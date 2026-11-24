@@ -1,30 +1,30 @@
 export const id = 55;
 export const ids = [55];
 export const modules = {
-  51242: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      startPageTexturePackFeed: () => Sp
+  51154: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      startPageTexturePackFeed: () => gT
     });
-    var Op = cp(1211),
-      op = cp(44),
-      Ip = cp(51229);
+    var WT = mT(1302),
+      zT = mT(44),
+      MT = mT(51142);
 
-    function Sp(pp, ip) {
-      const cp = new Ip.b({
-        store: op.g,
-        warn: pp,
-        oneShot: ip,
-        fetchLatest: async pp => {
-          const ip = await fetch(`${Op.clientSideServerUrls.texturePackUrl}/${pp}.json`, {
+    function gT(TT, UT) {
+      const mT = new MT.d({
+        store: zT.h,
+        warn: TT,
+        oneShot: UT,
+        fetchLatest: async TT => {
+          const UT = await fetch(`${WT.clientSideServerUrls.texturePackUrl}/${TT}.json`, {
             cache: "reload"
           });
-          if (!ip.ok) throw new Error(`fetching texture pack ${pp} answered HTTP ${ip.status}`);
-          return await ip.json()
+          if (!UT.ok) throw new Error(`fetching texture pack ${TT} answered HTTP ${UT.status}`);
+          return await UT.json()
         }
       });
-      return (0, Ip.d)(cp), cp
+      return (0, MT.e)(mT), mT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

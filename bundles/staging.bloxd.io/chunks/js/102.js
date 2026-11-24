@@ -1,26 +1,26 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  5008: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => dp
+  5002: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => iT
     });
-    var Op = cp(1543),
-      op = cp(62),
-      Ip = cp(1201),
-      Sp = cp(1141),
-      xp = cp(1133),
-      Lp = cp(2112),
-      Yp = cp(1538),
-      Dp = cp(1361),
-      Ap = cp(1128),
-      Pp = cp(25),
-      Wp = cp(1480),
-      yp = cp(1060),
-      Up = cp(2655),
-      wp = cp(1563),
-      vp = cp(1112);
-    const tp = [{
+    var WT = mT(1641),
+      zT = mT(63),
+      MT = mT(1288),
+      gT = mT(1225),
+      nT = mT(1213),
+      HT = mT(2194),
+      kT = mT(1633),
+      jT = mT(1446),
+      lT = mT(1205),
+      LT = mT(25),
+      pT = mT(1569),
+      BT = mT(1135),
+      ZT = mT(2695),
+      cT = mT(1658),
+      vT = mT(1188);
+    const fT = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      Hp = {
+      qT = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function dp() {
+    function iT() {
       const {
-        t: pp
-      } = (0, Ip.H)(), ip = (0, Yp.useNavigatePreserveSearch)(), cp = (0, Op.r)(), {
-        isUserContextUpdating: dp
-      } = (0, Sp.b)(), ep = (0, Lp.e)(), jp = (0, xp.h)(), kp = (mp = cp.pathname).startsWith(wp.p) ? null : mp.startsWith(Hp.docs) ? "docs" : mp.startsWith(Hp.leaderboard) ? "leaderboard" : "myGames";
-      var mp;
-      const Rp = function(pp) {
-        if (!pp.startsWith(wp.p)) return {
+        t: TT
+      } = (0, MT.z)(), UT = (0, kT.useNavigatePreserveSearch)(), mT = (0, WT.p)(), {
+        isUserContextUpdating: iT
+      } = (0, gT.d)(), bT = (0, HT.e)(), OT = (0, nT.i)(), eT = (YT = mT.pathname).startsWith(cT.m) ? null : YT.startsWith(qT.docs) ? "docs" : YT.startsWith(qT.leaderboard) ? "leaderboard" : "myGames";
+      var YT;
+      const JT = function(TT) {
+        if (!TT.startsWith(cT.m)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const ip = (0, Yp.getPreviousLocation)();
+        const UT = (0, kT.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== ip && ip.startsWith(Hp.myGames) ? -1 : Hp.myGames
+          to: null !== UT && UT.startsWith(qT.myGames) ? -1 : qT.myGames
         }
-      }(cp.pathname);
-      return (0, op.useEffect)((() => {
-        Pp.c.set({
+      }(mT.pathname);
+      return (0, zT.useEffect)((() => {
+        LT.b.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, vp.jsxs)("div", {
+      }), []), (0, vT.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [ep && (0, vp.jsx)("aside", {
+        children: [bT && (0, vT.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, vp.jsx)(Up.b, {})
-        }), (0, vp.jsxs)("div", {
+          children: (0, vT.jsx)(ZT.b, {})
+        }), (0, vT.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, vp.jsxs)("div", {
+          children: [(0, vT.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, vp.jsx)(Ap.e, {
+            children: [(0, vT.jsx)(lT.c, {
               show: !0,
-              socialBarIsDocked: ep
-            }), (0, vp.jsxs)("nav", {
+              socialBarIsDocked: bT
+            }), (0, vT.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, vp.jsx)(Wp.d, {
-                icon: Rp.icon,
+              children: [(0, vT.jsx)(pT.d, {
+                icon: JT.icon,
                 onClick: () => {
-                  ip(Rp.to)
+                  UT(JT.to)
                 },
-                children: pp(Rp.title)
-              }), (0, vp.jsx)("div", {
+                children: TT(JT.title)
+              }), (0, vT.jsx)("div", {
                 className: "StudioNavTabs",
-                children: tp.map((cp => (0, vp.jsxs)(Wp.S, {
-                  active: kp === cp.id,
-                  href: Hp[cp.id],
+                children: fT.map((mT => (0, vT.jsxs)(pT.L, {
+                  active: eT === mT.id,
+                  href: qT[mT.id],
                   onClick: () => {
-                    ip(Hp[cp.id])
+                    UT(qT[mT.id])
                   },
-                  children: [(0, vp.jsx)(yp.d, {
-                    name: cp.icon
-                  }), !jp && pp(cp.title)]
-                }, cp.id)))
+                  children: [(0, vT.jsx)(BT.c, {
+                    name: mT.icon
+                  }), !OT && TT(mT.title)]
+                }, mT.id)))
               })]
             })]
-          }), (0, vp.jsxs)("main", {
+          }), (0, vT.jsxs)("main", {
             className: "StudioBottom",
-            children: [dp && (0, vp.jsx)("div", {
+            children: [iT && (0, vT.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, vp.jsx)(Dp.c, {})
-            }), !dp && (0, vp.jsx)("div", {
+              children: (0, vT.jsx)(jT.c, {})
+            }), !iT && (0, vT.jsx)("div", {
               className: "StudioContent",
-              children: (0, vp.jsx)(Op.f, {})
+              children: (0, vT.jsx)(WT.e, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

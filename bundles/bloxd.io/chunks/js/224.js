@@ -1,585 +1,585 @@
 export const id = 224;
 export const ids = [224];
 export const modules = {
-  37084: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => mp,
-      h: () => jp,
-      k: () => kp,
-      o: () => yp
+  36974: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => YT,
+      d: () => OT,
+      f: () => eT,
+      i: () => BT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(62),
-      Sp = cp(82),
-      xp = cp(1396),
-      Lp = cp(1480),
-      Yp = cp(1387),
-      Dp = cp(1295),
-      Ap = cp(1201),
-      Pp = cp(37089),
-      Wp = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(63),
+      gT = mT(85),
+      nT = mT(1482),
+      HT = mT(1569),
+      kT = mT(1475),
+      jT = mT(1376),
+      lT = mT(1288),
+      LT = mT(36982),
+      pT = mT(1188);
 
-    function yp(pp) {
-      const [ip, cp] = (0, Ip.useState)((() => (0, Pp.k)(pp)));
-      return (0, Ip.useEffect)((() => (cp((0, Pp.k)(pp)), (0, Pp.I)((() => {
-        cp((0, Pp.k)(pp))
-      })))), [pp]), ip
+    function BT(TT) {
+      const [UT, mT] = (0, MT.useState)((() => (0, LT.p)(TT)));
+      return (0, MT.useEffect)((() => (mT((0, LT.p)(TT)), (0, LT.Q)((() => {
+        mT((0, LT.p)(TT))
+      })))), [TT]), UT
     }
 
-    function Up(pp, ip) {
-      "function" === typeof pp ? pp(ip) : pp && (pp.current = ip)
+    function ZT(TT, UT) {
+      "function" === typeof TT ? TT(UT) : TT && (TT.current = UT)
     }
 
-    function wp(pp) {
+    function cT(TT) {
       let {
-        tutorial: ip,
-        step: cp,
-        enabled: Op = !0
-      } = pp;
-      const op = yp(ip);
-      return Op && op === cp
+        tutorial: UT,
+        step: mT,
+        enabled: WT = !0
+      } = TT;
+      const zT = BT(UT);
+      return WT && zT === mT
     }
 
-    function vp(pp, ip) {
-      const cp = (0, Pp.n)(pp),
-        Op = cp.indexOf(ip);
-      return !cp.slice(Op + 1).some((ip => (0, Pp.u)(pp, ip)))
+    function vT(TT, UT) {
+      const mT = (0, LT.q)(TT),
+        WT = mT.indexOf(UT);
+      return !mT.slice(WT + 1).some((UT => (0, LT.y)(TT, UT)))
     }
 
-    function tp(pp, ip, cp, Op) {
+    function fT(TT, UT, mT, WT) {
       let {
-        tutorial: op,
-        step: Ip,
-        waitForClick: Sp = !1,
-        onPrevious: xp
-      } = pp;
-      const Lp = ip && (0, Pp.t)(op, Ip),
-        Yp = ip && !vp(op, Ip),
-        Ap = Sp ? Op : cp;
-      let Wp = null;
-      Lp ? Wp = () => {
-        null === xp || void 0 === xp || xp(), (0, Pp.r)(op, Ip)
-      } : Yp && (Wp = () => {
-        (0, Pp.j)(op)
-      }), (0, Dp.x)("popup", null !== Ap && void 0 !== Ap ? Ap : cp, Wp, ip && null !== Ap, null, Lp ? void 0 : "controller:menusSkipTutorial")
+        tutorial: zT,
+        step: MT,
+        waitForClick: gT = !1,
+        onPrevious: nT
+      } = TT;
+      const HT = UT && (0, LT.u)(zT, MT),
+        kT = UT && !vT(zT, MT),
+        lT = gT ? WT : mT;
+      let pT = null;
+      HT ? pT = () => {
+        null === nT || void 0 === nT || nT(), (0, LT.s)(zT, MT)
+      } : kT && (pT = () => {
+        (0, LT.m)(zT)
+      }), (0, jT.p)("popup", null !== lT && void 0 !== lT ? lT : mT, pT, UT && null !== lT, null, HT ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function Hp(pp) {
+    function qT(TT) {
       let {
-        tutorial: ip,
-        step: cp,
-        text: Op,
-        waitForClick: op = !1,
-        onPrevious: Ip
-      } = pp;
+        tutorial: UT,
+        step: mT,
+        text: WT,
+        waitForClick: zT = !1,
+        onPrevious: MT
+      } = TT;
       const {
-        t: Sp
-      } = (0, Ap.H)(), xp = vp(ip, cp);
-      return (0, Wp.jsxs)(Wp.Fragment, {
-        children: [(0, Wp.jsx)("div", {
+        t: gT
+      } = (0, lT.z)(), nT = vT(UT, mT);
+      return (0, pT.jsxs)(pT.Fragment, {
+        children: [(0, pT.jsx)("div", {
           className: "TutorialStepText",
-          children: Op
-        }), (0, Wp.jsxs)("div", {
+          children: WT
+        }), (0, pT.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, Pp.t)(ip, cp) && (0, Wp.jsx)(Lp.j, {
+          children: [(0, LT.u)(UT, mT) && (0, pT.jsx)(HT.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === Ip || void 0 === Ip || Ip(), (0, Pp.r)(ip, cp)
+              null === MT || void 0 === MT || MT(), (0, LT.s)(UT, mT)
             },
-            children: Sp("tutorial:back")
-          }), !op && (0, Wp.jsx)(Lp.f, {
+            children: gT("tutorial:back")
+          }), !zT && (0, pT.jsx)(HT.e, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, Pp.d)(cp)
+              (0, LT.g)(mT)
             },
             padDefaultFocus: !0,
-            children: Sp(xp ? "tutorial:done" : "tutorial:next")
-          }), !xp && (0, Wp.jsx)(Lp.j, {
+            children: gT(nT ? "tutorial:done" : "tutorial:next")
+          }), !nT && (0, pT.jsx)(HT.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, Pp.j)(ip)
+              (0, LT.m)(UT)
             },
-            children: Sp("tutorial:skip")
+            children: gT("tutorial:skip")
           })]
         })]
       })
     }
-    const dp = 6;
+    const iT = 6;
 
-    function ep(pp) {
+    function bT(TT) {
       let {
-        rect: ip,
-        margin: cp
-      } = pp;
-      const Op = Math.max(0, ip.top - cp),
-        op = ip.bottom + cp,
-        Ip = Math.max(0, ip.left - cp),
-        Sp = ip.right + cp;
-      return (0, Wp.jsxs)(Wp.Fragment, {
-        children: [(0, Wp.jsx)("div", {
+        rect: UT,
+        margin: mT
+      } = TT;
+      const WT = Math.max(0, UT.top - mT),
+        zT = UT.bottom + mT,
+        MT = Math.max(0, UT.left - mT),
+        gT = UT.right + mT;
+      return (0, pT.jsxs)(pT.Fragment, {
+        children: [(0, pT.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: Op
+            height: WT
           }
-        }), (0, Wp.jsx)("div", {
+        }), (0, pT.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: op,
+            top: zT,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, Wp.jsx)("div", {
+        }), (0, pT.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Op,
+            top: WT,
             left: 0,
-            width: Ip,
-            height: op - Op
+            width: MT,
+            height: zT - WT
           }
-        }), (0, Wp.jsx)("div", {
+        }), (0, pT.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Op,
-            left: Sp,
+            top: WT,
+            left: gT,
             right: 0,
-            height: op - Op
+            height: zT - WT
           }
         })]
       })
     }
 
-    function jp(pp) {
+    function OT(TT) {
       let {
-        target: ip,
-        placement: cp,
-        boxRef: Op,
-        className: Lp,
-        spotlight: Dp = !0,
-        spotlightMargin: Ap = dp,
-        children: Pp
-      } = pp;
+        target: UT,
+        placement: mT,
+        boxRef: WT,
+        className: HT,
+        spotlight: jT = !0,
+        spotlightMargin: lT = iT,
+        children: LT
+      } = TT;
       const {
-        getArrowProps: yp,
-        getTooltipProps: Up,
-        setTooltipRef: wp,
-        setTriggerRef: vp,
-        update: tp
-      } = (0, xp.c)({
-        placement: cp,
+        getArrowProps: BT,
+        getTooltipProps: ZT,
+        setTooltipRef: cT,
+        setTriggerRef: vT,
+        update: fT
+      } = (0, nT.c)({
+        placement: mT,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, Ap]
+        offset: [0, lT]
       });
-      (0, Ip.useLayoutEffect)((() => {
-        vp(ip)
-      }), [ip, vp]);
-      const Hp = function(pp, ip) {
-        const [cp, Op] = (0, Ip.useState)(null);
-        return (0, Ip.useEffect)((() => {
-          if (!ip || !pp) return void Op(null);
-          let cp = 0,
-            op = null;
-          const Ip = () => {
-            const ip = pp.getBoundingClientRect();
-            op && ip.left === op.left && ip.top === op.top && ip.width === op.width && ip.height === op.height || (op = ip, Op(ip)), cp = requestAnimationFrame(Ip)
+      (0, MT.useLayoutEffect)((() => {
+        vT(UT)
+      }), [UT, vT]);
+      const qT = function(TT, UT) {
+        const [mT, WT] = (0, MT.useState)(null);
+        return (0, MT.useEffect)((() => {
+          if (!UT || !TT) return void WT(null);
+          let mT = 0,
+            zT = null;
+          const MT = () => {
+            const UT = TT.getBoundingClientRect();
+            zT && UT.left === zT.left && UT.top === zT.top && UT.width === zT.width && UT.height === zT.height || (zT = UT, WT(UT)), mT = requestAnimationFrame(MT)
           };
-          return Ip(), () => {
-            cancelAnimationFrame(cp)
+          return MT(), () => {
+            cancelAnimationFrame(mT)
           }
-        }), [pp, ip]), cp
-      }(ip, Dp);
-      (0, Ip.useEffect)((() => {
-        null === tp || void 0 === tp || tp()
-      }), [Hp, tp]), (0, Ip.useEffect)((() => {
-        if (Dp || !ip || !tp) return;
-        const pp = new ResizeObserver((() => {
-          tp()
+        }), [TT, UT]), mT
+      }(UT, jT);
+      (0, MT.useEffect)((() => {
+        null === fT || void 0 === fT || fT()
+      }), [qT, fT]), (0, MT.useEffect)((() => {
+        if (jT || !UT || !fT) return;
+        const TT = new ResizeObserver((() => {
+          fT()
         }));
-        return pp.observe(ip), ip.parentElement && pp.observe(ip.parentElement), () => {
-          pp.disconnect()
+        return TT.observe(UT), UT.parentElement && TT.observe(UT.parentElement), () => {
+          TT.disconnect()
         }
-      }), [ip, Dp, tp]), (0, Ip.useEffect)((() => {
-        Dp && (null === ip || void 0 === ip || ip.scrollIntoView({
+      }), [UT, jT, fT]), (0, MT.useEffect)((() => {
+        jT && (null === UT || void 0 === UT || UT.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         }))
-      }), [ip, Dp]);
-      const jp = (0, Ip.useCallback)((pp => {
-        wp(pp), Op && (Op.current = pp)
-      }), [wp, Op]);
-      return (0, Sp.createPortal)((0, Wp.jsxs)(Wp.Fragment, {
-        children: [Hp && (0, Wp.jsx)(ep, {
-          rect: Hp,
-          margin: Ap
-        }), (0, Wp.jsxs)("div", {
-          ref: jp,
-          ...Up({
-            className: op()("tooltip-container SmallTextLight TutorialStep", Lp)
+      }), [UT, jT]);
+      const OT = (0, MT.useCallback)((TT => {
+        cT(TT), WT && (WT.current = TT)
+      }), [cT, WT]);
+      return (0, gT.createPortal)((0, pT.jsxs)(pT.Fragment, {
+        children: [qT && (0, pT.jsx)(bT, {
+          rect: qT,
+          margin: lT
+        }), (0, pT.jsxs)("div", {
+          ref: OT,
+          ...ZT({
+            className: zT()("tooltip-container SmallTextLight TutorialStep", HT)
           }),
-          children: [Pp, (0, Wp.jsx)("div", {
-            ...yp({
+          children: [LT, (0, pT.jsx)("div", {
+            ...BT({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, Yp.g)())
+      }), (0, kT.f)())
     }
-    const kp = (0, Ip.forwardRef)((function(pp, ip) {
+    const eT = (0, MT.forwardRef)((function(TT, UT) {
       let {
-        placement: cp = "right",
-        children: Op,
-        ...op
-      } = pp;
-      const Sp = wp(op),
-        xp = (0, Ip.useRef)(null),
-        Lp = (0, Ip.useRef)(null);
-      tp(op, Sp, xp, Lp);
-      const [Yp, Dp] = (0, Ip.useState)(null), Ap = Op.ref, Pp = (0, Ip.useCallback)((pp => {
-        Lp.current = pp, Dp(pp), Up(ip, pp), Up(Ap, pp)
-      }), [ip, Ap]);
-      return (0, Wp.jsxs)(Wp.Fragment, {
-        children: [(0, Ip.cloneElement)(Op, {
-          ref: Pp
-        }), Sp && (0, Wp.jsx)(jp, {
-          target: Yp,
-          placement: cp,
-          boxRef: xp,
-          children: (0, Wp.jsx)(Hp, {
-            ...op
+        placement: mT = "right",
+        children: WT,
+        ...zT
+      } = TT;
+      const gT = cT(zT),
+        nT = (0, MT.useRef)(null),
+        HT = (0, MT.useRef)(null);
+      fT(zT, gT, nT, HT);
+      const [kT, jT] = (0, MT.useState)(null), lT = WT.ref, LT = (0, MT.useCallback)((TT => {
+        HT.current = TT, jT(TT), ZT(UT, TT), ZT(lT, TT)
+      }), [UT, lT]);
+      return (0, pT.jsxs)(pT.Fragment, {
+        children: [(0, MT.cloneElement)(WT, {
+          ref: LT
+        }), gT && (0, pT.jsx)(OT, {
+          target: kT,
+          placement: mT,
+          boxRef: nT,
+          children: (0, pT.jsx)(qT, {
+            ...zT
           })
         })]
       })
     }));
 
-    function mp(pp) {
-      const ip = wp(pp),
-        cp = (0, Ip.useRef)(null);
-      return tp(pp, ip, cp, null), ip ? (0, Sp.createPortal)((0, Wp.jsx)("div", {
+    function YT(TT) {
+      const UT = cT(TT),
+        mT = (0, MT.useRef)(null);
+      return fT(TT, UT, mT, null), UT ? (0, gT.createPortal)((0, pT.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, Wp.jsx)("div", {
-          ref: cp,
+        children: (0, pT.jsx)("div", {
+          ref: mT,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, Wp.jsx)(Hp, {
-            ...pp
+          children: (0, pT.jsx)(qT, {
+            ...TT
           })
         })
-      }), (0, Yp.g)()) : null
+      }), (0, kT.f)()) : null
     }
   },
-  36804: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => yp,
-      E: () => tp,
-      b: () => Ip,
-      d: () => Up,
-      f: () => wp,
-      j: () => xp,
-      n: () => Pp,
-      q: () => vp,
-      u: () => Ap,
-      w: () => Hp
+  36698: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT,
+      d: () => ZT,
+      h: () => cT,
+      j: () => nT,
+      l: () => LT,
+      n: () => vT,
+      p: () => lT,
+      r: () => qT,
+      s: () => BT,
+      v: () => fT
     });
-    var Op = cp(25),
-      op = cp(34);
-    const Ip = "clientGameInventoryButtonsChanged",
-      Sp = new Map;
+    var WT = mT(25),
+      zT = mT(31);
+    const MT = "clientGameInventoryButtonsChanged",
+      gT = new Map;
 
-    function xp() {
-      return [...Sp.values()].sort(((pp, ip) => {
-        var cp, Op;
-        return (null !== (cp = pp.order) && void 0 !== cp ? cp : 0) - (null !== (Op = ip.order) && void 0 !== Op ? Op : 0)
+    function nT() {
+      return [...gT.values()].sort(((TT, UT) => {
+        var mT, WT;
+        return (null !== (mT = TT.order) && void 0 !== mT ? mT : 0) - (null !== (WT = UT.order) && void 0 !== WT ? WT : 0)
       }))
     }
-    let Lp = null;
+    let HT = null;
 
-    function Yp(pp) {
-      Lp = pp
+    function kT(TT) {
+      HT = TT
     }
-    let Dp = !1;
+    let jT = !1;
 
-    function Ap(pp) {
-      Dp = !0;
+    function lT(TT) {
+      jT = !0;
       try {
-        pp.onClick()
+        TT.onClick()
       } finally {
-        Dp = !1
+        jT = !1
       }
-      pp.panel && "clientGame" === Op.c.get("openInGameMenuName") && Yp(pp.id)
+      TT.panel && "clientGame" === WT.b.get("openInGameMenuName") && kT(TT.id)
     }
 
-    function Pp() {
-      return Dp
+    function LT() {
+      return jT
     }
 
-    function Wp() {
-      return xp().filter((pp => pp.panel && !pp.disabled))
+    function pT() {
+      return nT().filter((TT => TT.panel && !TT.disabled))
     }
 
-    function yp(pp) {
-      const ip = Wp(),
-        cp = ip.findIndex((pp => pp.id === Lp));
-      return !(cp < 0 || ip.length < 2) && (Ap(ip[(cp + pp + ip.length) % ip.length]), !0)
+    function BT(TT) {
+      const UT = pT(),
+        mT = UT.findIndex((TT => TT.id === HT));
+      return !(mT < 0 || UT.length < 2) && (lT(UT[(mT + TT + UT.length) % UT.length]), !0)
     }
 
-    function Up() {
-      return null !== Lp && Wp().length > 1
+    function ZT() {
+      return null !== HT && pT().length > 1
     }
 
-    function wp() {
-      Yp(null)
+    function cT() {
+      kT(null)
     }
 
-    function vp() {
-      "inventory" !== Op.c.get("openInGameMenuName") && Yp(null)
+    function vT() {
+      "inventory" !== WT.b.get("openInGameMenuName") && kT(null)
     }
 
-    function tp() {
-      const pp = Lp;
-      return Yp(null), pp
+    function fT() {
+      const TT = HT;
+      return kT(null), TT
     }
 
-    function Hp(pp) {
-      return Sp.set(pp.id, pp), op.m.GA(Ip, xp(), !0), () => {
-        Sp.get(pp.id) === pp && (Sp.delete(pp.id), op.m.GA(Ip, xp()))
+    function qT(TT) {
+      return gT.set(TT.id, TT), zT.j.EZ(MT, nT(), !0), () => {
+        gT.get(TT.id) === TT && (gT.delete(TT.id), zT.j.EZ(MT, nT()))
       }
     }
   },
-  36799: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Dp,
-      d: () => xp,
-      h: () => wp,
-      l: () => vp,
-      o: () => Pp,
-      s: () => Yp,
-      t: () => Up,
-      x: () => Wp
+  36693: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      d: () => cT,
+      f: () => vT,
+      i: () => LT,
+      j: () => kT,
+      l: () => ZT,
+      n: () => pT,
+      q: () => jT
     });
-    var Op = cp(25),
-      op = cp(34),
-      Ip = cp(1308),
-      Sp = cp(36804);
-    const xp = "clientGameUiChanged";
-    let Lp = null;
+    var WT = mT(25),
+      zT = mT(31),
+      MT = mT(1388),
+      gT = mT(36698);
+    const nT = "clientGameUiChanged";
+    let HT = null;
 
-    function Yp() {
-      return Lp
+    function kT() {
+      return HT
     }
 
-    function Dp(pp, ip) {
-      const cp = {
-        content: pp,
-        menu: ip
+    function jT(TT, UT) {
+      const mT = {
+        content: TT,
+        menu: UT
       };
-      return Lp = cp, op.m.GA(xp, Lp, !0), () => {
-        Lp === cp && (Lp = null, yp = !1, wp(), op.m.GA(xp, null))
+      return HT = mT, zT.j.EZ(nT, HT, !0), () => {
+        HT === mT && (HT = null, BT = !1, cT(), zT.j.EZ(nT, null))
       }
     }
-    let Ap = null;
+    let lT = null;
 
-    function Pp() {
-      return Ap
+    function LT() {
+      return lT
     }
 
-    function Wp(pp) {
-      return Ap = pp, () => {
-        Ap === pp && (Ap = null)
+    function pT(TT) {
+      return lT = TT, () => {
+        lT === TT && (lT = null)
       }
     }
-    let yp = !1;
+    let BT = !1;
 
-    function Up() {
-      const pp = Op.c.get("openInGameMenuName");
-      "clientGame" !== pp && (yp = "inventory" === pp), (0, Sp.n)() || (0, Sp.f)(), (0, Ip.s)(Ip.c), Op.c.set({
+    function ZT() {
+      const TT = WT.b.get("openInGameMenuName");
+      "clientGame" !== TT && (BT = "inventory" === TT), (0, gT.l)() || (0, gT.h)(), (0, MT.s)(MT.d), WT.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function wp() {
-      tp(!1)
+    function cT() {
+      fT(!1)
     }
 
-    function vp() {
-      tp(yp)
+    function vT() {
+      fT(BT)
     }
 
-    function tp(pp) {
-      "clientGame" === Op.c.get("openInGameMenuName") && Op.c.set({
-        openInGameMenuName: pp ? "inventory" : null
-      }), pp || (0, Sp.f)(), yp = !1
+    function fT(TT) {
+      "clientGame" === WT.b.get("openInGameMenuName") && WT.b.set({
+        openInGameMenuName: TT ? "inventory" : null
+      }), TT || (0, gT.h)(), BT = !1
     }
   },
-  37089: (pp, ip, cp) => {
-    cp.d(ip, {
-      C: () => Np,
-      D: () => Tp,
-      H: () => Jp,
-      I: () => fp,
-      b: () => Lp,
-      d: () => Cp,
-      g: () => xp,
-      j: () => Qp,
-      k: () => qp,
-      n: () => jp,
-      r: () => lp,
-      t: () => Xp,
-      u: () => Rp,
-      y: () => Bp
+  36982: (TT, UT, mT) => {
+    mT.d(UT, {
+      C: () => QT,
+      G: () => sT,
+      I: () => FT,
+      M: () => IT,
+      Q: () => PT,
+      c: () => HT,
+      g: () => wT,
+      i: () => nT,
+      m: () => XT,
+      p: () => xT,
+      q: () => OT,
+      s: () => yT,
+      u: () => aT,
+      y: () => JT
     });
-    var Op = cp(44);
-    const op = {
+    var WT = mT(44);
+    const zT = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      Ip = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      Sp = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      xp = Ip.filter((pp => "docsButton" !== pp)),
-      Lp = Sp.filter((pp => "aiHelperButton" !== pp)),
-      Yp = "codeEditorTutorials",
-      Dp = {
+      MT = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      gT = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      nT = MT.filter((TT => "docsButton" !== TT)),
+      HT = gT.filter((TT => "aiHelperButton" !== TT)),
+      kT = "codeEditorTutorials",
+      jT = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      Ap = {
+      lT = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let Pp = null,
-      Wp = null;
-    const yp = new Set,
-      Up = new Set;
-    let wp = null;
-    const vp = new Set,
-      tp = new Set;
+    let LT = null,
+      pT = null;
+    const BT = new Set,
+      ZT = new Set;
+    let cT = null;
+    const vT = new Set,
+      fT = new Set;
 
-    function Hp() {
-      tp.forEach((pp => {
-        pp()
+    function qT() {
+      fT.forEach((TT => {
+        TT()
       }))
     }
 
-    function dp() {
-      if (!Pp) {
-        const pp = Op.h.getItem(Yp);
-        Pp = {
+    function iT() {
+      if (!LT) {
+        const TT = WT.l.getItem(kT);
+        LT = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof pp && null !== pp ? pp : {}
+          ..."object" === typeof TT && null !== TT ? TT : {}
         }
       }
-      return Pp
+      return LT
     }
 
-    function ep(pp) {
-      const ip = dp();
-      ip[pp] || (Pp = {
-        ...ip,
-        [pp]: !0
-      }, Op.h.setItem(Yp, Pp))
+    function bT(TT) {
+      const UT = iT();
+      UT[TT] || (LT = {
+        ...UT,
+        [TT]: !0
+      }, WT.l.setItem(kT, LT))
     }
 
-    function jp(pp) {
-      return "docsOverview" === pp ? Ip : "aiHelperOverview" === pp ? Sp : Wp ? op[Wp] : []
+    function OT(TT) {
+      return "docsOverview" === TT ? MT : "aiHelperOverview" === TT ? gT : pT ? zT[pT] : []
     }
 
-    function kp(pp) {
-      return ("worldCodeButton" !== pp || !dp().worldCodeIntroShown) && !vp.has(pp)
+    function eT(TT) {
+      return ("worldCodeButton" !== TT || !iT().worldCodeIntroShown) && !vT.has(TT)
     }
 
-    function mp(pp) {
-      var ip;
-      return (null === (ip = wp) || void 0 === ip ? void 0 : ip.name) === pp ? wp.stepsDone : yp
+    function YT(TT) {
+      var UT;
+      return (null === (UT = cT) || void 0 === UT ? void 0 : UT.name) === TT ? cT.stepsDone : BT
     }
 
-    function Rp(pp, ip) {
-      if (! function(pp) {
-          return wp ? wp.name === pp : "welcome" === pp
-        }(pp) || !kp(ip) || mp(pp).has(ip)) return !1;
-      if (wp) return !0;
-      const cp = Dp[ip];
-      return cp ? !dp()[cp] || Up.has(ip) : !dp()[Ap[pp]]
+    function JT(TT, UT) {
+      if (! function(TT) {
+          return cT ? cT.name === TT : "welcome" === TT
+        }(TT) || !eT(UT) || YT(TT).has(UT)) return !1;
+      if (cT) return !0;
+      const mT = jT[UT];
+      return mT ? !iT()[mT] || ZT.has(UT) : !iT()[lT[TT]]
     }
 
-    function qp(pp) {
-      var ip;
-      return null !== (ip = jp(pp).find((ip => Rp(pp, ip)))) && void 0 !== ip ? ip : null
+    function xT(TT) {
+      var UT;
+      return null !== (UT = OT(TT).find((UT => JT(TT, UT)))) && void 0 !== UT ? UT : null
     }
 
-    function Mp(pp) {
-      var ip;
-      ep(Ap[pp]), (null === (ip = wp) || void 0 === ip ? void 0 : ip.name) === pp && (wp = null)
+    function dT(TT) {
+      var UT;
+      bT(lT[TT]), (null === (UT = cT) || void 0 === UT ? void 0 : UT.name) === TT && (cT = null)
     }
 
-    function Cp(pp) {
-      const ip = (wp ? [wp.name] : ["welcome", "docsOverview"]).find((ip => qp(ip) === pp));
-      if (!ip) return;
-      mp(ip).add(pp);
-      const cp = Dp[pp];
-      cp && (ep(cp), wp || Up.add(pp)), null === qp(ip) && Mp(ip), Hp()
+    function wT(TT) {
+      const UT = (cT ? [cT.name] : ["welcome", "docsOverview"]).find((UT => xT(UT) === TT));
+      if (!UT) return;
+      YT(UT).add(TT);
+      const mT = jT[TT];
+      mT && (bT(mT), cT || ZT.add(TT)), null === xT(UT) && dT(UT), qT()
     }
 
-    function Ep(pp, ip) {
-      const cp = jp(pp),
-        Op = mp(pp);
-      for (let op = cp.indexOf(ip) - 1; op >= 0; op--)
-        if (Op.has(cp[op]) && kp(cp[op])) return cp[op];
+    function tT(TT, UT) {
+      const mT = OT(TT),
+        WT = YT(TT);
+      for (let zT = mT.indexOf(UT) - 1; zT >= 0; zT--)
+        if (WT.has(mT[zT]) && eT(mT[zT])) return mT[zT];
       return null
     }
 
-    function Xp(pp, ip) {
-      return null !== Ep(pp, ip)
+    function aT(TT, UT) {
+      return null !== tT(TT, UT)
     }
 
-    function lp(pp, ip) {
-      const cp = Ep(pp, ip);
-      cp && (mp(pp).delete(cp), Hp())
+    function yT(TT, UT) {
+      const mT = tT(TT, UT);
+      mT && (YT(TT).delete(mT), qT())
     }
 
-    function Qp(pp) {
-      Mp(pp), "welcome" === pp && jp("welcome").forEach((pp => {
-        const ip = Dp[pp];
-        ip && ep(ip)
-      })), Hp()
+    function XT(TT) {
+      dT(TT), "welcome" === TT && OT("welcome").forEach((TT => {
+        const UT = jT[TT];
+        UT && bT(UT)
+      })), qT()
     }
 
-    function Jp(pp) {
-      wp = {
-        name: pp,
+    function IT(TT) {
+      cT = {
+        name: TT,
         stepsDone: new Set
-      }, Hp()
+      }, qT()
     }
 
-    function Bp() {
-      (wp || 0 !== yp.size || 0 !== Up.size) && (wp = null, yp.clear(), Up.clear(), Hp())
+    function QT() {
+      (cT || 0 !== BT.size || 0 !== ZT.size) && (cT = null, BT.clear(), ZT.clear(), qT())
     }
 
-    function Np(pp, ip) {
-      const cp = ip ? pp : Wp === pp ? null : Wp;
-      cp !== Wp && (Wp = cp, Hp())
+    function sT(TT, UT) {
+      const mT = UT ? TT : pT === TT ? null : pT;
+      mT !== pT && (pT = mT, qT())
     }
 
-    function Tp(pp, ip) {
-      vp.has(pp) === ip && (ip ? vp.delete(pp) : vp.add(pp), Hp())
+    function FT(TT, UT) {
+      vT.has(TT) === UT && (UT ? vT.delete(TT) : vT.add(TT), qT())
     }
 
-    function fp(pp) {
-      return tp.add(pp), () => {
-        tp.delete(pp)
+    function PT(TT) {
+      return fT.add(TT), () => {
+        fT.delete(TT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

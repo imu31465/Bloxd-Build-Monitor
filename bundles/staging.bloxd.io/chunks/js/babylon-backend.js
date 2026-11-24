@@ -1,100 +1,100 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  41339: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CapeMaterialPlugin: () => dp,
-      HueTintMaterialPlugin: () => ep,
-      LifeformMaterialPlugin: () => jp,
-      OverlayMaterialPlugin: () => kp
+  41267: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      CapeMaterialPlugin: () => iT,
+      HueTintMaterialPlugin: () => bT,
+      LifeformMaterialPlugin: () => OT,
+      OverlayMaterialPlugin: () => eT
     });
-    var Op = cp(41345),
-      op = cp(38232);
-    class Ip extends((0, Op.d)(op.d)) {}(0, Op.g)(op.d, Ip);
-    var Sp = cp(37411);
-    class xp extends((0, Op.d)(Sp.h)) {}(0, Op.g)(Sp.h, xp);
-    var Lp = cp(38071);
-    class Yp extends((0, Op.d)(Lp.i)) {}(0, Op.g)(Lp.i, Yp);
-    var Dp = cp(37655),
-      Ap = cp(40459),
-      Pp = cp(37646);
-    class Wp extends((0, Op.d)(Pp.i)) {
-      constructor(pp, ip, cp) {
-        super(pp, ip, cp), (0, Dp.g)(pp)
+    var WT = mT(41269),
+      zT = mT(38142);
+    class MT extends((0, WT.h)(zT.c)) {}(0, WT.i)(zT.c, MT);
+    var gT = mT(37273);
+    class nT extends((0, WT.h)(gT.e)) {}(0, WT.i)(gT.e, nT);
+    var HT = mT(37976);
+    class kT extends((0, WT.h)(HT.c)) {}(0, WT.i)(HT.c, kT);
+    var jT = mT(37534),
+      lT = mT(40379),
+      LT = mT(37531);
+    class pT extends((0, WT.h)(LT.h)) {
+      constructor(TT, UT, mT) {
+        super(TT, UT, mT), (0, jT.e)(TT)
       }
-      dispose(pp) {
-        (0, Dp.i)(this._material), super.dispose(pp)
+      dispose(TT) {
+        (0, jT.g)(this._material), super.dispose(TT)
       }
-    }(0, Op.g)(Pp.i, Wp), (0, Pp.j)({
-      disableUnusedSpecularTerm: Op.c,
-      isLightingDisabled: pp => pp instanceof Ap.StandardMaterial && pp.disableLighting
+    }(0, WT.i)(LT.h, pT), (0, LT.l)({
+      disableUnusedSpecularTerm: WT.e,
+      isLightingDisabled: TT => TT instanceof lT.StandardMaterial && TT.disableLighting
     });
-    var yp = cp(38916);
-    class Up extends((0, Op.d)(yp.g)) {}(0, Op.g)(yp.g, Up);
-    var wp = cp(39014),
-      vp = cp(37496),
-      tp = cp(38352),
-      Hp = cp(37454);
-    class dp extends((0, Op.d)(wp.b)) {}(0, Op.g)(wp.b, dp);
-    class ep extends((0, Op.d)(vp.d)) {}(0, Op.g)(vp.d, ep);
-    class jp extends((0, Op.d)(tp.q)) {}(0, Op.g)(tp.q, jp);
-    class kp extends((0, Op.d)(Hp.d)) {}(0, Op.g)(Hp.d, kp)
+    var BT = mT(38807);
+    class ZT extends((0, WT.h)(BT.e)) {}(0, WT.i)(BT.e, ZT);
+    var cT = mT(38914),
+      vT = mT(37376),
+      fT = mT(38266),
+      qT = mT(37324);
+    class iT extends((0, WT.h)(cT.d)) {}(0, WT.i)(cT.d, iT);
+    class bT extends((0, WT.h)(vT.c)) {}(0, WT.i)(vT.c, bT);
+    class OT extends((0, WT.h)(fT.i)) {}(0, WT.i)(fT.i, OT);
+    class eT extends((0, WT.h)(qT.c)) {}(0, WT.i)(qT.c, eT)
   },
-  41801: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      addBabylonLights: () => ji,
-      default: () => Ri
+  41689: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      addBabylonLights: () => bU,
+      default: () => YU
     });
-    var Op = cp(41806),
-      op = (cp(40182), cp(41333), cp(40663), cp(41814)),
-      Ip = cp(37479),
-      Sp = cp(37313),
-      xp = cp(41826),
-      Lp = cp(41834),
-      Yp = cp(37448),
-      Dp = (cp(41345), cp(41851)),
-      Ap = cp(41843),
-      Pp = cp(38949),
-      Wp = cp(41860),
-      yp = cp(40062),
-      Up = cp(38938);
-    const wp = "gpuParticles",
-      vp = Up.o,
-      tp = pp => pp / 4,
-      Hp = pp => `gpuParticleSystem[${pp>>2}].${"xyzw"[3&pp]}`,
-      dp = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${Up.d}\n#define COLOR_POSITIONS ${tp(vp.colorPositions)}\n#define COLOR1 ${tp(vp.color1)}\n#define COLOR2 ${tp(vp.color2)}\n#define VELOCITY ${tp(vp.tw)}\n#define REMAP ${tp(vp.remap)}\n#define RECORDS_PER_ROW ${Up.l}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${Up.m/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Hp(vp.gravity)}, ${Hp(vp.gravity+1)}, ${Hp(vp.gravity+2)}); }\nint colorCount() { return int(${Hp(vp.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${tp(vp.colorDead)}]; }\nint velocityCount() { return int(${Hp(vp.velocityCount)}); }\nint remapCount() { return int(${Hp(vp.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
-    yp.b.ShadersStore[`${wp}VertexShader`] = dp, yp.b.ShadersStore[`${wp}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    const ep = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      jp = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var kp = cp(38930),
-      mp = cp(41864);
-    class Rp extends kp.c {
-      constructor(pp, ip, cp, Op) {
-        super(pp, ip, cp), this.renderer = cp, this.pw = Op, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(Up.m), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, mp.e)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (pp, ip) => {
+    var WT = mT(41693),
+      zT = (mT(40064), mT(41265), mT(40611), mT(41701)),
+      MT = mT(37364),
+      gT = mT(37185),
+      nT = mT(41714),
+      HT = mT(41719),
+      kT = mT(37321),
+      jT = (mT(41269), mT(41732)),
+      lT = mT(41727),
+      LT = mT(38836),
+      pT = mT(41737),
+      BT = mT(39934),
+      ZT = mT(38815);
+    const cT = "gpuParticles",
+      vT = ZT.q,
+      fT = TT => TT / 4,
+      qT = TT => `gpuParticleSystem[${TT>>2}].${"xyzw"[3&TT]}`,
+      iT = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${ZT.b}\n#define COLOR_POSITIONS ${fT(vT.colorPositions)}\n#define COLOR1 ${fT(vT.color1)}\n#define COLOR2 ${fT(vT.color2)}\n#define VELOCITY ${fT(vT.Tc)}\n#define REMAP ${fT(vT.remap)}\n#define RECORDS_PER_ROW ${ZT.l}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${ZT.n/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${qT(vT.gravity)}, ${qT(vT.gravity+1)}, ${qT(vT.gravity+2)}); }\nint colorCount() { return int(${qT(vT.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${fT(vT.colorDead)}]; }\nint velocityCount() { return int(${qT(vT.velocityCount)}); }\nint remapCount() { return int(${qT(vT.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
+    BT.d.ShadersStore[`${cT}VertexShader`] = iT, BT.d.ShadersStore[`${cT}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    const bT = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      OT = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var eT = mT(38813),
+      YT = mT(41743);
+    class JT extends eT.d {
+      constructor(TT, UT, mT, WT) {
+        super(TT, UT, mT), this.renderer = mT, this.XZ = WT, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(ZT.n), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, YT.h)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (TT, UT) => {
           const {
-            engine: cp
-          } = this, Op = cp._gl;
-          cp._bindTextureDirectly(Op.TEXTURE_2D, this.records, !0), cp._unpackFlipY(!1);
-          const op = this.ring.recordBits;
-          for (let Ip = pp; Ip < ip;) {
-            const pp = Math.floor(Ip / Up.l),
-              cp = Math.min(ip, (pp + 1) * Up.l);
-            Op.texSubImage2D(Op.TEXTURE_2D, 0, Ip % Up.l * 4, pp, 4 * (cp - Ip), 1, Op.RGBA_INTEGER, Op.UNSIGNED_INT, op, Ip * Up.e), Ip = cp
+            engine: mT
+          } = this, WT = mT._gl;
+          mT._bindTextureDirectly(WT.TEXTURE_2D, this.records, !0), mT._unpackFlipY(!1);
+          const zT = this.ring.recordBits;
+          for (let MT = TT; MT < UT;) {
+            const TT = Math.floor(MT / ZT.l),
+              mT = Math.min(UT, (TT + 1) * ZT.l);
+            WT.texSubImage2D(WT.TEXTURE_2D, 0, MT % ZT.l * 4, TT, 4 * (mT - MT), 1, WT.RGBA_INTEGER, WT.UNSIGNED_INT, zT, MT * ZT.d), MT = mT
           }
-          cp._bindTextureDirectly(Op.TEXTURE_2D, null)
-        }, this.id = pp;
-        const op = Op.gy();
-        this.engine = op;
-        const Ip = Math.max(1, ip),
-          Sp = Math.min(Ip, Up.l);
-        this.records = op.createRawTexture(null, 4 * Sp, Math.ceil(Ip / Sp), Dp.d.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Dp.d.TEXTURE_NEAREST_SAMPLINGMODE, null, Dp.d.TEXTURETYPE_UNSIGNED_INTEGER)
+          mT._bindTextureDirectly(WT.TEXTURE_2D, null)
+        }, this.id = TT;
+        const zT = WT.eB();
+        this.engine = zT;
+        const MT = Math.max(1, UT),
+          gT = Math.min(MT, ZT.l);
+        this.records = zT.createRawTexture(null, 4 * gT, Math.ceil(MT / gT), jT.b.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, jT.b.TEXTURE_NEAREST_SAMPLINGMODE, null, jT.b.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.pw.getAnimationRatio() || 1;
-        const ip = this.pw.getFrameId();
-        if (ip === this.animatedFrame) return !1;
-        const cp = super.animate(pp);
-        return cp && (this.animatedFrame = ip, this.ring.takeUploads(this.uploadSlots)), cp
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.XZ.getAnimationRatio() || 1;
+        const UT = this.XZ.getFrameId();
+        if (UT === this.animatedFrame) return !1;
+        const mT = super.animate(TT);
+        return mT && (this.animatedFrame = UT, this.ring.takeUploads(this.uploadSlots)), mT
       }
       render() {
         return this.renderer.render(this)
@@ -103,752 +103,752 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(pp) {
-        (0, mp.i)(this, this.uniforms, this.uniformBits, pp);
-        for (const cp of Up.n) this.uniforms[cp] = this.uniformBits[cp];
-        var ip;
-        (0, mp.m)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (ip = this.ramp) || void 0 === ip || ip.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = Ap.b.CreateRGBATexture(this.rampTexels.texels, Up.k, 1, this.pw, !1, !1, Dp.d.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(TT) {
+        (0, YT.j)(this, this.uniforms, this.uniformBits, TT);
+        for (const mT of ZT.o) this.uniforms[mT] = this.uniformBits[mT];
+        var UT;
+        (0, YT.n)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (UT = this.ramp) || void 0 === UT || UT.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = lT.b.CreateRGBATexture(this.rampTexels.texels, ZT.i, 1, this.XZ, !1, !1, jT.b.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var pp;
-        this.records.dispose(), null === (pp = this.ramp) || void 0 === pp || pp.dispose(), this.ramp = null
+        var TT;
+        this.records.dispose(), null === (TT = this.ramp) || void 0 === TT || TT.dispose(), this.ramp = null
       }
     }
-    const qp = "the context was lost before the programs linked";
-    class Mp {
-      constructor(pp, ip) {
-        this.pw = pp, this.reportFailure = ip, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, Wp.c)(), this.engine = pp.gy(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = Ap.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, pp, !1, !1, Dp.d.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
+    const xT = "the context was lost before the programs linked";
+    class dT {
+      constructor(TT, UT) {
+        this.XZ = TT, this.reportFailure = UT, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, pT.c)(), this.engine = TT.eB(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = lT.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, TT, !1, !1, jT.b.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
       }
-      eJ(pp, ip) {
-        const cp = Up.l * this.engine.getCaps().maxTextureSize;
-        ip > cp && this.warnOnce(`capacity:${pp}`, `particle system ${pp} holds ${cp} particles, not ${ip}: its records texture's limit`);
-        const Op = new Rp(pp, Math.min(ip, cp), this, this.pw);
-        return this.pw.addParticleSystem(Op), Op
+      wV(TT, UT) {
+        const mT = ZT.l * this.engine.getCaps().maxTextureSize;
+        UT > mT && this.warnOnce(`capacity:${TT}`, `particle system ${TT} holds ${mT} particles, not ${UT}: its records texture's limit`);
+        const WT = new JT(TT, Math.min(UT, mT), this, this.XZ);
+        return this.XZ.addParticleSystem(WT), WT
       }
-      canDraw(pp) {
-        var ip, cp;
-        if (this.failed || null === (ip = pp.texture) || void 0 === ip || null === (cp = ip.mirror) || void 0 === cp || !cp.isReady()) return !1;
-        for (const Op of (0, Pp.o)(pp.blendMode))
-          if (!this.effectFor(Op).isReady()) return !1;
+      canDraw(TT) {
+        var UT, mT;
+        if (this.failed || null === (UT = TT.texture) || void 0 === UT || null === (mT = UT.mirror) || void 0 === mT || !mT.isReady()) return !1;
+        for (const WT of (0, LT.i)(TT.blendMode))
+          if (!this.effectFor(WT).isReady()) return !1;
         return !0
       }
-      disposeStopped(pp) {
-        this.pw._toBeDisposed.push(pp)
+      disposeStopped(TT) {
+        this.XZ._toBeDisposed.push(TT)
       }
-      remove(pp) {
-        this.pw.removeParticleSystem(pp), pp.releaseGl()
+      remove(TT) {
+        this.XZ.removeParticleSystem(TT), TT.releaseGl()
       }
-      render(pp) {
-        var ip;
-        if (!pp.isReady() || !pp.hasLiveParticles()) return 0;
+      render(TT) {
+        var UT;
+        if (!TT.isReady() || !TT.hasLiveParticles()) return 0;
         const {
-          engine: cp,
-          pw: Op,
-          frame: op
+          engine: mT,
+          XZ: WT,
+          frame: zT
         } = this;
-        pp.prepareDraw(this.warnOnce), pp.drawOffset(op, 0), op[3] = pp.drawTime();
-        const Ip = pp.ring.drawStart(),
-          Sp = pp.ring.drawCount(),
-          xp = null !== (ip = pp.ramp) && void 0 !== ip ? ip : this.whiteRamp;
-        cp.setState(!1);
-        for (const Lp of (0, Pp.o)(pp.blendMode)) {
-          const ip = this.effectFor(Lp);
-          cp.enableEffect(ip), ip.setTexture("gpuParticleTexture", pp.texture.mirror), ip.setTexture("gpuParticleRampTexture", xp), ip._bindTexture("gpuParticleRecords", pp.records), ip.setMatrix("gpuParticleView", Op.getViewMatrix()), ip.setMatrix("gpuParticleProjection", Op.getProjectionMatrix()), ip.setFloatArray4("gpuParticleSystem", pp.uniforms), ip.setFloat4("gpuParticleFrame", op[0], op[1], op[2], op[3]), ip.setFloat2("gpuParticleRange", Ip, Sp), ip.setFloat("gpuParticleRamp", pp.uniforms[Up.o.ramp]), cp.bindBuffers(this.vertexBuffers, null, ip), cp.setAlphaMode((0, Pp.l)(Lp)), cp.drawArraysType(Dp.d.MATERIAL_TriangleStripDrawMode, 0, 4, Sp), ip._bindTexture("gpuParticleRecords", null)
+        TT.prepareDraw(this.warnOnce), TT.drawOffset(zT, 0), zT[3] = TT.drawTime();
+        const MT = TT.ring.drawStart(),
+          gT = TT.ring.drawCount(),
+          nT = null !== (UT = TT.ramp) && void 0 !== UT ? UT : this.whiteRamp;
+        mT.setState(!1);
+        for (const HT of (0, LT.i)(TT.blendMode)) {
+          const UT = this.effectFor(HT);
+          mT.enableEffect(UT), UT.setTexture("gpuParticleTexture", TT.texture.mirror), UT.setTexture("gpuParticleRampTexture", nT), UT._bindTexture("gpuParticleRecords", TT.records), UT.setMatrix("gpuParticleView", WT.getViewMatrix()), UT.setMatrix("gpuParticleProjection", WT.getProjectionMatrix()), UT.setFloatArray4("gpuParticleSystem", TT.uniforms), UT.setFloat4("gpuParticleFrame", zT[0], zT[1], zT[2], zT[3]), UT.setFloat2("gpuParticleRange", MT, gT), UT.setFloat("gpuParticleRamp", TT.uniforms[ZT.q.ramp]), mT.bindBuffers(this.vertexBuffers, null, UT), mT.setAlphaMode((0, LT.h)(HT)), mT.drawArraysType(jT.b.MATERIAL_TriangleStripDrawMode, 0, 4, gT), UT._bindTexture("gpuParticleRecords", null)
         }
-        return cp.setAlphaMode(Dp.d.ALPHA_DISABLE), Sp
+        return mT.setAlphaMode(jT.b.ALPHA_DISABLE), gT
       }
-      awaitLink(pp) {
-        const ip = pp.getPipelineContext(),
-          cp = this.gl();
-        !this.failed && cp && (!ip || ip.isParallelCompiled && !ip.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : ip.isParallelCompiled && ip.program && (cp.getProgramParameter(ip.program, cp.LINK_STATUS) || this.fail(function(pp, ip, cp) {
-          if (pp.isContextLost()) return qp;
-          for (const [Op, op] of [
-              ["VERTEX SHADER", ip.vertexShader],
-              ["FRAGMENT SHADER", ip.fragmentShader]
+      awaitLink(TT) {
+        const UT = TT.getPipelineContext(),
+          mT = this.gl();
+        !this.failed && mT && (!UT || UT.isParallelCompiled && !UT.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : UT.isParallelCompiled && UT.program && (mT.getProgramParameter(UT.program, mT.LINK_STATUS) || this.fail(function(TT, UT, mT) {
+          if (TT.isContextLost()) return xT;
+          for (const [WT, zT] of [
+              ["VERTEX SHADER", UT.vertexShader],
+              ["FRAGMENT SHADER", UT.fragmentShader]
             ]) {
-            const ip = op && !pp.getShaderParameter(op, pp.COMPILE_STATUS) ? pp.getShaderInfoLog(op) : null;
-            if (ip) return `${Op} ${ip}`
+            const UT = zT && !TT.getShaderParameter(zT, TT.COMPILE_STATUS) ? TT.getShaderInfoLog(zT) : null;
+            if (UT) return `${WT} ${UT}`
           }
-          return pp.getProgramInfoLog(cp) || "a program did not link"
-        }(cp, ip, ip.program))))
+          return TT.getProgramInfoLog(mT) || "a program did not link"
+        }(mT, UT, UT.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(pp) {
-        return pp === Pp.d ? this.multiplyEffect : this.effect
+      effectFor(TT) {
+        return TT === LT.e ? this.multiplyEffect : this.effect
       }
-      createEffect(pp) {
-        return this.engine.createEffect(wp, [], ep, jp, pp, void 0, void 0, ((pp, ip) => {
-          var cp;
-          this.fail(null !== (cp = this.gl()) && void 0 !== cp && cp.isContextLost() ? qp : function(pp) {
-            const ip = pp.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(ip) ? "a program failed, its log not in this browser's stack" : ip.replace(/^Error: /, "")
-          }(ip))
+      createEffect(TT) {
+        return this.engine.createEffect(cT, [], bT, OT, TT, void 0, void 0, ((TT, UT) => {
+          var mT;
+          this.fail(null !== (mT = this.gl()) && void 0 !== mT && mT.isContextLost() ? xT : function(TT) {
+            const UT = TT.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(UT) ? "a program failed, its log not in this browser's stack" : UT.replace(/^Error: /, "")
+          }(UT))
         }))
       }
-      fail(pp) {
+      fail(TT) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${pp}`), this.reportFailure(pp);
-          for (const pp of this.pw.Wm.slice()) pp instanceof Rp && pp.disposeOnStop && pp.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${TT}`), this.reportFailure(TT);
+          for (const TT of this.XZ.EY.slice()) TT instanceof JT && TT.disposeOnStop && TT.dispose()
         }
       }
     }
-    var Cp = cp(40024);
-    class Ep extends Cp.d {
+    var wT = mT(39907);
+    class tT extends wT.b {
       createEffect() {
-        const pp = super.createEffect(...arguments);
-        return lp(pp), Xp.has(pp) || (Xp.add(pp), pp.onCompileObservable.add((() => {
-          lp(pp)
-        }))), pp
+        const TT = super.createEffect(...arguments);
+        return yT(TT), aT.has(TT) || (aT.add(TT), TT.onCompileObservable.add((() => {
+          yT(TT)
+        }))), TT
       }
     }
-    const Xp = new WeakSet;
+    const aT = new WeakSet;
 
-    function lp(pp) {
-      pp._vertexSourceCodeBeforeMigration = "", pp._fragmentSourceCodeBeforeMigration = ""
+    function yT(TT) {
+      TT._vertexSourceCodeBeforeMigration = "", TT._fragmentSourceCodeBeforeMigration = ""
     }
-    var Qp = cp(40405),
-      Jp = cp(41325),
-      Bp = cp(40159),
-      Np = cp(40365),
-      Tp = cp(40358),
-      fp = cp(40289),
-      bp = cp(41391),
-      hp = cp(37815),
-      ap = cp(41869),
-      np = cp(41871),
-      Fp = cp(41879),
-      gp = cp(40314),
-      Gp = cp(2949),
-      rp = cp(37713),
-      Zp = cp(40504),
-      zp = cp(37784),
-      sp = cp(37736);
+    var XT = mT(40316),
+      IT = mT(41256),
+      QT = mT(40039),
+      sT = mT(40274),
+      FT = mT(40270),
+      PT = mT(40192),
+      VT = mT(41327),
+      uT = mT(37733),
+      CT = mT(41745),
+      rT = mT(41751),
+      KT = mT(41759),
+      ST = mT(40215),
+      GT = mT(2985),
+      NT = mT(37602),
+      ET = mT(40440),
+      hT = mT(37687),
+      DT = mT(37625);
 
-    function Kp(pp) {
-      if (pp.visibility < 1 || !pp.isVisible || !pp.isEnabled() || pp.metadata[sp.f] || !pp.isReady()) return !0;
-      const ip = pp.Am;
-      if (!ip || 0 === ip.length) return !0;
-      for (let cp = 0; cp < ip.length; cp++) {
-        const Op = ip[cp],
-          op = Op.Ky();
-        if (!op || !op.isReadyForSubMesh(pp, Op, !1)) return !0
+    function oT(TT) {
+      if (TT.visibility < 1 || !TT.isVisible || !TT.isEnabled() || TT.metadata[DT.d] || !TT.isReady()) return !0;
+      const UT = TT.rY;
+      if (!UT || 0 === UT.length) return !0;
+      for (let mT = 0; mT < UT.length; mT++) {
+        const WT = UT[mT],
+          zT = WT.wB();
+        if (!zT || !zT.isReadyForSubMesh(TT, WT, !1)) return !0
       }
       return !1
     }
-    class Vp {
-      constructor(pp, ip) {
-        this.HP = pp, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, ip.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class AT {
+      constructor(TT, UT) {
+        this.Rl = TT, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, UT.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      mW(pp) {
-        var ip;
-        const cp = this.armed;
-        if (this.armed = !1, this.vis = null, !cp) return !1;
+      np(TT) {
+        var UT;
+        const mT = this.armed;
+        if (this.armed = !1, this.vis = null, !mT) return !1;
         this.culled = 0;
         const {
-          HP: Op
-        } = this, op = null === (ip = Op.Zk) || void 0 === ip ? void 0 : ip.visibility;
-        if (!op || !pp || Op.WU.yU) return !1;
-        if (!(Op.WP.FOp[0] >= zp.i)) return !1;
-        const Ip = pp.getProjectionMatrix().m;
-        if (0 !== Ip[15]) return !1;
-        const Sp = Op.BP,
-          xp = pp.globalPosition,
-          Lp = this.eye;
-        return Lp[0] = xp.x + Sp[0], Lp[1] = xp.y + Sp[1], Lp[2] = xp.z + Sp[2], !!op.eyeClear(Lp[0], Lp[1], Lp[2], pp.minZ, Ip, Op.WP) && (this.vis = op, this.passable.clear(), this.count = 0, !0)
+          Rl: WT
+        } = this, zT = null === (UT = WT.JY) || void 0 === UT ? void 0 : UT.visibility;
+        if (!zT || !TT || WT.GB.NB) return !1;
+        if (!(WT.Nl.YWT[0] >= hT.f)) return !1;
+        const MT = TT.getProjectionMatrix().m;
+        if (0 !== MT[15]) return !1;
+        const gT = WT.ZL,
+          nT = TT.globalPosition,
+          HT = this.eye;
+        return HT[0] = nT.x + gT[0], HT[1] = nT.y + gT[1], HT[2] = nT.z + gT[2], !!zT.eyeClear(HT[0], HT[1], HT[2], TT.minZ, MT, WT.Nl) && (this.vis = zT, this.passable.clear(), this.count = 0, !0)
       }
-      see(pp, ip) {
-        const cp = this.count++;
-        if (cp === this.cellSlots.length) {
-          const pp = new Int32Array(2 * cp);
-          pp.set(this.cellSlots), this.cellSlots = pp
+      see(TT, UT) {
+        const mT = this.count++;
+        if (mT === this.cellSlots.length) {
+          const TT = new Int32Array(2 * mT);
+          TT.set(this.cellSlots), this.cellSlots = TT
         }
-        this.cellSlots[cp] = ip, this.meshes[cp] = pp
+        this.cellSlots[mT] = UT, this.meshes[mT] = TT
       }
-      seeThrough(pp) {
-        this.passable.add(pp)
+      seeThrough(TT) {
+        this.passable.add(TT)
       }
-      finish(pp, ip) {
+      finish(TT, UT) {
         const {
-          vis: cp,
-          eye: Op,
-          meshes: op,
-          count: Ip,
-          cellSlots: Sp
+          vis: mT,
+          eye: WT,
+          meshes: zT,
+          count: MT,
+          cellSlots: gT
         } = this, {
-          WP: xp
-        } = this.HP, [Lp, Yp] = xp.FOp, Dp = null !== cp && cp.update(Op[0], Op[1], Op[2], xp.epp, Lp, Yp, this.passable);
-        let Ap = 0;
-        for (let Pp = 0; Pp < Ip; Pp++) {
-          const Op = op[Pp];
-          if (Dp) {
-            const pp = 3 * Sp[Pp];
-            if (pp >= 0 && !cp.isDrawn(ip[pp], ip[pp + 1], ip[pp + 2])) {
-              Ap++;
+          Nl: nT
+        } = this.Rl, [HT, kT] = nT.YWT, jT = null !== mT && mT.update(WT[0], WT[1], WT[2], nT.iTT, HT, kT, this.passable);
+        let lT = 0;
+        for (let LT = 0; LT < MT; LT++) {
+          const WT = zT[LT];
+          if (jT) {
+            const TT = 3 * gT[LT];
+            if (TT >= 0 && !mT.isDrawn(UT[TT], UT[TT + 1], UT[TT + 2])) {
+              lT++;
               continue
             }
           }
-          gp.g.prototype.push.call(pp, Op)
+          ST.f.prototype.push.call(TT, WT)
         }
-        op.fill(null, 0, Ip), this.count = 0, this.vis = null, this.culled = Ap
+        zT.fill(null, 0, MT), this.count = 0, this.vis = null, this.culled = lT
       }
     }
-    var ii = cp(37769),
-      ci = cp(37723),
-      Oi = cp(40476),
-      oi = cp(41884),
-      Ii = cp(40481),
-      Si = cp(40415);
-    let xi = 1;
-    const Li = new WeakSet;
+    var RT = mT(37673),
+      TU = mT(37617),
+      UU = mT(40413),
+      mU = mT(41768),
+      WU = mT(40418),
+      zU = mT(40335);
+    let MU = 1;
+    const gU = new WeakSet;
 
-    function Yi() {
-      return xi
+    function nU() {
+      return MU
     }
 
-    function Di() {
-      xi = xi >= 1073741823 ? 1 : xi + 1
+    function HU() {
+      MU = MU >= 1073741823 ? 1 : MU + 1
     }
 
-    function Ai(pp) {
-      const ip = pp.metadata;
-      if (!ip || !0 !== ip[rp.o]) return;
-      const cp = ip[rp.s],
-        Op = null === cp || void 0 === cp ? void 0 : cp._noaStamps;
-      if (!cp || !Op) return;
-      const op = cp.entries.indexOf(pp);
-      op >= 0 && (Op[op] = 0)
+    function kU(TT) {
+      const UT = TT.metadata;
+      if (!UT || !0 !== UT[NT.m]) return;
+      const mT = UT[NT.q],
+        WT = null === mT || void 0 === mT ? void 0 : mT._noaStamps;
+      if (!mT || !WT) return;
+      const zT = mT.entries.indexOf(TT);
+      zT >= 0 && (WT[zT] = 0)
     }
 
-    function Pi(pp) {
-      const ip = pp.Am;
-      for (let cp = 0; cp < ip.length; cp++) {
-        const pp = ip[cp].Ky();
-        if (pp && !pp.isFrozen) return !1
+    function jU(TT) {
+      const UT = TT.rY;
+      for (let mT = 0; mT < UT.length; mT++) {
+        const TT = UT[mT].wB();
+        if (TT && !TT.isFrozen) return !1
       }
-      for (let cp = 0; cp < ip.length; cp++) {
-        const pp = ip[cp].Ky();
-        pp && Li.add(pp)
+      for (let mT = 0; mT < UT.length; mT++) {
+        const TT = UT[mT].wB();
+        TT && gU.add(TT)
       }
       return !0
     }
-    let Wi = !1;
-    const yi = new WeakSet;
+    let lU = !1;
+    const LU = new WeakSet;
 
-    function Ui(pp, ip) {
-      const cp = pp[ip];
-      if ("function" !== typeof cp) throw new Error(`terrainDrawState: Babylon has no ${ip} to hook`);
-      return cp
+    function pU(TT, UT) {
+      const mT = TT[UT];
+      if ("function" !== typeof mT) throw new Error(`terrainDrawState: Babylon has no ${UT} to hook`);
+      return mT
     }
 
-    function wi(pp, ip, cp, Op, op) {
-      const Ip = cp.WP.epp,
-        Sp = new Map;
-      let xp = 0;
-      const Lp = new Vp(cp, pp),
-        Yp = new ii.d(Ip, pp.gy());
-      ! function(pp) {
-        if (yi.has(pp) || (yi.add(pp), pp.onContextLostObservable.add(Di), pp.Fy.add(Di)), Wi) return;
-        Wi = !0;
-        const ip = oi.e.prototype,
-          cp = Ui(ip, "_markSubMeshesAsDirty");
-        Object.assign(ip, {
-          _markSubMeshesAsDirty(pp) {
-            cp.call(this, pp), Ai(this)
+    function BU(TT, UT, mT, WT, zT) {
+      const MT = mT.Nl.iTT,
+        gT = new Map;
+      let nT = 0;
+      const HT = new AT(mT, TT),
+        kT = new RT.e(MT, TT.eB());
+      ! function(TT) {
+        if (LU.has(TT) || (LU.add(TT), TT.onContextLostObservable.add(HU), TT.OB.add(HU)), lU) return;
+        lU = !0;
+        const UT = mU.d.prototype,
+          mT = pU(UT, "_markSubMeshesAsDirty");
+        Object.assign(UT, {
+          _markSubMeshesAsDirty(TT) {
+            mT.call(this, TT), kU(this)
           }
         });
-        const Op = Ui(Si.b.prototype, "_syncParentEnabledState");
-        Object.assign(Si.b.prototype, {
+        const WT = pU(zU.d.prototype, "_syncParentEnabledState");
+        Object.assign(zU.d.prototype, {
           _syncParentEnabledState() {
-            Op.call(this), Ai(this)
+            WT.call(this), kU(this)
           }
         });
-        const op = Ui(Ii.d.prototype, "resetDrawCache");
-        Ii.d.prototype.resetDrawCache = function(pp, ip) {
-          op.call(this, pp, ip), Ai(this.getMesh())
+        const zT = pU(WU.e.prototype, "resetDrawCache");
+        WU.e.prototype.resetDrawCache = function(TT, UT) {
+          zT.call(this, TT, UT), kU(this.getMesh())
         };
-        const Ip = Oi.b.prototype,
-          Sp = Ui(Ip, "markDirty");
-        Ip.markDirty = function(pp) {
-          Sp.call(this, pp), Li.has(this) && Di()
+        const MT = UU.b.prototype,
+          gT = pU(MT, "markDirty");
+        MT.markDirty = function(TT) {
+          gT.call(this, TT), gU.has(this) && HU()
         };
-        const xp = Ui(Ip, "_markAllSubMeshesAsDirty");
-        Object.assign(Ip, {
-          _markAllSubMeshesAsDirty(pp) {
-            xp.call(this, pp), Li.has(this) && Di()
+        const nT = pU(MT, "_markAllSubMeshesAsDirty");
+        Object.assign(MT, {
+          _markAllSubMeshesAsDirty(TT) {
+            nT.call(this, TT), gU.has(this) && HU()
           }
         })
-      }(pp.gy());
-      let Dp = new Float64Array(384),
-        Ap = new Int32Array(64),
-        Pp = new Uint8Array(64),
-        Wp = new Float64Array(64),
-        yp = new Int32Array(192),
-        Up = 0;
-      const wp = [],
-        vp = new Float64Array(24),
-        tp = () => {
-          const pp = wp.pop();
-          return void 0 !== pp ? (Ap[pp] = 0, pp) : (Up === Ap.length && (Dp = vi(Dp, new Float64Array(2 * Dp.length)), Ap = vi(Ap, new Int32Array(2 * Ap.length)), Pp = vi(Pp, new Uint8Array(2 * Pp.length)), Wp = vi(Wp, new Float64Array(2 * Wp.length)), yp = vi(yp, new Int32Array(2 * yp.length))), Up++)
+      }(TT.eB());
+      let jT = new Float64Array(384),
+        lT = new Int32Array(64),
+        LT = new Uint8Array(64),
+        pT = new Float64Array(64),
+        BT = new Int32Array(192),
+        ZT = 0;
+      const cT = [],
+        vT = new Float64Array(24),
+        fT = () => {
+          const TT = cT.pop();
+          return void 0 !== TT ? (lT[TT] = 0, TT) : (ZT === lT.length && (jT = ZU(jT, new Float64Array(2 * jT.length)), lT = ZU(lT, new Int32Array(2 * lT.length)), LT = ZU(LT, new Uint8Array(2 * LT.length)), pT = ZU(pT, new Float64Array(2 * pT.length)), BT = ZU(BT, new Int32Array(2 * BT.length))), ZT++)
         },
-        Hp = pp => {
-          const ip = 6 * pp._noaSlot,
-            cp = pp.KOp[0],
-            Op = pp.KOp[1];
-          Dp[ip] = cp.x, Dp[ip + 1] = cp.y, Dp[ip + 2] = cp.z, Dp[ip + 3] = Op.x, Dp[ip + 4] = Op.y, Dp[ip + 5] = Op.z
+        qT = TT => {
+          const UT = 6 * TT._noaSlot,
+            mT = TT.XWT[0],
+            WT = TT.XWT[1];
+          jT[UT] = mT.x, jT[UT + 1] = mT.y, jT[UT + 2] = mT.z, jT[UT + 3] = WT.x, jT[UT + 4] = WT.y, jT[UT + 5] = WT.z
         },
-        dp = (pp, ip, cp) => {
-          if (!cp) return Lp.see(pp, -1), !1;
-          const Op = Kp(pp);
-          return Op && Lp.seeThrough(Wp[ip]), Lp.see(pp, ip), !Op
+        iT = (TT, UT, mT) => {
+          if (!mT) return HT.see(TT, -1), !1;
+          const WT = oT(TT);
+          return WT && HT.seeThrough(pT[UT]), HT.see(TT, UT), !WT
         };
-      let ep = -1;
-      return pp.getActiveMeshCandidates = () => {
-        const cp = pp.frustumPlanes,
-          Op = ip._selectionContent;
-        Op.reset(), (cp => {
-          const Op = pp.frustumPlanes;
-          xp = xp + 1 | 0 || 1;
-          const op = ip.blocks,
-            Ip = Lp.mW(pp.activeCamera),
-            Sp = Ip && !0;
-          if (Sp) {
-            const ip = pp.gy().currentRenderPassId;
-            ip !== ep && (ep = ip, Di())
+      let bT = -1;
+      return TT.getActiveMeshCandidates = () => {
+        const mT = TT.frustumPlanes,
+          WT = UT._selectionContent;
+        WT.reset(), (mT => {
+          const WT = TT.frustumPlanes;
+          nT = nT + 1 | 0 || 1;
+          const zT = UT.blocks,
+            MT = HT.np(TT.activeCamera),
+            gT = MT && !0;
+          if (gT) {
+            const UT = TT.eB().currentRenderPassId;
+            UT !== bT && (bT = UT, HU())
           }
-          const Yp = Yi(),
-            Wp = Sp && !1;
-          op.length > 0 && function(pp, ip) {
-            for (let cp = 0; cp < 6; cp++) {
-              const Op = pp[cp],
-                op = Op.normal;
-              ip[4 * cp] = op.x, ip[4 * cp + 1] = op.y, ip[4 * cp + 2] = op.z, ip[4 * cp + 3] = Op.d
+          const kT = nU(),
+            pT = gT && !1;
+          zT.length > 0 && function(TT, UT) {
+            for (let mT = 0; mT < 6; mT++) {
+              const WT = TT[mT],
+                zT = WT.normal;
+              UT[4 * mT] = zT.x, UT[4 * mT + 1] = zT.y, UT[4 * mT + 2] = zT.z, UT[4 * mT + 3] = WT.d
             }
-          }(Op, vp);
-          const Up = Dp,
-            wp = Ap,
-            tp = Pp;
-          for (let pp = 0; pp < op.length; pp++) {
-            const ip = op[pp];
-            if (!Zp.d.IsInFrustum(ip.KOp, Op)) continue;
-            const Dp = ip.entries;
+          }(WT, vT);
+          const ZT = jT,
+            cT = lT,
+            fT = LT;
+          for (let TT = 0; TT < zT.length; TT++) {
+            const UT = zT[TT];
+            if (!ET.e.IsInFrustum(UT.XWT, WT)) continue;
+            const jT = UT.entries;
             {
-              const pp = ip._noaSlots,
-                Op = ip._noaStamps,
-                op = ip._noaTerrain;
-              for (let ip = 0; ip < Dp.length; ip++) {
-                const Ap = pp[ip];
-                if (wp[Ap] !== xp && (wp[Ap] = xp, tp[Ap] = ti(Up, 6 * Ap, vp) ? 1 : 0), 0 === tp[Ap]) continue;
-                const Pp = Dp[ip];
-                if (Sp && Op[ip] === Yp) Wp && 1 === op[ip] && Kp(Pp) && 0, Lp.see(Pp, 1 === op[ip] ? Ap : -1);
-                else if (Sp) {
-                  Op[ip] = Yp;
-                  const pp = !0 === Pp.metadata[ci.n];
-                  op[ip] = pp ? 1 : 0;
-                  const cp = dp(Pp, Ap, pp);
-                  !pp || cp && Pi(Pp) || (Op[ip] = 0)
-                } else Ip ? dp(Pp, Ap, !0 === Pp.metadata[ci.n]) : gp.g.prototype.push.call(cp, Pp)
+              const TT = UT._noaSlots,
+                WT = UT._noaStamps,
+                zT = UT._noaTerrain;
+              for (let UT = 0; UT < jT.length; UT++) {
+                const lT = TT[UT];
+                if (cT[lT] !== nT && (cT[lT] = nT, fT[lT] = cU(ZT, 6 * lT, vT) ? 1 : 0), 0 === fT[lT]) continue;
+                const LT = jT[UT];
+                if (gT && WT[UT] === kT) pT && 1 === zT[UT] && oT(LT) && 0, HT.see(LT, 1 === zT[UT] ? lT : -1);
+                else if (gT) {
+                  WT[UT] = kT;
+                  const TT = !0 === LT.metadata[TU.i];
+                  zT[UT] = TT ? 1 : 0;
+                  const mT = iT(LT, lT, TT);
+                  !TT || mT && jU(LT) || (WT[UT] = 0)
+                } else MT ? iT(LT, lT, !0 === LT.metadata[TU.i]) : ST.f.prototype.push.call(mT, LT)
               }
               continue
             }
           }
-          Ip && Lp.finish(cp, yp)
-        })(Op), Yp.apply(Op, pp.activeCamera);
-        const Ip = ip.sOp;
-        for (let pp = 0; pp < Ip.length; pp++) {
-          const ip = Ip[pp];
-          ip.isEnabled() && gp.g.prototype.push.call(Op, ip)
+          MT && HT.finish(mT, BT)
+        })(WT), kT.apply(WT, TT.activeCamera);
+        const MT = UT.yWT;
+        for (let TT = 0; TT < MT.length; TT++) {
+          const UT = MT[TT];
+          UT.isEnabled() && ST.f.prototype.push.call(WT, UT)
         }
-        return op(Op, cp), Op
+        return zT(WT, mT), WT
       }, {
-        iop: () => Lp.culled,
-        TOp: (pp, ip) => {
-          const op = Math.floor(ip[0] / Ip),
-            xp = Math.floor(ip[1] / Ip),
-            Lp = Math.floor(ip[2] / Ip),
-            Yp = `${op}|${xp}|${Lp}`;
-          let Dp = Sp.get(Yp);
-          if (!Dp) {
-            const pp = [0, 0, 0];
-            cp.uip([op * Ip - 1, xp * Ip - 1, Lp * Ip - 1], null, pp), Dp = Object.assign(Op(pp, Ip + 2), {
-              Oop: Yp,
-              oop: 0,
+        IWT: () => HT.culled,
+        fWT: (TT, UT) => {
+          const zT = Math.floor(UT[0] / MT),
+            nT = Math.floor(UT[1] / MT),
+            HT = Math.floor(UT[2] / MT),
+            kT = `${zT}|${nT}|${HT}`;
+          let jT = gT.get(kT);
+          if (!jT) {
+            const TT = [0, 0, 0];
+            mT.qUT([zT * MT - 1, nT * MT - 1, HT * MT - 1], null, TT), jT = Object.assign(WT(TT, MT + 2), {
+              QWT: kT,
+              sWT: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: tp()
-            }), Hp(Dp), Wp[Dp._noaSlot] = (0, Gp.j)(op, xp, Lp), yp[3 * Dp._noaSlot] = op, yp[3 * Dp._noaSlot + 1] = xp, yp[3 * Dp._noaSlot + 2] = Lp, Sp.set(Yp, Dp)
+              _noaSlot: fT()
+            }), qT(jT), pT[jT._noaSlot] = (0, GT.j)(zT, nT, HT), BT[3 * jT._noaSlot] = zT, BT[3 * jT._noaSlot + 1] = nT, BT[3 * jT._noaSlot + 2] = HT, gT.set(kT, jT)
           }
-          Dp.oop++, pp.metadata[rp.w] = Dp
+          jT.sWT++, TT.metadata[NT.r] = jT
         },
-        xJ: pp => {
-          const ip = pp.metadata[rp.w];
-          ip && (ip.oop--, ip.oop <= 0 && (Sp.delete(ip.Oop), wp.push(ip._noaSlot)), pp.metadata[rp.w] = null)
+        cV: TT => {
+          const UT = TT.metadata[NT.r];
+          UT && (UT.sWT--, UT.sWT <= 0 && (gT.delete(UT.QWT), cT.push(UT._noaSlot)), TT.metadata[NT.r] = null)
         },
-        zOp: (pp, ip) => {
-          const cp = pp,
-            Op = ip.metadata[rp.w];
-          (cp._noaSlots ??= []).push(Op._noaSlot), (cp._noaStamps ??= []).push(0), (cp._noaTerrain ??= []).push(0), cp.entries.push(ip)
+        aWT: (TT, UT) => {
+          const mT = TT,
+            WT = UT.metadata[NT.r];
+          (mT._noaSlots ??= []).push(WT._noaSlot), (mT._noaStamps ??= []).push(0), (mT._noaTerrain ??= []).push(0), mT.entries.push(UT)
         },
-        removeEntry: (pp, ip) => {
-          const cp = pp,
-            Op = cp.entries,
-            op = Op.indexOf(ip);
-          if (op < 0) return;
-          const Ip = cp._noaSlots,
-            Sp = cp._noaStamps,
-            xp = cp._noaTerrain,
-            Lp = Op.length - 1;
-          Op[op] = Op[Lp], Ip[op] = Ip[Lp], Sp[op] = Sp[Lp], xp[op] = xp[Lp], Op.pop(), Ip.pop(), Sp.pop(), xp.pop()
+        removeEntry: (TT, UT) => {
+          const mT = TT,
+            WT = mT.entries,
+            zT = WT.indexOf(UT);
+          if (zT < 0) return;
+          const MT = mT._noaSlots,
+            gT = mT._noaStamps,
+            nT = mT._noaTerrain,
+            HT = WT.length - 1;
+          WT[zT] = WT[HT], MT[zT] = MT[HT], gT[zT] = gT[HT], nT[zT] = nT[HT], WT.pop(), MT.pop(), gT.pop(), nT.pop()
         },
-        K9: pp => {
-          for (const ip of Sp.values()) {
-            ip.nOp.Iop(pp), ip.aOp.Iop(pp);
-            for (const cp of ip.KOp) cp.Iop(pp);
-            Hp(ip)
+        W9: TT => {
+          for (const UT of gT.values()) {
+            UT.eWT.FWT(TT), UT.OWT.FWT(TT);
+            for (const mT of UT.XWT) mT.FWT(TT);
+            qT(UT)
           }
         }
       }
     }
 
-    function vi(pp, ip) {
-      return ip.set(pp), ip
+    function ZU(TT, UT) {
+      return UT.set(TT), UT
     }
 
-    function ti(pp, ip, cp) {
-      const Op = pp[ip],
-        op = pp[ip + 1],
-        Ip = pp[ip + 2],
-        Sp = pp[ip + 3],
-        xp = pp[ip + 4],
-        Lp = pp[ip + 5];
-      for (let Yp = 0; Yp < 24; Yp += 4) {
-        const pp = cp[Yp],
-          ip = cp[Yp + 1],
-          Dp = cp[Yp + 2];
-        if (!(pp * (pp >= 0 ? Sp : Op) + ip * (ip >= 0 ? xp : op) + Dp * (Dp >= 0 ? Lp : Ip) + cp[Yp + 3] >= 0)) return !1
+    function cU(TT, UT, mT) {
+      const WT = TT[UT],
+        zT = TT[UT + 1],
+        MT = TT[UT + 2],
+        gT = TT[UT + 3],
+        nT = TT[UT + 4],
+        HT = TT[UT + 5];
+      for (let kT = 0; kT < 24; kT += 4) {
+        const TT = mT[kT],
+          UT = mT[kT + 1],
+          jT = mT[kT + 2];
+        if (!(TT * (TT >= 0 ? gT : WT) + UT * (UT >= 0 ? nT : zT) + jT * (jT >= 0 ? HT : MT) + mT[kT + 3] >= 0)) return !1
       }
       return !0
     }
-    var Hi = cp(37996);
-    class di {
-      constructor(pp, ip) {
-        var cp = pp.pw;
-        cp.uOp(new Fp.c(cp));
-        var Op = new ap.d(Lp);
-        cp.xop = Op, Op.blocks = [];
-        var op, Ip = {},
-          xp = [];
-        this.textPlanes = xp, this.iop = () => op.iop(), this.K9 = pp => {
-          Dp(Op, pp), op.K9(pp)
-        }, this.TOp = (ip, cp, Sp) => {
-          if (!ip.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!ip.metadata[rp.s] && !ip.metadata[rp.l]) {
-            if (!cp) {
-              var Lp = Op.sOp;
-              if (ip.metadata[rp.B] && !ip.parent) {
-                Lp = xp;
-                var Dp = ip.bJ().Yop;
-                ip.metadata[rp.C] = Dp.center.length() + Dp.radius, ip.Gy = !0
+    var vU = mT(37895);
+    class fU {
+      constructor(TT, UT) {
+        var mT = TT.XZ;
+        mT.WWT(new KT.d(mT));
+        var WT = new CT.c(HT);
+        mT.VWT = WT, WT.blocks = [];
+        var zT, MT = {},
+          nT = [];
+        this.textPlanes = nT, this.IWT = () => zT.IWT(), this.W9 = TT => {
+          jT(WT, TT), zT.W9(TT)
+        }, this.fWT = (UT, mT, gT) => {
+          if (!UT.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!UT.metadata[NT.q] && !UT.metadata[NT.k]) {
+            if (!mT) {
+              var HT = WT.yWT;
+              if (UT.metadata[NT.y] && !UT.parent) {
+                HT = nT;
+                var jT = UT.rV().rWT;
+                UT.metadata[NT.A] = jT.center.length() + jT.radius, UT.YB = !0
               }
-              return Lp.push(ip), ip.metadata[rp.h] = Lp, void(ip.metadata[rp.l] = !0)
+              return HT.push(UT), UT.metadata[NT.f] = HT, void(UT.metadata[NT.k] = !0)
             }
-            var Pp = Math.floor(Sp[0] / Yp),
-              Wp = Math.floor(Sp[1] / Yp),
-              yp = Math.floor(Sp[2] / Yp),
-              Up = Pp + "|" + Wp + "|" + yp,
-              wp = Ip[Up];
-            if (!wp) {
-              var vp = [Pp * Yp, Wp * Yp, yp * Yp],
-                tp = [0, 0, 0];
-              pp.HP.uip(vp, null, tp), wp = Ap(tp, Yp), Op.blocks.push(wp), Ip[Up] = wp, wp.Oop = Up
+            var LT = Math.floor(gT[0] / kT),
+              pT = Math.floor(gT[1] / kT),
+              BT = Math.floor(gT[2] / kT),
+              ZT = LT + "|" + pT + "|" + BT,
+              cT = MT[ZT];
+            if (!cT) {
+              var vT = [LT * kT, pT * kT, BT * kT],
+                fT = [0, 0, 0];
+              TT.Rl.qUT(vT, null, fT), cT = lT(fT, kT), WT.blocks.push(cT), MT[ZT] = cT, cT.QWT = ZT
             }
-            op.TOp(ip, Sp), op.zOp(wp, ip), wp.oop = (wp.oop || 0) + 1, ip.metadata[rp.s] = wp, ip.metadata[rp.o] = !0, ip.Gy = !0
+            zT.fWT(UT, gT), zT.aWT(cT, UT), cT.sWT = (cT.sWT || 0) + 1, UT.metadata[NT.q] = cT, UT.metadata[NT.m] = !0, UT.YB = !0
           }
-        }, this.xJ = pp => {
-          if (pp.metadata) {
-            pp.metadata[rp.l] && ((0, Gp.l)(pp.metadata[rp.h], pp), pp.metadata[rp.l] = !1), pp.metadata[rp.h] === xp && (pp.Gy = !1), pp.metadata[rp.h] = void 0, pp.metadata[rp.C] = void 0;
-            var ip = pp.metadata[rp.s];
-            ip && ip.entries && (pp.metadata[rp.o] && op.removeEntry(ip, pp), ip.oop--, ip.oop <= 0 && (delete Ip[ip.Oop], (0, Gp.l)(Op.blocks, ip))), op.xJ(pp), pp.metadata[rp.s] = null, pp.metadata[rp.o] = !1
+        }, this.cV = TT => {
+          if (TT.metadata) {
+            TT.metadata[NT.k] && ((0, GT.m)(TT.metadata[NT.f], TT), TT.metadata[NT.k] = !1), TT.metadata[NT.f] === nT && (TT.YB = !1), TT.metadata[NT.f] = void 0, TT.metadata[NT.A] = void 0;
+            var UT = TT.metadata[NT.q];
+            UT && UT.entries && (TT.metadata[NT.m] && zT.removeEntry(UT, TT), UT.sWT--, UT.sWT <= 0 && (delete MT[UT.QWT], (0, GT.m)(WT.blocks, UT))), zT.cV(TT), TT.metadata[NT.q] = null, TT.metadata[NT.m] = !1
           }
-        }, this.h_ = function(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (pp.metadata[rp.s]) {
-            if (pp.metadata[rp.o] === ip) return;
-            var cp = pp.metadata[rp.s];
-            cp && cp.entries && (ip ? op.zOp(cp, pp) : op.removeEntry(cp, pp)), pp.metadata[rp.o] = ip
+        }, this.t5 = function(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (TT.metadata[NT.q]) {
+            if (TT.metadata[NT.m] === UT) return;
+            var mT = TT.metadata[NT.q];
+            mT && mT.entries && (UT ? zT.aWT(mT, TT) : zT.removeEntry(mT, TT)), TT.metadata[NT.m] = UT
           } else {
-            if (pp.metadata[rp.l] === ip) return;
-            var Ip = pp.metadata[rp.h] || Op.sOp;
-            ip ? Ip.push(pp) : (0, Gp.l)(Ip, pp), pp.metadata[rp.l] = ip
+            if (TT.metadata[NT.k] === UT) return;
+            var MT = TT.metadata[NT.f] || WT.yWT;
+            UT ? MT.push(TT) : (0, GT.m)(MT, TT), TT.metadata[NT.k] = UT
           }
         };
-        var Lp = () => {},
-          Yp = ip * pp.HP.WP.epp,
-          Dp = (pp, ip) => {
-            pp.blocks.forEach((pp => {
-              pp.nOp.Iop(ip), pp.aOp.Iop(ip), pp.KOp.forEach((pp => pp.Iop(ip))), pp.blocks && Dp(pp, ip)
+        var HT = () => {},
+          kT = UT * TT.Rl.Nl.iTT,
+          jT = (TT, UT) => {
+            TT.blocks.forEach((TT => {
+              TT.eWT.FWT(UT), TT.OWT.FWT(UT), TT.XWT.forEach((TT => TT.FWT(UT))), TT.blocks && jT(TT, UT)
             }))
           },
-          Ap = (pp, ip) => {
-            var cp = new Sp.Zy(pp[0], pp[1], pp[2]),
-              Op = new Sp.Zy(pp[0] + ip, pp[1] + ip, pp[2] + ip);
-            return new np.b(cp, Op, void 0, void 0, void 0, Lp)
+          lT = (TT, UT) => {
+            var mT = new gT.JB(TT[0], TT[1], TT[2]),
+              WT = new gT.JB(TT[0] + UT, TT[1] + UT, TT[2] + UT);
+            return new rT.d(mT, WT, void 0, void 0, void 0, HT)
           };
-        op = wi(cp, Op, pp.HP, Ap, ((pp, ip) => {
-          for (var cp = 0; cp < xp.length; cp++) {
-            var Op = xp[cp];
-            Op.isEnabled(!1) && ((0, Hi.d)(Op, ip) && gp.g.prototype.push.call(pp, Op))
+        zT = BU(mT, WT, TT.Rl, lT, ((TT, UT) => {
+          for (var mT = 0; mT < nT.length; mT++) {
+            var WT = nT[mT];
+            WT.isEnabled(!1) && ((0, vU.d)(WT, UT) && ST.f.prototype.push.call(TT, WT))
           }
         }))
       }
     }
 
-    function ei(pp) {
+    function qU(TT) {
       const {
-        holderPosition: ip,
-        holderRotation: cp,
-        tV: Op,
-        fov: op,
-        near: Ip,
-        far: Sp
-      } = pp.model.wV, xp = pp.vop;
-      xp.position.i5(ip[0], ip[1], ip[2]), xp.rotation.i5(cp[0], cp[1], cp[2]);
-      const Lp = pp.camera;
-      Lp.position.i5(Op[0], Op[1], Op[2]), Lp.fov = op, Lp.minZ = Ip, Lp.maxZ = Sp
+        holderPosition: UT,
+        holderRotation: mT,
+        JA: WT,
+        fov: zT,
+        near: MT,
+        far: gT
+      } = TT.model.HA, nT = TT.DWT;
+      nT.position.J9(UT[0], UT[1], UT[2]), nT.rotation.J9(mT[0], mT[1], mT[2]);
+      const HT = TT.camera;
+      HT.position.J9(WT[0], WT[1], WT[2]), HT.fov = zT, HT.minZ = MT, HT.maxZ = gT
     }
 
-    function ui(pp) {
-      const ip = pp.gy(),
-        cp = ip,
-        Op = cp._gl;
-      if (!Op || cp.eU < 2 || ip.lOp || Op.getParameter(Op.DEPTH_BITS) < 24) return !1;
-      const op = pp._renderingManager,
-        Ip = op.getRenderingGroup(-1),
-        Sp = op.getRenderingGroup(0),
-        xp = Np.b.prototype.render;
-      return Ip.render = function(pp, ip, cp, Op, op, Ip, Lp, Yp, Dp) {
-        (pp || Sp._empty) && xp.call(this, pp, ip, cp, Op, op, Ip, Lp, Yp, Dp)
-      }, Sp.render = function(pp, cp, op, Sp) {
-        let Lp = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Yp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ap = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          Pp = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Wp = arguments.length > 8 ? arguments[8] : void 0;
-        pp ? xp.call(this, pp, cp, op, Sp, Lp, Yp, Ap, Pp, Wp) : (ip.setAlphaMode(Dp.d.ALPHA_DISABLE), xp.call(this, null, !1, !1, Sp, Lp, Yp, Ap, !1), Ip._empty || (Op.depthRange(1, 1), xp.call(Ip, null, cp, op, Sp, Lp, Yp, Ap, Pp, Wp), Op.depthRange(0, 1)), xp.call(this, null, cp, op, Sp, !1, !1, !1, Pp, Wp))
+    function iU(TT) {
+      const UT = TT.eB(),
+        mT = UT,
+        WT = mT._gl;
+      if (!WT || mT.TZ < 2 || UT.pWT || WT.getParameter(WT.DEPTH_BITS) < 24) return !1;
+      const zT = TT._renderingManager,
+        MT = zT.getRenderingGroup(-1),
+        gT = zT.getRenderingGroup(0),
+        nT = sT.b.prototype.render;
+      return MT.render = function(TT, UT, mT, WT, zT, MT, HT, kT, jT) {
+        (TT || gT._empty) && nT.call(this, TT, UT, mT, WT, zT, MT, HT, kT, jT)
+      }, gT.render = function(TT, mT, zT, gT) {
+        let HT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          kT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          lT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          LT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          pT = arguments.length > 8 ? arguments[8] : void 0;
+        TT ? nT.call(this, TT, mT, zT, gT, HT, kT, lT, LT, pT) : (UT.setAlphaMode(jT.b.ALPHA_DISABLE), nT.call(this, null, !1, !1, gT, HT, kT, lT, !1), MT._empty || (WT.depthRange(1, 1), nT.call(MT, null, mT, zT, gT, HT, kT, lT, LT, pT), WT.depthRange(0, 1)), nT.call(this, null, mT, zT, gT, !1, !1, !1, LT, pT))
       }, !0
     }
 
-    function ji(pp, ip) {
-      return [ip, hp.f].map(((ip, cp) => {
-        const Op = new op.d("light", Sp.Zy.FromArray(ip), pp);
-        return Op.diffuse = Ip.Color3.FromArray([1, 1, 1]), Op.specular = Ip.Color3.FromArray([1, 1, 1]), Op.intensity = hp.b[cp], Op
+    function bU(TT, UT) {
+      return [UT, uT.d].map(((UT, mT) => {
+        const WT = new zT.e("light", gT.JB.FromArray(UT), TT);
+        return WT.diffuse = MT.Color3.FromArray([1, 1, 1]), WT.specular = MT.Color3.FromArray([1, 1, 1]), WT.intensity = uT.c[mT], WT
       }))
     }
-    class ki extends Lp.e {
+    class OU extends HT.e {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(pp) {
-        var ip;
-        this.heldTexture = pp, this.particleTexture = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.mirror) && void 0 !== ip ? ip : null
+      set texture(TT) {
+        var UT;
+        this.heldTexture = TT, this.particleTexture = null !== (UT = null === TT || void 0 === TT ? void 0 : TT.mirror) && void 0 !== UT ? UT : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        pp && (this.particleTexture = null, (0, Yp.C)(this.heldTexture), this.heldTexture = null), super.dispose(pp, ip, cp)
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        TT && (this.particleTexture = null, (0, kT.I)(this.heldTexture), this.heldTexture = null), super.dispose(TT, UT, mT)
       }
     }
-    const mi = Op.c.Zero();
-    const Ri = {
-      Zcp: function(pp, ip) {
-        return new Ep(pp, ip.Fcp, {
-          preserveDrawingBuffer: ip.preserveDrawingBuffer,
+    const eU = WT.d.Zero();
+    const YU = {
+      ymT: function(TT, UT) {
+        return new tT(TT, UT.dmT, {
+          preserveDrawingBuffer: UT.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      jop: function(pp, ip) {
-        ! function(pp, ip, cp) {
-          const Op = new fp.c(pp.engine);
-          pp.pw = Op, Op.detachControl(), Op.autoClear = !1, Tp.d.MIN_RENDERINGGROUPS = -1;
-          for (let Ip = Tp.d.MIN_RENDERINGGROUPS; Ip <= 1; Ip++) Op.setRenderingOrder(Ip, Np.b.PainterSortCompare, Np.b.PainterSortCompare, Np.b.PainterSortCompare);
-          Op.setRenderingAutoClearDepthStencil(0, !1), Bp.b.Enabled = !1, pp.yop = new di(pp, Math.round(ip.Uop)), pp.vop = new Jp.b("camHolder", Op), pp.camera = new Qp.b("camera", new Sp.Zy(0, 0, 0), Op), pp.camera.parent = pp.vop, ei(pp), (0, hp.i)(pp, ((pp, ip, cp) => (0, bp.f)(ip, cp, pp.pw))), Op.clearColor = Ip.b.FromArray(ip.clearColor), Op.ambientColor = Ip.Color3.FromArray(ip.ambientColor);
-          const op = cp(Op, ip.uop);
-          Op.onNewLightAddedObservable.add((pp => {
-            op.some((ip => ip === pp)) || console.error(`Light "${pp.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), Op.skipPointerMovePicking = !0
-        }(pp, ip, ji), ui(pp.pw)
+      RWT: function(TT, UT) {
+        ! function(TT, UT, mT) {
+          const WT = new PT.b(TT.engine);
+          TT.XZ = WT, WT.detachControl(), WT.autoClear = !1, FT.d.MIN_RENDERINGGROUPS = -1;
+          for (let MT = FT.d.MIN_RENDERINGGROUPS; MT <= 1; MT++) WT.setRenderingOrder(MT, sT.b.PainterSortCompare, sT.b.PainterSortCompare, sT.b.PainterSortCompare);
+          WT.setRenderingAutoClearDepthStencil(0, !1), QT.b.Enabled = !1, TT.NWT = new fU(TT, Math.round(UT.EWT)), TT.DWT = new IT.d("camHolder", WT), TT.camera = new XT.b("camera", new gT.JB(0, 0, 0), WT), TT.camera.parent = TT.DWT, qU(TT), (0, uT.g)(TT, ((TT, UT, mT) => (0, VT.i)(UT, mT, TT.XZ))), WT.clearColor = MT.e.FromArray(UT.clearColor), WT.ambientColor = MT.Color3.FromArray(UT.ambientColor);
+          const zT = mT(WT, UT.AWT);
+          WT.onNewLightAddedObservable.add((TT => {
+            zT.some((UT => UT === TT)) || console.error(`Light "${TT.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), WT.skipPointerMovePicking = !0
+        }(TT, UT, bU), iU(TT.XZ)
       },
-      wop: ei,
-      setBabylonFog: function(pp, ip, cp, Op) {
-        const op = pp.pw;
-        op.fogMode = 3, op.fogStart = ip, op.fogEnd = cp, op.fogColor.set(Op[0], Op[1], Op[2])
+      hWT: qU,
+      setBabylonFog: function(TT, UT, mT, WT) {
+        const zT = TT.XZ;
+        zT.fogMode = 3, zT.fogStart = UT, zT.fogEnd = mT, zT.fogColor.set(WT[0], WT[1], WT[2])
       },
-      Rop: function(pp, ip, cp) {
-        return pp.engine.eU >= 2 && (pp.qop || (pp.qop = new Mp(pp.pw, pp.Mop)), !pp.qop.failed) ? pp.qop.eJ(ip, cp) : new ki(ip, cp, pp.pw)
+      MzT: function(TT, UT, mT) {
+        return TT.engine.TZ >= 2 && (TT.gzT || (TT.gzT = new dT(TT.XZ, TT.nzT)), !TT.gzT.failed) ? TT.gzT.wV(UT, mT) : new OU(UT, mT, TT.XZ)
       },
-      Xop: function(pp, ip) {
-        pp.pw.Wm.forEach((cp => {
-          if (cp instanceof Rp) return void cp.K9(ip, pp.HP.BP);
-          const Op = cp;
-          if (Op.emitter.getConnectedParticleSystems)
-            for (const pp of Op._particles) pp.position.set(pp.position.x - ip[0], pp.position.y - ip[1], pp.position.z - ip[2]);
+      kzT: function(TT, UT) {
+        TT.XZ.EY.forEach((mT => {
+          if (mT instanceof JT) return void mT.W9(UT, TT.Rl.ZL);
+          const WT = mT;
+          if (WT.emitter.getConnectedParticleSystems)
+            for (const TT of WT._particles) TT.position.set(TT.position.x - UT[0], TT.position.y - UT[1], TT.position.z - UT[2]);
           else {
-            if (!Op.worldOffset) throw new Error("Particle system has no world offset");
-            Op.worldOffset.x = -pp.HP.BP[0], Op.worldOffset.y = -pp.HP.BP[1], Op.worldOffset.z = -pp.HP.BP[2]
+            if (!WT.worldOffset) throw new Error("Particle system has no world offset");
+            WT.worldOffset.x = -TT.Rl.ZL[0], WT.worldOffset.y = -TT.Rl.ZL[1], WT.worldOffset.z = -TT.Rl.ZL[2]
           }
         }))
       },
-      linesFromArrays: function(pp, ip, cp) {
-        const Op = new xp.b(ip, pp.pw, null, void 0, void 0, !1);
-        return (0, bp.e)(ip, cp, pp.pw, Op), Op
+      linesFromArrays: function(TT, UT, mT) {
+        const WT = new nT.b(UT, TT.XZ, null, void 0, void 0, !1);
+        return (0, VT.f)(UT, mT, TT.XZ, WT), WT
       },
-      iw: Ai,
-      Eop: function(pp, ip) {
-        return mi.origin.rM(ip.origin), mi.direction.rM(ip.direction), mi.length = ip.length, mi.epsilon = ip.epsilon, mi.Eop(pp, !1, void 0, !1, void 0, !0).pickedPoint
+      IZ: kU,
+      HzT: function(TT, UT) {
+        return eU.origin.Gw(UT.origin), eU.direction.Gw(UT.direction), eU.length = UT.length, eU.epsilon = UT.epsilon, eU.HzT(TT, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  41345: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => ap,
-      d: () => tp,
-      g: () => Zp
+  41269: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => CT,
+      h: () => fT,
+      i: () => ET
     });
-    var Op = cp(40459),
-      op = cp(41347),
-      Ip = cp(41393),
-      Sp = cp(41353),
-      xp = cp(38045),
-      Lp = cp(38055),
-      Yp = cp(38061),
-      Dp = cp(38064),
-      Ap = cp(37445),
-      Pp = cp(37448),
-      Wp = cp(41359),
-      yp = cp(37433),
-      Up = cp(37436),
-      wp = cp(37421);
+    var WT = mT(40379),
+      zT = mT(41277),
+      MT = mT(41334),
+      gT = mT(41284),
+      nT = mT(37947),
+      HT = mT(37959),
+      kT = mT(37965),
+      jT = mT(37972),
+      lT = mT(37312),
+      LT = mT(37321),
+      pT = mT(41286),
+      BT = mT(37298),
+      ZT = mT(37302),
+      cT = mT(37288);
 
-    function vp(pp, ip) {
-      return Object.assign((function(pp, cp, Op, op) {
-        return ip(this.featureState, pp, cp, Op, op)
+    function vT(TT, UT) {
+      return Object.assign((function(TT, mT, WT, zT) {
+        return UT(this.featureState, TT, mT, WT, zT)
       }), {
-        Py: pp
+        hp: TT
       })
     }
 
-    function tp(pp) {
-      const ip = class extends Wp.c {
-          constructor(ip, cp) {
-            const Op = (0, Up.$)(ip),
-              op = Op && (0, Up.s)(Op, pp.name);
-            for (var Ip = arguments.length, Sp = new Array(Ip > 2 ? Ip - 2 : 0), xp = 2; xp < Ip; xp++) Sp[xp - 2] = arguments[xp];
-            super(ip, pp.name, pp.priority, op ? op.defines : pp.defines(...Sp), !1), this.featureState = void 0, this.featureState = cp, this._pluginManager._addPlugin(this), this._enable(!0), (0, Up.v)(this._material, pp, this.featureState, this._pluginDefineNames)
+    function fT(TT) {
+      const UT = class extends pT.d {
+          constructor(UT, mT) {
+            const WT = (0, ZT.R)(UT),
+              zT = WT && (0, ZT.s)(WT, TT.name);
+            for (var MT = arguments.length, gT = new Array(MT > 2 ? MT - 2 : 0), nT = 2; nT < MT; nT++) gT[nT - 2] = arguments[nT];
+            super(UT, TT.name, TT.priority, zT ? zT.defines : TT.defines(...gT), !1), this.featureState = void 0, this.featureState = mT, this._pluginManager._addPlugin(this), this._enable(!0), (0, ZT.t)(this._material, TT, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return pp.className
+            return TT.className
           }
-          isCompatible(pp) {
-            return pp === wp.b.GLSL || pp === wp.b.WGSL
+          isCompatible(TT) {
+            return TT === cT.e.GLSL || TT === cT.e.WGSL
           }
         },
-        cp = (0, yp.l)(pp);
-      for (const [Op, op] of Object.entries(yp.e)) {
-        const Ip = pp[Op];
-        if (Ip) {
-          const pp = cp[Op];
-          Object.defineProperty(ip.prototype, op, {
-            value: vp(Ip, pp),
+        mT = (0, BT.g)(TT);
+      for (const [WT, zT] of Object.entries(BT.c)) {
+        const MT = TT[WT];
+        if (MT) {
+          const TT = mT[WT];
+          Object.defineProperty(UT.prototype, zT, {
+            value: vT(MT, TT),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return ip
+      return UT
     }
-    class Hp extends(tp(xp.d)) {}
-    var dp = cp(40024),
-      ep = cp(41367),
-      jp = cp(41375);
+    class qT extends(fT(nT.b)) {}
+    var iT = mT(39907),
+      bT = mT(41291),
+      OT = mT(41300);
 
-    function kp(pp, ip, cp) {
-      return (0, jp.h)(cp, ip.urls, (() => async function(pp, ip, cp) {
+    function eT(TT, UT, mT) {
+      return (0, OT.h)(mT, UT.urls, (() => async function(TT, UT, mT) {
         const {
-          width: Op
-        } = pp[0].getSize(), op = pp.map(((pp, cp) => {
-          var op;
-          const Ip = Math.round(pp.getSize().height / Op),
-            Sp = null === ip || void 0 === ip ? void 0 : ip[cp];
+          width: WT
+        } = TT[0].getSize(), zT = TT.map(((TT, mT) => {
+          var zT;
+          const MT = Math.round(TT.getSize().height / WT),
+            gT = null === UT || void 0 === UT ? void 0 : UT[mT];
           return {
-            pixels: Sp && Sp.byteLength === Op * Op * Ip * 4 ? Sp : null !== (op = mp.get(pp.getInternalTexture())) && void 0 !== op ? op : pp._readPixelsSync(),
-            layers: Ip
+            pixels: gT && gT.byteLength === WT * WT * MT * 4 ? gT : null !== (zT = YT.get(TT.getInternalTexture())) && void 0 !== zT ? zT : TT._readPixelsSync(),
+            layers: MT
           }
-        })), Ip = cp.gy().getCaps().texture2DArrayMaxLayerCount, xp = (0, jp.d)(op, Op, Ip).map((pp => {
+        })), MT = mT.eB().getCaps().texture2DArrayMaxLayerCount, nT = (0, OT.e)(zT, WT, MT).map((TT => {
           let {
-            pixels: ip,
-            layers: op
-          } = pp;
+            pixels: UT,
+            layers: zT
+          } = TT;
           return {
-            atlas: new ep.c(ip, Op, Op, op, dp.d.TEXTUREFORMAT_RGBA, cp, !0, !1, Sp.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: op
+            atlas: new bT.e(UT, WT, WT, zT, iT.b.TEXTUREFORMAT_RGBA, mT, !0, !1, gT.e.NEAREST_NEAREST_MIPLINEAR),
+            layers: zT
           }
         }));
-        return pp.forEach(((pp, ip) => {
-          const Op = pp.getInternalTexture();
-          mp.has(Op) || (! function(pp, ip) {
-            const cp = ip.createRawTexture(new Uint8Array(4), 1, 1, dp.d.TEXTUREFORMAT_RGBA, !1, !1, Sp.d.NEAREST_SAMPLINGMODE);
-            pp._hardwareTexture.release(), ip.unbindAllTextures(), cp._swapAndDie(pp, !1)
-          }(Op, cp.gy()), mp.set(Op, op[ip].pixels))
-        })), xp
-      }(pp, ip.pixels, cp)))
+        return TT.forEach(((TT, UT) => {
+          const WT = TT.getInternalTexture();
+          YT.has(WT) || (! function(TT, UT) {
+            const mT = UT.createRawTexture(new Uint8Array(4), 1, 1, iT.b.TEXTUREFORMAT_RGBA, !1, !1, gT.e.NEAREST_SAMPLINGMODE);
+            TT._hardwareTexture.release(), UT.unbindAllTextures(), mT._swapAndDie(TT, !1)
+          }(WT, mT.eB()), YT.set(WT, zT[UT].pixels))
+        })), nT
+      }(TT, UT.pixels, mT)))
     }
-    const mp = new WeakMap;
-    var Rp = cp(38069);
-    class qp extends(tp(Lp.f)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.loaded = new Set, this.mirrors = void 0, this.mirrors = ip.textures.map((pp => pp.mirror)), this.mirrors.forEach(((pp, ip) => {
-          pp.onLoadObservable.add((pp => {
-            this.setTextureArrayData(pp, ip).catch((pp => {
-              console.error(`Failed to build the texture arrays, at atlas ${ip}`, pp)
+    const YT = new WeakMap;
+    var JT = mT(37974);
+    class xT extends(fT(HT.i)) {
+      constructor(TT, UT) {
+        super(TT, UT), this.loaded = new Set, this.mirrors = void 0, this.mirrors = UT.textures.map((TT => TT.mirror)), this.mirrors.forEach(((TT, UT) => {
+          TT.onLoadObservable.add((TT => {
+            this.setTextureArrayData(TT, UT).catch((TT => {
+              console.error(`Failed to build the texture arrays, at atlas ${UT}`, TT)
             }))
           }))
-        })), (0, Rp.n)(ip, pp.shaderLanguage)
+        })), (0, JT.n)(UT, TT.shaderLanguage)
       }
-      async setTextureArrayData(pp, ip) {
-        const cp = this.featureState,
+      async setTextureArrayData(TT, UT) {
+        const mT = this.featureState,
           {
-            width: Op,
-            height: op
-          } = pp.getSize(),
-          Ip = this._material.shaderLanguage;
-        if (!cp.useWebGL2) return void(0, Rp.f)(this._material, cp, ip, Op, Math.round(op / Op), Ip);
-        if (this.loaded.add(ip), this.loaded.size < this.mirrors.length) return;
-        const Sp = await kp(this.mirrors, cp.sources, this._material.Gl());
-        (0, Rp.b)(this._material, cp, Sp, Op, Ip)
+            width: WT,
+            height: zT
+          } = TT.getSize(),
+          MT = this._material.shaderLanguage;
+        if (!mT.useWebGL2) return void(0, JT.f)(this._material, mT, UT, WT, Math.round(zT / WT), MT);
+        if (this.loaded.add(UT), this.loaded.size < this.mirrors.length) return;
+        const gT = await eT(this.mirrors, mT.sources, this._material.KF());
+        (0, JT.d)(this._material, mT, gT, WT, MT)
       }
     }
-    var Mp = cp(41378),
-      Cp = cp(40498),
-      Ep = cp(37313),
-      Xp = cp(41383),
-      lp = cp(40589),
-      Qp = cp(40481),
-      Jp = cp(41325),
-      Bp = cp(37800),
-      Np = cp(41391);
-    class Tp extends Mp.c {
+    var dT = mT(41309),
+      wT = mT(40432),
+      tT = mT(37185),
+      aT = mT(41318),
+      yT = mT(40546),
+      XT = mT(40418),
+      IT = mT(41256),
+      QT = mT(37708),
+      sT = mT(41327);
+    class FT extends dT.e {
       getData() {
         return null
       }
@@ -857,464 +857,464 @@ export const modules = {
         super._rebuild()
       }
     }
-    const fp = {
-      Mesh: Xp.c,
-      TransformNode: Jp.b,
-      my: Mp.c,
-      VertexBuffer: Mp.f,
-      BoundingInfo: Cp.d,
-      Zy: Ep.Zy,
-      ArenaBuffer: Tp,
-      SubMesh: Qp.d,
-      VertexData: lp.d,
-      MirroredGeometry: Np.b,
-      meshFromArrays: Np.e,
-      plainMeshFromArrays: Np.f
+    const PT = {
+      Mesh: aT.d,
+      TransformNode: IT.d,
+      HB: dT.e,
+      VertexBuffer: dT.i,
+      BoundingInfo: wT.e,
+      JB: tT.JB,
+      ArenaBuffer: FT,
+      SubMesh: XT.e,
+      VertexData: yT.d,
+      MirroredGeometry: sT.b,
+      meshFromArrays: sT.f,
+      plainMeshFromArrays: sT.i
     };
-    (0, Bp.g)(fp);
-    var bp = cp(37655);
-    class hp extends(tp(Dp.g)) {
-      constructor(pp, ip) {
-        if (super(pp, ip), pp instanceof Op.StandardMaterial && ip.dirLightCount > 0) {
-          const ip = pp,
-            cp = ip._blockDirtyMechanism;
-          ip._blockDirtyMechanism = !0, pp.disableLighting = !0, ip._blockDirtyMechanism = cp;
-          const Op = (0, Up.$)(pp);
-          Op && (Op.disableLighting = !0, (0, Up.Y)(Op))
-        }(0, bp.g)(pp)
+    (0, QT.f)(PT);
+    var VT = mT(37534);
+    class uT extends(fT(jT.k)) {
+      constructor(TT, UT) {
+        if (super(TT, UT), TT instanceof WT.StandardMaterial && UT.dirLightCount > 0) {
+          const UT = TT,
+            mT = UT._blockDirtyMechanism;
+          UT._blockDirtyMechanism = !0, TT.disableLighting = !0, UT._blockDirtyMechanism = mT;
+          const WT = (0, ZT.R)(TT);
+          WT && (WT.disableLighting = !0, (0, ZT.Q)(WT))
+        }(0, VT.e)(TT)
       }
-      dispose(pp) {
-        (0, bp.i)(this._material), super.dispose(pp)
+      dispose(TT) {
+        (0, VT.g)(this._material), super.dispose(TT)
       }
     }
 
-    function ap(pp, ip) {
-      if (!(ip instanceof Op.StandardMaterial) || ip.specularTexture) return;
+    function CT(TT, UT) {
+      if (!(UT instanceof WT.StandardMaterial) || UT.specularTexture) return;
       const {
-        r: cp,
-        g: op,
-        b: Ip
-      } = ip.specularColor;
-      0 === cp && 0 === op && 0 === Ip && (pp.SPECULARTERM = !1)
-    }(0, Dp.d)({
-      disableUnusedSpecularTerm: ap
+        r: mT,
+        g: zT,
+        b: MT
+      } = UT.specularColor;
+      0 === mT && 0 === zT && 0 === MT && (TT.SPECULARTERM = !1)
+    }(0, jT.g)({
+      disableUnusedSpecularTerm: CT
     });
-    var np = cp(37519),
-      Fp = cp(37807);
-    const gp = new RegExp(`^#define ${Yp.b}\\s*$`, "m");
-    class Gp extends(tp(Yp.h)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.Ry = !1, ip.ditherOnlyWhileFading && (Fp.d.add(pp), this.prewarmDitherTwins(pp))
+    var rT = mT(37397),
+      KT = mT(37721);
+    const ST = new RegExp(`^#define ${kT.c}\\s*$`, "m");
+    class GT extends(fT(kT.h)) {
+      constructor(TT, UT) {
+        super(TT, UT), this.kB = !1, UT.ditherOnlyWhileFading && (KT.f.add(TT), this.prewarmDitherTwins(TT))
       }
-      prewarmDitherTwins(pp) {
-        const ip = new WeakSet;
-        pp.onEffectCreatedObservable.add((cp => {
+      prewarmDitherTwins(TT) {
+        const UT = new WeakSet;
+        TT.onEffectCreatedObservable.add((mT => {
           let {
-            effect: Op,
-            subMesh: op
-          } = cp;
-          if (this.featureState.prewarmingDither || ip.has(Op)) return;
-          ip.add(Op);
-          const Ip = null === op || void 0 === op ? void 0 : op.getMesh();
-          Ip && !gp.test(Op.defines) && pp.Gl().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Ip) || ip.delete(Op)
+            effect: WT,
+            subMesh: zT
+          } = mT;
+          if (this.featureState.prewarmingDither || UT.has(WT)) return;
+          UT.add(WT);
+          const MT = null === zT || void 0 === zT ? void 0 : zT.getMesh();
+          MT && !ST.test(WT.defines) && TT.KF().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(MT) || UT.delete(WT)
           }))
         }))
       }
-      prewarmDither(pp) {
-        if (this.Ry || pp.uR()) return !1;
-        const ip = new Qp.d(0, 0, 0, 0, 0, pp, void 0, !1, !1);
+      prewarmDither(TT) {
+        if (this.kB || TT.bJ()) return !1;
+        const UT = new XT.e(0, 0, 0, 0, 0, TT, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(pp, ip)
+          this._material.isReadyForSubMesh(TT, UT)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== ip.effect
+        return null !== UT.effect
       }
-      dispose(pp) {
-        this.Ry = !0, super.dispose(pp)
+      dispose(TT) {
+        this.kB = !0, super.dispose(TT)
       }
     }
-    const rp = new Map;
+    const NT = new Map;
 
-    function Zp(pp, ip) {
-      rp.set(pp, ip)
+    function ET(TT, UT) {
+      NT.set(TT, UT)
     }
-    Zp(xp.d, Hp), Zp(Lp.f, qp), Zp(Yp.h, Gp), Zp(Dp.g, hp), (0, Ap.e)({
-      create: (pp, ip) => {
-        const cp = new Op.StandardMaterial(pp.name, ip);
-        return (0, np.p)(pp, cp), cp.detailMap._pluginDefineNames
+    ET(nT.b, qT), ET(HT.i, xT), ET(kT.h, GT), ET(jT.k, uT), (0, lT.d)({
+      create: (TT, UT) => {
+        const mT = new WT.StandardMaterial(TT.name, UT);
+        return (0, rT.o)(TT, mT), mT.detailMap._pluginDefineNames
       },
-      write: (pp, ip, cp) => {
-        (0, np.S)(pp.mirror, ip, cp)
+      write: (TT, UT, mT) => {
+        (0, rT._)(TT.mirror, UT, mT)
       },
-      addFeature: (pp, ip, cp) => {
-        const Op = rp.get(ip.feature);
-        if (!Op) throw new Error(`${ip.feature.name} has no plugin class (registerPluginClass)`);
-        new Op(pp.mirror, ip.state, ...cp)
+      addFeature: (TT, UT, mT) => {
+        const WT = NT.get(UT.feature);
+        if (!WT) throw new Error(`${UT.feature.name} has no plugin class (registerPluginClass)`);
+        new WT(TT.mirror, UT.state, ...mT)
       },
-      texture: (pp, ip, cp) => {
+      texture: (TT, UT, mT) => {
         let {
-          url: Op,
-          noMipmap: op,
-          invertY: Ip,
-          samplingMode: xp,
-          data: Lp,
-          sets: Yp
-        } = cp;
-        if (!Lp) {
-          const cp = new Sp.d(Op, ip, op, Ip, xp);
-          return Object.assign(cp, Yp), void(0, Pp.K)(pp, cp)
+          url: WT,
+          noMipmap: zT,
+          invertY: MT,
+          samplingMode: nT,
+          data: HT,
+          sets: kT
+        } = mT;
+        if (!HT) {
+          const mT = new gT.e(WT, UT, zT, MT, nT);
+          return Object.assign(mT, kT), void(0, LT.N)(TT, mT)
         }
-        const Dp = {},
-          Ap = new Promise(((pp, ip) => {
-            Dp.onLoad = pp, Dp.onError = (pp, cp) => {
-              ip(new Error(`${Lp.context}: ${(null===cp||void 0===cp?void 0:cp.message)||pp||"Failed to load texture"}`))
+        const jT = {},
+          lT = new Promise(((TT, UT) => {
+            jT.onLoad = TT, jT.onError = (TT, mT) => {
+              UT(new Error(`${HT.context}: ${(null===mT||void 0===mT?void 0:mT.message)||TT||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Wp,
-            bytes: yp,
-            label: Up
-          } = Lp,
-          wp = {
-            noMipmap: op,
+            mimeType: pT,
+            bytes: BT,
+            label: ZT
+          } = HT,
+          cT = {
+            noMipmap: zT,
             invertY: !1,
-            samplingMode: xp,
-            ...Dp,
-            mimeType: Wp,
+            samplingMode: nT,
+            ...jT,
+            mimeType: pT,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          vp = new Sp.d(null, ip, wp);
-        np.t.set(vp, Ap), Object.assign(vp, Yp), vp.updateURL(Op, yp);
-        const tp = vp.getInternalTexture();
-        tp && (tp.label = Up), pp.uvSet = vp.coordinatesIndex, pp.matrix.set((0, np.L)(vp)), (0, Pp.K)(pp, vp)
+          vT = new gT.e(null, UT, cT);
+        rT.q.set(vT, lT), Object.assign(vT, kT), vT.updateURL(WT, BT);
+        const fT = vT.getInternalTexture();
+        fT && (fT.label = ZT), TT.uvSet = vT.coordinatesIndex, TT.matrix.set((0, rT.Q)(vT)), (0, LT.N)(TT, vT)
       },
-      cube: (pp, ip, cp) => {
+      cube: (TT, UT, mT) => {
         let {
-          rootUrl: Op,
-          files: Ip,
-          noMipmap: xp,
-          luminance: Lp
-        } = cp;
+          rootUrl: WT,
+          files: MT,
+          noMipmap: nT,
+          luminance: HT
+        } = mT;
         const {
-          samplingMode: Yp
-        } = pp.sampler, Dp = Yp === (0, Pp.z)(xp) ? null : () => {
-          (0, np.J)(Ap, Yp)
-        }, Ap = new op.b(Op, ip, null, xp, Ip, Dp, null, (0, Pp.w)(Lp));
-        Ap.coordinatesMode = Sp.d.SKYBOX_MODE, (0, Pp.K)(pp, Ap)
+          samplingMode: kT
+        } = TT.sampler, jT = kT === (0, LT.G)(nT) ? null : () => {
+          (0, rT.M)(lT, kT)
+        }, lT = new zT.d(WT, UT, null, nT, MT, jT, null, (0, LT.C)(HT));
+        lT.coordinatesMode = gT.e.SKYBOX_MODE, (0, LT.N)(TT, lT)
       },
-      canvas: (pp, ip, cp) => {
+      canvas: (TT, UT, mT) => {
         let {
-          width: Op,
-          height: op,
-          mipmaps: xp,
-          samplingMode: Lp,
-          hasAlpha: Yp = !1,
-          wrap: Dp = Sp.d.CLAMP_ADDRESSMODE
-        } = cp;
-        const Ap = new Ip.e(ip, {
-          width: Op,
-          height: op
-        }, pp, xp, Lp);
-        Ap.hasAlpha = Yp, Ap.wrapU = Dp, Ap.wrapV = Dp;
-        const Pp = (0, np.B)(Ap);
-        return (0, np.D)(Pp, Ap), Pp
+          width: WT,
+          height: zT,
+          mipmaps: nT,
+          samplingMode: HT,
+          hasAlpha: kT = !1,
+          wrap: jT = gT.e.CLAMP_ADDRESSMODE
+        } = mT;
+        const lT = new MT.b(UT, {
+          width: WT,
+          height: zT
+        }, TT, nT, HT);
+        lT.hasAlpha = kT, lT.wrapU = jT, lT.wrapV = jT;
+        const LT = (0, rT.A)(lT);
+        return (0, rT.E)(LT, lT), LT
       }
     })
   },
-  41391: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      e: () => Ap,
-      f: () => Pp
+  41327: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => jT,
+      f: () => lT,
+      i: () => LT
     });
-    var Op = cp(41378),
-      op = cp(40273),
-      Ip = cp(40498),
-      Sp = cp(40593),
-      xp = cp(41383),
-      Lp = cp(40589),
-      Yp = cp(37698);
-    class Dp extends Sp.b {
+    var WT = mT(41309),
+      zT = mT(40171),
+      MT = mT(40432),
+      gT = mT(40550),
+      nT = mT(41318),
+      HT = mT(40546),
+      kT = mT(37584);
+    class jT extends gT.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (pp, ip) => {
-          this.releaseUnlessInstanced(ip)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (TT, UT) => {
+          this.releaseUnlessInstanced(UT)
         }, this.onLinked = null
       }
-      link(pp) {
-        var ip;
-        (0, Yp.m)(pp), this.model = pp, null === (ip = this.onLinked) || void 0 === ip || ip.call(this, pp)
+      link(TT) {
+        var UT;
+        (0, kT.m)(TT), this.model = TT, null === (UT = this.onLinked) || void 0 === UT || UT.call(this, TT)
       }
       relink() {
         this.release();
-        const pp = [];
-        for (const op of Object.values(this._vertexBuffers))
-          if (!op.getIsInstanced()) {
+        const TT = [];
+        for (const zT of Object.values(this._vertexBuffers))
+          if (!zT.getIsInstanced()) {
             const {
-              byteOffset: ip,
-              byteStride: cp,
-              type: Op,
-              normalized: Ip
-            } = op;
-            pp.push({
-              kind: op.getKind(),
-              data: op.getData(),
-              offset: ip,
-              stride: cp,
-              components: op.getSize(),
-              glType: Op,
-              isNormalized: Ip
+              byteOffset: UT,
+              byteStride: mT,
+              type: WT,
+              normalized: MT
+            } = zT;
+            TT.push({
+              kind: zT.getKind(),
+              data: zT.getData(),
+              offset: UT,
+              stride: mT,
+              components: zT.getSize(),
+              glType: WT,
+              isNormalized: MT
             })
-          } const ip = this._indices.length ? this._indices : null,
+          } const UT = this._indices.length ? this._indices : null,
           {
-            minimum: cp,
-            maximum: Op
+            minimum: mT,
+            maximum: WT
           } = this.extend;
-        this.link(new Yp.f(pp, ip, this.getTotalVertices(), new Float64Array(cp.BOp()), new Float64Array(Op.BOp())))
+        this.link(new kT.f(TT, UT, this.getTotalVertices(), new Float64Array(mT.cWT()), new Float64Array(WT.cWT())))
       }
-      copy(pp) {
-        if (!this.model) return super.copy(pp);
-        const ip = new Dp(pp, this.Gl()),
-          cp = this.NOp(void 0, !0);
-        cp && ip.setIndices(cp);
-        let Sp = !1;
-        for (const Ip in this._vertexBuffers) {
-          const pp = this._vertexBuffers[Ip],
-            cp = pp.getData();
-          if (!cp) continue;
-          const xp = pp.getSize(),
+      copy(TT) {
+        if (!this.model) return super.copy(TT);
+        const UT = new jT(TT, this.KF()),
+          mT = this.vWT(void 0, !0);
+        mT && UT.setIndices(mT);
+        let gT = !1;
+        for (const MT in this._vertexBuffers) {
+          const TT = this._vertexBuffers[MT],
+            mT = TT.getData();
+          if (!mT) continue;
+          const nT = TT.getSize(),
             {
-              type: Lp,
-              byteOffset: Yp,
-              byteStride: Dp,
-              normalized: Ap
-            } = pp;
-          Sp ||= pp.isUpdatable();
-          const Pp = pp.getIsInstanced() ? (cp instanceof Array ? 4 * cp.length : cp.byteLength) / Dp : this.getTotalVertices(),
-            Wp = (0, op.s)(cp, xp, Lp, Yp, Dp, Pp, !0),
-            yp = {
-              updatable: pp.isUpdatable(),
-              stride: xp,
-              type: Lp,
-              normalized: Ap,
+              type: HT,
+              byteOffset: kT,
+              byteStride: jT,
+              normalized: lT
+            } = TT;
+          gT ||= TT.isUpdatable();
+          const LT = TT.getIsInstanced() ? (mT instanceof Array ? 4 * mT.length : mT.byteLength) / jT : this.getTotalVertices(),
+            pT = (0, zT.v)(mT, nT, HT, kT, jT, LT, !0),
+            BT = {
+              updatable: TT.isUpdatable(),
+              stride: nT,
+              type: HT,
+              normalized: lT,
               takeBufferOwnership: !0,
-              instanced: pp.getIsInstanced()
+              instanced: TT.getIsInstanced()
             };
-          ip.setVerticesBuffer(new Op.f(this.gy(), Wp, Ip, yp), Pp)
+          UT.setVerticesBuffer(new WT.i(this.eB(), pT, MT, BT), LT)
         }
-        return ip._updatable = Sp, ip._boundingInfo = new Ip.d(this.extend.minimum, this.extend.maximum), ip.relink(), ip
+        return UT._updatable = gT, UT._boundingInfo = new MT.e(this.extend.minimum, this.extend.maximum), UT.relink(), UT
       }
-      static mergeMeshes(pp, ip, cp, Op, op, Ip) {
-        const Lp = pp[0].Gl(),
-          Yp = new xp.c(pp[0].name + "_merged", Lp),
-          Ap = new Dp(Sp.b.RandomId(), Lp, void 0, !1, Yp);
+      static mergeMeshes(TT, UT, mT, WT, zT, MT) {
+        const HT = TT[0].KF(),
+          kT = new nT.d(TT[0].name + "_merged", HT),
+          lT = new jT(gT.e.RandomId(), HT, void 0, !1, kT);
         try {
-          if (!xp.c.MergeMeshes(pp, ip, cp, Yp, op, Ip)) return Yp.dispose(), null
-        } catch (Pp) {
-          throw Yp.dispose(), Pp
+          if (!nT.d.MergeMeshes(TT, UT, mT, kT, zT, MT)) return kT.dispose(), null
+        } catch (LT) {
+          throw kT.dispose(), LT
         }
-        return Ap.relink(), Yp
+        return lT.relink(), kT
       }
-      removeVerticesData(pp) {
-        this.releaseUnlessInstanced(pp), super.removeVerticesData(pp)
+      removeVerticesData(TT) {
+        this.releaseUnlessInstanced(TT), super.removeVerticesData(TT)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(pp) {
-        var ip;
-        pp && null !== (ip = this.getVertexBuffer(pp)) && void 0 !== ip && ip.getIsInstanced() || this.release()
+      releaseUnlessInstanced(TT) {
+        var UT;
+        TT && null !== (UT = this.getVertexBuffer(TT)) && void 0 !== UT && UT.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Yp.v)(this.model), this.model = null)
+        this.model && ((0, kT.s)(this.model), this.model = null)
       }
     }
 
-    function Ap(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new xp.c(pp, cp);
-      const op = (0, Yp.j)(ip),
+    function lT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new nT.d(TT, mT);
+      const zT = (0, kT.k)(UT),
         {
-          positions: Ip,
-          normals: Ap,
-          uvs: Pp,
-          indices: Wp,
-          named: yp = {}
-        } = ip,
-        Up = new Lp.d;
-      Up.positions = Ip, Up.normals = null !== Ap && void 0 !== Ap ? Ap : null, Up.uvs = null !== Pp && void 0 !== Pp ? Pp : null, Up.indices = Wp;
-      const wp = new Dp(Sp.b.RandomId(), cp, Up, !1, Op);
+          positions: MT,
+          normals: lT,
+          uvs: LT,
+          indices: pT,
+          named: BT = {}
+        } = UT,
+        ZT = new HT.d;
+      ZT.positions = MT, ZT.normals = null !== lT && void 0 !== lT ? lT : null, ZT.uvs = null !== LT && void 0 !== LT ? LT : null, ZT.indices = pT;
+      const cT = new jT(gT.e.RandomId(), mT, ZT, !1, WT);
       for (const {
-          kind: Sp,
-          components: xp
+          kind: gT,
+          components: nT
         }
-        of op.vertexAttributes) Sp in yp && Op.setVerticesData(Sp, yp[Sp], !1, xp);
-      return wp.link(op), Op
+        of zT.vertexAttributes) gT in BT && WT.setVerticesData(gT, BT[gT], !1, nT);
+      return cT.link(zT), WT
     }
 
-    function Pp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const op = new xp.c(pp, cp),
+    function LT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const zT = new nT.d(TT, mT),
         {
-          positions: Ip,
-          normals: Sp,
-          uvs: Yp,
-          indices: Dp
-        } = ip;
-      return Object.assign(new Lp.d, {
-        positions: Ip,
-        normals: Sp,
-        uvs: Yp,
-        indices: Dp
-      }).applyToMesh(op, Op), op
+          positions: MT,
+          normals: gT,
+          uvs: kT,
+          indices: jT
+        } = UT;
+      return Object.assign(new HT.d, {
+        positions: MT,
+        normals: gT,
+        uvs: kT,
+        indices: jT
+      }).applyToMesh(zT, WT), zT
     }
   },
-  41864: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => wp,
-      e: () => xp,
-      i: () => Sp,
-      m: () => Yp
+  41743: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => cT,
+      h: () => nT,
+      j: () => gT,
+      n: () => kT
     });
-    var Op = cp(37479),
-      op = cp(38942),
-      Ip = cp(38938);
+    var WT = mT(37364),
+      zT = mT(38824),
+      MT = mT(38815);
 
-    function Sp(pp, ip, cp, Op) {
-      const op = Ip.o;
-      ip.fill(0), pp.gravity.toArray(ip, op.gravity), pp.colorDead.toArray(ip, op.colorDead), cp[op.ramp] = pp.useRampGradients ? 1 : 0;
-      const Sp = pp.getColorGradients(),
-        xp = Pp(pp, Sp, "colour", Op);
-      cp[op.colorCount] = xp;
-      for (let Ip = 0; Ip < xp; Ip++) {
-        var Lp;
-        const pp = Sp[Wp(Sp, Ip)];
-        ip[op.colorPositions + Ip] = pp.gradient, pp.color1.toArray(ip, op.color1 + 4 * Ip), (null !== (Lp = pp.color2) && void 0 !== Lp ? Lp : pp.color1).toArray(ip, op.color2 + 4 * Ip)
+    function gT(TT, UT, mT, WT) {
+      const zT = MT.q;
+      UT.fill(0), TT.gravity.toArray(UT, zT.gravity), TT.colorDead.toArray(UT, zT.colorDead), mT[zT.ramp] = TT.useRampGradients ? 1 : 0;
+      const gT = TT.getColorGradients(),
+        nT = LT(TT, gT, "colour", WT);
+      mT[zT.colorCount] = nT;
+      for (let MT = 0; MT < nT; MT++) {
+        var HT;
+        const TT = gT[pT(gT, MT)];
+        UT[zT.colorPositions + MT] = TT.gradient, TT.color1.toArray(UT, zT.color1 + 4 * MT), (null !== (HT = TT.color2) && void 0 !== HT ? HT : TT.color1).toArray(UT, zT.color2 + 4 * MT)
       }
-      const Yp = pp.getVelocityGradients(),
-        Dp = Pp(pp, Yp, "tw", Op);
-      cp[op.velocityCount] = Dp;
-      for (let Ip = 0; Ip < Dp; Ip++) tp(ip, op.tw + 4 * Ip, Yp[Wp(Yp, Ip)]);
-      const Ap = pp.useRampGradients ? pp.getColorRemapGradients() : null,
-        yp = Pp(pp, Ap, "colour remap", Op);
-      cp[op.remapCount] = yp;
-      for (let Ip = 0; Ip < yp; Ip++) tp(ip, op.remap + 4 * Ip, Ap[Wp(Ap, Ip)])
+      const kT = TT.getVelocityGradients(),
+        jT = LT(TT, kT, "Tc", WT);
+      mT[zT.velocityCount] = jT;
+      for (let MT = 0; MT < jT; MT++) fT(UT, zT.Tc + 4 * MT, kT[pT(kT, MT)]);
+      const lT = TT.useRampGradients ? TT.getColorRemapGradients() : null,
+        BT = LT(TT, lT, "colour remap", WT);
+      mT[zT.remapCount] = BT;
+      for (let MT = 0; MT < BT; MT++) fT(UT, zT.remap + 4 * MT, lT[pT(lT, MT)])
     }
 
-    function xp() {
+    function nT() {
       return {
         key: [],
-        texels: new Uint8Array(4 * Ip.k)
+        texels: new Uint8Array(4 * MT.i)
       }
     }
-    const Lp = [];
+    const HT = [];
 
-    function Yp(pp, ip) {
-      return Dp(pp, Lp), !vp(Lp, ip.key) && (ip.key.length = 0, ip.key.push(...Lp), ip.key.length > 0 && function(pp, ip) {
-        for (let cp = 0; cp < Ip.k; cp++) op.l.GetCurrentGradient(cp / Ip.k, pp, ((pp, ip, cp) => {
-          Op.Color3.LerpToRef(pp.color, ip.color, cp, Ap)
-        })), ip[4 * cp] = 255 * Ap.r, ip[4 * cp + 1] = 255 * Ap.g, ip[4 * cp + 2] = 255 * Ap.b, ip[4 * cp + 3] = 255
-      }(pp.getRampGradients(), ip.texels), !0)
+    function kT(TT, UT) {
+      return jT(TT, HT), !vT(HT, UT.key) && (UT.key.length = 0, UT.key.push(...HT), UT.key.length > 0 && function(TT, UT) {
+        for (let mT = 0; mT < MT.i; mT++) zT.j.GetCurrentGradient(mT / MT.i, TT, ((TT, UT, mT) => {
+          WT.Color3.LerpToRef(TT.color, UT.color, mT, lT)
+        })), UT[4 * mT] = 255 * lT.r, UT[4 * mT + 1] = 255 * lT.g, UT[4 * mT + 2] = 255 * lT.b, UT[4 * mT + 3] = 255
+      }(TT.getRampGradients(), UT.texels), !0)
     }
 
-    function Dp(pp, ip) {
-      ip.length = 0;
-      const cp = pp.useRampGradients ? pp.getRampGradients() : null;
-      if (null !== cp && void 0 !== cp && cp.length) {
-        ip.push(cp.length);
-        for (const pp of cp) ip.push(pp.gradient, pp.color.r, pp.color.g, pp.color.b)
+    function jT(TT, UT) {
+      UT.length = 0;
+      const mT = TT.useRampGradients ? TT.getRampGradients() : null;
+      if (null !== mT && void 0 !== mT && mT.length) {
+        UT.push(mT.length);
+        for (const TT of mT) UT.push(TT.gradient, TT.color.r, TT.color.g, TT.color.b)
       }
     }
-    const Ap = new Op.Color3;
+    const lT = new WT.Color3;
 
-    function Pp(pp, ip, cp, Op) {
-      return ip ? ip.length > Ip.d ? (Op(`particleStops:${cp}`, `GPU particles use the first 2 and last ${Ip.d-2} of more than ${Ip.d} ${cp} gradient stops (${pp.name})`), Ip.d) : ip.length : 0
+    function LT(TT, UT, mT, WT) {
+      return UT ? UT.length > MT.b ? (WT(`particleStops:${mT}`, `GPU particles use the first 2 and last ${MT.b-2} of more than ${MT.b} ${mT} gradient stops (${TT.name})`), MT.b) : UT.length : 0
     }
 
-    function Wp(pp, ip) {
-      return ip < 2 || pp.length <= Ip.d ? ip : pp.length - Ip.d + ip
+    function pT(TT, UT) {
+      return UT < 2 || TT.length <= MT.b ? UT : TT.length - MT.b + UT
     }
-    const yp = new Float32Array(Ip.m),
-      Up = new Uint32Array(yp.buffer);
+    const BT = new Float32Array(MT.n),
+      ZT = new Uint32Array(BT.buffer);
 
-    function wp(pp, ip, cp) {
-      return Sp(pp, yp, Up, cp), ip && vp(Up, ip) ? null : Up.slice()
+    function cT(TT, UT, mT) {
+      return gT(TT, BT, ZT, mT), UT && vT(ZT, UT) ? null : ZT.slice()
     }
 
-    function vp(pp, ip) {
-      if (pp.length !== ip.length) return !1;
-      for (let cp = 0; cp < pp.length; cp++)
-        if (pp[cp] !== ip[cp]) return !1;
+    function vT(TT, UT) {
+      if (TT.length !== UT.length) return !1;
+      for (let mT = 0; mT < TT.length; mT++)
+        if (TT[mT] !== UT[mT]) return !1;
       return !0
     }
 
-    function tp(pp, ip, cp) {
-      var Op;
-      pp[ip] = cp.gradient, pp[ip + 1] = cp.factor1, pp[ip + 2] = null !== (Op = cp.factor2) && void 0 !== Op ? Op : cp.factor1
+    function fT(TT, UT, mT) {
+      var WT;
+      TT[UT] = mT.gradient, TT[UT + 1] = mT.factor1, TT[UT + 2] = null !== (WT = mT.factor2) && void 0 !== WT ? WT : mT.factor1
     }
   },
-  41375: (pp, ip, cp) => {
-    function Op(pp, ip, cp) {
-      const Op = ip * ip * 4,
-        op = pp[0].layers,
-        Ip = op * (pp.length - 1) + pp[pp.length - 1].layers,
-        Sp = new Uint8Array(Ip * Op);
-      pp.forEach(((ip, cp) => {
-        const Ip = cp + 1 < pp.length ? Math.min(ip.layers, op) : ip.layers;
-        Sp.set(new Uint8Array(ip.pixels.buffer, ip.pixels.byteOffset, Ip * Op), cp * op * Op)
+  41300: (TT, UT, mT) => {
+    function WT(TT, UT, mT) {
+      const WT = UT * UT * 4,
+        zT = TT[0].layers,
+        MT = zT * (TT.length - 1) + TT[TT.length - 1].layers,
+        gT = new Uint8Array(MT * WT);
+      TT.forEach(((UT, mT) => {
+        const MT = mT + 1 < TT.length ? Math.min(UT.layers, zT) : UT.layers;
+        gT.set(new Uint8Array(UT.pixels.buffer, UT.pixels.byteOffset, MT * WT), mT * zT * WT)
       }));
-      const xp = Math.max(1, Math.min(Ip, cp || Ip));
-      if (xp === Ip) return [{
-        pixels: Sp,
-        layers: Ip
+      const nT = Math.max(1, Math.min(MT, mT || MT));
+      if (nT === MT) return [{
+        pixels: gT,
+        layers: MT
       }];
-      const Lp = [];
-      for (let Yp = 0; Yp < Ip; Yp += xp) {
-        const pp = Math.min(Ip, Yp + xp);
-        Lp.push({
-          pixels: Sp.slice(Yp * Op, pp * Op),
-          layers: pp - Yp
+      const HT = [];
+      for (let kT = 0; kT < MT; kT += nT) {
+        const TT = Math.min(MT, kT + nT);
+        HT.push({
+          pixels: gT.slice(kT * WT, TT * WT),
+          layers: TT - kT
         })
       }
-      return Lp
+      return HT
     }
-    cp.d(ip, {
-      d: () => Op,
-      h: () => Ip
+    mT.d(UT, {
+      e: () => WT,
+      h: () => MT
     });
-    const op = new WeakMap;
+    const zT = new WeakMap;
 
-    function Ip(pp, ip, cp) {
-      var Op, Ip;
-      const Sp = null !== (Op = op.get(pp)) && void 0 !== Op ? Op : new Map;
-      op.set(pp, Sp);
-      const xp = null !== (Ip = Sp.get(ip[0])) && void 0 !== Ip ? Ip : [];
-      Sp.set(ip[0], xp);
-      const Lp = xp.find((pp => pp.urls.length === ip.length && pp.urls.every(((pp, cp) => pp === ip[cp]))));
-      if (Lp) return Lp.built;
-      const Yp = {
-        urls: [...ip],
-        built: cp()
+    function MT(TT, UT, mT) {
+      var WT, MT;
+      const gT = null !== (WT = zT.get(TT)) && void 0 !== WT ? WT : new Map;
+      zT.set(TT, gT);
+      const nT = null !== (MT = gT.get(UT[0])) && void 0 !== MT ? MT : [];
+      gT.set(UT[0], nT);
+      const HT = nT.find((TT => TT.urls.length === UT.length && TT.urls.every(((TT, mT) => TT === UT[mT]))));
+      if (HT) return HT.built;
+      const kT = {
+        urls: [...UT],
+        built: mT()
       };
-      return xp.push(Yp), Yp.built.catch((() => {
-        xp.splice(xp.indexOf(Yp), 1)
-      })), Yp.built
+      return nT.push(kT), kT.built.catch((() => {
+        nT.splice(nT.indexOf(kT), 1)
+      })), kT.built
     }
   },
-  41860: (pp, ip, cp) => {
-    function Op() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const ip = new Set;
-      return (cp, Op) => {
-        ip.has(cp) || (ip.add(cp), console.warn(pp + Op))
+  41737: (TT, UT, mT) => {
+    function WT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const UT = new Set;
+      return (mT, WT) => {
+        UT.has(mT) || (UT.add(mT), console.warn(TT + WT))
       }
     }
-    cp.d(ip, {
-      c: () => Op
+    mT.d(UT, {
+      c: () => WT
     })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

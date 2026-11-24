@@ -1,401 +1,401 @@
 export const id = 144;
 export const ids = [144];
 export const modules = {
-  8205: (pp, ip) => {
-    var cp = "youtube",
-      Op = [61802],
-      op = "f167",
-      Ip = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
-    ip.c = {
+  8188: (TT, UT) => {
+    var mT = "youtube",
+      WT = [61802],
+      zT = "f167",
+      MT = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
+    UT.e = {
       prefix: "fab",
-      iconName: cp,
-      icon: [576, 512, Op, op, Ip]
-    }, ip.e = ip.c
+      iconName: mT,
+      icon: [576, 512, WT, zT, MT]
+    }, UT.i = UT.e
   },
-  6983: (pp, ip) => {
-    Object.defineProperty(ip, "__esModule", {
+  6907: (TT, UT) => {
+    Object.defineProperty(UT, "__esModule", {
       value: !0
     });
-    var cp = "bolt",
-      Op = [9889, "zap"],
-      op = "f0e7",
-      Ip = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
-    ip.definition = {
+    var mT = "bolt",
+      WT = [9889, "zap"],
+      zT = "f0e7",
+      MT = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
+    UT.definition = {
       prefix: "fas",
-      iconName: cp,
-      icon: [448, 512, Op, op, Ip]
-    }, ip.faBolt = ip.definition, ip.prefix = "fas", ip.iconName = cp, ip.width = 448, ip.height = 512, ip.ligatures = Op, ip.unicode = op, ip.svgPathData = Ip, ip.aliases = Op
+      iconName: mT,
+      icon: [448, 512, WT, zT, MT]
+    }, UT.faBolt = UT.definition, UT.prefix = "fas", UT.iconName = mT, UT.width = 448, UT.height = 512, UT.ligatures = WT, UT.unicode = zT, UT.svgPathData = MT, UT.aliases = WT
   },
-  7696: (pp, ip) => {
-    var cp = "person-military-pointing",
-      Op = [],
-      op = "e54a",
-      Ip = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
-    ip.d = {
+  7631: (TT, UT) => {
+    var mT = "person-military-pointing",
+      WT = [],
+      zT = "e54a",
+      MT = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
+    UT.d = {
       prefix: "fas",
-      iconName: cp,
-      icon: [512, 512, Op, op, Ip]
-    }, ip.f = ip.d
+      iconName: mT,
+      icon: [512, 512, WT, zT, MT]
+    }, UT.h = UT.d
   },
-  7838: (pp, ip) => {
-    var cp = "sparkle",
-      Op = [],
-      op = "e5d6",
-      Ip = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
-    ip.c = {
+  7782: (TT, UT) => {
+    var mT = "sparkle",
+      WT = [],
+      zT = "e5d6",
+      MT = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
+    UT.e = {
       prefix: "fas",
-      iconName: cp,
-      icon: [512, 512, Op, op, Ip]
-    }, ip.g = ip.c
+      iconName: mT,
+      icon: [512, 512, WT, zT, MT]
+    }, UT.h = UT.e
   },
-  7940: (pp, ip) => {
-    var cp = "user",
-      Op = [128100, 62144, 62470, "user-alt", "user-large"],
-      op = "f007",
-      Ip = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
-    ip.d = {
+  7898: (TT, UT) => {
+    var mT = "user",
+      WT = [128100, 62144, 62470, "user-alt", "user-large"],
+      zT = "f007",
+      MT = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
+    UT.b = {
       prefix: "fas",
-      iconName: cp,
-      icon: [448, 512, Op, op, Ip]
-    }, ip.g = ip.d
+      iconName: mT,
+      icon: [448, 512, WT, zT, MT]
+    }, UT.c = UT.b
   },
-  8066: (pp, ip) => {
-    var cp = "wrench",
-      Op = [128295],
-      op = "f0ad",
-      Ip = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
-    ip.c = {
+  8028: (TT, UT) => {
+    var mT = "wrench",
+      WT = [128295],
+      zT = "f0ad",
+      MT = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
+    UT.b = {
       prefix: "fas",
-      iconName: cp,
-      icon: [576, 512, Op, op, Ip]
-    }, ip.d = ip.c
+      iconName: mT,
+      icon: [576, 512, WT, zT, MT]
+    }, UT.e = UT.b
   },
-  8083: (pp, ip, cp) => {
-    var Op = cp(6983);
-    ip.d = {
-      prefix: Op.prefix,
-      iconName: Op.iconName,
-      icon: [Op.width, Op.height, Op.aliases, Op.unicode, Op.svgPathData]
-    }, ip.g = ip.d, Op.prefix, Op.iconName, Op.width, Op.height, Op.aliases, Op.unicode, Op.svgPathData, Op.aliases
+  8048: (TT, UT, mT) => {
+    var WT = mT(6907);
+    UT.d = {
+      prefix: WT.prefix,
+      iconName: WT.iconName,
+      icon: [WT.width, WT.height, WT.aliases, WT.unicode, WT.svgPathData]
+    }, UT.f = UT.d, WT.prefix, WT.iconName, WT.width, WT.height, WT.aliases, WT.unicode, WT.svgPathData, WT.aliases
   },
-  41262: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp,
-      h: () => Sp
+  41182: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      c: () => gT
     });
-    var Op = cp(3405);
-    let op = null,
-      Ip = null;
+    var WT = mT(3413);
+    let zT = null,
+      MT = null;
 
-    function Sp() {
-      return Ip ??= cp.e(216).then((() => cp(36527))).then((pp => {
+    function gT() {
+      return MT ??= mT.e(216).then((() => mT(36408))).then((TT => {
         let {
-          ITEM_SPRITES: ip,
-          ITEM_SPRITES_WITHOUT_FILE: cp,
-          ITEM_FILES_WITHOUT_SPRITE: Ip
-        } = pp;
-        op = function(pp, ip, cp) {
-          const op = new Set,
-            Ip = (0, Op.w)(ip);
-          let Sp = 0;
-          for (const [Op, xp] of pp.entries()) Op === Ip[Sp] ? Sp++ : op.add(xp);
-          if ("" !== cp)
-            for (const xp of cp.split(Op.p)) op.add(xp);
-          return op
-        }(ip.split(Op.p), cp, Ip)
-      }), (pp => {
-        throw Ip = null, pp
-      })), Ip
+          ITEM_SPRITES: UT,
+          ITEM_SPRITES_WITHOUT_FILE: mT,
+          ITEM_FILES_WITHOUT_SPRITE: MT
+        } = TT;
+        zT = function(TT, UT, mT) {
+          const zT = new Set,
+            MT = (0, WT.s)(UT);
+          let gT = 0;
+          for (const [WT, nT] of TT.entries()) WT === MT[gT] ? gT++ : zT.add(nT);
+          if ("" !== mT)
+            for (const nT of mT.split(WT.o)) zT.add(nT);
+          return zT
+        }(UT.split(WT.o), mT, MT)
+      }), (TT => {
+        throw MT = null, TT
+      })), MT
     }
 
-    function xp(pp) {
-      var ip, cp;
-      return null !== (ip = null === (cp = op) || void 0 === cp ? void 0 : cp.has(pp)) && void 0 !== ip && ip
+    function nT(TT) {
+      var UT, mT;
+      return null !== (UT = null === (mT = zT) || void 0 === mT ? void 0 : mT.has(TT)) && void 0 !== UT && UT
     }
   },
-  41253: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp,
-      f: () => xp
+  41178: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT,
+      f: () => nT
     });
-    var Op = cp(41262);
-    let op = null,
-      Ip = null;
+    var WT = mT(41182);
+    let zT = null,
+      MT = null;
 
-    function Sp() {
-      return op ??= cp.e(62).then((() => cp(60734))).catch((pp => {
-        throw op = null, pp
-      })), op
+    function gT() {
+      return zT ??= mT.e(62).then((() => mT(60497))).catch((TT => {
+        throw zT = null, TT
+      })), zT
     }
 
-    function xp() {
-      return Ip ??= Promise.all([Sp(), (0, Op.h)()]).then((pp => {
-        let [ip] = pp;
-        return ip
-      }), (pp => {
-        throw Ip = null, pp
-      })), Ip
+    function nT() {
+      return MT ??= Promise.all([gT(), (0, WT.c)()]).then((TT => {
+        let [UT] = TT;
+        return UT
+      }), (TT => {
+        throw MT = null, TT
+      })), MT
     }
   },
-  42885: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Gp,
-      h: () => Vp,
-      i: () => np,
-      k: () => Fp,
-      m: () => gp,
-      o: () => Oi,
-      p: () => ap,
-      q: () => hp
+  42761: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => GT,
+      i: () => AT,
+      j: () => rT,
+      l: () => KT,
+      m: () => ST,
+      q: () => UU,
+      r: () => CT,
+      t: () => uT
     });
-    var Op = cp(4556),
-      op = cp(4580),
-      Ip = cp(34448),
-      Sp = cp(3400),
-      xp = cp(3396),
-      Lp = cp(1105),
-      Yp = cp(41014),
-      Dp = cp(104),
-      Ap = cp(1276),
-      Pp = cp(41153),
-      Wp = cp(41253),
-      yp = cp(8205),
-      Up = cp(7696),
-      wp = cp(7838),
-      vp = cp(7940),
-      tp = cp(8066),
-      Hp = cp(8083);
-    const dp = {
-      youtube: yp.e,
-      "person-military-pointing": Up.f,
-      sparkle: wp.g,
-      user: vp.g,
-      wrench: tp.d,
-      zap: Hp.g
+    var WT = mT(4590),
+      zT = mT(4602),
+      MT = mT(34291),
+      gT = mT(3411),
+      nT = mT(3406),
+      HT = mT(1185),
+      kT = mT(40957),
+      jT = mT(102),
+      lT = mT(1360),
+      LT = mT(41085),
+      pT = mT(41178),
+      BT = mT(8188),
+      ZT = mT(7631),
+      cT = mT(7782),
+      vT = mT(7898),
+      fT = mT(8028),
+      qT = mT(8048);
+    const iT = {
+      youtube: BT.i,
+      "person-military-pointing": ZT.h,
+      sparkle: cT.h,
+      user: vT.c,
+      wrench: fT.e,
+      zap: qT.f
     };
 
-    function ep(pp) {
-      const [ip, cp, , , Op] = pp.icon;
+    function bT(TT) {
+      const [UT, mT, , , WT] = TT.icon;
       return {
-        width: ip,
-        height: cp,
-        path: "string" === typeof Op ? Op : Op.join(" ")
+        width: UT,
+        height: mT,
+        path: "string" === typeof WT ? WT : WT.join(" ")
       }
     }
-    const jp = new Map(Object.entries(dp).map((pp => {
-      let [ip, cp] = pp;
-      return [ip, ep(cp)]
+    const OT = new Map(Object.entries(iT).map((TT => {
+      let [UT, mT] = TT;
+      return [UT, bT(mT)]
     })));
-    let kp = !1;
-    const mp = new Set;
-    var Rp = cp(41046);
-    const qp = "Jetbrains Mono",
-      Mp = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      Cp = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+    let eT = !1;
+    const YT = new Set;
+    var JT = mT(40991);
+    const xT = "Jetbrains Mono",
+      dT = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      wT = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
 
-    function Ep(pp) {
-      return pp.split(",").map((pp => {
-        const [ip, cp = ip] = pp.slice(2).split("-");
-        return [parseInt(ip, 16), parseInt(cp, 16)]
+    function tT(TT) {
+      return TT.split(",").map((TT => {
+        const [UT, mT = UT] = TT.slice(2).split("-");
+        return [parseInt(UT, 16), parseInt(mT, 16)]
       }))
     }
-    const Xp = {
-        latin: Ep(Mp),
-        rest: Ep(Cp)
+    const aT = {
+        latin: tT(dT),
+        rest: tT(wT)
       },
-      lp = new RegExp(`[${Xp.rest.map((pp=>{let[ip,cp]=pp;return`\\u{${ip.toString(16)}}-\\u{${cp.toString(16)}}`})).join("")}]`, "u");
+      yT = new RegExp(`[${aT.rest.map((TT=>{let[UT,mT]=TT;return`\\u{${UT.toString(16)}}-\\u{${mT.toString(16)}}`})).join("")}]`, "u");
 
-    function Qp(pp) {
-      return ip => {
-        console.warn(`[bloxd-wasm-client] the text font's ${pp} file did not load`, ip)
+    function XT(TT) {
+      return UT => {
+        console.warn(`[bloxd-wasm-client] the text font's ${TT} file did not load`, UT)
       }
     }
-    const Jp = 397,
-      Bp = 1,
-      Np = {
-        translate: pp => [pp],
-        keyBindingText: pp => pp,
+    const IT = 397,
+      QT = 1,
+      sT = {
+        translate: TT => [TT],
+        keyBindingText: TT => TT,
         isFriend: () => !1,
         hiddenNames: {},
         loadsFontRest: !1
       };
-    let Tp = null,
-      fp = 0,
-      bp = "none";
+    let FT = null,
+      PT = 0,
+      VT = "none";
 
-    function hp() {
-      return fp
+    function uT() {
+      return PT
     }
 
-    function ap() {
-      fp++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? bp = "all" : "none" === bp && (bp = "notBoards")
-    }(0, Lp.v)((() => {
+    function CT() {
+      PT++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? VT = "all" : "none" === VT && (VT = "notBoards")
+    }(0, HT.q)((() => {
       (function() {
-        const pp = kp;
-        return kp = !1, pp
-      })() && ap(!1)
+        const TT = eT;
+        return eT = !1, TT
+      })() && CT(!1)
     }));
-    const np = new class {
-      constructor(pp) {
-        this.loaded = pp, this.latin = null, this.rest = null, this.restWanted = !1
+    const rT = new class {
+      constructor(TT) {
+        this.loaded = TT, this.latin = null, this.rest = null, this.restWanted = !1
       }
       load() {
         if (null === this.latin) {
-          this.latin = new FontFace(qp, `url(${(0,Rp.f)()}) format("woff2")`, {
-            unicodeRange: Mp
-          }).load().then((pp => {
-            document.fonts.add(pp), this.loaded()
-          }), Qp("Latin"));
-          const pp = new FontFace(qp, `url(${(0,Rp.j)()}) format("woff2")`, {
-            unicodeRange: Cp,
+          this.latin = new FontFace(xT, `url(${(0,JT.h)()}) format("woff2")`, {
+            unicodeRange: dT
+          }).load().then((TT => {
+            document.fonts.add(TT), this.loaded()
+          }), XT("Latin"));
+          const TT = new FontFace(xT, `url(${(0,JT.i)()}) format("woff2")`, {
+            unicodeRange: wT,
             display: "swap"
           });
-          document.fonts.add(pp), pp.loaded.then((() => {
+          document.fonts.add(TT), TT.loaded.then((() => {
             this.loaded()
-          }), Qp("rest")), this.rest = pp, this.restWanted && pp.load()
+          }), XT("rest")), this.rest = TT, this.restWanted && TT.load()
         }
         return this.latin
       }
       loadRest() {
-        var pp;
-        this.restWanted || (this.restWanted = !0, null === (pp = this.rest) || void 0 === pp || pp.load())
+        var TT;
+        this.restWanted || (this.restWanted = !0, null === (TT = this.rest) || void 0 === TT || TT.load())
       }
-      loadFor(pp) {
-        !this.restWanted && lp.test(pp) && this.loadRest()
+      loadFor(TT) {
+        !this.restWanted && yT.test(TT) && this.loadRest()
       }
-    }(ap);
+    }(CT);
 
-    function Fp(pp) {
-      Object.assign(Np, pp), Np.loadsFontRest && np.loadRest(), ap(!1)
+    function KT(TT) {
+      Object.assign(sT, TT), sT.loadsFontRest && rT.loadRest(), CT(!1)
     }
 
-    function gp(pp) {
-      pp !== Tp && (Tp = pp, ap())
+    function ST(TT) {
+      TT !== FT && (FT = TT, CT())
     }
 
-    function Gp(pp) {
-      if ("none" === bp || null === pp) return;
-      pp(Jp, "all" === bp ? 0 : Bp, new Uint8Array(0)) && (bp = "none")
+    function GT(TT) {
+      if ("none" === VT || null === TT) return;
+      TT(IT, "all" === VT ? 0 : QT, new Uint8Array(0)) && (VT = "none")
     }
-    const rp = new Map,
-      Zp = new Map;
+    const NT = new Map,
+      ET = new Map;
 
-    function zp(pp, ip, cp) {
-      var Op;
-      const op = cp ? `${pp}#${cp.join(",")}` : pp,
-        Ip = rp.get(op);
-      if (Ip) return Ip.image;
-      const Sp = {
-        image: null !== (Op = Zp.get(op)) && void 0 !== Op ? Op : null
+    function hT(TT, UT, mT) {
+      var WT;
+      const zT = mT ? `${TT}#${mT.join(",")}` : TT,
+        MT = NT.get(zT);
+      if (MT) return MT.image;
+      const gT = {
+        image: null !== (WT = ET.get(zT)) && void 0 !== WT ? WT : null
       };
-      return rp.set(op, Sp), ip().then((async pp => {
-        if (null === pp) return null;
-        const ip = new Image;
-        ip.crossOrigin = "anonymous", ip.src = pp, await ip.decode();
-        const Op = await createImageBitmap(ip);
-        if (!cp) return Op;
+      return NT.set(zT, gT), UT().then((async TT => {
+        if (null === TT) return null;
+        const UT = new Image;
+        UT.crossOrigin = "anonymous", UT.src = TT, await UT.decode();
+        const WT = await createImageBitmap(UT);
+        if (!mT) return WT;
         try {
-          return function(pp, ip) {
-            let [cp, Op, op] = ip;
-            const Ip = (0, Yp.e)(pp.width, pp.height),
+          return function(TT, UT) {
+            let [mT, WT, zT] = UT;
+            const MT = (0, kT.e)(TT.width, TT.height),
               {
-                canvas: Sp
-              } = Ip;
-            return Ip.drawImage(pp, 0, 0), Ip.globalCompositeOperation = "multiply", Ip.fillStyle = `rgb(${cp}, ${Op}, ${op})`, Ip.fillRect(0, 0, Sp.width, Sp.height), Ip.globalCompositeOperation = "destination-in", Ip.drawImage(pp, 0, 0), Sp
-          }(Op, cp)
+                canvas: gT
+              } = MT;
+            return MT.drawImage(TT, 0, 0), MT.globalCompositeOperation = "multiply", MT.fillStyle = `rgb(${mT}, ${WT}, ${zT})`, MT.fillRect(0, 0, gT.width, gT.height), MT.globalCompositeOperation = "destination-in", MT.drawImage(TT, 0, 0), gT
+          }(WT, mT)
         } finally {
-          Op.close()
+          WT.close()
         }
-      })).then((pp => {
-        rp.get(op) === Sp && Zp.delete(op), pp !== Sp.image && (Sp.image = pp, ap(!1))
-      }), (ip => {
-        console.warn(`[bloxd-wasm-client] text icon ${pp} did not load`, ip), rp.get(op) === Sp && (rp.delete(op), Zp.delete(op), null !== Sp.image && ap(!1))
-      })), Sp.image
-    }(0, Pp.d)((() => {
-      Zp.clear();
-      for (const [pp, {
-          image: ip
-        }] of rp) null !== ip && Zp.set(pp, ip);
-      rp.clear(), ap(!1)
+      })).then((TT => {
+        NT.get(zT) === gT && ET.delete(zT), TT !== gT.image && (gT.image = TT, CT(!1))
+      }), (UT => {
+        console.warn(`[bloxd-wasm-client] text icon ${TT} did not load`, UT), NT.get(zT) === gT && (NT.delete(zT), ET.delete(zT), null !== gT.image && CT(!1))
+      })), gT.image
+    }(0, LT.e)((() => {
+      ET.clear();
+      for (const [TT, {
+          image: UT
+        }] of NT) null !== UT && ET.set(TT, UT);
+      NT.clear(), CT(!1)
     }));
-    const sp = new Set(Op.d),
-      Kp = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+    const DT = new Set(WT.d),
+      oT = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
 
-    function Vp() {
-      (0, Wp.f)().catch((() => {}))
+    function AT() {
+      (0, pT.f)().catch((() => {}))
     }
 
-    function ii(pp) {
-      return sp.has(pp) ? zp(`icon:${pp}`, (async () => {
-        var ip, cp;
-        return null !== (ip = null === (cp = (0, Pp.i)()) || void 0 === cp ? void 0 : cp.textureUrl(pp)) && void 0 !== ip ? ip : (await (0, Wp.d)()).ingameIconUrl(pp)
+    function RT(TT) {
+      return DT.has(TT) ? hT(`icon:${TT}`, (async () => {
+        var UT, mT;
+        return null !== (UT = null === (mT = (0, LT.k)()) || void 0 === mT ? void 0 : mT.textureUrl(TT)) && void 0 !== UT ? UT : (await (0, pT.c)()).ingameIconUrl(TT)
       })) : null
     }
-    let ci = "unasked";
-    const Oi = {
+    let TU = "unasked";
+    const UU = {
       get canSeeRealPlayerNames() {
-        return Dp.featureFlags.canSeeRealPlayerNames
+        return jT.featureFlags.canSeeRealPlayerNames
       },
       get canSeePlayerWrittenText() {
-        return Dp.featureFlags.canSeePlayerWrittenText
+        return jT.featureFlags.canSeePlayerWrittenText
       },
       get localPlayerDbId() {
-        return Tp
+        return FT
       },
-      shownPlayerName: pp => (0, Ap.e)(pp, Np.hiddenNames),
-      translate: (pp, ip) => {
-        const cp = "object" === typeof ip && null !== ip ? ip : void 0;
-        return Np.translate(pp, (0, Ap.h)(cp, Np.hiddenNames))
+      shownPlayerName: TT => (0, lT.f)(TT, sT.hiddenNames),
+      translate: (TT, UT) => {
+        const mT = "object" === typeof UT && null !== UT ? UT : void 0;
+        return sT.translate(TT, (0, lT.h)(mT, sT.hiddenNames))
       },
-      keyBindingText: pp => Np.keyBindingText(pp),
-      isFriend: pp => Np.isFriend(pp, Np.hiddenNames),
-      iconImage: function(pp) {
-        if (sp.has(pp)) return ii(pp);
-        if ("unasked" === ci && (ci = "loading", (0, xp.e)().then((() => {
-            ci = "in", ap(!1)
-          }), (pp => {
-            ci = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", pp)
-          }))), "in" !== ci) return null;
-        const ip = (0, Sp.c)(pp),
-          cp = void 0 === ip ? void 0 : (0, Ip.itemTypeNameOf)(ip);
-        if ("Gun" === cp) return null;
-        const Op = (0, xp.d)(pp),
-          Lp = void 0 !== cp && Kp.has(cp);
-        if (Lp && void 0 === Op) return null;
-        const Yp = void 0 !== ip && "GrayscaleArmour" === (0, Ip.itemTypeOf)(ip) || Object.hasOwn(op.e, pp),
-          Dp = null !== Op && void 0 !== Op ? Op : pp;
-        return zp(Lp ? `block:${Dp}` : `item:${Dp}`, (async () => {
-          var pp, ip;
-          const cp = (0, Pp.i)(),
-            Op = await (0, Wp.f)();
-          return null !== (pp = null !== (ip = null === cp || void 0 === cp ? void 0 : cp.textureUrl(Dp)) && void 0 !== ip ? ip : Op.itemSpriteUrl(Dp)) && void 0 !== pp ? pp : Lp ? null : Op.notFoundUrl()
-        }), Yp ? (0, op.g)(pp) : void 0)
+      keyBindingText: TT => sT.keyBindingText(TT),
+      isFriend: TT => sT.isFriend(TT, sT.hiddenNames),
+      iconImage: function(TT) {
+        if (DT.has(TT)) return RT(TT);
+        if ("unasked" === TU && (TU = "loading", (0, nT.f)().then((() => {
+            TU = "in", CT(!1)
+          }), (TT => {
+            TU = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", TT)
+          }))), "in" !== TU) return null;
+        const UT = (0, gT.c)(TT),
+          mT = void 0 === UT ? void 0 : (0, MT.itemTypeNameOf)(UT);
+        if ("Gun" === mT) return null;
+        const WT = (0, nT.c)(TT),
+          HT = void 0 !== mT && oT.has(mT);
+        if (HT && void 0 === WT) return null;
+        const kT = void 0 !== UT && "GrayscaleArmour" === (0, MT.itemTypeOf)(UT) || Object.hasOwn(zT.c, TT),
+          jT = null !== WT && void 0 !== WT ? WT : TT;
+        return hT(HT ? `block:${jT}` : `item:${jT}`, (async () => {
+          var TT, UT;
+          const mT = (0, LT.k)(),
+            WT = await (0, pT.f)();
+          return null !== (TT = null !== (UT = null === mT || void 0 === mT ? void 0 : mT.textureUrl(jT)) && void 0 !== UT ? UT : WT.itemSpriteUrl(jT)) && void 0 !== TT ? TT : HT ? null : WT.notFoundUrl()
+        }), kT ? (0, zT.d)(TT) : void 0)
       },
-      effectImage: ii,
-      rankIcon: function(pp) {
-        const ip = jp.get(pp);
-        if (ip) return ip;
-        const cp = (0, Lp.h)(pp, (0, Lp.k)(pp));
-        if (!cp) return (0, Lp.i)("brands") && (0, Lp.i)("solid") ? mp.has(pp) || (mp.add(pp), console.warn(`[bloxd-wasm-client] unknown rank icon "${pp}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : kp = !0, null;
-        const Op = ep(cp);
-        return jp.set(pp, Op), Op
+      effectImage: RT,
+      rankIcon: function(TT) {
+        const UT = OT.get(TT);
+        if (UT) return UT;
+        const mT = (0, HT.d)(TT, (0, HT.f)(TT));
+        if (!mT) return (0, HT.e)("brands") && (0, HT.e)("solid") ? YT.has(TT) || (YT.add(TT), console.warn(`[bloxd-wasm-client] unknown rank icon "${TT}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : eT = !0, null;
+        const WT = bT(mT);
+        return OT.set(TT, WT), WT
       },
-      glyphsShown: pp => {
-        np.loadFor(pp)
+      glyphsShown: TT => {
+        rT.loadFor(TT)
       }
     }
   },
-  42879: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => ki,
-      f: () => vi
+  42755: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => OU,
+      f: () => ZU
     });
-    var Op = cp(36939),
-      op = cp(41014),
-      Ip = cp(39076),
-      Sp = cp(620),
-      xp = cp(322);
-    const Lp = {
+    var WT = mT(36843),
+      zT = mT(40957),
+      MT = mT(38992),
+      gT = mT(641),
+      nT = mT(351);
+    const HT = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -404,220 +404,220 @@ export const modules = {
         LINE_SPACING: 8,
         EFFECT_ICON_SIZE: 70
       },
-      Yp = 41;
+      kT = 41;
 
-    function Dp(pp) {
-      return `bolder ${pp}px 'Jetbrains Mono'`
+    function jT(TT) {
+      return `bolder ${TT}px 'Jetbrains Mono'`
     }
 
-    function Ap(pp) {
-      return "object" === typeof pp && null !== pp
+    function lT(TT) {
+      return "object" === typeof TT && null !== TT
     }
 
-    function Pp(pp, ip) {
-      const cp = "number" === typeof pp ? pp : "string" === typeof pp ? Number(pp.replace("px", "")) : NaN;
-      return Number.isFinite(cp) && cp > 0 ? cp : ip
+    function LT(TT, UT) {
+      const mT = "number" === typeof TT ? TT : "string" === typeof TT ? Number(TT.replace("px", "")) : NaN;
+      return Number.isFinite(mT) && mT > 0 ? mT : UT
     }
 
-    function Wp(pp) {
-      return Ap(pp) ? pp : void 0
+    function pT(TT) {
+      return lT(TT) ? TT : void 0
     }
 
-    function yp(pp) {
-      const ip = "number" === typeof pp ? Sp.v[pp] : pp;
-      return "string" === typeof ip && Object.hasOwn(Sp.g, ip) ? Sp.g[ip] : void 0
+    function BT(TT) {
+      const UT = "number" === typeof TT ? gT.v[TT] : TT;
+      return "string" === typeof UT && Object.hasOwn(gT.l, UT) ? gT.l[UT] : void 0
     }
 
-    function Up(pp, ip) {
-      return "string" === typeof pp ? pp : Ap(pp) ? "string" === typeof pp.translationKey ? ip.translate(pp.translationKey, pp.params).map((pp => "string" === typeof pp ? pp : pp.icon)).join("") : "string" === typeof pp.entityName ? ip.shownPlayerName(pp.entityName) : "" : void 0 === pp || null === pp ? "" : String(pp)
+    function ZT(TT, UT) {
+      return "string" === typeof TT ? TT : lT(TT) ? "string" === typeof TT.translationKey ? UT.translate(TT.translationKey, TT.params).map((TT => "string" === typeof TT ? TT : TT.icon)).join("") : "string" === typeof TT.entityName ? UT.shownPlayerName(TT.entityName) : "" : void 0 === TT || null === TT ? "" : String(TT)
     }
 
-    function wp(pp, ip, cp, Op) {
-      if (!Array.isArray(pp)) return [];
-      const op = [];
-      for (const Dp of pp) {
-        var Ip, Sp;
-        if (Ap(Dp) && "chatTag" in Dp) {
-          op.push({
+    function cT(TT, UT, mT, WT) {
+      if (!Array.isArray(TT)) return [];
+      const zT = [];
+      for (const jT of TT) {
+        var MT, gT;
+        if (lT(jT) && "chatTag" in jT) {
+          zT.push({
             kind: "rank",
-            rank: Dp
+            rank: jT
           });
           continue
         }
-        if (Ap(Dp) && "icon" in Dp && !("mainRGB" in Dp)) {
-          var Yp;
-          op.push({
+        if (lT(jT) && "icon" in jT && !("mainRGB" in jT)) {
+          var kT;
+          zT.push({
             kind: "icon",
-            icon: String(Dp.icon),
-            size: Pp(null === (Yp = Wp(Dp.style)) || void 0 === Yp ? void 0 : Yp.fontSize, Lp.DEFAULT_FONT_SIZE)
+            icon: String(jT.icon),
+            size: LT(null === (kT = pT(jT.style)) || void 0 === kT ? void 0 : kT.fontSize, HT.DEFAULT_FONT_SIZE)
           });
           continue
         }
-        if (Ap(Dp) && (0, xp.Eb)(Dp)) {
-          op.push({
+        if (lT(jT) && (0, nT.kb)(jT)) {
+          zT.push({
             kind: "text",
             text: "",
-            size: ip,
-            colour: Op
+            size: UT,
+            colour: WT
           });
           continue
         }
-        let pp, yp;
-        Ap(Dp) && (0, xp.Cb)(Dp) ? (pp = cp.keyBindingText(String(Dp.action)), yp = Wp(Dp.style)) : Ap(Dp) && "str" in Dp ? (pp = Dp.str, yp = Wp(Dp.style)) : pp = Dp;
-        const wp = Pp(null === (Ip = yp) || void 0 === Ip ? void 0 : Ip.fontSize, ip),
-          vp = null !== (Sp = (0, xp.fc)(yp)) && void 0 !== Sp ? Sp : Op;
-        if (Ap(pp) && "string" === typeof pp.translationKey) {
-          const ip = cp.translate(pp.translationKey, pp.params);
-          if (ip.some((pp => "string" !== typeof pp))) {
-            for (const pp of ip) op.push("string" === typeof pp ? {
+        let TT, BT;
+        lT(jT) && (0, nT.gb)(jT) ? (TT = mT.keyBindingText(String(jT.action)), BT = pT(jT.style)) : lT(jT) && "str" in jT ? (TT = jT.str, BT = pT(jT.style)) : TT = jT;
+        const cT = LT(null === (MT = BT) || void 0 === MT ? void 0 : MT.fontSize, UT),
+          vT = null !== (gT = (0, nT.Ob)(BT)) && void 0 !== gT ? gT : WT;
+        if (lT(TT) && "string" === typeof TT.translationKey) {
+          const UT = mT.translate(TT.translationKey, TT.params);
+          if (UT.some((TT => "string" !== typeof TT))) {
+            for (const TT of UT) zT.push("string" === typeof TT ? {
               kind: "text",
-              text: pp,
-              size: wp,
-              colour: vp
+              text: TT,
+              size: cT,
+              colour: vT
             } : {
               kind: "icon",
-              icon: pp.icon,
-              size: wp
+              icon: TT.icon,
+              size: cT
             });
             continue
           }
         }
-        op.push({
+        zT.push({
           kind: "text",
-          text: Up(pp, cp),
-          size: wp,
-          colour: vp
+          text: ZT(TT, mT),
+          size: cT,
+          colour: vT
         })
       }
-      return op
+      return zT
     }
 
-    function vp(pp) {
-      return void 0 !== pp && "rank" !== pp.kind
+    function vT(TT) {
+      return void 0 !== TT && "rank" !== TT.kind
     }
 
-    function tp(pp, ip) {
-      const cp = vp(pp),
-        Op = vp(ip);
-      return void 0 === pp && !Op || !cp && void 0 === ip ? 0 : cp !== Op ? .5 * Lp.HORIZONTAL_PADDING : 0
+    function fT(TT, UT) {
+      const mT = vT(TT),
+        WT = vT(UT);
+      return void 0 === TT && !WT || !mT && void 0 === UT ? 0 : mT !== WT ? .5 * HT.HORIZONTAL_PADDING : 0
     }
 
-    function Hp(pp) {
-      return "rank" === pp.kind ? Lp.DEFAULT_FONT_SIZE : pp.size
+    function qT(TT) {
+      return "rank" === TT.kind ? HT.DEFAULT_FONT_SIZE : TT.size
     }
 
-    function dp(pp, ip, cp) {
-      return "icon" === pp.kind ? pp.size : "rank" === pp.kind ? function(pp, ip) {
-        const cp = ip.rankIcon(pp.rank.icon);
-        return cp ? Yp * (cp.width / cp.height) : Yp
-      }(pp, cp) + Lp.HORIZONTAL_PADDING : (cp.glyphsShown(pp.text), ip.font = Dp(pp.size), ip.measureText(pp.text).width)
+    function iT(TT, UT, mT) {
+      return "icon" === TT.kind ? TT.size : "rank" === TT.kind ? function(TT, UT) {
+        const mT = UT.rankIcon(TT.rank.icon);
+        return mT ? kT * (mT.width / mT.height) : kT
+      }(TT, mT) + HT.HORIZONTAL_PADDING : (mT.glyphsShown(TT.text), UT.font = jT(TT.size), UT.measureText(TT.text).width)
     }
 
-    function ep(pp, ip, cp) {
-      if (0 === pp.length) return {
+    function bT(TT, UT, mT) {
+      if (0 === TT.length) return {
         width: 0,
         height: 0,
         sizes: []
       };
-      let Op = 0;
-      for (const Sp of pp) Op = Math.max(Op, Hp(Sp));
-      const op = [];
-      let Ip = tp(void 0, pp[0]);
-      for (let Sp = 0; Sp < pp.length; Sp++) {
-        const Op = Ip;
-        Ip += dp(pp[Sp], ip, cp), Ip += tp(pp[Sp], pp[Sp + 1]), op.push({
-          x: Op,
-          width: Ip - Op
+      let WT = 0;
+      for (const gT of TT) WT = Math.max(WT, qT(gT));
+      const zT = [];
+      let MT = fT(void 0, TT[0]);
+      for (let gT = 0; gT < TT.length; gT++) {
+        const WT = MT;
+        MT += iT(TT[gT], UT, mT), MT += fT(TT[gT], TT[gT + 1]), zT.push({
+          x: WT,
+          width: MT - WT
         })
       }
       return {
-        width: Ip,
-        height: Op + Lp.VERTICAL_PADDING,
-        sizes: op
+        width: MT,
+        height: WT + HT.VERTICAL_PADDING,
+        sizes: zT
       }
     }
 
-    function jp(pp, ip, cp, Op, op, Ip, Sp) {
-      ip += tp(void 0, pp[0]);
-      for (let xp = 0; xp < pp.length; xp++) {
-        const Lp = kp(pp[xp], ip, cp, Op, op, Ip, Sp);
-        ip += 0 === Lp ? 0 : Lp + tp(pp[xp], pp[xp + 1])
+    function OT(TT, UT, mT, WT, zT, MT, gT) {
+      UT += fT(void 0, TT[0]);
+      for (let nT = 0; nT < TT.length; nT++) {
+        const HT = eT(TT[nT], UT, mT, WT, zT, MT, gT);
+        UT += 0 === HT ? 0 : HT + fT(TT[nT], TT[nT + 1])
       }
     }
 
-    function kp(pp, ip, cp, Op, op, Ip, Sp, xp) {
-      var Ap;
-      if ("icon" === pp.kind) {
-        const Op = Ip.iconImage(pp.icon);
-        return Op && Sp.push({
-          image: Op,
-          x: ip,
-          y: cp + Lp.VERTICAL_PADDING / 2,
-          size: pp.size
-        }), pp.size
+    function eT(TT, UT, mT, WT, zT, MT, gT, nT) {
+      var lT;
+      if ("icon" === TT.kind) {
+        const WT = MT.iconImage(TT.icon);
+        return WT && gT.push({
+          image: WT,
+          x: UT,
+          y: mT + HT.VERTICAL_PADDING / 2,
+          size: TT.size
+        }), TT.size
       }
-      if ("rank" === pp.kind) {
-        const Sp = null !== xp && void 0 !== xp ? xp : dp(pp, op, Ip);
-        return function(pp, ip, cp, Op, op, Ip, Sp) {
-          var xp, Dp;
+      if ("rank" === TT.kind) {
+        const gT = null !== nT && void 0 !== nT ? nT : iT(TT, zT, MT);
+        return function(TT, UT, mT, WT, zT, MT, gT) {
+          var nT, jT;
           const {
-            rank: Ap
-          } = pp;
-          Ip.fillStyle = Ap.mainRGB, Ip.fillRect(ip, cp, Op, op);
-          const Pp = Sp.rankIcon(Ap.icon);
-          if (!Pp) return;
-          const Wp = Yp / Pp.height,
-            yp = ip + (Op - Pp.width * Wp) / 2,
-            Up = cp + (op - Yp) / 2,
-            wp = new Path2D(Pp.path),
-            vp = Lp.TEXT_SHADOW_WIDTH,
-            tp = (null === (xp = Ap.nameTag) || void 0 === xp ? void 0 : xp.iconShadowRGB) || "black";
-          for (const Lp of [-1, 1])
-            for (const pp of [-1, 1]) Rp(Ip, wp, yp + vp * Lp, Up + vp * pp, Wp, tp);
-          Rp(Ip, wp, yp, Up, Wp, (null === (Dp = Ap.nameTag) || void 0 === Dp ? void 0 : Dp.iconRGB) || "white")
-        }(pp, ip, cp, Sp, Op, op, Ip), Sp
+            rank: lT
+          } = TT;
+          MT.fillStyle = lT.mainRGB, MT.fillRect(UT, mT, WT, zT);
+          const LT = gT.rankIcon(lT.icon);
+          if (!LT) return;
+          const pT = kT / LT.height,
+            BT = UT + (WT - LT.width * pT) / 2,
+            ZT = mT + (zT - kT) / 2,
+            cT = new Path2D(LT.path),
+            vT = HT.TEXT_SHADOW_WIDTH,
+            fT = (null === (nT = lT.nameTag) || void 0 === nT ? void 0 : nT.iconShadowRGB) || "black";
+          for (const HT of [-1, 1])
+            for (const TT of [-1, 1]) JT(MT, cT, BT + vT * HT, ZT + vT * TT, pT, fT);
+          JT(MT, cT, BT, ZT, pT, (null === (jT = lT.nameTag) || void 0 === jT ? void 0 : jT.iconRGB) || "white")
+        }(TT, UT, mT, gT, WT, zT, MT), gT
       }
-      if (0 === pp.text.length) return 0;
-      const Pp = Dp(pp.size);
-      op.font = Pp;
-      const Wp = null !== xp && void 0 !== xp ? xp : op.measureText(pp.text).width;
-      return function(pp, ip, cp, Op, op, Ip) {
-        const Sp = Lp.TEXT_SHADOW_WIDTH;
-        Ip.font = Op, Ip.fillStyle = "black";
-        for (const xp of [-1, 1])
-          for (const Op of [-1, 1]) Ip.fillText(pp, ip + Sp * xp, cp + Sp * Op);
-        Ip.fillStyle = op, Ip.fillText(pp, ip, cp)
-      }(pp.text, ip, cp + Op - Lp.VERTICAL_PADDING + 5, Pp, null !== (Ap = pp.colour) && void 0 !== Ap ? Ap : "white", op), Wp
+      if (0 === TT.text.length) return 0;
+      const LT = jT(TT.size);
+      zT.font = LT;
+      const pT = null !== nT && void 0 !== nT ? nT : zT.measureText(TT.text).width;
+      return function(TT, UT, mT, WT, zT, MT) {
+        const gT = HT.TEXT_SHADOW_WIDTH;
+        MT.font = WT, MT.fillStyle = "black";
+        for (const nT of [-1, 1])
+          for (const WT of [-1, 1]) MT.fillText(TT, UT + gT * nT, mT + gT * WT);
+        MT.fillStyle = zT, MT.fillText(TT, UT, mT)
+      }(TT.text, UT, mT + WT - HT.VERTICAL_PADDING + 5, LT, null !== (lT = TT.colour) && void 0 !== lT ? lT : "white", zT), pT
     }
 
-    function mp(pp, ip) {
+    function YT(TT, UT) {
       for (const {
-          image: cp,
-          x: Op,
-          y: op,
-          size: Ip
+          image: mT,
+          x: WT,
+          y: zT,
+          size: MT
         }
-        of pp) ip.imageSmoothingEnabled = !1, ip.drawImage(cp, Op, op, Ip, Ip)
+        of TT) UT.imageSmoothingEnabled = !1, UT.drawImage(mT, WT, zT, MT, MT)
     }
 
-    function Rp(pp, ip, cp, Op, op, Ip) {
-      pp.save(), pp.translate(cp, Op), pp.scale(op, op), pp.fillStyle = Ip, pp.fill(ip), pp.restore()
+    function JT(TT, UT, mT, WT, zT, MT) {
+      TT.save(), TT.translate(mT, WT), TT.scale(zT, zT), TT.fillStyle = MT, TT.fill(UT), TT.restore()
     }
 
-    function qp(pp, ip, cp) {
-      const Op = "object" === typeof pp && null !== pp ? pp : {},
-        op = function(pp, ip, cp) {
-          if (!Array.isArray(pp) || 0 === pp.length) return [];
-          const Op = [{
+    function xT(TT, UT, mT) {
+      const WT = "object" === typeof TT && null !== TT ? TT : {},
+        zT = function(TT, UT, mT) {
+          if (!Array.isArray(TT) || 0 === TT.length) return [];
+          const WT = [{
             width: 0,
             height: 0,
             y: 0,
             items: []
           }];
-          for (const Sp of wp(pp, Lp.DEFAULT_FONT_SIZE, cp)) {
-            if ("text" !== Sp.kind) {
-              Op[Op.length - 1].items.push({
-                content: Sp,
+          for (const gT of cT(TT, HT.DEFAULT_FONT_SIZE, mT)) {
+            if ("text" !== gT.kind) {
+              WT[WT.length - 1].items.push({
+                content: gT,
                 chars: 1,
                 size: {
                   x: 0,
@@ -626,20 +626,20 @@ export const modules = {
               });
               continue
             }
-            if (0 === Sp.text.length) continue;
-            const pp = Op[Op.length - 1].items.reduce(((pp, ip) => pp + ("text" === ip.content.kind ? (0, Ip.d)(ip.content.text) : ip.chars)), 0);
-            (0, Ip.e)(Sp.text, pp).forEach(((pp, ip) => {
-              ip > 0 && Op.push({
+            if (0 === gT.text.length) continue;
+            const TT = WT[WT.length - 1].items.reduce(((TT, UT) => TT + ("text" === UT.content.kind ? (0, MT.d)(UT.content.text) : UT.chars)), 0);
+            (0, MT.g)(gT.text, TT).forEach(((TT, UT) => {
+              UT > 0 && WT.push({
                 width: 0,
                 height: 0,
                 y: 0,
                 items: []
-              }), pp.length > 0 && Op[Op.length - 1].items.push({
+              }), TT.length > 0 && WT[WT.length - 1].items.push({
                 content: {
-                  ...Sp,
-                  text: pp
+                  ...gT,
+                  text: TT
                 },
-                chars: pp.length,
+                chars: TT.length,
                 size: {
                   x: 0,
                   width: 0
@@ -647,58 +647,58 @@ export const modules = {
               })
             }))
           }
-          let op = Lp.VERTICAL_PADDING / 2;
-          for (const Ip of Op) {
-            if (0 === Ip.items.length) continue;
+          let zT = HT.VERTICAL_PADDING / 2;
+          for (const MT of WT) {
+            if (0 === MT.items.length) continue;
             const {
-              width: pp,
-              height: Op,
-              sizes: Sp
-            } = ep(Ip.items.map((pp => pp.content)), ip, cp);
-            Ip.items.forEach(((pp, ip) => {
-              pp.size = Sp[ip]
-            })), Ip.width = pp, Ip.height = Op, Ip.y = op, op += Op + Lp.LINE_SPACING
+              width: TT,
+              height: WT,
+              sizes: gT
+            } = bT(MT.items.map((TT => TT.content)), UT, mT);
+            MT.items.forEach(((TT, UT) => {
+              TT.size = gT[UT]
+            })), MT.width = TT, MT.height = WT, MT.y = zT, zT += WT + HT.LINE_SPACING
           }
-          return Op
-        }(Op.content, ip, cp);
-      let Sp = 0,
-        xp = Lp.VERTICAL_PADDING,
-        Yp = 0;
-      for (const Ip of op) {
-        Sp = Math.max(Sp, Ip.width + 2 * Lp.HORIZONTAL_PADDING), xp += Ip.height + Lp.LINE_SPACING;
-        for (const pp of Ip.items) Yp += pp.chars
+          return WT
+        }(WT.content, UT, mT);
+      let gT = 0,
+        nT = HT.VERTICAL_PADDING,
+        kT = 0;
+      for (const MT of zT) {
+        gT = Math.max(gT, MT.width + 2 * HT.HORIZONTAL_PADDING), nT += MT.height + HT.LINE_SPACING;
+        for (const TT of MT.items) kT += TT.chars
       }
-      const Dp = "string" === typeof Op.backgroundColor ? Op.backgroundColor : "#22283b";
+      const jT = "string" === typeof WT.backgroundColor ? WT.backgroundColor : "#22283b";
       return {
-        width: Sp,
-        height: xp,
-        chars: Yp,
-        draw: (pp, ip) => {
-          const Op = [];
-          if (pp.fillStyle = Dp, pp.fillRect(0, 0, Sp, xp), null === ip)
-            for (const Ip of op) Ip.items.length > 0 && jp(Ip.items.map((pp => pp.content)), 0, Ip.y, Ip.height, pp, cp, Op);
+        width: gT,
+        height: nT,
+        chars: kT,
+        draw: (TT, UT) => {
+          const WT = [];
+          if (TT.fillStyle = jT, TT.fillRect(0, 0, gT, nT), null === UT)
+            for (const MT of zT) MT.items.length > 0 && OT(MT.items.map((TT => TT.content)), 0, MT.y, MT.height, TT, mT, WT);
           else {
-            let Ip = 0;
-            for (const Sp of op)
-              for (const op of Sp.items) {
-                if (Ip >= ip) break;
-                kp("text" === op.content.kind ? {
-                  ...op.content,
-                  text: op.content.text.substring(0, ip - Ip)
-                } : op.content, op.size.x, Sp.y, Sp.height, pp, cp, Op, op.size.width), Ip += op.chars
+            let MT = 0;
+            for (const gT of zT)
+              for (const zT of gT.items) {
+                if (MT >= UT) break;
+                eT("text" === zT.content.kind ? {
+                  ...zT.content,
+                  text: zT.content.text.substring(0, UT - MT)
+                } : zT.content, zT.size.x, gT.y, gT.height, TT, mT, WT, zT.size.width), MT += zT.chars
               }
           }
-          mp(Op, pp)
+          YT(WT, TT)
         }
       }
     }
-    var Mp = cp(4556),
-      Cp = cp(1284),
-      Ep = cp(2068);
-    const Xp = 10,
-      lp = 3,
-      Qp = 3,
-      Jp = [{
+    var dT = mT(4590),
+      wT = mT(1367),
+      tT = mT(2144);
+    const aT = 10,
+      yT = 3,
+      XT = 3,
+      IT = [{
         healthFraction: .25,
         colour: "#ff0000"
       }, {
@@ -708,10 +708,10 @@ export const modules = {
         healthFraction: 1,
         colour: "#00ff00"
       }],
-      Bp = 64,
-      Np = 69,
-      Tp = {
-        icon: Ep.c,
+      QT = 64,
+      sT = 69,
+      FT = {
+        icon: tT.b,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -721,386 +721,386 @@ export const modules = {
         visible: !0
       };
 
-    function fp(pp) {
-      return "object" !== typeof pp || null === pp || Array.isArray(pp) ? void 0 : pp
+    function PT(TT) {
+      return "object" !== typeof TT || null === TT || Array.isArray(TT) ? void 0 : TT
     }
-    const bp = new Set(Mp.d);
+    const VT = new Set(dT.d);
 
-    function hp(pp, ip) {
-      return "string" === typeof pp ? Pp(pp, ip) : ip
-    }
-
-    function ap(pp) {
-      return hp(pp.width, lp)
+    function uT(TT, UT) {
+      return "string" === typeof TT ? LT(TT, UT) : UT
     }
 
-    function np(pp, ip) {
-      var cp;
-      const Op = null !== (cp = pp.applyTo) && void 0 !== cp ? cp : "both";
-      return "both" === Op || Op === ip
+    function CT(TT) {
+      return uT(TT.width, yT)
     }
 
-    function Fp(pp) {
-      const ip = ap(pp);
-      return "glow" === pp.style ? ip * Qp : Math.ceil(ip / 2) + 1
+    function rT(TT, UT) {
+      var mT;
+      const WT = null !== (mT = TT.applyTo) && void 0 !== mT ? mT : "both";
+      return "both" === WT || WT === UT
     }
 
-    function gp(pp, ip, cp) {
-      var Op, op;
-      const Ip = null !== (Op = fp(pp.info)) && void 0 !== Op ? Op : {},
-        xp = "string" === typeof pp.name ? pp.name : "",
-        Yp = Ip.subtitle;
-      if (Array.isArray(Ip.content) && 0 === Ip.content.length && !(Array.isArray(Yp) && Yp.length > 0)) return null;
-      const Dp = "number" === typeof pp.hideNameSeed ? pp.hideNameSeed : null,
-        Ap = "" === xp || !0 === pp.mesh ? xp : (0, Cp.d)(xp, !cp.canSeeRealPlayerNames, Dp);
-      if (!Ap && !Ip.content) return null;
-      const Pp = "string" === typeof pp.colour ? pp.colour : "default",
-        Wp = Object.hasOwn(Sp.r, Pp) ? Sp.r[Pp] : void 0,
-        Up = Ip.content ? wp(Ip.content, Lp.DEFAULT_FONT_SIZE, cp, Wp) : [{
+    function KT(TT) {
+      const UT = CT(TT);
+      return "glow" === TT.style ? UT * XT : Math.ceil(UT / 2) + 1
+    }
+
+    function ST(TT, UT, mT) {
+      var WT, zT;
+      const MT = null !== (WT = PT(TT.info)) && void 0 !== WT ? WT : {},
+        nT = "string" === typeof TT.name ? TT.name : "",
+        kT = MT.subtitle;
+      if (Array.isArray(MT.content) && 0 === MT.content.length && !(Array.isArray(kT) && kT.length > 0)) return null;
+      const jT = "number" === typeof TT.hideNameSeed ? TT.hideNameSeed : null,
+        lT = "" === nT || !0 === TT.mesh ? nT : (0, wT.d)(nT, !mT.canSeeRealPlayerNames, jT);
+      if (!lT && !MT.content) return null;
+      const LT = "string" === typeof TT.colour ? TT.colour : "default",
+        pT = Object.hasOwn(gT.u, LT) ? gT.u[LT] : void 0,
+        ZT = MT.content ? cT(MT.content, HT.DEFAULT_FONT_SIZE, mT, pT) : [{
           kind: "text",
-          text: Ap,
-          size: Lp.DEFAULT_FONT_SIZE,
-          colour: Wp
+          text: lT,
+          size: HT.DEFAULT_FONT_SIZE,
+          colour: pT
         }],
-        vp = [];
-      for (const Sp of Array.isArray(pp.ranks) ? pp.ranks : []) {
-        const pp = yp(Sp);
-        null !== pp && void 0 !== pp && pp.nameTag && pp.visible && vp.push({
+        vT = [];
+      for (const gT of Array.isArray(TT.ranks) ? TT.ranks : []) {
+        const TT = BT(gT);
+        null !== TT && void 0 !== TT && TT.nameTag && TT.visible && vT.push({
           kind: "rank",
-          rank: pp
+          rank: TT
         })
       }
-      vp.push(...Up);
-      ("boolean" === typeof pp.player ? pp.player : Array.isArray(pp.ranks)) && "" !== xp && cp.isFriend(xp) && vp.push({
+      vT.push(...ZT);
+      ("boolean" === typeof TT.player ? TT.player : Array.isArray(TT.ranks)) && "" !== nT && mT.isFriend(nT) && vT.push({
         kind: "rank",
-        rank: Tp
-      }), "number" === typeof pp.Yx && vp.push({
+        rank: FT
+      }), "number" === typeof TT.sg && vT.push({
         kind: "text",
-        text: ` ${pp.Yx}m`,
-        size: Lp.DEFAULT_FONT_SIZE,
+        text: ` ${TT.sg}m`,
+        size: HT.DEFAULT_FONT_SIZE,
         colour: "#cef3ff"
       });
-      const tp = Yp ? wp(Yp, Lp.DEFAULT_SUBTITLE_FONT_SIZE, cp) : null,
-        Hp = "string" === typeof Ip.backgroundColor ? Ip.backgroundColor : "#22283b",
-        dp = "string" === typeof Ip.subtitleBackgroundColor ? Ip.subtitleBackgroundColor : "#1a1e2d",
-        kp = fp(Ip.healthbar),
-        Rp = fp(Ip.border),
-        qp = Array.isArray(pp.effects) ? pp.effects.filter((pp => "string" === typeof pp && bp.has(pp))) : [],
-        Mp = "number" === typeof pp.health ? Math.max(0, Math.min(1, pp.health)) : null,
-        Ep = ep(vp, ip, cp),
-        lp = ep(null !== tp && void 0 !== tp ? tp : [], ip, cp),
-        gp = {
-          width: Lp.EFFECT_ICON_SIZE * qp.length,
-          height: qp.length > 0 ? Lp.EFFECT_ICON_SIZE : 0
+      const fT = kT ? cT(kT, HT.DEFAULT_SUBTITLE_FONT_SIZE, mT) : null,
+        qT = "string" === typeof MT.backgroundColor ? MT.backgroundColor : "#22283b",
+        iT = "string" === typeof MT.subtitleBackgroundColor ? MT.subtitleBackgroundColor : "#1a1e2d",
+        eT = PT(MT.healthbar),
+        JT = PT(MT.border),
+        xT = Array.isArray(TT.effects) ? TT.effects.filter((TT => "string" === typeof TT && VT.has(TT))) : [],
+        dT = "number" === typeof TT.health ? Math.max(0, Math.min(1, TT.health)) : null,
+        tT = bT(vT, UT, mT),
+        yT = bT(null !== fT && void 0 !== fT ? fT : [], UT, mT),
+        ST = {
+          width: HT.EFFECT_ICON_SIZE * xT.length,
+          height: xT.length > 0 ? HT.EFFECT_ICON_SIZE : 0
         },
-        Gp = Rp && np(Rp, "nametag") ? Fp(Rp) : 0,
-        rp = hp(null === kp || void 0 === kp ? void 0 : kp.height, Xp),
-        Zp = Rp && np(Rp, "healthbar") ? Fp(Rp) : 0,
-        zp = "never" === (null !== (op = null === kp || void 0 === kp ? void 0 : kp.display) && void 0 !== op ? op : "onDamage") ? 0 : rp + Zp,
-        sp = Math.max(gp.height, Gp),
-        Kp = Math.max(Lp.VERTICAL_PADDING, zp, Gp);
-      let Vp = Math.max(Ep.width, lp.width, gp.width);
-      if (Rp) {
-        const pp = Fp(Rp) + Lp.HORIZONTAL_PADDING / 2;
-        Vp = Math.max(Vp, Math.max(Ep.width, lp.width) + Lp.HORIZONTAL_PADDING + 2 * pp)
+        GT = JT && rT(JT, "nametag") ? KT(JT) : 0,
+        NT = uT(null === eT || void 0 === eT ? void 0 : eT.height, aT),
+        ET = JT && rT(JT, "healthbar") ? KT(JT) : 0,
+        hT = "never" === (null !== (zT = null === eT || void 0 === eT ? void 0 : eT.display) && void 0 !== zT ? zT : "onDamage") ? 0 : NT + ET,
+        DT = Math.max(ST.height, GT),
+        oT = Math.max(HT.VERTICAL_PADDING, hT, GT);
+      let AT = Math.max(tT.width, yT.width, ST.width);
+      if (JT) {
+        const TT = KT(JT) + HT.HORIZONTAL_PADDING / 2;
+        AT = Math.max(AT, Math.max(tT.width, yT.width) + HT.HORIZONTAL_PADDING + 2 * TT)
       }
-      const ii = Ep.height + lp.height + sp + Kp,
-        ci = Ep.width + Lp.HORIZONTAL_PADDING,
-        Oi = lp.width + Lp.HORIZONTAL_PADDING,
-        oi = Math.max(ci, Oi),
-        Ii = (Vp - oi) / 2,
-        Si = Math.max(gp.height, Gp);
+      const RT = tT.height + yT.height + DT + oT,
+        TU = tT.width + HT.HORIZONTAL_PADDING,
+        UU = yT.width + HT.HORIZONTAL_PADDING,
+        mU = Math.max(TU, UU),
+        WU = (AT - mU) / 2,
+        zU = Math.max(ST.height, GT);
       return {
-        width: Vp,
-        height: ii,
-        draw: pp => {
-          const ip = [];
-          if (pp.fillStyle = Hp, pp.fillRect(Ii, Si, oi, Ep.height), jp(vp, (Vp - ci) / 2 + Lp.HORIZONTAL_PADDING / 2, Si, Ep.height, pp, cp, ip), tp) {
-            const Op = Si + Ep.height;
-            pp.fillStyle = dp, pp.fillRect(Ii, Op, oi, lp.height), jp(tp, (Vp - Oi) / 2 + Lp.HORIZONTAL_PADDING / 2, Op, lp.height, pp, cp, ip)
+        width: AT,
+        height: RT,
+        draw: TT => {
+          const UT = [];
+          if (TT.fillStyle = qT, TT.fillRect(WU, zU, mU, tT.height), OT(vT, (AT - TU) / 2 + HT.HORIZONTAL_PADDING / 2, zU, tT.height, TT, mT, UT), fT) {
+            const WT = zU + tT.height;
+            TT.fillStyle = iT, TT.fillRect(WU, WT, mU, yT.height), OT(fT, (AT - UU) / 2 + HT.HORIZONTAL_PADDING / 2, WT, yT.height, TT, mT, UT)
           }
-          let Op = null;
-          if (null !== Mp) {
-            const ip = ii - rp - Zp;
-            null !== kp && void 0 !== kp && kp.backgroundColour && (pp.fillStyle = kp.backgroundColour, pp.fillRect(Ii, ip, oi, rp)), pp.fillStyle = function(pp, ip) {
-              const cp = null === pp || void 0 === pp ? void 0 : pp.foregroundColour;
-              if ("string" === typeof cp) return cp;
-              const Op = [...Array.isArray(cp) && cp.length > 0 ? cp : Jp].sort(((pp, ip) => pp.healthFraction - ip.healthFraction)),
-                op = Op.find((pp => ip <= pp.healthFraction));
-              return (null !== op && void 0 !== op ? op : Op[Op.length - 1]).colour
-            }(kp, Mp), pp.fillRect(Ii, ip, Math.round(oi * Mp), rp), Op = {
-              x: Ii,
-              y: ip,
-              width: oi,
-              height: rp
+          let WT = null;
+          if (null !== dT) {
+            const UT = RT - NT - ET;
+            null !== eT && void 0 !== eT && eT.backgroundColour && (TT.fillStyle = eT.backgroundColour, TT.fillRect(WU, UT, mU, NT)), TT.fillStyle = function(TT, UT) {
+              const mT = null === TT || void 0 === TT ? void 0 : TT.foregroundColour;
+              if ("string" === typeof mT) return mT;
+              const WT = [...Array.isArray(mT) && mT.length > 0 ? mT : IT].sort(((TT, UT) => TT.healthFraction - UT.healthFraction)),
+                zT = WT.find((TT => UT <= TT.healthFraction));
+              return (null !== zT && void 0 !== zT ? zT : WT[WT.length - 1]).colour
+            }(eT, dT), TT.fillRect(WU, UT, Math.round(mU * dT), NT), WT = {
+              x: WU,
+              y: UT,
+              width: mU,
+              height: NT
             }
           }
-          if (Rp) {
-            const ip = [];
-            np(Rp, "nametag") && ip.push({
-              x: Ii,
-              y: Si,
-              width: oi,
-              height: Ep.height + (tp ? lp.height : 0)
-            }), Op && np(Rp, "healthbar") && ip.push(Op), ip.length > 0 && function(pp, ip, cp) {
-              const Op = ap(ip),
-                op = Op / 2,
-                Ip = pp => pp.width > 0 && pp.height > 0,
-                Sp = cp.map((pp => ({
-                  x: pp.x + op,
-                  y: pp.y + op,
-                  width: pp.width - Op,
-                  height: pp.height - Op
-                }))).filter(Ip);
-              if (0 === Sp.length) return;
-              const xp = ip => {
-                const cp = ip.filter(Ip);
-                if (0 !== cp.length) {
-                  pp.beginPath();
-                  for (const ip of cp) pp.rect(ip.x, ip.y, ip.width, ip.height);
-                  pp.stroke()
+          if (JT) {
+            const UT = [];
+            rT(JT, "nametag") && UT.push({
+              x: WU,
+              y: zU,
+              width: mU,
+              height: tT.height + (fT ? yT.height : 0)
+            }), WT && rT(JT, "healthbar") && UT.push(WT), UT.length > 0 && function(TT, UT, mT) {
+              const WT = CT(UT),
+                zT = WT / 2,
+                MT = TT => TT.width > 0 && TT.height > 0,
+                gT = mT.map((TT => ({
+                  x: TT.x + zT,
+                  y: TT.y + zT,
+                  width: TT.width - WT,
+                  height: TT.height - WT
+                }))).filter(MT);
+              if (0 === gT.length) return;
+              const nT = UT => {
+                const mT = UT.filter(MT);
+                if (0 !== mT.length) {
+                  TT.beginPath();
+                  for (const UT of mT) TT.rect(UT.x, UT.y, UT.width, UT.height);
+                  TT.stroke()
                 }
               };
-              if (pp.save(), pp.strokeStyle = ip.colour, pp.lineWidth = Op, pp.lineJoin = "round", "glow" === ip.style) pp.shadowColor = ip.colour, pp.shadowBlur = Op * Qp, xp(Sp), xp(Sp);
-              else if ("double" === ip.style) {
-                xp(Sp);
-                const pp = Op + 2;
-                xp(Sp.map((ip => ({
-                  x: ip.x + pp,
-                  y: ip.y + pp,
-                  width: ip.width - 2 * pp,
-                  height: ip.height - 2 * pp
+              if (TT.save(), TT.strokeStyle = UT.colour, TT.lineWidth = WT, TT.lineJoin = "round", "glow" === UT.style) TT.shadowColor = UT.colour, TT.shadowBlur = WT * XT, nT(gT), nT(gT);
+              else if ("double" === UT.style) {
+                nT(gT);
+                const TT = WT + 2;
+                nT(gT.map((UT => ({
+                  x: UT.x + TT,
+                  y: UT.y + TT,
+                  width: UT.width - 2 * TT,
+                  height: UT.height - 2 * TT
                 }))))
-              } else xp(Sp);
-              pp.restore()
-            }(pp, Rp, ip)
+              } else nT(gT);
+              TT.restore()
+            }(TT, JT, UT)
           }
-          mp(ip, pp);
-          for (let op = 0; op < qp.length; op++) {
-            const ip = cp.effectImage(qp[op]);
-            ip && (pp.imageSmoothingEnabled = !1, pp.drawImage(ip, 5 + Np * op, 5, Bp, Bp))
+          YT(UT, TT);
+          for (let zT = 0; zT < xT.length; zT++) {
+            const UT = mT.effectImage(xT[zT]);
+            UT && (TT.imageSmoothingEnabled = !1, TT.drawImage(UT, 5 + sT * zT, 5, QT, QT))
           }
         }
       }
     }
-    var Gp = cp(38883);
-    const rp = 256,
-      Zp = 1024,
-      zp = {
+    var GT = mT(38782);
+    const NT = 256,
+      ET = 1024,
+      hT = {
         width: 1,
         height: 7 / 8
       };
-    var sp = cp(38890);
-    const Kp = {
+    var DT = mT(38788);
+    const oT = {
       leaderboard: ""
     };
-    var Vp = cp(42885);
-    const ii = {
+    var AT = mT(42761);
+    const RT = {
         Nametag: 1,
         MultilineText: 2,
         Board: 3,
         Leaderboard: 4
       },
-      ci = 2048,
-      Oi = 256,
-      oi = 10,
-      Ii = 4,
-      Si = 65536,
-      xi = new TextDecoder;
-    let Li = Vp.o,
-      Yi = -1;
-    const Di = new Map,
-      Ai = new Map;
-    let Pi = 0;
-    const Wi = new TextEncoder;
+      TU = 2048,
+      UU = 256,
+      mU = 10,
+      WU = 4,
+      zU = 65536,
+      MU = new TextDecoder;
+    let gU = AT.q,
+      nU = -1;
+    const HU = new Map,
+      kU = new Map;
+    let jU = 0;
+    const lU = new TextEncoder;
 
-    function yi(pp, ip) {
-      const cp = Wi.encode(JSON.stringify(ip)),
-        Op = new Uint8Array(cp.length + 1);
-      return Op[0] = pp, Op.set(cp, 1), Op
+    function LU(TT, UT) {
+      const mT = lU.encode(JSON.stringify(UT)),
+        WT = new Uint8Array(mT.length + 1);
+      return WT[0] = TT, WT.set(mT, 1), WT
     }
-    const Ui = {
+    const pU = {
         name: "Ag",
         info: null,
         colour: "default",
         ranks: [],
         effects: [],
         health: .5,
-        Yx: null,
+        sg: null,
         hideNameSeed: null
       },
-      wi = [yi(ii.Nametag, Ui), yi(ii.Nametag, {
-        ...Ui,
+      BU = [LU(RT.Nametag, pU), LU(RT.Nametag, {
+        ...pU,
         info: {
           content: [{
             str: "Ag"
           }],
           subtitle: ["Ag"]
         }
-      }), yi(ii.MultilineText, {
+      }), LU(RT.MultilineText, {
         box: {
           content: ["Ag"]
         },
         shown: null
-      }), ...Op.e.map(((pp, ip) => yi(ii.Board, {
+      }), ...WT.b.map(((TT, UT) => LU(RT.Board, {
         shared: {
           text: "Ag",
-          textSize: ip
+          textSize: UT
         },
         w: 0,
         h: 0
       })))];
 
-    function vi(pp) {
-      Vp.i.load().then((() => {
-        if (pp()) return;
-        const ip = (0, op.e)(1, 1, {
+    function ZU(TT) {
+      AT.j.load().then((() => {
+        if (TT()) return;
+        const UT = (0, zT.e)(1, 1, {
           willReadFrequently: !0
         });
-        var cp;
-        ip && (cp = ip.canvas, wi.map((pp => ki(pp, cp))))
+        var mT;
+        UT && (mT = UT.canvas, BU.map((TT => OU(TT, mT))))
       }))
     }
-    let ti = Vp.q;
+    let cU = AT.t;
 
-    function Hi() {
-      Di.clear(), Ai.clear()
+    function vU() {
+      HU.clear(), kU.clear()
     }
 
-    function di(pp, ip) {
-      const cp = pp.get(ip);
-      return void 0 !== cp && (pp.delete(ip), pp.set(ip, cp)), cp
+    function fU(TT, UT) {
+      const mT = TT.get(UT);
+      return void 0 !== mT && (TT.delete(UT), TT.set(UT, mT)), mT
     }
 
-    function ei(pp, ip, cp) {
-      pp.set(ip, cp), pp.size > Oi && pp.delete(pp.keys().next().value)
+    function qU(TT, UT, mT) {
+      TT.set(UT, mT), TT.size > UU && TT.delete(TT.keys().next().value)
     }
 
-    function ui(pp, ip, cp) {
-      if (pp === ii.Nametag) {
-        let pp = di(Di, ip);
-        return void 0 === pp && (pp = gp(JSON.parse(ip), cp, Li), ei(Di, ip, pp)), pp
+    function iU(TT, UT, mT) {
+      if (TT === RT.Nametag) {
+        let TT = fU(HU, UT);
+        return void 0 === TT && (TT = ST(JSON.parse(UT), mT, gU), qU(HU, UT, TT)), TT
       }
-      if (pp === ii.MultilineText) {
-        var op;
-        const pp = JSON.parse(ip),
-          Op = JSON.stringify(null !== (op = pp.box) && void 0 !== op ? op : null),
-          Ip = "number" === typeof pp.shown ? pp.shown : null;
-        let Sp = di(Ai, Op);
-        void 0 === Sp && (Sp = qp(pp.box, cp, Li), ei(Ai, Op, Sp));
-        const xp = null === Ip ? null : Math.min(Math.max(0, Math.floor(Ip)), Sp.chars),
-          Lp = Sp;
+      if (TT === RT.MultilineText) {
+        var zT;
+        const TT = JSON.parse(UT),
+          WT = JSON.stringify(null !== (zT = TT.box) && void 0 !== zT ? zT : null),
+          MT = "number" === typeof TT.shown ? TT.shown : null;
+        let gT = fU(kU, WT);
+        void 0 === gT && (gT = xT(TT.box, mT, gU), qU(kU, WT, gT));
+        const nT = null === MT ? null : Math.min(Math.max(0, Math.floor(MT)), gT.chars),
+          HT = gT;
         return {
-          width: Lp.width,
-          height: Lp.height,
-          draw: pp => {
-            Lp.draw(pp, xp)
+          width: HT.width,
+          height: HT.height,
+          draw: TT => {
+            HT.draw(TT, nT)
           }
         }
       }
-      if (pp === ii.Board) return function(pp, ip) {
-        var cp;
-        if (!ip.canSeePlayerWrittenText) return null;
+      if (TT === RT.Board) return function(TT, UT) {
+        var mT;
+        if (!UT.canSeePlayerWrittenText) return null;
         const {
-          shared: op,
-          w: Ip = 0,
-          h: Sp = 0
-        } = pp, xp = !Ip;
-        let Lp;
-        if (xp) {
-          var Yp, Dp;
-          Lp = null !== (Yp = null === op || void 0 === op || null === (Dp = op.text) || void 0 === Dp ? void 0 : Dp.toString()) && void 0 !== Yp ? Yp : ""
+          shared: zT,
+          w: MT = 0,
+          h: gT = 0
+        } = TT, nT = !MT;
+        let HT;
+        if (nT) {
+          var kT, jT;
+          HT = null !== (kT = null === zT || void 0 === zT || null === (jT = zT.text) || void 0 === jT ? void 0 : jT.toString()) && void 0 !== kT ? kT : ""
         } else {
-          if ("string" !== typeof(null === op || void 0 === op ? void 0 : op.text)) return null;
-          Lp = op.text
+          if ("string" !== typeof(null === zT || void 0 === zT ? void 0 : zT.text)) return null;
+          HT = zT.text
         }
-        if ("" === Lp.trim()) return null;
-        const Ap = null !== (cp = null === op || void 0 === op ? void 0 : op.textSize) && void 0 !== cp ? cp : 0,
-          Pp = Op.e[Ap].ingameFontSize;
-        let Wp = zp,
-          yp = rp;
-        xp || (Lp = (0, Op.l)(Lp, Ap, Ip, Sp), Wp = (0, Op.t)(Ip, Sp), yp = Math.min(rp, Zp / Math.max(Wp.width, Wp.height)));
-        const Up = Math.round(yp * Wp.width),
-          wp = Math.round(yp * Wp.height),
-          vp = yp / rp;
+        if ("" === HT.trim()) return null;
+        const lT = null !== (mT = null === zT || void 0 === zT ? void 0 : zT.textSize) && void 0 !== mT ? mT : 0,
+          LT = WT.b[lT].ingameFontSize;
+        let pT = hT,
+          BT = NT;
+        nT || (HT = (0, WT.m)(HT, lT, MT, gT), pT = (0, WT.s)(MT, gT), BT = Math.min(NT, ET / Math.max(pT.width, pT.height)));
+        const ZT = Math.round(BT * pT.width),
+          cT = Math.round(BT * pT.height),
+          vT = BT / NT;
         return {
-          width: Up,
-          height: wp,
-          draw: pp => {
-            Gp.b.fontSize = Pp * vp, Gp.b.fontWeight = "bold", Gp.b.font = "'Jetbrains Mono', monospace", Gp.b.drawText(pp, Lp, 0, (-10 - 7 * Ap) * vp, Up, wp)
+          width: ZT,
+          height: cT,
+          draw: TT => {
+            GT.e.fontSize = LT * vT, GT.e.fontWeight = "bold", GT.e.font = "'Jetbrains Mono', monospace", GT.e.drawText(TT, HT, 0, (-10 - 7 * lT) * vT, ZT, cT)
           }
         }
-      }(JSON.parse(ip), Li);
-      if (pp === ii.Leaderboard) return function(pp, ip, cp) {
-        var Op;
-        const op = (0, sp.l)(pp.opts, Kp),
-          Ip = (0, sp.f)(op, cp),
-          Sp = {
-            top: (0, sp.i)(op, (0, sp.n)(pp.top)),
-            around: null !== (Op = pp.around) && void 0 !== Op ? Op : null,
-            showPlayerText: ip.canSeePlayerWrittenText,
-            localPlayerDbId: ip.localPlayerDbId
+      }(JSON.parse(UT), gU);
+      if (TT === RT.Leaderboard) return function(TT, UT, mT) {
+        var WT;
+        const zT = (0, DT.j)(TT.opts, oT),
+          MT = (0, DT.e)(zT, mT),
+          gT = {
+            top: (0, DT.g)(zT, (0, DT.k)(TT.top)),
+            around: null !== (WT = TT.around) && void 0 !== WT ? WT : null,
+            showPlayerText: UT.canSeePlayerWrittenText,
+            localPlayerDbId: UT.localPlayerDbId
           };
         return {
-          width: Ip.pixelWidth,
-          height: Ip.pixelHeight,
-          draw: pp => {
+          width: MT.pixelWidth,
+          height: MT.pixelHeight,
+          draw: TT => {
             const {
-              a: ip,
-              d: cp
-            } = pp.getTransform();
-            (0, sp.d)(pp, Math.round(Ip.pixelWidth * ip), Math.round(Ip.pixelHeight * cp), Ip, op, Sp)
+              a: UT,
+              d: mT
+            } = TT.getTransform();
+            (0, DT.b)(TT, Math.round(MT.pixelWidth * UT), Math.round(MT.pixelHeight * mT), MT, zT, gT)
           }
         }
-      }(JSON.parse(ip), Li, ci);
-      throw new Error(`unknown text plane kind ${pp}`)
+      }(JSON.parse(UT), gU, TU);
+      throw new Error(`unknown text plane kind ${TT}`)
     }
-    const ji = 2 ** Math.floor(Math.log2(ci));
+    const bU = 2 ** Math.floor(Math.log2(TU));
 
-    function ki(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function OU(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       try {
-        if (pp.length < 2) return [0, 0];
-        const Ip = (0, op.c)(ip);
-        if (!Ip) return [0, 0];
-        const Sp = ti();
-        Sp !== Yi && (Yi = Sp, Hi());
-        const [xp] = pp, Lp = xi.decode(pp.subarray(1));
-        let Yp;
-        xp !== ii.Board && xp !== ii.Leaderboard || !Li.canSeePlayerWrittenText || Li.glyphsShown(Lp), Ip.save();
+        if (TT.length < 2) return [0, 0];
+        const MT = (0, zT.c)(UT);
+        if (!MT) return [0, 0];
+        const gT = cU();
+        gT !== nU && (nU = gT, vU());
+        const [nT] = TT, HT = MU.decode(TT.subarray(1));
+        let kT;
+        nT !== RT.Board && nT !== RT.Leaderboard || !gU.canSeePlayerWrittenText || gU.glyphsShown(HT), MT.save();
         try {
-          Yp = ui(xp, Lp, Ip)
+          kT = iU(nT, HT, MT)
         } finally {
-          Ip.restore()
+          MT.restore()
         }
-        if (null === Yp || !(Yp.width > 0 && Yp.height > 0)) return [0, 0];
-        const Dp = Math.min(1, ci / Yp.width, ci / Yp.height),
-          Ap = pp => Op ? function(pp) {
-            const ip = 2 ** Math.ceil(Math.log2(pp));
-            return Math.min(ji, ip - pp > pp - ip / 2 ? ip / 2 : ip)
-          }(pp) : Math.min(ci, Math.ceil(pp * Dp)),
-          [Pp, Wp] = [Ap(Yp.width), Ap(Yp.height)];
-        ! function(pp, ip, cp, Op, op) {
-          const Ip = Math.max(pp.width, cp),
-            Sp = Math.max(pp.height, Op),
-            xp = op || Ip * Sp > Math.max(Ii * cp * Op, Si),
-            [Lp, Yp] = xp ? [cp, Op] : [Ip, Sp];
-          Lp === pp.width && Yp === pp.height ? ip.clearRect(0, 0, Lp, Yp) : (pp.width = Lp, pp.height = Yp)
-        }(ip, Ip, Pp, Wp, cp), Ip.save();
+        if (null === kT || !(kT.width > 0 && kT.height > 0)) return [0, 0];
+        const jT = Math.min(1, TU / kT.width, TU / kT.height),
+          lT = TT => WT ? function(TT) {
+            const UT = 2 ** Math.ceil(Math.log2(TT));
+            return Math.min(bU, UT - TT > TT - UT / 2 ? UT / 2 : UT)
+          }(TT) : Math.min(TU, Math.ceil(TT * jT)),
+          [LT, pT] = [lT(kT.width), lT(kT.height)];
+        ! function(TT, UT, mT, WT, zT) {
+          const MT = Math.max(TT.width, mT),
+            gT = Math.max(TT.height, WT),
+            nT = zT || MT * gT > Math.max(WU * mT * WT, zU),
+            [HT, kT] = nT ? [mT, WT] : [MT, gT];
+          HT === TT.width && kT === TT.height ? UT.clearRect(0, 0, HT, kT) : (TT.width = HT, TT.height = kT)
+        }(UT, MT, LT, pT, mT), MT.save();
         try {
-          const [pp, ip] = Op ? [Pp / Yp.width, Wp / Yp.height] : [Dp, Dp];
-          1 === pp && 1 === ip || Ip.scale(pp, ip), Yp.draw(Ip)
+          const [TT, UT] = WT ? [LT / kT.width, pT / kT.height] : [jT, jT];
+          1 === TT && 1 === UT || MT.scale(TT, UT), kT.draw(MT)
         } finally {
-          Ip.restore()
+          MT.restore()
         }
-        return [Pp, Wp]
-      } catch (Ip) {
-        ! function(pp, ip) {
-          Pi < oi && (Pi++, console.warn(`[bloxd-wasm-client] ${pp}`, ip))
-        }("could not raster a text plane", Ip);
+        return [LT, pT]
+      } catch (MT) {
+        ! function(TT, UT) {
+          jU < mU && (jU++, console.warn(`[bloxd-wasm-client] ${TT}`, UT))
+        }("could not raster a text plane", MT);
         try {
-          ip.width = 1
+          UT.width = 1
         } catch {}
         return [0, 0]
       }
@@ -1108,4 +1108,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

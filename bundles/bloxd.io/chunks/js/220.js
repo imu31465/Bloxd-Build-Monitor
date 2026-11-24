@@ -1,83 +1,83 @@
 export const id = 220;
 export const ids = [220, 296];
 export const modules = {
-  41517: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CharacterCustomisationUI: () => Si
+  41433: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      CharacterCustomisationUI: () => zU
     });
-    var Op = cp(62),
-      op = cp(3107),
-      Ip = cp(1141),
-      Sp = cp(1049),
-      xp = cp.n(Sp),
-      Lp = cp(1251),
-      Yp = cp(620),
-      Dp = cp(1201),
-      Ap = cp(2276),
-      Pp = cp(1579),
-      Wp = cp(2638);
-    const yp = Lp.u.filter((pp => !Pp.f.includes(pp)));
+    var WT = mT(63),
+      zT = mT(3137),
+      MT = mT(1225),
+      gT = mT(1126),
+      nT = mT.n(gT),
+      HT = mT(1336),
+      kT = mT(641),
+      jT = mT(1288),
+      lT = mT(2348),
+      LT = mT(1688),
+      pT = mT(2685);
+    const BT = HT.t.filter((TT => !LT.f.includes(TT)));
 
-    function Up(pp, ip) {
-      return yp.includes(pp) && "string" === typeof ip && (0, Wp.f)(pp, ip)
+    function ZT(TT, UT) {
+      return BT.includes(TT) && "string" === typeof UT && (0, pT.h)(TT, UT)
     }
 
-    function wp(pp) {
-      const ip = {};
-      for (const cp of yp) {
-        const Op = pp[cp];
-        void 0 !== Op && Up(cp, Op) && (ip[cp] = Op)
+    function cT(TT) {
+      const UT = {};
+      for (const mT of BT) {
+        const WT = TT[mT];
+        void 0 !== WT && ZT(mT, WT) && (UT[mT] = WT)
       }
-      return ip
+      return UT
     }
 
-    function vp(pp) {
-      return 0 === Object.keys(pp).length
+    function vT(TT) {
+      return 0 === Object.keys(TT).length
     }
 
-    function tp(pp, ip) {
-      return Object.entries(pp).every((pp => {
-        let [cp, Op] = pp;
-        return ip[cp] === Op
+    function fT(TT, UT) {
+      return Object.entries(TT).every((TT => {
+        let [mT, WT] = TT;
+        return UT[mT] === WT
       }))
     }
-    var Hp = cp(2281),
-      dp = cp(3190),
-      ep = cp(2004),
-      jp = cp(1480),
-      kp = cp(2314),
-      mp = cp(25),
-      Rp = cp(2767),
-      qp = cp(1520),
-      Mp = cp(1149),
-      Cp = cp(1880);
-    class Ep {
+    var qT = mT(2355),
+      iT = mT(3219),
+      bT = mT(2089),
+      OT = mT(1569),
+      eT = mT(2391),
+      YT = mT(25),
+      JT = mT(2805),
+      xT = mT(1613),
+      dT = mT(1231),
+      wT = mT(1976);
+    class tT {
       constructor() {
         this.slots = new Map, this.before = new Map, this.accountId = null
       }
-      moveTo(pp) {
-        null !== pp && pp !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = pp)
+      moveTo(TT) {
+        null !== TT && TT !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = TT)
       }
-      isFor(pp) {
-        return null === this.accountId || this.accountId === pp
+      isFor(TT) {
+        return null === this.accountId || this.accountId === TT
       }
-      overlay(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return pp.map(((pp, cp) => {
-          var Op, op;
-          return null !== (Op = null !== (op = this.slots.get(cp)) && void 0 !== op ? op : ip.get(cp)) && void 0 !== Op ? Op : pp
+      overlay(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return TT.map(((TT, mT) => {
+          var WT, zT;
+          return null !== (WT = null !== (zT = this.slots.get(mT)) && void 0 !== zT ? zT : UT.get(mT)) && void 0 !== WT ? WT : TT
         }))
       }
     }
-    class Xp extends Rp.e {
+    class aT extends JT.d {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Ep;
-        super("saved outfits", (async ip => {
-          const cp = pp.isFor(ip.whamm),
-            Op = new Map(pp.slots),
-            op = await qp.b.getSavedOutfits(ip);
-          return cp ? pp.overlay(op, Op) : op
-        })), this.unsaved = pp, this.started = !1, this.sending = !1
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new tT;
+        super("saved outfits", (async UT => {
+          const mT = TT.isFor(UT.whamm),
+            WT = new Map(TT.slots),
+            zT = await xT.b.getSavedOutfits(UT);
+          return mT ? TT.overlay(zT, WT) : zT
+        })), this.unsaved = TT, this.started = !1, this.sending = !1
       }
       ensureLoaded() {
         if (this.started) {
@@ -85,994 +85,994 @@ export const modules = {
         } else this.started = !0, this.watchAccount();
         this.refresh()
       }
-      save(pp, ip) {
-        var cp, Op;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(pp)) || this.unsaved.before.set(pp, null !== (cp = null === (Op = this.getState().data) || void 0 === Op ? void 0 : Op[pp]) && void 0 !== cp ? cp : {});
-        this.unsaved.slots.set(pp, ip), this.update((cp => cp.map(((cp, Op) => Op === pp ? ip : cp)))), this.sending || this.sendUnsaved()
+      save(TT, UT) {
+        var mT, WT;
+        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(TT)) || this.unsaved.before.set(TT, null !== (mT = null === (WT = this.getState().data) || void 0 === WT ? void 0 : WT[TT]) && void 0 !== mT ? mT : {});
+        this.unsaved.slots.set(TT, UT), this.update((mT => mT.map(((mT, WT) => WT === TT ? UT : mT)))), this.sending || this.sendUnsaved()
       }
-      clear(pp) {
-        this.save(pp, {})
+      clear(TT) {
+        this.save(TT, {})
       }
       async sendUnsaved() {
         this.sending = !0;
-        let pp = !1;
+        let TT = !1;
         for (; this.unsaved.slots.size > 0;) {
-          const cp = new Map(this.unsaved.slots);
-          let Op = this.getState().accountId;
+          const mT = new Map(this.unsaved.slots);
+          let WT = this.getState().accountId;
           try {
-            const pp = await Mp.userContextManager.getCurrentUserContext();
-            if (Op = pp.whamm, this.unsaved.moveTo(pp.whamm), 0 === this.unsaved.slots.size) {
+            const TT = await dT.userContextManager.getCurrentUserContext();
+            if (WT = TT.whamm, this.unsaved.moveTo(TT.whamm), 0 === this.unsaved.slots.size) {
               this.refresh();
               break
             }
             const {
-              accountId: ip,
-              data: op
+              accountId: UT,
+              data: zT
             } = this.getState();
-            let Ip = op;
-            ip === pp.whamm && null !== Ip || (Ip = this.unsaved.overlay(await qp.b.getSavedOutfits(pp)), this.refresh()), await qp.b.setSavedOutfits(pp, Ip), this.unsaved.isFor(pp.whamm) && Ip.forEach(((pp, ip) => {
-              const Op = this.unsaved.slots.get(ip);
-              void 0 === Op || Op === cp.get(ip) ? this.unsaved.before.delete(ip) : this.unsaved.before.set(ip, pp)
+            let MT = zT;
+            UT === TT.whamm && null !== MT || (MT = this.unsaved.overlay(await xT.b.getSavedOutfits(TT)), this.refresh()), await xT.b.setSavedOutfits(TT, MT), this.unsaved.isFor(TT.whamm) && MT.forEach(((TT, UT) => {
+              const WT = this.unsaved.slots.get(UT);
+              void 0 === WT || WT === mT.get(UT) ? this.unsaved.before.delete(UT) : this.unsaved.before.set(UT, TT)
             }))
-          } catch (ip) {
-            if (console.error("Failed to save outfits", ip), this.getState().accountId === Op && [...this.unsaved.slots].every((pp => {
-                let [ip, Op] = pp;
-                return cp.get(ip) === Op
+          } catch (UT) {
+            if (console.error("Failed to save outfits", UT), this.getState().accountId === WT && [...this.unsaved.slots].every((TT => {
+                let [UT, WT] = TT;
+                return mT.get(UT) === WT
               }))) {
-              const ip = [...cp.values()].every(vp);
-              Cp.i.showMessage({
-                translationKey: ip ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
+              const UT = [...mT.values()].every(vT);
+              wT.i.showMessage({
+                translationKey: UT ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
               });
-              const Op = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((pp => pp.map(((pp, ip) => {
-                var cp;
-                return null !== (cp = Op.get(ip)) && void 0 !== cp ? cp : pp
-              })))), pp = !0
+              const WT = new Map(this.unsaved.before);
+              this.unsaved.before.clear(), this.update((TT => TT.map(((TT, UT) => {
+                var mT;
+                return null !== (mT = WT.get(UT)) && void 0 !== mT ? mT : TT
+              })))), TT = !0
             }
           }
-          for (const [pp, ip] of cp) this.unsaved.slots.get(pp) === ip && this.unsaved.slots.delete(pp)
+          for (const [TT, UT] of mT) this.unsaved.slots.get(TT) === UT && this.unsaved.slots.delete(TT)
         }
-        this.sending = !1, pp && this.refresh()
+        this.sending = !1, TT && this.refresh()
       }
     }
-    const lp = new Xp;
-    var Qp = cp(337),
-      Jp = cp(41524),
-      Bp = cp(1577),
-      Np = cp(2382),
-      Tp = cp(3098),
-      fp = cp(2210),
-      bp = cp(2671),
-      hp = cp(1060);
-    cp(34462), cp(3195);
+    const yT = new aT;
+    var XT = mT(366),
+      IT = mT(41439),
+      QT = mT(1685),
+      sT = mT(2446),
+      FT = mT(3130),
+      PT = mT(2286),
+      VT = mT(2713),
+      uT = mT(1135);
+    mT(34311), mT(3226);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var ap = cp(2320),
-      np = cp(1387),
-      Fp = cp(2429),
-      gp = cp(1372),
-      Gp = cp(1112);
+    var CT = mT(2395),
+      rT = mT(1475),
+      KT = mT(2493),
+      ST = mT(1457),
+      GT = mT(1188);
 
-    function rp(pp) {
+    function NT(TT) {
       let {
-        wornOutfit: ip,
-        onApply: cp,
-        onOverwrite: op,
-        onDelete: Sp
-      } = pp;
+        wornOutfit: UT,
+        onApply: mT,
+        onOverwrite: zT,
+        onDelete: gT
+      } = TT;
       const {
-        t: Lp
-      } = (0, Dp.H)(), {
-        accountId: Yp,
-        data: Ap
-      } = (0, Rp.j)(lp, !1), {
-        userContext: Pp
-      } = (0, Ip.b)();
-      async function Wp(pp, ip) {
-        const cp = await gp.NotificationProvider.showPromptPopup({
+        t: HT
+      } = (0, jT.z)(), {
+        accountId: kT,
+        data: lT
+      } = (0, JT.h)(yT, !1), {
+        userContext: LT
+      } = (0, MT.d)();
+      async function pT(TT, UT) {
+        const mT = await ST.NotificationProvider.showPromptPopup({
             title: "homePage:deleteOutfitConfirm",
             confirmText: "general:delete",
             cancelText: "general:cancel",
             destructive: !0
           }).getResult(),
           {
-            accountId: Op,
-            data: op
-          } = lp.getState();
-        var Ip, xp;
-        !0 === cp && Op === Yp && null !== op && (tp(Ip = op[pp], xp = ip) && tp(xp, Ip)) && (lp.clear(pp), Sp(pp))
+            accountId: WT,
+            data: zT
+          } = yT.getState();
+        var MT, nT;
+        !0 === mT && WT === kT && null !== zT && (fT(MT = zT[TT], nT = UT) && fT(nT, MT)) && (yT.clear(TT), gT(TT))
       }
-      return (0, Op.useEffect)((() => {
-        lp.ensureLoaded()
-      }), []), null === Ap || Yp !== Pp.whamm ? null : (0, Gp.jsxs)("div", {
+      return (0, WT.useEffect)((() => {
+        yT.ensureLoaded()
+      }), []), null === lT || kT !== LT.whamm ? null : (0, GT.jsxs)("div", {
         className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, Gp.jsx)("div", {
+        children: [(0, GT.jsx)("div", {
           className: "CosmeticPackGroupLabel",
-          children: (0, Gp.jsx)("span", {
+          children: (0, GT.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: Lp("homePage:myOutfits")
+            children: HT("homePage:myOutfits")
           })
-        }), (0, Gp.jsx)("div", {
+        }), (0, GT.jsx)("div", {
           className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: Ap.map(((pp, Op) => {
-            const Ip = vp(pp);
-            return (0, Gp.jsxs)("div", {
-              className: xp()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !Ip
+          children: lT.map(((TT, WT) => {
+            const MT = vT(TT);
+            return (0, GT.jsxs)("div", {
+              className: nT()("SavedOutfitSlot", {
+                SavedOutfitSlotFilled: !MT
               }),
-              children: [(0, Gp.jsxs)("div", {
-                ...(0, jp.bb)(),
-                role: Ip ? "button" : "link",
+              children: [(0, GT.jsxs)("div", {
+                ...(0, OT.R)(),
+                role: MT ? "button" : "link",
                 "data-pad-focusable": !0,
-                className: xp()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: Ip,
-                  CharacterPresetCardActive: !Ip && tp(pp, ip)
+                className: nT()("CharacterPresetCard SavedOutfitCard", {
+                  SavedOutfitCardEmpty: MT,
+                  CharacterPresetCardActive: !MT && fT(TT, UT)
                 }),
                 onClick: () => {
-                  Ip ? lp.save(Op, ip) : cp(pp)
+                  MT ? yT.save(WT, UT) : mT(TT)
                 },
-                children: [Ip && (0, Gp.jsxs)(Gp.Fragment, {
-                  children: [(0, Gp.jsx)(hp.d, {
+                children: [MT && (0, GT.jsxs)(GT.Fragment, {
+                  children: [(0, GT.jsx)(uT.c, {
                     name: "plus"
-                  }), Lp("homePage:saveOutfit")]
-                }), !Ip && (0, Gp.jsxs)(Gp.Fragment, {
-                  children: [(0, Gp.jsx)("div", {
+                  }), HT("homePage:saveOutfit")]
+                }), !MT && (0, GT.jsxs)(GT.Fragment, {
+                  children: [(0, GT.jsx)("div", {
                     className: "SavedOutfitCardPicture",
-                    children: (0, Gp.jsx)(Fp.c, {
-                      cosmetics: pp
+                    children: (0, GT.jsx)(KT.e, {
+                      cosmetics: TT
                     })
-                  }), (0, Gp.jsx)(jp.S, {
+                  }), (0, GT.jsx)(OT.L, {
                     padSecondaryLabelKey: "homePage:saveOutfit",
                     stopPropagation: !0,
                     onClick: () => {
-                      tp(ip, pp) || (lp.save(Op, ip), op(Op, pp))
+                      fT(UT, TT) || (yT.save(WT, UT), zT(WT, TT))
                     },
-                    children: Lp("general:save")
+                    children: HT("general:save")
                   })]
                 })]
-              }), !Ip && (0, Gp.jsx)(jp.K, {
+              }), !MT && (0, GT.jsx)(OT.I, {
                 className: "SavedOutfitDeleteButton",
-                ariaLabel: Lp("general:delete"),
+                ariaLabel: HT("general:delete"),
                 onClick: () => {
-                  Wp(Op, pp)
+                  pT(WT, TT)
                 },
-                children: (0, Gp.jsx)(hp.d, {
+                children: (0, GT.jsx)(uT.c, {
                   name: "trash-can"
                 })
               })]
-            }, Op)
+            }, WT)
           }))
         })]
       })
     }
-    var Zp = cp(36602),
-      zp = cp(2623),
-      sp = cp(2630);
+    var ET = mT(36465),
+      hT = mT(2676),
+      DT = mT(2682);
 
-    function Kp(pp, ip, cp) {
-      return null !== pp && !(0, zp.h)(sp.b, ip, cp, pp.collected, pp.ownedPacks)
+    function oT(TT, UT, mT) {
+      return null !== TT && !(0, hT.j)(DT.e, UT, mT, TT.collected, TT.ownedPacks)
     }
 
-    function Vp(pp) {
+    function AT(TT) {
       let {
-        locked: ip,
-        children: cp
-      } = pp;
-      return ip ? (0, Gp.jsx)(ii, {
-        children: cp
-      }) : cp
+        locked: UT,
+        children: mT
+      } = TT;
+      return UT ? (0, GT.jsx)(RT, {
+        children: mT
+      }) : mT
     }
 
-    function ii(pp) {
-      var ip;
+    function RT(TT) {
+      var UT;
       let {
-        children: cp
-      } = pp;
+        children: mT
+      } = TT;
       const {
-        t: Op
-      } = (0, Dp.H)(), {
-        userContext: op
-      } = (0, Ip.b)(), Sp = null !== (ip = op.dailyDrop) && void 0 !== ip && ip.hidden ? Op("dailyDrop:lockedFromHidden") : Op("dailyDrop:lockedFrom");
-      return (0, Gp.jsx)(np.f, {
-        tooltipInner: (0, Gp.jsx)(Gp.Fragment, {
-          children: Sp
+        t: WT
+      } = (0, jT.z)(), {
+        userContext: zT
+      } = (0, MT.d)(), gT = null !== (UT = zT.dailyDrop) && void 0 !== UT && UT.hidden ? WT("dailyDrop:lockedFromHidden") : WT("dailyDrop:lockedFrom");
+      return (0, GT.jsx)(rT.e, {
+        tooltipInner: (0, GT.jsx)(GT.Fragment, {
+          children: gT
         }),
-        children: cp
+        children: mT
       })
     }
 
-    function ci(pp, ip, cp) {
-      return (0, Ap.o)(pp, ip).purchasable && !(0, Np.w)(pp, ip, cp)
+    function TU(TT, UT, mT) {
+      return (0, lT.m)(TT, UT).purchasable && !(0, sT.u)(TT, UT, mT)
     }
 
-    function Oi(pp, ip) {
-      return Object.entries(pp).some((pp => {
-        let [cp, Op] = pp;
-        return ci(cp, Op, ip)
+    function UU(TT, UT) {
+      return Object.entries(TT).some((TT => {
+        let [mT, WT] = TT;
+        return TU(mT, WT, UT)
       }))
     }
 
-    function oi(pp) {
-      var ip;
+    function mU(TT) {
+      var UT;
       let {
-        pack: cp,
-        ownedPacks: Op,
-        showStoreLink: op = !1,
-        children: Ip
-      } = pp;
+        pack: mT,
+        ownedPacks: WT,
+        showStoreLink: zT = !1,
+        children: MT
+      } = TT;
       const {
-        t: Sp
-      } = (0, Dp.H)(), Lp = Bp.e[cp], Yp = Lp.purchasable && !Op.includes(cp) && Bp.x.includes(cp), Ap = Tp.i[cp];
-      return (0, Gp.jsxs)("div", {
-        className: xp()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: Yp
+        t: gT
+      } = (0, jT.z)(), HT = QT.b[mT], kT = HT.purchasable && !WT.includes(mT) && QT.s.includes(mT), lT = FT.l[mT];
+      return (0, GT.jsxs)("div", {
+        className: nT()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: kT
         }),
-        children: [Ap && (0, Gp.jsx)(Ap, {}), (0, Gp.jsxs)("div", {
+        children: [lT && (0, GT.jsx)(lT, {}), (0, GT.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, Gp.jsx)("span", {
+          children: [(0, GT.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (ip = Lp.displayName) && void 0 !== ip ? ip : cp
-          }), (Yp || op) && (0, Gp.jsxs)(jp.C, {
+            children: null !== (UT = HT.displayName) && void 0 !== UT ? UT : mT
+          }), (kT || zT) && (0, GT.jsxs)(OT.B, {
             onClick: () => {
-              Yp ? (0, Tp.f)(cp) : (0, kp.r)({
+              kT ? (0, FT.j)(mT) : (0, eT.p)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, Gp.jsx)(hp.d, {
+            children: [(0, GT.jsx)(uT.c, {
               name: "store"
-            }), " ", Sp("general:viewInShop")]
+            }), " ", gT("general:viewInShop")]
           })]
-        }), Yp && "bee" === cp && (0, Gp.jsx)(Tp.b, {}), Ip]
+        }), kT && "bee" === mT && (0, GT.jsx)(FT.e, {}), MT]
       })
     }
 
-    function Ii(pp) {
+    function WU(TT) {
       let {
-        equippedEmoteIds: ip,
-        ownedPacks: cp,
-        canBuy: Op,
-        onUpdateLoadout: op,
-        onEmoteSelected: Ip,
-        onEquipPreviewSkin: Sp
-      } = pp;
+        equippedEmoteIds: UT,
+        ownedPacks: mT,
+        canBuy: WT,
+        onUpdateLoadout: zT,
+        onEmoteSelected: MT,
+        onEquipPreviewSkin: gT
+      } = TT;
       const {
-        t: Yp
-      } = (0, Dp.H)(), Pp = new Set(ip), Wp = new Map, yp = Object.keys(Ap.h.emote).sort(((pp, ip) => {
-        var cp, Op, op, Ip;
-        return (null !== (cp = null === (Op = (0, Ap.m)("emote", pp)) || void 0 === Op ? void 0 : Op.clientIdx) && void 0 !== cp ? cp : 0) - (null !== (op = null === (Ip = (0, Ap.m)("emote", ip)) || void 0 === Ip ? void 0 : Ip.clientIdx) && void 0 !== op ? op : 0)
-      })).filter((pp => {
-        const ip = (0, Ap.o)("emote", pp),
-          op = (0, Np.w)("emote", pp, cp);
-        return !(ip.purchasable && !op && !Op) && (ip.clientSelectable || op)
+        t: kT
+      } = (0, jT.z)(), LT = new Set(UT), pT = new Map, BT = Object.keys(lT.f.emote).sort(((TT, UT) => {
+        var mT, WT, zT, MT;
+        return (null !== (mT = null === (WT = (0, lT.j)("emote", TT)) || void 0 === WT ? void 0 : WT.clientIdx) && void 0 !== mT ? mT : 0) - (null !== (zT = null === (MT = (0, lT.j)("emote", UT)) || void 0 === MT ? void 0 : MT.clientIdx) && void 0 !== zT ? zT : 0)
+      })).filter((TT => {
+        const UT = (0, lT.m)("emote", TT),
+          zT = (0, sT.u)("emote", TT, mT);
+        return !(UT.purchasable && !zT && !WT) && (UT.clientSelectable || zT)
       }));
-      for (const xp of yp) {
-        const pp = (0, Ap.m)("emote", xp).cosmeticPack;
-        Wp.has(pp) || Wp.set(pp, []), Wp.get(pp).push(xp)
+      for (const nT of BT) {
+        const TT = (0, lT.j)("emote", nT).cosmeticPack;
+        pT.has(TT) || pT.set(TT, []), pT.get(TT).push(nT)
       }
-      const Up = Array.from(Wp.keys());
-      return (0, Gp.jsxs)("div", {
+      const ZT = Array.from(pT.keys());
+      return (0, GT.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, Gp.jsxs)("div", {
+        children: [!1, (0, GT.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, Gp.jsx)("span", {
+          children: [(0, GT.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: Yp("emotes:equippedCount", {
-              count: ip.length,
-              max: Lp.n
+            children: kT("emotes:equippedCount", {
+              count: UT.length,
+              max: HT.j
             })
-          }), (0, Gp.jsx)("span", {
+          }), (0, GT.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: Yp("emotes:loadoutHint")
+            children: kT("emotes:loadoutHint")
           })]
-        }), Up.map((pp => {
-          const Op = Wp.get(pp);
-          return (0, Gp.jsx)(oi, {
-            pack: pp,
-            ownedPacks: cp,
-            children: (0, Gp.jsx)("div", {
+        }), ZT.map((TT => {
+          const WT = pT.get(TT);
+          return (0, GT.jsx)(mU, {
+            pack: TT,
+            ownedPacks: mT,
+            children: (0, GT.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: Op.map((pp => {
-                var Op;
-                const Sp = ip.indexOf(pp),
-                  Dp = -1 !== Sp,
-                  Ap = ip.length >= Lp.n,
-                  Wp = ci("emote", pp, cp),
-                  yp = Wp || !Dp && Ap,
-                  Up = (0, Hp.g)(pp);
-                return (0, Gp.jsxs)("div", {
-                  className: xp()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: Dp
+              children: WT.map((TT => {
+                var WT;
+                const gT = UT.indexOf(TT),
+                  jT = -1 !== gT,
+                  lT = UT.length >= HT.j,
+                  pT = TU("emote", TT, mT),
+                  BT = pT || !jT && lT,
+                  ZT = (0, qT.h)(TT);
+                return (0, GT.jsxs)("div", {
+                  className: nT()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: jT
                   }),
                   onClick: () => {
-                    Ip(pp)
+                    MT(TT)
                   },
-                  children: [(0, Gp.jsxs)("div", {
+                  children: [(0, GT.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, Gp.jsx)("div", {
+                    children: [(0, GT.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${pp}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${TT}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, Gp.jsx)("span", {
+                    }), (0, GT.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (Op = null === Up || void 0 === Up ? void 0 : Up.displayName) && void 0 !== Op ? Op : pp
+                      children: null !== (WT = null === ZT || void 0 === ZT ? void 0 : ZT.displayName) && void 0 !== WT ? WT : TT
                     })]
-                  }), (0, Gp.jsxs)("div", {
+                  }), (0, GT.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [Dp && (0, Gp.jsx)("span", {
+                    children: [jT && (0, GT.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: Sp + 1
-                    }), Wp && (0, Gp.jsx)(hp.d, {
+                      children: gT + 1
+                    }), pT && (0, GT.jsx)(uT.c, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, Gp.jsx)(np.f, {
-                      tooltipInner: (0, Gp.jsx)(Gp.Fragment, {
-                        children: Yp(Dp ? "general:remove" : "general:add")
+                    }), (0, GT.jsx)(rT.e, {
+                      tooltipInner: (0, GT.jsx)(GT.Fragment, {
+                        children: kT(jT ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, Gp.jsx)("div", {
-                        className: xp()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: yp,
-                          EmoteCustomPartToggleEquipped: Dp
+                      children: (0, GT.jsx)("div", {
+                        className: nT()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: BT,
+                          EmoteCustomPartToggleEquipped: jT
                         }),
-                        onClick: cp => {
-                          cp.stopPropagation(), yp || function(pp) {
-                            Pp.has(pp) ? op(ip.filter((ip => ip !== pp))) : ip.length >= Lp.n || op([...ip, pp])
-                          }(pp)
+                        onClick: mT => {
+                          mT.stopPropagation(), BT || function(TT) {
+                            LT.has(TT) ? zT(UT.filter((UT => UT !== TT))) : UT.length >= HT.j || zT([...UT, TT])
+                          }(TT)
                         },
-                        children: (0, Gp.jsx)(hp.d, {
-                          name: Dp ? "minus" : "plus",
+                        children: (0, GT.jsx)(uT.c, {
+                          name: jT ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, pp)
+                }, TT)
               }))
             })
-          }, pp)
+          }, TT)
         }))]
       })
     }
-    const Si = (0, Op.memo)((function(pp) {
+    const zU = (0, WT.memo)((function(TT) {
       let {
-        selectedTab: ip
-      } = pp;
-      const cp = "characters" === ip ? "skin" : ip,
+        selectedTab: UT
+      } = TT;
+      const mT = "characters" === UT ? "skin" : UT,
         {
-          t: Sp
-        } = (0, Dp.H)(),
+          t: gT
+        } = (0, jT.z)(),
         {
-          userContext: yp,
-          isUserContextUpdating: Up
-        } = (0, Ip.b)(),
-        vp = (0, op.c)(),
+          userContext: BT,
+          isUserContextUpdating: ZT
+        } = (0, MT.d)(),
+        vT = (0, zT.d)(),
         {
-          gameState: Hp
-        } = (0, mp.o)(["gameState"]),
-        [Rp, qp] = (0, Op.useState)({}),
-        [Mp, Cp] = (0, Op.useState)({}),
-        [Ep, Xp] = (0, Op.useState)(null),
+          gameState: qT
+        } = (0, YT.h)(["gameState"]),
+        [JT, xT] = (0, WT.useState)({}),
+        [dT, wT] = (0, WT.useState)({}),
+        [tT, aT] = (0, WT.useState)(null),
         {
-          previewEmote: Tp,
-          triggerEmote: np
-        } = (0, dp.c)(),
-        Fp = (0, Op.useRef)(Lp.u.reduce(((pp, ip) => (pp[ip] = (0, Wp.b)(ip), pp)), {})),
-        gp = (0, Op.useRef)(!1),
-        zp = (0, Op.useRef)(null),
-        sp = (0, Op.useRef)(null),
-        ii = (0, Op.useRef)(null);
+          previewEmote: FT,
+          triggerEmote: rT
+        } = (0, iT.c)(),
+        KT = (0, WT.useRef)(HT.t.reduce(((TT, UT) => (TT[UT] = (0, pT.e)(UT), TT)), {})),
+        ST = (0, WT.useRef)(!1),
+        hT = (0, WT.useRef)(null),
+        DT = (0, WT.useRef)(null),
+        RT = (0, WT.useRef)(null);
 
-      function Si() {
-        null !== sp.current && (clearTimeout(sp.current), sp.current = null);
-        const pp = ii.current;
-        null !== pp && (ii.current = null, (0, Zp.b)(yp, [
-          ["emote", pp]
+      function zU() {
+        null !== DT.current && (clearTimeout(DT.current), DT.current = null);
+        const TT = RT.current;
+        null !== TT && (RT.current = null, (0, ET.b)(BT, [
+          ["emote", TT]
         ]))
       }
 
-      function xi(pp, ip, cp) {
-        var Op, op, Ip;
-        Fp.current = {
-          ...Fp.current,
-          [pp]: ip
-        }, vp(), cp && ((0, Zp.b)(yp, [
-          [pp, ip]
-        ]), Xp(null));
-        const Sp = (0, Ap.m)(pp, ip);
-        if (null !== Sp && void 0 !== Sp && Sp.colourGroup && null !== (Op = Bp.e[Sp.cosmeticPack].colourGroups) && void 0 !== Op && null !== (op = Op[Sp.colourGroup]) && void 0 !== op && op.showSwatchSelector) {
-          const cp = (0, Ap.j)(ip);
-          cp && Cp((ip => ({
-            ...ip,
-            [`${Sp.cosmeticPack}_${pp}_${Sp.colourGroup}`]: parseInt(cp[1])
+      function MU(TT, UT, mT) {
+        var WT, zT, MT;
+        KT.current = {
+          ...KT.current,
+          [TT]: UT
+        }, vT(), mT && ((0, ET.b)(BT, [
+          [TT, UT]
+        ]), aT(null));
+        const gT = (0, lT.j)(TT, UT);
+        if (null !== gT && void 0 !== gT && gT.colourGroup && null !== (WT = QT.b[gT.cosmeticPack].colourGroups) && void 0 !== WT && null !== (zT = WT[gT.colourGroup]) && void 0 !== zT && zT.showSwatchSelector) {
+          const mT = (0, lT.i)(UT);
+          mT && wT((UT => ({
+            ...UT,
+            [`${gT.cosmeticPack}_${TT}_${gT.colourGroup}`]: parseInt(mT[1])
           })))
         }
-        null !== (Ip = zp.current) && void 0 !== Ip && Ip.isReady() && zp.current.updateCosmetic(pp, ip)
+        null !== (MT = hT.current) && void 0 !== MT && MT.isReady() && hT.current.updateCosmetic(TT, UT)
       }
 
-      function Li(pp) {
-        qp((ip => {
-          const cp = {
-            ...ip
+      function gU(TT) {
+        xT((UT => {
+          const mT = {
+            ...UT
           };
-          return delete cp[pp], cp
+          return delete mT[TT], mT
         }))
       }
 
-      function Yi(pp, ip) {
+      function nU(TT, UT) {
         let {
-          undoable: cp
-        } = ip;
-        Object.keys(Rp).length > 0 && qp({});
-        const Op = Object.entries(pp).filter((pp => {
-          let [ip, cp] = pp;
-          return Fp.current[ip] !== cp && !ci(ip, cp, Di) && !Kp(Ai, ip, cp)
+          undoable: mT
+        } = UT;
+        Object.keys(JT).length > 0 && xT({});
+        const WT = Object.entries(TT).filter((TT => {
+          let [UT, mT] = TT;
+          return KT.current[UT] !== mT && !TU(UT, mT, HU) && !oT(kU, UT, mT)
         }));
-        cp ? Op.length > 0 && Xp({
+        mT ? WT.length > 0 && aT({
           kind: "worn",
-          outfit: wp(Fp.current)
-        }) : Xp(null);
-        for (const [op, Ip] of Op) xi(op, Ip, !1);
-        Op.length > 0 && (0, Zp.b)(yp, Op)
-      }(0, ep.b)("cosmeticsUpdated", (pp => {
-        let ip = !1;
+          outfit: cT(KT.current)
+        }) : aT(null);
+        for (const [zT, MT] of WT) MU(zT, MT, !1);
+        WT.length > 0 && (0, ET.b)(BT, WT)
+      }(0, bT.e)("cosmeticsUpdated", (TT => {
+        let UT = !1;
         for (const {
-            local: cp,
-            KI: Op,
-            VI: op
+            local: mT,
+            wM: WT,
+            tM: zT
           }
-          of pp) {
-          if (!cp) return;
-          ip = !0, gp.current || xi(Op, op, !1), vp()
+          of TT) {
+          if (!mT) return;
+          UT = !0, ST.current || MU(WT, zT, !1), vT()
         }
-        ip && (gp.current = !0)
-      })), (0, Op.useEffect)((() => {
-        if (!Up) {
-          for (const [pp, ip] of Object.entries(yp.getPlayerCosmetics())) xi(pp, ip, !1);
-          vp()
+        UT && (ST.current = !0)
+      })), (0, WT.useEffect)((() => {
+        if (!ZT) {
+          for (const [TT, UT] of Object.entries(BT.getPlayerCosmetics())) MU(TT, UT, !1);
+          vT()
         }
-      }), [Up]), (0, Op.useEffect)((() => () => {
-        Si()
+      }), [ZT]), (0, WT.useEffect)((() => () => {
+        zU()
       }), []);
-      const Di = yp.getOwnedCosmeticPacks(),
-        Ai = function(pp, ip) {
-          return null === pp ? null : {
-            collected: new Set(pp.collected),
-            ownedPacks: ip
+      const HU = BT.getOwnedCosmeticPacks(),
+        kU = function(TT, UT) {
+          return null === TT ? null : {
+            collected: new Set(TT.collected),
+            ownedPacks: UT
           }
-        }(yp.dailyDrop, Di),
-        Pi = (0, ap.usePurchasesAllowed)(),
-        Wi = Object.keys(Ap.h[cp]).filter((pp => {
-          const ip = (0, Ap.o)(cp, pp),
-            Op = (0, Np.w)(cp, pp, Di);
-          return !(ip.purchasable && !Op && !Pi) && (ip.clientSelectable || Op)
-        })).sort(((pp, ip) => {
-          var Op, op, Ip, Sp;
-          return (null !== (Op = null === (op = (0, Ap.m)(cp, pp)) || void 0 === op ? void 0 : op.clientIdx) && void 0 !== Op ? Op : 0) - (null !== (Ip = null === (Sp = (0, Ap.m)(cp, ip)) || void 0 === Sp ? void 0 : Sp.clientIdx) && void 0 !== Ip ? Ip : 0)
+        }(BT.dailyDrop, HU),
+        jU = (0, CT.usePurchasesAllowed)(),
+        lU = Object.keys(lT.f[mT]).filter((TT => {
+          const UT = (0, lT.m)(mT, TT),
+            WT = (0, sT.u)(mT, TT, HU);
+          return !(UT.purchasable && !WT && !jU) && (UT.clientSelectable || WT)
+        })).sort(((TT, UT) => {
+          var WT, zT, MT, gT;
+          return (null !== (WT = null === (zT = (0, lT.j)(mT, TT)) || void 0 === zT ? void 0 : zT.clientIdx) && void 0 !== WT ? WT : 0) - (null !== (MT = null === (gT = (0, lT.j)(mT, UT)) || void 0 === gT ? void 0 : gT.clientIdx) && void 0 !== MT ? MT : 0)
         })),
-        yi = new Map;
-      for (const Op of Wi) {
-        var Ui;
-        const pp = null === (Ui = (0, Ap.m)(cp, Op)) || void 0 === Ui ? void 0 : Ui.cosmeticPack;
-        yi.has(pp) || yi.set(pp, []), yi.get(pp).push(Op)
+        LU = new Map;
+      for (const WT of lU) {
+        var pU;
+        const TT = null === (pU = (0, lT.j)(mT, WT)) || void 0 === pU ? void 0 : pU.cosmeticPack;
+        LU.has(TT) || LU.set(TT, []), LU.get(TT).push(WT)
       }
-      const wi = function(pp, ip) {
-          const cp = new Set,
-            Op = new Set;
-          for (const [op, Ip] of Object.entries(Ap.h[pp])) {
-            if (void 0 === Ip.colourGroup) continue;
-            const Sp = `${Ip.cosmeticPack}_${Ip.colourGroup}`;
-            (ci(pp, op, ip) ? Op : cp).add(Sp)
+      const BU = function(TT, UT) {
+          const mT = new Set,
+            WT = new Set;
+          for (const [zT, MT] of Object.entries(lT.f[TT])) {
+            if (void 0 === MT.colourGroup) continue;
+            const gT = `${MT.cosmeticPack}_${MT.colourGroup}`;
+            (TU(TT, zT, UT) ? WT : mT).add(gT)
           }
-          return new Set([...cp].filter((pp => Op.has(pp))))
-        }(cp, Di),
-        vi = new Map;
-      for (const [Op, op] of yi) {
-        const pp = [],
-          ip = new Map;
-        for (const Op of op) {
-          var ti, Hi;
-          const op = null !== (ti = null === (Hi = (0, Ap.m)(cp, Op)) || void 0 === Hi ? void 0 : Hi.colourGroup) && void 0 !== ti ? ti : null;
-          ip.has(op) || (ip.set(op, []), pp.push(op)), ip.get(op).push(Op)
+          return new Set([...mT].filter((TT => WT.has(TT))))
+        }(mT, HU),
+        ZU = new Map;
+      for (const [WT, zT] of LU) {
+        const TT = [],
+          UT = new Map;
+        for (const WT of zT) {
+          var cU, vU;
+          const zT = null !== (cU = null === (vU = (0, lT.j)(mT, WT)) || void 0 === vU ? void 0 : vU.colourGroup) && void 0 !== cU ? cU : null;
+          UT.has(zT) || (UT.set(zT, []), TT.push(zT)), UT.get(zT).push(WT)
         }
-        const Ip = pp.map((pp => {
-          var op;
-          const Ip = ip.get(pp),
-            Sp = pp ? null === (op = Bp.e[Op].colourGroups) || void 0 === op ? void 0 : op[pp] : void 0,
-            xp = !0 === (null === Sp || void 0 === Sp ? void 0 : Sp.showSwatchSelector) && !wi.has(`${Op}_${pp}`);
-          if (xp && Sp) {
-            var Lp;
-            const ip = null !== (Lp = Mp[`${Op}_${cp}_${pp}`]) && void 0 !== Lp ? Lp : (0, Bp.k)(Sp.colours);
+        const MT = TT.map((TT => {
+          var zT;
+          const MT = UT.get(TT),
+            gT = TT ? null === (zT = QT.b[WT].colourGroups) || void 0 === zT ? void 0 : zT[TT] : void 0,
+            nT = !0 === (null === gT || void 0 === gT ? void 0 : gT.showSwatchSelector) && !BU.has(`${WT}_${TT}`);
+          if (nT && gT) {
+            var HT;
+            const UT = null !== (HT = dT[`${WT}_${mT}_${TT}`]) && void 0 !== HT ? HT : (0, QT.i)(gT.colours);
             return {
-              groupName: pp,
-              showSwatch: xp,
-              cosmetics: Ip.filter((pp => {
-                const cp = (0, Ap.j)(pp);
-                return !cp || ip.toString() === cp[1].toString()
+              groupName: TT,
+              showSwatch: nT,
+              cosmetics: MT.filter((TT => {
+                const mT = (0, lT.i)(TT);
+                return !mT || UT.toString() === mT[1].toString()
               }))
             }
           }
           return {
-            groupName: pp,
-            cosmetics: Ip,
-            showSwatch: xp
+            groupName: TT,
+            cosmetics: MT,
+            showSwatch: nT
           }
         }));
-        vi.set(Op, Ip)
+        ZU.set(WT, MT)
       }
-      const di = Array.from(yi.keys()),
-        ei = new Map;
-      for (const [Op, op] of Object.entries(Pp.b)) {
-        const pp = Bp.e[op.cosmeticPack],
-          ip = !Oi(op.cosmetics, Di),
-          cp = Bp.p.some((pp => (0, Bp.i)(pp) === Op));
-        (pp.clientSelectable || cp || ip) && ((!pp.purchasable || ip || Pi) && (ei.has(op.cosmeticPack) || ei.set(op.cosmeticPack, []), ei.get(op.cosmeticPack).push([Op, op])))
+      const fU = Array.from(LU.keys()),
+        qU = new Map;
+      for (const [WT, zT] of Object.entries(LT.e)) {
+        const TT = QT.b[zT.cosmeticPack],
+          UT = !UU(zT.cosmetics, HU),
+          mT = QT.n.some((TT => (0, QT.f)(TT) === WT));
+        (TT.clientSelectable || mT || UT) && ((!TT.purchasable || UT || jU) && (qU.has(zT.cosmeticPack) || qU.set(zT.cosmeticPack, []), qU.get(zT.cosmeticPack).push([WT, zT])))
       }
-      const ui = Array.from(ei.keys());
-      return (0, Gp.jsxs)("div", {
+      const iU = Array.from(qU.keys());
+      return (0, GT.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === cp || "nameColour" === cp) && !yp.playerHasRank("super") && (0, Gp.jsxs)("div", {
+        children: [("cape" === mT || "nameColour" === mT) && !BT.playerHasRank("super") && (0, GT.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, Gp.jsx)(hp.d, {
+          children: [(0, GT.jsx)(uT.c, {
             name: "bolt"
-          }), Sp("homePage:unlockWithSuperRank"), Pi && (0, Gp.jsx)(jp.o, {
+          }), gT("homePage:unlockWithSuperRank"), jU && (0, GT.jsx)(OT.l, {
             onClick: () => {
-              (0, kp.r)({
+              (0, eT.p)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: Sp("general:getItNow")
+            children: gT("general:getItNow")
           })]
-        }), (0, Gp.jsxs)("div", {
+        }), (0, GT.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === ip && (0, Gp.jsxs)("div", {
+          children: ["characters" === UT && (0, GT.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, Gp.jsx)(rp, {
-              wornOutfit: wp(Fp.current),
-              onApply: pp => {
-                Yi(pp, {
+            children: [!1, (0, GT.jsx)(NT, {
+              wornOutfit: cT(KT.current),
+              onApply: TT => {
+                nU(TT, {
                   undoable: !0
                 })
               },
-              onOverwrite: (pp, ip) => {
-                Xp({
+              onOverwrite: (TT, UT) => {
+                aT({
                   kind: "slot",
-                  slot: pp,
-                  outfit: ip
+                  slot: TT,
+                  outfit: UT
                 })
               },
-              onDelete: pp => {
-                Xp((ip => "slot" === (null === ip || void 0 === ip ? void 0 : ip.kind) && ip.slot === pp ? null : ip))
+              onDelete: TT => {
+                aT((UT => "slot" === (null === UT || void 0 === UT ? void 0 : UT.kind) && UT.slot === TT ? null : UT))
               }
-            }), ui.map((pp => {
-              const ip = ei.get(pp);
-              return (0, Gp.jsx)(oi, {
-                pack: pp,
-                ownedPacks: Di,
-                showStoreLink: !Bp.t.includes(pp) && ip.some((pp => {
+            }), iU.map((TT => {
+              const UT = qU.get(TT);
+              return (0, GT.jsx)(mU, {
+                pack: TT,
+                ownedPacks: HU,
+                showStoreLink: !QT.r.includes(TT) && UT.some((TT => {
                   let [, {
-                    cosmetics: ip
-                  }] = pp;
-                  return Oi(ip, Di)
+                    cosmetics: UT
+                  }] = TT;
+                  return UU(UT, HU)
                 })),
-                children: (0, Gp.jsx)("div", {
+                children: (0, GT.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: ip.map((pp => {
-                    let [ip, {
-                      cosmetics: cp
-                    }] = pp;
-                    const Op = Oi(cp, Di),
-                      op = !Op && function(pp, ip) {
-                        return Object.entries(ip).some((ip => {
-                          let [cp, Op] = ip;
-                          return Kp(pp, cp, Op)
+                  children: UT.map((TT => {
+                    let [UT, {
+                      cosmetics: mT
+                    }] = TT;
+                    const WT = UU(mT, HU),
+                      zT = !WT && function(TT, UT) {
+                        return Object.entries(UT).some((UT => {
+                          let [mT, WT] = UT;
+                          return oT(TT, mT, WT)
                         }))
-                      }(Ai, cp),
-                      Ip = Op || op,
-                      Sp = tp(cp, Rp),
-                      Lp = !Sp && tp(cp, Fp.current);
-                    return (0, Gp.jsx)(Vp, {
-                      locked: op,
-                      children: (0, Gp.jsxs)("div", {
+                      }(kU, mT),
+                      MT = WT || zT,
+                      gT = fT(mT, JT),
+                      HT = !gT && fT(mT, KT.current);
+                    return (0, GT.jsx)(AT, {
+                      locked: zT,
+                      children: (0, GT.jsxs)("div", {
                         "data-pad-focusable": !0,
-                        className: xp()("CharacterPresetCard", {
-                          CharacterPresetCardActive: Lp,
-                          CharacterPresetCardTryingOn: Sp
+                        className: nT()("CharacterPresetCard", {
+                          CharacterPresetCardActive: HT,
+                          CharacterPresetCardTryingOn: gT
                         }),
                         onClick: () => {
-                          Ip ? function(pp) {
-                            tp(pp, Rp) ? qp({}) : qp({
-                              ...pp
+                          MT ? function(TT) {
+                            fT(TT, JT) ? xT({}) : xT({
+                              ...TT
                             })
-                          }(cp) : Yi(cp, {
+                          }(mT) : nU(mT, {
                             undoable: !0
                           })
                         },
-                        children: [(0, Gp.jsx)("div", {
+                        children: [(0, GT.jsx)("div", {
                           className: "CharacterPresetCardPreview",
                           style: {
-                            backgroundImage: `url(/textures/charSkins/previews/character_${ip}_preview.png)`
+                            backgroundImage: `url(/textures/charSkins/previews/character_${UT}_preview.png)`
                           }
-                        }), Ip && (0, Gp.jsx)(hp.d, {
+                        }), MT && (0, GT.jsx)(uT.c, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
                       })
-                    }, ip)
+                    }, UT)
                   }))
                 })
-              }, pp)
+              }, TT)
             }))]
-          }), "emote" === ip && (0, Gp.jsx)(Ii, {
-            equippedEmoteIds: (0, Wp.i)(Fp.current.emote),
-            ownedPacks: Di,
-            canBuy: Pi,
-            onUpdateLoadout: pp => {
-              const ip = (0, Wp.m)(pp);
-              var cp;
-              Fp.current = {
-                ...Fp.current,
-                emote: ip
-              }, yp.setPlayerCosmetics("emote", ip), vp(), cp = ip, ii.current = cp, null !== sp.current && clearTimeout(sp.current), sp.current = setTimeout(Si, 350)
+          }), "emote" === UT && (0, GT.jsx)(WU, {
+            equippedEmoteIds: (0, pT.l)(KT.current.emote),
+            ownedPacks: HU,
+            canBuy: jU,
+            onUpdateLoadout: TT => {
+              const UT = (0, pT.n)(TT);
+              var mT;
+              KT.current = {
+                ...KT.current,
+                emote: UT
+              }, BT.setPlayerCosmetics("emote", UT), vT(), mT = UT, RT.current = mT, null !== DT.current && clearTimeout(DT.current), DT.current = setTimeout(zU, 350)
             },
-            onEmoteSelected: np,
+            onEmoteSelected: rT,
             onEquipPreviewSkin: () => {
-              ! function(pp, ip) {
-                for (const cp of Lp.u) "cape" !== cp && "nameColour" !== cp && "emote" !== cp && pp(cp, "skin" === cp ? "skin_preview" : `${cp}_none`, !1);
-                ip()
-              }(xi, vp)
+              ! function(TT, UT) {
+                for (const mT of HT.t) "cape" !== mT && "nameColour" !== mT && "emote" !== mT && TT(mT, "skin" === mT ? "skin_preview" : `${mT}_none`, !1);
+                UT()
+              }(MU, vT)
             }
-          }), "characters" !== ip && "emote" !== ip && (0, Gp.jsxs)("div", {
+          }), "characters" !== UT && "emote" !== UT && (0, GT.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, di.map((pp => {
-              const ip = vi.get(pp);
-              return (0, Gp.jsx)(oi, {
-                pack: pp,
-                ownedPacks: Di,
-                children: ip.map((ip => {
-                  var Op;
+            children: [!1, fU.map((TT => {
+              const UT = ZU.get(TT);
+              return (0, GT.jsx)(mU, {
+                pack: TT,
+                ownedPacks: HU,
+                children: UT.map((UT => {
+                  var WT;
                   let {
-                    groupName: op,
-                    cosmetics: Ip,
-                    showSwatch: Sp
-                  } = ip;
-                  const Lp = op ? null === (Op = Bp.e[pp].colourGroups) || void 0 === Op ? void 0 : Op[op] : void 0,
-                    Dp = `${pp}_${cp}_${op}`;
-                  return (0, Gp.jsxs)("div", {
+                    groupName: zT,
+                    cosmetics: MT,
+                    showSwatch: gT
+                  } = UT;
+                  const HT = zT ? null === (WT = QT.b[TT].colourGroups) || void 0 === WT ? void 0 : WT[zT] : void 0,
+                    jT = `${TT}_${mT}_${zT}`;
+                  return (0, GT.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [Sp && Lp && (0, Gp.jsx)("div", {
+                    children: [gT && HT && (0, GT.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...Lp.colours.map(((pp, ip) => ({
-                        color: pp,
-                        index: ip
-                      })))].sort(((pp, ip) => pp.color.order - ip.color.order)).map((ip => {
-                        var Op;
+                      children: [...HT.colours.map(((TT, UT) => ({
+                        color: TT,
+                        index: UT
+                      })))].sort(((TT, UT) => TT.color.order - UT.color.order)).map((UT => {
+                        var WT;
                         let {
-                          color: Ip,
-                          index: Sp
-                        } = ip;
-                        return (0, Gp.jsx)("div", {
-                          className: xp()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (Op = Mp[Dp]) && void 0 !== Op ? Op : (0, Bp.k)(Lp.colours)) === Sp
+                          color: MT,
+                          index: gT
+                        } = UT;
+                        return (0, GT.jsx)("div", {
+                          className: nT()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (WT = dT[jT]) && void 0 !== WT ? WT : (0, QT.i)(HT.colours)) === gT
                           }),
                           style: {
-                            backgroundColor: `rgb(${Ip.rbg.join(",")})`
+                            backgroundColor: `rgb(${MT.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var ip;
-                            Cp((pp => ({
-                              ...pp,
-                              [Dp]: Sp
+                            var UT;
+                            wT((TT => ({
+                              ...TT,
+                              [jT]: gT
                             })));
-                            const Op = Rp[cp],
-                              Ip = Op ? (0, Ap.m)(cp, Op) : null,
-                              xp = (null === Ip || void 0 === Ip ? void 0 : Ip.cosmeticPack) === pp,
-                              Lp = xp ? Op : Fp.current[cp],
-                              Yp = xp ? Ip : (0, Ap.m)(cp, Lp);
-                            if ((null === Yp || void 0 === Yp ? void 0 : Yp.cosmeticPack) !== pp) return;
-                            if ((null !== (ip = null === Yp || void 0 === Yp ? void 0 : Yp.colourGroup) && void 0 !== ip ? ip : null) !== op) return;
-                            const Pp = (0, Ap.j)(Lp);
-                            if (Pp) {
-                              const pp = `${cp}_${Pp[0]}_${Sp}`;
-                              ci(cp, pp, Di) || Kp(Ai, cp, pp) ? qp((ip => ({
-                                ...ip,
-                                [cp]: pp
-                              }))) : (xp && Li(cp), xi(cp, pp, !0))
+                            const WT = JT[mT],
+                              MT = WT ? (0, lT.j)(mT, WT) : null,
+                              nT = (null === MT || void 0 === MT ? void 0 : MT.cosmeticPack) === TT,
+                              HT = nT ? WT : KT.current[mT],
+                              kT = nT ? MT : (0, lT.j)(mT, HT);
+                            if ((null === kT || void 0 === kT ? void 0 : kT.cosmeticPack) !== TT) return;
+                            if ((null !== (UT = null === kT || void 0 === kT ? void 0 : kT.colourGroup) && void 0 !== UT ? UT : null) !== zT) return;
+                            const LT = (0, lT.i)(HT);
+                            if (LT) {
+                              const TT = `${mT}_${LT[0]}_${gT}`;
+                              TU(mT, TT, HU) || oT(kU, mT, TT) ? xT((UT => ({
+                                ...UT,
+                                [mT]: TT
+                              }))) : (nT && gU(mT), MU(mT, TT, !0))
                             }
                           }
-                        }, Ip.rbg.join())
+                        }, MT.rbg.join())
                       }))
-                    }), Ip.map((pp => {
-                      const ip = pp === Fp.current[cp],
-                        Op = Rp[cp] === pp,
-                        op = ci(cp, pp, Di),
-                        Ip = !op && Kp(Ai, cp, pp),
-                        Sp = op || Ip;
-                      let Lp = !0;
-                      return Sp || ip || ("cape" !== cp || (0, Qp.yd)(yp.getPlayerRanks(), pp)) && ("nameColour" !== cp || yp.playerHasRank("super")) || (Lp = !1), (0, Gp.jsx)(Vp, {
-                        locked: Ip,
-                        children: (0, Gp.jsxs)("div", {
-                          className: xp()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: ip && !Op,
-                            TryingOnCharCustomPartWrapper: Op,
-                            DisabledCharCustomPartWrapper: !Lp,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === cp
+                    }), MT.map((TT => {
+                      const UT = TT === KT.current[mT],
+                        WT = JT[mT] === TT,
+                        zT = TU(mT, TT, HU),
+                        MT = !zT && oT(kU, mT, TT),
+                        gT = zT || MT;
+                      let HT = !0;
+                      return gT || UT || ("cape" !== mT || (0, XT.de)(BT.getPlayerRanks(), TT)) && ("nameColour" !== mT || BT.playerHasRank("super")) || (HT = !1), (0, GT.jsx)(AT, {
+                        locked: MT,
+                        children: (0, GT.jsxs)("div", {
+                          className: nT()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: UT && !WT,
+                            TryingOnCharCustomPartWrapper: WT,
+                            DisabledCharCustomPartWrapper: !HT,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === mT
                           }),
                           onClick: () => {
-                            if (Lp)
-                              if (Sp) qp((ip => {
-                                if (ip[cp] === pp) {
-                                  const pp = {
-                                    ...ip
+                            if (HT)
+                              if (gT) xT((UT => {
+                                if (UT[mT] === TT) {
+                                  const TT = {
+                                    ...UT
                                   };
-                                  return delete pp[cp], pp
+                                  return delete TT[mT], TT
                                 }
                                 return {
-                                  ...ip,
-                                  [cp]: pp
+                                  ...UT,
+                                  [mT]: TT
                                 }
                               }));
                               else {
-                                var ip;
-                                if (Rp[cp] && Li(cp), pp === Fp.current[cp]) return;
-                                null !== (ip = zp.current) && void 0 !== ip && ip.isReady() && xi(cp, pp, !0)
+                                var UT;
+                                if (JT[mT] && gU(mT), TT === KT.current[mT]) return;
+                                null !== (UT = hT.current) && void 0 !== UT && UT.isReady() && MU(mT, TT, !0)
                               }
                           },
-                          children: ["profileEffect" === cp ? (0, Gp.jsx)("div", {
+                          children: ["profileEffect" === mT ? (0, GT.jsx)("div", {
                             className: "CharCustomPart CharCustomProfileEffect",
-                            children: (0, Gp.jsx)(bp.d, {
-                              playerSocialPreview: (0, fp.b)(pp, {
-                                name: yp.getPlayerName(),
-                                cosmetics: yp.getPlayerCosmetics()
+                            children: (0, GT.jsx)(VT.i, {
+                              playerSocialPreview: (0, PT.b)(TT, {
+                                name: BT.getPlayerName(),
+                                cosmetics: BT.getPlayerCosmetics()
                               }),
                               showLocation: !1,
                               opensProfileCard: !1
                             })
-                          }) : (0, Gp.jsx)("div", {
-                            className: xp()("CharCustomPart", {
-                              PixelatedImage: "cape" === cp
+                          }) : (0, GT.jsx)("div", {
+                            className: nT()("CharCustomPart", {
+                              PixelatedImage: "cape" === mT
                             }),
-                            style: (0, Ap.m)(cp, pp).previewTex ? {
-                              backgroundImage: `url(/textures/charSkins/previews/${(0,Ap.m)(cp,pp).previewTex}.png)`
+                            style: (0, lT.j)(mT, TT).previewTex ? {
+                              backgroundImage: `url(/textures/charSkins/previews/${(0,lT.j)(mT,TT).previewTex}.png)`
                             } : {
-                              backgroundColor: Yp.r[pp]
+                              backgroundColor: kT.u[TT]
                             }
-                          }), Sp && (0, Gp.jsx)(hp.d, {
+                          }), gT && (0, GT.jsx)(uT.c, {
                             name: "lock",
                             className: "LockedCosmeticIcon"
                           })]
                         })
-                      }, pp)
+                      }, TT)
                     }))]
-                  }, null !== op && void 0 !== op ? op : "ungrouped")
+                  }, null !== zT && void 0 !== zT ? zT : "ungrouped")
                 }))
-              }, pp)
+              }, TT)
             }))]
-          }), Ep && (0, Gp.jsxs)(jp.f, {
+          }), tT && (0, GT.jsxs)(OT.e, {
             className: "CharCustomisationUndo",
             onClick: () => {
-              "worn" === Ep.kind ? Yi(Ep.outfit, {
+              "worn" === tT.kind ? nU(tT.outfit, {
                 undoable: !1
-              }) : (lp.save(Ep.slot, Ep.outfit), Xp(null))
+              }) : (yT.save(tT.slot, tT.outfit), aT(null))
             },
-            children: [(0, Gp.jsx)(hp.d, {
+            children: [(0, GT.jsx)(uT.c, {
               name: "rotate-left"
-            }), Sp("general:undo")]
-          }), (0, Gp.jsx)(Jp.CharacterPreview, {
-            ref: zp,
-            forcedCosmetics: Rp,
-            IL: Tp.id,
-            emotePlaySeq: Tp.seq,
+            }), gT("general:undo")]
+          }), (0, GT.jsx)(IT.CharacterPreview, {
+            ref: hT,
+            forcedCosmetics: JT,
+            tn: FT.id,
+            emotePlaySeq: FT.seq,
             onReady: () => {
-              for (const pp of Lp.u) xi(pp, Fp.current[pp], !1)
+              for (const TT of HT.t) MU(TT, KT.current[TT], !1)
             }
           })]
         })]
       })
     }))
   },
-  41524: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CharacterPreview: () => Ap
+  41439: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      CharacterPreview: () => lT
     });
-    var Op = cp(62),
-      op = cp(2835),
-      Ip = cp(1251),
-      Sp = cp(2638),
-      xp = cp(34462),
-      Lp = cp(3731),
-      Yp = cp(1112);
-    const Dp = .6 * Math.PI,
-      Ap = (0, Op.memo)((0, Op.forwardRef)((function(pp, ip) {
+    var WT = mT(63),
+      zT = mT(2856),
+      MT = mT(1336),
+      gT = mT(2685),
+      nT = mT(34311),
+      HT = mT(3746),
+      kT = mT(1188);
+    const jT = .6 * Math.PI,
+      lT = (0, WT.memo)((0, WT.forwardRef)((function(TT, UT) {
         let {
-          onReady: cp,
-          onDrawn: Ap,
-          owner: Pp = "other",
-          framing: Wp = "player",
-          forcedCosmetics: yp,
-          IL: Up,
-          emotePlaySeq: wp,
-          turntableFromYaw: vp = null
-        } = pp;
-        const tp = (0, Op.useRef)(null),
+          onReady: mT,
+          onDrawn: lT,
+          owner: LT = "other",
+          framing: pT = "player",
+          forcedCosmetics: BT,
+          tn: ZT,
+          emotePlaySeq: cT,
+          turntableFromYaw: vT = null
+        } = TT;
+        const fT = (0, WT.useRef)(null),
           {
-            width: Hp,
-            height: dp
-          } = (0, op.d)(tp),
-          ep = (0, Op.useRef)(null),
-          jp = (0, Op.useRef)({}),
-          kp = (0, Op.useRef)({}),
-          [mp, Rp] = (0, Op.useState)(!1),
-          qp = (0, Op.useRef)(cp);
-        qp.current = cp;
-        const Mp = (0, Op.useRef)(Ap);
-        Mp.current = Ap;
-        const Cp = (0, Op.useRef)(null),
-          Ep = (0, Op.useRef)(!1),
-          Xp = (0, Op.useRef)(!1),
-          lp = (0, Op.useCallback)((() => {
-            const pp = ep.current;
-            if (!pp || !Mp.current || Ep.current || !Xp.current) return;
-            const ip = {};
-            Cp.current = ip, queueMicrotask((() => {
-              if (Cp.current !== ip) return;
-              const cp = Promise.all(Ip.u.map((ip => pp.untilDrawn(ip)))).catch((pp => {
-                  console.error("Failed to draw the character preview", pp)
+            width: qT,
+            height: iT
+          } = (0, zT.b)(fT),
+          bT = (0, WT.useRef)(null),
+          OT = (0, WT.useRef)({}),
+          eT = (0, WT.useRef)({}),
+          [YT, JT] = (0, WT.useState)(!1),
+          xT = (0, WT.useRef)(mT);
+        xT.current = mT;
+        const dT = (0, WT.useRef)(lT);
+        dT.current = lT;
+        const wT = (0, WT.useRef)(null),
+          tT = (0, WT.useRef)(!1),
+          aT = (0, WT.useRef)(!1),
+          yT = (0, WT.useCallback)((() => {
+            const TT = bT.current;
+            if (!TT || !dT.current || tT.current || !aT.current) return;
+            const UT = {};
+            wT.current = UT, queueMicrotask((() => {
+              if (wT.current !== UT) return;
+              const mT = Promise.all(MT.t.map((UT => TT.untilDrawn(UT)))).catch((TT => {
+                  console.error("Failed to draw the character preview", TT)
                 })),
-                Op = new Promise((pp => {
-                  setTimeout(pp, 1e4)
+                WT = new Promise((TT => {
+                  setTimeout(TT, 1e4)
                 }));
-              Promise.race([cp, Op]).then((() => {
-                var cp;
-                ep.current !== pp || Cp.current !== ip || Ep.current || (Ep.current = !0, null === (cp = Mp.current) || void 0 === cp || cp.call(Mp))
+              Promise.race([mT, WT]).then((() => {
+                var mT;
+                bT.current !== TT || wT.current !== UT || tT.current || (tT.current = !0, null === (mT = dT.current) || void 0 === mT || mT.call(dT))
               }))
             }))
           }), []);
-        return (0, Op.useImperativeHandle)(ip, (() => {
-          const pp = (pp, ip) => {
-            var cp;
-            (jp.current[pp] = ip, null !== yp && void 0 !== yp && yp[pp]) || (null === (cp = ep.current) || void 0 === cp || cp.setCosmetic(pp, ip), lp())
+        return (0, WT.useImperativeHandle)(UT, (() => {
+          const TT = (TT, UT) => {
+            var mT;
+            (OT.current[TT] = UT, null !== BT && void 0 !== BT && BT[TT]) || (null === (mT = bT.current) || void 0 === mT || mT.setCosmetic(TT, UT), yT())
           };
           return {
-            updateCosmetic: pp,
-            setAllCosmetics(ip) {
-              for (const Op of Ip.u) {
-                var cp;
-                pp(Op, null !== (cp = ip[Op]) && void 0 !== cp ? cp : (0, Sp.b)(Op))
+            updateCosmetic: TT,
+            setAllCosmetics(UT) {
+              for (const WT of MT.t) {
+                var mT;
+                TT(WT, null !== (mT = UT[WT]) && void 0 !== mT ? mT : (0, gT.e)(WT))
               }
             },
             isReady() {
-              var pp, ip;
-              return null !== (pp = null === (ip = ep.current) || void 0 === ip ? void 0 : ip.isReady()) && void 0 !== pp && pp
+              var TT, UT;
+              return null !== (TT = null === (UT = bT.current) || void 0 === UT ? void 0 : UT.isReady()) && void 0 !== TT && TT
             },
             resetCamera() {
-              var pp;
-              null === (pp = ep.current) || void 0 === pp || pp.resetCamera()
+              var TT;
+              null === (TT = bT.current) || void 0 === TT || TT.resetCamera()
             },
-            setOrbit(pp) {
-              var ip;
-              null === (ip = ep.current) || void 0 === ip || ip.setOrbit(pp)
+            setOrbit(TT) {
+              var UT;
+              null === (UT = bT.current) || void 0 === UT || UT.setOrbit(TT)
             },
-            async ensureReadyForCapture(pp) {
-              var ip;
-              await (null === (ip = ep.current) || void 0 === ip ? void 0 : ip.untilDrawn(pp))
+            async ensureReadyForCapture(TT) {
+              var UT;
+              await (null === (UT = bT.current) || void 0 === UT ? void 0 : UT.untilDrawn(TT))
             },
             getDevTools() {
-              var pp;
-              return null !== (pp = ep.current) && void 0 !== pp && pp.isReady() ? ep.current.dev : null
+              var TT;
+              return null !== (TT = bT.current) && void 0 !== TT && TT.isReady() ? bT.current.dev : null
             }
           }
-        }), [yp, lp]), (0, Op.useEffect)((() => {
-          const pp = Lp.c.register(Pp),
-            ip = xp.j.openCharacter(tp.current, Wp);
-          ep.current = ip;
-          let cp = !0;
-          return ip.ready.then((() => {
-            cp && (Rp(!0), qp.current())
-          })).catch((pp => {
-            console.error("Failed to set up the character preview", pp)
+        }), [BT, yT]), (0, WT.useEffect)((() => {
+          const TT = HT.c.register(LT),
+            UT = nT.g.openCharacter(fT.current, pT);
+          bT.current = UT;
+          let mT = !0;
+          return UT.ready.then((() => {
+            mT && (JT(!0), xT.current())
+          })).catch((TT => {
+            console.error("Failed to set up the character preview", TT)
           })), () => {
-            cp = !1, pp(), ip.resetCamera(), ip.close(), ep.current = null
+            mT = !1, TT(), UT.resetCamera(), UT.close(), bT.current = null
           }
-        }), []), (0, Op.useEffect)((() => {
-          Hp <= 0 || dp <= 0 || ep.current.resize(Hp, dp)
-        }), [Hp, dp]), (0, Op.useEffect)((() => {
-          if (!mp) return;
-          const pp = kp.current;
-          for (const ip of Ip.u) {
-            const cp = null === yp || void 0 === yp ? void 0 : yp[ip],
-              Op = pp[ip];
-            cp && cp !== Op ? ep.current.setCosmetic(ip, cp) : !cp && Op && jp.current[ip] && ep.current.setCosmetic(ip, jp.current[ip])
+        }), []), (0, WT.useEffect)((() => {
+          qT <= 0 || iT <= 0 || bT.current.resize(qT, iT)
+        }), [qT, iT]), (0, WT.useEffect)((() => {
+          if (!YT) return;
+          const TT = eT.current;
+          for (const UT of MT.t) {
+            const mT = null === BT || void 0 === BT ? void 0 : BT[UT],
+              WT = TT[UT];
+            mT && mT !== WT ? bT.current.setCosmetic(UT, mT) : !mT && WT && OT.current[UT] && bT.current.setCosmetic(UT, OT.current[UT])
           }
-          kp.current = {
-            ...yp
-          }, Xp.current = !0, lp()
-        }), [yp, mp, lp]), (0, Op.useEffect)((() => {
-          mp && ep.current.playEmote(null !== Up && void 0 !== Up ? Up : null)
-        }), [Up, wp, mp]), (0, Op.useEffect)((() => {
-          if (!mp || null === vp) return;
-          const pp = ep.current,
+          eT.current = {
+            ...BT
+          }, aT.current = !0, yT()
+        }), [BT, YT, yT]), (0, WT.useEffect)((() => {
+          YT && bT.current.playEmote(null !== ZT && void 0 !== ZT ? ZT : null)
+        }), [ZT, cT, YT]), (0, WT.useEffect)((() => {
+          if (!YT || null === vT) return;
+          const TT = bT.current,
             {
-              pitch: ip,
-              radius: cp
-            } = xp.e[Wp];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return pp.setOrbit({
-            yaw: vp + Dp,
-            pitch: ip,
-            radius: cp
+              pitch: UT,
+              radius: mT
+            } = nT.c[pT];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return TT.setOrbit({
+            yaw: vT + jT,
+            pitch: UT,
+            radius: mT
           }), () => {
-            pp.resetCamera()
+            TT.resetCamera()
           };
-          const Op = performance.now();
-          let op = 0;
-          const Ip = Sp => {
-            pp.setOrbit({
-              yaw: vp + (Sp - Op) / 6e3 * 2 * Math.PI,
-              pitch: ip,
-              radius: cp
-            }), op = requestAnimationFrame(Ip)
+          const WT = performance.now();
+          let zT = 0;
+          const MT = gT => {
+            TT.setOrbit({
+              yaw: vT + (gT - WT) / 6e3 * 2 * Math.PI,
+              pitch: UT,
+              radius: mT
+            }), zT = requestAnimationFrame(MT)
           };
-          return op = requestAnimationFrame(Ip), () => {
-            cancelAnimationFrame(op), pp.resetCamera()
+          return zT = requestAnimationFrame(MT), () => {
+            cancelAnimationFrame(zT), TT.resetCamera()
           }
-        }), [mp, vp]), (0, Yp.jsx)("div", {
+        }), [YT, vT]), (0, kT.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: tp
+          ref: fT
         })
       })))
   },
-  36602: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  36465: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op = cp(1956),
-      op = cp(1520);
-    const Ip = new class {
+    var WT = mT(2046),
+      zT = mT(1613);
+    const MT = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(pp, ip) {
-        pp !== this.userContext && this.sendHeld(), this.userContext = pp;
-        for (const [Op, op] of ip) this.pending.set(Op, op);
+      save(TT, UT) {
+        TT !== this.userContext && this.sendHeld(), this.userContext = TT;
+        for (const [WT, zT] of UT) this.pending.set(WT, zT);
         if (null !== this.timer) return;
-        const cp = this.lastSentAt + 1100 - Date.now();
-        cp <= 0 ? this.send(pp) : (this.timer = setTimeout((() => {
+        const mT = this.lastSentAt + 1100 - Date.now();
+        mT <= 0 ? this.send(TT) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), cp), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), mT), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(pp) {
-        const ip = Array.from(this.pending, (pp => {
-          let [ip, cp] = pp;
+      send(TT) {
+        const UT = Array.from(this.pending, (TT => {
+          let [UT, mT] = TT;
           return {
-            KI: ip,
-            VI: cp
+            wM: UT,
+            tM: mT
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), op.b.updateCosmetics(pp, ip).catch((pp => {
-          console.error("Failed to update cosmetics", pp)
+        this.pending.clear(), this.lastSentAt = Date.now(), zT.b.updateCosmetics(TT, UT).catch((TT => {
+          console.error("Failed to update cosmetics", TT)
         }))
       }
     };
 
-    function Sp(pp, ip) {
-      for (const [cp, Op] of ip) pp.setPlayerCosmetics(cp, Op);
-      if (null === Op.gameBridge.latest("connectedGame").websocketUrl) Ip.save(pp, ip);
+    function gT(TT, UT) {
+      for (const [mT, WT] of UT) TT.setPlayerCosmetics(mT, WT);
+      if (null === WT.gameBridge.latest("connectedGame").websocketUrl) MT.save(TT, UT);
       else
-        for (const [cp, op] of ip) Op.gameBridge.send("updateMyCosmetic", {
-          KI: cp,
-          VI: op
+        for (const [mT, zT] of UT) WT.gameBridge.send("updateMyCosmetic", {
+          wM: mT,
+          tM: zT
         })
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

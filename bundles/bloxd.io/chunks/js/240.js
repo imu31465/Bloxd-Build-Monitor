@@ -1,95 +1,95 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  61395: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      DEVTOOLS_SHADERS: () => Ip,
-      registerDevtoolsShader: () => Sp
+  61157: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      DEVTOOLS_SHADERS: () => MT,
+      registerDevtoolsShader: () => gT
     });
-    var Op = cp(40062),
-      op = cp(37421);
-    const Ip = {
-      devtoolsNormal: function(pp) {
+    var WT = mT(39934),
+      zT = mT(37288);
+    const MT = {
+      devtoolsNormal: function(TT) {
         return {
-          vertex: `\n\t\t\t${(0,op.d)(pp,"position","vec3")}\n\t\t\t${(0,op.d)(pp,"normal","vec3")}\n\t\t\t${(0,op.rb)(pp,"worldViewProjection","mat4")}\n\t\t\t${(0,op.rb)(pp,"world","mat4")}\n\t\t\t${(0,op.tb)(pp,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,op.vb)(pp,`\n\t\t\t\t${(0,op.i)(pp)} = ${(0,op.sb)(pp,"worldViewProjection")} * ${(0,op.j)(pp,"vec4",(0,op.zb)(pp,"position"),"1.0")};\n\t\t\t\t${(0,op.Ab)(pp,"vNormal")} = normalize((${(0,op.sb)(pp,"world")} * ${(0,op.j)(pp,"vec4",(0,op.zb)(pp,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,op.tb)(pp,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,op.N)(pp,`\n\t\t\t\t\n\t\t\t\t${(0,op.A)(pp,"vec3","normalColor",`abs(${(0,op.R)(pp,"vNormal")})`)}\n\t\t\t\t${(0,op.I)(pp)} = ${(0,op.j)(pp,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,zT.f)(TT,"position","vec3")}\n\t\t\t${(0,zT.f)(TT,"normal","vec3")}\n\t\t\t${(0,zT.yb)(TT,"worldViewProjection","mat4")}\n\t\t\t${(0,zT.yb)(TT,"world","mat4")}\n\t\t\t${(0,zT.Ab)(TT,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,zT.Bb)(TT,`\n\t\t\t\t${(0,zT.h)(TT)} = ${(0,zT.zb)(TT,"worldViewProjection")} * ${(0,zT.k)(TT,"vec4",(0,zT.Eb)(TT,"position"),"1.0")};\n\t\t\t\t${(0,zT.Ib)(TT,"vNormal")} = normalize((${(0,zT.zb)(TT,"world")} * ${(0,zT.k)(TT,"vec4",(0,zT.Eb)(TT,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,zT.Ab)(TT,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,zT.O)(TT,`\n\t\t\t\t\n\t\t\t\t${(0,zT.w)(TT,"vec3","normalColor",`abs(${(0,zT.R)(TT,"vNormal")})`)}\n\t\t\t\t${(0,zT.G)(TT)} = ${(0,zT.k)(TT,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsWhite: function(pp) {
+      devtoolsWhite: function(TT) {
         return {
-          vertex: `\n\t\t\t${(0,op.d)(pp,"position","vec3")}\n\t\t\t${(0,op.rb)(pp,"worldViewProjection","mat4")}\n\n\t\t\t${(0,op.vb)(pp,`\n\t\t\t\t${(0,op.i)(pp)} = ${(0,op.sb)(pp,"worldViewProjection")} * ${(0,op.j)(pp,"vec4",(0,op.zb)(pp,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,op.N)(pp,`\n\t\t\t\t${(0,op.I)(pp)} = ${(0,op.j)(pp,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,zT.f)(TT,"position","vec3")}\n\t\t\t${(0,zT.yb)(TT,"worldViewProjection","mat4")}\n\n\t\t\t${(0,zT.Bb)(TT,`\n\t\t\t\t${(0,zT.h)(TT)} = ${(0,zT.zb)(TT,"worldViewProjection")} * ${(0,zT.k)(TT,"vec4",(0,zT.Eb)(TT,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,zT.O)(TT,`\n\t\t\t\t${(0,zT.G)(TT)} = ${(0,zT.k)(TT,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsDepth: function(pp) {
+      devtoolsDepth: function(TT) {
         return {
-          vertex: `\n\t\t\t${(0,op.d)(pp,"position","vec3")}\n\t\t\t${(0,op.rb)(pp,"worldViewProjection","mat4")}\n\t\t\t${(0,op.rb)(pp,"world","mat4")}\n\t\t\t${(0,op.rb)(pp,"cameraPosition","vec3")}\n\t\t\t${(0,op.tb)(pp,"vDepth","float","mediump")}\n\n\t\t\t${(0,op.vb)(pp,`\n\t\t\t\t${(0,op.i)(pp)} = ${(0,op.sb)(pp,"worldViewProjection")} * ${(0,op.j)(pp,"vec4",(0,op.zb)(pp,"position"),"1.0")};\n\t\t\t\t${(0,op.A)(pp,"vec3","worldPosition",`(${(0,op.sb)(pp,"world")} * ${(0,op.j)(pp,"vec4",(0,op.zb)(pp,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,op.Ab)(pp,"vDepth")} = distance(worldPosition, ${(0,op.sb)(pp,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,op.tb)(pp,"vDepth","float","mediump")}\n\t\t\t${(0,op.rb)(pp,"maxDepth","float")}\n\t\t\t${(0,op.rb)(pp,"minDepth","float")}\n\n\t\t\t${(0,op.N)(pp,`\n\t\t\t\t\n\t\t\t\t${(0,op.A)(pp,"float","normalizedDepth",`clamp((${(0,op.R)(pp,"vDepth")} - ${(0,op.sb)(pp,"minDepth")}) / (${(0,op.sb)(pp,"maxDepth")} - ${(0,op.sb)(pp,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,op.A)(pp,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,op.I)(pp)} = ${(0,op.j)(pp,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,zT.f)(TT,"position","vec3")}\n\t\t\t${(0,zT.yb)(TT,"worldViewProjection","mat4")}\n\t\t\t${(0,zT.yb)(TT,"world","mat4")}\n\t\t\t${(0,zT.yb)(TT,"cameraPosition","vec3")}\n\t\t\t${(0,zT.Ab)(TT,"vDepth","float","mediump")}\n\n\t\t\t${(0,zT.Bb)(TT,`\n\t\t\t\t${(0,zT.h)(TT)} = ${(0,zT.zb)(TT,"worldViewProjection")} * ${(0,zT.k)(TT,"vec4",(0,zT.Eb)(TT,"position"),"1.0")};\n\t\t\t\t${(0,zT.w)(TT,"vec3","worldPosition",`(${(0,zT.zb)(TT,"world")} * ${(0,zT.k)(TT,"vec4",(0,zT.Eb)(TT,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,zT.Ib)(TT,"vDepth")} = distance(worldPosition, ${(0,zT.zb)(TT,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,zT.Ab)(TT,"vDepth","float","mediump")}\n\t\t\t${(0,zT.yb)(TT,"maxDepth","float")}\n\t\t\t${(0,zT.yb)(TT,"minDepth","float")}\n\n\t\t\t${(0,zT.O)(TT,`\n\t\t\t\t\n\t\t\t\t${(0,zT.w)(TT,"float","normalizedDepth",`clamp((${(0,zT.R)(TT,"vDepth")} - ${(0,zT.zb)(TT,"minDepth")}) / (${(0,zT.zb)(TT,"maxDepth")} - ${(0,zT.zb)(TT,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,zT.w)(TT,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,zT.G)(TT)} = ${(0,zT.k)(TT,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
         }
       }
     };
 
-    function Sp(pp, ip) {
+    function gT(TT, UT) {
       const {
-        vertex: cp,
-        fragment: op
-      } = Ip[pp](ip), Sp = Op.b.GetShadersStore(ip);
-      Sp[`${pp}VertexShader`] = cp, Sp[`${pp}FragmentShader`] = op
+        vertex: mT,
+        fragment: zT
+      } = MT[TT](UT), gT = WT.d.GetShadersStore(UT);
+      gT[`${TT}VertexShader`] = mT, gT[`${TT}FragmentShader`] = zT
     }
   },
-  37421: (pp, ip, cp) => {
-    cp.d(ip, {
-      $: () => hp,
-      A: () => Dp,
-      Ab: () => Mp,
-      B: () => mp,
-      D: () => lp,
-      G: () => Ip,
-      I: () => Bp,
-      K: () => Jp,
-      N: () => dp,
-      R: () => Cp,
-      S: () => Xp,
-      V: () => fp,
-      Y: () => op,
-      Z: () => Qp,
-      b: () => Op,
-      cb: () => np,
-      d: () => Up,
-      db: () => kp,
-      eb: () => jp,
-      g: () => Rp,
-      gb: () => ap,
-      i: () => tp,
-      ib: () => Fp,
-      j: () => Lp,
-      jb: () => bp,
-      l: () => Np,
-      mb: () => ep,
-      n: () => Tp,
-      qb: () => Yp,
-      r: () => Pp,
-      rb: () => vp,
-      sb: () => Ep,
-      tb: () => wp,
-      v: () => Wp,
-      vb: () => Hp,
-      w: () => Ap,
-      zb: () => qp
+  37288: (TT, UT, mT) => {
+    mT.d(UT, {
+      $: () => zT,
+      Ab: () => cT,
+      B: () => yT,
+      Bb: () => qT,
+      D: () => MT,
+      Eb: () => xT,
+      G: () => QT,
+      Ib: () => dT,
+      K: () => IT,
+      O: () => iT,
+      R: () => wT,
+      U: () => aT,
+      Y: () => PT,
+      cb: () => XT,
+      db: () => uT,
+      e: () => WT,
+      eb: () => rT,
+      f: () => ZT,
+      fb: () => eT,
+      g: () => JT,
+      h: () => fT,
+      ib: () => OT,
+      k: () => HT,
+      kb: () => CT,
+      lb: () => KT,
+      m: () => sT,
+      o: () => FT,
+      pb: () => VT,
+      q: () => LT,
+      r: () => pT,
+      tb: () => bT,
+      v: () => lT,
+      w: () => jT,
+      wb: () => kT,
+      yb: () => vT,
+      z: () => YT,
+      zb: () => tT
     });
-    const Op = {
+    const WT = {
       GLSL: 0,
       WGSL: 1
     };
 
-    function op(pp) {
-      return pp === Op.WGSL
+    function zT(TT) {
+      return TT === WT.WGSL
     }
 
-    function Ip(pp, ip, cp) {
-      return op(pp) ? cp : ip
+    function MT(TT, UT, mT) {
+      return zT(TT) ? mT : UT
     }
-    const Sp = new Map([
+    const gT = new Map([
       ["int", "i32"],
       ["float", "f32"],
       ["vec2", "vec2f"],
@@ -100,185 +100,185 @@ export const modules = {
       ["mat4", "mat4x4f"]
     ]);
 
-    function xp(pp, ip) {
-      if (!op(pp)) return ip;
-      const cp = Sp.get(ip);
-      if (!cp) throw new Error(`No WGSL name for shader type "${ip}"`);
-      return cp
+    function nT(TT, UT) {
+      if (!zT(TT)) return UT;
+      const mT = gT.get(UT);
+      if (!mT) throw new Error(`No WGSL name for shader type "${UT}"`);
+      return mT
     }
 
-    function Lp(pp, ip) {
-      for (var cp = arguments.length, Op = new Array(cp > 2 ? cp - 2 : 0), op = 2; op < cp; op++) Op[op - 2] = arguments[op];
-      return `${xp(pp,ip)}(${Op.join(", ")})`
+    function HT(TT, UT) {
+      for (var mT = arguments.length, WT = new Array(mT > 2 ? mT - 2 : 0), zT = 2; zT < mT; zT++) WT[zT - 2] = arguments[zT];
+      return `${nT(TT,UT)}(${WT.join(", ")})`
     }
 
-    function Yp(pp, ip) {
-      return Lp(pp, "int", ip)
+    function kT(TT, UT) {
+      return HT(TT, "int", UT)
     }
 
-    function Dp(pp, ip, cp, Op, Ip) {
-      return op(pp) ? `var ${cp}: ${xp(pp,ip)} = ${Op};` : `${yp(pp,Ip)}${ip} ${cp} = ${Op};`
+    function jT(TT, UT, mT, WT, MT) {
+      return zT(TT) ? `var ${mT}: ${nT(TT,UT)} = ${WT};` : `${BT(TT,MT)}${UT} ${mT} = ${WT};`
     }
 
-    function Ap(pp, ip, cp) {
-      return op(pp) ? `var ${cp}: ${xp(pp,ip)};` : `${ip} ${cp};`
+    function lT(TT, UT, mT) {
+      return zT(TT) ? `var ${mT}: ${nT(TT,UT)};` : `${UT} ${mT};`
     }
 
-    function Pp(pp, ip, cp, Op) {
-      return op(pp) ? `const ${cp}: ${xp(pp,ip)} = ${Op};` : `const ${ip} ${cp} = ${Op};`
+    function LT(TT, UT, mT, WT) {
+      return zT(TT) ? `const ${mT}: ${nT(TT,UT)} = ${WT};` : `const ${UT} ${mT} = ${WT};`
     }
 
-    function Wp(pp, ip, cp, Op, Ip) {
-      if (op(pp)) {
-        return `fn ${cp}(${Op.map((ip=>`${ip.name}: ${xp(pp,ip.type)}`)).join(", ")}) -> ${xp(pp,ip)} {${Ip}}`
+    function pT(TT, UT, mT, WT, MT) {
+      if (zT(TT)) {
+        return `fn ${mT}(${WT.map((UT=>`${UT.name}: ${nT(TT,UT.type)}`)).join(", ")}) -> ${nT(TT,UT)} {${MT}}`
       }
-      return `${ip} ${cp}(${Op.map((pp=>`${pp.type} ${pp.name}`)).join(", ")}) {${Ip}}`
+      return `${UT} ${mT}(${WT.map((TT=>`${TT.type} ${TT.name}`)).join(", ")}) {${MT}}`
     }
 
-    function yp(pp, ip) {
-      return !ip || op(pp) ? "" : `${ip} `
+    function BT(TT, UT) {
+      return !UT || zT(TT) ? "" : `${UT} `
     }
 
-    function Up(pp, ip, cp, Op) {
-      return op(pp) ? `attribute ${ip}: ${xp(pp,cp)};` : `attribute ${yp(pp,Op)}${cp} ${ip};`
+    function ZT(TT, UT, mT, WT) {
+      return zT(TT) ? `attribute ${UT}: ${nT(TT,mT)};` : `attribute ${BT(TT,WT)}${mT} ${UT};`
     }
 
-    function wp(pp, ip, cp, Op) {
-      return op(pp) ? `varying ${ip}: ${xp(pp,cp)};` : `varying ${yp(pp,Op)}${cp} ${ip};`
+    function cT(TT, UT, mT, WT) {
+      return zT(TT) ? `varying ${UT}: ${nT(TT,mT)};` : `varying ${BT(TT,WT)}${mT} ${UT};`
     }
 
-    function vp(pp, ip, cp) {
-      return op(pp) ? `uniform ${ip}: ${xp(pp,cp)};` : `uniform ${cp} ${ip};`
+    function vT(TT, UT, mT) {
+      return zT(TT) ? `uniform ${UT}: ${nT(TT,mT)};` : `uniform ${mT} ${UT};`
     }
 
-    function tp(pp) {
-      return op(pp) ? "vertexOutputs.position" : "gl_Position"
+    function fT(TT) {
+      return zT(TT) ? "vertexOutputs.position" : "gl_Position"
     }
 
-    function Hp(pp, ip) {
-      return op(pp) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${ip}}` : `void main() {${ip}}`
+    function qT(TT, UT) {
+      return zT(TT) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${UT}}` : `void main() {${UT}}`
     }
 
-    function dp(pp, ip) {
-      return op(pp) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${ip}}` : `void main() {${ip}}`
+    function iT(TT, UT) {
+      return zT(TT) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${UT}}` : `void main() {${UT}}`
     }
 
-    function ep(pp, ip, cp) {
-      if (op(pp)) {
-        return [`var ${ip}Sampler: sampler;`, `var ${ip}: ${"2dArray"===cp?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
+    function bT(TT, UT, mT) {
+      if (zT(TT)) {
+        return [`var ${UT}Sampler: sampler;`, `var ${UT}: ${"2dArray"===mT?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
       }
-      return `uniform highp ${"2dArray"===cp?"sampler2DArray":"sampler2D"} ${ip};`
+      return `uniform highp ${"2dArray"===mT?"sampler2DArray":"sampler2D"} ${UT};`
     }
 
-    function jp(pp, ip, cp) {
-      return op(pp) ? `textureSample(${ip}, ${ip}Sampler, ${cp})` : `texture2D(${ip}, ${cp})`
+    function OT(TT, UT, mT) {
+      return zT(TT) ? `textureSample(${UT}, ${UT}Sampler, ${mT})` : `texture2D(${UT}, ${mT})`
     }
 
-    function kp(pp, ip, cp, Op, Ip) {
-      if (op(pp)) {
-        return `${Ip?"textureSampleLevel":"textureSample"}(${ip}, ${ip}Sampler, ${cp}, ${Yp(pp,`round(${Op})`)}${Ip?`, ${Ip}`:""})`
+    function eT(TT, UT, mT, WT, MT) {
+      if (zT(TT)) {
+        return `${MT?"textureSampleLevel":"textureSample"}(${UT}, ${UT}Sampler, ${mT}, ${kT(TT,`round(${WT})`)}${MT?`, ${MT}`:""})`
       }
-      const Sp = Lp(pp, "vec3", cp, Op);
-      return Ip ? `textureLod(${ip}, ${Sp}, ${Ip})` : `texture(${ip}, ${Sp})`
+      const gT = HT(TT, "vec3", mT, WT);
+      return MT ? `textureLod(${UT}, ${gT}, ${MT})` : `texture(${UT}, ${gT})`
     }
 
-    function mp(pp) {
-      return op(pp) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
+    function YT(TT) {
+      return zT(TT) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
     }
 
-    function Rp(pp) {
-      return op(pp) ? {
+    function JT(TT) {
+      return zT(TT) ? {
         "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
       } : {
         "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
       }
     }
 
-    function qp(pp, ip) {
-      return op(pp) ? `vertexInputs.${ip}` : ip
+    function xT(TT, UT) {
+      return zT(TT) ? `vertexInputs.${UT}` : UT
     }
 
-    function Mp(pp, ip) {
-      return op(pp) ? `vertexOutputs.${ip}` : ip
+    function dT(TT, UT) {
+      return zT(TT) ? `vertexOutputs.${UT}` : UT
     }
 
-    function Cp(pp, ip) {
-      return op(pp) ? `fragmentInputs.${ip}` : ip
+    function wT(TT, UT) {
+      return zT(TT) ? `fragmentInputs.${UT}` : UT
     }
 
-    function Ep(pp, ip) {
-      return op(pp) ? `uniforms.${ip}` : ip
+    function tT(TT, UT) {
+      return zT(TT) ? `uniforms.${UT}` : UT
     }
 
-    function Xp(pp, ip, cp) {
-      return op(pp) ? `frame.${ip}` : cp
+    function aT(TT, UT, mT) {
+      return zT(TT) ? `frame.${UT}` : mT
     }
 
-    function lp(pp) {
-      return op(pp) ? "scene.vEyePosition" : "vEyePosition"
+    function yT(TT) {
+      return zT(TT) ? "scene.vEyePosition" : "vEyePosition"
     }
 
-    function Qp(pp) {
-      return op(pp) ? "mesh.visibility" : "visibility"
+    function XT(TT) {
+      return zT(TT) ? "mesh.visibility" : "visibility"
     }
 
-    function Jp(pp) {
-      return op(pp) ? "fragmentInputs.position" : "gl_FragCoord"
+    function IT(TT) {
+      return zT(TT) ? "fragmentInputs.position" : "gl_FragCoord"
     }
 
-    function Bp(pp) {
-      return op(pp) ? "fragmentOutputs.color" : "gl_FragColor"
+    function QT(TT) {
+      return zT(TT) ? "fragmentOutputs.color" : "gl_FragColor"
     }
 
-    function Np(pp, ip) {
-      return op(pp) ? `dpdx(${ip})` : `dFdx(${ip})`
+    function sT(TT, UT) {
+      return zT(TT) ? `dpdx(${UT})` : `dFdx(${UT})`
     }
 
-    function Tp(pp, ip) {
-      return op(pp) ? `dpdy(${ip})` : `dFdy(${ip})`
+    function FT(TT, UT) {
+      return zT(TT) ? `dpdy(${UT})` : `dFdy(${UT})`
     }
 
-    function fp(pp, ip) {
-      return op(pp) ? `inverseSqrt(${ip})` : `inversesqrt(${ip})`
+    function PT(TT, UT) {
+      return zT(TT) ? `inverseSqrt(${UT})` : `inversesqrt(${UT})`
     }
 
-    function bp(pp, ip, cp, Op) {
-      return op(pp) ? `select(${Op}, ${cp}, ${ip})` : `((${ip}) ? (${cp}) : (${Op}))`
+    function VT(TT, UT, mT, WT) {
+      return zT(TT) ? `select(${WT}, ${mT}, ${UT})` : `((${UT}) ? (${mT}) : (${WT}))`
     }
 
-    function hp(pp, ip, cp) {
-      return op(pp) ? `((${ip}) - (${cp}) * floor((${ip}) / (${cp})))` : `mod(${ip}, ${cp})`
+    function uT(TT, UT, mT) {
+      return zT(TT) ? `((${UT}) - (${mT}) * floor((${UT}) / (${mT})))` : `mod(${UT}, ${mT})`
     }
 
-    function ap(pp, ip, cp) {
-      return op(pp) ? `${ip} = vec4f(${cp}, ${ip}.a);` : `${ip}.rgb = ${cp};`
+    function CT(TT, UT, mT) {
+      return zT(TT) ? `${UT} = vec4f(${mT}, ${UT}.a);` : `${UT}.rgb = ${mT};`
     }
 
-    function np(pp, ip, cp) {
-      return op(pp) ? `${ip} = vec4f(${ip}.rgb * (${cp}), ${ip}.a);` : `${ip}.rgb *= ${cp};`
+    function rT(TT, UT, mT) {
+      return zT(TT) ? `${UT} = vec4f(${UT}.rgb * (${mT}), ${UT}.a);` : `${UT}.rgb *= ${mT};`
     }
 
-    function Fp(pp, ip, cp) {
-      return op(pp) ? `${ip} = vec4f(${cp}, ${ip}.w);` : `${ip}.xyz = ${cp};`
+    function KT(TT, UT, mT) {
+      return zT(TT) ? `${UT} = vec4f(${mT}, ${UT}.w);` : `${UT}.xyz = ${mT};`
     }
   },
-  40062: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  39934: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    class Op {
+    class WT {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.ShadersRepository : Op.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.ShadersRepository : WT.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.ShadersStore : Op.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.ShadersStore : WT.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.IncludesShadersStore : Op.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.IncludesShadersStore : WT.IncludesShadersStoreWGSL
       }
     }
-    Op.ShadersRepository = "src/Shaders/", Op.ShadersStore = {}, Op.IncludesShadersStore = {}, Op.ShadersRepositoryWGSL = "src/ShadersWGSL/", Op.ShadersStoreWGSL = {}, Op.IncludesShadersStoreWGSL = {}
+    WT.ShadersRepository = "src/Shaders/", WT.ShadersStore = {}, WT.IncludesShadersStore = {}, WT.ShadersRepositoryWGSL = "src/ShadersWGSL/", WT.ShadersStoreWGSL = {}, WT.IncludesShadersStoreWGSL = {}
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

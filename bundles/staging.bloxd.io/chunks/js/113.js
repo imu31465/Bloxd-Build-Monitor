@@ -1,228 +1,228 @@
 export const id = 113;
 export const ids = [113];
 export const modules = {
-  5113: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => yp,
-      f: () => Hp,
-      i: () => Up,
-      l: () => tp
+  5090: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => BT,
+      f: () => qT,
+      j: () => ZT,
+      l: () => fT
     });
-    var Op = cp(62),
-      op = cp(5122),
-      Ip = cp(4462),
-      Sp = cp(1387),
-      xp = cp(5146),
-      Lp = cp(1049),
-      Yp = cp.n(Lp),
-      Dp = cp(1372),
-      Ap = cp(1765),
-      Pp = cp(5149),
-      Wp = cp(1112);
+    var WT = mT(63),
+      zT = mT(5095),
+      MT = mT(4468),
+      gT = mT(1475),
+      nT = mT(5116),
+      HT = mT(1126),
+      kT = mT.n(HT),
+      jT = mT(1457),
+      lT = mT(1863),
+      LT = mT(5123),
+      pT = mT(1188);
 
-    function yp(pp) {
+    function BT(TT) {
       let {
-        label: ip,
-        onClick: cp,
-        checked: Op,
-        circleInfoText: op,
-        className: xp,
-        disabled: Lp,
-        note: Dp
-      } = pp;
-      return (0, Wp.jsxs)("div", {
-        "aria-disabled": Lp || void 0,
+        label: UT,
+        onClick: mT,
+        checked: WT,
+        circleInfoText: zT,
+        className: nT,
+        disabled: HT,
+        note: jT
+      } = TT;
+      return (0, pT.jsxs)("div", {
+        "aria-disabled": HT || void 0,
         "data-pad-focusable": !0,
-        className: Yp()("SettingBox CheckboxContainer", {
-          [xp]: xp,
-          SettingBoxDisabled: Lp
+        className: kT()("SettingBox CheckboxContainer", {
+          [nT]: nT,
+          SettingBoxDisabled: HT
         }),
         onClick: () => {
-          Lp || cp(!Op)
+          HT || mT(!WT)
         },
-        children: [(0, Wp.jsxs)("div", {
+        children: [(0, pT.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Wp.jsx)("label", {
+          children: [(0, pT.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Wp.jsx)(Ip.b, {
+            children: (0, pT.jsx)(MT.d, {
               className: "SettingsCheckbox",
-              checked: Op,
-              disabled: Lp,
+              checked: WT,
+              disabled: HT,
               onChange: () => {}
             })
-          }), (0, Wp.jsxs)("div", {
+          }), (0, pT.jsxs)("div", {
             className: "CheckboxText",
-            children: [ip, op && (0, Wp.jsx)("span", {
-              onClick: pp => pp.stopPropagation(),
-              children: (0, Wp.jsx)(Sp.d, {
+            children: [UT, zT && (0, pT.jsx)("span", {
+              onClick: TT => TT.stopPropagation(),
+              children: (0, pT.jsx)(gT.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: op
+                hoverInfo: zT
               })
             })]
           })]
-        }), Dp && (0, Wp.jsx)("div", {
+        }), jT && (0, pT.jsx)("div", {
           className: "SettingNote",
-          children: Dp
+          children: jT
         })]
       })
     }
 
-    function Up(pp) {
+    function ZT(TT) {
       let {
-        name: ip,
-        onChange: cp,
-        min: op,
-        max: Ip,
-        step: xp,
-        initValue: Lp,
-        circleInfoText: Dp,
-        format: Ap,
-        className: Pp,
-        padStep: yp,
-        disabled: Up = !1,
-        selectableMax: wp,
-        cappedNote: tp,
-        onChangeComplete: Hp
-      } = pp;
-      const [dp, ep] = (0, Op.useState)(Lp), jp = (0, Op.useRef)(Lp);
-      (0, Op.useEffect)((() => {
-        jp.current = Lp, ep(Lp)
-      }), [Lp]);
-      const kp = void 0 !== wp && wp < Ip,
-        mp = kp ? {
-          "--slider-selectable": (wp - op) / (Ip - op)
+        name: UT,
+        onChange: mT,
+        min: zT,
+        max: MT,
+        step: nT,
+        initValue: HT,
+        circleInfoText: jT,
+        format: lT,
+        className: LT,
+        padStep: BT,
+        disabled: ZT = !1,
+        selectableMax: cT,
+        cappedNote: fT,
+        onChangeComplete: qT
+      } = TT;
+      const [iT, bT] = (0, WT.useState)(HT), OT = (0, WT.useRef)(HT);
+      (0, WT.useEffect)((() => {
+        OT.current = HT, bT(HT)
+      }), [HT]);
+      const eT = void 0 !== cT && cT < MT,
+        YT = eT ? {
+          "--slider-selectable": (cT - zT) / (MT - zT)
         } : void 0;
-      return (0, Wp.jsxs)("div", {
-        className: Yp()("SettingBox SettingsSliderDiv", {
-          [Pp]: Pp,
-          SettingBoxDisabled: Up,
-          SliderCapped: kp
+      return (0, pT.jsxs)("div", {
+        className: kT()("SettingBox SettingsSliderDiv", {
+          [LT]: LT,
+          SettingBoxDisabled: ZT,
+          SliderCapped: eT
         }),
-        style: mp,
-        children: [(0, Wp.jsxs)("div", {
+        style: YT,
+        children: [(0, pT.jsxs)("div", {
           className: "SliderText",
-          children: [`${ip}: ${Ap?Ap(dp):dp}`, Dp && (0, Wp.jsx)(Sp.d, {
+          children: [`${UT}: ${lT?lT(iT):iT}`, jT && (0, pT.jsx)(gT.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Dp
+            hoverInfo: jT
           })]
-        }), (0, Wp.jsx)("div", {
+        }), (0, pT.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Wp.jsx)(vp, {
-            value: dp,
-            min: op,
-            max: Ip,
-            step: xp,
-            onChange: pp => {
-              if (kp && pp >= wp && dp === wp) return;
-              const ip = kp ? Math.min(pp, wp) : pp;
-              jp.current = ip, ep(ip), cp(ip)
+          children: (0, pT.jsx)(vT, {
+            value: iT,
+            min: zT,
+            max: MT,
+            step: nT,
+            onChange: TT => {
+              if (eT && TT >= cT && iT === cT) return;
+              const UT = eT ? Math.min(TT, cT) : TT;
+              OT.current = UT, bT(UT), mT(UT)
             },
-            onChangeComplete: Hp && (() => {
-              Hp(jp.current)
+            onChangeComplete: qT && (() => {
+              qT(OT.current)
             }),
-            format: Ap,
-            padStep: yp,
-            disabled: Up
+            format: lT,
+            padStep: BT,
+            disabled: ZT
           })
-        }), kp && tp && (0, Wp.jsx)("div", {
+        }), eT && fT && (0, pT.jsx)("div", {
           className: "SettingNote",
-          children: tp
+          children: fT
         })]
       })
     }
-    const wp = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const cT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function vp(pp) {
-      var ip;
+    function vT(TT) {
+      var UT;
       let {
-        value: cp,
-        min: Ip,
-        max: Sp,
-        step: xp,
-        onChange: Lp,
-        orientation: Yp,
-        reverse: Dp,
-        setIsChanging: Ap,
-        tooltip: yp,
-        labels: Up,
-        handleLabel: vp,
-        format: tp,
-        onChangeStart: Hp,
-        onChangeComplete: dp,
-        padStep: ep,
-        disabled: jp = !1
-      } = pp;
-      const kp = (0, Op.useRef)(null),
-        mp = (0, Op.useRef)(null);
-      (0, Op.useLayoutEffect)((() => {
-        var pp, ip, cp;
-        const Op = null !== (pp = null === (ip = kp.current) || void 0 === ip ? void 0 : ip.querySelector(".rangeslider")) && void 0 !== pp ? pp : null;
-        null === Op || void 0 === Op || Op.setAttribute("data-pad-slider", ""), null === Op || void 0 === Op || Op.setAttribute("data-pad-focusable", ""), null === Op || void 0 === Op || null === (cp = Op.querySelector(".rangeslider__handle")) || void 0 === cp || cp.setAttribute("data-pad-slider-handle", ""), mp.current = Op
-      }), []), (0, Op.useLayoutEffect)((() => {
-        var pp, ip;
-        jp ? null === (pp = mp.current) || void 0 === pp || pp.setAttribute("aria-disabled", "true") : null === (ip = mp.current) || void 0 === ip || ip.removeAttribute("aria-disabled")
-      }), [jp]);
-      const Rp = (null !== (ip = String(xp).split(".")[1]) && void 0 !== ip ? ip : "").length,
-        qp = pp => {
-          const ip = Number((Math.round((pp - Ip) / xp) * xp + Ip).toFixed(Rp));
-          return Math.min(Sp, Math.max(Ip, ip))
+        value: mT,
+        min: MT,
+        max: gT,
+        step: nT,
+        onChange: HT,
+        orientation: kT,
+        reverse: jT,
+        setIsChanging: lT,
+        tooltip: BT,
+        labels: ZT,
+        handleLabel: vT,
+        format: fT,
+        onChangeStart: qT,
+        onChangeComplete: iT,
+        padStep: bT,
+        disabled: OT = !1
+      } = TT;
+      const eT = (0, WT.useRef)(null),
+        YT = (0, WT.useRef)(null);
+      (0, WT.useLayoutEffect)((() => {
+        var TT, UT, mT;
+        const WT = null !== (TT = null === (UT = eT.current) || void 0 === UT ? void 0 : UT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
+        null === WT || void 0 === WT || WT.setAttribute("data-pad-slider", ""), null === WT || void 0 === WT || WT.setAttribute("data-pad-focusable", ""), null === WT || void 0 === WT || null === (mT = WT.querySelector(".rangeslider__handle")) || void 0 === mT || mT.setAttribute("data-pad-slider-handle", ""), YT.current = WT
+      }), []), (0, WT.useLayoutEffect)((() => {
+        var TT, UT;
+        OT ? null === (TT = YT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (UT = YT.current) || void 0 === UT || UT.removeAttribute("aria-disabled")
+      }), [OT]);
+      const JT = (null !== (UT = String(nT).split(".")[1]) && void 0 !== UT ? UT : "").length,
+        xT = TT => {
+          const UT = Number((Math.round((TT - MT) / nT) * nT + MT).toFixed(JT));
+          return Math.min(gT, Math.max(MT, UT))
         },
-        Mp = (0, Op.useRef)(dp);
-      Mp.current = dp, (0, Op.useEffect)((() => {
-        const pp = kp.current;
-        if (!pp) return;
-        const ip = pp => {
-          var ip;
-          wp.has(pp.key) && (null === (ip = Mp.current) || void 0 === ip || ip.call(Mp))
+        dT = (0, WT.useRef)(iT);
+      dT.current = iT, (0, WT.useEffect)((() => {
+        const TT = eT.current;
+        if (!TT) return;
+        const UT = TT => {
+          var UT;
+          cT.has(TT.key) && (null === (UT = dT.current) || void 0 === UT || UT.call(dT))
         };
-        return pp.addEventListener("keyup", ip), () => {
-          pp.removeEventListener("keyup", ip)
+        return TT.addEventListener("keyup", UT), () => {
+          TT.removeEventListener("keyup", UT)
         }
       }), []);
-      const Cp = (0, Op.useRef)(!1);
-      return (0, Pp.h)(mp, {
-        adjust: pp => {
-          if (jp) return;
-          const ip = null !== ep && void 0 !== ep ? ep : Math.max(xp, Math.round((Sp - Ip) / 20 / xp) * xp),
-            Op = qp(cp + pp * ip * (Dp ? -1 : 1));
-          Op !== cp && (null === Hp || void 0 === Hp || Hp(), Lp(Op), null === dp || void 0 === dp || dp())
+      const wT = (0, WT.useRef)(!1);
+      return (0, LT.g)(YT, {
+        adjust: TT => {
+          if (OT) return;
+          const UT = null !== bT && void 0 !== bT ? bT : Math.max(nT, Math.round((gT - MT) / 20 / nT) * nT),
+            WT = xT(mT + TT * UT * (jT ? -1 : 1));
+          WT !== mT && (null === qT || void 0 === qT || qT(), HT(WT), null === iT || void 0 === iT || iT())
         },
-        setFraction: pp => {
-          if (jp) return;
-          const ip = qp(Ip + (Dp ? 1 - pp : pp) * (Sp - Ip));
-          ip !== cp && (Cp.current || (Cp.current = !0, null === Hp || void 0 === Hp || Hp()), Lp(ip))
+        setFraction: TT => {
+          if (OT) return;
+          const UT = xT(MT + (jT ? 1 - TT : TT) * (gT - MT));
+          UT !== mT && (wT.current || (wT.current = !0, null === qT || void 0 === qT || qT()), HT(UT))
         },
         endDrag: () => {
-          Cp.current && (Cp.current = !1, null === dp || void 0 === dp || dp())
+          wT.current && (wT.current = !1, null === iT || void 0 === iT || iT())
         }
-      }), (0, Wp.jsx)("div", {
-        ref: kp,
+      }), (0, pT.jsx)("div", {
+        ref: eT,
         style: {
           display: "contents"
         },
-        children: (0, Wp.jsx)(op.b, {
-          value: cp,
-          min: Ip,
-          max: Sp,
-          step: xp,
-          onChange: Lp,
-          orientation: Yp,
-          reverse: Dp,
-          tooltip: yp,
-          labels: Up,
-          handleLabel: vp,
-          format: tp,
+        children: (0, pT.jsx)(zT.d, {
+          value: mT,
+          min: MT,
+          max: gT,
+          step: nT,
+          onChange: HT,
+          orientation: kT,
+          reverse: jT,
+          tooltip: BT,
+          labels: ZT,
+          handleLabel: vT,
+          format: fT,
           onChangeStart: () => {
-            null === Hp || void 0 === Hp || Hp(), null === Ap || void 0 === Ap || Ap(!0)
+            null === qT || void 0 === qT || qT(), null === lT || void 0 === lT || lT(!0)
           },
           onChangeComplete: () => {
-            null === Ap || void 0 === Ap || Ap(!1), null === dp || void 0 === dp || dp()
+            null === lT || void 0 === lT || lT(!1), null === iT || void 0 === iT || iT()
           }
         })
       })
     }
-    async function tp() {
-      const pp = Dp.NotificationProvider.showPromptPopup({
+    async function fT() {
+      const TT = jT.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -230,456 +230,456 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await pp.getResult() && (0, Ap.reloadBloxd)()
+      !0 === await TT.getResult() && (0, lT.reloadBloxd)()
     }
 
-    function Hp(pp) {
+    function qT(TT) {
       let {
-        label: ip,
-        options: cp,
-        value: Op,
-        onChange: op,
-        circleInfoText: Ip
-      } = pp;
-      return (0, Wp.jsxs)("div", {
+        label: UT,
+        options: mT,
+        value: WT,
+        onChange: zT,
+        circleInfoText: MT
+      } = TT;
+      return (0, pT.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Wp.jsxs)("div", {
+        children: [(0, pT.jsxs)("div", {
           className: "SliderText",
-          children: [ip, Ip && (0, Wp.jsx)(Sp.d, {
+          children: [UT, MT && (0, pT.jsx)(gT.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Ip
+            hoverInfo: MT
           })]
-        }), (0, Wp.jsx)(xp.b, {
-          ariaLabel: ip,
-          options: cp,
-          value: Op,
-          onChange: op
+        }), (0, pT.jsx)(nT.c, {
+          ariaLabel: UT,
+          options: mT,
+          value: WT,
+          onChange: zT
         })]
       })
     }
   },
-  6806: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Kp
+  6727: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => oT
     });
-    var Op = cp(62),
-      op = cp(1543),
-      Ip = cp(6704),
-      Sp = cp(1234),
-      xp = cp(337),
-      Lp = cp(1569),
-      Yp = cp(1361),
-      Dp = cp(1538),
-      Ap = cp(1480),
-      Pp = cp(1387),
-      Wp = cp(1626),
-      yp = cp(2671),
-      Up = cp(2814),
-      wp = cp(4648),
-      vp = cp(1141),
-      tp = cp(1520),
-      Hp = cp(104),
-      dp = cp(1201);
-    const ep = cp.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var jp = cp(1049),
-      kp = cp.n(jp),
-      mp = cp(1060),
-      Rp = cp(1372),
-      qp = cp(6698),
-      Mp = cp(1112);
-    const Cp = (0, Op.lazy)((() => Promise.all([cp.e(109), cp.e(78), cp.e(136), cp.e(135), cp.e(114), cp.e(402)]).then((() => cp(6743))).then((pp => ({
-      default: pp.ShaderPackPublishForm
+    var WT = mT(63),
+      zT = mT(1641),
+      MT = mT(6630),
+      gT = mT(1321),
+      nT = mT(366),
+      HT = mT(1667),
+      kT = mT(1446),
+      jT = mT(1633),
+      lT = mT(1569),
+      LT = mT(1475),
+      pT = mT(1731),
+      BT = mT(2713),
+      ZT = mT(2836),
+      cT = mT(4655),
+      vT = mT(1225),
+      fT = mT(1613),
+      qT = mT(102),
+      iT = mT(1288);
+    const bT = mT.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var OT = mT(1126),
+      eT = mT.n(OT),
+      YT = mT(1135),
+      JT = mT(1457),
+      xT = mT(6623),
+      dT = mT(1188);
+    const wT = (0, WT.lazy)((() => Promise.all([mT.e(109), mT.e(78), mT.e(136), mT.e(135), mT.e(114), mT.e(402)]).then((() => mT(6668))).then((TT => ({
+      default: TT.ShaderPackPublishForm
     })))));
 
-    function Ep(pp) {
+    function tT(TT) {
       let {
-        details: ip,
-        owner: cp,
-        onChanged: op
-      } = pp;
+        details: UT,
+        owner: mT,
+        onChanged: zT
+      } = TT;
       const {
-        t: Sp
-      } = (0, dp.H)(), xp = (0, Dp.useNavigatePreserveSearch)(), {
-        userContext: Lp
-      } = (0, vp.b)(), [Pp, Wp] = (0, Op.useState)(!1), [yp, Up] = (0, Op.useState)(null), [wp, Hp] = (0, Op.useState)(!1), {
-        packId: ep,
-        name: jp,
-        description: Ep,
-        live: Xp
-      } = ip;
-      async function lp(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op;
-        Wp(!0), Up(null);
+        t: gT
+      } = (0, iT.z)(), nT = (0, jT.useNavigatePreserveSearch)(), {
+        userContext: HT
+      } = (0, vT.d)(), [LT, pT] = (0, WT.useState)(!1), [BT, ZT] = (0, WT.useState)(null), [cT, qT] = (0, WT.useState)(!1), {
+        packId: bT,
+        name: OT,
+        description: tT,
+        live: aT
+      } = UT;
+      async function yT(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT;
+        pT(!0), ZT(null);
         try {
-          await pp(), ip()
-        } catch (cp) {
-          console.error("Failed to change a shader pack", cp), Up((0, qp.s)(cp, Sp, "shaderPackListing:ownerActionFailed"))
+          await TT(), UT()
+        } catch (mT) {
+          console.error("Failed to change a shader pack", mT), ZT((0, xT.s)(mT, gT, "shaderPackListing:ownerActionFailed"))
         } finally {
-          Wp(!1)
+          pT(!1)
         }
       }
-      const Qp = (0, qp.n)(Lp);
-      return (0, Mp.jsxs)("section", {
+      const XT = (0, xT.o)(HT);
+      return (0, dT.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, Mp.jsx)("h2", {
+        children: [(0, dT.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: Sp("general:manage")
-        }), (0, qp.S)(cp, !(null === Xp || void 0 === Xp || !Xp.renderId), Date.now(), Sp).map((pp => (0, Mp.jsxs)("div", {
-          className: kp()("ShaderPackOwnerNotice", {
-            Warning: "warning" === pp.tone
+          children: gT("general:manage")
+        }), (0, xT.M)(mT, !(null === aT || void 0 === aT || !aT.renderId), Date.now(), gT).map((TT => (0, dT.jsxs)("div", {
+          className: eT()("ShaderPackOwnerNotice", {
+            Warning: "warning" === TT.tone
           }),
-          children: [(0, Mp.jsx)(mp.d, {
-            name: "warning" === pp.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, Mp.jsxs)("div", {
-            children: [pp.text, pp.detail && (0, Mp.jsx)("pre", {
+          children: [(0, dT.jsx)(YT.c, {
+            name: "warning" === TT.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, dT.jsxs)("div", {
+            children: [TT.text, TT.detail && (0, dT.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: pp.detail
+              children: TT.detail
             })]
           })]
-        }, pp.text))), ip.ban && (0, Mp.jsxs)("div", {
+        }, TT.text))), UT.ban && (0, dT.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, Mp.jsx)(mp.d, {
+          children: [(0, dT.jsx)(YT.c, {
             name: "ban"
-          }), (0, Mp.jsxs)("div", {
-            children: ["Banned by ", ip.ban.byName, " on ", new Date(ip.ban.at).toLocaleString()]
+          }), (0, dT.jsxs)("div", {
+            children: ["Banned by ", UT.ban.byName, " on ", new Date(UT.ban.at).toLocaleString()]
           })]
-        }), yp && (0, Mp.jsx)("div", {
+        }), BT && (0, dT.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: yp
-        }), (0, Mp.jsxs)("div", {
+          children: BT
+        }), (0, dT.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, Mp.jsxs)(Ap.S, {
-            disabled: Pp,
+          children: [(0, dT.jsxs)(lT.L, {
+            disabled: LT,
             onClick: () => {
               !async function() {
-                const pp = await Rp.NotificationProvider.showInputPopup({
+                const TT = await JT.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: jp,
-                  maxLength: Ip.D,
+                  initialValue: OT,
+                  maxLength: MT.C,
                   submitText: "general:save",
-                  validate: pp => pp.trim().length < Ip.G ? Sp("shaderPackListing:nameTooShort", {
-                    min: String(Ip.G)
+                  validate: TT => TT.trim().length < MT.F ? gT("shaderPackListing:nameTooShort", {
+                    min: String(MT.F)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== pp && "submit" === (null === pp || void 0 === pp ? void 0 : pp.type) && pp.value.trim() !== jp && await lp((() => tp.b.updateShaderPack(Lp, {
-                  packId: ep,
-                  name: pp.value.trim()
+                "notificationTornDown" !== TT && "submit" === (null === TT || void 0 === TT ? void 0 : TT.type) && TT.value.trim() !== OT && await yT((() => fT.b.updateShaderPack(HT, {
+                  packId: bT,
+                  name: TT.value.trim()
                 })))
               }()
             },
-            children: [(0, Mp.jsx)(mp.d, {
+            children: [(0, dT.jsx)(YT.c, {
               name: "pen"
-            }), " ", Sp("shaderPackListing:rename")]
-          }), (0, Mp.jsxs)(Ap.S, {
-            disabled: Pp,
+            }), " ", gT("shaderPackListing:rename")]
+          }), (0, dT.jsxs)(lT.L, {
+            disabled: LT,
             onClick: () => {
               !async function() {
-                const pp = await Rp.NotificationProvider.showInputPopup({
+                const TT = await JT.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: Ep,
-                  maxLength: Ip.t,
+                  initialValue: tT,
+                  maxLength: MT.s,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== pp && "submit" === (null === pp || void 0 === pp ? void 0 : pp.type) && pp.value.trim() !== Ep && await lp((() => tp.b.updateShaderPack(Lp, {
-                  packId: ep,
-                  description: pp.value.trim()
+                "notificationTornDown" !== TT && "submit" === (null === TT || void 0 === TT ? void 0 : TT.type) && TT.value.trim() !== tT && await yT((() => fT.b.updateShaderPack(HT, {
+                  packId: bT,
+                  description: TT.value.trim()
                 })))
               }()
             },
-            children: [(0, Mp.jsx)(mp.d, {
+            children: [(0, dT.jsx)(YT.c, {
               name: "file-lines"
-            }), " ", Sp("shaderPackListing:editDescription")]
-          }), (0, Mp.jsxs)(Ap.S, {
-            disabled: Pp || cp.isBanned && !cp.listed,
+            }), " ", gT("shaderPackListing:editDescription")]
+          }), (0, dT.jsxs)(lT.L, {
+            disabled: LT || mT.isBanned && !mT.listed,
             onClick: () => {
-              lp((() => tp.b.updateShaderPack(Lp, {
-                packId: ep,
-                listed: !cp.listed
+              yT((() => fT.b.updateShaderPack(HT, {
+                packId: bT,
+                listed: !mT.listed
               })))
             },
-            children: [(0, Mp.jsx)(mp.d, {
-              name: cp.listed ? "eye-slash" : "eye"
-            }), " ", Sp(cp.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !cp.isBanned && (0, Mp.jsxs)(Ap.f, {
-            disabled: Pp,
+            children: [(0, dT.jsx)(YT.c, {
+              name: mT.listed ? "eye-slash" : "eye"
+            }), " ", gT(mT.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !mT.isBanned && (0, dT.jsxs)(lT.e, {
+            disabled: LT,
             onClick: () => {
-              Hp(!wp)
+              qT(!cT)
             },
-            children: [(0, Mp.jsx)(mp.d, {
+            children: [(0, dT.jsx)(YT.c, {
               name: "upload"
-            }), " ", Sp("shaderPackListing:uploadVersion")]
-          }), (0, Mp.jsxs)(Ap.N, {
-            disabled: Pp || cp.isBanned,
+            }), " ", gT("shaderPackListing:uploadVersion")]
+          }), (0, dT.jsxs)(lT.J, {
+            disabled: LT || mT.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await Rp.NotificationProvider.showPromptPopup({
+                !0 === await JT.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await lp((() => tp.b.deleteShaderPack(Lp, ep)), (() => {
-                  xp(`${qp.R}?section=mine`, {
+                }).getResult() && await yT((() => fT.b.deleteShaderPack(HT, bT)), (() => {
+                  nT(`${xT.K}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, Mp.jsx)(mp.d, {
+            children: [(0, dT.jsx)(YT.c, {
               name: "trash-can"
-            }), " ", Sp("general:delete")]
-          }), Qp && (0, Mp.jsxs)(Ap.N, {
-            disabled: Pp,
+            }), " ", gT("general:delete")]
+          }), XT && (0, dT.jsxs)(lT.J, {
+            disabled: LT,
             onClick: () => {
-              lp((() => tp.b.setShaderPackBanned(Lp, ep, !cp.isBanned)))
+              yT((() => fT.b.setShaderPackBanned(HT, bT, !mT.isBanned)))
             },
-            children: [(0, Mp.jsx)(mp.d, {
-              name: cp.isBanned ? "circle-check" : "ban"
-            }), " ", cp.isBanned ? "Unban" : "Ban"]
+            children: [(0, dT.jsx)(YT.c, {
+              name: mT.isBanned ? "circle-check" : "ban"
+            }), " ", mT.isBanned ? "Unban" : "Ban"]
           })]
-        }), wp && (0, Mp.jsx)(Op.Suspense, {
-          fallback: (0, Mp.jsx)(Yp.c, {}),
-          children: (0, Mp.jsx)(Cp, {
+        }), cT && (0, dT.jsx)(WT.Suspense, {
+          fallback: (0, dT.jsx)(kT.c, {}),
+          children: (0, dT.jsx)(wT, {
             existing: {
-              packId: ep,
-              name: jp,
-              description: Ep
+              packId: bT,
+              name: OT,
+              description: tT
             },
             onPublished: () => {
-              Hp(!1), op()
+              qT(!1), zT()
             }
           })
         })]
       })
     }
-    var Xp = cp(82),
-      lp = cp(1927),
-      Qp = cp(1295),
-      Jp = cp(5149),
-      Bp = cp(1211),
-      Np = cp(6716),
-      Tp = cp(6712),
-      fp = cp(6733);
+    var aT = mT(85),
+      yT = mT(2014),
+      XT = mT(1376),
+      IT = mT(5123),
+      QT = mT(1302),
+      sT = mT(6641),
+      FT = mT(6633),
+      PT = mT(6654);
 
-    function bp(pp) {
+    function VT(TT) {
       let {
-        item: ip
-      } = pp;
+        item: UT
+      } = TT;
       const {
-        t: cp
-      } = (0, dp.H)(), [op] = (0, Np.h)(), [Sp, xp] = (0, Op.useState)(op), [Lp, Yp] = (0, Op.useState)(!1), [Dp, Ap] = (0, Op.useState)(!1), {
-        s3Url: Pp
-      } = Bp.clientSideServerUrls, {
-        width: Wp,
-        height: yp
-      } = Ip.u.large, Up = (0, Ip.x)(Pp, ip, Sp, "large"), {
-        renderVersion: wp
-      } = ip;
-      return (0, Mp.jsxs)("div", {
+        t: mT
+      } = (0, iT.z)(), [zT] = (0, sT.j)(), [gT, nT] = (0, WT.useState)(zT), [HT, kT] = (0, WT.useState)(!1), [jT, lT] = (0, WT.useState)(!1), {
+        s3Url: LT
+      } = QT.clientSideServerUrls, {
+        width: pT,
+        height: BT
+      } = MT.t.large, ZT = (0, MT.x)(LT, UT, gT, "large"), {
+        renderVersion: cT
+      } = UT;
+      return (0, dT.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, Mp.jsx)(fp.e, {
-          selected: Sp,
-          onSelect: pp => {
-            xp(pp), Yp(!1)
+        children: [(0, dT.jsx)(PT.d, {
+          selected: gT,
+          onSelect: TT => {
+            nT(TT), kT(!1)
           },
-          imageUrl: pp => (0, Ip.x)(Pp, ip, pp, "thumb")
-        }), (0, Mp.jsxs)("div", {
+          imageUrl: TT => (0, MT.x)(LT, UT, TT, "thumb")
+        }), (0, dT.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!Lp && (0, Mp.jsxs)("button", {
+          children: [!HT && (0, dT.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === wp ? void 0 : cp("shaderPackListing:fullSize"),
-            disabled: null === wp,
+            title: null === cT ? void 0 : mT("shaderPackListing:fullSize"),
+            disabled: null === cT,
             onClick: () => {
-              Ap(!0)
+              lT(!0)
             },
-            children: [(0, Mp.jsx)("img", {
-              src: Up,
-              width: Wp,
-              height: yp,
-              alt: cp(qp.ab[Sp]),
+            children: [(0, dT.jsx)("img", {
+              src: ZT,
+              width: pT,
+              height: BT,
+              alt: mT(xT.U[gT]),
               draggable: !1
-            }), (0, Mp.jsx)(Tp.d, {
-              item: ip
+            }), (0, dT.jsx)(FT.e, {
+              item: UT
             })]
-          }), !Lp && null !== wp && (0, Mp.jsxs)(Fp, {
+          }), !HT && null !== cT && (0, dT.jsxs)(KT, {
             side: "Right",
             onClick: () => {
-              Yp(!0)
+              kT(!0)
             },
-            children: [(0, Mp.jsx)(mp.d, {
+            children: [(0, dT.jsx)(YT.c, {
               name: "arrows-left-right"
-            }), " ", cp("shaderPackListing:compare")]
-          }), Lp && null !== wp && (0, Mp.jsx)(np, {
-            item: ip,
-            packUrl: Up,
-            baselineUrl: (0, Ip.r)(Pp, wp, Sp, "large")
-          }), Lp && (0, Mp.jsx)(Fp, {
+            }), " ", mT("shaderPackListing:compare")]
+          }), HT && null !== cT && (0, dT.jsx)(rT, {
+            item: UT,
+            packUrl: ZT,
+            baselineUrl: (0, MT.q)(LT, cT, gT, "large")
+          }), HT && (0, dT.jsx)(KT, {
             side: "Left",
             onClick: () => {
-              Yp(!1)
+              kT(!1)
             },
-            children: cp("shaderPackListing:withPack")
-          }), Lp && (0, Mp.jsx)(Fp, {
+            children: mT("shaderPackListing:withPack")
+          }), HT && (0, dT.jsx)(KT, {
             side: "Right",
             onClick: () => {
-              Yp(!1)
+              kT(!1)
             },
-            children: cp("shaderPackListing:withoutPack")
+            children: mT("shaderPackListing:withoutPack")
           })]
-        }), Dp && (0, Mp.jsx)(hp, {
-          fullUrl: (0, Ip.x)(Pp, ip, Sp, "full"),
-          largeUrl: Up,
-          alt: cp(qp.ab[Sp]),
+        }), jT && (0, dT.jsx)(uT, {
+          fullUrl: (0, MT.x)(LT, UT, gT, "full"),
+          largeUrl: ZT,
+          alt: mT(xT.U[gT]),
           onClose: () => {
-            Ap(!1)
+            lT(!1)
           }
         })]
       })
     }
 
-    function hp(pp) {
+    function uT(TT) {
       let {
-        fullUrl: ip,
-        largeUrl: cp,
-        alt: op,
-        onClose: Ip
-      } = pp;
-      const Sp = (0, Op.useRef)(null);
-      return (0, Qp.x)("popup", Sp, Ip), (0, Op.useEffect)((() => {
-        function pp(pp) {
-          "Escape" === pp.key && (pp.stopPropagation(), Ip())
+        fullUrl: UT,
+        largeUrl: mT,
+        alt: zT,
+        onClose: MT
+      } = TT;
+      const gT = (0, WT.useRef)(null);
+      return (0, XT.p)("popup", gT, MT), (0, WT.useEffect)((() => {
+        function TT(TT) {
+          "Escape" === TT.key && (TT.stopPropagation(), MT())
         }
-        return window.addEventListener("keydown", pp, !0), () => {
-          window.removeEventListener("keydown", pp, !0)
+        return window.addEventListener("keydown", TT, !0), () => {
+          window.removeEventListener("keydown", TT, !0)
         }
-      }), [Ip]), (0, Xp.createPortal)((0, Mp.jsxs)("div", {
-        ref: Sp,
+      }), [MT]), (0, aT.createPortal)((0, dT.jsxs)("div", {
+        ref: gT,
         className: "ShaderPackFullSize",
-        onClick: Ip,
-        children: [(0, Mp.jsx)("img", {
+        onClick: MT,
+        children: [(0, dT.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: ip,
-          alt: op,
+          src: UT,
+          alt: zT,
           draggable: !1,
           style: {
-            backgroundImage: `url(${cp})`
+            backgroundImage: `url(${mT})`
           }
-        }), (0, Mp.jsx)(Ap.l, {
+        }), (0, dT.jsx)(lT.k, {
           className: "ShaderPackFullSizeClose",
-          onClick: Ip
+          onClick: MT
         })]
       }), document.body)
     }
-    const ap = 5;
+    const CT = 5;
 
-    function np(pp) {
+    function rT(TT) {
       let {
-        item: ip,
-        packUrl: cp,
-        baselineUrl: op
-      } = pp;
+        item: UT,
+        packUrl: mT,
+        baselineUrl: zT
+      } = TT;
       const {
-        t: Sp
-      } = (0, dp.H)(), [xp, Lp] = (0, Op.useState)(50), Yp = (0, Op.useRef)(!1), Dp = (0, Op.useRef)(null), {
-        width: Ap,
-        height: Pp
-      } = Ip.u.large;
+        t: gT
+      } = (0, iT.z)(), [nT, HT] = (0, WT.useState)(50), kT = (0, WT.useRef)(!1), jT = (0, WT.useRef)(null), {
+        width: lT,
+        height: LT
+      } = MT.t.large;
 
-      function Wp(pp) {
-        Lp((ip => (0, lp.h)(ip + pp, 0, 100)))
+      function pT(TT) {
+        HT((UT => (0, yT.e)(UT + TT, 0, 100)))
       }
 
-      function yp(pp) {
-        const ip = pp.currentTarget.getBoundingClientRect();
-        Lp((0, lp.h)((pp.clientX - ip.left) / ip.width * 100, 0, 100))
+      function BT(TT) {
+        const UT = TT.currentTarget.getBoundingClientRect();
+        HT((0, yT.e)((TT.clientX - UT.left) / UT.width * 100, 0, 100))
       }
-      return (0, Jp.h)(Dp, {
-        adjust: pp => {
-          Wp(pp * ap)
+      return (0, IT.g)(jT, {
+        adjust: TT => {
+          pT(TT * CT)
         },
-        setFraction: pp => {
-          Lp(100 * pp)
+        setFraction: TT => {
+          HT(100 * TT)
         },
         endDrag: () => {}
-      }), (0, Mp.jsxs)("div", {
-        ref: Dp,
+      }), (0, dT.jsxs)("div", {
+        ref: jT,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": Sp("shaderPackListing:compare"),
+        "aria-label": gT("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(xp),
+        "aria-valuenow": Math.round(nT),
         style: {
-          "--split": `${xp}%`
+          "--split": `${nT}%`
         },
-        onKeyDown: function(pp) {
-          const ip = "ArrowLeft" === pp.key ? -ap : "ArrowRight" === pp.key ? ap : 0;
-          0 !== ip && (pp.preventDefault(), Wp(ip))
+        onKeyDown: function(TT) {
+          const UT = "ArrowLeft" === TT.key ? -CT : "ArrowRight" === TT.key ? CT : 0;
+          0 !== UT && (TT.preventDefault(), pT(UT))
         },
-        onPointerDown: pp => {
-          Yp.current = !0, pp.currentTarget.setPointerCapture(pp.pointerId), yp(pp)
+        onPointerDown: TT => {
+          kT.current = !0, TT.currentTarget.setPointerCapture(TT.pointerId), BT(TT)
         },
-        onPointerMove: pp => {
-          Yp.current && yp(pp)
+        onPointerMove: TT => {
+          kT.current && BT(TT)
         },
         onPointerUp: () => {
-          Yp.current = !1
+          kT.current = !1
         },
         onPointerCancel: () => {
-          Yp.current = !1
+          kT.current = !1
         },
-        children: [(0, Mp.jsx)("img", {
+        children: [(0, dT.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: op,
-          width: Ap,
-          height: Pp,
+          src: zT,
+          width: lT,
+          height: LT,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${cp})`
+            backgroundImage: `url(${mT})`
           }
-        }), (0, Mp.jsx)("div", {
+        }), (0, dT.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, Mp.jsx)("img", {
+        }), (0, dT.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: cp,
-          width: Ap,
-          height: Pp,
+          src: mT,
+          width: lT,
+          height: LT,
           alt: "",
           draggable: !1
-        }), (0, Mp.jsx)(Tp.d, {
-          item: ip,
+        }), (0, dT.jsx)(FT.e, {
+          item: UT,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function Fp(pp) {
+    function KT(TT) {
       let {
-        side: ip,
-        onClick: cp,
-        children: Op
-      } = pp;
-      return (0, Mp.jsx)("button", {
+        side: UT,
+        onClick: mT,
+        children: WT
+      } = TT;
+      return (0, dT.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${ip}`,
-        onClick: cp,
-        children: (0, Mp.jsx)("span", {
+        className: `ShaderPackStageButton ${UT}`,
+        onClick: mT,
+        children: (0, dT.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: Op
+          children: WT
         })
       })
     }
-    var gp = cp(5113),
-      Gp = cp(314),
-      rp = cp(6804);
-    const Zp = {
+    var ST = mT(5090),
+      GT = mT(340),
+      NT = mT(6723);
+    const ET = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -688,399 +688,399 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function zp(pp) {
+    function hT(TT) {
       const {
-        userContext: ip
-      } = (0, vp.b)(), [op, Ip] = (0, Op.useState)(null), [Sp, xp] = (0, Op.useState)(!1), [Lp, Yp] = (0, Op.useState)(!1), [Dp, Ap] = (0, Op.useState)(null), Pp = null === pp || void 0 === pp ? void 0 : pp.packId, Wp = null === pp || void 0 === pp ? void 0 : pp.sourceHash;
-      return (0, Op.useEffect)((() => {
-        if (xp(!1), Ap(null), void 0 === Pp) return;
-        let pp = !1;
-        return Promise.all([(0, Hp.hasUsableWebGpuAdapter)(), (0, rp.f)()]).then((ip => {
-          let [cp, Op] = ip;
-          var op;
-          pp || (Ip(cp), xp((null === Op || void 0 === Op || null === (op = Op.listing) || void 0 === op ? void 0 : op.packId) === Pp && Op.listing.sourceHash === Wp))
-        })).catch((ip => {
-          console.error("Failed to check whether this shader pack can be used", ip), pp || Ip(!1)
+        userContext: UT
+      } = (0, vT.d)(), [zT, MT] = (0, WT.useState)(null), [gT, nT] = (0, WT.useState)(!1), [HT, kT] = (0, WT.useState)(!1), [jT, lT] = (0, WT.useState)(null), LT = null === TT || void 0 === TT ? void 0 : TT.packId, pT = null === TT || void 0 === TT ? void 0 : TT.sourceHash;
+      return (0, WT.useEffect)((() => {
+        if (nT(!1), lT(null), void 0 === LT) return;
+        let TT = !1;
+        return Promise.all([(0, qT.hasUsableWebGpuAdapter)(), (0, NT.h)()]).then((UT => {
+          let [mT, WT] = UT;
+          var zT;
+          TT || (MT(mT), nT((null === WT || void 0 === WT || null === (zT = WT.listing) || void 0 === zT ? void 0 : zT.packId) === LT && WT.listing.sourceHash === pT))
+        })).catch((UT => {
+          console.error("Failed to check whether this shader pack can be used", UT), TT || MT(!1)
         })), () => {
-          pp = !0
+          TT = !0
         }
-      }), [Pp, Wp]), {
-        webGpuUsable: op,
-        inUse: Sp,
-        busy: Lp,
-        errorKey: Dp,
+      }), [LT, pT]), {
+        webGpuUsable: zT,
+        inUse: gT,
+        busy: HT,
+        errorKey: jT,
         use: () => {
-          null !== pp && async function(pp) {
-            Yp(!0), Ap(null);
+          null !== TT && async function(TT) {
+            kT(!0), lT(null);
             try {
               const {
-                installListedShaderPack: Op
-              } = await Promise.all([cp.e(78), cp.e(136), cp.e(115)]).then((() => cp(40674))), op = await Op({
-                packId: pp.packId,
-                sourceHash: pp.sourceHash,
-                name: pp.name,
-                ownerName: pp.ownerName,
-                description: pp.description
+                installListedShaderPack: WT
+              } = await Promise.all([mT.e(78), mT.e(136), mT.e(115)]).then((() => mT(40618))), zT = await WT({
+                packId: TT.packId,
+                sourceHash: TT.sourceHash,
+                name: TT.name,
+                ownerName: TT.ownerName,
+                description: TT.description
               });
-              if ("failed" === op.kind) return void Ap(Zp[op.reason]);
-              xp(!0), tp.b.recordShaderPackDownload(ip, pp.packId).catch((pp => {
-                console.error("Failed to count a shader pack's download", pp)
-              })), (0, gp.l)()
-            } catch (Op) {
-              console.error("Failed to use the shader pack", Op), Ap("shaderPack:unexpectedError")
+              if ("failed" === zT.kind) return void lT(ET[zT.reason]);
+              nT(!0), fT.b.recordShaderPackDownload(UT, TT.packId).catch((TT => {
+                console.error("Failed to count a shader pack's download", TT)
+              })), (0, ST.l)()
+            } catch (WT) {
+              console.error("Failed to use the shader pack", WT), lT("shaderPack:unexpectedError")
             } finally {
-              Yp(!1)
+              kT(!1)
             }
-          }(pp)
+          }(TT)
         }
       }
     }
 
-    function sp(pp) {
+    function DT(TT) {
       let {
-        packUse: ip
-      } = pp;
+        packUse: UT
+      } = TT;
       const {
-        t: cp
-      } = (0, dp.H)(), {
-        webGpuUsable: Op,
-        inUse: op,
-        busy: Ip,
-        errorKey: Sp,
-        use: xp
-      } = ip;
-      return (0, Mp.jsxs)("div", {
+        t: mT
+      } = (0, iT.z)(), {
+        webGpuUsable: WT,
+        inUse: zT,
+        busy: MT,
+        errorKey: gT,
+        use: nT
+      } = UT;
+      return (0, dT.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, Mp.jsxs)(Ap.o, {
-          disabled: !0 !== Op || op,
-          loading: Ip,
-          onClick: xp,
-          children: [(0, Mp.jsx)(mp.d, {
-            name: op ? "check" : "download"
-          }), " ", cp(op ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === Op && (0, Mp.jsx)("div", {
+        children: [(0, dT.jsxs)(lT.l, {
+          disabled: !0 !== WT || zT,
+          loading: MT,
+          onClick: nT,
+          children: [(0, dT.jsx)(YT.c, {
+            name: zT ? "check" : "download"
+          }), " ", mT(zT ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === WT && (0, dT.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: cp((0, Gp.f)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), Sp && (0, Mp.jsx)("div", {
+          children: mT((0, GT.h)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), gT && (0, dT.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: cp(Sp)
+          children: mT(gT)
         })]
       })
     }
 
-    function Kp() {
-      var pp;
+    function oT() {
+      var TT;
       const {
-        t: ip
-      } = (0, dp.H)(), cp = (0, Dp.useNavigatePreserveSearch)(), {
-        packId: Ip
-      } = (0, op.A)(), {
-        userContext: Sp,
-        isUserContextUpdating: xp
-      } = (0, vp.b)(), [Pp, yp] = (0, Op.useState)(null), [Up, Hp] = (0, Op.useState)(null), [ep, jp] = (0, Op.useState)(0), kp = (0, Op.useRef)(0);
+        t: UT
+      } = (0, iT.z)(), mT = (0, jT.useNavigatePreserveSearch)(), {
+        packId: MT
+      } = (0, zT.y)(), {
+        userContext: gT,
+        isUserContextUpdating: nT
+      } = (0, vT.d)(), [LT, BT] = (0, WT.useState)(null), [ZT, qT] = (0, WT.useState)(null), [bT, OT] = (0, WT.useState)(0), eT = (0, WT.useRef)(0);
 
-      function mp() {
-        var pp;
-        null !== (pp = (0, Dp.getPreviousLocation)()) && void 0 !== pp && pp.startsWith(qp.R) ? cp(-1) : cp(qp.R)
-      }(0, wp.e)(mp), (0, Np.b)(), (0, Op.useEffect)((() => {
-        if (xp || void 0 === Ip) return;
-        const pp = ++kp.current;
-        Hp(null), tp.b.getShaderPack(Sp, Ip).then((ip => {
-          kp.current === pp && yp(ip)
-        })).catch((ip => {
-          kp.current === pp && (console.error("Failed to get the shader pack", ip), yp(null), Hp({
-            error: ip
+      function YT() {
+        var TT;
+        null !== (TT = (0, jT.getPreviousLocation)()) && void 0 !== TT && TT.startsWith(xT.K) ? mT(-1) : mT(xT.K)
+      }(0, cT.d)(YT), (0, sT.d)(), (0, WT.useEffect)((() => {
+        if (nT || void 0 === MT) return;
+        const TT = ++eT.current;
+        qT(null), fT.b.getShaderPack(gT, MT).then((UT => {
+          eT.current === TT && BT(UT)
+        })).catch((UT => {
+          eT.current === TT && (console.error("Failed to get the shader pack", UT), BT(null), qT({
+            error: UT
           }))
         }))
-      }), [Ip, Sp, xp, ep]);
-      const Rp = () => {
-          jp((pp => pp + 1))
+      }), [MT, gT, nT, bT]);
+      const JT = () => {
+          OT((TT => TT + 1))
         },
-        Cp = (null === Pp || void 0 === Pp ? void 0 : Pp.packId) === Ip ? Pp : null,
-        Xp = (0, Np.i)(),
-        lp = zp(null !== (pp = null === Cp || void 0 === Cp ? void 0 : Cp.live) && void 0 !== pp ? pp : null),
-        Qp = null !== Cp && void 0 !== Cp && Cp.live ? (0, Mp.jsx)(Vp, {
-          item: Cp.live,
-          favourites: Xp,
-          packUse: lp
+        wT = (null === LT || void 0 === LT ? void 0 : LT.packId) === MT ? LT : null,
+        aT = (0, sT.m)(),
+        yT = hT(null !== (TT = null === wT || void 0 === wT ? void 0 : wT.live) && void 0 !== TT ? TT : null),
+        XT = null !== wT && void 0 !== wT && wT.live ? (0, dT.jsx)(AT, {
+          item: wT.live,
+          favourites: aT,
+          packUse: yT
         }) : null;
-      return (0, Mp.jsxs)("article", {
+      return (0, dT.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [null !== Cp && (0, Mp.jsx)(Wp.c, {
-          meta: (0, Lp.W)(Cp.name)
-        }), (0, Mp.jsx)(Ap.d, {
-          onClick: mp,
-          children: ip("shaderPackListing:backToPacks")
-        }), null === Cp && null === Up && (0, Mp.jsx)("div", {
+        children: [null !== wT && (0, dT.jsx)(pT.e, {
+          meta: (0, HT.O)(wT.name)
+        }), (0, dT.jsx)(lT.d, {
+          onClick: YT,
+          children: UT("shaderPackListing:backToPacks")
+        }), null === wT && null === ZT && (0, dT.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, Mp.jsx)(Yp.c, {})
-        }), null !== Up && (0, Mp.jsxs)("div", {
+          children: (0, dT.jsx)(kT.c, {})
+        }), null !== ZT && (0, dT.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, qp.s)(Up.error, ip, "shaderPackListing:loadPackFailed"), (0, Mp.jsx)(Ap.f, {
-            onClick: Rp,
-            children: ip("general:tryAgain")
+          children: [(0, xT.s)(ZT.error, UT, "shaderPackListing:loadPackFailed"), (0, dT.jsx)(lT.e, {
+            onClick: JT,
+            children: UT("general:tryAgain")
           })]
-        }), null !== Cp && null === Up && (0, Mp.jsxs)("div", {
+        }), null !== wT && null === ZT && (0, dT.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, Mp.jsxs)("header", {
+          children: [(0, dT.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, Mp.jsx)("h1", {
+            children: [(0, dT.jsx)("h1", {
               className: "FullyFancyText",
-              children: Cp.name
-            }), Qp]
-          }), Cp.live && (0, Mp.jsx)(bp, {
-            item: Cp.live
-          }), Cp.live && (0, Mp.jsx)(ii, {
-            item: Cp.live,
-            ownerPreview: Cp.ownerPreview,
-            bloxdhubSlug: Cp.bloxdhubSlug,
-            actions: Qp
-          }), Cp.owner && (0, Mp.jsx)(Ep, {
-            details: Cp,
-            owner: Cp.owner,
-            onChanged: Rp
+              children: wT.name
+            }), XT]
+          }), wT.live && (0, dT.jsx)(VT, {
+            item: wT.live
+          }), wT.live && (0, dT.jsx)(RT, {
+            item: wT.live,
+            ownerPreview: wT.ownerPreview,
+            bloxdhubSlug: wT.bloxdhubSlug,
+            actions: XT
+          }), wT.owner && (0, dT.jsx)(tT, {
+            details: wT,
+            owner: wT.owner,
+            onChanged: JT
           })]
         })]
       })
     }
 
-    function Vp(pp) {
+    function AT(TT) {
       let {
-        item: ip,
-        favourites: cp,
-        packUse: Op
-      } = pp;
-      const op = cp.isFavourite(ip.packId);
-      return (0, Mp.jsxs)("div", {
+        item: UT,
+        favourites: mT,
+        packUse: WT
+      } = TT;
+      const zT = mT.isFavourite(UT.packId);
+      return (0, dT.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [Hp.featureFlags.settings.canUseShaderPacks && (0, Mp.jsx)(sp, {
-          packUse: Op
-        }), (0, Mp.jsx)(Ap.x, {
+        children: [qT.featureFlags.settings.canUseShaderPacks && (0, dT.jsx)(DT, {
+          packUse: WT
+        }), (0, dT.jsx)(lT.t, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            cp.toggle(ip.packId)
+            mT.toggle(UT.packId)
           },
-          isLiked: !0 === op,
-          isLoading: null === op
+          isLiked: !0 === zT,
+          isLoading: null === zT
         })]
       })
     }
 
-    function ii(pp) {
+    function RT(TT) {
       let {
-        item: ip,
-        ownerPreview: cp,
-        bloxdhubSlug: Op,
-        actions: op
-      } = pp;
+        item: UT,
+        ownerPreview: mT,
+        bloxdhubSlug: WT,
+        actions: zT
+      } = TT;
       const {
-        t: xp
-      } = (0, dp.H)(), Lp = (0, Up.o)(), Yp = null === Op ? null : (0, Ip.g)(Op);
-      return (0, Mp.jsxs)("div", {
+        t: nT
+      } = (0, iT.z)(), HT = (0, ZT.p)(), kT = null === WT ? null : (0, MT.h)(WT);
+      return (0, dT.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [ip.description && (0, Mp.jsx)("p", {
+        children: [UT.description && (0, dT.jsx)("p", {
           className: "ShaderPackDescription",
-          children: ip.description
-        }), (0, Mp.jsxs)("div", {
+          children: UT.description
+        }), (0, dT.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== cp || null !== Yp) && (0, Mp.jsx)("div", {
+          children: [(null !== mT || null !== kT) && (0, dT.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== cp ? (0, Mp.jsxs)(Mp.Fragment, {
-              children: [(0, Mp.jsx)(yp.d, {
-                playerSocialPreview: cp,
+            children: null !== mT ? (0, dT.jsxs)(dT.Fragment, {
+              children: [(0, dT.jsx)(BT.i, {
+                playerSocialPreview: mT,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== Yp && (0, Mp.jsx)("a", {
+              }), null !== kT && (0, dT.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: Yp,
+                href: kT,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, Mp.jsx)("img", {
-                  src: ep,
-                  alt: Ip.d
+                children: (0, dT.jsx)("img", {
+                  src: bT,
+                  alt: MT.e
                 })
               })]
-            }) : (0, Mp.jsxs)("a", {
+            }) : (0, dT.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: Yp,
+              href: kT,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [Ip.d, (0, Mp.jsx)("img", {
-                src: ep,
+              children: [MT.e, (0, dT.jsx)("img", {
+                src: bT,
                 alt: ""
               })]
             })
-          }), qp.w.filter((pp => ip.features.includes(pp))).map((pp => (0, Mp.jsx)(Dp.LinkPreserveSearch, {
+          }), xT.t.filter((TT => UT.features.includes(TT))).map((TT => (0, dT.jsx)(jT.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, qp.H)(pp),
-            children: xp(qp.L[pp])
-          }, pp)))]
-        }), op, (0, Mp.jsxs)("dl", {
+            to: (0, xT.A)(TT),
+            children: nT(xT.C[TT])
+          }, TT)))]
+        }), zT, (0, dT.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, Mp.jsxs)("div", {
-            children: [(0, Mp.jsx)("dt", {
-              children: xp("shaderPackListing:downloads")
-            }), (0, Mp.jsx)("dd", {
-              children: (0, Sp.O)(ip.downloads)
+          children: [(0, dT.jsxs)("div", {
+            children: [(0, dT.jsx)("dt", {
+              children: nT("shaderPackListing:downloads")
+            }), (0, dT.jsx)("dd", {
+              children: (0, gT.V)(UT.downloads)
             })]
-          }), (0, Mp.jsx)(ci, {
-            label: xp("shaderPackListing:updated"),
-            time: ip.listedUpdatedAt,
-            now: Lp
-          }), (0, Mp.jsx)(ci, {
-            label: xp("shaderPackListing:created"),
-            time: ip.publishedAt,
-            now: Lp
-          }), null !== ip.gpuCost && (0, Mp.jsxs)("div", {
-            children: [(0, Mp.jsx)("dt", {
-              children: xp("shaderPackListing:lag")
-            }), (0, Mp.jsx)("dd", {
-              children: xp("shaderPackListing:lagPercent", {
-                percent: String((0, qp.P)(ip.gpuCost))
+          }), (0, dT.jsx)(TU, {
+            label: nT("shaderPackListing:updated"),
+            time: UT.listedUpdatedAt,
+            now: HT
+          }), (0, dT.jsx)(TU, {
+            label: nT("shaderPackListing:created"),
+            time: UT.publishedAt,
+            now: HT
+          }), null !== UT.gpuCost && (0, dT.jsxs)("div", {
+            children: [(0, dT.jsx)("dt", {
+              children: nT("shaderPackListing:lag")
+            }), (0, dT.jsx)("dd", {
+              children: nT("shaderPackListing:lagPercent", {
+                percent: String((0, xT.J)(UT.gpuCost))
               })
             })]
-          }), (0, Mp.jsxs)("div", {
-            children: [(0, Mp.jsx)("dt", {
-              children: xp("shaderPackListing:size")
-            }), (0, Mp.jsx)("dd", {
-              children: xp("shaderPackListing:sizeValue", {
-                kilobytes: String((0, qp.O)(ip.sourceBytes))
+          }), (0, dT.jsxs)("div", {
+            children: [(0, dT.jsx)("dt", {
+              children: nT("shaderPackListing:size")
+            }), (0, dT.jsx)("dd", {
+              children: nT("shaderPackListing:sizeValue", {
+                kilobytes: String((0, xT.G)(UT.sourceBytes))
               })
             })]
-          }), (0, Mp.jsxs)("div", {
-            children: [(0, Mp.jsx)("dt", {
-              children: xp("shaderPackListing:files")
-            }), (0, Mp.jsx)("dd", {
-              children: ip.fileCount
+          }), (0, dT.jsxs)("div", {
+            children: [(0, dT.jsx)("dt", {
+              children: nT("shaderPackListing:files")
+            }), (0, dT.jsx)("dd", {
+              children: UT.fileCount
             })]
           })]
         })]
       })
     }
 
-    function ci(pp) {
+    function TU(TT) {
       let {
-        label: ip,
-        time: cp,
-        now: Op
-      } = pp;
+        label: UT,
+        time: mT,
+        now: WT
+      } = TT;
       const {
-        t: op,
-        selectedLanguage: Ip
-      } = (0, dp.H)(), Sp = new Date(cp);
-      let Lp = Sp.toLocaleDateString();
-      if (Op - cp <= 30 * xp.i) {
-        const pp = (0, dp.p)(Ip.code, "shaderPackListing:timeAgo");
-        Lp = op("shaderPackListing:timeAgo", {
-          time: (0, xp.cb)(pp, cp, Op)
+        t: zT,
+        selectedLanguage: MT
+      } = (0, iT.z)(), gT = new Date(mT);
+      let HT = gT.toLocaleDateString();
+      if (WT - mT <= 30 * nT.k) {
+        const TT = (0, iT.m)(MT.code, "shaderPackListing:timeAgo");
+        HT = zT("shaderPackListing:timeAgo", {
+          time: (0, nT.nb)(TT, mT, WT)
         })
       }
-      return (0, Mp.jsx)(Pp.f, {
-        tooltipInner: Sp.toLocaleString(),
-        children: (0, Mp.jsxs)("div", {
-          children: [(0, Mp.jsx)("dt", {
-            children: ip
-          }), (0, Mp.jsx)("dd", {
-            children: Lp
+      return (0, dT.jsx)(LT.e, {
+        tooltipInner: gT.toLocaleString(),
+        children: (0, dT.jsxs)("div", {
+          children: [(0, dT.jsx)("dt", {
+            children: UT
+          }), (0, dT.jsx)("dd", {
+            children: HT
           })]
         })
       })
     }
   },
-  5146: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  5116: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(1188);
 
-    function Sp(pp) {
+    function gT(TT) {
       let {
-        options: ip,
-        value: cp,
-        onChange: Op,
-        ariaLabel: Sp,
-        className: xp,
-        reselectable: Lp = !1,
-        keepsFocus: Yp = !1,
-        padTabs: Dp
-      } = pp;
-      const Ap = void 0 !== Dp;
-      return (0, Ip.jsx)("div", {
-        className: op()("SegmentedToggle", xp),
+        options: UT,
+        value: mT,
+        onChange: WT,
+        ariaLabel: gT,
+        className: nT,
+        reselectable: HT = !1,
+        keepsFocus: kT = !1,
+        padTabs: jT
+      } = TT;
+      const lT = void 0 !== jT;
+      return (0, MT.jsx)("div", {
+        className: zT()("SegmentedToggle", nT),
         role: "group",
-        "aria-label": Sp,
-        "data-pad-tabs": Dp,
-        children: ip.map((pp => {
-          const ip = pp.value === cp;
-          return (0, Ip.jsx)("button", {
+        "aria-label": gT,
+        "data-pad-tabs": jT,
+        children: UT.map((TT => {
+          const UT = TT.value === mT;
+          return (0, MT.jsx)("button", {
             type: "button",
-            "aria-pressed": ip,
-            "data-pad-tab": Ap || void 0,
-            "data-pad-selected": Ap && ip ? "true" : void 0,
-            "data-pad-default-focus": Ap && ip || void 0,
-            "aria-label": pp.ariaLabel,
-            title: pp.ariaLabel,
-            className: op()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: ip
+            "aria-pressed": UT,
+            "data-pad-tab": lT || void 0,
+            "data-pad-selected": lT && UT ? "true" : void 0,
+            "data-pad-default-focus": lT && UT || void 0,
+            "aria-label": TT.ariaLabel,
+            title: TT.ariaLabel,
+            className: zT()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: UT
             }),
-            onMouseDown: Yp ? pp => {
-              pp.preventDefault()
+            onMouseDown: kT ? TT => {
+              TT.preventDefault()
             } : void 0,
             onClick: () => {
-              ip && !Lp || Op(pp.value)
+              UT && !HT || WT(TT.value)
             },
-            children: pp.label
-          }, pp.value)
+            children: TT.label
+          }, TT.value)
         }))
       })
     }
   },
-  5149: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip,
-      h: () => Sp
+  5123: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT,
+      g: () => gT
     });
-    var Op = cp(62);
-    const op = new WeakMap,
-      Ip = pp => {
-        var ip;
-        const cp = pp.closest("[data-pad-slider]");
-        return cp && null !== (ip = op.get(cp)) && void 0 !== ip ? ip : null
+    var WT = mT(63);
+    const zT = new WeakMap,
+      MT = TT => {
+        var UT;
+        const mT = TT.closest("[data-pad-slider]");
+        return mT && null !== (UT = zT.get(mT)) && void 0 !== UT ? UT : null
       },
-      Sp = (pp, ip) => {
-        const cp = (0, Op.useRef)(ip);
-        cp.current = ip, (0, Op.useEffect)((() => {
-          if (pp.current) return ((pp, ip) => (op.set(pp, ip), () => {
-            op.get(pp) === ip && op.delete(pp)
-          }))(pp.current, {
-            adjust: pp => {
-              cp.current.adjust(pp)
+      gT = (TT, UT) => {
+        const mT = (0, WT.useRef)(UT);
+        mT.current = UT, (0, WT.useEffect)((() => {
+          if (TT.current) return ((TT, UT) => (zT.set(TT, UT), () => {
+            zT.get(TT) === UT && zT.delete(TT)
+          }))(TT.current, {
+            adjust: TT => {
+              mT.current.adjust(TT)
             },
-            setFraction: pp => {
-              cp.current.setFraction(pp)
+            setFraction: TT => {
+              mT.current.setFraction(TT)
             },
             endDrag: () => {
-              cp.current.endDrag()
+              mT.current.endDrag()
             }
           })
-        }), [pp])
+        }), [TT])
       }
   },
-  6804: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op,
-      f: () => Ip
+  6723: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      h: () => MT
     });
-    var Op = cp(44);
-    const op = "shaderPack";
-    async function Ip() {
-      var pp;
-      let ip = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (pp = await Op.g.getItem(op, ip)) && void 0 !== pp ? pp : null
+    var WT = mT(44);
+    const zT = "shaderPack";
+    async function MT() {
+      var TT;
+      let UT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await WT.h.getItem(zT, UT)) && void 0 !== TT ? TT : null
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

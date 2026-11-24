@@ -1,36 +1,36 @@
 export const id = 257;
 export const ids = [257, 358];
 export const modules = {
-  40062: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  39934: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    class Op {
+    class WT {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.ShadersRepository : Op.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.ShadersRepository : WT.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.ShadersStore : Op.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.ShadersStore : WT.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.IncludesShadersStore : Op.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.IncludesShadersStore : WT.IncludesShadersStoreWGSL
       }
     }
-    Op.ShadersRepository = "src/Shaders/", Op.ShadersStore = {}, Op.IncludesShadersStore = {}, Op.ShadersRepositoryWGSL = "src/ShadersWGSL/", Op.ShadersStoreWGSL = {}, Op.IncludesShadersStoreWGSL = {}
+    WT.ShadersRepository = "src/Shaders/", WT.ShadersStore = {}, WT.IncludesShadersStore = {}, WT.ShadersRepositoryWGSL = "src/ShadersWGSL/", WT.ShadersStoreWGSL = {}, WT.IncludesShadersStoreWGSL = {}
   },
-  61392: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      postprocessVertexShader: () => Sp
+  61150: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      postprocessVertexShader: () => gT
     });
-    var Op = cp(40062);
-    const op = "postprocessVertexShader",
-      Ip = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Op.b.ShadersStore[op] || (Op.b.ShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "postprocessVertexShader",
+      MT = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    WT.d.ShadersStore[zT] || (WT.d.ShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

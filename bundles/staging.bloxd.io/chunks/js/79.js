@@ -1,272 +1,272 @@
 export const id = 79;
 export const ids = [79, 95];
 export const modules = {
-    4950: (pp, ip, cp) => {
-      cp.d(ip, {
-        e: () => wp,
-        i: () => vp
+    4932: (TT, UT, mT) => {
+      mT.d(UT, {
+        d: () => cT,
+        f: () => vT
       });
-      var Op = cp(1049),
-        op = cp.n(Op),
-        Ip = cp(62),
-        Sp = cp(1201),
-        xp = cp(4956),
-        Lp = cp(1929),
-        Yp = cp(2492),
-        Dp = cp(4964),
-        Ap = cp(1112);
-      const Pp = new WeakMap;
-      let Wp = 0;
+      var WT = mT(1126),
+        zT = mT.n(WT),
+        MT = mT(63),
+        gT = mT(1288),
+        nT = mT(4936),
+        HT = mT(2023),
+        kT = mT(2552),
+        jT = mT(4939),
+        lT = mT(1188);
+      const LT = new WeakMap;
+      let pT = 0;
 
-      function yp(pp) {
-        let ip = Pp.get(pp);
-        return void 0 === ip && (ip = Wp++, Pp.set(pp, ip)), ip
+      function BT(TT) {
+        let UT = LT.get(TT);
+        return void 0 === UT && (UT = pT++, LT.set(TT, UT)), UT
       }
 
-      function Up(pp) {
+      function ZT(TT) {
         let {
-          piece: ip
-        } = pp;
-        return "space" === ip.kind ? (0, Ap.jsx)(Ap.Fragment, {
-          children: ip.text
-        }) : (0, Ap.jsx)("span", {
+          piece: UT
+        } = TT;
+        return "space" === UT.kind ? (0, lT.jsx)(lT.Fragment, {
+          children: UT.text
+        }) : (0, lT.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${ip.delayMs}ms`
+            "--word-delay": `${UT.delayMs}ms`
           },
-          children: (0, Ap.jsx)(xp.d, {
-            text: "icon" === ip.kind ? `[[${ip.icon}]]` : ip.text
+          children: (0, lT.jsx)(nT.b, {
+            text: "icon" === UT.kind ? `[[${UT.icon}]]` : UT.text
           })
         })
       }
 
-      function wp(pp) {
+      function cT(TT) {
         let {
-          display: ip
-        } = pp;
+          display: UT
+        } = TT;
         const {
-          selectedLanguage: cp
-        } = (0, Sp.H)(), Op = (0, Ip.useMemo)((() => (0, Dp.e)((0, Dp.h)(ip).plan.pieces)), [ip, cp.code]);
-        return (0, Ap.jsxs)("div", {
-          className: op()("Dialogue", {
-            DialogueAnimateIn: !1 !== ip.animateIn
+          selectedLanguage: mT
+        } = (0, gT.z)(), WT = (0, MT.useMemo)((() => (0, jT.d)((0, jT.e)(UT).plan.pieces)), [UT, mT.code]);
+        return (0, lT.jsxs)("div", {
+          className: zT()("Dialogue", {
+            DialogueAnimateIn: !1 !== UT.animateIn
           }),
-          children: [ip.speakerName && (0, Ap.jsx)(Lp.e, {
-            text: ip.speakerName,
+          children: [UT.speakerName && (0, lT.jsx)(HT.e, {
+            text: UT.speakerName,
             className: "DialogueSpeaker"
-          }), (0, Ap.jsx)("p", {
+          }), (0, lT.jsx)("p", {
             className: "DialogueLine",
-            children: Op.map(((pp, ip) => 1 === pp.length && "space" === pp[0].kind ? pp[0].text : (0, Ap.jsx)("span", {
+            children: WT.map(((TT, UT) => 1 === TT.length && "space" === TT[0].kind ? TT[0].text : (0, lT.jsx)("span", {
               className: "DialogueGlue",
-              children: pp.map(((pp, ip) => (0, Ap.jsx)(Up, {
-                piece: pp
-              }, ip)))
-            }, ip)))
+              children: TT.map(((TT, UT) => (0, lT.jsx)(ZT, {
+                piece: TT
+              }, UT)))
+            }, UT)))
           })]
         })
       }
-      const vp = (0, Ip.memo)((function() {
-        const pp = (0, Yp.i)("dialogue");
-        return (0, Ap.jsx)("div", {
+      const vT = (0, MT.memo)((function() {
+        const TT = (0, kT.f)("dialogue");
+        return (0, lT.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: pp && (0, Ap.jsx)(wp, {
-            display: pp
-          }, yp(pp))
+          children: TT && (0, lT.jsx)(cT, {
+            display: TT
+          }, BT(TT))
         })
       }))
     },
-    4817: (pp, ip, cp) => {
-        cp.r(ip), cp.d(ip, {
-          default: () => oS
+    4799: (TT, UT, mT) => {
+        mT.r(UT), mT.d(UT, {
+          default: () => Tg
         });
-        var Op = cp(62),
-          op = cp(1049),
-          Ip = cp.n(op),
-          Sp = cp(1540),
-          xp = cp(1543),
-          Lp = cp(25),
-          Yp = cp(82),
-          Dp = cp(4819),
-          Ap = cp(4831),
-          Pp = cp(4838),
-          Wp = cp(4458),
-          yp = cp(1112);
-        const Up = "/textures/docs/icons";
+        var WT = mT(63),
+          zT = mT(1126),
+          MT = mT.n(zT),
+          gT = mT(1639),
+          nT = mT(1641),
+          HT = mT(25),
+          kT = mT(85),
+          jT = mT(4808),
+          lT = mT(4825),
+          LT = mT(4833),
+          pT = mT(4461),
+          BT = mT(1188);
+        const ZT = "/textures/docs/icons";
 
-        function wp(pp) {
+        function cT(TT) {
           let {
-            name: ip,
-            isTinted: cp,
-            className: Op,
-            style: op
-          } = pp;
-          const Sp = `${Up}/${ip}.png`;
-          return cp ? (0, yp.jsxs)("span", {
-            className: Ip()("DocsPixelIcon", "Tinted", Op),
+            name: UT,
+            isTinted: mT,
+            className: WT,
+            style: zT
+          } = TT;
+          const gT = `${ZT}/${UT}.png`;
+          return mT ? (0, BT.jsxs)("span", {
+            className: MT()("DocsPixelIcon", "Tinted", WT),
             "aria-hidden": "true",
-            style: op,
-            children: [(0, yp.jsx)("span", {
+            style: zT,
+            children: [(0, BT.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${Sp}")`,
-                WebkitMaskImage: `url("${Sp}")`
+                maskImage: `url("${gT}")`,
+                WebkitMaskImage: `url("${gT}")`
               }
-            }), (0, yp.jsx)("img", {
-              src: Sp,
+            }), (0, BT.jsx)("img", {
+              src: gT,
               alt: ""
             })]
-          }) : (0, yp.jsx)("img", {
-            className: Ip()("DocsPixelIcon", Op),
-            src: Sp,
+          }) : (0, BT.jsx)("img", {
+            className: MT()("DocsPixelIcon", WT),
+            src: gT,
             alt: "",
             "aria-hidden": "true",
-            style: op
+            style: zT
           })
         }
-        const vp = 1500;
+        const vT = 1500;
 
-        function tp() {
-          const [pp, ip] = (0, Op.useState)(null);
-          (0, Op.useEffect)((() => {
-            if (null === pp) return;
-            const cp = setTimeout((() => {
-              ip(null)
-            }), vp);
+        function fT() {
+          const [TT, UT] = (0, WT.useState)(null);
+          (0, WT.useEffect)((() => {
+            if (null === TT) return;
+            const mT = setTimeout((() => {
+              UT(null)
+            }), vT);
             return () => {
-              clearTimeout(cp)
+              clearTimeout(mT)
             }
-          }), [pp]);
-          return [pp, pp => {
-            (0, Wp.d)(pp).then((() => {
-              ip({
-                text: pp,
+          }), [TT]);
+          return [TT, TT => {
+            (0, pT.b)(TT).then((() => {
+              UT({
+                text: TT,
                 failed: !1
               })
-            }), (cp => {
-              console.error("Could not copy to the clipboard", cp), ip({
-                text: pp,
+            }), (mT => {
+              console.error("Could not copy to the clipboard", mT), UT({
+                text: TT,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Hp(pp) {
+        function qT(TT) {
           let {
-            text: ip,
-            label: cp,
-            className: Op
-          } = pp;
-          const [op, Sp] = tp(), xp = !1 === (null === op || void 0 === op ? void 0 : op.failed);
-          return (0, yp.jsxs)("button", {
+            text: UT,
+            label: mT,
+            className: WT
+          } = TT;
+          const [zT, gT] = fT(), nT = !1 === (null === zT || void 0 === zT ? void 0 : zT.failed);
+          return (0, BT.jsxs)("button", {
             type: "button",
-            className: Ip()("DocsCopyButton", Op, {
-              Copied: xp
+            className: MT()("DocsCopyButton", WT, {
+              Copied: nT
             }),
-            title: `Copy ${ip.length>40?"to clipboard":ip}`,
-            "aria-label": cp ? void 0 : `Copy ${ip}`,
-            onClick: pp => {
-              pp.stopPropagation(), Sp(ip)
+            title: `Copy ${UT.length>40?"to clipboard":UT}`,
+            "aria-label": mT ? void 0 : `Copy ${UT}`,
+            onClick: TT => {
+              TT.stopPropagation(), gT(UT)
             },
-            children: [(0, yp.jsx)(wp, {
-              name: xp ? "check" : "copy"
-            }), cp && (0, yp.jsx)("span", {
-              children: xp ? "Copied" : null !== op && void 0 !== op && op.failed ? "Copy failed" : cp
+            children: [(0, BT.jsx)(cT, {
+              name: nT ? "check" : "copy"
+            }), mT && (0, BT.jsx)("span", {
+              children: nT ? "Copied" : null !== zT && void 0 !== zT && zT.failed ? "Copy failed" : mT
             })]
           })
         }
-        Dp.d.registerLanguage("javascript", Ap.d), Dp.d.registerLanguage("typescript", Pp.d);
-        const dp = {
+        jT.c.registerLanguage("javascript", lT.b), jT.c.registerLanguage("typescript", LT.d);
+        const iT = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          ep = {
+          bT = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          jp = 24;
+          OT = 24;
 
-        function kp(pp) {
+        function eT(TT) {
           let {
-            code: ip,
-            lang: cp,
-            compact: op = !1
-          } = pp;
-          const Sp = (0, Op.useMemo)((() => function(pp, ip) {
-              const cp = dp[ip];
-              return cp ? Dp.d.highlight(pp, {
-                language: cp
-              }).value : pp.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(ip, cp)), [ip, cp]),
-            xp = ip.split("\n").length,
-            Lp = !op && xp > jp + 6,
-            [Yp, Ap] = (0, Op.useState)(!1),
-            Pp = dp[cp];
-          return (0, yp.jsxs)("div", {
-            className: Ip()("DocsCodeBlock", {
-              Compact: op,
-              Collapsed: Lp && !Yp
+            code: UT,
+            lang: mT,
+            compact: zT = !1
+          } = TT;
+          const gT = (0, WT.useMemo)((() => function(TT, UT) {
+              const mT = iT[UT];
+              return mT ? jT.c.highlight(TT, {
+                language: mT
+              }).value : TT.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(UT, mT)), [UT, mT]),
+            nT = UT.split("\n").length,
+            HT = !zT && nT > OT + 6,
+            [kT, lT] = (0, WT.useState)(!1),
+            LT = iT[mT];
+          return (0, BT.jsxs)("div", {
+            className: MT()("DocsCodeBlock", {
+              Compact: zT,
+              Collapsed: HT && !kT
             }),
-            children: [!op && (0, yp.jsxs)("div", {
+            children: [!zT && (0, BT.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, yp.jsx)("span", {
+              children: [(0, BT.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: Pp ? ep[Pp] : "Text"
-              }), (0, yp.jsx)(Hp, {
-                text: ip,
+                children: LT ? bT[LT] : "Text"
+              }), (0, BT.jsx)(qT, {
+                text: UT,
                 label: "Copy"
               })]
-            }), (0, yp.jsx)("pre", {
-              children: (0, yp.jsx)("code", {
+            }), (0, BT.jsx)("pre", {
+              children: (0, BT.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: Sp
+                  __html: gT
                 }
               })
-            }), Lp && (0, yp.jsxs)("button", {
+            }), HT && (0, BT.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Yp,
+              "aria-expanded": kT,
               onClick: () => {
-                Ap(!Yp)
+                lT(!kT)
               },
-              children: [(0, yp.jsx)(wp, {
-                name: Yp ? "chevron-up" : "chevron-down"
-              }), Yp ? "Show less" : `Show all ${xp} lines`]
+              children: [(0, BT.jsx)(cT, {
+                name: kT ? "chevron-up" : "chevron-down"
+              }), kT ? "Show less" : `Show all ${nT} lines`]
             })]
           })
         }
-        var mp = cp(4844);
-        var Rp = cp(4852);
-        const qp = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var YT = mT(4842);
+        var JT = mT(4850);
+        const xT = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Mp(pp) {
-          const ip = new Map;
-          let cp, Op = [],
-            op = !1;
-          const Ip = () => {
-            cp && ip.set(cp.name, cp.lines.join("\n").trimEnd())
+        function dT(TT) {
+          const UT = new Map;
+          let mT, WT = [],
+            zT = !1;
+          const MT = () => {
+            mT && UT.set(mT.name, mT.lines.join("\n").trimEnd())
           };
-          for (const Sp of pp.split("\n")) {
-            const pp = Sp.match(qp);
-            op || Sp.startsWith("/*") ? (op || (Ip(), cp = void 0), Op.push(Sp), op = !Sp.includes("*/")) : pp ? (Ip(), cp = {
-              name: pp[1],
-              lines: [...Op, Sp]
-            }, Op = []) : cp && (Sp.startsWith(" ") || Sp.startsWith("\t") || /^[}\])|]/.test(Sp)) ? cp.lines.push(Sp) : cp && "" !== Sp.trim() && (Ip(), cp = void 0)
+          for (const gT of TT.split("\n")) {
+            const TT = gT.match(xT);
+            zT || gT.startsWith("/*") ? (zT || (MT(), mT = void 0), WT.push(gT), zT = !gT.includes("*/")) : TT ? (MT(), mT = {
+              name: TT[1],
+              lines: [...WT, gT]
+            }, WT = []) : mT && (gT.startsWith(" ") || gT.startsWith("\t") || /^[}\])|]/.test(gT)) ? mT.lines.push(gT) : mT && "" !== gT.trim() && (MT(), mT = void 0)
           }
-          return Ip(), ip
+          return MT(), UT
         }
 
-        function Cp(pp) {
-          return "methods" === pp || "callbacks" === pp || "settings" === pp
+        function wT(TT) {
+          return "methods" === TT || "callbacks" === TT || "settings" === TT
         }
-        const Ep = {
+        const tT = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (pp, ip) => `api.setClientOption(playerId, "${pp}", ${ip})`
+              setterSnippet: (TT, UT) => `api.setClientOption(playerId, "${TT}", ${UT})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (pp, ip) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${pp}", ${ip})`
+              setterSnippet: (TT, UT) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${TT}", ${UT})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (pp, ip) => `api.setMobSetting(mobId, "${pp}", ${ip})`
+              setterSnippet: (TT, UT) => `api.setMobSetting(mobId, "${TT}", ${UT})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (pp, ip) => `api.setVehicleSetting(vehicleId, "${pp}", ${ip})`
+              setterSnippet: (TT, UT) => `api.setVehicleSetting(vehicleId, "${TT}", ${UT})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Xp = {
+          aT = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function lp(pp) {
-          return pp.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function yT(TT) {
+          return TT.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function Qp(pp) {
-          let ip = !1;
-          return pp.split("\n").map((pp => (pp.startsWith("```") && (ip = !ip), !ip && /^#{3,} /.test(pp) ? pp.slice(1) : pp))).join("\n")
+        function XT(TT) {
+          let UT = !1;
+          return TT.split("\n").map((TT => (TT.startsWith("```") && (UT = !UT), !UT && /^#{3,} /.test(TT) ? TT.slice(1) : TT))).join("\n")
         }
 
-        function Jp(pp) {
-          return "readme" === pp ? "getting-started" : lp(pp)
+        function IT(TT) {
+          return "readme" === TT ? "getting-started" : yT(TT)
         }
-        const Bp = "## Glossary of Referenced Types";
-        const Np = [{
+        const QT = "## Glossary of Referenced Types";
+        const sT = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...Rp.d.flatMap((pp => {
-            const ip = {
-              id: pp.id,
-              slug: Jp(pp.id),
-              title: pp.title,
-              markdown: pp.content,
-              ...Ep[pp.id]
+          }, ...JT.d.flatMap((TT => {
+            const UT = {
+              id: TT.id,
+              slug: IT(TT.id),
+              title: TT.title,
+              markdown: TT.content,
+              ...tT[TT.id]
             };
-            if ("readme" === pp.id) return function(pp) {
-              const ip = pp.markdown.indexOf(Bp),
-                cp = pp.markdown.indexOf("\n```", ip),
-                Op = pp.markdown.indexOf("\n```", cp + 1);
-              if (-1 === ip || -1 === cp || -1 === Op) throw new Error(`Getting started has no "${Bp}" section with a code block`);
-              const op = pp.markdown.slice(ip + 31, cp).trim(),
-                Ip = [...Mp(pp.markdown.slice(pp.markdown.indexOf("\n", cp + 1) + 1, Op))].map((pp => {
-                  let [ip, cp] = pp;
-                  return `## ${ip}\n\n\`\`\`ts\n${cp}\n\`\`\`\n`
+            if ("readme" === TT.id) return function(TT) {
+              const UT = TT.markdown.indexOf(QT),
+                mT = TT.markdown.indexOf("\n```", UT),
+                WT = TT.markdown.indexOf("\n```", mT + 1);
+              if (-1 === UT || -1 === mT || -1 === WT) throw new Error(`Getting started has no "${QT}" section with a code block`);
+              const zT = TT.markdown.slice(UT + 31, mT).trim(),
+                MT = [...dT(TT.markdown.slice(TT.markdown.indexOf("\n", mT + 1) + 1, WT))].map((TT => {
+                  let [UT, mT] = TT;
+                  return `## ${UT}\n\n\`\`\`ts\n${mT}\n\`\`\`\n`
                 })),
-                Sp = pp.markdown.slice(pp.markdown.indexOf("\n", Op + 1) + 1);
+                gT = TT.markdown.slice(TT.markdown.indexOf("\n", WT + 1) + 1);
               return [{
-                ...pp,
-                markdown: `${pp.markdown.slice(0,ip)}${Sp}`
+                ...TT,
+                markdown: `${TT.markdown.slice(0,UT)}${gT}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${op}\n\n${Ip.join("\n")}`
+                markdown: `# Types\n\n${zT}\n\n${MT.join("\n")}`
               }]
-            }(ip);
-            if ("howTo" === pp.id) {
+            }(UT);
+            if ("howTo" === TT.id) {
               const {
-                parent: pp,
-                guides: cp
-              } = function(pp) {
-                const [ip, ...cp] = pp.markdown.split(/^(?=## )/m), Op = [ip], op = [];
-                for (const Sp of cp) {
-                  var Ip;
-                  const ip = Sp.indexOf("\n"),
-                    cp = Sp.slice(3, ip).trim(),
-                    xp = Sp.slice(ip + 1);
-                  if (!xp.includes("```")) {
-                    Op.push(Sp);
+                parent: TT,
+                guides: mT
+              } = function(TT) {
+                const [UT, ...mT] = TT.markdown.split(/^(?=## )/m), WT = [UT], zT = [];
+                for (const gT of mT) {
+                  var MT;
+                  const UT = gT.indexOf("\n"),
+                    mT = gT.slice(3, UT).trim(),
+                    nT = gT.slice(UT + 1);
+                  if (!nT.includes("```")) {
+                    WT.push(gT);
                     continue
                   }
-                  const Lp = null !== (Ip = Xp[cp]) && void 0 !== Ip ? Ip : {
+                  const HT = null !== (MT = aT[mT]) && void 0 !== MT ? MT : {
                     icon: "lightbulb",
-                    summary: `How to use ${cp.toLowerCase()} in World Code.`
+                    summary: `How to use ${mT.toLowerCase()} in World Code.`
                   };
-                  op.push({
-                    id: `${pp.id}${cp.split(/[^A-Za-z0-9]+/).map((pp=>pp.charAt(0).toUpperCase()+pp.slice(1))).join("")}`,
-                    slug: `${pp.slug}-${lp(cp)}`,
-                    title: cp,
+                  zT.push({
+                    id: `${TT.id}${mT.split(/[^A-Za-z0-9]+/).map((TT=>TT.charAt(0).toUpperCase()+TT.slice(1))).join("")}`,
+                    slug: `${TT.slug}-${yT(mT)}`,
+                    title: mT,
                     layout: "article",
-                    sourceAnchor: (0, mp.s)(cp),
-                    markdown: `# ${cp}\n\n${Qp(xp)}`,
-                    ...Lp
+                    sourceAnchor: (0, YT.w)(mT),
+                    markdown: `# ${mT}\n\n${XT(nT)}`,
+                    ...HT
                   })
                 }
                 return {
                   parent: {
-                    ...pp,
-                    markdown: Op.join(""),
-                    childPageIds: op.map((pp => pp.id))
+                    ...TT,
+                    markdown: WT.join(""),
+                    childPageIds: zT.map((TT => TT.id))
                   },
-                  guides: op
+                  guides: zT
                 }
-              }(ip);
-              return [pp, ...cp]
+              }(UT);
+              return [TT, ...mT]
             }
-            return [ip]
+            return [UT]
           }))],
-          Tp = [{
+          FT = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...Np.filter((pp => void 0 !== pp.sourceAnchor)).map((pp => pp.id))]
+            pageIds: ["howTo", ...sT.filter((TT => void 0 !== TT.sourceAnchor)).map((TT => TT.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function fp(pp) {
-          return Np.find((ip => ip.id === pp))
+        function PT(TT) {
+          return sT.find((UT => UT.id === TT))
         }
-        const bp = new Map;
+        const VT = new Map;
 
-        function hp(pp) {
-          let ip = bp.get(pp.id);
-          return ip || (ip = (0, mp.w)(pp.markdown, "changelog" === pp.layout ? 3 : 2), bp.set(pp.id, ip)), ip
-        }
-
-        function ap(pp, ip) {
-          return hp(pp).sections.some((pp => pp.heading.anchor === ip || pp.blocks.some((pp => "heading" === pp.kind && pp.anchor === ip))))
+        function uT(TT) {
+          let UT = VT.get(TT.id);
+          return UT || (UT = (0, YT.E)(TT.markdown, "changelog" === TT.layout ? 3 : 2), VT.set(TT.id, UT)), UT
         }
 
-        function np(pp) {
-          const [ip, ...cp] = pp.replace(/^#/, "").split("-"), Op = Np.find((pp => pp.id === ip));
-          if (!Op) return null;
-          const op = cp.length > 0 ? (0, mp.s)(cp.join("-")) : "";
-          for (const Sp of null !== (Ip = Op.childPageIds) && void 0 !== Ip ? Ip : []) {
-            var Ip;
-            const pp = fp(Sp);
-            if (pp.sourceAnchor === op) return {
-              page: pp,
+        function CT(TT, UT) {
+          return uT(TT).sections.some((TT => TT.heading.anchor === UT || TT.blocks.some((TT => "heading" === TT.kind && TT.anchor === UT))))
+        }
+
+        function rT(TT) {
+          const [UT, ...mT] = TT.replace(/^#/, "").split("-"), WT = sT.find((TT => TT.id === UT));
+          if (!WT) return null;
+          const zT = mT.length > 0 ? (0, YT.w)(mT.join("-")) : "";
+          for (const gT of null !== (MT = WT.childPageIds) && void 0 !== MT ? MT : []) {
+            var MT;
+            const TT = PT(gT);
+            if (TT.sourceAnchor === zT) return {
+              page: TT,
               anchor: ""
             };
-            if (ap(pp, op)) return {
-              page: pp,
-              anchor: op
+            if (CT(TT, zT)) return {
+              page: TT,
+              anchor: zT
             }
           }
           return {
-            page: Op,
-            anchor: op
+            page: WT,
+            anchor: zT
           }
         }
-        const Fp = {
+        const KT = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function gp(pp, ip) {
-          let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Op = ip.slug ? `${pp}/${ip.slug}` : pp;
-          return cp ? `${Op}#${cp}` : Op
+        function ST(TT, UT) {
+          let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const WT = UT.slug ? `${TT}/${UT.slug}` : TT;
+          return mT ? `${WT}#${mT}` : WT
         }
-        var Gp = cp(4874);
-        const rp = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          Zp = new Set(["GameApi", "Console", "_TypeOf"]),
-          zp = 4;
+        var GT = mT(4866);
+        const NT = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          ET = new Set(["GameApi", "Console", "_TypeOf"]),
+          hT = 4;
 
-        function sp(pp) {
-          let ip = pp.length;
-          for (; ip > 0 && "" === pp[ip - 1].trim();) ip--;
-          return pp.slice(0, ip)
+        function DT(TT) {
+          let UT = TT.length;
+          for (; UT > 0 && "" === TT[UT - 1].trim();) UT--;
+          return TT.slice(0, UT)
         }
 
-        function Kp(pp) {
-          var ip;
-          const cp = sp(pp);
-          if (null === (ip = cp.at(-1)) || void 0 === ip || !ip.trimEnd().endsWith("*/")) return {
-            lines: cp,
+        function oT(TT) {
+          var UT;
+          const mT = DT(TT);
+          if (null === (UT = mT.at(-1)) || void 0 === UT || !UT.trimEnd().endsWith("*/")) return {
+            lines: mT,
             doc: ""
           };
-          const Op = cp.findLastIndex((pp => pp.startsWith("/**")));
-          return -1 === Op ? {
-            lines: cp,
+          const WT = mT.findLastIndex((TT => TT.startsWith("/**")));
+          return -1 === WT ? {
+            lines: mT,
             doc: ""
           } : {
-            lines: sp(cp.slice(0, Op)),
-            doc: cp.slice(Op).join("\n")
+            lines: DT(mT.slice(0, WT)),
+            doc: mT.slice(WT).join("\n")
           }
         }
 
-        function Vp(pp) {
-          var ip;
-          const cp = pp.split("\n"),
-            Op = cp.flatMap(((pp, ip) => rp.test(pp) ? [ip] : []));
-          let op = Kp(cp.slice(0, null !== (ip = Op[0]) && void 0 !== ip ? ip : cp.length)).doc;
-          return Op.map(((pp, ip) => {
-            var Ip;
-            const Sp = Kp(cp.slice(pp, null !== (Ip = Op[ip + 1]) && void 0 !== Ip ? Ip : cp.length)),
-              xp = {
-                name: cp[pp].match(rp)[1],
-                doc: op,
-                lines: Sp.lines
+        function AT(TT) {
+          var UT;
+          const mT = TT.split("\n"),
+            WT = mT.flatMap(((TT, UT) => NT.test(TT) ? [UT] : []));
+          let zT = oT(mT.slice(0, null !== (UT = WT[0]) && void 0 !== UT ? UT : mT.length)).doc;
+          return WT.map(((TT, UT) => {
+            var MT;
+            const gT = oT(mT.slice(TT, null !== (MT = WT[UT + 1]) && void 0 !== MT ? MT : mT.length)),
+              nT = {
+                name: mT[TT].match(NT)[1],
+                doc: zT,
+                lines: gT.lines
               };
-            return op = Sp.doc, xp
+            return zT = gT.doc, nT
           }))
         }
 
-        function ii(pp) {
-          var ip;
-          const cp = pp.match(/^readonly \[([\s\S]*)\]$/);
-          return cp ? null !== (ip = cp[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== ip ? ip : [] : null
+        function RT(TT) {
+          var UT;
+          const mT = TT.match(/^readonly \[([\s\S]*)\]$/);
+          return mT ? null !== (UT = mT[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== UT ? UT : [] : null
         }
 
-        function ci(pp) {
-          if (!pp.startsWith("{") || !pp.endsWith("}")) return null;
-          const ip = {
+        function TU(TT) {
+          if (!TT.startsWith("{") || !TT.endsWith("}")) return null;
+          const UT = {
               keys: [],
               values: []
             },
-            cp = pp => {
-              const cp = pp.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              cp && (ip.keys.push(cp[1].startsWith('"') ? cp[1] : `"${cp[1]}"`), ip.values.push(cp[2].trim()))
+            mT = TT => {
+              const mT = TT.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              mT && (UT.keys.push(mT[1].startsWith('"') ? mT[1] : `"${mT[1]}"`), UT.values.push(mT[2].trim()))
             };
-          let Op = 0,
-            op = "";
-          for (const Ip of pp.slice(1, -1)) "{[(".includes(Ip) ? Op++ : "}])".includes(Ip) && Op--, ";" === Ip && 0 === Op ? (cp(op), op = "") : op += Ip;
-          return cp(op), ip
+          let WT = 0,
+            zT = "";
+          for (const MT of TT.slice(1, -1)) "{[(".includes(MT) ? WT++ : "}])".includes(MT) && WT--, ";" === MT && 0 === WT ? (mT(zT), zT = "") : zT += MT;
+          return mT(zT), UT
         }
 
-        function Oi(pp) {
-          return pp.length > zp ? `\n\t| ${pp.join("\n\t| ")}` : pp.join(" | ")
+        function UU(TT) {
+          return TT.length > hT ? `\n\t| ${TT.join("\n\t| ")}` : TT.join(" | ")
         }
 
-        function oi(pp, ip) {
-          const cp = function(pp, ip) {
-            return pp.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((pp, cp) => {
-              var Op;
-              const op = null === (Op = ip.get(cp)) || void 0 === Op ? void 0 : Op.object;
-              return op ? Oi(op.values) : pp
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((pp, cp) => {
-              var Op, op;
-              const Ip = null === (Op = ip.get(cp)) || void 0 === Op || null === (op = Op.object) || void 0 === op ? void 0 : op.values.map(ii);
-              return null !== Ip && void 0 !== Ip && Ip.every((pp => null !== pp)) ? Oi([...new Set(Ip.flat())]) : pp
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((pp, cp) => {
-              var Op;
-              const op = null === (Op = ip.get(cp)) || void 0 === Op ? void 0 : Op.members;
-              return op ? Oi(op) : pp
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((pp, cp) => {
-              var Op;
-              const op = null === (Op = ip.get(cp)) || void 0 === Op ? void 0 : Op.object;
-              return op ? Oi(op.keys) : pp
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((pp, cp) => {
-              var Op, op;
-              return null !== (Op = null === (op = ip.get(cp)) || void 0 === op ? void 0 : op.text) && void 0 !== Op ? Op : pp
+        function mU(TT, UT) {
+          const mT = function(TT, UT) {
+            return TT.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((TT, mT) => {
+              var WT;
+              const zT = null === (WT = UT.get(mT)) || void 0 === WT ? void 0 : WT.object;
+              return zT ? UU(zT.values) : TT
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((TT, mT) => {
+              var WT, zT;
+              const MT = null === (WT = UT.get(mT)) || void 0 === WT || null === (zT = WT.object) || void 0 === zT ? void 0 : zT.values.map(RT);
+              return null !== MT && void 0 !== MT && MT.every((TT => null !== TT)) ? UU([...new Set(MT.flat())]) : TT
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((TT, mT) => {
+              var WT;
+              const zT = null === (WT = UT.get(mT)) || void 0 === WT ? void 0 : WT.members;
+              return zT ? UU(zT) : TT
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((TT, mT) => {
+              var WT;
+              const zT = null === (WT = UT.get(mT)) || void 0 === WT ? void 0 : WT.object;
+              return zT ? UU(zT.keys) : TT
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((TT, mT) => {
+              var WT, zT;
+              return null !== (WT = null === (zT = UT.get(mT)) || void 0 === zT ? void 0 : zT.text) && void 0 !== WT ? WT : TT
             }))
-          }(pp.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), ip);
-          return [pp.doc, cp].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(TT.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), UT);
+          return [TT.doc, mT].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function Ii(pp) {
-          const ip = Vp(pp),
-            cp = function(pp) {
-              const ip = new Map,
-                cp = pp.find((pp => "_TypeOf" === pp.name));
-              let Op = null;
-              const op = () => {
-                if (Op) {
-                  const pp = Op.lines.join("\n");
-                  ip.set(Op.name, {
-                    text: pp,
-                    members: ii(pp),
-                    object: ci(pp)
+        function WU(TT) {
+          const UT = AT(TT),
+            mT = function(TT) {
+              const UT = new Map,
+                mT = TT.find((TT => "_TypeOf" === TT.name));
+              let WT = null;
+              const zT = () => {
+                if (WT) {
+                  const TT = WT.lines.join("\n");
+                  UT.set(WT.name, {
+                    text: TT,
+                    members: RT(TT),
+                    object: TU(TT)
                   })
                 }
               };
-              for (const Ip of cp.lines.slice(1, -1)) {
-                const pp = Ip.match(/^\t([\w$]+): (.+)$/);
-                pp ? (op(), Op = {
-                  name: pp[1],
-                  lines: [pp[2]]
-                }) : Op && Op.lines.push(Ip.replace(/^\t/, ""))
+              for (const MT of mT.lines.slice(1, -1)) {
+                const TT = MT.match(/^\t([\w$]+): (.+)$/);
+                TT ? (zT(), WT = {
+                  name: TT[1],
+                  lines: [TT[2]]
+                }) : WT && WT.lines.push(MT.replace(/^\t/, ""))
               }
-              return op(), ip
-            }(ip),
-            Op = new Map;
-          for (const op of ip) Zp.has(op.name) || Op.has(op.name) || Op.set(op.name, oi(op, cp));
-          return Op
+              return zT(), UT
+            }(UT),
+            WT = new Map;
+          for (const zT of UT) ET.has(zT.name) || WT.has(zT.name) || WT.set(zT.name, mU(zT, mT));
+          return WT
         }
-        let Si, xi, Li;
+        let zU, MU, gU;
 
-        function Yi() {
-          return xi ??= function(pp) {
-            const ip = Vp(pp).find((pp => "GameApi" === pp.name)),
-              cp = new Map,
-              Op = ip.lines;
-            for (let Ip = 0; Ip < Op.length; Ip++) {
-              var op;
-              if (!Op[Ip].trimStart().startsWith("/**")) continue;
-              const pp = Ip;
-              for (; Ip < Op.length && !Op[Ip].includes("*/");) Ip++;
-              const ip = null === (op = Op[Ip + 1]) || void 0 === op ? void 0 : op.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!ip) continue;
-              let Sp = null;
-              const xp = [];
-              let Lp = "description",
-                Yp = !1;
-              for (const cp of Op.slice(pp, Ip + 1).join("\n").split("\n").map((pp => pp.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const pp = cp.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                pp ? (Sp = pp[1].trim(), Lp = "deprecation") : cp.startsWith("@") ? (Lp = "otherTag", Yp = !0) : "" === cp.trim() ? Yp || (Lp = "description", xp.push(cp)) : "deprecation" !== Lp || /^[A-Z]/.test(cp.trim()) ? "otherTag" !== Lp && (Lp = "description", xp.push(cp)) : Sp = `${Sp} ${cp.trim()}`.trim()
+        function nU() {
+          return MU ??= function(TT) {
+            const UT = AT(TT).find((TT => "GameApi" === TT.name)),
+              mT = new Map,
+              WT = UT.lines;
+            for (let MT = 0; MT < WT.length; MT++) {
+              var zT;
+              if (!WT[MT].trimStart().startsWith("/**")) continue;
+              const TT = MT;
+              for (; MT < WT.length && !WT[MT].includes("*/");) MT++;
+              const UT = null === (zT = WT[MT + 1]) || void 0 === zT ? void 0 : zT.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!UT) continue;
+              let gT = null;
+              const nT = [];
+              let HT = "description",
+                kT = !1;
+              for (const mT of WT.slice(TT, MT + 1).join("\n").split("\n").map((TT => TT.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const TT = mT.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                TT ? (gT = TT[1].trim(), HT = "deprecation") : mT.startsWith("@") ? (HT = "otherTag", kT = !0) : "" === mT.trim() ? kT || (HT = "description", nT.push(mT)) : "deprecation" !== HT || /^[A-Z]/.test(mT.trim()) ? "otherTag" !== HT && (HT = "description", nT.push(mT)) : gT = `${gT} ${mT.trim()}`.trim()
               }
-              cp.set(ip[1], {
-                deprecation: Sp,
-                description: xp.join("\n").trim()
+              mT.set(UT[1], {
+                deprecation: gT,
+                description: nT.join("\n").trim()
               })
             }
-            return cp
-          }(Gp.default), xi
+            return mT
+          }(GT.default), MU
         }
 
-        function Di() {
-          if (!Li) {
-            Li = new Map;
-            for (const pp of Np) {
-              const ip = (0, mp.t)(hp(pp)).flatMap((pp => pp.blocks));
-              for (const pp of (0, mp.n)(ip))
-                if ("ts" === pp.lang || "typescript" === pp.lang)
-                  for (const [ip, cp] of Mp(pp.code)) Li.set(ip, cp)
+        function HU() {
+          if (!gU) {
+            gU = new Map;
+            for (const TT of sT) {
+              const UT = (0, YT.A)(uT(TT)).flatMap((TT => TT.blocks));
+              for (const TT of (0, YT.n)(UT))
+                if ("ts" === TT.lang || "typescript" === TT.lang)
+                  for (const [UT, mT] of dT(TT.code)) gU.set(UT, mT)
             }
-            for (const [pp, ip] of(Si ??= Ii(Gp.default), Si)) Li.has(pp) || Li.set(pp, ip)
+            for (const [TT, UT] of(zU ??= WU(GT.default), zU)) gU.has(TT) || gU.set(TT, UT)
           }
-          return Li
+          return gU
         }
-        const Ai = {
+        const kU = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let Pi;
+        let jU;
 
-        function Wi() {
-          if (!Pi) {
-            Pi = new Map;
-            for (const pp of Np)
-              if (Cp(pp.layout))
-                for (const ip of hp(pp).sections) Pi.has(ip.heading.text) || Pi.set(ip.heading.text, {
-                  pageId: pp.id,
-                  anchor: ip.heading.anchor
+        function lU() {
+          if (!jU) {
+            jU = new Map;
+            for (const TT of sT)
+              if (wT(TT.layout))
+                for (const UT of uT(TT).sections) jU.has(UT.heading.text) || jU.set(UT.heading.text, {
+                  pageId: TT.id,
+                  anchor: UT.heading.anchor
                 })
           }
-          return Pi
+          return jU
         }
 
-        function yi(pp) {
-          const ip = pp.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return ip ? Wi().get(ip[1]) : void 0
+        function LU(TT) {
+          const UT = TT.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return UT ? lU().get(UT[1]) : void 0
         }
-        const Ui = (0, Op.createContext)("/docs"),
-          wi = (0, Op.createContext)(null),
-          vi = (0, Op.createContext)(!1),
-          ti = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const pU = (0, WT.createContext)("/docs"),
+          BU = (0, WT.createContext)(null),
+          ZU = (0, WT.createContext)(!1),
+          cU = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function Hi(pp) {
-          const ip = pp.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return ip ? ip[1] : null
+        function vU(TT) {
+          const UT = TT.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return UT ? UT[1] : null
         }
 
-        function di(pp) {
+        function fU(TT) {
           let {
-            colour: ip
-          } = pp;
-          return (0, yp.jsx)("span", {
+            colour: UT
+          } = TT;
+          return (0, BT.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: ip
+              background: UT
             },
             "aria-hidden": "true"
           })
         }
 
-        function ei(pp) {
-          const ip = [];
-          let cp = 0;
-          for (const Op of pp.matchAll(ti)) ip.push(pp.slice(cp, Op.index), (0, yp.jsx)(di, {
-            colour: Op[0]
-          }), Op[0]), cp = Op.index + Op[0].length;
-          return ip.push(pp.slice(cp)), ip
+        function qU(TT) {
+          const UT = [];
+          let mT = 0;
+          for (const WT of TT.matchAll(cU)) UT.push(TT.slice(mT, WT.index), (0, BT.jsx)(fU, {
+            colour: WT[0]
+          }), WT[0]), mT = WT.index + WT[0].length;
+          return UT.push(TT.slice(mT)), UT
         }
 
-        function ui(pp) {
+        function iU(TT) {
           let {
-            href: ip,
-            children: cp
-          } = pp;
-          const op = (0, Op.useContext)(Ui);
-          if (ip.startsWith("#")) {
-            const pp = np(ip);
-            if (pp) return (0, yp.jsx)(Sp.c, {
-              to: gp(op, pp.page, pp.anchor),
-              children: (0, yp.jsx)(vi.Provider, {
+            href: UT,
+            children: mT
+          } = TT;
+          const zT = (0, WT.useContext)(pU);
+          if (UT.startsWith("#")) {
+            const TT = rT(UT);
+            if (TT) return (0, BT.jsx)(gT.d, {
+              to: ST(zT, TT.page, TT.anchor),
+              children: (0, BT.jsx)(ZU.Provider, {
                 value: !0,
-                children: cp
+                children: mT
               })
             })
           }
-          return (0, yp.jsx)("a", {
-            href: ip,
+          return (0, BT.jsx)("a", {
+            href: UT,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, yp.jsx)(vi.Provider, {
+            children: (0, BT.jsx)(ZU.Provider, {
               value: !0,
-              children: cp
+              children: mT
             })
           })
         }
 
-        function ji(pp) {
+        function bU(TT) {
           let {
-            code: ip
-          } = pp;
-          const cp = (0, Op.useContext)(Ui);
-          if ((0, Op.useContext)(vi)) return (0, yp.jsx)("code", {
+            code: UT
+          } = TT;
+          const mT = (0, WT.useContext)(pU);
+          if ((0, WT.useContext)(ZU)) return (0, BT.jsx)("code", {
             className: "DocsInlineCode",
-            children: ip
+            children: UT
           });
-          if (Di().has(ip)) return (0, yp.jsx)(qi, {
-            type: ip
+          if (HU().has(UT)) return (0, BT.jsx)(JU, {
+            type: UT
           });
-          const op = yi(ip);
-          if (op) return (0, yp.jsx)(Sp.c, {
+          const zT = LU(UT);
+          if (zT) return (0, BT.jsx)(gT.d, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: gp(cp, fp(op.pageId), op.anchor),
-            children: ip
+            to: ST(mT, PT(zT.pageId), zT.anchor),
+            children: UT
           });
-          const Ip = Hi(ip);
-          return (0, yp.jsxs)("code", {
+          const MT = vU(UT);
+          return (0, BT.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [Ip && (0, yp.jsx)(di, {
-              colour: Ip
-            }), ip]
+            children: [MT && (0, BT.jsx)(fU, {
+              colour: MT
+            }), UT]
           })
         }
 
-        function ki(pp) {
+        function OU(TT) {
           let {
-            text: ip
-          } = pp;
-          const cp = [];
-          let op = 0;
-          for (const Op of ip.matchAll(mp.g)) {
-            Op.index > op && cp.push(...ei(ip.slice(op, Op.index)));
-            const [, pp, Ip, Sp, xp, Lp] = Op;
-            pp ? cp.push((0, yp.jsx)(ji, {
-              code: (0, mp.q)(pp, Ip)
-            })) : Sp ? cp.push((0, yp.jsx)("strong", {
-              children: (0, yp.jsx)(ki, {
-                text: Sp
+            text: UT
+          } = TT;
+          const mT = [];
+          let zT = 0;
+          for (const WT of UT.matchAll(YT.h)) {
+            WT.index > zT && mT.push(...qU(UT.slice(zT, WT.index)));
+            const [, TT, MT, gT, nT, HT] = WT;
+            TT ? mT.push((0, BT.jsx)(bU, {
+              code: (0, YT.p)(TT, MT)
+            })) : gT ? mT.push((0, BT.jsx)("strong", {
+              children: (0, BT.jsx)(OU, {
+                text: gT
               })
-            })) : cp.push((0, yp.jsx)(ui, {
-              href: Lp,
-              children: (0, yp.jsx)(ki, {
-                text: xp
+            })) : mT.push((0, BT.jsx)(iU, {
+              href: HT,
+              children: (0, BT.jsx)(OU, {
+                text: nT
               })
-            })), op = Op.index + Op[0].length
+            })), zT = WT.index + WT[0].length
           }
-          return op < ip.length && cp.push(...ei(ip.slice(op))), (0, yp.jsx)(yp.Fragment, {
-            children: cp.map(((pp, ip) => (0, yp.jsx)(Op.Fragment, {
-              children: pp
-            }, ip)))
+          return zT < UT.length && mT.push(...qU(UT.slice(zT))), (0, BT.jsx)(BT.Fragment, {
+            children: mT.map(((TT, UT) => (0, BT.jsx)(WT.Fragment, {
+              children: TT
+            }, UT)))
           })
         }
-        const mi = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          Ri = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const eU = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          YU = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function qi(pp) {
+        function JU(TT) {
           let {
-            type: ip
-          } = pp;
-          const cp = Di(),
-            op = [];
-          for (const Op of ip.trim().matchAll(mi)) {
-            const [pp, ip, Ip, Sp, xp] = Op;
-            ip ? op.push((0, yp.jsx)("span", {
+            type: UT
+          } = TT;
+          const mT = HU(),
+            zT = [];
+          for (const WT of UT.trim().matchAll(eU)) {
+            const [TT, UT, MT, gT, nT] = WT;
+            UT ? zT.push((0, BT.jsx)("span", {
               className: "DocsTypeString",
-              children: pp
-            })) : Ip && cp.has(Ip) ? op.push((0, yp.jsx)(li, {
-              name: Ip,
-              definition: cp.get(Ip)
-            })) : Ip ? op.push((0, yp.jsx)("span", {
-              className: Ri.has(Ip) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: pp
-            })) : Sp ? op.push((0, yp.jsx)("span", {
+              children: TT
+            })) : MT && mT.has(MT) ? zT.push((0, BT.jsx)(aU, {
+              name: MT,
+              definition: mT.get(MT)
+            })) : MT ? zT.push((0, BT.jsx)("span", {
+              className: YU.has(MT) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: TT
+            })) : gT ? zT.push((0, BT.jsx)("span", {
               className: "DocsTypeNumber",
-              children: pp
-            })) : xp ? op.push(" ") : op.push((0, yp.jsx)("span", {
+              children: TT
+            })) : nT ? zT.push(" ") : zT.push((0, BT.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: pp
+              children: TT
             }))
           }
-          return (0, yp.jsx)("code", {
+          return (0, BT.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: op.map(((pp, ip) => (0, yp.jsx)(Op.Fragment, {
-              children: pp
-            }, ip)))
+            children: zT.map(((TT, UT) => (0, BT.jsx)(WT.Fragment, {
+              children: TT
+            }, UT)))
           })
         }
-        const Mi = 480,
-          Ci = 6,
-          Ei = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Xi = 0;
+        const xU = 480,
+          dU = 6,
+          wU = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let tU = 0;
 
-        function li(pp) {
+        function aU(TT) {
           let {
-            name: ip,
-            definition: cp
-          } = pp;
-          const op = (0, Op.useContext)(Ui),
-            Ip = Ai[ip],
-            xp = (0, Op.useRef)(null),
-            Lp = (0, Op.useRef)(null),
-            Dp = (0, Op.useRef)(null),
-            [Ap, Pp] = (0, Op.useState)(!1),
-            [Wp, Up] = (0, Op.useState)(null),
-            vp = (0, Op.useRef)(),
-            tp = (0, Op.useContext)(wi),
-            [Hp] = (0, Op.useState)((() => "DocsTypePopover-" + Xi++)),
-            dp = () => {
-              clearTimeout(vp.current), Pp(!0)
+            name: UT,
+            definition: mT
+          } = TT;
+          const zT = (0, WT.useContext)(pU),
+            MT = kU[UT],
+            nT = (0, WT.useRef)(null),
+            HT = (0, WT.useRef)(null),
+            jT = (0, WT.useRef)(null),
+            [lT, LT] = (0, WT.useState)(!1),
+            [pT, ZT] = (0, WT.useState)(null),
+            vT = (0, WT.useRef)(),
+            fT = (0, WT.useContext)(BU),
+            [qT] = (0, WT.useState)((() => "DocsTypePopover-" + tU++)),
+            iT = () => {
+              clearTimeout(vT.current), LT(!0)
             },
-            ep = () => {
-              clearTimeout(vp.current), vp.current = setTimeout((() => {
-                Pp(!1)
+            bT = () => {
+              clearTimeout(vT.current), vT.current = setTimeout((() => {
+                LT(!1)
               }), 120)
             };
-          return (0, Op.useEffect)((() => {
-            if (!Ap) return;
-            const pp = pp => {
-              if ("Escape" === pp.key) {
-                var ip, cp;
-                if (null !== (ip = Lp.current) && void 0 !== ip && ip.contains(document.activeElement)) null === (cp = xp.current) || void 0 === cp || cp.focus();
-                Pp(!1)
+          return (0, WT.useEffect)((() => {
+            if (!lT) return;
+            const TT = TT => {
+              if ("Escape" === TT.key) {
+                var UT, mT;
+                if (null !== (UT = HT.current) && void 0 !== UT && UT.contains(document.activeElement)) null === (mT = nT.current) || void 0 === mT || mT.focus();
+                LT(!1)
               }
             };
-            return document.addEventListener("keydown", pp), () => {
-              document.removeEventListener("keydown", pp)
+            return document.addEventListener("keydown", TT), () => {
+              document.removeEventListener("keydown", TT)
             }
-          }), [Ap]), (0, Op.useEffect)((() => () => {
-            clearTimeout(vp.current)
-          }), []), (0, Op.useLayoutEffect)((() => {
-            if (!Ap || !xp.current || !Lp.current) return void Up(null);
-            const pp = xp.current.getBoundingClientRect(),
-              ip = Lp.current.offsetHeight,
-              cp = Math.min(Mi, window.innerWidth - 32),
-              Op = Math.min(Math.max(16, pp.left), window.innerWidth - cp - 16),
-              op = pp.bottom + Ci + ip < window.innerHeight;
-            Up({
-              left: Op,
-              top: op ? pp.bottom + Ci : Math.max(16, pp.top - Ci - ip)
+          }), [lT]), (0, WT.useEffect)((() => () => {
+            clearTimeout(vT.current)
+          }), []), (0, WT.useLayoutEffect)((() => {
+            if (!lT || !nT.current || !HT.current) return void ZT(null);
+            const TT = nT.current.getBoundingClientRect(),
+              UT = HT.current.offsetHeight,
+              mT = Math.min(xU, window.innerWidth - 32),
+              WT = Math.min(Math.max(16, TT.left), window.innerWidth - mT - 16),
+              zT = TT.bottom + dU + UT < window.innerHeight;
+            ZT({
+              left: WT,
+              top: zT ? TT.bottom + dU : Math.max(16, TT.top - dU - UT)
             })
-          }), [Ap]), (0, yp.jsxs)(yp.Fragment, {
-            children: [(0, yp.jsx)("button", {
+          }), [lT]), (0, BT.jsxs)(BT.Fragment, {
+            children: [(0, BT.jsx)("button", {
               type: "button",
-              ref: xp,
+              ref: nT,
               className: "DocsTypeLink",
-              "aria-expanded": Ap,
-              "aria-describedby": Ap ? Hp : void 0,
-              onMouseEnter: dp,
-              onMouseLeave: ep,
-              onFocus: dp,
-              onBlur: ep,
-              onKeyDown: pp => {
-                "Tab" === pp.key && !pp.shiftKey && Dp.current && (pp.preventDefault(), Dp.current.focus())
+              "aria-expanded": lT,
+              "aria-describedby": lT ? qT : void 0,
+              onMouseEnter: iT,
+              onMouseLeave: bT,
+              onFocus: iT,
+              onBlur: bT,
+              onKeyDown: TT => {
+                "Tab" === TT.key && !TT.shiftKey && jT.current && (TT.preventDefault(), jT.current.focus())
               },
-              onClick: dp,
-              children: ip
-            }), Ap && (0, Yp.createPortal)((0, yp.jsxs)("span", {
-              ref: Lp,
-              id: Hp,
+              onClick: iT,
+              children: UT
+            }), lT && (0, kT.createPortal)((0, BT.jsxs)("span", {
+              ref: HT,
+              id: qT,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Wp ? {
-                left: Wp.left,
-                top: Wp.top,
-                maxWidth: Mi
+              style: pT ? {
+                left: pT.left,
+                top: pT.top,
+                maxWidth: xU
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: dp,
-              onMouseLeave: ep,
-              onFocus: dp,
-              onBlur: ep,
-              children: [(0, yp.jsxs)("span", {
+              onMouseEnter: iT,
+              onMouseLeave: bT,
+              onFocus: iT,
+              onBlur: bT,
+              children: [(0, BT.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, yp.jsx)("span", {
+                children: [(0, BT.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: ip
-                }), Ip && (0, yp.jsxs)(Sp.c, {
-                  ref: Dp,
+                  children: UT
+                }), MT && (0, BT.jsxs)(gT.d, {
+                  ref: jT,
                   className: "DocsTypePopoverLink",
-                  to: gp(op, fp(Ip)),
+                  to: ST(zT, PT(MT)),
                   onClick: () => {
-                    Pp(!1)
+                    LT(!1)
                   },
-                  onKeyDown: pp => {
-                    if ("Tab" === pp.key) {
-                      var ip;
-                      if (pp.preventDefault(), pp.shiftKey || !xp.current || ! function(pp, ip) {
-                          const cp = [...document.querySelectorAll(Ei)],
-                            Op = cp.slice(cp.indexOf(pp) + 1).find((pp => pp.getClientRects().length > 0 && !(null !== ip && void 0 !== ip && ip.contains(pp))));
-                          return null === Op || void 0 === Op || Op.focus(), void 0 !== Op
-                        }(xp.current, Lp.current)) null === (ip = xp.current) || void 0 === ip || ip.focus();
-                      pp.shiftKey || Pp(!1)
+                  onKeyDown: TT => {
+                    if ("Tab" === TT.key) {
+                      var UT;
+                      if (TT.preventDefault(), TT.shiftKey || !nT.current || ! function(TT, UT) {
+                          const mT = [...document.querySelectorAll(wU)],
+                            WT = mT.slice(mT.indexOf(TT) + 1).find((TT => TT.getClientRects().length > 0 && !(null !== UT && void 0 !== UT && UT.contains(TT))));
+                          return null === WT || void 0 === WT || WT.focus(), void 0 !== WT
+                        }(nT.current, HT.current)) null === (UT = nT.current) || void 0 === UT || UT.focus();
+                      TT.shiftKey || LT(!1)
                     }
                   },
-                  children: [fp(Ip).title, (0, yp.jsx)(wp, {
+                  children: [PT(MT).title, (0, BT.jsx)(cT, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, yp.jsx)(kp, {
+              }), (0, BT.jsx)(eT, {
                 lang: "ts",
-                code: cp,
+                code: mT,
                 compact: !0
               })]
-            }), null !== tp && void 0 !== tp ? tp : document.body)]
+            }), null !== fT && void 0 !== fT ? fT : document.body)]
           })
         }
-        var Qi = cp(195),
-          Ji = cp(4876),
-          Bi = cp(4880),
-          Ni = cp(4882);
-        const Ti = {
+        var yU = mT(208),
+          XU = mT(4869),
+          IU = mT(4873),
+          QU = mT(4879);
+        const sU = {
           progressBar: {
-            Oi: 30,
-            oi: .075,
-            Ii: 5,
-            Si: !1,
+            hT: 30,
+            DT: .075,
+            oT: 5,
+            AT: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            Yi: "fa-solid fa-computer-mouse",
+            UU: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Ai: 3e3,
+            WU: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Pi: !0,
+            zU: !0,
             scale: 3,
             rotation: 15,
-            Wi: !1
+            MU: !1
           },
           gravityBar: {
-            Oi: 30,
-            Ui: .25,
-            Hi: 3,
-            ui: .8,
+            hT: 30,
+            nU: .25,
+            HU: 3,
+            kU: .8,
             gravity: 1,
-            ji: 1.5,
-            ki: 8,
-            mi: 4,
-            Si: !1,
+            jU: 1.5,
+            lU: 8,
+            LU: 4,
+            AT: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            qi: .15,
+            BU: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            Ci: 5,
-            Ei: 1200,
-            Xi: .15,
-            li: 3,
+            cU: 5,
+            vU: 1200,
+            fU: .15,
+            qU: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var fi = cp(322),
-          bi = cp(2028);
+        var FU = mT(351),
+          PU = mT(2111);
 
-        function ai(pp) {
-          return pp.startsWith("fa-")
+        function VU(TT) {
+          return TT.startsWith("fa-")
         }
-        const ni = {
+        const uU = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Fi = {
+          CU = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function gi(pp) {
-          return "string" === typeof pp ? "text" : "entityName" in pp || "translationKey" in pp ? "other" : (0, fi.Eb)(pp) ? "progressBar" : (0, fi.Cb)(pp) ? "keyBinding" : "icon" in pp ? "icon" : "str" in pp && "string" === typeof pp.str ? "text" : "other"
+        function rU(TT) {
+          return "string" === typeof TT ? "text" : "entityName" in TT || "translationKey" in TT ? "other" : (0, FU.kb)(TT) ? "progressBar" : (0, FU.gb)(TT) ? "keyBinding" : "icon" in TT ? "icon" : "str" in TT && "string" === typeof TT.str ? "text" : "other"
         }
-        const Gi = [{
+        const KU = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          ri = {
+          SU = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...Gi],
+            }, ...KU],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: bi.n
+                options: PU.l
               },
               isRequired: !0
-            }, ...Gi],
+            }, ...KU],
             other: []
           };
 
-        function Zi(pp) {
-          return "string" === typeof pp ? {
-            str: pp
-          } : pp
+        function GU(TT) {
+          return "string" === typeof TT ? {
+            str: TT
+          } : TT
         }
 
-        function zi(pp, ip) {
-          let cp = Zi(pp);
-          for (const Op of ip) cp = cp && "object" === typeof cp ? cp[Op] : void 0;
-          return cp
+        function NU(TT, UT) {
+          let mT = GU(TT);
+          for (const WT of UT) mT = mT && "object" === typeof mT ? mT[WT] : void 0;
+          return mT
         }
 
-        function si(pp, ip, cp) {
-          const Op = (pp, op) => {
-            var Ip;
-            const Sp = ip[op],
-              xp = {
-                ...pp
+        function EU(TT, UT, mT) {
+          const WT = (TT, zT) => {
+            var MT;
+            const gT = UT[zT],
+              nT = {
+                ...TT
               };
-            if (op === ip.length - 1) return void 0 === cp ? delete xp[Sp] : xp[Sp] = cp, xp;
-            const Lp = Op(null !== (Ip = pp[Sp]) && void 0 !== Ip ? Ip : {}, op + 1);
-            return 0 === Object.keys(Lp).length ? delete xp[Sp] : xp[Sp] = Lp, xp
+            if (zT === UT.length - 1) return void 0 === mT ? delete nT[gT] : nT[gT] = mT, nT;
+            const HT = WT(null !== (MT = TT[gT]) && void 0 !== MT ? MT : {}, zT + 1);
+            return 0 === Object.keys(HT).length ? delete nT[gT] : nT[gT] = HT, nT
           };
-          return function(pp) {
-            const ip = Object.keys(pp);
-            return "string" === typeof pp.str && 1 === ip.length ? pp.str : pp
-          }(Op(Zi(pp), 0))
+          return function(TT) {
+            const UT = Object.keys(TT);
+            return "string" === typeof TT.str && 1 === UT.length ? TT.str : TT
+          }(WT(GU(TT), 0))
         }
 
-        function Ki(pp, ip) {
-          const cp = gi(pp),
-            Op = ri[cp].find((pp => pp.path.join(".") === ip.join("."))),
-            op = null !== Op && void 0 !== Op && Op.isRequired && "other" !== cp ? zi(Fi[cp], ip) : void 0;
-          return si(pp, ip, op)
+        function hU(TT, UT) {
+          const mT = rU(TT),
+            WT = SU[mT].find((TT => TT.path.join(".") === UT.join("."))),
+            zT = null !== WT && void 0 !== WT && WT.isRequired && "other" !== mT ? NU(CU[mT], UT) : void 0;
+          return EU(TT, UT, zT)
         }
 
-        function Vi(pp) {
-          switch (gi(pp)) {
+        function DU(TT) {
+          switch (rU(TT)) {
             case "text":
-              return String(zi(pp, ["str"]));
+              return String(NU(TT, ["str"]));
             case "icon":
-              return String(zi(pp, ["icon"]));
+              return String(NU(TT, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(zi(pp,["progress"])))}%`;
+              return `${Math.round(100*Number(NU(TT,["progress"])))}%`;
             case "keyBinding":
-              return String(zi(pp, ["action"]));
+              return String(NU(TT, ["action"]));
             case "other":
-              return JSON.stringify(pp)
+              return JSON.stringify(TT)
           }
         }
-        const pc = /^[A-Za-z_$][\w$]*$/;
+        const oU = /^[A-Za-z_$][\w$]*$/;
 
-        function ic(pp) {
-          if (Array.isArray(pp)) return `[${pp.map(ic).join(", ")}]`;
-          if (pp && "object" === typeof pp) {
-            const ip = Object.entries(pp).map((pp => {
-              let [ip, cp] = pp;
-              return `${pc.test(ip)?ip:JSON.stringify(ip)}: ${ic(cp)}`
+        function AU(TT) {
+          if (Array.isArray(TT)) return `[${TT.map(AU).join(", ")}]`;
+          if (TT && "object" === typeof TT) {
+            const UT = Object.entries(TT).map((TT => {
+              let [UT, mT] = TT;
+              return `${oU.test(UT)?UT:JSON.stringify(UT)}: ${AU(mT)}`
             }));
-            return 0 === ip.length ? "{}" : `{ ${ip.join(", ")} }`
+            return 0 === UT.length ? "{}" : `{ ${UT.join(", ")} }`
           }
-          return JSON.stringify(pp)
+          return JSON.stringify(TT)
         }
 
-        function cc(pp) {
-          const ip = pp.map(ic),
-            cp = `[${ip.join(", ")}]`;
-          return cp.length <= 60 ? cp : `[\n${ip.map((pp=>`    ${pp},`)).join("\n")}\n]`
+        function RU(TT) {
+          const UT = TT.map(AU),
+            mT = `[${UT.join(", ")}]`;
+          return mT.length <= 60 ? mT : `[\n${UT.map((TT=>`    ${TT},`)).join("\n")}\n]`
         }
-        const Oc = {
+        const Tm = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function oc(pp) {
-          let ip = "";
-          for (let op = 0; op < pp.length; op++) {
-            const Ip = pp[op];
-            if ("\\" === Ip) {
-              var cp;
-              const Op = null !== (cp = pp[op + 1]) && void 0 !== cp ? cp : "";
-              ip += "'" === Op ? "'" : Ip + Op, op++
-            } else if ('"' === Ip) ip += '\\"';
+        function Um(TT) {
+          let UT = "";
+          for (let zT = 0; zT < TT.length; zT++) {
+            const MT = TT[zT];
+            if ("\\" === MT) {
+              var mT;
+              const WT = null !== (mT = TT[zT + 1]) && void 0 !== mT ? mT : "";
+              UT += "'" === WT ? "'" : MT + WT, zT++
+            } else if ('"' === MT) UT += '\\"';
             else {
-              var Op;
-              ip += null !== (Op = Oc[Ip]) && void 0 !== Op ? Op : Ip
+              var WT;
+              UT += null !== (WT = Tm[MT]) && void 0 !== WT ? WT : MT
             }
           }
-          return `"${ip}"`
+          return `"${UT}"`
         }
 
-        function Ic(pp) {
-          if ("string" === typeof pp) return !0;
-          if (!pp || "object" !== typeof pp || Array.isArray(pp)) return !1;
-          const ip = pp;
-          return "ProgressBar" === ip.type ? "number" === typeof ip.progress : "StyledKeyBinding" === ip.type ? bi.n.includes(ip.action) : "string" === typeof ip.icon || "string" === typeof ip.str || "string" === typeof ip.entityName || "string" === typeof ip.translationKey
+        function mm(TT) {
+          if ("string" === typeof TT) return !0;
+          if (!TT || "object" !== typeof TT || Array.isArray(TT)) return !1;
+          const UT = TT;
+          return "ProgressBar" === UT.type ? "number" === typeof UT.progress : "StyledKeyBinding" === UT.type ? PU.l.includes(UT.action) : "string" === typeof UT.icon || "string" === typeof UT.str || "string" === typeof UT.entityName || "string" === typeof UT.translationKey
         }
 
-        function Sc(pp) {
-          let ip;
+        function Wm(TT) {
+          let UT;
           try {
-            ip = function(pp) {
-              let ip = "",
-                cp = "",
-                Op = 0;
-              const op = () => {
-                ip += cp.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), cp = ""
+            UT = function(TT) {
+              let UT = "",
+                mT = "",
+                WT = 0;
+              const zT = () => {
+                UT += mT.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), mT = ""
               };
-              for (; Op < pp.length;) {
-                const Ip = pp.slice(Op).search(/["'`]|\/\//);
-                if (-1 === Ip) {
-                  cp += pp.slice(Op);
+              for (; WT < TT.length;) {
+                const MT = TT.slice(WT).search(/["'`]|\/\//);
+                if (-1 === MT) {
+                  mT += TT.slice(WT);
                   break
                 }
-                cp += pp.slice(Op, Op + Ip);
-                const Sp = Op + Ip,
-                  xp = pp[Sp];
-                if ("/" === xp) {
-                  const ip = pp.indexOf("\n", Sp);
-                  Op = -1 === ip ? pp.length : ip;
+                mT += TT.slice(WT, WT + MT);
+                const gT = WT + MT,
+                  nT = TT[gT];
+                if ("/" === nT) {
+                  const UT = TT.indexOf("\n", gT);
+                  WT = -1 === UT ? TT.length : UT;
                   continue
                 }
-                if (op(), "`" === xp) throw new Error("Use quotes rather than template strings.");
-                let Lp = Sp + 1;
-                for (; Lp < pp.length && pp[Lp] !== xp;) Lp += "\\" === pp[Lp] ? 2 : 1;
-                if (Lp >= pp.length) throw new Error("A string is missing its closing quote.");
-                const Yp = pp.slice(Sp + 1, Lp);
-                ip += oc(Yp), Op = Lp + 1
+                if (zT(), "`" === nT) throw new Error("Use quotes rather than template strings.");
+                let HT = gT + 1;
+                for (; HT < TT.length && TT[HT] !== nT;) HT += "\\" === TT[HT] ? 2 : 1;
+                if (HT >= TT.length) throw new Error("A string is missing its closing quote.");
+                const kT = TT.slice(gT + 1, HT);
+                UT += Um(kT), WT = HT + 1
               }
-              return op(), JSON.parse(ip)
-            }(pp.trim())
-          } catch (Op) {
+              return zT(), JSON.parse(UT)
+            }(TT.trim())
+          } catch (WT) {
             return {
               parts: null,
-              error: Op instanceof SyntaxError ? "This isn't a valid array yet." : Op.message
+              error: WT instanceof SyntaxError ? "This isn't a valid array yet." : WT.message
             }
           }
-          if (!Array.isArray(ip)) return {
+          if (!Array.isArray(UT)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const cp = ip.findIndex((pp => !Ic(pp)));
-          return -1 !== cp ? {
+          const mT = UT.findIndex((TT => !mm(TT)));
+          return -1 !== mT ? {
             parts: null,
-            error: `Part ${cp+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${mT+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: ip,
+            parts: UT,
             error: null
           }
         }
-        const xc = 1 / Qi.g.clientTicksPerSecond,
-          Lc = 700,
-          Yc = {
+        const zm = 1 / yU.f.clientTicksPerSecond,
+          Mm = 700,
+          gm = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Dc = {
-            progressBar: Ti.progressBar.Yi,
-            timedClick: Ti.timedClick.icon,
-            gravityBar: Ti.gravityBar.icon,
-            precisionBar: Ti.precisionBar.icon,
-            rhythmClick: Ti.rhythmClick.icon
+          nm = {
+            progressBar: sU.progressBar.UU,
+            timedClick: sU.timedClick.icon,
+            gravityBar: sU.gravityBar.icon,
+            precisionBar: sU.precisionBar.icon,
+            rhythmClick: sU.rhythmClick.icon
           };
 
-        function Ac(pp) {
+        function Hm(TT) {
           let {
-            type: ip
-          } = pp;
-          const [cp, op] = (0, Op.useState)("ready"), [Sp, xp] = (0, Op.useState)(1), [Lp, Yp] = (0, Op.useState)(!0), Dp = (0, Op.useRef)(null), Ap = (0, Op.useRef)(null), Pp = (0, Op.useRef)(null), Wp = (0, Op.useRef)(new Set), Up = (0, Op.useRef)(!1), vp = Dc[ip], tp = (0, Op.useMemo)((() => ({
+            type: UT
+          } = TT;
+          const [mT, zT] = (0, WT.useState)("ready"), [gT, nT] = (0, WT.useState)(1), [HT, kT] = (0, WT.useState)(!0), jT = (0, WT.useRef)(null), lT = (0, WT.useRef)(null), LT = (0, WT.useRef)(null), pT = (0, WT.useRef)(new Set), ZT = (0, WT.useRef)(!1), vT = nm[UT], fT = (0, WT.useMemo)((() => ({
             getState: () => {
-              var pp, ip;
-              return null !== (pp = null === (ip = Pp.current) || void 0 === ip ? void 0 : ip.getState()) && void 0 !== pp ? pp : Yc
+              var TT, UT;
+              return null !== (TT = null === (UT = LT.current) || void 0 === UT ? void 0 : UT.getState()) && void 0 !== TT ? TT : gm
             },
-            onFrame: pp => (Wp.current.add(pp), () => {
-              Wp.current.delete(pp)
+            onFrame: TT => (pT.current.add(TT), () => {
+              pT.current.delete(TT)
             })
           })), []);
-          (0, Op.useEffect)((() => {
-            const pp = Dp.current,
-              ip = Ap.current;
-            if (!pp || !ip) return;
-            const cp = new ResizeObserver((() => {
-              xp(pp.clientWidth / Math.max(1, ip.offsetWidth))
+          (0, WT.useEffect)((() => {
+            const TT = jT.current,
+              UT = lT.current;
+            if (!TT || !UT) return;
+            const mT = new ResizeObserver((() => {
+              nT(TT.clientWidth / Math.max(1, UT.offsetWidth))
             }));
-            return cp.observe(pp), () => {
-              cp.disconnect()
+            return mT.observe(TT), () => {
+              mT.disconnect()
             }
-          }), []), (0, Op.useEffect)((() => {
-            var pp;
-            if ("playing" !== cp) return;
-            let Op = !1;
-            const Ip = new Ni.e[ip](Ti[ip], (pp => {
-              Op = !0, Yp(!1), op(pp ? "succeeded" : "failed")
+          }), []), (0, WT.useEffect)((() => {
+            var TT;
+            if ("playing" !== mT) return;
+            let WT = !1;
+            const MT = new QU.e[UT](sU[UT], (TT => {
+              WT = !0, kT(!1), zT(TT ? "succeeded" : "failed")
             }), (() => {}));
-            Pp.current = Ip;
-            let Sp = 0,
-              xp = performance.now(),
-              Lp = requestAnimationFrame((function pp(ip) {
-                for (Sp += Math.min(.25, (ip - xp) / 1e3), xp = ip; Sp >= xc && !Op;) Sp -= xc, Ip.handleTick(xc);
-                for (const cp of Wp.current) cp();
-                Op || (Lp = requestAnimationFrame(pp))
+            LT.current = MT;
+            let gT = 0,
+              nT = performance.now(),
+              HT = requestAnimationFrame((function TT(UT) {
+                for (gT += Math.min(.25, (UT - nT) / 1e3), nT = UT; gT >= zm && !WT;) gT -= zm, MT.handleTick(zm);
+                for (const mT of pT.current) mT();
+                WT || (HT = requestAnimationFrame(TT))
               }));
-            return null === (pp = Dp.current) || void 0 === pp || pp.focus({
+            return null === (TT = jT.current) || void 0 === TT || TT.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(Lp), Ip.tearDown(), Pp.current = null, Up.current = !1
+              cancelAnimationFrame(HT), MT.tearDown(), LT.current = null, ZT.current = !1
             }
-          }), [cp, ip]), (0, Op.useEffect)((() => {
-            if (Lp) return;
-            const pp = setTimeout((() => {
-              Yp(!0)
-            }), Lc);
+          }), [mT, UT]), (0, WT.useEffect)((() => {
+            if (HT) return;
+            const TT = setTimeout((() => {
+              kT(!0)
+            }), Mm);
             return () => {
-              clearTimeout(pp)
+              clearTimeout(TT)
             }
-          }), [Lp]);
-          const Hp = pp => {
-            var ip;
-            "playing" === cp && Up.current !== pp && (Up.current = pp, null === (ip = Pp.current) || void 0 === ip || ip.handleMouseInput(pp))
+          }), [HT]);
+          const qT = TT => {
+            var UT;
+            "playing" === mT && ZT.current !== TT && (ZT.current = TT, null === (UT = LT.current) || void 0 === UT || UT.handleMouseInput(TT))
           };
-          return (0, yp.jsxs)("div", {
+          return (0, BT.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, yp.jsxs)("div", {
-              ref: Dp,
-              className: Ip()("DocsQteStage", {
-                Playing: "playing" === cp
+            children: [(0, BT.jsxs)("div", {
+              ref: jT,
+              className: MT()("DocsQteStage", {
+                Playing: "playing" === mT
               }),
-              tabIndex: "playing" === cp ? 0 : -1,
-              role: "playing" === cp ? "button" : void 0,
-              "aria-label": "playing" === cp ? `${ip} quick time event: click or press Space` : void 0,
-              onPointerDown: pp => {
-                0 === pp.button && Hp(!0)
+              tabIndex: "playing" === mT ? 0 : -1,
+              role: "playing" === mT ? "button" : void 0,
+              "aria-label": "playing" === mT ? `${UT} quick time event: click or press Space` : void 0,
+              onPointerDown: TT => {
+                0 === TT.button && qT(!0)
               },
               onPointerUp: () => {
-                Hp(!1)
+                qT(!1)
               },
               onPointerLeave: () => {
-                Hp(!1)
+                qT(!1)
               },
               onPointerCancel: () => {
-                Hp(!1)
+                qT(!1)
               },
-              onKeyDown: pp => {
-                "playing" !== cp || " " !== pp.key && "Enter" !== pp.key || (pp.preventDefault(), Hp(!0))
+              onKeyDown: TT => {
+                "playing" !== mT || " " !== TT.key && "Enter" !== TT.key || (TT.preventDefault(), qT(!0))
               },
-              onKeyUp: pp => {
-                "playing" !== cp || " " !== pp.key && "Enter" !== pp.key || Hp(!1)
+              onKeyUp: TT => {
+                "playing" !== mT || " " !== TT.key && "Enter" !== TT.key || qT(!1)
               },
-              children: [(0, yp.jsx)("div", {
-                ref: Ap,
+              children: [(0, BT.jsx)("div", {
+                ref: lT,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${Sp})`
+                  transform: `scale(${gT})`
                 },
-                children: "playing" === cp && (0, yp.jsx)(Bi.b.Provider, {
-                  value: tp,
-                  children: (0, yp.jsx)(Ji.c, {
+                children: "playing" === mT && (0, BT.jsx)(IU.c.Provider, {
+                  value: fT,
+                  children: (0, BT.jsx)(XU.d, {
                     qte: {
-                      type: ip,
-                      parameters: Ti[ip]
+                      type: UT,
+                      parameters: sU[UT]
                     }
                   })
                 })
-              }), "playing" !== cp && (0, yp.jsxs)("div", {
+              }), "playing" !== mT && (0, BT.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== cp && (0, yp.jsxs)("div", {
-                  className: Ip()("DocsQteResult", "succeeded" === cp ? "Succeeded" : "Failed"),
-                  children: [(0, yp.jsx)(wp, {
-                    name: "succeeded" === cp ? "check" : "cross",
+                children: ["ready" !== mT && (0, BT.jsxs)("div", {
+                  className: MT()("DocsQteResult", "succeeded" === mT ? "Succeeded" : "Failed"),
+                  children: [(0, BT.jsx)(cT, {
+                    name: "succeeded" === mT ? "check" : "cross",
                     isTinted: !0
-                  }), (0, yp.jsx)("span", {
-                    children: "succeeded" === cp ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, BT.jsx)("span", {
+                    children: "succeeded" === mT ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, yp.jsxs)("button", {
+                }), (0, BT.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !Lp,
+                  disabled: !HT,
                   onClick: () => {
-                    op("playing")
+                    zT("playing")
                   },
-                  children: [(0, yp.jsx)(wp, {
-                    name: "ready" === cp ? "play" : "replay"
-                  }), (0, yp.jsx)("span", {
-                    children: "ready" === cp ? `Try ${ip}` : "Play again"
+                  children: [(0, BT.jsx)(cT, {
+                    name: "ready" === mT ? "play" : "replay"
+                  }), (0, BT.jsx)("span", {
+                    children: "ready" === mT ? `Try ${UT}` : "Play again"
                   })]
                 })]
               })]
-            }), vp && !ai(vp) && (0, yp.jsxs)("p", {
+            }), vT && !VU(vT) && (0, BT.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, yp.jsx)("code", {
-                children: vp
+              children: ["The ", (0, BT.jsx)("code", {
+                children: vT
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Pc(pp) {
+        function km(TT) {
           let {
-            level: ip,
-            text: cp,
-            anchor: Op,
-            className: op
-          } = pp;
-          const Sp = `h${Math.min(ip,6)}`;
-          return (0, yp.jsxs)(Sp, {
-                id: Op,
-                className: Ip()("DocsHeading", op),
-                children: [(0, yp.jsx)(ki, {
-                      text: cp
-                    }), (0, yp.jsx)("a", {
+            level: UT,
+            text: mT,
+            anchor: WT,
+            className: zT
+          } = TT;
+          const gT = `h${Math.min(UT,6)}`;
+          return (0, BT.jsxs)(gT, {
+                id: WT,
+                className: MT()("DocsHeading", zT),
+                children: [(0, BT.jsx)(OU, {
+                      text: mT
+                    }), (0, BT.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Op}`,
-                        "aria-label": `Link to ${cp.replace(/`/g,"")}`,children:"#"})]})}function Wc(pp){let{items:ip,ordered:cp}=pp;const Op=cp?"ol":"ul";return(0,yp.jsx)(Op,{className:"DocsList",children:ip.map(((pp,ip)=>(0,yp.jsxs)("li",{children:[(0,yp.jsx)(ki,{text:pp.text}),pp.children.length>0&&(0,yp.jsx)(Wc,{items:pp.children,ordered:cp})]},ip)))})}function yc(pp){const ip=pp[0],cp="paragraph"===(null===ip||void 0===ip?void 0:ip.kind)?ip.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(cp)?"warning":/^\*\*(tip|prefer)/.test(cp)?"tip":"note"}function Uc(pp){let{block:ip}=pp;switch(ip.kind){case"heading":return(0,yp.jsx)(Pc,{level:ip.level,text:ip.text,anchor:ip.anchor});case"paragraph":return(0,yp.jsx)("p",{children:(0,yp.jsx)(ki,{text:ip.text})});case"code":{const pp="ts"===ip.lang?function(pp){const ip=pp.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return ip&&Object.hasOwn(Ti,ip[1])?ip[1]:null}(ip.code):null;return(0,yp.jsxs)(yp.Fragment,{children:[(0,yp.jsx)(kp,{code:ip.code,lang:ip.lang}),pp&&(0,yp.jsx)(Ac,{type:pp})]})}case"table":return(0,yp.jsx)("div",{className:"DocsTableScroll",children:(0,yp.jsxs)("table",{className:"DocsTable",children:[(0,yp.jsx)("thead",{children:(0,yp.jsx)("tr",{children:ip.header.map(((pp,ip)=>(0,yp.jsx)("th",{children:(0,yp.jsx)(ki,{text:pp})},ip)))})}),(0,yp.jsx)("tbody",{children:ip.rows.map(((pp,ip)=>(0,yp.jsx)("tr",{children:pp.map(((pp,ip)=>(0,yp.jsx)("td",{children:(0,yp.jsx)(ki,{text:pp})},ip)))},ip)))})]})});case"list":return(0,yp.jsx)(Wc,{items:ip.items,ordered:ip.ordered});case"quote":return(0,yp.jsx)("aside",{className:Ip()("DocsCallout",yc(ip.blocks)),children:(0,yp.jsx)(wc,{blocks:ip.blocks})});case"rule":return(0,yp.jsx)("hr",{className:"DocsRule"})}}function wc(pp){let{blocks:ip}=pp;return(0,yp.jsx)(yp.Fragment,{children:ip.map(((pp,ip)=>(0,yp.jsx)(Uc,{block:pp},ip)))})}var vc=cp(4861),tc=cp(4868);function Hc(pp){return"blocks"===pp||"items"===pp}const dc=new Map;function ec(pp){let ip=dc.get(pp);return ip||(ip=function(pp){const ip={entries:[],legend:[],notes:[],examples:[]};let cp=!1;for(const Ip of pp.split(/\r?\n/).slice(1)){if(Ip.startsWith("#")){const pp=Ip.replace(/^# ?/,""),Op=pp.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Op?ip.legend.push({code:Op[1],meaning:Op[2],usage:Op[3].trim()}):/^Examples:/.test(pp.trim())?cp=!0:cp&&pp.trim()?ip.examples.push(pp.trim()):pp.trim()&&!/^\s/.test(pp)&&ip.notes.push(pp.trim());continue}const pp=Ip.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Op,op;pp&&ip.entries.push({name:pp[1],variants:null!==(Op=null===(op=pp[2])||void 0===op?void 0:op.split(","))&&void 0!==Op?Op:[]})}return ip}("blocks"===pp?vc:tc),dc.set(pp,ip)),ip}function uc(pp){let{className:ip,value:cp,placeholder:Op,label:op,onChange:Ip,count:Sp,children:xp}=pp;return(0,yp.jsxs)("div",{className:ip,children:[(0,yp.jsx)(wp,{name:"magnifying-glass"}),(0,yp.jsx)("input",{type:"search",value:cp,placeholder:Op,"aria-label":op,onChange:pp=>{Ip(pp.target.value)}}),xp,Sp&&(0,yp.jsxs)("span",{className:"DocsFilterCount",children:[Sp.visible," of ",Sp.total]})]})}var jc=cp(1060);function kc(pp){const ip=pp.trim().match(/^(` {
+                        href: `#${WT}`,
+                        "aria-label": `Link to ${mT.replace(/`/g,"")}`,children:"#"})]})}function jm(TT){let{items:UT,ordered:mT}=TT;const WT=mT?"ol":"ul";return(0,BT.jsx)(WT,{className:"DocsList",children:UT.map(((TT,UT)=>(0,BT.jsxs)("li",{children:[(0,BT.jsx)(OU,{text:TT.text}),TT.children.length>0&&(0,BT.jsx)(jm,{items:TT.children,ordered:mT})]},UT)))})}function lm(TT){const UT=TT[0],mT="paragraph"===(null===UT||void 0===UT?void 0:UT.kind)?UT.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(mT)?"warning":/^\*\*(tip|prefer)/.test(mT)?"tip":"note"}function Lm(TT){let{block:UT}=TT;switch(UT.kind){case"heading":return(0,BT.jsx)(km,{level:UT.level,text:UT.text,anchor:UT.anchor});case"paragraph":return(0,BT.jsx)("p",{children:(0,BT.jsx)(OU,{text:UT.text})});case"code":{const TT="ts"===UT.lang?function(TT){const UT=TT.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return UT&&Object.hasOwn(sU,UT[1])?UT[1]:null}(UT.code):null;return(0,BT.jsxs)(BT.Fragment,{children:[(0,BT.jsx)(eT,{code:UT.code,lang:UT.lang}),TT&&(0,BT.jsx)(Hm,{type:TT})]})}case"table":return(0,BT.jsx)("div",{className:"DocsTableScroll",children:(0,BT.jsxs)("table",{className:"DocsTable",children:[(0,BT.jsx)("thead",{children:(0,BT.jsx)("tr",{children:UT.header.map(((TT,UT)=>(0,BT.jsx)("th",{children:(0,BT.jsx)(OU,{text:TT})},UT)))})}),(0,BT.jsx)("tbody",{children:UT.rows.map(((TT,UT)=>(0,BT.jsx)("tr",{children:TT.map(((TT,UT)=>(0,BT.jsx)("td",{children:(0,BT.jsx)(OU,{text:TT})},UT)))},UT)))})]})});case"list":return(0,BT.jsx)(jm,{items:UT.items,ordered:UT.ordered});case"quote":return(0,BT.jsx)("aside",{className:MT()("DocsCallout",lm(UT.blocks)),children:(0,BT.jsx)(pm,{blocks:UT.blocks})});case"rule":return(0,BT.jsx)("hr",{className:"DocsRule"})}}function pm(TT){let{blocks:UT}=TT;return(0,BT.jsx)(BT.Fragment,{children:UT.map(((TT,UT)=>(0,BT.jsx)(Lm,{block:TT},UT)))})}var Bm=mT(4856),Zm=mT(4859);function cm(TT){return"blocks"===TT||"items"===TT}const fm=new Map;function qm(TT){let UT=fm.get(TT);return UT||(UT=function(TT){const UT={entries:[],legend:[],notes:[],examples:[]};let mT=!1;for(const MT of TT.split(/\r?\n/).slice(1)){if(MT.startsWith("#")){const TT=MT.replace(/^# ?/,""),WT=TT.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);WT?UT.legend.push({code:WT[1],meaning:WT[2],usage:WT[3].trim()}):/^Examples:/.test(TT.trim())?mT=!0:mT&&TT.trim()?UT.examples.push(TT.trim()):TT.trim()&&!/^\s/.test(TT)&&UT.notes.push(TT.trim());continue}const TT=MT.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var WT,zT;TT&&UT.entries.push({name:TT[1],variants:null!==(WT=null===(zT=TT[2])||void 0===zT?void 0:zT.split(","))&&void 0!==WT?WT:[]})}return UT}("blocks"===TT?Bm:Zm),fm.set(TT,UT)),UT}function im(TT){let{className:UT,value:mT,placeholder:WT,label:zT,onChange:MT,count:gT,children:nT}=TT;return(0,BT.jsxs)("div",{className:UT,children:[(0,BT.jsx)(cT,{name:"magnifying-glass"}),(0,BT.jsx)("input",{type:"search",value:mT,placeholder:WT,"aria-label":zT,onChange:TT=>{MT(TT.target.value)}}),nT,gT&&(0,BT.jsxs)("span",{className:"DocsFilterCount",children:[gT.visible," of ",gT.total]})]})}var bm=mT(1135);function Om(TT){const UT=TT.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return ip?ip[2]:null}function mc(pp){return"paragraph"===pp.kind&&""===pp.text.trim()}function Rc(pp){const ip={name:pp.heading.text,description:[],params:[],returns:null};let cp="description";for(const op of pp.blocks)if(!mc(op))if("heading"===op.kind&&/^Parameters:?$/.test(op.text))cp="params";else if("heading"===op.kind&&/^Returns:?$/.test(op.text))cp="returns",ip.returns={type:"",description:[]};else if("params"!==cp||"table"!==op.kind){if("returns"===cp&&"paragraph"===op.kind&&""===ip.returns.type){const pp=kc(op.text);if(null!==pp){ip.returns.type=pp.replaceAll("\\|","|");continue}}"returns"===cp?ip.returns.description.push(op):ip.description.push(op)}else for(const[pp,cp,Ip]of op.rows){var Op;ip.params.push({name:pp,type:null!==(Op=kc(cp))&&void 0!==Op?Op:cp,description:null!==Ip&&void 0!==Ip?Ip:""})}return ip}const qc=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Mc(pp){return pp.filter((pp=>!mc(pp)))}const Cc=/^[\w][\w .'&!:()-]*$/,Ec=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Xc(pp){var ip;if("code"===pp.kind&&"text"===pp.lang){const ip=pp.code.split("\n").map((pp=>pp.trim())).filter(Boolean);return ip.length>0&&ip.every((pp=>Cc.test(pp)))?ip.map((pp=>({name:pp}))):null}return"paragraph"===pp.kind&&Ec.test(pp.text.trim())?[...pp.text.matchAll(/`([ ^ `]+)` / g)].flatMap((pp => pp[1].split(/,\s*/).map((pp => ({
-                              name: pp.trim()
-                            }))))): "table" === pp.kind && null !== (ip = pp.header[0]) && void 0 !== ip && ip.startsWith("Song") ? pp.rows.map((pp => {
-                              let [ip, cp] = pp;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return UT?UT[2]:null}function em(TT){return"paragraph"===TT.kind&&""===TT.text.trim()}function Ym(TT){const UT={name:TT.heading.text,description:[],params:[],returns:null};let mT="description";for(const zT of TT.blocks)if(!em(zT))if("heading"===zT.kind&&/^Parameters:?$/.test(zT.text))mT="params";else if("heading"===zT.kind&&/^Returns:?$/.test(zT.text))mT="returns",UT.returns={type:"",description:[]};else if("params"!==mT||"table"!==zT.kind){if("returns"===mT&&"paragraph"===zT.kind&&""===UT.returns.type){const TT=Om(zT.text);if(null!==TT){UT.returns.type=TT.replaceAll("\\|","|");continue}}"returns"===mT?UT.returns.description.push(zT):UT.description.push(zT)}else for(const[TT,mT,MT]of zT.rows){var WT;UT.params.push({name:TT,type:null!==(WT=Om(mT))&&void 0!==WT?WT:mT,description:null!==MT&&void 0!==MT?MT:""})}return UT}const Jm=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function xm(TT){return TT.filter((TT=>!em(TT)))}const dm=/^[\w][\w .'&!:()-]*$/,wm=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function tm(TT){var UT;if("code"===TT.kind&&"text"===TT.lang){const UT=TT.code.split("\n").map((TT=>TT.trim())).filter(Boolean);return UT.length>0&&UT.every((TT=>dm.test(TT)))?UT.map((TT=>({name:TT}))):null}return"paragraph"===TT.kind&&wm.test(TT.text.trim())?[...TT.text.matchAll(/`([ ^ `]+)` / g)].flatMap((TT => TT[1].split(/,\s*/).map((TT => ({
+                              name: TT.trim()
+                            }))))): "table" === TT.kind && null !== (UT = TT.header[0]) && void 0 !== UT && UT.startsWith("Song") ? TT.rows.map((TT => {
+                              let [UT, mT] = TT;
                               return {
-                                name: ip.replace(/`/g, ""),
-                                caption: cp
+                                name: UT.replace(/`/g, ""),
+                                caption: mT
                               }
                             })) : null
                           }
 
-                          function lc(pp) {
-                            const ip = [];
-                            for (const cp of pp) {
-                              const pp = Xc(cp),
-                                Op = ip.at(-1),
-                                op = "table" === cp.kind;
-                              pp ? "names" === (null === Op || void 0 === Op ? void 0 : Op.kind) && Op.isSongs === op ? Op.names.push(...pp) : ip.push({
+                          function am(TT) {
+                            const UT = [];
+                            for (const mT of TT) {
+                              const TT = tm(mT),
+                                WT = UT.at(-1),
+                                zT = "table" === mT.kind;
+                              TT ? "names" === (null === WT || void 0 === WT ? void 0 : WT.kind) && WT.isSongs === zT ? WT.names.push(...TT) : UT.push({
                                 kind: "names",
-                                names: pp,
-                                isSongs: op
-                              }) : ip.push({
+                                names: TT,
+                                isSongs: zT
+                              }) : UT.push({
                                 kind: "block",
-                                block: cp
+                                block: mT
                               })
                             }
-                            return ip
+                            return UT
                           }
-                          const Qc = {
+                          const ym = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Jc(pp, ip) {
-                            return `${Qc[pp]}-${(0,mp.s)(ip)}`
+                          function Xm(TT, UT) {
+                            return `${ym[TT]}-${(0,YT.w)(UT)}`
                           }
-                          const Bc = new WeakMap;
+                          const Im = new WeakMap;
 
-                          function Nc(pp, ip, cp) {
-                            let Op = Bc.get(ip);
-                            if (!Op) {
-                              Op = new Map;
-                              const cp = new Set;
-                              for (const op of (0, mp.t)(ip)) {
-                                const ip = lc(Mc(op.blocks)).map((ip => {
-                                  if ("block" === ip.kind) return ip;
+                          function Qm(TT, UT, mT) {
+                            let WT = Im.get(UT);
+                            if (!WT) {
+                              WT = new Map;
+                              const mT = new Set;
+                              for (const zT of (0, YT.A)(UT)) {
+                                const UT = am(xm(zT.blocks)).map((UT => {
+                                  if ("block" === UT.kind) return UT;
                                   return {
                                     kind: "names",
-                                    names: ip.names.map((ip => {
-                                      var Op, Ip;
-                                      const Sp = Jc(pp, ip.name);
-                                      let xp = Sp;
-                                      for (let pp = 2; cp.has(xp); pp++) xp = `${Sp}-${pp}`;
-                                      return cp.add(xp), {
-                                        ...ip,
-                                        anchor: xp,
-                                        heading: null !== (Op = null === (Ip = op.heading) || void 0 === Ip ? void 0 : Ip.text) && void 0 !== Op ? Op : ""
+                                    names: UT.names.map((UT => {
+                                      var WT, MT;
+                                      const gT = Xm(TT, UT.name);
+                                      let nT = gT;
+                                      for (let TT = 2; mT.has(nT); TT++) nT = `${gT}-${TT}`;
+                                      return mT.add(nT), {
+                                        ...UT,
+                                        anchor: nT,
+                                        heading: null !== (WT = null === (MT = zT.heading) || void 0 === MT ? void 0 : MT.text) && void 0 !== WT ? WT : ""
                                       }
                                     })),
-                                    isSongs: ip.isSongs
+                                    isSongs: UT.isSongs
                                   }
                                 }));
-                                Op.set(op.blocks, ip)
+                                WT.set(zT.blocks, UT)
                               }
-                              Bc.set(ip, Op)
+                              Im.set(UT, WT)
                             }
-                            const op = Op.get(cp);
-                            if (!op) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return op
+                            const zT = WT.get(mT);
+                            if (!zT) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return zT
                           }
-                          const Tc = "/textures/docs/skinPreviews",
-                            fc = [{
+                          const sm = "/textures/docs/skinPreviews",
+                            Fm = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var bc = cp(4317),
-                            hc = cp(4341);
+                          var Pm = mT(4311),
+                            Vm = mT(4328);
 
-                          function ac(pp) {
-                            return Object.hasOwn(bc.f, pp) ? bc.f[pp] : null
+                          function um(TT) {
+                            return Object.hasOwn(Pm.c, TT) ? Pm.c[TT] : null
                           }
-                          const nc = {
+                          const Cm = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: hc.g.Standard
+                            blendMode: Vm.e.Standard
                           };
 
-                          function Fc(pp, ip, cp) {
-                            return ip + (cp - ip) * pp()
+                          function rm(TT, UT, mT) {
+                            return UT + (mT - UT) * TT()
                           }
 
-                          function gc(pp, ip, cp) {
-                            return pp + (ip - pp) * cp
+                          function Km(TT, UT, mT) {
+                            return TT + (UT - TT) * mT
                           }
 
-                          function Gc(pp) {
-                            return pp.length > 0 && "timeFraction" in pp[0]
+                          function Sm(TT) {
+                            return TT.length > 0 && "timeFraction" in TT[0]
                           }
 
-                          function rc(pp, ip) {
-                            if (0 === pp.colorGradients.length) return [{
+                          function Gm(TT, UT) {
+                            if (0 === TT.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Gc(pp.colorGradients)) {
-                              const cp = pp.colorGradients,
+                            if (!Sm(TT.colorGradients)) {
+                              const mT = TT.colorGradients,
                                 {
-                                  color: Op
-                                } = cp[Math.floor(ip() * cp.length) % cp.length];
+                                  color: WT
+                                } = mT[Math.floor(UT() * mT.length) % mT.length];
                               return [{
                                 at: 0,
-                                colour: [Op[0] / 255, Op[1] / 255, Op[2] / 255, 1]
+                                colour: [WT[0] / 255, WT[1] / 255, WT[2] / 255, 1]
                               }]
                             }
-                            return [...pp.colorGradients].sort(((pp, ip) => pp.timeFraction - ip.timeFraction)).map((pp => {
-                              var cp, Op, op;
-                              const Ip = pp.minColor,
-                                Sp = null !== (cp = pp.maxColor) && void 0 !== cp ? cp : Ip,
-                                xp = ip(),
-                                Lp = [gc(Ip[0], Sp[0], xp) / 255, gc(Ip[1], Sp[1], xp) / 255, gc(Ip[2], Sp[2], xp) / 255, gc(null !== (Op = Ip[3]) && void 0 !== Op ? Op : 1, null !== (op = Sp[3]) && void 0 !== op ? op : 1, xp)];
+                            return [...TT.colorGradients].sort(((TT, UT) => TT.timeFraction - UT.timeFraction)).map((TT => {
+                              var mT, WT, zT;
+                              const MT = TT.minColor,
+                                gT = null !== (mT = TT.maxColor) && void 0 !== mT ? mT : MT,
+                                nT = UT(),
+                                HT = [Km(MT[0], gT[0], nT) / 255, Km(MT[1], gT[1], nT) / 255, Km(MT[2], gT[2], nT) / 255, Km(null !== (WT = MT[3]) && void 0 !== WT ? WT : 1, null !== (zT = gT[3]) && void 0 !== zT ? zT : 1, nT)];
                               return {
-                                at: pp.timeFraction,
-                                colour: Lp
+                                at: TT.timeFraction,
+                                colour: HT
                               }
                             }))
                           }
 
-                          function Zc(pp, ip, cp, Op) {
-                            const op = Fc(Op, pp.minEmitPower, pp.maxEmitPower),
-                              Ip = ip => Fc(Op, Math.min(pp.dir1[ip], pp.dir2[ip]), Math.max(pp.dir1[ip], pp.dir2[ip])) * op,
-                              Sp = [...pp.velocityGradients].sort(((pp, ip) => pp.timeFraction - ip.timeFraction)).map((pp => ({
-                                at: pp.timeFraction,
-                                factor: Fc(Op, pp.factor, pp.factor2)
+                          function Nm(TT, UT, mT, WT) {
+                            const zT = rm(WT, TT.minEmitPower, TT.maxEmitPower),
+                              MT = UT => rm(WT, Math.min(TT.dir1[UT], TT.dir2[UT]), Math.max(TT.dir1[UT], TT.dir2[UT])) * zT,
+                              gT = [...TT.velocityGradients].sort(((TT, UT) => TT.timeFraction - UT.timeFraction)).map((TT => ({
+                                at: TT.timeFraction,
+                                factor: rm(WT, TT.factor, TT.factor2)
                               })));
                             return {
-                              pos: [Fc(Op, ip[0], cp[0]), Fc(Op, ip[1], cp[1]), Fc(Op, ip[2], cp[2])],
-                              dir: [Ip(0), Ip(1), Ip(2)],
+                              pos: [rm(WT, UT[0], mT[0]), rm(WT, UT[1], mT[1]), rm(WT, UT[2], mT[2])],
+                              dir: [MT(0), MT(1), MT(2)],
                               age: 0,
-                              life: Fc(Op, pp.minLifeTime, pp.maxLifeTime),
-                              size: Fc(Op, pp.minSize, pp.maxSize),
-                              colours: rc(pp, Op),
-                              velocityFactors: Sp
+                              life: rm(WT, TT.minLifeTime, TT.maxLifeTime),
+                              size: rm(WT, TT.minSize, TT.maxSize),
+                              colours: Gm(TT, WT),
+                              velocityFactors: gT
                             }
                           }
 
-                          function zc(pp, ip, cp, Op) {
-                            if (ip < pp[0].at) return cp(Math.min(1, pp.length - 1));
-                            for (let op = 0; op < pp.length - 1; op++)
-                              if (ip <= pp[op + 1].at) {
-                                const Ip = pp[op + 1].at - pp[op].at;
-                                return Op(cp(op), cp(op + 1), Ip > 0 ? (ip - pp[op].at) / Ip : 1)
-                              } return cp(pp.length - 1)
+                          function Em(TT, UT, mT, WT) {
+                            if (UT < TT[0].at) return mT(Math.min(1, TT.length - 1));
+                            for (let zT = 0; zT < TT.length - 1; zT++)
+                              if (UT <= TT[zT + 1].at) {
+                                const MT = TT[zT + 1].at - TT[zT].at;
+                                return WT(mT(zT), mT(zT + 1), MT > 0 ? (UT - TT[zT].at) / MT : 1)
+                              } return mT(TT.length - 1)
                           }
 
-                          function sc(pp) {
-                            return zc(pp.colours, pp.age / pp.life, (ip => pp.colours[ip].colour), ((pp, ip, cp) => [gc(pp[0], ip[0], cp), gc(pp[1], ip[1], cp), gc(pp[2], ip[2], cp), gc(pp[3], ip[3], cp)]))
+                          function hm(TT) {
+                            return Em(TT.colours, TT.age / TT.life, (UT => TT.colours[UT].colour), ((TT, UT, mT) => [Km(TT[0], UT[0], mT), Km(TT[1], UT[1], mT), Km(TT[2], UT[2], mT), Km(TT[3], UT[3], mT)]))
                           }
 
-                          function Kc(pp, ip, cp) {
-                            if (pp.age += cp, pp.age >= pp.life) return !1;
-                            const Op = function(pp) {
-                              return 0 === pp.velocityFactors.length ? 1 : zc(pp.velocityFactors, pp.age / pp.life, (ip => pp.velocityFactors[ip].factor), gc)
-                            }(pp) * cp;
-                            for (let Ip = 0; Ip < 3; Ip++) {
-                              var op;
-                              pp.pos[Ip] += pp.dir[Ip] * Op, pp.dir[Ip] += (null !== (op = ip[Ip]) && void 0 !== op ? op : 0) * cp
+                          function Dm(TT, UT, mT) {
+                            if (TT.age += mT, TT.age >= TT.life) return !1;
+                            const WT = function(TT) {
+                              return 0 === TT.velocityFactors.length ? 1 : Em(TT.velocityFactors, TT.age / TT.life, (UT => TT.velocityFactors[UT].factor), Km)
+                            }(TT) * mT;
+                            for (let MT = 0; MT < 3; MT++) {
+                              var zT;
+                              TT.pos[MT] += TT.dir[MT] * WT, TT.dir[MT] += (null !== (zT = UT[MT]) && void 0 !== zT ? zT : 0) * mT
                             }
                             return !0
                           }
 
-                          function Vc(pp) {
-                            return String(Math.round(1e6 * pp) / 1e6)
+                          function om(TT) {
+                            return String(Math.round(1e6 * TT) / 1e6)
                           }
 
-                          function pO(pp) {
-                            return `[${pp.map(Vc).join(", ")}]`
+                          function Am(TT) {
+                            return `[${TT.map(om).join(", ")}]`
                           }
 
-                          function iO(pp, ip) {
-                            const cp = `${ip}    `;
-                            return `[\n${(Gc(pp)?pp.map((pp=>{const ip=[`${cp}    timeFraction: ${Vc(pp.timeFraction)},`,`${cp}    minColor: ${pO(pp.minColor)},`];return pp.maxColor&&ip.push(`${cp}    maxColor: ${pO(pp.maxColor)},`),`${cp}{\n${ip.join("\n")}\n${cp}},`})):pp.map((pp=>`
+                          function Rm(TT, UT) {
+                            const mT = `${UT}    `;
+                            return `[\n${(Sm(TT)?TT.map((TT=>{const UT=[`${mT}    timeFraction: ${om(TT.timeFraction)},`,`${mT}    minColor: ${Am(TT.minColor)},`];return TT.maxColor&&UT.push(`${mT}    maxColor: ${Am(TT.maxColor)},`),`${mT}{\n${UT.join("\n")}\n${mT}},`})):TT.map((TT=>`
                             $ {
-                              cp
+                              mT
                             } {
                               color: $ {
-                                pO(pp.color)
+                                Am(TT.color)
                               }
-                            }, `))).join("\n")}\n${ip}]`
+                            }, `))).join("\n")}\n${UT}]`
                           }
-                          const cO = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            OO = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const oO = .6;
+                          const TW = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            UW = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const mW = .6;
 
-                          function IO(pp, ip) {
-                            return `${ip?"song":"sound"}:${pp}`
+                          function WW(TT, UT) {
+                            return `${UT?"song":"sound"}:${TT}`
                           }
-                          let SO = {
+                          let zW = {
                               track: null,
-                              volume: oO
+                              volume: mW
                             },
-                            xO = null,
-                            LO = 0,
-                            YO = 0;
-                          const DO = new Set;
+                            MW = null,
+                            gW = 0,
+                            nW = 0;
+                          const HW = new Set;
 
-                          function AO(pp) {
-                            SO = {
-                              ...SO,
-                              ...pp
-                            }, DO.forEach((pp => {
-                              pp()
+                          function kW(TT) {
+                            zW = {
+                              ...zW,
+                              ...TT
+                            }, HW.forEach((TT => {
+                              TT()
                             }))
                           }
 
-                          function PO(pp) {
-                            SO.track && AO({
+                          function jW(TT) {
+                            zW.track && kW({
                               track: {
-                                ...SO.track,
-                                ...pp
+                                ...zW.track,
+                                ...TT
                               }
                             })
                           }
 
-                          function WO(pp) {
-                            const [ip, cp] = (0, Op.useState)((() => pp(SO))), op = (0, Op.useRef)(pp);
-                            return op.current = pp, (0, Op.useEffect)((() => {
-                              const pp = () => {
-                                cp((() => op.current(SO)))
+                          function lW(TT) {
+                            const [UT, mT] = (0, WT.useState)((() => TT(zW))), zT = (0, WT.useRef)(TT);
+                            return zT.current = TT, (0, WT.useEffect)((() => {
+                              const TT = () => {
+                                mT((() => zT.current(zW)))
                               };
-                              return DO.add(pp), pp(), () => {
-                                DO.delete(pp)
+                              return HW.add(TT), TT(), () => {
+                                HW.delete(TT)
                               }
-                            }), []), ip
+                            }), []), UT
                           }
 
-                          function yO() {
-                            LO++;
-                            const pp = xO;
-                            xO = null, null === pp || void 0 === pp || pp.stop()
+                          function LW() {
+                            gW++;
+                            const TT = MW;
+                            MW = null, null === TT || void 0 === TT || TT.stop()
                           }
 
-                          function UO(pp, ip) {
-                            let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            yO();
-                            const op = LO,
+                          function pW(TT, UT) {
+                            let WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            LW();
+                            const zT = gW,
                               {
-                                track: Ip
-                              } = SO,
-                              Sp = Ip && Ip.name === pp && Ip.isSong === ip ? Ip.duration : 0;
-                            YO = Op, AO({
+                                track: MT
+                              } = zW,
+                              gT = MT && MT.name === TT && MT.isSong === UT ? MT.duration : 0;
+                            nW = WT, kW({
                               track: {
-                                name: pp,
-                                isSong: ip,
+                                name: TT,
+                                isSong: UT,
                                 status: "loading",
-                                duration: Sp
+                                duration: gT
                               }
-                            }), Promise.all([cp.e(227), cp.e(253)]).then((() => cp(40003))).then((cp => {
+                            }), Promise.all([mT.e(227), mT.e(253)]).then((() => mT(39890))).then((mT => {
                               let {
-                                playDocsSound: Ip
-                              } = cp;
-                              op === LO && (xO = Ip(pp, ip, SO.volume, Op, {
-                                onPlay: pp => {
-                                  op === LO && PO({
+                                playDocsSound: MT
+                              } = mT;
+                              zT === gW && (MW = MT(TT, UT, zW.volume, WT, {
+                                onPlay: TT => {
+                                  zT === gW && jW({
                                     status: "playing",
-                                    duration: pp
+                                    duration: TT
                                   })
                                 },
-                                onEnd: pp => {
-                                  var ip, cp;
-                                  op === LO && (xO = null, pp ? AO({
+                                onEnd: TT => {
+                                  var UT, mT;
+                                  zT === gW && (MW = null, TT ? kW({
                                     track: null
-                                  }) : (YO = null !== (ip = null === (cp = SO.track) || void 0 === cp ? void 0 : cp.duration) && void 0 !== ip ? ip : 0, PO({
+                                  }) : (nW = null !== (UT = null === (mT = zW.track) || void 0 === mT ? void 0 : mT.duration) && void 0 !== UT ? UT : 0, jW({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((ip => {
-                              console.error(`Could not play docs sound ${pp}`, ip), op === LO && AO({
+                            })).catch((UT => {
+                              console.error(`Could not play docs sound ${TT}`, UT), zT === gW && kW({
                                 track: null
                               })
                             }))
                           }
 
-                          function wO() {
+                          function BW() {
                             const {
-                              track: pp
-                            } = SO;
-                            if (!pp) return;
-                            if ("playing" === pp.status && xO) return YO = xO.sH(), xO.pause(), void PO({
+                              track: TT
+                            } = zW;
+                            if (!TT) return;
+                            if ("playing" === TT.status && MW) return nW = MW.Aq(), MW.pause(), void jW({
                               status: "paused"
                             });
-                            if ("loading" === pp.status) return yO(), void PO({
+                            if ("loading" === TT.status) return LW(), void jW({
                               status: "paused"
                             });
-                            if (xO) return void xO.resume();
-                            const ip = pp.duration > 0 && YO >= pp.duration - .05;
-                            UO(pp.name, pp.isSong, ip ? 0 : YO)
+                            if (MW) return void MW.resume();
+                            const UT = TT.duration > 0 && nW >= TT.duration - .05;
+                            pW(TT.name, TT.isSong, UT ? 0 : nW)
                           }
 
-                          function vO() {
-                            var pp;
-                            return xO && "playing" === (null === (pp = SO.track) || void 0 === pp ? void 0 : pp.status) ? xO.sH() : YO
+                          function ZW() {
+                            var TT;
+                            return MW && "playing" === (null === (TT = zW.track) || void 0 === TT ? void 0 : TT.status) ? MW.Aq() : nW
                           }
 
-                          function tO(pp) {
-                            var ip;
-                            null === (ip = xO) || void 0 === ip || ip.setVolume(pp), AO({
-                              volume: pp
+                          function cW(TT) {
+                            var UT;
+                            null === (UT = MW) || void 0 === UT || UT.setVolume(TT), kW({
+                              volume: TT
                             })
                           }
 
-                          function HO() {
-                            yO(), YO = 0, AO({
+                          function vW() {
+                            LW(), nW = 0, kW({
                               track: null
                             })
                           }
-                          const dO = (0, Op.createContext)(null);
-                          let eO = null;
+                          const fW = (0, WT.createContext)(null);
+                          let qW = null;
 
-                          function uO() {
-                            const [pp, ip] = (0, Op.useState)(null);
-                            return (0, Op.useEffect)((() => {
-                              let pp = !1;
-                              return eO ??= Promise.all([cp.e(73), cp.e(76), cp.e(75), cp.e(74), cp.e(188), cp.e(100), cp.e(231)]).then((() => cp(40001))), eO.then((cp => {
-                                pp || ip(cp)
-                              }), (pp => {
-                                console.error("Could not load the docs gallery's textures", pp), eO = null
+                          function iW() {
+                            const [TT, UT] = (0, WT.useState)(null);
+                            return (0, WT.useEffect)((() => {
+                              let TT = !1;
+                              return qW ??= Promise.all([mT.e(73), mT.e(76), mT.e(75), mT.e(74), mT.e(188), mT.e(100), mT.e(231)]).then((() => mT(39888))), qW.then((mT => {
+                                TT || UT(mT)
+                              }), (TT => {
+                                console.error("Could not load the docs gallery's textures", TT), qW = null
                               })), () => {
-                                pp = !0
+                                TT = !0
                               }
-                            }), []), pp
+                            }), []), TT
                           }
-                          const jO = 24,
-                            kO = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const bW = 24,
+                            OW = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function mO(pp, ip) {
-                            const cp = "skins" === pp ? function(pp, ip) {
-                              const cp = fc.find((ip => pp.startsWith(ip.heading)));
-                              return cp ? function(pp, ip) {
-                                return `${pp}-${ip}`
-                              }(cp.prefix, ip) : null
-                            }(ip.heading, ip.name) : null;
-                            return null === cp ? null : `${Tc}/${cp}.webp`
+                          function eW(TT, UT) {
+                            const mT = "skins" === TT ? function(TT, UT) {
+                              const mT = Fm.find((UT => TT.startsWith(UT.heading)));
+                              return mT ? function(TT, UT) {
+                                return `${TT}-${UT}`
+                              }(mT.prefix, UT) : null
+                            }(UT.heading, UT.name) : null;
+                            return null === mT ? null : `${sm}/${mT}.webp`
                           }
 
-                          function RO(pp) {
+                          function YW(TT) {
                             let {
-                              kind: ip,
-                              entry: cp,
-                              assets: op,
-                              renderedUrl: Sp
-                            } = pp;
+                              kind: UT,
+                              entry: mT,
+                              assets: zT,
+                              renderedUrl: gT
+                            } = TT;
                             const {
-                              name: xp
-                            } = cp, [Lp, Yp] = (0, Op.useState)(!1);
-                            if ("icons" === ip && ai(xp)) return (0, yp.jsx)(jc.d, {
+                              name: nT
+                            } = mT, [HT, kT] = (0, WT.useState)(!1);
+                            if ("icons" === UT && VU(nT)) return (0, BT.jsx)(bm.c, {
                               className: "DocsTileIcon",
-                              name: xp
+                              name: nT
                             });
-                            let Dp = null;
-                            var Ap;
-                            if ("icons" === ip) Dp = null !== (Ap = null === op || void 0 === op ? void 0 : op.getIngameIconUrl(xp)) && void 0 !== Ap ? Ap : null;
-                            else if ("particles" === ip) {
-                              var Pp, Wp, Up;
-                              Dp = null !== (Pp = null === op || void 0 === op ? void 0 : op.getParticleTextureUrl(null !== (Wp = null === (Up = ac(xp)) || void 0 === Up ? void 0 : Up.texture) && void 0 !== Wp ? Wp : xp)) && void 0 !== Pp ? Pp : null
-                            } else "skins" === ip && (Dp = null !== Sp && void 0 !== Sp ? Sp : kO.test(xp) ? `/textures/charSkins/previews/${xp}_preview.png` : null);
-                            return !Dp || Lp ? (0, yp.jsx)(wp, {
+                            let jT = null;
+                            var lT;
+                            if ("icons" === UT) jT = null !== (lT = null === zT || void 0 === zT ? void 0 : zT.getIngameIconUrl(nT)) && void 0 !== lT ? lT : null;
+                            else if ("particles" === UT) {
+                              var LT, pT, ZT;
+                              jT = null !== (LT = null === zT || void 0 === zT ? void 0 : zT.getParticleTextureUrl(null !== (pT = null === (ZT = um(nT)) || void 0 === ZT ? void 0 : ZT.texture) && void 0 !== pT ? pT : nT)) && void 0 !== LT ? LT : null
+                            } else "skins" === UT && (jT = null !== gT && void 0 !== gT ? gT : OW.test(nT) ? `/textures/charSkins/previews/${nT}_preview.png` : null);
+                            return !jT || HT ? (0, BT.jsx)(cT, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === ip ? "person" : "image"
-                            }) : (0, yp.jsx)("img", {
-                              className: Ip()("DocsTileImage", {
-                                Pixelated: "skins" !== ip
+                              name: "skins" === UT ? "person" : "image"
+                            }) : (0, BT.jsx)("img", {
+                              className: MT()("DocsTileImage", {
+                                Pixelated: "skins" !== UT
                               }),
-                              src: Dp,
-                              srcSet: Dp === Sp ? `${Dp} 2x` : void 0,
+                              src: jT,
+                              srcSet: jT === gT ? `${jT} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Dp}`), Yp(!0)
+                                console.warn(`Docs gallery: could not load ${jT}`), kT(!0)
                               }
                             })
                           }
 
-                          function qO(pp) {
+                          function JW(TT) {
                             let {
-                              entry: ip,
-                              isSong: cp
-                            } = pp;
-                            const Op = WO((pp => {
+                              entry: UT,
+                              isSong: mT
+                            } = TT;
+                            const WT = lW((TT => {
                                 let {
-                                  track: Op
-                                } = pp;
-                                return (null === Op || void 0 === Op ? void 0 : Op.name) === ip.name && Op.isSong === cp ? Op.status : null
+                                  track: WT
+                                } = TT;
+                                return (null === WT || void 0 === WT ? void 0 : WT.name) === UT.name && WT.isSong === mT ? WT.status : null
                               })),
-                              op = null !== Op && "paused" !== Op;
-                            return (0, yp.jsxs)("button", {
+                              zT = null !== WT && "paused" !== WT;
+                            return (0, BT.jsxs)("button", {
                               type: "button",
-                              id: ip.anchor,
-                              className: Ip()("DocsSoundTile", {
-                                Playing: op
+                              id: UT.anchor,
+                              className: MT()("DocsSoundTile", {
+                                Playing: zT
                               }),
-                              "data-docs-track": IO(ip.name, cp),
-                              "aria-label": op ? `Pause ${ip.name}` : `Play ${ip.name}`,
+                              "data-docs-track": WW(UT.name, mT),
+                              "aria-label": zT ? `Pause ${UT.name}` : `Play ${UT.name}`,
                               onClick: () => {
-                                null !== Op ? wO() : UO(ip.name, cp)
+                                null !== WT ? BW() : pW(UT.name, mT)
                               },
-                              children: [(0, yp.jsx)("span", {
+                              children: [(0, BT.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, yp.jsx)(wp, {
-                                  name: op ? "pause" : "play"
+                                children: (0, BT.jsx)(cT, {
+                                  name: zT ? "pause" : "play"
                                 })
-                              }), (0, yp.jsx)("code", {
+                              }), (0, BT.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: ip.name
-                              }), ip.caption && (0, yp.jsx)("span", {
+                                children: UT.name
+                              }), UT.caption && (0, BT.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: ip.caption
+                                children: UT.caption
                               })]
                             })
                           }
 
-                          function MO(pp) {
+                          function xW(TT) {
                             let {
-                              kind: ip,
-                              names: cp,
-                              isSongs: op
-                            } = pp;
-                            const Sp = uO(),
-                              [xp, Lp] = tp(),
-                              Yp = !1 === (null === xp || void 0 === xp ? void 0 : xp.failed) ? xp.text : null,
-                              Dp = (0, Op.useContext)(dO),
-                              [Ap, Pp] = (0, Op.useState)(""),
-                              Wp = Ap.trim().toLowerCase(),
-                              Up = Wp ? cp.filter((pp => pp.name.toLowerCase().includes(Wp))) : cp;
-                            return (0, yp.jsxs)("div", {
+                              kind: UT,
+                              names: mT,
+                              isSongs: zT
+                            } = TT;
+                            const gT = iW(),
+                              [nT, HT] = fT(),
+                              kT = !1 === (null === nT || void 0 === nT ? void 0 : nT.failed) ? nT.text : null,
+                              jT = (0, WT.useContext)(fW),
+                              [lT, LT] = (0, WT.useState)(""),
+                              pT = lT.trim().toLowerCase(),
+                              ZT = pT ? mT.filter((TT => TT.name.toLowerCase().includes(pT))) : mT;
+                            return (0, BT.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [cp.length > jO && (0, yp.jsx)(uc, {
+                              children: [mT.length > bW && (0, BT.jsx)(im, {
                                 className: "DocsGalleryFilter",
-                                value: Ap,
-                                placeholder: `Filter ${cp.length} names\u2026`,
+                                value: lT,
+                                placeholder: `Filter ${mT.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: Pp,
-                                count: Wp ? {
-                                  visible: Up.length,
-                                  total: cp.length
+                                onChange: LT,
+                                count: pT ? {
+                                  visible: ZT.length,
+                                  total: mT.length
                                 } : null
-                              }), (0, yp.jsx)("div", {
-                                className: Ip()("DocsGalleryGrid", `Kind-${ip}`, {
-                                  Songs: op
+                              }), (0, BT.jsx)("div", {
+                                className: MT()("DocsGalleryGrid", `Kind-${UT}`, {
+                                  Songs: zT
                                 }),
-                                children: Up.map((pp => {
-                                  if ("sounds" === ip) return (0, yp.jsx)(qO, {
-                                    entry: pp,
-                                    isSong: op
-                                  }, pp.anchor);
-                                  if (Dp && "particles" === ip && ac(pp.name)) return (0, yp.jsxs)("button", {
+                                children: ZT.map((TT => {
+                                  if ("sounds" === UT) return (0, BT.jsx)(JW, {
+                                    entry: TT,
+                                    isSong: zT
+                                  }, TT.anchor);
+                                  if (jT && "particles" === UT && um(TT.name)) return (0, BT.jsxs)("button", {
                                     type: "button",
-                                    id: pp.anchor,
-                                    className: Ip()("DocsTile Previewable", {
-                                      Copied: Yp === pp.name
+                                    id: TT.anchor,
+                                    className: MT()("DocsTile Previewable", {
+                                      Copied: kT === TT.name
                                     }),
-                                    title: `Play "${pp.name}" in the playground and copy its name`,
+                                    title: `Play "${TT.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Dp(pp.name), Lp(pp.name)
+                                      jT(TT.name), HT(TT.name)
                                     },
-                                    children: [(0, yp.jsxs)("span", {
+                                    children: [(0, BT.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, yp.jsx)(RO, {
-                                        kind: ip,
-                                        entry: pp,
-                                        assets: Sp,
+                                      children: [(0, BT.jsx)(YW, {
+                                        kind: UT,
+                                        entry: TT,
+                                        assets: gT,
                                         renderedUrl: null
-                                      }), (0, yp.jsx)("span", {
+                                      }), (0, BT.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, yp.jsx)(wp, {
+                                        children: (0, BT.jsx)(cT, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, yp.jsx)("span", {
+                                    }), (0, BT.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Yp === pp.name ? "Copied!" : pp.name
+                                      children: kT === TT.name ? "Copied!" : TT.name
                                     })]
-                                  }, pp.anchor);
-                                  const cp = mO(ip, pp);
-                                  return (0, yp.jsxs)("button", {
+                                  }, TT.anchor);
+                                  const mT = eW(UT, TT);
+                                  return (0, BT.jsxs)("button", {
                                     type: "button",
-                                    id: pp.anchor,
-                                    className: Ip()("DocsTile", {
-                                      Copied: Yp === pp.name
+                                    id: TT.anchor,
+                                    className: MT()("DocsTile", {
+                                      Copied: kT === TT.name
                                     }),
-                                    title: `Copy "${pp.name}"`,
+                                    title: `Copy "${TT.name}"`,
                                     onClick: () => {
-                                      Lp(pp.name)
+                                      HT(TT.name)
                                     },
-                                    children: [(0, yp.jsx)("span", {
-                                      className: Ip()("DocsTilePreview", {
-                                        Rendered: null !== cp
+                                    children: [(0, BT.jsx)("span", {
+                                      className: MT()("DocsTilePreview", {
+                                        Rendered: null !== mT
                                       }),
-                                      children: (0, yp.jsx)(RO, {
-                                        kind: ip,
-                                        entry: pp,
-                                        assets: Sp,
-                                        renderedUrl: cp
+                                      children: (0, BT.jsx)(YW, {
+                                        kind: UT,
+                                        entry: TT,
+                                        assets: gT,
+                                        renderedUrl: mT
                                       })
-                                    }), (0, yp.jsx)("span", {
+                                    }), (0, BT.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Yp === pp.name ? "Copied!" : pp.name
+                                      children: kT === TT.name ? "Copied!" : TT.name
                                     })]
-                                  }, pp.anchor)
+                                  }, TT.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function CO(pp) {
+                          function dW(TT) {
                             let {
-                              kind: ip,
-                              content: cp,
-                              blocks: Op
-                            } = pp;
-                            return (0, yp.jsx)(yp.Fragment, {
-                              children: Nc(ip, cp, Op).map(((pp, cp) => "block" === pp.kind ? (0, yp.jsx)(Uc, {
-                                block: pp.block
-                              }, cp) : (0, yp.jsx)(MO, {
-                                kind: ip,
-                                names: pp.names,
-                                isSongs: pp.isSongs
-                              }, cp)))
+                              kind: UT,
+                              content: mT,
+                              blocks: WT
+                            } = TT;
+                            return (0, BT.jsx)(BT.Fragment, {
+                              children: Qm(UT, mT, WT).map(((TT, mT) => "block" === TT.kind ? (0, BT.jsx)(Lm, {
+                                block: TT.block
+                              }, mT) : (0, BT.jsx)(xW, {
+                                kind: UT,
+                                names: TT.names,
+                                isSongs: TT.isSongs
+                              }, mT)))
                             })
                           }
-                          const EO = [{
+                          const wW = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function XO(pp) {
+                          function tW(TT) {
                             let {
-                              cards: ip = EO,
-                              label: cp = "Start here"
-                            } = pp;
-                            const op = (0, Op.useContext)(Ui);
-                            return (0, yp.jsx)("nav", {
+                              cards: UT = wW,
+                              label: mT = "Start here"
+                            } = TT;
+                            const zT = (0, WT.useContext)(pU);
+                            return (0, BT.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": cp,
-                              children: ip.map((pp => {
+                              "aria-label": mT,
+                              children: UT.map((TT => {
                                 let {
-                                  pageId: ip,
-                                  countNoun: cp
-                                } = pp;
-                                const Op = fp(ip);
-                                return (0, yp.jsxs)(Sp.c, {
-                                  to: gp(op, Op),
+                                  pageId: UT,
+                                  countNoun: mT
+                                } = TT;
+                                const WT = PT(UT);
+                                return (0, BT.jsxs)(gT.d, {
+                                  to: ST(zT, WT),
                                   className: "DocsLandingCard",
-                                  children: [(0, yp.jsx)("span", {
+                                  children: [(0, BT.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, yp.jsx)(wp, {
-                                      name: Op.icon
+                                    children: (0, BT.jsx)(cT, {
+                                      name: WT.icon
                                     })
-                                  }), (0, yp.jsx)("span", {
+                                  }), (0, BT.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Op.title
-                                  }), (0, yp.jsx)("span", {
+                                    children: WT.title
+                                  }), (0, BT.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Op.summary
-                                  }), cp && (0, yp.jsxs)("span", {
+                                    children: WT.summary
+                                  }), mT && (0, BT.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [hp(Op).sections.length, " ", cp]
+                                    children: [uT(WT).sections.length, " ", mT]
                                   })]
-                                }, ip)
+                                }, UT)
                               }))
                             })
                           }
-                          const lO = 240;
+                          const aW = 240;
 
-                          function QO(pp) {
+                          function yW(TT) {
                             let {
-                              faces: ip
-                            } = pp;
-                            return (0, yp.jsxs)("span", {
+                              faces: UT
+                            } = TT;
+                            return (0, BT.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, yp.jsx)("span", {
+                              children: [(0, BT.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${ip.top}")`
+                                  backgroundImage: `url("${UT.top}")`
                                 }
-                              }), (0, yp.jsx)("span", {
+                              }), (0, BT.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${ip.left}")`
+                                  backgroundImage: `url("${UT.left}")`
                                 }
-                              }), (0, yp.jsx)("span", {
+                              }), (0, BT.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${ip.right}")`
+                                  backgroundImage: `url("${UT.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function JO(pp) {
+                          function XW(TT) {
                             let {
-                              src: ip
-                            } = pp;
-                            const [cp, op] = (0, Op.useState)(!1);
-                            return cp ? null : (0, yp.jsx)("img", {
-                              src: ip,
+                              src: UT
+                            } = TT;
+                            const [mT, zT] = (0, WT.useState)(!1);
+                            return mT ? null : (0, BT.jsx)("img", {
+                              src: UT,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${ip}`), op(!0)
+                                console.warn(`Docs catalogue: could not load ${UT}`), zT(!0)
                               }
                             })
                           }
 
-                          function BO(pp) {
+                          function IW(TT) {
                             let {
-                              kind: ip
-                            } = pp;
-                            const cp = ec(ip),
-                              op = uO(),
-                              Sp = (0, xp.r)(),
-                              [Lp, Yp] = (0, Op.useState)(""),
-                              [Dp, Ap] = (0, Op.useState)(null),
-                              [Pp, Wp] = (0, Op.useState)(lO),
-                              [Up, vp] = (0, Op.useState)(null),
-                              tp = (0, Op.useRef)(null),
-                              dp = Lp.trim().toLowerCase();
-                            (0, Op.useEffect)((() => {
-                              const pp = (0, mp.r)(Sp.hash),
-                                Op = cp.entries.find((cp => Jc(ip, cp.name) === pp));
-                              if (Op) tp.current = Op.name, Yp(Op.name), Ap(null), vp(Op.name);
-                              else if (null !== tp.current) {
-                                const pp = tp.current;
-                                tp.current = null, Yp((ip => ip === pp ? "" : ip)), vp(null)
+                              kind: UT
+                            } = TT;
+                            const mT = qm(UT),
+                              zT = iW(),
+                              gT = (0, nT.p)(),
+                              [HT, kT] = (0, WT.useState)(""),
+                              [jT, lT] = (0, WT.useState)(null),
+                              [LT, pT] = (0, WT.useState)(aW),
+                              [ZT, vT] = (0, WT.useState)(null),
+                              fT = (0, WT.useRef)(null),
+                              iT = HT.trim().toLowerCase();
+                            (0, WT.useEffect)((() => {
+                              const TT = (0, YT.t)(gT.hash),
+                                WT = mT.entries.find((mT => Xm(UT, mT.name) === TT));
+                              if (WT) fT.current = WT.name, kT(WT.name), lT(null), vT(WT.name);
+                              else if (null !== fT.current) {
+                                const TT = fT.current;
+                                fT.current = null, kT((UT => UT === TT ? "" : UT)), vT(null)
                               }
-                            }), [cp, ip, Sp.hash, Sp.key]), (0, Op.useEffect)((() => {
-                              var pp;
-                              null !== Up && (null === (pp = document.getElementById(Jc(ip, Up))) || void 0 === pp || pp.scrollIntoView({
+                            }), [mT, UT, gT.hash, gT.key]), (0, WT.useEffect)((() => {
+                              var TT;
+                              null !== ZT && (null === (TT = document.getElementById(Xm(UT, ZT))) || void 0 === TT || TT.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [ip, Up]);
-                            const ep = cp.entries.filter((pp => (!dp || pp.name.toLowerCase().includes(dp)) && (!Dp || pp.variants.includes(Dp))));
-                            return (0, yp.jsxs)("div", {
+                            }), [UT, ZT]);
+                            const bT = mT.entries.filter((TT => (!iT || TT.name.toLowerCase().includes(iT)) && (!jT || TT.variants.includes(jT))));
+                            return (0, BT.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [cp.notes.length > 0 && (0, yp.jsx)("div", {
+                              children: [mT.notes.length > 0 && (0, BT.jsx)("div", {
                                 className: "DocsProse",
-                                children: cp.notes.map((pp => (0, yp.jsx)("p", {
-                                  children: pp
-                                }, pp)))
-                              }), cp.legend.length > 0 && (0, yp.jsx)("div", {
+                                children: mT.notes.map((TT => (0, BT.jsx)("p", {
+                                  children: TT
+                                }, TT)))
+                              }), mT.legend.length > 0 && (0, BT.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, yp.jsxs)("table", {
+                                children: (0, BT.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, yp.jsx)("thead", {
-                                    children: (0, yp.jsxs)("tr", {
-                                      children: [(0, yp.jsx)("th", {
+                                  children: [(0, BT.jsx)("thead", {
+                                    children: (0, BT.jsxs)("tr", {
+                                      children: [(0, BT.jsx)("th", {
                                         children: "Code"
-                                      }), (0, yp.jsx)("th", {
+                                      }), (0, BT.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, yp.jsx)("th", {
+                                      }), (0, BT.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, yp.jsx)("tbody", {
-                                    children: cp.legend.map((pp => (0, yp.jsxs)("tr", {
-                                      children: [(0, yp.jsx)("td", {
-                                        children: (0, yp.jsx)("button", {
+                                  }), (0, BT.jsx)("tbody", {
+                                    children: mT.legend.map((TT => (0, BT.jsxs)("tr", {
+                                      children: [(0, BT.jsx)("td", {
+                                        children: (0, BT.jsx)("button", {
                                           type: "button",
-                                          className: Ip()("DocsVariantChip", {
-                                            Active: Dp === pp.code
+                                          className: MT()("DocsVariantChip", {
+                                            Active: jT === TT.code
                                           }),
-                                          "aria-pressed": Dp === pp.code,
-                                          title: `Show only ${ip} with ${pp.meaning} variants`,
+                                          "aria-pressed": jT === TT.code,
+                                          title: `Show only ${UT} with ${TT.meaning} variants`,
                                           onClick: () => {
-                                            Ap(Dp === pp.code ? null : pp.code)
+                                            lT(jT === TT.code ? null : TT.code)
                                           },
-                                          children: pp.code
+                                          children: TT.code
                                         })
-                                      }), (0, yp.jsx)("td", {
-                                        children: pp.meaning
-                                      }), (0, yp.jsx)("td", {
-                                        children: (0, yp.jsx)("code", {
+                                      }), (0, BT.jsx)("td", {
+                                        children: TT.meaning
+                                      }), (0, BT.jsx)("td", {
+                                        children: (0, BT.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: pp.usage
+                                          children: TT.usage
                                         })
                                       })]
-                                    }, pp.code)))
+                                    }, TT.code)))
                                   })]
                                 })
-                              }), cp.examples.length > 0 && (0, yp.jsx)(kp, {
+                              }), mT.examples.length > 0 && (0, BT.jsx)(eT, {
                                 lang: "text",
-                                code: cp.examples.join("\n")
-                              }), (0, yp.jsx)(uc, {
+                                code: mT.examples.join("\n")
+                              }), (0, BT.jsx)(im, {
                                 className: "DocsFilterBar",
-                                value: Lp,
-                                placeholder: `Search ${cp.entries.length} ${ip}\u2026`,
-                                label: `Search ${ip}`,
-                                onChange: pp => {
-                                  Yp(pp), Wp(lO)
+                                value: HT,
+                                placeholder: `Search ${mT.entries.length} ${UT}\u2026`,
+                                label: `Search ${UT}`,
+                                onChange: TT => {
+                                  kT(TT), pT(aW)
                                 },
-                                count: dp || Dp ? {
-                                  visible: ep.length,
-                                  total: cp.entries.length
+                                count: iT || jT ? {
+                                  visible: bT.length,
+                                  total: mT.entries.length
                                 } : null,
-                                children: Dp && (0, yp.jsxs)("button", {
+                                children: jT && (0, BT.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    Ap(null)
+                                    lT(null)
                                   },
-                                  children: [Dp, " ", (0, yp.jsx)(wp, {
+                                  children: [jT, " ", (0, BT.jsx)(cT, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, yp.jsx)("div", {
+                              }), (0, BT.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: ep.slice(0, Pp).map((pp => {
-                                  const cp = "blocks" === ip ? null === op || void 0 === op ? void 0 : op.getBlockFaces(pp.name) : null,
-                                    Op = op && !cp ? op.getItemTextureUrl(pp.name) : null;
-                                  return (0, yp.jsxs)("div", {
-                                    id: Jc(ip, pp.name),
-                                    className: Ip()("DocsCatalogueTile", {
-                                      Linked: pp.name === Up
+                                children: bT.slice(0, LT).map((TT => {
+                                  const mT = "blocks" === UT ? null === zT || void 0 === zT ? void 0 : zT.getBlockFaces(TT.name) : null,
+                                    WT = zT && !mT ? zT.getItemTextureUrl(TT.name) : null;
+                                  return (0, BT.jsxs)("div", {
+                                    id: Xm(UT, TT.name),
+                                    className: MT()("DocsCatalogueTile", {
+                                      Linked: TT.name === ZT
                                     }),
-                                    children: [(0, yp.jsxs)("span", {
+                                    children: [(0, BT.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [cp && (0, yp.jsx)(QO, {
-                                        faces: cp
-                                      }), Op && (0, yp.jsx)(JO, {
-                                        src: Op
+                                      children: [mT && (0, BT.jsx)(yW, {
+                                        faces: mT
+                                      }), WT && (0, BT.jsx)(XW, {
+                                        src: WT
                                       })]
-                                    }), (0, yp.jsx)("span", {
+                                    }), (0, BT.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: pp.name
-                                    }), pp.variants.length > 0 && (0, yp.jsx)("span", {
+                                      children: TT.name
+                                    }), TT.variants.length > 0 && (0, BT.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: pp.variants.map((pp => (0, yp.jsx)("span", {
-                                        children: pp
-                                      }, pp)))
-                                    }), (0, yp.jsx)(Hp, {
-                                      text: pp.name,
+                                      children: TT.variants.map((TT => (0, BT.jsx)("span", {
+                                        children: TT
+                                      }, TT)))
+                                    }), (0, BT.jsx)(qT, {
+                                      text: TT.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, pp.name)
+                                  }, TT.name)
                                 }))
-                              }), ep.length > Pp && (0, yp.jsxs)("button", {
+                              }), bT.length > LT && (0, BT.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Wp(ep.length)
+                                  pT(bT.length)
                                 },
-                                children: ["Show all ", ep.length]
-                              }), 0 === ep.length && (0, yp.jsxs)("p", {
+                                children: ["Show all ", bT.length]
+                              }), 0 === bT.length && (0, BT.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", ip, " match."]
+                                children: ["No ", UT, " match."]
                               })]
                             })
                           }
-                          var NO = cp(4933),
-                            TO = cp(1603);
-                          const fO = .95 * NO.e;
+                          var QW = mT(4918),
+                            sW = mT(1710);
+                          const FW = .95 * QW.b;
 
-                          function bO(pp) {
-                            return /^\s*```/.test(pp)
+                          function PW(TT) {
+                            return /^\s*```/.test(TT)
                           }
 
-                          function hO(pp, ip) {
-                            const cp = [
+                          function VW(TT, UT) {
+                            const mT = [
                               []
                             ];
-                            let Op = !1;
-                            for (const op of pp.split("\n")) !Op && ip(op) && cp.at(-1).length > 0 && cp.push([]), bO(op) && (Op = !Op), cp.at(-1).push(op);
-                            return cp.map((pp => pp.join("\n").trim())).filter(Boolean)
+                            let WT = !1;
+                            for (const zT of TT.split("\n")) !WT && UT(zT) && mT.at(-1).length > 0 && mT.push([]), PW(zT) && (WT = !WT), mT.at(-1).push(zT);
+                            return mT.map((TT => TT.join("\n").trim())).filter(Boolean)
                           }
 
-                          function aO(pp, ip) {
-                            const cp = `${"#".repeat(ip)} `,
-                              Op = [];
-                            let op = !1;
-                            for (const Ip of pp.split("\n")) bO(Ip) ? op = !op : !op && Ip.startsWith(cp) && Op.push(Ip.slice(cp.length).trim());
-                            return Op
+                          function uW(TT, UT) {
+                            const mT = `${"#".repeat(UT)} `,
+                              WT = [];
+                            let zT = !1;
+                            for (const MT of TT.split("\n")) PW(MT) ? zT = !zT : !zT && MT.startsWith(mT) && WT.push(MT.slice(mT.length).trim());
+                            return WT
                           }
 
-                          function nO(pp) {
-                            return pp.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function CW(TT) {
+                            return TT.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class FO {
-                            constructor(pp, ip) {
-                              this.origin = ip, this.pages = void 0, this.partPaths = new Map;
-                              const cp = pp.map((pp => {
-                                const ip = ip => this.resolveLinks(pp, ip).length,
-                                  cp = function(pp, ip) {
-                                    const cp = pp.map((pp => ip(pp.markdown) + 2)),
-                                      Op = cp.reduce(((pp, ip) => pp + ip), 0),
-                                      op = Op / Math.ceil(Op / fO),
-                                      Ip = [];
-                                    let Sp = 0;
-                                    return pp.forEach(((pp, ip) => {
-                                      const Op = cp[ip];
-                                      (0 === Ip.length || Sp + Op > fO || Sp + Op / 2 > op) && (Ip.push([]), Sp = 0), Ip.at(-1).push(pp), Sp += Op
-                                    })), Ip
-                                  }(function(pp, ip) {
-                                    return hO(pp, (pp => pp.startsWith("## "))).flatMap((pp => {
-                                      var cp;
-                                      const Op = null !== (cp = aO(pp, 2)[0]) && void 0 !== cp ? cp : "";
-                                      if (ip(pp) <= fO) return [{
-                                        markdown: pp,
-                                        section: Op
+                          class rW {
+                            constructor(TT, UT) {
+                              this.origin = UT, this.pages = void 0, this.partPaths = new Map;
+                              const mT = TT.map((TT => {
+                                const UT = UT => this.resolveLinks(TT, UT).length,
+                                  mT = function(TT, UT) {
+                                    const mT = TT.map((TT => UT(TT.markdown) + 2)),
+                                      WT = mT.reduce(((TT, UT) => TT + UT), 0),
+                                      zT = WT / Math.ceil(WT / FW),
+                                      MT = [];
+                                    let gT = 0;
+                                    return TT.forEach(((TT, UT) => {
+                                      const WT = mT[UT];
+                                      (0 === MT.length || gT + WT > FW || gT + WT / 2 > zT) && (MT.push([]), gT = 0), MT.at(-1).push(TT), gT += WT
+                                    })), MT
+                                  }(function(TT, UT) {
+                                    return VW(TT, (TT => TT.startsWith("## "))).flatMap((TT => {
+                                      var mT;
+                                      const WT = null !== (mT = uW(TT, 2)[0]) && void 0 !== mT ? mT : "";
+                                      if (UT(TT) <= FW) return [{
+                                        markdown: TT,
+                                        section: WT
                                       }];
-                                      let op = !1,
-                                        Ip = "";
-                                      return hO(pp, (pp => {
-                                        const ip = op && "" !== pp.trim();
-                                        return op = "" === pp.trim(), ip
-                                      })).map((pp => {
-                                        var ip;
-                                        const cp = aO(pp, 3),
-                                          op = pp.startsWith("### ") ? cp[0] : Ip;
-                                        return Ip = null !== (ip = cp.at(-1)) && void 0 !== ip ? ip : Ip, {
-                                          markdown: pp,
-                                          section: Op || op
+                                      let zT = !1,
+                                        MT = "";
+                                      return VW(TT, (TT => {
+                                        const UT = zT && "" !== TT.trim();
+                                        return zT = "" === TT.trim(), UT
+                                      })).map((TT => {
+                                        var UT;
+                                        const mT = uW(TT, 3),
+                                          zT = TT.startsWith("### ") ? mT[0] : MT;
+                                        return MT = null !== (UT = mT.at(-1)) && void 0 !== UT ? UT : MT, {
+                                          markdown: TT,
+                                          section: WT || zT
                                         }
                                       }))
                                     }))
-                                  }(nO(pp), ip), ip);
+                                  }(CW(TT), UT), UT);
                                 return {
-                                  page: pp,
-                                  groups: cp.length > 1 ? cp : []
+                                  page: TT,
+                                  groups: mT.length > 1 ? mT : []
                                 }
                               }));
                               for (const {
-                                  page: Op,
-                                  groups: op
+                                  page: WT,
+                                  groups: zT
                                 }
-                                of cp) op.forEach(((pp, ip) => {
-                                const cp = (0, NO.u)(Op.slug, ip);
-                                for (const op of pp.flatMap((pp => [...aO(pp.markdown, 2), ...aO(pp.markdown, 3)]))) {
-                                  const pp = `${Op.id}#${(0,mp.s)(op)}`;
-                                  this.partPaths.has(pp) || this.partPaths.set(pp, cp)
+                                of mT) zT.forEach(((TT, UT) => {
+                                const mT = (0, QW.t)(WT.slug, UT);
+                                for (const zT of TT.flatMap((TT => [...uW(TT.markdown, 2), ...uW(TT.markdown, 3)]))) {
+                                  const TT = `${WT.id}#${(0,YT.w)(zT)}`;
+                                  this.partPaths.has(TT) || this.partPaths.set(TT, mT)
                                 }
                               }));
-                              this.pages = cp.map((pp => {
+                              this.pages = mT.map((TT => {
                                 let {
-                                  page: ip,
-                                  groups: cp
-                                } = pp;
+                                  page: UT,
+                                  groups: mT
+                                } = TT;
                                 return {
-                                  page: ip,
-                                  path: (0, NO.r)(ip.slug),
-                                  markdown: `# ${ip.title}\n\n${this.resolveLinks(ip,nO(ip))}\n`,
-                                  parts: cp.map(((pp, Op) => this.renderPart(ip, pp, Op, cp.length)))
+                                  page: UT,
+                                  path: (0, QW.r)(UT.slug),
+                                  markdown: `# ${UT.title}\n\n${this.resolveLinks(UT,CW(UT))}\n`,
+                                  parts: mT.map(((TT, WT) => this.renderPart(UT, TT, WT, mT.length)))
                                 }
                               }))
                             }
-                            url(pp) {
-                              return `${this.origin}${pp}`
+                            url(TT) {
+                              return `${this.origin}${TT}`
                             }
-                            getPage(pp) {
-                              return this.pages.find((ip => ip.page.id === pp))
+                            getPage(TT) {
+                              return this.pages.find((UT => UT.page.id === TT))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((pp => (pp.parts.length > 0 ? pp.parts : [{
-                                path: pp.path,
+                              return this.pages.flatMap((TT => (TT.parts.length > 0 ? TT.parts : [{
+                                path: TT.path,
                                 label: "",
-                                markdown: pp.markdown
-                              }]).filter((pp => pp.markdown.length > NO.e))))
+                                markdown: TT.markdown
+                              }]).filter((TT => TT.markdown.length > QW.b))))
                             }
-                            markdownUrl(pp, ip) {
-                              const cp = ip && this.partPaths.get(`${pp.id}#${ip}`) || (0, NO.r)(pp.slug);
-                              return this.url(ip ? `${cp}#${ip}` : cp)
+                            markdownUrl(TT, UT) {
+                              const mT = UT && this.partPaths.get(`${TT.id}#${UT}`) || (0, QW.r)(TT.slug);
+                              return this.url(UT ? `${mT}#${UT}` : mT)
                             }
-                            resolveLinks(pp, ip) {
-                              return ip.replace(/\]\((#[^)]+)\)/g, ((ip, cp) => {
-                                var Op;
-                                const op = null !== (Op = np(cp)) && void 0 !== Op ? Op : this.samePageTarget(pp, cp);
-                                return op ? `](${this.markdownUrl(op.page,op.anchor)})` : ip
+                            resolveLinks(TT, UT) {
+                              return UT.replace(/\]\((#[^)]+)\)/g, ((UT, mT) => {
+                                var WT;
+                                const zT = null !== (WT = rT(mT)) && void 0 !== WT ? WT : this.samePageTarget(TT, mT);
+                                return zT ? `](${this.markdownUrl(zT.page,zT.anchor)})` : UT
                               }))
                             }
-                            samePageTarget(pp, ip) {
-                              const cp = (0, mp.s)(ip.slice(1));
-                              return ap(pp, cp) ? {
-                                page: pp,
-                                anchor: cp
+                            samePageTarget(TT, UT) {
+                              const mT = (0, YT.w)(UT.slice(1));
+                              return CT(TT, mT) ? {
+                                page: TT,
+                                anchor: mT
                               } : null
                             }
-                            renderPart(pp, ip, cp, Op) {
-                              const op = function(pp) {
-                                  const ip = pp.map((pp => pp.section)).filter(Boolean);
-                                  if (0 === ip.length) return "";
-                                  const cp = ip[0],
-                                    Op = ip.at(-1);
-                                  return cp === Op ? cp : `${cp} to ${Op}`
-                                }(ip),
-                                Ip = ip.map((pp => pp.markdown)).join("\n\n"),
-                                Sp = op ? `It covers ${op}. ` : "",
-                                xp = `Part ${cp+1} of ${Op} of [${pp.title}](${this.url((0,NO.r)(pp.slug))}). ${Sp}[llms.txt](${this.url(NO.j)}) lists every part.`;
+                            renderPart(TT, UT, mT, WT) {
+                              const zT = function(TT) {
+                                  const UT = TT.map((TT => TT.section)).filter(Boolean);
+                                  if (0 === UT.length) return "";
+                                  const mT = UT[0],
+                                    WT = UT.at(-1);
+                                  return mT === WT ? mT : `${mT} to ${WT}`
+                                }(UT),
+                                MT = UT.map((TT => TT.markdown)).join("\n\n"),
+                                gT = zT ? `It covers ${zT}. ` : "",
+                                nT = `Part ${mT+1} of ${WT} of [${TT.title}](${this.url((0,QW.r)(TT.slug))}). ${gT}[llms.txt](${this.url(QW.h)}) lists every part.`;
                               return {
-                                path: (0, NO.u)(pp.slug, cp),
-                                label: op,
-                                markdown: `# ${pp.title}, part ${cp+1} of ${Op}\n\n${xp}\n\n${this.resolveLinks(pp,Ip)}\n`
+                                path: (0, QW.t)(TT.slug, mT),
+                                label: zT,
+                                markdown: `# ${TT.title}, part ${mT+1} of ${WT}\n\n${nT}\n\n${this.resolveLinks(TT,MT)}\n`
                               }
                             }
-                            llmsTxt(pp) {
-                              const ip = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${gO(NO.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const cp of Tp) {
-                                ip.push("", `## ${cp.title}`, "");
-                                for (const pp of cp.pageIds) {
-                                  const cp = this.getPage(pp),
+                            llmsTxt(TT) {
+                              const UT = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${KW(QW.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const mT of FT) {
+                                UT.push("", `## ${mT.title}`, "");
+                                for (const TT of mT.pageIds) {
+                                  const mT = this.getPage(TT),
                                     {
-                                      page: Op,
-                                      parts: op
-                                    } = cp,
-                                    Ip = `About ${gO(cp.markdown.length)} tokens${op.length>0?`, in ${op.length} parts:`:"."}`;
-                                  ip.push(`- [${Op.title}](${this.url(cp.path)}): ${Op.summary} ${Ip}`), op.forEach(((pp, cp) => {
-                                    ip.push(`  - [Part ${cp+1}${pp.label?`: ${pp.label}`:""}](${this.url(pp.path)})`)
+                                      page: WT,
+                                      parts: zT
+                                    } = mT,
+                                    MT = `About ${KW(mT.markdown.length)} tokens${zT.length>0?`, in ${zT.length} parts:`:"."}`;
+                                  UT.push(`- [${WT.title}](${this.url(mT.path)}): ${WT.summary} ${MT}`), zT.forEach(((TT, mT) => {
+                                    UT.push(`  - [Part ${mT+1}${TT.label?`: ${TT.label}`:""}](${this.url(TT.path)})`)
                                   }))
                                 }
                               }
-                              return ip.push("", "## Optional", "", `- [Every page in one file](${this.url(NO.i)}): About ${gO(pp.length)} tokens, for a model with a large context window.`, ""), ip.join("\n")
+                              return UT.push("", "## Optional", "", `- [Every page in one file](${this.url(QW.d)}): About ${KW(TT.length)} tokens, for a model with a large context window.`, ""), UT.join("\n")
                             }
                             llmsFullTxt() {
-                              return Tp.flatMap((pp => pp.pageIds.map((pp => this.getPage(pp).markdown)))).join("\n---\n\n")
+                              return FT.flatMap((TT => TT.pageIds.map((TT => this.getPage(TT).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const pp = this.llmsFullTxt(),
-                                ip = this.llmsTxt(pp),
-                                cp = new Map([
-                                  [NO.o, ip],
-                                  [NO.j, ip],
-                                  [NO.i, pp]
+                              const TT = this.llmsFullTxt(),
+                                UT = this.llmsTxt(TT),
+                                mT = new Map([
+                                  [QW.m, UT],
+                                  [QW.h, UT],
+                                  [QW.d, TT]
                                 ]);
-                              for (const Op of this.pages) {
-                                cp.set(Op.path, Op.markdown);
-                                for (const pp of Op.parts) cp.set(pp.path, pp.markdown)
+                              for (const WT of this.pages) {
+                                mT.set(WT.path, WT.markdown);
+                                for (const TT of WT.parts) mT.set(TT.path, TT.markdown)
                               }
-                              return cp
+                              return mT
                             }
                           }
 
-                          function gO(pp) {
-                            return `${Math.max(1,Math.round(pp/4e3))}K`
+                          function KW(TT) {
+                            return `${Math.max(1,Math.round(TT/4e3))}K`
                           }
-                          let GO = null;
+                          let SW = null;
 
-                          function rO() {
-                            return GO ??= new FO(Np, TO.b), GO
+                          function GW() {
+                            return SW ??= new rW(sT, sW.b), SW
                           }
-                          var ZO = cp(4941);
-                          const zO = [ZO.f, ZO.o];
+                          var NW = mT(4923);
+                          const EW = [NW.g, NW.o];
 
-                          function sO(pp) {
-                            return rO().getPage(pp.id).parts.length > 0 ? `Read ${NO.n}, then the parts of the Bloxd Code API's ${pp.title} page it lists, so I can ask questions about it.` : `Read ${TO.b}${(0,NO.r)(pp.slug)} so I can ask questions about it. ${ZO.k}`
+                          function hW(TT) {
+                            return GW().getPage(TT.id).parts.length > 0 ? `Read ${QW.k}, then the parts of the Bloxd Code API's ${TT.title} page it lists, so I can ask questions about it.` : `Read ${sW.b}${(0,QW.r)(TT.slug)} so I can ask questions about it. ${NW.m}`
                           }
 
-                          function KO(pp) {
+                          function DW(TT) {
                             let {
-                              page: ip
-                            } = pp;
-                            const [cp, Op] = tp();
-                            return (0, yp.jsxs)("div", {
+                              page: UT
+                            } = TT;
+                            const [mT, WT] = fT();
+                            return (0, BT.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, yp.jsxs)("button", {
+                              children: [(0, BT.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Op(rO().getPage(ip.id).markdown)
+                                  WT(GW().getPage(UT.id).markdown)
                                 },
-                                children: [(0, yp.jsx)(wp, {
-                                  name: !1 === (null === cp || void 0 === cp ? void 0 : cp.failed) ? "check" : "copy"
-                                }), (0, yp.jsx)("span", {
-                                  children: cp ? cp.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, BT.jsx)(cT, {
+                                  name: !1 === (null === mT || void 0 === mT ? void 0 : mT.failed) ? "check" : "copy"
+                                }), (0, BT.jsx)("span", {
+                                  children: mT ? mT.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), zO.map((pp => (0, yp.jsxs)("a", {
+                              }), EW.map((TT => (0, BT.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, ZO.e)(pp, sO(ip)),
+                                href: (0, NW.c)(TT, hW(UT)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, yp.jsx)(wp, {
+                                children: [(0, BT.jsx)(cT, {
                                   name: "external-link"
-                                }), (0, yp.jsxs)("span", {
-                                  children: ["Open in ", pp.name]
+                                }), (0, BT.jsxs)("span", {
+                                  children: ["Open in ", TT.name]
                                 })]
-                              }, pp.name)))]
+                              }, TT.name)))]
                             })
                           }
 
-                          function VO(pp) {
-                            return `#${[0,1,2].map((ip=>Math.round(Math.min(255,Math.max(0,pp[ip]))).toString(16).padStart(2,"0"))).join("")}`
+                          function oW(TT) {
+                            return `#${[0,1,2].map((UT=>Math.round(Math.min(255,Math.max(0,TT[UT]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function po(pp) {
-                            return [parseInt(pp.slice(1, 3), 16), parseInt(pp.slice(3, 5), 16), parseInt(pp.slice(5, 7), 16)]
+                          function AW(TT) {
+                            return [parseInt(TT.slice(1, 3), 16), parseInt(TT.slice(3, 5), 16), parseInt(TT.slice(5, 7), 16)]
                           }
 
-                          function io(pp) {
+                          function RW(TT) {
                             let {
-                              label: ip,
-                              min: cp,
-                              max: Op,
-                              step: op,
-                              low: Ip,
-                              high: Sp,
-                              onChange: xp
-                            } = pp;
-                            return (0, yp.jsxs)("div", {
+                              label: UT,
+                              min: mT,
+                              max: WT,
+                              step: zT,
+                              low: MT,
+                              high: gT,
+                              onChange: nT
+                            } = TT;
+                            return (0, BT.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, yp.jsxs)("div", {
+                              children: [(0, BT.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, yp.jsx)("span", {
-                                  children: ip
-                                }), (0, yp.jsx)("span", {
+                                children: [(0, BT.jsx)("span", {
+                                  children: UT
+                                }), (0, BT.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Ip === Sp ? Ip : `${Ip}\u2013${Sp}`
+                                  children: MT === gT ? MT : `${MT}\u2013${gT}`
                                 })]
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, yp.jsx)("input", {
+                                children: [(0, BT.jsx)("input", {
                                   type: "range",
-                                  min: cp,
-                                  max: Op,
-                                  step: op,
-                                  value: Math.min(Op, Ip),
-                                  "aria-label": `Minimum ${ip.toLowerCase()}`,
-                                  onChange: pp => {
-                                    const ip = Number(pp.target.value);
-                                    xp(ip, Math.max(ip, Sp))
+                                  min: mT,
+                                  max: WT,
+                                  step: zT,
+                                  value: Math.min(WT, MT),
+                                  "aria-label": `Minimum ${UT.toLowerCase()}`,
+                                  onChange: TT => {
+                                    const UT = Number(TT.target.value);
+                                    nT(UT, Math.max(UT, gT))
                                   }
-                                }), (0, yp.jsx)("input", {
+                                }), (0, BT.jsx)("input", {
                                   type: "range",
-                                  min: cp,
-                                  max: Op,
-                                  step: op,
-                                  value: Math.min(Op, Sp),
-                                  "aria-label": `Maximum ${ip.toLowerCase()}`,
-                                  onChange: pp => {
-                                    const ip = Number(pp.target.value);
-                                    xp(Math.min(ip, Ip), ip)
+                                  min: mT,
+                                  max: WT,
+                                  step: zT,
+                                  value: Math.min(WT, gT),
+                                  "aria-label": `Maximum ${UT.toLowerCase()}`,
+                                  onChange: TT => {
+                                    const UT = Number(TT.target.value);
+                                    nT(Math.min(UT, MT), UT)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function co(pp) {
+                          function Tz(TT) {
                             let {
-                              label: ip,
-                              min: cp,
-                              max: Op,
-                              step: op,
-                              value: Ip,
-                              onChange: Sp,
-                              format: xp = String
-                            } = pp;
-                            return (0, yp.jsxs)("div", {
+                              label: UT,
+                              min: mT,
+                              max: WT,
+                              step: zT,
+                              value: MT,
+                              onChange: gT,
+                              format: nT = String
+                            } = TT;
+                            return (0, BT.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, yp.jsxs)("div", {
+                              children: [(0, BT.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, yp.jsx)("span", {
-                                  children: ip
-                                }), (0, yp.jsx)("span", {
+                                children: [(0, BT.jsx)("span", {
+                                  children: UT
+                                }), (0, BT.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: xp(Ip)
+                                  children: nT(MT)
                                 })]
-                              }), (0, yp.jsx)("input", {
+                              }), (0, BT.jsx)("input", {
                                 type: "range",
-                                min: cp,
-                                max: Op,
-                                step: op,
-                                value: Math.min(Op, Math.max(cp, Ip)),
-                                "aria-label": ip,
-                                onChange: pp => {
-                                  Sp(Number(pp.target.value))
+                                min: mT,
+                                max: WT,
+                                step: zT,
+                                value: Math.min(WT, Math.max(mT, MT)),
+                                "aria-label": UT,
+                                onChange: TT => {
+                                  gT(Number(TT.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function Oo(pp) {
+                          function Uz(TT) {
                             let {
-                              opts: ip,
-                              onChange: cp
-                            } = pp;
-                            const Op = ip.colorGradients;
-                            if (!Gc(Op)) return (0, yp.jsxs)("div", {
+                              opts: UT,
+                              onChange: mT
+                            } = TT;
+                            const WT = UT.colorGradients;
+                            if (!Sm(WT)) return (0, BT.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, yp.jsx)("div", {
+                              children: [(0, BT.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, yp.jsx)("span", {
+                                children: (0, BT.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, yp.jsx)("div", {
+                              }), (0, BT.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Op.map(((pp, ip) => (0, yp.jsx)("input", {
+                                children: WT.map(((TT, UT) => (0, BT.jsx)("input", {
                                   type: "color",
-                                  value: VO(pp.color),
-                                  "aria-label": `Colour ${ip+1}`,
-                                  onChange: pp => {
-                                    const op = [...Op];
-                                    op[ip] = {
-                                      color: po(pp.target.value)
-                                    }, cp(op)
+                                  value: oW(TT.color),
+                                  "aria-label": `Colour ${UT+1}`,
+                                  onChange: TT => {
+                                    const zT = [...WT];
+                                    zT[UT] = {
+                                      color: AW(TT.target.value)
+                                    }, mT(zT)
                                   }
-                                }, ip)))
+                                }, UT)))
                               })]
                             });
-                            const op = (pp, ip) => {
-                              const op = [...Op];
-                              op[pp] = ip, cp(op)
+                            const zT = (TT, UT) => {
+                              const zT = [...WT];
+                              zT[TT] = UT, mT(zT)
                             };
-                            return (0, yp.jsxs)("div", {
+                            return (0, BT.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, yp.jsxs)("div", {
+                              children: [(0, BT.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, yp.jsx)("span", {
+                                children: [(0, BT.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, yp.jsx)("span", {
+                                }), (0, BT.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Op.map(((pp, ip) => {
-                                var cp;
-                                const Op = null !== (cp = pp.maxColor) && void 0 !== cp ? cp : pp.minColor;
-                                return (0, yp.jsxs)("div", {
+                              }), WT.map(((TT, UT) => {
+                                var mT;
+                                const WT = null !== (mT = TT.maxColor) && void 0 !== mT ? mT : TT.minColor;
+                                return (0, BT.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, yp.jsxs)("span", {
+                                  children: [(0, BT.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * pp.timeFraction), "%"]
-                                  }), (0, yp.jsx)("span", {
+                                    children: [Math.round(100 * TT.timeFraction), "%"]
+                                  }), (0, BT.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${VO(pp.minColor)}, ${VO(Op)})`
+                                      background: `linear-gradient(90deg, ${oW(TT.minColor)}, ${oW(WT)})`
                                     }
-                                  }), (0, yp.jsx)("input", {
+                                  }), (0, BT.jsx)("input", {
                                     type: "color",
-                                    value: VO(pp.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*pp.timeFraction)}%`,
-                                    onChange: cp => {
-                                      op(ip, {
-                                        ...pp,
-                                        minColor: [...po(cp.target.value), pp.minColor[3]]
+                                    value: oW(TT.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*TT.timeFraction)}%`,
+                                    onChange: mT => {
+                                      zT(UT, {
+                                        ...TT,
+                                        minColor: [...AW(mT.target.value), TT.minColor[3]]
                                       })
                                     }
-                                  }), (0, yp.jsx)("input", {
+                                  }), (0, BT.jsx)("input", {
                                     type: "color",
-                                    value: VO(Op),
-                                    "aria-label": `Maximum colour at ${Math.round(100*pp.timeFraction)}%`,
-                                    onChange: cp => {
-                                      op(ip, {
-                                        ...pp,
-                                        maxColor: [...po(cp.target.value), Op[3]]
+                                    value: oW(WT),
+                                    "aria-label": `Maximum colour at ${Math.round(100*TT.timeFraction)}%`,
+                                    onChange: mT => {
+                                      zT(UT, {
+                                        ...TT,
+                                        maxColor: [...AW(mT.target.value), WT[3]]
                                       })
                                     }
                                   })]
-                                }, ip)
+                                }, UT)
                               }))]
                             })
                           }
-                          const oo = [-.5, -.5, -.5],
-                            Io = [.5, .5, .5],
-                            So = [0, 1, 2, 3, 4, 5, 6, 7].map((pp => [1 & pp ? Io[0] : oo[0], 2 & pp ? Io[1] : oo[1], 4 & pp ? Io[2] : oo[2]]));class xo {
+                          const mz = [-.5, -.5, -.5],
+                            Wz = [.5, .5, .5],
+                            zz = [0, 1, 2, 3, 4, 5, 6, 7].map((TT => [1 & TT ? Wz[0] : mz[0], 2 & TT ? Wz[1] : mz[1], 4 & TT ? Wz[2] : mz[2]]));class Mz {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(pp, ip, cp, Op) {
-                              const op = Math.round(31 * ip),
-                                Ip = Math.round(31 * cp),
-                                Sp = Math.round(31 * Op),
-                                xp = `${op}|${Ip}|${Sp}`;
-                              let Lp = this.tints.get(pp);
-                              (!Lp || Lp.size > 2e3) && (Lp = new Map, this.tints.set(pp, Lp));
-                              let Yp = Lp.get(xp);
-                              if (Yp) return Yp;
-                              Yp = document.createElement("canvas"), Yp.width = pp.naturalWidth || 16, Yp.height = pp.naturalHeight || 16;
-                              const Dp = Yp.getContext("2d");
-                              return Dp ? (Dp.imageSmoothingEnabled = !1, Dp.drawImage(pp, 0, 0, Yp.width, Yp.height), Dp.globalCompositeOperation = "multiply", Dp.fillStyle = `rgb(${op/31*255}, ${Ip/31*255}, ${Sp/31*255})`, Dp.fillRect(0, 0, Yp.width, Yp.height), Dp.globalCompositeOperation = "destination-in", Dp.drawImage(pp, 0, 0, Yp.width, Yp.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Lp.set(xp, Yp), Yp
+                            get(TT, UT, mT, WT) {
+                              const zT = Math.round(31 * UT),
+                                MT = Math.round(31 * mT),
+                                gT = Math.round(31 * WT),
+                                nT = `${zT}|${MT}|${gT}`;
+                              let HT = this.tints.get(TT);
+                              (!HT || HT.size > 2e3) && (HT = new Map, this.tints.set(TT, HT));
+                              let kT = HT.get(nT);
+                              if (kT) return kT;
+                              kT = document.createElement("canvas"), kT.width = TT.naturalWidth || 16, kT.height = TT.naturalHeight || 16;
+                              const jT = kT.getContext("2d");
+                              return jT ? (jT.imageSmoothingEnabled = !1, jT.drawImage(TT, 0, 0, kT.width, kT.height), jT.globalCompositeOperation = "multiply", jT.fillStyle = `rgb(${zT/31*255}, ${MT/31*255}, ${gT/31*255})`, jT.fillRect(0, 0, kT.width, kT.height), jT.globalCompositeOperation = "destination-in", jT.drawImage(TT, 0, 0, kT.width, kT.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), HT.set(nT, kT), kT
                             }
                           }
 
-                          function Lo(pp) {
+                          function gz(TT) {
                             let {
-                              opts: ip,
-                              textureUrl: cp,
-                              burst: op,
-                              paused: Ip
-                            } = pp;
-                            const Sp = (0, Op.useRef)(null),
-                              xp = (0, Op.useRef)(ip);
-                            xp.current = ip;
-                            const Lp = (0, Op.useRef)(Ip);
-                            Lp.current = Ip;
-                            const Yp = (0, Op.useRef)(null),
-                              Dp = (0, Op.useRef)(null),
-                              Ap = (0, Op.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(pp) {
-                                let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const cp = [-.5, -.5, -.5],
-                                  Op = [.5, .5, .5];
-                                let op = .5;
-                                for (let Ip = 0; Ip < 40; Ip++) {
-                                  const Ip = Zc(pp, cp, Op, ip),
-                                    Sp = Math.max(Ip.life / 30, .001);
-                                  for (; Kc(Ip, pp.gravity, Sp);) op = Math.max(op, Math.hypot(Ip.pos[0], Ip.pos[1], Ip.pos[2]) + Ip.size / 2)
+                              opts: UT,
+                              textureUrl: mT,
+                              burst: zT,
+                              paused: MT
+                            } = TT;
+                            const gT = (0, WT.useRef)(null),
+                              nT = (0, WT.useRef)(UT);
+                            nT.current = UT;
+                            const HT = (0, WT.useRef)(MT);
+                            HT.current = MT;
+                            const kT = (0, WT.useRef)(null),
+                              jT = (0, WT.useRef)(null),
+                              lT = (0, WT.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(TT) {
+                                let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const mT = [-.5, -.5, -.5],
+                                  WT = [.5, .5, .5];
+                                let zT = .5;
+                                for (let MT = 0; MT < 40; MT++) {
+                                  const MT = Nm(TT, mT, WT, UT),
+                                    gT = Math.max(MT.life / 30, .001);
+                                  for (; Dm(MT, TT.gravity, gT);) zT = Math.max(zT, Math.hypot(MT.pos[0], MT.pos[1], MT.pos[2]) + MT.size / 2)
                                 }
-                                return op
-                              }(ip)))), [ip]),
-                              Pp = (0, Op.useRef)(Ap);
-                            return Pp.current = Ap, (0, Op.useEffect)((() => {
-                              if (Yp.current = null, !cp) return;
-                              const pp = new Image;
-                              let ip = !1;
-                              return pp.onload = () => {
-                                ip || (Yp.current = pp)
-                              }, pp.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${cp}`)
-                              }, pp.src = cp, () => {
-                                ip = !0
+                                return zT
+                              }(UT)))), [UT]),
+                              LT = (0, WT.useRef)(lT);
+                            return LT.current = lT, (0, WT.useEffect)((() => {
+                              if (kT.current = null, !mT) return;
+                              const TT = new Image;
+                              let UT = !1;
+                              return TT.onload = () => {
+                                UT || (kT.current = TT)
+                              }, TT.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${mT}`)
+                              }, TT.src = mT, () => {
+                                UT = !0
                               }
-                            }), [cp]), (0, Op.useEffect)((() => {
-                              var pp;
-                              null === (pp = Dp.current) || void 0 === pp || pp.call(Dp)
-                            }), [ip, op]), (0, Op.useEffect)((() => {
-                              const pp = Sp.current,
-                                ip = null === pp || void 0 === pp ? void 0 : pp.getContext("2d");
-                              if (!pp || !ip) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const cp = new xo;
-                              let Op = [],
-                                op = 0,
-                                Ip = -.7,
-                                Ap = Pp.current,
-                                Wp = performance.now(),
-                                yp = 0,
-                                Up = !0,
-                                wp = null;
-                              const vp = () => {
-                                const pp = xp.current,
-                                  ip = Math.min(400, Math.max(0, Math.ceil(pp.manualEmitCount)));
-                                Op = [];
-                                for (let cp = 0; cp < ip; cp++) Op.push(Zc(pp, oo, Io, Math.random));
-                                op = 0
+                            }), [mT]), (0, WT.useEffect)((() => {
+                              var TT;
+                              null === (TT = jT.current) || void 0 === TT || TT.call(jT)
+                            }), [UT, zT]), (0, WT.useEffect)((() => {
+                              const TT = gT.current,
+                                UT = null === TT || void 0 === TT ? void 0 : TT.getContext("2d");
+                              if (!TT || !UT) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const mT = new Mz;
+                              let WT = [],
+                                zT = 0,
+                                MT = -.7,
+                                lT = LT.current,
+                                pT = performance.now(),
+                                BT = 0,
+                                ZT = !0,
+                                cT = null;
+                              const vT = () => {
+                                const TT = nT.current,
+                                  UT = Math.min(400, Math.max(0, Math.ceil(TT.manualEmitCount)));
+                                WT = [];
+                                for (let mT = 0; mT < UT; mT++) WT.push(Nm(TT, mz, Wz, Math.random));
+                                zT = 0
                               };
-                              Dp.current = vp, vp();
-                              const tp = Sp => {
-                                yp = requestAnimationFrame(tp);
-                                const Dp = Math.min(.05, (Sp - Wp) / 1e3);
-                                if (Wp = Sp, !Up) return;
-                                const Hp = window.devicePixelRatio || 1,
-                                  dp = Math.round(pp.clientWidth * Hp),
-                                  ep = Math.round(pp.clientHeight * Hp);
-                                if (0 === dp || 0 === ep) return;
-                                pp.width === dp && pp.height === ep || (pp.width = dp, pp.height = ep);
-                                const jp = xp.current;
-                                null === wp && (Ip += .18 * Dp), Ap += (Pp.current - Ap) * Math.min(1, 4 * Dp);
-                                const kp = .6 * Dp;
-                                Op = Op.filter((pp => Kc(pp, jp.gravity, kp))), 0 !== Op.length || Lp.current || (op += Dp, op > .6 && vp());
-                                const mp = function(pp, ip, cp, Op) {
-                                  const op = 3.2 * Op,
-                                    Ip = .44 * Math.min(pp, ip) * op / Op,
-                                    Sp = Math.cos(cp),
-                                    xp = Math.sin(cp),
-                                    Lp = Math.cos(.42),
-                                    Yp = Math.sin(.42);
-                                  return (cp, Op, Dp) => {
-                                    const Ap = cp * xp + Dp * Sp,
-                                      Pp = op - (Op * Yp + Ap * Lp);
-                                    if (Pp < .05) return null;
-                                    const Wp = Ip / Pp;
+                              jT.current = vT, vT();
+                              const fT = gT => {
+                                BT = requestAnimationFrame(fT);
+                                const jT = Math.min(.05, (gT - pT) / 1e3);
+                                if (pT = gT, !ZT) return;
+                                const qT = window.devicePixelRatio || 1,
+                                  iT = Math.round(TT.clientWidth * qT),
+                                  bT = Math.round(TT.clientHeight * qT);
+                                if (0 === iT || 0 === bT) return;
+                                TT.width === iT && TT.height === bT || (TT.width = iT, TT.height = bT);
+                                const OT = nT.current;
+                                null === cT && (MT += .18 * jT), lT += (LT.current - lT) * Math.min(1, 4 * jT);
+                                const eT = .6 * jT;
+                                WT = WT.filter((TT => Dm(TT, OT.gravity, eT))), 0 !== WT.length || HT.current || (zT += jT, zT > .6 && vT());
+                                const YT = function(TT, UT, mT, WT) {
+                                  const zT = 3.2 * WT,
+                                    MT = .44 * Math.min(TT, UT) * zT / WT,
+                                    gT = Math.cos(mT),
+                                    nT = Math.sin(mT),
+                                    HT = Math.cos(.42),
+                                    kT = Math.sin(.42);
+                                  return (mT, WT, jT) => {
+                                    const lT = mT * nT + jT * gT,
+                                      LT = zT - (WT * kT + lT * HT);
+                                    if (LT < .05) return null;
+                                    const pT = MT / LT;
                                     return {
-                                      x: pp / 2 + (cp * Sp - Dp * xp) * Wp,
-                                      y: ip / 2 - (Op * Lp - Ap * Yp) * Wp,
-                                      scale: Wp,
-                                      depth: Pp
+                                      x: TT / 2 + (mT * gT - jT * nT) * pT,
+                                      y: UT / 2 - (WT * HT - lT * kT) * pT,
+                                      scale: pT,
+                                      depth: LT
                                     }
                                   }
-                                }(dp, ep, Ip, Ap);
-                                ! function(pp, ip, cp, Op, op) {
-                                  const Ip = pp.createLinearGradient(0, 0, 0, cp);
-                                  Ip.addColorStop(0, "#23262d"), Ip.addColorStop(1, "#16181c"), pp.globalCompositeOperation = "source-over", pp.globalAlpha = 1, pp.fillStyle = Ip, pp.fillRect(0, 0, ip, cp);
-                                  const Sp = (ip, cp) => {
-                                      const op = Op(ip[0], ip[1], ip[2]),
-                                        Ip = Op(cp[0], cp[1], cp[2]);
-                                      op && Ip && (pp.beginPath(), pp.moveTo(op.x, op.y), pp.lineTo(Ip.x, Ip.y), pp.stroke())
+                                }(iT, bT, MT, lT);
+                                ! function(TT, UT, mT, WT, zT) {
+                                  const MT = TT.createLinearGradient(0, 0, 0, mT);
+                                  MT.addColorStop(0, "#23262d"), MT.addColorStop(1, "#16181c"), TT.globalCompositeOperation = "source-over", TT.globalAlpha = 1, TT.fillStyle = MT, TT.fillRect(0, 0, UT, mT);
+                                  const gT = (UT, mT) => {
+                                      const zT = WT(UT[0], UT[1], UT[2]),
+                                        MT = WT(mT[0], mT[1], mT[2]);
+                                      zT && MT && (TT.beginPath(), TT.moveTo(zT.x, zT.y), TT.lineTo(MT.x, MT.y), TT.stroke())
                                     },
-                                    xp = Math.ceil(op) + 1,
-                                    Lp = oo[1];
-                                  pp.lineWidth = 1, pp.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Yp = -xp; Yp <= xp; Yp++) Sp([Yp + .5, Lp, .5 - xp], [Yp + .5, Lp, xp + .5]), Sp([.5 - xp, Lp, Yp + .5], [xp + .5, Lp, Yp + .5]);
-                                  pp.strokeStyle = "rgba(255, 255, 255, 0.28)", pp.setLineDash([4, 4]);
-                                  for (const Yp of So)
-                                    for (const pp of So) {
-                                      const ip = [0, 1, 2].filter((ip => Yp[ip] !== pp[ip]));
-                                      1 === ip.length && Yp[ip[0]] < pp[ip[0]] && Sp(Yp, pp)
+                                    nT = Math.ceil(zT) + 1,
+                                    HT = mz[1];
+                                  TT.lineWidth = 1, TT.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let kT = -nT; kT <= nT; kT++) gT([kT + .5, HT, .5 - nT], [kT + .5, HT, nT + .5]), gT([.5 - nT, HT, kT + .5], [nT + .5, HT, kT + .5]);
+                                  TT.strokeStyle = "rgba(255, 255, 255, 0.28)", TT.setLineDash([4, 4]);
+                                  for (const kT of zz)
+                                    for (const TT of zz) {
+                                      const UT = [0, 1, 2].filter((UT => kT[UT] !== TT[UT]));
+                                      1 === UT.length && kT[UT[0]] < TT[UT[0]] && gT(kT, TT)
                                     }
-                                  pp.setLineDash([])
-                                }(ip, dp, ep, mp, Ap);
-                                const Rp = Yp.current,
-                                  qp = Op.map((pp => ({
-                                    particle: pp,
-                                    at: mp(pp.pos[0], pp.pos[1], pp.pos[2])
-                                  }))).filter((pp => null !== pp.at)).sort(((pp, ip) => ip.at.depth - pp.at.depth));
-                                ip.imageSmoothingEnabled = !1;
-                                for (const pp of function(pp) {
-                                    switch (pp) {
-                                      case hc.g.OneOne:
+                                  TT.setLineDash([])
+                                }(UT, iT, bT, YT, lT);
+                                const JT = kT.current,
+                                  xT = WT.map((TT => ({
+                                    particle: TT,
+                                    at: YT(TT.pos[0], TT.pos[1], TT.pos[2])
+                                  }))).filter((TT => null !== TT.at)).sort(((TT, UT) => UT.at.depth - TT.at.depth));
+                                UT.imageSmoothingEnabled = !1;
+                                for (const TT of function(TT) {
+                                    switch (TT) {
+                                      case Vm.e.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case hc.g.Add:
+                                      case Vm.e.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case hc.g.Multiply:
+                                      case Vm.e.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case hc.g.MultiplyAdd:
+                                      case Vm.e.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(jp.blendMode)) {
-                                  ip.globalCompositeOperation = pp.operation;
+                                  }(OT.blendMode)) {
+                                  UT.globalCompositeOperation = TT.operation;
                                   for (const {
-                                      particle: Op,
-                                      at: op
+                                      particle: WT,
+                                      at: zT
                                     }
-                                    of qp) {
-                                    const [Ip, Sp, xp, Lp] = sc(Op), Yp = Math.max(1, Op.size * op.scale);
-                                    ip.globalAlpha = pp.usesAlpha ? Math.min(1, Math.max(0, Lp)) : 1, Rp ? ip.drawImage(cp.get(Rp, Ip, Sp, xp), op.x - Yp / 2, op.y - Yp / 2, Yp, Yp) : (ip.fillStyle = `rgb(${255*Ip}, ${255*Sp}, ${255*xp})`, ip.fillRect(op.x - Yp / 2, op.y - Yp / 2, Yp, Yp))
+                                    of xT) {
+                                    const [MT, gT, nT, HT] = hm(WT), kT = Math.max(1, WT.size * zT.scale);
+                                    UT.globalAlpha = TT.usesAlpha ? Math.min(1, Math.max(0, HT)) : 1, JT ? UT.drawImage(mT.get(JT, MT, gT, nT), zT.x - kT / 2, zT.y - kT / 2, kT, kT) : (UT.fillStyle = `rgb(${255*MT}, ${255*gT}, ${255*nT})`, UT.fillRect(zT.x - kT / 2, zT.y - kT / 2, kT, kT))
                                   }
                                 }
-                                ip.globalCompositeOperation = "source-over", ip.globalAlpha = 1
+                                UT.globalCompositeOperation = "source-over", UT.globalAlpha = 1
                               };
-                              yp = requestAnimationFrame(tp);
-                              const Hp = new IntersectionObserver((pp => {
-                                let [ip] = pp;
-                                Up = ip.isIntersecting
+                              BT = requestAnimationFrame(fT);
+                              const qT = new IntersectionObserver((TT => {
+                                let [UT] = TT;
+                                ZT = UT.isIntersecting
                               }));
-                              Hp.observe(pp);
-                              const dp = ip => {
-                                  wp = ip.clientX, pp.setPointerCapture(ip.pointerId)
+                              qT.observe(TT);
+                              const iT = UT => {
+                                  cT = UT.clientX, TT.setPointerCapture(UT.pointerId)
                                 },
-                                ep = pp => {
-                                  null !== wp && (Ip += .01 * (pp.clientX - wp), wp = pp.clientX)
+                                bT = TT => {
+                                  null !== cT && (MT += .01 * (TT.clientX - cT), cT = TT.clientX)
                                 },
-                                jp = () => {
-                                  wp = null
+                                OT = () => {
+                                  cT = null
                                 };
-                              return pp.addEventListener("pointerdown", dp), pp.addEventListener("pointermove", ep), pp.addEventListener("pointerup", jp), pp.addEventListener("pointercancel", jp), () => {
-                                cancelAnimationFrame(yp), Hp.disconnect(), Dp.current = null, pp.removeEventListener("pointerdown", dp), pp.removeEventListener("pointermove", ep), pp.removeEventListener("pointerup", jp), pp.removeEventListener("pointercancel", jp)
+                              return TT.addEventListener("pointerdown", iT), TT.addEventListener("pointermove", bT), TT.addEventListener("pointerup", OT), TT.addEventListener("pointercancel", OT), () => {
+                                cancelAnimationFrame(BT), qT.disconnect(), jT.current = null, TT.removeEventListener("pointerdown", iT), TT.removeEventListener("pointermove", bT), TT.removeEventListener("pointerup", OT), TT.removeEventListener("pointercancel", OT)
                               }
-                            }), []), (0, yp.jsx)("canvas", {
-                              ref: Sp,
+                            }), []), (0, BT.jsx)("canvas", {
+                              ref: gT,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${ip.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${UT.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const Yo = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            Do = [{
-                              mode: hc.g.OneOne,
+                          const nz = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            Hz = [{
+                              mode: Vm.e.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: hc.g.Standard,
+                              mode: Vm.e.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: hc.g.Add,
+                              mode: Vm.e.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: hc.g.Multiply,
+                              mode: Vm.e.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: hc.g.MultiplyAdd,
+                              mode: Vm.e.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            Ao = (0, Op.forwardRef)((function(pp, ip) {
-                              var cp, op;
+                            kz = (0, WT.forwardRef)((function(TT, UT) {
+                              var mT, zT;
                               let {
-                                textures: Sp
-                              } = pp;
-                              const xp = uO(),
-                                Lp = (0, Op.useRef)(null),
-                                [Yp, Dp] = (0, Op.useState)(nc),
-                                [Ap, Pp] = (0, Op.useState)("example"),
-                                [Wp, Up] = (0, Op.useState)(0),
-                                [vp, tp] = (0, Op.useState)(!1),
-                                dp = pp => {
-                                  const ip = "example" === pp ? nc : ac(pp);
-                                  ip && (Dp(ip), Pp(pp))
+                                textures: gT
+                              } = TT;
+                              const nT = iW(),
+                                HT = (0, WT.useRef)(null),
+                                [kT, jT] = (0, WT.useState)(Cm),
+                                [lT, LT] = (0, WT.useState)("example"),
+                                [pT, ZT] = (0, WT.useState)(0),
+                                [vT, fT] = (0, WT.useState)(!1),
+                                iT = TT => {
+                                  const UT = "example" === TT ? Cm : um(TT);
+                                  UT && (jT(UT), LT(TT))
                                 };
-                              (0, Op.useImperativeHandle)(ip, (() => ({
-                                preview: pp => {
-                                  var ip;
-                                  dp(pp), null === (ip = Lp.current) || void 0 === ip || ip.scrollIntoView({
+                              (0, WT.useImperativeHandle)(UT, (() => ({
+                                preview: TT => {
+                                  var UT;
+                                  iT(TT), null === (UT = HT.current) || void 0 === UT || UT.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const ep = pp => {
-                                  Dp({
-                                    ...Yp,
-                                    ...pp
-                                  }), Pp(null)
+                              const bT = TT => {
+                                  jT({
+                                    ...kT,
+                                    ...TT
+                                  }), LT(null)
                                 },
-                                jp = function(pp, ip) {
-                                  if (null !== ip) return `${cO}    presetId: "${ip}",\n${OO}\n})`;
-                                  const cp = pp.velocityGradients.map((pp => `        {\n            timeFraction: ${Vc(pp.timeFraction)},\n            factor: ${Vc(pp.factor)},\n            factor2: ${Vc(pp.factor2)},\n        },`)),
-                                    Op = [`    dir1: ${pO(pp.dir1)},`, `    dir2: ${pO(pp.dir2)},`, OO, `    texture: "${pp.texture}",`, `    minLifeTime: ${Vc(pp.minLifeTime)},`, `    maxLifeTime: ${Vc(pp.maxLifeTime)},`, `    minEmitPower: ${Vc(pp.minEmitPower)},`, `    maxEmitPower: ${Vc(pp.maxEmitPower)},`, `    minSize: ${Vc(pp.minSize)},`, `    maxSize: ${Vc(pp.maxSize)},`, `    manualEmitCount: ${Vc(pp.manualEmitCount)},`, `    gravity: ${pO(pp.gravity)},`, `    colorGradients: ${iO(pp.colorGradients,"    ")},`, `    velocityGradients: ${cp.length>0?`[\n${cp.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Vc(pp.blendMode)},`];
-                                  return void 0 !== pp.hideDist && Op.push(`    hideDist: ${Vc(pp.hideDist)},`), `${cO}${Op.join("\n")}\n})`
-                                }(Yp, null === Ap || "example" === Ap ? null : Ap),
-                                mp = Sp.includes(Yp.texture) ? Sp : [...Sp, Yp.texture];
-                              return (0, yp.jsxs)("section", {
-                                ref: Lp,
+                                OT = function(TT, UT) {
+                                  if (null !== UT) return `${TW}    presetId: "${UT}",\n${UW}\n})`;
+                                  const mT = TT.velocityGradients.map((TT => `        {\n            timeFraction: ${om(TT.timeFraction)},\n            factor: ${om(TT.factor)},\n            factor2: ${om(TT.factor2)},\n        },`)),
+                                    WT = [`    dir1: ${Am(TT.dir1)},`, `    dir2: ${Am(TT.dir2)},`, UW, `    texture: "${TT.texture}",`, `    minLifeTime: ${om(TT.minLifeTime)},`, `    maxLifeTime: ${om(TT.maxLifeTime)},`, `    minEmitPower: ${om(TT.minEmitPower)},`, `    maxEmitPower: ${om(TT.maxEmitPower)},`, `    minSize: ${om(TT.minSize)},`, `    maxSize: ${om(TT.maxSize)},`, `    manualEmitCount: ${om(TT.manualEmitCount)},`, `    gravity: ${Am(TT.gravity)},`, `    colorGradients: ${Rm(TT.colorGradients,"    ")},`, `    velocityGradients: ${mT.length>0?`[\n${mT.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${om(TT.blendMode)},`];
+                                  return void 0 !== TT.hideDist && WT.push(`    hideDist: ${om(TT.hideDist)},`), `${TW}${WT.join("\n")}\n})`
+                                }(kT, null === lT || "example" === lT ? null : lT),
+                                YT = gT.includes(kT.texture) ? gT : [...gT, kT.texture];
+                              return (0, BT.jsxs)("section", {
+                                ref: HT,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, yp.jsxs)("header", {
+                                children: [(0, BT.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, yp.jsxs)("div", {
-                                    children: [(0, yp.jsx)("div", {
+                                  children: [(0, BT.jsxs)("div", {
+                                    children: [(0, BT.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, yp.jsx)("div", {
+                                    }), (0, BT.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, yp.jsx)(Hp, {
-                                    text: jp,
+                                  }), (0, BT.jsx)(qT, {
+                                    text: OT,
                                     label: "Copy code"
                                   })]
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, yp.jsx)("button", {
+                                  children: [(0, BT.jsx)("button", {
                                     type: "button",
-                                    className: Ip()("DocsVariantChip", {
-                                      Active: "example" === Ap
+                                    className: MT()("DocsVariantChip", {
+                                      Active: "example" === lT
                                     }),
                                     onClick: () => {
-                                      dp("example")
+                                      iT("example")
                                     },
                                     children: "Example"
-                                  }), Yo.filter((pp => null !== ac(pp))).map((pp => (0, yp.jsx)("button", {
+                                  }), nz.filter((TT => null !== um(TT))).map((TT => (0, BT.jsx)("button", {
                                     type: "button",
-                                    className: Ip()("DocsVariantChip", {
-                                      Active: Ap === pp
+                                    className: MT()("DocsVariantChip", {
+                                      Active: lT === TT
                                     }),
                                     onClick: () => {
-                                      dp(pp)
+                                      iT(TT)
                                     },
-                                    children: pp
-                                  }, pp))), (0, yp.jsxs)("select", {
+                                    children: TT
+                                  }, TT))), (0, BT.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== Ap && void 0 !== Ap ? Ap : "custom",
+                                    value: null !== lT && void 0 !== lT ? lT : "custom",
                                     "aria-label": "Preset",
-                                    onChange: pp => {
-                                      dp(pp.target.value)
+                                    onChange: TT => {
+                                      iT(TT.target.value)
                                     },
-                                    children: [(0, yp.jsx)("option", {
+                                    children: [(0, BT.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === Ap && (0, yp.jsx)("option", {
+                                    }), null === lT && (0, BT.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), bc.d.map((pp => (0, yp.jsx)("option", {
-                                      value: pp,
-                                      children: pp
-                                    }, pp)))]
+                                    }), Pm.b.map((TT => (0, BT.jsx)("option", {
+                                      value: TT,
+                                      children: TT
+                                    }, TT)))]
                                   })]
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, yp.jsxs)("div", {
+                                  children: [(0, BT.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, yp.jsx)(Lo, {
-                                      opts: Yp,
-                                      textureUrl: null !== (cp = null === xp || void 0 === xp ? void 0 : xp.getParticleTextureUrl(Yp.texture)) && void 0 !== cp ? cp : null,
-                                      burst: Wp,
-                                      paused: vp
-                                    }), (0, yp.jsxs)("div", {
+                                    children: [(0, BT.jsx)(gz, {
+                                      opts: kT,
+                                      textureUrl: null !== (mT = null === nT || void 0 === nT ? void 0 : nT.getParticleTextureUrl(kT.texture)) && void 0 !== mT ? mT : null,
+                                      burst: pT,
+                                      paused: vT
+                                    }), (0, BT.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, yp.jsxs)("button", {
+                                      children: [(0, BT.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          Up(Wp + 1)
+                                          ZT(pT + 1)
                                         },
-                                        children: [(0, yp.jsx)(wp, {
+                                        children: [(0, BT.jsx)(cT, {
                                           name: "replay"
-                                        }), (0, yp.jsx)("span", {
+                                        }), (0, BT.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, yp.jsxs)("button", {
+                                      }), (0, BT.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": vp,
+                                        "aria-pressed": vT,
                                         onClick: () => {
-                                          tp(!vp)
+                                          fT(!vT)
                                         },
-                                        children: [(0, yp.jsx)(wp, {
-                                          name: vp ? "play" : "pause"
-                                        }), (0, yp.jsx)("span", {
-                                          children: vp ? "Loop" : "Stop looping"
+                                        children: [(0, BT.jsx)(cT, {
+                                          name: vT ? "play" : "pause"
+                                        }), (0, BT.jsx)("span", {
+                                          children: vT ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, yp.jsxs)("div", {
+                                  }), (0, BT.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, yp.jsxs)("div", {
+                                    children: [(0, BT.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, yp.jsxs)("div", {
+                                      children: [(0, BT.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, yp.jsx)("span", {
+                                        children: [(0, BT.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, yp.jsx)("code", {
+                                        }), (0, BT.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Yp.texture
+                                          children: kT.texture
                                         })]
-                                      }), (0, yp.jsx)("div", {
+                                      }), (0, BT.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: mp.map((pp => {
-                                          var ip;
-                                          const cp = null !== (ip = null === xp || void 0 === xp ? void 0 : xp.getParticleTextureUrl(pp)) && void 0 !== ip ? ip : null;
-                                          return (0, yp.jsx)("button", {
+                                        children: YT.map((TT => {
+                                          var UT;
+                                          const mT = null !== (UT = null === nT || void 0 === nT ? void 0 : nT.getParticleTextureUrl(TT)) && void 0 !== UT ? UT : null;
+                                          return (0, BT.jsx)("button", {
                                             type: "button",
-                                            className: Ip()("DocsParticleTexture", {
-                                              Active: Yp.texture === pp
+                                            className: MT()("DocsParticleTexture", {
+                                              Active: kT.texture === TT
                                             }),
-                                            title: pp,
-                                            "aria-label": pp,
-                                            "aria-pressed": Yp.texture === pp,
+                                            title: TT,
+                                            "aria-label": TT,
+                                            "aria-pressed": kT.texture === TT,
                                             onClick: () => {
-                                              ep({
-                                                texture: pp
+                                              bT({
+                                                texture: TT
                                               })
                                             },
-                                            children: cp ? (0, yp.jsx)("img", {
-                                              src: cp,
+                                            children: mT ? (0, BT.jsx)("img", {
+                                              src: mT,
                                               alt: ""
-                                            }) : (0, yp.jsx)(wp, {
+                                            }) : (0, BT.jsx)(cT, {
                                               name: "image"
                                             })
-                                          }, pp)
+                                          }, TT)
                                         }))
                                       })]
-                                    }), (0, yp.jsx)(co, {
+                                    }), (0, BT.jsx)(Tz, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Yp.manualEmitCount,
-                                      onChange: pp => {
-                                        ep({
-                                          manualEmitCount: pp
+                                      value: kT.manualEmitCount,
+                                      onChange: TT => {
+                                        bT({
+                                          manualEmitCount: TT
                                         })
                                       }
-                                    }), (0, yp.jsx)(io, {
+                                    }), (0, BT.jsx)(RW, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Yp.minLifeTime,
-                                      high: Yp.maxLifeTime,
-                                      onChange: (pp, ip) => {
-                                        ep({
-                                          minLifeTime: pp,
-                                          maxLifeTime: ip
+                                      low: kT.minLifeTime,
+                                      high: kT.maxLifeTime,
+                                      onChange: (TT, UT) => {
+                                        bT({
+                                          minLifeTime: TT,
+                                          maxLifeTime: UT
                                         })
                                       }
-                                    }), (0, yp.jsx)(io, {
+                                    }), (0, BT.jsx)(RW, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Yp.minEmitPower,
-                                      high: Yp.maxEmitPower,
-                                      onChange: (pp, ip) => {
-                                        ep({
-                                          minEmitPower: pp,
-                                          maxEmitPower: ip
+                                      low: kT.minEmitPower,
+                                      high: kT.maxEmitPower,
+                                      onChange: (TT, UT) => {
+                                        bT({
+                                          minEmitPower: TT,
+                                          maxEmitPower: UT
                                         })
                                       }
-                                    }), (0, yp.jsx)(io, {
+                                    }), (0, BT.jsx)(RW, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Yp.minSize,
-                                      high: Yp.maxSize,
-                                      onChange: (pp, ip) => {
-                                        ep({
-                                          minSize: pp,
-                                          maxSize: ip
+                                      low: kT.minSize,
+                                      high: kT.maxSize,
+                                      onChange: (TT, UT) => {
+                                        bT({
+                                          minSize: TT,
+                                          maxSize: UT
                                         })
                                       }
-                                    }), (0, yp.jsx)(co, {
+                                    }), (0, BT.jsx)(Tz, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (op = Yp.gravity[1]) && void 0 !== op ? op : 0,
-                                      onChange: pp => {
-                                        var ip, cp;
-                                        ep({
-                                          gravity: [null !== (ip = Yp.gravity[0]) && void 0 !== ip ? ip : 0, pp, null !== (cp = Yp.gravity[2]) && void 0 !== cp ? cp : 0]
+                                      value: null !== (zT = kT.gravity[1]) && void 0 !== zT ? zT : 0,
+                                      onChange: TT => {
+                                        var UT, mT;
+                                        bT({
+                                          gravity: [null !== (UT = kT.gravity[0]) && void 0 !== UT ? UT : 0, TT, null !== (mT = kT.gravity[2]) && void 0 !== mT ? mT : 0]
                                         })
                                       }
-                                    }), (0, yp.jsxs)("div", {
+                                    }), (0, BT.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, yp.jsx)("div", {
+                                      children: [(0, BT.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, yp.jsx)("span", {
+                                        children: (0, BT.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, yp.jsx)("select", {
+                                      }), (0, BT.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Yp.blendMode,
+                                        value: kT.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: pp => {
-                                          ep({
-                                            blendMode: Number(pp.target.value)
+                                        onChange: TT => {
+                                          bT({
+                                            blendMode: Number(TT.target.value)
                                           })
                                         },
-                                        children: Do.map((pp => {
+                                        children: Hz.map((TT => {
                                           let {
-                                            mode: ip,
-                                            label: cp
-                                          } = pp;
-                                          return (0, yp.jsx)("option", {
-                                            value: ip,
-                                            children: cp
-                                          }, ip)
+                                            mode: UT,
+                                            label: mT
+                                          } = TT;
+                                          return (0, BT.jsx)("option", {
+                                            value: UT,
+                                            children: mT
+                                          }, UT)
                                         }))
                                       })]
-                                    }), (0, yp.jsx)(Oo, {
-                                      opts: Yp,
-                                      onChange: pp => {
-                                        ep({
-                                          colorGradients: pp
+                                    }), (0, BT.jsx)(Uz, {
+                                      opts: kT,
+                                      onChange: TT => {
+                                        bT({
+                                          colorGradients: TT
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, yp.jsx)(kp, {
-                                  code: jp,
+                                }), (0, BT.jsx)(eT, {
+                                  code: OT,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var Po = cp(4556),
-                            Wo = cp(1929);
+                          var jz = mT(4590),
+                            lz = mT(2023);
 
-                          function yo(pp, ip) {
-                            return pp ? Po.d.includes(ip) ? pp.getIngameIconUrl(ip) : pp.getItemIconUrl(ip) : null
+                          function Lz(TT, UT) {
+                            return TT ? jz.d.includes(UT) ? TT.getIngameIconUrl(UT) : TT.getItemIconUrl(UT) : null
                           }
 
-                          function Uo(pp) {
-                            var ip, cp, Op;
+                          function pz(TT) {
+                            var UT, mT, WT;
                             let {
-                              part: op,
-                              assets: Sp
-                            } = pp;
-                            const xp = yo(Sp, op.icon),
-                              Lp = null !== (ip = null === (cp = op.style) || void 0 === cp ? void 0 : cp.fontSize) && void 0 !== ip ? ip : "1.8em",
-                              Yp = (0, fi.fc)(op.style);
-                            return (0, yp.jsxs)("span", {
-                              className: Ip()("DocsBloxdTextIcon", {
-                                Missing: !xp
+                              part: zT,
+                              assets: gT
+                            } = TT;
+                            const nT = Lz(gT, zT.icon),
+                              HT = null !== (UT = null === (mT = zT.style) || void 0 === mT ? void 0 : mT.fontSize) && void 0 !== UT ? UT : "1.8em",
+                              kT = (0, FU.Ob)(zT.style);
+                            return (0, BT.jsxs)("span", {
+                              className: MT()("DocsBloxdTextIcon", {
+                                Missing: !nT
                               }),
                               style: {
-                                width: Lp,
-                                height: Lp,
-                                opacity: null === (Op = op.style) || void 0 === Op ? void 0 : Op.opacity
+                                width: HT,
+                                height: HT,
+                                opacity: null === (WT = zT.style) || void 0 === WT ? void 0 : WT.opacity
                               },
-                              title: xp ? void 0 : `No Bloxd icon, item or block is called "${op.icon}"`,
-                              children: [xp && Yp && (0, yp.jsx)("span", {
+                              title: nT ? void 0 : `No Bloxd icon, item or block is called "${zT.icon}"`,
+                              children: [nT && kT && (0, BT.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Yp,
-                                  maskImage: `url("${xp}")`,
-                                  WebkitMaskImage: `url("${xp}")`
+                                  background: kT,
+                                  maskImage: `url("${nT}")`,
+                                  WebkitMaskImage: `url("${nT}")`
                                 }
-                              }), xp ? (0, yp.jsx)("img", {
-                                src: xp,
+                              }), nT ? (0, BT.jsx)("img", {
+                                src: nT,
                                 alt: "",
-                                className: Ip()({
-                                  Tinted: Yp
+                                className: MT()({
+                                  Tinted: kT
                                 })
-                              }) : (0, yp.jsx)(wp, {
+                              }) : (0, BT.jsx)(cT, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function wo(pp) {
+                          function Bz(TT) {
                             let {
-                              parts: ip,
-                              className: cp
-                            } = pp;
-                            const Op = uO(),
-                              op = [];
-                            let Sp = [];
-                            const xp = pp => {
-                              Sp.length > 0 && (op.push((0, yp.jsx)(Wo.e, {
-                                text: Sp
-                              }, `run-${pp}`)), Sp = [])
+                              parts: UT,
+                              className: mT
+                            } = TT;
+                            const WT = iW(),
+                              zT = [];
+                            let gT = [];
+                            const nT = TT => {
+                              gT.length > 0 && (zT.push((0, BT.jsx)(lz.e, {
+                                text: gT
+                              }, `run-${TT}`)), gT = [])
                             };
-                            return ip.forEach(((pp, ip) => {
-                              "icon" !== gi(pp) || ai(pp.icon) ? Sp.push(pp) : (xp(ip), op.push((0, yp.jsx)(Uo, {
-                                part: pp,
-                                assets: Op
-                              }, `icon-${ip}`)))
-                            })), xp(ip.length), (0, yp.jsx)("div", {
-                              className: Ip()("DocsStyledTextPreview", cp),
-                              children: op
+                            return UT.forEach(((TT, UT) => {
+                              "icon" !== rU(TT) || VU(TT.icon) ? gT.push(TT) : (nT(UT), zT.push((0, BT.jsx)(pz, {
+                                part: TT,
+                                assets: WT
+                              }, `icon-${UT}`)))
+                            })), nT(UT.length), (0, BT.jsx)("div", {
+                              className: MT()("DocsStyledTextPreview", mT),
+                              children: zT
                             })
                           }
-                          const vo = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let to = null;
+                          const Zz = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let cz = null;
 
-                          function Ho(pp) {
-                            if (to ??= document.createElement("canvas").getContext("2d"), !to) return "#000000";
-                            to.fillStyle = "#000000", to.fillStyle = pp;
-                            const ip = to.fillStyle;
-                            return ip.startsWith("#") ? ip : "#000000"
+                          function vz(TT) {
+                            if (cz ??= document.createElement("canvas").getContext("2d"), !cz) return "#000000";
+                            cz.fillStyle = "#000000", cz.fillStyle = TT;
+                            const UT = cz.fillStyle;
+                            return UT.startsWith("#") ? UT : "#000000"
                           }
 
-                          function eo(pp) {
+                          function fz(TT) {
                             let {
-                              value: ip,
-                              label: cp,
-                              onChange: Op
-                            } = pp;
-                            return (0, yp.jsxs)("span", {
+                              value: UT,
+                              label: mT,
+                              onChange: WT
+                            } = TT;
+                            return (0, BT.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, yp.jsx)("input", {
+                              children: [(0, BT.jsx)("input", {
                                 type: "color",
-                                value: Ho(ip),
-                                "aria-label": `${cp} picker`,
-                                onChange: pp => {
-                                  Op(pp.target.value)
+                                value: vz(UT),
+                                "aria-label": `${mT} picker`,
+                                onChange: TT => {
+                                  WT(TT.target.value)
                                 }
-                              }), (0, yp.jsx)("input", {
+                              }), (0, BT.jsx)("input", {
                                 type: "text",
-                                value: ip,
+                                value: UT,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": cp,
+                                "aria-label": mT,
                                 spellCheck: !1,
-                                onChange: pp => {
-                                  Op(pp.target.value)
+                                onChange: TT => {
+                                  WT(TT.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function uo(pp) {
+                          function qz(TT) {
                             let {
-                              value: ip,
-                              fontAwesomeIcons: cp,
-                              onChange: op
-                            } = pp;
-                            const Sp = uO(),
-                              [xp, Lp] = (0, Op.useState)(ai(ip) ? "fontAwesome" : "bloxd"),
-                              [Yp, Dp] = (0, Op.useState)(""),
-                              Ap = Yp.trim().toLowerCase(),
-                              Pp = "bloxd" === xp ? Po.d : cp,
-                              Wp = Ap ? Pp.filter((pp => pp.toLowerCase().includes(Ap))) : Pp;
-                            return (0, yp.jsxs)("div", {
+                              value: UT,
+                              fontAwesomeIcons: mT,
+                              onChange: zT
+                            } = TT;
+                            const gT = iW(),
+                              [nT, HT] = (0, WT.useState)(VU(UT) ? "fontAwesome" : "bloxd"),
+                              [kT, jT] = (0, WT.useState)(""),
+                              lT = kT.trim().toLowerCase(),
+                              LT = "bloxd" === nT ? jz.d : mT,
+                              pT = lT ? LT.filter((TT => TT.toLowerCase().includes(lT))) : LT;
+                            return (0, BT.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, yp.jsx)("input", {
+                              children: [(0, BT.jsx)("input", {
                                 type: "text",
-                                value: ip,
+                                value: UT,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: pp => {
-                                  op(pp.target.value)
+                                onChange: TT => {
+                                  zT(TT.target.value)
                                 }
-                              }), (0, yp.jsx)("p", {
+                              }), (0, BT.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((pp => (0, yp.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((TT => (0, BT.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": xp === pp,
-                                    className: Ip()("DocsVariantChip", {
-                                      Active: xp === pp
+                                    "aria-selected": nT === TT,
+                                    className: MT()("DocsVariantChip", {
+                                      Active: nT === TT
                                     }),
                                     onClick: () => {
-                                      Lp(pp)
+                                      HT(TT)
                                     },
-                                    children: "bloxd" === pp ? `Bloxd icons (${Po.d.length})` : `Font Awesome (${cp.length})`
-                                  }, pp))), (0, yp.jsx)("input", {
+                                    children: "bloxd" === TT ? `Bloxd icons (${jz.d.length})` : `Font Awesome (${mT.length})`
+                                  }, TT))), (0, BT.jsx)("input", {
                                     type: "search",
-                                    value: Yp,
+                                    value: kT,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: pp => {
-                                      Dp(pp.target.value)
+                                    onChange: TT => {
+                                      jT(TT.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Wp.map((pp => {
-                                  const cp = "bloxd" === xp ? yo(Sp, pp) : null;
-                                  return (0, yp.jsx)("button", {
+                                children: [pT.map((TT => {
+                                  const mT = "bloxd" === nT ? Lz(gT, TT) : null;
+                                  return (0, BT.jsx)("button", {
                                     type: "button",
-                                    title: pp,
-                                    "aria-label": pp,
-                                    "aria-pressed": pp === ip,
-                                    className: Ip()("DocsIconPickerOption", {
-                                      Active: pp === ip
+                                    title: TT,
+                                    "aria-label": TT,
+                                    "aria-pressed": TT === UT,
+                                    className: MT()("DocsIconPickerOption", {
+                                      Active: TT === UT
                                     }),
                                     onClick: () => {
-                                      op(pp)
+                                      zT(TT)
                                     },
-                                    children: "fontAwesome" === xp ? (0, yp.jsx)(jc.d, {
-                                      name: pp
-                                    }) : cp ? (0, yp.jsx)("img", {
-                                      src: cp,
+                                    children: "fontAwesome" === nT ? (0, BT.jsx)(bm.c, {
+                                      name: TT
+                                    }) : mT ? (0, BT.jsx)("img", {
+                                      src: mT,
                                       alt: ""
-                                    }) : (0, yp.jsx)(wp, {
+                                    }) : (0, BT.jsx)(cT, {
                                       name: "image"
                                     })
-                                  }, pp)
-                                })), 0 === Wp.length && (0, yp.jsxs)("p", {
+                                  }, TT)
+                                })), 0 === pT.length && (0, BT.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Yp, "\u201d."]
+                                  children: ["No icons match \u201c", kT, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function jo(pp) {
+                          function iz(TT) {
                             let {
-                              property: ip,
-                              value: cp,
-                              fontAwesomeIcons: Op,
-                              onChange: op
-                            } = pp;
+                              property: UT,
+                              value: mT,
+                              fontAwesomeIcons: WT,
+                              onChange: zT
+                            } = TT;
                             const {
-                              field: Ip,
-                              label: Sp
-                            } = ip, xp = pp => "" !== pp || ip.isRequired ? pp : void 0;
-                            switch (Ip.kind) {
+                              field: MT,
+                              label: gT
+                            } = UT, nT = TT => "" !== TT || UT.isRequired ? TT : void 0;
+                            switch (MT.kind) {
                               case "text":
-                                return Ip.multiline ? (0, yp.jsx)("textarea", {
-                                  value: String(null !== cp && void 0 !== cp ? cp : ""),
+                                return MT.multiline ? (0, BT.jsx)("textarea", {
+                                  value: String(null !== mT && void 0 !== mT ? mT : ""),
                                   rows: 2,
-                                  "aria-label": Sp,
-                                  onChange: pp => {
-                                    op(pp.target.value)
+                                  "aria-label": gT,
+                                  onChange: TT => {
+                                    zT(TT.target.value)
                                   }
-                                }) : (0, yp.jsx)("input", {
+                                }) : (0, BT.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== cp && void 0 !== cp ? cp : ""),
-                                  "aria-label": Sp,
-                                  onChange: pp => {
-                                    op(xp(pp.target.value))
+                                  value: String(null !== mT && void 0 !== mT ? mT : ""),
+                                  "aria-label": gT,
+                                  onChange: TT => {
+                                    zT(nT(TT.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, yp.jsx)("input", {
+                                return (0, BT.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== cp && void 0 !== cp ? cp : ""),
-                                  placeholder: ip.defaultText,
+                                  value: String(null !== mT && void 0 !== mT ? mT : ""),
+                                  placeholder: UT.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": Sp,
+                                  "aria-label": gT,
                                   spellCheck: !1,
-                                  onChange: pp => {
-                                    op(xp(pp.target.value.trim()))
+                                  onChange: TT => {
+                                    zT(nT(TT.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, yp.jsx)(eo, {
-                                  value: String(null !== cp && void 0 !== cp ? cp : ""),
-                                  label: Sp,
-                                  onChange: pp => {
-                                    op(xp(pp))
+                                return (0, BT.jsx)(fz, {
+                                  value: String(null !== mT && void 0 !== mT ? mT : ""),
+                                  label: gT,
+                                  onChange: TT => {
+                                    zT(nT(TT))
                                   }
                                 });
                               case "colours": {
-                                const pp = Array.isArray(cp) ? cp : [],
-                                  ip = pp => {
-                                    op(pp.length > 0 ? pp : void 0)
+                                const TT = Array.isArray(mT) ? mT : [],
+                                  UT = TT => {
+                                    zT(TT.length > 0 ? TT : void 0)
                                   };
-                                return (0, yp.jsxs)("div", {
+                                return (0, BT.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [pp.map(((cp, Op) => (0, yp.jsxs)("span", {
+                                  children: [TT.map(((mT, WT) => (0, BT.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, yp.jsx)(eo, {
-                                      value: cp,
-                                      label: `${Sp} ${Op+1}`,
-                                      onChange: cp => {
-                                        ip(pp.map(((pp, ip) => ip === Op ? cp : pp)))
+                                    children: [(0, BT.jsx)(fz, {
+                                      value: mT,
+                                      label: `${gT} ${WT+1}`,
+                                      onChange: mT => {
+                                        UT(TT.map(((TT, UT) => UT === WT ? mT : TT)))
                                       }
-                                    }), (0, yp.jsx)("button", {
+                                    }), (0, BT.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Op+1}`,
+                                      "aria-label": `Remove colour ${WT+1}`,
                                       onClick: () => {
-                                        ip(pp.filter(((pp, ip) => ip !== Op)))
+                                        UT(TT.filter(((TT, UT) => UT !== WT)))
                                       },
-                                      children: (0, yp.jsx)(wp, {
+                                      children: (0, BT.jsx)(cT, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Op))), (0, yp.jsxs)("button", {
+                                  }, WT))), (0, BT.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var cp;
-                                      ip([...pp, null !== (cp = pp.at(-1)) && void 0 !== cp ? cp : "#ffffff"])
+                                      var mT;
+                                      UT([...TT, null !== (mT = TT.at(-1)) && void 0 !== mT ? mT : "#ffffff"])
                                     },
-                                    children: [(0, yp.jsx)(wp, {
+                                    children: [(0, BT.jsx)(cT, {
                                       name: "plus"
-                                    }), 0 === pp.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === TT.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var Lp;
-                                const pp = "number" === typeof cp ? cp : Number(null !== (Lp = ip.defaultText) && void 0 !== Lp ? Lp : 0);
-                                return (0, yp.jsxs)("span", {
+                                var HT;
+                                const TT = "number" === typeof mT ? mT : Number(null !== (HT = UT.defaultText) && void 0 !== HT ? HT : 0);
+                                return (0, BT.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, yp.jsx)("input", {
+                                  children: [(0, BT.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: pp,
-                                    "aria-label": Sp,
-                                    onChange: pp => {
-                                      op(Number(pp.target.value))
+                                    value: TT,
+                                    "aria-label": gT,
+                                    onChange: TT => {
+                                      zT(Number(TT.target.value))
                                     }
-                                  }), (0, yp.jsx)("output", {
-                                    children: pp.toFixed(2)
+                                  }), (0, BT.jsx)("output", {
+                                    children: TT.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, yp.jsxs)("select", {
-                                  value: String(null !== cp && void 0 !== cp ? cp : ""),
-                                  "aria-label": Sp,
-                                  onChange: pp => {
-                                    op(xp(pp.target.value))
+                                return (0, BT.jsxs)("select", {
+                                  value: String(null !== mT && void 0 !== mT ? mT : ""),
+                                  "aria-label": gT,
+                                  onChange: TT => {
+                                    zT(nT(TT.target.value))
                                   },
-                                  children: [!ip.isRequired && (0, yp.jsxs)("option", {
+                                  children: [!UT.isRequired && (0, BT.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", ip.defaultText, ")"]
-                                  }), Ip.options.map((pp => (0, yp.jsx)("option", {
-                                    value: pp,
-                                    children: pp
-                                  }, pp)))]
+                                    children: ["Default (", UT.defaultText, ")"]
+                                  }), MT.options.map((TT => (0, BT.jsx)("option", {
+                                    value: TT,
+                                    children: TT
+                                  }, TT)))]
                                 });
                               case "icon":
-                                return (0, yp.jsx)(uo, {
-                                  value: String(null !== cp && void 0 !== cp ? cp : ""),
-                                  fontAwesomeIcons: Op,
-                                  onChange: op
+                                return (0, BT.jsx)(qz, {
+                                  value: String(null !== mT && void 0 !== mT ? mT : ""),
+                                  fontAwesomeIcons: WT,
+                                  onChange: zT
                                 })
                             }
                           }
 
-                          function ko(pp) {
-                            let ip;
+                          function bz(TT) {
+                            let UT;
                             try {
-                              ip = JSON.parse(pp)
-                            } catch (cp) {
+                              UT = JSON.parse(TT)
+                            } catch (mT) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${cp.message}`
+                                error: `Not valid JSON yet: ${mT.message}`
                               }
                             }
-                            return Ic(ip) ? {
-                              part: ip,
+                            return mm(UT) ? {
+                              part: UT,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function mo(pp) {
+                          function Oz(TT) {
                             let {
-                              parts: ip,
-                              index: cp,
-                              fontAwesomeIcons: op,
-                              onChange: Ip,
-                              uE: Sp,
-                              onClose: xp
-                            } = pp;
-                            const Lp = (0, Op.useContext)(wi),
-                              Dp = (0, Op.useRef)(null),
-                              Ap = ip[cp],
-                              Pp = gi(Ap),
-                              [Wp, Up] = (0, Op.useState)((() => JSON.stringify(Ap, null, 2))),
-                              vp = (0, Op.useMemo)((() => "other" === Pp ? ko(Wp).error : null), [Pp, Wp]);
-                            (0, Op.useEffect)((() => {
-                              var pp;
-                              null === (pp = Dp.current) || void 0 === pp || pp.focus()
+                              parts: UT,
+                              index: mT,
+                              fontAwesomeIcons: zT,
+                              onChange: MT,
+                              yI: gT,
+                              onClose: nT
+                            } = TT;
+                            const HT = (0, WT.useContext)(BU),
+                              jT = (0, WT.useRef)(null),
+                              lT = UT[mT],
+                              LT = rU(lT),
+                              [pT, ZT] = (0, WT.useState)((() => JSON.stringify(lT, null, 2))),
+                              vT = (0, WT.useMemo)((() => "other" === LT ? bz(pT).error : null), [LT, pT]);
+                            (0, WT.useEffect)((() => {
+                              var TT;
+                              null === (TT = jT.current) || void 0 === TT || TT.focus()
                             }), []);
-                            const tp = (0, yp.jsx)("div", {
+                            const fT = (0, BT.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: pp => {
-                                pp.target === pp.currentTarget && xp()
+                              onMouseDown: TT => {
+                                TT.target === TT.currentTarget && nT()
                               },
-                              children: (0, yp.jsxs)("div", {
-                                ref: Dp,
+                              children: (0, BT.jsxs)("div", {
+                                ref: jT,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${cp+1}: ${ni[Pp]}`,
+                                "aria-label": `Edit part ${mT+1}: ${uU[LT]}`,
                                 tabIndex: -1,
-                                onKeyDown: pp => {
-                                  "Escape" === pp.key ? (pp.stopPropagation(), xp()) : "Tab" === pp.key && Dp.current && function(pp, ip) {
-                                    const cp = Array.from(pp.querySelectorAll(Ei)),
-                                      Op = cp[0],
-                                      op = cp.at(-1);
-                                    if (!Op || !op) return;
-                                    const Ip = document.activeElement;
-                                    !ip.shiftKey || Ip !== Op && Ip !== pp ? ip.shiftKey || Ip !== op || (ip.preventDefault(), Op.focus()) : (ip.preventDefault(), op.focus())
-                                  }(Dp.current, pp)
+                                onKeyDown: TT => {
+                                  "Escape" === TT.key ? (TT.stopPropagation(), nT()) : "Tab" === TT.key && jT.current && function(TT, UT) {
+                                    const mT = Array.from(TT.querySelectorAll(wU)),
+                                      WT = mT[0],
+                                      zT = mT.at(-1);
+                                    if (!WT || !zT) return;
+                                    const MT = document.activeElement;
+                                    !UT.shiftKey || MT !== WT && MT !== TT ? UT.shiftKey || MT !== zT || (UT.preventDefault(), WT.focus()) : (UT.preventDefault(), zT.focus())
+                                  }(jT.current, TT)
                                 },
-                                children: [(0, yp.jsxs)("header", {
+                                children: [(0, BT.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, yp.jsxs)("div", {
-                                    children: [(0, yp.jsxs)("div", {
+                                  children: [(0, BT.jsxs)("div", {
+                                    children: [(0, BT.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", cp + 1]
-                                    }), (0, yp.jsx)("div", {
+                                      children: ["Part ", mT + 1]
+                                    }), (0, BT.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: ni[Pp]
+                                      children: uU[LT]
                                     })]
-                                  }), (0, yp.jsx)("button", {
+                                  }), (0, BT.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: xp,
-                                    children: (0, yp.jsx)(wp, {
+                                    onClick: nT,
+                                    children: (0, BT.jsx)(cT, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, yp.jsx)(wo, {
-                                  parts: ip,
+                                }), (0, BT.jsx)(Bz, {
+                                  parts: UT,
                                   className: "DocsTextDialogPreview"
-                                }), (0, yp.jsx)("div", {
+                                }), (0, BT.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === Pp ? (0, yp.jsxs)("label", {
+                                  children: "other" === LT ? (0, BT.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, yp.jsx)("span", {
+                                    children: [(0, BT.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, yp.jsx)("textarea", {
+                                    }), (0, BT.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Wp,
+                                      value: pT,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: pp => {
-                                        Up(pp.target.value);
-                                        const ip = ko(pp.target.value);
-                                        null !== ip.part && Ip(ip.part)
+                                      onChange: TT => {
+                                        ZT(TT.target.value);
+                                        const UT = bz(TT.target.value);
+                                        null !== UT.part && MT(UT.part)
                                       }
-                                    }), vp && (0, yp.jsx)("span", {
+                                    }), vT && (0, BT.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: vp
+                                      children: vT
                                     })]
-                                  }) : ri[Pp].map((pp => {
-                                    const ip = zi(Ap, pp.path),
-                                      cp = pp.isRequired ? JSON.stringify(Ki(Ap, pp.path)) === JSON.stringify(Ap) : void 0 === ip;
-                                    return (0, yp.jsxs)("div", {
+                                  }) : SU[LT].map((TT => {
+                                    const UT = NU(lT, TT.path),
+                                      mT = TT.isRequired ? JSON.stringify(hU(lT, TT.path)) === JSON.stringify(lT) : void 0 === UT;
+                                    return (0, BT.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, yp.jsxs)("div", {
+                                      children: [(0, BT.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, yp.jsx)("span", {
-                                          children: pp.label
-                                        }), (0, yp.jsxs)("button", {
+                                        children: [(0, BT.jsx)("span", {
+                                          children: TT.label
+                                        }), (0, BT.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: cp,
-                                          "aria-label": `Reset ${pp.label.toLowerCase()} to default`,
+                                          disabled: mT,
+                                          "aria-label": `Reset ${TT.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            Ip(Ki(Ap, pp.path))
+                                            MT(hU(lT, TT.path))
                                           },
-                                          children: [(0, yp.jsx)(wp, {
+                                          children: [(0, BT.jsx)(cT, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, yp.jsx)(jo, {
-                                        property: pp,
-                                        value: ip,
-                                        fontAwesomeIcons: op,
-                                        onChange: ip => {
-                                          Ip(si(Ap, pp.path, ip))
+                                      }), (0, BT.jsx)(iz, {
+                                        property: TT,
+                                        value: UT,
+                                        fontAwesomeIcons: zT,
+                                        onChange: UT => {
+                                          MT(EU(lT, TT.path, UT))
                                         }
-                                      }), !pp.isRequired && (0, yp.jsxs)("span", {
+                                      }), !TT.isRequired && (0, BT.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", pp.defaultText]
+                                        children: ["Default: ", TT.defaultText]
                                       })]
-                                    }, pp.path.join("."))
+                                    }, TT.path.join("."))
                                   }))
-                                }), (0, yp.jsxs)("footer", {
+                                }), (0, BT.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, yp.jsxs)("button", {
+                                  children: [(0, BT.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: Sp,
-                                    children: [(0, yp.jsx)(wp, {
+                                    onClick: gT,
+                                    children: [(0, BT.jsx)(cT, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, yp.jsx)("button", {
+                                  }), (0, BT.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: xp,
+                                    onClick: nT,
                                     children: "Done"
                                   })]
-                                }), (0, yp.jsx)("datalist", {
+                                }), (0, BT.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: vo.map((pp => (0, yp.jsx)("option", {
-                                    value: pp
-                                  }, pp)))
+                                  children: Zz.map((TT => (0, BT.jsx)("option", {
+                                    value: TT
+                                  }, TT)))
                                 })]
                               })
                             });
-                            return Lp ? (0, Yp.createPortal)(tp, Lp) : tp
+                            return HT ? (0, kT.createPortal)(fT, HT) : fT
                           }
-                          const Ro = [{
+                          const ez = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            qo = Object.keys(Fi);
+                            Yz = Object.keys(CU);
 
-                          function Mo(pp) {
+                          function Jz(TT) {
                             let {
-                              fontAwesomeIcons: ip
-                            } = pp;
-                            const [cp, op] = (0, Op.useState)(Ro[0].parts), [Sp, xp] = (0, Op.useState)((() => cc(Ro[0].parts))), [Lp, Yp] = (0, Op.useState)(null), [Dp, Ap] = (0, Op.useState)(!1), [Pp, Wp] = (0, Op.useState)(null), [Up, vp] = (0, Op.useState)(!1), [tp, Hp] = (0, Op.useState)(null), dp = (0, Op.useRef)(null), ep = cc(cp);
-                            (0, Op.useLayoutEffect)((() => {
-                              var pp;
-                              if (!tp) return;
-                              const ip = pp => {
-                                  var ip;
-                                  return null === (ip = dp.current) || void 0 === ip ? void 0 : ip.querySelector(`[data-focus-key="${pp}"]`)
+                              fontAwesomeIcons: UT
+                            } = TT;
+                            const [mT, zT] = (0, WT.useState)(ez[0].parts), [gT, nT] = (0, WT.useState)((() => RU(ez[0].parts))), [HT, kT] = (0, WT.useState)(null), [jT, lT] = (0, WT.useState)(!1), [LT, pT] = (0, WT.useState)(null), [ZT, vT] = (0, WT.useState)(!1), [fT, qT] = (0, WT.useState)(null), iT = (0, WT.useRef)(null), bT = RU(mT);
+                            (0, WT.useLayoutEffect)((() => {
+                              var TT;
+                              if (!fT) return;
+                              const UT = TT => {
+                                  var UT;
+                                  return null === (UT = iT.current) || void 0 === UT ? void 0 : UT.querySelector(`[data-focus-key="${TT}"]`)
                                 },
-                                cp = ip(tp.key);
-                              null === (pp = cp && !cp.disabled ? cp : ip(tp.fallback)) || void 0 === pp || pp.focus(), Hp(null)
-                            }), [tp]);
-                            const jp = pp => {
-                                op(pp), xp(cc(pp)), Yp(null)
+                                mT = UT(fT.key);
+                              null === (TT = mT && !mT.disabled ? mT : UT(fT.fallback)) || void 0 === TT || TT.focus(), qT(null)
+                            }), [fT]);
+                            const OT = TT => {
+                                zT(TT), nT(RU(TT)), kT(null)
                               },
-                              mp = pp => {
-                                jp(cp.filter(((ip, cp) => cp !== pp))), Hp({
-                                  key: `edit-${Math.min(pp,cp.length-2)}`,
+                              YT = TT => {
+                                OT(mT.filter(((UT, mT) => mT !== TT))), qT({
+                                  key: `edit-${Math.min(TT,mT.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              Rp = (pp, ip) => {
-                                const Op = [...cp],
-                                  [op] = Op.splice(pp, 1);
-                                Op.splice(pp + ip, 0, op), jp(Op);
-                                Hp({
-                                  key: `${ip<0?"up":"down"}-${pp+ip}`,
-                                  fallback: `edit-${pp+ip}`
+                              JT = (TT, UT) => {
+                                const WT = [...mT],
+                                  [zT] = WT.splice(TT, 1);
+                                WT.splice(TT + UT, 0, zT), OT(WT);
+                                qT({
+                                  key: `${UT<0?"up":"down"}-${TT+UT}`,
+                                  fallback: `edit-${TT+UT}`
                                 })
                               };
-                            return (0, yp.jsxs)("section", {
-                              ref: dp,
+                            return (0, BT.jsxs)("section", {
+                              ref: iT,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, yp.jsx)("header", {
+                              children: [(0, BT.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, yp.jsxs)("div", {
-                                  children: [(0, yp.jsx)("div", {
+                                children: (0, BT.jsxs)("div", {
+                                  children: [(0, BT.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, yp.jsx)("div", {
+                                  }), (0, BT.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, yp.jsx)("div", {
+                              }), (0, BT.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: Ro.map((pp => (0, yp.jsx)("button", {
+                                children: ez.map((TT => (0, BT.jsx)("button", {
                                   type: "button",
-                                  className: Ip()("DocsVariantChip", {
-                                    Active: ep === cc(pp.parts)
+                                  className: MT()("DocsVariantChip", {
+                                    Active: bT === RU(TT.parts)
                                   }),
                                   onClick: () => {
-                                    jp(pp.parts)
+                                    OT(TT.parts)
                                   },
-                                  children: pp.label
-                                }, pp.label)))
-                              }), (0, yp.jsx)(wo, {
-                                parts: cp,
+                                  children: TT.label
+                                }, TT.label)))
+                              }), (0, BT.jsx)(Bz, {
+                                parts: mT,
                                 className: "DocsTextEditorPreview"
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, yp.jsxs)("div", {
+                                children: [(0, BT.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, yp.jsx)("div", {
+                                  children: [(0, BT.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, yp.jsxs)("ol", {
+                                  }), (0, BT.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [cp.map(((pp, ip) => {
-                                      const Op = gi(pp);
-                                      return (0, yp.jsxs)("li", {
+                                    children: [mT.map(((TT, UT) => {
+                                      const WT = rU(TT);
+                                      return (0, BT.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, yp.jsxs)("button", {
+                                        children: [(0, BT.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${ip}`,
-                                          "aria-label": `Edit part ${ip+1}, ${ni[Op]}`,
+                                          "data-focus-key": `edit-${UT}`,
+                                          "aria-label": `Edit part ${UT+1}, ${uU[WT]}`,
                                           onClick: () => {
-                                            Wp(ip)
+                                            pT(UT)
                                           },
-                                          children: [(0, yp.jsx)("span", {
+                                          children: [(0, BT.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: ni[Op]
-                                          }), (0, yp.jsx)(wo, {
-                                            parts: [pp],
+                                            children: uU[WT]
+                                          }), (0, BT.jsx)(Bz, {
+                                            parts: [TT],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Op && (0, yp.jsx)("code", {
+                                          }), "text" !== WT && (0, BT.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Vi(pp)
+                                            children: DU(TT)
                                           })]
-                                        }), (0, yp.jsxs)("span", {
+                                        }), (0, BT.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, yp.jsx)("button", {
+                                          children: [(0, BT.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${ip+1} up`,
-                                            "data-focus-key": `up-${ip}`,
-                                            disabled: 0 === ip,
+                                            "aria-label": `Move part ${UT+1} up`,
+                                            "data-focus-key": `up-${UT}`,
+                                            disabled: 0 === UT,
                                             onClick: () => {
-                                              Rp(ip, -1)
+                                              JT(UT, -1)
                                             },
-                                            children: (0, yp.jsx)(wp, {
+                                            children: (0, BT.jsx)(cT, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, yp.jsx)("button", {
+                                          }), (0, BT.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${ip+1} down`,
-                                            "data-focus-key": `down-${ip}`,
-                                            disabled: ip === cp.length - 1,
+                                            "aria-label": `Move part ${UT+1} down`,
+                                            "data-focus-key": `down-${UT}`,
+                                            disabled: UT === mT.length - 1,
                                             onClick: () => {
-                                              Rp(ip, 1)
+                                              JT(UT, 1)
                                             },
-                                            children: (0, yp.jsx)(wp, {
+                                            children: (0, BT.jsx)(cT, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, yp.jsx)("button", {
+                                          }), (0, BT.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${ip+1}`,
+                                            "aria-label": `Remove part ${UT+1}`,
                                             onClick: () => {
-                                              mp(ip)
+                                              YT(UT)
                                             },
-                                            children: (0, yp.jsx)(wp, {
+                                            children: (0, BT.jsx)(cT, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, ip)
-                                    })), 0 === cp.length && (0, yp.jsx)("li", {
+                                      }, UT)
+                                    })), 0 === mT.length && (0, BT.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, yp.jsxs)("div", {
+                                  }), (0, BT.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: pp => {
-                                      "Escape" === pp.key && Up && (pp.stopPropagation(), vp(!1), Hp({
+                                    onKeyDown: TT => {
+                                      "Escape" === TT.key && ZT && (TT.stopPropagation(), vT(!1), qT({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, yp.jsxs)("button", {
+                                    children: [(0, BT.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": Up,
+                                      "aria-expanded": ZT,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        vp(!Up)
+                                        vT(!ZT)
                                       },
-                                      children: [(0, yp.jsx)(wp, {
+                                      children: [(0, BT.jsx)(cT, {
                                         name: "plus"
-                                      }), "Add a part", (0, yp.jsx)(wp, {
-                                        name: Up ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, BT.jsx)(cT, {
+                                        name: ZT ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), Up && (0, yp.jsx)("ul", {
+                                    }), ZT && (0, BT.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: qo.map((pp => (0, yp.jsx)("li", {
-                                        children: (0, yp.jsx)("button", {
+                                      children: Yz.map((TT => (0, BT.jsx)("li", {
+                                        children: (0, BT.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (pp => {
-                                              jp([...cp, Fi[pp]]), vp(!1), Wp(cp.length)
-                                            })(pp)
+                                            (TT => {
+                                              OT([...mT, CU[TT]]), vT(!1), pT(mT.length)
+                                            })(TT)
                                           },
-                                          children: ni[pp]
+                                          children: uU[TT]
                                         })
-                                      }, pp)))
+                                      }, TT)))
                                     })]
                                   })]
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, yp.jsxs)("div", {
+                                  children: [(0, BT.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, yp.jsxs)("button", {
+                                    children: ["Code", (0, BT.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Dp,
+                                      "aria-pressed": jT,
                                       onClick: () => {
-                                        Ap(!Dp)
+                                        lT(!jT)
                                       },
-                                      children: [(0, yp.jsx)(wp, {
-                                        name: Dp ? "check" : "pencil"
-                                      }), Dp ? "Done" : "Edit"]
+                                      children: [(0, BT.jsx)(cT, {
+                                        name: jT ? "check" : "pencil"
+                                      }), jT ? "Done" : "Edit"]
                                     })]
-                                  }), Dp ? (0, yp.jsxs)(yp.Fragment, {
-                                    children: [(0, yp.jsx)("textarea", {
+                                  }), jT ? (0, BT.jsxs)(BT.Fragment, {
+                                    children: [(0, BT.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: Sp,
+                                      value: gT,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: pp => {
-                                        xp(pp.target.value);
-                                        const ip = Sc(pp.target.value);
-                                        Yp(ip.error), ip.parts && op(ip.parts)
+                                      onChange: TT => {
+                                        nT(TT.target.value);
+                                        const UT = Wm(TT.target.value);
+                                        kT(UT.error), UT.parts && zT(UT.parts)
                                       }
-                                    }), Lp && (0, yp.jsx)("p", {
+                                    }), HT && (0, BT.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: Lp
+                                      children: HT
                                     })]
-                                  }) : (0, yp.jsx)(kp, {
+                                  }) : (0, BT.jsx)(eT, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${ep})`
+                                    code: `api.sendMessage(playerId, ${bT})`
                                   })]
                                 })]
-                              }), null !== Pp && Pp < cp.length && (0, yp.jsx)(mo, {
-                                parts: cp,
-                                index: Pp,
-                                fontAwesomeIcons: ip,
-                                onChange: pp => {
-                                  ((pp, ip) => {
-                                    jp(cp.map(((cp, Op) => Op === pp ? ip : cp)))
-                                  })(Pp, pp)
+                              }), null !== LT && LT < mT.length && (0, BT.jsx)(Oz, {
+                                parts: mT,
+                                index: LT,
+                                fontAwesomeIcons: UT,
+                                onChange: TT => {
+                                  ((TT, UT) => {
+                                    OT(mT.map(((mT, WT) => WT === TT ? UT : mT)))
+                                  })(LT, TT)
                                 },
-                                uE: () => {
-                                  mp(Pp), Wp(null)
+                                yI: () => {
+                                  YT(LT), pT(null)
                                 },
                                 onClose: () => {
-                                  Wp(null), Hp({
-                                    key: `edit-${Pp}`,
+                                  pT(null), qT({
+                                    key: `edit-${LT}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var Co = cp(4970),
-                            Eo = cp(4950),
-                            Xo = cp(4964),
-                            Qo = cp(4972);
-                          const Jo = 40,
-                            Bo = 800,
-                            No = 150,
-                            To = 8e3,
-                            fo = 2e3;
+                          var xz = mT(4948),
+                            dz = mT(4932),
+                            wz = mT(4939),
+                            tz = mT(4956);
+                          const az = 40,
+                            yz = 800,
+                            Xz = 150,
+                            Iz = 8e3,
+                            Qz = 2e3;
 
-                          function bo(pp, ip) {
-                            return 12 * Math.log2(ip / pp)
+                          function sz(TT, UT) {
+                            return 12 * Math.log2(UT / TT)
                           }
 
-                          function ho(pp, ip) {
-                            return Math.round(pp * 2 ** (ip / 12) * 10) / 10
+                          function Fz(TT, UT) {
+                            return Math.round(TT * 2 ** (UT / 12) * 10) / 10
                           }
 
-                          function ao(pp) {
-                            return `${pp} ms`
+                          function Pz(TT) {
+                            return `${TT} ms`
                           }
 
-                          function no(pp) {
-                            return `${pp} st`
+                          function Vz(TT) {
+                            return `${TT} st`
                           }
-                          const Fo = [{
+                          const uz = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function go(pp) {
+                          function Cz(TT) {
                             let {
-                              synth: ip,
-                              onChange: cp
-                            } = pp;
-                            const Op = (0, Co.m)(ip);
-                            return (0, yp.jsxs)("div", {
+                              synth: UT,
+                              onChange: mT
+                            } = TT;
+                            const WT = (0, xz.k)(UT);
+                            return (0, BT.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, yp.jsxs)("div", {
+                              children: [(0, BT.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, yp.jsx)("div", {
+                                children: [(0, BT.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, yp.jsx)("div", {
+                                  children: [(0, BT.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, yp.jsx)("span", {
+                                    children: (0, BT.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, yp.jsx)("div", {
+                                  }), (0, BT.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: Co.f.map((pp => (0, yp.jsx)("button", {
+                                    children: xz.e.map((TT => (0, BT.jsx)("button", {
                                       type: "button",
-                                      className: Ip()("DocsVariantChip", {
-                                        Active: ip.waveform === pp
+                                      className: MT()("DocsVariantChip", {
+                                        Active: UT.waveform === TT
                                       }),
-                                      "aria-pressed": ip.waveform === pp,
+                                      "aria-pressed": UT.waveform === TT,
                                       onClick: () => {
-                                        cp({
-                                          waveform: pp
+                                        mT({
+                                          waveform: TT
                                         })
                                       },
-                                      children: pp
-                                    }, pp)))
+                                      children: TT
+                                    }, TT)))
                                   })]
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: bo(Jo, Bo),
+                                  max: sz(az, yz),
                                   step: .1,
-                                  value: bo(Jo, ip.pitchHz),
-                                  format: () => `${ip.pitchHz} Hz`,
-                                  onChange: pp => {
-                                    cp({
-                                      pitchHz: ho(Jo, pp)
+                                  value: sz(az, UT.pitchHz),
+                                  format: () => `${UT.pitchHz} Hz`,
+                                  onChange: TT => {
+                                    mT({
+                                      pitchHz: Fz(az, TT)
                                     })
                                   }
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: ip.syllableMs,
-                                  format: ao,
-                                  onChange: pp => {
-                                    cp({
-                                      syllableMs: pp
+                                  value: UT.syllableMs,
+                                  format: Pz,
+                                  onChange: TT => {
+                                    mT({
+                                      syllableMs: TT
                                     })
                                   }
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: ip.volume,
-                                  onChange: pp => {
-                                    cp({
-                                      volume: pp
+                                  value: UT.volume,
+                                  onChange: TT => {
+                                    mT({
+                                      volume: TT
                                     })
                                   }
                                 })]
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, yp.jsx)("div", {
+                                children: [(0, BT.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: ip.durationMs,
-                                  format: ao,
-                                  onChange: pp => {
-                                    cp({
-                                      durationMs: pp
+                                  value: UT.durationMs,
+                                  format: Pz,
+                                  onChange: TT => {
+                                    mT({
+                                      durationMs: TT
                                     })
                                   }
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Op.durationMs,
+                                  max: WT.durationMs,
                                   step: 1,
-                                  value: Op.attackMs,
-                                  format: ao,
-                                  onChange: pp => {
-                                    cp({
-                                      attackMs: pp
+                                  value: WT.attackMs,
+                                  format: Pz,
+                                  onChange: TT => {
+                                    mT({
+                                      attackMs: TT
                                     })
                                   }
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Op.durationMs - Op.attackMs,
+                                  max: WT.durationMs - WT.attackMs,
                                   step: 1,
-                                  value: Op.releaseMs,
-                                  format: ao,
-                                  onChange: pp => {
-                                    cp({
-                                      releaseMs: pp
+                                  value: WT.releaseMs,
+                                  format: Pz,
+                                  onChange: TT => {
+                                    mT({
+                                      releaseMs: TT
                                     })
                                   }
-                                }), (0, yp.jsx)(co, {
+                                }), (0, BT.jsx)(Tz, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: ip.glideSemitones,
-                                  format: no,
-                                  onChange: pp => {
-                                    cp({
-                                      glideSemitones: pp
+                                  value: UT.glideSemitones,
+                                  format: Vz,
+                                  onChange: TT => {
+                                    mT({
+                                      glideSemitones: TT
                                     })
                                   }
-                                }), (0, yp.jsxs)("label", {
+                                }), (0, BT.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, yp.jsx)("input", {
+                                  children: [(0, BT.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== ip.lowpassHz,
-                                    onChange: pp => {
-                                      cp({
-                                        lowpassHz: pp.target.checked ? fo : null
+                                    checked: null !== UT.lowpassHz,
+                                    onChange: TT => {
+                                      mT({
+                                        lowpassHz: TT.target.checked ? Qz : null
                                       })
                                     }
-                                  }), (0, yp.jsx)("span", {
+                                  }), (0, BT.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== ip.lowpassHz && (0, yp.jsx)(co, {
+                                }), null !== UT.lowpassHz && (0, BT.jsx)(Tz, {
                                   label: "Filter",
                                   min: 0,
-                                  max: bo(No, To),
+                                  max: sz(Xz, Iz),
                                   step: .1,
-                                  value: bo(No, ip.lowpassHz),
-                                  format: () => `${ip.lowpassHz} Hz`,
-                                  onChange: pp => {
-                                    cp({
-                                      lowpassHz: ho(No, pp)
+                                  value: sz(Xz, UT.lowpassHz),
+                                  format: () => `${UT.lowpassHz} Hz`,
+                                  onChange: TT => {
+                                    mT({
+                                      lowpassHz: Fz(Xz, TT)
                                     })
                                   }
                                 })]
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, yp.jsx)("div", {
+                                children: [(0, BT.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), Fo.map((pp => {
+                                }), uz.map((TT => {
                                   let {
-                                    key: Op,
-                                    label: op,
-                                    max: Ip
-                                  } = pp;
-                                  return (0, yp.jsx)(co, {
-                                    label: op,
+                                    key: WT,
+                                    label: zT,
+                                    max: MT
+                                  } = TT;
+                                  return (0, BT.jsx)(Tz, {
+                                    label: zT,
                                     min: 0,
-                                    max: Ip,
+                                    max: MT,
                                     step: .1,
-                                    value: ip.intonation[Op],
-                                    format: no,
-                                    onChange: pp => {
-                                      cp({
+                                    value: UT.intonation[WT],
+                                    format: Vz,
+                                    onChange: TT => {
+                                      mT({
                                         intonation: {
-                                          ...ip.intonation,
-                                          [Op]: pp
+                                          ...UT.intonation,
+                                          [WT]: TT
                                         }
                                       })
                                     }
-                                  }, Op)
+                                  }, WT)
                                 }))]
                               })]
                             })
                           }
-                          const Go = Object.keys(Co.i),
-                            ro = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const rz = Object.keys(xz.h),
+                            Kz = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function Zo(pp) {
-                            var ip;
-                            const cp = JSON.stringify((0, Co.m)(pp));
-                            return null !== (ip = Go.find((pp => JSON.stringify((0, Co.m)(Co.i[pp])) === cp))) && void 0 !== ip ? ip : null
+                          function Sz(TT) {
+                            var UT;
+                            const mT = JSON.stringify((0, xz.k)(TT));
+                            return null !== (UT = rz.find((TT => JSON.stringify((0, xz.k)(xz.h[TT])) === mT))) && void 0 !== UT ? UT : null
                           }
 
-                          function zo(pp) {
-                            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof pp || null === pp) return JSON.stringify(pp);
-                            return `{\n${Object.entries(pp).map((pp=>{let[cp,Op]=pp;return`${ip}    ${cp}: ${zo(Op,`${ip}    `)},`})).join("\n")}\n${ip}}`
+                          function Gz(TT) {
+                            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof TT || null === TT) return JSON.stringify(TT);
+                            return `{\n${Object.entries(TT).map((TT=>{let[mT,WT]=TT;return`${UT}    ${mT}: ${Gz(WT,`${UT}    `)},`})).join("\n")}\n${UT}}`
                           }
 
-                          function so(pp, ip, cp) {
-                            const Op = Zo(pp),
-                              op = [`    line: ${JSON.stringify(ip)},`];
-                            return cp && op.push(`    speakerName: ${JSON.stringify(cp)},`), op.push("    voice,"), `const voice = ${Op?JSON.stringify(Op):zo((0,Co.m)(pp))}\n\napi.setClientOption(playerId, "dialogue", {\n${op.join("\n")}\n})`
+                          function Nz(TT, UT, mT) {
+                            const WT = Sz(TT),
+                              zT = [`    line: ${JSON.stringify(UT)},`];
+                            return mT && zT.push(`    speakerName: ${JSON.stringify(mT)},`), zT.push("    voice,"), `const voice = ${WT?JSON.stringify(WT):Gz((0,xz.k)(TT))}\n\napi.setClientOption(playerId, "dialogue", {\n${zT.join("\n")}\n})`
                           }
-                          const Ko = 400,
-                            Vo = 90;
-                          let pI = null;
+                          const Ez = 400,
+                            hz = 90;
+                          let Dz = null;
 
-                          function iI(pp, ip, cp) {
-                            return pI ??= new AudioContext, pI.resume(), (0, Qo.e)(pI, pI.destination, pp, ip, cp, (() => {}))
+                          function oz(TT, UT, mT) {
+                            return Dz ??= new AudioContext, Dz.resume(), (0, tz.c)(Dz, Dz.destination, TT, UT, mT, (() => {}))
                           }
 
-                          function cI() {
-                            const [pp, ip] = (0, Op.useState)(Co.i.regular), [cp, op] = (0, Op.useState)(ro[0]), [Sp, xp] = (0, Op.useState)("Innkeeper"), [Lp, Yp] = (0, Op.useState)(0), Dp = WO((pp => pp.volume)), Ap = (0, Op.useRef)(null), Pp = (0, Op.useRef)(0), Wp = (0, Op.useRef)(0), Up = () => {
-                              var pp;
-                              null === (pp = Ap.current) || void 0 === pp || pp.call(Ap), Ap.current = null
+                          function Az() {
+                            const [TT, UT] = (0, WT.useState)(xz.h.regular), [mT, zT] = (0, WT.useState)(Kz[0]), [gT, nT] = (0, WT.useState)("Innkeeper"), [HT, kT] = (0, WT.useState)(0), jT = lW((TT => TT.volume)), lT = (0, WT.useRef)(null), LT = (0, WT.useRef)(0), pT = (0, WT.useRef)(0), ZT = () => {
+                              var TT;
+                              null === (TT = lT.current) || void 0 === TT || TT.call(lT), lT.current = null
                             };
-                            (0, Op.useEffect)((() => () => {
-                              var pp;
-                              null === (pp = Ap.current) || void 0 === pp || pp.call(Ap), window.clearTimeout(Pp.current)
+                            (0, WT.useEffect)((() => () => {
+                              var TT;
+                              null === (TT = lT.current) || void 0 === TT || TT.call(lT), window.clearTimeout(LT.current)
                             }), []);
-                            const vp = (0, Op.useMemo)((() => ({
-                                line: cp,
-                                speakerName: Sp || void 0,
-                                voice: pp
-                              })), [cp, Sp, pp]),
-                              tp = (0, Op.useRef)(vp);
-                            tp.current = vp;
-                            const dp = Zo(pp),
-                              ep = pp => {
-                                window.clearTimeout(Pp.current), Up();
+                            const vT = (0, WT.useMemo)((() => ({
+                                line: mT,
+                                speakerName: gT || void 0,
+                                voice: TT
+                              })), [mT, gT, TT]),
+                              fT = (0, WT.useRef)(vT);
+                            fT.current = vT;
+                            const iT = Sz(TT),
+                              bT = TT => {
+                                window.clearTimeout(LT.current), ZT();
                                 const {
-                                  plan: ip,
-                                  synth: cp
-                                } = (0, Xo.h)(pp);
-                                cp && (Ap.current = iI(cp, ip.blips, Dp)), Yp((pp => pp + 1))
+                                  plan: UT,
+                                  synth: mT
+                                } = (0, wz.e)(TT);
+                                mT && (lT.current = oz(mT, UT.blips, jT)), kT((TT => TT + 1))
                               },
-                              jp = so(pp, cp, Sp);
-                            return (0, yp.jsxs)("section", {
+                              OT = Nz(TT, mT, gT);
+                            return (0, BT.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, yp.jsxs)("header", {
+                              children: [(0, BT.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, yp.jsxs)("div", {
-                                  children: [(0, yp.jsx)("div", {
+                                children: [(0, BT.jsxs)("div", {
+                                  children: [(0, BT.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, yp.jsx)("div", {
+                                  }), (0, BT.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, yp.jsx)(Hp, {
-                                  text: jp,
+                                }), (0, BT.jsx)(qT, {
+                                  text: OT,
                                   label: "Copy code"
                                 })]
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [Go.map((pp => (0, yp.jsx)("button", {
+                                children: [rz.map((TT => (0, BT.jsx)("button", {
                                   type: "button",
-                                  className: Ip()("DocsVariantChip", {
-                                    Active: dp === pp
+                                  className: MT()("DocsVariantChip", {
+                                    Active: iT === TT
                                   }),
-                                  "aria-pressed": dp === pp,
+                                  "aria-pressed": iT === TT,
                                   onClick: () => {
-                                    (pp => {
-                                      const cp = Co.i[pp];
-                                      ip(cp), ep({
-                                        ...vp,
-                                        voice: cp
+                                    (TT => {
+                                      const mT = xz.h[TT];
+                                      UT(mT), bT({
+                                        ...vT,
+                                        voice: mT
                                       })
-                                    })(pp)
+                                    })(TT)
                                   },
-                                  children: pp
-                                }, pp))), !dp && (0, yp.jsx)("span", {
+                                  children: TT
+                                }, TT))), !iT && (0, BT.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, yp.jsxs)("div", {
+                              }), (0, BT.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, yp.jsxs)("div", {
+                                children: [(0, BT.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, yp.jsx)("div", {
+                                  children: [(0, BT.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, yp.jsx)(Eo.e, {
-                                      display: vp
-                                    }, Lp)
-                                  }), (0, yp.jsxs)("form", {
+                                    children: (0, BT.jsx)(dz.d, {
+                                      display: vT
+                                    }, HT)
+                                  }), (0, BT.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: pp => {
-                                      pp.preventDefault(), ep(vp)
+                                    onSubmit: TT => {
+                                      TT.preventDefault(), bT(vT)
                                     },
-                                    children: [(0, yp.jsx)("input", {
-                                      value: cp,
+                                    children: [(0, BT.jsx)("input", {
+                                      value: mT,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: pp => {
-                                        op(pp.target.value)
+                                      onChange: TT => {
+                                        zT(TT.target.value)
                                       }
-                                    }), (0, yp.jsxs)("button", {
+                                    }), (0, BT.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, yp.jsx)(wp, {
+                                      children: [(0, BT.jsx)(cT, {
                                         name: "play"
-                                      }), (0, yp.jsx)("span", {
+                                      }), (0, BT.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, yp.jsx)("div", {
+                                  }), (0, BT.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: ro.map((pp => (0, yp.jsx)("button", {
+                                    children: Kz.map((TT => (0, BT.jsx)("button", {
                                       type: "button",
-                                      className: Ip()("DocsVariantChip", {
-                                        Active: cp === pp
+                                      className: MT()("DocsVariantChip", {
+                                        Active: mT === TT
                                       }),
                                       onClick: () => {
-                                        var ip;
-                                        op(ip = pp), ep({
-                                          ...vp,
-                                          line: ip
+                                        var UT;
+                                        zT(UT = TT), bT({
+                                          ...vT,
+                                          line: UT
                                         })
                                       },
-                                      children: pp
-                                    }, pp)))
-                                  }), (0, yp.jsxs)("label", {
+                                      children: TT
+                                    }, TT)))
+                                  }), (0, BT.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, yp.jsx)("span", {
+                                    children: [(0, BT.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, yp.jsx)("input", {
-                                      value: Sp,
+                                    }), (0, BT.jsx)("input", {
+                                      value: gT,
                                       placeholder: "No name",
-                                      onChange: pp => {
-                                        xp(pp.target.value)
+                                      onChange: TT => {
+                                        nT(TT.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, yp.jsx)(go, {
-                                  synth: pp,
-                                  onChange: cp => {
-                                    const Op = {
-                                      ...pp,
-                                      ...cp
+                                }), (0, BT.jsx)(Cz, {
+                                  synth: TT,
+                                  onChange: mT => {
+                                    const WT = {
+                                      ...TT,
+                                      ...mT
                                     };
-                                    ip(Op);
-                                    const op = {
-                                        ...vp,
-                                        voice: Op
+                                    UT(WT);
+                                    const zT = {
+                                        ...vT,
+                                        voice: WT
                                       },
-                                      Ip = performance.now();
-                                    if (Ip - Wp.current >= Vo) {
-                                      Wp.current = Ip, Up();
-                                      const pp = (0, Xo.h)(op).plan.blips[0];
-                                      pp && (Ap.current = iI((0, Co.m)(Op), [{
-                                        ...pp,
+                                      MT = performance.now();
+                                    if (MT - pT.current >= hz) {
+                                      pT.current = MT, ZT();
+                                      const TT = (0, wz.e)(zT).plan.blips[0];
+                                      TT && (lT.current = oz((0, xz.k)(WT), [{
+                                        ...TT,
                                         atMs: 0
-                                      }], Dp))
+                                      }], jT))
                                     }
-                                    window.clearTimeout(Pp.current), Pp.current = window.setTimeout((() => {
-                                      ep(tp.current)
-                                    }), Ko)
+                                    window.clearTimeout(LT.current), LT.current = window.setTimeout((() => {
+                                      bT(fT.current)
+                                    }), Ez)
                                   }
                                 })]
-                              }), (0, yp.jsx)(kp, {
-                                code: jp,
+                              }), (0, BT.jsx)(eT, {
+                                code: OT,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var OI = cp(4984);
-                          const oI = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            II = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            SI = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${II}`, "g"), OI.m],
+                          var Rz = mT(4972);
+                          const TM = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            UM = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            mM = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${UM}`, "g"), Rz.n],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, OI.m]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Rz.n]
                             ];
 
-                          function xI(pp) {
-                            return `${pp.pageId}#${pp.anchor}`
+                          function WM(TT) {
+                            return `${TT.pageId}#${TT.anchor}`
                           }
-                          let LI, YI, DI;
+                          let zM, MM, gM;
 
-                          function AI(pp) {
-                            const ip = (0, mp.k)(pp),
-                              cp = new Set;
-                            for (const [, , Op] of ip.matchAll(mp.d)) {
-                              const pp = Op.startsWith("#") ? np(Op) : null,
-                                ip = pp ? xI({
-                                  pageId: pp.page.id,
-                                  anchor: pp.anchor
+                          function nM(TT) {
+                            const UT = (0, YT.l)(TT),
+                              mT = new Set;
+                            for (const [, , WT] of UT.matchAll(YT.e)) {
+                              const TT = WT.startsWith("#") ? rT(WT) : null,
+                                UT = TT ? WM({
+                                  pageId: TT.page.id,
+                                  anchor: TT.anchor
                                 }) : null;
-                              null !== ip && (LI || (LI = new Set(Np.flatMap((pp => Cp(pp.layout) ? hp(pp).sections.map((ip => xI({
-                                pageId: pp.id,
-                                anchor: ip.heading.anchor
-                              }))) : [])))), LI).has(ip) && cp.add(ip)
+                              null !== UT && (zM || (zM = new Set(sT.flatMap((TT => wT(TT.layout) ? uT(TT).sections.map((UT => WM({
+                                pageId: TT.id,
+                                anchor: UT.heading.anchor
+                              }))) : [])))), zM).has(UT) && mT.add(UT)
                             }
-                            for (const [, , Op] of ip.matchAll(oI)) {
-                              const pp = yi(Op);
-                              pp && cp.add(xI(pp))
+                            for (const [, , WT] of UT.matchAll(TM)) {
+                              const TT = LU(WT);
+                              TT && mT.add(WM(TT))
                             }
-                            return cp
+                            return mT
                           }
 
-                          function PI(pp, ip) {
-                            const cp = new Set,
-                              Op = function(pp) {
-                                return pp.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(pp);
-                            for (const [, op] of Op.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) cp.add(op);
-                            for (const [op, Ip] of SI)
-                              for (const [, pp] of(0, OI.f)(Op, op, Ip)) ip.has(pp) && cp.add(pp);
-                            return cp
+                          function HM(TT, UT) {
+                            const mT = new Set,
+                              WT = function(TT) {
+                                return TT.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(TT);
+                            for (const [, zT] of WT.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) mT.add(zT);
+                            for (const [zT, MT] of mM)
+                              for (const [, TT] of(0, Rz.e)(WT, zT, MT)) UT.has(TT) && mT.add(TT);
+                            return mT
                           }
 
-                          function WI(pp, ip, cp, Op) {
-                            const op = pp.get(ip);
-                            op ? !Op && op.some((pp => pp.pageId === cp.pageId)) || op.push(cp) : pp.set(ip, [cp])
+                          function kM(TT, UT, mT, WT) {
+                            const zT = TT.get(UT);
+                            zT ? !WT && zT.some((TT => TT.pageId === mT.pageId)) || zT.push(mT) : TT.set(UT, [mT])
                           }
-                          const yI = /^[A-Za-z_$][\w$]*$/;
+                          const jM = /^[A-Za-z_$][\w$]*$/;
 
-                          function UI(pp) {
-                            return yI.test(pp.name) ? pp.name : "options"
-                          }
-
-                          function wI(pp, ip) {
-                            const cp = pp.params.map(UI).join(", ");
-                            return ip ? `${pp.name} = (${cp}) => {\n\t\n}` : `api.${pp.name}(${cp})`
+                          function lM(TT) {
+                            return jM.test(TT.name) ? TT.name : "options"
                           }
 
-                          function vI(pp) {
+                          function LM(TT, UT) {
+                            const mT = TT.params.map(lM).join(", ");
+                            return UT ? `${TT.name} = (${mT}) => {\n\t\n}` : `api.${TT.name}(${mT})`
+                          }
+
+                          function pM(TT) {
                             let {
-                              method: ip,
-                              isCallback: cp
-                            } = pp;
-                            return (0, yp.jsxs)("div", {
+                              method: UT,
+                              isCallback: mT
+                            } = TT;
+                            return (0, BT.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, yp.jsxs)("span", {
+                              children: [(0, BT.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [cp ? (0, yp.jsxs)(yp.Fragment, {
-                                  children: [(0, yp.jsx)("span", {
+                                children: [mT ? (0, BT.jsxs)(BT.Fragment, {
+                                  children: [(0, BT.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: ip.name
-                                  }), (0, yp.jsx)("span", {
+                                    children: UT.name
+                                  }), (0, BT.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, yp.jsxs)(yp.Fragment, {
-                                  children: [(0, yp.jsx)("span", {
+                                }) : (0, BT.jsxs)(BT.Fragment, {
+                                  children: [(0, BT.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, yp.jsx)("span", {
+                                  }), (0, BT.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: ip.name
-                                  }), (0, yp.jsx)("span", {
+                                    children: UT.name
+                                  }), (0, BT.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), ip.params.map(((pp, cp) => (0, yp.jsxs)(Op.Fragment, {
-                                  children: [cp > 0 && (0, yp.jsx)("span", {
+                                }), UT.params.map(((TT, mT) => (0, BT.jsxs)(WT.Fragment, {
+                                  children: [mT > 0 && (0, BT.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, yp.jsx)("a", {
+                                  }), (0, BT.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${ip.name}-${UI(pp)}`,
-                                    children: pp.name
+                                    href: `#${UT.name}-${lM(TT)}`,
+                                    children: TT.name
                                   })]
-                                }, pp.name))), (0, yp.jsx)("span", {
+                                }, TT.name))), (0, BT.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: cp ? ") => " : ")"
-                                }), cp && !ip.returns && (0, yp.jsx)("span", {
+                                  children: mT ? ") => " : ")"
+                                }), mT && !UT.returns && (0, BT.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), ip.returns && ip.returns.type && (0, yp.jsxs)("span", {
+                              }), UT.returns && UT.returns.type && (0, BT.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!cp && (0, yp.jsx)("span", {
+                                children: [!mT && (0, BT.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, yp.jsx)(qi, {
-                                  type: ip.returns.type
+                                }), (0, BT.jsx)(JU, {
+                                  type: UT.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function tI(pp) {
+                          function BM(TT) {
                             let {
-                              title: ip,
-                              references: cp
-                            } = pp;
-                            const op = (0, Op.useContext)(Ui);
-                            return (0, yp.jsxs)("div", {
+                              title: UT,
+                              references: mT
+                            } = TT;
+                            const zT = (0, WT.useContext)(pU);
+                            return (0, BT.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, yp.jsx)("span", {
+                              children: [(0, BT.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: ip
-                              }), cp.map((pp => (0, yp.jsx)(Sp.c, {
-                                to: gp(op, fp(pp.pageId), pp.anchor),
-                                children: pp.label
-                              }, `${pp.pageId}#${pp.anchor}`)))]
+                                children: UT
+                              }), mT.map((TT => (0, BT.jsx)(gT.d, {
+                                to: ST(zT, PT(TT.pageId), TT.anchor),
+                                children: TT.label
+                              }, `${TT.pageId}#${TT.anchor}`)))]
                             })
                           }
 
-                          function HI(pp) {
-                            var ip, cp;
+                          function ZM(TT) {
+                            var UT, mT;
                             let {
-                              pageId: Op,
-                              anchor: op
-                            } = pp;
-                            const Ip = xI({
-                                pageId: Op,
-                                anchor: op
+                              pageId: WT,
+                              anchor: zT
+                            } = TT;
+                            const MT = WM({
+                                pageId: WT,
+                                anchor: zT
                               }),
-                              Sp = null !== (ip = function() {
-                                if (!DI) {
-                                  DI = new Map;
-                                  const Op = new Set(Np.filter((pp => "callbacks" === pp.layout)).flatMap((pp => hp(pp).sections.map((pp => pp.heading.text)))));
-                                  for (const op of Np)
-                                    if ("article" === op.layout || "snippets" === op.layout)
-                                      for (const Ip of (0, mp.t)(hp(op)))
+                              gT = null !== (UT = function() {
+                                if (!gM) {
+                                  gM = new Map;
+                                  const WT = new Set(sT.filter((TT => "callbacks" === TT.layout)).flatMap((TT => uT(TT).sections.map((TT => TT.heading.text)))));
+                                  for (const zT of sT)
+                                    if ("article" === zT.layout || "snippets" === zT.layout)
+                                      for (const MT of (0, YT.A)(uT(zT)))
                                         for (const {
-                                            code: Sp
+                                            code: gT
                                           }
-                                          of(0, mp.n)(Ip.blocks))
-                                          for (const xp of PI(Sp, Op)) {
-                                            const Op = Wi().get(xp);
-                                            if (Op) {
-                                              var pp, ip, cp;
-                                              const Sp = {
-                                                pageId: op.id,
-                                                anchor: null !== (pp = null === (ip = Ip.heading) || void 0 === ip ? void 0 : ip.anchor) && void 0 !== pp ? pp : "",
-                                                label: null !== (cp = op.navTitle) && void 0 !== cp ? cp : op.title
+                                          of(0, YT.n)(MT.blocks))
+                                          for (const nT of HM(gT, WT)) {
+                                            const WT = lU().get(nT);
+                                            if (WT) {
+                                              var TT, UT, mT;
+                                              const gT = {
+                                                pageId: zT.id,
+                                                anchor: null !== (TT = null === (UT = MT.heading) || void 0 === UT ? void 0 : UT.anchor) && void 0 !== TT ? TT : "",
+                                                label: null !== (mT = zT.navTitle) && void 0 !== mT ? mT : zT.title
                                               };
-                                              WI(DI, xI(Op), Sp, !1)
+                                              kM(gM, WM(WT), gT, !1)
                                             }
                                           }
                                 }
-                                return DI
-                              }().get(Ip)) && void 0 !== ip ? ip : [],
-                              xp = null !== (cp = function() {
-                                if (!YI) {
-                                  YI = new Map;
-                                  const pp = fp("changelog");
-                                  for (const ip of hp(pp).sections) {
-                                    const cp = new Set(ip.blocks.flatMap((pp => [...AI(pp)])));
-                                    for (const Op of cp) {
-                                      const cp = {
-                                        pageId: pp.id,
-                                        anchor: ip.heading.anchor,
-                                        label: ip.heading.text
+                                return gM
+                              }().get(MT)) && void 0 !== UT ? UT : [],
+                              nT = null !== (mT = function() {
+                                if (!MM) {
+                                  MM = new Map;
+                                  const TT = PT("changelog");
+                                  for (const UT of uT(TT).sections) {
+                                    const mT = new Set(UT.blocks.flatMap((TT => [...nM(TT)])));
+                                    for (const WT of mT) {
+                                      const mT = {
+                                        pageId: TT.id,
+                                        anchor: UT.heading.anchor,
+                                        label: UT.heading.text
                                       };
-                                      WI(YI, Op, cp, !0)
+                                      kM(MM, WT, mT, !0)
                                     }
                                   }
                                 }
-                                return YI
-                              }().get(Ip)) && void 0 !== cp ? cp : [];
-                            return 0 === Sp.length && 0 === xp.length ? null : (0, yp.jsxs)("footer", {
+                                return MM
+                              }().get(MT)) && void 0 !== mT ? mT : [];
+                            return 0 === gT.length && 0 === nT.length ? null : (0, BT.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [Sp.length > 0 && (0, yp.jsx)(tI, {
+                              children: [gT.length > 0 && (0, BT.jsx)(BM, {
                                 title: "Used in",
-                                references: Sp
-                              }), xp.length > 0 && (0, yp.jsx)(tI, {
+                                references: gT
+                              }), nT.length > 0 && (0, BT.jsx)(BM, {
                                 title: "Changelog",
-                                references: xp
+                                references: nT
                               })]
                             })
                           }
 
-                          function dI(pp) {
+                          function cM(TT) {
                             let {
-                              method: ip,
-                              pageId: cp,
-                              anchor: Op,
-                              isCallback: op
-                            } = pp;
-                            const Ip = op ? void 0 : Yi().get(ip.name),
-                              Sp = ip.description.length > 0 || null === Ip || void 0 === Ip || !Ip.description ? ip.description : (0, mp.x)(Ip.description);
-                            return (0, yp.jsxs)("article", {
+                              method: UT,
+                              pageId: mT,
+                              anchor: WT,
+                              isCallback: zT
+                            } = TT;
+                            const MT = zT ? void 0 : nU().get(UT.name),
+                              gT = UT.description.length > 0 || null === MT || void 0 === MT || !MT.description ? UT.description : (0, YT.I)(MT.description);
+                            return (0, BT.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, yp.jsxs)("header", {
+                              children: [(0, BT.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, yp.jsx)(Pc, {
+                                children: [(0, BT.jsx)(km, {
                                   level: 2,
-                                  text: ip.name,
-                                  anchor: Op,
+                                  text: UT.name,
+                                  anchor: WT,
                                   className: "DocsCardTitle"
-                                }), (0, yp.jsx)(Hp, {
-                                  text: wI(ip, op),
-                                  label: op ? "Copy handler" : "Copy call",
+                                }), (0, BT.jsx)(qT, {
+                                  text: LM(UT, zT),
+                                  label: zT ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, yp.jsx)(vI, {
-                                method: ip,
-                                isCallback: op
-                              }), Ip && null !== Ip.deprecation && (0, yp.jsxs)("aside", {
+                              }), (0, BT.jsx)(pM, {
+                                method: UT,
+                                isCallback: zT
+                              }), MT && null !== MT.deprecation && (0, BT.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, yp.jsx)("strong", {
+                                children: [(0, BT.jsx)("strong", {
                                   children: "Deprecated"
-                                }), Ip.deprecation && (0, yp.jsxs)(yp.Fragment, {
-                                  children: [": ", (0, yp.jsx)(ki, {
-                                    text: (xp = Ip.deprecation, (0, OI.r)(xp, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, OI.k)("`\\w"), (pp => {
-                                      let [ip] = pp;
-                                      return Wi().has(ip) ? `\`${ip}\`` : ip
+                                }), MT.deprecation && (0, BT.jsxs)(BT.Fragment, {
+                                  children: [": ", (0, BT.jsx)(OU, {
+                                    text: (nT = MT.deprecation, (0, Rz.s)(nT, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Rz.j)("`\\w"), (TT => {
+                                      let [UT] = TT;
+                                      return lU().has(UT) ? `\`${UT}\`` : UT
                                     })))
                                   })]
                                 })]
-                              }), Sp.length > 0 && (0, yp.jsx)("div", {
+                              }), gT.length > 0 && (0, BT.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, yp.jsx)(wc, {
-                                  blocks: Sp
+                                children: (0, BT.jsx)(pm, {
+                                  blocks: gT
                                 })
-                              }), ip.params.length > 0 && (0, yp.jsxs)("section", {
+                              }), UT.params.length > 0 && (0, BT.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, yp.jsx)("h3", {
+                                children: [(0, BT.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, yp.jsx)("dl", {
+                                }), (0, BT.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: ip.params.map((pp => (0, yp.jsxs)("div", {
-                                    id: `${ip.name}-${UI(pp)}`,
+                                  children: UT.params.map((TT => (0, BT.jsxs)("div", {
+                                    id: `${UT.name}-${lM(TT)}`,
                                     className: "DocsParam",
-                                    children: [(0, yp.jsxs)("dt", {
-                                      children: [(0, yp.jsx)("code", {
+                                    children: [(0, BT.jsxs)("dt", {
+                                      children: [(0, BT.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: pp.name
-                                      }), (0, yp.jsx)(qi, {
-                                        type: pp.type
+                                        children: TT.name
+                                      }), (0, BT.jsx)(JU, {
+                                        type: TT.type
                                       })]
-                                    }), pp.description && (0, yp.jsx)("dd", {
-                                      children: (0, yp.jsx)(ki, {
-                                        text: pp.description
+                                    }), TT.description && (0, BT.jsx)("dd", {
+                                      children: (0, BT.jsx)(OU, {
+                                        text: TT.description
                                       })
                                     })]
-                                  }, pp.name)))
+                                  }, TT.name)))
                                 })]
-                              }), ip.returns && (ip.returns.type || ip.returns.description.length > 0) && (0, yp.jsxs)("section", {
+                              }), UT.returns && (UT.returns.type || UT.returns.description.length > 0) && (0, BT.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, yp.jsx)("h3", {
+                                children: [(0, BT.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [ip.returns.type && (0, yp.jsx)(qi, {
-                                    type: ip.returns.type
-                                  }), ip.returns.description.length > 0 && (0, yp.jsx)("div", {
+                                  children: [UT.returns.type && (0, BT.jsx)(JU, {
+                                    type: UT.returns.type
+                                  }), UT.returns.description.length > 0 && (0, BT.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, yp.jsx)(wc, {
-                                      blocks: ip.returns.description
+                                    children: (0, BT.jsx)(pm, {
+                                      blocks: UT.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, yp.jsx)(HI, {
-                                pageId: cp,
-                                anchor: Op
+                              }), (0, BT.jsx)(ZM, {
+                                pageId: mT,
+                                anchor: WT
                               })]
                             });
-                            var xp
+                            var nT
                           }
 
-                          function eI(pp) {
-                            var ip;
-                            return null !== pp.defaultValue && "undefined" !== pp.defaultValue ? pp.defaultValue : null !== (ip = pp.example) && void 0 !== ip ? ip : "value"
+                          function vM(TT) {
+                            var UT;
+                            return null !== TT.defaultValue && "undefined" !== TT.defaultValue ? TT.defaultValue : null !== (UT = TT.example) && void 0 !== UT ? UT : "value"
                           }
 
-                          function uI(pp) {
+                          function fM(TT) {
                             let {
-                              setting: ip,
-                              pageId: cp,
-                              anchor: Op,
-                              setterSnippet: op
-                            } = pp;
-                            const Ip = null === ip.defaultValue ? null : Hi(ip.defaultValue);
-                            return (0, yp.jsxs)("article", {
+                              setting: UT,
+                              pageId: mT,
+                              anchor: WT,
+                              setterSnippet: zT
+                            } = TT;
+                            const MT = null === UT.defaultValue ? null : vU(UT.defaultValue);
+                            return (0, BT.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, yp.jsxs)("header", {
+                              children: [(0, BT.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, yp.jsx)(Pc, {
+                                children: [(0, BT.jsx)(km, {
                                   level: 2,
-                                  text: ip.name,
-                                  anchor: Op,
+                                  text: UT.name,
+                                  anchor: WT,
                                   className: "DocsCardTitle"
-                                }), (0, yp.jsx)(Hp, {
-                                  text: op(ip.name, eI(ip)),
+                                }), (0, BT.jsx)(qT, {
+                                  text: zT(UT.name, vM(UT)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, yp.jsxs)("dl", {
+                              }), (0, BT.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, yp.jsxs)("div", {
-                                  children: [(0, yp.jsx)("dt", {
+                                children: [(0, BT.jsxs)("div", {
+                                  children: [(0, BT.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, yp.jsx)("dd", {
-                                    children: (0, yp.jsx)(qi, {
-                                      type: ip.type
+                                  }), (0, BT.jsx)("dd", {
+                                    children: (0, BT.jsx)(JU, {
+                                      type: UT.type
                                     })
                                   })]
-                                }), null !== ip.defaultValue && (0, yp.jsxs)("div", {
-                                  children: [(0, yp.jsx)("dt", {
+                                }), null !== UT.defaultValue && (0, BT.jsxs)("div", {
+                                  children: [(0, BT.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, yp.jsx)("dd", {
-                                    children: (0, yp.jsxs)("code", {
+                                  }), (0, BT.jsx)("dd", {
+                                    children: (0, BT.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [Ip && (0, yp.jsx)(di, {
-                                        colour: Ip
-                                      }), ip.defaultValue]
+                                      children: [MT && (0, BT.jsx)(fU, {
+                                        colour: MT
+                                      }), UT.defaultValue]
                                     })
                                   })]
-                                }), null !== ip.example && (0, yp.jsxs)("div", {
-                                  children: [(0, yp.jsx)("dt", {
+                                }), null !== UT.example && (0, BT.jsxs)("div", {
+                                  children: [(0, BT.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, yp.jsx)("dd", {
-                                    children: (0, yp.jsx)("code", {
+                                  }), (0, BT.jsx)("dd", {
+                                    children: (0, BT.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: ip.example
+                                      children: UT.example
                                     })
                                   })]
                                 })]
-                              }), ip.description.length > 0 && (0, yp.jsx)("div", {
+                              }), UT.description.length > 0 && (0, BT.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, yp.jsx)(wc, {
-                                  blocks: ip.description
+                                children: (0, BT.jsx)(pm, {
+                                  blocks: UT.description
                                 })
-                              }), (0, yp.jsx)(HI, {
-                                pageId: cp,
-                                anchor: Op
+                              }), (0, BT.jsx)(ZM, {
+                                pageId: mT,
+                                anchor: WT
                               })]
                             })
                           }
 
-                          function jI(pp) {
+                          function qM(TT) {
                             let {
-                              section: ip
-                            } = pp;
-                            return (0, yp.jsxs)("article", {
+                              section: UT
+                            } = TT;
+                            return (0, BT.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, yp.jsx)(Pc, {
+                              children: [(0, BT.jsx)(km, {
                                 level: 2,
-                                text: ip.heading.text,
-                                anchor: ip.heading.anchor,
+                                text: UT.heading.text,
+                                anchor: UT.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, yp.jsx)("div", {
+                              }), (0, BT.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, yp.jsx)(wc, {
-                                  blocks: ip.blocks
+                                children: (0, BT.jsx)(pm, {
+                                  blocks: UT.blocks
                                 })
                               })]
                             })
                           }
 
-                          function kI(pp) {
+                          function iM(TT) {
                             let {
-                              section: ip
-                            } = pp;
-                            return (0, yp.jsxs)("section", {
+                              section: UT
+                            } = TT;
+                            return (0, BT.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, yp.jsx)(Pc, {
-                                level: ip.heading.level,
-                                text: ip.heading.text,
-                                anchor: ip.heading.anchor
-                              }), (0, yp.jsx)(wc, {
-                                blocks: ip.blocks
+                              children: [(0, BT.jsx)(km, {
+                                level: UT.heading.level,
+                                text: UT.heading.text,
+                                anchor: UT.heading.anchor
+                              }), (0, BT.jsx)(pm, {
+                                blocks: UT.blocks
                               })]
                             })
                           }
-                          const mI = {
+                          const bM = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function RI(pp) {
+                          function OM(TT) {
                             let {
-                              page: ip,
-                              section: cp
-                            } = pp;
-                            if ("methods" === ip.layout || "callbacks" === ip.layout) return (0, yp.jsx)(dI, {
-                              method: Rc(cp),
-                              pageId: ip.id,
-                              anchor: cp.heading.anchor,
-                              isCallback: "callbacks" === ip.layout
+                              page: UT,
+                              section: mT
+                            } = TT;
+                            if ("methods" === UT.layout || "callbacks" === UT.layout) return (0, BT.jsx)(cM, {
+                              method: Ym(mT),
+                              pageId: UT.id,
+                              anchor: mT.heading.anchor,
+                              isCallback: "callbacks" === UT.layout
                             });
-                            if ("settings" === ip.layout) {
-                              const pp = function(pp) {
-                                const ip = {
-                                  name: pp.heading.text,
+                            if ("settings" === UT.layout) {
+                              const TT = function(TT) {
+                                const UT = {
+                                  name: TT.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Op of pp.blocks) {
-                                  var cp;
-                                  if (mc(Op)) continue;
-                                  const pp = "paragraph" === Op.kind ? Op.text.match(qc) : null;
-                                  if (!pp) {
-                                    ip.description.push(Op);
+                                for (const WT of TT.blocks) {
+                                  var mT;
+                                  if (em(WT)) continue;
+                                  const TT = "paragraph" === WT.kind ? WT.text.match(Jm) : null;
+                                  if (!TT) {
+                                    UT.description.push(WT);
                                     continue
                                   }
-                                  const op = null !== (cp = kc(pp[2])) && void 0 !== cp ? cp : pp[2];
-                                  "Type" === pp[1] ? ip.type = op : "Default" === pp[1] ? ip.defaultValue = op : "" !== op && (ip.example = op)
+                                  const zT = null !== (mT = Om(TT[2])) && void 0 !== mT ? mT : TT[2];
+                                  "Type" === TT[1] ? UT.type = zT : "Default" === TT[1] ? UT.defaultValue = zT : "" !== zT && (UT.example = zT)
                                 }
-                                return ip.type ? ip : null
-                              }(cp);
-                              if (pp) return (0, yp.jsx)(uI, {
-                                setting: pp,
-                                pageId: ip.id,
-                                anchor: cp.heading.anchor,
-                                setterSnippet: ip.setterSnippet
+                                return UT.type ? UT : null
+                              }(mT);
+                              if (TT) return (0, BT.jsx)(fM, {
+                                setting: TT,
+                                pageId: UT.id,
+                                anchor: mT.heading.anchor,
+                                setterSnippet: UT.setterSnippet
                               })
                             }
-                            return "snippets" === ip.layout ? (0, yp.jsx)(jI, {
-                              section: cp
-                            }) : "changelog" === ip.layout ? (0, yp.jsxs)("section", {
+                            return "snippets" === UT.layout ? (0, BT.jsx)(qM, {
+                              section: mT
+                            }) : "changelog" === UT.layout ? (0, BT.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, yp.jsx)("div", {
+                              children: [(0, BT.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, yp.jsx)(Pc, {
+                                children: (0, BT.jsx)(km, {
                                   level: 2,
-                                  text: cp.heading.text,
-                                  anchor: cp.heading.anchor
+                                  text: mT.heading.text,
+                                  anchor: mT.heading.anchor
                                 })
-                              }), (0, yp.jsx)("div", {
+                              }), (0, BT.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, yp.jsx)(wc, {
-                                  blocks: Mc(cp.blocks)
+                                children: (0, BT.jsx)(pm, {
+                                  blocks: xm(mT.blocks)
                                 })
                               })]
-                            }) : ip.gallery ? (0, yp.jsxs)("section", {
+                            }) : UT.gallery ? (0, BT.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, yp.jsx)(Pc, {
-                                level: cp.heading.level,
-                                text: cp.heading.text,
-                                anchor: cp.heading.anchor
-                              }), (0, yp.jsx)(CO, {
-                                kind: ip.gallery,
-                                content: hp(ip),
-                                blocks: cp.blocks
+                              children: [(0, BT.jsx)(km, {
+                                level: mT.heading.level,
+                                text: mT.heading.text,
+                                anchor: mT.heading.anchor
+                              }), (0, BT.jsx)(dW, {
+                                kind: UT.gallery,
+                                content: uT(UT),
+                                blocks: mT.blocks
                               })]
-                            }) : (0, yp.jsx)(kI, {
-                              section: cp
+                            }) : (0, BT.jsx)(iM, {
+                              section: mT
                             })
                           }
 
-                          function qI(pp) {
+                          function eM(TT) {
                             let {
-                              page: ip,
-                              onTocChange: cp
-                            } = pp;
-                            const op = hp(ip),
-                              [Ip, Sp] = (0, Op.useState)(""),
-                              xp = "article" !== ip.layout,
-                              Lp = Hc(ip.gallery) ? ip.gallery : null,
-                              Yp = null !== Lp,
-                              Dp = Ip.trim().toLowerCase(),
-                              Ap = (0, Op.useRef)(null),
-                              Pp = (0, Op.useCallback)((pp => {
-                                var ip;
-                                null === (ip = Ap.current) || void 0 === ip || ip.preview(pp)
+                              page: UT,
+                              onTocChange: mT
+                            } = TT;
+                            const zT = uT(UT),
+                              [MT, gT] = (0, WT.useState)(""),
+                              nT = "article" !== UT.layout,
+                              HT = cm(UT.gallery) ? UT.gallery : null,
+                              kT = null !== HT,
+                              jT = MT.trim().toLowerCase(),
+                              lT = (0, WT.useRef)(null),
+                              LT = (0, WT.useCallback)((TT => {
+                                var UT;
+                                null === (UT = lT.current) || void 0 === UT || UT.preview(TT)
                               }), []),
-                              Wp = (0, Op.useMemo)((() => {
-                                if (!ip.hasParticlePlayground) return [];
-                                const pp = lc(op.intro).find((pp => "names" === pp.kind && !pp.names.some((pp => null !== ac(pp.name)))));
-                                return "names" === (null === pp || void 0 === pp ? void 0 : pp.kind) ? pp.names.map((pp => pp.name)) : []
-                              }), [ip, op]),
-                              Up = (0, Op.useMemo)((() => {
-                                if (!ip.hasTextPlayground) return [];
-                                const pp = op.sections.flatMap((pp => pp.blocks.flatMap((pp => {
-                                  var ip;
-                                  return (null !== (ip = Xc(pp)) && void 0 !== ip ? ip : []).flatMap((pp => ai(pp.name) ? [pp.name] : []))
+                              pT = (0, WT.useMemo)((() => {
+                                if (!UT.hasParticlePlayground) return [];
+                                const TT = am(zT.intro).find((TT => "names" === TT.kind && !TT.names.some((TT => null !== um(TT.name)))));
+                                return "names" === (null === TT || void 0 === TT ? void 0 : TT.kind) ? TT.names.map((TT => TT.name)) : []
+                              }), [UT, zT]),
+                              ZT = (0, WT.useMemo)((() => {
+                                if (!UT.hasTextPlayground) return [];
+                                const TT = zT.sections.flatMap((TT => TT.blocks.flatMap((TT => {
+                                  var UT;
+                                  return (null !== (UT = tm(TT)) && void 0 !== UT ? UT : []).flatMap((TT => VU(TT.name) ? [TT.name] : []))
                                 }))));
-                                return [...new Set(pp)]
-                              }), [ip, op]),
-                              wp = (0, Op.useMemo)((() => Dp ? op.sections.filter((pp => function(pp, ip) {
-                                return !!pp.heading.text.toLowerCase().includes(ip) || pp.blocks.some((pp => (0, mp.k)(pp).toLowerCase().includes(ip)))
-                              }(pp, Dp))) : op.sections), [op, Dp]),
-                              vp = (0, Op.useMemo)((() => function(pp, ip) {
-                                return "article" !== pp.layout ? ip.map((pp => ({
-                                  anchor: pp.heading.anchor,
-                                  text: pp.heading.text,
+                                return [...new Set(TT)]
+                              }), [UT, zT]),
+                              cT = (0, WT.useMemo)((() => jT ? zT.sections.filter((TT => function(TT, UT) {
+                                return !!TT.heading.text.toLowerCase().includes(UT) || TT.blocks.some((TT => (0, YT.l)(TT).toLowerCase().includes(UT)))
+                              }(TT, jT))) : zT.sections), [zT, jT]),
+                              vT = (0, WT.useMemo)((() => function(TT, UT) {
+                                return "article" !== TT.layout ? UT.map((TT => ({
+                                  anchor: TT.heading.anchor,
+                                  text: TT.heading.text,
                                   level: 2
-                                }))) : ip.flatMap((pp => {
-                                  const ip = pp.blocks.flatMap((pp => "heading" === pp.kind && 3 === pp.level ? [{
-                                    anchor: pp.anchor,
-                                    text: pp.text,
+                                }))) : UT.flatMap((TT => {
+                                  const UT = TT.blocks.flatMap((TT => "heading" === TT.kind && 3 === TT.level ? [{
+                                    anchor: TT.anchor,
+                                    text: TT.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: pp.heading.anchor,
-                                    text: pp.heading.text,
+                                    anchor: TT.heading.anchor,
+                                    text: TT.heading.text,
                                     level: 2
-                                  }, ...ip]
+                                  }, ...UT]
                                 }))
-                              }(ip, wp)), [ip, wp]);
-                            return (0, Op.useEffect)((() => {
-                              cp(vp)
-                            }), [vp, cp]), (0, yp.jsxs)("article", {
+                              }(UT, cT)), [UT, cT]);
+                            return (0, WT.useEffect)((() => {
+                              mT(vT)
+                            }), [vT, mT]), (0, BT.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, yp.jsxs)("header", {
+                              children: [(0, BT.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, yp.jsx)("h1", {
+                                children: [(0, BT.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: op.title || ip.title
-                                }), (0, yp.jsx)("p", {
+                                  children: zT.title || UT.title
+                                }), (0, BT.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: ip.summary
-                                }), (0, yp.jsx)(KO, {
-                                  page: ip
-                                }), xp && (0, yp.jsx)("div", {
+                                  children: UT.summary
+                                }), (0, BT.jsx)(DW, {
+                                  page: UT
+                                }), nT && (0, BT.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, yp.jsxs)("span", {
-                                    children: [(0, yp.jsx)("strong", {
-                                      children: op.sections.length
-                                    }), " ", mI[ip.layout]]
+                                  children: (0, BT.jsxs)("span", {
+                                    children: [(0, BT.jsx)("strong", {
+                                      children: zT.sections.length
+                                    }), " ", bM[UT.layout]]
                                   })
                                 })]
-                              }), "" === ip.slug && (0, yp.jsx)(XO, {}), Lp && (0, yp.jsx)(BO, {
-                                kind: Lp
-                              }, Lp), ip.hasParticlePlayground && (0, yp.jsx)(Ao, {
-                                ref: Ap,
-                                textures: Wp
-                              }), !Yp && op.intro.length > 0 && (0, yp.jsx)("div", {
+                              }), "" === UT.slug && (0, BT.jsx)(tW, {}), HT && (0, BT.jsx)(IW, {
+                                kind: HT
+                              }, HT), UT.hasParticlePlayground && (0, BT.jsx)(kz, {
+                                ref: lT,
+                                textures: pT
+                              }), !kT && zT.intro.length > 0 && (0, BT.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: ip.gallery ? (0, yp.jsx)(dO.Provider, {
-                                  value: ip.hasParticlePlayground ? Pp : null,
-                                  children: (0, yp.jsx)(CO, {
-                                    kind: ip.gallery,
-                                    content: op,
-                                    blocks: op.intro
+                                children: UT.gallery ? (0, BT.jsx)(fW.Provider, {
+                                  value: UT.hasParticlePlayground ? LT : null,
+                                  children: (0, BT.jsx)(dW, {
+                                    kind: UT.gallery,
+                                    content: zT,
+                                    blocks: zT.intro
                                   })
-                                }) : (0, yp.jsx)(wc, {
-                                  blocks: Mc(op.intro)
+                                }) : (0, BT.jsx)(pm, {
+                                  blocks: xm(zT.intro)
                                 })
-                              }), ip.hasTextPlayground && (0, yp.jsx)(Mo, {
-                                fontAwesomeIcons: Up
-                              }), ip.hasVoicePlayground && (0, yp.jsx)(cI, {}), ip.childPageIds && (0, yp.jsx)(XO, {
-                                cards: ip.childPageIds.map((pp => ({
-                                  pageId: pp
+                              }), UT.hasTextPlayground && (0, BT.jsx)(Jz, {
+                                fontAwesomeIcons: ZT
+                              }), UT.hasVoicePlayground && (0, BT.jsx)(Az, {}), UT.childPageIds && (0, BT.jsx)(tW, {
+                                cards: UT.childPageIds.map((TT => ({
+                                  pageId: TT
                                 }))),
-                                label: ip.title
-                              }), xp && (0, yp.jsx)(uc, {
+                                label: UT.title
+                              }), nT && (0, BT.jsx)(im, {
                                 className: "DocsFilterBar",
-                                value: Ip,
-                                placeholder: `Filter ${op.sections.length} ${mI[ip.layout]}\u2026`,
-                                label: `Filter ${mI[ip.layout]}`,
-                                onChange: Sp,
-                                count: Dp ? {
-                                  visible: wp.length,
-                                  total: op.sections.length
+                                value: MT,
+                                placeholder: `Filter ${zT.sections.length} ${bM[UT.layout]}\u2026`,
+                                label: `Filter ${bM[UT.layout]}`,
+                                onChange: gT,
+                                count: jT ? {
+                                  visible: cT.length,
+                                  total: zT.sections.length
                                 } : null
-                              }), !Yp && (0, yp.jsxs)("div", {
-                                className: `DocsSections Layout-${ip.layout}`,
-                                children: [wp.map((pp => (0, yp.jsx)(RI, {
-                                  page: ip,
-                                  section: pp
-                                }, pp.heading.anchor))), 0 === wp.length && (0, yp.jsxs)("p", {
+                              }), !kT && (0, BT.jsxs)("div", {
+                                className: `DocsSections Layout-${UT.layout}`,
+                                children: [cT.map((TT => (0, BT.jsx)(OM, {
+                                  page: UT,
+                                  section: TT
+                                }, TT.heading.anchor))), 0 === cT.length && (0, BT.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", mI[ip.layout], " match \u201c", Ip, "\u201d."]
+                                  children: ["No ", bM[UT.layout], " match \u201c", MT, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const MI = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const YM = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function CI(pp) {
+                          function JM(TT) {
                             let {
-                              entry: ip,
-                              isActive: cp,
-                              onNavigate: Op,
-                              label: op,
-                              children: Sp
-                            } = pp;
-                            return (0, yp.jsx)("a", {
-                              href: `#${ip.anchor}`,
-                              "aria-label": op,
-                              className: Ip()(`Level${ip.level}`, {
-                                Active: cp
+                              entry: UT,
+                              isActive: mT,
+                              onNavigate: WT,
+                              label: zT,
+                              children: gT
+                            } = TT;
+                            return (0, BT.jsx)("a", {
+                              href: `#${UT.anchor}`,
+                              "aria-label": zT,
+                              className: MT()(`Level${UT.level}`, {
+                                Active: mT
                               }),
-                              "aria-current": cp ? "location" : void 0,
-                              onClick: pp => {
-                                pp.preventDefault(), Op(ip.anchor)
+                              "aria-current": mT ? "location" : void 0,
+                              onClick: TT => {
+                                TT.preventDefault(), WT(UT.anchor)
                               },
-                              children: Sp
+                              children: gT
                             })
                           }
 
-                          function EI(pp) {
+                          function xM(TT) {
                             let {
-                              toc: ip,
-                              activeAnchor: cp,
-                              onNavigate: op
-                            } = pp;
-                            const Sp = Math.max(0, ip.findIndex((pp => pp.anchor === cp))),
-                              xp = (0, Op.useRef)(null),
-                              Lp = (0, Op.useRef)(!1);
-                            (0, Op.useEffect)((() => {
-                              var pp, cp;
-                              const Op = null === (pp = xp.current) || void 0 === pp ? void 0 : pp.closest(".DocsToc"),
-                                op = null === (cp = xp.current) || void 0 === cp ? void 0 : cp.querySelector(".DocsTimelineNotch.Active");
-                              if (!Op || !op) return;
-                              let Ip = 0;
-                              if (Sp === ip.length - 1) Ip = Op.scrollHeight;
-                              else if (Sp > 0) {
-                                const pp = Op.getBoundingClientRect(),
-                                  ip = op.getBoundingClientRect();
-                                Ip = Op.scrollTop + ip.top + ip.height / 2 - (pp.top + Op.clientHeight / 2)
+                              toc: UT,
+                              activeAnchor: mT,
+                              onNavigate: zT
+                            } = TT;
+                            const gT = Math.max(0, UT.findIndex((TT => TT.anchor === mT))),
+                              nT = (0, WT.useRef)(null),
+                              HT = (0, WT.useRef)(!1);
+                            (0, WT.useEffect)((() => {
+                              var TT, mT;
+                              const WT = null === (TT = nT.current) || void 0 === TT ? void 0 : TT.closest(".DocsToc"),
+                                zT = null === (mT = nT.current) || void 0 === mT ? void 0 : mT.querySelector(".DocsTimelineNotch.Active");
+                              if (!WT || !zT) return;
+                              let MT = 0;
+                              if (gT === UT.length - 1) MT = WT.scrollHeight;
+                              else if (gT > 0) {
+                                const TT = WT.getBoundingClientRect(),
+                                  UT = zT.getBoundingClientRect();
+                                MT = WT.scrollTop + UT.top + UT.height / 2 - (TT.top + WT.clientHeight / 2)
                               }
-                              Op.scrollTo({
-                                top: Ip,
-                                behavior: Lp.current ? "smooth" : "auto"
-                              }), Lp.current = !0
-                            }), [Sp, ip.length]);
-                            const Yp = [];
-                            return ip.forEach(((pp, ip) => {
-                              var cp, Op, op;
-                              const Ip = function(pp) {
-                                  const ip = pp.trim().match(MI);
-                                  return ip ? {
-                                    day: ip[1],
-                                    month: `${ip[2]} ${ip[3]}`
+                              WT.scrollTo({
+                                top: MT,
+                                behavior: HT.current ? "smooth" : "auto"
+                              }), HT.current = !0
+                            }), [gT, UT.length]);
+                            const kT = [];
+                            return UT.forEach(((TT, UT) => {
+                              var mT, WT, zT;
+                              const MT = function(TT) {
+                                  const UT = TT.trim().match(YM);
+                                  return UT ? {
+                                    day: UT[1],
+                                    month: `${UT[2]} ${UT[3]}`
                                   } : null
-                                }(pp.text),
-                                Sp = null !== (cp = null === Ip || void 0 === Ip ? void 0 : Ip.month) && void 0 !== cp ? cp : null;
-                              null !== Sp && (null === (Op = Yp.at(-1)) || void 0 === Op ? void 0 : Op.month) === Sp || Yp.push({
-                                month: Sp,
+                                }(TT.text),
+                                gT = null !== (mT = null === MT || void 0 === MT ? void 0 : MT.month) && void 0 !== mT ? mT : null;
+                              null !== gT && (null === (WT = kT.at(-1)) || void 0 === WT ? void 0 : WT.month) === gT || kT.push({
+                                month: gT,
                                 entries: []
-                              }), Yp.at(-1).entries.push({
-                                entry: pp,
-                                day: null !== (op = null === Ip || void 0 === Ip ? void 0 : Ip.day) && void 0 !== op ? op : null,
-                                index: ip
+                              }), kT.at(-1).entries.push({
+                                entry: TT,
+                                day: null !== (zT = null === MT || void 0 === MT ? void 0 : MT.day) && void 0 !== zT ? zT : null,
+                                index: UT
                               })
-                            })), (0, yp.jsx)("ol", {
-                              ref: xp,
+                            })), (0, BT.jsx)("ol", {
+                              ref: nT,
                               className: "DocsTimeline",
-                              children: Yp.map((pp => {
+                              children: kT.map((TT => {
                                 let {
-                                  month: ip,
-                                  entries: cp
-                                } = pp;
-                                return (0, yp.jsxs)("li", {
+                                  month: UT,
+                                  entries: mT
+                                } = TT;
+                                return (0, BT.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [ip && (0, yp.jsx)("span", {
+                                  children: [UT && (0, BT.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: ip
-                                  }), (0, yp.jsx)("ol", {
-                                    children: cp.map((pp => {
+                                    children: UT
+                                  }), (0, BT.jsx)("ol", {
+                                    children: mT.map((TT => {
                                       let {
-                                        entry: ip,
-                                        day: cp,
-                                        index: Op
-                                      } = pp;
-                                      return (0, yp.jsx)("li", {
-                                        className: Ip()("DocsTimelineNotch", {
-                                          Passed: Op < Sp,
-                                          Active: Op === Sp
+                                        entry: UT,
+                                        day: mT,
+                                        index: WT
+                                      } = TT;
+                                      return (0, BT.jsx)("li", {
+                                        className: MT()("DocsTimelineNotch", {
+                                          Passed: WT < gT,
+                                          Active: WT === gT
                                         }),
-                                        children: (0, yp.jsx)(CI, {
-                                          entry: ip,
-                                          isActive: Op === Sp,
-                                          onNavigate: op,
-                                          label: ip.text,
-                                          children: (0, yp.jsx)("span", {
+                                        children: (0, BT.jsx)(JM, {
+                                          entry: UT,
+                                          isActive: WT === gT,
+                                          onNavigate: zT,
+                                          label: UT.text,
+                                          children: (0, BT.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== cp && void 0 !== cp ? cp : ip.text
+                                            children: null !== mT && void 0 !== mT ? mT : UT.text
                                           })
                                         })
-                                      }, ip.anchor)
+                                      }, UT.anchor)
                                     }))
                                   })]
-                                }, cp[0].entry.anchor)
+                                }, mT[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function XI(pp) {
+                          function dM(TT) {
                             let {
-                              isChangelog: ip,
-                              toc: cp,
-                              activeAnchor: Op,
-                              onNavigate: op
-                            } = pp;
-                            return 0 === cp.length ? null : (0, yp.jsxs)(yp.Fragment, {
-                              children: [(0, yp.jsx)("div", {
+                              isChangelog: UT,
+                              toc: mT,
+                              activeAnchor: WT,
+                              onNavigate: zT
+                            } = TT;
+                            return 0 === mT.length ? null : (0, BT.jsxs)(BT.Fragment, {
+                              children: [(0, BT.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: ip ? "Updates" : "On this page"
-                              }), ip ? (0, yp.jsx)(EI, {
-                                toc: cp,
-                                activeAnchor: Op,
-                                onNavigate: op
-                              }) : (0, yp.jsx)("ul", {
-                                children: cp.map((pp => (0, yp.jsx)("li", {
-                                  children: (0, yp.jsx)(CI, {
-                                    entry: pp,
-                                    isActive: pp.anchor === Op,
-                                    onNavigate: op,
-                                    children: pp.text.replace(/`/g, "")
+                                children: UT ? "Updates" : "On this page"
+                              }), UT ? (0, BT.jsx)(xM, {
+                                toc: mT,
+                                activeAnchor: WT,
+                                onNavigate: zT
+                              }) : (0, BT.jsx)("ul", {
+                                children: mT.map((TT => (0, BT.jsx)("li", {
+                                  children: (0, BT.jsx)(JM, {
+                                    entry: TT,
+                                    isActive: TT.anchor === WT,
+                                    onNavigate: zT,
+                                    children: TT.text.replace(/`/g, "")
                                   })
-                                }, pp.anchor)))
+                                }, TT.anchor)))
                               })]
                             })
                           }
-                          const lI = {
+                          const wM = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            QI = {
+                            tM = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            JI = 20,
-                            BI = 10,
-                            NI = 40,
-                            TI = 120;
-                          let fI;
+                            aM = 20,
+                            yM = 10,
+                            XM = 40,
+                            IM = 120;
+                          let QM;
 
-                          function bI(pp) {
-                            const ip = pp.gallery;
-                            if (!ip) return [];
-                            if (Hc(ip)) return function(pp) {
-                              return ec(pp).entries.map((pp => pp.name))
-                            }(ip).map((cp => ({
-                              page: pp,
-                              anchor: Jc(ip, cp),
-                              title: cp,
-                              kind: QI[ip],
+                          function sM(TT) {
+                            const UT = TT.gallery;
+                            if (!UT) return [];
+                            if (cm(UT)) return function(TT) {
+                              return qm(TT).entries.map((TT => TT.name))
+                            }(UT).map((mT => ({
+                              page: TT,
+                              anchor: Xm(UT, mT),
+                              title: mT,
+                              kind: tM[UT],
                               text: "",
-                              listedUnder: pp.title
+                              listedUnder: TT.title
                             })));
-                            const cp = hp(pp);
-                            return (0, mp.t)(cp).flatMap((Op => {
-                              const op = Op.heading ? `${pp.title} \u203a ${Op.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : pp.title;
-                              return Nc(ip, cp, Op.blocks).flatMap((cp => "names" !== cp.kind ? [] : cp.names.map((Op => {
-                                const Ip = cp.isSongs ? "Song" : QI[ip];
+                            const mT = uT(TT);
+                            return (0, YT.A)(mT).flatMap((WT => {
+                              const zT = WT.heading ? `${TT.title} \u203a ${WT.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : TT.title;
+                              return Qm(UT, mT, WT.blocks).flatMap((mT => "names" !== mT.kind ? [] : mT.names.map((WT => {
+                                const MT = mT.isSongs ? "Song" : tM[UT];
                                 return {
-                                  page: pp,
-                                  anchor: Op.anchor,
-                                  title: Op.name,
-                                  kind: Ip,
+                                  page: TT,
+                                  anchor: WT.anchor,
+                                  title: WT.name,
+                                  kind: MT,
                                   text: "",
-                                  listedUnder: op
+                                  listedUnder: zT
                                 }
                               }))))
                             }))
                           }
 
-                          function hI(pp, ip, cp) {
-                            const Op = pp.title.toLowerCase();
-                            let op = 0;
-                            if (Op === ip) op = 100;
-                            else if (Op.startsWith(ip)) op = 80;
-                            else if (Op.includes(ip)) op = 60;
-                            else if (cp.every((pp => Op.includes(pp)))) op = 45;
+                          function FM(TT, UT, mT) {
+                            const WT = TT.title.toLowerCase();
+                            let zT = 0;
+                            if (WT === UT) zT = 100;
+                            else if (WT.startsWith(UT)) zT = 80;
+                            else if (WT.includes(UT)) zT = 60;
+                            else if (mT.every((TT => WT.includes(TT)))) zT = 45;
                             else {
-                              if (!pp.text.toLowerCase().includes(ip)) return 0;
-                              op = 20
+                              if (!TT.text.toLowerCase().includes(UT)) return 0;
+                              zT = 20
                             }
-                            return op - Math.min(Op.length / 10, 9) + ("Page" === pp.kind ? 8 : "Method" === pp.kind ? 3 : 0) - (pp.listedUnder ? JI : 0)
+                            return zT - Math.min(WT.length / 10, 9) + ("Page" === TT.kind ? 8 : "Method" === TT.kind ? 3 : 0) - (TT.listedUnder ? aM : 0)
                           }
 
-                          function aI(pp, ip) {
-                            const cp = pp.toLowerCase().indexOf(ip),
-                              Op = Math.max(0, cp - TI / 3);
-                            return `${Op>0?"\u2026":""}${pp.slice(Op,Op+TI)}${Op+TI<pp.length?"\u2026":""}`
+                          function PM(TT, UT) {
+                            const mT = TT.toLowerCase().indexOf(UT),
+                              WT = Math.max(0, mT - IM / 3);
+                            return `${WT>0?"\u2026":""}${TT.slice(WT,WT+IM)}${WT+IM<TT.length?"\u2026":""}`
                           }
 
-                          function nI(pp) {
+                          function VM(TT) {
                             let {
-                              text: ip,
-                              query: cp
-                            } = pp;
-                            const Op = cp ? ip.toLowerCase().indexOf(cp) : -1;
-                            return -1 === Op ? (0, yp.jsx)(yp.Fragment, {
-                              children: ip
-                            }) : (0, yp.jsxs)(yp.Fragment, {
-                              children: [ip.slice(0, Op), (0, yp.jsx)("mark", {
-                                children: ip.slice(Op, Op + cp.length)
-                              }), ip.slice(Op + cp.length)]
+                              text: UT,
+                              query: mT
+                            } = TT;
+                            const WT = mT ? UT.toLowerCase().indexOf(mT) : -1;
+                            return -1 === WT ? (0, BT.jsx)(BT.Fragment, {
+                              children: UT
+                            }) : (0, BT.jsxs)(BT.Fragment, {
+                              children: [UT.slice(0, WT), (0, BT.jsx)("mark", {
+                                children: UT.slice(WT, WT + mT.length)
+                              }), UT.slice(WT + mT.length)]
                             })
                           }
 
-                          function FI(pp) {
+                          function uM(TT) {
                             let {
-                              basePath: ip,
-                              onClose: cp
-                            } = pp;
-                            const op = (0, xp.t)(),
-                              [Sp, Lp] = (0, Op.useState)(""),
-                              [Yp, Dp] = (0, Op.useState)(0),
-                              Ap = (0, Op.useRef)(null),
-                              Pp = (0, Op.useRef)(null),
-                              Wp = Sp.trim().toLowerCase(),
-                              Up = (0, Op.useMemo)((() => {
-                                const pp = (fI || (fI = Np.flatMap((pp => {
-                                  const ip = hp(pp);
+                              basePath: UT,
+                              onClose: mT
+                            } = TT;
+                            const zT = (0, nT.s)(),
+                              [gT, HT] = (0, WT.useState)(""),
+                              [kT, jT] = (0, WT.useState)(0),
+                              lT = (0, WT.useRef)(null),
+                              LT = (0, WT.useRef)(null),
+                              pT = gT.trim().toLowerCase(),
+                              ZT = (0, WT.useMemo)((() => {
+                                const TT = (QM || (QM = sT.flatMap((TT => {
+                                  const UT = uT(TT);
                                   return [{
-                                    page: pp,
+                                    page: TT,
                                     anchor: "",
-                                    title: pp.title,
+                                    title: TT.title,
                                     kind: "Page",
-                                    text: pp.summary
-                                  }, ...ip.sections.flatMap((ip => {
-                                    const cp = ip.blocks.filter((pp => "paragraph" === pp.kind)).map(mp.k).join(" ").replace(/[`*]/g, ""),
-                                      Op = {
-                                        page: pp,
-                                        anchor: ip.heading.anchor,
-                                        title: ip.heading.text.replace(/`/g, ""),
-                                        kind: lI[pp.layout],
-                                        text: cp
+                                    text: TT.summary
+                                  }, ...UT.sections.flatMap((UT => {
+                                    const mT = UT.blocks.filter((TT => "paragraph" === TT.kind)).map(YT.l).join(" ").replace(/[`*]/g, ""),
+                                      WT = {
+                                        page: TT,
+                                        anchor: UT.heading.anchor,
+                                        title: UT.heading.text.replace(/`/g, ""),
+                                        kind: wM[TT.layout],
+                                        text: mT
                                       },
-                                      op = ip.blocks.flatMap((ip => "article" === pp.layout && "heading" === ip.kind && 3 === ip.level ? [{
-                                        page: pp,
-                                        anchor: ip.anchor,
-                                        title: ip.text.replace(/`/g, ""),
+                                      zT = UT.blocks.flatMap((UT => "article" === TT.layout && "heading" === UT.kind && 3 === UT.level ? [{
+                                        page: TT,
+                                        anchor: UT.anchor,
+                                        title: UT.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Op.title
+                                        text: WT.title
                                       }] : []));
-                                    return [Op, ...op]
-                                  })), ...bI(pp)]
-                                }))), fI);
-                                if (!Wp) return pp.filter((pp => "Page" === pp.kind));
-                                const ip = Wp.split(/\s+/);
-                                let cp = 0;
-                                return pp.map((pp => ({
-                                  entry: pp,
-                                  score: hI(pp, Wp, ip)
-                                }))).filter((pp => pp.score > 0)).sort(((pp, ip) => ip.score - pp.score)).filter((pp => !pp.entry.listedUnder || (cp++, cp <= BI))).slice(0, NI).map((pp => pp.entry))
-                              }), [Wp]);
-                            (0, Op.useEffect)((() => {
-                              Dp(0)
-                            }), [Wp]), (0, Op.useEffect)((() => {
-                              const pp = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [WT, ...zT]
+                                  })), ...sM(TT)]
+                                }))), QM);
+                                if (!pT) return TT.filter((TT => "Page" === TT.kind));
+                                const UT = pT.split(/\s+/);
+                                let mT = 0;
+                                return TT.map((TT => ({
+                                  entry: TT,
+                                  score: FM(TT, pT, UT)
+                                }))).filter((TT => TT.score > 0)).sort(((TT, UT) => UT.score - TT.score)).filter((TT => !TT.entry.listedUnder || (mT++, mT <= yM))).slice(0, XM).map((TT => TT.entry))
+                              }), [pT]);
+                            (0, WT.useEffect)((() => {
+                              jT(0)
+                            }), [pT]), (0, WT.useEffect)((() => {
+                              const TT = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === pp || void 0 === pp || pp.focus()
+                                null === TT || void 0 === TT || TT.focus()
                               }
-                            }), []), (0, Op.useEffect)((() => {
-                              var pp, ip;
-                              null === (pp = Ap.current) || void 0 === pp || null === (ip = pp.querySelector(".Active")) || void 0 === ip || ip.scrollIntoView({
+                            }), []), (0, WT.useEffect)((() => {
+                              var TT, UT;
+                              null === (TT = lT.current) || void 0 === TT || null === (UT = TT.querySelector(".Active")) || void 0 === UT || UT.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Yp]);
-                            const vp = pp => {
-                              op(gp(ip, pp.page, pp.anchor)), cp()
+                            }), [kT]);
+                            const vT = TT => {
+                              zT(ST(UT, TT.page, TT.anchor)), mT()
                             };
-                            return (0, yp.jsx)("div", {
+                            return (0, BT.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: pp => {
-                                pp.target === pp.currentTarget && cp()
+                              onMouseDown: TT => {
+                                TT.target === TT.currentTarget && mT()
                               },
-                              children: (0, yp.jsxs)("div", {
+                              children: (0, BT.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: pp => {
-                                  pp.target !== Pp.current && pp.preventDefault()
+                                onMouseDown: TT => {
+                                  TT.target !== LT.current && TT.preventDefault()
                                 },
-                                onKeyDown: pp => {
-                                  if ("Escape" === pp.key) cp();
-                                  else if ("Tab" === pp.key) {
-                                    var ip;
-                                    pp.preventDefault(), null === (ip = Pp.current) || void 0 === ip || ip.focus()
+                                onKeyDown: TT => {
+                                  if ("Escape" === TT.key) mT();
+                                  else if ("Tab" === TT.key) {
+                                    var UT;
+                                    TT.preventDefault(), null === (UT = LT.current) || void 0 === UT || UT.focus()
                                   }
                                 },
-                                children: [(0, yp.jsxs)("div", {
+                                children: [(0, BT.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, yp.jsx)(wp, {
+                                  children: [(0, BT.jsx)(cT, {
                                     name: "magnifying-glass"
-                                  }), (0, yp.jsx)("input", {
-                                    ref: Pp,
+                                  }), (0, BT.jsx)("input", {
+                                    ref: LT,
                                     autoFocus: !0,
-                                    value: Sp,
+                                    value: gT,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": Up.length > 0 ? `DocsSearchResult-${Yp}` : void 0,
-                                    onChange: pp => {
-                                      Lp(pp.target.value)
+                                    "aria-activedescendant": ZT.length > 0 ? `DocsSearchResult-${kT}` : void 0,
+                                    onChange: TT => {
+                                      HT(TT.target.value)
                                     },
-                                    onKeyDown: pp => {
-                                      if ("ArrowDown" === pp.key || "ArrowUp" === pp.key) {
-                                        pp.preventDefault();
-                                        const ip = "ArrowDown" === pp.key ? 1 : -1;
-                                        Dp((Yp + ip + Up.length) % Math.max(Up.length, 1))
-                                      } else "Enter" === pp.key && Up[Yp] && vp(Up[Yp])
+                                    onKeyDown: TT => {
+                                      if ("ArrowDown" === TT.key || "ArrowUp" === TT.key) {
+                                        TT.preventDefault();
+                                        const UT = "ArrowDown" === TT.key ? 1 : -1;
+                                        jT((kT + UT + ZT.length) % Math.max(ZT.length, 1))
+                                      } else "Enter" === TT.key && ZT[kT] && vT(ZT[kT])
                                     }
-                                  }), (0, yp.jsx)("kbd", {
+                                  }), (0, BT.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, yp.jsxs)("ul", {
+                                }), (0, BT.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: Ap,
+                                  ref: lT,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Wp && (0, yp.jsx)("li", {
+                                  children: [!pT && (0, BT.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), Up.map(((pp, ip) => {
-                                    var cp;
-                                    return (0, yp.jsxs)("li", {
-                                      id: `DocsSearchResult-${ip}`,
+                                  }), ZT.map(((TT, UT) => {
+                                    var mT;
+                                    return (0, BT.jsxs)("li", {
+                                      id: `DocsSearchResult-${UT}`,
                                       role: "option",
-                                      "aria-selected": ip === Yp,
-                                      className: Ip()("DocsSearchResult", {
-                                        Active: ip === Yp
+                                      "aria-selected": UT === kT,
+                                      className: MT()("DocsSearchResult", {
+                                        Active: UT === kT
                                       }),
                                       onMouseMove: () => {
-                                        Dp(ip)
+                                        jT(UT)
                                       },
                                       onClick: () => {
-                                        vp(pp)
+                                        vT(TT)
                                       },
-                                      children: [(0, yp.jsx)(wp, {
-                                        name: pp.page.icon
-                                      }), (0, yp.jsxs)("div", {
+                                      children: [(0, BT.jsx)(cT, {
+                                        name: TT.page.icon
+                                      }), (0, BT.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, yp.jsx)("div", {
+                                        children: [(0, BT.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, yp.jsx)(nI, {
-                                            text: pp.title,
-                                            query: Wp
+                                          children: (0, BT.jsx)(VM, {
+                                            text: TT.title,
+                                            query: pT
                                           })
-                                        }), pp.text && (0, yp.jsx)("div", {
+                                        }), TT.text && (0, BT.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, yp.jsx)(nI, {
-                                            text: aI(pp.text, Wp),
-                                            query: Wp
+                                          children: (0, BT.jsx)(VM, {
+                                            text: PM(TT.text, pT),
+                                            query: pT
                                           })
                                         })]
-                                      }), (0, yp.jsx)("span", {
+                                      }), (0, BT.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === pp.kind ? "Page" : null !== (cp = pp.listedUnder) && void 0 !== cp ? cp : `${pp.kind} \xb7 ${pp.page.title}`
+                                        children: "Page" === TT.kind ? "Page" : null !== (mT = TT.listedUnder) && void 0 !== mT ? mT : `${TT.kind} \xb7 ${TT.page.title}`
                                       })]
-                                    }, `${pp.page.id}#${pp.anchor}`)
-                                  })), Wp && 0 === Up.length && (0, yp.jsxs)("li", {
+                                    }, `${TT.page.id}#${TT.anchor}`)
+                                  })), pT && 0 === ZT.length && (0, BT.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", Sp, "\u201d."]
+                                    children: ["Nothing matches \u201c", gT, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function gI(pp, ip) {
-                            if (ip < 10) return `${pp.toFixed(1)}s`;
-                            const cp = Math.floor(pp);
-                            return `${Math.floor(cp/60)}:${String(cp%60).padStart(2,"0")}`
+                          function CM(TT, UT) {
+                            if (UT < 10) return `${TT.toFixed(1)}s`;
+                            const mT = Math.floor(TT);
+                            return `${Math.floor(mT/60)}:${String(mT%60).padStart(2,"0")}`
                           }
 
-                          function GI() {
-                            const pp = WO((pp => pp.track)),
-                              ip = WO((pp => pp.volume)),
-                              [cp, op] = (0, Op.useState)(0),
-                              Sp = (0, Op.useRef)(oO);
-                            if ((0, Op.useEffect)((() => {
-                                if (!pp) return;
-                                if (op(vO()), "playing" !== pp.status) return;
-                                let ip = 0;
-                                const cp = () => {
-                                  op(vO()), ip = requestAnimationFrame(cp)
+                          function rM() {
+                            const TT = lW((TT => TT.track)),
+                              UT = lW((TT => TT.volume)),
+                              [mT, zT] = (0, WT.useState)(0),
+                              gT = (0, WT.useRef)(mW);
+                            if ((0, WT.useEffect)((() => {
+                                if (!TT) return;
+                                if (zT(ZW()), "playing" !== TT.status) return;
+                                let UT = 0;
+                                const mT = () => {
+                                  zT(ZW()), UT = requestAnimationFrame(mT)
                                 };
-                                return ip = requestAnimationFrame(cp), () => {
-                                  cancelAnimationFrame(ip)
+                                return UT = requestAnimationFrame(mT), () => {
+                                  cancelAnimationFrame(UT)
                                 }
-                              }), [pp]), !pp) return null;
-                            const xp = "paused" !== pp.status,
-                              Lp = Math.min(cp, pp.duration);
-                            return (0, yp.jsx)("div", {
+                              }), [TT]), !TT) return null;
+                            const nT = "paused" !== TT.status,
+                              HT = Math.min(mT, TT.duration);
+                            return (0, BT.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, yp.jsxs)("section", {
+                              children: (0, BT.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, yp.jsx)("button", {
+                                children: [(0, BT.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": xp ? `Pause ${pp.name}` : `Play ${pp.name}`,
-                                  onClick: wO,
-                                  children: (0, yp.jsx)(wp, {
-                                    name: xp ? "pause" : "play"
+                                  "aria-label": nT ? `Pause ${TT.name}` : `Play ${TT.name}`,
+                                  onClick: BW,
+                                  children: (0, BT.jsx)(cT, {
+                                    name: nT ? "pause" : "play"
                                   })
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, yp.jsxs)("div", {
+                                  children: [(0, BT.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, yp.jsx)("code", {
-                                      children: pp.name
-                                    }), (0, yp.jsx)("span", {
-                                      children: pp.isSong ? "Song" : "Sound"
+                                    children: [(0, BT.jsx)("code", {
+                                      children: TT.name
+                                    }), (0, BT.jsx)("span", {
+                                      children: TT.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, yp.jsxs)("div", {
+                                  }), (0, BT.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, yp.jsx)("span", {
-                                      children: gI(Lp, pp.duration)
-                                    }), (0, yp.jsx)("input", {
+                                    children: [(0, BT.jsx)("span", {
+                                      children: CM(HT, TT.duration)
+                                    }), (0, BT.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: pp.duration || 1,
+                                      max: TT.duration || 1,
                                       step: .01,
-                                      value: Lp,
-                                      disabled: 0 === pp.duration,
+                                      value: HT,
+                                      disabled: 0 === TT.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${gI(Lp,pp.duration)} of ${gI(pp.duration,pp.duration)}`,
-                                      onChange: pp => {
-                                        const ip = Number(pp.target.value);
-                                        ! function(pp) {
-                                          var ip;
-                                          YO = pp, null === (ip = xO) || void 0 === ip || ip.seek(pp)
-                                        }(ip), op(ip)
+                                      "aria-valuetext": `${CM(HT,TT.duration)} of ${CM(TT.duration,TT.duration)}`,
+                                      onChange: TT => {
+                                        const UT = Number(TT.target.value);
+                                        ! function(TT) {
+                                          var UT;
+                                          nW = TT, null === (UT = MW) || void 0 === UT || UT.seek(TT)
+                                        }(UT), zT(UT)
                                       }
-                                    }), (0, yp.jsx)("span", {
-                                      children: pp.duration > 0 ? gI(pp.duration, pp.duration) : "\u2013"
+                                    }), (0, BT.jsx)("span", {
+                                      children: TT.duration > 0 ? CM(TT.duration, TT.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, yp.jsxs)("div", {
+                                }), (0, BT.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, yp.jsx)("button", {
+                                  children: [(0, BT.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === ip ? "Unmute" : "Mute",
+                                    "aria-label": 0 === UT ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === ip ? tO(Sp.current) : (Sp.current = ip, tO(0))
+                                      0 === UT ? cW(gT.current) : (gT.current = UT, cW(0))
                                     },
-                                    children: (0, yp.jsx)(wp, {
+                                    children: (0, BT.jsx)(cT, {
                                       name: "volume",
-                                      className: Ip()({
-                                        Muted: 0 === ip
+                                      className: MT()({
+                                        Muted: 0 === UT
                                       })
                                     })
-                                  }), (0, yp.jsx)("input", {
+                                  }), (0, BT.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: ip,
+                                    value: UT,
                                     "aria-label": "Volume",
-                                    onChange: pp => {
-                                      tO(Number(pp.target.value))
+                                    onChange: TT => {
+                                      cW(Number(TT.target.value))
                                     }
                                   })]
-                                }), (0, yp.jsx)("button", {
+                                }), (0, BT.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var ip;
-                                    null === (ip = document.querySelector(`[data-docs-track="${CSS.escape(IO(pp.name,pp.isSong))}"]`)) || void 0 === ip || ip.focus(), HO()
+                                    var UT;
+                                    null === (UT = document.querySelector(`[data-docs-track="${CSS.escape(WW(TT.name,TT.isSong))}"]`)) || void 0 === UT || UT.focus(), vW()
                                   },
-                                  children: (0, yp.jsx)(wp, {
+                                  children: (0, BT.jsx)(cT, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var rI = cp(44);
-                          const ZI = "docsTheme",
-                            zI = window.matchMedia("(prefers-color-scheme: light)");
+                          var KM = mT(44);
+                          const SM = "docsTheme",
+                            GM = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function sI(pp) {
+                          function NM(TT) {
                             let {
-                              theme: ip,
-                              onChange: cp
-                            } = pp;
-                            const Op = "dark" === ip ? "light" : "dark";
-                            return (0, yp.jsx)("button", {
+                              theme: UT,
+                              onChange: mT
+                            } = TT;
+                            const WT = "dark" === UT ? "light" : "dark";
+                            return (0, BT.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Op} theme`,
-                              title: `Switch to ${Op} theme`,
+                              "aria-label": `Switch to ${WT} theme`,
+                              title: `Switch to ${WT} theme`,
                               onClick: () => {
-                                cp(Op)
+                                mT(WT)
                               },
-                              children: (0, yp.jsx)(wp, {
-                                name: "dark" === ip ? "moon" : "sun"
+                              children: (0, BT.jsx)(cT, {
+                                name: "dark" === UT ? "moon" : "sun"
                               })
                             })
                           }
-                          const KI = "https://github.com/Bloxdy/code-api",
-                            VI = "https://discord.gg/playbloxd",
-                            pS = 180,
-                            iS = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const EM = "https://github.com/Bloxdy/code-api",
+                            hM = "https://discord.gg/playbloxd",
+                            DM = 180,
+                            oM = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function cS(pp) {
+                          function AM(TT) {
                             let {
-                              basePath: ip,
-                              activePageId: cp,
-                              onNavigate: Op
-                            } = pp;
-                            return (0, yp.jsx)("nav", {
+                              basePath: UT,
+                              activePageId: mT,
+                              onNavigate: WT
+                            } = TT;
+                            return (0, BT.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Tp.map((pp => (0, yp.jsxs)("div", {
+                              children: FT.map((TT => (0, BT.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, yp.jsx)("div", {
+                                children: [(0, BT.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: pp.title
-                                }), pp.pageIds.map((pp => {
-                                  var op;
-                                  const xp = fp(pp);
-                                  return (0, yp.jsxs)(Sp.c, {
-                                    to: gp(ip, xp),
-                                    className: Ip()("DocsNavLink", {
-                                      Active: xp.id === cp
+                                  children: TT.title
+                                }), TT.pageIds.map((TT => {
+                                  var zT;
+                                  const nT = PT(TT);
+                                  return (0, BT.jsxs)(gT.d, {
+                                    to: ST(UT, nT),
+                                    className: MT()("DocsNavLink", {
+                                      Active: nT.id === mT
                                     }),
-                                    "aria-current": xp.id === cp ? "page" : void 0,
-                                    onClick: Op,
-                                    children: [(0, yp.jsx)(wp, {
-                                      name: xp.icon
-                                    }), (0, yp.jsx)("span", {
-                                      children: null !== (op = xp.navTitle) && void 0 !== op ? op : xp.title
+                                    "aria-current": nT.id === mT ? "page" : void 0,
+                                    onClick: WT,
+                                    children: [(0, BT.jsx)(cT, {
+                                      name: nT.icon
+                                    }), (0, BT.jsx)("span", {
+                                      children: null !== (zT = nT.navTitle) && void 0 !== zT ? zT : nT.title
                                     })]
-                                  }, xp.id)
+                                  }, nT.id)
                                 }))]
-                              }, pp.title)))
+                              }, TT.title)))
                             })
                           }
 
-                          function OS(pp) {
+                          function RM(TT) {
                             let {
-                              basePath: ip,
-                              pageId: cp
-                            } = pp;
-                            const Op = Tp.flatMap((pp => pp.pageIds)),
-                              op = Op.indexOf(cp),
-                              Ip = op > 0 ? fp(Op[op - 1]) : null,
-                              xp = op < Op.length - 1 ? fp(Op[op + 1]) : null;
-                            return (0, yp.jsxs)("nav", {
+                              basePath: UT,
+                              pageId: mT
+                            } = TT;
+                            const WT = FT.flatMap((TT => TT.pageIds)),
+                              zT = WT.indexOf(mT),
+                              MT = zT > 0 ? PT(WT[zT - 1]) : null,
+                              nT = zT < WT.length - 1 ? PT(WT[zT + 1]) : null;
+                            return (0, BT.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [Ip ? (0, yp.jsxs)(Sp.c, {
+                              children: [MT ? (0, BT.jsxs)(gT.d, {
                                 className: "DocsPagerLink Previous",
-                                to: gp(ip, Ip),
-                                children: [(0, yp.jsx)("span", {
+                                to: ST(UT, MT),
+                                children: [(0, BT.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, yp.jsx)("span", {
+                                }), (0, BT.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Ip.title
+                                  children: MT.title
                                 })]
-                              }) : (0, yp.jsx)("span", {}), xp && (0, yp.jsxs)(Sp.c, {
+                              }) : (0, BT.jsx)("span", {}), nT && (0, BT.jsxs)(gT.d, {
                                 className: "DocsPagerLink Next",
-                                to: gp(ip, xp),
-                                children: [(0, yp.jsx)("span", {
+                                to: ST(UT, nT),
+                                children: [(0, BT.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, yp.jsx)("span", {
+                                }), (0, BT.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: xp.title
+                                  children: nT.title
                                 })]
                               })]
                             })
                           }
 
-                          function oS(pp) {
+                          function Tg(TT) {
                             let {
-                              basePath: ip,
-                              embedded: cp = !1
-                            } = pp;
+                              basePath: UT,
+                              embedded: mT = !1
+                            } = TT;
                             const {
-                              pageSlug: op = ""
-                            } = (0, xp.A)(), Yp = (0, xp.r)(), Dp = (0, xp.t)(), Ap = (Pp = op, Np.find((pp => pp.slug === Pp)));
-                            var Pp;
-                            const [Wp, Up] = function() {
-                              const [pp, ip] = (0, Op.useState)((() => {
-                                const pp = rI.h.getItem(ZI);
-                                return "dark" === pp || "light" === pp ? pp : null
-                              })), [cp, op] = (0, Op.useState)(zI.matches ? "light" : "dark");
-                              return (0, Op.useEffect)((() => {
-                                const pp = () => {
-                                  op(zI.matches ? "light" : "dark")
+                              pageSlug: zT = ""
+                            } = (0, nT.y)(), kT = (0, nT.p)(), jT = (0, nT.s)(), lT = (LT = zT, sT.find((TT => TT.slug === LT)));
+                            var LT;
+                            const [pT, ZT] = function() {
+                              const [TT, UT] = (0, WT.useState)((() => {
+                                const TT = KM.l.getItem(SM);
+                                return "dark" === TT || "light" === TT ? TT : null
+                              })), [mT, zT] = (0, WT.useState)(GM.matches ? "light" : "dark");
+                              return (0, WT.useEffect)((() => {
+                                const TT = () => {
+                                  zT(GM.matches ? "light" : "dark")
                                 };
-                                return zI.addEventListener("change", pp), () => {
-                                  zI.removeEventListener("change", pp)
+                                return GM.addEventListener("change", TT), () => {
+                                  GM.removeEventListener("change", TT)
                                 }
-                              }), []), [null !== pp && void 0 !== pp ? pp : cp, pp => {
-                                rI.h.setItem(ZI, pp), ip(pp)
+                              }), []), [null !== TT && void 0 !== TT ? TT : mT, TT => {
+                                KM.l.setItem(SM, TT), UT(TT)
                               }]
-                            }(), [vp, tp] = (0, Op.useState)(null), [Hp, dp] = (0, Op.useState)(!1), [ep, jp] = (0, Op.useState)(!1), [kp, Rp] = (0, Op.useState)([]), qp = function(pp, ip) {
-                              const [cp, op] = (0, Op.useState)("");
-                              return (0, Op.useEffect)((() => {
-                                if (!ip) return;
-                                let cp = 0;
-                                const Op = () => {
-                                    var Op, Ip;
-                                    cp = 0;
-                                    const Sp = ip.getBoundingClientRect().top + pS;
-                                    let xp = null !== (Op = null === (Ip = pp[0]) || void 0 === Ip ? void 0 : Ip.anchor) && void 0 !== Op ? Op : "";
-                                    for (const ip of pp) {
-                                      const pp = document.getElementById(ip.anchor);
-                                      pp && pp.getBoundingClientRect().top <= Sp && (xp = ip.anchor)
+                            }(), [vT, fT] = (0, WT.useState)(null), [qT, iT] = (0, WT.useState)(!1), [bT, OT] = (0, WT.useState)(!1), [eT, JT] = (0, WT.useState)([]), xT = function(TT, UT) {
+                              const [mT, zT] = (0, WT.useState)("");
+                              return (0, WT.useEffect)((() => {
+                                if (!UT) return;
+                                let mT = 0;
+                                const WT = () => {
+                                    var WT, MT;
+                                    mT = 0;
+                                    const gT = UT.getBoundingClientRect().top + DM;
+                                    let nT = null !== (WT = null === (MT = TT[0]) || void 0 === MT ? void 0 : MT.anchor) && void 0 !== WT ? WT : "";
+                                    for (const UT of TT) {
+                                      const TT = document.getElementById(UT.anchor);
+                                      TT && TT.getBoundingClientRect().top <= gT && (nT = UT.anchor)
                                     }
-                                    ip.scrollTop + ip.clientHeight >= ip.scrollHeight - 2 && ip.scrollTop > 0 && pp.length > 0 && (xp = pp[pp.length - 1].anchor), op(xp)
+                                    UT.scrollTop + UT.clientHeight >= UT.scrollHeight - 2 && UT.scrollTop > 0 && TT.length > 0 && (nT = TT[TT.length - 1].anchor), zT(nT)
                                   },
-                                  Ip = () => {
-                                    cp || (cp = requestAnimationFrame(Op))
+                                  MT = () => {
+                                    mT || (mT = requestAnimationFrame(WT))
                                   };
-                                return Op(), ip.addEventListener("scroll", Ip, {
+                                return WT(), UT.addEventListener("scroll", MT, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(cp), ip.removeEventListener("scroll", Ip)
+                                  cancelAnimationFrame(mT), UT.removeEventListener("scroll", MT)
                                 }
-                              }), [pp, ip]), cp
-                            }(kp, vp), Mp = "" === op && Yp.hash ? function(pp) {
-                              const ip = (0, mp.r)(pp);
-                              if (ap(fp("welcome"), ip)) return null;
-                              const cp = Object.hasOwn(Fp, ip) ? Fp[ip] : null;
-                              if (cp) return {
-                                page: fp(cp.pageId),
-                                anchor: cp.anchor
+                              }), [TT, UT]), mT
+                            }(eT, vT), dT = "" === zT && kT.hash ? function(TT) {
+                              const UT = (0, YT.t)(TT);
+                              if (CT(PT("welcome"), UT)) return null;
+                              const mT = Object.hasOwn(KT, UT) ? KT[UT] : null;
+                              if (mT) return {
+                                page: PT(mT.pageId),
+                                anchor: mT.anchor
                               };
-                              const Op = fp("readme");
-                              return ap(Op, ip) ? {
-                                page: Op,
-                                anchor: ip
-                              } : np(`#${ip}`)
-                            }(Yp.hash) : null;
-                            (0, Op.useEffect)((() => (Lp.c.set({
+                              const WT = PT("readme");
+                              return CT(WT, UT) ? {
+                                page: WT,
+                                anchor: UT
+                              } : rT(`#${UT}`)
+                            }(kT.hash) : null;
+                            (0, WT.useEffect)((() => (HT.b.set({
                               musicOnFromPage: !1
                             }), () => {
-                              Lp.c.set({
+                              HT.b.set({
                                 musicOnFromPage: !0
-                              }), HO()
-                            })), []), (0, Op.useEffect)((() => {
-                              const pp = pp => {
-                                const ip = pp.target;
-                                if (ip.closest(".DocsTextDialog")) return;
-                                const cp = ip.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(ip.tagName);
-                                "k" === pp.key && (pp.metaKey || pp.ctrlKey) || "/" === pp.key && !cp ? (pp.preventDefault(), jp(!0)) : "Escape" === pp.key && dp(!1)
+                              }), vW()
+                            })), []), (0, WT.useEffect)((() => {
+                              const TT = TT => {
+                                const UT = TT.target;
+                                if (UT.closest(".DocsTextDialog")) return;
+                                const mT = UT.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(UT.tagName);
+                                "k" === TT.key && (TT.metaKey || TT.ctrlKey) || "/" === TT.key && !mT ? (TT.preventDefault(), OT(!0)) : "Escape" === TT.key && iT(!1)
                               };
-                              return window.addEventListener("keydown", pp), () => {
-                                window.removeEventListener("keydown", pp)
+                              return window.addEventListener("keydown", TT), () => {
+                                window.removeEventListener("keydown", TT)
                               }
                             }), []);
-                            const Cp = (0, Op.useRef)(null);
-                            (0, Op.useLayoutEffect)((() => {
-                              var pp, ip;
-                              if (!vp) return;
-                              const cp = Cp.current === Yp.pathname;
-                              Cp.current = Yp.pathname;
-                              const Op = (0, mp.r)(Yp.hash),
-                                op = Op ? document.getElementById(Op) : null;
-                              if (null === (pp = vp.querySelector(".DocsTargeted")) || void 0 === pp || pp.classList.remove("DocsTargeted"), null === op || void 0 === op || null === (ip = op.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === ip || ip.classList.add("DocsTargeted"), op) {
-                                var Ip;
-                                const pp = op.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (Ip = op.closest(".DocsChangelogEntry")) && void 0 !== Ip ? Ip : op).scrollIntoView({
-                                  block: pp ? "center" : "start",
-                                  behavior: cp ? "smooth" : "auto"
+                            const wT = (0, WT.useRef)(null);
+                            (0, WT.useLayoutEffect)((() => {
+                              var TT, UT;
+                              if (!vT) return;
+                              const mT = wT.current === kT.pathname;
+                              wT.current = kT.pathname;
+                              const WT = (0, YT.t)(kT.hash),
+                                zT = WT ? document.getElementById(WT) : null;
+                              if (null === (TT = vT.querySelector(".DocsTargeted")) || void 0 === TT || TT.classList.remove("DocsTargeted"), null === zT || void 0 === zT || null === (UT = zT.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === UT || UT.classList.add("DocsTargeted"), zT) {
+                                var MT;
+                                const TT = zT.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (MT = zT.closest(".DocsChangelogEntry")) && void 0 !== MT ? MT : zT).scrollIntoView({
+                                  block: TT ? "center" : "start",
+                                  behavior: mT ? "smooth" : "auto"
                                 })
-                              } else cp || vp.scrollTo({
+                              } else mT || vT.scrollTo({
                                 top: 0
                               })
-                            }), [vp, Yp.pathname, Yp.hash, Yp.key]);
-                            const Ep = (0, Op.useCallback)((() => {
-                                dp(!1)
+                            }), [vT, kT.pathname, kT.hash, kT.key]);
+                            const tT = (0, WT.useCallback)((() => {
+                                iT(!1)
                               }), []),
-                              Xp = (0, Op.useCallback)((pp => {
-                                Dp({
-                                  hash: pp
+                              aT = (0, WT.useCallback)((TT => {
+                                jT({
+                                  hash: TT
                                 })
-                              }), [Dp]);
-                            if (Mp) return (0, yp.jsx)(xp.d, {
+                              }), [jT]);
+                            if (dT) return (0, BT.jsx)(nT.d, {
                               replace: !0,
-                              to: gp(ip, Mp.page, Mp.anchor)
+                              to: ST(UT, dT.page, dT.anchor)
                             });
-                            if (!Ap) return (0, yp.jsx)(xp.d, {
+                            if (!lT) return (0, BT.jsx)(nT.d, {
                               replace: !0,
-                              to: ip
+                              to: UT
                             });
-                            const lp = cp ? "div" : "main";
-                            return (0, yp.jsx)(Ui.Provider, {
-                              value: ip,
-                              children: (0, yp.jsx)(wi.Provider, {
-                                value: vp,
-                                children: (0, yp.jsxs)("div", {
-                                  ref: tp,
-                                  className: Ip()("DocsSite", {
-                                    Embedded: cp,
-                                    NavOpen: Hp
+                            const yT = mT ? "div" : "main";
+                            return (0, BT.jsx)(pU.Provider, {
+                              value: UT,
+                              children: (0, BT.jsx)(BU.Provider, {
+                                value: vT,
+                                children: (0, BT.jsxs)("div", {
+                                  ref: fT,
+                                  className: MT()("DocsSite", {
+                                    Embedded: mT,
+                                    NavOpen: qT
                                   }),
-                                  "data-theme": Wp,
-                                  children: [(0, yp.jsxs)("header", {
+                                  "data-theme": pT,
+                                  children: [(0, BT.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, yp.jsx)("button", {
+                                    children: [(0, BT.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Hp ? "Close menu" : "Open menu",
-                                      "aria-expanded": Hp,
+                                      "aria-label": qT ? "Close menu" : "Open menu",
+                                      "aria-expanded": qT,
                                       onClick: () => {
-                                        dp(!Hp)
+                                        iT(!qT)
                                       },
-                                      children: (0, yp.jsx)(wp, {
-                                        name: Hp ? "cross" : "menu"
+                                      children: (0, BT.jsx)(cT, {
+                                        name: qT ? "cross" : "menu"
                                       })
-                                    }), (0, yp.jsxs)(Sp.c, {
-                                      to: ip,
+                                    }), (0, BT.jsxs)(gT.d, {
+                                      to: UT,
                                       className: "DocsBrand",
-                                      children: [(0, yp.jsx)("img", {
+                                      children: [(0, BT.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, yp.jsx)("span", {
+                                      }), (0, BT.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, yp.jsx)("span", {
+                                      }), (0, BT.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, yp.jsxs)("button", {
+                                    }), (0, BT.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        jp(!0)
+                                        OT(!0)
                                       },
-                                      children: [(0, yp.jsx)(wp, {
+                                      children: [(0, BT.jsx)(cT, {
                                         name: "magnifying-glass"
-                                      }), (0, yp.jsx)("span", {
+                                      }), (0, BT.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, yp.jsxs)("kbd", {
-                                        children: [iS ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, BT.jsxs)("kbd", {
+                                        children: [oM ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, yp.jsxs)("div", {
+                                    }), (0, BT.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, yp.jsxs)("a", {
-                                        href: VI,
+                                      children: [(0, BT.jsxs)("a", {
+                                        href: hM,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, yp.jsx)(wp, {
+                                        children: [(0, BT.jsx)(cT, {
                                           name: "discord"
-                                        }), (0, yp.jsx)("span", {
+                                        }), (0, BT.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, yp.jsxs)("a", {
-                                        href: KI,
+                                      }), (0, BT.jsxs)("a", {
+                                        href: EM,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, yp.jsx)(wp, {
+                                        children: [(0, BT.jsx)(cT, {
                                           name: "external-link"
-                                        }), (0, yp.jsx)("span", {
+                                        }), (0, BT.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !cp && (0, yp.jsxs)(Sp.c, {
+                                      }), !mT && (0, BT.jsxs)(gT.d, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, yp.jsx)(wp, {
+                                        children: [(0, BT.jsx)(cT, {
                                           name: "play"
-                                        }), (0, yp.jsx)("span", {
+                                        }), (0, BT.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, yp.jsx)(sI, {
-                                        theme: Wp,
-                                        onChange: Up
+                                      }), (0, BT.jsx)(NM, {
+                                        theme: pT,
+                                        onChange: ZT
                                       })]
                                     })]
-                                  }), (0, yp.jsxs)("div", {
+                                  }), (0, BT.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, yp.jsx)("aside", {
+                                    children: [(0, BT.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, yp.jsx)(cS, {
-                                        basePath: ip,
-                                        activePageId: Ap.id,
-                                        onNavigate: Ep
+                                      children: (0, BT.jsx)(AM, {
+                                        basePath: UT,
+                                        activePageId: lT.id,
+                                        onNavigate: tT
                                       })
-                                    }), (0, yp.jsx)("div", {
+                                    }), (0, BT.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: Ep
-                                    }), (0, yp.jsxs)(lp, {
+                                      onClick: tT
+                                    }), (0, BT.jsxs)(yT, {
                                       className: "DocsMain",
-                                      children: [(0, yp.jsx)(qI, {
-                                        page: Ap,
-                                        onTocChange: Rp
-                                      }, Ap.id), (0, yp.jsx)(OS, {
-                                        basePath: ip,
-                                        pageId: Ap.id
+                                      children: [(0, BT.jsx)(eM, {
+                                        page: lT,
+                                        onTocChange: JT
+                                      }, lT.id), (0, BT.jsx)(RM, {
+                                        basePath: UT,
+                                        pageId: lT.id
                                       })]
-                                    }), (0, yp.jsx)("aside", {
-                                      className: Ip()("DocsToc", {
-                                        Timeline: "changelog" === Ap.layout
+                                    }), (0, BT.jsx)("aside", {
+                                      className: MT()("DocsToc", {
+                                        Timeline: "changelog" === lT.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, yp.jsx)(XI, {
-                                        isChangelog: "changelog" === Ap.layout,
-                                        toc: kp,
-                                        activeAnchor: qp,
-                                        onNavigate: Xp
+                                      children: (0, BT.jsx)(dM, {
+                                        isChangelog: "changelog" === lT.layout,
+                                        toc: eT,
+                                        activeAnchor: xT,
+                                        onNavigate: aT
                                       })
                                     })]
-                                  }), (0, yp.jsx)(GI, {}), ep && (0, yp.jsx)(FI, {
-                                    basePath: ip,
+                                  }), (0, BT.jsx)(rM, {}), bT && (0, BT.jsx)(uM, {
+                                    basePath: UT,
                                     onClose: () => {
-                                      jp(!1)
+                                      OT(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4844: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            d: () => Op,
-                            g: () => Sp,
-                            k: () => wp,
-                            n: () => Up,
-                            q: () => xp,
-                            r: () => op,
-                            s: () => Ip,
-                            t: () => yp,
-                            w: () => Wp,
-                            x: () => Pp
+                        }, 4842: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            A: () => BT,
+                            E: () => pT,
+                            I: () => LT,
+                            e: () => WT,
+                            h: () => gT,
+                            l: () => cT,
+                            n: () => ZT,
+                            p: () => nT,
+                            t: () => zT,
+                            w: () => MT
                           });
-                          const Op = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const WT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function op(pp) {
+                          function zT(TT) {
                             try {
-                              return decodeURIComponent(pp.slice(1))
+                              return decodeURIComponent(TT.slice(1))
                             } catch {
-                              return pp.slice(1)
+                              return TT.slice(1)
                             }
                           }
 
-                          function Ip(pp) {
-                            return pp.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function MT(TT) {
+                            return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const Sp = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Op.source}`, "g");
+                          const gT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${WT.source}`, "g");
 
-                          function xp(pp, ip) {
-                            return 2 === pp.length ? ip.replace(/^ (.*) $/, "$1") : ip
-                          }
-
-                          function Lp(pp) {
-                            return "" === pp.trim()
+                          function nT(TT, UT) {
+                            return 2 === TT.length ? UT.replace(/^ (.*) $/, "$1") : UT
                           }
 
-                          function Yp(pp) {
-                            const ip = [];
-                            for (const cp of pp.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ip.length > 0 && ip[ip.length - 1].endsWith("\\") ? ip[ip.length - 1] += `|${cp}` : ip.push(cp);
-                            return ip.map((pp => pp.trim().replaceAll("\\|", "|")))
+                          function HT(TT) {
+                            return "" === TT.trim()
                           }
-                          const Dp = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function Ap(pp) {
-                            const ip = [],
-                              cp = [{
+                          function kT(TT) {
+                            const UT = [];
+                            for (const mT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) UT.length > 0 && UT[UT.length - 1].endsWith("\\") ? UT[UT.length - 1] += `|${mT}` : UT.push(mT);
+                            return UT.map((TT => TT.trim().replaceAll("\\|", "|")))
+                          }
+                          const jT = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function lT(TT) {
+                            const UT = [],
+                              mT = [{
                                 indent: -1,
-                                items: ip
+                                items: UT
                               }];
-                            let Op = null;
-                            for (const op of pp) {
-                              const pp = op.match(Dp);
-                              if (!pp) {
-                                Op && (Op.text += ` ${op.trim()}`);
+                            let WT = null;
+                            for (const zT of TT) {
+                              const TT = zT.match(jT);
+                              if (!TT) {
+                                WT && (WT.text += ` ${zT.trim()}`);
                                 continue
                               }
-                              const ip = pp[1].replace(/\t/g, "  ").length;
-                              for (; ip <= cp[cp.length - 1].indent;) cp.pop();
-                              Op = {
-                                text: pp[3].trim(),
+                              const UT = TT[1].replace(/\t/g, "  ").length;
+                              for (; UT <= mT[mT.length - 1].indent;) mT.pop();
+                              WT = {
+                                text: TT[3].trim(),
                                 children: []
-                              }, cp[cp.length - 1].items.push(Op), cp.push({
-                                indent: ip,
-                                items: Op.children
+                              }, mT[mT.length - 1].items.push(WT), mT.push({
+                                indent: UT,
+                                items: WT.children
                               })
                             }
-                            return ip
+                            return UT
                           }
 
-                          function Pp(pp) {
-                            const ip = pp.replace(/\r\n/g, "\n").split("\n"),
-                              cp = [];
-                            let Op = 0;
-                            for (; Op < ip.length;) {
-                              const pp = ip[Op];
-                              if (Lp(pp)) {
-                                Op++;
+                          function LT(TT) {
+                            const UT = TT.replace(/\r\n/g, "\n").split("\n"),
+                              mT = [];
+                            let WT = 0;
+                            for (; WT < UT.length;) {
+                              const TT = UT[WT];
+                              if (HT(TT)) {
+                                WT++;
                                 continue
                               }
-                              const op = pp.match(/^\s*```\s*(\w*)\s*$/);
-                              if (op) {
-                                const pp = [];
-                                for (Op++; Op < ip.length && !/^\s*```\s*$/.test(ip[Op]);) pp.push(ip[Op]), Op++;
-                                Op++, cp.push({
+                              const zT = TT.match(/^\s*```\s*(\w*)\s*$/);
+                              if (zT) {
+                                const TT = [];
+                                for (WT++; WT < UT.length && !/^\s*```\s*$/.test(UT[WT]);) TT.push(UT[WT]), WT++;
+                                WT++, mT.push({
                                   kind: "code",
-                                  lang: op[1] || "text",
-                                  code: pp.join("\n").replace(/\s+$/, "")
+                                  lang: zT[1] || "text",
+                                  code: TT.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const Sp = pp.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (Sp) {
-                                const pp = Sp[2].trim();
-                                cp.push({
+                              const gT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (gT) {
+                                const TT = gT[2].trim();
+                                mT.push({
                                   kind: "heading",
-                                  level: Sp[1].length,
-                                  text: pp,
-                                  anchor: Ip(pp)
-                                }), Op++;
+                                  level: gT[1].length,
+                                  text: TT,
+                                  anchor: MT(TT)
+                                }), WT++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(pp)) {
-                                cp.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
+                                mT.push({
                                   kind: "rule"
-                                }), Op++;
+                                }), WT++;
                                 continue
                               }
-                              if (pp.trim().startsWith("|") && Op + 1 < ip.length && /^\s*\|[\s:|-]+\|\s*$/.test(ip[Op + 1])) {
-                                const op = Yp(pp),
-                                  Ip = [];
-                                for (Op += 2; Op < ip.length && ip[Op].trim().startsWith("|");) Ip.push(Yp(ip[Op])), Op++;
-                                cp.push({
+                              if (TT.trim().startsWith("|") && WT + 1 < UT.length && /^\s*\|[\s:|-]+\|\s*$/.test(UT[WT + 1])) {
+                                const zT = kT(TT),
+                                  MT = [];
+                                for (WT += 2; WT < UT.length && UT[WT].trim().startsWith("|");) MT.push(kT(UT[WT])), WT++;
+                                mT.push({
                                   kind: "table",
-                                  header: op,
-                                  rows: Ip
+                                  header: zT,
+                                  rows: MT
                                 });
                                 continue
                               }
-                              if (pp.startsWith(">")) {
-                                const pp = [];
-                                for (; Op < ip.length && ip[Op].startsWith(">");) pp.push(ip[Op].replace(/^>\s?/, "")), Op++;
-                                cp.push({
+                              if (TT.startsWith(">")) {
+                                const TT = [];
+                                for (; WT < UT.length && UT[WT].startsWith(">");) TT.push(UT[WT].replace(/^>\s?/, "")), WT++;
+                                mT.push({
                                   kind: "quote",
-                                  blocks: Pp(pp.join("\n"))
+                                  blocks: LT(TT.join("\n"))
                                 });
                                 continue
                               }
-                              if (Dp.test(pp)) {
-                                const op = [],
-                                  Ip = /^\s*\d+\./.test(pp);
-                                for (; Op < ip.length && !Lp(ip[Op]) && (Dp.test(ip[Op]) || /^\s+\S/.test(ip[Op]));) op.push(ip[Op]), Op++;
-                                cp.push({
+                              if (jT.test(TT)) {
+                                const zT = [],
+                                  MT = /^\s*\d+\./.test(TT);
+                                for (; WT < UT.length && !HT(UT[WT]) && (jT.test(UT[WT]) || /^\s+\S/.test(UT[WT]));) zT.push(UT[WT]), WT++;
+                                mT.push({
                                   kind: "list",
-                                  ordered: Ip,
-                                  items: Ap(op)
+                                  ordered: MT,
+                                  items: lT(zT)
                                 });
                                 continue
                               }
-                              const xp = [];
-                              for (; Op < ip.length && !Lp(ip[Op]) && !/^\s*```/.test(ip[Op]) && !/^#{1,6}\s/.test(ip[Op]) && !ip[Op].startsWith(">") && !Dp.test(ip[Op]) && (!ip[Op].trim().startsWith("|") || 0 !== xp.length);) xp.push(ip[Op].trim()), Op++;
-                              0 === xp.length && (xp.push(ip[Op].trim()), Op++), cp.push({
+                              const nT = [];
+                              for (; WT < UT.length && !HT(UT[WT]) && !/^\s*```/.test(UT[WT]) && !/^#{1,6}\s/.test(UT[WT]) && !UT[WT].startsWith(">") && !jT.test(UT[WT]) && (!UT[WT].trim().startsWith("|") || 0 !== nT.length);) nT.push(UT[WT].trim()), WT++;
+                              0 === nT.length && (nT.push(UT[WT].trim()), WT++), mT.push({
                                 kind: "paragraph",
-                                text: xp.join(" ")
+                                text: nT.join(" ")
                               })
                             }
-                            return cp
+                            return mT
                           }
 
-                          function Wp(pp) {
-                            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const cp = Pp(pp);
-                            let Op = "";
-                            const op = [],
-                              Ip = [],
-                              Sp = new Map;
-                            for (const Yp of cp) {
-                              if ("heading" === Yp.kind) {
-                                var xp;
-                                const pp = (null !== (xp = Sp.get(Yp.anchor)) && void 0 !== xp ? xp : 0) + 1;
-                                Sp.set(Yp.anchor, pp), pp > 1 && (Yp.anchor = `${Yp.anchor}-${pp}`)
+                          function pT(TT) {
+                            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const mT = LT(TT);
+                            let WT = "";
+                            const zT = [],
+                              MT = [],
+                              gT = new Map;
+                            for (const kT of mT) {
+                              if ("heading" === kT.kind) {
+                                var nT;
+                                const TT = (null !== (nT = gT.get(kT.anchor)) && void 0 !== nT ? nT : 0) + 1;
+                                gT.set(kT.anchor, TT), TT > 1 && (kT.anchor = `${kT.anchor}-${TT}`)
                               }
-                              if ("heading" === Yp.kind && 1 === Yp.level && !Op) {
-                                Op = Yp.text;
+                              if ("heading" === kT.kind && 1 === kT.level && !WT) {
+                                WT = kT.text;
                                 continue
                               }
-                              if ("heading" === Yp.kind && Yp.level <= ip) {
-                                Ip.push({
-                                  heading: Yp,
+                              if ("heading" === kT.kind && kT.level <= UT) {
+                                MT.push({
+                                  heading: kT,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const pp = Ip.at(-1);
-                              pp ? pp.blocks.push(Yp) : op.push(Yp)
+                              const TT = MT.at(-1);
+                              TT ? TT.blocks.push(kT) : zT.push(kT)
                             }
-                            const Lp = pp => {
+                            const HT = TT => {
                               for (;
-                                "rule" === (null === (ip = pp.at(-1)) || void 0 === ip ? void 0 : ip.kind);) {
-                                var ip;
-                                pp.pop()
+                                "rule" === (null === (UT = TT.at(-1)) || void 0 === UT ? void 0 : UT.kind);) {
+                                var UT;
+                                TT.pop()
                               }
                             };
-                            Lp(op);
-                            for (const Yp of Ip) Lp(Yp.blocks);
+                            HT(zT);
+                            for (const kT of MT) HT(kT.blocks);
                             return {
-                              title: Op,
-                              intro: op,
-                              sections: Ip
+                              title: WT,
+                              intro: zT,
+                              sections: MT
                             }
                           }
 
-                          function yp(pp) {
+                          function BT(TT) {
                             return [{
                               heading: null,
-                              blocks: pp.intro
-                            }, ...pp.sections.map((pp => ({
-                              heading: pp.heading,
-                              blocks: pp.blocks
+                              blocks: TT.intro
+                            }, ...TT.sections.map((TT => ({
+                              heading: TT.heading,
+                              blocks: TT.blocks
                             })))]
                           }
 
-                          function Up(pp) {
-                            return pp.flatMap((pp => "code" === pp.kind ? [pp] : "quote" === pp.kind ? Up(pp.blocks) : []))
+                          function ZT(TT) {
+                            return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? ZT(TT.blocks) : []))
                           }
 
-                          function wp(pp) {
-                            switch (pp.kind) {
+                          function cT(TT) {
+                            switch (TT.kind) {
                               case "heading":
                               case "paragraph":
-                                return pp.text;
+                                return TT.text;
                               case "code":
-                                return pp.code;
+                                return TT.code;
                               case "table":
-                                return [pp.header, ...pp.rows].map((pp => pp.join(" "))).join(" ");
+                                return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
                               case "list": {
-                                const ip = pp => pp.map((pp => `${pp.text} ${ip(pp.children)}`)).join(" ");
-                                return ip(pp.items)
+                                const UT = TT => TT.map((TT => `${TT.text} ${UT(TT.children)}`)).join(" ");
+                                return UT(TT.items)
                               }
                               case "quote":
-                                return pp.blocks.map(wp).join(" ");
+                                return TT.blocks.map(cT).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4956: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            d: () => xp
+                        }, 4936: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            b: () => nT
                           });
-                          var Op = cp(62),
-                            op = cp(322),
-                            Ip = cp(1941),
-                            Sp = cp(1112);
+                          var WT = mT(63),
+                            zT = mT(351),
+                            MT = mT(2034),
+                            gT = mT(1188);
 
-                          function xp(pp) {
+                          function nT(TT) {
                             let {
-                              text: ip
-                            } = pp;
-                            const cp = [];
-                            let xp = "";
-                            return (0, op.nc)(ip).forEach(((pp, ip) => {
-                              if ("string" === typeof pp || !(0, Ip.f)(pp.icon)) return void(xp += "string" === typeof pp ? pp : pp.icon);
-                              const op = Math.max(0, xp.trimEnd().search(/\S{1,12}$/));
-                              cp.push((0, Sp.jsxs)(Op.Fragment, {
-                                children: [xp.slice(0, op), (0, Sp.jsxs)("span", {
+                              text: UT
+                            } = TT;
+                            const mT = [];
+                            let nT = "";
+                            return (0, zT.Wb)(UT).forEach(((TT, UT) => {
+                              if ("string" === typeof TT || !(0, MT.e)(TT.icon)) return void(nT += "string" === typeof TT ? TT : TT.icon);
+                              const zT = Math.max(0, nT.trimEnd().search(/\S{1,12}$/));
+                              mT.push((0, gT.jsxs)(WT.Fragment, {
+                                children: [nT.slice(0, zT), (0, gT.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [xp.slice(op), (0, Sp.jsx)("span", {
+                                  children: [nT.slice(zT), (0, gT.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": pp.icon,
-                                    children: (0, Sp.jsx)(Ip.d, {
-                                      itemName: pp.icon,
+                                    "aria-label": TT.icon,
+                                    children: (0, gT.jsx)(MT.b, {
+                                      itemName: TT.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, ip)), xp = ""
-                            })), cp.push(xp), (0, Sp.jsx)(Sp.Fragment, {
-                              children: cp
+                              }, UT)), nT = ""
+                            })), mT.push(nT), (0, gT.jsx)(gT.Fragment, {
+                              children: mT
                             })
                           }
-                        }, 4876: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            e: () => tp,
-                            c: () => vp
+                        }, 4869: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            g: () => fT,
+                            d: () => vT
                           });
-                          var Op = cp(62),
-                            op = cp(1476),
-                            Ip = cp(1929),
-                            Sp = cp(4880),
-                            xp = cp(1112);
-                          const Lp = (0, Op.memo)((function(pp) {
+                          var WT = mT(63),
+                            zT = mT(1567),
+                            MT = mT(2023),
+                            gT = mT(4873),
+                            nT = mT(1188);
+                          const HT = (0, WT.memo)((function(TT) {
                             let {
-                              initialParameters: ip
-                            } = pp;
-                            const cp = (0, Op.useRef)(null),
-                              op = (0, Op.useRef)(null),
-                              Lp = (0, Op.useRef)(0),
-                              Yp = (0, Op.useRef)(null),
-                              Dp = ip.description,
-                              Ap = ip.Yi,
+                              initialParameters: UT
+                            } = TT;
+                            const mT = (0, WT.useRef)(null),
+                              zT = (0, WT.useRef)(null),
+                              HT = (0, WT.useRef)(0),
+                              kT = (0, WT.useRef)(null),
+                              jT = UT.description,
+                              lT = UT.UU,
                               {
-                                scale: Pp,
-                                rotation: Wp
-                              } = null !== ip && void 0 !== ip ? ip : {},
-                              yp = (0, Sp.d)();
-                            return (0, Op.useEffect)((() => {
-                              const pp = yp.onFrame((() => {
-                                const pp = yp.getState();
-                                if (!pp.isActive || !cp.current || !op.current) return;
-                                const ip = pp.state;
-                                if (cp.current.value = ip.progress, ip.clickCount > Lp.current) {
-                                  Lp.current = ip.clickCount;
-                                  const pp = op.current;
-                                  pp.classList.add("pulse"), Yp.current = setTimeout((() => {
-                                    pp.classList.remove("pulse")
+                                scale: LT,
+                                rotation: pT
+                              } = null !== UT && void 0 !== UT ? UT : {},
+                              BT = (0, gT.e)();
+                            return (0, WT.useEffect)((() => {
+                              const TT = BT.onFrame((() => {
+                                const TT = BT.getState();
+                                if (!TT.isActive || !mT.current || !zT.current) return;
+                                const UT = TT.state;
+                                if (mT.current.value = UT.progress, UT.clickCount > HT.current) {
+                                  HT.current = UT.clickCount;
+                                  const TT = zT.current;
+                                  TT.classList.add("pulse"), kT.current = setTimeout((() => {
+                                    TT.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Yp.current), pp()
+                                clearTimeout(kT.current), TT()
                               }
-                            }), [yp]), (0, xp.jsx)(xp.Fragment, {
-                              children: (0, xp.jsxs)("div", {
+                            }), [BT]), (0, nT.jsx)(nT.Fragment, {
+                              children: (0, nT.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== Pp && {
-                                    "--scale": Pp
+                                  ...null !== LT && {
+                                    "--scale": LT
                                   },
-                                  ...null !== Wp && {
-                                    "--rotation": `${Wp}deg`
+                                  ...null !== pT && {
+                                    "--rotation": `${pT}deg`
                                   }
                                 },
-                                children: [(0, xp.jsx)("progress", {
+                                children: [(0, nT.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: cp
-                                }), (0, xp.jsx)("span", {
+                                  ref: mT
+                                }), (0, nT.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: op,
-                                  children: (0, xp.jsx)(Ip.e, {
+                                  ref: zT,
+                                  children: (0, nT.jsx)(MT.e, {
                                     text: [{
-                                      icon: Ap
+                                      icon: lT
                                     }]
                                   })
-                                }), (0, xp.jsx)("div", {
+                                }), (0, nT.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, xp.jsx)(Ip.e, {
-                                    text: Dp
+                                  children: (0, nT.jsx)(MT.e, {
+                                    text: jT
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Yp = cp(1049),
-                            Dp = cp.n(Yp);
-                          const Ap = 2 * Math.PI * 90,
-                            Pp = (0, Op.memo)((function(pp) {
+                          var kT = mT(1126),
+                            jT = mT.n(kT);
+                          const lT = 2 * Math.PI * 90,
+                            LT = (0, WT.memo)((function(TT) {
                               let {
-                                initialParameters: ip
-                              } = pp;
-                              const cp = (0, Op.useRef)(null),
-                                op = (0, Op.useRef)(null),
-                                Lp = (0, Op.useRef)(null),
-                                Yp = ip.label,
-                                Pp = ip.icon,
-                                Wp = ip.Pi,
+                                initialParameters: UT
+                              } = TT;
+                              const mT = (0, WT.useRef)(null),
+                                zT = (0, WT.useRef)(null),
+                                HT = (0, WT.useRef)(null),
+                                kT = UT.label,
+                                LT = UT.icon,
+                                pT = UT.zU,
                                 {
-                                  scale: yp,
-                                  rotation: Up,
-                                  Wi: wp
-                                } = null !== ip && void 0 !== ip ? ip : {},
-                                vp = (0, Sp.d)();
-                              return (0, Op.useEffect)((() => {
-                                const pp = vp.onFrame((() => {
-                                  var pp, ip;
-                                  const Op = vp.getState();
-                                  if (!Op.isActive || !op.current) return;
-                                  const Ip = Op.state,
-                                    Sp = null !== (pp = Ip.timeRemaining) && void 0 !== pp ? pp : 0,
-                                    xp = null !== (ip = Ip.Ai) && void 0 !== ip ? ip : 1,
-                                    Yp = Ap * (1 - Sp / xp);
-                                  op.current.style.strokeDashoffset = `${Yp}`, cp.current && (cp.current.style.opacity = Sp > 0 ? "1" : "0"), Lp.current && Wp && (Lp.current.textContent = `${(Sp/1e3).toFixed(1)}s`)
+                                  scale: BT,
+                                  rotation: ZT,
+                                  MU: cT
+                                } = null !== UT && void 0 !== UT ? UT : {},
+                                vT = (0, gT.e)();
+                              return (0, WT.useEffect)((() => {
+                                const TT = vT.onFrame((() => {
+                                  var TT, UT;
+                                  const WT = vT.getState();
+                                  if (!WT.isActive || !zT.current) return;
+                                  const MT = WT.state,
+                                    gT = null !== (TT = MT.timeRemaining) && void 0 !== TT ? TT : 0,
+                                    nT = null !== (UT = MT.WU) && void 0 !== UT ? UT : 1,
+                                    kT = lT * (1 - gT / nT);
+                                  zT.current.style.strokeDashoffset = `${kT}`, mT.current && (mT.current.style.opacity = gT > 0 ? "1" : "0"), HT.current && pT && (HT.current.textContent = `${(gT/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  pp()
+                                  TT()
                                 }
-                              }), [vp, Wp]), (0, xp.jsxs)("div", {
+                              }), [vT, pT]), (0, nT.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: cp,
+                                ref: mT,
                                 style: {
-                                  ...null !== yp && {
-                                    "--scale": yp
+                                  ...null !== BT && {
+                                    "--scale": BT
                                   },
-                                  ...null !== Up && {
-                                    "--rotation": `${Up}deg`
+                                  ...null !== ZT && {
+                                    "--rotation": `${ZT}deg`
                                   }
                                 },
-                                children: [(0, xp.jsxs)("div", {
+                                children: [(0, nT.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, xp.jsxs)("svg", {
+                                  children: [(0, nT.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, xp.jsx)("circle", {
+                                    children: [(0, nT.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, xp.jsx)("circle", {
+                                    }), (0, nT.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: Ap,
-                                      ref: op
+                                      strokeDasharray: lT,
+                                      ref: zT
                                     })]
-                                  }), (0, xp.jsx)("div", {
+                                  }), (0, nT.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, xp.jsx)(Ip.e, {
+                                    children: (0, nT.jsx)(MT.e, {
                                       text: [{
-                                        icon: Pp
+                                        icon: LT
                                       }],
-                                      className: Dp()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: wp
+                                      className: jT()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: cT
                                       })
                                     })
                                   })]
-                                }), (0, xp.jsxs)("div", {
+                                }), (0, nT.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, xp.jsx)(Ip.e, {
-                                    text: Yp,
+                                  children: [(0, nT.jsx)(MT.e, {
+                                    text: kT,
                                     className: "QTETimedClickLabelText"
-                                  }), Wp && (0, xp.jsx)("span", {
+                                  }), pT && (0, nT.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: Lp
+                                    ref: HT
                                   })]
                                 })]
                               })
                             })),
-                            Wp = (0, Op.memo)((function(pp) {
+                            pT = (0, WT.memo)((function(TT) {
                               let {
-                                initialParameters: ip
-                              } = pp;
-                              const cp = (0, Op.useRef)(null),
-                                op = (0, Op.useRef)(null),
-                                Lp = (0, Op.useRef)(null),
-                                Yp = (0, Op.useRef)(!1),
-                                Dp = ip.description,
-                                Ap = null === ip || void 0 === ip ? void 0 : ip.icon,
-                                Pp = (0, Sp.d)();
-                              return (0, Op.useEffect)((() => {
-                                const pp = Pp.onFrame((() => {
-                                  const pp = Pp.getState();
-                                  if (!pp.isActive) return;
-                                  const ip = pp.state;
-                                  if (cp.current) {
-                                    const pp = 100 * (ip.catchZonePosition - ip.Ui / 2);
-                                    cp.current.style.left = `${pp}%`, cp.current.style.width = 100 * ip.Ui + "%", ip.isCatching !== Yp.current && (Yp.current = ip.isCatching, ip.isCatching ? cp.current.classList.add("catching") : cp.current.classList.remove("catching"))
+                                initialParameters: UT
+                              } = TT;
+                              const mT = (0, WT.useRef)(null),
+                                zT = (0, WT.useRef)(null),
+                                HT = (0, WT.useRef)(null),
+                                kT = (0, WT.useRef)(!1),
+                                jT = UT.description,
+                                lT = null === UT || void 0 === UT ? void 0 : UT.icon,
+                                LT = (0, gT.e)();
+                              return (0, WT.useEffect)((() => {
+                                const TT = LT.onFrame((() => {
+                                  const TT = LT.getState();
+                                  if (!TT.isActive) return;
+                                  const UT = TT.state;
+                                  if (mT.current) {
+                                    const TT = 100 * (UT.catchZonePosition - UT.nU / 2);
+                                    mT.current.style.left = `${TT}%`, mT.current.style.width = 100 * UT.nU + "%", UT.isCatching !== kT.current && (kT.current = UT.isCatching, UT.isCatching ? mT.current.classList.add("catching") : mT.current.classList.remove("catching"))
                                   }
-                                  op.current && (op.current.style.left = 100 * ip.moverPosition + "%"), Lp.current && (Lp.current.value = ip.progress)
+                                  zT.current && (zT.current.style.left = 100 * UT.moverPosition + "%"), HT.current && (HT.current.value = UT.progress)
                                 }));
                                 return () => {
-                                  pp()
+                                  TT()
                                 }
-                              }), [Pp]), (0, xp.jsxs)("div", {
+                              }), [LT]), (0, nT.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, xp.jsx)("div", {
+                                children: [(0, nT.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, xp.jsx)(Ip.e, {
-                                    text: Dp
+                                  children: (0, nT.jsx)(MT.e, {
+                                    text: jT
                                   })
-                                }), (0, xp.jsx)("progress", {
+                                }), (0, nT.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: Lp
-                                }), (0, xp.jsxs)("div", {
+                                  ref: HT
+                                }), (0, nT.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, xp.jsx)("div", {
+                                  children: [(0, nT.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: cp
-                                  }), (0, xp.jsx)("div", {
+                                    ref: mT
+                                  }), (0, nT.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: op,
-                                    children: (0, xp.jsx)("span", {
-                                      children: Ap && (0, xp.jsx)(Ip.e, {
+                                    ref: zT,
+                                    children: (0, nT.jsx)("span", {
+                                      children: lT && (0, nT.jsx)(MT.e, {
                                         text: [{
-                                          icon: Ap,
+                                          icon: lT,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var yp = cp(640);
-                          const Up = (0, Op.memo)((function(pp) {
+                          var BT = mT(653);
+                          const ZT = (0, WT.memo)((function(TT) {
                               let {
-                                initialParameters: ip
-                              } = pp;
-                              const cp = (0, Op.useRef)(null),
-                                op = ip.label,
-                                Lp = ip.qi,
+                                initialParameters: UT
+                              } = TT;
+                              const mT = (0, WT.useRef)(null),
+                                zT = UT.label,
+                                HT = UT.BU,
                                 {
-                                  icon: Yp,
-                                  scale: Dp,
-                                  rotation: Ap
-                                } = null !== ip && void 0 !== ip ? ip : {},
-                                Pp = 100 * (.5 - Lp / 2),
-                                Wp = 100 * Lp,
-                                Up = (0, Sp.d)();
-                              return (0, Op.useEffect)((() => {
-                                const pp = Up.onFrame((() => {
-                                  const pp = Up.getState();
-                                  if (!pp.isActive || !cp.current) return;
-                                  const ip = pp.state;
-                                  cp.current.style.left = 100 * ip.markerPosition + "%"
+                                  icon: kT,
+                                  scale: jT,
+                                  rotation: lT
+                                } = null !== UT && void 0 !== UT ? UT : {},
+                                LT = 100 * (.5 - HT / 2),
+                                pT = 100 * HT,
+                                ZT = (0, gT.e)();
+                              return (0, WT.useEffect)((() => {
+                                const TT = ZT.onFrame((() => {
+                                  const TT = ZT.getState();
+                                  if (!TT.isActive || !mT.current) return;
+                                  const UT = TT.state;
+                                  mT.current.style.left = 100 * UT.markerPosition + "%"
                                 }));
                                 return () => {
-                                  pp()
+                                  TT()
                                 }
-                              }), [Up]), (0, xp.jsxs)("div", {
+                              }), [ZT]), (0, nT.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, yp.G)(Dp) && {
-                                    "--scale": Dp
+                                  ...!(0, BT.E)(jT) && {
+                                    "--scale": jT
                                   },
-                                  ...!(0, yp.G)(Ap) && {
-                                    "--rotation": `${Ap}deg`
+                                  ...!(0, BT.E)(lT) && {
+                                    "--rotation": `${lT}deg`
                                   }
                                 },
-                                children: [Yp && (0, xp.jsx)(Ip.e, {
+                                children: [kT && (0, nT.jsx)(MT.e, {
                                   text: [{
-                                    icon: Yp
+                                    icon: kT
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, xp.jsxs)("div", {
+                                }), (0, nT.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, xp.jsx)("div", {
+                                  children: [(0, nT.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${Pp}%`,
-                                      width: `${Wp}%`
+                                      left: `${LT}%`,
+                                      width: `${pT}%`
                                     }
-                                  }), (0, xp.jsx)("div", {
+                                  }), (0, nT.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: cp
+                                    ref: mT
                                   })]
-                                }), (0, xp.jsx)("div", {
+                                }), (0, nT.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, xp.jsx)(Ip.e, {
-                                    text: op
+                                  children: (0, nT.jsx)(MT.e, {
+                                    text: zT
                                   })
                                 })]
                               })
                             })),
-                            wp = (0, Op.memo)((function(pp) {
+                            cT = (0, WT.memo)((function(TT) {
                               let {
-                                initialParameters: ip
-                              } = pp;
-                              const cp = (0, Op.useRef)(null),
-                                [op, Lp] = (0, Op.useState)((() => new Array(ip.Ci).fill("pending"))),
-                                [Yp, Dp] = (0, Op.useState)((() => {
-                                  const pp = ip.li;
-                                  return (0, yp.G)(pp) || pp <= 0 ? [] : new Array(pp).fill("pending")
+                                initialParameters: UT
+                              } = TT;
+                              const mT = (0, WT.useRef)(null),
+                                [zT, HT] = (0, WT.useState)((() => new Array(UT.cU).fill("pending"))),
+                                [kT, jT] = (0, WT.useState)((() => {
+                                  const TT = UT.qU;
+                                  return (0, BT.E)(TT) || TT <= 0 ? [] : new Array(TT).fill("pending")
                                 })),
-                                Ap = ip.label,
+                                lT = UT.label,
                                 {
-                                  icon: Pp
-                                } = ip,
-                                Wp = (0, Op.useRef)(0),
-                                Up = (0, Op.useRef)(0),
-                                wp = (0, Op.useRef)([]),
-                                vp = (0, Sp.d)();
-                              return (0, Op.useEffect)((() => {
-                                const pp = vp.onFrame((() => {
-                                  const pp = vp.getState();
-                                  if (!pp.isActive || !cp.current) return;
-                                  const ip = pp.state,
-                                    Op = 30 + 60 * ip.outerCircleProgress;
-                                  if (cp.current.setAttribute("r", String(Op)), !0 === ip.lastClickResult && ip.successes > Wp.current) {
-                                    cp.current.classList.remove("QTERhythmClickOuterCircle--miss"), cp.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const pp = setTimeout((() => {
-                                      var pp;
-                                      null === (pp = cp.current) || void 0 === pp || pp.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: LT
+                                } = UT,
+                                pT = (0, WT.useRef)(0),
+                                ZT = (0, WT.useRef)(0),
+                                cT = (0, WT.useRef)([]),
+                                vT = (0, gT.e)();
+                              return (0, WT.useEffect)((() => {
+                                const TT = vT.onFrame((() => {
+                                  const TT = vT.getState();
+                                  if (!TT.isActive || !mT.current) return;
+                                  const UT = TT.state,
+                                    WT = 30 + 60 * UT.outerCircleProgress;
+                                  if (mT.current.setAttribute("r", String(WT)), !0 === UT.lastClickResult && UT.successes > pT.current) {
+                                    mT.current.classList.remove("QTERhythmClickOuterCircle--miss"), mT.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const TT = setTimeout((() => {
+                                      var TT;
+                                      null === (TT = mT.current) || void 0 === TT || TT.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    wp.current.push(pp)
-                                  } else if (!1 === ip.lastClickResult && ip.misses > Up.current) {
-                                    cp.current.classList.remove("QTERhythmClickOuterCircle--hit"), cp.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const pp = setTimeout((() => {
-                                      var pp;
-                                      null === (pp = cp.current) || void 0 === pp || pp.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    cT.current.push(TT)
+                                  } else if (!1 === UT.lastClickResult && UT.misses > ZT.current) {
+                                    mT.current.classList.remove("QTERhythmClickOuterCircle--hit"), mT.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const TT = setTimeout((() => {
+                                      var TT;
+                                      null === (TT = mT.current) || void 0 === TT || TT.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    wp.current.push(pp)
+                                    cT.current.push(TT)
                                   }
-                                  ip.successes === Wp.current && ip.misses === Up.current || (Wp.current = ip.successes, Up.current = ip.misses, Lp((pp => {
-                                    const cp = [...pp];
-                                    for (let Op = 0; Op < ip.Ci; Op++) cp[Op] = Op < ip.successes ? "success" : "pending";
-                                    return cp
-                                  })), Dp((pp => {
-                                    if (0 === pp.length) return pp;
-                                    const cp = [...pp];
-                                    for (let Op = 0; Op < cp.length; Op++) cp[Op] = Op < ip.misses ? "miss" : "pending";
-                                    return cp
+                                  UT.successes === pT.current && UT.misses === ZT.current || (pT.current = UT.successes, ZT.current = UT.misses, HT((TT => {
+                                    const mT = [...TT];
+                                    for (let WT = 0; WT < UT.cU; WT++) mT[WT] = WT < UT.successes ? "success" : "pending";
+                                    return mT
+                                  })), jT((TT => {
+                                    if (0 === TT.length) return TT;
+                                    const mT = [...TT];
+                                    for (let WT = 0; WT < mT.length; WT++) mT[WT] = WT < UT.misses ? "miss" : "pending";
+                                    return mT
                                   })))
                                 }));
                                 return () => {
-                                  pp();
-                                  for (const pp of wp.current) clearTimeout(pp);
-                                  wp.current = []
+                                  TT();
+                                  for (const TT of cT.current) clearTimeout(TT);
+                                  cT.current = []
                                 }
-                              }), [vp]), (0, xp.jsxs)("div", {
+                              }), [vT]), (0, nT.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, xp.jsx)("div", {
+                                children: [(0, nT.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: op.map(((pp, ip) => (0, xp.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === pp ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, ip)))
-                                }), (0, xp.jsxs)("div", {
+                                  children: zT.map(((TT, UT) => (0, nT.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === TT ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, UT)))
+                                }), (0, nT.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, xp.jsxs)("svg", {
+                                  children: [(0, nT.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, xp.jsx)("circle", {
+                                    children: [(0, nT.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, xp.jsx)("circle", {
+                                    }), (0, nT.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: cp
+                                      ref: mT
                                     })]
-                                  }), Pp && (0, xp.jsx)("div", {
+                                  }), LT && (0, nT.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, xp.jsx)(Ip.e, {
+                                    children: (0, nT.jsx)(MT.e, {
                                       text: [{
-                                        icon: Pp
+                                        icon: LT
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Yp.length > 0 && (0, xp.jsx)("div", {
+                                }), kT.length > 0 && (0, nT.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Yp.map(((pp, ip) => (0, xp.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === pp ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, ip)))
-                                }), (0, xp.jsx)("div", {
+                                  children: kT.map(((TT, UT) => (0, nT.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === TT ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, UT)))
+                                }), (0, nT.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, xp.jsx)(Ip.e, {
-                                    text: Ap
+                                  children: (0, nT.jsx)(MT.e, {
+                                    text: lT
                                   })
                                 })]
                               })
                             }));
 
-                          function vp(pp) {
+                          function vT(TT) {
                             let {
-                              qte: ip
-                            } = pp;
-                            switch (ip.type) {
+                              qte: UT
+                            } = TT;
+                            switch (UT.type) {
                               case "progressBar":
-                                return (0, xp.jsx)(Lp, {
-                                  initialParameters: ip.parameters
+                                return (0, nT.jsx)(HT, {
+                                  initialParameters: UT.parameters
                                 });
                               case "timedClick":
-                                return (0, xp.jsx)(Pp, {
-                                  initialParameters: ip.parameters
+                                return (0, nT.jsx)(LT, {
+                                  initialParameters: UT.parameters
                                 });
                               case "gravityBar":
-                                return (0, xp.jsx)(Wp, {
-                                  initialParameters: ip.parameters
+                                return (0, nT.jsx)(pT, {
+                                  initialParameters: UT.parameters
                                 });
                               case "precisionBar":
-                                return (0, xp.jsx)(Up, {
-                                  initialParameters: ip.parameters
+                                return (0, nT.jsx)(ZT, {
+                                  initialParameters: UT.parameters
                                 });
                               case "rhythmClick":
-                                return (0, xp.jsx)(wp, {
-                                  initialParameters: ip.parameters
+                                return (0, nT.jsx)(cT, {
+                                  initialParameters: UT.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const tp = (0, Op.memo)((function() {
-                            const [pp, ip] = (0, Op.useState)({
+                          const fT = (0, WT.memo)((function() {
+                            const [TT, UT] = (0, WT.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, op.f)("qteStateUpdated", (pp => {
-                              ip(pp)
-                            })), pp.isActive && pp.type ? (0, xp.jsx)("div", {
+                            return (0, zT.g)("qteStateUpdated", (TT => {
+                              UT(TT)
+                            })), TT.isActive && TT.type ? (0, nT.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, xp.jsx)(vp, {
-                                qte: pp
+                              children: (0, nT.jsx)(vT, {
+                                qte: TT
                               })
                             }) : null
                           }))
-                        }, 4880: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            b: () => xp,
-                            d: () => Lp
+                        }, 4873: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            c: () => nT,
+                            e: () => HT
                           });
-                          var Op = cp(62),
-                            op = cp(1317),
-                            Ip = cp(4882);
-                          const Sp = {
-                              getState: () => Ip.b.getCurrentState(),
-                              onFrame: op.q
+                          var WT = mT(63),
+                            zT = mT(1398),
+                            MT = mT(4879);
+                          const gT = {
+                              getState: () => MT.b.getCurrentState(),
+                              onFrame: zT.k
                             },
-                            xp = (0, Op.createContext)(Sp);
+                            nT = (0, WT.createContext)(gT);
 
-                          function Lp() {
-                            return (0, Op.useContext)(xp)
+                          function HT() {
+                            return (0, WT.useContext)(nT)
                           }
-                        }, 4964: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            e: () => Jp,
-                            h: () => Qp
+                        }, 4939: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            d: () => IT,
+                            e: () => XT
                           });
-                          var Op = cp(4970),
-                            op = cp(322);
-                          const Ip = 120,
-                            Sp = 260,
-                            xp = 1.15,
-                            Lp = 1.2,
-                            Yp = 2,
-                            Dp = 1.08,
-                            Ap = .8,
-                            Pp = .95,
-                            Wp = 8,
-                            yp = "[\"')\\]\u300d\u300f\uff09]*",
-                            Up = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${yp}$`),
-                            wp = new RegExp(`[?\uff1f]${yp}$`),
-                            vp = new RegExp(`[!\uff01]${yp}$`),
-                            tp = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Hp = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            dp = new RegExp(`[${Hp}]`),
-                            ep = new RegExp(`[${Hp}]|[^${Hp}]+`, "g"),
-                            jp = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var WT = mT(4948),
+                            zT = mT(351);
+                          const MT = 120,
+                            gT = 260,
+                            nT = 1.15,
+                            HT = 1.2,
+                            kT = 2,
+                            jT = 1.08,
+                            lT = .8,
+                            LT = .95,
+                            pT = 8,
+                            BT = "[\"')\\]\u300d\u300f\uff09]*",
+                            ZT = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${BT}$`),
+                            cT = new RegExp(`[?\uff1f]${BT}$`),
+                            vT = new RegExp(`[!\uff01]${BT}$`),
+                            fT = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            qT = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            iT = new RegExp(`[${qT}]`),
+                            bT = new RegExp(`[${qT}]|[^${qT}]+`, "g"),
+                            OT = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function kp(pp) {
-                            let ip = 2166136261;
-                            for (let cp = 0; cp < pp.length; cp++) ip ^= pp.charCodeAt(cp), ip = Math.imul(ip, 16777619);
-                            return (ip >>> 0) / 4294967295 * 2 - 1
+                          function eT(TT) {
+                            let UT = 2166136261;
+                            for (let mT = 0; mT < TT.length; mT++) UT ^= TT.charCodeAt(mT), UT = Math.imul(UT, 16777619);
+                            return (UT >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function mp(pp) {
-                            var ip;
-                            if (dp.test(pp)) return 1;
-                            const cp = pp.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Op = cp.replace(/[^0-9]/g, "");
-                            if (Op.length > 0 && !/\p{L}/u.test(cp)) return Math.min(Op.length, 4);
-                            const op = null !== (ip = cp.match(jp)) && void 0 !== ip ? ip : [];
-                            if (0 === op.length) {
-                              var Ip, Sp;
-                              const pp = null !== (Ip = null === (Sp = cp.match(/\p{L}/gu)) || void 0 === Sp ? void 0 : Sp.length) && void 0 !== Ip ? Ip : 0;
-                              return 0 === pp ? 0 : Math.min(Math.max(1, Math.round(pp / 2.5)), Wp)
+                          function YT(TT) {
+                            var UT;
+                            if (iT.test(TT)) return 1;
+                            const mT = TT.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              WT = mT.replace(/[^0-9]/g, "");
+                            if (WT.length > 0 && !/\p{L}/u.test(mT)) return Math.min(WT.length, 4);
+                            const zT = null !== (UT = mT.match(OT)) && void 0 !== UT ? UT : [];
+                            if (0 === zT.length) {
+                              var MT, gT;
+                              const TT = null !== (MT = null === (gT = mT.match(/\p{L}/gu)) || void 0 === gT ? void 0 : gT.length) && void 0 !== MT ? MT : 0;
+                              return 0 === TT ? 0 : Math.min(Math.max(1, Math.round(TT / 2.5)), pT)
                             }
-                            const xp = cp.replace(/[^\p{L}]/gu, ""),
-                              Lp = op.length > 1 && "e" === op.at(-1) && xp.endsWith("e") && !xp.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(pp.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(op.length - (Lp ? 1 : 0), Wp)
+                            const nT = mT.replace(/[^\p{L}]/gu, ""),
+                              HT = zT.length > 1 && "e" === zT.at(-1) && nT.endsWith("e") && !nT.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(TT.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(zT.length - (HT ? 1 : 0), pT)
                           }
 
-                          function Rp(pp) {
-                            return pp.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function JT(TT) {
+                            return TT.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function qp(pp) {
-                            const ip = pp.replace(/[^\p{L}]/gu, "");
-                            return ip.length >= 2 && ip === ip.toUpperCase() && ip !== ip.toLowerCase()
+                          function xT(TT) {
+                            const UT = TT.replace(/[^\p{L}]/gu, "");
+                            return UT.length >= 2 && UT === UT.toUpperCase() && UT !== UT.toLowerCase()
                           }
 
-                          function Mp(pp, ip) {
-                            var cp;
-                            const Wp = ip && (0, Op.m)(ip),
-                              yp = null !== (cp = null === Wp || void 0 === Wp ? void 0 : Wp.syllableMs) && void 0 !== cp ? cp : Op.d,
-                              Hp = function(pp) {
-                                const ip = [];
-                                for (const Op of (0, op.nc)(pp))
-                                  if ("string" === typeof Op)
-                                    for (const pp of Op.split(/(\s+)/)) {
-                                      if ("" === pp) continue;
-                                      if (/^\s+$/.test(pp)) {
-                                        ip.push({
+                          function dT(TT, UT) {
+                            var mT;
+                            const pT = UT && (0, WT.k)(UT),
+                              BT = null !== (mT = null === pT || void 0 === pT ? void 0 : pT.syllableMs) && void 0 !== mT ? mT : WT.d,
+                              qT = function(TT) {
+                                const UT = [];
+                                for (const WT of (0, zT.Wb)(TT))
+                                  if ("string" === typeof WT)
+                                    for (const TT of WT.split(/(\s+)/)) {
+                                      if ("" === TT) continue;
+                                      if (/^\s+$/.test(TT)) {
+                                        UT.push({
                                           kind: "space",
-                                          text: pp
+                                          text: TT
                                         });
                                         continue
                                       }
-                                      if (!dp.test(pp)) {
-                                        ip.push({
+                                      if (!iT.test(TT)) {
+                                        UT.push({
                                           kind: "word",
-                                          text: pp,
+                                          text: TT,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Op = !0;
-                                      for (const op of null !== (cp = pp.match(ep)) && void 0 !== cp ? cp : []) {
-                                        var cp;
-                                        const pp = ip.at(-1);
-                                        Op || "word" !== (null === pp || void 0 === pp ? void 0 : pp.kind) || dp.test(op) || /[\p{L}\p{N}]/u.test(op) ? (Op || ip.push({
+                                      let WT = !0;
+                                      for (const zT of null !== (mT = TT.match(bT)) && void 0 !== mT ? mT : []) {
+                                        var mT;
+                                        const TT = UT.at(-1);
+                                        WT || "word" !== (null === TT || void 0 === TT ? void 0 : TT.kind) || iT.test(zT) || /[\p{L}\p{N}]/u.test(zT) ? (WT || UT.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), ip.push({
+                                        }), UT.push({
                                           kind: "word",
-                                          text: op,
+                                          text: zT,
                                           delayMs: 0
-                                        }), Op = !1) : pp.text += op
+                                        }), WT = !1) : TT.text += zT
                                       }
-                                    } else ip.push({
+                                    } else UT.push({
                                       kind: "icon",
-                                      text: Op.icon,
+                                      text: WT.icon,
                                       delayMs: 0
                                     });
-                                return ip
-                              }(pp),
-                              jp = [];
-                            let Mp = [];
-                            for (const Op of Hp) "space" !== Op.kind && (Mp.push(Op), Up.test(Op.text) && (jp.push(Mp), Mp = []));
-                            jp.push(Mp);
-                            const Cp = [];
-                            let Ep = 0;
-                            for (const Op of jp) {
-                              var Xp, lp;
-                              const pp = null !== (Xp = null === (lp = Op.at(-1)) || void 0 === lp ? void 0 : lp.text) && void 0 !== Xp ? Xp : "",
-                                ip = wp.test(pp),
-                                cp = vp.test(pp),
-                                op = Op.map((pp => "word" === pp.kind ? mp(pp.text) : 1)),
-                                Hp = op.findLastIndex((pp => pp > 0));
-                              for (const [wp, vp] of Op.entries()) {
-                                const pp = "word" === vp.kind,
-                                  Op = op[wp];
-                                vp.delayMs = Ep;
-                                for (let op = 0; Wp && op < Op; op++) {
+                                return UT
+                              }(TT),
+                              OT = [];
+                            let dT = [];
+                            for (const WT of qT) "space" !== WT.kind && (dT.push(WT), ZT.test(WT.text) && (OT.push(dT), dT = []));
+                            OT.push(dT);
+                            const wT = [];
+                            let tT = 0;
+                            for (const WT of OT) {
+                              var aT, yT;
+                              const TT = null !== (aT = null === (yT = WT.at(-1)) || void 0 === yT ? void 0 : yT.text) && void 0 !== aT ? aT : "",
+                                UT = cT.test(TT),
+                                mT = vT.test(TT),
+                                zT = WT.map((TT => "word" === TT.kind ? YT(TT.text) : 1)),
+                                qT = zT.findLastIndex((TT => TT > 0));
+                              for (const [cT, vT] of WT.entries()) {
+                                const TT = "word" === vT.kind,
+                                  WT = zT[cT];
+                                vT.delayMs = tT;
+                                for (let zT = 0; pT && zT < WT; zT++) {
                                   const {
-                                    intonation: Ip
-                                  } = Wp;
-                                  let Sp = Hp > 0 ? -Ip.declineSemitones * (wp / Hp) : 0;
-                                  Sp += kp(`${Rp(vp.text)}|${op}`) * Ip.variationSemitones;
-                                  const Up = Math.min(1, Ip.variationSemitones);
-                                  let tp = Wp.glideSemitones,
-                                    dp = 1;
-                                  cp && (Sp += Ip.exclaimLiftSemitones, dp *= xp), ip && wp === Hp && (Sp += Ip.questionRiseSemitones * (Op > 1 ? .5 + .5 * op / (Op - 1) : 1), op === Op - 1 && (tp = Math.abs(tp) + Ip.questionRiseSemitones / 2)), pp && qp(vp.text) && (Sp += Yp * Up, dp *= Lp), Op > 1 && 0 === op && (Sp += Ap * Up, dp *= Dp), Cp.push({
-                                    atMs: Ep + op * yp,
-                                    semitones: Sp,
-                                    glideSemitones: tp,
-                                    durationMs: op < Op - 1 ? Math.min(Wp.durationMs, yp * Pp) : Wp.durationMs,
-                                    level: dp
+                                    intonation: MT
+                                  } = pT;
+                                  let gT = qT > 0 ? -MT.declineSemitones * (cT / qT) : 0;
+                                  gT += eT(`${JT(vT.text)}|${zT}`) * MT.variationSemitones;
+                                  const ZT = Math.min(1, MT.variationSemitones);
+                                  let fT = pT.glideSemitones,
+                                    iT = 1;
+                                  mT && (gT += MT.exclaimLiftSemitones, iT *= nT), UT && cT === qT && (gT += MT.questionRiseSemitones * (WT > 1 ? .5 + .5 * zT / (WT - 1) : 1), zT === WT - 1 && (fT = Math.abs(fT) + MT.questionRiseSemitones / 2)), TT && xT(vT.text) && (gT += kT * ZT, iT *= HT), WT > 1 && 0 === zT && (gT += lT * ZT, iT *= jT), wT.push({
+                                    atMs: tT + zT * BT,
+                                    semitones: gT,
+                                    glideSemitones: fT,
+                                    durationMs: zT < WT - 1 ? Math.min(pT.durationMs, BT * LT) : pT.durationMs,
+                                    level: iT
                                   })
                                 }
-                                Ep += Op * yp + (Up.test(vp.text) ? Sp : tp.test(vp.text) ? Ip : 0)
+                                tT += WT * BT + (ZT.test(vT.text) ? gT : fT.test(vT.text) ? MT : 0)
                               }
                             }
                             return {
-                              pieces: Hp.map((pp => "space" === pp.kind ? pp : "icon" === pp.kind ? {
+                              pieces: qT.map((TT => "space" === TT.kind ? TT : "icon" === TT.kind ? {
                                 kind: "icon",
-                                icon: pp.text,
-                                delayMs: pp.delayMs
+                                icon: TT.text,
+                                delayMs: TT.delayMs
                               } : {
                                 kind: "word",
-                                text: pp.text,
-                                delayMs: pp.delayMs
+                                text: TT.text,
+                                delayMs: TT.delayMs
                               })),
-                              blips: Cp
+                              blips: wT
                             }
                           }
-                          var Cp = cp(1201),
-                            Ep = cp(1260),
-                            Xp = cp(1963);
+                          var wT = mT(1288),
+                            tT = mT(1345),
+                            aT = mT(2054);
 
-                          function lp(pp) {
-                            if ("string" === typeof pp) return pp;
-                            const ip = Ep.g.get().getCurrentLanguageCode();
-                            return (0, Cp.w)(ip, pp.translationKey, (0, Cp.t)(pp.params, Xp.d.shown))
+                          function yT(TT) {
+                            if ("string" === typeof TT) return TT;
+                            const UT = tT.f.get().getCurrentLanguageCode();
+                            return (0, wT.r)(UT, TT.translationKey, (0, wT.o)(TT.params, aT.d.shown))
                           }
 
-                          function Qp(pp) {
-                            const ip = void 0 === pp.voice ? null : (0, Op.o)(pp.voice),
-                              cp = ip && (0, Op.m)(ip);
+                          function XT(TT) {
+                            const UT = void 0 === TT.voice ? null : (0, WT.l)(TT.voice),
+                              mT = UT && (0, WT.k)(UT);
                             return {
-                              plan: Mp(lp(pp.line), cp),
-                              synth: cp
+                              plan: dT(yT(TT.line), mT),
+                              synth: mT
                             }
                           }
 
-                          function Jp(pp) {
-                            const ip = [];
-                            let cp = [];
-                            for (const [op, Ip] of pp.entries()) {
-                              var Op;
-                              "space" === Ip.kind && (" " !== Ip.text || "icon" !== (null === (Op = pp[op + 1]) || void 0 === Op ? void 0 : Op.kind)) ? (cp.length > 0 && ip.push(cp), ip.push([Ip]), cp = []) : cp.push(Ip)
+                          function IT(TT) {
+                            const UT = [];
+                            let mT = [];
+                            for (const [zT, MT] of TT.entries()) {
+                              var WT;
+                              "space" === MT.kind && (" " !== MT.text || "icon" !== (null === (WT = TT[zT + 1]) || void 0 === WT ? void 0 : WT.kind)) ? (mT.length > 0 && UT.push(mT), UT.push([MT]), mT = []) : mT.push(MT)
                             }
-                            return cp.length > 0 && ip.push(cp), ip
+                            return mT.length > 0 && UT.push(mT), UT
                           }
-                        }, 4972: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            e: () => Dp,
-                            f: () => Ap
+                        }, 4956: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            c: () => jT,
+                            f: () => lT
                           });
-                          var Op = cp(4974),
-                            op = cp(25);
-                          const Ip = .25,
-                            Sp = .85,
-                            xp = .02,
-                            Lp = .01;
+                          var WT = mT(4959),
+                            zT = mT(25);
+                          const MT = .25,
+                            gT = .85,
+                            nT = .02,
+                            HT = .01;
 
-                          function Yp(pp, ip, cp, Op, op, Ip, xp) {
+                          function kT(TT, UT, mT, WT, zT, MT, nT) {
                             const {
-                              waveform: Lp,
-                              pitchHz: Yp,
-                              attackMs: Dp,
-                              releaseMs: Ap,
-                              lowpassHz: Pp
-                            } = cp, Wp = op + Op.durationMs / 1e3, yp = Yp * 2 ** (Op.semitones / 12), Up = pp.createOscillator();
-                            Up.type = Lp, Up.frequency.setValueAtTime(yp, op), Up.frequency.exponentialRampToValueAtTime(yp * 2 ** (Op.glideSemitones / 12), Wp);
-                            const wp = op + Math.min(Dp, Op.durationMs) / 1e3,
-                              vp = pp.createGain();
-                            vp.gain.setValueAtTime(0, op), vp.gain.linearRampToValueAtTime(Ip, wp), vp.gain.linearRampToValueAtTime(Ip * Sp, Math.max(wp, Wp - Ap / 1e3)), vp.gain.linearRampToValueAtTime(0, Wp);
-                            const tp = [Up];
-                            if (null !== Pp) {
-                              const ip = pp.createBiquadFilter();
-                              ip.type = "lowpass", ip.frequency.value = Pp, tp.push(ip)
+                              waveform: HT,
+                              pitchHz: kT,
+                              attackMs: jT,
+                              releaseMs: lT,
+                              lowpassHz: LT
+                            } = mT, pT = zT + WT.durationMs / 1e3, BT = kT * 2 ** (WT.semitones / 12), ZT = TT.createOscillator();
+                            ZT.type = HT, ZT.frequency.setValueAtTime(BT, zT), ZT.frequency.exponentialRampToValueAtTime(BT * 2 ** (WT.glideSemitones / 12), pT);
+                            const cT = zT + Math.min(jT, WT.durationMs) / 1e3,
+                              vT = TT.createGain();
+                            vT.gain.setValueAtTime(0, zT), vT.gain.linearRampToValueAtTime(MT, cT), vT.gain.linearRampToValueAtTime(MT * gT, Math.max(cT, pT - lT / 1e3)), vT.gain.linearRampToValueAtTime(0, pT);
+                            const fT = [ZT];
+                            if (null !== LT) {
+                              const UT = TT.createBiquadFilter();
+                              UT.type = "lowpass", UT.frequency.value = LT, fT.push(UT)
                             }
-                            tp.push(vp, ip);
-                            for (let Sp = 1; Sp < tp.length; Sp++) tp[Sp - 1].connect(tp[Sp]);
-                            return Up.onended = () => {
-                              for (const pp of tp.slice(0, -1)) pp.disconnect();
-                              xp()
-                            }, Up.start(op), Up.stop(Wp), Up
+                            fT.push(vT, UT);
+                            for (let gT = 1; gT < fT.length; gT++) fT[gT - 1].connect(fT[gT]);
+                            return ZT.onended = () => {
+                              for (const TT of fT.slice(0, -1)) TT.disconnect();
+                              nT()
+                            }, ZT.start(zT), ZT.stop(pT), ZT
                           }
 
-                          function Dp(pp, ip, cp, Op, op, Sp) {
-                            if (0 === Op.length) return Sp(), () => {};
-                            const Dp = Ip * cp.volume * op,
-                              Ap = pp.createGain();
-                            Ap.connect(ip);
-                            const Pp = pp.currentTime + xp,
-                              Wp = new Set;
-                            for (const Ip of Op) {
-                              const ip = Yp(pp, Ap, cp, Ip, Pp + Ip.atMs / 1e3, Dp * Ip.level, (() => {
-                                Wp.delete(ip), 0 === Wp.size && (Ap.disconnect(), Sp())
+                          function jT(TT, UT, mT, WT, zT, gT) {
+                            if (0 === WT.length) return gT(), () => {};
+                            const jT = MT * mT.volume * zT,
+                              lT = TT.createGain();
+                            lT.connect(UT);
+                            const LT = TT.currentTime + nT,
+                              pT = new Set;
+                            for (const MT of WT) {
+                              const UT = kT(TT, lT, mT, MT, LT + MT.atMs / 1e3, jT * MT.level, (() => {
+                                pT.delete(UT), 0 === pT.size && (lT.disconnect(), gT())
                               }));
-                              Wp.add(ip)
+                              pT.add(UT)
                             }
                             return () => {
-                              const ip = pp.currentTime;
-                              Ap.gain.setTargetAtTime(0, ip, Lp);
-                              for (const pp of Wp) try {
-                                pp.stop(ip + 5 * Lp)
+                              const UT = TT.currentTime;
+                              lT.gain.setTargetAtTime(0, UT, HT);
+                              for (const TT of pT) try {
+                                TT.stop(UT + 5 * HT)
                               } catch {}
                             }
                           }
 
-                          function Ap(pp, ip) {
-                            var cp;
-                            const Ip = Op.Howler.ctx,
-                              Sp = Op.Howler.masterGain;
-                            if (!Ip || !Sp || !op.c.get("soundOnFromAd")) return () => {};
-                            const xp = Op.Howler;
-                            return null === (cp = xp._autoResume) || void 0 === cp || cp.call(xp), Dp(Ip, Sp, pp, ip, op.c.get("soundVolume"), (() => {
-                              var pp;
-                              null === (pp = xp._autoSuspend) || void 0 === pp || pp.call(xp)
+                          function lT(TT, UT) {
+                            var mT;
+                            const MT = WT.Howler.ctx,
+                              gT = WT.Howler.masterGain;
+                            if (!MT || !gT || !zT.b.get("soundOnFromAd")) return () => {};
+                            const nT = WT.Howler;
+                            return null === (mT = nT._autoResume) || void 0 === mT || mT.call(nT), jT(MT, gT, TT, UT, zT.b.get("soundVolume"), (() => {
+                              var TT;
+                              null === (TT = nT._autoSuspend) || void 0 === TT || TT.call(nT)
                             }))
                           }
-                        }, 4941: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            e: () => xp,
-                            f: () => op,
-                            h: () => Lp,
-                            k: () => Sp,
-                            o: () => Ip
+                        }, 4923: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            c: () => nT,
+                            g: () => zT,
+                            i: () => HT,
+                            m: () => gT,
+                            o: () => MT
                           });
-                          var Op = cp(4933);
-                          const op = {
+                          var WT = mT(4918);
+                          const zT = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            Ip = {
+                            MT = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            Sp = `${Op.n} lists every page of the Bloxd Code API docs.`;
+                            gT = `${WT.k} lists every page of the Bloxd Code API docs.`;
 
-                          function xp(pp, ip) {
-                            return `${pp.url}${encodeURIComponent(ip.toWellFormed())}`
+                          function nT(TT, UT) {
+                            return `${TT.url}${encodeURIComponent(UT.toWellFormed())}`
                           }
 
-                          function Lp(pp) {
-                            const ip = xp(op, pp);
-                            return ip.length <= 3e4 ? {
-                              url: ip,
+                          function HT(TT) {
+                            const UT = nT(zT, TT);
+                            return UT.length <= 3e4 ? {
+                              url: UT,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(op.url).origin,
+                              url: new URL(zT.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 4974: (pp, ip, cp) => {
-                          cp.r(ip), cp.d(ip, {
-                            Howl: () => op.Howl,
-                            Howler: () => op.Howler,
-                            musicOutput: () => wp,
-                            readyAudioContext: () => vp
+                        }, 4959: (TT, UT, mT) => {
+                          mT.r(UT), mT.d(UT, {
+                            Howl: () => zT.Howl,
+                            Howler: () => zT.Howler,
+                            musicOutput: () => cT,
+                            readyAudioContext: () => vT
                           });
-                          var Op, op = cp(4977),
-                            Ip = cp(3546),
-                            Sp = cp(4743);
-                          const xp = op.Howler;
+                          var WT, zT = mT(4966),
+                            MT = mT(3536),
+                            gT = mT(4741);
+                          const nT = zT.Howler;
 
-                          function Lp() {
-                            var pp, ip;
-                            if (xp.ctx || !xp.usingWebAudio || "undefined" === typeof AudioContext || !(0, Sp.f)()) return;
-                            const cp = navigator.audioSession;
-                            let Op;
-                            "auto" === (null === cp || void 0 === cp ? void 0 : cp.type) && (cp.type = "ambient");
+                          function HT() {
+                            var TT, UT;
+                            if (nT.ctx || !nT.usingWebAudio || "undefined" === typeof AudioContext || !(0, gT.j)()) return;
+                            const mT = navigator.audioSession;
+                            let WT;
+                            "auto" === (null === mT || void 0 === mT ? void 0 : mT.type) && (mT.type = "ambient");
                             try {
-                              Op = new AudioContext({
+                              WT = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const op = Op.createGain();
-                            op.gain.setValueAtTime(xp._muted ? 0 : null !== (pp = xp._volume) && void 0 !== pp ? pp : 1, Op.currentTime), op.connect(Op.destination), xp.ctx = Op, xp.masterGain = op, null === (ip = xp._setup) || void 0 === ip || ip.call(xp)
+                            const zT = WT.createGain();
+                            zT.gain.setValueAtTime(nT._muted ? 0 : null !== (TT = nT._volume) && void 0 !== TT ? TT : 1, WT.currentTime), zT.connect(WT.destination), nT.ctx = WT, nT.masterGain = zT, null === (UT = nT._setup) || void 0 === UT || UT.call(nT)
                           }
-                          xp._mobileUnloaded = !0;
-                          const Yp = xp.volume.bind(op.Howler);
-                          xp.volume = function() {
-                            return Lp(), Yp(...arguments)
+                          nT._mobileUnloaded = !0;
+                          const kT = nT.volume.bind(zT.Howler);
+                          nT.volume = function() {
+                            return HT(), kT(...arguments)
                           };
-                          const Dp = xp.mute.bind(op.Howler);
-                          xp.mute = pp => (Lp(), Dp(pp));
-                          const Ap = op.Howl.prototype,
-                            Pp = Ap.init;
+                          const jT = nT.mute.bind(zT.Howler);
+                          nT.mute = TT => (HT(), jT(TT));
+                          const lT = zT.Howl.prototype,
+                            LT = lT.init;
 
-                          function Wp() {
-                            for (; xp._html5AudioPool.length < xp.html5PoolSize;) {
-                              const pp = new Audio;
-                              pp._unlocked = !0, xp._releaseHtml5Audio(pp)
+                          function pT() {
+                            for (; nT._html5AudioPool.length < nT.html5PoolSize;) {
+                              const TT = new Audio;
+                              TT._unlocked = !0, nT._releaseHtml5Audio(TT)
                             }
-                            for (const ip of xp._howls)
-                              if (!ip._webAudio)
-                                for (const cp of ip._getSoundIds()) {
-                                  var pp;
-                                  const Op = null === (pp = ip._soundById(cp)) || void 0 === pp ? void 0 : pp._node;
-                                  Op && !Op._unlocked && (Op._unlocked = !0, Op.load())
+                            for (const UT of nT._howls)
+                              if (!UT._webAudio)
+                                for (const mT of UT._getSoundIds()) {
+                                  var TT;
+                                  const WT = null === (TT = UT._soundById(mT)) || void 0 === TT ? void 0 : TT._node;
+                                  WT && !WT._unlocked && (WT._unlocked = !0, WT.load())
                                 }
                           }
-                          Ap.init = function(pp) {
-                            return Lp(), Pp.call(this, pp)
-                          }, (0, Sp.f)() && (xp._unlockAudio = () => {
-                            const pp = xp.ctx;
-                            if (xp._audioUnlocked || !pp) return;
-                            xp.autoUnlock = !1;
-                            const ip = pp.createBuffer(1, 1, 22050);
-                            xp._scratchBuffer = ip;
-                            const cp = new AbortController;
-                            let Op = "afterPaint";
-                            const op = () => {
-                                var Op;
-                                if (xp._audioUnlocked) return;
-                                null === (Op = xp._autoResume) || void 0 === Op || Op.call(xp);
-                                const op = pp.createBufferSource();
-                                op.buffer = ip, op.connect(pp.destination), op.start(0), pp.resume().catch((() => {})), op.onended = () => {
-                                  op.disconnect(0), xp._audioUnlocked = !0, cp.abort();
-                                  for (const pp of xp._howls) pp._emit("unlock")
+                          lT.init = function(TT) {
+                            return HT(), LT.call(this, TT)
+                          }, (0, gT.j)() && (nT._unlockAudio = () => {
+                            const TT = nT.ctx;
+                            if (nT._audioUnlocked || !TT) return;
+                            nT.autoUnlock = !1;
+                            const UT = TT.createBuffer(1, 1, 22050);
+                            nT._scratchBuffer = UT;
+                            const mT = new AbortController;
+                            let WT = "afterPaint";
+                            const zT = () => {
+                                var WT;
+                                if (nT._audioUnlocked) return;
+                                null === (WT = nT._autoResume) || void 0 === WT || WT.call(nT);
+                                const zT = TT.createBufferSource();
+                                zT.buffer = UT, zT.connect(TT.destination), zT.start(0), TT.resume().catch((() => {})), zT.onended = () => {
+                                  zT.disconnect(0), nT._audioUnlocked = !0, mT.abort();
+                                  for (const TT of nT._howls) TT._emit("unlock")
                                 }
                               },
-                              Lp = () => {
-                                Wp(), op()
+                              HT = () => {
+                                pT(), zT()
                               },
-                              Yp = ip => {
-                                if (Wp(), "inTap" === Op) {
-                                  if ("running" === pp.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), op()
-                                } else "afterPaint" === Op && (Op = "queued", (0, Ip.e)(ip.timeStamp, (() => {
-                                  Op = "inTap", op()
+                              kT = UT => {
+                                if (pT(), "inTap" === WT) {
+                                  if ("running" === TT.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), zT()
+                                } else "afterPaint" === WT && (WT = "queued", (0, MT.e)(UT.timeStamp, (() => {
+                                  WT = "inTap", zT()
                                 })))
                               };
-                            for (const Ip of ["touchstart", "touchend"]) document.addEventListener(Ip, Lp, {
+                            for (const MT of ["touchstart", "touchend"]) document.addEventListener(MT, HT, {
                               capture: !0,
-                              signal: cp.signal
+                              signal: mT.signal
                             });
-                            for (const Ip of Sp.c) document.addEventListener(Ip, Yp, {
+                            for (const MT of gT.c) document.addEventListener(MT, kT, {
                               capture: !0,
-                              signal: cp.signal
+                              signal: mT.signal
                             })
                           });
-                          let yp = 0;
-                          const Up = null === (Op = xp._autoSuspend) || void 0 === Op ? void 0 : Op.bind(op.Howler);
+                          let BT = 0;
+                          const ZT = null === (WT = nT._autoSuspend) || void 0 === WT ? void 0 : WT.bind(zT.Howler);
 
-                          function wp() {
-                            vp();
+                          function cT() {
+                            vT();
                             const {
-                              ctx: pp,
-                              masterGain: ip
-                            } = xp;
-                            return pp && ip ? {
-                              ctx: pp,
-                              destination: ip,
-                              holdAwake: pp => {
-                                var ip, cp;
-                                (yp += pp ? 1 : -1, pp) ? null === (ip = xp._autoResume) || void 0 === ip || ip.call(xp): null === (cp = xp._autoSuspend) || void 0 === cp || cp.call(xp)
+                              ctx: TT,
+                              masterGain: UT
+                            } = nT;
+                            return TT && UT ? {
+                              ctx: TT,
+                              destination: UT,
+                              holdAwake: TT => {
+                                var UT, mT;
+                                (BT += TT ? 1 : -1, TT) ? null === (UT = nT._autoResume) || void 0 === UT || UT.call(nT): null === (mT = nT._autoSuspend) || void 0 === mT || mT.call(nT)
                               },
                               wake: () => {
-                                var ip;
-                                "running" !== pp.state && (null === (ip = xp._autoResume) || void 0 === ip || ip.call(xp), pp.resume().catch((() => {})))
+                                var UT;
+                                "running" !== TT.state && (null === (UT = nT._autoResume) || void 0 === UT || UT.call(nT), TT.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function vp() {
-                            var pp;
-                            (xp.volume(), xp.ctx && xp.autoUnlock) && (null === (pp = xp._unlockAudio) || void 0 === pp || pp.call(xp))
+                          function vT() {
+                            var TT;
+                            (nT.volume(), nT.ctx && nT.autoUnlock) && (null === (TT = nT._unlockAudio) || void 0 === TT || TT.call(nT))
                           }
-                          Up && (xp._autoSuspend = () => yp > 0 ? op.Howler : Up())
-                        }, 4984: (pp, ip, cp) => {
-                          function Op(pp) {
+                          ZT && (nT._autoSuspend = () => BT > 0 ? zT.Howler : ZT())
+                        }, 4972: (TT, UT, mT) => {
+                          function WT(TT) {
                             return {
-                              notAfter: pp
+                              notAfter: TT
                             }
                           }
-                          cp.d(ip, {
-                            c: () => Lp,
-                            f: () => Yp,
-                            j: () => xp,
-                            k: () => Op,
-                            m: () => op,
-                            n: () => Ip,
-                            p: () => Sp,
-                            r: () => Dp,
-                            s: () => Ap
+                          mT.d(UT, {
+                            d: () => HT,
+                            e: () => kT,
+                            f: () => nT,
+                            j: () => WT,
+                            n: () => zT,
+                            o: () => MT,
+                            p: () => gT,
+                            s: () => jT,
+                            v: () => lT
                           });
-                          const op = Op("\\w$."),
-                            Ip = Op("\\w.,");
+                          const zT = WT("\\w$."),
+                            MT = WT("\\w.,");
 
-                          function Sp(pp) {
-                            return ip => Lp(ip, pp)
+                          function gT(TT) {
+                            return UT => HT(UT, TT)
                           }
 
-                          function xp(pp) {
-                            return ip => !pp.test(ip.input.slice(0, ip.index))
+                          function nT(TT) {
+                            return UT => !TT.test(UT.input.slice(0, UT.index))
                           }
 
-                          function Lp(pp, ip) {
-                            return pp.index > 0 && new RegExp(`[${ip}]`).test(pp.input[pp.index - 1])
+                          function HT(TT, UT) {
+                            return TT.index > 0 && new RegExp(`[${UT}]`).test(TT.input[TT.index - 1])
                           }
 
-                          function Yp(pp, ip, cp) {
-                            return function(pp) {
-                              return void 0 !== pp && "function" !== typeof pp
-                            }(cp) ? function(pp, ip, cp) {
-                              const Op = ip.flags.replace(/[gy]/g, ""),
-                                op = new RegExp(`[^${cp}](?:${ip.source})`, `${Op}g`),
-                                Ip = [],
-                                Sp = cp => {
-                                  const Op = cp.index + cp[0].length;
-                                  return ("" === cp[0] ? Pp(pp, ip, Op) : Op) - 1
+                          function kT(TT, UT, mT) {
+                            return function(TT) {
+                              return void 0 !== TT && "function" !== typeof TT
+                            }(mT) ? function(TT, UT, mT) {
+                              const WT = UT.flags.replace(/[gy]/g, ""),
+                                zT = new RegExp(`[^${mT}](?:${UT.source})`, `${WT}g`),
+                                MT = [],
+                                gT = mT => {
+                                  const WT = mT.index + mT[0].length;
+                                  return ("" === mT[0] ? LT(TT, UT, WT) : WT) - 1
                                 },
-                                xp = new RegExp(`(?:${ip.source})`, `${Op}y`).exec(pp);
-                              if (xp) {
-                                if (Ip.push(xp), !ip.global) return Ip;
-                                op.lastIndex = Sp(xp)
+                                nT = new RegExp(`(?:${UT.source})`, `${WT}y`).exec(TT);
+                              if (nT) {
+                                if (MT.push(nT), !UT.global) return MT;
+                                zT.lastIndex = gT(nT)
                               }
-                              for (let Lp = op.exec(pp); Lp; Lp = op.exec(pp)) {
-                                const cp = Pp(pp, ip, Lp.index) - Lp.index;
-                                if (Lp[0] = Lp[0].slice(cp), Lp.index += cp, Ip.push(Lp), !ip.global) break;
-                                op.lastIndex = Sp(Lp)
+                              for (let HT = zT.exec(TT); HT; HT = zT.exec(TT)) {
+                                const mT = LT(TT, UT, HT.index) - HT.index;
+                                if (HT[0] = HT[0].slice(mT), HT.index += mT, MT.push(HT), !UT.global) break;
+                                zT.lastIndex = gT(HT)
                               }
-                              return Ip
-                            }(pp, ip, cp.notAfter) : function(pp, ip, cp) {
-                              const Op = new RegExp(ip.source, `${ip.flags.replace(/[gy]/g,"")}g`),
-                                op = [];
-                              for (let Ip = Op.exec(pp); Ip; Ip = Op.exec(pp))
-                                if (!cp || cp(Ip)) {
-                                  if (op.push(Ip), !ip.global) break;
-                                  "" === Ip[0] && (Op.lastIndex = Pp(pp, ip, Op.lastIndex))
-                                } else Op.lastIndex = Pp(pp, ip, Ip.index);
-                              return op
-                            }(pp, ip, cp)
+                              return MT
+                            }(TT, UT, mT.notAfter) : function(TT, UT, mT) {
+                              const WT = new RegExp(UT.source, `${UT.flags.replace(/[gy]/g,"")}g`),
+                                zT = [];
+                              for (let MT = WT.exec(TT); MT; MT = WT.exec(TT))
+                                if (!mT || mT(MT)) {
+                                  if (zT.push(MT), !UT.global) break;
+                                  "" === MT[0] && (WT.lastIndex = LT(TT, UT, WT.lastIndex))
+                                } else WT.lastIndex = LT(TT, UT, MT.index);
+                              return zT
+                            }(TT, UT, mT)
                           }
 
-                          function Dp(pp, ip, cp, Op) {
-                            let op = "",
-                              Ip = 0;
-                            for (const Sp of Yp(pp, ip, cp)) op += pp.slice(Ip, Sp.index) + Op(Sp), Ip = Sp.index + Sp[0].length;
-                            return op + pp.slice(Ip)
+                          function jT(TT, UT, mT, WT) {
+                            let zT = "",
+                              MT = 0;
+                            for (const gT of kT(TT, UT, mT)) zT += TT.slice(MT, gT.index) + WT(gT), MT = gT.index + gT[0].length;
+                            return zT + TT.slice(MT)
                           }
 
-                          function Ap(pp, ip, cp) {
-                            const Op = [];
-                            let op = 0;
-                            for (const Ip of Yp(pp, ip, cp)) Op.push(pp.slice(op, Ip.index)), op = Ip.index + Ip[0].length;
-                            return [...Op, pp.slice(op)]
+                          function lT(TT, UT, mT) {
+                            const WT = [];
+                            let zT = 0;
+                            for (const MT of kT(TT, UT, mT)) WT.push(TT.slice(zT, MT.index)), zT = MT.index + MT[0].length;
+                            return [...WT, TT.slice(zT)]
                           }
 
-                          function Pp(pp, ip, cp) {
-                            var Op;
-                            return cp + (ip.unicode && (null !== (Op = pp.codePointAt(cp)) && void 0 !== Op ? Op : 0) > 65535 ? 2 : 1)
+                          function LT(TT, UT, mT) {
+                            var WT;
+                            return mT + (UT.unicode && (null !== (WT = TT.codePointAt(mT)) && void 0 !== WT ? WT : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4933: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            e: () => op,
-                            i: () => Lp,
-                            j: () => Ip,
-                            n: () => Sp,
-                            o: () => xp,
-                            q: () => wp,
-                            r: () => Dp,
-                            u: () => Ap,
-                            v: () => Up,
-                            y: () => Wp
+                        }, 4918: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            b: () => zT,
+                            d: () => HT,
+                            h: () => MT,
+                            k: () => gT,
+                            m: () => nT,
+                            o: () => cT,
+                            r: () => jT,
+                            t: () => lT,
+                            v: () => ZT,
+                            y: () => pT
                           });
-                          var Op = cp(1603);
-                          const op = 24e3,
-                            Ip = "/docs/llms.txt",
-                            Sp = `${Op.b}${Ip}`,
-                            xp = "/llms.txt",
-                            Lp = "/docs/llms-full.txt";
+                          var WT = mT(1710);
+                          const zT = 24e3,
+                            MT = "/docs/llms.txt",
+                            gT = `${WT.b}${MT}`,
+                            nT = "/llms.txt",
+                            HT = "/docs/llms-full.txt";
 
-                          function Yp(pp) {
-                            return pp || "index"
+                          function kT(TT) {
+                            return TT || "index"
                           }
 
-                          function Dp(pp) {
-                            return `/docs/${Yp(pp)}.md`
+                          function jT(TT) {
+                            return `/docs/${kT(TT)}.md`
                           }
 
-                          function Ap(pp, ip) {
-                            return `/docs/${Yp(pp)}/${ip+1}.md`
+                          function lT(TT, UT) {
+                            return `/docs/${kT(TT)}/${UT+1}.md`
                           }
-                          const Pp = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const LT = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Wp(pp) {
-                            const ip = Pp.exec(pp);
-                            return null === ip ? null : {
-                              name: ip[1],
-                              part: void 0 === ip[2] ? null : Number(ip[2])
+                          function pT(TT) {
+                            const UT = LT.exec(TT);
+                            return null === UT ? null : {
+                              name: UT[1],
+                              part: void 0 === UT[2] ? null : Number(UT[2])
                             }
                           }
-                          const yp = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const BT = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function Up(pp) {
-                            const ip = yp.exec(pp);
-                            if (null === ip) return null;
-                            const [, cp = "", Op] = ip;
-                            return void 0 === Op ? Dp(cp) : Ap(cp, Number(Op) - 1)
+                          function ZT(TT) {
+                            const UT = BT.exec(TT);
+                            if (null === UT) return null;
+                            const [, mT = "", WT] = UT;
+                            return void 0 === WT ? jT(mT) : lT(mT, Number(WT) - 1)
                           }
 
-                          function wp(pp) {
-                            return `/docsHtml/${Yp(pp)}.html`
+                          function cT(TT) {
+                            return `/docsHtml/${kT(TT)}.html`
                           }
-                        }, 4970: (pp, ip, cp) => {
-                          cp.d(ip, {
-                            d: () => op,
-                            f: () => Op,
-                            i: () => Ip,
-                            m: () => Lp,
-                            o: () => Sp
+                        }, 4948: (TT, UT, mT) => {
+                          mT.d(UT, {
+                            d: () => zT,
+                            e: () => WT,
+                            h: () => MT,
+                            k: () => HT,
+                            l: () => gT
                           });
-                          const Op = ["sine", "triangle", "square", "sawtooth"],
-                            op = 55,
-                            Ip = {
+                          const WT = ["sine", "triangle", "square", "sawtooth"],
+                            zT = 55,
+                            MT = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function Sp(pp) {
-                            return "string" !== typeof pp ? pp : Object.hasOwn(Ip, pp) ? Ip[pp] : null
+                          function gT(TT) {
+                            return "string" !== typeof TT ? TT : Object.hasOwn(MT, TT) ? MT[TT] : null
                           }
 
-                          function xp(pp, ip, cp) {
-                            return Math.min(cp, Math.max(ip, pp))
+                          function nT(TT, UT, mT) {
+                            return Math.min(mT, Math.max(UT, TT))
                           }
 
-                          function Lp(pp) {
-                            const ip = xp(pp.durationMs, 10, 500),
-                              cp = xp(pp.attackMs, 0, ip),
+                          function HT(TT) {
+                            const UT = nT(TT.durationMs, 10, 500),
+                              mT = nT(TT.attackMs, 0, UT),
                               {
-                                intonation: op
-                              } = pp;
+                                intonation: zT
+                              } = TT;
                             return {
-                              waveform: Op.includes(pp.waveform) ? pp.waveform : "sine",
-                              pitchHz: xp(pp.pitchHz, 20, 4e3),
-                              glideSemitones: xp(pp.glideSemitones, -24, 24),
-                              durationMs: ip,
-                              attackMs: cp,
-                              releaseMs: xp(pp.releaseMs, 0, ip - cp),
-                              lowpassHz: null === pp.lowpassHz ? null : xp(pp.lowpassHz, 20, 2e4),
-                              volume: xp(pp.volume, 0, 2),
+                              waveform: WT.includes(TT.waveform) ? TT.waveform : "sine",
+                              pitchHz: nT(TT.pitchHz, 20, 4e3),
+                              glideSemitones: nT(TT.glideSemitones, -24, 24),
+                              durationMs: UT,
+                              attackMs: mT,
+                              releaseMs: nT(TT.releaseMs, 0, UT - mT),
+                              lowpassHz: null === TT.lowpassHz ? null : nT(TT.lowpassHz, 20, 2e4),
+                              volume: nT(TT.volume, 0, 2),
                               intonation: {
-                                variationSemitones: xp(op.variationSemitones, 0, 6),
-                                declineSemitones: xp(op.declineSemitones, 0, 12),
-                                questionRiseSemitones: xp(op.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: xp(op.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: nT(zT.variationSemitones, 0, 6),
+                                declineSemitones: nT(zT.declineSemitones, 0, 12),
+                                questionRiseSemitones: nT(zT.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: nT(zT.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: xp(pp.syllableMs, 25, 200)
+                              syllableMs: nT(TT.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const pp in modules) Object.freeze(modules[pp]);
+                      for (const TT in modules) Object.freeze(modules[TT]);

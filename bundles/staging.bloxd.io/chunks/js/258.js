@@ -1,83 +1,83 @@
 export const id = 258;
 export const ids = [258];
 export const modules = {
-  40273: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Pp,
-      e: () => Ap,
-      f: () => Lp,
-      i: () => Wp,
-      m: () => Yp,
-      p: () => xp,
-      s: () => Dp
+  40171: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => LT,
+      h: () => lT,
+      l: () => HT,
+      o: () => pT,
+      p: () => kT,
+      s: () => nT,
+      v: () => jT
     });
-    var Op = cp(38905),
-      op = cp(40276);
+    var WT = mT(38800),
+      zT = mT(40178);
 
-    function Ip(pp, ip, cp, Op) {
-      switch (ip) {
+    function MT(TT, UT, mT, WT) {
+      switch (UT) {
         case 5120: {
-          let ip = pp.getInt8(cp);
-          return Op && (ip = Math.max(ip / 127, -1)), ip
+          let UT = TT.getInt8(mT);
+          return WT && (UT = Math.max(UT / 127, -1)), UT
         }
         case 5121: {
-          let ip = pp.getUint8(cp);
-          return Op && (ip /= 255), ip
+          let UT = TT.getUint8(mT);
+          return WT && (UT /= 255), UT
         }
         case 5122: {
-          let ip = pp.getInt16(cp, !0);
-          return Op && (ip = Math.max(ip / 32767, -1)), ip
+          let UT = TT.getInt16(mT, !0);
+          return WT && (UT = Math.max(UT / 32767, -1)), UT
         }
         case 5123: {
-          let ip = pp.getUint16(cp, !0);
-          return Op && (ip /= 65535), ip
+          let UT = TT.getUint16(mT, !0);
+          return WT && (UT /= 65535), UT
         }
         case 5131:
-          return (0, op.c)(pp.getUint16(cp, !0));
+          return (0, zT.c)(TT.getUint16(mT, !0));
         case 5124:
-          return pp.getInt32(cp, !0);
+          return TT.getInt32(mT, !0);
         case 5125:
-          return pp.getUint32(cp, !0);
+          return TT.getUint32(mT, !0);
         case 5126:
-          return pp.getFloat32(cp, !0);
+          return TT.getFloat32(mT, !0);
         default:
-          throw new Error(`Invalid component type ${ip}`)
+          throw new Error(`Invalid component type ${UT}`)
       }
     }
 
-    function Sp(pp, ip, cp, Op, Ip) {
-      switch (ip) {
+    function gT(TT, UT, mT, WT, MT) {
+      switch (UT) {
         case 5120:
-          Op && (Ip = Math.round(127 * Ip)), pp.setInt8(cp, Ip);
+          WT && (MT = Math.round(127 * MT)), TT.setInt8(mT, MT);
           break;
         case 5121:
-          Op && (Ip = Math.round(255 * Ip)), pp.setUint8(cp, Ip);
+          WT && (MT = Math.round(255 * MT)), TT.setUint8(mT, MT);
           break;
         case 5122:
-          Op && (Ip = Math.round(32767 * Ip)), pp.setInt16(cp, Ip, !0);
+          WT && (MT = Math.round(32767 * MT)), TT.setInt16(mT, MT, !0);
           break;
         case 5123:
-          Op && (Ip = Math.round(65535 * Ip)), pp.setUint16(cp, Ip, !0);
+          WT && (MT = Math.round(65535 * MT)), TT.setUint16(mT, MT, !0);
           break;
         case 5131:
-          pp.setUint16(cp, (0, op.h)(Ip), !0);
+          TT.setUint16(mT, (0, zT.j)(MT), !0);
           break;
         case 5124:
-          pp.setInt32(cp, Ip, !0);
+          TT.setInt32(mT, MT, !0);
           break;
         case 5125:
-          pp.setUint32(cp, Ip, !0);
+          TT.setUint32(mT, MT, !0);
           break;
         case 5126:
-          pp.setFloat32(cp, Ip, !0);
+          TT.setFloat32(mT, MT, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${ip}`)
+          throw new Error(`Invalid component type ${UT}`)
       }
     }
 
-    function xp(pp) {
-      switch (pp) {
+    function nT(TT) {
+      switch (TT) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${pp}'`)
+          throw new Error(`Invalid type '${TT}'`)
       }
     }
 
-    function Lp(pp, ip, cp, Op, op, Lp, Yp, Dp) {
-      const Ap = new Array(Op),
-        Pp = new Array(Op);
-      if (pp instanceof Array) {
-        let op = ip / 4;
-        const Ip = cp / 4;
-        for (let ip = 0; ip < Lp; ip += Op) {
-          for (let ip = 0; ip < Op; ip++) Ap[ip] = Pp[ip] = pp[op + ip];
-          Dp(Pp, ip);
-          for (let ip = 0; ip < Op; ip++) Ap[ip] !== Pp[ip] && (pp[op + ip] = Pp[ip]);
-          op += Ip
+    function HT(TT, UT, mT, WT, zT, HT, kT, jT) {
+      const lT = new Array(WT),
+        LT = new Array(WT);
+      if (TT instanceof Array) {
+        let zT = UT / 4;
+        const MT = mT / 4;
+        for (let UT = 0; UT < HT; UT += WT) {
+          for (let UT = 0; UT < WT; UT++) lT[UT] = LT[UT] = TT[zT + UT];
+          jT(LT, UT);
+          for (let UT = 0; UT < WT; UT++) lT[UT] !== LT[UT] && (TT[zT + UT] = LT[UT]);
+          zT += MT
         }
       } else {
-        const Wp = ArrayBuffer.isView(pp) ? new DataView(pp.buffer, pp.byteOffset, pp.byteLength) : new DataView(pp),
-          yp = xp(op);
-        for (let pp = 0; pp < Lp; pp += Op) {
-          for (let pp = 0, cp = ip; pp < Op; pp++, cp += yp) Ap[pp] = Pp[pp] = Ip(Wp, op, cp, Yp);
-          Dp(Pp, pp);
-          for (let pp = 0, cp = ip; pp < Op; pp++, cp += yp) Ap[pp] !== Pp[pp] && Sp(Wp, op, cp, Yp, Pp[pp]);
-          ip += cp
+        const pT = ArrayBuffer.isView(TT) ? new DataView(TT.buffer, TT.byteOffset, TT.byteLength) : new DataView(TT),
+          BT = nT(zT);
+        for (let TT = 0; TT < HT; TT += WT) {
+          for (let TT = 0, mT = UT; TT < WT; TT++, mT += BT) lT[TT] = LT[TT] = MT(pT, zT, mT, kT);
+          jT(LT, TT);
+          for (let TT = 0, mT = UT; TT < WT; TT++, mT += BT) lT[TT] !== LT[TT] && gT(pT, zT, mT, kT, LT[TT]);
+          UT += mT
         }
       }
     }
 
-    function Yp(pp, ip, cp, op, Ip, Sp, Yp, Dp) {
-      const Ap = ip * xp(cp),
-        Pp = Yp * ip;
-      if (5126 !== cp || Ip !== Ap) {
-        const Op = new Float32Array(Pp);
-        return Lp(pp, op, Ip, ip, cp, Pp, Sp, ((pp, cp) => {
-          for (let op = 0; op < ip; op++) Op[cp + op] = pp[op]
-        })), Op
+    function kT(TT, UT, mT, zT, MT, gT, kT, jT) {
+      const lT = UT * nT(mT),
+        LT = kT * UT;
+      if (5126 !== mT || MT !== lT) {
+        const WT = new Float32Array(LT);
+        return HT(TT, zT, MT, UT, mT, LT, gT, ((TT, mT) => {
+          for (let zT = 0; zT < UT; zT++) WT[mT + zT] = TT[zT]
+        })), WT
       }
-      if (!(pp instanceof Array || pp instanceof Float32Array) || 0 !== op || pp.length !== Pp) {
-        if (pp instanceof Array) {
-          const ip = op / 4;
-          return pp.slice(ip, ip + Pp)
+      if (!(TT instanceof Array || TT instanceof Float32Array) || 0 !== zT || TT.length !== LT) {
+        if (TT instanceof Array) {
+          const UT = zT / 4;
+          return TT.slice(UT, UT + LT)
         }
-        if (ArrayBuffer.isView(pp)) {
-          const ip = pp.byteOffset + op;
-          return 0 !== (3 & ip) && (Op.e.Warn("Float array must be aligned to 4-bytes border"), Dp = !0), Dp ? new Float32Array(pp.buffer.slice(ip, ip + Pp * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(pp.buffer, ip, Pp)
+        if (ArrayBuffer.isView(TT)) {
+          const UT = TT.byteOffset + zT;
+          return 0 !== (3 & UT) && (WT.b.Warn("Float array must be aligned to 4-bytes border"), jT = !0), jT ? new Float32Array(TT.buffer.slice(UT, UT + LT * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(TT.buffer, UT, LT)
         }
-        return new Float32Array(pp, op, Pp)
+        return new Float32Array(TT, zT, LT)
       }
-      return Dp ? pp.slice() : pp
+      return jT ? TT.slice() : TT
     }
 
-    function Dp(pp, ip, cp, op, Ip, Sp, Yp) {
-      const Dp = xp(cp),
-        Ap = function(pp) {
-          switch (pp) {
+    function jT(TT, UT, mT, zT, MT, gT, kT) {
+      const jT = nT(mT),
+        lT = function(TT) {
+          switch (TT) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${pp}'`)
+              throw new Error(`Invalid component type '${TT}'`)
           }
-        }(cp),
-        Pp = Sp * ip;
-      if (Array.isArray(pp)) {
-        if (0 !== (3 & op) || 0 !== (3 & Ip)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Op = op / 4,
-          xp = Ip / 4;
-        if (Op + (Sp - 1) * xp + ip > pp.length) throw new Error("Last accessed index is out of bounds.");
-        if (xp < ip) throw new Error("Data stride cannot be smaller than the component size.");
-        if (xp !== ip) {
-          const Op = new Ap(Pp);
-          return Lp(pp, op, Ip, ip, cp, Pp, !1, ((pp, cp) => {
-            for (let op = 0; op < ip; op++) Op[cp + op] = pp[op]
-          })), Op
+        }(mT),
+        LT = gT * UT;
+      if (Array.isArray(TT)) {
+        if (0 !== (3 & zT) || 0 !== (3 & MT)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const WT = zT / 4,
+          nT = MT / 4;
+        if (WT + (gT - 1) * nT + UT > TT.length) throw new Error("Last accessed index is out of bounds.");
+        if (nT < UT) throw new Error("Data stride cannot be smaller than the component size.");
+        if (nT !== UT) {
+          const WT = new lT(LT);
+          return HT(TT, zT, MT, UT, mT, LT, !1, ((TT, mT) => {
+            for (let zT = 0; zT < UT; zT++) WT[mT + zT] = TT[zT]
+          })), WT
         }
-        return new Ap(pp.slice(Op, Op + Pp))
+        return new lT(TT.slice(WT, WT + LT))
       }
-      let Wp, yp = op;
-      ArrayBuffer.isView(pp) ? (Wp = pp.buffer, yp += pp.byteOffset) : Wp = pp;
-      if (yp + (Sp - 1) * Ip + ip * Dp > Wp.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const Up = ip * Dp;
-      if (Ip < Up) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (Ip !== Up) {
-        const pp = new Ap(Pp),
-          cp = new Uint8Array(Wp, yp),
-          Op = new Uint8Array(pp.buffer),
-          op = ip * Dp;
-        for (let ip = 0, xp = 0, Lp = 0; ip < Sp; ip++, xp += Ip, Lp += op) Op.set(cp.subarray(xp, xp + op), Lp);
-        return pp
+      let pT, BT = zT;
+      ArrayBuffer.isView(TT) ? (pT = TT.buffer, BT += TT.byteOffset) : pT = TT;
+      if (BT + (gT - 1) * MT + UT * jT > pT.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const ZT = UT * jT;
+      if (MT < ZT) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (MT !== ZT) {
+        const TT = new lT(LT),
+          mT = new Uint8Array(pT, BT),
+          WT = new Uint8Array(TT.buffer),
+          zT = UT * jT;
+        for (let UT = 0, nT = 0, HT = 0; UT < gT; UT++, nT += MT, HT += zT) WT.set(mT.subarray(nT, nT + zT), HT);
+        return TT
       }
-      return 1 !== Dp && 0 !== (yp & Dp - 1) && (Op.e.Warn("Array must be aligned to border of element size. Data will be copied."), Yp = !0), Yp ? new Ap(Wp.slice(yp, yp + Pp * Dp)) : new Ap(Wp, yp, Pp)
+      return 1 !== jT && 0 !== (BT & jT - 1) && (WT.b.Warn("Array must be aligned to border of element size. Data will be copied."), kT = !0), kT ? new lT(pT.slice(BT, BT + LT * jT)) : new lT(pT, BT, LT)
     }
 
-    function Ap(pp, ip, cp, op, Ip, Sp, Yp, Dp) {
-      const Ap = ip * xp(cp),
-        Pp = Yp * ip;
-      if (Dp.length !== Pp) throw new Error("Output length is not valid");
-      if (5126 === cp && Ip === Ap)
-        if (pp instanceof Array) {
-          const ip = op / 4;
-          Dp.set(pp, ip)
-        } else if (ArrayBuffer.isView(pp)) {
-        const ip = pp.byteOffset + op;
-        if (0 !== (3 & ip)) return Op.e.Warn("Float array must be aligned to 4-bytes border"), void Dp.set(new Float32Array(pp.buffer.slice(ip, ip + Pp * Float32Array.BYTES_PER_ELEMENT)));
-        const cp = new Float32Array(pp.buffer, ip, Pp);
-        Dp.set(cp)
+    function lT(TT, UT, mT, zT, MT, gT, kT, jT) {
+      const lT = UT * nT(mT),
+        LT = kT * UT;
+      if (jT.length !== LT) throw new Error("Output length is not valid");
+      if (5126 === mT && MT === lT)
+        if (TT instanceof Array) {
+          const UT = zT / 4;
+          jT.set(TT, UT)
+        } else if (ArrayBuffer.isView(TT)) {
+        const UT = TT.byteOffset + zT;
+        if (0 !== (3 & UT)) return WT.b.Warn("Float array must be aligned to 4-bytes border"), void jT.set(new Float32Array(TT.buffer.slice(UT, UT + LT * Float32Array.BYTES_PER_ELEMENT)));
+        const mT = new Float32Array(TT.buffer, UT, LT);
+        jT.set(mT)
       } else {
-        const ip = new Float32Array(pp, op, Pp);
-        Dp.set(ip)
-      } else Lp(pp, op, Ip, ip, cp, Pp, Sp, ((pp, cp) => {
-        for (let Op = 0; Op < ip; Op++) Dp[cp + Op] = pp[Op]
+        const UT = new Float32Array(TT, zT, LT);
+        jT.set(UT)
+      } else HT(TT, zT, MT, UT, mT, LT, gT, ((TT, mT) => {
+        for (let WT = 0; WT < UT; WT++) jT[mT + WT] = TT[WT]
       }))
     }
 
-    function Pp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(pp)) {
-        for (let op = 0; op < ip; op++)
-          if (pp[cp + op] - Op > 65535) return !0;
+    function LT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(TT)) {
+        for (let zT = 0; zT < UT; zT++)
+          if (TT[mT + zT] - WT > 65535) return !0;
         return !1
       }
-      return 4 === pp.BYTES_PER_ELEMENT
+      return 4 === TT.BYTES_PER_ELEMENT
     }
 
-    function Wp(pp) {
-      const ip = pp.buffer;
-      if (ip instanceof ArrayBuffer) return pp;
-      const cp = new ArrayBuffer(pp.byteLength);
-      return new Uint8Array(cp).set(new Uint8Array(ip, pp.byteOffset, pp.byteLength)), cp
+    function pT(TT) {
+      const UT = TT.buffer;
+      if (UT instanceof ArrayBuffer) return TT;
+      const mT = new ArrayBuffer(TT.byteLength);
+      return new Uint8Array(mT).set(new Uint8Array(UT, TT.byteOffset, TT.byteLength)), mT
     }
   },
-  40103: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => mp,
-      c: () => jp,
-      j: () => kp,
-      g: () => lp,
-      k: () => Qp
+  39972: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => YT,
+      d: () => OT,
+      h: () => eT,
+      g: () => yT,
+      l: () => XT
     });
-    class Op {
+    class WT {
       constructor() {
         this.children = []
       }
-      isValid(pp) {
+      isValid(TT) {
         return !0
       }
-      process(pp, ip, cp) {
-        let Op = "";
+      process(TT, UT, mT) {
+        let WT = "";
         if (this.line) {
-          let cp = this.line;
-          const op = ip.processor;
-          if (op) {
-            op.lineProcessor && (cp = op.lineProcessor(cp, ip.isFragment, ip.processingContext));
-            const Op = ip.processor?.attributeKeywordName ?? "attribute",
-              Ip = ip.isFragment && ip.processor?.varyingFragmentKeywordName ? ip.processor?.varyingFragmentKeywordName : !ip.isFragment && ip.processor?.varyingVertexKeywordName ? ip.processor?.varyingVertexKeywordName : "varying";
-            if (!ip.isFragment && op.attributeProcessor && this.line.startsWith(Op)) cp = op.attributeProcessor(this.line, pp, ip.processingContext);
-            else if (op.varyingProcessor && (op.varyingCheck?.(this.line, ip.isFragment) || !op.varyingCheck && this.line.startsWith(Ip))) cp = op.varyingProcessor(this.line, ip.isFragment, pp, ip.processingContext);
-            else if (op.uniformProcessor && op.uniformRegexp && op.uniformRegexp.test(this.line)) ip.lookForClosingBracketForUniformBuffer || (cp = op.uniformProcessor(this.line, ip.isFragment, pp, ip.processingContext));
-            else if (op.uniformBufferProcessor && op.uniformBufferRegexp && op.uniformBufferRegexp.test(this.line)) ip.lookForClosingBracketForUniformBuffer || (cp = op.uniformBufferProcessor(this.line, ip.isFragment, ip.processingContext), ip.lookForClosingBracketForUniformBuffer = !0);
-            else if (op.textureProcessor && op.textureRegexp && op.textureRegexp.test(this.line)) cp = op.textureProcessor(this.line, ip.isFragment, pp, ip.processingContext);
-            else if ((op.uniformProcessor || op.uniformBufferProcessor) && this.line.startsWith("uniform") && !ip.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? op.uniformProcessor && (cp = op.uniformProcessor(this.line, ip.isFragment, pp, ip.processingContext)) : op.uniformBufferProcessor && (cp = op.uniformBufferProcessor(this.line, ip.isFragment, ip.processingContext), ip.lookForClosingBracketForUniformBuffer = !0)
+          let mT = this.line;
+          const zT = UT.processor;
+          if (zT) {
+            zT.lineProcessor && (mT = zT.lineProcessor(mT, UT.isFragment, UT.processingContext));
+            const WT = UT.processor?.attributeKeywordName ?? "attribute",
+              MT = UT.isFragment && UT.processor?.varyingFragmentKeywordName ? UT.processor?.varyingFragmentKeywordName : !UT.isFragment && UT.processor?.varyingVertexKeywordName ? UT.processor?.varyingVertexKeywordName : "varying";
+            if (!UT.isFragment && zT.attributeProcessor && this.line.startsWith(WT)) mT = zT.attributeProcessor(this.line, TT, UT.processingContext);
+            else if (zT.varyingProcessor && (zT.varyingCheck?.(this.line, UT.isFragment) || !zT.varyingCheck && this.line.startsWith(MT))) mT = zT.varyingProcessor(this.line, UT.isFragment, TT, UT.processingContext);
+            else if (zT.uniformProcessor && zT.uniformRegexp && zT.uniformRegexp.test(this.line)) UT.lookForClosingBracketForUniformBuffer || (mT = zT.uniformProcessor(this.line, UT.isFragment, TT, UT.processingContext));
+            else if (zT.uniformBufferProcessor && zT.uniformBufferRegexp && zT.uniformBufferRegexp.test(this.line)) UT.lookForClosingBracketForUniformBuffer || (mT = zT.uniformBufferProcessor(this.line, UT.isFragment, UT.processingContext), UT.lookForClosingBracketForUniformBuffer = !0);
+            else if (zT.textureProcessor && zT.textureRegexp && zT.textureRegexp.test(this.line)) mT = zT.textureProcessor(this.line, UT.isFragment, TT, UT.processingContext);
+            else if ((zT.uniformProcessor || zT.uniformBufferProcessor) && this.line.startsWith("uniform") && !UT.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? zT.uniformProcessor && (mT = zT.uniformProcessor(this.line, UT.isFragment, TT, UT.processingContext)) : zT.uniformBufferProcessor && (mT = zT.uniformBufferProcessor(this.line, UT.isFragment, UT.processingContext), UT.lookForClosingBracketForUniformBuffer = !0)
             }
-            ip.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (ip.lookForClosingBracketForUniformBuffer = !1, op.endOfUniformBufferProcessor && (cp = op.endOfUniformBufferProcessor(this.line, ip.isFragment, ip.processingContext)))
+            UT.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (UT.lookForClosingBracketForUniformBuffer = !1, zT.endOfUniformBufferProcessor && (mT = zT.endOfUniformBufferProcessor(this.line, UT.isFragment, UT.processingContext)))
           }
-          Op += cp + "\n"
+          WT += mT + "\n"
         }
-        for (const op of this.children) Op += op.process(pp, ip, cp);
-        return this.additionalDefineKey && (pp[this.additionalDefineKey] = this.additionalDefineValue || "true", cp[this.additionalDefineKey] = pp[this.additionalDefineKey]), Op
+        for (const zT of this.children) WT += zT.process(TT, UT, mT);
+        return this.additionalDefineKey && (TT[this.additionalDefineKey] = this.additionalDefineValue || "true", mT[this.additionalDefineKey] = TT[this.additionalDefineKey]), WT
       }
     }
-    class op {
+    class zT {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(pp) {
+      set lines(TT) {
         this._lines.length = 0;
-        for (const ip of pp) {
-          if (!ip || "\r" === ip) continue;
-          if ("#" === ip[0]) {
-            this._lines.push(ip);
+        for (const UT of TT) {
+          if (!UT || "\r" === UT) continue;
+          if ("#" === UT[0]) {
+            this._lines.push(UT);
             continue
           }
-          const pp = ip.trim();
-          if (!pp) continue;
-          if (pp.startsWith("//")) {
-            this._lines.push(ip);
+          const TT = UT.trim();
+          if (!TT) continue;
+          if (TT.startsWith("//")) {
+            this._lines.push(UT);
             continue
           }
-          const cp = pp.indexOf(";");
-          if (-1 === cp) this._lines.push(pp);
-          else if (cp === pp.length - 1) pp.length > 1 && this._lines.push(pp);
+          const mT = TT.indexOf(";");
+          if (-1 === mT) this._lines.push(TT);
+          else if (mT === TT.length - 1) TT.length > 1 && this._lines.push(TT);
           else {
-            const pp = ip.split(";");
-            for (let ip = 0; ip < pp.length; ip++) {
-              let cp = pp[ip];
-              cp && (cp = cp.trim(), cp && this._lines.push(cp + (ip !== pp.length - 1 ? ";" : "")))
+            const TT = UT.split(";");
+            for (let UT = 0; UT < TT.length; UT++) {
+              let mT = TT[UT];
+              mT && (mT = mT.trim(), mT && this._lines.push(mT + (UT !== TT.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class Ip extends Op {
-      process(pp, ip, cp) {
-        for (let Op = 0; Op < this.children.length; Op++) {
-          const op = this.children[Op];
-          if (op.isValid(pp)) return op.process(pp, ip, cp)
+    class MT extends WT {
+      process(TT, UT, mT) {
+        for (let WT = 0; WT < this.children.length; WT++) {
+          const zT = this.children[WT];
+          if (zT.isValid(TT)) return zT.process(TT, UT, mT)
         }
         return ""
       }
     }
-    class Sp extends Op {
-      isValid(pp) {
-        return this.testExpression.isTrue(pp)
+    class gT extends WT {
+      isValid(TT) {
+        return this.testExpression.isTrue(TT)
       }
     }
-    class xp {
-      isTrue(pp) {
+    class nT {
+      isTrue(TT) {
         return !0
       }
-      static postfixToInfix(pp) {
-        const ip = [];
-        for (const cp of pp)
-          if (void 0 === xp._OperatorPriority[cp]) ip.push(cp);
+      static postfixToInfix(TT) {
+        const UT = [];
+        for (const mT of TT)
+          if (void 0 === nT._OperatorPriority[mT]) UT.push(mT);
           else {
-            const pp = ip[ip.length - 1],
-              Op = ip[ip.length - 2];
-            ip.length -= 2, ip.push(`(${Op}${cp}${pp})`)
-          } return ip[ip.length - 1]
+            const TT = UT[UT.length - 1],
+              WT = UT[UT.length - 2];
+            UT.length -= 2, UT.push(`(${WT}${mT}${TT})`)
+          } return UT[UT.length - 1]
       }
-      static infixToPostfix(pp) {
-        const ip = xp._InfixToPostfixCache.get(pp);
-        if (ip) return ip.accessTime = Date.now(), ip.result;
-        if (!pp.includes("&&") && !pp.includes("||") && !pp.includes(")") && !pp.includes("(")) return [pp];
-        const cp = [];
-        let Op = -1;
-        const op = () => {
-            Dp = Dp.trim(), "" !== Dp && (cp.push(Dp), Dp = "")
+      static infixToPostfix(TT) {
+        const UT = nT._InfixToPostfixCache.get(TT);
+        if (UT) return UT.accessTime = Date.now(), UT.result;
+        if (!TT.includes("&&") && !TT.includes("||") && !TT.includes(")") && !TT.includes("(")) return [TT];
+        const mT = [];
+        let WT = -1;
+        const zT = () => {
+            jT = jT.trim(), "" !== jT && (mT.push(jT), jT = "")
           },
-          Ip = pp => {
-            Op < xp._Stack.length - 1 && (xp._Stack[++Op] = pp)
+          MT = TT => {
+            WT < nT._Stack.length - 1 && (nT._Stack[++WT] = TT)
           },
-          Sp = () => xp._Stack[Op],
-          Lp = () => -1 === Op ? "!!INVALID EXPRESSION!!" : xp._Stack[Op--];
-        let Yp = 0,
-          Dp = "";
-        for (; Yp < pp.length;) {
-          const ip = pp.charAt(Yp),
-            Ap = Yp < pp.length - 1 ? pp.substring(Yp, 2 + Yp) : "";
-          if ("(" === ip) Dp = "", Ip(ip);
-          else if (")" === ip) {
-            for (op(); - 1 !== Op && "(" !== Sp();) cp.push(Lp());
-            Lp()
-          } else if (xp._OperatorPriority[Ap] > 1) {
-            for (op(); - 1 !== Op && xp._OperatorPriority[Sp()] >= xp._OperatorPriority[Ap];) cp.push(Lp());
-            Ip(Ap), Yp++
-          } else Dp += ip;
-          Yp++
+          gT = () => nT._Stack[WT],
+          HT = () => -1 === WT ? "!!INVALID EXPRESSION!!" : nT._Stack[WT--];
+        let kT = 0,
+          jT = "";
+        for (; kT < TT.length;) {
+          const UT = TT.charAt(kT),
+            lT = kT < TT.length - 1 ? TT.substring(kT, 2 + kT) : "";
+          if ("(" === UT) jT = "", MT(UT);
+          else if (")" === UT) {
+            for (zT(); - 1 !== WT && "(" !== gT();) mT.push(HT());
+            HT()
+          } else if (nT._OperatorPriority[lT] > 1) {
+            for (zT(); - 1 !== WT && nT._OperatorPriority[gT()] >= nT._OperatorPriority[lT];) mT.push(HT());
+            MT(lT), kT++
+          } else jT += UT;
+          kT++
         }
-        for (op(); - 1 !== Op;) "(" === Sp() ? Lp() : cp.push(Lp());
-        return xp._InfixToPostfixCache.size >= xp.InfixToPostfixCacheLimitSize && xp.ClearCache(), xp._InfixToPostfixCache.set(pp, {
-          result: cp,
+        for (zT(); - 1 !== WT;) "(" === gT() ? HT() : mT.push(HT());
+        return nT._InfixToPostfixCache.size >= nT.InfixToPostfixCacheLimitSize && nT.ClearCache(), nT._InfixToPostfixCache.set(TT, {
+          result: mT,
           accessTime: Date.now()
-        }), cp
+        }), mT
       }
       static ClearCache() {
-        const pp = Array.from(xp._InfixToPostfixCache.entries()).sort(((pp, ip) => pp[1].accessTime - ip[1].accessTime));
-        for (let ip = 0; ip < xp.InfixToPostfixCacheCleanupSize; ip++) xp._InfixToPostfixCache.delete(pp[ip][0])
+        const TT = Array.from(nT._InfixToPostfixCache.entries()).sort(((TT, UT) => TT[1].accessTime - UT[1].accessTime));
+        for (let UT = 0; UT < nT.InfixToPostfixCacheCleanupSize; UT++) nT._InfixToPostfixCache.delete(TT[UT][0])
       }
     }
-    xp.InfixToPostfixCacheLimitSize = 5e4, xp.InfixToPostfixCacheCleanupSize = 25e3, xp._InfixToPostfixCache = new Map, xp._OperatorPriority = {
+    nT.InfixToPostfixCacheLimitSize = 5e4, nT.InfixToPostfixCacheCleanupSize = 25e3, nT._InfixToPostfixCache = new Map, nT._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, xp._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class Lp extends xp {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = pp, this.not = ip
+    }, nT._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class HT extends nT {
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = TT, this.not = UT
       }
-      isTrue(pp) {
-        let ip = void 0 !== pp[this.define];
-        return this.not && (ip = !ip), ip
-      }
-    }
-    class Yp extends xp {
-      isTrue(pp) {
-        return this.leftOperand.isTrue(pp) || this.rightOperand.isTrue(pp)
+      isTrue(TT) {
+        let UT = void 0 !== TT[this.define];
+        return this.not && (UT = !UT), UT
       }
     }
-    class Dp extends xp {
-      isTrue(pp) {
-        return this.leftOperand.isTrue(pp) && this.rightOperand.isTrue(pp)
+    class kT extends nT {
+      isTrue(TT) {
+        return this.leftOperand.isTrue(TT) || this.rightOperand.isTrue(TT)
       }
     }
-    class Ap extends xp {
-      constructor(pp, ip, cp) {
-        super(), this.define = pp, this.operand = ip, this.testValue = cp
+    class jT extends nT {
+      isTrue(TT) {
+        return this.leftOperand.isTrue(TT) && this.rightOperand.isTrue(TT)
+      }
+    }
+    class lT extends nT {
+      constructor(TT, UT, mT) {
+        super(), this.define = TT, this.operand = UT, this.testValue = mT
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(pp) {
-        let ip = !1;
-        const cp = parseInt(void 0 != pp[this.define] ? pp[this.define] : this.define),
-          Op = parseInt(void 0 != pp[this.testValue] ? pp[this.testValue] : this.testValue);
-        if (isNaN(cp) || isNaN(Op)) return !1;
+      isTrue(TT) {
+        let UT = !1;
+        const mT = parseInt(void 0 != TT[this.define] ? TT[this.define] : this.define),
+          WT = parseInt(void 0 != TT[this.testValue] ? TT[this.testValue] : this.testValue);
+        if (isNaN(mT) || isNaN(WT)) return !1;
         switch (this.operand) {
           case ">":
-            ip = cp > Op;
+            UT = mT > WT;
             break;
           case "<":
-            ip = cp < Op;
+            UT = mT < WT;
             break;
           case "<=":
-            ip = cp <= Op;
+            UT = mT <= WT;
             break;
           case ">=":
-            ip = cp >= Op;
+            UT = mT >= WT;
             break;
           case "==":
-            ip = cp === Op;
+            UT = mT === WT;
             break;
           case "!=":
-            ip = cp !== Op
+            UT = mT !== WT
         }
-        return ip
+        return UT
       }
     }
-    var Pp = cp(40096),
-      Wp = cp(40088);
-    const yp = /defined\s*?\((.+?)\)/g,
-      Up = /defined\s*?\[(.+?)\]/g,
-      wp = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      vp = /__decl__/,
-      tp = /light\{X\}.(\w*)/g,
-      Hp = /\{X\}/g,
-      dp = [],
-      ep = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var LT = mT(39965),
+      pT = mT(39957);
+    const BT = /defined\s*?\((.+?)\)/g,
+      ZT = /defined\s*?\[(.+?)\]/g,
+      cT = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      vT = /__decl__/,
+      fT = /light\{X\}.(\w*)/g,
+      qT = /\{X\}/g,
+      iT = [],
+      bT = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function jp(pp) {
-      pp.processor && pp.processor.initializeShaders && pp.processor.initializeShaders(pp.processingContext)
+    function OT(TT) {
+      TT.processor && TT.processor.initializeShaders && TT.processor.initializeShaders(TT.processingContext)
     }
 
-    function kp(pp, ip, cp, Op) {
-      ip.processor?.preProcessShaderCode && (pp = ip.processor.preProcessShaderCode(pp, ip.isFragment)), lp(pp, ip, (pp => {
-        ip.processCodeAfterIncludes && (pp = ip.processCodeAfterIncludes(ip.isFragment ? "fragment" : "vertex", pp, ip.defines));
-        const op = function(pp, ip, cp) {
-          let Op = function(pp, ip) {
-            if (ip.processor?.noPrecision) return pp;
-            const cp = ip.shouldUseHighPrecisionShader; - 1 === pp.indexOf("precision highp float") ? pp = cp ? "precision highp float;\n" + pp : "precision mediump float;\n" + pp : cp || (pp = pp.replace("precision highp float", "precision mediump float"));
-            return pp
-          }(pp, ip);
-          if (!ip.processor) return Op;
-          if (0 === ip.processor.shaderLanguage && -1 !== Op.indexOf("#version 3") && (Op = Op.replace("#version 300 es", ""), !ip.processor.parseGLES3)) return Op;
-          const op = ip.defines,
-            Ip = Xp(ip, cp);
-          ip.processor.preProcessor && (Op = ip.processor.preProcessor(Op, op, Ip, ip.isFragment, ip.processingContext));
-          const Sp = {};
-          Op = Ep(Op, Ip, ip, Sp), ip.processor.postProcessor && (Op = ip.processor.postProcessor(Op, op, ip.isFragment, ip.processingContext, cp ? {
-            drawBuffersExtensionDisabled: !cp.getCaps().drawBuffersExtension
-          } : {}, Ip, Sp));
-          cp?._features.needShaderCodeInlining && (Op = cp.inlineShaderCode(Op));
-          return Op
-        }(pp, ip, Op);
-        cp(op, pp)
+    function eT(TT, UT, mT, WT) {
+      UT.processor?.preProcessShaderCode && (TT = UT.processor.preProcessShaderCode(TT, UT.isFragment)), yT(TT, UT, (TT => {
+        UT.processCodeAfterIncludes && (TT = UT.processCodeAfterIncludes(UT.isFragment ? "fragment" : "vertex", TT, UT.defines));
+        const zT = function(TT, UT, mT) {
+          let WT = function(TT, UT) {
+            if (UT.processor?.noPrecision) return TT;
+            const mT = UT.shouldUseHighPrecisionShader; - 1 === TT.indexOf("precision highp float") ? TT = mT ? "precision highp float;\n" + TT : "precision mediump float;\n" + TT : mT || (TT = TT.replace("precision highp float", "precision mediump float"));
+            return TT
+          }(TT, UT);
+          if (!UT.processor) return WT;
+          if (0 === UT.processor.shaderLanguage && -1 !== WT.indexOf("#version 3") && (WT = WT.replace("#version 300 es", ""), !UT.processor.parseGLES3)) return WT;
+          const zT = UT.defines,
+            MT = aT(UT, mT);
+          UT.processor.preProcessor && (WT = UT.processor.preProcessor(WT, zT, MT, UT.isFragment, UT.processingContext));
+          const gT = {};
+          WT = tT(WT, MT, UT, gT), UT.processor.postProcessor && (WT = UT.processor.postProcessor(WT, zT, UT.isFragment, UT.processingContext, mT ? {
+            drawBuffersExtensionDisabled: !mT.getCaps().drawBuffersExtension
+          } : {}, MT, gT));
+          mT?._features.needShaderCodeInlining && (WT = mT.inlineShaderCode(WT));
+          return WT
+        }(TT, UT, WT);
+        mT(zT, TT)
       }))
     }
 
-    function mp(pp, ip, cp) {
-      return cp.processor && cp.processor.finalizeShaders ? cp.processor.finalizeShaders(pp, ip, cp.processingContext) : {
-        vertexCode: pp,
-        fragmentCode: ip
+    function YT(TT, UT, mT) {
+      return mT.processor && mT.processor.finalizeShaders ? mT.processor.finalizeShaders(TT, UT, mT.processingContext) : {
+        vertexCode: TT,
+        fragmentCode: UT
       }
     }
 
-    function Rp(pp) {
-      const ip = /defined\((.+)\)/.exec(pp);
-      if (ip && ip.length) return new Lp(ip[1].trim(), "!" === pp[0]);
-      const cp = ["==", "!=", ">=", "<=", "<", ">"];
-      let Op = "",
-        op = 0;
-      for (Op of cp)
-        if (op = pp.indexOf(Op), op > -1) break;
-      if (-1 === op) return new Lp(pp);
-      const Ip = pp.substring(0, op).trim(),
-        Sp = pp.substring(op + Op.length).trim();
-      return new Ap(Ip, Op, Sp)
+    function JT(TT) {
+      const UT = /defined\((.+)\)/.exec(TT);
+      if (UT && UT.length) return new HT(UT[1].trim(), "!" === TT[0]);
+      const mT = ["==", "!=", ">=", "<=", "<", ">"];
+      let WT = "",
+        zT = 0;
+      for (WT of mT)
+        if (zT = TT.indexOf(WT), zT > -1) break;
+      if (-1 === zT) return new HT(TT);
+      const MT = TT.substring(0, zT).trim(),
+        gT = TT.substring(zT + WT.length).trim();
+      return new lT(MT, WT, gT)
     }
 
-    function qp(pp, ip) {
-      const cp = new Sp,
-        Op = pp.substring(0, ip);
-      let op = pp.substring(ip);
-      return op = op.substring(0, (op.indexOf("//") + 1 || op.length + 1) - 1).trim(), cp.testExpression = "#ifdef" === Op ? new Lp(op) : "#ifndef" === Op ? new Lp(op, !0) : function(pp) {
-        pp = pp.replace(yp, "defined[$1]");
-        const ip = xp.infixToPostfix(pp),
-          cp = [];
-        for (const op of ip)
-          if ("||" !== op && "&&" !== op) cp.push(op);
-          else if (cp.length >= 2) {
-          let pp = cp[cp.length - 1],
-            ip = cp[cp.length - 2];
-          cp.length -= 2;
-          const Op = "&&" == op ? new Dp : new Yp;
-          "string" === typeof pp && (pp = pp.replace(Up, "defined($1)")), "string" === typeof ip && (ip = ip.replace(Up, "defined($1)")), Op.leftOperand = "string" === typeof ip ? Rp(ip) : ip, Op.rightOperand = "string" === typeof pp ? Rp(pp) : pp, cp.push(Op)
+    function xT(TT, UT) {
+      const mT = new gT,
+        WT = TT.substring(0, UT);
+      let zT = TT.substring(UT);
+      return zT = zT.substring(0, (zT.indexOf("//") + 1 || zT.length + 1) - 1).trim(), mT.testExpression = "#ifdef" === WT ? new HT(zT) : "#ifndef" === WT ? new HT(zT, !0) : function(TT) {
+        TT = TT.replace(BT, "defined[$1]");
+        const UT = nT.infixToPostfix(TT),
+          mT = [];
+        for (const zT of UT)
+          if ("||" !== zT && "&&" !== zT) mT.push(zT);
+          else if (mT.length >= 2) {
+          let TT = mT[mT.length - 1],
+            UT = mT[mT.length - 2];
+          mT.length -= 2;
+          const WT = "&&" == zT ? new jT : new kT;
+          "string" === typeof TT && (TT = TT.replace(ZT, "defined($1)")), "string" === typeof UT && (UT = UT.replace(ZT, "defined($1)")), WT.leftOperand = "string" === typeof UT ? JT(UT) : UT, WT.rightOperand = "string" === typeof TT ? JT(TT) : TT, mT.push(WT)
         }
-        let Op = cp[cp.length - 1];
-        return "string" === typeof Op && (Op = Op.replace(Up, "defined($1)")), "string" === typeof Op ? Rp(Op) : Op
-      }(op), cp
+        let WT = mT[mT.length - 1];
+        return "string" === typeof WT && (WT = WT.replace(ZT, "defined($1)")), "string" === typeof WT ? JT(WT) : WT
+      }(zT), mT
     }
 
-    function Mp(pp, ip, cp, op) {
-      let Ip;
-      for (; Cp(pp, cp, op);) {
-        Ip = pp.currentLine;
-        const Sp = Ip.substring(0, 5).toLowerCase();
-        if ("#else" === Sp) {
-          const cp = new Op;
-          return ip.children.push(cp), void Cp(pp, cp, op)
+    function dT(TT, UT, mT, zT) {
+      let MT;
+      for (; wT(TT, mT, zT);) {
+        MT = TT.currentLine;
+        const gT = MT.substring(0, 5).toLowerCase();
+        if ("#else" === gT) {
+          const mT = new WT;
+          return UT.children.push(mT), void wT(TT, mT, zT)
         }
-        if ("#elif" === Sp) {
-          const pp = qp(Ip, 5);
-          ip.children.push(pp), cp = pp
+        if ("#elif" === gT) {
+          const TT = xT(MT, 5);
+          UT.children.push(TT), mT = TT
         }
       }
     }
 
-    function Cp(pp, ip, cp) {
-      for (; pp.canRead;) {
-        pp.lineIndex++;
-        const op = pp.currentLine;
-        if (op.indexOf("#") >= 0) {
-          const Op = ep.exec(op);
-          if (Op && Op.length) {
-            switch (Op[0]) {
+    function wT(TT, UT, mT) {
+      for (; TT.canRead;) {
+        TT.lineIndex++;
+        const zT = TT.currentLine;
+        if (zT.indexOf("#") >= 0) {
+          const WT = bT.exec(zT);
+          if (WT && WT.length) {
+            switch (WT[0]) {
               case "#ifdef": {
-                const Op = new Ip;
-                ip.children.push(Op);
-                const Sp = qp(op, 6);
-                Op.children.push(Sp), Mp(pp, Op, Sp, cp);
+                const WT = new MT;
+                UT.children.push(WT);
+                const gT = xT(zT, 6);
+                WT.children.push(gT), dT(TT, WT, gT, mT);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const Op = new Ip;
-                ip.children.push(Op);
-                const Sp = qp(op, 7);
-                Op.children.push(Sp), Mp(pp, Op, Sp, cp);
+                const WT = new MT;
+                UT.children.push(WT);
+                const gT = xT(zT, 7);
+                WT.children.push(gT), dT(TT, WT, gT, mT);
                 break
               }
               case "#if": {
-                const Op = new Ip,
-                  Sp = qp(op, 3);
-                ip.children.push(Op), Op.children.push(Sp), Mp(pp, Op, Sp, cp);
+                const WT = new MT,
+                  gT = xT(zT, 3);
+                UT.children.push(WT), WT.children.push(gT), dT(TT, WT, gT, mT);
                 break
               }
             }
             continue
           }
         }
-        const Sp = new Op;
-        if (Sp.line = op, ip.children.push(Sp), "#" === op[0] && "d" === op[1]) {
-          const pp = op.replace(";", "").split(" ");
-          Sp.additionalDefineKey = pp[1], 3 === pp.length && (Sp.additionalDefineValue = pp[2])
+        const gT = new WT;
+        if (gT.line = zT, UT.children.push(gT), "#" === zT[0] && "d" === zT[1]) {
+          const TT = zT.replace(";", "").split(" ");
+          gT.additionalDefineKey = TT[1], 3 === TT.length && (gT.additionalDefineValue = TT[2])
         }
       }
       return !1
     }
 
-    function Ep(pp, ip, cp, Ip) {
-      const Sp = new Op,
-        xp = new op;
-      return xp.lineIndex = -1, xp.lines = pp.split("\n"), Cp(xp, Sp, Ip), Sp.process(ip, cp, Ip)
+    function tT(TT, UT, mT, MT) {
+      const gT = new WT,
+        nT = new zT;
+      return nT.lineIndex = -1, nT.lines = TT.split("\n"), wT(nT, gT, MT), gT.process(UT, mT, MT)
     }
 
-    function Xp(pp, ip) {
-      const cp = pp.defines,
-        Op = {};
-      for (const op of cp) {
-        const pp = op.replace("#define", "").replace(";", "").trim().split(" ");
-        Op[pp[0]] = pp.length > 1 ? pp[1] : ""
+    function aT(TT, UT) {
+      const mT = TT.defines,
+        WT = {};
+      for (const zT of mT) {
+        const TT = zT.replace("#define", "").replace(";", "").trim().split(" ");
+        WT[TT[0]] = TT.length > 1 ? TT[1] : ""
       }
-      return 0 === pp.processor?.shaderLanguage && (Op.GL_ES = "true"), Op.__VERSION__ = pp.version, Op[pp.platformName] = "true", (0, Wp.j)(Op, ip?.isNDCHalfZRange, ip?.lOp, ip?.useExactSrgbConversions), Op
+      return 0 === TT.processor?.shaderLanguage && (WT.GL_ES = "true"), WT.__VERSION__ = TT.version, WT[TT.platformName] = "true", (0, pT.j)(WT, UT?.isNDCHalfZRange, UT?.pWT, UT?.useExactSrgbConversions), WT
     }
 
-    function lp(pp, ip, cp) {
-      let Op;
-      for (dp.length = 0; null !== (Op = wp.exec(pp));) dp.push(Op);
-      let op = [pp],
-        Ip = !1;
-      for (const xp of dp) {
-        let pp = xp[1];
-        if (-1 !== pp.indexOf("__decl__") && (pp = pp.replace(vp, ""), ip.supportsUniformBuffers && (pp = pp.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), pp += "Declaration"), !ip.includesShadersStore[pp]) {
-          const Op = ip.shadersRepository + "ShadersInclude/" + pp + ".fx";
-          return void Qp.loadFile(Op, (Op => {
-            ip.includesShadersStore[pp] = Op, lp(op.join(""), ip, cp)
+    function yT(TT, UT, mT) {
+      let WT;
+      for (iT.length = 0; null !== (WT = cT.exec(TT));) iT.push(WT);
+      let zT = [TT],
+        MT = !1;
+      for (const nT of iT) {
+        let TT = nT[1];
+        if (-1 !== TT.indexOf("__decl__") && (TT = TT.replace(vT, ""), UT.supportsUniformBuffers && (TT = TT.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), TT += "Declaration"), !UT.includesShadersStore[TT]) {
+          const WT = UT.shadersRepository + "ShadersInclude/" + TT + ".fx";
+          return void XT.loadFile(WT, (WT => {
+            UT.includesShadersStore[TT] = WT, yT(zT.join(""), UT, mT)
           }))
         } {
-          let cp = ip.includesShadersStore[pp];
-          if (xp[2]) {
-            const pp = xp[3].split(",");
-            for (let ip = 0; ip < pp.length; ip += 2) {
-              const Op = new RegExp(pp[ip], "g"),
-                op = pp[ip + 1];
-              cp = cp.replace(Op, op)
+          let mT = UT.includesShadersStore[TT];
+          if (nT[2]) {
+            const TT = nT[3].split(",");
+            for (let UT = 0; UT < TT.length; UT += 2) {
+              const WT = new RegExp(TT[UT], "g"),
+                zT = TT[UT + 1];
+              mT = mT.replace(WT, zT)
             }
           }
-          if (xp[4]) {
-            const pp = xp[5];
-            if (-1 !== pp.indexOf("..")) {
-              const Op = pp.split(".."),
-                op = parseInt(Op[0]);
-              let Ip = parseInt(Op[1]),
-                Sp = cp.slice(0);
-              cp = "", isNaN(Ip) && (Ip = ip.indexParameters[Op[1]]);
-              for (let pp = op; pp < Ip; pp++) ip.supportsUniformBuffers || (Sp = Sp.replace(tp, ((pp, ip) => ip + "{X}"))), cp += Sp.replace(Hp, pp.toString()) + "\n"
-            } else ip.supportsUniformBuffers || (cp = cp.replace(tp, ((pp, ip) => ip + "{X}"))), cp = cp.replace(Hp, pp)
+          if (nT[4]) {
+            const TT = nT[5];
+            if (-1 !== TT.indexOf("..")) {
+              const WT = TT.split(".."),
+                zT = parseInt(WT[0]);
+              let MT = parseInt(WT[1]),
+                gT = mT.slice(0);
+              mT = "", isNaN(MT) && (MT = UT.indexParameters[WT[1]]);
+              for (let TT = zT; TT < MT; TT++) UT.supportsUniformBuffers || (gT = gT.replace(fT, ((TT, UT) => UT + "{X}"))), mT += gT.replace(qT, TT.toString()) + "\n"
+            } else UT.supportsUniformBuffers || (mT = mT.replace(fT, ((TT, UT) => UT + "{X}"))), mT = mT.replace(qT, TT)
           }
-          const Op = [];
-          for (const pp of op) {
-            const ip = pp.split(xp[0]);
-            for (let pp = 0; pp < ip.length - 1; pp++) Op.push(ip[pp]), Op.push(cp);
-            Op.push(ip[ip.length - 1])
+          const WT = [];
+          for (const TT of zT) {
+            const UT = TT.split(nT[0]);
+            for (let TT = 0; TT < UT.length - 1; TT++) WT.push(UT[TT]), WT.push(mT);
+            WT.push(UT[UT.length - 1])
           }
-          op = Op, Ip = Ip || cp.indexOf("#include<") >= 0 || cp.indexOf("#include <") >= 0
+          zT = WT, MT = MT || mT.indexOf("#include<") >= 0 || mT.indexOf("#include <") >= 0
         }
       }
-      dp.length = 0;
-      const Sp = op.join("");
-      Ip ? lp(Sp.toString(), ip, cp) : cp(Sp)
+      iT.length = 0;
+      const gT = zT.join("");
+      MT ? yT(gT.toString(), UT, mT) : mT(gT)
     }
-    const Qp = {
-      loadFile: (pp, ip, cp, Op, op, Ip) => {
-        throw (0, Pp.o)("FileTools")
+    const XT = {
+      loadFile: (TT, UT, mT, WT, zT, MT) => {
+        throw (0, LT.k)("FileTools")
       }
     }
   },
-  40088: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      g: () => Ip,
-      j: () => xp,
-      n: () => Sp,
-      r: () => Lp
+  39957: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      g: () => MT,
+      j: () => nT,
+      m: () => gT,
+      p: () => HT
     });
-    var Op = cp(40096);
-    const op = {};
+    var WT = mT(39965);
+    const zT = {};
 
-    function Ip(pp, ip) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (ip ? ip + "\n" : "") + pp
+    function MT(TT, UT) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (UT ? UT + "\n" : "") + TT
     }
 
-    function Sp(pp, ip, cp, Ip, Sp, xp, Lp) {
-      const Yp = Lp || op.loadFile;
-      if (!Yp) throw (0, Op.o)("FileTools");
-      return Yp(pp, ip, cp, Ip, Sp, xp)
+    function gT(TT, UT, mT, MT, gT, nT, HT) {
+      const kT = HT || zT.loadFile;
+      if (!kT) throw (0, WT.k)("FileTools");
+      return kT(TT, UT, mT, MT, gT, nT)
     }
 
-    function xp(pp, ip, cp, Op) {
-      if (pp) return ip ? pp.IS_NDC_HALF_ZRANGE = "" : delete pp.IS_NDC_HALF_ZRANGE, cp ? pp.USE_REVERSE_DEPTHBUFFER = "" : delete pp.USE_REVERSE_DEPTHBUFFER, void(Op ? pp.USE_EXACT_SRGB_CONVERSIONS = "" : delete pp.USE_EXACT_SRGB_CONVERSIONS);
+    function nT(TT, UT, mT, WT) {
+      if (TT) return UT ? TT.IS_NDC_HALF_ZRANGE = "" : delete TT.IS_NDC_HALF_ZRANGE, mT ? TT.USE_REVERSE_DEPTHBUFFER = "" : delete TT.USE_REVERSE_DEPTHBUFFER, void(WT ? TT.USE_EXACT_SRGB_CONVERSIONS = "" : delete TT.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let pp = "";
-        return ip && (pp += "#define IS_NDC_HALF_ZRANGE"), cp && (pp && (pp += "\n"), pp += "#define USE_REVERSE_DEPTHBUFFER"), Op && (pp && (pp += "\n"), pp += "#define USE_EXACT_SRGB_CONVERSIONS"), pp
+        let TT = "";
+        return UT && (TT += "#define IS_NDC_HALF_ZRANGE"), mT && (TT && (TT += "\n"), TT += "#define USE_REVERSE_DEPTHBUFFER"), WT && (TT && (TT += "\n"), TT += "#define USE_EXACT_SRGB_CONVERSIONS"), TT
       }
     }
 
-    function Lp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Op = arguments.length > 3 ? arguments[3] : void 0;
-      switch (pp) {
+    function HT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        WT = arguments.length > 3 ? arguments[3] : void 0;
+      switch (TT) {
         case 3: {
-          const pp = new Int8Array(ip);
-          return Op && pp.set(new Int8Array(Op)), pp
+          const TT = new Int8Array(UT);
+          return WT && TT.set(new Int8Array(WT)), TT
         }
         case 0: {
-          const pp = new Uint8Array(ip);
-          return Op && pp.set(new Uint8Array(Op)), pp
+          const TT = new Uint8Array(UT);
+          return WT && TT.set(new Uint8Array(WT)), TT
         }
         case 4: {
-          const pp = "number" !== typeof ip ? new Int16Array(ip) : new Int16Array(cp ? ip / 2 : ip);
-          return Op && pp.set(new Int16Array(Op)), pp
+          const TT = "number" !== typeof UT ? new Int16Array(UT) : new Int16Array(mT ? UT / 2 : UT);
+          return WT && TT.set(new Int16Array(WT)), TT
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const pp = "number" !== typeof ip ? new Uint16Array(ip) : new Uint16Array(cp ? ip / 2 : ip);
-          return Op && pp.set(new Uint16Array(Op)), pp
+          const TT = "number" !== typeof UT ? new Uint16Array(UT) : new Uint16Array(mT ? UT / 2 : UT);
+          return WT && TT.set(new Uint16Array(WT)), TT
         }
         case 6: {
-          const pp = "number" !== typeof ip ? new Int32Array(ip) : new Int32Array(cp ? ip / 4 : ip);
-          return Op && pp.set(new Int32Array(Op)), pp
+          const TT = "number" !== typeof UT ? new Int32Array(UT) : new Int32Array(mT ? UT / 4 : UT);
+          return WT && TT.set(new Int32Array(WT)), TT
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const pp = "number" !== typeof ip ? new Uint32Array(ip) : new Uint32Array(cp ? ip / 4 : ip);
-          return Op && pp.set(new Uint32Array(Op)), pp
+          const TT = "number" !== typeof UT ? new Uint32Array(UT) : new Uint32Array(mT ? UT / 4 : UT);
+          return WT && TT.set(new Uint32Array(WT)), TT
         }
         case 1: {
-          const pp = "number" !== typeof ip ? new Float32Array(ip) : new Float32Array(cp ? ip / 4 : ip);
-          return Op && pp.set(new Float32Array(Op)), pp
+          const TT = "number" !== typeof UT ? new Float32Array(UT) : new Float32Array(mT ? UT / 4 : UT);
+          return WT && TT.set(new Float32Array(WT)), TT
         }
       }
-      const op = new Uint8Array(ip);
-      return Op && op.set(new Uint8Array(Op)), op
+      const zT = new Uint8Array(UT);
+      return WT && zT.set(new Uint8Array(WT)), zT
     }
   },
-  40096: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Yp,
-      h: () => Dp,
-      k: () => Lp,
-      o: () => op
+  39965: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT,
+      h: () => jT,
+      j: () => HT,
+      k: () => zT
     });
-    const Op = {};
+    const WT = {};
 
-    function op(pp) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Op[pp]) return Op[pp] = !0, `${pp} needs to be imported before as it contains a side-effect required by your code.`
+    function zT(TT) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !WT[TT]) return WT[TT] = !0, `${TT} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const Ip = {};
-    let Sp = !1,
-      xp = 0;
+    const MT = {};
+    let gT = !1,
+      nT = 0;
 
-    function Lp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Op = function() {
-        if ((cp || Sp) && 0 === xp) {
-          const cp = `${pp}.${ip}`;
-          Ip[cp] || (Ip[cp] = !0, console.warn(`[Babylon.js] ${cp}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function HT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const WT = function() {
+        if ((mT || gT) && 0 === nT) {
+          const mT = `${TT}.${UT}`;
+          MT[mT] || (MT[mT] = !0, console.warn(`[Babylon.js] ${mT}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return Op.__isSideEffectStub = !0, Op
+      return WT.__isSideEffectStub = !0, WT
     }
 
-    function Yp(pp) {
-      return !!pp && !pp.__isSideEffectStub
+    function kT(TT) {
+      return !!TT && !TT.__isSideEffectStub
     }
 
-    function Dp(pp, ip) {
+    function jT(TT, UT) {
       return {
         get() {},
-        set(pp) {
-          Object.defineProperty(this, ip, {
-            value: pp,
+        set(TT) {
+          Object.defineProperty(this, UT, {
+            value: TT,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  40071: (pp, ip, cp) => {
-    function Op() {
+  39946: (TT, UT, mT) => {
+    function WT() {
       return "undefined" !== typeof window
     }
 
-    function op() {
+    function zT() {
       return "undefined" !== typeof navigator
     }
 
-    function Ip() {
+    function MT() {
       return "undefined" !== typeof document
     }
 
-    function Sp(pp) {
-      let ip = "",
-        cp = pp.firstChild;
-      for (; cp;) 3 === cp.nodeType && (ip += cp.textContent), cp = cp.nextSibling;
-      return ip
+    function gT(TT) {
+      let UT = "",
+        mT = TT.firstChild;
+      for (; mT;) 3 === mT.nodeType && (UT += mT.textContent), mT = mT.nextSibling;
+      return UT
     }
-    cp.d(ip, {
-      d: () => Sp,
-      f: () => Ip,
-      h: () => op,
-      j: () => Op
+    mT.d(UT, {
+      c: () => gT,
+      d: () => MT,
+      f: () => zT,
+      j: () => WT
     })
   },
-  40266: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op,
-      h: () => op,
-      i: () => Ip
+  40160: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT,
+      f: () => zT,
+      j: () => MT
     });
-    class Op extends Error {}
-    Op._setPrototypeOf = Object.setPrototypeOf || ((pp, ip) => (pp.__proto__ = ip, pp));
-    const op = {
+    class WT extends Error {}
+    WT._setPrototypeOf = Object.setPrototypeOf || ((TT, UT) => (TT.__proto__ = UT, TT));
+    const zT = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class Ip extends Op {
-      constructor(pp, ip, cp) {
-        super(pp), this.errorCode = ip, this.innerError = cp, this.name = "RuntimeError", Op._setPrototypeOf(this, Ip.prototype)
+    class MT extends WT {
+      constructor(TT, UT, mT) {
+        super(TT), this.errorCode = UT, this.innerError = mT, this.name = "RuntimeError", WT._setPrototypeOf(this, MT.prototype)
       }
     }
   },
-  40257: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Xp,
-      c: () => Hp,
-      g: () => qp,
-      k: () => Cp,
-      l: () => mp,
-      p: () => jp,
-      r: () => kp,
-      u: () => Np,
-      v: () => Rp,
-      y: () => dp
+  40151: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => aT,
+      h: () => qT,
+      k: () => xT,
+      m: () => wT,
+      n: () => YT,
+      q: () => OT,
+      u: () => eT,
+      y: () => sT,
+      z: () => JT,
+      B: () => iT
     });
-    var Op = cp(40261),
-      op = cp(40071),
-      Ip = cp(37349);
-    class Sp {}
-    Sp.FilesToLoad = {};
-    var xp = cp(40266),
-      Lp = cp(40269),
-      Yp = cp(37345),
-      Dp = cp(40088),
-      Ap = cp(40103),
-      Pp = cp(38905),
-      Wp = cp(40107),
-      yp = cp(40273);
-    const Up = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class wp extends xp.i {
-      constructor(pp, ip) {
-        super(pp, xp.h.LoadFileError), this.name = "LoadFileError", xp.d._setPrototypeOf(this, wp.prototype), ip instanceof Op.e ? this.request = ip : this.file = ip
+    var WT = mT(40155),
+      zT = mT(39946),
+      MT = mT(37219);
+    class gT {}
+    gT.FilesToLoad = {};
+    var nT = mT(40160),
+      HT = mT(40165),
+      kT = mT(37216),
+      jT = mT(39957),
+      lT = mT(39972),
+      LT = mT(38800),
+      pT = mT(39975),
+      BT = mT(40171);
+    const ZT = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class cT extends nT.j {
+      constructor(TT, UT) {
+        super(TT, nT.f.LoadFileError), this.name = "LoadFileError", nT.c._setPrototypeOf(this, cT.prototype), UT instanceof WT.b ? this.request = UT : this.file = UT
       }
     }
-    class vp extends xp.i {
-      constructor(pp, ip) {
-        super(pp, xp.h.RequestFileError), this.request = ip, this.name = "RequestFileError", xp.d._setPrototypeOf(this, vp.prototype)
+    class vT extends nT.j {
+      constructor(TT, UT) {
+        super(TT, nT.f.RequestFileError), this.request = UT, this.name = "RequestFileError", nT.c._setPrototypeOf(this, vT.prototype)
       }
     }
-    class tp extends xp.i {
-      constructor(pp, ip) {
-        super(pp, xp.h.ReadFileError), this.file = ip, this.name = "ReadFileError", xp.d._setPrototypeOf(this, tp.prototype)
+    class fT extends nT.j {
+      constructor(TT, UT) {
+        super(TT, nT.f.ReadFileError), this.file = UT, this.name = "ReadFileError", nT.c._setPrototypeOf(this, fT.prototype)
       }
     }
-    const Hp = {
+    const qT = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (cp, Op, op) => 0 !== Op.status || op >= pp || -1 !== cp.indexOf("file:") ? -1 : Math.pow(2, op) * ip
+            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (mT, WT, zT) => 0 !== WT.status || zT >= TT || -1 !== mT.indexOf("file:") ? -1 : Math.pow(2, zT) * UT
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: pp => pp,
+        PreprocessUrl: TT => TT,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: pp => pp,
-        CleanUrl: pp => pp = pp.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: TT => TT,
+        CleanUrl: TT => TT = TT.replace(/#/gm, "%23")
       },
-      dp = (pp, ip) => {
-        if ((!pp || 0 !== pp.indexOf("data:")) && Hp.CorsBehavior)
-          if ("string" === typeof Hp.CorsBehavior || Hp.CorsBehavior instanceof String) ip.crossOrigin = Hp.CorsBehavior;
+      iT = (TT, UT) => {
+        if ((!TT || 0 !== TT.indexOf("data:")) && qT.CorsBehavior)
+          if ("string" === typeof qT.CorsBehavior || qT.CorsBehavior instanceof String) UT.crossOrigin = qT.CorsBehavior;
           else {
-            const cp = Hp.CorsBehavior(pp);
-            cp && (ip.crossOrigin = cp)
+            const mT = qT.CorsBehavior(TT);
+            mT && (UT.crossOrigin = mT)
           }
       },
-      ep = {
+      bT = {
         getRequiredSize: null
       },
-      jp = function(pp, ip, cp, op) {
-        let Ip, xp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          Dp = arguments.length > 5 ? arguments[5] : void 0,
-          Ap = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Yp.e.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !Ap?._features.forceBitmapOverHTMLImageElement) return cp("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (Ap?._features.forceBitmapOverHTMLImageElement && "string" !== typeof pp && "undefined" !== typeof Blob) {
-          let Op;
-          if (pp instanceof Blob) Op = pp;
+      OT = function(TT, UT, mT, zT) {
+        let MT, nT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          jT = arguments.length > 5 ? arguments[5] : void 0,
+          lT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : kT.c.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !lT?._features.forceBitmapOverHTMLImageElement) return mT("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (lT?._features.forceBitmapOverHTMLImageElement && "string" !== typeof TT && "undefined" !== typeof Blob) {
+          let WT;
+          if (TT instanceof Blob) WT = TT;
           else {
-            const ip = pp instanceof ArrayBuffer ? pp : (0, yp.i)(pp);
-            Op = new Blob([ip], {
-              type: xp
+            const UT = TT instanceof ArrayBuffer ? TT : (0, BT.o)(TT);
+            WT = new Blob([UT], {
+              type: nT
             })
           }
-          return Ap.createImageBitmap(Op, {
+          return lT.createImageBitmap(WT, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Dp
-          }).then(ip).catch((ip => {
-            cp && cp("Error while trying to load image: " + pp, ip)
+            ...jT
+          }).then(UT).catch((UT => {
+            mT && mT("Error while trying to load image: " + TT, UT)
           })), null
         }
-        let Pp = !1;
-        if (pp instanceof ArrayBuffer || ArrayBuffer.isView(pp))
+        let LT = !1;
+        if (TT instanceof ArrayBuffer || ArrayBuffer.isView(TT))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let ip;
-            ip = pp instanceof ArrayBuffer ? pp : (0, yp.i)(pp), Ip = URL.createObjectURL(new Blob([ip], {
-              type: xp
-            })), Pp = !0
-          } else Ip = `data:${xp};base64,` + (0, Lp.i)(pp);
-        else pp instanceof Blob ? (Ip = URL.createObjectURL(pp), Pp = !0) : (Ip = Hp.CleanUrl(pp), Ip = Hp.PreprocessUrl(Ip));
-        const Wp = ip => {
-          if (cp) {
-            const Op = Ip || pp.toString();
-            cp(`Error while trying to load image: ${0===Op.indexOf("http")||Op.length<=128?Op:Op.slice(0,128)+"..."}`, ip)
+            let UT;
+            UT = TT instanceof ArrayBuffer ? TT : (0, BT.o)(TT), MT = URL.createObjectURL(new Blob([UT], {
+              type: nT
+            })), LT = !0
+          } else MT = `data:${nT};base64,` + (0, HT.j)(TT);
+        else TT instanceof Blob ? (MT = URL.createObjectURL(TT), LT = !0) : (MT = qT.CleanUrl(TT), MT = qT.PreprocessUrl(MT));
+        const pT = UT => {
+          if (mT) {
+            const WT = MT || TT.toString();
+            mT(`Error while trying to load image: ${0===WT.indexOf("http")||WT.length<=128?WT:WT.slice(0,128)+"..."}`, UT)
           }
         };
-        if (Ap?._features.forceBitmapOverHTMLImageElement) return mp(Ip, (Op => {
-          Ap.createImageBitmap(new Blob([Op], {
-            type: xp
+        if (lT?._features.forceBitmapOverHTMLImageElement) return YT(MT, (WT => {
+          lT.createImageBitmap(new Blob([WT], {
+            type: nT
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Dp
-          }).then((pp => {
-            ip(pp), Pp && URL.revokeObjectURL(Ip)
-          })).catch((ip => {
-            cp && cp("Error while trying to load image: " + pp, ip)
+            ...jT
+          }).then((TT => {
+            UT(TT), LT && URL.revokeObjectURL(MT)
+          })).catch((UT => {
+            mT && mT("Error while trying to load image: " + TT, UT)
           }))
-        }), void 0, op || void 0, !0, ((pp, ip) => {
-          Wp(ip)
+        }), void 0, zT || void 0, !0, ((TT, UT) => {
+          pT(UT)
         })), null;
-        const Up = new Image;
-        if (ep.getRequiredSize) {
-          const ip = ep.getRequiredSize(pp);
-          ip.width && (Up.width = ip.width), ip.height && (Up.height = ip.height)
+        const ZT = new Image;
+        if (bT.getRequiredSize) {
+          const UT = bT.getRequiredSize(TT);
+          UT.width && (ZT.width = UT.width), UT.height && (ZT.height = UT.height)
         }
-        dp(Ip, Up);
-        const wp = [],
-          vp = () => {
-            for (const pp of wp) pp.target.removeEventListener(pp.name, pp.handler);
-            wp.length = 0
+        iT(MT, ZT);
+        const cT = [],
+          vT = () => {
+            for (const TT of cT) TT.target.removeEventListener(TT.name, TT.handler);
+            cT.length = 0
           };
-        wp.push({
-          target: Up,
+        cT.push({
+          target: ZT,
           name: "load",
           handler: () => {
-            vp(), ip(Up), Pp && Up.src && URL.revokeObjectURL(Up.src)
+            vT(), UT(ZT), LT && ZT.src && URL.revokeObjectURL(ZT.src)
           }
-        }), wp.push({
-          target: Up,
+        }), cT.push({
+          target: ZT,
           name: "error",
-          handler: pp => {
-            vp(), Wp(pp), Pp && Up.src && URL.revokeObjectURL(Up.src)
+          handler: TT => {
+            vT(), pT(TT), LT && ZT.src && URL.revokeObjectURL(ZT.src)
           }
-        }), wp.push({
+        }), cT.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: pp => {
-            if (pp.blockedURI !== Up.src || "Yy" === pp.disposition) return;
-            vp();
-            const ip = new Error(`CSP violation of policy ${pp.effectiveDirective} ${pp.blockedURI}. Current policy is ${pp.originalPolicy}`);
-            Yp.e.UseFallbackTexture = !1, Wp(ip), Pp && Up.src && URL.revokeObjectURL(Up.src), Up.src = ""
+          handler: TT => {
+            if (TT.blockedURI !== ZT.src || "Gp" === TT.disposition) return;
+            vT();
+            const UT = new Error(`CSP violation of policy ${TT.effectiveDirective} ${TT.blockedURI}. Current policy is ${TT.originalPolicy}`);
+            kT.c.UseFallbackTexture = !1, pT(UT), LT && ZT.src && URL.revokeObjectURL(ZT.src), ZT.src = ""
           }
         }), (() => {
-          for (const pp of wp) pp.target.addEventListener(pp.name, pp.handler)
+          for (const TT of cT) TT.target.addEventListener(TT.name, TT.handler)
         })();
-        const tp = "blob:" === Ip.substring(0, 5),
-          jp = "data:" === Ip.substring(0, 5),
-          kp = () => {
-            tp || jp || !Op.e.IsCustomRequestAvailable ? Up.src = Ip : mp(Ip, ((pp, ip, cp) => {
-              const Op = new Blob([pp], {
-                  type: !xp && cp ? cp : xp
+        const fT = "blob:" === MT.substring(0, 5),
+          OT = "data:" === MT.substring(0, 5),
+          eT = () => {
+            fT || OT || !WT.b.IsCustomRequestAvailable ? ZT.src = MT : YT(MT, ((TT, UT, mT) => {
+              const WT = new Blob([TT], {
+                  type: !nT && mT ? mT : nT
                 }),
-                op = URL.createObjectURL(Op);
-              Pp = !0, Up.src = op
-            }), void 0, op || void 0, !0, ((pp, ip) => {
-              Wp(ip)
+                zT = URL.createObjectURL(WT);
+              LT = !0, ZT.src = zT
+            }), void 0, zT || void 0, !0, ((TT, UT) => {
+              pT(UT)
             }))
           },
-          Rp = () => {
-            op && op.loadImage(Ip, Up)
+          JT = () => {
+            zT && zT.loadImage(MT, ZT)
           };
-        if (!tp && !jp && op && op.enableTexturesOffline) op.open(Rp, kp);
+        if (!fT && !OT && zT && zT.enableTexturesOffline) zT.open(JT, eT);
         else {
-          if (-1 !== Ip.indexOf("file:")) {
-            const pp = decodeURIComponent(Ip.substring(5).toLowerCase());
-            if (Sp.FilesToLoad[pp] && "undefined" !== typeof URL) {
+          if (-1 !== MT.indexOf("file:")) {
+            const TT = decodeURIComponent(MT.substring(5).toLowerCase());
+            if (gT.FilesToLoad[TT] && "undefined" !== typeof URL) {
               try {
-                let ip;
+                let UT;
                 try {
-                  ip = URL.createObjectURL(Sp.FilesToLoad[pp])
-                } catch (qp) {
-                  ip = URL.createObjectURL(Sp.FilesToLoad[pp])
+                  UT = URL.createObjectURL(gT.FilesToLoad[TT])
+                } catch (xT) {
+                  UT = URL.createObjectURL(gT.FilesToLoad[TT])
                 }
-                Up.src = ip, Pp = !0
-              } catch (Mp) {
-                Up.src = ""
+                ZT.src = UT, LT = !0
+              } catch (dT) {
+                ZT.src = ""
               }
-              return Up
+              return ZT
             }
           }
-          kp()
+          eT()
         }
-        return Up
+        return ZT
       },
-      kp = (pp, ip, cp, Op, op) => {
-        const Sp = new FileReader,
-          xp = {
-            onCompleteObservable: new Ip.d,
-            abort: () => Sp.abort()
+      eT = (TT, UT, mT, WT, zT) => {
+        const gT = new FileReader,
+          nT = {
+            onCompleteObservable: new MT.d,
+            abort: () => gT.abort()
           };
-        return Sp.onloadend = () => xp.onCompleteObservable.notifyObservers(xp), op && (Sp.onerror = () => {
-          op(new tp(`Unable to read ${pp.name}`, pp))
-        }), Sp.onload = pp => {
-          ip(pp.target.result)
-        }, cp && (Sp.onprogress = cp), Op ? Sp.readAsArrayBuffer(pp) : Sp.readAsText(pp), xp
+        return gT.onloadend = () => nT.onCompleteObservable.notifyObservers(nT), zT && (gT.onerror = () => {
+          zT(new fT(`Unable to read ${TT.name}`, TT))
+        }), gT.onload = TT => {
+          UT(TT.target.result)
+        }, mT && (gT.onprogress = mT), WT ? gT.readAsArrayBuffer(TT) : gT.readAsText(TT), nT
       },
-      mp = (pp, ip, cp, Op, op, Lp, Yp) => {
-        if (pp.name) return kp(pp, ip, cp, op, Lp ? pp => {
-          Lp(void 0, pp)
+      YT = (TT, UT, mT, WT, zT, HT, kT) => {
+        if (TT.name) return eT(TT, UT, mT, zT, HT ? TT => {
+          HT(void 0, TT)
         } : void 0);
-        const Dp = pp;
-        if (-1 !== Dp.indexOf("file:")) {
-          let pp = decodeURIComponent(Dp.substring(5).toLowerCase());
-          0 === pp.indexOf("./") && (pp = pp.substring(2));
-          const Op = Sp.FilesToLoad[pp];
-          if (Op) return kp(Op, ip, cp, op, Lp ? pp => Lp(void 0, new wp(pp.message, pp.file)) : void 0)
+        const jT = TT;
+        if (-1 !== jT.indexOf("file:")) {
+          let TT = decodeURIComponent(jT.substring(5).toLowerCase());
+          0 === TT.indexOf("./") && (TT = TT.substring(2));
+          const WT = gT.FilesToLoad[TT];
+          if (WT) return eT(WT, UT, mT, zT, HT ? TT => HT(void 0, new cT(TT.message, TT.file)) : void 0)
         }
         const {
-          match: Ap,
-          type: yp
-        } = Ep(Dp);
-        if (Ap) {
-          const pp = {
-            onCompleteObservable: new Ip.d,
+          match: lT,
+          type: BT
+        } = tT(jT);
+        if (lT) {
+          const TT = {
+            onCompleteObservable: new MT.d,
             abort: () => () => {}
           };
           try {
-            const pp = op ? Xp(Dp) : lp(Dp);
-            ip(pp, void 0, yp)
-          } catch (xp) {
-            Lp ? Lp(void 0, xp) : Pp.e.Error(xp.message || "Failed to parse the Data URL")
+            const TT = zT ? aT(jT) : yT(jT);
+            UT(TT, void 0, BT)
+          } catch (nT) {
+            HT ? HT(void 0, nT) : LT.b.Error(nT.message || "Failed to parse the Data URL")
           }
-          return Wp.b.SetImmediate((() => {
-            pp.onCompleteObservable.notifyObservers(pp)
-          })), pp
+          return pT.e.SetImmediate((() => {
+            TT.onCompleteObservable.notifyObservers(TT)
+          })), TT
         }
-        return Rp(Dp, ((pp, cp) => {
-          ip(pp, cp?.responseURL, cp?.getResponseHeader("content-type"))
-        }), cp, Op, op, Lp ? pp => {
-          Lp(pp.request, new wp(pp.message, pp.request))
-        } : void 0, Yp)
+        return JT(jT, ((TT, mT) => {
+          UT(TT, mT?.responseURL, mT?.getResponseHeader("content-type"))
+        }), mT, WT, zT, HT ? TT => {
+          HT(TT.request, new cT(TT.message, TT.request))
+        } : void 0, kT)
       },
-      Rp = (pp, ip, cp, Sp, xp, Lp, Dp) => {
-        null !== Sp && (Sp ?? (Sp = Yp.e.LastCreatedScene?.offlineProvider)), pp = Hp.CleanUrl(pp), pp = Hp.PreprocessUrl(pp);
-        const Ap = Hp.BaseUrl + pp;
-        let Wp = !1;
-        const yp = {
-            onCompleteObservable: new Ip.d,
-            abort: () => Wp = !0
+      JT = (TT, UT, mT, gT, nT, HT, jT) => {
+        null !== gT && (gT ?? (gT = kT.c.LastCreatedScene?.offlineProvider)), TT = qT.CleanUrl(TT), TT = qT.PreprocessUrl(TT);
+        const lT = qT.BaseUrl + TT;
+        let pT = !1;
+        const BT = {
+            onCompleteObservable: new MT.d,
+            abort: () => pT = !0
           },
-          Up = () => {
-            let pp, Ip = new Op.e,
-              Sp = null;
-            const Yp = () => {
-              Ip && (cp && Ip.removeEventListener("progress", cp), pp && Ip.removeEventListener("readystatechange", pp), Ip.removeEventListener("loadend", Up))
+          ZT = () => {
+            let TT, MT = new WT.b,
+              gT = null;
+            const kT = () => {
+              MT && (mT && MT.removeEventListener("progress", mT), TT && MT.removeEventListener("readystatechange", TT), MT.removeEventListener("loadend", ZT))
             };
-            let Up = () => {
-              Yp(), yp.onCompleteObservable.notifyObservers(yp), yp.onCompleteObservable.clear(), cp = void 0, pp = null, Up = null, Lp = void 0, Dp = void 0, ip = void 0
+            let ZT = () => {
+              kT(), BT.onCompleteObservable.notifyObservers(BT), BT.onCompleteObservable.clear(), mT = void 0, TT = null, ZT = null, HT = void 0, jT = void 0, UT = void 0
             };
-            yp.abort = () => {
-              Wp = !0, Up && Up(), Ip && Ip.readyState !== (XMLHttpRequest.DONE || 4) && Ip.abort(), null !== Sp && (clearTimeout(Sp), Sp = null), Ip = null
+            BT.abort = () => {
+              pT = !0, ZT && ZT(), MT && MT.readyState !== (XMLHttpRequest.DONE || 4) && MT.abort(), null !== gT && (clearTimeout(gT), gT = null), MT = null
             };
-            const wp = pp => {
-                const ip = pp.message || "Unknown error";
-                Lp && Ip ? Lp(new vp(ip, Ip)) : Pp.e.Error(ip)
+            const cT = TT => {
+                const UT = TT.message || "Unknown error";
+                HT && MT ? HT(new vT(UT, MT)) : LT.b.Error(UT)
               },
-              tp = Pp => {
-                if (Ip) {
-                  if (Ip.open("GET", Ap), Dp) try {
-                    Dp(Ip)
-                  } catch (yp) {
-                    return void wp(yp)
+              fT = LT => {
+                if (MT) {
+                  if (MT.open("GET", lT), jT) try {
+                    jT(MT)
+                  } catch (BT) {
+                    return void cT(BT)
                   }
-                  xp && (Ip.responseType = "arraybuffer"), cp && Ip.addEventListener("progress", cp), Up && Ip.addEventListener("loadend", Up), pp = () => {
-                    if (!Wp && Ip && Ip.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (pp && Ip.removeEventListener("readystatechange", pp), Ip.status >= 200 && Ip.status < 300 || 0 === Ip.status && (!(0, op.j)() || Mp())) {
-                        const pp = xp ? Ip.response : Ip.responseText;
-                        if (null !== pp) {
+                  nT && (MT.responseType = "arraybuffer"), mT && MT.addEventListener("progress", mT), ZT && MT.addEventListener("loadend", ZT), TT = () => {
+                    if (!pT && MT && MT.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (TT && MT.removeEventListener("readystatechange", TT), MT.status >= 200 && MT.status < 300 || 0 === MT.status && (!(0, zT.j)() || dT())) {
+                        const TT = nT ? MT.response : MT.responseText;
+                        if (null !== TT) {
                           try {
-                            ip && ip(pp, Ip)
-                          } catch (yp) {
-                            wp(yp)
+                            UT && UT(TT, MT)
+                          } catch (BT) {
+                            cT(BT)
                           }
                           return
                         }
                       }
-                      const cp = Hp.DefaultRetryStrategy;
-                      if (cp) {
-                        const pp = cp(Ap, Ip, Pp);
-                        if (-1 !== pp) return Yp(), Ip = new Op.e, void(Sp = setTimeout((() => tp(Pp + 1)), pp))
+                      const mT = qT.DefaultRetryStrategy;
+                      if (mT) {
+                        const TT = mT(lT, MT, LT);
+                        if (-1 !== TT) return kT(), MT = new WT.b, void(gT = setTimeout((() => fT(LT + 1)), TT))
                       }
-                      const Dp = new vp("Error status: " + Ip.status + " " + Ip.statusText + " - Unable to load " + Ap, Ip);
-                      Lp && Lp(Dp)
+                      const jT = new vT("Error status: " + MT.status + " " + MT.statusText + " - Unable to load " + lT, MT);
+                      HT && HT(jT)
                     }
-                  }, Ip.addEventListener("readystatechange", pp), Ip.send()
+                  }, MT.addEventListener("readystatechange", TT), MT.send()
                 }
               };
-            tp(0)
+            fT(0)
           };
-        if (Sp && Sp.enableSceneOffline && !pp.startsWith("blob:")) {
-          const Op = pp => {
-              pp && pp.status > 400 ? Lp && Lp(pp) : Up()
+        if (gT && gT.enableSceneOffline && !TT.startsWith("blob:")) {
+          const WT = TT => {
+              TT && TT.status > 400 ? HT && HT(TT) : ZT()
             },
-            op = () => {
-              Sp && Sp.loadFile(Hp.BaseUrl + pp, (pp => {
-                !Wp && ip && ip(pp), yp.onCompleteObservable.notifyObservers(yp)
-              }), cp ? pp => {
-                !Wp && cp && cp(pp)
-              } : void 0, Op, xp)
+            zT = () => {
+              gT && gT.loadFile(qT.BaseUrl + TT, (TT => {
+                !pT && UT && UT(TT), BT.onCompleteObservable.notifyObservers(BT)
+              }), mT ? TT => {
+                !pT && mT && mT(TT)
+              } : void 0, WT, nT)
             };
-          Sp.open(op, Op)
-        } else Up();
-        return yp
+          gT.open(zT, WT)
+        } else ZT();
+        return BT
       },
-      qp = pp => {
+      xT = TT => {
         const {
-          match: ip,
-          type: cp
-        } = Ep(pp);
-        if (ip) return cp || void 0;
-        const Op = pp.lastIndexOf(".");
-        switch (pp.substring(Op + 1).toLowerCase()) {
+          match: UT,
+          type: mT
+        } = tT(TT);
+        if (UT) return mT || void 0;
+        const WT = TT.lastIndexOf(".");
+        switch (TT.substring(WT + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "sE":
+          case "mF":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      Mp = () => "undefined" !== typeof location && "file:" === location.protocol,
-      Cp = pp => Up.test(pp),
-      Ep = pp => {
-        const ip = Up.exec(pp);
-        if (null === ip || 0 === ip.length) return {
+      dT = () => "undefined" !== typeof location && "file:" === location.protocol,
+      wT = TT => ZT.test(TT),
+      tT = TT => {
+        const UT = ZT.exec(TT);
+        if (null === UT || 0 === UT.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: ip[0].replace("data:", "").replace(";base64,", "")
+          type: UT[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function Xp(pp) {
-      return (0, Lp.c)(pp.split(",")[1])
+    function aT(TT) {
+      return (0, HT.e)(TT.split(",")[1])
     }
-    const lp = pp => (0, Lp.e)(pp.split(",")[1]);
-    let Qp;
-    const Jp = (pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) => {
-      Qp = {
-        DecodeBase64UrlToBinary: pp,
-        DecodeBase64UrlToString: ip,
-        DefaultRetryStrategy: cp.DefaultRetryStrategy,
-        BaseUrl: cp.BaseUrl,
-        CorsBehavior: cp.CorsBehavior,
-        PreprocessUrl: cp.PreprocessUrl,
-        IsBase64DataUrl: Op,
-        IsFileURL: op,
-        LoadFile: Ip,
-        LoadImage: Sp,
-        ReadFile: xp,
-        RequestFile: Lp,
-        SetCorsBehavior: Yp
-      }, Object.defineProperty(Qp, "DefaultRetryStrategy", {
+    const yT = TT => (0, HT.h)(TT.split(",")[1]);
+    let XT;
+    const IT = (TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) => {
+      XT = {
+        DecodeBase64UrlToBinary: TT,
+        DecodeBase64UrlToString: UT,
+        DefaultRetryStrategy: mT.DefaultRetryStrategy,
+        BaseUrl: mT.BaseUrl,
+        CorsBehavior: mT.CorsBehavior,
+        PreprocessUrl: mT.PreprocessUrl,
+        IsBase64DataUrl: WT,
+        IsFileURL: zT,
+        LoadFile: MT,
+        LoadImage: gT,
+        ReadFile: nT,
+        RequestFile: HT,
+        SetCorsBehavior: kT
+      }, Object.defineProperty(XT, "DefaultRetryStrategy", {
         get: function() {
-          return cp.DefaultRetryStrategy
+          return mT.DefaultRetryStrategy
         },
-        set: function(pp) {
-          cp.DefaultRetryStrategy = pp
+        set: function(TT) {
+          mT.DefaultRetryStrategy = TT
         }
-      }), Object.defineProperty(Qp, "BaseUrl", {
+      }), Object.defineProperty(XT, "BaseUrl", {
         get: function() {
-          return cp.BaseUrl
+          return mT.BaseUrl
         },
-        set: function(pp) {
-          cp.BaseUrl = pp
+        set: function(TT) {
+          mT.BaseUrl = TT
         }
-      }), Object.defineProperty(Qp, "PreprocessUrl", {
+      }), Object.defineProperty(XT, "PreprocessUrl", {
         get: function() {
-          return cp.PreprocessUrl
+          return mT.PreprocessUrl
         },
-        set: function(pp) {
-          cp.PreprocessUrl = pp
+        set: function(TT) {
+          mT.PreprocessUrl = TT
         }
-      }), Object.defineProperty(Qp, "CorsBehavior", {
+      }), Object.defineProperty(XT, "CorsBehavior", {
         get: function() {
-          return cp.CorsBehavior
+          return mT.CorsBehavior
         },
-        set: function(pp) {
-          cp.CorsBehavior = pp
+        set: function(TT) {
+          mT.CorsBehavior = TT
         }
       })
     };
-    let Bp = !1;
+    let QT = !1;
 
-    function Np() {
-      Bp || (Bp = !0, Jp(Xp, lp, Hp, Cp, Mp, mp, jp, kp, Rp, dp), Dp.c.loadFile = mp, Dp.c.loadImage = jp, Ap.k.loadFile = mp)
+    function sT() {
+      QT || (QT = !0, IT(aT, yT, qT, wT, dT, YT, OT, eT, JT, iT), jT.d.loadFile = YT, jT.d.loadImage = OT, lT.l.loadFile = YT)
     }
   },
-  40276: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      f: () => Ip,
-      h: () => Sp
+  40178: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => nT,
+      f: () => MT,
+      j: () => gT
     });
-    let Op = null;
+    let WT = null;
 
-    function op() {
-      if (Op) return Op;
-      const pp = new ArrayBuffer(4),
-        ip = new Float32Array(pp),
-        cp = new Uint32Array(pp),
-        op = new Uint32Array(512),
-        Ip = new Uint32Array(512);
-      for (let Op = 0; Op < 256; ++Op) {
-        const pp = Op - 127;
-        pp < -24 ? (op[Op] = 0, op[256 | Op] = 32768, Ip[Op] = 24, Ip[256 | Op] = 24) : pp < -14 ? (op[Op] = 1024 >> -pp - 14, op[256 | Op] = 1024 >> -pp - 14 | 32768, Ip[Op] = -pp - 1, Ip[256 | Op] = -pp - 1) : pp <= 15 ? (op[Op] = pp + 15 << 10, op[256 | Op] = pp + 15 << 10 | 32768, Ip[Op] = 13, Ip[256 | Op] = 13) : pp < 128 ? (op[Op] = 31744, op[256 | Op] = 64512, Ip[Op] = 24, Ip[256 | Op] = 24) : (op[Op] = 31744, op[256 | Op] = 64512, Ip[Op] = 13, Ip[256 | Op] = 13)
+    function zT() {
+      if (WT) return WT;
+      const TT = new ArrayBuffer(4),
+        UT = new Float32Array(TT),
+        mT = new Uint32Array(TT),
+        zT = new Uint32Array(512),
+        MT = new Uint32Array(512);
+      for (let WT = 0; WT < 256; ++WT) {
+        const TT = WT - 127;
+        TT < -24 ? (zT[WT] = 0, zT[256 | WT] = 32768, MT[WT] = 24, MT[256 | WT] = 24) : TT < -14 ? (zT[WT] = 1024 >> -TT - 14, zT[256 | WT] = 1024 >> -TT - 14 | 32768, MT[WT] = -TT - 1, MT[256 | WT] = -TT - 1) : TT <= 15 ? (zT[WT] = TT + 15 << 10, zT[256 | WT] = TT + 15 << 10 | 32768, MT[WT] = 13, MT[256 | WT] = 13) : TT < 128 ? (zT[WT] = 31744, zT[256 | WT] = 64512, MT[WT] = 24, MT[256 | WT] = 24) : (zT[WT] = 31744, zT[256 | WT] = 64512, MT[WT] = 13, MT[256 | WT] = 13)
       }
-      const Sp = new Uint32Array(2048),
-        xp = new Uint32Array(64),
-        Lp = new Uint32Array(64);
-      for (let Op = 1; Op < 1024; ++Op) {
-        let pp = Op << 13,
-          ip = 0;
-        for (; 0 === (8388608 & pp);) pp <<= 1, ip -= 8388608;
-        pp &= -8388609, ip += 947912704, Sp[Op] = pp | ip
+      const gT = new Uint32Array(2048),
+        nT = new Uint32Array(64),
+        HT = new Uint32Array(64);
+      for (let WT = 1; WT < 1024; ++WT) {
+        let TT = WT << 13,
+          UT = 0;
+        for (; 0 === (8388608 & TT);) TT <<= 1, UT -= 8388608;
+        TT &= -8388609, UT += 947912704, gT[WT] = TT | UT
       }
-      for (let Op = 1024; Op < 2048; ++Op) Sp[Op] = 939524096 + (Op - 1024 << 13);
-      for (let Op = 1; Op < 31; ++Op) xp[Op] = Op << 23;
-      xp[31] = 1199570944, xp[32] = 2147483648;
-      for (let Op = 33; Op < 63; ++Op) xp[Op] = 2147483648 + (Op - 32 << 23);
-      xp[63] = 3347054592;
-      for (let Op = 1; Op < 64; ++Op) 32 !== Op && (Lp[Op] = 1024);
-      return Op = {
-        floatView: ip,
-        uint32View: cp,
-        baseTable: op,
-        shiftTable: Ip,
-        mantissaTable: Sp,
-        exponentTable: xp,
-        offsetTable: Lp
-      }, Op
+      for (let WT = 1024; WT < 2048; ++WT) gT[WT] = 939524096 + (WT - 1024 << 13);
+      for (let WT = 1; WT < 31; ++WT) nT[WT] = WT << 23;
+      nT[31] = 1199570944, nT[32] = 2147483648;
+      for (let WT = 33; WT < 63; ++WT) nT[WT] = 2147483648 + (WT - 32 << 23);
+      nT[63] = 3347054592;
+      for (let WT = 1; WT < 64; ++WT) 32 !== WT && (HT[WT] = 1024);
+      return WT = {
+        floatView: UT,
+        uint32View: mT,
+        baseTable: zT,
+        shiftTable: MT,
+        mantissaTable: gT,
+        exponentTable: nT,
+        offsetTable: HT
+      }, WT
     }
-    const Ip = 65504;
+    const MT = 65504;
 
-    function Sp(pp) {
-      const ip = op();
-      ip.floatView[0] = pp;
-      const cp = ip.uint32View[0],
-        Op = cp >> 23 & 511;
-      return ip.baseTable[Op] + ((8388607 & cp) >> ip.shiftTable[Op])
+    function gT(TT) {
+      const UT = zT();
+      UT.floatView[0] = TT;
+      const mT = UT.uint32View[0],
+        WT = mT >> 23 & 511;
+      return UT.baseTable[WT] + ((8388607 & mT) >> UT.shiftTable[WT])
     }
 
-    function xp(pp) {
-      const ip = op();
-      return ip.uint32View[0] = ip.mantissaTable[ip.offsetTable[pp >> 10] + (1023 & pp)] + ip.exponentTable[pp >> 10], ip.floatView[0]
+    function nT(TT) {
+      const UT = zT();
+      return UT.uint32View[0] = UT.mantissaTable[UT.offsetTable[TT >> 10] + (1023 & TT)] + UT.exponentTable[TT >> 10], UT.floatView[0]
     }
   },
-  40269: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ip,
-      e: () => op,
-      i: () => Op
+  40165: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT,
+      h: () => zT,
+      j: () => WT
     });
-    const Op = pp => {
-        const ip = ArrayBuffer.isView(pp) ? new Uint8Array(pp.buffer, pp.byteOffset, pp.byteLength) : new Uint8Array(pp);
-        return "function" === typeof ip.toBase64 ? ip.toBase64() : function(pp) {
-          const ip = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let cp, Op, op, Ip, Sp, xp, Lp, Yp = "",
-            Dp = 0;
-          for (; Dp < pp.length;) cp = pp[Dp++], Op = Dp < pp.length ? pp[Dp++] : Number.NaN, op = Dp < pp.length ? pp[Dp++] : Number.NaN, Ip = cp >> 2, Sp = (3 & cp) << 4 | Op >> 4, xp = (15 & Op) << 2 | op >> 6, Lp = 63 & op, isNaN(Op) ? xp = Lp = 64 : isNaN(op) && (Lp = 64), Yp += ip.charAt(Ip) + ip.charAt(Sp) + ip.charAt(xp) + ip.charAt(Lp);
-          return Yp
-        }(ip)
+    const WT = TT => {
+        const UT = ArrayBuffer.isView(TT) ? new Uint8Array(TT.buffer, TT.byteOffset, TT.byteLength) : new Uint8Array(TT);
+        return "function" === typeof UT.toBase64 ? UT.toBase64() : function(TT) {
+          const UT = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let mT, WT, zT, MT, gT, nT, HT, kT = "",
+            jT = 0;
+          for (; jT < TT.length;) mT = TT[jT++], WT = jT < TT.length ? TT[jT++] : Number.NaN, zT = jT < TT.length ? TT[jT++] : Number.NaN, MT = mT >> 2, gT = (3 & mT) << 4 | WT >> 4, nT = (15 & WT) << 2 | zT >> 6, HT = 63 & zT, isNaN(WT) ? nT = HT = 64 : isNaN(zT) && (HT = 64), kT += UT.charAt(MT) + UT.charAt(gT) + UT.charAt(nT) + UT.charAt(HT);
+          return kT
+        }(UT)
       },
-      op = pp => atob(pp),
-      Ip = pp => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(pp).buffer : function(pp) {
-        const ip = op(pp),
-          cp = ip.length,
-          Op = new Uint8Array(new ArrayBuffer(cp));
-        for (let op = 0; op < cp; op++) Op[op] = ip.charCodeAt(op);
-        return Op.buffer
-      }(pp)
+      zT = TT => atob(TT),
+      MT = TT => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(TT).buffer : function(TT) {
+        const UT = zT(TT),
+          mT = UT.length,
+          WT = new Uint8Array(new ArrayBuffer(mT));
+        for (let zT = 0; zT < mT; zT++) WT[zT] = UT.charCodeAt(zT);
+        return WT.buffer
+      }(TT)
   },
-  40107: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      c: () => Sp
+  39975: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => zT,
+      i: () => gT
     });
-    let Op = [];
-    class op {
-      static SetImmediate(pp) {
-        0 === Op.length && setTimeout((() => {
-          const pp = Op;
-          Op = [];
-          for (const ip of pp) ip()
-        }), 1), Op.push(pp)
+    let WT = [];
+    class zT {
+      static SetImmediate(TT) {
+        0 === WT.length && setTimeout((() => {
+          const TT = WT;
+          WT = [];
+          for (const UT of TT) UT()
+        }), 1), WT.push(TT)
       }
     }
 
-    function Ip(pp, ip, cp) {
+    function MT(TT, UT, mT) {
       try {
-        if (pp()) return ip(), !0
-      } catch (Op) {
-        return cp?.(Op), !0
+        if (TT()) return UT(), !0
+      } catch (WT) {
+        return mT?.(WT), !0
       }
       return !1
     }
-    const Sp = function(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        Sp = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Ip(pp, ip, cp)) return null;
-      const xp = setInterval((() => {
-        Ip(pp, ip, cp) ? clearInterval(xp) : (op -= Op, op < 0 && (clearInterval(xp), cp?.(new Error("Operation timed out after maximum retries. " + (Sp || "")), !0)))
-      }), Op);
-      return () => clearInterval(xp)
+    const gT = function(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        gT = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && MT(TT, UT, mT)) return null;
+      const nT = setInterval((() => {
+        MT(TT, UT, mT) ? clearInterval(nT) : (zT -= WT, zT < 0 && (clearInterval(nT), mT?.(new Error("Operation timed out after maximum retries. " + (gT || "")), !0)))
+      }), WT);
+      return () => clearInterval(nT)
     }
   },
-  40261: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  40155: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
+    class WT {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(Op.CustomRequestHeaders).length > 0 || Op.CustomRequestModifiers.length > 0
+        return Object.keys(WT.CustomRequestHeaders).length > 0 || WT.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(pp) {
-        return pp = (pp = pp.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(TT) {
+        return TT = (TT = TT.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(pp) {
-        return Op.SkipRequestModificationForBabylonCDN && (pp.includes("preview.babylonjs.com") || pp.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(TT) {
+        return WT.SkipRequestModificationForBabylonCDN && (TT.includes("preview.babylonjs.com") || TT.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(pp) {
-        const ip = {
+      static _CollectCustomizations(TT) {
+        const UT = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (Op._ShouldSkipRequestModifications(pp)) return {
-          url: pp,
-          headers: ip
+        if (WT._ShouldSkipRequestModifications(TT)) return {
+          url: TT,
+          headers: UT
         };
-        for (const op in Op.CustomRequestHeaders) {
-          const pp = Op.CustomRequestHeaders[op];
-          pp && (ip[op] = pp)
+        for (const zT in WT.CustomRequestHeaders) {
+          const TT = WT.CustomRequestHeaders[zT];
+          TT && (UT[zT] = TT)
         }
-        const cp = {
-          setRequestHeader: (pp, cp) => {
-            ip[pp] = cp
+        const mT = {
+          setRequestHeader: (TT, mT) => {
+            UT[TT] = mT
           }
         };
-        for (const op of Op.CustomRequestModifiers) {
-          if (Op._ShouldSkipRequestModifications(pp)) break;
-          const ip = op(cp, pp);
-          "string" === typeof ip && (pp = ip)
+        for (const zT of WT.CustomRequestModifiers) {
+          if (WT._ShouldSkipRequestModifications(TT)) break;
+          const UT = zT(mT, TT);
+          "string" === typeof UT && (TT = UT)
         }
         return {
-          url: pp,
-          headers: ip
+          url: TT,
+          headers: UT
         }
       }
-      static async FetchAsync(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const cp = ip.method ?? "GET";
+      static async FetchAsync(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const mT = UT.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: op,
-            headers: Ip
-          } = Op._CollectCustomizations(Op._CleanUrl(pp), ip.headers ?? {});
-          return await fetch(op, {
-            method: cp,
-            headers: Ip,
-            body: ip.body ?? void 0
+            url: zT,
+            headers: MT
+          } = WT._CollectCustomizations(WT._CleanUrl(TT), UT.headers ?? {});
+          return await fetch(zT, {
+            method: mT,
+            headers: MT,
+            body: UT.body ?? void 0
           })
         }
-        return await new Promise(((op, Ip) => {
-          const Sp = new Op;
-          Sp.responseType = "arraybuffer", Sp.addEventListener("readystatechange", (() => {
-            if (4 === Sp.readyState)
-              if (Sp.status >= 200 && Sp.status < 300) {
-                const pp = "undefined" !== typeof Headers ? new Headers : void 0,
-                  ip = Sp.getResponseHeader("Content-Type");
-                ip && pp && pp.set("Content-Type", ip), "undefined" !== typeof Response ? op(new Response(Sp.response, {
-                  status: Sp.status,
-                  statusText: Sp.statusText,
-                  headers: pp
-                })) : op({
+        return await new Promise(((zT, MT) => {
+          const gT = new WT;
+          gT.responseType = "arraybuffer", gT.addEventListener("readystatechange", (() => {
+            if (4 === gT.readyState)
+              if (gT.status >= 200 && gT.status < 300) {
+                const TT = "undefined" !== typeof Headers ? new Headers : void 0,
+                  UT = gT.getResponseHeader("Content-Type");
+                UT && TT && TT.set("Content-Type", UT), "undefined" !== typeof Response ? zT(new Response(gT.response, {
+                  status: gT.status,
+                  statusText: gT.statusText,
+                  headers: TT
+                })) : zT({
                   ok: !0,
-                  status: Sp.status,
-                  statusText: Sp.statusText,
+                  status: gT.status,
+                  statusText: gT.statusText,
                   headers: {
-                    get: pp => Sp.getResponseHeader(pp)
+                    get: TT => gT.getResponseHeader(TT)
                   },
-                  arrayBuffer: async () => await Promise.resolve(Sp.response)
+                  arrayBuffer: async () => await Promise.resolve(gT.response)
                 })
-              } else Ip(new Error(`HTTP ${Sp.status} loading '${Sp.requestURL}': ${Sp.statusText}`))
-          })), Sp.open(cp, pp, ip.headers), Sp.send(ip.body ?? null)
+              } else MT(new Error(`HTTP ${gT.status} loading '${gT.requestURL}': ${gT.statusText}`))
+          })), gT.open(mT, TT, UT.headers), gT.send(UT.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(pp) {
-        this._xhr.onprogress = pp
+      set onprogress(TT) {
+        this._xhr.onprogress = TT
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(pp) {
-        this._xhr.responseType = pp
+      set responseType(TT) {
+        this._xhr.responseType = TT
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(pp) {
-        this._xhr.timeout = pp
+      set timeout(TT) {
+        this._xhr.timeout = TT
       }
-      addEventListener(pp, ip, cp) {
-        this._xhr.addEventListener(pp, ip, cp)
+      addEventListener(TT, UT, mT) {
+        this._xhr.addEventListener(TT, UT, mT)
       }
-      removeEventListener(pp, ip, cp) {
-        this._xhr.removeEventListener(pp, ip, cp)
+      removeEventListener(TT, UT, mT) {
+        this._xhr.removeEventListener(TT, UT, mT)
       }
       abort() {
         this._xhr.abort()
       }
-      send(pp) {
-        this._xhr.send(pp)
+      send(TT) {
+        this._xhr.send(TT)
       }
-      open(pp, ip, cp) {
+      open(TT, UT, mT) {
         const {
-          url: op,
-          headers: Ip
-        } = Op._CollectCustomizations(ip, cp);
-        this._requestURL = Op._CleanUrl(op), this._xhr.open(pp, this._requestURL, !0);
-        for (const Op in Ip) this._xhr.setRequestHeader(Op, Ip[Op])
+          url: zT,
+          headers: MT
+        } = WT._CollectCustomizations(UT, mT);
+        this._requestURL = WT._CleanUrl(zT), this._xhr.open(TT, this._requestURL, !0);
+        for (const WT in MT) this._xhr.setRequestHeader(WT, MT[WT])
       }
-      setRequestHeader(pp, ip) {
-        this._xhr.setRequestHeader(pp, ip)
+      setRequestHeader(TT, UT) {
+        this._xhr.setRequestHeader(TT, UT)
       }
-      getResponseHeader(pp) {
-        return this._xhr.getResponseHeader(pp)
+      getResponseHeader(TT) {
+        return this._xhr.getResponseHeader(TT)
       }
     }
-    Op.CustomRequestHeaders = {}, Op.CustomRequestModifiers = new Array, Op.SkipRequestModificationForBabylonCDN = !0
+    WT.CustomRequestHeaders = {}, WT.CustomRequestModifiers = new Array, WT.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,62 +1,62 @@
 export const id = 362;
 export const ids = [362];
 export const modules = {
-  61443: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      applyLightFoOffset: () => Sp,
-      getFloatingOriginOffset: () => op,
-      lightFoVersion: () => Ip,
-      wrapRenderableForFO: () => xp
+  61222: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      applyLightFoOffset: () => gT,
+      getFloatingOriginOffset: () => zT,
+      lightFoVersion: () => MT,
+      wrapRenderableForFO: () => nT
     });
-    var Op = cp(41977);
+    var WT = mT(41868);
 
-    function op(pp) {
-      const ip = pp.camera;
-      if (!ip) return {
+    function zT(TT) {
+      const UT = TT.camera;
+      if (!UT) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const cp = ip.worldMatrix;
+      const mT = UT.worldMatrix;
       return {
-        x: cp[12],
-        y: cp[13],
-        z: cp[14]
+        x: mT[12],
+        y: mT[13],
+        z: mT[14]
       }
     }
 
-    function Ip(pp) {
-      return pp.camera ? pp.camera.worldMatrixVersion : 0
+    function MT(TT) {
+      return TT.camera ? TT.camera.worldMatrixVersion : 0
     }
 
-    function Sp(pp, ip) {
-      const cp = ip.camera?.worldMatrix;
-      if (!cp) return;
-      const op = cp[12],
-        Ip = cp[13],
-        Sp = cp[14];
-      let xp = 0;
-      for (const Lp of ip.lights) {
-        if (xp >= Op.d) break;
-        if (!Lp._writeLightUbo) continue;
-        const ip = 4 + 16 * xp,
-          cp = pp[ip + 3];
-        if (0 === cp || 2 === cp) {
-          const cp = Lp.worldMatrix;
-          pp[ip] = cp[12] - op, pp[ip + 1] = cp[13] - Ip, pp[ip + 2] = cp[14] - Sp
+    function gT(TT, UT) {
+      const mT = UT.camera?.worldMatrix;
+      if (!mT) return;
+      const zT = mT[12],
+        MT = mT[13],
+        gT = mT[14];
+      let nT = 0;
+      for (const HT of UT.lights) {
+        if (nT >= WT.c) break;
+        if (!HT._writeLightUbo) continue;
+        const UT = 4 + 16 * nT,
+          mT = TT[UT + 3];
+        if (0 === mT || 2 === mT) {
+          const mT = HT.worldMatrix;
+          TT[UT] = mT[12] - zT, TT[UT + 1] = mT[13] - MT, TT[UT + 2] = mT[14] - gT
         }
-        xp++
+        nT++
       }
     }
 
-    function xp(pp, ip, cp) {
-      let Op = -1;
+    function nT(TT, UT, mT) {
+      let WT = -1;
       return () => {
-        const op = ip.camera ? ip.camera.worldMatrixVersion : -1;
-        op !== Op && (cp(), Op = op), pp()
+        const zT = UT.camera ? UT.camera.worldMatrixVersion : -1;
+        zT !== WT && (mT(), WT = zT), TT()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,467 +1,467 @@
 export const id = 313;
 export const ids = [313];
 export const modules = {
-  42054: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      _ENVTextureLoader: () => Rp
+  41935: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      _ENVTextureLoader: () => JT
     });
-    var Op = cp(40143),
-      op = cp(37320),
-      Ip = cp(37356),
-      Sp = cp(40190),
-      xp = cp(40033),
-      Lp = cp(40195),
-      Yp = (cp(40296), cp(42060)),
-      Dp = cp(38905),
-      Ap = (cp(42071), cp(42102), cp(40273));
-    const Pp = "image/png",
-      Wp = [134, 22, 135, 150, 246, 214, 150, 54];
+    var WT = mT(40022),
+      zT = mT(37188),
+      MT = mT(37226),
+      gT = mT(40080),
+      nT = mT(39913),
+      HT = mT(40088),
+      kT = (mT(40198), mT(41939)),
+      jT = mT(38800),
+      lT = (mT(41953), mT(41976), mT(40171));
+    const LT = "image/png",
+      pT = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function yp(pp) {
-      const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      let cp = 0;
-      for (let Sp = 0; Sp < Wp.length; Sp++)
-        if (ip.getUint8(cp++) !== Wp[Sp]) return Dp.e.Error("Not a babylon environment map"), null;
-      let Op, op = "";
-      for (; Op = ip.getUint8(cp++);) op += String.fromCharCode(Op);
-      let Ip = JSON.parse(op);
-      return Ip = Up(Ip), Ip.binaryDataPosition = cp, Ip.specular && (Ip.specular.lodGenerationScale = Ip.specular.lodGenerationScale || .8), Ip
+    function BT(TT) {
+      const UT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      let mT = 0;
+      for (let gT = 0; gT < pT.length; gT++)
+        if (UT.getUint8(mT++) !== pT[gT]) return jT.b.Error("Not a babylon environment map"), null;
+      let WT, zT = "";
+      for (; WT = UT.getUint8(mT++);) zT += String.fromCharCode(WT);
+      let MT = JSON.parse(zT);
+      return MT = ZT(MT), MT.binaryDataPosition = mT, MT.specular && (MT.specular.lodGenerationScale = MT.specular.lodGenerationScale || .8), MT
     }
 
-    function Up(pp) {
-      if (pp.version > 2) throw new Error(`Unsupported babylon environment map version "${pp.version}". Latest supported version is "2".`);
-      return 2 === pp.version ? pp : pp = {
-        ...pp,
+    function ZT(TT) {
+      if (TT.version > 2) throw new Error(`Unsupported babylon environment map version "${TT.version}". Latest supported version is "2".`);
+      return 2 === TT.version ? TT : TT = {
+        ...TT,
         version: 2,
-        imageType: Pp
+        imageType: LT
       }
     }
 
-    function wp(pp, ip) {
-      const cp = (ip = Up(ip)).specular;
-      let Op = Math.log2(ip.width);
-      if (Op = Math.round(Op) + 1, cp.mipmaps.length !== 6 * Op) throw new Error(`Unsupported specular mipmaps number "${cp.mipmaps.length}"`);
-      const op = new Array(Op);
-      for (let Ip = 0; Ip < Op; Ip++) {
-        op[Ip] = new Array(6);
-        for (let Op = 0; Op < 6; Op++) {
-          const Sp = cp.mipmaps[6 * Ip + Op];
-          op[Ip][Op] = new Uint8Array(pp.buffer, pp.byteOffset + ip.binaryDataPosition + Sp.position, Sp.length)
+    function cT(TT, UT) {
+      const mT = (UT = ZT(UT)).specular;
+      let WT = Math.log2(UT.width);
+      if (WT = Math.round(WT) + 1, mT.mipmaps.length !== 6 * WT) throw new Error(`Unsupported specular mipmaps number "${mT.mipmaps.length}"`);
+      const zT = new Array(WT);
+      for (let MT = 0; MT < WT; MT++) {
+        zT[MT] = new Array(6);
+        for (let WT = 0; WT < 6; WT++) {
+          const gT = mT.mipmaps[6 * MT + WT];
+          zT[MT][WT] = new Uint8Array(TT.buffer, TT.byteOffset + UT.binaryDataPosition + gT.position, gT.length)
         }
       }
-      return op
+      return zT
     }
 
-    function vp(pp, ip) {
-      ip = Up(ip);
-      const cp = new Array(6),
-        Op = ip.irradiance?.irradianceTexture;
-      if (Op) {
-        if (6 !== Op.faces.length) throw new Error(`Incorrect irradiance texture faces number "${Op.faces.length}"`);
-        for (let op = 0; op < 6; op++) {
-          const Ip = Op.faces[op];
-          cp[op] = new Uint8Array(pp.buffer, pp.byteOffset + ip.binaryDataPosition + Ip.position, Ip.length)
+    function vT(TT, UT) {
+      UT = ZT(UT);
+      const mT = new Array(6),
+        WT = UT.irradiance?.irradianceTexture;
+      if (WT) {
+        if (6 !== WT.faces.length) throw new Error(`Incorrect irradiance texture faces number "${WT.faces.length}"`);
+        for (let zT = 0; zT < 6; zT++) {
+          const MT = WT.faces[zT];
+          mT[zT] = new Uint8Array(TT.buffer, TT.byteOffset + UT.binaryDataPosition + MT.position, MT.length)
         }
       }
-      return cp
+      return mT
     }
 
-    function tp(pp, ip, cp) {
-      const Op = (cp = Up(cp)).specular;
-      if (!Op) return Promise.resolve([]);
-      pp._lodGenerationScale = Op.lodGenerationScale;
-      const Ip = [],
-        Sp = wp(ip, cp);
-      Ip.push(dp(pp, Sp, cp.imageType));
-      const xp = cp.irradiance?.irradianceTexture;
-      if (xp) {
-        const Op = vp(ip, cp);
-        let Sp = null;
-        cp.irradiance?.irradianceTexture?.dominantDirection && (Sp = op.o.FromArray(cp.irradiance.irradianceTexture.dominantDirection)), Ip.push(ep(pp, Op, xp.size, cp.imageType, Sp))
+    function fT(TT, UT, mT) {
+      const WT = (mT = ZT(mT)).specular;
+      if (!WT) return Promise.resolve([]);
+      TT._lodGenerationScale = WT.lodGenerationScale;
+      const MT = [],
+        gT = cT(UT, mT);
+      MT.push(iT(TT, gT, mT.imageType));
+      const nT = mT.irradiance?.irradianceTexture;
+      if (nT) {
+        const WT = vT(UT, mT);
+        let gT = null;
+        mT.irradiance?.irradianceTexture?.dominantDirection && (gT = zT.p.FromArray(mT.irradiance.irradianceTexture.dominantDirection)), MT.push(bT(TT, WT, nT.size, mT.imageType, gT))
       }
-      return Promise.all(Ip)
+      return Promise.all(MT)
     }
-    async function Hp(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp) {
-      return await new Promise(((Ap, Pp) => {
-        if (cp) {
-          const cp = ip.createTexture(null, !0, !0, null, 1, null, (pp => {
-            Pp(pp)
-          }), pp);
-          Op?.onEffectCreatedObservable.addOnce((xp => {
-            xp.executeWhenCompiled((() => {
-              Op.externalTextureSamplerBinding = !0, Op.onApply = Op => {
-                Op._bindTexture("textureSampler", cp), Op.setFloat2("scale", 1, ip._features.needsInvertingBitmap && pp instanceof ImageBitmap ? -1 : 1)
-              }, ip.scenes.length && (ip.scenes[0].postProcessManager.directRender([Op], Yp, !0, Ip, Sp), ip.restoreDefaultFramebuffer(), cp.dispose(), URL.revokeObjectURL(op), Ap())
+    async function qT(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT) {
+      return await new Promise(((lT, LT) => {
+        if (mT) {
+          const mT = UT.createTexture(null, !0, !0, null, 1, null, (TT => {
+            LT(TT)
+          }), TT);
+          WT?.onEffectCreatedObservable.addOnce((nT => {
+            nT.executeWhenCompiled((() => {
+              WT.externalTextureSamplerBinding = !0, WT.onApply = WT => {
+                WT._bindTexture("textureSampler", mT), WT.setFloat2("scale", 1, UT._features.needsInvertingBitmap && TT instanceof ImageBitmap ? -1 : 1)
+              }, UT.scenes.length && (UT.scenes[0].postProcessManager.directRender([WT], kT, !0, MT, gT), UT.restoreDefaultFramebuffer(), mT.dispose(), URL.revokeObjectURL(zT), lT())
             }))
           }))
         } else {
-          if (ip._uploadImageToTexture(Dp, pp, Ip, Sp), xp) {
-            const cp = Lp[Sp];
-            cp && ip._uploadImageToTexture(cp._texture, pp, Ip, 0)
+          if (UT._uploadImageToTexture(jT, TT, MT, gT), nT) {
+            const mT = HT[gT];
+            mT && UT._uploadImageToTexture(mT._texture, TT, MT, 0)
           }
-          Ap()
+          lT()
         }
       }))
     }
-    async function dp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Pp;
-      const Op = pp.gy();
-      pp.format = 5, pp.type = 0, pp.generateMipMaps = !0, pp._cachedAnisotropicFilteringLevel = null, Op.updateTextureSamplingMode(3, pp), await jp(pp, ip, !0, cp), pp.isReady = !0
+    async function iT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LT;
+      const WT = TT.eB();
+      TT.format = 5, TT.type = 0, TT.generateMipMaps = !0, TT._cachedAnisotropicFilteringLevel = null, WT.updateTextureSamplingMode(3, TT), await OT(TT, UT, !0, mT), TT.isReady = !0
     }
-    async function ep(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Pp,
-        op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const Ip = pp.gy(),
-        Sp = new xp.b(Ip, 5),
-        Yp = new Lp.d(Ip, Sp);
-      pp._irradianceTexture = Yp, Yp._dominantDirection = op, Sp.isCube = !0, Sp.format = 5, Sp.type = 0, Sp.generateMipMaps = !0, Sp._cachedAnisotropicFilteringLevel = null, Sp.generateMipMaps = !0, Sp.width = cp, Sp.height = cp, Ip.updateTextureSamplingMode(3, Sp), await jp(Sp, [ip], !1, Op), Ip.generateMipMapsForCubemap(Sp), Sp.isReady = !0
+    async function bT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LT,
+        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const MT = TT.eB(),
+        gT = new nT.b(MT, 5),
+        kT = new HT.c(MT, gT);
+      TT._irradianceTexture = kT, kT._dominantDirection = zT, gT.isCube = !0, gT.format = 5, gT.type = 0, gT.generateMipMaps = !0, gT._cachedAnisotropicFilteringLevel = null, gT.generateMipMaps = !0, gT.width = mT, gT.height = mT, MT.updateTextureSamplingMode(3, gT), await OT(gT, [UT], !1, WT), MT.generateMipMapsForCubemap(gT), gT.isReady = !0
     }
-    async function jp(pp, ip, op) {
-      let Sp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Pp;
-      if (!(0, Op.h)(pp.width)) throw new Error("Texture size must be a power of two");
-      const Dp = (0, Ip.ILog2)(pp.width) + 1,
-        Wp = pp.gy();
-      let yp = !1,
-        Up = !1,
-        wp = null,
-        vp = null,
-        tp = null;
-      const dp = Wp.getCaps();
-      dp.textureLOD ? Wp._features.supportRenderAndCopyToLodForFloatTextures ? dp.textureHalfFloatRender && dp.textureHalfFloatLinearFiltering ? (yp = !0, pp.type = 2) : dp.textureFloatRender && dp.textureFloatLinearFiltering && (yp = !0, pp.type = 1) : yp = !1 : (yp = !1, Up = op);
-      let ep = 0;
-      if (yp) Wp.isWebGPU ? (ep = 1, await cp.e(347).then((() => cp(61482)))) : await cp.e(329).then((() => cp(61491))), wp = new Yp.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Wp, !1, void 0, pp.type, void 0, null, !1, void 0, ep), pp._isRGBD = !1, pp.invertY = !1, vp = Wp.createRenderTargetCubeTexture(pp.width, {
+    async function OT(TT, UT, zT) {
+      let gT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LT;
+      if (!(0, WT.i)(TT.width)) throw new Error("Texture size must be a power of two");
+      const jT = (0, MT.ILog2)(TT.width) + 1,
+        pT = TT.eB();
+      let BT = !1,
+        ZT = !1,
+        cT = null,
+        vT = null,
+        fT = null;
+      const iT = pT.getCaps();
+      iT.textureLOD ? pT._features.supportRenderAndCopyToLodForFloatTextures ? iT.textureHalfFloatRender && iT.textureHalfFloatLinearFiltering ? (BT = !0, TT.type = 2) : iT.textureFloatRender && iT.textureFloatLinearFiltering && (BT = !0, TT.type = 1) : BT = !1 : (BT = !1, ZT = zT);
+      let bT = 0;
+      if (BT) pT.isWebGPU ? (bT = 1, await mT.e(347).then((() => mT(61264)))) : await mT.e(329).then((() => mT(61266))), cT = new kT.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, pT, !1, void 0, TT.type, void 0, null, !1, void 0, bT), TT._isRGBD = !1, TT.invertY = !1, vT = pT.createRenderTargetCubeTexture(TT.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: pp.type,
+        type: TT.type,
         format: 5
       });
-      else if (pp._isRGBD = !0, pp.invertY = !0, Up) {
-        const ip = 3;
-        tp = {};
-        const cp = pp._lodGenerationScale,
-          Op = pp._lodGenerationOffset;
-        for (let op = 0; op < ip; op++) {
-          const Ip = (Dp - 1) * cp + Op,
-            Sp = Op + (Ip - Op) * (1 - op / (ip - 1)),
-            Yp = Math.round(Math.min(Math.max(Sp, 0), Ip)),
-            Ap = new xp.b(Wp, 2);
-          Ap.isCube = !0, Ap.invertY = !0, Ap.generateMipMaps = !1, Wp.updateTextureSamplingMode(2, Ap);
-          const Pp = new Lp.d(null);
-          switch (Pp._isCube = !0, Pp._texture = Ap, tp[Yp] = Pp, op) {
+      else if (TT._isRGBD = !0, TT.invertY = !0, ZT) {
+        const UT = 3;
+        fT = {};
+        const mT = TT._lodGenerationScale,
+          WT = TT._lodGenerationOffset;
+        for (let zT = 0; zT < UT; zT++) {
+          const MT = (jT - 1) * mT + WT,
+            gT = WT + (MT - WT) * (1 - zT / (UT - 1)),
+            kT = Math.round(Math.min(Math.max(gT, 0), MT)),
+            lT = new nT.b(pT, 2);
+          lT.isCube = !0, lT.invertY = !0, lT.generateMipMaps = !1, pT.updateTextureSamplingMode(2, lT);
+          const LT = new HT.c(null);
+          switch (LT._isCube = !0, LT._texture = lT, fT[kT] = LT, zT) {
             case 0:
-              pp._lodTextureLow = Pp;
+              TT._lodTextureLow = LT;
               break;
             case 1:
-              pp._lodTextureMid = Pp;
+              TT._lodTextureMid = LT;
               break;
             case 2:
-              pp._lodTextureHigh = Pp
+              TT._lodTextureHigh = LT
           }
         }
       }
-      const jp = [];
-      for (let cp = 0; cp < ip.length; cp++)
-        for (let Op = 0; Op < 6; Op++) {
-          const op = ip[cp][Op],
-            Ip = (0, Ap.i)(op),
-            xp = new Blob([Ip], {
-              type: Sp
+      const OT = [];
+      for (let mT = 0; mT < UT.length; mT++)
+        for (let WT = 0; WT < 6; WT++) {
+          const zT = UT[mT][WT],
+            MT = (0, lT.o)(zT),
+            nT = new Blob([MT], {
+              type: gT
             }),
-            Lp = URL.createObjectURL(xp);
-          let Yp;
-          if (Wp._features.forceBitmapOverHTMLImageElement) Yp = Wp.createImageBitmap(xp, {
+            HT = URL.createObjectURL(nT);
+          let kT;
+          if (pT._features.forceBitmapOverHTMLImageElement) kT = pT.createImageBitmap(nT, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async ip => await Hp(ip, Wp, yp, wp, Lp, Op, cp, Up, tp, vp, pp)));
+          }).then((async UT => await qT(UT, pT, BT, cT, HT, WT, mT, ZT, fT, vT, TT)));
           else {
-            const ip = new Image;
-            ip.src = Lp, Yp = new Promise(((op, Ip) => {
-              ip.onload = () => {
-                Hp(ip, Wp, yp, wp, Lp, Op, cp, Up, tp, vp, pp).then((() => op())).catch((pp => {
-                  Ip(pp)
+            const UT = new Image;
+            UT.src = HT, kT = new Promise(((zT, MT) => {
+              UT.onload = () => {
+                qT(UT, pT, BT, cT, HT, WT, mT, ZT, fT, vT, TT).then((() => zT())).catch((TT => {
+                  MT(TT)
                 }))
-              }, ip.onerror = pp => {
-                Ip(pp)
+              }, UT.onerror = TT => {
+                MT(TT)
               }
             }))
           }
-          jp.push(Yp)
+          OT.push(kT)
         }
-      if (await Promise.all(jp), ip.length < Dp) {
-        let cp;
-        const Op = Math.pow(2, Dp - 1 - ip.length),
-          op = Op * Op * 4;
-        switch (pp.type) {
+      if (await Promise.all(OT), UT.length < jT) {
+        let mT;
+        const WT = Math.pow(2, jT - 1 - UT.length),
+          zT = WT * WT * 4;
+        switch (TT.type) {
           case 0:
-            cp = new Uint8Array(op);
+            mT = new Uint8Array(zT);
             break;
           case 2:
-            cp = new Uint16Array(op);
+            mT = new Uint16Array(zT);
             break;
           case 1:
-            cp = new Float32Array(op)
+            mT = new Float32Array(zT)
         }
-        for (let Ip = ip.length; Ip < Dp; Ip++)
-          for (let ip = 0; ip < 6; ip++) Wp._uploadArrayBufferViewToTexture(vp?.texture || pp, cp, ip, Ip)
+        for (let MT = UT.length; MT < jT; MT++)
+          for (let UT = 0; UT < 6; UT++) pT._uploadArrayBufferViewToTexture(vT?.texture || TT, mT, UT, MT)
       }
-      if (vp) {
-        const ip = pp._irradianceTexture;
-        pp._irradianceTexture = null, Wp._releaseTexture(pp), vp._swapAndDie(pp), pp._irradianceTexture = ip
+      if (vT) {
+        const UT = TT._irradianceTexture;
+        TT._irradianceTexture = null, pT._releaseTexture(TT), vT._swapAndDie(TT), TT._irradianceTexture = UT
       }
-      wp && wp.dispose(), Up && (pp._lodTextureHigh && pp._lodTextureHigh._texture && (pp._lodTextureHigh._texture.isReady = !0), pp._lodTextureMid && pp._lodTextureMid._texture && (pp._lodTextureMid._texture.isReady = !0), pp._lodTextureLow && pp._lodTextureLow._texture && (pp._lodTextureLow._texture.isReady = !0))
+      cT && cT.dispose(), ZT && (TT._lodTextureHigh && TT._lodTextureHigh._texture && (TT._lodTextureHigh._texture.isReady = !0), TT._lodTextureMid && TT._lodTextureMid._texture && (TT._lodTextureMid._texture.isReady = !0), TT._lodTextureLow && TT._lodTextureLow._texture && (TT._lodTextureLow._texture.isReady = !0))
     }
 
-    function kp(pp, ip) {
-      const cp = (ip = Up(ip)).irradiance;
-      if (!cp) return;
-      const Op = new Sp.e;
-      op.o.FromArrayToRef(cp.x, 0, Op.x), op.o.FromArrayToRef(cp.y, 0, Op.y), op.o.FromArrayToRef(cp.z, 0, Op.z), op.o.FromArrayToRef(cp.xx, 0, Op.xx), op.o.FromArrayToRef(cp.yy, 0, Op.yy), op.o.FromArrayToRef(cp.zz, 0, Op.zz), op.o.FromArrayToRef(cp.yz, 0, Op.yz), op.o.FromArrayToRef(cp.zx, 0, Op.zx), op.o.FromArrayToRef(cp.xy, 0, Op.xy), pp._sphericalPolynomial = Op
+    function eT(TT, UT) {
+      const mT = (UT = ZT(UT)).irradiance;
+      if (!mT) return;
+      const WT = new gT.c;
+      zT.p.FromArrayToRef(mT.x, 0, WT.x), zT.p.FromArrayToRef(mT.y, 0, WT.y), zT.p.FromArrayToRef(mT.z, 0, WT.z), zT.p.FromArrayToRef(mT.xx, 0, WT.xx), zT.p.FromArrayToRef(mT.yy, 0, WT.yy), zT.p.FromArrayToRef(mT.zz, 0, WT.zz), zT.p.FromArrayToRef(mT.yz, 0, WT.yz), zT.p.FromArrayToRef(mT.zx, 0, WT.zx), zT.p.FromArrayToRef(mT.xy, 0, WT.xy), TT._sphericalPolynomial = WT
     }
-    var mp = cp(42109);
-    class Rp {
+    var YT = mT(41978);
+    class JT {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(pp, ip, cp, Op, op) {
-        if (Array.isArray(pp)) return;
-        const Ip = yp(pp);
-        if (Ip) {
-          ip.width = Ip.width, ip.height = Ip.width;
+      loadCubeData(TT, UT, mT, WT, zT) {
+        if (Array.isArray(TT)) return;
+        const MT = BT(TT);
+        if (MT) {
+          UT.width = MT.width, UT.height = MT.width;
           try {
-            (0, mp.d)(), kp(ip, Ip), tp(ip, pp, Ip).then((() => {
-              ip.isReady = !0, ip.onLoadedObservable.notifyObservers(ip), ip.onLoadedObservable.clear(), Op && Op()
-            }), (pp => {
-              op?.("Can not upload environment levels", pp)
+            (0, YT.c)(), eT(UT, MT), fT(UT, TT, MT).then((() => {
+              UT.isReady = !0, UT.onLoadedObservable.notifyObservers(UT), UT.onLoadedObservable.clear(), WT && WT()
+            }), (TT => {
+              zT?.("Can not upload environment levels", TT)
             }))
-          } catch (Sp) {
-            op?.("Can not upload environment file", Sp)
+          } catch (gT) {
+            zT?.("Can not upload environment file", gT)
           }
-        } else op && op("Can not parse the environment file", null)
+        } else zT && zT("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  42109: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp
+  41978: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT
     });
-    var Op = cp(42025),
-      op = cp(40195);
-    let Ip = !1;
+    var WT = mT(41908),
+      zT = mT(40088);
+    let MT = !1;
 
-    function Sp() {
-      Ip || (Ip = !0, op.d.prototype._sphericalPolynomialTargetSize = 0, op.d.prototype.forceSphericalPolynomialsRecompute = function() {
+    function gT() {
+      MT || (MT = !0, zT.c.prototype._sphericalPolynomialTargetSize = 0, zT.c.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(op.d.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(zT.c.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = Op.d.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((pp => {
-              this._texture._sphericalPolynomial = pp, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = WT.d.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((TT => {
+              this._texture._sphericalPolynomial = TT, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(pp) {
-          this._texture && (this._texture._sphericalPolynomial = pp)
+        set: function(TT) {
+          this._texture && (this._texture._sphericalPolynomial = TT)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  42025: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Yp
+  41908: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => kT
     });
-    var Op = cp(37320),
-      op = cp(37356),
-      Ip = cp(40190),
-      Sp = cp(37324),
-      xp = cp(37487);
-    class Lp {
-      constructor(pp, ip, cp, Op) {
-        this.name = pp, this.worldAxisForNormal = ip, this.worldAxisForFileX = cp, this.worldAxisForFileY = Op
+    var WT = mT(37188),
+      zT = mT(37226),
+      MT = mT(40080),
+      gT = mT(37196),
+      nT = mT(37367);
+    class HT {
+      constructor(TT, UT, mT, WT) {
+        this.name = TT, this.worldAxisForNormal = UT, this.worldAxisForFileX = mT, this.worldAxisForFileY = WT
       }
     }
-    class Yp {
-      static _NearestPow2Floor(pp) {
-        return pp <= 1 ? 1 : 1 << Math.floor(Math.log2(pp))
+    class kT {
+      static _NearestPow2Floor(TT) {
+        return TT <= 1 ? 1 : 1 << Math.floor(Math.log2(TT))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(pp) {
-        if (!pp.isCube) return null;
-        pp.Gl()?.gy().flushFramebuffer();
-        const ip = pp.getSize().width,
-          cp = pp._sphericalPolynomialTargetSize,
-          Op = cp > 0 ? this._NearestPow2Floor(cp) : 0,
-          op = !pp.noMipmap && !0 === pp._texture?.generateMipMaps,
-          Ip = Op > 0 && Op < ip && op,
-          Sp = Ip ? Math.max(0, Math.round(Math.log2(ip / Op))) : 0,
-          xp = Ip ? Math.max(1, Math.floor(ip / Math.pow(2, Sp))) : ip,
-          Lp = pp.readPixels(0, Sp, void 0, !1),
-          Yp = pp.readPixels(1, Sp, void 0, !1);
-        let Dp, Ap;
-        pp.isRenderTarget ? (Dp = pp.readPixels(3, Sp, void 0, !1), Ap = pp.readPixels(2, Sp, void 0, !1)) : (Dp = pp.readPixels(2, Sp, void 0, !1), Ap = pp.readPixels(3, Sp, void 0, !1));
-        const Pp = pp.readPixels(4, Sp, void 0, !1),
-          Wp = pp.readPixels(5, Sp, void 0, !1),
-          yp = pp.gammaSpace,
-          Up = Op > 0 && Op < ip && !Ip;
-        return new Promise((pp => {
-          Promise.all([Yp, Lp, Dp, Ap, Pp, Wp]).then((cp => {
-            let [op, Ip, Sp, Lp, Yp, Dp] = cp, Ap = xp;
-            if (Up) {
-              const pp = 4;
-              op = this._DownsampleFace(op, ip, Op, pp), Ip = this._DownsampleFace(Ip, ip, Op, pp), Sp = this._DownsampleFace(Sp, ip, Op, pp), Lp = this._DownsampleFace(Lp, ip, Op, pp), Yp = this._DownsampleFace(Yp, ip, Op, pp), Dp = this._DownsampleFace(Dp, ip, Op, pp), Ap = Op
+      static ConvertCubeMapTextureToSphericalPolynomial(TT) {
+        if (!TT.isCube) return null;
+        TT.KF()?.eB().flushFramebuffer();
+        const UT = TT.getSize().width,
+          mT = TT._sphericalPolynomialTargetSize,
+          WT = mT > 0 ? this._NearestPow2Floor(mT) : 0,
+          zT = !TT.noMipmap && !0 === TT._texture?.generateMipMaps,
+          MT = WT > 0 && WT < UT && zT,
+          gT = MT ? Math.max(0, Math.round(Math.log2(UT / WT))) : 0,
+          nT = MT ? Math.max(1, Math.floor(UT / Math.pow(2, gT))) : UT,
+          HT = TT.readPixels(0, gT, void 0, !1),
+          kT = TT.readPixels(1, gT, void 0, !1);
+        let jT, lT;
+        TT.isRenderTarget ? (jT = TT.readPixels(3, gT, void 0, !1), lT = TT.readPixels(2, gT, void 0, !1)) : (jT = TT.readPixels(2, gT, void 0, !1), lT = TT.readPixels(3, gT, void 0, !1));
+        const LT = TT.readPixels(4, gT, void 0, !1),
+          pT = TT.readPixels(5, gT, void 0, !1),
+          BT = TT.gammaSpace,
+          ZT = WT > 0 && WT < UT && !MT;
+        return new Promise((TT => {
+          Promise.all([kT, HT, jT, lT, LT, pT]).then((mT => {
+            let [zT, MT, gT, HT, kT, jT] = mT, lT = nT;
+            if (ZT) {
+              const TT = 4;
+              zT = this._DownsampleFace(zT, UT, WT, TT), MT = this._DownsampleFace(MT, UT, WT, TT), gT = this._DownsampleFace(gT, UT, WT, TT), HT = this._DownsampleFace(HT, UT, WT, TT), kT = this._DownsampleFace(kT, UT, WT, TT), jT = this._DownsampleFace(jT, UT, WT, TT), lT = WT
             }
-            const Pp = {
-              size: Ap,
-              right: Ip,
-              left: op,
-              up: Sp,
-              down: Lp,
-              front: Yp,
-              back: Dp,
+            const LT = {
+              size: lT,
+              right: MT,
+              left: zT,
+              up: gT,
+              down: HT,
+              front: kT,
+              back: jT,
               format: 5,
-              type: op instanceof Float32Array ? 1 : 0,
-              gammaSpace: yp
+              type: zT instanceof Float32Array ? 1 : 0,
+              gammaSpace: BT
             };
-            pp(this.ConvertCubeMapToSphericalPolynomial(Pp))
+            TT(this.ConvertCubeMapToSphericalPolynomial(LT))
           }))
         }))
       }
-      static _AreaElement(pp, ip) {
-        return Math.atan2(pp * ip, Math.sqrt(pp * pp + ip * ip + 1))
+      static _AreaElement(TT, UT) {
+        return Math.atan2(TT * UT, Math.sqrt(TT * TT + UT * UT + 1))
       }
-      static _DownsampleFace(pp, ip, cp, Op) {
-        const op = pp instanceof Float32Array ? pp : Float32Array.from(pp),
-          Ip = cp * cp * Op,
-          Sp = new Float32Array(Ip),
-          xp = ip / cp,
-          Lp = 1 / (xp * xp);
-        for (let Dp = 0; Dp < cp; Dp++) {
-          const pp = Math.floor(Dp * xp),
-            Ip = Math.floor((Dp + 1) * xp);
-          for (let Yp = 0; Yp < cp; Yp++) {
-            const Ap = Math.floor(Yp * xp),
-              Pp = Math.floor((Yp + 1) * xp),
-              Wp = (Dp * cp + Yp) * Op;
-            for (let cp = 0; cp < Op; cp++) {
-              let xp = 0;
-              for (let Sp = pp; Sp < Ip; Sp++)
-                for (let pp = Ap; pp < Pp; pp++) xp += op[(Sp * ip + pp) * Op + cp];
-              Sp[Wp + cp] = xp * Lp
+      static _DownsampleFace(TT, UT, mT, WT) {
+        const zT = TT instanceof Float32Array ? TT : Float32Array.from(TT),
+          MT = mT * mT * WT,
+          gT = new Float32Array(MT),
+          nT = UT / mT,
+          HT = 1 / (nT * nT);
+        for (let jT = 0; jT < mT; jT++) {
+          const TT = Math.floor(jT * nT),
+            MT = Math.floor((jT + 1) * nT);
+          for (let kT = 0; kT < mT; kT++) {
+            const lT = Math.floor(kT * nT),
+              LT = Math.floor((kT + 1) * nT),
+              pT = (jT * mT + kT) * WT;
+            for (let mT = 0; mT < WT; mT++) {
+              let nT = 0;
+              for (let gT = TT; gT < MT; gT++)
+                for (let TT = lT; TT < LT; TT++) nT += zT[(gT * UT + TT) * WT + mT];
+              gT[pT + mT] = nT * HT
             }
           }
         }
-        if (pp instanceof Float32Array) return Sp;
-        const Yp = new(0, pp.constructor)(Ip);
-        for (let Dp = 0; Dp < Ip; Dp++) Yp[Dp] = Sp[Dp] + .5 | 0;
-        return Yp
+        if (TT instanceof Float32Array) return gT;
+        const kT = new(0, TT.constructor)(MT);
+        for (let jT = 0; jT < MT; jT++) kT[jT] = gT[jT] + .5 | 0;
+        return kT
       }
-      static ConvertCubeMapToSphericalPolynomial(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const cp = ip > 0 ? this._NearestPow2Floor(ip) : 0;
-        if (cp > 0 && pp.size > cp) {
-          const ip = 5 === pp.format ? 4 : 3,
-            Op = ["right", "left", "up", "down", "front", "back"],
-            op = {};
-          for (const Ip of Op) op[Ip] = this._DownsampleFace(pp[Ip], pp.size, cp, ip);
-          pp = {
-            ...pp,
-            ...op,
-            size: cp
+      static ConvertCubeMapToSphericalPolynomial(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const mT = UT > 0 ? this._NearestPow2Floor(UT) : 0;
+        if (mT > 0 && TT.size > mT) {
+          const UT = 5 === TT.format ? 4 : 3,
+            WT = ["right", "left", "up", "down", "front", "back"],
+            zT = {};
+          for (const MT of WT) zT[MT] = this._DownsampleFace(TT[MT], TT.size, mT, UT);
+          TT = {
+            ...TT,
+            ...zT,
+            size: mT
           }
         }
-        const Op = new Ip.c;
-        let Lp = 0;
-        const Yp = 2 / pp.size,
-          Dp = Yp,
-          Ap = .5 * Yp,
-          Pp = Ap - 1;
-        for (let Ip = 0; Ip < 6; Ip++) {
-          const ip = this._FileFaces[Ip],
-            cp = pp[ip.name];
-          let Wp = Pp;
-          const yp = 5 === pp.format ? 4 : 3;
-          for (let Ip = 0; Ip < pp.size; Ip++) {
-            let Up = Pp;
-            for (let Dp = 0; Dp < pp.size; Dp++) {
-              const Pp = ip.worldAxisForFileX.scale(Up).add(ip.worldAxisForFileY.scale(Wp)).add(ip.worldAxisForNormal);
-              Pp.normalize();
-              const wp = this._AreaElement(Up - Ap, Wp - Ap) - this._AreaElement(Up - Ap, Wp + Ap) - this._AreaElement(Up + Ap, Wp - Ap) + this._AreaElement(Up + Ap, Wp + Ap);
-              let vp = cp[Ip * pp.size * yp + Dp * yp + 0],
-                tp = cp[Ip * pp.size * yp + Dp * yp + 1],
-                Hp = cp[Ip * pp.size * yp + Dp * yp + 2];
-              isNaN(vp) && (vp = 0), isNaN(tp) && (tp = 0), isNaN(Hp) && (Hp = 0), 0 === pp.type && (vp /= 255, tp /= 255, Hp /= 255), pp.gammaSpace && (vp = Math.pow((0, op.Clamp)(vp), Sp.g), tp = Math.pow((0, op.Clamp)(tp), Sp.g), Hp = Math.pow((0, op.Clamp)(Hp), Sp.g));
-              const dp = this.MAX_HDRI_VALUE;
+        const WT = new MT.b;
+        let HT = 0;
+        const kT = 2 / TT.size,
+          jT = kT,
+          lT = .5 * kT,
+          LT = lT - 1;
+        for (let MT = 0; MT < 6; MT++) {
+          const UT = this._FileFaces[MT],
+            mT = TT[UT.name];
+          let pT = LT;
+          const BT = 5 === TT.format ? 4 : 3;
+          for (let MT = 0; MT < TT.size; MT++) {
+            let ZT = LT;
+            for (let jT = 0; jT < TT.size; jT++) {
+              const LT = UT.worldAxisForFileX.scale(ZT).add(UT.worldAxisForFileY.scale(pT)).add(UT.worldAxisForNormal);
+              LT.normalize();
+              const cT = this._AreaElement(ZT - lT, pT - lT) - this._AreaElement(ZT - lT, pT + lT) - this._AreaElement(ZT + lT, pT - lT) + this._AreaElement(ZT + lT, pT + lT);
+              let vT = mT[MT * TT.size * BT + jT * BT + 0],
+                fT = mT[MT * TT.size * BT + jT * BT + 1],
+                qT = mT[MT * TT.size * BT + jT * BT + 2];
+              isNaN(vT) && (vT = 0), isNaN(fT) && (fT = 0), isNaN(qT) && (qT = 0), 0 === TT.type && (vT /= 255, fT /= 255, qT /= 255), TT.gammaSpace && (vT = Math.pow((0, zT.Clamp)(vT), gT.f), fT = Math.pow((0, zT.Clamp)(fT), gT.f), qT = Math.pow((0, zT.Clamp)(qT), gT.f));
+              const iT = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const pp = Math.max(vp, tp, Hp);
-                if (pp > dp) {
-                  const ip = dp / pp;
-                  vp *= ip, tp *= ip, Hp *= ip
+                const TT = Math.max(vT, fT, qT);
+                if (TT > iT) {
+                  const UT = iT / TT;
+                  vT *= UT, fT *= UT, qT *= UT
                 }
-              } else vp = (0, op.Clamp)(vp, 0, dp), tp = (0, op.Clamp)(tp, 0, dp), Hp = (0, op.Clamp)(Hp, 0, dp);
-              const ep = new xp.d(vp, tp, Hp);
-              Op.addLight(Pp, ep, wp), Lp += wp, Up += Yp
+              } else vT = (0, zT.Clamp)(vT, 0, iT), fT = (0, zT.Clamp)(fT, 0, iT), qT = (0, zT.Clamp)(qT, 0, iT);
+              const bT = new nT.d(vT, fT, qT);
+              WT.addLight(LT, bT, cT), HT += cT, ZT += kT
             }
-            Wp += Dp
+            pT += jT
           }
         }
-        const Wp = 6 * (4 * Math.PI) / 6 / Lp;
-        return Op.scaleInPlace(Wp), Op.convertIncidentRadianceToIrradiance(), Op.convertIrradianceToLambertianRadiance(), Ip.e.FromHarmonics(Op)
+        const pT = 6 * (4 * Math.PI) / 6 / HT;
+        return WT.scaleInPlace(pT), WT.convertIncidentRadianceToIrradiance(), WT.convertIrradianceToLambertianRadiance(), MT.c.FromHarmonics(WT)
       }
     }
-    Yp._FileFaces = [new Lp("right", new Op.o(1, 0, 0), new Op.o(0, 0, -1), new Op.o(0, -1, 0)), new Lp("left", new Op.o(-1, 0, 0), new Op.o(0, 0, 1), new Op.o(0, -1, 0)), new Lp("up", new Op.o(0, 1, 0), new Op.o(1, 0, 0), new Op.o(0, 0, 1)), new Lp("down", new Op.o(0, -1, 0), new Op.o(1, 0, 0), new Op.o(0, 0, -1)), new Lp("front", new Op.o(0, 0, 1), new Op.o(1, 0, 0), new Op.o(0, -1, 0)), new Lp("back", new Op.o(0, 0, -1), new Op.o(-1, 0, 0), new Op.o(0, -1, 0))], Yp.MAX_HDRI_VALUE = 4096, Yp.PRESERVE_CLAMPED_COLORS = !1
+    kT._FileFaces = [new HT("right", new WT.p(1, 0, 0), new WT.p(0, 0, -1), new WT.p(0, -1, 0)), new HT("left", new WT.p(-1, 0, 0), new WT.p(0, 0, 1), new WT.p(0, -1, 0)), new HT("up", new WT.p(0, 1, 0), new WT.p(1, 0, 0), new WT.p(0, 0, 1)), new HT("down", new WT.p(0, -1, 0), new WT.p(1, 0, 0), new WT.p(0, 0, -1)), new HT("front", new WT.p(0, 0, 1), new WT.p(1, 0, 0), new WT.p(0, -1, 0)), new HT("back", new WT.p(0, 0, -1), new WT.p(-1, 0, 0), new WT.p(0, -1, 0))], kT.MAX_HDRI_VALUE = 4096, kT.PRESERVE_CLAMPED_COLORS = !1
   },
-  42071: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip
+  41953: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT
     });
-    var Op = cp(42060),
-      op = cp(42080);
-    class Ip {
-      static ExpandRGBDTexture(pp) {
-        const ip = pp._texture;
-        if (!ip || !pp.isRGBD) return;
-        const op = ip.gy(),
-          Ip = op.getCaps(),
-          Sp = ip.isReady;
-        let xp = !1;
-        Ip.textureHalfFloatRender && Ip.textureHalfFloatLinearFiltering ? (xp = !0, ip.type = 2) : Ip.textureFloatRender && Ip.textureFloatLinearFiltering && (xp = !0, ip.type = 1), xp && (ip.isReady = !1, ip._isRGBD = !1, ip.invertY = !1);
-        const Lp = async () => {
-          const Ip = op.isWebGPU,
-            Sp = Ip ? 1 : 0;
-          ip.isReady = !1, Ip ? await cp.e(347).then((() => cp(61482))) : await cp.e(329).then((() => cp(61491)));
-          const xp = new Op.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, op, !1, void 0, ip.type, void 0, null, !1, void 0, Sp);
-          xp.externalTextureSamplerBinding = !0;
-          const Lp = op.createRenderTargetTexture(ip.width, {
+    var WT = mT(41939),
+      zT = mT(41957);
+    class MT {
+      static ExpandRGBDTexture(TT) {
+        const UT = TT._texture;
+        if (!UT || !TT.isRGBD) return;
+        const zT = UT.eB(),
+          MT = zT.getCaps(),
+          gT = UT.isReady;
+        let nT = !1;
+        MT.textureHalfFloatRender && MT.textureHalfFloatLinearFiltering ? (nT = !0, UT.type = 2) : MT.textureFloatRender && MT.textureFloatLinearFiltering && (nT = !0, UT.type = 1), nT && (UT.isReady = !1, UT._isRGBD = !1, UT.invertY = !1);
+        const HT = async () => {
+          const MT = zT.isWebGPU,
+            gT = MT ? 1 : 0;
+          UT.isReady = !1, MT ? await mT.e(347).then((() => mT(61264))) : await mT.e(329).then((() => mT(61266)));
+          const nT = new WT.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, zT, !1, void 0, UT.type, void 0, null, !1, void 0, gT);
+          nT.externalTextureSamplerBinding = !0;
+          const HT = zT.createRenderTargetTexture(UT.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: ip.samplingMode,
-            type: ip.type,
+            samplingMode: UT.samplingMode,
+            type: UT.type,
             format: 5
           });
-          xp.onEffectCreatedObservable.addOnce((cp => {
-            cp.executeWhenCompiled((() => {
-              xp.onApply = pp => {
-                pp._bindTexture("textureSampler", ip), pp.setFloat2("scale", 1, 1)
-              }, pp.Gl()?.postProcessManager.directRender([xp], Lp, !0), op.restoreDefaultFramebuffer(), op._releaseTexture(ip), xp && xp.dispose(), Lp._swapAndDie(ip), ip.isReady = !0
+          nT.onEffectCreatedObservable.addOnce((mT => {
+            mT.executeWhenCompiled((() => {
+              nT.onApply = TT => {
+                TT._bindTexture("textureSampler", UT), TT.setFloat2("scale", 1, 1)
+              }, TT.KF()?.postProcessManager.directRender([nT], HT, !0), zT.restoreDefaultFramebuffer(), zT._releaseTexture(UT), nT && nT.dispose(), HT._swapAndDie(UT), UT.isReady = !0
             }))
           }))
         };
-        xp && (Sp ? Lp() : pp.onLoadObservable.addOnce(Lp))
+        nT && (gT ? HT() : TT.onLoadObservable.addOnce(HT))
       }
-      static async EncodeTextureToRGBD(pp, ip) {
-        let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return ip.gy().isWebGPU ? await cp.e(348).then((() => cp(61509))) : await cp.e(330).then((() => cp(61507))), await (0, op.c)("rgbdEncode", pp, ip, Op, 1, 5)
+      static async EncodeTextureToRGBD(TT, UT) {
+        let WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return UT.eB().isWebGPU ? await mT.e(348).then((() => mT(61282))) : await mT.e(330).then((() => mT(61273))), await (0, zT.d)("rgbdEncode", TT, UT, WT, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

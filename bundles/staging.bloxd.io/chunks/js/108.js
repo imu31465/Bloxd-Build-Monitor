@@ -1,255 +1,255 @@
 export const id = 108;
 export const ids = [108];
 export const modules = {
-  36565: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Lp
+  36435: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => HT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(62),
-      Sp = cp(4664),
-      xp = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(63),
+      gT = mT(4677),
+      nT = mT(1188);
 
-    function Lp(pp) {
+    function HT(TT) {
       let {
-        locked: ip,
-        children: cp
-      } = pp;
-      const Op = (0, Ip.useRef)(null),
-        Lp = (0, Sp.c)(Op, "y");
-      return (0, xp.jsx)("div", {
-        ref: Op,
-        className: op()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: Lp.before,
-          CreateCustomLobbyBodyMoreBelow: Lp.after
+        locked: UT,
+        children: mT
+      } = TT;
+      const WT = (0, MT.useRef)(null),
+        HT = (0, gT.e)(WT, "y");
+      return (0, nT.jsx)("div", {
+        ref: WT,
+        className: zT()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: HT.before,
+          CreateCustomLobbyBodyMoreBelow: HT.after
         }),
-        "data-pad-ignore": ip || void 0,
-        children: cp
+        "data-pad-ignore": UT || void 0,
+        children: mT
       })
     }
   },
-  36652: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      showFirstWorldSetupPopup: () => Up
+  36506: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      showFirstWorldSetupPopup: () => ZT
     });
-    cp(5054), cp(36543);
-    var Op = cp(4719),
-      op = cp(62),
-      Ip = cp(4677),
-      Sp = cp(1201),
-      xp = cp(1372),
-      Lp = cp(36565),
-      Yp = cp(5061),
-      Dp = cp(1480),
-      Ap = cp(3587),
-      Pp = cp(36557),
-      Wp = cp(4710),
-      yp = cp(1112);
+    mT(5045), mT(36419);
+    var WT = mT(4719),
+      zT = mT(63),
+      MT = mT(4686),
+      gT = mT(1288),
+      nT = mT(1457),
+      HT = mT(36435),
+      kT = mT(5048),
+      jT = mT(1569),
+      lT = mT(3582),
+      LT = mT(36432),
+      pT = mT(4712),
+      BT = mT(1188);
 
-    function Up(pp) {
-      const ip = {
+    function ZT(TT) {
+      const UT = {
         requested: !1,
         closed: !1
       };
-      xp.NotificationProvider.showCustomPopup({
-        body: cp => (0, yp.jsx)(wp, {
-          flow: ip,
-          close: cp,
-          ...pp
+      nT.NotificationProvider.showCustomPopup({
+        body: mT => (0, BT.jsx)(cT, {
+          flow: UT,
+          close: mT,
+          ...TT
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          ip.closed = !0, ip.requested || (0, Wp.d)()
+          UT.closed = !0, UT.requested || (0, pT.d)()
         }
       })
     }
 
-    function wp(pp) {
+    function cT(TT) {
       let {
-        flow: ip,
-        close: cp,
-        onCreating: xp,
-        onCreated: Up,
-        onFailedClosed: wp,
-        join: vp
-      } = pp;
+        flow: UT,
+        close: mT,
+        onCreating: nT,
+        onCreated: ZT,
+        onFailedClosed: cT,
+        join: vT
+      } = TT;
       const {
-        t: tp
-      } = (0, Sp.H)(), [Hp, dp] = (0, op.useState)(Op.s), [ep, jp] = (0, op.useState)(!1), [kp, mp] = (0, op.useState)(""), Rp = (0, Ap.b)();
-      (0, op.useEffect)((() => {
-        (0, Wp.n)()
+        t: fT
+      } = (0, gT.z)(), [qT, iT] = (0, zT.useState)(WT.u), [bT, OT] = (0, zT.useState)(!1), [eT, YT] = (0, zT.useState)(""), JT = (0, lT.c)();
+      (0, zT.useEffect)((() => {
+        (0, pT.l)()
       }), []);
-      const qp = pp => ({
-        isEnabled: () => Hp.plugins[pp],
-        eC: ip => {
-          (0, Wp.g)({
-            plugin: pp,
-            enabled: ip
-          }), dp({
-            ...Hp,
+      const xT = TT => ({
+        isEnabled: () => qT.plugins[TT],
+        Qy: UT => {
+          (0, pT.g)({
+            plugin: TT,
+            enabled: UT
+          }), iT({
+            ...qT,
             plugins: {
-              ...Hp.plugins,
-              [pp]: ip
+              ...qT.plugins,
+              [TT]: UT
             }
           })
         }
       });
-      return (0, yp.jsxs)("div", {
+      return (0, BT.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, yp.jsx)("div", {
+        children: [(0, BT.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, yp.jsx)("div", {
+          children: (0, BT.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: tp("homePage:myWorld")
+            children: fT("homePage:myWorld")
           })
-        }), (0, yp.jsx)(Lp.b, {
-          locked: ep,
-          children: (0, yp.jsxs)("div", {
+        }), (0, BT.jsx)(HT.b, {
+          locked: bT,
+          children: (0, BT.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, yp.jsx)(Pp.e, {
-              value: Hp.defaultGamemode,
-              onChange: pp => {
-                (0, Op.u)(pp) && pp !== Hp.defaultGamemode && ((0, Wp.g)({
-                  defaultGamemode: pp
-                }), dp({
-                  ...Hp,
-                  defaultGamemode: pp
+            children: [(0, BT.jsx)(LT.c, {
+              value: qT.defaultGamemode,
+              onChange: TT => {
+                (0, WT.v)(TT) && TT !== qT.defaultGamemode && ((0, pT.g)({
+                  defaultGamemode: TT
+                }), iT({
+                  ...qT,
+                  defaultGamemode: TT
                 }))
               },
               showAll: !1,
-              disabled: ep
-            }), (0, yp.jsx)(Pp.i, {
-              mapTypes: Op.e,
-              value: Hp.mapType,
-              onChange: pp => {
-                (0, Op.y)(pp) && pp !== Hp.mapType && ((0, Wp.g)({
-                  mapType: pp
-                }), dp({
-                  ...Hp,
-                  mapType: pp
+              disabled: bT
+            }), (0, BT.jsx)(LT.d, {
+              mapTypes: WT.g,
+              value: qT.mapType,
+              onChange: TT => {
+                (0, WT.w)(TT) && TT !== qT.mapType && ((0, pT.g)({
+                  mapType: TT
+                }), iT({
+                  ...qT,
+                  mapType: TT
                 }))
               },
               showAll: !1,
-              disabled: ep
-            }), (0, yp.jsx)(Yp.e, {
+              disabled: bT
+            }), (0, BT.jsx)(kT.c, {
               callbacks: {
-                dayNight: qp("dayNight"),
-                fallDamage: qp("fallDamage"),
-                survivalGuns: qp("survivalGuns")
+                dayNight: xT("dayNight"),
+                fallDamage: xT("fallDamage"),
+                survivalGuns: xT("survivalGuns")
               },
-              disabled: ep,
+              disabled: bT,
               advancedMode: !1
             })]
           })
-        }), (0, yp.jsxs)("div", {
+        }), (0, BT.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, yp.jsx)(Dp.o, {
+          children: [(0, BT.jsx)(jT.l, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: ep,
+            loading: bT,
             onClick: () => {
-              ip.requested = !0, jp(!0), xp(!0), mp(""), (0, Wp.j)(Hp), Ip.b.createPersonalWorld(Hp).then((pp => {
-                xp(!1);
-                const Op = Up(pp);
-                !ip.closed && Rp.current ? (cp(), vp(pp)) : Op || (0, Wp.d)()
-              }), (pp => {
-                if (console.error("Failed to create personal world:", pp), xp(!1), ip.requested = !1, ip.closed || !Rp.current) return (0, Wp.d)(), void wp(pp);
-                mp(pp.message), jp(!1)
+              UT.requested = !0, OT(!0), nT(!0), YT(""), (0, pT.k)(qT), MT.d.createPersonalWorld(qT).then((TT => {
+                nT(!1);
+                const WT = ZT(TT);
+                !UT.closed && JT.current ? (mT(), vT(TT)) : WT || (0, pT.d)()
+              }), (TT => {
+                if (console.error("Failed to create personal world:", TT), nT(!1), UT.requested = !1, UT.closed || !JT.current) return (0, pT.d)(), void cT(TT);
+                YT(TT.message), OT(!1)
               }))
             },
-            children: tp("general:play")
-          }), kp && (0, yp.jsx)("div", {
+            children: fT("general:play")
+          }), eT && (0, BT.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: kp
+            children: eT
           })]
         })]
       })
     }
   },
-  5061: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp
+  5048: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => kT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(4719),
-      Sp = cp(1201),
-      xp = cp(1112);
-    const Lp = [...Ip.h, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(4719),
+      gT = mT(1288),
+      nT = mT(1188);
+    const HT = [...MT.k, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function Yp(pp) {
+    function kT(TT) {
       const {
-        disabled: ip,
-        hideWrapper: cp
-      } = pp, {
-        t: Op
-      } = (0, Sp.H)(), Yp = pp.advancedMode ? Lp.map((ip => [ip, pp.callbacks[ip]])) : Ip.h.map((ip => [ip, pp.callbacks[ip]])), Ap = (0, xp.jsx)("div", {
-        className: op()("PluginsGrid", {
-          SectionBody: !cp
+        disabled: UT,
+        hideWrapper: mT
+      } = TT, {
+        t: WT
+      } = (0, gT.z)(), kT = TT.advancedMode ? HT.map((UT => [UT, TT.callbacks[UT]])) : MT.k.map((UT => [UT, TT.callbacks[UT]])), lT = (0, nT.jsx)("div", {
+        className: zT()("PluginsGrid", {
+          SectionBody: !mT
         }),
-        children: Yp.map((pp => {
-          let [cp, Op] = pp;
-          return (0, xp.jsx)(Dp, {
-            plugin: cp,
-            callbacks: Op,
-            disabled: ip
-          }, cp)
+        children: kT.map((TT => {
+          let [mT, WT] = TT;
+          return (0, nT.jsx)(jT, {
+            plugin: mT,
+            callbacks: WT,
+            disabled: UT
+          }, mT)
         }))
       });
-      return cp ? Ap : (0, xp.jsxs)("div", {
+      return mT ? lT : (0, nT.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, xp.jsx)("div", {
+        children: [(0, nT.jsx)("div", {
           className: "SectionTitle",
-          children: Op("worldBuilder:pluginsSection")
-        }), Ap]
+          children: WT("worldBuilder:pluginsSection")
+        }), lT]
       })
     }
 
-    function Dp(pp) {
+    function jT(TT) {
       let {
-        plugin: ip,
+        plugin: UT,
         callbacks: {
-          isEnabled: cp,
-          eC: Op
+          isEnabled: mT,
+          Qy: WT
         },
-        disabled: Ip
-      } = pp;
+        disabled: MT
+      } = TT;
       const {
-        t: Lp
-      } = (0, Sp.H)(), Yp = cp();
-      return (0, xp.jsxs)("div", {
-        className: op()("PluginCard", {
-          PluginCardEnabled: Yp,
-          PluginCardDisabledForm: Ip
+        t: HT
+      } = (0, gT.z)(), kT = mT();
+      return (0, nT.jsxs)("div", {
+        className: zT()("PluginCard", {
+          PluginCardEnabled: kT,
+          PluginCardDisabledForm: MT
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": Ip || void 0,
+        "aria-disabled": MT || void 0,
         onClick: () => {
-          Ip || Op(!Yp)
+          MT || WT(!kT)
         },
-        children: [(0, xp.jsx)("div", {
+        children: [(0, nT.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, xp.jsx)("img", {
-            src: `/textures/games/classic/customGames/${ip}.png`,
-            alt: ip
+          children: (0, nT.jsx)("img", {
+            src: `/textures/games/classic/customGames/${UT}.png`,
+            alt: UT
           })
-        }), (0, xp.jsxs)("div", {
+        }), (0, nT.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, xp.jsx)("div", {
+          children: [(0, nT.jsx)("div", {
             className: "PluginCardTitle",
-            children: Lp(Ap[ip])
-          }), (0, xp.jsx)("div", {
+            children: HT(lT[UT])
+          }), (0, nT.jsx)("div", {
             className: "PluginCardDescription",
-            children: Lp(Pp[ip])
+            children: HT(LT[UT])
           })]
-        }), (0, xp.jsx)("span", {
+        }), (0, nT.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: Lp(Yp ? "general:on" : "general:off")
+          children: HT(kT ? "general:on" : "general:off")
         })]
       })
     }
-    const Ap = {
+    const lT = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      Pp = {
+      LT = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  36557: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp,
-      i: () => Dp
+  36432: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => kT,
+      d: () => jT
     });
-    cp(62);
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(4719),
-      Sp = cp(322),
-      xp = cp(1201),
-      Lp = cp(1112);
+    mT(63);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(4719),
+      gT = mT(351),
+      nT = mT(1288),
+      HT = mT(1188);
 
-    function Yp(pp) {
+    function kT(TT) {
       let {
-        value: ip,
-        onChange: cp,
-        showAll: Op,
-        disabled: Yp = !1
-      } = pp;
+        value: UT,
+        onChange: mT,
+        showAll: WT,
+        disabled: kT = !1
+      } = TT;
       const {
-        t: Dp
-      } = (0, xp.H)();
-      return (0, Lp.jsxs)("div", {
-        className: op()("BloxdForm GamemodeForm", {
-          BasicOptions: !Op
+        t: jT
+      } = (0, nT.z)();
+      return (0, HT.jsxs)("div", {
+        className: zT()("BloxdForm GamemodeForm", {
+          BasicOptions: !WT
         }),
-        children: [(0, Lp.jsx)("div", {
+        children: [(0, HT.jsx)("div", {
           className: "SectionTitle",
-          children: Dp("classic:defaultGamemode")
-        }), (0, Lp.jsx)("div", {
+          children: jT("classic:defaultGamemode")
+        }), (0, HT.jsx)("div", {
           className: "SectionBody",
-          children: Ip.E.map((pp => Op || (0, Ip.u)(pp) ? (0, Lp.jsx)("button", {
+          children: MT.C.map((TT => WT || (0, MT.v)(TT) ? (0, HT.jsx)("button", {
             type: "button",
-            className: op()("WorldGamemode", {
-              Selected: ip === pp
+            className: zT()("WorldGamemode", {
+              Selected: UT === TT
             }),
-            disabled: Yp,
+            disabled: kT,
             onClick: () => {
-              cp(pp)
+              mT(TT)
             },
             style: {
-              "--background-image": `url(${Sp.p[pp]})`
+              "--background-image": `url(${gT.p[TT]})`
             },
-            children: Sp.o[pp]
-          }, pp) : null))
+            children: gT.m[TT]
+          }, TT) : null))
         })]
       })
     }
 
-    function Dp(pp) {
+    function jT(TT) {
       let {
-        mapTypes: ip,
-        value: cp,
-        onChange: Op,
-        showAll: Yp,
-        disabled: Dp = !1,
-        children: Ap
-      } = pp;
+        mapTypes: UT,
+        value: mT,
+        onChange: WT,
+        showAll: kT,
+        disabled: jT = !1,
+        children: lT
+      } = TT;
       const {
-        t: Pp
-      } = (0, xp.H)();
-      return (0, Lp.jsxs)("div", {
-        className: op()("BloxdForm MapTypeForm", {
-          BasicOptions: !Yp
+        t: LT
+      } = (0, nT.z)();
+      return (0, HT.jsxs)("div", {
+        className: zT()("BloxdForm MapTypeForm", {
+          BasicOptions: !kT
         }),
-        children: [(0, Lp.jsx)("div", {
+        children: [(0, HT.jsx)("div", {
           className: "SectionTitle",
-          children: Pp("customLobby:mapType")
-        }), (0, Lp.jsx)("div", {
+          children: LT("customLobby:mapType")
+        }), (0, HT.jsx)("div", {
           className: "SectionBody",
-          children: ip.map((pp => Yp || (0, Ip.y)(pp) ? (0, Lp.jsx)("button", {
+          children: UT.map((TT => kT || (0, MT.w)(TT) ? (0, HT.jsx)("button", {
             type: "button",
-            className: op()("MapType", {
-              Selected: cp === pp
+            className: zT()("MapType", {
+              Selected: mT === TT
             }),
-            disabled: Dp,
+            disabled: jT,
             onClick: () => {
-              Op(pp)
+              WT(TT)
             },
             style: {
-              "--background-image": `url(${Sp.k[pp]})`
+              "--background-image": `url(${gT.h[TT]})`
             },
-            children: Sp.h[pp]
-          }, pp) : null))
-        }), Ap]
+            children: gT.g[TT]
+          }, TT) : null))
+        }), lT]
       })
     }
   },
-  5054: () => {},
-  36543: () => {}
+  5045: () => {},
+  36419: () => {}
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

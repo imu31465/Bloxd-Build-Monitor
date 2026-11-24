@@ -1,132 +1,132 @@
 export const id = 141;
 export const ids = [141];
 export const modules = {
-  6780: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => dp,
-      g: () => ep,
-      i: () => tp,
-      m: () => vp
+  6706: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => iT,
+      h: () => bT,
+      i: () => fT,
+      m: () => vT
     });
-    var Op = cp(6788);
-    const op = 6,
-      Ip = 3,
-      Sp = 1,
-      xp = 2,
-      Lp = 4,
-      Yp = 8,
-      Dp = 16,
-      Ap = 32,
-      Pp = 64,
-      Wp = 128,
-      yp = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var WT = mT(6713);
+    const zT = 6,
+      MT = 3,
+      gT = 1,
+      nT = 2,
+      HT = 4,
+      kT = 8,
+      jT = 16,
+      lT = 32,
+      LT = 64,
+      pT = 128,
+      BT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Up(pp) {
-      if (!pp) return 0;
-      const ip = yp.indexOf(pp);
-      if (ip <= 0) throw new Error(`"${pp}" is not a shader pack hook function`);
-      return ip
+    function ZT(TT) {
+      if (!TT) return 0;
+      const UT = BT.indexOf(TT);
+      if (UT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
+      return UT
     }
 
-    function wp(pp) {
-      if (0 === pp) return null;
-      const ip = yp[pp];
-      if (void 0 === ip) throw new Error(`${pp} is not a shader pack hook function id`);
-      return ip
+    function cT(TT) {
+      if (0 === TT) return null;
+      const UT = BT[TT];
+      if (void 0 === UT) throw new Error(`${TT} is not a shader pack hook function id`);
+      return UT
     }
 
-    function vp(pp) {
-      const ip = Op.d.length;
+    function vT(TT) {
+      const UT = WT.e.length;
       return {
-        strict: pp >= ip,
-        program: Op.d[pp % ip]
+        strict: TT >= UT,
+        program: WT.e[TT % UT]
       }
     }
 
-    function tp(pp) {
-      return Number(pp.strict) * Op.d.length + Op.d.indexOf(pp.program)
+    function fT(TT) {
+      return Number(TT.strict) * WT.e.length + WT.e.indexOf(TT.program)
     }
 
-    function Hp(pp) {
-      return "" === pp ? [] : pp.split(" ")
+    function qT(TT) {
+      return "" === TT ? [] : TT.split(" ")
     }
 
-    function dp(pp) {
-      const ip = {
-        variantFlags: new Uint8Array(op),
-        hooks: new Uint8Array(op * Ip),
-        moduleCodes: Array(op).fill(""),
-        reads: Array(2 * op).fill("")
+    function iT(TT) {
+      const UT = {
+        variantFlags: new Uint8Array(zT),
+        hooks: new Uint8Array(zT * MT),
+        moduleCodes: Array(zT).fill(""),
+        reads: Array(2 * zT).fill("")
       };
-      for (const cp of pp) {
-        const pp = tp(cp.key),
-          Op = (pp, ip) => null === cp.hooks.surface || cp.reads.fragment.includes(pp) ? 0 : ip;
-        ip.variantFlags[pp] = (cp.sceneDepth ? Sp : 0) | (cp.movesVertices ? xp : 0) | (cp.sunShadow ? Lp : 0) | (cp.airShadow ? Yp : 0) | (cp.discards ? Dp : 0) | Op("localPosition", Ap) | Op("enchantSpeed", Pp) | Op("enchantTier", Wp), ip.hooks[pp * Ip] = Up(cp.hooks.vertex), ip.hooks[pp * Ip + 1] = Up(cp.hooks.surface), ip.hooks[pp * Ip + 2] = Up(cp.hooks.light), ip.moduleCodes[pp] = cp.moduleCode, ip.reads[2 * pp] = cp.reads.vertex.join(" "), ip.reads[2 * pp + 1] = cp.reads.fragment.join(" ")
+      for (const mT of TT) {
+        const TT = fT(mT.key),
+          WT = (TT, UT) => null === mT.hooks.surface || mT.reads.fragment.includes(TT) ? 0 : UT;
+        UT.variantFlags[TT] = (mT.sceneDepth ? gT : 0) | (mT.movesVertices ? nT : 0) | (mT.sunShadow ? HT : 0) | (mT.airShadow ? kT : 0) | (mT.discards ? jT : 0) | WT("localPosition", lT) | WT("enchantSpeed", LT) | WT("enchantTier", pT), UT.hooks[TT * MT] = ZT(mT.hooks.vertex), UT.hooks[TT * MT + 1] = ZT(mT.hooks.surface), UT.hooks[TT * MT + 2] = ZT(mT.hooks.light), UT.moduleCodes[TT] = mT.moduleCode, UT.reads[2 * TT] = mT.reads.vertex.join(" "), UT.reads[2 * TT + 1] = mT.reads.fragment.join(" ")
       }
-      return ip
+      return UT
     }
 
-    function ep(pp) {
+    function bT(TT) {
       const {
-        hooks: ip,
-        moduleCodes: cp,
-        reads: Op
-      } = pp;
-      return Array.from(pp.variantFlags, ((pp, op) => {
-        const Ap = op * Ip;
+        hooks: UT,
+        moduleCodes: mT,
+        reads: WT
+      } = TT;
+      return Array.from(TT.variantFlags, ((TT, zT) => {
+        const lT = zT * MT;
         return {
-          key: vp(op),
+          key: vT(zT),
           hooks: {
-            vertex: wp(ip[Ap]),
-            surface: wp(ip[Ap + 1]),
-            light: wp(ip[Ap + 2])
+            vertex: cT(UT[lT]),
+            surface: cT(UT[lT + 1]),
+            light: cT(UT[lT + 2])
           },
-          moduleCode: cp[op],
-          sceneDepth: 0 !== (pp & Sp),
-          sunShadow: 0 !== (pp & Lp),
-          airShadow: 0 !== (pp & Yp),
-          movesVertices: 0 !== (pp & xp),
-          discards: 0 !== (pp & Dp),
+          moduleCode: mT[zT],
+          sceneDepth: 0 !== (TT & gT),
+          sunShadow: 0 !== (TT & HT),
+          airShadow: 0 !== (TT & kT),
+          movesVertices: 0 !== (TT & nT),
+          discards: 0 !== (TT & jT),
           reads: {
-            vertex: Hp(Op[2 * op]),
-            fragment: Hp(Op[2 * op + 1])
+            vertex: qT(WT[2 * zT]),
+            fragment: qT(WT[2 * zT + 1])
           }
         }
       }))
     }
   },
-  40892: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Up,
-      C: () => Wp,
-      E: () => yp,
-      c: () => op,
-      g: () => Op,
-      h: () => Pp,
-      l: () => Dp,
-      m: () => wp,
-      o: () => Ip,
-      r: () => xp,
-      t: () => Lp,
-      x: () => Sp
+  40839: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => HT,
+      E: () => gT,
+      F: () => ZT,
+      H: () => pT,
+      K: () => BT,
+      e: () => zT,
+      i: () => WT,
+      m: () => LT,
+      p: () => jT,
+      r: () => cT,
+      u: () => MT,
+      x: () => nT
     });
-    const Op = 3,
-      op = 0,
-      Ip = 1,
-      Sp = 2,
-      xp = {
+    const WT = 3,
+      zT = 0,
+      MT = 1,
+      gT = 2,
+      nT = {
         uniform: 3,
-        hP: 4,
+        iL: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Lp = 10,
-      Yp = "BloxdPackInputs",
-      Dp = "bloxdPackInputs",
-      Ap = [{
+      HT = 10,
+      kT = "BloxdPackInputs",
+      jT = "bloxdPackInputs",
+      lT = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Pp = 80;
+      LT = 80;
 
-    function Wp() {
-      const pp = Ap.map((pp => {
+    function pT() {
+      const TT = lT.map((TT => {
         let {
-          name: ip,
-          type: cp
-        } = pp;
-        return `    ${ip}: ${cp},\n`
+          name: UT,
+          type: mT
+        } = TT;
+        return `    ${UT}: ${mT},\n`
       })).join("");
-      return `struct ${Yp} {\n${pp}}\n@group(${Op}) @binding(${op}) var<uniform> ${Dp}: ${Yp};\n`
+      return `struct ${kT} {\n${TT}}\n@group(${WT}) @binding(${zT}) var<uniform> ${jT}: ${kT};\n`
     }
 
-    function yp(pp, ip) {
-      const cp = new DataView(pp, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Pp),
-        [Op, op, Ip, Sp, xp, Lp] = Ap;
-      cp.setFloat32(Op.offset, ip.seconds, !0), cp.setUint32(op.offset, ip.lit ? 1 : 0, !0);
-      for (let Yp = 0; Yp < 3; Yp++) cp.setInt32(Ip.offset + 4 * Yp, ip.renderOffset[Yp], !0), cp.setFloat32(Sp.offset + 4 * Yp, ip.opp[Yp], !0), cp.setFloat32(xp.offset + 4 * Yp, ip.eyePosition[Yp], !0), cp.setFloat32(Lp.offset + 4 * Yp, ip.shadowDirection[Yp], !0)
+    function BT(TT, UT) {
+      const mT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, LT),
+        [WT, zT, MT, gT, nT, HT] = lT;
+      mT.setFloat32(WT.offset, UT.seconds, !0), mT.setUint32(zT.offset, UT.lit ? 1 : 0, !0);
+      for (let kT = 0; kT < 3; kT++) mT.setInt32(MT.offset + 4 * kT, UT.renderOffset[kT], !0), mT.setFloat32(gT.offset + 4 * kT, UT.zTT[kT], !0), mT.setFloat32(nT.offset + 4 * kT, UT.eyePosition[kT], !0), mT.setFloat32(HT.offset + 4 * kT, UT.shadowDirection[kT], !0)
     }
 
-    function Up(pp) {
-      const ip = new Uint32Array(Math.max(1, pp.length));
-      return pp.forEach(((pp, cp) => {
+    function ZT(TT) {
+      const UT = new Uint32Array(Math.max(1, TT.length));
+      return TT.forEach(((TT, mT) => {
         let {
-          id: Op,
-          rotation: op
-        } = pp;
-        ip[cp] = 65535 & Op | (3 & op) << 16
-      })), ip
+          id: WT,
+          rotation: zT
+        } = TT;
+        UT[mT] = 65535 & WT | (3 & zT) << 16
+      })), UT
     }
-    const wp = {
+    const cT = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6788: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op,
-      e: () => Sp,
-      f: () => xp,
-      h: () => op,
-      i: () => Ip
+  6713: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT,
+      i: () => gT,
+      l: () => nT,
+      n: () => zT,
+      r: () => MT
     });
-    const Op = ["terrain", "liquid", "model"];
+    const WT = ["terrain", "liquid", "model"];
 
-    function op() {
-      const pp = [];
-      for (const ip of [!1, !0])
-        for (const cp of Op) pp.push({
-          strict: ip,
-          program: cp
+    function zT() {
+      const TT = [];
+      for (const UT of [!1, !0])
+        for (const mT of WT) TT.push({
+          strict: UT,
+          program: mT
         });
-      return pp
+      return TT
     }
 
-    function Ip(pp) {
-      return `${pp.strict?"strict":"allow"}.${pp.program}`
+    function MT(TT) {
+      return `${TT.strict?"strict":"allow"}.${TT.program}`
     }
 
-    function Sp(pp) {
-      return !pp.hooks.vertex && !pp.hooks.surface && !pp.hooks.light
+    function gT(TT) {
+      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
     }
 
-    function xp(pp, ip) {
-      return "off" !== ip && (null === pp || pp.some((pp => pp.key.strict === ("strict" === ip) && !Sp(pp))))
+    function nT(TT, UT) {
+      return "off" !== UT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === UT) && !gT(TT))))
     }
   },
-  41515: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      SHADER_PACK_INPUTS_BINDING: () => Ip.c,
-      SHADER_PACK_INPUTS_GROUP: () => Ip.g,
-      SHADER_PACK_INPUTS_SIZE: () => Ip.h,
-      SHADER_PACK_INPUTS_VAR: () => Ip.l,
-      SHADER_PACK_MODES: () => Ip.m,
-      SHADER_PACK_PROGRAMS: () => Op.d,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Ip.o,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Ip.r,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Ip.t,
-      SHADER_PACK_TEXTURES_BINDING: () => Ip.x,
-      encodeTextureLayers: () => Ip.A,
-      flattenVariants: () => op.c,
-      isVariantOff: () => Op.e,
-      packRunsIn: () => Op.f,
-      shaderPackInputsWgsl: () => Ip.C,
-      shaderPackVariantKeys: () => Op.h,
-      variantKeyId: () => Op.i,
-      writeShaderPackInputs: () => Ip.E
+  41429: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      SHADER_PACK_INPUTS_BINDING: () => MT.e,
+      SHADER_PACK_INPUTS_GROUP: () => MT.i,
+      SHADER_PACK_INPUTS_SIZE: () => MT.m,
+      SHADER_PACK_INPUTS_VAR: () => MT.p,
+      SHADER_PACK_MODES: () => MT.r,
+      SHADER_PACK_PROGRAMS: () => WT.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => MT.u,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => MT.x,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => MT.A,
+      SHADER_PACK_TEXTURES_BINDING: () => MT.E,
+      encodeTextureLayers: () => MT.F,
+      flattenVariants: () => zT.d,
+      isVariantOff: () => WT.i,
+      packRunsIn: () => WT.l,
+      shaderPackInputsWgsl: () => MT.H,
+      shaderPackVariantKeys: () => WT.n,
+      variantKeyId: () => WT.r,
+      writeShaderPackInputs: () => MT.K
     });
-    var Op = cp(6788),
-      op = cp(6780),
-      Ip = cp(40892)
+    var WT = mT(6713),
+      zT = mT(6706),
+      MT = mT(40839)
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,394 +1,394 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  37399: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      e: () => Sp,
-      f: () => op
+  37268: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => nT,
+      g: () => gT,
+      h: () => zT
     });
-    const Op = 1024,
-      op = 16,
-      Ip = 36e4;
-    class Sp {
-      constructor(pp) {
-        this.boneCount = pp, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * pp), this.position = new Float64Array(3 * pp), this.scale = new Float64Array(3 * pp).fill(1), this.touched = new Uint8Array(pp)
+    const WT = 1024,
+      zT = 16,
+      MT = 36e4;
+    class gT {
+      constructor(TT) {
+        this.boneCount = TT, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * TT), this.position = new Float64Array(3 * TT), this.scale = new Float64Array(3 * TT).fill(1), this.touched = new Uint8Array(TT)
       }
       clampToLimits() {
-        for (let pp = 0; pp < this.boneCount; pp++)
-          if (0 !== this.touched[pp])
-            for (let ip = 3 * pp; ip < 3 * pp + 3; ip++) {
-              const pp = this.rotation[ip],
-                cp = this.position[ip],
-                Sp = this.scale[ip];
-              pp >= -36e4 && pp <= Ip || (this.rotation[ip] = Lp(pp, Ip)), cp >= -1024 && cp <= Op || (this.position[ip] = Lp(cp, Op)), Sp >= -op && Sp <= op || (this.scale[ip] = Lp(Sp, op, 1))
+        for (let TT = 0; TT < this.boneCount; TT++)
+          if (0 !== this.touched[TT])
+            for (let UT = 3 * TT; UT < 3 * TT + 3; UT++) {
+              const TT = this.rotation[UT],
+                mT = this.position[UT],
+                gT = this.scale[UT];
+              TT >= -36e4 && TT <= MT || (this.rotation[UT] = HT(TT, MT)), mT >= -1024 && mT <= WT || (this.position[UT] = HT(mT, WT)), gT >= -zT && gT <= zT || (this.scale[UT] = HT(gT, zT, 1))
             }
       }
       reset() {
-        for (let pp = 0; pp < this.boneCount; pp++)
-          if (0 !== this.touched[pp]) {
-            this.touched[pp] = 0;
-            for (let ip = 3 * pp; ip < 3 * pp + 3; ip++) this.rotation[ip] = 0, this.position[ip] = 0, this.scale[ip] = 1
+        for (let TT = 0; TT < this.boneCount; TT++)
+          if (0 !== this.touched[TT]) {
+            this.touched[TT] = 0;
+            for (let UT = 3 * TT; UT < 3 * TT + 3; UT++) this.rotation[UT] = 0, this.position[UT] = 0, this.scale[UT] = 1
           }
       }
     }
-    class xp {
-      constructor(pp) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * pp), this.position = new Float64Array(3 * pp), this.scaleDelta = new Float64Array(3 * pp), this.boneWeight = new Float64Array(pp), this.touched = new Uint8Array(pp), this.overrides = new Uint8Array(pp), this.touchedBones = new Int32Array(pp)
+    class nT {
+      constructor(TT) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * TT), this.position = new Float64Array(3 * TT), this.scaleDelta = new Float64Array(3 * TT), this.boneWeight = new Float64Array(TT), this.touched = new Uint8Array(TT), this.overrides = new Uint8Array(TT), this.touchedBones = new Int32Array(TT)
       }
-      touch(pp, ip, cp) {
-        0 === this.touched[pp] && (this.touched[pp] = 1, this.touchedBones[this.touchedCount++] = pp), this.boneWeight[pp] += ip, cp && (this.overrides[pp] = 1)
+      touch(TT, UT, mT) {
+        0 === this.touched[TT] && (this.touched[TT] = 1, this.touchedBones[this.touchedCount++] = TT), this.boneWeight[TT] += UT, mT && (this.overrides[TT] = 1)
       }
-      applyTo(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let op = 0; op < this.touchedCount; op++) {
-          const Ip = this.touchedBones[op],
-            Sp = this.boneWeight[Ip];
-          if (cp || 1 === this.overrides[Ip]) {
-            const cp = ip * Math.min(1, Sp);
-            for (let ip = 3 * Ip; ip < 3 * Ip + 3; ip++) pp.rotation[ip] += (this.rotation[ip] / Sp - pp.rotation[ip]) * cp, pp.position[ip] += (this.position[ip] / Sp - pp.position[ip]) * cp, pp.scale[ip] += (1 + this.scaleDelta[ip] / Sp - pp.scale[ip]) * cp
+      applyTo(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let zT = 0; zT < this.touchedCount; zT++) {
+          const MT = this.touchedBones[zT],
+            gT = this.boneWeight[MT];
+          if (mT || 1 === this.overrides[MT]) {
+            const mT = UT * Math.min(1, gT);
+            for (let UT = 3 * MT; UT < 3 * MT + 3; UT++) TT.rotation[UT] += (this.rotation[UT] / gT - TT.rotation[UT]) * mT, TT.position[UT] += (this.position[UT] / gT - TT.position[UT]) * mT, TT.scale[UT] += (1 + this.scaleDelta[UT] / gT - TT.scale[UT]) * mT
           } else {
-            const cp = Op && Sp > 1 ? ip / Sp : ip;
-            for (let ip = 3 * Ip; ip < 3 * Ip + 3; ip++) pp.rotation[ip] += this.rotation[ip] * cp, pp.position[ip] += this.position[ip] * cp, pp.scale[ip] *= 1 + this.scaleDelta[ip] * cp
+            const mT = WT && gT > 1 ? UT / gT : UT;
+            for (let UT = 3 * MT; UT < 3 * MT + 3; UT++) TT.rotation[UT] += this.rotation[UT] * mT, TT.position[UT] += this.position[UT] * mT, TT.scale[UT] *= 1 + this.scaleDelta[UT] * mT
           }
-          pp.touched[Ip] = 1
+          TT.touched[MT] = 1
         }
       }
       clear() {
-        for (let pp = 0; pp < this.touchedCount; pp++) {
-          const ip = this.touchedBones[pp];
-          this.touched[ip] = 0, this.overrides[ip] = 0, this.boneWeight[ip] = 0;
-          for (let pp = 3 * ip; pp < 3 * ip + 3; pp++) this.rotation[pp] = 0, this.position[pp] = 0, this.scaleDelta[pp] = 0
+        for (let TT = 0; TT < this.touchedCount; TT++) {
+          const UT = this.touchedBones[TT];
+          this.touched[UT] = 0, this.overrides[UT] = 0, this.boneWeight[UT] = 0;
+          for (let TT = 3 * UT; TT < 3 * UT + 3; TT++) this.rotation[TT] = 0, this.position[TT] = 0, this.scaleDelta[TT] = 0
         }
         this.touchedCount = 0
       }
     }
 
-    function Lp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(pp) ? cp : Math.min(ip, Math.max(-ip, pp))
+    function HT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(TT) ? mT : Math.min(UT, Math.max(-UT, TT))
     }
   },
-  37395: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Lp,
-      d: () => xp
+  37266: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      f: () => nT
     });
-    var Op = cp(37385),
-      op = cp(337),
-      Ip = cp(1927),
-      Sp = cp(37399);
+    var WT = mT(37253),
+      zT = mT(366),
+      MT = mT(2014),
+      gT = mT(37268);
 
-    function xp(pp) {
-      if ("Lo" in pp) return Rp.createAnimationScript(pp);
-      return new Dp(pp).createAnimationScript()
+    function nT(TT) {
+      if ("GW" in TT) return JT.createAnimationScript(TT);
+      return new jT(TT).createAnimationScript()
     }
 
-    function Lp(pp, ip, cp, op) {
-      const Ip = pp.Lo <= 0 ? 1 : ip + cp * Math.max(0, op) / pp.Lo;
-      return pp.Yo === Op.j.LoopOnLastFrame ? Ip % 1 : pp.Yo === Op.j.NoLoop && Ip >= 1 ? null : Math.min(1, Ip)
+    function HT(TT, UT, mT, zT) {
+      const MT = TT.GW <= 0 ? 1 : UT + mT * Math.max(0, zT) / TT.GW;
+      return TT.NW === WT.k.LoopOnLastFrame ? MT % 1 : TT.NW === WT.k.NoLoop && MT >= 1 ? null : Math.min(1, MT)
     }
-    class Yp {
-      createAnimationScript(pp) {
+    class kT {
+      createAnimationScript(TT) {
         const {
-          Lo: ip,
-          loop: cp,
-          Do: Op
-        } = pp;
+          GW: UT,
+          loop: mT,
+          EW: WT
+        } = TT;
         return {
-          Lo: Math.round(ip),
-          Yo: this.createLoopMode(null !== cp && void 0 !== cp && cp),
-          Do: this.createNodeSkeletonAnimationScript(null !== Op && void 0 !== Op ? Op : null)
+          GW: Math.round(UT),
+          NW: this.createLoopMode(null !== mT && void 0 !== mT && mT),
+          EW: this.createNodeSkeletonAnimationScript(null !== WT && void 0 !== WT ? WT : null)
         }
       }
-      createLoopMode(pp) {
-        switch (pp) {
+      createLoopMode(TT) {
+        switch (TT) {
           case !1:
-            return Op.j.NoLoop;
+            return WT.k.NoLoop;
           case !0:
-            return Op.j.LoopOnLastFrame;
+            return WT.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Op.j.HoldOnLastFrame
+            return WT.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${pp}`)
+        throw new Error(`Invalid loop mode schema: ${TT}`)
       }
-      createNodeSkeletonAnimationScript(pp) {
-        if (null === pp) return null;
-        const ip = {};
-        for (const cp in pp) {
-          const Op = pp[cp];
-          ip[cp] = this.createNodeAnimationScript(Op)
+      createNodeSkeletonAnimationScript(TT) {
+        if (null === TT) return null;
+        const UT = {};
+        for (const mT in TT) {
+          const WT = TT[mT];
+          UT[mT] = this.createNodeAnimationScript(WT)
         }
-        return ip
+        return UT
       }
-      createNodeAnimationScript(pp) {
+      createNodeAnimationScript(TT) {
         const {
-          timeline: ip
-        } = pp, cp = ip.filter((pp => Number.isFinite(pp.timeFraction)));
-        return cp.sort(((pp, ip) => pp.timeFraction - ip.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(cp, "rotation", Wp),
-          position: this.createTimelineFromKeyframes(cp, "position", Up),
-          scale: this.createTimelineFromKeyframes(cp, "scale", Up, vp)
+          timeline: UT
+        } = TT, mT = UT.filter((TT => Number.isFinite(TT.timeFraction)));
+        return mT.sort(((TT, UT) => TT.timeFraction - UT.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(mT, "rotation", pT),
+          position: this.createTimelineFromKeyframes(mT, "position", ZT),
+          scale: this.createTimelineFromKeyframes(mT, "scale", ZT, vT)
         }
       }
-      createTimelineFromKeyframes(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pp => pp;
-        const op = [];
-        for (const Yp of pp) {
-          const pp = Yp[ip];
-          if (pp) {
-            const ip = this.createAnimationFrameWithoutPrecomputes(Yp.timeFraction, pp, Op);
-            Ap(ip) && op.push(ip)
+      createTimelineFromKeyframes(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT => TT;
+        const zT = [];
+        for (const kT of TT) {
+          const TT = kT[UT];
+          if (TT) {
+            const UT = this.createAnimationFrameWithoutPrecomputes(kT.timeFraction, TT, WT);
+            lT(UT) && zT.push(UT)
           }
         }
-        const Ip = [];
-        for (let Yp = 0; Yp < op.length; Yp++) {
-          var Sp, xp, Lp;
-          const pp = op[Yp],
-            ip = null !== (Sp = op[Yp - 1]) && void 0 !== Sp ? Sp : pp,
-            Op = null !== (xp = op[Yp + 1]) && void 0 !== xp ? xp : pp,
-            Dp = null !== (Lp = op[Yp + 2]) && void 0 !== Lp ? Lp : Op;
-          Ip.push({
-            ...pp,
-            ...cp(ip.post, ip.timeFraction, pp.post, pp.timeFraction, Op.pre, Op.timeFraction, Dp.pre, Dp.timeFraction)
+        const MT = [];
+        for (let kT = 0; kT < zT.length; kT++) {
+          var gT, nT, HT;
+          const TT = zT[kT],
+            UT = null !== (gT = zT[kT - 1]) && void 0 !== gT ? gT : TT,
+            WT = null !== (nT = zT[kT + 1]) && void 0 !== nT ? nT : TT,
+            jT = null !== (HT = zT[kT + 2]) && void 0 !== HT ? HT : WT;
+          MT.push({
+            ...TT,
+            ...mT(UT.post, UT.timeFraction, TT.post, TT.timeFraction, WT.pre, WT.timeFraction, jT.pre, jT.timeFraction)
           })
         }
-        return Ip
+        return MT
       }
-      createAnimationFrameWithoutPrecomputes(pp, ip, cp) {
-        let Op, op, Ip = null;
-        var Sp;
-        if ("object" === typeof ip && "point" in ip) Ip = null !== (Sp = ip.Wo) && void 0 !== Sp ? Sp : null, Op = ip.point, op = ip.point;
-        else if ("object" === typeof ip && "pre" in ip) {
-          var xp;
-          Ip = null !== (xp = ip.Wo) && void 0 !== xp ? xp : null, Op = ip.pre, op = ip.post
-        } else Op = ip, op = ip;
+      createAnimationFrameWithoutPrecomputes(TT, UT, mT) {
+        let WT, zT, MT = null;
+        var gT;
+        if ("object" === typeof UT && "point" in UT) MT = null !== (gT = UT.oW) && void 0 !== gT ? gT : null, WT = UT.point, zT = UT.point;
+        else if ("object" === typeof UT && "pre" in UT) {
+          var nT;
+          MT = null !== (nT = UT.oW) && void 0 !== nT ? nT : null, WT = UT.pre, zT = UT.post
+        } else WT = UT, zT = UT;
         return {
-          timeFraction: pp,
-          Wo: this.createLerpMode(Ip),
-          pre: cp(Op),
-          post: cp(op)
+          timeFraction: TT,
+          oW: this.createLerpMode(MT),
+          pre: mT(WT),
+          post: mT(zT)
         }
       }
-      createLerpMode(pp) {
-        return null === pp ? Op.f.Linear : Yp.LERP_MODE_SCHEMA_MAPPING[pp]
+      createLerpMode(TT) {
+        return null === TT ? WT.j.Linear : kT.LERP_MODE_SCHEMA_MAPPING[TT]
       }
     }
-    Yp.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Op.f.Linear,
-      "catmull-rom-spline": Op.f.CatmullRomSpline
+    kT.LERP_MODE_SCHEMA_MAPPING = {
+      linear: WT.j.Linear,
+      "catmull-rom-spline": WT.j.CatmullRomSpline
     };
-    class Dp {
-      constructor(pp) {
-        this.animationSchema = pp
+    class jT {
+      constructor(TT) {
+        this.animationSchema = TT
       }
       createAnimationScript() {
         const {
-          animation_length: pp,
-          loop: ip,
-          bones: cp
+          animation_length: TT,
+          loop: UT,
+          bones: mT
         } = this.animationSchema;
         return {
-          Lo: Math.round(1e3 * pp),
-          Yo: this.createLoopMode(null !== ip && void 0 !== ip && ip),
-          Do: this.createNodeSkeletonAnimationScript(null !== cp && void 0 !== cp ? cp : null)
+          GW: Math.round(1e3 * TT),
+          NW: this.createLoopMode(null !== UT && void 0 !== UT && UT),
+          EW: this.createNodeSkeletonAnimationScript(null !== mT && void 0 !== mT ? mT : null)
         }
       }
-      createLoopMode(pp) {
-        switch (pp) {
+      createLoopMode(TT) {
+        switch (TT) {
           case !1:
-            return Op.j.NoLoop;
+            return WT.k.NoLoop;
           case !0:
-            return Op.j.LoopOnLastFrame;
+            return WT.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Op.j.HoldOnLastFrame
+            return WT.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${pp}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${TT}`)
       }
-      createNodeSkeletonAnimationScript(pp) {
-        if (null === pp) return null;
-        const ip = {};
-        for (const cp in pp) {
-          const Op = pp[cp];
-          ip[cp] = this.createNodeAnimationScript(Op)
+      createNodeSkeletonAnimationScript(TT) {
+        if (null === TT) return null;
+        const UT = {};
+        for (const mT in TT) {
+          const WT = TT[mT];
+          UT[mT] = this.createNodeAnimationScript(WT)
         }
-        return ip
+        return UT
       }
-      createNodeAnimationScript(pp) {
+      createNodeAnimationScript(TT) {
         const {
-          rotation: ip,
-          position: cp,
-          scale: Op
-        } = pp;
+          rotation: UT,
+          position: mT,
+          scale: WT
+        } = TT;
         return {
-          rotation: this.createAnimationTimeline(null !== ip && void 0 !== ip ? ip : null, Hp, Wp, !0),
-          position: this.createAnimationTimeline(null !== cp && void 0 !== cp ? cp : null, ep, Up, !1),
-          scale: this.createAnimationTimeline(null !== Op && void 0 !== Op ? Op : null, wp, Up, !1)
+          rotation: this.createAnimationTimeline(null !== UT && void 0 !== UT ? UT : null, qT, pT, !0),
+          position: this.createAnimationTimeline(null !== mT && void 0 !== mT ? mT : null, bT, ZT, !1),
+          scale: this.createAnimationTimeline(null !== WT && void 0 !== WT ? WT : null, cT, ZT, !1)
         }
       }
-      createAnimationTimeline(pp, ip, cp, Op) {
-        if (null === pp) return [];
-        (Array.isArray(pp) || "number" === typeof pp) && (pp = {
-          "0.0": pp
+      createAnimationTimeline(TT, UT, mT, WT) {
+        if (null === TT) return [];
+        (Array.isArray(TT) || "number" === typeof TT) && (TT = {
+          "0.0": TT
         });
-        const op = Object.entries(pp).map((pp => {
-          let [cp, Op] = pp;
-          const op = Number(cp) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(op, Op, ip)
-        })).filter(Ap);
-        op.sort(((pp, ip) => pp.timeFraction - ip.timeFraction)), Op && function(pp) {
-          for (let ip = 1; ip < pp.length; ip++) {
-            const cp = pp[ip - 1].post,
-              Op = pp[ip],
-              op = jp(Op.pre),
-              Ip = jp(Op.post),
-              Sp = mp(cp, Op.pre);
-            mp(cp, op) < Sp && (pp[ip] = {
-              ...Op,
-              pre: op,
-              post: Ip
+        const zT = Object.entries(TT).map((TT => {
+          let [mT, WT] = TT;
+          const zT = Number(mT) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(zT, WT, UT)
+        })).filter(lT);
+        zT.sort(((TT, UT) => TT.timeFraction - UT.timeFraction)), WT && function(TT) {
+          for (let UT = 1; UT < TT.length; UT++) {
+            const mT = TT[UT - 1].post,
+              WT = TT[UT],
+              zT = OT(WT.pre),
+              MT = OT(WT.post),
+              gT = YT(mT, WT.pre);
+            YT(mT, zT) < gT && (TT[UT] = {
+              ...WT,
+              pre: zT,
+              post: MT
             })
           }
-        }(op);
-        const Ip = [];
-        for (let Yp = 0; Yp < op.length; Yp++) {
-          var Sp, xp, Lp;
-          const pp = op[Yp],
-            ip = null !== (Sp = op[Yp - 1]) && void 0 !== Sp ? Sp : pp,
-            Op = null !== (xp = op[Yp + 1]) && void 0 !== xp ? xp : pp,
-            Dp = null !== (Lp = op[Yp + 2]) && void 0 !== Lp ? Lp : Op;
-          Ip.push({
-            ...pp,
-            ...cp(ip.post, ip.timeFraction, pp.post, pp.timeFraction, Op.pre, Op.timeFraction, Dp.pre, Dp.timeFraction)
+        }(zT);
+        const MT = [];
+        for (let kT = 0; kT < zT.length; kT++) {
+          var gT, nT, HT;
+          const TT = zT[kT],
+            UT = null !== (gT = zT[kT - 1]) && void 0 !== gT ? gT : TT,
+            WT = null !== (nT = zT[kT + 1]) && void 0 !== nT ? nT : TT,
+            jT = null !== (HT = zT[kT + 2]) && void 0 !== HT ? HT : WT;
+          MT.push({
+            ...TT,
+            ...mT(UT.post, UT.timeFraction, TT.post, TT.timeFraction, WT.pre, WT.timeFraction, jT.pre, jT.timeFraction)
           })
         }
-        return Ip
+        return MT
       }
-      createAnimationFrameWithoutPrecomputes(pp, ip, cp) {
-        let Op, op, Ip = null;
-        if ("object" === typeof ip && "post" in ip) {
-          var Sp;
-          Ip = null !== (Sp = ip.lerp_mode) && void 0 !== Sp ? Sp : null, op = cp(ip.post), Op = void 0 !== ip.pre ? cp(ip.pre) : op
+      createAnimationFrameWithoutPrecomputes(TT, UT, mT) {
+        let WT, zT, MT = null;
+        if ("object" === typeof UT && "post" in UT) {
+          var gT;
+          MT = null !== (gT = UT.lerp_mode) && void 0 !== gT ? gT : null, zT = mT(UT.post), WT = void 0 !== UT.pre ? mT(UT.pre) : zT
         } else {
-          const pp = cp(ip);
-          op = pp, Op = pp
+          const TT = mT(UT);
+          zT = TT, WT = TT
         }
         return {
-          timeFraction: pp,
-          Wo: this.createLerpMode(Ip),
-          pre: Op,
-          post: op
+          timeFraction: TT,
+          oW: this.createLerpMode(MT),
+          pre: WT,
+          post: zT
         }
       }
-      createLerpMode(pp) {
-        return null === pp ? Op.f.Linear : Dp.LERP_MODE_SCHEMA_MAPPING[pp]
+      createLerpMode(TT) {
+        return null === TT ? WT.j.Linear : jT.LERP_MODE_SCHEMA_MAPPING[TT]
       }
     }
 
-    function Ap(pp) {
-      return Number.isFinite(pp.timeFraction) && Pp(pp.pre) && Pp(pp.post)
+    function lT(TT) {
+      return Number.isFinite(TT.timeFraction) && LT(TT.pre) && LT(TT.post)
     }
 
-    function Pp(pp) {
-      return Number.isFinite(pp[0]) && Number.isFinite(pp[1]) && Number.isFinite(pp[2])
+    function LT(TT) {
+      return Number.isFinite(TT[0]) && Number.isFinite(TT[1]) && Number.isFinite(TT[2])
     }
 
-    function Wp(pp, ip, cp, Op, op, Ip, Sp, xp) {
-      const Lp = Ip - ip,
-        Yp = Ip - Op,
-        Dp = xp - Op,
-        Ap = [null, null, null];
-      for (let Pp = 0; Pp < Ap.length; Pp++) Ap[Pp] = yp(pp[Pp], cp[Pp], op[Pp], Sp[Pp], Lp, Dp);
+    function pT(TT, UT, mT, WT, zT, MT, gT, nT) {
+      const HT = MT - UT,
+        kT = MT - WT,
+        jT = nT - WT,
+        lT = [null, null, null];
+      for (let LT = 0; LT < lT.length; LT++) lT[LT] = BT(TT[LT], mT[LT], zT[LT], gT[LT], HT, jT);
       return {
-        yo: Yp,
-        Uo: Ap
+        AW: kT,
+        RW: lT
       }
     }
 
-    function yp(pp, ip, cp, Op, Ip, Sp) {
+    function BT(TT, UT, mT, WT, MT, gT) {
       return {
-        vo: op.d.computeShortestRotation(pp, cp) / Ip,
-        Ho: op.d.computeShortestRotation(ip, Op) / Sp,
-        delta: op.d.computeShortestRotation(ip, cp)
+        Uz: zT.e.computeShortestRotation(TT, mT) / MT,
+        mz: zT.e.computeShortestRotation(UT, WT) / gT,
+        delta: zT.e.computeShortestRotation(UT, mT)
       }
     }
 
-    function Up(pp, ip, cp, Op, op, Ip, Sp, xp) {
-      const Lp = Ip - ip,
-        Yp = Ip - Op,
-        Dp = xp - Op,
-        Ap = [null, null, null];
-      for (let Pp = 0; Pp < Ap.length; Pp++) Ap[Pp] = {
-        vo: (op[Pp] - pp[Pp]) / Lp,
-        Ho: (Sp[Pp] - cp[Pp]) / Dp,
-        delta: op[Pp] - cp[Pp]
+    function ZT(TT, UT, mT, WT, zT, MT, gT, nT) {
+      const HT = MT - UT,
+        kT = MT - WT,
+        jT = nT - WT,
+        lT = [null, null, null];
+      for (let LT = 0; LT < lT.length; LT++) lT[LT] = {
+        Uz: (zT[LT] - TT[LT]) / HT,
+        mz: (gT[LT] - mT[LT]) / jT,
+        delta: zT[LT] - mT[LT]
       };
       return {
-        yo: Yp,
-        Uo: Ap
+        AW: kT,
+        RW: lT
       }
     }
 
-    function wp(pp) {
-      return vp("number" === typeof pp ? [pp, pp, pp] : pp)
+    function cT(TT) {
+      return vT("number" === typeof TT ? [TT, TT, TT] : TT)
     }
 
-    function vp(pp) {
-      return [tp(pp[0]), tp(pp[1]), tp(pp[2])]
+    function vT(TT) {
+      return [fT(TT[0]), fT(TT[1]), fT(TT[2])]
     }
 
-    function tp(pp) {
-      return Number.isFinite(pp) ? Math.min(Sp.f, Math.max(-Sp.f, pp)) : pp
+    function fT(TT) {
+      return Number.isFinite(TT) ? Math.min(gT.h, Math.max(-gT.h, TT)) : TT
     }
 
-    function Hp(pp) {
-      const [ip, cp, Op] = pp, Sp = -(0, Ip.o)(ip), xp = -(0, Ip.o)(cp), Lp = (0, Ip.o)(Op), Yp = op.d.quaternionFromEulerZYX(Sp, xp, Lp);
-      return op.d.eulerYXZFromQuaternion(Yp)
+    function qT(TT) {
+      const [UT, mT, WT] = TT, gT = -(0, MT.m)(UT), nT = -(0, MT.m)(mT), HT = (0, MT.m)(WT), kT = zT.e.quaternionFromEulerZYX(gT, nT, HT);
+      return zT.e.eulerYXZFromQuaternion(kT)
     }
-    Dp.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Op.f.Linear,
-      catmullrom: Op.f.CatmullRomSpline
+    jT.LERP_MODE_SCHEMA_MAPPING = {
+      linear: WT.j.Linear,
+      catmullrom: WT.j.CatmullRomSpline
     };
-    const dp = 1 / 16;
+    const iT = 1 / 16;
 
-    function ep(pp) {
-      return [-pp[0] * dp, pp[1] * dp, pp[2] * dp]
+    function bT(TT) {
+      return [-TT[0] * iT, TT[1] * iT, TT[2] * iT]
     }
 
-    function jp(pp) {
-      const [ip, cp, Op] = pp;
-      return [ip >= 0 ? Math.PI - ip : -Math.PI - ip, kp(cp + Math.PI), kp(Op + Math.PI)]
+    function OT(TT) {
+      const [UT, mT, WT] = TT;
+      return [UT >= 0 ? Math.PI - UT : -Math.PI - UT, eT(mT + Math.PI), eT(WT + Math.PI)]
     }
 
-    function kp(pp) {
-      return op.d.mod(pp + Math.PI, 2 * Math.PI) - Math.PI
+    function eT(TT) {
+      return zT.e.mod(TT + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function mp(pp, ip) {
-      return Math.abs(op.d.computeShortestRotation(pp[0], ip[0])) + Math.abs(op.d.computeShortestRotation(pp[1], ip[1])) + Math.abs(op.d.computeShortestRotation(pp[2], ip[2]))
+    function YT(TT, UT) {
+      return Math.abs(zT.e.computeShortestRotation(TT[0], UT[0])) + Math.abs(zT.e.computeShortestRotation(TT[1], UT[1])) + Math.abs(zT.e.computeShortestRotation(TT[2], UT[2]))
     }
-    const Rp = new Yp
+    const JT = new kT
   },
-  37385: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp,
-      e: () => Ip,
-      f: () => Op,
-      j: () => op
+  37253: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      g: () => MT,
+      j: () => WT,
+      k: () => zT
     });
-    let Op = function(pp) {
-        return pp[pp.Linear = 0] = "Linear", pp[pp.CatmullRomSpline = 1] = "CatmullRomSpline", pp
+    let WT = function(TT) {
+        return TT[TT.Linear = 0] = "Linear", TT[TT.CatmullRomSpline = 1] = "CatmullRomSpline", TT
       }({}),
-      op = function(pp) {
-        return pp[pp.NoLoop = 0] = "NoLoop", pp[pp.LoopOnLastFrame = 1] = "LoopOnLastFrame", pp[pp.HoldOnLastFrame = 2] = "HoldOnLastFrame", pp
+      zT = function(TT) {
+        return TT[TT.NoLoop = 0] = "NoLoop", TT[TT.LoopOnLastFrame = 1] = "LoopOnLastFrame", TT[TT.HoldOnLastFrame = 2] = "HoldOnLastFrame", TT
       }({}),
-      Ip = function(pp) {
-        return pp[pp.Movement = 0] = "Movement", pp[pp.Action = 1] = "Action", pp[pp.Emote = 2] = "Emote", pp[pp.Custom = 3] = "Custom", pp
+      MT = function(TT) {
+        return TT[TT.Movement = 0] = "Movement", TT[TT.Action = 1] = "Action", TT[TT.Emote = 2] = "Emote", TT[TT.Custom = 3] = "Custom", TT
       }({}),
-      Sp = function(pp) {
-        return pp[pp.Start = 0] = "Start", pp[pp.Stop = 1] = "Stop", pp
+      gT = function(TT) {
+        return TT[TT.Start = 0] = "Start", TT[TT.Stop = 1] = "Stop", TT
       }({})
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

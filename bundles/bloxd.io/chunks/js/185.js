@@ -1,11 +1,11 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  9201: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      pageBody: () => Op
+  9187: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      pageBody: () => WT
     });
-    const Op = {
+    const WT = {
       whatIs: ["Something's broken loose in an abandoned research lab, and your squad has been sent in to deal with it. Bloxd Containment Breach is a co-op PvE survival horror shooter. You fight through the infested halls, contain the anomaly before the breach spreads, and then try to get out alive. Grab some friends and see if you can make it."],
       howToPlay: ["Get your squad together in the lobby and visit the Loadout NPC. That's where you choose a primary gun, a secondary, throwables, healing items, armour and a perk. Then step onto a queue pad: Normal takes up to 6 players and Hard takes up to 4. You need at least 2 to start. Every run builds a fresh chain of lab rooms full of infected scientists and failed experiments. Sealed doors open as you push on, and an objective arrow shows you the way.", "Clear each room, open the loot chests and track down the anomaly. Each anomaly is a different boss.", "Go down and you turn into a ghost. Mobs ignore ghosts and ghosts can't shoot, but you can still help out with ghost actions like Open Path. A teammate can revive you with a splash healing potion, and you'll get your inventory back. If the whole squad ends up as ghosts, the run's over. Contain the anomaly and you earn a boss part, which you can spend along with the gold from your kills on better gear."],
       features: ["Normal (Up to 6 Players) and Hard (Up to 4 Players) Difficulties", "A New Chain of Lab Rooms Every Run", "9 Anomaly Bosses to Find and Contain", "Encounters That Adapt as You Play", "Loadouts with Guns, Throwables, Healing, Armour and Perks", "Upgrade Your Gear with Gold and Boss Parts", "Ghost Mode and Team Revives", "Locators to Choose Which Anomaly You Face", "A Codex to Track Every Anomaly You've Met and Contained"],
@@ -34,4 +34,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

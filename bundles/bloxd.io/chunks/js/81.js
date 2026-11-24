@@ -1,377 +1,377 @@
 export const id = 81;
 export const ids = [81];
 export const modules = {
-  4844: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op,
-      g: () => Sp,
-      k: () => wp,
-      n: () => Up,
-      q: () => xp,
-      r: () => op,
-      s: () => Ip,
-      t: () => yp,
-      w: () => Wp,
-      x: () => Pp
+  4842: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => BT,
+      E: () => pT,
+      I: () => LT,
+      e: () => WT,
+      h: () => gT,
+      l: () => cT,
+      n: () => ZT,
+      p: () => nT,
+      t: () => zT,
+      w: () => MT
     });
-    const Op = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const WT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function op(pp) {
+    function zT(TT) {
       try {
-        return decodeURIComponent(pp.slice(1))
+        return decodeURIComponent(TT.slice(1))
       } catch {
-        return pp.slice(1)
+        return TT.slice(1)
       }
     }
 
-    function Ip(pp) {
-      return pp.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function MT(TT) {
+      return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const Sp = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Op.source}`, "g");
+    const gT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${WT.source}`, "g");
 
-    function xp(pp, ip) {
-      return 2 === pp.length ? ip.replace(/^ (.*) $/, "$1") : ip
-    }
-
-    function Lp(pp) {
-      return "" === pp.trim()
+    function nT(TT, UT) {
+      return 2 === TT.length ? UT.replace(/^ (.*) $/, "$1") : UT
     }
 
-    function Yp(pp) {
-      const ip = [];
-      for (const cp of pp.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ip.length > 0 && ip[ip.length - 1].endsWith("\\") ? ip[ip.length - 1] += `|${cp}` : ip.push(cp);
-      return ip.map((pp => pp.trim().replaceAll("\\|", "|")))
+    function HT(TT) {
+      return "" === TT.trim()
     }
-    const Dp = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function Ap(pp) {
-      const ip = [],
-        cp = [{
+    function kT(TT) {
+      const UT = [];
+      for (const mT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) UT.length > 0 && UT[UT.length - 1].endsWith("\\") ? UT[UT.length - 1] += `|${mT}` : UT.push(mT);
+      return UT.map((TT => TT.trim().replaceAll("\\|", "|")))
+    }
+    const jT = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function lT(TT) {
+      const UT = [],
+        mT = [{
           indent: -1,
-          items: ip
+          items: UT
         }];
-      let Op = null;
-      for (const op of pp) {
-        const pp = op.match(Dp);
-        if (!pp) {
-          Op && (Op.text += ` ${op.trim()}`);
+      let WT = null;
+      for (const zT of TT) {
+        const TT = zT.match(jT);
+        if (!TT) {
+          WT && (WT.text += ` ${zT.trim()}`);
           continue
         }
-        const ip = pp[1].replace(/\t/g, "  ").length;
-        for (; ip <= cp[cp.length - 1].indent;) cp.pop();
-        Op = {
-          text: pp[3].trim(),
+        const UT = TT[1].replace(/\t/g, "  ").length;
+        for (; UT <= mT[mT.length - 1].indent;) mT.pop();
+        WT = {
+          text: TT[3].trim(),
           children: []
-        }, cp[cp.length - 1].items.push(Op), cp.push({
-          indent: ip,
-          items: Op.children
+        }, mT[mT.length - 1].items.push(WT), mT.push({
+          indent: UT,
+          items: WT.children
         })
       }
-      return ip
+      return UT
     }
 
-    function Pp(pp) {
-      const ip = pp.replace(/\r\n/g, "\n").split("\n"),
-        cp = [];
-      let Op = 0;
-      for (; Op < ip.length;) {
-        const pp = ip[Op];
-        if (Lp(pp)) {
-          Op++;
+    function LT(TT) {
+      const UT = TT.replace(/\r\n/g, "\n").split("\n"),
+        mT = [];
+      let WT = 0;
+      for (; WT < UT.length;) {
+        const TT = UT[WT];
+        if (HT(TT)) {
+          WT++;
           continue
         }
-        const op = pp.match(/^\s*```\s*(\w*)\s*$/);
-        if (op) {
-          const pp = [];
-          for (Op++; Op < ip.length && !/^\s*```\s*$/.test(ip[Op]);) pp.push(ip[Op]), Op++;
-          Op++, cp.push({
+        const zT = TT.match(/^\s*```\s*(\w*)\s*$/);
+        if (zT) {
+          const TT = [];
+          for (WT++; WT < UT.length && !/^\s*```\s*$/.test(UT[WT]);) TT.push(UT[WT]), WT++;
+          WT++, mT.push({
             kind: "code",
-            lang: op[1] || "text",
-            code: pp.join("\n").replace(/\s+$/, "")
+            lang: zT[1] || "text",
+            code: TT.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const Sp = pp.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (Sp) {
-          const pp = Sp[2].trim();
-          cp.push({
+        const gT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (gT) {
+          const TT = gT[2].trim();
+          mT.push({
             kind: "heading",
-            level: Sp[1].length,
-            text: pp,
-            anchor: Ip(pp)
-          }), Op++;
+            level: gT[1].length,
+            text: TT,
+            anchor: MT(TT)
+          }), WT++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(pp)) {
-          cp.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
+          mT.push({
             kind: "rule"
-          }), Op++;
+          }), WT++;
           continue
         }
-        if (pp.trim().startsWith("|") && Op + 1 < ip.length && /^\s*\|[\s:|-]+\|\s*$/.test(ip[Op + 1])) {
-          const op = Yp(pp),
-            Ip = [];
-          for (Op += 2; Op < ip.length && ip[Op].trim().startsWith("|");) Ip.push(Yp(ip[Op])), Op++;
-          cp.push({
+        if (TT.trim().startsWith("|") && WT + 1 < UT.length && /^\s*\|[\s:|-]+\|\s*$/.test(UT[WT + 1])) {
+          const zT = kT(TT),
+            MT = [];
+          for (WT += 2; WT < UT.length && UT[WT].trim().startsWith("|");) MT.push(kT(UT[WT])), WT++;
+          mT.push({
             kind: "table",
-            header: op,
-            rows: Ip
+            header: zT,
+            rows: MT
           });
           continue
         }
-        if (pp.startsWith(">")) {
-          const pp = [];
-          for (; Op < ip.length && ip[Op].startsWith(">");) pp.push(ip[Op].replace(/^>\s?/, "")), Op++;
-          cp.push({
+        if (TT.startsWith(">")) {
+          const TT = [];
+          for (; WT < UT.length && UT[WT].startsWith(">");) TT.push(UT[WT].replace(/^>\s?/, "")), WT++;
+          mT.push({
             kind: "quote",
-            blocks: Pp(pp.join("\n"))
+            blocks: LT(TT.join("\n"))
           });
           continue
         }
-        if (Dp.test(pp)) {
-          const op = [],
-            Ip = /^\s*\d+\./.test(pp);
-          for (; Op < ip.length && !Lp(ip[Op]) && (Dp.test(ip[Op]) || /^\s+\S/.test(ip[Op]));) op.push(ip[Op]), Op++;
-          cp.push({
+        if (jT.test(TT)) {
+          const zT = [],
+            MT = /^\s*\d+\./.test(TT);
+          for (; WT < UT.length && !HT(UT[WT]) && (jT.test(UT[WT]) || /^\s+\S/.test(UT[WT]));) zT.push(UT[WT]), WT++;
+          mT.push({
             kind: "list",
-            ordered: Ip,
-            items: Ap(op)
+            ordered: MT,
+            items: lT(zT)
           });
           continue
         }
-        const xp = [];
-        for (; Op < ip.length && !Lp(ip[Op]) && !/^\s*```/.test(ip[Op]) && !/^#{1,6}\s/.test(ip[Op]) && !ip[Op].startsWith(">") && !Dp.test(ip[Op]) && (!ip[Op].trim().startsWith("|") || 0 !== xp.length);) xp.push(ip[Op].trim()), Op++;
-        0 === xp.length && (xp.push(ip[Op].trim()), Op++), cp.push({
+        const nT = [];
+        for (; WT < UT.length && !HT(UT[WT]) && !/^\s*```/.test(UT[WT]) && !/^#{1,6}\s/.test(UT[WT]) && !UT[WT].startsWith(">") && !jT.test(UT[WT]) && (!UT[WT].trim().startsWith("|") || 0 !== nT.length);) nT.push(UT[WT].trim()), WT++;
+        0 === nT.length && (nT.push(UT[WT].trim()), WT++), mT.push({
           kind: "paragraph",
-          text: xp.join(" ")
+          text: nT.join(" ")
         })
       }
-      return cp
+      return mT
     }
 
-    function Wp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const cp = Pp(pp);
-      let Op = "";
-      const op = [],
-        Ip = [],
-        Sp = new Map;
-      for (const Yp of cp) {
-        if ("heading" === Yp.kind) {
-          var xp;
-          const pp = (null !== (xp = Sp.get(Yp.anchor)) && void 0 !== xp ? xp : 0) + 1;
-          Sp.set(Yp.anchor, pp), pp > 1 && (Yp.anchor = `${Yp.anchor}-${pp}`)
+    function pT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const mT = LT(TT);
+      let WT = "";
+      const zT = [],
+        MT = [],
+        gT = new Map;
+      for (const kT of mT) {
+        if ("heading" === kT.kind) {
+          var nT;
+          const TT = (null !== (nT = gT.get(kT.anchor)) && void 0 !== nT ? nT : 0) + 1;
+          gT.set(kT.anchor, TT), TT > 1 && (kT.anchor = `${kT.anchor}-${TT}`)
         }
-        if ("heading" === Yp.kind && 1 === Yp.level && !Op) {
-          Op = Yp.text;
+        if ("heading" === kT.kind && 1 === kT.level && !WT) {
+          WT = kT.text;
           continue
         }
-        if ("heading" === Yp.kind && Yp.level <= ip) {
-          Ip.push({
-            heading: Yp,
+        if ("heading" === kT.kind && kT.level <= UT) {
+          MT.push({
+            heading: kT,
             blocks: []
           });
           continue
         }
-        const pp = Ip.at(-1);
-        pp ? pp.blocks.push(Yp) : op.push(Yp)
+        const TT = MT.at(-1);
+        TT ? TT.blocks.push(kT) : zT.push(kT)
       }
-      const Lp = pp => {
+      const HT = TT => {
         for (;
-          "rule" === (null === (ip = pp.at(-1)) || void 0 === ip ? void 0 : ip.kind);) {
-          var ip;
-          pp.pop()
+          "rule" === (null === (UT = TT.at(-1)) || void 0 === UT ? void 0 : UT.kind);) {
+          var UT;
+          TT.pop()
         }
       };
-      Lp(op);
-      for (const Yp of Ip) Lp(Yp.blocks);
+      HT(zT);
+      for (const kT of MT) HT(kT.blocks);
       return {
-        title: Op,
-        intro: op,
-        sections: Ip
+        title: WT,
+        intro: zT,
+        sections: MT
       }
     }
 
-    function yp(pp) {
+    function BT(TT) {
       return [{
         heading: null,
-        blocks: pp.intro
-      }, ...pp.sections.map((pp => ({
-        heading: pp.heading,
-        blocks: pp.blocks
+        blocks: TT.intro
+      }, ...TT.sections.map((TT => ({
+        heading: TT.heading,
+        blocks: TT.blocks
       })))]
     }
 
-    function Up(pp) {
-      return pp.flatMap((pp => "code" === pp.kind ? [pp] : "quote" === pp.kind ? Up(pp.blocks) : []))
+    function ZT(TT) {
+      return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? ZT(TT.blocks) : []))
     }
 
-    function wp(pp) {
-      switch (pp.kind) {
+    function cT(TT) {
+      switch (TT.kind) {
         case "heading":
         case "paragraph":
-          return pp.text;
+          return TT.text;
         case "code":
-          return pp.code;
+          return TT.code;
         case "table":
-          return [pp.header, ...pp.rows].map((pp => pp.join(" "))).join(" ");
+          return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
         case "list": {
-          const ip = pp => pp.map((pp => `${pp.text} ${ip(pp.children)}`)).join(" ");
-          return ip(pp.items)
+          const UT = TT => TT.map((TT => `${TT.text} ${UT(TT.children)}`)).join(" ");
+          return UT(TT.items)
         }
         case "quote":
-          return pp.blocks.map(wp).join(" ");
+          return TT.blocks.map(cT).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6637: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ap,
-      c: () => Sp,
-      d: () => xp
+  6562: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => lT,
+      d: () => gT,
+      h: () => nT
     });
-    cp(6630);
-    var Op = cp(62),
-      op = cp(4844),
-      Ip = cp(1112);
-    const Sp = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    mT(6559);
+    var WT = mT(63),
+      zT = mT(4842),
+      MT = mT(1188);
+    const gT = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function xp(pp, ip) {
-      return pp === ip ? pp : `${pp} (${ip})`
+    function nT(TT, UT) {
+      return TT === UT ? TT : `${TT} (${UT})`
     }
 
-    function Lp(pp) {
-      const ip = [];
-      let cp = 0;
-      for (const Op of pp.matchAll(Sp)) {
-        Op.index > cp && ip.push(pp.slice(cp, Op.index));
-        const [, op, Sp, Lp, Yp, Dp, Ap] = Op;
-        void 0 !== op ? ip.push(xp(op, Sp)) : void 0 !== Lp || void 0 !== Yp ? ip.push((0, Ip.jsx)("strong", {
-          children: null !== Lp && void 0 !== Lp ? Lp : Yp
-        }, Op.index)) : void 0 !== Dp ? ip.push((0, Ip.jsx)("em", {
-          children: Dp
-        }, Op.index)) : ip.push((0, Ip.jsx)("code", {
-          children: Ap
-        }, Op.index)), cp = Op.index + Op[0].length
+    function HT(TT) {
+      const UT = [];
+      let mT = 0;
+      for (const WT of TT.matchAll(gT)) {
+        WT.index > mT && UT.push(TT.slice(mT, WT.index));
+        const [, zT, gT, HT, kT, jT, lT] = WT;
+        void 0 !== zT ? UT.push(nT(zT, gT)) : void 0 !== HT || void 0 !== kT ? UT.push((0, MT.jsx)("strong", {
+          children: null !== HT && void 0 !== HT ? HT : kT
+        }, WT.index)) : void 0 !== jT ? UT.push((0, MT.jsx)("em", {
+          children: jT
+        }, WT.index)) : UT.push((0, MT.jsx)("code", {
+          children: lT
+        }, WT.index)), mT = WT.index + WT[0].length
       }
-      return cp < pp.length && ip.push(pp.slice(cp)), ip
+      return mT < TT.length && UT.push(TT.slice(mT)), UT
     }
 
-    function Yp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const Op = pp.map(((pp, ip) => (0, Ip.jsxs)("li", {
-        children: [Lp(pp.text), pp.children.length > 0 && Yp(pp.children, !1)]
-      }, ip)));
-      return ip ? (0, Ip.jsx)("ol", {
-        start: cp,
-        children: Op
-      }) : (0, Ip.jsx)("ul", {
-        children: Op
+    function kT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const WT = TT.map(((TT, UT) => (0, MT.jsxs)("li", {
+        children: [HT(TT.text), TT.children.length > 0 && kT(TT.children, !1)]
+      }, UT)));
+      return UT ? (0, MT.jsx)("ol", {
+        start: mT,
+        children: WT
+      }) : (0, MT.jsx)("ul", {
+        children: WT
       })
     }
 
-    function Dp(pp, ip) {
-      switch (pp.kind) {
+    function jT(TT, UT) {
+      switch (TT.kind) {
         case "heading":
-          return pp.level <= 2 ? (0, Ip.jsx)("h3", {
-            children: Lp(pp.text)
-          }, ip) : (0, Ip.jsx)("h4", {
-            children: Lp(pp.text)
-          }, ip);
+          return TT.level <= 2 ? (0, MT.jsx)("h3", {
+            children: HT(TT.text)
+          }, UT) : (0, MT.jsx)("h4", {
+            children: HT(TT.text)
+          }, UT);
         case "paragraph":
-          return (0, Ip.jsx)("p", {
-            children: Lp(pp.text)
-          }, ip);
+          return (0, MT.jsx)("p", {
+            children: HT(TT.text)
+          }, UT);
         case "list":
-          return (0, Ip.jsx)(Op.Fragment, {
-            children: Yp(pp.items, pp.ordered)
-          }, ip);
+          return (0, MT.jsx)(WT.Fragment, {
+            children: kT(TT.items, TT.ordered)
+          }, UT);
         case "quote":
-          return (0, Ip.jsx)("blockquote", {
-            children: pp.blocks.map(((pp, ip) => Dp(pp, ip)))
-          }, ip);
+          return (0, MT.jsx)("blockquote", {
+            children: TT.blocks.map(((TT, UT) => jT(TT, UT)))
+          }, UT);
         case "code":
-          return (0, Ip.jsx)("pre", {
-            children: (0, Ip.jsx)("code", {
-              children: pp.code
+          return (0, MT.jsx)("pre", {
+            children: (0, MT.jsx)("code", {
+              children: TT.code
             })
-          }, ip);
+          }, UT);
         case "table":
-          return (0, Ip.jsxs)("table", {
-            children: [(0, Ip.jsx)("thead", {
-              children: (0, Ip.jsx)("tr", {
-                children: pp.header.map(((pp, ip) => (0, Ip.jsx)("th", {
-                  children: Lp(pp)
-                }, ip)))
+          return (0, MT.jsxs)("table", {
+            children: [(0, MT.jsx)("thead", {
+              children: (0, MT.jsx)("tr", {
+                children: TT.header.map(((TT, UT) => (0, MT.jsx)("th", {
+                  children: HT(TT)
+                }, UT)))
               })
-            }), (0, Ip.jsx)("tbody", {
-              children: pp.rows.map(((pp, ip) => (0, Ip.jsx)("tr", {
-                children: pp.map(((pp, ip) => (0, Ip.jsx)("td", {
-                  children: Lp(pp)
-                }, ip)))
-              }, ip)))
+            }), (0, MT.jsx)("tbody", {
+              children: TT.rows.map(((TT, UT) => (0, MT.jsx)("tr", {
+                children: TT.map(((TT, UT) => (0, MT.jsx)("td", {
+                  children: HT(TT)
+                }, UT)))
+              }, UT)))
             })]
-          }, ip);
+          }, UT);
         case "rule":
-          return (0, Ip.jsx)("hr", {}, ip)
+          return (0, MT.jsx)("hr", {}, UT)
       }
     }
 
-    function Ap(pp) {
+    function lT(TT) {
       let {
-        markdown: ip
-      } = pp, cp = 0;
-      return (0, Ip.jsx)("div", {
+        markdown: UT
+      } = TT, mT = 0;
+      return (0, MT.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, op.x)(ip).map(((pp, ip) => {
-          if ("list" !== pp.kind || !pp.ordered) return cp = 0, Dp(pp, ip);
-          const op = cp + 1;
-          return cp += pp.items.length, (0, Ip.jsx)(Op.Fragment, {
-            children: Yp(pp.items, !0, op)
-          }, ip)
+        children: (0, zT.I)(UT).map(((TT, UT) => {
+          if ("list" !== TT.kind || !TT.ordered) return mT = 0, jT(TT, UT);
+          const zT = mT + 1;
+          return mT += TT.items.length, (0, MT.jsx)(WT.Fragment, {
+            children: kT(TT.items, !0, zT)
+          }, UT)
         }))
       })
     }
   },
-  6621: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => tp,
-      d: () => Hp,
-      c: () => ep,
-      f: () => yp
+  6552: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => fT,
+      g: () => qT,
+      d: () => bT,
+      j: () => BT
     });
-    var Op = cp(1216),
-      op = cp(6575),
-      Ip = cp(4984);
-    const Sp = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var WT = mT(1308),
+      zT = mT(6515),
+      MT = mT(4972);
+    const gT = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function xp(pp) {
-      return (0, Ip.f)(pp, Sp, (ip => !/^my/i.test(ip[0]) || !/follow $/i.test(pp.slice(0, ip.index)))).length > 0
+    function nT(TT) {
+      return (0, MT.e)(TT, gT, (UT => !/^my/i.test(UT[0]) || !/follow $/i.test(TT.slice(0, UT.index)))).length > 0
     }
-    const Lp = /\byou(?:r|'re|'ll)?\b/i,
-      Yp = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      Dp = 2;
+    const HT = /\byou(?:r|'re|'ll)?\b/i,
+      kT = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      jT = 2;
 
-    function Ap(pp) {
-      return function(pp) {
-        const ip = [];
-        let cp = !1;
-        for (const Op of pp.split("\n")) {
-          if (/^\s*(```|~~~)/.test(Op)) {
-            cp = !cp;
+    function lT(TT) {
+      return function(TT) {
+        const UT = [];
+        let mT = !1;
+        for (const WT of TT.split("\n")) {
+          if (/^\s*(```|~~~)/.test(WT)) {
+            mT = !mT;
             continue
           }
-          if (cp || /^\s*>/.test(Op)) continue;
-          const pp = Op.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          ip.push(...(0, op.r)(pp))
+          if (mT || /^\s*>/.test(WT)) continue;
+          const TT = WT.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          UT.push(...(0, zT.q)(TT))
         }
-        return ip
-      }(pp).filter((pp => xp(pp) || Yp.test(pp) && !Lp.test(pp)))
+        return UT
+      }(TT).filter((TT => nT(TT) || kT.test(TT) && !HT.test(TT)))
     }
-    const Pp = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Wp = [{
+    const LT = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      pT = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function yp(pp) {
-      const ip = Wp.findIndex((ip => ip.name === pp));
-      return -1 === ip ? Wp.length : ip
+    function BT(TT) {
+      const UT = pT.findIndex((UT => UT.name === TT));
+      return -1 === UT ? pT.length : UT
     }
-    const Up = 2500,
-      wp = 12e4;
-    class vp extends Error {
-      constructor(pp) {
-        super(`Studio AI chat ${pp}`), this.reason = pp
+    const ZT = 2500,
+      cT = 12e4;
+    class vT extends Error {
+      constructor(TT) {
+        super(`Studio AI chat ${TT}`), this.reason = TT
       }
     }
 
-    function tp(pp, ip) {
-      const cp = new AbortController,
-        Op = () => {
-          cp.abort()
+    function fT(TT, UT) {
+      const mT = new AbortController,
+        WT = () => {
+          mT.abort()
         },
-        op = setTimeout(Op, pp);
-      return null !== ip && void 0 !== ip && ip.aborted && Op(), null === ip || void 0 === ip || ip.addEventListener("abort", Op, {
+        zT = setTimeout(WT, TT);
+      return null !== UT && void 0 !== UT && UT.aborted && WT(), null === UT || void 0 === UT || UT.addEventListener("abort", WT, {
         once: !0
       }), {
-        signal: cp.signal,
+        signal: mT.signal,
         clear: () => {
-          clearTimeout(op), null === ip || void 0 === ip || ip.removeEventListener("abort", Op)
+          clearTimeout(zT), null === UT || void 0 === UT || UT.removeEventListener("abort", WT)
         }
       }
     }
 
-    function Hp(pp, ip, cp) {
-      return new Promise(((op, Ip) => {
-        const Sp = new AbortController,
-          xp = () => {
-            Sp.abort(), Ip((0, Op.e)(cp))
+    function qT(TT, UT, mT) {
+      return new Promise(((zT, MT) => {
+        const gT = new AbortController,
+          nT = () => {
+            gT.abort(), MT((0, WT.i)(mT))
           };
-        if (null !== cp && void 0 !== cp && cp.aborted) return void xp();
-        null === cp || void 0 === cp || cp.addEventListener("abort", xp, {
+        if (null !== mT && void 0 !== mT && mT.aborted) return void nT();
+        null === mT || void 0 === mT || mT.addEventListener("abort", nT, {
           once: !0
         });
-        const Lp = Wp.map((() => !1));
-        let Yp = null;
-        const Dp = Wp.map((() => !1)),
-          Ap = Wp.map((() => !1));
-        Wp.forEach(((Op, Pp) => {
-          const yp = tp(wp, Sp.signal);
-          jp(Op, [{
+        const HT = pT.map((() => !1));
+        let kT = null;
+        const jT = pT.map((() => !1)),
+          lT = pT.map((() => !1));
+        pT.forEach(((WT, LT) => {
+          const BT = fT(cT, gT.signal);
+          OT(WT, [{
             role: "user",
-            content: pp
-          }], yp.signal).then((pp => {
-            Sp.signal.aborted || ("busy" === pp || "failed" === pp ? (Dp[Pp] = "busy" === pp, Ap[Pp] = !0) : null !== pp && (null === Yp || Pp < Yp.rank) && (Yp = {
-              rank: Pp,
+            content: TT
+          }], BT.signal).then((TT => {
+            gT.signal.aborted || ("busy" === TT || "failed" === TT ? (jT[LT] = "busy" === TT, lT[LT] = !0) : null !== TT && (null === kT || LT < kT.rank) && (kT = {
+              rank: LT,
               answer: {
-                text: pp.text,
-                model: Op.name
+                text: TT.text,
+                model: WT.name
               }
-            }, ip(Yp.answer)))
-          }), (pp => {
-            Sp.signal.aborted || (Ap[Pp] = !0, console.warn(`Studio AI: ${Op.name} couldn't be reached`, pp))
+            }, UT(kT.answer)))
+          }), (TT => {
+            gT.signal.aborted || (lT[LT] = !0, console.warn(`Studio AI: ${WT.name} couldn't be reached`, TT))
           })).finally((() => {
-            yp.clear(), Lp[Pp] = !0, Sp.signal.aborted || (() => {
-              var pp, ip;
-              const Op = null !== (pp = null === (ip = Yp) || void 0 === ip ? void 0 : ip.rank) && void 0 !== pp ? pp : Wp.length;
-              Lp.slice(0, Op).includes(!1) || (null === cp || void 0 === cp || cp.removeEventListener("abort", xp), Sp.abort(), null !== Yp ? op({
-                ...Yp.answer,
-                isFinal: !Ap.slice(0, Yp.rank).includes(!0)
-              }) : Ip(new vp(Dp.includes(!0) ? "busy" : "failed")))
+            BT.clear(), HT[LT] = !0, gT.signal.aborted || (() => {
+              var TT, UT;
+              const WT = null !== (TT = null === (UT = kT) || void 0 === UT ? void 0 : UT.rank) && void 0 !== TT ? TT : pT.length;
+              HT.slice(0, WT).includes(!1) || (null === mT || void 0 === mT || mT.removeEventListener("abort", nT), gT.abort(), null !== kT ? zT({
+                ...kT.answer,
+                isFinal: !lT.slice(0, kT.rank).includes(!0)
+              }) : MT(new vT(jT.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((pp => {
-            console.error("Studio AI: showing an answer failed", pp)
+          })).catch((TT => {
+            console.error("Studio AI: showing an answer failed", TT)
           }))
         }))
       }))
     }
 
-    function dp(pp) {
-      var ip, cp;
-      return "length" === (null === pp || void 0 === pp || null === (ip = pp.choices) || void 0 === ip || null === (cp = ip[0]) || void 0 === cp ? void 0 : cp.finish_reason)
+    function iT(TT) {
+      var UT, mT;
+      return "length" === (null === TT || void 0 === TT || null === (UT = TT.choices) || void 0 === UT || null === (mT = UT[0]) || void 0 === mT ? void 0 : mT.finish_reason)
     }
-    async function ep(pp, ip, cp) {
-      const Op = Wp.find((ip => ip.name === pp));
-      if (void 0 === Op) return "failed";
-      const op = tp(wp, cp);
+    async function bT(TT, UT, mT) {
+      const WT = pT.find((UT => UT.name === TT));
+      if (void 0 === WT) return "failed";
+      const zT = fT(cT, mT);
       try {
-        const pp = await jp(Op, ip, op.signal);
-        return null !== pp && "object" === typeof pp ? pp.isCutOff ? (console.warn(`Studio AI: ${Op.name}'s answer was cut off at the token limit`), null) : {
-          text: pp.text
-        } : pp
+        const TT = await OT(WT, UT, zT.signal);
+        return null !== TT && "object" === typeof TT ? TT.isCutOff ? (console.warn(`Studio AI: ${WT.name}'s answer was cut off at the token limit`), null) : {
+          text: TT.text
+        } : TT
       } finally {
-        op.clear()
+        zT.clear()
       }
     }
-    async function jp(pp, ip, cp) {
-      const Op = await fetch(Pp, {
+    async function OT(TT, UT, mT) {
+      const WT = await fetch(LT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: pp.name,
-          messages: ip,
-          max_tokens: Up,
-          temperature: pp.temperature,
-          reasoning_effort: pp.reasoningEffort
+          model: TT.name,
+          messages: UT,
+          max_tokens: ZT,
+          temperature: TT.temperature,
+          reasoning_effort: TT.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: cp
+        signal: mT
       });
-      if (429 === Op.status) return "busy";
-      if (!Op.ok) return console.warn(`Studio AI: ${pp.name} answered ${Op.status}`), "failed";
-      const op = await Op.json().catch((() => null)),
-        Ip = function(pp) {
-          var ip, cp, Op;
-          const op = null === pp || void 0 === pp || null === (ip = pp.choices) || void 0 === ip || null === (cp = ip[0]) || void 0 === cp || null === (Op = cp.message) || void 0 === Op ? void 0 : Op.content;
-          if ("string" !== typeof op) return null;
-          const Ip = op.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === Ip ? null : Ip
-        }(op);
-      return null !== Ip && function(pp) {
-        const ip = Ap(pp);
-        return ip.length >= Dp || ip.some((pp => xp(pp)))
-      }(Ip) ? (console.warn(`Studio AI: ${pp.name} thought out loud instead of answering`), "failed") : null === Ip ? null : {
-        text: Ip,
-        isCutOff: dp(op)
+      if (429 === WT.status) return "busy";
+      if (!WT.ok) return console.warn(`Studio AI: ${TT.name} answered ${WT.status}`), "failed";
+      const zT = await WT.json().catch((() => null)),
+        MT = function(TT) {
+          var UT, mT, WT;
+          const zT = null === TT || void 0 === TT || null === (UT = TT.choices) || void 0 === UT || null === (mT = UT[0]) || void 0 === mT || null === (WT = mT.message) || void 0 === WT ? void 0 : WT.content;
+          if ("string" !== typeof zT) return null;
+          const MT = zT.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === MT ? null : MT
+        }(zT);
+      return null !== MT && function(TT) {
+        const UT = lT(TT);
+        return UT.length >= jT || UT.some((TT => nT(TT)))
+      }(MT) ? (console.warn(`Studio AI: ${TT.name} thought out loud instead of answering`), "failed") : null === MT ? null : {
+        text: MT,
+        isCutOff: iT(zT)
       }
     }
   },
-  6575: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => dp,
-      C: () => jp,
-      D: () => wp,
-      E: () => Hp,
-      I: () => ep,
-      K: () => tp,
-      L: () => Ap,
-      N: () => Yp,
-      P: () => Wp,
-      c: () => yp,
-      g: () => xp,
-      i: () => Sp,
-      l: () => Up,
-      n: () => Pp,
-      r: () => Dp,
-      s: () => Ip,
-      w: () => op
+  6515: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => qT,
+      B: () => bT,
+      E: () => fT,
+      I: () => lT,
+      M: () => kT,
+      N: () => pT,
+      c: () => BT,
+      f: () => nT,
+      j: () => gT,
+      n: () => ZT,
+      p: () => LT,
+      q: () => jT,
+      r: () => MT,
+      s: () => zT,
+      t: () => iT,
+      w: () => OT,
+      y: () => cT
     });
-    var Op = cp(4984);
-    const op = 2e3,
-      Ip = 2e4;
+    var WT = mT(4972);
+    const zT = 2e3,
+      MT = 2e4;
 
-    function Sp(pp) {
-      return pp.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function gT(TT) {
+      return TT.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function xp(pp) {
-      return pp.replace(/\$/g, "\\$")
+    function nT(TT) {
+      return TT.replace(/\$/g, "\\$")
     }
-    const Lp = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const HT = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function Yp(pp, ip) {
-      Lp.lastIndex = ip;
-      const cp = Lp.exec(pp);
-      return cp.index + cp[0].length
-    }
-
-    function Dp(pp) {
-      return (0, Op.s)(pp, /\s+/g, (0, Op.p)(".!?")).flatMap((pp => pp.split("\n")))
+    function kT(TT, UT) {
+      HT.lastIndex = UT;
+      const mT = HT.exec(TT);
+      return mT.index + mT[0].length
     }
 
-    function Ap(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ip;
-      const Op = [...pp.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((pp => pp.index)),
-        op = Op.filter((pp => pp < ip)),
-        Ip = Op.find((pp => pp >= cp));
-      return [0 === op.length ? 0 : op.at(-1) + 1, void 0 === Ip ? pp.length : Ip + 1]
+    function jT(TT) {
+      return (0, WT.v)(TT, /\s+/g, (0, WT.p)(".!?")).flatMap((TT => TT.split("\n")))
     }
 
-    function Pp(pp, ip) {
-      const cp = pp.charCodeAt(ip - 1);
-      return pp.slice(0, ip > 0 && ip < pp.length && cp >= 55296 && cp <= 56319 ? ip - 1 : ip)
+    function lT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UT;
+      const WT = [...TT.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((TT => TT.index)),
+        zT = WT.filter((TT => TT < UT)),
+        MT = WT.find((TT => TT >= mT));
+      return [0 === zT.length ? 0 : zT.at(-1) + 1, void 0 === MT ? TT.length : MT + 1]
     }
 
-    function Wp(pp, ip) {
-      return `${ip}${pp.replace(/\\/g,"\\\\").split(ip).join(`\\${ip}`)}${ip}`
+    function LT(TT, UT) {
+      const mT = TT.charCodeAt(UT - 1);
+      return TT.slice(0, UT > 0 && UT < TT.length && mT >= 55296 && mT <= 56319 ? UT - 1 : UT)
     }
 
-    function yp(pp) {
-      return pp.charAt(0).toUpperCase() + pp.slice(1)
+    function pT(TT, UT) {
+      return `${UT}${TT.replace(/\\/g,"\\\\").split(UT).join(`\\${UT}`)}${UT}`
     }
 
-    function Up(pp) {
-      return Math.round(pp).toLocaleString("en-US")
+    function BT(TT) {
+      return TT.charAt(0).toUpperCase() + TT.slice(1)
     }
 
-    function wp(pp) {
-      return pp.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((pp => "" !== pp))
-    }
-    const vp = 3;
-
-    function tp(pp, ip) {
-      return wp(pp).filter((pp => pp.length >= vp && !/\d/.test(pp))).map((pp => `${pp} ${ip}`))
+    function ZT(TT) {
+      return Math.round(TT).toLocaleString("en-US")
     }
 
-    function Hp(pp) {
-      return pp.split(/[\s:_]+/).filter((pp => "" !== pp)).map(Sp).join("[`:_\\s]+")
+    function cT(TT) {
+      return TT.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((TT => "" !== TT))
+    }
+    const vT = 3;
+
+    function fT(TT, UT) {
+      return cT(TT).filter((TT => TT.length >= vT && !/\d/.test(TT))).map((TT => `${TT} ${UT}`))
     }
 
-    function dp(pp) {
-      return wp(pp.split(".").pop())
+    function qT(TT) {
+      return TT.split(/[\s:_]+/).filter((TT => "" !== TT)).map(gT).join("[`:_\\s]+")
     }
 
-    function ep(pp) {
-      return pp.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function iT(TT) {
+      return cT(TT.split(".").pop())
     }
 
-    function jp(pp) {
-      let ip = null;
+    function bT(TT) {
+      return TT.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function OT(TT) {
+      let UT = null;
       return () => {
-        const cp = ip ??= pp();
-        return cp.catch((() => {
-          ip === cp && (ip = null)
-        })), cp
+        const mT = UT ??= TT();
+        return mT.catch((() => {
+          UT === mT && (UT = null)
+        })), mT
       }
     }
   },
-  4984: (pp, ip, cp) => {
-    function Op(pp) {
+  4972: (TT, UT, mT) => {
+    function WT(TT) {
       return {
-        notAfter: pp
+        notAfter: TT
       }
     }
-    cp.d(ip, {
-      c: () => Lp,
-      f: () => Yp,
-      j: () => xp,
-      k: () => Op,
-      m: () => op,
-      n: () => Ip,
-      p: () => Sp,
-      r: () => Dp,
-      s: () => Ap
+    mT.d(UT, {
+      d: () => HT,
+      e: () => kT,
+      f: () => nT,
+      j: () => WT,
+      n: () => zT,
+      o: () => MT,
+      p: () => gT,
+      s: () => jT,
+      v: () => lT
     });
-    const op = Op("\\w$."),
-      Ip = Op("\\w.,");
+    const zT = WT("\\w$."),
+      MT = WT("\\w.,");
 
-    function Sp(pp) {
-      return ip => Lp(ip, pp)
+    function gT(TT) {
+      return UT => HT(UT, TT)
     }
 
-    function xp(pp) {
-      return ip => !pp.test(ip.input.slice(0, ip.index))
+    function nT(TT) {
+      return UT => !TT.test(UT.input.slice(0, UT.index))
     }
 
-    function Lp(pp, ip) {
-      return pp.index > 0 && new RegExp(`[${ip}]`).test(pp.input[pp.index - 1])
+    function HT(TT, UT) {
+      return TT.index > 0 && new RegExp(`[${UT}]`).test(TT.input[TT.index - 1])
     }
 
-    function Yp(pp, ip, cp) {
-      return function(pp) {
-        return void 0 !== pp && "function" !== typeof pp
-      }(cp) ? function(pp, ip, cp) {
-        const Op = ip.flags.replace(/[gy]/g, ""),
-          op = new RegExp(`[^${cp}](?:${ip.source})`, `${Op}g`),
-          Ip = [],
-          Sp = cp => {
-            const Op = cp.index + cp[0].length;
-            return ("" === cp[0] ? Pp(pp, ip, Op) : Op) - 1
+    function kT(TT, UT, mT) {
+      return function(TT) {
+        return void 0 !== TT && "function" !== typeof TT
+      }(mT) ? function(TT, UT, mT) {
+        const WT = UT.flags.replace(/[gy]/g, ""),
+          zT = new RegExp(`[^${mT}](?:${UT.source})`, `${WT}g`),
+          MT = [],
+          gT = mT => {
+            const WT = mT.index + mT[0].length;
+            return ("" === mT[0] ? LT(TT, UT, WT) : WT) - 1
           },
-          xp = new RegExp(`(?:${ip.source})`, `${Op}y`).exec(pp);
-        if (xp) {
-          if (Ip.push(xp), !ip.global) return Ip;
-          op.lastIndex = Sp(xp)
+          nT = new RegExp(`(?:${UT.source})`, `${WT}y`).exec(TT);
+        if (nT) {
+          if (MT.push(nT), !UT.global) return MT;
+          zT.lastIndex = gT(nT)
         }
-        for (let Lp = op.exec(pp); Lp; Lp = op.exec(pp)) {
-          const cp = Pp(pp, ip, Lp.index) - Lp.index;
-          if (Lp[0] = Lp[0].slice(cp), Lp.index += cp, Ip.push(Lp), !ip.global) break;
-          op.lastIndex = Sp(Lp)
+        for (let HT = zT.exec(TT); HT; HT = zT.exec(TT)) {
+          const mT = LT(TT, UT, HT.index) - HT.index;
+          if (HT[0] = HT[0].slice(mT), HT.index += mT, MT.push(HT), !UT.global) break;
+          zT.lastIndex = gT(HT)
         }
-        return Ip
-      }(pp, ip, cp.notAfter) : function(pp, ip, cp) {
-        const Op = new RegExp(ip.source, `${ip.flags.replace(/[gy]/g,"")}g`),
-          op = [];
-        for (let Ip = Op.exec(pp); Ip; Ip = Op.exec(pp))
-          if (!cp || cp(Ip)) {
-            if (op.push(Ip), !ip.global) break;
-            "" === Ip[0] && (Op.lastIndex = Pp(pp, ip, Op.lastIndex))
-          } else Op.lastIndex = Pp(pp, ip, Ip.index);
-        return op
-      }(pp, ip, cp)
+        return MT
+      }(TT, UT, mT.notAfter) : function(TT, UT, mT) {
+        const WT = new RegExp(UT.source, `${UT.flags.replace(/[gy]/g,"")}g`),
+          zT = [];
+        for (let MT = WT.exec(TT); MT; MT = WT.exec(TT))
+          if (!mT || mT(MT)) {
+            if (zT.push(MT), !UT.global) break;
+            "" === MT[0] && (WT.lastIndex = LT(TT, UT, WT.lastIndex))
+          } else WT.lastIndex = LT(TT, UT, MT.index);
+        return zT
+      }(TT, UT, mT)
     }
 
-    function Dp(pp, ip, cp, Op) {
-      let op = "",
-        Ip = 0;
-      for (const Sp of Yp(pp, ip, cp)) op += pp.slice(Ip, Sp.index) + Op(Sp), Ip = Sp.index + Sp[0].length;
-      return op + pp.slice(Ip)
+    function jT(TT, UT, mT, WT) {
+      let zT = "",
+        MT = 0;
+      for (const gT of kT(TT, UT, mT)) zT += TT.slice(MT, gT.index) + WT(gT), MT = gT.index + gT[0].length;
+      return zT + TT.slice(MT)
     }
 
-    function Ap(pp, ip, cp) {
-      const Op = [];
-      let op = 0;
-      for (const Ip of Yp(pp, ip, cp)) Op.push(pp.slice(op, Ip.index)), op = Ip.index + Ip[0].length;
-      return [...Op, pp.slice(op)]
+    function lT(TT, UT, mT) {
+      const WT = [];
+      let zT = 0;
+      for (const MT of kT(TT, UT, mT)) WT.push(TT.slice(zT, MT.index)), zT = MT.index + MT[0].length;
+      return [...WT, TT.slice(zT)]
     }
 
-    function Pp(pp, ip, cp) {
-      var Op;
-      return cp + (ip.unicode && (null !== (Op = pp.codePointAt(cp)) && void 0 !== Op ? Op : 0) > 65535 ? 2 : 1)
+    function LT(TT, UT, mT) {
+      var WT;
+      return mT + (UT.unicode && (null !== (WT = TT.codePointAt(mT)) && void 0 !== WT ? WT : 0) > 65535 ? 2 : 1)
     }
   },
-  6630: () => {}
+  6559: () => {}
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

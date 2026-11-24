@@ -1,197 +1,197 @@
 export const id = 397;
 export const ids = [397];
 export const modules = {
-  61981: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      rebuildScenePbrPipelines: () => xp,
-      rebuildSceneRenderables: () => Lp
+  61771: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      rebuildScenePbrPipelines: () => nT,
+      rebuildSceneRenderables: () => HT
     });
-    var Op = cp(41959),
-      op = (pp, ip) => pp.order - ip.order,
-      Ip = 8,
-      Sp = pp => Lp(pp);
-    async function xp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await Yp(pp, "pbr", ip)
+    var WT = mT(41850),
+      zT = (TT, UT) => TT.order - UT.order,
+      MT = 8,
+      gT = TT => HT(TT);
+    async function nT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await kT(TT, "pbr", UT)
     }
-    async function Lp(pp) {
-      await Yp(pp, void 0, !1)
+    async function HT(TT) {
+      await kT(TT, void 0, !1)
     }
-    async function Yp(pp, ip, xp) {
-      const Lp = pp;
-      if (!Lp._built && !xp) return;
-      const Yp = Lp._lightListVersion ?? 0,
-        Dp = Lp.surface.engine,
-        Ap = pp => {
-          Lp._z ? pp.forEach((pp => pp())) : (0, Op.h)(Dp, (() => pp.forEach((pp => pp()))))
+    async function kT(TT, UT, nT) {
+      const HT = TT;
+      if (!HT._built && !nT) return;
+      const kT = HT._lightListVersion ?? 0,
+        jT = HT.surface.engine,
+        lT = TT => {
+          HT._z ? TT.forEach((TT => TT())) : (0, WT.f)(jT, (() => TT.forEach((TT => TT()))))
         };
-      let Pp = !1,
-        Wp = !1,
-        yp = !1,
-        Up = !1;
+      let LT = !1,
+        pT = !1,
+        BT = !1,
+        ZT = !1;
       try {
-        for (let pp = 1;; pp++) {
-          if (void 0 !== ip) {
-            await wp();
+        for (let TT = 1;; TT++) {
+          if (void 0 !== UT) {
+            await cT();
             break
           }
-          if (tp(Lp), await wp(), !vp(Lp)) break;
-          if (pp >= Ip) {
-            Lp._rebuildHook = Sp, Up = !0, Wp = !0;
+          if (fT(HT), await cT(), !vT(HT)) break;
+          if (TT >= MT) {
+            HT._rebuildHook = gT, ZT = !0, pT = !0;
             break
           }
         }
-        yp = !0
+        BT = !0
       } finally {
-        if (Pp && (Lp._renderables.sort(op), Lp._renderableVersion++, Lp._materialEpoch++, Lp._built && Lp._frameGraph.build()), void 0 === ip && yp && !Wp && (Lp._lightListVersion ?? 0) === Yp) {
-          const pp = Lp._pendingTopologyRetirements?.splice(0);
-          pp?.length && Ap(pp), Up || (Lp._rebuildHook = void 0)
+        if (LT && (HT._renderables.sort(zT), HT._renderableVersion++, HT._materialEpoch++, HT._built && HT._frameGraph.build()), void 0 === UT && BT && !pT && (HT._lightListVersion ?? 0) === kT) {
+          const TT = HT._pendingTopologyRetirements?.splice(0);
+          TT?.length && lT(TT), ZT || (HT._rebuildHook = void 0)
         }
       }
-      async function wp() {
-        for (const [pp, Op] of Lp._groups) {
-          if (void 0 !== ip && pp._materialFamily !== ip) continue;
-          if (0 === Op.length) {
-            (Op.o || Op.r) && (Hp(pp, Op), Pp = !0);
+      async function cT() {
+        for (const [TT, WT] of HT._groups) {
+          if (void 0 !== UT && TT._materialFamily !== UT) continue;
+          if (0 === WT.length) {
+            (WT.o || WT.r) && (qT(TT, WT), LT = !0);
             continue
           }
-          const op = Lp._runtimeBuilds;
-          await (op?.wait(Op));
-          let Ip = !1;
-          const xp = async () => {
-            const ip = Lp._runtimeBuilds,
-              cp = [...Op].filter((ip => Lp.meshes.includes(ip) && ip.material?._buildGroup === pp));
-            if (0 === cp.length) return void Hp(pp, Op);
-            const Sp = !!Op.r,
-              xp = Lp._disposables.length,
-              Yp = new Map,
-              Dp = new Map(cp.map((pp => [pp, pp.material])));
-            for (const pp of cp) {
-              const cp = Lp._meshDisposables.get(pp);
-              cp && (Yp.set(pp, cp), Lp._meshDisposables.delete(pp), ip?.holdPendingDisposers(pp, cp))
+          const zT = HT._runtimeBuilds;
+          await (zT?.wait(WT));
+          let MT = !1;
+          const nT = async () => {
+            const UT = HT._runtimeBuilds,
+              mT = [...WT].filter((UT => HT.meshes.includes(UT) && UT.material?._buildGroup === TT));
+            if (0 === mT.length) return void qT(TT, WT);
+            const gT = !!WT.r,
+              nT = HT._disposables.length,
+              kT = new Map,
+              jT = new Map(mT.map((TT => [TT, TT.material])));
+            for (const TT of mT) {
+              const mT = HT._meshDisposables.get(TT);
+              mT && (kT.set(TT, mT), HT._meshDisposables.delete(TT), UT?.holdPendingDisposers(TT, mT))
             }
-            let Pp, Wp;
-            Lp._p = pp => (Wp = pp, !0);
+            let LT, pT;
+            HT._p = TT => (pT = TT, !0);
             try {
-              Pp = await pp(Lp, cp)
-            } catch (jp) {
-              Wp?.[1]();
-              for (const op of cp) {
-                const cp = Yp.get(op),
-                  Ip = Lp._meshDisposables.get(op);
-                if (Ip && Ip !== cp)
-                  for (const pp of Ip) pp();
-                const Sp = Lp.meshes.includes(op) && op.material === Dp.get(op) && op.material?._buildGroup === pp && Op.includes(op);
-                cp && Sp ? Lp._meshDisposables.set(op, cp) : (Lp._meshDisposables.delete(op), cp && Ap(cp)), cp && ip?.releasePendingDisposers(op, cp)
+              LT = await TT(HT, mT)
+            } catch (OT) {
+              pT?.[1]();
+              for (const zT of mT) {
+                const mT = kT.get(zT),
+                  MT = HT._meshDisposables.get(zT);
+                if (MT && MT !== mT)
+                  for (const TT of MT) TT();
+                const gT = HT.meshes.includes(zT) && zT.material === jT.get(zT) && zT.material?._buildGroup === TT && WT.includes(zT);
+                mT && gT ? HT._meshDisposables.set(zT, mT) : (HT._meshDisposables.delete(zT), mT && lT(mT)), mT && UT?.releasePendingDisposers(zT, mT)
               }
-              throw jp
+              throw OT
             } finally {
-              delete Lp._p
+              delete HT._p
             }
-            if (Lp._z || op?._d()) {
-              Wp?.[1]();
-              for (const ip of cp) {
-                const pp = Lp._meshDisposables.get(ip),
-                  cp = Yp.get(ip);
-                if (pp && pp !== cp)
-                  for (const ip of pp) ip();
-                Lp._meshDisposables.delete(ip)
+            if (HT._z || zT?._d()) {
+              pT?.[1]();
+              for (const UT of mT) {
+                const TT = HT._meshDisposables.get(UT),
+                  mT = kT.get(UT);
+                if (TT && TT !== mT)
+                  for (const UT of TT) UT();
+                HT._meshDisposables.delete(UT)
               }
-              for (const ip of Lp._disposables.splice(0)) ip();
-              const pp = [...Yp.values()].flat();
-              Ap(pp);
-              for (const [cp, Op] of Yp) ip?.releasePendingDisposers(cp, Op);
+              for (const UT of HT._disposables.splice(0)) UT();
+              const TT = [...kT.values()].flat();
+              lT(TT);
+              for (const [mT, WT] of kT) UT?.releasePendingDisposers(mT, WT);
               return
             }
-            Wp?.[0](), pp._rebuildSingle = Pp.rebuildSingle, Op.r = Lp._runtimeBuilds?.base(pp, Pp.rebuildSingle) ?? Pp.rebuildSingle, "pbr" === pp._materialFamily && Pp._G && (Op._w = null), Sp && dp(Lp, xp);
-            const yp = new Set(cp.filter((ip => Lp.meshes.includes(ip) && ip.material === Dp.get(ip) && ip.material?._buildGroup === pp && Op.includes(ip))));
-            if (yp.size !== cp.length && Pp.renderables.some((pp => !pp.mesh))) {
-              for (const pp of cp) {
-                const cp = Lp._meshDisposables.get(pp),
-                  Op = Yp.get(pp);
-                if (cp && cp !== Op)
-                  for (const pp of cp) pp();
-                Op && Lp.meshes.includes(pp) ? Lp._meshDisposables.set(pp, Op) : (Lp._meshDisposables.delete(pp), Op && Ap(Op)), Op && ip?.releasePendingDisposers(pp, Op)
+            pT?.[0](), TT._rebuildSingle = LT.rebuildSingle, WT.r = HT._runtimeBuilds?.base(TT, LT.rebuildSingle) ?? LT.rebuildSingle, "pbr" === TT._materialFamily && LT._G && (WT._w = null), gT && iT(HT, nT);
+            const BT = new Set(mT.filter((UT => HT.meshes.includes(UT) && UT.material === jT.get(UT) && UT.material?._buildGroup === TT && WT.includes(UT))));
+            if (BT.size !== mT.length && LT.renderables.some((TT => !TT.mesh))) {
+              for (const TT of mT) {
+                const mT = HT._meshDisposables.get(TT),
+                  WT = kT.get(TT);
+                if (mT && mT !== WT)
+                  for (const TT of mT) TT();
+                WT && HT.meshes.includes(TT) ? HT._meshDisposables.set(TT, WT) : (HT._meshDisposables.delete(TT), WT && lT(WT)), WT && UT?.releasePendingDisposers(TT, WT)
               }
-              return void(Ip = !0)
+              return void(MT = !0)
             }
-            const Up = new Set;
-            for (const pp of cp)
-              if (yp.has(pp)) Up.add(pp.material), Lp._runtimeBuilds?.reset(pp);
+            const ZT = new Set;
+            for (const TT of mT)
+              if (BT.has(TT)) ZT.add(TT.material), HT._runtimeBuilds?.reset(TT);
               else {
-                const cp = Yp.get(pp),
-                  Op = Lp._meshDisposables.get(pp);
-                if (Op && Op !== cp)
-                  for (const pp of Op) pp();
-                cp && Lp.meshes.includes(pp) ? (Lp._meshDisposables.set(pp, cp), Yp.delete(pp), ip?.releasePendingDisposers(pp, cp)) : Lp._meshDisposables.delete(pp)
-              } for (const pp of Up) pp._csmGen = (pp._csmGen ?? 0) + 1;
-            const wp = Op.o,
-              vp = wp?.length ? new Set(wp) : null;
-            for (let pp = Lp._renderables.length - 1; pp >= 0; pp--) {
-              const ip = Lp._renderables[pp];
-              (yp.has(ip.mesh) || vp?.has(ip)) && Lp._renderables.splice(pp, 1)
+                const mT = kT.get(TT),
+                  WT = HT._meshDisposables.get(TT);
+                if (WT && WT !== mT)
+                  for (const TT of WT) TT();
+                mT && HT.meshes.includes(TT) ? (HT._meshDisposables.set(TT, mT), kT.delete(TT), UT?.releasePendingDisposers(TT, mT)) : HT._meshDisposables.delete(TT)
+              } for (const TT of ZT) TT._csmGen = (TT._csmGen ?? 0) + 1;
+            const cT = WT.o,
+              vT = cT?.length ? new Set(cT) : null;
+            for (let TT = HT._renderables.length - 1; TT >= 0; TT--) {
+              const UT = HT._renderables[TT];
+              (BT.has(UT.mesh) || vT?.has(UT)) && HT._renderables.splice(TT, 1)
             }
-            const tp = Pp.renderables.filter((pp => !pp.mesh || yp.has(pp.mesh)));
-            Lp._renderables.push(...tp), Op.o = tp;
-            const ep = [...Yp.values()].flat();
-            Ap(ep);
-            for (const [pp, Op] of Yp) ip?.releasePendingDisposers(pp, Op)
+            const fT = LT.renderables.filter((TT => !TT.mesh || BT.has(TT.mesh)));
+            HT._renderables.push(...fT), WT.o = fT;
+            const bT = [...kT.values()].flat();
+            lT(bT);
+            for (const [TT, WT] of kT) UT?.releasePendingDisposers(TT, WT)
           }, {
-            X: Yp
-          } = await Promise.resolve().then((() => cp(61471))), Dp = 3;
-          for (let ip = 1;; ip++) {
-            if (Ip = !1, await Yp(Lp, pp, xp), Lp._z || op?._d()) return void(Wp = !0);
-            if (!Ip) break;
-            if (ip >= Dp) {
-              Hp(pp, Op), Lp._rebuildHook = Sp, Up = !0, Wp = !0;
+            X: kT
+          } = await Promise.resolve().then((() => mT(61251))), jT = 3;
+          for (let UT = 1;; UT++) {
+            if (MT = !1, await kT(HT, TT, nT), HT._z || zT?._d()) return void(pT = !0);
+            if (!MT) break;
+            if (UT >= jT) {
+              qT(TT, WT), HT._rebuildHook = gT, ZT = !0, pT = !0;
               break
             }
           }
-          Ip ? Pp = !0 : Pp = !0
+          MT ? LT = !0 : LT = !0
         }
       }
 
-      function vp(pp) {
-        for (const ip of pp.meshes) {
-          const cp = ip.material?._buildGroup;
-          if (cp && !pp._groups.get(cp)?.includes(ip)) return !0
+      function vT(TT) {
+        for (const UT of TT.meshes) {
+          const mT = UT.material?._buildGroup;
+          if (mT && !TT._groups.get(mT)?.includes(UT)) return !0
         }
         return !1
       }
 
-      function tp(pp) {
-        const ip = new Map;
-        for (const cp of pp.meshes) {
-          const pp = cp.material?._buildGroup;
-          if (!pp) continue;
-          const Op = ip.get(pp);
-          Op ? Op.push(cp) : ip.set(pp, [cp])
+      function fT(TT) {
+        const UT = new Map;
+        for (const mT of TT.meshes) {
+          const TT = mT.material?._buildGroup;
+          if (!TT) continue;
+          const WT = UT.get(TT);
+          WT ? WT.push(mT) : UT.set(TT, [mT])
         }
-        for (const [cp, Op] of pp._groups) {
-          const pp = ip.get(cp) ?? [];
-          (Op.length !== pp.length || pp.some(((pp, ip) => Op[ip] !== pp))) && (Op.length = 0, Op.push(...pp)), ip.delete(cp)
+        for (const [mT, WT] of TT._groups) {
+          const TT = UT.get(mT) ?? [];
+          (WT.length !== TT.length || TT.some(((TT, UT) => WT[UT] !== TT))) && (WT.length = 0, WT.push(...TT)), UT.delete(mT)
         }
-        for (const [cp, Op] of ip) {
-          const ip = Op;
-          pp._groups.set(cp, ip)
+        for (const [mT, WT] of UT) {
+          const UT = WT;
+          TT._groups.set(mT, UT)
         }
       }
 
-      function Hp(pp, ip) {
-        const cp = ip.o;
-        if (cp?.length) {
-          const pp = new Set(cp);
-          for (let ip = Lp._renderables.length - 1; ip >= 0; ip--) pp.has(Lp._renderables[ip]) && Lp._renderables.splice(ip, 1)
+      function qT(TT, UT) {
+        const mT = UT.o;
+        if (mT?.length) {
+          const TT = new Set(mT);
+          for (let UT = HT._renderables.length - 1; UT >= 0; UT--) TT.has(HT._renderables[UT]) && HT._renderables.splice(UT, 1)
         }
-        ip.o = void 0, ip.r = void 0, Lp._runtimeBuilds?.dropBase(pp), Lp._rebuildHook = Sp, Up = !0
+        UT.o = void 0, UT.r = void 0, HT._runtimeBuilds?.dropBase(TT), HT._rebuildHook = gT, ZT = !0
       }
 
-      function dp(pp, ip) {
-        const cp = new Set(pp._disposables.slice(0, ip));
-        for (let Op = pp._disposables.length - 1; Op >= ip; Op--) cp.has(pp._disposables[Op]) && pp._disposables.splice(Op, 1)
+      function iT(TT, UT) {
+        const mT = new Set(TT._disposables.slice(0, UT));
+        for (let WT = TT._disposables.length - 1; WT >= UT; WT--) mT.has(TT._disposables[WT]) && TT._disposables.splice(WT, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,32 +1,32 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  38993: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp,
-      h: () => Pp,
-      l: () => Wp,
-      p: () => wp,
-      q: () => Ap,
-      t: () => Dp,
-      x: () => Sp,
-      y: () => yp
+  38880: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => kT,
+      f: () => LT,
+      i: () => pT,
+      l: () => cT,
+      m: () => lT,
+      p: () => jT,
+      q: () => gT,
+      t: () => BT
     });
-    var Op = cp(316),
-      op = cp(1749);
-    const Ip = "A valid external Instance reference no longer exists.";
+    var WT = mT(344),
+      zT = mT(1843);
+    const MT = "A valid external Instance reference no longer exists.";
 
-    function Sp(pp) {
-      return pp.includes(Ip)
+    function gT(TT) {
+      return TT.includes(MT)
     }
-    const xp = [
+    const nT = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      Lp = [
+      HT = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -34,206 +34,213 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const Yp = {
+    const kT = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function Dp(pp, ip) {
-      return pp ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(pp) {
-        var ip;
-        const cp = null !== (ip = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(pp)) && void 0 !== ip ? ip : /failed with ([A-Z][A-Z0-9_]+)/.exec(pp);
-        return cp ? cp[1] : Sp(pp) ? "gpu_process_lost" : "other"
-      }(ip)
+    function jT(TT, UT) {
+      return TT ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(TT) {
+        var UT;
+        const mT = null !== (UT = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(TT)) && void 0 !== UT ? UT : /failed with ([A-Z][A-Z0-9_]+)/.exec(TT);
+        return mT ? mT[1] : gT(TT) ? "gpu_process_lost" : "other"
+      }(UT)
     }
 
-    function Ap(pp) {
-      return `${(null===pp||void 0===pp?void 0:pp.vendor)||"unknown vendor"} ${(null===pp||void 0===pp?void 0:pp.architecture)||"unknown architecture"}`
+    function lT(TT) {
+      return `${(null===TT||void 0===TT?void 0:TT.vendor)||"unknown vendor"} ${(null===TT||void 0===TT?void 0:TT.architecture)||"unknown architecture"}`
     }
 
-    function Pp(pp) {
-      return vp(pp)[1]
+    function LT(TT) {
+      return vT(TT)[1]
     }
 
-    function Wp(pp) {
-      return vp(pp)[2]
+    function pT(TT) {
+      return vT(TT)[2]
     }
 
-    function yp(pp, ip, cp) {
-      const op = (0, Op.i)(),
-        Ip = null !== op && op >= ip,
-        Sp = document.hidden ? "hidden" : Ip ? "shown" : "visible",
-        xp = Ip ? cp - op : null;
+    function BT(TT, UT, mT) {
+      const zT = (0, WT.h)(),
+        MT = null !== zT && zT >= UT,
+        gT = document.hidden ? "hidden" : MT ? "shown" : "visible",
+        nT = MT ? mT - zT : null;
       return {
-        page: null === xp ? Sp : `${Sp}${Pp(xp)}`,
-        code: `${pp}_${null===xp?Sp:`${Sp}_${Wp(xp)}`}_${Up(cp)}`
+        page: null === nT ? gT : `${gT}${LT(nT)}`,
+        code: `${TT}_${null===nT?gT:`${gT}_${pT(nT)}`}_${ZT(mT)}`
       }
     }
 
-    function Up(pp) {
-      if ((0, op.d)()) return "ad_open";
-      const ip = (0, op.c)();
-      return null === ip ? "ad_none" : `ad_${Wp(pp-ip.endedAt)}_${ip.pageHid?"h":"v"}`
+    function ZT(TT) {
+      if ((0, zT.h)()) return "ad_open";
+      const UT = (0, zT.e)();
+      return null === UT ? "ad_none" : `ad_${pT(TT-UT.endedAt)}_${UT.pageHid?"h":"v"}`
     }
 
-    function wp(pp) {
-      return tp(Lp, pp)[1]
+    function cT(TT) {
+      return fT(HT, TT)[1]
     }
 
-    function vp(pp) {
-      return tp(xp, pp)
+    function vT(TT) {
+      return fT(nT, TT)
     }
 
-    function tp(pp, ip) {
-      var cp;
-      return null !== (cp = pp.find((pp => {
-        let [cp] = pp;
-        return ip < cp
-      }))) && void 0 !== cp ? cp : pp[pp.length - 1]
+    function fT(TT, UT) {
+      var mT;
+      return null !== (mT = TT.find((TT => {
+        let [mT] = TT;
+        return UT < mT
+      }))) && void 0 !== mT ? mT : TT[TT.length - 1]
     }
   },
-  40842: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op,
-      d: () => Dp,
-      f: () => Sp,
-      g: () => op,
-      i: () => xp,
-      l: () => Yp
+  40786: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT,
+      e: () => jT,
+      h: () => gT,
+      i: () => zT,
+      l: () => nT,
+      o: () => kT
     });
-    class Op extends Error {
+    class WT extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function op(pp) {
-      return pp instanceof RangeError && /call stack/i.test(pp.message) || pp instanceof Error && "InternalError" === pp.name && /recursion/i.test(pp.message)
+    function zT(TT) {
+      return TT instanceof RangeError && /call stack/i.test(TT.message) || TT instanceof Error && "InternalError" === TT.name && /recursion/i.test(TT.message)
     }
-    const Ip = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const MT = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Sp(pp) {
-      var ip;
-      return pp instanceof WebAssembly.RuntimeError || pp instanceof Op || op(pp) && Ip.test(null !== (ip = pp.stack) && void 0 !== ip ? ip : "")
-    }
-
-    function xp(pp, ip) {
-      if (Sp(pp)) throw pp;
-      console.error(ip, pp)
+    function gT(TT) {
+      var UT;
+      return TT instanceof WebAssembly.RuntimeError || TT instanceof WT || zT(TT) && MT.test(null !== (UT = TT.stack) && void 0 !== UT ? UT : "")
     }
 
-    function Lp(pp, ip, cp, op, Ip) {
-      if (ip % op !== 0 || ip + cp > pp.byteLength) throw new Op(`${Ip}: ${cp} bytes at ${ip}, ${op}-aligned, outside ${pp.byteLength} bytes of memory`)
+    function nT(TT, UT) {
+      if (gT(TT)) throw TT;
+      console.error(UT, TT)
     }
 
-    function Yp(pp, ip, cp, Op, op) {
-      return 0 === cp ? null : (Lp(ip, cp, Op * pp.BYTES_PER_ELEMENT, pp.BYTES_PER_ELEMENT, op), new pp(ip, cp, Op))
+    function HT(TT, UT, mT, zT, MT) {
+      if (UT % zT !== 0 || UT + mT > TT.byteLength) throw new WT(`${MT}: ${mT} bytes at ${UT}, ${zT}-aligned, outside ${TT.byteLength} bytes of memory`)
     }
 
-    function Dp(pp, ip, cp, Op, op) {
-      return 0 === ip ? null : (Lp(pp, ip, cp, Op, op), new DataView(pp, ip, cp))
+    function kT(TT, UT, mT, WT, zT) {
+      return 0 === mT ? null : (HT(UT, mT, WT * TT.BYTES_PER_ELEMENT, TT.BYTES_PER_ELEMENT, zT), new TT(UT, mT, WT))
+    }
+
+    function jT(TT, UT, mT, WT, zT) {
+      return 0 === UT ? null : (HT(TT, UT, mT, WT, zT), new DataView(TT, UT, mT))
     }
   },
-  40911: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => wi,
-      E: () => gp,
-      F: () => rp,
-      J: () => hp,
-      N: () => Kp,
-      Q: () => sp,
-      T: () => Zp,
-      V: () => ii,
-      Y: () => Pi,
-      _: () => Vp,
-      ab: () => zp,
-      e: () => Mp,
-      eb: () => ci,
-      gb: () => Ii,
-      i: () => Wi,
-      j: () => vi,
-      k: () => xi,
-      kb: () => Li,
-      mb: () => Ep,
-      o: () => Ai,
-      s: () => oi,
-      w: () => Di,
-      z: () => Yi
+  40860: (TT, UT, mT) => {
+    mT.d(UT, {
+      $: () => MU,
+      B: () => rT,
+      C: () => RT,
+      F: () => AT,
+      J: () => DT,
+      K: () => UU,
+      O: () => LU,
+      R: () => TU,
+      T: () => oT,
+      X: () => mU,
+      c: () => dT,
+      db: () => HU,
+      f: () => pU,
+      g: () => vU,
+      hb: () => tT,
+      i: () => nU,
+      k: () => lU,
+      n: () => zU,
+      p: () => jU,
+      s: () => kU,
+      u: () => cU,
+      v: () => NT,
+      z: () => hT
     });
-    var Op = cp(322),
-      op = cp(257),
-      Ip = cp(259),
-      Sp = cp(25),
-      xp = cp(2908),
-      Lp = cp(681),
-      Yp = cp(4602),
-      Dp = cp(2865),
-      Ap = cp(3564),
-      Pp = cp(104),
-      Wp = cp(316),
-      yp = cp(44),
-      Up = cp(314),
-      wp = cp(118),
-      vp = cp(652),
-      tp = cp(129),
-      Hp = cp(120),
-      dp = cp(4911),
-      ep = cp(40920),
-      jp = cp(1819),
-      kp = cp(40923),
-      mp = cp(34379),
-      Rp = cp(40930);
-    const qp = "bloxd-webgpuOffAfterLoss",
-      Mp = "context:webgl",
-      Cp = "probe:threw";
+    var WT = mT(351),
+      zT = mT(278),
+      MT = mT(280),
+      gT = mT(25),
+      nT = mT(2929),
+      HT = mT(712),
+      kT = mT(4627),
+      jT = mT(2893),
+      lT = mT(3551),
+      LT = mT(102),
+      pT = mT(344),
+      BT = mT(44),
+      ZT = mT(340),
+      cT = mT(117),
+      vT = mT(677),
+      fT = mT(130),
+      qT = mT(126),
+      iT = mT(4904),
+      bT = mT(40869),
+      OT = mT(1926),
+      eT = mT(40871),
+      YT = mT(34219),
+      JT = mT(40879);
+    const xT = "bloxd-webgpuOffAfterLoss",
+      dT = "context:webgl",
+      wT = "probe:threw";
 
-    function Ep(pp) {
-      let ip;
+    function tT(TT) {
+      let UT;
       try {
-        ip = pp.getContext("webgl", {
-          powerPreference: tp.c
+        UT = TT.getContext("webgl", {
+          powerPreference: fT.c
         })
       } catch {
-        ip = null
+        UT = null
       }
-      if (null === ip) return null;
-      let cp = null;
+      if (null === UT) return null;
+      let mT = null;
       try {
-        const pp = ip.getParameter(ip.MAX_TEXTURE_SIZE);
-        cp = "number" === typeof pp && pp > 0 ? pp : null
+        const TT = UT.getParameter(UT.MAX_TEXTURE_SIZE);
+        mT = "number" === typeof TT && TT > 0 ? TT : null
       } catch {
-        cp = null
+        mT = null
       }
       try {
-        var Op;
-        null === (Op = ip.getExtension("WEBGL_lose_context")) || void 0 === Op || Op.loseContext()
+        var WT;
+        null === (WT = UT.getExtension("WEBGL_lose_context")) || void 0 === WT || WT.loseContext()
       } catch {}
-      return cp
+      return mT
     }
-    const Xp = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
-      lp = "mali_valhall",
-      Qp = new Set(["nvidia_pre_turing"]),
-      Jp = new Set(["intel_gen7_8"]);
+    const aT = new Set(["android_arm", "chromeos_other", "windows_intel_low", "ios"]);
 
-    function Bp(pp) {
-      return function(pp) {
+    function yT() {
+      return "ios" === (0, LT.getOperatingSystem)() ? "ios" : "other"
+    }
+    const XT = "mali_valhall",
+      IT = new Set(["nvidia_pre_turing"]),
+      QT = new Set(["intel_gen7_8"]);
+
+    function sT(TT, UT) {
+      return aT.has(TT) ? "android_arm" === TT && UT === XT ? "webgpu_default" : "webgl_default" : null
+    }
+
+    function FT(TT) {
+      return function(TT) {
         try {
-          return pp()
+          return TT()
         } catch {
           return null
         }
       }((() => {
-        var ip, cp, Op, Sp;
-        const xp = null !== (ip = null === (cp = pp.info) || void 0 === cp ? void 0 : cp.vendor) && void 0 !== ip ? ip : "";
-        return "windows" === (0, Pp.getOperatingSystem)() && "" !== xp && "intel" !== (0, Pp.normaliseGpuVendor)(xp) ? null : ((0, Pp.seedGpuVendor)(xp), Lp = (0, op.i)(), Yp = (0, Ip.f)(xp, null !== (Op = null === (Sp = pp.info) || void 0 === Sp ? void 0 : Sp.architecture) && void 0 !== Op ? Op : ""), Xp.has(Lp) ? "android_arm" === Lp && Yp === lp ? "webgpu_default" : "webgl_default" : null);
-        var Lp, Yp
+        var UT, mT, WT, gT;
+        const nT = null !== (UT = null === (mT = TT.info) || void 0 === mT ? void 0 : mT.vendor) && void 0 !== UT ? UT : "";
+        return "windows" === (0, LT.getOperatingSystem)() && "" !== nT && "intel" !== (0, LT.normaliseGpuVendor)(nT) ? null : ((0, LT.seedGpuVendor)(nT), sT((0, zT.i)(), (0, MT.g)(nT, null !== (WT = null === (gT = TT.info) || void 0 === gT ? void 0 : gT.architecture) && void 0 !== WT ? WT : "")))
       }))
     }
 
-    function Np() {
-      var pp;
+    function PT() {
+      var TT;
       return {
-        gpu: null !== (pp = navigator.gpu) && void 0 !== pp ? pp : null,
+        gpu: null !== (TT = navigator.gpu) && void 0 !== TT ? TT : null,
         webgl2: () => {
           try {
             return null !== document.createElement("canvas").getContext("webgl2")
@@ -241,379 +248,382 @@ export const modules = {
             return !1
           }
         },
-        webgl1: () => function(pp) {
-          let ip, cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ep.d;
+        webgl1: () => function(TT) {
+          let UT, mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bT.d;
           try {
-            ip = pp.getContext("webgl")
+            UT = TT.getContext("webgl")
           } catch {
-            ip = null
+            UT = null
           }
-          if (null === ip) return [Mp];
-          const Op = [];
+          if (null === UT) return [dT];
+          const WT = [];
           try {
-            for (const op of cp.extensions) null === ip.getExtension(op) && Op.push(op);
-            for (const [op, Ip] of Object.entries(cp.limits)) {
-              const pp = ip[op],
-                cp = "number" === typeof pp ? ip.getParameter(pp) : null;
-              ("number" !== typeof cp || cp < Ip) && Op.push(`limit:${op}`)
+            for (const zT of mT.extensions) null === UT.getExtension(zT) && WT.push(zT);
+            for (const [zT, MT] of Object.entries(mT.limits)) {
+              const TT = UT[zT],
+                mT = "number" === typeof TT ? UT.getParameter(TT) : null;
+              ("number" !== typeof mT || mT < MT) && WT.push(`limit:${zT}`)
             }
-            const pp = ip.getShaderPrecisionFormat(ip.VERTEX_SHADER, ip.HIGH_FLOAT);
-            (null === pp || pp.precision < cp.vertexHighFloatBits) && Op.push("precision:vertex_high_float")
+            const TT = UT.getShaderPrecisionFormat(UT.VERTEX_SHADER, UT.HIGH_FLOAT);
+            (null === TT || TT.precision < mT.vertexHighFloatBits) && WT.push("precision:vertex_high_float")
           } catch {
-            Op.push(Cp)
+            WT.push(wT)
           }
           try {
-            var op;
-            null === (op = ip.getExtension("WEBGL_lose_context")) || void 0 === op || op.loseContext()
+            var zT;
+            null === (zT = UT.getExtension("WEBGL_lose_context")) || void 0 === zT || zT.loseContext()
           } catch {}
-          return Op
+          return WT
         }(document.createElement("canvas")),
-        offAfterLoss: pp => fp((() => pp ? (0, Up.E)() : Sp.c.isWebGpuOffAfterLoss())),
-        oldIntelDriver: pp => fp((() => (0, wp.g)(pp))),
-        intelGen9: pp => fp((() => (0, wp.o)(pp))),
-        storeIntelGen9Verdict: pp => {
-          yp.h.setItem(wp.A, pp)
+        offAfterLoss: TT => uT((() => TT ? (0, ZT.z)() : gT.b.isWebGpuOffAfterLoss())),
+        oldIntelDriver: TT => uT((() => (0, cT.f)(TT))),
+        intelGen9: TT => uT((() => (0, cT.l)(TT))),
+        storeIntelGen9Verdict: TT => {
+          BT.l.setItem(cT.D, TT)
         },
-        gpuClassWebGlArm: Bp,
-        storeGpuClassVerdict: pp => {
-          yp.h.setItem(wp.z, pp)
+        gpuClassWebGlArm: FT,
+        storeGpuClassVerdict: TT => {
+          BT.l.setItem(cT.C, TT)
         },
-        gpuClassOnWebGl: pp => (0, vp.c)(pp),
-        webGlDefaultFamily: pp => Jp.has((0, Ip.f)(pp.vendor, pp.architecture)),
-        storeWebGlDefaultFamilyVerdict: pp => {
-          yp.h.setItem(wp.I, pp)
+        gpuClassOnWebGl: TT => (0, vT.d)(TT),
+        webGlDefaultFamily: TT => QT.has((0, MT.g)(TT.vendor, TT.architecture)),
+        storeWebGlDefaultFamilyVerdict: TT => {
+          BT.l.setItem(cT.G, TT)
         },
-        override: () => Tp(),
-        claimed: () => bp((0, Lp.j)()),
+        override: () => VT(),
+        claimed: () => CT((0, HT.j)()),
         webGpuSetting: () => {
-          const pp = yp.h.getItem(Op.tc);
-          return "boolean" === typeof pp ? pp : null
+          const TT = BT.l.getItem(WT.ac);
+          return "boolean" === typeof TT ? TT : null
         },
-        heldBack: () => vp.e,
-        storeHoldbackSpared: pp => {
-          yp.h.setItem(wp.x, pp)
+        heldBack: () => vT.h,
+        storeHoldbackSpared: TT => {
+          BT.l.setItem(cT.y, TT)
         },
-        intelGen9OnWebGl: () => vp.g,
-        Dy: () => fp((() => (0, Ap.e)(Pp.featureFlags.settings.canUseShaderPacks))),
-        windows: () => fp((() => "windows" === (0, Pp.getOperatingSystem)())),
-        defaultCompatibility: mp.b
+        intelGen9OnWebGl: () => vT.i,
+        Np: () => uT((() => (0, lT.i)(LT.featureFlags.settings.canUseShaderPacks))),
+        windows: () => uT((() => "windows" === (0, LT.getOperatingSystem)())),
+        defaultCompatibility: YT.b
       }
     }
 
-    function Tp() {
-      let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      if ((0, xp.r)("render") && "webgl1" === (0, xp.o)("renderer")) return "webgl1";
-      const ip = [() => new URLSearchParams(window.location.search).get(Dp.c), () => yp.h.getItem(Dp.g), () => {
-        const ip = localStorage.getItem(qp);
-        return null !== ip && pp && localStorage.removeItem(qp), "1" === ip ? "webgl2" : null
+    function VT() {
+      let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      if ((0, nT.r)("render") && "webgl1" === (0, nT.o)("renderer")) return "webgl1";
+      const UT = [() => new URLSearchParams(window.location.search).get(jT.c), () => BT.l.getItem(jT.e), () => {
+        const UT = localStorage.getItem(xT);
+        return null !== UT && TT && localStorage.removeItem(xT), "1" === UT ? "webgl2" : null
       }];
-      for (const cp of ip) {
-        let pp = null;
+      for (const mT of UT) {
+        let TT = null;
         try {
-          pp = bp(cp())
+          TT = CT(mT())
         } catch {}
-        if (null !== pp) return pp
+        if (null !== TT) return TT
       }
       return null
     }
 
-    function fp(pp) {
+    function uT(TT) {
       try {
-        return pp()
+        return TT()
       } catch {
         return !1
       }
     }
 
-    function bp(pp) {
-      return "lite" === pp ? "webgpu" : "webgl2" === pp || "babylon" === pp ? "webgl" : null
+    function CT(TT) {
+      return "lite" === TT ? "webgpu" : "webgl2" === TT || "babylon" === TT ? "webgl" : null
     }
 
-    function hp(pp) {
-      return "none" === pp || "compatibility_mode" === pp
+    function rT(TT) {
+      return "none" === TT || "compatibility_mode" === TT
     }
-    async function ap() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Np();
-      const ip = await async function(pp) {
-        const ip = Fp(pp),
+    async function KT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PT();
+      const UT = await async function(TT) {
+        const UT = GT(TT),
           {
-            source: cp
-          } = ip,
-          Op = !ip.asked,
-          op = "gpu" in ip && ip.heldBack,
-          Sp = function(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            return op && !hp(pp) ? {
+            source: mT
+          } = UT,
+          WT = !UT.asked,
+          zT = "gpu" in UT && UT.heldBack,
+          gT = function(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            return zT && !rT(TT) ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: cp
+              source: mT
             } : {
-              reason: pp,
-              adapter: ip,
-              source: cp
+              reason: TT,
+              adapter: UT,
+              source: mT
             }
           };
-        if (!("gpu" in ip)) return Sp(ip.refused);
-        let xp;
+        if (!("gpu" in UT)) return gT(UT.refused);
+        let nT;
         try {
-          xp = await (0, jp.k)((0, Hp.o)(ip.gpu, {
-            compatibility: np(pp, ip)
-          }), yi, `requestAdapter didn't settle in ${yi/1e3} s`)
+          nT = await (0, OT.l)((0, qT.o)(UT.gpu, {
+            compatibility: ST(TT, UT)
+          }), BU, `requestAdapter didn't settle in ${BU/1e3} s`)
         } catch {
-          return Sp("adapter_error")
+          return gT("adapter_error")
         }
-        if ("string" === typeof xp) return Sp(xp);
+        if ("string" === typeof nT) return gT(nT);
         const {
-          adapter: Lp,
-          compatibility: Yp
-        } = xp, Dp = (0, Hp.c)(Lp);
-        if ((0, Hp.j)(Lp)) return Sp("software_adapter", Dp);
-        const Ap = pp.windows() && function(pp) {
-          return Qp.has((0, Ip.f)(pp.vendor, pp.architecture))
-        }(Dp);
-        if (pp.storeHoldbackSpared(Ap), op && !Ap) return Sp("webgl_holdback");
-        const Pp = pp.intelGen9(Lp);
-        pp.storeIntelGen9Verdict(Pp);
-        const Wp = Pp ? null : pp.gpuClassWebGlArm(Lp);
-        pp.storeGpuClassVerdict(null !== Wp && void 0 !== Wp && Wp);
-        const yp = pp.webGlDefaultFamily(Dp);
-        if (pp.storeWebGlDefaultFamilyVerdict(yp), Op && pp.oldIntelDriver(Lp)) return Sp("old_intel_driver", Dp);
-        if ("default" === cp && Pp && pp.intelGen9OnWebGl()) return Sp("intel_gen9", Dp);
-        if ("default" === cp && null !== Wp && pp.gpuClassOnWebGl(Wp)) return Sp("gpu_class_webgl", Dp);
-        if ("default" === cp && yp) return Sp("gpu_wasm_arm", Dp);
-        return Sp(Yp ? "compatibility_mode" : "none", Dp)
-      }(pp);
-      if (hp(ip.reason)) return {
+          adapter: HT,
+          compatibility: kT
+        } = nT, jT = (0, qT.c)(HT);
+        if ((0, qT.g)(HT)) return gT("software_adapter", jT);
+        const lT = TT.windows() && function(TT) {
+          return IT.has((0, MT.g)(TT.vendor, TT.architecture))
+        }(jT);
+        if (TT.storeHoldbackSpared(lT), zT && !lT) return gT("webgl_holdback");
+        const LT = TT.intelGen9(HT);
+        TT.storeIntelGen9Verdict(LT);
+        const pT = LT ? null : TT.gpuClassWebGlArm(HT);
+        TT.storeGpuClassVerdict(null !== pT && void 0 !== pT && pT);
+        const BT = TT.webGlDefaultFamily(jT);
+        if (TT.storeWebGlDefaultFamilyVerdict(BT), WT && TT.oldIntelDriver(HT)) return gT("old_intel_driver", jT);
+        if ("default" === mT && LT && TT.intelGen9OnWebGl()) return gT("intel_gen9", jT);
+        if ("default" === mT && null !== pT && TT.gpuClassOnWebGl(pT)) return gT("gpu_class_webgl", jT);
+        if ("default" === mT && BT) return gT("gpu_wasm_arm", jT);
+        return gT(kT ? "compatibility_mode" : "none", jT)
+      }(TT);
+      if (rT(UT.reason)) return {
         backend: "webgpu",
-        ...ip
+        ...UT
       };
-      if ("webgl1" !== pp.override() && pp.webgl2()) return {
+      if ("webgl1" !== TT.override() && TT.webgl2()) return {
         backend: "webgl",
-        ...ip
+        ...UT
       };
-      const cp = pp.webgl1();
-      return 0 === cp.length ? {
+      const mT = TT.webgl1();
+      return 0 === mT.length ? {
         backend: "webgl1",
-        ...ip
+        ...UT
       } : {
-        missing: cp
+        missing: mT
       }
     }
 
-    function np(pp, ip) {
+    function ST(TT, UT) {
       let {
-        source: cp,
-        asked: Op
-      } = ip;
-      return Op || "default" === cp ? (0, mp.h)(Op, pp.defaultCompatibility) : void 0
+        source: mT,
+        asked: WT
+      } = UT;
+      return WT || "default" === mT ? (0, YT.i)(WT, TT.defaultCompatibility) : void 0
     }
 
-    function Fp(pp) {
-      const ip = pp.override(),
-        cp = pp.webGpuSetting(),
-        Op = null === ip && !0 !== cp && pp.Dy(),
-        op = null !== ip || null !== cp || Op ? null : pp.claimed(),
-        Ip = null !== ip ? "override" : !0 === cp ? "setting" : Op ? "pack" : !1 === cp ? "setting" : null !== op ? "claim" : "default",
-        Sp = function(pp) {
-          return "override" === pp || "setting" === pp
-        }(Ip);
-      if ("webgl" === ip || "webgl1" === ip || "webgl" === op || "setting" === Ip && !1 === cp) return {
-        source: Ip,
-        asked: Sp,
+    function GT(TT) {
+      const UT = TT.override(),
+        mT = TT.webGpuSetting(),
+        WT = null === UT && !0 !== mT && TT.Np(),
+        zT = null !== UT || null !== mT || WT ? null : TT.claimed(),
+        MT = null !== UT ? "override" : !0 === mT ? "setting" : WT ? "pack" : !1 === mT ? "setting" : null !== zT ? "claim" : "default",
+        gT = function(TT) {
+          return "override" === TT || "setting" === TT
+        }(MT);
+      if ("webgl" === UT || "webgl1" === UT || "webgl" === zT || "setting" === MT && !1 === mT) return {
+        source: MT,
+        asked: gT,
         refused: "not_requested"
       };
-      if (!pp.gpu) return {
-        source: Ip,
-        asked: Sp,
+      if (!TT.gpu) return {
+        source: MT,
+        asked: gT,
         refused: "no_webgpu_api"
       };
-      const xp = "default" === Ip && pp.heldBack();
-      return xp && !pp.windows() ? {
-        source: Ip,
-        asked: Sp,
+      const nT = "default" === MT && TT.heldBack();
+      return nT && !TT.windows() ? {
+        source: MT,
+        asked: gT,
         refused: "webgl_holdback"
-      } : !Sp && pp.offAfterLoss("pack" === Ip) ? {
-        source: Ip,
-        asked: Sp,
-        refused: xp ? "webgl_holdback" : "off_after_loss"
+      } : !gT && TT.offAfterLoss("pack" === MT) ? {
+        source: MT,
+        asked: gT,
+        refused: nT ? "webgl_holdback" : "off_after_loss"
       } : {
-        source: Ip,
-        asked: Sp,
-        heldBack: xp,
-        gpu: pp.gpu
+        source: MT,
+        asked: gT,
+        heldBack: nT,
+        gpu: TT.gpu
       }
     }
 
-    function gp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
-          ...Np(),
-          override: () => Tp(!1)
+    function NT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          ...PT(),
+          override: () => VT(!1)
         },
-        ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Pp.isWebKit;
+        UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LT.isWebKit,
+        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yT;
       try {
-        if (!ip()) return !1;
-        const cp = Fp(pp);
-        return "gpu" in cp && !cp.heldBack
-      } catch (cp) {
-        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", cp), !1
+        if (!UT()) return !1;
+        const WT = GT(TT);
+        if (!("gpu" in WT) || WT.heldBack) return !1;
+        const zT = "default" === WT.source ? sT(mT(), "apple") : null;
+        return null === zT || !TT.gpuClassOnWebGl(zT)
+      } catch (WT) {
+        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", WT), !1
       }
     }
-    let Gp = !1;
-    async function rp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Np();
-      if (null === pp) return null;
-      const cp = await ap(ip);
-      return Gp = !("missing" in cp) && "webgpu" === cp.backend && "claim" === cp.source, "missing" in cp ? cp : {
-        ...cp,
-        load: pp[cp.backend]
+    let ET = !1;
+    async function hT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PT();
+      if (null === TT) return null;
+      const mT = await KT(UT);
+      return ET = !("missing" in mT) && "webgpu" === mT.backend && "claim" === mT.source, "missing" in mT ? mT : {
+        ...mT,
+        load: TT[mT.backend]
       }
     }
-    async function Zp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Np().gpu,
-        Op = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== pp.backend) return !1;
-      const op = Oi(pp, ip, "indirectDraws", "off", "on");
-      if (null !== op) return op;
-      if (null !== pp.adapter && (0, wp.q)(pp.adapter, Op)) return !0;
-      if (null === cp) return !1;
+    async function DT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : PT().gpu,
+        WT = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== TT.backend) return !1;
+      const zT = WU(TT, UT, "indirectDraws", "off", "on");
+      if (null !== zT) return zT;
+      if (null !== TT.adapter && (0, cT.m)(TT.adapter, WT)) return !0;
+      if (null === mT) return !1;
       try {
-        var Ip;
-        const pp = await (0, jp.k)(cp.requestAdapter({
+        var MT;
+        const TT = await (0, OT.l)(mT.requestAdapter({
           powerPreference: "low-power"
-        }).then((async pp => (null !== pp && await (0, Hp.g)(pp), pp))), yi, `the low-power requestAdapter didn't settle in ${yi/1e3} s`);
-        return (0, wp.q)(null !== (Ip = null === pp || void 0 === pp ? void 0 : pp.info) && void 0 !== Ip ? Ip : {}, Op)
-      } catch (Sp) {
-        return Sp instanceof jp.h
+        }).then((async TT => (null !== TT && await (0, qT.e)(TT), TT))), BU, `the low-power requestAdapter didn't settle in ${BU/1e3} s`);
+        return (0, cT.m)(null !== (MT = null === TT || void 0 === TT ? void 0 : TT.info) && void 0 !== MT ? MT : {}, WT)
+      } catch (gT) {
+        return gT instanceof OT.f
       }
     }
 
-    function zp(pp, ip, cp) {
-      if ("webgpu" !== pp.backend) return !1;
-      const Op = Oi(pp, ip, "terrainFetch", "texture", "storage");
-      return null !== Op ? Op : null !== pp.adapter && (0, wp.k)(pp.adapter, cp)
+    function oT(TT, UT, mT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const WT = WU(TT, UT, "terrainFetch", "texture", "storage");
+      return null !== WT ? WT : null !== TT.adapter && (0, cT.j)(TT.adapter, mT)
     }
 
-    function sp(pp, ip) {
-      if ("webgpu" !== pp.backend) return !1;
-      const cp = Oi(pp, ip, "skyOrder", "early", "last");
-      return null !== cp ? cp : null !== pp.adapter && (0, Ip.f)(pp.adapter.vendor, pp.adapter.architecture) === lp
+    function AT(TT, UT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const mT = WU(TT, UT, "skyOrder", "early", "last");
+      return null !== mT ? mT : null !== TT.adapter && (0, MT.g)(TT.adapter.vendor, TT.adapter.architecture) === XT
     }
 
-    function Kp(pp, ip) {
-      if ("webgpu" !== pp.backend) return !1;
-      const cp = Oi(pp, ip, "uploadCopies", "off", "on");
-      return null !== cp ? cp : null !== pp.adapter && "powervr_rogue" === (0, Ip.f)(pp.adapter.vendor, pp.adapter.architecture)
+    function RT(TT, UT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const mT = WU(TT, UT, "uploadCopies", "off", "on");
+      return null !== mT ? mT : null !== TT.adapter && "powervr_rogue" === (0, MT.g)(TT.adapter.vendor, TT.adapter.architecture)
     }
 
-    function Vp(pp, ip, cp) {
-      if ("webgpu" !== pp.backend) return !1;
-      const Op = Oi(pp, ip, "sceneDepth", "off", "on");
-      return null !== Op ? Op : null !== pp.adapter && (0, wp.n)(pp.adapter, cp)
+    function TU(TT, UT, mT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const WT = WU(TT, UT, "sceneDepth", "off", "on");
+      return null !== WT ? WT : null !== TT.adapter && (0, cT.k)(TT.adapter, mT)
     }
 
-    function ii(pp, ip) {
-      return "webgl" === pp.backend ? Oi(pp, ip, "instancedTerrain", "1", "0") : null
+    function UU(TT, UT) {
+      return "webgl" === TT.backend ? WU(TT, UT, "instancedTerrain", "1", "0") : null
     }
 
-    function ci(pp, ip) {
-      return "webgpu" !== pp.backend || ip && (null === pp.adapter || !(0, Up.H)(pp.adapter))
+    function mU(TT, UT) {
+      return "webgpu" !== TT.backend || UT && (null === TT.adapter || !(0, ZT.B)(TT.adapter))
     }
 
-    function Oi(pp, ip, cp, Op, op) {
-      const Ip = new URLSearchParams(ip).get(cp),
-        Sp = null !== Ip && void 0 !== Ip ? Ip : (0, Lp.f)(cp);
-      return Sp !== Op && Sp !== op ? null : (Gp ||= null === Ip && "webgpu" === pp.backend, Sp === Op)
+    function WU(TT, UT, mT, WT, zT) {
+      const MT = new URLSearchParams(UT).get(mT),
+        gT = null !== MT && void 0 !== MT ? MT : (0, HT.c)(mT);
+      return gT !== WT && gT !== zT ? null : (ET ||= null === MT && "webgpu" === TT.backend, gT === WT)
     }
 
-    function oi(pp) {
-      return null !== pp && "missing" in pp
+    function zU(TT) {
+      return null !== TT && "missing" in TT
     }
 
-    function Ii(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Li(),
-        cp = arguments.length > 2 ? arguments[2] : void 0;
-      return ip ? function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sp.c,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
+    function MU(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !HU(),
+        mT = arguments.length > 2 ? arguments[2] : void 0;
+      return UT ? function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gT.b,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
         try {
-          const Op = "start_failed" === pp || "pipeline_failed" === pp,
-            op = (0, Rp.l)(pp, cp),
-            Ip = ip.turnOffWebGpuAfterDeviceLoss(Op ? "visible" : (0, Up.i)((0, Wp.j)()), Op, op);
-          return Gp && (0, Lp.q)("webgpuLoss"), ip.isWebGpuOffAfterLoss() && "webgpu" === bp(yp.h.getItem(Dp.g)) && yp.h.removeItem(Dp.g), (0, xp.r)("webgpuloss") && (0, Yp.d)((ip => {
-            var cp;
-            ip.noteWebGpuLoss("wasm", Ip ? pp : `${pp}, which storage didn't keep`, null !== (cp = op.message) && void 0 !== cp ? cp : null)
-          })), Ip
+          const WT = "start_failed" === TT || "pipeline_failed" === TT,
+            zT = (0, JT.g)(TT, mT),
+            MT = UT.turnOffWebGpuAfterDeviceLoss(WT ? "visible" : (0, ZT.i)((0, pT.l)()), WT, zT);
+          return ET && (0, HT.v)("webgpuLoss"), UT.isWebGpuOffAfterLoss() && "webgpu" === CT(BT.l.getItem(jT.e)) && BT.l.removeItem(jT.e), (0, nT.r)("webgpuloss") && (0, kT.c)((UT => {
+            var mT;
+            UT.noteWebGpuLoss("wasm", MT ? TT : `${TT}, which storage didn't keep`, null !== (mT = zT.message) && void 0 !== mT ? mT : null)
+          })), MT
         } catch {
           return !1
         }
-      }(pp, Sp.c, cp) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+      }(TT, gT.b, mT) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const Si = "framePacing";
+    const gU = "framePacing";
 
-    function xi(pp) {
-      const ip = new URLSearchParams(pp).get(Si);
-      return null !== ip && /^\d{1,9}$/.test(ip) ? Number(ip) : void 0
+    function nU(TT) {
+      const UT = new URLSearchParams(TT).get(gU);
+      return null !== UT && /^\d{1,9}$/.test(UT) ? Number(UT) : void 0
     }
 
-    function Li() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function HU() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === bp(new URLSearchParams(pp).get(Dp.c))
+        return "webgpu" === CT(new URLSearchParams(TT).get(jT.c))
       } catch {
         return !1
       }
     }
 
-    function Yi(pp) {
-      return !!Di(pp) || pp instanceof Error && !(pp instanceof WebAssembly.RuntimeError) && pp.message.startsWith(`${dp.k.RenderSurfaceUnusable}:`)
+    function kU(TT) {
+      return !!jU(TT) || TT instanceof Error && !(TT instanceof WebAssembly.RuntimeError) && TT.message.startsWith(`${iT.l.RenderSurfaceUnusable}:`)
     }
 
-    function Di(pp) {
+    function jU(TT) {
       const {
-        name: ip,
-        message: cp
-      } = null !== pp && void 0 !== pp ? pp : {};
-      return "InvalidStateError" === ip && "string" === typeof cp && cp.startsWith("GPUDevice.")
+        name: UT,
+        message: mT
+      } = null !== TT && void 0 !== TT ? TT : {};
+      return "InvalidStateError" === UT && "string" === typeof mT && mT.startsWith("GPUDevice.")
     }
 
-    function Ai(pp) {
-      const ip = pp;
-      return "function" === typeof ip.kOp && "function" === typeof ip.mOp ? ip : null
+    function lU(TT) {
+      const UT = TT;
+      return "function" === typeof UT.MWT && "function" === typeof UT.gWT ? UT : null
     }
 
-    function Pi(pp) {
-      return "function" === typeof pp.sw ? pp : null
+    function LU(TT) {
+      return "function" === typeof TT.Qc ? TT : null
     }
-    const Wi = "openRenderer";
-    const yi = 5e3,
-      Ui = 15e3;
+    const pU = "openRenderer";
+    const BU = 5e3,
+      ZU = 15e3;
 
-    function wi(pp, ip, cp, Op, op, Ip) {
-      return (0, jp.k)(function(pp, ip, cp, Op, op, Ip) {
-        return (0, kp.e)(pp, ip, (() => pp.sw(cp, Op, op, Ip.indirectHangs, Ip.storagePullBreaks, Ip.splitPassBreaks, Ip.earlySky, Ip.instancedTerrain, Ip.cellLight, Ip.framesAhead, Ip.webGpuRestores, Ip.bufferCopiesCrash)))
-      }(pp, ip, cp, Op, op, Ip), Ui, `${dp.k.RenderSurfaceUnusable}: the renderer didn't open in ${Ui/1e3} s`, ti)
+    function cU(TT, UT, mT, WT, zT, MT) {
+      return (0, OT.l)(function(TT, UT, mT, WT, zT, MT) {
+        return (0, eT.e)(TT, UT, (() => TT.Qc(mT, WT, zT, MT.indirectHangs, MT.storagePullBreaks, MT.splitPassBreaks, MT.earlySky, MT.instancedTerrain, MT.cellLight, MT.framesAhead, MT.webGpuRestores, MT.bufferCopiesCrash)))
+      }(TT, UT, mT, WT, zT, MT), ZU, `${iT.l.RenderSurfaceUnusable}: the renderer didn't open in ${ZU/1e3} s`, fU)
     }
-    async function vi(pp, ip, cp, Op, op, Ip) {
-      if ("function" !== typeof pp.FSp) throw new Error("this core has no set_renderer");
-      const Sp = await wi(ip, Wi, cp, op, Op, Ip);
+    async function vU(TT, UT, mT, WT, zT, MT) {
+      if ("function" !== typeof TT.OgT) throw new Error("this core has no set_renderer");
+      const gT = await cU(UT, pU, mT, zT, WT, MT);
       try {
-        pp.FSp(Sp)
-      } catch (xp) {
-        throw ti(Sp), xp
+        TT.OgT(gT)
+      } catch (nT) {
+        throw fU(gT), nT
       }
     }
 
-    function ti(pp) {
+    function fU(TT) {
       try {
-        pp.free()
+        TT.free()
       } catch {}
     }
   },
-  41016: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  40966: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT
     });
-    const Op = {
+    const WT = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -626,279 +636,279 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  40949: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => yp,
-      e: () => Up,
-      g: () => Pp,
-      i: () => Ap
+  40893: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => BT,
+      e: () => ZT,
+      f: () => LT,
+      h: () => lT
     });
-    const Op = 2e3,
-      op = "unavailable";
-    let Ip = () => Promise.resolve().then((() => cp(3031))),
-      Sp = null,
-      xp = null,
-      Lp = Yp();
+    const WT = 2e3,
+      zT = "unavailable";
+    let MT = () => Promise.resolve().then((() => mT(3075))),
+      gT = null,
+      nT = null,
+      HT = kT();
 
-    function Yp() {
-      let pp = () => {};
+    function kT() {
+      let TT = () => {};
       return {
-        promise: new Promise((ip => {
-          pp = () => {
-            ip(null)
+        promise: new Promise((UT => {
+          TT = () => {
+            UT(null)
           }
         })),
-        resolve: pp
+        resolve: TT
       }
     }
 
-    function Dp() {
-      if (null === Sp) {
-        const pp = Ip();
-        Sp = pp, pp.then((ip => {
-          Sp === pp && (xp = ip)
+    function jT() {
+      if (null === gT) {
+        const TT = MT();
+        gT = TT, TT.then((UT => {
+          gT === TT && (nT = UT)
         }), (() => {
-          Sp === pp && (Sp = null)
+          gT === TT && (gT = null)
         }))
       }
-      return Sp
+      return gT
     }
 
-    function Ap() {
-      Dp().catch((() => {}))
+    function lT() {
+      jT().catch((() => {}))
     }
 
-    function Pp() {
-      Lp.resolve()
+    function LT() {
+      HT.resolve()
     }
 
-    function Wp(pp, ip, cp, Op) {
-      if (null === pp) return {
-        errorKind: ip,
-        fingerprint: op,
-        dedupe: `${ip}|${Op}`
+    function pT(TT, UT, mT, WT) {
+      if (null === TT) return {
+        errorKind: UT,
+        fingerprint: zT,
+        dedupe: `${UT}|${WT}`
       };
       const {
-        fingerprint: Ip
-      } = pp.clientErrorKey(ip, cp, Op);
+        fingerprint: MT
+      } = TT.clientErrorKey(UT, mT, WT);
       return {
-        errorKind: ip,
-        fingerprint: Ip,
-        dedupe: Ip
+        errorKind: UT,
+        fingerprint: MT,
+        dedupe: MT
       }
     }
 
-    function yp(pp, ip, cp, Op) {
-      return null === xp ? Op ? (Ap(), Wp(null, pp, ip, cp)) : null : Wp(xp, pp, ip, cp)
+    function BT(TT, UT, mT, WT) {
+      return null === nT ? WT ? (lT(), pT(null, TT, UT, mT)) : null : pT(nT, TT, UT, mT)
     }
-    async function Up(pp, ip, cp) {
-      let op;
-      const Ip = new Promise((pp => {
-        op = setTimeout((() => {
-          pp(null)
-        }), Op)
+    async function ZT(TT, UT, mT) {
+      let zT;
+      const MT = new Promise((TT => {
+        zT = setTimeout((() => {
+          TT(null)
+        }), WT)
       }));
       try {
-        return Wp(await Promise.race([Dp(), Ip, Lp.promise]), pp, ip, cp)
+        return pT(await Promise.race([jT(), MT, HT.promise]), TT, UT, mT)
       } catch {
-        return Wp(null, pp, ip, cp)
+        return pT(null, TT, UT, mT)
       } finally {
-        clearTimeout(op)
+        clearTimeout(zT)
       }
     }
   },
-  40945: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      BUILT_IN_ANIMATIONS_SITE: () => zp,
-      CORE_ERRORS_SITE: () => fp,
-      EVENT_OVERFLOW_SITE: () => Zp,
-      FIRST_VIEW_SITE: () => Vp,
-      JOIN_SITE: () => hp,
-      LEAVE_SITE: () => ap,
-      MAIN_THREAD_SITE: () => ii,
-      MODEL_FEED_SITE: () => np,
-      MODEL_POOL_SITE: () => Fp,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => Ii,
-      NON_FATAL_REPORTS_PER_SESSION: () => ji,
-      PREVIEW_ANIMATIONS_SITE: () => rp,
-      RENDER_RELOAD_SITE: () => Gp,
-      REQUEST_DEVICE_SITE: () => ci,
-      TEXTURE_NAMES_SITE: () => gp,
-      TEXTURE_PACK_FEED_SITE: () => sp,
-      TEXTURE_PACK_SWAP_SITE: () => Kp,
-      TurnstilePageError: () => xc,
-      WASM_LOAD_SITE: () => bp,
-      countRenderLost: () => bc,
-      crashError: () => Ci,
-      crashReportsSettled: () => Ti,
-      deviceLossWords: () => Bc,
-      flushCrashReports: () => Bi,
-      joinFailureCode: () => Lc,
-      lokiTransport: () => Li,
-      modelFailureCode: () => Uc,
-      readTrap: () => Gi,
-      renderLoss: () => fc,
-      renderReloadMessage: () => Nc,
-      reportCoreErrors: () => ai,
-      reportCountedLoadFallback: () => Ic,
-      reportCrash: () => Ei,
-      reportDataLoadFailure: () => Gc,
-      reportDisconnect: () => Wc,
-      reportDracoDecoderFailure: () => Hc,
-      reportDroppedRequiredLimits: () => Oc,
-      reportEventOverflow: () => jc,
-      reportFirstViewNoTerrain: () => Mc,
-      reportLightFault: () => mc,
-      reportMainStall: () => Cc,
-      reportMemoryShed: () => qc,
-      reportModelFailure: () => wc,
-      reportModelPoolFailure: () => vc,
-      reportModelsModuleRetry: () => tc,
-      reportNoBackendRetry: () => cc,
-      reportPageJoinFailure: () => Dc,
-      reportReconnectGaveUp: () => yc,
-      reportRenderReload: () => nc,
-      reportReplayFault: () => Xc,
-      reportStaleBuildReload: () => Zc,
-      reportStoppedCore: () => si,
-      reportTerrainTextureFailure: () => Fc,
-      reportTexturePackFeedLoadFailure: () => ec,
-      reportTexturePackKeptOut: () => uc,
-      reportUnstreamedCoreLoad: () => Sc,
-      reportUnsupportedFallback: () => ic,
-      reportUnusedSeat: () => Pc,
-      reportWorkerLost: () => kc,
-      reportWorkerStartTimeout: () => Ec,
-      reportWorldgenGaveUp: () => Rc,
-      reportWorldgenLoadFailure: () => dc,
-      resetCrashReports: () => fi,
-      setCrashAdPreload: () => vi,
-      setCrashBackend: () => wi,
-      setCrashScreen: () => Wi,
-      setCrashTransport: () => Ai,
-      showCrash: () => zi,
-      showJoinFailure: () => Yc,
-      showUnsupported: () => Vi,
-      unknownSkyWords: () => bi
+  40887: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      BUILT_IN_ANIMATIONS_SITE: () => hT,
+      CORE_ERRORS_SITE: () => PT,
+      EVENT_OVERFLOW_SITE: () => ET,
+      FIRST_VIEW_SITE: () => AT,
+      JOIN_SITE: () => uT,
+      LEAVE_SITE: () => CT,
+      MAIN_THREAD_SITE: () => RT,
+      MODEL_FEED_SITE: () => rT,
+      MODEL_POOL_SITE: () => KT,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => WU,
+      NON_FATAL_REPORTS_PER_SESSION: () => bU,
+      PREVIEW_ANIMATIONS_SITE: () => NT,
+      RENDER_RELOAD_SITE: () => GT,
+      REQUEST_DEVICE_SITE: () => TU,
+      TEXTURE_NAMES_SITE: () => ST,
+      TEXTURE_PACK_FEED_SITE: () => DT,
+      TEXTURE_PACK_SWAP_SITE: () => oT,
+      TurnstilePageError: () => zm,
+      WASM_LOAD_SITE: () => VT,
+      countRenderLost: () => Pm,
+      crashError: () => dU,
+      crashReportsSettled: () => sU,
+      deviceLossWords: () => Im,
+      flushCrashReports: () => IU,
+      joinFailureCode: () => Mm,
+      lokiTransport: () => gU,
+      modelFailureCode: () => Lm,
+      readTrap: () => KU,
+      renderLoss: () => Fm,
+      renderReloadMessage: () => Qm,
+      reportCoreErrors: () => VU,
+      reportCountedLoadFallback: () => mm,
+      reportCrash: () => wU,
+      reportDataLoadFailure: () => Sm,
+      reportDisconnect: () => jm,
+      reportDracoDecoderFailure: () => cm,
+      reportDroppedRequiredLimits: () => Tm,
+      reportEventOverflow: () => bm,
+      reportFirstViewNoTerrain: () => xm,
+      reportLightFault: () => em,
+      reportMainStall: () => dm,
+      reportMemoryShed: () => Jm,
+      reportModelFailure: () => pm,
+      reportModelPoolFailure: () => Bm,
+      reportModelsModuleRetry: () => Zm,
+      reportNoBackendRetry: () => RU,
+      reportPageJoinFailure: () => nm,
+      reportReconnectGaveUp: () => lm,
+      reportRenderReload: () => Cm,
+      reportReplayFault: () => tm,
+      reportStaleBuildReload: () => Nm,
+      reportStoppedCore: () => EU,
+      reportTerrainTextureFailure: () => rm,
+      reportTexturePackFeedLoadFailure: () => qm,
+      reportTexturePackKeptOut: () => im,
+      reportUnstreamedCoreLoad: () => Wm,
+      reportUnsupportedFallback: () => AU,
+      reportUnusedSeat: () => km,
+      reportWorkerLost: () => Om,
+      reportWorkerStartTimeout: () => wm,
+      reportWorldgenGaveUp: () => Ym,
+      reportWorldgenLoadFailure: () => fm,
+      resetCrashReports: () => FU,
+      setCrashAdPreload: () => ZU,
+      setCrashBackend: () => BU,
+      setCrashScreen: () => lU,
+      setCrashTransport: () => kU,
+      showCrash: () => NU,
+      showJoinFailure: () => gm,
+      showUnsupported: () => DU,
+      unknownSkyWords: () => PU
     });
-    var Op = cp(1014),
-      op = cp(1356),
-      Ip = cp(1349),
-      Sp = cp(1080),
-      xp = cp(259),
-      Lp = cp(3035),
-      Yp = cp(4398),
-      Dp = cp(40949),
-      Ap = cp(4903),
-      Pp = cp(40954),
-      Wp = cp(3071),
-      yp = cp(38993),
-      Up = cp(131),
-      wp = cp(129),
-      vp = cp(3074),
-      tp = cp(36689),
-      Hp = cp(1819),
-      dp = cp(40967),
-      ep = cp(40783),
-      jp = cp(40882),
-      kp = cp(40884),
-      mp = cp(36686),
-      Rp = cp(2963),
-      qp = cp(2970),
-      Mp = cp(40988),
-      Cp = cp(41005),
-      Ep = cp(41008),
-      Xp = cp(37044),
-      lp = cp(3330),
-      Qp = cp(36472),
-      Jp = cp(40923),
-      Bp = cp(36484),
-      Np = cp(41025);
-    const Tp = "[bloxd-wasm-client]",
-      fp = "coreErrors",
-      bp = "wasmLoad",
-      hp = "join",
-      ap = "leave",
-      np = "modelFeed",
-      Fp = "modelWorkerPool",
-      gp = "textureNames",
-      Gp = "renderReload",
-      rp = "previewAnimations",
-      Zp = "eventOverflow",
-      zp = "builtInAnimations",
-      sp = "texturePackFeed",
-      Kp = "texturePackSwap",
-      Vp = "firstView",
-      ii = "mainThread",
-      ci = "requestDevice",
-      Oi = 300,
-      oi = 64,
-      Ii = 8;
-    let Si = 0;
-    const xi = new Set,
-      Li = (pp, ip) => {
-        const cp = ti[pp.kind],
-          Op = {
-            backend: yi,
-            adPreload: Ui
+    var WT = mT(1089),
+      zT = mT(1437),
+      MT = mT(1429),
+      gT = mT(1153),
+      nT = mT(280),
+      HT = mT(3081),
+      kT = mT(4399),
+      jT = mT(40893),
+      lT = mT(4895),
+      LT = mT(40900),
+      pT = mT(3116),
+      BT = mT(38880),
+      ZT = mT(133),
+      cT = mT(130),
+      vT = mT(3119),
+      fT = mT(36565),
+      qT = mT(1926),
+      iT = mT(40907),
+      bT = mT(40724),
+      OT = mT(40824),
+      eT = mT(40827),
+      YT = mT(36557),
+      JT = mT(2992),
+      xT = mT(3001),
+      dT = mT(40926),
+      wT = mT(40944),
+      tT = mT(40951),
+      aT = mT(36945),
+      yT = mT(3342),
+      XT = mT(36349),
+      IT = mT(40871),
+      QT = mT(36358),
+      sT = mT(40975);
+    const FT = "[bloxd-wasm-client]",
+      PT = "coreErrors",
+      VT = "wasmLoad",
+      uT = "join",
+      CT = "leave",
+      rT = "modelFeed",
+      KT = "modelWorkerPool",
+      ST = "textureNames",
+      GT = "renderReload",
+      NT = "previewAnimations",
+      ET = "eventOverflow",
+      hT = "builtInAnimations",
+      DT = "texturePackFeed",
+      oT = "texturePackSwap",
+      AT = "firstView",
+      RT = "mainThread",
+      TU = "requestDevice",
+      UU = 300,
+      mU = 64,
+      WU = 8;
+    let zU = 0;
+    const MU = new Set,
+      gU = (TT, UT) => {
+        const mT = cU[TT.kind],
+          WT = {
+            backend: LU,
+            adPreload: pU
           };
-        if (null === cp) return void Yi(pp, ip, Op, null);
-        const op = (0, Dp.d)(cp, pp.message, pp.code, pp.fatal);
-        null === op ? Ji("Loki", (async () => {
-          Yi(pp, ip, Op, await (0, Dp.e)(cp, pp.message, pp.code))
-        })) : Yi(pp, ip, Op, op)
+        if (null === mT) return void nU(TT, UT, WT, null);
+        const zT = (0, jT.b)(mT, TT.message, TT.code, TT.fatal);
+        null === zT ? XU("Loki", (async () => {
+          nU(TT, UT, WT, await (0, jT.e)(mT, TT.message, TT.code))
+        })) : nU(TT, UT, WT, zT)
       };
 
-    function Yi(pp, ip, cp, Op) {
+    function nU(TT, UT, mT, WT) {
       let {
-        backend: op,
-        adPreload: Ip
-      } = cp;
+        backend: zT,
+        adPreload: MT
+      } = mT;
       const {
-        kind: xp,
-        code: Yp,
-        site: Dp,
-        fatal: Ap,
-        details: Pp
-      } = pp;
-      if (!Ap)
-        if (null === Op || (0, Lp.e)(Op.errorKind) || xi.has(Op.dedupe)) {
-          if (Si >= Ii) return;
-          Si++
-        } else xi.add(Op.dedupe);
-      const Wp = {
-        ...Pp,
-        kind: xp,
-        code: Yp,
-        site: Dp,
-        fatal: String(Ap),
-        backend: op
+        kind: nT,
+        code: kT,
+        site: jT,
+        fatal: lT,
+        details: LT
+      } = TT;
+      if (!lT)
+        if (null === WT || (0, HT.c)(WT.errorKind) || MU.has(WT.dedupe)) {
+          if (zU >= WU) return;
+          zU++
+        } else MU.add(WT.dedupe);
+      const pT = {
+        ...LT,
+        kind: nT,
+        code: kT,
+        site: jT,
+        fatal: String(lT),
+        backend: zT
       };
-      Ip && (Wp.adPreload = "true"), null !== Op && (Wp.errorKind = Op.errorKind, Wp.fingerprint = Op.fingerprint), ip instanceof Error && "string" === typeof ip.stack && (Wp.causeStack = ip.stack.slice(0, 2e3)), (0, Sp.NU)(Ci(pp, ip), Wp)
+      MT && (pT.adPreload = "true"), null !== WT && (pT.errorKind = WT.errorKind, pT.fingerprint = WT.fingerprint), UT instanceof Error && "string" === typeof UT.stack && (pT.causeStack = UT.stack.slice(0, 2e3)), (0, gT.cZ)(dU(TT, UT), pT)
     }
-    let Di = Li;
+    let HU = gU;
 
-    function Ai(pp) {
-      const ip = Di;
-      return Di = pp, ip
+    function kU(TT) {
+      const UT = HU;
+      return HU = TT, UT
     }
-    let Pi = () => {};
+    let jU = () => {};
 
-    function Wi(pp) {
-      const ip = Pi;
-      return Pi = pp, ip
+    function lU(TT) {
+      const UT = jU;
+      return jU = TT, UT
     }
-    let yi = "unpicked",
-      Ui = !1;
+    let LU = "unpicked",
+      pU = !1;
 
-    function wi(pp) {
-      yi = pp
+    function BU(TT) {
+      LU = TT
     }
 
-    function vi(pp) {
-      Ui = pp
+    function ZU(TT) {
+      pU = TT
     }
-    const ti = {
+    const cU = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -924,7 +934,7 @@ export const modules = {
         linkCensus: "wasm_load",
         linksReadAfterView: "wasm_load"
       },
-      Hi = {
+      vU = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -932,220 +942,220 @@ export const modules = {
         mainStall: "wasm_load",
         texturePackKeptOut: "texture_pack"
       },
-      di = new Set(["unstreamedLoad"]),
-      ei = new Set(["linkCensus", "linksReadAfterView"]);
-    let ui = !1;
-    const ji = 20,
-      ki = new Map;
-    let mi = 0,
-      Ri = 0;
-    const qi = new Set,
-      Mi = new Set;
+      fU = new Set(["unstreamedLoad"]),
+      qU = new Set(["linkCensus", "linksReadAfterView"]);
+    let iU = !1;
+    const bU = 20,
+      OU = new Map;
+    let eU = 0,
+      YU = 0;
+    const JU = new Set,
+      xU = new Set;
 
-    function Ci(pp, ip) {
-      const cp = Object.assign(new Error(`${pp.code}: ${pp.message}`), {
+    function dU(TT, UT) {
+      const mT = Object.assign(new Error(`${TT.code}: ${TT.message}`), {
         name: "WasmClientCrash",
-        cause: null !== ip && void 0 !== ip ? ip : void 0
+        cause: null !== UT && void 0 !== UT ? UT : void 0
       });
-      return ip instanceof Error && ip.stack && (cp.stack = ip.stack), cp
+      return UT instanceof Error && UT.stack && (mT.stack = UT.stack), mT
     }
 
-    function Ei(pp) {
-      var ip, Op;
+    function wU(TT) {
+      var UT, WT;
       const {
-        kind: op,
-        code: Ip,
-        site: Sp,
-        fatal: xp,
-        message: Lp,
-        error: Yp
-      } = pp, Dp = !1 !== pp.toTransport && !di.has(op), Ap = !xp && Dp && !ei.has(op), Pp = {
-        kind: op,
-        code: Ip,
-        site: Sp,
-        fatal: xp,
-        message: Lp,
-        details: null !== (ip = pp.details) && void 0 !== ip ? ip : {}
-      }, Wp = `${Ip}@${Sp}${void 0===pp.instance?"":`#${pp.instance}`}${xp?"!":""}`, yp = (null !== (Op = ki.get(Wp)) && void 0 !== Op ? Op : 0) + 1;
-      if (ki.set(Wp, yp), void 0 !== pp.countAs && 1 === yp && li(pp.countAs), yp > 1 ? 0 === (yp & yp - 1) && Qi((() => {
-          console.warn(`${Tp} ${Ip} at ${Sp} reported ${yp} times`)
-        })) : Ap && mi >= ji ? Qi((() => {
-          console.warn(`${Tp} ${op} ${Ip} at ${Sp}: ${Lp} (not sent: the session's ${ji} went)`, Pp.details, null !== Yp && void 0 !== Yp ? Yp : "")
-        })) : (Ap && mi++, function(pp, ip, Op, op) {
-          var Ip, Sp;
+        kind: zT,
+        code: MT,
+        site: gT,
+        fatal: nT,
+        message: HT,
+        error: kT
+      } = TT, jT = !1 !== TT.toTransport && !fU.has(zT), lT = !nT && jT && !qU.has(zT), LT = {
+        kind: zT,
+        code: MT,
+        site: gT,
+        fatal: nT,
+        message: HT,
+        details: null !== (UT = TT.details) && void 0 !== UT ? UT : {}
+      }, pT = `${MT}@${gT}${void 0===TT.instance?"":`#${TT.instance}`}${nT?"!":""}`, BT = (null !== (WT = OU.get(pT)) && void 0 !== WT ? WT : 0) + 1;
+      if (OU.set(pT, BT), void 0 !== TT.countAs && 1 === BT && aU(TT.countAs), BT > 1 ? 0 === (BT & BT - 1) && yU((() => {
+          console.warn(`${FT} ${MT} at ${gT} reported ${BT} times`)
+        })) : lT && eU >= bU ? yU((() => {
+          console.warn(`${FT} ${zT} ${MT} at ${gT}: ${HT} (not sent: the session's ${bU} went)`, LT.details, null !== kT && void 0 !== kT ? kT : "")
+        })) : (lT && eU++, function(TT, UT, WT, zT) {
+          var MT, gT;
           const {
-            kind: xp,
-            code: Lp,
-            site: Yp,
-            fatal: Dp,
-            message: Ap,
-            details: Pp
-          } = pp;
-          Qi((() => {
-            (Dp ? console.error : console.warn)(`${Tp} ${xp} ${Lp} at ${Yp}: ${Ap}`, Pp, null !== ip && void 0 !== ip ? ip : "")
+            kind: nT,
+            code: HT,
+            site: kT,
+            fatal: jT,
+            message: lT,
+            details: LT
+          } = TT;
+          yU((() => {
+            (jT ? console.error : console.warn)(`${FT} ${nT} ${HT} at ${kT}: ${lT}`, LT, null !== UT && void 0 !== UT ? UT : "")
           }));
-          const Wp = Hi[xp],
-            yp = null !== (Ip = null !== (Sp = ti[xp]) && void 0 !== Sp ? Sp : Wp) && void 0 !== Ip ? Ip : null;
-          op || null === yp || Xi((async () => {
+          const pT = vU[nT],
+            BT = null !== (MT = null !== (gT = cU[nT]) && void 0 !== gT ? gT : pT) && void 0 !== MT ? MT : null;
+          zT || null === BT || tU((async () => {
             const {
-              reportCappedWasmFailure: pp,
-              reportUncappedWasmFailure: ip,
-              reportWasmFailure: Op
-            } = await cp.e(213).then((() => cp(36469)));
-            (ei.has(xp) ? ip : void 0 === Wp ? Op : pp)(yp, Ap, Lp)
+              reportCappedWasmFailure: TT,
+              reportUncappedWasmFailure: UT,
+              reportWasmFailure: WT
+            } = await mT.e(213).then((() => mT(36341)));
+            (qU.has(nT) ? UT : void 0 === pT ? WT : TT)(BT, lT, HT)
           }));
-          Op && Qi((() => {
-            Di(pp, ip)
+          WT && yU((() => {
+            HU(TT, UT)
           }))
-        }(Pp, Yp, Dp, void 0 !== pp.countAs)), xp) {
-        var Up;
-        const ip = null !== (Up = pp.screen) && void 0 !== Up ? Up : {
-          text: (0, Xp.h)(Pp, !0),
+        }(LT, kT, jT, void 0 !== TT.countAs)), nT) {
+        var ZT;
+        const UT = null !== (ZT = TT.screen) && void 0 !== ZT ? ZT : {
+          text: (0, aT.d)(LT, !0),
           reload: !0
         };
-        Qi((() => {
-          Pi(ip)
+        yU((() => {
+          jU(UT)
         }))
       }
-      return Pp
+      return LT
     }
 
-    function Xi(pp) {
-      Ji("counts", (async () => {
+    function tU(TT) {
+      XU("counts", (async () => {
         const {
-          peekVisitSessionId: ip
-        } = await Promise.resolve().then((() => cp(670)));
-        null !== ip() && (await pp(), ui = !0)
+          peekVisitSessionId: UT
+        } = await Promise.resolve().then((() => mT(696)));
+        null !== UT() && (await TT(), iU = !0)
       }))
     }
 
-    function li(pp) {
-      qi.has(pp.errorKind) || (qi.add(pp.errorKind), Xi((async () => {
+    function aU(TT) {
+      JU.has(TT.errorKind) || (JU.add(TT.errorKind), tU((async () => {
         const {
-          reportClientError: ip
-        } = await Promise.resolve().then((() => cp(3025)));
-        ip(pp.errorKind, pp.error, pp.code, !0, void 0, pp.fields)
+          reportClientError: UT
+        } = await Promise.resolve().then((() => mT(3068)));
+        UT(TT.errorKind, TT.error, TT.code, !0, void 0, TT.fields)
       })))
     }
 
-    function Qi(pp) {
+    function yU(TT) {
       try {
-        pp()
-      } catch (ip) {
+        TT()
+      } catch (UT) {
         try {
-          console.warn(`${Tp} could not send a report`, ip)
+          console.warn(`${FT} could not send a report`, UT)
         } catch {}
       }
     }
 
-    function Ji(pp, ip) {
+    function XU(TT, UT) {
       try {
-        const cp = ip().catch((ip => {
-          console.warn(`${Tp} could not send the report to ${pp}`, ip)
+        const mT = UT().catch((UT => {
+          console.warn(`${FT} could not send the report to ${TT}`, UT)
         })).finally((() => {
-          Mi.delete(cp)
+          xU.delete(mT)
         }));
-        Mi.add(cp)
-      } catch (cp) {
-        console.warn(`${Tp} could not send the report to ${pp}`, cp)
+        xU.add(mT)
+      } catch (mT) {
+        console.warn(`${FT} could not send the report to ${TT}`, mT)
       }
     }
-    async function Bi(pp) {
-      let ip;
-      (0, Dp.g)();
-      const cp = new Promise((cp => {
-        ip = setTimeout(cp, pp)
+    async function IU(TT) {
+      let UT;
+      (0, jT.f)();
+      const mT = new Promise((mT => {
+        UT = setTimeout(mT, TT)
       }));
-      await Promise.race([Ni(), cp]), clearTimeout(ip)
+      await Promise.race([QU(), mT]), clearTimeout(UT)
     }
-    async function Ni() {
-      if (await Promise.allSettled([...Mi]), ui) try {
+    async function QU() {
+      if (await Promise.allSettled([...xU]), iU) try {
         const {
-          flushClientAnalyticsEvents: pp
-        } = await Promise.resolve().then((() => cp(1518)));
-        await pp()
-      } catch (pp) {
-        console.warn(`${Tp} could not send the counts`, pp)
+          flushClientAnalyticsEvents: TT
+        } = await Promise.resolve().then((() => mT(1607)));
+        await TT()
+      } catch (TT) {
+        console.warn(`${FT} could not send the counts`, TT)
       }
     }
-    async function Ti() {
-      for (; Mi.size > 0;) await Promise.allSettled([...Mi])
+    async function sU() {
+      for (; xU.size > 0;) await Promise.allSettled([...xU])
     }
 
-    function fi() {
-      ki.clear(), mi = 0, ui = !1, Si = 0, xi.clear(), Ri = 0, qi.clear(), (0, Pp.t)()
+    function FU() {
+      OU.clear(), eU = 0, iU = !1, zU = 0, MU.clear(), YU = 0, JU.clear(), (0, LT.v)()
     }
 
-    function bi(pp) {
-      const ip = "object" === typeof pp && null !== pp ? pp.type : pp;
-      return "string" !== typeof ip ? "sky not named" : `sky ${JSON.stringify(Array.from(ip).slice(0,oi).join(""))}`
+    function PU(TT) {
+      const UT = "object" === typeof TT && null !== TT ? TT.type : TT;
+      return "string" !== typeof UT ? "sky not named" : `sky ${JSON.stringify(Array.from(UT).slice(0,mU).join(""))}`
     }
 
-    function ai(pp, ip, cp, Op) {
-      Ri += ip;
+    function VU(TT, UT, mT, WT) {
+      YU += UT;
       for (const {
-          code: xp,
-          detail: Lp
+          code: nT,
+          detail: HT
         }
-        of pp) {
-        var op, Ip, Sp;
-        const pp = (0, Ap._d)(xp),
-          ip = (0, Pp.c)(xp, Lp),
-          Yp = null === Op || void 0 === Op ? void 0 : Op(xp, Lp),
-          Dp = void 0 !== (null === ip || void 0 === ip ? void 0 : ip.gpuDetails),
-          Wp = Dp ? null === (op = (0, wp.r)()) || void 0 === op ? void 0 : op.renderer : void 0,
-          yp = Dp ? ` ${(0,Pp.k)()}` : "",
-          Up = Array.from([Wp && `gpu ${(0,Pp.v)(Wp)}`, Yp].filter(Boolean).join("; ")).slice(0, Oi).join(""),
-          vp = `core error ${pp}${null!==(Ip=null===ip||void 0===ip?void 0:ip.words)&&void 0!==Ip?Ip:""}${yp}${Up?`: ${Up}`:""}`,
-          tp = {
-            errorCode: String(xp),
-            detail: String(Lp),
-            droppedBefore: String(Ri),
-            wasmBuild: cp.wasm,
-            clientVersion: cp.client,
-            ...null === ip || void 0 === ip ? void 0 : ip.gpuDetails
+        of TT) {
+        var zT, MT, gT;
+        const TT = (0, lT.pe)(nT),
+          UT = (0, LT.e)(nT, HT),
+          kT = null === WT || void 0 === WT ? void 0 : WT(nT, HT),
+          jT = void 0 !== (null === UT || void 0 === UT ? void 0 : UT.gpuDetails),
+          pT = jT ? null === (zT = (0, cT.s)()) || void 0 === zT ? void 0 : zT.renderer : void 0,
+          BT = jT ? ` ${(0,LT.m)()}` : "",
+          ZT = Array.from([pT && `gpu ${(0,LT.z)(pT)}`, kT].filter(Boolean).join("; ")).slice(0, UU).join(""),
+          vT = `core error ${TT}${null!==(MT=null===UT||void 0===UT?void 0:UT.words)&&void 0!==MT?MT:""}${BT}${ZT?`: ${ZT}`:""}`,
+          fT = {
+            errorCode: String(nT),
+            detail: String(HT),
+            droppedBefore: String(YU),
+            wasmBuild: mT.wasm,
+            clientVersion: mT.client,
+            ...null === UT || void 0 === UT ? void 0 : UT.gpuDetails
           };
-        null !== ip && (0, Pp.p)(ip) ? Qi((() => {
-          console.warn(`${Tp} coreError CORE-${pp}: ${vp} (not sent: the session's render warnings of its kind went)`, tp)
-        })) : ni(xp) ? Qi((() => {
-          console.warn(`${Tp} coreError CORE-${pp}: ${vp} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, tp)
-        })) : Ei({
-          kind: gi(xp, Lp),
-          code: `CORE-${pp}`,
-          site: fp,
+        null !== UT && (0, LT.t)(UT) ? yU((() => {
+          console.warn(`${FT} coreError CORE-${TT}: ${vT} (not sent: the session's render warnings of its kind went)`, fT)
+        })) : uU(nT) ? yU((() => {
+          console.warn(`${FT} coreError CORE-${TT}: ${vT} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, fT)
+        })) : wU({
+          kind: rU(nT, HT),
+          code: `CORE-${TT}`,
+          site: PT,
           fatal: !1,
-          message: vp,
-          details: tp,
-          instance: null !== (Sp = null === ip || void 0 === ip ? void 0 : ip.instance) && void 0 !== Sp ? Sp : Fi(xp, Lp)
+          message: vT,
+          details: fT,
+          instance: null !== (gT = null === UT || void 0 === UT ? void 0 : UT.instance) && void 0 !== gT ? gT : CU(nT, HT)
         })
       }
     }
 
-    function ni(pp) {
-      if (pp !== Ap.M.AudioUnknownSound && pp !== Ap.M.PresentationClipUnplayable) return !1;
+    function uU(TT) {
+      if (TT !== lT.S.AudioUnknownSound && TT !== lT.S.PresentationClipUnplayable) return !1;
       const {
-        gameNameWithVariation: ip,
-        lobbyName: cp
-      } = (0, Ip.d)();
-      return null !== ip && (!!(0, Op.j)(ip) || pp === Ap.M.AudioUnknownSound && (0, op.k)(ip, cp))
+        gameNameWithVariation: UT,
+        lobbyName: mT
+      } = (0, MT.c)();
+      return null !== UT && (!!(0, WT.k)(UT) || TT === lT.S.AudioUnknownSound && (0, zT.f)(UT, mT))
     }
 
-    function Fi(pp, ip) {
-      return pp === Ap.M.RenderDeviceLost && 0 !== (ip & Ap.U.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function CU(TT, UT) {
+      return TT === lT.S.RenderDeviceLost && 0 !== (UT & lT.$.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function gi(pp, ip) {
-      return pp === Ap.M.JobsHeapGaveUp ? "meshHeap" : (0, Pp.g)(pp, ip) ? "linksReadAfterView" : (0, Pp.d)(pp, ip) ? "linkCensus" : "coreError"
+    function rU(TT, UT) {
+      return TT === lT.S.JobsHeapGaveUp ? "meshHeap" : (0, LT.j)(TT, UT) ? "linksReadAfterView" : (0, LT.g)(TT, UT) ? "linkCensus" : "coreError"
     }
 
-    function Gi(pp) {
-      return (0, Qp.n)(pp instanceof Jp.b ? pp.trap : pp, Rp.L, Rp.ib)
+    function KU(TT) {
+      return (0, XT.o)(TT instanceof IT.b ? TT.trap : TT, JT.F, JT.bb)
     }
-    const ri = "declined=js";
+    const SU = "declined=js";
 
-    function Zi(pp) {
-      return pp ? {
-        labels: [ri],
+    function GU(TT) {
+      return TT ? {
+        labels: [SU],
         details: {
           declined: "js"
         }
@@ -1155,203 +1165,203 @@ export const modules = {
       }
     }
 
-    function zi(pp, ip, cp) {
-      return Ki(pp, ip, cp, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function NU(TT, UT, mT) {
+      return hU(TT, UT, mT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function si(pp, ip, cp) {
-      return Ki(pp, ip, cp, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function EU(TT, UT, mT) {
+      return hU(TT, UT, mT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function Ki(pp, ip, cp, Op, op) {
+    function hU(TT, UT, mT, WT, zT) {
       let {
-        memoryDetails: Ip = {},
-        declined: Sp = !1
-      } = Op;
+        memoryDetails: MT = {},
+        declined: gT = !1
+      } = WT;
       const {
-        code: xp,
-        details: Lp,
-        message: Yp
-      } = (0, dp.F)(pp, ip), Dp = [];
-      Object.assign(Lp, (0, Bp.d)(pp.error)), null !== cp && (Lp.trapKind = cp.kind, null !== cp.panic && (Lp.panic = (0, Qp.j)(cp.panic)), cp.refusedBytes > 0 && (Lp.refusedAllocation = String(cp.refusedBytes)), Dp.push((0, Qp.q)(cp.kind, cp.refusedBytes)));
-      const Ap = Zi(Sp);
-      return Ei({
+        code: nT,
+        details: HT,
+        message: kT
+      } = (0, iT.E)(TT, UT), jT = [];
+      Object.assign(HT, (0, QT.e)(TT.error)), null !== mT && (HT.trapKind = mT.kind, null !== mT.panic && (HT.panic = (0, XT.k)(mT.panic)), mT.refusedBytes > 0 && (HT.refusedAllocation = String(mT.refusedBytes)), jT.push((0, XT.p)(mT.kind, mT.refusedBytes)));
+      const lT = GU(gT);
+      return wU({
         kind: "crash",
-        code: xp,
-        site: pp.site,
-        fatal: op,
-        message: [...Dp, ...Ap.labels, Yp].join("; "),
+        code: nT,
+        site: TT.site,
+        fatal: zT,
+        message: [...jT, ...lT.labels, kT].join("; "),
         details: {
-          ...Lp,
-          ...Ap.details,
-          ...Ip
+          ...HT,
+          ...lT.details,
+          ...MT
         },
-        error: pp.error
+        error: TT.error
       })
     }
 
-    function Vi(pp, ip, cp) {
-      return Ei({
+    function DU(TT, UT, mT) {
+      return wU({
         kind: "unsupported",
-        code: ip,
-        site: bp,
+        code: UT,
+        site: VT,
         fatal: !0,
-        message: cp,
+        message: mT,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: pp,
-          status: ip
+          cause: TT,
+          status: UT
         },
         screen: {
-          text: (0, Xp.p)(pp),
-          reload: "download" === pp
+          text: (0, aT.k)(TT),
+          reload: "download" === TT
         }
       })
     }
-    const pc = {
+    const oU = {
       unsupported: "unsupported_js_fallback",
       blockedAfterLoss: "blocked_after_loss",
       noContext: "no_context_js_fallback"
     };
 
-    function ic(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      return Ei({
+    function AU(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      return wU({
         kind: "unsupportedFallback",
-        code: pc[ip],
-        site: bp,
+        code: oU[UT],
+        site: VT,
         fatal: !1,
-        message: cp,
+        message: mT,
         details: {
-          ...Op,
-          cause: pp,
+          ...WT,
+          cause: TT,
           status: "unsupported",
-          decline: ip,
+          decline: UT,
           fallback: "js"
         }
       })
     }
 
-    function cc(pp, ip, cp) {
-      return Ei({
+    function RU(TT, UT, mT) {
+      return wU({
         kind: "recovered",
-        code: "reprobed" === pp ? "no_backend_reprobed" : "no_backend_wasm_reload",
-        site: bp,
+        code: "reprobed" === TT ? "no_backend_reprobed" : "no_backend_wasm_reload",
+        site: VT,
         fatal: !1,
-        message: cp,
+        message: mT,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          decline: ip,
-          step: pp
+          decline: UT,
+          step: TT
         }
       })
     }
 
-    function Oc(pp) {
-      return Ei({
+    function Tm(TT) {
+      return wU({
         kind: "recovered",
         code: "WEBGPU-unknownLimits",
-        site: ci,
+        site: TU,
         fatal: !1,
         message: "WebGPU dropped required limits the browser doesn't name",
         details: {
-          limits: pp.join(",")
+          limits: TT.join(",")
         }
       })
     }
-    const oc = "reload=wasm";
+    const Um = "reload=wasm";
 
-    function Ic(pp, ip, cp, Op) {
-      const op = Zi("declined" === Op),
-        Ip = "wasmReload" === Op ? [oc] : op.labels;
-      return Ei({
+    function mm(TT, UT, mT, WT) {
+      const zT = GU("declined" === WT),
+        MT = "wasmReload" === WT ? [Um] : zT.labels;
+      return wU({
         kind: "unsupported",
-        code: ip,
-        site: bp,
+        code: UT,
+        site: VT,
         fatal: !1,
-        message: [...Ip, cp].join("; "),
+        message: [...MT, mT].join("; "),
         details: {
-          cause: pp,
-          status: ip,
-          fallback: "wasmReload" === Op ? "wasmReload" : "js",
-          ...op.details
+          cause: TT,
+          status: UT,
+          fallback: "wasmReload" === WT ? "wasmReload" : "js",
+          ...zT.details
         }
       })
     }
 
-    function Sc() {
+    function Wm() {
       const {
-        code: pp,
-        message: ip
-      } = lp.b;
-      return Ei({
+        code: TT,
+        message: UT
+      } = yT.e;
+      return wU({
         kind: "unstreamedLoad",
-        code: pp,
-        site: bp,
+        code: TT,
+        site: VT,
         fatal: !1,
-        message: ip
+        message: UT
       })
     }
-    class xc extends Error {
+    class zm extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function Lc(pp) {
-      return pp instanceof jp.r ? 0 === pp.code ? "JOIN-matchmake" : `JOIN-${pp.code}` : pp instanceof jp.d ? 0 === pp.code ? `JOIN-${pp.stage}` : `JOIN-${pp.stage}-${pp.code}` : pp instanceof ep.e ? "JOIN-gameCode" : pp instanceof xc ? "JOIN-turnstilePage" : pp instanceof jp.D ? "JOIN-trafficCheck" : pp instanceof tp.f ? "JOIN-timeout" : "JOIN-network"
+    function Mm(TT) {
+      return TT instanceof OT.n ? 0 === TT.code ? "JOIN-matchmake" : `JOIN-${TT.code}` : TT instanceof OT.d ? 0 === TT.code ? `JOIN-${TT.stage}` : `JOIN-${TT.stage}-${TT.code}` : TT instanceof bT.b ? "JOIN-gameCode" : TT instanceof zm ? "JOIN-turnstilePage" : TT instanceof OT.s ? "JOIN-trafficCheck" : TT instanceof fT.d ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function Yc(pp, ip) {
-      const cp = (0, Bp.h)(pp),
-        Op = {
-          wasmBuild: ip.wasm,
-          clientVersion: ip.client
+    function gm(TT, UT) {
+      const mT = (0, QT.k)(TT),
+        WT = {
+          wasmBuild: UT.wasm,
+          clientVersion: UT.client
         },
-        op = pp instanceof xc ? {
-          text: (0, Xp.j)(),
+        zT = TT instanceof zm ? {
+          text: (0, aT.h)(),
           reload: !1
         } : void 0,
-        Ip = (0, kp.g)(pp),
-        Sp = "expected" !== Ip;
-      return Ei({
+        MT = (0, eT.h)(TT),
+        gT = "expected" !== MT;
+      return wU({
         kind: "join",
-        code: Lc(pp),
-        site: hp,
+        code: Mm(TT),
+        site: uT,
         fatal: !0,
-        message: cp,
-        details: Op,
-        error: pp,
-        screen: op,
-        toTransport: Sp,
-        instance: Ip
+        message: mT,
+        details: WT,
+        error: TT,
+        screen: zT,
+        toTransport: gT,
+        instance: MT
       })
     }
 
-    function Dc(pp, ip, cp) {
-      var Op;
-      const op = (0, kp.g)(pp),
-        Ip = {
-          cause: (pp instanceof jp.d || pp instanceof jp.r) && null !== (Op = pp.serverText) && void 0 !== Op ? Op : "",
-          sinceJoinStart: (0, vp.d)(cp.sinceJoinStartMs),
-          game: cp.game,
-          ...(0, vp.l)(),
-          wasmBuild: ip.wasm,
-          clientVersion: ip.client
+    function nm(TT, UT, mT) {
+      var WT;
+      const zT = (0, eT.h)(TT),
+        MT = {
+          cause: (TT instanceof OT.d || TT instanceof OT.n) && null !== (WT = TT.serverText) && void 0 !== WT ? WT : "",
+          sinceJoinStart: (0, vT.b)(mT.sinceJoinStartMs),
+          game: mT.game,
+          ...(0, vT.h)(),
+          wasmBuild: UT.wasm,
+          clientVersion: UT.client
         };
-      return Ei({
+      return wU({
         kind: "pageJoin",
-        code: Lc(pp),
-        site: hp,
+        code: Mm(TT),
+        site: uT,
         fatal: !1,
-        message: (0, Bp.h)(pp),
-        details: Ip,
-        error: pp,
-        toTransport: "unrecognised" === op,
-        instance: op
+        message: (0, QT.k)(TT),
+        details: MT,
+        error: TT,
+        toTransport: "unrecognised" === zT,
+        instance: zT
       })
     }
-    const Ac = {
+    const Hm = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1370,682 +1380,682 @@ export const modules = {
       }
     };
 
-    function Pc(pp, ip) {
+    function km(TT, UT) {
       let {
-        unused: cp,
-        answered: Op,
-        heldMs: op
-      } = pp;
+        unused: mT,
+        answered: WT,
+        heldMs: zT
+      } = TT;
       const {
-        code: Ip,
-        message: Sp
-      } = Ac[cp], xp = {
-        unused: cp,
-        answered: String(Op),
-        heldMs: String(op),
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+        code: MT,
+        message: gT
+      } = Hm[mT], nT = {
+        unused: mT,
+        answered: String(WT),
+        heldMs: String(zT),
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "seat",
-        code: Ip,
-        site: hp,
+        code: MT,
+        site: uT,
         fatal: !1,
-        message: Sp,
-        details: xp
+        message: gT,
+        details: nT
       })
     }
 
-    function Wc(pp, ip, cp) {
-      var Op;
-      let op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Op = pp.name) && void 0 !== Op ? Op : String(pp.code);
-      const Ip = {
-          closeCode: String(pp.code),
-          recognised: String(null !== pp.name),
-          closeReason: cp.closeReason,
-          sinceJoined: (0, vp.d)(cp.sinceJoinedMs),
-          game: cp.game,
-          ...(0, vp.l)(),
-          wasmBuild: ip.wasm,
-          clientVersion: ip.client
+    function jm(TT, UT, mT) {
+      var WT;
+      let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (WT = TT.name) && void 0 !== WT ? WT : String(TT.code);
+      const MT = {
+          closeCode: String(TT.code),
+          recognised: String(null !== TT.name),
+          closeReason: mT.closeReason,
+          sinceJoined: (0, vT.b)(mT.sinceJoinedMs),
+          game: mT.game,
+          ...(0, vT.h)(),
+          wasmBuild: UT.wasm,
+          clientVersion: UT.client
         },
-        Sp = null === pp.name && !(0, vp.g)(pp.code);
-      return Ei({
+        gT = null === TT.name && !(0, vT.f)(TT.code);
+      return wU({
         kind: "disconnect",
-        code: op,
-        site: ap,
+        code: zT,
+        site: CT,
         fatal: !1,
         message: "Left room",
-        details: Ip,
-        toTransport: Sp
+        details: MT,
+        toTransport: gT
       })
     }
 
-    function yc(pp, ip) {
-      const cp = {
-        ...(0, Wp.l)(pp),
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+    function lm(TT, UT) {
+      const mT = {
+        ...(0, pT.k)(TT),
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "disconnect",
-        code: `reconnect-${pp.reason}`,
-        site: hp,
+        code: `reconnect-${TT.reason}`,
+        site: uT,
         fatal: !1,
         message: "Reconnect failed",
-        details: cp
+        details: mT
       })
     }
 
-    function Uc(pp) {
-      return pp.error instanceof qp.d ? `MODEL-${pp.error.status}` : pp.error instanceof Mp.h ? "MODEL-ring" : "MODEL-network"
+    function Lm(TT) {
+      return TT.error instanceof xT.f ? `MODEL-${TT.error.status}` : TT.error instanceof dT.h ? "MODEL-ring" : "MODEL-network"
     }
 
-    function wc(pp, ip) {
-      const cp = Uc(pp),
-        Op = `model file ${pp.file} ${pp.startup?"(startup) ":""}could not load`,
-        op = {
-          file: String(pp.file),
-          url: pp.url,
-          wasmBuild: ip.wasm,
-          clientVersion: ip.client
+    function pm(TT, UT) {
+      const mT = Lm(TT),
+        WT = `model file ${TT.file} ${TT.startup?"(startup) ":""}could not load`,
+        zT = {
+          file: String(TT.file),
+          url: TT.url,
+          wasmBuild: UT.wasm,
+          clientVersion: UT.client
         };
-      return Ei({
-        kind: pp.startup ? "model" : "modelLate",
-        code: cp,
-        site: np,
-        fatal: pp.startup,
-        message: Op,
-        details: op,
-        error: pp.error
+      return wU({
+        kind: TT.startup ? "model" : "modelLate",
+        code: mT,
+        site: rT,
+        fatal: TT.startup,
+        message: WT,
+        details: zT,
+        error: TT.error
       })
     }
 
-    function vc(pp, ip) {
-      const cp = {
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+    function Bm(TT, UT) {
+      const mT = {
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: Fp,
+        site: KT,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: cp,
-        error: pp
+        details: mT,
+        error: TT
       })
     }
 
-    function tc(pp, ip, cp) {
-      const Op = {
-        delayMs: String(ip),
-        wasmBuild: cp.wasm,
-        clientVersion: cp.client
+    function Zm(TT, UT, mT) {
+      const WT = {
+        delayMs: String(UT),
+        wasmBuild: mT.wasm,
+        clientVersion: mT.client
       };
-      pp instanceof qp.d && (Op.status = String(pp.status));
-      return Ei({
+      TT instanceof xT.f && (WT.status = String(TT.status));
+      return wU({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: Fp,
+        site: KT,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: Op,
-        error: pp
+        details: WT,
+        error: TT
       })
     }
 
-    function Hc(pp, ip) {
-      const cp = {
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+    function cm(TT, UT) {
+      const mT = {
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: Fp,
+        site: KT,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: cp,
-        error: pp
+        details: mT,
+        error: TT
       })
     }
 
-    function dc(pp, ip) {
-      const cp = {
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+    function fm(TT, UT) {
+      const mT = {
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: dp.A,
+        site: iT.B,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: cp,
-        error: pp
+        details: mT,
+        error: TT
       })
     }
 
-    function ec(pp, ip) {
-      const cp = {
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+    function qm(TT, UT) {
+      const mT = {
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: sp,
+        site: DT,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: cp,
-        error: pp
+        details: mT,
+        error: TT
       })
     }
 
-    function uc(pp, ip, cp, Op) {
-      const op = {
-        wasmBuild: Op.wasm,
-        clientVersion: Op.client
+    function im(TT, UT, mT, WT) {
+      const zT = {
+        wasmBuild: WT.wasm,
+        clientVersion: WT.client
       };
-      return Ei({
+      return wU({
         kind: "texturePackKeptOut",
-        code: (0, Yp.f)("wasm", pp, ip),
-        site: Kp,
+        code: (0, kT.d)("wasm", TT, UT),
+        site: oT,
         fatal: !1,
-        message: ip.detail,
-        details: op,
-        error: cp
+        message: UT.detail,
+        details: zT,
+        error: mT
       })
     }
 
-    function jc(pp, ip) {
+    function bm(TT, UT) {
       const {
-        frames: cp,
-        acks: Op,
-        mask: op,
-        outcome: Ip
-      } = pp, Sp = {
-        frames: String(cp),
-        acks: String(Op),
-        mask: String(op),
-        outcome: null !== Ip && void 0 !== Ip ? Ip : "resynced",
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+        frames: mT,
+        acks: WT,
+        mask: zT,
+        outcome: MT
+      } = TT, gT = {
+        frames: String(mT),
+        acks: String(WT),
+        mask: String(zT),
+        outcome: null !== MT && void 0 !== MT ? MT : "resynced",
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "recovered",
-        code: "rejoined" === Ip ? "CORE-eventOverflowRejoin" : "failed" === Ip ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: Zp,
+        code: "rejoined" === MT ? "CORE-eventOverflowRejoin" : "failed" === MT ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: ET,
         fatal: !1,
-        message: `the event buffer refused records in ${cp} frames`,
-        details: Sp
+        message: `the event buffer refused records in ${mT} frames`,
+        details: gT
       })
     }
 
-    function kc(pp, ip, cp) {
-      return Ei({
+    function Om(TT, UT, mT) {
+      return wU({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: pp,
+        site: TT,
         fatal: !1,
-        message: `a ${pp} worker was lost`,
+        message: `a ${TT} worker was lost`,
         details: {
-          reason: ip,
-          wasmBuild: cp.wasm,
-          clientVersion: cp.client
+          reason: UT,
+          wasmBuild: mT.wasm,
+          clientVersion: mT.client
         }
       })
     }
 
-    function mc(pp, ip, cp) {
-      const Op = {
-        wasmBuild: cp.wasm,
-        clientVersion: cp.client
+    function em(TT, UT, mT) {
+      const WT = {
+        wasmBuild: mT.wasm,
+        clientVersion: mT.client
       };
-      return Ei({
+      return wU({
         kind: "recovered",
-        code: pp,
-        site: dp.l,
+        code: TT,
+        site: iT.n,
         fatal: !1,
-        message: ip,
-        details: Op
+        message: UT,
+        details: WT
       })
     }
 
-    function Rc(pp, ip) {
-      const cp = {
-        lastReason: pp,
-        wasmBuild: ip.wasm,
-        clientVersion: ip.client
+    function Ym(TT, UT) {
+      const mT = {
+        lastReason: TT,
+        wasmBuild: UT.wasm,
+        clientVersion: UT.client
       };
-      return Ei({
+      return wU({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: dp.A,
+        site: iT.B,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: cp
+        details: mT
       })
     }
 
-    function qc(pp, ip, cp) {
-      return Ei({
+    function Jm(TT, UT, mT) {
+      return wU({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: dp.k,
+        site: iT.m,
         fatal: !1,
-        message: (0, mp.k)(pp) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, YT.o)(TT) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: pp,
-          ...ip,
-          wasmBuild: cp.wasm,
-          clientVersion: cp.client
+          cause: TT,
+          ...UT,
+          wasmBuild: mT.wasm,
+          clientVersion: mT.client
         }
       })
     }
 
-    function Mc(pp, ip, cp, Op) {
-      var op, Ip;
-      const Sp = (0, Pp.n)(),
-        xp = {
-          game: pp,
-          cause: ip,
-          census: null === cp ? "none" : JSON.stringify(cp),
-          gpu: null !== (op = null === (Ip = (0, wp.r)()) || void 0 === Ip ? void 0 : Ip.renderer) && void 0 !== op ? op : "",
-          renderWarned: String(Sp),
-          browser: (0, Pp.k)(),
-          wasmBuild: Op.wasm,
-          clientVersion: Op.client
+    function xm(TT, UT, mT, WT) {
+      var zT, MT;
+      const gT = (0, LT.q)(),
+        nT = {
+          game: TT,
+          cause: UT,
+          census: null === mT ? "none" : JSON.stringify(mT),
+          gpu: null !== (zT = null === (MT = (0, cT.s)()) || void 0 === MT ? void 0 : MT.renderer) && void 0 !== zT ? zT : "",
+          renderWarned: String(gT),
+          browser: (0, LT.m)(),
+          wasmBuild: WT.wasm,
+          clientVersion: WT.client
         },
-        Lp = `first view drew no whole terrain in ${Cp.h/1e3} s, ${ip}${Sp?", render warned":""}`;
-      return Ei({
+        HT = `first view drew no whole terrain in ${wT.h/1e3} s, ${UT}${gT?", render warned":""}`;
+      return wU({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: Vp,
+        site: AT,
         fatal: !1,
-        message: Lp,
-        details: xp
+        message: HT,
+        details: nT
       })
     }
 
-    function Cc(pp, ip, cp, Op) {
-      var op, Ip, Sp;
-      const Lp = null !== (op = (0, xp.i)(null !== (Ip = null === (Sp = (0, wp.j)()) || void 0 === Sp ? void 0 : Sp.renderer) && void 0 !== Ip ? Ip : null, (0, wp.i)())) && void 0 !== op ? op : "unknown",
-        Yp = null === ip ? "untimed" : `${Math.round(ip)} ms`,
-        Dp = `frames stalled, ${cp}, gpu ${(0,Pp.v)(Lp)}, blocking ${Yp}, drawn ${Math.round(pp)} ms apart`,
-        Ap = {
-          gpuModel: Lp,
-          wasmBuild: Op.wasm,
-          clientVersion: Op.client
+    function dm(TT, UT, mT, WT) {
+      var zT, MT, gT;
+      const HT = null !== (zT = (0, nT.m)(null !== (MT = null === (gT = (0, cT.l)()) || void 0 === gT ? void 0 : gT.renderer) && void 0 !== MT ? MT : null, (0, cT.i)())) && void 0 !== zT ? zT : "unknown",
+        kT = null === UT ? "untimed" : `${Math.round(UT)} ms`,
+        jT = `frames stalled, ${mT}, gpu ${(0,LT.z)(HT)}, blocking ${kT}, drawn ${Math.round(TT)} ms apart`,
+        lT = {
+          gpuModel: HT,
+          wasmBuild: WT.wasm,
+          clientVersion: WT.client
         };
-      return Ei({
+      return wU({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: ii,
+        site: RT,
         fatal: !1,
-        message: Dp,
-        details: Ap
+        message: jT,
+        details: lT
       })
     }
 
-    function Ec(pp, ip, cp) {
-      return Ei({
+    function wm(TT, UT, mT) {
+      return wU({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: pp,
+        site: TT,
         fatal: !1,
-        message: `a ${pp} worker did not start`,
+        message: `a ${TT} worker did not start`,
         details: {
-          waitedMs: String(Math.round(ip)),
-          wasmBuild: cp.wasm,
-          clientVersion: cp.client
+          waitedMs: String(Math.round(UT)),
+          wasmBuild: mT.wasm,
+          clientVersion: mT.client
         }
       })
     }
 
-    function Xc(pp, ip, cp) {
-      return Ei({
+    function tm(TT, UT, mT) {
+      return wU({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: pp,
+        site: TT,
         fatal: !1,
-        message: `the replay's ${pp} failed`,
+        message: `the replay's ${TT} failed`,
         details: {
-          wasmBuild: cp.wasm,
-          clientVersion: cp.client
+          wasmBuild: mT.wasm,
+          clientVersion: mT.client
         },
-        error: ip
+        error: UT
       })
     }
-    const lc = {
+    const am = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function Qc(pp) {
-      if (0 === pp) return "none";
-      const ip = [60, 600, 3600].find((ip => pp < ip));
-      return void 0 === ip ? "ge3600" : `lt${ip}`
+    function ym(TT) {
+      if (0 === TT) return "none";
+      const UT = [60, 600, 3600].find((UT => TT < UT));
+      return void 0 === UT ? "ge3600" : `lt${UT}`
     }
 
-    function Jc(pp, ip) {
-      return null === pp ? "unbound" : (0, yp.l)(ip - pp)
+    function Xm(TT, UT) {
+      return null === TT ? "unbound" : (0, BT.i)(UT - TT)
     }
 
-    function Bc(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
-      return [0 !== (pp & Ap.U.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (pp & Ap.U.LINKS_RUNNING) ? "links running" : "", `frames ${(0,Pp.v)(Qc(pp&Ap.U.FRAMES))}`, `up ${(0,Pp.v)(Jc(ip,cp))}`].filter(Boolean).join(", ")
+    function Im(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
+      return [0 !== (TT & lT.$.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (TT & lT.$.LINKS_RUNNING) ? "links running" : "", `frames ${(0,LT.z)(ym(TT&lT.$.FRAMES))}`, `up ${(0,LT.z)(Xm(UT,mT))}`].filter(Boolean).join(", ")
     }
 
-    function Nc(pp, ip, cp) {
-      const Op = "lost" === ip && void 0 !== cp ? ` (${cp})` : "";
-      return `the ${pp} ${lc[ip]}${Op}`
+    function Qm(TT, UT, mT) {
+      const WT = "lost" === UT && void 0 !== mT ? ` (${mT})` : "";
+      return `the ${TT} ${am[UT]}${WT}`
     }
-    const Tc = {
+    const sm = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
 
-    function fc(pp, ip, cp, Op) {
-      var op;
+    function Fm(TT, UT, mT, WT) {
+      var zT;
       let {
-        restoreLost: Ip = !1,
-        adapterRemembered: Sp = !1
-      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, xp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
-      const Lp = null === cp || void 0 === cp ? void 0 : cp.message,
-        Yp = "pipeline_failed" === ip ? ip : cp instanceof Hp.h ? "timeout" : (0, yp.t)("frames_refused" === ip, "string" === typeof Lp ? Lp : ""),
-        Dp = null === Op.boundAtMs ? "unbound" : `up${(0,yp.h)(xp-Op.boundAtMs)}`,
-        Ap = null === Op.adapter ? "no adapter" : (0, yp.q)(Op.adapter),
-        Pp = `${!0===Op.indirectHangs?" ih":""}${!0===Op.restoresSkipped?" nr":""}${Ip?" rl":""}${Sp?" ar":""}`,
-        Wp = `${Yp} ${(0,Hp.j)()?"hidden":"visible"} ${Dp}${Pp} ${Ap}`;
-      if ("webgpu" !== pp || "lost" !== ip && "frames_refused" !== ip) return {
-        detail: Wp,
+        restoreLost: MT = !1,
+        adapterRemembered: gT = !1
+      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, nT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
+      const HT = null === mT || void 0 === mT ? void 0 : mT.message,
+        kT = "pipeline_failed" === UT ? UT : mT instanceof qT.f ? "timeout" : (0, BT.p)("frames_refused" === UT, "string" === typeof HT ? HT : ""),
+        jT = null === WT.boundAtMs ? "unbound" : `up${(0,BT.f)(nT-WT.boundAtMs)}`,
+        lT = null === WT.adapter ? "no adapter" : (0, BT.m)(WT.adapter),
+        LT = `${!0===WT.indirectHangs?" ih":""}${!0===WT.restoresSkipped?" nr":""}${MT?" rl":""}${gT?" ar":""}`,
+        pT = `${kT} ${(0,qT.h)()?"hidden":"visible"} ${jT}${LT} ${lT}`;
+      if ("webgpu" !== TT || "lost" !== UT && "frames_refused" !== UT) return {
+        detail: pT,
         count: void 0
       };
       return {
-        detail: Wp,
+        detail: pT,
         count: {
           errorKind: "render_lost",
-          error: new Error(Wp),
-          code: (0, yp.y)(Yp, null !== (op = Op.boundAtMs) && void 0 !== op ? op : xp, xp).code,
+          error: new Error(pT),
+          code: (0, BT.t)(kT, null !== (zT = WT.boundAtMs) && void 0 !== zT ? zT : nT, nT).code,
           fields: {
-            renderBackend: Np.b.webgpu
+            renderBackend: sT.e.webgpu
           }
         }
       }
     }
 
-    function bc(pp, ip, cp) {
+    function Pm(TT, UT, mT) {
       const {
-        count: Op
-      } = fc("webgpu", pp, ip, cp);
-      void 0 !== Op && li(Op)
+        count: WT
+      } = Fm("webgpu", TT, UT, mT);
+      void 0 !== WT && aU(WT)
     }
-    const hc = {
+    const Vm = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function ac(pp) {
-      var ip;
-      return null !== (ip = pp instanceof Error ? pp.reason : void 0) && void 0 !== ip ? ip : ""
+    function um(TT) {
+      var UT;
+      return null !== (UT = TT instanceof Error ? TT.reason : void 0) && void 0 !== UT ? UT : ""
     }
 
-    function nc(pp, ip, Op) {
-      var op, Ip, Sp, Lp, Yp;
+    function Cm(TT, UT, WT) {
+      var zT, MT, gT, HT, kT;
       let {
-        from: Dp,
-        cause: Ap = "lost",
-        restoreLost: Wp = !1,
-        adapterRemembered: wp = !1,
-        error: vp,
-        context: tp = Tc,
-        session: Hp = hc
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, dp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
+        from: jT,
+        cause: lT = "lost",
+        restoreLost: pT = !1,
+        adapterRemembered: cT = !1,
+        error: vT,
+        context: fT = sm,
+        session: qT = Vm
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, iT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
       const {
-        detail: ep,
-        count: jp
-      } = fc(pp, Ap, vp, tp, {
-        restoreLost: Wp,
-        adapterRemembered: wp
-      }, dp), kp = {
-        reloadFrom: null !== Dp && void 0 !== Dp ? Dp : "",
-        losses: String(ip),
-        cause: Ap,
-        detail: ep,
-        vendor: null !== (op = null === (Ip = tp.adapter) || void 0 === Ip ? void 0 : Ip.vendor) && void 0 !== op ? op : "",
-        architecture: null !== (Sp = null === (Lp = tp.adapter) || void 0 === Lp ? void 0 : Lp.architecture) && void 0 !== Sp ? Sp : "",
-        indirectHangs: String(tp.indirectHangs),
-        restoresSkipped: String(tp.restoresSkipped),
-        restoreLost: String(Wp),
-        adapterRemembered: String(wp),
-        lossReason: ac(vp),
-        samples: String(Hp.samples),
-        sunShadows: String(Hp.sunShadows),
-        renderDistance: String(Hp.renderDistance),
-        gpuFamily: null !== (Yp = (0, xp.c)()) && void 0 !== Yp ? Yp : "",
-        browser: (0, Pp.k)(),
-        siteUsed: Up.siteUsed,
-        wasmBuild: Op.wasm,
-        clientVersion: Op.client
-      }, mp = "webgpu" !== pp && void 0 !== Dp ? function(pp, ip, cp, Op) {
-        return `: ${pp}, ${ip?"restore lost":"not restored"}, up ${(0,Pp.v)(Jc(cp,Op))}`
-      }(Dp, Wp, tp.boundAtMs, dp) : "", Rp = `${Nc(pp,Ap)}${mp}`, qp = Ei({
+        detail: bT,
+        count: OT
+      } = Fm(TT, lT, vT, fT, {
+        restoreLost: pT,
+        adapterRemembered: cT
+      }, iT), eT = {
+        reloadFrom: null !== jT && void 0 !== jT ? jT : "",
+        losses: String(UT),
+        cause: lT,
+        detail: bT,
+        vendor: null !== (zT = null === (MT = fT.adapter) || void 0 === MT ? void 0 : MT.vendor) && void 0 !== zT ? zT : "",
+        architecture: null !== (gT = null === (HT = fT.adapter) || void 0 === HT ? void 0 : HT.architecture) && void 0 !== gT ? gT : "",
+        indirectHangs: String(fT.indirectHangs),
+        restoresSkipped: String(fT.restoresSkipped),
+        restoreLost: String(pT),
+        adapterRemembered: String(cT),
+        lossReason: um(vT),
+        samples: String(qT.samples),
+        sunShadows: String(qT.sunShadows),
+        renderDistance: String(qT.renderDistance),
+        gpuFamily: null !== (kT = (0, nT.d)()) && void 0 !== kT ? kT : "",
+        browser: (0, LT.m)(),
+        siteUsed: ZT.siteUsed,
+        wasmBuild: WT.wasm,
+        clientVersion: WT.client
+      }, YT = "webgpu" !== TT && void 0 !== jT ? function(TT, UT, mT, WT) {
+        return `: ${TT}, ${UT?"restore lost":"not restored"}, up ${(0,LT.z)(Xm(mT,WT))}`
+      }(jT, pT, fT.boundAtMs, iT) : "", JT = `${Qm(TT,lT)}${YT}`, xT = wU({
         kind: "recovered",
         code: "CORE-renderLost",
-        site: Gp,
+        site: GT,
         fatal: !1,
-        message: Rp,
-        details: kp,
-        error: vp,
-        countAs: jp
+        message: JT,
+        details: eT,
+        error: vT,
+        countAs: OT
       });
-      return Ji("ga", (async () => {
+      return XU("ga", (async () => {
         const {
-          logError: ip
-        } = await Promise.resolve().then((() => cp(3003))), Op = `${yp.e["webgpu"===pp?"WebGPU":"WebGL2"]}\n Error: ${ep}`;
-        ip("warning", Op), ip("error", Op)
-      })), qp
+          logError: UT
+        } = await Promise.resolve().then((() => mT(3047))), WT = `${BT.b["webgpu"===TT?"WebGPU":"WebGL2"]}\n Error: ${bT}`;
+        UT("warning", WT), UT("error", WT)
+      })), xT
     }
 
-    function Fc(pp, ip) {
-      var cp, Op;
-      const op = null === pp.name ? "TEXTURE-sources" : null === pp.url ? "TEXTURE-nourl" : pp.error instanceof Ep.d ? `TEXTURE-${pp.error.status}` : "TEXTURE-network",
-        Ip = null === pp.name ? "terrain textures could not load" : `terrain texture ${pp.name} could not load`,
-        Sp = {
-          texture: null !== (cp = pp.name) && void 0 !== cp ? cp : "",
-          url: null !== (Op = pp.url) && void 0 !== Op ? Op : "",
-          wasmBuild: ip.wasm,
-          clientVersion: ip.client
+    function rm(TT, UT) {
+      var mT, WT;
+      const zT = null === TT.name ? "TEXTURE-sources" : null === TT.url ? "TEXTURE-nourl" : TT.error instanceof tT.d ? `TEXTURE-${TT.error.status}` : "TEXTURE-network",
+        MT = null === TT.name ? "terrain textures could not load" : `terrain texture ${TT.name} could not load`,
+        gT = {
+          texture: null !== (mT = TT.name) && void 0 !== mT ? mT : "",
+          url: null !== (WT = TT.url) && void 0 !== WT ? WT : "",
+          wasmBuild: UT.wasm,
+          clientVersion: UT.client
         };
-      return Ei({
+      return wU({
         kind: "terrainTexture",
-        code: op,
-        site: dp.y,
+        code: zT,
+        site: iT.y,
         fatal: !1,
-        message: Ip,
-        details: Sp,
-        error: pp.error
+        message: MT,
+        details: gT,
+        error: TT.error
       })
     }
-    const gc = {
+    const Km = {
       previewAnimations: {
-        site: rp,
+        site: NT,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: zp,
+        site: hT,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Gc(pp, ip, cp, Op) {
+    function Sm(TT, UT, mT, WT) {
       const {
-        site: op,
-        prefix: Ip,
-        name: Sp
-      } = gc[pp], {
-        stage: xp,
-        error: Lp
-      } = cp;
-      return Ei({
-        kind: pp,
-        code: "decode" === xp ? null === Lp ? `${Ip}-decode` : `${Ip}-trap` : Lp instanceof qp.d ? `${Ip}-${Lp.status}` : `${Ip}-network`,
-        site: op,
+        site: zT,
+        prefix: MT,
+        name: gT
+      } = Km[TT], {
+        stage: nT,
+        error: HT
+      } = mT;
+      return wU({
+        kind: TT,
+        code: "decode" === nT ? null === HT ? `${MT}-decode` : `${MT}-trap` : HT instanceof xT.f ? `${MT}-${HT.status}` : `${MT}-network`,
+        site: zT,
         fatal: !1,
-        message: "decode" === xp ? `${Sp} did not decode` : `${Sp} could not load`,
+        message: "decode" === nT ? `${gT} did not decode` : `${gT} could not load`,
         details: {
-          url: ip,
-          wasmBuild: Op.wasm,
-          clientVersion: Op.client
+          url: UT,
+          wasmBuild: WT.wasm,
+          clientVersion: WT.client
         },
-        error: Lp
+        error: HT
       })
     }
-    const rc = "staleBuild";
+    const Gm = "staleBuild";
 
-    function Zc(pp, ip, cp) {
-      const Op = {
-          failedSite: pp.site,
-          url: pp.url,
-          from: pp.from,
-          sameBuild: String(pp.from === ip),
-          reloadMs: String(Math.max(0, Date.now() - pp.at)),
-          wasmBuild: cp.wasm,
-          clientVersion: cp.client
+    function Nm(TT, UT, mT) {
+      const WT = {
+          failedSite: TT.site,
+          url: TT.url,
+          from: TT.from,
+          sameBuild: String(TT.from === UT),
+          reloadMs: String(Math.max(0, Date.now() - TT.at)),
+          wasmBuild: mT.wasm,
+          clientVersion: mT.client
         },
-        op = `reloaded into a newer build after ${pp.site} failed to load: ${pp.error}`;
-      return Ei({
+        zT = `reloaded into a newer build after ${TT.site} failed to load: ${TT.error}`;
+      return wU({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: rc,
+        site: Gm,
         fatal: !1,
-        message: op,
-        details: Op
+        message: zT,
+        details: WT
       })
     }
   },
-  41005: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip,
-      h: () => op,
-      i: () => Sp
+  40944: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => MT,
+      h: () => zT,
+      i: () => gT
     });
-    var Op = cp(4911);
-    const op = 3e4;
-    class Ip {
-      constructor(pp) {
-        this.Yy = pp, this.waitedMs = 0, this.lastMs = null
+    var WT = mT(4904);
+    const zT = 3e4;
+    class MT {
+      constructor(TT) {
+        this.Gp = TT, this.waitedMs = 0, this.lastMs = null
       }
-      frame(pp, ip) {
-        if (ip) return !0;
-        const cp = null === this.lastMs ? 0 : pp - this.lastMs;
-        return this.lastMs = pp, cp <= 900 && (this.waitedMs += cp), !(this.waitedMs < op) && (this.Yy(), !0)
+      frame(TT, UT) {
+        if (UT) return !0;
+        const mT = null === this.lastMs ? 0 : TT - this.lastMs;
+        return this.lastMs = TT, mT <= 900 && (this.waitedMs += mT), !(this.waitedMs < zT) && (this.Gp(), !0)
       }
     }
 
-    function Sp(pp, ip) {
-      return 0 === (pp & Op.L.ChunkRequested) ? "no_chunk_request" : 0 === (pp & Op.L.ChunkStored) ? "chunk_not_stored" : 0 === (pp & Op.L.MeshLanded) ? "not_meshed" : null === ip ? "no_frame_drawn" : 0 === ip.terrainParts ? "no_terrain_parts" : ip.terrainCompiling > 0 ? "terrain_compiling" : ip.terrainOpaque + ip.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
+    function gT(TT, UT) {
+      return 0 === (TT & WT.V.ChunkRequested) ? "no_chunk_request" : 0 === (TT & WT.V.ChunkStored) ? "chunk_not_stored" : 0 === (TT & WT.V.MeshLanded) ? "not_meshed" : null === UT ? "no_frame_drawn" : 0 === UT.terrainParts ? "no_terrain_parts" : UT.terrainCompiling > 0 ? "terrain_compiling" : UT.terrainOpaque + UT.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  40783: (pp, ip, cp) => {
-    cp.d(ip, {
-      C: () => yp,
-      e: () => Op,
-      i: () => vp,
-      k: () => Up,
-      n: () => wp,
-      o: () => Pp,
-      q: () => Wp,
-      u: () => Dp,
-      y: () => Ap
+  40724: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT,
+      f: () => vT,
+      i: () => ZT,
+      m: () => cT,
+      o: () => LT,
+      s: () => pT,
+      v: () => jT,
+      w: () => lT,
+      x: () => BT
     });
-    class Op extends Error {
-      constructor(pp) {
-        super(`the join's code did not load: ${pp instanceof Error?pp.message:String(pp)}`, {
-          cause: pp
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === pp || void 0 === pp ? void 0 : pp.request
+    class WT extends Error {
+      constructor(TT) {
+        super(`the join's code did not load: ${TT instanceof Error?TT.message:String(TT)}`, {
+          cause: TT
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === TT || void 0 === TT ? void 0 : TT.request
       }
     }
-    let op = null,
-      Ip = null,
-      Sp = null;
-    const xp = [];
-    let Lp = null;
+    let zT = null,
+      MT = null,
+      gT = null;
+    const nT = [];
+    let HT = null;
 
-    function Yp(pp, ip) {
+    function kT(TT, UT) {
       try {
-        pp(ip)
-      } catch (cp) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", cp)
+        TT(UT)
+      } catch (mT) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", mT)
       }
     }
 
-    function Dp() {
-      return Lp
+    function jT() {
+      return HT
     }
 
-    function Ap(pp) {
-      xp.push(pp), null !== Lp && Yp(pp, Lp)
+    function lT(TT) {
+      nT.push(TT), null !== HT && kT(TT, HT)
     }
 
-    function Pp(pp) {
-      return op ??= Promise.all([cp.e(73), cp.e(98), cp.e(226), cp.e(78), cp.e(227), cp.e(201), cp.e(97), cp.e(246), cp.e(273), cp.e(199), cp.e(214), cp.e(191), cp.e(198), cp.e(193), cp.e(144), cp.e(88), cp.e(122), cp.e(252), cp.e(57)]).then((() => cp(42870))).then((ip => {
-        ip.loadAudio(pp), Lp = ip;
-        for (const pp of xp) Yp(pp, ip);
-        return ip
-      })).catch((pp => {
-        throw op = null, pp
-      })), op
+    function LT(TT) {
+      return zT ??= Promise.all([mT.e(73), mT.e(98), mT.e(226), mT.e(78), mT.e(227), mT.e(201), mT.e(97), mT.e(246), mT.e(273), mT.e(199), mT.e(214), mT.e(191), mT.e(198), mT.e(193), mT.e(144), mT.e(88), mT.e(122), mT.e(252), mT.e(57)]).then((() => mT(42743))).then((UT => {
+        UT.loadAudio(TT), HT = UT;
+        for (const TT of nT) kT(TT, UT);
+        return UT
+      })).catch((TT => {
+        throw zT = null, TT
+      })), zT
     }
-    async function Wp(pp, ip) {
+    async function pT(TT, UT) {
       try {
-        const cp = await Pp(pp);
-        await cp.loadClientGame(ip)
-      } catch (cp) {
-        throw new Op(cp)
+        const mT = await LT(TT);
+        await mT.loadClientGame(UT)
+      } catch (mT) {
+        throw new WT(mT)
       }
     }
 
-    function yp(pp, ip) {
-      Ip = {
-        running: pp,
-        shell: ip
+    function BT(TT, UT) {
+      MT = {
+        running: TT,
+        shell: UT
       }
     }
 
-    function Up() {
-      return Sp
+    function ZT() {
+      return gT
     }
-    async function wp(pp) {
-      const ip = Ip;
-      if ((null === ip || void 0 === ip ? void 0 : ip.running) !== pp) throw new Error("the core's session has ended");
-      const cp = await Pp(ip.shell.audio).catch((pp => {
-        throw new Op(pp)
+    async function cT(TT) {
+      const UT = MT;
+      if ((null === UT || void 0 === UT ? void 0 : UT.running) !== TT) throw new Error("the core's session has ended");
+      const mT = await LT(UT.shell.audio).catch((TT => {
+        throw new WT(TT)
       }));
-      if (null !== Sp) return Sp;
-      if (Ip !== ip || pp.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Sp = cp.startGameHost(pp, ip.shell), null === Sp) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Sp
+      if (null !== gT) return gT;
+      if (MT !== UT || TT.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (gT = mT.startGameHost(TT, UT.shell), null === gT) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return gT
     }
 
-    function vp() {
-      null !== Sp && (null !== Lp ? Lp.endGameHost(Sp) : Sp.closeGame()), Sp = null, Ip = null
+    function vT() {
+      null !== gT && (null !== HT ? HT.endGameHost(gT) : gT.closeGame()), gT = null, MT = null
     }
   },
-  40920: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op
+  40869: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    const Op = {
+    const WT = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -2058,136 +2068,136 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  40882: (pp, ip, cp) => {
-    cp.d(ip, {
-      D: () => Ap,
-      F: () => xp,
-      d: () => Yp,
-      h: () => Ip,
-      l: () => Sp,
-      p: () => op,
-      r: () => Wp,
-      t: () => Dp,
-      w: () => Lp,
-      z: () => Pp
+  40824: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => kT,
+      f: () => MT,
+      h: () => gT,
+      j: () => zT,
+      n: () => pT,
+      o: () => jT,
+      p: () => HT,
+      r: () => LT,
+      s: () => lT,
+      v: () => nT
     });
-    var Op = cp(1823);
-    const op = new Uint8Array([12]),
-      Ip = 2e3,
-      Sp = 257;
+    var WT = mT(1928);
+    const zT = new Uint8Array([12]),
+      MT = 2e3,
+      gT = 257;
 
-    function xp(pp) {
-      const ip = new Uint8Array(4);
-      return new DataView(ip.buffer).setUint32(0, pp, !0), ip
+    function nT(TT) {
+      const UT = new Uint8Array(4);
+      return new DataView(UT.buffer).setUint32(0, TT, !0), UT
     }
-    class Lp extends Error {
+    class HT extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class Yp extends Error {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        super(pp), this.stage = ip, this.code = cp, this.serverText = Op, this.socketOpened = op, this.name = "JoinError"
+    class kT extends Error {
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        super(TT), this.stage = UT, this.code = mT, this.serverText = WT, this.socketOpened = zT, this.name = "JoinError"
       }
     }
-    class Dp extends Error {
-      constructor(pp) {
-        super(pp), this.final = !0, this.name = "ResumeRefusedError"
+    class jT extends Error {
+      constructor(TT) {
+        super(TT), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class Ap extends Error {
-      constructor(pp) {
-        super((0, Op.i)(pp), {
-          cause: pp
+    class lT extends Error {
+      constructor(TT) {
+        super((0, WT.f)(TT), {
+          cause: TT
         }), this.name = "TrafficCheckError"
       }
     }
-    class Pp extends Error {
-      constructor(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        super(pp, {
-          cause: cp
-        }), this.networkLost = ip, this.httpStatus = Op, this.name = "SeatRequestError"
+    class LT extends Error {
+      constructor(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        super(TT, {
+          cause: mT
+        }), this.networkLost = UT, this.httpStatus = WT, this.name = "SeatRequestError"
       }
     }
-    class Wp extends Error {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(pp), this.code = ip, this.serverText = cp, this.name = "MatchmakeError"
+    class pT extends Error {
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(TT), this.code = UT, this.serverText = mT, this.name = "MatchmakeError"
       }
     }
   },
-  40884: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Wp,
-      g: () => Pp,
-      j: () => yp
+  40827: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => pT,
+      h: () => LT,
+      i: () => BT
     });
-    var Op = cp(2695),
-      op = cp(3074),
-      Ip = cp(39241),
-      Sp = cp(36689),
-      xp = cp(39244),
-      Lp = cp(40882),
-      Yp = cp(40889);
-    const Dp = "seat reservation expired.",
-      Ap = "early_leave";
+    var WT = mT(2731),
+      zT = mT(3119),
+      MT = mT(39207),
+      gT = mT(36565),
+      nT = mT(39216),
+      HT = mT(40824),
+      kT = mT(40832);
+    const jT = "seat reservation expired.",
+      lT = "early_leave";
 
-    function Pp(pp) {
-      if (pp instanceof Sp.f) return "expected";
-      if (pp instanceof Lp.z) return pp.networkLost ? "expected" : "unrecognised";
-      if (pp instanceof Lp.d) {
-        if ("closed" === pp.stage && (0 === pp.code || (0, op.g)(pp.code))) return "expected";
-        if ("roomError" === pp.stage && (pp.serverText === Dp || pp.serverText === Ap)) return "expected"
+    function LT(TT) {
+      if (TT instanceof gT.d) return "expected";
+      if (TT instanceof HT.r) return TT.networkLost ? "expected" : "unrecognised";
+      if (TT instanceof HT.d) {
+        if ("closed" === TT.stage && (0 === TT.code || (0, zT.f)(TT.code))) return "expected";
+        if ("roomError" === TT.stage && (TT.serverText === jT || TT.serverText === lT)) return "expected"
       }
-      return pp instanceof Lp.d || pp instanceof Lp.r ? null === (0, xp.h)(pp.code).name ? "unrecognised" : "known" : (0, Op.g)(pp) ? "expected" : pp instanceof Lp.D || pp instanceof Yp.e ? "known" : "unrecognised"
+      return TT instanceof HT.d || TT instanceof HT.n ? null === (0, nT.o)(TT.code).name ? "unrecognised" : "known" : (0, WT.c)(TT) ? "expected" : TT instanceof HT.s || TT instanceof kT.b ? "known" : "unrecognised"
     }
 
-    function Wp(pp) {
-      return pp instanceof Sp.f ? "timedOut" : "expected" !== Pp(pp) || (0, Op.g)(pp) || pp instanceof Lp.d && 1001 === pp.code ? void 0 : "failed"
+    function pT(TT) {
+      return TT instanceof gT.d ? "timedOut" : "expected" !== LT(TT) || (0, WT.c)(TT) || TT instanceof HT.d && 1001 === TT.code ? void 0 : "failed"
     }
 
-    function yp(pp) {
-      return pp instanceof Lp.d && "attach" !== pp.stage ? (0, Ip.c)(pp, "closed" !== pp.stage || pp.socketOpened ? "socket" : "socket_unopened") : pp instanceof Lp.z ? {
+    function BT(TT) {
+      return TT instanceof HT.d && "attach" !== TT.stage ? (0, MT.b)(TT, "closed" !== TT.stage || TT.socketOpened ? "socket" : "socket_unopened") : TT instanceof HT.r ? {
         at: "seat_lost",
-        code: pp.httpStatus
-      } : pp instanceof Lp.r || pp instanceof Sp.f ? (0, Ip.c)(pp, pp instanceof Sp.f ? pp.leg : "seat") : void 0
+        code: TT.httpStatus
+      } : TT instanceof HT.n || TT instanceof gT.d ? (0, MT.b)(TT, TT instanceof gT.d ? TT.leg : "seat") : void 0
     }
   },
-  40988: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Lp,
-      e: () => Yp,
-      f: () => Wp,
-      h: () => Ap
+  40926: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => HT,
+      f: () => kT,
+      g: () => pT,
+      h: () => lT
     });
-    var Op = cp(2970),
-      op = cp(4903),
-      Ip = cp(40997),
-      Sp = cp(41001),
-      xp = cp(36484);
-    const Lp = 395,
-      Yp = 2147483648,
-      Dp = new Uint8Array(0);
-    class Ap extends Error {
+    var WT = mT(3001),
+      zT = mT(4895),
+      MT = mT(40929),
+      gT = mT(40935),
+      nT = mT(36358);
+    const HT = 395,
+      kT = 2147483648,
+      jT = new Uint8Array(0);
+    class lT extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class Pp extends Error {
+    class LT extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class Wp {
-      constructor(pp, ip, cp) {
-        var Op, op, Sp, xp;
-        let Lp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = pp, this.build = ip, this.onFailure = cp, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.aW = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Op = Lp.fetchFile) && void 0 !== Op ? Op : pp => (0, Ip.j)(pp), this.onWritten = null !== (op = Lp.onWritten) && void 0 !== op ? op : null, this.onTaken = null !== (Sp = Lp.onTaken) && void 0 !== Sp ? Sp : null, this.onPackFileFailed = null !== (xp = Lp.onPackFileFailed) && void 0 !== xp ? xp : null, this.startupLeft = new Set(pp.startup);
-        for (const Ip of pp.startup) this.request(Ip)
+    class pT {
+      constructor(TT, UT, mT) {
+        var WT, zT, gT, nT;
+        let HT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = TT, this.build = UT, this.onFailure = mT, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.Jp = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (WT = HT.fetchFile) && void 0 !== WT ? WT : TT => (0, MT.j)(TT), this.onWritten = null !== (zT = HT.onWritten) && void 0 !== zT ? zT : null, this.onTaken = null !== (gT = HT.onTaken) && void 0 !== gT ? gT : null, this.onPackFileFailed = null !== (nT = HT.onPackFileFailed) && void 0 !== nT ? nT : null, this.startupLeft = new Set(TT.startup);
+        for (const MT of TT.startup) this.request(MT)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2207,635 +2217,635 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(pp) {
-        return this.drawn.get(pp)
+      drawnUrl(TT) {
+        return this.drawn.get(TT)
       }
-      request(pp) {
-        const ip = this.pending.get(pp);
-        if (!0 === (null === ip || void 0 === ip ? void 0 : ip.ask)) return;
-        const cp = this.mW(pp, !0);
-        cp.recheck = void 0 !== ip;
-        const Op = this.drawn.get(pp);
-        if (void 0 !== Op) return cp.sx = !0, cp.recheck = !0, void this.fetch(pp, cp, Op);
-        this.fetchWanted(pp, cp)
+      request(TT) {
+        const UT = this.pending.get(TT);
+        if (!0 === (null === UT || void 0 === UT ? void 0 : UT.ask)) return;
+        const mT = this.np(TT, !0);
+        mT.recheck = void 0 !== UT;
+        const WT = this.drawn.get(TT);
+        if (void 0 !== WT) return mT.fn = !0, mT.recheck = !0, void this.fetch(TT, mT, WT);
+        this.fetchWanted(TT, mT)
       }
       async refresh() {
-        const pp = ++this.refreshes,
-          ip = new Set;
-        for (const Sp of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const pp of Sp) 0 === (pp & Ip.g) && ip.add(pp);
-        const cp = [...ip];
-        let Op;
+        const TT = ++this.refreshes,
+          UT = new Set;
+        for (const gT of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const TT of gT) 0 === (TT & MT.f) && UT.add(TT);
+        const mT = [...UT];
+        let WT;
         try {
-          Op = await Promise.all(cp.map((pp => this.wanted(pp))))
+          WT = await Promise.all(mT.map((TT => this.wanted(TT))))
         } catch {
           return null
         }
-        if (pp !== this.refreshes) return null;
-        const op = {
+        if (TT !== this.refreshes) return null;
+        const zT = {
           resent: 0,
           refetched: 0,
-          delivered: cp.filter((pp => this.drawn.has(pp))).length
+          delivered: mT.filter((TT => this.drawn.has(TT))).length
         };
-        return cp.forEach(((pp, ip) => {
+        return mT.forEach(((TT, UT) => {
           const {
-            url: cp,
-            inPlaceOf: Ip
-          } = Op[ip], Sp = this.pending.get(pp);
-          if (void 0 !== Sp) {
-            if (Sp.sx || void 0 === Sp.url) return void(Sp.recheck = !0);
-            if (Sp.url === cp) return;
-            op.refetched++;
-            const ip = this.mW(pp, Sp.ask);
-            return ip.recheck = Sp.recheck, void this.fetch(pp, ip, cp, Ip)
+            url: mT,
+            inPlaceOf: MT
+          } = WT[UT], gT = this.pending.get(TT);
+          if (void 0 !== gT) {
+            if (gT.fn || void 0 === gT.url) return void(gT.recheck = !0);
+            if (gT.url === mT) return;
+            zT.refetched++;
+            const UT = this.np(TT, gT.ask);
+            return UT.recheck = gT.recheck, void this.fetch(TT, UT, mT, MT)
           }
-          const xp = this.written.get(pp);
-          void 0 === xp ? this.drawn.get(pp) !== (null !== cp && void 0 !== cp ? cp : void 0) && (op.resent++, this.fetch(pp, this.mW(pp, !1), cp, Ip)) : xp.url !== (null !== cp && void 0 !== cp ? cp : "") && (xp.attempt.recheck = !0)
-        })), op
+          const nT = this.written.get(TT);
+          void 0 === nT ? this.drawn.get(TT) !== (null !== mT && void 0 !== mT ? mT : void 0) && (zT.resent++, this.fetch(TT, this.np(TT, !1), mT, MT)) : nT.url !== (null !== mT && void 0 !== mT ? mT : "") && (nT.attempt.recheck = !0)
+        })), zT
       }
-      taken(pp, ip) {
-        const cp = new Set,
-          Op = new Set;
-        for (const op of Array.from(ip)) 0 === (op & Yp) ? cp.add(op) : Op.add((op & ~Yp) >>> 0);
-        for (const [op, Ip] of this.written) Ip.seq > pp || (this.written.delete(op), cp.has(Ip.seq) ? this.refusedFile(op, Ip) : this.takenFile(op, Ip, !Ip.empty && !Op.has(Ip.seq)))
+      taken(TT, UT) {
+        const mT = new Set,
+          WT = new Set;
+        for (const zT of Array.from(UT)) 0 === (zT & kT) ? mT.add(zT) : WT.add((zT & ~kT) >>> 0);
+        for (const [zT, MT] of this.written) MT.seq > TT || (this.written.delete(zT), mT.has(MT.seq) ? this.refusedFile(zT, MT) : this.takenFile(zT, MT, !MT.empty && !WT.has(MT.seq)))
       }
-      takenFile(pp, ip, cp) {
+      takenFile(TT, UT, mT) {
         const {
-          attempt: Op
-        } = ip;
-        if (cp) {
-          var op;
-          this.drawn.set(pp, ip.url), this.undrawn.delete(pp), void 0 !== Op.inPlaceOf ? this.refusedPack.set(pp, Op.inPlaceOf) : Op.sx || this.refusedPack.delete(pp), null === (op = this.onTaken) || void 0 === op || op.call(this, pp, !0);
-          const cp = this.pending.get(pp);
-          if (!0 === (null === cp || void 0 === cp ? void 0 : cp.sx) && cp.url !== ip.url) {
-            const cp = this.mW(pp, !0);
-            cp.sx = !0, cp.recheck = !0, this.fetch(pp, cp, ip.url)
+          attempt: WT
+        } = UT;
+        if (mT) {
+          var zT;
+          this.drawn.set(TT, UT.url), this.undrawn.delete(TT), void 0 !== WT.inPlaceOf ? this.refusedPack.set(TT, WT.inPlaceOf) : WT.fn || this.refusedPack.delete(TT), null === (zT = this.onTaken) || void 0 === zT || zT.call(this, TT, !0);
+          const mT = this.pending.get(TT);
+          if (!0 === (null === mT || void 0 === mT ? void 0 : mT.fn) && mT.url !== UT.url) {
+            const mT = this.np(TT, !0);
+            mT.fn = !0, mT.recheck = !0, this.fetch(TT, mT, UT.url)
           }
         } else {
-          var Ip;
-          this.drawn.has(pp) || this.undrawn.add(pp), null === (Ip = this.onTaken) || void 0 === Ip || Ip.call(this, pp, !1)
+          var MT;
+          this.drawn.has(TT) || this.undrawn.add(TT), null === (MT = this.onTaken) || void 0 === MT || MT.call(this, TT, !1)
         }
-        Op.recheck && this.resendIfChanged(pp)
+        WT.recheck && this.resendIfChanged(TT)
       }
-      refusedFile(pp, ip) {
-        var cp, Op;
-        if (null === (cp = this.onTaken) || void 0 === cp || cp.call(this, pp, !1), this.refusedPack.set(pp, ip.url), this.pending.has(pp)) return void(null === (Op = this.onPackFileFailed) || void 0 === Op || Op.call(this, pp, yp(ip.url)));
-        const op = this.mW(pp, ip.attempt.ask);
-        op.recheck = ip.attempt.recheck, this.afterRefusal(pp, op, ip.url)
+      refusedFile(TT, UT) {
+        var mT, WT;
+        if (null === (mT = this.onTaken) || void 0 === mT || mT.call(this, TT, !1), this.refusedPack.set(TT, UT.url), this.pending.has(TT)) return void(null === (WT = this.onPackFileFailed) || void 0 === WT || WT.call(this, TT, BT(UT.url)));
+        const zT = this.np(TT, UT.attempt.ask);
+        zT.recheck = UT.attempt.recheck, this.afterRefusal(TT, zT, UT.url)
       }
-      async afterRefusal(pp, ip, cp) {
-        var Op;
-        let op;
+      async afterRefusal(TT, UT, mT) {
+        var WT;
+        let zT;
         try {
-          op = await this.wanted(pp)
-        } catch (Ip) {
-          return void(this.pending.get(pp) === ip && this.giveUp(pp, ip, cp, Ip))
+          zT = await this.wanted(TT)
+        } catch (MT) {
+          return void(this.pending.get(TT) === UT && this.giveUp(TT, UT, mT, MT))
         }
-        this.pending.get(pp) === ip && (op.inPlaceOf !== cp ? ip.ask || (null !== (Op = op.url) && void 0 !== Op ? Op : void 0) !== this.drawn.get(pp) ? this.fetch(pp, ip, op.url, op.inPlaceOf) : this.pending.delete(pp) : this.fallBack(pp, ip, cp, yp(cp)))
+        this.pending.get(TT) === UT && (zT.inPlaceOf !== mT ? UT.ask || (null !== (WT = zT.url) && void 0 !== WT ? WT : void 0) !== this.drawn.get(TT) ? this.fetch(TT, UT, zT.url, zT.inPlaceOf) : this.pending.delete(TT) : this.fallBack(TT, UT, mT, BT(mT)))
       }
-      mW(pp, ip) {
-        const cp = {
+      np(TT, UT) {
+        const mT = {
           url: void 0,
-          ask: ip,
-          sx: !1,
+          ask: UT,
+          fn: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(pp, cp);
-        for (let Op = this.ready.length - 1; Op >= 0; Op--) this.ready[Op].file === pp && this.ready.splice(Op, 1);
-        return cp
+        this.pending.set(TT, mT);
+        for (let WT = this.ready.length - 1; WT >= 0; WT--) this.ready[WT].file === TT && this.ready.splice(WT, 1);
+        return mT
       }
-      async wanted(pp) {
-        const ip = await this.files.url(pp);
-        return null !== ip && this.refusedPack.get(pp) === ip ? {
-          url: await this.files.shippedUrl(pp),
-          inPlaceOf: ip
+      async wanted(TT) {
+        const UT = await this.files.url(TT);
+        return null !== UT && this.refusedPack.get(TT) === UT ? {
+          url: await this.files.shippedUrl(TT),
+          inPlaceOf: UT
         } : {
-          url: ip,
+          url: UT,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(pp, ip) {
-        const cp = this.files.url(pp);
-        cp instanceof Promise ? cp.then((cp => {
-          this.fetchFound(pp, ip, cp)
-        }), (cp => {
-          this.pending.get(pp) === ip && this.giveUp(pp, ip, "", cp)
-        })) : this.fetchFound(pp, ip, cp)
+      fetchWanted(TT, UT) {
+        const mT = this.files.url(TT);
+        mT instanceof Promise ? mT.then((mT => {
+          this.fetchFound(TT, UT, mT)
+        }), (mT => {
+          this.pending.get(TT) === UT && this.giveUp(TT, UT, "", mT)
+        })) : this.fetchFound(TT, UT, mT)
       }
-      fetchFound(pp, ip, cp) {
-        null !== cp && this.refusedPack.get(pp) === cp ? Promise.resolve(this.files.shippedUrl(pp)).then((Op => {
-          this.fetch(pp, ip, Op, cp)
-        }), (Op => {
-          this.pending.get(pp) === ip && this.giveUp(pp, ip, cp, Op)
-        })) : this.fetch(pp, ip, cp)
+      fetchFound(TT, UT, mT) {
+        null !== mT && this.refusedPack.get(TT) === mT ? Promise.resolve(this.files.shippedUrl(TT)).then((WT => {
+          this.fetch(TT, UT, WT, mT)
+        }), (WT => {
+          this.pending.get(TT) === UT && this.giveUp(TT, UT, mT, WT)
+        })) : this.fetch(TT, UT, mT)
       }
-      fetch(pp, ip, cp, Op) {
-        this.pending.get(pp) === ip && (ip.url = cp, ip.inPlaceOf = Op, null !== cp ? this.load(pp, ip, cp) : this.buildFile(pp, ip, "", Dp))
+      fetch(TT, UT, mT, WT) {
+        this.pending.get(TT) === UT && (UT.url = mT, UT.inPlaceOf = WT, null !== mT ? this.load(TT, UT, mT) : this.buildFile(TT, UT, "", jT))
       }
-      load(pp, ip, cp) {
-        const Op = this.aW.get(pp);
-        (null === Op || void 0 === Op ? void 0 : Op.url) !== cp ? this.fetchFile(cp).then((Op => {
-          var op, Ip;
-          this.pending.get(pp) === ip && (this.keptTotal += Op.byteLength - (null !== (op = null === (Ip = this.aW.get(pp)) || void 0 === Ip ? void 0 : Ip.glb.byteLength) && void 0 !== op ? op : 0), this.aW.set(pp, {
-            url: cp,
-            glb: Op
-          }), this.buildFile(pp, ip, cp, Op))
-        }), (Op => {
-          this.pending.get(pp) === ip && this.fallBack(pp, ip, cp, Op)
-        })) : this.buildFile(pp, ip, cp, Op.glb)
+      load(TT, UT, mT) {
+        const WT = this.Jp.get(TT);
+        (null === WT || void 0 === WT ? void 0 : WT.url) !== mT ? this.fetchFile(mT).then((WT => {
+          var zT, MT;
+          this.pending.get(TT) === UT && (this.keptTotal += WT.byteLength - (null !== (zT = null === (MT = this.Jp.get(TT)) || void 0 === MT ? void 0 : MT.glb.byteLength) && void 0 !== zT ? zT : 0), this.Jp.set(TT, {
+            url: mT,
+            glb: WT
+          }), this.buildFile(TT, UT, mT, WT))
+        }), (WT => {
+          this.pending.get(TT) === UT && this.fallBack(TT, UT, mT, WT)
+        })) : this.buildFile(TT, UT, mT, WT.glb)
       }
-      buildFile(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Sp = Op.byteLength > 0 && (0, Ip.l)(cp) ? (pp | Ip.e) >>> 0 : pp;
-        this.queueRecord(pp, ip, cp, Op, this.build(Sp, Op), op)
+      buildFile(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const gT = WT.byteLength > 0 && (0, MT.m)(mT) ? (TT | MT.e) >>> 0 : TT;
+        this.queueRecord(TT, UT, mT, WT, this.build(gT, WT), zT)
       }
-      queueRecord(pp, ip, cp, Op, Ip, xp) {
-        Ip.then((Ip => {
-          if (this.pending.get(pp) !== ip) return;
-          if (op.u + (0, op.ue)(Ip.byteLength) > op.Gc) return void this.ringRefused(pp, ip, cp, new Ap(`${Up(cp)}'s record is ${Ip.byteLength-Sp.d} bytes, past the cmd ring's ${op.Gc}`), xp);
-          const Lp = {
-            file: pp,
-            url: cp,
-            payload: Ip,
-            glb: Op,
-            attempt: ip
+      queueRecord(TT, UT, mT, WT, MT, nT) {
+        MT.then((MT => {
+          if (this.pending.get(TT) !== UT) return;
+          if (zT.v + (0, zT.Ge)(MT.byteLength) > zT.Kc) return void this.ringRefused(TT, UT, mT, new lT(`${ZT(mT)}'s record is ${MT.byteLength-gT.c} bytes, past the cmd ring's ${zT.Kc}`), nT);
+          const HT = {
+            file: TT,
+            url: mT,
+            payload: MT,
+            glb: WT,
+            attempt: UT
           };
-          xp ? this.ready.unshift(Lp) : this.ready.push(Lp)
+          nT ? this.ready.unshift(HT) : this.ready.push(HT)
         }))
       }
-      async fallBack(pp, ip, cp, Op) {
-        var op;
-        let Ip = null,
-          Sp = Op;
+      async fallBack(TT, UT, mT, WT) {
+        var zT;
+        let MT = null,
+          gT = WT;
         try {
-          Ip = await this.files.shippedUrl(pp)
-        } catch (xp) {
-          Sp = xp
+          MT = await this.files.shippedUrl(TT)
+        } catch (nT) {
+          gT = nT
         }
-        this.pending.get(pp) === ip && (null !== Ip && Ip !== cp ? (null === (op = this.onPackFileFailed) || void 0 === op || op.call(this, pp, Op), ip.ask || this.drawn.get(pp) !== Ip ? (ip.url = Ip, ip.inPlaceOf = cp, this.load(pp, ip, Ip)) : this.pending.delete(pp)) : this.giveUp(pp, ip, cp, Sp))
+        this.pending.get(TT) === UT && (null !== MT && MT !== mT ? (null === (zT = this.onPackFileFailed) || void 0 === zT || zT.call(this, TT, WT), UT.ask || this.drawn.get(TT) !== MT ? (UT.url = MT, UT.inPlaceOf = mT, this.load(TT, UT, MT)) : this.pending.delete(TT)) : this.giveUp(TT, UT, mT, gT))
       }
-      ringRefused(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, Ip.l)(cp) ? this.fallBack(pp, ip, cp, Op): this.giveUp(pp, ip, cp, Op, op)
+      ringRefused(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, MT.m)(mT) ? this.fallBack(TT, UT, mT, WT): this.giveUp(TT, UT, mT, WT, zT)
       }
-      giveUp(pp, ip, cp, op) {
-        let Ip = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(TT, UT, mT, zT) {
+        let MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: pp,
-          url: Up(cp),
-          error: op,
-          startup: this.startupLeft.has(pp)
-        }), ip.ask || !this.drawn.has(pp) ? (0, Op.P)(op) ? this.queueRecord(pp, ip, cp, Dp, Promise.resolve((0, Sp.l)(pp, (0, xp.h)(op))), Ip) : this.buildFile(pp, ip, cp, Dp, Ip) : this.pending.delete(pp)
+          file: TT,
+          url: ZT(mT),
+          error: zT,
+          startup: this.startupLeft.has(TT)
+        }), UT.ask || !this.drawn.has(TT) ? (0, WT.V)(zT) ? this.queueRecord(TT, UT, mT, jT, Promise.resolve((0, gT.l)(TT, (0, nT.k)(zT))), MT) : this.buildFile(TT, UT, mT, jT, MT) : this.pending.delete(TT)
       }
-      async resendIfChanged(pp) {
-        var ip;
-        if (0 !== (pp & Ip.g)) return;
-        let cp;
+      async resendIfChanged(TT) {
+        var UT;
+        if (0 !== (TT & MT.f)) return;
+        let mT;
         try {
-          cp = await this.wanted(pp)
+          mT = await this.wanted(TT)
         } catch {
           return
-        }(null !== (ip = cp.url) && void 0 !== ip ? ip : void 0) === this.drawn.get(pp) || this.pending.has(pp) || this.written.has(pp) || this.fetch(pp, this.mW(pp, !1), cp.url, cp.inPlaceOf)
+        }(null !== (UT = mT.url) && void 0 !== UT ? UT : void 0) === this.drawn.get(TT) || this.pending.has(TT) || this.written.has(TT) || this.fetch(TT, this.np(TT, !1), mT.url, mT.inPlaceOf)
       }
-      drain(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === pp) return;
-        let cp = 0,
-          Op = 0;
-        for (; Op < this.ready.length && cp < 262144;) {
-          const xp = this.ready[Op];
-          if (this.written.has(xp.file)) {
-            Op++;
+      drain(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === TT) return;
+        let mT = 0,
+          WT = 0;
+        for (; WT < this.ready.length && mT < 262144;) {
+          const nT = this.ready[WT];
+          if (this.written.has(nT.file)) {
+            WT++;
             continue
           }
-          const Dp = this.nextSeq;
-          new DataView(xp.payload.buffer, xp.payload.byteOffset, xp.payload.byteLength).setUint32(Sp.g, Dp, !0);
-          const Pp = xp.attempt.sx && xp.glb.byteLength > 0 && this.drawn.get(xp.file) === xp.url;
-          if (pp(Lp, Pp ? 1 : 0, xp.payload)) {
-            if (this.nextSeq = Dp >= Yp - 1 ? 1 : Dp + 1, this.ready.splice(Op, 1), cp += xp.payload.byteLength, this.pending.delete(xp.file), this.startupLeft.delete(xp.file), this.written.set(xp.file, {
-                seq: Dp,
-                url: xp.url,
-                empty: 0 === xp.glb.byteLength,
-                attempt: xp.attempt
-              }), xp.glb.byteLength > 0) try {
-              var op;
-              null === (op = this.onWritten) || void 0 === op || op.call(this, xp.file, xp.glb)
-            } catch (Ip) {
-              console.warn("ModelFeed: reading the file's images failed", Ip)
+          const jT = this.nextSeq;
+          new DataView(nT.payload.buffer, nT.payload.byteOffset, nT.payload.byteLength).setUint32(gT.f, jT, !0);
+          const LT = nT.attempt.fn && nT.glb.byteLength > 0 && this.drawn.get(nT.file) === nT.url;
+          if (TT(HT, LT ? 1 : 0, nT.payload)) {
+            if (this.nextSeq = jT >= kT - 1 ? 1 : jT + 1, this.ready.splice(WT, 1), mT += nT.payload.byteLength, this.pending.delete(nT.file), this.startupLeft.delete(nT.file), this.written.set(nT.file, {
+                seq: jT,
+                url: nT.url,
+                empty: 0 === nT.glb.byteLength,
+                attempt: nT.attempt
+              }), nT.glb.byteLength > 0) try {
+              var zT;
+              null === (zT = this.onWritten) || void 0 === zT || zT.call(this, nT.file, nT.glb)
+            } catch (MT) {
+              console.warn("ModelFeed: reading the file's images failed", MT)
             }
           } else {
-            if (null === ip || 0 === xp.glb.byteLength || ip(xp.payload.byteLength)) return;
-            this.ready.splice(Op, 1);
-            const pp = new Ap(`${Up(xp.url)}'s record is ${xp.payload.byteLength-Sp.d} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(xp.file, xp.attempt, xp.url, pp, !0)
+            if (null === UT || 0 === nT.glb.byteLength || UT(nT.payload.byteLength)) return;
+            this.ready.splice(WT, 1);
+            const TT = new lT(`${ZT(nT.url)}'s record is ${nT.payload.byteLength-gT.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(nT.file, nT.attempt, nT.url, TT, !0)
           }
         }
       }
     }
 
-    function yp(pp) {
-      return new Pp(`presentation refused ${Up(pp)}`)
+    function BT(TT) {
+      return new LT(`presentation refused ${ZT(TT)}`)
     }
 
-    function Up(pp) {
-      return pp.startsWith("data:") ? `${pp.slice(0,Math.min(Math.max(pp.indexOf(","),5),64))},...` : pp
+    function ZT(TT) {
+      return TT.startsWith("data:") ? `${TT.slice(0,Math.min(Math.max(TT.indexOf(","),5),64))},...` : TT
     }
   },
-  40997: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      g: () => Ip,
-      j: () => Dp,
-      l: () => xp,
-      o: () => Yp,
-      r: () => Lp
+  40929: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => gT,
+      f: () => MT,
+      j: () => jT,
+      m: () => nT,
+      q: () => kT,
+      s: () => HT
     });
-    var Op = cp(2970),
-      op = cp(3309);
-    const Ip = 2147483648,
-      Sp = 1073741824;
+    var WT = mT(3001),
+      zT = mT(3327);
+    const MT = 2147483648,
+      gT = 1073741824;
 
-    function xp(pp) {
-      return pp.startsWith("data:")
+    function nT(TT) {
+      return TT.startsWith("data:")
     }
 
-    function Lp(pp) {
+    function HT(TT) {
       let {
-        onTableFailed: ip,
-        packUrl: cp
+        onTableFailed: UT,
+        packUrl: mT
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Op = Yp();
-      Op.catch((pp => {
-        null === ip || void 0 === ip || ip(pp)
+      const WT = kT();
+      WT.catch((TT => {
+        null === UT || void 0 === UT || UT(TT)
       }));
-      const op = async ip => (await Op).fileUrl((ip & ~Ip) >>> 0, pp);
+      const zT = async UT => (await WT).fileUrl((UT & ~MT) >>> 0, TT);
       return {
         startup: [],
-        url: async pp => {
-          if (cp && 0 === (pp & Ip)) {
-            const ip = await Op,
-              op = ip.filePackName(pp),
-              Ip = null === op || "lifeform" === ip.fileSource(pp) ? null : cp(op);
-            if (null !== Ip) return Ip
+        url: async TT => {
+          if (mT && 0 === (TT & MT)) {
+            const UT = await WT,
+              zT = UT.filePackName(TT),
+              MT = null === zT || "lifeform" === UT.fileSource(TT) ? null : mT(zT);
+            if (null !== MT) return MT
           }
-          return op(pp)
+          return zT(TT)
         },
-        shippedUrl: op
+        shippedUrl: zT
       }
     }
 
-    function Yp() {
-      return cp.e(42).then((() => cp(42949)))
+    function kT() {
+      return mT.e(42).then((() => mT(42823)))
     }
-    async function Dp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return pp.startsWith("data:") ? (0, op.d)(pp.slice(pp.indexOf(",") + 1), ip) : (0, Op.F)(pp, {
-        spare: ip
+    async function jT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return TT.startsWith("data:") ? (0, zT.c)(TT.slice(TT.indexOf(",") + 1), UT) : (0, WT.M)(TT, {
+        spare: UT
       })
     }
   },
-  41001: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Yp,
-      g: () => Dp,
-      i: () => Wp,
-      j: () => wp,
-      l: () => yp,
-      o: () => Pp,
-      q: () => Up
+  40935: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => kT,
+      f: () => jT,
+      g: () => pT,
+      j: () => cT,
+      l: () => BT,
+      n: () => LT,
+      q: () => ZT
     });
-    const Op = 826427981,
-      op = 1,
-      Ip = 2,
-      Sp = 44,
-      xp = 46,
-      Lp = 58,
-      Yp = 8,
-      Dp = 4;
+    const WT = 826427981,
+      zT = 1,
+      MT = 2,
+      gT = 44,
+      nT = 46,
+      HT = 58,
+      kT = 8,
+      jT = 4;
 
-    function Ap(pp, ip, cp) {
-      const op = (new TextEncoder).encode(cp),
-        Ip = Yp + 4 * (ip.length + 2),
-        Sp = new Uint8Array(Ip + (op.byteLength + 3 & -4)),
-        xp = new DataView(Sp.buffer);
-      return xp.setUint32(0, pp, !0), xp.setUint32(Yp, Op, !0), ip.forEach(((pp, ip) => {
-        xp.setUint32(Yp + 4 * (ip + 1), pp, !0)
-      })), xp.setUint32(Ip - 4, op.byteLength, !0), Sp.set(op, Ip), Sp
+    function lT(TT, UT, mT) {
+      const zT = (new TextEncoder).encode(mT),
+        MT = kT + 4 * (UT.length + 2),
+        gT = new Uint8Array(MT + (zT.byteLength + 3 & -4)),
+        nT = new DataView(gT.buffer);
+      return nT.setUint32(0, TT, !0), nT.setUint32(kT, WT, !0), UT.forEach(((TT, UT) => {
+        nT.setUint32(kT + 4 * (UT + 1), TT, !0)
+      })), nT.setUint32(MT - 4, zT.byteLength, !0), gT.set(zT, MT), gT
     }
 
-    function Pp(pp, ip) {
-      return Ap(pp, [Ip], ip)
+    function LT(TT, UT) {
+      return lT(TT, [MT], UT)
     }
 
-    function Wp(pp, ip) {
-      return Ap(pp, [op, xp], ip)
+    function pT(TT, UT) {
+      return lT(TT, [zT, nT], UT)
     }
 
-    function yp(pp, ip) {
-      return Ap(pp, [op, Lp], ip)
+    function BT(TT, UT) {
+      return lT(TT, [zT, HT], UT)
     }
 
-    function Up(pp, ip) {
-      return Ap(pp, [op, Sp], ip)
+    function ZT(TT, UT) {
+      return lT(TT, [zT, gT], UT)
     }
 
-    function wp(pp) {
-      const ip = Yp;
-      if (pp.byteLength < ip + 12) return !1;
-      const cp = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      return cp.getUint32(ip, !0) === Op && cp.getUint32(ip + 4, !0) === op && cp.getUint32(ip + 8, !0) === Sp
+    function cT(TT) {
+      const UT = kT;
+      if (TT.byteLength < UT + 12) return !1;
+      const mT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      return mT.getUint32(UT, !0) === WT && mT.getUint32(UT + 4, !0) === zT && mT.getUint32(UT + 8, !0) === gT
     }
   },
-  40923: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      e: () => Dp,
-      g: () => Sp,
-      h: () => Lp
+  40871: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT,
+      e: () => jT,
+      g: () => gT,
+      i: () => HT
     });
-    var Op = cp(36484);
-    class op extends Error {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${pp}: the module trapped${cp?" in an earlier call":""}: ${String(ip)}`, {
-          cause: ip
-        }), this.site = pp, this.trap = ip, this.earlier = cp, this.name = "ModuleTrapError", ip instanceof Error && void 0 !== ip.stack && (this.stack = `${this.name}: ${this.message}\n${ip.stack}`)
+    var WT = mT(36358);
+    class zT extends Error {
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${TT}: the module trapped${mT?" in an earlier call":""}: ${String(UT)}`, {
+          cause: UT
+        }), this.site = TT, this.trap = UT, this.earlier = mT, this.name = "ModuleTrapError", UT instanceof Error && void 0 !== UT.stack && (this.stack = `${this.name}: ${this.message}\n${UT.stack}`)
       }
     }
-    const Ip = new WeakMap;
+    const MT = new WeakMap;
 
-    function Sp(pp) {
-      return Ip.has(pp)
+    function gT(TT) {
+      return MT.has(TT)
     }
 
-    function xp(pp, ip) {
-      Ip.has(pp) || Ip.set(pp, ip)
+    function nT(TT, UT) {
+      MT.has(TT) || MT.set(TT, UT)
     }
 
-    function Lp(pp, ip) {
-      return !!(0, Op.e)(ip) && (xp(pp, ip), !0)
+    function HT(TT, UT) {
+      return !!(0, WT.i)(UT) && (nT(TT, UT), !0)
     }
-    const Yp = [
-      ["error", pp => pp.error],
-      ["unhandledrejection", pp => pp.reason]
+    const kT = [
+      ["error", TT => TT.error],
+      ["unhandledrejection", TT => TT.reason]
     ];
 
-    function Dp(pp, ip, cp) {
-      let Sp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return Ip.has(pp) ? Promise.reject(new op(ip, Ip.get(pp), !0)) : new Promise(((Ip, Lp) => {
-        const Dp = cp => {
-            xp(pp, cp), Wp(), Lp(new op(ip, cp))
+    function jT(TT, UT, mT) {
+      let gT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return MT.has(TT) ? Promise.reject(new zT(UT, MT.get(TT), !0)) : new Promise(((MT, HT) => {
+        const jT = mT => {
+            nT(TT, mT), pT(), HT(new zT(UT, mT))
           },
-          Ap = pp => {
-            pp instanceof WebAssembly.RuntimeError ? Dp(pp) : (Wp(), Lp(pp))
+          lT = TT => {
+            TT instanceof WebAssembly.RuntimeError ? jT(TT) : (pT(), HT(TT))
           },
-          Pp = Yp.map((pp => {
-            let [ip, cp] = pp;
-            return [ip, pp => {
-              const ip = cp(pp);
-              (0, Op.e)(ip) && Dp(ip)
+          LT = kT.map((TT => {
+            let [UT, mT] = TT;
+            return [UT, TT => {
+              const UT = mT(TT);
+              (0, WT.i)(UT) && jT(UT)
             }]
           })),
-          Wp = () => {
-            for (const [pp, ip] of Pp) null === Sp || void 0 === Sp || Sp.removeEventListener(pp, ip)
+          pT = () => {
+            for (const [TT, UT] of LT) null === gT || void 0 === gT || gT.removeEventListener(TT, UT)
           };
-        for (const [pp, ip] of Pp) null === Sp || void 0 === Sp || Sp.addEventListener(pp, ip);
-        let yp;
+        for (const [TT, UT] of LT) null === gT || void 0 === gT || gT.addEventListener(TT, UT);
+        let BT;
         try {
-          yp = cp()
-        } catch (Up) {
-          return void Ap(Up)
+          BT = mT()
+        } catch (ZT) {
+          return void lT(ZT)
         }
-        yp.then((pp => {
-          Wp(), Ip(pp)
-        }), Ap)
+        BT.then((TT => {
+          pT(), MT(TT)
+        }), lT)
       }))
     }
   },
-  40902: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => hp,
-      C: () => Qp,
-      G: () => mp,
-      J: () => Xp,
-      K: () => np,
-      L: () => lp,
-      N: () => Bp,
-      O: () => Ep,
-      Q: () => Fp,
-      b: () => kp,
-      e: () => dp,
-      f: () => Np,
-      i: () => Jp,
-      j: () => Hp,
-      l: () => jp,
-      m: () => vp,
-      q: () => qp,
-      u: () => Cp,
-      x: () => ap
+  40855: (TT, UT, mT) => {
+    mT.d(UT, {
+      $: () => KT,
+      A: () => CT,
+      C: () => uT,
+      F: () => XT,
+      J: () => YT,
+      L: () => aT,
+      O: () => rT,
+      R: () => yT,
+      U: () => QT,
+      X: () => tT,
+      d: () => eT,
+      g: () => iT,
+      i: () => sT,
+      l: () => IT,
+      o: () => qT,
+      r: () => OT,
+      s: () => vT,
+      w: () => xT,
+      x: () => wT
     });
-    var Op = cp(209),
-      op = cp(25),
-      Ip = cp(3657),
-      Sp = cp(316),
-      xp = cp(44),
-      Lp = cp(40911),
-      Yp = cp(36679),
-      Dp = cp(40938),
-      Ap = (cp(40976), cp(41025)),
-      Pp = cp(40962);
-    const Wp = "wasmJoinBuild";
-    let yp = null,
-      Up = null,
-      wp = null;
+    var WT = mT(218),
+      zT = mT(25),
+      MT = mT(3672),
+      gT = mT(344),
+      nT = mT(44),
+      HT = mT(40860),
+      kT = mT(36546),
+      jT = mT(40883),
+      lT = (mT(40912), mT(40975)),
+      LT = mT(40902);
+    const pT = "wasmJoinBuild";
+    let BT = null,
+      ZT = null,
+      cT = null;
 
-    function vp(pp) {
-      wp = pp
+    function vT(TT) {
+      cT = TT
     }
-    let tp = !1;
+    let fT = !1;
 
-    function Hp() {
-      tp = !0
-    }
-
-    function dp() {
-      return tp
-    }
-    let ep = !1;
-
-    function jp() {
-      ep = !0
+    function qT() {
+      fT = !0
     }
 
-    function kp() {
-      return ep
+    function iT() {
+      return fT
+    }
+    let bT = !1;
+
+    function OT() {
+      bT = !0
     }
 
-    function mp() {
-      return wp
-    }
-    let Rp = null;
-
-    function qp(pp) {
-      Rp = pp, (0, Sp.e)(pp)
-    }
-    const Mp = "wasmClientRenderLost";
-
-    function Cp() {
-      xp.l.setItem(Mp, !0)
+    function eT() {
+      return bT
     }
 
-    function Ep() {
-      return !0 === xp.l.getItem(Mp)
+    function YT() {
+      return cT
+    }
+    let JT = null;
+
+    function xT(TT) {
+      JT = TT, (0, gT.d)(TT)
+    }
+    const dT = "wasmClientRenderLost";
+
+    function wT() {
+      nT.m.setItem(dT, !0)
     }
 
-    function Xp() {
-      return Rp
+    function tT() {
+      return !0 === nT.m.getItem(dT)
     }
 
-    function lp() {
-      if (null === yp) {
-        xp.h.removeItem("wasmLastPick"), xp.h.removeItem("wasmGuessVerdict");
+    function aT() {
+      return JT
+    }
+
+    function yT() {
+      if (null === BT) {
+        nT.l.removeItem("wasmLastPick"), nT.l.removeItem("wasmGuessVerdict");
         try {
           localStorage.removeItem("wasmClientMisdrawnGpu"), localStorage.removeItem("wasmClientGameGpu")
-        } catch {}(0, Sp.k)(), yp = (0, Lp.F)(Dp.f).then((pp => (null === pp || (0, Lp.s)(pp) || (Up = Ap.b[pp.backend], op.c.followGameGpu("webgpu" === pp.backend ? pp.adapter : null), "webgpu" === pp.backend && (0, Pp.g)()), pp)))
+        } catch {}(0, gT.p)(), BT = (0, HT.z)(jT.d).then((TT => (null === TT || (0, HT.n)(TT) || (ZT = lT.e[TT.backend], zT.b.followGameGpu("webgpu" === TT.backend ? TT.adapter : null), "webgpu" === TT.backend && (0, LT.e)()), TT)))
       }
-      return yp
+      return BT
     }
 
-    function Qp() {
-      return Up
+    function XT() {
+      return ZT
     }
 
-    function Jp(pp) {
-      return pp ? pp.load() : Promise.resolve().then((function() {
-        var pp = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw pp.code = "MODULE_NOT_FOUND", pp
-      })).then((pp => pp.bloxdWasmClient))
+    function IT(TT) {
+      return TT ? TT.load() : Promise.resolve().then((function() {
+        var TT = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw TT.code = "MODULE_NOT_FOUND", TT
+      })).then((TT => TT.bloxdWasmClient))
     }
 
-    function Bp(pp) {
-      xp.h.setItem(Wp, pp)
+    function QT(TT) {
+      nT.l.setItem(pT, TT)
     }
-    async function Np() {
-      if (null === Dp.f) return Jp(null);
-      const pp = xp.h.getItem(Wp);
-      let ip;
-      return null === pp ? ip = void 0 !== (0, Op.e)(Dp.f, "webgpu") && (0, Lp.E)() ? "webgpu" : "webgl" : "none" === pp ? ip = null : "string" === typeof pp && void 0 !== (0, Op.e)(Dp.f, pp) ? ip = pp : (console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(pp)}, is none of this client's: guessing WebGL2's`), ip = "webgl"), null === ip ? null : Dp.f[ip]()
+    async function sT() {
+      if (null === jT.d) return IT(null);
+      const TT = nT.l.getItem(pT);
+      let UT;
+      return null === TT ? UT = void 0 !== (0, WT.b)(jT.d, "webgpu") && (0, HT.v)() ? "webgpu" : "webgl" : "none" === TT ? UT = null : "string" === typeof TT && void 0 !== (0, WT.b)(jT.d, TT) ? UT = TT : (console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(TT)}, is none of this client's: guessing WebGL2's`), UT = "webgl"), null === UT ? null : jT.d[UT]()
     }
-    let Tp = null,
-      fp = null,
-      bp = null;
+    let FT = null,
+      PT = null,
+      VT = null;
 
-    function hp() {
-      return Tp ??= lp().then((async pp => {
-        const ip = null !== pp && !(0, Lp.s)(pp),
-          cp = {
-            indirectHangs: ip && await (0, Lp.T)(pp, window.location.search),
-            storagePullBreaks: ip && (0, Lp.ab)(pp, window.location.search),
-            splitPassBreaks: ip && (0, Lp._)(pp, window.location.search),
-            earlySky: ip && (0, Lp.Q)(pp, window.location.search),
-            instancedTerrain: ip ? (0, Lp.V)(pp, window.location.search) : null,
-            cellLight: ip && await (0, Ip.j)("cellLight"),
-            framesAhead: (0, Lp.k)(window.location.search),
-            webGpuRestores: !ip || (0, Lp.eb)(pp, (0, Yp.c)()),
-            bufferCopiesCrash: ip && (0, Lp.N)(pp, window.location.search)
+    function uT() {
+      return FT ??= yT().then((async TT => {
+        const UT = null !== TT && !(0, HT.n)(TT),
+          mT = {
+            indirectHangs: UT && await (0, HT.J)(TT, window.location.search),
+            storagePullBreaks: UT && (0, HT.T)(TT, window.location.search),
+            splitPassBreaks: UT && (0, HT.R)(TT, window.location.search),
+            earlySky: UT && (0, HT.F)(TT, window.location.search),
+            instancedTerrain: UT ? (0, HT.K)(TT, window.location.search) : null,
+            cellLight: UT && await (0, MT.k)("cellLight"),
+            framesAhead: (0, HT.i)(window.location.search),
+            webGpuRestores: !UT || (0, HT.X)(TT, (0, kT.d)()),
+            bufferCopiesCrash: UT && (0, HT.C)(TT, window.location.search)
           };
-        return fp = cp.indirectHangs, bp = !cp.webGpuRestores, cp
-      })), Tp
+        return PT = mT.indirectHangs, VT = !mT.webGpuRestores, mT
+      })), FT
     }
 
-    function ap() {
-      return fp
+    function CT() {
+      return PT
     }
 
-    function np() {
-      return bp
+    function rT() {
+      return VT
     }
-    async function Fp() {
-      const pp = null === yp ? null : await yp;
-      return null !== pp && (0, Lp.s)(pp) && (yp = null, Tp = null, fp = null, bp = null), lp()
+    async function KT() {
+      const TT = null === BT ? null : await BT;
+      return null !== TT && (0, HT.n)(TT) && (BT = null, FT = null, PT = null, VT = null), yT()
     }
   },
-  41185: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  41117: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT
     });
-    var Op = cp(36519),
-      op = cp(41058),
-      Ip = cp(36679);
+    var WT = mT(36394),
+      zT = mT(41009),
+      MT = mT(36546);
 
-    function Sp(pp, ip) {
-      return (0, Op.k)(pp, op.g, {
-        ...ip,
-        memoryMaximumBytes: (0, Ip.p)()
+    function gT(TT, UT) {
+      return (0, WT.h)(TT, zT.g, {
+        ...UT,
+        memoryMaximumBytes: (0, MT.n)()
       })
     }
   },
-  40930: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Yp,
-      h: () => xp,
-      l: () => Dp,
-      o: () => Sp
+  40879: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => kT,
+      e: () => nT,
+      g: () => jT,
+      j: () => gT
     });
-    var Op = cp(335),
-      op = cp(650);
-    let Ip;
+    var WT = mT(363),
+      zT = mT(675);
+    let MT;
 
-    function Sp(pp) {
-      var ip;
-      const cp = Ip;
-      return Ip = void 0, null !== (ip = Lp(pp)) && void 0 !== ip ? ip : cp
+    function gT(TT) {
+      var UT;
+      const mT = MT;
+      return MT = void 0, null !== (UT = HT(TT)) && void 0 !== UT ? UT : mT
     }
 
-    function xp(pp) {
+    function nT(TT) {
       try {
-        const ip = Lp(pp);
-        void 0 !== ip && (Ip = ip, (0, op.e)((0, Op.l)(ip.reason, ip.message)))
-      } catch (ip) {
-        console.warn("Couldn't keep the WebGPU loss's cause", ip)
+        const UT = HT(TT);
+        void 0 !== UT && (MT = UT, (0, zT.e)((0, WT.p)(UT.reason, UT.message)))
+      } catch (UT) {
+        console.warn("Couldn't keep the WebGPU loss's cause", UT)
       }
     }
 
-    function Lp(pp) {
-      var ip;
-      const cp = null === pp || void 0 === pp || null === (ip = pp.OSp) || void 0 === ip ? void 0 : ip.call(pp),
-        Op = null === pp || void 0 === pp ? void 0 : pp.cSp();
-      if (void 0 === Op) return;
-      const op = new Error(Op);
-      return void 0 !== cp && (op.reason = cp), op
+    function HT(TT) {
+      var UT;
+      const mT = null === TT || void 0 === TT || null === (UT = TT.IMT) || void 0 === UT ? void 0 : UT.call(TT),
+        WT = null === TT || void 0 === TT ? void 0 : TT.XMT();
+      if (void 0 === WT) return;
+      const zT = new Error(WT);
+      return void 0 !== mT && (zT.reason = mT), zT
     }
 
-    function Yp(pp) {
-      return pp instanceof Error ? pp : void 0
+    function kT(TT) {
+      return TT instanceof Error ? TT : void 0
     }
 
-    function Dp(pp, ip) {
-      return "lost" !== pp && "frames_refused" !== pp ? {} : (0, Op.l)("frames_refused" === pp ? pp : null === ip || void 0 === ip ? void 0 : ip.reason, null === ip || void 0 === ip ? void 0 : ip.message)
+    function jT(TT, UT) {
+      return "lost" !== TT && "frames_refused" !== TT ? {} : (0, WT.p)("frames_refused" === TT ? TT : null === UT || void 0 === UT ? void 0 : UT.reason, null === UT || void 0 === UT ? void 0 : UT.message)
     }
   },
-  40954: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => mp,
-      d: () => Hp,
-      g: () => tp,
-      k: () => kp,
-      n: () => Cp,
-      p: () => Mp,
-      t: () => Ep,
-      v: () => ep
+  40900: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => YT,
+      g: () => qT,
+      j: () => fT,
+      m: () => eT,
+      q: () => wT,
+      t: () => dT,
+      v: () => tT,
+      z: () => bT
     });
-    var Op = cp(4911),
-      op = cp(40962);
-    const Ip = 1,
-      Sp = 18,
-      xp = 19,
-      Lp = 20,
-      Yp = 21,
-      Dp = {
-        [Ip]: "link",
+    var WT = mT(4904),
+      zT = mT(40902);
+    const MT = 1,
+      gT = 18,
+      nT = 19,
+      HT = 20,
+      kT = 21,
+      jT = {
+        [MT]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -2848,25 +2858,25 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [Sp]: "retry linked",
-        [xp]: "fallback linked",
-        [Lp]: "fallback failed",
-        [Yp]: "link stalled",
+        [gT]: "retry linked",
+        [nT]: "fallback linked",
+        [HT]: "fallback failed",
+        [kT]: "link stalled",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function Ap(pp, ip, cp) {
-      return pp === Sp ? "program retry" : pp === Ip ? "program link" : pp === Yp ? "program link stall" : pp === xp || pp === Lp ? `program ${ip} ${cp}` : "program"
+    function lT(TT, UT, mT) {
+      return TT === gT ? "program retry" : TT === MT ? "program link" : TT === kT ? "program link stall" : TT === nT || TT === HT ? `program ${UT} ${mT}` : "program"
     }
-    const Pp = {
+    const LT = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      Wp = {
+      pT = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2879,18 +2889,18 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      yp = {
+      BT = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      Up = {
+      ZT = {
         11: "none read after view",
         12: "some read after view"
       },
-      wp = {
+      cT = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2898,22 +2908,22 @@ export const modules = {
         5: "no wait no clock",
         6: "no wait parallel links",
         7: "view shown unheld",
-        ...Up
+        ...ZT
       },
-      vp = {
+      vT = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function tp(pp, ip) {
-      return pp === Op.k.RenderSerialLinks && void 0 !== Up[ip]
+    function fT(TT, UT) {
+      return TT === WT.l.RenderSerialLinks && void 0 !== ZT[UT]
     }
 
-    function Hp(pp, ip) {
-      return pp === Op.k.RenderSerialLinks && void 0 !== vp[15 & ip]
+    function qT(TT, UT) {
+      return TT === WT.l.RenderSerialLinks && void 0 !== vT[15 & UT]
     }
-    const dp = {
+    const iT = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -2922,93 +2932,93 @@ export const modules = {
       37442: "context lost"
     };
 
-    function ep(pp) {
-      return String(pp).replace(/\d/g, (pp => String.fromCharCode(97 + Number(pp))))
+    function bT(TT) {
+      return String(TT).replace(/\d/g, (TT => String.fromCharCode(97 + Number(TT))))
     }
 
-    function jp(pp, ip) {
-      var cp;
-      return null !== (cp = pp[ip]) && void 0 !== cp ? cp : ep(ip)
+    function OT(TT, UT) {
+      var mT;
+      return null !== (mT = TT[UT]) && void 0 !== mT ? mT : bT(UT)
     }
 
-    function kp() {
-      return ep((0, op.e)())
+    function eT() {
+      return bT((0, zT.c)())
     }
 
-    function mp(pp, ip) {
-      switch (pp) {
-        case Op.k.RenderSceneRowNotDrawn:
+    function YT(TT, UT) {
+      switch (TT) {
+        case WT.l.RenderSceneRowNotDrawn:
           return {
-            words: ` ${jp(Wp,ip)}`, instance: String(ip), group: String(pp)
+            words: ` ${OT(pT,UT)}`, instance: String(UT), group: String(TT)
           };
-        case Op.k.RenderChunkMeshNotDrawn: {
-          const cp = 0 === (128 & ip) ? "" : " shortage",
-            Op = ip >>> 8;
+        case WT.l.RenderChunkMeshNotDrawn: {
+          const mT = 0 === (128 & UT) ? "" : " shortage",
+            WT = UT >>> 8;
           return {
-            words: ` ${jp(yp,127&ip)}${cp}${0===Op?"":` kind ${ep(Op)}`}`,
-            instance: String(ip),
-            group: String(pp)
+            words: ` ${OT(BT,127&UT)}${mT}${0===WT?"":` kind ${bT(WT)}`}`,
+            instance: String(UT),
+            group: String(TT)
           }
         }
-        case Op.k.RenderInternal: {
-          const cp = jp(Pp, 255 & ip),
-            Op = ip >>> 8 & 255;
-          if (0 === Op) return {
-            words: ` ${cp}`,
-            instance: String(ip),
-            group: String(pp)
+        case WT.l.RenderInternal: {
+          const mT = OT(LT, 255 & UT),
+            WT = UT >>> 8 & 255;
+          if (0 === WT) return {
+            words: ` ${mT}`,
+            instance: String(UT),
+            group: String(TT)
           };
-          const op = jp(Dp, Op),
-            Ip = ip >>> 16;
+          const zT = OT(jT, WT),
+            MT = UT >>> 16;
           return {
-            words: ` ${cp} ${op} program ${ep(Ip)}`,
-            instance: `${cp} ${op} ${Ip}`,
-            group: Ap(Op, op, cp),
+            words: ` ${mT} ${zT} program ${bT(MT)}`,
+            instance: `${mT} ${zT} ${MT}`,
+            group: lT(WT, zT, mT),
             gpuDetails: {
-              programFailure: op,
-              program: String(Ip)
+              programFailure: zT,
+              program: String(MT)
             }
           }
         }
-        case Op.k.RenderSerialLinks: {
-          if (Hp(pp, ip)) {
-            const pp = function(pp) {
-              const ip = (ip, cp) => ep(pp >>> ip & (1 << cp) - 1),
-                cp = pp >>> 30 & 1 ? " restored" : "";
-              return `link census ${vp[15&pp]} linked ${ip(22,8)} failed ${ip(4,6)} retried ${ip(10,6)} fallback ${ip(16,6)}${cp}`
-            }(ip);
+        case WT.l.RenderSerialLinks: {
+          if (qT(TT, UT)) {
+            const TT = function(TT) {
+              const UT = (UT, mT) => bT(TT >>> UT & (1 << mT) - 1),
+                mT = TT >>> 30 & 1 ? " restored" : "";
+              return `link census ${vT[15&TT]} linked ${UT(22,8)} failed ${UT(4,6)} retried ${UT(10,6)} fallback ${UT(16,6)}${mT}`
+            }(UT);
             return {
-              words: ` ${pp}`,
-              instance: String(15 & ip),
+              words: ` ${TT}`,
+              instance: String(15 & UT),
               group: "link census",
               gpuDetails: {
-                linkCensus: pp
+                linkCensus: TT
               }
             }
           }
-          const cp = jp(wp, ip);
+          const mT = OT(cT, UT);
           return {
-            words: ` ${cp}`,
-            instance: String(ip),
-            group: String(pp),
+            words: ` ${mT}`,
+            instance: String(UT),
+            group: String(TT),
             gpuDetails: {
-              serialLinks: cp
+              serialLinks: mT
             }
           }
         }
-        case Op.k.RenderGlErrorAfterRestore: {
-          const cp = jp(dp, 65535 & ip),
-            Op = ip >>> 16,
-            op = 65535 !== Op;
+        case WT.l.RenderGlErrorAfterRestore: {
+          const mT = OT(iT, 65535 & UT),
+            WT = UT >>> 16,
+            zT = 65535 !== WT;
           return {
-            words: ` ${cp}${op?` program ${ep(Op)}`:""}`,
-            instance: String(ip),
-            group: String(pp),
-            gpuDetails: op ? {
-              glError: cp,
-              program: String(Op)
+            words: ` ${mT}${zT?` program ${bT(WT)}`:""}`,
+            instance: String(UT),
+            group: String(TT),
+            gpuDetails: zT ? {
+              glError: mT,
+              program: String(WT)
             } : {
-              glError: cp
+              glError: mT
             }
           }
         }
@@ -3016,562 +3026,562 @@ export const modules = {
           return null
       }
     }
-    const Rp = 2,
-      qp = new Map;
+    const JT = 2,
+      xT = new Map;
 
-    function Mp(pp) {
+    function dT(TT) {
       let {
-        group: ip,
-        instance: cp
-      } = pp, Op = qp.get(ip);
-      return void 0 === Op && (Op = [], qp.set(ip, Op)), !Op.includes(cp) && (Op.length >= Rp || (Op.push(cp), !1))
+        group: UT,
+        instance: mT
+      } = TT, WT = xT.get(UT);
+      return void 0 === WT && (WT = [], xT.set(UT, WT)), !WT.includes(mT) && (WT.length >= JT || (WT.push(mT), !1))
     }
 
-    function Cp() {
-      return qp.size > 0
+    function wT() {
+      return xT.size > 0
     }
 
-    function Ep() {
-      qp.clear()
+    function tT() {
+      xT.clear()
     }
   },
-  40938: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      f: () => Ip
+  40883: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT,
+      d: () => MT
     });
-    var Op = cp(40945);
-    const op = new WeakSet;
-    const Ip = {
+    var WT = mT(40887);
+    const zT = new WeakSet;
+    const MT = {
         webgpu: async () => (function() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
-          if (void 0 === pp || op.has(pp.prototype)) return;
-          op.add(pp.prototype);
-          const ip = pp.prototype.requestDevice;
-          pp.prototype.requestDevice = function(pp) {
-            var cp;
-            const op = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.requiredLimits) && void 0 !== cp ? cp : {},
-              Ip = Object.keys(op).filter((pp => !(pp in this.limits)));
-            if (0 === Ip.length) return ip.call(this, pp);
-            const Sp = Object.fromEntries(Object.entries(op).filter((pp => {
-              let [ip] = pp;
-              return ip in this.limits
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
+          if (void 0 === TT || zT.has(TT.prototype)) return;
+          zT.add(TT.prototype);
+          const UT = TT.prototype.requestDevice;
+          TT.prototype.requestDevice = function(TT) {
+            var mT;
+            const zT = null !== (mT = null === TT || void 0 === TT ? void 0 : TT.requiredLimits) && void 0 !== mT ? mT : {},
+              MT = Object.keys(zT).filter((TT => !(TT in this.limits)));
+            if (0 === MT.length) return UT.call(this, TT);
+            const gT = Object.fromEntries(Object.entries(zT).filter((TT => {
+              let [UT] = TT;
+              return UT in this.limits
             })));
-            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${Ip.join(", ")}`), (0, Op.reportDroppedRequiredLimits)(Ip), ip.call(this, {
-              ...pp,
-              requiredLimits: Sp
+            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${MT.join(", ")}`), (0, WT.reportDroppedRequiredLimits)(MT), UT.call(this, {
+              ...TT,
+              requiredLimits: gT
             })
           }
-        }(), (await cp.e(8).then((() => cp(42898)))).bloxdWasmWebgpu),
-        webgl: async () => (await cp.e(6).then((() => cp(42908)))).bloxdWasmWebgl,
-        webgl1: async () => (await cp.e(7).then((() => cp(42923)))).bloxdWasmWebgl1
+        }(), (await mT.e(8).then((() => mT(42777)))).bloxdWasmWebgpu),
+        webgl: async () => (await mT.e(6).then((() => mT(42790)))).bloxdWasmWebgl,
+        webgl1: async () => (await mT.e(7).then((() => mT(42803)))).bloxdWasmWebgl1
       },
-      Sp = async () => (await cp.e(5).then((() => cp(42935)))).compileAnimationPackInWasm
+      gT = async () => (await mT.e(5).then((() => mT(42816)))).compileAnimationPackInWasm
   },
-  40889: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => vp,
-      g: () => wp,
-      k: () => ep
+  40832: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => vT,
+      f: () => cT,
+      h: () => bT
     });
-    var Op = cp(6788),
-      op = cp(34),
-      Ip = cp(4385),
-      Sp = cp(4911),
-      xp = cp(6780),
-      Lp = cp(40892);
+    var WT = mT(6713),
+      zT = mT(31),
+      MT = mT(4388),
+      gT = mT(4904),
+      nT = mT(6706),
+      HT = mT(40839);
 
-    function Yp(pp, ip) {
-      const cp = (0, xp.c)(ip.variants);
-      return pp.setShaderPack(cp.variantFlags, cp.hooks, cp.moduleCodes, (0, Lp.A)(ip.layers), Lp.m[ip.Cx], ip.keepCircleShadows)
+    function kT(TT, UT) {
+      const mT = (0, nT.d)(UT.variants);
+      return TT.setShaderPack(mT.variantFlags, mT.hooks, mT.moduleCodes, (0, HT.F)(UT.layers), HT.r[UT.Tn], UT.keepCircleShadows)
     }
-    const Dp = 0,
-      Ap = 1,
-      Pp = 2,
-      Wp = "shaderPack:failedToCompile",
-      yp = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      Up = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
+    const jT = 0,
+      lT = 1,
+      LT = 2,
+      pT = "shaderPack:failedToCompile",
+      BT = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      ZT = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
 
-    function wp(pp, ip) {
-      var cp;
-      const Op = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.reason) && void 0 !== cp ? cp : "none";
-      return yp.has(Op) ? {
-        messageKey: ip ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function cT(TT, UT) {
+      var mT;
+      const WT = null !== (mT = null === TT || void 0 === TT ? void 0 : TT.reason) && void 0 !== mT ? mT : "none";
+      return BT.has(WT) ? {
+        messageKey: UT ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === Op && "override" === (null === pp || void 0 === pp ? void 0 : pp.source) ? {
+      } : "not_requested" === WT && "override" === (null === TT || void 0 === TT ? void 0 : TT.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: Up.has(Op) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: ZT.has(WT) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    class vp extends Error {
-      constructor(pp) {
-        super(`the shader pack can't run in this game: ${pp}`), this.messageKey = pp, this.name = "ShaderPackJoinError"
+    class vT extends Error {
+      constructor(TT) {
+        super(`the shader pack can't run in this game: ${TT}`), this.messageKey = TT, this.name = "ShaderPackJoinError"
       }
     }
-    const tp = "strict";
-    class Hp {
-      constructor(pp) {
-        this.deps = pp, this.pagePack = void 0, this.loaded = null, this.Cx = tp, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = pp.load().catch((ip => (pp.warn("the shader pack could not load: the game draws without it", ip), {
+    const fT = "strict";
+    class qT {
+      constructor(TT) {
+        this.deps = TT, this.pagePack = void 0, this.loaded = null, this.Tn = fT, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = TT.load().catch((UT => (TT.warn("the shader pack could not load: the game draws without it", UT), {
           status: "none"
-        }))).then((pp => (this.loaded = pp, "active" === pp.status && (this.handOverToPreviews(pp), null !== pp.harnessPolicy && (this.Cx = pp.harnessPolicy, this.handOver())), pp)))
+        }))).then((TT => (this.loaded = TT, "active" === TT.status && (this.handOverToPreviews(TT), null !== TT.harnessPolicy && (this.Tn = TT.harnessPolicy, this.handOver())), TT)))
       }
-      async join(pp) {
+      async join(TT) {
         this.leave();
-        const ip = this.game,
-          [cp, op] = await Promise.all([this.pagePack, this.policyOf(pp)]);
-        if (ip !== this.game || "none" === cp.status) return null;
-        const Ip = "active" === cp.status ? cp.pack.variants : cp.variants,
-          Sp = (0, Op.f)(Ip, op);
-        if (Sp && "active" === cp.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (Sp) {
-          const pp = this.cantRun(cp, op);
-          if (null !== pp) return pp
-        } else if ("blocked" === cp.status || null === this.deps.core) return null;
-        return this.Cx = op, this.handOver(), Sp && this.refused ? Wp : (this.joined = !0, this.offInThisGame = !Sp, null)
+        const UT = this.game,
+          [mT, zT] = await Promise.all([this.pagePack, this.policyOf(TT)]);
+        if (UT !== this.game || "none" === mT.status) return null;
+        const MT = "active" === mT.status ? mT.pack.variants : mT.variants,
+          gT = (0, WT.l)(MT, zT);
+        if (gT && "active" === mT.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (gT) {
+          const TT = this.cantRun(mT, zT);
+          if (null !== TT) return TT
+        } else if ("blocked" === mT.status || null === this.deps.core) return null;
+        return this.Tn = zT, this.handOver(), gT && this.refused ? pT : (this.joined = !0, this.offInThisGame = !gT, null)
       }
-      async replay(pp) {
-        const ip = await this.join(pp);
-        null === ip ? this.playable() : this.deps.failInGame(ip)
+      async replay(TT) {
+        const UT = await this.join(TT);
+        null === UT ? this.playable() : this.deps.failInGame(UT)
       }
-      cantRun(pp, ip) {
+      cantRun(TT, UT) {
         const {
-          core: cp,
-          noWebGpu: Op
+          core: mT,
+          noWebGpu: WT
         } = this.deps;
-        if ("blocked" === pp.status) {
-          return "shaderPack:failedUnchecked" === pp.messageKey && null === cp && Op.noAdapter ? Op.messageKey : pp.messageKey
+        if ("blocked" === TT.status) {
+          return "shaderPack:failedUnchecked" === TT.messageKey && null === mT && WT.noAdapter ? WT.messageKey : TT.messageKey
         }
-        return this.refused || this.failedPolicies.has(ip) ? Wp : null
+        return this.refused || this.failedPolicies.has(UT) ? pT : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var pp;
-        return this.runsInJoinedGame() && "active" === (null === (pp = this.loaded) || void 0 === pp ? void 0 : pp.status) ? function(pp, ip) {
-          const cp = pp.filter((pp => (0, Op.f)([pp], ip))),
-            op = pp => cp.some((ip => ip[pp]));
+        var TT;
+        return this.runsInJoinedGame() && "active" === (null === (TT = this.loaded) || void 0 === TT ? void 0 : TT.status) ? function(TT, UT) {
+          const mT = TT.filter((TT => (0, WT.l)([TT], UT))),
+            zT = TT => mT.some((UT => UT[TT]));
           return {
-            sceneDepth: op("sceneDepth"),
-            sunShadow: op("sunShadow"),
-            airShadow: op("airShadow")
+            sceneDepth: zT("sceneDepth"),
+            sunShadow: zT("sunShadow"),
+            airShadow: zT("airShadow")
           }
-        }(this.loaded.pack.variants, this.Cx) : null
+        }(this.loaded.pack.variants, this.Tn) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Wp) : (null !== this.couldntRun ? this.notify(Ip.c, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Cx) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(pT) : (null !== this.couldntRun ? this.notify(MT.c, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Tn) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(pp) {
+      coreErrors(TT) {
         for (const {
-            code: ip,
-            detail: cp
+            code: UT,
+            detail: mT
           }
-          of pp)
-          if (ip === Sp.k.RenderShaderPackNotRun) switch (255 & cp) {
-            case Dp:
+          of TT)
+          if (UT === gT.l.RenderShaderPackNotRun) switch (255 & mT) {
+            case jT:
               this.refused = !0, this.failed();
               break;
-            case Ap:
-              this.failedPolicies.add(this.Cx), this.failed();
+            case lT:
+              this.failedPolicies.add(this.Tn), this.failed();
               break;
-            case Pp:
-              this.failedModelPolicies.add(this.Cx), this.playing && this.notifyModelFallback()
+            case LT:
+              this.failedModelPolicies.add(this.Tn), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(Wp) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(pT) : this.failedWhileJoining = !0)
       }
-      fail(pp) {
-        this.leave(), this.deps.failInGame(pp)
+      fail(TT) {
+        this.leave(), this.deps.failInGame(TT)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(pp, ip) {
-        const cp = this.game;
-        this.deps.notify(pp, (() => cp === this.game && this.joined), ip)
+      notify(TT, UT) {
+        const mT = this.game;
+        this.deps.notify(TT, (() => mT === this.game && this.joined), UT)
       }
       handOver() {
-        var pp;
+        var TT;
         const {
-          core: ip
+          core: UT
         } = this.deps;
-        null !== ip && "active" === (null === (pp = this.loaded) || void 0 === pp ? void 0 : pp.status) && (Yp(ip, {
+        null !== UT && "active" === (null === (TT = this.loaded) || void 0 === TT ? void 0 : TT.status) && (kT(UT, {
           ...this.loaded.pack,
-          Cx: this.Cx
+          Tn: this.Tn
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(pp) {
+      handOverToPreviews(TT) {
         let {
-          pack: ip,
-          harnessPolicy: cp
-        } = pp;
+          pack: UT,
+          harnessPolicy: mT
+        } = TT;
         const {
-          previews: Op
+          previews: WT
         } = this.deps;
-        null !== Op && Yp(Op, {
-          ...ip,
-          Cx: null !== cp && void 0 !== cp ? cp : tp
+        null !== WT && kT(WT, {
+          ...UT,
+          Tn: null !== mT && void 0 !== mT ? mT : fT
         })
       }
-      policyOf(pp) {
-        return this.deps.policyOf(pp).catch((pp => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", pp), tp)))
+      policyOf(TT) {
+        return this.deps.policyOf(TT).catch((TT => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", TT), fT)))
       }
     }
-    const dp = "wasmShaderPackNotice";
+    const iT = "wasmShaderPackNotice";
 
-    function ep(pp, ip, cp, Op) {
-      return op.m.subscribe(dp, (pp => {
+    function bT(TT, UT, mT, WT) {
+      return zT.j.subscribe(iT, (TT => {
         let {
-          translationKey: ip,
-          stillCurrent: cp,
-          reasonKey: Op
-        } = pp;
-        cp() && op.m.GA("chat", (0, Ip.j)(ip, Op))
-      })), new Hp({
-        load: jp,
-        policyOf: kp,
-        core: pp,
-        previews: ip,
-        noWebGpu: cp,
-        notify: (pp, ip, cp) => {
-          const Op = {
-            translationKey: pp,
-            stillCurrent: ip,
-            reasonKey: cp
+          translationKey: UT,
+          stillCurrent: mT,
+          reasonKey: WT
+        } = TT;
+        mT() && zT.j.EZ("chat", (0, MT.e)(UT, WT))
+      })), new qT({
+        load: OT,
+        policyOf: eT,
+        core: TT,
+        previews: UT,
+        noWebGpu: mT,
+        notify: (TT, UT, mT) => {
+          const WT = {
+            translationKey: TT,
+            stillCurrent: UT,
+            reasonKey: mT
           };
-          op.m.GA(dp, Op, !0)
+          zT.j.EZ(iT, WT, !0)
         },
-        failInGame: pp => {
-          op.m.GA(Ip.g, pp)
+        failInGame: TT => {
+          zT.j.EZ(MT.d, TT)
         },
-        warn: Op
+        warn: WT
       })
     }
-    async function jp() {
+    async function OT() {
       const [{
-        shaderPackPage: pp,
-        harnessShaderPackMode: ip
+        shaderPackPage: TT,
+        harnessShaderPackMode: UT
       }, {
-        shaderPackTextures: Op
-      }] = await Promise.all([cp.e(117).then((() => cp(39396))), cp.e(118).then((() => cp(6772)))]), op = await pp.load();
-      return "active" !== op.status ? op : {
+        shaderPackTextures: WT
+      }] = await Promise.all([mT.e(117).then((() => mT(39343))), mT.e(118).then((() => mT(6698)))]), zT = await TT.load();
+      return "active" !== zT.status ? zT : {
         status: "active",
         pack: {
-          variants: op.pack.variants,
-          layers: Op().layers,
-          keepCircleShadows: op.pack.keepCircleShadows
+          variants: zT.pack.variants,
+          layers: WT().layers,
+          keepCircleShadows: zT.pack.keepCircleShadows
         },
-        harnessPolicy: ip()
+        harnessPolicy: UT()
       }
     }
-    async function kp(pp) {
-      var ip;
+    async function eT(TT) {
+      var UT;
       const [{
-        shaderPackPage: Op,
-        harnessShaderPackMode: op
+        shaderPackPage: WT,
+        harnessShaderPackMode: zT
       }, {
-        getShaderPackPolicy: Ip
-      }] = await Promise.all([cp.e(117).then((() => cp(39396))), cp.e(93).then((() => cp(41507)))]);
-      return await Op.load(), null !== (ip = op()) && void 0 !== ip ? ip : Ip(pp)
+        getShaderPackPolicy: MT
+      }] = await Promise.all([mT.e(117).then((() => mT(39343))), mT.e(93).then((() => mT(41427)))]);
+      return await WT.load(), null !== (UT = zT()) && void 0 !== UT ? UT : MT(TT)
     }
   },
-  41008: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp,
-      f: () => wp,
-      h: () => Lp,
-      i: () => Yp,
-      j: () => Dp,
-      n: () => Pp
+  40951: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => nT,
+      f: () => cT,
+      j: () => HT,
+      k: () => kT,
+      l: () => jT,
+      o: () => LT
     });
-    var Op = cp(41014),
-      op = cp(41016);
-    const Ip = "atlas:",
-      Sp = 3e4;
-    class xp extends Error {
-      constructor(pp, ip) {
-        super(`fetching ${pp} answered HTTP ${ip}`), this.url = pp, this.status = ip, this.name = "TerrainTextureFetchError"
+    var WT = mT(40957),
+      zT = mT(40966);
+    const MT = "atlas:",
+      gT = 3e4;
+    class nT extends Error {
+      constructor(TT, UT) {
+        super(`fetching ${TT} answered HTTP ${UT}`), this.url = TT, this.status = UT, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function Lp(pp) {
-      if (!pp.startsWith(Ip)) return null;
-      const ip = Number(pp.slice(Ip.length));
-      return Number.isInteger(ip) && ip >= 0 ? ip : null
+    function HT(TT) {
+      if (!TT.startsWith(MT)) return null;
+      const UT = Number(TT.slice(MT.length));
+      return Number.isInteger(UT) && UT >= 0 ? UT : null
     }
-    async function Yp() {
-      const pp = await cp.e(207).then((() => cp(34510)));
+    async function kT() {
+      const TT = await mT.e(207).then((() => mT(34366)));
       return {
-        atlasSheets: pp.blockAtlasUrls,
-        texture: ip => {
-          var cp, Op, Ip;
-          return null !== (cp = null !== (Op = null !== (Ip = pp.animatedBlockTextures[ip]) && void 0 !== Ip ? Ip : pp.rotatedBlockTextures[ip]) && void 0 !== Op ? Op : op.c[ip]) && void 0 !== cp ? cp : null
+        atlasSheets: TT.blockAtlasUrls,
+        texture: UT => {
+          var mT, WT, MT;
+          return null !== (mT = null !== (WT = null !== (MT = TT.animatedBlockTextures[UT]) && void 0 !== MT ? MT : TT.rotatedBlockTextures[UT]) && void 0 !== WT ? WT : zT.e[UT]) && void 0 !== mT ? mT : null
         }
       }
     }
-    async function Dp(pp) {
-      const ip = new AbortController,
-        cp = setTimeout((() => {
-          ip.abort(new DOMException(`${pp} took over ${Sp} ms`, "TimeoutError"))
-        }), Sp);
-      let Op;
+    async function jT(TT) {
+      const UT = new AbortController,
+        mT = setTimeout((() => {
+          UT.abort(new DOMException(`${TT} took over ${gT} ms`, "TimeoutError"))
+        }), gT);
+      let WT;
       try {
-        const cp = await fetch(pp, {
-          signal: ip.signal
+        const mT = await fetch(TT, {
+          signal: UT.signal
         });
-        if (!cp.ok) throw new xp(pp, cp.status);
-        Op = await cp.blob()
+        if (!mT.ok) throw new nT(TT, mT.status);
+        WT = await mT.blob()
       } finally {
-        clearTimeout(cp)
+        clearTimeout(mT)
       }
-      const op = await createImageBitmap(Op, {
+      const zT = await createImageBitmap(WT, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return Pp(op)
+        return LT(zT)
       } finally {
-        op.close()
+        zT.close()
       }
     }
-    const Ap = 8192;
+    const lT = 8192;
 
-    function Pp(pp) {
+    function LT(TT) {
       const {
-        width: ip,
-        height: cp
-      } = pp, op = Math.max(1, Math.min(cp, Ap)), Ip = (0, Op.e)(ip, op, {
+        width: UT,
+        height: mT
+      } = TT, zT = Math.max(1, Math.min(mT, lT)), MT = (0, WT.e)(UT, zT, {
         willReadFrequently: !0
       });
-      if (!Ip) throw new Error("no 2D context to read the texture back");
-      Ip.globalCompositeOperation = "copy";
-      const Sp = new Uint8Array(ip * cp * 4);
-      for (let Op = 0; Op < cp; Op += op) {
-        const xp = Math.min(op, cp - Op);
-        Ip.drawImage(pp, 0, Op, ip, xp, 0, 0, ip, xp), Sp.set(Ip.getImageData(0, 0, ip, xp).data, Op * ip * 4)
+      if (!MT) throw new Error("no 2D context to read the texture back");
+      MT.globalCompositeOperation = "copy";
+      const gT = new Uint8Array(UT * mT * 4);
+      for (let WT = 0; WT < mT; WT += zT) {
+        const nT = Math.min(zT, mT - WT);
+        MT.drawImage(TT, 0, WT, UT, nT, 0, 0, UT, nT), gT.set(MT.getImageData(0, 0, UT, nT).data, WT * UT * 4)
       }
       return {
-        width: ip,
-        height: cp,
-        pixels: Sp
+        width: UT,
+        height: mT,
+        pixels: gT
       }
     }
-    async function Wp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Dp;
-      const Op = [],
-        op = await Promise.all(pp.map((async pp => {
-          var op, Sp;
-          const xp = null !== (op = null === (Sp = ip.decoded) || void 0 === Sp ? void 0 : Sp.call(ip, pp)) && void 0 !== op ? op : null,
-            Yp = null === xp ? function(pp, ip) {
-              if (pp.startsWith(Ip)) {
-                var cp;
-                const Op = Lp(pp);
-                return null === Op ? null : null !== (cp = ip.atlasSheets[Op]) && void 0 !== cp ? cp : null
+    async function pT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : jT;
+      const WT = [],
+        zT = await Promise.all(TT.map((async TT => {
+          var zT, gT;
+          const nT = null !== (zT = null === (gT = UT.decoded) || void 0 === gT ? void 0 : gT.call(UT, TT)) && void 0 !== zT ? zT : null,
+            kT = null === nT ? function(TT, UT) {
+              if (TT.startsWith(MT)) {
+                var mT;
+                const WT = HT(TT);
+                return null === WT ? null : null !== (mT = UT.atlasSheets[WT]) && void 0 !== mT ? mT : null
               }
-              return ip.texture(pp)
-            }(pp, ip) : null,
-            Dp = null !== xp && void 0 !== xp ? xp : null === Yp ? null : cp(Yp);
-          if (null === Dp) return Op.push({
-            name: pp,
-            url: Yp,
-            error: new Error(`no URL for terrain texture ${pp}`)
+              return UT.texture(TT)
+            }(TT, UT) : null,
+            jT = null !== nT && void 0 !== nT ? nT : null === kT ? null : mT(kT);
+          if (null === jT) return WT.push({
+            name: TT,
+            url: kT,
+            error: new Error(`no URL for terrain texture ${TT}`)
           }), null;
           try {
-            const ip = await Dp;
-            if (ip.pixels.byteLength !== ip.width * ip.height * 4) throw new Error(`decoded ${ip.pixels.byteLength} bytes for ${ip.width}x${ip.height} texels`);
+            const UT = await jT;
+            if (UT.pixels.byteLength !== UT.width * UT.height * 4) throw new Error(`decoded ${UT.pixels.byteLength} bytes for ${UT.width}x${UT.height} texels`);
             return {
-              name: pp,
-              texture: ip
+              name: TT,
+              texture: UT
             }
-          } catch (Ap) {
-            return Op.push({
-              name: pp,
-              url: Yp,
-              error: Ap
+          } catch (lT) {
+            return WT.push({
+              name: TT,
+              url: kT,
+              error: lT
             }), null
           }
         }))),
-        Sp = op.filter((pp => null !== pp)),
-        xp = new Uint32Array(2 * Sp.length);
-      Sp.forEach(((pp, ip) => {
+        gT = zT.filter((TT => null !== TT)),
+        nT = new Uint32Array(2 * gT.length);
+      gT.forEach(((TT, UT) => {
         let {
-          texture: cp
-        } = pp;
-        xp[2 * ip] = cp.width, xp[2 * ip + 1] = cp.height
+          texture: mT
+        } = TT;
+        nT[2 * UT] = mT.width, nT[2 * UT + 1] = mT.height
       }));
       return {
         handOver: {
-          names: Sp.map((pp => {
+          names: gT.map((TT => {
             let {
-              name: ip
-            } = pp;
-            return ip
+              name: UT
+            } = TT;
+            return UT
           })),
-          textures: Sp.map((pp => {
+          textures: gT.map((TT => {
             let {
-              texture: ip
-            } = pp;
-            return ip.pixels
+              texture: UT
+            } = TT;
+            return UT.pixels
           })),
-          sizes: xp
+          sizes: nT
         },
-        failures: Op
+        failures: WT
       }
     }
-    const yp = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const BT = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function Up() {}
-    class wp {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yp,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = pp, this.retryMs = ip, this.keepBelow = cp, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function ZT() {}
+    class cT {
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BT,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = TT, this.retryMs = UT, this.keepBelow = mT, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Yp,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Op = ++this.started,
-          op = {
-            decode: cp.decode,
-            wholeAtlas: cp.wholeAtlas
+      async swap(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kT,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const WT = ++this.started,
+          zT = {
+            decode: mT.decode,
+            wholeAtlas: mT.wholeAtlas
           };
-        return this.loadAndHandOver(ip, op, pp, (() => {
-          var pp;
-          return Op < this.landed || !1 === (null === (pp = cp.wanted) || void 0 === pp ? void 0 : pp.call(cp))
+        return this.loadAndHandOver(UT, zT, TT, (() => {
+          var TT;
+          return WT < this.landed || !1 === (null === (TT = mT.wanted) || void 0 === TT ? void 0 : TT.call(mT))
         }), {
-          onTaken: (pp, cp) => {
-            this.landed = Op, this.current = {
-              mine: Op,
-              sources: ip,
-              load: op,
-              aW: pp,
-              failed: cp
+          onTaken: (TT, mT) => {
+            this.landed = WT, this.current = {
+              mine: WT,
+              sources: UT,
+              load: zT,
+              Jp: TT,
+              failed: mT
             }
           }
         })
       }
-      restore(pp) {
-        var ip;
-        const cp = this.current;
-        if (null === cp) return Promise.resolve(null);
-        if ((null === (ip = this.restoring) || void 0 === ip ? void 0 : ip.mine) === cp.mine) return this.restoring.done;
-        const Op = {
-          mine: cp.mine,
-          done: this.restoreLanded(cp, pp).finally((() => {
-            this.restoring === Op && (this.restoring = null)
+      restore(TT) {
+        var UT;
+        const mT = this.current;
+        if (null === mT) return Promise.resolve(null);
+        if ((null === (UT = this.restoring) || void 0 === UT ? void 0 : UT.mine) === mT.mine) return this.restoring.done;
+        const WT = {
+          mine: mT.mine,
+          done: this.restoreLanded(mT, TT).finally((() => {
+            this.restoring === WT && (this.restoring = null)
           }))
         };
-        return this.restoring = Op, Op.done
+        return this.restoring = WT, WT.done
       }
-      async restoreLanded(pp, ip) {
-        const cp = () => this.landed !== pp.mine,
+      async restoreLanded(TT, UT) {
+        const mT = () => this.landed !== TT.mine,
           {
-            aW: Op
-          } = pp;
-        if (null !== Op) return this.stopped() ? null : this.core.setTerrainTextures(Op.names, Op.textures, Op.sizes);
-        let op = ip;
-        for (let Ip = 0;; Ip++) {
-          const ip = this.retryMs.at(Ip),
-            Op = {
-              allOrNothingExcept: void 0 === ip ? void 0 : pp.failed
+            Jp: WT
+          } = TT;
+        if (null !== WT) return this.stopped() ? null : this.core.setTerrainTextures(WT.names, WT.textures, WT.sizes);
+        let zT = UT;
+        for (let MT = 0;; MT++) {
+          const UT = this.retryMs.at(MT),
+            WT = {
+              allOrNothingExcept: void 0 === UT ? void 0 : TT.failed
             },
-            Sp = await this.loadAndHandOver(pp.sources, pp.load, op, cp, Op);
-          if (!1 !== Sp || void 0 === ip || this.stopped()) return Sp;
-          if (op = Up, await new Promise((pp => {
-              setTimeout(pp, ip)
-            })), cp()) return null
+            gT = await this.loadAndHandOver(TT.sources, TT.load, zT, mT, WT);
+          if (!1 !== gT || void 0 === UT || this.stopped()) return gT;
+          if (zT = ZT, await new Promise((TT => {
+              setTimeout(TT, UT)
+            })), mT()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const Ip = this.core.terrainTextureNames();
-        var Sp;
-        if (0 === Ip.length) return null === (Sp = op.onTaken) || void 0 === Sp || Sp.call(op, null, new Set), !0;
-        let xp, Yp;
+        const MT = this.core.terrainTextureNames();
+        var gT;
+        if (0 === MT.length) return null === (gT = zT.onTaken) || void 0 === gT || gT.call(zT, null, new Set), !0;
+        let nT, kT;
         try {
-          xp = await pp(), Yp = await Wp(Ip, xp, ip.decode)
-        } catch (wp) {
-          return Op() ? null : (cp({
+          nT = await TT(), kT = await pT(MT, nT, UT.decode)
+        } catch (cT) {
+          return WT() ? null : (mT({
             name: null,
             url: null,
-            error: wp
+            error: cT
           }), !1)
         }
-        if (Op() || this.stopped()) return null;
-        for (const Lp of Yp.failures) cp(Lp);
-        const Dp = op.allOrNothingExcept;
-        if (void 0 !== Dp && Yp.failures.some((pp => {
+        if (WT() || this.stopped()) return null;
+        for (const HT of kT.failures) mT(HT);
+        const jT = zT.allOrNothingExcept;
+        if (void 0 !== jT && kT.failures.some((TT => {
             let {
-              name: ip
-            } = pp;
-            return null === ip || !Dp.has(ip)
-          })) || !0 === ip.wholeAtlas && Yp.failures.some((pp => {
+              name: UT
+            } = TT;
+            return null === UT || !jT.has(UT)
+          })) || !0 === UT.wholeAtlas && kT.failures.some((TT => {
             let {
-              name: ip
-            } = pp;
-            return null === ip || null !== Lp(ip)
+              name: UT
+            } = TT;
+            return null === UT || null !== HT(UT)
           }))) return !1;
         const {
-          handOver: Ap
-        } = Yp, Pp = function(pp) {
-          return pp.textures.reduce(((pp, ip) => pp + ip.byteLength), 0)
-        }(Ap) < this.keepBelow, yp = this.core.setTerrainTextures(Ap.names, Ap.textures, Ap.sizes, Pp ? void 0 : () => {
-          !async function(pp, ip) {
-            await ip;
+          handOver: lT
+        } = kT, LT = function(TT) {
+          return TT.textures.reduce(((TT, UT) => TT + UT.byteLength), 0)
+        }(lT) < this.keepBelow, BT = this.core.setTerrainTextures(lT.names, lT.textures, lT.sizes, LT ? void 0 : () => {
+          !async function(TT, UT) {
+            await UT;
             for (const {
-                buffer: Op
+                buffer: WT
               }
-              of pp) {
-              const pp = Op;
-              var cp;
-              if (!pp.detached) null === (cp = pp.transfer) || void 0 === cp || cp.call(pp, 0)
+              of TT) {
+              const TT = WT;
+              var mT;
+              if (!TT.detached) null === (mT = TT.transfer) || void 0 === mT || mT.call(TT, 0)
             }
-          }(Ap.textures, xp.heldUntil)
+          }(lT.textures, nT.heldUntil)
         });
-        if (yp) {
-          var Up;
-          const pp = new Set(Yp.failures.flatMap((pp => {
+        if (BT) {
+          var ZT;
+          const TT = new Set(kT.failures.flatMap((TT => {
             let {
-              name: ip
-            } = pp;
-            return null === ip ? [] : [ip]
+              name: UT
+            } = TT;
+            return null === UT ? [] : [UT]
           })));
-          null === (Up = op.onTaken) || void 0 === Up || Up.call(op, Pp ? Ap : null, pp)
+          null === (ZT = zT.onTaken) || void 0 === ZT || ZT.call(zT, LT ? lT : null, TT)
         }
-        return yp
+        return BT
       }
     }
   },
-  37044: (pp, ip, cp) => {
-    function Op(pp) {
-      return "fetch" === pp || "timeout" === pp || "integrity" === pp ? "download" : "browser"
+  36945: (TT, UT, mT) => {
+    function WT(TT) {
+      return "fetch" === TT || "timeout" === TT || "integrity" === TT ? "download" : "browser"
     }
-    cp.d(ip, {
-      d: () => op,
-      h: () => Sp,
-      i: () => Lp,
-      j: () => xp,
-      n: () => Op,
-      p: () => Ip
+    mT.d(UT, {
+      b: () => zT,
+      d: () => gT,
+      e: () => HT,
+      h: () => nT,
+      j: () => WT,
+      k: () => MT
     });
-    const op = "https://discord.gg/playbloxd";
+    const zT = "https://discord.gg/playbloxd";
 
-    function Ip(pp) {
-      return "download" === pp ? {
+    function MT(TT) {
+      return "download" === TT ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3590,21 +3600,21 @@ export const modules = {
       }
     }
 
-    function Sp(pp, ip) {
+    function gT(TT, UT) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: ip ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: UT ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: pp.code
+          code: TT.code
         },
-        discordLink: ip,
+        discordLink: UT,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function xp() {
+    function nT() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3616,277 +3626,277 @@ export const modules = {
       }
     }
 
-    function Lp(pp, ip, cp) {
+    function HT(TT, UT, mT) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: cp ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: mT ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: pp.reason
+          reason: TT.reason
         },
-        discordLink: null === pp.name,
-        confirm: ip ? "general:reconnect" : pp.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === TT.name,
+        confirm: UT ? "general:reconnect" : TT.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  34379: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Yp,
-      e: () => Ap,
-      h: () => Dp
+  34219: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => kT,
+      e: () => lT,
+      i: () => jT
     });
-    var Op = cp(259),
-      op = cp(104),
-      Ip = cp(129),
-      Sp = cp(120),
-      xp = cp(652);
-    const Lp = new Set(["mali_bifrost"]);
+    var WT = mT(280),
+      zT = mT(102),
+      MT = mT(130),
+      gT = mT(126),
+      nT = mT(677);
+    const HT = new Set(["mali_bifrost"]);
 
-    function Yp() {
-      if ("android" !== (0, op.pageOperatingSystem)() || xp.e || (0, xp.c)("webgl_default")) return;
-      const pp = (0, Ip.j)(),
-        ip = null === pp ? (0, Op.n)() : (0, Op.h)(pp.vendor, pp.renderer);
-      return null !== ip && Lp.has(ip) ? pp => (0, Op.k)((0, Sp.c)(pp).vendor, ip) : void 0
+    function kT() {
+      if ("android" !== (0, zT.pageOperatingSystem)() || nT.h || (0, nT.d)("webgl_default")) return;
+      const TT = (0, MT.l)(),
+        UT = null === TT ? (0, WT.u)() : (0, WT.i)(TT.vendor, TT.renderer);
+      return null !== UT && HT.has(UT) ? TT => (0, WT.n)((0, gT.c)(TT).vendor, UT) : void 0
     }
 
-    function Dp(pp, ip) {
-      return pp ? () => !0 : ip()
+    function jT(TT, UT) {
+      return TT ? () => !0 : UT()
     }
-    async function Ap(pp) {
+    async function lT(TT) {
       try {
-        const ip = Dp(pp, Yp),
-          cp = navigator.gpu;
-        if (void 0 === ip || void 0 === cp) return !1;
-        const Op = await (0, Sp.o)(cp, {
+        const UT = jT(TT, kT),
+          mT = navigator.gpu;
+        if (void 0 === UT || void 0 === mT) return !1;
+        const WT = await (0, gT.o)(mT, {
           seed: !1,
-          compatibility: ip
+          compatibility: UT
         });
-        return "string" !== typeof Op && Op.compatibility && !(0, Sp.j)(Op.adapter)
-      } catch (ip) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", ip), !1
+        return "string" !== typeof WT && WT.compatibility && !(0, gT.g)(WT.adapter)
+      } catch (UT) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", UT), !1
       }
     }
   },
-  40962: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Lp,
-      g: () => Yp
+  40902: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      e: () => kT
     });
-    var Op = cp(104),
-      op = cp(38993);
-    const Ip = "webgpuPipeline";
+    var WT = mT(102),
+      zT = mT(38880);
+    const MT = "webgpuPipeline";
 
-    function Sp(pp) {
-      return pp.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function gT(TT) {
+      return TT.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let xp = null;
+    let nT = null;
 
-    function Lp() {
-      if (null === xp) try {
-        pp = (0, Op.getBrowserName)(), ip = (0, Op.getBrowserVersion)(), cp = (0, Op.getOperatingSystem)(), op = (0, Op.getOperatingSystemVersion)(), xp = `${pp.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===ip?"unknown":Sp(ip)}-${cp}${void 0===op?"":`_${Sp(op)}`}`
-      } catch (Ip) {
-        console.warn("The user agent couldn't be read for its browser code", Ip), xp = "unknown"
+    function HT() {
+      if (null === nT) try {
+        TT = (0, WT.getBrowserName)(), UT = (0, WT.getBrowserVersion)(), mT = (0, WT.getOperatingSystem)(), zT = (0, WT.getOperatingSystemVersion)(), nT = `${TT.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===UT?"unknown":gT(UT)}-${mT}${void 0===zT?"":`_${gT(zT)}`}`
+      } catch (MT) {
+        console.warn("The user agent couldn't be read for its browser code", MT), nT = "unknown"
       }
-      var pp, ip, cp, op;
-      return xp
+      var TT, UT, mT, zT;
+      return nT
     }
 
-    function Yp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const ip = `WGPU-${Lp()}`,
-        Op = (pp, Op) => {
+    function kT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const UT = `WGPU-${HT()}`,
+        WT = (TT, WT) => {
           const {
-            reason: Sp,
-            message: xp
-          } = Op;
-          if ((0, op.x)(String(xp))) return;
-          const Lp = {
-            pipeline: null !== pp && void 0 !== pp ? pp : "",
-            reason: String(Sp),
-            browserMessage: String(xp)
+            reason: gT,
+            message: nT
+          } = WT;
+          if ((0, zT.q)(String(nT))) return;
+          const HT = {
+            pipeline: null !== TT && void 0 !== TT ? TT : "",
+            reason: String(gT),
+            browserMessage: String(nT)
           };
-          Promise.resolve().then((() => cp(40945))).then((pp => {
+          Promise.resolve().then((() => mT(40887))).then((TT => {
             let {
-              reportCrash: cp
-            } = pp;
-            cp({
+              reportCrash: mT
+            } = TT;
+            mT({
               kind: "coreError",
-              code: ip,
-              site: Ip,
+              code: UT,
+              site: MT,
               fatal: !1,
-              message: `${Lp.pipeline} ${Lp.reason}: ${Lp.browserMessage}`,
-              details: Lp,
-              error: Op
+              message: `${HT.pipeline} ${HT.reason}: ${HT.browserMessage}`,
+              details: HT,
+              error: WT
             })
-          })).catch((pp => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", pp)
+          })).catch((TT => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", TT)
           }))
         },
-        Sp = pp.createRenderPipelineAsync;
-      pp.createRenderPipelineAsync = function(pp) {
-        return Sp.call(this, pp).catch((ip => {
-          throw Op(pp.label, ip), ip
+        gT = TT.createRenderPipelineAsync;
+      TT.createRenderPipelineAsync = function(TT) {
+        return gT.call(this, TT).catch((UT => {
+          throw WT(TT.label, UT), UT
         }))
       };
-      const xp = pp.createComputePipelineAsync;
-      pp.createComputePipelineAsync = function(pp) {
-        return xp.call(this, pp).catch((ip => {
-          throw Op(pp.label, ip), ip
+      const nT = TT.createComputePipelineAsync;
+      TT.createComputePipelineAsync = function(TT) {
+        return nT.call(this, TT).catch((UT => {
+          throw WT(TT.label, UT), UT
         }))
       }
     }
   },
-  41071: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/bloxd_wasm_models_bg.6dc451a3cfd872ff659f.wasm"
+  41019: (TT, UT, mT) => {
+    TT.exports = mT.p + "static/media/bloxd_wasm_models_bg.c0c932fa53a0ea7342c3.wasm"
   },
-  41062: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/bloxd_wasm_workers_bg.7e123a4b9837a1d8c1e9.wasm"
+  41012: (TT, UT, mT) => {
+    TT.exports = mT.p + "static/media/bloxd_wasm_workers_bg.38b4ba0c4cedd2c6271b.wasm"
   },
-  41058: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op,
-      g: () => Op
+  41009: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      g: () => WT
     });
-    const Op = {
+    const WT = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new cp.U(cp(41062))
+        return new mT.U(mT(41012))
       }
     };
-    const op = {
+    const zT = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new cp.U(cp(41071))
+        return new mT.U(mT(41019))
       }
     }
   },
-  6780: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => dp,
-      g: () => ep,
-      i: () => tp,
-      m: () => vp
+  6706: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => iT,
+      h: () => bT,
+      i: () => fT,
+      m: () => vT
     });
-    var Op = cp(6788);
-    const op = 6,
-      Ip = 3,
-      Sp = 1,
-      xp = 2,
-      Lp = 4,
-      Yp = 8,
-      Dp = 16,
-      Ap = 32,
-      Pp = 64,
-      Wp = 128,
-      yp = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var WT = mT(6713);
+    const zT = 6,
+      MT = 3,
+      gT = 1,
+      nT = 2,
+      HT = 4,
+      kT = 8,
+      jT = 16,
+      lT = 32,
+      LT = 64,
+      pT = 128,
+      BT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Up(pp) {
-      if (!pp) return 0;
-      const ip = yp.indexOf(pp);
-      if (ip <= 0) throw new Error(`"${pp}" is not a shader pack hook function`);
-      return ip
+    function ZT(TT) {
+      if (!TT) return 0;
+      const UT = BT.indexOf(TT);
+      if (UT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
+      return UT
     }
 
-    function wp(pp) {
-      if (0 === pp) return null;
-      const ip = yp[pp];
-      if (void 0 === ip) throw new Error(`${pp} is not a shader pack hook function id`);
-      return ip
+    function cT(TT) {
+      if (0 === TT) return null;
+      const UT = BT[TT];
+      if (void 0 === UT) throw new Error(`${TT} is not a shader pack hook function id`);
+      return UT
     }
 
-    function vp(pp) {
-      const ip = Op.d.length;
+    function vT(TT) {
+      const UT = WT.e.length;
       return {
-        strict: pp >= ip,
-        program: Op.d[pp % ip]
+        strict: TT >= UT,
+        program: WT.e[TT % UT]
       }
     }
 
-    function tp(pp) {
-      return Number(pp.strict) * Op.d.length + Op.d.indexOf(pp.program)
+    function fT(TT) {
+      return Number(TT.strict) * WT.e.length + WT.e.indexOf(TT.program)
     }
 
-    function Hp(pp) {
-      return "" === pp ? [] : pp.split(" ")
+    function qT(TT) {
+      return "" === TT ? [] : TT.split(" ")
     }
 
-    function dp(pp) {
-      const ip = {
-        variantFlags: new Uint8Array(op),
-        hooks: new Uint8Array(op * Ip),
-        moduleCodes: Array(op).fill(""),
-        reads: Array(2 * op).fill("")
+    function iT(TT) {
+      const UT = {
+        variantFlags: new Uint8Array(zT),
+        hooks: new Uint8Array(zT * MT),
+        moduleCodes: Array(zT).fill(""),
+        reads: Array(2 * zT).fill("")
       };
-      for (const cp of pp) {
-        const pp = tp(cp.key),
-          Op = (pp, ip) => null === cp.hooks.surface || cp.reads.fragment.includes(pp) ? 0 : ip;
-        ip.variantFlags[pp] = (cp.sceneDepth ? Sp : 0) | (cp.movesVertices ? xp : 0) | (cp.sunShadow ? Lp : 0) | (cp.airShadow ? Yp : 0) | (cp.discards ? Dp : 0) | Op("localPosition", Ap) | Op("enchantSpeed", Pp) | Op("enchantTier", Wp), ip.hooks[pp * Ip] = Up(cp.hooks.vertex), ip.hooks[pp * Ip + 1] = Up(cp.hooks.surface), ip.hooks[pp * Ip + 2] = Up(cp.hooks.light), ip.moduleCodes[pp] = cp.moduleCode, ip.reads[2 * pp] = cp.reads.vertex.join(" "), ip.reads[2 * pp + 1] = cp.reads.fragment.join(" ")
+      for (const mT of TT) {
+        const TT = fT(mT.key),
+          WT = (TT, UT) => null === mT.hooks.surface || mT.reads.fragment.includes(TT) ? 0 : UT;
+        UT.variantFlags[TT] = (mT.sceneDepth ? gT : 0) | (mT.movesVertices ? nT : 0) | (mT.sunShadow ? HT : 0) | (mT.airShadow ? kT : 0) | (mT.discards ? jT : 0) | WT("localPosition", lT) | WT("enchantSpeed", LT) | WT("enchantTier", pT), UT.hooks[TT * MT] = ZT(mT.hooks.vertex), UT.hooks[TT * MT + 1] = ZT(mT.hooks.surface), UT.hooks[TT * MT + 2] = ZT(mT.hooks.light), UT.moduleCodes[TT] = mT.moduleCode, UT.reads[2 * TT] = mT.reads.vertex.join(" "), UT.reads[2 * TT + 1] = mT.reads.fragment.join(" ")
       }
-      return ip
+      return UT
     }
 
-    function ep(pp) {
+    function bT(TT) {
       const {
-        hooks: ip,
-        moduleCodes: cp,
-        reads: Op
-      } = pp;
-      return Array.from(pp.variantFlags, ((pp, op) => {
-        const Ap = op * Ip;
+        hooks: UT,
+        moduleCodes: mT,
+        reads: WT
+      } = TT;
+      return Array.from(TT.variantFlags, ((TT, zT) => {
+        const lT = zT * MT;
         return {
-          key: vp(op),
+          key: vT(zT),
           hooks: {
-            vertex: wp(ip[Ap]),
-            surface: wp(ip[Ap + 1]),
-            light: wp(ip[Ap + 2])
+            vertex: cT(UT[lT]),
+            surface: cT(UT[lT + 1]),
+            light: cT(UT[lT + 2])
           },
-          moduleCode: cp[op],
-          sceneDepth: 0 !== (pp & Sp),
-          sunShadow: 0 !== (pp & Lp),
-          airShadow: 0 !== (pp & Yp),
-          movesVertices: 0 !== (pp & xp),
-          discards: 0 !== (pp & Dp),
+          moduleCode: mT[zT],
+          sceneDepth: 0 !== (TT & gT),
+          sunShadow: 0 !== (TT & HT),
+          airShadow: 0 !== (TT & kT),
+          movesVertices: 0 !== (TT & nT),
+          discards: 0 !== (TT & jT),
           reads: {
-            vertex: Hp(Op[2 * op]),
-            fragment: Hp(Op[2 * op + 1])
+            vertex: qT(WT[2 * zT]),
+            fragment: qT(WT[2 * zT + 1])
           }
         }
       }))
     }
   },
-  40892: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Up,
-      C: () => Wp,
-      E: () => yp,
-      c: () => op,
-      g: () => Op,
-      h: () => Pp,
-      l: () => Dp,
-      m: () => wp,
-      o: () => Ip,
-      r: () => xp,
-      t: () => Lp,
-      x: () => Sp
+  40839: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => HT,
+      E: () => gT,
+      F: () => ZT,
+      H: () => pT,
+      K: () => BT,
+      e: () => zT,
+      i: () => WT,
+      m: () => LT,
+      p: () => jT,
+      r: () => cT,
+      u: () => MT,
+      x: () => nT
     });
-    const Op = 3,
-      op = 0,
-      Ip = 1,
-      Sp = 2,
-      xp = {
+    const WT = 3,
+      zT = 0,
+      MT = 1,
+      gT = 2,
+      nT = {
         uniform: 3,
-        hP: 4,
+        iL: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Lp = 10,
-      Yp = "BloxdPackInputs",
-      Dp = "bloxdPackInputs",
-      Ap = [{
+      HT = 10,
+      kT = "BloxdPackInputs",
+      jT = "bloxdPackInputs",
+      lT = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3911,74 +3921,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Pp = 80;
+      LT = 80;
 
-    function Wp() {
-      const pp = Ap.map((pp => {
+    function pT() {
+      const TT = lT.map((TT => {
         let {
-          name: ip,
-          type: cp
-        } = pp;
-        return `    ${ip}: ${cp},\n`
+          name: UT,
+          type: mT
+        } = TT;
+        return `    ${UT}: ${mT},\n`
       })).join("");
-      return `struct ${Yp} {\n${pp}}\n@group(${Op}) @binding(${op}) var<uniform> ${Dp}: ${Yp};\n`
+      return `struct ${kT} {\n${TT}}\n@group(${WT}) @binding(${zT}) var<uniform> ${jT}: ${kT};\n`
     }
 
-    function yp(pp, ip) {
-      const cp = new DataView(pp, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Pp),
-        [Op, op, Ip, Sp, xp, Lp] = Ap;
-      cp.setFloat32(Op.offset, ip.seconds, !0), cp.setUint32(op.offset, ip.lit ? 1 : 0, !0);
-      for (let Yp = 0; Yp < 3; Yp++) cp.setInt32(Ip.offset + 4 * Yp, ip.renderOffset[Yp], !0), cp.setFloat32(Sp.offset + 4 * Yp, ip.opp[Yp], !0), cp.setFloat32(xp.offset + 4 * Yp, ip.eyePosition[Yp], !0), cp.setFloat32(Lp.offset + 4 * Yp, ip.shadowDirection[Yp], !0)
+    function BT(TT, UT) {
+      const mT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, LT),
+        [WT, zT, MT, gT, nT, HT] = lT;
+      mT.setFloat32(WT.offset, UT.seconds, !0), mT.setUint32(zT.offset, UT.lit ? 1 : 0, !0);
+      for (let kT = 0; kT < 3; kT++) mT.setInt32(MT.offset + 4 * kT, UT.renderOffset[kT], !0), mT.setFloat32(gT.offset + 4 * kT, UT.zTT[kT], !0), mT.setFloat32(nT.offset + 4 * kT, UT.eyePosition[kT], !0), mT.setFloat32(HT.offset + 4 * kT, UT.shadowDirection[kT], !0)
     }
 
-    function Up(pp) {
-      const ip = new Uint32Array(Math.max(1, pp.length));
-      return pp.forEach(((pp, cp) => {
+    function ZT(TT) {
+      const UT = new Uint32Array(Math.max(1, TT.length));
+      return TT.forEach(((TT, mT) => {
         let {
-          id: Op,
-          rotation: op
-        } = pp;
-        ip[cp] = 65535 & Op | (3 & op) << 16
-      })), ip
+          id: WT,
+          rotation: zT
+        } = TT;
+        UT[mT] = 65535 & WT | (3 & zT) << 16
+      })), UT
     }
-    const wp = {
+    const cT = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6788: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op,
-      e: () => Sp,
-      f: () => xp,
-      h: () => op,
-      i: () => Ip
+  6713: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT,
+      i: () => gT,
+      l: () => nT,
+      n: () => zT,
+      r: () => MT
     });
-    const Op = ["terrain", "liquid", "model"];
+    const WT = ["terrain", "liquid", "model"];
 
-    function op() {
-      const pp = [];
-      for (const ip of [!1, !0])
-        for (const cp of Op) pp.push({
-          strict: ip,
-          program: cp
+    function zT() {
+      const TT = [];
+      for (const UT of [!1, !0])
+        for (const mT of WT) TT.push({
+          strict: UT,
+          program: mT
         });
-      return pp
+      return TT
     }
 
-    function Ip(pp) {
-      return `${pp.strict?"strict":"allow"}.${pp.program}`
+    function MT(TT) {
+      return `${TT.strict?"strict":"allow"}.${TT.program}`
     }
 
-    function Sp(pp) {
-      return !pp.hooks.vertex && !pp.hooks.surface && !pp.hooks.light
+    function gT(TT) {
+      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
     }
 
-    function xp(pp, ip) {
-      return "off" !== ip && (null === pp || pp.some((pp => pp.key.strict === ("strict" === ip) && !Sp(pp))))
+    function nT(TT, UT) {
+      return "off" !== UT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === UT) && !gT(TT))))
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

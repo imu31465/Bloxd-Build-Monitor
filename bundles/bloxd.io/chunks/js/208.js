@@ -1,330 +1,330 @@
 export const id = 208;
 export const ids = [208];
 export const modules = {
-  36453: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      WasmTextureWorker: () => tp
+  36323: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      WasmTextureWorker: () => fT
     });
-    var Op = cp(629),
-      op = cp(3296),
-      Ip = cp(36455),
-      Sp = cp.n(Ip);
+    var WT = mT(643),
+      zT = mT(3317),
+      MT = mT(36329),
+      gT = mT.n(MT);
 
-    function xp() {
-      return Sp()('(()=>{var pp={d:(ip,cp)=>{for(var Op in cp)pp.o(cp,Op)&&!pp.o(ip,Op)&&Object.defineProperty(ip,Op,{enumerable:!0,get:cp[Op]})},o:(pp,ip)=>Object.prototype.hasOwnProperty.call(pp,ip),r:pp=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(pp,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(pp,"__esModule",{value:!0})}},ip={};pp.r(ip),pp.d(ip,{op:()=>cp,dA:()=>Op,default:()=>Xp,initSync:()=>Ep,eA:()=>op});class cp{__destroy_into_raw(){const pp=this.__wbg_ptr;return this.__wbg_ptr=0,Sp.unregister(this),pp}free(){const pp=this.__destroy_into_raw();qp.LZs5(pp,0)}di(pp){const ip=function(pp,ip){const cp=ip(1*pp.length,1)>>>0;return yp().set(pp,cp/1),Mp=pp.length,cp}(pp,qp.SoFD),cp=Mp;return qp.EVa2(this.__wbg_ptr,ip,cp)>>>0}co(){const pp=qp.iDFW(this.__wbg_ptr);var ip=xp(pp[0],pp[1]).slice();return qp.WIAG(pp[0],4*pp[1],4),ip}So(){let pp,ip;try{const cp=qp.GGnt(this.__wbg_ptr);return pp=cp[0],ip=cp[1],Dp(cp[0],cp[1])}finally{qp.WIAG(pp,ip,1)}}do(){return qp.LhLO(this.__wbg_ptr)>>>0}To(){return qp.rDnw(this.__wbg_ptr)>>>0}TS(){let pp,ip;try{const cp=qp.C6HI(this.__wbg_ptr);return pp=cp[0],ip=cp[1],Dp(cp[0],cp[1])}finally{qp.WIAG(pp,ip,1)}}ox(){const pp=qp.Y2Hj(this.__wbg_ptr);var ip=xp(pp[0],pp[1]).slice();return qp.WIAG(pp[0],4*pp[1],4),ip}xx(){const pp=qp.caQu(this.__wbg_ptr);var ip,cp,Op=(ip=pp[0],cp=pp[1],ip>>>=0,Yp().subarray(ip/8,ip/8+cp)).slice();return qp.WIAG(pp[0],8*pp[1],8),Op}ux(){return qp.dO1b(this.__wbg_ptr)>>>0}ww(pp){const ip=qp.Na1z(this.__wbg_ptr,pp);if(ip[1])throw Hp(ip[0])}dw(){qp.Gpyn(this.__wbg_ptr)}uw(){qp.Cgqb(this.__wbg_ptr)}uy(){const pp=qp.bV4U(this.__wbg_ptr);if(pp[1])throw Hp(pp[0])}kw(){return qp.npz1(this.__wbg_ptr)>>>0}ew(){const pp=qp.Q085(this.__wbg_ptr);if(pp[1])throw Hp(pp[0])}mw(pp,ip){const cp=qp.ZigT(this.__wbg_ptr,pp,ip);if(cp[1])throw Hp(cp[0])}Rw(pp){let ip,cp;try{const Ip=qp.JdsT(this.__wbg_ptr,pp);var Op=Ip[0],op=Ip[1];if(Ip[3])throw Op=0,op=0,Hp(Ip[2]);return ip=Op,cp=op,Dp(Op,op)}finally{qp.WIAG(ip,cp,1)}}qw(pp){return qp.zgUR(this.__wbg_ptr,pp)>>>0}Mw(pp){return qp.p4rh(this.__wbg_ptr,pp)>>>0}ID(){const pp=qp.kGHO(this.__wbg_ptr);var ip=xp(pp[0],pp[1]).slice();return qp.WIAG(pp[0],4*pp[1],4),ip}Cw(){return 0!==qp.Lw68(this.__wbg_ptr)}constructor(pp,ip,cp,Op,op,Ip){const xp=tp(pp,qp.SoFD,qp.mX7X),Lp=Mp,Dp=vp(ip,qp.SoFD),Ap=Mp,Pp=function(pp,ip){const cp=ip(8*pp.length,8)>>>0;return Yp().set(pp,cp/8),Mp=pp.length,cp}(cp,qp.SoFD),Wp=Mp,yp=vp(Op,qp.SoFD),Up=Mp,wp=vp(op,qp.SoFD),dp=Mp,ep=qp.oYjz(xp,Lp,Dp,Ap,Pp,Wp,yp,Up,wp,dp,Ip);if(ep[2])throw Hp(ep[1]);return this.__wbg_ptr=ep[0],Sp.register(this,this.__wbg_ptr,this),this}Ew(){let pp,ip;try{const cp=qp.ZD43(this.__wbg_ptr);return pp=cp[0],ip=cp[1],Dp(cp[0],cp[1])}finally{qp.WIAG(pp,ip,1)}}Xw(pp,ip){const cp=tp(pp,qp.SoFD,qp.mX7X),Op=Mp,op=vp(ip,qp.SoFD),Ip=Mp,Sp=qp.YeiH(this.__wbg_ptr,cp,Op,op,Ip);if(Sp[1])throw Hp(Sp[0])}lw(){return qp.fpQO(this.__wbg_ptr)>>>0}Qw(){return qp.wi7n(this.__wbg_ptr)>>>0}jw(){return qp.FBng(this.__wbg_ptr)>>>0}oy(){return qp.hMjG(this.__wbg_ptr)>>>0}warnings(){let pp,ip;try{const cp=qp.odlS(this.__wbg_ptr);return pp=cp[0],ip=cp[1],Dp(cp[0],cp[1])}finally{qp.WIAG(pp,ip,1)}}}function Op(pp,ip){const cp=tp(pp,qp.SoFD,qp.mX7X),Op=Mp,op=qp.xbPj(cp,Op,ip);if(op[1])throw Hp(op[0])}function op(){qp.N2tc()}function Ip(){return{__proto__:null,PRc7:{__proto__:null,Muj5:function(pp,ip){return function(pp){wp===Up.length&&Up.push(Up.length+1);const ip=wp;return wp=Up[ip],Up[ip]=pp,ip}(Error(Dp(pp,ip)))},WhfB:function(pp,ip){throw new Error(Dp(pp,ip))},GeTe:function(pp,ip){console.error(Dp(pp,ip))}}}}Symbol.dispose&&(cp.prototype[Symbol.dispose]=cp.prototype.free);const Sp="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((pp=>qp.LZs5(pp,1)));function xp(pp,ip){return pp>>>=0,Pp().subarray(pp/4,pp/4+ip)}let Lp=null;function Yp(){return null!==Lp&&0!==Lp.byteLength||(Lp=new Float64Array(qp.memory.buffer)),Lp}function Dp(pp,ip){return function(pp,ip){jp+=ip,jp>=ep&&(dp=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),dp.decode(),jp=ip);return dp.decode(yp().subarray(pp,pp+ip))}(pp>>>0,ip)}let Ap=null;function Pp(){return null!==Ap&&0!==Ap.byteLength||(Ap=new Uint32Array(qp.memory.buffer)),Ap}let Wp=null;function yp(){return null!==Wp&&0!==Wp.byteLength||(Wp=new Uint8Array(qp.memory.buffer)),Wp}let Up=new Array(1024).fill(void 0);Up.push(void 0,null,!0,!1);let wp=Up.length;function vp(pp,ip){const cp=ip(4*pp.length,4)>>>0;return Pp().set(pp,cp/4),Mp=pp.length,cp}function tp(pp,ip,cp){if(void 0===cp){const cp=kp.encode(pp),Op=ip(cp.length,1)>>>0;return yp().subarray(Op,Op+cp.length).set(cp),Mp=cp.length,Op}let Op=pp.length,op=ip(Op,1)>>>0;const Ip=yp();let Sp=0;for(;Sp<Op;Sp++){const ip=pp.charCodeAt(Sp);if(ip>127)break;Ip[op+Sp]=ip}if(Sp!==Op){0!==Sp&&(pp=pp.slice(Sp)),op=cp(op,Op,Op=Sp+3*pp.length,1)>>>0;const ip=yp().subarray(op+Sp,op+Op);Sp+=kp.encodeInto(pp,ip).written,op=cp(op,Op,Sp,1)>>>0}return Mp=Sp,op}function Hp(pp){const ip=function(pp){return Up[pp]}(pp);return function(pp){pp<1028||(Up[pp]=wp,wp=pp)}(pp),ip}let dp=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});dp.decode();const ep=2146435072;let jp=0;const kp=new TextEncoder;"encodeInto"in kp||(kp.encodeInto=function(pp,ip){const cp=kp.encode(pp);return ip.set(cp),{read:pp.length,written:cp.length}});let mp,Rp,qp,Mp=0;function Cp(pp,ip){return Rp=pp,qp=pp.exports,mp=ip,Lp=null,Ap=null,Wp=null,qp.pXUE(),qp}function Ep(pp){if(void 0!==qp)return qp;void 0!==pp&&(Object.getPrototypeOf(pp)===Object.prototype?({module:pp}=pp):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const ip=Ip();pp instanceof WebAssembly.Module||(pp=new WebAssembly.Module(pp));return Cp(new WebAssembly.Instance(pp,ip),pp)}async function Xp(pp){if(void 0!==qp)return qp;void 0!==pp&&(Object.getPrototypeOf(pp)===Object.prototype?({module_or_path:pp}=pp):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const ip=Ip();("string"===typeof pp||"function"===typeof Request&&pp instanceof Request||"function"===typeof URL&&pp instanceof URL)&&(pp=fetch(pp));const{instance:cp,module:Op}=await async function(pp,ip){if("function"===typeof Response&&pp instanceof Response){if(!pp.ok)throw new Error(`failed to fetch Wasm: ${pp.status} ${pp.statusText} fetching \'${pp.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(pp,ip)}catch(cp){if(!function(pp){switch(pp){case"basic":case"cors":case"default":return!0}return!1}(pp.type)||"application/wasm"===pp.headers.get("Content-Type"))throw cp;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",cp)}const Op=await pp.arrayBuffer();return await WebAssembly.instantiate(Op,ip)}{const cp=await WebAssembly.instantiate(pp,ip);return cp instanceof WebAssembly.Instance?{instance:cp,module:pp}:cp}}(await pp,ip);return Cp(cp,Op)}let lp=null,Qp=null;function Jp(pp){if(null!==Qp)throw Qp;if(null===lp)try{const{memory:cp}=Ep({module:pp});lp={wasm:ip,memory:cp}}catch(cp){throw Qp=function(pp,ip){return new Error(`${pp}: ${ip instanceof Error?`${ip.name}: ${ip.message}`:String(ip)}`,{cause:ip})}("instantiate",cp),Qp}return lp}function Bp(pp){return pp instanceof Error?pp.message:String(pp)}const Np=0,Tp=1,fp=2,bp=3,hp=4;Error;function ap(pp){return`the texture module didn\'t load (${Bp(pp)})`}function np(pp){return""===pp?[]:pp.split("\\0")}const Fp=self;let gp=null,Gp=null,rp=Np,Zp=0;function zp(pp){const ip=performance.now();var cp,Op;(pp!==rp||ip-Zp>=1e3)&&(rp=pp,Zp=ip,Fp.postMessage({type:"progress",stage:pp,wasmBytes:null!==(cp=null===(Op=Gp)||void 0===Op?void 0:Op.buffer.byteLength)&&void 0!==cp?cp:0}))}const{FileReaderSync:sp}=self;function Kp(pp){return(new sp).readAsDataURL(new Blob([pp],{type:"image/png"}))}function Vp(pp,ip){Fp.postMessage({type:"sheet",sheet:pp,pixels:ip},[ip.buffer])}function ii(pp){let ip;zp(Tp);try{ip=Jp(pp.module)}catch(Sp){return void Fp.postMessage({type:"failed",reason:ap(Sp),moduleLoad:!0})}Gp=ip.memory,zp(fp);const{assets:cp,layerCap:Op,warnings:op,generator:Ip}=function(pp,ip,cp,Op,op,Ip,Sp){var xp;const{wasm:Lp,memory:Yp}=pp,{strings:Dp,blocks:Ap,numbers:Pp,index:Wp,armour:yp}=ip,Up=new Lp.op(Dp,Ap,Pp,Wp,yp,cp),wp=Op.sources.map((pp=>(null===Ip||void 0===Ip||Ip(fp),Up.di(pp)))),vp=new Uint32Array(2*Op.sourceOfName.length);for(const[Mp,Cp]of Op.sourceOfName.entries())vp[2*Mp]=Mp,vp[2*Mp+1]=wp[Cp];Up.Xw(Op.names,vp),null===Ip||void 0===Ip||Ip(bp),Up.mw(op,null!==(xp=null===Sp||void 0===Sp?void 0:Sp.layers)&&void 0!==xp?xp:0),null===Ip||void 0===Ip||Ip(hp);const tp={};for(const[Mp,Cp]of np(Up.Ew()).entries())null===Ip||void 0===Ip||Ip(hp),tp[Cp]=Up.Rw(Mp);const Hp={},dp=Up.co(),ep=new Map;for(const[Mp,Cp]of np(Up.So()).entries()){const pp=dp[Mp];ep.has(pp)||(null===Ip||void 0===Ip||Ip(hp),ep.set(pp,Up.Rw(pp))),Hp[Cp]=ep.get(pp)}Up.dw();const jp=Array.from(Up.ID()),kp=[],mp=[],Rp=(pp,ip)=>new Uint8ClampedArray(Yp.buffer,pp,ip).slice();if(Sp){for(let pp=0;pp<jp.length;pp++)null===Ip||void 0===Ip||Ip(hp),Up.ww(pp),Up.uy(),kp.push(Sp.dataUrl(new Uint8Array(Yp.buffer,Up.jw(),Up.Qw()))),Sp.onSheet(pp,Rp(Up.oy(),Up.lw()));Up.uw()}const qp=Up.kw();for(let Mp=qp;Mp<qp+Up.To();Mp++)null===Ip||void 0===Ip||Ip(hp),kp.push(Up.Rw(Mp)),mp.push(Rp(Up.Mw(Mp),Up.qw(Mp)));return{assets:{rotatedBlockTextures:tp,animatedBlockTextures:Hp,blockAtlasArr:kp,blockAtlasPixels:mp,armourAtlas:Up.Rw(Up.do()),imagesPerAtlas:jp,blockAtlasWidth:Up.ux()},layerCap:Up.Cw()?op:0,warnings:Up.warnings(),generator:Up}}(ip,pp.inputs,pp.isDefaultPack,{sources:pp.sources,names:pp.names,sourceOfName:pp.sourceOfName},pp.maxLayerWidth,zp,pp.sheetLayers>0?{layers:pp.sheetLayers,onSheet:Vp,dataUrl:Kp}:void 0);gp=Ip,Fp.postMessage({type:"required",assets:cp,layerCap:Op,warnings:op},cp.blockAtlasPixels.map((pp=>pp.buffer)))}self.onmessageerror=()=>{Fp.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=pp=>{let{data:ip}=pp;try{"required"===ip.type?ii(ip):function(){if(!gp)throw new Error("No required assets to follow");const{colours:pp,warnings:ip}=function(pp){return pp.ew(),{colours:{blocks:pp.TS(),counts:pp.ox(),values:pp.xx()},warnings:pp.warnings()}}(gp);Fp.postMessage({type:"optional",...pp,warnings:ip},[pp.counts.buffer,pp.values.buffer])}()}catch(cp){const pp=Bp(cp),ip=cp instanceof WebAssembly.RuntimeError?`wasm trapped (${pp})`:pp;Fp.postMessage({type:"failed",reason:ip,stack:cp instanceof Error?cp.stack:void 0})}}})();', "Worker", void 0, cp.p + "generation.worker.3a6d845e.worker.js")
+    function nT() {
+      return gT()('(()=>{var TT={d:(UT,mT)=>{for(var WT in mT)TT.o(mT,WT)&&!TT.o(UT,WT)&&Object.defineProperty(UT,WT,{enumerable:!0,get:mT[WT]})},o:(TT,UT)=>Object.prototype.hasOwnProperty.call(TT,UT),r:TT=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(TT,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(TT,"__esModule",{value:!0})}},UT={};TT.r(UT),TT.d(UT,{cz:()=>mT,Ul:()=>WT,default:()=>aT,initSync:()=>tT,ml:()=>zT});class mT{__destroy_into_raw(){const TT=this.__wbg_ptr;return this.__wbg_ptr=0,gT.unregister(this),TT}free(){const TT=this.__destroy_into_raw();xT.UT58(TT,0)}uz(TT){const UT=function(TT,UT){const mT=UT(1*TT.length,1)>>>0;return BT().set(TT,mT/1),dT=TT.length,mT}(TT,xT.ILH9),mT=dT;return xT.mok5(this.__wbg_ptr,UT,mT)>>>0}oz(){const TT=xT.Jw4A(this.__wbg_ptr);var UT=nT(TT[0],TT[1]).slice();return xT.BzF4(TT[0],4*TT[1],4),UT}dg(){let TT,UT;try{const mT=xT.XTqP(this.__wbg_ptr);return TT=mT[0],UT=mT[1],jT(mT[0],mT[1])}finally{xT.BzF4(TT,UT,1)}}On(){return xT.GAyH(this.__wbg_ptr)>>>0}wn(){return xT.xgvc(this.__wbg_ptr)>>>0}In(){let TT,UT;try{const mT=xT.fpHu(this.__wbg_ptr);return TT=mT[0],UT=mT[1],jT(mT[0],mT[1])}finally{xT.BzF4(TT,UT,1)}}un(){const TT=xT.sJmn(this.__wbg_ptr);var UT=nT(TT[0],TT[1]).slice();return xT.BzF4(TT[0],4*TT[1],4),UT}dk(){const TT=xT.lcsk(this.__wbg_ptr);var UT,mT,WT=(UT=TT[0],mT=TT[1],UT>>>=0,kT().subarray(UT/8,UT/8+mT)).slice();return xT.BzF4(TT[0],8*TT[1],8),WT}dj(){return xT.DTd4(this.__wbg_ptr)>>>0}mc(TT){const UT=xT.GtjL(this.__wbg_ptr,TT);if(UT[1])throw qT(UT[0])}Wc(){xT.CQXj(this.__wbg_ptr)}Mc(){xT.Zel7(this.__wbg_ptr)}KB(){const TT=xT.nW2m(this.__wbg_ptr);if(TT[1])throw qT(TT[0])}nc(){return xT.LcDT(this.__wbg_ptr)>>>0}zc(){const TT=xT.tZh9(this.__wbg_ptr);if(TT[1])throw qT(TT[0])}Hc(TT,UT){const mT=xT.LEfZ(this.__wbg_ptr,TT,UT);if(mT[1])throw qT(mT[0])}kc(TT){let UT,mT;try{const MT=xT.JGsy(this.__wbg_ptr,TT);var WT=MT[0],zT=MT[1];if(MT[3])throw WT=0,zT=0,qT(MT[2]);return UT=WT,mT=zT,jT(WT,zT)}finally{xT.BzF4(UT,mT,1)}}jc(TT){return xT.APqY(this.__wbg_ptr,TT)>>>0}lc(TT){return xT.ewPG(this.__wbg_ptr,TT)>>>0}op(){const TT=xT.xoGE(this.__wbg_ptr);var UT=nT(TT[0],TT[1]).slice();return xT.BzF4(TT[0],4*TT[1],4),UT}Lc(){return 0!==xT.gv48(this.__wbg_ptr)}constructor(TT,UT,mT,WT,zT,MT){const nT=fT(TT,xT.ILH9,xT.iUva),HT=dT,jT=vT(UT,xT.ILH9),lT=dT,LT=function(TT,UT){const mT=UT(8*TT.length,8)>>>0;return kT().set(TT,mT/8),dT=TT.length,mT}(mT,xT.ILH9),pT=dT,BT=vT(WT,xT.ILH9),ZT=dT,cT=vT(zT,xT.ILH9),iT=dT,bT=xT.H2R1(nT,HT,jT,lT,LT,pT,BT,ZT,cT,iT,MT);if(bT[2])throw qT(bT[1]);return this.__wbg_ptr=bT[0],gT.register(this,this.__wbg_ptr,this),this}Bc(){let TT,UT;try{const mT=xT.eLUg(this.__wbg_ptr);return TT=mT[0],UT=mT[1],jT(mT[0],mT[1])}finally{xT.BzF4(TT,UT,1)}}Zc(TT,UT){const mT=fT(TT,xT.ILH9,xT.iUva),WT=dT,zT=vT(UT,xT.ILH9),MT=dT,gT=xT.BtFN(this.__wbg_ptr,mT,WT,zT,MT);if(gT[1])throw qT(gT[0])}cc(){return xT.gwNu(this.__wbg_ptr)>>>0}vc(){return xT.WLts(this.__wbg_ptr)>>>0}gc(){return xT.SBHw(this.__wbg_ptr)>>>0}MB(){return xT.RSO0(this.__wbg_ptr)>>>0}warnings(){let TT,UT;try{const mT=xT.AYlh(this.__wbg_ptr);return TT=mT[0],UT=mT[1],jT(mT[0],mT[1])}finally{xT.BzF4(TT,UT,1)}}}function WT(TT,UT){const mT=fT(TT,xT.ILH9,xT.iUva),WT=dT,zT=xT.i20C(mT,WT,UT);if(zT[1])throw qT(zT[0])}function zT(){xT.XN7a()}function MT(){return{__proto__:null,BCum:{__proto__:null,YMF2:function(TT,UT){return function(TT){cT===ZT.length&&ZT.push(ZT.length+1);const UT=cT;return cT=ZT[UT],ZT[UT]=TT,UT}(Error(jT(TT,UT)))},Z9Lx:function(TT,UT){throw new Error(jT(TT,UT))},xE7t:function(TT,UT){console.error(jT(TT,UT))}}}}Symbol.dispose&&(mT.prototype[Symbol.dispose]=mT.prototype.free);const gT="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((TT=>xT.UT58(TT,1)));function nT(TT,UT){return TT>>>=0,LT().subarray(TT/4,TT/4+UT)}let HT=null;function kT(){return null!==HT&&0!==HT.byteLength||(HT=new Float64Array(xT.memory.buffer)),HT}function jT(TT,UT){return function(TT,UT){OT+=UT,OT>=bT&&(iT=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),iT.decode(),OT=UT);return iT.decode(BT().subarray(TT,TT+UT))}(TT>>>0,UT)}let lT=null;function LT(){return null!==lT&&0!==lT.byteLength||(lT=new Uint32Array(xT.memory.buffer)),lT}let pT=null;function BT(){return null!==pT&&0!==pT.byteLength||(pT=new Uint8Array(xT.memory.buffer)),pT}let ZT=new Array(1024).fill(void 0);ZT.push(void 0,null,!0,!1);let cT=ZT.length;function vT(TT,UT){const mT=UT(4*TT.length,4)>>>0;return LT().set(TT,mT/4),dT=TT.length,mT}function fT(TT,UT,mT){if(void 0===mT){const mT=eT.encode(TT),WT=UT(mT.length,1)>>>0;return BT().subarray(WT,WT+mT.length).set(mT),dT=mT.length,WT}let WT=TT.length,zT=UT(WT,1)>>>0;const MT=BT();let gT=0;for(;gT<WT;gT++){const UT=TT.charCodeAt(gT);if(UT>127)break;MT[zT+gT]=UT}if(gT!==WT){0!==gT&&(TT=TT.slice(gT)),zT=mT(zT,WT,WT=gT+3*TT.length,1)>>>0;const UT=BT().subarray(zT+gT,zT+WT);gT+=eT.encodeInto(TT,UT).written,zT=mT(zT,WT,gT,1)>>>0}return dT=gT,zT}function qT(TT){const UT=function(TT){return ZT[TT]}(TT);return function(TT){TT<1028||(ZT[TT]=cT,cT=TT)}(TT),UT}let iT=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});iT.decode();const bT=2146435072;let OT=0;const eT=new TextEncoder;"encodeInto"in eT||(eT.encodeInto=function(TT,UT){const mT=eT.encode(TT);return UT.set(mT),{read:TT.length,written:mT.length}});let YT,JT,xT,dT=0;function wT(TT,UT){return JT=TT,xT=TT.exports,YT=UT,HT=null,lT=null,pT=null,xT.ji2a(),xT}function tT(TT){if(void 0!==xT)return xT;void 0!==TT&&(Object.getPrototypeOf(TT)===Object.prototype?({module:TT}=TT):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const UT=MT();TT instanceof WebAssembly.Module||(TT=new WebAssembly.Module(TT));return wT(new WebAssembly.Instance(TT,UT),TT)}async function aT(TT){if(void 0!==xT)return xT;void 0!==TT&&(Object.getPrototypeOf(TT)===Object.prototype?({module_or_path:TT}=TT):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const UT=MT();("string"===typeof TT||"function"===typeof Request&&TT instanceof Request||"function"===typeof URL&&TT instanceof URL)&&(TT=fetch(TT));const{instance:mT,module:WT}=await async function(TT,UT){if("function"===typeof Response&&TT instanceof Response){if(!TT.ok)throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching \'${TT.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(TT,UT)}catch(mT){if(!function(TT){switch(TT){case"basic":case"cors":case"default":return!0}return!1}(TT.type)||"application/wasm"===TT.headers.get("Content-Type"))throw mT;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",mT)}const WT=await TT.arrayBuffer();return await WebAssembly.instantiate(WT,UT)}{const mT=await WebAssembly.instantiate(TT,UT);return mT instanceof WebAssembly.Instance?{instance:mT,module:TT}:mT}}(await TT,UT);return wT(mT,WT)}let yT=null,XT=null;function IT(TT){if(null!==XT)throw XT;if(null===yT)try{const{memory:mT}=tT({module:TT});yT={wasm:UT,memory:mT}}catch(mT){throw XT=function(TT,UT){return new Error(`${TT}: ${UT instanceof Error?`${UT.name}: ${UT.message}`:String(UT)}`,{cause:UT})}("instantiate",mT),XT}return yT}function QT(TT){return TT instanceof Error?TT.message:String(TT)}const sT=0,FT=1,PT=2,VT=3,uT=4;Error;function CT(TT){return`the texture module didn\'t load (${QT(TT)})`}function rT(TT){return""===TT?[]:TT.split("\\0")}const KT=self;let ST=null,GT=null,NT=sT,ET=0;function hT(TT){const UT=performance.now();var mT,WT;(TT!==NT||UT-ET>=1e3)&&(NT=TT,ET=UT,KT.postMessage({type:"progress",stage:TT,wasmBytes:null!==(mT=null===(WT=GT)||void 0===WT?void 0:WT.buffer.byteLength)&&void 0!==mT?mT:0}))}const{FileReaderSync:DT}=self;function oT(TT){return(new DT).readAsDataURL(new Blob([TT],{type:"image/png"}))}function AT(TT,UT){KT.postMessage({type:"sheet",sheet:TT,pixels:UT},[UT.buffer])}function RT(TT){let UT;hT(FT);try{UT=IT(TT.module)}catch(gT){return void KT.postMessage({type:"failed",reason:CT(gT),moduleLoad:!0})}GT=UT.memory,hT(PT);const{assets:mT,layerCap:WT,warnings:zT,generator:MT}=function(TT,UT,mT,WT,zT,MT,gT){var nT;const{wasm:HT,memory:kT}=TT,{strings:jT,blocks:lT,numbers:LT,index:pT,armour:BT}=UT,ZT=new HT.cz(jT,lT,LT,pT,BT,mT),cT=WT.sources.map((TT=>(null===MT||void 0===MT||MT(PT),ZT.uz(TT)))),vT=new Uint32Array(2*WT.sourceOfName.length);for(const[dT,wT]of WT.sourceOfName.entries())vT[2*dT]=dT,vT[2*dT+1]=cT[wT];ZT.Zc(WT.names,vT),null===MT||void 0===MT||MT(VT),ZT.Hc(zT,null!==(nT=null===gT||void 0===gT?void 0:gT.layers)&&void 0!==nT?nT:0),null===MT||void 0===MT||MT(uT);const fT={};for(const[dT,wT]of rT(ZT.Bc()).entries())null===MT||void 0===MT||MT(uT),fT[wT]=ZT.kc(dT);const qT={},iT=ZT.oz(),bT=new Map;for(const[dT,wT]of rT(ZT.dg()).entries()){const TT=iT[dT];bT.has(TT)||(null===MT||void 0===MT||MT(uT),bT.set(TT,ZT.kc(TT))),qT[wT]=bT.get(TT)}ZT.Wc();const OT=Array.from(ZT.op()),eT=[],YT=[],JT=(TT,UT)=>new Uint8ClampedArray(kT.buffer,TT,UT).slice();if(gT){for(let TT=0;TT<OT.length;TT++)null===MT||void 0===MT||MT(uT),ZT.mc(TT),ZT.KB(),eT.push(gT.dataUrl(new Uint8Array(kT.buffer,ZT.gc(),ZT.vc()))),gT.onSheet(TT,JT(ZT.MB(),ZT.cc()));ZT.Mc()}const xT=ZT.nc();for(let dT=xT;dT<xT+ZT.wn();dT++)null===MT||void 0===MT||MT(uT),eT.push(ZT.kc(dT)),YT.push(JT(ZT.lc(dT),ZT.jc(dT)));return{assets:{rotatedBlockTextures:fT,animatedBlockTextures:qT,blockAtlasArr:eT,blockAtlasPixels:YT,armourAtlas:ZT.kc(ZT.On()),imagesPerAtlas:OT,blockAtlasWidth:ZT.dj()},layerCap:ZT.Lc()?zT:0,warnings:ZT.warnings(),generator:ZT}}(UT,TT.inputs,TT.isDefaultPack,{sources:TT.sources,names:TT.names,sourceOfName:TT.sourceOfName},TT.maxLayerWidth,hT,TT.sheetLayers>0?{layers:TT.sheetLayers,onSheet:AT,dataUrl:oT}:void 0);ST=MT,KT.postMessage({type:"required",assets:mT,layerCap:WT,warnings:zT},mT.blockAtlasPixels.map((TT=>TT.buffer)))}self.onmessageerror=()=>{KT.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=TT=>{let{data:UT}=TT;try{"required"===UT.type?RT(UT):function(){if(!ST)throw new Error("No required assets to follow");const{colours:TT,warnings:UT}=function(TT){return TT.zc(),{colours:{blocks:TT.In(),counts:TT.un(),values:TT.dk()},warnings:TT.warnings()}}(ST);KT.postMessage({type:"optional",...TT,warnings:UT},[TT.counts.buffer,TT.values.buffer])}()}catch(mT){const TT=QT(mT),UT=mT instanceof WebAssembly.RuntimeError?`wasm trapped (${TT})`:TT;KT.postMessage({type:"failed",reason:UT,stack:mT instanceof Error?mT.stack:void 0})}}})();', "Worker", void 0, mT.p + "generation.worker.8523801a.worker.js")
     }
-    var Lp = cp(36464),
-      Yp = cp(3322),
-      Dp = cp(3335),
-      Ap = cp(3333),
-      Pp = cp(3305);
+    var HT = mT(36333),
+      kT = mT(3336),
+      jT = mT(3357),
+      lT = mT(3350),
+      LT = mT(3323);
 
-    function Wp(pp) {
-      return "" === pp ? [] : pp.split("\0")
-    }
-
-    function yp(pp) {
-      if ("" !== pp)
-        for (const ip of pp.split("\n")) console.error(ip)
+    function pT(TT) {
+      return "" === TT ? [] : TT.split("\0")
     }
 
-    function Up(pp, ip) {
-      return async function(pp, ip) {
-        const cp = Object.keys(pp),
-          Op = [],
-          op = new Map,
-          Ip = new Uint32Array(cp.length);
-        for (const [Sp, xp] of cp.entries()) {
+    function BT(TT) {
+      if ("" !== TT)
+        for (const UT of TT.split("\n")) console.error(UT)
+    }
+
+    function ZT(TT, UT) {
+      return async function(TT, UT) {
+        const mT = Object.keys(TT),
+          WT = [],
+          zT = new Map,
+          MT = new Uint32Array(mT.length);
+        for (const [gT, nT] of mT.entries()) {
           const {
-            url: ip
-          } = pp[xp];
-          op.has(ip) || (op.set(ip, Op.length), Op.push(ip)), Ip[Sp] = op.get(ip)
+            url: UT
+          } = TT[nT];
+          zT.has(UT) || (zT.set(UT, WT.length), WT.push(UT)), MT[gT] = zT.get(UT)
         }
         return {
-          sources: await ip(Op),
-          names: cp.join("\0"),
-          sourceOfName: Ip
+          sources: await UT(WT),
+          names: mT.join("\0"),
+          sourceOfName: MT
         }
-      }(pp, (async pp => {
-        const cp = await async function(pp, ip) {
-          const cp = new AbortController,
-            Op = () => {
-              cp.abort()
+      }(TT, (async TT => {
+        const mT = await async function(TT, UT) {
+          const mT = new AbortController,
+            WT = () => {
+              mT.abort()
             };
-          ip.addEventListener("abort", Op);
+          UT.addEventListener("abort", WT);
           try {
-            const ip = await Promise.all(pp.map((async pp => {
+            const UT = await Promise.all(TT.map((async TT => {
               try {
-                const ip = await fetch(pp, {
-                  signal: cp.signal
+                const UT = await fetch(TT, {
+                  signal: mT.signal
                 });
-                if (!ip.ok) throw new Error(`HTTP ${ip.status}`);
-                return [pp, await ip.blob()]
-              } catch (ip) {
-                throw cp.abort(), new Dp.l(Dp.k.Fetch, `fetching ${pp} failed: ${(0,Ap.e)(ip)}`)
+                if (!UT.ok) throw new Error(`HTTP ${UT.status}`);
+                return [TT, await UT.blob()]
+              } catch (UT) {
+                throw mT.abort(), new jT.i(jT.h.Fetch, `fetching ${TT} failed: ${(0,lT.e)(UT)}`)
               }
             })));
-            return new Map(ip)
+            return new Map(UT)
           } finally {
-            ip.removeEventListener("abort", Op)
+            UT.removeEventListener("abort", WT)
           }
-        }(pp.filter((pp => !pp.startsWith("data:"))), ip);
-        return Promise.all(pp.map((pp => {
-          var ip;
-          return (0, Pp.d)(null !== (ip = cp.get(pp)) && void 0 !== ip ? ip : pp)
+        }(TT.filter((TT => !TT.startsWith("data:"))), UT);
+        return Promise.all(TT.map((TT => {
+          var UT;
+          return (0, LT.g)(null !== (UT = mT.get(TT)) && void 0 !== UT ? UT : TT)
         })))
       }))
     }
 
-    function wp(pp, ip) {
-      const cp = Dp.l.from(pp, ip ? Dp.k.Optional : Dp.k.Error);
-      return cp.code !== Dp.k.Fetch && cp.code !== Dp.k.Error && (0, Yp.f)(cp.message), cp
+    function cT(TT, UT) {
+      const mT = jT.i.from(TT, UT ? jT.h.Optional : jT.h.Error);
+      return mT.code !== jT.h.Fetch && mT.code !== jT.h.Error && (0, kT.f)(mT.message), mT
     }
 
-    function vp(pp) {
-      return pp.message ? new Error(`the texture worker failed: ${pp.message}`) : new Dp.l(Dp.k.Load, "the texture worker failed to start")
+    function vT(TT) {
+      return TT.message ? new Error(`the texture worker failed: ${TT.message}`) : new jT.i(jT.h.Load, "the texture worker failed to start")
     }
-    class tp {
-      constructor(pp) {
-        this.worker = pp, this.failure = void 0, this.abandonStep = null, pp.addEventListener("error", (pp => {
-          pp.preventDefault(), this.failure ??= vp(pp)
+    class fT {
+      constructor(TT) {
+        this.worker = TT, this.failure = void 0, this.abandonStep = null, TT.addEventListener("error", (TT => {
+          TT.preventDefault(), this.failure ??= vT(TT)
         }))
       }
-      static async generateRequired(pp, ip, cp, Ip) {
-        let Sp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Dp.d,
-          Yp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const Pp = (0, Lp.i)();
-        if (null !== Pp) throw wp(new Dp.l(Dp.k.Load, Pp), !1);
-        let Wp;
-        const vp = new AbortController;
+      static async generateRequired(TT, UT, mT, MT) {
+        let gT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : jT.c,
+          kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const LT = (0, HT.k)();
+        if (null !== LT) throw cT(new jT.i(jT.h.Load, LT), !1);
+        let pT;
+        const vT = new AbortController;
         try {
-          Wp = new tp(function() {
+          pT = new fT(function() {
             try {
-              return new xp
-            } catch (pp) {
-              throw new Dp.l(Dp.k.Load, `the texture worker failed to start: ${(0,Ap.e)(pp)}`)
+              return new nT
+            } catch (TT) {
+              throw new jT.i(jT.h.Load, `the texture worker failed to start: ${(0,lT.e)(TT)}`)
             }
           }());
-          const Pp = (0, Lp.d)().catch((pp => {
-              throw new Dp.l(Dp.k.Load, function(pp) {
-                return `the texture module didn't load (${(0,Ap.e)(pp)})`
-              }(pp))
+          const LT = (0, HT.d)().catch((TT => {
+              throw new jT.i(jT.h.Load, function(TT) {
+                return `the texture module didn't load (${(0,lT.e)(TT)})`
+              }(TT))
             })),
-            wp = (async () => {
-              const Ip = function(pp, ip, cp) {
-                const Op = [],
-                  op = new Map,
-                  Ip = pp => {
-                    let ip = op.get(pp);
-                    return void 0 === ip && (ip = Op.length, Op.push(pp), op.set(pp, ip)), ip
+            cT = (async () => {
+              const MT = function(TT, UT, mT) {
+                const WT = [],
+                  zT = new Map,
+                  MT = TT => {
+                    let UT = zT.get(TT);
+                    return void 0 === UT && (UT = WT.length, WT.push(TT), zT.set(TT, UT)), UT
                   },
-                  Sp = [],
-                  xp = [],
-                  Lp = new Map,
-                  Yp = (pp, ip) => {
-                    const cp = "object" === typeof pp && null !== pp && "animTextures" in pp ? pp.animTextures : void 0;
-                    if (!Array.isArray(cp) || !cp.every((pp => "string" === typeof pp))) throw new Error(`Block ${ip} has textureInfo the encoding doesn't cover`);
-                    Sp.push(cp.length, ...cp.map(Ip))
+                  gT = [],
+                  nT = [],
+                  HT = new Map,
+                  kT = (TT, UT) => {
+                    const mT = "object" === typeof TT && null !== TT && "animTextures" in TT ? TT.animTextures : void 0;
+                    if (!Array.isArray(mT) || !mT.every((TT => "string" === typeof TT))) throw new Error(`Block ${UT} has textureInfo the encoding doesn't cover`);
+                    gT.push(mT.length, ...mT.map(MT))
                   };
-                let Dp = 0;
-                for (const Wp in pp) {
-                  const ip = pp[Wp];
-                  Sp.push(Ip(Wp));
-                  const cp = (ip.transTex ? 1 : 0) | (ip.tW ? 2 : 0) | (ip.particlesIgnoreBlack ? 4 : 0),
-                    Op = "string" === typeof ip.itemTexture ? Ip(ip.itemTexture) : 4294967295,
-                    op = `${cp},${Op}`,
-                    Ap = ip.textureInfo,
-                    Pp = Lp.get(Ap);
-                  if ((null === Pp || void 0 === Pp ? void 0 : Pp.fields) !== op)
-                    if (Lp.set(Ap, {
-                        entry: Dp++,
-                        fields: op
-                      }), Sp.push(1, cp, Op), "string" === typeof Ap) Sp.push(1, Ip(Ap));
-                    else if (Array.isArray(Ap)) {
-                    Sp.push(3, Ap.length);
-                    for (const pp of Ap) "string" === typeof pp ? Sp.push(0, Ip(pp)) : "number" === typeof pp ? (Sp.push(2, xp.length), xp.push(pp)) : (Sp.push(1), Yp(pp, Wp))
-                  } else Ap ? (Sp.push(2), Yp(Ap, Wp)) : Sp.push(0);
-                  else Sp.push(0, Pp.entry), Dp++
+                let jT = 0;
+                for (const pT in TT) {
+                  const UT = TT[pT];
+                  gT.push(MT(pT));
+                  const mT = (UT.transTex ? 1 : 0) | (UT.RL ? 2 : 0) | (UT.particlesIgnoreBlack ? 4 : 0),
+                    WT = "string" === typeof UT.itemTexture ? MT(UT.itemTexture) : 4294967295,
+                    zT = `${mT},${WT}`,
+                    lT = UT.textureInfo,
+                    LT = HT.get(lT);
+                  if ((null === LT || void 0 === LT ? void 0 : LT.fields) !== zT)
+                    if (HT.set(lT, {
+                        entry: jT++,
+                        fields: zT
+                      }), gT.push(1, mT, WT), "string" === typeof lT) gT.push(1, MT(lT));
+                    else if (Array.isArray(lT)) {
+                    gT.push(3, lT.length);
+                    for (const TT of lT) "string" === typeof TT ? gT.push(0, MT(TT)) : "number" === typeof TT ? (gT.push(2, nT.length), nT.push(TT)) : (gT.push(1), kT(TT, pT))
+                  } else lT ? (gT.push(2), kT(lT, pT)) : gT.push(0);
+                  else gT.push(0, LT.entry), jT++
                 }
-                const Ap = [];
-                for (const Wp in ip) Ap.push(Ip(Wp), ip[Wp]);
-                const Pp = new Uint32Array(cp.map(Ip));
+                const lT = [];
+                for (const pT in UT) lT.push(MT(pT), UT[pT]);
+                const LT = new Uint32Array(mT.map(MT));
                 return {
-                  strings: Op.join("\0"),
-                  blocks: new Uint32Array(Sp),
-                  numbers: new Float64Array(xp),
-                  index: new Uint32Array(Ap),
-                  armour: Pp
+                  strings: WT.join("\0"),
+                  blocks: new Uint32Array(gT),
+                  numbers: new Float64Array(nT),
+                  index: new Uint32Array(lT),
+                  armour: LT
                 }
-              }(pp, ip, Op.e.map(op.j));
+              }(TT, UT, WT.f.map(zT.f));
               return {
-                inputs: Ip,
-                sources: await Up(cp, vp.signal)
+                inputs: MT,
+                sources: await ZT(mT, vT.signal)
               }
             })(),
-            [Hp, {
-              inputs: dp,
-              sources: ep
-            }] = await Promise.all([Pp, wp]),
-            jp = [dp.blocks.buffer, dp.numbers.buffer, dp.index.buffer, dp.armour.buffer, ep.sourceOfName.buffer];
-          for (const pp of ep.sources) jp.push(pp.buffer);
-          const kp = [],
+            [qT, {
+              inputs: iT,
+              sources: bT
+            }] = await Promise.all([LT, cT]),
+            OT = [iT.blocks.buffer, iT.numbers.buffer, iT.index.buffer, iT.armour.buffer, bT.sourceOfName.buffer];
+          for (const TT of bT.sources) OT.push(TT.buffer);
+          const eT = [],
             {
-              assets: mp,
-              layerCap: Rp,
-              warnings: qp
-            } = await Wp.request({
+              assets: YT,
+              layerCap: JT,
+              warnings: xT
+            } = await pT.request({
               type: "required",
-              module: Hp,
-              inputs: dp,
-              isDefaultPack: Ip,
-              maxLayerWidth: Sp,
-              sheetLayers: Yp,
-              ...ep
-            }, jp, ((pp, ip) => {
-              kp[pp] = ip
+              module: qT,
+              inputs: iT,
+              isDefaultPack: MT,
+              maxLayerWidth: gT,
+              sheetLayers: kT,
+              ...bT
+            }, OT, ((TT, UT) => {
+              eT[TT] = UT
             }));
-          return Yp > 0 && (mp.blockAtlasPixels = function(pp, ip) {
-            const cp = [];
-            for (let Op = 0; Op < ip; Op++) {
-              const op = pp[Op];
-              if (void 0 === op) throw new Error(`the texture worker's sheet ${Op} of ${ip} didn't arrive`);
-              cp.push(op)
+          return kT > 0 && (YT.blockAtlasPixels = function(TT, UT) {
+            const mT = [];
+            for (let WT = 0; WT < UT; WT++) {
+              const zT = TT[WT];
+              if (void 0 === zT) throw new Error(`the texture worker's sheet ${WT} of ${UT} didn't arrive`);
+              mT.push(zT)
             }
-            return cp
-          }(kp, mp.imagesPerAtlas.length)), yp(qp), {
-            assets: mp,
-            layerCap: Rp,
-            worker: Wp
+            return mT
+          }(eT, YT.imagesPerAtlas.length)), BT(xT), {
+            assets: YT,
+            layerCap: JT,
+            worker: pT
           }
-        } catch (dp) {
-          var Hp;
-          throw vp.abort(), null === (Hp = Wp) || void 0 === Hp || Hp.terminate(), wp(dp, !1)
+        } catch (iT) {
+          var qT;
+          throw vT.abort(), null === (qT = pT) || void 0 === qT || qT.terminate(), cT(iT, !1)
         }
       }
       async generateOptional() {
-        let pp;
+        let TT;
         try {
-          pp = await this.request({
+          TT = await this.request({
             type: "optional"
           }, [])
-        } catch (ip) {
-          throw wp(ip, !0)
+        } catch (UT) {
+          throw cT(UT, !0)
         } finally {
           this.terminate()
         }
-        return yp(pp.warnings),
-          function(pp) {
+        return BT(TT.warnings),
+          function(TT) {
             let {
-              blocks: ip,
-              counts: cp,
-              values: Op
-            } = pp;
-            const op = {};
-            let Ip = 0;
-            for (const [Sp, xp] of Wp(ip).entries()) {
-              const pp = [];
-              for (let ip = 0; ip < cp[Sp]; ip++, Ip += 3) pp.push([Op[Ip], Op[Ip + 1], Op[Ip + 2]]);
-              op[xp] = pp
+              blocks: UT,
+              counts: mT,
+              values: WT
+            } = TT;
+            const zT = {};
+            let MT = 0;
+            for (const [gT, nT] of pT(UT).entries()) {
+              const TT = [];
+              for (let UT = 0; UT < mT[gT]; UT++, MT += 3) TT.push([WT[MT], WT[MT + 1], WT[MT + 2]]);
+              zT[nT] = TT
             }
-            return op
-          }(pp)
+            return zT
+          }(TT)
       }
       terminate() {
-        var pp;
-        this.worker.terminate(), null === (pp = this.abandonStep) || void 0 === pp || pp.call(this)
+        var TT;
+        this.worker.terminate(), null === (TT = this.abandonStep) || void 0 === TT || TT.call(this)
       }
-      request(pp, ip, cp) {
-        return new Promise(((Op, op) => {
-          if (void 0 !== this.failure) return void op(this.failure);
-          let Ip = Dp.p.None,
-            Sp = 0,
-            xp = null;
-          const Lp = () => {
-            var pp;
-            null === (pp = xp) || void 0 === pp || pp.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(TT, UT, mT) {
+        return new Promise(((WT, zT) => {
+          if (void 0 !== this.failure) return void zT(this.failure);
+          let MT = jT.m.None,
+            gT = 0,
+            nT = null;
+          const HT = () => {
+            var TT;
+            null === (TT = nT) || void 0 === TT || TT.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            Lp(), op(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = ip => {
+            HT(), zT(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = UT => {
             let {
-              data: Yp
-            } = ip;
-            var Ap;
-            if ("progress" === Yp.type) return Ip = Yp.stage, Sp = Yp.wasmBytes, void(null === (Ap = xp) || void 0 === Ap || Ap.restart(Ip === Dp.p.Generating ? Dp.e : Dp.h));
-            "sheet" === Yp.type && cp ? cp(Yp.sheet, Yp.pixels) : (Lp(), "failed" === Yp.type ? op(Yp.moduleLoad ? new Dp.l(Dp.k.Load, Yp.reason) : function(pp, ip) {
+              data: kT
+            } = UT;
+            var lT;
+            if ("progress" === kT.type) return MT = kT.stage, gT = kT.wasmBytes, void(null === (lT = nT) || void 0 === lT || lT.restart(MT === jT.m.Generating ? jT.e : jT.g));
+            "sheet" === kT.type && mT ? mT(kT.sheet, kT.pixels) : (HT(), "failed" === kT.type ? zT(kT.moduleLoad ? new jT.i(jT.h.Load, kT.reason) : function(TT, UT) {
               let {
-                reason: cp,
-                stack: Op
-              } = pp;
-              const op = new Error(Hp(cp, ip));
-              void 0 !== Op && (op.stack = Op);
-              return op
-            }(Yp, Sp)) : Yp.type !== pp.type ? op(new Error(`the texture worker answered ${Yp.type} to ${pp.type}`)) : Op(Yp))
-          }, this.worker.onerror = pp => {
-            Lp(), op(vp(pp))
+                reason: mT,
+                stack: WT
+              } = TT;
+              const zT = new Error(qT(mT, UT));
+              void 0 !== WT && (zT.stack = WT);
+              return zT
+            }(kT, gT)) : kT.type !== TT.type ? zT(new Error(`the texture worker answered ${kT.type} to ${TT.type}`)) : WT(kT))
+          }, this.worker.onerror = TT => {
+            HT(), zT(vT(TT))
           }, this.worker.onmessageerror = () => {
-            Lp(), op(new Error("the texture worker's answer couldn't be read"))
+            HT(), zT(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(pp, ip), xp = (0, Dp.r)((() => {
-              Lp();
-              const ip = new Dp.l("required" === pp.type ? `${Dp.k.Stalled}${Ip}` : Dp.k.Optional, Hp("the texture worker stopped responding", Sp));
-              op(ip)
+            this.worker.postMessage(TT, UT), nT = (0, jT.p)((() => {
+              HT();
+              const UT = new jT.i("required" === TT.type ? `${jT.h.Stalled}${MT}` : jT.h.Optional, qT("the texture worker stopped responding", gT));
+              zT(UT)
             }))
-          } catch (Yp) {
-            Lp(), op(Yp)
+          } catch (kT) {
+            HT(), zT(kT)
           }
         }))
       }
     }
 
-    function Hp(pp, ip) {
-      return ip > 0 ? `${pp}, its module's memory ${Math.round(ip/2**20)} MiB` : pp
+    function qT(TT, UT) {
+      return UT > 0 ? `${TT}, its module's memory ${Math.round(UT/2**20)} MiB` : TT
     }
   },
-  36481: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op,
-      c: () => op,
-      e: () => Ip,
-      g: () => Sp
+  36356: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT,
+      d: () => zT,
+      e: () => MT,
+      f: () => gT
     });
-    const Op = 1024,
-      op = 1024 * Op;
+    const WT = 1024,
+      zT = 1024 * WT;
 
-    function Ip(pp) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, pp / op)))
+    function MT(TT) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, TT / zT)))
     }
 
-    function Sp(pp) {
-      return (pp / op).toFixed(1)
+    function gT(TT) {
+      return (TT / zT).toFixed(1)
     }
   },
-  36455: pp => {
-    pp.exports = function(pp, ip, cp, Op) {
-      var op = self || window;
+  36329: TT => {
+    TT.exports = function(TT, UT, mT, WT) {
+      var zT = self || window;
       try {
         try {
-          var Ip;
+          var MT;
           try {
-            Ip = new op.Blob([pp])
-          } catch (Yp) {
-            (Ip = new(op.BlobBuilder || op.WebKitBlobBuilder || op.MozBlobBuilder || op.MSBlobBuilder)).append(pp), Ip = Ip.getBlob()
+            MT = new zT.Blob([TT])
+          } catch (kT) {
+            (MT = new(zT.BlobBuilder || zT.WebKitBlobBuilder || zT.MozBlobBuilder || zT.MSBlobBuilder)).append(TT), MT = MT.getBlob()
           }
-          var Sp = op.URL || op.webkitURL,
-            xp = Sp.createObjectURL(Ip),
-            Lp = new op[ip](xp, cp);
-          return Sp.revokeObjectURL(xp), Lp
-        } catch (Yp) {
-          return new op[ip]("data:application/javascript,".concat(encodeURIComponent(pp)), cp)
+          var gT = zT.URL || zT.webkitURL,
+            nT = gT.createObjectURL(MT),
+            HT = new zT[UT](nT, mT);
+          return gT.revokeObjectURL(nT), HT
+        } catch (kT) {
+          return new zT[UT]("data:application/javascript,".concat(encodeURIComponent(TT)), mT)
         }
-      } catch (Yp) {
-        if (!Op) throw Error("Inline worker is not supported");
-        return new op[ip](Op, cp)
+      } catch (kT) {
+        if (!WT) throw Error("Inline worker is not supported");
+        return new zT[UT](WT, mT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

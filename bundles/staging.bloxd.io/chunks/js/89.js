@@ -1,373 +1,373 @@
 export const id = 89;
 export const ids = [89];
 export const modules = {
-  40730: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      startWasmPadGameplay: () => fp
+  40666: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      startWasmPadGameplay: () => PT
     });
-    cp(40736);
-    var Op = cp(40739),
-      op = cp(40758),
-      Ip = cp(1982),
-      Sp = cp(40769),
-      xp = cp(4911),
-      Lp = cp(4886),
-      Yp = cp(40778),
-      Dp = cp(40783),
-      Ap = cp(4921),
-      Pp = cp(40867),
-      Wp = cp(2463),
-      yp = cp(8979),
-      Up = cp(40747),
-      wp = cp(8952),
-      vp = cp(39281);
-    const tp = pp => {
-        const ip = Ap.c.indexOf(pp);
-        if (ip < 0) throw new Error(`No core action "${pp}"`);
-        return ip
+    mT(40670);
+    var WT = mT(40677),
+      zT = mT(40699),
+      MT = mT(2067),
+      gT = mT(40709),
+      nT = mT(4904),
+      HT = mT(4883),
+      kT = mT(40717),
+      jT = mT(40724),
+      lT = mT(4912),
+      LT = mT(40802),
+      pT = mT(2525),
+      BT = mT(8967),
+      ZT = mT(40686),
+      cT = mT(8950),
+      vT = mT(39251);
+    const fT = TT => {
+        const UT = lT.c.indexOf(TT);
+        if (UT < 0) throw new Error(`No core action "${TT}"`);
+        return UT
       },
-      Hp = tp("primary-fire"),
-      dp = tp("alt-fire"),
-      ep = tp("mid-fire"),
-      jp = tp("jump"),
-      kp = tp("ReloadGun"),
-      mp = tp("SwapCameraZoom"),
-      Rp = tp("TouchAction1"),
-      qp = {
-        SpecialAction1: tp("SpecialAction1"),
-        SpecialAction2: tp("SpecialAction2")
+      qT = fT("primary-fire"),
+      iT = fT("alt-fire"),
+      bT = fT("mid-fire"),
+      OT = fT("jump"),
+      eT = fT("ReloadGun"),
+      YT = fT("SwapCameraZoom"),
+      JT = fT("TouchAction1"),
+      xT = {
+        SpecialAction1: fT("SpecialAction1"),
+        SpecialAction2: fT("SpecialAction2")
       },
-      Mp = (pp, ip) => {
-        (0, Wp.z)(xp.z.PadAction, pp, 0, 0, (0, Wp.v)(ip, performance.now()))
+      dT = (TT, UT) => {
+        (0, pT.u)(nT.G.PadAction, TT, 0, 0, (0, pT.r)(UT, performance.now()))
       },
-      Cp = pp => {
-        Mp(pp, Sp.id.Down)
+      wT = TT => {
+        dT(TT, gT.qd.Down)
       },
-      Ep = pp => {
-        Mp(pp, 0)
+      tT = TT => {
+        dT(TT, 0)
       },
-      Xp = pp => {
-        Cp(pp), Ep(pp)
+      aT = TT => {
+        wT(TT), tT(TT)
       },
-      lp = () => {
-        const pp = (0, Dp.k)();
-        return null !== pp && void 0 !== pp && pp.isCoreRunning ? pp : null
+      yT = () => {
+        const TT = (0, jT.i)();
+        return null !== TT && void 0 !== TT && TT.isCoreRunning ? TT : null
       },
-      Qp = pp => Sp.q.playerFlags(pp.api.apiView, 0),
-      Jp = pp => null !== pp && Sp.q.targetBlockId(pp.api.apiView, 0) !== Sp.Rc,
-      Bp = () => {
-        const pp = (0, yp.e)(),
-          ip = new Up.c;
-        let cp = !1;
-        const Op = (pp, ip) => {
-            (0, Wp.z)(xp.z.PadLook, Sp.rd.Rate, pp, ip, 0)
+      XT = TT => gT.x.playerFlags(TT.api.apiView, 0),
+      IT = TT => null !== TT && gT.x.targetBlockId(TT.api.apiView, 0) !== gT.Wc,
+      QT = () => {
+        const TT = (0, BT.b)(),
+          UT = new ZT.e;
+        let mT = !1;
+        const WT = (TT, UT) => {
+            (0, pT.u)(nT.G.PadLook, gT.xd.Rate, TT, UT, 0)
           },
-          op = () => {
-            cp = !1, ip.reset(), Op(0, 0)
+          zT = () => {
+            mT = !1, UT.reset(), WT(0, 0)
           };
         return {
-          update: (op, Ip, Lp) => {
-            cp || (pp.discardPending(), cp = !0);
-            const Yp = (0, Up.o)(ip, op, Ip, Lp, performance.now());
-            Op(Yp.yawRadPerSec, Yp.pitchRadPerSec);
-            const Dp = pp.drainLookDelta();
-            0 === Dp.QE && 0 === Dp.TE || (0, Wp.z)(xp.z.PadLook, Sp.rd.Gyro, Dp.QE, Dp.TE, 0)
+          update: (zT, MT, HT) => {
+            mT || (TT.discardPending(), mT = !0);
+            const kT = (0, ZT.r)(UT, zT, MT, HT, performance.now());
+            WT(kT.yawRadPerSec, kT.pitchRadPerSec);
+            const jT = TT.drainLookDelta();
+            0 === jT.Xs && 0 === jT.Qs || (0, pT.u)(nT.G.PadLook, gT.xd.Gyro, jT.Xs, jT.Qs, 0)
           },
-          release: op,
-          uninstall: op
+          release: zT,
+          uninstall: zT
         }
       },
-      Np = () => {
-        const pp = lp();
-        return null !== pp && 0 !== (Qp(pp) & Sp.wd.PadSneakToggled)
+      sT = () => {
+        const TT = yT();
+        return null !== TT && 0 !== (XT(TT) & gT.Cd.PadSneakToggled)
       },
-      Tp = () => {
-        const pp = (pp => {
-          const ip = pp => function() {
-            return (0, Pp.c)(), pp(...arguments)
+      FT = () => {
+        const TT = (TT => {
+          const UT = TT => function() {
+            return (0, LT.c)(), TT(...arguments)
           };
           return {
-            primaryFireDown: ip((pp => (Mp(Hp, Sp.id.Down | (pp ? Sp.id.Repeat : 0)), 0))),
-            primaryFireUp: ip((() => {
-              Ep(Hp)
+            primaryFireDown: UT((TT => (dT(qT, gT.qd.Down | (TT ? gT.qd.Repeat : 0)), 0))),
+            primaryFireUp: UT((() => {
+              tT(qT)
             })),
-            altFireDown: ip((() => (Cp(dp), 0))),
-            altFireUp: ip((() => {
-              Ep(dp)
+            altFireDown: UT((() => (wT(iT), 0))),
+            altFireUp: UT((() => {
+              tT(iT)
             })),
-            jumpDown: ip((() => {
-              Xp(jp)
+            jumpDown: UT((() => {
+              aT(OT)
             })),
-            specialActionDown: ip((pp => {
-              Cp(qp[pp])
+            specialActionDown: UT((TT => {
+              wT(xT[TT])
             })),
-            specialActionUp: ip((pp => {
-              Ep(qp[pp])
+            specialActionUp: UT((TT => {
+              tT(xT[TT])
             })),
-            reloadGun: ip((() => {
-              Xp(kp)
+            reloadGun: UT((() => {
+              aT(eT)
             })),
-            dropItem: ip((pp => {
-              Mp(Sp.ld.Drop, Sp.id.Down | (pp ? Sp.id.Stack : 0))
+            dropItem: UT((TT => {
+              dT(gT.td.Drop, gT.qd.Down | (TT ? gT.qd.Stack : 0))
             })),
-            swapCameraZoom: ip((() => {
-              Xp(mp)
+            swapCameraZoom: UT((() => {
+              aT(YT)
             })),
-            pickBlock: ip((() => (Xp(ep), Jp(pp()))))
+            pickBlock: UT((() => (aT(bT), IT(TT()))))
           }
-        })(lp);
-        let ip = !1,
-          cp = null;
-        const Op = () => {
-          var pp;
-          null === (pp = cp) || void 0 === pp || pp(), cp = null
+        })(yT);
+        let UT = !1,
+          mT = null;
+        const WT = () => {
+          var TT;
+          null === (TT = mT) || void 0 === TT || TT(), mT = null
         };
         return {
-          bodies: () => pp,
-          look: Bp(),
-          move: (pp, cp) => {
-            var op;
-            Op();
+          bodies: () => TT,
+          look: QT(),
+          move: (TT, mT) => {
+            var zT;
+            WT();
             const {
-              bits: Ip,
-              flips: xp
-            } = (pp => {
-              if (null === pp) return {
-                bits: Sp.nd.Peek,
+              bits: MT,
+              flips: nT
+            } = (TT => {
+              if (null === TT) return {
+                bits: gT.ud.Peek,
                 flips: 0
               };
-              const ip = pp.sneakHeld ? Sp.nd.SneakHeld : 0;
-              return "hold" === pp.mode ? {
-                bits: ip | Sp.nd.SneakHoldMode,
-                flips: pp.sneakTogglePressed ? 1 : 0
+              const UT = TT.sneakHeld ? gT.ud.SneakHeld : 0;
+              return "hold" === TT.mode ? {
+                bits: UT | gT.ud.SneakHoldMode,
+                flips: TT.sneakTogglePressed ? 1 : 0
               } : {
-                bits: ip,
-                flips: pp.sneakPressed || pp.sneakTogglePressed ? 1 : 0
+                bits: UT,
+                flips: TT.sneakPressed || TT.sneakTogglePressed ? 1 : 0
               }
-            })(cp);
-            null !== (op = lp()) && void 0 !== op && op.padMove(pp.x, pp.y, pp.magnitude, pp.headingOffset, (pp => Sp.nd.Active | (pp.jumpHeld ? Sp.nd.JumpHeld : 0) | (pp.jumpPressed ? Sp.nd.JumpPressed : 0) | (pp.running ? Sp.nd.Running : 0) | (pp.sprintHeld ? Sp.nd.SprintHeld : 0))(pp) | Ip, xp) && (ip = !0), (0, wp.e)(Np())
+            })(mT);
+            null !== (zT = yT()) && void 0 !== zT && zT.padMove(TT.x, TT.y, TT.magnitude, TT.headingOffset, (TT => gT.ud.Active | (TT.jumpHeld ? gT.ud.JumpHeld : 0) | (TT.jumpPressed ? gT.ud.JumpPressed : 0) | (TT.running ? gT.ud.Running : 0) | (TT.sprintHeld ? gT.ud.SprintHeld : 0))(TT) | MT, nT) && (UT = !0), (0, cT.g)(sT())
           },
           stopMoving: () => {
-            var pp;
-            ip && (ip = !(null !== (pp = lp()) && void 0 !== pp && pp.padMove(0, 0, 0, 0, 0, 0)), Op(), cp = (0, Lp.s)((() => {
-              Op(), (0, wp.e)(Np())
+            var TT;
+            UT && (UT = !(null !== (TT = yT()) && void 0 !== TT && TT.padMove(0, 0, 0, 0, 0, 0)), WT(), mT = (0, HT.C)((() => {
+              WT(), (0, cT.g)(sT())
             })))
           },
-          uninstall: Op,
-          deviceChanged: pp => {
-            var cp;
-            "touch" === pp ? ((0, wp.e)(!1), null !== (cp = lp()) && void 0 !== cp && cp.padMove(0, 0, 0, 0, Sp.nd.EndToggle, 0) && (ip = !1)) : "gamepad" === pp && (0, wp.e)(Np())
+          uninstall: WT,
+          deviceChanged: TT => {
+            var mT;
+            "touch" === TT ? ((0, cT.g)(!1), null !== (mT = yT()) && void 0 !== mT && mT.padMove(0, 0, 0, 0, gT.ud.EndToggle, 0) && (UT = !1)) : "gamepad" === TT && (0, cT.g)(sT())
           },
-          hasPlayer: () => null !== lp(),
+          hasPlayer: () => null !== yT(),
           isPlayerDead: () => {
-            var pp;
-            return !1 === (null === (pp = lp()) || void 0 === pp ? void 0 : pp.localPlayerAlive())
+            var TT;
+            return !1 === (null === (TT = yT()) || void 0 === TT ? void 0 : TT.localPlayerAlive())
           },
           isReplayMode: () => {
-            const pp = lp();
-            return null !== pp && 0 !== (Qp(pp) & Sp.wd.Replay)
+            const TT = yT();
+            return null !== TT && 0 !== (XT(TT) & gT.Cd.Replay)
           },
           isFreeCameraOn: () => {
-            const pp = lp();
-            return null !== pp && 0 !== (Qp(pp) & Sp.wd.FreeCam)
+            const TT = yT();
+            return null !== TT && 0 !== (XT(TT) & gT.Cd.FreeCam)
           },
-          targetsBlock: () => Jp(lp()),
+          targetsBlock: () => IT(yT()),
           selectedSlotEmpty: () => {
-            var pp;
-            return !(null !== (pp = lp()) && void 0 !== pp && pp.items.sx())
+            var TT;
+            return !(null !== (TT = yT()) && void 0 !== TT && TT.items.fn())
           },
-          pickBlockAllowed: () => !!Ip.c.get("creative") && !!Ip.c.get("canPickBlocks"),
-          scrollHotbar: pp => {
-            Mp(Sp.ld.Hotbar, Sp.id.Down | (pp > 0 ? Sp.id.Next : 0))
+          pickBlockAllowed: () => !!MT.d.get("creative") && !!MT.d.get("canPickBlocks"),
+          scrollHotbar: TT => {
+            dT(gT.td.Hotbar, gT.qd.Down | (TT > 0 ? gT.qd.Next : 0))
           },
-          hasFullInventory: Yp.o,
-          hasLobbyTab: () => (0, vp.d)({
-            lobbyLeaderboardInfo: Ip.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: Ip.c.get("lobbyManage")
+          hasFullInventory: kT.n,
+          hasLobbyTab: () => (0, vT.b)({
+            lobbyLeaderboardInfo: MT.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: MT.d.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var pp, ip, cp, Op;
-            const op = lp();
+            var TT, UT, mT, WT;
+            const zT = yT();
             return {
-              holdingGun: !1 !== (null === op || void 0 === op ? void 0 : op.localPlayerAlive()) && "Gun" === (null === op || void 0 === op || null === (pp = op.items.sx()) || void 0 === pp || null === (ip = pp.typeObj) || void 0 === ip ? void 0 : ip.type),
-              customButtons: null !== (cp = Ip.c.get("customButtons")) && void 0 !== cp ? cp : null,
-              touchscreenActionButton: null !== (Op = Ip.c.get("touchscreenActionButton")) && void 0 !== Op ? Op : null
+              holdingGun: !1 !== (null === zT || void 0 === zT ? void 0 : zT.localPlayerAlive()) && "Gun" === (null === zT || void 0 === zT || null === (TT = zT.items.fn()) || void 0 === TT || null === (UT = TT.typeObj) || void 0 === UT ? void 0 : UT.type),
+              customButtons: null !== (mT = MT.d.get("customButtons")) && void 0 !== mT ? mT : null,
+              touchscreenActionButton: null !== (WT = MT.d.get("touchscreenActionButton")) && void 0 !== WT ? WT : null
             }
           },
-          pressTouchButton: pp => {
-            pp ? Cp(Rp) : Ep(Rp)
+          pressTouchButton: TT => {
+            TT ? wT(JT) : tT(JT)
           }
         }
       },
-      fp = () => {
-        const pp = (0, op.d)(Tp()),
-          ip = (0, Op.e)(),
-          cp = null;
+      PT = () => {
+        const TT = (0, zT.c)(FT()),
+          UT = (0, WT.d)(),
+          mT = null;
         return () => {
-          pp(), ip(), null === cp || void 0 === cp || cp()
+          TT(), UT(), null === mT || void 0 === mT || mT()
         }
       }
   },
-  4886: (pp, ip, cp) => {
-    cp.d(ip, {
-      B: () => tp,
-      D: () => Sp,
-      H: () => xp,
-      K: () => Rp,
-      b: () => mp,
-      c: () => dp,
-      f: () => Xp,
-      h: () => Ep,
-      j: () => vp,
-      m: () => jp,
-      n: () => Hp,
-      p: () => ep,
-      s: () => qp,
-      u: () => Mp,
-      y: () => Cp
+  4883: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => bT,
+      C: () => xT,
+      G: () => dT,
+      I: () => wT,
+      K: () => fT,
+      L: () => gT,
+      N: () => nT,
+      Q: () => JT,
+      c: () => YT,
+      g: () => iT,
+      k: () => aT,
+      n: () => tT,
+      r: () => vT,
+      u: () => OT,
+      x: () => qT
     });
-    var Op = cp(4895);
-    const op = {
+    var WT = mT(4890);
+    const zT = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Ip = op;
+    let MT = zT;
 
-    function Sp(pp) {
-      Ip = null !== pp && void 0 !== pp ? pp : op
+    function gT(TT) {
+      MT = null !== TT && void 0 !== TT ? TT : zT
     }
 
-    function xp() {
-      return Ip
+    function nT() {
+      return MT
     }
-    const Lp = new Set,
-      Yp = new Set;
-    let Dp = -1;
-    const Ap = new Set,
-      Pp = new Set;
-    let Wp = 0,
-      yp = 0;
-    const Up = new Set,
-      wp = new Set;
+    const HT = new Set,
+      kT = new Set;
+    let jT = -1;
+    const lT = new Set,
+      LT = new Set;
+    let pT = 0,
+      BT = 0;
+    const ZT = new Set,
+      cT = new Set;
 
-    function vp(pp) {
-      return Lp.add(pp), () => {
-        Lp.delete(pp)
+    function vT(TT) {
+      return HT.add(TT), () => {
+        HT.delete(TT)
       }
     }
 
-    function tp(pp, ip) {
-      for (const Op of Lp) try {
-        Op(pp)
-      } catch (cp) {
-        ip(cp)
+    function fT(TT, UT) {
+      for (const WT of HT) try {
+        WT(TT)
+      } catch (mT) {
+        UT(mT)
       }
     }
 
-    function Hp(pp) {
-      return Yp.add(pp), () => {
-        Yp.delete(pp)
+    function qT(TT) {
+      return kT.add(TT), () => {
+        kT.delete(TT)
       }
     }
 
-    function dp(pp, ip) {
-      const cp = Dp < 0 ? 0 : pp - Dp;
-      Dp = pp;
-      for (const op of Yp) try {
-        op(cp)
-      } catch (Op) {
-        ip(Op)
+    function iT(TT, UT) {
+      const mT = jT < 0 ? 0 : TT - jT;
+      jT = TT;
+      for (const zT of kT) try {
+        zT(mT)
+      } catch (WT) {
+        UT(WT)
       }
     }
 
-    function ep(pp) {
-      return Ap.add(pp), () => {
-        Ap.delete(pp)
+    function bT(TT) {
+      return lT.add(TT), () => {
+        lT.delete(TT)
       }
     }
 
-    function jp(pp) {
-      return Pp.add(pp), () => {
-        Pp.delete(pp)
+    function OT(TT) {
+      return LT.add(TT), () => {
+        LT.delete(TT)
       }
     }
-    let kp = 0;
+    let eT = 0;
 
-    function mp(pp) {
-      kp += pp
+    function YT(TT) {
+      eT += TT
     }
 
-    function Rp() {
-      const pp = kp;
-      return kp = 0, pp
+    function JT() {
+      const TT = eT;
+      return eT = 0, TT
     }
 
-    function qp(pp) {
-      return Up.add(pp), () => {
-        Up.delete(pp)
-      }
-    }
-
-    function Mp(pp) {
-      return wp.add(pp), () => {
-        wp.delete(pp)
+    function xT(TT) {
+      return ZT.add(TT), () => {
+        ZT.delete(TT)
       }
     }
 
-    function Cp() {
-      Wp = 0, yp = 0, Dp = -1
+    function dT(TT) {
+      return cT.add(TT), () => {
+        cT.delete(TT)
+      }
     }
 
-    function Ep(pp, ip) {
-      if ("paced" === pp) return yp += ip, null;
-      if ("drawn" !== pp && "skipped" !== pp) return null;
-      const cp = ip + yp;
-      return yp = 0, cp
+    function wT() {
+      pT = 0, BT = 0, jT = -1
     }
 
-    function Xp(pp, ip, cp, op) {
-      const Ip = (0, Op.j)(ip),
-        Sp = pp > 0 ? performance.now() : 0;
-      for (let Op = 0; Op < pp; Op++)
-        for (const pp of Up) try {
-          pp()
-        } catch (xp) {
-          op(xp)
+    function tT(TT, UT) {
+      if ("paced" === TT) return BT += UT, null;
+      if ("drawn" !== TT && "skipped" !== TT) return null;
+      const mT = UT + BT;
+      return BT = 0, mT
+    }
+
+    function aT(TT, UT, mT, zT) {
+      const MT = (0, WT.g)(UT),
+        gT = TT > 0 ? performance.now() : 0;
+      for (let WT = 0; WT < TT; WT++)
+        for (const TT of ZT) try {
+          TT()
+        } catch (nT) {
+          zT(nT)
         }
-      if (pp > 0 && mp(performance.now() - Sp), null !== cp) {
-        for (const pp of Ap) try {
-          pp(cp)
-        } catch (xp) {
-          op(xp)
+      if (TT > 0 && YT(performance.now() - gT), null !== mT) {
+        for (const TT of lT) try {
+          TT(mT)
+        } catch (nT) {
+          zT(nT)
         }
-        Wp += cp
+        pT += mT
       }
-      if ("drawn" === ip) {
-        const pp = Wp;
-        Wp = 0;
-        for (const ip of Pp) try {
-          ip(pp)
-        } catch (xp) {
-          op(xp)
+      if ("drawn" === UT) {
+        const TT = pT;
+        pT = 0;
+        for (const UT of LT) try {
+          UT(TT)
+        } catch (nT) {
+          zT(nT)
         }
       }
-      for (const Op of wp) try {
-        Op(pp, Ip)
-      } catch (xp) {
-        op(xp)
+      for (const WT of cT) try {
+        WT(TT, MT)
+      } catch (nT) {
+        zT(nT)
       }
     }
   },
-  4921: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      e: () => Ip,
-      i: () => Sp,
-      j: () => Op,
-      n: () => xp
+  4912: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      e: () => MT,
+      f: () => gT,
+      g: () => WT,
+      i: () => nT
     });
-    const Op = {
+    const WT = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      op = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Ip = {
+      zT = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      MT = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      Sp = {
+      gT = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      xp = [16]
+      nT = [16]
   },
-  40867: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp,
-      f: () => Ip,
-      i: () => op
+  40802: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT,
+      d: () => MT,
+      e: () => zT
     });
-    let Op = null;
+    let WT = null;
 
-    function op(pp) {
-      Op = pp
+    function zT(TT) {
+      WT = TT
     }
 
-    function Ip(pp) {
-      Op === pp && (Op = null)
+    function MT(TT) {
+      WT === TT && (WT = null)
     }
 
-    function Sp() {
-      var pp;
-      null === (pp = Op) || void 0 === pp || pp()
+    function gT() {
+      var TT;
+      null === (TT = WT) || void 0 === TT || TT()
     }
   },
-  4927: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      e: () => Sp,
-      g: () => Yp
+  4915: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      e: () => gT,
+      g: () => kT
     });
-    var Op = cp(2457),
-      op = cp(2463);
-    const Ip = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var WT = mT(2522),
+      zT = mT(2525);
+    const MT = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function Sp(pp) {
-      return pp instanceof HTMLElement && (!!(pp.isContentEditable || pp instanceof HTMLTextAreaElement || pp instanceof HTMLSelectElement) || pp instanceof HTMLInputElement && !Ip.has(pp.type))
+    function gT(TT) {
+      return TT instanceof HTMLElement && (!!(TT.isContentEditable || TT instanceof HTMLTextAreaElement || TT instanceof HTMLSelectElement) || TT instanceof HTMLInputElement && !MT.has(TT.type))
     }
 
-    function xp(pp) {
-      let ip = null;
-      const cp = cp => {
-          const op = Sp(cp);
-          op !== ip && (ip = op, pp(Op.i.UiCapture, Op.C.Keyboard, 0, 0, op ? Op.C.Keyboard : 0))
+    function nT(TT) {
+      let UT = null;
+      const mT = mT => {
+          const zT = gT(mT);
+          zT !== UT && (UT = zT, TT(WT.g.UiCapture, WT.y.Keyboard, 0, 0, zT ? WT.y.Keyboard : 0))
         },
-        op = pp => {
-          cp(pp.target)
+        zT = TT => {
+          mT(TT.target)
         },
-        Ip = pp => {
-          cp(pp.relatedTarget)
+        MT = TT => {
+          mT(TT.relatedTarget)
         },
-        xp = () => {
-          cp(document.activeElement)
+        nT = () => {
+          mT(document.activeElement)
         },
-        Lp = {
+        HT = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", op, Lp), document.addEventListener("focusout", Ip, Lp), document.addEventListener("keydown", xp, Lp), cp(document.activeElement), () => {
-        document.removeEventListener("focusin", op, Lp), document.removeEventListener("focusout", Ip, Lp), document.removeEventListener("keydown", xp, Lp)
+      return document.addEventListener("focusin", zT, HT), document.addEventListener("focusout", MT, HT), document.addEventListener("keydown", nT, HT), mT(document.activeElement), () => {
+        document.removeEventListener("focusin", zT, HT), document.removeEventListener("focusout", MT, HT), document.removeEventListener("keydown", nT, HT)
       }
     }
-    const Lp = new Map;
+    const HT = new Map;
 
-    function Yp(pp, ip) {
-      var cp;
-      let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Lp.set(Op, (null !== (cp = Lp.get(Op)) && void 0 !== cp ? cp : 0) & ~pp | ip & pp);
-      let Ip = 0;
-      for (const op of Lp.values()) Ip |= op;
-      return (0, op.E)(pp, Ip & pp)
+    function kT(TT, UT) {
+      var mT;
+      let WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      HT.set(WT, (null !== (mT = HT.get(WT)) && void 0 !== mT ? mT : 0) & ~TT | UT & TT);
+      let MT = 0;
+      for (const zT of HT.values()) MT |= zT;
+      return (0, zT.A)(TT, MT & TT)
     }
   },
-  37146: (pp, ip, cp) => {
-    function Op(pp) {
-      return pp.includes("Leaf Bed")
+  37032: (TT, UT, mT) => {
+    function WT(TT) {
+      return TT.includes("Leaf Bed")
     }
 
-    function op(pp) {
-      return / Bed(?: Head)?(?:\||$)/.test(pp) && !Op(pp)
+    function zT(TT) {
+      return / Bed(?: Head)?(?:\||$)/.test(TT) && !WT(TT)
     }
 
-    function Ip(pp) {
-      return pp.includes(" Strongbed")
+    function MT(TT) {
+      return TT.includes(" Strongbed")
     }
 
-    function Sp(pp) {
-      return Op(pp) || op(pp) || Ip(pp)
+    function gT(TT) {
+      return WT(TT) || zT(TT) || MT(TT)
     }
-    cp.d(ip, {
-      b: () => Sp,
-      f: () => Op,
-      g: () => Ip,
-      h: () => op
+    mT.d(UT, {
+      c: () => gT,
+      g: () => WT,
+      j: () => MT,
+      l: () => zT
     })
   },
-  37142: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp
+  37030: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT
     });
-    var Op = cp(37146),
-      op = cp(9338);
-    const Ip = [],
-      Sp = [],
-      xp = [],
-      Lp = [];
-    for (const Dp of Object.keys(op.h))(0, Op.f)(Dp) ? Ip.push(Dp) : (0, Op.h)(Dp) && Sp.push(Dp), (0, Op.g)(Dp) && xp.push(Dp), (Dp.includes(" Bed Head") || Dp.includes(" Strongbed Head")) && Lp.push(Dp);
-    const Yp = {
-      leafBeds: Ip,
-      woolBeds: Sp,
-      strongBeds: xp,
-      beds: [...Ip, ...Sp, ...xp],
-      bedHeads: Lp,
+    var WT = mT(37032),
+      zT = mT(9330);
+    const MT = [],
+      gT = [],
+      nT = [],
+      HT = [];
+    for (const jT of Object.keys(zT.k))(0, WT.g)(jT) ? MT.push(jT) : (0, WT.l)(jT) && gT.push(jT), (0, WT.j)(jT) && nT.push(jT), (jT.includes(" Bed Head") || jT.includes(" Strongbed Head")) && HT.push(jT);
+    const kT = {
+      leafBeds: MT,
+      woolBeds: gT,
+      strongBeds: nT,
+      beds: [...MT, ...gT, ...nT],
+      bedHeads: HT,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6605: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      g: () => op,
-      h: () => Lp,
-      i: () => Ip,
-      k: () => Yp,
-      l: () => Op,
-      m: () => xp
+  6542: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT,
+      g: () => zT,
+      i: () => HT,
+      l: () => MT,
+      p: () => kT,
+      q: () => WT,
+      u: () => nT
     });
-    let Op = function(pp) {
-        return pp[pp.DEFAULT = 0] = "DEFAULT", pp[pp.BOAT = 1] = "BOAT", pp[pp.GLIDER = 2] = "GLIDER", pp[pp.BALLOON = 3] = "BALLOON", pp[pp.SLEEPING = 4] = "SLEEPING", pp[pp.RIDING_MOB = 5] = "RIDING_MOB", pp[pp.CAR = 6] = "CAR", pp[pp.HOVERCRAFT = 7] = "HOVERCRAFT", pp
+    let WT = function(TT) {
+        return TT[TT.DEFAULT = 0] = "DEFAULT", TT[TT.BOAT = 1] = "BOAT", TT[TT.GLIDER = 2] = "GLIDER", TT[TT.BALLOON = 3] = "BALLOON", TT[TT.SLEEPING = 4] = "SLEEPING", TT[TT.RIDING_MOB = 5] = "RIDING_MOB", TT[TT.CAR = 6] = "CAR", TT[TT.HOVERCRAFT = 7] = "HOVERCRAFT", TT
       }({}),
-      op = function(pp) {
-        return pp[pp.WOOD = 0] = "WOOD", pp[pp.OBSIDIAN = 1] = "OBSIDIAN", pp[pp.SPEED = 2] = "SPEED", pp
+      zT = function(TT) {
+        return TT[TT.WOOD = 0] = "WOOD", TT[TT.OBSIDIAN = 1] = "OBSIDIAN", TT[TT.SPEED = 2] = "SPEED", TT
       }({}),
-      Ip = function(pp) {
-        return pp[pp.WOOD = 0] = "WOOD", pp[pp.IRON = 1] = "IRON", pp[pp.GOLD = 2] = "GOLD", pp[pp.DIAMOND = 3] = "DIAMOND", pp
+      MT = function(TT) {
+        return TT[TT.WOOD = 0] = "WOOD", TT[TT.IRON = 1] = "IRON", TT[TT.GOLD = 2] = "GOLD", TT[TT.DIAMOND = 3] = "DIAMOND", TT
       }({}),
-      Sp = function(pp) {
-        return pp[pp.YELLOW = 0] = "YELLOW", pp[pp.WHITE = 1] = "WHITE", pp[pp.RED = 2] = "RED", pp[pp.PURPLE = 3] = "PURPLE", pp[pp.PINK = 4] = "PINK", pp[pp.ORANGE = 5] = "ORANGE", pp[pp.MAGENTA = 6] = "MAGENTA", pp[pp.LIME = 7] = "LIME", pp[pp.LIGHT_GRAY = 8] = "LIGHT_GRAY", pp[pp.LIGHT_BLUE = 9] = "LIGHT_BLUE", pp[pp.GREEN = 10] = "GREEN", pp[pp.GRAY = 11] = "GRAY", pp[pp.CYAN = 12] = "CYAN", pp[pp.BROWN = 13] = "BROWN", pp[pp.BLUE = 14] = "BLUE", pp[pp.BLACK = 15] = "BLACK", pp
+      gT = function(TT) {
+        return TT[TT.YELLOW = 0] = "YELLOW", TT[TT.WHITE = 1] = "WHITE", TT[TT.RED = 2] = "RED", TT[TT.PURPLE = 3] = "PURPLE", TT[TT.PINK = 4] = "PINK", TT[TT.ORANGE = 5] = "ORANGE", TT[TT.MAGENTA = 6] = "MAGENTA", TT[TT.LIME = 7] = "LIME", TT[TT.LIGHT_GRAY = 8] = "LIGHT_GRAY", TT[TT.LIGHT_BLUE = 9] = "LIGHT_BLUE", TT[TT.GREEN = 10] = "GREEN", TT[TT.GRAY = 11] = "GRAY", TT[TT.CYAN = 12] = "CYAN", TT[TT.BROWN = 13] = "BROWN", TT[TT.BLUE = 14] = "BLUE", TT[TT.BLACK = 15] = "BLACK", TT
       }({}),
-      xp = function(pp) {
-        return pp[pp.ROTATION_1 = 0] = "ROTATION_1", pp[pp.ROTATION_2 = 1] = "ROTATION_2", pp[pp.ROTATION_3 = 2] = "ROTATION_3", pp[pp.ROTATION_4 = 3] = "ROTATION_4", pp
+      nT = function(TT) {
+        return TT[TT.ROTATION_1 = 0] = "ROTATION_1", TT[TT.ROTATION_2 = 1] = "ROTATION_2", TT[TT.ROTATION_3 = 2] = "ROTATION_3", TT[TT.ROTATION_4 = 3] = "ROTATION_4", TT
       }({}),
-      Lp = function(pp) {
-        return pp[pp.KART = 0] = "KART", pp[pp.OFF_ROADER = 1] = "OFF_ROADER", pp[pp.CAR = 2] = "CAR", pp[pp.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", pp[pp.ARMORED_CAR = 4] = "ARMORED_CAR", pp[pp.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", pp[pp.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", pp[pp.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", pp
+      HT = function(TT) {
+        return TT[TT.KART = 0] = "KART", TT[TT.OFF_ROADER = 1] = "OFF_ROADER", TT[TT.CAR = 2] = "CAR", TT[TT.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", TT[TT.ARMORED_CAR = 4] = "ARMORED_CAR", TT[TT.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", TT[TT.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", TT[TT.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", TT
       }({});
-    Op.DEFAULT, Op.BOAT, op.SPEED, Op.GLIDER, Ip.DIAMOND, Op.BALLOON, Sp.BLACK, Op.SLEEPING, xp.ROTATION_4, Op.RIDING_MOB, Op.CAR, Lp.MOONSTONE_MINING_DRILL, Op.HOVERCRAFT;
-    let Yp = function(pp) {
-      return pp[pp.NORMAL = 0] = "NORMAL", pp[pp.GLIDING = 1] = "GLIDING", pp[pp.FLOATING = 2] = "FLOATING", pp
+    WT.DEFAULT, WT.BOAT, zT.SPEED, WT.GLIDER, MT.DIAMOND, WT.BALLOON, gT.BLACK, WT.SLEEPING, nT.ROTATION_4, WT.RIDING_MOB, WT.CAR, HT.MOONSTONE_MINING_DRILL, WT.HOVERCRAFT;
+    let kT = function(TT) {
+      return TT[TT.NORMAL = 0] = "NORMAL", TT[TT.GLIDING = 1] = "GLIDING", TT[TT.FLOATING = 2] = "FLOATING", TT
     }({})
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

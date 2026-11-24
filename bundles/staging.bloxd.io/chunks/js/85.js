@@ -1,11 +1,11 @@
 export const id = 85;
 export const ids = [85];
 export const modules = {
-  4874: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Op
+  4866: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => WT
     });
-    const Op = String.raw`export interface GameApi {
+    const WT = String.raw`export interface GameApi {
 		/** The ID of the player running the code.
 		 *
 		 * Lobby code usually has nobody running it, so this is null.
@@ -4492,4 +4492,4 @@ export type OtherEntitySettings = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

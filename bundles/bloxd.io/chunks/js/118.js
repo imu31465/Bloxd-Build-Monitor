@@ -1,213 +1,213 @@
 export const id = 118;
 export const ids = [118, 138];
 export const modules = {
-  6772: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      loadShaderPackTextures: () => Sp,
-      shaderPackTextures: () => xp
+  6698: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      loadShaderPackTextures: () => gT,
+      shaderPackTextures: () => nT
     });
-    var Op = cp(5167);
-    let op = null,
-      Ip = null;
+    var WT = mT(5142);
+    let zT = null,
+      MT = null;
 
-    function Sp() {
-      return Ip ??= Promise.all([cp.e(73), cp.e(190)]).then((() => cp(40670))).then((pp => {
+    function gT() {
+      return MT ??= Promise.all([mT.e(73), mT.e(190)]).then((() => mT(40614))).then((TT => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: ip,
-          textureNameToIndex: cp,
-          textureAnimationData: Ip
-        } = pp;
-        return op ??= (0, Op.j)(cp, Ip, ip), op
-      })), Ip
+          FORMER_BLOCK_IMAGE_NAMES: UT,
+          textureNameToIndex: mT,
+          textureAnimationData: MT
+        } = TT;
+        return zT ??= (0, WT.l)(mT, MT, UT), zT
+      })), MT
     }
 
-    function xp() {
-      if (null === op) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return op
+    function nT() {
+      if (null === zT) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return zT
     }
   },
-  5167: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      e: () => Sp,
-      f: () => Op,
-      j: () => Up,
-      m: () => Ap,
-      o: () => op,
-      p: () => Ip,
-      s: () => Yp,
-      v: () => Dp,
-      z: () => Pp
+  5142: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      f: () => gT,
+      j: () => WT,
+      l: () => ZT,
+      o: () => lT,
+      q: () => zT,
+      s: () => MT,
+      v: () => kT,
+      w: () => jT,
+      x: () => LT
     });
-    const Op = 5;
+    const WT = 5;
 
-    function op(pp) {
-      return pp === Op
+    function zT(TT) {
+      return TT === WT
     }
 
-    function Ip(pp) {
-      return [...pp.features]
+    function MT(TT) {
+      return [...TT.features]
     }
-    const Sp = 262144,
-      xp = 256,
-      Lp = 256;
+    const gT = 262144,
+      nT = 256,
+      HT = 256;
 
-    function Yp(pp) {
-      if ("object" !== typeof pp || null === pp || Array.isArray(pp)) return "The pack has no files.";
-      const ip = [];
-      for (const [cp, Op] of Object.entries(pp)) {
-        if ("string" !== typeof Op) return `${cp} isn't text.`;
-        ip.push({
-          path: cp,
-          source: Op
+    function kT(TT) {
+      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
+      const UT = [];
+      for (const [mT, WT] of Object.entries(TT)) {
+        if ("string" !== typeof WT) return `${mT} isn't text.`;
+        UT.push({
+          path: mT,
+          source: WT
         })
       }
-      return ip.sort(((pp, ip) => Ap(pp.path, ip.path))),
-        function(pp) {
-          if (0 === pp.length) return "The pack has no .wgsl files.";
-          if (pp.length > xp) return `The pack has more than ${xp} .wgsl files.`;
-          const ip = new Set;
+      return UT.sort(((TT, UT) => lT(TT.path, UT.path))),
+        function(TT) {
+          if (0 === TT.length) return "The pack has no .wgsl files.";
+          if (TT.length > nT) return `The pack has more than ${nT} .wgsl files.`;
+          const UT = new Set;
           for (const {
-              path: cp
+              path: mT
             }
-            of pp) {
-            const pp = Wp(cp);
-            if (null !== pp) return pp;
-            if (ip.has(cp)) return `The pack has two files at ${cp}.`;
-            ip.add(cp)
+            of TT) {
+            const TT = pT(mT);
+            if (null !== TT) return TT;
+            if (UT.has(mT)) return `The pack has two files at ${mT}.`;
+            UT.add(mT)
           }
-          return Pp(pp) > Sp ? `The pack's .wgsl files are over ${Sp/1024} KB in total.` : null
-        }(ip) ?? ip
+          return LT(TT) > gT ? `The pack's .wgsl files are over ${gT/1024} KB in total.` : null
+        }(UT) ?? UT
     }
 
-    function Dp(pp) {
-      const ip = {};
-      for (const cp of pp) ip[cp.path] = cp.source;
-      return ip
+    function jT(TT) {
+      const UT = {};
+      for (const mT of TT) UT[mT.path] = mT.source;
+      return UT
     }
 
-    function Ap(pp, ip) {
-      return pp < ip ? -1 : pp > ip ? 1 : 0
+    function lT(TT, UT) {
+      return TT < UT ? -1 : TT > UT ? 1 : 0
     }
 
-    function Pp(pp) {
-      const ip = new TextEncoder;
-      let cp = 0;
+    function LT(TT) {
+      const UT = new TextEncoder;
+      let mT = 0;
       for (const {
-          source: Op
+          source: WT
         }
-        of pp) cp += ip.encode(Op).byteLength;
-      return cp
+        of TT) mT += UT.encode(WT).byteLength;
+      return mT
     }
 
-    function Wp(pp) {
-      if (!pp.toLowerCase().endsWith(".wgsl")) return `${pp} isn't a .wgsl file.`;
-      if (pp.length > Lp) return `A file path is over ${Lp} characters.`;
-      if (pp.includes("\\") || /[\u0000-\u001f]/.test(pp)) return `${pp} isn't a valid file path.`;
-      return pp.split("/").some((pp => "" === pp || "." === pp || ".." === pp)) ? `${pp} isn't a valid file path.` : null
+    function pT(TT) {
+      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
+      if (TT.length > HT) return `A file path is over ${HT} characters.`;
+      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
+      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
     }
-    const yp = /^(.*)\[rot\[([1-4])$/;
+    const BT = /^(.*)\[rot\[([1-4])$/;
 
-    function Up(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Op = new Map;
-      ip.forEach(((pp, ip) => {
+    function ZT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const WT = new Map;
+      UT.forEach(((TT, UT) => {
         let {
-          numAnimStates: cp,
-          animStartIdx: op
-        } = pp;
-        for (let Ip = 1; Ip < cp; Ip++) Op.set(op + Ip - 1, ip)
+          numAnimStates: mT,
+          animStartIdx: zT
+        } = TT;
+        for (let MT = 1; MT < mT; MT++) WT.set(zT + MT - 1, UT)
       }));
-      const op = Object.entries(pp),
-        Ip = new Map;
-      for (const [Up, wp] of op) {
-        const pp = yp.exec(Up);
-        "1" === pp?.[2] && Ip.set(pp[1], wp + 1)
+      const zT = Object.entries(TT),
+        MT = new Map;
+      for (const [ZT, cT] of zT) {
+        const TT = BT.exec(ZT);
+        "1" === TT?.[2] && MT.set(TT[1], cT + 1)
       }
-      const Sp = pp => {
-          const ip = yp.exec(pp);
-          return ip && Ip.has(ip[1]) ? {
-            root: ip[1],
-            rotation: Number(ip[2]) - 1
+      const gT = TT => {
+          const UT = BT.exec(TT);
+          return UT && MT.has(UT[1]) ? {
+            root: UT[1],
+            rotation: Number(UT[2]) - 1
           } : null
         },
-        xp = new Set(op.map((pp => {
-          let [ip] = pp;
-          return Sp(ip)?.root ?? ip
+        nT = new Set(zT.map((TT => {
+          let [UT] = TT;
+          return gT(UT)?.root ?? UT
         }))),
-        Lp = (pp, cp) => {
-          const Op = pp.replace(/_?0$/, "");
-          return (ip[cp]?.numAnimStates ?? 0) > 1 && !xp.has(Op) ? Op : pp
+        HT = (TT, mT) => {
+          const WT = TT.replace(/_?0$/, "");
+          return (UT[mT]?.numAnimStates ?? 0) > 1 && !nT.has(WT) ? WT : TT
         },
-        Yp = new Map;
-      for (const [yp, Up] of op) Yp.set(Up, Lp(Sp(yp)?.root ?? yp, Up));
-      const Dp = op.reduce(((pp, ip) => {
-          let [, cp] = ip;
-          return Math.max(pp, cp + 1)
+        kT = new Map;
+      for (const [BT, ZT] of zT) kT.set(ZT, HT(gT(BT)?.root ?? BT, ZT));
+      const jT = zT.reduce(((TT, UT) => {
+          let [, mT] = UT;
+          return Math.max(TT, mT + 1)
         }), 0),
-        Ap = Array.from({
-          length: Dp
-        }, ((pp, ip) => ({
-          id: ip + 1,
+        lT = Array.from({
+          length: jT
+        }, ((TT, UT) => ({
+          id: UT + 1,
           rotation: 0
         }))),
-        Pp = new Map,
-        Wp = new Map;
-      for (const [yp, Up] of op) {
-        const pp = Sp(yp),
-          ip = Op.get(Up);
-        if (void 0 !== ip) {
-          const cp = Yp.get(ip);
-          Wp.set(yp, {
-            name: yp,
-            texture: cp,
+        LT = new Map,
+        pT = new Map;
+      for (const [BT, ZT] of zT) {
+        const TT = gT(BT),
+          UT = WT.get(ZT);
+        if (void 0 !== UT) {
+          const mT = kT.get(UT);
+          pT.set(BT, {
+            name: BT,
+            texture: mT,
             kind: "frame"
-          }), pp && !Wp.has(pp.root) && Wp.set(pp.root, {
-            name: pp.root,
-            texture: cp,
+          }), TT && !pT.has(TT.root) && pT.set(TT.root, {
+            name: TT.root,
+            texture: mT,
             kind: "frame"
           });
           continue
         }
-        const cp = Yp.get(Up),
-          op = pp?.root ?? yp;
-        if (cp !== op && Wp.set(op, {
-            name: op,
-            texture: cp,
+        const mT = kT.get(ZT),
+          zT = TT?.root ?? BT;
+        if (mT !== zT && pT.set(zT, {
+            name: zT,
+            texture: mT,
             kind: "frame"
-          }), pp) {
-          const ip = Ip.get(pp.root);
-          Ap[Up] = {
-            id: ip,
-            rotation: pp.rotation
-          }, Pp.set(cp, ip), Wp.set(yp, {
-            name: yp,
-            texture: cp,
+          }), TT) {
+          const UT = MT.get(TT.root);
+          lT[ZT] = {
+            id: UT,
+            rotation: TT.rotation
+          }, LT.set(mT, UT), pT.set(BT, {
+            name: BT,
+            texture: mT,
             kind: "rotation"
           })
-        } else Pp.set(cp, Up + 1)
+        } else LT.set(mT, ZT + 1)
       }
-      for (const yp of Pp.keys()) Wp.delete(yp);
-      for (const [yp, Up] of cp) {
-        const pp = Pp.get(Up);
-        void 0 === pp || Pp.has(yp) || (Pp.set(yp, pp), Wp.delete(yp))
+      for (const BT of LT.keys()) pT.delete(BT);
+      for (const [BT, ZT] of mT) {
+        const TT = LT.get(ZT);
+        void 0 === TT || LT.has(BT) || (LT.set(BT, TT), pT.delete(BT))
       }
       return {
-        named: [...Pp].sort(((pp, ip) => {
-          let [cp] = pp, [Op] = ip;
-          return cp < Op ? -1 : cp > Op ? 1 : 0
-        })).map((pp => {
-          let [ip, cp] = pp;
+        named: [...LT].sort(((TT, UT) => {
+          let [mT] = TT, [WT] = UT;
+          return mT < WT ? -1 : mT > WT ? 1 : 0
+        })).map((TT => {
+          let [UT, mT] = TT;
           return {
-            name: ip,
-            id: cp
+            name: UT,
+            id: mT
           }
         })),
-        aliases: [...Wp.values()],
-        layers: Ap
+        aliases: [...pT.values()],
+        layers: lT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

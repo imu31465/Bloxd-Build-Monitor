@@ -1,243 +1,243 @@
 export const id = 123;
 export const ids = [123, 401];
 export const modules = {
-  36533: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Ni
+  36413: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => QU
     });
-    var Op = cp(322),
-      op = cp(3607),
-      Ip = cp(3641),
-      Sp = cp(3635),
-      xp = cp(3628),
-      Lp = cp(1201),
-      Yp = cp(44),
-      Dp = cp(1765),
-      Ap = cp(1387),
-      Pp = cp(1480),
-      Wp = cp(1049),
-      yp = cp.n(Wp),
-      Up = cp(1692),
-      wp = cp(62),
-      vp = cp(82),
-      tp = cp(2420),
-      Hp = cp(1356),
-      dp = cp(1626),
-      ep = cp(1141),
-      jp = cp(3523),
-      kp = cp(4648),
-      mp = cp(3584),
-      Rp = cp(1929),
-      qp = cp(3600),
-      Mp = cp(1776),
-      Cp = cp(1520),
-      Ep = cp(2210),
-      Xp = cp(1361),
-      lp = cp(2671),
-      Qp = cp(5146),
-      Jp = cp(1112);
-    const Bp = 15e3,
-      Np = 2500;
+    var WT = mT(351),
+      zT = mT(3599),
+      MT = mT(3644),
+      gT = mT(3635),
+      nT = mT(3627),
+      HT = mT(1288),
+      kT = mT(44),
+      jT = mT(1863),
+      lT = mT(1475),
+      LT = mT(1569),
+      pT = mT(1126),
+      BT = mT.n(pT),
+      ZT = mT(1792),
+      cT = mT(63),
+      vT = mT(85),
+      fT = mT(2490),
+      qT = mT(1437),
+      iT = mT(1731),
+      bT = mT(1225),
+      OT = mT(3518),
+      eT = mT(4655),
+      YT = mT(3577),
+      JT = mT(2023),
+      xT = mT(3593),
+      dT = mT(1872),
+      wT = mT(1613),
+      tT = mT(2286),
+      aT = mT(1446),
+      yT = mT(2713),
+      XT = mT(5116),
+      IT = mT(1188);
+    const QT = 15e3,
+      sT = 2500;
 
-    function Tp(pp) {
-      var ip;
+    function FT(TT) {
+      var UT;
       let {
-        eventName: cp
-      } = pp;
+        eventName: mT
+      } = TT;
       const {
-        t: Op
-      } = (0, Lp.H)(), op = Mp.e[cp], [Ip, Sp] = (0, wp.useState)((() => Date.now() >= op.endsAt.getTime())), [xp, Yp] = (0, wp.useState)("overall"), Dp = function(pp, ip) {
+        t: WT
+      } = (0, HT.z)(), zT = dT.e[mT], [MT, gT] = (0, cT.useState)((() => Date.now() >= zT.endsAt.getTime())), [nT, kT] = (0, cT.useState)("overall"), jT = function(TT, UT) {
         const {
-          userContext: cp,
-          isUserContextUpdating: Op
-        } = (0, ep.b)(), op = `${pp}:${ip}`, [Ip, Sp] = (0, wp.useState)({
-          requestKey: op,
+          userContext: mT,
+          isUserContextUpdating: WT
+        } = (0, bT.d)(), zT = `${TT}:${UT}`, [MT, gT] = (0, cT.useState)({
+          requestKey: zT,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, wp.useEffect)((() => {
-          if (Op) return;
-          let Ip, xp = !1;
-          const Lp = async () => {
+        return (0, cT.useEffect)((() => {
+          if (WT) return;
+          let MT, nT = !1;
+          const HT = async () => {
             if ("visible" === document.visibilityState) try {
-              const Op = await Cp.b.getGameEventLeaderboard(cp, {
-                event: pp,
-                scope: ip
+              const WT = await wT.b.getGameEventLeaderboard(mT, {
+                event: TT,
+                scope: UT
               });
-              xp || Sp({
-                requestKey: op,
+              nT || gT({
+                requestKey: zT,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: Op
+                  leaderboard: WT
                 }
               })
             } catch {
-              xp || Sp((pp => pp.requestKey === op && "loaded" === pp.leaderboard.status ? pp : {
-                requestKey: op,
+              nT || gT((TT => TT.requestKey === zT && "loaded" === TT.leaderboard.status ? TT : {
+                requestKey: zT,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            xp || (Ip = setTimeout(Lp, Bp))
+            nT || (MT = setTimeout(HT, QT))
           };
-          return Lp(), () => {
-            xp = !0, clearTimeout(Ip)
+          return HT(), () => {
+            nT = !0, clearTimeout(MT)
           }
-        }), [pp, ip, op, cp, Op]), Ip.requestKey === op ? Ip.leaderboard : {
+        }), [TT, UT, zT, mT, WT]), MT.requestKey === zT ? MT.leaderboard : {
           status: "loading"
         }
-      }(cp, xp), Ap = function(pp) {
-        const ip = (0, wp.useRef)(null),
-          cp = (0, wp.useRef)(0),
-          Op = (0, wp.useRef)(),
-          [op, Ip] = (0, wp.useState)({});
-        return (0, wp.useEffect)((() => {
-          const op = null === pp || void 0 === pp ? void 0 : pp.entries;
-          if (!op) return;
-          const Sp = new Map(op.map((pp => [pp.player.name, pp.value]))),
-            xp = ip.current;
-          if (ip.current = Sp, null === xp) return;
-          const Lp = {};
-          for (const [pp, ip] of Sp) {
-            const Op = xp.get(pp);
-            void 0 !== Op && ip > Op && (Lp[pp] = {
-              amount: ip - Op,
-              key: cp.current++
+      }(mT, nT), lT = function(TT) {
+        const UT = (0, cT.useRef)(null),
+          mT = (0, cT.useRef)(0),
+          WT = (0, cT.useRef)(),
+          [zT, MT] = (0, cT.useState)({});
+        return (0, cT.useEffect)((() => {
+          const zT = null === TT || void 0 === TT ? void 0 : TT.entries;
+          if (!zT) return;
+          const gT = new Map(zT.map((TT => [TT.player.name, TT.value]))),
+            nT = UT.current;
+          if (UT.current = gT, null === nT) return;
+          const HT = {};
+          for (const [TT, UT] of gT) {
+            const WT = nT.get(TT);
+            void 0 !== WT && UT > WT && (HT[TT] = {
+              amount: UT - WT,
+              key: mT.current++
             })
           }
-          0 !== Object.keys(Lp).length && (Ip(Lp), clearTimeout(Op.current), Op.current = setTimeout((() => {
-            Ip({})
-          }), Np))
-        }), [pp]), (0, wp.useEffect)((() => () => {
-          clearTimeout(Op.current)
-        }), []), op
-      }("loaded" === Dp.status ? Dp.leaderboard : null), Pp = function(pp) {
-        const [ip, cp] = (0, wp.useState)(null), Op = "loaded" === pp.status ? pp.leaderboard.goalProgress : void 0;
-        return (0, wp.useEffect)((() => {
-          Op && cp(Op)
-        }), [Op]), ip
-      }(Dp), Wp = Ep.f[`profileEffect_${op.prizePack}`];
-      if (Ip) return null;
-      const Up = "loaded" === Dp.status ? Dp.leaderboard : null,
-        vp = null !== (ip = null === Up || void 0 === Up ? void 0 : Up.entries) && void 0 !== ip ? ip : null,
-        tp = null !== Up && void 0 !== Up && Up.own && null !== vp && !vp.some((pp => pp.isOwn)) ? Up.own : null;
-      return (0, Jp.jsx)("section", {
+          0 !== Object.keys(HT).length && (MT(HT), clearTimeout(WT.current), WT.current = setTimeout((() => {
+            MT({})
+          }), sT))
+        }), [TT]), (0, cT.useEffect)((() => () => {
+          clearTimeout(WT.current)
+        }), []), zT
+      }("loaded" === jT.status ? jT.leaderboard : null), LT = function(TT) {
+        const [UT, mT] = (0, cT.useState)(null), WT = "loaded" === TT.status ? TT.leaderboard.goalProgress : void 0;
+        return (0, cT.useEffect)((() => {
+          WT && mT(WT)
+        }), [WT]), UT
+      }(jT), pT = tT.c[`profileEffect_${zT.prizePack}`];
+      if (MT) return null;
+      const ZT = "loaded" === jT.status ? jT.leaderboard : null,
+        vT = null !== (UT = null === ZT || void 0 === ZT ? void 0 : ZT.entries) && void 0 !== UT ? UT : null,
+        fT = null !== ZT && void 0 !== ZT && ZT.own && null !== vT && !vT.some((TT => TT.isOwn)) ? ZT.own : null;
+      return (0, IT.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, Jp.jsxs)("div", {
+        children: (0, IT.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, IT.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, Jp.jsxs)("div", {
+            children: [(0, IT.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, Jp.jsxs)("span", {
+              children: [(0, IT.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, Jp.jsx)("span", {
+                children: [(0, IT.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), Op("gameEvents:live")]
-              }), (0, Jp.jsxs)("span", {
+                }), WT("gameEvents:live")]
+              }), (0, IT.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [Op("gameEvents:endsIn"), (0, Jp.jsx)(mp.e, {
-                  toTime: op.endsAt,
+                children: [WT("gameEvents:endsIn"), (0, IT.jsx)(YT.e, {
+                  toTime: zT.endsAt,
                   onReachEndOfCountdown: () => {
-                    Sp(!0)
+                    gT(!0)
                   }
                 })]
               })]
-            }), (0, Jp.jsx)("h2", {
+            }), (0, IT.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: Op(op.titleKey)
-            }), (0, Jp.jsxs)("div", {
+              children: WT(zT.titleKey)
+            }), (0, IT.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, Jp.jsxs)("div", {
+              children: [(0, IT.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [Wp && (0, Jp.jsx)("div", {
+                children: [pT && (0, IT.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, Jp.jsx)(Wp, {})
-                }), (0, Jp.jsxs)("div", {
+                  children: (0, IT.jsx)(pT, {})
+                }), (0, IT.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, Jp.jsx)("div", {
+                  children: [(0, IT.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: Op("gameEvents:prize")
-                  }), (0, Jp.jsx)("div", {
+                    children: WT("gameEvents:prize")
+                  }), (0, IT.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: Op(op.prizeNameKey)
+                    children: WT(zT.prizeNameKey)
                   })]
                 })]
-              }), (0, Jp.jsx)(fp, {
-                event: op,
-                progress: Pp
+              }), (0, IT.jsx)(PT, {
+                event: zT,
+                progress: LT
               })]
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, IT.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, Jp.jsxs)("div", {
+            children: [(0, IT.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, Jp.jsx)("h3", {
+              children: [(0, IT.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: Op(op.leaderboard.titleKey)
-              }), (0, Jp.jsx)(Qp.b, {
-                ariaLabel: Op("gameEvents:leaderboardScope"),
-                options: Mp.b.map((pp => ({
-                  value: pp,
-                  label: Op(`gameEvents:${pp}Scope`)
+                children: WT(zT.leaderboard.titleKey)
+              }), (0, IT.jsx)(XT.c, {
+                ariaLabel: WT("gameEvents:leaderboardScope"),
+                options: dT.d.map((TT => ({
+                  value: TT,
+                  label: WT(`gameEvents:${TT}Scope`)
                 }))),
-                value: xp,
-                onChange: Yp
+                value: nT,
+                onChange: kT
               })]
-            }), "loading" === Dp.status && (0, Jp.jsx)("div", {
+            }), "loading" === jT.status && (0, IT.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, Jp.jsx)(Xp.c, {})
-            }), ("unavailable" === Dp.status || "loaded" === Dp.status && null === vp) && (0, Jp.jsx)("div", {
+              children: (0, IT.jsx)(aT.c, {})
+            }), ("unavailable" === jT.status || "loaded" === jT.status && null === vT) && (0, IT.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: Op("gameEvents:leaderboardUnavailable")
-            }), null !== vp && 0 === vp.length && (0, Jp.jsx)("div", {
+              children: WT("gameEvents:leaderboardUnavailable")
+            }), null !== vT && 0 === vT.length && (0, IT.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: Op("friends" === xp ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== vp && vp.length > 0 && (0, Jp.jsx)("ol", {
+              children: WT("friends" === nT ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== vT && vT.length > 0 && (0, IT.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: vp.map((pp => {
-                const ip = Ap[pp.player.name];
-                return (0, Jp.jsxs)("li", {
-                  className: yp()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: pp.isOwn,
-                    GameEventPanelRowTop: pp.rank <= 3
+              children: vT.map((TT => {
+                const UT = lT[TT.player.name];
+                return (0, IT.jsxs)("li", {
+                  className: BT()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: TT.isOwn,
+                    GameEventPanelRowTop: TT.rank <= 3
                   }),
-                  children: [(0, Jp.jsxs)("span", {
+                  children: [(0, IT.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", pp.rank]
-                  }), (0, Jp.jsx)("div", {
+                    children: ["#", TT.rank]
+                  }), (0, IT.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, Jp.jsx)(lp.d, {
+                    children: (0, IT.jsx)(yT.i, {
                       playerSocialPreview: {
-                        ...pp.player,
+                        ...TT.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== ip && (0, Jp.jsxs)("span", {
+                  }), void 0 !== UT && (0, IT.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", ip.amount.toLocaleString()]
-                  }, ip.key), (0, Jp.jsx)("span", {
+                    children: ["+", UT.amount.toLocaleString()]
+                  }, UT.key), (0, IT.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: pp.value.toLocaleString()
+                    children: TT.value.toLocaleString()
                   })]
-                }, pp.player.name)
+                }, TT.player.name)
               }))
-            }), tp && (0, Jp.jsxs)("div", {
+            }), fT && (0, IT.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, Jp.jsxs)("span", {
+              children: [(0, IT.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", tp.rank.toLocaleString()]
-              }), (0, Jp.jsx)("span", {
+                children: ["#", fT.rank.toLocaleString()]
+              }), (0, IT.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: Op("gameEvents:yourPlace")
-              }), (0, Jp.jsx)("span", {
+                children: WT("gameEvents:yourPlace")
+              }), (0, IT.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: tp.value.toLocaleString()
+                children: fT.value.toLocaleString()
               })]
             })]
           })]
@@ -245,355 +245,355 @@ export const modules = {
       })
     }
 
-    function fp(pp) {
+    function PT(TT) {
       let {
-        event: ip,
-        progress: cp
-      } = pp;
+        event: UT,
+        progress: mT
+      } = TT;
       const {
-        t: Op
-      } = (0, Lp.H)(), op = null !== cp && ip.prizeGoals.some(((pp, ip) => cp[ip] >= pp.target));
-      return (0, Jp.jsxs)("div", {
+        t: WT
+      } = (0, HT.z)(), zT = null !== mT && UT.prizeGoals.some(((TT, UT) => mT[UT] >= TT.target));
+      return (0, IT.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, Jp.jsx)("div", {
+        children: [(0, IT.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: Op(op ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, Jp.jsx)("div", {
+          children: WT(zT ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, IT.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: ip.prizeGoals.map(((pp, ip) => {
-            const op = null === cp ? null : Math.min(cp[ip], pp.target);
-            return (0, Jp.jsxs)(wp.Fragment, {
-              children: [ip > 0 && (0, Jp.jsx)("div", {
+          children: UT.prizeGoals.map(((TT, UT) => {
+            const zT = null === mT ? null : Math.min(mT[UT], TT.target);
+            return (0, IT.jsxs)(cT.Fragment, {
+              children: [UT > 0 && (0, IT.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: Op("gameEvents:goalsOr")
-              }), (0, Jp.jsxs)("div", {
-                className: yp()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: op === pp.target
+                children: WT("gameEvents:goalsOr")
+              }), (0, IT.jsxs)("div", {
+                className: BT()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: zT === TT.target
                 }),
-                children: [(0, Jp.jsx)("span", {
+                children: [(0, IT.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: Op(pp.labelKey)
-                }), (0, Jp.jsxs)("div", {
+                  children: WT(TT.labelKey)
+                }), (0, IT.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, Jp.jsx)("div", {
+                  children: [(0, IT.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== op && void 0 !== op ? op : 0) / pp.target * 100 + "%"
+                      width: (null !== zT && void 0 !== zT ? zT : 0) / TT.target * 100 + "%"
                     }
-                  }), null !== op && (0, Jp.jsxs)("span", {
+                  }), null !== zT && (0, IT.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [op.toLocaleString(), " / ", pp.target.toLocaleString()]
+                    children: [zT.toLocaleString(), " / ", TT.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, pp.board)
+            }, TT.board)
           }))
         })]
       })
     }
-    var bp = cp(1569),
-      hp = cp(1611),
-      ap = cp(1035),
-      np = cp(739),
-      Fp = cp(3581);
+    var VT = mT(1667),
+      uT = mT(1717),
+      CT = mT(1113),
+      rT = mT(782),
+      KT = mT(3568);
 
-    function gp(pp) {
+    function ST(TT) {
       let {
-        gameNameWithVariation: ip
-      } = pp;
-      const cp = (0, bp.B)(ip),
-        [Op, op] = (0, wp.useState)(null);
-      if ((0, wp.useEffect)((() => {
-          if (!cp) return;
-          let pp = !0;
-          return (0, hp.i)(cp).then((ip => {
-            pp && op(ip)
-          })).catch((pp => {
-            console.error(`Failed to load the page copy for ${cp.name}`, pp)
+        gameNameWithVariation: UT
+      } = TT;
+      const mT = (0, VT.z)(UT),
+        [WT, zT] = (0, cT.useState)(null);
+      if ((0, cT.useEffect)((() => {
+          if (!mT) return;
+          let TT = !0;
+          return (0, uT.i)(mT).then((UT => {
+            TT && zT(UT)
+          })).catch((TT => {
+            console.error(`Failed to load the page copy for ${mT.name}`, TT)
           })), () => {
-            pp = !1
+            TT = !1
           }
-        }), [cp]), !cp || !Op || Op.name !== cp.name) return null;
-      const Ip = (0, hp.e)(Op),
-        Sp = new Set((0, ap.e)((0, np.i)()).map((pp => (0, bp.t)(pp)))),
-        xp = Op.similarGames.filter((pp => Sp.has((0, bp.t)(pp))));
-      return (0, Jp.jsx)("div", {
+        }), [mT]), !mT || !WT || WT.name !== mT.name) return null;
+      const MT = (0, uT.e)(WT),
+        gT = new Set((0, CT.b)((0, rT.j)()).map((TT => (0, VT.r)(TT)))),
+        nT = WT.similarGames.filter((TT => gT.has((0, VT.r)(TT))));
+      return (0, IT.jsx)("div", {
         className: "GamePageContent",
-        children: (0, Jp.jsxs)("div", {
+        children: (0, IT.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, Jp.jsxs)("section", {
+          children: [(0, IT.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, Jp.jsx)("h2", {
-              children: Ip.whatIs
-            }), Op.whatIs.map((pp => (0, Jp.jsx)("p", {
-              children: pp
-            }, pp)))]
-          }), (0, Jp.jsxs)("section", {
+            children: [(0, IT.jsx)("h2", {
+              children: MT.whatIs
+            }), WT.whatIs.map((TT => (0, IT.jsx)("p", {
+              children: TT
+            }, TT)))]
+          }), (0, IT.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, Jp.jsx)("h2", {
-              children: Ip.howToPlay
-            }), Op.howToPlay.map((pp => (0, Jp.jsx)("p", {
-              children: pp
-            }, pp)))]
-          }), (0, Jp.jsxs)("section", {
+            children: [(0, IT.jsx)("h2", {
+              children: MT.howToPlay
+            }), WT.howToPlay.map((TT => (0, IT.jsx)("p", {
+              children: TT
+            }, TT)))]
+          }), (0, IT.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, Jp.jsx)("h2", {
-              children: Ip.features
-            }), (0, Jp.jsx)("ul", {
-              children: Op.features.map((pp => (0, Jp.jsx)("li", {
-                children: pp
-              }, pp)))
+            children: [(0, IT.jsx)("h2", {
+              children: MT.features
+            }), (0, IT.jsx)("ul", {
+              children: WT.features.map((TT => (0, IT.jsx)("li", {
+                children: TT
+              }, TT)))
             })]
-          }), (0, Jp.jsxs)("aside", {
+          }), (0, IT.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, Jp.jsx)("h2", {
-              children: Ip.tips
-            }), (0, Jp.jsx)("ul", {
-              children: Op.tips.map((pp => (0, Jp.jsx)("li", {
-                children: pp
-              }, pp)))
+            children: [(0, IT.jsx)("h2", {
+              children: MT.tips
+            }), (0, IT.jsx)("ul", {
+              children: WT.tips.map((TT => (0, IT.jsx)("li", {
+                children: TT
+              }, TT)))
             })]
-          }), (0, Jp.jsxs)("section", {
+          }), (0, IT.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, Jp.jsx)("h2", {
-              children: Ip.faq
-            }), Op.faq.map((pp => {
+            children: [(0, IT.jsx)("h2", {
+              children: MT.faq
+            }), WT.faq.map((TT => {
               let {
-                question: ip,
-                answer: cp
-              } = pp;
-              return (0, Jp.jsxs)("div", {
+                question: UT,
+                answer: mT
+              } = TT;
+              return (0, IT.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, Jp.jsx)("h3", {
-                  children: ip
-                }), (0, Jp.jsx)("p", {
-                  children: cp
+                children: [(0, IT.jsx)("h3", {
+                  children: UT
+                }), (0, IT.jsx)("p", {
+                  children: mT
                 })]
-              }, ip)
+              }, UT)
             }))]
-          }), xp.length > 0 && (0, Jp.jsxs)("nav", {
+          }), nT.length > 0 && (0, IT.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, Jp.jsx)("h2", {
-              children: Ip.similarGames
-            }), (0, Jp.jsx)("ul", {
+            children: [(0, IT.jsx)("h2", {
+              children: MT.similarGames
+            }), (0, IT.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: xp.map((pp => (0, Jp.jsx)("li", {
-                children: (0, Jp.jsx)(Fp.g, {
+              children: nT.map((TT => (0, IT.jsx)("li", {
+                children: (0, IT.jsx)(KT.f, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: pp
+                    gameNameWithVariation: TT
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, pp)))
+              }, TT)))
             })]
           })]
         })
       })
     }
-    var Gp = cp(1060),
-      rp = cp(104),
-      Zp = cp(1149),
-      zp = cp(34470),
-      sp = cp(1666),
-      Kp = cp(1543),
-      Vp = cp(1538),
-      ii = cp(1623),
-      ci = cp(1490),
-      Oi = cp(1372),
-      oi = cp(36539),
-      Ii = cp(1244),
-      Si = cp(1014),
-      xi = cp(337),
-      Li = cp(1024),
-      Yi = cp(1563),
-      Di = cp(9049),
-      Ai = cp(25),
-      Pi = cp(2580),
-      Wi = cp(768),
-      yi = cp(1234),
-      Ui = cp(6648),
-      wi = cp(3587);
+    var GT = mT(1135),
+      NT = mT(102),
+      ET = mT(1231),
+      hT = mT(34323),
+      DT = mT(1772),
+      oT = mT(1641),
+      AT = mT(1633),
+      RT = mT(1723),
+      TU = mT(1580),
+      UU = mT(1457),
+      mU = mT(36415),
+      WU = mT(1327),
+      zU = mT(1089),
+      MU = mT(366),
+      gU = mT(1099),
+      nU = mT(1658),
+      HU = mT(9039),
+      kU = mT(25),
+      jU = mT(2641),
+      lU = mT(825),
+      LU = mT(1321),
+      pU = mT(6569),
+      BU = mT(3582);
 
-    function vi(pp) {
+    function ZU(TT) {
       let {
-        preview: ip,
-        isBroken: cp
-      } = pp;
-      const Op = null === ip ? null : (0, Ip.f)(ip, "small"),
-        Sp = (0, op.d)(null !== Op && void 0 !== Op ? Op : Ip.q);
-      return null === ip ? (0, Jp.jsx)("div", {
-        className: yp()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: cp
+        preview: UT,
+        isBroken: mT
+      } = TT;
+      const WT = null === UT ? null : (0, MT.e)(UT, "small"),
+        gT = (0, zT.e)(null !== WT && void 0 !== WT ? WT : MT.n);
+      return null === UT ? (0, IT.jsx)("div", {
+        className: BT()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: mT
         }),
-        children: (0, Jp.jsx)(Gp.d, {
-          name: cp ? "triangle-exclamation" : "star"
+        children: (0, IT.jsx)(GT.c, {
+          name: mT ? "triangle-exclamation" : "star"
         })
-      }) : (0, Jp.jsx)("div", {
-        className: yp()("FeaturedGamesPopupSlotThumbnail", xp.g),
-        style: (0, xp.f)(Sp),
+      }) : (0, IT.jsx)("div", {
+        className: BT()("FeaturedGamesPopupSlotThumbnail", nT.h),
+        style: (0, nT.e)(gT),
         role: "img",
-        "aria-label": ip.name,
-        children: (0, Jp.jsx)(xp.c, {
-          image: Sp
+        "aria-label": UT.name,
+        children: (0, IT.jsx)(nT.c, {
+          image: gT
         })
       })
     }
 
-    function ti(pp) {
+    function cU(TT) {
       let {
-        schematicId: ip,
-        gameName: cp
-      } = pp;
+        schematicId: UT,
+        gameName: mT
+      } = TT;
       const {
-        userContext: op
-      } = (0, ep.b)(), Ip = (0, wi.b)(), [Sp, xp] = (0, wp.useState)(null), [Lp, Yp] = (0, wp.useState)(null), [Dp, Ap] = (0, wp.useState)(!1), Wp = (0, wp.useCallback)((() => {
-        Yp(null), Cp.b.getFeaturedGames(op).then((pp => {
-          Ip.current && xp(pp.slots)
-        })).catch((pp => {
-          console.error("Failed to get featured games", pp), Ip.current && Yp("Failed to load featured games")
+        userContext: zT
+      } = (0, bT.d)(), MT = (0, BU.c)(), [gT, nT] = (0, cT.useState)(null), [HT, kT] = (0, cT.useState)(null), [jT, lT] = (0, cT.useState)(!1), pT = (0, cT.useCallback)((() => {
+        kT(null), wT.b.getFeaturedGames(zT).then((TT => {
+          MT.current && nT(TT.slots)
+        })).catch((TT => {
+          console.error("Failed to get featured games", TT), MT.current && kT("Failed to load featured games")
         }))
-      }), [op, Ip]);
-      (0, wp.useEffect)((() => {
-        Wp()
-      }), [Wp]);
-      const yp = (pp, ip) => {
-        Dp || (Ap(!0), Cp.b.setFeaturedGame(op, pp, ip).then((() => {
-          Ip.current && Wp()
-        })).catch((pp => {
-          console.error("Failed to set featured game", pp), Ip.current && Yp("Failed to update the featured slot")
+      }), [zT, MT]);
+      (0, cT.useEffect)((() => {
+        pT()
+      }), [pT]);
+      const BT = (TT, UT) => {
+        jT || (lT(!0), wT.b.setFeaturedGame(zT, TT, UT).then((() => {
+          MT.current && pT()
+        })).catch((TT => {
+          console.error("Failed to set featured game", TT), MT.current && kT("Failed to update the featured slot")
         })).finally((() => {
-          Ip.current && Ap(!1)
+          MT.current && lT(!1)
         })))
       };
-      return (0, Jp.jsxs)("div", {
+      return (0, IT.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, Jp.jsx)("h1", {
+        children: [(0, IT.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !Sp && !Lp && (0, Jp.jsx)("div", {
+        }), !gT && !HT && (0, IT.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, Jp.jsx)(Xp.c, {})
-        }), Lp && (0, Jp.jsx)("div", {
+          children: (0, IT.jsx)(aT.c, {})
+        }), HT && (0, IT.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: Lp
-        }), Sp && (0, Jp.jsxs)(Jp.Fragment, {
-          children: [(0, Jp.jsx)("div", {
+          children: HT
+        }), gT && (0, IT.jsxs)(IT.Fragment, {
+          children: [(0, IT.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: Sp.map((pp => {
-              const cp = pp.schematicId === ip,
-                op = null === pp.schematicId,
+            children: gT.map((TT => {
+              const mT = TT.schematicId === UT,
+                zT = null === TT.schematicId,
                 {
-                  categoryGroup: Ip
-                } = Op.N[pp.slotId];
-              return (0, Jp.jsxs)("div", {
+                  categoryGroup: MT
+                } = WT.F[TT.slotId];
+              return (0, IT.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, Jp.jsx)(vi, {
-                  preview: pp.preview,
-                  isBroken: !op
-                }), (0, Jp.jsxs)("div", {
+                children: [(0, IT.jsx)(ZU, {
+                  preview: TT.preview,
+                  isBroken: !zT
+                }), (0, IT.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, Jp.jsxs)("div", {
+                  children: [(0, IT.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, Op.rb)(Ip), " \xb7 position", " ", (0, Op.Q)(pp.slotId, Op.Zb) + 1, " of", " ", (0, Op.Xb)(Ip, Op.Zb)]
-                  }), op && (0, Jp.jsx)("div", {
+                    children: [(0, WT.ab)(MT), " \xb7 position", " ", (0, WT.I)(TT.slotId, WT.Fb) + 1, " of", " ", (0, WT.Bb)(MT, WT.Fb)]
+                  }), zT && (0, IT.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !op && null !== pp.preview && (0, Jp.jsx)("div", {
+                  }), !zT && null !== TT.preview && (0, IT.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: pp.preview.name
-                  }), !op && null === pp.preview && (0, Jp.jsxs)("div", {
+                    children: TT.preview.name
+                  }), !zT && null === TT.preview && (0, IT.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, Jp.jsx)(Gp.d, {
+                    children: [(0, IT.jsx)(GT.c, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, Jp.jsxs)("div", {
+                }), (0, IT.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [op && (0, Jp.jsxs)(Pp.w, {
+                  children: [zT && (0, IT.jsxs)(LT.s, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      yp(pp.slotId, ip)
+                      BT(TT.slotId, UT)
                     },
-                    disabled: Dp,
-                    children: [(0, Jp.jsx)(Gp.d, {
+                    disabled: jT,
+                    children: [(0, IT.jsx)(GT.c, {
                       name: "star"
                     }), " Feature here"]
-                  }), !op && !cp && (0, Jp.jsxs)(Pp.S, {
+                  }), !zT && !mT && (0, IT.jsxs)(LT.L, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      yp(pp.slotId, ip)
+                      BT(TT.slotId, UT)
                     },
-                    disabled: Dp,
-                    children: [(0, Jp.jsx)(Gp.d, {
+                    disabled: jT,
+                    children: [(0, IT.jsx)(GT.c, {
                       name: "star"
                     }), " Replace"]
-                  }), !op && (0, Jp.jsxs)(Pp.K, {
+                  }), !zT && (0, IT.jsxs)(LT.I, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      yp(pp.slotId, null)
+                      BT(TT.slotId, null)
                     },
-                    disabled: Dp,
-                    children: [(0, Jp.jsx)(Gp.d, {
+                    disabled: jT,
+                    children: [(0, IT.jsx)(GT.c, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, pp.slotId)
+              }, TT.slotId)
             }))
-          }), (0, Jp.jsx)("p", {
+          }), (0, IT.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var Hi = cp(4766),
-      di = cp(4685),
-      ei = cp(3546);
-    const ui = 8,
-      ji = 12;
+    var vU = mT(4761),
+      fU = mT(4688),
+      qU = mT(3536);
+    const iU = 8,
+      bU = 12;
 
-    function ki(pp) {
+    function OU(TT) {
       let {
-        customLobbies: ip,
-        favouriteLobbies: cp,
-        toggleLikeLobby: Op,
-        showReport: op
-      } = pp;
-      const [Ip, Sp] = (0, wp.useState)(ui);
-      return (0, wp.useEffect)((() => {
-        if (Ip >= ip.length) return;
-        let pp = !0;
-        return (0, ei.h)().then((() => {
-          pp && Sp(Ip + ji)
+        customLobbies: UT,
+        favouriteLobbies: mT,
+        toggleLikeLobby: WT,
+        showReport: zT
+      } = TT;
+      const [MT, gT] = (0, cT.useState)(iU);
+      return (0, cT.useEffect)((() => {
+        if (MT >= UT.length) return;
+        let TT = !0;
+        return (0, qU.h)().then((() => {
+          TT && gT(MT + bU)
         })), () => {
-          pp = !1
+          TT = !1
         }
-      }), [Ip, ip.length]), (0, Jp.jsx)(Jp.Fragment, {
-        children: ip.slice(0, Ip).map((pp => (0, Jp.jsx)(di.f, {
-          customLobby: pp,
-          favouriteLobbies: cp,
-          toggleLikeLobby: Op,
-          showReport: op
-        }, pp.name)))
+      }), [MT, UT.length]), (0, IT.jsx)(IT.Fragment, {
+        children: UT.slice(0, MT).map((TT => (0, IT.jsx)(fU.e, {
+          customLobby: TT,
+          favouriteLobbies: mT,
+          toggleLikeLobby: WT,
+          showReport: zT
+        }, TT.name)))
       })
     }
-    var mi = cp(4694),
-      Ri = cp(4705),
-      qi = cp(4661),
-      Mi = cp(3662),
-      Ci = cp(9046),
-      Ei = cp(212);
-    const Xi = {
-      skyblock: [cp(36569).c]
+    var eU = mT(4696),
+      YU = mT(4707),
+      JU = mT(4673),
+      xU = mT(3674),
+      dU = mT(9036),
+      wU = mT(227);
+    const tU = {
+      skyblock: [mT(36437).c]
     };
-    var li = cp(640);
-    const Qi = {
+    var aU = mT(653);
+    const yU = {
       listedVariations: null,
-      backgroundImage: Ip.q,
+      backgroundImage: MT.n,
       badges: [],
       category: null,
       title: null,
@@ -609,363 +609,363 @@ export const modules = {
       countdownInformation: null
     };
 
-    function Ji(pp, ip) {
-      const cp = Wi.d[pp.schematicId];
+    function XU(TT, UT) {
+      const mT = lU.h[TT.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, Ip.f)(pp, "large"),
+        backgroundImage: (0, MT.e)(TT, "large"),
         badges: [],
-        category: pp.gameCategory,
-        title: void 0 !== (null === cp || void 0 === cp ? void 0 : cp.title) ? ip(cp.title) : pp.name,
+        category: TT.gameCategory,
+        title: void 0 !== (null === mT || void 0 === mT ? void 0 : mT.title) ? UT(mT.title) : TT.name,
         variationTitle: null,
-        description: void 0 !== (null === cp || void 0 === cp ? void 0 : cp.description) ? ip(cp.description) : pp.description,
-        ownerSocialPreviewWithoutLocation: "owner" in pp ? pp.owner : null,
-        ccu: pp.ccu,
-        favourites: pp.favourites,
+        description: void 0 !== (null === mT || void 0 === mT ? void 0 : mT.description) ? UT(mT.description) : TT.description,
+        ownerSocialPreviewWithoutLocation: "owner" in TT ? TT.owner : null,
+        ccu: TT.ccu,
+        favourites: TT.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in pp ? pp.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in TT ? TT.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function Bi(pp) {
-      var ip, cp, Op;
-      return null !== (ip = null !== (cp = (0, Ei.h)() ? function(pp) {
-        for (const [ip, cp] of Object.entries(Xi)) {
-          const Op = [ip, ...cp.map((pp => (0, xi.Lb)(ip, pp)))];
-          if (Op.includes(pp)) return Op
+    function IU(TT) {
+      var UT, mT, WT;
+      return null !== (UT = null !== (mT = (0, wU.k)() ? function(TT) {
+        for (const [UT, mT] of Object.entries(tU)) {
+          const WT = [UT, ...mT.map((TT => (0, MU.ac)(UT, TT)))];
+          if (WT.includes(TT)) return WT
         }
         return null
-      }(pp) : null) && void 0 !== cp ? cp : null === (Op = Wi.c[pp]) || void 0 === Op ? void 0 : Op.listedVariations) && void 0 !== ip ? ip : null
+      }(TT) : null) && void 0 !== mT ? mT : null === (WT = lU.d[TT]) || void 0 === WT ? void 0 : WT.listedVariations) && void 0 !== UT ? UT : null
     }
 
-    function Ni() {
+    function QU() {
       const {
-        gameNameWithVariation: pp
-      } = (0, Kp.A)();
-      if ((0, wp.useEffect)(Mi.p, []), pp && (0, Ii.r)(pp)) return (0, Jp.jsx)(Ti, {
-        urlId: pp
-      }, pp);
-      const ip = pp && (0, Si.j)(pp) ? pp : "firstParty";
-      return (0, Jp.jsx)(fi, {}, ip)
+        gameNameWithVariation: TT
+      } = (0, oT.y)();
+      if ((0, cT.useEffect)(xU.n, []), TT && (0, WU.u)(TT)) return (0, IT.jsx)(sU, {
+        urlId: TT
+      }, TT);
+      const UT = TT && (0, zU.k)(TT) ? TT : "firstParty";
+      return (0, IT.jsx)(FU, {}, UT)
     }
 
-    function Ti(pp) {
+    function sU(TT) {
       let {
-        urlId: ip
-      } = pp;
+        urlId: UT
+      } = TT;
       const {
-        userContext: cp,
-        isUserContextUpdating: Op
-      } = (0, ep.b)(), op = (0, wp.useMemo)((() => (0, sp.i)(ip)), [ip]);
-      (0, wp.useMemo)((() => {
-        if (null === op) return;
-        const pp = Zp.userContextManager.peekCurrentUserContext();
-        (null !== pp ? Cp.b.getGame(pp, op.schematicId) : Zp.userContextManager.getCurrentUserContext().then((pp => Cp.b.getGame(pp, op.schematicId)))).catch((pp => {
-          console.error(`Failed to get the custom game ${op.schematicId}`, pp), (0, sp.f)(ip)
+        userContext: mT,
+        isUserContextUpdating: WT
+      } = (0, bT.d)(), zT = (0, cT.useMemo)((() => (0, DT.j)(UT)), [UT]);
+      (0, cT.useMemo)((() => {
+        if (null === zT) return;
+        const TT = ET.userContextManager.peekCurrentUserContext();
+        (null !== TT ? wT.b.getGame(TT, zT.schematicId) : ET.userContextManager.getCurrentUserContext().then((TT => wT.b.getGame(TT, zT.schematicId)))).catch((TT => {
+          console.error(`Failed to get the custom game ${zT.schematicId}`, TT), (0, DT.f)(UT)
         }))
-      }), [op, ip]);
-      const [Ip, Sp] = (0, wp.useState)(null), xp = (0, zp.d)();
-      (0, wp.useEffect)((() => {
-        if (null !== op || Op) return;
-        let pp = !0;
-        return Cp.b.getGameByUrlId(cp, ip).then((cp => {
-          pp && Sp({
-            urlId: ip,
-            game: cp
+      }), [zT, UT]);
+      const [MT, gT] = (0, cT.useState)(null), nT = (0, hT.d)();
+      (0, cT.useEffect)((() => {
+        if (null !== zT || WT) return;
+        let TT = !0;
+        return wT.b.getGameByUrlId(mT, UT).then((mT => {
+          TT && gT({
+            urlId: UT,
+            game: mT
           })
-        })).catch((cp => {
-          console.error(`Failed to find the custom game with urlId ${ip}`, cp), pp && (0, Vp.navigateToHomePage)()
+        })).catch((mT => {
+          console.error(`Failed to find the custom game with urlId ${UT}`, mT), TT && (0, AT.navigateToHomePage)()
         })), () => {
-          pp = !1
+          TT = !1
         }
-      }), [ip, op, Op, cp]);
-      const Lp = null !== op && void 0 !== op ? op : (null === Ip || void 0 === Ip ? void 0 : Ip.urlId) === ip ? Ip.game : null;
-      return null === Lp ? (0, Jp.jsx)(Xp.c, {}) : xp ? (0, Jp.jsx)(fi, {
-        gameNameWithVariation: (0, Si.t)(Lp.schematicId),
-        knownCustomGame: Lp
-      }, Lp.schematicId) : null
+      }), [UT, zT, WT, mT]);
+      const HT = null !== zT && void 0 !== zT ? zT : (null === MT || void 0 === MT ? void 0 : MT.urlId) === UT ? MT.game : null;
+      return null === HT ? (0, IT.jsx)(aT.c, {}) : nT ? (0, IT.jsx)(FU, {
+        gameNameWithVariation: (0, zU.s)(HT.schematicId),
+        knownCustomGame: HT
+      }, HT.schematicId) : null
     }
 
-    function fi(pp) {
-      var ip, cp, Sp, Wp, Mp, Ep, Xp, Qp;
+    function FU(TT) {
+      var UT, mT, gT, pT, dT, tT, aT, XT;
       let {
-        gameNameWithVariation: Bp,
-        knownCustomGame: Np = null
-      } = pp;
+        gameNameWithVariation: QT,
+        knownCustomGame: sT = null
+      } = TT;
       const {
-        t: fp
-      } = (0, Lp.H)();
-      (0, Pi.g)();
-      const hp = (0, Pi.n)(),
+        t: PT
+      } = (0, HT.z)();
+      (0, jU.i)();
+      const uT = (0, jU.m)(),
         {
-          userContext: ap,
-          isUserContextUpdating: np
-        } = (0, ep.b)(),
-        Fp = (0, qi.f)(),
-        Zp = (0, Vp.useNavigatePreserveSearch)(),
-        zp = (0, Kp.A)(),
-        sp = (0, wp.useMemo)((() => Bp ? {
-          gameNameWithVariation: Bp
-        } : zp), [Bp, zp]),
-        ci = (0, Di.c)(sp),
-        Ii = (0, wp.useMemo)((() => {
-          const pp = function(pp) {
-            var ip, cp;
-            const Op = Bi(pp);
-            if (!Op || 0 === Op.length || Op.includes(pp)) return pp;
-            const op = Yp.h.getItem((0, tp.g)(pp));
-            if (op && Op.includes(op)) return op;
-            return null !== (ip = null === (cp = Wi.c[pp]) || void 0 === cp ? void 0 : cp.defaultListedVariation) && void 0 !== ip ? ip : Op[0]
-          }(ci.gameNameWithVariation);
-          return pp === ci.gameNameWithVariation ? ci : {
-            ...ci,
-            gameNameWithVariation: pp
+          userContext: CT,
+          isUserContextUpdating: rT
+        } = (0, bT.d)(),
+        KT = (0, JU.e)(),
+        ET = (0, AT.useNavigatePreserveSearch)(),
+        hT = (0, oT.y)(),
+        DT = (0, cT.useMemo)((() => QT ? {
+          gameNameWithVariation: QT
+        } : hT), [QT, hT]),
+        TU = (0, HU.b)(DT),
+        WU = (0, cT.useMemo)((() => {
+          const TT = function(TT) {
+            var UT, mT;
+            const WT = IU(TT);
+            if (!WT || 0 === WT.length || WT.includes(TT)) return TT;
+            const zT = kT.l.getItem((0, fT.g)(TT));
+            if (zT && WT.includes(zT)) return zT;
+            return null !== (UT = null === (mT = lU.d[TT]) || void 0 === mT ? void 0 : mT.defaultListedVariation) && void 0 !== UT ? UT : WT[0]
+          }(TU.gameNameWithVariation);
+          return TT === TU.gameNameWithVariation ? TU : {
+            ...TU,
+            gameNameWithVariation: TT
           }
-        }), [ci]);
-      (0, wp.useEffect)((() => {
-        const pp = ci.gameNameWithVariation;
-        Ii.gameNameWithVariation !== pp && pp !== (0, xi.Mb)(pp) && Zp((0, bp.u)(Ii.gameNameWithVariation), {
+        }), [TU]);
+      (0, cT.useEffect)((() => {
+        const TT = TU.gameNameWithVariation;
+        WU.gameNameWithVariation !== TT && TT !== (0, MU.dc)(TT) && ET((0, VT.v)(WU.gameNameWithVariation), {
           replace: !0
         })
-      }), [Ii.gameNameWithVariation, ci.gameNameWithVariation, Zp]);
-      const [wi, vi] = (0, wp.useState)(""), ei = wp.useRef(null), [ui, ji] = (0, wp.useState)(), Mi = (0, Si.j)(Ii.gameNameWithVariation), Ei = (0, wp.useMemo)((() => Mi ? null : function(pp, ip, cp) {
-        var Op, op;
-        const Sp = Wi.c[pp];
-        return (0, li.G)(Sp) ? null : {
-          listedVariations: Bi(pp),
-          backgroundImage: (0, Ip.k)(pp, (0, Ip.c)(Sp)),
-          badges: (0, Dp.filterBadges)(Sp.badges),
-          category: Sp.type,
-          title: cp(Sp.title),
-          variationTitle: Sp.variationTitle ? cp(Sp.variationTitle) : null,
-          description: cp(Sp.description),
+      }), [WU.gameNameWithVariation, TU.gameNameWithVariation, ET]);
+      const [BU, ZU] = (0, cT.useState)(""), qU = cT.useRef(null), [iU, bU] = (0, cT.useState)(), xU = (0, zU.k)(WU.gameNameWithVariation), wU = (0, cT.useMemo)((() => xU ? null : function(TT, UT, mT) {
+        var WT, zT;
+        const gT = lU.d[TT];
+        return (0, aU.E)(gT) ? null : {
+          listedVariations: IU(TT),
+          backgroundImage: (0, MT.j)(TT, (0, MT.d)(gT)),
+          badges: (0, jT.filterBadges)(gT.badges),
+          category: gT.type,
+          title: mT(gT.title),
+          variationTitle: gT.variationTitle ? mT(gT.variationTitle) : null,
+          description: mT(gT.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== ip ? null !== (Op = ip[pp]) && void 0 !== Op ? Op : 0 : null,
+          ccu: null !== UT ? null !== (WT = UT[TT]) && void 0 !== WT ? WT : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: Sp.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: Sp.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (op = Sp.canCreateCustomLobbies) || void 0 === op || op,
-          countdownInformation: (0, tp.c)(pp)
+          useRejoinLastLobbyButton: gT.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: gT.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (zT = gT.canCreateCustomLobbies) || void 0 === zT || zT,
+          countdownInformation: (0, fT.d)(TT)
         }
-      }(Ii.gameNameWithVariation, hp, fp)), [Mi, Ii.gameNameWithVariation, hp, fp]), [Xi, Ni] = (0, wp.useState)(!1), [Ti, fi] = (0, wp.useState)((() => Np ? Ji(Np, fp) : Qi)), ai = null !== Ei && void 0 !== Ei ? Ei : Ti, [ni] = (0, wp.useState)(ai === Qi), Fi = (0, op.d)(ai.backgroundImage, {
+      }(WU.gameNameWithVariation, uT, PT)), [xU, WU.gameNameWithVariation, uT, PT]), [tU, QU] = (0, cT.useState)(!1), [sU, FU] = (0, cT.useState)((() => sT ? XU(sT, PT) : yU)), VU = null !== wU && void 0 !== wU ? wU : sU, [uU] = (0, cT.useState)(VU === yU), CU = (0, zT.e)(VU.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: gi,
-        recentlyPlayedCustomLobbies: Gi
-      } = (0, wp.useMemo)((() => function(pp, ip, cp, Op) {
-        var op;
-        const Ip = pp => {
-            const cp = (0, Si.o)(pp),
-              Op = ip.find((ip => "custom" === ip.type ? ip.schematicId === cp : ip.gameNameWithVariation === pp));
-            return Op ? [...Op.recentLobbies] : []
+        recentlyPlayedPublicLobbies: rU,
+        recentlyPlayedCustomLobbies: KU
+      } = (0, cT.useMemo)((() => function(TT, UT, mT, WT) {
+        var zT;
+        const MT = TT => {
+            const mT = (0, zU.q)(TT),
+              WT = UT.find((UT => "custom" === UT.type ? UT.schematicId === mT : UT.gameNameWithVariation === TT));
+            return WT ? [...WT.recentLobbies] : []
           },
-          Sp = (0, Dp.getRecentGameNameWithVariationLobbiesKey)(pp),
-          xp = null !== (op = Yp.h.getItem(Sp)) && void 0 !== op ? op : [],
-          Lp = [...Ip(pp), ...xp],
-          Ap = [];
-        for (const Yp of Lp)(0, yi.I)(Yp) && !Ap.includes(Yp) && Ap.push(Yp);
-        let Pp = Lp;
-        if (cp) {
-          const pp = Ip("classic_worlds"),
-            ip = Lp.filter((ip => !pp.includes(ip)));
-          Pp = [...pp, ...ip]
+          gT = (0, jT.getRecentGameNameWithVariationLobbiesKey)(TT),
+          nT = null !== (zT = kT.l.getItem(gT)) && void 0 !== zT ? zT : [],
+          HT = [...MT(TT), ...nT],
+          lT = [];
+        for (const kT of HT)(0, LU.S)(kT) && !lT.includes(kT) && lT.push(kT);
+        let LT = HT;
+        if (mT) {
+          const TT = MT("classic_worlds"),
+            UT = HT.filter((UT => !TT.includes(UT)));
+          LT = [...TT, ...UT]
         }
-        const Wp = [],
-          yp = !1 === Op ? [] : Pp;
-        for (const Yp of yp)(0, yi.I)(Yp) || Wp.includes(Yp) || Wp.push(Yp);
+        const pT = [],
+          BT = !1 === WT ? [] : LT;
+        for (const kT of BT)(0, LU.S)(kT) || pT.includes(kT) || pT.push(kT);
         return {
-          recentlyPlayedPublicLobbies: Ap,
-          recentlyPlayedCustomLobbies: Wp
+          recentlyPlayedPublicLobbies: lT,
+          recentlyPlayedCustomLobbies: pT
         }
-      }(Ii.gameNameWithVariation, Fp, ai.showWorldsInsteadOfCustomLobbies, ai.canCreateCustomLobbies)), [Ii.gameNameWithVariation, Fp, ai.showWorldsInsteadOfCustomLobbies, ai.canCreateCustomLobbies]), [ri, Zi] = (0, wp.useState)(!0), [zi, si] = (0, wp.useState)([]), [Ki, Vi] = (0, wp.useState)(null), [pc, ic] = (0, wp.useState)("explore"), cc = (0, wp.useRef)(!1), Oc = (0, wp.useCallback)((pp => {
-        (0, vp.unstable_batchedUpdates)((() => {
-          ji(pp), fi((ip => ({
-            ...Ji(pp, fp),
-            isFavourite: ip.isFavourite
+      }(WU.gameNameWithVariation, KT, VU.showWorldsInsteadOfCustomLobbies, VU.canCreateCustomLobbies)), [WU.gameNameWithVariation, KT, VU.showWorldsInsteadOfCustomLobbies, VU.canCreateCustomLobbies]), [SU, GU] = (0, cT.useState)(!0), [NU, EU] = (0, cT.useState)([]), [hU, DU] = (0, cT.useState)(null), [oU, AU] = (0, cT.useState)("explore"), RU = (0, cT.useRef)(!1), Tm = (0, cT.useCallback)((TT => {
+        (0, vT.unstable_batchedUpdates)((() => {
+          bU(TT), FU((UT => ({
+            ...XU(TT, PT),
+            isFavourite: UT.isFavourite
           })))
         }))
-      }), [fp]);
-      (0, wp.useEffect)((() => {
-        null === Ai.c.get("gameEntrySource") && (0, Ai.k)("gameInformationPageDirect")
+      }), [PT]);
+      (0, cT.useEffect)((() => {
+        null === kU.b.get("gameEntrySource") && (0, kU.e)("gameInformationPageDirect")
       }), []);
-      const oc = (0, wp.useRef)(null);
-      (0, wp.useEffect)((() => {
-        const pp = pp => {
-            oc.current = pp.target instanceof Element ? pp.target.closest("a, button") : null
+      const Um = (0, cT.useRef)(null);
+      (0, cT.useEffect)((() => {
+        const TT = TT => {
+            Um.current = TT.target instanceof Element ? TT.target.closest("a, button") : null
           },
-          ip = pp => {
-            "Tab" === pp.key && (oc.current = null)
+          UT = TT => {
+            "Tab" === TT.key && (Um.current = null)
           };
-        return document.addEventListener("pointerdown", pp, !0), document.addEventListener("keydown", ip, !0), () => {
-          document.removeEventListener("pointerdown", pp, !0), document.removeEventListener("keydown", ip, !0)
+        return document.addEventListener("pointerdown", TT, !0), document.addEventListener("keydown", UT, !0), () => {
+          document.removeEventListener("pointerdown", TT, !0), document.removeEventListener("keydown", UT, !0)
         }
-      }), []), (0, jp.b)("Enter", (pp => {
-        const ip = pp.target instanceof Element ? pp.target : null;
-        if (pp.defaultPrevented || null !== ip && void 0 !== ip && ip.closest("input, textarea, select")) return;
-        const cp = null === ip || void 0 === ip ? void 0 : ip.closest("a, button");
-        cp && cp !== oc.current || (pp.preventDefault(), Wc())
-      })), (0, kp.e)(Vp.navigateToHomePage);
-      const Ic = gi.length > 0 || Gi.length > 0,
-        Sc = !ai.useRejoinLastLobbyButton || 0 === gi.length,
-        xc = Mi && null === ai.ownerSocialPreviewWithoutLocation,
-        Lc = ap.getPlayerName() === (null === ui || void 0 === ui || null === (ip = ui.owner) || void 0 === ip ? void 0 : ip.name),
-        Yc = null !== (cp = null === (Sp = ai.badges.find((pp => "event" === pp.type))) || void 0 === Sp ? void 0 : Sp.event) && void 0 !== cp ? cp : null,
-        Dc = Sc ? Pp.o : Pp.f,
-        Ac = (0, Jp.jsx)(Ap.f, {
-          tooltipInner: (0, Jp.jsx)("div", {
-            children: fp("homePage:quickPlayInfo")
+      }), []), (0, OT.c)("Enter", (TT => {
+        const UT = TT.target instanceof Element ? TT.target : null;
+        if (TT.defaultPrevented || null !== UT && void 0 !== UT && UT.closest("input, textarea, select")) return;
+        const mT = null === UT || void 0 === UT ? void 0 : UT.closest("a, button");
+        mT && mT !== Um.current || (TT.preventDefault(), jm())
+      })), (0, eT.d)(AT.navigateToHomePage);
+      const mm = rU.length > 0 || KU.length > 0,
+        Wm = !VU.useRejoinLastLobbyButton || 0 === rU.length,
+        zm = xU && null === VU.ownerSocialPreviewWithoutLocation,
+        Mm = CT.getPlayerName() === (null === iU || void 0 === iU || null === (UT = iU.owner) || void 0 === UT ? void 0 : UT.name),
+        gm = null !== (mT = null === (gT = VU.badges.find((TT => "event" === TT.type))) || void 0 === gT ? void 0 : gT.event) && void 0 !== mT ? mT : null,
+        nm = Wm ? LT.l : LT.e,
+        Hm = (0, IT.jsx)(lT.e, {
+          tooltipInner: (0, IT.jsx)("div", {
+            children: PT("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, Jp.jsx)(Dc, {
+          children: (0, IT.jsx)(nm, {
             className: "GameInformationButton",
-            padDefaultFocus: Sc,
+            padDefaultFocus: Wm,
             showPress: !0,
             onClick: () => {
-              Wc()
+              jm()
             },
-            children: (0, Jp.jsxs)("div", {
+            children: (0, IT.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [Sc && (0, Jp.jsxs)(Jp.Fragment, {
-                children: [(0, Jp.jsx)(Gp.d, {
+              children: [Wm && (0, IT.jsxs)(IT.Fragment, {
+                children: [(0, IT.jsx)(GT.c, {
                   name: "play"
                 }), " "]
-              }), fp("homePage:quickPlay")]
+              }), PT("homePage:quickPlay")]
             })
           })
         });
-      (0, wp.useEffect)((() => {
-        if (!Mi || np) return;
-        let pp = !0;
-        const ip = (0, Si.o)(Ii.gameNameWithVariation);
-        return Cp.b.getGame(ap, ip).then((ip => {
-          pp && Oc(ip)
-        })).catch((ip => {
-          console.error("Failed to get Custom Game information", ip), pp && (0, Vp.navigateToHomePage)()
-        })), Cp.b.getFavouriteGames(ap).then((cp => {
-          pp && fi((pp => ({
-            ...pp,
-            isFavourite: cp.includes(ip)
+      (0, cT.useEffect)((() => {
+        if (!xU || rT) return;
+        let TT = !0;
+        const UT = (0, zU.q)(WU.gameNameWithVariation);
+        return wT.b.getGame(CT, UT).then((UT => {
+          TT && Tm(UT)
+        })).catch((UT => {
+          console.error("Failed to get Custom Game information", UT), TT && (0, AT.navigateToHomePage)()
+        })), wT.b.getFavouriteGames(CT).then((mT => {
+          TT && FU((TT => ({
+            ...TT,
+            isFavourite: mT.includes(UT)
           })))
-        })).catch((ip => {
-          console.error("Failed to get favourite games", ip), pp && Ni(!0)
+        })).catch((UT => {
+          console.error("Failed to get favourite games", UT), TT && QU(!0)
         })), () => {
-          pp = !1
+          TT = !1
         }
-      }), [Mi, np, Ii.gameNameWithVariation, Oc, ap]);
-      const Pc = !Mi && null === Ei;
+      }), [xU, rT, WU.gameNameWithVariation, Tm, CT]);
+      const km = !xU && null === wU;
 
-      function Wc(pp) {
-        (0, Ci.g)(), Zp((0, Hp.c)(Ii.gameNameWithVariation, pp))
-      }(0, wp.useEffect)((() => {
-        Pc && (0, Vp.navigateToHomePage)()
-      }), [Pc]), (0, wp.useEffect)((() => {
-        if (!1 === ai.canCreateCustomLobbies) return;
-        let pp = !0;
-        return null !== ai.showWorldsInsteadOfCustomLobbies && !1 === np && (Zi(!0), Cp.b.getFavouriteLobbies(ap).then((pp => {
-          Vi(pp)
-        })), Cp.b.getOpenCustomLobbies(ap, {
-          gameNameWithVariation: ai.showWorldsInsteadOfCustomLobbies ? "classic" : Ii.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === pc,
-          onlyFavouriteLobbies: "favourite" === pc
-        }).then((ip => {
-          pp && (0, vp.unstable_batchedUpdates)((() => {
-            si(ip), Zi(!1)
+      function jm(TT) {
+        (0, dU.c)(), ET((0, qT.d)(WU.gameNameWithVariation, TT))
+      }(0, cT.useEffect)((() => {
+        km && (0, AT.navigateToHomePage)()
+      }), [km]), (0, cT.useEffect)((() => {
+        if (!1 === VU.canCreateCustomLobbies) return;
+        let TT = !0;
+        return null !== VU.showWorldsInsteadOfCustomLobbies && !1 === rT && (GU(!0), wT.b.getFavouriteLobbies(CT).then((TT => {
+          DU(TT)
+        })), wT.b.getOpenCustomLobbies(CT, {
+          gameNameWithVariation: VU.showWorldsInsteadOfCustomLobbies ? "classic" : WU.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === oU,
+          onlyFavouriteLobbies: "favourite" === oU
+        }).then((UT => {
+          TT && (0, vT.unstable_batchedUpdates)((() => {
+            EU(UT), GU(!1)
           }))
-        })).catch((ip => {
-          console.error("Failed to get open custom lobbies", ip), pp && Zi(!1)
+        })).catch((UT => {
+          console.error("Failed to get open custom lobbies", UT), TT && GU(!1)
         }))), () => {
-          pp = !1
+          TT = !1
         }
-      }), [np, Ii, pc, ai.showWorldsInsteadOfCustomLobbies, ai.canCreateCustomLobbies, ap]);
-      const yc = (0, wp.useCallback)((async pp => {
+      }), [rT, WU, oU, VU.showWorldsInsteadOfCustomLobbies, VU.canCreateCustomLobbies, CT]);
+      const lm = (0, cT.useCallback)((async TT => {
           try {
-            if (!Ki) return;
-            Ki.includes(pp) ? (Cp.b.unfavouriteLobby(ap, pp), Vi(Ki.filter((ip => ip !== pp)))) : (Cp.b.favouriteLobby(ap, pp).catch((pp => {
-              console.error("Failed to favourite lobby", pp)
-            })), Vi([...Ki, pp]))
-          } catch (ip) {
-            console.error("Failed to like lobby", ip)
+            if (!hU) return;
+            hU.includes(TT) ? (wT.b.unfavouriteLobby(CT, TT), DU(hU.filter((UT => UT !== TT)))) : (wT.b.favouriteLobby(CT, TT).catch((TT => {
+              console.error("Failed to favourite lobby", TT)
+            })), DU([...hU, TT]))
+          } catch (UT) {
+            console.error("Failed to like lobby", UT)
           }
-        }), [ap, Ki]),
-        Uc = (null === ui || void 0 === ui ? void 0 : ui.schematicId) === (0, Si.o)(ci.gameNameWithVariation) ? ui : null,
-        wc = Uc && (0, bp.E)(ci.gameNameWithVariation, (pp => fp(pp)), Uc);
-      (0, ii.e)(Uc && (0, bp.u)(ci.gameNameWithVariation, Uc));
-      const vc = rp.featureFlags.canUseCustomLobbies && !0 === ai.canCreateCustomLobbies,
-        tc = (0, Jp.jsx)("div", {
+        }), [CT, hU]),
+        Lm = (null === iU || void 0 === iU ? void 0 : iU.schematicId) === (0, zU.q)(TU.gameNameWithVariation) ? iU : null,
+        pm = Lm && (0, VT.C)(TU.gameNameWithVariation, (TT => PT(TT)), Lm);
+      (0, RT.i)(Lm && (0, VT.v)(TU.gameNameWithVariation, Lm));
+      const Bm = NT.featureFlags.canUseCustomLobbies && !0 === VU.canCreateCustomLobbies,
+        Zm = (0, IT.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, Jp.jsx)(gp, {
-            gameNameWithVariation: Ii.gameNameWithVariation
+          children: (0, IT.jsx)(ST, {
+            gameNameWithVariation: WU.gameNameWithVariation
           })
         });
-      return (0, Jp.jsx)(Jp.Fragment, {
-        children: (0, Jp.jsxs)("article", {
-          className: yp()("GameInformation", {
-            GameInformationFadeIn: ni,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (Wp = ai.countdownInformation) || void 0 === Wp ? void 0 : Wp.type)
+      return (0, IT.jsx)(IT.Fragment, {
+        children: (0, IT.jsxs)("article", {
+          className: BT()("GameInformation", {
+            GameInformationFadeIn: uU,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (pT = VU.countdownInformation) || void 0 === pT ? void 0 : pT.type)
           }),
-          children: [wc && (0, Jp.jsx)(dp.c, {
-            meta: wc
-          }), (0, Jp.jsxs)("div", {
+          children: [pm && (0, IT.jsx)(iT.e, {
+            meta: pm
+          }), (0, IT.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, Jp.jsxs)("div", {
+            children: [(0, IT.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, Jp.jsxs)("div", {
+              children: [(0, IT.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, Jp.jsx)("div", {
+                children: [(0, IT.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, Jp.jsx)("div", {
-                  className: yp()("GameInformationTopBackgroundImage", xp.g),
-                  style: (0, xp.f)(Fi),
-                  children: (0, Jp.jsx)(xp.c, {
-                    image: Fi
+                }), (0, IT.jsx)("div", {
+                  className: BT()("GameInformationTopBackgroundImage", nT.h),
+                  style: (0, nT.e)(CU),
+                  children: (0, IT.jsx)(nT.c, {
+                    image: CU
                   })
                 })]
-              }), (0, Jp.jsxs)("div", {
+              }), (0, IT.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, Jp.jsx)(Hi.c, {}), (0, Jp.jsxs)("div", {
+                children: [(0, IT.jsx)(vU.c, {}), (0, IT.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, Jp.jsxs)("div", {
+                  children: [(0, IT.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, Jp.jsxs)("div", {
-                      className: yp()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: xc
+                    children: [(0, IT.jsxs)("div", {
+                      className: BT()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: zm
                       }),
-                      children: [ai.badges.map((pp => (0, Jp.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${pp.type}`,
-                        children: (0, Jp.jsx)(qp.b, {
-                          badge: pp
+                      children: [VU.badges.map((TT => (0, IT.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${TT.type}`,
+                        children: (0, IT.jsx)(xT.d, {
+                          badge: TT
                         })
-                      }, pp.type))), Mi && (0, Jp.jsx)("div", {
+                      }, TT.type))), xU && (0, IT.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, Jp.jsx)(Rp.e, {
-                          text: (0, Op.kb)({
+                        children: (0, IT.jsx)(JT.e, {
+                          text: (0, WT.Y)({
                             type: "playerCrafted"
                           })
                         })
-                      }), ai.category && (0, Jp.jsx)("div", {
+                      }), VU.category && (0, IT.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, Jp.jsx)(Rp.e, {
+                        children: (0, IT.jsx)(JT.e, {
                           text: [{
-                            str: (0, Op.nb)(ai.category).toUpperCase()
+                            str: (0, WT.Z)(VU.category).toUpperCase()
                           }]
                         })
-                      }), null !== ai.ccu && (0, Jp.jsxs)("div", {
+                      }), null !== VU.ccu && (0, IT.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, Jp.jsx)(Gp.d, {
+                        children: [(0, IT.jsx)(GT.c, {
                           name: "user"
-                        }), (0, yi.O)(ai.ccu), " online"]
-                      }), null !== ai.ownerSocialPreviewWithoutLocation && (0, Jp.jsxs)("div", {
+                        }), (0, LU.V)(VU.ccu), " online"]
+                      }), null !== VU.ownerSocialPreviewWithoutLocation && (0, IT.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, Jp.jsx)("span", {
+                        children: [(0, IT.jsx)("span", {
                           children: "Made by"
-                        }), (0, Jp.jsx)(lp.d, {
+                        }), (0, IT.jsx)(yT.i, {
                           playerSocialPreview: {
-                            ...ai.ownerSocialPreviewWithoutLocation,
+                            ...VU.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -973,402 +973,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), xc && (0, Jp.jsxs)("div", {
+                      }), zm && (0, IT.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, Jp.jsx)("span", {
+                        children: [(0, IT.jsx)("span", {
                           children: "Made by"
-                        }), (0, Jp.jsx)("div", {
+                        }), (0, IT.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== ai.favourites && (null !== ai.isFavourite || Mi && !Xi) && (0, Jp.jsx)(Pp.x, {
+                      }), null !== VU.favourites && (null !== VU.isFavourite || xU && !tU) && (0, IT.jsx)(LT.t, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== cc.current && (cc.current = !0, null !== ai.isFavourite)) {
-                              const pp = (0, Si.o)(Ii.gameNameWithVariation);
-                              let ip;
-                              ai.isFavourite ? (ip = -1, Cp.b.unfavouriteGame(ap, pp).catch((pp => {
-                                console.error("Failed to get unfavourite game", pp)
+                            if (!0 !== RU.current && (RU.current = !0, null !== VU.isFavourite)) {
+                              const TT = (0, zU.q)(WU.gameNameWithVariation);
+                              let UT;
+                              VU.isFavourite ? (UT = -1, wT.b.unfavouriteGame(CT, TT).catch((TT => {
+                                console.error("Failed to get unfavourite game", TT)
                               })).finally((() => {
-                                cc.current = !1
-                              }))) : (ip = 1, Cp.b.favouriteGame(ap, pp).catch((pp => {
-                                console.error("Failed to get favourite game", pp)
+                                RU.current = !1
+                              }))) : (UT = 1, wT.b.favouriteGame(CT, TT).catch((TT => {
+                                console.error("Failed to get favourite game", TT)
                               })).finally((() => {
-                                cc.current = !1
-                              }))), fi((pp => ({
-                                ...pp,
-                                isFavourite: !pp.isFavourite
-                              }))), fi((pp => ({
-                                ...pp,
-                                favourites: pp.favourites + ip
+                                RU.current = !1
+                              }))), FU((TT => ({
+                                ...TT,
+                                isFavourite: !TT.isFavourite
+                              }))), FU((TT => ({
+                                ...TT,
+                                favourites: TT.favourites + UT
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (Mp = ai.isFavourite) && void 0 !== Mp && Mp,
-                        disabled: null === ai.isFavourite,
-                        className: yp()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === ai.isFavourite
+                        isLiked: null !== (dT = VU.isFavourite) && void 0 !== dT && dT,
+                        disabled: null === VU.isFavourite,
+                        className: BT()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === VU.isFavourite
                         })
-                      }, null === ai.isFavourite ? "pending" : "known"), Mi && !xc && rp.featureFlags.useSocialFeatures && !Lc && (0, Jp.jsx)(mi.c, {
+                      }, null === VU.isFavourite ? "pending" : "known"), xU && !zm && NT.featureFlags.useSocialFeatures && !Mm && (0, IT.jsx)(eU.c, {
                         targetType: "customGame",
-                        targetId: (0, Si.o)(Ii.gameNameWithVariation),
+                        targetId: (0, zU.q)(WU.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (ap.playerHasRank("developer") || ap.playerHasRank("admin") && Lc) && (0, Jp.jsxs)(Pp.o, {
+                      }), (CT.playerHasRank("developer") || CT.playerHasRank("admin") && Mm) && (0, IT.jsxs)(LT.l, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          Zp((0, Yi.n)((0, Li.g)(Ii.gameNameWithVariation, !0)))
+                          ET((0, nU.k)((0, gU.e)(WU.gameNameWithVariation, !0)))
                         },
-                        children: [(0, Jp.jsx)(Gp.d, {
+                        children: [(0, IT.jsx)(GT.c, {
                           name: "star-christmas"
-                        }), " ", fp("studio:viewInStudio")]
-                      }), Mi && ap.playerHasRank("developer") && (0, Jp.jsxs)(Pp.f, {
+                        }), " ", PT("studio:viewInStudio")]
+                      }), xU && CT.playerHasRank("developer") && (0, IT.jsxs)(LT.e, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, Ui.d)({
-                            schematicId: (0, Si.o)(Ii.gameNameWithVariation),
+                          (0, pU.e)({
+                            schematicId: (0, zU.q)(WU.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, Jp.jsx)(Gp.d, {
+                        children: [(0, IT.jsx)(GT.c, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), Mi && ap.playerHasRank("developer") && (0, Jp.jsxs)(Pp.f, {
+                      }), xU && CT.playerHasRank("developer") && (0, IT.jsxs)(LT.e, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          Oi.NotificationProvider.showCustomPopup({
-                            body: () => (0, Jp.jsx)(ti, {
-                              schematicId: (0, Si.o)(Ii.gameNameWithVariation),
-                              gameName: ai.title
+                          UU.NotificationProvider.showCustomPopup({
+                            body: () => (0, IT.jsx)(cU, {
+                              schematicId: (0, zU.q)(WU.gameNameWithVariation),
+                              gameName: VU.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, Jp.jsx)(Gp.d, {
+                        children: [(0, IT.jsx)(GT.c, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (Ep = ai.countdownInformation) || void 0 === Ep ? void 0 : Ep.type) && (0, Jp.jsxs)("div", {
+                      }), "updateCountdown" === (null === (tT = VU.countdownInformation) || void 0 === tT ? void 0 : tT.type) && (0, IT.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, Jp.jsxs)("div", {
+                        children: [(0, IT.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, Jp.jsx)(mp.e, {
-                            toTime: ai.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, IT.jsx)(YT.e, {
+                            toTime: VU.countdownInformation.countdownToTime
                           })]
-                        }), (0, Jp.jsx)("div", {
+                        }), (0, IT.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: ai.countdownInformation.previewText
+                          children: VU.countdownInformation.previewText
                         })]
                       })]
-                    }, xc ? "pending" : "shown"), (0, Jp.jsxs)("header", {
+                    }, zm ? "pending" : "shown"), (0, IT.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, Jp.jsx)("div", {
+                      children: [(0, IT.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, Jp.jsxs)("h1", {
+                        children: (0, IT.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [ai.title, " ", ai.variationTitle && (null === (Xp = Wi.c[Ii.gameNameWithVariation]) || void 0 === Xp ? void 0 : Xp.variationThumbnailUseBigRatio) && (0, Jp.jsx)("span", {
+                          children: [VU.title, " ", VU.variationTitle && (null === (aT = lU.d[WU.gameNameWithVariation]) || void 0 === aT ? void 0 : aT.variationThumbnailUseBigRatio) && (0, IT.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: ai.variationTitle
+                            children: VU.variationTitle
                           })]
                         })
-                      }), ai.listedVariations && ai.listedVariations.length > 0 && (0, Jp.jsx)("div", {
-                        className: yp()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (Qp = Wi.c[Ii.gameNameWithVariation]) || void 0 === Qp ? void 0 : Qp.variationThumbnailUseBigRatio
+                      }), VU.listedVariations && VU.listedVariations.length > 0 && (0, IT.jsx)("div", {
+                        className: BT()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (XT = lU.d[WU.gameNameWithVariation]) || void 0 === XT ? void 0 : XT.variationThumbnailUseBigRatio
                         }),
-                        children: ai.listedVariations.map((pp => {
-                          var ip, cp;
-                          return (0, Jp.jsxs)(bi, {
-                            variation: pp,
-                            isSelected: Ii.gameNameWithVariation === pp,
-                            children: [null !== hp && (0, Jp.jsx)("div", {
+                        children: VU.listedVariations.map((TT => {
+                          var UT, mT;
+                          return (0, IT.jsxs)(PU, {
+                            variation: TT,
+                            isSelected: WU.gameNameWithVariation === TT,
+                            children: [null !== uT && (0, IT.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, Jp.jsxs)("div", {
+                              children: (0, IT.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, Jp.jsx)(Gp.d, {
+                                children: [(0, IT.jsx)(GT.c, {
                                   name: "user"
-                                }), " ", (0, yi.O)(null !== (ip = hp[pp]) && void 0 !== ip ? ip : 0)]
+                                }), " ", (0, LU.V)(null !== (UT = uT[TT]) && void 0 !== UT ? UT : 0)]
                               })
-                            }), (0, Jp.jsx)("div", {
+                            }), (0, IT.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: fp(null !== (cp = Wi.c[pp].variationTitle) && void 0 !== cp ? cp : Wi.c[pp].title)
-                            }), (0, Jp.jsx)("div", {
+                              children: PT(null !== (mT = lU.d[TT].variationTitle) && void 0 !== mT ? mT : lU.d[TT].title)
+                            }), (0, IT.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, Dp.filterBadges)(Wi.c[pp].badges).map((pp => (0, Jp.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + pp.type,
-                                children: (0, Jp.jsx)("div", {
+                              children: (0, jT.filterBadges)(lU.d[TT].badges).map((TT => (0, IT.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + TT.type,
+                                children: (0, IT.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, Jp.jsx)(qp.b, {
-                                    badge: pp
+                                  children: (0, IT.jsx)(xT.d, {
+                                    badge: TT
                                   })
                                 })
-                              }, pp.type)))
+                              }, TT.type)))
                             })]
-                          }, pp)
+                          }, TT)
                         }))
                       })]
-                    }), ai.description && (0, Jp.jsx)("p", {
+                    }), VU.description && (0, IT.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: ai.description
+                      children: VU.description
                     })]
-                  }), (0, Jp.jsxs)("div", {
+                  }), (0, IT.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, Jp.jsxs)("div", {
+                    children: [(0, IT.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!Sc && (0, Jp.jsx)(Ap.f, {
-                        tooltipInner: (0, Jp.jsx)("div", {
-                          children: fp("homePage:rejoinLobbyNumberInfo")
+                      children: [!Wm && (0, IT.jsx)(lT.e, {
+                        tooltipInner: (0, IT.jsx)("div", {
+                          children: PT("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, Jp.jsx)(Pp.o, {
+                        children: (0, IT.jsx)(LT.l, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            Wc(gi[0])
+                            jm(rU[0])
                           },
-                          children: (0, Jp.jsxs)("div", {
+                          children: (0, IT.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, Jp.jsx)(Gp.d, {
+                            children: [(0, IT.jsx)(GT.c, {
                               name: "play"
-                            }), " ", fp("homePage:rejoinLobbyNumber", {
-                              number: gi[0]
+                            }), " ", PT("homePage:rejoinLobbyNumber", {
+                              number: rU[0]
                             })]
                           })
                         })
-                      }), Sc && Ac]
-                    }), (0, Jp.jsxs)("div", {
+                      }), Wm && Hm]
+                    }), (0, IT.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!Sc && Ac, (0, Jp.jsxs)("div", {
+                      children: [!Wm && Hm, (0, IT.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, Jp.jsx)(Gp.d, {
+                        children: [(0, IT.jsx)(GT.c, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, Jp.jsx)(Up.c, {
+                        }), (0, IT.jsx)(ZT.e, {
                           className: "JoinLobbyInput",
-                          placeholderText: fp("homePage:lobbyName"),
-                          maxLength: yi.M,
-                          domRef: ei,
-                          onValueChange: pp => {
-                            pp = (0, yi.rb)(pp), vi(pp)
+                          placeholderText: PT("homePage:lobbyName"),
+                          maxLength: LU.U,
+                          domRef: qU,
+                          onValueChange: TT => {
+                            TT = (0, LU.Ab)(TT), ZU(TT)
                           },
                           onEnter: () => {
-                            0 === wi.length ? Wc(gi[0]) : Wc(wi)
+                            0 === BU.length ? jm(rU[0]) : jm(BU)
                           }
-                        }), (0, Jp.jsx)(Pp.f, {
+                        }), (0, IT.jsx)(LT.e, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === wi.length ? Wc(gi[0]) : Wc(wi)
+                            0 === BU.length ? jm(rU[0]) : jm(BU)
                           },
-                          children: fp("general:join")
+                          children: PT("general:join")
                         })]
                       })]
-                    }), (0, Jp.jsxs)("section", {
-                      className: yp()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !Ic
+                    }), (0, IT.jsxs)("section", {
+                      className: BT()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !mm
                       }),
-                      children: [(0, Jp.jsx)("div", {
+                      children: [(0, IT.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, Jp.jsxs)("div", {
+                        children: (0, IT.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, Jp.jsx)(Gp.d, {
+                          children: [(0, IT.jsx)(GT.c, {
                             name: "clock-rotate-left"
-                          }), Ic && (0, Jp.jsx)("h2", {
+                          }), mm && (0, IT.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: fp("homePage:recentlyPlayedLobbies")
+                            children: PT("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, Jp.jsx)(Ri.b, {
-                        lobbyGroups: [gi, Gi],
-                        onLobbyClick: pp => {
-                          Wc(pp)
+                      }), (0, IT.jsx)(YU.d, {
+                        lobbyGroups: [rU, KU],
+                        onLobbyClick: TT => {
+                          jm(TT)
                         },
-                        keyPrefix: Ii.gameNameWithVariation
+                        keyPrefix: WU.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== Yc && (0, Jp.jsx)(Tp, {
-                eventName: Yc
+              }), null !== gm && (0, IT.jsx)(FT, {
+                eventName: gm
               })]
-            }), vc && (0, Jp.jsx)("div", {
+            }), Bm && (0, IT.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, Jp.jsxs)("section", {
+              children: (0, IT.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, Jp.jsxs)("div", {
-                  className: yp()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === ai.showWorldsInsteadOfCustomLobbies
+                children: [(0, IT.jsxs)("div", {
+                  className: BT()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === VU.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === ai.showWorldsInsteadOfCustomLobbies && (0, Jp.jsxs)("h2", {
+                  children: [!0 === VU.showWorldsInsteadOfCustomLobbies && (0, IT.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, Jp.jsx)(Gp.d, {
+                    children: [(0, IT.jsx)(GT.c, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, Jp.jsxs)("div", {
+                    }), (0, IT.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, Jp.jsx)("div", {
+                      children: [(0, IT.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), fp("game:worlds")]
+                      }), PT("game:worlds")]
                     })]
-                  }), !1 === ai.showWorldsInsteadOfCustomLobbies && (0, Jp.jsxs)("h2", {
+                  }), !1 === VU.showWorldsInsteadOfCustomLobbies && (0, IT.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, Jp.jsx)(Gp.d, {
+                    children: [(0, IT.jsx)(GT.c, {
                       name: "joystick"
-                    }), (0, Jp.jsxs)("div", {
+                    }), (0, IT.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, Jp.jsx)("div", {
+                      children: [(0, IT.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), fp("homePage:customLobbies")]
+                      }), PT("homePage:customLobbies")]
                     })]
-                  }), (0, Jp.jsx)(Pp.S, {
+                  }), (0, IT.jsx)(LT.L, {
                     onClick: () => {
-                      ic("explore")
+                      AU("explore")
                     },
-                    active: "explore" === pc,
-                    children: fp("general:explore")
-                  }), (0, Jp.jsx)(Pp.S, {
+                    active: "explore" === oU,
+                    children: PT("general:explore")
+                  }), (0, IT.jsx)(LT.L, {
                     onClick: () => {
-                      ic("favourite")
+                      AU("favourite")
                     },
-                    active: "favourite" === pc,
-                    children: fp("homePage:favouriteLobbies")
-                  }), (0, Jp.jsx)(Pp.S, {
+                    active: "favourite" === oU,
+                    children: PT("homePage:favouriteLobbies")
+                  }), (0, IT.jsx)(LT.L, {
                     onClick: () => {
-                      ic("owned")
+                      AU("owned")
                     },
-                    active: "owned" === pc,
-                    children: fp("homePage:ownedLobbies")
+                    active: "owned" === oU,
+                    children: PT("homePage:ownedLobbies")
                   })]
-                }), (0, Jp.jsxs)("div", {
+                }), (0, IT.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, Jp.jsxs)("div", {
+                  children: [(0, IT.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, Jp.jsx)(di.e, {
+                    children: [(0, IT.jsx)(fU.b, {
                       label: "Create",
                       onClick: () => {
-                        Oi.NotificationProvider.showCustomPopup({
-                          body: pp => (0, Jp.jsx)(oi.CreateCustomLobby, {
-                            gameNameWithVariation: Ii.gameNameWithVariation,
-                            close: pp
+                        UU.NotificationProvider.showCustomPopup({
+                          body: TT => (0, IT.jsx)(mU.CreateCustomLobby, {
+                            gameNameWithVariation: WU.gameNameWithVariation,
+                            close: TT
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === ri && (0, Jp.jsx)(di.i, {}), !1 === ri && (0, Jp.jsx)(ki, {
-                      customLobbies: zi,
-                      favouriteLobbies: Ki,
-                      toggleLikeLobby: yc,
-                      showReport: rp.featureFlags.useSocialFeatures && "owned" !== pc
+                    }), !0 === SU && (0, IT.jsx)(fU.g, {}), !1 === SU && (0, IT.jsx)(OU, {
+                      customLobbies: NU,
+                      favouriteLobbies: hU,
+                      toggleLikeLobby: lm,
+                      showReport: NT.featureFlags.useSocialFeatures && "owned" !== oU
                     })]
-                  }), tc]
+                  }), Zm]
                 })]
               })
             })]
-          }), !vc && tc]
+          }), !Bm && Zm]
         })
       })
     }
 
-    function bi(pp) {
+    function PU(TT) {
       let {
-        variation: ip,
-        isSelected: cp,
-        children: Op
-      } = pp;
-      const Lp = Wi.c[ip],
-        Dp = (0, Ip.k)(ip, (0, Ip.m)(Lp)),
-        Ap = (0, op.d)(Dp),
-        Pp = (0, Sp.f)([(0, Ip.i)(ip, (0, Ip.c)(Lp))]);
-      return (0, Jp.jsxs)(Vp.LinkPreserveSearch, {
-        to: (0, bp.u)(ip),
+        variation: UT,
+        isSelected: mT,
+        children: WT
+      } = TT;
+      const HT = lU.d[UT],
+        jT = (0, MT.j)(UT, (0, MT.m)(HT)),
+        lT = (0, zT.e)(jT),
+        LT = (0, gT.d)([(0, MT.f)(UT, (0, MT.d)(HT))]);
+      return (0, IT.jsxs)(AT.LinkPreserveSearch, {
+        to: (0, VT.v)(UT),
         replace: !0,
-        className: yp()("GameInformationVariation", xp.g, {
-          SelectedGameInformationVariation: cp
+        className: BT()("GameInformationVariation", nT.h, {
+          SelectedGameInformationVariation: mT
         }),
-        onClick: pp => {
-          if (!(0, ci.e)(pp)) return;
-          const cp = (0, tp.g)(ip);
-          Yp.h.setItem(cp, ip)
+        onClick: TT => {
+          if (!(0, TU.e)(TT)) return;
+          const mT = (0, fT.g)(UT);
+          kT.l.setItem(mT, UT)
         },
-        onMouseEnter: Pp.start,
-        onMouseLeave: Pp.cancel,
-        onFocus: Pp.start,
-        onBlur: Pp.cancel,
-        style: (0, xp.f)(Ap),
-        children: [(0, Jp.jsx)(xp.c, {
-          image: Ap
-        }), Op]
+        onMouseEnter: LT.start,
+        onMouseLeave: LT.cancel,
+        onFocus: LT.start,
+        onBlur: LT.cancel,
+        style: (0, nT.e)(lT),
+        children: [(0, IT.jsx)(nT.c, {
+          image: lT
+        }), WT]
       })
     }
   },
-  6648: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => tp
+  6569: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => fT
     });
-    var Op = cp(62),
-      op = cp(1480),
-      Ip = cp(1520),
-      Sp = cp(3587),
-      xp = cp(1141),
-      Lp = cp(1361),
-      Yp = cp(1387),
-      Dp = cp(1060),
-      Ap = cp(1049),
-      Pp = cp.n(Ap),
-      Wp = cp(6644),
-      yp = cp(1112);
+    var WT = mT(63),
+      zT = mT(1569),
+      MT = mT(1613),
+      gT = mT(3582),
+      nT = mT(1225),
+      HT = mT(1446),
+      kT = mT(1475),
+      jT = mT(1135),
+      lT = mT(1126),
+      LT = mT.n(lT),
+      pT = mT(6565),
+      BT = mT(1188);
 
-    function Up(pp) {
+    function ZT(TT) {
       let {
-        info: ip,
-        className: cp
-      } = pp;
+        info: UT,
+        className: mT
+      } = TT;
       const {
-        statusText: Op,
-        rowText: op
-      } = (0, Wp.f)();
-      return (0, yp.jsxs)("div", {
-        className: Pp()("GameApprovalInfoDetails", cp),
-        children: [(0, yp.jsxs)("div", {
-          className: Pp()("GameApprovalInfoSummary", ip.overallPassed ? "Passed" : "Failed"),
-          children: [(0, yp.jsx)(Dp.d, {
-            name: ip.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, yp.jsx)("span", {
-            children: Op(ip.status)
+        statusText: WT,
+        rowText: zT
+      } = (0, pT.f)();
+      return (0, BT.jsxs)("div", {
+        className: LT()("GameApprovalInfoDetails", mT),
+        children: [(0, BT.jsxs)("div", {
+          className: LT()("GameApprovalInfoSummary", UT.overallPassed ? "Passed" : "Failed"),
+          children: [(0, BT.jsx)(jT.c, {
+            name: UT.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, BT.jsx)("span", {
+            children: WT(UT.status)
           })]
-        }), ip.rows.length > 0 && (0, yp.jsx)("div", {
+        }), UT.rows.length > 0 && (0, BT.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: ip.rows.map((pp => {
+          children: UT.rows.map((TT => {
             const {
-              label: ip,
-              value: cp
-            } = op(pp);
-            return (0, yp.jsxs)("div", {
-              className: Pp()("GameApprovalInfoRow", pp.passed ? "Passed" : "Failed"),
-              children: [(0, yp.jsx)(Dp.d, {
-                name: pp.passed ? "check" : "xmark"
-              }), (0, yp.jsxs)("div", {
+              label: UT,
+              value: mT
+            } = zT(TT);
+            return (0, BT.jsxs)("div", {
+              className: LT()("GameApprovalInfoRow", TT.passed ? "Passed" : "Failed"),
+              children: [(0, BT.jsx)(jT.c, {
+                name: TT.passed ? "check" : "xmark"
+              }), (0, BT.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, yp.jsx)("div", {
+                children: [(0, BT.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: ip
-                }), null !== cp && (0, yp.jsx)("div", {
+                  children: UT
+                }), null !== mT && (0, BT.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: cp
+                  children: mT
                 })]
               })]
-            }, pp.kind)
+            }, TT.kind)
           }))
         })]
       })
     }
-    var wp = cp(1201),
-      vp = cp(1372);
+    var cT = mT(1288),
+      vT = mT(1457);
 
-    function tp(pp) {
-      vp.NotificationProvider.showCustomPopup({
-        body: () => (0, yp.jsx)(Hp, {
-          ...pp
+    function fT(TT) {
+      vT.NotificationProvider.showCustomPopup({
+        body: () => (0, BT.jsx)(qT, {
+          ...TT
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1376,92 +1376,92 @@ export const modules = {
       })
     }
 
-    function Hp(pp) {
+    function qT(TT) {
       let {
-        schematicId: ip,
-        canOverride: cp,
-        onApprovalChanged: Ap
-      } = pp;
+        schematicId: UT,
+        canOverride: mT,
+        onApprovalChanged: lT
+      } = TT;
       const {
-        t: Pp
-      } = (0, wp.H)(), {
-        userContext: Wp
-      } = (0, xp.b)(), vp = (0, Sp.b)(), [tp, Hp] = (0, Op.useState)(null), [dp, ep] = (0, Op.useState)(null), [jp, kp] = (0, Op.useState)(!1), mp = (0, Op.useCallback)((() => {
-        ep(null), Ip.b.getGameApprovalInfo(Wp, ip).then((pp => {
-          vp.current && Hp(pp)
-        })).catch((pp => {
-          console.error("Failed to get game approval info", pp), vp.current && ep(Pp("studio:approvalLoadFailed"))
+        t: LT
+      } = (0, cT.z)(), {
+        userContext: pT
+      } = (0, nT.d)(), vT = (0, gT.c)(), [fT, qT] = (0, WT.useState)(null), [iT, bT] = (0, WT.useState)(null), [OT, eT] = (0, WT.useState)(!1), YT = (0, WT.useCallback)((() => {
+        bT(null), MT.b.getGameApprovalInfo(pT, UT).then((TT => {
+          vT.current && qT(TT)
+        })).catch((TT => {
+          console.error("Failed to get game approval info", TT), vT.current && bT(LT("studio:approvalLoadFailed"))
         }))
-      }), [Wp, ip, vp, Pp]);
-      (0, Op.useEffect)((() => {
-        mp()
-      }), [mp]);
-      const Rp = pp => {
-        jp || (kp(!0), Ip.b.setGameApproval(Wp, ip, pp).then((() => {
-          null === Ap || void 0 === Ap || Ap(), vp.current && mp()
-        })).catch((pp => {
-          console.error("Failed to set game approval", pp)
+      }), [pT, UT, vT, LT]);
+      (0, WT.useEffect)((() => {
+        YT()
+      }), [YT]);
+      const JT = TT => {
+        OT || (eT(!0), MT.b.setGameApproval(pT, UT, TT).then((() => {
+          null === lT || void 0 === lT || lT(), vT.current && YT()
+        })).catch((TT => {
+          console.error("Failed to set game approval", TT)
         })).finally((() => {
-          vp.current && kp(!1)
+          vT.current && eT(!1)
         })))
       };
-      return (0, yp.jsxs)("div", {
+      return (0, BT.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, yp.jsx)("h1", {
+        children: [(0, BT.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: Pp("studio:approvalTitle")
-        }), !tp && !dp && (0, yp.jsx)("div", {
+          children: LT("studio:approvalTitle")
+        }), !fT && !iT && (0, BT.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, yp.jsx)(Lp.c, {})
-        }), dp && (0, yp.jsx)("div", {
+          children: (0, BT.jsx)(HT.c, {})
+        }), iT && (0, BT.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: dp
-        }), tp && (0, yp.jsxs)(yp.Fragment, {
-          children: [(0, yp.jsx)(Up, {
-            info: tp
-          }), cp && (0, yp.jsxs)("div", {
+          children: iT
+        }), fT && (0, BT.jsxs)(BT.Fragment, {
+          children: [(0, BT.jsx)(ZT, {
+            info: fT
+          }), mT && (0, BT.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== tp.manualOverride && (0, yp.jsx)(Yp.f, {
-              tooltipInner: (0, yp.jsx)("div", {
-                children: Pp("studio:approvalApproveTooltip")
+            children: [!0 !== fT.manualOverride && (0, BT.jsx)(kT.e, {
+              tooltipInner: (0, BT.jsx)("div", {
+                children: LT("studio:approvalApproveTooltip")
               }),
-              children: (0, yp.jsxs)(op.o, {
+              children: (0, BT.jsxs)(zT.l, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  Rp(!0)
+                  JT(!0)
                 },
-                disabled: jp,
-                children: [(0, yp.jsx)(Dp.d, {
+                disabled: OT,
+                children: [(0, BT.jsx)(jT.c, {
                   name: "check"
-                }), " ", Pp("studio:approvalApprove")]
+                }), " ", LT("studio:approvalApprove")]
               })
-            }), !1 !== tp.manualOverride && (0, yp.jsx)(Yp.f, {
-              tooltipInner: (0, yp.jsx)("div", {
-                children: Pp("studio:approvalDenyTooltip")
+            }), !1 !== fT.manualOverride && (0, BT.jsx)(kT.e, {
+              tooltipInner: (0, BT.jsx)("div", {
+                children: LT("studio:approvalDenyTooltip")
               }),
-              children: (0, yp.jsxs)(op.K, {
+              children: (0, BT.jsxs)(zT.I, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  Rp(!1)
+                  JT(!1)
                 },
-                disabled: jp,
-                children: [(0, yp.jsx)(Dp.d, {
+                disabled: OT,
+                children: [(0, BT.jsx)(jT.c, {
                   name: "xmark"
-                }), " ", Pp("studio:approvalDeny")]
+                }), " ", LT("studio:approvalDeny")]
               })
-            }), null !== tp.manualOverride && (0, yp.jsx)(Yp.f, {
-              tooltipInner: (0, yp.jsx)("div", {
-                children: Pp("studio:approvalClearOverrideTooltip")
+            }), null !== fT.manualOverride && (0, BT.jsx)(kT.e, {
+              tooltipInner: (0, BT.jsx)("div", {
+                children: LT("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, yp.jsxs)(op.f, {
+              children: (0, BT.jsxs)(zT.e, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  Rp(null)
+                  JT(null)
                 },
-                disabled: jp,
-                children: [(0, yp.jsx)(Dp.d, {
+                disabled: OT,
+                children: [(0, BT.jsx)(jT.c, {
                   name: "arrows-rotate"
-                }), " ", Pp("studio:approvalClearOverride")]
+                }), " ", LT("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1469,14 +1469,14 @@ export const modules = {
       })
     }
   },
-  6644: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      f: () => Sp
+  6565: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => nT,
+      f: () => gT
     });
-    var Op = cp(337),
-      op = cp(1201);
-    const Ip = {
+    var WT = mT(366),
+      zT = mT(1288);
+    const MT = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1485,60 +1485,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function Sp() {
+    function gT() {
       const {
-        t: pp,
-        selectedLanguage: ip
-      } = (0, op.H)();
+        t: TT,
+        selectedLanguage: UT
+      } = (0, zT.z)();
       return {
-        statusText: ip => pp(Ip[ip]),
-        rowText: cp => {
-          const Ip = (pp, cp) => (0, Op.cb)((0, op.p)(ip.code, pp), 0, cp);
-          switch (cp.kind) {
+        statusText: UT => TT(MT[UT]),
+        rowText: mT => {
+          const MT = (TT, mT) => (0, WT.nb)((0, zT.m)(UT.code, TT), 0, mT);
+          switch (mT.kind) {
             case "ownerAccountAge": {
-              const ip = cp.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const UT = mT.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: pp("studio:approvalAccountAgeLabel"),
-                value: pp(ip, {
-                  age: Ip(ip, cp.accountAgeMs),
-                  days: cp.minAccountAgeDays
+                label: TT("studio:approvalAccountAgeLabel"),
+                value: TT(UT, {
+                  age: MT(UT, mT.accountAgeMs),
+                  days: mT.minAccountAgeDays
                 })
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: pp("studio:approvalSinceUnbannedLabel"), value: pp("studio:approvalSinceUnbannedValue", {
-                  time: Ip("studio:approvalSinceUnbannedValue", cp.sinceMs),
-                  days: cp.minDays
+                label: TT("studio:approvalSinceUnbannedLabel"), value: TT("studio:approvalSinceUnbannedValue", {
+                  time: MT("studio:approvalSinceUnbannedValue", mT.sinceMs),
+                  days: mT.minDays
                 })
               };
             case "reportHold": {
               const {
-                detail: ip
-              } = cp;
-              if (null === ip) return {
-                label: pp("studio:approvalUnderInvestigation"),
+                detail: UT
+              } = mT;
+              if (null === UT) return {
+                label: TT("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const Op = ip.weightedReporters.toFixed(1),
-                op = ip.threshold.toFixed(1),
-                Sp = pp("studio:approvalReportHoldLabel", {
-                  hours: ip.windowHours
+              const WT = UT.weightedReporters.toFixed(1),
+                zT = UT.threshold.toFixed(1),
+                gT = TT("studio:approvalReportHoldLabel", {
+                  hours: UT.windowHours
                 });
-              if (null === ip.heldUntil) return {
-                label: Sp,
-                value: pp("studio:approvalReportHoldValue", {
-                  weightedReporters: Op,
-                  threshold: op
+              if (null === UT.heldUntil) return {
+                label: gT,
+                value: TT("studio:approvalReportHoldValue", {
+                  weightedReporters: WT,
+                  threshold: zT
                 })
               };
-              const xp = "studio:approvalReportHoldValueHeld";
+              const nT = "studio:approvalReportHoldValueHeld";
               return {
-                label: Sp,
-                value: pp(xp, {
-                  weightedReporters: Op,
-                  threshold: op,
-                  time: Ip(xp, ip.heldUntil - Date.now())
+                label: gT,
+                value: TT(nT, {
+                  weightedReporters: WT,
+                  threshold: zT,
+                  time: MT(nT, UT.heldUntil - Date.now())
                 })
               }
             }
@@ -1547,85 +1547,85 @@ export const modules = {
       }
     }
 
-    function xp(pp) {
-      return null === pp.manualOverride && pp.rows.some((pp => "reportHold" === pp.kind && !pp.passed))
+    function nT(TT) {
+      return null === TT.manualOverride && TT.rows.some((TT => "reportHold" === TT.kind && !TT.passed))
     }
   },
-  34470: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip
+  34323: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => MT
     });
-    var Op = cp(62),
-      op = cp(3546);
+    var WT = mT(63),
+      zT = mT(3536);
 
-    function Ip() {
-      const [pp, ip] = (0, Op.useState)(!1);
-      return (0, Op.useLayoutEffect)((() => {
-        let pp = !0;
-        return (0, op.h)().then((() => {
-          pp && ip(!0)
+    function MT() {
+      const [TT, UT] = (0, WT.useState)(!1);
+      return (0, WT.useLayoutEffect)((() => {
+        let TT = !0;
+        return (0, zT.h)().then((() => {
+          TT && UT(!0)
         })), () => {
-          pp = !1
+          TT = !1
         }
-      }), []), pp
+      }), []), TT
     }
   },
-  9049: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  9039: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op = cp(1356),
-      op = cp(1234),
-      Ip = cp(640);
+    var WT = mT(1437),
+      zT = mT(1321),
+      MT = mT(653);
 
-    function Sp(pp) {
-      return pp = function(pp, ip) {
-        var cp;
-        const Op = new URLSearchParams(ip),
-          op = Op.get("lobby"),
-          Ip = Op.get("vm"),
-          Sp = null !== (cp = op) && void 0 !== cp ? cp : pp.lobbyName,
-          xp = null !== Ip && void 0 !== Ip ? Ip : pp.directJoinVmUrl;
-        if (Sp === pp.lobbyName && xp === pp.directJoinVmUrl) return pp;
+    function gT(TT) {
+      return TT = function(TT, UT) {
+        var mT;
+        const WT = new URLSearchParams(UT),
+          zT = WT.get("lobby"),
+          MT = WT.get("vm"),
+          gT = null !== (mT = zT) && void 0 !== mT ? mT : TT.lobbyName,
+          nT = null !== MT && void 0 !== MT ? MT : TT.directJoinVmUrl;
+        if (gT === TT.lobbyName && nT === TT.directJoinVmUrl) return TT;
         return {
-          ...pp,
-          lobbyName: Sp,
-          directJoinVmUrl: xp
+          ...TT,
+          lobbyName: gT,
+          directJoinVmUrl: nT
         }
-      }(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), pp = function(pp) {
-        if ((0, Ip.G)(pp.directJoinVmUrl)) return pp;
-        const ip = (0, op.Z)(pp.directJoinVmUrl);
-        null === ip && (pp.directJoinVmUrl = void 0);
-        return pp
-      }(pp = function(pp) {
-        if ((0, Ip.G)(pp.gameNameWithVariation)) return pp;
-        return pp.gameNameWithVariation = (0, Op.m)(pp.gameNameWithVariation), pp
-      }(pp))
+      }(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), TT = function(TT) {
+        if ((0, MT.E)(TT.directJoinVmUrl)) return TT;
+        const UT = (0, zT.gb)(TT.directJoinVmUrl);
+        null === UT && (TT.directJoinVmUrl = void 0);
+        return TT
+      }(TT = function(TT) {
+        if ((0, MT.E)(TT.gameNameWithVariation)) return TT;
+        return TT.gameNameWithVariation = (0, WT.i)(TT.gameNameWithVariation), TT
+      }(TT))
     }
   },
-  9046: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ip,
-      g: () => op
+  9036: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT,
+      c: () => zT
     });
-    let Op = !1;
+    let WT = !1;
 
-    function op() {
-      Op = !0
+    function zT() {
+      WT = !0
     }
 
-    function Ip() {
-      return Op
+    function MT() {
+      return WT
     }
   },
-  36569: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      e: () => Op
+  36437: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      e: () => WT
     });
-    const Op = "skyblockSkills",
-      op = "skills_test_gym"
+    const WT = "skyblockSkills",
+      zT = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

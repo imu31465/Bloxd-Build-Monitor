@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36791: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Wp,
-      h: () => yp,
-      i: () => Pp,
-      k: () => Ap
+  36687: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => pT,
+      d: () => BT,
+      h: () => LT,
+      i: () => lT
     });
-    var Op = cp(34430),
-      op = cp(36799),
-      Ip = cp(36804),
-      Sp = cp(8852),
-      xp = cp(1476),
-      Lp = cp(62),
-      Yp = cp(82),
-      Dp = cp(1112);
+    var WT = mT(34270),
+      zT = mT(36693),
+      MT = mT(36698),
+      gT = mT(8852),
+      nT = mT(1567),
+      HT = mT(63),
+      kT = mT(85),
+      jT = mT(1188);
 
-    function Ap() {
-      var pp;
-      return (0, xp.i)(op.d, (0, op.s)()), (0, Dp.jsx)(Dp.Fragment, {
-        children: null === (pp = (0, op.s)()) || void 0 === pp ? void 0 : pp.content
+    function lT() {
+      var TT;
+      return (0, nT.j)(zT.b, (0, zT.j)()), (0, jT.jsx)(jT.Fragment, {
+        children: null === (TT = (0, zT.j)()) || void 0 === TT ? void 0 : TT.content
       })
     }
 
-    function Pp(pp) {
-      var ip;
+    function LT(TT) {
+      var UT;
       let {
-        show: cp
-      } = pp;
-      (0, xp.i)(op.d, (0, op.s)());
-      const Yp = null === (ip = (0, op.s)()) || void 0 === ip ? void 0 : ip.menu;
-      return (0, Lp.useEffect)((() => {
-        var pp;
-        cp || (null === Yp || void 0 === Yp || null === (pp = Yp.onClose) || void 0 === pp || pp.call(Yp), (0, Ip.q)())
-      }), [cp, Yp]), (0, Lp.useEffect)((() => cp ? (0, Sp.e)(Ip.A, Ip.d) : void 0), [cp]), (0, Dp.jsx)(Op.b, {
-        showing: cp,
+        show: mT
+      } = TT;
+      (0, nT.j)(zT.b, (0, zT.j)());
+      const kT = null === (UT = (0, zT.j)()) || void 0 === UT ? void 0 : UT.menu;
+      return (0, HT.useEffect)((() => {
+        var TT;
+        mT || (null === kT || void 0 === kT || null === (TT = kT.onClose) || void 0 === TT || TT.call(kT), (0, MT.n)())
+      }), [mT, kT]), (0, HT.useEffect)((() => mT ? (0, gT.f)(MT.s, MT.d) : void 0), [mT]), (0, jT.jsx)(WT.e, {
+        showing: mT,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Yp || void 0 === Yp ? void 0 : Yp.content
+        children: null === kT || void 0 === kT ? void 0 : kT.content
       })
     }
 
-    function Wp(pp) {
+    function pT(TT) {
       let {
-        placement: ip = "bottom"
-      } = pp;
-      return (0, Dp.jsx)("div", {
-        id: `clientGameHud-${ip}`,
+        placement: UT = "bottom"
+      } = TT;
+      return (0, jT.jsx)("div", {
+        id: `clientGameHud-${UT}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function yp(pp) {
+    function BT(TT) {
       let {
-        children: ip,
-        placement: cp = "bottom"
-      } = pp;
-      const [Op, op] = (0, Lp.useState)(null);
-      return (0, Lp.useEffect)((() => {
-        op(document.getElementById(`clientGameHud-${cp}`))
-      }), [cp]), Op ? (0, Yp.createPortal)(ip, Op) : null
+        children: UT,
+        placement: mT = "bottom"
+      } = TT;
+      const [WT, zT] = (0, HT.useState)(null);
+      return (0, HT.useEffect)((() => {
+        zT(document.getElementById(`clientGameHud-${mT}`))
+      }), [mT]), WT ? (0, kT.createPortal)(UT, WT) : null
     }
   },
-  34430: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip
+  34270: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT
     });
-    var Op = cp(4628),
-      op = cp(4635);
+    var WT = mT(4641),
+      zT = mT(4650);
 
-    function Ip(pp) {
+    function MT(TT) {
       let {
-        children: ip,
-        showing: cp,
-        globallyUniqueKey: Ip,
-        alwaysMountChildren: Sp = !1,
-        doGameplayStartStopOnShow: xp = !0,
-        keepsMovement: Lp = !1
-      } = pp;
-      return (0, op.e)(!0, cp, Ip, Lp), (0, Op.d)(xp, cp), cp || Sp ? ip : null
+        children: UT,
+        showing: mT,
+        globallyUniqueKey: MT,
+        alwaysMountChildren: gT = !1,
+        doGameplayStartStopOnShow: nT = !0,
+        keepsMovement: HT = !1
+      } = TT;
+      return (0, zT.d)(!0, mT, MT, HT), (0, WT.c)(nT, mT), mT || gT ? UT : null
     }
   },
-  36879: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip,
-      h: () => Sp,
-      l: () => xp,
-      m: () => Lp
+  36776: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT,
+      e: () => gT,
+      h: () => nT,
+      j: () => HT
     });
-    var Op = cp(62),
-      op = cp(3209);
-    const Ip = 8,
-      Sp = "InGameHeaderContainer",
-      xp = "TopRightElements";
+    var WT = mT(63),
+      zT = mT(3239);
+    const MT = 8,
+      gT = "InGameHeaderContainer",
+      nT = "TopRightElements";
 
-    function Lp(pp) {
-      const [ip] = (0, op.b)(), [cp, Lp] = (0, Op.useState)(!1);
-      return (0, Op.useLayoutEffect)((() => {
-        if (!pp) return;
-        const ip = document.querySelector(`.${Sp}`),
-          cp = document.querySelector(`.${xp}`),
-          Op = () => {
-            const Op = pp.getBoundingClientRect(),
-              op = ip ? ip.getBoundingClientRect().right : 0,
-              Sp = cp ? cp.getBoundingClientRect().left : window.innerWidth,
-              xp = Op.left < op + Ip,
-              Yp = Op.right > Sp - Ip;
-            Lp(xp || Yp)
+    function HT(TT) {
+      const [UT] = (0, zT.e)(), [mT, HT] = (0, WT.useState)(!1);
+      return (0, WT.useLayoutEffect)((() => {
+        if (!TT) return;
+        const UT = document.querySelector(`.${gT}`),
+          mT = document.querySelector(`.${nT}`),
+          WT = () => {
+            const WT = TT.getBoundingClientRect(),
+              zT = UT ? UT.getBoundingClientRect().right : 0,
+              gT = mT ? mT.getBoundingClientRect().left : window.innerWidth,
+              nT = WT.left < zT + MT,
+              kT = WT.right > gT - MT;
+            HT(nT || kT)
           };
-        Op();
-        const op = new ResizeObserver(Op);
-        return op.observe(pp), ip && op.observe(ip), cp && op.observe(cp), () => {
-          op.disconnect()
+        WT();
+        const zT = new ResizeObserver(WT);
+        return zT.observe(TT), UT && zT.observe(UT), mT && zT.observe(mT), () => {
+          zT.disconnect()
         }
-      }), [pp, ip]), cp
+      }), [TT, UT]), mT
     }
   },
-  36872: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op
+  36772: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT
     });
-    const Op = [{
+    const WT = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function op(pp, ip, cp) {
-      const op = Math.abs(pp - ip),
-        Ip = Date.now() - cp;
-      for (const Sp of Op)
-        if (pp < Sp.maxDist) return op >= Sp.hardUpdateDist || Ip > Sp.timeBetweenSoftChecks && op >= Sp.softUpdateDist;
+    function zT(TT, UT, mT) {
+      const zT = Math.abs(TT - UT),
+        MT = Date.now() - mT;
+      for (const gT of WT)
+        if (TT < gT.maxDist) return zT >= gT.hardUpdateDist || MT > gT.timeBetweenSoftChecks && zT >= gT.softUpdateDist;
       return !1
     }
   },
-  8852: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      e: () => op
+  8852: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT,
+      f: () => zT
     });
-    let Op = null;
-    const op = function(pp) {
-        const ip = {
-          cycle: pp,
+    let WT = null;
+    const zT = function(TT) {
+        const UT = {
+          cycle: TT,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Op = ip, () => {
-          Op === ip && (Op = null)
+        return WT = UT, () => {
+          WT === UT && (WT = null)
         }
       },
-      Ip = () => {
-        var pp;
-        return null !== (pp = Op) && void 0 !== pp && pp.canCycle() ? Op.cycle : null
+      MT = () => {
+        var TT;
+        return null !== (TT = WT) && void 0 !== TT && TT.canCycle() ? WT.cycle : null
       }
   },
-  38751: (pp, ip, cp) => {
-    function Op(pp, ip, cp) {
-      var Op;
+  38669: (TT, UT, mT) => {
+    function WT(TT, UT, mT) {
+      var WT;
       const {
-        width: op,
-        height: Ip
-      } = cp, Sp = null !== (Op = pp.text) && void 0 !== Op ? Op : pp, xp = (Sp.x / 100 - .5) * op, Lp = (Sp.y / 100 - .5) * Ip, Yp = op / 2 - ip.x;
-      if (null !== pp.text && Math.abs(xp) <= Yp && Lp >= ip.top - Ip / 2 && Lp <= Ip / 2 - ip.bottom) return {
-        x: Sp.x,
-        y: Sp.y
+        width: zT,
+        height: MT
+      } = mT, gT = null !== (WT = TT.text) && void 0 !== WT ? WT : TT, nT = (gT.x / 100 - .5) * zT, HT = (gT.y / 100 - .5) * MT, kT = zT / 2 - UT.x;
+      if (null !== TT.text && Math.abs(nT) <= kT && HT >= UT.top - MT / 2 && HT <= MT / 2 - UT.bottom) return {
+        x: gT.x,
+        y: gT.y
       };
-      const Dp = Math.min(0 === xp ? 1 / 0 : Yp / Math.abs(xp), Lp > 0 ? (Ip / 2 - ip.bottom) / Lp : Lp < 0 ? (ip.top - Ip / 2) / Lp : 1 / 0);
-      return !Number.isFinite(Dp) || Dp < 0 ? {
+      const jT = Math.min(0 === nT ? 1 / 0 : kT / Math.abs(nT), HT > 0 ? (MT / 2 - UT.bottom) / HT : HT < 0 ? (UT.top - MT / 2) / HT : 1 / 0);
+      return !Number.isFinite(jT) || jT < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + xp * Dp / op * 100,
-        y: 50 + Lp * Dp / Ip * 100
+        x: 50 + nT * jT / zT * 100,
+        y: 50 + HT * jT / MT * 100
       }
     }
-    cp.d(ip, {
-      d: () => Op
+    mT.d(UT, {
+      e: () => WT
     })
   },
-  36804: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => yp,
-      E: () => tp,
-      b: () => Ip,
-      d: () => Up,
-      f: () => wp,
-      j: () => xp,
-      n: () => Pp,
-      q: () => vp,
-      u: () => Ap,
-      w: () => Hp
+  36698: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT,
+      d: () => ZT,
+      h: () => cT,
+      j: () => nT,
+      l: () => LT,
+      n: () => vT,
+      p: () => lT,
+      r: () => qT,
+      s: () => BT,
+      v: () => fT
     });
-    var Op = cp(25),
-      op = cp(34);
-    const Ip = "clientGameInventoryButtonsChanged",
-      Sp = new Map;
+    var WT = mT(25),
+      zT = mT(31);
+    const MT = "clientGameInventoryButtonsChanged",
+      gT = new Map;
 
-    function xp() {
-      return [...Sp.values()].sort(((pp, ip) => {
-        var cp, Op;
-        return (null !== (cp = pp.order) && void 0 !== cp ? cp : 0) - (null !== (Op = ip.order) && void 0 !== Op ? Op : 0)
+    function nT() {
+      return [...gT.values()].sort(((TT, UT) => {
+        var mT, WT;
+        return (null !== (mT = TT.order) && void 0 !== mT ? mT : 0) - (null !== (WT = UT.order) && void 0 !== WT ? WT : 0)
       }))
     }
-    let Lp = null;
+    let HT = null;
 
-    function Yp(pp) {
-      Lp = pp
+    function kT(TT) {
+      HT = TT
     }
-    let Dp = !1;
+    let jT = !1;
 
-    function Ap(pp) {
-      Dp = !0;
+    function lT(TT) {
+      jT = !0;
       try {
-        pp.onClick()
+        TT.onClick()
       } finally {
-        Dp = !1
+        jT = !1
       }
-      pp.panel && "clientGame" === Op.c.get("openInGameMenuName") && Yp(pp.id)
+      TT.panel && "clientGame" === WT.b.get("openInGameMenuName") && kT(TT.id)
     }
 
-    function Pp() {
-      return Dp
+    function LT() {
+      return jT
     }
 
-    function Wp() {
-      return xp().filter((pp => pp.panel && !pp.disabled))
+    function pT() {
+      return nT().filter((TT => TT.panel && !TT.disabled))
     }
 
-    function yp(pp) {
-      const ip = Wp(),
-        cp = ip.findIndex((pp => pp.id === Lp));
-      return !(cp < 0 || ip.length < 2) && (Ap(ip[(cp + pp + ip.length) % ip.length]), !0)
+    function BT(TT) {
+      const UT = pT(),
+        mT = UT.findIndex((TT => TT.id === HT));
+      return !(mT < 0 || UT.length < 2) && (lT(UT[(mT + TT + UT.length) % UT.length]), !0)
     }
 
-    function Up() {
-      return null !== Lp && Wp().length > 1
+    function ZT() {
+      return null !== HT && pT().length > 1
     }
 
-    function wp() {
-      Yp(null)
+    function cT() {
+      kT(null)
     }
 
-    function vp() {
-      "inventory" !== Op.c.get("openInGameMenuName") && Yp(null)
+    function vT() {
+      "inventory" !== WT.b.get("openInGameMenuName") && kT(null)
     }
 
-    function tp() {
-      const pp = Lp;
-      return Yp(null), pp
+    function fT() {
+      const TT = HT;
+      return kT(null), TT
     }
 
-    function Hp(pp) {
-      return Sp.set(pp.id, pp), op.m.GA(Ip, xp(), !0), () => {
-        Sp.get(pp.id) === pp && (Sp.delete(pp.id), op.m.GA(Ip, xp()))
+    function qT(TT) {
+      return gT.set(TT.id, TT), zT.j.EZ(MT, nT(), !0), () => {
+        gT.get(TT.id) === TT && (gT.delete(TT.id), zT.j.EZ(MT, nT()))
       }
     }
   },
-  36799: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Dp,
-      d: () => xp,
-      h: () => wp,
-      l: () => vp,
-      o: () => Pp,
-      s: () => Yp,
-      t: () => Up,
-      x: () => Wp
+  36693: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      d: () => cT,
+      f: () => vT,
+      i: () => LT,
+      j: () => kT,
+      l: () => ZT,
+      n: () => pT,
+      q: () => jT
     });
-    var Op = cp(25),
-      op = cp(34),
-      Ip = cp(1308),
-      Sp = cp(36804);
-    const xp = "clientGameUiChanged";
-    let Lp = null;
+    var WT = mT(25),
+      zT = mT(31),
+      MT = mT(1388),
+      gT = mT(36698);
+    const nT = "clientGameUiChanged";
+    let HT = null;
 
-    function Yp() {
-      return Lp
+    function kT() {
+      return HT
     }
 
-    function Dp(pp, ip) {
-      const cp = {
-        content: pp,
-        menu: ip
+    function jT(TT, UT) {
+      const mT = {
+        content: TT,
+        menu: UT
       };
-      return Lp = cp, op.m.GA(xp, Lp, !0), () => {
-        Lp === cp && (Lp = null, yp = !1, wp(), op.m.GA(xp, null))
+      return HT = mT, zT.j.EZ(nT, HT, !0), () => {
+        HT === mT && (HT = null, BT = !1, cT(), zT.j.EZ(nT, null))
       }
     }
-    let Ap = null;
+    let lT = null;
 
-    function Pp() {
-      return Ap
+    function LT() {
+      return lT
     }
 
-    function Wp(pp) {
-      return Ap = pp, () => {
-        Ap === pp && (Ap = null)
+    function pT(TT) {
+      return lT = TT, () => {
+        lT === TT && (lT = null)
       }
     }
-    let yp = !1;
+    let BT = !1;
 
-    function Up() {
-      const pp = Op.c.get("openInGameMenuName");
-      "clientGame" !== pp && (yp = "inventory" === pp), (0, Sp.n)() || (0, Sp.f)(), (0, Ip.s)(Ip.c), Op.c.set({
+    function ZT() {
+      const TT = WT.b.get("openInGameMenuName");
+      "clientGame" !== TT && (BT = "inventory" === TT), (0, gT.l)() || (0, gT.h)(), (0, MT.s)(MT.d), WT.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function wp() {
-      tp(!1)
+    function cT() {
+      fT(!1)
     }
 
-    function vp() {
-      tp(yp)
+    function vT() {
+      fT(BT)
     }
 
-    function tp(pp) {
-      "clientGame" === Op.c.get("openInGameMenuName") && Op.c.set({
-        openInGameMenuName: pp ? "inventory" : null
-      }), pp || (0, Sp.f)(), yp = !1
+    function fT(TT) {
+      "clientGame" === WT.b.get("openInGameMenuName") && WT.b.set({
+        openInGameMenuName: TT ? "inventory" : null
+      }), TT || (0, gT.h)(), BT = !1
     }
   },
-  39623: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => ti
+  39557: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => cU
     });
-    const Op = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var op = cp(62),
-      Ip = cp(36799),
-      Sp = cp(37246),
-      xp = cp(36819),
-      Lp = cp(1765),
-      Yp = cp(34);
-    const Dp = {
+    const WT = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var zT = mT(63),
+      MT = mT(36693),
+      gT = mT(37125),
+      nT = mT(36710),
+      HT = mT(1863),
+      kT = mT(31);
+    const jT = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const Ap = 32;
+    const lT = 32;
 
-    function Pp(pp, ip, cp, Op) {
+    function LT(TT, UT, mT, WT) {
       return {
         tag: "line",
         attrs: {
-          x1: pp,
-          y1: ip,
-          x2: cp,
-          y2: Op,
+          x1: TT,
+          y1: UT,
+          x2: mT,
+          y2: WT,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function Wp(pp) {
+    function pT(TT) {
       return {
         tag: "circle",
         attrs: {
-          cx: Ap,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ap,
-          r: pp,
+          cx: lT,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lT,
+          r: TT,
           class: "Fill"
         }
       }
     }
 
-    function yp(pp, ip) {
+    function BT(TT, UT) {
       return {
         tag: "path",
         attrs: {
-          d: pp,
-          "stroke-width": ip
+          d: TT,
+          "stroke-width": UT
         }
       }
     }
 
-    function Up(pp, ip, cp) {
+    function ZT(TT, UT, mT) {
       return {
         tag: "circle",
         attrs: {
-          cx: Ap,
-          cy: Ap,
-          r: pp,
-          "stroke-width": ip,
-          class: cp
+          cx: lT,
+          cy: lT,
+          r: TT,
+          "stroke-width": UT,
+          class: mT
         }
       }
     }
 
-    function wp(pp, ip, cp) {
+    function cT(TT, UT, mT) {
       return {
         tag: "text",
         attrs: {
-          x: pp,
-          y: ip,
+          x: TT,
+          y: UT,
           class: "Fill Label"
         },
-        text: cp
+        text: mT
       }
     }
-    const vp = {
-      pistol: pp => [Pp(Ap, Ap - pp - 5, Ap, Ap - pp), Pp(Ap - pp - 5, Ap, Ap - pp, Ap), Pp(Ap + pp, Ap, Ap + pp + 5, Ap), Wp(1.4)],
-      rifle: pp => [Pp(Ap, Ap - pp - 8, Ap, Ap - pp), Pp(Ap, Ap + pp, Ap, Ap + pp + 8), Pp(Ap - pp - 8, Ap, Ap - pp, Ap), Pp(Ap + pp, Ap, Ap + pp + 8, Ap), Wp(1)],
-      smg: pp => {
-        const ip = Math.PI / 2,
-          cp = [];
-        for (let Sp = 0; Sp < 4; Sp++) cp.push((op = Sp * ip + .35, Ip = (Sp + 1) * ip - .35, yp(`M${Ap+(Op=6+pp)*Math.cos(op)} ${Ap+Op*Math.sin(op)} A${Op} ${Op} 0 0 1 ${Ap+Op*Math.cos(Ip)} ${Ap+Op*Math.sin(Ip)}`, 2)));
-        var Op, op, Ip;
-        return [...cp, Wp(1.4)]
+    const vT = {
+      pistol: TT => [LT(lT, lT - TT - 5, lT, lT - TT), LT(lT - TT - 5, lT, lT - TT, lT), LT(lT + TT, lT, lT + TT + 5, lT), pT(1.4)],
+      rifle: TT => [LT(lT, lT - TT - 8, lT, lT - TT), LT(lT, lT + TT, lT, lT + TT + 8), LT(lT - TT - 8, lT, lT - TT, lT), LT(lT + TT, lT, lT + TT + 8, lT), pT(1)],
+      smg: TT => {
+        const UT = Math.PI / 2,
+          mT = [];
+        for (let gT = 0; gT < 4; gT++) mT.push((zT = gT * UT + .35, MT = (gT + 1) * UT - .35, BT(`M${lT+(WT=6+TT)*Math.cos(zT)} ${lT+WT*Math.sin(zT)} A${WT} ${WT} 0 0 1 ${lT+WT*Math.cos(MT)} ${lT+WT*Math.sin(MT)}`, 2)));
+        var WT, zT, MT;
+        return [...mT, pT(1.4)]
       },
-      shotgun: pp => [Up(pp, 3, "Ring Outline"), Up(pp, 1.5, "Ring")],
-      marksman: pp => [yp(`M${26-pp/2} ${39+pp/2} L32 33 L${38+pp/2} ${39+pp/2}`, 2), Pp(14 - pp, Ap, 24 - pp, Ap, 1.5), Pp(40 + pp, Ap, 50 + pp, Ap, 1.5), Pp(14 - pp, 30, 14 - pp, 34, 1.5), Pp(50 + pp, 30, 50 + pp, 34, 1.5)],
-      machineGun: pp => {
-        const ip = 10 + pp,
-          cp = [];
-        for (const [Op, op] of [
+      shotgun: TT => [ZT(TT, 3, "Ring Outline"), ZT(TT, 1.5, "Ring")],
+      marksman: TT => [BT(`M${26-TT/2} ${39+TT/2} L32 33 L${38+TT/2} ${39+TT/2}`, 2), LT(14 - TT, lT, 24 - TT, lT, 1.5), LT(40 + TT, lT, 50 + TT, lT, 1.5), LT(14 - TT, 30, 14 - TT, 34, 1.5), LT(50 + TT, 30, 50 + TT, 34, 1.5)],
+      machineGun: TT => {
+        const UT = 10 + TT,
+          mT = [];
+        for (const [WT, zT] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) cp.push(yp(`M${Ap+Op*ip} ${Ap+op*(ip-5)} L${Ap+Op*ip} ${Ap+op*ip} L${Ap+Op*(ip-5)} ${Ap+op*ip}`, 2));
-        return [...cp, Pp(Ap, 28, Ap, 36, 1.5), Pp(28, Ap, 36, Ap, 1.5)]
+          ]) mT.push(BT(`M${lT+WT*UT} ${lT+zT*(UT-5)} L${lT+WT*UT} ${lT+zT*UT} L${lT+WT*(UT-5)} ${lT+zT*UT}`, 2));
+        return [...mT, LT(lT, 28, lT, 36, 1.5), LT(28, lT, 36, lT, 1.5)]
       },
-      launcher: () => [Pp(14, 30, 50, 30, 1.5), Pp(Ap, 24, Ap, 52, 1.5), Pp(28, 38, 36, 38, 1.5), Pp(29, 44, 35, 44, 1.5), Pp(30, 50, 34, 50, 1.5), wp(38, 40, "100"), wp(37, 46, "200"), Wp(1.4, 30)],
-      melee: () => [yp("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Wp(1.2)],
-      throwable: () => [Wp(1.6)]
+      launcher: () => [LT(14, 30, 50, 30, 1.5), LT(lT, 24, lT, 52, 1.5), LT(28, 38, 36, 38, 1.5), LT(29, 44, 35, 44, 1.5), LT(30, 50, 34, 50, 1.5), cT(38, 40, "100"), cT(37, 46, "200"), pT(1.4, 30)],
+      melee: () => [BT("M32 26 L38 32 L32 38 L26 32 Z", 1.5), pT(1.2)],
+      throwable: () => [pT(1.6)]
     };
 
-    function tp(pp) {
+    function fT(TT) {
       let {
-        tag: ip,
-        attrs: cp,
-        text: Op
-      } = pp, op = `<${ip}`;
-      for (const [Ip, Sp] of Object.entries(cp)) op += ` ${Ip}="${Sp}"`;
-      return void 0 === Op ? `${op}/>` : `${op}>${Op}</${ip}>`
+        tag: UT,
+        attrs: mT,
+        text: WT
+      } = TT, zT = `<${UT}`;
+      for (const [MT, gT] of Object.entries(mT)) zT += ` ${MT}="${gT}"`;
+      return void 0 === WT ? `${zT}/>` : `${zT}>${WT}</${UT}>`
     }
-    class Hp {
-      constructor(pp, ip) {
-        this.api = pp, this.localPlayerId = ip, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = pp => {
-          this.element = pp, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, pp && !this.enabled && (pp.style.display = "none")
+    class qT {
+      constructor(TT, UT) {
+        this.api = TT, this.localPlayerId = UT, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = TT => {
+          this.element = TT, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, TT && !this.enabled && (TT.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Lp.getRemInPx)()))
-        }, this.tokens = [Yp.m.subscribe("aimingOverlay", (pp => {
-          this.sniperOverlay = "sniper" === pp
-        })), Yp.m.subscribe("mouseState", (pp => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, HT.getRemInPx)()))
+        }, this.tokens = [kT.j.subscribe("aimingOverlay", (TT => {
+          this.sniperOverlay = "sniper" === TT
+        })), kT.j.subscribe("mouseState", (TT => {
           let {
-            isDown: ip
-          } = pp;
-          this.mouseDown = ip
+            isDown: UT
+          } = TT;
+          this.mouseDown = UT
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      eC(pp) {
-        pp !== this.enabled && (this.enabled = pp, this.drawnVisible = null, pp || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      Qy(TT) {
+        TT !== this.enabled && (this.enabled = TT, this.drawnVisible = null, TT || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(pp, ip) {
-        var cp, Op;
+      frame(TT, UT) {
+        var mT, WT;
         if (!this.enabled) return;
         const {
-          api: op
-        } = this, Ip = op.isAlive(this.localPlayerId) && null !== (cp = null === (Op = op.Acp(this.localPlayerId)) || void 0 === Op ? void 0 : Op.name) && void 0 !== cp ? cp : null, Sp = (xp = Ip) && Dp[xp] || null;
-        var xp;
-        if (this.setOwnsCrosshair(null !== Sp), !this.element) return;
-        const Lp = op.getHeldGunInaccuracy(),
-          Yp = null !== Lp,
-          Ap = null !== Sp && !this.sniperOverlay && op.isCrosshairShown();
-        if (Ap !== this.drawnVisible && (this.drawnVisible = Ap, this.element.style.display = Ap ? "block" : "none"), !Ap) return;
-        const Pp = Yp ? function(pp) {
-            return "launcher" === pp || "melee" === pp || "throwable" === pp ? "none" : "shotgun" === pp ? "cone" : "offset"
-          }(Sp) : "none",
-          Wp = null !== Lp && void 0 !== Lp ? Lp : 0;
-        "cone" === Pp ? this.drawCone(Sp, this.coneRadiusVh(Wp, ip) * this.gapPerVh, pp) : (this.coneDrawn = !1, this.draw(Sp, "none" === Pp ? 2 : this.offsetGap(Wp)));
-        const yp = !Yp && this.mouseDown;
-        yp !== this.drawnPressed && (this.drawnPressed = yp, this.element.classList.toggle("Pressed", yp))
+          api: zT
+        } = this, MT = zT.isAlive(this.localPlayerId) && null !== (mT = null === (WT = zT.RUT(this.localPlayerId)) || void 0 === WT ? void 0 : WT.name) && void 0 !== mT ? mT : null, gT = (nT = MT) && jT[nT] || null;
+        var nT;
+        if (this.setOwnsCrosshair(null !== gT), !this.element) return;
+        const HT = zT.getHeldGunInaccuracy(),
+          kT = null !== HT,
+          lT = null !== gT && !this.sniperOverlay && zT.isCrosshairShown();
+        if (lT !== this.drawnVisible && (this.drawnVisible = lT, this.element.style.display = lT ? "block" : "none"), !lT) return;
+        const LT = kT ? function(TT) {
+            return "launcher" === TT || "melee" === TT || "throwable" === TT ? "none" : "shotgun" === TT ? "cone" : "offset"
+          }(gT) : "none",
+          pT = null !== HT && void 0 !== HT ? HT : 0;
+        "cone" === LT ? this.drawCone(gT, this.coneRadiusVh(pT, UT) * this.gapPerVh, TT) : (this.coneDrawn = !1, this.draw(gT, "none" === LT ? 2 : this.offsetGap(pT)));
+        const BT = !kT && this.mouseDown;
+        BT !== this.drawnPressed && (this.drawnPressed = BT, this.element.classList.toggle("Pressed", BT))
       }
       dispose() {
-        for (const pp of this.tokens) Yp.m.unsubscribe(pp);
+        for (const TT of this.tokens) kT.j.unsubscribe(TT);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(pp, ip) {
-        var cp, Op;
-        pp !== this.drawnFamily ? (this.drawnFamily = pp, this.drawnGap = ip, this.element.innerHTML = function(pp, ip) {
-          return `<svg viewBox="0 0 64 64">${vp[pp](ip).map(tp).join("")}</svg>`
-        }(pp, ip), this.shapes = Array.from(null !== (cp = null === (Op = this.element.firstElementChild) || void 0 === Op ? void 0 : Op.children) && void 0 !== cp ? cp : [])) : ip !== this.drawnGap && (this.drawnGap = ip, function(pp, ip, cp) {
-          const Op = vp[ip](cp);
-          for (let op = 0; op < Op.length; op++)
-            for (const [ip, cp] of Object.entries(Op[op].attrs)) {
-              const Op = String(cp);
-              pp[op].getAttribute(ip) !== Op && pp[op].setAttribute(ip, Op)
+      draw(TT, UT) {
+        var mT, WT;
+        TT !== this.drawnFamily ? (this.drawnFamily = TT, this.drawnGap = UT, this.element.innerHTML = function(TT, UT) {
+          return `<svg viewBox="0 0 64 64">${vT[TT](UT).map(fT).join("")}</svg>`
+        }(TT, UT), this.shapes = Array.from(null !== (mT = null === (WT = this.element.firstElementChild) || void 0 === WT ? void 0 : WT.children) && void 0 !== mT ? mT : [])) : UT !== this.drawnGap && (this.drawnGap = UT, function(TT, UT, mT) {
+          const WT = vT[UT](mT);
+          for (let zT = 0; zT < WT.length; zT++)
+            for (const [UT, mT] of Object.entries(WT[zT].attrs)) {
+              const WT = String(mT);
+              TT[zT].getAttribute(UT) !== WT && TT[zT].setAttribute(UT, WT)
             }
-        }(this.shapes, pp, ip))
+        }(this.shapes, TT, UT))
       }
-      drawCone(pp, ip, cp) {
-        pp === this.drawnFamily && this.coneDrawn ? this.shownRadius += (ip - this.shownRadius) * (1 - Math.exp(-cp / 80)) : this.shownRadius = ip, this.coneDrawn = !0, this.draw(pp, Math.round(4 * this.shownRadius) / 4)
+      drawCone(TT, UT, mT) {
+        TT === this.drawnFamily && this.coneDrawn ? this.shownRadius += (UT - this.shownRadius) * (1 - Math.exp(-mT / 80)) : this.shownRadius = UT, this.coneDrawn = !0, this.draw(TT, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(pp, ip) {
-        if (!(ip > 0)) return 1;
-        const cp = pp * Sp.j / 2;
-        return Math.max(50 * Math.tan(cp) / ip, 1)
+      coneRadiusVh(TT, UT) {
+        if (!(UT > 0)) return 1;
+        const mT = TT * gT.h / 2;
+        return Math.max(50 * Math.tan(mT) / UT, 1)
       }
-      offsetGap(pp) {
-        const ip = 2 + ((0, xp.e)(pp) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * ip) / 2)
+      offsetGap(TT) {
+        const UT = 2 + ((0, nT.h)(TT) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * UT) / 2)
       }
-      setOwnsCrosshair(pp) {
-        pp !== this.ownsCrosshair && (this.ownsCrosshair = pp, document.body.classList.toggle("FrontlineCustomCrosshair", pp))
+      setOwnsCrosshair(TT) {
+        TT !== this.ownsCrosshair && (this.ownsCrosshair = TT, document.body.classList.toggle("FrontlineCustomCrosshair", TT))
       }
     }
-    const dp = "FrontlineCustomDamage",
-      ep = .45,
-      jp = .2;
-    class kp {
-      constructor(pp, ip) {
-        this.api = pp, this.localPlayerId = ip, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const iT = "FrontlineCustomDamage",
+      bT = .45,
+      OT = .2;
+    class eT {
+      constructor(TT, UT) {
+        this.api = TT, this.localPlayerId = UT, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.Bp = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = pp => {
-          var ip, cp;
-          this.clearHits(), this.root = pp, this.lowLayer = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.querySelector(".FrontlineDamageLow")) && void 0 !== ip ? ip : null, this.arcLayer = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.querySelector(".FrontlineDamageArcs")) && void 0 !== cp ? cp : null, this.showRoot(), this.drawLow()
-        }, this.token = Yp.m.subscribe("damagedByOtherPlayer", (pp => {
+        }, this.maxHealth = null, this.yT = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = TT => {
+          var UT, mT;
+          this.clearHits(), this.root = TT, this.lowLayer = null !== (UT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".FrontlineDamageLow")) && void 0 !== UT ? UT : null, this.arcLayer = null !== (mT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".FrontlineDamageArcs")) && void 0 !== mT ? mT : null, this.showRoot(), this.drawLow()
+        }, this.token = kT.j.subscribe("damagedByOtherPlayer", (TT => {
           let {
-            direction: ip,
-            Qp: cp
-          } = pp;
-          this.onHurt(ip, cp)
-        })), this.syncHealth(), document.body.classList.add(dp)
+            direction: UT,
+            tT: mT
+          } = TT;
+          this.onHurt(UT, mT)
+        })), this.syncHealth(), document.body.classList.add(iT)
       }
-      eC(pp) {
-        pp !== this.enabled && (this.enabled = pp, document.body.classList.toggle(dp, pp), pp || this.clearHits(), this.showRoot())
+      Qy(TT) {
+        TT !== this.enabled && (this.enabled = TT, document.body.classList.toggle(iT, TT), TT || this.clearHits(), this.showRoot())
       }
-      frame(pp) {
-        this.syncHealth(), this.cameraHeading = pp;
-        for (const ip of this.arcs) this.drawArcAngle(ip)
+      frame(TT) {
+        this.syncHealth(), this.cameraHeading = TT;
+        for (const UT of this.arcs) this.drawArcAngle(UT)
       }
       dispose() {
-        Yp.m.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(dp)
+        kT.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(iT)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const pp = this.api.getClientOption(this.localPlayerId, "_health"),
-          ip = this.api.getClientOption(this.localPlayerId, "_shield"),
-          cp = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(pp, this.readHealth) && Object.is(ip, this.readShield) && Object.is(cp, this.readMaxHealth)) return;
-        if (this.readHealth = pp, this.readShield = ip, this.readMaxHealth = cp, null === pp || void 0 === pp || !cp) return this.lastHealthPool = null, this.maxHealth = null, this.Bp = 1, this.dead = !1, void this.drawLow();
-        const Op = pp + (null !== ip && void 0 !== ip ? ip : 0);
-        if (null !== this.lastHealthPool && Op < this.lastHealthPool) {
-          const pp = performance.now(),
-            ip = (this.lastHealthPool - Op) / cp;
-          this.lastDrop = pp - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + ip,
+        const TT = this.api.getClientOption(this.localPlayerId, "_health"),
+          UT = this.api.getClientOption(this.localPlayerId, "_shield"),
+          mT = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(TT, this.readHealth) && Object.is(UT, this.readShield) && Object.is(mT, this.readMaxHealth)) return;
+        if (this.readHealth = TT, this.readShield = UT, this.readMaxHealth = mT, null === TT || void 0 === TT || !mT) return this.lastHealthPool = null, this.maxHealth = null, this.yT = 1, this.dead = !1, void this.drawLow();
+        const WT = TT + (null !== UT && void 0 !== UT ? UT : 0);
+        if (null !== this.lastHealthPool && WT < this.lastHealthPool) {
+          const TT = performance.now(),
+            UT = (this.lastHealthPool - WT) / mT;
+          this.lastDrop = TT - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + UT,
             at: this.lastDrop.at
           } : {
-            frac: ip,
-            at: pp
+            frac: UT,
+            at: TT
           }
         }
-        this.dead = pp <= 0, this.dead && this.clearHits(), this.lastHealthPool = Op, this.maxHealth = cp, this.Bp = pp > 0 ? pp / cp : 1, this.drawLow()
+        this.dead = TT <= 0, this.dead && this.clearHits(), this.lastHealthPool = WT, this.maxHealth = mT, this.yT = TT > 0 ? TT / mT : 1, this.drawLow()
       }
-      onHurt(pp, ip) {
+      onHurt(TT, UT) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const cp = Math.min(1, this.takeDamageFrac(ip) / .3);
-        null !== pp && this.showArc(pp, cp), this.flashEdge(null === pp ? null : pp - this.cameraHeading, .4 + .6 * cp)
+        const mT = Math.min(1, this.takeDamageFrac(UT) / .3);
+        null !== TT && this.showArc(TT, mT), this.flashEdge(null === TT ? null : TT - this.cameraHeading, .4 + .6 * mT)
       }
-      takeDamageFrac(pp) {
-        if (void 0 !== pp && this.maxHealth) return pp / this.maxHealth;
+      takeDamageFrac(TT) {
+        if (void 0 !== TT && this.maxHealth) return TT / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: ip
+          frac: UT
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, ip
+        }, UT
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const pp = Rp((ep - this.Bp) / .25),
-          ip = Rp((jp - this.Bp) / .15000000000000002),
-          cp = this.Bp < ep;
-        this.lowLayer.classList.toggle("Active", cp), this.lowLayer.classList.toggle("Critical", this.Bp < jp), this.lowLayer.style.opacity = String(cp ? .55 + .3 * pp + .15 * ip : 0)
+        const TT = JT((bT - this.yT) / .25),
+          UT = JT((OT - this.yT) / .15000000000000002),
+          mT = this.yT < bT;
+        this.lowLayer.classList.toggle("Active", mT), this.lowLayer.classList.toggle("Critical", this.yT < OT), this.lowLayer.style.opacity = String(mT ? .55 + .3 * TT + .15 * UT : 0)
       }
-      showArc(pp, ip) {
-        var cp, Op;
+      showArc(TT, UT) {
+        var mT, WT;
         if (!this.arcLayer) return;
-        let op = this.arcs.find((ip => mp(ip.direction, pp) < .6));
-        if (!op) {
-          const ip = document.createElement("div");
-          ip.className = "FrontlineDamageArc", ip.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(ip), op = {
-            element: ip,
-            direction: pp,
+        let zT = this.arcs.find((UT => YT(UT.direction, TT) < .6));
+        if (!zT) {
+          const UT = document.createElement("div");
+          UT.className = "FrontlineDamageArc", UT.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(UT), zT = {
+            element: UT,
+            direction: TT,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(op)
+          }, this.arcs.push(zT)
         }
-        op.direction = pp, this.drawArcAngle(op);
-        const Ip = op.fade ? Number(getComputedStyle(op.element).opacity) : 0;
-        null === (cp = op.fade) || void 0 === cp || cp.cancel(), null === (Op = op.pop) || void 0 === Op || Op.cancel(), op.element.style.opacity = "1";
-        const Sp = op.element.animate([{
-          opacity: Ip
+        zT.direction = TT, this.drawArcAngle(zT);
+        const MT = zT.fade ? Number(getComputedStyle(zT.element).opacity) : 0;
+        null === (mT = zT.fade) || void 0 === mT || mT.cancel(), null === (WT = zT.pop) || void 0 === WT || WT.cancel(), zT.element.style.opacity = "1";
+        const gT = zT.element.animate([{
+          opacity: MT
         }, {
           opacity: 1
         }], 144);
-        op.fade = Sp, op.pop = op.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * ip
+        zT.fade = gT, zT.pop = zT.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * UT
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const xp = op;
-        Sp.onfinish = () => {
-          if (xp.fade !== Sp) return;
-          const pp = xp.element.animate([{
+        const nT = zT;
+        gT.onfinish = () => {
+          if (nT.fade !== gT) return;
+          const TT = nT.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          pp.startTime = Sp.startTime, xp.fade = pp, pp.onfinish = () => {
-            xp.fade === pp && (xp.element.remove(), qp(this.arcs, xp))
+          TT.startTime = gT.startTime, nT.fade = TT, TT.onfinish = () => {
+            nT.fade === TT && (nT.element.remove(), xT(this.arcs, nT))
           }
         }
       }
-      drawArcAngle(pp) {
-        const ip = pp.direction - this.cameraHeading;
-        (null === pp.drawnAngle || Math.abs(ip - pp.drawnAngle) > .005) && (pp.drawnAngle = ip, pp.element.style.rotate = `${ip}rad`)
+      drawArcAngle(TT) {
+        const UT = TT.direction - this.cameraHeading;
+        (null === TT.drawnAngle || Math.abs(UT - TT.drawnAngle) > .005) && (TT.drawnAngle = UT, TT.element.style.rotate = `${UT}rad`)
       }
-      flashEdge(pp, ip) {
-        var cp, Op, op;
+      flashEdge(TT, UT) {
+        var mT, WT, zT;
         if (!this.root) return;
-        let Ip = this.flashes.find((ip => null === ip.angle || null === pp ? ip.angle === pp : mp(ip.angle, pp) < .5));
-        if (!Ip) {
-          const ip = document.createElement("div");
-          ip.className = "FrontlineDamageFlash";
-          const cp = ip.appendChild(document.createElement("div"));
-          cp.className = "FrontlineDamageFlashGlow", this.root.insertBefore(ip, this.arcLayer), Ip = {
-            element: ip,
-            glow: cp,
-            angle: pp,
+        let MT = this.flashes.find((UT => null === UT.angle || null === TT ? UT.angle === TT : YT(UT.angle, TT) < .5));
+        if (!MT) {
+          const UT = document.createElement("div");
+          UT.className = "FrontlineDamageFlash";
+          const mT = UT.appendChild(document.createElement("div"));
+          mT.className = "FrontlineDamageFlashGlow", this.root.insertBefore(UT, this.arcLayer), MT = {
+            element: UT,
+            glow: mT,
+            angle: TT,
             level: 0,
             animation: null
-          }, this.flashes.push(Ip)
+          }, this.flashes.push(MT)
         }
-        const Sp = null === (cp = Ip.animation) || void 0 === cp || null === (Op = cp.effect) || void 0 === Op ? void 0 : Op.getComputedTiming().progress,
-          xp = null === Sp || void 0 === Sp ? 0 : Ip.level * (1 - Sp);
-        Ip.level = Math.min(1, Math.max(ip, xp + .6 * ip)), Ip.angle = pp;
+        const gT = null === (mT = MT.animation) || void 0 === mT || null === (WT = mT.effect) || void 0 === WT ? void 0 : WT.getComputedTiming().progress,
+          nT = null === gT || void 0 === gT ? 0 : MT.level * (1 - gT);
+        MT.level = Math.min(1, Math.max(UT, nT + .6 * UT)), MT.angle = TT;
         const {
-          x: Lp,
-          y: Yp,
-          rx: Dp,
-          ry: Ap
-        } = function(pp, ip) {
-          const cp = window.innerWidth,
-            Op = window.innerHeight;
-          if (null === pp) return {
-            x: cp / 2,
-            y: Op / 2,
+          x: HT,
+          y: kT,
+          rx: jT,
+          ry: lT
+        } = function(TT, UT) {
+          const mT = window.innerWidth,
+            WT = window.innerHeight;
+          if (null === TT) return {
+            x: mT / 2,
+            y: WT / 2,
             rx: 0,
             ry: 0
           };
-          const op = Math.sin(pp),
-            Ip = -Math.cos(pp),
-            Sp = cp / 2 / Math.max(1e-6, Math.abs(op)),
-            xp = Op / 2 / Math.max(1e-6, Math.abs(Ip)),
-            Lp = Math.min(Sp, xp),
-            Yp = Math.round(cp / 2 + op * Lp),
-            Dp = Math.round(Op / 2 + Ip * Lp),
-            Ap = Op / 100 * (.85 + .25 * ip),
-            Pp = Sp <= xp,
-            Wp = Math.round((Pp ? 30 : 74) * Ap),
-            yp = Math.round((Pp ? 58 : 26) * Ap);
+          const zT = Math.sin(TT),
+            MT = -Math.cos(TT),
+            gT = mT / 2 / Math.max(1e-6, Math.abs(zT)),
+            nT = WT / 2 / Math.max(1e-6, Math.abs(MT)),
+            HT = Math.min(gT, nT),
+            kT = Math.round(mT / 2 + zT * HT),
+            jT = Math.round(WT / 2 + MT * HT),
+            lT = WT / 100 * (.85 + .25 * UT),
+            LT = gT <= nT,
+            pT = Math.round((LT ? 30 : 74) * lT),
+            BT = Math.round((LT ? 58 : 26) * lT);
           return {
-            x: Yp,
-            y: Dp,
-            rx: Wp,
-            ry: yp
+            x: kT,
+            y: jT,
+            rx: pT,
+            ry: BT
           }
-        }(pp, Ip.level), {
-          style: Pp
-        } = Ip.glow;
-        Ip.glow.classList.toggle("Everywhere", null === pp), Pp.setProperty("--glowX", `${Lp}px`), Pp.setProperty("--glowY", `${Yp}px`), Pp.setProperty("--glowRx", `${Dp}px`), Pp.setProperty("--glowRy", `${Ap}px`), Ip.element.style.transformOrigin = `${Lp}px ${Yp}px`, null === (op = Ip.animation) || void 0 === op || op.cancel();
-        const Wp = Ip.element.animate([{
+        }(TT, MT.level), {
+          style: LT
+        } = MT.glow;
+        MT.glow.classList.toggle("Everywhere", null === TT), LT.setProperty("--glowX", `${HT}px`), LT.setProperty("--glowY", `${kT}px`), LT.setProperty("--glowRx", `${jT}px`), LT.setProperty("--glowRy", `${lT}px`), MT.element.style.transformOrigin = `${HT}px ${kT}px`, null === (zT = MT.animation) || void 0 === zT || zT.cancel();
+        const pT = MT.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: Ip.level,
+          opacity: MT.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * Ip.level,
+          opacity: .8 * MT.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * Ip.level
+          duration: 520 + 180 * MT.level
         });
-        Ip.animation = Wp;
-        const yp = Ip;
-        Wp.onfinish = () => {
-          yp.animation === Wp && (yp.element.remove(), qp(this.flashes, yp))
+        MT.animation = pT;
+        const BT = MT;
+        pT.onfinish = () => {
+          BT.animation === pT && (BT.element.remove(), xT(this.flashes, BT))
         }
       }
       clearHits() {
-        for (const Op of this.arcs) {
-          var pp, ip;
-          null === (pp = Op.fade) || void 0 === pp || pp.cancel(), Op.fade = null, null === (ip = Op.pop) || void 0 === ip || ip.cancel(), Op.element.remove()
+        for (const WT of this.arcs) {
+          var TT, UT;
+          null === (TT = WT.fade) || void 0 === TT || TT.cancel(), WT.fade = null, null === (UT = WT.pop) || void 0 === UT || UT.cancel(), WT.element.remove()
         }
         this.arcs.length = 0;
-        for (const Op of this.flashes) {
-          var cp;
-          null === (cp = Op.animation) || void 0 === cp || cp.cancel(), Op.element.remove()
+        for (const WT of this.flashes) {
+          var mT;
+          null === (mT = WT.animation) || void 0 === mT || mT.cancel(), WT.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function mp(pp, ip) {
-      return Math.abs(Math.atan2(Math.sin(pp - ip), Math.cos(pp - ip)))
+    function YT(TT, UT) {
+      return Math.abs(Math.atan2(Math.sin(TT - UT), Math.cos(TT - UT)))
     }
 
-    function Rp(pp) {
-      return Math.max(0, Math.min(1, pp))
+    function JT(TT) {
+      return Math.max(0, Math.min(1, TT))
     }
 
-    function qp(pp, ip) {
-      const cp = pp.indexOf(ip); - 1 !== cp && pp.splice(cp, 1)
+    function xT(TT, UT) {
+      const mT = TT.indexOf(UT); - 1 !== mT && TT.splice(mT, 1)
     }
-    var Mp = cp(1049),
-      Cp = cp.n(Mp),
-      Ep = cp(36791),
-      Xp = cp(36879),
-      lp = cp(1201),
-      Qp = cp(1476);
-    const Jp = "frontlineHudChanged",
-      Bp = "frontlineScoreboardChanged";
-    class Np {
+    var dT = mT(1126),
+      wT = mT.n(dT),
+      tT = mT(36687),
+      aT = mT(36776),
+      yT = mT(1288),
+      XT = mT(1567);
+    const IT = "frontlineHudChanged",
+      QT = "frontlineScoreboardChanged";
+    class sT {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      Ey(pp) {
-        this.wire = pp, Yp.m.GA(Jp, pp, !0)
+      pB(TT) {
+        this.wire = TT, kT.j.EZ(IT, TT, !0)
       }
-      receiveScoreboard(pp) {
-        let ip = "scoreboard" === pp[0] ? performance.now() + pp[5] : 0;
-        const cp = this.scoreboard.endsAt;
-        0 !== ip && 0 !== cp && Math.abs(ip - cp) < 1e3 && (ip = cp), this.scoreboard = {
-          wire: pp,
-          endsAt: ip
-        }, Yp.m.GA(Bp, this.scoreboard, !0)
+      receiveScoreboard(TT) {
+        let UT = "scoreboard" === TT[0] ? performance.now() + TT[5] : 0;
+        const mT = this.scoreboard.endsAt;
+        0 !== UT && 0 !== mT && Math.abs(UT - mT) < 1e3 && (UT = mT), this.scoreboard = {
+          wire: TT,
+          endsAt: UT
+        }, kT.j.EZ(QT, this.scoreboard, !0)
       }
     }
-    var Tp = cp(1112);
-    const fp = {
+    var FT = mT(1188);
+    const PT = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function bp(pp) {
-      const [ip, cp] = (0, op.useState)((() => (pp - performance.now()) / 1e3));
-      return (0, op.useEffect)((() => {
-        if (0 === pp) return;
-        const ip = () => {
-          cp((pp - performance.now()) / 1e3)
+    function VT(TT) {
+      const [UT, mT] = (0, zT.useState)((() => (TT - performance.now()) / 1e3));
+      return (0, zT.useEffect)((() => {
+        if (0 === TT) return;
+        const UT = () => {
+          mT((TT - performance.now()) / 1e3)
         };
-        ip();
-        const Op = window.setInterval(ip, 250);
+        UT();
+        const WT = window.setInterval(UT, 250);
         return () => {
-          window.clearInterval(Op)
+          window.clearInterval(WT)
         }
-      }), [pp]), ip
+      }), [TT]), UT
     }
 
-    function hp(pp) {
+    function uT(TT) {
       let {
-        className: ip,
-        point: cp
-      } = pp;
-      const [Op, op, Ip, Sp, xp, Lp] = cp;
-      return (0, Tp.jsxs)("div", {
-        className: Cp()(ip, `Owner-${op||"None"}`, `Leader-${Sp||"None"}`, {
-          Contested: xp,
-          Here: Lp
+        className: UT,
+        point: mT
+      } = TT;
+      const [WT, zT, MT, gT, nT, HT] = mT;
+      return (0, FT.jsxs)("div", {
+        className: wT()(UT, `Owner-${zT||"None"}`, `Leader-${gT||"None"}`, {
+          Contested: nT,
+          Here: HT
         }),
-        children: [(0, Tp.jsx)("span", {
+        children: [(0, FT.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Op
-        }), (0, Tp.jsx)("i", {
+          children: WT
+        }), (0, FT.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${Ip}%`
+            width: `${MT}%`
           }
         })]
       })
     }
-    const ap = (0, op.memo)((function(pp) {
+    const CT = (0, zT.memo)((function(TT) {
         let {
-          points: ip,
-          markers: cp
-        } = pp;
+          points: UT,
+          markers: mT
+        } = TT;
         const {
-          t: Op
-        } = (0, lp.H)();
-        return ip ? (0, Tp.jsx)("div", {
+          t: WT
+        } = (0, yT.z)();
+        return UT ? (0, FT.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: ip.map((pp => {
-            const [ip, , , , , , , op] = pp;
-            return (0, Tp.jsxs)("div", {
-              ref: cp.bindMarker(ip),
+          children: UT.map((TT => {
+            const [UT, , , , , , , zT] = TT;
+            return (0, FT.jsxs)("div", {
+              ref: mT.bindMarker(UT),
               className: "FrontlinePointMarker",
-              children: [(0, Tp.jsx)(hp, {
+              children: [(0, FT.jsx)(uT, {
                 className: "FrontlinePointMarkerTile",
-                point: pp
-              }), (0, Tp.jsxs)("div", {
+                point: TT
+              }), (0, FT.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [op && (0, Tp.jsx)("span", {
-                  className: Cp()("FrontlinePointMarkerHomeTurf", `Team-${op}`),
-                  children: Op("frontlineHud:homeTurf", {
-                    team: Op(fp[op])
+                children: [zT && (0, FT.jsx)("span", {
+                  className: wT()("FrontlinePointMarkerHomeTurf", `Team-${zT}`),
+                  children: WT("frontlineHud:homeTurf", {
+                    team: WT(PT[zT])
                   })
-                }), (0, Tp.jsx)("span", {
+                }), (0, FT.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, ip)
+            }, UT)
           }))
         }) : null
       })),
-      np = {
+      rT = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      Fp = {
+      KT = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function gp(pp) {
+    function ST(TT) {
       let {
-        hud: ip,
-        crosshair: cp,
-        damage: Op,
-        markers: op
-      } = pp;
-      const Ip = (0, Qp.i)(Jp, ip.getWire()),
-        Sp = (0, Qp.i)(Bp, ip.getScoreboard());
-      return (0, Tp.jsxs)(Tp.Fragment, {
-        children: [(0, Tp.jsx)(Gp, {
-          damage: Op
-        }), (0, Tp.jsx)(ap, {
-          points: "scoreboard" === Sp.wire[0] ? Sp.wire[6] : null,
-          markers: op
-        }), (0, Tp.jsx)(Zp, {
-          view: Sp
-        }), (0, Tp.jsx)("div", {
+        hud: UT,
+        crosshair: mT,
+        damage: WT,
+        markers: zT
+      } = TT;
+      const MT = (0, XT.j)(IT, UT.getWire()),
+        gT = (0, XT.j)(QT, UT.getScoreboard());
+      return (0, FT.jsxs)(FT.Fragment, {
+        children: [(0, FT.jsx)(GT, {
+          damage: WT
+        }), (0, FT.jsx)(CT, {
+          points: "scoreboard" === gT.wire[0] ? gT.wire[6] : null,
+          markers: zT
+        }), (0, FT.jsx)(ET, {
+          view: gT
+        }), (0, FT.jsx)("div", {
           className: "FrontlineReticle",
-          ref: cp.bindElement
-        }), (0, Tp.jsx)(Ep.h, {
-          children: (0, Tp.jsx)(rp, {
-            wire: Ip
+          ref: mT.bindElement
+        }), (0, FT.jsx)(tT.d, {
+          children: (0, FT.jsx)(NT, {
+            wire: MT
           })
         })]
       })
     }
-    const Gp = (0, op.memo)((function(pp) {
+    const GT = (0, zT.memo)((function(TT) {
         let {
-          damage: ip
-        } = pp;
-        return (0, Tp.jsxs)("div", {
+          damage: UT
+        } = TT;
+        return (0, FT.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: ip.bindElement,
-          children: [(0, Tp.jsx)("div", {
+          ref: UT.bindElement,
+          children: [(0, FT.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, Tp.jsx)("div", {
+            children: (0, FT.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, Tp.jsx)("div", {
+          }), (0, FT.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      rp = (0, op.memo)((function(pp) {
+      NT = (0, zT.memo)((function(TT) {
         let {
-          wire: ip
-        } = pp;
+          wire: UT
+        } = TT;
         const {
-          t: cp
-        } = (0, lp.H)();
-        if ("capture" === ip[0]) {
-          const [, pp, Op, op, Ip, Sp, xp] = ip, Lp = Math.round(op / 100 * 24);
-          return (0, Tp.jsxs)("div", {
-            className: Cp()("FrontlinePlate", `Status-${Op}`, `Leader-${Ip||"None"}`),
-            children: [(0, Tp.jsx)(Vp, {}), (0, Tp.jsxs)("div", {
+          t: mT
+        } = (0, yT.z)();
+        if ("capture" === UT[0]) {
+          const [, TT, WT, zT, MT, gT, nT] = UT, HT = Math.round(zT / 100 * 24);
+          return (0, FT.jsxs)("div", {
+            className: wT()("FrontlinePlate", `Status-${WT}`, `Leader-${MT||"None"}`),
+            children: [(0, FT.jsx)(AT, {}), (0, FT.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, Tp.jsx)("span", {
+              children: [(0, FT.jsx)("span", {
                 className: "FrontlineObjective",
-                children: pp
-              }), (0, Tp.jsxs)("div", {
+                children: TT
+              }), (0, FT.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, Tp.jsx)("div", {
+                children: [(0, FT.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: cp("frontlineHud:objective", {
-                    point: pp,
-                    friendly: Sp,
-                    enemy: xp
+                  children: mT("frontlineHud:objective", {
+                    point: TT,
+                    friendly: gT,
+                    enemy: nT
                   })
-                }), (0, Tp.jsx)("div", {
+                }), (0, FT.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: cp(np[Op])
+                  children: mT(rT[WT])
                 })]
-              }), (0, Tp.jsxs)("span", {
+              }), (0, FT.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(op).padStart(3, "0"), (0, Tp.jsx)("small", {
+                children: [String(zT).padStart(3, "0"), (0, FT.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, Tp.jsx)(sp, {
+            }), (0, FT.jsx)(DT, {
               segments: 24,
-              lit: Lp
+              lit: HT
             })]
           })
         }
-        if ("alert" === ip[0]) {
-          const [, pp, Op, op] = ip;
-          return (0, Tp.jsxs)("div", {
-            className: Cp()("FrontlinePlate", "FrontlineAlert", `Tone-${op}`),
-            children: [(0, Tp.jsx)(Vp, {}), (0, Tp.jsx)("div", {
+        if ("alert" === UT[0]) {
+          const [, TT, WT, zT] = UT;
+          return (0, FT.jsxs)("div", {
+            className: wT()("FrontlinePlate", "FrontlineAlert", `Tone-${zT}`),
+            children: [(0, FT.jsx)(AT, {}), (0, FT.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: cp(Fp[pp])
-            }), (0, Tp.jsx)("div", {
+              children: mT(KT[TT])
+            }), (0, FT.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Op
+              children: WT
             })]
           })
         }
         return null
       })),
-      Zp = (0, op.memo)((function(pp) {
+      ET = (0, zT.memo)((function(TT) {
         let {
-          view: ip
-        } = pp;
+          view: UT
+        } = TT;
         const {
-          t: cp
-        } = (0, lp.H)(), Op = (0, op.useRef)(null), Ip = function(pp, ip) {
-          const [cp, Op] = (0, op.useState)(!1);
-          return (0, op.useLayoutEffect)((() => {
-            const ip = pp.current;
-            if (!ip) return;
-            const cp = document.querySelector(`.${Xp.h}`),
-              op = document.querySelector(`.${Xp.l}`),
-              Ip = () => {
-                var pp;
-                const Ip = ip.querySelector(".FrontlineTeamTrack"),
-                  Sp = (0, Lp.getRemInPx)(),
-                  xp = ip.getBoundingClientRect().width - 2 * (null !== (pp = null === Ip || void 0 === Ip ? void 0 : Ip.getBoundingClientRect().width) && void 0 !== pp ? pp : 0),
-                  Yp = window.innerWidth / 2,
-                  Dp = cp ? cp.getBoundingClientRect().right : 0,
-                  Ap = op ? op.getBoundingClientRect().left : window.innerWidth,
-                  Pp = Math.min(Yp - Dp, Ap - Yp) - Xp.e - xp / 2,
-                  Wp = Pp < 6 * Sp,
-                  yp = Wp ? (window.innerWidth - xp) / 2 - Xp.e : Pp;
-                ip.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(yp,14*Sp)))}px`), Op(Wp)
+          t: mT
+        } = (0, yT.z)(), WT = (0, zT.useRef)(null), MT = function(TT, UT) {
+          const [mT, WT] = (0, zT.useState)(!1);
+          return (0, zT.useLayoutEffect)((() => {
+            const UT = TT.current;
+            if (!UT) return;
+            const mT = document.querySelector(`.${aT.e}`),
+              zT = document.querySelector(`.${aT.h}`),
+              MT = () => {
+                var TT;
+                const MT = UT.querySelector(".FrontlineTeamTrack"),
+                  gT = (0, HT.getRemInPx)(),
+                  nT = UT.getBoundingClientRect().width - 2 * (null !== (TT = null === MT || void 0 === MT ? void 0 : MT.getBoundingClientRect().width) && void 0 !== TT ? TT : 0),
+                  kT = window.innerWidth / 2,
+                  jT = mT ? mT.getBoundingClientRect().right : 0,
+                  lT = zT ? zT.getBoundingClientRect().left : window.innerWidth,
+                  LT = Math.min(kT - jT, lT - kT) - aT.c - nT / 2,
+                  pT = LT < 6 * gT,
+                  BT = pT ? (window.innerWidth - nT) / 2 - aT.c : LT;
+                UT.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(BT,14*gT)))}px`), WT(pT)
               };
-            Ip();
-            const Sp = new ResizeObserver(Ip);
-            for (const pp of [ip, cp, op]) pp && Sp.observe(pp);
-            return window.addEventListener("resize", Ip), () => {
-              Sp.disconnect(), window.removeEventListener("resize", Ip)
+            MT();
+            const gT = new ResizeObserver(MT);
+            for (const TT of [UT, mT, zT]) TT && gT.observe(TT);
+            return window.addEventListener("resize", MT), () => {
+              gT.disconnect(), window.removeEventListener("resize", MT)
             }
-          }), [pp, ip]), cp
-        }(Op, "scoreboard" === ip.wire[0]);
-        if ("scoreboard" !== ip.wire[0]) return null;
-        const [, Sp, xp, Yp, Dp, , Ap] = ip.wire, Pp = "Red" === Sp ? "Blue" : "Red";
-        return (0, Tp.jsxs)("div", {
-          className: Cp()("FrontlineScoreboardContainer", {
-            Below: Ip
+          }), [TT, UT]), mT
+        }(WT, "scoreboard" === UT.wire[0]);
+        if ("scoreboard" !== UT.wire[0]) return null;
+        const [, gT, nT, kT, jT, , lT] = UT.wire, LT = "Red" === gT ? "Blue" : "Red";
+        return (0, FT.jsxs)("div", {
+          className: wT()("FrontlineScoreboardContainer", {
+            Below: MT
           }),
-          children: [(0, Tp.jsxs)("div", {
-            ref: Op,
+          children: [(0, FT.jsxs)("div", {
+            ref: WT,
             className: "FrontlineScoreboard",
-            children: [(0, Tp.jsx)(Vp, {}), (0, Tp.jsx)(zp, {
-              team: Sp,
-              tickets: xp,
-              goal: Dp,
+            children: [(0, FT.jsx)(AT, {}), (0, FT.jsx)(hT, {
+              team: gT,
+              tickets: nT,
+              goal: jT,
               side: "Friendly"
-            }), (0, Tp.jsx)("div", {
+            }), (0, FT.jsx)("div", {
               className: "FrontlinePoints",
-              children: Ap.map((pp => (0, Tp.jsx)(hp, {
+              children: lT.map((TT => (0, FT.jsx)(uT, {
                 className: "FrontlinePoint",
-                point: pp
-              }, pp[0])))
-            }), (0, Tp.jsx)(zp, {
-              team: Pp,
-              tickets: Yp,
-              goal: Dp,
+                point: TT
+              }, TT[0])))
+            }), (0, FT.jsx)(hT, {
+              team: LT,
+              tickets: kT,
+              goal: jT,
               side: "Enemy"
             })]
-          }), (0, Tp.jsxs)("div", {
+          }), (0, FT.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, Tp.jsx)(Kp, {
-              endsAt: ip.endsAt
-            }), (0, Tp.jsx)("div", {
+            children: [(0, FT.jsx)(oT, {
+              endsAt: UT.endsAt
+            }), (0, FT.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: cp("frontlineHud:ticketGoal", {
-                goal: Dp
+              children: mT("frontlineHud:ticketGoal", {
+                goal: jT
               })
             })]
           })]
         })
       }));
 
-    function zp(pp) {
+    function hT(TT) {
       let {
-        team: ip,
-        tickets: cp,
-        goal: Op,
-        side: op
-      } = pp;
+        team: UT,
+        tickets: mT,
+        goal: WT,
+        side: zT
+      } = TT;
       const {
-        t: Ip
-      } = (0, lp.H)(), Sp = String(cp).padStart(3, "0"), xp = Sp.search(/[1-9]/), Lp = -1 === xp ? Sp : Sp.slice(0, xp), Yp = Math.min(20, Math.floor(cp / Op * 20));
-      return (0, Tp.jsxs)("div", {
-        className: Cp()("FrontlineTeamScore", op, `Team-${ip}`),
-        children: [(0, Tp.jsxs)("div", {
+        t: MT
+      } = (0, yT.z)(), gT = String(mT).padStart(3, "0"), nT = gT.search(/[1-9]/), HT = -1 === nT ? gT : gT.slice(0, nT), kT = Math.min(20, Math.floor(mT / WT * 20));
+      return (0, FT.jsxs)("div", {
+        className: wT()("FrontlineTeamScore", zT, `Team-${UT}`),
+        children: [(0, FT.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, Tp.jsx)("span", {
+          children: [(0, FT.jsx)("span", {
             className: "Lead",
-            children: Lp
-          }), -1 !== xp && Sp.slice(xp)]
-        }), (0, Tp.jsxs)("div", {
+            children: HT
+          }), -1 !== nT && gT.slice(nT)]
+        }), (0, FT.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, Tp.jsx)("div", {
+          children: [(0, FT.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: Ip(fp[ip])
-          }), (0, Tp.jsx)(sp, {
+            children: MT(PT[UT])
+          }), (0, FT.jsx)(DT, {
             segments: 20,
-            lit: Yp
+            lit: kT
           })]
         })]
       })
     }
 
-    function sp(pp) {
+    function DT(TT) {
       let {
-        segments: ip,
-        lit: cp
-      } = pp;
-      return (0, Tp.jsx)("div", {
+        segments: UT,
+        lit: mT
+      } = TT;
+      return (0, FT.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: ip
-        }, ((pp, ip) => (0, Tp.jsx)("i", {
-          className: Cp()({
-            Lit: ip < cp
+          length: UT
+        }, ((TT, UT) => (0, FT.jsx)("i", {
+          className: wT()({
+            Lit: UT < mT
           })
-        }, ip)))
+        }, UT)))
       })
     }
 
-    function Kp(pp) {
+    function oT(TT) {
       let {
-        endsAt: ip
-      } = pp;
-      const cp = Math.max(0, Math.ceil(bp(ip)));
-      return (0, Tp.jsxs)("div", {
-        className: Cp()("FrontlineClock", {
-          Urgent: cp <= 60
+        endsAt: UT
+      } = TT;
+      const mT = Math.max(0, Math.ceil(VT(UT)));
+      return (0, FT.jsxs)("div", {
+        className: wT()("FrontlineClock", {
+          Urgent: mT <= 60
         }),
-        children: [Math.floor(cp / 60), ":", String(cp % 60).padStart(2, "0")]
+        children: [Math.floor(mT / 60), ":", String(mT % 60).padStart(2, "0")]
       })
     }
 
-    function Vp() {
-      return (0, Tp.jsxs)(Tp.Fragment, {
-        children: [(0, Tp.jsx)("i", {
+    function AT() {
+      return (0, FT.jsxs)(FT.Fragment, {
+        children: [(0, FT.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Tp.jsx)("i", {
+        }), (0, FT.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var ii = cp(36872),
-      ci = cp(1260),
-      Oi = cp(38712),
-      oi = cp(38751);
-    class Ii {
-      constructor(pp) {
-        var ip;
-        this.hud = pp, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var RT = mT(36772),
+      TU = mT(1345),
+      UU = mT(38622),
+      mU = mT(38669);
+    class WU {
+      constructor(TT) {
+        var UT;
+        this.hud = TT, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.Ry = !1, this.mH = () => {
+        }, this.render = null, this.kB = !1, this.Qq = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.mH), null === (ip = window.visualViewport) || void 0 === ip || ip.addEventListener("resize", this.mH)
+        }, window.addEventListener("resize", this.Qq), null === (UT = window.visualViewport) || void 0 === UT || UT.addEventListener("resize", this.Qq)
       }
-      bindMarker(pp) {
-        let ip = this.refs.get(pp);
-        return ip || (ip = ip => {
-          var cp;
-          null === (cp = this.markers.get(pp)) || void 0 === cp || cp.stopObserving(), this.markers.delete(pp), ip && !this.Ry && this.markers.set(pp, this.mount(ip))
-        }, this.refs.set(pp, ip)), ip
+      bindMarker(TT) {
+        let UT = this.refs.get(TT);
+        return UT || (UT = UT => {
+          var mT;
+          null === (mT = this.markers.get(TT)) || void 0 === mT || mT.stopObserving(), this.markers.delete(TT), UT && !this.kB && this.markers.set(TT, this.mount(UT))
+        }, this.refs.set(TT, UT)), UT
       }
-      frame(pp, ip) {
-        this.render = pp;
-        const cp = this.hud.getScoreboard().wire;
-        if ("scoreboard" === cp[0] && 0 !== this.markers.size)
-          for (const [Op, , , , , , op] of cp[6]) {
-            const pp = this.markers.get(Op);
-            pp && op && (pp.target ??= [0, 0, 0], pp.target[0] = op[0], pp.target[1] = op[1] + 2.5, pp.target[2] = op[2], this.place(pp), this.ri(pp, ip && Math.hypot(op[0] - ip[0], op[1] - ip[1], op[2] - ip[2])))
+      frame(TT, UT) {
+        this.render = TT;
+        const mT = this.hud.getScoreboard().wire;
+        if ("scoreboard" === mT[0] && 0 !== this.markers.size)
+          for (const [WT, , , , , , zT] of mT[6]) {
+            const TT = this.markers.get(WT);
+            TT && zT && (TT.target ??= [0, 0, 0], TT.target[0] = zT[0], TT.target[1] = zT[1] + 2.5, TT.target[2] = zT[2], this.place(TT), this.yU(TT, UT && Math.hypot(zT[0] - UT[0], zT[1] - UT[1], zT[2] - UT[2])))
           }
       }
       dispose() {
-        var pp;
-        this.Ry = !0, window.removeEventListener("resize", this.mH), null === (pp = window.visualViewport) || void 0 === pp || pp.removeEventListener("resize", this.mH);
-        for (const ip of this.markers.values()) ip.stopObserving();
+        var TT;
+        this.kB = !0, window.removeEventListener("resize", this.Qq), null === (TT = window.visualViewport) || void 0 === TT || TT.removeEventListener("resize", this.Qq);
+        for (const UT of this.markers.values()) UT.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(pp) {
+      place(TT) {
         const {
-          render: ip,
-          viewport: cp
+          render: UT,
+          viewport: mT
         } = this;
-        if (!ip || !pp.target) return;
-        const Op = (50 - ip.screenBandPct.y) / 100 * cp.height,
-          op = {
-            x: pp.halfSize.width + 8,
-            top: pp.halfSize.height + 8,
-            bottom: pp.halfSize.height + pp.labelsBelow + Op
+        if (!UT || !TT.target) return;
+        const WT = (50 - UT.screenBandPct.y) / 100 * mT.height,
+          zT = {
+            x: TT.halfSize.width + 8,
+            top: TT.halfSize.height + 8,
+            bottom: TT.halfSize.height + TT.labelsBelow + WT
           },
-          Ip = ip.projectWorldPosToViewport(pp.target),
-          Sp = null !== Ip && void 0 !== Ip ? Ip : ip.projectWorldPosToScreenPos(pp.target),
-          xp = (0, oi.d)({
-            x: Sp.x,
-            y: Sp.y,
-            text: Ip
-          }, op, cp);
-        (0, Oi.b)(pp.root, Math.round(100 * xp.x) / 100, Math.round(100 * xp.y) / 100)
+          MT = UT.projectWorldPosToViewport(TT.target),
+          gT = null !== MT && void 0 !== MT ? MT : UT.projectWorldPosToScreenPos(TT.target),
+          nT = (0, mU.e)({
+            x: gT.x,
+            y: gT.y,
+            text: MT
+          }, zT, mT);
+        (0, UU.d)(TT.root, Math.round(100 * nT.x) / 100, Math.round(100 * nT.y) / 100)
       }
-      ri(pp, ip) {
-        if (null === ip) return void(null !== pp.metres && (pp.metres = null, pp.distance.textContent = ""));
-        const cp = Date.now();
-        (null === pp.metres || (0, ii.c)(ip, pp.metres, pp.metresShownAt)) && (pp.metres = Math.round(ip), pp.metresShownAt = cp, pp.distance.textContent = (0, lp.B)(ci.g.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(pp.metres)
+      yU(TT, UT) {
+        if (null === UT) return void(null !== TT.metres && (TT.metres = null, TT.distance.textContent = ""));
+        const mT = Date.now();
+        (null === TT.metres || (0, RT.b)(UT, TT.metres, TT.metresShownAt)) && (TT.metres = Math.round(UT), TT.metresShownAt = mT, TT.distance.textContent = (0, yT.v)(TU.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(TT.metres)
         }))
       }
-      mount(pp) {
-        const ip = {
-            root: pp,
-            distance: pp.querySelector(".FrontlinePointMarkerDistance"),
+      mount(TT) {
+        const UT = {
+            root: TT,
+            distance: TT.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          cp = pp.querySelector(".FrontlinePointMarkerLabels"),
-          Op = new ResizeObserver((() => {
-            ip.halfSize = {
-              width: Math.max(pp.offsetWidth, cp.offsetWidth) / 2,
-              height: pp.offsetHeight / 2
-            }, ip.labelsBelow = cp.offsetTop + cp.offsetHeight - pp.offsetHeight, this.place(ip)
+          mT = TT.querySelector(".FrontlinePointMarkerLabels"),
+          WT = new ResizeObserver((() => {
+            UT.halfSize = {
+              width: Math.max(TT.offsetWidth, mT.offsetWidth) / 2,
+              height: TT.offsetHeight / 2
+            }, UT.labelsBelow = mT.offsetTop + mT.offsetHeight - TT.offsetHeight, this.place(UT)
           }));
-        return Op.observe(pp, {
+        return WT.observe(TT, {
           box: "border-box"
-        }), Op.observe(cp, {
+        }), WT.observe(mT, {
           box: "border-box"
-        }), ip.stopObserving = () => {
-          Op.disconnect()
-        }, ip
+        }), UT.stopObserving = () => {
+          WT.disconnect()
+        }, UT
       }
     }
-    var Si = cp(6566),
-      xi = cp(2695);
-    const Li = "frontlineRoundEndChanged";
-    class Yi {
+    var zU = mT(6508),
+      MU = mT(2731);
+    const gU = "frontlineRoundEndChanged";
+    class nU {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      Ey(pp) {
-        const ip = "roundEnd" === pp[0] ? performance.now() + pp[5] : 0;
+      pB(TT) {
+        const UT = "roundEnd" === TT[0] ? performance.now() + TT[5] : 0;
         this.view = {
-          wire: pp,
+          wire: TT,
           key: this.view.key + 1,
-          endsAt: ip
-        }, Yp.m.GA(Li, this.view, !0)
+          endsAt: UT
+        }, kT.j.EZ(gU, this.view, !0)
       }
     }
-    const Di = (0, op.lazy)((() => (0, xi.c)(Promise.all([cp.e(239), cp.e(202)]).then((() => cp(42012))), (pp => pp.FrontlineMvpLineup)))),
-      Ai = [4800, 4e3, 3200],
-      Pi = [1, 0, 2],
-      Wi = {
+    const HU = (0, zT.lazy)((() => (0, MU.b)(Promise.all([mT.e(239), mT.e(202)]).then((() => mT(41901))), (TT => TT.FrontlineMvpLineup)))),
+      kU = [4800, 4e3, 3200],
+      jU = [1, 0, 2],
+      lU = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      yi = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      LU = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function Ui(pp) {
+    function pU(TT) {
       let {
-        controller: ip
-      } = pp;
-      const cp = (0, Qp.i)(Li, ip.getView()),
-        Op = bp(cp.endsAt);
-      return "roundEnd" !== cp.wire[0] || 1e3 * Op < -2e3 ? null : (0, Tp.jsx)(wi, {
-        wire: cp.wire,
-        secondsLeft: Math.max(0, Math.ceil(Op))
-      }, cp.key)
+        controller: UT
+      } = TT;
+      const mT = (0, XT.j)(gU, UT.getView()),
+        WT = VT(mT.endsAt);
+      return "roundEnd" !== mT.wire[0] || 1e3 * WT < -2e3 ? null : (0, FT.jsx)(BU, {
+        wire: mT.wire,
+        secondsLeft: Math.max(0, Math.ceil(WT))
+      }, mT.key)
     }
-    const wi = (0, op.memo)((function(pp) {
+    const BU = (0, zT.memo)((function(TT) {
       let {
-        wire: ip,
-        secondsLeft: cp
-      } = pp;
+        wire: UT,
+        secondsLeft: mT
+      } = TT;
       const {
-        t: Ip
-      } = (0, lp.H)(), [, Sp, xp, Lp, Yp, , Dp, Ap] = ip, Pp = (0, op.useMemo)((() => Pi.filter((pp => pp < Ap.length))), [Ap]), Wp = (0, op.useMemo)((() => Pp.map((pp => {
-        const [, , , , , ip, cp] = Ap[pp];
+        t: MT
+      } = (0, yT.z)(), [, gT, nT, HT, kT, , jT, lT] = UT, LT = (0, zT.useMemo)((() => jU.filter((TT => TT < lT.length))), [lT]), pT = (0, zT.useMemo)((() => LT.map((TT => {
+        const [, , , , , UT, mT] = lT[TT];
         return {
-          cosmetics: Op.map(((pp, cp) => [pp, ip[cp]])),
-          size: 0 === pp ? 1.15 : .85,
+          cosmetics: WT.map(((TT, mT) => [TT, UT[mT]])),
+          size: 0 === TT ? 1.15 : .85,
           heldGun: {
-            name: cp,
-            aimed: 0 === pp
+            name: mT,
+            aimed: 0 === TT
           },
-          showAfterMs: Ai[pp]
+          showAfterMs: kU[TT]
         }
-      }))), [Ap, Pp]);
-      return (0, Tp.jsxs)("div", {
-        className: Cp()("FrontlineRoundEnd", `Result-${Sp}`),
+      }))), [lT, LT]);
+      return (0, FT.jsxs)("div", {
+        className: wT()("FrontlineRoundEnd", `Result-${gT}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, Tp.jsx)("div", {
+        children: [(0, FT.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, Tp.jsxs)("div", {
+        }), (0, FT.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, Tp.jsxs)("div", {
+          children: [(0, FT.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, Tp.jsx)("i", {
+            children: [(0, FT.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, Tp.jsx)("i", {
+            }), (0, FT.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (yp = Ip(Wi[Sp]), /\p{Script=Arabic}/u.test(yp) ? [yp] : (0, Si.d)(yp)).map(((pp, ip) => (0, Tp.jsx)("span", {
+            }), (BT = MT(lU[gT]), /\p{Script=Arabic}/u.test(BT) ? [BT] : (0, zU.c)(BT)).map(((TT, UT) => (0, FT.jsx)("span", {
               style: {
-                "--letter": ip
+                "--letter": UT
               },
-              children: pp
-            }, ip)))]
-          }), (0, Tp.jsxs)("div", {
+              children: TT
+            }, UT)))]
+          }), (0, FT.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [xp && "victory" === Sp && (0, Tp.jsx)("span", {
+            children: [nT && "victory" === gT && (0, FT.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: Ip("frontlineRoundEnd:comeback")
-            }), (0, Tp.jsxs)("span", {
+              children: MT("frontlineRoundEnd:comeback")
+            }), (0, FT.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, Tp.jsx)("b", {
+              children: [(0, FT.jsx)("b", {
                 className: "Friendly",
-                children: Lp
-              }), " \u2013 ", (0, Tp.jsx)("b", {
+                children: HT
+              }), " \u2013 ", (0, FT.jsx)("b", {
                 className: "Enemy",
-                children: Yp
+                children: kT
               })]
             })]
           })]
-        }), Pp.length > 0 && (0, Tp.jsxs)("div", {
+        }), LT.length > 0 && (0, FT.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": Pp.length
+            "--columns": LT.length
           },
-          children: [(0, Tp.jsx)(op.Suspense, {
+          children: [(0, FT.jsx)(zT.Suspense, {
             fallback: null,
-            children: (0, Tp.jsx)(Di, {
+            children: (0, FT.jsx)(HU, {
               className: "FrontlineRoundEndLineup",
-              players: Wp
+              players: pT
             })
-          }), Pp.map((pp => (0, Tp.jsx)(vi, {
-            mvp: Ap[pp],
-            place: pp
-          }, pp)))]
-        }), (0, Tp.jsx)("div", {
+          }), LT.map((TT => (0, FT.jsx)(ZU, {
+            mvp: lT[TT],
+            place: TT
+          }, TT)))]
+        }), (0, FT.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: Ip("frontlineRoundEnd:nextFront", {
-            map: Dp,
-            seconds: String(cp)
+          children: MT("frontlineRoundEnd:nextFront", {
+            map: jT,
+            seconds: String(mT)
           })
         })]
       });
-      var yp
+      var BT
     }));
 
-    function vi(pp) {
+    function ZU(TT) {
       let {
-        mvp: ip,
-        place: cp
-      } = pp;
+        mvp: UT,
+        place: mT
+      } = TT;
       const {
-        t: Op
-      } = (0, lp.H)(), [op, Ip, Sp, xp, Lp] = ip, [Yp, Dp] = Op(function(pp, ip) {
-        return 1 === ip && "damage" !== pp ? `frontlineRoundEnd:${pp}One` : `frontlineRoundEnd:${pp}`
-      }(Sp, xp), {
+        t: WT
+      } = (0, yT.z)(), [zT, MT, gT, nT, HT] = UT, [kT, jT] = WT(function(TT, UT) {
+        return 1 === UT && "damage" !== TT ? `frontlineRoundEnd:${TT}One` : `frontlineRoundEnd:${TT}`
+      }(gT, nT), {
         name: "\0",
-        count: xp.toLocaleString()
+        count: nT.toLocaleString()
       }).split("\0");
-      return (0, Tp.jsxs)("div", {
-        className: Cp()("FrontlineMvpCard", `Place-${cp+1}`, `Team-${Ip}`),
+      return (0, FT.jsxs)("div", {
+        className: wT()("FrontlineMvpCard", `Place-${mT+1}`, `Team-${MT}`),
         style: {
-          "--revealMs": `${Ai[cp]}ms`
+          "--revealMs": `${kU[mT]}ms`
         },
-        children: [(0, Tp.jsx)("i", {
+        children: [(0, FT.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Tp.jsx)("i", {
+        }), (0, FT.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, Tp.jsx)("div", {
+        }), (0, FT.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Op(yi[cp])
-        }), (0, Tp.jsxs)("div", {
+          children: WT(LU[mT])
+        }), (0, FT.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [Yp, (0, Tp.jsx)("span", {
+          children: [kT, (0, FT.jsx)("span", {
             className: "FrontlineMvpName",
-            children: op
-          }), Dp]
-        }), (0, Tp.jsx)("div", {
+            children: zT
+          }), jT]
+        }), (0, FT.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: Lp
+          children: HT
         })]
       })
     }
-    const ti = function(pp, ip, cp, Op) {
+    const cU = function(TT, UT, mT, WT) {
       let {
-        localPlayerId: Sp
-      } = Op;
-      const xp = new Np,
-        Lp = new Yi;
-      let Yp = null,
-        Dp = null,
-        Ap = null,
-        Pp = null,
-        Wp = null,
-        yp = [!1, !1];
-      const Up = () => {
-        var pp, ip;
-        const [cp, Op] = yp;
-        null === (pp = Dp) || void 0 === pp || pp.eC(!cp), null === (ip = Ap) || void 0 === ip || ip.eC(!Op)
+        localPlayerId: gT
+      } = WT;
+      const nT = new sT,
+        HT = new nU;
+      let kT = null,
+        jT = null,
+        lT = null,
+        LT = null,
+        pT = null,
+        BT = [!1, !1];
+      const ZT = () => {
+        var TT, UT;
+        const [mT, WT] = BT;
+        null === (TT = jT) || void 0 === TT || TT.Qy(!mT), null === (UT = lT) || void 0 === UT || UT.Qy(!WT)
       };
       return {
-        onCreate: pp => {
-          Yp = pp, Dp = new Hp(pp, Sp), Ap = new kp(pp, Sp), Pp = new Ii(xp), Up(), Wp = (0, Ip.A)((0, op.createElement)(op.Fragment, null, (0, op.createElement)(gp, {
-            hud: xp,
-            crosshair: Dp,
-            damage: Ap,
-            markers: Pp
-          }), (0, op.createElement)(Ui, {
-            controller: Lp
+        onCreate: TT => {
+          kT = TT, jT = new qT(TT, gT), lT = new eT(TT, gT), LT = new WU(nT), ZT(), pT = (0, MT.q)((0, zT.createElement)(zT.Fragment, null, (0, zT.createElement)(ST, {
+            hud: nT,
+            crosshair: jT,
+            damage: lT,
+            markers: LT
+          }), (0, zT.createElement)(pU, {
+            controller: HT
           })))
         },
         onClose: () => {
-          var pp, ip, cp, Op;
-          null === (pp = Wp) || void 0 === pp || pp(), null === (ip = Dp) || void 0 === ip || ip.dispose(), Dp = null, null === (cp = Ap) || void 0 === cp || cp.dispose(), Ap = null, null === (Op = Pp) || void 0 === Op || Op.dispose(), Pp = null, Yp = null
+          var TT, UT, mT, WT;
+          null === (TT = pT) || void 0 === TT || TT(), null === (UT = jT) || void 0 === UT || UT.dispose(), jT = null, null === (mT = lT) || void 0 === mT || mT.dispose(), lT = null, null === (WT = LT) || void 0 === WT || WT.dispose(), LT = null, kT = null
         },
-        onAfterRender: (pp, ip) => {
-          var cp, Op, op, Ip;
-          null === (cp = Dp) || void 0 === cp || cp.frame(pp, ip.tanHalfFovY), null === (Op = Ap) || void 0 === Op || Op.frame(ip.cameraHeading), null === (op = Pp) || void 0 === op || op.frame(ip, null !== (Ip = Yp) && void 0 !== Ip && Ip.checkValid(Sp) ? Yp.sH(Sp) : null)
+        onAfterRender: (TT, UT) => {
+          var mT, WT, zT, MT;
+          null === (mT = jT) || void 0 === mT || mT.frame(TT, UT.tanHalfFovY), null === (WT = lT) || void 0 === WT || WT.frame(UT.cameraHeading), null === (zT = LT) || void 0 === zT || zT.frame(UT, null !== (MT = kT) && void 0 !== MT && MT.checkValid(gT) ? kT.Aq(gT) : null)
         },
-        onReceivedMessageFromServer: (pp, ip) => {
-          "frontlineHud" === pp ? xp.Ey(ip) : "frontlineScoreboard" === pp ? xp.receiveScoreboard(ip) : "frontlineRoundEnd" === pp ? Lp.Ey(ip) : "frontlinePrefs" === pp && (yp = ip, Up())
+        onReceivedMessageFromServer: (TT, UT) => {
+          "frontlineHud" === TT ? nT.pB(UT) : "frontlineScoreboard" === TT ? nT.receiveScoreboard(UT) : "frontlineRoundEnd" === TT ? HT.pB(UT) : "frontlinePrefs" === TT && (BT = UT, ZT())
         }
       }
     }
   },
-  6566: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op
+  6508: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT
     });
-    const Op = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const WT = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function op(pp) {
-      return null === Op ? Array.from(pp) : Array.from(Op.segment(pp), (pp => {
+    function zT(TT) {
+      return null === WT ? Array.from(TT) : Array.from(WT.segment(TT), (TT => {
         let {
-          segment: ip
-        } = pp;
-        return ip
+          segment: UT
+        } = TT;
+        return UT
       }))
     }
   },
-  38712: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp,
-      d: () => Ip
+  38622: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      h: () => MT
     });
-    const Op = new WeakMap;
+    const WT = new WeakMap;
 
-    function op(pp) {
-      let ip = Op.get(pp);
-      return ip || (ip = {
-        hidden: pp.hidden,
+    function zT(TT) {
+      let UT = WT.get(TT);
+      return UT || (UT = {
+        hidden: TT.hidden,
         x: NaN,
         y: NaN
-      }, Op.set(pp, ip)), ip
+      }, WT.set(TT, UT)), UT
     }
 
-    function Ip(pp, ip) {
-      const cp = op(pp);
-      cp.hidden !== ip && (cp.hidden = ip, pp.hidden = ip)
+    function MT(TT, UT) {
+      const mT = zT(TT);
+      mT.hidden !== UT && (mT.hidden = UT, TT.hidden = UT)
     }
 
-    function Sp(pp, ip, cp) {
-      const Op = op(pp);
-      Op.x === ip && Op.y === cp || (Op.x = ip, Op.y = cp, pp.style.translate = `${ip}vw ${cp}vh`)
+    function gT(TT, UT, mT) {
+      const WT = zT(TT);
+      WT.x === UT && WT.y === mT || (WT.x = UT, WT.y = mT, TT.style.translate = `${UT}vw ${mT}vh`)
     }
   },
-  37286: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  37162: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    const Op = {
+    const WT = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

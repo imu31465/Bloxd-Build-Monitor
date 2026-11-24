@@ -1,156 +1,156 @@
 export const id = 296;
 export const ids = [296];
 export const modules = {
-  41524: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CharacterPreview: () => Ap
+  41439: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      CharacterPreview: () => lT
     });
-    var Op = cp(62),
-      op = cp(2835),
-      Ip = cp(1251),
-      Sp = cp(2638),
-      xp = cp(34462),
-      Lp = cp(3731),
-      Yp = cp(1112);
-    const Dp = .6 * Math.PI,
-      Ap = (0, Op.memo)((0, Op.forwardRef)((function(pp, ip) {
+    var WT = mT(63),
+      zT = mT(2856),
+      MT = mT(1336),
+      gT = mT(2685),
+      nT = mT(34311),
+      HT = mT(3746),
+      kT = mT(1188);
+    const jT = .6 * Math.PI,
+      lT = (0, WT.memo)((0, WT.forwardRef)((function(TT, UT) {
         let {
-          onReady: cp,
-          onDrawn: Ap,
-          owner: Pp = "other",
-          framing: Wp = "player",
-          forcedCosmetics: yp,
-          IL: Up,
-          emotePlaySeq: wp,
-          turntableFromYaw: vp = null
-        } = pp;
-        const tp = (0, Op.useRef)(null),
+          onReady: mT,
+          onDrawn: lT,
+          owner: LT = "other",
+          framing: pT = "player",
+          forcedCosmetics: BT,
+          tn: ZT,
+          emotePlaySeq: cT,
+          turntableFromYaw: vT = null
+        } = TT;
+        const fT = (0, WT.useRef)(null),
           {
-            width: Hp,
-            height: dp
-          } = (0, op.d)(tp),
-          ep = (0, Op.useRef)(null),
-          jp = (0, Op.useRef)({}),
-          kp = (0, Op.useRef)({}),
-          [mp, Rp] = (0, Op.useState)(!1),
-          qp = (0, Op.useRef)(cp);
-        qp.current = cp;
-        const Mp = (0, Op.useRef)(Ap);
-        Mp.current = Ap;
-        const Cp = (0, Op.useRef)(null),
-          Ep = (0, Op.useRef)(!1),
-          Xp = (0, Op.useRef)(!1),
-          lp = (0, Op.useCallback)((() => {
-            const pp = ep.current;
-            if (!pp || !Mp.current || Ep.current || !Xp.current) return;
-            const ip = {};
-            Cp.current = ip, queueMicrotask((() => {
-              if (Cp.current !== ip) return;
-              const cp = Promise.all(Ip.u.map((ip => pp.untilDrawn(ip)))).catch((pp => {
-                  console.error("Failed to draw the character preview", pp)
+            width: qT,
+            height: iT
+          } = (0, zT.b)(fT),
+          bT = (0, WT.useRef)(null),
+          OT = (0, WT.useRef)({}),
+          eT = (0, WT.useRef)({}),
+          [YT, JT] = (0, WT.useState)(!1),
+          xT = (0, WT.useRef)(mT);
+        xT.current = mT;
+        const dT = (0, WT.useRef)(lT);
+        dT.current = lT;
+        const wT = (0, WT.useRef)(null),
+          tT = (0, WT.useRef)(!1),
+          aT = (0, WT.useRef)(!1),
+          yT = (0, WT.useCallback)((() => {
+            const TT = bT.current;
+            if (!TT || !dT.current || tT.current || !aT.current) return;
+            const UT = {};
+            wT.current = UT, queueMicrotask((() => {
+              if (wT.current !== UT) return;
+              const mT = Promise.all(MT.t.map((UT => TT.untilDrawn(UT)))).catch((TT => {
+                  console.error("Failed to draw the character preview", TT)
                 })),
-                Op = new Promise((pp => {
-                  setTimeout(pp, 1e4)
+                WT = new Promise((TT => {
+                  setTimeout(TT, 1e4)
                 }));
-              Promise.race([cp, Op]).then((() => {
-                var cp;
-                ep.current !== pp || Cp.current !== ip || Ep.current || (Ep.current = !0, null === (cp = Mp.current) || void 0 === cp || cp.call(Mp))
+              Promise.race([mT, WT]).then((() => {
+                var mT;
+                bT.current !== TT || wT.current !== UT || tT.current || (tT.current = !0, null === (mT = dT.current) || void 0 === mT || mT.call(dT))
               }))
             }))
           }), []);
-        return (0, Op.useImperativeHandle)(ip, (() => {
-          const pp = (pp, ip) => {
-            var cp;
-            (jp.current[pp] = ip, null !== yp && void 0 !== yp && yp[pp]) || (null === (cp = ep.current) || void 0 === cp || cp.setCosmetic(pp, ip), lp())
+        return (0, WT.useImperativeHandle)(UT, (() => {
+          const TT = (TT, UT) => {
+            var mT;
+            (OT.current[TT] = UT, null !== BT && void 0 !== BT && BT[TT]) || (null === (mT = bT.current) || void 0 === mT || mT.setCosmetic(TT, UT), yT())
           };
           return {
-            updateCosmetic: pp,
-            setAllCosmetics(ip) {
-              for (const Op of Ip.u) {
-                var cp;
-                pp(Op, null !== (cp = ip[Op]) && void 0 !== cp ? cp : (0, Sp.b)(Op))
+            updateCosmetic: TT,
+            setAllCosmetics(UT) {
+              for (const WT of MT.t) {
+                var mT;
+                TT(WT, null !== (mT = UT[WT]) && void 0 !== mT ? mT : (0, gT.e)(WT))
               }
             },
             isReady() {
-              var pp, ip;
-              return null !== (pp = null === (ip = ep.current) || void 0 === ip ? void 0 : ip.isReady()) && void 0 !== pp && pp
+              var TT, UT;
+              return null !== (TT = null === (UT = bT.current) || void 0 === UT ? void 0 : UT.isReady()) && void 0 !== TT && TT
             },
             resetCamera() {
-              var pp;
-              null === (pp = ep.current) || void 0 === pp || pp.resetCamera()
+              var TT;
+              null === (TT = bT.current) || void 0 === TT || TT.resetCamera()
             },
-            setOrbit(pp) {
-              var ip;
-              null === (ip = ep.current) || void 0 === ip || ip.setOrbit(pp)
+            setOrbit(TT) {
+              var UT;
+              null === (UT = bT.current) || void 0 === UT || UT.setOrbit(TT)
             },
-            async ensureReadyForCapture(pp) {
-              var ip;
-              await (null === (ip = ep.current) || void 0 === ip ? void 0 : ip.untilDrawn(pp))
+            async ensureReadyForCapture(TT) {
+              var UT;
+              await (null === (UT = bT.current) || void 0 === UT ? void 0 : UT.untilDrawn(TT))
             },
             getDevTools() {
-              var pp;
-              return null !== (pp = ep.current) && void 0 !== pp && pp.isReady() ? ep.current.dev : null
+              var TT;
+              return null !== (TT = bT.current) && void 0 !== TT && TT.isReady() ? bT.current.dev : null
             }
           }
-        }), [yp, lp]), (0, Op.useEffect)((() => {
-          const pp = Lp.c.register(Pp),
-            ip = xp.j.openCharacter(tp.current, Wp);
-          ep.current = ip;
-          let cp = !0;
-          return ip.ready.then((() => {
-            cp && (Rp(!0), qp.current())
-          })).catch((pp => {
-            console.error("Failed to set up the character preview", pp)
+        }), [BT, yT]), (0, WT.useEffect)((() => {
+          const TT = HT.c.register(LT),
+            UT = nT.g.openCharacter(fT.current, pT);
+          bT.current = UT;
+          let mT = !0;
+          return UT.ready.then((() => {
+            mT && (JT(!0), xT.current())
+          })).catch((TT => {
+            console.error("Failed to set up the character preview", TT)
           })), () => {
-            cp = !1, pp(), ip.resetCamera(), ip.close(), ep.current = null
+            mT = !1, TT(), UT.resetCamera(), UT.close(), bT.current = null
           }
-        }), []), (0, Op.useEffect)((() => {
-          Hp <= 0 || dp <= 0 || ep.current.resize(Hp, dp)
-        }), [Hp, dp]), (0, Op.useEffect)((() => {
-          if (!mp) return;
-          const pp = kp.current;
-          for (const ip of Ip.u) {
-            const cp = null === yp || void 0 === yp ? void 0 : yp[ip],
-              Op = pp[ip];
-            cp && cp !== Op ? ep.current.setCosmetic(ip, cp) : !cp && Op && jp.current[ip] && ep.current.setCosmetic(ip, jp.current[ip])
+        }), []), (0, WT.useEffect)((() => {
+          qT <= 0 || iT <= 0 || bT.current.resize(qT, iT)
+        }), [qT, iT]), (0, WT.useEffect)((() => {
+          if (!YT) return;
+          const TT = eT.current;
+          for (const UT of MT.t) {
+            const mT = null === BT || void 0 === BT ? void 0 : BT[UT],
+              WT = TT[UT];
+            mT && mT !== WT ? bT.current.setCosmetic(UT, mT) : !mT && WT && OT.current[UT] && bT.current.setCosmetic(UT, OT.current[UT])
           }
-          kp.current = {
-            ...yp
-          }, Xp.current = !0, lp()
-        }), [yp, mp, lp]), (0, Op.useEffect)((() => {
-          mp && ep.current.playEmote(null !== Up && void 0 !== Up ? Up : null)
-        }), [Up, wp, mp]), (0, Op.useEffect)((() => {
-          if (!mp || null === vp) return;
-          const pp = ep.current,
+          eT.current = {
+            ...BT
+          }, aT.current = !0, yT()
+        }), [BT, YT, yT]), (0, WT.useEffect)((() => {
+          YT && bT.current.playEmote(null !== ZT && void 0 !== ZT ? ZT : null)
+        }), [ZT, cT, YT]), (0, WT.useEffect)((() => {
+          if (!YT || null === vT) return;
+          const TT = bT.current,
             {
-              pitch: ip,
-              radius: cp
-            } = xp.e[Wp];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return pp.setOrbit({
-            yaw: vp + Dp,
-            pitch: ip,
-            radius: cp
+              pitch: UT,
+              radius: mT
+            } = nT.c[pT];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return TT.setOrbit({
+            yaw: vT + jT,
+            pitch: UT,
+            radius: mT
           }), () => {
-            pp.resetCamera()
+            TT.resetCamera()
           };
-          const Op = performance.now();
-          let op = 0;
-          const Ip = Sp => {
-            pp.setOrbit({
-              yaw: vp + (Sp - Op) / 6e3 * 2 * Math.PI,
-              pitch: ip,
-              radius: cp
-            }), op = requestAnimationFrame(Ip)
+          const WT = performance.now();
+          let zT = 0;
+          const MT = gT => {
+            TT.setOrbit({
+              yaw: vT + (gT - WT) / 6e3 * 2 * Math.PI,
+              pitch: UT,
+              radius: mT
+            }), zT = requestAnimationFrame(MT)
           };
-          return op = requestAnimationFrame(Ip), () => {
-            cancelAnimationFrame(op), pp.resetCamera()
+          return zT = requestAnimationFrame(MT), () => {
+            cancelAnimationFrame(zT), TT.resetCamera()
           }
-        }), [mp, vp]), (0, Yp.jsx)("div", {
+        }), [YT, vT]), (0, kT.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: tp
+          ref: fT
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

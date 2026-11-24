@@ -1,161 +1,161 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  34484: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      packDisplayName: () => yp,
-      packModelMessage: () => Up,
-      packModelSummary: () => vp,
-      refusedPackModels: () => wp
+  34345: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      packDisplayName: () => BT,
+      packModelMessage: () => ZT,
+      packModelSummary: () => vT,
+      refusedPackModels: () => cT
     });
-    var Op = cp(34493),
-      op = cp(34496);
-    const Ip = "DRACO",
-      Sp = 0,
-      xp = 1,
-      Lp = 0,
-      Yp = 1,
-      Dp = 32768;
+    var WT = mT(34350),
+      zT = mT(34358);
+    const MT = "DRACO",
+      gT = 0,
+      nT = 1,
+      HT = 0,
+      kT = 1,
+      jT = 32768;
 
-    function Ap(pp) {
-      const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      let cp = 0;
-      const Op = () => {
-          if (cp >= pp.byteLength) throw new RangeError("past the stream");
-          return pp[cp++]
+    function lT(TT) {
+      const UT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      let mT = 0;
+      const WT = () => {
+          if (mT >= TT.byteLength) throw new RangeError("past the stream");
+          return TT[mT++]
         },
-        op = () => {
-          if (cp + 4 > pp.byteLength) throw new RangeError("past the stream");
-          const Op = ip.getUint32(cp, !0);
-          return cp += 4, Op
+        zT = () => {
+          if (mT + 4 > TT.byteLength) throw new RangeError("past the stream");
+          const WT = UT.getUint32(mT, !0);
+          return mT += 4, WT
         },
-        Ap = () => {
-          let pp = 0;
-          for (let ip = 0; ip < 35; ip += 7) {
-            const cp = Op();
-            if (pp += (127 & cp) * 2 ** ip, 0 === (128 & cp)) return pp
+        lT = () => {
+          let TT = 0;
+          for (let UT = 0; UT < 35; UT += 7) {
+            const mT = WT();
+            if (TT += (127 & mT) * 2 ** UT, 0 === (128 & mT)) return TT
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let pp = 0; pp < Ip.length; pp++)
-          if (Op() !== Ip.charCodeAt(pp)) return null;
-        const ip = Op(),
-          Pp = Op(),
-          Wp = Op(),
-          yp = Op(),
-          Up = Op() | Op() << 8;
-        if (2 !== ip) return null;
-        0 !== (Up & Dp) && function(pp, ip, cp) {
-          const Op = () => {
-              ip(cp())
+        for (let TT = 0; TT < MT.length; TT++)
+          if (WT() !== MT.charCodeAt(TT)) return null;
+        const UT = WT(),
+          LT = WT(),
+          pT = WT(),
+          BT = WT(),
+          ZT = WT() | WT() << 8;
+        if (2 !== UT) return null;
+        0 !== (ZT & jT) && function(TT, UT, mT) {
+          const WT = () => {
+              UT(mT())
             },
-            op = () => {
-              let cp = 1,
-                op = !0;
-              for (; cp > 0;) {
-                cp--, op || Op(), op = !1;
-                const Ip = pp();
-                for (let cp = 0; cp < Ip; cp++) Op(), ip(pp());
-                cp += pp()
+            zT = () => {
+              let mT = 1,
+                zT = !0;
+              for (; mT > 0;) {
+                mT--, zT || WT(), zT = !1;
+                const MT = TT();
+                for (let mT = 0; mT < MT; mT++) WT(), UT(TT());
+                mT += TT()
               }
             },
-            Ip = pp();
-          for (let Sp = 0; Sp < Ip; Sp++) pp(), op();
-          op()
-        }(Ap, (ip => {
-          if (cp + ip > pp.byteLength) throw new RangeError("past the stream");
-          cp += ip
-        }), Op);
-        const wp = Pp < 2 ? op : Ap;
-        if (Wp === Sp) return {
+            MT = TT();
+          for (let gT = 0; gT < MT; gT++) TT(), zT();
+          zT()
+        }(lT, (UT => {
+          if (mT + UT > TT.byteLength) throw new RangeError("past the stream");
+          mT += UT
+        }), WT);
+        const cT = LT < 2 ? zT : lT;
+        if (pT === gT) return {
           faces: 0,
-          vertices: op()
+          vertices: zT()
         };
-        if (Wp !== xp) return null;
-        if (yp === Lp) {
+        if (pT !== nT) return null;
+        if (BT === HT) {
           return {
-            faces: wp(),
-            vertices: wp()
+            faces: cT(),
+            vertices: cT()
           }
         }
-        if (yp !== Yp) return null;
-        Op(), Pp < 2 && Ap();
-        const vp = Ap();
+        if (BT !== kT) return null;
+        WT(), LT < 2 && lT();
+        const vT = lT();
         return {
-          faces: Ap(),
-          vertices: vp
+          faces: lT(),
+          vertices: vT
         }
       } catch {
         return null
       }
     }
 
-    function Pp(pp, ip, cp) {
-      var Op, op;
-      if (null === (Op = null === (op = pp.extensionsUsed) || void 0 === op ? void 0 : op.includes("KHR_draco_mesh_compression")) || void 0 === Op || !Op) return null;
-      for (const yp of null !== (Ip = pp.meshes) && void 0 !== Ip ? Ip : []) {
-        var Ip;
-        for (const Op of yp.primitives) {
-          var Sp, xp, Lp, Yp, Dp, Pp;
-          const op = null === (Sp = Op.extensions) || void 0 === Sp ? void 0 : Sp.KHR_draco_mesh_compression;
-          if ("object" !== typeof op || null === op) continue;
-          const Ip = null === (xp = pp.bufferViews) || void 0 === xp ? void 0 : xp[op.bufferView];
-          if (null === ip || void 0 === Ip) return Wp;
-          const yp = null !== (Lp = Ip.byteOffset) && void 0 !== Lp ? Lp : 0,
-            Up = Ap(ip.subarray(yp, yp + Ip.byteLength));
-          if (null === Up && !cp) continue;
-          const wp = null !== (Yp = pp.accessors) && void 0 !== Yp ? Yp : [],
-            vp = null === (Dp = wp[Op.attributes.POSITION]) || void 0 === Dp ? void 0 : Dp.count,
-            tp = void 0 === Op.indices ? 0 : null === (Pp = wp[Op.indices]) || void 0 === Pp ? void 0 : Pp.count;
-          if (null === Up || void 0 === vp || void 0 === tp || 3 * Up.faces !== tp || Up.vertices > vp) return Wp
+    function LT(TT, UT, mT) {
+      var WT, zT;
+      if (null === (WT = null === (zT = TT.extensionsUsed) || void 0 === zT ? void 0 : zT.includes("KHR_draco_mesh_compression")) || void 0 === WT || !WT) return null;
+      for (const BT of null !== (MT = TT.meshes) && void 0 !== MT ? MT : []) {
+        var MT;
+        for (const WT of BT.primitives) {
+          var gT, nT, HT, kT, jT, LT;
+          const zT = null === (gT = WT.extensions) || void 0 === gT ? void 0 : gT.KHR_draco_mesh_compression;
+          if ("object" !== typeof zT || null === zT) continue;
+          const MT = null === (nT = TT.bufferViews) || void 0 === nT ? void 0 : nT[zT.bufferView];
+          if (null === UT || void 0 === MT) return pT;
+          const BT = null !== (HT = MT.byteOffset) && void 0 !== HT ? HT : 0,
+            ZT = lT(UT.subarray(BT, BT + MT.byteLength));
+          if (null === ZT && !mT) continue;
+          const cT = null !== (kT = TT.accessors) && void 0 !== kT ? kT : [],
+            vT = null === (jT = cT[WT.attributes.POSITION]) || void 0 === jT ? void 0 : jT.count,
+            fT = void 0 === WT.indices ? 0 : null === (LT = cT[WT.indices]) || void 0 === LT ? void 0 : LT.count;
+          if (null === ZT || void 0 === vT || void 0 === fT || 3 * ZT.faces !== fT || ZT.vertices > vT) return pT
         }
       }
       return null
     }
-    const Wp = "has a Draco stream whose counts don't match its accessors";
+    const pT = "has a Draco stream whose counts don't match its accessors";
 
-    function yp(pp) {
-      var ip;
-      return null !== (ip = pp.name) && void 0 !== ip ? ip : pp.fromFolderName || pp.id
+    function BT(TT) {
+      var UT;
+      return null !== (UT = TT.name) && void 0 !== UT ? UT : TT.fromFolderName || TT.id
     }
 
-    function Up(pp, ip, cp) {
-      return `Texture pack "${pp}": model "${ip}" was not loaded because it ${cp}. The default model is used instead.`
+    function ZT(TT, UT, mT) {
+      return `Texture pack "${TT}": model "${UT}" was not loaded because it ${mT}. The default model is used instead.`
     }
 
-    function wp(pp, ip, cp) {
+    function cT(TT, UT, mT) {
       let {
-        strictDraco: Ip = !1
+        strictDraco: MT = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Sp = {};
-      for (const [xp, Lp] of Object.entries(ip)) {
-        let ip;
-        if (Lp.startsWith("data:")) try {
-          const pp = new Uint8Array((0, op.s)(Lp));
-          if (ip = (0, Op.b)(pp), null === ip) {
+      const gT = {};
+      for (const [nT, HT] of Object.entries(UT)) {
+        let UT;
+        if (HT.startsWith("data:")) try {
+          const TT = new Uint8Array((0, zT.m)(HT));
+          if (UT = (0, WT.c)(TT), null === UT) {
             const {
-              json: cp,
-              bin: Op
-            } = (0, op.B)(pp);
-            ip = Pp(cp, Op, Ip)
+              json: mT,
+              bin: WT
+            } = (0, zT.p)(TT);
+            UT = LT(mT, WT, MT)
           }
         } catch {
-          ip = "is not a binary glTF 2.0 file"
-        } else ip = "loads data from outside the file";
-        ip && (Sp[xp] = ip, cp && console.warn(Up(pp, xp, ip)))
+          UT = "is not a binary glTF 2.0 file"
+        } else UT = "loads data from outside the file";
+        UT && (gT[nT] = UT, mT && console.warn(ZT(TT, nT, UT)))
       }
-      return Sp
+      return gT
     }
 
-    function vp(pp, ip) {
-      const cp = Object.keys(ip);
-      if (0 === cp.length) return null;
-      if (1 === cp.length) return Up(pp, cp[0], ip[cp[0]]);
-      const Op = cp.map((pp => `"${pp}" ${ip[pp]}`)).join("; ");
-      return `Texture pack "${pp}": ${cp.length} models were not loaded (${Op}). The default models are used instead.`
+    function vT(TT, UT) {
+      const mT = Object.keys(UT);
+      if (0 === mT.length) return null;
+      if (1 === mT.length) return ZT(TT, mT[0], UT[mT[0]]);
+      const WT = mT.map((TT => `"${TT}" ${UT[TT]}`)).join("; ");
+      return `Texture pack "${TT}": ${mT.length} models were not loaded (${WT}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

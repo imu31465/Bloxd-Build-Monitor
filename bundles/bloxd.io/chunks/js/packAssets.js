@@ -1,286 +1,286 @@
 export const id = 45;
 export const ids = [45, 205];
 export const modules = {
-  34484: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      packDisplayName: () => yp,
-      packModelMessage: () => Up,
-      packModelSummary: () => vp,
-      refusedPackModels: () => wp
+  34345: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      packDisplayName: () => BT,
+      packModelMessage: () => ZT,
+      packModelSummary: () => vT,
+      refusedPackModels: () => cT
     });
-    var Op = cp(34493),
-      op = cp(34496);
-    const Ip = "DRACO",
-      Sp = 0,
-      xp = 1,
-      Lp = 0,
-      Yp = 1,
-      Dp = 32768;
+    var WT = mT(34350),
+      zT = mT(34358);
+    const MT = "DRACO",
+      gT = 0,
+      nT = 1,
+      HT = 0,
+      kT = 1,
+      jT = 32768;
 
-    function Ap(pp) {
-      const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      let cp = 0;
-      const Op = () => {
-          if (cp >= pp.byteLength) throw new RangeError("past the stream");
-          return pp[cp++]
+    function lT(TT) {
+      const UT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      let mT = 0;
+      const WT = () => {
+          if (mT >= TT.byteLength) throw new RangeError("past the stream");
+          return TT[mT++]
         },
-        op = () => {
-          if (cp + 4 > pp.byteLength) throw new RangeError("past the stream");
-          const Op = ip.getUint32(cp, !0);
-          return cp += 4, Op
+        zT = () => {
+          if (mT + 4 > TT.byteLength) throw new RangeError("past the stream");
+          const WT = UT.getUint32(mT, !0);
+          return mT += 4, WT
         },
-        Ap = () => {
-          let pp = 0;
-          for (let ip = 0; ip < 35; ip += 7) {
-            const cp = Op();
-            if (pp += (127 & cp) * 2 ** ip, 0 === (128 & cp)) return pp
+        lT = () => {
+          let TT = 0;
+          for (let UT = 0; UT < 35; UT += 7) {
+            const mT = WT();
+            if (TT += (127 & mT) * 2 ** UT, 0 === (128 & mT)) return TT
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let pp = 0; pp < Ip.length; pp++)
-          if (Op() !== Ip.charCodeAt(pp)) return null;
-        const ip = Op(),
-          Pp = Op(),
-          Wp = Op(),
-          yp = Op(),
-          Up = Op() | Op() << 8;
-        if (2 !== ip) return null;
-        0 !== (Up & Dp) && function(pp, ip, cp) {
-          const Op = () => {
-              ip(cp())
+        for (let TT = 0; TT < MT.length; TT++)
+          if (WT() !== MT.charCodeAt(TT)) return null;
+        const UT = WT(),
+          LT = WT(),
+          pT = WT(),
+          BT = WT(),
+          ZT = WT() | WT() << 8;
+        if (2 !== UT) return null;
+        0 !== (ZT & jT) && function(TT, UT, mT) {
+          const WT = () => {
+              UT(mT())
             },
-            op = () => {
-              let cp = 1,
-                op = !0;
-              for (; cp > 0;) {
-                cp--, op || Op(), op = !1;
-                const Ip = pp();
-                for (let cp = 0; cp < Ip; cp++) Op(), ip(pp());
-                cp += pp()
+            zT = () => {
+              let mT = 1,
+                zT = !0;
+              for (; mT > 0;) {
+                mT--, zT || WT(), zT = !1;
+                const MT = TT();
+                for (let mT = 0; mT < MT; mT++) WT(), UT(TT());
+                mT += TT()
               }
             },
-            Ip = pp();
-          for (let Sp = 0; Sp < Ip; Sp++) pp(), op();
-          op()
-        }(Ap, (ip => {
-          if (cp + ip > pp.byteLength) throw new RangeError("past the stream");
-          cp += ip
-        }), Op);
-        const wp = Pp < 2 ? op : Ap;
-        if (Wp === Sp) return {
+            MT = TT();
+          for (let gT = 0; gT < MT; gT++) TT(), zT();
+          zT()
+        }(lT, (UT => {
+          if (mT + UT > TT.byteLength) throw new RangeError("past the stream");
+          mT += UT
+        }), WT);
+        const cT = LT < 2 ? zT : lT;
+        if (pT === gT) return {
           faces: 0,
-          vertices: op()
+          vertices: zT()
         };
-        if (Wp !== xp) return null;
-        if (yp === Lp) {
+        if (pT !== nT) return null;
+        if (BT === HT) {
           return {
-            faces: wp(),
-            vertices: wp()
+            faces: cT(),
+            vertices: cT()
           }
         }
-        if (yp !== Yp) return null;
-        Op(), Pp < 2 && Ap();
-        const vp = Ap();
+        if (BT !== kT) return null;
+        WT(), LT < 2 && lT();
+        const vT = lT();
         return {
-          faces: Ap(),
-          vertices: vp
+          faces: lT(),
+          vertices: vT
         }
       } catch {
         return null
       }
     }
 
-    function Pp(pp, ip, cp) {
-      var Op, op;
-      if (null === (Op = null === (op = pp.extensionsUsed) || void 0 === op ? void 0 : op.includes("KHR_draco_mesh_compression")) || void 0 === Op || !Op) return null;
-      for (const yp of null !== (Ip = pp.meshes) && void 0 !== Ip ? Ip : []) {
-        var Ip;
-        for (const Op of yp.primitives) {
-          var Sp, xp, Lp, Yp, Dp, Pp;
-          const op = null === (Sp = Op.extensions) || void 0 === Sp ? void 0 : Sp.KHR_draco_mesh_compression;
-          if ("object" !== typeof op || null === op) continue;
-          const Ip = null === (xp = pp.bufferViews) || void 0 === xp ? void 0 : xp[op.bufferView];
-          if (null === ip || void 0 === Ip) return Wp;
-          const yp = null !== (Lp = Ip.byteOffset) && void 0 !== Lp ? Lp : 0,
-            Up = Ap(ip.subarray(yp, yp + Ip.byteLength));
-          if (null === Up && !cp) continue;
-          const wp = null !== (Yp = pp.accessors) && void 0 !== Yp ? Yp : [],
-            vp = null === (Dp = wp[Op.attributes.POSITION]) || void 0 === Dp ? void 0 : Dp.count,
-            tp = void 0 === Op.indices ? 0 : null === (Pp = wp[Op.indices]) || void 0 === Pp ? void 0 : Pp.count;
-          if (null === Up || void 0 === vp || void 0 === tp || 3 * Up.faces !== tp || Up.vertices > vp) return Wp
+    function LT(TT, UT, mT) {
+      var WT, zT;
+      if (null === (WT = null === (zT = TT.extensionsUsed) || void 0 === zT ? void 0 : zT.includes("KHR_draco_mesh_compression")) || void 0 === WT || !WT) return null;
+      for (const BT of null !== (MT = TT.meshes) && void 0 !== MT ? MT : []) {
+        var MT;
+        for (const WT of BT.primitives) {
+          var gT, nT, HT, kT, jT, LT;
+          const zT = null === (gT = WT.extensions) || void 0 === gT ? void 0 : gT.KHR_draco_mesh_compression;
+          if ("object" !== typeof zT || null === zT) continue;
+          const MT = null === (nT = TT.bufferViews) || void 0 === nT ? void 0 : nT[zT.bufferView];
+          if (null === UT || void 0 === MT) return pT;
+          const BT = null !== (HT = MT.byteOffset) && void 0 !== HT ? HT : 0,
+            ZT = lT(UT.subarray(BT, BT + MT.byteLength));
+          if (null === ZT && !mT) continue;
+          const cT = null !== (kT = TT.accessors) && void 0 !== kT ? kT : [],
+            vT = null === (jT = cT[WT.attributes.POSITION]) || void 0 === jT ? void 0 : jT.count,
+            fT = void 0 === WT.indices ? 0 : null === (LT = cT[WT.indices]) || void 0 === LT ? void 0 : LT.count;
+          if (null === ZT || void 0 === vT || void 0 === fT || 3 * ZT.faces !== fT || ZT.vertices > vT) return pT
         }
       }
       return null
     }
-    const Wp = "has a Draco stream whose counts don't match its accessors";
+    const pT = "has a Draco stream whose counts don't match its accessors";
 
-    function yp(pp) {
-      var ip;
-      return null !== (ip = pp.name) && void 0 !== ip ? ip : pp.fromFolderName || pp.id
+    function BT(TT) {
+      var UT;
+      return null !== (UT = TT.name) && void 0 !== UT ? UT : TT.fromFolderName || TT.id
     }
 
-    function Up(pp, ip, cp) {
-      return `Texture pack "${pp}": model "${ip}" was not loaded because it ${cp}. The default model is used instead.`
+    function ZT(TT, UT, mT) {
+      return `Texture pack "${TT}": model "${UT}" was not loaded because it ${mT}. The default model is used instead.`
     }
 
-    function wp(pp, ip, cp) {
+    function cT(TT, UT, mT) {
       let {
-        strictDraco: Ip = !1
+        strictDraco: MT = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Sp = {};
-      for (const [xp, Lp] of Object.entries(ip)) {
-        let ip;
-        if (Lp.startsWith("data:")) try {
-          const pp = new Uint8Array((0, op.s)(Lp));
-          if (ip = (0, Op.b)(pp), null === ip) {
+      const gT = {};
+      for (const [nT, HT] of Object.entries(UT)) {
+        let UT;
+        if (HT.startsWith("data:")) try {
+          const TT = new Uint8Array((0, zT.m)(HT));
+          if (UT = (0, WT.c)(TT), null === UT) {
             const {
-              json: cp,
-              bin: Op
-            } = (0, op.B)(pp);
-            ip = Pp(cp, Op, Ip)
+              json: mT,
+              bin: WT
+            } = (0, zT.p)(TT);
+            UT = LT(mT, WT, MT)
           }
         } catch {
-          ip = "is not a binary glTF 2.0 file"
-        } else ip = "loads data from outside the file";
-        ip && (Sp[xp] = ip, cp && console.warn(Up(pp, xp, ip)))
+          UT = "is not a binary glTF 2.0 file"
+        } else UT = "loads data from outside the file";
+        UT && (gT[nT] = UT, mT && console.warn(ZT(TT, nT, UT)))
       }
-      return Sp
+      return gT
     }
 
-    function vp(pp, ip) {
-      const cp = Object.keys(ip);
-      if (0 === cp.length) return null;
-      if (1 === cp.length) return Up(pp, cp[0], ip[cp[0]]);
-      const Op = cp.map((pp => `"${pp}" ${ip[pp]}`)).join("; ");
-      return `Texture pack "${pp}": ${cp.length} models were not loaded (${Op}). The default models are used instead.`
+    function vT(TT, UT) {
+      const mT = Object.keys(UT);
+      if (0 === mT.length) return null;
+      if (1 === mT.length) return ZT(TT, mT[0], UT[mT[0]]);
+      const WT = mT.map((TT => `"${TT}" ${UT[TT]}`)).join("; ");
+      return `Texture pack "${TT}": ${mT.length} models were not loaded (${WT}). The default models are used instead.`
     }
   },
-  61592: (pp, ip, cp) => {
-    cp.d(ip, {
-      packAssets: () => vp
+  61354: (TT, UT, mT) => {
+    mT.d(UT, {
+      packAssets: () => vT
     });
-    var Op = cp(2187),
-      op = cp(2174),
-      Ip = cp(34484),
-      Sp = cp(3316),
-      xp = cp(3335);
+    var WT = mT(2273),
+      zT = mT(2257),
+      MT = mT(34345),
+      gT = mT(3329),
+      nT = mT(3357);
 
-    function Lp(pp, ip, cp, Op) {
-      const op = `${(0,Sp.b)(pp,ip)}|sheets${cp}`;
-      return Op === xp.d ? op : `${op}|layers${Op}`
+    function HT(TT, UT, mT, WT) {
+      const zT = `${(0,gT.c)(TT,UT)}|sheets${mT}`;
+      return WT === nT.c ? zT : `${zT}|layers${WT}`
     }
-    var Yp = cp(3343),
-      Dp = cp(3280),
-      Ap = cp(3267),
-      Pp = cp(3320);
-    var Wp = cp(51220);
-    const yp = 256;
-    let Up = null,
-      wp = null;
+    var kT = mT(3359),
+      jT = mT(3309),
+      lT = mT(3299),
+      LT = mT(3334);
+    var pT = mT(51139);
+    const BT = 256;
+    let ZT = null,
+      cT = null;
 
-    function vp(pp) {
-      var ip;
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xp.d;
-      if ((null === (ip = Up) || void 0 === ip ? void 0 : ip.pack) === pp.pack && Up.maxLayerWidth === cp) return Up.assets;
-      const vp = (0, Wp.f)(pp.pack, (0, Wp.h)(pp));
-      if (null === vp || !(0, op.f)(vp)) return Promise.resolve(null);
-      const Hp = async function(pp, ip, cp) {
-        var Wp;
-        const Up = null !== (Wp = pp.textureOverrides) && void 0 !== Wp ? Wp : {},
+    function vT(TT) {
+      var UT;
+      let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nT.c;
+      if ((null === (UT = ZT) || void 0 === UT ? void 0 : UT.pack) === TT.pack && ZT.maxLayerWidth === mT) return ZT.assets;
+      const vT = (0, pT.g)(TT.pack, (0, pT.j)(TT));
+      if (null === vT || !(0, zT.d)(vT)) return Promise.resolve(null);
+      const qT = async function(TT, UT, mT) {
+        var pT;
+        const ZT = null !== (pT = TT.textureOverrides) && void 0 !== pT ? pT : {},
           {
-            id: vp,
-            version: Hp
-          } = pp.metaData,
-          dp = ip && vp !== Op.q.CUSTOM,
-          ep = {};
-        dp && (wp = ep);
-        let jp, kp, mp = dp ? await async function(pp, ip, cp, Op) {
-          const op = Lp(pp, ip, cp, xp.d),
-            Ip = Lp(pp, ip, cp, Op),
-            Yp = await (0, Sp.f)((pp => pp === op || pp === Ip));
-          return null !== Yp && (Op === xp.d || Yp.blockAtlasWidth <= Op) ? Yp : null
-        }(vp, Hp, yp, cp): null;
-        if (null === mp) {
+            id: vT,
+            version: qT
+          } = TT.metaData,
+          iT = UT && vT !== WT.n.CUSTOM,
+          bT = {};
+        iT && (cT = bT);
+        let OT, eT, YT = iT ? await async function(TT, UT, mT, WT) {
+          const zT = HT(TT, UT, mT, nT.c),
+            MT = HT(TT, UT, mT, WT),
+            kT = await (0, gT.g)((TT => TT === zT || TT === MT));
+          return null !== kT && (WT === nT.c || kT.blockAtlasWidth <= WT) ? kT : null
+        }(vT, qT, BT, mT): null;
+        if (null === YT) {
           const {
-            blockMetadata: pp,
-            getDefaultTexture: ip,
-            textureNameToIndex: Ip
-          } = await (0, op.n)(), xp = (0, Dp.c)(pp, ((pp, cp) => ({
-            url: tp(Up, ip, pp, "block" === cp ? Ap.i.BLOCK : Ap.i.ITEM)
-          }))), Yp = await
-          function(pp, ip, cp, Op, op, Ip) {
-            return (0, Pp.b)((Sp => Sp.WasmTextureWorker.generateRequired(pp, ip, cp, Op, op, Ip)))
-          }(pp, Ip, xp, vp === Op.b, cp, yp), Wp = Yp.assets;
-          mp = {
-            ...Wp,
+            blockMetadata: TT,
+            getDefaultTexture: UT,
+            textureNameToIndex: MT
+          } = await (0, zT.j)(), nT = (0, jT.d)(TT, ((TT, mT) => ({
+            url: fT(ZT, UT, TT, "block" === mT ? lT.f.BLOCK : lT.f.ITEM)
+          }))), kT = await
+          function(TT, UT, mT, WT, zT, MT) {
+            return (0, LT.d)((gT => gT.WasmTextureWorker.generateRequired(TT, UT, mT, WT, zT, MT)))
+          }(TT, MT, nT, vT === WT.e, mT, BT), pT = kT.assets;
+          YT = {
+            ...pT,
             averageColors: {}
-          }, jp = Yp.averageColors(), dp && (kp = jp.then((async pp => {
-            null !== pp && wp === ep && await
-            function(pp, ip, cp, Op, op) {
-              return (0, Sp.i)(Lp(pp, ip, Op, op), cp)
-            }(vp, Hp, {
-              ...Wp,
-              averageColors: pp
-            }, yp, Yp.layerCap)
+          }, OT = kT.averageColors(), iT && (eT = OT.then((async TT => {
+            null !== TT && cT === bT && await
+            function(TT, UT, mT, WT, zT) {
+              return (0, gT.k)(HT(TT, UT, WT, zT), mT)
+            }(vT, qT, {
+              ...pT,
+              averageColors: TT
+            }, BT, kT.layerCap)
           })))
         }
-        return function(pp, ip) {
-          var cp, Op;
-          let op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((xp = pp.averageColors, 0 === Object.keys(null !== xp && void 0 !== xp ? xp : {}).length ? null : pp.averageColors)),
-            Sp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var xp;
-          const Lp = null !== (cp = ip.textureOverrides) && void 0 !== cp ? cp : {},
-            Dp = null !== (Op = ip.modelOverrides) && void 0 !== Op ? Op : {},
-            Ap = 0 === Object.keys(Dp).length ? {} : (0, Ip.refusedPackModels)((0, Ip.packDisplayName)(ip.metaData), Dp, !0, {
+        return function(TT, UT) {
+          var mT, WT;
+          let zT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((nT = TT.averageColors, 0 === Object.keys(null !== nT && void 0 !== nT ? nT : {}).length ? null : TT.averageColors)),
+            gT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var nT;
+          const HT = null !== (mT = UT.textureOverrides) && void 0 !== mT ? mT : {},
+            jT = null !== (WT = UT.modelOverrides) && void 0 !== WT ? WT : {},
+            lT = 0 === Object.keys(jT).length ? {} : (0, MT.refusedPackModels)((0, MT.packDisplayName)(UT.metaData), jT, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: Pp,
-              rotatedBlockTextures: Wp
-            } = pp,
-            yp = pp => {
-              var ip, cp;
-              return null !== (ip = null !== (cp = Pp[pp]) && void 0 !== cp ? cp : Wp[pp]) && void 0 !== ip ? ip : null
+              animatedBlockTextures: LT,
+              rotatedBlockTextures: pT
+            } = TT,
+            BT = TT => {
+              var UT, mT;
+              return null !== (UT = null !== (mT = LT[TT]) && void 0 !== mT ? mT : pT[TT]) && void 0 !== UT ? UT : null
             };
           return {
             terrain: {
-              atlasSheets: pp.blockAtlasArr,
-              texture: yp
+              atlasSheets: TT.blockAtlasArr,
+              texture: BT
             },
-            sheetPixels: [...pp.blockAtlasPixels],
-            heldUntil: Sp,
-            sheetLayout: pp.imagesPerAtlas,
-            sheetWidth: pp.blockAtlasWidth,
-            armourAtlasUrl: pp.armourAtlas,
-            texture: pp => {
-              var ip, cp;
-              return null !== (ip = null !== (cp = yp(pp)) && void 0 !== cp ? cp : (0, Yp.b)(Lp, pp)) && void 0 !== ip ? ip : null
+            sheetPixels: [...TT.blockAtlasPixels],
+            heldUntil: gT,
+            sheetLayout: TT.imagesPerAtlas,
+            sheetWidth: TT.blockAtlasWidth,
+            armourAtlasUrl: TT.armourAtlas,
+            texture: TT => {
+              var UT, mT;
+              return null !== (UT = null !== (mT = BT(TT)) && void 0 !== mT ? mT : (0, kT.e)(HT, TT)) && void 0 !== UT ? UT : null
             },
-            model: pp => void 0 === Ap[pp] && Dp[pp] || null,
-            averageColours: op
+            model: TT => void 0 === lT[TT] && jT[TT] || null,
+            averageColours: zT
           }
-        }(mp, pp, jp, kp)
-      }(vp, null === pp.gameSource, cp), dp = {
-        pack: pp.pack,
-        maxLayerWidth: cp,
-        assets: Hp
+        }(YT, TT, OT, eT)
+      }(vT, null === TT.gameSource, mT), iT = {
+        pack: TT.pack,
+        maxLayerWidth: mT,
+        assets: qT
       };
-      return Up = dp, Hp.catch((() => {
-        Up === dp && (Up = null)
-      })), Hp
+      return ZT = iT, qT.catch((() => {
+        ZT === iT && (ZT = null)
+      })), qT
     }
 
-    function tp(pp, ip, Op, op) {
-      const Ip = (0, Yp.b)(pp, Op);
-      if (Ip) return Ip;
+    function fT(TT, UT, WT, zT) {
+      const MT = (0, kT.e)(TT, WT);
+      if (MT) return MT;
       try {
-        return ip(Op, op).url
+        return UT(WT, zT).url
       } catch {
-        return cp(3425)
+        return mT(3425)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

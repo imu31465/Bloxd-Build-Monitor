@@ -1,31 +1,31 @@
 export const id = 310;
 export const ids = [310];
 export const modules = {
-  41996: (pp, ip, cp) => {
-    cp.d(ip, {
-      parseShaderPack: () => Op
+  41888: (TT, UT, mT) => {
+    mT.d(UT, {
+      parseShaderPack: () => WT
     });
 
-    function Op(pp) {
-      var ip, cp;
-      const Op = pp.get("shaderPackUrl"),
-        op = null !== (ip = pp.get("shaderPackMode")) && void 0 !== ip ? ip : "strict";
-      if (null === Op) {
-        if (pp.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
+    function WT(TT) {
+      var UT, mT;
+      const WT = TT.get("shaderPackUrl"),
+        zT = null !== (UT = TT.get("shaderPackMode")) && void 0 !== UT ? UT : "strict";
+      if (null === WT) {
+        if (TT.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
         return null
       }
-      if ("lite" !== pp.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
-      if (! function(pp) {
-          return "strict" === pp || "allow" === pp
-        }(op)) throw new Error(`Unknown shaderPackMode "${op}" - use strict or allow`);
-      const Ip = (null !== (cp = pp.get("variants")) && void 0 !== cp ? cp : "").split(",").find((pp => pp.trim().startsWith("liteShaderPack")));
-      if (void 0 !== Ip) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${Ip.trim()}`);
+      if ("lite" !== TT.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
+      if (! function(TT) {
+          return "strict" === TT || "allow" === TT
+        }(zT)) throw new Error(`Unknown shaderPackMode "${zT}" - use strict or allow`);
+      const MT = (null !== (mT = TT.get("variants")) && void 0 !== mT ? mT : "").split(",").find((TT => TT.trim().startsWith("liteShaderPack")));
+      if (void 0 !== MT) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${MT.trim()}`);
       return {
-        url: Op,
-        mode: op
+        url: WT,
+        mode: zT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

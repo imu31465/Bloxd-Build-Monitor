@@ -1,139 +1,139 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6837: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      BaseExtension: () => Oc,
-      BaseInstrumentation: () => oc,
-      BaseTransport: () => cI,
-      CSPInstrumentation: () => Mo,
-      ConsoleInstrumentation: () => Jc,
-      ConsoleTransport: () => xI,
-      EVENT_CLICK: () => ei,
-      EVENT_NAVIGATION: () => ui,
-      EVENT_ROUTE_CHANGE: () => Mi,
-      EVENT_SESSION_EXTEND: () => Ri,
-      EVENT_SESSION_RESUME: () => mi,
-      EVENT_SESSION_START: () => ki,
-      EVENT_VIEW_CHANGED: () => ji,
-      ErrorsInstrumentation: () => Nc,
-      FetchTransport: () => mI,
-      InternalLoggerLevel: () => ri,
-      LogLevel: () => uc,
-      MAX_SESSION_PERSISTENCE_TIME: () => Lp,
-      NavigationInstrumentation: () => go,
-      Observable: () => ec,
-      PerformanceInstrumentation: () => zO,
-      PersistentSessionsManager: () => fi,
-      SESSION_EXPIRATION_TIME: () => Ip,
-      SESSION_INACTIVITY_TIME: () => Sp,
-      STORAGE_KEY: () => op,
-      SessionInstrumentation: () => Sc,
-      TransportItemType: () => OI,
-      UserActionInstrumentation: () => qo,
-      UserActionState: () => vo,
-      VERSION: () => Ic,
-      ViewInstrumentation: () => fc,
-      VolatileSessionsManager: () => bi,
-      WebVitalsInstrumentation: () => BO,
-      allLogLevels: () => kc,
-      browserMeta: () => Ko,
-      buildStackFrame: () => xc,
-      captureMetas: () => hI,
-      createInternalLogger: () => EI,
-      createPromiseBuffer: () => vI,
-      createSession: () => pI,
-      deepEqual: () => di,
-      defaultEventDomain: () => Op,
-      defaultExceptionType: () => Mc,
-      defaultGlobalObjectKey: () => XI,
-      defaultInternalLoggerLevel: () => zi,
-      defaultLogLevel: () => jc,
-      faro: () => Up,
-      genShortID: () => Hi,
-      getCurrentTimestamp: () => wi,
-      getDataFromSafariExtensions: () => Uc,
-      getIgnoreUrls: () => Zp,
-      getInternalFaroFromGlobalObject: () => Pp,
-      getStackFramesFromError: () => vc,
-      getTransportBody: () => SI,
-      getUrlFromResource: () => sp,
-      getWebInstrumentations: () => Go,
-      globalObject: () => Dp,
-      initializeFaro: () => cS,
-      internalGlobalObjectKey: () => Ap,
-      isArray: () => Ep,
-      isBoolean: () => Rp,
-      isDomError: () => bp,
-      isDomException: () => hp,
-      isElement: () => np,
-      isElementDefined: () => ap,
-      wy: () => rp,
-      isError: () => Tp,
-      isErrorDefined: () => Np,
-      isErrorEvent: () => fp,
-      isEvent: () => Bp,
-      isEventDefined: () => Jp,
-      isFunction: () => Cp,
-      isInstanceOf: () => Hp,
-      isInt: () => mp,
-      isInternalFaroOnGlobalObject: () => yp,
-      isMap: () => gp,
-      isMapDefined: () => Fp,
-      isNull: () => ep,
-      isNumber: () => kp,
-      isObject: () => Mp,
-      isPrimitive: () => Qp,
-      isRegExp: () => Xp,
-      isString: () => jp,
-      isSymbol: () => qp,
-      isSyntheticEvent: () => Gp,
-      isThenable: () => lp,
-      isToString: () => tp,
-      isTypeof: () => vp,
-      isUndefined: () => dp,
-      makeCoreConfig: () => JI,
-      noop: () => Gi,
-      osMeta: () => Vo,
-      parseStacktrace: () => tc,
-      sdkMeta: () => iI,
-      setInternalFaroOnGlobalObject: () => Wp,
-      transportItemTypeToBodyKey: () => oI,
-      unknownString: () => Tc,
-      userActionDataAttribute: () => sO,
-      userActionTimeoutDataAttribute: () => KO
+  6761: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      BaseExtension: () => Tm,
+      BaseInstrumentation: () => Um,
+      BaseTransport: () => Az,
+      CSPInstrumentation: () => Jz,
+      ConsoleInstrumentation: () => Xm,
+      ConsoleTransport: () => WM,
+      EVENT_CLICK: () => qU,
+      EVENT_NAVIGATION: () => iU,
+      EVENT_ROUTE_CHANGE: () => xU,
+      EVENT_SESSION_EXTEND: () => YU,
+      EVENT_SESSION_RESUME: () => eU,
+      EVENT_SESSION_START: () => OU,
+      EVENT_VIEW_CHANGED: () => bU,
+      ErrorsInstrumentation: () => Qm,
+      FetchTransport: () => bM,
+      InternalLoggerLevel: () => SU,
+      LogLevel: () => im,
+      MAX_SESSION_PERSISTENCE_TIME: () => HT,
+      NavigationInstrumentation: () => Cz,
+      Observable: () => qm,
+      PerformanceInstrumentation: () => EW,
+      PersistentSessionsManager: () => FU,
+      SESSION_EXPIRATION_TIME: () => MT,
+      SESSION_INACTIVITY_TIME: () => gT,
+      STORAGE_KEY: () => zT,
+      SessionInstrumentation: () => Wm,
+      TransportItemType: () => Rz,
+      UserActionInstrumentation: () => Yz,
+      UserActionState: () => Zz,
+      VERSION: () => mm,
+      ViewInstrumentation: () => Fm,
+      VolatileSessionsManager: () => PU,
+      WebVitalsInstrumentation: () => IW,
+      allLogLevels: () => Om,
+      browserMeta: () => Ez,
+      buildStackFrame: () => zm,
+      captureMetas: () => FM,
+      createInternalLogger: () => xM,
+      createPromiseBuffer: () => pM,
+      createSession: () => Dz,
+      deepEqual: () => fU,
+      defaultEventDomain: () => WT,
+      defaultExceptionType: () => xm,
+      defaultGlobalObjectKey: () => dM,
+      defaultInternalLoggerLevel: () => NU,
+      defaultLogLevel: () => bm,
+      faro: () => ZT,
+      genShortID: () => vU,
+      getCurrentTimestamp: () => BU,
+      getDataFromSafariExtensions: () => Lm,
+      getIgnoreUrls: () => ET,
+      getInternalFaroFromGlobalObject: () => LT,
+      getStackFramesFromError: () => Bm,
+      getTransportBody: () => mM,
+      getUrlFromResource: () => DT,
+      getWebInstrumentations: () => rz,
+      globalObject: () => jT,
+      initializeFaro: () => AM,
+      internalGlobalObjectKey: () => lT,
+      isArray: () => tT,
+      isBoolean: () => JT,
+      isDomError: () => VT,
+      isDomException: () => uT,
+      isElement: () => rT,
+      isElementDefined: () => CT,
+      TB: () => NT,
+      isError: () => FT,
+      isErrorDefined: () => sT,
+      isErrorEvent: () => PT,
+      isEvent: () => QT,
+      isEventDefined: () => IT,
+      isFunction: () => wT,
+      isInstanceOf: () => qT,
+      isInt: () => YT,
+      isInternalFaroOnGlobalObject: () => BT,
+      isMap: () => ST,
+      isMapDefined: () => KT,
+      isNull: () => bT,
+      isNumber: () => eT,
+      isObject: () => dT,
+      isPrimitive: () => XT,
+      isRegExp: () => aT,
+      isString: () => OT,
+      isSymbol: () => xT,
+      isSyntheticEvent: () => GT,
+      isThenable: () => yT,
+      isToString: () => fT,
+      isTypeof: () => vT,
+      isUndefined: () => iT,
+      makeCoreConfig: () => aM,
+      noop: () => KU,
+      osMeta: () => hz,
+      parseStacktrace: () => Zm,
+      sdkMeta: () => oz,
+      setInternalFaroOnGlobalObject: () => pT,
+      transportItemTypeToBodyKey: () => TM,
+      unknownString: () => sm,
+      userActionDataAttribute: () => hW,
+      userActionTimeoutDataAttribute: () => DW
     });
-    const Op = "browser",
-      op = "com.grafana.faro.session",
-      Ip = 144e5,
-      Sp = 9e5,
-      xp = 1e3,
-      Lp = Sp,
-      Yp = {
+    const WT = "browser",
+      zT = "com.grafana.faro.session",
+      MT = 144e5,
+      gT = 9e5,
+      nT = 1e3,
+      HT = gT,
+      kT = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: Lp
+        maxSessionPersistenceTime: HT
       };
-    const Dp = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof cp.g ? cp.g : "undefined" !== typeof self ? self : void 0;
-    const Ap = "_faroInternal";
+    const jT = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof mT.g ? mT.g : "undefined" !== typeof self ? self : void 0;
+    const lT = "_faroInternal";
 
-    function Pp() {
-      return Dp[Ap]
+    function LT() {
+      return jT[lT]
     }
 
-    function Wp(pp) {
-      pp.config.isolate ? pp.internalLogger.debug("Skipping registering internal Faro instance on global object") : (pp.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Dp, Ap, {
+    function pT(TT) {
+      TT.config.isolate ? TT.internalLogger.debug("Skipping registering internal Faro instance on global object") : (TT.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(jT, lT, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: pp
+        value: TT
       }))
     }
 
-    function yp() {
-      return Ap in Dp
+    function BT() {
+      return lT in jT
     }
-    let Up = {
+    let ZT = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function wp(pp, ip, cp, Op, op, Ip, Sp) {
-      return ip.debug("Initializing Faro"), Up = {
-          api: Ip,
-          config: cp,
-          instrumentations: Sp,
-          internalLogger: ip,
-          metas: Op,
-          pause: op.pause,
-          transports: op,
-          unpatchedConsole: pp,
-          unpause: op.unpause
-        }, Wp(Up),
-        function(pp) {
-          if (pp.config.preventGlobalExposure) pp.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function cT(TT, UT, mT, WT, zT, MT, gT) {
+      return UT.debug("Initializing Faro"), ZT = {
+          api: MT,
+          config: mT,
+          instrumentations: gT,
+          internalLogger: UT,
+          metas: WT,
+          pause: zT.pause,
+          transports: zT,
+          unpatchedConsole: TT,
+          unpause: zT.unpause
+        }, pT(ZT),
+        function(TT) {
+          if (TT.config.preventGlobalExposure) TT.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (pp.internalLogger.debug(`Registering public faro reference in the global scope using "${pp.config.globalObjectKey}" key`), pp.config.globalObjectKey in Dp) return void pp.internalLogger.warn(`Skipping global registration due to key "${pp.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(Dp, pp.config.globalObjectKey, {
+            if (TT.internalLogger.debug(`Registering public faro reference in the global scope using "${TT.config.globalObjectKey}" key`), TT.config.globalObjectKey in jT) return void TT.internalLogger.warn(`Skipping global registration due to key "${TT.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(jT, TT.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: pp
+              value: TT
             })
           }
-        }(Up), Up
+        }(ZT), ZT
     }
 
-    function vp(pp, ip) {
-      return typeof pp === ip
+    function vT(TT, UT) {
+      return typeof TT === UT
     }
 
-    function tp(pp, ip) {
-      return Object.prototype.toString.call(pp) === `[object ${ip}]`
+    function fT(TT, UT) {
+      return Object.prototype.toString.call(TT) === `[object ${UT}]`
     }
 
-    function Hp(pp, ip) {
+    function qT(TT, UT) {
       try {
-        return pp instanceof ip
-      } catch (cp) {
+        return TT instanceof UT
+      } catch (mT) {
         return !1
       }
     }
-    const dp = pp => vp(pp, "undefined"),
-      ep = pp => vp(pp, "null"),
-      jp = pp => vp(pp, "string"),
-      kp = pp => vp(pp, "number") && !isNaN(pp) || vp(pp, "bigint"),
-      mp = pp => kp(pp) && Number.isInteger(pp),
-      Rp = pp => vp(pp, "boolean"),
-      qp = pp => vp(pp, "symbol"),
-      Mp = pp => !ep(pp) && vp(pp, "object"),
-      Cp = pp => vp(pp, "function"),
-      Ep = pp => tp(pp, "Array"),
-      Xp = pp => tp(pp, "RegExp"),
-      lp = pp => Cp(null === pp || void 0 === pp ? void 0 : pp.then),
-      Qp = pp => !Mp(pp) && !Cp(pp),
-      Jp = "undefined" !== typeof Event,
-      Bp = pp => Jp && Hp(pp, Event),
-      Np = "undefined" !== typeof Error,
-      Tp = pp => Np && Hp(pp, Error),
-      fp = pp => tp(pp, "ErrorEvent"),
-      bp = pp => tp(pp, "DOMError"),
-      hp = pp => tp(pp, "DOMException"),
-      ap = "undefined" !== typeof Element,
-      np = pp => ap && Hp(pp, Element),
-      Fp = "undefined" !== typeof Map,
-      gp = pp => Fp && Hp(pp, Map),
-      Gp = pp => Mp(pp) && "nativeEvent" in pp && "preventDefault" in pp && "stopPropagation" in pp;
+    const iT = TT => vT(TT, "undefined"),
+      bT = TT => vT(TT, "null"),
+      OT = TT => vT(TT, "string"),
+      eT = TT => vT(TT, "number") && !isNaN(TT) || vT(TT, "bigint"),
+      YT = TT => eT(TT) && Number.isInteger(TT),
+      JT = TT => vT(TT, "boolean"),
+      xT = TT => vT(TT, "symbol"),
+      dT = TT => !bT(TT) && vT(TT, "object"),
+      wT = TT => vT(TT, "function"),
+      tT = TT => fT(TT, "Array"),
+      aT = TT => fT(TT, "RegExp"),
+      yT = TT => wT(null === TT || void 0 === TT ? void 0 : TT.then),
+      XT = TT => !dT(TT) && !wT(TT),
+      IT = "undefined" !== typeof Event,
+      QT = TT => IT && qT(TT, Event),
+      sT = "undefined" !== typeof Error,
+      FT = TT => sT && qT(TT, Error),
+      PT = TT => fT(TT, "ErrorEvent"),
+      VT = TT => fT(TT, "DOMError"),
+      uT = TT => fT(TT, "DOMException"),
+      CT = "undefined" !== typeof Element,
+      rT = TT => CT && qT(TT, Element),
+      KT = "undefined" !== typeof Map,
+      ST = TT => KT && qT(TT, Map),
+      GT = TT => dT(TT) && "nativeEvent" in TT && "preventDefault" in TT && "stopPropagation" in TT;
 
-    function rp(pp) {
-      return null == pp || (Ep(pp) || jp(pp) ? 0 === pp.length : !!Mp(pp) && 0 === Object.keys(pp).length)
+    function NT(TT) {
+      return null == TT || (tT(TT) || OT(TT) ? 0 === TT.length : !!dT(TT) && 0 === Object.keys(TT).length)
     }
 
-    function Zp() {
-      return Up.transports.transports.flatMap((pp => pp.getIgnoreUrls()))
+    function ET() {
+      return ZT.transports.transports.flatMap((TT => TT.getIgnoreUrls()))
     }
 
-    function zp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return Zp().some((ip => pp && null != pp.match(ip)))
+    function hT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return ET().some((UT => TT && null != TT.match(UT)))
     }
 
-    function sp(pp) {
-      return jp(pp) ? pp : pp instanceof URL ? pp.href : !rp(pp) && Cp(null === pp || void 0 === pp ? void 0 : pp.toString) ? pp.toString() : void 0
+    function DT(TT) {
+      return OT(TT) ? TT : TT instanceof URL ? TT.href : !NT(TT) && wT(null === TT || void 0 === TT ? void 0 : TT.toString) ? TT.toString() : void 0
     }
-    const Kp = "sessionStorage",
-      Vp = "localStorage";
+    const oT = "sessionStorage",
+      AT = "localStorage";
 
-    function ii(pp) {
+    function RT(TT) {
       try {
-        let ip;
-        ip = window[pp];
-        const cp = "__faro_storage_test__";
-        return ip.setItem(cp, cp), ip.removeItem(cp), !0
-      } catch (cp) {
-        var ip;
-        return null === (ip = Up.internalLogger) || void 0 === ip || ip.info(`Web storage of type ${pp} is not available. Reason: ${cp}`), !1
+        let UT;
+        UT = window[TT];
+        const mT = "__faro_storage_test__";
+        return UT.setItem(mT, mT), UT.removeItem(mT), !0
+      } catch (mT) {
+        var UT;
+        return null === (UT = ZT.internalLogger) || void 0 === UT || UT.info(`Web storage of type ${TT} is not available. Reason: ${mT}`), !1
       }
     }
 
-    function ci(pp, ip) {
-      return xi(ip) ? window[ip].getItem(pp) : null
+    function TU(TT, UT) {
+      return MU(UT) ? window[UT].getItem(TT) : null
     }
 
-    function Oi(pp, ip, cp) {
-      if (xi(cp)) try {
-        window[cp].setItem(pp, ip)
-      } catch (Op) {}
+    function UU(TT, UT, mT) {
+      if (MU(mT)) try {
+        window[mT].setItem(TT, UT)
+      } catch (WT) {}
     }
 
-    function oi(pp, ip) {
-      xi(ip) && window[ip].removeItem(pp)
+    function mU(TT, UT) {
+      MU(UT) && window[UT].removeItem(TT)
     }
-    const Ii = ii(Vp),
-      Si = ii(Kp);
+    const WU = RT(AT),
+      zU = RT(oT);
 
-    function xi(pp) {
-      return pp === Vp ? Ii : pp === Kp && Si
-    }
-
-    function Li(pp) {
-      return Li = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(pp) {
-        return typeof pp
-      } : function(pp) {
-        return pp && "function" == typeof Symbol && pp.constructor === Symbol && pp !== Symbol.prototype ? "symbol" : typeof pp
-      }, Li(pp)
+    function MU(TT) {
+      return TT === AT ? WU : TT === oT && zU
     }
 
-    function Yi(pp) {
-      var ip = function(pp, ip) {
-        if ("object" != Li(pp) || !pp) return pp;
-        var cp = pp[Symbol.toPrimitive];
-        if (void 0 !== cp) {
-          var Op = cp.call(pp, ip || "default");
-          if ("object" != Li(Op)) return Op;
+    function gU(TT) {
+      return gU = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(TT) {
+        return typeof TT
+      } : function(TT) {
+        return TT && "function" == typeof Symbol && TT.constructor === Symbol && TT !== Symbol.prototype ? "symbol" : typeof TT
+      }, gU(TT)
+    }
+
+    function nU(TT) {
+      var UT = function(TT, UT) {
+        if ("object" != gU(TT) || !TT) return TT;
+        var mT = TT[Symbol.toPrimitive];
+        if (void 0 !== mT) {
+          var WT = mT.call(TT, UT || "default");
+          if ("object" != gU(WT)) return WT;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === ip ? String : Number)(pp)
-      }(pp, "string");
-      return "symbol" == Li(ip) ? ip : ip + ""
+        return ("string" === UT ? String : Number)(TT)
+      }(TT, "string");
+      return "symbol" == gU(UT) ? UT : UT + ""
     }
 
-    function Di(pp, ip, cp) {
-      return (ip = Yi(ip)) in pp ? Object.defineProperty(pp, ip, {
-        value: cp,
+    function HU(TT, UT, mT) {
+      return (UT = nU(UT)) in TT ? Object.defineProperty(TT, UT, {
+        value: mT,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : pp[ip] = cp, pp
+      }) : TT[UT] = mT, TT
     }
 
-    function Ai(pp, ip) {
-      var cp = Object.keys(pp);
+    function kU(TT, UT) {
+      var mT = Object.keys(TT);
       if (Object.getOwnPropertySymbols) {
-        var Op = Object.getOwnPropertySymbols(pp);
-        ip && (Op = Op.filter((function(ip) {
-          return Object.getOwnPropertyDescriptor(pp, ip).enumerable
-        }))), cp.push.apply(cp, Op)
+        var WT = Object.getOwnPropertySymbols(TT);
+        UT && (WT = WT.filter((function(UT) {
+          return Object.getOwnPropertyDescriptor(TT, UT).enumerable
+        }))), mT.push.apply(mT, WT)
       }
-      return cp
+      return mT
     }
 
-    function Pi(pp) {
-      for (var ip = 1; ip < arguments.length; ip++) {
-        var cp = null != arguments[ip] ? arguments[ip] : {};
-        ip % 2 ? Ai(Object(cp), !0).forEach((function(ip) {
-          Di(pp, ip, cp[ip])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(pp, Object.getOwnPropertyDescriptors(cp)) : Ai(Object(cp)).forEach((function(ip) {
-          Object.defineProperty(pp, ip, Object.getOwnPropertyDescriptor(cp, ip))
+    function jU(TT) {
+      for (var UT = 1; UT < arguments.length; UT++) {
+        var mT = null != arguments[UT] ? arguments[UT] : {};
+        UT % 2 ? kU(Object(mT), !0).forEach((function(UT) {
+          HU(TT, UT, mT[UT])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(TT, Object.getOwnPropertyDescriptors(mT)) : kU(Object(mT)).forEach((function(UT) {
+          Object.defineProperty(TT, UT, Object.getOwnPropertyDescriptor(mT, UT))
         }))
       }
-      return pp
+      return TT
     }
 
-    function Wi() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Up;
-      var ip, cp, Op;
-      const op = pp.config.sessionTracking,
-        Ip = null !== (ip = null !== (cp = null === op || void 0 === op || null === (Op = op.sampler) || void 0 === Op ? void 0 : Op.call(op, {
-          metas: pp.metas.value
-        })) && void 0 !== cp ? cp : null === op || void 0 === op ? void 0 : op.samplingRate) && void 0 !== ip ? ip : 1,
-        Sp = "number" === typeof Ip ? function(pp) {
-          return Math.min(1, Math.max(0, pp))
-        }(Ip) : 0;
-      if (!(Sp > 0)) return !1;
-      if (1 === Sp) return !0;
+    function lU() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ZT;
+      var UT, mT, WT;
+      const zT = TT.config.sessionTracking,
+        MT = null !== (UT = null !== (mT = null === zT || void 0 === zT || null === (WT = zT.sampler) || void 0 === WT ? void 0 : WT.call(zT, {
+          metas: TT.metas.value
+        })) && void 0 !== mT ? mT : null === zT || void 0 === zT ? void 0 : zT.samplingRate) && void 0 !== UT ? UT : 1,
+        gT = "number" === typeof MT ? function(TT) {
+          return Math.min(1, Math.max(0, TT))
+        }(MT) : 0;
+      if (!(gT > 0)) return !1;
+      if (1 === gT) return !0;
       try {
-        const pp = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === pp || void 0 === pp ? void 0 : pp.getRandomValues)) {
-          const ip = new Uint32Array(1);
-          return pp.getRandomValues(ip), ip[0] / Math.pow(2, 32) < Sp
+        const TT = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === TT || void 0 === TT ? void 0 : TT.getRandomValues)) {
+          const UT = new Uint32Array(1);
+          return TT.getRandomValues(UT), UT[0] / Math.pow(2, 32) < gT
         }
-      } catch (xp) {}
-      return Math.random() < Sp
+      } catch (nT) {}
+      return Math.random() < gT
     }
 
-    function yi() {
+    function LU() {
       return Date.now()
     }
 
-    function Ui() {
+    function pU() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function wi() {
+    function BU() {
       return (new Date).toISOString()
     }
 
-    function vi(pp) {
-      return new Date(pp).toISOString()
+    function ZU(TT) {
+      return new Date(TT).toISOString()
     }
-    const ti = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const cU = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function Hi() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const ip = new Uint32Array(pp),
-        cp = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === cp || void 0 === cp ? void 0 : cp.getRandomValues) cp.getRandomValues(ip);
+    function vU() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const UT = new Uint32Array(TT),
+        mT = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === mT || void 0 === mT ? void 0 : mT.getRandomValues) mT.getRandomValues(UT);
       else
-        for (let op = 0; op < pp; op++) ip[op] = Math.floor(4294967296 * Math.random());
-      let Op = "";
-      for (let op = 0; op < pp; op++) Op += ti[ip[op] % 59];
-      return Op
+        for (let zT = 0; zT < TT; zT++) UT[zT] = Math.floor(4294967296 * Math.random());
+      let WT = "";
+      for (let zT = 0; zT < TT; zT++) WT += cU[UT[zT] % 59];
+      return WT
     }
 
-    function di(pp, ip) {
-      if (pp === ip) return !0;
-      if (vp(pp, "number") && isNaN(pp)) return vp(ip, "number") && isNaN(ip);
-      const cp = Ep(pp),
-        Op = Ep(ip);
-      if (cp !== Op) return !1;
-      if (cp && Op) {
-        const cp = pp.length;
-        if (cp !== ip.length) return !1;
-        for (let Op = cp; 0 !== Op--;)
-          if (!di(pp[Op], ip[Op])) return !1;
+    function fU(TT, UT) {
+      if (TT === UT) return !0;
+      if (vT(TT, "number") && isNaN(TT)) return vT(UT, "number") && isNaN(UT);
+      const mT = tT(TT),
+        WT = tT(UT);
+      if (mT !== WT) return !1;
+      if (mT && WT) {
+        const mT = TT.length;
+        if (mT !== UT.length) return !1;
+        for (let WT = mT; 0 !== WT--;)
+          if (!fU(TT[WT], UT[WT])) return !1;
         return !0
       }
-      const op = Mp(pp),
-        Ip = Mp(ip);
-      if (op !== Ip) return !1;
-      if (pp && ip && op && Ip) {
-        const cp = Object.keys(pp),
-          Op = Object.keys(ip);
-        if (cp.length !== Op.length) return !1;
-        for (let pp of cp)
-          if (!Op.includes(pp)) return !1;
-        for (let op of cp)
-          if (!di(pp[op], ip[op])) return !1;
+      const zT = dT(TT),
+        MT = dT(UT);
+      if (zT !== MT) return !1;
+      if (TT && UT && zT && MT) {
+        const mT = Object.keys(TT),
+          WT = Object.keys(UT);
+        if (mT.length !== WT.length) return !1;
+        for (let TT of mT)
+          if (!WT.includes(TT)) return !1;
+        for (let zT of mT)
+          if (!fU(TT[zT], UT[zT])) return !1;
         return !0
       }
       return !1
     }
-    const ei = "click",
-      ui = "navigation",
-      ji = "view_changed",
-      ki = "session_start",
-      mi = "session_resume",
-      Ri = "session_extend",
-      qi = "service_name_override",
-      Mi = "route_change";
+    const qU = "click",
+      iU = "navigation",
+      bU = "view_changed",
+      OU = "session_start",
+      eU = "session_resume",
+      YU = "session_extend",
+      JU = "service_name_override",
+      xU = "route_change";
 
-    function Ci() {
+    function dU() {
       let {
-        sessionId: pp,
-        started: ip,
-        lastActivity: cp,
-        isSampled: Op = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, op = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up;
-      var Ip;
-      const Sp = yi(),
-        xp = null === (Ip = op.config) || void 0 === Ip || null === (Ip = Ip.sessionTracking) || void 0 === Ip ? void 0 : Ip.generateSessionId;
-      return null == pp && (pp = "function" === typeof xp ? xp() : Hi()), {
-        sessionId: pp,
-        lastActivity: null !== cp && void 0 !== cp ? cp : Sp,
-        started: null !== ip && void 0 !== ip ? ip : Sp,
-        isSampled: Op
+        sessionId: TT,
+        started: UT,
+        lastActivity: mT,
+        isSampled: WT = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, zT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZT;
+      var MT;
+      const gT = LU(),
+        nT = null === (MT = zT.config) || void 0 === MT || null === (MT = MT.sessionTracking) || void 0 === MT ? void 0 : MT.generateSessionId;
+      return null == TT && (TT = "function" === typeof nT ? nT() : vU()), {
+        sessionId: TT,
+        lastActivity: null !== mT && void 0 !== mT ? mT : gT,
+        started: null !== UT && void 0 !== UT ? UT : gT,
+        isSampled: WT
       }
     }
 
-    function Ei(pp) {
-      if (null == pp) return !1;
-      const ip = yi();
-      return ip - pp.started < 144e5 && ip - pp.lastActivity < Sp
+    function wU(TT) {
+      if (null == TT) return !1;
+      const UT = LU();
+      return UT - TT.started < 144e5 && UT - TT.lastActivity < gT
     }
 
-    function Xi(pp) {
+    function tU(TT) {
       let {
-        fetchUserSession: ip,
-        storeUserSession: cp,
-        adoptSession: Op,
-        updateInterval: op = 0
-      } = pp, xp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up, Lp = 0;
+        fetchUserSession: UT,
+        storeUserSession: mT,
+        adoptSession: WT,
+        updateInterval: zT = 0
+      } = TT, nT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZT, HT = 0;
       return function() {
         let {
-          forceSessionExtend: pp = !1,
-          refreshActivity: Yp = !0
+          forceSessionExtend: TT = !1,
+          refreshActivity: kT = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var Dp, Ap;
-        if (!ip || !cp) return;
-        const Pp = yi();
-        if (!pp && Pp < Lp && Lp - Pp <= op) return;
-        const Wp = xp.config.sessionTracking,
-          yp = null === Wp || void 0 === Wp ? void 0 : Wp.persistent;
-        if (yp && !Ii || !yp && !Si) return;
-        const Up = ip();
-        if (Lp = Math.min(Pp + op, (null !== (Dp = null === Up || void 0 === Up ? void 0 : Up.started) && void 0 !== Dp ? Dp : Pp) + Ip, (null !== (Ap = null === Up || void 0 === Up ? void 0 : Up.lastActivity) && void 0 !== Ap ? Ap : Pp) + Sp), !1 === pp && Ei(Up)) {
-          var wp;
-          Yp && cp(Pi(Pi({}, Up), {}, {
-            lastActivity: Pp
+        var jT, lT;
+        if (!UT || !mT) return;
+        const LT = LU();
+        if (!TT && LT < HT && HT - LT <= zT) return;
+        const pT = nT.config.sessionTracking,
+          BT = null === pT || void 0 === pT ? void 0 : pT.persistent;
+        if (BT && !WU || !BT && !zU) return;
+        const ZT = UT();
+        if (HT = Math.min(LT + zT, (null !== (jT = null === ZT || void 0 === ZT ? void 0 : ZT.started) && void 0 !== jT ? jT : LT) + MT, (null !== (lT = null === ZT || void 0 === ZT ? void 0 : ZT.lastActivity) && void 0 !== lT ? lT : LT) + gT), !1 === TT && wU(ZT)) {
+          var cT;
+          kT && mT(jU(jU({}, ZT), {}, {
+            lastActivity: LT
           }));
-          const pp = null === (wp = xp.metas.value.session) || void 0 === wp ? void 0 : wp.id;
-          null != Op && null != Up.sessionMeta && Up.sessionId !== pp && Op(Up.sessionMeta)
+          const TT = null === (cT = nT.metas.value.session) || void 0 === cT ? void 0 : cT.id;
+          null != WT && null != ZT.sessionMeta && ZT.sessionId !== TT && WT(ZT.sessionMeta)
         } else {
-          var vp, tp, Hp;
-          let pp = Qi(Ci({
-            isSampled: Wi(xp)
-          }, xp), Up, xp);
-          Lp = Pp + op, cp(pp), null === (vp = xp.api) || void 0 === vp || vp.setSession(pp.sessionMeta), null === Wp || void 0 === Wp || null === (tp = Wp.onSessionChange) || void 0 === tp || tp.call(Wp, null !== (Hp = null === Up || void 0 === Up ? void 0 : Up.sessionMeta) && void 0 !== Hp ? Hp : null, pp.sessionMeta)
+          var vT, fT, qT;
+          let TT = yU(dU({
+            isSampled: lU(nT)
+          }, nT), ZT, nT);
+          HT = LT + zT, mT(TT), null === (vT = nT.api) || void 0 === vT || vT.setSession(TT.sessionMeta), null === pT || void 0 === pT || null === (fT = pT.onSessionChange) || void 0 === fT || fT.call(pT, null !== (qT = null === ZT || void 0 === ZT ? void 0 : ZT.sessionMeta) && void 0 !== qT ? qT : null, TT.sessionMeta)
         }
       }
     }
 
-    function li(pp) {
-      let ip, {
-          fetchUserSession: cp,
-          storeUserSession: Op,
-          updateInterval: op = 0
-        } = pp,
-        Ip = 0;
-      return pp => {
-        const Sp = yi();
-        if (pp === ip && Sp < Ip && Ip - Sp <= op) return;
-        ip = pp, Ip = Sp + op;
-        const xp = cp();
-        (null === xp || void 0 === xp ? void 0 : xp.sessionId) === pp && Ei(xp) && Op(Pi(Pi({}, xp), {}, {
-          lastActivity: Sp
+    function aU(TT) {
+      let UT, {
+          fetchUserSession: mT,
+          storeUserSession: WT,
+          updateInterval: zT = 0
+        } = TT,
+        MT = 0;
+      return TT => {
+        const gT = LU();
+        if (TT === UT && gT < MT && MT - gT <= zT) return;
+        UT = TT, MT = gT + zT;
+        const nT = mT();
+        (null === nT || void 0 === nT ? void 0 : nT.sessionId) === TT && wU(nT) && WT(jU(jU({}, nT), {}, {
+          lastActivity: gT
         }))
       }
     }
 
-    function Qi(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Up;
-      var Op, op, Ip, Sp, xp, Lp;
-      const Yp = Pi(Pi({}, pp), {}, {
+    function yU(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ZT;
+      var WT, zT, MT, gT, nT, HT;
+      const kT = jU(jU({}, TT), {}, {
           sessionMeta: {
-            id: pp.sessionId,
-            attributes: Bi(Pi(Pi(Pi({}, null === (Op = cp.config.sessionTracking) || void 0 === Op || null === (Op = Op.session) || void 0 === Op ? void 0 : Op.attributes), null !== (op = null === (Ip = cp.metas.value.session) || void 0 === Ip ? void 0 : Ip.attributes) && void 0 !== op ? op : {}), {}, {
-              isSampled: pp.isSampled.toString()
+            id: TT.sessionId,
+            attributes: IU(jU(jU(jU({}, null === (WT = mT.config.sessionTracking) || void 0 === WT || null === (WT = WT.session) || void 0 === WT ? void 0 : WT.attributes), null !== (zT = null === (MT = mT.metas.value.session) || void 0 === MT ? void 0 : MT.attributes) && void 0 !== zT ? zT : {}), {}, {
+              isSampled: TT.isSampled.toString()
             }))
           }
         }),
-        Dp = null !== (Sp = null === (xp = cp.metas.value.session) || void 0 === xp ? void 0 : xp.overrides) && void 0 !== Sp ? Sp : null === ip || void 0 === ip || null === (Lp = ip.sessionMeta) || void 0 === Lp ? void 0 : Lp.overrides;
-      rp(Dp) || (Yp.sessionMeta.overrides = Dp);
-      const Ap = null === ip || void 0 === ip ? void 0 : ip.sessionId;
-      return null != Ap && (Yp.sessionMeta.attributes.previousSession = Ap), Yp
+        jT = null !== (gT = null === (nT = mT.metas.value.session) || void 0 === nT ? void 0 : nT.overrides) && void 0 !== gT ? gT : null === UT || void 0 === UT || null === (HT = UT.sessionMeta) || void 0 === HT ? void 0 : HT.overrides;
+      NT(jT) || (kT.sessionMeta.overrides = jT);
+      const lT = null === UT || void 0 === UT ? void 0 : UT.sessionId;
+      return null != lT && (kT.sessionMeta.attributes.previousSession = lT), kT
     }
 
-    function Ji(pp) {
+    function XU(TT) {
       let {
-        fetchUserSession: ip,
-        storeUserSession: cp
-      } = pp, Op = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up, op = !1;
-      return function(pp) {
-        if (op) return;
-        const Ip = pp.session,
-          Sp = ip();
-        let xp = null === Ip || void 0 === Ip ? void 0 : Ip.id;
-        const Lp = null === Ip || void 0 === Ip ? void 0 : Ip.attributes,
-          Yp = null === Ip || void 0 === Ip ? void 0 : Ip.overrides,
-          Dp = null === Sp || void 0 === Sp ? void 0 : Sp.sessionMeta,
-          Ap = null === Dp || void 0 === Dp ? void 0 : Dp.overrides,
-          Pp = !!Yp && !di(Yp, Ap),
-          Wp = !!Lp && !di(Lp, null === Dp || void 0 === Dp ? void 0 : Dp.attributes);
-        if (Ip && xp !== (null === Sp || void 0 === Sp ? void 0 : Sp.sessionId) || Wp || Pp) {
-          var yp, Up;
-          const pp = null != Sp && xp === Sp.sessionId,
-            ip = Qi(pp ? Sp : Ci({
-              sessionId: xp,
-              isSampled: Wi(Op)
-            }, Op), Sp, Op),
-            Ip = null === Sp || void 0 === Sp || null === (yp = Sp.sessionMeta) || void 0 === yp || null === (yp = yp.attributes) || void 0 === yp ? void 0 : yp.previousSession;
-          pp && null != Ip && Ip !== ip.sessionId && (ip.sessionMeta.attributes.previousSession = Ip), (null === (Up = ip.sessionMeta.attributes) || void 0 === Up ? void 0 : Up.previousSession) === ip.sessionId && delete ip.sessionMeta.attributes.previousSession, cp(ip),
-            function(pp, ip) {
-              let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var op, Ip, Sp;
-              if (!ip) return;
-              const xp = cp.serviceName,
-                Lp = null !== (op = null !== (Ip = Op.serviceName) && void 0 !== Ip ? Ip : null === (Sp = pp.metas.value.app) || void 0 === Sp ? void 0 : Sp.name) && void 0 !== op ? op : "";
-              xp && xp !== Lp && pp.api.pushEvent(qi, {
-                serviceName: xp,
-                previousServiceName: Lp
+        fetchUserSession: UT,
+        storeUserSession: mT
+      } = TT, WT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZT, zT = !1;
+      return function(TT) {
+        if (zT) return;
+        const MT = TT.session,
+          gT = UT();
+        let nT = null === MT || void 0 === MT ? void 0 : MT.id;
+        const HT = null === MT || void 0 === MT ? void 0 : MT.attributes,
+          kT = null === MT || void 0 === MT ? void 0 : MT.overrides,
+          jT = null === gT || void 0 === gT ? void 0 : gT.sessionMeta,
+          lT = null === jT || void 0 === jT ? void 0 : jT.overrides,
+          LT = !!kT && !fU(kT, lT),
+          pT = !!HT && !fU(HT, null === jT || void 0 === jT ? void 0 : jT.attributes);
+        if (MT && nT !== (null === gT || void 0 === gT ? void 0 : gT.sessionId) || pT || LT) {
+          var BT, ZT;
+          const TT = null != gT && nT === gT.sessionId,
+            UT = yU(TT ? gT : dU({
+              sessionId: nT,
+              isSampled: lU(WT)
+            }, WT), gT, WT),
+            MT = null === gT || void 0 === gT || null === (BT = gT.sessionMeta) || void 0 === BT || null === (BT = BT.attributes) || void 0 === BT ? void 0 : BT.previousSession;
+          TT && null != MT && MT !== UT.sessionId && (UT.sessionMeta.attributes.previousSession = MT), (null === (ZT = UT.sessionMeta.attributes) || void 0 === ZT ? void 0 : ZT.previousSession) === UT.sessionId && delete UT.sessionMeta.attributes.previousSession, mT(UT),
+            function(TT, UT) {
+              let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var zT, MT, gT;
+              if (!UT) return;
+              const nT = mT.serviceName,
+                HT = null !== (zT = null !== (MT = WT.serviceName) && void 0 !== MT ? MT : null === (gT = TT.metas.value.app) || void 0 === gT ? void 0 : gT.name) && void 0 !== zT ? zT : "";
+              nT && nT !== HT && TT.api.pushEvent(JU, {
+                serviceName: nT,
+                previousServiceName: HT
               })
-            }(Op, Pp, Yp, Ap), op = !0;
+            }(WT, LT, kT, lT), zT = !0;
           try {
-            Op.api.setSession(ip.sessionMeta)
+            WT.api.setSession(UT.sessionMeta)
           } finally {
-            op = !1
+            zT = !1
           }
         }
       }
     }
 
-    function Bi(pp) {
-      const ip = {};
-      for (const cp of Object.keys(pp)) {
-        const Op = pp[cp];
-        void 0 !== Op && (ip[cp] = Op)
+    function IU(TT) {
+      const UT = {};
+      for (const mT of Object.keys(TT)) {
+        const WT = TT[mT];
+        void 0 !== WT && (UT[mT] = WT)
       }
-      return ip
+      return UT
     }
 
-    function Ni() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== pp && void 0 !== pp ? pp : {}, function() {
-        const pp = new WeakSet;
-        return function(ip, cp) {
-          if (Mp(cp) && null !== cp) {
-            if (pp.has(cp)) return null;
-            pp.add(cp)
+    function QU() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== TT && void 0 !== TT ? TT : {}, function() {
+        const TT = new WeakSet;
+        return function(UT, mT) {
+          if (dT(mT) && null !== mT) {
+            if (TT.has(mT)) return null;
+            TT.add(mT)
           }
-          return cp
+          return mT
         }
       }())
     }
 
-    function Ti() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const ip = {};
-      for (const [cp, Op] of Object.entries(pp)) ip[cp] = Mp(Op) && null !== Op ? Ni(Op) : String(Op);
-      return ip
+    function sU() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const UT = {};
+      for (const [mT, WT] of Object.entries(TT)) UT[mT] = dT(WT) && null !== WT ? QU(WT) : String(WT);
+      return UT
     }
-    var fi = class pp {
+    var FU = class TT {
       constructor() {
-        var ip = this;
-        let cp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Up;
-        this.context = cp, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = pp => {
+        var UT = this;
+        let mT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ZT;
+        this.context = mT, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = TT => {
           this.adopting = !0;
           try {
-            var ip;
-            null === (ip = this.context.api) || void 0 === ip || ip.setSession(pp)
+            var UT;
+            null === (UT = this.context.api) || void 0 === UT || UT.setSession(TT)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: pp = !0
+            refreshActivity: TT = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return ip.updateUserSession({
-            refreshActivity: pp
+          return UT.updateUserSession({
+            refreshActivity: TT
           })
-        }, this.recordActivity = li({
-          fetchUserSession: pp.fetchUserSession,
-          storeUserSession: pp.storeUserSession,
-          updateInterval: xp
-        }), this.updateUserSession = Xi({
-          fetchUserSession: pp.fetchUserSession,
-          storeUserSession: pp.storeUserSession,
+        }, this.recordActivity = aU({
+          fetchUserSession: TT.fetchUserSession,
+          storeUserSession: TT.storeUserSession,
+          updateInterval: nT
+        }), this.updateUserSession = tU({
+          fetchUserSession: TT.fetchUserSession,
+          storeUserSession: TT.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: xp
-        }, cp), this.init()
+          updateInterval: nT
+        }, mT), this.init()
       }
       static removeUserSession() {
-        oi(op, pp.storageTypeLocal)
+        mU(zT, TT.storageTypeLocal)
       }
-      static storeUserSession(ip) {
-        Oi(op, Ni(ip), pp.storageTypeLocal)
+      static storeUserSession(UT) {
+        UU(zT, QU(UT), TT.storageTypeLocal)
       }
       static fetchUserSession() {
-        const ip = ci(op, pp.storageTypeLocal);
-        return ip ? JSON.parse(ip) : null
+        const UT = TU(zT, TT.storageTypeLocal);
+        return UT ? JSON.parse(UT) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var pp;
+            var TT;
             this.updateSession({
               refreshActivity: !1
             });
-            const ip = null === (pp = this.context.api) || void 0 === pp || null === (pp = pp.getSession()) || void 0 === pp ? void 0 : pp.id;
-            ip && this.recordActivity(ip)
+            const UT = null === (TT = this.context.api) || void 0 === TT || null === (TT = TT.getSession()) || void 0 === TT ? void 0 : TT.id;
+            UT && this.recordActivity(UT)
           }
-        })), this.context.metas.addListener(Ji({
-          fetchUserSession: pp.fetchUserSession,
-          storeUserSession: pp.storeUserSession
+        })), this.context.metas.addListener(XU({
+          fetchUserSession: TT.fetchUserSession,
+          storeUserSession: TT.storeUserSession
         }, this.context))
       }
     };
-    fi.storageTypeLocal = Vp;
-    var bi = class pp {
+    FU.storageTypeLocal = AT;
+    var PU = class TT {
       constructor() {
-        var ip = this;
-        let cp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Up;
-        this.context = cp, this.isAdopting = () => !1, this.updateSession = function() {
+        var UT = this;
+        let mT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ZT;
+        this.context = mT, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: pp = !0
+            refreshActivity: TT = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return ip.updateUserSession({
-            refreshActivity: pp
+          return UT.updateUserSession({
+            refreshActivity: TT
           })
-        }, this.recordActivity = li({
-          fetchUserSession: pp.fetchUserSession,
-          storeUserSession: pp.storeUserSession,
-          updateInterval: xp
-        }), this.updateUserSession = Xi({
-          fetchUserSession: pp.fetchUserSession,
-          storeUserSession: pp.storeUserSession,
-          updateInterval: xp
-        }, cp), this.init()
+        }, this.recordActivity = aU({
+          fetchUserSession: TT.fetchUserSession,
+          storeUserSession: TT.storeUserSession,
+          updateInterval: nT
+        }), this.updateUserSession = tU({
+          fetchUserSession: TT.fetchUserSession,
+          storeUserSession: TT.storeUserSession,
+          updateInterval: nT
+        }, mT), this.init()
       }
       static removeUserSession() {
-        oi(op, pp.storageTypeSession)
+        mU(zT, TT.storageTypeSession)
       }
-      static storeUserSession(ip) {
-        Oi(op, Ni(ip), pp.storageTypeSession)
+      static storeUserSession(UT) {
+        UU(zT, QU(UT), TT.storageTypeSession)
       }
       static fetchUserSession() {
-        const ip = ci(op, pp.storageTypeSession);
-        return ip ? JSON.parse(ip) : null
+        const UT = TU(zT, TT.storageTypeSession);
+        return UT ? JSON.parse(UT) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var pp;
+            var TT;
             this.updateSession({
               refreshActivity: !1
             });
-            const ip = null === (pp = this.context.api) || void 0 === pp || null === (pp = pp.getSession()) || void 0 === pp ? void 0 : pp.id;
-            ip && this.recordActivity(ip)
+            const UT = null === (TT = this.context.api) || void 0 === TT || null === (TT = TT.getSession()) || void 0 === TT ? void 0 : TT.id;
+            UT && this.recordActivity(UT)
           }
-        })), this.context.metas.addListener(Ji({
-          fetchUserSession: pp.fetchUserSession,
-          storeUserSession: pp.storeUserSession
+        })), this.context.metas.addListener(XU({
+          fetchUserSession: TT.fetchUserSession,
+          storeUserSession: TT.storeUserSession
         }, this.context))
       }
     };
-    bi.storageTypeSession = Kp;
-    const ai = new WeakMap;
+    PU.storageTypeSession = oT;
+    const VU = new WeakMap;
 
-    function ni(pp) {
-      let ip = ai.get(pp);
-      if (!ip) {
-        let cp = [],
-          Op = [];
-        ip = {
-          addSessionUpdateListener: pp => {
-            cp.push(pp)
+    function uU(TT) {
+      let UT = VU.get(TT);
+      if (!UT) {
+        let mT = [],
+          WT = [];
+        UT = {
+          addSessionUpdateListener: TT => {
+            mT.push(TT)
           },
-          removeSessionUpdateListener: pp => {
-            cp = cp.filter((ip => ip !== pp))
+          removeSessionUpdateListener: TT => {
+            mT = mT.filter((UT => UT !== TT))
           },
-          notifySessionUpdate: pp => {
-            cp.forEach((ip => ip(pp)))
+          notifySessionUpdate: TT => {
+            mT.forEach((UT => UT(TT)))
           },
-          shouldCapture: () => Op.every((pp => pp())),
-          addCaptureFilter: pp => {
-            Op.push(pp)
+          shouldCapture: () => WT.every((TT => TT())),
+          addCaptureFilter: TT => {
+            WT.push(TT)
           },
-          removeCaptureFilter: pp => {
-            Op = Op.filter((ip => ip !== pp))
+          removeCaptureFilter: TT => {
+            WT = WT.filter((UT => UT !== TT))
           }
-        }, ai.set(pp, ip)
+        }, VU.set(TT, UT)
       }
-      return ip
+      return UT
     }
-    var Fi = class {
-      constructor(pp, ip, cp) {
-        this.metas = pp, this.transports = ip, this.onActivate = cp, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = pp => {
-          var ip, cp, Op;
-          const op = this.pending;
-          var Ip, Sp;
-          if ("overrides" === pp.type) return void(this.pending = {
-            reset: null !== (Ip = null === op || void 0 === op ? void 0 : op.reset) && void 0 !== Ip && Ip,
-            inheritOverrides: null === (Sp = null === op || void 0 === op ? void 0 : op.inheritOverrides) || void 0 === Sp || Sp,
-            session: Pi(Pi({}, null === op || void 0 === op ? void 0 : op.session), {}, {
-              overrides: Pi(Pi({}, null === op || void 0 === op ? void 0 : op.session.overrides), pp.overrides)
+    var CU = class {
+      constructor(TT, UT, mT) {
+        this.metas = TT, this.transports = UT, this.onActivate = mT, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = TT => {
+          var UT, mT, WT;
+          const zT = this.pending;
+          var MT, gT;
+          if ("overrides" === TT.type) return void(this.pending = {
+            reset: null !== (MT = null === zT || void 0 === zT ? void 0 : zT.reset) && void 0 !== MT && MT,
+            inheritOverrides: null === (gT = null === zT || void 0 === zT ? void 0 : zT.inheritOverrides) || void 0 === gT || gT,
+            session: jU(jU({}, null === zT || void 0 === zT ? void 0 : zT.session), {}, {
+              overrides: jU(jU({}, null === zT || void 0 === zT ? void 0 : zT.session.overrides), TT.overrides)
             })
           });
-          const xp = pp.session,
-            Lp = rp(xp) || null != xp && "id" in xp && !xp.id,
-            Yp = null !== (ip = null === xp || void 0 === xp ? void 0 : xp.overrides) && void 0 !== ip ? ip : null === op || void 0 === op ? void 0 : op.session.overrides;
+          const nT = TT.session,
+            HT = NT(nT) || null != nT && "id" in nT && !nT.id,
+            kT = null !== (UT = null === nT || void 0 === nT ? void 0 : nT.overrides) && void 0 !== UT ? UT : null === zT || void 0 === zT ? void 0 : zT.session.overrides;
           this.pending = {
-            reset: Lp || !(null === xp || void 0 === xp ? void 0 : xp.id) && null !== (cp = null === op || void 0 === op ? void 0 : op.reset) && void 0 !== cp && cp,
-            inheritOverrides: !(!pp.overrides && void 0 !== (null === xp || void 0 === xp ? void 0 : xp.overrides)) && (null === (Op = null === op || void 0 === op ? void 0 : op.inheritOverrides) || void 0 === Op || Op),
+            reset: HT || !(null === nT || void 0 === nT ? void 0 : nT.id) && null !== (mT = null === zT || void 0 === zT ? void 0 : zT.reset) && void 0 !== mT && mT,
+            inheritOverrides: !(!TT.overrides && void 0 !== (null === nT || void 0 === nT ? void 0 : nT.overrides)) && (null === (WT = null === zT || void 0 === zT ? void 0 : zT.inheritOverrides) || void 0 === WT || WT),
             session: {
-              id: null === xp || void 0 === xp ? void 0 : xp.id,
-              attributes: (null === xp || void 0 === xp ? void 0 : xp.attributes) && Pi({}, xp.attributes),
-              overrides: pp.overrides ? Pi(Pi({}, null === op || void 0 === op ? void 0 : op.session.overrides), pp.overrides) : Yp && Pi({}, Yp)
+              id: null === nT || void 0 === nT ? void 0 : nT.id,
+              attributes: (null === nT || void 0 === nT ? void 0 : nT.attributes) && jU({}, nT.attributes),
+              overrides: TT.overrides ? jU(jU({}, null === zT || void 0 === zT ? void 0 : zT.session.overrides), TT.overrides) : kT && jU({}, kT)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var pp, ip;
-        this.waiting = !0, ni(this.metas).addSessionUpdateListener(this.recordUpdate), ni(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (pp = (ip = this.metas).addCaptureListener) || void 0 === pp || pp.call(ip, this.activate), this.activate()
+        var TT, UT;
+        this.waiting = !0, uU(this.metas).addSessionUpdateListener(this.recordUpdate), uU(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (TT = (UT = this.metas).addCaptureListener) || void 0 === TT || TT.call(UT, this.activate), this.activate()
       }
       destroy() {
-        var pp, ip;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), ni(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (pp = (ip = this.metas).removeCaptureListener) || void 0 === pp || pp.call(ip, this.activate), ni(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var TT, UT;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), uU(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (TT = (UT = this.metas).removeCaptureListener) || void 0 === TT || TT.call(UT, this.activate), uU(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function gi(pp) {
-      return (null === pp || void 0 === pp ? void 0 : pp.persistent) ? fi : bi
+    function rU(TT) {
+      return (null === TT || void 0 === TT ? void 0 : TT.persistent) ? FU : PU
     }
 
-    function Gi() {}
-    let ri = function(pp) {
-      return pp[pp.OFF = 0] = "OFF", pp[pp.ERROR = 1] = "ERROR", pp[pp.WARN = 2] = "WARN", pp[pp.INFO = 3] = "INFO", pp[pp.VERBOSE = 4] = "VERBOSE", pp
+    function KU() {}
+    let SU = function(TT) {
+      return TT[TT.OFF = 0] = "OFF", TT[TT.ERROR = 1] = "ERROR", TT[TT.WARN = 2] = "WARN", TT[TT.INFO = 3] = "INFO", TT[TT.VERBOSE = 4] = "VERBOSE", TT
     }({});
-    const Zi = {
-        debug: Gi,
-        error: Gi,
-        info: Gi,
+    const GU = {
+        debug: KU,
+        error: KU,
+        info: KU,
         prefix: "Faro",
-        warn: Gi
+        warn: KU
       },
-      zi = 1;
+      NU = 1;
 
-    function si(pp) {
-      return si = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(pp) {
-        return typeof pp
-      } : function(pp) {
-        return pp && "function" == typeof Symbol && pp.constructor === Symbol && pp !== Symbol.prototype ? "symbol" : typeof pp
-      }, si(pp)
+    function EU(TT) {
+      return EU = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(TT) {
+        return typeof TT
+      } : function(TT) {
+        return TT && "function" == typeof Symbol && TT.constructor === Symbol && TT !== Symbol.prototype ? "symbol" : typeof TT
+      }, EU(TT)
     }
 
-    function Ki(pp) {
-      var ip = function(pp, ip) {
-        if ("object" != si(pp) || !pp) return pp;
-        var cp = pp[Symbol.toPrimitive];
-        if (void 0 !== cp) {
-          var Op = cp.call(pp, ip || "default");
-          if ("object" != si(Op)) return Op;
+    function hU(TT) {
+      var UT = function(TT, UT) {
+        if ("object" != EU(TT) || !TT) return TT;
+        var mT = TT[Symbol.toPrimitive];
+        if (void 0 !== mT) {
+          var WT = mT.call(TT, UT || "default");
+          if ("object" != EU(WT)) return WT;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === ip ? String : Number)(pp)
-      }(pp, "string");
-      return "symbol" == si(ip) ? ip : ip + ""
+        return ("string" === UT ? String : Number)(TT)
+      }(TT, "string");
+      return "symbol" == EU(UT) ? UT : UT + ""
     }
 
-    function Vi(pp, ip, cp) {
-      return (ip = Ki(ip)) in pp ? Object.defineProperty(pp, ip, {
-        value: cp,
+    function DU(TT, UT, mT) {
+      return (UT = hU(UT)) in TT ? Object.defineProperty(TT, UT, {
+        value: mT,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : pp[ip] = cp, pp
+      }) : TT[UT] = mT, TT
     }
 
-    function pc(pp, ip) {
-      var cp = Object.keys(pp);
+    function oU(TT, UT) {
+      var mT = Object.keys(TT);
       if (Object.getOwnPropertySymbols) {
-        var Op = Object.getOwnPropertySymbols(pp);
-        ip && (Op = Op.filter((function(ip) {
-          return Object.getOwnPropertyDescriptor(pp, ip).enumerable
-        }))), cp.push.apply(cp, Op)
+        var WT = Object.getOwnPropertySymbols(TT);
+        UT && (WT = WT.filter((function(UT) {
+          return Object.getOwnPropertyDescriptor(TT, UT).enumerable
+        }))), mT.push.apply(mT, WT)
       }
-      return cp
+      return mT
     }
 
-    function ic(pp) {
-      for (var ip = 1; ip < arguments.length; ip++) {
-        var cp = null != arguments[ip] ? arguments[ip] : {};
-        ip % 2 ? pc(Object(cp), !0).forEach((function(ip) {
-          Vi(pp, ip, cp[ip])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(pp, Object.getOwnPropertyDescriptors(cp)) : pc(Object(cp)).forEach((function(ip) {
-          Object.defineProperty(pp, ip, Object.getOwnPropertyDescriptor(cp, ip))
+    function AU(TT) {
+      for (var UT = 1; UT < arguments.length; UT++) {
+        var mT = null != arguments[UT] ? arguments[UT] : {};
+        UT % 2 ? oU(Object(mT), !0).forEach((function(UT) {
+          DU(TT, UT, mT[UT])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(TT, Object.getOwnPropertyDescriptors(mT)) : oU(Object(mT)).forEach((function(UT) {
+          Object.defineProperty(TT, UT, Object.getOwnPropertyDescriptor(mT, UT))
         }))
       }
-      return pp
+      return TT
     }
-    const cc = ic({}, console);
-    var Oc = class {
+    const RU = AU({}, console);
+    var Tm = class {
         constructor() {
-          this.unpatchedConsole = cc, this.internalLogger = Zi, this.config = {}, this.metas = {}
+          this.unpatchedConsole = RU, this.internalLogger = GU, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-          this.internalLogger.debug(`${this.name}\n`, ...ip)
+          for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+          this.internalLogger.debug(`${this.name}\n`, ...UT)
         }
         logInfo() {
-          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-          this.internalLogger.info(`${this.name}\n`, ...ip)
+          for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+          this.internalLogger.info(`${this.name}\n`, ...UT)
         }
         logWarn() {
-          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-          this.internalLogger.warn(`${this.name}\n`, ...ip)
+          for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+          this.internalLogger.warn(`${this.name}\n`, ...UT)
         }
         logError() {
-          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-          this.internalLogger.error(`${this.name}\n`, ...ip)
+          for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+          this.internalLogger.error(`${this.name}\n`, ...UT)
         }
       },
-      oc = class extends Oc {
+      Um = class extends Tm {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const Ic = "2.12.1";
-    var Sc = class extends oc {
+    const mm = "2.12.1";
+    var Wm = class extends Um {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = Ic, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = mm, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(pp) {
-        var ip;
-        const cp = pp.session;
-        if (cp && cp.id !== (null === (ip = this.notifiedSession) || void 0 === ip ? void 0 : ip.id)) {
-          var Op;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = cp);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (Op = cp.attributes) || void 0 === Op ? void 0 : Op.previousSession)) return this.api.pushEvent(Ri, {}, void 0, {
+      sendSessionStartEvent(TT) {
+        var UT;
+        const mT = TT.session;
+        if (mT && mT.id !== (null === (UT = this.notifiedSession) || void 0 === UT ? void 0 : UT.id)) {
+          var WT;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = mT);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (WT = mT.attributes) || void 0 === WT ? void 0 : WT.previousSession)) return this.api.pushEvent(YU, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = cp);
-          this.notifiedSession = cp, this.api.pushEvent(ki, {}, void 0, {
+          }), void(this.notifiedSession = mT);
+          this.notifiedSession = mT, this.api.pushEvent(OU, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(pp, ip, cp) {
-        const Op = null === cp || void 0 === cp ? void 0 : cp.session;
-        let op, Ip, Sp = pp.fetchUserSession();
-        if (ip.persistent && ip.maxSessionPersistenceTime && Sp) {
-          const pp = yi();
-          Sp.lastActivity < pp - ip.maxSessionPersistenceTime && (fi.removeUserSession(), Sp = null)
+      createInitialSession(TT, UT, mT) {
+        const WT = null === mT || void 0 === mT ? void 0 : mT.session;
+        let zT, MT, gT = TT.fetchUserSession();
+        if (UT.persistent && UT.maxSessionPersistenceTime && gT) {
+          const TT = LU();
+          gT.lastActivity < TT - UT.maxSessionPersistenceTime && (FU.removeUserSession(), gT = null)
         }
-        const xp = Ei(Sp);
-        if ((null === cp || void 0 === cp ? void 0 : cp.reset) || !xp || (null === Op || void 0 === Op ? void 0 : Op.id) && Op.id !== (null === Sp || void 0 === Sp ? void 0 : Sp.sessionId)) {
-          var Lp, Yp, Dp, Ap, Pp, Wp;
-          Ip = Ci({
-            sessionId: (null === cp || void 0 === cp ? void 0 : cp.reset) ? void 0 : null !== (Lp = null === Op || void 0 === Op ? void 0 : Op.id) && void 0 !== Lp ? Lp : null === (Yp = ip.session) || void 0 === Yp ? void 0 : Yp.id,
-            isSampled: Wi(this)
+        const nT = wU(gT);
+        if ((null === mT || void 0 === mT ? void 0 : mT.reset) || !nT || (null === WT || void 0 === WT ? void 0 : WT.id) && WT.id !== (null === gT || void 0 === gT ? void 0 : gT.sessionId)) {
+          var HT, kT, jT, lT, LT, pT;
+          MT = dU({
+            sessionId: (null === mT || void 0 === mT ? void 0 : mT.reset) ? void 0 : null !== (HT = null === WT || void 0 === WT ? void 0 : WT.id) && void 0 !== HT ? HT : null === (kT = UT.session) || void 0 === kT ? void 0 : kT.id,
+            isSampled: lU(this)
           }, this);
-          const pp = Ip.sessionId,
-            yp = cp && xp ? null === Sp || void 0 === Sp || null === (Dp = Sp.sessionMeta) || void 0 === Dp ? void 0 : Dp.overrides : void 0,
-            Up = yp ? Pi(Pi({}, null === (Ap = ip.session) || void 0 === Ap ? void 0 : Ap.overrides), yp) : null === (Pp = ip.session) || void 0 === Pp ? void 0 : Pp.overrides;
-          Ip.sessionMeta = Pi({
-            id: pp,
-            attributes: Pi({
-              isSampled: Ip.isSampled.toString()
-            }, null === (Wp = ip.session) || void 0 === Wp ? void 0 : Wp.attributes)
-          }, Up ? {
-            overrides: Up
-          } : {}), op = ki
+          const TT = MT.sessionId,
+            BT = mT && nT ? null === gT || void 0 === gT || null === (jT = gT.sessionMeta) || void 0 === jT ? void 0 : jT.overrides : void 0,
+            ZT = BT ? jU(jU({}, null === (lT = UT.session) || void 0 === lT ? void 0 : lT.overrides), BT) : null === (LT = UT.session) || void 0 === LT ? void 0 : LT.overrides;
+          MT.sessionMeta = jU({
+            id: TT,
+            attributes: jU({
+              isSampled: MT.isSampled.toString()
+            }, null === (pT = UT.session) || void 0 === pT ? void 0 : pT.attributes)
+          }, ZT ? {
+            overrides: ZT
+          } : {}), zT = OU
         } else {
-          var yp, Up;
-          const pp = null === Sp || void 0 === Sp ? void 0 : Sp.sessionId;
-          Ip = Ci({
-            sessionId: pp,
-            isSampled: Sp.isSampled || !1,
-            started: null === Sp || void 0 === Sp ? void 0 : Sp.started
+          var BT, ZT;
+          const TT = null === gT || void 0 === gT ? void 0 : gT.sessionId;
+          MT = dU({
+            sessionId: TT,
+            isSampled: gT.isSampled || !1,
+            started: null === gT || void 0 === gT ? void 0 : gT.started
           }, this);
-          const cp = null === Sp || void 0 === Sp ? void 0 : Sp.sessionMeta,
-            Op = Pi(Pi({}, null === (yp = ip.session) || void 0 === yp ? void 0 : yp.overrides), null === cp || void 0 === cp ? void 0 : cp.overrides);
-          Ip.sessionMeta = Pi(Pi({}, ip.session), {}, {
-            id: pp,
-            attributes: Pi(Pi(Pi({}, null === (Up = ip.session) || void 0 === Up ? void 0 : Up.attributes), null === cp || void 0 === cp ? void 0 : cp.attributes), {}, {
-              isSampled: Ip.isSampled.toString()
+          const mT = null === gT || void 0 === gT ? void 0 : gT.sessionMeta,
+            WT = jU(jU({}, null === (BT = UT.session) || void 0 === BT ? void 0 : BT.overrides), null === mT || void 0 === mT ? void 0 : mT.overrides);
+          MT.sessionMeta = jU(jU({}, UT.session), {}, {
+            id: TT,
+            attributes: jU(jU(jU({}, null === (ZT = UT.session) || void 0 === ZT ? void 0 : ZT.attributes), null === mT || void 0 === mT ? void 0 : mT.attributes), {}, {
+              isSampled: MT.isSampled.toString()
             }),
-            overrides: Op
-          }), op = mi
+            overrides: WT
+          }), zT = eU
         }
-        var wp;
-        if (Op && (Ip.sessionMeta = Pi(Pi({}, Ip.sessionMeta), {}, {
-            attributes: Pi(Pi(Pi({}, null === (wp = Ip.sessionMeta) || void 0 === wp ? void 0 : wp.attributes), Op.attributes), {}, {
-              isSampled: Ip.isSampled.toString()
+        var cT;
+        if (WT && (MT.sessionMeta = jU(jU({}, MT.sessionMeta), {}, {
+            attributes: jU(jU(jU({}, null === (cT = MT.sessionMeta) || void 0 === cT ? void 0 : cT.attributes), WT.attributes), {}, {
+              isSampled: MT.isSampled.toString()
             })
-          }), Op.overrides)) {
-          const pp = (null === cp || void 0 === cp ? void 0 : cp.inheritOverrides) ? Pi(Pi({}, Ip.sessionMeta.overrides), Op.overrides) : Op.overrides;
-          Object.keys(pp).length > 0 ? Ip.sessionMeta.overrides = pp : delete Ip.sessionMeta.overrides
+          }), WT.overrides)) {
+          const TT = (null === mT || void 0 === mT ? void 0 : mT.inheritOverrides) ? jU(jU({}, MT.sessionMeta.overrides), WT.overrides) : WT.overrides;
+          Object.keys(TT).length > 0 ? MT.sessionMeta.overrides = TT : delete MT.sessionMeta.overrides
         }
         return {
-          initialSession: Ip,
-          lifecycleType: op
+          initialSession: MT,
+          lifecycleType: zT
         }
       }
-      registerBeforeSendHook(pp) {
-        var ip;
-        this.beforeSendHook = ip => {
-          var cp, Op;
-          const op = null === (cp = ip.meta.session) || void 0 === cp ? void 0 : cp.id;
-          op && !this.transports.isPaused() && pp(op);
-          const Ip = null === (Op = ip.meta.session) || void 0 === Op ? void 0 : Op.attributes;
-          if (Ip && "true" === (null === Ip || void 0 === Ip ? void 0 : Ip.isSampled)) {
-            var Sp;
-            let pp = JSON.parse(JSON.stringify(ip));
-            const cp = null === (Sp = pp.meta.session) || void 0 === Sp ? void 0 : Sp.attributes;
-            var xp;
-            if (null === cp || void 0 === cp || delete cp.isSampled, 0 === Object.keys(null !== cp && void 0 !== cp ? cp : {}).length) null === (xp = pp.meta.session) || void 0 === xp || delete xp.attributes;
-            return pp
+      registerBeforeSendHook(TT) {
+        var UT;
+        this.beforeSendHook = UT => {
+          var mT, WT;
+          const zT = null === (mT = UT.meta.session) || void 0 === mT ? void 0 : mT.id;
+          zT && !this.transports.isPaused() && TT(zT);
+          const MT = null === (WT = UT.meta.session) || void 0 === WT ? void 0 : WT.attributes;
+          if (MT && "true" === (null === MT || void 0 === MT ? void 0 : MT.isSampled)) {
+            var gT;
+            let TT = JSON.parse(JSON.stringify(UT));
+            const mT = null === (gT = TT.meta.session) || void 0 === gT ? void 0 : gT.attributes;
+            var nT;
+            if (null === mT || void 0 === mT || delete mT.isSampled, 0 === Object.keys(null !== mT && void 0 !== mT ? mT : {}).length) null === (nT = TT.meta.session) || void 0 === nT || delete nT.attributes;
+            return TT
           }
           return null
-        }, null === (ip = this.transports) || void 0 === ip || ip.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (UT = this.transports) || void 0 === UT || UT.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var pp;
+        var TT;
         this.logDebug("init session instrumentation");
-        const ip = document.prerendering;
-        var cp;
-        if ((null === (pp = this.config.sessionTracking) || void 0 === pp ? void 0 : pp.enabled) && (ip || this.prerenderSession)) return null !== (cp = this.prerenderSession) && void 0 !== cp || (this.prerenderSession = new Fi(this.metas, this.transports, (pp => {
-          this.prerenderSession = void 0, this.initializeSession(pp)
+        const UT = document.prerendering;
+        var mT;
+        if ((null === (TT = this.config.sessionTracking) || void 0 === TT ? void 0 : TT.enabled) && (UT || this.prerenderSession)) return null !== (mT = this.prerenderSession) && void 0 !== mT || (this.prerenderSession = new CU(this.metas, this.transports, (TT => {
+          this.prerenderSession = void 0, this.initializeSession(TT)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(pp) {
-        const ip = this.config.sessionTracking;
-        if (null === ip || void 0 === ip ? void 0 : ip.enabled) {
-          var cp, Op;
-          const op = gi(ip),
-            Ip = new op(this);
-          this.isAdoptingSession = Ip.isAdopting, this.registerBeforeSendHook(Ip.recordActivity);
+      initializeSession(TT) {
+        const UT = this.config.sessionTracking;
+        if (null === UT || void 0 === UT ? void 0 : UT.enabled) {
+          var mT, WT;
+          const zT = rU(UT),
+            MT = new zT(this);
+          this.isAdoptingSession = MT.isAdopting, this.registerBeforeSendHook(MT.recordActivity);
           const {
-            initialSession: Sp,
-            lifecycleType: xp
-          } = this.createInitialSession(op, ip, pp);
-          op.storeUserSession(Sp);
-          const Lp = Sp.sessionMeta;
-          this.notifiedSession = Lp, this.api.setSession(Lp), this.captureListener = () => {
-            this.transports.isPaused() || Ip.updateSession({
+            initialSession: gT,
+            lifecycleType: nT
+          } = this.createInitialSession(zT, UT, TT);
+          zT.storeUserSession(gT);
+          const HT = gT.sessionMeta;
+          this.notifiedSession = HT, this.api.setSession(HT), this.captureListener = () => {
+            this.transports.isPaused() || MT.updateSession({
               refreshActivity: !1
             })
-          }, null === (cp = (Op = this.metas).addCaptureListener) || void 0 === cp || cp.call(Op, this.captureListener), xp === ki && this.api.pushEvent(ki, {}, void 0, {
+          }, null === (mT = (WT = this.metas).addCaptureListener) || void 0 === mT || mT.call(WT, this.captureListener), nT === OU && this.api.pushEvent(OU, {}, void 0, {
             skipDedupe: !0
-          }), xp === mi && this.api.pushEvent(mi, {}, void 0, {
+          }), nT === eU && this.api.pushEvent(eU, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var pp, ip, cp;
-        (null === (pp = this.prerenderSession) || void 0 === pp || pp.destroy(), this.captureListener) && (null === (ip = (cp = this.metas).removeCaptureListener) || void 0 === ip || ip.call(cp, this.captureListener), this.captureListener = void 0);
+        var TT, UT, mT;
+        (null === (TT = this.prerenderSession) || void 0 === TT || TT.destroy(), this.captureListener) && (null === (UT = (mT = this.metas).removeCaptureListener) || void 0 === UT || UT.call(mT, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function xc(pp, ip, cp, Op) {
-      const op = {
-        filename: pp || document.location.href,
-        function: ip || "?"
+    function zm(TT, UT, mT, WT) {
+      const zT = {
+        filename: TT || document.location.href,
+        function: UT || "?"
       };
-      return void 0 !== cp && (op.lineno = cp), void 0 !== Op && (op.colno = Op), op
+      return void 0 !== mT && (zT.lineno = mT), void 0 !== WT && (zT.colno = WT), zT
     }
-    const Lc = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      Yc = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      Dc = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      Ac = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      Pc = "safari-extension",
-      Wc = "safari-web-extension",
-      yc = /Minified React error #\d+;/i;
+    const Mm = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      gm = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      nm = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      Hm = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      km = "safari-extension",
+      jm = "safari-web-extension",
+      lm = /Minified React error #\d+;/i;
 
-    function Uc(pp, ip) {
-      const cp = null === pp || void 0 === pp ? void 0 : pp.includes(Pc),
-        Op = !cp && (null === pp || void 0 === pp ? void 0 : pp.includes("safari-web-extension"));
-      return cp || Op ? [(null === pp || void 0 === pp ? void 0 : pp.includes("@")) ? pp.split("@")[0] : pp, cp ? `${Pc}:${ip}` : `${Wc}:${ip}`] : [pp, ip]
+    function Lm(TT, UT) {
+      const mT = null === TT || void 0 === TT ? void 0 : TT.includes(km),
+        WT = !mT && (null === TT || void 0 === TT ? void 0 : TT.includes("safari-web-extension"));
+      return mT || WT ? [(null === TT || void 0 === TT ? void 0 : TT.includes("@")) ? TT.split("@")[0] : TT, mT ? `${km}:${UT}` : `${jm}:${UT}`] : [TT, UT]
     }
-    const wc = 1024;
+    const pm = 1024;
 
-    function vc(pp) {
-      let ip = [];
-      pp.stacktrace ? ip = pp.stacktrace.split("\n").filter(((pp, ip) => ip % 2 === 0)) : pp.stack && (ip = pp.stack.split("\n"));
-      const cp = ip.reduce(((ip, cp, Op) => {
-        if (cp.length > wc) return ip;
-        let op, Ip, Sp, xp, Lp;
-        if (op = Lc.exec(cp)) {
-          if (Ip = op[1], Sp = op[2], xp = op[3], Lp = op[4], null === Sp || void 0 === Sp ? void 0 : Sp.startsWith("eval")) {
-            const pp = Yc.exec(Sp);
-            pp && (Sp = pp[1], xp = pp[2], Lp = pp[3])
+    function Bm(TT) {
+      let UT = [];
+      TT.stacktrace ? UT = TT.stacktrace.split("\n").filter(((TT, UT) => UT % 2 === 0)) : TT.stack && (UT = TT.stack.split("\n"));
+      const mT = UT.reduce(((UT, mT, WT) => {
+        if (mT.length > pm) return UT;
+        let zT, MT, gT, nT, HT;
+        if (zT = Mm.exec(mT)) {
+          if (MT = zT[1], gT = zT[2], nT = zT[3], HT = zT[4], null === gT || void 0 === gT ? void 0 : gT.startsWith("eval")) {
+            const TT = gm.exec(gT);
+            TT && (gT = TT[1], nT = TT[2], HT = TT[3])
           }
-          Sp = (null === Sp || void 0 === Sp ? void 0 : Sp.startsWith("address at ")) ? Sp.substring(11) : Sp, [Ip, Sp] = Uc(Ip, Sp)
-        } else if (op = Dc.exec(cp)) {
-          if (Ip = op[1], Sp = op[3], xp = op[4], Lp = op[5], Sp && Sp.includes(" > eval")) {
-            const pp = Ac.exec(Sp);
-            pp && (Ip = Ip || "eval", Sp = pp[1], xp = pp[2])
-          } else 0 === Op && !Lp && kp(pp.columnNumber) && (Lp = String(pp.columnNumber + 1));
-          [Ip, Sp] = Uc(Ip, Sp)
+          gT = (null === gT || void 0 === gT ? void 0 : gT.startsWith("address at ")) ? gT.substring(11) : gT, [MT, gT] = Lm(MT, gT)
+        } else if (zT = nm.exec(mT)) {
+          if (MT = zT[1], gT = zT[3], nT = zT[4], HT = zT[5], gT && gT.includes(" > eval")) {
+            const TT = Hm.exec(gT);
+            TT && (MT = MT || "eval", gT = TT[1], nT = TT[2])
+          } else 0 === WT && !HT && eT(TT.columnNumber) && (HT = String(TT.columnNumber + 1));
+          [MT, gT] = Lm(MT, gT)
         }
-        return (Sp || Ip) && ip.push(xc(Sp, Ip, xp ? Number(xp) : void 0, Lp ? Number(Lp) : void 0)), ip
+        return (gT || MT) && UT.push(zm(gT, MT, nT ? Number(nT) : void 0, HT ? Number(HT) : void 0)), UT
       }), []);
-      return yc.test(pp.message) ? cp.slice(1) : cp
+      return lm.test(TT.message) ? mT.slice(1) : mT
     }
 
-    function tc(pp) {
+    function Zm(TT) {
       return {
-        frames: vc(pp)
+        frames: Bm(TT)
       }
     }
-    const Hc = "http-request-start",
-      dc = "http-request-end";
-    var ec = class pp {
+    const cm = "http-request-start",
+      fm = "http-request-end";
+    var qm = class TT {
       constructor() {
         this.subscribers = []
       }
-      subscribe(pp) {
-        return this.subscribers.push(pp), {
-          unsubscribe: () => this.unsubscribe(pp)
+      subscribe(TT) {
+        return this.subscribers.push(TT), {
+          unsubscribe: () => this.unsubscribe(TT)
         }
       }
-      unsubscribe(pp) {
-        this.subscribers = this.subscribers.filter((ip => ip !== pp))
+      unsubscribe(TT) {
+        this.subscribers = this.subscribers.filter((UT => UT !== TT))
       }
-      notify(pp) {
-        this.subscribers.forEach((ip => ip(pp)))
+      notify(TT) {
+        this.subscribers.forEach((UT => UT(TT)))
       }
       first() {
-        const ip = new pp,
-          cp = pp => {
-            ip.notify(pp), Op.unsubscribe()
+        const UT = new TT,
+          mT = TT => {
+            UT.notify(TT), WT.unsubscribe()
           },
-          Op = this.subscribe(cp),
-          op = ip.unsubscribe.bind(ip);
-        return this.withUnsubscribeOverride(ip, op, cp)
+          WT = this.subscribe(mT),
+          zT = UT.unsubscribe.bind(UT);
+        return this.withUnsubscribeOverride(UT, zT, mT)
       }
-      takeWhile(ip) {
-        const cp = new pp,
-          Op = pp => {
-            ip(pp) ? cp.notify(pp) : cp.unsubscribe(Op)
+      takeWhile(UT) {
+        const mT = new TT,
+          WT = TT => {
+            UT(TT) ? mT.notify(TT) : mT.unsubscribe(WT)
           };
-        this.subscribe(Op);
-        const op = cp.unsubscribe.bind(cp);
-        return this.withUnsubscribeOverride(cp, op, Op)
+        this.subscribe(WT);
+        const zT = mT.unsubscribe.bind(mT);
+        return this.withUnsubscribeOverride(mT, zT, WT)
       }
-      filter(ip) {
-        const cp = new pp,
-          Op = pp => {
-            ip(pp) && cp.notify(pp)
+      filter(UT) {
+        const mT = new TT,
+          WT = TT => {
+            UT(TT) && mT.notify(TT)
           };
-        this.subscribe(Op);
-        const op = cp.unsubscribe.bind(cp);
-        return this.withUnsubscribeOverride(cp, op, Op)
+        this.subscribe(WT);
+        const zT = mT.unsubscribe.bind(mT);
+        return this.withUnsubscribeOverride(mT, zT, WT)
       }
       merge() {
-        const ip = new pp,
-          cp = [];
-        for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
-        op.forEach((pp => {
-          const Op = pp.subscribe((pp => {
-            ip.notify(pp)
+        const UT = new TT,
+          mT = [];
+        for (var WT = arguments.length, zT = new Array(WT), MT = 0; MT < WT; MT++) zT[MT] = arguments[MT];
+        zT.forEach((TT => {
+          const WT = TT.subscribe((TT => {
+            UT.notify(TT)
           }));
-          cp.push(Op)
+          mT.push(WT)
         }));
-        const Sp = ip.unsubscribeAll.bind(ip);
-        return ip.unsubscribe = () => {
-          cp.forEach((pp => pp.unsubscribe())), Sp()
-        }, ip
+        const gT = UT.unsubscribeAll.bind(UT);
+        return UT.unsubscribe = () => {
+          mT.forEach((TT => TT.unsubscribe())), gT()
+        }, UT
       }
-      withUnsubscribeOverride(pp, ip, cp) {
-        return pp.unsubscribe = pp => {
-          ip(pp), this.unsubscribe(cp)
-        }, pp
+      withUnsubscribeOverride(TT, UT, mT) {
+        return TT.unsubscribe = TT => {
+          UT(TT), this.unsubscribe(mT)
+        }, TT
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let uc = function(pp) {
-      return pp.TRACE = "trace", pp.DEBUG = "debug", pp.INFO = "info", pp.LOG = "log", pp.WARN = "warn", pp.ERROR = "error", pp
+    let im = function(TT) {
+      return TT.TRACE = "trace", TT.DEBUG = "debug", TT.INFO = "info", TT.LOG = "log", TT.WARN = "warn", TT.ERROR = "error", TT
     }({});
-    const jc = "log",
-      kc = ["trace", "debug", "info", "log", "warn", "error"];
-    let mc, Rc = !1;
-    const qc = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      Mc = "Error",
-      Cc = pp => pp.map((pp => Mp(pp) ? Ni(pp) : String(pp))).join(" ");
+    const bm = "log",
+      Om = ["trace", "debug", "info", "log", "warn", "error"];
+    let em, Ym = !1;
+    const Jm = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      xm = "Error",
+      dm = TT => TT.map((TT => dT(TT) ? QU(TT) : String(TT))).join(" ");
 
-    function Ec(pp) {
-      let ip, cp, Op, op, Ip = [];
-      if (fp(pp) && pp.error) ip = pp.error.message, cp = pp.error.name, Ip = vc(pp.error);
-      else if ((Op = bp(pp)) || hp(pp)) {
+    function wm(TT) {
+      let UT, mT, WT, zT, MT = [];
+      if (PT(TT) && TT.error) UT = TT.error.message, mT = TT.error.name, MT = Bm(TT.error);
+      else if ((WT = VT(TT)) || uT(TT)) {
         const {
-          name: op,
-          message: Ip
-        } = pp;
-        cp = null !== op && void 0 !== op ? op : Op ? "DOMError" : "DOMException", ip = Ip ? `${cp}: ${Ip}` : cp
-      } else Tp(pp) ? (cp = pp.name, ip = pp.message, Ip = vc(pp)) : (Mp(pp) || (op = Bp(pp))) && (cp = op ? pp.constructor.name : void 0, ip = `Non-Error exception captured with keys: ${Object.keys(pp)}`);
-      return [ip, cp, Ip]
+          name: zT,
+          message: MT
+        } = TT;
+        mT = null !== zT && void 0 !== zT ? zT : WT ? "DOMError" : "DOMException", UT = MT ? `${mT}: ${MT}` : mT
+      } else FT(TT) ? (mT = TT.name, UT = TT.message, MT = Bm(TT)) : (dT(TT) || (zT = QT(TT))) && (mT = zT ? TT.constructor.name : void 0, UT = `Non-Error exception captured with keys: ${Object.keys(TT)}`);
+      return [UT, mT, MT]
     }
 
-    function Xc(pp) {
-      const [ip, cp, Op, op, Ip] = pp;
-      let Sp, xp, Lp = [];
-      const Yp = jp(ip),
-        Dp = xc(cp, "?", Op, op);
-      return Ip || !Yp ? ([Sp, xp, Lp] = Ec(null !== Ip && void 0 !== Ip ? Ip : ip), 0 === Lp.length && (Lp = [Dp])) : Yp && ([Sp, xp] = function(pp) {
-        var ip, cp;
-        const Op = pp.match(qc),
-          op = null !== (ip = null === Op || void 0 === Op ? void 0 : Op[1]) && void 0 !== ip ? ip : Mc;
-        return [null !== (cp = null === Op || void 0 === Op ? void 0 : Op[2]) && void 0 !== cp ? cp : pp, op]
-      }(ip), Lp = [Dp]), {
-        value: Sp,
-        type: xp,
-        stackFrames: Lp
+    function tm(TT) {
+      const [UT, mT, WT, zT, MT] = TT;
+      let gT, nT, HT = [];
+      const kT = OT(UT),
+        jT = zm(mT, "?", WT, zT);
+      return MT || !kT ? ([gT, nT, HT] = wm(null !== MT && void 0 !== MT ? MT : UT), 0 === HT.length && (HT = [jT])) : kT && ([gT, nT] = function(TT) {
+        var UT, mT;
+        const WT = TT.match(Jm),
+          zT = null !== (UT = null === WT || void 0 === WT ? void 0 : WT[1]) && void 0 !== UT ? UT : xm;
+        return [null !== (mT = null === WT || void 0 === WT ? void 0 : WT[2]) && void 0 !== mT ? mT : TT, zT]
+      }(UT), HT = [jT]), {
+        value: gT,
+        type: nT,
+        stackFrames: HT
       }
     }
 
-    function lc(pp, ip) {
-      return Tp(pp[0]) ? Xc(pp) : {
-        value: ip(pp)
+    function am(TT, UT) {
+      return FT(TT[0]) ? tm(TT) : {
+        value: UT(TT)
       }
     }
-    const Qc = pp => pp.map((pp => {
+    const ym = TT => TT.map((TT => {
       try {
-        return String(pp)
-      } catch (ip) {
+        return String(TT)
+      } catch (UT) {
         return ""
       }
     })).join(" ");
-    var Jc = class pp extends oc {
+    var Xm = class TT extends Um {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = Ic, this.errorSerializer = Qc
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = mm, this.errorSerializer = ym
       }
       initialize() {
-        var ip, cp;
-        const Op = this.config.consoleInstrumentation,
-          op = (null === Op || void 0 === Op ? void 0 : Op.serializeErrors) || !!(null === Op || void 0 === Op ? void 0 : Op.errorSerializer);
-        this.errorSerializer = op ? null !== (ip = null === Op || void 0 === Op ? void 0 : Op.errorSerializer) && void 0 !== ip ? ip : Cc : Qc;
-        const Ip = null !== (cp = null === Op || void 0 === Op ? void 0 : Op.disabledLevels) && void 0 !== cp ? cp : pp.defaultDisabledLevels,
-          Sp = function(pp) {
-            if (mc || (mc = new ec), !Rc) {
-              const ip = null !== pp && void 0 !== pp ? pp : cc;
-              kc.forEach((pp => {
-                console[pp] = function() {
-                  for (var cp, Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
-                  mc.notify({
+        var UT, mT;
+        const WT = this.config.consoleInstrumentation,
+          zT = (null === WT || void 0 === WT ? void 0 : WT.serializeErrors) || !!(null === WT || void 0 === WT ? void 0 : WT.errorSerializer);
+        this.errorSerializer = zT ? null !== (UT = null === WT || void 0 === WT ? void 0 : WT.errorSerializer) && void 0 !== UT ? UT : dm : ym;
+        const MT = null !== (mT = null === WT || void 0 === WT ? void 0 : WT.disabledLevels) && void 0 !== mT ? mT : TT.defaultDisabledLevels,
+          gT = function(TT) {
+            if (em || (em = new qm), !Ym) {
+              const UT = null !== TT && void 0 !== TT ? TT : RU;
+              Om.forEach((TT => {
+                console[TT] = function() {
+                  for (var mT, WT = arguments.length, zT = new Array(WT), MT = 0; MT < WT; MT++) zT[MT] = arguments[MT];
+                  em.notify({
                     type: "console",
-                    level: pp,
-                    args: op
-                  }), null === (cp = ip[pp]) || void 0 === cp || cp.apply(console, op)
+                    level: TT,
+                    args: zT
+                  }), null === (mT = UT[TT]) || void 0 === mT || mT.apply(console, zT)
                 }
-              })), Rc = !0
+              })), Ym = !0
             }
-            return mc
+            return em
           }(this.unpatchedConsole);
-        this.subscription = Sp.subscribe((ip => {
+        this.subscription = gT.subscribe((UT => {
           let {
-            level: cp,
-            args: op
-          } = ip;
-          if (!Ip.includes(cp)) try {
-            if (cp !== uc.ERROR || (null === Op || void 0 === Op ? void 0 : Op.consoleErrorAsLog))
-              if (cp === uc.ERROR && (null === Op || void 0 === Op ? void 0 : Op.consoleErrorAsLog)) {
+            level: mT,
+            args: zT
+          } = UT;
+          if (!MT.includes(mT)) try {
+            if (mT !== im.ERROR || (null === WT || void 0 === WT ? void 0 : WT.consoleErrorAsLog))
+              if (mT === im.ERROR && (null === WT || void 0 === WT ? void 0 : WT.consoleErrorAsLog)) {
                 const {
-                  value: ip,
-                  type: Op,
-                  stackFrames: Ip
-                } = lc(op, this.errorSerializer);
-                this.api.pushLog(ip ? [pp.consoleErrorPrefix + ip] : op, {
-                  level: cp,
+                  value: UT,
+                  type: WT,
+                  stackFrames: MT
+                } = am(zT, this.errorSerializer);
+                this.api.pushLog(UT ? [TT.consoleErrorPrefix + UT] : zT, {
+                  level: mT,
                   context: {
-                    value: null !== ip && void 0 !== ip ? ip : "",
-                    type: null !== Op && void 0 !== Op ? Op : "",
-                    stackFrames: (null === Ip || void 0 === Ip ? void 0 : Ip.length) ? Cc(Ip) : ""
+                    value: null !== UT && void 0 !== UT ? UT : "",
+                    type: null !== WT && void 0 !== WT ? WT : "",
+                    stackFrames: (null === MT || void 0 === MT ? void 0 : MT.length) ? dm(MT) : ""
                   }
                 })
-              } else this.api.pushLog(op, {
-                level: cp
+              } else this.api.pushLog(zT, {
+                level: mT
               });
             else {
               const {
-                value: ip,
-                type: cp,
-                stackFrames: Op
-              } = lc(op, this.errorSerializer);
-              if (ip && !cp && !Op) return void this.api.pushError(new Error(pp.consoleErrorPrefix + ip));
-              this.api.pushError(new Error(pp.consoleErrorPrefix + ip), {
-                type: cp,
-                stackFrames: Op
+                value: UT,
+                type: mT,
+                stackFrames: WT
+              } = am(zT, this.errorSerializer);
+              if (UT && !mT && !WT) return void this.api.pushError(new Error(TT.consoleErrorPrefix + UT));
+              this.api.pushError(new Error(TT.consoleErrorPrefix + UT), {
+                type: mT,
+                stackFrames: WT
               })
             }
-          } catch (Sp) {
-            this.logError(Sp)
+          } catch (gT) {
+            this.logError(gT)
           }
         }))
       }
       destroy() {
-        var pp;
-        null === (pp = this.subscription) || void 0 === pp || pp.unsubscribe(), this.subscription = void 0
+        var TT;
+        null === (TT = this.subscription) || void 0 === TT || TT.unsubscribe(), this.subscription = void 0
       }
     };
-    Jc.defaultDisabledLevels = [uc.DEBUG, uc.TRACE, uc.LOG], Jc.consoleErrorPrefix = "console.error: ";
-    const Bc = [];
-    var Nc = class extends oc {
+    Xm.defaultDisabledLevels = [im.DEBUG, im.TRACE, im.LOG], Xm.consoleErrorPrefix = "console.error: ";
+    const Im = [];
+    var Qm = class extends Um {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = Ic
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = mm
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(pp) {
-            const ip = window.onerror;
+          function(TT) {
+            const UT = window.onerror;
             window.onerror = function() {
-              for (var cp = arguments.length, Op = new Array(cp), op = 0; op < cp; op++) Op[op] = arguments[op];
+              for (var mT = arguments.length, WT = new Array(mT), zT = 0; zT < mT; zT++) WT[zT] = arguments[zT];
               try {
                 const {
-                  value: ip,
-                  type: cp,
-                  stackFrames: op
-                } = Xc(Op), Ip = Op[4];
-                if (ip) {
-                  const Op = {
-                    type: cp,
-                    stackFrames: op
+                  value: UT,
+                  type: mT,
+                  stackFrames: zT
+                } = tm(WT), MT = WT[4];
+                if (UT) {
+                  const WT = {
+                    type: mT,
+                    stackFrames: zT
                   };
-                  null != Ip && (Op.originalError = Ip), pp.pushError(new Error(ip), Op)
+                  null != MT && (WT.originalError = MT), TT.pushError(new Error(UT), WT)
                 }
               } finally {
-                null === ip || void 0 === ip || ip.apply(window, Op)
+                null === UT || void 0 === UT || UT.apply(window, WT)
               }
             }
           }(this.api),
-          function(pp) {
-            const ip = ip => {
-              var cp;
-              let Op, op, Ip = ip;
-              if (Ip.reason) Ip = ip.reason;
-              else if (null === (cp = ip.detail) || void 0 === cp ? void 0 : cp.reason) {
-                var Sp;
-                Ip = null === (Sp = ip.detail) || void 0 === Sp ? void 0 : Sp.reason
+          function(TT) {
+            const UT = UT => {
+              var mT;
+              let WT, zT, MT = UT;
+              if (MT.reason) MT = UT.reason;
+              else if (null === (mT = UT.detail) || void 0 === mT ? void 0 : mT.reason) {
+                var gT;
+                MT = null === (gT = UT.detail) || void 0 === gT ? void 0 : gT.reason
               }
-              let xp = [];
-              Qp(Ip) ? (Op = `Non-Error promise rejection captured with value: ${String(Ip)}`, op = "UnhandledRejection") : [Op, op, xp] = Ec(Ip), Op && pp.pushError(new Error(Op), {
-                type: op,
-                stackFrames: xp
+              let nT = [];
+              XT(MT) ? (WT = `Non-Error promise rejection captured with value: ${String(MT)}`, zT = "UnhandledRejection") : [WT, zT, nT] = wm(MT), WT && TT.pushError(new Error(WT), {
+                type: zT,
+                stackFrames: nT
               })
             };
-            window.addEventListener("unhandledrejection", ip), Bc.push(ip)
+            window.addEventListener("unhandledrejection", UT), Im.push(UT)
           }(this.api)
       }
     };
-    const Tc = "unknown";
-    var fc = class extends oc {
+    const sm = "unknown";
+    var Fm = class extends Um {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = Ic, this.waitingForActivation = !1, this.sendViewChangedEvent = pp => {
-          var ip;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = mm, this.waitingForActivation = !1, this.sendViewChangedEvent = TT => {
+          var UT;
           if (this.waitingForActivation || document.prerendering) return;
-          const cp = pp.view;
-          if (cp && cp.name !== (null === (ip = this.notifiedView) || void 0 === ip ? void 0 : ip.name)) {
-            var Op, op, Ip;
-            const pp = null !== (Op = null === (op = this.notifiedView) || void 0 === op ? void 0 : op.name) && void 0 !== Op ? Op : Tc;
-            this.notifiedView = cp, this.api.pushEvent(ji, {
-              fromView: pp,
-              toView: null !== (Ip = cp.name) && void 0 !== Ip ? Ip : Tc
+          const mT = TT.view;
+          if (mT && mT.name !== (null === (UT = this.notifiedView) || void 0 === UT ? void 0 : UT.name)) {
+            var WT, zT, MT;
+            const TT = null !== (WT = null === (zT = this.notifiedView) || void 0 === zT ? void 0 : zT.name) && void 0 !== WT ? WT : sm;
+            this.notifiedView = mT, this.api.pushEvent(bU, {
+              fromView: TT,
+              toView: null !== (MT = mT.name) && void 0 !== MT ? MT : sm
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class bc {
+    class Pm {
       t;
       o = 0;
       i = [];
-      l(pp) {
-        if (pp.hadRecentInput) return;
-        const ip = this.i[0],
-          cp = this.i.at(-1);
-        this.o && ip && cp && pp.startTime - cp.startTime < 1e3 && pp.startTime - ip.startTime < 5e3 ? (this.o += pp.value, this.i.push(pp)) : (this.o = pp.value, this.i = [pp]), this.t?.(pp)
+      l(TT) {
+        if (TT.hadRecentInput) return;
+        const UT = this.i[0],
+          mT = this.i.at(-1);
+        this.o && UT && mT && TT.startTime - mT.startTime < 1e3 && TT.startTime - UT.startTime < 5e3 ? (this.o += TT.value, this.i.push(TT)) : (this.o = TT.value, this.i = [TT]), this.t?.(TT)
       }
     }
-    const hc = () => {
-        const pp = performance.getEntriesByType("navigation")[0];
-        if (pp && pp.responseStart > 0 && pp.responseStart < performance.now()) return pp
+    const Vm = () => {
+        const TT = performance.getEntriesByType("navigation")[0];
+        if (TT && TT.responseStart > 0 && TT.responseStart < performance.now()) return TT
       },
-      ac = pp => {
+      um = TT => {
         if ("loading" === document.readyState) return "loading";
-        const ip = hc();
-        if (ip) {
-          if (pp < ip.domInteractive) return "loading";
-          if (0 === ip.domContentLoadedEventStart || pp < ip.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === ip.domComplete || pp < ip.domComplete) return "dom-content-loaded"
+        const UT = Vm();
+        if (UT) {
+          if (TT < UT.domInteractive) return "loading";
+          if (0 === UT.domContentLoadedEventStart || TT < UT.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === UT.domComplete || TT < UT.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      nc = pp => {
-        const ip = pp.nodeName;
-        return 1 === pp.nodeType ? ip.toLowerCase() : ip.toUpperCase().replace(/^#/, "")
+      Cm = TT => {
+        const UT = TT.nodeName;
+        return 1 === TT.nodeType ? UT.toLowerCase() : UT.toUpperCase().replace(/^#/, "")
       },
-      Fc = pp => {
-        let ip = "";
+      rm = TT => {
+        let UT = "";
         try {
-          for (; 9 !== pp?.nodeType;) {
-            const cp = pp,
-              Op = cp.id ? "#" + cp.id : [nc(cp), ...Array.from(cp.classList ?? []).sort()].join(".");
-            if (ip.length + Op.length > 99) return ip || Op;
-            if (ip = ip ? Op + ">" + ip : Op, cp.id) break;
-            pp = cp.parentNode
+          for (; 9 !== TT?.nodeType;) {
+            const mT = TT,
+              WT = mT.id ? "#" + mT.id : [Cm(mT), ...Array.from(mT.classList ?? []).sort()].join(".");
+            if (UT.length + WT.length > 99) return UT || WT;
+            if (UT = UT ? WT + ">" + UT : WT, mT.id) break;
+            TT = mT.parentNode
           }
         } catch {}
-        return ip
+        return UT
       },
-      gc = new WeakMap;
+      Km = new WeakMap;
 
-    function Gc(pp, ip) {
-      let cp = gc.get(ip);
-      return cp || (cp = new WeakMap, gc.set(ip, cp)), cp.get(pp) || cp.set(pp, new ip), cp.get(pp)
+    function Sm(TT, UT) {
+      let mT = Km.get(UT);
+      return mT || (mT = new WeakMap, Km.set(UT, mT)), mT.get(TT) || mT.set(TT, new UT), mT.get(TT)
     }
-    let rc = -1;
-    const Zc = () => rc,
-      zc = pp => {
-        addEventListener("pageshow", (ip => {
-          ip.persisted && (rc = ip.timeStamp, pp(ip))
+    let Gm = -1;
+    const Nm = () => Gm,
+      Em = TT => {
+        addEventListener("pageshow", (UT => {
+          UT.persisted && (Gm = UT.timeStamp, TT(UT))
         }), !0)
       },
-      sc = (pp, ip, cp, Op) => {
-        let op, Ip;
-        return Sp => {
-          ip.value >= 0 && (Sp || Op) && (Ip = ip.value - (op ?? 0), (Ip || void 0 === op) && (op = ip.value, ip.delta = Ip, ip.rating = ((pp, ip) => pp > ip[1] ? "poor" : pp > ip[0] ? "needs-improvement" : "good")(ip.value, cp), pp(ip)))
+      hm = (TT, UT, mT, WT) => {
+        let zT, MT;
+        return gT => {
+          UT.value >= 0 && (gT || WT) && (MT = UT.value - (zT ?? 0), (MT || void 0 === zT) && (zT = UT.value, UT.delta = MT, UT.rating = ((TT, UT) => TT > UT[1] ? "poor" : TT > UT[0] ? "needs-improvement" : "good")(UT.value, mT), TT(UT)))
         }
       },
-      Kc = pp => {
-        requestAnimationFrame((() => requestAnimationFrame((() => pp()))))
+      Dm = TT => {
+        requestAnimationFrame((() => requestAnimationFrame((() => TT()))))
       },
-      Vc = () => hc()?.activationStart ?? 0;
-    let pO = -1;
-    const iO = new Set,
-      cO = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      OO = pp => {
+      om = () => Vm()?.activationStart ?? 0;
+    let Am = -1;
+    const Rm = new Set,
+      TW = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      UW = TT => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === pp.type)
-            for (const pp of iO) pp();
-          isFinite(pO) || (pO = "visibilitychange" === pp.type ? pp.timeStamp : 0, removeEventListener("prerenderingchange", OO, !0))
+          if ("visibilitychange" === TT.type)
+            for (const TT of Rm) TT();
+          isFinite(Am) || (Am = "visibilitychange" === TT.type ? TT.timeStamp : 0, removeEventListener("prerenderingchange", UW, !0))
         }
       },
-      oO = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (pO = 1 / 0), pO < 0) {
-          const pp = Vc(),
-            ip = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((ip => "hidden" === ip.name && ip.startTime >= pp))?.startTime;
-          pO = ip ?? cO(), addEventListener("visibilitychange", OO, !0), addEventListener("prerenderingchange", OO, !0), zc((() => {
+      mW = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Am = 1 / 0), Am < 0) {
+          const TT = om(),
+            UT = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((UT => "hidden" === UT.name && UT.startTime >= TT))?.startTime;
+          Am = UT ?? TW(), addEventListener("visibilitychange", UW, !0), addEventListener("prerenderingchange", UW, !0), Em((() => {
             setTimeout((() => {
-              pO = cO()
+              Am = TW()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return pO
+            return Am
           },
-          onHidden(pp) {
-            iO.add(pp)
+          onHidden(TT) {
+            Rm.add(TT)
           }
         }
       },
-      IO = function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          cp = arguments.length > 2 ? arguments[2] : void 0,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          op = arguments.length > 4 ? arguments[4] : void 0,
-          Ip = arguments.length > 5 ? arguments[5] : void 0,
-          Sp = arguments.length > 6 ? arguments[6] : void 0;
-        const xp = hc(),
-          Lp = xp?.navigationId || 0;
-        let Yp = "navigate";
-        return cp ? Yp = cp : Zc() >= 0 ? Yp = "back-forward-cache" : xp && (document.prerendering || Vc() > 0 ? Yp = "prerender" : document.wasDiscarded ? Yp = "restore" : xp.type && (Yp = xp.type.replace(/_/g, "-"))), {
-          name: pp,
-          value: ip,
+      WW = function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          mT = arguments.length > 2 ? arguments[2] : void 0,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          zT = arguments.length > 4 ? arguments[4] : void 0,
+          MT = arguments.length > 5 ? arguments[5] : void 0,
+          gT = arguments.length > 6 ? arguments[6] : void 0;
+        const nT = Vm(),
+          HT = nT?.navigationId || 0;
+        let kT = "navigate";
+        return mT ? kT = mT : Nm() >= 0 ? kT = "back-forward-cache" : nT && (document.prerendering || om() > 0 ? kT = "prerender" : document.wasDiscarded ? kT = "restore" : nT.type && (kT = nT.type.replace(/_/g, "-"))), {
+          name: TT,
+          value: UT,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: Yp,
-          navigationId: Op || Lp,
-          navigationInteractionId: op,
-          navigationURL: Ip || xp?.name,
-          navigationStartTime: Sp || 0
+          navigationType: kT,
+          navigationId: WT || HT,
+          navigationInteractionId: zT,
+          navigationURL: MT || nT?.name,
+          navigationStartTime: gT || 0
         }
       },
-      SO = function(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      zW = function(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const Op = pp.filter((pp => PerformanceObserver.supportedEntryTypes.includes(pp)));
-          if (Op.length > 0) {
-            const pp = new PerformanceObserver((pp => {
+          const WT = TT.filter((TT => PerformanceObserver.supportedEntryTypes.includes(TT)));
+          if (WT.length > 0) {
+            const TT = new PerformanceObserver((TT => {
               queueMicrotask((() => {
-                const cp = pp.getEntries();
-                Op.length > 1 && cp.sort(((pp, ip) => pp.startTime + pp.duration - (ip.startTime + ip.duration))), ip(cp)
+                const mT = TT.getEntries();
+                WT.length > 1 && mT.sort(((TT, UT) => TT.startTime + TT.duration - (UT.startTime + UT.duration))), UT(mT)
               }))
             }));
-            for (const ip of Op) pp.observe({
-              type: ip,
+            for (const UT of WT) TT.observe({
+              type: UT,
               buffered: !0,
-              ...cp
+              ...mT
             });
-            return pp
+            return TT
           }
         } catch {}
       },
-      xO = pp => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && pp && pp.reportSoftNavs,
-      LO = (pp, ip) => {
-        if (pp.set(ip.navigationId, ip), pp.size > 2) {
-          const ip = pp.keys().next().value;
-          void 0 !== ip && pp.delete(ip)
+      MW = TT => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && TT && TT.reportSoftNavs,
+      gW = (TT, UT) => {
+        if (TT.set(UT.navigationId, UT), TT.size > 2) {
+          const UT = TT.keys().next().value;
+          void 0 !== UT && TT.delete(UT)
         }
       },
-      YO = pp => {
-        let ip = !1;
+      nW = TT => {
+        let UT = !1;
         return () => {
-          ip || (pp(), ip = !0)
+          UT || (TT(), UT = !0)
         }
       };
-    class DO {
+    class HW {
       u
     }
-    const AO = pp => {
-        document.prerendering ? addEventListener("prerenderingchange", pp, !0) : pp()
+    const kW = TT => {
+        document.prerendering ? addEventListener("prerenderingchange", TT, !0) : TT()
       },
-      PO = [1800, 3e3],
-      WO = function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const cp = xO(ip);
-        AO((() => {
-          const Op = Gc(ip, DO),
-            op = oO();
-          let Ip, Sp = IO("FCP");
-          const xp = SO(["paint"], (pp => {
-            for (const ip of pp) "first-contentful-paint" === ip.name && (xp.disconnect(), ip.startTime < op.firstHiddenTime && (Sp.value = Math.max(ip.startTime - Vc(), 0), Sp.entries.push(ip), Sp.navigationId = ip.navigationId || Sp.navigationId, Ip(!0)))
+      jW = [1800, 3e3],
+      lW = function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const mT = MW(UT);
+        kW((() => {
+          const WT = Sm(UT, HW),
+            zT = mW();
+          let MT, gT = WW("FCP");
+          const nT = zW(["paint"], (TT => {
+            for (const UT of TT) "first-contentful-paint" === UT.name && (nT.disconnect(), UT.startTime < zT.firstHiddenTime && (gT.value = Math.max(UT.startTime - om(), 0), gT.entries.push(UT), gT.navigationId = UT.navigationId || gT.navigationId, MT(!0)))
           }));
-          xp && (Ip = sc(pp, Sp, PO, ip.reportAllChanges), zc((cp => {
-            Sp = IO("FCP", -1, "back-forward-cache", Sp.navigationId, Sp.navigationInteractionId, Sp.navigationURL, Zc()), Ip = sc(pp, Sp, PO, ip.reportAllChanges), Kc((() => {
-              Sp.value = performance.now() - cp.timeStamp, Ip(!0)
+          nT && (MT = hm(TT, gT, jW, UT.reportAllChanges), Em((mT => {
+            gT = WW("FCP", -1, "back-forward-cache", gT.navigationId, gT.navigationInteractionId, gT.navigationURL, Nm()), MT = hm(TT, gT, jW, UT.reportAllChanges), Dm((() => {
+              gT.value = performance.now() - mT.timeStamp, MT(!0)
             }))
-          }))), cp && SO(["soft-navigation"], (cp => {
-            cp.forEach((cp => {
-              Op.u && cp.navigationId && LO(Op.u, cp);
-              const op = Math.max((cp.presentationTime || cp.paintTime || 0) - cp.startTime, 0);
-              Sp = IO("FCP", op, "soft-navigation", cp.navigationId, cp.interactionId, cp.name, cp.startTime), Ip = sc(pp, Sp, PO, ip.reportAllChanges), Ip(!0)
+          }))), mT && zW(["soft-navigation"], (mT => {
+            mT.forEach((mT => {
+              WT.u && mT.navigationId && gW(WT.u, mT);
+              const zT = Math.max((mT.presentationTime || mT.paintTime || 0) - mT.startTime, 0);
+              gT = WW("FCP", zT, "soft-navigation", mT.navigationId, mT.interactionId, mT.name, mT.startTime), MT = hm(TT, gT, jW, UT.reportAllChanges), MT(!0)
             }))
-          }), ip)
+          }), UT)
         }))
       },
-      yO = [.1, .25],
-      UO = pp => pp.find((pp => 1 === pp.node?.nodeType)) || pp[0];
-    let wO = 0,
-      vO = 1 / 0,
-      tO = 0;
-    const HO = pp => {
-      for (const ip of pp) ip.interactionId && (vO = Math.min(vO, ip.interactionId), tO = Math.max(tO, ip.interactionId), wO = tO ? (tO - vO) / 7 + 1 : 0)
+      LW = [.1, .25],
+      pW = TT => TT.find((TT => 1 === TT.node?.nodeType)) || TT[0];
+    let BW = 0,
+      ZW = 1 / 0,
+      cW = 0;
+    const vW = TT => {
+      for (const UT of TT) UT.interactionId && (ZW = Math.min(ZW, UT.interactionId), cW = Math.max(cW, UT.interactionId), BW = cW ? (cW - ZW) / 7 + 1 : 0)
     };
-    let dO;
-    const eO = () => dO ? wO : performance.interactionCount ?? 0;
-    class uO {
+    let fW;
+    const qW = () => fW ? BW : performance.interactionCount ?? 0;
+    class iW {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return eO() - this.h
+        return qW() - this.h
       }
       D() {
-        this.h = eO(), this.v.length = 0, this.p.clear()
+        this.h = qW(), this.v.length = 0, this.p.clear()
       }
-      S(pp) {
-        const ip = this.T(),
-          cp = Math.min(this.v.length - 1, Math.floor(ip / 50));
-        return !ip || -1 !== cp || "soft-navigation" !== pp && "back-forward-cache" !== pp ? this.v[cp] : {
+      S(TT) {
+        const UT = this.T(),
+          mT = Math.min(this.v.length - 1, Math.floor(UT / 50));
+        return !UT || -1 !== mT || "soft-navigation" !== TT && "back-forward-cache" !== TT ? this.v[mT] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(pp) {
-        if (this.m?.(pp), !pp.interactionId) return;
-        const ip = this.v.at(-1);
-        let cp = this.p.get(pp.interactionId);
-        if (cp || this.v.length < 10 || pp.duration > ip.k) {
-          if (cp ? pp.duration > cp.k ? (cp.entries = [pp], cp.k = pp.duration) : pp.duration === cp.k && pp.startTime === cp.entries[0].startTime && cp.entries.push(pp) : (cp = {
-              id: pp.interactionId,
-              entries: [pp],
-              k: pp.duration
-            }, this.p.set(cp.id, cp), this.v.push(cp)), this.v.sort(((pp, ip) => ip.k - pp.k)), this.v.length > 10) {
-            const pp = this.v.splice(10);
-            for (const ip of pp) this.p.delete(ip.id)
+      l(TT) {
+        if (this.m?.(TT), !TT.interactionId) return;
+        const UT = this.v.at(-1);
+        let mT = this.p.get(TT.interactionId);
+        if (mT || this.v.length < 10 || TT.duration > UT.k) {
+          if (mT ? TT.duration > mT.k ? (mT.entries = [TT], mT.k = TT.duration) : TT.duration === mT.k && TT.startTime === mT.entries[0].startTime && mT.entries.push(TT) : (mT = {
+              id: TT.interactionId,
+              entries: [TT],
+              k: TT.duration
+            }, this.p.set(mT.id, mT), this.v.push(mT)), this.v.sort(((TT, UT) => UT.k - TT.k)), this.v.length > 10) {
+            const TT = this.v.splice(10);
+            for (const UT of TT) this.p.delete(UT.id)
           }
-          this.M?.(cp)
+          this.M?.(mT)
         }
       }
     }
-    const jO = pp => {
-        const ip = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          cp = globalThis.requestIdleCallback || setTimeout,
-          Op = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) pp();
+    const bW = TT => {
+        const UT = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          mT = globalThis.requestIdleCallback || setTimeout,
+          WT = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) TT();
         else {
-          const op = YO(pp);
-          let Ip = -1;
-          const Sp = () => {
-            Op(Ip), op()
+          const zT = nW(TT);
+          let MT = -1;
+          const gT = () => {
+            WT(MT), zT()
           };
-          addEventListener("visibilitychange", Sp, {
+          addEventListener("visibilitychange", gT, {
             once: !0,
             capture: !0
-          }), Ip = cp((() => {
-            removeEventListener("visibilitychange", Sp, {
+          }), MT = mT((() => {
+            removeEventListener("visibilitychange", gT, {
               capture: !0
-            }), op()
+            }), zT()
           }), {
-            timeout: ip
+            timeout: UT
           })
         }
       },
-      kO = [200, 500],
-      mO = function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const cp = Gc(ip = Object.assign({}, ip), uO);
-        let Op = [],
-          op = [],
-          Ip = 0;
-        const Sp = new WeakMap,
-          xp = new WeakMap;
-        let Lp = !1;
-        const Yp = () => {
-            Lp || (Lp = !0, jO(Dp))
+      OW = [200, 500],
+      eW = function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const mT = Sm(UT = Object.assign({}, UT), iW);
+        let WT = [],
+          zT = [],
+          MT = 0;
+        const gT = new WeakMap,
+          nT = new WeakMap;
+        let HT = !1;
+        const kT = () => {
+            HT || (HT = !0, bW(jT))
           },
-          Dp = () => {
-            const pp = new Set(cp.v.map((pp => Sp.get(pp.entries[0])))),
-              ip = op.length - 10;
-            op = op.filter(((cp, Op) => Op >= ip || pp.has(cp)));
-            const xp = new Set;
-            for (const cp of op) {
-              const pp = Ap(cp.startTime, cp.processingEnd);
-              for (const ip of pp) xp.add(ip)
+          jT = () => {
+            const TT = new Set(mT.v.map((TT => gT.get(TT.entries[0])))),
+              UT = zT.length - 10;
+            zT = zT.filter(((mT, WT) => WT >= UT || TT.has(mT)));
+            const nT = new Set;
+            for (const mT of zT) {
+              const TT = lT(mT.startTime, mT.processingEnd);
+              for (const UT of TT) nT.add(UT)
             }
-            const Yp = Op.length - 10;
-            Op = Op.filter(((pp, ip) => xp.has(pp) || ip >= Yp && pp.startTime > Ip)), Lp = !1
+            const kT = WT.length - 10;
+            WT = WT.filter(((TT, UT) => nT.has(TT) || UT >= kT && TT.startTime > MT)), HT = !1
           };
-        cp.m = pp => {
-          const cp = pp.startTime + pp.duration;
-          let Op;
-          Ip = Math.max(Ip, pp.processingEnd);
-          for (let Ip = op.length - 1; Ip >= 0; Ip--) {
-            const Sp = op[Ip];
-            if (Math.abs(cp - Sp.renderTime) <= 8) {
-              Op = Sp, Op.startTime = Math.min(pp.startTime, Op.startTime), Op.processingStart = Math.min(pp.processingStart, Op.processingStart), Op.processingEnd = Math.max(pp.processingEnd, Op.processingEnd), ip.includeProcessedEventEntries && Op.entries.push(pp);
+        mT.m = TT => {
+          const mT = TT.startTime + TT.duration;
+          let WT;
+          MT = Math.max(MT, TT.processingEnd);
+          for (let MT = zT.length - 1; MT >= 0; MT--) {
+            const gT = zT[MT];
+            if (Math.abs(mT - gT.renderTime) <= 8) {
+              WT = gT, WT.startTime = Math.min(TT.startTime, WT.startTime), WT.processingStart = Math.min(TT.processingStart, WT.processingStart), WT.processingEnd = Math.max(TT.processingEnd, WT.processingEnd), UT.includeProcessedEventEntries && WT.entries.push(TT);
               break
             }
           }
-          Op || (Op = {
-            startTime: pp.startTime,
-            processingStart: pp.processingStart,
-            processingEnd: pp.processingEnd,
-            renderTime: cp,
-            entries: ip.includeProcessedEventEntries ? [pp] : []
-          }, op.push(Op)), pp.interactionId && Sp.set(pp, Op), Yp()
-        }, cp.M = pp => {
-          if (!xp.get(pp)) {
-            const cp = pp.entries.find((pp => pp.target))?.target;
-            if (cp) {
-              const Op = ip.generateTarget?.(cp) ?? Fc(cp);
-              xp.set(pp, Op)
+          WT || (WT = {
+            startTime: TT.startTime,
+            processingStart: TT.processingStart,
+            processingEnd: TT.processingEnd,
+            renderTime: mT,
+            entries: UT.includeProcessedEventEntries ? [TT] : []
+          }, zT.push(WT)), TT.interactionId && gT.set(TT, WT), kT()
+        }, mT.M = TT => {
+          if (!nT.get(TT)) {
+            const mT = TT.entries.find((TT => TT.target))?.target;
+            if (mT) {
+              const WT = UT.generateTarget?.(mT) ?? rm(mT);
+              nT.set(TT, WT)
             } else {
-              const ip = pp.entries.find((pp => pp.targetSelector))?.targetSelector;
-              ip && xp.set(pp, ip)
+              const UT = TT.entries.find((TT => TT.targetSelector))?.targetSelector;
+              UT && nT.set(TT, UT)
             }
           }
         };
-        const Ap = (pp, ip) => {
-          const cp = [];
-          for (const op of Op)
-            if (!(op.startTime + op.duration < pp)) {
-              if (op.startTime > ip) break;
-              cp.push(op)
-            } return cp
+        const lT = (TT, UT) => {
+          const mT = [];
+          for (const zT of WT)
+            if (!(zT.startTime + zT.duration < TT)) {
+              if (zT.startTime > UT) break;
+              mT.push(zT)
+            } return mT
         };
-        SO(["long-animation-frame"], (pp => {
-            Op = Op.concat(pp), Yp()
-          }), ip),
-          function(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        zW(["long-animation-frame"], (TT => {
+            WT = WT.concat(TT), kT()
+          }), UT),
+          function(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const cp = oO();
-            AO((() => {
-              "interactionCount" in performance || dO || (dO = SO(["event"], HO, {
+            const mT = mW();
+            kW((() => {
+              "interactionCount" in performance || fW || (fW = zW(["event"], vW, {
                 durationThreshold: 0
               }));
-              let Op, op = IO("INP");
-              const Ip = Gc(ip, uO),
-                Sp = (cp, Sp, xp, Lp, Yp) => {
-                  Ip.D(), op = IO("INP", -1, cp, Sp, xp, Lp, Yp), Op = sc(pp, op, kO, ip.reportAllChanges)
+              let WT, zT = WW("INP");
+              const MT = Sm(UT, iW),
+                gT = (mT, gT, nT, HT, kT) => {
+                  MT.D(), zT = WW("INP", -1, mT, gT, nT, HT, kT), WT = hm(TT, zT, OW, UT.reportAllChanges)
                 },
-                xp = () => {
-                  const pp = Ip.S(op.navigationType);
-                  pp && pp.k !== op.value && (op.value = pp.k, op.entries = pp.entries, Op())
+                nT = () => {
+                  const TT = MT.S(zT.navigationType);
+                  TT && TT.k !== zT.value && (zT.value = TT.k, zT.entries = TT.entries, WT())
                 },
-                Lp = pp => {
-                  xp(), Op(!0), Sp("soft-navigation", pp.navigationId, pp.interactionId, pp.name, pp.startTime)
+                HT = TT => {
+                  nT(), WT(!0), gT("soft-navigation", TT.navigationId, TT.interactionId, TT.name, TT.startTime)
                 },
-                Yp = function(pp) {
-                  let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  jO((() => {
-                    for (const ip of pp) "soft-navigation" !== ip.entryType ? Ip.l(ip) : Lp(ip);
-                    xp(), ip && Op(!0)
+                kT = function(TT) {
+                  let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  bW((() => {
+                    for (const UT of TT) "soft-navigation" !== UT.entryType ? MT.l(UT) : HT(UT);
+                    nT(), UT && WT(!0)
                   }))
                 },
-                Dp = ["event", "first-input"];
-              xO(ip) && Dp.push("soft-navigation");
-              const Ap = SO(Dp, Yp, {
-                ...ip,
-                durationThreshold: ip.durationThreshold ?? 40
+                jT = ["event", "first-input"];
+              MW(UT) && jT.push("soft-navigation");
+              const lT = zW(jT, kT, {
+                ...UT,
+                durationThreshold: UT.durationThreshold ?? 40
               });
-              Op = sc(pp, op, kO, ip.reportAllChanges), Ap && (cp.onHidden((() => {
-                Yp(Ap.takeRecords(), !0)
-              })), zc((() => {
-                Sp("back-forward-cache", op.navigationId, op.navigationInteractionId, op.navigationURL, Zc())
+              WT = hm(TT, zT, OW, UT.reportAllChanges), lT && (mT.onHidden((() => {
+                kT(lT.takeRecords(), !0)
+              })), Em((() => {
+                gT("back-forward-cache", zT.navigationId, zT.navigationInteractionId, zT.navigationURL, Nm())
               })))
             }))
-          }((ip => {
-            pp((pp => {
-              if (0 === pp.entries.length) {
-                const ip = pp.navigationStartTime || 0,
-                  cp = {
+          }((UT => {
+            TT((TT => {
+              if (0 === TT.entries.length) {
+                const UT = TT.navigationStartTime || 0,
+                  mT = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: pp.value,
-                    loadState: ac(ip)
+                    presentationDelay: TT.value,
+                    loadState: um(UT)
                   };
-                return Object.assign(pp, {
-                  attribution: cp
+                return Object.assign(TT, {
+                  attribution: mT
                 })
               }
-              const ip = pp.entries[0],
-                Op = Sp.get(ip),
-                op = Math.max(Op.processingStart, ip.startTime),
-                Ip = Math.max(ip.startTime + ip.duration, op),
-                Lp = Math.min(Op.processingEnd, Ip),
-                Yp = Op.entries.sort(((pp, ip) => pp.processingStart - ip.processingStart)),
-                Dp = Ap(ip.startTime, Lp),
-                Pp = cp.p.get(ip.interactionId),
-                Wp = {
-                  interactionTarget: xp.get(Pp),
-                  interactionType: ip.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: ip.startTime,
-                  nextPaintTime: Ip,
-                  processedEventEntries: Yp,
-                  longAnimationFrameEntries: Dp,
-                  inputDelay: op - ip.startTime,
-                  processingDuration: Lp - op,
-                  presentationDelay: Ip - Lp,
-                  loadState: ac(ip.startTime),
+              const UT = TT.entries[0],
+                WT = gT.get(UT),
+                zT = Math.max(WT.processingStart, UT.startTime),
+                MT = Math.max(UT.startTime + UT.duration, zT),
+                HT = Math.min(WT.processingEnd, MT),
+                kT = WT.entries.sort(((TT, UT) => TT.processingStart - UT.processingStart)),
+                jT = lT(UT.startTime, HT),
+                LT = mT.p.get(UT.interactionId),
+                pT = {
+                  interactionTarget: nT.get(LT),
+                  interactionType: UT.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: UT.startTime,
+                  nextPaintTime: MT,
+                  processedEventEntries: kT,
+                  longAnimationFrameEntries: jT,
+                  inputDelay: zT - UT.startTime,
+                  processingDuration: HT - zT,
+                  presentationDelay: MT - HT,
+                  loadState: um(UT.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (pp => {
-                const ip = pp.interactionTime,
-                  cp = pp.nextPaintTime;
-                if (!pp.longAnimationFrameEntries?.length || !ip || !cp) return;
-                const Op = pp.inputDelay,
-                  op = pp.processingDuration;
-                let Ip, Sp, xp = 0,
-                  Lp = 0,
-                  Yp = 0,
-                  Dp = 0;
-                for (const Wp of pp.longAnimationFrameEntries) {
-                  Lp = Lp + Wp.startTime + Wp.duration - Wp.styleAndLayoutStart;
-                  for (const pp of Wp.scripts) {
-                    const cp = pp.startTime + pp.duration;
-                    if (cp < ip) continue;
-                    const Yp = cp - Math.max(ip, pp.startTime),
-                      Ap = pp.duration ? Yp / pp.duration * pp.forcedStyleAndLayoutDuration : 0;
-                    xp += Yp - Ap, Lp += Ap, Yp > Dp && (Sp = pp.startTime < ip + Op ? "input-delay" : pp.startTime >= ip + Op + op ? "presentation-delay" : "processing-duration", Ip = pp, Dp = Yp)
+              return (TT => {
+                const UT = TT.interactionTime,
+                  mT = TT.nextPaintTime;
+                if (!TT.longAnimationFrameEntries?.length || !UT || !mT) return;
+                const WT = TT.inputDelay,
+                  zT = TT.processingDuration;
+                let MT, gT, nT = 0,
+                  HT = 0,
+                  kT = 0,
+                  jT = 0;
+                for (const pT of TT.longAnimationFrameEntries) {
+                  HT = HT + pT.startTime + pT.duration - pT.styleAndLayoutStart;
+                  for (const TT of pT.scripts) {
+                    const mT = TT.startTime + TT.duration;
+                    if (mT < UT) continue;
+                    const kT = mT - Math.max(UT, TT.startTime),
+                      lT = TT.duration ? kT / TT.duration * TT.forcedStyleAndLayoutDuration : 0;
+                    nT += kT - lT, HT += lT, kT > jT && (gT = TT.startTime < UT + WT ? "input-delay" : TT.startTime >= UT + WT + zT ? "presentation-delay" : "processing-duration", MT = TT, jT = kT)
                   }
                 }
-                const Ap = pp.longAnimationFrameEntries.at(-1),
-                  Pp = Ap ? Ap.startTime + Ap.duration : 0;
-                Pp >= ip + Op + op && (Yp = cp - Pp), Ip && Sp && (pp.longestScript = {
-                  entry: Ip,
-                  subpart: Sp,
-                  intersectingDuration: Dp
-                }), pp.totalScriptDuration = xp, pp.totalStyleAndLayoutDuration = Lp, pp.totalPaintDuration = Yp, pp.totalUnattributedDuration = cp - ip - xp - Lp - Yp
-              })(Wp), Object.assign(pp, {
-                attribution: Wp
+                const lT = TT.longAnimationFrameEntries.at(-1),
+                  LT = lT ? lT.startTime + lT.duration : 0;
+                LT >= UT + WT + zT && (kT = mT - LT), MT && gT && (TT.longestScript = {
+                  entry: MT,
+                  subpart: gT,
+                  intersectingDuration: jT
+                }), TT.totalScriptDuration = nT, TT.totalStyleAndLayoutDuration = HT, TT.totalPaintDuration = kT, TT.totalUnattributedDuration = mT - UT - nT - HT - kT
+              })(pT), Object.assign(TT, {
+                attribution: pT
               })
-            })(ip))
-          }), ip)
+            })(UT))
+          }), UT)
       };
-    class RO {
+    class YW {
       m;
       u;
-      l(pp) {
-        this.m?.(pp)
+      l(TT) {
+        this.m?.(TT)
       }
     }
-    const qO = [2500, 4e3];
-    let MO = 50;
-    const CO = [];
-    SO(["resource"], (pp => {
-      for (const ip of pp) CO.push(ip), CO.length > MO && CO.shift()
+    const JW = [2500, 4e3];
+    let xW = 50;
+    const dW = [];
+    zW(["resource"], (TT => {
+      for (const UT of TT) dW.push(UT), dW.length > xW && dW.shift()
     }));
-    const EO = [800, 1800],
-      XO = pp => {
-        document.prerendering ? AO((() => XO(pp))) : "complete" !== document.readyState ? addEventListener("load", (() => XO(pp)), !0) : setTimeout(pp)
+    const wW = [800, 1800],
+      tW = TT => {
+        document.prerendering ? kW((() => tW(TT))) : "complete" !== document.readyState ? addEventListener("load", (() => tW(TT)), !0) : setTimeout(TT)
       },
-      lO = "load_state",
-      QO = "time_to_first_byte";
-    var JO = class {
-        constructor(pp, ip) {
-          this.corePushMeasurement = pp, this.webVitalConfig = ip
+      aW = "load_state",
+      yW = "time_to_first_byte";
+    var XW = class {
+        constructor(TT, UT) {
+          this.corePushMeasurement = TT, this.webVitalConfig = UT
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var pp;
-          ! function(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const cp = Gc(ip = Object.assign({}, ip), bc),
-              Op = new WeakMap;
-            cp.t = pp => {
-                if (pp?.sources?.length) {
-                  const cp = UO(pp.sources),
-                    op = cp?.node;
-                  if (op) {
-                    const pp = ip.generateTarget?.(op) ?? Fc(op);
-                    Op.set(cp, pp)
+          var TT;
+          ! function(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const mT = Sm(UT = Object.assign({}, UT), Pm),
+              WT = new WeakMap;
+            mT.t = TT => {
+                if (TT?.sources?.length) {
+                  const mT = pW(TT.sources),
+                    zT = mT?.node;
+                  if (zT) {
+                    const TT = UT.generateTarget?.(zT) ?? rm(zT);
+                    WT.set(mT, TT)
                   }
                 }
               },
-              function(pp) {
-                let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const cp = oO();
-                WO(YO((() => {
-                  let Op, op = IO("CLS", 0);
-                  const Ip = Gc(ip, bc),
-                    Sp = (cp, Sp, xp, Lp, Yp) => {
-                      op = IO("CLS", 0, cp, Sp, xp, Lp, Yp), Ip.o = 0, Op = sc(pp, op, yO, ip.reportAllChanges)
+              function(TT) {
+                let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const mT = mW();
+                lW(nW((() => {
+                  let WT, zT = WW("CLS", 0);
+                  const MT = Sm(UT, Pm),
+                    gT = (mT, gT, nT, HT, kT) => {
+                      zT = WW("CLS", 0, mT, gT, nT, HT, kT), MT.o = 0, WT = hm(TT, zT, LW, UT.reportAllChanges)
                     },
-                    xp = function() {
-                      let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      Ip.o > op.value && (op.value = Ip.o, op.entries = Ip.i), Op(pp)
+                    nT = function() {
+                      let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      MT.o > zT.value && (zT.value = MT.o, zT.entries = MT.i), WT(TT)
                     },
-                    Lp = pp => {
-                      xp(!0), Sp("soft-navigation", pp.navigationId, pp.interactionId, pp.name, pp.startTime)
+                    HT = TT => {
+                      nT(!0), gT("soft-navigation", TT.navigationId, TT.interactionId, TT.name, TT.startTime)
                     },
-                    Yp = pp => {
-                      for (const ip of pp) "soft-navigation" !== ip.entryType ? Ip.l(ip) : Lp(ip);
-                      xp()
+                    kT = TT => {
+                      for (const UT of TT) "soft-navigation" !== UT.entryType ? MT.l(UT) : HT(UT);
+                      nT()
                     },
-                    Dp = ["layout-shift"];
-                  xO(ip) && Dp.push("soft-navigation");
-                  const Ap = SO(Dp, Yp);
-                  Ap && (Op = sc(pp, op, yO, ip.reportAllChanges), cp.onHidden((() => {
-                    Yp(Ap.takeRecords()), Op(!0)
-                  })), zc((() => {
-                    Sp("back-forward-cache", op.navigationId, op.navigationInteractionId, op.navigationURL, Zc()), Kc(Op)
-                  })), setTimeout(Op))
+                    jT = ["layout-shift"];
+                  MW(UT) && jT.push("soft-navigation");
+                  const lT = zW(jT, kT);
+                  lT && (WT = hm(TT, zT, LW, UT.reportAllChanges), mT.onHidden((() => {
+                    kT(lT.takeRecords()), WT(!0)
+                  })), Em((() => {
+                    gT("back-forward-cache", zT.navigationId, zT.navigationInteractionId, zT.navigationURL, Nm()), Dm(WT)
+                  })), setTimeout(WT))
                 })))
-              }((ip => {
-                pp((pp => {
-                  let ip = {};
-                  if (pp.entries.length) {
-                    const cp = pp.entries.reduce(((pp, ip) => pp.value > ip.value ? pp : ip));
-                    if (cp?.sources?.length) {
-                      const pp = UO(cp.sources);
-                      pp && (ip = {
-                        largestShiftTarget: Op.get(pp),
-                        largestShiftTime: cp.startTime,
-                        largestShiftValue: cp.value,
-                        largestShiftSource: pp,
-                        largestShiftEntry: cp,
-                        loadState: ac(cp.startTime)
+              }((UT => {
+                TT((TT => {
+                  let UT = {};
+                  if (TT.entries.length) {
+                    const mT = TT.entries.reduce(((TT, UT) => TT.value > UT.value ? TT : UT));
+                    if (mT?.sources?.length) {
+                      const TT = pW(mT.sources);
+                      TT && (UT = {
+                        largestShiftTarget: WT.get(TT),
+                        largestShiftTime: mT.startTime,
+                        largestShiftValue: mT.value,
+                        largestShiftSource: TT,
+                        largestShiftEntry: mT,
+                        loadState: um(mT.startTime)
                       })
                     }
                   }
-                  return Object.assign(pp, {
-                    attribution: ip
+                  return Object.assign(TT, {
+                    attribution: UT
                   })
-                })(ip))
-              }), ip)
-          }((pp => {
+                })(UT))
+              }), UT)
+          }((TT => {
             const {
-              loadState: ip,
-              largestShiftValue: cp,
-              largestShiftTime: Op,
-              largestShiftTarget: op
-            } = pp.attribution, Ip = this.buildInitialValues(pp);
-            this.addIfPresent(Ip, "largest_shift_value", cp), this.addIfPresent(Ip, "largest_shift_time", Op);
-            const Sp = this.buildInitialContext(pp);
-            this.addIfPresent(Sp, lO, ip), this.addIfPresent(Sp, "largest_shift_target", op), this.pushMeasurement(Ip, Sp)
+              loadState: UT,
+              largestShiftValue: mT,
+              largestShiftTime: WT,
+              largestShiftTarget: zT
+            } = TT.attribution, MT = this.buildInitialValues(TT);
+            this.addIfPresent(MT, "largest_shift_value", mT), this.addIfPresent(MT, "largest_shift_time", WT);
+            const gT = this.buildInitialContext(TT);
+            this.addIfPresent(gT, aW, UT), this.addIfPresent(gT, "largest_shift_target", zT), this.pushMeasurement(MT, gT)
           }), {
-            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
+            reportAllChanges: null === (TT = this.webVitalConfig) || void 0 === TT ? void 0 : TT.reportAllChanges
           })
         }
         measureFCP() {
-          var pp;
-          ! function(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const cp = Gc(ip = Object.assign({}, ip), DO);
-            xO(ip) && (cp.u = new Map), WO((ip => {
-              pp((pp => {
-                let ip = {
+          var TT;
+          ! function(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const mT = Sm(UT = Object.assign({}, UT), HW);
+            MW(UT) && (mT.u = new Map), lW((UT => {
+              TT((TT => {
+                let UT = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: pp.value,
-                  loadState: ac(Zc())
+                  firstByteToFCP: TT.value,
+                  loadState: um(Nm())
                 };
-                if ("soft-navigation" !== pp.navigationType) {
-                  if (pp.entries.length) {
-                    const cp = hc(),
-                      Op = pp.entries.at(-1);
-                    if (cp) {
-                      const op = cp.responseStart,
-                        Ip = cp.activationStart || 0,
-                        Sp = Math.max(0, op - Ip);
-                      ip = {
-                        timeToFirstByte: Sp,
-                        firstByteToFCP: pp.value - Sp,
-                        loadState: ac(pp.entries[0].startTime),
-                        navigationEntry: cp,
-                        fcpEntry: Op
+                if ("soft-navigation" !== TT.navigationType) {
+                  if (TT.entries.length) {
+                    const mT = Vm(),
+                      WT = TT.entries.at(-1);
+                    if (mT) {
+                      const zT = mT.responseStart,
+                        MT = mT.activationStart || 0,
+                        gT = Math.max(0, zT - MT);
+                      UT = {
+                        timeToFirstByte: gT,
+                        firstByteToFCP: TT.value - gT,
+                        loadState: um(TT.entries[0].startTime),
+                        navigationEntry: mT,
+                        fcpEntry: WT
                       }
                     }
                   }
                 } else {
-                  const Op = cp.u?.get(pp.navigationId);
-                  Op && (ip = {
+                  const WT = mT.u?.get(TT.navigationId);
+                  WT && (UT = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: pp.value,
+                    firstByteToFCP: TT.value,
                     loadState: "complete",
-                    navigationEntry: Op
+                    navigationEntry: WT
                   })
                 }
-                return Object.assign(pp, {
-                  attribution: ip
+                return Object.assign(TT, {
+                  attribution: UT
                 })
-              })(ip))
-            }), ip)
-          }((pp => {
+              })(UT))
+            }), UT)
+          }((TT => {
             const {
-              firstByteToFCP: ip,
-              timeToFirstByte: cp,
-              loadState: Op
-            } = pp.attribution, op = this.buildInitialValues(pp);
-            this.addIfPresent(op, "first_byte_to_fcp", ip), this.addIfPresent(op, QO, cp);
-            const Ip = this.buildInitialContext(pp);
-            this.addIfPresent(Ip, lO, Op), this.pushMeasurement(op, Ip)
+              firstByteToFCP: UT,
+              timeToFirstByte: mT,
+              loadState: WT
+            } = TT.attribution, zT = this.buildInitialValues(TT);
+            this.addIfPresent(zT, "first_byte_to_fcp", UT), this.addIfPresent(zT, yW, mT);
+            const MT = this.buildInitialContext(TT);
+            this.addIfPresent(MT, aW, WT), this.pushMeasurement(zT, MT)
           }), {
-            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
+            reportAllChanges: null === (TT = this.webVitalConfig) || void 0 === TT ? void 0 : TT.reportAllChanges
           })
         }
         measureINP() {
-          var pp;
-          mO((pp => {
-            var ip;
+          var TT;
+          eW((TT => {
+            var UT;
             const {
-              interactionTime: cp,
-              presentationDelay: Op,
-              inputDelay: op,
-              processingDuration: Ip,
-              nextPaintTime: Sp,
-              loadState: xp,
-              interactionTarget: Lp,
-              interactionType: Yp,
-              totalScriptDuration: Dp,
-              totalStyleAndLayoutDuration: Ap,
-              totalPaintDuration: Pp,
-              totalUnattributedDuration: Wp,
-              longestScript: yp
-            } = pp.attribution, Up = this.buildInitialValues(pp);
-            this.addIfPresent(Up, "interaction_time", cp), this.addIfPresent(Up, "presentation_delay", Op), this.addIfPresent(Up, "input_delay", op), this.addIfPresent(Up, "processing_duration", Ip), this.addIfPresent(Up, "next_paint_time", Sp), this.addNumberIfDefined(Up, "total_script_duration", Dp), this.addNumberIfDefined(Up, "total_style_and_layout_duration", Ap), this.addNumberIfDefined(Up, "total_paint_duration", Pp), this.addNumberIfDefined(Up, "total_unattributed_duration", Wp), this.addNumberIfDefined(Up, "longest_script_intersecting_duration", null === yp || void 0 === yp ? void 0 : yp.intersectingDuration);
-            const wp = this.buildInitialContext(pp);
-            this.addIfPresent(wp, lO, xp), this.addIfPresent(wp, "interaction_target", Lp), this.addIfPresent(wp, "interaction_type", Yp), this.addIfPresent(wp, "longest_script_subpart", null === yp || void 0 === yp ? void 0 : yp.subpart), this.addIfPresent(wp, "longest_script_invoker_type", null === yp || void 0 === yp ? void 0 : yp.entry.invokerType), (null === (ip = this.webVitalConfig) || void 0 === ip ? void 0 : ip.trackAttributionSources) && (this.addIfPresent(wp, "longest_script_invoker", null === yp || void 0 === yp ? void 0 : yp.entry.invoker), this.addIfPresent(wp, "longest_script_source_url", null === yp || void 0 === yp ? void 0 : yp.entry.sourceURL), this.addIfPresent(wp, "longest_script_source_function_name", null === yp || void 0 === yp ? void 0 : yp.entry.sourceFunctionName), this.addIfPresent(wp, "longest_script_source_char_position", void 0 !== (null === yp || void 0 === yp ? void 0 : yp.entry.sourceCharPosition) ? String(yp.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Up, wp)
+              interactionTime: mT,
+              presentationDelay: WT,
+              inputDelay: zT,
+              processingDuration: MT,
+              nextPaintTime: gT,
+              loadState: nT,
+              interactionTarget: HT,
+              interactionType: kT,
+              totalScriptDuration: jT,
+              totalStyleAndLayoutDuration: lT,
+              totalPaintDuration: LT,
+              totalUnattributedDuration: pT,
+              longestScript: BT
+            } = TT.attribution, ZT = this.buildInitialValues(TT);
+            this.addIfPresent(ZT, "interaction_time", mT), this.addIfPresent(ZT, "presentation_delay", WT), this.addIfPresent(ZT, "input_delay", zT), this.addIfPresent(ZT, "processing_duration", MT), this.addIfPresent(ZT, "next_paint_time", gT), this.addNumberIfDefined(ZT, "total_script_duration", jT), this.addNumberIfDefined(ZT, "total_style_and_layout_duration", lT), this.addNumberIfDefined(ZT, "total_paint_duration", LT), this.addNumberIfDefined(ZT, "total_unattributed_duration", pT), this.addNumberIfDefined(ZT, "longest_script_intersecting_duration", null === BT || void 0 === BT ? void 0 : BT.intersectingDuration);
+            const cT = this.buildInitialContext(TT);
+            this.addIfPresent(cT, aW, nT), this.addIfPresent(cT, "interaction_target", HT), this.addIfPresent(cT, "interaction_type", kT), this.addIfPresent(cT, "longest_script_subpart", null === BT || void 0 === BT ? void 0 : BT.subpart), this.addIfPresent(cT, "longest_script_invoker_type", null === BT || void 0 === BT ? void 0 : BT.entry.invokerType), (null === (UT = this.webVitalConfig) || void 0 === UT ? void 0 : UT.trackAttributionSources) && (this.addIfPresent(cT, "longest_script_invoker", null === BT || void 0 === BT ? void 0 : BT.entry.invoker), this.addIfPresent(cT, "longest_script_source_url", null === BT || void 0 === BT ? void 0 : BT.entry.sourceURL), this.addIfPresent(cT, "longest_script_source_function_name", null === BT || void 0 === BT ? void 0 : BT.entry.sourceFunctionName), this.addIfPresent(cT, "longest_script_source_char_position", void 0 !== (null === BT || void 0 === BT ? void 0 : BT.entry.sourceCharPosition) ? String(BT.entry.sourceCharPosition) : void 0)), this.pushMeasurement(ZT, cT)
           }), {
-            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
+            reportAllChanges: null === (TT = this.webVitalConfig) || void 0 === TT ? void 0 : TT.reportAllChanges
           })
         }
         measureLCP() {
-          var pp;
-          ! function(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (ip = Object.assign({}, ip)).resourceBufferSize && (MO = ip.resourceBufferSize);
-            const cp = Gc(ip, RO),
-              Op = new WeakMap;
-            xO(ip) && (cp.u = new Map), cp.m = pp => {
-                const cp = pp.element;
-                if (cp) {
-                  const op = ip.generateTarget?.(cp) ?? Fc(cp);
-                  Op.set(pp, op)
-                } else pp.id && Op.set(pp, `#${pp.id}`)
+          var TT;
+          ! function(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (UT = Object.assign({}, UT)).resourceBufferSize && (xW = UT.resourceBufferSize);
+            const mT = Sm(UT, YW),
+              WT = new WeakMap;
+            MW(UT) && (mT.u = new Map), mT.m = TT => {
+                const mT = TT.element;
+                if (mT) {
+                  const zT = UT.generateTarget?.(mT) ?? rm(mT);
+                  WT.set(TT, zT)
+                } else TT.id && WT.set(TT, `#${TT.id}`)
               },
-              function(pp) {
-                let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  cp = !1;
-                const Op = xO(ip);
-                AO((() => {
-                  let op, Ip = oO(),
-                    Sp = IO("LCP");
-                  const xp = Gc(ip, RO),
-                    Lp = (Op, xp, Lp, Yp, Dp) => {
-                      Sp = IO("LCP", -1, Op, xp, Lp, Yp, Dp), op = sc(pp, Sp, qO, ip.reportAllChanges), cp = !1, "soft-navigation" === Op && (Ip = oO(!0))
+              function(TT) {
+                let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  mT = !1;
+                const WT = MW(UT);
+                kW((() => {
+                  let zT, MT = mW(),
+                    gT = WW("LCP");
+                  const nT = Sm(UT, YW),
+                    HT = (WT, nT, HT, kT, jT) => {
+                      gT = WW("LCP", -1, WT, nT, HT, kT, jT), zT = hm(TT, gT, JW, UT.reportAllChanges), mT = !1, "soft-navigation" === WT && (MT = mW(!0))
                     },
-                    Yp = pp => {
-                      xp.u && pp.navigationId && LO(xp.u, pp), cp || op(!0), Lp("soft-navigation", pp.navigationId, pp.interactionId, pp.name, pp.startTime);
-                      const ip = pp.getLargestInteractionContentfulPaint?.();
-                      ip && Dp([ip])
+                    kT = TT => {
+                      nT.u && TT.navigationId && gW(nT.u, TT), mT || zT(!0), HT("soft-navigation", TT.navigationId, TT.interactionId, TT.name, TT.startTime);
+                      const UT = TT.getLargestInteractionContentfulPaint?.();
+                      UT && jT([UT])
                     },
-                    Dp = pp => {
-                      ip.reportAllChanges || Op || (pp = pp.slice(-1));
-                      for (const ip of pp) {
-                        if (!ip) continue;
-                        if ("soft-navigation" === ip.entryType) {
-                          Yp(ip);
+                    jT = TT => {
+                      UT.reportAllChanges || WT || (TT = TT.slice(-1));
+                      for (const UT of TT) {
+                        if (!UT) continue;
+                        if ("soft-navigation" === UT.entryType) {
+                          kT(UT);
                           continue
                         }
-                        let pp = 0,
-                          cp = [],
-                          Op = ip.startTime;
-                        if ("largest-contentful-paint" === ip.entryType) pp = Math.max(ip.startTime - Vc(), 0), xp.l(ip), cp = [ip];
-                        else if ("interaction-contentful-paint" === ip.entryType) {
-                          const op = ip;
-                          if (!Sp.navigationId) continue;
-                          if ("interactionId" in op && op.interactionId != Sp.navigationInteractionId) continue;
-                          Op = op.largestContentfulPaint?.renderTime || 0, pp = Math.max(Op - ip.startTime, 0), op.largestContentfulPaint && (xp.l(op.largestContentfulPaint), cp = [op.largestContentfulPaint])
+                        let TT = 0,
+                          mT = [],
+                          WT = UT.startTime;
+                        if ("largest-contentful-paint" === UT.entryType) TT = Math.max(UT.startTime - om(), 0), nT.l(UT), mT = [UT];
+                        else if ("interaction-contentful-paint" === UT.entryType) {
+                          const zT = UT;
+                          if (!gT.navigationId) continue;
+                          if ("interactionId" in zT && zT.interactionId != gT.navigationInteractionId) continue;
+                          WT = zT.largestContentfulPaint?.renderTime || 0, TT = Math.max(WT - UT.startTime, 0), zT.largestContentfulPaint && (nT.l(zT.largestContentfulPaint), mT = [zT.largestContentfulPaint])
                         }
-                        Op < Ip.firstHiddenTime && (Sp.value = pp, Sp.entries = cp, op())
+                        WT < MT.firstHiddenTime && (gT.value = TT, gT.entries = mT, zT())
                       }
                     },
-                    Ap = ["largest-contentful-paint"];
-                  Op && Ap.push("interaction-contentful-paint", "soft-navigation");
-                  const Pp = SO(Ap, Dp);
-                  if (Pp) {
-                    op = sc(pp, Sp, qO, ip.reportAllChanges);
-                    const Ip = ["keydown", "click", "visibilitychange"],
-                      xp = pp => {
-                        if (pp.isTrusted && !cp) {
-                          const pp = Sp.id;
-                          jO((() => {
-                            if (!cp) {
-                              if (!Op) {
-                                Pp.disconnect();
-                                for (const pp of Ip) removeEventListener(pp, xp, {
+                    lT = ["largest-contentful-paint"];
+                  WT && lT.push("interaction-contentful-paint", "soft-navigation");
+                  const LT = zW(lT, jT);
+                  if (LT) {
+                    zT = hm(TT, gT, JW, UT.reportAllChanges);
+                    const MT = ["keydown", "click", "visibilitychange"],
+                      nT = TT => {
+                        if (TT.isTrusted && !mT) {
+                          const TT = gT.id;
+                          bW((() => {
+                            if (!mT) {
+                              if (!WT) {
+                                LT.disconnect();
+                                for (const TT of MT) removeEventListener(TT, nT, {
                                   capture: !0
                                 })
                               }
-                              pp === Sp.id && (cp = !0, op(!0))
+                              TT === gT.id && (mT = !0, zT(!0))
                             }
                           }))
                         }
                       };
-                    for (const pp of Ip) addEventListener(pp, xp, {
+                    for (const TT of MT) addEventListener(TT, nT, {
                       capture: !0
                     });
-                    zc((Op => {
-                      Lp("back-forward-cache", Sp.navigationId, Sp.navigationInteractionId, Sp.navigationURL, Zc()), op = sc(pp, Sp, qO, ip.reportAllChanges), Kc((() => {
-                        Sp.value = performance.now() - Op.timeStamp, cp = !0, op(!0)
+                    Em((WT => {
+                      HT("back-forward-cache", gT.navigationId, gT.navigationInteractionId, gT.navigationURL, Nm()), zT = hm(TT, gT, JW, UT.reportAllChanges), Dm((() => {
+                        gT.value = performance.now() - WT.timeStamp, mT = !0, zT(!0)
                       }))
                     }))
                   }
                 }))
-              }((ip => {
-                pp((pp => {
-                  let ip = {
+              }((UT => {
+                TT((TT => {
+                  let UT = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: pp.value
+                    elementRenderDelay: TT.value
                   };
-                  if (pp.entries.length) {
-                    const op = pp.entries.at(-1),
-                      Ip = pp => pp.name === op.url && (pp.requestStart || pp.startTime) <= op.startTime,
-                      Sp = op.url && (CO.findLast(Ip) || performance.getEntriesByType("resource").findLast(Ip));
-                    let xp;
-                    ip.target = Op.get(op), ip.lcpEntry = op, op.url && (ip.url = op.url), Sp && (ip.lcpResourceEntry = Sp);
-                    let Lp = 0,
-                      Yp = 0;
-                    if ("soft-navigation" !== pp.navigationType ? (xp = hc(), Lp = xp?.activationStart ?? 0, Yp = xp?.responseStart ?? 0) : (Lp = pp.navigationStartTime || 0, xp = cp.u?.get(pp.navigationId)), xp) {
-                      const cp = Math.max(0, Yp - Lp),
-                        Op = Math.max(cp, Sp ? (Sp.requestStart || Sp.startTime) - Lp : 0),
-                        op = Math.min(pp.value, Math.max(Op, Sp ? Sp.responseEnd - Lp : 0));
-                      ip = {
-                        ...ip,
-                        timeToFirstByte: cp,
-                        resourceLoadDelay: Op - cp,
-                        resourceLoadDuration: op - Op,
-                        elementRenderDelay: pp.value - op,
-                        navigationEntry: xp
+                  if (TT.entries.length) {
+                    const zT = TT.entries.at(-1),
+                      MT = TT => TT.name === zT.url && (TT.requestStart || TT.startTime) <= zT.startTime,
+                      gT = zT.url && (dW.findLast(MT) || performance.getEntriesByType("resource").findLast(MT));
+                    let nT;
+                    UT.target = WT.get(zT), UT.lcpEntry = zT, zT.url && (UT.url = zT.url), gT && (UT.lcpResourceEntry = gT);
+                    let HT = 0,
+                      kT = 0;
+                    if ("soft-navigation" !== TT.navigationType ? (nT = Vm(), HT = nT?.activationStart ?? 0, kT = nT?.responseStart ?? 0) : (HT = TT.navigationStartTime || 0, nT = mT.u?.get(TT.navigationId)), nT) {
+                      const mT = Math.max(0, kT - HT),
+                        WT = Math.max(mT, gT ? (gT.requestStart || gT.startTime) - HT : 0),
+                        zT = Math.min(TT.value, Math.max(WT, gT ? gT.responseEnd - HT : 0));
+                      UT = {
+                        ...UT,
+                        timeToFirstByte: mT,
+                        resourceLoadDelay: WT - mT,
+                        resourceLoadDuration: zT - WT,
+                        elementRenderDelay: TT.value - zT,
+                        navigationEntry: nT
                       }
                     }
                   }
-                  return Object.assign(pp, {
-                    attribution: ip
+                  return Object.assign(TT, {
+                    attribution: UT
                   })
-                })(ip))
-              }), ip)
-          }((pp => {
-            var ip;
+                })(UT))
+              }), UT)
+          }((TT => {
+            var UT;
             const {
-              elementRenderDelay: cp,
-              resourceLoadDelay: Op,
-              resourceLoadDuration: op,
-              timeToFirstByte: Ip,
-              target: Sp,
-              url: xp,
-              lcpResourceEntry: Lp
-            } = pp.attribution, Yp = this.buildInitialValues(pp);
-            this.addIfPresent(Yp, "element_render_delay", cp), this.addIfPresent(Yp, "resource_load_delay", Op), this.addIfPresent(Yp, "resource_load_duration", op), this.addIfPresent(Yp, QO, Ip);
-            const Dp = this.buildInitialContext(pp);
-            this.addIfPresent(Dp, "element", Sp), (null === (ip = this.webVitalConfig) || void 0 === ip ? void 0 : ip.trackAttributionSources) && (this.addIfPresent(Dp, "resource_url", xp), this.addIfPresent(Dp, "resource_delivery_type", null === Lp || void 0 === Lp ? void 0 : Lp.deliveryType), this.addIfPresent(Dp, "resource_initiator_type", null === Lp || void 0 === Lp ? void 0 : Lp.initiatorType)), this.pushMeasurement(Yp, Dp)
+              elementRenderDelay: mT,
+              resourceLoadDelay: WT,
+              resourceLoadDuration: zT,
+              timeToFirstByte: MT,
+              target: gT,
+              url: nT,
+              lcpResourceEntry: HT
+            } = TT.attribution, kT = this.buildInitialValues(TT);
+            this.addIfPresent(kT, "element_render_delay", mT), this.addIfPresent(kT, "resource_load_delay", WT), this.addIfPresent(kT, "resource_load_duration", zT), this.addIfPresent(kT, yW, MT);
+            const jT = this.buildInitialContext(TT);
+            this.addIfPresent(jT, "element", gT), (null === (UT = this.webVitalConfig) || void 0 === UT ? void 0 : UT.trackAttributionSources) && (this.addIfPresent(jT, "resource_url", nT), this.addIfPresent(jT, "resource_delivery_type", null === HT || void 0 === HT ? void 0 : HT.deliveryType), this.addIfPresent(jT, "resource_initiator_type", null === HT || void 0 === HT ? void 0 : HT.initiatorType)), this.pushMeasurement(kT, jT)
           }), {
-            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
+            reportAllChanges: null === (TT = this.webVitalConfig) || void 0 === TT ? void 0 : TT.reportAllChanges
           })
         }
         measureTTFB() {
-          var pp;
-          ! function(pp) {
-            ! function(pp) {
-              let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const cp = xO(ip);
-              let Op = IO("TTFB"),
-                op = sc(pp, Op, EO, ip.reportAllChanges);
-              XO((() => {
-                const Ip = hc();
-                if (Ip) {
-                  const Sp = Ip.responseStart;
-                  Op.value = Math.max(Sp - Vc(), 0), Op.entries = [Ip], op(!0), zc((() => {
-                    Op = IO("TTFB", 0, "back-forward-cache", Op.navigationId, Op.navigationInteractionId, Op.navigationURL, Zc()), op = sc(pp, Op, EO, ip.reportAllChanges), op(!0)
-                  })), cp && SO(["soft-navigation"], (cp => {
-                    cp.forEach((cp => {
-                      cp.navigationId && (Op = IO("TTFB", 0, "soft-navigation", cp.navigationId, cp.interactionId, cp.name, cp.startTime), Op.entries = [cp], op = sc(pp, Op, EO, ip.reportAllChanges), op(!0))
+          var TT;
+          ! function(TT) {
+            ! function(TT) {
+              let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const mT = MW(UT);
+              let WT = WW("TTFB"),
+                zT = hm(TT, WT, wW, UT.reportAllChanges);
+              tW((() => {
+                const MT = Vm();
+                if (MT) {
+                  const gT = MT.responseStart;
+                  WT.value = Math.max(gT - om(), 0), WT.entries = [MT], zT(!0), Em((() => {
+                    WT = WW("TTFB", 0, "back-forward-cache", WT.navigationId, WT.navigationInteractionId, WT.navigationURL, Nm()), zT = hm(TT, WT, wW, UT.reportAllChanges), zT(!0)
+                  })), mT && zW(["soft-navigation"], (mT => {
+                    mT.forEach((mT => {
+                      mT.navigationId && (WT = WW("TTFB", 0, "soft-navigation", mT.navigationId, mT.interactionId, mT.name, mT.startTime), WT.entries = [mT], zT = hm(TT, WT, wW, UT.reportAllChanges), zT(!0))
                     }))
-                  }), ip)
+                  }), UT)
                 }
               }))
-            }((ip => {
-              pp((pp => {
-                const ip = pp.entries[0];
-                let cp = {
+            }((UT => {
+              TT((TT => {
+                const UT = TT.entries[0];
+                let mT = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: ip
+                  navigationEntry: UT
                 };
-                if (pp.entries.length && ip instanceof PerformanceNavigationTiming) {
-                  const Op = ip.activationStart || 0,
-                    op = Math.max((ip.workerStart || ip.fetchStart || 0) - Op, 0),
-                    Ip = Math.max(ip.domainLookupStart - Op, 0),
-                    Sp = Math.max(ip.connectStart - Op, 0),
-                    xp = Math.max(ip.connectEnd - Op, 0);
-                  cp = {
-                    waitingDuration: op,
-                    cacheDuration: Ip - op,
-                    dnsDuration: Sp - Ip,
-                    connectionDuration: xp - Sp,
-                    requestDuration: pp.value - xp,
-                    navigationEntry: ip
+                if (TT.entries.length && UT instanceof PerformanceNavigationTiming) {
+                  const WT = UT.activationStart || 0,
+                    zT = Math.max((UT.workerStart || UT.fetchStart || 0) - WT, 0),
+                    MT = Math.max(UT.domainLookupStart - WT, 0),
+                    gT = Math.max(UT.connectStart - WT, 0),
+                    nT = Math.max(UT.connectEnd - WT, 0);
+                  mT = {
+                    waitingDuration: zT,
+                    cacheDuration: MT - zT,
+                    dnsDuration: gT - MT,
+                    connectionDuration: nT - gT,
+                    requestDuration: TT.value - nT,
+                    navigationEntry: UT
                   }
                 }
-                return Object.assign(pp, {
-                  attribution: cp
+                return Object.assign(TT, {
+                  attribution: mT
                 })
-              })(ip))
+              })(UT))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((pp => {
+          }((TT => {
             const {
-              dnsDuration: ip,
-              connectionDuration: cp,
-              requestDuration: Op,
-              waitingDuration: op,
-              cacheDuration: Ip
-            } = pp.attribution, Sp = this.buildInitialValues(pp);
-            this.addIfPresent(Sp, "dns_duration", ip), this.addIfPresent(Sp, "connection_duration", cp), this.addIfPresent(Sp, "request_duration", Op), this.addIfPresent(Sp, "waiting_duration", op), this.addIfPresent(Sp, "cache_duration", Ip);
-            const xp = this.buildInitialContext(pp);
-            this.pushMeasurement(Sp, xp)
+              dnsDuration: UT,
+              connectionDuration: mT,
+              requestDuration: WT,
+              waitingDuration: zT,
+              cacheDuration: MT
+            } = TT.attribution, gT = this.buildInitialValues(TT);
+            this.addIfPresent(gT, "dns_duration", UT), this.addIfPresent(gT, "connection_duration", mT), this.addIfPresent(gT, "request_duration", WT), this.addIfPresent(gT, "waiting_duration", zT), this.addIfPresent(gT, "cache_duration", MT);
+            const nT = this.buildInitialContext(TT);
+            this.pushMeasurement(gT, nT)
           }), {
-            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
+            reportAllChanges: null === (TT = this.webVitalConfig) || void 0 === TT ? void 0 : TT.reportAllChanges
           })
         }
-        buildInitialValues(pp) {
+        buildInitialValues(TT) {
           return {
-            [pp.name.toLowerCase()]: pp.value,
-            delta: pp.delta
+            [TT.name.toLowerCase()]: TT.value,
+            delta: TT.delta
           }
         }
-        buildInitialContext(pp) {
-          var ip;
-          const cp = null !== (ip = ci("com.grafana.faro.lastNavigationId", Kp)) && void 0 !== ip ? ip : Tc;
+        buildInitialContext(TT) {
+          var UT;
+          const mT = null !== (UT = TU("com.grafana.faro.lastNavigationId", oT)) && void 0 !== UT ? UT : sm;
           return {
-            id: pp.id,
-            rating: pp.rating,
-            navigation_type: pp.navigationType,
-            navigation_entry_id: cp
+            id: TT.id,
+            rating: TT.rating,
+            navigation_type: TT.navigationType,
+            navigation_entry_id: mT
           }
         }
-        pushMeasurement(pp, ip) {
+        pushMeasurement(TT, UT) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: pp
+            values: TT
           }, {
-            context: ip
+            context: UT
           })
         }
-        addIfPresent(pp, ip, cp) {
-          cp && (pp[ip] = cp)
+        addIfPresent(TT, UT, mT) {
+          mT && (TT[UT] = mT)
         }
-        addNumberIfDefined(pp, ip, cp) {
-          void 0 !== cp && (pp[ip] = cp)
+        addNumberIfDefined(TT, UT, mT) {
+          void 0 !== mT && (TT[UT] = mT)
         }
       },
-      BO = class extends oc {
+      IW = class extends Um {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = Ic
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = mm
         }
         initialize() {
-          this.logDebug("Initializing"), new JO(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new XW(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const NO = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const QW = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function TO() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const ip of pp)
-        if ("traceparent" === ip.name) {
-          if (!NO.test(ip.description)) continue;
-          const [, pp, cp] = ip.description.split("-");
-          if (null != pp && null != cp) return {
-            traceId: pp,
-            spanId: cp
+    function sW() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const UT of TT)
+        if ("traceparent" === UT.name) {
+          if (!QW.test(UT.description)) continue;
+          const [, TT, mT] = UT.description.split("-");
+          if (null != TT && null != mT) return {
+            traceId: TT,
+            spanId: mT
           };
           break
         }
     }
 
-    function fO(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function FW(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: cp,
-        monoNow: Op
-      } = ip;
-      return Math.min(cp, cp - (Op - pp))
+        wallNow: mT,
+        monoNow: WT
+      } = UT;
+      return Math.min(mT, mT - (WT - TT))
     }
 
-    function bO(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [cp, Op] of Object.entries(ip)) {
-        const ip = pp[cp];
-        return null != ip && (Ep(Op) ? Op.includes(ip) : ip === Op)
+    function PW(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [mT, WT] of Object.entries(UT)) {
+        const UT = TT[mT];
+        return null != UT && (tT(WT) ? WT.includes(UT) : UT === WT)
       }
       return !0
     }
 
-    function hO(pp) {
+    function VW(TT) {
       const {
-        connectEnd: ip,
-        connectStart: cp,
-        decodedBodySize: Op,
-        domainLookupEnd: op,
-        domainLookupStart: Ip,
-        duration: Sp,
-        encodedBodySize: xp,
-        fetchStart: Lp,
-        initiatorType: Yp,
-        name: Dp,
-        nextHopProtocol: Ap,
-        redirectEnd: Pp,
-        redirectStart: Wp,
-        renderBlockingStatus: yp,
-        requestStart: Up,
-        responseEnd: wp,
-        responseStart: vp,
-        responseStatus: tp,
-        secureConnectionStart: Hp,
-        transferSize: dp,
-        workerStart: ep
-      } = pp;
+        connectEnd: UT,
+        connectStart: mT,
+        decodedBodySize: WT,
+        domainLookupEnd: zT,
+        domainLookupStart: MT,
+        duration: gT,
+        encodedBodySize: nT,
+        fetchStart: HT,
+        initiatorType: kT,
+        name: jT,
+        nextHopProtocol: lT,
+        redirectEnd: LT,
+        redirectStart: pT,
+        renderBlockingStatus: BT,
+        requestStart: ZT,
+        responseEnd: cT,
+        responseStart: vT,
+        responseStatus: fT,
+        secureConnectionStart: qT,
+        transferSize: iT,
+        workerStart: bT
+      } = TT;
       return {
-        name: Dp,
-        httpHost: nO(Dp),
-        duration: FO(Sp),
-        tcpHandshakeTime: FO(ip - cp),
-        dnsLookupTime: FO(op - Ip),
-        tlsNegotiationTime: FO(ip - Hp),
-        responseStatus: FO(tp),
-        redirectTime: FO(Pp - Wp),
-        requestTime: FO(vp - Up),
-        responseTime: FO(wp - vp),
-        fetchTime: FO(wp - Lp),
-        serviceWorkerTime: FO(ep > 0 ? Lp - ep : 0),
-        decodedBodySize: FO(Op),
-        encodedBodySize: FO(xp),
+        name: jT,
+        httpHost: CW(jT),
+        duration: rW(gT),
+        tcpHandshakeTime: rW(UT - mT),
+        dnsLookupTime: rW(zT - MT),
+        tlsNegotiationTime: rW(UT - qT),
+        responseStatus: rW(fT),
+        redirectTime: rW(LT - pT),
+        requestTime: rW(vT - ZT),
+        responseTime: rW(cT - vT),
+        fetchTime: rW(cT - HT),
+        serviceWorkerTime: rW(bT > 0 ? HT - bT : 0),
+        decodedBodySize: rW(WT),
+        encodedBodySize: rW(nT),
         cacheHitStatus: function() {
-          let pp = "fullLoad";
-          0 === dp ? Op > 0 && (pp = "cache") : null != tp ? 304 === tp && (pp = "conditionalFetch") : xp > 0 && dp < xp && (pp = "conditionalFetch");
-          return pp
+          let TT = "fullLoad";
+          0 === iT ? WT > 0 && (TT = "cache") : null != fT ? 304 === fT && (TT = "conditionalFetch") : nT > 0 && iT < nT && (TT = "conditionalFetch");
+          return TT
         }(),
-        renderBlockingStatus: FO(yp),
-        protocol: Ap,
-        initiatorType: Yp,
+        renderBlockingStatus: rW(BT),
+        protocol: lT,
+        initiatorType: kT,
         visibilityState: document.visibilityState,
-        ttfb: FO(vp - Up),
-        transferSize: FO(dp)
+        ttfb: rW(vT - ZT),
+        transferSize: rW(iT)
       }
     }
 
-    function aO(pp) {
+    function uW(TT) {
       const {
-        activationStart: ip,
-        domComplete: cp,
-        domContentLoadedEventEnd: Op,
-        domContentLoadedEventStart: op,
-        domInteractive: Ip,
-        fetchStart: Sp,
-        loadEventEnd: xp,
-        loadEventStart: Lp,
-        responseStart: Yp,
-        type: Dp
-      } = pp, Ap = function() {
-        var pp;
-        return null != (null === (pp = performance.timing) || void 0 === pp ? void 0 : pp.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: UT,
+        domComplete: mT,
+        domContentLoadedEventEnd: WT,
+        domContentLoadedEventStart: zT,
+        domInteractive: MT,
+        fetchStart: gT,
+        loadEventEnd: nT,
+        loadEventStart: HT,
+        responseStart: kT,
+        type: jT
+      } = TT, lT = function() {
+        var TT;
+        return null != (null === (TT = performance.timing) || void 0 === TT ? void 0 : TT.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return Pi(Pi({}, hO(pp)), {}, {
-        pageLoadTime: FO(cp - Sp),
-        documentParsingTime: FO(Ap ? Ip - Ap : null),
-        domProcessingTime: FO(cp - Ip),
-        domContentLoadHandlerTime: FO(Op - op),
-        onLoadTime: FO(xp - Lp),
-        ttfb: FO(Math.max(Yp - (null !== ip && void 0 !== ip ? ip : 0), 0)),
-        type: Dp
+      return jU(jU({}, VW(TT)), {}, {
+        pageLoadTime: rW(mT - gT),
+        documentParsingTime: rW(lT ? MT - lT : null),
+        domProcessingTime: rW(mT - MT),
+        domContentLoadHandlerTime: rW(WT - zT),
+        onLoadTime: rW(nT - HT),
+        ttfb: rW(Math.max(kT - (null !== UT && void 0 !== UT ? UT : 0), 0)),
+        type: jT
       })
     }
 
-    function nO(pp) {
+    function CW(TT) {
       try {
-        return new URL(pp).host || Tc
-      } catch (ip) {
-        return Tc
+        return new URL(TT).host || sm
+      } catch (UT) {
+        return sm
       }
     }
 
-    function FO(pp) {
-      return null == pp ? Tc : "number" === typeof pp ? Math.round(pp > 0 ? pp : 0).toString() : pp.toString()
+    function rW(TT) {
+      return null == TT ? sm : "number" === typeof TT ? Math.round(TT > 0 ? TT : 0).toString() : TT.toString()
     }
-    const gO = {
+    const KW = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function GO(pp, ip, cp, Op, op, Ip, Sp) {
+    function SW(TT, UT, mT, WT, zT, MT, gT) {
       try {
-        var xp = pp[Ip](Sp),
-          Lp = xp.value
-      } catch (pp) {
-        return void cp(pp)
+        var nT = TT[MT](gT),
+          HT = nT.value
+      } catch (TT) {
+        return void mT(TT)
       }
-      xp.done ? ip(Lp) : Promise.resolve(Lp).then(Op, op)
+      nT.done ? UT(HT) : Promise.resolve(HT).then(WT, zT)
     }
 
-    function rO(pp) {
+    function GW(TT) {
       return function() {
-        var ip = this,
-          cp = arguments;
-        return new Promise((function(Op, op) {
-          var Ip = pp.apply(ip, cp);
+        var UT = this,
+          mT = arguments;
+        return new Promise((function(WT, zT) {
+          var MT = TT.apply(UT, mT);
 
-          function Sp(pp) {
-            GO(Ip, Op, op, Sp, xp, "next", pp)
+          function gT(TT) {
+            SW(MT, WT, zT, gT, nT, "next", TT)
           }
 
-          function xp(pp) {
-            GO(Ip, Op, op, Sp, xp, "throw", pp)
+          function nT(TT) {
+            SW(MT, WT, zT, gT, nT, "throw", TT)
           }
-          Sp(void 0)
+          gT(void 0)
         }))
       }
     }
-    const ZO = new ec;
-    var zO = class extends oc {
+    const NW = new qm;
+    var EW = class extends Um {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = Ic
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = mm
       }
       initialize() {
-        var pp = this;
+        var TT = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let ip = !1;
-        const cp = () => {
-          ! function(pp) {
-            if ("complete" === document.readyState) pp();
+        let UT = !1;
+        const mT = () => {
+          ! function(TT) {
+            if ("complete" === document.readyState) TT();
             else {
-              const ip = () => {
-                "complete" === document.readyState && (pp(), document.removeEventListener("readystatechange", ip))
+              const UT = () => {
+                "complete" === document.readyState && (TT(), document.removeEventListener("readystatechange", UT))
               };
-              document.addEventListener("readystatechange", ip)
+              document.addEventListener("readystatechange", UT)
             }
-          }(rO((function*() {
-            if (ip) return;
-            const cp = pp.api.pushEvent,
+          }(GW((function*() {
+            if (UT) return;
+            const mT = TT.api.pushEvent,
               {
-                faroNavigationId: Op
-              } = yield function(pp) {
-                let ip;
-                const cp = new Promise((pp => {
-                  ip = pp
+                faroNavigationId: WT
+              } = yield function(TT) {
+                let UT;
+                const mT = new Promise((TT => {
+                  UT = TT
                 }));
-                return new PerformanceObserver((cp => {
-                  var Op;
-                  const [op] = cp.getEntries();
-                  if (null == op || zp(op.name)) return;
-                  const Ip = op.toJSON();
-                  let Sp = TO(null === Ip || void 0 === Ip ? void 0 : Ip.serverTiming);
-                  const xp = null !== (Op = ci("com.grafana.faro.lastNavigationId", Kp)) && void 0 !== Op ? Op : Tc,
-                    Lp = Pi(Pi({}, aO(Ip)), {}, {
-                      faroNavigationId: Hi(),
-                      faroPreviousNavigationId: xp
+                return new PerformanceObserver((mT => {
+                  var WT;
+                  const [zT] = mT.getEntries();
+                  if (null == zT || hT(zT.name)) return;
+                  const MT = zT.toJSON();
+                  let gT = sW(null === MT || void 0 === MT ? void 0 : MT.serverTiming);
+                  const nT = null !== (WT = TU("com.grafana.faro.lastNavigationId", oT)) && void 0 !== WT ? WT : sm,
+                    HT = jU(jU({}, uW(MT)), {}, {
+                      faroNavigationId: vU(),
+                      faroPreviousNavigationId: nT
                     });
-                  Oi("com.grafana.faro.lastNavigationId", Lp.faroNavigationId, Kp), pp("faro.performance.navigation", Lp, void 0, {
-                    spanContext: Sp,
-                    timestampOverwriteMs: fO(Ip.startTime)
-                  }), ip(Lp)
+                  UU("com.grafana.faro.lastNavigationId", HT.faroNavigationId, oT), TT("faro.performance.navigation", HT, void 0, {
+                    spanContext: gT,
+                    timestampOverwriteMs: FW(MT.startTime)
+                  }), UT(HT)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), cp
-              }(cp);
-            ip || null == Op || function(pp, ip, cp, Op) {
-              const op = Op.trackResources;
-              new PerformanceObserver((Op => {
-                const Ip = Op.getEntries(),
-                  Sp = {
+                }), mT
+              }(mT);
+            UT || null == WT || function(TT, UT, mT, WT) {
+              const zT = WT.trackResources;
+              new PerformanceObserver((WT => {
+                const MT = WT.getEntries(),
+                  gT = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const xp of Ip) {
-                  if (zp(xp.name)) continue;
-                  null === cp || void 0 === cp || cp.notify({
+                for (const nT of MT) {
+                  if (hT(nT.name)) continue;
+                  null === mT || void 0 === mT || mT.notify({
                     type: "resource"
                   });
-                  const Op = xp.toJSON();
-                  let Ip = TO(null === Op || void 0 === Op ? void 0 : Op.serverTiming);
-                  (null == op && bO(Op, gO) || op) && ip("faro.performance.resource", Pi(Pi({}, hO(Op)), {}, {
-                    faroNavigationId: pp,
-                    faroResourceId: Hi()
+                  const WT = nT.toJSON();
+                  let MT = sW(null === WT || void 0 === WT ? void 0 : WT.serverTiming);
+                  (null == zT && PW(WT, KW) || zT) && UT("faro.performance.resource", jU(jU({}, VW(WT)), {}, {
+                    faroNavigationId: TT,
+                    faroResourceId: vU()
                   }), void 0, {
-                    spanContext: Ip,
-                    timestampOverwriteMs: fO(Op.startTime, Sp)
+                    spanContext: MT,
+                    timestampOverwriteMs: FW(WT.startTime, gT)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(Op, cp, ZO, pp.config)
+            }(WT, mT, NW, TT.config)
           })))
         };
         this.cancelInitialization = () => {
-          ip = !0, document.removeEventListener("prerenderingchange", cp)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", cp, {
+          UT = !0, document.removeEventListener("prerenderingchange", mT)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", mT, {
           once: !0
-        }) : cp()
+        }) : mT()
       }
       destroy() {
-        var pp;
-        null === (pp = this.cancelInitialization) || void 0 === pp || pp.call(this), this.cancelInitialization = void 0
+        var TT;
+        null === (TT = this.cancelInitialization) || void 0 === TT || TT.call(this), this.cancelInitialization = void 0
       }
     };
-    const sO = "data-faro-user-action-name",
-      KO = sO.replace(/-name$/, "-timeout"),
-      VO = 1e3;
+    const hW = "data-faro-user-action-name",
+      DW = hW.replace(/-name$/, "-timeout"),
+      oW = 1e3;
 
-    function po(pp) {
-      return `data-${(pp.startsWith("data-")?pp.slice(5):pp).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function AW(TT) {
+      return `data-${(TT.startsWith("data-")?TT.slice(5):TT).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function io(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Gi;
-      if (void 0 === pp) return ip;
-      let Op = NaN;
+    function RW(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : KU;
+      if (void 0 === TT) return UT;
+      let WT = NaN;
       try {
-        Op = "string" === typeof pp && "" === pp.trim() ? NaN : Number(pp)
-      } catch (op) {}
-      return !Number.isFinite(Op) || Op <= 0 ? (cp(`initialActivityTimeout must be a finite number greater than zero; using ${ip} ms`), ip) : Op > 1e3 ? (cp(`initialActivityTimeout cannot exceed ${VO} ms; clamping to the maximum`), VO) : Op
+        WT = "string" === typeof TT && "" === TT.trim() ? NaN : Number(TT)
+      } catch (zT) {}
+      return !Number.isFinite(WT) || WT <= 0 ? (mT(`initialActivityTimeout must be a finite number greater than zero; using ${UT} ms`), UT) : WT > 1e3 ? (mT(`initialActivityTimeout cannot exceed ${oW} ms; clamping to the maximum`), oW) : WT
     }
 
-    function co(pp, ip, cp) {
-      return void 0 !== pp && window.clearTimeout(pp), window.setTimeout((() => {
-        ip()
-      }), cp)
+    function Tz(TT, UT, mT) {
+      return void 0 !== TT && window.clearTimeout(TT), window.setTimeout((() => {
+        UT()
+      }), mT)
     }
 
-    function Oo(pp) {
-      return pp.type === dc
+    function Uz(TT) {
+      return TT.type === fm
     }
-    let oo, Io;
+    let mz, Wz;
 
-    function So() {
-      return oo || (oo = new ec), Io || (Io = new MutationObserver(((pp, ip) => {
-        oo.notify({
+    function zz() {
+      return mz || (mz = new qm), Wz || (Wz = new MutationObserver(((TT, UT) => {
+        mz.notify({
           type: "dom-mutation"
         })
-      })), Io.observe(document, {
+      })), Wz.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), oo
+      })), mz
     }
-    const xo = "fetch",
-      Lo = "xhr";
-    let Yo, Do, Ao, Po, Wo = !1;
+    const Mz = "fetch",
+      gz = "xhr";
+    let nz, Hz, kz, jz, lz = !1;
 
-    function yo() {
-      if (Yo) return Yo;
+    function Lz() {
+      if (nz) return nz;
 
-      function pp(pp) {
-        Yo.notify({
-          type: Hc,
-          request: pp
+      function TT(TT) {
+        nz.notify({
+          type: cm,
+          request: TT
         })
       }
 
-      function ip(pp) {
-        Yo.notify({
-          type: dc,
-          request: pp
+      function UT(TT) {
+        nz.notify({
+          type: fm,
+          request: TT
         })
       }
-      return Yo = new ec, Wo || (! function(pp) {
+      return nz = new qm, lz || (! function(TT) {
         let {
-          onRequestEnd: ip,
-          onRequestStart: cp
-        } = pp;
-        Ao || (Ao = window.fetch);
+          onRequestEnd: UT,
+          onRequestStart: mT
+        } = TT;
+        kz || (kz = window.fetch);
         window.fetch = function() {
-          var pp, Op;
-          const op = null !== (pp = sp(arguments[0])) && void 0 !== pp ? pp : "",
-            Ip = zp(op),
-            Sp = (null !== (Op = arguments[1]) && void 0 !== Op ? Op : {}).method,
-            xp = Hi();
-          return Ip || cp({
-            url: op,
-            method: Sp,
-            requestId: xp,
-            apiType: xo
-          }), Ao.apply(this, arguments).then((pp => (Ip || ip({
-            url: op,
-            method: Sp,
-            requestId: xp,
-            apiType: xo
-          }), pp))).catch((pp => {
-            throw Ip || ip({
-              url: op,
-              method: Sp,
-              requestId: xp,
-              apiType: xo
-            }), pp
+          var TT, WT;
+          const zT = null !== (TT = DT(arguments[0])) && void 0 !== TT ? TT : "",
+            MT = hT(zT),
+            gT = (null !== (WT = arguments[1]) && void 0 !== WT ? WT : {}).method,
+            nT = vU();
+          return MT || mT({
+            url: zT,
+            method: gT,
+            requestId: nT,
+            apiType: Mz
+          }), kz.apply(this, arguments).then((TT => (MT || UT({
+            url: zT,
+            method: gT,
+            requestId: nT,
+            apiType: Mz
+          }), TT))).catch((TT => {
+            throw MT || UT({
+              url: zT,
+              method: gT,
+              requestId: nT,
+              apiType: Mz
+            }), TT
           }))
         }
       }({
-        onRequestStart: pp,
-        onRequestEnd: ip
-      }), function(pp) {
+        onRequestStart: TT,
+        onRequestEnd: UT
+      }), function(TT) {
         let {
-          onRequestStart: ip,
-          onRequestEnd: cp
-        } = pp;
-        Do || (Do = XMLHttpRequest.prototype.open);
+          onRequestStart: UT,
+          onRequestEnd: mT
+        } = TT;
+        Hz || (Hz = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const pp = arguments[1],
-            Op = zp(pp),
-            op = arguments[0],
-            Ip = Hi();
+          const TT = arguments[1],
+            WT = hT(TT),
+            zT = arguments[0],
+            MT = vU();
           this.addEventListener("loadstart", (function() {
-            Op || ip({
-              url: pp,
-              method: op,
-              requestId: Ip,
-              apiType: Lo
+            WT || UT({
+              url: TT,
+              method: zT,
+              requestId: MT,
+              apiType: gz
             })
           })), this.addEventListener("load", (function() {
-            Op || cp({
-              url: pp,
-              method: op,
-              requestId: Ip,
-              apiType: Lo
+            WT || mT({
+              url: TT,
+              method: zT,
+              requestId: MT,
+              apiType: gz
             })
           })), this.addEventListener("error", (function() {
-            Op || cp({
-              url: pp,
-              method: op,
-              requestId: Ip,
-              apiType: Lo
+            WT || mT({
+              url: TT,
+              method: zT,
+              requestId: MT,
+              apiType: gz
             })
           })), this.addEventListener("abort", (function() {
-            Op || cp({
-              url: pp,
-              method: op,
-              requestId: Ip,
-              apiType: Lo
+            WT || mT({
+              url: TT,
+              method: zT,
+              requestId: MT,
+              apiType: gz
             })
-          })), Do.apply(this, arguments)
+          })), Hz.apply(this, arguments)
         }
       }({
-        onRequestStart: pp,
-        onRequestEnd: ip
-      }), Wo = !0), Yo
+        onRequestStart: TT,
+        onRequestEnd: UT
+      }), lz = !0), nz
     }
-    let Uo, wo = !1;
-    let vo = function(pp) {
-      return pp[pp.Started = 0] = "Started", pp[pp.Halted = 1] = "Halted", pp[pp.Cancelled = 2] = "Cancelled", pp[pp.Ended = 3] = "Ended", pp
+    let pz, Bz = !1;
+    let Zz = function(TT) {
+      return TT[TT.Started = 0] = "Started", TT[TT.Halted = 1] = "Halted", TT[TT.Cancelled = 2] = "Cancelled", TT[TT.Ended = 3] = "Ended", TT
     }({});
-    var to = class {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = pp, this.logDebug = ip, this.initialActivityTimeout = cp, this.http = yo(), this.dom = So(), this.perf = (Po || (Po = new ec), wo || (Uo = ZO.subscribe((pp => {
-          "resource" === pp.type && Po.notify({
+    var cz = class {
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = TT, this.logDebug = UT, this.initialActivityTimeout = mT, this.http = Lz(), this.dom = zz(), this.perf = (jz || (jz = new qm), Bz || (pz = NW.subscribe((TT => {
+          "resource" === TT.type && jz.notify({
             type: "resource-entry"
           })
-        })), wo = !0), Po), this.isValid = !1, this.runningRequests = new Map
+        })), Bz = !0), jz), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new ec).merge(this.http, this.dom, this.perf).takeWhile((() => [vo.Started, vo.Halted].includes(this.userAction.getState()))).filter((pp => !!(this.userAction.getState() !== vo.Halted || Oo(pp) && this.runningRequests.has(pp.request.requestId)))).subscribe((pp => {
-          (function(pp) {
-            return pp.type === Hc
-          })(pp) && this.runningRequests.set(pp.request.requestId, pp.request), Oo(pp) && this.runningRequests.delete(pp.request.requestId), Oo(pp) ? this.userAction.getState() === vo.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((pp => [vo.Ended, vo.Cancelled].includes(pp))).first().subscribe((() => this.cleanup())), this.startupTid = co(this.startupTid, (() => {
+        this.allMonitorsSub = (new qm).merge(this.http, this.dom, this.perf).takeWhile((() => [Zz.Started, Zz.Halted].includes(this.userAction.getState()))).filter((TT => !!(this.userAction.getState() !== Zz.Halted || Uz(TT) && this.runningRequests.has(TT.request.requestId)))).subscribe((TT => {
+          (function(TT) {
+            return TT.type === cm
+          })(TT) && this.runningRequests.set(TT.request.requestId, TT.request), Uz(TT) && this.runningRequests.delete(TT.request.requestId), Uz(TT) ? this.userAction.getState() === Zz.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((TT => [Zz.Ended, Zz.Cancelled].includes(TT))).first().subscribe((() => this.cleanup())), this.startupTid = Tz(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === vo.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === Zz.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === vo.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === Zz.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = co(this.haltTid, (() => {
-          this.userAction.getState() === vo.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = Tz(this.haltTid, (() => {
+          this.userAction.getState() === Zz.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var pp, ip;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (pp = this.allMonitorsSub) || void 0 === pp || pp.unsubscribe(), null === (ip = this.stateSub) || void 0 === ip || ip.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var TT, UT;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (TT = this.allMonitorsSub) || void 0 === TT || TT.unsubscribe(), null === (UT = this.stateSub) || void 0 === UT || UT.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(pp) {
-        void 0 !== pp && window.clearTimeout(pp)
+      clearTimer(TT) {
+        void 0 !== TT && window.clearTimeout(TT)
       }
     };
 
-    function Ho(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Gi;
-      var cp;
+    function vz(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : KU;
+      var mT;
       const {
-        api: Op,
-        config: op,
-        internalLogger: Ip
-      } = pp, Sp = io(null === (cp = op.userActionsInstrumentation) || void 0 === cp ? void 0 : cp.initialActivityTimeout, 100, ip);
+        api: WT,
+        config: zT,
+        internalLogger: MT
+      } = TT, gT = RW(null === (mT = zT.userActionsInstrumentation) || void 0 === mT ? void 0 : mT.initialActivityTimeout, 100, UT);
       return {
-        processUserEvent: function(pp) {
-          var ip, cp;
-          const Ip = null !== (ip = null === (cp = op.userActionsInstrumentation) || void 0 === cp ? void 0 : cp.dataAttributeName) && void 0 !== ip ? ip : sO,
-            Sp = pp.target;
-          if (!(Sp instanceof Element)) return;
-          const xp = function(pp, ip) {
-              let cp = pp;
-              for (; cp;) {
-                if (cp.hasAttribute(ip)) return cp;
-                cp = cp.parentElement
+        processUserEvent: function(TT) {
+          var UT, mT;
+          const MT = null !== (UT = null === (mT = zT.userActionsInstrumentation) || void 0 === mT ? void 0 : mT.dataAttributeName) && void 0 !== UT ? UT : hW,
+            gT = TT.target;
+          if (!(gT instanceof Element)) return;
+          const nT = function(TT, UT) {
+              let mT = TT;
+              for (; mT;) {
+                if (mT.hasAttribute(UT)) return mT;
+                mT = mT.parentElement
               }
               return null
-            }(Sp, po(Ip)),
-            Lp = function(pp, ip) {
-              if (!pp) return;
-              const cp = function(pp) {
-                  return po(pp).slice(5).replace(/-(.)/g, ((pp, ip) => ip.toUpperCase()))
-                }(ip),
-                Op = pp.dataset;
-              for (const op in Op)
-                if (op === cp) return Op[op]
-            }(xp, Ip);
-          if (!xp || !Lp) return;
-          const Yp = function(pp, ip) {
-            const cp = pp.getAttribute(function(pp) {
-              const ip = po(pp);
-              return ip.endsWith("-name") ? `${ip.slice(0,-5)}-timeout` : `${ip}-timeout`
-            }(ip));
-            return null === cp ? void 0 : Number(cp)
-          }(xp, Ip);
-          Op.startUserAction(Lp, {}, {
-            triggerName: pp.type,
-            initialActivityTimeout: Yp
+            }(gT, AW(MT)),
+            HT = function(TT, UT) {
+              if (!TT) return;
+              const mT = function(TT) {
+                  return AW(TT).slice(5).replace(/-(.)/g, ((TT, UT) => UT.toUpperCase()))
+                }(UT),
+                WT = TT.dataset;
+              for (const zT in WT)
+                if (zT === mT) return WT[zT]
+            }(nT, MT);
+          if (!nT || !HT) return;
+          const kT = function(TT, UT) {
+            const mT = TT.getAttribute(function(TT) {
+              const UT = AW(TT);
+              return UT.endsWith("-name") ? `${UT.slice(0,-5)}-timeout` : `${UT}-timeout`
+            }(UT));
+            return null === mT ? void 0 : Number(mT)
+          }(nT, MT);
+          WT.startUserAction(HT, {}, {
+            triggerName: TT.type,
+            initialActivityTimeout: kT
           })
         },
-        processUserActionStarted: function(pp, cp) {
-          const Op = pp,
-            op = io(cp, Sp, ip);
-          new to(Op, Ip.debug, op).attach()
+        processUserActionStarted: function(TT, mT) {
+          const WT = TT,
+            zT = RW(mT, gT, UT);
+          new cz(WT, MT.debug, zT).attach()
         }
       }
     }
-    const eo = "user_action_start",
-      uo = {
+    const fz = "user_action_start",
+      qz = {
         Normal: "normal",
         Critical: "critical"
       };
-    var jo = class {
+    var iz = class {
         constructor() {
           this.buffer = []
         }
-        addItem(pp) {
-          this.buffer.push(pp)
+        addItem(TT) {
+          this.buffer.push(TT)
         }
-        flushBuffer(pp) {
-          if (Cp(pp))
-            for (const ip of this.buffer) pp(ip);
+        flushBuffer(TT) {
+          if (wT(TT))
+            for (const UT of this.buffer) TT(UT);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      ko = class extends ec {
-        constructor(pp) {
+      bz = class extends qm {
+        constructor(TT) {
           let {
-            name: ip,
-            parentId: cp,
-            trigger: Op,
-            transports: op,
-            attributes: Ip,
-            trackUserActionsExcludeItem: Sp,
-            importance: xp = uo.Normal,
-            pushEvent: Lp
-          } = pp;
-          super(), this.name = ip, this.attributes = Ip, this.id = Hi(), this.trigger = Op, this.parentId = null !== cp && void 0 !== cp ? cp : this.id, this.trackUserActionsExcludeItem = Sp, this.importance = xp, this._pushEvent = Lp, this._itemBuffer = new jo, this._transports = op, this._state = 0, this._start()
+            name: UT,
+            parentId: mT,
+            trigger: WT,
+            transports: zT,
+            attributes: MT,
+            trackUserActionsExcludeItem: gT,
+            importance: nT = qz.Normal,
+            pushEvent: HT
+          } = TT;
+          super(), this.name = UT, this.attributes = MT, this.id = vU(), this.trigger = WT, this.parentId = null !== mT && void 0 !== mT ? mT : this.id, this.trackUserActionsExcludeItem = gT, this.importance = nT, this._pushEvent = HT, this._itemBuffer = new iz, this._transports = zT, this._state = 0, this._start()
         }
-        addItem(pp) {
-          return 0 === this._state && (this._itemBuffer.addItem(pp), !0)
+        addItem(TT) {
+          return 0 === this._state && (this._itemBuffer.addItem(TT), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = yi(), this._startTimeMono = Ui())
+          this._state = 0, 0 === this._state && (this.startTime = LU(), this._startTimeMono = pU())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((pp => {
-            this._transports.execute(pp)
+          0 === this._state && this._itemBuffer.flushBuffer((TT => {
+            this._transports.execute(TT)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const pp = yi(),
-            ip = Ui() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((pp => {
-            if (function(pp, ip) {
-                return (null === ip || void 0 === ip ? void 0 : ip(pp)) || "measurement" === pp.type && "web-vitals" === pp.payload.type
-              }(pp, this.trackUserActionsExcludeItem)) return void this._transports.execute(pp);
-            const ip = ic(ic({}, pp), {}, {
-              payload: ic(ic({}, pp.payload), {}, {
+          const TT = LU(),
+            UT = pU() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((TT => {
+            if (function(TT, UT) {
+                return (null === UT || void 0 === UT ? void 0 : UT(TT)) || "measurement" === TT.type && "web-vitals" === TT.payload.type
+              }(TT, this.trackUserActionsExcludeItem)) return void this._transports.execute(TT);
+            const UT = AU(AU({}, TT), {}, {
+              payload: AU(AU({}, TT.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(ip)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", ic({
+            this._transports.execute(UT)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", AU({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: pp.toString(),
-            userActionDuration: ip.toString(),
+            userActionEndTime: TT.toString(),
+            userActionDuration: UT.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, Ti(this.attributes)), void 0, {
+          }, sU(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: pp => (pp.action = {
+            customPayloadTransformer: TT => (TT.action = {
               id: this.id,
               name: this.name
-            }, pp)
+            }, TT)
           })
         }
         getState() {
           return this._state
         }
       };
-    const mo = new ec;
+    const Oz = new qm;
 
-    function Ro(pp, ip) {
-      return !!pp && (0 === (null === pp || void 0 === pp ? void 0 : pp.getState()) && (pp.addItem(ip), !0))
+    function ez(TT, UT) {
+      return !!TT && (0 === (null === TT || void 0 === TT ? void 0 : TT.getState()) && (TT.addItem(UT), !0))
     }
-    var qo = class extends oc {
+    var Yz = class extends Um {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = Ic
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = mm
         }
         initialize() {
           const {
-            processUserEvent: pp,
-            processUserActionStarted: ip
-          } = Ho(Up, (pp => this.logWarn(pp)));
-          this._processUserEvent = pp, this._processKeydown = ip => {
-            [" ", "Enter"].includes(ip.key) && pp(ip)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = mo.subscribe((pp => {
+            processUserEvent: TT,
+            processUserActionStarted: UT
+          } = vz(ZT, (TT => this.logWarn(TT)));
+          this._processUserEvent = TT, this._processKeydown = UT => {
+            [" ", "Enter"].includes(UT.key) && TT(UT)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Oz.subscribe((TT => {
             let {
-              type: cp,
-              userAction: Op,
-              initialActivityTimeout: op
-            } = pp;
-            "user_action_start" === cp && ip(Op, op)
+              type: mT,
+              userAction: WT,
+              initialActivityTimeout: zT
+            } = TT;
+            "user_action_start" === mT && UT(WT, zT)
           }))
         }
         destroy() {
-          var pp;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (pp = this._userActionSub) || void 0 === pp || pp.unsubscribe()
+          var TT;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (TT = this._userActionSub) || void 0 === TT || TT.unsubscribe()
         }
       },
-      Mo = class extends oc {
+      Jz = class extends Um {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = Ic, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = mm, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(pp) {
-          const ip = {
-            blockedURI: pp.blockedURI,
-            columnNumber: pp.columnNumber,
-            disposition: pp.disposition,
-            documentURI: pp.documentURI,
-            effectiveDirective: pp.effectiveDirective,
-            lineNumber: pp.lineNumber,
-            originalPolicy: pp.originalPolicy,
-            referrer: pp.referrer,
-            sample: pp.sample,
-            sourceFile: pp.sourceFile,
-            statusCode: pp.statusCode,
-            violatedDirective: pp.violatedDirective
+        securitypolicyviolationHandler(TT) {
+          const UT = {
+            blockedURI: TT.blockedURI,
+            columnNumber: TT.columnNumber,
+            disposition: TT.disposition,
+            documentURI: TT.documentURI,
+            effectiveDirective: TT.effectiveDirective,
+            lineNumber: TT.lineNumber,
+            originalPolicy: TT.originalPolicy,
+            referrer: TT.referrer,
+            sample: TT.sample,
+            sourceFile: TT.sourceFile,
+            statusCode: TT.statusCode,
+            violatedDirective: TT.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", Ti(ip))
+          this.api.pushEvent("securitypolicyviolation", sU(UT))
         }
       };
-    var Co = class extends ec {
-      constructor(pp, ip) {
-        var cp, Op, op, Ip;
-        super(), this._tracking = !1, this.eventsObservable = pp, this._options = {
-          inactivityMs: null !== (cp = null === ip || void 0 === ip ? void 0 : ip.inactivityMs) && void 0 !== cp ? cp : 100,
-          drainTimeoutMs: null !== (Op = null === ip || void 0 === ip ? void 0 : ip.drainTimeoutMs) && void 0 !== Op ? Op : 1e4,
-          isOperationStart: null !== (op = null === ip || void 0 === ip ? void 0 : ip.isOperationStart) && void 0 !== op ? op : () => {},
-          isOperationEnd: null !== (Ip = null === ip || void 0 === ip ? void 0 : ip.isOperationEnd) && void 0 !== Ip ? Ip : () => {}
+    var xz = class extends qm {
+      constructor(TT, UT) {
+        var mT, WT, zT, MT;
+        super(), this._tracking = !1, this.eventsObservable = TT, this._options = {
+          inactivityMs: null !== (mT = null === UT || void 0 === UT ? void 0 : UT.inactivityMs) && void 0 !== mT ? mT : 100,
+          drainTimeoutMs: null !== (WT = null === UT || void 0 === UT ? void 0 : UT.drainTimeoutMs) && void 0 !== WT ? WT : 1e4,
+          isOperationStart: null !== (zT = null === UT || void 0 === UT ? void 0 : UT.isOperationStart) && void 0 !== zT ? zT : () => {},
+          isOperationEnd: null !== (MT = null === UT || void 0 === UT ? void 0 : UT.isOperationEnd) && void 0 !== MT ? MT : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((pp => {
-          var ip;
-          this._lastEventTime = Ui(), null === (ip = this._currentEvents) || void 0 === ip || ip.push(pp);
-          const cp = this._options.isOperationStart(pp);
-          var Op;
-          cp && (null === (Op = this._activeOperations) || void 0 === Op || Op.set(cp, !0));
-          const op = this._options.isOperationEnd(pp);
-          var Ip;
-          op && (null === (Ip = this._activeOperations) || void 0 === Ip || Ip.delete(op));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((TT => {
+          var UT;
+          this._lastEventTime = pU(), null === (UT = this._currentEvents) || void 0 === UT || UT.push(TT);
+          const mT = this._options.isOperationStart(TT);
+          var WT;
+          mT && (null === (WT = this._activeOperations) || void 0 === WT || WT.set(mT, !0));
+          const zT = this._options.isOperationEnd(TT);
+          var MT;
+          zT && (null === (MT = this._activeOperations) || void 0 === MT || MT.delete(zT));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = Ui(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = pU(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let pp;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), pp = this.hasActiveOperations() ? Ui() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let TT;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), TT = this.hasActiveOperations() ? pU() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: pp
+          duration: TT
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = Eo(this._inactivityTid, (() => {
+        this._inactivityTid = dz(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = Eo(this._drainTid, (() => {
+        this._drainTid = dz(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(pp) {
-        pp && clearTimeout(pp)
+      _clearTimer(TT) {
+        TT && clearTimeout(TT)
       }
     };
 
-    function Eo(pp, ip, cp) {
-      return pp && clearTimeout(pp), pp = setTimeout((() => {
-        ip()
-      }), cp)
+    function dz(TT, UT, mT) {
+      return TT && clearTimeout(TT), TT = setTimeout((() => {
+        UT()
+      }), mT)
     }
-    let Xo;
-    const Qo = new Set,
-      Jo = new Map;
-    let Bo, No, To, fo, bo, ho, ao, no, Fo = !1;
-    var go = class extends oc {
+    let wz;
+    const tz = new Set,
+      az = new Map;
+    let yz, Xz, Iz, Qz, sz, Fz, Pz, Vz, uz = !1;
+    var Cz = class extends Um {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = Ic
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = mm
       }
       initialize() {
-        const pp = yo(),
-          ip = So(),
-          cp = function() {
-            function pp(pp, ip) {
-              const cp = null !== ip && void 0 !== ip ? ip : location.href;
-              cp !== No && (Bo.notify({
+        const TT = Lz(),
+          UT = zz(),
+          mT = function() {
+            function TT(TT, UT) {
+              const mT = null !== UT && void 0 !== UT ? UT : location.href;
+              mT !== Xz && (yz.notify({
                 type: "url-change",
-                from: No,
-                to: cp,
-                trigger: pp
-              }), No = cp)
+                from: Xz,
+                to: mT,
+                trigger: TT
+              }), Xz = mT)
             }
-            if (Bo || (Bo = new ec, No = location.href), !Fo)
+            if (yz || (yz = new qm, Xz = location.href), !uz)
               if ("navigation" in window && "NavigateEvent" in window) {
-                ao = ip => {
+                Pz = UT => {
                   try {
-                    const cp = null === ip || void 0 === ip ? void 0 : ip.destination;
-                    (null === cp || void 0 === cp ? void 0 : cp.sameDocument) && "string" === typeof cp.url && pp("navigate", cp.url)
-                  } catch (cp) {}
-                }, window.navigation.addEventListener("navigate", ao);
-                const ip = window.NavigateEvent;
-                ip && ip.prototype && "function" === typeof ip.prototype.intercept && (no || (no = ip.prototype.intercept), ip.prototype.intercept = function(ip) {
+                    const mT = null === UT || void 0 === UT ? void 0 : UT.destination;
+                    (null === mT || void 0 === mT ? void 0 : mT.sameDocument) && "string" === typeof mT.url && TT("navigate", mT.url)
+                  } catch (mT) {}
+                }, window.navigation.addEventListener("navigate", Pz);
+                const UT = window.NavigateEvent;
+                UT && UT.prototype && "function" === typeof UT.prototype.intercept && (Vz || (Vz = UT.prototype.intercept), UT.prototype.intercept = function(UT) {
                   try {
-                    const ip = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      cp = null === this || void 0 === this ? void 0 : this.destination;
-                    ip && cp && !1 === cp.sameDocument && "string" === typeof cp.url && pp("navigate-intercept", cp.url)
-                  } catch (cp) {}
-                  return no.call(this, ip)
-                }), Fo = !0
-              } else To || (To = window.history.pushState), window.history.pushState = function() {
-                for (var ip = arguments.length, cp = new Array(ip), Op = 0; Op < ip; Op++) cp[Op] = arguments[Op];
-                const op = To.apply(window.history, cp);
-                return pp("pushState"), op
-              }, fo || (fo = window.history.replaceState), window.history.replaceState = function() {
-                for (var ip = arguments.length, cp = new Array(ip), Op = 0; Op < ip; Op++) cp[Op] = arguments[Op];
-                const op = fo.apply(window.history, cp);
-                return pp("replaceState"), op
-              }, bo = () => pp("popstate"), ho = () => pp("hashchange"), window.addEventListener("popstate", bo), window.addEventListener("hashchange", ho), Fo = !0;
-            return Bo
+                    const UT = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      mT = null === this || void 0 === this ? void 0 : this.destination;
+                    UT && mT && !1 === mT.sameDocument && "string" === typeof mT.url && TT("navigate-intercept", mT.url)
+                  } catch (mT) {}
+                  return Vz.call(this, UT)
+                }), uz = !0
+              } else Iz || (Iz = window.history.pushState), window.history.pushState = function() {
+                for (var UT = arguments.length, mT = new Array(UT), WT = 0; WT < UT; WT++) mT[WT] = arguments[WT];
+                const zT = Iz.apply(window.history, mT);
+                return TT("pushState"), zT
+              }, Qz || (Qz = window.history.replaceState), window.history.replaceState = function() {
+                for (var UT = arguments.length, mT = new Array(UT), WT = 0; WT < UT; WT++) mT[WT] = arguments[WT];
+                const zT = Qz.apply(window.history, mT);
+                return TT("replaceState"), zT
+              }, sz = () => TT("popstate"), Fz = () => TT("hashchange"), window.addEventListener("popstate", sz), window.addEventListener("hashchange", Fz), uz = !0;
+            return yz
           }(),
-          Op = (op = ["pointerdown", "keydown"], Xo || (Xo = new ec), op.forEach((pp => {
-            if (!Qo.has(pp)) {
-              const ip = () => {
-                Xo.notify({
+          WT = (zT = ["pointerdown", "keydown"], wz || (wz = new qm), zT.forEach((TT => {
+            if (!tz.has(TT)) {
+              const UT = () => {
+                wz.notify({
                   type: "interaction",
-                  name: pp
+                  name: TT
                 })
               };
-              window.addEventListener(pp, ip), Qo.add(pp), Jo.set(pp, ip)
+              window.addEventListener(TT, UT), tz.add(TT), az.set(TT, UT)
             }
-          })), Xo);
-        var op;
-        const Ip = new Co((new ec).merge(pp, ip, cp), {
+          })), wz);
+        var zT;
+        const MT = new xz((new qm).merge(TT, UT, mT), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: pp => function(pp) {
-            return pp.type === Hc
-          }(pp) ? pp.request.requestId : void 0,
-          isOperationEnd: pp => function(pp) {
-            return pp.type === dc
-          }(pp) ? pp.request.requestId : void 0
+          isOperationStart: TT => function(TT) {
+            return TT.type === cm
+          }(TT) ? TT.request.requestId : void 0,
+          isOperationEnd: TT => function(TT) {
+            return TT.type === fm
+          }(TT) ? TT.request.requestId : void 0
         });
-        Ip.filter((pp => "tracking-ended" === pp.message)).subscribe((pp => {
-          var ip, cp;
-          if ((null === (ip = pp.events) || void 0 === ip ? void 0 : ip.some((pp => "url-change" === pp.type))) && (null === (cp = pp.events) || void 0 === cp ? void 0 : cp.some((pp => "dom-mutation" === pp.type)))) {
-            var Op;
-            const ip = null === (Op = pp.events) || void 0 === Op ? void 0 : Op.find((pp => "url-change" === pp.type));
-            Up.api.pushEvent("faro.navigation", {
-              fromUrl: null === ip || void 0 === ip ? void 0 : ip.from,
-              toUrl: null === ip || void 0 === ip ? void 0 : ip.to,
+        MT.filter((TT => "tracking-ended" === TT.message)).subscribe((TT => {
+          var UT, mT;
+          if ((null === (UT = TT.events) || void 0 === UT ? void 0 : UT.some((TT => "url-change" === TT.type))) && (null === (mT = TT.events) || void 0 === mT ? void 0 : mT.some((TT => "dom-mutation" === TT.type)))) {
+            var WT;
+            const UT = null === (WT = TT.events) || void 0 === WT ? void 0 : WT.find((TT => "url-change" === TT.type));
+            ZT.api.pushEvent("faro.navigation", {
+              fromUrl: null === UT || void 0 === UT ? void 0 : UT.from,
+              toUrl: null === UT || void 0 === UT ? void 0 : UT.to,
               sameDocument: String(!0),
-              duration: pp.duration
+              duration: TT.duration
             })
           }
-        })), Op.subscribe((() => {
-          Ip.startTracking()
+        })), WT.subscribe((() => {
+          MT.startTracking()
         }))
       }
     };
 
-    function Go() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const ip = [new qo, new Nc, new BO, new Sc, new fc, new go];
-      return !1 !== pp.enablePerformanceInstrumentation && ip.unshift(new zO), !1 !== pp.enableContentSecurityPolicyInstrumentation && ip.push(new Mo), !1 !== pp.captureConsole && ip.push(new Jc), ip
+    function rz() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const UT = [new Yz, new Qm, new IW, new Wm, new Fm, new Cz];
+      return !1 !== TT.enablePerformanceInstrumentation && UT.unshift(new EW), !1 !== TT.enableContentSecurityPolicyInstrumentation && UT.push(new Jz), !1 !== TT.captureConsole && UT.push(new Xm), UT
     }
-    var ro = cp(6841);
-    let Zo, zo;
+    var Kz = mT(6770);
+    let Sz, Gz;
 
-    function so() {
-      const pp = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return Zo === pp && zo || (zo = new ro.UAParser(pp).getResult(), Zo = pp), zo
+    function Nz() {
+      const TT = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return Sz === TT && Gz || (Gz = new Kz.UAParser(TT).getResult(), Sz = TT), Gz
     }
-    const Ko = () => {
+    const Ez = () => {
         const {
-          browser: pp,
-          os: ip,
-          ua: cp
-        } = so(), {
-          name: Op,
-          version: op
-        } = pp, {
-          name: Ip,
-          version: Sp
-        } = ip, xp = navigator.language, Lp = cp.includes("Mobi"), Yp = function() {
-          if (!Op || !op) return;
+          browser: TT,
+          os: UT,
+          ua: mT
+        } = Nz(), {
+          name: WT,
+          version: zT
+        } = TT, {
+          name: MT,
+          version: gT
+        } = UT, nT = navigator.language, HT = mT.includes("Mobi"), kT = function() {
+          if (!WT || !zT) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== Op && void 0 !== Op ? Op : Tc,
-            version: null !== op && void 0 !== op ? op : Tc,
-            os: `${null!==Ip&&void 0!==Ip?Ip:Tc} ${null!==Sp&&void 0!==Sp?Sp:Tc}`,
-            userAgent: null !== cp && void 0 !== cp ? cp : Tc,
-            language: null !== xp && void 0 !== xp ? xp : Tc,
-            mobile: Lp,
-            brands: null !== Yp && void 0 !== Yp ? Yp : Tc,
+            name: null !== WT && void 0 !== WT ? WT : sm,
+            version: null !== zT && void 0 !== zT ? zT : sm,
+            os: `${null!==MT&&void 0!==MT?MT:sm} ${null!==gT&&void 0!==gT?gT:sm}`,
+            userAgent: null !== mT && void 0 !== mT ? mT : sm,
+            language: null !== nT && void 0 !== nT ? nT : sm,
+            mobile: HT,
+            brands: null !== kT && void 0 !== kT ? kT : sm,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      Vo = () => {
+      hz = () => {
         const {
-          name: pp,
-          version: ip
-        } = so().os;
-        if (!pp && !ip) return {};
-        const cp = {};
-        return pp && (cp.name = pp), ip && (cp.version = ip), {
-          os: cp
+          name: TT,
+          version: UT
+        } = Nz().os;
+        if (!TT && !UT) return {};
+        const mT = {};
+        return TT && (mT.name = TT), UT && (mT.version = UT), {
+          os: mT
         }
       };
 
-    function pI(pp) {
-      var ip, cp, Op;
+    function Dz(TT) {
+      var UT, mT, WT;
       return {
-        id: null !== (ip = null === (cp = Up.config) || void 0 === cp || null === (cp = cp.sessionTracking) || void 0 === cp || null === (Op = cp.generateSessionId) || void 0 === Op ? void 0 : Op.call(cp)) && void 0 !== ip ? ip : Hi(),
-        attributes: pp
+        id: null !== (UT = null === (mT = ZT.config) || void 0 === mT || null === (mT = mT.sessionTracking) || void 0 === mT || null === (WT = mT.generateSessionId) || void 0 === WT ? void 0 : WT.call(mT)) && void 0 !== UT ? UT : vU(),
+        attributes: TT
       }
     }
-    const iI = () => ({
+    const oz = () => ({
       sdk: {
         name: "faro-web",
-        version: Ic
+        version: mm
       }
     });
-    var cI = class extends Oc {
+    var Az = class extends Tm {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let OI = function(pp) {
-      return pp.EXCEPTION = "exception", pp.LOG = "log", pp.MEASUREMENT = "measurement", pp.TRACE = "trace", pp.EVENT = "event", pp
+    let Rz = function(TT) {
+      return TT.EXCEPTION = "exception", TT.LOG = "log", TT.MEASUREMENT = "measurement", TT.TRACE = "trace", TT.EVENT = "event", TT
     }({});
-    const oI = {
+    const TM = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function II(pp, ip) {
-      var cp, Op;
-      if (void 0 === ip) return pp;
-      if (void 0 === pp) return {
-        resourceSpans: ip
+    function UM(TT, UT) {
+      var mT, WT;
+      if (void 0 === UT) return TT;
+      if (void 0 === TT) return {
+        resourceSpans: UT
       };
-      const op = null === (cp = pp.resourceSpans) || void 0 === cp ? void 0 : cp[0];
-      if (void 0 === op) return pp;
-      const Ip = (null === op || void 0 === op ? void 0 : op.scopeSpans) || [],
-        Sp = (null === ip || void 0 === ip || null === (Op = ip[0]) || void 0 === Op ? void 0 : Op.scopeSpans) || [];
-      return ic(ic({}, pp), {}, {
-        resourceSpans: [ic(ic({}, op), {}, {
-          scopeSpans: [...Ip, ...Sp]
+      const zT = null === (mT = TT.resourceSpans) || void 0 === mT ? void 0 : mT[0];
+      if (void 0 === zT) return TT;
+      const MT = (null === zT || void 0 === zT ? void 0 : zT.scopeSpans) || [],
+        gT = (null === UT || void 0 === UT || null === (WT = UT[0]) || void 0 === WT ? void 0 : WT.scopeSpans) || [];
+      return AU(AU({}, TT), {}, {
+        resourceSpans: [AU(AU({}, zT), {}, {
+          scopeSpans: [...MT, ...gT]
         })]
       })
     }
 
-    function SI(pp) {
-      let ip = {
+    function mM(TT) {
+      let UT = {
         meta: {}
       };
-      return void 0 !== pp[0] && (ip.meta = pp[0].meta), pp.forEach((pp => {
-        switch (pp.type) {
+      return void 0 !== TT[0] && (UT.meta = TT[0].meta), TT.forEach((TT => {
+        switch (TT.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const cp = oI[pp.type],
-              Op = ip[cp];
-            ip = ic(ic({}, ip), {}, {
-              [cp]: void 0 === Op ? [pp.payload] : [...Op, pp.payload]
+            const mT = TM[TT.type],
+              WT = UT[mT];
+            UT = AU(AU({}, UT), {}, {
+              [mT]: void 0 === WT ? [TT.payload] : [...WT, TT.payload]
             });
             break
           }
           case "trace":
-            ip = ic(ic({}, ip), {}, {
-              traces: II(ip.traces, pp.payload.resourceSpans)
+            UT = AU(AU({}, UT), {}, {
+              traces: UM(UT.traces, TT.payload.resourceSpans)
             })
         }
-      })), ip
+      })), UT
     }
-    var xI = class extends cI {
+    var WM = class extends Az {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = pp, this.name = "@grafana/faro-web-sdk:transport-console", this.version = Ic
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = TT, this.name = "@grafana/faro-web-sdk:transport-console", this.version = mm
       }
-      send(pp) {
-        var ip;
-        return this.unpatchedConsole[null !== (ip = this.options.level) && void 0 !== ip ? ip : uc.DEBUG]("New event", SI([pp]))
+      send(TT) {
+        var UT;
+        return this.unpatchedConsole[null !== (UT = this.options.level) && void 0 !== UT ? UT : im.DEBUG]("New event", mM([TT]))
       }
     };
-    const LI = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      YI = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      DI = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      AI = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      PI = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      WI = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const zM = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      MM = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      gM = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      nM = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      HM = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      kM = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function yI(pp) {
+    function jM(TT) {
       let {
-        weekday: ip,
-        day: cp,
-        month: Op,
-        year: op,
-        hour: Ip,
-        minute: Sp,
-        second: xp
-      } = pp;
-      if (op < 1900 || cp < 1 || Ip > 23 || Sp > 59 || xp > 60) return;
-      const Lp = 60 === xp,
-        Yp = new Date(0);
-      return Yp.setUTCFullYear(op, Op, cp), Yp.setUTCHours(Ip, Sp, Lp ? 59 : xp, 0), Yp.getUTCDay() === ip && Yp.getUTCDate() === cp && Yp.getUTCMonth() === Op && Yp.getUTCFullYear() === op && Yp.getUTCHours() === Ip && Yp.getUTCMinutes() === Sp && Yp.getUTCSeconds() === (Lp ? 59 : xp) ? Yp.getTime() + (Lp ? 1e3 : 0) : void 0
+        weekday: UT,
+        day: mT,
+        month: WT,
+        year: zT,
+        hour: MT,
+        minute: gT,
+        second: nT
+      } = TT;
+      if (zT < 1900 || mT < 1 || MT > 23 || gT > 59 || nT > 60) return;
+      const HT = 60 === nT,
+        kT = new Date(0);
+      return kT.setUTCFullYear(zT, WT, mT), kT.setUTCHours(MT, gT, HT ? 59 : nT, 0), kT.getUTCDay() === UT && kT.getUTCDate() === mT && kT.getUTCMonth() === WT && kT.getUTCFullYear() === zT && kT.getUTCHours() === MT && kT.getUTCMinutes() === gT && kT.getUTCSeconds() === (HT ? 59 : nT) ? kT.getTime() + (HT ? 1e3 : 0) : void 0
     }
-    var UI = class {
-      constructor(pp) {
-        this.options = pp, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var lM = class {
+      constructor(TT) {
+        this.options = TT, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var pp = this;
+        var TT = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const ip = this.sequence++;
-        let cp = !1;
+        const UT = this.sequence++;
+        let mT = !1;
         return {
           deliver: function() {
-            var cp = rO((function*(cp) {
-              const Op = pp.options.getNow();
-              let op, Ip = 0;
+            var mT = GW((function*(mT) {
+              const WT = TT.options.getNow();
+              let zT, MT = 0;
               for (;;) {
-                var Sp, xp, Lp;
-                const Yp = pp.options.retry.maxAttempts - Ip,
-                  Dp = yield pp.runAttempt((() => cp(Yp, pp.unloading)), Ip > 0);
-                if (Ip += Dp.attemptsMade, "success" === Dp.kind) return {
+                var gT, nT, HT;
+                const kT = TT.options.retry.maxAttempts - MT,
+                  jT = yield TT.runAttempt((() => mT(kT, TT.unloading)), MT > 0);
+                if (MT += jT.attemptsMade, "success" === jT.kind) return {
                   kind: "success",
-                  attempts: Ip,
-                  elapsedTimeMs: pp.options.getNow() - Op
+                  attempts: MT,
+                  elapsedTimeMs: TT.options.getNow() - WT
                 };
-                if (op = Dp.failure, "terminal" === Dp.kind || pp.unloading) return {
+                if (zT = jT.failure, "terminal" === jT.kind || TT.unloading) return {
                   kind: "terminal",
-                  attempts: Ip,
-                  elapsedTimeMs: pp.options.getNow() - Op,
-                  failure: op
+                  attempts: MT,
+                  elapsedTimeMs: TT.options.getNow() - WT,
+                  failure: zT
                 };
-                if (Ip >= pp.options.retry.maxAttempts) return {
+                if (MT >= TT.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: Ip,
-                  elapsedTimeMs: pp.options.getNow() - Op,
-                  failure: op,
+                  attempts: MT,
+                  elapsedTimeMs: TT.options.getNow() - WT,
+                  failure: zT,
                   reason: "retries-exhausted"
                 };
-                if (null != Dp.retryAfterMs && Dp.retryAfterMs > pp.options.retry.maxBackoffMs) return {
+                if (null != jT.retryAfterMs && jT.retryAfterMs > TT.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: Ip,
-                  elapsedTimeMs: pp.options.getNow() - Op,
-                  failure: op,
+                  attempts: MT,
+                  elapsedTimeMs: TT.options.getNow() - WT,
+                  failure: zT,
                   reason: "retry-after-too-long"
                 };
-                const Ap = Math.min(null !== (Sp = Dp.retryAfterMs) && void 0 !== Sp ? Sp : pp.options.retry.initialBackoffMs * Math.pow(pp.options.retry.backoffMultiplier, Ip - 1), pp.options.retry.maxBackoffMs);
-                if (null === (xp = (Lp = pp.options).onRetry) || void 0 === xp || xp.call(Lp, Ap, Ip + 1), yield pp.waitForTurn(ip, Ap)) {
-                  const ip = pp.options.retry.maxAttempts - Ip,
-                    op = yield pp.runAttempt((() => cp(ip, !0)));
-                  return Ip += op.attemptsMade, {
-                    kind: "success" === op.kind ? "success" : "terminal",
-                    attempts: Ip,
-                    elapsedTimeMs: pp.options.getNow() - Op,
-                    failure: "success" === op.kind ? void 0 : op.failure
+                const lT = Math.min(null !== (gT = jT.retryAfterMs) && void 0 !== gT ? gT : TT.options.retry.initialBackoffMs * Math.pow(TT.options.retry.backoffMultiplier, MT - 1), TT.options.retry.maxBackoffMs);
+                if (null === (nT = (HT = TT.options).onRetry) || void 0 === nT || nT.call(HT, lT, MT + 1), yield TT.waitForTurn(UT, lT)) {
+                  const UT = TT.options.retry.maxAttempts - MT,
+                    zT = yield TT.runAttempt((() => mT(UT, !0)));
+                  return MT += zT.attemptsMade, {
+                    kind: "success" === zT.kind ? "success" : "terminal",
+                    attempts: MT,
+                    elapsedTimeMs: TT.options.getNow() - WT,
+                    failure: "success" === zT.kind ? void 0 : zT.failure
                   }
                 }
               }
             }));
-            return function(pp) {
-              return cp.apply(this, arguments)
+            return function(TT) {
+              return mT.apply(this, arguments)
             }
           }(),
           release: () => {
-            cp || (cp = !0, this.admitted--)
+            mT || (mT = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const pp = this.waiting.splice(0);
+        const TT = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const ip of pp) ip.resolve(!0);
+        for (const UT of TT) UT.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((cp, Op) => {
+      runAttempt(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((mT, WT) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const ip = () => {
+              const UT = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              pp().then((pp => {
-                ip(), cp(pp)
-              }), (pp => {
-                ip(), Op(pp)
+              TT().then((TT => {
+                UT(), mT(TT)
+              }), (TT => {
+                UT(), WT(TT)
               }))
             },
-            isRedelivery: ip
+            isRedelivery: UT
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const pp = this.options.getNow(),
-            ip = this.attemptQueue.findIndex((ip => {
+          const TT = this.options.getNow(),
+            UT = this.attemptQueue.findIndex((UT => {
               let {
-                isRedelivery: cp
-              } = ip;
-              return this.unloading || !cp || pp >= this.nextSendAt
+                isRedelivery: mT
+              } = UT;
+              return this.unloading || !mT || TT >= this.nextSendAt
             }));
-          if (ip < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (UT < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - pp)));
-          const [cp] = this.attemptQueue.splice(ip, 1);
-          cp.isRedelivery && !this.unloading && (this.nextSendAt = pp + 1), cp.run()
+          }), Math.max(0, this.nextSendAt - TT)));
+          const [mT] = this.attemptQueue.splice(UT, 1);
+          mT.isRedelivery && !this.unloading && (this.nextSendAt = TT + 1), mT.run()
         }
       }
-      waitForTurn(pp, ip) {
-        const cp = Math.min(ip * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((ip => {
+      waitForTurn(TT, UT) {
+        const mT = Math.min(UT * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((UT => {
           this.waiting.push({
-            sequence: pp,
-            readyAt: this.options.getNow() + cp,
-            resolve: ip
-          }), this.waiting.sort(((pp, ip) => pp.readyAt === ip.readyAt ? pp.sequence - ip.sequence : pp.readyAt - ip.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: TT,
+            readyAt: this.options.getNow() + mT,
+            resolve: UT
+          }), this.waiting.sort(((TT, UT) => TT.readyAt === UT.readyAt ? TT.sequence - UT.sequence : TT.readyAt - UT.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const pp = this.waiting[0],
-          ip = pp.readyAt;
+        const TT = this.waiting[0],
+          UT = TT.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const ip = this.waiting.indexOf(pp);
-          ip >= 0 && this.waiting.splice(ip, 1), pp.resolve(!1), this.scheduleNext()
-        }), Math.max(0, ip - this.options.getNow()))
+          const UT = this.waiting.indexOf(TT);
+          UT >= 0 && this.waiting.splice(UT, 1), TT.resolve(!1), this.scheduleNext()
+        }), Math.max(0, UT - this.options.getNow()))
       }
     };
 
-    function wI(pp, ip) {
-      if (null == pp) return {};
-      var cp, Op, op = function(pp, ip) {
-        if (null == pp) return {};
-        var cp = {};
-        for (var Op in pp)
-          if ({}.hasOwnProperty.call(pp, Op)) {
-            if (ip.includes(Op)) continue;
-            cp[Op] = pp[Op]
-          } return cp
-      }(pp, ip);
+    function LM(TT, UT) {
+      if (null == TT) return {};
+      var mT, WT, zT = function(TT, UT) {
+        if (null == TT) return {};
+        var mT = {};
+        for (var WT in TT)
+          if ({}.hasOwnProperty.call(TT, WT)) {
+            if (UT.includes(WT)) continue;
+            mT[WT] = TT[WT]
+          } return mT
+      }(TT, UT);
       if (Object.getOwnPropertySymbols) {
-        var Ip = Object.getOwnPropertySymbols(pp);
-        for (Op = 0; Op < Ip.length; Op++) cp = Ip[Op], ip.includes(cp) || {}.propertyIsEnumerable.call(pp, cp) && (op[cp] = pp[cp])
+        var MT = Object.getOwnPropertySymbols(TT);
+        for (WT = 0; WT < MT.length; WT++) mT = MT[WT], UT.includes(mT) || {}.propertyIsEnumerable.call(TT, mT) && (zT[mT] = TT[mT])
       }
-      return op
+      return zT
     }
 
-    function vI(pp) {
+    function pM(TT) {
       const {
-        size: ip,
-        concurrency: cp
-      } = pp, Op = [];
-      let op = 0;
-      const Ip = () => {
-        if (op < cp && Op.length) {
+        size: UT,
+        concurrency: mT
+      } = TT, WT = [];
+      let zT = 0;
+      const MT = () => {
+        if (zT < mT && WT.length) {
           const {
-            producer: pp,
-            resolve: ip,
-            reject: cp
-          } = Op.shift();
-          op++, pp().then((pp => {
-            op--, Ip(), ip(pp)
-          }), (pp => {
-            op--, Ip(), cp(pp)
+            producer: TT,
+            resolve: UT,
+            reject: mT
+          } = WT.shift();
+          zT++, TT().then((TT => {
+            zT--, MT(), UT(TT)
+          }), (TT => {
+            zT--, MT(), mT(TT)
           }))
         }
       };
       return {
-        add: pp => {
-          if (Op.length + op >= ip) throw new Error("Task buffer full");
-          return new Promise(((ip, cp) => {
-            Op.push({
-              producer: pp,
-              resolve: ip,
-              reject: cp
-            }), Ip()
+        add: TT => {
+          if (WT.length + zT >= UT) throw new Error("Task buffer full");
+          return new Promise(((UT, mT) => {
+            WT.push({
+              producer: TT,
+              resolve: UT,
+              reject: mT
+            }), MT()
           }))
         }
       }
     }
-    const tI = ["headers"],
-      HI = ["keepalive", "signal"],
-      dI = new Set([408, 425, 429, 500, 502, 503, 504]),
-      eI = new Set([429, 503]);
-    let uI = 0,
-      jI = 0;
-    var kI = class extends Error {};
-    var mI = class extends cI {
-      constructor(pp) {
-        var ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, Up, wp, vp;
-        super(), this.options = pp, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = Ic, this.pendingCustomSends = 0, this.getNow = null !== (ip = pp.getNow) && void 0 !== ip ? ip : Date.now, this.requestTimeoutMs = null !== (cp = pp.requestTimeoutMs) && void 0 !== cp ? cp : 1e4, this.compressionEnabled = null !== (Op = pp.requestCompression) && void 0 !== Op && Op && "undefined" !== typeof CompressionStream, pp.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new UI({
-          bufferSize: null !== (op = pp.bufferSize) && void 0 !== op ? op : 30,
-          concurrency: null !== (Ip = pp.concurrency) && void 0 !== Ip ? Ip : 5,
+    const BM = ["headers"],
+      ZM = ["keepalive", "signal"],
+      cM = new Set([408, 425, 429, 500, 502, 503, 504]),
+      vM = new Set([429, 503]);
+    let fM = 0,
+      qM = 0;
+    var iM = class extends Error {};
+    var bM = class extends Az {
+      constructor(TT) {
+        var UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT, LT, pT, BT, ZT, cT, vT;
+        super(), this.options = TT, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = mm, this.pendingCustomSends = 0, this.getNow = null !== (UT = TT.getNow) && void 0 !== UT ? UT : Date.now, this.requestTimeoutMs = null !== (mT = TT.requestTimeoutMs) && void 0 !== mT ? mT : 1e4, this.compressionEnabled = null !== (WT = TT.requestCompression) && void 0 !== WT && WT && "undefined" !== typeof CompressionStream, TT.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new lM({
+          bufferSize: null !== (zT = TT.bufferSize) && void 0 !== zT ? zT : 30,
+          concurrency: null !== (MT = TT.concurrency) && void 0 !== MT ? MT : 5,
           retry: {
-            maxAttempts: null !== (Sp = null === (xp = pp.retry) || void 0 === xp ? void 0 : xp.maxAttempts) && void 0 !== Sp ? Sp : 3,
-            initialBackoffMs: null !== (Lp = null !== (Yp = null === (Dp = pp.retry) || void 0 === Dp ? void 0 : Dp.initialBackoffMs) && void 0 !== Yp ? Yp : pp.defaultRateLimitBackoffMs) && void 0 !== Lp ? Lp : 1e3,
-            maxBackoffMs: null !== (Ap = null === (Pp = pp.retry) || void 0 === Pp ? void 0 : Pp.maxBackoffMs) && void 0 !== Ap ? Ap : 3e4,
-            backoffMultiplier: null !== (Wp = null === (yp = pp.retry) || void 0 === yp ? void 0 : yp.backoffMultiplier) && void 0 !== Wp ? Wp : 2
+            maxAttempts: null !== (gT = null === (nT = TT.retry) || void 0 === nT ? void 0 : nT.maxAttempts) && void 0 !== gT ? gT : 3,
+            initialBackoffMs: null !== (HT = null !== (kT = null === (jT = TT.retry) || void 0 === jT ? void 0 : jT.initialBackoffMs) && void 0 !== kT ? kT : TT.defaultRateLimitBackoffMs) && void 0 !== HT ? HT : 1e3,
+            maxBackoffMs: null !== (lT = null === (LT = TT.retry) || void 0 === LT ? void 0 : LT.maxBackoffMs) && void 0 !== lT ? lT : 3e4,
+            backoffMultiplier: null !== (pT = null === (BT = TT.retry) || void 0 === BT ? void 0 : BT.backoffMultiplier) && void 0 !== pT ? pT : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (Up = pp.getRandom) && void 0 !== Up ? Up : Math.random,
-          onRetry: (pp, ip) => {
-            this.logDebug(`Retrying failed request after ${pp}ms. Attempt ${ip}.`)
+          getRandom: null !== (ZT = TT.getRandom) && void 0 !== ZT ? ZT : Math.random,
+          onRetry: (TT, UT) => {
+            this.logDebug(`Retrying failed request after ${TT}ms. Attempt ${UT}.`)
           }
-        }), this.customPromiseBuffer = vI({
-          size: null !== (wp = pp.bufferSize) && void 0 !== wp ? wp : 30,
-          concurrency: null !== (vp = pp.concurrency) && void 0 !== vp ? vp : 5
+        }), this.customPromiseBuffer = pM({
+          size: null !== (cT = TT.bufferSize) && void 0 !== cT ? cT : 30,
+          concurrency: null !== (vT = TT.concurrency) && void 0 !== vT ? vT : 5
         }), this.defaultPromiseBuffer = {
-          add: pp => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(pp);
-            const ip = this.deliveryQueue.reserve();
-            if (!ip) throw new Error("Task buffer full");
-            return this.runBufferedTask(ip, pp)
+          add: TT => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(TT);
+            const UT = this.deliveryQueue.reserve();
+            if (!UT) throw new Error("Task buffer full");
+            return this.runBufferedTask(UT, TT)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (pp => {
-          pp.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (TT => {
+          TT.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(pp) {
-        var ip = this;
-        return rO((function*() {
-          const cp = ip.promiseBuffer;
-          if (cp !== ip.defaultPromiseBuffer || cp.add !== ip.defaultBufferAdd) {
-            ip.pendingCustomSends++;
+      send(TT) {
+        var UT = this;
+        return GW((function*() {
+          const mT = UT.promiseBuffer;
+          if (mT !== UT.defaultPromiseBuffer || mT.add !== UT.defaultBufferAdd) {
+            UT.pendingCustomSends++;
             try {
-              yield cp.add((() => ip.deliver(pp)))
-            } catch (Op) {
-              ip.logError("Permanent delivery failure", {
-                error: Op,
+              yield mT.add((() => UT.deliver(TT)))
+            } catch (WT) {
+              UT.logError("Permanent delivery failure", {
+                error: WT,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              ip.pendingCustomSends--
+              UT.pendingCustomSends--
             }
-          } else yield ip.deliver(pp)
+          } else yield UT.deliver(TT)
         }))()
       }
-      runBufferedTask(pp, ip) {
-        return rO((function*() {
-          let cp;
+      runBufferedTask(TT, UT) {
+        return GW((function*() {
+          let mT;
           try {
-            return yield pp.deliver(rO((function*() {
-              return cp = yield ip(), {
+            return yield TT.deliver(GW((function*() {
+              return mT = yield UT(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), cp
+            }))), mT
           } finally {
-            pp.release()
+            TT.release()
           }
         }))()
       }
-      deliver(pp) {
-        var ip = this;
-        return rO((function*() {
-          const cp = ip.deliveryQueue.reserve();
-          if (cp) try {
-            const Op = yield ip.prepareRequest(pp), op = yield cp.deliver(((pp, cp) => ip.performAttempt(Op, pp, cp)));
-            "terminal" === op.kind && ip.logError("retries-exhausted" === op.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Pi(Pi({}, op.failure), {}, {
-              reason: op.reason,
-              attempts: op.attempts,
-              elapsedTimeMs: op.elapsedTimeMs
+      deliver(TT) {
+        var UT = this;
+        return GW((function*() {
+          const mT = UT.deliveryQueue.reserve();
+          if (mT) try {
+            const WT = yield UT.prepareRequest(TT), zT = yield mT.deliver(((TT, mT) => UT.performAttempt(WT, TT, mT)));
+            "terminal" === zT.kind && UT.logError("retries-exhausted" === zT.reason ? "Delivery retries exhausted" : "Permanent delivery failure", jU(jU({}, zT.failure), {}, {
+              reason: zT.reason,
+              attempts: zT.attempts,
+              elapsedTimeMs: zT.elapsedTimeMs
             }))
-          } catch (Op) {
-            ip.logError("Permanent delivery failure", {
-              error: Op,
+          } catch (WT) {
+            UT.logError("Permanent delivery failure", {
+              error: WT,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            cp.release()
-          } else ip.logError("Permanent delivery failure", {
+            mT.release()
+          } else UT.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var pp;
-        return [this.options.url].concat(null !== (pp = this.config.ignoreUrls) && void 0 !== pp ? pp : [])
+        var TT;
+        return [this.options.url].concat(null !== (TT = this.config.ignoreUrls) && void 0 !== TT ? TT : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(pp) {
-        var ip = this;
-        return rO((function*() {
-          var cp, Op;
-          const op = SI(pp),
-            Ip = null === (cp = op.meta.session) || void 0 === cp ? void 0 : cp.id,
-            Sp = JSON.stringify(op),
-            xp = null !== (Op = ip.options.requestOptions) && void 0 !== Op ? Op : {},
+      prepareRequest(TT) {
+        var UT = this;
+        return GW((function*() {
+          var mT, WT;
+          const zT = mM(TT),
+            MT = null === (mT = zT.meta.session) || void 0 === mT ? void 0 : mT.id,
+            gT = JSON.stringify(zT),
+            nT = null !== (WT = UT.options.requestOptions) && void 0 !== WT ? WT : {},
             {
-              headers: Lp = {}
-            } = xp,
-            Yp = wI(xp, tI),
+              headers: HT = {}
+            } = nT,
+            kT = LM(nT, BM),
             {
-              keepalive: Dp,
-              signal: Ap
-            } = Yp,
-            Pp = wI(Yp, HI),
-            Wp = {};
-          for (const [pp, ip] of Object.entries(Lp)) Wp[pp] = "function" === typeof ip ? yield ip(): ip;
-          let yp = Sp,
-            Up = function(pp) {
-              return "undefined" === typeof TextEncoder ? pp.length : (new TextEncoder).encode(pp).byteLength
-            }(Sp);
-          const wp = {};
-          return ip.compressionEnabled && (yp = yield ip.compress(Sp), Up = yp.size, wp["Content-Encoding"] = "gzip"), {
-            bodySize: Up,
-            sessionId: Ip,
-            requestInit: Pi({
+              keepalive: jT,
+              signal: lT
+            } = kT,
+            LT = LM(kT, ZM),
+            pT = {};
+          for (const [TT, UT] of Object.entries(HT)) pT[TT] = "function" === typeof UT ? yield UT(): UT;
+          let BT = gT,
+            ZT = function(TT) {
+              return "undefined" === typeof TextEncoder ? TT.length : (new TextEncoder).encode(TT).byteLength
+            }(gT);
+          const cT = {};
+          return UT.compressionEnabled && (BT = yield UT.compress(gT), ZT = BT.size, cT["Content-Encoding"] = "gzip"), {
+            bodySize: ZT,
+            sessionId: MT,
+            requestInit: jU({
               method: "POST",
-              headers: Pi(Pi(Pi(Pi(Pi({
+              headers: jU(jU(jU(jU(jU({
                 "Content-Type": "application/json"
-              }, wp), Wp), ip.options.apiKey ? {
-                "x-api-key": ip.options.apiKey
-              } : {}), Ip ? {
-                "x-faro-session-id": Ip
+              }, cT), pT), UT.options.apiKey ? {
+                "x-api-key": UT.options.apiKey
+              } : {}), MT ? {
+                "x-faro-session-id": MT
               } : {}), {}, {
-                "Idempotency-Key": Hi(20)
+                "Idempotency-Key": vU(20)
               }),
-              body: yp
-            }, Pp)
+              body: BT
+            }, LT)
           }
         }))()
       }
-      performAttempt(pp, ip, cp) {
-        var Op = this;
-        return rO((function*() {
-          var op;
-          const Ip = null === (op = Op.options.requestOptions) || void 0 === op ? void 0 : op.signal;
-          if (null === Ip || void 0 === Ip ? void 0 : Ip.aborted) return {
+      performAttempt(TT, UT, mT) {
+        var WT = this;
+        return GW((function*() {
+          var zT;
+          const MT = null === (zT = WT.options.requestOptions) || void 0 === zT ? void 0 : zT.signal;
+          if (null === MT || void 0 === MT ? void 0 : MT.aborted) return {
             kind: "terminal",
             failure: {
-              error: Ip.reason
+              error: MT.reason
             },
             attemptsMade: 0
           };
-          let Sp = 0;
+          let gT = 0;
           try {
-            var xp;
-            const op = yield Op.fetchWithKeepaliveFallback(pp.requestInit, pp.bodySize, !!cp || (null === (xp = Op.options.requestOptions) || void 0 === xp ? void 0 : xp.keepalive), ip, (() => Sp++));
-            if (Op.handleResponse(op, pp.sessionId), op.status >= 200 && op.status < 300) return {
+            var nT;
+            const zT = yield WT.fetchWithKeepaliveFallback(TT.requestInit, TT.bodySize, !!mT || (null === (nT = WT.options.requestOptions) || void 0 === nT ? void 0 : nT.keepalive), UT, (() => gT++));
+            if (WT.handleResponse(zT, TT.sessionId), zT.status >= 200 && zT.status < 300) return {
               kind: "success",
-              attemptsMade: Sp
+              attemptsMade: gT
             };
-            const Ip = {
-              status: op.status
+            const MT = {
+              status: zT.status
             };
-            return !dI.has(op.status) || cp ? {
+            return !cM.has(zT.status) || mT ? {
               kind: "terminal",
-              failure: Ip,
-              attemptsMade: Sp
+              failure: MT,
+              attemptsMade: gT
             } : {
               kind: "retry",
-              failure: Ip,
-              attemptsMade: Sp,
-              retryAfterMs: eI.has(op.status) ? Op.getRetryAfterDelayMs(op) : void 0
+              failure: MT,
+              attemptsMade: gT,
+              retryAfterMs: vM.has(zT.status) ? WT.getRetryAfterDelayMs(zT) : void 0
             }
-          } catch (Lp) {
-            const pp = {
-              error: Lp
+          } catch (HT) {
+            const TT = {
+              error: HT
             };
-            return (null === Ip || void 0 === Ip ? void 0 : Ip.aborted) || !Op.isFetchNetworkError(Lp) || cp ? {
+            return (null === MT || void 0 === MT ? void 0 : MT.aborted) || !WT.isFetchNetworkError(HT) || mT ? {
               kind: "terminal",
-              failure: pp,
-              attemptsMade: Sp
+              failure: TT,
+              attemptsMade: gT
             } : {
               kind: "retry",
-              failure: pp,
-              attemptsMade: Sp
+              failure: TT,
+              attemptsMade: gT
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(pp, ip, cp, Op, op) {
-        var Ip = this;
-        return rO((function*() {
-          const Sp = Ip.getNow(),
-            xp = Ip.reserveKeepalive(ip, cp);
+      fetchWithKeepaliveFallback(TT, UT, mT, WT, zT) {
+        var MT = this;
+        return GW((function*() {
+          const gT = MT.getNow(),
+            nT = MT.reserveKeepalive(UT, mT);
           try {
-            return yield Ip.fetchWithTimeout(Pi(Pi({}, pp), {}, {
-              keepalive: xp.keepalive
-            }), Ip.requestTimeoutMs, op)
-          } catch (Yp) {
-            var Lp;
-            if (xp.keepalive && Op > 1 && Ip.isFetchNetworkError(Yp) && !(Yp instanceof kI) && !(null === (Lp = Ip.options.requestOptions) || void 0 === Lp || null === (Lp = Lp.signal) || void 0 === Lp ? void 0 : Lp.aborted)) {
-              Ip.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const ip = Ip.requestTimeoutMs - (Ip.getNow() - Sp);
-              return Ip.fetchWithTimeout(Pi(Pi({}, pp), {}, {
+            return yield MT.fetchWithTimeout(jU(jU({}, TT), {}, {
+              keepalive: nT.keepalive
+            }), MT.requestTimeoutMs, zT)
+          } catch (kT) {
+            var HT;
+            if (nT.keepalive && WT > 1 && MT.isFetchNetworkError(kT) && !(kT instanceof iM) && !(null === (HT = MT.options.requestOptions) || void 0 === HT || null === (HT = HT.signal) || void 0 === HT ? void 0 : HT.aborted)) {
+              MT.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const UT = MT.requestTimeoutMs - (MT.getNow() - gT);
+              return MT.fetchWithTimeout(jU(jU({}, TT), {}, {
                 keepalive: !1
-              }), ip, op)
+              }), UT, zT)
             }
-            throw Yp
+            throw kT
           } finally {
-            xp.release()
+            nT.release()
           }
         }))()
       }
-      fetchWithTimeout(pp, ip, cp) {
-        var Op = this;
-        return rO((function*() {
-          var op;
-          const Ip = null === (op = Op.options.requestOptions) || void 0 === op ? void 0 : op.signal;
-          if (Op.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return cp(), fetch(Op.options.url, Pi(Pi({}, pp), {}, {
-            signal: Ip
+      fetchWithTimeout(TT, UT, mT) {
+        var WT = this;
+        return GW((function*() {
+          var zT;
+          const MT = null === (zT = WT.options.requestOptions) || void 0 === zT ? void 0 : zT.signal;
+          if (WT.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return mT(), fetch(WT.options.url, jU(jU({}, TT), {}, {
+            signal: MT
           }));
-          if (ip <= 0) throw new kI("Request timed out");
-          const Sp = new AbortController,
-            xp = () => Sp.abort(null === Ip || void 0 === Ip ? void 0 : Ip.reason);
-          null === Ip || void 0 === Ip || Ip.addEventListener("abort", xp, {
+          if (UT <= 0) throw new iM("Request timed out");
+          const gT = new AbortController,
+            nT = () => gT.abort(null === MT || void 0 === MT ? void 0 : MT.reason);
+          null === MT || void 0 === MT || MT.addEventListener("abort", nT, {
             once: !0
           });
-          let Lp = !1;
-          const Yp = setTimeout((() => {
-            Lp = !0, Sp.abort()
-          }), ip);
+          let HT = !1;
+          const kT = setTimeout((() => {
+            HT = !0, gT.abort()
+          }), UT);
           try {
-            return cp(), yield fetch(Op.options.url, Pi(Pi({}, pp), {}, {
-              signal: Sp.signal
+            return mT(), yield fetch(WT.options.url, jU(jU({}, TT), {}, {
+              signal: gT.signal
             }))
-          } catch (Dp) {
-            if (Lp && !(null === Ip || void 0 === Ip ? void 0 : Ip.aborted)) throw new kI("Request timed out");
-            throw Dp
+          } catch (jT) {
+            if (HT && !(null === MT || void 0 === MT ? void 0 : MT.aborted)) throw new iM("Request timed out");
+            throw jT
           } finally {
-            clearTimeout(Yp), null === Ip || void 0 === Ip || Ip.removeEventListener("abort", xp)
+            clearTimeout(kT), null === MT || void 0 === MT || MT.removeEventListener("abort", nT)
           }
         }))()
       }
-      getRetryAfterDelayMs(pp) {
-        const ip = pp.headers.get("Retry-After");
-        if (!ip) return;
-        if (/^\d+$/.test(ip)) {
-          const pp = 1e3 * Number(ip);
-          return Number.isFinite(pp) ? pp : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(TT) {
+        const UT = TT.headers.get("Retry-After");
+        if (!UT) return;
+        if (/^\d+$/.test(UT)) {
+          const TT = 1e3 * Number(UT);
+          return Number.isFinite(TT) ? TT : Number.POSITIVE_INFINITY
         }
-        const cp = this.getNow(),
-          Op = function(pp, ip) {
-            const cp = LI.exec(pp);
-            if (cp) {
-              const [, pp, ip, Op, op, Ip, Sp, xp] = cp;
-              return yI({
-                weekday: AI.indexOf(pp),
-                day: Number(ip),
-                month: WI.indexOf(Op),
-                year: Number(op),
-                hour: Number(Ip),
-                minute: Number(Sp),
-                second: Number(xp)
+        const mT = this.getNow(),
+          WT = function(TT, UT) {
+            const mT = zM.exec(TT);
+            if (mT) {
+              const [, TT, UT, WT, zT, MT, gT, nT] = mT;
+              return jM({
+                weekday: nM.indexOf(TT),
+                day: Number(UT),
+                month: kM.indexOf(WT),
+                year: Number(zT),
+                hour: Number(MT),
+                minute: Number(gT),
+                second: Number(nT)
               })
             }
-            const Op = YI.exec(pp);
-            if (Op) {
-              const [, pp, cp, Sp, xp, Lp, Yp, Dp] = Op, Ap = new Date(ip);
-              if (Number.isNaN(Ap.getTime())) return;
-              const Pp = Ap.getUTCFullYear();
-              let Wp = 100 * Math.floor(Pp / 100) + Number(xp);
-              Wp < Pp && (Wp += 100);
-              const yp = WI.indexOf(Sp),
-                Up = {
-                  month: yp,
-                  day: Number(cp),
-                  hour: Number(Lp),
-                  minute: Number(Yp),
-                  second: Number(Dp),
+            const WT = MM.exec(TT);
+            if (WT) {
+              const [, TT, mT, gT, nT, HT, kT, jT] = WT, lT = new Date(UT);
+              if (Number.isNaN(lT.getTime())) return;
+              const LT = lT.getUTCFullYear();
+              let pT = 100 * Math.floor(LT / 100) + Number(nT);
+              pT < LT && (pT += 100);
+              const BT = kM.indexOf(gT),
+                ZT = {
+                  month: BT,
+                  day: Number(mT),
+                  hour: Number(HT),
+                  minute: Number(kT),
+                  second: Number(jT),
                   millisecond: 0
                 },
-                wp = {
-                  month: Ap.getUTCMonth(),
-                  day: Ap.getUTCDate(),
-                  hour: Ap.getUTCHours(),
-                  minute: Ap.getUTCMinutes(),
-                  second: Ap.getUTCSeconds(),
-                  millisecond: Ap.getUTCMilliseconds()
+                cT = {
+                  month: lT.getUTCMonth(),
+                  day: lT.getUTCDate(),
+                  hour: lT.getUTCHours(),
+                  minute: lT.getUTCMinutes(),
+                  second: lT.getUTCSeconds(),
+                  millisecond: lT.getUTCMilliseconds()
                 };
-              return (Wp > Pp + 50 || Wp === Pp + 50 && (Ip = wp, ((op = Up).month - Ip.month || op.day - Ip.day || op.hour - Ip.hour || op.minute - Ip.minute || op.second - Ip.second || op.millisecond - Ip.millisecond) > 0)) && (Wp -= 100), yI({
-                weekday: PI.indexOf(pp),
-                day: Number(cp),
-                month: yp,
-                year: Wp,
-                hour: Number(Lp),
-                minute: Number(Yp),
-                second: Number(Dp)
+              return (pT > LT + 50 || pT === LT + 50 && (MT = cT, ((zT = ZT).month - MT.month || zT.day - MT.day || zT.hour - MT.hour || zT.minute - MT.minute || zT.second - MT.second || zT.millisecond - MT.millisecond) > 0)) && (pT -= 100), jM({
+                weekday: HM.indexOf(TT),
+                day: Number(mT),
+                month: BT,
+                year: pT,
+                hour: Number(HT),
+                minute: Number(kT),
+                second: Number(jT)
               })
             }
-            var op, Ip;
-            const Sp = DI.exec(pp);
-            if (!Sp) return;
-            const [, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp] = Sp;
-            return yI({
-              weekday: AI.indexOf(xp),
-              day: Number(null !== Yp && void 0 !== Yp ? Yp : Dp),
-              month: WI.indexOf(Lp),
-              year: Number(yp),
-              hour: Number(Ap),
-              minute: Number(Pp),
-              second: Number(Wp)
+            var zT, MT;
+            const gT = gM.exec(TT);
+            if (!gT) return;
+            const [, nT, HT, kT, jT, lT, LT, pT, BT] = gT;
+            return jM({
+              weekday: nM.indexOf(nT),
+              day: Number(null !== kT && void 0 !== kT ? kT : jT),
+              month: kM.indexOf(HT),
+              year: Number(BT),
+              hour: Number(lT),
+              minute: Number(LT),
+              second: Number(pT)
             })
-          }(ip, cp);
-        return null == Op ? void 0 : Math.max(0, Op - cp)
+          }(UT, mT);
+        return null == WT ? void 0 : Math.max(0, WT - mT)
       }
-      reserveKeepalive(pp, ip) {
-        if (!1 === ip || pp > 6e4 || uI + pp > 6e4 || jI >= 9) return {
+      reserveKeepalive(TT, UT) {
+        if (!1 === UT || TT > 6e4 || fM + TT > 6e4 || qM >= 9) return {
           keepalive: !1,
-          release: Gi
+          release: KU
         };
-        uI += pp, jI++;
-        let cp = !1;
+        fM += TT, qM++;
+        let mT = !1;
         return {
           keepalive: !0,
           release: () => {
-            cp || (cp = !0, uI -= pp, jI--)
+            mT || (mT = !0, fM -= TT, qM--)
           }
         }
       }
-      handleResponse(pp, ip) {
-        202 === pp.status && "invalid" === pp.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), ip), pp.text().catch(Gi)
+      handleResponse(TT, UT) {
+        202 === TT.status && "invalid" === TT.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), UT), TT.text().catch(KU)
       }
-      isFetchNetworkError(pp) {
-        return pp instanceof TypeError || pp instanceof kI || pp instanceof DOMException && "AbortError" === pp.name
+      isFetchNetworkError(TT) {
+        return TT instanceof TypeError || TT instanceof iM || TT instanceof DOMException && "AbortError" === TT.name
       }
-      compress(pp) {
-        return rO((function*() {
-          const ip = [],
-            cp = new ReadableStream({
-              start(ip) {
-                ip.enqueue((new TextEncoder).encode(pp)), ip.close()
+      compress(TT) {
+        return GW((function*() {
+          const UT = [],
+            mT = new ReadableStream({
+              start(UT) {
+                UT.enqueue((new TextEncoder).encode(TT)), UT.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: pp,
-              value: Op
-            } = yield cp.read();
-            if (pp) return new Blob(ip);
-            ip.push(Op)
+              done: TT,
+              value: WT
+            } = yield mT.read();
+            if (TT) return new Blob(UT);
+            UT.push(WT)
           }
         }))()
       }
-      extendFaroSession(pp, ip, cp) {
-        var Op, op;
-        const Ip = pp.sessionTracking;
-        if (!(null === Ip || void 0 === Ip ? void 0 : Ip.enabled)) return void ip("Session expired.");
+      extendFaroSession(TT, UT, mT) {
+        var WT, zT;
+        const MT = TT.sessionTracking;
+        if (!(null === MT || void 0 === MT ? void 0 : MT.enabled)) return void UT("Session expired.");
         const {
-          fetchUserSession: Sp,
-          storeUserSession: xp
-        } = gi(Ip), Lp = null === (Op = this.metas.value.session) || void 0 === Op ? void 0 : Op.id, Yp = null === (op = Sp()) || void 0 === op ? void 0 : op.sessionId;
-        cp && cp === Lp && cp === Yp ? (Xi({
-          fetchUserSession: Sp,
-          storeUserSession: xp
+          fetchUserSession: gT,
+          storeUserSession: nT
+        } = rU(MT), HT = null === (WT = this.metas.value.session) || void 0 === WT ? void 0 : WT.id, kT = null === (zT = gT()) || void 0 === zT ? void 0 : zT.sessionId;
+        mT && mT === HT && mT === kT ? (tU({
+          fetchUserSession: gT,
+          storeUserSession: nT
         })({
           forceSessionExtend: !0
-        }), ip("Session expired; created new session.")) : ip("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), UT("Session expired; created new session.")) : UT("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const RI = () => {
-      const pp = window.k6;
+    const OM = () => {
+      const TT = window.k6;
       return {
-        k6: Pi({
+        k6: jU({
           isK6Browser: !0
-        }, (null === pp || void 0 === pp ? void 0 : pp.testRunId) && {
-          testRunId: null === pp || void 0 === pp ? void 0 : pp.testRunId
+        }, (null === TT || void 0 === TT ? void 0 : TT.testRunId) && {
+          testRunId: null === TT || void 0 === TT ? void 0 : TT.testRunId
         })
       }
     };
-    let qI, MI;
+    let eM, YM;
 
-    function CI() {
+    function JM() {
       let {
-        generatePageId: pp,
-        initialPageMeta: ip
+        generatePageId: TT,
+        initialPageMeta: UT
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const cp = location.href;
-        return Cp(pp) && qI !== cp && (qI = cp, MI = pp(location)), {
-          page: Pi(Pi({
-            url: cp
-          }, MI ? {
-            id: MI
-          } : {}), ip)
+        const mT = location.href;
+        return wT(TT) && eM !== mT && (eM = mT, YM = TT(location)), {
+          page: jU(jU({
+            url: mT
+          }, YM ? {
+            id: YM
+          } : {}), UT)
         }
       }
     }
 
-    function EI() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cc,
-        ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const cp = Zi;
-      return ip > 0 && (cp.error = ip >= 1 ? function() {
-        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
-        pp.error(`${cp.prefix}\n`, ...Op)
-      } : Gi, cp.warn = ip >= 2 ? function() {
-        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
-        pp.warn(`${cp.prefix}\n`, ...Op)
-      } : Gi, cp.info = ip >= 3 ? function() {
-        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
-        pp.info(`${cp.prefix}\n`, ...Op)
-      } : Gi, cp.debug = ip >= 4 ? function() {
-        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
-        pp.debug(`${cp.prefix}\n`, ...Op)
-      } : Gi), cp
+    function xM() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : RU,
+        UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const mT = GU;
+      return UT > 0 && (mT.error = UT >= 1 ? function() {
+        for (var UT = arguments.length, WT = new Array(UT), zT = 0; zT < UT; zT++) WT[zT] = arguments[zT];
+        TT.error(`${mT.prefix}\n`, ...WT)
+      } : KU, mT.warn = UT >= 2 ? function() {
+        for (var UT = arguments.length, WT = new Array(UT), zT = 0; zT < UT; zT++) WT[zT] = arguments[zT];
+        TT.warn(`${mT.prefix}\n`, ...WT)
+      } : KU, mT.info = UT >= 3 ? function() {
+        for (var UT = arguments.length, WT = new Array(UT), zT = 0; zT < UT; zT++) WT[zT] = arguments[zT];
+        TT.info(`${mT.prefix}\n`, ...WT)
+      } : KU, mT.debug = UT >= 4 ? function() {
+        for (var UT = arguments.length, WT = new Array(UT), zT = 0; zT < UT; zT++) WT[zT] = arguments[zT];
+        TT.debug(`${mT.prefix}\n`, ...WT)
+      } : KU), mT
     }
-    const XI = "faro",
-      lI = {
+    const dM = "faro",
+      wM = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      QI = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      tM = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function JI(pp) {
-      var ip, cp, op, Ip, Sp, xp;
-      const Lp = [],
-        Dp = EI(pp.unpatchedConsole, pp.internalLoggerLevel);
-      pp.transports ? ((pp.url || pp.apiKey) && Dp.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Lp.push(...pp.transports)) : pp.url ? Lp.push(new mI({
-        url: pp.url,
-        apiKey: pp.apiKey,
-        requestCompression: pp.requestCompression
-      })) : Dp.error('either "url" or "transports" must be defined');
+    function aM(TT) {
+      var UT, mT, zT, MT, gT, nT;
+      const HT = [],
+        jT = xM(TT.unpatchedConsole, TT.internalLoggerLevel);
+      TT.transports ? ((TT.url || TT.apiKey) && jT.error('if "transports" is defined, "url" and "apiKey" should not be defined'), HT.push(...TT.transports)) : TT.url ? HT.push(new bM({
+        url: TT.url,
+        apiKey: TT.apiKey,
+        requestCompression: TT.requestCompression
+      })) : jT.error('either "url" or "transports" must be defined');
       const {
-        dedupe: Ap = !0,
-        eventDomain: Pp = Op,
-        globalObjectKey: Wp = XI,
-        instrumentations: yp = Go(),
-        internalLoggerLevel: Up = zi,
-        isolate: wp = !1,
-        logArgsSerializer: vp = Qc,
-        metas: tp = NI(pp),
-        paused: Hp = !1,
-        preventGlobalExposure: dp = !1,
-        unpatchedConsole: ep = cc,
-        url: jp,
-        experimental: kp
-      } = pp, mp = wI(pp, QI), Rp = null !== (ip = null === kp || void 0 === kp ? void 0 : kp.trackNavigation) && void 0 !== ip && ip, qp = {
-        dataAttributeName: po(null !== (cp = null === (op = pp.userActionsInstrumentation) || void 0 === op ? void 0 : op.dataAttributeName) && void 0 !== cp ? cp : sO),
-        excludeItem: null === (Ip = pp.userActionsInstrumentation) || void 0 === Ip ? void 0 : Ip.excludeItem,
-        initialActivityTimeout: io(null === (Sp = pp.userActionsInstrumentation) || void 0 === Sp ? void 0 : Sp.initialActivityTimeout, 100, (pp => Dp.warn(pp)))
+        dedupe: lT = !0,
+        eventDomain: LT = WT,
+        globalObjectKey: pT = dM,
+        instrumentations: BT = rz(),
+        internalLoggerLevel: ZT = NU,
+        isolate: cT = !1,
+        logArgsSerializer: vT = ym,
+        metas: fT = XM(TT),
+        paused: qT = !1,
+        preventGlobalExposure: iT = !1,
+        unpatchedConsole: bT = RU,
+        url: OT,
+        experimental: eT
+      } = TT, YT = LM(TT, tM), JT = null !== (UT = null === eT || void 0 === eT ? void 0 : eT.trackNavigation) && void 0 !== UT && UT, xT = {
+        dataAttributeName: AW(null !== (mT = null === (zT = TT.userActionsInstrumentation) || void 0 === zT ? void 0 : zT.dataAttributeName) && void 0 !== mT ? mT : hW),
+        excludeItem: null === (MT = TT.userActionsInstrumentation) || void 0 === MT ? void 0 : MT.excludeItem,
+        initialActivityTimeout: RW(null === (gT = TT.userActionsInstrumentation) || void 0 === gT ? void 0 : gT.initialActivityTimeout, 100, (TT => jT.warn(TT)))
       };
-      return Pi(Pi({}, mp), {}, {
-        batching: Pi(Pi({}, lI), pp.batching),
-        dedupe: Ap,
-        globalObjectKey: Wp,
-        instrumentations: BI(yp, pp),
-        internalLoggerLevel: Up,
-        isolate: wp,
-        logArgsSerializer: vp,
-        metas: tp,
-        parseStacktrace: tc,
-        paused: Hp,
-        preventGlobalExposure: dp,
-        transports: Lp,
-        unpatchedConsole: ep,
-        eventDomain: Pp,
-        ignoreUrls: [...null !== (xp = pp.ignoreUrls) && void 0 !== xp ? xp : [], ...jp ? [jp] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: Pi(Pi(Pi({}, Yp), pp.sessionTracking), TI({
-          trackGeolocation: pp.trackGeolocation,
-          sessionTracking: pp.sessionTracking
+      return jU(jU({}, YT), {}, {
+        batching: jU(jU({}, wM), TT.batching),
+        dedupe: lT,
+        globalObjectKey: pT,
+        instrumentations: yM(BT, TT),
+        internalLoggerLevel: ZT,
+        isolate: cT,
+        logArgsSerializer: vT,
+        metas: fT,
+        parseStacktrace: Zm,
+        paused: qT,
+        preventGlobalExposure: iT,
+        transports: HT,
+        unpatchedConsole: bT,
+        eventDomain: LT,
+        ignoreUrls: [...null !== (nT = TT.ignoreUrls) && void 0 !== nT ? nT : [], ...OT ? [OT] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: jU(jU(jU({}, kT), TT.sessionTracking), IM({
+          trackGeolocation: TT.trackGeolocation,
+          sessionTracking: TT.sessionTracking
         })),
-        userActionsInstrumentation: qp,
+        userActionsInstrumentation: xT,
         experimental: {
-          trackNavigation: Rp
+          trackNavigation: JT
         }
       })
     }
 
-    function BI(pp, ip) {
+    function yM(TT, UT) {
       let {
-        experimental: cp
-      } = ip;
-      var Op;
-      const op = null !== (Op = null === cp || void 0 === cp ? void 0 : cp.trackNavigation) && void 0 !== Op && Op;
-      return pp.filter((pp => !("@grafana/faro-web-sdk:instrumentation-navigation" === pp.name && !op)))
+        experimental: mT
+      } = UT;
+      var WT;
+      const zT = null !== (WT = null === mT || void 0 === mT ? void 0 : mT.trackNavigation) && void 0 !== WT && WT;
+      return TT.filter((TT => !("@grafana/faro-web-sdk:instrumentation-navigation" === TT.name && !zT)))
     }
 
-    function NI(pp) {
-      var ip, cp, Op;
+    function XM(TT) {
+      var UT, mT, WT;
       const {
-        page: op,
-        generatePageId: Ip
-      } = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.pageTracking) && void 0 !== ip ? ip : {}, Sp = [Ko, Vo, CI({
-        generatePageId: Ip,
-        initialPageMeta: op
-      }), ...null !== (cp = pp.metas) && void 0 !== cp ? cp : [], iI];
-      return Mp(null === (Op = window) || void 0 === Op ? void 0 : Op.k6) ? [...Sp, RI] : Sp
+        page: zT,
+        generatePageId: MT
+      } = null !== (UT = null === TT || void 0 === TT ? void 0 : TT.pageTracking) && void 0 !== UT ? UT : {}, gT = [Ez, hz, JM({
+        generatePageId: MT,
+        initialPageMeta: zT
+      }), ...null !== (mT = TT.metas) && void 0 !== mT ? mT : [], oz];
+      return dT(null === (WT = window) || void 0 === WT ? void 0 : WT.k6) ? [...gT, OM] : gT
     }
 
-    function TI(pp) {
+    function IM(TT) {
       let {
-        trackGeolocation: ip,
-        sessionTracking: cp
-      } = pp;
-      var Op;
-      const op = {};
-      return Rp(ip) && (op.geoLocationTrackingEnabled = ip), rp(op) ? {} : {
-        session: Pi(Pi({}, null !== (Op = null === cp || void 0 === cp ? void 0 : cp.session) && void 0 !== Op ? Op : {}), {}, {
-          overrides: op
+        trackGeolocation: UT,
+        sessionTracking: mT
+      } = TT;
+      var WT;
+      const zT = {};
+      return JT(UT) && (zT.geoLocationTrackingEnabled = UT), NT(zT) ? {} : {
+        session: jU(jU({}, null !== (WT = null === mT || void 0 === mT ? void 0 : mT.session) && void 0 !== WT ? WT : {}), {}, {
+          overrides: zT
         })
       }
     }
-    const fI = new WeakSet;
+    const QM = new WeakSet;
 
-    function bI(pp) {
-      return fI.add(pp), pp
+    function sM(TT) {
+      return QM.add(TT), TT
     }
 
-    function hI(pp, ip) {
-      if (pp.capture) return bI(pp.capture(ip));
-      const cp = bI(pp.value);
-      return null === ip || void 0 === ip || ip(), cp
+    function FM(TT, UT) {
+      if (TT.capture) return sM(TT.capture(UT));
+      const mT = sM(TT.value);
+      return null === UT || void 0 === UT || UT(), mT
     }
 
-    function aI(pp) {
-      const ip = `__faroBundleId_${pp}`,
-        cp = null === Dp || void 0 === Dp ? void 0 : Dp[ip];
-      if ("string" === typeof cp && "" !== cp) return cp;
-      const Op = "undefined" !== typeof window ? window[ip] : void 0;
-      return "string" === typeof Op && "" !== Op ? Op : void 0
+    function PM(TT) {
+      const UT = `__faroBundleId_${TT}`,
+        mT = null === jT || void 0 === jT ? void 0 : jT[UT];
+      if ("string" === typeof mT && "" !== mT) return mT;
+      const WT = "undefined" !== typeof window ? window[UT] : void 0;
+      return "string" === typeof WT && "" !== WT ? WT : void 0
     }
 
-    function nI(pp) {
-      var ip, cp;
-      const Op = pp.config.app.name,
-        op = Op ? function(pp) {
-          return null === Dp || void 0 === Dp ? void 0 : Dp[`__faroGitHash_${pp}`]
-        }(Op) : void 0,
-        Ip = {
+    function VM(TT) {
+      var UT, mT;
+      const WT = TT.config.app.name,
+        zT = WT ? function(TT) {
+          return null === jT || void 0 === jT ? void 0 : jT[`__faroGitHash_${TT}`]
+        }(WT) : void 0,
+        MT = {
           sdk: {
-            version: Ic,
+            version: mm,
             name: "faro"
           },
-          app: ic({
-            bundleId: Op && aI(Op)
-          }, void 0 !== op ? {
-            gitHash: op
+          app: AU({
+            bundleId: WT && PM(WT)
+          }, void 0 !== zT ? {
+            gitHash: zT
           } : {})
         },
-        Sp = null === (ip = pp.config.sessionTracking) || void 0 === ip ? void 0 : ip.session;
-      Sp && pp.api.setSession(Sp), pp.config.app && (Ip.app = ic(ic({}, pp.config.app), Ip.app)), pp.config.user && (Ip.user = pp.config.user), pp.config.view && (Ip.view = pp.config.view), pp.metas.add(Ip, ...null !== (cp = pp.config.metas) && void 0 !== cp ? cp : [])
+        gT = null === (UT = TT.config.sessionTracking) || void 0 === UT ? void 0 : UT.session;
+      gT && TT.api.setSession(gT), TT.config.app && (MT.app = AU(AU({}, TT.config.app), MT.app)), TT.config.user && (MT.user = TT.config.user), TT.config.view && (MT.view = TT.config.view), TT.metas.add(MT, ...null !== (mT = TT.config.metas) && void 0 !== mT ? mT : [])
     }
-    var FI = class {
-      constructor(pp, ip) {
-        var cp, Op;
-        this.signalBuffer = [], this.itemLimit = null !== (cp = null === ip || void 0 === ip ? void 0 : ip.itemLimit) && void 0 !== cp ? cp : 50, this.sendTimeout = null !== (Op = null === ip || void 0 === ip ? void 0 : ip.sendTimeout) && void 0 !== Op ? Op : 250, this.paused = (null === ip || void 0 === ip ? void 0 : ip.paused) || !1, this.sendFn = pp, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var uM = class {
+      constructor(TT, UT) {
+        var mT, WT;
+        this.signalBuffer = [], this.itemLimit = null !== (mT = null === UT || void 0 === UT ? void 0 : UT.itemLimit) && void 0 !== mT ? mT : 50, this.sendTimeout = null !== (WT = null === UT || void 0 === UT ? void 0 : UT.sendTimeout) && void 0 !== WT ? WT : 250, this.paused = (null === UT || void 0 === UT ? void 0 : UT.paused) || !1, this.sendFn = TT, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(pp) {
-        this.paused || (this.signalBuffer.push(pp), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(TT) {
+        this.paused || (this.signalBuffer.push(TT), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(pp) {
-        const ip = new Map;
-        return pp.forEach((pp => {
-          const cp = JSON.stringify(pp.meta);
-          let Op = ip.get(cp);
-          Op = void 0 === Op ? [pp] : [...Op, pp], ip.set(cp, Op)
-        })), Array.from(ip.values())
+      groupItems(TT) {
+        const UT = new Map;
+        return TT.forEach((TT => {
+          const mT = JSON.stringify(TT.meta);
+          let WT = UT.get(mT);
+          WT = void 0 === WT ? [TT] : [...WT, TT], UT.set(mT, WT)
+        })), Array.from(UT.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const pp = this.signalBuffer;
+        const TT = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(pp).forEach(this.sendFn)
-        } catch (ip) {
-          throw this.signalBuffer = [...pp, ...this.signalBuffer], this.trimBufferToLimit(), ip
+          this.groupItems(TT).forEach(this.sendFn)
+        } catch (UT) {
+          throw this.signalBuffer = [...TT, ...this.signalBuffer], this.trimBufferToLimit(), UT
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function gI(pp, ip, cp, Op) {
-      var op;
-      ip.debug("Initializing transports");
-      const Ip = [];
-      let Sp = [];
-      const xp = pp => {
-        let ip = pp;
-        for (const Op of Sp) {
-          const pp = ip.map(Op).filter(Boolean);
-          if (0 === pp.length) return [];
-          ip = GI(pp, cp)
+    function CM(TT, UT, mT, WT) {
+      var zT;
+      UT.debug("Initializing transports");
+      const MT = [];
+      let gT = [];
+      const nT = TT => {
+        let UT = TT;
+        for (const WT of gT) {
+          const TT = UT.map(WT).filter(Boolean);
+          if (0 === TT.length) return [];
+          UT = rM(TT, mT)
         }
-        return ip
+        return UT
       };
-      let Lp;
-      (null === (op = cp.batching) || void 0 === op ? void 0 : op.enabled) && (Lp = new FI((pp => {
-        const cp = xp(pp);
-        if (0 !== cp.length)
-          for (const Op of Ip) ip.debug(`Transporting item using ${Op.name}\n`, cp), Op.isBatched() && Op.send(cp)
+      let HT;
+      (null === (zT = mT.batching) || void 0 === zT ? void 0 : zT.enabled) && (HT = new uM((TT => {
+        const mT = nT(TT);
+        if (0 !== mT.length)
+          for (const WT of MT) UT.debug(`Transporting item using ${WT.name}\n`, mT), WT.isBatched() && WT.send(mT)
       }), {
-        sendTimeout: cp.batching.sendTimeout,
-        itemLimit: cp.batching.itemLimit,
-        paused: cp.paused
+        sendTimeout: mT.batching.sendTimeout,
+        itemLimit: mT.batching.itemLimit,
+        paused: mT.paused
       }));
       return {
         add: function() {
-          ip.debug("Adding transports");
-          for (var op = arguments.length, Sp = new Array(op), xp = 0; xp < op; xp++) Sp[xp] = arguments[xp];
-          Sp.forEach((op => {
-            ip.debug(`Adding "${op.name}" transport`), Ip.some((pp => pp === op)) ? ip.warn(`Transport ${op.name} is already added`) : (op.unpatchedConsole = pp, op.internalLogger = ip, op.config = cp, op.metas = Op, Ip.push(op))
+          UT.debug("Adding transports");
+          for (var zT = arguments.length, gT = new Array(zT), nT = 0; nT < zT; nT++) gT[nT] = arguments[nT];
+          gT.forEach((zT => {
+            UT.debug(`Adding "${zT.name}" transport`), MT.some((TT => TT === zT)) ? UT.warn(`Transport ${zT.name} is already added`) : (zT.unpatchedConsole = TT, zT.internalLogger = UT, zT.config = mT, zT.metas = WT, MT.push(zT))
           }))
         },
         addBeforeSendHooks: function() {
-          ip.debug("Adding beforeSendHooks\n", Sp);
-          for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
-          cp.forEach((pp => {
-            pp && Sp.push(pp)
+          UT.debug("Adding beforeSendHooks\n", gT);
+          for (var TT = arguments.length, mT = new Array(TT), WT = 0; WT < TT; WT++) mT[WT] = arguments[WT];
+          mT.forEach((TT => {
+            TT && gT.push(TT)
           }))
         },
-        getBeforeSendHooks: () => [...Sp],
-        execute: pp => {
-          var op;
-          if (!cp.paused && ni(Op).shouldCapture()) {
-            if (Ap = pp.meta, !fI.has(Ap)) {
-              var Sp, Yp, Dp;
-              const ip = null === (Sp = Op.value.session) || void 0 === Sp ? void 0 : Sp.id,
-                op = hI(Op);
-              if (cp.paused) return;
-              const Ip = ic({}, pp.meta);
-              (null === (Yp = Ip.session) || void 0 === Yp ? void 0 : Yp.id) === ip && (null === (Dp = op.session) || void 0 === Dp ? void 0 : Dp.id) !== ip && (void 0 === op.session ? delete Ip.session : Ip.session = op.session), pp = ic(ic({}, pp), {}, {
-                meta: bI(Ip)
+        getBeforeSendHooks: () => [...gT],
+        execute: TT => {
+          var zT;
+          if (!mT.paused && uU(WT).shouldCapture()) {
+            if (lT = TT.meta, !QM.has(lT)) {
+              var gT, kT, jT;
+              const UT = null === (gT = WT.value.session) || void 0 === gT ? void 0 : gT.id,
+                zT = FM(WT);
+              if (mT.paused) return;
+              const MT = AU({}, TT.meta);
+              (null === (kT = MT.session) || void 0 === kT ? void 0 : kT.id) === UT && (null === (jT = zT.session) || void 0 === jT ? void 0 : jT.id) !== UT && (void 0 === zT.session ? delete MT.session : MT.session = zT.session), TT = AU(AU({}, TT), {}, {
+                meta: sM(MT)
               })
             }
-            var Ap;
-            (null === (op = cp.batching) || void 0 === op ? void 0 : op.enabled) && (null === Lp || void 0 === Lp || Lp.addItem(pp)), (pp => {
-              var Op;
-              if ((null === (Op = cp.batching) || void 0 === Op ? void 0 : Op.enabled) && Ip.every((pp => pp.isBatched()))) return;
-              const [op] = xp([pp]);
-              if (void 0 !== op)
-                for (const xp of Ip) {
-                  var Sp;
-                  ip.debug(`Transporting item using ${xp.name}\n`, op), xp.isBatched() ? (null === (Sp = cp.batching) || void 0 === Sp ? void 0 : Sp.enabled) || xp.send([op]) : xp.send(op)
+            var lT;
+            (null === (zT = mT.batching) || void 0 === zT ? void 0 : zT.enabled) && (null === HT || void 0 === HT || HT.addItem(TT)), (TT => {
+              var WT;
+              if ((null === (WT = mT.batching) || void 0 === WT ? void 0 : WT.enabled) && MT.every((TT => TT.isBatched()))) return;
+              const [zT] = nT([TT]);
+              if (void 0 !== zT)
+                for (const nT of MT) {
+                  var gT;
+                  UT.debug(`Transporting item using ${nT.name}\n`, zT), nT.isBatched() ? (null === (gT = mT.batching) || void 0 === gT ? void 0 : gT.enabled) || nT.send([zT]) : nT.send(zT)
                 }
-            })(pp)
+            })(TT)
           }
         },
-        isPaused: () => cp.paused,
+        isPaused: () => mT.paused,
         pause: () => {
-          ip.debug("Pausing transports"), null === Lp || void 0 === Lp || Lp.pause(), cp.paused = !0
+          UT.debug("Pausing transports"), null === HT || void 0 === HT || HT.pause(), mT.paused = !0
         },
         remove: function() {
-          ip.debug("Removing transports");
-          for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
-          cp.forEach((pp => {
-            ip.debug(`Removing "${pp.name}" transport`);
-            const cp = Ip.indexOf(pp); - 1 !== cp ? Ip.splice(cp, 1) : ip.warn(`Transport "${pp.name}" is not added`)
+          UT.debug("Removing transports");
+          for (var TT = arguments.length, mT = new Array(TT), WT = 0; WT < TT; WT++) mT[WT] = arguments[WT];
+          mT.forEach((TT => {
+            UT.debug(`Removing "${TT.name}" transport`);
+            const mT = MT.indexOf(TT); - 1 !== mT ? MT.splice(mT, 1) : UT.warn(`Transport "${TT.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
-          ip.debug("Removing beforeSendHooks"), Sp = Sp.filter((pp => !cp.includes(pp)))
+          for (var TT = arguments.length, mT = new Array(TT), WT = 0; WT < TT; WT++) mT[WT] = arguments[WT];
+          UT.debug("Removing beforeSendHooks"), gT = gT.filter((TT => !mT.includes(TT)))
         },
         get transports() {
-          return [...Ip]
+          return [...MT]
         },
         unpause: () => {
-          ip.debug("Unpausing transports"), null === Lp || void 0 === Lp || Lp.start(), cp.paused = !1
+          UT.debug("Unpausing transports"), null === HT || void 0 === HT || HT.start(), mT.paused = !1
         }
       }
     }
 
-    function GI(pp, ip) {
-      if (ip.preserveOriginalError)
-        for (const cp of pp) "exception" === cp.type && delete cp.payload.originalError;
-      return pp
+    function rM(TT, UT) {
+      if (UT.preserveOriginalError)
+        for (const mT of TT) "exception" === mT.type && delete mT.payload.originalError;
+      return TT
     }
-    let rI = cc;
+    let KM = RU;
 
-    function ZI(pp) {
-      var ip;
-      return rI = null !== (ip = pp.unpatchedConsole) && void 0 !== ip ? ip : rI, rI
+    function SM(TT) {
+      var UT;
+      return KM = null !== (UT = TT.unpatchedConsole) && void 0 !== UT ? UT : KM, KM
     }
-    let zI, sI = Zi;
+    let GM, NM = GU;
 
-    function KI(pp, ip) {
-      return sI = EI(pp, ip.internalLoggerLevel), sI
+    function EM(TT, UT) {
+      return NM = xM(TT, UT.internalLoggerLevel), NM
     }
 
-    function VI(pp) {
+    function hM(TT) {
       let {
-        internalLogger: ip,
-        config: cp,
-        metas: Op,
-        transports: op,
-        tracesApi: Ip,
-        userActionsApi: Sp
-      } = pp;
-      var xp;
-      ip.debug("Initializing exceptions API");
-      let Lp = null;
-      zI = null !== (xp = cp.parseStacktrace) && void 0 !== xp ? xp : zI;
-      const Yp = pp => {
-          ip.debug("Changing stacktrace parser"), zI = null !== pp && void 0 !== pp ? pp : zI
+        internalLogger: UT,
+        config: mT,
+        metas: WT,
+        transports: zT,
+        tracesApi: MT,
+        userActionsApi: gT
+      } = TT;
+      var nT;
+      UT.debug("Initializing exceptions API");
+      let HT = null;
+      GM = null !== (nT = mT.parseStacktrace) && void 0 !== nT ? nT : GM;
+      const kT = TT => {
+          UT.debug("Changing stacktrace parser"), GM = null !== TT && void 0 !== TT ? TT : GM
         },
         {
-          ignoreErrors: Dp = [],
-          preserveOriginalError: Ap
-        } = cp;
-      return Yp(cp.parseStacktrace), {
-        changeStacktraceParser: Yp,
-        getStacktraceParser: () => zI,
-        pushError: function(pp) {
+          ignoreErrors: jT = [],
+          preserveOriginalError: lT
+        } = mT;
+      return kT(mT.parseStacktrace), {
+        changeStacktraceParser: kT,
+        getStacktraceParser: () => GM,
+        pushError: function(TT) {
           let {
-            skipDedupe: xp,
-            stackFrames: Yp,
-            type: Pp,
-            context: Wp,
-            spanContext: yp,
-            timestampOverwriteMs: Up,
-            originalError: wp,
-            fingerprint: vp,
-            fatal: tp
+            skipDedupe: nT,
+            stackFrames: kT,
+            type: LT,
+            context: pT,
+            spanContext: BT,
+            timestampOverwriteMs: ZT,
+            originalError: cT,
+            fingerprint: vT,
+            fatal: fT
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(pp, ip) {
+          if (! function(TT, UT) {
               const {
-                message: cp,
-                name: Op,
-                stack: op
-              } = ip;
-              return Ip = pp, Sp = cp + " " + Op + " " + op, Ip.some((pp => jp(pp) ? Sp.includes(pp) : !!Sp.match(pp)));
-              var Ip, Sp
-            }(Dp, null !== wp && void 0 !== wp ? wp : pp)) try {
-            var Hp, dp;
-            if (!ni(Op).shouldCapture()) return;
-            const Dp = Ti(ic(ic({}, function(pp) {
-                let ip = pp.cause;
-                Tp(ip) ? ip = pp.cause.toString() : null !== ip && (Mp(pp.cause) || Ep(pp.cause)) ? ip = Ni(pp.cause) : null != ip && (ip = pp.cause.toString());
-                return null == ip ? {} : {
-                  cause: ip
+                message: mT,
+                name: WT,
+                stack: zT
+              } = UT;
+              return MT = TT, gT = mT + " " + WT + " " + zT, MT.some((TT => OT(TT) ? gT.includes(TT) : !!gT.match(TT)));
+              var MT, gT
+            }(jT, null !== cT && void 0 !== cT ? cT : TT)) try {
+            var qT, iT;
+            if (!uU(WT).shouldCapture()) return;
+            const jT = sU(AU(AU({}, function(TT) {
+                let UT = TT.cause;
+                FT(UT) ? UT = TT.cause.toString() : null !== UT && (dT(TT.cause) || tT(TT.cause)) ? UT = QU(TT.cause) : null != UT && (UT = TT.cause.toString());
+                return null == UT ? {} : {
+                  cause: UT
                 }
-              }(null !== wp && void 0 !== wp ? wp : pp)), null !== Wp && void 0 !== Wp ? Wp : {})),
-              jp = ic(ic(ic(ic({
-                type: Pp || pp.name || "Error",
-                value: pp.message,
-                timestamp: Up ? vi(Up) : wi(),
-                trace: yp ? {
-                  trace_id: yp.traceId,
-                  span_id: yp.spanId
-                } : Ip.getTraceContext()
-              }, rp(Dp) ? {} : {
-                context: Dp
-              }), Ap ? {
-                originalError: wp
-              } : {}), vp ? {
-                fingerprint: vp
-              } : {}), void 0 !== tp ? {
-                fatal: tp
+              }(null !== cT && void 0 !== cT ? cT : TT)), null !== pT && void 0 !== pT ? pT : {})),
+              OT = AU(AU(AU(AU({
+                type: LT || TT.name || "Error",
+                value: TT.message,
+                timestamp: ZT ? ZU(ZT) : BU(),
+                trace: BT ? {
+                  trace_id: BT.traceId,
+                  span_id: BT.spanId
+                } : MT.getTraceContext()
+              }, NT(jT) ? {} : {
+                context: jT
+              }), lT ? {
+                originalError: cT
+              } : {}), vT ? {
+                fingerprint: vT
+              } : {}), void 0 !== fT ? {
+                fatal: fT
               } : {});
-            Yp = null !== (Hp = Yp) && void 0 !== Hp ? Hp : pp.stack ? null === zI || void 0 === zI ? void 0 : zI(pp).frames : void 0, (null === Yp || void 0 === Yp ? void 0 : Yp.length) && (jp.stacktrace = {
-              frames: Yp
+            kT = null !== (qT = kT) && void 0 !== qT ? qT : TT.stack ? null === GM || void 0 === GM ? void 0 : GM(TT).frames : void 0, (null === kT || void 0 === kT ? void 0 : kT.length) && (OT.stacktrace = {
+              frames: kT
             });
-            const kp = {
-              type: jp.type,
-              value: jp.value,
-              stacktrace: jp.stacktrace,
-              context: jp.context,
-              fingerprint: jp.fingerprint,
-              fatal: null !== (dp = jp.fatal) && void 0 !== dp && dp
+            const eT = {
+              type: OT.type,
+              value: OT.value,
+              stacktrace: OT.stacktrace,
+              context: OT.context,
+              fingerprint: OT.fingerprint,
+              fatal: null !== (iT = OT.fatal) && void 0 !== iT && iT
             };
-            if (!xp && cp.dedupe && !ep(Lp) && di(kp, Lp)) return void ip.debug("Skipping error push because it is the same as the last one\n", jp);
-            const mp = Lp,
-              Rp = hI(Op);
-            if (Lp !== mp && !xp && cp.dedupe && di(kp, Lp)) return;
-            Lp = kp;
-            const qp = {
-              meta: Rp,
-              payload: jp,
+            if (!nT && mT.dedupe && !bT(HT) && fU(eT, HT)) return void UT.debug("Skipping error push because it is the same as the last one\n", OT);
+            const YT = HT,
+              JT = FM(WT);
+            if (HT !== YT && !nT && mT.dedupe && fU(eT, HT)) return;
+            HT = eT;
+            const xT = {
+              meta: JT,
+              payload: OT,
               type: "exception"
             };
-            ip.debug("Pushing exception\n", qp), Ro(Sp.getActiveUserAction(), qp) || op.execute(qp)
-          } catch (kp) {
-            ip.error("Error pushing event", kp)
+            UT.debug("Pushing exception\n", xT), ez(gT.getActiveUserAction(), xT) || zT.execute(xT)
+          } catch (eT) {
+            UT.error("Error pushing event", eT)
           }
         }
       }
     }
 
-    function pS(pp, ip, cp, Op, op) {
-      ip.debug("Initializing API");
-      let Ip = null;
-      const Sp = function(pp) {
+    function DM(TT, UT, mT, WT, zT) {
+      UT.debug("Initializing API");
+      let MT = null;
+      const gT = function(TT) {
           let {
-            transports: ip,
-            internalLogger: cp,
-            config: Op,
-            pushEvent: op
-          } = pp;
-          var Ip;
-          const Sp = null === (Ip = Op.userActionsInstrumentation) || void 0 === Ip ? void 0 : Ip.excludeItem;
-          let xp;
-          const Lp = () => xp;
+            transports: UT,
+            internalLogger: mT,
+            config: WT,
+            pushEvent: zT
+          } = TT;
+          var MT;
+          const gT = null === (MT = WT.userActionsInstrumentation) || void 0 === MT ? void 0 : MT.excludeItem;
+          let nT;
+          const HT = () => nT;
           return {
-            startUserAction: (pp, Op, Ip) => {
-              if (void 0 === Lp()) {
-                const cp = new ko({
-                  name: pp,
-                  transports: ip,
-                  attributes: Op,
-                  trigger: (null === Ip || void 0 === Ip ? void 0 : Ip.triggerName) || "faroApiCall",
-                  importance: (null === Ip || void 0 === Ip ? void 0 : Ip.importance) || uo.Normal,
-                  trackUserActionsExcludeItem: Sp,
-                  pushEvent: op
+            startUserAction: (TT, WT, MT) => {
+              if (void 0 === HT()) {
+                const mT = new bz({
+                  name: TT,
+                  transports: UT,
+                  attributes: WT,
+                  trigger: (null === MT || void 0 === MT ? void 0 : MT.triggerName) || "faroApiCall",
+                  importance: (null === MT || void 0 === MT ? void 0 : MT.importance) || qz.Normal,
+                  trackUserActionsExcludeItem: gT,
+                  pushEvent: zT
                 });
-                return cp.filter((pp => [3, 2].includes(pp))).first().subscribe((() => {
-                  xp = void 0
-                })), mo.notify({
-                  type: eo,
-                  userAction: cp,
-                  initialActivityTimeout: null === Ip || void 0 === Ip ? void 0 : Ip.initialActivityTimeout
-                }), xp = cp, xp
+                return mT.filter((TT => [3, 2].includes(TT))).first().subscribe((() => {
+                  nT = void 0
+                })), Oz.notify({
+                  type: fz,
+                  userAction: mT,
+                  initialActivityTimeout: null === MT || void 0 === MT ? void 0 : MT.initialActivityTimeout
+                }), nT = mT, nT
               }
-              cp.error("Attempted to create a new user action while one is already running. This is not possible.")
+              mT.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: Lp
+            getActiveUserAction: HT
           }
         }({
-          transports: op,
-          config: cp,
-          internalLogger: ip,
-          pushEvent: (pp, cp, Op, op) => {
-            Ip ? Ip(pp, cp, Op, op) : ip.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: pp,
-              attributes: cp,
-              domain: Op,
-              options: op
+          transports: zT,
+          config: mT,
+          internalLogger: UT,
+          pushEvent: (TT, mT, WT, zT) => {
+            MT ? MT(TT, mT, WT, zT) : UT.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: TT,
+              attributes: mT,
+              domain: WT,
+              options: zT
             })
           }
         }),
-        xp = function(pp, ip, cp, Op, op) {
-          let Ip;
-          return ip.debug("Initializing traces API"), {
-            getOTEL: () => Ip,
+        nT = function(TT, UT, mT, WT, zT) {
+          let MT;
+          return UT.debug("Initializing traces API"), {
+            getOTEL: () => MT,
             getTraceContext: () => {
-              const pp = null === Ip || void 0 === Ip ? void 0 : Ip.trace.getSpanContext(Ip.context.active());
-              return pp ? {
-                trace_id: pp.traceId,
-                span_id: pp.spanId
+              const TT = null === MT || void 0 === MT ? void 0 : MT.trace.getSpanContext(MT.context.active());
+              return TT ? {
+                trace_id: TT.traceId,
+                span_id: TT.spanId
               } : void 0
             },
-            initOTEL: (pp, cp) => {
-              ip.debug("Initializing OpenTelemetry"), Ip = {
-                trace: pp,
-                context: cp
+            initOTEL: (TT, mT) => {
+              UT.debug("Initializing OpenTelemetry"), MT = {
+                trace: TT,
+                context: mT
               }
             },
-            isOTELInitialized: () => !!Ip,
-            pushTraces: pp => {
+            isOTELInitialized: () => !!MT,
+            pushTraces: TT => {
               try {
-                if (!ni(Op).shouldCapture()) return;
-                const cp = {
+                if (!uU(WT).shouldCapture()) return;
+                const mT = {
                   type: "trace",
-                  payload: pp,
-                  meta: hI(Op)
+                  payload: TT,
+                  meta: FM(WT)
                 };
-                ip.debug("Pushing trace\n", cp), op.execute(cp)
-              } catch (cp) {
-                ip.error("Error pushing trace\n", cp)
+                UT.debug("Pushing trace\n", mT), zT.execute(mT)
+              } catch (mT) {
+                UT.error("Error pushing trace\n", mT)
               }
             }
           }
-        }(0, ip, 0, Op, op),
-        Lp = {
-          unpatchedConsole: pp,
-          internalLogger: ip,
-          userActionsApi: Sp,
-          config: cp,
-          metas: Op,
-          transports: op,
-          tracesApi: xp
+        }(0, UT, 0, WT, zT),
+        HT = {
+          unpatchedConsole: TT,
+          internalLogger: UT,
+          userActionsApi: gT,
+          config: mT,
+          metas: WT,
+          transports: zT,
+          tracesApi: nT
         },
-        Yp = function(pp) {
+        kT = function(TT) {
           let {
-            internalLogger: ip,
-            config: cp,
-            metas: Op,
-            transports: op,
-            tracesApi: Ip,
-            userActionsApi: Sp
-          } = pp, xp = null;
+            internalLogger: UT,
+            config: mT,
+            metas: WT,
+            transports: zT,
+            tracesApi: MT,
+            userActionsApi: gT
+          } = TT, nT = null;
           return {
-            pushEvent: function(pp, Lp, Yp) {
+            pushEvent: function(TT, HT, kT) {
               let {
-                skipDedupe: Dp,
-                spanContext: Ap,
-                timestampOverwriteMs: Pp,
-                customPayloadTransformer: Wp = pp => pp
+                skipDedupe: jT,
+                spanContext: lT,
+                timestampOverwriteMs: LT,
+                customPayloadTransformer: pT = TT => TT
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!ni(Op).shouldCapture()) return;
-                const yp = Ti(Lp),
-                  Up = Wp({
-                    name: pp,
-                    domain: null !== Yp && void 0 !== Yp ? Yp : cp.eventDomain,
-                    attributes: rp(yp) ? void 0 : yp,
-                    timestamp: Pp ? vi(Pp) : wi(),
-                    trace: Ap ? {
-                      trace_id: Ap.traceId,
-                      span_id: Ap.spanId
-                    } : Ip.getTraceContext()
+                if (!uU(WT).shouldCapture()) return;
+                const BT = sU(HT),
+                  ZT = pT({
+                    name: TT,
+                    domain: null !== kT && void 0 !== kT ? kT : mT.eventDomain,
+                    attributes: NT(BT) ? void 0 : BT,
+                    timestamp: LT ? ZU(LT) : BU(),
+                    trace: lT ? {
+                      trace_id: lT.traceId,
+                      span_id: lT.spanId
+                    } : MT.getTraceContext()
                   }),
-                  wp = {
-                    name: Up.name,
-                    attributes: Up.attributes,
-                    domain: Up.domain
+                  cT = {
+                    name: ZT.name,
+                    attributes: ZT.attributes,
+                    domain: ZT.domain
                   };
-                if (!Dp && cp.dedupe && !ep(xp) && di(wp, xp)) return void ip.debug("Skipping event push because it is the same as the last one\n", Up);
-                const vp = xp,
-                  tp = hI(Op);
-                if (xp !== vp && !Dp && cp.dedupe && di(wp, xp)) return;
-                xp = wp;
-                const Hp = {
-                  meta: tp,
-                  payload: Up,
+                if (!jT && mT.dedupe && !bT(nT) && fU(cT, nT)) return void UT.debug("Skipping event push because it is the same as the last one\n", ZT);
+                const vT = nT,
+                  fT = FM(WT);
+                if (nT !== vT && !jT && mT.dedupe && fU(cT, nT)) return;
+                nT = cT;
+                const qT = {
+                  meta: fT,
+                  payload: ZT,
                   type: "event"
                 };
-                ip.debug("Pushing event\n", Hp), Ro(Sp.getActiveUserAction(), Hp) || op.execute(Hp)
-              } catch (yp) {
-                ip.error("Error pushing event", yp)
+                UT.debug("Pushing event\n", qT), ez(gT.getActiveUserAction(), qT) || zT.execute(qT)
+              } catch (BT) {
+                UT.error("Error pushing event", BT)
               }
             }
           }
-        }(Lp);
-      return Ip = Yp.pushEvent, ic(ic(ic(ic(ic(ic(ic({}, xp), VI(Lp)), function(pp) {
-        let ip, cp, Op, op, {
-          internalLogger: Ip,
-          metas: Sp
-        } = pp;
-        Ip.debug("Initializing meta API");
-        const xp = pp => {
-            cp && Sp.remove(cp), cp = {
-              user: pp
-            }, Sp.add(cp)
+        }(HT);
+      return MT = kT.pushEvent, AU(AU(AU(AU(AU(AU(AU({}, nT), hM(HT)), function(TT) {
+        let UT, mT, WT, zT, {
+          internalLogger: MT,
+          metas: gT
+        } = TT;
+        MT.debug("Initializing meta API");
+        const nT = TT => {
+            mT && gT.remove(mT), mT = {
+              user: TT
+            }, gT.add(mT)
           },
-          Lp = (pp, cp) => {
-            var Op;
-            const op = null === cp || void 0 === cp ? void 0 : cp.overrides,
-              Ip = op ? {
-                overrides: ic(ic({}, null === ip || void 0 === ip || null === (Op = ip.session) || void 0 === Op ? void 0 : Op.overrides), op)
+          HT = (TT, mT) => {
+            var WT;
+            const zT = null === mT || void 0 === mT ? void 0 : mT.overrides,
+              MT = zT ? {
+                overrides: AU(AU({}, null === UT || void 0 === UT || null === (WT = UT.session) || void 0 === WT ? void 0 : WT.overrides), zT)
               } : {};
-            ip && Sp.remove(ip), ip = {
-              session: ic(ic({}, rp(pp) ? void 0 : pp), Ip)
-            }, Sp.add(ip)
+            UT && gT.remove(UT), UT = {
+              session: AU(AU({}, NT(TT) ? void 0 : TT), MT)
+            }, gT.add(UT)
           },
-          Yp = (pp, ip) => {
-            ni(Sp).notifySessionUpdate({
+          kT = (TT, UT) => {
+            uU(gT).notifySessionUpdate({
               type: "replace",
-              session: pp,
-              overrides: null === ip || void 0 === ip ? void 0 : ip.overrides
-            }), Lp(pp, ip)
+              session: TT,
+              overrides: null === UT || void 0 === UT ? void 0 : UT.overrides
+            }), HT(TT, UT)
           },
-          Dp = () => Sp.value.session,
-          Ap = () => Sp.value.page;
+          jT = () => gT.value.session,
+          lT = () => gT.value.page;
         return {
-          setUser: xp,
-          resetUser: xp,
-          setSession: Yp,
-          resetSession: Yp,
-          getSession: Dp,
-          setView: (pp, ip) => {
-            var cp;
-            if ((null === ip || void 0 === ip ? void 0 : ip.overrides) && (ni(Sp).notifySessionUpdate({
+          setUser: nT,
+          resetUser: nT,
+          setSession: kT,
+          resetSession: kT,
+          getSession: jT,
+          setView: (TT, UT) => {
+            var mT;
+            if ((null === UT || void 0 === UT ? void 0 : UT.overrides) && (uU(gT).notifySessionUpdate({
                 type: "overrides",
-                overrides: ip.overrides
-              }), Lp(Dp(), {
-                overrides: ip.overrides
-              })), (null === Op || void 0 === Op || null === (cp = Op.view) || void 0 === cp ? void 0 : cp.name) === (null === pp || void 0 === pp ? void 0 : pp.name)) return;
-            const op = Op;
-            Op = {
-              view: pp
-            }, Sp.add(Op), op && Sp.remove(op)
+                overrides: UT.overrides
+              }), HT(jT(), {
+                overrides: UT.overrides
+              })), (null === WT || void 0 === WT || null === (mT = WT.view) || void 0 === mT ? void 0 : mT.name) === (null === TT || void 0 === TT ? void 0 : TT.name)) return;
+            const zT = WT;
+            WT = {
+              view: TT
+            }, gT.add(WT), zT && gT.remove(zT)
           },
-          getView: () => Sp.value.view,
-          setPage: pp => {
-            var ip;
-            const cp = jp(pp) ? ic(ic({}, null !== (ip = null === op || void 0 === op ? void 0 : op.page) && void 0 !== ip ? ip : Ap()), {}, {
-              id: pp
-            }) : pp;
-            op && Sp.remove(op), op = {
-              page: cp
-            }, Sp.add(op)
+          getView: () => gT.value.view,
+          setPage: TT => {
+            var UT;
+            const mT = OT(TT) ? AU(AU({}, null !== (UT = null === zT || void 0 === zT ? void 0 : zT.page) && void 0 !== UT ? UT : lT()), {}, {
+              id: TT
+            }) : TT;
+            zT && gT.remove(zT), zT = {
+              page: mT
+            }, gT.add(zT)
           },
-          getPage: Ap
+          getPage: lT
         }
-      }(Lp)), function(pp) {
+      }(HT)), function(TT) {
         let {
-          internalLogger: ip,
-          config: cp,
-          metas: Op,
-          transports: op,
-          tracesApi: Ip,
-          userActionsApi: Sp
-        } = pp;
-        var xp;
-        ip.debug("Initializing logs API");
-        let Lp = null;
-        const Yp = null !== (xp = cp.logArgsSerializer) && void 0 !== xp ? xp : Qc;
+          internalLogger: UT,
+          config: mT,
+          metas: WT,
+          transports: zT,
+          tracesApi: MT,
+          userActionsApi: gT
+        } = TT;
+        var nT;
+        UT.debug("Initializing logs API");
+        let HT = null;
+        const kT = null !== (nT = mT.logArgsSerializer) && void 0 !== nT ? nT : ym;
         return {
-          pushLog: function(pp) {
+          pushLog: function(TT) {
             let {
-              context: xp,
-              level: Dp,
-              skipDedupe: Ap,
-              spanContext: Pp,
-              timestampOverwriteMs: Wp
+              context: nT,
+              level: jT,
+              skipDedupe: lT,
+              spanContext: LT,
+              timestampOverwriteMs: pT
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!ni(Op).shouldCapture()) return;
-              const yp = Ti(xp),
-                Up = {
-                  message: Yp(pp),
-                  level: null !== Dp && void 0 !== Dp ? Dp : "log",
-                  context: rp(yp) ? void 0 : yp,
-                  timestamp: Wp ? vi(Wp) : wi(),
-                  trace: Pp ? {
-                    trace_id: Pp.traceId,
-                    span_id: Pp.spanId
-                  } : Ip.getTraceContext()
+              if (!uU(WT).shouldCapture()) return;
+              const BT = sU(nT),
+                ZT = {
+                  message: kT(TT),
+                  level: null !== jT && void 0 !== jT ? jT : "log",
+                  context: NT(BT) ? void 0 : BT,
+                  timestamp: pT ? ZU(pT) : BU(),
+                  trace: LT ? {
+                    trace_id: LT.traceId,
+                    span_id: LT.spanId
+                  } : MT.getTraceContext()
                 },
-                wp = {
-                  message: Up.message,
-                  level: Up.level,
-                  context: Up.context
+                cT = {
+                  message: ZT.message,
+                  level: ZT.level,
+                  context: ZT.context
                 };
-              if (!Ap && cp.dedupe && !ep(Lp) && di(wp, Lp)) return void ip.debug("Skipping log push because it is the same as the last one\n", Up);
-              const vp = Lp,
-                tp = hI(Op);
-              if (Lp !== vp && !Ap && cp.dedupe && di(wp, Lp)) return;
-              Lp = wp;
-              const Hp = {
+              if (!lT && mT.dedupe && !bT(HT) && fU(cT, HT)) return void UT.debug("Skipping log push because it is the same as the last one\n", ZT);
+              const vT = HT,
+                fT = FM(WT);
+              if (HT !== vT && !lT && mT.dedupe && fU(cT, HT)) return;
+              HT = cT;
+              const qT = {
                 type: "log",
-                payload: Up,
-                meta: tp
+                payload: ZT,
+                meta: fT
               };
-              ip.debug("Pushing log\n", Hp), Ro(Sp.getActiveUserAction(), Hp) || op.execute(Hp)
-            } catch (yp) {
-              ip.error("Error pushing log\n", yp)
+              UT.debug("Pushing log\n", qT), ez(gT.getActiveUserAction(), qT) || zT.execute(qT)
+            } catch (BT) {
+              UT.error("Error pushing log\n", BT)
             }
           }
         }
-      }(Lp)), function(pp) {
+      }(HT)), function(TT) {
         let {
-          internalLogger: ip,
-          config: cp,
-          metas: Op,
-          transports: op,
-          tracesApi: Ip,
-          userActionsApi: Sp
-        } = pp;
-        ip.debug("Initializing measurements API");
-        let xp = null;
+          internalLogger: UT,
+          config: mT,
+          metas: WT,
+          transports: zT,
+          tracesApi: MT,
+          userActionsApi: gT
+        } = TT;
+        UT.debug("Initializing measurements API");
+        let nT = null;
         return {
-          pushMeasurement: function(pp) {
+          pushMeasurement: function(TT) {
             let {
-              skipDedupe: Lp,
-              context: Yp,
-              spanContext: Dp,
-              timestampOverwriteMs: Ap
+              skipDedupe: HT,
+              context: kT,
+              spanContext: jT,
+              timestampOverwriteMs: lT
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!ni(Op).shouldCapture()) return;
-              const Pp = Ti(Yp),
-                Wp = ic(ic({}, pp), {}, {
-                  trace: Dp ? {
-                    trace_id: Dp.traceId,
-                    span_id: Dp.spanId
-                  } : Ip.getTraceContext(),
-                  timestamp: Ap ? vi(Ap) : wi(),
-                  context: rp(Pp) ? void 0 : Pp
+              if (!uU(WT).shouldCapture()) return;
+              const LT = sU(kT),
+                pT = AU(AU({}, TT), {}, {
+                  trace: jT ? {
+                    trace_id: jT.traceId,
+                    span_id: jT.spanId
+                  } : MT.getTraceContext(),
+                  timestamp: lT ? ZU(lT) : BU(),
+                  context: NT(LT) ? void 0 : LT
                 }),
-                yp = {
-                  type: Wp.type,
-                  values: Wp.values,
-                  context: Wp.context
+                BT = {
+                  type: pT.type,
+                  values: pT.values,
+                  context: pT.context
                 };
-              if (!Lp && cp.dedupe && !ep(xp) && di(yp, xp)) return void ip.debug("Skipping measurement push because it is the same as the last one\n", Wp);
-              const Up = xp,
-                wp = hI(Op);
-              if (xp !== Up && !Lp && cp.dedupe && di(yp, xp)) return;
-              xp = yp;
-              const vp = {
+              if (!HT && mT.dedupe && !bT(nT) && fU(BT, nT)) return void UT.debug("Skipping measurement push because it is the same as the last one\n", pT);
+              const ZT = nT,
+                cT = FM(WT);
+              if (nT !== ZT && !HT && mT.dedupe && fU(BT, nT)) return;
+              nT = BT;
+              const vT = {
                 type: "measurement",
-                payload: Wp,
-                meta: wp
+                payload: pT,
+                meta: cT
               };
-              ip.debug("Pushing measurement\n", vp), Ro(Sp.getActiveUserAction(), vp) || op.execute(vp)
-            } catch (Pp) {
-              ip.error("Error pushing measurement\n", Pp)
+              UT.debug("Pushing measurement\n", vT), ez(gT.getActiveUserAction(), vT) || zT.execute(vT)
+            } catch (LT) {
+              UT.error("Error pushing measurement\n", LT)
             }
           }
         }
-      }(Lp)), Yp), Sp)
+      }(HT)), kT), gT)
     }
 
-    function iS(pp) {
-      const ip = ZI(pp),
-        cp = KI(ip, pp);
-      if (yp() && !pp.isolate) return void cp.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      cp.debug("Initializing");
-      const Op = function(pp, ip) {
-          let cp, Op = [],
-            op = [],
-            Ip = [],
-            Sp = 0,
-            xp = 0;
-          const Lp = () => Op.reduce(((pp, ip) => Object.assign(pp, Cp(ip) ? ip() : ip)), {}),
-            Yp = () => {
-              if (op.length) {
-                const pp = Lp();
-                op.forEach((ip => ip(pp)))
+    function oM(TT) {
+      const UT = SM(TT),
+        mT = EM(UT, TT);
+      if (BT() && !TT.isolate) return void mT.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      mT.debug("Initializing");
+      const WT = function(TT, UT) {
+          let mT, WT = [],
+            zT = [],
+            MT = [],
+            gT = 0,
+            nT = 0;
+          const HT = () => WT.reduce(((TT, UT) => Object.assign(TT, wT(UT) ? UT() : UT)), {}),
+            kT = () => {
+              if (zT.length) {
+                const TT = HT();
+                zT.forEach((UT => UT(TT)))
               }
             };
           return {
             add: function() {
-              for (var pp = arguments.length, cp = new Array(pp), op = 0; op < pp; op++) cp[op] = arguments[op];
-              ip.debug("Adding metas\n", cp), Op.push(...cp), Yp()
+              for (var TT = arguments.length, mT = new Array(TT), zT = 0; zT < TT; zT++) mT[zT] = arguments[zT];
+              UT.debug("Adding metas\n", mT), WT.push(...mT), kT()
             },
             remove: function() {
-              for (var pp = arguments.length, cp = new Array(pp), op = 0; op < pp; op++) cp[op] = arguments[op];
-              ip.debug("Removing metas\n", cp), Op = Op.filter((pp => !cp.includes(pp))), Yp()
+              for (var TT = arguments.length, mT = new Array(TT), zT = 0; zT < TT; zT++) mT[zT] = arguments[zT];
+              UT.debug("Removing metas\n", mT), WT = WT.filter((TT => !mT.includes(TT))), kT()
             },
-            addListener: pp => {
-              ip.debug("Adding metas listener\n", pp), op.push(pp)
+            addListener: TT => {
+              UT.debug("Adding metas listener\n", TT), zT.push(TT)
             },
-            removeListener: pp => {
-              ip.debug("Removing metas listener\n", pp), op = op.filter((ip => ip !== pp))
+            removeListener: TT => {
+              UT.debug("Removing metas listener\n", TT), zT = zT.filter((UT => UT !== TT))
             },
-            capture: pp => {
-              var ip;
-              const Op = void 0 !== cp,
-                op = null !== (ip = cp) && void 0 !== ip ? ip : Ip;
-              Op || (cp = op, Sp = 0, xp = op.length);
+            capture: TT => {
+              var UT;
+              const WT = void 0 !== mT,
+                zT = null !== (UT = mT) && void 0 !== UT ? UT : MT;
+              WT || (mT = zT, gT = 0, nT = zT.length);
               try {
-                for (; Sp < xp;) {
-                  const pp = op[Sp++];
-                  null === pp || void 0 === pp || pp()
+                for (; gT < nT;) {
+                  const TT = zT[gT++];
+                  null === TT || void 0 === TT || TT()
                 }
-                const ip = bI(Lp());
-                return null === pp || void 0 === pp || pp(), ip
+                const UT = sM(HT());
+                return null === TT || void 0 === TT || TT(), UT
               } finally {
-                Op || (cp = void 0)
+                WT || (mT = void 0)
               }
             },
-            addCaptureListener: pp => {
-              Ip.push(pp)
+            addCaptureListener: TT => {
+              MT.push(TT)
             },
-            removeCaptureListener: pp => {
-              Ip = Ip.filter((ip => ip !== pp))
+            removeCaptureListener: TT => {
+              MT = MT.filter((UT => UT !== TT))
             },
             get value() {
-              return Lp()
+              return HT()
             }
           }
-        }(0, cp),
-        op = gI(ip, cp, pp, Op),
-        Ip = pS(ip, cp, pp, Op, op),
-        Sp = function(pp, ip, cp, Op, op, Ip) {
-          ip.debug("Initializing instrumentations");
-          const Sp = [];
+        }(0, mT),
+        zT = CM(UT, mT, TT, WT),
+        MT = DM(UT, mT, TT, WT, zT),
+        gT = function(TT, UT, mT, WT, zT, MT) {
+          UT.debug("Initializing instrumentations");
+          const gT = [];
           return {
             add: function() {
-              ip.debug("Adding instrumentations");
-              for (var xp = arguments.length, Lp = new Array(xp), Yp = 0; Yp < xp; Yp++) Lp[Yp] = arguments[Yp];
-              Lp.forEach((xp => {
-                ip.debug(`Adding "${xp.name}" instrumentation`), Sp.some((pp => pp.name === xp.name)) ? ip.warn(`Instrumentation ${xp.name} is already added`) : (xp.unpatchedConsole = pp, xp.internalLogger = ip, xp.config = cp, xp.metas = Op, xp.transports = op, xp.api = Ip, Sp.push(xp), xp.initialize())
+              UT.debug("Adding instrumentations");
+              for (var nT = arguments.length, HT = new Array(nT), kT = 0; kT < nT; kT++) HT[kT] = arguments[kT];
+              HT.forEach((nT => {
+                UT.debug(`Adding "${nT.name}" instrumentation`), gT.some((TT => TT.name === nT.name)) ? UT.warn(`Instrumentation ${nT.name} is already added`) : (nT.unpatchedConsole = TT, nT.internalLogger = UT, nT.config = mT, nT.metas = WT, nT.transports = zT, nT.api = MT, gT.push(nT), nT.initialize())
               }))
             },
             get instrumentations() {
-              return [...Sp]
+              return [...gT]
             },
             remove: function() {
-              ip.debug("Removing instrumentations");
-              for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
-              cp.forEach((pp => {
-                var cp, Op;
-                ip.debug(`Removing "${pp.name}" instrumentation`);
-                const op = Sp.reduce(((ip, cp, Op) => null === ip && cp.name === pp.name ? Op : null), null);
-                null !== op ? (null === (cp = (Op = Sp[op]).destroy) || void 0 === cp || cp.call(Op), Sp.splice(op, 1)) : ip.warn(`Instrumentation "${pp.name}" is not added`)
+              UT.debug("Removing instrumentations");
+              for (var TT = arguments.length, mT = new Array(TT), WT = 0; WT < TT; WT++) mT[WT] = arguments[WT];
+              mT.forEach((TT => {
+                var mT, WT;
+                UT.debug(`Removing "${TT.name}" instrumentation`);
+                const zT = gT.reduce(((UT, mT, WT) => null === UT && mT.name === TT.name ? WT : null), null);
+                null !== zT ? (null === (mT = (WT = gT[zT]).destroy) || void 0 === mT || mT.call(WT), gT.splice(zT, 1)) : UT.warn(`Instrumentation "${TT.name}" is not added`)
               }))
             }
           }
-        }(ip, cp, pp, Op, op, Ip),
-        xp = wp(ip, cp, pp, Op, op, Ip, Sp);
-      return nI(xp),
-        function(pp) {
-          pp.transports.add(...pp.config.transports), pp.transports.addBeforeSendHooks(pp.config.beforeSend)
-        }(xp),
-        function(pp) {
-          pp.instrumentations.add(...pp.config.instrumentations)
-        }(xp), xp
+        }(UT, mT, TT, WT, zT, MT),
+        nT = cT(UT, mT, TT, WT, zT, MT, gT);
+      return VM(nT),
+        function(TT) {
+          TT.transports.add(...TT.config.transports), TT.transports.addBeforeSendHooks(TT.config.beforeSend)
+        }(nT),
+        function(TT) {
+          TT.instrumentations.add(...TT.config.instrumentations)
+        }(nT), nT
     }
 
-    function cS(pp) {
-      const ip = JI(pp);
-      if (ip) return iS(ip)
+    function AM(TT) {
+      const UT = aM(TT);
+      if (UT) return oM(UT)
     }
   },
-  6841: function(pp, ip, cp) {
-    var Op;
-    ! function(op, Ip) {
-      var Sp = "function",
-        xp = "undefined",
-        Lp = "object",
-        Yp = "string",
-        Dp = "major",
-        Ap = "model",
-        Pp = "name",
-        Wp = "type",
-        yp = "vendor",
-        Up = "version",
-        wp = "architecture",
-        vp = "console",
-        tp = "mobile",
-        Hp = "tablet",
-        dp = "smarttv",
-        ep = "wearable",
-        jp = "embedded",
-        kp = "Amazon",
-        mp = "Apple",
-        Rp = "ASUS",
-        qp = "BlackBerry",
-        Mp = "Browser",
-        Cp = "Chrome",
-        Ep = "Firefox",
-        Xp = "Google",
-        lp = "Honor",
-        Qp = "Huawei",
-        Jp = "LG",
-        Bp = "Microsoft",
-        Np = "Motorola",
-        Tp = "Nvidia",
-        fp = "OnePlus",
-        bp = "Opera",
-        hp = "OPPO",
-        ap = "Samsung",
-        np = "Sharp",
-        Fp = "Sony",
-        gp = "Xiaomi",
-        Gp = "Zebra",
-        rp = "Facebook",
-        Zp = "Chromium OS",
-        zp = "Mac OS",
-        sp = " Browser",
-        Kp = function(pp) {
-          for (var ip = {}, cp = 0; cp < pp.length; cp++) ip[pp[cp].toUpperCase()] = pp[cp];
-          return ip
+  6770: function(TT, UT, mT) {
+    var WT;
+    ! function(zT, MT) {
+      var gT = "function",
+        nT = "undefined",
+        HT = "object",
+        kT = "string",
+        jT = "major",
+        lT = "model",
+        LT = "name",
+        pT = "type",
+        BT = "vendor",
+        ZT = "version",
+        cT = "architecture",
+        vT = "console",
+        fT = "mobile",
+        qT = "tablet",
+        iT = "smarttv",
+        bT = "wearable",
+        OT = "embedded",
+        eT = "Amazon",
+        YT = "Apple",
+        JT = "ASUS",
+        xT = "BlackBerry",
+        dT = "Browser",
+        wT = "Chrome",
+        tT = "Firefox",
+        aT = "Google",
+        yT = "Honor",
+        XT = "Huawei",
+        IT = "LG",
+        QT = "Microsoft",
+        sT = "Motorola",
+        FT = "Nvidia",
+        PT = "OnePlus",
+        VT = "Opera",
+        uT = "OPPO",
+        CT = "Samsung",
+        rT = "Sharp",
+        KT = "Sony",
+        ST = "Xiaomi",
+        GT = "Zebra",
+        NT = "Facebook",
+        ET = "Chromium OS",
+        hT = "Mac OS",
+        DT = " Browser",
+        oT = function(TT) {
+          for (var UT = {}, mT = 0; mT < TT.length; mT++) UT[TT[mT].toUpperCase()] = TT[mT];
+          return UT
         },
-        Vp = function(pp, ip) {
-          return typeof pp === Yp && -1 !== ii(ip).indexOf(ii(pp))
+        AT = function(TT, UT) {
+          return typeof TT === kT && -1 !== RT(UT).indexOf(RT(TT))
         },
-        ii = function(pp) {
-          return pp.toLowerCase()
+        RT = function(TT) {
+          return TT.toLowerCase()
         },
-        ci = function(pp, ip) {
-          if (typeof pp === Yp) return pp = pp.replace(/^\s\s*/, ""), typeof ip === xp ? pp : pp.substring(0, 500)
+        TU = function(TT, UT) {
+          if (typeof TT === kT) return TT = TT.replace(/^\s\s*/, ""), typeof UT === nT ? TT : TT.substring(0, 500)
         },
-        Oi = function(pp, ip) {
-          for (var cp, Op, op, xp, Yp, Dp, Ap = 0; Ap < ip.length && !Yp;) {
-            var Pp = ip[Ap],
-              Wp = ip[Ap + 1];
-            for (cp = Op = 0; cp < Pp.length && !Yp && Pp[cp];)
-              if (Yp = Pp[cp++].exec(pp))
-                for (op = 0; op < Wp.length; op++) Dp = Yp[++Op], typeof(xp = Wp[op]) === Lp && xp.length > 0 ? 2 === xp.length ? typeof xp[1] == Sp ? this[xp[0]] = xp[1].call(this, Dp) : this[xp[0]] = xp[1] : 3 === xp.length ? typeof xp[1] !== Sp || xp[1].exec && xp[1].test ? this[xp[0]] = Dp ? Dp.replace(xp[1], xp[2]) : Ip : this[xp[0]] = Dp ? xp[1].call(this, Dp, xp[2]) : Ip : 4 === xp.length && (this[xp[0]] = Dp ? xp[3].call(this, Dp.replace(xp[1], xp[2])) : Ip) : this[xp] = Dp || Ip;
-            Ap += 2
+        UU = function(TT, UT) {
+          for (var mT, WT, zT, nT, kT, jT, lT = 0; lT < UT.length && !kT;) {
+            var LT = UT[lT],
+              pT = UT[lT + 1];
+            for (mT = WT = 0; mT < LT.length && !kT && LT[mT];)
+              if (kT = LT[mT++].exec(TT))
+                for (zT = 0; zT < pT.length; zT++) jT = kT[++WT], typeof(nT = pT[zT]) === HT && nT.length > 0 ? 2 === nT.length ? typeof nT[1] == gT ? this[nT[0]] = nT[1].call(this, jT) : this[nT[0]] = nT[1] : 3 === nT.length ? typeof nT[1] !== gT || nT[1].exec && nT[1].test ? this[nT[0]] = jT ? jT.replace(nT[1], nT[2]) : MT : this[nT[0]] = jT ? nT[1].call(this, jT, nT[2]) : MT : 4 === nT.length && (this[nT[0]] = jT ? nT[3].call(this, jT.replace(nT[1], nT[2])) : MT) : this[nT] = jT || MT;
+            lT += 2
           }
         },
-        oi = function(pp, ip) {
-          for (var cp in ip)
-            if (typeof ip[cp] === Lp && ip[cp].length > 0) {
-              for (var Op = 0; Op < ip[cp].length; Op++)
-                if (Vp(ip[cp][Op], pp)) return "?" === cp ? Ip : cp
-            } else if (Vp(ip[cp], pp)) return "?" === cp ? Ip : cp;
-          return ip.hasOwnProperty("*") ? ip["*"] : pp
+        mU = function(TT, UT) {
+          for (var mT in UT)
+            if (typeof UT[mT] === HT && UT[mT].length > 0) {
+              for (var WT = 0; WT < UT[mT].length; WT++)
+                if (AT(UT[mT][WT], TT)) return "?" === mT ? MT : mT
+            } else if (AT(UT[mT], TT)) return "?" === mT ? MT : mT;
+          return UT.hasOwnProperty("*") ? UT["*"] : TT
         },
-        Ii = {
+        WU = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        Si = {
+        zU = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [Up, [Pp, "Chrome"]],
+            [ZT, [LT, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [Up, [Pp, "Edge"]],
+            [ZT, [LT, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/opios[\/ ]+([\w\.]+)/i],
-            [Up, [Pp, bp + " Mini"]],
+            [ZT, [LT, VT + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [Up, [Pp, bp + " GX"]],
+            [ZT, [LT, VT + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [Up, [Pp, bp]],
+            [ZT, [LT, VT]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [Up, [Pp, "Baidu"]],
+            [ZT, [LT, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [Up, [Pp, "Maxthon"]],
+            [ZT, [LT, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [Up, [Pp, "Quark"]],
+            [ZT, [LT, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [Up, [Pp, "DuckDuckGo"]],
+            [ZT, [LT, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [Up, [Pp, "UC" + Mp]],
+            [ZT, [LT, "UC" + dT]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [Up, [Pp, "WeChat"]],
+            [ZT, [LT, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [Up, [Pp, "Konqueror"]],
+            [ZT, [LT, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [Up, [Pp, "IE"]],
+            [ZT, [LT, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [Up, [Pp, "Yandex"]],
+            [ZT, [LT, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [Up, [Pp, "Smart Lenovo " + Mp]],
+            [ZT, [LT, "Smart Lenovo " + dT]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [Pp, /(.+)/, "$1 Secure " + Mp], Up
+              [LT, /(.+)/, "$1 Secure " + dT], ZT
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [Up, [Pp, Ep + " Focus"]],
+            [ZT, [LT, tT + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [Up, [Pp, bp + " Touch"]],
+            [ZT, [LT, VT + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [Up, [Pp, "Coc Coc"]],
+            [ZT, [LT, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [Up, [Pp, "Dolphin"]],
+            [ZT, [LT, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [Up, [Pp, bp + " Coast"]],
+            [ZT, [LT, VT + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [Up, [Pp, "MIUI" + sp]],
+            [ZT, [LT, "MIUI" + DT]],
             [/fxios\/([\w\.-]+)/i],
-            [Up, [Pp, Ep]],
+            [ZT, [LT, tT]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [Up, [Pp, "360"]],
+            [ZT, [LT, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [Pp, /(.+)/, "$1Browser"], Up
+              [LT, /(.+)/, "$1Browser"], ZT
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [Pp, /(.+)/, "$1" + sp], Up
+              [LT, /(.+)/, "$1" + DT], ZT
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [Up, [Pp, ap + " Internet"]],
+            [ZT, [LT, CT + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [Up, [Pp, "Sogou Explorer"]],
+            [ZT, [LT, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [Pp, "Sogou Mobile"], Up
+              [LT, "Sogou Mobile"], ZT
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [Pp],
+            [LT],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [Up, Pp],
+            [ZT, LT],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [Pp, rp], Up
+              [LT, NT], ZT
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [Up, [Pp, "GSA"]],
+            [ZT, [LT, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [Up, [Pp, "TikTok"]],
+            [ZT, [LT, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [Up, [Pp, Cp + " Headless"]],
+            [ZT, [LT, wT + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [Pp, Cp + " WebView"], Up
+              [LT, wT + " WebView"], ZT
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [Up, [Pp, "Android " + Mp]],
+            [ZT, [LT, "Android " + dT]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [Up, [Pp, "Mobile Safari"]],
+            [ZT, [LT, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [Up, Pp],
+            [ZT, LT],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [Pp, [Up, oi, {
+            [LT, [ZT, mU, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [Pp, "Netscape"], Up
+              [LT, "Netscape"], ZT
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [Up, [Pp, Ep + " Reality"]],
+            [ZT, [LT, tT + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [Pp, [Up, /_/g, "."]],
+            [LT, [ZT, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [Pp, [Up, /master.|lts./, ""]]
+            [LT, [ZT, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [wp, "amd64"]
+              [cT, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [wp, "ia32"]
+              [cT, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [wp, "arm64"]
+              [cT, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [wp, "armhf"]
+              [cT, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [wp, "arm"]
+              [cT, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [wp, /ower/, "", ii]
+              [cT, /ower/, "", RT]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [wp, "sparc"]
+              [cT, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [wp, ii]
+              [cT, RT]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [Ap, [yp, ap],
-              [Wp, Hp]
+            [lT, [BT, CT],
+              [pT, qT]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [Ap, [yp, ap],
-              [Wp, tp]
+            [lT, [BT, CT],
+              [pT, fT]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [Ap, [yp, mp],
-              [Wp, tp]
+            [lT, [BT, YT],
+              [pT, fT]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [Ap, [yp, mp],
-              [Wp, Hp]
+            [lT, [BT, YT],
+              [pT, qT]
             ],
             [/(macintosh);/i],
-            [Ap, [yp, mp]],
+            [lT, [BT, YT]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [Ap, [yp, np],
-              [Wp, tp]
+            [lT, [BT, rT],
+              [pT, fT]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [Ap, [yp, lp],
-              [Wp, Hp]
+            [lT, [BT, yT],
+              [pT, qT]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [Ap, [yp, lp],
-              [Wp, tp]
+            [lT, [BT, yT],
+              [pT, fT]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [Ap, [yp, Qp],
-              [Wp, Hp]
+            [lT, [BT, XT],
+              [pT, qT]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [Ap, [yp, Qp],
-              [Wp, tp]
+            [lT, [BT, XT],
+              [pT, fT]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [Ap, /_/g, " "],
-              [yp, gp],
-              [Wp, Hp]
+              [lT, /_/g, " "],
+              [BT, ST],
+              [pT, qT]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [Ap, /_/g, " "],
-              [yp, gp],
-              [Wp, tp]
+              [lT, /_/g, " "],
+              [BT, ST],
+              [pT, fT]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [Ap, [yp, hp],
-              [Wp, tp]
+            [lT, [BT, uT],
+              [pT, fT]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [Ap, [yp, oi, {
+            [lT, [BT, mU, {
                 OnePlus: ["304", "403", "203"],
-                "*": hp
+                "*": uT
               }],
-              [Wp, Hp]
+              [pT, qT]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [Ap, [yp, "Vivo"],
-              [Wp, tp]
+            [lT, [BT, "Vivo"],
+              [pT, fT]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [Ap, [yp, "Realme"],
-              [Wp, tp]
+            [lT, [BT, "Realme"],
+              [pT, fT]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [Ap, [yp, Np],
-              [Wp, tp]
+            [lT, [BT, sT],
+              [pT, fT]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [Ap, [yp, Np],
-              [Wp, Hp]
+            [lT, [BT, sT],
+              [pT, qT]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [Ap, [yp, Jp],
-              [Wp, Hp]
+            [lT, [BT, IT],
+              [pT, qT]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [Ap, [yp, Jp],
-              [Wp, tp]
+            [lT, [BT, IT],
+              [pT, fT]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [Ap, [yp, "Lenovo"],
-              [Wp, Hp]
+            [lT, [BT, "Lenovo"],
+              [pT, qT]
             ],
             [/(nokia) (t[12][01])/i],
-            [yp, Ap, [Wp, Hp]],
+            [BT, lT, [pT, qT]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [Ap, /_/g, " "],
-              [Wp, tp],
-              [yp, "Nokia"]
+              [lT, /_/g, " "],
+              [pT, fT],
+              [BT, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [Ap, [yp, Xp],
-              [Wp, Hp]
+            [lT, [BT, aT],
+              [pT, qT]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [Ap, [yp, Xp],
-              [Wp, tp]
+            [lT, [BT, aT],
+              [pT, fT]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [Ap, [yp, Fp],
-              [Wp, tp]
+            [lT, [BT, KT],
+              [pT, fT]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [Ap, "Xperia Tablet"],
-              [yp, Fp],
-              [Wp, Hp]
+              [lT, "Xperia Tablet"],
+              [BT, KT],
+              [pT, qT]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [Ap, [yp, fp],
-              [Wp, tp]
+            [lT, [BT, PT],
+              [pT, fT]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [Ap, [yp, kp],
-              [Wp, Hp]
+            [lT, [BT, eT],
+              [pT, qT]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [Ap, /(.+)/g, "Fire Phone $1"],
-              [yp, kp],
-              [Wp, tp]
+              [lT, /(.+)/g, "Fire Phone $1"],
+              [BT, eT],
+              [pT, fT]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [Ap, yp, [Wp, Hp]],
+            [lT, BT, [pT, qT]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [Ap, [yp, qp],
-              [Wp, tp]
+            [lT, [BT, xT],
+              [pT, fT]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [Ap, [yp, Rp],
-              [Wp, Hp]
+            [lT, [BT, JT],
+              [pT, qT]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [Ap, [yp, Rp],
-              [Wp, tp]
+            [lT, [BT, JT],
+              [pT, fT]
             ],
             [/(nexus 9)/i],
-            [Ap, [yp, "HTC"],
-              [Wp, Hp]
+            [lT, [BT, "HTC"],
+              [pT, qT]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [yp, [Ap, /_/g, " "],
-              [Wp, tp]
+            [BT, [lT, /_/g, " "],
+              [pT, fT]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [Ap, [yp, "TCL"],
-              [Wp, Hp]
+            [lT, [BT, "TCL"],
+              [pT, qT]
             ],
             [/(itel) ((\w+))/i],
             [
-              [yp, ii], Ap, [Wp, oi, {
+              [BT, RT], lT, [pT, mU, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [Ap, [yp, "Acer"],
-              [Wp, Hp]
+            [lT, [BT, "Acer"],
+              [pT, qT]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [Ap, [yp, "Meizu"],
-              [Wp, tp]
+            [lT, [BT, "Meizu"],
+              [pT, fT]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [Ap, [yp, "Ulefone"],
-              [Wp, tp]
+            [lT, [BT, "Ulefone"],
+              [pT, fT]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [Ap, [yp, "Energizer"],
-              [Wp, tp]
+            [lT, [BT, "Energizer"],
+              [pT, fT]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [Ap, [yp, "Cat"],
-              [Wp, tp]
+            [lT, [BT, "Cat"],
+              [pT, fT]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [Ap, [yp, "Smartfren"],
-              [Wp, tp]
+            [lT, [BT, "Smartfren"],
+              [pT, fT]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [Ap, [yp, "Nothing"],
-              [Wp, tp]
+            [lT, [BT, "Nothing"],
+              [pT, fT]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [Ap, [yp, "Archos"],
-              [Wp, Hp]
+            [lT, [BT, "Archos"],
+              [pT, qT]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [Ap, [yp, "Archos"],
-              [Wp, tp]
+            [lT, [BT, "Archos"],
+              [pT, fT]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [yp, Ap, [Wp, Hp]],
+            [BT, lT, [pT, qT]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [yp, Ap, [Wp, tp]],
+            [BT, lT, [pT, fT]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [yp, Ap, [Wp, Hp]],
+            [BT, lT, [pT, qT]],
             [/(surface duo)/i],
-            [Ap, [yp, Bp],
-              [Wp, Hp]
+            [lT, [BT, QT],
+              [pT, qT]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [Ap, [yp, "Fairphone"],
-              [Wp, tp]
+            [lT, [BT, "Fairphone"],
+              [pT, fT]
             ],
             [/(u304aa)/i],
-            [Ap, [yp, "AT&T"],
-              [Wp, tp]
+            [lT, [BT, "AT&T"],
+              [pT, fT]
             ],
             [/\bsie-(\w*)/i],
-            [Ap, [yp, "Siemens"],
-              [Wp, tp]
+            [lT, [BT, "Siemens"],
+              [pT, fT]
             ],
             [/\b(rct\w+) b/i],
-            [Ap, [yp, "RCA"],
-              [Wp, Hp]
+            [lT, [BT, "RCA"],
+              [pT, qT]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [Ap, [yp, "Dell"],
-              [Wp, Hp]
+            [lT, [BT, "Dell"],
+              [pT, qT]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [Ap, [yp, "Verizon"],
-              [Wp, Hp]
+            [lT, [BT, "Verizon"],
+              [pT, qT]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [Ap, [yp, "Barnes & Noble"],
-              [Wp, Hp]
+            [lT, [BT, "Barnes & Noble"],
+              [pT, qT]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [Ap, [yp, "NuVision"],
-              [Wp, Hp]
+            [lT, [BT, "NuVision"],
+              [pT, qT]
             ],
             [/\b(k88) b/i],
-            [Ap, [yp, "ZTE"],
-              [Wp, Hp]
+            [lT, [BT, "ZTE"],
+              [pT, qT]
             ],
             [/\b(nx\d{3}j) b/i],
-            [Ap, [yp, "ZTE"],
-              [Wp, tp]
+            [lT, [BT, "ZTE"],
+              [pT, fT]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [Ap, [yp, "Swiss"],
-              [Wp, tp]
+            [lT, [BT, "Swiss"],
+              [pT, fT]
             ],
             [/\b(zur\d{3}) b/i],
-            [Ap, [yp, "Swiss"],
-              [Wp, Hp]
+            [lT, [BT, "Swiss"],
+              [pT, qT]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [Ap, [yp, "Zeki"],
-              [Wp, Hp]
+            [lT, [BT, "Zeki"],
+              [pT, qT]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [yp, "Dragon Touch"], Ap, [Wp, Hp]
+              [BT, "Dragon Touch"], lT, [pT, qT]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [Ap, [yp, "Insignia"],
-              [Wp, Hp]
+            [lT, [BT, "Insignia"],
+              [pT, qT]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [Ap, [yp, "NextBook"],
-              [Wp, Hp]
+            [lT, [BT, "NextBook"],
+              [pT, qT]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [yp, "Voice"], Ap, [Wp, tp]
+              [BT, "Voice"], lT, [pT, fT]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [yp, "LvTel"], Ap, [Wp, tp]
+              [BT, "LvTel"], lT, [pT, fT]
             ],
             [/\b(ph-1) /i],
-            [Ap, [yp, "Essential"],
-              [Wp, tp]
+            [lT, [BT, "Essential"],
+              [pT, fT]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [Ap, [yp, "Envizen"],
-              [Wp, Hp]
+            [lT, [BT, "Envizen"],
+              [pT, qT]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [Ap, [yp, "MachSpeed"],
-              [Wp, Hp]
+            [lT, [BT, "MachSpeed"],
+              [pT, qT]
             ],
             [/\btu_(1491) b/i],
-            [Ap, [yp, "Rotor"],
-              [Wp, Hp]
+            [lT, [BT, "Rotor"],
+              [pT, qT]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [Ap, [yp, Tp],
-              [Wp, Hp]
+            [lT, [BT, FT],
+              [pT, qT]
             ],
             [/(sprint) (\w+)/i],
-            [yp, Ap, [Wp, tp]],
+            [BT, lT, [pT, fT]],
             [/(kin\.[onetw]{3})/i],
             [
-              [Ap, /\./g, " "],
-              [yp, Bp],
-              [Wp, tp]
+              [lT, /\./g, " "],
+              [BT, QT],
+              [pT, fT]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [Ap, [yp, Gp],
-              [Wp, Hp]
+            [lT, [BT, GT],
+              [pT, qT]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [Ap, [yp, Gp],
-              [Wp, tp]
+            [lT, [BT, GT],
+              [pT, fT]
             ],
             [/smart-tv.+(samsung)/i],
-            [yp, [Wp, dp]],
+            [BT, [pT, iT]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [Ap, /^/, "SmartTV"],
-              [yp, ap],
-              [Wp, dp]
+              [lT, /^/, "SmartTV"],
+              [BT, CT],
+              [pT, iT]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [yp, Jp],
-              [Wp, dp]
+              [BT, IT],
+              [pT, iT]
             ],
             [/(apple) ?tv/i],
-            [yp, [Ap, mp + " TV"],
-              [Wp, dp]
+            [BT, [lT, YT + " TV"],
+              [pT, iT]
             ],
             [/crkey/i],
             [
-              [Ap, Cp + "cast"],
-              [yp, Xp],
-              [Wp, dp]
+              [lT, wT + "cast"],
+              [BT, aT],
+              [pT, iT]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [Ap, [yp, kp],
-              [Wp, dp]
+            [lT, [BT, eT],
+              [pT, iT]
             ],
             [/(shield \w+ tv)/i],
-            [Ap, [yp, Tp],
-              [Wp, dp]
+            [lT, [BT, FT],
+              [pT, iT]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [Ap, [yp, np],
-              [Wp, dp]
+            [lT, [BT, rT],
+              [pT, iT]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [Ap, [yp, Fp],
-              [Wp, dp]
+            [lT, [BT, KT],
+              [pT, iT]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [Ap, [yp, gp],
-              [Wp, dp]
+            [lT, [BT, ST],
+              [pT, iT]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [yp, Ap, [Wp, dp]],
+            [BT, lT, [pT, iT]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [yp, ci],
-              [Ap, ci],
-              [Wp, dp]
+              [BT, TU],
+              [lT, TU],
+              [pT, iT]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [Ap, [Wp, dp]],
+            [lT, [pT, iT]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [Wp, dp]
+              [pT, iT]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [yp, Ap, [Wp, vp]],
+            [BT, lT, [pT, vT]],
             [/droid.+; (shield)( bui|\))/i],
-            [Ap, [yp, Tp],
-              [Wp, vp]
+            [lT, [BT, FT],
+              [pT, vT]
             ],
             [/(playstation \w+)/i],
-            [Ap, [yp, Fp],
-              [Wp, vp]
+            [lT, [BT, KT],
+              [pT, vT]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [Ap, [yp, Bp],
-              [Wp, vp]
+            [lT, [BT, QT],
+              [pT, vT]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [Ap, [yp, ap],
-              [Wp, ep]
+            [lT, [BT, CT],
+              [pT, bT]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [yp, Ap, [Wp, ep]],
+            [BT, lT, [pT, bT]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [Ap, [yp, hp],
-              [Wp, ep]
+            [lT, [BT, uT],
+              [pT, bT]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [Ap, [yp, mp],
-              [Wp, ep]
+            [lT, [BT, YT],
+              [pT, bT]
             ],
             [/(opwwe\d{3})/i],
-            [Ap, [yp, fp],
-              [Wp, ep]
+            [lT, [BT, PT],
+              [pT, bT]
             ],
             [/(moto 360)/i],
-            [Ap, [yp, Np],
-              [Wp, ep]
+            [lT, [BT, sT],
+              [pT, bT]
             ],
             [/(smartwatch 3)/i],
-            [Ap, [yp, Fp],
-              [Wp, ep]
+            [lT, [BT, KT],
+              [pT, bT]
             ],
             [/(g watch r)/i],
-            [Ap, [yp, Jp],
-              [Wp, ep]
+            [lT, [BT, IT],
+              [pT, bT]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [Ap, [yp, Gp],
-              [Wp, ep]
+            [lT, [BT, GT],
+              [pT, bT]
             ],
             [/droid.+; (glass) \d/i],
-            [Ap, [yp, Xp],
-              [Wp, ep]
+            [lT, [BT, aT],
+              [pT, bT]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [yp, Ap, [Wp, ep]],
+            [BT, lT, [pT, bT]],
             [/; (quest( \d| pro)?)/i],
-            [Ap, [yp, rp],
-              [Wp, ep]
+            [lT, [BT, NT],
+              [pT, bT]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [yp, [Wp, jp]],
+            [BT, [pT, OT]],
             [/(aeobc)\b/i],
-            [Ap, [yp, kp],
-              [Wp, jp]
+            [lT, [BT, eT],
+              [pT, OT]
             ],
             [/(homepod).+mac os/i],
-            [Ap, [yp, mp],
-              [Wp, jp]
+            [lT, [BT, YT],
+              [pT, OT]
             ],
             [/windows iot/i],
             [
-              [Wp, jp]
+              [pT, OT]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [Ap, [Wp, tp]],
+            [lT, [pT, fT]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [Ap, [Wp, Hp]],
+            [lT, [pT, qT]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [Wp, Hp]
+              [pT, qT]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [Wp, tp]
+              [pT, fT]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [Ap, [yp, "Generic"]]
+            [lT, [BT, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [Up, [Pp, "EdgeHTML"]],
+            [ZT, [LT, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [Up, [Pp, "Blink"]],
+            [ZT, [LT, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/ladybird\//i],
             [
-              [Pp, "LibWeb"]
+              [LT, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [Up, Pp]
+            [ZT, LT]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [Pp, [Up, oi, Ii]],
+            [LT, [ZT, mU, WU]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [Up, oi, Ii],
-              [Pp, "Windows"]
+              [ZT, mU, WU],
+              [LT, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [Up, /_/g, "."],
-              [Pp, "iOS"]
+              [ZT, /_/g, "."],
+              [LT, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [Pp, zp],
-              [Up, /_/g, "."]
+              [LT, hT],
+              [ZT, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [Up, Pp],
+            [ZT, LT],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [Pp, /(.+)/, "$1 Touch"], Up
+              [LT, /(.+)/, "$1 Touch"], ZT
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/\(bb(10);/i],
-            [Up, [Pp, qp]],
+            [ZT, [LT, xT]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [Up, [Pp, "Symbian"]],
+            [ZT, [LT, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [Up, [Pp, Ep + " OS"]],
+            [ZT, [LT, tT + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [Up, [Pp, "webOS"]],
+            [ZT, [LT, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [Up, [Pp, "watchOS"]],
+            [ZT, [LT, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [Up, [Pp, Cp + "cast"]],
+            [ZT, [LT, wT + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [Pp, Zp], Up
+              [LT, ET], ZT
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [Pp, Up],
+            [LT, ZT],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [Pp, "Solaris"], Up
+              [LT, "Solaris"], ZT
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [Pp, Up]
+            [LT, ZT]
           ]
         },
-        xi = function(pp, ip) {
-          if (typeof pp === Lp && (ip = pp, pp = Ip), !(this instanceof xi)) return new xi(pp, ip).getResult();
-          var cp = typeof op !== xp && op.navigator ? op.navigator : Ip,
-            Op = pp || (cp && cp.userAgent ? cp.userAgent : ""),
-            vp = cp && cp.userAgentData ? cp.userAgentData : Ip,
-            dp = ip ? function(pp, ip) {
-              var cp = {};
-              for (var Op in pp) ip[Op] && ip[Op].length % 2 === 0 ? cp[Op] = ip[Op].concat(pp[Op]) : cp[Op] = pp[Op];
-              return cp
-            }(Si, ip) : Si,
-            ep = cp && cp.userAgent == Op;
+        MU = function(TT, UT) {
+          if (typeof TT === HT && (UT = TT, TT = MT), !(this instanceof MU)) return new MU(TT, UT).getResult();
+          var mT = typeof zT !== nT && zT.navigator ? zT.navigator : MT,
+            WT = TT || (mT && mT.userAgent ? mT.userAgent : ""),
+            vT = mT && mT.userAgentData ? mT.userAgentData : MT,
+            iT = UT ? function(TT, UT) {
+              var mT = {};
+              for (var WT in TT) UT[WT] && UT[WT].length % 2 === 0 ? mT[WT] = UT[WT].concat(TT[WT]) : mT[WT] = TT[WT];
+              return mT
+            }(zU, UT) : zU,
+            bT = mT && mT.userAgent == WT;
           return this.getBrowser = function() {
-            var pp, ip = {};
-            return ip[Pp] = Ip, ip[Up] = Ip, Oi.call(ip, Op, dp.browser), ip[Dp] = typeof(pp = ip[Up]) === Yp ? pp.replace(/[^\d\.]/g, "").split(".")[0] : Ip, ep && cp && cp.brave && typeof cp.brave.isBrave == Sp && (ip[Pp] = "Brave"), ip
+            var TT, UT = {};
+            return UT[LT] = MT, UT[ZT] = MT, UU.call(UT, WT, iT.browser), UT[jT] = typeof(TT = UT[ZT]) === kT ? TT.replace(/[^\d\.]/g, "").split(".")[0] : MT, bT && mT && mT.brave && typeof mT.brave.isBrave == gT && (UT[LT] = "Brave"), UT
           }, this.getCPU = function() {
-            var pp = {};
-            return pp[wp] = Ip, Oi.call(pp, Op, dp.cpu), pp
+            var TT = {};
+            return TT[cT] = MT, UU.call(TT, WT, iT.cpu), TT
           }, this.getDevice = function() {
-            var pp = {};
-            return pp[yp] = Ip, pp[Ap] = Ip, pp[Wp] = Ip, Oi.call(pp, Op, dp.device), ep && !pp[Wp] && vp && vp.mobile && (pp[Wp] = tp), ep && "Macintosh" == pp[Ap] && cp && typeof cp.standalone !== xp && cp.maxTouchPoints && cp.maxTouchPoints > 2 && (pp[Ap] = "iPad", pp[Wp] = Hp), pp
-          }, this.gy = function() {
-            var pp = {};
-            return pp[Pp] = Ip, pp[Up] = Ip, Oi.call(pp, Op, dp.engine), pp
+            var TT = {};
+            return TT[BT] = MT, TT[lT] = MT, TT[pT] = MT, UU.call(TT, WT, iT.device), bT && !TT[pT] && vT && vT.mobile && (TT[pT] = fT), bT && "Macintosh" == TT[lT] && mT && typeof mT.standalone !== nT && mT.maxTouchPoints && mT.maxTouchPoints > 2 && (TT[lT] = "iPad", TT[pT] = qT), TT
+          }, this.eB = function() {
+            var TT = {};
+            return TT[LT] = MT, TT[ZT] = MT, UU.call(TT, WT, iT.engine), TT
           }, this.getOS = function() {
-            var pp = {};
-            return pp[Pp] = Ip, pp[Up] = Ip, Oi.call(pp, Op, dp.os), ep && !pp[Pp] && vp && vp.platform && "Unknown" != vp.platform && (pp[Pp] = vp.platform.replace(/chrome os/i, Zp).replace(/macos/i, zp)), pp
+            var TT = {};
+            return TT[LT] = MT, TT[ZT] = MT, UU.call(TT, WT, iT.os), bT && !TT[LT] && vT && vT.platform && "Unknown" != vT.platform && (TT[LT] = vT.platform.replace(/chrome os/i, ET).replace(/macos/i, hT)), TT
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.gy(),
+              engine: this.eB(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return Op
-          }, this.setUA = function(pp) {
-            return Op = typeof pp === Yp && pp.length > 500 ? ci(pp, 500) : pp, this
-          }, this.setUA(Op), this
+            return WT
+          }, this.setUA = function(TT) {
+            return WT = typeof TT === kT && TT.length > 500 ? TU(TT, 500) : TT, this
+          }, this.setUA(WT), this
         };
-      xi.VERSION = "1.0.41", xi.BROWSER = Kp([Pp, Up, Dp]), xi.CPU = Kp([wp]), xi.DEVICE = Kp([Ap, yp, Wp, vp, tp, dp, Hp, ep, jp]), xi.ENGINE = xi.OS = Kp([Pp, Up]), typeof ip !== xp ? (pp.exports && (ip = pp.exports = xi), ip.UAParser = xi) : cp.amdO ? (Op = function() {
-        return xi
-      }.call(ip, cp, ip, pp)) === Ip || (pp.exports = Op) : typeof op !== xp && (op.UAParser = xi);
-      var Li = typeof op !== xp && (op.jQuery || op.Zepto);
-      if (Li && !Li.ua) {
-        var Yi = new xi;
-        Li.ua = Yi.getResult(), Li.ua.get = function() {
-          return Yi.getUA()
-        }, Li.ua.set = function(pp) {
-          Yi.setUA(pp);
-          var ip = Yi.getResult();
-          for (var cp in ip) Li.ua[cp] = ip[cp]
+      MU.VERSION = "1.0.41", MU.BROWSER = oT([LT, ZT, jT]), MU.CPU = oT([cT]), MU.DEVICE = oT([lT, BT, pT, vT, fT, iT, qT, bT, OT]), MU.ENGINE = MU.OS = oT([LT, ZT]), typeof UT !== nT ? (TT.exports && (UT = TT.exports = MU), UT.UAParser = MU) : mT.amdO ? (WT = function() {
+        return MU
+      }.call(UT, mT, UT, TT)) === MT || (TT.exports = WT) : typeof zT !== nT && (zT.UAParser = MU);
+      var gU = typeof zT !== nT && (zT.jQuery || zT.Zepto);
+      if (gU && !gU.ua) {
+        var nU = new MU;
+        gU.ua = nU.getResult(), gU.ua.get = function() {
+          return nU.getUA()
+        }, gU.ua.set = function(TT) {
+          nU.setUA(TT);
+          var UT = nU.getResult();
+          for (var mT in UT) gU.ua[mT] = UT[mT]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

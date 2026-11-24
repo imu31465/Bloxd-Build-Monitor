@@ -1,173 +1,173 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  5127: (pp, ip, cp) => {
-    function Op(pp) {
-      return Op = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(pp) {
-        return typeof pp
-      } : function(pp) {
-        return pp && "function" == typeof Symbol && pp.constructor === Symbol && pp !== Symbol.prototype ? "symbol" : typeof pp
-      }, Op(pp)
+  5098: (TT, UT, mT) => {
+    function WT(TT) {
+      return WT = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(TT) {
+        return typeof TT
+      } : function(TT) {
+        return TT && "function" == typeof Symbol && TT.constructor === Symbol && TT !== Symbol.prototype ? "symbol" : typeof TT
+      }, WT(TT)
     }
-    Object.defineProperty(ip, "__esModule", {
+    Object.defineProperty(UT, "__esModule", {
       value: !0
-    }), ip.default = void 0;
-    var op = Ap(cp(1049)),
-      Ip = function(pp, ip) {
-        if (!ip && pp && pp.__esModule) return pp;
-        if (null === pp || "object" !== Op(pp) && "function" !== typeof pp) return {
-          default: pp
+    }), UT.default = void 0;
+    var zT = lT(mT(1126)),
+      MT = function(TT, UT) {
+        if (!UT && TT && TT.__esModule) return TT;
+        if (null === TT || "object" !== WT(TT) && "function" !== typeof TT) return {
+          default: TT
         };
-        var cp = Dp(ip);
-        if (cp && cp.has(pp)) return cp.get(pp);
-        var op = {},
-          Ip = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var Sp in pp)
-          if ("default" !== Sp && Object.prototype.hasOwnProperty.call(pp, Sp)) {
-            var xp = Ip ? Object.getOwnPropertyDescriptor(pp, Sp) : null;
-            xp && (xp.get || xp.set) ? Object.defineProperty(op, Sp, xp) : op[Sp] = pp[Sp]
-          } op.default = pp, cp && cp.set(pp, op);
-        return op
-      }(cp(62)),
-      Sp = Ap(cp(5081)),
-      xp = Ap(cp(5129)),
-      Lp = cp(5137),
-      Yp = cp(1112);
+        var mT = jT(UT);
+        if (mT && mT.has(TT)) return mT.get(TT);
+        var zT = {},
+          MT = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var gT in TT)
+          if ("default" !== gT && Object.prototype.hasOwnProperty.call(TT, gT)) {
+            var nT = MT ? Object.getOwnPropertyDescriptor(TT, gT) : null;
+            nT && (nT.get || nT.set) ? Object.defineProperty(zT, gT, nT) : zT[gT] = TT[gT]
+          } zT.default = TT, mT && mT.set(TT, zT);
+        return zT
+      }(mT(63)),
+      gT = lT(mT(5066)),
+      nT = lT(mT(5103)),
+      HT = mT(5110),
+      kT = mT(1188);
 
-    function Dp(pp) {
+    function jT(TT) {
       if ("function" !== typeof WeakMap) return null;
-      var ip = new WeakMap,
-        cp = new WeakMap;
-      return (Dp = function(pp) {
-        return pp ? cp : ip
-      })(pp)
+      var UT = new WeakMap,
+        mT = new WeakMap;
+      return (jT = function(TT) {
+        return TT ? mT : UT
+      })(TT)
     }
 
-    function Ap(pp) {
-      return pp && pp.__esModule ? pp : {
-        default: pp
+    function lT(TT) {
+      return TT && TT.__esModule ? TT : {
+        default: TT
       }
     }
 
-    function Pp(pp, ip) {
-      var cp = "undefined" !== typeof Symbol && pp[Symbol.iterator] || pp["@@iterator"];
-      if (!cp) {
-        if (Array.isArray(pp) || (cp = function(pp, ip) {
-            if (!pp) return;
-            if ("string" === typeof pp) return Wp(pp, ip);
-            var cp = Object.prototype.toString.call(pp).slice(8, -1);
-            "Object" === cp && pp.constructor && (cp = pp.constructor.name);
-            if ("Map" === cp || "Set" === cp) return Array.from(pp);
-            if ("Arguments" === cp || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(cp)) return Wp(pp, ip)
-          }(pp)) || ip && pp && "number" === typeof pp.length) {
-          cp && (pp = cp);
-          var Op = 0,
-            op = function() {};
+    function LT(TT, UT) {
+      var mT = "undefined" !== typeof Symbol && TT[Symbol.iterator] || TT["@@iterator"];
+      if (!mT) {
+        if (Array.isArray(TT) || (mT = function(TT, UT) {
+            if (!TT) return;
+            if ("string" === typeof TT) return pT(TT, UT);
+            var mT = Object.prototype.toString.call(TT).slice(8, -1);
+            "Object" === mT && TT.constructor && (mT = TT.constructor.name);
+            if ("Map" === mT || "Set" === mT) return Array.from(TT);
+            if ("Arguments" === mT || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(mT)) return pT(TT, UT)
+          }(TT)) || UT && TT && "number" === typeof TT.length) {
+          mT && (TT = mT);
+          var WT = 0,
+            zT = function() {};
           return {
-            s: op,
+            s: zT,
             n: function() {
-              return Op >= pp.length ? {
+              return WT >= TT.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: pp[Op++]
+                value: TT[WT++]
               }
             },
-            e: function(pp) {
-              throw pp
+            e: function(TT) {
+              throw TT
             },
-            f: op
+            f: zT
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var Ip, Sp = !0,
-        xp = !1;
+      var MT, gT = !0,
+        nT = !1;
       return {
         s: function() {
-          cp = cp.call(pp)
+          mT = mT.call(TT)
         },
         n: function() {
-          var pp = cp.next();
-          return Sp = pp.done, pp
+          var TT = mT.next();
+          return gT = TT.done, TT
         },
-        e: function(pp) {
-          xp = !0, Ip = pp
+        e: function(TT) {
+          nT = !0, MT = TT
         },
         f: function() {
           try {
-            Sp || null == cp.return || cp.return()
+            gT || null == mT.return || mT.return()
           } finally {
-            if (xp) throw Ip
+            if (nT) throw MT
           }
         }
       }
     }
 
-    function Wp(pp, ip) {
-      (null == ip || ip > pp.length) && (ip = pp.length);
-      for (var cp = 0, Op = new Array(ip); cp < ip; cp++) Op[cp] = pp[cp];
-      return Op
+    function pT(TT, UT) {
+      (null == UT || UT > TT.length) && (UT = TT.length);
+      for (var mT = 0, WT = new Array(UT); mT < UT; mT++) WT[mT] = TT[mT];
+      return WT
     }
 
-    function yp(pp, ip) {
-      for (var cp = 0; cp < ip.length; cp++) {
-        var Op = ip[cp];
-        Op.enumerable = Op.enumerable || !1, Op.configurable = !0, "value" in Op && (Op.writable = !0), Object.defineProperty(pp, Op.key, Op)
+    function BT(TT, UT) {
+      for (var mT = 0; mT < UT.length; mT++) {
+        var WT = UT[mT];
+        WT.enumerable = WT.enumerable || !1, WT.configurable = !0, "value" in WT && (WT.writable = !0), Object.defineProperty(TT, WT.key, WT)
       }
     }
 
-    function Up(pp, ip) {
-      return Up = Object.setPrototypeOf || function(pp, ip) {
-        return pp.__proto__ = ip, pp
-      }, Up(pp, ip)
+    function ZT(TT, UT) {
+      return ZT = Object.setPrototypeOf || function(TT, UT) {
+        return TT.__proto__ = UT, TT
+      }, ZT(TT, UT)
     }
 
-    function wp(pp) {
-      var ip = function() {
+    function cT(TT) {
+      var UT = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (pp) {
+        } catch (TT) {
           return !1
         }
       }();
       return function() {
-        var cp, op = tp(pp);
-        if (ip) {
-          var Ip = tp(this).constructor;
-          cp = Reflect.construct(op, arguments, Ip)
-        } else cp = op.apply(this, arguments);
-        return function(pp, ip) {
-          if (ip && ("object" === Op(ip) || "function" === typeof ip)) return ip;
-          if (void 0 !== ip) throw new TypeError("Derived constructors may only return object or undefined");
-          return vp(pp)
-        }(this, cp)
+        var mT, zT = fT(TT);
+        if (UT) {
+          var MT = fT(this).constructor;
+          mT = Reflect.construct(zT, arguments, MT)
+        } else mT = zT.apply(this, arguments);
+        return function(TT, UT) {
+          if (UT && ("object" === WT(UT) || "function" === typeof UT)) return UT;
+          if (void 0 !== UT) throw new TypeError("Derived constructors may only return object or undefined");
+          return vT(TT)
+        }(this, mT)
       }
     }
 
-    function vp(pp) {
-      if (void 0 === pp) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return pp
+    function vT(TT) {
+      if (void 0 === TT) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return TT
     }
 
-    function tp(pp) {
-      return tp = Object.setPrototypeOf ? Object.getPrototypeOf : function(pp) {
-        return pp.__proto__ || Object.getPrototypeOf(pp)
-      }, tp(pp)
+    function fT(TT) {
+      return fT = Object.setPrototypeOf ? Object.getPrototypeOf : function(TT) {
+        return TT.__proto__ || Object.getPrototypeOf(TT)
+      }, fT(TT)
     }
 
-    function Hp(pp, ip, cp) {
-      return ip in pp ? Object.defineProperty(pp, ip, {
-        value: cp,
+    function qT(TT, UT, mT) {
+      return UT in TT ? Object.defineProperty(TT, UT, {
+        value: mT,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : pp[ip] = cp, pp
+      }) : TT[UT] = mT, TT
     }
-    var dp = {
+    var iT = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      ep = function(pp) {
-        ! function(pp, ip) {
-          if ("function" !== typeof ip && null !== ip) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(pp, "prototype", {
-            value: Object.create(ip && ip.prototype, {
+      bT = function(TT) {
+        ! function(TT, UT) {
+          if ("function" !== typeof UT && null !== UT) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(TT, "prototype", {
+            value: Object.create(UT && UT.prototype, {
               constructor: {
-                value: pp,
+                value: TT,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), ip && Up(pp, ip)
-        }(Sp, pp);
-        var ip, cp, Op, Ip = wp(Sp);
+          }), UT && ZT(TT, UT)
+        }(gT, TT);
+        var UT, mT, WT, MT = cT(gT);
 
-        function Sp(pp, ip) {
-          var cp;
-          return function(pp, ip) {
-            if (!(pp instanceof ip)) throw new TypeError("Cannot call a class as a function")
-          }(this, Sp), Hp(vp(cp = Ip.call(this, pp, ip)), "handleFormat", (function(pp) {
-            var ip = cp.props.format;
-            return ip ? ip(pp) : pp
-          })), Hp(vp(cp), "handleUpdate", (function() {
-            if (cp.slider) {
-              var pp = cp.props.orientation,
-                ip = (0, Lp.capitalize)(dp.orientation[pp].dimension),
-                Op = cp.slider["offset".concat(ip)],
-                op = cp.handle["offset".concat(ip)];
-              cp.setState({
-                limit: Op - op,
-                grab: op / 2
+        function gT(TT, UT) {
+          var mT;
+          return function(TT, UT) {
+            if (!(TT instanceof UT)) throw new TypeError("Cannot call a class as a function")
+          }(this, gT), qT(vT(mT = MT.call(this, TT, UT)), "handleFormat", (function(TT) {
+            var UT = mT.props.format;
+            return UT ? UT(TT) : TT
+          })), qT(vT(mT), "handleUpdate", (function() {
+            if (mT.slider) {
+              var TT = mT.props.orientation,
+                UT = (0, HT.capitalize)(iT.orientation[TT].dimension),
+                WT = mT.slider["offset".concat(UT)],
+                zT = mT.handle["offset".concat(UT)];
+              mT.setState({
+                limit: WT - zT,
+                grab: zT / 2
               })
             }
-          })), Hp(vp(cp), "handleStart", (function(pp) {
-            var ip = cp.props.onChangeStart;
-            document.addEventListener("mousemove", cp.handleDrag), document.addEventListener("mouseup", cp.handleEnd), cp.setState({
+          })), qT(vT(mT), "handleStart", (function(TT) {
+            var UT = mT.props.onChangeStart;
+            document.addEventListener("mousemove", mT.handleDrag), document.addEventListener("mouseup", mT.handleEnd), mT.setState({
               active: !0
             }, (function() {
-              ip && ip(pp)
+              UT && UT(TT)
             }))
-          })), Hp(vp(cp), "handleDrag", (function(pp) {
-            pp.stopPropagation();
-            var ip = cp.props.onChange,
-              Op = pp.target,
-              op = Op.className,
-              Ip = Op.classList,
-              Sp = Op.dataset;
-            if (ip && "rangeslider__labels" !== op) {
-              var xp = cp.position(pp);
-              Ip && Ip.contains("rangeslider__label-item") && Sp.value && (xp = parseFloat(Sp.value)), ip && ip(xp, pp)
+          })), qT(vT(mT), "handleDrag", (function(TT) {
+            TT.stopPropagation();
+            var UT = mT.props.onChange,
+              WT = TT.target,
+              zT = WT.className,
+              MT = WT.classList,
+              gT = WT.dataset;
+            if (UT && "rangeslider__labels" !== zT) {
+              var nT = mT.position(TT);
+              MT && MT.contains("rangeslider__label-item") && gT.value && (nT = parseFloat(gT.value)), UT && UT(nT, TT)
             }
-          })), Hp(vp(cp), "handleEnd", (function(pp) {
-            var ip = cp.props.onChangeComplete;
-            cp.setState({
+          })), qT(vT(mT), "handleEnd", (function(TT) {
+            var UT = mT.props.onChangeComplete;
+            mT.setState({
               active: !1
             }, (function() {
-              ip && ip(pp)
-            })), document.removeEventListener("mousemove", cp.handleDrag), document.removeEventListener("mouseup", cp.handleEnd)
-          })), Hp(vp(cp), "handleKeyDown", (function(pp) {
-            pp.preventDefault();
-            var ip, Op = pp.keyCode,
-              op = cp.props,
-              Ip = op.value,
-              Sp = op.min,
-              xp = op.max,
-              Lp = op.step,
-              Yp = op.onChange;
-            switch (Op) {
+              UT && UT(TT)
+            })), document.removeEventListener("mousemove", mT.handleDrag), document.removeEventListener("mouseup", mT.handleEnd)
+          })), qT(vT(mT), "handleKeyDown", (function(TT) {
+            TT.preventDefault();
+            var UT, WT = TT.keyCode,
+              zT = mT.props,
+              MT = zT.value,
+              gT = zT.min,
+              nT = zT.max,
+              HT = zT.step,
+              kT = zT.onChange;
+            switch (WT) {
               case 38:
               case 39:
-                ip = Ip + Lp > xp ? xp : Ip + Lp, Yp && Yp(ip, pp);
+                UT = MT + HT > nT ? nT : MT + HT, kT && kT(UT, TT);
                 break;
               case 37:
               case 40:
-                ip = Ip - Lp < Sp ? Sp : Ip - Lp, Yp && Yp(ip, pp)
+                UT = MT - HT < gT ? gT : MT - HT, kT && kT(UT, TT)
             }
-          })), Hp(vp(cp), "getPositionFromValue", (function(pp) {
-            var ip = cp.state.limit,
-              Op = cp.props,
-              op = Op.min,
-              Ip = (pp - op) / (Op.max - op);
-            return Math.round(Ip * ip)
-          })), Hp(vp(cp), "getValueFromPosition", (function(pp) {
-            var ip = cp.state.limit,
-              Op = cp.props,
-              op = Op.orientation,
-              Ip = Op.min,
-              Sp = Op.max,
-              xp = Op.step,
-              Yp = (0, Lp.clamp)(pp, 0, ip) / (ip || 1),
-              Dp = xp * Math.round(Yp * (Sp - Ip) / xp),
-              Ap = "horizontal" === op ? Dp + Ip : Sp - Dp;
-            return (0, Lp.clamp)(Ap, Ip, Sp)
-          })), Hp(vp(cp), "position", (function(pp) {
-            var ip = cp.state.grab,
-              Op = cp.props,
-              op = Op.orientation,
-              Ip = Op.reverse,
-              Sp = cp.slider,
-              xp = dp.orientation[op].coordinate,
-              Yp = Ip ? dp.orientation[op].reverseDirection : dp.orientation[op].direction,
-              Dp = "client".concat((0, Lp.capitalize)(xp)),
-              Ap = pp.touches ? pp.touches[0][Dp] : pp[Dp],
-              Pp = Sp.getBoundingClientRect()[Yp],
-              Wp = Ip ? Pp - Ap - ip : Ap - Pp - ip;
-            return cp.getValueFromPosition(Wp)
-          })), Hp(vp(cp), "coordinates", (function(pp) {
-            var ip = cp.state,
-              Op = ip.limit,
-              op = ip.grab,
-              Ip = cp.props.orientation,
-              Sp = cp.getValueFromPosition(pp),
-              xp = cp.getPositionFromValue(Sp),
-              Lp = "horizontal" === Ip ? xp + op : xp;
+          })), qT(vT(mT), "getPositionFromValue", (function(TT) {
+            var UT = mT.state.limit,
+              WT = mT.props,
+              zT = WT.min,
+              MT = (TT - zT) / (WT.max - zT);
+            return Math.round(MT * UT)
+          })), qT(vT(mT), "getValueFromPosition", (function(TT) {
+            var UT = mT.state.limit,
+              WT = mT.props,
+              zT = WT.orientation,
+              MT = WT.min,
+              gT = WT.max,
+              nT = WT.step,
+              kT = (0, HT.clamp)(TT, 0, UT) / (UT || 1),
+              jT = nT * Math.round(kT * (gT - MT) / nT),
+              lT = "horizontal" === zT ? jT + MT : gT - jT;
+            return (0, HT.clamp)(lT, MT, gT)
+          })), qT(vT(mT), "position", (function(TT) {
+            var UT = mT.state.grab,
+              WT = mT.props,
+              zT = WT.orientation,
+              MT = WT.reverse,
+              gT = mT.slider,
+              nT = iT.orientation[zT].coordinate,
+              kT = MT ? iT.orientation[zT].reverseDirection : iT.orientation[zT].direction,
+              jT = "client".concat((0, HT.capitalize)(nT)),
+              lT = TT.touches ? TT.touches[0][jT] : TT[jT],
+              LT = gT.getBoundingClientRect()[kT],
+              pT = MT ? LT - lT - UT : lT - LT - UT;
+            return mT.getValueFromPosition(pT)
+          })), qT(vT(mT), "coordinates", (function(TT) {
+            var UT = mT.state,
+              WT = UT.limit,
+              zT = UT.grab,
+              MT = mT.props.orientation,
+              gT = mT.getValueFromPosition(TT),
+              nT = mT.getPositionFromValue(gT),
+              HT = "horizontal" === MT ? nT + zT : nT;
             return {
-              fill: "horizontal" === Ip ? Lp : Op - Lp,
-              handle: Lp,
-              label: Lp
+              fill: "horizontal" === MT ? HT : WT - HT,
+              handle: HT,
+              label: HT
             }
-          })), Hp(vp(cp), "renderLabels", (function(pp) {
-            return (0, Yp.jsx)("ul", {
-              ref: function(pp) {
-                cp.labels = pp
+          })), qT(vT(mT), "renderLabels", (function(TT) {
+            return (0, kT.jsx)("ul", {
+              ref: function(TT) {
+                mT.labels = TT
               },
-              className: (0, op.default)("rangeslider__labels"),
-              children: pp
+              className: (0, zT.default)("rangeslider__labels"),
+              children: TT
             })
-          })), cp.state = {
+          })), mT.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, cp
+          }, mT
         }
-        return ip = Sp, (cp = [{
+        return UT = gT, (mT = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new xp.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new nT.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var pp = this,
-              ip = this.props,
-              cp = ip.value,
-              Op = ip.orientation,
-              Ip = ip.className,
-              Sp = ip.tooltip,
-              xp = ip.reverse,
-              Lp = ip.labels,
-              Dp = ip.min,
-              Ap = ip.max,
-              Wp = ip.handleLabel,
-              yp = this.state.active,
-              Up = dp.orientation[Op].dimension,
-              wp = xp ? dp.orientation[Op].reverseDirection : dp.orientation[Op].direction,
-              vp = this.getPositionFromValue(cp),
-              tp = this.coordinates(vp),
-              ep = Hp({}, Up, "".concat(tp.fill, "px")),
-              jp = Hp({}, wp, "".concat(tp.handle, "px")),
-              kp = Sp && yp,
-              mp = [],
-              Rp = Object.keys(Lp);
-            if (Rp.length > 0) {
-              var qp, Mp = Pp(Rp = Rp.sort((function(pp, ip) {
-                return xp ? pp - ip : ip - pp
+            var TT = this,
+              UT = this.props,
+              mT = UT.value,
+              WT = UT.orientation,
+              MT = UT.className,
+              gT = UT.tooltip,
+              nT = UT.reverse,
+              HT = UT.labels,
+              jT = UT.min,
+              lT = UT.max,
+              pT = UT.handleLabel,
+              BT = this.state.active,
+              ZT = iT.orientation[WT].dimension,
+              cT = nT ? iT.orientation[WT].reverseDirection : iT.orientation[WT].direction,
+              vT = this.getPositionFromValue(mT),
+              fT = this.coordinates(vT),
+              bT = qT({}, ZT, "".concat(fT.fill, "px")),
+              OT = qT({}, cT, "".concat(fT.handle, "px")),
+              eT = gT && BT,
+              YT = [],
+              JT = Object.keys(HT);
+            if (JT.length > 0) {
+              var xT, dT = LT(JT = JT.sort((function(TT, UT) {
+                return nT ? TT - UT : UT - TT
               })));
               try {
-                for (Mp.s(); !(qp = Mp.n()).done;) {
-                  var Cp = qp.value,
-                    Ep = this.getPositionFromValue(Cp),
-                    Xp = this.coordinates(Ep),
-                    lp = Hp({}, wp, "".concat(Xp.label, "px"));
-                  mp.push((0, Yp.jsx)("li", {
-                    className: (0, op.default)("rangeslider__label-item"),
-                    "data-value": Cp,
+                for (dT.s(); !(xT = dT.n()).done;) {
+                  var wT = xT.value,
+                    tT = this.getPositionFromValue(wT),
+                    aT = this.coordinates(tT),
+                    yT = qT({}, cT, "".concat(aT.label, "px"));
+                  YT.push((0, kT.jsx)("li", {
+                    className: (0, zT.default)("rangeslider__label-item"),
+                    "data-value": wT,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: lp,
-                    children: this.props.labels[Cp]
-                  }, Cp))
+                    style: yT,
+                    children: this.props.labels[wT]
+                  }, wT))
                 }
-              } catch (Qp) {
-                Mp.e(Qp)
+              } catch (XT) {
+                dT.e(XT)
               } finally {
-                Mp.f()
+                dT.f()
               }
             }
-            return (0, Yp.jsxs)("div", {
-              ref: function(ip) {
-                pp.slider = ip
+            return (0, kT.jsxs)("div", {
+              ref: function(UT) {
+                TT.slider = UT
               },
-              className: (0, op.default)("rangeslider", "rangeslider-".concat(Op), {
-                "rangeslider-reverse": xp
-              }, Ip),
+              className: (0, zT.default)("rangeslider", "rangeslider-".concat(WT), {
+                "rangeslider-reverse": nT
+              }, MT),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": Dp,
-              "aria-valuemax": Ap,
-              "aria-valuenow": cp,
-              "aria-orientation": Op,
-              children: [(0, Yp.jsx)("div", {
+              "aria-valuemin": jT,
+              "aria-valuemax": lT,
+              "aria-valuenow": mT,
+              "aria-orientation": WT,
+              children: [(0, kT.jsx)("div", {
                 className: "rangeslider__fill",
-                style: ep
-              }), (0, Yp.jsxs)("div", {
-                ref: function(ip) {
-                  pp.handle = ip
+                style: bT
+              }), (0, kT.jsxs)("div", {
+                ref: function(UT) {
+                  TT.handle = UT
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: jp,
+                style: OT,
                 tabIndex: 0,
-                children: [kp && (0, Yp.jsx)("div", {
-                  ref: function(ip) {
-                    pp.tooltip = ip
+                children: [eT && (0, kT.jsx)("div", {
+                  ref: function(UT) {
+                    TT.tooltip = UT
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, Yp.jsx)("span", {
-                    children: this.handleFormat(cp)
+                  children: (0, kT.jsx)("span", {
+                    children: this.handleFormat(mT)
                   })
-                }), (0, Yp.jsx)("div", {
+                }), (0, kT.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: Wp
+                  children: pT
                 })]
-              }), Lp && this.renderLabels(mp)]
+              }), HT && this.renderLabels(YT)]
             })
           }
-        }]) && yp(ip.prototype, cp), Op && yp(ip, Op), Object.defineProperty(ip, "prototype", {
+        }]) && BT(UT.prototype, mT), WT && BT(UT, WT), Object.defineProperty(UT, "prototype", {
           writable: !1
-        }), Sp
-      }(Ip.Component);
-    Hp(ep, "propTypes", {
-      min: Sp.default.number,
-      max: Sp.default.number,
-      step: Sp.default.number,
-      value: Sp.default.number,
-      orientation: Sp.default.string,
-      tooltip: Sp.default.bool,
-      reverse: Sp.default.bool,
-      labels: Sp.default.object,
-      handleLabel: Sp.default.string,
-      format: Sp.default.func,
-      onChangeStart: Sp.default.func,
-      onChange: Sp.default.func,
-      onChangeComplete: Sp.default.func
-    }), Hp(ep, "defaultProps", {
+        }), gT
+      }(MT.Component);
+    qT(bT, "propTypes", {
+      min: gT.default.number,
+      max: gT.default.number,
+      step: gT.default.number,
+      value: gT.default.number,
+      orientation: gT.default.string,
+      tooltip: gT.default.bool,
+      reverse: gT.default.bool,
+      labels: gT.default.object,
+      handleLabel: gT.default.string,
+      format: gT.default.func,
+      onChangeStart: gT.default.func,
+      onChange: gT.default.func,
+      onChangeComplete: gT.default.func
+    }), qT(bT, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var jp = ep;
-    ip.default = jp
+    var OT = bT;
+    UT.default = OT
   },
-  5122: (pp, ip, cp) => {
-    var Op;
-    ip.b = void 0;
-    var op = ((Op = cp(5127)) && Op.__esModule ? Op : {
-      default: Op
+  5095: (TT, UT, mT) => {
+    var WT;
+    UT.d = void 0;
+    var zT = ((WT = mT(5098)) && WT.__esModule ? WT : {
+      default: WT
     }).default;
-    ip.b = op
+    UT.d = zT
   },
-  5137: (pp, ip) => {
-    Object.defineProperty(ip, "__esModule", {
+  5110: (TT, UT) => {
+    Object.defineProperty(UT, "__esModule", {
       value: !0
-    }), ip.capitalize = function(pp) {
-      return pp.charAt(0).toUpperCase() + pp.substr(1)
-    }, ip.clamp = function(pp, ip, cp) {
-      return Math.min(Math.max(pp, ip), cp)
+    }), UT.capitalize = function(TT) {
+      return TT.charAt(0).toUpperCase() + TT.substr(1)
+    }, UT.clamp = function(TT, UT, mT) {
+      return Math.min(Math.max(TT, UT), mT)
     }
   },
-  5085: (pp, ip, cp) => {
-    var Op = cp(5088);
+  5068: (TT, UT, mT) => {
+    var WT = mT(5072);
 
-    function op() {}
+    function zT() {}
 
-    function Ip() {}
-    Ip.resetWarningCache = op, pp.exports = function() {
-      function pp(pp, ip, cp, op, Ip, Sp) {
-        if (Sp !== Op) {
-          var xp = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw xp.name = "Invariant Violation", xp
+    function MT() {}
+    MT.resetWarningCache = zT, TT.exports = function() {
+      function TT(TT, UT, mT, zT, MT, gT) {
+        if (gT !== WT) {
+          var nT = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw nT.name = "Invariant Violation", nT
         }
       }
 
-      function ip() {
-        return pp
+      function UT() {
+        return TT
       }
-      pp.isRequired = pp;
-      var cp = {
-        array: pp,
-        bigint: pp,
-        bool: pp,
-        func: pp,
-        number: pp,
-        object: pp,
-        string: pp,
-        symbol: pp,
-        any: pp,
-        arrayOf: ip,
-        element: pp,
-        elementType: pp,
-        instanceOf: ip,
-        node: pp,
-        objectOf: ip,
-        oneOf: ip,
-        oneOfType: ip,
-        shape: ip,
-        exact: ip,
-        checkPropTypes: Ip,
-        resetWarningCache: op
+      TT.isRequired = TT;
+      var mT = {
+        array: TT,
+        bigint: TT,
+        bool: TT,
+        func: TT,
+        number: TT,
+        object: TT,
+        string: TT,
+        symbol: TT,
+        any: TT,
+        arrayOf: UT,
+        element: TT,
+        elementType: TT,
+        instanceOf: UT,
+        node: TT,
+        objectOf: UT,
+        oneOf: UT,
+        oneOfType: UT,
+        shape: UT,
+        exact: UT,
+        checkPropTypes: MT,
+        resetWarningCache: zT
       };
-      return cp.PropTypes = cp, cp
+      return mT.PropTypes = mT, mT
     }
   },
-  5081: (pp, ip, cp) => {
-    pp.exports = cp(5085)()
+  5066: (TT, UT, mT) => {
+    TT.exports = mT(5068)()
   },
-  5088: pp => {
-    pp.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5072: TT => {
+    TT.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5129: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => mp
+  5103: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => YT
     });
-    var Op = function() {
+    var WT = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function pp(pp, ip) {
-          var cp = -1;
-          return pp.some((function(pp, Op) {
-            return pp[0] === ip && (cp = Op, !0)
-          })), cp
+        function TT(TT, UT) {
+          var mT = -1;
+          return TT.some((function(TT, WT) {
+            return TT[0] === UT && (mT = WT, !0)
+          })), mT
         }
         return function() {
-          function ip() {
+          function UT() {
             this.__entries__ = []
           }
-          return Object.defineProperty(ip.prototype, "size", {
+          return Object.defineProperty(UT.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), ip.prototype.get = function(ip) {
-            var cp = pp(this.__entries__, ip),
-              Op = this.__entries__[cp];
-            return Op && Op[1]
-          }, ip.prototype.set = function(ip, cp) {
-            var Op = pp(this.__entries__, ip);
-            ~Op ? this.__entries__[Op][1] = cp : this.__entries__.push([ip, cp])
-          }, ip.prototype.delete = function(ip) {
-            var cp = this.__entries__,
-              Op = pp(cp, ip);
-            ~Op && cp.splice(Op, 1)
-          }, ip.prototype.has = function(ip) {
-            return !!~pp(this.__entries__, ip)
-          }, ip.prototype.clear = function() {
+          }), UT.prototype.get = function(UT) {
+            var mT = TT(this.__entries__, UT),
+              WT = this.__entries__[mT];
+            return WT && WT[1]
+          }, UT.prototype.set = function(UT, mT) {
+            var WT = TT(this.__entries__, UT);
+            ~WT ? this.__entries__[WT][1] = mT : this.__entries__.push([UT, mT])
+          }, UT.prototype.delete = function(UT) {
+            var mT = this.__entries__,
+              WT = TT(mT, UT);
+            ~WT && mT.splice(WT, 1)
+          }, UT.prototype.has = function(UT) {
+            return !!~TT(this.__entries__, UT)
+          }, UT.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, ip.prototype.forEach = function(pp, ip) {
-            void 0 === ip && (ip = null);
-            for (var cp = 0, Op = this.__entries__; cp < Op.length; cp++) {
-              var op = Op[cp];
-              pp.call(ip, op[1], op[0])
+          }, UT.prototype.forEach = function(TT, UT) {
+            void 0 === UT && (UT = null);
+            for (var mT = 0, WT = this.__entries__; mT < WT.length; mT++) {
+              var zT = WT[mT];
+              TT.call(UT, zT[1], zT[0])
             }
-          }, ip
+          }, UT
         }()
       }(),
-      op = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      Ip = "undefined" !== typeof cp.g && cp.g.Math === Math ? cp.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      Sp = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Ip) : function(pp) {
+      zT = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      MT = "undefined" !== typeof mT.g && mT.g.Math === Math ? mT.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      gT = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(MT) : function(TT) {
         return setTimeout((function() {
-          return pp(Date.now())
+          return TT(Date.now())
         }), 1e3 / 60)
       };
-    var xp = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      Lp = "undefined" !== typeof MutationObserver,
-      Yp = function() {
-        function pp() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(pp, ip) {
-            var cp = !1,
-              Op = !1,
-              op = 0;
+    var nT = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      HT = "undefined" !== typeof MutationObserver,
+      kT = function() {
+        function TT() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(TT, UT) {
+            var mT = !1,
+              WT = !1,
+              zT = 0;
 
-            function Ip() {
-              cp && (cp = !1, pp()), Op && Lp()
+            function MT() {
+              mT && (mT = !1, TT()), WT && HT()
             }
 
-            function xp() {
-              Sp(Ip)
+            function nT() {
+              gT(MT)
             }
 
-            function Lp() {
-              var pp = Date.now();
-              if (cp) {
-                if (pp - op < 2) return;
-                Op = !0
-              } else cp = !0, Op = !1, setTimeout(xp, ip);
-              op = pp
+            function HT() {
+              var TT = Date.now();
+              if (mT) {
+                if (TT - zT < 2) return;
+                WT = !0
+              } else mT = !0, WT = !1, setTimeout(nT, UT);
+              zT = TT
             }
-            return Lp
+            return HT
           }(this.refresh.bind(this), 20)
         }
-        return pp.prototype.addObserver = function(pp) {
-          ~this.observers_.indexOf(pp) || this.observers_.push(pp), this.connected_ || this.connect_()
-        }, pp.prototype.removeObserver = function(pp) {
-          var ip = this.observers_,
-            cp = ip.indexOf(pp);
-          ~cp && ip.splice(cp, 1), !ip.length && this.connected_ && this.disconnect_()
-        }, pp.prototype.refresh = function() {
+        return TT.prototype.addObserver = function(TT) {
+          ~this.observers_.indexOf(TT) || this.observers_.push(TT), this.connected_ || this.connect_()
+        }, TT.prototype.removeObserver = function(TT) {
+          var UT = this.observers_,
+            mT = UT.indexOf(TT);
+          ~mT && UT.splice(mT, 1), !UT.length && this.connected_ && this.disconnect_()
+        }, TT.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, pp.prototype.updateObservers_ = function() {
-          var pp = this.observers_.filter((function(pp) {
-            return pp.gatherActive(), pp.hasActive()
+        }, TT.prototype.updateObservers_ = function() {
+          var TT = this.observers_.filter((function(TT) {
+            return TT.gatherActive(), TT.hasActive()
           }));
-          return pp.forEach((function(pp) {
-            return pp.broadcastActive()
-          })), pp.length > 0
-        }, pp.prototype.connect_ = function() {
-          op && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Lp ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return TT.forEach((function(TT) {
+            return TT.broadcastActive()
+          })), TT.length > 0
+        }, TT.prototype.connect_ = function() {
+          zT && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), HT ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, pp.prototype.disconnect_ = function() {
-          op && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, pp.prototype.onTransitionEnd_ = function(pp) {
-          var ip = pp.propertyName,
-            cp = void 0 === ip ? "" : ip;
-          xp.some((function(pp) {
-            return !!~cp.indexOf(pp)
+        }, TT.prototype.disconnect_ = function() {
+          zT && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, TT.prototype.onTransitionEnd_ = function(TT) {
+          var UT = TT.propertyName,
+            mT = void 0 === UT ? "" : UT;
+          nT.some((function(TT) {
+            return !!~mT.indexOf(TT)
           })) && this.refresh()
-        }, pp.getInstance = function() {
-          return this.instance_ || (this.instance_ = new pp), this.instance_
-        }, pp.instance_ = null, pp
+        }, TT.getInstance = function() {
+          return this.instance_ || (this.instance_ = new TT), this.instance_
+        }, TT.instance_ = null, TT
       }(),
-      Dp = function(pp, ip) {
-        for (var cp = 0, Op = Object.keys(ip); cp < Op.length; cp++) {
-          var op = Op[cp];
-          Object.defineProperty(pp, op, {
-            value: ip[op],
+      jT = function(TT, UT) {
+        for (var mT = 0, WT = Object.keys(UT); mT < WT.length; mT++) {
+          var zT = WT[mT];
+          Object.defineProperty(TT, zT, {
+            value: UT[zT],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return pp
+        return TT
       },
-      Ap = function(pp) {
-        return pp && pp.ownerDocument && pp.ownerDocument.defaultView || Ip
+      lT = function(TT) {
+        return TT && TT.ownerDocument && TT.ownerDocument.defaultView || MT
       },
-      Pp = tp(0, 0, 0, 0);
+      LT = fT(0, 0, 0, 0);
 
-    function Wp(pp) {
-      return parseFloat(pp) || 0
+    function pT(TT) {
+      return parseFloat(TT) || 0
     }
 
-    function yp(pp) {
-      for (var ip = [], cp = 1; cp < arguments.length; cp++) ip[cp - 1] = arguments[cp];
-      return ip.reduce((function(ip, cp) {
-        return ip + Wp(pp["border-" + cp + "-width"])
+    function BT(TT) {
+      for (var UT = [], mT = 1; mT < arguments.length; mT++) UT[mT - 1] = arguments[mT];
+      return UT.reduce((function(UT, mT) {
+        return UT + pT(TT["border-" + mT + "-width"])
       }), 0)
     }
 
-    function Up(pp) {
-      var ip = pp.clientWidth,
-        cp = pp.clientHeight;
-      if (!ip && !cp) return Pp;
-      var Op = Ap(pp).getComputedStyle(pp),
-        op = function(pp) {
-          for (var ip = {}, cp = 0, Op = ["top", "right", "bottom", "left"]; cp < Op.length; cp++) {
-            var op = Op[cp],
-              Ip = pp["padding-" + op];
-            ip[op] = Wp(Ip)
+    function ZT(TT) {
+      var UT = TT.clientWidth,
+        mT = TT.clientHeight;
+      if (!UT && !mT) return LT;
+      var WT = lT(TT).getComputedStyle(TT),
+        zT = function(TT) {
+          for (var UT = {}, mT = 0, WT = ["top", "right", "bottom", "left"]; mT < WT.length; mT++) {
+            var zT = WT[mT],
+              MT = TT["padding-" + zT];
+            UT[zT] = pT(MT)
           }
-          return ip
-        }(Op),
-        Ip = op.left + op.right,
-        Sp = op.top + op.bottom,
-        xp = Wp(Op.width),
-        Lp = Wp(Op.height);
-      if ("border-box" === Op.boxSizing && (Math.round(xp + Ip) !== ip && (xp -= yp(Op, "left", "right") + Ip), Math.round(Lp + Sp) !== cp && (Lp -= yp(Op, "top", "bottom") + Sp)), ! function(pp) {
-          return pp === Ap(pp).document.documentElement
-        }(pp)) {
-        var Yp = Math.round(xp + Ip) - ip,
-          Dp = Math.round(Lp + Sp) - cp;
-        1 !== Math.abs(Yp) && (xp -= Yp), 1 !== Math.abs(Dp) && (Lp -= Dp)
+          return UT
+        }(WT),
+        MT = zT.left + zT.right,
+        gT = zT.top + zT.bottom,
+        nT = pT(WT.width),
+        HT = pT(WT.height);
+      if ("border-box" === WT.boxSizing && (Math.round(nT + MT) !== UT && (nT -= BT(WT, "left", "right") + MT), Math.round(HT + gT) !== mT && (HT -= BT(WT, "top", "bottom") + gT)), ! function(TT) {
+          return TT === lT(TT).document.documentElement
+        }(TT)) {
+        var kT = Math.round(nT + MT) - UT,
+          jT = Math.round(HT + gT) - mT;
+        1 !== Math.abs(kT) && (nT -= kT), 1 !== Math.abs(jT) && (HT -= jT)
       }
-      return tp(op.left, op.top, xp, Lp)
+      return fT(zT.left, zT.top, nT, HT)
     }
-    var wp = "undefined" !== typeof SVGGraphicsElement ? function(pp) {
-      return pp instanceof Ap(pp).SVGGraphicsElement
-    } : function(pp) {
-      return pp instanceof Ap(pp).SVGElement && "function" === typeof pp.getBBox
+    var cT = "undefined" !== typeof SVGGraphicsElement ? function(TT) {
+      return TT instanceof lT(TT).SVGGraphicsElement
+    } : function(TT) {
+      return TT instanceof lT(TT).SVGElement && "function" === typeof TT.getBBox
     };
 
-    function vp(pp) {
-      return op ? wp(pp) ? function(pp) {
-        var ip = pp.getBBox();
-        return tp(0, 0, ip.width, ip.height)
-      }(pp) : Up(pp) : Pp
+    function vT(TT) {
+      return zT ? cT(TT) ? function(TT) {
+        var UT = TT.getBBox();
+        return fT(0, 0, UT.width, UT.height)
+      }(TT) : ZT(TT) : LT
     }
 
-    function tp(pp, ip, cp, Op) {
+    function fT(TT, UT, mT, WT) {
       return {
-        x: pp,
-        y: ip,
-        width: cp,
-        height: Op
+        x: TT,
+        y: UT,
+        width: mT,
+        height: WT
       }
     }
-    var Hp = function() {
-        function pp(pp) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = tp(0, 0, 0, 0), this.target = pp
+    var qT = function() {
+        function TT(TT) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = fT(0, 0, 0, 0), this.target = TT
         }
-        return pp.prototype.isActive = function() {
-          var pp = vp(this.target);
-          return this.contentRect_ = pp, pp.width !== this.broadcastWidth || pp.height !== this.broadcastHeight
-        }, pp.prototype.broadcastRect = function() {
-          var pp = this.contentRect_;
-          return this.broadcastWidth = pp.width, this.broadcastHeight = pp.height, pp
-        }, pp
+        return TT.prototype.isActive = function() {
+          var TT = vT(this.target);
+          return this.contentRect_ = TT, TT.width !== this.broadcastWidth || TT.height !== this.broadcastHeight
+        }, TT.prototype.broadcastRect = function() {
+          var TT = this.contentRect_;
+          return this.broadcastWidth = TT.width, this.broadcastHeight = TT.height, TT
+        }, TT
       }(),
-      dp = function(pp, ip) {
-        var cp = function(pp) {
-          var ip = pp.x,
-            cp = pp.y,
-            Op = pp.width,
-            op = pp.height,
-            Ip = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            Sp = Object.create(Ip.prototype);
-          return Dp(Sp, {
-            x: ip,
-            y: cp,
-            width: Op,
-            height: op,
-            top: cp,
-            right: ip + Op,
-            bottom: op + cp,
-            left: ip
-          }), Sp
-        }(ip);
-        Dp(this, {
-          target: pp,
-          contentRect: cp
+      iT = function(TT, UT) {
+        var mT = function(TT) {
+          var UT = TT.x,
+            mT = TT.y,
+            WT = TT.width,
+            zT = TT.height,
+            MT = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            gT = Object.create(MT.prototype);
+          return jT(gT, {
+            x: UT,
+            y: mT,
+            width: WT,
+            height: zT,
+            top: mT,
+            right: UT + WT,
+            bottom: zT + mT,
+            left: UT
+          }), gT
+        }(UT);
+        jT(this, {
+          target: TT,
+          contentRect: mT
         })
       },
-      ep = function() {
-        function pp(pp, ip, cp) {
-          if (this.activeObservations_ = [], this.observations_ = new Op, "function" !== typeof pp) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = pp, this.controller_ = ip, this.callbackCtx_ = cp
+      bT = function() {
+        function TT(TT, UT, mT) {
+          if (this.activeObservations_ = [], this.observations_ = new WT, "function" !== typeof TT) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = TT, this.controller_ = UT, this.callbackCtx_ = mT
         }
-        return pp.prototype.observe = function(pp) {
+        return TT.prototype.observe = function(TT) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(pp instanceof Ap(pp).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var ip = this.observations_;
-            ip.has(pp) || (ip.set(pp, new Hp(pp)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(TT instanceof lT(TT).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var UT = this.observations_;
+            UT.has(TT) || (UT.set(TT, new qT(TT)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, pp.prototype.unobserve = function(pp) {
+        }, TT.prototype.unobserve = function(TT) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(pp instanceof Ap(pp).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var ip = this.observations_;
-            ip.has(pp) && (ip.delete(pp), ip.size || this.controller_.removeObserver(this))
+            if (!(TT instanceof lT(TT).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var UT = this.observations_;
+            UT.has(TT) && (UT.delete(TT), UT.size || this.controller_.removeObserver(this))
           }
-        }, pp.prototype.disconnect = function() {
+        }, TT.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, pp.prototype.gatherActive = function() {
-          var pp = this;
-          this.clearActive(), this.observations_.forEach((function(ip) {
-            ip.isActive() && pp.activeObservations_.push(ip)
+        }, TT.prototype.gatherActive = function() {
+          var TT = this;
+          this.clearActive(), this.observations_.forEach((function(UT) {
+            UT.isActive() && TT.activeObservations_.push(UT)
           }))
-        }, pp.prototype.broadcastActive = function() {
+        }, TT.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var pp = this.callbackCtx_,
-              ip = this.activeObservations_.map((function(pp) {
-                return new dp(pp.target, pp.broadcastRect())
+            var TT = this.callbackCtx_,
+              UT = this.activeObservations_.map((function(TT) {
+                return new iT(TT.target, TT.broadcastRect())
               }));
-            this.callback_.call(pp, ip, pp), this.clearActive()
+            this.callback_.call(TT, UT, TT), this.clearActive()
           }
-        }, pp.prototype.clearActive = function() {
+        }, TT.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, pp.prototype.hasActive = function() {
+        }, TT.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, pp
+        }, TT
       }(),
-      jp = "undefined" !== typeof WeakMap ? new WeakMap : new Op,
-      kp = function pp(ip) {
-        if (!(this instanceof pp)) throw new TypeError("Cannot call a class as a function.");
+      OT = "undefined" !== typeof WeakMap ? new WeakMap : new WT,
+      eT = function TT(UT) {
+        if (!(this instanceof TT)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var cp = Yp.getInstance(),
-          Op = new ep(ip, cp, this);
-        jp.set(this, Op)
+        var mT = kT.getInstance(),
+          WT = new bT(UT, mT, this);
+        OT.set(this, WT)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(pp) {
-      kp.prototype[pp] = function() {
-        var ip;
-        return (ip = jp.get(this))[pp].apply(ip, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(TT) {
+      eT.prototype[TT] = function() {
+        var UT;
+        return (UT = OT.get(this))[TT].apply(UT, arguments)
       }
     }));
-    const mp = "undefined" !== typeof Ip.ResizeObserver ? Ip.ResizeObserver : kp
+    const YT = "undefined" !== typeof MT.ResizeObserver ? MT.ResizeObserver : eT
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

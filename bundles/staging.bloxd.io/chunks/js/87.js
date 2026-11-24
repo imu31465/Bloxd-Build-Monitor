@@ -1,53 +1,53 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  4882: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => dp,
-      e: () => vp
+  4879: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => iT,
+      e: () => vT
     });
-    var Op = cp(1325),
-      op = cp(34);
-    var Ip = cp(337);
-    var Sp = cp(640);
-    var xp = cp(2457),
-      Lp = cp(4886),
-      Yp = cp(4919),
-      Dp = cp(4927);
-    class Ap {
-      constructor(pp, ip, cp, Op, op, Ip) {
-        this.id = pp, this.type = ip, this.parameters = cp, this.tearDownNotification = Op, this.onDonePromise = op, this.resolveRequest = Ip
+    var WT = mT(1408),
+      zT = mT(31);
+    var MT = mT(366);
+    var gT = mT(653);
+    var nT = mT(2522),
+      HT = mT(4883),
+      kT = mT(4906),
+      jT = mT(4915);
+    class lT {
+      constructor(TT, UT, mT, WT, zT, MT) {
+        this.id = TT, this.type = UT, this.parameters = mT, this.tearDownNotification = WT, this.onDonePromise = zT, this.resolveRequest = MT
       }
     }
-    const Pp = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class Wp {
-      constructor(pp, ip, cp, Op, op, Ip) {
-        this.id = pp, this.type = ip, this.parameters = cp, this.resolveRequest = Op, this.onDonePromise = op, this.tearDownNotification = Ip, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const Sp = vp[ip];
-        if (!Sp) throw console.error(`No QTE implementation registered for type: ${ip}`), new Error(`No QTE implementation registered for type: ${ip}`);
-        this.implementation = new Sp(cp, (pp => {
-          this.isCompleted = !0, this.resolveRequest(pp)
+    const LT = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class pT {
+      constructor(TT, UT, mT, WT, zT, MT) {
+        this.id = TT, this.type = UT, this.parameters = mT, this.resolveRequest = WT, this.onDonePromise = zT, this.tearDownNotification = MT, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const gT = vT[UT];
+        if (!gT) throw console.error(`No QTE implementation registered for type: ${UT}`), new Error(`No QTE implementation registered for type: ${UT}`);
+        this.implementation = new gT(mT, (TT => {
+          this.isCompleted = !0, this.resolveRequest(TT)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = op.m.subscribe("QTEMouseState", (pp => {
+        this.mouseSub = zT.j.subscribe("QTEMouseState", (TT => {
           let {
-            isDown: ip
-          } = pp;
-          this.isCompleted || this.implementation.handleMouseInput(ip)
-        })), this.stopInputActions = (0, Yp.f)((pp => {
-          this.isCompleted || !Pp.has(pp.action) && !(0, Yp.e)(pp) || this.implementation.handleMouseInput(pp.down)
-        })), this.tickSub = op.m.subscribe("noaTick", (pp => {
+            isDown: UT
+          } = TT;
+          this.isCompleted || this.implementation.handleMouseInput(UT)
+        })), this.stopInputActions = (0, kT.h)((TT => {
+          this.isCompleted || !LT.has(TT.action) && !(0, kT.f)(TT) || this.implementation.handleMouseInput(TT.down)
+        })), this.tickSub = zT.j.subscribe("noaTick", (TT => {
           if (this.isCompleted) return;
-          const ip = pp / 1e3;
-          this.implementation.handleTick(ip)
-        })), this.stopShellTicks = (0, Lp.s)((() => {
-          this.isCompleted || this.implementation.handleTick(xp.u / 1e3)
+          const UT = TT / 1e3;
+          this.implementation.handleTick(UT)
+        })), this.stopShellTicks = (0, HT.C)((() => {
+          this.isCompleted || this.implementation.handleTick(nT.u / 1e3)
         }))
       }
       cleanup() {
-        var pp, ip;
-        this.mouseSub && (op.m.unsubscribe(this.mouseSub), this.mouseSub = null), null === (pp = this.stopInputActions) || void 0 === pp || pp.call(this), this.stopInputActions = null, null === (ip = this.stopShellTicks) || void 0 === ip || ip.call(this), this.stopShellTicks = null, this.tickSub && (op.m.unsubscribe(this.tickSub), this.tickSub = null)
+        var TT, UT;
+        this.mouseSub && (zT.j.unsubscribe(this.mouseSub), this.mouseSub = null), null === (TT = this.stopInputActions) || void 0 === TT || TT.call(this), this.stopInputActions = null, null === (UT = this.stopShellTicks) || void 0 === UT || UT.call(this), this.stopShellTicks = null, this.tickSub && (zT.j.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const yp = new Op.c,
-      Up = new Map;
-    let wp = null;
-    const vp = {
+    const BT = new WT.d,
+      ZT = new Map;
+    let cT = null;
+    const vT = {
       progressBar: class {
-        constructor(pp, ip, cp) {
-          var Op, op, Ip, Sp;
-          this.resolveRequest = ip, this.tearDownNotification = cp, this.progress = 0, this.oi = void 0, this.Ii = void 0, this.Si = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const xp = pp;
-          this.oi = null !== (Op = xp.oi) && void 0 !== Op ? Op : .075, this.Ii = null !== (op = xp.Ii) && void 0 !== op ? op : 1, this.progress = null !== (Ip = xp.Oi) && void 0 !== Ip ? Ip : 30, this.Si = null !== (Sp = xp.Si) && void 0 !== Sp && Sp, this.parameters = xp
+        constructor(TT, UT, mT) {
+          var WT, zT, MT, gT;
+          this.resolveRequest = UT, this.tearDownNotification = mT, this.progress = 0, this.DT = void 0, this.oT = void 0, this.AT = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const nT = TT;
+          this.DT = null !== (WT = nT.DT) && void 0 !== WT ? WT : .075, this.oT = null !== (zT = nT.oT) && void 0 !== zT ? zT : 1, this.progress = null !== (MT = nT.hT) && void 0 !== MT ? MT : 30, this.AT = null !== (gT = nT.AT) && void 0 !== gT && gT, this.parameters = nT
         }
-        handleMouseInput(pp) {
-          pp && !this.isCompleted && (this.clickCount++, this.progress += this.Ii, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(TT) {
+          TT && !this.isCompleted && (this.clickCount++, this.progress += this.oT, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.oi, this.Si && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.DT, this.AT && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(pp) {
-          this.isCompleted = !0, this.resolveRequest(pp)
+        complete(TT) {
+          this.isCompleted = !0, this.resolveRequest(TT)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(pp, ip, cp) {
-          var Op;
-          this.resolveRequest = ip, this.tearDownNotification = cp, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = pp, this.timeWindowMs = null !== (Op = this.parameters.Ai) && void 0 !== Op ? Op : 3e3, this.startTime = Date.now()
+        constructor(TT, UT, mT) {
+          var WT;
+          this.resolveRequest = UT, this.tearDownNotification = mT, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = TT, this.timeWindowMs = null !== (WT = this.parameters.WU) && void 0 !== WT ? WT : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(pp) {
-          if (!pp || this.isCompleted) return;
+        handleMouseInput(TT) {
+          if (!TT || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(pp) {
-          this.isCompleted = !0, this.resolveRequest(pp)
+        complete(TT) {
+          this.isCompleted = !0, this.resolveRequest(TT)
         }
         getState() {
-          const pp = Date.now() - this.startTime,
-            ip = Math.max(0, this.timeWindowMs - pp);
+          const TT = Date.now() - this.startTime,
+            UT = Math.max(0, this.timeWindowMs - TT);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: ip,
-              Ai: this.timeWindowMs
+              timeRemaining: UT,
+              WU: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(pp, ip, cp) {
-          var Op;
-          this.resolveRequest = ip, this.tearDownNotification = cp, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const op = pp;
+        constructor(TT, UT, mT) {
+          var WT;
+          this.resolveRequest = UT, this.tearDownNotification = mT, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const zT = TT;
           this.parameters = {
-            ...op,
-            Ui: Ip.d.clamp(op.Ui, .05, 1)
-          }, this.progress = null !== (Op = op.Oi) && void 0 !== Op ? Op : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...zT,
+            nU: MT.e.clamp(zT.nU, .05, 1)
+          }, this.progress = null !== (WT = zT.hT) && void 0 !== WT ? WT : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(pp) {
-          this.isMouseDown = pp
+        handleMouseInput(TT) {
+          this.isMouseDown = TT
         }
-        handleTick(pp) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(pp))
+        handleTick(TT) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(TT))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const pp = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += pp * this.parameters.Hi * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const TT = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += TT * this.parameters.HU * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const pp = Ip.d.clamp(1 - .7 * this.parameters.ui, 0, 1.4);
-          return Math.floor(60 * pp + 40 * Math.random())
+          const TT = MT.e.clamp(1 - .7 * this.parameters.kU, 0, 1.4);
+          return Math.floor(60 * TT + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.ji : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = Ip.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const pp = this.parameters.Ui / 2,
-            ip = pp,
-            cp = 1 - pp;
-          this.catchZonePosition <= ip ? (this.catchZonePosition = ip, this.catchZoneVelocity = 0) : this.catchZonePosition >= cp && (this.catchZonePosition = cp, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.jU : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = MT.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const TT = this.parameters.nU / 2,
+            UT = TT,
+            mT = 1 - TT;
+          this.catchZonePosition <= UT ? (this.catchZonePosition = UT, this.catchZoneVelocity = 0) : this.catchZonePosition >= mT && (this.catchZonePosition = mT, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const pp = this.parameters.Ui / 2;
-          return this.moverPosition >= this.catchZonePosition - pp && this.moverPosition <= this.catchZonePosition + pp
+          const TT = this.parameters.nU / 2;
+          return this.moverPosition >= this.catchZonePosition - TT && this.moverPosition <= this.catchZonePosition + TT
         }
-        updateProgress(pp) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.ki * pp : this.progress -= this.parameters.mi * pp, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.Si && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(TT) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.lU * TT : this.progress -= this.parameters.LU * TT, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.AT && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(pp) {
-          this.isCompleted = !0, this.resolveRequest(pp)
+        complete(TT) {
+          this.isCompleted = !0, this.resolveRequest(TT)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              Ui: this.parameters.Ui,
+              nU: this.parameters.nU,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(pp, ip, cp) {
-          var Op, op, Sp, xp, Lp;
-          this.resolveRequest = ip, this.tearDownNotification = cp, this.startTime = void 0, this.speed = void 0, this.qi = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const Yp = pp;
+        constructor(TT, UT, mT) {
+          var WT, zT, gT, nT, HT;
+          this.resolveRequest = UT, this.tearDownNotification = mT, this.startTime = void 0, this.speed = void 0, this.BU = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const kT = TT;
           this.parameters = {
-            ...Yp,
-            speed: null !== (Op = Yp.speed) && void 0 !== Op ? Op : .5,
-            qi: Ip.d.clamp(Yp.qi, .05, 1),
-            label: null !== (op = Yp.label) && void 0 !== op ? op : [{
+            ...kT,
+            speed: null !== (WT = kT.speed) && void 0 !== WT ? WT : .5,
+            BU: MT.e.clamp(kT.BU, .05, 1),
+            label: null !== (zT = kT.label) && void 0 !== zT ? zT : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (Sp = Yp.icon) && void 0 !== Sp ? Sp : null,
-            scale: null !== (xp = Yp.scale) && void 0 !== xp ? xp : 1,
-            rotation: null !== (Lp = Yp.rotation) && void 0 !== Lp ? Lp : 0
-          }, this.speed = this.parameters.speed, this.qi = this.parameters.qi, this.startTime = Date.now()
+            icon: null !== (gT = kT.icon) && void 0 !== gT ? gT : null,
+            scale: null !== (nT = kT.scale) && void 0 !== nT ? nT : 1,
+            rotation: null !== (HT = kT.rotation) && void 0 !== HT ? HT : 0
+          }, this.speed = this.parameters.speed, this.BU = this.parameters.BU, this.startTime = Date.now()
         }
-        handleMouseInput(pp) {
-          if (pp) {
+        handleMouseInput(TT) {
+          if (TT) {
             this.updateMarkerPosition();
-            const pp = Math.abs(this.markerPosition - .5) <= this.qi / 2;
-            this.complete(pp)
+            const TT = Math.abs(this.markerPosition - .5) <= this.BU / 2;
+            this.complete(TT)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const pp = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = pp <= .5 ? 2 * pp : 2 - 2 * pp
+          const TT = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = TT <= .5 ? 2 * TT : 2 - 2 * TT
         }
-        complete(pp) {
-          this.isCompleted = !0, this.resolveRequest(pp)
+        complete(TT) {
+          this.isCompleted = !0, this.resolveRequest(TT)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(pp, ip, cp) {
-          this.resolveRequest = ip, this.tearDownNotification = cp, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = pp, this.shrinkStartTime = Date.now()
+        constructor(TT, UT, mT) {
+          this.resolveRequest = UT, this.tearDownNotification = mT, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = TT, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(pp) {
-          if (!pp || this.isCompleted) return;
-          const ip = this.getOuterCircleProgress();
-          if (ip <= this.parameters.Xi && ip >= -this.parameters.Xi) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.Ci) return void this.complete(!0)
+        handleMouseInput(TT) {
+          if (!TT || this.isCompleted) return;
+          const UT = this.getOuterCircleProgress();
+          if (UT <= this.parameters.fU && UT >= -this.parameters.fU) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.cU) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, Sp.G)(this.parameters.li) && this.misses > this.parameters.li ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, gT.E)(this.parameters.qU) && this.misses > this.parameters.qU ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.Xi && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.fU && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.Ei
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.vU
         }
-        complete(pp) {
-          this.isCompleted = !0, this.resolveRequest(pp)
+        complete(TT) {
+          this.isCompleted = !0, this.resolveRequest(TT)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              Ci: this.parameters.Ci,
+              cU: this.parameters.cU,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function tp() {
-      (0, Dp.g)(xp.C.Qte, wp ? xp.C.Qte : 0), wp ? op.m.GA("qteStateUpdated", wp.getState()) : op.m.GA("qteStateUpdated", {
+    function fT() {
+      (0, jT.g)(nT.y.Qte, cT ? nT.y.Qte : 0), cT ? zT.j.EZ("qteStateUpdated", cT.getState()) : zT.j.EZ("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class Hp {
-      constructor(pp, ip) {
-        this.resultPromise = pp, this.tearDownQTE = ip
+    class qT {
+      constructor(TT, UT) {
+        this.resultPromise = TT, this.tearDownQTE = UT
       }
-      static create(pp, ip, cp) {
-        const Op = Promise.race([pp, ip]);
-        return new Hp(Op, cp)
+      static create(TT, UT, mT) {
+        const WT = Promise.race([TT, UT]);
+        return new qT(WT, mT)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class dp {
-      static queueQTE(pp, ip, cp) {
-        let Op, op;
-        const Ip = new Promise((pp => {
-            Op = pp
+    class iT {
+      static queueQTE(TT, UT, mT) {
+        let WT, zT;
+        const MT = new Promise((TT => {
+            WT = TT
           })),
-          Sp = new Promise((pp => {
-            op = () => {
-              pp("qteTornDown")
+          gT = new Promise((TT => {
+            zT = () => {
+              TT("qteTornDown")
             }
           })),
-          xp = Promise.race([Ip, Sp]).then((() => {})),
-          Lp = new Ap(pp, ip, cp, op, xp, Op);
-        return Up.set(pp, Lp), yp.enqueue(Lp), wp || this.processNextQTE(), Hp.create(Ip, Sp, op)
+          nT = Promise.race([MT, gT]).then((() => {})),
+          HT = new lT(TT, UT, mT, zT, nT, WT);
+        return ZT.set(TT, HT), BT.enqueue(HT), cT || this.processNextQTE(), qT.create(MT, gT, zT)
       }
       static async processNextQTE() {
-        if (wp || yp.wy()) return void(yp.wy() && wp && (wp = null, tp()));
-        const pp = await yp.dequeue();
-        if (!Up.has(pp.id)) return void await this.processNextQTE();
-        Up.delete(pp.id);
-        const ip = new Wp(pp.id, pp.type, pp.parameters, pp.resolveRequest, pp.onDonePromise, pp.tearDownNotification);
-        wp = ip, tp();
+        if (cT || BT.TB()) return void(BT.TB() && cT && (cT = null, fT()));
+        const TT = await BT.dequeue();
+        if (!ZT.has(TT.id)) return void await this.processNextQTE();
+        ZT.delete(TT.id);
+        const UT = new pT(TT.id, TT.type, TT.parameters, TT.resolveRequest, TT.onDonePromise, TT.tearDownNotification);
+        cT = UT, fT();
         try {
-          await ip.waitUntilDone()
-        } catch (cp) {
-          console.error("Error while waiting for QTE to resolve:", cp.stack)
+          await UT.waitUntilDone()
+        } catch (mT) {
+          console.error("Error while waiting for QTE to resolve:", mT.stack)
         }
-        wp === ip && (wp.cleanup(), wp = null, tp()), await this.processNextQTE()
+        cT === UT && (cT.cleanup(), cT = null, fT()), await this.processNextQTE()
       }
-      static cancelQTE(pp) {
-        if (wp && wp.id === pp) return wp.tearDown(), wp = null, tp(), void this.processNextQTE();
-        const ip = Up.get(pp);
-        ip && (Up.delete(pp), ip.tearDownNotification())
+      static cancelQTE(TT) {
+        if (cT && cT.id === TT) return cT.tearDown(), cT = null, fT(), void this.processNextQTE();
+        const UT = ZT.get(TT);
+        UT && (ZT.delete(TT), UT.tearDownNotification())
       }
       static getCurrentState() {
-        return wp ? wp.getState() : {
+        return cT ? cT.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,209 +348,209 @@ export const modules = {
         }
       }
       static reset() {
-        wp && (wp.tearDown(), wp = null), Up.forEach(((pp, ip) => {
-          this.cancelQTE(ip)
-        })), yp.emptyQueue(), Up.clear(), tp()
+        cT && (cT.tearDown(), cT = null), ZT.forEach(((TT, UT) => {
+          this.cancelQTE(UT)
+        })), BT.emptyQueue(), ZT.clear(), fT()
       }
     }
   },
-  4886: (pp, ip, cp) => {
-    cp.d(ip, {
-      B: () => tp,
-      D: () => Sp,
-      H: () => xp,
-      K: () => Rp,
-      b: () => mp,
-      c: () => dp,
-      f: () => Xp,
-      h: () => Ep,
-      j: () => vp,
-      m: () => jp,
-      n: () => Hp,
-      p: () => ep,
-      s: () => qp,
-      u: () => Mp,
-      y: () => Cp
+  4883: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => bT,
+      C: () => xT,
+      G: () => dT,
+      I: () => wT,
+      K: () => fT,
+      L: () => gT,
+      N: () => nT,
+      Q: () => JT,
+      c: () => YT,
+      g: () => iT,
+      k: () => aT,
+      n: () => tT,
+      r: () => vT,
+      u: () => OT,
+      x: () => qT
     });
-    var Op = cp(4895);
-    const op = {
+    var WT = mT(4890);
+    const zT = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Ip = op;
+    let MT = zT;
 
-    function Sp(pp) {
-      Ip = null !== pp && void 0 !== pp ? pp : op
+    function gT(TT) {
+      MT = null !== TT && void 0 !== TT ? TT : zT
     }
 
-    function xp() {
-      return Ip
+    function nT() {
+      return MT
     }
-    const Lp = new Set,
-      Yp = new Set;
-    let Dp = -1;
-    const Ap = new Set,
-      Pp = new Set;
-    let Wp = 0,
-      yp = 0;
-    const Up = new Set,
-      wp = new Set;
+    const HT = new Set,
+      kT = new Set;
+    let jT = -1;
+    const lT = new Set,
+      LT = new Set;
+    let pT = 0,
+      BT = 0;
+    const ZT = new Set,
+      cT = new Set;
 
-    function vp(pp) {
-      return Lp.add(pp), () => {
-        Lp.delete(pp)
+    function vT(TT) {
+      return HT.add(TT), () => {
+        HT.delete(TT)
       }
     }
 
-    function tp(pp, ip) {
-      for (const Op of Lp) try {
-        Op(pp)
-      } catch (cp) {
-        ip(cp)
+    function fT(TT, UT) {
+      for (const WT of HT) try {
+        WT(TT)
+      } catch (mT) {
+        UT(mT)
       }
     }
 
-    function Hp(pp) {
-      return Yp.add(pp), () => {
-        Yp.delete(pp)
+    function qT(TT) {
+      return kT.add(TT), () => {
+        kT.delete(TT)
       }
     }
 
-    function dp(pp, ip) {
-      const cp = Dp < 0 ? 0 : pp - Dp;
-      Dp = pp;
-      for (const op of Yp) try {
-        op(cp)
-      } catch (Op) {
-        ip(Op)
+    function iT(TT, UT) {
+      const mT = jT < 0 ? 0 : TT - jT;
+      jT = TT;
+      for (const zT of kT) try {
+        zT(mT)
+      } catch (WT) {
+        UT(WT)
       }
     }
 
-    function ep(pp) {
-      return Ap.add(pp), () => {
-        Ap.delete(pp)
+    function bT(TT) {
+      return lT.add(TT), () => {
+        lT.delete(TT)
       }
     }
 
-    function jp(pp) {
-      return Pp.add(pp), () => {
-        Pp.delete(pp)
+    function OT(TT) {
+      return LT.add(TT), () => {
+        LT.delete(TT)
       }
     }
-    let kp = 0;
+    let eT = 0;
 
-    function mp(pp) {
-      kp += pp
+    function YT(TT) {
+      eT += TT
     }
 
-    function Rp() {
-      const pp = kp;
-      return kp = 0, pp
+    function JT() {
+      const TT = eT;
+      return eT = 0, TT
     }
 
-    function qp(pp) {
-      return Up.add(pp), () => {
-        Up.delete(pp)
-      }
-    }
-
-    function Mp(pp) {
-      return wp.add(pp), () => {
-        wp.delete(pp)
+    function xT(TT) {
+      return ZT.add(TT), () => {
+        ZT.delete(TT)
       }
     }
 
-    function Cp() {
-      Wp = 0, yp = 0, Dp = -1
+    function dT(TT) {
+      return cT.add(TT), () => {
+        cT.delete(TT)
+      }
     }
 
-    function Ep(pp, ip) {
-      if ("paced" === pp) return yp += ip, null;
-      if ("drawn" !== pp && "skipped" !== pp) return null;
-      const cp = ip + yp;
-      return yp = 0, cp
+    function wT() {
+      pT = 0, BT = 0, jT = -1
     }
 
-    function Xp(pp, ip, cp, op) {
-      const Ip = (0, Op.j)(ip),
-        Sp = pp > 0 ? performance.now() : 0;
-      for (let Op = 0; Op < pp; Op++)
-        for (const pp of Up) try {
-          pp()
-        } catch (xp) {
-          op(xp)
+    function tT(TT, UT) {
+      if ("paced" === TT) return BT += UT, null;
+      if ("drawn" !== TT && "skipped" !== TT) return null;
+      const mT = UT + BT;
+      return BT = 0, mT
+    }
+
+    function aT(TT, UT, mT, zT) {
+      const MT = (0, WT.g)(UT),
+        gT = TT > 0 ? performance.now() : 0;
+      for (let WT = 0; WT < TT; WT++)
+        for (const TT of ZT) try {
+          TT()
+        } catch (nT) {
+          zT(nT)
         }
-      if (pp > 0 && mp(performance.now() - Sp), null !== cp) {
-        for (const pp of Ap) try {
-          pp(cp)
-        } catch (xp) {
-          op(xp)
+      if (TT > 0 && YT(performance.now() - gT), null !== mT) {
+        for (const TT of lT) try {
+          TT(mT)
+        } catch (nT) {
+          zT(nT)
         }
-        Wp += cp
+        pT += mT
       }
-      if ("drawn" === ip) {
-        const pp = Wp;
-        Wp = 0;
-        for (const ip of Pp) try {
-          ip(pp)
-        } catch (xp) {
-          op(xp)
+      if ("drawn" === UT) {
+        const TT = pT;
+        pT = 0;
+        for (const UT of LT) try {
+          UT(TT)
+        } catch (nT) {
+          zT(nT)
         }
       }
-      for (const Op of wp) try {
-        Op(pp, Ip)
-      } catch (xp) {
-        op(xp)
+      for (const WT of cT) try {
+        WT(TT, MT)
+      } catch (nT) {
+        zT(nT)
       }
     }
   },
-  4919: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Lp,
-      e: () => Ip,
-      f: () => xp
+  4906: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      f: () => MT,
+      h: () => nT
     });
-    var Op = cp(2457),
-      op = cp(4921);
+    var WT = mT(2522),
+      zT = mT(4912);
 
-    function Ip(pp) {
+    function MT(TT) {
       let {
-        action: ip,
-        flags: cp
-      } = pp;
-      return "mid-fire" === ip && 0 !== (cp & Op.c.AltLeftClick)
+        action: UT,
+        flags: mT
+      } = TT;
+      return "mid-fire" === UT && 0 !== (mT & WT.b.AltLeftClick)
     }
-    const Sp = new Set;
+    const gT = new Set;
 
-    function xp(pp) {
-      return Sp.add(pp), () => {
-        Sp.delete(pp)
+    function nT(TT) {
+      return gT.add(TT), () => {
+        gT.delete(TT)
       }
     }
 
-    function Lp(pp) {
-      const ip = op.c[255 & pp];
-      if (void 0 === ip) return;
-      const cp = pp >>> 8 & 255,
-        Ip = {
-          action: ip,
-          down: 0 !== (cp & Op.c.Down),
-          flags: cp,
-          press: pp >>> 16
+    function HT(TT) {
+      const UT = zT.c[255 & TT];
+      if (void 0 === UT) return;
+      const mT = TT >>> 8 & 255,
+        MT = {
+          action: UT,
+          down: 0 !== (mT & WT.b.Down),
+          flags: mT,
+          press: TT >>> 16
         };
-      for (const Op of Sp) Op(Ip)
+      for (const WT of gT) WT(MT)
     }
   },
-  4921: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      e: () => Ip,
-      i: () => Sp,
-      j: () => Op,
-      n: () => xp
+  4912: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      e: () => MT,
+      f: () => gT,
+      g: () => WT,
+      i: () => nT
     });
-    const Op = {
+    const WT = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -747,8 +747,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      op = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Ip = {
+      zT = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      MT = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -811,63 +811,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      Sp = {
+      gT = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      xp = [16]
+      nT = [16]
   },
-  4927: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      e: () => Sp,
-      g: () => Yp
+  4915: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      e: () => gT,
+      g: () => kT
     });
-    var Op = cp(2457),
-      op = cp(2463);
-    const Ip = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var WT = mT(2522),
+      zT = mT(2525);
+    const MT = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function Sp(pp) {
-      return pp instanceof HTMLElement && (!!(pp.isContentEditable || pp instanceof HTMLTextAreaElement || pp instanceof HTMLSelectElement) || pp instanceof HTMLInputElement && !Ip.has(pp.type))
+    function gT(TT) {
+      return TT instanceof HTMLElement && (!!(TT.isContentEditable || TT instanceof HTMLTextAreaElement || TT instanceof HTMLSelectElement) || TT instanceof HTMLInputElement && !MT.has(TT.type))
     }
 
-    function xp(pp) {
-      let ip = null;
-      const cp = cp => {
-          const op = Sp(cp);
-          op !== ip && (ip = op, pp(Op.i.UiCapture, Op.C.Keyboard, 0, 0, op ? Op.C.Keyboard : 0))
+    function nT(TT) {
+      let UT = null;
+      const mT = mT => {
+          const zT = gT(mT);
+          zT !== UT && (UT = zT, TT(WT.g.UiCapture, WT.y.Keyboard, 0, 0, zT ? WT.y.Keyboard : 0))
         },
-        op = pp => {
-          cp(pp.target)
+        zT = TT => {
+          mT(TT.target)
         },
-        Ip = pp => {
-          cp(pp.relatedTarget)
+        MT = TT => {
+          mT(TT.relatedTarget)
         },
-        xp = () => {
-          cp(document.activeElement)
+        nT = () => {
+          mT(document.activeElement)
         },
-        Lp = {
+        HT = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", op, Lp), document.addEventListener("focusout", Ip, Lp), document.addEventListener("keydown", xp, Lp), cp(document.activeElement), () => {
-        document.removeEventListener("focusin", op, Lp), document.removeEventListener("focusout", Ip, Lp), document.removeEventListener("keydown", xp, Lp)
+      return document.addEventListener("focusin", zT, HT), document.addEventListener("focusout", MT, HT), document.addEventListener("keydown", nT, HT), mT(document.activeElement), () => {
+        document.removeEventListener("focusin", zT, HT), document.removeEventListener("focusout", MT, HT), document.removeEventListener("keydown", nT, HT)
       }
     }
-    const Lp = new Map;
+    const HT = new Map;
 
-    function Yp(pp, ip) {
-      var cp;
-      let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Lp.set(Op, (null !== (cp = Lp.get(Op)) && void 0 !== cp ? cp : 0) & ~pp | ip & pp);
-      let Ip = 0;
-      for (const op of Lp.values()) Ip |= op;
-      return (0, op.E)(pp, Ip & pp)
+    function kT(TT, UT) {
+      var mT;
+      let WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      HT.set(WT, (null !== (mT = HT.get(WT)) && void 0 !== mT ? mT : 0) & ~TT | UT & TT);
+      let MT = 0;
+      for (const zT of HT.values()) MT |= zT;
+      return (0, zT.A)(TT, MT & TT)
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

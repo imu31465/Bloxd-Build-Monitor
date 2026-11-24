@@ -1,2046 +1,2046 @@
 export const id = 6;
 export const ids = [6];
 export const modules = {
-  42915: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/bloxd_wasm_webgl_bg.5a7acf67a8d13ac5aed9.wasm"
+  42798: (TT, UT, mT) => {
+    TT.exports = mT.p + "static/media/bloxd_wasm_webgl_bg.cef1a8dbb9b17e0d9ef3.wasm"
   },
-  42908: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      bloxdWasmWebgl: () => li
+  42790: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      bloxdWasmWebgl: () => aU
     });
-    var Op = {};
-    cp.r(Op), cp.d(Op, {
-      hw: () => op,
-      KIp: () => Ip,
-      Renderer: () => Sp,
-      dA: () => xp,
-      default: () => Xi,
-      initSync: () => Ei,
-      eA: () => Lp,
-      XOp: () => Yp,
-      uA: () => Dp,
-      jA: () => Ap,
-      kA: () => Pp,
-      mA: () => Wp,
-      RA: () => yp,
-      qA: () => Up,
-      MA: () => wp,
-      sw: () => vp,
-      lA: () => tp,
-      kOp: () => Hp,
-      VIp: () => dp,
-      mOp: () => ep,
-      pSp: () => jp,
-      iSp: () => kp,
-      qOp: () => mp,
-      cSp: () => Rp,
-      OSp: () => qp,
-      COp: () => Mp,
-      JA: () => Cp,
-      BA: () => Ep
+    var WT = {};
+    mT.r(WT), mT.d(WT, {
+      Jc: () => zT,
+      wMT: () => MT,
+      Renderer: () => gT,
+      Ul: () => nT,
+      default: () => tU,
+      initSync: () => wU,
+      ml: () => HT,
+      LWT: () => kT,
+      Wl: () => jT,
+      zl: () => lT,
+      Ml: () => LT,
+      gl: () => pT,
+      nl: () => BT,
+      Hl: () => ZT,
+      kl: () => cT,
+      Qc: () => vT,
+      pl: () => fT,
+      MWT: () => qT,
+      tMT: () => iT,
+      gWT: () => bT,
+      aMT: () => OT,
+      yMT: () => eT,
+      HWT: () => YT,
+      XMT: () => JT,
+      IMT: () => xT,
+      jWT: () => dT,
+      Zl: () => wT,
+      cl: () => tT
     });
-    class op {
+    class zT {
       __destroy_into_raw() {
-        const pp = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Np.unregister(this), pp
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, sT.unregister(this), TT
       }
       free() {
-        const pp = this.__destroy_into_raw();
-        qi.spmq(pp, 0)
+        const TT = this.__destroy_into_raw();
+        JU.jagn(TT, 0)
       }
-      static MOp() {
-        return qi.uDmS() >>> 0
+      static kWT() {
+        return JU.aB6D() >>> 0
       }
-      oSp() {
-        return qi.qpMO(this.__wbg_ptr)
+      QMT() {
+        return JU.mRPP(this.__wbg_ptr)
       }
-      OIp() {
-        return qi.YjFk(this.__wbg_ptr) >>> 0
+      tzT() {
+        return JU.kfEi(this.__wbg_ptr) >>> 0
       }
-      ISp(pp, ip, cp) {
-        return qi.Bifo(this.__wbg_ptr, pp, ip, cp) >>> 0
+      sMT(TT, UT, mT) {
+        return JU.OdMN(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      nP(pp, ip, cp) {
-        return qi.slJI(this.__wbg_ptr, pp, ip, cp) >>> 0
+      OL(TT, UT, mT) {
+        return JU.Nb45(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      SSp() {
-        return qi.Foy7(this.__wbg_ptr) >>> 0
+      FMT() {
+        return JU.WQuZ(this.__wbg_ptr) >>> 0
       }
-      IIp(pp, ip, cp, Op, op, Ip, Sp) {
-        return qi.oils(this.__wbg_ptr, pp, ip, cp, Op, op, Ip, Sp)
+      yzT(TT, UT, mT, WT, zT, MT, gT) {
+        return JU.iYeM(this.__wbg_ptr, TT, UT, mT, WT, zT, MT, gT)
       }
-      xSp(pp, ip, cp) {
-        return qi.qSvO(this.__wbg_ptr, pp, ip, cp) >>> 0
+      PMT(TT, UT, mT) {
+        return JU.xmM4(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      LSp() {
-        return qi.bNjQ(this.__wbg_ptr) >>> 0
+      VMT() {
+        return JU.bKpv(this.__wbg_ptr) >>> 0
       }
-      YSp() {
-        return qi.GHs8(this.__wbg_ptr) >>> 0
+      uMT() {
+        return JU.eJx1(this.__wbg_ptr) >>> 0
       }
-      ASp() {
-        return qi.EIzx(this.__wbg_ptr) >>> 0
+      rMT() {
+        return JU.eSxo(this.__wbg_ptr) >>> 0
       }
-      craft(pp, ip, cp) {
-        return qi.u3Ci(this.__wbg_ptr, pp, ip, cp) >>> 0
+      craft(TT, UT, mT) {
+        return JU.XbWY(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      AIp(pp, ip, cp) {
-        return qi.T56Q(this.__wbg_ptr, pp, ip, cp) >>> 0
+      uzT(TT, UT, mT) {
+        return JU.bj2T(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      SIp() {
-        return qi.To8d(this.__wbg_ptr) >>> 0
+      XzT() {
+        return JU.nnHV(this.__wbg_ptr) >>> 0
       }
-      xIp(pp) {
-        return qi.eqSR(this.__wbg_ptr, pp) >>> 0
+      IzT(TT) {
+        return JU.ssYA(this.__wbg_ptr, TT) >>> 0
       }
-      LIp(pp, ip, cp, Op, op, Ip) {
-        return qi.BSBR(this.__wbg_ptr, pp, ip, cp, Op, op, Ip) >>> 0
+      szT(TT, UT, mT, WT, zT, MT) {
+        return JU.KyPV(this.__wbg_ptr, TT, UT, mT, WT, zT, MT) >>> 0
       }
-      oIp() {
-        return qi.KRd0(this.__wbg_ptr) >>> 0
+      azT() {
+        return JU.Nam9(this.__wbg_ptr) >>> 0
       }
-      PSp() {
-        return qi.aSmq(this.__wbg_ptr) >>> 0
+      KMT() {
+        return JU.BKCx(this.__wbg_ptr) >>> 0
       }
-      WSp(pp) {
-        return qi.PHxq(this.__wbg_ptr, pp) >>> 0
+      SMT(TT) {
+        return JU.RAU1(this.__wbg_ptr, TT) >>> 0
       }
-      WIp(pp) {
-        return qi.uwSe(this.__wbg_ptr, pp) >>> 0
+      rzT(TT) {
+        return JU.huP0(this.__wbg_ptr, TT) >>> 0
       }
-      ySp(pp) {
-        return qi.PTWM(this.__wbg_ptr, pp) >>> 0
+      NMT(TT) {
+        return JU.ISXt(this.__wbg_ptr, TT) >>> 0
       }
-      wSp(pp) {
-        return qi.hmkD(this.__wbg_ptr, pp) >>> 0
+      EMT(TT) {
+        return JU.RR3M(this.__wbg_ptr, TT) >>> 0
       }
-      frame(pp, ip, cp, Op, op, Ip) {
-        return qi.sI2t(this.__wbg_ptr, pp, ip, cp, Op, op, Ip) >>> 0
+      frame(TT, UT, mT, WT, zT, MT) {
+        return JU.ZdJD(this.__wbg_ptr, TT, UT, mT, WT, zT, MT) >>> 0
       }
-      tSp(pp) {
-        return 0 !== qi.HmDp(this.__wbg_ptr, pp)
+      DMT(TT) {
+        return 0 !== JU.oMa6(this.__wbg_ptr, TT)
       }
-      Zw() {
-        return qi.sbAI(this.__wbg_ptr) >>> 0
+      Xc() {
+        return JU.VZm6(this.__wbg_ptr) >>> 0
       }
-      HSp(pp, ip) {
-        return qi.cFdt(this.__wbg_ptr, pp, ip) >>> 0
+      oMT(TT, UT) {
+        return JU.aGGs(this.__wbg_ptr, TT, UT) >>> 0
       }
-      dSp(pp) {
-        return qi.lzFx(this.__wbg_ptr, pp) >>> 0
+      RMT(TT) {
+        return JU.NseN(this.__wbg_ptr, TT) >>> 0
       }
-      RW() {
-        return qi.N5K4(this.__wbg_ptr) >>> 0
+      Hp() {
+        return JU.Zv2u(this.__wbg_ptr) >>> 0
       }
-      eSp() {
-        return qi.vzXZ(this.__wbg_ptr) >>> 0
+      TgT() {
+        return JU.gwLV(this.__wbg_ptr) >>> 0
       }
-      VA() {
-        return qi.s2fB(this.__wbg_ptr) >>> 0
+      yl() {
+        return JU.K15b(this.__wbg_ptr) >>> 0
       }
-      uSp(pp, ip, cp, Op, op) {
-        return qi.Y73R(this.__wbg_ptr, pp, ip, cp, Op, op) >>> 0
+      UgT(TT, UT, mT, WT, zT) {
+        return JU.Yi1s(this.__wbg_ptr, TT, UT, mT, WT, zT) >>> 0
       }
-      jSp(pp, ip, cp) {
-        return qi.g9uw(this.__wbg_ptr, pp, ip, cp) >>> 0
+      mgT(TT, UT, mT) {
+        return JU.atPE(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      kSp(pp, ip, cp, Op) {
-        return qi.AAQc(this.__wbg_ptr, pp, ip, cp, Op) >>> 0
+      WgT(TT, UT, mT, WT) {
+        return JU.AYo5(this.__wbg_ptr, TT, UT, mT, WT) >>> 0
       }
-      mSp(pp, ip, cp) {
-        return qi.A95N(this.__wbg_ptr, pp, ip, cp) >>> 0
+      zgT(TT, UT, mT) {
+        return JU.kxrt(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      RSp(pp, ip) {
-        return qi.uCIp(this.__wbg_ptr, pp, ip) >>> 0
+      MgT(TT, UT) {
+        return JU.h63U(this.__wbg_ptr, TT, UT) >>> 0
       }
-      PIp(pp) {
-        return qi.WzeQ(this.__wbg_ptr, pp) >>> 0
+      CzT(TT) {
+        return JU.ReSx(this.__wbg_ptr, TT) >>> 0
       }
-      WC() {
-        return qi.lJhG(this.__wbg_ptr) >>> 0
+      jy() {
+        return JU.hBeX(this.__wbg_ptr) >>> 0
       }
-      qSp() {
-        return qi.VXC7(this.__wbg_ptr) >>> 0
+      ggT() {
+        return JU.RFBT(this.__wbg_ptr) >>> 0
       }
-      aw() {
-        return qi.B9f6(this.__wbg_ptr) >>> 0
+      xc() {
+        return JU.Zvr3(this.__wbg_ptr) >>> 0
       }
-      MSp() {
-        return qi.A7Z5(this.__wbg_ptr) >>> 0
+      ngT() {
+        return JU.PzXk(this.__wbg_ptr) >>> 0
       }
-      CSp() {
-        return qi.LVNf(this.__wbg_ptr) >>> 0
+      HgT() {
+        return JU.uGh2(this.__wbg_ptr) >>> 0
       }
-      constructor(pp, ip) {
-        const cp = qi.Bi71(pp, ip);
-        return this.__wbg_ptr = cp, Np.register(this, this.__wbg_ptr, this), this
+      constructor(TT, UT) {
+        const mT = JU.Cvdh(TT, UT);
+        return this.__wbg_ptr = mT, sT.register(this, this.__wbg_ptr, this), this
       }
-      ESp(pp) {
-        return qi.ECyO(this.__wbg_ptr, pp) >>> 0
+      kgT(TT) {
+        return JU.HLpV(this.__wbg_ptr, TT) >>> 0
       }
-      cv() {
-        return qi.ovF6(this.__wbg_ptr) >>> 0
+      uc() {
+        return JU.WDFV(this.__wbg_ptr) >>> 0
       }
-      CIp(pp, ip) {
-        return qi.jSKa(this.__wbg_ptr, pp, ip) >>> 0
+      nMT(TT, UT) {
+        return JU.m7SD(this.__wbg_ptr, TT, UT) >>> 0
       }
-      mIp(pp) {
-        return qi.pL2q(this.__wbg_ptr, pp) >>> 0
+      WMT(TT) {
+        return JU.a7on(this.__wbg_ptr, TT) >>> 0
       }
-      XSp(pp, ip, cp, Op) {
-        return qi.a2dG(this.__wbg_ptr, pp, ip, cp, Op) >>> 0
+      jgT(TT, UT, mT, WT) {
+        return JU.sdUT(this.__wbg_ptr, TT, UT, mT, WT) >>> 0
       }
-      QIp(pp) {
-        return qi.hLW3(this.__wbg_ptr, pp) >>> 0
+      lMT(TT) {
+        return JU.xQT7(this.__wbg_ptr, TT) >>> 0
       }
-      tIp() {
-        qi.xZIH(this.__wbg_ptr)
+      EzT() {
+        JU.gvkp(this.__wbg_ptr)
       }
-      TIp(pp) {
-        qi.uZKY(this.__wbg_ptr, pp)
+      ZMT(TT) {
+        JU.Cnix(this.__wbg_ptr, TT)
       }
-      NIp(pp) {
-        return qi.eXco(this.__wbg_ptr, pp)
+      BMT(TT) {
+        return JU.rKhn(this.__wbg_ptr, TT)
       }
-      vIp() {
-        return qi.aWfb(this.__wbg_ptr) >>> 0
+      NzT() {
+        return JU.ReK2(this.__wbg_ptr) >>> 0
       }
-      gw() {
-        return qi.lWPx(this.__wbg_ptr) >>> 0
+      tc() {
+        return JU.M08d(this.__wbg_ptr) >>> 0
       }
-      XIp() {
-        return qi.BRIZ(this.__wbg_ptr) >>> 0
+      kMT() {
+        return JU.HpS0(this.__wbg_ptr) >>> 0
       }
-      DSp(pp) {
-        return qi.SpRl(this.__wbg_ptr, pp) >>> 0
+      CMT(TT) {
+        return JU.nGz3(this.__wbg_ptr, TT) >>> 0
       }
-      lSp(pp) {
-        return qi.t773(this.__wbg_ptr, pp) >>> 0
+      lgT(TT) {
+        return JU.aexX(this.__wbg_ptr, TT) >>> 0
       }
-      QSp(pp) {
-        return qi.Pv4T(this.__wbg_ptr, pp) >>> 0
+      LgT(TT) {
+        return JU.Mqpt(this.__wbg_ptr, TT) >>> 0
       }
-      JSp(pp) {
-        return qi.IfWo(this.__wbg_ptr, pp) >>> 0
+      pgT(TT) {
+        return JU.MI4Z(this.__wbg_ptr, TT) >>> 0
       }
-      salvage(pp, ip, cp) {
-        return qi.IhCb(this.__wbg_ptr, pp, ip, cp) >>> 0
+      salvage(TT, UT, mT) {
+        return JU.vc9K(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      UIp(pp) {
-        return qi.KYhh(this.__wbg_ptr, pp) >>> 0
+      SzT(TT) {
+        return JU.kWeU(this.__wbg_ptr, TT) >>> 0
       }
-      cIp() {
-        return qi.DTvD(this.__wbg_ptr) >>> 0
+      wzT() {
+        return JU.gIF9(this.__wbg_ptr) >>> 0
       }
-      BSp(pp) {
-        return qi.kSQw(this.__wbg_ptr, pp) >>> 0
+      BgT(TT) {
+        return JU.XMDv(this.__wbg_ptr, TT) >>> 0
       }
-      NSp(pp) {
-        qi.e71C(this.__wbg_ptr, pp)
+      ZgT(TT) {
+        JU.vndt(this.__wbg_ptr, TT)
       }
-      TSp(pp) {
-        return 0 !== qi.IkNd(this.__wbg_ptr, bp(pp))
+      cgT(TT) {
+        return 0 !== JU.huTW(this.__wbg_ptr, VT(TT))
       }
-      AW(pp, ip, cp, Op) {
-        return qi.v2Nl(this.__wbg_ptr, pp, ip, cp, Op) >>> 0
+      SL(TT, UT, mT, WT) {
+        return JU.ZVdu(this.__wbg_ptr, TT, UT, mT, WT) >>> 0
       }
-      ROp(pp, ip, cp) {
-        const Op = Hi(pp, qi.Lklm, qi.mB2K),
-          op = Mi,
-          Ip = wi(ip, qi.Lklm),
-          Sp = Mi,
-          xp = function(pp, ip) {
-            const cp = ip(8 * pp.length, 8) >>> 0;
-            return ii().set(pp, cp / 8), Mi = pp.length, cp
-          }(cp, qi.Lklm),
-          Lp = Mi;
-        return 0 !== qi.Y39M(this.__wbg_ptr, Op, op, Ip, Sp, xp, Lp)
+      nWT(TT, UT, mT) {
+        const WT = vU(TT, JU.dRuG, JU.VgFS),
+          zT = xU,
+          MT = BU(UT, JU.dRuG),
+          gT = xU,
+          nT = function(TT, UT) {
+            const mT = UT(8 * TT.length, 8) >>> 0;
+            return RT().set(TT, mT / 8), xU = TT.length, mT
+          }(mT, JU.dRuG),
+          HT = xU;
+        return 0 !== JU.Fl16(this.__wbg_ptr, WT, zT, MT, gT, nT, HT)
       }
-      fSp(pp) {
-        qi.K4cH(this.__wbg_ptr, pp)
+      vgT(TT) {
+        JU.D4Og(this.__wbg_ptr, TT)
       }
-      bSp(pp, ip) {
-        return 0 !== qi.MW9V(this.__wbg_ptr, pp, ip)
+      fgT(TT, UT) {
+        return 0 !== JU.zj3t(this.__wbg_ptr, TT, UT)
       }
-      hSp(pp) {
-        return qi.OJgy(this.__wbg_ptr, pp) >>> 0
+      qgT(TT) {
+        return JU.M7S5(this.__wbg_ptr, TT) >>> 0
       }
-      nw(pp, ip) {
-        qi.ETfc(this.__wbg_ptr, pp, ip)
+      dc(TT, UT) {
+        JU.zBqs(this.__wbg_ptr, TT, UT)
       }
-      vSp(pp) {
-        qi.cdjl(this.__wbg_ptr, bp(pp))
+      hMT(TT) {
+        JU.DMAr(this.__wbg_ptr, VT(TT))
       }
-      aSp(pp) {
-        qi.jhWx(this.__wbg_ptr, pp)
+      igT(TT) {
+        JU.cAWb(this.__wbg_ptr, TT)
       }
-      DIp(pp, ip, cp) {
-        return qi.Dxh1(this.__wbg_ptr, pp, ip, cp) >>> 0
+      PzT(TT, UT, mT) {
+        return JU.S9YY(this.__wbg_ptr, TT, UT, mT) >>> 0
       }
-      wIp(pp) {
-        return qi.qfOL(this.__wbg_ptr, pp) >>> 0
+      GzT(TT) {
+        return JU.qrZP(this.__wbg_ptr, TT) >>> 0
       }
-      nSp(pp) {
-        qi.gQsx(this.__wbg_ptr, pp)
+      bgT(TT) {
+        JU.xplN(this.__wbg_ptr, TT)
       }
-      FSp(pp) {
-        hp(pp, Sp);
-        var ip = pp.__destroy_into_raw();
-        qi.LD2N(this.__wbg_ptr, ip)
+      OgT(TT) {
+        uT(TT, gT);
+        var UT = TT.__destroy_into_raw();
+        JU.FjLW(this.__wbg_ptr, UT)
       }
-      fOp(pp, ip, cp, Op, op, Ip) {
-        var Sp = yi(pp) ? 0 : vi(pp, qi.Lklm),
-          xp = Mi;
-        const Lp = vi(ip, qi.Lklm),
-          Yp = Mi,
-          Dp = ti(cp, qi.Lklm),
-          Ap = Mi,
-          Pp = wi(Op, qi.Lklm),
-          Wp = Mi;
-        return 0 !== qi.aPkK(this.__wbg_ptr, Sp, xp, Lp, Yp, Dp, Ap, Pp, Wp, op, Ip)
+      qWT(TT, UT, mT, WT, zT, MT) {
+        var gT = LU(TT) ? 0 : ZU(TT, JU.dRuG),
+          nT = xU;
+        const HT = ZU(UT, JU.dRuG),
+          kT = xU,
+          jT = cU(mT, JU.dRuG),
+          lT = xU,
+          LT = BU(WT, JU.dRuG),
+          pT = xU;
+        return 0 !== JU.z3VZ(this.__wbg_ptr, gT, nT, HT, kT, jT, lT, LT, pT, zT, MT)
       }
-      gSp(pp, ip, cp, Op, op) {
-        var Ip = yi(op) ? 0 : vi(op, qi.Lklm),
-          Sp = Mi;
-        qi.NWpZ(this.__wbg_ptr, pp, ip, cp, Op, Ip, Sp)
+      egT(TT, UT, mT, WT, zT) {
+        var MT = LU(zT) ? 0 : ZU(zT, JU.dRuG),
+          gT = xU;
+        JU.LkIx(this.__wbg_ptr, TT, UT, mT, WT, MT, gT)
       }
-      GSp(pp, ip, cp, Op) {
-        const op = ti(pp, qi.Lklm),
-          Ip = Mi,
-          Sp = wi(ip, qi.Lklm),
-          xp = Mi,
-          Lp = ti(cp, qi.Lklm),
-          Yp = Mi;
-        return 0 !== qi.c00O(this.__wbg_ptr, op, Ip, Sp, xp, Lp, Yp, yi(Op) ? 0 : bp(Op))
+      YgT(TT, UT, mT, WT) {
+        const zT = cU(TT, JU.dRuG),
+          MT = xU,
+          gT = BU(UT, JU.dRuG),
+          nT = xU,
+          HT = cU(mT, JU.dRuG),
+          kT = xU;
+        return 0 !== JU.xtBX(this.__wbg_ptr, zT, MT, gT, nT, HT, kT, LU(WT) ? 0 : VT(WT))
       }
-      rSp(pp) {
-        const ip = Hi(pp, qi.Lklm, qi.mB2K),
-          cp = Mi;
-        return 0 !== qi.LZ21(this.__wbg_ptr, ip, cp)
+      JgT(TT) {
+        const UT = vU(TT, JU.dRuG, JU.VgFS),
+          mT = xU;
+        return 0 !== JU.ZN8U(this.__wbg_ptr, UT, mT)
       }
-      ZSp(pp) {
-        return qi.MSEE(this.__wbg_ptr, pp) >>> 0
+      xgT(TT) {
+        return JU.ibc6(this.__wbg_ptr, TT) >>> 0
       }
-      EOp() {
-        return qi.MVro(this.__wbg_ptr) >>> 0
+      lWT() {
+        return JU.qvKZ(this.__wbg_ptr) >>> 0
       }
-      zSp() {
-        const pp = qi.po8l(this.__wbg_ptr);
-        var ip = rp(pp[0], pp[1]).slice();
-        return qi.km9T(pp[0], 4 * pp[1], 4), ip
+      dgT() {
+        const TT = JU.lUA3(this.__wbg_ptr);
+        var UT = NT(TT[0], TT[1]).slice();
+        return JU.DxTA(TT[0], 4 * TT[1], 4), UT
       }
-      sSp() {
-        const pp = qi.rriA(this.__wbg_ptr);
-        return 16777215 === pp ? void 0 : 0 !== pp
+      wgT() {
+        const TT = JU.jwvX(this.__wbg_ptr);
+        return 16777215 === TT ? void 0 : 0 !== TT
       }
-      Fw(pp) {
-        const ip = qi.KMhs(this.__wbg_ptr, pp);
-        var cp = Fp(ip[0], ip[1]).slice();
-        return qi.km9T(ip[0], 8 * ip[1], 8), cp
+      wc(TT) {
+        const UT = JU.JCzR(this.__wbg_ptr, TT);
+        var mT = KT(UT[0], UT[1]).slice();
+        return JU.DxTA(UT[0], 8 * UT[1], 8), mT
       }
-      KSp() {
-        const pp = qi.T0jO(this.__wbg_ptr);
-        var ip = Gp(pp[0], pp[1]);
-        return qi.km9T(pp[0], 4 * pp[1], 4), ip
+      tgT() {
+        const TT = JU.xPGO(this.__wbg_ptr);
+        var UT = GT(TT[0], TT[1]);
+        return JU.DxTA(TT[0], 4 * TT[1], 4), UT
       }
-      VSp(pp, ip, cp, Op, op) {
-        return qi.HV9N(this.__wbg_ptr, pp, ip, cp, Op, op) >>> 0
+      agT(TT, UT, mT, WT, zT) {
+        return JU.ULs6(this.__wbg_ptr, TT, UT, mT, WT, zT) >>> 0
       }
-      pxp() {
-        const pp = qi.yPgj(this.__wbg_ptr);
-        var ip = Gp(pp[0], pp[1]);
-        return qi.km9T(pp[0], 4 * pp[1], 4), ip
+      ygT() {
+        const TT = JU.LyBe(this.__wbg_ptr);
+        var UT = GT(TT[0], TT[1]);
+        return JU.DxTA(TT[0], 4 * TT[1], 4), UT
       }
-      ixp() {
-        return qi.beWZ(this.__wbg_ptr) >>> 0
+      XgT() {
+        return JU.K7We(this.__wbg_ptr) >>> 0
       }
-      cxp() {
-        return qi.ZSeI(this.__wbg_ptr) >>> 0
+      IgT() {
+        return JU.yj8l(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (op.prototype[Symbol.dispose] = op.prototype.free);
-    class Ip {
+    Symbol.dispose && (zT.prototype[Symbol.dispose] = zT.prototype.free);
+    class MT {
       __destroy_into_raw() {
-        const pp = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Tp.unregister(this), pp
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, FT.unregister(this), TT
       }
       free() {
-        const pp = this.__destroy_into_raw();
-        qi.tuWE(pp, 0)
+        const TT = this.__destroy_into_raw();
+        JU.EVNa(TT, 0)
       }
-      attach(pp) {
-        hp(pp, op);
-        return 0 !== qi.a26p(this.__wbg_ptr, pp.__wbg_ptr)
+      attach(TT) {
+        uT(TT, zT);
+        return 0 !== JU.AXYE(this.__wbg_ptr, TT.__wbg_ptr)
       }
       attached() {
-        return 0 !== qi.CxxE(this.__wbg_ptr)
+        return 0 !== JU.rCIO(this.__wbg_ptr)
       }
-      close(pp) {
-        const ip = qi.vY03(this.__wbg_ptr, pp);
-        var cp = Zp(ip[0], ip[1]).slice();
-        return qi.km9T(ip[0], 1 * ip[1], 1), cp
+      close(TT) {
+        const UT = JU.hyp2(this.__wbg_ptr, TT);
+        var mT = ET(UT[0], UT[1]).slice();
+        return JU.DxTA(UT[0], 1 * UT[1], 1), mT
       }
       detach() {
-        qi.s1Pg(this.__wbg_ptr)
+        JU.Io20(this.__wbg_ptr)
       }
-      Oxp() {
-        return qi.roqi(this.__wbg_ptr) >>> 0
+      QgT() {
+        return JU.rCmP(this.__wbg_ptr) >>> 0
       }
-      oxp() {
-        return qi.ENFq(this.__wbg_ptr) >>> 0
+      sgT() {
+        return JU.gn0i(this.__wbg_ptr) >>> 0
       }
-      frame(pp) {
-        return qi.jZE6(this.__wbg_ptr, pp) >>> 0
+      frame(TT) {
+        return JU.Dy7k(this.__wbg_ptr, TT) >>> 0
       }
-      Sxp(pp, ip, cp, Op) {
-        const op = vi(Op, qi.Lklm),
-          Ip = Mi;
-        return qi.d9FI(this.__wbg_ptr, pp, ip, cp, op, Ip)
+      PgT(TT, UT, mT, WT) {
+        const zT = ZU(WT, JU.dRuG),
+          MT = xU;
+        return JU.KJSE(this.__wbg_ptr, TT, UT, mT, zT, MT)
       }
-      xxp() {
-        return 0 !== qi.IIla(this.__wbg_ptr)
+      VgT() {
+        return 0 !== JU.tLJt(this.__wbg_ptr)
       }
-      Lxp(pp, ip) {
-        const cp = vi(ip, qi.Lklm),
-          Op = Mi;
-        qi.HfUg(this.__wbg_ptr, pp, cp, Op)
+      ugT(TT, UT) {
+        const mT = ZU(UT, JU.dRuG),
+          WT = xU;
+        JU.DN1x(this.__wbg_ptr, TT, mT, WT)
       }
       constructor() {
-        const pp = qi.fY8s();
-        return this.__wbg_ptr = pp, Tp.register(this, this.__wbg_ptr, this), this
+        const TT = JU.hMDR();
+        return this.__wbg_ptr = TT, FT.register(this, this.__wbg_ptr, this), this
       }
-      open(pp, ip, cp, Op) {
-        return 0 !== qi.YiX0(this.__wbg_ptr, pp, ip, cp, Op)
+      open(TT, UT, mT, WT) {
+        return 0 !== JU.Ke2v(this.__wbg_ptr, TT, UT, mT, WT)
       }
-      orbit(pp) {
-        const ip = qi.QxIP(this.__wbg_ptr, pp);
-        var cp = Fp(ip[0], ip[1]).slice();
-        return qi.km9T(ip[0], 8 * ip[1], 8), cp
+      orbit(TT) {
+        const UT = JU.wrW1(this.__wbg_ptr, TT);
+        var mT = KT(UT[0], UT[1]).slice();
+        return JU.DxTA(UT[0], 8 * UT[1], 8), mT
       }
-      Ixp() {
-        const pp = qi.Oqr1(this.__wbg_ptr);
-        var ip = rp(pp[0], pp[1]).slice();
-        return qi.km9T(pp[0], 4 * pp[1], 4), ip
+      FgT() {
+        const TT = JU.EcD2(this.__wbg_ptr);
+        var UT = NT(TT[0], TT[1]).slice();
+        return JU.DxTA(TT[0], 4 * TT[1], 4), UT
       }
-      replay(pp) {
-        return qi.trM9(this.__wbg_ptr, pp) >>> 0
+      replay(TT) {
+        return JU.vsRd(this.__wbg_ptr, TT) >>> 0
       }
-      resize(pp, ip, cp) {
-        qi.d7qt(this.__wbg_ptr, pp, ip, cp)
+      resize(TT, UT, mT) {
+        JU.BCBx(this.__wbg_ptr, TT, UT, mT)
       }
-      Yxp(pp) {
-        const ip = vi(pp, qi.Lklm),
-          cp = Mi;
-        return 0 !== qi.kjiz(this.__wbg_ptr, ip, cp)
+      CgT(TT) {
+        const UT = ZU(TT, JU.dRuG),
+          mT = xU;
+        return 0 !== JU.WBfR(this.__wbg_ptr, UT, mT)
       }
-      Axp(pp, ip, cp, Op, op) {
-        const Ip = Hi(ip, qi.Lklm, qi.mB2K),
-          Sp = Mi;
-        return qi.csSz(this.__wbg_ptr, pp, Ip, Sp, cp, Op, op) >>> 0
+      KgT(TT, UT, mT, WT, zT) {
+        const MT = vU(UT, JU.dRuG, JU.VgFS),
+          gT = xU;
+        return JU.QTTM(this.__wbg_ptr, TT, MT, gT, mT, WT, zT) >>> 0
       }
-      Pxp(pp) {
-        qi.ioPZ(this.__wbg_ptr, pp)
+      SgT(TT) {
+        JU.f34H(this.__wbg_ptr, TT)
       }
-      Wxp(pp, ip, cp, Op, op) {
-        const Ip = Hi(cp, qi.Lklm, qi.mB2K),
-          Sp = Mi;
-        return qi.twmL(this.__wbg_ptr, pp, ip, Ip, Sp, Op, op) >>> 0
+      GgT(TT, UT, mT, WT, zT) {
+        const MT = vU(mT, JU.dRuG, JU.VgFS),
+          gT = xU;
+        return JU.omoN(this.__wbg_ptr, TT, UT, MT, gT, WT, zT) >>> 0
       }
-      yxp(pp, ip, cp, Op) {
-        qi.ZmT2(this.__wbg_ptr, pp, ip, cp, Op)
+      NgT(TT, UT, mT, WT) {
+        JU.Q2C3(this.__wbg_ptr, TT, UT, mT, WT)
       }
-      Uxp(pp, ip, cp, Op, op) {
-        const Ip = Hi(cp, qi.Lklm, qi.mB2K),
-          Sp = Mi,
-          xp = Hi(Op, qi.Lklm, qi.mB2K),
-          Lp = Mi;
-        return qi.EyE6(this.__wbg_ptr, pp, ip, Ip, Sp, xp, Lp, op) >>> 0
+      EgT(TT, UT, mT, WT, zT) {
+        const MT = vU(mT, JU.dRuG, JU.VgFS),
+          gT = xU,
+          nT = vU(WT, JU.dRuG, JU.VgFS),
+          HT = xU;
+        return JU.vvXW(this.__wbg_ptr, TT, UT, MT, gT, nT, HT, zT) >>> 0
       }
-      Dxp(pp, ip, cp, Op) {
-        const op = Hi(ip, qi.Lklm, qi.mB2K),
-          Ip = Mi,
-          Sp = wi(cp, qi.Lklm),
-          xp = Mi;
-        return qi.v1tY(this.__wbg_ptr, pp, op, Ip, Sp, xp, Op) >>> 0
+      rgT(TT, UT, mT, WT) {
+        const zT = vU(UT, JU.dRuG, JU.VgFS),
+          MT = xU,
+          gT = BU(mT, JU.dRuG),
+          nT = xU;
+        return JU.LmmR(this.__wbg_ptr, TT, zT, MT, gT, nT, WT) >>> 0
       }
-      FSp(pp) {
-        hp(pp, Sp);
-        var ip = pp.__destroy_into_raw();
-        return 0 !== qi.xNhs(this.__wbg_ptr, ip)
+      OgT(TT) {
+        uT(TT, gT);
+        var UT = TT.__destroy_into_raw();
+        return 0 !== JU.Kynv(this.__wbg_ptr, UT)
       }
-      fOp(pp, ip, cp, Op, op) {
-        var Ip = yi(pp) ? 0 : vi(pp, qi.Lklm),
-          Sp = Mi;
-        const xp = vi(ip, qi.Lklm),
-          Lp = Mi,
-          Yp = ti(cp, qi.Lklm),
-          Dp = Mi,
-          Ap = wi(Op, qi.Lklm),
-          Pp = Mi;
-        return 0 !== qi.bxCT(this.__wbg_ptr, Ip, Sp, xp, Lp, Yp, Dp, Ap, Pp, op)
+      qWT(TT, UT, mT, WT, zT) {
+        var MT = LU(TT) ? 0 : ZU(TT, JU.dRuG),
+          gT = xU;
+        const nT = ZU(UT, JU.dRuG),
+          HT = xU,
+          kT = cU(mT, JU.dRuG),
+          jT = xU,
+          lT = BU(WT, JU.dRuG),
+          LT = xU;
+        return 0 !== JU.k3Hf(this.__wbg_ptr, MT, gT, nT, HT, kT, jT, lT, LT, zT)
       }
-      wxp() {
-        const pp = qi.jZZQ(this.__wbg_ptr);
-        var ip = rp(pp[0], pp[1]).slice();
-        return qi.km9T(pp[0], 4 * pp[1], 4), ip
+      hgT() {
+        const TT = JU.dYb3(this.__wbg_ptr);
+        var UT = NT(TT[0], TT[1]).slice();
+        return JU.DxTA(TT[0], 4 * TT[1], 4), UT
       }
-      vxp(pp) {
-        const ip = qi.ne8q(this.__wbg_ptr, pp);
-        var cp = Zp(ip[0], ip[1]).slice();
-        return qi.km9T(ip[0], 1 * ip[1], 1), cp
+      DgT(TT) {
+        const UT = JU.ytd1(this.__wbg_ptr, TT);
+        var mT = ET(UT[0], UT[1]).slice();
+        return JU.DxTA(UT[0], 1 * UT[1], 1), mT
       }
-      txp(pp) {
-        const ip = qi.RBsT(this.__wbg_ptr, pp);
-        var cp = rp(ip[0], ip[1]).slice();
-        return qi.km9T(ip[0], 4 * ip[1], 4), cp
+      ogT(TT) {
+        const UT = JU.HLkW(this.__wbg_ptr, TT);
+        var mT = NT(UT[0], UT[1]).slice();
+        return JU.DxTA(UT[0], 4 * UT[1], 4), mT
       }
     }
-    Symbol.dispose && (Ip.prototype[Symbol.dispose] = Ip.prototype.free);
-    class Sp {
-      static __wrap(pp) {
-        const ip = Object.create(Sp.prototype);
-        return ip.__wbg_ptr = pp, fp.register(ip, ip.__wbg_ptr, ip), ip
+    Symbol.dispose && (MT.prototype[Symbol.dispose] = MT.prototype.free);
+    class gT {
+      static __wrap(TT) {
+        const UT = Object.create(gT.prototype);
+        return UT.__wbg_ptr = TT, PT.register(UT, UT.__wbg_ptr, UT), UT
       }
       __destroy_into_raw() {
-        const pp = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, fp.unregister(this), pp
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, PT.unregister(this), TT
       }
       free() {
-        const pp = this.__destroy_into_raw();
-        qi.fE0W(pp, 0)
+        const TT = this.__destroy_into_raw();
+        JU.lnii(TT, 0)
       }
     }
 
-    function xp(pp, ip) {
-      const cp = Hi(pp, qi.Lklm, qi.mB2K),
-        Op = Mi,
-        op = qi.j8c1(cp, Op, ip);
-      if (op[1]) throw di(op[0])
+    function nT(TT, UT) {
+      const mT = vU(TT, JU.dRuG, JU.VgFS),
+        WT = xU,
+        zT = JU.uxk9(mT, WT, UT);
+      if (zT[1]) throw fU(zT[0])
     }
 
-    function Lp() {
-      qi.kU6C()
+    function HT() {
+      JU.Gqrc()
     }
 
-    function Yp() {
-      return qi.eQsA()
+    function kT() {
+      return JU.d1w2()
     }
 
-    function Dp() {
-      return qi.hqNq() >>> 0
+    function jT() {
+      return JU.YwTx() >>> 0
     }
 
-    function Ap(pp) {
-      return 0 !== qi.HPM1(pp)
+    function lT(TT) {
+      return 0 !== JU.zHmT(TT)
     }
 
-    function Pp(pp) {
-      return 0 !== qi.Wvs4(pp)
+    function LT(TT) {
+      return 0 !== JU.ySqK(TT)
     }
 
-    function Wp(pp) {
-      qi.lje7(pp)
+    function pT(TT) {
+      JU.BpGu(TT)
     }
 
-    function yp() {
-      return qi.u5Qy() >>> 0
+    function BT() {
+      return JU.Y3HB() >>> 0
     }
 
-    function Up() {
-      return qi.pvrn() >>> 0
+    function ZT() {
+      return JU.dVpe() >>> 0
     }
 
-    function wp() {
-      return 0 !== qi.nVgX()
+    function cT() {
+      return 0 !== JU.X0xq()
     }
 
-    function vp(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-      return di(qi.cYLf(bp(pp), ip, bp(cp), Op, op, Ip, Sp, yi(xp) ? 16777215 : xp ? 1 : 0, Lp, yi(Yp) ? Number.MAX_SAFE_INTEGER : Yp >>> 0))
+    function vT(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+      return fU(JU.eCYX(VT(TT), UT, VT(mT), WT, zT, MT, gT, LU(nT) ? 16777215 : nT ? 1 : 0, HT, LU(kT) ? Number.MAX_SAFE_INTEGER : kT >>> 0))
     }
 
-    function tp() {
-      return qi.HGeR() >>> 0
+    function fT() {
+      return JU.RGDl() >>> 0
     }
 
-    function Hp(pp, ip) {
-      qi.wL8b(pp, bp(ip))
+    function qT(TT, UT) {
+      JU.Nnzq(TT, VT(UT))
     }
 
-    function dp(pp, ip) {
-      qi.pwkj(pp, bp(ip))
+    function iT(TT, UT) {
+      JU.s4Vu(TT, VT(UT))
     }
 
-    function ep(pp) {
-      qi.S9re(pp)
+    function bT(TT) {
+      JU.MH3A(TT)
     }
 
-    function jp(pp) {
-      qi.ZWn1(pp)
+    function OT(TT) {
+      JU.Np55(TT)
     }
 
-    function kp(pp) {
-      const ip = vi(pp, qi.Lklm),
-        cp = Mi;
-      return 0 !== qi.gVoj(ip, cp)
+    function eT(TT) {
+      const UT = ZU(TT, JU.dRuG),
+        mT = xU;
+      return 0 !== JU.il2E(UT, mT)
     }
 
-    function mp(pp) {
-      var ip = yi(pp) ? 0 : vi(pp, qi.Lklm),
-        cp = Mi;
-      const Op = qi.Avxj(ip, cp);
-      let op;
-      return 0 !== Op[0] && (op = Gp(Op[0], Op[1]), qi.km9T(Op[0], 4 * Op[1], 4)), op
+    function YT(TT) {
+      var UT = LU(TT) ? 0 : ZU(TT, JU.dRuG),
+        mT = xU;
+      const WT = JU.jfiQ(UT, mT);
+      let zT;
+      return 0 !== WT[0] && (zT = GT(WT[0], WT[1]), JU.DxTA(WT[0], 4 * WT[1], 4)), zT
     }
 
-    function Rp() {
-      const pp = qi.bTEM();
-      let ip;
-      return 0 !== pp[0] && (ip = oi(pp[0], pp[1]), qi.km9T(pp[0], 1 * pp[1], 1)), ip
+    function JT() {
+      const TT = JU.nt7T();
+      let UT;
+      return 0 !== TT[0] && (UT = mU(TT[0], TT[1]), JU.DxTA(TT[0], 1 * TT[1], 1)), UT
     }
 
-    function qp() {
-      const pp = qi.uZ6r();
-      let ip;
-      return 0 !== pp[0] && (ip = oi(pp[0], pp[1]), qi.km9T(pp[0], 1 * pp[1], 1)), ip
+    function xT() {
+      const TT = JU.Q0Za();
+      let UT;
+      return 0 !== TT[0] && (UT = mU(TT[0], TT[1]), JU.DxTA(TT[0], 1 * TT[1], 1)), UT
     }
 
-    function Mp(pp, ip) {
-      const cp = qi.MJVw(pp, ip);
-      let Op;
-      return 0 !== cp[0] && (Op = oi(cp[0], cp[1]), qi.km9T(cp[0], 1 * cp[1], 1)), Op
+    function dT(TT, UT) {
+      const mT = JU.ebc8(TT, UT);
+      let WT;
+      return 0 !== mT[0] && (WT = mU(mT[0], mT[1]), JU.DxTA(mT[0], 1 * mT[1], 1)), WT
     }
 
-    function Cp() {
-      let pp, ip;
+    function wT() {
+      let TT, UT;
       try {
-        const cp = qi.qSBx();
-        return pp = cp[0], ip = cp[1], oi(cp[0], cp[1])
+        const mT = JU.AwfG();
+        return TT = mT[0], UT = mT[1], mU(mT[0], mT[1])
       } finally {
-        qi.km9T(pp, ip, 1)
+        JU.DxTA(TT, UT, 1)
       }
     }
 
-    function Ep(pp) {
-      qi.Q3Ya(bp(pp))
+    function tT(TT) {
+      JU.MBTL(VT(TT))
     }
 
-    function Xp(pp) {
-      const ip = {
+    function aT(TT) {
+      const UT = {
         __proto__: null,
-        azkJ: function(pp, ip) {
-          return bp(Error(oi(pp, ip)))
+        P8cW: function(TT, UT) {
+          return VT(Error(mU(TT, UT)))
         },
-        dNSE: function(pp) {
-          const ip = Di(pp),
-            cp = "boolean" === typeof ip ? ip : void 0;
-          return yi(cp) ? 16777215 : cp ? 1 : 0
+        dM52: function(TT) {
+          const UT = HU(TT),
+            mT = "boolean" === typeof UT ? UT : void 0;
+          return LU(mT) ? 16777215 : mT ? 1 : 0
         },
-        KhUq: function(pp, ip) {
-          const cp = Hi(np(Di(ip)), qi.Lklm, qi.mB2K),
-            Op = Mi;
-          sp().setInt32(pp + 4, Op, !0), sp().setInt32(pp + 0, cp, !0)
+        DECf: function(TT, UT) {
+          const mT = vU(rT(HU(UT)), JU.dRuG, JU.VgFS),
+            WT = xU;
+          DT().setInt32(TT + 4, WT, !0), DT().setInt32(TT + 0, mT, !0)
         },
-        mxMn: function(pp) {
-          return "function" === typeof Di(pp)
+        FzVI: function(TT) {
+          return "function" === typeof HU(TT)
         },
-        LXSS: function(pp) {
-          const ip = Di(pp);
-          return "object" === typeof ip && null !== ip
+        J6XJ: function(TT) {
+          const UT = HU(TT);
+          return "object" === typeof UT && null !== UT
         },
-        r46E: function(pp) {
-          return void 0 === Di(pp)
+        s8wl: function(TT) {
+          return void 0 === HU(TT)
         },
-        UnVy: function(pp, ip) {
-          const cp = Di(ip),
-            Op = "number" === typeof cp ? cp : void 0;
-          sp().setFloat64(pp + 8, yi(Op) ? 0 : Op, !0), sp().setInt32(pp + 0, !yi(Op), !0)
+        OgFd: function(TT, UT) {
+          const mT = HU(UT),
+            WT = "number" === typeof mT ? mT : void 0;
+          DT().setFloat64(TT + 8, LU(WT) ? 0 : WT, !0), DT().setInt32(TT + 0, !LU(WT), !0)
         },
-        HzoU: function(pp) {
-          throw di(pp)
+        ZKEk: function(TT) {
+          throw fU(TT)
         },
-        SY8x: function(pp, ip) {
-          const cp = Di(ip),
-            Op = "string" === typeof cp ? cp : void 0;
-          var op = yi(Op) ? 0 : Hi(Op, qi.Lklm, qi.mB2K),
-            Ip = Mi;
-          sp().setInt32(pp + 4, Ip, !0), sp().setInt32(pp + 0, op, !0)
+        gzBH: function(TT, UT) {
+          const mT = HU(UT),
+            WT = "string" === typeof mT ? mT : void 0;
+          var zT = LU(WT) ? 0 : vU(WT, JU.dRuG, JU.VgFS),
+            MT = xU;
+          DT().setInt32(TT + 4, MT, !0), DT().setInt32(TT + 0, zT, !0)
         },
-        YiDW: function(pp, ip) {
-          throw new Error(oi(pp, ip))
+        LjwT: function(TT, UT) {
+          throw new Error(mU(TT, UT))
         },
-        V2uK: function(pp) {
-          Di(pp)._wbg_cb_unref()
+        zZX5: function(TT) {
+          HU(TT)._wbg_cb_unref()
         },
-        KZmz: function(pp, ip) {
-          Di(pp).activeTexture(ip >>> 0)
+        UVUK: function(TT, UT) {
+          HU(TT).activeTexture(UT >>> 0)
         },
-        VYpy: function(pp, ip) {
-          Di(pp).activeTexture(ip >>> 0)
+        mkFW: function(TT, UT) {
+          HU(TT).activeTexture(UT >>> 0)
         },
-        MIDS: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            Di(pp).addEventListener(oi(ip, cp), Di(Op))
+        eeIS: function() {
+          return kU((function(TT, UT, mT, WT) {
+            HU(TT).addEventListener(mU(UT, mT), HU(WT))
           }), arguments)
         },
-        Inu5: function(pp, ip, cp) {
-          Di(pp).attachShader(Di(ip), Di(cp))
+        SHiK: function(TT, UT, mT) {
+          HU(TT).attachShader(HU(UT), HU(mT))
         },
-        dGpd: function(pp, ip, cp) {
-          Di(pp).attachShader(Di(ip), Di(cp))
+        hMqA: function(TT, UT, mT) {
+          HU(TT).attachShader(HU(UT), HU(mT))
         },
-        uW6i: function(pp, ip, cp) {
-          Di(pp).beginQuery(ip >>> 0, Di(cp))
+        j5Ej: function(TT, UT, mT) {
+          HU(TT).beginQuery(UT >>> 0, HU(mT))
         },
-        Hb18: function(pp, ip) {
-          Di(pp).beginTransformFeedback(ip >>> 0)
+        AYec: function(TT, UT) {
+          HU(TT).beginTransformFeedback(UT >>> 0)
         },
-        TShx: function(pp, ip, cp, Op) {
-          Di(pp).bindBufferBase(ip >>> 0, cp >>> 0, Di(Op))
+        QFsH: function(TT, UT, mT, WT) {
+          HU(TT).bindBufferBase(UT >>> 0, mT >>> 0, HU(WT))
         },
-        o6q1: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).bindBufferRange(ip >>> 0, cp >>> 0, Di(Op), op, Ip)
+        QbnM: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).bindBufferRange(UT >>> 0, mT >>> 0, HU(WT), zT, MT)
         },
-        bJYp: function(pp, ip, cp) {
-          Di(pp).bindBuffer(ip >>> 0, Di(cp))
+        sVr0: function(TT, UT, mT) {
+          HU(TT).bindBuffer(UT >>> 0, HU(mT))
         },
-        zmXJ: function(pp, ip, cp) {
-          Di(pp).bindBuffer(ip >>> 0, Di(cp))
+        orOw: function(TT, UT, mT) {
+          HU(TT).bindBuffer(UT >>> 0, HU(mT))
         },
-        OySX: function(pp, ip, cp) {
-          Di(pp).bindFramebuffer(ip >>> 0, Di(cp))
+        MFjX: function(TT, UT, mT) {
+          HU(TT).bindFramebuffer(UT >>> 0, HU(mT))
         },
-        Irrf: function(pp, ip, cp) {
-          Di(pp).bindFramebuffer(ip >>> 0, Di(cp))
+        xMA2: function(TT, UT, mT) {
+          HU(TT).bindFramebuffer(UT >>> 0, HU(mT))
         },
-        xVrN: function(pp, ip, cp) {
-          Di(pp).bindRenderbuffer(ip >>> 0, Di(cp))
+        QGNz: function(TT, UT, mT) {
+          HU(TT).bindRenderbuffer(UT >>> 0, HU(mT))
         },
-        pGNa: function(pp, ip, cp) {
-          Di(pp).bindRenderbuffer(ip >>> 0, Di(cp))
+        L6tu: function(TT, UT, mT) {
+          HU(TT).bindRenderbuffer(UT >>> 0, HU(mT))
         },
-        mpQE: function(pp, ip, cp) {
-          Di(pp).bindSampler(ip >>> 0, Di(cp))
+        D1xE: function(TT, UT, mT) {
+          HU(TT).bindSampler(UT >>> 0, HU(mT))
         },
-        u1cX: function(pp, ip, cp) {
-          Di(pp).bindTexture(ip >>> 0, Di(cp))
+        rZiO: function(TT, UT, mT) {
+          HU(TT).bindTexture(UT >>> 0, HU(mT))
         },
-        Yy92: function(pp, ip, cp) {
-          Di(pp).bindTexture(ip >>> 0, Di(cp))
+        WR6N: function(TT, UT, mT) {
+          HU(TT).bindTexture(UT >>> 0, HU(mT))
         },
-        vtVi: function(pp, ip, cp) {
-          Di(pp).bindTransformFeedback(ip >>> 0, Di(cp))
+        bGjt: function(TT, UT, mT) {
+          HU(TT).bindTransformFeedback(UT >>> 0, HU(mT))
         },
-        ej9i: function(pp, ip) {
-          Di(pp).bindVertexArrayOES(Di(ip))
+        y8ME: function(TT, UT) {
+          HU(TT).bindVertexArrayOES(HU(UT))
         },
-        C6RS: function(pp, ip) {
-          Di(pp).bindVertexArray(Di(ip))
+        GgfY: function(TT, UT) {
+          HU(TT).bindVertexArray(HU(UT))
         },
-        VZoH: function(pp, ip, cp) {
-          Di(pp).blendEquationSeparate(ip >>> 0, cp >>> 0)
+        P7ld: function(TT, UT, mT) {
+          HU(TT).blendEquationSeparate(UT >>> 0, mT >>> 0)
         },
-        iPJJ: function(pp, ip, cp) {
-          Di(pp).blendEquationSeparate(ip >>> 0, cp >>> 0)
+        OdFT: function(TT, UT, mT) {
+          HU(TT).blendEquationSeparate(UT >>> 0, mT >>> 0)
         },
-        v9xd: function(pp, ip, cp, Op, op) {
-          Di(pp).blendFuncSeparate(ip >>> 0, cp >>> 0, Op >>> 0, op >>> 0)
+        KS8L: function(TT, UT, mT, WT, zT) {
+          HU(TT).blendFuncSeparate(UT >>> 0, mT >>> 0, WT >>> 0, zT >>> 0)
         },
-        FlSw: function(pp, ip, cp, Op, op) {
-          Di(pp).blendFuncSeparate(ip >>> 0, cp >>> 0, Op >>> 0, op >>> 0)
+        zKwc: function(TT, UT, mT, WT, zT) {
+          HU(TT).blendFuncSeparate(UT >>> 0, mT >>> 0, WT >>> 0, zT >>> 0)
         },
-        af9Z: function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp) {
-          Di(pp).blitFramebuffer(ip, cp, Op, op, Ip, Sp, xp, Lp, Yp >>> 0, Dp >>> 0)
+        AVQ9: function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT) {
+          HU(TT).blitFramebuffer(UT, mT, WT, zT, MT, gT, nT, HT, kT >>> 0, jT >>> 0)
         },
-        gA2f: function(pp, ip, cp, Op) {
-          Di(pp).bufferData(ip >>> 0, cp, Op >>> 0)
+        LwoN: function(TT, UT, mT, WT) {
+          HU(TT).bufferData(UT >>> 0, mT, WT >>> 0)
         },
-        rTGz: function(pp, ip, cp, Op) {
-          Di(pp).bufferData(ip >>> 0, cp, Op >>> 0)
+        vYUe: function(TT, UT, mT, WT) {
+          HU(TT).bufferData(UT >>> 0, mT, WT >>> 0)
         },
-        gvWM: function(pp, ip, cp, Op, op) {
-          Di(pp).bufferSubData(ip >>> 0, cp, Zp(Op, op))
+        pEWu: function(TT, UT, mT, WT, zT) {
+          HU(TT).bufferSubData(UT >>> 0, mT, ET(WT, zT))
         },
-        Y8uS: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip) {
-            return bp(Di(pp).call(Di(ip), Di(cp), Di(Op), Di(op), Di(Ip)))
+        j61L: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT) {
+            return VT(HU(TT).call(HU(UT), HU(mT), HU(WT), HU(zT), HU(MT)))
           }), arguments)
         },
-        tX60: function() {
-          return Ai((function(pp, ip, cp) {
-            return bp(Di(pp).call(Di(ip), Di(cp)))
+        LbCp: function() {
+          return kU((function(TT, UT, mT) {
+            return VT(HU(TT).call(HU(UT), HU(mT)))
           }), arguments)
         },
-        SDZb: function(pp) {
-          Di(pp).call()
+        bzgs: function(TT) {
+          HU(TT).call()
         },
-        TPCS: function() {
-          return Ai((function(pp, ip) {
-            return bp(Di(pp).call(Di(ip)))
+        RwrO: function() {
+          return kU((function(TT, UT) {
+            return VT(HU(TT).call(HU(UT)))
           }), arguments)
         },
-        jcyS: function(pp, ip, cp, Op, op) {
-          Di(pp).clearColor(ip, cp, Op, op)
+        XnYJ: function(TT, UT, mT, WT, zT) {
+          HU(TT).clearColor(UT, mT, WT, zT)
         },
-        SBvM: function(pp, ip, cp, Op, op) {
-          Di(pp).clearColor(ip, cp, Op, op)
+        tdzD: function(TT, UT, mT, WT, zT) {
+          HU(TT).clearColor(UT, mT, WT, zT)
         },
-        HXu0: function(pp, ip) {
-          Di(pp).clearDepth(ip)
+        ExZh: function(TT, UT) {
+          HU(TT).clearDepth(UT)
         },
-        g4Za: function(pp, ip) {
-          Di(pp).clearDepth(ip)
+        hg28: function(TT, UT) {
+          HU(TT).clearDepth(UT)
         },
-        dJoQ: function(pp, ip, cp, Op, op) {
-          Di(pp).clearRect(ip, cp, Op, op)
+        E6EP: function(TT, UT, mT, WT, zT) {
+          HU(TT).clearRect(UT, mT, WT, zT)
         },
-        FW3d: function(pp, ip) {
-          Di(pp).clear(ip >>> 0)
+        YwZD: function(TT, UT) {
+          HU(TT).clear(UT >>> 0)
         },
-        AiMJ: function(pp, ip) {
-          Di(pp).clear(ip >>> 0)
+        oMcU: function(TT, UT) {
+          HU(TT).clear(UT >>> 0)
         },
-        IOQf: function(pp, ip, cp, Op, op) {
-          Di(pp).colorMask(0 !== ip, 0 !== cp, 0 !== Op, 0 !== op)
+        uzD8: function(TT, UT, mT, WT, zT) {
+          HU(TT).colorMask(0 !== UT, 0 !== mT, 0 !== WT, 0 !== zT)
         },
-        h22K: function(pp, ip, cp, Op, op) {
-          Di(pp).colorMask(0 !== ip, 0 !== cp, 0 !== Op, 0 !== op)
+        PRXD: function(TT, UT, mT, WT, zT) {
+          HU(TT).colorMask(0 !== UT, 0 !== mT, 0 !== WT, 0 !== zT)
         },
-        CadV: function(pp, ip) {
-          Di(pp).compileShader(Di(ip))
+        ow1U: function(TT, UT) {
+          HU(TT).compileShader(HU(UT))
         },
-        mGFN: function(pp, ip) {
-          Di(pp).compileShader(Di(ip))
+        fC2Y: function(TT, UT) {
+          HU(TT).compileShader(HU(UT))
         },
-        FiOr: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).copyBufferSubData(ip >>> 0, cp >>> 0, Op, op, Ip)
+        xyHx: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).copyBufferSubData(UT >>> 0, mT >>> 0, WT, zT, MT)
         },
-        WeLq: function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
-          Di(pp).copyTexSubImage2D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp)
+        wdGW: function(TT, UT, mT, WT, zT, MT, gT, nT, HT) {
+          HU(TT).copyTexSubImage2D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT)
         },
-        u8d2: function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
-          Di(pp).copyTexSubImage2D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp)
+        aSu2: function(TT, UT, mT, WT, zT, MT, gT, nT, HT) {
+          HU(TT).copyTexSubImage2D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT)
         },
-        OYeR: function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-          Di(pp).copyTexSubImage3D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp, Yp)
+        fCpd: function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+          HU(TT).copyTexSubImage3D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT, kT)
         },
-        Qdhv: function(pp) {
-          const ip = Di(pp).createBuffer();
-          return yi(ip) ? 0 : bp(ip)
+        dHGc: function(TT) {
+          const UT = HU(TT).createBuffer();
+          return LU(UT) ? 0 : VT(UT)
         },
-        MyJX: function(pp) {
-          const ip = Di(pp).createBuffer();
-          return yi(ip) ? 0 : bp(ip)
+        oMk4: function(TT) {
+          const UT = HU(TT).createBuffer();
+          return LU(UT) ? 0 : VT(UT)
         },
-        z4JV: function() {
-          return Ai((function(pp, ip, cp) {
-            return bp(Di(pp).createElement(oi(ip, cp)))
+        LFVV: function() {
+          return kU((function(TT, UT, mT) {
+            return VT(HU(TT).createElement(mU(UT, mT)))
           }), arguments)
         },
-        VPNT: function(pp) {
-          const ip = Di(pp).createFramebuffer();
-          return yi(ip) ? 0 : bp(ip)
+        xpED: function(TT) {
+          const UT = HU(TT).createFramebuffer();
+          return LU(UT) ? 0 : VT(UT)
         },
-        SzI7: function(pp) {
-          const ip = Di(pp).createFramebuffer();
-          return yi(ip) ? 0 : bp(ip)
+        FmI3: function(TT) {
+          const UT = HU(TT).createFramebuffer();
+          return LU(UT) ? 0 : VT(UT)
         },
-        me2M: function(pp) {
-          const ip = Di(pp).createProgram();
-          return yi(ip) ? 0 : bp(ip)
+        EFPI: function(TT) {
+          const UT = HU(TT).createProgram();
+          return LU(UT) ? 0 : VT(UT)
         },
-        hB3r: function(pp) {
-          const ip = Di(pp).createProgram();
-          return yi(ip) ? 0 : bp(ip)
+        n2nf: function(TT) {
+          const UT = HU(TT).createProgram();
+          return LU(UT) ? 0 : VT(UT)
         },
-        LiPW: function(pp) {
-          const ip = Di(pp).createQuery();
-          return yi(ip) ? 0 : bp(ip)
+        knWN: function(TT) {
+          const UT = HU(TT).createQuery();
+          return LU(UT) ? 0 : VT(UT)
         },
-        b4VQ: function(pp) {
-          const ip = Di(pp).createRenderbuffer();
-          return yi(ip) ? 0 : bp(ip)
+        dRFq: function(TT) {
+          const UT = HU(TT).createRenderbuffer();
+          return LU(UT) ? 0 : VT(UT)
         },
-        qDTe: function(pp) {
-          const ip = Di(pp).createRenderbuffer();
-          return yi(ip) ? 0 : bp(ip)
+        lqQs: function(TT) {
+          const UT = HU(TT).createRenderbuffer();
+          return LU(UT) ? 0 : VT(UT)
         },
-        OxYi: function(pp) {
-          const ip = Di(pp).createSampler();
-          return yi(ip) ? 0 : bp(ip)
+        KHnA: function(TT) {
+          const UT = HU(TT).createSampler();
+          return LU(UT) ? 0 : VT(UT)
         },
-        kYlX: function(pp, ip) {
-          const cp = Di(pp).createShader(ip >>> 0);
-          return yi(cp) ? 0 : bp(cp)
+        pvOj: function(TT, UT) {
+          const mT = HU(TT).createShader(UT >>> 0);
+          return LU(mT) ? 0 : VT(mT)
         },
-        gFow: function(pp, ip) {
-          const cp = Di(pp).createShader(ip >>> 0);
-          return yi(cp) ? 0 : bp(cp)
+        uRfo: function(TT, UT) {
+          const mT = HU(TT).createShader(UT >>> 0);
+          return LU(mT) ? 0 : VT(mT)
         },
-        wGne: function(pp) {
-          const ip = Di(pp).createTexture();
-          return yi(ip) ? 0 : bp(ip)
+        j56K: function(TT) {
+          const UT = HU(TT).createTexture();
+          return LU(UT) ? 0 : VT(UT)
         },
-        PBbi: function(pp) {
-          const ip = Di(pp).createTexture();
-          return yi(ip) ? 0 : bp(ip)
+        Z4Cq: function(TT) {
+          const UT = HU(TT).createTexture();
+          return LU(UT) ? 0 : VT(UT)
         },
-        B1gY: function(pp) {
-          const ip = Di(pp).createTransformFeedback();
-          return yi(ip) ? 0 : bp(ip)
+        FL6C: function(TT) {
+          const UT = HU(TT).createTransformFeedback();
+          return LU(UT) ? 0 : VT(UT)
         },
-        X68H: function(pp) {
-          const ip = Di(pp).createVertexArrayOES();
-          return yi(ip) ? 0 : bp(ip)
+        oA2f: function(TT) {
+          const UT = HU(TT).createVertexArrayOES();
+          return LU(UT) ? 0 : VT(UT)
         },
-        pTsx: function(pp) {
-          const ip = Di(pp).createVertexArray();
-          return yi(ip) ? 0 : bp(ip)
+        FoUY: function(TT) {
+          const UT = HU(TT).createVertexArray();
+          return LU(UT) ? 0 : VT(UT)
         },
-        FtVe: function(pp, ip) {
-          Di(pp).cullFace(ip >>> 0)
+        ytdm: function(TT, UT) {
+          HU(TT).cullFace(UT >>> 0)
         },
-        EMDx: function(pp, ip) {
-          Di(pp).cullFace(ip >>> 0)
+        wz04: function(TT, UT) {
+          HU(TT).cullFace(UT >>> 0)
         },
-        piV5: function(pp, ip) {
-          Di(pp).deleteBuffer(Di(ip))
+        Qwlm: function(TT, UT) {
+          HU(TT).deleteBuffer(HU(UT))
         },
-        mSQw: function(pp, ip) {
-          Di(pp).deleteBuffer(Di(ip))
+        ndYs: function(TT, UT) {
+          HU(TT).deleteBuffer(HU(UT))
         },
-        IkL2: function(pp, ip) {
-          Di(pp).deleteFramebuffer(Di(ip))
+        zwdW: function(TT, UT) {
+          HU(TT).deleteFramebuffer(HU(UT))
         },
-        qLGl: function(pp, ip) {
-          Di(pp).deleteFramebuffer(Di(ip))
+        gc33: function(TT, UT) {
+          HU(TT).deleteFramebuffer(HU(UT))
         },
-        DD5n: function(pp, ip) {
-          Di(pp).deleteProgram(Di(ip))
+        Anzx: function(TT, UT) {
+          HU(TT).deleteProgram(HU(UT))
         },
-        hxwc: function(pp, ip) {
-          Di(pp).deleteProgram(Di(ip))
+        XzuP: function(TT, UT) {
+          HU(TT).deleteProgram(HU(UT))
         },
-        QrWF: function(pp, ip) {
-          Di(pp).deleteQuery(Di(ip))
+        nHsr: function(TT, UT) {
+          HU(TT).deleteQuery(HU(UT))
         },
-        rr9W: function(pp, ip) {
-          Di(pp).deleteRenderbuffer(Di(ip))
+        bDIQ: function(TT, UT) {
+          HU(TT).deleteRenderbuffer(HU(UT))
         },
-        syK7: function(pp, ip) {
-          Di(pp).deleteRenderbuffer(Di(ip))
+        H0Z4: function(TT, UT) {
+          HU(TT).deleteRenderbuffer(HU(UT))
         },
-        IzRE: function(pp, ip) {
-          Di(pp).deleteSampler(Di(ip))
+        WBsF: function(TT, UT) {
+          HU(TT).deleteSampler(HU(UT))
         },
-        A6r3: function(pp, ip) {
-          Di(pp).deleteShader(Di(ip))
+        DvXW: function(TT, UT) {
+          HU(TT).deleteShader(HU(UT))
         },
-        x7IL: function(pp, ip) {
-          Di(pp).deleteShader(Di(ip))
+        zj33: function(TT, UT) {
+          HU(TT).deleteShader(HU(UT))
         },
-        EjYi: function(pp, ip) {
-          Di(pp).deleteSync(Di(ip))
+        aCN0: function(TT, UT) {
+          HU(TT).deleteSync(HU(UT))
         },
-        Qc5q: function(pp, ip) {
-          Di(pp).deleteTexture(Di(ip))
+        Sz1s: function(TT, UT) {
+          HU(TT).deleteTexture(HU(UT))
         },
-        Jx3Z: function(pp, ip) {
-          Di(pp).deleteTexture(Di(ip))
+        v8u9: function(TT, UT) {
+          HU(TT).deleteTexture(HU(UT))
         },
-        AmV4: function(pp, ip) {
-          Di(pp).deleteTransformFeedback(Di(ip))
+        aCcx: function(TT, UT) {
+          HU(TT).deleteTransformFeedback(HU(UT))
         },
-        YmYh: function(pp, ip) {
-          Di(pp).deleteVertexArrayOES(Di(ip))
+        Vp3U: function(TT, UT) {
+          HU(TT).deleteVertexArrayOES(HU(UT))
         },
-        KHIO: function(pp, ip) {
-          Di(pp).deleteVertexArray(Di(ip))
+        NoP9: function(TT, UT) {
+          HU(TT).deleteVertexArray(HU(UT))
         },
-        KVpr: function(pp, ip) {
-          Di(pp).depthFunc(ip >>> 0)
+        saLh: function(TT, UT) {
+          HU(TT).depthFunc(UT >>> 0)
         },
-        AuDQ: function(pp, ip) {
-          Di(pp).depthFunc(ip >>> 0)
+        irue: function(TT, UT) {
+          HU(TT).depthFunc(UT >>> 0)
         },
-        cvM3: function(pp, ip) {
-          Di(pp).depthMask(0 !== ip)
+        jwBr: function(TT, UT) {
+          HU(TT).depthMask(0 !== UT)
         },
-        jQCX: function(pp, ip) {
-          Di(pp).depthMask(0 !== ip)
+        ZO0o: function(TT, UT) {
+          HU(TT).depthMask(0 !== UT)
         },
-        ygjg: function(pp, ip, cp) {
-          Di(pp).depthRange(ip, cp)
+        IJ0f: function(TT, UT, mT) {
+          HU(TT).depthRange(UT, mT)
         },
-        BC2F: function(pp, ip, cp) {
-          Di(pp).depthRange(ip, cp)
+        Iy6c: function(TT, UT, mT) {
+          HU(TT).depthRange(UT, mT)
         },
-        TnYd: function(pp, ip, cp) {
-          Di(pp).detachShader(Di(ip), Di(cp))
+        nStr: function(TT, UT, mT) {
+          HU(TT).detachShader(HU(UT), HU(mT))
         },
-        e7tG: function(pp, ip, cp) {
-          Di(pp).detachShader(Di(ip), Di(cp))
+        M34Q: function(TT, UT, mT) {
+          HU(TT).detachShader(HU(UT), HU(mT))
         },
-        UWGW: function(pp, ip) {
-          Di(pp).disable(ip >>> 0)
+        TneZ: function(TT, UT) {
+          HU(TT).disable(UT >>> 0)
         },
-        sVyA: function(pp, ip) {
-          Di(pp).disable(ip >>> 0)
+        fdzm: function(TT, UT) {
+          HU(TT).disable(UT >>> 0)
         },
-        u2ia: function(pp) {
-          const ip = Di(pp).document;
-          return yi(ip) ? 0 : bp(ip)
+        aOqB: function(TT) {
+          const UT = HU(TT).document;
+          return LU(UT) ? 0 : VT(UT)
         },
-        p7KQ: function(pp, ip, cp, Op, op) {
-          Di(pp).drawArraysInstancedANGLE(ip >>> 0, cp, Op, op)
+        pn8B: function(TT, UT, mT, WT, zT) {
+          HU(TT).drawArraysInstancedANGLE(UT >>> 0, mT, WT, zT)
         },
-        nnGP: function(pp, ip, cp, Op, op) {
-          Di(pp).drawArraysInstanced(ip >>> 0, cp, Op, op)
+        UW3O: function(TT, UT, mT, WT, zT) {
+          HU(TT).drawArraysInstanced(UT >>> 0, mT, WT, zT)
         },
-        G916: function(pp, ip, cp, Op) {
-          Di(pp).drawArrays(ip >>> 0, cp, Op)
+        LLpn: function(TT, UT, mT, WT) {
+          HU(TT).drawArrays(UT >>> 0, mT, WT)
         },
-        se4i: function(pp, ip, cp, Op) {
-          Di(pp).drawArrays(ip >>> 0, cp, Op)
+        wv7v: function(TT, UT, mT, WT) {
+          HU(TT).drawArrays(UT >>> 0, mT, WT)
         },
-        SL8r: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).drawElementsInstancedANGLE(ip >>> 0, cp, Op >>> 0, op, Ip)
+        wNwi: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).drawElementsInstancedANGLE(UT >>> 0, mT, WT >>> 0, zT, MT)
         },
-        Shgj: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).drawElementsInstanced(ip >>> 0, cp, Op >>> 0, op, Ip)
+        yd1R: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).drawElementsInstanced(UT >>> 0, mT, WT >>> 0, zT, MT)
         },
-        ncuN: function(pp, ip, cp, Op, op) {
-          Di(pp).drawElements(ip >>> 0, cp, Op >>> 0, op)
+        WA5D: function(TT, UT, mT, WT, zT) {
+          HU(TT).drawElements(UT >>> 0, mT, WT >>> 0, zT)
         },
-        pdDi: function(pp, ip, cp, Op, op) {
-          Di(pp).drawElements(ip >>> 0, cp, Op >>> 0, op)
+        Hej1: function(TT, UT, mT, WT, zT) {
+          HU(TT).drawElements(UT >>> 0, mT, WT >>> 0, zT)
         },
-        XAK3: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-            Di(pp).drawImage(Di(ip), cp, Op, op, Ip, Sp, xp, Lp, Yp)
+        dP0g: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+            HU(TT).drawImage(HU(UT), mT, WT, zT, MT, gT, nT, HT, kT)
           }), arguments)
         },
-        CqMu: function(pp) {
-          return Di(pp).drawingBufferHeight
+        aoU0: function(TT) {
+          return HU(TT).drawingBufferHeight
         },
-        Js3P: function(pp) {
-          return Di(pp).drawingBufferWidth
+        tnS1: function(TT) {
+          return HU(TT).drawingBufferWidth
         },
-        eIRF: function(pp, ip) {
-          Di(pp).enableVertexAttribArray(ip >>> 0)
+        lVYZ: function(TT, UT) {
+          HU(TT).enableVertexAttribArray(UT >>> 0)
         },
-        oZo2: function(pp, ip) {
-          Di(pp).enableVertexAttribArray(ip >>> 0)
+        pUD3: function(TT, UT) {
+          HU(TT).enableVertexAttribArray(UT >>> 0)
         },
-        v74J: function(pp, ip) {
-          Di(pp).enable(ip >>> 0)
+        uxTw: function(TT, UT) {
+          HU(TT).enable(UT >>> 0)
         },
-        IlaH: function(pp, ip) {
-          Di(pp).enable(ip >>> 0)
+        I7XP: function(TT, UT) {
+          HU(TT).enable(UT >>> 0)
         },
-        bEnN: function(pp, ip) {
-          Di(pp).endQuery(ip >>> 0)
+        U6JQ: function(TT, UT) {
+          HU(TT).endQuery(UT >>> 0)
         },
-        qnnj: function(pp) {
-          Di(pp).endTransformFeedback()
+        Xacm: function(TT) {
+          HU(TT).endTransformFeedback()
         },
-        EWm9: function(pp) {
-          console.error(Di(pp))
+        droC: function(TT) {
+          console.error(HU(TT))
         },
-        JGge: function(pp, ip) {
-          console.error(oi(pp, ip))
+        XJkg: function(TT, UT) {
+          console.error(mU(TT, UT))
         },
-        lthN: function(pp, ip, cp) {
-          const Op = Di(pp).fenceSync(ip >>> 0, cp >>> 0);
-          return yi(Op) ? 0 : bp(Op)
+        INgE: function(TT, UT, mT) {
+          const WT = HU(TT).fenceSync(UT >>> 0, mT >>> 0);
+          return LU(WT) ? 0 : VT(WT)
         },
-        XwwW: function(pp, ip, cp, Op, op) {
-          Di(pp).framebufferRenderbuffer(ip >>> 0, cp >>> 0, Op >>> 0, Di(op))
+        a9Fq: function(TT, UT, mT, WT, zT) {
+          HU(TT).framebufferRenderbuffer(UT >>> 0, mT >>> 0, WT >>> 0, HU(zT))
         },
-        PWrn: function(pp, ip, cp, Op, op) {
-          Di(pp).framebufferRenderbuffer(ip >>> 0, cp >>> 0, Op >>> 0, Di(op))
+        u1hu: function(TT, UT, mT, WT, zT) {
+          HU(TT).framebufferRenderbuffer(UT >>> 0, mT >>> 0, WT >>> 0, HU(zT))
         },
-        gB0B: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).framebufferTexture2D(ip >>> 0, cp >>> 0, Op >>> 0, Di(op), Ip)
+        uJLR: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).framebufferTexture2D(UT >>> 0, mT >>> 0, WT >>> 0, HU(zT), MT)
         },
-        BMvE: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).framebufferTexture2D(ip >>> 0, cp >>> 0, Op >>> 0, Di(op), Ip)
+        VH0Q: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).framebufferTexture2D(UT >>> 0, mT >>> 0, WT >>> 0, HU(zT), MT)
         },
-        hwNe: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).framebufferTextureLayer(ip >>> 0, cp >>> 0, Di(Op), op, Ip)
+        kS4T: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).framebufferTextureLayer(UT >>> 0, mT >>> 0, HU(WT), zT, MT)
         },
-        RpGW: function(pp, ip) {
-          Di(pp).frontFace(ip >>> 0)
+        uvtW: function(TT, UT) {
+          HU(TT).frontFace(UT >>> 0)
         },
-        e8LD: function(pp, ip) {
-          Di(pp).frontFace(ip >>> 0)
+        HA1z: function(TT, UT) {
+          HU(TT).frontFace(UT >>> 0)
         },
-        yS8U: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-            return Di(pp).gameCall(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp, Yp)
+        i2mg: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+            return HU(TT).gameCall(UT >>> 0, mT, WT, zT, MT, gT, nT, HT, kT)
           }), arguments)
         },
-        DoQD: function(pp, ip) {
-          Di(pp).generateMipmap(ip >>> 0)
+        n9rj: function(TT, UT) {
+          HU(TT).generateMipmap(UT >>> 0)
         },
-        i5TA: function(pp, ip) {
-          Di(pp).generateMipmap(ip >>> 0)
+        b6vE: function(TT, UT) {
+          HU(TT).generateMipmap(UT >>> 0)
         },
-        IFrJ: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            return bp(Di(pp).getActiveUniformBlockParameter(Di(ip), cp >>> 0, Op >>> 0))
+        mqdT: function() {
+          return kU((function(TT, UT, mT, WT) {
+            return VT(HU(TT).getActiveUniformBlockParameter(HU(UT), mT >>> 0, WT >>> 0))
           }), arguments)
         },
-        tB6P: function(pp, ip, cp, Op) {
-          Di(pp).getBufferSubData(ip >>> 0, cp, Di(Op))
+        qboC: function(TT, UT, mT, WT) {
+          HU(TT).getBufferSubData(UT >>> 0, mT, HU(WT))
         },
-        kUPT: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            const op = Di(pp).getContext(oi(ip, cp), Di(Op));
-            return yi(op) ? 0 : bp(op)
+        trsy: function() {
+          return kU((function(TT, UT, mT, WT) {
+            const zT = HU(TT).getContext(mU(UT, mT), HU(WT));
+            return LU(zT) ? 0 : VT(zT)
           }), arguments)
         },
-        Sul3: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            const op = Di(pp).getContext(oi(ip, cp), Di(Op));
-            return yi(op) ? 0 : bp(op)
+        YIxt: function() {
+          return kU((function(TT, UT, mT, WT) {
+            const zT = HU(TT).getContext(mU(UT, mT), HU(WT));
+            return LU(zT) ? 0 : VT(zT)
           }), arguments)
         },
-        JeRg: function() {
-          return Ai((function(pp, ip, cp) {
-            const Op = Di(pp).getContext(oi(ip, cp));
-            return yi(Op) ? 0 : bp(Op)
+        poIi: function() {
+          return kU((function(TT, UT, mT) {
+            const WT = HU(TT).getContext(mU(UT, mT));
+            return LU(WT) ? 0 : VT(WT)
           }), arguments)
         },
-        EUhI: function(pp) {
-          return Di(pp).getError()
+        JGXk: function(TT) {
+          return HU(TT).getError()
         },
-        Hzh5: function(pp) {
-          return Di(pp).getError()
+        mJF1: function(TT) {
+          return HU(TT).getError()
         },
-        qTZ2: function() {
-          return Ai((function(pp, ip, cp) {
-            const Op = Di(pp).getExtension(oi(ip, cp));
-            return yi(Op) ? 0 : bp(Op)
+        lo5i: function() {
+          return kU((function(TT, UT, mT) {
+            const WT = HU(TT).getExtension(mU(UT, mT));
+            return LU(WT) ? 0 : VT(WT)
           }), arguments)
         },
-        SMbE: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            const op = Di(ip).getItem(oi(cp, Op));
-            var Ip = yi(op) ? 0 : Hi(op, qi.Lklm, qi.mB2K),
-              Sp = Mi;
-            sp().setInt32(pp + 4, Sp, !0), sp().setInt32(pp + 0, Ip, !0)
+        Lnzv: function() {
+          return kU((function(TT, UT, mT, WT) {
+            const zT = HU(UT).getItem(mU(mT, WT));
+            var MT = LU(zT) ? 0 : vU(zT, JU.dRuG, JU.VgFS),
+              gT = xU;
+            DT().setInt32(TT + 4, gT, !0), DT().setInt32(TT + 0, MT, !0)
           }), arguments)
         },
-        qYNS: function() {
-          return Ai((function(pp, ip) {
-            return bp(Di(pp).getParameter(ip >>> 0))
+        zenE: function() {
+          return kU((function(TT, UT) {
+            return VT(HU(TT).getParameter(UT >>> 0))
           }), arguments)
         },
-        n72A: function() {
-          return Ai((function(pp, ip) {
-            return bp(Di(pp).getParameter(ip >>> 0))
+        BVaV: function() {
+          return kU((function(TT, UT) {
+            return VT(HU(TT).getParameter(UT >>> 0))
           }), arguments)
         },
-        Tfn6: function(pp, ip, cp) {
-          const Op = Di(ip).getProgramInfoLog(Di(cp));
-          var op = yi(Op) ? 0 : Hi(Op, qi.Lklm, qi.mB2K),
-            Ip = Mi;
-          sp().setInt32(pp + 4, Ip, !0), sp().setInt32(pp + 0, op, !0)
+        LPDC: function(TT, UT, mT) {
+          const WT = HU(UT).getProgramInfoLog(HU(mT));
+          var zT = LU(WT) ? 0 : vU(WT, JU.dRuG, JU.VgFS),
+            MT = xU;
+          DT().setInt32(TT + 4, MT, !0), DT().setInt32(TT + 0, zT, !0)
         },
-        OZp1: function(pp, ip, cp) {
-          const Op = Di(ip).getProgramInfoLog(Di(cp));
-          var op = yi(Op) ? 0 : Hi(Op, qi.Lklm, qi.mB2K),
-            Ip = Mi;
-          sp().setInt32(pp + 4, Ip, !0), sp().setInt32(pp + 0, op, !0)
+        Ulyd: function(TT, UT, mT) {
+          const WT = HU(UT).getProgramInfoLog(HU(mT));
+          var zT = LU(WT) ? 0 : vU(WT, JU.dRuG, JU.VgFS),
+            MT = xU;
+          DT().setInt32(TT + 4, MT, !0), DT().setInt32(TT + 0, zT, !0)
         },
-        p5er: function(pp, ip, cp) {
-          return bp(Di(pp).getProgramParameter(Di(ip), cp >>> 0))
+        NUB3: function(TT, UT, mT) {
+          return VT(HU(TT).getProgramParameter(HU(UT), mT >>> 0))
         },
-        aEMQ: function(pp, ip, cp) {
-          return bp(Di(pp).getProgramParameter(Di(ip), cp >>> 0))
+        RnlN: function(TT, UT, mT) {
+          return VT(HU(TT).getProgramParameter(HU(UT), mT >>> 0))
         },
-        Q2b0: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            const op = Hi(Di(ip).getPropertyValue(oi(cp, Op)), qi.Lklm, qi.mB2K),
-              Ip = Mi;
-            sp().setInt32(pp + 4, Ip, !0), sp().setInt32(pp + 0, op, !0)
+        F6OI: function() {
+          return kU((function(TT, UT, mT, WT) {
+            const zT = vU(HU(UT).getPropertyValue(mU(mT, WT)), JU.dRuG, JU.VgFS),
+              MT = xU;
+            DT().setInt32(TT + 4, MT, !0), DT().setInt32(TT + 0, zT, !0)
           }), arguments)
         },
-        l8g8: function(pp, ip, cp) {
-          return bp(Di(pp).getQueryParameter(Di(ip), cp >>> 0))
+        buEm: function(TT, UT, mT) {
+          return VT(HU(TT).getQueryParameter(HU(UT), mT >>> 0))
         },
-        dSKu: function(pp, ip, cp) {
-          const Op = Di(ip).getShaderInfoLog(Di(cp));
-          var op = yi(Op) ? 0 : Hi(Op, qi.Lklm, qi.mB2K),
-            Ip = Mi;
-          sp().setInt32(pp + 4, Ip, !0), sp().setInt32(pp + 0, op, !0)
+        slMO: function(TT, UT, mT) {
+          const WT = HU(UT).getShaderInfoLog(HU(mT));
+          var zT = LU(WT) ? 0 : vU(WT, JU.dRuG, JU.VgFS),
+            MT = xU;
+          DT().setInt32(TT + 4, MT, !0), DT().setInt32(TT + 0, zT, !0)
         },
-        WFmu: function(pp, ip, cp) {
-          const Op = Di(ip).getShaderInfoLog(Di(cp));
-          var op = yi(Op) ? 0 : Hi(Op, qi.Lklm, qi.mB2K),
-            Ip = Mi;
-          sp().setInt32(pp + 4, Ip, !0), sp().setInt32(pp + 0, op, !0)
+        p8tV: function(TT, UT, mT) {
+          const WT = HU(UT).getShaderInfoLog(HU(mT));
+          var zT = LU(WT) ? 0 : vU(WT, JU.dRuG, JU.VgFS),
+            MT = xU;
+          DT().setInt32(TT + 4, MT, !0), DT().setInt32(TT + 0, zT, !0)
         },
-        LpbR: function(pp) {
-          const ip = Di(pp).getSupportedExtensions();
-          return yi(ip) ? 0 : bp(ip)
+        gK3j: function(TT) {
+          const UT = HU(TT).getSupportedExtensions();
+          return LU(UT) ? 0 : VT(UT)
         },
-        WoXY: function(pp, ip, cp) {
-          return bp(Di(pp).getSyncParameter(Di(ip), cp >>> 0))
+        cVkJ: function(TT, UT, mT) {
+          return VT(HU(TT).getSyncParameter(HU(UT), mT >>> 0))
         },
-        X7IQ: function(pp, ip, cp, Op) {
-          return Di(pp).getUniformBlockIndex(Di(ip), oi(cp, Op))
+        g36A: function(TT, UT, mT, WT) {
+          return HU(TT).getUniformBlockIndex(HU(UT), mU(mT, WT))
         },
-        EXsg: function(pp, ip, cp, Op) {
-          const op = Di(pp).getUniformLocation(Di(ip), oi(cp, Op));
-          return yi(op) ? 0 : bp(op)
+        ZZFu: function(TT, UT, mT, WT) {
+          const zT = HU(TT).getUniformLocation(HU(UT), mU(mT, WT));
+          return LU(zT) ? 0 : VT(zT)
         },
-        IMhi: function(pp, ip, cp, Op) {
-          const op = Di(pp).getUniformLocation(Di(ip), oi(cp, Op));
-          return yi(op) ? 0 : bp(op)
+        wXP2: function(TT, UT, mT, WT) {
+          const zT = HU(TT).getUniformLocation(HU(UT), mU(mT, WT));
+          return LU(zT) ? 0 : VT(zT)
         },
-        ouyu: function() {
-          return Ai((function(pp, ip) {
-            return bp(Reflect.get(Di(pp), Di(ip)))
+        rOwd: function() {
+          return kU((function(TT, UT) {
+            return VT(Reflect.get(HU(TT), HU(UT)))
           }), arguments)
         },
-        W7Pl: function(pp, ip) {
-          return bp(Di(pp)[ip >>> 0])
+        VJur: function(TT, UT) {
+          return VT(HU(TT)[UT >>> 0])
         },
-        PDwC: function(pp, ip, cp, Op) {
-          const op = Di(ip).get(oi(cp, Op));
-          var Ip = yi(op) ? 0 : Hi(op, qi.Lklm, qi.mB2K),
-            Sp = Mi;
-          sp().setInt32(pp + 4, Sp, !0), sp().setInt32(pp + 0, Ip, !0)
+        qHgk: function(TT, UT, mT, WT) {
+          const zT = HU(UT).get(mU(mT, WT));
+          var MT = LU(zT) ? 0 : vU(zT, JU.dRuG, JU.VgFS),
+            gT = xU;
+          DT().setInt32(TT + 4, gT, !0), DT().setInt32(TT + 0, MT, !0)
         },
-        ZzrR: function(pp, ip) {
-          return bp(Di(pp)[ip >>> 0])
+        o0ib: function(TT, UT) {
+          return VT(HU(TT)[UT >>> 0])
         },
-        DuAd: function() {
-          return Ai((function(pp, ip) {
-            return Reflect.has(Di(pp), Di(ip))
+        tVJi: function() {
+          return kU((function(TT, UT) {
+            return Reflect.has(HU(TT), HU(UT))
           }), arguments)
         },
-        gR33: function(pp) {
-          return Di(pp).height
+        n7ib: function(TT) {
+          return HU(TT).height
         },
-        Ggqx: function(pp) {
-          return Di(pp).height
+        w3br: function(TT) {
+          return HU(TT).height
         },
-        tMFW: function(pp) {
-          return Di(pp).height
+        XD32: function(TT) {
+          return HU(TT).height
         },
-        piD9: function(pp) {
-          console.info(Di(pp))
+        D89v: function(TT) {
+          console.info(HU(TT))
         },
-        pU2h: function(pp) {
-          let ip;
+        vd3c: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof CanvasRenderingContext2D
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof CanvasRenderingContext2D
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        Dzdm: function(pp) {
-          let ip;
+        Ssg3: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof Error
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof Error
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        R2Da: function(pp) {
-          let ip;
+        rg5c: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof HTMLCanvasElement
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof HTMLCanvasElement
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        vyE2: function(pp) {
-          let ip;
+        VCqB: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof ImageBitmap
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof ImageBitmap
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        Kvla: function(pp) {
-          let ip;
+        cLYd: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof OffscreenCanvas
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof OffscreenCanvas
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        v3Xw: function(pp) {
-          let ip;
+        YiRB: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof Performance
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof Performance
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        sXoP: function(pp) {
-          let ip;
+        Bqad: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof WebGL2RenderingContext
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof WebGL2RenderingContext
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        ZJnO: function(pp) {
-          let ip;
+        OAnt: function(TT) {
+          let UT;
           try {
-            ip = Di(pp) instanceof Window
-          } catch (cp) {
-            ip = !1
+            UT = HU(TT) instanceof Window
+          } catch (mT) {
+            UT = !1
           }
-          return ip
+          return UT
         },
-        hTZV: function() {
-          return Ai((function(pp, ip, cp) {
-            Di(pp).invalidateFramebuffer(ip >>> 0, Di(cp))
+        uk7f: function() {
+          return kU((function(TT, UT, mT) {
+            HU(TT).invalidateFramebuffer(UT >>> 0, HU(mT))
           }), arguments)
         },
-        dyf7: function(pp) {
-          return Array.isArray(Di(pp))
+        UwfO: function(TT) {
+          return Array.isArray(HU(TT))
         },
-        ILUN: function(pp) {
-          return Di(pp).isContextLost()
+        rcQW: function(TT) {
+          return HU(TT).isContextLost()
         },
-        U95J: function(pp) {
-          return Di(pp).length
+        Cj0J: function(TT) {
+          return HU(TT).length
         },
-        vXE1: function(pp) {
-          return Di(pp).length
+        P4zm: function(TT) {
+          return HU(TT).length
         },
-        lzco: function(pp, ip) {
-          Di(pp).linkProgram(Di(ip))
+        ljGe: function(TT, UT) {
+          HU(TT).linkProgram(HU(UT))
         },
-        gDuv: function(pp, ip) {
-          Di(pp).linkProgram(Di(ip))
+        Ogrn: function(TT, UT) {
+          HU(TT).linkProgram(HU(UT))
         },
-        wMU5: function() {
-          return Ai((function(pp) {
-            const ip = Di(pp).localStorage;
-            return yi(ip) ? 0 : bp(ip)
+        d8ZU: function() {
+          return kU((function(TT) {
+            const UT = HU(TT).localStorage;
+            return LU(UT) ? 0 : VT(UT)
           }), arguments)
         },
-        q2Vh: function(pp) {
-          return bp(Di(pp).location)
+        uCPt: function(TT) {
+          return VT(HU(TT).location)
         },
-        fjDu: function(pp) {
-          Di(pp).loseContext()
+        hVvE: function(TT) {
+          HU(TT).loseContext()
         },
-        H7Rj: function(pp) {
-          return bp(Di(pp).message)
+        J1du: function(TT) {
+          return VT(HU(TT).message)
         },
-        xKMf: function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
-          Di(pp).multiDrawArraysWEBGL(ip >>> 0, gp(cp, Op), op >>> 0, gp(Ip, Sp), xp >>> 0, Lp)
+        XrAz: function(TT, UT, mT, WT, zT, MT, gT, nT, HT) {
+          HU(TT).multiDrawArraysWEBGL(UT >>> 0, ST(mT, WT), zT >>> 0, ST(MT, gT), nT >>> 0, HT)
         },
-        PJjn: function(pp) {
-          return bp(Di(pp).name)
+        JJhU: function(TT) {
+          return VT(HU(TT).name)
         },
-        Yyyu: function(pp, ip) {
-          return bp(new Error(oi(pp, ip)))
+        VXjN: function(TT, UT) {
+          return VT(new Error(mU(TT, UT)))
         },
-        jW8R: function() {
-          return bp(new Object)
+        ojbA: function() {
+          return VT(new Object)
         },
-        uANy: function() {
-          return Ai((function(pp, ip) {
-            return bp(new OffscreenCanvas(pp >>> 0, ip >>> 0))
+        N0Jq: function() {
+          return kU((function(TT, UT) {
+            return VT(new OffscreenCanvas(TT >>> 0, UT >>> 0))
           }), arguments)
         },
-        hfQt: function() {
-          return bp(new Array)
+        rA52: function() {
+          return VT(new Array)
         },
-        zedH: function(pp, ip) {
-          return bp(new Uint8Array(Zp(pp, ip)))
+        YGFW: function(TT, UT) {
+          return VT(new Uint8Array(ET(TT, UT)))
         },
-        vNxk: function(pp, ip) {
+        YE3n: function(TT, UT) {
           try {
-            var cp = {
-              a: pp,
-              b: ip
+            var mT = {
+              a: TT,
+              b: UT
             };
-            const Op = new Promise(((pp, ip) => {
-              const Op = cp.a;
-              cp.a = 0;
+            const WT = new Promise(((TT, UT) => {
+              const WT = mT.a;
+              mT.a = 0;
               try {
-                return function(pp, ip, cp, Op) {
-                  qi.sCVT(pp, ip, bp(cp), bp(Op))
-                }(Op, cp.b, pp, ip)
+                return function(TT, UT, mT, WT) {
+                  JU.KOrp(TT, UT, VT(mT), VT(WT))
+                }(WT, mT.b, TT, UT)
               } finally {
-                cp.a = Op
+                mT.a = WT
               }
             }));
-            return bp(Op)
+            return VT(WT)
           } finally {
-            cp.a = 0
+            mT.a = 0
           }
         },
-        wRDZ: function() {
-          return Ai((function(pp, ip) {
-            return bp(new URLSearchParams(oi(pp, ip)))
+        MVn3: function() {
+          return kU((function(TT, UT) {
+            return VT(new URLSearchParams(mU(TT, UT)))
           }), arguments)
         },
-        M1oA: function() {
+        eGbU: function() {
           return performance.now()
         },
-        Z44b: function(pp) {
-          return Performance.prototype.now.call(Di(pp))
+        b1yR: function(TT) {
+          return Performance.prototype.now.call(HU(TT))
         },
-        i2cJ: function() {
+        K47w: function() {
           return Date.now()
         },
-        geUh: function() {
+        vRym: function() {
           return Date.now()
         },
-        ddSP: function(pp, ip, cp) {
-          Di(pp).pixelStorei(ip >>> 0, cp)
+        RTkP: function(TT, UT, mT) {
+          HU(TT).pixelStorei(UT >>> 0, mT)
         },
-        Oot5: function(pp, ip, cp) {
-          Di(pp).pixelStorei(ip >>> 0, cp)
+        ZadG: function(TT, UT, mT) {
+          HU(TT).pixelStorei(UT >>> 0, mT)
         },
-        GAHm: function(pp, ip, cp) {
-          Di(pp).polygonOffset(ip, cp)
+        nzf2: function(TT, UT, mT) {
+          HU(TT).polygonOffset(UT, mT)
         },
-        YKZg: function(pp, ip, cp) {
-          Di(pp).polygonOffset(ip, cp)
+        P3Xy: function(TT, UT, mT) {
+          HU(TT).polygonOffset(UT, mT)
         },
-        NuXI: function(pp) {
-          Di(pp).preventDefault()
+        zIXB: function(TT) {
+          HU(TT).preventDefault()
         },
-        QgET: function(pp, ip, cp, Op) {
-          return Di(pp).probe(ip >>> 0, cp >>> 0, Op >>> 0)
+        kX8u: function(TT, UT, mT, WT) {
+          return HU(TT).probe(UT >>> 0, mT >>> 0, WT >>> 0)
         },
-        J8IY: function(pp, ip, cp) {
-          Uint8Array.prototype.set.call(Zp(pp, ip), Di(cp))
+        B46K: function(TT, UT, mT) {
+          Uint8Array.prototype.set.call(ET(TT, UT), HU(mT))
         },
-        kPFs: function(pp, ip) {
-          return Di(pp).push(Di(ip))
+        lrMO: function(TT, UT) {
+          return HU(TT).push(HU(UT))
         },
-        guvB: function(pp) {
-          return bp(Di(pp).queueMicrotask)
+        Q787: function(TT) {
+          return VT(HU(TT).queueMicrotask)
         },
-        M28u: function(pp) {
-          queueMicrotask(Di(pp))
+        axFT: function(TT) {
+          queueMicrotask(HU(TT))
         },
-        DP83: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp) {
-            Di(pp).readPixels(ip, cp, Op, op, Ip >>> 0, Sp >>> 0, Di(xp))
+        evk1: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT) {
+            HU(TT).readPixels(UT, mT, WT, zT, MT >>> 0, gT >>> 0, HU(nT))
           }), arguments)
         },
-        RuGy: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp) {
-            Di(pp).readPixels(ip, cp, Op, op, Ip >>> 0, Sp >>> 0, Di(xp))
+        I7Q6: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT) {
+            HU(TT).readPixels(UT, mT, WT, zT, MT >>> 0, gT >>> 0, HU(nT))
           }), arguments)
         },
-        rfqd: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp) {
-            Di(pp).readPixels(ip, cp, Op, op, Ip >>> 0, Sp >>> 0, xp)
+        yFZS: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT) {
+            HU(TT).readPixels(UT, mT, WT, zT, MT >>> 0, gT >>> 0, nT)
           }), arguments)
         },
-        jIl0: function() {
-          return Ai((function(pp, ip, cp, Op) {
-            Di(pp).removeEventListener(oi(ip, cp), Di(Op))
+        uXT1: function() {
+          return kU((function(TT, UT, mT, WT) {
+            HU(TT).removeEventListener(mU(UT, mT), HU(WT))
           }), arguments)
         },
-        mYfs: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).renderbufferStorageMultisample(ip >>> 0, cp, Op >>> 0, op, Ip)
+        fMzo: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).renderbufferStorageMultisample(UT >>> 0, mT, WT >>> 0, zT, MT)
         },
-        EZ4O: function(pp, ip, cp, Op, op) {
-          Di(pp).renderbufferStorage(ip >>> 0, cp >>> 0, Op, op)
+        Azbu: function(TT, UT, mT, WT, zT) {
+          HU(TT).renderbufferStorage(UT >>> 0, mT >>> 0, WT, zT)
         },
-        aI3N: function(pp, ip, cp, Op, op) {
-          Di(pp).renderbufferStorage(ip >>> 0, cp >>> 0, Op, op)
+        YsNo: function(TT, UT, mT, WT, zT) {
+          HU(TT).renderbufferStorage(UT >>> 0, mT >>> 0, WT, zT)
         },
-        OG9t: function(pp) {
-          return bp(Sp.__wrap(pp))
+        ngYa: function(TT) {
+          return VT(gT.__wrap(TT))
         },
-        hpQl: function(pp) {
-          return bp(Promise.resolve(Di(pp)))
+        qNt2: function(TT) {
+          return VT(Promise.resolve(HU(TT)))
         },
-        AgrU: function(pp) {
-          Di(pp).restoreContext()
+        GULm: function(TT) {
+          HU(TT).restoreContext()
         },
-        LU2w: function(pp, ip, cp, Op) {
-          Di(pp).samplerParameterf(Di(ip), cp >>> 0, Op)
+        mRdz: function(TT, UT, mT, WT) {
+          HU(TT).samplerParameterf(HU(UT), mT >>> 0, WT)
         },
-        rn6B: function(pp, ip, cp, Op) {
-          Di(pp).samplerParameteri(Di(ip), cp >>> 0, Op)
+        mF47: function(TT, UT, mT, WT) {
+          HU(TT).samplerParameteri(HU(UT), mT >>> 0, WT)
         },
-        DEop: function() {
-          return Ai((function(pp, ip) {
-            const cp = Hi(Di(ip).search, qi.Lklm, qi.mB2K),
-              Op = Mi;
-            sp().setInt32(pp + 4, Op, !0), sp().setInt32(pp + 0, cp, !0)
+        XQ55: function() {
+          return kU((function(TT, UT) {
+            const mT = vU(HU(UT).search, JU.dRuG, JU.VgFS),
+              WT = xU;
+            DT().setInt32(TT + 4, WT, !0), DT().setInt32(TT + 0, mT, !0)
           }), arguments)
         },
-        ilCg: function() {
-          return Ai((function(pp, ip, cp) {
-            return Di(pp).setTimeout(Di(ip), cp)
+        ktZl: function() {
+          return kU((function(TT, UT, mT) {
+            return HU(TT).setTimeout(HU(UT), mT)
           }), arguments)
         },
-        wNKs: function() {
-          return Ai((function(pp, ip, cp) {
-            return Reflect.set(Di(pp), Di(ip), Di(cp))
+        Y05K: function() {
+          return kU((function(TT, UT, mT) {
+            return Reflect.set(HU(TT), HU(UT), HU(mT))
           }), arguments)
         },
-        tHhP: function(pp, ip) {
-          Di(pp).alpha = 0 !== ip
+        Q3mY: function(TT, UT) {
+          HU(TT).alpha = 0 !== UT
         },
-        iStx: function(pp, ip) {
-          Di(pp).antialias = 0 !== ip
+        tDVa: function(TT, UT) {
+          HU(TT).antialias = 0 !== UT
         },
-        LI6r: function(pp, ip) {
-          Di(pp).depth = 0 !== ip
+        LXHY: function(TT, UT) {
+          HU(TT).depth = 0 !== UT
         },
-        qJLB: function(pp, ip) {
-          Di(pp).height = ip >>> 0
+        FhqM: function(TT, UT) {
+          HU(TT).height = UT >>> 0
         },
-        srXn: function(pp, ip) {
-          Di(pp).powerPreference = Bp[ip]
+        TCBV: function(TT, UT) {
+          HU(TT).powerPreference = QT[UT]
         },
-        bjry: function(pp, ip) {
-          Di(pp).premultipliedAlpha = 0 !== ip
+        ed3t: function(TT, UT) {
+          HU(TT).premultipliedAlpha = 0 !== UT
         },
-        OHHs: function(pp, ip) {
-          Di(pp).preserveDrawingBuffer = 0 !== ip
+        vbmy: function(TT, UT) {
+          HU(TT).preserveDrawingBuffer = 0 !== UT
         },
-        QKJM: function(pp, ip) {
-          Di(pp).stencil = 0 !== ip
+        lU5p: function(TT, UT) {
+          HU(TT).stencil = 0 !== UT
         },
-        DDUz: function(pp, ip) {
-          Di(pp).width = ip >>> 0
+        mhYY: function(TT, UT) {
+          HU(TT).width = UT >>> 0
         },
-        IP9r: function(pp, ip, cp, Op) {
-          Di(pp).shaderSource(Di(ip), oi(cp, Op))
+        arhd: function(TT, UT, mT, WT) {
+          HU(TT).shaderSource(HU(UT), mU(mT, WT))
         },
-        u0QM: function(pp, ip, cp, Op) {
-          Di(pp).shaderSource(Di(ip), oi(cp, Op))
+        ZzhF: function(TT, UT, mT, WT) {
+          HU(TT).shaderSource(HU(UT), mU(mT, WT))
         },
-        oAIE: function() {
-          const pp = "undefined" === typeof global ? null : global;
-          return yi(pp) ? 0 : bp(pp)
+        N2J1: function() {
+          const TT = "undefined" === typeof global ? null : global;
+          return LU(TT) ? 0 : VT(TT)
         },
-        G7H1: function() {
-          const pp = "undefined" === typeof globalThis ? null : globalThis;
-          return yi(pp) ? 0 : bp(pp)
+        JBUS: function() {
+          const TT = "undefined" === typeof globalThis ? null : globalThis;
+          return LU(TT) ? 0 : VT(TT)
         },
-        zWkv: function() {
-          const pp = "undefined" === typeof self ? null : self;
-          return yi(pp) ? 0 : bp(pp)
+        DDf9: function() {
+          const TT = "undefined" === typeof self ? null : self;
+          return LU(TT) ? 0 : VT(TT)
         },
-        tx0R: function() {
-          const pp = "undefined" === typeof window ? null : window;
-          return yi(pp) ? 0 : bp(pp)
+        qA8O: function() {
+          const TT = "undefined" === typeof window ? null : window;
+          return LU(TT) ? 0 : VT(TT)
         },
-        raDR: function(pp) {
-          return bp(Di(pp).style)
+        OmWn: function(TT) {
+          return VT(HU(TT).style)
         },
-        xa12: function(pp, ip, cp) {
-          return bp(Di(pp).subarray(ip >>> 0, cp >>> 0))
+        OHXQ: function(TT, UT, mT) {
+          return VT(HU(TT).subarray(UT >>> 0, mT >>> 0))
         },
-        lZir: function(pp, ip, cp, Op) {
-          Di(pp).texParameterf(ip >>> 0, cp >>> 0, Op)
+        UG30: function(TT, UT, mT, WT) {
+          HU(TT).texParameterf(UT >>> 0, mT >>> 0, WT)
         },
-        Cqqn: function(pp, ip, cp, Op) {
-          Di(pp).texParameterf(ip >>> 0, cp >>> 0, Op)
+        xQDo: function(TT, UT, mT, WT) {
+          HU(TT).texParameterf(UT >>> 0, mT >>> 0, WT)
         },
-        yS0p: function(pp, ip, cp, Op) {
-          Di(pp).texParameteri(ip >>> 0, cp >>> 0, Op)
+        jBTr: function(TT, UT, mT, WT) {
+          HU(TT).texParameteri(UT >>> 0, mT >>> 0, WT)
         },
-        ytJm: function(pp, ip, cp, Op) {
-          Di(pp).texParameteri(ip >>> 0, cp >>> 0, Op)
+        ev08: function(TT, UT, mT, WT) {
+          HU(TT).texParameteri(UT >>> 0, mT >>> 0, WT)
         },
-        KvKB: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).texStorage2D(ip >>> 0, cp, Op >>> 0, op, Ip)
+        L3qp: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).texStorage2D(UT >>> 0, mT, WT >>> 0, zT, MT)
         },
-        LcEN: function(pp, ip, cp, Op, op, Ip, Sp) {
-          Di(pp).texStorage3D(ip >>> 0, cp, Op >>> 0, op, Ip, Sp)
+        Gy82: function(TT, UT, mT, WT, zT, MT, gT) {
+          HU(TT).texStorage3D(UT >>> 0, mT, WT >>> 0, zT, MT, gT)
         },
-        vnx3: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-            Di(pp).texSubImage2D(ip >>> 0, cp, Op, op, Ip, Sp, xp >>> 0, Lp >>> 0, Di(Yp))
+        l3Kt: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+            HU(TT).texSubImage2D(UT >>> 0, mT, WT, zT, MT, gT, nT >>> 0, HT >>> 0, HU(kT))
           }), arguments)
         },
-        jycv: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-            Di(pp).texSubImage2D(ip >>> 0, cp, Op, op, Ip, Sp, xp >>> 0, Lp >>> 0, Di(Yp))
+        SY07: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+            HU(TT).texSubImage2D(UT >>> 0, mT, WT, zT, MT, gT, nT >>> 0, HT >>> 0, HU(kT))
           }), arguments)
         },
-        bAjP: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-            Di(pp).texSubImage2D(ip >>> 0, cp, Op, op, Ip, Sp, xp >>> 0, Lp >>> 0, Di(Yp))
+        te0M: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+            HU(TT).texSubImage2D(UT >>> 0, mT, WT, zT, MT, gT, nT >>> 0, HT >>> 0, HU(kT))
           }), arguments)
         },
-        m5CY: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-            Di(pp).texSubImage2D(ip >>> 0, cp, Op, op, Ip, Sp, xp >>> 0, Lp >>> 0, Di(Yp))
+        Gu9L: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+            HU(TT).texSubImage2D(UT >>> 0, mT, WT, zT, MT, gT, nT >>> 0, HT >>> 0, HU(kT))
           }), arguments)
         },
-        JFvZ: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-            Di(pp).texSubImage3D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp, Yp >>> 0, Dp >>> 0, Di(Ap))
+        m5n3: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT) {
+            HU(TT).texSubImage3D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT, kT >>> 0, jT >>> 0, HU(lT))
           }), arguments)
         },
-        nYyu: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-            Di(pp).texSubImage3D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp, Yp >>> 0, Dp >>> 0, Di(Ap))
+        Gkab: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT) {
+            HU(TT).texSubImage3D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT, kT >>> 0, jT >>> 0, HU(lT))
           }), arguments)
         },
-        COWp: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-            Di(pp).texSubImage3D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp, Yp >>> 0, Dp >>> 0, Di(Ap))
+        nONi: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT) {
+            HU(TT).texSubImage3D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT, kT >>> 0, jT >>> 0, HU(lT))
           }), arguments)
         },
-        nYNg: function() {
-          return Ai((function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-            Di(pp).texSubImage3D(ip >>> 0, cp, Op, op, Ip, Sp, xp, Lp, Yp >>> 0, Dp >>> 0, Di(Ap))
+        UQqL: function() {
+          return kU((function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT) {
+            HU(TT).texSubImage3D(UT >>> 0, mT, WT, zT, MT, gT, nT, HT, kT >>> 0, jT >>> 0, HU(lT))
           }), arguments)
         },
-        M8QI: function(pp, ip) {
-          return bp(Di(pp).then(Di(ip)))
+        Jf80: function(TT, UT) {
+          return VT(HU(TT).then(HU(UT)))
         },
-        R1Sc: function(pp, ip, cp, Op) {
-          Di(pp).transformFeedbackVaryings(Di(ip), Di(cp), Op >>> 0)
+        OPaj: function(TT, UT, mT, WT) {
+          HU(TT).transformFeedbackVaryings(HU(UT), HU(mT), WT >>> 0)
         },
-        t3MJ: function(pp, ip, cp) {
-          Di(pp).uniform1f(Di(ip), cp)
+        pSbV: function(TT, UT, mT) {
+          HU(TT).uniform1f(HU(UT), mT)
         },
-        baOT: function(pp, ip, cp) {
-          Di(pp).uniform1f(Di(ip), cp)
+        k9yH: function(TT, UT, mT) {
+          HU(TT).uniform1f(HU(UT), mT)
         },
-        bhHv: function(pp, ip, cp) {
-          Di(pp).uniform1i(Di(ip), cp)
+        teN9: function(TT, UT, mT) {
+          HU(TT).uniform1i(HU(UT), mT)
         },
-        KLcs: function(pp, ip, cp) {
-          Di(pp).uniform1i(Di(ip), cp)
+        sChf: function(TT, UT, mT) {
+          HU(TT).uniform1i(HU(UT), mT)
         },
-        veNF: function(pp, ip, cp) {
-          Di(pp).uniform1ui(Di(ip), cp >>> 0)
+        A4gL: function(TT, UT, mT) {
+          HU(TT).uniform1ui(HU(UT), mT >>> 0)
         },
-        KCrR: function(pp, ip, cp, Op) {
-          Di(pp).uniform2f(Di(ip), cp, Op)
+        nRZb: function(TT, UT, mT, WT) {
+          HU(TT).uniform2f(HU(UT), mT, WT)
         },
-        G5Bu: function(pp, ip, cp, Op) {
-          Di(pp).uniform2f(Di(ip), cp, Op)
+        i3ng: function(TT, UT, mT, WT) {
+          HU(TT).uniform2f(HU(UT), mT, WT)
         },
-        FhpM: function(pp, ip, cp, Op) {
-          Di(pp).uniformBlockBinding(Di(ip), cp >>> 0, Op >>> 0)
+        fR1w: function(TT, UT, mT, WT) {
+          HU(TT).uniformBlockBinding(HU(UT), mT >>> 0, WT >>> 0)
         },
-        xUfS: function(pp, ip) {
-          Di(pp).useProgram(Di(ip))
+        dNDO: function(TT, UT) {
+          HU(TT).useProgram(HU(UT))
         },
-        mNfx: function(pp, ip) {
-          Di(pp).useProgram(Di(ip))
+        Lr9f: function(TT, UT) {
+          HU(TT).useProgram(HU(UT))
         },
-        X14s: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).vertexAttrib4f(ip >>> 0, cp, Op, op, Ip)
+        E1AN: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).vertexAttrib4f(UT >>> 0, mT, WT, zT, MT)
         },
-        ZfrI: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).vertexAttrib4f(ip >>> 0, cp, Op, op, Ip)
+        PtJh: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).vertexAttrib4f(UT >>> 0, mT, WT, zT, MT)
         },
-        NVwR: function(pp, ip, cp) {
-          Di(pp).vertexAttribDivisorANGLE(ip >>> 0, cp >>> 0)
+        Yv3i: function(TT, UT, mT) {
+          HU(TT).vertexAttribDivisorANGLE(UT >>> 0, mT >>> 0)
         },
-        pTFE: function(pp, ip, cp) {
-          Di(pp).vertexAttribDivisor(ip >>> 0, cp >>> 0)
+        EZXu: function(TT, UT, mT) {
+          HU(TT).vertexAttribDivisor(UT >>> 0, mT >>> 0)
         },
-        cB4K: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).vertexAttribI4i(ip >>> 0, cp, Op, op, Ip)
+        DMWu: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).vertexAttribI4i(UT >>> 0, mT, WT, zT, MT)
         },
-        tmFM: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).vertexAttribI4ui(ip >>> 0, cp >>> 0, Op >>> 0, op >>> 0, Ip >>> 0)
+        dwYd: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).vertexAttribI4ui(UT >>> 0, mT >>> 0, WT >>> 0, zT >>> 0, MT >>> 0)
         },
-        hoM1: function(pp, ip, cp, Op, op, Ip) {
-          Di(pp).vertexAttribIPointer(ip >>> 0, cp, Op >>> 0, op, Ip)
+        tUCP: function(TT, UT, mT, WT, zT, MT) {
+          HU(TT).vertexAttribIPointer(UT >>> 0, mT, WT >>> 0, zT, MT)
         },
-        QuST: function(pp, ip, cp, Op, op, Ip, Sp) {
-          Di(pp).vertexAttribPointer(ip >>> 0, cp, Op >>> 0, 0 !== op, Ip, Sp)
+        FVf4: function(TT, UT, mT, WT, zT, MT, gT) {
+          HU(TT).vertexAttribPointer(UT >>> 0, mT, WT >>> 0, 0 !== zT, MT, gT)
         },
-        bpJ3: function(pp, ip, cp, Op, op, Ip, Sp) {
-          Di(pp).vertexAttribPointer(ip >>> 0, cp, Op >>> 0, 0 !== op, Ip, Sp)
+        BerH: function(TT, UT, mT, WT, zT, MT, gT) {
+          HU(TT).vertexAttribPointer(UT >>> 0, mT, WT >>> 0, 0 !== zT, MT, gT)
         },
-        YvLg: function(pp, ip, cp, Op, op) {
-          Di(pp).viewport(ip, cp, Op, op)
+        oGCT: function(TT, UT, mT, WT, zT) {
+          HU(TT).viewport(UT, mT, WT, zT)
         },
-        dtOA: function(pp, ip, cp, Op, op) {
-          Di(pp).viewport(ip, cp, Op, op)
+        vSkI: function(TT, UT, mT, WT, zT) {
+          HU(TT).viewport(UT, mT, WT, zT)
         },
-        L3GH: function(pp, ip) {
-          console.warn(oi(pp, ip))
+        xqwy: function(TT, UT) {
+          console.warn(mU(TT, UT))
         },
-        rXEf: function(pp) {
-          return Di(pp).width
+        F35a: function(TT) {
+          return HU(TT).width
         },
-        sU9k: function(pp) {
-          return Di(pp).width
+        Xjah: function(TT) {
+          return HU(TT).width
         },
-        ujsd: function(pp) {
-          return Di(pp).width
+        O4mz: function(TT) {
+          return HU(TT).width
         },
-        Bkxo: function(pp, ip) {
-          return bp(Ui(pp, ip, Jp))
+        CmWj: function(TT, UT) {
+          return VT(pU(TT, UT, IT))
         },
-        dckL: function(pp, ip) {
-          return bp(Ui(pp, ip, Qp))
+        gaFD: function(TT, UT) {
+          return VT(pU(TT, UT, XT))
         },
-        D08E: function(pp, ip) {
-          return bp(Ui(pp, ip, lp))
+        rB2u: function(TT, UT) {
+          return VT(pU(TT, UT, yT))
         },
-        S9fC: function(pp) {
-          return bp(pp)
+        FODH: function(TT) {
+          return VT(TT)
         },
-        KOdx: function(pp, ip) {
-          var cp, Op;
-          return bp((cp = pp, Op = ip, cp >>>= 0, (null !== Kp && 0 !== Kp.byteLength || (Kp = new Float32Array(qi.memory.buffer)), Kp).subarray(cp / 4, cp / 4 + Op)))
+        bOt5: function(TT, UT) {
+          var mT, WT;
+          return VT((mT = TT, WT = UT, mT >>>= 0, (null !== oT && 0 !== oT.byteLength || (oT = new Float32Array(JU.memory.buffer)), oT).subarray(mT / 4, mT / 4 + WT)))
         },
-        c0VJ: function(pp, ip) {
-          var cp, Op;
-          return bp((cp = pp, Op = ip, cp >>>= 0, (null !== ci && 0 !== ci.byteLength || (ci = new Int16Array(qi.memory.buffer)), ci).subarray(cp / 2, cp / 2 + Op)))
+        MPVk: function(TT, UT) {
+          var mT, WT;
+          return VT((mT = TT, WT = UT, mT >>>= 0, (null !== TU && 0 !== TU.byteLength || (TU = new Int16Array(JU.memory.buffer)), TU).subarray(mT / 2, mT / 2 + WT)))
         },
-        MPZG: function(pp, ip) {
-          return bp(gp(pp, ip))
+        Pld6: function(TT, UT) {
+          return VT(ST(TT, UT))
         },
-        k9bv: function(pp, ip) {
-          var cp, Op;
-          return bp((cp = pp, Op = ip, cp >>>= 0, (null !== Ii && 0 !== Ii.byteLength || (Ii = new Uint16Array(qi.memory.buffer)), Ii).subarray(cp / 2, cp / 2 + Op)))
+        wR6i: function(TT, UT) {
+          var mT, WT;
+          return VT((mT = TT, WT = UT, mT >>>= 0, (null !== WU && 0 !== WU.byteLength || (WU = new Uint16Array(JU.memory.buffer)), WU).subarray(mT / 2, mT / 2 + WT)))
         },
-        f8Sq: function(pp, ip) {
-          return bp(rp(pp, ip))
+        kF9s: function(TT, UT) {
+          return VT(NT(TT, UT))
         },
-        dfBa: function(pp, ip) {
-          return bp(Zp(pp, ip))
+        aSPZ: function(TT, UT) {
+          return VT(ET(TT, UT))
         },
-        y4D2: function(pp, ip) {
-          return bp(oi(pp, ip))
+        b3Rg: function(TT, UT) {
+          return VT(mU(TT, UT))
         },
-        AqLl: function(pp) {
-          return bp(Di(pp))
+        Mt6y: function(TT) {
+          return VT(HU(TT))
         },
-        kZ3h: function(pp) {
-          di(pp)
+        Zz5h: function(TT) {
+          fU(TT)
         },
-        B3OE: pp || new WebAssembly.Memory({
+        aKtC: TT || new WebAssembly.Memory({
           initial: 128,
           maximum: 14648
         })
       };
       return {
         __proto__: null,
-        z9Pc: ip
+        d59n: UT
       }
     }
 
-    function lp(pp, ip) {
-      qi.ILcO(pp, ip)
+    function yT(TT, UT) {
+      JU.aO9J(TT, UT)
     }
 
-    function Qp(pp, ip, cp) {
-      qi.F4HK(pp, ip, bp(cp))
+    function XT(TT, UT, mT) {
+      JU.cJMZ(TT, UT, VT(mT))
     }
 
-    function Jp(pp, ip, cp) {
-      const Op = qi.Zmoe(pp, ip, bp(cp));
-      if (Op[1]) throw di(Op[0])
+    function IT(TT, UT, mT) {
+      const WT = JU.PiZi(TT, UT, VT(mT));
+      if (WT[1]) throw fU(WT[0])
     }
-    Symbol.dispose && (Sp.prototype[Symbol.dispose] = Sp.prototype.free);
-    const Bp = ["default", "low-power", "high-performance"],
-      Np = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (gT.prototype[Symbol.dispose] = gT.prototype.free);
+    const QT = ["default", "low-power", "high-performance"],
+      sT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((pp => qi.spmq(pp, 1))),
-      Tp = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => JU.jagn(TT, 1))),
+      FT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((pp => qi.tuWE(pp, 1))),
-      fp = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => JU.EVNa(TT, 1))),
+      PT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((pp => qi.fE0W(pp, 1)));
+      } : new FinalizationRegistry((TT => JU.lnii(TT, 1)));
 
-    function bp(pp) {
-      Wi === Pi.length && Pi.push(Pi.length + 1);
-      const ip = Wi;
-      return Wi = Pi[ip], Pi[ip] = pp, ip
+    function VT(TT) {
+      lU === jU.length && jU.push(jU.length + 1);
+      const UT = lU;
+      return lU = jU[UT], jU[UT] = TT, UT
     }
 
-    function hp(pp, ip) {
-      if (!(pp instanceof ip)) throw new Error(`expected instance of ${ip.name}`)
+    function uT(TT, UT) {
+      if (!(TT instanceof UT)) throw new Error(`expected instance of ${UT.name}`)
     }
-    const ap = "undefined" === typeof FinalizationRegistry ? {
+    const CT = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((pp => qi.hMnr(pp.a, pp.b)));
+    } : new FinalizationRegistry((TT => JU.T9Gp(TT.a, TT.b)));
 
-    function np(pp) {
-      const ip = typeof pp;
-      if ("number" == ip || "boolean" == ip || null == pp) return `${pp}`;
-      if ("string" == ip) return `"${pp}"`;
-      if ("symbol" == ip) {
-        const ip = pp.description;
-        return null == ip ? "Symbol" : `Symbol(${ip})`
+    function rT(TT) {
+      const UT = typeof TT;
+      if ("number" == UT || "boolean" == UT || null == TT) return `${TT}`;
+      if ("string" == UT) return `"${TT}"`;
+      if ("symbol" == UT) {
+        const UT = TT.description;
+        return null == UT ? "Symbol" : `Symbol(${UT})`
       }
-      if ("function" == ip) {
-        const ip = pp.name;
-        return "string" == typeof ip && ip.length > 0 ? `Function(${ip})` : "Function"
+      if ("function" == UT) {
+        const UT = TT.name;
+        return "string" == typeof UT && UT.length > 0 ? `Function(${UT})` : "Function"
       }
-      if (Array.isArray(pp)) {
-        const ip = pp.length;
-        let cp = "[";
-        ip > 0 && (cp += np(pp[0]));
-        for (let Op = 1; Op < ip; Op++) cp += ", " + np(pp[Op]);
-        return cp += "]", cp
+      if (Array.isArray(TT)) {
+        const UT = TT.length;
+        let mT = "[";
+        UT > 0 && (mT += rT(TT[0]));
+        for (let WT = 1; WT < UT; WT++) mT += ", " + rT(TT[WT]);
+        return mT += "]", mT
       }
-      const cp = /\[object ([^\]]+)\]/.exec(toString.call(pp));
-      let Op;
-      if (!(cp && cp.length > 1)) return toString.call(pp);
-      if (Op = cp[1], "Object" == Op) try {
-        return "Object(" + JSON.stringify(pp) + ")"
-      } catch (op) {
+      const mT = /\[object ([^\]]+)\]/.exec(toString.call(TT));
+      let WT;
+      if (!(mT && mT.length > 1)) return toString.call(TT);
+      if (WT = mT[1], "Object" == WT) try {
+        return "Object(" + JSON.stringify(TT) + ")"
+      } catch (zT) {
         return "Object"
       }
-      return pp instanceof Error ? `${pp.name}: ${pp.message}\n${pp.stack}` : Op
+      return TT instanceof Error ? `${TT.name}: ${TT.message}\n${TT.stack}` : WT
     }
 
-    function Fp(pp, ip) {
-      return pp >>>= 0, ii().subarray(pp / 8, pp / 8 + ip)
+    function KT(TT, UT) {
+      return TT >>>= 0, RT().subarray(TT / 8, TT / 8 + UT)
     }
 
-    function gp(pp, ip) {
-      return pp >>>= 0,
+    function ST(TT, UT) {
+      return TT >>>= 0,
         function() {
-          null !== Oi && 0 !== Oi.byteLength || (Oi = new Int32Array(qi.memory.buffer));
-          return Oi
-        }().subarray(pp / 4, pp / 4 + ip)
+          null !== UU && 0 !== UU.byteLength || (UU = new Int32Array(JU.memory.buffer));
+          return UU
+        }().subarray(TT / 4, TT / 4 + UT)
     }
 
-    function Gp(pp, ip) {
-      pp >>>= 0;
-      const cp = sp(),
-        Op = [];
-      for (let op = pp; op < pp + 4 * ip; op += 4) Op.push(di(cp.getUint32(op, !0)));
-      return Op
+    function GT(TT, UT) {
+      TT >>>= 0;
+      const mT = DT(),
+        WT = [];
+      for (let zT = TT; zT < TT + 4 * UT; zT += 4) WT.push(fU(mT.getUint32(zT, !0)));
+      return WT
     }
 
-    function rp(pp, ip) {
-      return pp >>>= 0, xi().subarray(pp / 4, pp / 4 + ip)
+    function NT(TT, UT) {
+      return TT >>>= 0, MU().subarray(TT / 4, TT / 4 + UT)
     }
 
-    function Zp(pp, ip) {
-      return pp >>>= 0, Yi().subarray(pp / 1, pp / 1 + ip)
+    function ET(TT, UT) {
+      return TT >>>= 0, nU().subarray(TT / 1, TT / 1 + UT)
     }
-    let zp = null;
+    let hT = null;
 
-    function sp() {
-      return null !== zp && zp.buffer === qi.memory.buffer || (zp = new DataView(qi.memory.buffer)), zp
+    function DT() {
+      return null !== hT && hT.buffer === JU.memory.buffer || (hT = new DataView(JU.memory.buffer)), hT
     }
-    let Kp = null;
-    let Vp = null;
+    let oT = null;
+    let AT = null;
 
-    function ii() {
-      return null !== Vp && 0 !== Vp.byteLength || (Vp = new Float64Array(qi.memory.buffer)), Vp
+    function RT() {
+      return null !== AT && 0 !== AT.byteLength || (AT = new Float64Array(JU.memory.buffer)), AT
     }
-    let ci = null;
-    let Oi = null;
+    let TU = null;
+    let UU = null;
 
-    function oi(pp, ip) {
-      return function(pp, ip) {
-        ji += ip, ji >= ui && (ei = new TextDecoder("utf-8", {
+    function mU(TT, UT) {
+      return function(TT, UT) {
+        bU += UT, bU >= iU && (qU = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), ei.decode(), ji = ip);
-        return ei.decode(Yi().subarray(pp, pp + ip))
-      }(pp >>> 0, ip)
+        }), qU.decode(), bU = UT);
+        return qU.decode(nU().subarray(TT, TT + UT))
+      }(TT >>> 0, UT)
     }
-    let Ii = null;
-    let Si = null;
+    let WU = null;
+    let zU = null;
 
-    function xi() {
-      return null !== Si && 0 !== Si.byteLength || (Si = new Uint32Array(qi.memory.buffer)), Si
+    function MU() {
+      return null !== zU && 0 !== zU.byteLength || (zU = new Uint32Array(JU.memory.buffer)), zU
     }
-    let Li = null;
+    let gU = null;
 
-    function Yi() {
-      return null !== Li && 0 !== Li.byteLength || (Li = new Uint8Array(qi.memory.buffer)), Li
-    }
-
-    function Di(pp) {
-      return Pi[pp]
+    function nU() {
+      return null !== gU && 0 !== gU.byteLength || (gU = new Uint8Array(JU.memory.buffer)), gU
     }
 
-    function Ai(pp, ip) {
+    function HU(TT) {
+      return jU[TT]
+    }
+
+    function kU(TT, UT) {
       try {
-        return pp.apply(this, ip)
-      } catch (cp) {
-        qi.qOU4(bp(cp))
+        return TT.apply(this, UT)
+      } catch (mT) {
+        JU.JgsK(VT(mT))
       }
     }
-    let Pi = new Array(1024).fill(void 0);
-    Pi.push(void 0, null, !0, !1);
-    let Wi = Pi.length;
+    let jU = new Array(1024).fill(void 0);
+    jU.push(void 0, null, !0, !1);
+    let lU = jU.length;
 
-    function yi(pp) {
-      return void 0 === pp || null === pp
+    function LU(TT) {
+      return void 0 === TT || null === TT
     }
 
-    function Ui(pp, ip, cp) {
-      const Op = {
-          a: pp,
-          b: ip,
+    function pU(TT, UT, mT) {
+      const WT = {
+          a: TT,
+          b: UT,
           cnt: 1
         },
-        op = function() {
-          Op.cnt++;
-          const pp = Op.a;
-          Op.a = 0;
+        zT = function() {
+          WT.cnt++;
+          const TT = WT.a;
+          WT.a = 0;
           try {
-            for (var ip = arguments.length, Ip = new Array(ip), Sp = 0; Sp < ip; Sp++) Ip[Sp] = arguments[Sp];
-            return cp(pp, Op.b, ...Ip)
+            for (var UT = arguments.length, MT = new Array(UT), gT = 0; gT < UT; gT++) MT[gT] = arguments[gT];
+            return mT(TT, WT.b, ...MT)
           } finally {
-            Op.a = pp, op._wbg_cb_unref()
+            WT.a = TT, zT._wbg_cb_unref()
           }
         };
-      return op._wbg_cb_unref = () => {
-        0 === --Op.cnt && (qi.hMnr(Op.a, Op.b), Op.a = 0, ap.unregister(Op))
-      }, ap.register(op, Op, Op), op
+      return zT._wbg_cb_unref = () => {
+        0 === --WT.cnt && (JU.T9Gp(WT.a, WT.b), WT.a = 0, CT.unregister(WT))
+      }, CT.register(zT, WT, WT), zT
     }
 
-    function wi(pp, ip) {
-      const cp = ip(4 * pp.length, 4) >>> 0;
-      return xi().set(pp, cp / 4), Mi = pp.length, cp
+    function BU(TT, UT) {
+      const mT = UT(4 * TT.length, 4) >>> 0;
+      return MU().set(TT, mT / 4), xU = TT.length, mT
     }
 
-    function vi(pp, ip) {
-      const cp = ip(1 * pp.length, 1) >>> 0;
-      return Yi().set(pp, cp / 1), Mi = pp.length, cp
+    function ZU(TT, UT) {
+      const mT = UT(1 * TT.length, 1) >>> 0;
+      return nU().set(TT, mT / 1), xU = TT.length, mT
     }
 
-    function ti(pp, ip) {
-      const cp = ip(4 * pp.length, 4) >>> 0,
-        Op = sp();
-      for (let op = 0; op < pp.length; op++) Op.setUint32(cp + 4 * op, bp(pp[op]), !0);
-      return Mi = pp.length, cp
+    function cU(TT, UT) {
+      const mT = UT(4 * TT.length, 4) >>> 0,
+        WT = DT();
+      for (let zT = 0; zT < TT.length; zT++) WT.setUint32(mT + 4 * zT, VT(TT[zT]), !0);
+      return xU = TT.length, mT
     }
 
-    function Hi(pp, ip, cp) {
-      if (void 0 === cp) {
-        const cp = ki.encode(pp),
-          Op = ip(cp.length, 1) >>> 0;
-        return Yi().subarray(Op, Op + cp.length).set(cp), Mi = cp.length, Op
+    function vU(TT, UT, mT) {
+      if (void 0 === mT) {
+        const mT = OU.encode(TT),
+          WT = UT(mT.length, 1) >>> 0;
+        return nU().subarray(WT, WT + mT.length).set(mT), xU = mT.length, WT
       }
-      let Op = pp.length,
-        op = ip(Op, 1) >>> 0;
-      const Ip = Yi();
-      let Sp = 0;
-      for (; Sp < Op; Sp++) {
-        const ip = pp.charCodeAt(Sp);
-        if (ip > 127) break;
-        Ip[op + Sp] = ip
+      let WT = TT.length,
+        zT = UT(WT, 1) >>> 0;
+      const MT = nU();
+      let gT = 0;
+      for (; gT < WT; gT++) {
+        const UT = TT.charCodeAt(gT);
+        if (UT > 127) break;
+        MT[zT + gT] = UT
       }
-      if (Sp !== Op) {
-        0 !== Sp && (pp = pp.slice(Sp)), op = cp(op, Op, Op = Sp + 3 * pp.length, 1) >>> 0;
-        const ip = Yi().subarray(op + Sp, op + Op);
-        Sp += ki.encodeInto(pp, ip).written, op = cp(op, Op, Sp, 1) >>> 0
+      if (gT !== WT) {
+        0 !== gT && (TT = TT.slice(gT)), zT = mT(zT, WT, WT = gT + 3 * TT.length, 1) >>> 0;
+        const UT = nU().subarray(zT + gT, zT + WT);
+        gT += OU.encodeInto(TT, UT).written, zT = mT(zT, WT, gT, 1) >>> 0
       }
-      return Mi = Sp, op
+      return xU = gT, zT
     }
 
-    function di(pp) {
-      const ip = Di(pp);
-      return function(pp) {
-        pp < 1028 || (Pi[pp] = Wi, Wi = pp)
-      }(pp), ip
+    function fU(TT) {
+      const UT = HU(TT);
+      return function(TT) {
+        TT < 1028 || (jU[TT] = lU, lU = TT)
+      }(TT), UT
     }
-    let ei = new TextDecoder("utf-8", {
+    let qU = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    ei.decode();
-    const ui = 2146435072;
-    let ji = 0;
-    const ki = new TextEncoder;
-    "encodeInto" in ki || (ki.encodeInto = function(pp, ip) {
-      const cp = ki.encode(pp);
-      return ip.set(cp), {
-        read: pp.length,
-        written: cp.length
+    qU.decode();
+    const iU = 2146435072;
+    let bU = 0;
+    const OU = new TextEncoder;
+    "encodeInto" in OU || (OU.encodeInto = function(TT, UT) {
+      const mT = OU.encode(TT);
+      return UT.set(mT), {
+        read: TT.length,
+        written: mT.length
       }
     });
-    let mi, Ri, qi, Mi = 0;
+    let eU, YU, JU, xU = 0;
 
-    function Ci(pp, ip) {
-      return Ri = pp, qi = pp.exports, mi = ip, zp = null, Kp = null, Vp = null, ci = null, Oi = null, Ii = null, Si = null, Li = null, qi.mhsc(), qi
+    function dU(TT, UT) {
+      return YU = TT, JU = TT.exports, eU = UT, hT = null, oT = null, AT = null, TU = null, UU = null, WU = null, zU = null, gU = null, JU.L6WC(), JU
     }
 
-    function Ei(pp, ip) {
-      if (void 0 !== qi) return qi;
-      void 0 !== pp && (Object.getPrototypeOf(pp) === Object.prototype ? ({
-        module: pp,
-        memory: ip
-      } = pp) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const cp = Xp(ip);
-      pp instanceof WebAssembly.Module || (pp = new WebAssembly.Module(pp));
-      return Ci(new WebAssembly.Instance(pp, cp), pp)
+    function wU(TT, UT) {
+      if (void 0 !== JU) return JU;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module: TT,
+        memory: UT
+      } = TT) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const mT = aT(UT);
+      TT instanceof WebAssembly.Module || (TT = new WebAssembly.Module(TT));
+      return dU(new WebAssembly.Instance(TT, mT), TT)
     }
-    async function Xi(pp, ip) {
-      if (void 0 !== qi) return qi;
-      void 0 !== pp && (Object.getPrototypeOf(pp) === Object.prototype ? ({
-        module_or_path: pp,
-        memory: ip
-      } = pp) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const cp = Xp(ip);
-      ("string" === typeof pp || "function" === typeof Request && pp instanceof Request || "function" === typeof URL && pp instanceof URL) && (pp = fetch(pp));
+    async function tU(TT, UT) {
+      if (void 0 !== JU) return JU;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module_or_path: TT,
+        memory: UT
+      } = TT) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const mT = aT(UT);
+      ("string" === typeof TT || "function" === typeof Request && TT instanceof Request || "function" === typeof URL && TT instanceof URL) && (TT = fetch(TT));
       const {
-        instance: Op,
-        module: op
-      } = await async function(pp, ip) {
-        if ("function" === typeof Response && pp instanceof Response) {
-          if (!pp.ok) throw new Error(`failed to fetch Wasm: ${pp.status} ${pp.statusText} fetching '${pp.url}'`);
+        instance: WT,
+        module: zT
+      } = await async function(TT, UT) {
+        if ("function" === typeof Response && TT instanceof Response) {
+          if (!TT.ok) throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching '${TT.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(pp, ip)
-          } catch (cp) {
-            if (! function(pp) {
-                switch (pp) {
+            return await WebAssembly.instantiateStreaming(TT, UT)
+          } catch (mT) {
+            if (! function(TT) {
+                switch (TT) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(pp.type) || "application/wasm" === pp.headers.get("Content-Type")) throw cp;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cp)
+              }(TT.type) || "application/wasm" === TT.headers.get("Content-Type")) throw mT;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", mT)
           }
-          const Op = await pp.arrayBuffer();
-          return await WebAssembly.instantiate(Op, ip)
+          const WT = await TT.arrayBuffer();
+          return await WebAssembly.instantiate(WT, UT)
         } {
-          const cp = await WebAssembly.instantiate(pp, ip);
-          return cp instanceof WebAssembly.Instance ? {
-            instance: cp,
-            module: pp
-          } : cp
+          const mT = await WebAssembly.instantiate(TT, UT);
+          return mT instanceof WebAssembly.Instance ? {
+            instance: mT,
+            module: TT
+          } : mT
         }
-      }(await pp, cp);
-      return Ci(Op, op)
+      }(await TT, mT);
+      return dU(WT, zT)
     }
-    const li = {
+    const aU = {
       name: "bloxd_wasm_webgl",
-      url: () => new cp.U(cp(42915)),
-      init: Xi,
-      bindings: Op
+      url: () => new mT.U(mT(42798)),
+      init: tU,
+      bindings: WT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

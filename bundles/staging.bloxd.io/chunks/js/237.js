@@ -1,39 +1,39 @@
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  37487: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ap,
-      h: () => Pp,
-      i: () => Up,
-      j: () => Wp
+  37367: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => lT,
+      g: () => LT,
+      k: () => ZT,
+      m: () => pT
     });
-    var Op = cp(37329),
-      op = cp(37324),
-      Ip = cp(37356),
-      Sp = cp(37368);
+    var WT = mT(37205),
+      zT = mT(37196),
+      MT = mT(37226),
+      gT = mT(37239);
 
-    function xp(pp) {
-      return Math.pow(pp, op.g)
+    function nT(TT) {
+      return Math.pow(TT, zT.f)
     }
 
-    function Lp(pp) {
-      return pp <= .04045 ? .0773993808 * pp : Math.pow(.947867299 * (pp + .055), 2.4)
+    function HT(TT) {
+      return TT <= .04045 ? .0773993808 * TT : Math.pow(.947867299 * (TT + .055), 2.4)
     }
 
-    function Yp(pp) {
-      return Math.pow(pp, op.d)
+    function kT(TT) {
+      return Math.pow(TT, zT.d)
     }
 
-    function Dp(pp) {
-      return pp <= .0031308 ? 12.92 * pp : 1.055 * Math.pow(pp, .41666) - .055
+    function jT(TT) {
+      return TT <= .0031308 ? 12.92 * TT : 1.055 * Math.pow(TT, .41666) - .055
     }
-    class Ap {
+    class lT {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = pp, this.g = ip, this.b = cp
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = TT, this.g = UT, this.b = mT
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let pp = 255 * this.r | 0;
-        return pp = 397 * pp ^ 255 * this.g, pp = 397 * pp ^ 255 * this.b, pp
+        let TT = 255 * this.r | 0;
+        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT
       }
-      toArray(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return pp[ip] = this.r, pp[ip + 1] = this.g, pp[ip + 2] = this.b, this
+      toArray(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[UT] = this.r, TT[UT + 1] = this.g, TT[UT + 2] = this.b, this
       }
-      vcp(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Ap.FromArrayToRef(pp, ip, this), this
+      MmT(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return lT.FromArrayToRef(TT, UT, this), this
       }
       toColor4() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new Pp(this.r, this.g, this.b, pp)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new LT(this.r, this.g, this.b, TT)
       }
-      BOp() {
+      cWT() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(pp) {
-        return new Ap(this.r * pp.r, this.g * pp.g, this.b * pp.b)
+      multiply(TT) {
+        return new lT(this.r * TT.r, this.g * TT.g, this.b * TT.b)
       }
-      multiplyToRef(pp, ip) {
-        return ip.r = this.r * pp.r, ip.g = this.g * pp.g, ip.b = this.b * pp.b, ip
+      multiplyToRef(TT, UT) {
+        return UT.r = this.r * TT.r, UT.g = this.g * TT.g, UT.b = this.b * TT.b, UT
       }
-      multiplyInPlace(pp) {
-        return this.r *= pp.r, this.g *= pp.g, this.b *= pp.b, this
+      multiplyInPlace(TT) {
+        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this
       }
-      multiplyByFloats(pp, ip, cp) {
-        return new Ap(this.r * pp, this.g * ip, this.b * cp)
+      multiplyByFloats(TT, UT, mT) {
+        return new lT(this.r * TT, this.g * UT, this.b * mT)
       }
-      divide(pp) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(pp, ip) {
+      divideToRef(TT, UT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(pp) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(pp) {
-        return this.minimizeInPlaceFromFloats(pp.r, pp.g, pp.b)
+      minimizeInPlace(TT) {
+        return this.minimizeInPlaceFromFloats(TT.r, TT.g, TT.b)
       }
-      maximizeInPlace(pp) {
-        return this.maximizeInPlaceFromFloats(pp.r, pp.g, pp.b)
+      maximizeInPlace(TT) {
+        return this.maximizeInPlaceFromFloats(TT.r, TT.g, TT.b)
       }
-      minimizeInPlaceFromFloats(pp, ip, cp) {
-        return this.r = Math.min(pp, this.r), this.g = Math.min(ip, this.g), this.b = Math.min(cp, this.b), this
+      minimizeInPlaceFromFloats(TT, UT, mT) {
+        return this.r = Math.min(TT, this.r), this.g = Math.min(UT, this.g), this.b = Math.min(mT, this.b), this
       }
-      maximizeInPlaceFromFloats(pp, ip, cp) {
-        return this.r = Math.max(pp, this.r), this.g = Math.max(ip, this.g), this.b = Math.max(cp, this.b), this
+      maximizeInPlaceFromFloats(TT, UT, mT) {
+        return this.r = Math.max(TT, this.r), this.g = Math.max(UT, this.g), this.b = Math.max(mT, this.b), this
       }
-      floorToRef(pp) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(pp) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(pp) {
-        return pp && this.r === pp.r && this.g === pp.g && this.b === pp.b
+      equals(TT) {
+        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b
       }
-      equalsFloats(pp, ip, cp) {
-        return this.jxp(pp, ip, cp)
+      equalsFloats(TT, UT, mT) {
+        return this.UnT(TT, UT, mT)
       }
-      jxp(pp, ip, cp) {
-        return this.r === pp && this.g === ip && this.b === cp
+      UnT(TT, UT, mT) {
+        return this.r === TT && this.g === UT && this.b === mT
       }
-      equalsWithEpsilon(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op.b;
-        return (0, Ip.WithinEpsilon)(this.r, pp.r, ip) && (0, Ip.WithinEpsilon)(this.g, pp.g, ip) && (0, Ip.WithinEpsilon)(this.b, pp.b, ip)
+      equalsWithEpsilon(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.c;
+        return (0, MT.WithinEpsilon)(this.r, TT.r, UT) && (0, MT.WithinEpsilon)(this.g, TT.g, UT) && (0, MT.WithinEpsilon)(this.b, TT.b, UT)
       }
-      gp() {
+      ck() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(pp) {
+      negateToRef(TT) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(pp) {
-        return new Ap(this.r * pp, this.g * pp, this.b * pp)
+      scale(TT) {
+        return new lT(this.r * TT, this.g * TT, this.b * TT)
       }
-      scaleInPlace(pp) {
-        return this.r *= pp, this.g *= pp, this.b *= pp, this
+      scaleInPlace(TT) {
+        return this.r *= TT, this.g *= TT, this.b *= TT, this
       }
-      scaleToRef(pp, ip) {
-        return ip.r = this.r * pp, ip.g = this.g * pp, ip.b = this.b * pp, ip
+      scaleToRef(TT, UT) {
+        return UT.r = this.r * TT, UT.g = this.g * TT, UT.b = this.b * TT, UT
       }
-      scaleAndAddToRef(pp, ip) {
-        return ip.r += this.r * pp, ip.g += this.g * pp, ip.b += this.b * pp, ip
+      scaleAndAddToRef(TT, UT) {
+        return UT.r += this.r * TT, UT.g += this.g * TT, UT.b += this.b * TT, UT
       }
       clampToRef() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        return cp.r = (0, Ip.Clamp)(this.r, pp, ip), cp.g = (0, Ip.Clamp)(this.g, pp, ip), cp.b = (0, Ip.Clamp)(this.b, pp, ip), cp
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        return mT.r = (0, MT.Clamp)(this.r, TT, UT), mT.g = (0, MT.Clamp)(this.g, TT, UT), mT.b = (0, MT.Clamp)(this.b, TT, UT), mT
       }
-      add(pp) {
-        return new Ap(this.r + pp.r, this.g + pp.g, this.b + pp.b)
+      add(TT) {
+        return new lT(this.r + TT.r, this.g + TT.g, this.b + TT.b)
       }
-      addInPlace(pp) {
-        return this.r += pp.r, this.g += pp.g, this.b += pp.b, this
+      addInPlace(TT) {
+        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this
       }
-      addInPlaceFromFloats(pp, ip, cp) {
-        return this.r += pp, this.g += ip, this.b += cp, this
+      addInPlaceFromFloats(TT, UT, mT) {
+        return this.r += TT, this.g += UT, this.b += mT, this
       }
-      addToRef(pp, ip) {
-        return ip.r = this.r + pp.r, ip.g = this.g + pp.g, ip.b = this.b + pp.b, ip
+      addToRef(TT, UT) {
+        return UT.r = this.r + TT.r, UT.g = this.g + TT.g, UT.b = this.b + TT.b, UT
       }
-      subtract(pp) {
-        return new Ap(this.r - pp.r, this.g - pp.g, this.b - pp.b)
+      subtract(TT) {
+        return new lT(this.r - TT.r, this.g - TT.g, this.b - TT.b)
       }
-      subtractToRef(pp, ip) {
-        return ip.r = this.r - pp.r, ip.g = this.g - pp.g, ip.b = this.b - pp.b, ip
+      subtractToRef(TT, UT) {
+        return UT.r = this.r - TT.r, UT.g = this.g - TT.g, UT.b = this.b - TT.b, UT
       }
-      Iop(pp) {
-        return this.r -= pp.r, this.g -= pp.g, this.b -= pp.b, this
+      FWT(TT) {
+        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this
       }
-      subtractFromFloats(pp, ip, cp) {
-        return new Ap(this.r - pp, this.g - ip, this.b - cp)
+      subtractFromFloats(TT, UT, mT) {
+        return new lT(this.r - TT, this.g - UT, this.b - mT)
       }
-      subtractFromFloatsToRef(pp, ip, cp, Op) {
-        return Op.r = this.r - pp, Op.g = this.g - ip, Op.b = this.b - cp, Op
+      subtractFromFloatsToRef(TT, UT, mT, WT) {
+        return WT.r = this.r - TT, WT.g = this.g - UT, WT.b = this.b - mT, WT
       }
       clone() {
-        return new Ap(this.r, this.g, this.b)
+        return new lT(this.r, this.g, this.b)
       }
-      rM(pp) {
-        return this.r = pp.r, this.g = pp.g, this.b = pp.b, this
+      Gw(TT) {
+        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this
       }
-      i5(pp, ip, cp) {
-        return this.r = pp, this.g = ip, this.b = cp, this
+      J9(TT, UT, mT) {
+        return this.r = TT, this.g = UT, this.b = mT, this
       }
-      set(pp, ip, cp) {
-        return this.i5(pp, ip, cp)
+      set(TT, UT, mT) {
+        return this.J9(TT, UT, mT)
       }
-      E_(pp) {
-        return this.r = this.g = this.b = pp, this
+      B3(TT) {
+        return this.r = this.g = this.b = TT, this
       }
       toHexString() {
-        const pp = Math.round(255 * this.r),
-          ip = Math.round(255 * this.g),
-          cp = Math.round(255 * this.b);
-        return "#" + (0, Ip.ToHex)(pp) + (0, Ip.ToHex)(ip) + (0, Ip.ToHex)(cp)
+        const TT = Math.round(255 * this.r),
+          UT = Math.round(255 * this.g),
+          mT = Math.round(255 * this.b);
+        return "#" + (0, MT.ToHex)(TT) + (0, MT.ToHex)(UT) + (0, MT.ToHex)(mT)
       }
-      fromHexString(pp) {
-        return "#" !== pp.substring(0, 1) || 7 !== pp.length || (this.r = parseInt(pp.substring(1, 3), 16) / 255, this.g = parseInt(pp.substring(3, 5), 16) / 255, this.b = parseInt(pp.substring(5, 7), 16) / 255), this
+      fromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new Ap)
+        return this.toHSVToRef(new lT)
       }
-      toHSVToRef(pp) {
-        const ip = this.r,
-          cp = this.g,
-          Op = this.b,
-          op = Math.max(ip, cp, Op),
-          Ip = Math.min(ip, cp, Op);
-        let Sp = 0,
-          xp = 0;
-        const Lp = op,
-          Yp = op - Ip;
-        return 0 !== op && (xp = Yp / op), op != Ip && (op == ip ? (Sp = (cp - Op) / Yp, cp < Op && (Sp += 6)) : op == cp ? Sp = (Op - ip) / Yp + 2 : op == Op && (Sp = (ip - cp) / Yp + 4), Sp *= 60), pp.r = Sp, pp.g = xp, pp.b = Lp, pp
+      toHSVToRef(TT) {
+        const UT = this.r,
+          mT = this.g,
+          WT = this.b,
+          zT = Math.max(UT, mT, WT),
+          MT = Math.min(UT, mT, WT);
+        let gT = 0,
+          nT = 0;
+        const HT = zT,
+          kT = zT - MT;
+        return 0 !== zT && (nT = kT / zT), zT != MT && (zT == UT ? (gT = (mT - WT) / kT, mT < WT && (gT += 6)) : zT == mT ? gT = (WT - UT) / kT + 2 : zT == WT && (gT = (UT - mT) / kT + 4), gT *= 60), TT.r = gT, TT.g = nT, TT.b = HT, TT
       }
       toLinearSpace() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ip = new Ap;
-        return this.toLinearSpaceToRef(ip, pp), ip
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const UT = new lT;
+        return this.toLinearSpaceToRef(UT, TT), UT
       }
-      toLinearSpaceToRef(pp) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (pp.r = Lp(this.r), pp.g = Lp(this.g), pp.b = Lp(this.b)) : (pp.r = xp(this.r), pp.g = xp(this.g), pp.b = xp(this.b)), this
+      toLinearSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = HT(this.r), TT.g = HT(this.g), TT.b = HT(this.b)) : (TT.r = nT(this.r), TT.g = nT(this.g), TT.b = nT(this.b)), this
       }
       toGammaSpace() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ip = new Ap;
-        return this.toGammaSpaceToRef(ip, pp), ip
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const UT = new lT;
+        return this.toGammaSpaceToRef(UT, TT), UT
       }
-      toGammaSpaceToRef(pp) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (pp.r = Dp(this.r), pp.g = Dp(this.g), pp.b = Dp(this.b)) : (pp.r = Yp(this.r), pp.g = Yp(this.g), pp.b = Yp(this.b)), this
+      toGammaSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = jT(this.r), TT.g = jT(this.g), TT.b = jT(this.b)) : (TT.r = kT(this.r), TT.g = kT(this.g), TT.b = kT(this.b)), this
       }
-      static HSVtoRGBToRef(pp, ip, cp, Op) {
-        const op = cp * ip,
-          Ip = pp / 60,
-          Sp = op * (1 - Math.abs(Ip % 2 - 1));
-        let xp = 0,
-          Lp = 0,
-          Yp = 0;
-        Ip >= 0 && Ip <= 1 ? (xp = op, Lp = Sp) : Ip >= 1 && Ip <= 2 ? (xp = Sp, Lp = op) : Ip >= 2 && Ip <= 3 ? (Lp = op, Yp = Sp) : Ip >= 3 && Ip <= 4 ? (Lp = Sp, Yp = op) : Ip >= 4 && Ip <= 5 ? (xp = Sp, Yp = op) : Ip >= 5 && Ip <= 6 && (xp = op, Yp = Sp);
-        const Dp = cp - op;
-        return Op.r = xp + Dp, Op.g = Lp + Dp, Op.b = Yp + Dp, Op
+      static HSVtoRGBToRef(TT, UT, mT, WT) {
+        const zT = mT * UT,
+          MT = TT / 60,
+          gT = zT * (1 - Math.abs(MT % 2 - 1));
+        let nT = 0,
+          HT = 0,
+          kT = 0;
+        MT >= 0 && MT <= 1 ? (nT = zT, HT = gT) : MT >= 1 && MT <= 2 ? (nT = gT, HT = zT) : MT >= 2 && MT <= 3 ? (HT = zT, kT = gT) : MT >= 3 && MT <= 4 ? (HT = gT, kT = zT) : MT >= 4 && MT <= 5 ? (nT = gT, kT = zT) : MT >= 5 && MT <= 6 && (nT = zT, kT = gT);
+        const jT = mT - zT;
+        return WT.r = nT + jT, WT.g = HT + jT, WT.b = kT + jT, WT
       }
-      static FromHSV(pp, ip, cp) {
-        const Op = new Ap(0, 0, 0);
-        return Ap.HSVtoRGBToRef(pp, ip, cp, Op), Op
+      static FromHSV(TT, UT, mT) {
+        const WT = new lT(0, 0, 0);
+        return lT.HSVtoRGBToRef(TT, UT, mT, WT), WT
       }
-      static FromHexString(pp) {
-        return new Ap(0, 0, 0).fromHexString(pp)
+      static FromHexString(TT) {
+        return new lT(0, 0, 0).fromHexString(TT)
       }
-      static FromArray(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Ap(pp[ip], pp[ip + 1], pp[ip + 2])
+      static FromArray(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new lT(TT[UT], TT[UT + 1], TT[UT + 2])
       }
-      static FromArrayToRef(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        cp.r = pp[ip], cp.g = pp[ip + 1], cp.b = pp[ip + 2]
+      static FromArrayToRef(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        mT.r = TT[UT], mT.g = TT[UT + 1], mT.b = TT[UT + 2]
       }
-      static FromInts(pp, ip, cp) {
-        return new Ap(pp / 255, ip / 255, cp / 255)
+      static FromInts(TT, UT, mT) {
+        return new lT(TT / 255, UT / 255, mT / 255)
       }
-      static Lerp(pp, ip, cp) {
-        const Op = new Ap(0, 0, 0);
-        return Ap.LerpToRef(pp, ip, cp, Op), Op
+      static Lerp(TT, UT, mT) {
+        const WT = new lT(0, 0, 0);
+        return lT.LerpToRef(TT, UT, mT, WT), WT
       }
-      static LerpToRef(pp, ip, cp, Op) {
-        Op.r = pp.r + (ip.r - pp.r) * cp, Op.g = pp.g + (ip.g - pp.g) * cp, Op.b = pp.b + (ip.b - pp.b) * cp
+      static LerpToRef(TT, UT, mT, WT) {
+        WT.r = TT.r + (UT.r - TT.r) * mT, WT.g = TT.g + (UT.g - TT.g) * mT, WT.b = TT.b + (UT.b - TT.b) * mT
       }
-      static Hermite(pp, ip, cp, Op, op) {
-        const Ip = op * op,
-          Sp = op * Ip,
-          xp = 2 * Sp - 3 * Ip + 1,
-          Lp = -2 * Sp + 3 * Ip,
-          Yp = Sp - 2 * Ip + op,
-          Dp = Sp - Ip,
-          Pp = pp.r * xp + cp.r * Lp + ip.r * Yp + Op.r * Dp,
-          Wp = pp.g * xp + cp.g * Lp + ip.g * Yp + Op.g * Dp,
-          yp = pp.b * xp + cp.b * Lp + ip.b * Yp + Op.b * Dp;
-        return new Ap(Pp, Wp, yp)
+      static Hermite(TT, UT, mT, WT, zT) {
+        const MT = zT * zT,
+          gT = zT * MT,
+          nT = 2 * gT - 3 * MT + 1,
+          HT = -2 * gT + 3 * MT,
+          kT = gT - 2 * MT + zT,
+          jT = gT - MT,
+          LT = TT.r * nT + mT.r * HT + UT.r * kT + WT.r * jT,
+          pT = TT.g * nT + mT.g * HT + UT.g * kT + WT.g * jT,
+          BT = TT.b * nT + mT.b * HT + UT.b * kT + WT.b * jT;
+        return new lT(LT, pT, BT)
       }
-      static Hermite1stDerivative(pp, ip, cp, Op, op) {
-        const Ip = Ap.Black();
-        return this.Hermite1stDerivativeToRef(pp, ip, cp, Op, op, Ip), Ip
+      static Hermite1stDerivative(TT, UT, mT, WT, zT) {
+        const MT = lT.Black();
+        return this.Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT), MT
       }
-      static Hermite1stDerivativeToRef(pp, ip, cp, Op, op, Ip) {
-        const Sp = op * op;
-        Ip.r = 6 * (Sp - op) * pp.r + (3 * Sp - 4 * op + 1) * ip.r + 6 * (-Sp + op) * cp.r + (3 * Sp - 2 * op) * Op.r, Ip.g = 6 * (Sp - op) * pp.g + (3 * Sp - 4 * op + 1) * ip.g + 6 * (-Sp + op) * cp.g + (3 * Sp - 2 * op) * Op.g, Ip.b = 6 * (Sp - op) * pp.b + (3 * Sp - 4 * op + 1) * ip.b + 6 * (-Sp + op) * cp.b + (3 * Sp - 2 * op) * Op.b
+      static Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT) {
+        const gT = zT * zT;
+        MT.r = 6 * (gT - zT) * TT.r + (3 * gT - 4 * zT + 1) * UT.r + 6 * (-gT + zT) * mT.r + (3 * gT - 2 * zT) * WT.r, MT.g = 6 * (gT - zT) * TT.g + (3 * gT - 4 * zT + 1) * UT.g + 6 * (-gT + zT) * mT.g + (3 * gT - 2 * zT) * WT.g, MT.b = 6 * (gT - zT) * TT.b + (3 * gT - 4 * zT + 1) * UT.b + 6 * (-gT + zT) * mT.b + (3 * gT - 2 * zT) * WT.b
       }
       static Red() {
-        return new Ap(1, 0, 0)
+        return new lT(1, 0, 0)
       }
       static Green() {
-        return new Ap(0, 1, 0)
+        return new lT(0, 1, 0)
       }
       static Blue() {
-        return new Ap(0, 0, 1)
+        return new lT(0, 0, 1)
       }
       static Black() {
-        return new Ap(0, 0, 0)
+        return new lT(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return Ap._BlackReadOnly
+        return lT._BlackReadOnly
       }
       static White() {
-        return new Ap(1, 1, 1)
+        return new lT(1, 1, 1)
       }
       static Purple() {
-        return new Ap(.5, 0, .5)
+        return new lT(.5, 0, .5)
       }
       static Magenta() {
-        return new Ap(1, 0, 1)
+        return new lT(1, 0, 1)
       }
       static Yellow() {
-        return new Ap(1, 1, 0)
+        return new lT(1, 1, 0)
       }
       static Gray() {
-        return new Ap(.5, .5, .5)
+        return new lT(.5, .5, .5)
       }
       static Teal() {
-        return new Ap(0, 1, 1)
+        return new lT(0, 1, 1)
       }
       static Random() {
-        return new Ap(Math.random(), Math.random(), Math.random())
+        return new lT(Math.random(), Math.random(), Math.random())
       }
     }
-    Ap._V8PerformanceHack = new Ap(.5, .5, .5), Ap._BlackReadOnly = Ap.Black();
-    class Pp {
+    lT._V8PerformanceHack = new lT(.5, .5, .5), lT._BlackReadOnly = lT.Black();
+    class LT {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = pp, this.g = ip, this.b = cp, this.a = Op
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = TT, this.g = UT, this.b = mT, this.a = WT
       }
-      BOp() {
+      cWT() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return pp[ip] = this.r, pp[ip + 1] = this.g, pp[ip + 2] = this.b, pp[ip + 3] = this.a, this
+      toArray(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[UT] = this.r, TT[UT + 1] = this.g, TT[UT + 2] = this.b, TT[UT + 3] = this.a, this
       }
-      vcp(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = pp[ip], this.g = pp[ip + 1], this.b = pp[ip + 2], this.a = pp[ip + 3], this
+      MmT(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = TT[UT], this.g = TT[UT + 1], this.b = TT[UT + 2], this.a = TT[UT + 3], this
       }
-      equals(pp) {
-        return pp && this.r === pp.r && this.g === pp.g && this.b === pp.b && this.a === pp.a
+      equals(TT) {
+        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b && this.a === TT.a
       }
-      add(pp) {
-        return new Pp(this.r + pp.r, this.g + pp.g, this.b + pp.b, this.a + pp.a)
+      add(TT) {
+        return new LT(this.r + TT.r, this.g + TT.g, this.b + TT.b, this.a + TT.a)
       }
-      addToRef(pp, ip) {
-        return ip.r = this.r + pp.r, ip.g = this.g + pp.g, ip.b = this.b + pp.b, ip.a = this.a + pp.a, ip
+      addToRef(TT, UT) {
+        return UT.r = this.r + TT.r, UT.g = this.g + TT.g, UT.b = this.b + TT.b, UT.a = this.a + TT.a, UT
       }
-      addInPlace(pp) {
-        return this.r += pp.r, this.g += pp.g, this.b += pp.b, this.a += pp.a, this
+      addInPlace(TT) {
+        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this.a += TT.a, this
       }
-      addInPlaceFromFloats(pp, ip, cp, Op) {
-        return this.r += pp, this.g += ip, this.b += cp, this.a += Op, this
+      addInPlaceFromFloats(TT, UT, mT, WT) {
+        return this.r += TT, this.g += UT, this.b += mT, this.a += WT, this
       }
-      subtract(pp) {
-        return new Pp(this.r - pp.r, this.g - pp.g, this.b - pp.b, this.a - pp.a)
+      subtract(TT) {
+        return new LT(this.r - TT.r, this.g - TT.g, this.b - TT.b, this.a - TT.a)
       }
-      subtractToRef(pp, ip) {
-        return ip.r = this.r - pp.r, ip.g = this.g - pp.g, ip.b = this.b - pp.b, ip.a = this.a - pp.a, ip
+      subtractToRef(TT, UT) {
+        return UT.r = this.r - TT.r, UT.g = this.g - TT.g, UT.b = this.b - TT.b, UT.a = this.a - TT.a, UT
       }
-      Iop(pp) {
-        return this.r -= pp.r, this.g -= pp.g, this.b -= pp.b, this.a -= pp.a, this
+      FWT(TT) {
+        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this.a -= TT.a, this
       }
-      subtractFromFloats(pp, ip, cp, Op) {
-        return new Pp(this.r - pp, this.g - ip, this.b - cp, this.a - Op)
+      subtractFromFloats(TT, UT, mT, WT) {
+        return new LT(this.r - TT, this.g - UT, this.b - mT, this.a - WT)
       }
-      subtractFromFloatsToRef(pp, ip, cp, Op, op) {
-        return op.r = this.r - pp, op.g = this.g - ip, op.b = this.b - cp, op.a = this.a - Op, op
+      subtractFromFloatsToRef(TT, UT, mT, WT, zT) {
+        return zT.r = this.r - TT, zT.g = this.g - UT, zT.b = this.b - mT, zT.a = this.a - WT, zT
       }
-      scale(pp) {
-        return new Pp(this.r * pp, this.g * pp, this.b * pp, this.a * pp)
+      scale(TT) {
+        return new LT(this.r * TT, this.g * TT, this.b * TT, this.a * TT)
       }
-      scaleInPlace(pp) {
-        return this.r *= pp, this.g *= pp, this.b *= pp, this.a *= pp, this
+      scaleInPlace(TT) {
+        return this.r *= TT, this.g *= TT, this.b *= TT, this.a *= TT, this
       }
-      scaleToRef(pp, ip) {
-        return ip.r = this.r * pp, ip.g = this.g * pp, ip.b = this.b * pp, ip.a = this.a * pp, ip
+      scaleToRef(TT, UT) {
+        return UT.r = this.r * TT, UT.g = this.g * TT, UT.b = this.b * TT, UT.a = this.a * TT, UT
       }
-      scaleAndAddToRef(pp, ip) {
-        return ip.r += this.r * pp, ip.g += this.g * pp, ip.b += this.b * pp, ip.a += this.a * pp, ip
+      scaleAndAddToRef(TT, UT) {
+        return UT.r += this.r * TT, UT.g += this.g * TT, UT.b += this.b * TT, UT.a += this.a * TT, UT
       }
       clampToRef() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        return cp.r = (0, Ip.Clamp)(this.r, pp, ip), cp.g = (0, Ip.Clamp)(this.g, pp, ip), cp.b = (0, Ip.Clamp)(this.b, pp, ip), cp.a = (0, Ip.Clamp)(this.a, pp, ip), cp
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        return mT.r = (0, MT.Clamp)(this.r, TT, UT), mT.g = (0, MT.Clamp)(this.g, TT, UT), mT.b = (0, MT.Clamp)(this.b, TT, UT), mT.a = (0, MT.Clamp)(this.a, TT, UT), mT
       }
-      multiply(pp) {
-        return new Pp(this.r * pp.r, this.g * pp.g, this.b * pp.b, this.a * pp.a)
+      multiply(TT) {
+        return new LT(this.r * TT.r, this.g * TT.g, this.b * TT.b, this.a * TT.a)
       }
-      multiplyToRef(pp, ip) {
-        return ip.r = this.r * pp.r, ip.g = this.g * pp.g, ip.b = this.b * pp.b, ip.a = this.a * pp.a, ip
+      multiplyToRef(TT, UT) {
+        return UT.r = this.r * TT.r, UT.g = this.g * TT.g, UT.b = this.b * TT.b, UT.a = this.a * TT.a, UT
       }
-      multiplyInPlace(pp) {
-        return this.r *= pp.r, this.g *= pp.g, this.b *= pp.b, this.a *= pp.a, this
+      multiplyInPlace(TT) {
+        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this.a *= TT.a, this
       }
-      multiplyByFloats(pp, ip, cp, Op) {
-        return new Pp(this.r * pp, this.g * ip, this.b * cp, this.a * Op)
+      multiplyByFloats(TT, UT, mT, WT) {
+        return new LT(this.r * TT, this.g * UT, this.b * mT, this.a * WT)
       }
-      divide(pp) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(pp, ip) {
+      divideToRef(TT, UT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(pp) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(pp) {
-        return this.r = Math.min(this.r, pp.r), this.g = Math.min(this.g, pp.g), this.b = Math.min(this.b, pp.b), this.a = Math.min(this.a, pp.a), this
+      minimizeInPlace(TT) {
+        return this.r = Math.min(this.r, TT.r), this.g = Math.min(this.g, TT.g), this.b = Math.min(this.b, TT.b), this.a = Math.min(this.a, TT.a), this
       }
-      maximizeInPlace(pp) {
-        return this.r = Math.max(this.r, pp.r), this.g = Math.max(this.g, pp.g), this.b = Math.max(this.b, pp.b), this.a = Math.max(this.a, pp.a), this
+      maximizeInPlace(TT) {
+        return this.r = Math.max(this.r, TT.r), this.g = Math.max(this.g, TT.g), this.b = Math.max(this.b, TT.b), this.a = Math.max(this.a, TT.a), this
       }
-      minimizeInPlaceFromFloats(pp, ip, cp, Op) {
-        return this.r = Math.min(pp, this.r), this.g = Math.min(ip, this.g), this.b = Math.min(cp, this.b), this.a = Math.min(Op, this.a), this
+      minimizeInPlaceFromFloats(TT, UT, mT, WT) {
+        return this.r = Math.min(TT, this.r), this.g = Math.min(UT, this.g), this.b = Math.min(mT, this.b), this.a = Math.min(WT, this.a), this
       }
-      maximizeInPlaceFromFloats(pp, ip, cp, Op) {
-        return this.r = Math.max(pp, this.r), this.g = Math.max(ip, this.g), this.b = Math.max(cp, this.b), this.a = Math.max(Op, this.a), this
+      maximizeInPlaceFromFloats(TT, UT, mT, WT) {
+        return this.r = Math.max(TT, this.r), this.g = Math.max(UT, this.g), this.b = Math.max(mT, this.b), this.a = Math.max(WT, this.a), this
       }
-      floorToRef(pp) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(pp) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      gp() {
+      ck() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(pp) {
+      negateToRef(TT) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op.b;
-        return (0, Ip.WithinEpsilon)(this.r, pp.r, ip) && (0, Ip.WithinEpsilon)(this.g, pp.g, ip) && (0, Ip.WithinEpsilon)(this.b, pp.b, ip) && (0, Ip.WithinEpsilon)(this.a, pp.a, ip)
+      equalsWithEpsilon(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.c;
+        return (0, MT.WithinEpsilon)(this.r, TT.r, UT) && (0, MT.WithinEpsilon)(this.g, TT.g, UT) && (0, MT.WithinEpsilon)(this.b, TT.b, UT) && (0, MT.WithinEpsilon)(this.a, TT.a, UT)
       }
-      jxp(pp, ip, cp, Op) {
-        return this.r === pp && this.g === ip && this.b === cp && this.a === Op
+      UnT(TT, UT, mT, WT) {
+        return this.r === TT && this.g === UT && this.b === mT && this.a === WT
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let pp = 255 * this.r | 0;
-        return pp = 397 * pp ^ 255 * this.g, pp = 397 * pp ^ 255 * this.b, pp = 397 * pp ^ 255 * this.a, pp
+        let TT = 255 * this.r | 0;
+        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT = 397 * TT ^ 255 * this.a, TT
       }
       clone() {
-        return (new Pp).rM(this)
+        return (new LT).Gw(this)
       }
-      rM(pp) {
-        return this.r = pp.r, this.g = pp.g, this.b = pp.b, this.a = pp.a, this
+      Gw(TT) {
+        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this.a = TT.a, this
       }
-      i5(pp, ip, cp, Op) {
-        return this.r = pp, this.g = ip, this.b = cp, this.a = Op, this
+      J9(TT, UT, mT, WT) {
+        return this.r = TT, this.g = UT, this.b = mT, this.a = WT, this
       }
-      set(pp, ip, cp, Op) {
-        return this.i5(pp, ip, cp, Op)
+      set(TT, UT, mT, WT) {
+        return this.J9(TT, UT, mT, WT)
       }
-      E_(pp) {
-        return this.r = this.g = this.b = this.a = pp, this
+      B3(TT) {
+        return this.r = this.g = this.b = this.a = TT, this
       }
       toHexString() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ip = Math.round(255 * this.r),
-          cp = Math.round(255 * this.g),
-          Op = Math.round(255 * this.b);
-        if (pp) return "#" + (0, Ip.ToHex)(ip) + (0, Ip.ToHex)(cp) + (0, Ip.ToHex)(Op);
-        const op = Math.round(255 * this.a);
-        return "#" + (0, Ip.ToHex)(ip) + (0, Ip.ToHex)(cp) + (0, Ip.ToHex)(Op) + (0, Ip.ToHex)(op)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const UT = Math.round(255 * this.r),
+          mT = Math.round(255 * this.g),
+          WT = Math.round(255 * this.b);
+        if (TT) return "#" + (0, MT.ToHex)(UT) + (0, MT.ToHex)(mT) + (0, MT.ToHex)(WT);
+        const zT = Math.round(255 * this.a);
+        return "#" + (0, MT.ToHex)(UT) + (0, MT.ToHex)(mT) + (0, MT.ToHex)(WT) + (0, MT.ToHex)(zT)
       }
-      fromHexString(pp) {
-        return "#" !== pp.substring(0, 1) || 9 !== pp.length && 7 !== pp.length || (this.r = parseInt(pp.substring(1, 3), 16) / 255, this.g = parseInt(pp.substring(3, 5), 16) / 255, this.b = parseInt(pp.substring(5, 7), 16) / 255, 9 === pp.length && (this.a = parseInt(pp.substring(7, 9), 16) / 255)), this
+      fromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255, 9 === TT.length && (this.a = parseInt(TT.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ip = new Pp;
-        return this.toLinearSpaceToRef(ip, pp), ip
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const UT = new LT;
+        return this.toLinearSpaceToRef(UT, TT), UT
       }
-      toLinearSpaceToRef(pp) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (pp.r = Lp(this.r), pp.g = Lp(this.g), pp.b = Lp(this.b)) : (pp.r = xp(this.r), pp.g = xp(this.g), pp.b = xp(this.b)), pp.a = this.a, this
+      toLinearSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = HT(this.r), TT.g = HT(this.g), TT.b = HT(this.b)) : (TT.r = nT(this.r), TT.g = nT(this.g), TT.b = nT(this.b)), TT.a = this.a, this
       }
       toGammaSpace() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ip = new Pp;
-        return this.toGammaSpaceToRef(ip, pp), ip
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const UT = new LT;
+        return this.toGammaSpaceToRef(UT, TT), UT
       }
-      toGammaSpaceToRef(pp) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (pp.r = Dp(this.r), pp.g = Dp(this.g), pp.b = Dp(this.b)) : (pp.r = Yp(this.r), pp.g = Yp(this.g), pp.b = Yp(this.b)), pp.a = this.a, this
+      toGammaSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = jT(this.r), TT.g = jT(this.g), TT.b = jT(this.b)) : (TT.r = kT(this.r), TT.g = kT(this.g), TT.b = kT(this.b)), TT.a = this.a, this
       }
-      static FromHexString(pp) {
-        return "#" !== pp.substring(0, 1) || 9 !== pp.length && 7 !== pp.length ? new Pp(0, 0, 0, 0) : new Pp(0, 0, 0, 1).fromHexString(pp)
+      static FromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length ? new LT(0, 0, 0, 0) : new LT(0, 0, 0, 1).fromHexString(TT)
       }
-      static Lerp(pp, ip, cp) {
-        return Pp.LerpToRef(pp, ip, cp, new Pp)
+      static Lerp(TT, UT, mT) {
+        return LT.LerpToRef(TT, UT, mT, new LT)
       }
-      static LerpToRef(pp, ip, cp, Op) {
-        return Op.r = pp.r + (ip.r - pp.r) * cp, Op.g = pp.g + (ip.g - pp.g) * cp, Op.b = pp.b + (ip.b - pp.b) * cp, Op.a = pp.a + (ip.a - pp.a) * cp, Op
+      static LerpToRef(TT, UT, mT, WT) {
+        return WT.r = TT.r + (UT.r - TT.r) * mT, WT.g = TT.g + (UT.g - TT.g) * mT, WT.b = TT.b + (UT.b - TT.b) * mT, WT.a = TT.a + (UT.a - TT.a) * mT, WT
       }
-      static Hermite(pp, ip, cp, Op, op) {
-        const Ip = op * op,
-          Sp = op * Ip,
-          xp = 2 * Sp - 3 * Ip + 1,
-          Lp = -2 * Sp + 3 * Ip,
-          Yp = Sp - 2 * Ip + op,
-          Dp = Sp - Ip,
-          Ap = pp.r * xp + cp.r * Lp + ip.r * Yp + Op.r * Dp,
-          Wp = pp.g * xp + cp.g * Lp + ip.g * Yp + Op.g * Dp,
-          yp = pp.b * xp + cp.b * Lp + ip.b * Yp + Op.b * Dp,
-          Up = pp.a * xp + cp.a * Lp + ip.a * Yp + Op.a * Dp;
-        return new Pp(Ap, Wp, yp, Up)
+      static Hermite(TT, UT, mT, WT, zT) {
+        const MT = zT * zT,
+          gT = zT * MT,
+          nT = 2 * gT - 3 * MT + 1,
+          HT = -2 * gT + 3 * MT,
+          kT = gT - 2 * MT + zT,
+          jT = gT - MT,
+          lT = TT.r * nT + mT.r * HT + UT.r * kT + WT.r * jT,
+          pT = TT.g * nT + mT.g * HT + UT.g * kT + WT.g * jT,
+          BT = TT.b * nT + mT.b * HT + UT.b * kT + WT.b * jT,
+          ZT = TT.a * nT + mT.a * HT + UT.a * kT + WT.a * jT;
+        return new LT(lT, pT, BT, ZT)
       }
-      static Hermite1stDerivative(pp, ip, cp, Op, op) {
-        const Ip = new Pp;
-        return this.Hermite1stDerivativeToRef(pp, ip, cp, Op, op, Ip), Ip
+      static Hermite1stDerivative(TT, UT, mT, WT, zT) {
+        const MT = new LT;
+        return this.Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT), MT
       }
-      static Hermite1stDerivativeToRef(pp, ip, cp, Op, op, Ip) {
-        const Sp = op * op;
-        Ip.r = 6 * (Sp - op) * pp.r + (3 * Sp - 4 * op + 1) * ip.r + 6 * (-Sp + op) * cp.r + (3 * Sp - 2 * op) * Op.r, Ip.g = 6 * (Sp - op) * pp.g + (3 * Sp - 4 * op + 1) * ip.g + 6 * (-Sp + op) * cp.g + (3 * Sp - 2 * op) * Op.g, Ip.b = 6 * (Sp - op) * pp.b + (3 * Sp - 4 * op + 1) * ip.b + 6 * (-Sp + op) * cp.b + (3 * Sp - 2 * op) * Op.b, Ip.a = 6 * (Sp - op) * pp.a + (3 * Sp - 4 * op + 1) * ip.a + 6 * (-Sp + op) * cp.a + (3 * Sp - 2 * op) * Op.a
+      static Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT) {
+        const gT = zT * zT;
+        MT.r = 6 * (gT - zT) * TT.r + (3 * gT - 4 * zT + 1) * UT.r + 6 * (-gT + zT) * mT.r + (3 * gT - 2 * zT) * WT.r, MT.g = 6 * (gT - zT) * TT.g + (3 * gT - 4 * zT + 1) * UT.g + 6 * (-gT + zT) * mT.g + (3 * gT - 2 * zT) * WT.g, MT.b = 6 * (gT - zT) * TT.b + (3 * gT - 4 * zT + 1) * UT.b + 6 * (-gT + zT) * mT.b + (3 * gT - 2 * zT) * WT.b, MT.a = 6 * (gT - zT) * TT.a + (3 * gT - 4 * zT + 1) * UT.a + 6 * (-gT + zT) * mT.a + (3 * gT - 2 * zT) * WT.a
       }
-      static FromColor3(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Pp(pp.r, pp.g, pp.b, ip)
+      static FromColor3(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new LT(TT.r, TT.g, TT.b, UT)
       }
-      static FromArray(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Pp(pp[ip], pp[ip + 1], pp[ip + 2], pp[ip + 3])
+      static FromArray(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new LT(TT[UT], TT[UT + 1], TT[UT + 2], TT[UT + 3])
       }
-      static FromArrayToRef(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        cp.r = pp[ip], cp.g = pp[ip + 1], cp.b = pp[ip + 2], cp.a = pp[ip + 3]
+      static FromArrayToRef(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        mT.r = TT[UT], mT.g = TT[UT + 1], mT.b = TT[UT + 2], mT.a = TT[UT + 3]
       }
-      static FromInts(pp, ip, cp, Op) {
-        return new Pp(pp / 255, ip / 255, cp / 255, Op / 255)
+      static FromInts(TT, UT, mT, WT) {
+        return new LT(TT / 255, UT / 255, mT / 255, WT / 255)
       }
-      static CheckColors4(pp, ip) {
-        if (pp.length === 3 * ip) {
-          const ip = [];
-          for (let cp = 0; cp < pp.length; cp += 3) {
-            const Op = cp / 3 * 4;
-            ip[Op] = pp[cp], ip[Op + 1] = pp[cp + 1], ip[Op + 2] = pp[cp + 2], ip[Op + 3] = 1
+      static CheckColors4(TT, UT) {
+        if (TT.length === 3 * UT) {
+          const UT = [];
+          for (let mT = 0; mT < TT.length; mT += 3) {
+            const WT = mT / 3 * 4;
+            UT[WT] = TT[mT], UT[WT + 1] = TT[mT + 1], UT[WT + 2] = TT[mT + 2], UT[WT + 3] = 1
           }
-          return ip
+          return UT
         }
-        return pp
+        return TT
       }
     }
-    Pp._V8PerformanceHack = new Pp(.5, .5, .5, .5);
-    class Wp {}
-    Wp.Color3 = (0, Op.d)(3, Ap.Black), Wp.Color4 = (0, Op.d)(3, (() => new Pp(0, 0, 0, 0)));
-    let yp = !1;
+    LT._V8PerformanceHack = new LT(.5, .5, .5, .5);
+    class pT {}
+    pT.Color3 = (0, WT.c)(3, lT.Black), pT.Color4 = (0, WT.c)(3, (() => new LT(0, 0, 0, 0)));
+    let BT = !1;
 
-    function Up() {
-      yp || (yp = !0, Object.defineProperties(Ap.prototype, {
+    function ZT() {
+      BT || (BT = !0, Object.defineProperties(lT.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Pp.prototype, {
+      }), Object.defineProperties(LT.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, Sp.g)("BABYLON.Color3", Ap), (0, Sp.g)("BABYLON.Color4", Pp))
+      }), (0, gT.h)("BABYLON.Color3", lT), (0, gT.h)("BABYLON.Color4", LT))
     }
   },
-  37324: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      d: () => Op,
-      g: () => op
+  37196: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT,
+      d: () => WT,
+      f: () => zT
     });
-    const Op = 1 / 2.2,
-      op = 2.2;
+    const WT = 1 / 2.2,
+      zT = 2.2;
     Math.sqrt(5);
-    let Ip = .001
+    let MT = .001
   },
-  37356: (pp, ip, cp) => {
-    function Op(pp) {
-      return parseInt(pp.toString().replace(/\W/g, ""))
+  37226: (TT, UT, mT) => {
+    function WT(TT) {
+      return parseInt(TT.toString().replace(/\W/g, ""))
     }
 
-    function op(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(pp - ip) <= cp
+    function zT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(TT - UT) <= mT
     }
 
-    function Ip(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return pp < ip - Op || pp > cp + Op
+    function MT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return TT < UT - WT || TT > mT + WT
     }
 
-    function Sp(pp, ip) {
-      return pp === ip ? pp : Math.random() * (ip - pp) + pp
+    function gT(TT, UT) {
+      return TT === UT ? TT : Math.random() * (UT - TT) + TT
     }
 
-    function xp(pp, ip, cp) {
-      return pp + (ip - pp) * cp
+    function nT(TT, UT, mT) {
+      return TT + (UT - TT) * mT
     }
 
-    function Lp(pp, ip, cp) {
-      let Op = wp(ip - pp, 360);
-      return Op > 180 && (Op -= 360), pp + Op * Pp(cp)
+    function HT(TT, UT, mT) {
+      let WT = cT(UT - TT, 360);
+      return WT > 180 && (WT -= 360), TT + WT * LT(mT)
     }
 
-    function Yp(pp, ip, cp) {
-      let Op;
-      return Op = pp != ip ? Pp((cp - pp) / (ip - pp)) : 0, Op
+    function kT(TT, UT, mT) {
+      let WT;
+      return WT = TT != UT ? LT((mT - TT) / (UT - TT)) : 0, WT
     }
 
-    function Dp(pp, ip, cp, Op, op) {
-      const Ip = op * op,
-        Sp = op * Ip;
-      return pp * (2 * Sp - 3 * Ip + 1) + cp * (-2 * Sp + 3 * Ip) + ip * (Sp - 2 * Ip + op) + Op * (Sp - Ip)
+    function jT(TT, UT, mT, WT, zT) {
+      const MT = zT * zT,
+        gT = zT * MT;
+      return TT * (2 * gT - 3 * MT + 1) + mT * (-2 * gT + 3 * MT) + UT * (gT - 2 * MT + zT) + WT * (gT - MT)
     }
 
-    function Ap(pp, ip, cp, Op, op) {
-      const Ip = op * op;
-      return 6 * (Ip - op) * pp + (3 * Ip - 4 * op + 1) * ip + 6 * (-Ip + op) * cp + (3 * Ip - 2 * op) * Op
+    function lT(TT, UT, mT, WT, zT) {
+      const MT = zT * zT;
+      return 6 * (MT - zT) * TT + (3 * MT - 4 * zT + 1) * UT + 6 * (-MT + zT) * mT + (3 * MT - 2 * zT) * WT
     }
 
-    function Pp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(cp, Math.max(ip, pp))
+    function LT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(mT, Math.max(UT, TT))
     }
 
-    function Wp(pp) {
-      return pp -= 2 * Math.PI * Math.floor((pp + Math.PI) / (2 * Math.PI))
+    function pT(TT) {
+      return TT -= 2 * Math.PI * Math.floor((TT + Math.PI) / (2 * Math.PI))
     }
 
-    function yp(pp) {
-      const ip = pp.toString(16);
-      return pp <= 15 ? ("0" + ip).toUpperCase() : ip.toUpperCase()
+    function BT(TT) {
+      const UT = TT.toString(16);
+      return TT <= 15 ? ("0" + UT).toUpperCase() : UT.toUpperCase()
     }
 
-    function Up(pp) {
-      if (Math.log2) return Math.floor(Math.log2(pp));
-      if (pp < 0) return NaN;
-      if (0 === pp) return -1 / 0;
-      let ip = 0;
-      if (pp < 1) {
-        for (; pp < 1;) ip++, pp *= 2;
-        ip = -ip
-      } else if (pp > 1)
-        for (; pp > 1;) ip++, pp = Math.floor(pp / 2);
-      return ip
+    function ZT(TT) {
+      if (Math.log2) return Math.floor(Math.log2(TT));
+      if (TT < 0) return NaN;
+      if (0 === TT) return -1 / 0;
+      let UT = 0;
+      if (TT < 1) {
+        for (; TT < 1;) UT++, TT *= 2;
+        UT = -UT
+      } else if (TT > 1)
+        for (; TT > 1;) UT++, TT = Math.floor(TT / 2);
+      return UT
     }
 
-    function wp(pp, ip) {
-      return pp - Math.floor(pp / ip) * ip
+    function cT(TT, UT) {
+      return TT - Math.floor(TT / UT) * UT
     }
 
-    function vp(pp, ip, cp) {
-      return (pp - ip) / (cp - ip)
+    function vT(TT, UT, mT) {
+      return (TT - UT) / (mT - UT)
     }
 
-    function tp(pp, ip, cp) {
-      return pp * (cp - ip) + ip
+    function fT(TT, UT, mT) {
+      return TT * (mT - UT) + UT
     }
 
-    function Hp(pp, ip) {
-      let cp = wp(ip - pp, 360);
-      return cp > 180 && (cp -= 360), cp
+    function qT(TT, UT) {
+      let mT = cT(UT - TT, 360);
+      return mT > 180 && (mT -= 360), mT
     }
 
-    function dp(pp, ip) {
-      const cp = wp(pp, 2 * ip);
-      return ip - Math.abs(cp - ip)
+    function iT(TT, UT) {
+      const mT = cT(TT, 2 * UT);
+      return UT - Math.abs(mT - UT)
     }
 
-    function ep(pp, ip, cp) {
-      let Op = Pp(cp);
-      return Op = -2 * Op * Op * Op + 3 * Op * Op, ip * Op + pp * (1 - Op)
+    function bT(TT, UT, mT) {
+      let WT = LT(mT);
+      return WT = -2 * WT * WT * WT + 3 * WT * WT, UT * WT + TT * (1 - WT)
     }
 
-    function jp(pp, ip, cp) {
-      let Op;
-      return Op = Math.abs(ip - pp) <= cp ? ip : pp + Math.sign(ip - pp) * cp, Op
+    function OT(TT, UT, mT) {
+      let WT;
+      return WT = Math.abs(UT - TT) <= mT ? UT : TT + Math.sign(UT - TT) * mT, WT
     }
 
-    function kp(pp, ip, cp) {
-      const Op = Hp(pp, ip);
-      let op;
-      return op = -cp < Op && Op < cp ? ip : jp(pp, ip = pp + Op, cp), op
+    function eT(TT, UT, mT) {
+      const WT = qT(TT, UT);
+      let zT;
+      return zT = -mT < WT && WT < mT ? UT : OT(TT, UT = TT + WT, mT), zT
     }
 
-    function mp(pp, ip, cp) {
-      return (pp - ip) / (cp - ip)
+    function YT(TT, UT, mT) {
+      return (TT - UT) / (mT - UT)
     }
 
-    function Rp(pp, ip, cp) {
-      return (cp - ip) * pp + ip
+    function JT(TT, UT, mT) {
+      return (mT - UT) * TT + UT
     }
 
-    function qp(pp, ip) {
-      const cp = pp % ip;
-      return 0 === cp ? ip : qp(ip, cp)
+    function xT(TT, UT) {
+      const mT = TT % UT;
+      return 0 === mT ? UT : xT(UT, mT)
     }
-    cp.r(ip), cp.d(ip, {
-      Clamp: () => Pp,
-      DeltaAngle: () => Hp,
-      Denormalize: () => tp,
-      ExtractAsInt: () => Op,
-      Hermite: () => Dp,
-      Hermite1stDerivative: () => Ap,
-      HighestCommonFactor: () => qp,
-      ILog2: () => Up,
-      InverseLerp: () => Yp,
-      Lerp: () => xp,
-      LerpAngle: () => Lp,
-      MoveTowards: () => jp,
-      MoveTowardsAngle: () => kp,
-      Normalize: () => vp,
-      NormalizeRadians: () => Wp,
-      OutsideRange: () => Ip,
-      PercentToRange: () => Rp,
-      PingPong: () => dp,
-      RandomRange: () => Sp,
-      RangeToPercent: () => mp,
-      Repeat: () => wp,
-      SmoothStep: () => ep,
-      ToHex: () => yp,
-      WithinEpsilon: () => op
+    mT.r(UT), mT.d(UT, {
+      Clamp: () => LT,
+      DeltaAngle: () => qT,
+      Denormalize: () => fT,
+      ExtractAsInt: () => WT,
+      Hermite: () => jT,
+      Hermite1stDerivative: () => lT,
+      HighestCommonFactor: () => xT,
+      ILog2: () => ZT,
+      InverseLerp: () => kT,
+      Lerp: () => nT,
+      LerpAngle: () => HT,
+      MoveTowards: () => OT,
+      MoveTowardsAngle: () => eT,
+      Normalize: () => vT,
+      NormalizeRadians: () => pT,
+      OutsideRange: () => MT,
+      PercentToRange: () => JT,
+      PingPong: () => iT,
+      RandomRange: () => gT,
+      RangeToPercent: () => YT,
+      Repeat: () => cT,
+      SmoothStep: () => bT,
+      ToHex: () => BT,
+      WithinEpsilon: () => zT
     })
   },
-  37329: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      const cp = [];
-      for (let Op = 0; Op < pp; ++Op) cp.push(ip());
-      return cp
+  37205: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      const mT = [];
+      for (let WT = 0; WT < TT; ++WT) mT.push(UT());
+      return mT
     }
 
-    function op(pp, ip) {
-      return Op(pp, ip)
+    function zT(TT, UT) {
+      return WT(TT, UT)
     }
-    cp.d(ip, {
-      d: () => Op,
-      g: () => op,
-      j: () => Sp
+    mT.d(UT, {
+      c: () => WT,
+      d: () => zT,
+      e: () => gT
     });
-    const Ip = ["push", "splice", "pop", "shift", "unshift"];
+    const MT = ["push", "splice", "pop", "shift", "unshift"];
 
-    function Sp(pp, ip) {
-      const cp = Ip.map((cp => function(pp, ip, cp) {
-        const Op = pp[ip];
-        if ("function" !== typeof Op) return null;
-        const op = function() {
-          const Op = pp.length,
-            Ip = op.previous.apply(pp, arguments);
-          return cp(ip, Op), Ip
+    function gT(TT, UT) {
+      const mT = MT.map((mT => function(TT, UT, mT) {
+        const WT = TT[UT];
+        if ("function" !== typeof WT) return null;
+        const zT = function() {
+          const WT = TT.length,
+            MT = zT.previous.apply(TT, arguments);
+          return mT(UT, WT), MT
         };
-        return Op.next = op, op.previous = Op, pp[ip] = op, () => {
-          const cp = op.previous;
-          if (!cp) return;
-          const Op = op.next;
-          Op ? (cp.next = Op, Op.previous = cp) : (cp.next = void 0, pp[ip] = cp), op.next = void 0, op.previous = void 0
+        return WT.next = zT, zT.previous = WT, TT[UT] = zT, () => {
+          const mT = zT.previous;
+          if (!mT) return;
+          const WT = zT.next;
+          WT ? (mT.next = WT, WT.previous = mT) : (mT.next = void 0, TT[UT] = mT), zT.next = void 0, zT.previous = void 0
         }
-      }(pp, cp, ip)));
+      }(TT, mT, UT)));
       return () => {
-        for (const pp of cp) pp?.()
+        for (const TT of mT) TT?.()
       }
     }
   },
-  37368: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip,
-      g: () => op
+  37239: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => MT,
+      h: () => zT
     });
-    const Op = {};
+    const WT = {};
 
-    function op(pp, ip) {
-      Op[pp] = ip
+    function zT(TT, UT) {
+      WT[TT] = UT
     }
 
-    function Ip(pp) {
-      return Op[pp]
+    function MT(TT) {
+      return WT[TT]
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

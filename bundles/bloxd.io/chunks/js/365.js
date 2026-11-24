@@ -1,29 +1,29 @@
 export const id = 365;
 export const ids = [365];
 export const modules = {
-  61462: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      for (const cp of pp._frameGraph._tasks)
-        if (cp?._config && cp._colorAttachment && (cp._config.rt === ip.scRT || cp._config.rst === ip.scRT)) return cp
+  61238: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      for (const mT of TT._frameGraph._tasks)
+        if (mT?._config && mT._colorAttachment && (mT._config.rt === UT.scRT || mT._config.rst === UT.scRT)) return mT
     }
 
-    function op(pp, ip) {
-      const cp = pp._renderingContexts[pp._renderingContexts.length - 1];
-      if (!cp?._frameGraph) return;
-      const op = Op(ip, pp);
-      if (!op) return;
-      if (1 === pp.msaaSamples) return void(op._config.clr = !1);
-      const Ip = op.enabled;
-      op._config.clr = !0, op.enabled = !1, ip._beforeRender.unshift((() => {
-        const ip = Op(cp, pp),
-          Sp = ip?._config.rst === pp.scRT && ip._config.rt._colorView;
-        op.enabled = !!Sp && Ip, op._config.clr = !Sp, Sp && (op._colorAttachment.view = Sp)
+    function zT(TT, UT) {
+      const mT = TT._renderingContexts[TT._renderingContexts.length - 1];
+      if (!mT?._frameGraph) return;
+      const zT = WT(UT, TT);
+      if (!zT) return;
+      if (1 === TT.msaaSamples) return void(zT._config.clr = !1);
+      const MT = zT.enabled;
+      zT._config.clr = !0, zT.enabled = !1, UT._beforeRender.unshift((() => {
+        const UT = WT(mT, TT),
+          gT = UT?._config.rst === TT.scRT && UT._config.rt._colorView;
+        zT.enabled = !!gT && MT, zT._config.clr = !gT, gT && (zT._colorAttachment.view = gT)
       }))
     }
-    cp.r(ip), cp.d(ip, {
-      configureSwapchainOverlayScene: () => op
+    mT.r(UT), mT.d(UT, {
+      configureSwapchainOverlayScene: () => zT
     })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

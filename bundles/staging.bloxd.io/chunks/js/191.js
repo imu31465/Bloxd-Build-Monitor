@@ -1,156 +1,156 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  40818: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Lp,
-      f: () => xp,
-      i: () => Sp
+  40756: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => HT,
+      h: () => nT,
+      k: () => gT
     });
-    var Op = cp(40824),
-      op = cp(4903),
-      Ip = cp(40831);
+    var WT = mT(40765),
+      zT = mT(4895),
+      MT = mT(40771);
 
-    function Sp(pp) {
-      return pp.payloadKind === op.kc.Msgpack ? (0, Op.c)(pp.payload) : void 0
+    function gT(TT) {
+      return TT.payloadKind === zT.lc.Msgpack ? (0, WT.c)(TT.payload) : void 0
     }
 
-    function xp(pp, ip) {
-      if (ip.payloadKind === op.kc.Bytes || ip.payloadKind === op.kc.MsgpackBin) return (0, Ip.b)(pp, ip.payload)
+    function nT(TT, UT) {
+      if (UT.payloadKind === zT.lc.Bytes || UT.payloadKind === zT.lc.MsgpackBin) return (0, MT.c)(TT, UT.payload)
     }
 
-    function Lp(pp) {
-      return null !== pp && "object" === typeof pp
+    function HT(TT) {
+      return null !== TT && "object" === typeof TT
     }
   },
-  40837: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ap,
-      d: () => Pp,
-      e: () => Wp,
-      h: () => Dp,
-      i: () => wp
+  40780: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => lT,
+      h: () => LT,
+      l: () => pT,
+      m: () => jT,
+      q: () => cT
     });
-    var Op = cp(4903),
-      op = cp(40842);
-    const Ip = new Map,
-      Sp = new Set,
-      xp = new Set;
-    let Lp = 0,
-      Yp = 0;
+    var WT = mT(4895),
+      zT = mT(40786);
+    const MT = new Map,
+      gT = new Set,
+      nT = new Set;
+    let HT = 0,
+      kT = 0;
 
-    function Dp(pp, ip) {
-      let cp = Ip.get(pp);
-      return cp || (cp = new Set, Ip.set(pp, cp)), cp.add(ip), () => {
-        cp.delete(ip)
+    function jT(TT, UT) {
+      let mT = MT.get(TT);
+      return mT || (mT = new Set, MT.set(TT, mT)), mT.add(UT), () => {
+        mT.delete(UT)
       }
     }
 
-    function Ap() {
-      return 0 !== Lp
+    function lT() {
+      return 0 !== HT
     }
 
-    function Pp(pp) {
-      return Sp.add(pp), () => {
-        Sp.delete(pp)
+    function LT(TT) {
+      return gT.add(TT), () => {
+        gT.delete(TT)
       }
     }
 
-    function Wp(pp) {
-      return xp.add(pp), () => {
-        xp.delete(pp)
+    function pT(TT) {
+      return nT.add(TT), () => {
+        nT.delete(TT)
       }
     }
-    const yp = "A raw message listener threw";
+    const BT = "A raw message listener threw";
 
-    function Up(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sp;
-      for (const Op of ip) try {
-        Op()
-      } catch (cp) {
-        pp ? (0, op.i)(cp, yp) : console.error(yp, cp)
+    function ZT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gT;
+      for (const WT of UT) try {
+        WT()
+      } catch (mT) {
+        TT ? (0, zT.l)(mT, BT) : console.error(BT, mT)
       }
     }
-    const wp = {
-      fire: function(pp) {
-        if ("connection" === pp.type) {
-          const ip = pp.phase === Op.H.Activated && pp.conn !== Lp && pp.conn > Yp,
-            cp = (pp.phase === Op.H.Left || pp.phase === Op.H.Closed) && pp.conn === Lp;
-          return void(ip || cp ? (Lp = ip ? pp.conn : 0, Up(!0)) : pp.phase === Op.H.Resumed && 0 !== Lp && pp.conn > Yp && (Lp = pp.conn, Up(!0, xp)))
+    const cT = {
+      fire: function(TT) {
+        if ("connection" === TT.type) {
+          const UT = TT.phase === WT.O.Activated && TT.conn !== HT && TT.conn > kT,
+            mT = (TT.phase === WT.O.Left || TT.phase === WT.O.Closed) && TT.conn === HT;
+          return void(UT || mT ? (HT = UT ? TT.conn : 0, ZT(!0)) : TT.phase === WT.O.Resumed && 0 !== HT && TT.conn > kT && (HT = TT.conn, ZT(!0, nT)))
         }
-        const ip = Ip.get(pp.VD);
-        if (ip && pp.conn === Lp && 0 !== Lp)
-          for (const Op of ip) try {
-            Op(pp)
-          } catch (cp) {
-            (0, op.i)(cp, yp)
+        const UT = MT.get(TT.Xj);
+        if (UT && TT.conn === HT && 0 !== HT)
+          for (const WT of UT) try {
+            WT(TT)
+          } catch (mT) {
+            (0, zT.l)(mT, BT)
           }
       },
-      close: function(pp) {
-        Yp = Math.max(Yp, pp, Lp), 0 !== Lp && (Lp = 0, Up(!1))
+      close: function(TT) {
+        kT = Math.max(kT, TT, HT), 0 !== HT && (HT = 0, ZT(!1))
       }
     }
   },
-  40806: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Yp,
-      h: () => Lp,
-      k: () => xp
+  40743: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT,
+      h: () => HT,
+      j: () => nT
     });
-    var Op = cp(1284),
-      op = cp(40769);
-    const Ip = new TextDecoder,
-      Sp = new TextEncoder;
+    var WT = mT(1367),
+      zT = mT(40709);
+    const MT = new TextDecoder,
+      gT = new TextEncoder;
 
-    function xp(pp, ip) {
-      const cp = pp.queries.entityName(ip);
-      if (cp === op.Dc) return;
-      const Sp = pp.memoryData(pp.scratch(), 4 + cp, 4, "entity_name's answer");
-      if (!Sp) return;
-      const xp = Sp.getUint32(0, !0),
-        Lp = Ip.decode(new Uint8Array(Sp.buffer, Sp.byteOffset + 4, cp));
-      return (0, Op.d)(Lp, !1, xp === op.Hd ? null : xp)
+    function nT(TT, UT) {
+      const mT = TT.queries.entityName(UT);
+      if (mT === zT.Fc) return;
+      const gT = TT.memoryData(TT.scratch(), 4 + mT, 4, "entity_name's answer");
+      if (!gT) return;
+      const nT = gT.getUint32(0, !0),
+        HT = MT.decode(new Uint8Array(gT.buffer, gT.byteOffset + 4, mT));
+      return (0, WT.d)(HT, !1, nT === zT.Nd ? null : nT)
     }
 
-    function Lp(pp, ip, cp) {
-      const Op = Sp.encode(cp);
-      if (Op.length > op.qb) return !1;
-      const Ip = pp.memoryView(Uint8Array, pp.scratch(), Op.length, "has_effect's name");
-      return !!Ip && (Ip.set(Op), 1 === pp.queries.hasEffect(ip, Op.length))
+    function HT(TT, UT, mT) {
+      const WT = gT.encode(mT);
+      if (WT.length > zT.Db) return !1;
+      const MT = TT.memoryView(Uint8Array, TT.scratch(), WT.length, "has_effect's name");
+      return !!MT && (MT.set(WT), 1 === TT.queries.hasEffect(UT, WT.length))
     }
 
-    function Yp(pp, ip, cp, Op) {
-      const Sp = pp.queries.blockData(ip, cp, Op);
-      if (Sp === op.Dc) return;
-      const xp = pp.memoryView(Uint8Array, pp.scratch(), Sp, "block_data's answer");
-      return xp ? JSON.parse(Ip.decode(xp)) : void 0
+    function kT(TT, UT, mT, WT) {
+      const gT = TT.queries.blockData(UT, mT, WT);
+      if (gT === zT.Fc) return;
+      const nT = TT.memoryView(Uint8Array, TT.scratch(), gT, "block_data's answer");
+      return nT ? JSON.parse(MT.decode(nT)) : void 0
     }
   },
-  40824: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      f: () => Dp
+  40765: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      g: () => jT
     });
-    const Op = new TextDecoder;
+    const WT = new TextDecoder;
 
-    function op(pp) {
-      const ip = new Ip(pp),
-        cp = ip.value();
-      if (ip.at !== pp.length) throw new Error(`msgpack: ${pp.length-ip.at} bytes after the value`);
-      return cp
+    function zT(TT) {
+      const UT = new MT(TT),
+        mT = UT.value();
+      if (UT.at !== TT.length) throw new Error(`msgpack: ${TT.length-UT.at} bytes after the value`);
+      return mT
     }
-    class Ip {
-      constructor(pp) {
-        this.bytes = pp, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(pp.buffer, pp.byteOffset, pp.byteLength)
+    class MT {
+      constructor(TT) {
+        this.bytes = TT, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(TT.buffer, TT.byteOffset, TT.byteLength)
       }
       value() {
-        const pp = this.u8();
-        if (pp <= 127) return pp;
-        if (pp >= 224) return pp - 256;
-        if (pp >= 128 && pp <= 143) return this.map(15 & pp);
-        if (pp >= 144 && pp <= 159) return this.array(15 & pp);
-        if (pp >= 160 && pp <= 191) return this.str(31 & pp);
-        switch (pp) {
+        const TT = this.u8();
+        if (TT <= 127) return TT;
+        if (TT >= 224) return TT - 256;
+        if (TT >= 128 && TT <= 143) return this.map(15 & TT);
+        if (TT >= 144 && TT <= 159) return this.array(15 & TT);
+        if (TT >= 160 && TT <= 191) return this.str(31 & TT);
+        switch (TT) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${pp.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${TT.toString(16)} at ${this.at-1}`)
         }
       }
-      take(pp) {
-        const ip = this.at;
-        if (ip + pp > this.bytes.length) throw new Error(`msgpack: ${pp} bytes past the end at ${ip}`);
-        return this.at = ip + pp, ip
+      take(TT) {
+        const UT = this.at;
+        if (UT + TT > this.bytes.length) throw new Error(`msgpack: ${TT} bytes past the end at ${UT}`);
+        return this.at = UT + TT, UT
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(pp) {
-        const ip = this.take(8);
-        return pp ? this.view.getBigInt64(ip, !1) : this.view.getBigUint64(ip, !1)
+      int64(TT) {
+        const UT = this.take(8);
+        return TT ? this.view.getBigInt64(UT, !1) : this.view.getBigUint64(UT, !1)
       }
-      str(pp) {
-        const ip = this.take(pp),
-          cp = this.bytes;
-        if (pp < 16) {
-          let op = "";
-          for (let Ip = ip; Ip < ip + pp; Ip++) {
-            const Sp = cp[Ip];
-            if (Sp >= 128) return Op.decode(cp.subarray(ip, ip + pp));
-            op += String.fromCharCode(Sp)
+      str(TT) {
+        const UT = this.take(TT),
+          mT = this.bytes;
+        if (TT < 16) {
+          let zT = "";
+          for (let MT = UT; MT < UT + TT; MT++) {
+            const gT = mT[MT];
+            if (gT >= 128) return WT.decode(mT.subarray(UT, UT + TT));
+            zT += String.fromCharCode(gT)
           }
-          return op
+          return zT
         }
-        return Op.decode(cp.subarray(ip, ip + pp))
+        return WT.decode(mT.subarray(UT, UT + TT))
       }
-      bin(pp) {
-        const ip = this.take(pp);
-        return this.bytes.subarray(ip, ip + pp)
+      bin(TT) {
+        const UT = this.take(TT);
+        return this.bytes.subarray(UT, UT + TT)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(pp) {
+      array(TT) {
         this.enter();
-        const ip = [];
-        for (let cp = 0; cp < pp; cp++) ip.push(this.value());
-        return this.depth--, ip
+        const UT = [];
+        for (let mT = 0; mT < TT; mT++) UT.push(this.value());
+        return this.depth--, UT
       }
-      map(pp) {
+      map(TT) {
         this.enter();
-        const ip = {};
-        for (let cp = 0; cp < pp; cp++) {
-          const pp = this.value(),
-            cp = this.value();
-          ip["__proto__" === pp ? "__proto_" : String(pp)] = cp
+        const UT = {};
+        for (let mT = 0; mT < TT; mT++) {
+          const TT = this.value(),
+            mT = this.value();
+          UT["__proto__" === TT ? "__proto_" : String(TT)] = mT
         }
-        return this.depth--, ip
+        return this.depth--, UT
       }
-      ext(pp) {
-        const ip = this.view.getInt8(this.take(1)),
-          cp = this.take(pp);
-        if (0 !== ip) {
-          if (-1 === ip) {
-            if (1 === pp) return new Date(NaN);
-            if (4 === pp) return new Date(1e3 * this.view.getUint32(cp, !1));
-            if (8 === pp) {
-              const pp = this.view.getUint32(cp, !1),
-                ip = pp >>> 2,
-                Op = 4294967296 * (3 & pp) + this.view.getUint32(cp + 4, !1);
-              return new Date(1e3 * Op + ip / 1e6)
+      ext(TT) {
+        const UT = this.view.getInt8(this.take(1)),
+          mT = this.take(TT);
+        if (0 !== UT) {
+          if (-1 === UT) {
+            if (1 === TT) return new Date(NaN);
+            if (4 === TT) return new Date(1e3 * this.view.getUint32(mT, !1));
+            if (8 === TT) {
+              const TT = this.view.getUint32(mT, !1),
+                UT = TT >>> 2,
+                WT = 4294967296 * (3 & TT) + this.view.getUint32(mT + 4, !1);
+              return new Date(1e3 * WT + UT / 1e6)
             }
-            if (12 === pp) {
-              const pp = this.view.getUint32(cp, !1),
-                ip = 4294967296 * this.view.getInt32(cp + 4, !1) + this.view.getUint32(cp + 8, !1);
-              return new Date(1e3 * ip + pp / 1e6)
+            if (12 === TT) {
+              const TT = this.view.getUint32(mT, !1),
+                UT = 4294967296 * this.view.getInt32(mT + 4, !1) + this.view.getUint32(mT + 8, !1);
+              return new Date(1e3 * UT + TT / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${ip} of ${pp} bytes`)
+          throw new Error(`msgpack: ext type ${UT} of ${TT} bytes`)
         }
       }
     }
-    const Sp = new TextEncoder,
-      xp = -(2n ** 63n),
-      Lp = 2n ** 63n - 1n,
-      Yp = 2n ** 64n - 1n;
+    const gT = new TextEncoder,
+      nT = -(2n ** 63n),
+      HT = 2n ** 63n - 1n,
+      kT = 2n ** 64n - 1n;
 
-    function Dp(pp) {
-      const ip = new Ap;
-      return ip.value(pp, 0), ip.bytes()
+    function jT(TT) {
+      const UT = new lT;
+      return UT.value(TT, 0), UT.bytes()
     }
-    class Ap {
+    class lT {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(pp, ip) {
-        if (ip > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof pp) {
+      value(TT, UT) {
+        if (UT > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof TT) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(pp ? 195 : 194);
+            return void this.u8(TT ? 195 : 194);
           case "number":
-            return void this.number(pp);
+            return void this.number(TT);
           case "bigint":
-            return void this.bigint(pp);
+            return void this.bigint(TT);
           case "string":
-            return void this.string(pp);
+            return void this.string(TT);
           case "object":
-            if (null === pp) this.u8(192);
-            else if (pp instanceof Uint8Array) this.head(pp.length, 196, -1, 197, 198), this.room(pp.length), this.buf.set(pp, this.at), this.at += pp.length;
-            else if (Array.isArray(pp)) {
-              this.head(pp.length, 220, 144, 220, 221);
-              for (const cp of pp) this.value(cp, ip + 1)
+            if (null === TT) this.u8(192);
+            else if (TT instanceof Uint8Array) this.head(TT.length, 196, -1, 197, 198), this.room(TT.length), this.buf.set(TT, this.at), this.at += TT.length;
+            else if (Array.isArray(TT)) {
+              this.head(TT.length, 220, 144, 220, 221);
+              for (const mT of TT) this.value(mT, UT + 1)
             } else {
-              var cp, Op;
-              if (Object.getPrototypeOf(pp) !== Object.prototype && null !== Object.getPrototypeOf(pp)) throw new Error(`msgpack: can't encode a ${null!==(cp=null===(Op=pp.constructor)||void 0===Op?void 0:Op.name)&&void 0!==cp?cp:"object"}`);
+              var mT, WT;
+              if (Object.getPrototypeOf(TT) !== Object.prototype && null !== Object.getPrototypeOf(TT)) throw new Error(`msgpack: can't encode a ${null!==(mT=null===(WT=TT.constructor)||void 0===WT?void 0:WT.name)&&void 0!==mT?mT:"object"}`);
               {
-                const cp = Object.keys(pp);
-                this.head(cp.length, 222, 128, 222, 223);
-                for (const Op of cp) this.string(Op), this.value(pp[Op], ip + 1)
+                const mT = Object.keys(TT);
+                this.head(mT.length, 222, 128, 222, 223);
+                for (const WT of mT) this.string(WT), this.value(TT[WT], UT + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof pp)
+            throw new Error("msgpack: can't encode a " + typeof TT)
         }
       }
-      number(pp) {
-        Number.isInteger(pp) && pp >= -2147483648 && pp <= 4294967295 ? pp >= 0 ? pp < 128 ? this.u8(pp) : pp < 256 ? (this.u8(204), this.u8(pp)) : pp < 65536 ? (this.u8(205), this.u16(pp)) : (this.u8(206), this.u32(pp)) : pp >= -32 ? this.u8(pp + 256) : pp >= -128 ? (this.u8(208), this.u8(pp + 256)) : pp >= -32768 ? (this.u8(209), this.u16(pp + 65536)) : (this.u8(210), this.u32(pp >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, pp, !1), this.at += 8)
+      number(TT) {
+        Number.isInteger(TT) && TT >= -2147483648 && TT <= 4294967295 ? TT >= 0 ? TT < 128 ? this.u8(TT) : TT < 256 ? (this.u8(204), this.u8(TT)) : TT < 65536 ? (this.u8(205), this.u16(TT)) : (this.u8(206), this.u32(TT)) : TT >= -32 ? this.u8(TT + 256) : TT >= -128 ? (this.u8(208), this.u8(TT + 256)) : TT >= -32768 ? (this.u8(209), this.u16(TT + 65536)) : (this.u8(210), this.u32(TT >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, TT, !1), this.at += 8)
       }
-      bigint(pp) {
-        const ip = pp >= xp && pp <= Lp;
-        if (!ip && (pp < 0n || pp > Yp)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(ip ? 211 : 207), this.room(8), ip ? this.view.setBigInt64(this.at, pp, !1) : this.view.setBigUint64(this.at, pp, !1), this.at += 8
+      bigint(TT) {
+        const UT = TT >= nT && TT <= HT;
+        if (!UT && (TT < 0n || TT > kT)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(UT ? 211 : 207), this.room(8), UT ? this.view.setBigInt64(this.at, TT, !1) : this.view.setBigUint64(this.at, TT, !1), this.at += 8
       }
-      string(pp) {
-        const ip = Sp.encode(pp);
-        this.head(ip.length, 217, 160, 218, 219), this.room(ip.length), this.buf.set(ip, this.at), this.at += ip.length
+      string(TT) {
+        const UT = gT.encode(TT);
+        this.head(UT.length, 217, 160, 218, 219), this.room(UT.length), this.buf.set(UT, this.at), this.at += UT.length
       }
-      head(pp, ip, cp, Op, op) {
-        cp >= 0 && pp < (160 === cp ? 32 : 16) ? this.u8(cp | pp) : ip !== Op && pp < 256 ? (this.u8(ip), this.u8(pp)) : pp < 65536 ? (this.u8(Op), this.u16(pp)) : (this.u8(op), this.u32(pp))
+      head(TT, UT, mT, WT, zT) {
+        mT >= 0 && TT < (160 === mT ? 32 : 16) ? this.u8(mT | TT) : UT !== WT && TT < 256 ? (this.u8(UT), this.u8(TT)) : TT < 65536 ? (this.u8(WT), this.u16(TT)) : (this.u8(zT), this.u32(TT))
       }
-      room(pp) {
-        if (this.at + pp <= this.buf.length) return;
-        let ip = 2 * this.buf.length;
-        for (; ip < this.at + pp;) ip *= 2;
-        const cp = new Uint8Array(ip);
-        cp.set(this.buf.subarray(0, this.at)), this.buf = cp, this.view = new DataView(cp.buffer)
+      room(TT) {
+        if (this.at + TT <= this.buf.length) return;
+        let UT = 2 * this.buf.length;
+        for (; UT < this.at + TT;) UT *= 2;
+        const mT = new Uint8Array(UT);
+        mT.set(this.buf.subarray(0, this.at)), this.buf = mT, this.view = new DataView(mT.buffer)
       }
-      u8(pp) {
-        this.room(1), this.buf[this.at++] = pp
+      u8(TT) {
+        this.room(1), this.buf[this.at++] = TT
       }
-      u16(pp) {
-        this.room(2), this.view.setUint16(this.at, pp, !1), this.at += 2
+      u16(TT) {
+        this.room(2), this.view.setUint16(this.at, TT, !1), this.at += 2
       }
-      u32(pp) {
-        this.room(4), this.view.setUint32(this.at, pp, !1), this.at += 4
+      u32(TT) {
+        this.room(4), this.view.setUint32(this.at, TT, !1), this.at += 4
       }
     }
   },
-  40831: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  40771: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT
     });
-    var Op = cp(40813);
-    const op = new TextDecoder("utf-8", {
+    var WT = mT(40752);
+    const zT = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class Ip {
-      constructor(pp) {
-        this.buf = pp, this.at = 0, this.view = null
+    class MT {
+      constructor(TT) {
+        this.buf = TT, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let pp = this.u8(),
-          ip = 127 & pp,
-          cp = 128;
-        for (; 128 & pp;) {
-          if (cp > 2 ** 63) throw new RangeError("avro: varint too long");
-          pp = this.u8(), ip += (127 & pp) * cp, cp *= 128
+        let TT = this.u8(),
+          UT = 127 & TT,
+          mT = 128;
+        for (; 128 & TT;) {
+          if (mT > 2 ** 63) throw new RangeError("avro: varint too long");
+          TT = this.u8(), UT += (127 & TT) * mT, mT *= 128
         }
-        return ip % 2 === 1 ? -(ip + 1) / 2 : ip / 2
+        return UT % 2 === 1 ? -(UT + 1) / 2 : UT / 2
       }
       float() {
-        const pp = this.take(4);
-        return this.floats().getFloat32(pp, !0)
+        const TT = this.take(4);
+        return this.floats().getFloat32(TT, !0)
       }
       double() {
-        const pp = this.take(8);
-        return this.floats().getFloat64(pp, !0)
+        const TT = this.take(8);
+        return this.floats().getFloat64(TT, !0)
       }
       str() {
-        const pp = this.size(),
-          ip = this.take(pp),
-          cp = ip + pp;
-        if (pp <= 32) {
-          let pp = "";
-          for (let Op = ip; Op < cp; Op++) {
-            const Ip = this.buf[Op];
-            if (Ip >= 128) return op.decode(this.buf.subarray(ip, cp));
-            pp += String.fromCharCode(Ip)
+        const TT = this.size(),
+          UT = this.take(TT),
+          mT = UT + TT;
+        if (TT <= 32) {
+          let TT = "";
+          for (let WT = UT; WT < mT; WT++) {
+            const MT = this.buf[WT];
+            if (MT >= 128) return zT.decode(this.buf.subarray(UT, mT));
+            TT += String.fromCharCode(MT)
           }
-          return pp
+          return TT
         }
-        return op.decode(this.buf.subarray(ip, cp))
+        return zT.decode(this.buf.subarray(UT, mT))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(pp) {
-        const ip = this.take(pp);
-        return this.buf.slice(ip, ip + pp)
+      fixed(TT) {
+        const UT = this.take(TT);
+        return this.buf.slice(UT, UT + TT)
       }
-      index(pp) {
-        const ip = this.long();
-        if (!(ip >= 0 && ip < pp)) throw new RangeError(`avro: index ${ip} of ${pp}`);
-        return ip
+      index(TT) {
+        const UT = this.long();
+        if (!(UT >= 0 && UT < TT)) throw new RangeError(`avro: index ${UT} of ${TT}`);
+        return UT
       }
-      qy(pp) {
-        const ip = [];
-        for (let cp = this.long(); 0 !== cp; cp = this.long()) {
-          cp = this.block(cp);
-          for (let Op = 0; Op < cp; Op++) ip.push(pp(this))
+      jB(TT) {
+        const UT = [];
+        for (let mT = this.long(); 0 !== mT; mT = this.long()) {
+          mT = this.block(mT);
+          for (let WT = 0; WT < mT; WT++) UT.push(TT(this))
         }
-        return ip
+        return UT
       }
-      map(pp) {
-        const ip = {};
-        for (let cp = this.long(); 0 !== cp; cp = this.long()) {
-          cp = this.block(cp);
-          for (let Op = 0; Op < cp; Op++) {
-            ip[this.str()] = pp(this)
+      map(TT) {
+        const UT = {};
+        for (let mT = this.long(); 0 !== mT; mT = this.long()) {
+          mT = this.block(mT);
+          for (let WT = 0; WT < mT; WT++) {
+            UT[this.str()] = TT(this)
           }
         }
-        return ip
+        return UT
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(pp) {
-        let ip = pp;
-        if (ip < 0 && (ip = -ip, this.long()), ip > this.buf.length - this.at) throw new RangeError(`avro: block of ${ip} items in ${this.buf.length-this.at} bytes`);
-        return ip
+      block(TT) {
+        let UT = TT;
+        if (UT < 0 && (UT = -UT, this.long()), UT > this.buf.length - this.at) throw new RangeError(`avro: block of ${UT} items in ${this.buf.length-this.at} bytes`);
+        return UT
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const pp = this.long();
-        if (pp < 0) throw new RangeError(`avro: length ${pp}`);
-        return pp
+        const TT = this.long();
+        if (TT < 0) throw new RangeError(`avro: length ${TT}`);
+        return TT
       }
       u8() {
-        const pp = this.buf[this.at];
-        if (void 0 === pp) throw new RangeError("avro: truncated");
-        return this.at++, pp
+        const TT = this.buf[this.at];
+        if (void 0 === TT) throw new RangeError("avro: truncated");
+        return this.at++, TT
       }
-      take(pp) {
-        const ip = this.at;
-        if (pp > this.buf.length - ip) throw new RangeError("avro: truncated");
-        return this.at = ip + pp, ip
+      take(TT) {
+        const UT = this.at;
+        if (TT > this.buf.length - UT) throw new RangeError("avro: truncated");
+        return this.at = UT + TT, UT
       }
     }
 
-    function Sp(pp, ip) {
-      const cp = new Ip(ip),
-        op = (0, Op.lb)(pp, cp);
-      return cp.end(), op
+    function gT(TT, UT) {
+      const mT = new MT(UT),
+        zT = (0, WT.lb)(TT, mT);
+      return mT.end(), zT
     }
   },
-  40813: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Pp,
-      E: () => Yp,
-      F: () => Sp,
-      G: () => Mp,
-      H: () => op,
-      J: () => xp,
-      K: () => Wp,
-      O: () => Rp,
-      P: () => mp,
-      Q: () => jp,
-      S: () => Dp,
-      V: () => Ap,
-      X: () => qp,
-      _: () => yp,
-      cb: () => Hp,
-      d: () => ep,
-      fb: () => Up,
-      h: () => wp,
-      jb: () => Lp,
-      l: () => vp,
-      lb: () => Cp,
-      n: () => tp,
-      p: () => kp,
-      t: () => Op,
-      v: () => Ip,
-      w: () => dp
+  40752: (TT, UT, mT) => {
+    mT.d(UT, {
+      B: () => gT,
+      D: () => dT,
+      H: () => zT,
+      L: () => nT,
+      M: () => pT,
+      Q: () => JT,
+      U: () => YT,
+      X: () => OT,
+      Y: () => jT,
+      ab: () => lT,
+      bb: () => xT,
+      e: () => bT,
+      fb: () => BT,
+      gb: () => qT,
+      h: () => cT,
+      ib: () => ZT,
+      j: () => vT,
+      jb: () => HT,
+      l: () => fT,
+      lb: () => wT,
+      m: () => eT,
+      p: () => WT,
+      r: () => MT,
+      u: () => iT,
+      x: () => LT,
+      y: () => kT
     });
-    const Op = 2,
-      op = 12,
-      Ip = 27,
-      Sp = 40,
-      xp = 52,
-      Lp = 59,
-      Yp = 63,
-      Dp = 83,
-      Ap = 84,
-      Pp = 89,
-      Wp = 91,
-      yp = 93,
-      Up = 94,
-      wp = 95,
-      vp = 97,
-      tp = 101,
-      Hp = 102,
-      dp = 73,
-      ep = 16,
-      jp = 86,
-      kp = 60,
-      mp = 17,
-      Rp = 56,
-      qp = 100,
-      Mp = 81;
+    const WT = 2,
+      zT = 12,
+      MT = 27,
+      gT = 40,
+      nT = 52,
+      HT = 59,
+      kT = 63,
+      jT = 83,
+      lT = 84,
+      LT = 89,
+      pT = 91,
+      BT = 93,
+      ZT = 94,
+      cT = 95,
+      vT = 97,
+      fT = 101,
+      qT = 102,
+      iT = 73,
+      bT = 16,
+      OT = 86,
+      eT = 60,
+      YT = 17,
+      JT = 56,
+      xT = 100,
+      dT = 81;
 
-    function Cp(pp, ip) {
-      switch (pp) {
-        case Op:
-          return function(pp) {
+    function wT(TT, UT) {
+      switch (TT) {
+        case WT:
+          return function(TT) {
             return {
-              pS: zp(pp),
-              iS: pp.float(),
-              cS: pp.long()
+              aM: hT(TT),
+              yM: TT.float(),
+              XM: TT.long()
             }
-          }(ip);
-        case op:
-          return function(pp) {
+          }(UT);
+        case zT:
+          return function(TT) {
             return {
-              xI: Jp(pp),
-              LI: Jp(pp)
+              Fz: IT(TT),
+              Pz: IT(TT)
             }
-          }(ip);
-        case Ip:
-          return function(pp) {
+          }(UT);
+        case MT:
+          return function(TT) {
             return {
-              Yp: pp.bool(),
-              Dp: Jp(pp)
+              nT: TT.bool(),
+              HT: IT(TT)
             }
-          }(ip);
-        case Sp:
-          return ip.str();
-        case xp:
-          return function(pp) {
+          }(UT);
+        case gT:
+          return UT.str();
+        case nT:
+          return function(TT) {
             return {
-              id: pp.long(),
-              sp: Li(pp)
+              id: TT.long(),
+              ST: gU(TT)
             }
-          }(ip);
-        case Lp:
-          return function(pp) {
+          }(UT);
+        case HT:
+          return function(TT) {
             return {
-              vS: Jp(pp),
-              tS: Di(pp)
+              hM: IT(TT),
+              DM: HU(TT)
             }
-          }(ip);
-        case Yp:
-          return ip.str();
-        case Dp:
-        case Ap:
-          return ip.long();
-        case Pp:
-          return function(pp) {
+          }(UT);
+        case kT:
+          return UT.str();
+        case jT:
+        case lT:
+          return UT.long();
+        case LT:
+          return function(TT) {
             return {
-              cI: pp.long(),
-              OI: pp.bool(),
-              oI: pp.float()
+              yz: TT.long(),
+              Xz: TT.bool(),
+              Iz: TT.float()
             }
-          }(ip);
-        case Wp:
-          return ip.long();
-        case yp:
-          return function(pp) {
+          }(UT);
+        case pT:
+          return UT.long();
+        case BT:
+          return function(TT) {
             return {
-              cc: pp.bool(),
-              Ep: Wi(pp)
+              PU: TT.bool(),
+              xT: lU(TT)
             }
-          }(ip);
-        case Up:
-          return function(pp) {
+          }(UT);
+        case ZT:
+          return function(TT) {
             return {
-              id: pp.str(),
-              position: Pi(pp),
-              gi: yi(pp),
-              style: hp(pp),
-              ri: pp.bool()
+              id: TT.str(),
+              position: jU(TT),
+              tU: LU(TT),
+              style: uT(TT),
+              yU: TT.bool()
             }
-          }(ip);
-        case wp:
-          return function(pp) {
+          }(UT);
+        case cT:
+          return function(TT) {
             return {
-              id: Jp(pp)
+              id: IT(TT)
             }
-          }(ip);
-        case vp:
-          return function(pp) {
+          }(UT);
+        case vT:
+          return function(TT) {
             return {
-              eI: pp.long(),
-              uI: pp.str(),
-              jI: Si(pp),
-              kI: Si(pp),
-              mI: Jp(pp),
-              RI: Jp(pp),
-              qI: Jp(pp),
-              MI: Jp(pp),
-              CI: Jp(pp),
-              EI: Si(pp),
-              XI: Si(pp),
-              lI: Jp(pp),
-              QI: Jp(pp),
-              JI: Jp(pp)
+              Rz: TT.long(),
+              TM: TT.str(),
+              UM: zU(TT),
+              mM: zU(TT),
+              WM: IT(TT),
+              zM: IT(TT),
+              MM: IT(TT),
+              gM: IT(TT),
+              nM: IT(TT),
+              HM: zU(TT),
+              kM: zU(TT),
+              jM: IT(TT),
+              lM: IT(TT),
+              LM: IT(TT)
             }
-          }(ip);
-        case tp:
-          return ip.str();
-        case Hp:
-          return ip.long();
-        case dp:
-          return function(pp) {
+          }(UT);
+        case fT:
+          return UT.str();
+        case qT:
+          return UT.long();
+        case iT:
+          return function(TT) {
             return {
-              Cc: pp.long(),
-              Ec: pp.str(),
-              Xc: pp.float()
+              pm: TT.long(),
+              Bm: TT.str(),
+              Zm: TT.float()
             }
-          }(ip);
-        case ep:
-          return function(pp) {
+          }(UT);
+        case bT:
+          return function(TT) {
             return {
-              YI: pp.bool(),
-              DI: Jp(pp),
-              AI: pp.str(),
-              WI: wi(pp),
-              yI: wi(pp),
-              UI: pp.bool(),
-              wI: pp.long(),
-              vI: vi(pp)
+              Vz: TT.bool(),
+              Cz: IT(TT),
+              rz: TT.str(),
+              Kz: BU(TT),
+              Sz: BU(TT),
+              Gz: TT.bool(),
+              Nz: TT.long(),
+              Ez: ZU(TT)
             }
-          }(ip);
-        case jp:
-          return function(pp) {
+          }(UT);
+        case OT:
+          return function(TT) {
             return {
-              iI: Jp(pp)
+              az: IT(TT)
             }
-          }(ip);
-        case kp:
-          return function(pp) {
+          }(UT);
+        case eT:
+          return function(TT) {
             return {
-              Np: pp.str(),
-              Tp: pp.str(),
-              bp: ti(pp),
-              Oc: pp.str(),
-              oc: Vp(pp),
-              Ic: pp.float()
+              XT: TT.str(),
+              IT: TT.str(),
+              QT: cU(TT),
+              VU: TT.str(),
+              uU: AT(TT),
+              CU: TT.float()
             }
-          }(ip);
-        case mp:
-          return function(pp) {
+          }(UT);
+        case YT:
+          return function(TT) {
             return {
-              Np: pp.str(),
-              Tp: pp.str(),
-              bp: ti(pp)
+              XT: TT.str(),
+              IT: TT.str(),
+              QT: cU(TT)
             }
-          }(ip);
-        case Rp:
-          return function(pp) {
-            return pp.qy(Hi)
-          }(ip);
-        case qp:
-          return function(pp) {
+          }(UT);
+        case JT:
+          return function(TT) {
+            return TT.jB(vU)
+          }(UT);
+        case xT:
+          return function(TT) {
             return {
-              hp: ei(pp),
-              rp: Fp(pp)
+              sT: qU(TT),
+              CT: KT(TT)
             }
-          }(ip);
-        case Mp:
-          return function(pp) {
+          }(UT);
+        case dT:
+          return function(TT) {
             return {
-              xO: pp.bool(),
-              LO: Jp(pp),
-              YO: ji(pp),
-              PO: fi(pp)
+              Em: TT.bool(),
+              hm: IT(TT),
+              Dm: bU(TT),
+              Am: FU(TT)
             }
-          }(ip);
+          }(UT);
         default:
-          throw new Error(`no reader for to-client message ${pp}`)
+          throw new Error(`no reader for to-client message ${TT}`)
       }
     }
 
-    function Ep(pp) {
+    function tT(TT) {
       return {
-        entityName: pp.str()
+        entityName: TT.str()
       }
     }
 
-    function Xp(pp) {
-      const ip = pp.index(4);
-      return 0 === ip ? pp.str() : 1 === ip ? pp.long() : 2 === ip ? pp.bool() : Ep(pp)
+    function aT(TT) {
+      const UT = TT.index(4);
+      return 0 === UT ? TT.str() : 1 === UT ? TT.long() : 2 === UT ? TT.bool() : tT(TT)
     }
 
-    function lp(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
-        return pp.map(Xp)
-      }(pp)
+    function yT(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
+        return TT.map(aT)
+      }(TT)
     }
 
-    function Qp(pp) {
+    function XT(TT) {
       return {
-        translationKey: pp.str(),
-        params: lp(pp)
+        translationKey: TT.str(),
+        params: yT(TT)
       }
     }
 
-    function Jp(pp) {
-      return 0 === pp.index(2) ? null : pp.str()
+    function IT(TT) {
+      return 0 === TT.index(2) ? null : TT.str()
     }
 
-    function Bp(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function QT(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          color: Jp(pp),
-          colour: Jp(pp),
-          fontSize: Jp(pp)
+          color: IT(TT),
+          colour: IT(TT),
+          fontSize: IT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function Np(pp) {
+    function sT(TT) {
       return {
-        icon: pp.str(),
-        style: Bp(pp)
+        icon: TT.str(),
+        style: QT(TT)
       }
     }
 
-    function Tp(pp) {
-      const ip = pp.index(3);
-      return 0 === ip ? {
-        string: pp.str()
-      } : 1 === ip ? {
-        styledEntityName: Ep(pp)
+    function FT(TT) {
+      const UT = TT.index(3);
+      return 0 === UT ? {
+        string: TT.str()
+      } : 1 === UT ? {
+        styledEntityName: tT(TT)
       } : {
-        styledTranslatedText: Qp(pp)
+        styledTranslatedText: XT(TT)
       }
     }
 
-    function fp(pp) {
-      const ip = pp.index(3);
-      return 0 === ip ? null : 1 === ip ? pp.str() : pp.long()
+    function PT(TT) {
+      const UT = TT.index(3);
+      return 0 === UT ? null : 1 === UT ? TT.str() : TT.long()
     }
 
-    function bp(pp) {
-      return 0 === pp.index(2) ? null : pp.float()
+    function VT(TT) {
+      return 0 === TT.index(2) ? null : TT.float()
     }
 
-    function hp(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function uT(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          color: Jp(pp),
-          colour: Jp(pp),
-          fontWeight: fp(pp),
-          fontStyle: Jp(pp),
-          fontSize: Jp(pp),
-          opacity: bp(pp)
+          color: IT(TT),
+          colour: IT(TT),
+          fontWeight: PT(TT),
+          fontStyle: IT(TT),
+          fontSize: IT(TT),
+          opacity: VT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function ap(pp) {
+    function CT(TT) {
       return {
-        str: Tp(pp),
-        style: hp(pp),
-        clickableUrl: Jp(pp)
+        str: FT(TT),
+        style: uT(TT),
+        clickableUrl: IT(TT)
       }
     }
 
-    function np(pp) {
-      return pp.str()
+    function rT(TT) {
+      return TT.str()
     }
 
-    function Fp(pp) {
-      return pp.qy(np)
+    function KT(TT) {
+      return TT.jB(rT)
     }
 
-    function gp(pp) {
-      return 0 === pp.index(2) ? null : Fp(pp)
+    function ST(TT) {
+      return 0 === TT.index(2) ? null : KT(TT)
     }
 
-    function Gp(pp) {
+    function GT(TT) {
       return {
-        type: pp.str(),
-        progress: pp.float(),
-        width: Jp(pp),
-        height: Jp(pp),
-        colours: gp(pp),
-        backgroundColour: Jp(pp)
+        type: TT.str(),
+        progress: TT.float(),
+        width: IT(TT),
+        height: IT(TT),
+        colours: ST(TT),
+        backgroundColour: IT(TT)
       }
     }
 
-    function rp(pp) {
+    function NT(TT) {
       return {
-        type: pp.str(),
-        action: pp.str(),
-        style: hp(pp)
+        type: TT.str(),
+        action: TT.str(),
+        style: uT(TT)
       }
     }
 
-    function Zp(pp) {
-      const ip = pp.index(7);
-      return 0 === ip ? {
-        string: pp.str()
-      } : 1 === ip ? {
-        entityName: Ep(pp)
-      } : 2 === ip ? {
-        translatedText: Qp(pp)
-      } : 3 === ip ? {
-        styledIcon: Np(pp)
-      } : 4 === ip ? {
-        xi: ap(pp)
-      } : 5 === ip ? {
-        styledProgressBar: Gp(pp)
+    function ET(TT) {
+      const UT = TT.index(7);
+      return 0 === UT ? {
+        string: TT.str()
+      } : 1 === UT ? {
+        entityName: tT(TT)
+      } : 2 === UT ? {
+        translatedText: XT(TT)
+      } : 3 === UT ? {
+        styledIcon: sT(TT)
+      } : 4 === UT ? {
+        RT: CT(TT)
+      } : 5 === UT ? {
+        styledProgressBar: GT(TT)
       } : {
-        styledKeyBinding: rp(pp)
+        styledKeyBinding: NT(TT)
       }
     }
 
-    function zp(pp) {
-      return pp.qy(Zp)
+    function hT(TT) {
+      return TT.jB(ET)
     }
-    const sp = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const DT = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function Kp(pp) {
-      return sp[pp.index(5)]
-    }
-
-    function Vp(pp) {
-      return 0 === pp.index(2) ? null : pp.double()
+    function oT(TT) {
+      return DT[TT.index(5)]
     }
 
-    function ii(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function AT(TT) {
+      return 0 === TT.index(2) ? null : TT.double()
+    }
+
+    function RT(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          Oi: Vp(pp),
-          oi: pp.double(),
-          Ii: pp.double(),
-          Si: pp.bool(),
-          description: zp(pp),
-          Yi: pp.str(),
-          scale: Vp(pp),
-          rotation: Vp(pp)
+          hT: AT(TT),
+          DT: TT.double(),
+          oT: TT.double(),
+          AT: TT.bool(),
+          description: hT(TT),
+          UU: TT.str(),
+          scale: AT(TT),
+          rotation: AT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function ci(pp) {
-      return 0 === pp.index(2) ? null : pp.bool()
+    function TU(TT) {
+      return 0 === TT.index(2) ? null : TT.bool()
     }
 
-    function Oi(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function UU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          Ai: pp.double(),
-          icon: pp.str(),
-          label: zp(pp),
-          Pi: pp.bool(),
-          scale: Vp(pp),
-          rotation: Vp(pp),
-          Wi: ci(pp)
+          WU: TT.double(),
+          icon: TT.str(),
+          label: hT(TT),
+          zU: TT.bool(),
+          scale: AT(TT),
+          rotation: AT(TT),
+          MU: TU(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function oi(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function mU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          Oi: Vp(pp),
-          Ui: pp.double(),
-          Hi: pp.double(),
-          ui: pp.double(),
-          gravity: pp.double(),
-          ji: pp.double(),
-          ki: pp.double(),
-          mi: pp.double(),
-          Si: pp.bool(),
-          description: zp(pp),
-          icon: Jp(pp)
+          hT: AT(TT),
+          nU: TT.double(),
+          HU: TT.double(),
+          kU: TT.double(),
+          gravity: TT.double(),
+          jU: TT.double(),
+          lU: TT.double(),
+          LU: TT.double(),
+          AT: TT.bool(),
+          description: hT(TT),
+          icon: IT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function Ii(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function WU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          speed: pp.double(),
-          qi: pp.double(),
-          label: zp(pp),
-          icon: Jp(pp),
-          scale: Vp(pp),
-          rotation: Vp(pp)
+          speed: TT.double(),
+          BU: TT.double(),
+          label: hT(TT),
+          icon: IT(TT),
+          scale: AT(TT),
+          rotation: AT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function Si(pp) {
-      return 0 === pp.index(2) ? null : pp.long()
+    function zU(TT) {
+      return 0 === TT.index(2) ? null : TT.long()
     }
 
-    function xi(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function MU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          Ci: pp.long(),
-          Ei: pp.double(),
-          Xi: pp.double(),
-          li: Si(pp),
-          label: zp(pp),
-          icon: Jp(pp)
+          cU: TT.long(),
+          vU: TT.double(),
+          fU: TT.double(),
+          qU: zU(TT),
+          label: hT(TT),
+          icon: IT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function Li(pp) {
+    function gU(TT) {
       return {
-        type: Kp(pp),
-        progressBar: ii(pp),
-        timedClick: Oi(pp),
-        gravityBar: oi(pp),
-        precisionBar: Ii(pp),
-        rhythmClick: xi(pp)
+        type: oT(TT),
+        progressBar: RT(TT),
+        timedClick: UU(TT),
+        gravityBar: mU(TT),
+        precisionBar: WU(TT),
+        rhythmClick: MU(TT)
       }
     }
-    const Yi = ["playerGone", "rateLimited"];
+    const nU = ["playerGone", "rateLimited"];
 
-    function Di(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
-        return Yi[pp.index(2)]
-      }(pp)
+    function HU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
+        return nU[TT.index(2)]
+      }(TT)
     }
 
-    function Ai(pp) {
-      return pp.float()
+    function kU(TT) {
+      return TT.float()
     }
 
-    function Pi(pp) {
-      return pp.qy(Ai)
+    function jU(TT) {
+      return TT.jB(kU)
     }
 
-    function Wi(pp) {
-      return 0 === pp.index(2) ? null : Pi(pp)
+    function lU(TT) {
+      return 0 === TT.index(2) ? null : jU(TT)
     }
 
-    function yi(pp) {
-      return 0 === pp.index(2) ? null : zp(pp)
+    function LU(TT) {
+      return 0 === TT.index(2) ? null : hT(TT)
     }
 
-    function Ui(pp) {
-      return pp.long()
+    function pU(TT) {
+      return TT.long()
     }
 
-    function wi(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
-        return pp.qy(Ui)
-      }(pp)
+    function BU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
+        return TT.jB(pU)
+      }(TT)
     }
 
-    function vi(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function ZU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          HI: pp.str(),
-          dI: pp.long()
+          Dz: TT.str(),
+          Az: TT.long()
         }
-      }(pp)
+      }(TT)
     }
 
-    function ti(pp) {
-      const ip = pp.index(3);
-      return 0 === ip ? null : 1 === ip ? pp.str() : Qp(pp)
+    function cU(TT) {
+      const UT = TT.index(3);
+      return 0 === UT ? null : 1 === UT ? TT.str() : XT(TT)
     }
 
-    function Hi(pp) {
+    function vU(TT) {
       return {
-        sI: pp.str(),
-        KI: pp.str(),
-        VI: pp.str()
+        dM: TT.str(),
+        wM: TT.str(),
+        tM: TT.str()
       }
     }
 
-    function di(pp) {
+    function fU(TT) {
       return {
-        ap: pp.str(),
-        np: Jp(pp),
-        Fp: Jp(pp),
-        Gp: Fp(pp)
+        FT: TT.str(),
+        PT: IT(TT),
+        VT: IT(TT),
+        uT: KT(TT)
       }
     }
 
-    function ei(pp) {
-      return pp.qy(di)
+    function qU(TT) {
+      return TT.jB(fU)
     }
 
-    function ui(pp) {
+    function iU(TT) {
       return {
-        DO: pp.str(),
-        x: pp.long(),
-        y: pp.long(),
-        z: pp.long()
+        om: TT.str(),
+        x: TT.long(),
+        y: TT.long(),
+        z: TT.long()
       }
     }
 
-    function ji(pp) {
-      return pp.qy(ui)
+    function bU(TT) {
+      return TT.jB(iU)
     }
 
-    function ki(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function OU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          lO: pp.float(),
-          QO: pp.long(),
-          JO: pp.long()
+          fW: TT.float(),
+          qW: TT.long(),
+          iW: TT.long()
         }
-      }(pp)
+      }(TT)
     }
 
-    function mi(pp) {
+    function eU(TT) {
       return {
-        blockName: pp.str(),
-        kO: pp.bool(),
-        mO: pp.bool(),
-        RO: pp.bool(),
-        qO: pp.float(),
-        MO: pp.float(),
-        CO: pp.long(),
-        EO: ki(pp)
+        blockName: TT.str(),
+        jW: TT.bool(),
+        lW: TT.bool(),
+        LW: TT.bool(),
+        pW: TT.float(),
+        BW: TT.float(),
+        ZW: TT.long(),
+        cW: OU(TT)
       }
     }
 
-    function Ri(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
-        return pp.qy(mi)
-      }(pp)
+    function YU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
+        return TT.jB(eU)
+      }(TT)
     }
 
-    function qi(pp) {
+    function JU(TT) {
       return {
-        eO: pp.str(),
-        uO: Ri(pp)
+        nW: TT.str(),
+        HW: YU(TT)
       }
     }
 
-    function Mi(pp) {
+    function xU(TT) {
       return {
-        blockName: pp.str(),
-        frequency: pp.float()
+        blockName: TT.str(),
+        frequency: TT.float()
       }
     }
 
-    function Ci(pp) {
-      return pp.qy(Mi)
+    function dU(TT) {
+      return TT.jB(xU)
     }
 
-    function Ei(pp) {
+    function wU(TT) {
       return {
-        TO: pp.str(),
-        fO: pp.str(),
-        frequency: pp.float(),
-        bO: Ci(pp)
+        eW: TT.str(),
+        YW: TT.str(),
+        frequency: TT.float(),
+        JW: dU(TT)
       }
     }
 
-    function Xi(pp) {
-      return pp.qy(Ei)
+    function tU(TT) {
+      return TT.jB(wU)
     }
 
-    function li(pp) {
+    function aU(TT) {
       return {
-        blockName: pp.str(),
-        radius: pp.long(),
-        FO: pp.long(),
-        UO: pp.long(),
-        wO: pp.long(),
-        gO: pp.float()
+        blockName: TT.str(),
+        radius: TT.long(),
+        tW: TT.long(),
+        UW: TT.long(),
+        mW: TT.long(),
+        aW: TT.float()
       }
     }
 
-    function Qi(pp) {
-      return pp.qy(li)
+    function yU(TT) {
+      return TT.jB(aU)
     }
 
-    function Ji(pp) {
+    function XU(TT) {
       return {
-        UO: pp.long(),
-        wO: pp.long(),
-        vO: pp.long(),
-        tO: pp.bool(),
-        HO: qi(pp),
-        BO: Xi(pp),
-        aO: Qi(pp)
+        UW: TT.long(),
+        mW: TT.long(),
+        WW: TT.long(),
+        zW: TT.bool(),
+        MW: JU(TT),
+        bW: tU(TT),
+        dW: yU(TT)
       }
     }
 
-    function Bi(pp) {
-      return pp.qy(Ji)
+    function IU(TT) {
+      return TT.jB(XU)
     }
 
-    function Ni(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function QU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          name: pp.str(),
-          zO: Jp(pp)
+          name: TT.str(),
+          QW: IT(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function Ti(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function sU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          terrain: Ni(pp),
-          sO: Qi(pp)
+          terrain: QU(TT),
+          sW: yU(TT)
         }
-      }(pp)
+      }(TT)
     }
 
-    function fi(pp) {
-      return 0 === pp.index(2) ? null : function(pp) {
+    function FU(TT) {
+      return 0 === TT.index(2) ? null : function(TT) {
         return {
-          layers: Bi(pp),
-          GO: Ti(pp)
+          layers: IU(TT),
+          yW: sU(TT)
         }
-      }(pp)
+      }(TT)
     }
   },
-  40792: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Ep,
-      B: () => dp,
-      E: () => ep,
-      H: () => wp,
-      K: () => qp,
-      N: () => lp,
-      P: () => yp,
-      Q: () => Jp,
-      S: () => tp,
-      W: () => vp,
-      _: () => Hp,
-      c: () => op,
-      cb: () => jp,
-      d: () => Qp,
-      h: () => Xp,
-      k: () => Wp,
-      n: () => Up,
-      o: () => Cp,
-      q: () => mp,
-      r: () => Mp,
-      u: () => Rp,
-      w: () => kp
+  40731: (TT, UT, mT) => {
+    mT.d(UT, {
+      $: () => IT,
+      A: () => JT,
+      D: () => eT,
+      H: () => tT,
+      J: () => iT,
+      N: () => bT,
+      Q: () => cT,
+      S: () => xT,
+      V: () => yT,
+      Z: () => BT,
+      db: () => fT,
+      e: () => zT,
+      f: () => XT,
+      gb: () => vT,
+      h: () => aT,
+      ib: () => qT,
+      l: () => pT,
+      mb: () => OT,
+      p: () => ZT,
+      t: () => wT,
+      u: () => YT,
+      w: () => dT
     });
-    var Op = cp(3085);
-    const op = {
+    var WT = mT(3124);
+    const zT = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function Ip(pp, ip) {
-      return !ArrayBuffer.isView(pp) || pp instanceof DataView ? Array.isArray(pp) ? pp.map((pp => ip(pp))) : pp : Array.from(pp, (pp => ip(pp)))
+    function MT(TT, UT) {
+      return !ArrayBuffer.isView(TT) || TT instanceof DataView ? Array.isArray(TT) ? TT.map((TT => UT(TT))) : TT : Array.from(TT, (TT => UT(TT)))
     }
 
-    function Sp(pp) {
-      if ("string" !== typeof pp) return pp;
-      for (let ip = 0; ip < pp.length; ip++) {
-        const cp = pp.charCodeAt(ip);
-        if (cp >= 55296 && cp <= 57343) return Lp.decode(xp.encode(pp))
+    function gT(TT) {
+      if ("string" !== typeof TT) return TT;
+      for (let UT = 0; UT < TT.length; UT++) {
+        const mT = TT.charCodeAt(UT);
+        if (mT >= 55296 && mT <= 57343) return HT.decode(nT.encode(TT))
       }
-      return pp
+      return TT
     }
-    const xp = new TextEncoder,
-      Lp = new TextDecoder;
+    const nT = new TextEncoder,
+      HT = new TextDecoder;
 
-    function Yp(pp) {
-      return pp
+    function kT(TT) {
+      return TT
     }
-    let Dp;
+    let jT;
 
-    function Ap(pp) {
-      return null === pp || "object" !== typeof pp ? pp : [Sp(pp.Cx), Sp(pp.Ex)]
-    }
-
-    function Pp(pp) {
-      return null === pp || "object" !== typeof pp ? pp : [Ip(pp.WI, Yp), Ip(pp.Zx, Yp)]
+    function lT(TT) {
+      return null === TT || "object" !== typeof TT ? TT : [gT(TT.Tn), gT(TT.Un)]
     }
 
-    function Wp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.VD), Sp(ip.pA)];
-      var ip
+    function LT(TT) {
+      return null === TT || "object" !== typeof TT ? TT : [MT(TT.Kz, kT), MT(TT.cn, kT)]
     }
 
-    function yp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [ip.id, ip.bD];
-      var ip
+    function pT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.Xj), gT(UT.Ij)];
+      var UT
     }
 
-    function Up(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [ip.eI, Sp(ip.uI), ip.jI, Sp(ip.RI), ip.EI, ip.XI, ip.zD, Sp(ip.sD), Sp(ip.KD)];
-      var ip
+    function BT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [UT.id, UT.qj];
+      var UT
     }
 
-    function wp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Ip(ip.vx, Yp), ip.tx];
-      var ip
+    function ZT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [UT.Rz, gT(UT.TM), UT.UM, gT(UT.zM), UT.HM, UT.kM, UT.tj, gT(UT.aj), gT(UT.yj)];
+      var UT
     }
 
-    function vp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Ip(ip.yx, (pp => Sp(pp))), Sp(ip.Ux), ip.wx];
-      var ip
+    function cT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [MT(UT.Sg, kT), UT.Gg];
+      var UT
     }
 
-    function tp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Ip(ip.nL, Yp), Sp(ip.FL), ip.gL];
-      var ip
+    function vT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [MT(UT.Cg, (TT => gT(TT))), gT(UT.rg), UT.Kg];
+      var UT
     }
 
-    function Hp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.KI), Sp(ip.VI)];
-      var ip
+    function fT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [MT(UT.qH, kT), gT(UT.iH), UT.bH];
+      var UT
     }
 
-    function dp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.IL)];
-      var ip
+    function qT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.wM), gT(UT.tM)];
+      var UT
     }
 
-    function ep(pp) {
-      return Sp(pp)
+    function iT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.tn)];
+      var UT
     }
 
-    function jp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.ND), Sp(ip.TD), Sp(ip.Cx), Sp(ip.Ex)];
-      var ip
+    function bT(TT) {
+      return gT(TT)
     }
 
-    function kp(pp) {
-      return Ap(pp)
+    function OT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.Zj), gT(UT.vj), gT(UT.Tn), gT(UT.Un)];
+      var UT
     }
 
-    function mp(pp) {
-      return Ap(pp)
+    function eT(TT) {
+      return lT(TT)
     }
 
-    function Rp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.JL)];
-      var ip
+    function YT(TT) {
+      return lT(TT)
     }
 
-    function qp(pp) {
-      return pp
+    function JT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.lH)];
+      var UT
     }
 
-    function Mp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.qx), Sp(ip.Mx)];
-      var ip
+    function xT(TT) {
+      return TT
     }
 
-    function Cp(pp) {
-      return Sp(pp)
+    function dT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.Ag), gT(UT.Rg)];
+      var UT
     }
 
-    function Ep(pp) {
-      return Pp(pp)
+    function wT(TT) {
+      return gT(TT)
     }
 
-    function Xp(pp) {
-      return Pp(pp)
+    function tT(TT) {
+      return LT(TT)
     }
 
-    function lp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [Sp(ip.rL)];
-      var ip
+    function aT(TT) {
+      return LT(TT)
     }
 
-    function Qp(pp) {
-      return (Dp ??= (0, Op.c)().map((pp => pp.name)), Dp).map((ip => {
-        return "string" === typeof(cp = pp[ip]) ? Sp(cp) : Ip(cp, Yp);
-        var cp
+    function yT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.OH)];
+      var UT
+    }
+
+    function XT(TT) {
+      return (jT ??= (0, WT.i)().map((TT => TT.name)), jT).map((UT => {
+        return "string" === typeof(mT = TT[UT]) ? gT(mT) : MT(mT, kT);
+        var mT
       }))
     }
 
-    function Jp(pp) {
-      return null === (ip = pp) || "object" !== typeof ip ? ip : [ip.XL, ip.lL, ip.QL];
-      var ip
+    function IT(TT) {
+      return null === (UT = TT) || "object" !== typeof UT ? UT : [UT.HH, UT.kH, UT.jH];
+      var UT
     }
   },
-  9436: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      h: () => Ip
+  9411: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => zT,
+      i: () => MT
     });
-    var Op = cp(9385);
-    const op = "Air",
-      Ip = Object.freeze(new Op.e(op, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var WT = mT(9369);
+    const zT = "Air",
+      MT = Object.freeze(new WT.g(zT, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39425: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      d: () => xp
+  39366: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT,
+      e: () => nT
     });
-    var Op = cp(337),
-      op = cp(4543);
-    const Ip = new Set(op.s),
-      Sp = new Map;
+    var WT = mT(366),
+      zT = mT(4581);
+    const MT = new Set(zT.p),
+      gT = new Map;
 
-    function xp(pp, ip) {
-      let cp = Sp.get(ip);
-      void 0 === cp && (cp = new Map, Sp.set(ip, cp));
-      let op = cp.get(pp);
-      return void 0 === op && (op = `${pp}${(0,Op.C)(ip)}`, cp.set(pp, op)), op
+    function nT(TT, UT) {
+      let mT = gT.get(UT);
+      void 0 === mT && (mT = new Map, gT.set(UT, mT));
+      let zT = mT.get(TT);
+      return void 0 === zT && (zT = `${TT}${(0,WT.G)(UT)}`, mT.set(TT, zT)), zT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

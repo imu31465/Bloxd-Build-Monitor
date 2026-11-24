@@ -1,571 +1,571 @@
 export const id = 242;
 export const ids = [242];
 export const modules = {
-  41280: (pp, ip, cp) => {
-    cp.d(ip, {
-      noaDevTools: () => Ap
+  41207: (TT, UT, mT) => {
+    mT.d(UT, {
+      noaDevTools: () => lT
     });
-    var Op = cp(37769),
-      op = cp(37760),
-      Ip = cp(2849),
-      Sp = cp(1765),
-      xp = cp(41182);
+    var WT = mT(37673),
+      zT = mT(37649),
+      MT = mT(2875),
+      gT = mT(1863),
+      nT = mT(41110);
 
-    function Lp(pp) {
+    function HT(TT) {
       const {
-        WU: ip
-      } = pp, cp = ip.engine, Op = {
-        width: cp.getRenderWidth(),
-        height: cp.getRenderHeight()
+        GB: UT
+      } = TT, mT = UT.engine, WT = {
+        width: mT.getRenderWidth(),
+        height: mT.getRenderHeight()
       };
       return {
-        canvas: cp.getRenderingCanvas(),
-        maxTextureSize: cp.getCaps().maxTextureSize,
-        drawing: () => !pp.Fk,
-        resize: (pp, ip) => {
-          cp.setSize(pp, ip)
+        canvas: mT.getRenderingCanvas(),
+        maxTextureSize: mT.getCaps().maxTextureSize,
+        drawing: () => !TT.bY,
+        resize: (TT, UT) => {
+          mT.setSize(TT, UT)
         },
         restoreSize: () => {
-          cp.setSize(Op.width, Op.height), ip.resize()
+          mT.setSize(WT.width, WT.height), UT.resize()
         },
-        onFrameDrawn: ip => (pp.on("afterRender", ip), () => {
-          pp.off("afterRender", ip)
+        onFrameDrawn: UT => (TT.on("afterRender", UT), () => {
+          TT.off("afterRender", UT)
         })
       }
     }
-    var Yp = cp(34306);
+    var kT = mT(34152);
 
-    function Dp(pp, ip) {
+    function jT(TT, UT) {
       let {
-        width: Yp,
-        height: Dp,
-        colouring: Ap
-      } = ip;
-      const Pp = "normals" === Ap,
-        Wp = "depth" === Ap;
-      return new Promise((ip => {
+        width: kT,
+        height: jT,
+        colouring: lT
+      } = UT;
+      const LT = "normals" === lT,
+        pT = "depth" === lT;
+      return new Promise((UT => {
         try {
-          const yp = (0, Ip.g)();
-          if (yp.WU.yU) return "screenshot" !== pp || null !== Ap ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void ip()) : void(0, xp.g)(Lp(yp), Yp, Dp).finally(ip);
-          const Up = yp.WU.engine,
-            wp = yp.WU.Gl(),
-            vp = Yp,
-            tp = Dp;
-          Promise.all([Promise.all([cp.e(258), cp.e(259), cp.e(238)]).then((() => cp(61368))), Promise.all([cp.e(237), cp.e(236), cp.e(258), cp.e(259), cp.e(256), cp.e(260), cp.e(263), cp.e(316), cp.e(243)]).then((() => cp(61372))), Promise.all([cp.e(237), cp.e(236), cp.e(258), cp.e(259), cp.e(256), cp.e(266), cp.e(260), cp.e(268), cp.e(245)]).then((() => cp(61380))), cp.e(357).then((() => cp(61383))), Promise.all([cp.e(236), cp.e(232)]).then((() => cp(37313))), cp.e(257).then((() => cp(61392))), cp.e(240).then((() => cp(61395)))]).then((Ip => {
+          const BT = (0, MT.h)();
+          if (BT.GB.NB) return "screenshot" !== TT || null !== lT ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void UT()) : void(0, nT.g)(HT(BT), kT, jT).finally(UT);
+          const ZT = BT.GB.engine,
+            cT = BT.GB.KF(),
+            vT = kT,
+            fT = jT;
+          Promise.all([Promise.all([mT.e(258), mT.e(259), mT.e(238)]).then((() => mT(61126))), Promise.all([mT.e(237), mT.e(236), mT.e(258), mT.e(259), mT.e(256), mT.e(260), mT.e(263), mT.e(316), mT.e(243)]).then((() => mT(61133))), Promise.all([mT.e(237), mT.e(236), mT.e(258), mT.e(259), mT.e(256), mT.e(266), mT.e(260), mT.e(268), mT.e(245)]).then((() => mT(61136))), mT.e(357).then((() => mT(61145))), Promise.all([mT.e(236), mT.e(232)]).then((() => mT(37185))), mT.e(257).then((() => mT(61150))), mT.e(240).then((() => mT(61157)))]).then((MT => {
             const {
-              CreateScreenshotUsingRenderTarget: xp
-            } = Ip[1], {
-              ShaderMaterial: Lp
-            } = Ip[2], {
-              ShaderLanguage: Yp
-            } = Ip[3], {
-              Zy: Dp
-            } = Ip[4], {
-              registerDevtoolsShader: Ap
-            } = Ip[6], yp = Yp.GLSL, Hp = new Map, dp = wp.meshes.filter((pp => pp.material));
-            let ep = !1,
-              jp = null;
+              CreateScreenshotUsingRenderTarget: nT
+            } = MT[1], {
+              ShaderMaterial: HT
+            } = MT[2], {
+              ShaderLanguage: kT
+            } = MT[3], {
+              JB: jT
+            } = MT[4], {
+              registerDevtoolsShader: lT
+            } = MT[6], BT = kT.GLSL, qT = new Map, iT = cT.meshes.filter((TT => TT.material));
+            let bT = !1,
+              OT = null;
 
-            function kp() {
-              var pp;
-              ep && (ep = !1, (0, Op.f)(wp.meshes, !1)), null === (pp = jp) || void 0 === pp || pp(), jp = null, dp.forEach((pp => {
-                const ip = Hp.get(pp);
-                ip && (pp.material = ip)
+            function eT() {
+              var TT;
+              bT && (bT = !1, (0, WT.i)(cT.meshes, !1)), null === (TT = OT) || void 0 === TT || TT(), OT = null, iT.forEach((TT => {
+                const UT = qT.get(TT);
+                UT && (TT.material = UT)
               }))
             }
-            if (Pp) {
-              const pp = [],
-                ip = [];
-              dp.forEach((cp => {
-                const Op = cp.name.toLowerCase(),
-                  op = cp.bJ().boundingBox.center,
-                  Ip = wp.activeCamera.position.subtract(op).length();
-                Op.includes("sky") || Op.includes("background") || Op.includes("environment") || Ip > 1e3 ? ip.push(cp) : pp.push(cp)
-              })), Ap("devtoolsNormal", yp);
-              const cp = new Lp("normalMaterial", wp, "devtoolsNormal", {
+            if (LT) {
+              const TT = [],
+                UT = [];
+              iT.forEach((mT => {
+                const WT = mT.name.toLowerCase(),
+                  zT = mT.rV().boundingBox.center,
+                  MT = cT.activeCamera.position.subtract(zT).length();
+                WT.includes("sky") || WT.includes("background") || WT.includes("environment") || MT > 1e3 ? UT.push(mT) : TT.push(mT)
+              })), lT("devtoolsNormal", BT);
+              const mT = new HT("normalMaterial", cT, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: yp
+                shaderLanguage: BT
               });
-              Ap("devtoolsWhite", yp);
-              const Op = new Lp("whiteMaterial", wp, "devtoolsWhite", {
+              lT("devtoolsWhite", BT);
+              const WT = new HT("whiteMaterial", cT, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: yp
+                shaderLanguage: BT
               });
-              pp.forEach((pp => {
-                Hp.set(pp, pp.material), pp.material = cp
-              })), ip.forEach((pp => {
-                Hp.set(pp, pp.material), pp.material = Op
+              TT.forEach((TT => {
+                qT.set(TT, TT.material), TT.material = mT
+              })), UT.forEach((TT => {
+                qT.set(TT, TT.material), TT.material = WT
               }))
-            } else if (Wp) {
-              Ap("devtoolsDepth", yp);
-              const pp = wp.activeCamera.position;
-              let ip = 0,
-                cp = 1 / 0;
-              dp.forEach((Op => {
-                const op = Op.name.toLowerCase();
-                if (op.includes("sky") || op.includes("background") || op.includes("environment")) return;
-                const Ip = Op.bJ().boundingBox.center,
-                  Sp = Dp.TransformCoordinates(Ip, Op.getWorldMatrix()),
-                  xp = pp.subtract(Sp).length();
-                xp > 1e3 || (ip = Math.max(ip, xp), cp = Math.min(cp, xp))
+            } else if (pT) {
+              lT("devtoolsDepth", BT);
+              const TT = cT.activeCamera.position;
+              let UT = 0,
+                mT = 1 / 0;
+              iT.forEach((WT => {
+                const zT = WT.name.toLowerCase();
+                if (zT.includes("sky") || zT.includes("background") || zT.includes("environment")) return;
+                const MT = WT.rV().boundingBox.center,
+                  gT = jT.TransformCoordinates(MT, WT.getWorldMatrix()),
+                  nT = TT.subtract(gT).length();
+                nT > 1e3 || (UT = Math.max(UT, nT), mT = Math.min(mT, nT))
               }));
-              const Op = ip - cp;
-              ip += .1 * Op, cp = Math.max(0, cp - .1 * Op), console.log(`Depth range: min=${cp.toFixed(2)}, max=${ip.toFixed(2)}, range=${Op.toFixed(2)}`), Op < 1 && (ip = cp + 10);
-              const op = new Lp("depthMaterial", wp, "devtoolsDepth", {
+              const WT = UT - mT;
+              UT += .1 * WT, mT = Math.max(0, mT - .1 * WT), console.log(`Depth range: min=${mT.toFixed(2)}, max=${UT.toFixed(2)}, range=${WT.toFixed(2)}`), WT < 1 && (UT = mT + 10);
+              const zT = new HT("depthMaterial", cT, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: yp
+                shaderLanguage: BT
               });
-              op.setVector3("cameraPosition", pp), op.setFloat("maxDepth", ip), op.setFloat("minDepth", cp), dp.forEach((pp => {
-                Hp.set(pp, pp.material), pp.material = op
+              zT.setVector3("cameraPosition", TT), zT.setFloat("maxDepth", UT), zT.setFloat("minDepth", mT), iT.forEach((TT => {
+                qT.set(TT, TT.material), TT.material = zT
               }))
             }
-            if ((0, Op.f)(wp.meshes, !0), ep = !0, "glb" === pp && (jp = (0, op.d)(wp.meshes)), "screenshot" === pp) {
-              let pp = `bloxd-screenshot-${vp}x${tp}-${Date.now()}.png`;
-              Pp ? pp = `bloxd-screenshot-normals-${vp}x${tp}-${Date.now()}.png` : Wp && (pp = `bloxd-screenshot-depth-${vp}x${tp}-${Date.now()}.png`), xp(Up, wp.activeCamera, {
-                width: vp,
-                height: tp
-              }, (function(cp) {
-                kp(), fetch(cp).then((function(pp) {
-                  return pp.blob()
-                })).then((function(cp) {
-                  (0, Sp.downloadBlob)(cp, pp), ip()
-                })).catch((function(pp) {
-                  console.error("Error processing screenshot:", pp), ip()
+            if ((0, WT.i)(cT.meshes, !0), bT = !0, "glb" === TT && (OT = (0, zT.c)(cT.meshes)), "screenshot" === TT) {
+              let TT = `bloxd-screenshot-${vT}x${fT}-${Date.now()}.png`;
+              LT ? TT = `bloxd-screenshot-normals-${vT}x${fT}-${Date.now()}.png` : pT && (TT = `bloxd-screenshot-depth-${vT}x${fT}-${Date.now()}.png`), nT(ZT, cT.activeCamera, {
+                width: vT,
+                height: fT
+              }, (function(mT) {
+                eT(), fetch(mT).then((function(TT) {
+                  return TT.blob()
+                })).then((function(mT) {
+                  (0, gT.downloadBlob)(mT, TT), UT()
+                })).catch((function(TT) {
+                  console.error("Error processing screenshot:", TT), UT()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), kp(), ip()
+                console.error("Screenshot timed out"), eT(), UT()
               }))
             } else {
-              let pp = "pw";
-              Pp ? pp = "scene-normals" : Wp && (pp = "scene-depth"), Pp || Wp ? setTimeout((() => {
+              let TT = "XZ";
+              LT ? TT = "scene-normals" : pT && (TT = "scene-depth"), LT || pT ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: pp
-                  } = await Promise.all([cp.e(237), cp.e(236), cp.e(258), cp.e(259), cp.e(256), cp.e(266), cp.e(265), cp.e(244)]).then((() => cp(40459))), {
-                    Color3: ip
-                  } = await Promise.all([cp.e(237), cp.e(241)]).then((() => cp(37479))), Op = [], op = [];
-                  if (dp.forEach((pp => {
-                      const ip = pp.name.toLowerCase(),
-                        cp = pp.bJ().boundingBox.center,
-                        Ip = wp.activeCamera.position.subtract(cp).length();
-                      ip.includes("sky") || ip.includes("background") || ip.includes("environment") || Ip > 1e3 ? op.push(pp) : Op.push(pp)
-                    })), Pp) Op.forEach(((cp, Op) => {
-                    const op = cp.getVerticesData("normal");
-                    if (op) {
-                      const Ip = [];
-                      for (let pp = 0; pp < op.length; pp += 3) {
-                        const ip = Math.abs(op[pp]),
-                          cp = Math.abs(op[pp + 1]),
-                          Op = Math.abs(op[pp + 2]);
-                        Ip.push(ip, cp, Op, 1)
+                    StandardMaterial: TT
+                  } = await Promise.all([mT.e(237), mT.e(236), mT.e(258), mT.e(259), mT.e(256), mT.e(266), mT.e(265), mT.e(244)]).then((() => mT(40379))), {
+                    Color3: UT
+                  } = await Promise.all([mT.e(237), mT.e(241)]).then((() => mT(37364))), WT = [], zT = [];
+                  if (iT.forEach((TT => {
+                      const UT = TT.name.toLowerCase(),
+                        mT = TT.rV().boundingBox.center,
+                        MT = cT.activeCamera.position.subtract(mT).length();
+                      UT.includes("sky") || UT.includes("background") || UT.includes("environment") || MT > 1e3 ? zT.push(TT) : WT.push(TT)
+                    })), LT) WT.forEach(((mT, WT) => {
+                    const zT = mT.getVerticesData("normal");
+                    if (zT) {
+                      const MT = [];
+                      for (let TT = 0; TT < zT.length; TT += 3) {
+                        const UT = Math.abs(zT[TT]),
+                          mT = Math.abs(zT[TT + 1]),
+                          WT = Math.abs(zT[TT + 2]);
+                        MT.push(UT, mT, WT, 1)
                       }
-                      cp.setVerticesData("color", Ip);
-                      const Sp = new pp(`vertexColorMat_${Op}`, wp);
-                      Sp.disableLighting = !0, Sp.emissiveColor = new ip(1, 1, 1), Sp.specularColor = new ip(0, 0, 0), cp.material = Sp
+                      mT.setVerticesData("color", MT);
+                      const gT = new TT(`vertexColorMat_${WT}`, cT);
+                      gT.disableLighting = !0, gT.emissiveColor = new UT(1, 1, 1), gT.specularColor = new UT(0, 0, 0), mT.material = gT
                     }
-                  })), op.forEach(((cp, Op) => {
-                    const op = cp.getVerticesData("position");
-                    if (op) {
-                      const Ip = [],
-                        Sp = op.length / 3;
-                      for (let pp = 0; pp < Sp; pp++) Ip.push(1, 1, 1, 1);
-                      cp.setVerticesData("color", Ip);
-                      const xp = new pp(`whiteMat_${Op}`, wp);
-                      xp.disableLighting = !0, xp.emissiveColor = new ip(1, 1, 1), xp.specularColor = new ip(0, 0, 0), cp.material = xp
+                  })), zT.forEach(((mT, WT) => {
+                    const zT = mT.getVerticesData("position");
+                    if (zT) {
+                      const MT = [],
+                        gT = zT.length / 3;
+                      for (let TT = 0; TT < gT; TT++) MT.push(1, 1, 1, 1);
+                      mT.setVerticesData("color", MT);
+                      const nT = new TT(`whiteMat_${WT}`, cT);
+                      nT.disableLighting = !0, nT.emissiveColor = new UT(1, 1, 1), nT.specularColor = new UT(0, 0, 0), mT.material = nT
                     }
                   }));
-                  else if (Wp) {
-                    const cp = wp.activeCamera.position;
-                    let op = 0,
-                      Ip = 1 / 0;
-                    Op.forEach((pp => {
-                      const ip = pp.bJ().boundingBox.center,
-                        Op = Dp.TransformCoordinates(ip, pp.getWorldMatrix()),
-                        Sp = cp.subtract(Op).length();
-                      op = Math.max(op, Sp), Ip = Math.min(Ip, Sp)
+                  else if (pT) {
+                    const mT = cT.activeCamera.position;
+                    let zT = 0,
+                      MT = 1 / 0;
+                    WT.forEach((TT => {
+                      const UT = TT.rV().boundingBox.center,
+                        WT = jT.TransformCoordinates(UT, TT.getWorldMatrix()),
+                        gT = mT.subtract(WT).length();
+                      zT = Math.max(zT, gT), MT = Math.min(MT, gT)
                     }));
-                    const Sp = op - Ip;
-                    op += .1 * Sp, Ip = Math.max(0, Ip - .1 * Sp), Sp < 1 && (op = Ip + 10), dp.forEach(((Op, Sp) => {
-                      const xp = Op.name.toLowerCase(),
-                        Lp = Op.bJ().boundingBox.center,
-                        Yp = Dp.TransformCoordinates(Lp, Op.getWorldMatrix()),
-                        Ap = cp.subtract(Yp).length();
-                      if (!(xp.includes("sky") || xp.includes("background") || xp.includes("environment") || Ap > 1e3)) {
-                        const cp = 1 - Math.min(Math.max((Ap - Ip) / (op - Ip), 0), 1),
-                          xp = new pp(`depthMat_${Sp}`, wp);
-                        xp.diffuseColor = new ip(cp, cp, cp), xp.specularColor = new ip(0, 0, 0), Op.material = xp
+                    const gT = zT - MT;
+                    zT += .1 * gT, MT = Math.max(0, MT - .1 * gT), gT < 1 && (zT = MT + 10), iT.forEach(((WT, gT) => {
+                      const nT = WT.name.toLowerCase(),
+                        HT = WT.rV().boundingBox.center,
+                        kT = jT.TransformCoordinates(HT, WT.getWorldMatrix()),
+                        lT = mT.subtract(kT).length();
+                      if (!(nT.includes("sky") || nT.includes("background") || nT.includes("environment") || lT > 1e3)) {
+                        const mT = 1 - Math.min(Math.max((lT - MT) / (zT - MT), 0), 1),
+                          nT = new TT(`depthMat_${gT}`, cT);
+                        nT.diffuseColor = new UT(mT, mT, mT), nT.specularColor = new UT(0, 0, 0), WT.material = nT
                       }
                     }))
                   }
-                })().then((() => Promise.all([cp.e(237), cp.e(236), cp.e(258), cp.e(259), cp.e(256), cp.e(266), cp.e(260), cp.e(265), cp.e(263), cp.e(255), cp.e(268), cp.e(279), cp.e(316), cp.e(249), cp.e(267), cp.e(235)]).then((() => cp(61397))))).then((ip => ip.GLTF2Export.GLBAsync(wp, pp))).then((pp => {
-                  kp(), pp.downloadFiles(), ip()
-                })).catch((pp => {
-                  console.error("Error exporting GLB:", pp), kp(), ip()
+                })().then((() => Promise.all([mT.e(237), mT.e(236), mT.e(258), mT.e(259), mT.e(256), mT.e(266), mT.e(260), mT.e(265), mT.e(263), mT.e(255), mT.e(268), mT.e(279), mT.e(316), mT.e(249), mT.e(267), mT.e(235)]).then((() => mT(61159))))).then((UT => UT.GLTF2Export.GLBAsync(cT, TT))).then((TT => {
+                  eT(), TT.downloadFiles(), UT()
+                })).catch((TT => {
+                  console.error("Error exporting GLB:", TT), eT(), UT()
                 }))
-              }), 100) : Promise.all([cp.e(237), cp.e(236), cp.e(258), cp.e(259), cp.e(256), cp.e(266), cp.e(260), cp.e(265), cp.e(263), cp.e(255), cp.e(268), cp.e(279), cp.e(316), cp.e(249), cp.e(267), cp.e(235)]).then((() => cp(61397))).then((cp => {
-                cp.GLTF2Export.GLBAsync(wp, pp).then((pp => {
-                  kp(), pp.downloadFiles(), ip()
-                })).catch((pp => {
-                  console.error("Error exporting GLB:", pp), kp(), ip()
+              }), 100) : Promise.all([mT.e(237), mT.e(236), mT.e(258), mT.e(259), mT.e(256), mT.e(266), mT.e(260), mT.e(265), mT.e(263), mT.e(255), mT.e(268), mT.e(279), mT.e(316), mT.e(249), mT.e(267), mT.e(235)]).then((() => mT(61159))).then((mT => {
+                mT.GLTF2Export.GLBAsync(cT, TT).then((TT => {
+                  eT(), TT.downloadFiles(), UT()
+                })).catch((TT => {
+                  console.error("Error exporting GLB:", TT), eT(), UT()
                 }))
-              })).catch((pp => {
-                console.error("Error importing serializers:", pp), kp(), ip()
+              })).catch((TT => {
+                console.error("Error importing serializers:", TT), eT(), UT()
               }))
             }
-          })).catch((pp => {
-            console.error("Error downloading the scene:", pp), ip()
+          })).catch((TT => {
+            console.error("Error downloading the scene:", TT), UT()
           }))
-        } catch (yp) {
-          console.error("Error taking screenshot:", yp), ip()
+        } catch (BT) {
+          console.error("Error taking screenshot:", BT), UT()
         }
       }))
     }
-    const Ap = new class {
+    const lT = new class {
       constructor() {
-        this.tools = Yp.ALL_DEV_TOOLS
+        this.tools = kT.ALL_DEV_TOOLS
       }
-      downloadScene(pp, ip) {
-        return Dp(pp, ip)
+      downloadScene(TT, UT) {
+        return jT(TT, UT)
       }
-      async setAmbientLightIntensity(pp) {
+      async setAmbientLightIntensity(TT) {
         const {
-          Color3: ip
-        } = await Promise.all([cp.e(237), cp.e(241)]).then((() => cp(37479)));
-        (0, Ip.g)().WU.Gl().ambientColor = ip.FromArray([pp, pp, pp])
+          Color3: UT
+        } = await Promise.all([mT.e(237), mT.e(241)]).then((() => mT(37364)));
+        (0, MT.h)().GB.KF().ambientColor = UT.FromArray([TT, TT, TT])
       }
-      capturePhoto(pp, ip, cp) {
-        return function(pp, ip, cp, Op) {
-          return (0, xp.c)(Lp(pp), ip, cp, Op)
-        }((0, Ip.g)(), pp, ip, cp)
+      capturePhoto(TT, UT, mT) {
+        return function(TT, UT, mT, WT) {
+          return (0, nT.c)(HT(TT), UT, mT, WT)
+        }((0, MT.h)(), TT, UT, mT)
       }
     }
   },
-  41182: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      g: () => Lp
+  41110: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => nT,
+      g: () => HT
     });
-    var Op = cp(1779);
-    const op = 33177600,
-      Ip = 3e4;
-    let Sp = !1;
+    var WT = mT(1876);
+    const zT = 33177600,
+      MT = 3e4;
+    let gT = !1;
 
-    function xp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function nT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: xp = 1,
-        type: Lp = "image/png",
-        quality: Yp
-      } = Op;
-      if (!pp.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (Sp) return Promise.reject(new Error("A screenshot is already being taken"));
-      Sp = !0;
-      const Dp = function(pp, ip, cp) {
-        const Op = Math.max(1, pp),
-          Ip = Math.max(1, ip),
-          Sp = Math.min(1, cp / Math.max(Op, Ip), Math.sqrt(op / (Op * Ip)));
+        scale: nT = 1,
+        type: HT = "image/png",
+        quality: kT
+      } = WT;
+      if (!TT.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (gT) return Promise.reject(new Error("A screenshot is already being taken"));
+      gT = !0;
+      const jT = function(TT, UT, mT) {
+        const WT = Math.max(1, TT),
+          MT = Math.max(1, UT),
+          gT = Math.min(1, mT / Math.max(WT, MT), Math.sqrt(zT / (WT * MT)));
         return {
-          width: Math.max(1, Math.floor(Op * Sp)),
-          height: Math.max(1, Math.floor(Ip * Sp))
+          width: Math.max(1, Math.floor(WT * gT)),
+          height: Math.max(1, Math.floor(MT * gT))
         }
-      }(ip, cp, pp.maxTextureSize);
-      return pp.resize(Dp.width, Dp.height, xp * Dp.width / Math.max(1, ip)), new Promise(((ip, cp) => {
-        let Op, op = 2,
-          xp = null;
-        const Dp = () => {
-          var ip;
-          Sp = !1, null === (ip = xp) || void 0 === ip || ip(), clearTimeout(Op), pp.restoreSize()
+      }(UT, mT, TT.maxTextureSize);
+      return TT.resize(jT.width, jT.height, nT * jT.width / Math.max(1, UT)), new Promise(((UT, mT) => {
+        let WT, zT = 2,
+          nT = null;
+        const jT = () => {
+          var UT;
+          gT = !1, null === (UT = nT) || void 0 === UT || UT(), clearTimeout(WT), TT.restoreSize()
         };
-        Op = setTimeout((() => {
-          Dp(), cp(new Error("No frame was drawn to capture"))
-        }), Ip), xp = pp.onFrameDrawn((() => {
-          if (op--, op > 0) return;
+        WT = setTimeout((() => {
+          jT(), mT(new Error("No frame was drawn to capture"))
+        }), MT), nT = TT.onFrameDrawn((() => {
+          if (zT--, zT > 0) return;
           const {
-            canvas: Op
-          } = pp, Ip = {
-            width: Op.width,
-            height: Op.height
+            canvas: WT
+          } = TT, MT = {
+            width: WT.width,
+            height: WT.height
           };
           try {
-            Op.toBlob((pp => {
-              pp ? ip({
-                blob: pp,
-                ...Ip
-              }) : cp(new Error("The canvas gave no image"))
-            }), Lp, Yp)
-          } catch (Sp) {
-            cp(Sp)
+            WT.toBlob((TT => {
+              TT ? UT({
+                blob: TT,
+                ...MT
+              }) : mT(new Error("The canvas gave no image"))
+            }), HT, kT)
+          } catch (gT) {
+            mT(gT)
           } finally {
-            Dp()
+            jT()
           }
         }))
       }))
     }
-    async function Lp(pp, ip, cp) {
+    async function HT(TT, UT, mT) {
       try {
-        const op = await xp(pp, ip, cp);
-        (0, Op.c)(op.blob, `bloxd-screenshot-${op.width}x${op.height}-${Date.now()}.png`)
-      } catch (op) {
-        console.error("Error taking screenshot:", op)
+        const zT = await nT(TT, UT, mT);
+        (0, WT.c)(zT.blob, `bloxd-screenshot-${zT.width}x${zT.height}-${Date.now()}.png`)
+      } catch (zT) {
+        console.error("Error taking screenshot:", zT)
       }
     }
   },
-  37769: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Yp,
-      f: () => xp,
-      g: () => Sp
+  37673: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT,
+      i: () => nT,
+      k: () => gT
     });
-    var Op = cp(37767),
-      op = cp(37772);
-    let Ip = 0;
+    var WT = mT(37666),
+      zT = mT(37676);
+    let MT = 0;
 
-    function Sp(pp, ip) {
-      const cp = pp;
-      cp._noaFaceGroups = null !== ip && void 0 !== ip ? ip : null, cp._noaFaceEpoch = -1, cp._noaFaceMask = -1, cp._noaFaceCount = -1, cp._noaFaceMaterial = null;
-      const Op = pp.Am;
-      Op && 1 === Op.length && (Op[0].indexStart = 0, Op[0].indexCount = pp.getTotalIndices())
+    function gT(TT, UT) {
+      const mT = TT;
+      mT._noaFaceGroups = null !== UT && void 0 !== UT ? UT : null, mT._noaFaceEpoch = -1, mT._noaFaceMask = -1, mT._noaFaceCount = -1, mT._noaFaceMaterial = null;
+      const WT = TT.rY;
+      WT && 1 === WT.length && (WT[0].indexStart = 0, WT[0].indexCount = TT.getTotalIndices())
     }
 
-    function xp(pp, ip) {
-      if (ip) {
-        Ip++;
-        for (const ip of pp) {
-          const pp = ip._noaFaceGroups;
-          pp && Sp(ip, pp)
+    function nT(TT, UT) {
+      if (UT) {
+        MT++;
+        for (const UT of TT) {
+          const TT = UT._noaFaceGroups;
+          TT && gT(UT, TT)
         }
-      } else Ip = Math.max(0, Ip - 1)
+      } else MT = Math.max(0, MT - 1)
     }
 
-    function Lp(pp, ip, cp) {
-      let op = -1,
-        Ip = 0;
-      for (let Sp = 0; Sp < Op.f; Sp++) {
-        const cp = pp[Sp],
-          xp = pp[Sp + 1];
-        xp > cp && ip & 1 << Op.e[Sp] && (op < 0 && (op = cp), Ip = xp)
+    function HT(TT, UT, mT) {
+      let zT = -1,
+        MT = 0;
+      for (let gT = 0; gT < WT.f; gT++) {
+        const mT = TT[gT],
+          nT = TT[gT + 1];
+        nT > mT && UT & 1 << WT.c[gT] && (zT < 0 && (zT = mT), MT = nT)
       }
-      return op < 0 ? (cp[0] = 0, cp[1] = 0, 0) : (cp[0] = op, cp[1] = Ip - op, Ip - op)
+      return zT < 0 ? (mT[0] = 0, mT[1] = 0, 0) : (mT[0] = zT, mT[1] = MT - zT, MT - zT)
     }
-    class Yp {
-      constructor(pp, ip) {
-        this.Qy = pp, this.engine = ip, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class kT {
+      constructor(TT, UT) {
+        this.cB = TT, this.engine = UT, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(pp, ip) {
-        if (!ip) return;
-        const cp = ip.getProjectionMatrix().m,
-          Sp = 0 === Ip && 0 === cp[15],
-          xp = ip.globalPosition,
+      apply(TT, UT) {
+        if (!UT) return;
+        const mT = UT.getProjectionMatrix().m,
+          gT = 0 === MT && 0 === mT[15],
+          nT = UT.globalPosition,
           {
-            engine: Yp
+            engine: kT
           } = this,
-          Dp = Sp ? (0, op.c)(cp, Yp.getRenderWidth(), Yp.getRenderHeight()) : 0;
-        xp.x === this.eyeX && xp.y === this.eyeY && xp.z === this.eyeZ && Dp === this.focalPx && Sp === this.culling || (this.epoch++, this.eyeX = xp.x, this.eyeY = xp.y, this.eyeZ = xp.z, this.focalPx = Dp, this.culling = Sp);
+          jT = gT ? (0, zT.c)(mT, kT.getRenderWidth(), kT.getRenderHeight()) : 0;
+        nT.x === this.eyeX && nT.y === this.eyeY && nT.z === this.eyeZ && jT === this.focalPx && gT === this.culling || (this.epoch++, this.eyeX = nT.x, this.eyeY = nT.y, this.eyeZ = nT.z, this.focalPx = jT, this.culling = gT);
         const {
-          epoch: Ap,
-          range: Pp
-        } = this, Wp = this.Qy / 2, yp = Wp * Math.sqrt(3), Up = pp.data, wp = pp.length;
-        let vp = 0;
-        for (let Ip = 0; Ip < wp; Ip++) {
-          const pp = Up[Ip],
-            ip = pp._noaFaceGroups;
-          if (ip && (pp._noaFaceEpoch !== Ap || pp._noaFaceMaterial !== pp.material)) {
-            pp._noaFaceEpoch = Ap, pp._noaFaceMaterial = pp.material;
-            const cp = pp.Am,
-              Ip = cp && 1 === cp.length ? cp[0] : null;
-            let Yp = -1;
-            if (Sp && Ip && (0, Op.v)(pp.material)) {
-              const cp = pp.position,
-                Op = xp.x - cp.x,
-                Ip = xp.y - cp.y,
-                Sp = xp.z - cp.z,
-                Lp = Op - Wp,
-                Ap = Ip - Wp,
-                Pp = Sp - Wp,
-                Up = Math.sqrt(Lp * Lp + Ap * Ap + Pp * Pp) + yp;
-              Yp = (0, op.j)(ip, Op, Ip, Sp, (0, op.d)(Up, Dp))
+          epoch: lT,
+          range: LT
+        } = this, pT = this.cB / 2, BT = pT * Math.sqrt(3), ZT = TT.data, cT = TT.length;
+        let vT = 0;
+        for (let MT = 0; MT < cT; MT++) {
+          const TT = ZT[MT],
+            UT = TT._noaFaceGroups;
+          if (UT && (TT._noaFaceEpoch !== lT || TT._noaFaceMaterial !== TT.material)) {
+            TT._noaFaceEpoch = lT, TT._noaFaceMaterial = TT.material;
+            const mT = TT.rY,
+              MT = mT && 1 === mT.length ? mT[0] : null;
+            let kT = -1;
+            if (gT && MT && (0, WT.p)(TT.material)) {
+              const mT = TT.position,
+                WT = nT.x - mT.x,
+                MT = nT.y - mT.y,
+                gT = nT.z - mT.z,
+                HT = WT - pT,
+                lT = MT - pT,
+                LT = gT - pT,
+                ZT = Math.sqrt(HT * HT + lT * lT + LT * LT) + BT;
+              kT = (0, zT.l)(UT, WT, MT, gT, (0, zT.e)(ZT, jT))
             }
-            if (Ip && Yp !== pp._noaFaceMask) {
-              pp._noaFaceMask = Yp;
-              let cp = 0,
-                op = ip[Op.f]; - 1 !== Yp && (op = Lp(ip, Yp, Pp), cp = Pp[0]), pp._noaFaceCount = op, Ip.indexStart = 6 * cp, Ip.indexCount = 6 * op, Ip.setBoundingInfo(pp.bJ())
+            if (MT && kT !== TT._noaFaceMask) {
+              TT._noaFaceMask = kT;
+              let mT = 0,
+                zT = UT[WT.f]; - 1 !== kT && (zT = HT(UT, kT, LT), mT = LT[0]), TT._noaFaceCount = zT, MT.indexStart = 6 * mT, MT.indexCount = 6 * zT, MT.setBoundingInfo(TT.rV())
             }
           }
-          ip && 0 === pp._noaFaceCount || (Up[vp++] = pp)
+          UT && 0 === TT._noaFaceCount || (ZT[vT++] = TT)
         }
-        pp.length = vp
+        TT.length = vT
       }
     }
   },
-  37760: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Lp,
-      g: () => xp
+  37649: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      f: () => nT
     });
-    const Op = new WeakSet;
-    let op = 0;
-    const Ip = new Set;
+    const WT = new WeakSet;
+    let zT = 0;
+    const MT = new Set;
 
-    function Sp(pp, ip) {
-      pp._data = ip
+    function gT(TT, UT) {
+      TT._data = UT
     }
 
-    function xp(pp) {
-      var ip, cp;
-      (null !== (ip = null === (cp = pp.getBuffer()) || void 0 === cp ? void 0 : cp.TA) && void 0 !== ip ? ip : 0) > 0 && (Op.add(pp), 0 === op ? Sp(pp, null) : Ip.add(pp))
+    function nT(TT) {
+      var UT, mT;
+      (null !== (UT = null === (mT = TT.getBuffer()) || void 0 === mT ? void 0 : mT.fl) && void 0 !== UT ? UT : 0) > 0 && (WT.add(TT), 0 === zT ? gT(TT, null) : MT.add(TT))
     }
 
-    function Lp(pp) {
-      op++;
-      for (const cp of function(pp) {
-          const ip = new Set;
-          for (const op of pp) {
-            const pp = op.geometry;
-            for (const op of Object.values(null !== (cp = null === pp || void 0 === pp ? void 0 : pp.getVertexBuffers()) && void 0 !== cp ? cp : {})) {
-              var cp;
-              const pp = op.getWrapperBuffer();
-              Op.has(pp) && ip.add(pp)
+    function HT(TT) {
+      zT++;
+      for (const mT of function(TT) {
+          const UT = new Set;
+          for (const zT of TT) {
+            const TT = zT.geometry;
+            for (const zT of Object.values(null !== (mT = null === TT || void 0 === TT ? void 0 : TT.getVertexBuffers()) && void 0 !== mT ? mT : {})) {
+              var mT;
+              const TT = zT.getWrapperBuffer();
+              WT.has(TT) && UT.add(TT)
             }
           }
-          return ip
-        }(pp)) cp.getData() || Yp(cp), Ip.add(cp);
-      let ip = !0;
+          return UT
+        }(TT)) mT.getData() || kT(mT), MT.add(mT);
+      let UT = !0;
       return () => {
-        if (ip && (ip = !1, op--, 0 === op)) {
-          for (const pp of Ip) Sp(pp, null);
-          Ip.clear()
+        if (UT && (UT = !1, zT--, 0 === zT)) {
+          for (const TT of MT) gT(TT, null);
+          MT.clear()
         }
       }
     }
 
-    function Yp(pp) {
-      const ip = pp.getBuffer();
-      if (!ip || !(ip.TA > 0)) return;
-      const cp = pp._engine,
-        Op = new Uint8Array(ip.TA);
-      cp.bindArrayBuffer(ip), cp._gl.getBufferSubData(cp._gl.ARRAY_BUFFER, 0, Op), cp._resetVertexBufferBinding(), Sp(pp, Op)
+    function kT(TT) {
+      const UT = TT.getBuffer();
+      if (!UT || !(UT.fl > 0)) return;
+      const mT = TT._engine,
+        WT = new Uint8Array(UT.fl);
+      mT.bindArrayBuffer(UT), mT._gl.getBufferSubData(mT._gl.ARRAY_BUFFER, 0, WT), mT._resetVertexBufferBinding(), gT(TT, WT)
     }
   },
-  37767: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      f: () => Ip,
-      g: () => Lp,
-      j: () => Op,
-      n: () => xp,
-      r: () => op,
-      v: () => Yp
+  37666: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT,
+      f: () => MT,
+      i: () => HT,
+      l: () => WT,
+      m: () => nT,
+      o: () => zT,
+      p: () => kT
     });
-    const Op = 6,
-      op = [0, 2, 4, 1, 3, 5, 0, 2],
-      Ip = 6,
-      Sp = [1, 0, 3, 2, 5, 4];
-    for (let Dp = Ip; Dp < op.length; Dp++)
-      if (op[Dp] !== op[Dp - Ip]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const xp = op.length + 1,
-      Lp = (() => {
-        const pp = [];
-        for (let ip = 0; ip < Ip; ip++) pp[op[ip]] = ip;
-        return pp
+    const WT = 6,
+      zT = [0, 2, 4, 1, 3, 5, 0, 2],
+      MT = 6,
+      gT = [1, 0, 3, 2, 5, 4];
+    for (let jT = MT; jT < zT.length; jT++)
+      if (zT[jT] !== zT[jT - MT]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const nT = zT.length + 1,
+      HT = (() => {
+        const TT = [];
+        for (let UT = 0; UT < MT; UT++) TT[zT[UT]] = UT;
+        return TT
       })();
 
-    function Yp(pp) {
-      return !!pp && pp.backFaceCulling && (0 === pp.transparencyMode || 1 === pp.transparencyMode)
+    function kT(TT) {
+      return !!TT && TT.backFaceCulling && (0 === TT.transparencyMode || 1 === TT.transparencyMode)
     }
   },
-  37772: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      d: () => Lp,
-      g: () => Dp,
-      j: () => Yp,
-      m: () => yp
+  37676: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => nT,
+      e: () => HT,
+      h: () => jT,
+      l: () => kT,
+      n: () => BT
     });
-    var Op = cp(37767);
-    const op = 1 / 16,
-      Ip = 1 / 64,
-      Sp = 2048;
-    Op.j;
+    var WT = mT(37666);
+    const zT = 1 / 16,
+      MT = 1 / 64,
+      gT = 2048;
+    WT.l;
 
-    function xp(pp, ip, cp) {
-      return Math.min(Math.abs(pp[0] * ip), Math.abs(pp[5] * cp)) / 2
+    function nT(TT, UT, mT) {
+      return Math.min(Math.abs(TT[0] * UT), Math.abs(TT[5] * mT)) / 2
     }
 
-    function Lp(pp, ip) {
-      return op + Ip * pp * pp / ip
+    function HT(TT, UT) {
+      return zT + MT * TT * TT / UT
     }
 
-    function Yp(pp, ip, cp, op, Ip) {
-      const Sp = Op.n;
-      return Dp(pp[Sp], pp[Sp + 1], pp[Sp + 2], pp[Sp + 3], pp[Sp + 4], pp[Sp + 5], ip, cp, op, Ip)
+    function kT(TT, UT, mT, zT, MT) {
+      const gT = WT.m;
+      return jT(TT[gT], TT[gT + 1], TT[gT + 2], TT[gT + 3], TT[gT + 4], TT[gT + 5], UT, mT, zT, MT)
     }
 
-    function Dp(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-      return (Sp <= pp - Yp ? 0 : 1) | (Sp >= ip + Yp ? 0 : 2) | (xp <= cp - Yp ? 0 : 4) | (xp >= Op + Yp ? 0 : 8) | (Lp <= op - Yp ? 0 : 16) | (Lp >= Ip + Yp ? 0 : 32)
+    function jT(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+      return (gT <= TT - kT ? 0 : 1) | (gT >= UT + kT ? 0 : 2) | (nT <= mT - kT ? 0 : 4) | (nT >= WT + kT ? 0 : 8) | (HT <= zT - kT ? 0 : 16) | (HT >= MT + kT ? 0 : 32)
     }
-    const Ap = (() => {
-        const pp = [];
-        for (let ip = 0; ip < Op.r.length; ip++) {
-          let cp = 0;
-          for (let op = ip + 1; op <= Op.r.length; op++) {
-            const Ip = 1 << Op.r[op - 1];
-            if (cp & Ip) break;
-            cp |= Ip, pp.push({
-              start: ip,
-              end: op,
-              Bc: cp
+    const lT = (() => {
+        const TT = [];
+        for (let UT = 0; UT < WT.o.length; UT++) {
+          let mT = 0;
+          for (let zT = UT + 1; zT <= WT.o.length; zT++) {
+            const MT = 1 << WT.o[zT - 1];
+            if (mT & MT) break;
+            mT |= MT, TT.push({
+              start: UT,
+              end: zT,
+              bm: mT
             })
           }
         }
-        return pp
+        return TT
       })(),
-      Pp = [];
+      LT = [];
 
-    function Wp(pp, ip) {
-      const cp = Op.g[ip];
-      return pp[cp + 1] - pp[cp]
+    function pT(TT, UT) {
+      const mT = WT.i[UT];
+      return TT[mT + 1] - TT[mT]
     }
 
-    function yp(pp, ip, cp) {
-      let op = 0;
-      for (let Sp = 0; Sp < Op.j; Sp++) Wp(pp, Sp) > 0 && (op |= 1 << Sp);
-      if (0 === (ip &= op)) return 0;
-      if (ip === op) return cp[0] = 0, cp[1] = pp[Op.f], 1;
-      let Ip = null,
-        xp = 1 / 0;
-      for (const Yp of function(pp) {
-          let ip = Pp[pp];
-          if (ip) return ip;
-          const cp = new Map,
-            Op = (pp, ip) => {
-              const Op = 4 * pp + ip.length / 2;
-              cp.has(Op) || cp.set(Op, {
-                Bc: pp,
-                windows: ip
+    function BT(TT, UT, mT) {
+      let zT = 0;
+      for (let gT = 0; gT < WT.l; gT++) pT(TT, gT) > 0 && (zT |= 1 << gT);
+      if (0 === (UT &= zT)) return 0;
+      if (UT === zT) return mT[0] = 0, mT[1] = TT[WT.f], 1;
+      let MT = null,
+        nT = 1 / 0;
+      for (const kT of function(TT) {
+          let UT = LT[TT];
+          if (UT) return UT;
+          const mT = new Map,
+            WT = (TT, UT) => {
+              const WT = 4 * TT + UT.length / 2;
+              mT.has(WT) || mT.set(WT, {
+                bm: TT,
+                windows: UT
               })
             };
-          for (const Ip of Ap)
-            if ((Ip.Bc & pp) === pp && Op(Ip.Bc, [Ip.start, Ip.end]), 0 !== (Ip.Bc & pp))
-              for (const ip of Ap) ip.start < Ip.end || 0 !== (Ip.Bc & ip.Bc) || 0 === (ip.Bc & pp) || ((Ip.Bc | ip.Bc) & pp) !== pp || Op(Ip.Bc | ip.Bc, [Ip.start, Ip.end, ip.start, ip.end]);
-          const op = [...cp.values()];
-          return ip = op.filter((pp => !op.some((ip => ip !== pp && (ip.Bc & pp.Bc) === ip.Bc && ip.windows.length <= pp.windows.length)))), Pp[pp] = ip, ip
-        }(ip)) {
-        let cp = (Yp.windows.length / 2 - 1) * Sp;
-        const Lp = Yp.Bc & ~ip & op;
-        for (let ip = 0; ip < Op.j; ip++) Lp & 1 << ip && (cp += Wp(pp, ip));
-        cp < xp && (Ip = Yp, xp = cp)
+          for (const MT of lT)
+            if ((MT.bm & TT) === TT && WT(MT.bm, [MT.start, MT.end]), 0 !== (MT.bm & TT))
+              for (const UT of lT) UT.start < MT.end || 0 !== (MT.bm & UT.bm) || 0 === (UT.bm & TT) || ((MT.bm | UT.bm) & TT) !== TT || WT(MT.bm | UT.bm, [MT.start, MT.end, UT.start, UT.end]);
+          const zT = [...mT.values()];
+          return UT = zT.filter((TT => !zT.some((UT => UT !== TT && (UT.bm & TT.bm) === UT.bm && UT.windows.length <= TT.windows.length)))), LT[TT] = UT, UT
+        }(UT)) {
+        let mT = (kT.windows.length / 2 - 1) * gT;
+        const HT = kT.bm & ~UT & zT;
+        for (let UT = 0; UT < WT.l; UT++) HT & 1 << UT && (mT += pT(TT, UT));
+        mT < nT && (MT = kT, nT = mT)
       }
-      const Lp = Ip.windows;
-      for (let Op = 0; Op < Lp.length; Op += 2) {
-        const ip = pp[Lp[Op]];
-        cp[Op] = ip, cp[Op + 1] = pp[Lp[Op + 1]] - ip
+      const HT = MT.windows;
+      for (let WT = 0; WT < HT.length; WT += 2) {
+        const UT = TT[HT[WT]];
+        mT[WT] = UT, mT[WT + 1] = TT[HT[WT + 1]] - UT
       }
-      return Lp.length / 2
+      return HT.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

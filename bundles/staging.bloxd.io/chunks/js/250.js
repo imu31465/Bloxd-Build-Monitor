@@ -1,584 +1,553 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  39017: (pp, ip, cp) => {
-    var Op = {
-      "./cape_cow_cream.png": 28171,
-      "./cape_cow_normal.png": 28176,
-      "./cape_creator_level1.png": 28184,
-      "./cape_creator_level2.png": 28191,
-      "./cape_creator_level3.png": 28197,
-      "./cape_none.png": 28204,
-      "./cape_pig.png": 28213,
-      "./cape_sheep.png": 28217,
-      "./cape_super.png": 28226,
-      "./cape_super_inverted.png": 28234,
-      "./cape_youtuber.png": 28239
-    };
-
-    function op(pp) {
-      var ip = Ip(pp);
-      return cp(ip)
-    }
-
-    function Ip(pp) {
-      if (!cp.o(Op, pp)) {
-        var ip = new Error("Cannot find module '" + pp + "'");
-        throw ip.code = "MODULE_NOT_FOUND", ip
-      }
-      return Op[pp]
-    }
-    op.keys = function() {
-      return Object.keys(Op)
-    }, op.resolve = Ip, pp.exports = op, op.id = 39017
-  },
-  41400: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      openCharacterPreview: () => rp
+  41341: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      openCharacterPreview: () => NT
     });
-    var Op = cp(38317),
-      op = cp(2849),
-      Ip = cp(620),
-      Sp = cp(37395),
-      xp = cp(2281),
-      Lp = cp(37385),
-      Yp = cp(40024),
-      Dp = cp(40289),
-      Ap = cp(41300),
-      Pp = cp(37313),
-      Wp = cp(40443),
-      yp = cp(37479),
-      Up = cp(40459),
-      wp = cp(41353),
-      vp = cp(37305),
-      tp = cp(1234),
-      Hp = cp(2276),
-      dp = cp(37459),
-      ep = cp(37551);
-    class jp {
-      constructor(pp, ip) {
-        this.pose = pp, this.nodes = void 0, this.nodes = pp.boneNames.map((pp => ip.get(pp)))
+    var WT = mT(38231),
+      zT = mT(2875),
+      MT = mT(641),
+      gT = mT(37266),
+      nT = mT(2355),
+      HT = mT(37253),
+      kT = mT(39907),
+      jT = mT(40192),
+      lT = mT(41236),
+      LT = mT(37185),
+      pT = mT(40362),
+      BT = mT(37364),
+      ZT = mT(40379),
+      cT = mT(41284),
+      vT = mT(37176),
+      fT = mT(1321),
+      qT = mT(2348),
+      iT = mT(37329),
+      bT = mT(37437);
+    class OT {
+      constructor(TT, UT) {
+        this.pose = TT, this.nodes = void 0, this.nodes = TT.boneNames.map((TT => UT.get(TT)))
       }
-      write(pp) {
-        this.pose.pose(pp);
+      write(TT) {
+        this.pose.pose(TT);
         const {
-          rotations: ip
+          rotations: UT
         } = this.pose;
-        for (let cp = 0; cp < this.nodes.length; cp++) {
-          const pp = 4 * cp;
-          this.nodes[cp].rotationQuaternion.set(ip[pp], ip[pp + 1], ip[pp + 2], ip[pp + 3])
+        for (let mT = 0; mT < this.nodes.length; mT++) {
+          const TT = 4 * mT;
+          this.nodes[mT].rotationQuaternion.set(UT[TT], UT[TT + 1], UT[TT + 2], UT[TT + 3])
         }
       }
     }
 
-    function kp(pp) {
-      pp.unfreezeWorldMatrix();
-      for (const ip of pp.getChildren()) kp(ip)
+    function eT(TT) {
+      TT.unfreezeWorldMatrix();
+      for (const UT of TT.getChildren()) eT(UT)
     }
 
-    function mp(pp, ip) {
-      pp.isVisible = ip;
-      for (const cp of pp.getChildMeshes()) cp.isVisible = ip
+    function YT(TT, UT) {
+      TT.isVisible = UT;
+      for (const mT of TT.getChildMeshes()) mT.isVisible = UT
     }
-    class Rp {
-      constructor(pp, ip, cp) {
-        this.pw = pp, this.thinInstMgr = ip, this.FQ = cp, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
+    class JT {
+      constructor(TT, UT, mT) {
+        this.XZ = TT, this.thinInstMgr = UT, this.zV = mT, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
       }
-      loadModel(pp, ip, cp) {
-        const Op = (0, dp.g)(pp, ip);
-        return Op in this.modelCache || (this.modelCache[Op] = (async () => {
+      loadModel(TT, UT, mT) {
+        const WT = (0, iT.e)(TT, UT);
+        return WT in this.modelCache || (this.modelCache[WT] = (async () => {
           try {
-            const Op = await (0, dp.j)(pp, this.pw),
-              op = new Map;
-            for (const pp of Op.getNodes()) op.set(pp.name, pp);
-            const Ip = (0, dp.e)(null !== ip && void 0 !== ip ? ip : pp, this.pw);
-            (0, dp.l)(Op, Ip, {
-              keepTransforms: void 0 !== cp,
-              onProcessedMesh: pp => {
-                (0, dp.o)(pp), this.pw.TOp(pp, !1), pp.isVisible = !1
+            const WT = await (0, iT.i)(TT, this.XZ),
+              zT = new Map;
+            for (const TT of WT.getNodes()) zT.set(TT.name, TT);
+            const MT = (0, iT.c)(null !== UT && void 0 !== UT ? UT : TT, this.XZ);
+            (0, iT.l)(WT, MT, {
+              keepTransforms: void 0 !== mT,
+              onProcessedMesh: TT => {
+                (0, iT.n)(TT), this.XZ.fWT(TT, !1), TT.isVisible = !1
               }
             });
-            for (const pp of Op.rootNodes) kp(pp);
-            const Sp = void 0 === cp ? null : (0, ep.e)(cp, (pp => {
-              var ip, cp;
-              return null !== (ip = null === (cp = op.get(pp)) || void 0 === cp ? void 0 : cp.rotationQuaternion) && void 0 !== ip ? ip : null
+            for (const TT of WT.rootNodes) eT(TT);
+            const gT = void 0 === mT ? null : (0, bT.h)(mT, (TT => {
+              var UT, mT;
+              return null !== (UT = null === (mT = zT.get(TT)) || void 0 === mT ? void 0 : mT.rotationQuaternion) && void 0 !== UT ? UT : null
             }));
             return {
-              nodesByName: op,
-              bones: null === Sp ? null : new jp(Sp, op)
+              nodesByName: zT,
+              bones: null === gT ? null : new OT(gT, zT)
             }
-          } catch (op) {
-            throw delete this.modelCache[Op], console.error(`Failed to load preview attachment ${Op}:`, op), op
+          } catch (zT) {
+            throw delete this.modelCache[WT], console.error(`Failed to load preview attachment ${WT}:`, zT), zT
           }
-        })()), this.modelCache[Op]
+        })()), this.modelCache[WT]
       }
-      async update(pp, ip) {
-        var cp;
+      async update(TT, UT) {
+        var mT;
         const {
-          thinInstMgr: Op,
-          FQ: op
+          thinInstMgr: WT,
+          zV: zT
         } = this;
-        this.cosmeticNames[pp] = ip;
-        const Ip = this.attachmentsByType[pp];
-        if (Ip)
+        this.cosmeticNames[TT] = UT;
+        const MT = this.attachmentsByType[TT];
+        if (MT)
           for (const {
-              mesh: xp,
-              destNode: Lp,
-              bones: Yp
+              mesh: nT,
+              destNode: HT,
+              bones: kT
             }
-            of Ip) {
-            null !== Yp && (0, tp.kb)(this.shownBones, Yp), mp(xp, !1);
-            const pp = Op.getNamedNode(op, Lp);
-            Op.detachTransformNodeIfFound(xp, op, pp)
+            of MT) {
+            null !== kT && (0, fT.ub)(this.shownBones, kT), YT(nT, !1);
+            const TT = WT.getNamedNode(zT, HT);
+            WT.detachTransformNodeIfFound(nT, zT, TT)
           }
-        this.attachmentsByType[pp] = [];
-        const Sp = (0, Hp.m)(pp, ip);
-        if (null !== Sp && void 0 !== Sp && null !== (cp = Sp.attachments) && void 0 !== cp && cp.length)
-          for (const xp of Sp.attachments) {
-            let cp;
+        this.attachmentsByType[TT] = [];
+        const gT = (0, qT.j)(TT, UT);
+        if (null !== gT && void 0 !== gT && null !== (mT = gT.attachments) && void 0 !== mT && mT.length)
+          for (const nT of gT.attachments) {
+            let mT;
             try {
-              cp = await this.loadModel(xp.modelGlb, xp.texture, xp.animation)
+              mT = await this.loadModel(nT.modelGlb, nT.texture, nT.animation)
             } catch {
               continue
             }
-            if (this.cosmeticNames[pp] !== ip) return;
-            const Ip = cp.nodesByName.get(xp.modelNode);
-            if (!Ip) {
-              console.error(`Preview attachment node ${xp.modelNode} not found in ${xp.modelGlb}`);
+            if (this.cosmeticNames[TT] !== UT) return;
+            const MT = mT.nodesByName.get(nT.modelNode);
+            if (!MT) {
+              console.error(`Preview attachment node ${nT.modelNode} not found in ${nT.modelGlb}`);
               continue
             }
-            mp(Ip, !0), (0, dp.q)(Ip, xp.overlayColour);
-            const Sp = Op.getNamedNode(op, xp.destNode);
-            Op.attachTransformNode(Ip, op, Sp), this.attachmentsByType[pp].push({
-              mesh: Ip,
-              destNode: xp.destNode,
-              bones: cp.bones
-            }), null !== cp.bones && this.shownBones.push(cp.bones)
+            YT(MT, !0), (0, iT.s)(MT, nT.overlayColour);
+            const gT = WT.getNamedNode(zT, nT.destNode);
+            WT.attachTransformNode(MT, zT, gT), this.attachmentsByType[TT].push({
+              mesh: MT,
+              destNode: nT.destNode,
+              bones: mT.bones
+            }), null !== mT.bones && this.shownBones.push(mT.bones)
           }
       }
-      writePoses(pp) {
-        for (const ip of this.shownBones) ip.write(pp)
+      writePoses(TT) {
+        for (const UT of this.shownBones) UT.write(TT)
       }
     }
-    var qp = cp(37403),
-      Mp = (cp(41333), cp(40663), cp(41339), cp(34466));
-    let Cp, Ep, Xp, lp, Qp, Jp, Bp, Np, Tp, fp;
-    const bp = document.createElement("canvas");
-    async function hp() {
-      await new Promise((pp => {
+    var xT = mT(37270),
+      dT = (mT(41265), mT(40611), mT(41267), mT(34315));
+    let wT, tT, aT, yT, XT, IT, QT, sT, FT, PT;
+    const VT = document.createElement("canvas");
+    async function uT() {
+      await new Promise((TT => {
         setTimeout((() => {
-          pp()
+          TT()
         }), 100)
       }))
     }
-    bp.classList.add("CharCustomisationPreviewCanvas");
-    const ap = {};
+    VT.classList.add("CharCustomisationPreviewCanvas");
+    const CT = {};
 
-    function np(pp, ip) {
-      bp.width = pp, bp.height = ip, Cp.resize()
+    function rT(TT, UT) {
+      VT.width = TT, VT.height = UT, wT.resize()
     }
-    let Fp = 0;
-    class gp {
-      constructor(pp, ip) {
-        this.framing = ip, this.ready = fp, this.dev = {
-          canvas: () => bp,
-          isolateHead(pp) {
-            const ip = Jp.getNodeNames(Bp);
-            for (let cp = 0; cp < ip.length; cp++) "HeadMesh" !== ip[cp] && "__root__" !== ip[cp] && "TorsoNode" !== ip[cp] && Jp.setNodeEnabled(Bp, cp, !1);
-            if (pp) {
-              const pp = Jp.getNamedNode(Bp, "HeadMesh");
-              Jp.setNodeDisableColorWrite(Bp, pp, !0, (pp => {
-                const ip = new Up.StandardMaterial(`${pp.name}_depthOnly`, pp.Gl());
-                return ip.disableColorWrite = !0, ip
+    let KT = 0;
+    class ST {
+      constructor(TT, UT) {
+        this.framing = UT, this.ready = PT, this.dev = {
+          canvas: () => VT,
+          isolateHead(TT) {
+            const UT = IT.getNodeNames(QT);
+            for (let mT = 0; mT < UT.length; mT++) "HeadMesh" !== UT[mT] && "__root__" !== UT[mT] && "TorsoNode" !== UT[mT] && IT.setNodeEnabled(QT, mT, !1);
+            if (TT) {
+              const TT = IT.getNamedNode(QT, "HeadMesh");
+              IT.setNodeDisableColorWrite(QT, TT, !0, (TT => {
+                const UT = new ZT.StandardMaterial(`${TT.name}_depthOnly`, TT.KF());
+                return UT.disableColorWrite = !0, UT
               }))
             }
-            Jp.setPosition(Bp, 0, -12, 0)
+            IT.setPosition(QT, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const cp = pp.getBoundingClientRect();
-        np(cp.width, cp.height), Fp++, Cp.stopRenderLoop(), Cp.runRenderLoop((() => {
-          var pp, ip;
-          null === (pp = Np) || void 0 === pp || pp.render(Cp.getDeltaTime()), null === (ip = Tp) || void 0 === ip || ip.writePoses(performance.now() / 1e3), Xp.render()
+        const mT = TT.getBoundingClientRect();
+        rT(mT.width, mT.height), KT++, wT.stopRenderLoop(), wT.runRenderLoop((() => {
+          var TT, UT;
+          null === (TT = sT) || void 0 === TT || TT.render(wT.getDeltaTime()), null === (UT = FT) || void 0 === UT || UT.writePoses(performance.now() / 1e3), aT.render()
         }))
       }
       isReady() {
-        return !!lp
+        return !!yT
       }
-      setCosmetic(pp, ip) {
-        ! function(pp, ip) {
-          if (!lp) return;
-          const Sp = (0, op.g)();
-          Sp.ZC(!1), Op.d.Player.meshApi.updatePlayerCosmetic(Sp.NJ, Bp, pp, ip, !0), "cape" === pp && (ip === Ip.c ? Qp.eC(!1) : (Qp.eC(!0), Qp.material.diffuseTexture = new wp.d(cp(39017)(`./cape_${ip}.png`), Qp.Gl(), {
+      setCosmetic(TT, UT) {
+        ! function(TT, UT) {
+          if (!yT) return;
+          const gT = (0, zT.h)();
+          gT.MI(!1), WT.c.Player.meshApi.updatePlayerCosmetic(gT.VV, QT, TT, UT, !0), "cape" === TT && (UT === MT.e ? XT.Qy(!1) : (XT.Qy(!0), XT.material.diffuseTexture = new cT.e(mT(38918)(`./cape_${UT}.png`), XT.KF(), {
             invertY: !1,
-            samplingMode: wp.d.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: cT.e.NEAREST_NEAREST_MIPLINEAR
           })));
-          ap[pp] = Tp.update(pp, ip)
-        }(pp, ip)
+          CT[TT] = FT.update(TT, UT)
+        }(TT, UT)
       }
-      playEmote(pp) {
-        if (!Np) return;
-        if (!pp) return void Np.stopAnimation(Lp.e.Emote);
-        const ip = (0, Sp.d)((0, xp.g)(pp).animation);
-        Np.startAnimation(ip, Lp.e.Emote, 0, xp.c)
+      playEmote(TT) {
+        if (!sT) return;
+        if (!TT) return void sT.stopAnimation(HT.g.Emote);
+        const UT = (0, gT.f)((0, nT.h)(TT).animation);
+        sT.startAnimation(UT, HT.g.Emote, 0, nT.c)
       }
-      async untilDrawn(pp) {
-        if (await hp(), "cape" === pp && Qp) {
-          const pp = Qp.material,
-            ip = null === pp || void 0 === pp ? void 0 : pp.diffuseTexture;
-          ip && !ip.isReady() && (await new Promise((pp => {
-            ip.onLoadObservable.addOnce((() => {
-              pp()
+      async untilDrawn(TT) {
+        if (await uT(), "cape" === TT && XT) {
+          const TT = XT.material,
+            UT = null === TT || void 0 === TT ? void 0 : TT.diffuseTexture;
+          UT && !UT.isReady() && (await new Promise((TT => {
+            UT.onLoadObservable.addOnce((() => {
+              TT()
             }))
-          })), await hp())
+          })), await uT())
         }
-        ap[pp] && (await ap[pp], await hp()), await Xp.whenReadyAsync(), await new Promise((pp => {
-          Xp.onAfterRenderObservable.addOnce((() => {
-            pp()
+        CT[TT] && (await CT[TT], await uT()), await aT.whenReadyAsync(), await new Promise((TT => {
+          aT.onAfterRenderObservable.addOnce((() => {
+            TT()
           }))
         }))
       }
-      setOrbit(pp) {
-        Gp(pp)
+      setOrbit(TT) {
+        GT(TT)
       }
       resetCamera() {
-        Ep.inertialAlphaOffset = 0, Ep.inertialBetaOffset = 0, Ep.inertialRadiusOffset = 0, Gp(Mp.b[this.framing])
+        tT.inertialAlphaOffset = 0, tT.inertialBetaOffset = 0, tT.inertialRadiusOffset = 0, GT(dT.d[this.framing])
       }
-      resize(pp, ip) {
-        np(pp, ip)
+      resize(TT, UT) {
+        rT(TT, UT)
       }
       close() {
-        this.closed || (this.closed = !0, Fp--, 0 === Fp && Cp.stopRenderLoop())
+        this.closed || (this.closed = !0, KT--, 0 === KT && wT.stopRenderLoop())
       }
     }
 
-    function Gp(pp) {
+    function GT(TT) {
       let {
-        yaw: ip,
-        pitch: cp,
-        radius: Op,
-        target: op
-      } = pp;
-      Ep.alpha = ip, Ep.beta = cp, Op && (Ep.radius = Op), op && Ep.target.set(op[0], op[1], op[2])
+        yaw: UT,
+        pitch: mT,
+        radius: WT,
+        target: zT
+      } = TT;
+      tT.alpha = UT, tT.beta = mT, WT && (tT.radius = WT), zT && tT.target.set(zT[0], zT[1], zT[2])
     }
 
-    function rp(pp, ip) {
-      return pp.appendChild(bp), Cp || function() {
-        Cp = new Yp.d(bp, !0, {
+    function NT(TT, UT) {
+      return TT.appendChild(VT), wT || function() {
+        wT = new kT.b(VT, !0, {
           preserveDrawingBuffer: !0
         });
-        const pp = (0, op.g)();
-        Cp.lOp = pp.WU.engine.lOp, Xp = new Dp.c(Cp), Xp.clearColor = new yp.b(0, 0, 0, 0), Xp.ambientColor = new yp.Color3(1, 1, 1), Ep = new Ap.c("Gw", 0, 0, 1, Pp.Zy.Zero(), Xp), Ep.attachControl(bp, !0), Ep.panningSensibility = 0, fp = (0, Op.u)("Player", Xp, !0).then((ip => {
-          lp = ip.meshApi, Qp = ip.capeMesh, Jp = pp.WU.EQ;
-          const cp = 8.33;
-          Bp = (0, Op.n)("Player", cp, !0, !0), Jp.setPosition(Bp, 0, -8.33, 0);
-          const op = Jp.getNamedNode(Bp, "BodyMesh");
-          Jp.attachTransformNode(Qp, Bp, op), Jp.set(Bp, "aOpacity", 1), Jp.aJ(Bp, "aOpacity", 1), Tp = new Rp(Xp, Jp, Bp), Np = new vp.AnimatorState, Np.HP = pp, Np.thinInstMgr = Jp, Np.FQ = Bp, Np.iOp = Jp.QOp(Bp, 0), Np.modelLifeformType = "Player", Np.nodeNameAliases = (0, qp.d)("Player").nodeNameAliases;
-          const Ip = Qp.bJ().boundingBox;
-          Qp.position.y = ((24 - Ip.maximum.y + Ip.minimum.y) / 2 - 1 / 32) / cp, Qp.position.z = -1 / cp, Qp.rotationQuaternion = null;
-          const Sp = Math.PI / 18,
-            xp = Ip.maximum.y / cp;
-          Qp.rotation.x = Sp;
-          const Lp = Math.cos(Sp),
-            Yp = Math.sin(Sp);
-          Qp.position.y += xp * (1 - Lp) + 0 * Yp, Qp.position.z -= xp * Yp + 0 * (1 - Lp);
-          const Dp = new Up.StandardMaterial("capeMaterial", Qp.Gl());
-          Qp.material = Dp;
-          const Ap = new yp.Color3(1, 1, 1);
-          Dp.diffuseColor = new yp.Color3, Dp.specularColor = new yp.Color3, Dp.emissiveColor = new yp.Color3, Dp.ambientColor = new yp.Color3, Ap.scaleToRef(.43, Dp.diffuseColor), Ap.scaleToRef(1.75, Dp.ambientColor), Dp.freeze();
-          const wp = new Wp.d("light", new Pp.Zy(-.1, 1, -.3), Xp);
-          wp.diffuse = new yp.Color3(1, 1, 1), wp.specular = new yp.Color3(1, 1, 1), wp.groundColor = new yp.Color3(.5, .5, .5)
+        const TT = (0, zT.h)();
+        wT.pWT = TT.GB.engine.pWT, aT = new jT.b(wT), aT.clearColor = new BT.e(0, 0, 0, 0), aT.ambientColor = new BT.Color3(1, 1, 1), tT = new lT.d("ac", 0, 0, 1, LT.JB.Zero(), aT), tT.attachControl(VT, !0), tT.panningSensibility = 0, PT = (0, WT.v)("Player", aT, !0).then((UT => {
+          yT = UT.meshApi, XT = UT.capeMesh, IT = TT.GB.mV;
+          const mT = 8.33;
+          QT = (0, WT.k)("Player", mT, !0, !0), IT.setPosition(QT, 0, -8.33, 0);
+          const zT = IT.getNamedNode(QT, "BodyMesh");
+          IT.attachTransformNode(XT, QT, zT), IT.set(QT, "aOpacity", 1), IT.KV(QT, "aOpacity", 1), FT = new JT(aT, IT, QT), sT = new vT.AnimatorState, sT.Rl = TT, sT.thinInstMgr = IT, sT.zV = QT, sT.PmT = IT.BWT(QT, 0), sT.modelLifeformType = "Player", sT.nodeNameAliases = (0, xT.b)("Player").nodeNameAliases;
+          const MT = XT.rV().boundingBox;
+          XT.position.y = ((24 - MT.maximum.y + MT.minimum.y) / 2 - 1 / 32) / mT, XT.position.z = -1 / mT, XT.rotationQuaternion = null;
+          const gT = Math.PI / 18,
+            nT = MT.maximum.y / mT;
+          XT.rotation.x = gT;
+          const HT = Math.cos(gT),
+            kT = Math.sin(gT);
+          XT.position.y += nT * (1 - HT) + 0 * kT, XT.position.z -= nT * kT + 0 * (1 - HT);
+          const jT = new ZT.StandardMaterial("capeMaterial", XT.KF());
+          XT.material = jT;
+          const lT = new BT.Color3(1, 1, 1);
+          jT.diffuseColor = new BT.Color3, jT.specularColor = new BT.Color3, jT.emissiveColor = new BT.Color3, jT.ambientColor = new BT.Color3, lT.scaleToRef(.43, jT.diffuseColor), lT.scaleToRef(1.75, jT.ambientColor), jT.freeze();
+          const cT = new pT.b("light", new LT.JB(-.1, 1, -.3), aT);
+          cT.diffuse = new BT.Color3(1, 1, 1), cT.specular = new BT.Color3(1, 1, 1), cT.groundColor = new BT.Color3(.5, .5, .5)
         }))
-      }(), new gp(pp, ip)
+      }(), new ST(TT, UT)
     }
   },
-  39014: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Pp
+  38914: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => LT
     });
-    var Op = cp(37413),
-      op = cp(37429),
-      Ip = cp(37662),
-      Sp = cp(37433),
-      xp = cp(37421);
+    var WT = mT(37281),
+      zT = mT(37292),
+      MT = mT(37549),
+      gT = mT(37298),
+      nT = mT(37288);
 
-    function Lp(pp) {
-      return `\n\t\t\t\t${(0,xp.v)(pp,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function HT(TT) {
+      return `\n\t\t\t\t${(0,nT.r)(TT,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, xp.A)(pp, "float", "s", "sin(ang)")
+        (0, nT.w)(TT, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, xp.A)(pp, "float", "c", "cos(ang)")
+        (0, nT.w)(TT, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, xp.j)(pp, "mat2", "c", "s", "-s", "c")
+        (0, nT.k)(TT, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function Yp(pp, ip) {
-      let cp = (0, xp.sb)(pp, "skele" + (ip - 1));
-      for (let op = ip - 2; op >= 0; op--) cp = (0, xp.jb)(pp, `boneIdx == ${op}`, (0, xp.sb)(pp, `skele${op}`), cp);
-      const Op = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,xp.A)(pp,"int","boneIdx",(0,xp.qb)(pp,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,xp.A)(pp,"vec3","bone",cp)}\n\t\t\t\t${(0,xp.A)(pp,"vec2","pivot",(0,xp.j)(pp,"vec2","0.0",`${(0,xp.zb)(pp,"position")}.z`))}\n\t\t\t\t${(0,xp.Y)(pp)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${Op}));`:`positionUpdated.yz += ${Op};`}\n\t\t`
+    function kT(TT, UT) {
+      let mT = (0, nT.zb)(TT, "skele" + (UT - 1));
+      for (let zT = UT - 2; zT >= 0; zT--) mT = (0, nT.pb)(TT, `boneIdx == ${zT}`, (0, nT.zb)(TT, `skele${zT}`), mT);
+      const WT = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,nT.w)(TT,"int","boneIdx",(0,nT.wb)(TT,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,nT.w)(TT,"vec3","bone",mT)}\n\t\t\t\t${(0,nT.w)(TT,"vec2","pivot",(0,nT.k)(TT,"vec2","0.0",`${(0,nT.Eb)(TT,"position")}.z`))}\n\t\t\t\t${(0,nT.$)(TT)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${WT}));`:`positionUpdated.yz += ${WT};`}\n\t\t`
     }
 
-    function Dp(pp) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,xp.j)(pp,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function jT(TT) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,nT.k)(TT,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const Ap = {
+    const lT = {
         x: 0,
         y: 0,
         z: 0,
-        vcp(pp, ip) {
-          return this.x = pp[ip], this.y = pp[ip + 1], this.z = pp[ip + 2], this
+        MmT(TT, UT) {
+          return this.x = TT[UT], this.y = TT[UT + 1], this.z = TT[UT + 2], this
         }
       },
-      Pp = {
+      LT = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (pp, ip) => ({
-          ...(0, Op.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${pp}`,
-          BLOXD_CAPE_MAX_Y: (0, op.hb)(ip)
+        defines: (TT, UT) => ({
+          ...(0, WT.b)("CAPE"),
+          BLOXD_CAPE_BONES: `${TT}`,
+          BLOXD_CAPE_MAX_Y: (0, zT.nb)(UT)
         }),
-        getUniforms(pp) {
-          return (0, Ip.b)(function(pp) {
-            const ip = [];
-            for (let cp = 0; cp < pp; cp++) ip.push({
-              name: `skele${cp}`,
+        getUniforms(TT) {
+          return (0, MT.c)(function(TT) {
+            const UT = [];
+            for (let mT = 0; mT < TT; mT++) UT.push({
+              name: `skele${mT}`,
               type: "highp vec3"
             });
-            return ip
-          }(this.skeleLen), "vertex", pp)
+            return UT
+          }(this.skeleLen), "vertex", TT)
         },
-        bind(pp) {
-          for (let ip = 0; ip < this.skeleLen; ip++) pp.updateVector3(`skele${ip}`, Ap.vcp(this.skele, 3 * ip))
+        bind(TT) {
+          for (let UT = 0; UT < this.skeleLen; UT++) TT.updateVector3(`skele${UT}`, lT.MmT(this.skele, 3 * UT))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(pp, ip) {
-          return "vertex" !== pp ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: Lp(ip),
-            CUSTOM_VERTEX_UPDATE_POSITION: Yp(ip, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: Dp(ip)
+        getCustomCode(TT, UT) {
+          return "vertex" !== TT ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: HT(UT),
+            CUSTOM_VERTEX_UPDATE_POSITION: kT(UT, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: jT(UT)
           }
         }
       };
-    (0, Sp.q)(Pp)
+    (0, gT.l)(LT)
   },
-  38916: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Dp,
-      g: () => Ap
+  38807: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => jT,
+      e: () => lT
     });
-    var Op = cp(37413),
-      op = cp(37662),
-      Ip = cp(37421),
-      Sp = cp(37433);
-    const xp = "bloxdTextLodBias",
-      Lp = [{
-        name: xp,
+    var WT = mT(37281),
+      zT = mT(37549),
+      MT = mT(37288),
+      gT = mT(37298);
+    const nT = "bloxdTextLodBias",
+      HT = [{
+        name: nT,
         type: "float"
       }],
-      Yp = "bloxdTextSample",
-      Dp = {
+      kT = "bloxdTextSample",
+      jT = {
         planes: -.5,
         boards: -.5
       },
-      Ap = {
+      lT = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, Op.b)("TEXT_SAMPLER"),
-        getUniforms: pp => (0, op.b)(Lp, "fragment", pp),
-        bind(pp) {
-          pp.updateFloat(xp, this.lodBias)
+        defines: () => (0, WT.b)("TEXT_SAMPLER"),
+        getUniforms: TT => (0, zT.c)(HT, "fragment", TT),
+        bind(TT) {
+          TT.updateFloat(nT, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(pp, ip) {
-          if ("fragment" !== pp) return null;
-          const cp = (0, Ip.G)(ip, `vec4 ${Yp}(sampler2D s, vec2 uv, float bias)`, `fn ${Yp}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            Op = (0, Ip.G)(ip, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            op = `${(0,Ip.R)(ip,"vDiffuseUV")} + uvOffset`,
-            Sp = (0, Ip.G)(ip, `${Yp}(diffuseSampler, ${op}, ${(0,Ip.sb)(ip,xp)})`, `${Yp}(diffuseSampler, diffuseSamplerSampler, ${op}, ${(0,Ip.sb)(ip,xp)})`);
+        getCustomCode(TT, UT) {
+          if ("fragment" !== TT) return null;
+          const mT = (0, MT.D)(UT, `vec4 ${kT}(sampler2D s, vec2 uv, float bias)`, `fn ${kT}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            WT = (0, MT.D)(UT, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            zT = `${(0,MT.R)(UT,"vDiffuseUV")} + uvOffset`,
+            gT = (0, MT.D)(UT, `${kT}(diffuseSampler, ${zT}, ${(0,MT.zb)(UT,nT)})`, `${kT}(diffuseSampler, diffuseSamplerSampler, ${zT}, ${(0,MT.zb)(UT,nT)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${cp} {\n\t\t\t\t\t${(0,Ip.A)(ip,"vec4","texel",Op)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,Ip.j)(ip,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,Ip.j)(ip,"vec3","0.0")}, ${(0,Ip.j)(ip,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, Ip.B)(ip)]: `baseColor = ${Sp};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${mT} {\n\t\t\t\t\t${(0,MT.w)(UT,"vec4","texel",WT)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,MT.k)(UT,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,MT.k)(UT,"vec3","0.0")}, ${(0,MT.k)(UT,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, MT.z)(UT)]: `baseColor = ${gT};`
           }
         }
       };
-    (0, Sp.q)(Ap)
+    (0, gT.l)(lT)
   },
-  41339: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CapeMaterialPlugin: () => dp,
-      HueTintMaterialPlugin: () => ep,
-      LifeformMaterialPlugin: () => jp,
-      OverlayMaterialPlugin: () => kp
+  41267: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      CapeMaterialPlugin: () => iT,
+      HueTintMaterialPlugin: () => bT,
+      LifeformMaterialPlugin: () => OT,
+      OverlayMaterialPlugin: () => eT
     });
-    var Op = cp(41345),
-      op = cp(38232);
-    class Ip extends((0, Op.d)(op.d)) {}(0, Op.g)(op.d, Ip);
-    var Sp = cp(37411);
-    class xp extends((0, Op.d)(Sp.h)) {}(0, Op.g)(Sp.h, xp);
-    var Lp = cp(38071);
-    class Yp extends((0, Op.d)(Lp.i)) {}(0, Op.g)(Lp.i, Yp);
-    var Dp = cp(37655),
-      Ap = cp(40459),
-      Pp = cp(37646);
-    class Wp extends((0, Op.d)(Pp.i)) {
-      constructor(pp, ip, cp) {
-        super(pp, ip, cp), (0, Dp.g)(pp)
+    var WT = mT(41269),
+      zT = mT(38142);
+    class MT extends((0, WT.h)(zT.c)) {}(0, WT.i)(zT.c, MT);
+    var gT = mT(37273);
+    class nT extends((0, WT.h)(gT.e)) {}(0, WT.i)(gT.e, nT);
+    var HT = mT(37976);
+    class kT extends((0, WT.h)(HT.c)) {}(0, WT.i)(HT.c, kT);
+    var jT = mT(37534),
+      lT = mT(40379),
+      LT = mT(37531);
+    class pT extends((0, WT.h)(LT.h)) {
+      constructor(TT, UT, mT) {
+        super(TT, UT, mT), (0, jT.e)(TT)
       }
-      dispose(pp) {
-        (0, Dp.i)(this._material), super.dispose(pp)
+      dispose(TT) {
+        (0, jT.g)(this._material), super.dispose(TT)
       }
-    }(0, Op.g)(Pp.i, Wp), (0, Pp.j)({
-      disableUnusedSpecularTerm: Op.c,
-      isLightingDisabled: pp => pp instanceof Ap.StandardMaterial && pp.disableLighting
+    }(0, WT.i)(LT.h, pT), (0, LT.l)({
+      disableUnusedSpecularTerm: WT.e,
+      isLightingDisabled: TT => TT instanceof lT.StandardMaterial && TT.disableLighting
     });
-    var yp = cp(38916);
-    class Up extends((0, Op.d)(yp.g)) {}(0, Op.g)(yp.g, Up);
-    var wp = cp(39014),
-      vp = cp(37496),
-      tp = cp(38352),
-      Hp = cp(37454);
-    class dp extends((0, Op.d)(wp.b)) {}(0, Op.g)(wp.b, dp);
-    class ep extends((0, Op.d)(vp.d)) {}(0, Op.g)(vp.d, ep);
-    class jp extends((0, Op.d)(tp.q)) {}(0, Op.g)(tp.q, jp);
-    class kp extends((0, Op.d)(Hp.d)) {}(0, Op.g)(Hp.d, kp)
+    var BT = mT(38807);
+    class ZT extends((0, WT.h)(BT.e)) {}(0, WT.i)(BT.e, ZT);
+    var cT = mT(38914),
+      vT = mT(37376),
+      fT = mT(38266),
+      qT = mT(37324);
+    class iT extends((0, WT.h)(cT.d)) {}(0, WT.i)(cT.d, iT);
+    class bT extends((0, WT.h)(vT.c)) {}(0, WT.i)(vT.c, bT);
+    class OT extends((0, WT.h)(fT.i)) {}(0, WT.i)(fT.i, OT);
+    class eT extends((0, WT.h)(qT.c)) {}(0, WT.i)(qT.c, eT)
   },
-  41345: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => ap,
-      d: () => tp,
-      g: () => Zp
+  41269: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => CT,
+      h: () => fT,
+      i: () => ET
     });
-    var Op = cp(40459),
-      op = cp(41347),
-      Ip = cp(41393),
-      Sp = cp(41353),
-      xp = cp(38045),
-      Lp = cp(38055),
-      Yp = cp(38061),
-      Dp = cp(38064),
-      Ap = cp(37445),
-      Pp = cp(37448),
-      Wp = cp(41359),
-      yp = cp(37433),
-      Up = cp(37436),
-      wp = cp(37421);
+    var WT = mT(40379),
+      zT = mT(41277),
+      MT = mT(41334),
+      gT = mT(41284),
+      nT = mT(37947),
+      HT = mT(37959),
+      kT = mT(37965),
+      jT = mT(37972),
+      lT = mT(37312),
+      LT = mT(37321),
+      pT = mT(41286),
+      BT = mT(37298),
+      ZT = mT(37302),
+      cT = mT(37288);
 
-    function vp(pp, ip) {
-      return Object.assign((function(pp, cp, Op, op) {
-        return ip(this.featureState, pp, cp, Op, op)
+    function vT(TT, UT) {
+      return Object.assign((function(TT, mT, WT, zT) {
+        return UT(this.featureState, TT, mT, WT, zT)
       }), {
-        Py: pp
+        hp: TT
       })
     }
 
-    function tp(pp) {
-      const ip = class extends Wp.c {
-          constructor(ip, cp) {
-            const Op = (0, Up.$)(ip),
-              op = Op && (0, Up.s)(Op, pp.name);
-            for (var Ip = arguments.length, Sp = new Array(Ip > 2 ? Ip - 2 : 0), xp = 2; xp < Ip; xp++) Sp[xp - 2] = arguments[xp];
-            super(ip, pp.name, pp.priority, op ? op.defines : pp.defines(...Sp), !1), this.featureState = void 0, this.featureState = cp, this._pluginManager._addPlugin(this), this._enable(!0), (0, Up.v)(this._material, pp, this.featureState, this._pluginDefineNames)
+    function fT(TT) {
+      const UT = class extends pT.d {
+          constructor(UT, mT) {
+            const WT = (0, ZT.R)(UT),
+              zT = WT && (0, ZT.s)(WT, TT.name);
+            for (var MT = arguments.length, gT = new Array(MT > 2 ? MT - 2 : 0), nT = 2; nT < MT; nT++) gT[nT - 2] = arguments[nT];
+            super(UT, TT.name, TT.priority, zT ? zT.defines : TT.defines(...gT), !1), this.featureState = void 0, this.featureState = mT, this._pluginManager._addPlugin(this), this._enable(!0), (0, ZT.t)(this._material, TT, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return pp.className
+            return TT.className
           }
-          isCompatible(pp) {
-            return pp === wp.b.GLSL || pp === wp.b.WGSL
+          isCompatible(TT) {
+            return TT === cT.e.GLSL || TT === cT.e.WGSL
           }
         },
-        cp = (0, yp.l)(pp);
-      for (const [Op, op] of Object.entries(yp.e)) {
-        const Ip = pp[Op];
-        if (Ip) {
-          const pp = cp[Op];
-          Object.defineProperty(ip.prototype, op, {
-            value: vp(Ip, pp),
+        mT = (0, BT.g)(TT);
+      for (const [WT, zT] of Object.entries(BT.c)) {
+        const MT = TT[WT];
+        if (MT) {
+          const TT = mT[WT];
+          Object.defineProperty(UT.prototype, zT, {
+            value: vT(MT, TT),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return ip
+      return UT
     }
-    class Hp extends(tp(xp.d)) {}
-    var dp = cp(40024),
-      ep = cp(41367),
-      jp = cp(41375);
+    class qT extends(fT(nT.b)) {}
+    var iT = mT(39907),
+      bT = mT(41291),
+      OT = mT(41300);
 
-    function kp(pp, ip, cp) {
-      return (0, jp.h)(cp, ip.urls, (() => async function(pp, ip, cp) {
+    function eT(TT, UT, mT) {
+      return (0, OT.h)(mT, UT.urls, (() => async function(TT, UT, mT) {
         const {
-          width: Op
-        } = pp[0].getSize(), op = pp.map(((pp, cp) => {
-          var op;
-          const Ip = Math.round(pp.getSize().height / Op),
-            Sp = null === ip || void 0 === ip ? void 0 : ip[cp];
+          width: WT
+        } = TT[0].getSize(), zT = TT.map(((TT, mT) => {
+          var zT;
+          const MT = Math.round(TT.getSize().height / WT),
+            gT = null === UT || void 0 === UT ? void 0 : UT[mT];
           return {
-            pixels: Sp && Sp.byteLength === Op * Op * Ip * 4 ? Sp : null !== (op = mp.get(pp.getInternalTexture())) && void 0 !== op ? op : pp._readPixelsSync(),
-            layers: Ip
+            pixels: gT && gT.byteLength === WT * WT * MT * 4 ? gT : null !== (zT = YT.get(TT.getInternalTexture())) && void 0 !== zT ? zT : TT._readPixelsSync(),
+            layers: MT
           }
-        })), Ip = cp.gy().getCaps().texture2DArrayMaxLayerCount, xp = (0, jp.d)(op, Op, Ip).map((pp => {
+        })), MT = mT.eB().getCaps().texture2DArrayMaxLayerCount, nT = (0, OT.e)(zT, WT, MT).map((TT => {
           let {
-            pixels: ip,
-            layers: op
-          } = pp;
+            pixels: UT,
+            layers: zT
+          } = TT;
           return {
-            atlas: new ep.c(ip, Op, Op, op, dp.d.TEXTUREFORMAT_RGBA, cp, !0, !1, Sp.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: op
+            atlas: new bT.e(UT, WT, WT, zT, iT.b.TEXTUREFORMAT_RGBA, mT, !0, !1, gT.e.NEAREST_NEAREST_MIPLINEAR),
+            layers: zT
           }
         }));
-        return pp.forEach(((pp, ip) => {
-          const Op = pp.getInternalTexture();
-          mp.has(Op) || (! function(pp, ip) {
-            const cp = ip.createRawTexture(new Uint8Array(4), 1, 1, dp.d.TEXTUREFORMAT_RGBA, !1, !1, Sp.d.NEAREST_SAMPLINGMODE);
-            pp._hardwareTexture.release(), ip.unbindAllTextures(), cp._swapAndDie(pp, !1)
-          }(Op, cp.gy()), mp.set(Op, op[ip].pixels))
-        })), xp
-      }(pp, ip.pixels, cp)))
+        return TT.forEach(((TT, UT) => {
+          const WT = TT.getInternalTexture();
+          YT.has(WT) || (! function(TT, UT) {
+            const mT = UT.createRawTexture(new Uint8Array(4), 1, 1, iT.b.TEXTUREFORMAT_RGBA, !1, !1, gT.e.NEAREST_SAMPLINGMODE);
+            TT._hardwareTexture.release(), UT.unbindAllTextures(), mT._swapAndDie(TT, !1)
+          }(WT, mT.eB()), YT.set(WT, zT[UT].pixels))
+        })), nT
+      }(TT, UT.pixels, mT)))
     }
-    const mp = new WeakMap;
-    var Rp = cp(38069);
-    class qp extends(tp(Lp.f)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.loaded = new Set, this.mirrors = void 0, this.mirrors = ip.textures.map((pp => pp.mirror)), this.mirrors.forEach(((pp, ip) => {
-          pp.onLoadObservable.add((pp => {
-            this.setTextureArrayData(pp, ip).catch((pp => {
-              console.error(`Failed to build the texture arrays, at atlas ${ip}`, pp)
+    const YT = new WeakMap;
+    var JT = mT(37974);
+    class xT extends(fT(HT.i)) {
+      constructor(TT, UT) {
+        super(TT, UT), this.loaded = new Set, this.mirrors = void 0, this.mirrors = UT.textures.map((TT => TT.mirror)), this.mirrors.forEach(((TT, UT) => {
+          TT.onLoadObservable.add((TT => {
+            this.setTextureArrayData(TT, UT).catch((TT => {
+              console.error(`Failed to build the texture arrays, at atlas ${UT}`, TT)
             }))
           }))
-        })), (0, Rp.n)(ip, pp.shaderLanguage)
+        })), (0, JT.n)(UT, TT.shaderLanguage)
       }
-      async setTextureArrayData(pp, ip) {
-        const cp = this.featureState,
+      async setTextureArrayData(TT, UT) {
+        const mT = this.featureState,
           {
-            width: Op,
-            height: op
-          } = pp.getSize(),
-          Ip = this._material.shaderLanguage;
-        if (!cp.useWebGL2) return void(0, Rp.f)(this._material, cp, ip, Op, Math.round(op / Op), Ip);
-        if (this.loaded.add(ip), this.loaded.size < this.mirrors.length) return;
-        const Sp = await kp(this.mirrors, cp.sources, this._material.Gl());
-        (0, Rp.b)(this._material, cp, Sp, Op, Ip)
+            width: WT,
+            height: zT
+          } = TT.getSize(),
+          MT = this._material.shaderLanguage;
+        if (!mT.useWebGL2) return void(0, JT.f)(this._material, mT, UT, WT, Math.round(zT / WT), MT);
+        if (this.loaded.add(UT), this.loaded.size < this.mirrors.length) return;
+        const gT = await eT(this.mirrors, mT.sources, this._material.KF());
+        (0, JT.d)(this._material, mT, gT, WT, MT)
       }
     }
-    var Mp = cp(41378),
-      Cp = cp(40498),
-      Ep = cp(37313),
-      Xp = cp(41383),
-      lp = cp(40589),
-      Qp = cp(40481),
-      Jp = cp(41325),
-      Bp = cp(37800),
-      Np = cp(41391);
-    class Tp extends Mp.c {
+    var dT = mT(41309),
+      wT = mT(40432),
+      tT = mT(37185),
+      aT = mT(41318),
+      yT = mT(40546),
+      XT = mT(40418),
+      IT = mT(41256),
+      QT = mT(37708),
+      sT = mT(41327);
+    class FT extends dT.e {
       getData() {
         return null
       }
@@ -587,368 +556,399 @@ export const modules = {
         super._rebuild()
       }
     }
-    const fp = {
-      Mesh: Xp.c,
-      TransformNode: Jp.b,
-      my: Mp.c,
-      VertexBuffer: Mp.f,
-      BoundingInfo: Cp.d,
-      Zy: Ep.Zy,
-      ArenaBuffer: Tp,
-      SubMesh: Qp.d,
-      VertexData: lp.d,
-      MirroredGeometry: Np.b,
-      meshFromArrays: Np.e,
-      plainMeshFromArrays: Np.f
+    const PT = {
+      Mesh: aT.d,
+      TransformNode: IT.d,
+      HB: dT.e,
+      VertexBuffer: dT.i,
+      BoundingInfo: wT.e,
+      JB: tT.JB,
+      ArenaBuffer: FT,
+      SubMesh: XT.e,
+      VertexData: yT.d,
+      MirroredGeometry: sT.b,
+      meshFromArrays: sT.f,
+      plainMeshFromArrays: sT.i
     };
-    (0, Bp.g)(fp);
-    var bp = cp(37655);
-    class hp extends(tp(Dp.g)) {
-      constructor(pp, ip) {
-        if (super(pp, ip), pp instanceof Op.StandardMaterial && ip.dirLightCount > 0) {
-          const ip = pp,
-            cp = ip._blockDirtyMechanism;
-          ip._blockDirtyMechanism = !0, pp.disableLighting = !0, ip._blockDirtyMechanism = cp;
-          const Op = (0, Up.$)(pp);
-          Op && (Op.disableLighting = !0, (0, Up.Y)(Op))
-        }(0, bp.g)(pp)
+    (0, QT.f)(PT);
+    var VT = mT(37534);
+    class uT extends(fT(jT.k)) {
+      constructor(TT, UT) {
+        if (super(TT, UT), TT instanceof WT.StandardMaterial && UT.dirLightCount > 0) {
+          const UT = TT,
+            mT = UT._blockDirtyMechanism;
+          UT._blockDirtyMechanism = !0, TT.disableLighting = !0, UT._blockDirtyMechanism = mT;
+          const WT = (0, ZT.R)(TT);
+          WT && (WT.disableLighting = !0, (0, ZT.Q)(WT))
+        }(0, VT.e)(TT)
       }
-      dispose(pp) {
-        (0, bp.i)(this._material), super.dispose(pp)
+      dispose(TT) {
+        (0, VT.g)(this._material), super.dispose(TT)
       }
     }
 
-    function ap(pp, ip) {
-      if (!(ip instanceof Op.StandardMaterial) || ip.specularTexture) return;
+    function CT(TT, UT) {
+      if (!(UT instanceof WT.StandardMaterial) || UT.specularTexture) return;
       const {
-        r: cp,
-        g: op,
-        b: Ip
-      } = ip.specularColor;
-      0 === cp && 0 === op && 0 === Ip && (pp.SPECULARTERM = !1)
-    }(0, Dp.d)({
-      disableUnusedSpecularTerm: ap
+        r: mT,
+        g: zT,
+        b: MT
+      } = UT.specularColor;
+      0 === mT && 0 === zT && 0 === MT && (TT.SPECULARTERM = !1)
+    }(0, jT.g)({
+      disableUnusedSpecularTerm: CT
     });
-    var np = cp(37519),
-      Fp = cp(37807);
-    const gp = new RegExp(`^#define ${Yp.b}\\s*$`, "m");
-    class Gp extends(tp(Yp.h)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.Ry = !1, ip.ditherOnlyWhileFading && (Fp.d.add(pp), this.prewarmDitherTwins(pp))
+    var rT = mT(37397),
+      KT = mT(37721);
+    const ST = new RegExp(`^#define ${kT.c}\\s*$`, "m");
+    class GT extends(fT(kT.h)) {
+      constructor(TT, UT) {
+        super(TT, UT), this.kB = !1, UT.ditherOnlyWhileFading && (KT.f.add(TT), this.prewarmDitherTwins(TT))
       }
-      prewarmDitherTwins(pp) {
-        const ip = new WeakSet;
-        pp.onEffectCreatedObservable.add((cp => {
+      prewarmDitherTwins(TT) {
+        const UT = new WeakSet;
+        TT.onEffectCreatedObservable.add((mT => {
           let {
-            effect: Op,
-            subMesh: op
-          } = cp;
-          if (this.featureState.prewarmingDither || ip.has(Op)) return;
-          ip.add(Op);
-          const Ip = null === op || void 0 === op ? void 0 : op.getMesh();
-          Ip && !gp.test(Op.defines) && pp.Gl().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Ip) || ip.delete(Op)
+            effect: WT,
+            subMesh: zT
+          } = mT;
+          if (this.featureState.prewarmingDither || UT.has(WT)) return;
+          UT.add(WT);
+          const MT = null === zT || void 0 === zT ? void 0 : zT.getMesh();
+          MT && !ST.test(WT.defines) && TT.KF().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(MT) || UT.delete(WT)
           }))
         }))
       }
-      prewarmDither(pp) {
-        if (this.Ry || pp.uR()) return !1;
-        const ip = new Qp.d(0, 0, 0, 0, 0, pp, void 0, !1, !1);
+      prewarmDither(TT) {
+        if (this.kB || TT.bJ()) return !1;
+        const UT = new XT.e(0, 0, 0, 0, 0, TT, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(pp, ip)
+          this._material.isReadyForSubMesh(TT, UT)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== ip.effect
+        return null !== UT.effect
       }
-      dispose(pp) {
-        this.Ry = !0, super.dispose(pp)
+      dispose(TT) {
+        this.kB = !0, super.dispose(TT)
       }
     }
-    const rp = new Map;
+    const NT = new Map;
 
-    function Zp(pp, ip) {
-      rp.set(pp, ip)
+    function ET(TT, UT) {
+      NT.set(TT, UT)
     }
-    Zp(xp.d, Hp), Zp(Lp.f, qp), Zp(Yp.h, Gp), Zp(Dp.g, hp), (0, Ap.e)({
-      create: (pp, ip) => {
-        const cp = new Op.StandardMaterial(pp.name, ip);
-        return (0, np.p)(pp, cp), cp.detailMap._pluginDefineNames
+    ET(nT.b, qT), ET(HT.i, xT), ET(kT.h, GT), ET(jT.k, uT), (0, lT.d)({
+      create: (TT, UT) => {
+        const mT = new WT.StandardMaterial(TT.name, UT);
+        return (0, rT.o)(TT, mT), mT.detailMap._pluginDefineNames
       },
-      write: (pp, ip, cp) => {
-        (0, np.S)(pp.mirror, ip, cp)
+      write: (TT, UT, mT) => {
+        (0, rT._)(TT.mirror, UT, mT)
       },
-      addFeature: (pp, ip, cp) => {
-        const Op = rp.get(ip.feature);
-        if (!Op) throw new Error(`${ip.feature.name} has no plugin class (registerPluginClass)`);
-        new Op(pp.mirror, ip.state, ...cp)
+      addFeature: (TT, UT, mT) => {
+        const WT = NT.get(UT.feature);
+        if (!WT) throw new Error(`${UT.feature.name} has no plugin class (registerPluginClass)`);
+        new WT(TT.mirror, UT.state, ...mT)
       },
-      texture: (pp, ip, cp) => {
+      texture: (TT, UT, mT) => {
         let {
-          url: Op,
-          noMipmap: op,
-          invertY: Ip,
-          samplingMode: xp,
-          data: Lp,
-          sets: Yp
-        } = cp;
-        if (!Lp) {
-          const cp = new Sp.d(Op, ip, op, Ip, xp);
-          return Object.assign(cp, Yp), void(0, Pp.K)(pp, cp)
+          url: WT,
+          noMipmap: zT,
+          invertY: MT,
+          samplingMode: nT,
+          data: HT,
+          sets: kT
+        } = mT;
+        if (!HT) {
+          const mT = new gT.e(WT, UT, zT, MT, nT);
+          return Object.assign(mT, kT), void(0, LT.N)(TT, mT)
         }
-        const Dp = {},
-          Ap = new Promise(((pp, ip) => {
-            Dp.onLoad = pp, Dp.onError = (pp, cp) => {
-              ip(new Error(`${Lp.context}: ${(null===cp||void 0===cp?void 0:cp.message)||pp||"Failed to load texture"}`))
+        const jT = {},
+          lT = new Promise(((TT, UT) => {
+            jT.onLoad = TT, jT.onError = (TT, mT) => {
+              UT(new Error(`${HT.context}: ${(null===mT||void 0===mT?void 0:mT.message)||TT||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Wp,
-            bytes: yp,
-            label: Up
-          } = Lp,
-          wp = {
-            noMipmap: op,
+            mimeType: pT,
+            bytes: BT,
+            label: ZT
+          } = HT,
+          cT = {
+            noMipmap: zT,
             invertY: !1,
-            samplingMode: xp,
-            ...Dp,
-            mimeType: Wp,
+            samplingMode: nT,
+            ...jT,
+            mimeType: pT,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          vp = new Sp.d(null, ip, wp);
-        np.t.set(vp, Ap), Object.assign(vp, Yp), vp.updateURL(Op, yp);
-        const tp = vp.getInternalTexture();
-        tp && (tp.label = Up), pp.uvSet = vp.coordinatesIndex, pp.matrix.set((0, np.L)(vp)), (0, Pp.K)(pp, vp)
+          vT = new gT.e(null, UT, cT);
+        rT.q.set(vT, lT), Object.assign(vT, kT), vT.updateURL(WT, BT);
+        const fT = vT.getInternalTexture();
+        fT && (fT.label = ZT), TT.uvSet = vT.coordinatesIndex, TT.matrix.set((0, rT.Q)(vT)), (0, LT.N)(TT, vT)
       },
-      cube: (pp, ip, cp) => {
+      cube: (TT, UT, mT) => {
         let {
-          rootUrl: Op,
-          files: Ip,
-          noMipmap: xp,
-          luminance: Lp
-        } = cp;
+          rootUrl: WT,
+          files: MT,
+          noMipmap: nT,
+          luminance: HT
+        } = mT;
         const {
-          samplingMode: Yp
-        } = pp.sampler, Dp = Yp === (0, Pp.z)(xp) ? null : () => {
-          (0, np.J)(Ap, Yp)
-        }, Ap = new op.b(Op, ip, null, xp, Ip, Dp, null, (0, Pp.w)(Lp));
-        Ap.coordinatesMode = Sp.d.SKYBOX_MODE, (0, Pp.K)(pp, Ap)
+          samplingMode: kT
+        } = TT.sampler, jT = kT === (0, LT.G)(nT) ? null : () => {
+          (0, rT.M)(lT, kT)
+        }, lT = new zT.d(WT, UT, null, nT, MT, jT, null, (0, LT.C)(HT));
+        lT.coordinatesMode = gT.e.SKYBOX_MODE, (0, LT.N)(TT, lT)
       },
-      canvas: (pp, ip, cp) => {
+      canvas: (TT, UT, mT) => {
         let {
-          width: Op,
-          height: op,
-          mipmaps: xp,
-          samplingMode: Lp,
-          hasAlpha: Yp = !1,
-          wrap: Dp = Sp.d.CLAMP_ADDRESSMODE
-        } = cp;
-        const Ap = new Ip.e(ip, {
-          width: Op,
-          height: op
-        }, pp, xp, Lp);
-        Ap.hasAlpha = Yp, Ap.wrapU = Dp, Ap.wrapV = Dp;
-        const Pp = (0, np.B)(Ap);
-        return (0, np.D)(Pp, Ap), Pp
+          width: WT,
+          height: zT,
+          mipmaps: nT,
+          samplingMode: HT,
+          hasAlpha: kT = !1,
+          wrap: jT = gT.e.CLAMP_ADDRESSMODE
+        } = mT;
+        const lT = new MT.b(UT, {
+          width: WT,
+          height: zT
+        }, TT, nT, HT);
+        lT.hasAlpha = kT, lT.wrapU = jT, lT.wrapV = jT;
+        const LT = (0, rT.A)(lT);
+        return (0, rT.E)(LT, lT), LT
       }
     })
   },
-  41391: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      e: () => Ap,
-      f: () => Pp
+  41327: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => jT,
+      f: () => lT,
+      i: () => LT
     });
-    var Op = cp(41378),
-      op = cp(40273),
-      Ip = cp(40498),
-      Sp = cp(40593),
-      xp = cp(41383),
-      Lp = cp(40589),
-      Yp = cp(37698);
-    class Dp extends Sp.b {
+    var WT = mT(41309),
+      zT = mT(40171),
+      MT = mT(40432),
+      gT = mT(40550),
+      nT = mT(41318),
+      HT = mT(40546),
+      kT = mT(37584);
+    class jT extends gT.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (pp, ip) => {
-          this.releaseUnlessInstanced(ip)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (TT, UT) => {
+          this.releaseUnlessInstanced(UT)
         }, this.onLinked = null
       }
-      link(pp) {
-        var ip;
-        (0, Yp.m)(pp), this.model = pp, null === (ip = this.onLinked) || void 0 === ip || ip.call(this, pp)
+      link(TT) {
+        var UT;
+        (0, kT.m)(TT), this.model = TT, null === (UT = this.onLinked) || void 0 === UT || UT.call(this, TT)
       }
       relink() {
         this.release();
-        const pp = [];
-        for (const op of Object.values(this._vertexBuffers))
-          if (!op.getIsInstanced()) {
+        const TT = [];
+        for (const zT of Object.values(this._vertexBuffers))
+          if (!zT.getIsInstanced()) {
             const {
-              byteOffset: ip,
-              byteStride: cp,
-              type: Op,
-              normalized: Ip
-            } = op;
-            pp.push({
-              kind: op.getKind(),
-              data: op.getData(),
-              offset: ip,
-              stride: cp,
-              components: op.getSize(),
-              glType: Op,
-              isNormalized: Ip
+              byteOffset: UT,
+              byteStride: mT,
+              type: WT,
+              normalized: MT
+            } = zT;
+            TT.push({
+              kind: zT.getKind(),
+              data: zT.getData(),
+              offset: UT,
+              stride: mT,
+              components: zT.getSize(),
+              glType: WT,
+              isNormalized: MT
             })
-          } const ip = this._indices.length ? this._indices : null,
+          } const UT = this._indices.length ? this._indices : null,
           {
-            minimum: cp,
-            maximum: Op
+            minimum: mT,
+            maximum: WT
           } = this.extend;
-        this.link(new Yp.f(pp, ip, this.getTotalVertices(), new Float64Array(cp.BOp()), new Float64Array(Op.BOp())))
+        this.link(new kT.f(TT, UT, this.getTotalVertices(), new Float64Array(mT.cWT()), new Float64Array(WT.cWT())))
       }
-      copy(pp) {
-        if (!this.model) return super.copy(pp);
-        const ip = new Dp(pp, this.Gl()),
-          cp = this.NOp(void 0, !0);
-        cp && ip.setIndices(cp);
-        let Sp = !1;
-        for (const Ip in this._vertexBuffers) {
-          const pp = this._vertexBuffers[Ip],
-            cp = pp.getData();
-          if (!cp) continue;
-          const xp = pp.getSize(),
+      copy(TT) {
+        if (!this.model) return super.copy(TT);
+        const UT = new jT(TT, this.KF()),
+          mT = this.vWT(void 0, !0);
+        mT && UT.setIndices(mT);
+        let gT = !1;
+        for (const MT in this._vertexBuffers) {
+          const TT = this._vertexBuffers[MT],
+            mT = TT.getData();
+          if (!mT) continue;
+          const nT = TT.getSize(),
             {
-              type: Lp,
-              byteOffset: Yp,
-              byteStride: Dp,
-              normalized: Ap
-            } = pp;
-          Sp ||= pp.isUpdatable();
-          const Pp = pp.getIsInstanced() ? (cp instanceof Array ? 4 * cp.length : cp.byteLength) / Dp : this.getTotalVertices(),
-            Wp = (0, op.s)(cp, xp, Lp, Yp, Dp, Pp, !0),
-            yp = {
-              updatable: pp.isUpdatable(),
-              stride: xp,
-              type: Lp,
-              normalized: Ap,
+              type: HT,
+              byteOffset: kT,
+              byteStride: jT,
+              normalized: lT
+            } = TT;
+          gT ||= TT.isUpdatable();
+          const LT = TT.getIsInstanced() ? (mT instanceof Array ? 4 * mT.length : mT.byteLength) / jT : this.getTotalVertices(),
+            pT = (0, zT.v)(mT, nT, HT, kT, jT, LT, !0),
+            BT = {
+              updatable: TT.isUpdatable(),
+              stride: nT,
+              type: HT,
+              normalized: lT,
               takeBufferOwnership: !0,
-              instanced: pp.getIsInstanced()
+              instanced: TT.getIsInstanced()
             };
-          ip.setVerticesBuffer(new Op.f(this.gy(), Wp, Ip, yp), Pp)
+          UT.setVerticesBuffer(new WT.i(this.eB(), pT, MT, BT), LT)
         }
-        return ip._updatable = Sp, ip._boundingInfo = new Ip.d(this.extend.minimum, this.extend.maximum), ip.relink(), ip
+        return UT._updatable = gT, UT._boundingInfo = new MT.e(this.extend.minimum, this.extend.maximum), UT.relink(), UT
       }
-      static mergeMeshes(pp, ip, cp, Op, op, Ip) {
-        const Lp = pp[0].Gl(),
-          Yp = new xp.c(pp[0].name + "_merged", Lp),
-          Ap = new Dp(Sp.b.RandomId(), Lp, void 0, !1, Yp);
+      static mergeMeshes(TT, UT, mT, WT, zT, MT) {
+        const HT = TT[0].KF(),
+          kT = new nT.d(TT[0].name + "_merged", HT),
+          lT = new jT(gT.e.RandomId(), HT, void 0, !1, kT);
         try {
-          if (!xp.c.MergeMeshes(pp, ip, cp, Yp, op, Ip)) return Yp.dispose(), null
-        } catch (Pp) {
-          throw Yp.dispose(), Pp
+          if (!nT.d.MergeMeshes(TT, UT, mT, kT, zT, MT)) return kT.dispose(), null
+        } catch (LT) {
+          throw kT.dispose(), LT
         }
-        return Ap.relink(), Yp
+        return lT.relink(), kT
       }
-      removeVerticesData(pp) {
-        this.releaseUnlessInstanced(pp), super.removeVerticesData(pp)
+      removeVerticesData(TT) {
+        this.releaseUnlessInstanced(TT), super.removeVerticesData(TT)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(pp) {
-        var ip;
-        pp && null !== (ip = this.getVertexBuffer(pp)) && void 0 !== ip && ip.getIsInstanced() || this.release()
+      releaseUnlessInstanced(TT) {
+        var UT;
+        TT && null !== (UT = this.getVertexBuffer(TT)) && void 0 !== UT && UT.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Yp.v)(this.model), this.model = null)
+        this.model && ((0, kT.s)(this.model), this.model = null)
       }
     }
 
-    function Ap(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new xp.c(pp, cp);
-      const op = (0, Yp.j)(ip),
+    function lT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new nT.d(TT, mT);
+      const zT = (0, kT.k)(UT),
         {
-          positions: Ip,
-          normals: Ap,
-          uvs: Pp,
-          indices: Wp,
-          named: yp = {}
-        } = ip,
-        Up = new Lp.d;
-      Up.positions = Ip, Up.normals = null !== Ap && void 0 !== Ap ? Ap : null, Up.uvs = null !== Pp && void 0 !== Pp ? Pp : null, Up.indices = Wp;
-      const wp = new Dp(Sp.b.RandomId(), cp, Up, !1, Op);
+          positions: MT,
+          normals: lT,
+          uvs: LT,
+          indices: pT,
+          named: BT = {}
+        } = UT,
+        ZT = new HT.d;
+      ZT.positions = MT, ZT.normals = null !== lT && void 0 !== lT ? lT : null, ZT.uvs = null !== LT && void 0 !== LT ? LT : null, ZT.indices = pT;
+      const cT = new jT(gT.e.RandomId(), mT, ZT, !1, WT);
       for (const {
-          kind: Sp,
-          components: xp
+          kind: gT,
+          components: nT
         }
-        of op.vertexAttributes) Sp in yp && Op.setVerticesData(Sp, yp[Sp], !1, xp);
-      return wp.link(op), Op
+        of zT.vertexAttributes) gT in BT && WT.setVerticesData(gT, BT[gT], !1, nT);
+      return cT.link(zT), WT
     }
 
-    function Pp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const op = new xp.c(pp, cp),
+    function LT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const zT = new nT.d(TT, mT),
         {
-          positions: Ip,
-          normals: Sp,
-          uvs: Yp,
-          indices: Dp
-        } = ip;
-      return Object.assign(new Lp.d, {
-        positions: Ip,
-        normals: Sp,
-        uvs: Yp,
-        indices: Dp
-      }).applyToMesh(op, Op), op
+          positions: MT,
+          normals: gT,
+          uvs: kT,
+          indices: jT
+        } = UT;
+      return Object.assign(new HT.d, {
+        positions: MT,
+        normals: gT,
+        uvs: kT,
+        indices: jT
+      }).applyToMesh(zT, WT), zT
     }
   },
-  41375: (pp, ip, cp) => {
-    function Op(pp, ip, cp) {
-      const Op = ip * ip * 4,
-        op = pp[0].layers,
-        Ip = op * (pp.length - 1) + pp[pp.length - 1].layers,
-        Sp = new Uint8Array(Ip * Op);
-      pp.forEach(((ip, cp) => {
-        const Ip = cp + 1 < pp.length ? Math.min(ip.layers, op) : ip.layers;
-        Sp.set(new Uint8Array(ip.pixels.buffer, ip.pixels.byteOffset, Ip * Op), cp * op * Op)
+  41300: (TT, UT, mT) => {
+    function WT(TT, UT, mT) {
+      const WT = UT * UT * 4,
+        zT = TT[0].layers,
+        MT = zT * (TT.length - 1) + TT[TT.length - 1].layers,
+        gT = new Uint8Array(MT * WT);
+      TT.forEach(((UT, mT) => {
+        const MT = mT + 1 < TT.length ? Math.min(UT.layers, zT) : UT.layers;
+        gT.set(new Uint8Array(UT.pixels.buffer, UT.pixels.byteOffset, MT * WT), mT * zT * WT)
       }));
-      const xp = Math.max(1, Math.min(Ip, cp || Ip));
-      if (xp === Ip) return [{
-        pixels: Sp,
-        layers: Ip
+      const nT = Math.max(1, Math.min(MT, mT || MT));
+      if (nT === MT) return [{
+        pixels: gT,
+        layers: MT
       }];
-      const Lp = [];
-      for (let Yp = 0; Yp < Ip; Yp += xp) {
-        const pp = Math.min(Ip, Yp + xp);
-        Lp.push({
-          pixels: Sp.slice(Yp * Op, pp * Op),
-          layers: pp - Yp
+      const HT = [];
+      for (let kT = 0; kT < MT; kT += nT) {
+        const TT = Math.min(MT, kT + nT);
+        HT.push({
+          pixels: gT.slice(kT * WT, TT * WT),
+          layers: TT - kT
         })
       }
-      return Lp
+      return HT
     }
-    cp.d(ip, {
-      d: () => Op,
-      h: () => Ip
+    mT.d(UT, {
+      e: () => WT,
+      h: () => MT
     });
-    const op = new WeakMap;
+    const zT = new WeakMap;
 
-    function Ip(pp, ip, cp) {
-      var Op, Ip;
-      const Sp = null !== (Op = op.get(pp)) && void 0 !== Op ? Op : new Map;
-      op.set(pp, Sp);
-      const xp = null !== (Ip = Sp.get(ip[0])) && void 0 !== Ip ? Ip : [];
-      Sp.set(ip[0], xp);
-      const Lp = xp.find((pp => pp.urls.length === ip.length && pp.urls.every(((pp, cp) => pp === ip[cp]))));
-      if (Lp) return Lp.built;
-      const Yp = {
-        urls: [...ip],
-        built: cp()
+    function MT(TT, UT, mT) {
+      var WT, MT;
+      const gT = null !== (WT = zT.get(TT)) && void 0 !== WT ? WT : new Map;
+      zT.set(TT, gT);
+      const nT = null !== (MT = gT.get(UT[0])) && void 0 !== MT ? MT : [];
+      gT.set(UT[0], nT);
+      const HT = nT.find((TT => TT.urls.length === UT.length && TT.urls.every(((TT, mT) => TT === UT[mT]))));
+      if (HT) return HT.built;
+      const kT = {
+        urls: [...UT],
+        built: mT()
       };
-      return xp.push(Yp), Yp.built.catch((() => {
-        xp.splice(xp.indexOf(Yp), 1)
-      })), Yp.built
+      return nT.push(kT), kT.built.catch((() => {
+        nT.splice(nT.indexOf(kT), 1)
+      })), kT.built
     }
+  },
+  38918: (TT, UT, mT) => {
+    var WT = {
+      "./cape_cow_cream.png": 28056,
+      "./cape_cow_normal.png": 28059,
+      "./cape_creator_level1.png": 28063,
+      "./cape_creator_level2.png": 28068,
+      "./cape_creator_level3.png": 28074,
+      "./cape_none.png": 28083,
+      "./cape_pig.png": 28086,
+      "./cape_sheep.png": 28090,
+      "./cape_super.png": 28097,
+      "./cape_super_inverted.png": 28104,
+      "./cape_youtuber.png": 28108
+    };
+
+    function zT(TT) {
+      var UT = MT(TT);
+      return mT(UT)
+    }
+
+    function MT(TT) {
+      if (!mT.o(WT, TT)) {
+        var UT = new Error("Cannot find module '" + TT + "'");
+        throw UT.code = "MODULE_NOT_FOUND", UT
+      }
+      return WT[TT]
+    }
+    zT.keys = function() {
+      return Object.keys(WT)
+    }, zT.resolve = MT, TT.exports = zT, zT.id = 38918
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

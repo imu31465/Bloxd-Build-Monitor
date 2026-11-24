@@ -1,66 +1,66 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  36812: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Up,
-      h: () => jp
+  36707: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => ZT,
+      d: () => OT
     });
-    cp(34402);
-    var Op = cp(62),
-      op = cp(1476),
-      Ip = cp(1956),
-      Sp = cp(2004),
-      xp = cp(25),
-      Lp = cp(2492),
-      Yp = cp(36819),
-      Dp = cp(36828),
-      Ap = cp(34386),
-      Pp = cp(34397),
-      Wp = cp(34420),
-      yp = cp(1112);
-    const Up = (0, Op.memo)((function() {
-      var pp;
+    mT(34243);
+    var WT = mT(63),
+      zT = mT(1567),
+      MT = mT(2046),
+      gT = mT(2089),
+      nT = mT(25),
+      HT = mT(2552),
+      kT = mT(36710),
+      jT = mT(36716),
+      lT = mT(34227),
+      LT = mT(34237),
+      pT = mT(34253),
+      BT = mT(1188);
+    const ZT = (0, WT.memo)((function() {
+      var TT;
       const {
-        isTouchScreen: ip,
-        clientEscMenuOptions: cp,
-        scriptedCameraFacing: Ip,
-        crosshairShownOverride: Up,
-        crosshairGameView: vp
-      } = (0, xp.o)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), tp = (0, Lp.i)("gunshotOrigin"), Hp = (0, Op.useRef)(null), dp = (0, Op.useRef)(!1), [ep, kp] = (0, Op.useState)(wp);
-      (0, op.f)("cameraZoomSet", kp), (0, Op.useEffect)((() => {
-        kp(wp())
+        isTouchScreen: UT,
+        clientEscMenuOptions: mT,
+        scriptedCameraFacing: MT,
+        crosshairShownOverride: ZT,
+        crosshairGameView: vT
+      } = (0, nT.h)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), fT = (0, HT.f)("gunshotOrigin"), qT = (0, WT.useRef)(null), iT = (0, WT.useRef)(!1), [bT, eT] = (0, WT.useState)(cT);
+      (0, zT.g)("cameraZoomSet", eT), (0, WT.useEffect)((() => {
+        eT(cT())
       }), []);
-      const mp = (0, Sp.g)("heldItemAim"),
-        qp = mp.gun,
-        Mp = (0, Wp.f)(),
-        Cp = (0, Op.useRef)(Mp);
-      Cp.current = Mp;
-      const [Ep, Xp] = (0, Op.useState)(!1);
-      (0, Op.useEffect)((() => (0, Dp.i)("crosshairAccuracy", jp)), []), (0, op.f)("mouseState", (pp => {
+      const YT = (0, gT.i)("heldItemAim"),
+        xT = YT.gun,
+        dT = (0, pT.g)(),
+        wT = (0, WT.useRef)(dT);
+      wT.current = dT;
+      const [tT, aT] = (0, WT.useState)(!1);
+      (0, WT.useEffect)((() => (0, jT.e)("crosshairAccuracy", OT)), []), (0, zT.g)("mouseState", (TT => {
         let {
-          isDown: ip
-        } = pp;
-        dp.current = ip, Hp.current && (Hp.current.style.transform = (0, Pp.e)(ip, Cp.current.growOnClick)), "shapes" === Cp.current.style && Xp(ip)
+          isDown: UT
+        } = TT;
+        iT.current = UT, qT.current && (qT.current.style.transform = (0, LT.c)(UT, wT.current.growOnClick)), "shapes" === wT.current.style && aT(UT)
       }));
-      const lp = (0, Ap.g)(ip, cp.touchActionButtons);
-      return (null !== (pp = (0, Yp.d)(vp, Up)) && void 0 !== pp ? pp : (0, Yp.h)(mp, ep > 1, lp, tp)) ? "movement" === Ip || "cursor" === Ip ? null : (0, yp.jsxs)(yp.Fragment, {
-        children: [qp && (0, yp.jsx)(Rp, {
-          custom: Mp.forGuns && "shapes" === Mp.style ? Mp : null,
-          touch: ip
-        }), !qp && (0, yp.jsx)(Pp.b, {
-          settings: Mp,
-          touch: ip,
-          pressRef: Hp,
-          pressed: "shapes" === Mp.style ? Ep : dp.current
+      const yT = (0, lT.h)(UT, mT.touchActionButtons);
+      return (null !== (TT = (0, kT.e)(vT, ZT)) && void 0 !== TT ? TT : (0, kT.i)(YT, bT > 1, yT, fT)) ? "movement" === MT || "cursor" === MT ? null : (0, BT.jsxs)(BT.Fragment, {
+        children: [xT && (0, BT.jsx)(JT, {
+          custom: dT.forGuns && "shapes" === dT.style ? dT : null,
+          touch: UT
+        }), !xT && (0, BT.jsx)(LT.b, {
+          settings: dT,
+          touch: UT,
+          pressRef: qT,
+          pressed: "shapes" === dT.style ? tT : iT.current
         })]
       }) : null
     }));
 
-    function wp() {
-      return Ip.gameBridge.lookup("cameraZoom", null)
+    function cT() {
+      return MT.gameBridge.lookup("cameraZoom", null)
     }
-    const vp = [{
+    const vT = [{
         current: null
       }, {
         current: null
@@ -69,340 +69,340 @@ export const modules = {
       }, {
         current: null
       }],
-      tp = {
+      fT = {
         current: null
       },
-      Hp = {
+      qT = {
         current: null
       };
-    let dp = 0,
-      ep = 0;
+    let iT = 0,
+      bT = 0;
 
-    function jp(pp) {
-      ep = pp, vp[0].current || tp.current || Hp.current ? mp(pp) : dp = pp
+    function OT(TT) {
+      bT = TT, vT[0].current || fT.current || qT.current ? YT(TT) : iT = TT
     }
 
-    function kp(pp) {
-      return ((0, Yp.e)(pp) - (0, Yp.e)(0)) * window.innerHeight / 100
+    function eT(TT) {
+      return ((0, kT.h)(TT) - (0, kT.h)(0)) * window.innerHeight / 100
     }
 
-    function mp(pp) {
-      var ip;
-      if (null === (ip = Hp.current) || void 0 === ip || ip.call(Hp, kp(pp)), vp[0].current) {
-        const ip = `${(0,Yp.e)(pp)}vh`;
-        vp[0].current.style.transform = `translateX(calc(0px - ${ip}))`, vp[1].current.style.transform = `translateX(calc(0px + ${ip}))`, vp[2].current.style.transform = `translateY(calc(0px - ${ip}))`, vp[3].current.style.transform = `translateY(calc(0px + ${ip}))`
+    function YT(TT) {
+      var UT;
+      if (null === (UT = qT.current) || void 0 === UT || UT.call(qT, eT(TT)), vT[0].current) {
+        const UT = `${(0,kT.h)(TT)}vh`;
+        vT[0].current.style.transform = `translateX(calc(0px - ${UT}))`, vT[1].current.style.transform = `translateX(calc(0px + ${UT}))`, vT[2].current.style.transform = `translateY(calc(0px - ${UT}))`, vT[3].current.style.transform = `translateY(calc(0px + ${UT}))`
       }
-      tp.current && (tp.current.style.filter = `blur(${Math.round(pp/10)}px)`)
+      fT.current && (fT.current.style.filter = `blur(${Math.round(TT/10)}px)`)
     }
 
-    function Rp(pp) {
+    function JT(TT) {
       let {
-        custom: ip,
-        touch: cp
-      } = pp;
-      const Ip = (0, op.i)("aimingOverlay", "none"),
-        Sp = "1.2vh",
-        xp = "0.3vh";
-      (0, Op.useEffect)((() => {
-        dp && mp(dp)
+        custom: UT,
+        touch: mT
+      } = TT;
+      const MT = (0, zT.j)("aimingOverlay", "none"),
+        gT = "1.2vh",
+        nT = "0.3vh";
+      (0, WT.useEffect)((() => {
+        iT && YT(iT)
       }), []);
-      const Lp = (0, Op.useRef)(null !== ip);
-      return (0, Op.useLayoutEffect)((() => {
-        var pp;
-        ip ? null === (pp = Hp.current) || void 0 === pp || pp.call(Hp, kp(ep)) : Lp.current && mp(ep);
-        Lp.current = null !== ip
-      }), [ip]), (0, yp.jsxs)(yp.Fragment, {
-        children: ["sniper" === Ip && (0, yp.jsxs)("div", {
-          ref: tp,
+      const HT = (0, WT.useRef)(null !== UT);
+      return (0, WT.useLayoutEffect)((() => {
+        var TT;
+        UT ? null === (TT = qT.current) || void 0 === TT || TT.call(qT, eT(bT)) : HT.current && YT(bT);
+        HT.current = null !== UT
+      }), [UT]), (0, BT.jsxs)(BT.Fragment, {
+        children: ["sniper" === MT && (0, BT.jsxs)("div", {
+          ref: fT,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, yp.jsx)("div", {
+          children: [(0, BT.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, yp.jsx)("div", {
+          }), (0, BT.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, yp.jsx)("div", {
+          }), (0, BT.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, yp.jsx)("div", {
+          }), (0, BT.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, yp.jsxs)("div", {
+        }), (0, BT.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === Ip ? 0 : 1
+            opacity: "sniper" === MT ? 0 : 1
           },
-          children: [ip && (0, yp.jsx)(Pp.b, {
-            settings: ip,
-            touch: cp,
-            spreadRef: Hp
-          }), !ip && (0, yp.jsxs)(yp.Fragment, {
-            children: [(0, yp.jsx)("div", {
+          children: [UT && (0, BT.jsx)(LT.b, {
+            settings: UT,
+            touch: mT,
+            spreadRef: qT
+          }), !UT && (0, BT.jsxs)(BT.Fragment, {
+            children: [(0, BT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Sp,
-                height: xp,
+                width: gT,
+                height: nT,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: vp[0]
-            }), (0, yp.jsx)("div", {
+              ref: vT[0]
+            }), (0, BT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Sp,
-                height: xp,
+                width: gT,
+                height: nT,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: vp[1]
-            }), (0, yp.jsx)("div", {
+              ref: vT[1]
+            }), (0, BT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: xp,
-                height: Sp,
+                width: nT,
+                height: gT,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: vp[2]
-            }), (0, yp.jsx)("div", {
+              ref: vT[2]
+            }), (0, BT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: xp,
-                height: Sp,
+                width: nT,
+                height: gT,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: vp[3]
+              ref: vT[3]
             })]
           })]
         })]
       })
     }
   },
-  34397: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Up,
-      e: () => yp
+  34237: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => ZT,
+      c: () => BT
     });
-    cp(34402);
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(62),
-      Sp = cp(34392);
+    mT(34243);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(63),
+      gT = mT(34233);
 
-    function xp(pp, ip) {
-      return Math.max(1, Math.round(pp * ip))
+    function nT(TT, UT) {
+      return Math.max(1, Math.round(TT * UT))
     }
 
-    function Lp(pp, ip) {
-      const cp = ip * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        Op = function(pp, ip) {
-          if (pp.lines) return xp(pp.lineThickness, ip) % 2;
-          if (pp.dot) return xp(pp.dotSize, ip) % 2;
-          return Yp(pp, ip) % 2
-        }(pp, ip),
-        op = Dp(pp.lineThickness * cp, Op),
-        Ip = xp(pp.lineLength, cp),
-        Sp = Math.round(pp.gap * cp),
-        Lp = pp.outline > 0 ? xp(pp.outline, cp) : 0,
-        Pp = [];
-      if (pp.lines && (Pp.push({
-          x: op + Sp,
+    function HT(TT, UT) {
+      const mT = UT * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        WT = function(TT, UT) {
+          if (TT.lines) return nT(TT.lineThickness, UT) % 2;
+          if (TT.dot) return nT(TT.dotSize, UT) % 2;
+          return kT(TT, UT) % 2
+        }(TT, UT),
+        zT = jT(TT.lineThickness * mT, WT),
+        MT = nT(TT.lineLength, mT),
+        gT = Math.round(TT.gap * mT),
+        HT = TT.outline > 0 ? nT(TT.outline, mT) : 0,
+        LT = [];
+      if (TT.lines && (LT.push({
+          x: zT + gT,
           y: 0,
-          w: Ip,
-          h: op,
+          w: MT,
+          h: zT,
           arm: "right"
-        }), Pp.push({
-          x: -Sp - Ip,
+        }), LT.push({
+          x: -gT - MT,
           y: 0,
-          w: Ip,
-          h: op,
+          w: MT,
+          h: zT,
           arm: "left"
-        }), Pp.push({
+        }), LT.push({
           x: 0,
-          y: op + Sp,
-          w: op,
-          h: Ip,
+          y: zT + gT,
+          w: zT,
+          h: MT,
           arm: "down"
-        }), pp.tStyle || Pp.push({
+        }), TT.tStyle || LT.push({
           x: 0,
-          y: -Sp - Ip,
-          w: op,
-          h: Ip,
+          y: -gT - MT,
+          w: zT,
+          h: MT,
           arm: "up"
-        }), 0 === Sp && Pp.push({
+        }), 0 === gT && LT.push({
           x: 0,
           y: 0,
-          w: op,
-          h: op
-        })), pp.dot) {
-        const ip = Dp(pp.dotSize * cp, Op),
-          Ip = pp.lines && 0 === Sp && pp.dotSize > pp.lineThickness ? Math.max(ip, op + 2) : ip,
-          xp = (op - Ip) / 2;
-        Pp.push({
-          x: xp,
-          y: xp,
-          w: Ip,
-          h: Ip
+          w: zT,
+          h: zT
+        })), TT.dot) {
+        const UT = jT(TT.dotSize * mT, WT),
+          MT = TT.lines && 0 === gT && TT.dotSize > TT.lineThickness ? Math.max(UT, zT + 2) : UT,
+          nT = (zT - MT) / 2;
+        LT.push({
+          x: nT,
+          y: nT,
+          w: MT,
+          h: MT
         })
       }
-      const Wp = Pp.map((pp => ({
-        ...pp,
-        x: pp.x - Lp,
-        y: pp.y - Lp,
-        w: pp.w + 2 * Lp,
-        h: pp.h + 2 * Lp
+      const pT = LT.map((TT => ({
+        ...TT,
+        x: TT.x - HT,
+        y: TT.y - HT,
+        w: TT.w + 2 * HT,
+        h: TT.h + 2 * HT
       })));
-      let yp = null,
-        Up = null;
-      if (pp.circle) {
-        const ip = xp(pp.circleThickness, cp),
-          Ip = function(pp, ip) {
-            return pp + (pp % 2 === ip ? 0 : 1)
-          }(Yp(pp, cp), Op),
-          Sp = (op - Ip) / 2;
-        yp = Ap(Sp, Ip, ip), Lp > 0 && (Up = Ap(Sp - Lp, Ip + 2 * Lp, ip + 2 * Lp))
+      let BT = null,
+        ZT = null;
+      if (TT.circle) {
+        const UT = nT(TT.circleThickness, mT),
+          MT = function(TT, UT) {
+            return TT + (TT % 2 === UT ? 0 : 1)
+          }(kT(TT, mT), WT),
+          gT = (zT - MT) / 2;
+        BT = lT(gT, MT, UT), HT > 0 && (ZT = lT(gT - HT, MT + 2 * HT, UT + 2 * HT))
       }
       return {
-        cell: op,
-        fills: Pp,
-        outlines: Lp > 0 ? Wp : [],
-        ring: yp,
-        ringOutline: Up
+        cell: zT,
+        fills: LT,
+        outlines: HT > 0 ? pT : [],
+        ring: BT,
+        ringOutline: ZT
       }
     }
 
-    function Yp(pp, ip) {
-      return Math.round(pp.circleRadius * ip * 2 + xp(pp.circleThickness, ip))
+    function kT(TT, UT) {
+      return Math.round(TT.circleRadius * UT * 2 + nT(TT.circleThickness, UT))
     }
 
-    function Dp(pp, ip) {
-      return Math.max(2 - ip, 2 * Math.round((pp - ip) / 2) + ip)
+    function jT(TT, UT) {
+      return Math.max(2 - UT, 2 * Math.round((TT - UT) / 2) + UT)
     }
 
-    function Ap(pp, ip, cp) {
-      const Op = 2 * cp >= ip - 1;
+    function lT(TT, UT, mT) {
+      const WT = 2 * mT >= UT - 1;
       return {
-        x: pp,
-        y: pp,
-        size: ip,
-        border: Math.min(cp, Math.floor(ip / 2)),
-        filled: Op
+        x: TT,
+        y: TT,
+        size: UT,
+        border: Math.min(mT, Math.floor(UT / 2)),
+        filled: WT
       }
     }
-    var Pp = cp(1112);
-    const Wp = 1.4;
+    var LT = mT(1188);
+    const pT = 1.4;
 
-    function yp(pp, ip) {
-      return pp && ip ? `scale(${Wp})` : "scale(1)"
+    function BT(TT, UT) {
+      return TT && UT ? `scale(${pT})` : "scale(1)"
     }
 
-    function Up(pp) {
-      return "classic" === pp.settings.style ? (0, Pp.jsx)(tp, {
-        ...pp
-      }) : (0, Pp.jsx)(Rp, {
-        ...pp
+    function ZT(TT) {
+      return "classic" === TT.settings.style ? (0, LT.jsx)(fT, {
+        ...TT
+      }) : (0, LT.jsx)(JT, {
+        ...TT
       })
     }
-    const wp = .125;
+    const cT = .125;
 
-    function vp(pp, ip) {
-      const cp = {};
-      if (pp.color !== Sp.d.color && (cp.color = (0, Sp.j)(pp.color)), pp.opacity !== Sp.d.opacity && (cp.opacity = pp.opacity / 100), pp.outline !== Sp.d.outline || pp.outlineColor !== Sp.d.outlineColor) {
-        const ip = pp.outline,
-          Op = (0, Sp.j)(pp.outlineColor);
-        cp.textShadow = ip > 0 ? `-${ip}px 0 ${Op}, 0 ${ip}px ${Op}, ${ip}px 0 ${Op}, 0 -${ip}px ${Op}` : "none"
+    function vT(TT, UT) {
+      const mT = {};
+      if (TT.color !== gT.e.color && (mT.color = (0, gT.i)(TT.color)), TT.opacity !== gT.e.opacity && (mT.opacity = TT.opacity / 100), TT.outline !== gT.e.outline || TT.outlineColor !== gT.e.outlineColor) {
+        const UT = TT.outline,
+          WT = (0, gT.i)(TT.outlineColor);
+        mT.textShadow = UT > 0 ? `-${UT}px 0 ${WT}, 0 ${UT}px ${WT}, ${UT}px 0 ${WT}, 0 -${UT}px ${WT}` : "none"
       }
-      if (pp.size !== Sp.d.size) {
-        const Op = pp.size / 100;
-        cp.fontSize = ip ? `calc(max(1.3rem, 18px) * ${Op})` : `calc(1.3rem * ${Op})`, cp.marginTop = `-${wp}em`, cp.transformOrigin = `50% calc(50% + ${wp}em)`
+      if (TT.size !== gT.e.size) {
+        const WT = TT.size / 100;
+        mT.fontSize = UT ? `calc(max(1.3rem, 18px) * ${WT})` : `calc(1.3rem * ${WT})`, mT.marginTop = `-${cT}em`, mT.transformOrigin = `50% calc(50% + ${cT}em)`
       }
-      return cp
+      return mT
     }
 
-    function tp(pp) {
+    function fT(TT) {
       let {
-        settings: ip,
-        touch: cp,
-        inPreview: Op,
-        inEditor: Ip,
-        pressed: Sp = !1,
-        pressRef: xp
-      } = pp;
-      return (0, Pp.jsx)("div", {
-        className: op()("Crosshair", {
-          Touch: cp,
-          CrosshairInPreview: Op,
-          CrosshairInEditor: Ip || Op
+        settings: UT,
+        touch: mT,
+        inPreview: WT,
+        inEditor: MT,
+        pressed: gT = !1,
+        pressRef: nT
+      } = TT;
+      return (0, LT.jsx)("div", {
+        className: zT()("Crosshair", {
+          Touch: mT,
+          CrosshairInPreview: WT,
+          CrosshairInEditor: MT || WT
         }),
-        ref: xp,
+        ref: nT,
         style: {
-          transform: yp(Sp, ip.growOnClick),
-          ...vp(ip, cp)
+          transform: BT(gT, UT.growOnClick),
+          ...vT(UT, mT)
         },
         children: "+"
       })
     }
 
-    function Hp(pp, ip) {
-      return pp / ip + "px"
+    function qT(TT, UT) {
+      return TT / UT + "px"
     }
 
-    function dp(pp, ip, cp, Op) {
+    function iT(TT, UT, mT, WT) {
       return {
-        ...kp(pp, ip, cp),
-        width: Hp(pp.w, cp),
-        height: Hp(pp.h, cp),
-        background: Op
+        ...eT(TT, UT, mT),
+        width: qT(TT.w, mT),
+        height: qT(TT.h, mT),
+        background: WT
       }
     }
 
-    function ep(pp, ip, cp) {
+    function bT(TT, UT, mT) {
       return {
-        left: Hp(pp.x, ip),
-        top: Hp(pp.y, ip),
-        width: Hp(pp.size, ip),
-        height: Hp(pp.size, ip),
-        borderWidth: Hp(pp.border, ip),
-        borderColor: cp,
-        background: pp.filled ? cp : void 0
+        left: qT(TT.x, UT),
+        top: qT(TT.y, UT),
+        width: qT(TT.size, UT),
+        height: qT(TT.size, UT),
+        borderWidth: qT(TT.border, UT),
+        borderColor: mT,
+        background: TT.filled ? mT : void 0
       }
     }
-    const jp = {
+    const OT = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function kp(pp, ip, cp) {
-      const [Op, op] = pp.arm ? jp[pp.arm] : [0, 0], Ip = Math.round(ip * cp);
+    function eT(TT, UT, mT) {
+      const [WT, zT] = TT.arm ? OT[TT.arm] : [0, 0], MT = Math.round(UT * mT);
       return {
-        left: Hp(pp.x + Op * Ip, cp),
-        top: Hp(pp.y + op * Ip, cp)
+        left: qT(TT.x + WT * MT, mT),
+        top: qT(TT.y + zT * MT, mT)
       }
     }
 
-    function mp(pp) {
-      return pp.arm ? {
-        "data-arm": pp.arm,
-        "data-x": pp.x,
-        "data-y": pp.y
+    function YT(TT) {
+      return TT.arm ? {
+        "data-arm": TT.arm,
+        "data-x": TT.x,
+        "data-y": TT.y
       } : {}
     }
 
-    function Rp(pp) {
+    function JT(TT) {
       let {
-        settings: ip,
-        inPreview: cp,
-        inEditor: Op,
-        pressed: xp = !1,
-        spread: Yp,
-        spreadRef: Dp
-      } = pp;
-      const Ap = (0, Ip.useRef)(null),
+        settings: UT,
+        inPreview: mT,
+        inEditor: WT,
+        pressed: nT = !1,
+        spread: kT,
+        spreadRef: jT
+      } = TT;
+      const lT = (0, MT.useRef)(null),
         {
-          box: yp,
-          dpr: Up
-        } = function(pp) {
-          const [ip, cp] = (0, Ip.useState)({
+          box: BT,
+          dpr: ZT
+        } = function(TT) {
+          const [UT, mT] = (0, MT.useState)({
             box: {
               left: 0,
               top: 0,
@@ -411,200 +411,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Ip.useLayoutEffect)((() => {
-            const ip = pp.current;
-            if (!ip) return;
-            const Op = () => {
-              const pp = ip.getBoundingClientRect(),
-                Op = window.devicePixelRatio || 1;
-              cp((ip => ip.dpr === Op && ip.box.left === pp.left && ip.box.top === pp.top && ip.box.width === pp.width && ip.box.height === pp.height ? ip : {
+          return (0, MT.useLayoutEffect)((() => {
+            const UT = TT.current;
+            if (!UT) return;
+            const WT = () => {
+              const TT = UT.getBoundingClientRect(),
+                WT = window.devicePixelRatio || 1;
+              mT((UT => UT.dpr === WT && UT.box.left === TT.left && UT.box.top === TT.top && UT.box.width === TT.width && UT.box.height === TT.height ? UT : {
                 box: {
-                  left: pp.left,
-                  top: pp.top,
-                  width: pp.width,
-                  height: pp.height
+                  left: TT.left,
+                  top: TT.top,
+                  width: TT.width,
+                  height: TT.height
                 },
-                dpr: Op
+                dpr: WT
               }))
             };
-            Op();
-            const op = new ResizeObserver(Op);
-            return op.observe(ip), window.addEventListener("resize", Op), window.addEventListener("scroll", Op, !0), () => {
-              op.disconnect(), window.removeEventListener("resize", Op), window.removeEventListener("scroll", Op, !0)
+            WT();
+            const zT = new ResizeObserver(WT);
+            return zT.observe(UT), window.addEventListener("resize", WT), window.addEventListener("scroll", WT, !0), () => {
+              zT.disconnect(), window.removeEventListener("resize", WT), window.removeEventListener("scroll", WT, !0)
             }
-          }), [pp]), ip
-        }(Ap),
-        wp = (0, Ip.useRef)(Up);
-      wp.current = Up;
-      const vp = Lp(ip, Up, xp && ip.growOnClick ? Wp : 1),
-        tp = function(pp, ip, cp) {
-          const Op = Math.round((pp.left + pp.width / 2) * cp - ip / 2),
-            op = Math.round((pp.top + pp.height / 2) * cp - ip / 2);
+          }), [TT]), UT
+        }(lT),
+        cT = (0, MT.useRef)(ZT);
+      cT.current = ZT;
+      const vT = HT(UT, ZT, nT && UT.growOnClick ? pT : 1),
+        fT = function(TT, UT, mT) {
+          const WT = Math.round((TT.left + TT.width / 2) * mT - UT / 2),
+            zT = Math.round((TT.top + TT.height / 2) * mT - UT / 2);
           return {
-            x: Op / cp - pp.left,
-            y: op / cp - pp.top
+            x: WT / mT - TT.left,
+            y: zT / mT - TT.top
           }
-        }(yp, vp.cell, Up),
-        Hp = (0, Sp.j)(ip.color),
-        jp = (0, Sp.j)(ip.outlineColor),
-        Rp = (0, Ip.useRef)(0);
-      (0, Ip.useLayoutEffect)((() => {
-        if (Dp) return Dp.current = pp => {
-          var ip;
-          Rp.current = pp, null === (ip = Ap.current) || void 0 === ip || ip.querySelectorAll("[data-arm]").forEach((ip => {
-            Object.assign(ip.style, kp(function(pp) {
+        }(BT, vT.cell, ZT),
+        qT = (0, gT.i)(UT.color),
+        OT = (0, gT.i)(UT.outlineColor),
+        JT = (0, MT.useRef)(0);
+      (0, MT.useLayoutEffect)((() => {
+        if (jT) return jT.current = TT => {
+          var UT;
+          JT.current = TT, null === (UT = lT.current) || void 0 === UT || UT.querySelectorAll("[data-arm]").forEach((UT => {
+            Object.assign(UT.style, eT(function(TT) {
               return {
-                x: Number(pp.dataset.x),
-                y: Number(pp.dataset.y),
-                arm: pp.dataset.arm
+                x: Number(TT.dataset.x),
+                y: Number(TT.dataset.y),
+                arm: TT.dataset.arm
               }
-            }(ip), pp, wp.current))
+            }(UT), TT, cT.current))
           }))
         }, () => {
-          Dp.current = null
+          jT.current = null
         }
-      }), [Dp]);
-      const qp = null !== Yp && void 0 !== Yp ? Yp : Rp.current;
-      return (0, Pp.jsx)("div", {
-        ref: Ap,
-        className: op()("CrosshairShapes", {
-          CrosshairInPreview: cp,
-          CrosshairInEditor: Op || cp,
-          CrosshairSpreads: void 0 !== Dp
+      }), [jT]);
+      const xT = null !== kT && void 0 !== kT ? kT : JT.current;
+      return (0, LT.jsx)("div", {
+        ref: lT,
+        className: zT()("CrosshairShapes", {
+          CrosshairInPreview: mT,
+          CrosshairInEditor: WT || mT,
+          CrosshairSpreads: void 0 !== jT
         }),
-        children: (0, Pp.jsx)("div", {
+        children: (0, LT.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: tp.x,
-            top: tp.y,
-            opacity: ip.opacity / 100
+            left: fT.x,
+            top: fT.y,
+            opacity: UT.opacity / 100
           },
-          children: (0, Pp.jsxs)("div", {
+          children: (0, LT.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [vp.ringOutline && (0, Pp.jsx)("div", {
+            children: [vT.ringOutline && (0, LT.jsx)("div", {
               className: "CrosshairRing",
-              style: ep(vp.ringOutline, Up, jp)
-            }), vp.outlines.map(((pp, ip) => (0, Pp.jsx)("div", {
+              style: bT(vT.ringOutline, ZT, OT)
+            }), vT.outlines.map(((TT, UT) => (0, LT.jsx)("div", {
               className: "CrosshairPart",
-              ...mp(pp),
-              style: dp(pp, qp, Up, jp)
-            }, `o${ip}`))), vp.ring && (0, Pp.jsx)("div", {
+              ...YT(TT),
+              style: iT(TT, xT, ZT, OT)
+            }, `o${UT}`))), vT.ring && (0, LT.jsx)("div", {
               className: "CrosshairRing",
-              style: ep(vp.ring, Up, Hp)
-            }), vp.fills.map(((pp, ip) => (0, Pp.jsx)("div", {
+              style: bT(vT.ring, ZT, qT)
+            }), vT.fills.map(((TT, UT) => (0, LT.jsx)("div", {
               className: "CrosshairPart",
-              ...mp(pp),
-              style: dp(pp, qp, Up, Hp)
-            }, `f${ip}`)))]
+              ...YT(TT),
+              style: iT(TT, xT, ZT, qT)
+            }, `f${UT}`)))]
           })
         })
       })
     }
   },
-  34411: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Dp,
-      e: () => wp,
-      h: () => Up
+  34245: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => jT,
+      f: () => cT,
+      h: () => ZT
     });
-    var Op = cp(34392);
-    const op = "XH1-",
-      Ip = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Sp = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      xp = ["color", "outlineColor"],
-      Lp = 1 + 3 * xp.length + Sp.length + 1,
-      Yp = Math.ceil(8 * Lp / Math.log2(62)),
-      Dp = op.length + Yp;
+    var WT = mT(34233);
+    const zT = "XH1-",
+      MT = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      gT = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      nT = ["color", "outlineColor"],
+      HT = 1 + 3 * nT.length + gT.length + 1,
+      kT = Math.ceil(8 * HT / Math.log2(62)),
+      jT = zT.length + kT;
 
-    function Ap(pp) {
-      let ip = 90;
-      for (const cp of pp) ip = 31 * ip + cp & 255;
-      return ip
+    function lT(TT) {
+      let UT = 90;
+      for (const mT of TT) UT = 31 * UT + mT & 255;
+      return UT
     }
-    const Pp = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Wp = BigInt(Pp.length);
+    const LT = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      pT = BigInt(LT.length);
 
-    function yp(pp, ip) {
-      let cp = 0n;
-      for (const op of pp) {
-        const pp = Pp.indexOf(op);
-        if (pp < 0) return null;
-        cp = cp * Wp + BigInt(pp)
+    function BT(TT, UT) {
+      let mT = 0n;
+      for (const zT of TT) {
+        const TT = LT.indexOf(zT);
+        if (TT < 0) return null;
+        mT = mT * pT + BigInt(TT)
       }
-      if (cp >> BigInt(8 * ip) !== 0n) return null;
-      const Op = [];
-      for (let op = 0; op < ip; op++) Op.unshift(Number(0xffn & cp)), cp >>= 8n;
-      return Op
+      if (mT >> BigInt(8 * UT) !== 0n) return null;
+      const WT = [];
+      for (let zT = 0; zT < UT; zT++) WT.unshift(Number(0xffn & mT)), mT >>= 8n;
+      return WT
     }
 
-    function Up(pp) {
-      let ip = "shapes" === pp.style ? 1 : 0;
-      Ip.forEach(((cp, Op) => {
-        pp[cp] && (ip |= 1 << Op + 1)
+    function ZT(TT) {
+      let UT = "shapes" === TT.style ? 1 : 0;
+      MT.forEach(((mT, WT) => {
+        TT[mT] && (UT |= 1 << WT + 1)
       }));
-      const cp = [ip];
-      for (const op of xp) {
-        const ip = (0, Op.g)(op, pp[op]);
-        cp.push(ip >> 16 & 255, ip >> 8 & 255, 255 & ip)
+      const mT = [UT];
+      for (const zT of nT) {
+        const UT = (0, WT.g)(zT, TT[zT]);
+        mT.push(UT >> 16 & 255, UT >> 8 & 255, 255 & UT)
       }
-      for (const op of Sp) {
+      for (const zT of gT) {
         const {
-          min: ip,
-          step: Ip
-        } = Op.b[op];
-        cp.push(Math.round(((0, Op.g)(op, pp[op]) - ip) / Ip))
+          min: UT,
+          step: MT
+        } = WT.b[zT];
+        mT.push(Math.round(((0, WT.g)(zT, TT[zT]) - UT) / MT))
       }
-      return cp.push(Ap(cp)), op + function(pp, ip) {
-        let cp = 0n;
-        for (const op of pp) cp = cp << 8n | BigInt(op);
-        let Op = "";
-        for (let op = 0; op < ip; op++) Op = Pp[Number(cp % Wp)] + Op, cp /= Wp;
-        return Op
-      }(cp, Yp)
+      return mT.push(lT(mT)), zT + function(TT, UT) {
+        let mT = 0n;
+        for (const zT of TT) mT = mT << 8n | BigInt(zT);
+        let WT = "";
+        for (let zT = 0; zT < UT; zT++) WT = LT[Number(mT % pT)] + WT, mT /= pT;
+        return WT
+      }(mT, kT)
     }
 
-    function wp(pp) {
-      for (const ip of pp.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Yp}})`, "gi"))) {
-        const pp = vp(yp(ip[1], Lp));
-        if (pp) return pp
+    function cT(TT) {
+      for (const UT of TT.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${kT}})`, "gi"))) {
+        const TT = vT(BT(UT[1], HT));
+        if (TT) return TT
       }
       return null
     }
 
-    function vp(pp) {
-      if (!pp || pp.length !== Lp || Ap(pp.slice(0, -1)) !== pp[pp.length - 1]) return null;
-      const ip = pp[0],
-        cp = {
-          ...Op.d,
-          style: 1 & ip ? "shapes" : "classic"
+    function vT(TT) {
+      if (!TT || TT.length !== HT || lT(TT.slice(0, -1)) !== TT[TT.length - 1]) return null;
+      const UT = TT[0],
+        mT = {
+          ...WT.e,
+          style: 1 & UT ? "shapes" : "classic"
         };
-      Ip.forEach(((pp, Op) => {
-        cp[pp] = 0 !== (ip & 1 << Op + 1)
+      MT.forEach(((TT, WT) => {
+        mT[TT] = 0 !== (UT & 1 << WT + 1)
       }));
-      let op = 1;
-      for (const Op of xp) cp[Op] = pp[op] << 16 | pp[op + 1] << 8 | pp[op + 2], op += 3;
-      for (const Ip of Sp) {
+      let zT = 1;
+      for (const WT of nT) mT[WT] = TT[zT] << 16 | TT[zT + 1] << 8 | TT[zT + 2], zT += 3;
+      for (const MT of gT) {
         const {
-          min: ip,
-          step: Sp
-        } = Op.b[Ip];
-        cp[Ip] = (0, Op.g)(Ip, ip + pp[op] * Sp), op++
+          min: UT,
+          step: gT
+        } = WT.b[MT];
+        mT[MT] = (0, WT.g)(MT, UT + TT[zT] * gT), zT++
       }
-      return cp
+      return mT
     }
   },
-  34392: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op,
-      d: () => op,
-      g: () => Ip,
-      j: () => Yp,
-      n: () => Lp,
-      o: () => Dp,
-      p: () => xp,
-      q: () => Sp
+  34233: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT,
+      e: () => zT,
+      g: () => MT,
+      i: () => kT,
+      m: () => HT,
+      n: () => jT,
+      o: () => nT,
+      s: () => gT
     });
-    const Op = {
+    const WT = {
         opacity: {
           min: 5,
           max: 100,
@@ -661,7 +661,7 @@ export const modules = {
           step: 1
         }
       },
-      op = Object.freeze({
+      zT = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -682,224 +682,224 @@ export const modules = {
         forGuns: !1
       });
 
-    function Ip(pp, ip) {
-      var cp;
+    function MT(TT, UT) {
+      var mT;
       const {
-        min: Ip,
-        max: Sp,
-        step: xp
-      } = Op[pp];
-      if (!Number.isFinite(ip)) return op[pp];
-      const Lp = (null !== (cp = String(xp).split(".")[1]) && void 0 !== cp ? cp : "").length,
-        Yp = Number((Math.round(ip / xp) * xp).toFixed(Lp));
-      return Math.min(Sp, Math.max(Ip, Yp))
+        min: MT,
+        max: gT,
+        step: nT
+      } = WT[TT];
+      if (!Number.isFinite(UT)) return zT[TT];
+      const HT = (null !== (mT = String(nT).split(".")[1]) && void 0 !== mT ? mT : "").length,
+        kT = Number((Math.round(UT / nT) * nT).toFixed(HT));
+      return Math.min(gT, Math.max(MT, kT))
     }
 
-    function Sp(pp, ip, cp) {
-      const Op = "number" === typeof cp ? Ip(ip, cp) : cp;
+    function gT(TT, UT, mT) {
+      const WT = "number" === typeof mT ? MT(UT, mT) : mT;
       return {
-        ...pp,
-        [ip]: Op
+        ...TT,
+        [UT]: WT
       }
     }
 
-    function xp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(op).every((Op => cp.includes(Op) || pp[Op] === ip[Op]))
+    function nT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(zT).every((WT => mT.includes(WT) || TT[WT] === UT[WT]))
     }
 
-    function Lp(pp) {
-      return xp(pp, op)
+    function HT(TT) {
+      return nT(TT, zT)
     }
 
-    function Yp(pp) {
-      return `#${pp.toString(16).padStart(6,"0")}`
+    function kT(TT) {
+      return `#${TT.toString(16).padStart(6,"0")}`
     }
 
-    function Dp(pp) {
-      const ip = /^#?([0-9a-f]{6})$/i.exec(pp.trim());
-      return ip ? parseInt(ip[1], 16) : null
+    function jT(TT) {
+      const UT = /^#?([0-9a-f]{6})$/i.exec(TT.trim());
+      return UT ? parseInt(UT[1], 16) : null
     }
   },
-  34420: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ap,
-      f: () => Pp
+  34253: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => lT,
+      g: () => LT
     });
-    var Op = cp(62),
-      op = cp(44),
-      Ip = cp(34411),
-      Sp = cp(34392);
-    const xp = "crosshairCode";
-    let Lp = null;
-    const Yp = new Set;
+    var WT = mT(63),
+      zT = mT(44),
+      MT = mT(34245),
+      gT = mT(34233);
+    const nT = "crosshairCode";
+    let HT = null;
+    const kT = new Set;
 
-    function Dp() {
-      if (null === Lp) {
-        var pp;
-        const ip = op.h.getItem(xp);
-        Lp = null !== (pp = "string" === typeof ip ? (0, Ip.e)(ip) : null) && void 0 !== pp ? pp : Sp.d
+    function jT() {
+      if (null === HT) {
+        var TT;
+        const UT = zT.l.getItem(nT);
+        HT = null !== (TT = "string" === typeof UT ? (0, MT.f)(UT) : null) && void 0 !== TT ? TT : gT.e
       }
-      return Lp
+      return HT
     }
 
-    function Ap(pp) {
-      Lp = pp, (0, Sp.n)(pp) ? op.h.removeItem(xp) : op.h.setItem(xp, (0, Ip.h)(pp));
-      for (const ip of Yp) ip()
+    function lT(TT) {
+      HT = TT, (0, gT.m)(TT) ? zT.l.removeItem(nT) : zT.l.setItem(nT, (0, MT.h)(TT));
+      for (const UT of kT) UT()
     }
 
-    function Pp() {
-      const [pp, ip] = (0, Op.useState)(Dp);
-      return (0, Op.useEffect)((() => {
-        const pp = () => {
-          ip(Dp())
+    function LT() {
+      const [TT, UT] = (0, WT.useState)(jT);
+      return (0, WT.useEffect)((() => {
+        const TT = () => {
+          UT(jT())
         };
-        return pp(), cp = pp, Yp.add(cp), () => {
-          Yp.delete(cp)
+        return TT(), mT = TT, kT.add(mT), () => {
+          kT.delete(mT)
         };
-        var cp
-      }), []), pp
+        var mT
+      }), []), TT
     }
   },
-  36959: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      c: () => Lp,
-      e: () => Sp
+  36866: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT,
+      h: () => HT,
+      l: () => gT
     });
-    var Op = cp(640),
-      op = cp(2849);
+    var WT = mT(653),
+      zT = mT(2875);
 
-    function Ip(pp) {
-      return pp === (0, op.g)().Fpp ? (0, op.g)().NJ : pp
+    function MT(TT) {
+      return TT === (0, zT.h)().rTT ? (0, zT.h)().VV : TT
     }
 
-    function Sp(pp) {
-      return !(0, Op.G)(pp) && Ip(pp) === (0, op.g)().NJ
+    function gT(TT) {
+      return !(0, WT.E)(TT) && MT(TT) === (0, zT.h)().VV
     }
-    const xp = "gravity";
+    const nT = "gravity";
 
-    function Lp() {
-      return (0, op.g)().physics[xp][1]
+    function HT() {
+      return (0, zT.h)().physics[nT][1]
     }
   },
-  36942: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => kp
+  36851: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => eT
     });
-    var Op = cp(36948),
-      op = cp(195),
-      Ip = cp(4974),
-      Sp = cp(36950),
-      xp = cp(36654),
-      Lp = cp(37001),
-      Yp = cp(36959),
-      Dp = cp(343),
-      Ap = cp.n(Dp),
-      Pp = cp(1211),
-      Wp = cp(2849),
-      yp = cp(36994),
-      Up = cp(34),
-      wp = cp(25),
-      vp = cp(36965),
-      tp = cp(36974),
-      Hp = cp(36980);
-    const dp = new Set(["note"]);
-    const ep = {
-      stop: () => ep,
-      fade: () => ep,
-      rate: () => ep,
+    var WT = mT(36855),
+      zT = mT(208),
+      MT = mT(4959),
+      gT = mT(36862),
+      nT = mT(36513),
+      HT = mT(36904),
+      kT = mT(36866),
+      jT = mT(375),
+      lT = mT.n(jT),
+      LT = mT(1302),
+      pT = mT(2875),
+      BT = mT(36901),
+      ZT = mT(31),
+      cT = mT(25),
+      vT = mT(36875),
+      fT = mT(36882),
+      qT = mT(36889);
+    const iT = new Set(["note"]);
+    const bT = {
+      stop: () => bT,
+      fade: () => bT,
+      rate: () => bT,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => ep,
-      setPannerAttr: () => ep,
-      setPosition: () => ep
+      setRelativeVolume: () => bT,
+      setPannerAttr: () => bT,
+      setPosition: () => bT
     };
-    class jp {
-      constructor(pp) {
-        let ip, {
-          src: cp,
-          volumeScalar: op,
-          isSoundSprite: Sp
-        } = pp;
-        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, this._unloaded = !1, Sp ? (ip = (0, Op.e)(cp), this._spriteTrackSrc = ip) : ip = {
-          src: Pp.clientSideServerUrls.staticUrl + cp
-        }, this._volumeMultiplier = new Lp.g, this._volumeMultiplier.setMultiplierType("persistentScalar", op), this._howl = (0, xp.countDecodesAs)(new Ip.Howl({
-          ...ip,
+    class OT {
+      constructor(TT) {
+        let UT, {
+          src: mT,
+          volumeScalar: zT,
+          isSoundSprite: gT
+        } = TT;
+        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, this._unloaded = !1, gT ? (UT = (0, WT.h)(mT), this._spriteTrackSrc = UT) : UT = {
+          src: LT.clientSideServerUrls.staticUrl + mT
+        }, this._volumeMultiplier = new HT.f, this._volumeMultiplier.setMultiplierType("persistentScalar", zT), this._howl = (0, nT.countDecodesAs)(new MT.Howl({
+          ...UT,
           pool: 15
         }), "sheet"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let pp, ip = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
-          cp = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (ip) {
-          var Op;
-          if (null === (Op = this._spriteTrackSrc) || void 0 === Op || !Op.sprite[ip]) throw new Error("No such sprite in your spritetrack");
-          pp = this._howl.play(ip)
-        } else pp = this._howl.play();
-        cp && this._howl.loop(!0, pp);
-        let op = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), pp);
-        const Ip = {
+        let TT, UT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
+          mT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (UT) {
+          var WT;
+          if (null === (WT = this._spriteTrackSrc) || void 0 === WT || !WT.sprite[UT]) throw new Error("No such sprite in your spritetrack");
+          TT = this._howl.play(UT)
+        } else TT = this._howl.play();
+        mT && this._howl.loop(!0, TT);
+        let zT = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), TT);
+        const MT = {
           stop: () => {
-            var ip;
-            return null === (ip = this.liveHowl()) || void 0 === ip || ip.stop(pp), Ip
+            var UT;
+            return null === (UT = this.liveHowl()) || void 0 === UT || UT.stop(TT), MT
           },
-          fade: (ip, cp, Op) => {
-            var op;
-            return null === (op = this.liveHowl()) || void 0 === op || op.fade(ip, cp, Op, pp), Ip
+          fade: (UT, mT, WT) => {
+            var zT;
+            return null === (zT = this.liveHowl()) || void 0 === zT || zT.fade(UT, mT, WT, TT), MT
           },
-          rate: ip => {
-            var cp;
-            return null === (cp = this.liveHowl()) || void 0 === cp || cp.rate(ip, pp), Ip
+          rate: UT => {
+            var mT;
+            return null === (mT = this.liveHowl()) || void 0 === mT || mT.rate(UT, TT), MT
           },
-          stopsAtOnce: () => this._howl.playing(pp) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(TT) && !this._howl._playLock,
           isAlive: () => {
-            const ip = this._howl._soundById(pp);
-            return !this._loadFailed && !!ip && !ip._ended
+            const UT = this._howl._soundById(TT);
+            return !this._loadFailed && !!UT && !UT._ended
           },
-          getDurationMs: () => this._howl._soundById(pp) ? 1e3 * this._howl.duration(pp) / this._howl.rate(pp) : 0,
-          getVolume: () => op * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => op,
-          setRelativeVolume: ip => {
-            var cp;
-            if (ip > 1) throw new Error("Volume should be <= 1");
-            return op = wp.c.get("soundOnFromAd") ? ip : 0, null === (cp = this.liveHowl()) || void 0 === cp || cp.volume(Math.min(1, op * this._volumeMultiplier.getTotalMultipliedVal()), pp), Ip
+          getDurationMs: () => this._howl._soundById(TT) ? 1e3 * this._howl.duration(TT) / this._howl.rate(TT) : 0,
+          getVolume: () => zT * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => zT,
+          setRelativeVolume: UT => {
+            var mT;
+            if (UT > 1) throw new Error("Volume should be <= 1");
+            return zT = cT.b.get("soundOnFromAd") ? UT : 0, null === (mT = this.liveHowl()) || void 0 === mT || mT.volume(Math.min(1, zT * this._volumeMultiplier.getTotalMultipliedVal()), TT), MT
           },
-          setPannerAttr: ip => {
+          setPannerAttr: UT => {
             let {
-              coneInnerAngle: cp,
-              coneOuterAngle: Op = 360,
-              coneOuterGain: op,
-              distanceModel: Sp,
-              maxDistance: xp,
-              panningModel: Lp,
-              refDistance: Yp,
-              rolloffFactor: Dp
-            } = ip;
+              coneInnerAngle: mT,
+              coneOuterAngle: WT = 360,
+              coneOuterGain: zT,
+              distanceModel: gT,
+              maxDistance: nT,
+              panningModel: HT,
+              refDistance: kT,
+              rolloffFactor: jT
+            } = UT;
             return this._setPannerAttr({
-              id: pp,
-              coneInnerAngle: cp,
-              coneOuterAngle: Op,
-              coneOuterGain: op,
-              distanceModel: Sp,
-              maxDistance: xp,
-              panningModel: Lp,
-              refDistance: Yp,
-              rolloffFactor: Dp
-            }), Ip
+              id: TT,
+              coneInnerAngle: mT,
+              coneOuterAngle: WT,
+              coneOuterGain: zT,
+              distanceModel: gT,
+              maxDistance: nT,
+              panningModel: HT,
+              refDistance: kT,
+              rolloffFactor: jT
+            }), MT
           },
-          setPosition: ip => {
-            var cp;
-            return null === (cp = this.liveHowl()) || void 0 === cp || cp.pos(ip[2], ip[1], ip[0], pp), Ip
+          setPosition: UT => {
+            var mT;
+            return null === (mT = this.liveHowl()) || void 0 === mT || mT.pos(UT[2], UT[1], UT[0], TT), MT
           }
         };
-        return Ip
+        return MT
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -908,199 +908,199 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, Sp.d)(this._howl, (() => {
+        (0, gT.d)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(pp) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", pp), this._howl.volume(pp)
+      setGlobalVolume(TT) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", TT), this._howl.volume(TT)
       }
-      _setPannerAttr(pp) {
+      _setPannerAttr(TT) {
         let {
-          id: ip,
-          coneInnerAngle: cp = 360,
-          coneOuterAngle: Op = 360,
-          coneOuterGain: op = 0,
-          distanceModel: Ip = "inverse",
-          maxDistance: Sp = 1e3,
-          panningModel: xp = "HRTF",
-          refDistance: Lp = yp.k,
-          rolloffFactor: Yp = 1
-        } = pp;
-        const Dp = this.liveHowl();
-        if (null === Dp) return;
-        Dp.pannerAttr({
-          coneOuterAngle: Op
-        }, ip);
-        const Ap = {
-          coneInnerAngle: cp,
-          coneOuterAngle: Op,
-          coneOuterGain: op,
-          distanceModel: Ip,
-          maxDistance: Sp,
-          panningModel: xp,
-          refDistance: Lp,
-          rolloffFactor: Yp
+          id: UT,
+          coneInnerAngle: mT = 360,
+          coneOuterAngle: WT = 360,
+          coneOuterGain: zT = 0,
+          distanceModel: MT = "inverse",
+          maxDistance: gT = 1e3,
+          panningModel: nT = "HRTF",
+          refDistance: HT = BT.k,
+          rolloffFactor: kT = 1
+        } = TT;
+        const jT = this.liveHowl();
+        if (null === jT) return;
+        jT.pannerAttr({
+          coneOuterAngle: WT
+        }, UT);
+        const lT = {
+          coneInnerAngle: mT,
+          coneOuterAngle: WT,
+          coneOuterGain: zT,
+          distanceModel: MT,
+          maxDistance: gT,
+          panningModel: nT,
+          refDistance: HT,
+          rolloffFactor: kT
         };
-        Dp.pannerAttr(Ap, ip)
+        jT.pannerAttr(lT, UT)
       }
     }
-    const kp = new class {
+    const eT = new class {
       constructor() {
-        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new vp.b, Up.m.subscribe("appManagerUpdated|soundVolume", (pp => {
-          const ip = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
-          for (const cp of ip) cp.setGlobalVolume(pp)
+        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new vT.b, ZT.j.subscribe("appManagerUpdated|soundVolume", (TT => {
+          const UT = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
+          for (const mT of UT) mT.setGlobalVolume(TT)
         }))
       }
-      play(pp, ip) {
-        var cp;
-        let Ip, Sp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (cp = (0, Wp.g)()) || void 0 === cp ? void 0 : cp.NJ,
-          xp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : yp.g,
-          Lp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : yp.k,
-          Dp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var Pp;
-        (0, Wp.g)() ? Ip = !!Array.isArray(Sp) || (0, Yp.b)(Sp) !== (null === (Pp = (0, Wp.g)()) || void 0 === Pp ? void 0 : Pp.NJ): Ip = !1;
-        const Up = (0, Op.i)(pp),
-          wp = this.loadSheet(Ip ? this.spatialSheets : this.stereoSheets, Up);
-        if (!Ip) {
-          const cp = wp.play(pp, Dp);
-          return cp.setRelativeVolume(ip), cp
+      play(TT, UT) {
+        var mT;
+        let MT, gT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (mT = (0, pT.h)()) || void 0 === mT ? void 0 : mT.VV,
+          nT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BT.g,
+          HT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : BT.k,
+          jT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var LT;
+        (0, pT.h)() ? MT = !!Array.isArray(gT) || (0, kT.e)(gT) !== (null === (LT = (0, pT.h)()) || void 0 === LT ? void 0 : LT.VV): MT = !1;
+        const ZT = (0, WT.i)(TT),
+          cT = this.loadSheet(MT ? this.spatialSheets : this.stereoSheets, ZT);
+        if (!MT) {
+          const mT = cT.play(TT, jT);
+          return mT.setRelativeVolume(UT), mT
         }
-        const tp = (0, Wp.g)(),
-          Hp = Array.isArray(Sp) ? Sp : tp.Yk.sH(Sp),
-          jp = tp.Yk.sH(tp.NJ);
-        if (!Hp || Ap().sqrDist(Hp, jp) > xp * xp) return ep;
-        let kp;
-        if (!Dp) {
+        const fT = (0, pT.h)(),
+          qT = Array.isArray(gT) ? gT : fT.pY.Aq(gT),
+          OT = fT.pY.Aq(fT.VV);
+        if (!qT || lT().sqrDist(qT, OT) > nT * nT) return bT;
+        let eT;
+        if (!jT) {
           if (!this.spatialVoices.admit({
-              group: dp.has(Up) ? null : (0, vp.f)(pp),
-              loudness: (0, vp.c)(ip, Ap().Yx(Hp, jp), Lp),
+              group: iT.has(ZT) ? null : (0, vT.h)(TT),
+              loudness: (0, vT.e)(UT, lT().sg(qT, OT), HT),
               startMs: performance.now(),
               getDurationMs: () => {
-                var pp, ip;
-                return null !== (pp = null === (ip = kp) || void 0 === ip ? void 0 : ip.getDurationMs()) && void 0 !== pp ? pp : 0
+                var TT, UT;
+                return null !== (TT = null === (UT = eT) || void 0 === UT ? void 0 : UT.getDurationMs()) && void 0 !== TT ? TT : 0
               },
               isAlive: () => {
-                var pp, ip;
-                return null !== (pp = null === (ip = kp) || void 0 === ip ? void 0 : ip.isAlive()) && void 0 !== pp && pp
+                var TT, UT;
+                return null !== (TT = null === (UT = eT) || void 0 === UT ? void 0 : UT.isAlive()) && void 0 !== TT && TT
               },
               canStop: () => {
-                var pp, ip;
-                return null !== (pp = null === (ip = kp) || void 0 === ip ? void 0 : ip.stopsAtOnce()) && void 0 !== pp && pp
+                var TT, UT;
+                return null !== (TT = null === (UT = eT) || void 0 === UT ? void 0 : UT.stopsAtOnce()) && void 0 !== TT && TT
               },
               stop: () => {
-                var pp;
-                null === (pp = kp) || void 0 === pp || pp.stop()
+                var TT;
+                null === (TT = eT) || void 0 === TT || TT.stop()
               }
-            })) return ep
+            })) return bT
         }
-        return kp = wp.play(pp, Dp), kp.setRelativeVolume(ip), kp.setPannerAttr({
-          refDistance: Lp
-        }), kp.setPosition([Hp[0], Hp[1] + op.g.Vw * op.g.playerEyeToHeightRatio, Hp[2]]), kp
+        return eT = cT.play(TT, jT), eT.setRelativeVolume(UT), eT.setPannerAttr({
+          refDistance: HT
+        }), eT.setPosition([qT[0], qT[1] + zT.f.Fc * zT.f.playerEyeToHeightRatio, qT[2]]), eT
       }
-      preload(pp) {
-        this.loadSheet(this.stereoSheets, (0, Op.i)(pp))
+      preload(TT) {
+        this.loadSheet(this.stereoSheets, (0, WT.i)(TT))
       }
-      loadSheet(pp, ip) {
-        let cp = pp[ip];
-        return cp || ((0, Hp.b)(ip), cp = new jp({
-          src: ip,
+      loadSheet(TT, UT) {
+        let mT = TT[UT];
+        return mT || ((0, qT.d)(UT), mT = new OT({
+          src: UT,
           isSoundSprite: !0,
           volumeScalar: 1
-        }), cp.setGlobalVolume(wp.c.get("soundVolume")), pp[ip] = cp), cp
+        }), mT.setGlobalVolume(cT.b.get("soundVolume")), TT[UT] = mT), mT
       }
       freeSheetsAfterGame() {
-        for (const pp of [this.stereoSheets, this.spatialSheets])
-          for (const [ip, cp] of Object.entries(pp)) !tp.b.has(ip) && cp.loaded() && (cp.unloadOnceIdle(), delete pp[ip])
+        for (const TT of [this.stereoSheets, this.spatialSheets])
+          for (const [UT, mT] of Object.entries(TT)) !fT.c.has(UT) && mT.loaded() && (mT.unloadOnceIdle(), delete TT[UT])
       }
     }
   },
-  37039: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      var cp, Op, op, Ip, Sp, xp, Lp, Yp;
-      return pp.name === ip.name && ((null === (cp = pp.attributes) || void 0 === cp || null === (Op = cp.customAttributes) || void 0 === Op ? void 0 : Op.stackKey) === (null === (op = ip.attributes) || void 0 === op || null === (Ip = op.customAttributes) || void 0 === Ip ? void 0 : Ip.stackKey) && (!0 !== (null === (Sp = pp.attributes) || void 0 === Sp || null === (xp = Sp.customAttributes) || void 0 === xp ? void 0 : xp.unstackable) && !0 !== (null === (Lp = ip.attributes) || void 0 === Lp || null === (Yp = Lp.customAttributes) || void 0 === Yp ? void 0 : Yp.unstackable)))
+  36937: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      var mT, WT, zT, MT, gT, nT, HT, kT;
+      return TT.name === UT.name && ((null === (mT = TT.attributes) || void 0 === mT || null === (WT = mT.customAttributes) || void 0 === WT ? void 0 : WT.stackKey) === (null === (zT = UT.attributes) || void 0 === zT || null === (MT = zT.customAttributes) || void 0 === MT ? void 0 : MT.stackKey) && (!0 !== (null === (gT = TT.attributes) || void 0 === gT || null === (nT = gT.customAttributes) || void 0 === nT ? void 0 : nT.unstackable) && !0 !== (null === (HT = UT.attributes) || void 0 === HT || null === (kT = HT.customAttributes) || void 0 === kT ? void 0 : kT.unstackable)))
     }
-    cp.d(ip, {
-      d: () => Op
+    mT.d(UT, {
+      d: () => WT
     })
   },
-  37146: (pp, ip, cp) => {
-    function Op(pp) {
-      return pp.includes("Leaf Bed")
+  37032: (TT, UT, mT) => {
+    function WT(TT) {
+      return TT.includes("Leaf Bed")
     }
 
-    function op(pp) {
-      return / Bed(?: Head)?(?:\||$)/.test(pp) && !Op(pp)
+    function zT(TT) {
+      return / Bed(?: Head)?(?:\||$)/.test(TT) && !WT(TT)
     }
 
-    function Ip(pp) {
-      return pp.includes(" Strongbed")
+    function MT(TT) {
+      return TT.includes(" Strongbed")
     }
 
-    function Sp(pp) {
-      return Op(pp) || op(pp) || Ip(pp)
+    function gT(TT) {
+      return WT(TT) || zT(TT) || MT(TT)
     }
-    cp.d(ip, {
-      b: () => Sp,
-      f: () => Op,
-      g: () => Ip,
-      h: () => op
+    mT.d(UT, {
+      c: () => gT,
+      g: () => WT,
+      j: () => MT,
+      l: () => zT
     })
   },
-  37142: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp
+  37030: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT
     });
-    var Op = cp(37146),
-      op = cp(9338);
-    const Ip = [],
-      Sp = [],
-      xp = [],
-      Lp = [];
-    for (const Dp of Object.keys(op.h))(0, Op.f)(Dp) ? Ip.push(Dp) : (0, Op.h)(Dp) && Sp.push(Dp), (0, Op.g)(Dp) && xp.push(Dp), (Dp.includes(" Bed Head") || Dp.includes(" Strongbed Head")) && Lp.push(Dp);
-    const Yp = {
-      leafBeds: Ip,
-      woolBeds: Sp,
-      strongBeds: xp,
-      beds: [...Ip, ...Sp, ...xp],
-      bedHeads: Lp,
+    var WT = mT(37032),
+      zT = mT(9330);
+    const MT = [],
+      gT = [],
+      nT = [],
+      HT = [];
+    for (const jT of Object.keys(zT.k))(0, WT.g)(jT) ? MT.push(jT) : (0, WT.l)(jT) && gT.push(jT), (0, WT.j)(jT) && nT.push(jT), (jT.includes(" Bed Head") || jT.includes(" Strongbed Head")) && HT.push(jT);
+    const kT = {
+      leafBeds: MT,
+      woolBeds: gT,
+      strongBeds: nT,
+      beds: [...MT, ...gT, ...nT],
+      bedHeads: HT,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6605: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      g: () => op,
-      h: () => Lp,
-      i: () => Ip,
-      k: () => Yp,
-      l: () => Op,
-      m: () => xp
+  6542: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT,
+      g: () => zT,
+      i: () => HT,
+      l: () => MT,
+      p: () => kT,
+      q: () => WT,
+      u: () => nT
     });
-    let Op = function(pp) {
-        return pp[pp.DEFAULT = 0] = "DEFAULT", pp[pp.BOAT = 1] = "BOAT", pp[pp.GLIDER = 2] = "GLIDER", pp[pp.BALLOON = 3] = "BALLOON", pp[pp.SLEEPING = 4] = "SLEEPING", pp[pp.RIDING_MOB = 5] = "RIDING_MOB", pp[pp.CAR = 6] = "CAR", pp[pp.HOVERCRAFT = 7] = "HOVERCRAFT", pp
+    let WT = function(TT) {
+        return TT[TT.DEFAULT = 0] = "DEFAULT", TT[TT.BOAT = 1] = "BOAT", TT[TT.GLIDER = 2] = "GLIDER", TT[TT.BALLOON = 3] = "BALLOON", TT[TT.SLEEPING = 4] = "SLEEPING", TT[TT.RIDING_MOB = 5] = "RIDING_MOB", TT[TT.CAR = 6] = "CAR", TT[TT.HOVERCRAFT = 7] = "HOVERCRAFT", TT
       }({}),
-      op = function(pp) {
-        return pp[pp.WOOD = 0] = "WOOD", pp[pp.OBSIDIAN = 1] = "OBSIDIAN", pp[pp.SPEED = 2] = "SPEED", pp
+      zT = function(TT) {
+        return TT[TT.WOOD = 0] = "WOOD", TT[TT.OBSIDIAN = 1] = "OBSIDIAN", TT[TT.SPEED = 2] = "SPEED", TT
       }({}),
-      Ip = function(pp) {
-        return pp[pp.WOOD = 0] = "WOOD", pp[pp.IRON = 1] = "IRON", pp[pp.GOLD = 2] = "GOLD", pp[pp.DIAMOND = 3] = "DIAMOND", pp
+      MT = function(TT) {
+        return TT[TT.WOOD = 0] = "WOOD", TT[TT.IRON = 1] = "IRON", TT[TT.GOLD = 2] = "GOLD", TT[TT.DIAMOND = 3] = "DIAMOND", TT
       }({}),
-      Sp = function(pp) {
-        return pp[pp.YELLOW = 0] = "YELLOW", pp[pp.WHITE = 1] = "WHITE", pp[pp.RED = 2] = "RED", pp[pp.PURPLE = 3] = "PURPLE", pp[pp.PINK = 4] = "PINK", pp[pp.ORANGE = 5] = "ORANGE", pp[pp.MAGENTA = 6] = "MAGENTA", pp[pp.LIME = 7] = "LIME", pp[pp.LIGHT_GRAY = 8] = "LIGHT_GRAY", pp[pp.LIGHT_BLUE = 9] = "LIGHT_BLUE", pp[pp.GREEN = 10] = "GREEN", pp[pp.GRAY = 11] = "GRAY", pp[pp.CYAN = 12] = "CYAN", pp[pp.BROWN = 13] = "BROWN", pp[pp.BLUE = 14] = "BLUE", pp[pp.BLACK = 15] = "BLACK", pp
+      gT = function(TT) {
+        return TT[TT.YELLOW = 0] = "YELLOW", TT[TT.WHITE = 1] = "WHITE", TT[TT.RED = 2] = "RED", TT[TT.PURPLE = 3] = "PURPLE", TT[TT.PINK = 4] = "PINK", TT[TT.ORANGE = 5] = "ORANGE", TT[TT.MAGENTA = 6] = "MAGENTA", TT[TT.LIME = 7] = "LIME", TT[TT.LIGHT_GRAY = 8] = "LIGHT_GRAY", TT[TT.LIGHT_BLUE = 9] = "LIGHT_BLUE", TT[TT.GREEN = 10] = "GREEN", TT[TT.GRAY = 11] = "GRAY", TT[TT.CYAN = 12] = "CYAN", TT[TT.BROWN = 13] = "BROWN", TT[TT.BLUE = 14] = "BLUE", TT[TT.BLACK = 15] = "BLACK", TT
       }({}),
-      xp = function(pp) {
-        return pp[pp.ROTATION_1 = 0] = "ROTATION_1", pp[pp.ROTATION_2 = 1] = "ROTATION_2", pp[pp.ROTATION_3 = 2] = "ROTATION_3", pp[pp.ROTATION_4 = 3] = "ROTATION_4", pp
+      nT = function(TT) {
+        return TT[TT.ROTATION_1 = 0] = "ROTATION_1", TT[TT.ROTATION_2 = 1] = "ROTATION_2", TT[TT.ROTATION_3 = 2] = "ROTATION_3", TT[TT.ROTATION_4 = 3] = "ROTATION_4", TT
       }({}),
-      Lp = function(pp) {
-        return pp[pp.KART = 0] = "KART", pp[pp.OFF_ROADER = 1] = "OFF_ROADER", pp[pp.CAR = 2] = "CAR", pp[pp.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", pp[pp.ARMORED_CAR = 4] = "ARMORED_CAR", pp[pp.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", pp[pp.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", pp[pp.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", pp
+      HT = function(TT) {
+        return TT[TT.KART = 0] = "KART", TT[TT.OFF_ROADER = 1] = "OFF_ROADER", TT[TT.CAR = 2] = "CAR", TT[TT.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", TT[TT.ARMORED_CAR = 4] = "ARMORED_CAR", TT[TT.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", TT[TT.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", TT[TT.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", TT
       }({});
-    Op.DEFAULT, Op.BOAT, op.SPEED, Op.GLIDER, Ip.DIAMOND, Op.BALLOON, Sp.BLACK, Op.SLEEPING, xp.ROTATION_4, Op.RIDING_MOB, Op.CAR, Lp.MOONSTONE_MINING_DRILL, Op.HOVERCRAFT;
-    let Yp = function(pp) {
-      return pp[pp.NORMAL = 0] = "NORMAL", pp[pp.GLIDING = 1] = "GLIDING", pp[pp.FLOATING = 2] = "FLOATING", pp
+    WT.DEFAULT, WT.BOAT, zT.SPEED, WT.GLIDER, MT.DIAMOND, WT.BALLOON, gT.BLACK, WT.SLEEPING, nT.ROTATION_4, WT.RIDING_MOB, WT.CAR, HT.MOONSTONE_MINING_DRILL, WT.HOVERCRAFT;
+    let kT = function(TT) {
+      return TT[TT.NORMAL = 0] = "NORMAL", TT[TT.GLIDING = 1] = "GLIDING", TT[TT.FLOATING = 2] = "FLOATING", TT
     }({})
   },
-  34402: () => {}
+  34243: () => {}
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

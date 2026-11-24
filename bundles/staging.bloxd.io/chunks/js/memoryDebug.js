@@ -1,66 +1,66 @@
 export const id = 40;
 export const ids = [40];
 export const modules = {
-  4811: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      startMemoryDebug: () => Dp
+  4790: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      startMemoryDebug: () => jT
     });
-    var Op = cp(2963),
-      op = cp(2908);
-    const Ip = 6e4,
-      Sp = 5,
-      xp = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var Lp = cp(659);
-    const Yp = [];
+    var WT = mT(2992),
+      zT = mT(2929);
+    const MT = 6e4,
+      gT = 5,
+      nT = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var HT = mT(684);
+    const kT = [];
 
-    function Dp() {
-      (0, op.v)() && (0, op.C)(Pp), Ap(), setInterval(Ap, Ip)
+    function jT() {
+      (0, zT.v)() && (0, zT.E)(LT), lT(), setInterval(lT, MT)
     }
 
-    function Ap() {
-      var pp;
+    function lT() {
+      var TT;
       const {
-        client: ip,
-        playedS: cp,
-        snapshot: Ip
-      } = (0, Lp.q)(), Dp = null !== (pp = Ip.wasmMainMiB) && void 0 !== pp ? pp : function() {
+        client: UT,
+        playedS: mT,
+        snapshot: MT
+      } = (0, HT.m)(), jT = null !== (TT = MT.wasmMainMiB) && void 0 !== TT ? TT : function() {
         try {
-          return (0, Lp.O)((0, Op.z)().buffer.byteLength)
+          return (0, HT.G)((0, WT.u)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), Ap = function(pp) {
+      }(), lT = function(TT) {
         let {
-          client: ip,
-          playedS: cp,
-          hidden: Op,
-          snapshot: op
-        } = pp;
-        const Ip = [`client=${null!==ip&&void 0!==ip?ip:"none"}`];
-        null !== cp && Ip.push(`playedS=${cp}`);
-        const Sp = op.pageAgeS;
-        "number" === typeof Sp && Ip.push(`pageAgeS=${Sp}`), Ip.push("hidden=" + (Op ? 1 : 0));
-        for (const Lp of xp) {
-          const pp = op[Lp];
-          "number" === typeof pp && Number.isFinite(pp) && Ip.push(`${Lp}=${pp}`)
+          client: UT,
+          playedS: mT,
+          hidden: WT,
+          snapshot: zT
+        } = TT;
+        const MT = [`client=${null!==UT&&void 0!==UT?UT:"none"}`];
+        null !== mT && MT.push(`playedS=${mT}`);
+        const gT = zT.pageAgeS;
+        "number" === typeof gT && MT.push(`pageAgeS=${gT}`), MT.push("hidden=" + (WT ? 1 : 0));
+        for (const HT of nT) {
+          const TT = zT[HT];
+          "number" === typeof TT && Number.isFinite(TT) && MT.push(`${HT}=${TT}`)
         }
-        return Ip.join(" ")
+        return MT.join(" ")
       }({
-        client: ip,
-        playedS: cp,
+        client: UT,
+        playedS: mT,
         hidden: document.hidden,
         snapshot: {
-          ...Ip,
-          wasmMainMiB: Dp
+          ...MT,
+          wasmMainMiB: jT
         }
       });
-      (0, op.v)() ? (Yp.push(Ap), Yp.length >= Sp && Pp()) : (0, op.n)("memory", Ap)
+      (0, zT.v)() ? (kT.push(lT), kT.length >= gT && LT()) : (0, zT.m)("memory", lT)
     }
 
-    function Pp() {
-      for (const pp of Yp.splice(0))(0, op.n)("memory", pp)
+    function LT() {
+      for (const TT of kT.splice(0))(0, zT.m)("memory", TT)
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

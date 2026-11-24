@@ -1,260 +1,260 @@
 export const id = 245;
 export const ids = [244, 245];
 export const modules = {
-  61380: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      RegisterShaderMaterial: () => Op.e,
-      ShaderMaterial: () => Op.q,
-      ShaderMaterialCreateFromSnippetAsync: () => Op.f,
-      ShaderMaterialParse: () => Op.p,
-      ShaderMaterialParseFromFileAsync: () => Op.j,
-      ShaderMaterialParseFromSnippetAsync: () => Op.m
+  61136: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      RegisterShaderMaterial: () => WT.c,
+      ShaderMaterial: () => WT.o,
+      ShaderMaterialCreateFromSnippetAsync: () => WT.d,
+      ShaderMaterialParse: () => WT.k,
+      ShaderMaterialParseFromFileAsync: () => WT.e,
+      ShaderMaterialParseFromSnippetAsync: () => WT.h
     });
-    var Op = cp(40647);
-    (0, Op.e)()
+    var WT = mT(40593);
+    (0, WT.c)()
   },
-  37985: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op
+  37885: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT
     });
-    var Op = cp(37989);
-    class op {
-      static GetPlanes(pp) {
-        const ip = [];
-        for (let cp = 0; cp < 6; cp++) ip.push(new Op.e(0, 0, 0, 0));
-        return op.GetPlanesToRef(pp, ip), ip
+    var WT = mT(37889);
+    class zT {
+      static GetPlanes(TT) {
+        const UT = [];
+        for (let mT = 0; mT < 6; mT++) UT.push(new WT.e(0, 0, 0, 0));
+        return zT.GetPlanesToRef(TT, UT), UT
       }
-      static GetNearPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[2], ip.normal.y = cp[7] + cp[6], ip.normal.z = cp[11] + cp[10], ip.d = cp[15] + cp[14], ip.normalize()
+      static GetNearPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] + mT[2], UT.normal.y = mT[7] + mT[6], UT.normal.z = mT[11] + mT[10], UT.d = mT[15] + mT[14], UT.normalize()
       }
-      static GetFarPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[2], ip.normal.y = cp[7] - cp[6], ip.normal.z = cp[11] - cp[10], ip.d = cp[15] - cp[14], ip.normalize()
+      static GetFarPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] - mT[2], UT.normal.y = mT[7] - mT[6], UT.normal.z = mT[11] - mT[10], UT.d = mT[15] - mT[14], UT.normalize()
       }
-      static GetLeftPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[0], ip.normal.y = cp[7] + cp[4], ip.normal.z = cp[11] + cp[8], ip.d = cp[15] + cp[12], ip.normalize()
+      static GetLeftPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] + mT[0], UT.normal.y = mT[7] + mT[4], UT.normal.z = mT[11] + mT[8], UT.d = mT[15] + mT[12], UT.normalize()
       }
-      static GetRightPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[0], ip.normal.y = cp[7] - cp[4], ip.normal.z = cp[11] - cp[8], ip.d = cp[15] - cp[12], ip.normalize()
+      static GetRightPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] - mT[0], UT.normal.y = mT[7] - mT[4], UT.normal.z = mT[11] - mT[8], UT.d = mT[15] - mT[12], UT.normalize()
       }
-      static GetTopPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[1], ip.normal.y = cp[7] - cp[5], ip.normal.z = cp[11] - cp[9], ip.d = cp[15] - cp[13], ip.normalize()
+      static GetTopPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] - mT[1], UT.normal.y = mT[7] - mT[5], UT.normal.z = mT[11] - mT[9], UT.d = mT[15] - mT[13], UT.normalize()
       }
-      static GetBottomPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[1], ip.normal.y = cp[7] + cp[5], ip.normal.z = cp[11] + cp[9], ip.d = cp[15] + cp[13], ip.normalize()
+      static GetBottomPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] + mT[1], UT.normal.y = mT[7] + mT[5], UT.normal.z = mT[11] + mT[9], UT.d = mT[15] + mT[13], UT.normalize()
       }
-      static GetPlanesToRef(pp, ip) {
-        op.GetNearPlaneToRef(pp, ip[0]), op.GetFarPlaneToRef(pp, ip[1]), op.GetLeftPlaneToRef(pp, ip[2]), op.GetRightPlaneToRef(pp, ip[3]), op.GetTopPlaneToRef(pp, ip[4]), op.GetBottomPlaneToRef(pp, ip[5])
+      static GetPlanesToRef(TT, UT) {
+        zT.GetNearPlaneToRef(TT, UT[0]), zT.GetFarPlaneToRef(TT, UT[1]), zT.GetLeftPlaneToRef(TT, UT[2]), zT.GetRightPlaneToRef(TT, UT[3]), zT.GetTopPlaneToRef(TT, UT[4]), zT.GetBottomPlaneToRef(TT, UT[5])
       }
-      static IsPointInFrustum(pp, ip) {
-        for (let cp = 0; cp < 6; cp++)
-          if (ip[cp].dotCoordinate(pp) < 0) return !1;
+      static IsPointInFrustum(TT, UT) {
+        for (let mT = 0; mT < 6; mT++)
+          if (UT[mT].dotCoordinate(TT) < 0) return !1;
         return !0
       }
     }
   },
-  37989: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op
+  37889: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => zT
     });
-    var Op = cp(37320);
-    class op {
-      constructor(pp, ip, cp, op) {
-        this.normal = new Op.o(pp, ip, cp), this.d = op
+    var WT = mT(37188);
+    class zT {
+      constructor(TT, UT, mT, zT) {
+        this.normal = new WT.p(TT, UT, mT), this.d = zT
       }
-      BOp() {
+      cWT() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new op(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new zT(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let pp = this.normal.getHashCode();
-        return pp = 397 * pp ^ this.d, pp
+        let TT = this.normal.getHashCode();
+        return TT = 397 * TT ^ this.d, TT
       }
       normalize() {
-        const pp = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let ip = 0;
-        return 0 !== pp && (ip = 1 / pp), this.normal.x *= ip, this.normal.y *= ip, this.normal.z *= ip, this.d *= ip, this
+        const TT = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let UT = 0;
+        return 0 !== TT && (UT = 1 / TT), this.normal.x *= UT, this.normal.y *= UT, this.normal.z *= UT, this.d *= UT, this
       }
-      transform(pp) {
-        const ip = op._TmpMatrix;
-        pp.invertToRef(ip);
-        const cp = ip.m,
-          Op = this.normal.x,
-          Ip = this.normal.y,
-          Sp = this.normal.z,
-          xp = this.d,
-          Lp = Op * cp[0] + Ip * cp[1] + Sp * cp[2] + xp * cp[3],
-          Yp = Op * cp[4] + Ip * cp[5] + Sp * cp[6] + xp * cp[7],
-          Dp = Op * cp[8] + Ip * cp[9] + Sp * cp[10] + xp * cp[11],
-          Ap = Op * cp[12] + Ip * cp[13] + Sp * cp[14] + xp * cp[15];
-        return new op(Lp, Yp, Dp, Ap)
+      transform(TT) {
+        const UT = zT._TmpMatrix;
+        TT.invertToRef(UT);
+        const mT = UT.m,
+          WT = this.normal.x,
+          MT = this.normal.y,
+          gT = this.normal.z,
+          nT = this.d,
+          HT = WT * mT[0] + MT * mT[1] + gT * mT[2] + nT * mT[3],
+          kT = WT * mT[4] + MT * mT[5] + gT * mT[6] + nT * mT[7],
+          jT = WT * mT[8] + MT * mT[9] + gT * mT[10] + nT * mT[11],
+          lT = WT * mT[12] + MT * mT[13] + gT * mT[14] + nT * mT[15];
+        return new zT(HT, kT, jT, lT)
       }
-      dotCoordinate(pp) {
-        return this.normal.x * pp.x + this.normal.y * pp.y + this.normal.z * pp.z + this.d
+      dotCoordinate(TT) {
+        return this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z + this.d
       }
-      copyFromPoints(pp, ip, cp) {
-        const Op = ip.x - pp.x,
-          op = ip.y - pp.y,
-          Ip = ip.z - pp.z,
-          Sp = cp.x - pp.x,
-          xp = cp.y - pp.y,
-          Lp = cp.z - pp.z,
-          Yp = op * Lp - Ip * xp,
-          Dp = Ip * Sp - Op * Lp,
-          Ap = Op * xp - op * Sp,
-          Pp = Math.sqrt(Yp * Yp + Dp * Dp + Ap * Ap);
-        let Wp;
-        return Wp = 0 !== Pp ? 1 / Pp : 0, this.normal.x = Yp * Wp, this.normal.y = Dp * Wp, this.normal.z = Ap * Wp, this.d = -(this.normal.x * pp.x + this.normal.y * pp.y + this.normal.z * pp.z), this
+      copyFromPoints(TT, UT, mT) {
+        const WT = UT.x - TT.x,
+          zT = UT.y - TT.y,
+          MT = UT.z - TT.z,
+          gT = mT.x - TT.x,
+          nT = mT.y - TT.y,
+          HT = mT.z - TT.z,
+          kT = zT * HT - MT * nT,
+          jT = MT * gT - WT * HT,
+          lT = WT * nT - zT * gT,
+          LT = Math.sqrt(kT * kT + jT * jT + lT * lT);
+        let pT;
+        return pT = 0 !== LT ? 1 / LT : 0, this.normal.x = kT * pT, this.normal.y = jT * pT, this.normal.z = lT * pT, this.d = -(this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z), this
       }
-      isFrontFacingTo(pp, ip) {
-        return Op.o.Dot(this.normal, pp) <= ip
+      isFrontFacingTo(TT, UT) {
+        return WT.p.Dot(this.normal, TT) <= UT
       }
-      signedDistanceTo(pp) {
-        return Op.o.Dot(pp, this.normal) + this.d
+      signedDistanceTo(TT) {
+        return WT.p.Dot(TT, this.normal) + this.d
       }
-      static FromArray(pp) {
-        return new op(pp[0], pp[1], pp[2], pp[3])
+      static FromArray(TT) {
+        return new zT(TT[0], TT[1], TT[2], TT[3])
       }
-      static FromPoints(pp, ip, cp) {
-        const Op = new op(0, 0, 0, 0);
-        return Op.copyFromPoints(pp, ip, cp), Op
+      static FromPoints(TT, UT, mT) {
+        const WT = new zT(0, 0, 0, 0);
+        return WT.copyFromPoints(TT, UT, mT), WT
       }
-      static FromPositionAndNormal(pp, ip) {
-        const cp = new op(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(pp, ip, cp)
+      static FromPositionAndNormal(TT, UT) {
+        const mT = new zT(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(TT, UT, mT)
       }
-      static FromPositionAndNormalToRef(pp, ip, cp) {
-        return cp.normal.rM(ip), cp.normal.normalize(), cp.d = -pp.dot(cp.normal), cp
+      static FromPositionAndNormalToRef(TT, UT, mT) {
+        return mT.normal.Gw(UT), mT.normal.normalize(), mT.d = -TT.dot(mT.normal), mT
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(pp, ip, cp) {
-        const op = -(ip.x * pp.x + ip.y * pp.y + ip.z * pp.z);
-        return Op.o.Dot(cp, ip) + op
+      static SignedDistanceToPlaneFromPositionAndNormal(TT, UT, mT) {
+        const zT = -(UT.x * TT.x + UT.y * TT.y + UT.z * TT.z);
+        return WT.p.Dot(mT, UT) + zT
       }
     }
-    op._TmpMatrix = Op.b.Identity()
+    zT._TmpMatrix = WT.e.Identity()
   },
-  38900: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
+  38793: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT
     });
-    var Op = cp(38905);
-    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
-      ...pp
-    } : null : pp.clone(ip) : null;
-    class Ip {
-      static DeepCopy(pp, ip, cp, Ip) {
-        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xp = function(pp) {
-          const ip = [];
+    var WT = mT(38800);
+    const zT = (TT, UT, mT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : mT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(UT) : null;
+    class MT {
+      static DeepCopy(TT, UT, mT, MT) {
+        let gT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const nT = function(TT) {
+          const UT = [];
           do {
-            const cp = Object.getOwnPropertyNames(pp);
-            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
-          } while (pp = Object.getPrototypeOf(pp));
-          return ip
-        }(pp);
-        for (const Yp of xp) {
-          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
-          if (Yp.endsWith("Observable")) continue;
-          if (cp && -1 !== cp.indexOf(Yp)) continue;
-          const xp = pp[Yp],
-            Dp = typeof xp;
-          if ("function" !== Dp) try {
-            if ("object" === Dp)
-              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
-              else if (xp instanceof Array) {
-              if (ip[Yp] = [], xp.length > 0)
-                if ("object" == typeof xp[0])
-                  for (let pp = 0; pp < xp.length; pp++) {
-                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
-                  } else ip[Yp] = xp.slice(0)
-            } else ip[Yp] = op(xp, ip, Sp);
-            else ip[Yp] = xp
-          } catch (Lp) {
-            Op.e.Warn(Lp.message)
+            const mT = Object.getOwnPropertyNames(TT);
+            for (const TT of mT) - 1 === UT.indexOf(TT) && UT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return UT
+        }(TT);
+        for (const kT of nT) {
+          if ("_" === kT[0] && (!MT || -1 === MT.indexOf(kT))) continue;
+          if (kT.endsWith("Observable")) continue;
+          if (mT && -1 !== mT.indexOf(kT)) continue;
+          const nT = TT[kT],
+            jT = typeof nT;
+          if ("function" !== jT) try {
+            if ("object" === jT)
+              if (nT instanceof Uint8Array) UT[kT] = Uint8Array.from(nT);
+              else if (nT instanceof Array) {
+              if (UT[kT] = [], nT.length > 0)
+                if ("object" == typeof nT[0])
+                  for (let TT = 0; TT < nT.length; TT++) {
+                    const mT = zT(nT[TT], UT, gT); - 1 === UT[kT].indexOf(mT) && UT[kT].push(mT)
+                  } else UT[kT] = nT.slice(0)
+            } else UT[kT] = zT(nT, UT, gT);
+            else UT[kT] = nT
+          } catch (HT) {
+            WT.b.Warn(HT.message)
           }
         }
       }
     }
   },
-  38124: (pp, ip, cp) => {
-    function Op() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (pp => {
-        const ip = 16 * Math.random() | 0;
-        return ("x" === pp ? ip : 3 & ip | 8).toString(16)
+  38045: (TT, UT, mT) => {
+    function WT() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (TT => {
+        const UT = 16 * Math.random() | 0;
+        return ("x" === TT ? UT : 3 & UT | 8).toString(16)
       }))
     }
-    cp.d(ip, {
-      e: () => Op
+    mT.d(UT, {
+      c: () => WT
     })
   },
-  38905: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  38800: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
-      static _CheckLimit(pp, ip) {
-        let cp = Op._LogLimitOutputs[pp];
-        return cp ? cp.current++ : (cp = {
-          limit: ip,
+    class WT {
+      static _CheckLimit(TT, UT) {
+        let mT = WT._LogLimitOutputs[TT];
+        return mT ? mT.current++ : (mT = {
+          limit: UT,
           current: 1
-        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
+        }, WT._LogLimitOutputs[TT] = mT), mT.current <= mT.limit
       }
-      static _GenerateLimitMessage(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cp = Op._LogLimitOutputs[pp];
-        if (!cp || !Op.MessageLimitReached) return;
-        const op = this._Levels[ip];
-        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const mT = WT._LogLimitOutputs[TT];
+        if (!mT || !WT.MessageLimitReached) return;
+        const zT = this._Levels[UT];
+        mT.current === mT.limit && WT[zT.name](WT.MessageLimitReached.replace(/%LIMIT%/g, "" + mT.limit).replace(/%TYPE%/g, zT.name ?? ""))
       }
-      static _AddLogEntry(pp) {
-        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
+      static _AddLogEntry(TT) {
+        WT._LogCache = TT + WT._LogCache, WT.OnNewCacheEntry && WT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(pp) {
-        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
-          cp = new Date;
-        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
+      static _FormatMessage(TT) {
+        const UT = TT => TT < 10 ? "0" + TT : "" + TT,
+          mT = new Date;
+        return "[" + UT(mT.getHours()) + ":" + UT(mT.getMinutes()) + ":" + UT(mT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(pp, ip) {}
+      static _LogDisabled(TT, UT) {}
       static _LogEnabled() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        const op = Array.isArray(ip) ? ip[0] : ip;
-        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
-        const Ip = Op._FormatMessage(op),
-          Sp = this._Levels[pp],
-          xp = Array.isArray(ip) ? ip.slice(1) : [];
-        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
-        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
-        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          UT = arguments.length > 1 ? arguments[1] : void 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        const zT = Array.isArray(UT) ? UT[0] : UT;
+        if (void 0 !== mT && !WT._CheckLimit(zT, mT)) return;
+        const MT = WT._FormatMessage(zT),
+          gT = this._Levels[TT],
+          nT = Array.isArray(UT) ? UT.slice(1) : [];
+        gT.logFunc && gT.logFunc("BJS - " + MT, ...nT);
+        const HT = `<div style='color:${gT.color}'>${MT}</div><br>`;
+        WT._AddLogEntry(HT), WT._GenerateLimitMessage(zT, TT)
       }
       static get LogCache() {
-        return Op._LogCache
+        return WT._LogCache
       }
       static ClearLogCache() {
-        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
+        WT._LogCache = "", WT._LogLimitOutputs = {}, WT.errorsCount = 0
       }
-      static set LogLevels(pp) {
-        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
-        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
-        for (const cp of ip)
-          if ((pp & cp) === cp) {
-            const pp = this._Levels[cp];
-            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
+      static set LogLevels(TT) {
+        WT.Log = WT._LogDisabled, WT.Warn = WT._LogDisabled, WT.Error = WT._LogDisabled;
+        const UT = [WT.MessageLogLevel, WT.WarningLogLevel, WT.ErrorLogLevel];
+        for (const mT of UT)
+          if ((TT & mT) === mT) {
+            const TT = this._Levels[mT];
+            WT[TT.name] = WT._LogEnabled.bind(WT, mT)
           }
       }
     }
-    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
+    WT.NoneLogLevel = 0, WT.MessageLogLevel = 1, WT.WarningLogLevel = 2, WT.ErrorLogLevel = 4, WT.AllLogLevel = 7, WT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", WT._LogCache = "", WT._LogLimitOutputs = {}, WT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -266,8 +266,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+    }], WT.errorsCount = 0, WT.Log = WT._LogEnabled.bind(WT, WT.MessageLogLevel), WT.Warn = WT._LogEnabled.bind(WT, WT.WarningLogLevel), WT.Error = WT._LogEnabled.bind(WT, WT.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

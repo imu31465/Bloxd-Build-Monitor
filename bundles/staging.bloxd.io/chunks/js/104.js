@@ -1,79 +1,79 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  5025: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Pp
+  5013: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => LT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(1060),
-      Sp = cp(1361),
-      xp = cp(3607),
-      Lp = cp(131),
-      Yp = cp(3641),
-      Dp = cp(3628),
-      Ap = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(1135),
+      gT = mT(1446),
+      nT = mT(3599),
+      HT = mT(133),
+      kT = mT(3644),
+      jT = mT(3627),
+      lT = mT(1188);
 
-    function Pp(pp) {
+    function LT(TT) {
       let {
-        game: ip
-      } = pp;
-      const cp = (0, Lp.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Op = (0, Yp.f)(ip, cp),
-        Pp = (0, xp.d)(Op),
-        Wp = void 0 !== Pp.blurhash;
-      return (0, Ap.jsxs)("div", {
+        game: UT
+      } = TT;
+      const mT = (0, HT.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        WT = (0, kT.e)(UT, mT),
+        LT = (0, nT.e)(WT),
+        pT = void 0 !== LT.blurhash;
+      return (0, lT.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Pp.isLoading && !Wp && (0, Ap.jsx)(Sp.c, {
+        children: [LT.isLoading && !pT && (0, lT.jsx)(gT.c, {
           loaderType: "Secondary"
-        }), !Pp.failed && (null !== Pp.src || Wp) && (0, Ap.jsx)("div", {
-          className: op()("SchematicImage", Dp.g, {
-            SchematicImageFadeIn: Pp.fadeIn && !Wp
+        }), !LT.failed && (null !== LT.src || pT) && (0, lT.jsx)("div", {
+          className: zT()("SchematicImage", jT.h, {
+            SchematicImageFadeIn: LT.fadeIn && !pT
           }),
-          style: (0, Dp.f)(Pp),
-          children: (0, Ap.jsx)(Dp.c, {
-            image: Pp
+          style: (0, jT.e)(LT),
+          children: (0, lT.jsx)(jT.c, {
+            image: LT
           })
-        }), Pp.failed && (0, Ap.jsx)("div", {
+        }), LT.failed && (0, lT.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Ap.jsx)(Ip.d, {
+          children: (0, lT.jsx)(MT.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6652: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => fp
+  6573: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => PT
     });
-    cp(5017);
-    var Op = cp(62),
-      op = cp(1049),
-      Ip = cp.n(op),
-      Sp = cp(322),
-      xp = cp(1024),
-      Lp = cp(1234),
-      Yp = cp(1005),
-      Dp = cp(1201),
-      Ap = cp(1520),
-      Pp = cp(3651),
-      Wp = cp(1141),
-      yp = cp(5025),
-      Up = cp(2671),
-      wp = cp(1480),
-      vp = cp(4656),
-      tp = cp(5034),
-      Hp = cp(1361),
-      dp = cp(1538),
-      ep = cp(4653),
-      jp = cp(2580),
-      kp = cp(5040),
-      mp = cp(6539),
-      Rp = cp(1563),
-      qp = cp(1112);
-    const Mp = [{
+    mT(5009);
+    var WT = mT(63),
+      zT = mT(1126),
+      MT = mT.n(zT),
+      gT = mT(351),
+      nT = mT(1099),
+      HT = mT(1321),
+      kT = mT(1087),
+      jT = mT(1288),
+      lT = mT(1613),
+      LT = mT(3656),
+      pT = mT(1225),
+      BT = mT(5013),
+      ZT = mT(2713),
+      cT = mT(1569),
+      vT = mT(4667),
+      fT = mT(5017),
+      qT = mT(1446),
+      iT = mT(1633),
+      bT = mT(4660),
+      OT = mT(2641),
+      eT = mT(5021),
+      YT = mT(6482),
+      JT = mT(1658),
+      xT = mT(1188);
+    const dT = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      Cp = 25,
-      Ep = "scope",
-      Xp = "category",
-      lp = "customGames";
-    const Qp = 7,
-      Jp = {
+      wT = 25,
+      tT = "scope",
+      aT = "category",
+      yT = "customGames";
+    const XT = 7,
+      IT = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function Bp(pp) {
+    function QT(TT) {
       let {
-        position: ip
-      } = pp;
-      const cp = mp.b[ip];
-      return (0, qp.jsxs)("td", {
-        className: Ip()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== cp,
-          [`StudioLeaderboardTopPosition${ip}`]: void 0 !== cp
+        position: UT
+      } = TT;
+      const mT = YT.c[UT];
+      return (0, xT.jsxs)("td", {
+        className: MT()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== mT,
+          [`StudioLeaderboardTopPosition${UT}`]: void 0 !== mT
         }),
-        children: [void 0 !== cp && (0, qp.jsx)("img", {
+        children: [void 0 !== mT && (0, xT.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: cp,
+          src: mT,
           alt: ""
-        }), ip]
+        }), UT]
       })
     }
 
-    function Np(pp) {
+    function sT(TT) {
       let {
-        discoverability: ip
-      } = pp;
+        discoverability: UT
+      } = TT;
       const {
-        playsPerDay: cp,
-        avgPlaytimeMinutes: op,
-        retention: Ip
-      } = null === ip ? Jp : (0, Pp.j)(ip);
-      return (0, qp.jsxs)(Op.Fragment, {
-        children: [(0, qp.jsx)("td", {
-          children: null !== cp ? (0, Pp.b)(cp) : "-"
-        }), (0, qp.jsx)("td", {
-          children: null !== op ? (0, Pp.d)(op) : "-"
-        }), (0, qp.jsx)("td", {
-          children: null !== Ip ? (0, Pp.f)(Ip) : "-"
+        playsPerDay: mT,
+        avgPlaytimeMinutes: zT,
+        retention: MT
+      } = null === UT ? IT : (0, LT.l)(UT);
+      return (0, xT.jsxs)(WT.Fragment, {
+        children: [(0, xT.jsx)("td", {
+          children: null !== mT ? (0, LT.c)(mT) : "-"
+        }), (0, xT.jsx)("td", {
+          children: null !== zT ? (0, LT.g)(zT) : "-"
+        }), (0, xT.jsx)("td", {
+          children: null !== MT ? (0, LT.k)(MT) : "-"
         })]
       })
     }
 
-    function Tp(pp) {
+    function FT(TT) {
       let {
-        discoverability: ip
-      } = pp;
-      return (0, qp.jsx)("td", {
+        discoverability: UT
+      } = TT;
+      return (0, xT.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === ip || void 0 === ip ? void 0 : ip.engagementScore) ? (0, Lp.O)(Math.round(ip.engagementScore)) : "-"
+        children: void 0 !== (null === UT || void 0 === UT ? void 0 : UT.engagementScore) ? (0, HT.V)(Math.round(UT.engagementScore)) : "-"
       })
     }
 
-    function fp() {
-      var pp, ip;
+    function PT() {
+      var TT, UT;
       const {
-        t: cp
-      } = (0, Dp.H)(), op = (0, dp.useNavigatePreserveSearch)(), {
-        userContext: Ip,
-        isUserContextUpdating: mp
-      } = (0, Wp.b)(), Jp = (0, jp.n)(), [fp, bp] = (0, ep.o)(), hp = (ap = fp.get(Ep), Mp.some((pp => pp.scope === ap)) ? ap : lp);
-      var ap;
-      const np = function(pp) {
-          return Sp.$.includes(pp) ? pp : null
-        }(fp.get(Xp)),
-        Fp = (0, ep.e)(fp.get(ep.c)),
-        [gp, Gp] = (0, Op.useState)(null),
-        [rp, Zp] = (0, Op.useState)(!1);
+        t: mT
+      } = (0, jT.z)(), zT = (0, iT.useNavigatePreserveSearch)(), {
+        userContext: MT,
+        isUserContextUpdating: YT
+      } = (0, pT.d)(), IT = (0, OT.m)(), [PT, VT] = (0, bT.l)(), uT = (CT = PT.get(tT), dT.some((TT => TT.scope === CT)) ? CT : yT);
+      var CT;
+      const rT = function(TT) {
+          return gT.O.includes(TT) ? TT : null
+        }(PT.get(aT)),
+        KT = (0, bT.f)(PT.get(bT.d)),
+        [ST, GT] = (0, WT.useState)(null),
+        [NT, ET] = (0, WT.useState)(!1);
 
-      function zp(pp) {
-        bp((ip => {
-          (0, ep.g)(ip, Ep, pp.scope === lp ? null : pp.scope), (0, ep.g)(ip, Xp, pp.category), (0, ep.k)(ip, pp.page)
+      function hT(TT) {
+        VT((UT => {
+          (0, bT.j)(UT, tT, TT.scope === yT ? null : TT.scope), (0, bT.j)(UT, aT, TT.category), (0, bT.k)(UT, TT.page)
         }))
       }
-      const sp = !mp && Ip.playerHasRank("developer"),
-        Kp = sp && "allGames" === hp,
-        Vp = sp && "dormantGames" === hp;
-      (0, Op.useEffect)((() => {
-        if (mp) return;
-        let pp = !1;
-        return Gp(null), Zp(!1), Ap.b.getPublishedGamePreviews(Ip, {
+      const DT = !YT && MT.playerHasRank("developer"),
+        oT = DT && "allGames" === uT,
+        AT = DT && "dormantGames" === uT;
+      (0, WT.useEffect)((() => {
+        if (YT) return;
+        let TT = !1;
+        return GT(null), ET(!1), lT.b.getPublishedGamePreviews(MT, {
           searchQuery: null,
-          pageNumber: Fp,
-          pageSize: Cp,
+          pageNumber: KT,
+          pageSize: wT,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== np ? [np] : [],
+          gameCategories: null !== rT ? [rT] : [],
           upAndComing: !1,
-          dormantGames: Vp,
+          dormantGames: AT,
           sortByEngagementScore: !0,
-          firstPartyGameNames: Kp ? Yp.e : void 0,
+          firstPartyGameNames: oT ? kT.b : void 0,
           includeOwners: !0
-        }).then((ip => {
-          pp || Gp(ip)
-        })).catch((ip => {
-          console.error("Failed to load the studio leaderboard", ip), pp || Zp(!0)
+        }).then((UT => {
+          TT || GT(UT)
+        })).catch((UT => {
+          console.error("Failed to load the studio leaderboard", UT), TT || ET(!0)
         })), () => {
-          pp = !0
+          TT = !0
         }
-      }), [mp, Kp, Vp, np, Fp, Ip]);
-      const ii = null !== (pp = null === gp || void 0 === gp ? void 0 : gp.results) && void 0 !== pp ? pp : null,
-        ci = function(pp, ip, cp) {
-          const [op, Ip] = (0, Op.useState)({}), Sp = cp ? (null !== pp && void 0 !== pp ? pp : []).flatMap((pp => "firstPartyGame" === pp.type ? [(0, xp.g)(pp.gameNameWithVariation, !0)] : [])).join(",") : "", Lp = (0, Op.useMemo)((() => "" === Sp ? [] : Sp.split(",")), [Sp]);
-          return (0, Op.useEffect)((() => {
-            if (0 === Lp.length) return void Ip({});
-            let pp = !1;
-            return Ap.b.getGamesByAnalyticsIds(ip, Lp).then((ip => {
-              pp || Ip(ip)
-            })).catch((pp => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", pp)
+      }), [YT, oT, AT, rT, KT, MT]);
+      const RT = null !== (TT = null === ST || void 0 === ST ? void 0 : ST.results) && void 0 !== TT ? TT : null,
+        TU = function(TT, UT, mT) {
+          const [zT, MT] = (0, WT.useState)({}), gT = mT ? (null !== TT && void 0 !== TT ? TT : []).flatMap((TT => "firstPartyGame" === TT.type ? [(0, nT.e)(TT.gameNameWithVariation, !0)] : [])).join(",") : "", HT = (0, WT.useMemo)((() => "" === gT ? [] : gT.split(",")), [gT]);
+          return (0, WT.useEffect)((() => {
+            if (0 === HT.length) return void MT({});
+            let TT = !1;
+            return lT.b.getGamesByAnalyticsIds(UT, HT).then((UT => {
+              TT || MT(UT)
+            })).catch((TT => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", TT)
             })), () => {
-              pp = !0
+              TT = !0
             }
-          }), [Lp, ip]), op
-        }(ii, Ip, sp),
-        Oi = null !== ii ? function(pp, ip, cp, Op, op) {
-          return pp.map(((pp, Ip) => {
-            var Sp;
-            const Lp = Op + Ip + 1;
-            if ("customGame" === pp.type) {
-              const ip = pp.preview;
+          }), [HT, UT]), zT
+        }(RT, MT, DT),
+        UU = null !== RT ? function(TT, UT, mT, WT, zT) {
+          return TT.map(((TT, MT) => {
+            var gT;
+            const HT = WT + MT + 1;
+            if ("customGame" === TT.type) {
+              const UT = TT.preview;
               return {
-                key: ip.schematicId,
-                position: Lp,
-                thumbnail: (0, qp.jsx)(yp.b, {
-                  game: ip
+                key: UT.schematicId,
+                position: HT,
+                thumbnail: (0, xT.jsx)(BT.c, {
+                  game: UT
                 }),
-                name: ip.name,
-                owner: pp.owner,
-                category: ip.gameCategory,
-                ccu: ip.ccu,
-                favourites: ip.favourites,
-                discoverability: (0, Pp.k)(ip) ? ip : null,
-                url: (0, Rp.n)((0, xp.e)(ip.schematicId))
+                name: UT.name,
+                owner: TT.owner,
+                category: UT.gameCategory,
+                ccu: UT.ccu,
+                favourites: UT.favourites,
+                discoverability: (0, LT.n)(UT) ? UT : null,
+                url: (0, JT.k)((0, nT.d)(UT.schematicId))
               }
             }
-            const Yp = pp.gameNameWithVariation,
-              Dp = (0, xp.g)(Yp, !0);
+            const kT = TT.gameNameWithVariation,
+              jT = (0, nT.e)(kT, !0);
             return {
-              key: Yp,
-              position: Lp,
-              thumbnail: (0, qp.jsx)(kp.e, {
-                game: Yp
+              key: kT,
+              position: HT,
+              thumbnail: (0, xT.jsx)(eT.d, {
+                game: kT
               }),
-              name: (0, Rp.k)(Yp, op),
+              name: (0, JT.h)(kT, zT),
               owner: null,
-              category: (0, Rp.c)(Yp),
-              ccu: (0, jp.c)(Yp, ip),
+              category: (0, JT.d)(kT),
+              ccu: (0, OT.c)(kT, UT),
               favourites: null,
-              discoverability: null !== (Sp = cp[Dp]) && void 0 !== Sp ? Sp : null,
-              url: (0, Rp.n)(Dp)
+              discoverability: null !== (gT = mT[jT]) && void 0 !== gT ? gT : null,
+              url: (0, JT.k)(jT)
             }
           }))
-        }(ii, Jp, ci, (Fp - 1) * Cp, cp) : [],
-        oi = !rp && null === gp,
-        Ii = !oi && !rp && 0 === Oi.length,
-        Si = null !== (ip = null === gp || void 0 === gp ? void 0 : gp.totalPages) && void 0 !== ip ? ip : 1;
-      return (0, qp.jsxs)("div", {
+        }(RT, IT, TU, (KT - 1) * wT, mT) : [],
+        mU = !NT && null === ST,
+        WU = !mU && !NT && 0 === UU.length,
+        zU = null !== (UT = null === ST || void 0 === ST ? void 0 : ST.totalPages) && void 0 !== UT ? UT : 1;
+      return (0, xT.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, qp.jsx)("div", {
+        children: [(0, xT.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, qp.jsx)("h1", {
+          children: (0, xT.jsx)("h1", {
             className: "StudioPageTitle",
-            children: cp("studio:leaderboard")
+            children: mT("studio:leaderboard")
           })
-        }), (0, qp.jsxs)("div", {
+        }), (0, xT.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!Vp && (0, qp.jsx)("div", {
-            children: cp("studio:leaderboardBanner")
-          }), Vp && (0, qp.jsx)("div", {
-            children: cp("studio:leaderboardDormantBanner")
-          }), (0, qp.jsx)("div", {
-            children: cp("studio:leaderboardMetricsBanner", {
-              days: Qp
+          children: [!AT && (0, xT.jsx)("div", {
+            children: mT("studio:leaderboardBanner")
+          }), AT && (0, xT.jsx)("div", {
+            children: mT("studio:leaderboardDormantBanner")
+          }), (0, xT.jsx)("div", {
+            children: mT("studio:leaderboardMetricsBanner", {
+              days: XT
             })
           })]
-        }), sp && (0, qp.jsx)("div", {
+        }), DT && (0, xT.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: Mp.map((pp => (0, qp.jsx)(wp.S, {
-            active: hp === pp.scope,
+          children: dT.map((TT => (0, xT.jsx)(cT.L, {
+            active: uT === TT.scope,
             onClick: () => {
-              zp({
-                scope: pp.scope,
-                category: np,
+              hT({
+                scope: TT.scope,
+                category: rT,
                 page: 1
               })
             },
-            children: cp(pp.title)
-          }, pp.scope)))
-        }), (0, qp.jsxs)("div", {
+            children: mT(TT.title)
+          }, TT.scope)))
+        }), (0, xT.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, qp.jsx)(wp.S, {
-            active: null === np,
+          children: [(0, xT.jsx)(cT.L, {
+            active: null === rT,
             onClick: () => {
-              zp({
-                scope: hp,
+              hT({
+                scope: uT,
                 category: null,
                 page: 1
               })
             },
-            children: cp("studio:leaderboardAllCategories")
-          }), Sp.$.map((pp => (0, qp.jsx)(wp.S, {
-            active: np === pp,
+            children: mT("studio:leaderboardAllCategories")
+          }), gT.O.map((TT => (0, xT.jsx)(cT.L, {
+            active: rT === TT,
             onClick: () => {
-              zp({
-                scope: hp,
-                category: pp,
+              hT({
+                scope: uT,
+                category: TT,
                 page: 1
               })
             },
-            children: (0, Sp.nb)(pp)
-          }, pp)))]
-        }), oi && (0, qp.jsx)("div", {
+            children: (0, gT.Z)(TT)
+          }, TT)))]
+        }), mU && (0, xT.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, qp.jsx)(Hp.c, {})
-        }), rp && (0, qp.jsx)("div", {
+          children: (0, xT.jsx)(qT.c, {})
+        }), NT && (0, xT.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: cp("studio:failedToLoadLeaderboard")
-        }), Ii && (0, qp.jsx)("div", {
+          children: mT("studio:failedToLoadLeaderboard")
+        }), WU && (0, xT.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: cp("studio:leaderboardEmpty")
-        }), !oi && !rp && !Ii && (0, qp.jsx)("div", {
+          children: mT("studio:leaderboardEmpty")
+        }), !mU && !NT && !WU && (0, xT.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, qp.jsx)(tp.d, {
+          children: (0, xT.jsx)(fT.b, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: cp("general:game")
+              header: mT("general:game")
             }, {
               key: "owner",
-              header: cp("general:owner")
-            }, ...null === np ? [{
+              header: mT("general:owner")
+            }, ...null === rT ? [{
               key: "category",
-              header: cp("general:category")
-            }] : [], ...sp ? [{
+              header: mT("general:category")
+            }] : [], ...DT ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: cp("studio:leaderboardPlaysPerDay")
+              header: mT("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: cp("studio:leaderboardSessionLength")
+              header: mT("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: cp("studio:leaderboardSessionsPerPlayer")
-            }, ...Vp ? [] : [{
+              header: mT("studio:leaderboardSessionsPerPlayer")
+            }, ...AT ? [] : [{
               key: "ccu",
-              header: cp("studio:metricCcu")
+              header: mT("studio:metricCcu")
             }], {
               key: "favourites",
-              header: cp("general:favourites")
+              header: mT("general:favourites")
             }],
-            rows: Oi,
-            getRowKey: pp => pp.key,
-            renderRow: pp => (0, qp.jsxs)("tr", {
+            rows: UU,
+            getRowKey: TT => TT.key,
+            renderRow: TT => (0, xT.jsxs)("tr", {
               onClick: () => {
-                op(pp.url)
+                zT(TT.url)
               },
-              children: [(0, qp.jsx)(Bp, {
-                position: pp.position
-              }), (0, qp.jsx)("td", {
-                children: (0, qp.jsx)(kp.h, {
-                  thumbnail: pp.thumbnail,
-                  name: pp.name
+              children: [(0, xT.jsx)(QT, {
+                position: TT.position
+              }), (0, xT.jsx)("td", {
+                children: (0, xT.jsx)(eT.f, {
+                  thumbnail: TT.thumbnail,
+                  name: TT.name
                 })
-              }), (0, qp.jsxs)("td", {
+              }), (0, xT.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === pp.owner && "-", null !== pp.owner && (0, qp.jsx)(Up.d, {
-                  playerSocialPreview: pp.owner,
+                children: [null === TT.owner && "-", null !== TT.owner && (0, xT.jsx)(ZT.i, {
+                  playerSocialPreview: TT.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === np && (0, qp.jsx)("td", {
-                children: (0, Sp.nb)(pp.category)
-              }), sp && (0, qp.jsx)(Tp, {
-                discoverability: pp.discoverability
-              }), (0, qp.jsx)(Np, {
-                discoverability: pp.discoverability
-              }), !Vp && (0, qp.jsx)("td", {
-                children: null !== pp.ccu ? (0, Lp.O)(pp.ccu) : "-"
-              }), (0, qp.jsx)("td", {
-                children: null !== pp.favourites ? (0, Lp.O)(pp.favourites) : "-"
+              }), null === rT && (0, xT.jsx)("td", {
+                children: (0, gT.Z)(TT.category)
+              }), DT && (0, xT.jsx)(FT, {
+                discoverability: TT.discoverability
+              }), (0, xT.jsx)(sT, {
+                discoverability: TT.discoverability
+              }), !AT && (0, xT.jsx)("td", {
+                children: null !== TT.ccu ? (0, HT.V)(TT.ccu) : "-"
+              }), (0, xT.jsx)("td", {
+                children: null !== TT.favourites ? (0, HT.V)(TT.favourites) : "-"
               })]
             })
           })
-        }), !rp && (0, qp.jsx)(vp.d, {
+        }), !NT && (0, xT.jsx)(vT.b, {
           className: "AnimFadeIn",
-          page: Fp,
-          totalPages: Si,
-          onSetPage: pp => {
-            zp({
-              scope: hp,
-              category: np,
-              page: pp
+          page: KT,
+          totalPages: zU,
+          onSetPage: TT => {
+            hT({
+              scope: uT,
+              category: rT,
+              page: TT
             })
           }
         })]
       })
     }
   },
-  5040: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      h: () => Ip
+  5021: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      f: () => MT
     });
-    var Op = cp(1563),
-      op = cp(1112);
+    var WT = mT(1658),
+      zT = mT(1188);
 
-    function Ip(pp) {
+    function MT(TT) {
       let {
-        thumbnail: ip,
-        name: cp
-      } = pp;
-      return (0, op.jsxs)("div", {
+        thumbnail: UT,
+        name: mT
+      } = TT;
+      return (0, zT.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, op.jsx)("div", {
+        children: [(0, zT.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: ip
-        }), (0, op.jsx)("span", {
+          children: UT
+        }), (0, zT.jsx)("span", {
           className: "StudioTableGameName",
-          children: cp
+          children: mT
         })]
       })
     }
 
-    function Sp(pp) {
+    function gT(TT) {
       let {
-        game: ip
-      } = pp;
-      return (0, op.jsx)("img", {
+        game: UT
+      } = TT;
+      return (0, zT.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, Op.h)(ip),
+        src: (0, WT.f)(UT),
         alt: ""
       })
     }
   },
-  6539: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  6482: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT
     });
-    const Op = {
-      1: cp(6546),
-      2: cp(6551),
-      3: cp(6557)
+    const WT = {
+      1: mT(6485),
+      2: mT(6488),
+      3: mT(6495)
     }
   },
-  5034: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp
+  5017: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT
     });
-    var Op = cp(62),
-      op = cp(1049),
-      Ip = cp.n(op),
-      Sp = cp(1112);
+    var WT = mT(63),
+      zT = mT(1126),
+      MT = mT.n(zT),
+      gT = mT(1188);
 
-    function xp(pp) {
+    function nT(TT) {
       let {
-        columns: ip,
-        rows: cp,
-        getRowKey: op,
-        renderRow: xp,
-        className: Lp
-      } = pp;
-      return (0, Sp.jsxs)("table", {
-        className: Ip()("Table", Lp),
-        children: [(0, Sp.jsx)("thead", {
-          children: (0, Sp.jsx)("tr", {
-            children: ip.map((pp => (0, Sp.jsx)("th", {
-              children: pp.header
-            }, pp.key)))
+        columns: UT,
+        rows: mT,
+        getRowKey: zT,
+        renderRow: nT,
+        className: HT
+      } = TT;
+      return (0, gT.jsxs)("table", {
+        className: MT()("Table", HT),
+        children: [(0, gT.jsx)("thead", {
+          children: (0, gT.jsx)("tr", {
+            children: UT.map((TT => (0, gT.jsx)("th", {
+              children: TT.header
+            }, TT.key)))
           })
-        }), (0, Sp.jsx)("tbody", {
-          children: cp.map((pp => (0, Sp.jsx)(Op.Fragment, {
-            children: xp(pp)
-          }, op(pp))))
+        }), (0, gT.jsx)("tbody", {
+          children: mT.map((TT => (0, gT.jsx)(WT.Fragment, {
+            children: nT(TT)
+          }, zT(TT))))
         })]
       })
     }
   },
-  5017: () => {},
-  6546: pp => {
-    pp.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  5009: () => {},
+  6485: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6551: pp => {
-    pp.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6488: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6557: pp => {
-    pp.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6495: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

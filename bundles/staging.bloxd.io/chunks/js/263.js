@@ -1,174 +1,174 @@
 export const id = 263;
 export const ids = [263];
 export const modules = {
-  40451: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Pp
+  40373: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => LT
     });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(37320),
-      Sp = cp(37487),
-      xp = cp(40415),
-      Lp = cp(40332),
-      Yp = cp(37368),
-      Dp = cp(40398),
-      Ap = cp(40233);
-    let Pp = (() => {
-      var pp, ip;
-      let cp, Pp, Wp, yp, Up, wp, vp, tp, Hp, dp, ep, jp, kp, mp = xp.b,
-        Rp = [],
-        qp = [],
-        Mp = [],
-        Cp = [],
-        Ep = [],
-        Xp = [],
-        lp = [],
-        Qp = [],
-        Jp = [],
-        Bp = [],
-        Np = [],
-        Tp = [],
-        fp = [],
-        bp = [],
-        hp = [],
-        ap = [],
-        np = [],
-        Fp = [],
-        gp = [],
-        Gp = [],
-        rp = [];
-      return pp = class extends mp {
+    var WT = mT(40095),
+      zT = mT(40102),
+      MT = mT(37188),
+      gT = mT(37367),
+      nT = mT(40335),
+      HT = mT(40242),
+      kT = mT(37239),
+      jT = mT(40310),
+      lT = mT(40122);
+    let LT = (() => {
+      var TT, UT;
+      let mT, LT, pT, BT, ZT, cT, vT, fT, qT, iT, bT, OT, eT, YT = nT.d,
+        JT = [],
+        xT = [],
+        dT = [],
+        wT = [],
+        tT = [],
+        aT = [],
+        yT = [],
+        XT = [],
+        IT = [],
+        QT = [],
+        sT = [],
+        FT = [],
+        PT = [],
+        VT = [],
+        uT = [],
+        CT = [],
+        rT = [],
+        KT = [],
+        ST = [],
+        GT = [],
+        NT = [];
+      return TT = class extends YT {
         get range() {
           return this._range
         }
-        set range(pp) {
-          this._range = pp, this._inverseSquaredRange = 1 / (this.range * this.range)
+        set range(TT) {
+          this._range = TT, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
         get intensityMode() {
           return this._intensityMode
         }
-        set intensityMode(pp) {
-          this._intensityMode = pp, this._computePhotometricScale()
+        set intensityMode(TT) {
+          this._intensityMode = TT, this._computePhotometricScale()
         }
         get radius() {
           return this._radius
         }
-        set radius(pp) {
-          this._radius = pp, this._computePhotometricScale()
+        set radius(TT) {
+          this._radius = TT, this._computePhotometricScale()
         }
         get renderPriority() {
-          return (0, Op.e)(this, ip, "f")
+          return (0, WT.d)(this, UT, "f")
         }
-        set renderPriority(pp) {
-          (0, Op.f)(this, ip, pp, "f")
+        set renderPriority(TT) {
+          (0, WT.e)(this, UT, TT, "f")
         }
         get shadowEnabled() {
           return this._shadowEnabled
         }
-        set shadowEnabled(pp) {
-          this._shadowEnabled !== pp && (this._shadowEnabled = pp, this._markMeshesAsLightDirty())
+        set shadowEnabled(TT) {
+          this._shadowEnabled !== TT && (this._shadowEnabled = TT, this._markMeshesAsLightDirty())
         }
         get includedOnlyMeshes() {
           return this._includedOnlyMeshes
         }
-        set includedOnlyMeshes(pp) {
-          this._includedOnlyMeshes = pp, this._hookArrayForIncludedOnly(pp)
+        set includedOnlyMeshes(TT) {
+          this._includedOnlyMeshes = TT, this._hookArrayForIncludedOnly(TT)
         }
         get excludedMeshes() {
           return this._excludedMeshes
         }
-        set excludedMeshes(pp) {
-          this._excludedMeshes = pp, this._hookArrayForExcluded(pp)
+        set excludedMeshes(TT) {
+          this._excludedMeshes = TT, this._hookArrayForExcluded(TT)
         }
         get excludeWithLayerMask() {
           return this._excludeWithLayerMask
         }
-        set excludeWithLayerMask(pp) {
-          this._excludeWithLayerMask = pp, this._resyncMeshes()
+        set excludeWithLayerMask(TT) {
+          this._excludeWithLayerMask = TT, this._resyncMeshes()
         }
         get includeOnlyWithLayerMask() {
           return this._includeOnlyWithLayerMask
         }
-        set includeOnlyWithLayerMask(pp) {
-          this._includeOnlyWithLayerMask = pp, this._resyncMeshes()
+        set includeOnlyWithLayerMask(TT) {
+          this._includeOnlyWithLayerMask = TT, this._resyncMeshes()
         }
         get lightmapMode() {
           return this._lightmapMode
         }
-        set lightmapMode(pp) {
-          this._lightmapMode !== pp && (this._lightmapMode = pp, this._markMeshesAsLightDirty())
+        set lightmapMode(TT) {
+          this._lightmapMode !== TT && (this._lightmapMode = TT, this._markMeshesAsLightDirty())
         }
-        getViewMatrix(pp) {
+        getViewMatrix(TT) {
           return null
         }
-        getProjectionMatrix(pp, ip) {
+        getProjectionMatrix(TT, UT) {
           return null
         }
-        constructor(cp, op, Ip) {
-          super(cp, op, !1), this.diffuse = ((0, Op.l)(this, Rp), (0, Op.l)(this, qp, new Sp.d(1, 1, 1))), this.specular = ((0, Op.l)(this, Mp), (0, Op.l)(this, Cp, new Sp.d(1, 1, 1))), this.falloffType = ((0, Op.l)(this, Ep), (0, Op.l)(this, Xp, pp.FALLOFF_DEFAULT)), this.intensity = ((0, Op.l)(this, lp), (0, Op.l)(this, Qp, 1)), this._range = ((0, Op.l)(this, Jp), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = pp.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, Op.l)(this, Bp, void 0), ip.set(this, ((0, Op.l)(this, Np), (0, Op.l)(this, Tp, 0))), this._shadowEnabled = ((0, Op.l)(this, fp), (0, Op.l)(this, bp, !0)), this._includedOnlyMeshes = (0, Op.l)(this, hp), this._excludeWithLayerMask = (0, Op.l)(this, ap, 0), this._includeOnlyWithLayerMask = ((0, Op.l)(this, np), (0, Op.l)(this, Fp, 0)), this._lightmapMode = ((0, Op.l)(this, gp), (0, Op.l)(this, Gp, 0)), this._shadowGenerators = ((0, Op.l)(this, rp), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, Ip || this.Gl().addLight(this), this._uniformBuffer = new Lp.b(this.Gl().gy(), void 0, void 0, cp), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], Ip || this._resyncMeshes()
+        constructor(mT, zT, MT) {
+          super(mT, zT, !1), this.diffuse = ((0, WT.k)(this, JT), (0, WT.k)(this, xT, new gT.d(1, 1, 1))), this.specular = ((0, WT.k)(this, dT), (0, WT.k)(this, wT, new gT.d(1, 1, 1))), this.falloffType = ((0, WT.k)(this, tT), (0, WT.k)(this, aT, TT.FALLOFF_DEFAULT)), this.intensity = ((0, WT.k)(this, yT), (0, WT.k)(this, XT, 1)), this._range = ((0, WT.k)(this, IT), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = TT.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, WT.k)(this, QT, void 0), UT.set(this, ((0, WT.k)(this, sT), (0, WT.k)(this, FT, 0))), this._shadowEnabled = ((0, WT.k)(this, PT), (0, WT.k)(this, VT, !0)), this._includedOnlyMeshes = (0, WT.k)(this, uT), this._excludeWithLayerMask = (0, WT.k)(this, CT, 0), this._includeOnlyWithLayerMask = ((0, WT.k)(this, rT), (0, WT.k)(this, KT, 0)), this._lightmapMode = ((0, WT.k)(this, ST), (0, WT.k)(this, GT, 0)), this._shadowGenerators = ((0, WT.k)(this, NT), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, MT || this.KF().addLight(this), this._uniformBuffer = new HT.c(this.KF().eB(), void 0, void 0, mT), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], MT || this._resyncMeshes()
         }
-        transferTexturesToEffect(pp, ip) {
+        transferTexturesToEffect(TT, UT) {
           return this
         }
-        _bindLight(pp, ip, cp, Op) {
-          let op = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const Ip = pp.toString();
-          let xp = !1;
-          if (this._uniformBuffer.bindToEffect(cp, "Light" + Ip), this._renderId !== ip.getRenderId() || this._lastUseSpecular !== Op || !this._uniformBuffer.useUbo) {
-            this._renderId = ip.getRenderId(), this._lastUseSpecular = Op;
-            const pp = this.getScaledIntensity();
-            this.transferToEffect(cp, Ip), this.diffuse.scaleToRef(pp, Sp.j.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", Sp.j.Color3[0], this.range, Ip), Op && (this.specular.scaleToRef(pp, Sp.j.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", Sp.j.Color3[1], this.radius, Ip)), xp = !0
+        _bindLight(TT, UT, mT, WT) {
+          let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const MT = TT.toString();
+          let nT = !1;
+          if (this._uniformBuffer.bindToEffect(mT, "Light" + MT), this._renderId !== UT.getRenderId() || this._lastUseSpecular !== WT || !this._uniformBuffer.useUbo) {
+            this._renderId = UT.getRenderId(), this._lastUseSpecular = WT;
+            const TT = this.getScaledIntensity();
+            this.transferToEffect(mT, MT), this.diffuse.scaleToRef(TT, gT.m.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", gT.m.Color3[0], this.range, MT), WT && (this.specular.scaleToRef(TT, gT.m.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", gT.m.Color3[1], this.radius, MT)), nT = !0
           }
-          if (this.transferTexturesToEffect(cp, Ip), ip.shadowsEnabled && this.shadowEnabled && op) {
-            const pp = this.getShadowGenerator(ip.activeCamera) ?? this.getShadowGenerator();
-            pp && (pp.bindShadowLight(Ip, cp), xp = !0)
+          if (this.transferTexturesToEffect(mT, MT), UT.shadowsEnabled && this.shadowEnabled && zT) {
+            const TT = this.getShadowGenerator(UT.activeCamera) ?? this.getShadowGenerator();
+            TT && (TT.bindShadowLight(MT, mT), nT = !0)
           }
-          xp ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
+          nT ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
         }
         getClassName() {
           return "Light"
         }
-        toString(pp) {
-          let ip = "Name: " + this.name;
-          if (ip += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let cp = 0; cp < this.animations.length; cp++) ip += ", animation[0]: " + this.animations[cp].toString(pp);
-          return ip
+        toString(TT) {
+          let UT = "Name: " + this.name;
+          if (UT += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let mT = 0; mT < this.animations.length; mT++) UT += ", animation[0]: " + this.animations[mT].toString(TT);
+          return UT
         }
         _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.uR() || this._resyncMeshes()
+          super._syncParentEnabledState(), this.bJ() || this._resyncMeshes()
         }
-        eC(pp) {
-          super.eC(pp), this._resyncMeshes()
+        Qy(TT) {
+          super.Qy(TT), this._resyncMeshes()
         }
         getShadowGenerator() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(pp) ?? null
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(TT) ?? null
         }
         getShadowGenerators() {
           return this._shadowGenerators
         }
         getAbsolutePosition() {
-          return Ip.o.Zero()
+          return MT.p.Zero()
         }
-        canAffectMesh(pp) {
-          return !pp || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(pp)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(pp)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & pp.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & pp.layerMask)))
+        canAffectMesh(TT) {
+          return !TT || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(TT)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(TT)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & TT.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & TT.layerMask)))
         }
-        dispose(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        dispose(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           if (this._shadowGenerators) {
-            const pp = this._shadowGenerators.values();
-            for (let ip = pp.next(); !0 !== ip.done; ip = pp.next()) {
-              ip.value.dispose()
+            const TT = this._shadowGenerators.values();
+            for (let UT = TT.next(); !0 !== UT.done; UT = TT.next()) {
+              UT.value.dispose()
             }
             this._shadowGenerators = null
           }
-          if (this.Gl().stopAnimation(this), this._parentContainer) {
-            const pp = this._parentContainer.lights.indexOf(this);
-            pp > -1 && this._parentContainer.lights.splice(pp, 1), this._parentContainer = null
+          if (this.KF().stopAnimation(this), this._parentContainer) {
+            const TT = this._parentContainer.lights.indexOf(this);
+            TT > -1 && this._parentContainer.lights.splice(TT, 1), this._parentContainer = null
           }
-          for (const cp of this.Gl().meshes) cp._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.Gl().removeLight(this), super.dispose(pp, ip)
+          for (const mT of this.KF().meshes) mT._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.KF().removeLight(this), super.dispose(TT, UT)
         }
         getTypeID() {
           return 0
@@ -176,127 +176,127 @@ export const modules = {
         getScaledIntensity() {
           return this._photometricScale * this.intensity
         }
-        clone(ip) {
-          let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const Op = pp.GetConstructorFromName(this.getTypeID(), ip, this.Gl());
-          if (!Op) return null;
-          const op = Ap.c.Clone(Op, this);
-          return ip && (op.name = ip), cp && (op.parent = cp), op.eC(this.isEnabled()), this.onClonedObservable.notifyObservers(op), op
+        clone(UT) {
+          let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const WT = TT.GetConstructorFromName(this.getTypeID(), UT, this.KF());
+          if (!WT) return null;
+          const zT = lT.e.Clone(WT, this);
+          return UT && (zT.name = UT), mT && (zT.parent = mT), zT.Qy(this.isEnabled()), this.onClonedObservable.notifyObservers(zT), zT
         }
         serialize() {
-          const pp = Ap.c.Serialize(this);
-          if (pp.uniqueId = this.uniqueId, pp.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(pp), this.excludedMeshes.length > 0) {
-            pp.excludedMeshesIds = [];
-            for (const ip of this.excludedMeshes) pp.excludedMeshesIds.push(ip.id)
+          const TT = lT.e.Serialize(this);
+          if (TT.uniqueId = this.uniqueId, TT.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(TT), this.excludedMeshes.length > 0) {
+            TT.excludedMeshesIds = [];
+            for (const UT of this.excludedMeshes) TT.excludedMeshesIds.push(UT.id)
           }
           if (this.includedOnlyMeshes.length > 0) {
-            pp.includedOnlyMeshesIds = [];
-            for (const ip of this.includedOnlyMeshes) pp.includedOnlyMeshesIds.push(ip.id)
+            TT.includedOnlyMeshesIds = [];
+            for (const UT of this.includedOnlyMeshes) TT.includedOnlyMeshesIds.push(UT.id)
           }
-          return Ap.c.AppendSerializedAnimations(this, pp), pp.By = this.serializeAnimationRanges(), pp.isEnabled = this.isEnabled(), pp
+          return lT.e.AppendSerializedAnimations(this, TT), TT.hZ = this.serializeAnimationRanges(), TT.isEnabled = this.isEnabled(), TT
         }
-        static GetConstructorFromName(pp, ip, cp) {
-          const Op = xp.b.Construct("Light_Type_" + pp, ip, cp);
-          return Op || null
+        static GetConstructorFromName(TT, UT, mT) {
+          const WT = nT.d.Construct("Light_Type_" + TT, UT, mT);
+          return WT || null
         }
-        static Parse(ip, cp) {
-          let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const op = pp.GetConstructorFromName(ip.type, ip.name, cp);
-          if (!op) return null;
-          const Ip = Ap.c.Parse(op, ip, cp, Op);
-          if (ip.excludedMeshesIds && (Ip._excludedMeshesIds = ip.excludedMeshesIds), ip.includedOnlyMeshesIds && (Ip._includedOnlyMeshesIds = ip.includedOnlyMeshesIds), void 0 !== ip.parentId && (Ip._waitingParentId = ip.parentId), void 0 !== ip.parentInstanceIndex && (Ip._waitingParentInstanceIndex = ip.parentInstanceIndex), void 0 !== ip.falloffType && (Ip.falloffType = ip.falloffType), void 0 !== ip.lightmapMode && (Ip.lightmapMode = ip.lightmapMode), ip.animations) {
-            for (let pp = 0; pp < ip.animations.length; pp++) {
-              const cp = ip.animations[pp],
-                Op = (0, Yp.d)("BABYLON.Animation");
-              Op && Ip.animations.push(Op.Parse(cp))
+        static Parse(UT, mT) {
+          let WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const zT = TT.GetConstructorFromName(UT.type, UT.name, mT);
+          if (!zT) return null;
+          const MT = lT.e.Parse(zT, UT, mT, WT);
+          if (UT.excludedMeshesIds && (MT._excludedMeshesIds = UT.excludedMeshesIds), UT.includedOnlyMeshesIds && (MT._includedOnlyMeshesIds = UT.includedOnlyMeshesIds), void 0 !== UT.parentId && (MT._waitingParentId = UT.parentId), void 0 !== UT.parentInstanceIndex && (MT._waitingParentInstanceIndex = UT.parentInstanceIndex), void 0 !== UT.falloffType && (MT.falloffType = UT.falloffType), void 0 !== UT.lightmapMode && (MT.lightmapMode = UT.lightmapMode), UT.animations) {
+            for (let TT = 0; TT < UT.animations.length; TT++) {
+              const mT = UT.animations[TT],
+                WT = (0, kT.d)("BABYLON.Animation");
+              WT && MT.animations.push(WT.Parse(mT))
             }
-            xp.b.ParseAnimationRanges(Ip, ip, cp)
+            nT.d.ParseAnimationRanges(MT, UT, mT)
           }
-          return ip.autoAnimate && cp.beginAnimation(Ip, ip.autoAnimateFrom, ip.autoAnimateTo, ip.autoAnimateLoop, ip.autoAnimateSpeed || 1), void 0 !== ip.isEnabled && Ip.eC(ip.isEnabled), Ip._onParsed(ip, cp, Op), Ip
+          return UT.autoAnimate && mT.beginAnimation(MT, UT.autoAnimateFrom, UT.autoAnimateTo, UT.autoAnimateLoop, UT.autoAnimateSpeed || 1), void 0 !== UT.isEnabled && MT.Qy(UT.isEnabled), MT._onParsed(UT, mT, WT), MT
         }
-        _onParsed(pp, ip) {}
-        _hookArrayForExcluded(pp) {
-          var ip = this;
-          const cp = pp.push;
-          pp.push = function() {
-            for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
-            const Sp = cp.apply(pp, op);
-            if (ip._clusteredContainer) return Sp;
-            for (const pp of op) pp._resyncLightSource(ip);
-            return Sp
+        _onParsed(TT, UT) {}
+        _hookArrayForExcluded(TT) {
+          var UT = this;
+          const mT = TT.push;
+          TT.push = function() {
+            for (var WT = arguments.length, zT = new Array(WT), MT = 0; MT < WT; MT++) zT[MT] = arguments[MT];
+            const gT = mT.apply(TT, zT);
+            if (UT._clusteredContainer) return gT;
+            for (const TT of zT) TT._resyncLightSource(UT);
+            return gT
           };
-          const Op = pp.splice;
-          pp.splice = (ip, cp) => {
-            const op = Op.call(pp, ip, cp ?? pp.length);
-            if (this._clusteredContainer) return op;
-            for (const pp of op) pp._resyncLightSource(this);
-            return op
+          const WT = TT.splice;
+          TT.splice = (UT, mT) => {
+            const zT = WT.call(TT, UT, mT ?? TT.length);
+            if (this._clusteredContainer) return zT;
+            for (const TT of zT) TT._resyncLightSource(this);
+            return zT
           }, this._resyncMeshes()
         }
-        _hookArrayForIncludedOnly(pp) {
-          var ip = this;
-          const cp = pp.push;
-          pp.push = function() {
-            for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
-            const Sp = cp.apply(pp, op);
-            return ip._resyncMeshes(), Sp
+        _hookArrayForIncludedOnly(TT) {
+          var UT = this;
+          const mT = TT.push;
+          TT.push = function() {
+            for (var WT = arguments.length, zT = new Array(WT), MT = 0; MT < WT; MT++) zT[MT] = arguments[MT];
+            const gT = mT.apply(TT, zT);
+            return UT._resyncMeshes(), gT
           };
-          const Op = pp.splice;
-          pp.splice = (ip, cp) => {
-            const op = Op.call(pp, ip, cp ?? pp.length);
-            return this._resyncMeshes(), op
+          const WT = TT.splice;
+          TT.splice = (UT, mT) => {
+            const zT = WT.call(TT, UT, mT ?? TT.length);
+            return this._resyncMeshes(), zT
           }, this._resyncMeshes()
         }
         _resyncMeshes() {
           if (!this._clusteredContainer)
-            for (const pp of this.Gl().meshes) pp._resyncLightSource(this)
+            for (const TT of this.KF().meshes) TT._resyncLightSource(this)
         }
         _markMeshesAsLightDirty() {
-          for (const pp of this.Gl().meshes) - 1 !== pp.lightSources.indexOf(this) && pp._markSubMeshesAsLightDirty()
+          for (const TT of this.KF().meshes) - 1 !== TT.lightSources.indexOf(this) && TT._markSubMeshesAsLightDirty()
         }
         _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.Gl().resetCachedMaterial()
+          this._photometricScale = this._getPhotometricScale(), this.KF().resetCachedMaterial()
         }
         _getPhotometricScale() {
-          let ip = 0;
-          const cp = this.getTypeID();
-          let Op = this.intensityMode;
-          switch (Op === pp.INTENSITYMODE_AUTOMATIC && (Op = cp === pp.LIGHTTYPEID_DIRECTIONALLIGHT ? pp.INTENSITYMODE_ILLUMINANCE : pp.INTENSITYMODE_LUMINOUSINTENSITY), cp) {
-            case pp.LIGHTTYPEID_POINTLIGHT:
-            case pp.LIGHTTYPEID_SPOTLIGHT:
-              switch (Op) {
-                case pp.INTENSITYMODE_LUMINOUSPOWER:
-                  ip = 1 / (4 * Math.PI);
+          let UT = 0;
+          const mT = this.getTypeID();
+          let WT = this.intensityMode;
+          switch (WT === TT.INTENSITYMODE_AUTOMATIC && (WT = mT === TT.LIGHTTYPEID_DIRECTIONALLIGHT ? TT.INTENSITYMODE_ILLUMINANCE : TT.INTENSITYMODE_LUMINOUSINTENSITY), mT) {
+            case TT.LIGHTTYPEID_POINTLIGHT:
+            case TT.LIGHTTYPEID_SPOTLIGHT:
+              switch (WT) {
+                case TT.INTENSITYMODE_LUMINOUSPOWER:
+                  UT = 1 / (4 * Math.PI);
                   break;
-                case pp.INTENSITYMODE_LUMINOUSINTENSITY:
-                  ip = 1;
+                case TT.INTENSITYMODE_LUMINOUSINTENSITY:
+                  UT = 1;
                   break;
-                case pp.INTENSITYMODE_LUMINANCE:
-                  ip = this.radius * this.radius
+                case TT.INTENSITYMODE_LUMINANCE:
+                  UT = this.radius * this.radius
               }
               break;
-            case pp.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (Op) {
-                case pp.INTENSITYMODE_ILLUMINANCE:
-                  ip = 1;
+            case TT.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (WT) {
+                case TT.INTENSITYMODE_ILLUMINANCE:
+                  UT = 1;
                   break;
-                case pp.INTENSITYMODE_LUMINANCE: {
-                  let pp = this.radius;
-                  pp = Math.max(pp, .001);
-                  ip = 2 * Math.PI * (1 - Math.cos(pp));
+                case TT.INTENSITYMODE_LUMINANCE: {
+                  let TT = this.radius;
+                  TT = Math.max(TT, .001);
+                  UT = 2 * Math.PI * (1 - Math.cos(TT));
                   break
                 }
               }
               break;
-            case pp.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case pp.LIGHTTYPEID_RECT_AREALIGHT:
-              ip = 1
+            case TT.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case TT.LIGHTTYPEID_RECT_AREALIGHT:
+              UT = 1
           }
-          return ip
+          return UT
         }
         _reorderLightsInScene() {
-          const pp = this.Gl();
-          0 != this._renderPriority && (pp.requireLightSorting = !0), this.Gl().sortLightsByPriority()
+          const TT = this.KF();
+          0 != this._renderPriority && (TT.requireLightSorting = !0), this.KF().sortLightsByPriority()
         }
         areLightTexturesReady() {
           return !0
@@ -304,215 +304,215 @@ export const modules = {
         _isReady() {
           return !0
         }
-      }, ip = new WeakMap, (() => {
-        const ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(mp[Symbol.metadata] ?? null) : void 0;
-        cp = [(0, op.n)()], Pp = [(0, op.n)()], Wp = [(0, op.K)()], yp = [(0, op.K)()], Up = [(0, op.K)()], wp = [(0, op.K)()], vp = [(0, op.K)()], tp = [(0, op.K)()], Hp = [(0, op.e)("_reorderLightsInScene")], dp = [(0, op.K)("shadowEnabled")], ep = [(0, op.K)("excludeWithLayerMask")], jp = [(0, op.K)("includeOnlyWithLayerMask")], kp = [(0, op.K)("lightmapMode")], (0, Op.j)(pp, null, Up, {
+      }, UT = new WeakMap, (() => {
+        const UT = "function" === typeof Symbol && Symbol.metadata ? Object.create(YT[Symbol.metadata] ?? null) : void 0;
+        mT = [(0, zT.l)()], LT = [(0, zT.l)()], pT = [(0, zT.L)()], BT = [(0, zT.L)()], ZT = [(0, zT.L)()], cT = [(0, zT.L)()], vT = [(0, zT.L)()], fT = [(0, zT.L)()], qT = [(0, zT.g)("_reorderLightsInScene")], iT = [(0, zT.L)("shadowEnabled")], bT = [(0, zT.L)("excludeWithLayerMask")], OT = [(0, zT.L)("includeOnlyWithLayerMask")], eT = [(0, zT.L)("lightmapMode")], (0, WT.h)(TT, null, ZT, {
           kind: "getter",
           name: "range",
           static: !1,
           private: !1,
           access: {
-            has: pp => "range" in pp,
-            get: pp => pp.range
+            has: TT => "range" in TT,
+            get: TT => TT.range
           },
-          metadata: ip
-        }, null, Rp), (0, Op.j)(pp, null, wp, {
+          metadata: UT
+        }, null, JT), (0, WT.h)(TT, null, cT, {
           kind: "getter",
           name: "intensityMode",
           static: !1,
           private: !1,
           access: {
-            has: pp => "intensityMode" in pp,
-            get: pp => pp.intensityMode
+            has: TT => "intensityMode" in TT,
+            get: TT => TT.intensityMode
           },
-          metadata: ip
-        }, null, Rp), (0, Op.j)(pp, null, vp, {
+          metadata: UT
+        }, null, JT), (0, WT.h)(TT, null, vT, {
           kind: "getter",
           name: "radius",
           static: !1,
           private: !1,
           access: {
-            has: pp => "radius" in pp,
-            get: pp => pp.radius
+            has: TT => "radius" in TT,
+            get: TT => TT.radius
           },
-          metadata: ip
-        }, null, Rp), (0, Op.j)(pp, null, Hp, {
+          metadata: UT
+        }, null, JT), (0, WT.h)(TT, null, qT, {
           kind: "accessor",
           name: "renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: pp => "renderPriority" in pp,
-            get: pp => pp.renderPriority,
-            set: (pp, ip) => {
-              pp.renderPriority = ip
+            has: TT => "renderPriority" in TT,
+            get: TT => TT.renderPriority,
+            set: (TT, UT) => {
+              TT.renderPriority = UT
             }
           },
-          metadata: ip
-        }, Tp, fp), (0, Op.j)(null, null, cp, {
+          metadata: UT
+        }, FT, PT), (0, WT.h)(null, null, mT, {
           kind: "field",
           name: "diffuse",
           static: !1,
           private: !1,
           access: {
-            has: pp => "diffuse" in pp,
-            get: pp => pp.diffuse,
-            set: (pp, ip) => {
-              pp.diffuse = ip
+            has: TT => "diffuse" in TT,
+            get: TT => TT.diffuse,
+            set: (TT, UT) => {
+              TT.diffuse = UT
             }
           },
-          metadata: ip
-        }, qp, Mp), (0, Op.j)(null, null, Pp, {
+          metadata: UT
+        }, xT, dT), (0, WT.h)(null, null, LT, {
           kind: "field",
           name: "specular",
           static: !1,
           private: !1,
           access: {
-            has: pp => "specular" in pp,
-            get: pp => pp.specular,
-            set: (pp, ip) => {
-              pp.specular = ip
+            has: TT => "specular" in TT,
+            get: TT => TT.specular,
+            set: (TT, UT) => {
+              TT.specular = UT
             }
           },
-          metadata: ip
-        }, Cp, Ep), (0, Op.j)(null, null, Wp, {
+          metadata: UT
+        }, wT, tT), (0, WT.h)(null, null, pT, {
           kind: "field",
           name: "falloffType",
           static: !1,
           private: !1,
           access: {
-            has: pp => "falloffType" in pp,
-            get: pp => pp.falloffType,
-            set: (pp, ip) => {
-              pp.falloffType = ip
+            has: TT => "falloffType" in TT,
+            get: TT => TT.falloffType,
+            set: (TT, UT) => {
+              TT.falloffType = UT
             }
           },
-          metadata: ip
-        }, Xp, lp), (0, Op.j)(null, null, yp, {
+          metadata: UT
+        }, aT, yT), (0, WT.h)(null, null, BT, {
           kind: "field",
           name: "intensity",
           static: !1,
           private: !1,
           access: {
-            has: pp => "intensity" in pp,
-            get: pp => pp.intensity,
-            set: (pp, ip) => {
-              pp.intensity = ip
+            has: TT => "intensity" in TT,
+            get: TT => TT.intensity,
+            set: (TT, UT) => {
+              TT.intensity = UT
             }
           },
-          metadata: ip
-        }, Qp, Jp), (0, Op.j)(null, null, tp, {
+          metadata: UT
+        }, XT, IT), (0, WT.h)(null, null, fT, {
           kind: "field",
           name: "_renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_renderPriority" in pp,
-            get: pp => pp._renderPriority,
-            set: (pp, ip) => {
-              pp._renderPriority = ip
+            has: TT => "_renderPriority" in TT,
+            get: TT => TT._renderPriority,
+            set: (TT, UT) => {
+              TT._renderPriority = UT
             }
           },
-          metadata: ip
-        }, Bp, Np), (0, Op.j)(null, null, dp, {
+          metadata: UT
+        }, QT, sT), (0, WT.h)(null, null, iT, {
           kind: "field",
           name: "_shadowEnabled",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_shadowEnabled" in pp,
-            get: pp => pp._shadowEnabled,
-            set: (pp, ip) => {
-              pp._shadowEnabled = ip
+            has: TT => "_shadowEnabled" in TT,
+            get: TT => TT._shadowEnabled,
+            set: (TT, UT) => {
+              TT._shadowEnabled = UT
             }
           },
-          metadata: ip
-        }, bp, hp), (0, Op.j)(null, null, ep, {
+          metadata: UT
+        }, VT, uT), (0, WT.h)(null, null, bT, {
           kind: "field",
           name: "_excludeWithLayerMask",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_excludeWithLayerMask" in pp,
-            get: pp => pp._excludeWithLayerMask,
-            set: (pp, ip) => {
-              pp._excludeWithLayerMask = ip
+            has: TT => "_excludeWithLayerMask" in TT,
+            get: TT => TT._excludeWithLayerMask,
+            set: (TT, UT) => {
+              TT._excludeWithLayerMask = UT
             }
           },
-          metadata: ip
-        }, ap, np), (0, Op.j)(null, null, jp, {
+          metadata: UT
+        }, CT, rT), (0, WT.h)(null, null, OT, {
           kind: "field",
           name: "_includeOnlyWithLayerMask",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_includeOnlyWithLayerMask" in pp,
-            get: pp => pp._includeOnlyWithLayerMask,
-            set: (pp, ip) => {
-              pp._includeOnlyWithLayerMask = ip
+            has: TT => "_includeOnlyWithLayerMask" in TT,
+            get: TT => TT._includeOnlyWithLayerMask,
+            set: (TT, UT) => {
+              TT._includeOnlyWithLayerMask = UT
             }
           },
-          metadata: ip
-        }, Fp, gp), (0, Op.j)(null, null, kp, {
+          metadata: UT
+        }, KT, ST), (0, WT.h)(null, null, eT, {
           kind: "field",
           name: "_lightmapMode",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_lightmapMode" in pp,
-            get: pp => pp._lightmapMode,
-            set: (pp, ip) => {
-              pp._lightmapMode = ip
+            has: TT => "_lightmapMode" in TT,
+            get: TT => TT._lightmapMode,
+            set: (TT, UT) => {
+              TT._lightmapMode = UT
             }
           },
-          metadata: ip
-        }, Gp, rp), ip && Object.defineProperty(pp, Symbol.metadata, {
+          metadata: UT
+        }, GT, NT), UT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: ip
+          value: UT
         })
-      })(), pp.FALLOFF_DEFAULT = Dp.b.FALLOFF_DEFAULT, pp.FALLOFF_PHYSICAL = Dp.b.FALLOFF_PHYSICAL, pp.FALLOFF_GLTF = Dp.b.FALLOFF_GLTF, pp.FALLOFF_STANDARD = Dp.b.FALLOFF_STANDARD, pp.LIGHTMAP_DEFAULT = Dp.b.LIGHTMAP_DEFAULT, pp.LIGHTMAP_SPECULAR = Dp.b.LIGHTMAP_SPECULAR, pp.LIGHTMAP_SHADOWSONLY = Dp.b.LIGHTMAP_SHADOWSONLY, pp.INTENSITYMODE_AUTOMATIC = Dp.b.INTENSITYMODE_AUTOMATIC, pp.INTENSITYMODE_LUMINOUSPOWER = Dp.b.INTENSITYMODE_LUMINOUSPOWER, pp.INTENSITYMODE_LUMINOUSINTENSITY = Dp.b.INTENSITYMODE_LUMINOUSINTENSITY, pp.INTENSITYMODE_ILLUMINANCE = Dp.b.INTENSITYMODE_ILLUMINANCE, pp.INTENSITYMODE_LUMINANCE = Dp.b.INTENSITYMODE_LUMINANCE, pp.LIGHTTYPEID_POINTLIGHT = Dp.b.LIGHTTYPEID_POINTLIGHT, pp.LIGHTTYPEID_DIRECTIONALLIGHT = Dp.b.LIGHTTYPEID_DIRECTIONALLIGHT, pp.LIGHTTYPEID_SPOTLIGHT = Dp.b.LIGHTTYPEID_SPOTLIGHT, pp.LIGHTTYPEID_HEMISPHERICLIGHT = Dp.b.LIGHTTYPEID_HEMISPHERICLIGHT, pp.LIGHTTYPEID_RECT_AREALIGHT = Dp.b.LIGHTTYPEID_RECT_AREALIGHT, pp
+      })(), TT.FALLOFF_DEFAULT = jT.b.FALLOFF_DEFAULT, TT.FALLOFF_PHYSICAL = jT.b.FALLOFF_PHYSICAL, TT.FALLOFF_GLTF = jT.b.FALLOFF_GLTF, TT.FALLOFF_STANDARD = jT.b.FALLOFF_STANDARD, TT.LIGHTMAP_DEFAULT = jT.b.LIGHTMAP_DEFAULT, TT.LIGHTMAP_SPECULAR = jT.b.LIGHTMAP_SPECULAR, TT.LIGHTMAP_SHADOWSONLY = jT.b.LIGHTMAP_SHADOWSONLY, TT.INTENSITYMODE_AUTOMATIC = jT.b.INTENSITYMODE_AUTOMATIC, TT.INTENSITYMODE_LUMINOUSPOWER = jT.b.INTENSITYMODE_LUMINOUSPOWER, TT.INTENSITYMODE_LUMINOUSINTENSITY = jT.b.INTENSITYMODE_LUMINOUSINTENSITY, TT.INTENSITYMODE_ILLUMINANCE = jT.b.INTENSITYMODE_ILLUMINANCE, TT.INTENSITYMODE_LUMINANCE = jT.b.INTENSITYMODE_LUMINANCE, TT.LIGHTTYPEID_POINTLIGHT = jT.b.LIGHTTYPEID_POINTLIGHT, TT.LIGHTTYPEID_DIRECTIONALLIGHT = jT.b.LIGHTTYPEID_DIRECTIONALLIGHT, TT.LIGHTTYPEID_SPOTLIGHT = jT.b.LIGHTTYPEID_SPOTLIGHT, TT.LIGHTTYPEID_HEMISPHERICLIGHT = jT.b.LIGHTTYPEID_HEMISPHERICLIGHT, TT.LIGHTTYPEID_RECT_AREALIGHT = jT.b.LIGHTTYPEID_RECT_AREALIGHT, TT
     })()
   },
-  40415: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ap
+  40335: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => lT
     });
-    var Op = cp(40203),
-      op = cp(37320),
-      Ip = cp(40210),
-      Sp = cp(37349),
-      xp = cp(37345),
-      Lp = cp(40096),
-      Yp = cp(40233);
-    class Dp {
+    var WT = mT(40095),
+      zT = mT(37188),
+      MT = mT(40102),
+      gT = mT(37219),
+      nT = mT(37216),
+      HT = mT(39965),
+      kT = mT(40122);
+    class jT {
       constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new Sp.d, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new Sp.d, this._inheritVisibility = !1, this._isVisible = !0
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new gT.d, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new gT.d, this._inheritVisibility = !1, this._isVisible = !0
       }
     }
-    let Ap = (() => {
-      var pp;
-      let ip, cp, Ap, Pp, Wp, yp = [],
-        Up = [],
-        wp = [],
-        vp = [],
-        tp = [],
-        Hp = [],
-        dp = [],
-        ep = [],
-        jp = [],
-        kp = [];
-      return pp = class {
-        static AddNodeConstructor(pp, ip) {
-          this._NodeConstructors[pp] = ip
+    let lT = (() => {
+      var TT;
+      let UT, mT, lT, LT, pT, BT = [],
+        ZT = [],
+        cT = [],
+        vT = [],
+        fT = [],
+        qT = [],
+        iT = [],
+        bT = [],
+        OT = [],
+        eT = [];
+      return TT = class {
+        static AddNodeConstructor(TT, UT) {
+          this._NodeConstructors[TT] = UT
         }
-        static Construct(pp, ip, cp, Op) {
-          const op = this._NodeConstructors[pp];
-          return op ? op(ip, cp, Op) : null
+        static Construct(TT, UT, mT, WT) {
+          const zT = this._NodeConstructors[TT];
+          return zT ? zT(UT, mT, WT) : null
         }
-        set accessibilityTag(pp) {
-          this._accessibilityTag = pp, this.onAccessibilityTagChangedObservable.notifyObservers(pp)
+        set accessibilityTag(TT) {
+          this._accessibilityTag = TT, this.onAccessibilityTagChangedObservable.notifyObservers(TT)
         }
         get accessibilityTag() {
           return this._accessibilityTag
@@ -520,19 +520,19 @@ export const modules = {
         get doNotSerialize() {
           return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
         }
-        set doNotSerialize(pp) {
-          this._nodeDataStorage._doNotSerialize = pp
+        set doNotSerialize(TT) {
+          this._nodeDataStorage._doNotSerialize = TT
         }
-        uR() {
+        bJ() {
           return this._nodeDataStorage._isDisposed
         }
-        set parent(pp) {
-          if (this._parentNode === pp) return;
-          const ip = this._parentNode;
+        set parent(TT) {
+          if (this._parentNode === TT) return;
+          const UT = this._parentNode;
           if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const ip = this._parentNode._children.indexOf(this); - 1 !== ip && this._parentNode._children.splice(ip, 1), pp || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+            const UT = this._parentNode._children.indexOf(this); - 1 !== UT && this._parentNode._children.splice(UT, 1), TT || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
           }
-          this._parentNode = pp, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), ip || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
+          this._parentNode = TT, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), UT || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
         }
         get parent() {
           return this._parentNode
@@ -540,77 +540,77 @@ export const modules = {
         get inheritVisibility() {
           return this._nodeDataStorage._inheritVisibility
         }
-        set inheritVisibility(pp) {
-          this._nodeDataStorage._inheritVisibility = pp
+        set inheritVisibility(TT) {
+          this._nodeDataStorage._inheritVisibility = TT
         }
         get isVisible() {
           return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
         }
-        set isVisible(pp) {
-          this._nodeDataStorage._isVisible = pp
+        set isVisible(TT) {
+          this._nodeDataStorage._isVisible = TT
         }
-        _serializeAsParent(pp) {
-          pp.parentId = this.uniqueId
+        _serializeAsParent(TT) {
+          TT.parentId = this.uniqueId
         }
         _addToSceneRootNodes() {
           -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
         }
         _removeFromSceneRootNodes() {
           if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const pp = this._scene.rootNodes,
-              ip = pp.length - 1;
-            pp[this._nodeDataStorage._sceneRootNodesIndex] = pp[ip], pp[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+            const TT = this._scene.rootNodes,
+              UT = TT.length - 1;
+            TT[this._nodeDataStorage._sceneRootNodesIndex] = TT[UT], TT[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
           }
         }
         get animationPropertiesOverride() {
           return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
         }
-        set animationPropertiesOverride(pp) {
-          this._animationPropertiesOverride = pp
+        set animationPropertiesOverride(TT) {
+          this._animationPropertiesOverride = TT
         }
         getClassName() {
           return "Node"
         }
-        set onDispose(pp) {
-          this._onDisposeObserver && this.Kl.remove(this._onDisposeObserver), this._onDisposeObserver = this.Kl.add(pp)
+        set onDispose(TT) {
+          this._onDisposeObserver && this.SF.remove(this._onDisposeObserver), this._onDisposeObserver = this.SF.add(TT)
         }
         get onEnabledStateChangedObservable() {
           return this._nodeDataStorage._onEnabledStateChangedObservable
         }
         get onEffectiveEnabledStateChangedObservable() {
-          var pp;
-          return (pp = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (pp._onEffectiveEnabledStateChangedObservable = new Sp.d)
+          var TT;
+          return (TT = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (TT._onEffectiveEnabledStateChangedObservable = new gT.d)
         }
         get onClonedObservable() {
           return this._nodeDataStorage._onClonedObservable
         }
-        constructor(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new Dp, this.name = (0, Op.l)(this, yp, void 0), this.id = ((0, Op.l)(this, Up), (0, Op.l)(this, wp, void 0)), this.uniqueId = ((0, Op.l)(this, vp), (0, Op.l)(this, tp, void 0)), this.state = ((0, Op.l)(this, Hp), (0, Op.l)(this, dp, "")), this.metadata = ((0, Op.l)(this, ep), (0, Op.l)(this, jp, null)), this._internalMetadata = (0, Op.l)(this, kp), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new Sp.d, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = op.b.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.Kl = new Sp.d, this._onDisposeObserver = null, this._behaviors = new Array, this.name = pp, this.id = pp, this._scene = ip || xp.e.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), cp && this._addToSceneRootNodes()
+        constructor(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new jT, this.name = (0, WT.k)(this, BT, void 0), this.id = ((0, WT.k)(this, ZT), (0, WT.k)(this, cT, void 0)), this.uniqueId = ((0, WT.k)(this, vT), (0, WT.k)(this, fT, void 0)), this.state = ((0, WT.k)(this, qT), (0, WT.k)(this, iT, "")), this.metadata = ((0, WT.k)(this, bT), (0, WT.k)(this, OT, null)), this._internalMetadata = (0, WT.k)(this, eT), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new gT.d, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = zT.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.SF = new gT.d, this._onDisposeObserver = null, this._behaviors = new Array, this.name = TT, this.id = TT, this._scene = UT || nT.c.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), mT && this._addToSceneRootNodes()
         }
-        Gl() {
+        KF() {
           return this._scene
         }
-        gy() {
-          return this._scene.gy()
+        eB() {
+          return this._scene.eB()
         }
-        addBehavior(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(pp) || (pp.init(), this._scene.isLoading && !ip ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(pp) && pp.attach(this)
-          })) : pp.attach(this), this._behaviors.push(pp)), this
+        addBehavior(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(TT) || (TT.init(), this._scene.isLoading && !UT ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(TT) && TT.attach(this)
+          })) : TT.attach(this), this._behaviors.push(TT)), this
         }
-        removeBehavior(pp) {
-          const ip = this._behaviors.indexOf(pp);
-          return -1 === ip || (this._behaviors.splice(ip, 1), pp.detach()), this
+        removeBehavior(TT) {
+          const UT = this._behaviors.indexOf(TT);
+          return -1 === UT || (this._behaviors.splice(UT, 1), TT.detach()), this
         }
         get behaviors() {
           return this._behaviors
         }
-        getBehaviorByName(pp) {
-          for (const ip of this._behaviors)
-            if (ip.name === pp) return ip;
+        getBehaviorByName(TT) {
+          for (const UT of this._behaviors)
+            if (UT.name === TT) return UT;
           return null
         }
         getWorldMatrix() {
@@ -625,13 +625,13 @@ export const modules = {
         _initCache() {
           this._cache = {}
         }
-        updateCache(pp) {
-          !pp && this.isSynchronized() || this._updateCache()
+        updateCache(TT) {
+          !TT && this.isSynchronized() || this._updateCache()
         }
-        _getActionManagerForTrigger(pp) {
-          return this.parent ? this.parent._getActionManagerForTrigger(pp, !1) : null
+        _getActionManagerForTrigger(TT) {
+          return this.parent ? this.parent._getActionManagerForTrigger(TT, !1) : null
         }
-        _updateCache(pp) {}
+        _updateCache(TT) {}
         _isSynchronized() {
           return !0
         }
@@ -647,238 +647,238 @@ export const modules = {
         isReady() {
           return this._nodeDataStorage._isReady
         }
-        ocp(pp) {
+        NUT(TT) {
           return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
         }
         isEnabled() {
           return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
         }
         _hasEffectiveEnabledStateObservers() {
-          const pp = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!pp && pp.hasObservers()
+          const TT = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!TT && TT.hasObservers()
         }
         _syncParentEnabledState() {
-          const pp = this._hasEffectiveEnabledStateObservers(),
-            ip = pp ? this.isEnabled() : null;
+          const TT = this._hasEffectiveEnabledStateObservers(),
+            UT = TT ? this.isEnabled() : null;
           if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const cp of this._children) cp._syncParentEnabledState();
-          if (pp) {
-            const pp = this.isEnabled();
-            pp !== ip && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(pp)
+            for (const mT of this._children) mT._syncParentEnabledState();
+          if (TT) {
+            const TT = this.isEnabled();
+            TT !== UT && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(TT)
           }
         }
-        eC(pp) {
-          if (this._nodeDataStorage._isEnabled === pp) return;
-          const ip = this._hasEffectiveEnabledStateObservers(),
-            cp = ip ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = pp, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(pp), ip) {
-            const pp = this.isEnabled();
-            pp !== cp && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(pp)
+        Qy(TT) {
+          if (this._nodeDataStorage._isEnabled === TT) return;
+          const UT = this._hasEffectiveEnabledStateObservers(),
+            mT = UT ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = TT, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(TT), UT) {
+            const TT = this.isEnabled();
+            TT !== mT && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(TT)
           }
         }
-        isDescendantOf(pp) {
-          return !!this.parent && (this.parent === pp || this.parent.isDescendantOf(pp))
+        isDescendantOf(TT) {
+          return !!this.parent && (this.parent === TT || this.parent.isDescendantOf(TT))
         }
-        _getDescendants(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            cp = arguments.length > 2 ? arguments[2] : void 0;
+        _getDescendants(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            mT = arguments.length > 2 ? arguments[2] : void 0;
           if (this._children)
-            for (let Op = 0; Op < this._children.length; Op++) {
-              const op = this._children[Op];
-              cp && !cp(op) || pp.push(op), ip || op._getDescendants(pp, !1, cp)
+            for (let WT = 0; WT < this._children.length; WT++) {
+              const zT = this._children[WT];
+              mT && !mT(zT) || TT.push(zT), UT || zT._getDescendants(TT, !1, mT)
             }
         }
-        getDescendants(pp, ip) {
-          const cp = [];
-          return this._getDescendants(cp, pp, ip), cp
+        getDescendants(TT, UT) {
+          const mT = [];
+          return this._getDescendants(mT, TT, UT), mT
         }
-        getChildMeshes(pp, ip) {
-          const cp = [];
-          return this._getDescendants(cp, pp, (pp => (!ip || ip(pp)) && void 0 !== pp.cullingStrategy)), cp
+        getChildMeshes(TT, UT) {
+          const mT = [];
+          return this._getDescendants(mT, TT, (TT => (!UT || UT(TT)) && void 0 !== TT.cullingStrategy)), mT
         }
-        getChildren(pp) {
-          let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(ip, pp)
+        getChildren(TT) {
+          let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(UT, TT)
         }
-        _setReady(pp) {
-          pp !== this._nodeDataStorage._isReady && (pp ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        _setReady(TT) {
+          TT !== this._nodeDataStorage._isReady && (TT ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
         }
-        getAnimationByName(pp) {
-          for (let ip = 0; ip < this.animations.length; ip++) {
-            const cp = this.animations[ip];
-            if (cp.name === pp) return cp
+        getAnimationByName(TT) {
+          for (let UT = 0; UT < this.animations.length; UT++) {
+            const mT = this.animations[UT];
+            if (mT.name === TT) return mT
           }
           return null
         }
-        createAnimationRange(ip, cp, Op) {
-          if (!this._ranges[ip]) {
-            this._ranges[ip] = pp._AnimationRangeFactory(ip, cp, Op);
-            for (let pp = 0, op = this.animations.length; pp < op; pp++) this.animations[pp] && this.animations[pp].createRange(ip, cp, Op)
+        createAnimationRange(UT, mT, WT) {
+          if (!this._ranges[UT]) {
+            this._ranges[UT] = TT._AnimationRangeFactory(UT, mT, WT);
+            for (let TT = 0, zT = this.animations.length; TT < zT; TT++) this.animations[TT] && this.animations[TT].createRange(UT, mT, WT)
           }
         }
-        deleteAnimationRange(pp) {
-          let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let cp = 0, Op = this.animations.length; cp < Op; cp++) this.animations[cp] && this.animations[cp].deleteRange(pp, ip);
-          this._ranges[pp] = null
+        deleteAnimationRange(TT) {
+          let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let mT = 0, WT = this.animations.length; mT < WT; mT++) this.animations[mT] && this.animations[mT].deleteRange(TT, UT);
+          this._ranges[TT] = null
         }
-        getAnimationRange(pp) {
-          return this._ranges[pp] || null
+        getAnimationRange(TT) {
+          return this._ranges[TT] || null
         }
-        clone(ip, cp, Op) {
-          const op = Yp.c.Clone((() => new pp(ip, this.Gl())), this);
-          if (cp && (op.parent = cp), !Op) {
-            const pp = this.getDescendants(!0);
-            for (let cp = 0; cp < pp.length; cp++) {
-              const Op = pp[cp];
-              Op.clone(ip + "." + Op.name, op)
+        clone(UT, mT, WT) {
+          const zT = kT.e.Clone((() => new TT(UT, this.KF())), this);
+          if (mT && (zT.parent = mT), !WT) {
+            const TT = this.getDescendants(!0);
+            for (let mT = 0; mT < TT.length; mT++) {
+              const WT = TT[mT];
+              WT.clone(UT + "." + WT.name, zT)
             }
           }
-          return op
+          return zT
         }
         getAnimationRanges() {
-          const pp = [];
-          let ip;
-          for (ip in this._ranges) pp.push(this._ranges[ip]);
-          return pp
+          const TT = [];
+          let UT;
+          for (UT in this._ranges) TT.push(this._ranges[UT]);
+          return TT
         }
-        beginAnimation(pp, ip, cp, Op) {
-          const op = this.getAnimationRange(pp);
-          return op ? this._scene.beginAnimation(this, op.from, op.to, ip, cp, Op) : null
+        beginAnimation(TT, UT, mT, WT) {
+          const zT = this.getAnimationRange(TT);
+          return zT ? this._scene.beginAnimation(this, zT.from, zT.to, UT, mT, WT) : null
         }
         serializeAnimationRanges() {
-          const pp = [];
-          for (const ip in this._ranges) {
-            const cp = this._ranges[ip];
-            if (!cp) continue;
-            const Op = {};
-            Op.name = ip, Op.from = cp.from, Op.to = cp.to, pp.push(Op)
+          const TT = [];
+          for (const UT in this._ranges) {
+            const mT = this._ranges[UT];
+            if (!mT) continue;
+            const WT = {};
+            WT.name = UT, WT.from = mT.from, WT.to = mT.to, TT.push(WT)
           }
-          return pp
+          return TT
         }
-        computeWorldMatrix(pp) {
-          return this._worldMatrix || (this._worldMatrix = op.b.Identity()), this._worldMatrix
+        computeWorldMatrix(TT) {
+          return this._worldMatrix || (this._worldMatrix = zT.e.Identity()), this._worldMatrix
         }
-        dispose(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !pp) {
-            const cp = this.getDescendants(!0);
-            for (const Op of cp) Op.dispose(pp, ip)
+        dispose(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !TT) {
+            const mT = this.getDescendants(!0);
+            for (const WT of mT) WT.dispose(TT, UT)
           }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.Kl.notifyObservers(this), this.Kl.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const cp of this._behaviors) cp.detach();
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.SF.notifyObservers(this), this.SF.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const mT of this._behaviors) mT.detach();
           this._behaviors.length = 0, this.metadata = null
         }
-        static ParseAnimationRanges(pp, ip, cp) {
-          if (ip.By)
-            for (let Op = 0; Op < ip.By.length; Op++) {
-              const cp = ip.By[Op];
-              pp.createAnimationRange(cp.name, cp.from, cp.to)
+        static ParseAnimationRanges(TT, UT, mT) {
+          if (UT.hZ)
+            for (let WT = 0; WT < UT.hZ.length; WT++) {
+              const mT = UT.hZ[WT];
+              TT.createAnimationRange(mT.name, mT.from, mT.to)
             }
         }
         getHierarchyBoundingVectors() {
-          let pp, ip, cp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            Op = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.Gl().incrementRenderId(), this.computeWorldMatrix(!0);
-          const Ip = this;
-          if (Ip.bJ && Ip.Am) {
-            const cp = Ip.bJ();
-            pp = cp.boundingBox.minimumWorld.clone(), ip = cp.boundingBox.maximumWorld.clone()
-          } else pp = new op.o(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), ip = new op.o(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (cp) {
-            const cp = this.getDescendants(!1);
-            for (const Ip of cp) {
-              const cp = Ip;
-              if (cp.computeWorldMatrix(!0), Op && !Op(cp)) continue;
-              if (!cp.bJ || 0 === cp.getTotalVertices()) continue;
-              const Sp = cp.bJ().boundingBox,
-                xp = Sp.minimumWorld,
-                Lp = Sp.maximumWorld;
-              op.o.CheckExtends(xp, pp, ip), op.o.CheckExtends(Lp, pp, ip)
+          let TT, UT, mT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            WT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.KF().incrementRenderId(), this.computeWorldMatrix(!0);
+          const MT = this;
+          if (MT.rV && MT.rY) {
+            const mT = MT.rV();
+            TT = mT.boundingBox.minimumWorld.clone(), UT = mT.boundingBox.maximumWorld.clone()
+          } else TT = new zT.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), UT = new zT.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (mT) {
+            const mT = this.getDescendants(!1);
+            for (const MT of mT) {
+              const mT = MT;
+              if (mT.computeWorldMatrix(!0), WT && !WT(mT)) continue;
+              if (!mT.rV || 0 === mT.getTotalVertices()) continue;
+              const gT = mT.rV().boundingBox,
+                nT = gT.minimumWorld,
+                HT = gT.maximumWorld;
+              zT.p.CheckExtends(nT, TT, UT), zT.p.CheckExtends(HT, TT, UT)
             }
           }
           return {
-            min: pp,
-            max: ip
+            min: TT,
+            max: UT
           }
         }
       }, (() => {
-        const op = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ip = [(0, Ip.K)()], cp = [(0, Ip.K)()], Ap = [(0, Ip.K)()], Pp = [(0, Ip.K)()], Wp = [(0, Ip.K)()], (0, Op.j)(null, null, ip, {
+        const zT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        UT = [(0, MT.L)()], mT = [(0, MT.L)()], lT = [(0, MT.L)()], LT = [(0, MT.L)()], pT = [(0, MT.L)()], (0, WT.h)(null, null, UT, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: pp => "name" in pp,
-            get: pp => pp.name,
-            set: (pp, ip) => {
-              pp.name = ip
+            has: TT => "name" in TT,
+            get: TT => TT.name,
+            set: (TT, UT) => {
+              TT.name = UT
             }
           },
-          metadata: op
-        }, yp, Up), (0, Op.j)(null, null, cp, {
+          metadata: zT
+        }, BT, ZT), (0, WT.h)(null, null, mT, {
           kind: "field",
           name: "id",
           static: !1,
           private: !1,
           access: {
-            has: pp => "id" in pp,
-            get: pp => pp.id,
-            set: (pp, ip) => {
-              pp.id = ip
+            has: TT => "id" in TT,
+            get: TT => TT.id,
+            set: (TT, UT) => {
+              TT.id = UT
             }
           },
-          metadata: op
-        }, wp, vp), (0, Op.j)(null, null, Ap, {
+          metadata: zT
+        }, cT, vT), (0, WT.h)(null, null, lT, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: pp => "uniqueId" in pp,
-            get: pp => pp.uniqueId,
-            set: (pp, ip) => {
-              pp.uniqueId = ip
+            has: TT => "uniqueId" in TT,
+            get: TT => TT.uniqueId,
+            set: (TT, UT) => {
+              TT.uniqueId = UT
             }
           },
-          metadata: op
-        }, tp, Hp), (0, Op.j)(null, null, Pp, {
+          metadata: zT
+        }, fT, qT), (0, WT.h)(null, null, LT, {
           kind: "field",
           name: "state",
           static: !1,
           private: !1,
           access: {
-            has: pp => "state" in pp,
-            get: pp => pp.state,
-            set: (pp, ip) => {
-              pp.state = ip
+            has: TT => "state" in TT,
+            get: TT => TT.state,
+            set: (TT, UT) => {
+              TT.state = UT
             }
           },
-          metadata: op
-        }, dp, ep), (0, Op.j)(null, null, Wp, {
+          metadata: zT
+        }, iT, bT), (0, WT.h)(null, null, pT, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: pp => "metadata" in pp,
-            get: pp => pp.metadata,
-            set: (pp, ip) => {
-              pp.metadata = ip
+            has: TT => "metadata" in TT,
+            get: TT => TT.metadata,
+            set: (TT, UT) => {
+              TT.metadata = UT
             }
           },
-          metadata: op
-        }, jp, kp), op && Object.defineProperty(pp, Symbol.metadata, {
+          metadata: zT
+        }, OT, eT), zT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: op
+          value: zT
         })
-      })(), pp._AnimationRangeFactory = (pp, ip, cp) => {
-        throw (0, Lp.o)("AnimationRange")
-      }, pp._NodeConstructors = {}, pp
+      })(), TT._AnimationRangeFactory = (TT, UT, mT) => {
+        throw (0, HT.k)("AnimationRange")
+      }, TT._NodeConstructors = {}, TT
     })()
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

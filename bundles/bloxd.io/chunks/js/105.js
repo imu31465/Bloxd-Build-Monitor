@@ -1,462 +1,462 @@
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  5025: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Pp
+  5013: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => LT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(1060),
-      Sp = cp(1361),
-      xp = cp(3607),
-      Lp = cp(131),
-      Yp = cp(3641),
-      Dp = cp(3628),
-      Ap = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(1135),
+      gT = mT(1446),
+      nT = mT(3599),
+      HT = mT(133),
+      kT = mT(3644),
+      jT = mT(3627),
+      lT = mT(1188);
 
-    function Pp(pp) {
+    function LT(TT) {
       let {
-        game: ip
-      } = pp;
-      const cp = (0, Lp.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Op = (0, Yp.f)(ip, cp),
-        Pp = (0, xp.d)(Op),
-        Wp = void 0 !== Pp.blurhash;
-      return (0, Ap.jsxs)("div", {
+        game: UT
+      } = TT;
+      const mT = (0, HT.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        WT = (0, kT.e)(UT, mT),
+        LT = (0, nT.e)(WT),
+        pT = void 0 !== LT.blurhash;
+      return (0, lT.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Pp.isLoading && !Wp && (0, Ap.jsx)(Sp.c, {
+        children: [LT.isLoading && !pT && (0, lT.jsx)(gT.c, {
           loaderType: "Secondary"
-        }), !Pp.failed && (null !== Pp.src || Wp) && (0, Ap.jsx)("div", {
-          className: op()("SchematicImage", Dp.g, {
-            SchematicImageFadeIn: Pp.fadeIn && !Wp
+        }), !LT.failed && (null !== LT.src || pT) && (0, lT.jsx)("div", {
+          className: zT()("SchematicImage", jT.h, {
+            SchematicImageFadeIn: LT.fadeIn && !pT
           }),
-          style: (0, Dp.f)(Pp),
-          children: (0, Ap.jsx)(Dp.c, {
-            image: Pp
+          style: (0, jT.e)(LT),
+          children: (0, lT.jsx)(jT.c, {
+            image: LT
           })
-        }), Pp.failed && (0, Ap.jsx)("div", {
+        }), LT.failed && (0, lT.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Ap.jsx)(Ip.d, {
+          children: (0, lT.jsx)(MT.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5152: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => wp
+  5130: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => cT
     });
-    var Op = cp(62),
-      op = cp(1049),
-      Ip = cp.n(op),
-      Sp = cp(5076),
-      xp = cp(1361),
-      Lp = cp(1201),
-      Yp = cp(3250),
-      Dp = cp(3412),
-      Ap = cp(1060),
-      Pp = cp(3259),
-      Wp = cp(5156),
-      yp = cp(5173),
-      Up = cp(1112);
+    var WT = mT(63),
+      zT = mT(1126),
+      MT = mT.n(zT),
+      gT = mT(5057),
+      nT = mT(1446),
+      HT = mT(1288),
+      kT = mT(3292),
+      jT = mT(3419),
+      lT = mT(1135),
+      LT = mT(3295),
+      pT = mT(5136),
+      BT = mT(5151),
+      ZT = mT(1188);
 
-    function wp(pp) {
+    function cT(TT) {
       let {
-        folderName: ip,
-        onTexturePackUpdated: op,
-        disabled: wp = !1,
-        maxFileSizeMb: vp,
-        packOwner: tp
-      } = pp;
+        folderName: UT,
+        onTexturePackUpdated: zT,
+        disabled: cT = !1,
+        maxFileSizeMb: vT,
+        packOwner: fT
+      } = TT;
       const {
-        t: Hp
-      } = (0, Lp.H)(), [dp, ep] = (0, Op.useState)(!1), [jp, kp] = (0, Op.useState)(null), [mp, Rp] = (0, Op.useState)(null), qp = (0, Op.useRef)(null);
-      async function Mp(pp) {
-        ep(!0);
+        t: qT
+      } = (0, HT.z)(), [iT, bT] = (0, WT.useState)(!1), [OT, eT] = (0, WT.useState)(null), [YT, JT] = (0, WT.useState)(null), xT = (0, WT.useRef)(null);
+      async function dT(TT) {
+        bT(!0);
         try {
-          const ip = await (0, Yp.o)(pp);
-          if ("customGame" === tp && (0, Dp.m)(ip)) return void kp(Hp(Dp.e));
-          if (void 0 !== vp) {
-            const pp = JSON.stringify(ip).length / 1048576;
-            if (pp > vp) return void kp(Hp("customTexturePack:packTooBig", {
-              size: pp.toFixed(1),
-              max: vp
+          const UT = await (0, kT.p)(TT);
+          if ("customGame" === fT && (0, jT.h)(UT)) return void eT(qT(jT.d));
+          if (void 0 !== vT) {
+            const TT = JSON.stringify(UT).length / 1048576;
+            if (TT > vT) return void eT(qT("customTexturePack:packTooBig", {
+              size: TT.toFixed(1),
+              max: vT
             }))
           }
-          kp(null), Rp(null), op(ip), qp.current = ip,
-            function(pp, ip) {
-              const Op = pp.modelOverrides;
-              Op && Promise.all([cp.e(206), cp.e(205)]).then((() => cp(34484))).then((cp => {
+          eT(null), JT(null), zT(UT), xT.current = UT,
+            function(TT, UT) {
+              const WT = TT.modelOverrides;
+              WT && Promise.all([mT.e(206), mT.e(205)]).then((() => mT(34345))).then((mT => {
                 let {
-                  packDisplayName: op,
-                  refusedPackModels: Ip,
-                  packModelSummary: Sp
-                } = cp;
-                const xp = op(pp.metaData);
-                ip(Sp(xp, Ip(xp, Op, !1)))
-              })).catch((pp => {
-                console.error("Checking the texture pack's models failed:", pp)
+                  packDisplayName: zT,
+                  refusedPackModels: MT,
+                  packModelSummary: gT
+                } = mT;
+                const nT = zT(TT.metaData);
+                UT(gT(nT, MT(nT, WT, !1)))
+              })).catch((TT => {
+                console.error("Checking the texture pack's models failed:", TT)
               }))
-            }(ip, (pp => {
-              qp.current === ip && Rp(pp)
+            }(UT, (TT => {
+              xT.current === UT && JT(TT)
             }))
-        } catch (ip) {
-          if (ip instanceof Pp.b) {
-            const pp = "customTexturePack:invalidPack" !== ip.translationKey || (0, yp.e)() ? ip.translationKey : "customTexturePack:invalidPackZip";
-            kp((0, Wp.f)(Hp, pp, ip.params))
-          } else console.error("Couldn't read the texture pack", ip), kp(Hp("customTexturePack:errorTitle"))
+        } catch (UT) {
+          if (UT instanceof LT.e) {
+            const TT = "customTexturePack:invalidPack" !== UT.translationKey || (0, BT.i)() ? UT.translationKey : "customTexturePack:invalidPackZip";
+            eT((0, pT.f)(qT, TT, UT.params))
+          } else console.error("Couldn't read the texture pack", UT), eT(qT("customTexturePack:errorTitle"))
         } finally {
-          ep(!1)
+          bT(!1)
         }
       }
       const {
-        getRootProps: Cp,
-        getInputProps: Ep,
-        isDragActive: Xp,
-        open: lp
-      } = (0, Sp.c)({
-        onDrop: Mp,
+        getRootProps: wT,
+        getInputProps: tT,
+        isDragActive: aT,
+        open: yT
+      } = (0, gT.b)({
+        onDrop: dT,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: wp
+        disabled: cT
       });
-      return (0, Up.jsxs)("div", {
+      return (0, ZT.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, Up.jsxs)("div", {
+        children: [(0, ZT.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [Hp("settingsMenu:customTextureWarning"), ".", (0, Up.jsx)("br", {}), Hp("settingsMenu:viewDocumentation"), ":", " ", (0, Up.jsx)("a", {
+          children: [qT("settingsMenu:customTextureWarning"), ".", (0, ZT.jsx)("br", {}), qT("settingsMenu:viewDocumentation"), ":", " ", (0, ZT.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), jp && (0, Up.jsxs)("div", {
+        }), OT && (0, ZT.jsxs)("div", {
           className: "CustomTextureError",
-          children: [Hp("general:error"), ": ", jp]
-        }), mp && (0, Up.jsx)("div", {
+          children: [qT("general:error"), ": ", OT]
+        }), YT && (0, ZT.jsx)("div", {
           className: "CustomTextureError",
-          children: mp
-        }), (0, Up.jsxs)("div", {
-          ...Cp({
-            className: Ip()("CustomTextureFolderUpload", {
-              ActiveDrag: Xp,
-              Disabled: wp
+          children: YT
+        }), (0, ZT.jsxs)("div", {
+          ...wT({
+            className: MT()("CustomTextureFolderUpload", {
+              ActiveDrag: aT,
+              Disabled: cT
             })
           }),
-          children: [(0, Up.jsx)("input", {
-            ...Ep({
+          children: [(0, ZT.jsx)("input", {
+            ...tT({
               webkitdirectory: "true"
             })
-          }), dp && (0, Up.jsx)("div", {
+          }), iT && (0, ZT.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, Up.jsx)(xp.c, {})
-          }), !dp && !Xp && ip && (0, Up.jsxs)(Up.Fragment, {
-            children: [(0, Up.jsx)("div", {
+            children: (0, ZT.jsx)(nT.c, {})
+          }), !iT && !aT && UT && (0, ZT.jsxs)(ZT.Fragment, {
+            children: [(0, ZT.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Up.jsx)(Ap.d, {
+              children: (0, ZT.jsx)(lT.c, {
                 name: "folder-image"
               })
-            }), (0, Up.jsx)("div", {
+            }), (0, ZT.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: ip
+              children: UT
             })]
-          }), !dp && (Xp || !ip) && (0, Up.jsxs)(Up.Fragment, {
-            children: [(0, Up.jsx)("div", {
+          }), !iT && (aT || !UT) && (0, ZT.jsxs)(ZT.Fragment, {
+            children: [(0, ZT.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, Up.jsx)(Ap.d, {
+              children: (0, ZT.jsx)(lT.c, {
                 name: "up-from-bracket"
               })
-            }), (0, Up.jsx)("div", {
+            }), (0, ZT.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: Hp((0, yp.e)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: qT((0, BT.i)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !dp && (0, Up.jsx)(yp.d, {
-            disabled: wp,
-            openFolderPicker: lp,
-            onFiles: pp => {
-              Mp(pp)
+          }), !iT && (0, ZT.jsx)(BT.e, {
+            disabled: cT,
+            openFolderPicker: yT,
+            onFiles: TT => {
+              dT(TT)
             }
           })]
         })]
       })
     }
   },
-  5173: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Dp,
-      e: () => Yp
+  5151: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => jT,
+      i: () => kT
     });
-    var Op = cp(62),
-      op = cp(1480),
-      Ip = cp(1201),
-      Sp = cp(104),
-      xp = cp(3235),
-      Lp = cp(1112);
+    var WT = mT(63),
+      zT = mT(1569),
+      MT = mT(1288),
+      gT = mT(102),
+      nT = mT(3278),
+      HT = mT(1188);
 
-    function Yp() {
-      return !(0, Sp.isMobile)()
+    function kT() {
+      return !(0, gT.isMobile)()
     }
 
-    function Dp(pp) {
+    function jT(TT) {
       let {
-        disabled: ip,
-        openFolderPicker: cp,
-        onFiles: Sp
-      } = pp;
+        disabled: UT,
+        openFolderPicker: mT,
+        onFiles: gT
+      } = TT;
       const {
-        t: Dp
-      } = (0, Ip.H)(), Ap = (0, Op.useRef)(null);
-      return (0, Lp.jsxs)("div", {
+        t: jT
+      } = (0, MT.z)(), lT = (0, WT.useRef)(null);
+      return (0, HT.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, Lp.jsx)("input", {
-          ref: Ap,
+        children: [(0, HT.jsx)("input", {
+          ref: lT,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(pp) {
-            const ip = Array.from(pp.target.files);
-            pp.target.value = "", Sp(ip)
+          onChange: function(TT) {
+            const UT = Array.from(TT.target.files);
+            TT.target.value = "", gT(UT)
           }
-        }), Yp() && (0, Lp.jsx)(op.f, {
-          disabled: ip,
-          onClick: cp,
-          children: Dp("general:chooseFolder")
-        }), (0, Lp.jsx)(op.f, {
-          disabled: ip,
+        }), kT() && (0, HT.jsx)(zT.e, {
+          disabled: UT,
+          onClick: mT,
+          children: jT("general:chooseFolder")
+        }), (0, HT.jsx)(zT.e, {
+          disabled: UT,
           onClick: () => {
-            (0, xp.h)(Ap.current)
+            (0, nT.f)(lT.current)
           },
-          children: Dp("general:chooseZip")
+          children: jT("general:chooseZip")
         })]
       })
     }
   },
-  5113: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => yp,
-      f: () => Hp,
-      i: () => Up,
-      l: () => tp
+  5090: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => BT,
+      f: () => qT,
+      j: () => ZT,
+      l: () => fT
     });
-    var Op = cp(62),
-      op = cp(5122),
-      Ip = cp(4462),
-      Sp = cp(1387),
-      xp = cp(5146),
-      Lp = cp(1049),
-      Yp = cp.n(Lp),
-      Dp = cp(1372),
-      Ap = cp(1765),
-      Pp = cp(5149),
-      Wp = cp(1112);
+    var WT = mT(63),
+      zT = mT(5095),
+      MT = mT(4468),
+      gT = mT(1475),
+      nT = mT(5116),
+      HT = mT(1126),
+      kT = mT.n(HT),
+      jT = mT(1457),
+      lT = mT(1863),
+      LT = mT(5123),
+      pT = mT(1188);
 
-    function yp(pp) {
+    function BT(TT) {
       let {
-        label: ip,
-        onClick: cp,
-        checked: Op,
-        circleInfoText: op,
-        className: xp,
-        disabled: Lp,
-        note: Dp
-      } = pp;
-      return (0, Wp.jsxs)("div", {
-        "aria-disabled": Lp || void 0,
+        label: UT,
+        onClick: mT,
+        checked: WT,
+        circleInfoText: zT,
+        className: nT,
+        disabled: HT,
+        note: jT
+      } = TT;
+      return (0, pT.jsxs)("div", {
+        "aria-disabled": HT || void 0,
         "data-pad-focusable": !0,
-        className: Yp()("SettingBox CheckboxContainer", {
-          [xp]: xp,
-          SettingBoxDisabled: Lp
+        className: kT()("SettingBox CheckboxContainer", {
+          [nT]: nT,
+          SettingBoxDisabled: HT
         }),
         onClick: () => {
-          Lp || cp(!Op)
+          HT || mT(!WT)
         },
-        children: [(0, Wp.jsxs)("div", {
+        children: [(0, pT.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Wp.jsx)("label", {
+          children: [(0, pT.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Wp.jsx)(Ip.b, {
+            children: (0, pT.jsx)(MT.d, {
               className: "SettingsCheckbox",
-              checked: Op,
-              disabled: Lp,
+              checked: WT,
+              disabled: HT,
               onChange: () => {}
             })
-          }), (0, Wp.jsxs)("div", {
+          }), (0, pT.jsxs)("div", {
             className: "CheckboxText",
-            children: [ip, op && (0, Wp.jsx)("span", {
-              onClick: pp => pp.stopPropagation(),
-              children: (0, Wp.jsx)(Sp.d, {
+            children: [UT, zT && (0, pT.jsx)("span", {
+              onClick: TT => TT.stopPropagation(),
+              children: (0, pT.jsx)(gT.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: op
+                hoverInfo: zT
               })
             })]
           })]
-        }), Dp && (0, Wp.jsx)("div", {
+        }), jT && (0, pT.jsx)("div", {
           className: "SettingNote",
-          children: Dp
+          children: jT
         })]
       })
     }
 
-    function Up(pp) {
+    function ZT(TT) {
       let {
-        name: ip,
-        onChange: cp,
-        min: op,
-        max: Ip,
-        step: xp,
-        initValue: Lp,
-        circleInfoText: Dp,
-        format: Ap,
-        className: Pp,
-        padStep: yp,
-        disabled: Up = !1,
-        selectableMax: wp,
-        cappedNote: tp,
-        onChangeComplete: Hp
-      } = pp;
-      const [dp, ep] = (0, Op.useState)(Lp), jp = (0, Op.useRef)(Lp);
-      (0, Op.useEffect)((() => {
-        jp.current = Lp, ep(Lp)
-      }), [Lp]);
-      const kp = void 0 !== wp && wp < Ip,
-        mp = kp ? {
-          "--slider-selectable": (wp - op) / (Ip - op)
+        name: UT,
+        onChange: mT,
+        min: zT,
+        max: MT,
+        step: nT,
+        initValue: HT,
+        circleInfoText: jT,
+        format: lT,
+        className: LT,
+        padStep: BT,
+        disabled: ZT = !1,
+        selectableMax: cT,
+        cappedNote: fT,
+        onChangeComplete: qT
+      } = TT;
+      const [iT, bT] = (0, WT.useState)(HT), OT = (0, WT.useRef)(HT);
+      (0, WT.useEffect)((() => {
+        OT.current = HT, bT(HT)
+      }), [HT]);
+      const eT = void 0 !== cT && cT < MT,
+        YT = eT ? {
+          "--slider-selectable": (cT - zT) / (MT - zT)
         } : void 0;
-      return (0, Wp.jsxs)("div", {
-        className: Yp()("SettingBox SettingsSliderDiv", {
-          [Pp]: Pp,
-          SettingBoxDisabled: Up,
-          SliderCapped: kp
+      return (0, pT.jsxs)("div", {
+        className: kT()("SettingBox SettingsSliderDiv", {
+          [LT]: LT,
+          SettingBoxDisabled: ZT,
+          SliderCapped: eT
         }),
-        style: mp,
-        children: [(0, Wp.jsxs)("div", {
+        style: YT,
+        children: [(0, pT.jsxs)("div", {
           className: "SliderText",
-          children: [`${ip}: ${Ap?Ap(dp):dp}`, Dp && (0, Wp.jsx)(Sp.d, {
+          children: [`${UT}: ${lT?lT(iT):iT}`, jT && (0, pT.jsx)(gT.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Dp
+            hoverInfo: jT
           })]
-        }), (0, Wp.jsx)("div", {
+        }), (0, pT.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Wp.jsx)(vp, {
-            value: dp,
-            min: op,
-            max: Ip,
-            step: xp,
-            onChange: pp => {
-              if (kp && pp >= wp && dp === wp) return;
-              const ip = kp ? Math.min(pp, wp) : pp;
-              jp.current = ip, ep(ip), cp(ip)
+          children: (0, pT.jsx)(vT, {
+            value: iT,
+            min: zT,
+            max: MT,
+            step: nT,
+            onChange: TT => {
+              if (eT && TT >= cT && iT === cT) return;
+              const UT = eT ? Math.min(TT, cT) : TT;
+              OT.current = UT, bT(UT), mT(UT)
             },
-            onChangeComplete: Hp && (() => {
-              Hp(jp.current)
+            onChangeComplete: qT && (() => {
+              qT(OT.current)
             }),
-            format: Ap,
-            padStep: yp,
-            disabled: Up
+            format: lT,
+            padStep: BT,
+            disabled: ZT
           })
-        }), kp && tp && (0, Wp.jsx)("div", {
+        }), eT && fT && (0, pT.jsx)("div", {
           className: "SettingNote",
-          children: tp
+          children: fT
         })]
       })
     }
-    const wp = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const cT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function vp(pp) {
-      var ip;
+    function vT(TT) {
+      var UT;
       let {
-        value: cp,
-        min: Ip,
-        max: Sp,
-        step: xp,
-        onChange: Lp,
-        orientation: Yp,
-        reverse: Dp,
-        setIsChanging: Ap,
-        tooltip: yp,
-        labels: Up,
-        handleLabel: vp,
-        format: tp,
-        onChangeStart: Hp,
-        onChangeComplete: dp,
-        padStep: ep,
-        disabled: jp = !1
-      } = pp;
-      const kp = (0, Op.useRef)(null),
-        mp = (0, Op.useRef)(null);
-      (0, Op.useLayoutEffect)((() => {
-        var pp, ip, cp;
-        const Op = null !== (pp = null === (ip = kp.current) || void 0 === ip ? void 0 : ip.querySelector(".rangeslider")) && void 0 !== pp ? pp : null;
-        null === Op || void 0 === Op || Op.setAttribute("data-pad-slider", ""), null === Op || void 0 === Op || Op.setAttribute("data-pad-focusable", ""), null === Op || void 0 === Op || null === (cp = Op.querySelector(".rangeslider__handle")) || void 0 === cp || cp.setAttribute("data-pad-slider-handle", ""), mp.current = Op
-      }), []), (0, Op.useLayoutEffect)((() => {
-        var pp, ip;
-        jp ? null === (pp = mp.current) || void 0 === pp || pp.setAttribute("aria-disabled", "true") : null === (ip = mp.current) || void 0 === ip || ip.removeAttribute("aria-disabled")
-      }), [jp]);
-      const Rp = (null !== (ip = String(xp).split(".")[1]) && void 0 !== ip ? ip : "").length,
-        qp = pp => {
-          const ip = Number((Math.round((pp - Ip) / xp) * xp + Ip).toFixed(Rp));
-          return Math.min(Sp, Math.max(Ip, ip))
+        value: mT,
+        min: MT,
+        max: gT,
+        step: nT,
+        onChange: HT,
+        orientation: kT,
+        reverse: jT,
+        setIsChanging: lT,
+        tooltip: BT,
+        labels: ZT,
+        handleLabel: vT,
+        format: fT,
+        onChangeStart: qT,
+        onChangeComplete: iT,
+        padStep: bT,
+        disabled: OT = !1
+      } = TT;
+      const eT = (0, WT.useRef)(null),
+        YT = (0, WT.useRef)(null);
+      (0, WT.useLayoutEffect)((() => {
+        var TT, UT, mT;
+        const WT = null !== (TT = null === (UT = eT.current) || void 0 === UT ? void 0 : UT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
+        null === WT || void 0 === WT || WT.setAttribute("data-pad-slider", ""), null === WT || void 0 === WT || WT.setAttribute("data-pad-focusable", ""), null === WT || void 0 === WT || null === (mT = WT.querySelector(".rangeslider__handle")) || void 0 === mT || mT.setAttribute("data-pad-slider-handle", ""), YT.current = WT
+      }), []), (0, WT.useLayoutEffect)((() => {
+        var TT, UT;
+        OT ? null === (TT = YT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (UT = YT.current) || void 0 === UT || UT.removeAttribute("aria-disabled")
+      }), [OT]);
+      const JT = (null !== (UT = String(nT).split(".")[1]) && void 0 !== UT ? UT : "").length,
+        xT = TT => {
+          const UT = Number((Math.round((TT - MT) / nT) * nT + MT).toFixed(JT));
+          return Math.min(gT, Math.max(MT, UT))
         },
-        Mp = (0, Op.useRef)(dp);
-      Mp.current = dp, (0, Op.useEffect)((() => {
-        const pp = kp.current;
-        if (!pp) return;
-        const ip = pp => {
-          var ip;
-          wp.has(pp.key) && (null === (ip = Mp.current) || void 0 === ip || ip.call(Mp))
+        dT = (0, WT.useRef)(iT);
+      dT.current = iT, (0, WT.useEffect)((() => {
+        const TT = eT.current;
+        if (!TT) return;
+        const UT = TT => {
+          var UT;
+          cT.has(TT.key) && (null === (UT = dT.current) || void 0 === UT || UT.call(dT))
         };
-        return pp.addEventListener("keyup", ip), () => {
-          pp.removeEventListener("keyup", ip)
+        return TT.addEventListener("keyup", UT), () => {
+          TT.removeEventListener("keyup", UT)
         }
       }), []);
-      const Cp = (0, Op.useRef)(!1);
-      return (0, Pp.h)(mp, {
-        adjust: pp => {
-          if (jp) return;
-          const ip = null !== ep && void 0 !== ep ? ep : Math.max(xp, Math.round((Sp - Ip) / 20 / xp) * xp),
-            Op = qp(cp + pp * ip * (Dp ? -1 : 1));
-          Op !== cp && (null === Hp || void 0 === Hp || Hp(), Lp(Op), null === dp || void 0 === dp || dp())
+      const wT = (0, WT.useRef)(!1);
+      return (0, LT.g)(YT, {
+        adjust: TT => {
+          if (OT) return;
+          const UT = null !== bT && void 0 !== bT ? bT : Math.max(nT, Math.round((gT - MT) / 20 / nT) * nT),
+            WT = xT(mT + TT * UT * (jT ? -1 : 1));
+          WT !== mT && (null === qT || void 0 === qT || qT(), HT(WT), null === iT || void 0 === iT || iT())
         },
-        setFraction: pp => {
-          if (jp) return;
-          const ip = qp(Ip + (Dp ? 1 - pp : pp) * (Sp - Ip));
-          ip !== cp && (Cp.current || (Cp.current = !0, null === Hp || void 0 === Hp || Hp()), Lp(ip))
+        setFraction: TT => {
+          if (OT) return;
+          const UT = xT(MT + (jT ? 1 - TT : TT) * (gT - MT));
+          UT !== mT && (wT.current || (wT.current = !0, null === qT || void 0 === qT || qT()), HT(UT))
         },
         endDrag: () => {
-          Cp.current && (Cp.current = !1, null === dp || void 0 === dp || dp())
+          wT.current && (wT.current = !1, null === iT || void 0 === iT || iT())
         }
-      }), (0, Wp.jsx)("div", {
-        ref: kp,
+      }), (0, pT.jsx)("div", {
+        ref: eT,
         style: {
           display: "contents"
         },
-        children: (0, Wp.jsx)(op.b, {
-          value: cp,
-          min: Ip,
-          max: Sp,
-          step: xp,
-          onChange: Lp,
-          orientation: Yp,
-          reverse: Dp,
-          tooltip: yp,
-          labels: Up,
-          handleLabel: vp,
-          format: tp,
+        children: (0, pT.jsx)(zT.d, {
+          value: mT,
+          min: MT,
+          max: gT,
+          step: nT,
+          onChange: HT,
+          orientation: kT,
+          reverse: jT,
+          tooltip: BT,
+          labels: ZT,
+          handleLabel: vT,
+          format: fT,
           onChangeStart: () => {
-            null === Hp || void 0 === Hp || Hp(), null === Ap || void 0 === Ap || Ap(!0)
+            null === qT || void 0 === qT || qT(), null === lT || void 0 === lT || lT(!0)
           },
           onChangeComplete: () => {
-            null === Ap || void 0 === Ap || Ap(!1), null === dp || void 0 === dp || dp()
+            null === lT || void 0 === lT || lT(!1), null === iT || void 0 === iT || iT()
           }
         })
       })
     }
-    async function tp() {
-      const pp = Dp.NotificationProvider.showPromptPopup({
+    async function fT() {
+      const TT = jT.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -464,75 +464,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await pp.getResult() && (0, Ap.reloadBloxd)()
+      !0 === await TT.getResult() && (0, lT.reloadBloxd)()
     }
 
-    function Hp(pp) {
+    function qT(TT) {
       let {
-        label: ip,
-        options: cp,
-        value: Op,
-        onChange: op,
-        circleInfoText: Ip
-      } = pp;
-      return (0, Wp.jsxs)("div", {
+        label: UT,
+        options: mT,
+        value: WT,
+        onChange: zT,
+        circleInfoText: MT
+      } = TT;
+      return (0, pT.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Wp.jsxs)("div", {
+        children: [(0, pT.jsxs)("div", {
           className: "SliderText",
-          children: [ip, Ip && (0, Wp.jsx)(Sp.d, {
+          children: [UT, MT && (0, pT.jsx)(gT.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Ip
+            hoverInfo: MT
           })]
-        }), (0, Wp.jsx)(xp.b, {
-          ariaLabel: ip,
-          options: cp,
-          value: Op,
-          onChange: op
+        }), (0, pT.jsx)(nT.c, {
+          ariaLabel: UT,
+          options: mT,
+          value: WT,
+          onChange: zT
         })]
       })
     }
   },
-  5107: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => wp,
-      f: () => vp
+  5083: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => cT,
+      i: () => vT
     });
-    var Op = cp(3250),
-      op = cp(2187),
-      Ip = cp(62),
-      Sp = cp(1049),
-      xp = cp.n(Sp),
-      Lp = cp(1361),
-      Yp = cp(3246),
-      Dp = cp(1372),
-      Ap = cp(5113),
-      Pp = cp(5152),
-      Wp = cp(657),
-      yp = cp(5178),
-      Up = cp(1112);
+    var WT = mT(3292),
+      zT = mT(2273),
+      MT = mT(63),
+      gT = mT(1126),
+      nT = mT.n(gT),
+      HT = mT(1446),
+      kT = mT(3289),
+      jT = mT(1457),
+      lT = mT(5090),
+      LT = mT(5130),
+      pT = mT(681),
+      BT = mT(5154),
+      ZT = mT(1188);
 
-    function wp(pp) {
-      var ip;
+    function cT(TT) {
+      var UT;
       let {
-        setApplySettingsCallback: cp
-      } = pp;
-      const [, Sp] = (0, Ip.useReducer)((pp => pp + 1), 0), xp = (0, Ip.useRef)(!1), Lp = (0, Ip.useRef)(null);
+        setApplySettingsCallback: mT
+      } = TT;
+      const [, gT] = (0, MT.useReducer)((TT => TT + 1), 0), nT = (0, MT.useRef)(!1), HT = (0, MT.useRef)(null);
 
-      function wp(pp, ip) {
-        Yp.d.setFromJson(pp, "player");
-        const Op = Yp.d.saveTexturePack();
-        if (Wp.z) {
-          const pp = Yp.d.toJson();
-          Op.then((ip => {
-            ip && (0, yp.c)(pp)
+      function cT(TT, UT) {
+        kT.e.setFromJson(TT, "player");
+        const WT = kT.e.saveTexturePack();
+        if (pT.B) {
+          const TT = kT.e.toJson();
+          WT.then((UT => {
+            UT && (0, BT.e)(TT)
           }))
-        } else xp.current ||= ip, Lp.current !== Yp.d.getId() || Yp.d.getId() === op.q.CUSTOM && xp.current ? cp((() => Ap.l)) : cp(null);
-        Sp()
+        } else nT.current ||= UT, HT.current !== kT.e.getId() || kT.e.getId() === zT.n.CUSTOM && nT.current ? mT((() => lT.l)) : mT(null);
+        gT()
       }
-      async function tp(pp) {
-        if (Yp.d.getId() !== pp.metaData.id) {
-          if (Yp.d.getId() === op.q.CUSTOM && Yp.d.getFromFolderName()) {
-            const pp = Dp.NotificationProvider.showPromptPopup({
+      async function fT(TT) {
+        if (kT.e.getId() !== TT.metaData.id) {
+          if (kT.e.getId() === zT.n.CUSTOM && kT.e.getFromFolderName()) {
+            const TT = jT.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -541,29 +541,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await pp.getResult()) return
+            if (!0 !== await TT.getResult()) return
           }
-          wp(pp, !1)
+          cT(TT, !1)
         }
-      }(0, Ip.useEffect)((() => {
-        Lp.current = Yp.d.getId()
+      }(0, MT.useEffect)((() => {
+        HT.current = kT.e.getId()
       }), []);
-      const Hp = Op.b,
-        dp = [Hp, ...Object.values(op.q).filter((pp => pp !== Hp))];
-      return (0, Up.jsx)(Up.Fragment, {
-        children: (0, Up.jsxs)("div", {
+      const qT = WT.c,
+        iT = [qT, ...Object.values(zT.n).filter((TT => TT !== qT))];
+      return (0, ZT.jsx)(ZT.Fragment, {
+        children: (0, ZT.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Up.jsx)("div", {
+          children: [(0, ZT.jsx)("div", {
             className: "TexturePackList",
-            children: dp.map((pp => (0, Up.jsx)(vp, {
-              id: pp,
-              isSelected: pp === Yp.d.getId(),
-              setSelected: tp
-            }, pp)))
-          }), Yp.d.getId() === op.q.CUSTOM && (0, Up.jsx)(Pp.b, {
-            folderName: null !== (ip = Yp.d.getFromFolderName()) && void 0 !== ip ? ip : null,
-            onTexturePackUpdated: function(pp) {
-              wp(pp, !0)
+            children: iT.map((TT => (0, ZT.jsx)(vT, {
+              id: TT,
+              isSelected: TT === kT.e.getId(),
+              setSelected: fT
+            }, TT)))
+          }), kT.e.getId() === zT.n.CUSTOM && (0, ZT.jsx)(LT.e, {
+            folderName: null !== (UT = kT.e.getFromFolderName()) && void 0 !== UT ? UT : null,
+            onTexturePackUpdated: function(TT) {
+              cT(TT, !0)
             },
             packOwner: "player"
           })]
@@ -571,417 +571,417 @@ export const modules = {
       })
     }
 
-    function vp(pp) {
+    function vT(TT) {
       let {
-        id: ip,
-        isSelected: cp,
-        setSelected: Sp,
-        disabled: Yp = !1
-      } = pp;
-      const [Dp, Ap] = (0, Ip.useState)(!0), [Pp, Wp] = (0, Ip.useState)(""), [yp, wp] = (0, Ip.useState)(""), [vp, tp] = (0, Ip.useState)(""), Hp = (0, Ip.useRef)({});
-      return (0, Ip.useEffect)((() => {
-        (0, Op.n)(ip).then((pp => {
-          var ip;
-          pp && (Hp.current = pp, Ap(!1), Wp(Hp.current.metaData.name), wp(Hp.current.metaData.author), tp(null !== (ip = Hp.current.metaData.previewImage) && void 0 !== ip ? ip : ""))
-        })).catch((pp => {
-          console.warn(`Failed to fetch texture pack ${ip}`, pp)
+        id: UT,
+        isSelected: mT,
+        setSelected: gT,
+        disabled: kT = !1
+      } = TT;
+      const [jT, lT] = (0, MT.useState)(!0), [LT, pT] = (0, MT.useState)(""), [BT, cT] = (0, MT.useState)(""), [vT, fT] = (0, MT.useState)(""), qT = (0, MT.useRef)({});
+      return (0, MT.useEffect)((() => {
+        (0, WT.n)(UT).then((TT => {
+          var UT;
+          TT && (qT.current = TT, lT(!1), pT(qT.current.metaData.name), cT(qT.current.metaData.author), fT(null !== (UT = qT.current.metaData.previewImage) && void 0 !== UT ? UT : ""))
+        })).catch((TT => {
+          console.warn(`Failed to fetch texture pack ${UT}`, TT)
         }))
-      }), [ip]), (0, Up.jsxs)("div", {
+      }), [UT]), (0, ZT.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Yp || void 0,
-        className: xp()("TexturePack", {
-          Selected: cp,
-          Custom: ip === op.q.CUSTOM,
-          Disabled: Yp
+        "aria-disabled": kT || void 0,
+        className: nT()("TexturePack", {
+          Selected: mT,
+          Custom: UT === zT.n.CUSTOM,
+          Disabled: kT
         }),
         onClick: () => {
-          Dp || Yp || Sp(Hp.current)
+          jT || kT || gT(qT.current)
         },
-        children: [(0, Up.jsx)("div", {
+        children: [(0, ZT.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: vp ? `url(${vp})` : void 0
+            backgroundImage: vT ? `url(${vT})` : void 0
           }
-        }), Dp && (0, Up.jsx)("div", {
+        }), jT && (0, ZT.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Up.jsx)(Lp.c, {})
-        }), !Dp && Pp && (0, Up.jsx)("div", {
+          children: (0, ZT.jsx)(HT.c, {})
+        }), !jT && LT && (0, ZT.jsx)("div", {
           className: "TexturePackName",
-          children: Pp
-        }), !Dp && yp && (0, Up.jsx)("div", {
+          children: LT
+        }), !jT && BT && (0, ZT.jsx)("div", {
           className: "TexturePackAuthor",
-          children: yp
+          children: BT
         })]
       })
     }
   },
-  5156: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      e: () => Sp,
-      f: () => Ip
+  5136: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      c: () => gT,
+      f: () => MT
     });
-    var Op = cp(5159);
-    const op = [pp => pp.strict ? "strict" : "nonStrict", pp => pp.program];
+    var WT = mT(5139);
+    const zT = [TT => TT.strict ? "strict" : "nonStrict", TT => TT.program];
 
-    function Ip(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Op = {};
-      for (const op in cp) Op[op] = `\0${op}\0`;
-      return pp(ip, Op).replace(/\0(\w+)\0/g, ((pp, ip) => cp[ip]))
+    function MT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const WT = {};
+      for (const zT in mT) WT[zT] = `\0${zT}\0`;
+      return TT(UT, WT).replace(/\0(\w+)\0/g, ((TT, UT) => mT[UT]))
     }
 
-    function Sp(pp) {
-      return null === pp.file ? null : pp.line > 0 ? `${pp.file}:${pp.line}` : pp.file
+    function gT(TT) {
+      return null === TT.file ? null : TT.line > 0 ? `${TT.file}:${TT.line}` : TT.file
     }
 
-    function xp(pp) {
-      const ip = new Map(pp.map((pp => [Lp(pp).join("."), pp])));
-      if (0 === ip.size) return [];
-      const cp = Dp([...ip.values()]);
-      return 0 === cp[0].length ? [] : cp
+    function nT(TT) {
+      const UT = new Map(TT.map((TT => [HT(TT).join("."), TT])));
+      if (0 === UT.size) return [];
+      const mT = jT([...UT.values()]);
+      return 0 === mT[0].length ? [] : mT
     }
 
-    function Lp(pp) {
-      return op.map((ip => ip(pp)))
+    function HT(TT) {
+      return zT.map((UT => UT(TT)))
     }
-    const Yp = op.map((pp => new Set(Op.g.map(pp)).size));
+    const kT = zT.map((TT => new Set(WT.e.map(TT)).size));
 
-    function Dp(pp) {
-      const ip = op.map((ip => new Set(pp.map(ip)))),
-        cp = ip.reduce(((pp, ip) => pp * ip.size), 1),
-        Op = ip.every(((pp, ip) => 1 === pp.size || pp.size === Yp[ip]));
-      if (cp === pp.length && Op) return [op.filter(((pp, cp) => 1 === ip[cp].size)).map((ip => ip(pp[0])))];
-      let Ip = null;
-      for (let Sp = 0; Sp < op.length; Sp++) {
-        if (1 === ip[Sp].size) continue;
-        const cp = Ap(pp, op[Sp]).flatMap(Dp);
-        (null === Ip || cp.length < Ip.length) && (Ip = cp)
+    function jT(TT) {
+      const UT = zT.map((UT => new Set(TT.map(UT)))),
+        mT = UT.reduce(((TT, UT) => TT * UT.size), 1),
+        WT = UT.every(((TT, UT) => 1 === TT.size || TT.size === kT[UT]));
+      if (mT === TT.length && WT) return [zT.filter(((TT, mT) => 1 === UT[mT].size)).map((UT => UT(TT[0])))];
+      let MT = null;
+      for (let gT = 0; gT < zT.length; gT++) {
+        if (1 === UT[gT].size) continue;
+        const mT = lT(TT, zT[gT]).flatMap(jT);
+        (null === MT || mT.length < MT.length) && (MT = mT)
       }
-      return Ip
+      return MT
     }
 
-    function Ap(pp, ip) {
-      const cp = new Map;
-      for (const op of pp) {
-        var Op;
-        const pp = ip(op);
-        cp.set(pp, [...null !== (Op = cp.get(pp)) && void 0 !== Op ? Op : [], op])
+    function lT(TT, UT) {
+      const mT = new Map;
+      for (const zT of TT) {
+        var WT;
+        const TT = UT(zT);
+        mT.set(TT, [...null !== (WT = mT.get(TT)) && void 0 !== WT ? WT : [], zT])
       }
-      return [...cp.values()]
+      return [...mT.values()]
     }
   },
-  5146: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  5116: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(1188);
 
-    function Sp(pp) {
+    function gT(TT) {
       let {
-        options: ip,
-        value: cp,
-        onChange: Op,
-        ariaLabel: Sp,
-        className: xp,
-        reselectable: Lp = !1,
-        keepsFocus: Yp = !1,
-        padTabs: Dp
-      } = pp;
-      const Ap = void 0 !== Dp;
-      return (0, Ip.jsx)("div", {
-        className: op()("SegmentedToggle", xp),
+        options: UT,
+        value: mT,
+        onChange: WT,
+        ariaLabel: gT,
+        className: nT,
+        reselectable: HT = !1,
+        keepsFocus: kT = !1,
+        padTabs: jT
+      } = TT;
+      const lT = void 0 !== jT;
+      return (0, MT.jsx)("div", {
+        className: zT()("SegmentedToggle", nT),
         role: "group",
-        "aria-label": Sp,
-        "data-pad-tabs": Dp,
-        children: ip.map((pp => {
-          const ip = pp.value === cp;
-          return (0, Ip.jsx)("button", {
+        "aria-label": gT,
+        "data-pad-tabs": jT,
+        children: UT.map((TT => {
+          const UT = TT.value === mT;
+          return (0, MT.jsx)("button", {
             type: "button",
-            "aria-pressed": ip,
-            "data-pad-tab": Ap || void 0,
-            "data-pad-selected": Ap && ip ? "true" : void 0,
-            "data-pad-default-focus": Ap && ip || void 0,
-            "aria-label": pp.ariaLabel,
-            title: pp.ariaLabel,
-            className: op()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: ip
+            "aria-pressed": UT,
+            "data-pad-tab": lT || void 0,
+            "data-pad-selected": lT && UT ? "true" : void 0,
+            "data-pad-default-focus": lT && UT || void 0,
+            "aria-label": TT.ariaLabel,
+            title: TT.ariaLabel,
+            className: zT()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: UT
             }),
-            onMouseDown: Yp ? pp => {
-              pp.preventDefault()
+            onMouseDown: kT ? TT => {
+              TT.preventDefault()
             } : void 0,
             onClick: () => {
-              ip && !Lp || Op(pp.value)
+              UT && !HT || WT(TT.value)
             },
-            children: pp.label
-          }, pp.value)
+            children: TT.label
+          }, TT.value)
         }))
       })
     }
   },
-  5149: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip,
-      h: () => Sp
+  5123: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT,
+      g: () => gT
     });
-    var Op = cp(62);
-    const op = new WeakMap,
-      Ip = pp => {
-        var ip;
-        const cp = pp.closest("[data-pad-slider]");
-        return cp && null !== (ip = op.get(cp)) && void 0 !== ip ? ip : null
+    var WT = mT(63);
+    const zT = new WeakMap,
+      MT = TT => {
+        var UT;
+        const mT = TT.closest("[data-pad-slider]");
+        return mT && null !== (UT = zT.get(mT)) && void 0 !== UT ? UT : null
       },
-      Sp = (pp, ip) => {
-        const cp = (0, Op.useRef)(ip);
-        cp.current = ip, (0, Op.useEffect)((() => {
-          if (pp.current) return ((pp, ip) => (op.set(pp, ip), () => {
-            op.get(pp) === ip && op.delete(pp)
-          }))(pp.current, {
-            adjust: pp => {
-              cp.current.adjust(pp)
+      gT = (TT, UT) => {
+        const mT = (0, WT.useRef)(UT);
+        mT.current = UT, (0, WT.useEffect)((() => {
+          if (TT.current) return ((TT, UT) => (zT.set(TT, UT), () => {
+            zT.get(TT) === UT && zT.delete(TT)
+          }))(TT.current, {
+            adjust: TT => {
+              mT.current.adjust(TT)
             },
-            setFraction: pp => {
-              cp.current.setFraction(pp)
+            setFraction: TT => {
+              mT.current.setFraction(TT)
             },
             endDrag: () => {
-              cp.current.endDrag()
+              mT.current.endDrag()
             }
           })
-        }), [pp])
+        }), [TT])
       }
   },
-  5159: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op.f,
-      g: () => op,
-      k: () => Op.o
+  5139: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT.j,
+      e: () => zT,
+      f: () => WT.q
     });
-    var Op = cp(5167);
-    const op = [!1, !0].flatMap((pp => ["terrain", "liquid", "model"].map((ip => ({
-      strict: pp,
-      program: ip
+    var WT = mT(5142);
+    const zT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((UT => ({
+      strict: TT,
+      program: UT
     })))))
   },
-  5183: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      return op(pp, ip)
+  5158: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      return zT(TT, UT)
     }
 
-    function op(pp, ip) {
-      if (pp === ip) return !0;
-      if ("object" !== typeof pp || "object" !== typeof ip || null === pp || null === ip || Array.isArray(pp) !== Array.isArray(ip)) return !1;
-      const cp = pp,
-        Op = ip,
-        Ip = Object.keys(cp);
-      return Ip.length === Object.keys(Op).length && Ip.every((pp => Object.prototype.hasOwnProperty.call(Op, pp) && op(cp[pp], Op[pp])))
+    function zT(TT, UT) {
+      if (TT === UT) return !0;
+      if ("object" !== typeof TT || "object" !== typeof UT || null === TT || null === UT || Array.isArray(TT) !== Array.isArray(UT)) return !1;
+      const mT = TT,
+        WT = UT,
+        MT = Object.keys(mT);
+      return MT.length === Object.keys(WT).length && MT.every((TT => Object.prototype.hasOwnProperty.call(WT, TT) && zT(mT[TT], WT[TT])))
     }
-    cp.d(ip, {
-      b: () => Op
+    mT.d(UT, {
+      c: () => WT
     })
   },
-  5178: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp,
-      d: () => xp
+  5154: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => gT,
+      h: () => nT
     });
-    var Op = cp(2187),
-      op = cp(5183);
-    let Ip = null;
+    var WT = mT(2273),
+      zT = mT(5158);
+    let MT = null;
 
-    function Sp(pp) {
-      Ip = {
-        pack: pp.metaData.id === Op.b ? null : pp
+    function gT(TT) {
+      MT = {
+        pack: TT.metaData.id === WT.e ? null : TT
       }
     }
 
-    function xp(pp) {
-      return !(null === Ip || !(0, op.b)(Ip.pack, pp)) && (Ip = null, !0)
+    function nT(TT) {
+      return !(null === MT || !(0, zT.c)(MT.pack, TT)) && (MT = null, !0)
     }
   },
-  5167: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      e: () => Sp,
-      f: () => Op,
-      j: () => Up,
-      m: () => Ap,
-      o: () => op,
-      p: () => Ip,
-      s: () => Yp,
-      v: () => Dp,
-      z: () => Pp
+  5142: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT,
+      f: () => gT,
+      j: () => WT,
+      l: () => ZT,
+      o: () => lT,
+      q: () => zT,
+      s: () => MT,
+      v: () => kT,
+      w: () => jT,
+      x: () => LT
     });
-    const Op = 5;
+    const WT = 5;
 
-    function op(pp) {
-      return pp === Op
+    function zT(TT) {
+      return TT === WT
     }
 
-    function Ip(pp) {
-      return [...pp.features]
+    function MT(TT) {
+      return [...TT.features]
     }
-    const Sp = 262144,
-      xp = 256,
-      Lp = 256;
+    const gT = 262144,
+      nT = 256,
+      HT = 256;
 
-    function Yp(pp) {
-      if ("object" !== typeof pp || null === pp || Array.isArray(pp)) return "The pack has no files.";
-      const ip = [];
-      for (const [cp, Op] of Object.entries(pp)) {
-        if ("string" !== typeof Op) return `${cp} isn't text.`;
-        ip.push({
-          path: cp,
-          source: Op
+    function kT(TT) {
+      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
+      const UT = [];
+      for (const [mT, WT] of Object.entries(TT)) {
+        if ("string" !== typeof WT) return `${mT} isn't text.`;
+        UT.push({
+          path: mT,
+          source: WT
         })
       }
-      return ip.sort(((pp, ip) => Ap(pp.path, ip.path))),
-        function(pp) {
-          if (0 === pp.length) return "The pack has no .wgsl files.";
-          if (pp.length > xp) return `The pack has more than ${xp} .wgsl files.`;
-          const ip = new Set;
+      return UT.sort(((TT, UT) => lT(TT.path, UT.path))),
+        function(TT) {
+          if (0 === TT.length) return "The pack has no .wgsl files.";
+          if (TT.length > nT) return `The pack has more than ${nT} .wgsl files.`;
+          const UT = new Set;
           for (const {
-              path: cp
+              path: mT
             }
-            of pp) {
-            const pp = Wp(cp);
-            if (null !== pp) return pp;
-            if (ip.has(cp)) return `The pack has two files at ${cp}.`;
-            ip.add(cp)
+            of TT) {
+            const TT = pT(mT);
+            if (null !== TT) return TT;
+            if (UT.has(mT)) return `The pack has two files at ${mT}.`;
+            UT.add(mT)
           }
-          return Pp(pp) > Sp ? `The pack's .wgsl files are over ${Sp/1024} KB in total.` : null
-        }(ip) ?? ip
+          return LT(TT) > gT ? `The pack's .wgsl files are over ${gT/1024} KB in total.` : null
+        }(UT) ?? UT
     }
 
-    function Dp(pp) {
-      const ip = {};
-      for (const cp of pp) ip[cp.path] = cp.source;
-      return ip
+    function jT(TT) {
+      const UT = {};
+      for (const mT of TT) UT[mT.path] = mT.source;
+      return UT
     }
 
-    function Ap(pp, ip) {
-      return pp < ip ? -1 : pp > ip ? 1 : 0
+    function lT(TT, UT) {
+      return TT < UT ? -1 : TT > UT ? 1 : 0
     }
 
-    function Pp(pp) {
-      const ip = new TextEncoder;
-      let cp = 0;
+    function LT(TT) {
+      const UT = new TextEncoder;
+      let mT = 0;
       for (const {
-          source: Op
+          source: WT
         }
-        of pp) cp += ip.encode(Op).byteLength;
-      return cp
+        of TT) mT += UT.encode(WT).byteLength;
+      return mT
     }
 
-    function Wp(pp) {
-      if (!pp.toLowerCase().endsWith(".wgsl")) return `${pp} isn't a .wgsl file.`;
-      if (pp.length > Lp) return `A file path is over ${Lp} characters.`;
-      if (pp.includes("\\") || /[\u0000-\u001f]/.test(pp)) return `${pp} isn't a valid file path.`;
-      return pp.split("/").some((pp => "" === pp || "." === pp || ".." === pp)) ? `${pp} isn't a valid file path.` : null
+    function pT(TT) {
+      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
+      if (TT.length > HT) return `A file path is over ${HT} characters.`;
+      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
+      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
     }
-    const yp = /^(.*)\[rot\[([1-4])$/;
+    const BT = /^(.*)\[rot\[([1-4])$/;
 
-    function Up(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Op = new Map;
-      ip.forEach(((pp, ip) => {
+    function ZT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const WT = new Map;
+      UT.forEach(((TT, UT) => {
         let {
-          numAnimStates: cp,
-          animStartIdx: op
-        } = pp;
-        for (let Ip = 1; Ip < cp; Ip++) Op.set(op + Ip - 1, ip)
+          numAnimStates: mT,
+          animStartIdx: zT
+        } = TT;
+        for (let MT = 1; MT < mT; MT++) WT.set(zT + MT - 1, UT)
       }));
-      const op = Object.entries(pp),
-        Ip = new Map;
-      for (const [Up, wp] of op) {
-        const pp = yp.exec(Up);
-        "1" === pp?.[2] && Ip.set(pp[1], wp + 1)
+      const zT = Object.entries(TT),
+        MT = new Map;
+      for (const [ZT, cT] of zT) {
+        const TT = BT.exec(ZT);
+        "1" === TT?.[2] && MT.set(TT[1], cT + 1)
       }
-      const Sp = pp => {
-          const ip = yp.exec(pp);
-          return ip && Ip.has(ip[1]) ? {
-            root: ip[1],
-            rotation: Number(ip[2]) - 1
+      const gT = TT => {
+          const UT = BT.exec(TT);
+          return UT && MT.has(UT[1]) ? {
+            root: UT[1],
+            rotation: Number(UT[2]) - 1
           } : null
         },
-        xp = new Set(op.map((pp => {
-          let [ip] = pp;
-          return Sp(ip)?.root ?? ip
+        nT = new Set(zT.map((TT => {
+          let [UT] = TT;
+          return gT(UT)?.root ?? UT
         }))),
-        Lp = (pp, cp) => {
-          const Op = pp.replace(/_?0$/, "");
-          return (ip[cp]?.numAnimStates ?? 0) > 1 && !xp.has(Op) ? Op : pp
+        HT = (TT, mT) => {
+          const WT = TT.replace(/_?0$/, "");
+          return (UT[mT]?.numAnimStates ?? 0) > 1 && !nT.has(WT) ? WT : TT
         },
-        Yp = new Map;
-      for (const [yp, Up] of op) Yp.set(Up, Lp(Sp(yp)?.root ?? yp, Up));
-      const Dp = op.reduce(((pp, ip) => {
-          let [, cp] = ip;
-          return Math.max(pp, cp + 1)
+        kT = new Map;
+      for (const [BT, ZT] of zT) kT.set(ZT, HT(gT(BT)?.root ?? BT, ZT));
+      const jT = zT.reduce(((TT, UT) => {
+          let [, mT] = UT;
+          return Math.max(TT, mT + 1)
         }), 0),
-        Ap = Array.from({
-          length: Dp
-        }, ((pp, ip) => ({
-          id: ip + 1,
+        lT = Array.from({
+          length: jT
+        }, ((TT, UT) => ({
+          id: UT + 1,
           rotation: 0
         }))),
-        Pp = new Map,
-        Wp = new Map;
-      for (const [yp, Up] of op) {
-        const pp = Sp(yp),
-          ip = Op.get(Up);
-        if (void 0 !== ip) {
-          const cp = Yp.get(ip);
-          Wp.set(yp, {
-            name: yp,
-            texture: cp,
+        LT = new Map,
+        pT = new Map;
+      for (const [BT, ZT] of zT) {
+        const TT = gT(BT),
+          UT = WT.get(ZT);
+        if (void 0 !== UT) {
+          const mT = kT.get(UT);
+          pT.set(BT, {
+            name: BT,
+            texture: mT,
             kind: "frame"
-          }), pp && !Wp.has(pp.root) && Wp.set(pp.root, {
-            name: pp.root,
-            texture: cp,
+          }), TT && !pT.has(TT.root) && pT.set(TT.root, {
+            name: TT.root,
+            texture: mT,
             kind: "frame"
           });
           continue
         }
-        const cp = Yp.get(Up),
-          op = pp?.root ?? yp;
-        if (cp !== op && Wp.set(op, {
-            name: op,
-            texture: cp,
+        const mT = kT.get(ZT),
+          zT = TT?.root ?? BT;
+        if (mT !== zT && pT.set(zT, {
+            name: zT,
+            texture: mT,
             kind: "frame"
-          }), pp) {
-          const ip = Ip.get(pp.root);
-          Ap[Up] = {
-            id: ip,
-            rotation: pp.rotation
-          }, Pp.set(cp, ip), Wp.set(yp, {
-            name: yp,
-            texture: cp,
+          }), TT) {
+          const UT = MT.get(TT.root);
+          lT[ZT] = {
+            id: UT,
+            rotation: TT.rotation
+          }, LT.set(mT, UT), pT.set(BT, {
+            name: BT,
+            texture: mT,
             kind: "rotation"
           })
-        } else Pp.set(cp, Up + 1)
+        } else LT.set(mT, ZT + 1)
       }
-      for (const yp of Pp.keys()) Wp.delete(yp);
-      for (const [yp, Up] of cp) {
-        const pp = Pp.get(Up);
-        void 0 === pp || Pp.has(yp) || (Pp.set(yp, pp), Wp.delete(yp))
+      for (const BT of LT.keys()) pT.delete(BT);
+      for (const [BT, ZT] of mT) {
+        const TT = LT.get(ZT);
+        void 0 === TT || LT.has(BT) || (LT.set(BT, TT), pT.delete(BT))
       }
       return {
-        named: [...Pp].sort(((pp, ip) => {
-          let [cp] = pp, [Op] = ip;
-          return cp < Op ? -1 : cp > Op ? 1 : 0
-        })).map((pp => {
-          let [ip, cp] = pp;
+        named: [...LT].sort(((TT, UT) => {
+          let [mT] = TT, [WT] = UT;
+          return mT < WT ? -1 : mT > WT ? 1 : 0
+        })).map((TT => {
+          let [UT, mT] = TT;
           return {
-            name: ip,
-            id: cp
+            name: UT,
+            id: mT
           }
         })),
-        aliases: [...Wp.values()],
-        layers: Ap
+        aliases: [...pT.values()],
+        layers: lT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

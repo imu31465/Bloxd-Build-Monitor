@@ -1,58 +1,58 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  36591: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      c: () => xp,
-      g: () => Yp,
-      h: () => Lp,
-      l: () => Hp
+  36451: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => jT,
+      e: () => nT,
+      f: () => kT,
+      h: () => HT,
+      k: () => qT
     });
-    var Op = cp(643),
-      op = cp(1779),
-      Ip = cp(4911);
-    class Sp {
-      constructor(pp, ip) {
-        this.width = pp, this.TA = ip, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(pp * ip)
+    var WT = mT(662),
+      zT = mT(1876),
+      MT = mT(4904);
+    class gT {
+      constructor(TT, UT) {
+        this.width = TT, this.fl = UT, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(TT * UT)
       }
-      push(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const cp = this.data,
-          Op = this.next * this.width;
-        for (let op = 0; op < this.width; op++) cp[Op + op] = pp[ip + op];
-        this.next = (this.next + 1) % this.TA, this.size = Math.min(this.size + 1, this.TA)
+      push(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const mT = this.data,
+          WT = this.next * this.width;
+        for (let zT = 0; zT < this.width; zT++) mT[WT + zT] = TT[UT + zT];
+        this.next = (this.next + 1) % this.fl, this.size = Math.min(this.size + 1, this.fl)
       }
       rows() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const cp = [],
-          Op = (this.next - this.size + this.TA) % this.TA;
-        for (let op = 0; op < this.size; op++) {
-          const Ip = (Op + op) % this.TA * this.width;
-          this.data[Ip + pp] >= ip && cp.push(Array.from(this.data.subarray(Ip, Ip + this.width)))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const mT = [],
+          WT = (this.next - this.size + this.fl) % this.fl;
+        for (let zT = 0; zT < this.size; zT++) {
+          const MT = (WT + zT) % this.fl * this.width;
+          this.data[MT + TT] >= UT && mT.push(Array.from(this.data.subarray(MT, MT + this.width)))
         }
-        return cp
+        return mT
       }
       lines() {
-        return this.rows().map((pp => pp.join(",")))
+        return this.rows().map((TT => TT.join(",")))
       }
     }
-    const xp = 10,
-      Lp = {
+    const nT = 10,
+      HT = {
         idle: 0,
-        aW: 1,
-        FX: 2,
-        Al: 3,
-        Hw: 4
+        Jp: 1,
+        ZF: 2,
+        vF: 3,
+        Uc: 4
       },
-      Yp = {
+      kT = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      Dp = {
+      jT = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -66,91 +66,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      Ap = 12e3,
-      Pp = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Wp = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      yp = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      Up = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      wp = ["nowMs", "change", "count"];
+      lT = 12e3,
+      LT = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      pT = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      BT = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      ZT = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      cT = ["nowMs", "change", "count"];
 
-    function vp(pp) {
-      return "js" === pp ? Dp.jsClient : Dp.wasmClient
+    function vT(TT) {
+      return "js" === TT ? jT.jsClient : jT.wasmClient
     }
-    class tp {
+    class fT {
       constructor() {
-        this.steps = new Sp(xp, Ap), this.events = new Sp(Wp.length, Ap), this.frames = new Sp(yp.length, Ap), this.cameraSets = new Sp(Ip.e, 256), this.changes = new Sp(wp.length, 256)
+        this.steps = new gT(nT, lT), this.events = new gT(pT.length, lT), this.frames = new gT(BT.length, lT), this.cameraSets = new gT(MT.f, 256), this.changes = new gT(cT.length, 256)
       }
     }
-    const Hp = new class {
+    const qT = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Wp.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(pT.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(pp, ip) {
-        this.startedClient = pp, this.startedAtMs = performance.now(), null !== this.rings ? this.change(vp(pp)) : ip && this.allocate()
+      start(TT, UT) {
+        this.startedClient = TT, this.startedAtMs = performance.now(), null !== this.rings ? this.change(vT(TT)) : UT && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(Dp.lockGained)
+        this.allocate(), this.change(jT.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new tp, null !== this.startedClient && this.changeAt(this.startedAtMs, vp(this.startedClient), 1))
+        null === this.rings && (this.rings = new fT, null !== this.startedClient && this.changeAt(this.startedAtMs, vT(this.startedClient), 1))
       }
-      step(pp, ip) {
-        var cp;
-        pp[ip + 6] !== Lp.Hw && (null === (cp = this.rings) || void 0 === cp || cp.steps.push(pp, ip))
+      step(TT, UT) {
+        var mT;
+        TT[UT + 6] !== HT.Uc && (null === (mT = this.rings) || void 0 === mT || mT.steps.push(TT, UT))
       }
-      cameraSet(pp, ip) {
-        var cp;
-        null === (cp = this.rings) || void 0 === cp || cp.cameraSets.push(pp, ip)
+      cameraSet(TT, UT) {
+        var mT;
+        null === (mT = this.rings) || void 0 === mT || mT.cameraSets.push(TT, UT)
       }
-      mouseMove(pp, ip) {
-        const cp = this.rings;
-        if (null === cp) return;
-        const Op = this.sample;
-        Op[0] = pp.timeStamp, Op[1] = performance.now(), Op[2] = pp.movementX, Op[3] = pp.movementY, Op[4] = ip ? 1 : 0, cp.events.push(Op)
+      mouseMove(TT, UT) {
+        const mT = this.rings;
+        if (null === mT) return;
+        const WT = this.sample;
+        WT[0] = TT.timeStamp, WT[1] = performance.now(), WT[2] = TT.movementX, WT[3] = TT.movementY, WT[4] = UT ? 1 : 0, mT.events.push(WT)
       }
-      frame(pp, ip, cp, Op) {
-        const op = this.rings;
-        if (null === op || Op === Yp.none) return;
-        const Ip = this.sample;
-        Ip[0] = performance.now(), Ip[1] = pp, Ip[2] = ip, Ip[3] = cp, Ip[4] = Op, op.frames.push(Ip)
+      frame(TT, UT, mT, WT) {
+        const zT = this.rings;
+        if (null === zT || WT === kT.none) return;
+        const MT = this.sample;
+        MT[0] = performance.now(), MT[1] = TT, MT[2] = UT, MT[3] = mT, MT[4] = WT, zT.frames.push(MT)
       }
-      change(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), pp, ip)
+      change(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), TT, UT)
       }
-      changeAt(pp, ip, cp) {
-        const Op = this.rings;
-        if (null === Op) return;
-        const op = this.sample;
-        op[0] = pp, op[1] = ip, op[2] = cp, Op.changes.push(op)
+      changeAt(TT, UT, mT) {
+        const WT = this.rings;
+        if (null === WT) return;
+        const zT = this.sample;
+        zT[0] = TT, zT[1] = UT, zT[2] = mT, WT.changes.push(zT)
       }
       dumpText() {
-        var pp, ip;
-        const cp = this.rings;
-        return [`look records (${this.startedClient}): ${Pp.join(",")}`, ...null !== (pp = null === cp || void 0 === cp ? void 0 : cp.steps.lines()) && void 0 !== pp ? pp : [], `mousemove events: ${Wp.join(",")}`, ...null !== (ip = null === cp || void 0 === cp ? void 0 : cp.events.lines()) && void 0 !== ip ? ip : []].join("\n")
+        var TT, UT;
+        const mT = this.rings;
+        return [`look records (${this.startedClient}): ${LT.join(",")}`, ...null !== (TT = null === mT || void 0 === mT ? void 0 : mT.steps.lines()) && void 0 !== TT ? TT : [], `mousemove events: ${pT.join(",")}`, ...null !== (UT = null === mT || void 0 === mT ? void 0 : mT.events.lines()) && void 0 !== UT ? UT : []].join("\n")
       }
-      toJson(pp, ip) {
-        var cp;
-        const op = pp - 6e4,
-          Ip = this.rings,
-          Sp = function(pp, ip) {
-            var cp;
-            let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const Ip = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.rows(Op, op)) && void 0 !== cp ? cp : [];
+      toJson(TT, UT) {
+        var mT;
+        const zT = TT - 6e4,
+          MT = this.rings,
+          gT = function(TT, UT) {
+            var mT;
+            let WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const MT = null !== (mT = null === TT || void 0 === TT ? void 0 : TT.rows(WT, zT)) && void 0 !== mT ? mT : [];
             return {
-              columns: ip,
-              fromMs: 0 === Ip.length ? null : Ip[0][Op],
-              rows: Ip
+              columns: UT,
+              fromMs: 0 === MT.length ? null : MT[0][WT],
+              rows: MT
             }
           };
         return {
-          version: Op.c,
-          client: null !== (cp = this.startedClient) && void 0 !== cp ? cp : "not started",
+          version: WT.d,
+          client: null !== (mT = this.startedClient) && void 0 !== mT ? mT : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: pp,
+          savedAtMs: TT,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -159,260 +159,260 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          rw: null !== document.pointerLockElement,
+          yc: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...ip,
-          outcomes: Lp,
-          frameKinds: Yp,
-          changes: Dp,
-          lookSteps: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.steps, Pp),
-          mouseMoves: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.events, Wp, 1),
-          frames: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.frames, yp),
-          cameraSets: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.cameraSets, Up),
-          pageChanges: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.changes, wp)
+          ...UT,
+          outcomes: HT,
+          frameKinds: kT,
+          changes: jT,
+          lookSteps: gT(null === MT || void 0 === MT ? void 0 : MT.steps, LT),
+          mouseMoves: gT(null === MT || void 0 === MT ? void 0 : MT.events, pT, 1),
+          frames: gT(null === MT || void 0 === MT ? void 0 : MT.frames, BT),
+          cameraSets: gT(null === MT || void 0 === MT ? void 0 : MT.cameraSets, ZT),
+          pageChanges: gT(null === MT || void 0 === MT ? void 0 : MT.changes, cT)
         }
       }
-      save(pp) {
-        const ip = JSON.stringify(this.toJson(performance.now(), pp));
-        (0, op.c)(new Blob([ip], {
+      save(TT) {
+        const UT = JSON.stringify(this.toJson(performance.now(), TT));
+        (0, zT.c)(new Blob([UT], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  36582: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      LOOK_DEBUG_HEADER: () => Dp,
-      endLookDebugTake: () => vp,
-      noteLookDroppedCopy: () => tp,
-      saveLookCapture: () => Hp,
-      startLookDebug: () => wp
+  36447: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      LOOK_DEBUG_HEADER: () => jT,
+      endLookDebugTake: () => vT,
+      noteLookDroppedCopy: () => fT,
+      saveLookCapture: () => qT,
+      startLookDebug: () => cT
     });
-    var Op = cp(4911),
-      op = cp(2908),
-      Ip = cp(1927);
-    const Sp = new Map(Object.entries(Op.h).map((pp => {
-      let [ip, cp] = pp;
-      return [cp, ip]
+    var WT = mT(4904),
+      zT = mT(2929),
+      MT = mT(2014);
+    const gT = new Map(Object.entries(WT.j).map((TT => {
+      let [UT, mT] = TT;
+      return [mT, UT]
     })));
 
-    function xp(pp) {
-      return (0, Ip.C)(pp).toFixed(1)
+    function nT(TT) {
+      return (0, MT.D)(TT).toFixed(1)
     }
 
-    function Lp(pp, ip) {
-      return `camera set by ${Sp.get(pp[ip+1])}: heading ${`${xp(pp[ip+2])} -> ${xp(pp[ip+4])}`} deg, pitch ${`${xp(pp[ip+3])} -> ${xp(pp[ip+5])}`} deg, at ${pp[ip].toFixed(1)} ms`
+    function HT(TT, UT) {
+      return `camera set by ${gT.get(TT[UT+1])}: heading ${`${nT(TT[UT+2])} -> ${nT(TT[UT+4])}`} deg, pitch ${`${nT(TT[UT+3])} -> ${nT(TT[UT+5])}`} deg, at ${TT[UT].toFixed(1)} ms`
     }
-    var Yp = cp(36591);
-    const Dp = 2;
+    var kT = mT(36451);
+    const jT = 2;
 
-    function Ap(pp) {
-      return Number.isFinite(pp) ? String(Math.round(10 * pp) / 10) : String(pp)
+    function lT(TT) {
+      return Number.isFinite(TT) ? String(Math.round(10 * TT) / 10) : String(TT)
     }
 
-    function Pp(pp) {
-      return Number.isFinite(pp) ? pp.toFixed(1) : String(pp)
+    function LT(TT) {
+      return Number.isFinite(TT) ? TT.toFixed(1) : String(TT)
     }
-    class Wp {
+    class pT {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.FX = 0, this.pastLimit = 0, this.lockSkips = 0, this.Hw = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.ZF = 0, this.pastLimit = 0, this.lockSkips = 0, this.Uc = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.FX > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.ZF > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.FX > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.ZF > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class yp {
+    class BT {
       constructor() {
-        var pp = this;
-        this.topicOn = (0, op.r)("look"), this.remote = (0, op.v)(), this.tally = new Wp, this.takes = null, this.started = !1, this.record = function(ip) {
-          let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (Yp.l.step(ip, cp), !pp.topicOn) return;
-          const Op = ip[cp],
-            op = ip[cp + 1],
-            Ip = ip[cp + 2],
-            Sp = ip[cp + 3],
-            xp = ip[cp + 4],
-            Lp = ip[cp + 5],
-            Dp = ip[cp + 6],
-            Wp = ip[cp + 7],
-            yp = ip[cp + 8],
-            Up = ip[cp + 9],
-            wp = pp.tally;
-          switch (wp.frames++, Dp) {
-            case Yp.h.idle:
-              return void wp.idle++;
-            case Yp.h.Hw:
-              return void wp.Hw++;
-            case Yp.h.Al:
-              return wp.lockSkips++, void(0 === Ip && 0 === Sp || pp.outlier(`lock skip dropped raw (${Ap(Ip)}, ${Ap(Sp)}) at ${Pp(Op)} ms`))
+        var TT = this;
+        this.topicOn = (0, zT.r)("look"), this.remote = (0, zT.v)(), this.tally = new pT, this.takes = null, this.started = !1, this.record = function(UT) {
+          let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          if (kT.k.step(UT, mT), !TT.topicOn) return;
+          const WT = UT[mT],
+            zT = UT[mT + 1],
+            MT = UT[mT + 2],
+            gT = UT[mT + 3],
+            nT = UT[mT + 4],
+            HT = UT[mT + 5],
+            jT = UT[mT + 6],
+            pT = UT[mT + 7],
+            BT = UT[mT + 8],
+            ZT = UT[mT + 9],
+            cT = TT.tally;
+          switch (cT.frames++, jT) {
+            case kT.h.idle:
+              return void cT.idle++;
+            case kT.h.Uc:
+              return void cT.Uc++;
+            case kT.h.vF:
+              return cT.lockSkips++, void(0 === MT && 0 === gT || TT.outlier(`lock skip dropped raw (${lT(MT)}, ${lT(gT)}) at ${LT(WT)} ms`))
           }
-          wp.looked++, Number.isFinite(op) && (wp.dtMin = Math.min(wp.dtMin, op), wp.dtMax = Math.max(wp.dtMax, op), wp.dtSum += op, op > 0 && (wp.peakRate = Math.max(wp.peakRate, Math.hypot(xp, Lp) / op))), wp.raw[0] += Ip, wp.raw[1] += Sp, wp.turned[0] += xp, wp.turned[1] += Lp;
-          const vp = Math.abs(Ip) > Up || Math.abs(Sp) > Up,
-            tp = `raw (${Ap(Ip)}, ${Ap(Sp)}) over ${Pp(op)} ms, limit ${Ap(Up)}, filter v (${Wp.toFixed(3)}, ${yp.toFixed(3)}) px/ms, at ${Pp(Op)} ms`;
-          Dp === Yp.h.FX ? (wp.FX++, pp.outlier(`spike put right: ${tp} -> turned (${Ap(xp)}, ${Ap(Lp)})`)) : vp ? (wp.pastLimit++, pp.outlier(`kept past limit: ${tp}`)) : op > 50 && (wp.longFrames++, pp.remote || pp.outlier(`long frame: ${tp}, turned in full`))
-        }, this.onMouseMove = pp => {
-          const ip = null !== document.pointerLockElement;
-          if (Yp.l.mouseMove(pp, ip), !this.topicOn) return;
-          const cp = this.tally,
+          cT.looked++, Number.isFinite(zT) && (cT.dtMin = Math.min(cT.dtMin, zT), cT.dtMax = Math.max(cT.dtMax, zT), cT.dtSum += zT, zT > 0 && (cT.peakRate = Math.max(cT.peakRate, Math.hypot(nT, HT) / zT))), cT.raw[0] += MT, cT.raw[1] += gT, cT.turned[0] += nT, cT.turned[1] += HT;
+          const vT = Math.abs(MT) > ZT || Math.abs(gT) > ZT,
+            fT = `raw (${lT(MT)}, ${lT(gT)}) over ${LT(zT)} ms, limit ${lT(ZT)}, filter v (${pT.toFixed(3)}, ${BT.toFixed(3)}) px/ms, at ${LT(WT)} ms`;
+          jT === kT.h.ZF ? (cT.ZF++, TT.outlier(`spike put right: ${fT} -> turned (${lT(nT)}, ${lT(HT)})`)) : vT ? (cT.pastLimit++, TT.outlier(`kept past limit: ${fT}`)) : zT > 50 && (cT.longFrames++, TT.remote || TT.outlier(`long frame: ${fT}, turned in full`))
+        }, this.onMouseMove = TT => {
+          const UT = null !== document.pointerLockElement;
+          if (kT.k.mouseMove(TT, UT), !this.topicOn) return;
+          const mT = this.tally,
             {
-              movementX: Op,
-              movementY: op
-            } = pp;
-          cp.events++;
-          const Ip = Math.max(Math.abs(Op), Math.abs(op));
-          cp.eventMax = Math.max(cp.eventMax, Ip), Ip >= 200 && (cp.bigEvents++, this.eventOutlier(`big mousemove (${Op}, ${op}) at ${Pp(pp.timeStamp)} ms, lock ${ip?"sx":"free"}`))
+              movementX: WT,
+              movementY: zT
+            } = TT;
+          mT.events++;
+          const MT = Math.max(Math.abs(WT), Math.abs(zT));
+          mT.eventMax = Math.max(mT.eventMax, MT), MT >= 200 && (mT.bigEvents++, this.eventOutlier(`big mousemove (${WT}, ${zT}) at ${LT(TT.timeStamp)} ms, lock ${UT?"fn":"free"}`))
         }, this.onLockChange = () => {
-          const pp = document.pointerLockElement;
-          pp ? Yp.l.lockGained() : Yp.l.change(Yp.b.lockLost), this.topicOn && (0, op.n)("look", `pointer lock ${pp?`gained (${pp.tagName.toLowerCase()})`:"lost"} at ${Pp(performance.now())} ms`)
+          const TT = document.pointerLockElement;
+          TT ? kT.k.lockGained() : kT.k.change(kT.b.lockLost), this.topicOn && (0, zT.m)("look", `pointer lock ${TT?`gained (${TT.tagName.toLowerCase()})`:"lost"} at ${LT(performance.now())} ms`)
         }, this.onLockError = () => {
-          Yp.l.change(Yp.b.lockError), this.topicOn && (0, op.n)("look", `pointer lock request failed at ${Pp(performance.now())} ms`)
+          kT.k.change(kT.b.lockError), this.topicOn && (0, zT.m)("look", `pointer lock request failed at ${LT(performance.now())} ms`)
         }, this.onVisibility = () => {
-          Yp.l.change("hidden" === document.visibilityState ? Yp.b.hidden : Yp.b.visible), this.topicOn && (0, op.n)("look", `page ${document.visibilityState} at ${Pp(performance.now())} ms`)
+          kT.k.change("hidden" === document.visibilityState ? kT.b.hidden : kT.b.visible), this.topicOn && (0, zT.m)("look", `page ${document.visibilityState} at ${LT(performance.now())} ms`)
         }, this.onFocus = () => {
-          Yp.l.change(Yp.b.focus)
+          kT.k.change(kT.b.focus)
         }, this.onBlur = () => {
-          Yp.l.change(Yp.b.blur)
+          kT.k.change(kT.b.blur)
         }, this.flush = () => {
           if (this.takeRecords(), !this.topicOn) return;
-          const pp = this.tally;
-          if (this.tally = new Wp, !pp.moved() || this.remote && !pp.hasEvent()) return;
-          const ip = pp.looked > 0 ? pp.dtSum / pp.looked : NaN,
-            cp = [`${pp.frames} frames (${pp.looked} looked, ${pp.idle} idle${"wasm"===Yp.l.client?`, ${pp.Hw} carried`:""})`, `dt avg ${Pp(ip)} min ${Pp(pp.dtMin)} max ${Pp(pp.dtMax)}, ${pp.longFrames} long`, `${pp.events} mousemoves (max ${Ap(pp.eventMax)} px, ${pp.bigEvents} big)`, `raw (${Ap(pp.raw[0])}, ${Ap(pp.raw[1])}) turned (${Ap(pp.turned[0])}, ${Ap(pp.turned[1])})`, `peak ${pp.peakRate.toFixed(2)} px/ms`, `put right ${pp.FX}, past limit ${pp.pastLimit}, lock skips ${pp.lockSkips}`, "lock " + (document.pointerLockElement ? "sx" : "free")];
-          pp.dropped > 0 && cp.push(`${pp.dropped} doubled spike copies dropped`), pp.cameraSets > 0 && cp.push(`${pp.cameraSets} camera sets`), pp.cameraSetsLost > 0 && cp.push(`${pp.cameraSetsLost} camera set records lost`), pp.lost > 0 && cp.push(`${pp.lost} records lost`), pp.suppressed > 0 && cp.push(`${pp.suppressed} outlier lines not shown`), (0, op.n)("look", `1s: ${cp.join("; ")}`)
+          const TT = this.tally;
+          if (this.tally = new pT, !TT.moved() || this.remote && !TT.hasEvent()) return;
+          const UT = TT.looked > 0 ? TT.dtSum / TT.looked : NaN,
+            mT = [`${TT.frames} frames (${TT.looked} looked, ${TT.idle} idle${"wasm"===kT.k.client?`, ${TT.Uc} carried`:""})`, `dt avg ${LT(UT)} min ${LT(TT.dtMin)} max ${LT(TT.dtMax)}, ${TT.longFrames} long`, `${TT.events} mousemoves (max ${lT(TT.eventMax)} px, ${TT.bigEvents} big)`, `raw (${lT(TT.raw[0])}, ${lT(TT.raw[1])}) turned (${lT(TT.turned[0])}, ${lT(TT.turned[1])})`, `peak ${TT.peakRate.toFixed(2)} px/ms`, `put right ${TT.ZF}, past limit ${TT.pastLimit}, lock skips ${TT.lockSkips}`, "lock " + (document.pointerLockElement ? "fn" : "free")];
+          TT.dropped > 0 && mT.push(`${TT.dropped} doubled spike copies dropped`), TT.cameraSets > 0 && mT.push(`${TT.cameraSets} camera sets`), TT.cameraSetsLost > 0 && mT.push(`${TT.cameraSetsLost} camera set records lost`), TT.lost > 0 && mT.push(`${TT.lost} records lost`), TT.suppressed > 0 && mT.push(`${TT.suppressed} outlier lines not shown`), (0, zT.m)("look", `1s: ${mT.join("; ")}`)
         }
       }
-      start(pp, ip) {
-        if (Yp.l.start(pp, null !== document.pointerLockElement), this.takes = ip, this.topicOn) {
+      start(TT, UT) {
+        if (kT.k.start(TT, null !== document.pointerLockElement), this.takes = UT, this.topicOn) {
           const {
-            screen: ip
+            screen: UT
           } = window;
-          (0, op.n)("look", `start: ${pp} client, dpr ${window.devicePixelRatio}, screen ${ip.width}x${ip.height}, pointer lock ${document.pointerLockElement?"sx":"free"}`)
+          (0, zT.m)("look", `start: ${TT} client, dpr ${window.devicePixelRatio}, screen ${UT.width}x${UT.height}, pointer lock ${document.pointerLockElement?"fn":"free"}`)
         }
         this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, op.k)("look", (() => Yp.l.dumpText())))
+        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, zT.j)("look", (() => kT.k.dumpText())))
       }
-      outlier(pp) {
-        const ip = this.tally;
-        ip.outliers >= 20 ? ip.suppressed++ : (ip.outliers++, (0, op.n)("look", pp))
+      outlier(TT) {
+        const UT = this.tally;
+        UT.outliers >= 20 ? UT.suppressed++ : (UT.outliers++, (0, zT.m)("look", TT))
       }
-      eventOutlier(pp) {
-        const ip = this.tally;
-        ip.eventLines >= 10 ? ip.suppressed++ : (ip.eventLines++, (0, op.n)("look", pp))
+      eventOutlier(TT) {
+        const UT = this.tally;
+        UT.eventLines >= 10 ? UT.suppressed++ : (UT.eventLines++, (0, zT.m)("look", TT))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const pp = this.takes.look();
-        if (pp.length >= Dp) {
-          this.counted(Yp.b.stepsLost, pp[0]), this.counted(Yp.b.droppedCopies, pp[1]);
-          for (let ip = Dp; ip + Yp.c <= pp.length; ip += Yp.c) this.record(pp, ip)
+        const TT = this.takes.look();
+        if (TT.length >= jT) {
+          this.counted(kT.b.stepsLost, TT[0]), this.counted(kT.b.droppedCopies, TT[1]);
+          for (let UT = jT; UT + kT.e <= TT.length; UT += kT.e) this.record(TT, UT)
         }
-        const ip = this.takes.cameraSets();
-        if (ip.length >= Op.d) {
-          this.counted(Yp.b.cameraSetsLost, ip[0]);
-          for (let pp = Op.d; pp + Op.e <= ip.length; pp += Op.e) Yp.l.cameraSet(ip, pp), this.topicOn && (this.tally.cameraSets++, this.outlier(Lp(ip, pp)))
+        const UT = this.takes.cameraSets();
+        if (UT.length >= WT.d) {
+          this.counted(kT.b.cameraSetsLost, UT[0]);
+          for (let TT = WT.d; TT + WT.f <= UT.length; TT += WT.f) kT.k.cameraSet(UT, TT), this.topicOn && (this.tally.cameraSets++, this.outlier(HT(UT, TT)))
         }
       }
       droppedCopy() {
-        this.counted(Yp.b.droppedCopies, 1)
+        this.counted(kT.b.droppedCopies, 1)
       }
-      counted(pp, ip) {
-        if (0 === ip) return;
-        if (Yp.l.change(pp, ip), !this.topicOn) return;
-        const cp = this.tally;
-        pp === Yp.b.droppedCopies ? cp.dropped += ip : pp === Yp.b.stepsLost ? cp.lost += ip : cp.cameraSetsLost += ip
+      counted(TT, UT) {
+        if (0 === UT) return;
+        if (kT.k.change(TT, UT), !this.topicOn) return;
+        const mT = this.tally;
+        TT === kT.b.droppedCopies ? mT.dropped += UT : TT === kT.b.stepsLost ? mT.lost += UT : mT.cameraSetsLost += UT
       }
       endTake() {
         this.takeRecords(), this.takes = null
       }
     }
-    let Up = null;
+    let ZT = null;
 
-    function wp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return Up ??= new yp, Up.start(pp, ip), Up.record
+    function cT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return ZT ??= new BT, ZT.start(TT, UT), ZT.record
     }
 
-    function vp() {
-      var pp;
-      null === (pp = Up) || void 0 === pp || pp.endTake()
+    function vT() {
+      var TT;
+      null === (TT = ZT) || void 0 === TT || TT.endTake()
     }
 
-    function tp() {
-      var pp;
-      null === (pp = Up) || void 0 === pp || pp.droppedCopy()
+    function fT() {
+      var TT;
+      null === (TT = ZT) || void 0 === TT || TT.droppedCopy()
     }
-    async function Hp(pp) {
-      var ip;
-      null === (ip = Up) || void 0 === ip || ip.takeRecords();
+    async function qT(TT) {
+      var UT;
+      null === (UT = ZT) || void 0 === UT || UT.takeRecords();
       const {
-        clientHintsRead: Op,
-        debugDeviceLines: op
-      } = await cp.e(29).then((() => cp(34291)));
-      await Op, Yp.l.save({
-        ...pp,
-        device: op()
+        clientHintsRead: WT,
+        debugDeviceLines: zT
+      } = await mT.e(29).then((() => mT(34135)));
+      await WT, kT.k.save({
+        ...TT,
+        device: zT()
       })
     }
   },
-  4911: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Vp,
-      Bb: () => Cp,
-      C: () => Ap,
-      Fb: () => Mp,
-      G: () => Pp,
-      Hb: () => Tp,
-      I: () => Dp,
-      Kb: () => gp,
-      L: () => Yp,
-      M: () => ep,
-      Mb: () => bp,
-      O: () => Lp,
-      Ob: () => ap,
-      Q: () => Up,
-      Rb: () => np,
-      S: () => yp,
-      Sb: () => Rp,
-      Tb: () => qp,
-      Vb: () => rp,
-      W: () => Ep,
-      Wb: () => op,
-      Zb: () => Kp,
-      _: () => lp,
-      cb: () => Qp,
-      d: () => tp,
-      e: () => vp,
-      f: () => sp,
-      gb: () => Xp,
-      h: () => Hp,
-      ib: () => Jp,
-      k: () => zp,
-      kb: () => Gp,
-      lb: () => Fp,
-      m: () => Wp,
-      mb: () => hp,
-      ob: () => Bp,
-      p: () => mp,
-      q: () => Zp,
-      qb: () => fp,
-      r: () => kp,
-      s: () => jp,
-      t: () => Sp,
-      tb: () => Np,
-      u: () => xp,
-      w: () => Op,
-      x: () => Ip,
-      xb: () => wp,
-      z: () => dp
+  4904: (TT, UT, mT) => {
+    mT.d(UT, {
+      $: () => BT,
+      $b: () => oT,
+      A: () => gT,
+      C: () => nT,
+      Cb: () => wT,
+      D: () => WT,
+      Db: () => dT,
+      Eb: () => FT,
+      F: () => MT,
+      G: () => iT,
+      Ib: () => ST,
+      K: () => AT,
+      Kb: () => VT,
+      L: () => lT,
+      Mb: () => CT,
+      Nb: () => rT,
+      O: () => LT,
+      Pb: () => JT,
+      R: () => jT,
+      Sb: () => xT,
+      Tb: () => NT,
+      V: () => kT,
+      X: () => bT,
+      Xb: () => zT,
+      Y: () => HT,
+      _: () => ZT,
+      bb: () => tT,
+      d: () => fT,
+      f: () => vT,
+      fb: () => yT,
+      i: () => DT,
+      j: () => qT,
+      jb: () => XT,
+      l: () => hT,
+      nb: () => aT,
+      o: () => pT,
+      ob: () => IT,
+      p: () => YT,
+      pb: () => GT,
+      q: () => ET,
+      qb: () => KT,
+      rb: () => uT,
+      s: () => eT,
+      tb: () => QT,
+      vb: () => PT,
+      w: () => OT,
+      wb: () => sT,
+      yb: () => cT
     });
-    const Op = 32,
-      op = 33.333333333333336,
-      Ip = {
+    const WT = 32,
+      zT = 33.333333333333336,
+      MT = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -446,36 +446,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Sp = {
+      gT = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      xp = {
+      nT = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      Lp = {
+      HT = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      Yp = {
+      kT = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Dp = {
+      jT = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      Ap = 14,
-      Pp = {
+      lT = 14,
+      LT = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -491,14 +491,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Wp = {
+      pT = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      yp = 8,
-      Up = 1,
-      wp = {
+      BT = 8,
+      ZT = 1,
+      cT = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -507,16 +507,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      vp = 6,
-      tp = 1,
-      Hp = {
+      vT = 6,
+      fT = 1,
+      qT = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      dp = {
+      iT = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -544,12 +544,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      ep = {
+      bT = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      jp = {
+      OT = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -602,7 +602,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      kp = {
+      eT = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -612,10 +612,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      mp = 4,
-      Rp = 4,
-      qp = 65535,
-      Mp = {
+      YT = 4,
+      JT = 4,
+      xT = 65535,
+      dT = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -628,7 +628,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      Cp = {
+      wT = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -636,12 +636,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Ep = 88,
-      Xp = 0,
-      lp = 24,
-      Qp = 48,
-      Jp = 80,
-      Bp = {
+      tT = 88,
+      aT = 0,
+      yT = 24,
+      XT = 48,
+      IT = 80,
+      QT = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -652,18 +652,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Np = {
+      sT = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Tp = {
+      FT = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      fp = {
+      PT = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -681,34 +681,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      bp = {
+      VT = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      hp = 65535,
-      ap = {
+      uT = 65535,
+      CT = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      np = {
+      rT = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Fp = 2,
-      gp = {
+      KT = 2,
+      ST = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Gp = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      rp = {
+      GT = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      NT = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -722,7 +722,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Zp = {
+      ET = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -749,7 +749,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      zp = {
+      hT = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -907,8 +907,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      sp = 8,
-      Kp = {
+      DT = 8,
+      oT = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -933,8 +933,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Vp = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      AT = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,114 +1,114 @@
-/*! For license information please see sn3sfj.272.14e37789.chunk.js.LICENSE.txt */
+/*! For license information please see yma3ej.272.e4575882.chunk.js.LICENSE.txt */
 export const id = 272;
 export const ids = [272];
 export const modules = {
-    40721: (pp, ip, cp) => {
-        cp.r(ip), cp.d(ip, {
-          ActionCodeOperation: () => Pp,
-          ActionCodeURL: () => pc,
-          AuthCredential: () => bi,
-          AuthErrorCodes: () => vp,
-          EmailAuthCredential: () => Zi,
-          EmailAuthProvider: () => cc,
-          FacebookAuthProvider: () => Sc,
-          FactorId: () => Lp,
-          GithubAuthProvider: () => Lc,
-          GoogleAuthProvider: () => xc,
-          OAuthCredential: () => si,
-          OAuthProvider: () => Ic,
-          OperationType: () => Ap,
-          PhoneAuthCredential: () => Vi,
-          PhoneAuthProvider: () => oo,
-          PhoneMultiFactorGenerator: () => II,
-          ProviderId: () => Yp,
-          RecaptchaVerifier: () => sO,
-          SAMLAuthProvider: () => Dc,
-          SignInMethod: () => Dp,
-          TotpMultiFactorGenerator: () => SI,
-          TotpSecret: () => LI,
-          TwitterAuthProvider: () => Ac,
-          applyActionCode: () => Jc,
-          beforeAuthStateChanged: () => xO,
-          browserLocalPersistence: () => uO,
-          browserPopupRedirectResolver: () => cI,
-          browserSessionPersistence: () => kO,
-          checkActionCode: () => Bc,
-          confirmPasswordReset: () => Qc,
-          connectAuthEmulator: () => Ni,
-          createUserWithEmailAndPassword: () => Tc,
-          debugErrorMap: () => yp,
-          deleteUser: () => PO,
-          fetchSignInMethodsForEmail: () => nc,
-          getAdditionalUserInfo: () => OO,
-          getAuth: () => wI,
-          getIdToken: () => Gp,
-          getIdTokenResult: () => rp,
-          getMultiFactorResolver: () => UO,
-          getRedirectResult: () => qo,
-          inMemoryPersistence: () => Yi,
-          indexedDBLocalPersistence: () => bO,
-          initializeAuth: () => Bi,
-          initializeRecaptchaConfig: () => IO,
-          isSignInWithEmailLink: () => hc,
-          linkWithCredential: () => mc,
-          linkWithPhoneNumber: () => po,
-          linkWithPopup: () => yo,
-          linkWithRedirect: () => Ro,
-          multiFactor: () => tO,
-          onAuthStateChanged: () => LO,
-          onIdTokenChanged: () => SO,
-          parseActionCodeURL: () => ic,
-          prodErrorMap: () => Up,
-          reauthenticateWithCredential: () => Rc,
-          reauthenticateWithPhoneNumber: () => io,
-          reauthenticateWithPopup: () => Wo,
-          reauthenticateWithRedirect: () => mo,
-          reload: () => ci,
-          sendEmailVerification: () => Fc,
-          sendPasswordResetEmail: () => lc,
-          sendSignInLinkToEmail: () => bc,
-          setPersistence: () => oO,
-          signInAnonymously: () => Uc,
-          signInWithCredential: () => kc,
-          signInWithCustomToken: () => qc,
-          signInWithEmailAndPassword: () => fc,
-          signInWithEmailLink: () => ac,
-          signInWithPhoneNumber: () => VO,
-          signInWithPopup: () => Po,
-          signInWithRedirect: () => ko,
-          signOut: () => AO,
-          unlink: () => Hc,
-          updateCurrentUser: () => DO,
-          updateEmail: () => rc,
-          updatePassword: () => Zc,
-          updatePhoneNumber: () => Oo,
-          updateProfile: () => Gc,
-          useDeviceLanguage: () => YO,
-          verifyBeforeUpdateEmail: () => gc,
-          verifyPasswordResetCode: () => Nc
+    40659: (TT, UT, mT) => {
+        mT.r(UT), mT.d(UT, {
+          ActionCodeOperation: () => LT,
+          ActionCodeURL: () => oU,
+          AuthCredential: () => PU,
+          AuthErrorCodes: () => vT,
+          EmailAuthCredential: () => GU,
+          EmailAuthProvider: () => RU,
+          FacebookAuthProvider: () => Wm,
+          FactorId: () => HT,
+          GithubAuthProvider: () => Mm,
+          GoogleAuthProvider: () => zm,
+          OAuthCredential: () => EU,
+          OAuthProvider: () => mm,
+          OperationType: () => lT,
+          PhoneAuthCredential: () => DU,
+          PhoneAuthProvider: () => mz,
+          PhoneMultiFactorGenerator: () => UM,
+          ProviderId: () => kT,
+          RecaptchaVerifier: () => hW,
+          SAMLAuthProvider: () => nm,
+          SignInMethod: () => jT,
+          TotpMultiFactorGenerator: () => mM,
+          TotpSecret: () => zM,
+          TwitterAuthProvider: () => Hm,
+          applyActionCode: () => Xm,
+          beforeAuthStateChanged: () => MW,
+          browserLocalPersistence: () => iW,
+          browserPopupRedirectResolver: () => Az,
+          browserSessionPersistence: () => OW,
+          checkActionCode: () => Im,
+          confirmPasswordReset: () => ym,
+          connectAuthEmulator: () => QU,
+          createUserWithEmailAndPassword: () => sm,
+          debugErrorMap: () => BT,
+          deleteUser: () => jW,
+          fetchSignInMethodsForEmail: () => Cm,
+          getAdditionalUserInfo: () => UW,
+          getAuth: () => LM,
+          getIdToken: () => GT,
+          getIdTokenResult: () => NT,
+          getMultiFactorResolver: () => pW,
+          getRedirectResult: () => Yz,
+          inMemoryPersistence: () => nU,
+          indexedDBLocalPersistence: () => PW,
+          initializeAuth: () => IU,
+          initializeRecaptchaConfig: () => WW,
+          isSignInWithEmailLink: () => Vm,
+          linkWithCredential: () => em,
+          linkWithPhoneNumber: () => AW,
+          linkWithPopup: () => Lz,
+          linkWithRedirect: () => ez,
+          multiFactor: () => cW,
+          onAuthStateChanged: () => gW,
+          onIdTokenChanged: () => zW,
+          parseActionCodeURL: () => AU,
+          prodErrorMap: () => ZT,
+          reauthenticateWithCredential: () => Ym,
+          reauthenticateWithPhoneNumber: () => RW,
+          reauthenticateWithPopup: () => lz,
+          reauthenticateWithRedirect: () => Oz,
+          reload: () => TU,
+          sendEmailVerification: () => rm,
+          sendPasswordResetEmail: () => am,
+          sendSignInLinkToEmail: () => Pm,
+          setPersistence: () => mW,
+          signInAnonymously: () => Lm,
+          signInWithCredential: () => Om,
+          signInWithCustomToken: () => Jm,
+          signInWithEmailAndPassword: () => Fm,
+          signInWithEmailLink: () => um,
+          signInWithPhoneNumber: () => oW,
+          signInWithPopup: () => jz,
+          signInWithRedirect: () => bz,
+          signOut: () => kW,
+          unlink: () => cm,
+          updateCurrentUser: () => HW,
+          updateEmail: () => Gm,
+          updatePassword: () => Nm,
+          updatePhoneNumber: () => Uz,
+          updateProfile: () => Sm,
+          useDeviceLanguage: () => nW,
+          verifyBeforeUpdateEmail: () => Km,
+          verifyPasswordResetCode: () => Qm
         });
-        var Op = cp(40700),
-          op = cp(40687);
+        var WT = mT(40643),
+          zT = mT(40631);
 
-        function Ip(pp, ip) {
-          var cp = {};
-          for (var Op in pp) Object.prototype.hasOwnProperty.call(pp, Op) && ip.indexOf(Op) < 0 && (cp[Op] = pp[Op]);
-          if (null != pp && "function" === typeof Object.getOwnPropertySymbols) {
-            var op = 0;
-            for (Op = Object.getOwnPropertySymbols(pp); op < Op.length; op++) ip.indexOf(Op[op]) < 0 && Object.prototype.propertyIsEnumerable.call(pp, Op[op]) && (cp[Op[op]] = pp[Op[op]])
+        function MT(TT, UT) {
+          var mT = {};
+          for (var WT in TT) Object.prototype.hasOwnProperty.call(TT, WT) && UT.indexOf(WT) < 0 && (mT[WT] = TT[WT]);
+          if (null != TT && "function" === typeof Object.getOwnPropertySymbols) {
+            var zT = 0;
+            for (WT = Object.getOwnPropertySymbols(TT); zT < WT.length; zT++) UT.indexOf(WT[zT]) < 0 && Object.prototype.propertyIsEnumerable.call(TT, WT[zT]) && (mT[WT[zT]] = TT[WT[zT]])
           }
-          return cp
+          return mT
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var Sp = cp(40704),
-          xp = cp(40692);
-        const Lp = {
+        var gT = mT(40651),
+          nT = mT(40639);
+        const HT = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          Yp = {
+          kT = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          Dp = {
+          jT = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          Ap = {
+          lT = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          Pp = {
+          LT = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function Wp() {
+        function pT() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const yp = function() {
+        const BT = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          Up = Wp,
-          wp = new Op.i("auth", "Firebase", {
+          ZT = pT,
+          cT = new WT.g("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          vp = {
+          vT = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          tp = new Sp.d("@firebase/auth");
+          fT = new gT.h("@firebase/auth");
 
-        function Hp(pp) {
-          if (tp.logLevel <= Sp.c.ERROR) {
-            for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-            tp.error(`Auth (${op.f}): ${pp}`, ...cp)
+        function qT(TT) {
+          if (fT.logLevel <= gT.d.ERROR) {
+            for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+            fT.error(`Auth (${zT.f}): ${TT}`, ...mT)
           }
         }
 
-        function dp(pp) {
-          for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-          throw mp(pp, ...cp)
+        function iT(TT) {
+          for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+          throw YT(TT, ...mT)
         }
 
-        function ep(pp) {
-          for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-          return mp(pp, ...cp)
+        function bT(TT) {
+          for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+          return YT(TT, ...mT)
         }
 
-        function jp(pp, ip, cp) {
-          const op = Object.assign(Object.assign({}, Up()), {
-            [ip]: cp
+        function OT(TT, UT, mT) {
+          const zT = Object.assign(Object.assign({}, ZT()), {
+            [UT]: mT
           });
-          return new Op.i("auth", "Firebase", op).create(ip, {
-            appName: pp.name
+          return new WT.g("auth", "Firebase", zT).create(UT, {
+            appName: TT.name
           })
         }
 
-        function kp(pp, ip, cp) {
-          if (!(ip instanceof cp)) throw cp.name !== ip.constructor.name && dp(pp, "argument-error"), jp(pp, "argument-error", `Type of ${ip.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function eT(TT, UT, mT) {
+          if (!(UT instanceof mT)) throw mT.name !== UT.constructor.name && iT(TT, "argument-error"), OT(TT, "argument-error", `Type of ${UT.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function mp(pp) {
-          for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-          if ("string" !== typeof pp) {
-            const ip = cp[0],
-              Op = [...cp.slice(1)];
-            return Op[0] && (Op[0].appName = pp.name), pp._errorFactory.create(ip, ...Op)
+        function YT(TT) {
+          for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+          if ("string" !== typeof TT) {
+            const UT = mT[0],
+              WT = [...mT.slice(1)];
+            return WT[0] && (WT[0].appName = TT.name), TT._errorFactory.create(UT, ...WT)
           }
-          return wp.create(pp, ...cp)
+          return cT.create(TT, ...mT)
         }
 
-        function Rp(pp, ip) {
-          if (!pp) {
-            for (var cp = arguments.length, Op = new Array(cp > 2 ? cp - 2 : 0), op = 2; op < cp; op++) Op[op - 2] = arguments[op];
-            throw mp(ip, ...Op)
+        function JT(TT, UT) {
+          if (!TT) {
+            for (var mT = arguments.length, WT = new Array(mT > 2 ? mT - 2 : 0), zT = 2; zT < mT; zT++) WT[zT - 2] = arguments[zT];
+            throw YT(UT, ...WT)
           }
         }
 
-        function qp(pp) {
-          const ip = "INTERNAL ASSERTION FAILED: " + pp;
-          throw Hp(ip), new Error(ip)
+        function xT(TT) {
+          const UT = "INTERNAL ASSERTION FAILED: " + TT;
+          throw qT(UT), new Error(UT)
         }
 
-        function Mp(pp, ip) {
-          pp || qp(ip)
+        function dT(TT, UT) {
+          TT || xT(UT)
         }
 
-        function Cp() {
-          var pp;
-          return "undefined" !== typeof self && (null === (pp = self.location) || void 0 === pp ? void 0 : pp.href) || ""
+        function wT() {
+          var TT;
+          return "undefined" !== typeof self && (null === (TT = self.location) || void 0 === TT ? void 0 : TT.href) || ""
         }
 
-        function Ep() {
-          return "http:" === Xp() || "https:" === Xp()
+        function tT() {
+          return "http:" === aT() || "https:" === aT()
         }
 
-        function Xp() {
-          var pp;
-          return "undefined" !== typeof self && (null === (pp = self.location) || void 0 === pp ? void 0 : pp.protocol) || null
+        function aT() {
+          var TT;
+          return "undefined" !== typeof self && (null === (TT = self.location) || void 0 === TT ? void 0 : TT.protocol) || null
         }
-        class lp {
-          constructor(pp, ip) {
-            this.shortDelay = pp, this.longDelay = ip, Mp(ip > pp, "Short delay should be less than long delay!"), this.isMobile = (0, Op.T)() || (0, Op.X)()
+        class yT {
+          constructor(TT, UT) {
+            this.shortDelay = TT, this.longDelay = UT, dT(UT > TT, "Short delay should be less than long delay!"), this.isMobile = (0, WT.gb)() || (0, WT.ib)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (Ep() || (0, Op.K)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (tT() || (0, WT.V)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function Qp(pp, ip) {
-          Mp(pp.emulator, "Emulator should always be set here");
+        function XT(TT, UT) {
+          dT(TT.emulator, "Emulator should always be set here");
           const {
-            url: cp
-          } = pp.emulator;
-          return ip ? `${cp}${ip.startsWith("/")?ip.slice(1):ip}` : cp
+            url: mT
+          } = TT.emulator;
+          return UT ? `${mT}${UT.startsWith("/")?UT.slice(1):UT}` : mT
         }
-        class Jp {
-          static initialize(pp, ip, cp) {
-            this.fetchImpl = pp, ip && (this.headersImpl = ip), cp && (this.responseImpl = cp)
+        class IT {
+          static initialize(TT, UT, mT) {
+            this.fetchImpl = TT, UT && (this.headersImpl = UT), mT && (this.responseImpl = mT)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void qp("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void xT("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void qp("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void xT("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void qp("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void xT("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const Bp = {
+        const QT = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          Np = new lp(3e4, 6e4);
+          sT = new yT(3e4, 6e4);
 
-        function Tp(pp, ip) {
-          return pp.tenantId && !ip.tenantId ? Object.assign(Object.assign({}, ip), {
-            tenantId: pp.tenantId
-          }) : ip
+        function FT(TT, UT) {
+          return TT.tenantId && !UT.tenantId ? Object.assign(Object.assign({}, UT), {
+            tenantId: TT.tenantId
+          }) : UT
         }
-        async function fp(pp, ip, cp, op) {
-          return bp(pp, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let Ip = {},
-              Sp = {};
-            op && ("GET" === ip ? Sp = op : Ip = {
-              body: JSON.stringify(op)
+        async function PT(TT, UT, mT, zT) {
+          return VT(TT, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let MT = {},
+              gT = {};
+            zT && ("GET" === UT ? gT = zT : MT = {
+              body: JSON.stringify(zT)
             });
-            const xp = (0, Op.cb)(Object.assign({
-                key: pp.config.apiKey
-              }, Sp)).slice(1),
-              Lp = await pp._getAdditionalHeaders();
-            return Lp["Content-Type"] = "application/json", pp.languageCode && (Lp["X-Firebase-Locale"] = pp.languageCode), Jp.fetch()(ap(pp, pp.config.apiHost, cp, xp), Object.assign({
-              method: ip,
-              headers: Lp,
+            const nT = (0, WT.pb)(Object.assign({
+                key: TT.config.apiKey
+              }, gT)).slice(1),
+              HT = await TT._getAdditionalHeaders();
+            return HT["Content-Type"] = "application/json", TT.languageCode && (HT["X-Firebase-Locale"] = TT.languageCode), IT.fetch()(CT(TT, TT.config.apiHost, mT, nT), Object.assign({
+              method: UT,
+              headers: HT,
               referrerPolicy: "no-referrer"
-            }, Ip))
+            }, MT))
           }))
         }
-        async function bp(pp, ip, cp) {
-          pp._canInitEmulator = !1;
-          const op = Object.assign(Object.assign({}, Bp), ip);
+        async function VT(TT, UT, mT) {
+          TT._canInitEmulator = !1;
+          const zT = Object.assign(Object.assign({}, QT), UT);
           try {
-            const ip = new np(pp),
-              Op = await Promise.race([cp(), ip.promise]);
-            ip.clearNetworkTimeout();
-            const Ip = await Op.json();
-            if ("needConfirmation" in Ip) throw Fp(pp, "account-exists-with-different-credential", Ip);
-            if (Op.ok && !("errorMessage" in Ip)) return Ip;
+            const UT = new rT(TT),
+              WT = await Promise.race([mT(), UT.promise]);
+            UT.clearNetworkTimeout();
+            const MT = await WT.json();
+            if ("needConfirmation" in MT) throw KT(TT, "account-exists-with-different-credential", MT);
+            if (WT.ok && !("errorMessage" in MT)) return MT;
             {
-              const ip = Op.ok ? Ip.errorMessage : Ip.error.message,
-                [cp, Sp] = ip.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === cp) throw Fp(pp, "credential-already-in-use", Ip);
-              if ("EMAIL_EXISTS" === cp) throw Fp(pp, "email-already-in-use", Ip);
-              if ("USER_DISABLED" === cp) throw Fp(pp, "user-disabled", Ip);
-              const xp = op[cp] || cp.toLowerCase().replace(/[_\s]+/g, "-");
-              if (Sp) throw jp(pp, xp, Sp);
-              dp(pp, xp)
+              const UT = WT.ok ? MT.errorMessage : MT.error.message,
+                [mT, gT] = UT.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === mT) throw KT(TT, "credential-already-in-use", MT);
+              if ("EMAIL_EXISTS" === mT) throw KT(TT, "email-already-in-use", MT);
+              if ("USER_DISABLED" === mT) throw KT(TT, "user-disabled", MT);
+              const nT = zT[mT] || mT.toLowerCase().replace(/[_\s]+/g, "-");
+              if (gT) throw OT(TT, nT, gT);
+              iT(TT, nT)
             }
-          } catch (Ip) {
-            if (Ip instanceof Op.l) throw Ip;
-            dp(pp, "network-request-failed", {
-              message: String(Ip)
+          } catch (MT) {
+            if (MT instanceof WT.i) throw MT;
+            iT(TT, "network-request-failed", {
+              message: String(MT)
             })
           }
         }
-        async function hp(pp, ip, cp, Op) {
-          let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const Ip = await fp(pp, ip, cp, Op, op);
-          return "mfaPendingCredential" in Ip && dp(pp, "multi-factor-auth-required", {
-            _serverResponse: Ip
-          }), Ip
+        async function uT(TT, UT, mT, WT) {
+          let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const MT = await PT(TT, UT, mT, WT, zT);
+          return "mfaPendingCredential" in MT && iT(TT, "multi-factor-auth-required", {
+            _serverResponse: MT
+          }), MT
         }
 
-        function ap(pp, ip, cp, Op) {
-          const op = `${ip}${cp}?${Op}`;
-          return pp.config.emulator ? Qp(pp.config, op) : `${pp.config.apiScheme}://${op}`
+        function CT(TT, UT, mT, WT) {
+          const zT = `${UT}${mT}?${WT}`;
+          return TT.config.emulator ? XT(TT.config, zT) : `${TT.config.apiScheme}://${zT}`
         }
-        class np {
-          constructor(pp) {
-            this.auth = pp, this.timer = null, this.promise = new Promise(((pp, ip) => {
-              this.timer = setTimeout((() => ip(ep(this.auth, "network-request-failed"))), Np.get())
+        class rT {
+          constructor(TT) {
+            this.auth = TT, this.timer = null, this.promise = new Promise(((TT, UT) => {
+              this.timer = setTimeout((() => UT(bT(this.auth, "network-request-failed"))), sT.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,75 +586,75 @@ export const modules = {
           }
         }
 
-        function Fp(pp, ip, cp) {
-          const Op = {
-            appName: pp.name
+        function KT(TT, UT, mT) {
+          const WT = {
+            appName: TT.name
           };
-          cp.email && (Op.email = cp.email), cp.phoneNumber && (Op.phoneNumber = cp.phoneNumber);
-          const op = ep(pp, ip, Op);
-          return op.customData._tokenResponse = cp, op
+          mT.email && (WT.email = mT.email), mT.phoneNumber && (WT.phoneNumber = mT.phoneNumber);
+          const zT = bT(TT, UT, WT);
+          return zT.customData._tokenResponse = mT, zT
         }
 
-        function gp(pp) {
-          if (pp) try {
-            const ip = new Date(Number(pp));
-            if (!isNaN(ip.getTime())) return ip.toUTCString()
-          } catch (ip) {}
+        function ST(TT) {
+          if (TT) try {
+            const UT = new Date(Number(TT));
+            if (!isNaN(UT.getTime())) return UT.toUTCString()
+          } catch (UT) {}
         }
 
-        function Gp(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, Op.F)(pp).getIdToken(ip)
+        function GT(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, WT.P)(TT).getIdToken(UT)
         }
-        async function rp(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const cp = (0, Op.F)(pp),
-            op = await cp.getIdToken(ip),
-            Ip = zp(op);
-          Rp(Ip && Ip.exp && Ip.auth_time && Ip.iat, cp.auth, "internal-error");
-          const Sp = "object" === typeof Ip.firebase ? Ip.firebase : void 0,
-            xp = null === Sp || void 0 === Sp ? void 0 : Sp.sign_in_provider;
+        async function NT(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const mT = (0, WT.P)(TT),
+            zT = await mT.getIdToken(UT),
+            MT = hT(zT);
+          JT(MT && MT.exp && MT.auth_time && MT.iat, mT.auth, "internal-error");
+          const gT = "object" === typeof MT.firebase ? MT.firebase : void 0,
+            nT = null === gT || void 0 === gT ? void 0 : gT.sign_in_provider;
           return {
-            claims: Ip,
-            token: op,
-            authTime: gp(Zp(Ip.auth_time)),
-            issuedAtTime: gp(Zp(Ip.iat)),
-            expirationTime: gp(Zp(Ip.exp)),
-            signInProvider: xp || null,
-            signInSecondFactor: (null === Sp || void 0 === Sp ? void 0 : Sp.sign_in_second_factor) || null
+            claims: MT,
+            token: zT,
+            authTime: ST(ET(MT.auth_time)),
+            issuedAtTime: ST(ET(MT.iat)),
+            expirationTime: ST(ET(MT.exp)),
+            signInProvider: nT || null,
+            signInSecondFactor: (null === gT || void 0 === gT ? void 0 : gT.sign_in_second_factor) || null
           }
         }
 
-        function Zp(pp) {
-          return 1e3 * Number(pp)
+        function ET(TT) {
+          return 1e3 * Number(TT)
         }
 
-        function zp(pp) {
-          const [ip, cp, op] = pp.split(".");
-          if (void 0 === ip || void 0 === cp || void 0 === op) return Hp("JWT malformed, contained fewer than 3 sections"), null;
+        function hT(TT) {
+          const [UT, mT, zT] = TT.split(".");
+          if (void 0 === UT || void 0 === mT || void 0 === zT) return qT("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const pp = (0, Op.r)(cp);
-            return pp ? JSON.parse(pp) : (Hp("Failed to decode base64 JWT payload"), null)
-          } catch (Ip) {
-            return Hp("Caught error parsing JWT payload as JSON", null === Ip || void 0 === Ip ? void 0 : Ip.toString()), null
+            const TT = (0, WT.q)(mT);
+            return TT ? JSON.parse(TT) : (qT("Failed to decode base64 JWT payload"), null)
+          } catch (MT) {
+            return qT("Caught error parsing JWT payload as JSON", null === MT || void 0 === MT ? void 0 : MT.toString()), null
           }
         }
-        async function sp(pp, ip) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return ip;
+        async function DT(TT, UT) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return UT;
           try {
-            return await ip
-          } catch (cp) {
-            throw cp instanceof Op.l && function(pp) {
+            return await UT
+          } catch (mT) {
+            throw mT instanceof WT.i && function(TT) {
               let {
-                code: ip
-              } = pp;
-              return "auth/user-disabled" === ip || "auth/user-token-expired" === ip
-            }(cp) && pp.auth.currentUser === pp && await pp.auth.signOut(), cp
+                code: UT
+              } = TT;
+              return "auth/user-disabled" === UT || "auth/user-token-expired" === UT
+            }(mT) && TT.auth.currentUser === TT && await TT.auth.signOut(), mT
           }
         }
-        class Kp {
-          constructor(pp) {
-            this.user = pp, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
+        class oT {
+          constructor(TT) {
+            this.user = TT, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
           _start() {
             this.isRunning || (this.isRunning = !0, this.schedule())
@@ -662,43 +662,43 @@ export const modules = {
           _stop() {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
-          getInterval(pp) {
-            var ip;
-            if (pp) {
-              const pp = this.errorBackoff;
-              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), pp
+          getInterval(TT) {
+            var UT;
+            if (TT) {
+              const TT = this.errorBackoff;
+              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), TT
             } {
               this.errorBackoff = 3e4;
-              const pp = (null !== (ip = this.user.stsTokenManager.expirationTime) && void 0 !== ip ? ip : 0) - Date.now() - 3e5;
-              return Math.max(0, pp)
+              const TT = (null !== (UT = this.user.stsTokenManager.expirationTime) && void 0 !== UT ? UT : 0) - Date.now() - 3e5;
+              return Math.max(0, TT)
             }
           }
           schedule() {
-            let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const ip = this.getInterval(pp);
+            const UT = this.getInterval(TT);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), ip)
+            }), UT)
           }
           async iteration() {
             try {
               await this.user.getIdToken(!0)
-            } catch (pp) {
-              return void("auth/network-request-failed" === (null === pp || void 0 === pp ? void 0 : pp.code) && this.schedule(!0))
+            } catch (TT) {
+              return void("auth/network-request-failed" === (null === TT || void 0 === TT ? void 0 : TT.code) && this.schedule(!0))
             }
             this.schedule()
           }
         }
-        class Vp {
-          constructor(pp, ip) {
-            this.createdAt = pp, this.lastLoginAt = ip, this._initializeTime()
+        class AT {
+          constructor(TT, UT) {
+            this.createdAt = TT, this.lastLoginAt = UT, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = gp(this.lastLoginAt), this.creationTime = gp(this.createdAt)
+            this.lastSignInTime = ST(this.lastLoginAt), this.creationTime = ST(this.createdAt)
           }
-          _copy(pp) {
-            this.createdAt = pp.createdAt, this.lastLoginAt = pp.lastLoginAt, this._initializeTime()
+          _copy(TT) {
+            this.createdAt = TT.createdAt, this.lastLoginAt = TT.lastLoginAt, this._initializeTime()
           }
           toJSON() {
             return {
@@ -707,123 +707,123 @@ export const modules = {
             }
           }
         }
-        async function ii(pp) {
-          var ip;
-          const cp = pp.auth,
-            Op = await pp.getIdToken(),
-            op = await sp(pp, async function(pp, ip) {
-              return fp(pp, "POST", "/v1/accounts:lookup", ip)
-            }(cp, {
-              idToken: Op
+        async function RT(TT) {
+          var UT;
+          const mT = TT.auth,
+            WT = await TT.getIdToken(),
+            zT = await DT(TT, async function(TT, UT) {
+              return PT(TT, "POST", "/v1/accounts:lookup", UT)
+            }(mT, {
+              idToken: WT
             }));
-          Rp(null === op || void 0 === op ? void 0 : op.users.length, cp, "internal-error");
-          const Sp = op.users[0];
-          pp._notifyReloadListener(Sp);
-          const xp = (null === (ip = Sp.providerUserInfo) || void 0 === ip ? void 0 : ip.length) ? Sp.providerUserInfo.map((pp => {
+          JT(null === zT || void 0 === zT ? void 0 : zT.users.length, mT, "internal-error");
+          const gT = zT.users[0];
+          TT._notifyReloadListener(gT);
+          const nT = (null === (UT = gT.providerUserInfo) || void 0 === UT ? void 0 : UT.length) ? gT.providerUserInfo.map((TT => {
             var {
-              providerId: ip
-            } = pp, cp = Ip(pp, ["providerId"]);
+              providerId: UT
+            } = TT, mT = MT(TT, ["providerId"]);
             return {
-              providerId: ip,
-              uid: cp.rawId || "",
-              displayName: cp.displayName || null,
-              email: cp.email || null,
-              phoneNumber: cp.phoneNumber || null,
-              photoURL: cp.photoUrl || null
+              providerId: UT,
+              uid: mT.rawId || "",
+              displayName: mT.displayName || null,
+              email: mT.email || null,
+              phoneNumber: mT.phoneNumber || null,
+              photoURL: mT.photoUrl || null
             }
           })) : [];
-          const Lp = (Yp = pp.providerData, Dp = xp, [...Yp.filter((pp => !Dp.some((ip => ip.providerId === pp.providerId)))), ...Dp]);
-          var Yp, Dp;
-          const Ap = pp.isAnonymous,
-            Pp = !(pp.email && Sp.passwordHash) && !(null === Lp || void 0 === Lp ? void 0 : Lp.length),
-            Wp = !!Ap && Pp,
-            yp = {
-              uid: Sp.localId,
-              displayName: Sp.displayName || null,
-              photoURL: Sp.photoUrl || null,
-              email: Sp.email || null,
-              emailVerified: Sp.emailVerified || !1,
-              phoneNumber: Sp.phoneNumber || null,
-              tenantId: Sp.tenantId || null,
-              providerData: Lp,
-              metadata: new Vp(Sp.createdAt, Sp.lastLoginAt),
-              isAnonymous: Wp
+          const HT = (kT = TT.providerData, jT = nT, [...kT.filter((TT => !jT.some((UT => UT.providerId === TT.providerId)))), ...jT]);
+          var kT, jT;
+          const lT = TT.isAnonymous,
+            LT = !(TT.email && gT.passwordHash) && !(null === HT || void 0 === HT ? void 0 : HT.length),
+            pT = !!lT && LT,
+            BT = {
+              uid: gT.localId,
+              displayName: gT.displayName || null,
+              photoURL: gT.photoUrl || null,
+              email: gT.email || null,
+              emailVerified: gT.emailVerified || !1,
+              phoneNumber: gT.phoneNumber || null,
+              tenantId: gT.tenantId || null,
+              providerData: HT,
+              metadata: new AT(gT.createdAt, gT.lastLoginAt),
+              isAnonymous: pT
             };
-          Object.assign(pp, yp)
+          Object.assign(TT, BT)
         }
-        async function ci(pp) {
-          const ip = (0, Op.F)(pp);
-          await ii(ip), await ip.auth._persistUserIfCurrent(ip), ip.auth._notifyListenersIfCurrent(ip)
+        async function TU(TT) {
+          const UT = (0, WT.P)(TT);
+          await RT(UT), await UT.auth._persistUserIfCurrent(UT), UT.auth._notifyListenersIfCurrent(UT)
         }
-        class Oi {
+        class UU {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
           get isExpired() {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
-          updateFromServerResponse(pp) {
-            Rp(pp.idToken, "internal-error"), Rp("undefined" !== typeof pp.idToken, "internal-error"), Rp("undefined" !== typeof pp.refreshToken, "internal-error");
-            const ip = "expiresIn" in pp && "undefined" !== typeof pp.expiresIn ? Number(pp.expiresIn) : function(pp) {
-              const ip = zp(pp);
-              return Rp(ip, "internal-error"), Rp("undefined" !== typeof ip.exp, "internal-error"), Rp("undefined" !== typeof ip.iat, "internal-error"), Number(ip.exp) - Number(ip.iat)
-            }(pp.idToken);
-            this.updateTokensAndExpiration(pp.idToken, pp.refreshToken, ip)
+          updateFromServerResponse(TT) {
+            JT(TT.idToken, "internal-error"), JT("undefined" !== typeof TT.idToken, "internal-error"), JT("undefined" !== typeof TT.refreshToken, "internal-error");
+            const UT = "expiresIn" in TT && "undefined" !== typeof TT.expiresIn ? Number(TT.expiresIn) : function(TT) {
+              const UT = hT(TT);
+              return JT(UT, "internal-error"), JT("undefined" !== typeof UT.exp, "internal-error"), JT("undefined" !== typeof UT.iat, "internal-error"), Number(UT.exp) - Number(UT.iat)
+            }(TT.idToken);
+            this.updateTokensAndExpiration(TT.idToken, TT.refreshToken, UT)
           }
-          async getToken(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return Rp(!this.accessToken || this.refreshToken, pp, "user-token-expired"), ip || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(pp, this.refreshToken), this.accessToken) : null : this.accessToken
+          async getToken(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return JT(!this.accessToken || this.refreshToken, TT, "user-token-expired"), UT || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(TT, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(pp, ip) {
+          async refresh(TT, UT) {
             const {
-              accessToken: cp,
-              refreshToken: op,
-              expiresIn: Ip
-            } = await async function(pp, ip) {
-              const cp = await bp(pp, {}, (async () => {
-                const cp = (0, Op.cb)({
+              accessToken: mT,
+              refreshToken: zT,
+              expiresIn: MT
+            } = await async function(TT, UT) {
+              const mT = await VT(TT, {}, (async () => {
+                const mT = (0, WT.pb)({
                     grant_type: "refresh_token",
-                    refresh_token: ip
+                    refresh_token: UT
                   }).slice(1),
                   {
-                    tokenApiHost: op,
-                    apiKey: Ip
-                  } = pp.config,
-                  Sp = ap(pp, op, "/v1/token", `key=${Ip}`),
-                  xp = await pp._getAdditionalHeaders();
-                return xp["Content-Type"] = "application/x-www-form-urlencoded", Jp.fetch()(Sp, {
+                    tokenApiHost: zT,
+                    apiKey: MT
+                  } = TT.config,
+                  gT = CT(TT, zT, "/v1/token", `key=${MT}`),
+                  nT = await TT._getAdditionalHeaders();
+                return nT["Content-Type"] = "application/x-www-form-urlencoded", IT.fetch()(gT, {
                   method: "POST",
-                  headers: xp,
-                  body: cp
+                  headers: nT,
+                  body: mT
                 })
               }));
               return {
-                accessToken: cp.access_token,
-                expiresIn: cp.expires_in,
-                refreshToken: cp.refresh_token
+                accessToken: mT.access_token,
+                expiresIn: mT.expires_in,
+                refreshToken: mT.refresh_token
               }
-            }(pp, ip);
-            this.updateTokensAndExpiration(cp, op, Number(Ip))
+            }(TT, UT);
+            this.updateTokensAndExpiration(mT, zT, Number(MT))
           }
-          updateTokensAndExpiration(pp, ip, cp) {
-            this.refreshToken = ip || null, this.accessToken = pp || null, this.expirationTime = Date.now() + 1e3 * cp
+          updateTokensAndExpiration(TT, UT, mT) {
+            this.refreshToken = UT || null, this.accessToken = TT || null, this.expirationTime = Date.now() + 1e3 * mT
           }
-          static fromJSON(pp, ip) {
+          static fromJSON(TT, UT) {
             const {
-              refreshToken: cp,
-              accessToken: Op,
-              expirationTime: op
-            } = ip, Ip = new Oi;
-            return cp && (Rp("string" === typeof cp, "internal-error", {
-              appName: pp
-            }), Ip.refreshToken = cp), Op && (Rp("string" === typeof Op, "internal-error", {
-              appName: pp
-            }), Ip.accessToken = Op), op && (Rp("number" === typeof op, "internal-error", {
-              appName: pp
-            }), Ip.expirationTime = op), Ip
+              refreshToken: mT,
+              accessToken: WT,
+              expirationTime: zT
+            } = UT, MT = new UU;
+            return mT && (JT("string" === typeof mT, "internal-error", {
+              appName: TT
+            }), MT.refreshToken = mT), WT && (JT("string" === typeof WT, "internal-error", {
+              appName: TT
+            }), MT.accessToken = WT), zT && (JT("number" === typeof zT, "internal-error", {
+              appName: TT
+            }), MT.expirationTime = zT), MT
           }
           toJSON() {
             return {
@@ -832,56 +832,56 @@ export const modules = {
               expirationTime: this.expirationTime
             }
           }
-          _assign(pp) {
-            this.accessToken = pp.accessToken, this.refreshToken = pp.refreshToken, this.expirationTime = pp.expirationTime
+          _assign(TT) {
+            this.accessToken = TT.accessToken, this.refreshToken = TT.refreshToken, this.expirationTime = TT.expirationTime
           }
           _clone() {
-            return Object.assign(new Oi, this.toJSON())
+            return Object.assign(new UU, this.toJSON())
           }
           _performRefresh() {
-            return qp("not implemented")
+            return xT("not implemented")
           }
         }
 
-        function oi(pp, ip) {
-          Rp("string" === typeof pp || "undefined" === typeof pp, "internal-error", {
-            appName: ip
+        function mU(TT, UT) {
+          JT("string" === typeof TT || "undefined" === typeof TT, "internal-error", {
+            appName: UT
           })
         }
-        class Ii {
-          constructor(pp) {
+        class WU {
+          constructor(TT) {
             var {
-              uid: ip,
-              auth: cp,
-              stsTokenManager: Op
-            } = pp, op = Ip(pp, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new Kp(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = ip, this.auth = cp, this.stsTokenManager = Op, this.accessToken = Op.accessToken, this.displayName = op.displayName || null, this.email = op.email || null, this.emailVerified = op.emailVerified || !1, this.phoneNumber = op.phoneNumber || null, this.photoURL = op.photoURL || null, this.isAnonymous = op.isAnonymous || !1, this.tenantId = op.tenantId || null, this.providerData = op.providerData ? [...op.providerData] : [], this.metadata = new Vp(op.createdAt || void 0, op.lastLoginAt || void 0)
+              uid: UT,
+              auth: mT,
+              stsTokenManager: WT
+            } = TT, zT = MT(TT, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new oT(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = UT, this.auth = mT, this.stsTokenManager = WT, this.accessToken = WT.accessToken, this.displayName = zT.displayName || null, this.email = zT.email || null, this.emailVerified = zT.emailVerified || !1, this.phoneNumber = zT.phoneNumber || null, this.photoURL = zT.photoURL || null, this.isAnonymous = zT.isAnonymous || !1, this.tenantId = zT.tenantId || null, this.providerData = zT.providerData ? [...zT.providerData] : [], this.metadata = new AT(zT.createdAt || void 0, zT.lastLoginAt || void 0)
           }
-          async getIdToken(pp) {
-            const ip = await sp(this, this.stsTokenManager.getToken(this.auth, pp));
-            return Rp(ip, this.auth, "internal-error"), this.accessToken !== ip && (this.accessToken = ip, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), ip
+          async getIdToken(TT) {
+            const UT = await DT(this, this.stsTokenManager.getToken(this.auth, TT));
+            return JT(UT, this.auth, "internal-error"), this.accessToken !== UT && (this.accessToken = UT, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), UT
           }
-          getIdTokenResult(pp) {
-            return rp(this, pp)
+          getIdTokenResult(TT) {
+            return NT(this, TT)
           }
           reload() {
-            return ci(this)
+            return TU(this)
           }
-          _assign(pp) {
-            this !== pp && (Rp(this.uid === pp.uid, this.auth, "internal-error"), this.displayName = pp.displayName, this.photoURL = pp.photoURL, this.email = pp.email, this.emailVerified = pp.emailVerified, this.phoneNumber = pp.phoneNumber, this.isAnonymous = pp.isAnonymous, this.tenantId = pp.tenantId, this.providerData = pp.providerData.map((pp => Object.assign({}, pp))), this.metadata._copy(pp.metadata), this.stsTokenManager._assign(pp.stsTokenManager))
+          _assign(TT) {
+            this !== TT && (JT(this.uid === TT.uid, this.auth, "internal-error"), this.displayName = TT.displayName, this.photoURL = TT.photoURL, this.email = TT.email, this.emailVerified = TT.emailVerified, this.phoneNumber = TT.phoneNumber, this.isAnonymous = TT.isAnonymous, this.tenantId = TT.tenantId, this.providerData = TT.providerData.map((TT => Object.assign({}, TT))), this.metadata._copy(TT.metadata), this.stsTokenManager._assign(TT.stsTokenManager))
           }
-          _clone(pp) {
-            const ip = new Ii(Object.assign(Object.assign({}, this), {
-              auth: pp,
+          _clone(TT) {
+            const UT = new WU(Object.assign(Object.assign({}, this), {
+              auth: TT,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return ip.metadata._copy(this.metadata), ip
+            return UT.metadata._copy(this.metadata), UT
           }
-          _onReload(pp) {
-            Rp(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = pp, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+          _onReload(TT) {
+            JT(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = TT, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
-          _notifyReloadListener(pp) {
-            this.reloadListener ? this.reloadListener(pp) : this.reloadUserInfo = pp
+          _notifyReloadListener(TT) {
+            this.reloadListener ? this.reloadListener(TT) : this.reloadUserInfo = TT
           }
           _startProactiveRefresh() {
             this.proactiveRefresh._start()
@@ -889,17 +889,17 @@ export const modules = {
           _stopProactiveRefresh() {
             this.proactiveRefresh._stop()
           }
-          async _updateTokensIfNecessary(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              cp = !1;
-            pp.idToken && pp.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(pp), cp = !0), ip && await ii(this), await this.auth._persistUserIfCurrent(this), cp && this.auth._notifyListenersIfCurrent(this)
+          async _updateTokensIfNecessary(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              mT = !1;
+            TT.idToken && TT.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(TT), mT = !0), UT && await RT(this), await this.auth._persistUserIfCurrent(this), mT && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
-            const pp = await this.getIdToken();
-            return await sp(this, async function(pp, ip) {
-              return fp(pp, "POST", "/v1/accounts:delete", ip)
+            const TT = await this.getIdToken();
+            return await DT(this, async function(TT, UT) {
+              return PT(TT, "POST", "/v1/accounts:delete", UT)
             }(this.auth, {
-              idToken: pp
+              idToken: TT
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
           }
           toJSON() {
@@ -912,7 +912,7 @@ export const modules = {
               photoURL: this.photoURL || void 0,
               phoneNumber: this.phoneNumber || void 0,
               tenantId: this.tenantId || void 0,
-              providerData: this.providerData.map((pp => Object.assign({}, pp))),
+              providerData: this.providerData.map((TT => Object.assign({}, TT))),
               stsTokenManager: this.stsTokenManager.toJSON(),
               _redirectEventId: this._redirectEventId
             }, this.metadata.toJSON()), {
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(pp, ip) {
-            var cp, Op, op, Ip, Sp, xp, Lp, Yp;
-            const Dp = null !== (cp = ip.displayName) && void 0 !== cp ? cp : void 0,
-              Ap = null !== (Op = ip.email) && void 0 !== Op ? Op : void 0,
-              Pp = null !== (op = ip.phoneNumber) && void 0 !== op ? op : void 0,
-              Wp = null !== (Ip = ip.photoURL) && void 0 !== Ip ? Ip : void 0,
-              yp = null !== (Sp = ip.tenantId) && void 0 !== Sp ? Sp : void 0,
-              Up = null !== (xp = ip._redirectEventId) && void 0 !== xp ? xp : void 0,
-              wp = null !== (Lp = ip.createdAt) && void 0 !== Lp ? Lp : void 0,
-              vp = null !== (Yp = ip.lastLoginAt) && void 0 !== Yp ? Yp : void 0,
+          static _fromJSON(TT, UT) {
+            var mT, WT, zT, MT, gT, nT, HT, kT;
+            const jT = null !== (mT = UT.displayName) && void 0 !== mT ? mT : void 0,
+              lT = null !== (WT = UT.email) && void 0 !== WT ? WT : void 0,
+              LT = null !== (zT = UT.phoneNumber) && void 0 !== zT ? zT : void 0,
+              pT = null !== (MT = UT.photoURL) && void 0 !== MT ? MT : void 0,
+              BT = null !== (gT = UT.tenantId) && void 0 !== gT ? gT : void 0,
+              ZT = null !== (nT = UT._redirectEventId) && void 0 !== nT ? nT : void 0,
+              cT = null !== (HT = UT.createdAt) && void 0 !== HT ? HT : void 0,
+              vT = null !== (kT = UT.lastLoginAt) && void 0 !== kT ? kT : void 0,
               {
-                uid: tp,
-                emailVerified: Hp,
-                isAnonymous: dp,
-                providerData: ep,
-                stsTokenManager: jp
-              } = ip;
-            Rp(tp && jp, pp, "internal-error");
-            const kp = Oi.fromJSON(this.name, jp);
-            Rp("string" === typeof tp, pp, "internal-error"), oi(Dp, pp.name), oi(Ap, pp.name), Rp("boolean" === typeof Hp, pp, "internal-error"), Rp("boolean" === typeof dp, pp, "internal-error"), oi(Pp, pp.name), oi(Wp, pp.name), oi(yp, pp.name), oi(Up, pp.name), oi(wp, pp.name), oi(vp, pp.name);
-            const mp = new Ii({
-              uid: tp,
-              auth: pp,
-              email: Ap,
-              emailVerified: Hp,
-              displayName: Dp,
-              isAnonymous: dp,
-              photoURL: Wp,
-              phoneNumber: Pp,
-              tenantId: yp,
-              stsTokenManager: kp,
-              createdAt: wp,
-              lastLoginAt: vp
+                uid: fT,
+                emailVerified: qT,
+                isAnonymous: iT,
+                providerData: bT,
+                stsTokenManager: OT
+              } = UT;
+            JT(fT && OT, TT, "internal-error");
+            const eT = UU.fromJSON(this.name, OT);
+            JT("string" === typeof fT, TT, "internal-error"), mU(jT, TT.name), mU(lT, TT.name), JT("boolean" === typeof qT, TT, "internal-error"), JT("boolean" === typeof iT, TT, "internal-error"), mU(LT, TT.name), mU(pT, TT.name), mU(BT, TT.name), mU(ZT, TT.name), mU(cT, TT.name), mU(vT, TT.name);
+            const YT = new WU({
+              uid: fT,
+              auth: TT,
+              email: lT,
+              emailVerified: qT,
+              displayName: jT,
+              isAnonymous: iT,
+              photoURL: pT,
+              phoneNumber: LT,
+              tenantId: BT,
+              stsTokenManager: eT,
+              createdAt: cT,
+              lastLoginAt: vT
             });
-            return ep && Array.isArray(ep) && (mp.providerData = ep.map((pp => Object.assign({}, pp)))), Up && (mp._redirectEventId = Up), mp
+            return bT && Array.isArray(bT) && (YT.providerData = bT.map((TT => Object.assign({}, TT)))), ZT && (YT._redirectEventId = ZT), YT
           }
-          static async _fromIdTokenResponse(pp, ip) {
-            let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const Op = new Oi;
-            Op.updateFromServerResponse(ip);
-            const op = new Ii({
-              uid: ip.localId,
-              auth: pp,
-              stsTokenManager: Op,
-              isAnonymous: cp
+          static async _fromIdTokenResponse(TT, UT) {
+            let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const WT = new UU;
+            WT.updateFromServerResponse(UT);
+            const zT = new WU({
+              uid: UT.localId,
+              auth: TT,
+              stsTokenManager: WT,
+              isAnonymous: mT
             });
-            return await ii(op), op
+            return await RT(zT), zT
           }
         }
-        const Si = new Map;
+        const zU = new Map;
 
-        function xi(pp) {
-          Mp(pp instanceof Function, "Expected a class definition");
-          let ip = Si.get(pp);
-          return ip ? (Mp(ip instanceof pp, "Instance stored in cache mismatched with class"), ip) : (ip = new pp, Si.set(pp, ip), ip)
+        function MU(TT) {
+          dT(TT instanceof Function, "Expected a class definition");
+          let UT = zU.get(TT);
+          return UT ? (dT(UT instanceof TT, "Instance stored in cache mismatched with class"), UT) : (UT = new TT, zU.set(TT, UT), UT)
         }
-        class Li {
+        class gU {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(pp, ip) {
-            this.storage[pp] = ip
+          async _set(TT, UT) {
+            this.storage[TT] = UT
           }
-          async _get(pp) {
-            const ip = this.storage[pp];
-            return void 0 === ip ? null : ip
+          async _get(TT) {
+            const UT = this.storage[TT];
+            return void 0 === UT ? null : UT
           }
-          async _remove(pp) {
-            delete this.storage[pp]
+          async _remove(TT) {
+            delete this.storage[TT]
           }
-          _addListener(pp, ip) {}
-          _removeListener(pp, ip) {}
+          _addListener(TT, UT) {}
+          _removeListener(TT, UT) {}
         }
-        Li.type = "NONE";
-        const Yi = Li;
+        gU.type = "NONE";
+        const nU = gU;
 
-        function Di(pp, ip, cp) {
-          return `firebase:${pp}:${ip}:${cp}`
+        function HU(TT, UT, mT) {
+          return `firebase:${TT}:${UT}:${mT}`
         }
-        class Ai {
-          constructor(pp, ip, cp) {
-            this.persistence = pp, this.auth = ip, this.userKey = cp;
+        class kU {
+          constructor(TT, UT, mT) {
+            this.persistence = TT, this.auth = UT, this.userKey = mT;
             const {
-              config: Op,
-              name: op
+              config: WT,
+              name: zT
             } = this.auth;
-            this.fullUserKey = Di(this.userKey, Op.apiKey, op), this.fullPersistenceKey = Di("persistence", Op.apiKey, op), this.boundEventHandler = ip._onStorageEvent.bind(ip), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = HU(this.userKey, WT.apiKey, zT), this.fullPersistenceKey = HU("persistence", WT.apiKey, zT), this.boundEventHandler = UT._onStorageEvent.bind(UT), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
-          setCurrentUser(pp) {
-            return this.persistence._set(this.fullUserKey, pp.toJSON())
+          setCurrentUser(TT) {
+            return this.persistence._set(this.fullUserKey, TT.toJSON())
           }
           async getCurrentUser() {
-            const pp = await this.persistence._get(this.fullUserKey);
-            return pp ? Ii._fromJSON(this.auth, pp) : null
+            const TT = await this.persistence._get(this.fullUserKey);
+            return TT ? WU._fromJSON(this.auth, TT) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1027,364 +1027,364 @@ export const modules = {
           savePersistenceForRedirect() {
             return this.persistence._set(this.fullPersistenceKey, this.persistence.type)
           }
-          async setPersistence(pp) {
-            if (this.persistence === pp) return;
-            const ip = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = pp, ip ? this.setCurrentUser(ip) : void 0
+          async setPersistence(TT) {
+            if (this.persistence === TT) return;
+            const UT = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = TT, UT ? this.setCurrentUser(UT) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(pp, ip) {
-            let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!ip.length) return new Ai(xi(Yi), pp, cp);
-            const Op = (await Promise.all(ip.map((async pp => {
-              if (await pp._isAvailable()) return pp
-            })))).filter((pp => pp));
-            let op = Op[0] || xi(Yi);
-            const Ip = Di(cp, pp.config.apiKey, pp.name);
-            let Sp = null;
-            for (const Yp of ip) try {
-              const ip = await Yp._get(Ip);
-              if (ip) {
-                const cp = Ii._fromJSON(pp, ip);
-                Yp !== op && (Sp = cp), op = Yp;
+          static async create(TT, UT) {
+            let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!UT.length) return new kU(MU(nU), TT, mT);
+            const WT = (await Promise.all(UT.map((async TT => {
+              if (await TT._isAvailable()) return TT
+            })))).filter((TT => TT));
+            let zT = WT[0] || MU(nU);
+            const MT = HU(mT, TT.config.apiKey, TT.name);
+            let gT = null;
+            for (const kT of UT) try {
+              const UT = await kT._get(MT);
+              if (UT) {
+                const mT = WU._fromJSON(TT, UT);
+                kT !== zT && (gT = mT), zT = kT;
                 break
               }
-            } catch (Lp) {}
-            const xp = Op.filter((pp => pp._shouldAllowMigration));
-            return op._shouldAllowMigration && xp.length ? (op = xp[0], Sp && await op._set(Ip, Sp.toJSON()), await Promise.all(ip.map((async pp => {
-              if (pp !== op) try {
-                await pp._remove(Ip)
-              } catch (Lp) {}
-            }))), new Ai(op, pp, cp)) : new Ai(op, pp, cp)
+            } catch (HT) {}
+            const nT = WT.filter((TT => TT._shouldAllowMigration));
+            return zT._shouldAllowMigration && nT.length ? (zT = nT[0], gT && await zT._set(MT, gT.toJSON()), await Promise.all(UT.map((async TT => {
+              if (TT !== zT) try {
+                await TT._remove(MT)
+              } catch (HT) {}
+            }))), new kU(zT, TT, mT)) : new kU(zT, TT, mT)
           }
         }
 
-        function Pi(pp) {
-          const ip = pp.toLowerCase();
-          if (ip.includes("opera/") || ip.includes("opr/") || ip.includes("opios/")) return "Opera";
-          if (wi(ip)) return "IEMobile";
-          if (ip.includes("msie") || ip.includes("trident/")) return "IE";
-          if (ip.includes("edge/")) return "Edge";
-          if (Wi(ip)) return "Firefox";
-          if (ip.includes("silk/")) return "Silk";
-          if (ti(ip)) return "Blackberry";
-          if (Hi(ip)) return "Webos";
-          if (yi(ip)) return "Safari";
-          if ((ip.includes("chrome/") || Ui(ip)) && !ip.includes("edge/")) return "Chrome";
-          if (vi(ip)) return "Android";
+        function jU(TT) {
+          const UT = TT.toLowerCase();
+          if (UT.includes("opera/") || UT.includes("opr/") || UT.includes("opios/")) return "Opera";
+          if (BU(UT)) return "IEMobile";
+          if (UT.includes("msie") || UT.includes("trident/")) return "IE";
+          if (UT.includes("edge/")) return "Edge";
+          if (lU(UT)) return "Firefox";
+          if (UT.includes("silk/")) return "Silk";
+          if (cU(UT)) return "Blackberry";
+          if (vU(UT)) return "Webos";
+          if (LU(UT)) return "Safari";
+          if ((UT.includes("chrome/") || pU(UT)) && !UT.includes("edge/")) return "Chrome";
+          if (ZU(UT)) return "Android";
           {
-            const ip = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              cp = pp.match(ip);
-            if (2 === (null === cp || void 0 === cp ? void 0 : cp.length)) return cp[1]
+            const UT = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              mT = TT.match(UT);
+            if (2 === (null === mT || void 0 === mT ? void 0 : mT.length)) return mT[1]
           }
           return "Other"
         }
 
-        function Wi() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /firefox\//i.test(pp)
+        function lU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /firefox\//i.test(TT)
         }
 
-        function yi() {
-          const pp = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)()).toLowerCase();
-          return pp.includes("safari/") && !pp.includes("chrome/") && !pp.includes("crios/") && !pp.includes("android")
+        function LU() {
+          const TT = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)()).toLowerCase();
+          return TT.includes("safari/") && !TT.includes("chrome/") && !TT.includes("crios/") && !TT.includes("android")
         }
 
-        function Ui() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /crios\//i.test(pp)
+        function pU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /crios\//i.test(TT)
         }
 
-        function wi() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /iemobile/i.test(pp)
+        function BU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /iemobile/i.test(TT)
         }
 
-        function vi() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /android/i.test(pp)
+        function ZU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /android/i.test(TT)
         }
 
-        function ti() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /blackberry/i.test(pp)
+        function cU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /blackberry/i.test(TT)
         }
 
-        function Hi() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /webos/i.test(pp)
+        function vU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /webos/i.test(TT)
         }
 
-        function di() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return /iphone|ipad|ipod/i.test(pp) || /macintosh/i.test(pp) && /mobile/i.test(pp)
+        function fU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return /iphone|ipad|ipod/i.test(TT) || /macintosh/i.test(TT) && /mobile/i.test(TT)
         }
 
-        function ei() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)();
-          return di(pp) || vi(pp) || Hi(pp) || ti(pp) || /windows phone/i.test(pp) || wi(pp)
+        function qU() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)();
+          return fU(TT) || ZU(TT) || vU(TT) || cU(TT) || /windows phone/i.test(TT) || BU(TT)
         }
 
-        function ui(pp) {
-          let ip, cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-          switch (pp) {
+        function iU(TT) {
+          let UT, mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+          switch (TT) {
             case "Browser":
-              ip = Pi((0, Op.H)());
+              UT = jU((0, WT.R)());
               break;
             case "Worker":
-              ip = `${Pi((0,Op.H)())}-${pp}`;
+              UT = `${jU((0,WT.R)())}-${TT}`;
               break;
             default:
-              ip = pp
+              UT = TT
           }
-          const Ip = cp.length ? cp.join(",") : "FirebaseCore-web";
-          return `${ip}/JsCore/${op.f}/${Ip}`
+          const MT = mT.length ? mT.join(",") : "FirebaseCore-web";
+          return `${UT}/JsCore/${zT.f}/${MT}`
         }
-        async function ji(pp, ip) {
-          return fp(pp, "GET", "/v2/recaptchaConfig", Tp(pp, ip))
-        }
-
-        function ki(pp) {
-          return void 0 !== pp && void 0 !== pp.getResponse
+        async function bU(TT, UT) {
+          return PT(TT, "GET", "/v2/recaptchaConfig", FT(TT, UT))
         }
 
-        function mi(pp) {
-          return void 0 !== pp && void 0 !== pp.enterprise
+        function OU(TT) {
+          return void 0 !== TT && void 0 !== TT.getResponse
         }
-        class Ri {
-          constructor(pp) {
-            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === pp.recaptchaKey) throw new Error("recaptchaKey undefined");
-            this.siteKey = pp.recaptchaKey.split("/")[3], this.emailPasswordEnabled = pp.recaptchaEnforcementState.some((pp => "EMAIL_PASSWORD_PROVIDER" === pp.provider && "OFF" !== pp.enforcementState))
+
+        function eU(TT) {
+          return void 0 !== TT && void 0 !== TT.enterprise
+        }
+        class YU {
+          constructor(TT) {
+            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === TT.recaptchaKey) throw new Error("recaptchaKey undefined");
+            this.siteKey = TT.recaptchaKey.split("/")[3], this.emailPasswordEnabled = TT.recaptchaEnforcementState.some((TT => "EMAIL_PASSWORD_PROVIDER" === TT.provider && "OFF" !== TT.enforcementState))
           }
         }
 
-        function qi(pp) {
-          return new Promise(((ip, cp) => {
-            const Op = document.createElement("script");
-            Op.setAttribute("src", pp), Op.onload = ip, Op.onerror = pp => {
-                const ip = ep("internal-error");
-                ip.customData = pp, cp(ip)
-              }, Op.type = "text/javascript", Op.charset = "UTF-8",
+        function JU(TT) {
+          return new Promise(((UT, mT) => {
+            const WT = document.createElement("script");
+            WT.setAttribute("src", TT), WT.onload = UT, WT.onerror = TT => {
+                const UT = bT("internal-error");
+                UT.customData = TT, mT(UT)
+              }, WT.type = "text/javascript", WT.charset = "UTF-8",
               function() {
-                var pp, ip;
-                return null !== (ip = null === (pp = document.getElementsByTagName("head")) || void 0 === pp ? void 0 : pp[0]) && void 0 !== ip ? ip : document
-              }().appendChild(Op)
+                var TT, UT;
+                return null !== (UT = null === (TT = document.getElementsByTagName("head")) || void 0 === TT ? void 0 : TT[0]) && void 0 !== UT ? UT : document
+              }().appendChild(WT)
           }))
         }
 
-        function Mi(pp) {
-          return `__${pp}${Math.floor(1e6*Math.random())}`
+        function xU(TT) {
+          return `__${TT}${Math.floor(1e6*Math.random())}`
         }
-        class Ci {
-          constructor(pp) {
-            this.type = "recaptcha-enterprise", this.auth = Qi(pp)
+        class dU {
+          constructor(TT) {
+            this.type = "recaptcha-enterprise", this.auth = yU(TT)
           }
           async verify() {
-            let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
+              UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function cp(ip, cp, Op) {
-              const op = window.grecaptcha;
-              mi(op) ? op.enterprise.ready((() => {
-                op.enterprise.execute(ip, {
-                  action: pp
-                }).then((pp => {
-                  cp(pp)
+            function mT(UT, mT, WT) {
+              const zT = window.grecaptcha;
+              eU(zT) ? zT.enterprise.ready((() => {
+                zT.enterprise.execute(UT, {
+                  action: TT
+                }).then((TT => {
+                  mT(TT)
                 })).catch((() => {
-                  cp("NO_RECAPTCHA")
+                  mT("NO_RECAPTCHA")
                 }))
-              })) : Op(Error("No reCAPTCHA enterprise script loaded."))
+              })) : WT(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((pp, Op) => {
-              (async function(pp) {
-                if (!ip) {
-                  if (null == pp.tenantId && null != pp._agentRecaptchaConfig) return pp._agentRecaptchaConfig.siteKey;
-                  if (null != pp.tenantId && void 0 !== pp._tenantRecaptchaConfigs[pp.tenantId]) return pp._tenantRecaptchaConfigs[pp.tenantId].siteKey
+            return new Promise(((TT, WT) => {
+              (async function(TT) {
+                if (!UT) {
+                  if (null == TT.tenantId && null != TT._agentRecaptchaConfig) return TT._agentRecaptchaConfig.siteKey;
+                  if (null != TT.tenantId && void 0 !== TT._tenantRecaptchaConfigs[TT.tenantId]) return TT._tenantRecaptchaConfigs[TT.tenantId].siteKey
                 }
-                return new Promise((async (ip, cp) => {
-                  ji(pp, {
+                return new Promise((async (UT, mT) => {
+                  bU(TT, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((Op => {
-                    if (void 0 !== Op.recaptchaKey) {
-                      const cp = new Ri(Op);
-                      return null == pp.tenantId ? pp._agentRecaptchaConfig = cp : pp._tenantRecaptchaConfigs[pp.tenantId] = cp, ip(cp.siteKey)
+                  }).then((WT => {
+                    if (void 0 !== WT.recaptchaKey) {
+                      const mT = new YU(WT);
+                      return null == TT.tenantId ? TT._agentRecaptchaConfig = mT : TT._tenantRecaptchaConfigs[TT.tenantId] = mT, UT(mT.siteKey)
                     }
-                    cp(new Error("recaptcha Enterprise site key undefined"))
-                  })).catch((pp => {
-                    cp(pp)
+                    mT(new Error("recaptcha Enterprise site key undefined"))
+                  })).catch((TT => {
+                    mT(TT)
                   }))
                 }))
-              })(this.auth).then((op => {
-                if (!ip && mi(window.grecaptcha)) cp(op, pp, Op);
+              })(this.auth).then((zT => {
+                if (!UT && eU(window.grecaptcha)) mT(zT, TT, WT);
                 else {
-                  if ("undefined" === typeof window) return void Op(new Error("RecaptchaVerifier is only supported in browser"));
-                  qi("https://www.google.com/recaptcha/enterprise.js?render=" + op).then((() => {
-                    cp(op, pp, Op)
-                  })).catch((pp => {
-                    Op(pp)
+                  if ("undefined" === typeof window) return void WT(new Error("RecaptchaVerifier is only supported in browser"));
+                  JU("https://www.google.com/recaptcha/enterprise.js?render=" + zT).then((() => {
+                    mT(zT, TT, WT)
+                  })).catch((TT => {
+                    WT(TT)
                   }))
                 }
-              })).catch((pp => {
-                Op(pp)
+              })).catch((TT => {
+                WT(TT)
               }))
             }))
           }
         }
-        async function Ei(pp, ip, cp) {
-          let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const op = new Ci(pp);
-          let Ip;
+        async function wU(TT, UT, mT) {
+          let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const zT = new dU(TT);
+          let MT;
           try {
-            Ip = await op.verify(cp)
-          } catch (xp) {
-            Ip = await op.verify(cp, !0)
+            MT = await zT.verify(mT)
+          } catch (nT) {
+            MT = await zT.verify(mT, !0)
           }
-          const Sp = Object.assign({}, ip);
-          return Op ? Object.assign(Sp, {
-            captchaResp: Ip
-          }) : Object.assign(Sp, {
-            captchaResponse: Ip
-          }), Object.assign(Sp, {
+          const gT = Object.assign({}, UT);
+          return WT ? Object.assign(gT, {
+            captchaResp: MT
+          }) : Object.assign(gT, {
+            captchaResponse: MT
+          }), Object.assign(gT, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(Sp, {
+          }), Object.assign(gT, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), Sp
+          }), gT
         }
-        class Xi {
-          constructor(pp) {
-            this.auth = pp, this.queue = []
+        class tU {
+          constructor(TT) {
+            this.auth = TT, this.queue = []
           }
-          pushCallback(pp, ip) {
-            const cp = ip => new Promise(((cp, Op) => {
+          pushCallback(TT, UT) {
+            const mT = UT => new Promise(((mT, WT) => {
               try {
-                cp(pp(ip))
-              } catch (op) {
-                Op(op)
+                mT(TT(UT))
+              } catch (zT) {
+                WT(zT)
               }
             }));
-            cp.onAbort = ip, this.queue.push(cp);
-            const Op = this.queue.length - 1;
+            mT.onAbort = UT, this.queue.push(mT);
+            const WT = this.queue.length - 1;
             return () => {
-              this.queue[Op] = () => Promise.resolve()
+              this.queue[WT] = () => Promise.resolve()
             }
           }
-          async runMiddleware(pp) {
-            if (this.auth.currentUser === pp) return;
-            const ip = [];
+          async runMiddleware(TT) {
+            if (this.auth.currentUser === TT) return;
+            const UT = [];
             try {
-              for (const cp of this.queue) await cp(pp), cp.onAbort && ip.push(cp.onAbort)
-            } catch (cp) {
-              ip.reverse();
-              for (const pp of ip) try {
-                pp()
-              } catch (Op) {}
+              for (const mT of this.queue) await mT(TT), mT.onAbort && UT.push(mT.onAbort)
+            } catch (mT) {
+              UT.reverse();
+              for (const TT of UT) try {
+                TT()
+              } catch (WT) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === cp || void 0 === cp ? void 0 : cp.message
+                originalMessage: null === mT || void 0 === mT ? void 0 : mT.message
               })
             }
           }
         }
-        class li {
-          constructor(pp, ip, cp, Op) {
-            this.app = pp, this.heartbeatServiceProvider = ip, this.appCheckServiceProvider = cp, this.config = Op, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new Ji(this), this.idTokenSubscription = new Ji(this), this.beforeStateQueue = new Xi(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = wp, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class aU {
+          constructor(TT, UT, mT, WT) {
+            this.app = TT, this.heartbeatServiceProvider = UT, this.appCheckServiceProvider = mT, this.config = WT, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new XU(this), this.idTokenSubscription = new XU(this), this.beforeStateQueue = new tU(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = cT, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = pp.name, this.clientVersion = Op.sdkClientVersion
+            }, this.frameworks = [], this.name = TT.name, this.clientVersion = WT.sdkClientVersion
           }
-          _initializeWithPersistence(pp, ip) {
-            return ip && (this._popupRedirectResolver = xi(ip)), this._initializationPromise = this.queue((async () => {
-              var cp, Op;
-              if (!this._deleted && (this.persistenceManager = await Ai.create(this, pp), !this._deleted)) {
-                if (null === (cp = this._popupRedirectResolver) || void 0 === cp ? void 0 : cp._shouldInitProactively) try {
+          _initializeWithPersistence(TT, UT) {
+            return UT && (this._popupRedirectResolver = MU(UT)), this._initializationPromise = this.queue((async () => {
+              var mT, WT;
+              if (!this._deleted && (this.persistenceManager = await kU.create(this, TT), !this._deleted)) {
+                if (null === (mT = this._popupRedirectResolver) || void 0 === mT ? void 0 : mT._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (op) {}
-                await this.initializeCurrentUser(ip), this.lastNotifiedUid = (null === (Op = this.currentUser) || void 0 === Op ? void 0 : Op.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (zT) {}
+                await this.initializeCurrentUser(UT), this.lastNotifiedUid = (null === (WT = this.currentUser) || void 0 === WT ? void 0 : WT.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
           async _onStorageEvent() {
             if (this._deleted) return;
-            const pp = await this.assertedPersistence.getCurrentUser();
-            return this.currentUser || pp ? this.currentUser && pp && this.currentUser.uid === pp.uid ? (this._currentUser._assign(pp), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(pp, !0) : void 0
+            const TT = await this.assertedPersistence.getCurrentUser();
+            return this.currentUser || TT ? this.currentUser && TT && this.currentUser.uid === TT.uid ? (this._currentUser._assign(TT), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(TT, !0) : void 0
           }
-          async initializeCurrentUser(pp) {
-            var ip;
-            const cp = await this.assertedPersistence.getCurrentUser();
-            let Op = cp,
-              op = !1;
-            if (pp && this.config.authDomain) {
+          async initializeCurrentUser(TT) {
+            var UT;
+            const mT = await this.assertedPersistence.getCurrentUser();
+            let WT = mT,
+              zT = !1;
+            if (TT && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const cp = null === (ip = this.redirectUser) || void 0 === ip ? void 0 : ip._redirectEventId,
-                Ip = null === Op || void 0 === Op ? void 0 : Op._redirectEventId,
-                Sp = await this.tryRedirectSignIn(pp);
-              cp && cp !== Ip || !(null === Sp || void 0 === Sp ? void 0 : Sp.user) || (Op = Sp.user, op = !0)
+              const mT = null === (UT = this.redirectUser) || void 0 === UT ? void 0 : UT._redirectEventId,
+                MT = null === WT || void 0 === WT ? void 0 : WT._redirectEventId,
+                gT = await this.tryRedirectSignIn(TT);
+              mT && mT !== MT || !(null === gT || void 0 === gT ? void 0 : gT.user) || (WT = gT.user, zT = !0)
             }
-            if (!Op) return this.directlySetCurrentUser(null);
-            if (!Op._redirectEventId) {
-              if (op) try {
-                await this.beforeStateQueue.runMiddleware(Op)
-              } catch (Ip) {
-                Op = cp, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(Ip)))
+            if (!WT) return this.directlySetCurrentUser(null);
+            if (!WT._redirectEventId) {
+              if (zT) try {
+                await this.beforeStateQueue.runMiddleware(WT)
+              } catch (MT) {
+                WT = mT, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(MT)))
               }
-              return Op ? this.reloadAndSetCurrentUserOrClear(Op) : this.directlySetCurrentUser(null)
+              return WT ? this.reloadAndSetCurrentUserOrClear(WT) : this.directlySetCurrentUser(null)
             }
-            return Rp(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === Op._redirectEventId ? this.directlySetCurrentUser(Op) : this.reloadAndSetCurrentUserOrClear(Op)
+            return JT(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === WT._redirectEventId ? this.directlySetCurrentUser(WT) : this.reloadAndSetCurrentUserOrClear(WT)
           }
-          async tryRedirectSignIn(pp) {
-            let ip = null;
+          async tryRedirectSignIn(TT) {
+            let UT = null;
             try {
-              ip = await this._popupRedirectResolver._completeRedirectFn(this, pp, !0)
-            } catch (cp) {
+              UT = await this._popupRedirectResolver._completeRedirectFn(this, TT, !0)
+            } catch (mT) {
               await this._setRedirectUser(null)
             }
-            return ip
+            return UT
           }
-          async reloadAndSetCurrentUserOrClear(pp) {
+          async reloadAndSetCurrentUserOrClear(TT) {
             try {
-              await ii(pp)
-            } catch (ip) {
-              if ("auth/network-request-failed" !== (null === ip || void 0 === ip ? void 0 : ip.code)) return this.directlySetCurrentUser(null)
+              await RT(TT)
+            } catch (UT) {
+              if ("auth/network-request-failed" !== (null === UT || void 0 === UT ? void 0 : UT.code)) return this.directlySetCurrentUser(null)
             }
-            return this.directlySetCurrentUser(pp)
+            return this.directlySetCurrentUser(TT)
           }
           useDeviceLanguage() {
             this.languageCode = function() {
               if ("undefined" === typeof navigator) return null;
-              const pp = navigator;
-              return pp.languages && pp.languages[0] || pp.language || null
+              const TT = navigator;
+              return TT.languages && TT.languages[0] || TT.language || null
             }()
           }
           async _delete() {
             this._deleted = !0
           }
-          async updateCurrentUser(pp) {
-            const ip = pp ? (0, Op.F)(pp) : null;
-            return ip && Rp(ip.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(ip && ip._clone(this))
+          async updateCurrentUser(TT) {
+            const UT = TT ? (0, WT.P)(TT) : null;
+            return UT && JT(UT.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(UT && UT._clone(this))
           }
-          async _updateCurrentUser(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return pp && Rp(this.tenantId === pp.tenantId, this, "tenant-id-mismatch"), ip || await this.beforeStateQueue.runMiddleware(pp), this.queue((async () => {
-              await this.directlySetCurrentUser(pp), this.notifyAuthListeners()
+          async _updateCurrentUser(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return TT && JT(this.tenantId === TT.tenantId, this, "tenant-id-mismatch"), UT || await this.beforeStateQueue.runMiddleware(TT), this.queue((async () => {
+              await this.directlySetCurrentUser(TT), this.notifyAuthListeners()
             }))
           }
           async signOut() {
             return await this.beforeStateQueue.runMiddleware(null), (this.redirectPersistenceManager || this._popupRedirectResolver) && await this._setRedirectUser(null), this._updateCurrentUser(null, !0)
           }
-          setPersistence(pp) {
+          setPersistence(TT) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(xi(pp))
+              await this.assertedPersistence.setPersistence(MU(TT))
             }))
           }
           async initializeRecaptchaConfig() {
-            const pp = await ji(this, {
+            const TT = await bU(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              ip = new Ri(pp);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = ip : this._tenantRecaptchaConfigs[this.tenantId] = ip, ip.emailPasswordEnabled) {
-              new Ci(this).verify()
+              UT = new YU(TT);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = UT : this._tenantRecaptchaConfigs[this.tenantId] = UT, UT.emailPasswordEnabled) {
+              new dU(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1393,47 +1393,47 @@ export const modules = {
           _getPersistence() {
             return this.assertedPersistence.persistence.type
           }
-          _updateErrorMap(pp) {
-            this._errorFactory = new Op.i("auth", "Firebase", pp())
+          _updateErrorMap(TT) {
+            this._errorFactory = new WT.g("auth", "Firebase", TT())
           }
-          onAuthStateChanged(pp, ip, cp) {
-            return this.registerStateListener(this.authStateSubscription, pp, ip, cp)
+          onAuthStateChanged(TT, UT, mT) {
+            return this.registerStateListener(this.authStateSubscription, TT, UT, mT)
           }
-          beforeAuthStateChanged(pp, ip) {
-            return this.beforeStateQueue.pushCallback(pp, ip)
+          beforeAuthStateChanged(TT, UT) {
+            return this.beforeStateQueue.pushCallback(TT, UT)
           }
-          onIdTokenChanged(pp, ip, cp) {
-            return this.registerStateListener(this.idTokenSubscription, pp, ip, cp)
+          onIdTokenChanged(TT, UT, mT) {
+            return this.registerStateListener(this.idTokenSubscription, TT, UT, mT)
           }
           toJSON() {
-            var pp;
+            var TT;
             return {
               apiKey: this.config.apiKey,
               authDomain: this.config.authDomain,
               appName: this.name,
-              currentUser: null === (pp = this._currentUser) || void 0 === pp ? void 0 : pp.toJSON()
+              currentUser: null === (TT = this._currentUser) || void 0 === TT ? void 0 : TT.toJSON()
             }
           }
-          async _setRedirectUser(pp, ip) {
-            const cp = await this.getOrInitRedirectPersistenceManager(ip);
-            return null === pp ? cp.removeCurrentUser() : cp.setCurrentUser(pp)
+          async _setRedirectUser(TT, UT) {
+            const mT = await this.getOrInitRedirectPersistenceManager(UT);
+            return null === TT ? mT.removeCurrentUser() : mT.setCurrentUser(TT)
           }
-          async getOrInitRedirectPersistenceManager(pp) {
+          async getOrInitRedirectPersistenceManager(TT) {
             if (!this.redirectPersistenceManager) {
-              const ip = pp && xi(pp) || this._popupRedirectResolver;
-              Rp(ip, this, "argument-error"), this.redirectPersistenceManager = await Ai.create(this, [xi(ip._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const UT = TT && MU(TT) || this._popupRedirectResolver;
+              JT(UT, this, "argument-error"), this.redirectPersistenceManager = await kU.create(this, [MU(UT._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
-          async _redirectUserForId(pp) {
-            var ip, cp;
-            return this._isInitialized && await this.queue((async () => {})), (null === (ip = this._currentUser) || void 0 === ip ? void 0 : ip._redirectEventId) === pp ? this._currentUser : (null === (cp = this.redirectUser) || void 0 === cp ? void 0 : cp._redirectEventId) === pp ? this.redirectUser : null
+          async _redirectUserForId(TT) {
+            var UT, mT;
+            return this._isInitialized && await this.queue((async () => {})), (null === (UT = this._currentUser) || void 0 === UT ? void 0 : UT._redirectEventId) === TT ? this._currentUser : (null === (mT = this.redirectUser) || void 0 === mT ? void 0 : mT._redirectEventId) === TT ? this.redirectUser : null
           }
-          async _persistUserIfCurrent(pp) {
-            if (pp === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(pp)))
+          async _persistUserIfCurrent(TT) {
+            if (TT === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(TT)))
           }
-          _notifyListenersIfCurrent(pp) {
-            pp === this.currentUser && this.notifyAuthListeners()
+          _notifyListenersIfCurrent(TT) {
+            TT === this.currentUser && this.notifyAuthListeners()
           }
           _key() {
             return `${this.config.authDomain}:${this.config.apiKey}:${this.name}`
@@ -1448,192 +1448,192 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var pp, ip;
+            var TT, UT;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const cp = null !== (ip = null === (pp = this.currentUser) || void 0 === pp ? void 0 : pp.uid) && void 0 !== ip ? ip : null;
-            this.lastNotifiedUid !== cp && (this.lastNotifiedUid = cp, this.authStateSubscription.next(this.currentUser))
+            const mT = null !== (UT = null === (TT = this.currentUser) || void 0 === TT ? void 0 : TT.uid) && void 0 !== UT ? UT : null;
+            this.lastNotifiedUid !== mT && (this.lastNotifiedUid = mT, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(pp, ip, cp, Op) {
+          registerStateListener(TT, UT, mT, WT) {
             if (this._deleted) return () => {};
-            const op = "function" === typeof ip ? ip : ip.next.bind(ip),
-              Ip = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return Rp(Ip, this, "internal-error"), Ip.then((() => op(this.currentUser))), "function" === typeof ip ? pp.addObserver(ip, cp, Op) : pp.addObserver(ip)
+            const zT = "function" === typeof UT ? UT : UT.next.bind(UT),
+              MT = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return JT(MT, this, "internal-error"), MT.then((() => zT(this.currentUser))), "function" === typeof UT ? TT.addObserver(UT, mT, WT) : TT.addObserver(UT)
           }
-          async directlySetCurrentUser(pp) {
-            this.currentUser && this.currentUser !== pp && this._currentUser._stopProactiveRefresh(), pp && this.isProactiveRefreshEnabled && pp._startProactiveRefresh(), this.currentUser = pp, pp ? await this.assertedPersistence.setCurrentUser(pp) : await this.assertedPersistence.removeCurrentUser()
+          async directlySetCurrentUser(TT) {
+            this.currentUser && this.currentUser !== TT && this._currentUser._stopProactiveRefresh(), TT && this.isProactiveRefreshEnabled && TT._startProactiveRefresh(), this.currentUser = TT, TT ? await this.assertedPersistence.setCurrentUser(TT) : await this.assertedPersistence.removeCurrentUser()
           }
-          queue(pp) {
-            return this.operations = this.operations.then(pp, pp), this.operations
+          queue(TT) {
+            return this.operations = this.operations.then(TT, TT), this.operations
           }
           get assertedPersistence() {
-            return Rp(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return JT(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
-          _logFramework(pp) {
-            pp && !this.frameworks.includes(pp) && (this.frameworks.push(pp), this.frameworks.sort(), this.clientVersion = ui(this.config.clientPlatform, this._getFrameworks()))
+          _logFramework(TT) {
+            TT && !this.frameworks.includes(TT) && (this.frameworks.push(TT), this.frameworks.sort(), this.clientVersion = iU(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
-            var pp;
-            const ip = {
+            var TT;
+            const UT = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (ip["X-Firebase-gmpid"] = this.app.options.appId);
-            const cp = await (null === (pp = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (UT["X-Firebase-gmpid"] = this.app.options.appId);
+            const mT = await (null === (TT = this.heartbeatServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === pp ? void 0 : pp.getHeartbeatsHeader());
-            cp && (ip["X-Firebase-Client"] = cp);
-            const Op = await this._getAppCheckToken();
-            return Op && (ip["X-Firebase-AppCheck"] = Op), ip
+            })) || void 0 === TT ? void 0 : TT.getHeartbeatsHeader());
+            mT && (UT["X-Firebase-Client"] = mT);
+            const WT = await this._getAppCheckToken();
+            return WT && (UT["X-Firebase-AppCheck"] = WT), UT
           }
           async _getAppCheckToken() {
-            var pp;
-            const ip = await (null === (pp = this.appCheckServiceProvider.getImmediate({
+            var TT;
+            const UT = await (null === (TT = this.appCheckServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === pp ? void 0 : pp.getToken());
-            return (null === ip || void 0 === ip ? void 0 : ip.error) && function(pp) {
-              if (tp.logLevel <= Sp.c.WARN) {
-                for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-                tp.warn(`Auth (${op.f}): ${pp}`, ...cp)
+            })) || void 0 === TT ? void 0 : TT.getToken());
+            return (null === UT || void 0 === UT ? void 0 : UT.error) && function(TT) {
+              if (fT.logLevel <= gT.d.WARN) {
+                for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+                fT.warn(`Auth (${zT.f}): ${TT}`, ...mT)
               }
-            }(`Error while retrieving App Check token: ${ip.error}`), null === ip || void 0 === ip ? void 0 : ip.token
+            }(`Error while retrieving App Check token: ${UT.error}`), null === UT || void 0 === UT ? void 0 : UT.token
           }
         }
 
-        function Qi(pp) {
-          return (0, Op.F)(pp)
+        function yU(TT) {
+          return (0, WT.P)(TT)
         }
-        class Ji {
-          constructor(pp) {
-            this.auth = pp, this.observer = null, this.addObserver = (0, Op.x)((pp => this.observer = pp))
+        class XU {
+          constructor(TT) {
+            this.auth = TT, this.observer = null, this.addObserver = (0, WT.y)((TT => this.observer = TT))
           }
           get next() {
-            return Rp(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return JT(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function Bi(pp, ip) {
-          const cp = (0, op.x)(pp, "auth");
-          if (cp.isInitialized()) {
-            const pp = cp.getImmediate(),
-              op = cp.getOptions();
-            if ((0, Op.y)(op, null !== ip && void 0 !== ip ? ip : {})) return pp;
-            dp(pp, "already-initialized")
+        function IU(TT, UT) {
+          const mT = (0, zT.B)(TT, "auth");
+          if (mT.isInitialized()) {
+            const TT = mT.getImmediate(),
+              zT = mT.getOptions();
+            if ((0, WT.B)(zT, null !== UT && void 0 !== UT ? UT : {})) return TT;
+            iT(TT, "already-initialized")
           }
-          return cp.initialize({
-            options: ip
+          return mT.initialize({
+            options: UT
           })
         }
 
-        function Ni(pp, ip, cp) {
-          const Op = Qi(pp);
-          Rp(Op._canInitEmulator, Op, "emulator-config-failed"), Rp(/^https?:\/\//.test(ip), Op, "invalid-emulator-scheme");
-          const op = !!(null === cp || void 0 === cp ? void 0 : cp.disableWarnings),
-            Ip = Ti(ip),
+        function QU(TT, UT, mT) {
+          const WT = yU(TT);
+          JT(WT._canInitEmulator, WT, "emulator-config-failed"), JT(/^https?:\/\//.test(UT), WT, "invalid-emulator-scheme");
+          const zT = !!(null === mT || void 0 === mT ? void 0 : mT.disableWarnings),
+            MT = sU(UT),
             {
-              host: Sp,
-              port: xp
-            } = function(pp) {
-              const ip = Ti(pp),
-                cp = /(\/\/)?([^?#/]+)/.exec(pp.substr(ip.length));
-              if (!cp) return {
+              host: gT,
+              port: nT
+            } = function(TT) {
+              const UT = sU(TT),
+                mT = /(\/\/)?([^?#/]+)/.exec(TT.substr(UT.length));
+              if (!mT) return {
                 host: "",
                 port: null
               };
-              const Op = cp[2].split("@").pop() || "",
-                op = /^(\[[^\]]+\])(:|$)/.exec(Op);
-              if (op) {
-                const pp = op[1];
+              const WT = mT[2].split("@").pop() || "",
+                zT = /^(\[[^\]]+\])(:|$)/.exec(WT);
+              if (zT) {
+                const TT = zT[1];
                 return {
-                  host: pp,
-                  port: fi(Op.substr(pp.length + 1))
+                  host: TT,
+                  port: FU(WT.substr(TT.length + 1))
                 }
               } {
-                const [pp, ip] = Op.split(":");
+                const [TT, UT] = WT.split(":");
                 return {
-                  host: pp,
-                  port: fi(ip)
+                  host: TT,
+                  port: FU(UT)
                 }
               }
-            }(ip),
-            Lp = null === xp ? "" : `:${xp}`;
-          Op.config.emulator = {
-            url: `${Ip}//${Sp}${Lp}/`
-          }, Op.settings.appVerificationDisabledForTesting = !0, Op.emulatorConfig = Object.freeze({
-            host: Sp,
-            port: xp,
-            protocol: Ip.replace(":", ""),
+            }(UT),
+            HT = null === nT ? "" : `:${nT}`;
+          WT.config.emulator = {
+            url: `${MT}//${gT}${HT}/`
+          }, WT.settings.appVerificationDisabledForTesting = !0, WT.emulatorConfig = Object.freeze({
+            host: gT,
+            port: nT,
+            protocol: MT.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: op
+              disableWarnings: zT
             })
-          }), op || function() {
-            function pp() {
-              const pp = document.createElement("p"),
-                ip = pp.style;
-              pp.innerText = "Running in emulator mode. Do not use with production credentials.", ip.position = "fixed", ip.width = "100%", ip.backgroundColor = "#ffffff", ip.border = ".1em solid #000000", ip.color = "#b50000", ip.bottom = "0px", ip.left = "0px", ip.margin = "0px", ip.zIndex = "10000", ip.textAlign = "center", pp.classList.add("firebase-emulator-warning"), document.body.appendChild(pp)
+          }), zT || function() {
+            function TT() {
+              const TT = document.createElement("p"),
+                UT = TT.style;
+              TT.innerText = "Running in emulator mode. Do not use with production credentials.", UT.position = "fixed", UT.width = "100%", UT.backgroundColor = "#ffffff", UT.border = ".1em solid #000000", UT.color = "#b50000", UT.bottom = "0px", UT.left = "0px", UT.margin = "0px", UT.zIndex = "10000", UT.textAlign = "center", TT.classList.add("firebase-emulator-warning"), document.body.appendChild(TT)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
-            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", pp) : pp())
+            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", TT) : TT())
           }()
         }
 
-        function Ti(pp) {
-          const ip = pp.indexOf(":");
-          return ip < 0 ? "" : pp.substr(0, ip + 1)
+        function sU(TT) {
+          const UT = TT.indexOf(":");
+          return UT < 0 ? "" : TT.substr(0, UT + 1)
         }
 
-        function fi(pp) {
-          if (!pp) return null;
-          const ip = Number(pp);
-          return isNaN(ip) ? null : ip
+        function FU(TT) {
+          if (!TT) return null;
+          const UT = Number(TT);
+          return isNaN(UT) ? null : UT
         }
-        class bi {
-          constructor(pp, ip) {
-            this.providerId = pp, this.signInMethod = ip
+        class PU {
+          constructor(TT, UT) {
+            this.providerId = TT, this.signInMethod = UT
           }
           toJSON() {
-            return qp("not implemented")
+            return xT("not implemented")
           }
-          _getIdTokenResponse(pp) {
-            return qp("not implemented")
+          _getIdTokenResponse(TT) {
+            return xT("not implemented")
           }
-          _linkToIdToken(pp, ip) {
-            return qp("not implemented")
+          _linkToIdToken(TT, UT) {
+            return xT("not implemented")
           }
-          _getReauthenticationResolver(pp) {
-            return qp("not implemented")
+          _getReauthenticationResolver(TT) {
+            return xT("not implemented")
           }
         }
-        async function ai(pp, ip) {
-          return fp(pp, "POST", "/v1/accounts:resetPassword", Tp(pp, ip))
+        async function VU(TT, UT) {
+          return PT(TT, "POST", "/v1/accounts:resetPassword", FT(TT, UT))
         }
-        async function ni(pp, ip) {
-          return fp(pp, "POST", "/v1/accounts:update", ip)
+        async function uU(TT, UT) {
+          return PT(TT, "POST", "/v1/accounts:update", UT)
         }
-        async function Fi(pp, ip) {
-          return hp(pp, "POST", "/v1/accounts:signInWithPassword", Tp(pp, ip))
+        async function CU(TT, UT) {
+          return uT(TT, "POST", "/v1/accounts:signInWithPassword", FT(TT, UT))
         }
-        async function gi(pp, ip) {
-          return fp(pp, "POST", "/v1/accounts:sendOobCode", Tp(pp, ip))
+        async function rU(TT, UT) {
+          return PT(TT, "POST", "/v1/accounts:sendOobCode", FT(TT, UT))
         }
-        async function Gi(pp, ip) {
-          return gi(pp, ip)
+        async function KU(TT, UT) {
+          return rU(TT, UT)
         }
-        async function ri(pp, ip) {
-          return gi(pp, ip)
+        async function SU(TT, UT) {
+          return rU(TT, UT)
         }
-        class Zi extends bi {
-          constructor(pp, ip, cp) {
-            let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", cp), this._email = pp, this._password = ip, this._tenantId = Op
+        class GU extends PU {
+          constructor(TT, UT, mT) {
+            let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", mT), this._email = TT, this._password = UT, this._tenantId = WT
           }
-          static _fromEmailAndPassword(pp, ip) {
-            return new Zi(pp, ip, "password")
+          static _fromEmailAndPassword(TT, UT) {
+            return new GU(TT, UT, "password")
           }
-          static _fromEmailAndCode(pp, ip) {
-            return new Zi(pp, ip, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(TT, UT) {
+            return new GU(TT, UT, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1643,82 +1643,82 @@ export const modules = {
               tenantId: this._tenantId
             }
           }
-          static fromJSON(pp) {
-            const ip = "string" === typeof pp ? JSON.parse(pp) : pp;
-            if ((null === ip || void 0 === ip ? void 0 : ip.email) && (null === ip || void 0 === ip ? void 0 : ip.password)) {
-              if ("password" === ip.signInMethod) return this._fromEmailAndPassword(ip.email, ip.password);
-              if ("emailLink" === ip.signInMethod) return this._fromEmailAndCode(ip.email, ip.password, ip.tenantId)
+          static fromJSON(TT) {
+            const UT = "string" === typeof TT ? JSON.parse(TT) : TT;
+            if ((null === UT || void 0 === UT ? void 0 : UT.email) && (null === UT || void 0 === UT ? void 0 : UT.password)) {
+              if ("password" === UT.signInMethod) return this._fromEmailAndPassword(UT.email, UT.password);
+              if ("emailLink" === UT.signInMethod) return this._fromEmailAndCode(UT.email, UT.password, UT.tenantId)
             }
             return null
           }
-          async _getIdTokenResponse(pp) {
-            var ip;
+          async _getIdTokenResponse(TT) {
+            var UT;
             switch (this.signInMethod) {
               case "password":
-                const cp = {
+                const mT = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (ip = pp._getRecaptchaConfig()) || void 0 === ip ? void 0 : ip.emailPasswordEnabled) {
-                  const ip = await Ei(pp, cp, "signInWithPassword");
-                  return Fi(pp, ip)
+                if (null === (UT = TT._getRecaptchaConfig()) || void 0 === UT ? void 0 : UT.emailPasswordEnabled) {
+                  const UT = await wU(TT, mT, "signInWithPassword");
+                  return CU(TT, UT)
                 }
-                return Fi(pp, cp).catch((async ip => {
-                  if ("auth/missing-recaptcha-token" === ip.code) {
+                return CU(TT, mT).catch((async UT => {
+                  if ("auth/missing-recaptcha-token" === UT.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const ip = await Ei(pp, cp, "signInWithPassword");
-                    return Fi(pp, ip)
+                    const UT = await wU(TT, mT, "signInWithPassword");
+                    return CU(TT, UT)
                   }
-                  return Promise.reject(ip)
+                  return Promise.reject(UT)
                 }));
               case "emailLink":
-                return async function(pp, ip) {
-                  return hp(pp, "POST", "/v1/accounts:signInWithEmailLink", Tp(pp, ip))
-                }(pp, {
+                return async function(TT, UT) {
+                  return uT(TT, "POST", "/v1/accounts:signInWithEmailLink", FT(TT, UT))
+                }(TT, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                dp(pp, "internal-error")
+                iT(TT, "internal-error")
             }
           }
-          async _linkToIdToken(pp, ip) {
+          async _linkToIdToken(TT, UT) {
             switch (this.signInMethod) {
               case "password":
-                return ni(pp, {
-                  idToken: ip,
+                return uU(TT, {
+                  idToken: UT,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(pp, ip) {
-                  return hp(pp, "POST", "/v1/accounts:signInWithEmailLink", Tp(pp, ip))
-                }(pp, {
-                  idToken: ip,
+                return async function(TT, UT) {
+                  return uT(TT, "POST", "/v1/accounts:signInWithEmailLink", FT(TT, UT))
+                }(TT, {
+                  idToken: UT,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                dp(pp, "internal-error")
+                iT(TT, "internal-error")
             }
           }
-          _getReauthenticationResolver(pp) {
-            return this._getIdTokenResponse(pp)
+          _getReauthenticationResolver(TT) {
+            return this._getIdTokenResponse(TT)
           }
         }
-        async function zi(pp, ip) {
-          return hp(pp, "POST", "/v1/accounts:signInWithIdp", Tp(pp, ip))
+        async function NU(TT, UT) {
+          return uT(TT, "POST", "/v1/accounts:signInWithIdp", FT(TT, UT))
         }
-        class si extends bi {
+        class EU extends PU {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
-          static _fromParams(pp) {
-            const ip = new si(pp.providerId, pp.signInMethod);
-            return pp.idToken || pp.accessToken ? (pp.idToken && (ip.idToken = pp.idToken), pp.accessToken && (ip.accessToken = pp.accessToken), pp.nonce && !pp.pendingToken && (ip.nonce = pp.nonce), pp.pendingToken && (ip.pendingToken = pp.pendingToken)) : pp.oauthToken && pp.oauthTokenSecret ? (ip.accessToken = pp.oauthToken, ip.secret = pp.oauthTokenSecret) : dp("argument-error"), ip
+          static _fromParams(TT) {
+            const UT = new EU(TT.providerId, TT.signInMethod);
+            return TT.idToken || TT.accessToken ? (TT.idToken && (UT.idToken = TT.idToken), TT.accessToken && (UT.accessToken = TT.accessToken), TT.nonce && !TT.pendingToken && (UT.nonce = TT.nonce), TT.pendingToken && (UT.pendingToken = TT.pendingToken)) : TT.oauthToken && TT.oauthTokenSecret ? (UT.accessToken = TT.oauthToken, UT.secret = TT.oauthTokenSecret) : iT("argument-error"), UT
           }
           toJSON() {
             return {
@@ -1731,126 +1731,126 @@ export const modules = {
               signInMethod: this.signInMethod
             }
           }
-          static fromJSON(pp) {
-            const ip = "string" === typeof pp ? JSON.parse(pp) : pp,
+          static fromJSON(TT) {
+            const UT = "string" === typeof TT ? JSON.parse(TT) : TT,
               {
-                providerId: cp,
-                signInMethod: Op
-              } = ip,
-              op = Ip(ip, ["providerId", "signInMethod"]);
-            if (!cp || !Op) return null;
-            const Sp = new si(cp, Op);
-            return Sp.idToken = op.idToken || void 0, Sp.accessToken = op.accessToken || void 0, Sp.secret = op.secret, Sp.nonce = op.nonce, Sp.pendingToken = op.pendingToken || null, Sp
+                providerId: mT,
+                signInMethod: WT
+              } = UT,
+              zT = MT(UT, ["providerId", "signInMethod"]);
+            if (!mT || !WT) return null;
+            const gT = new EU(mT, WT);
+            return gT.idToken = zT.idToken || void 0, gT.accessToken = zT.accessToken || void 0, gT.secret = zT.secret, gT.nonce = zT.nonce, gT.pendingToken = zT.pendingToken || null, gT
           }
-          _getIdTokenResponse(pp) {
-            return zi(pp, this.buildRequest())
+          _getIdTokenResponse(TT) {
+            return NU(TT, this.buildRequest())
           }
-          _linkToIdToken(pp, ip) {
-            const cp = this.buildRequest();
-            return cp.idToken = ip, zi(pp, cp)
+          _linkToIdToken(TT, UT) {
+            const mT = this.buildRequest();
+            return mT.idToken = UT, NU(TT, mT)
           }
-          _getReauthenticationResolver(pp) {
-            const ip = this.buildRequest();
-            return ip.autoCreate = !1, zi(pp, ip)
+          _getReauthenticationResolver(TT) {
+            const UT = this.buildRequest();
+            return UT.autoCreate = !1, NU(TT, UT)
           }
           buildRequest() {
-            const pp = {
+            const TT = {
               requestUri: "http://localhost",
               returnSecureToken: !0
             };
-            if (this.pendingToken) pp.pendingToken = this.pendingToken;
+            if (this.pendingToken) TT.pendingToken = this.pendingToken;
             else {
-              const ip = {};
-              this.idToken && (ip.id_token = this.idToken), this.accessToken && (ip.access_token = this.accessToken), this.secret && (ip.oauth_token_secret = this.secret), ip.providerId = this.providerId, this.nonce && !this.pendingToken && (ip.nonce = this.nonce), pp.postBody = (0, Op.cb)(ip)
+              const UT = {};
+              this.idToken && (UT.id_token = this.idToken), this.accessToken && (UT.access_token = this.accessToken), this.secret && (UT.oauth_token_secret = this.secret), UT.providerId = this.providerId, this.nonce && !this.pendingToken && (UT.nonce = this.nonce), TT.postBody = (0, WT.pb)(UT)
             }
-            return pp
+            return TT
           }
         }
-        const Ki = {
+        const hU = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class Vi extends bi {
-          constructor(pp) {
-            super("phone", "phone"), this.params = pp
+        class DU extends PU {
+          constructor(TT) {
+            super("phone", "phone"), this.params = TT
           }
-          static _fromVerification(pp, ip) {
-            return new Vi({
-              verificationId: pp,
-              verificationCode: ip
+          static _fromVerification(TT, UT) {
+            return new DU({
+              verificationId: TT,
+              verificationCode: UT
             })
           }
-          static _fromTokenResponse(pp, ip) {
-            return new Vi({
-              phoneNumber: pp,
-              temporaryProof: ip
+          static _fromTokenResponse(TT, UT) {
+            return new DU({
+              phoneNumber: TT,
+              temporaryProof: UT
             })
           }
-          _getIdTokenResponse(pp) {
-            return async function(pp, ip) {
-              return hp(pp, "POST", "/v1/accounts:signInWithPhoneNumber", Tp(pp, ip))
-            }(pp, this._makeVerificationRequest())
+          _getIdTokenResponse(TT) {
+            return async function(TT, UT) {
+              return uT(TT, "POST", "/v1/accounts:signInWithPhoneNumber", FT(TT, UT))
+            }(TT, this._makeVerificationRequest())
           }
-          _linkToIdToken(pp, ip) {
-            return async function(pp, ip) {
-              const cp = await hp(pp, "POST", "/v1/accounts:signInWithPhoneNumber", Tp(pp, ip));
-              if (cp.temporaryProof) throw Fp(pp, "account-exists-with-different-credential", cp);
-              return cp
-            }(pp, Object.assign({
-              idToken: ip
+          _linkToIdToken(TT, UT) {
+            return async function(TT, UT) {
+              const mT = await uT(TT, "POST", "/v1/accounts:signInWithPhoneNumber", FT(TT, UT));
+              if (mT.temporaryProof) throw KT(TT, "account-exists-with-different-credential", mT);
+              return mT
+            }(TT, Object.assign({
+              idToken: UT
             }, this._makeVerificationRequest()))
           }
-          _getReauthenticationResolver(pp) {
-            return async function(pp, ip) {
-              return hp(pp, "POST", "/v1/accounts:signInWithPhoneNumber", Tp(pp, Object.assign(Object.assign({}, ip), {
+          _getReauthenticationResolver(TT) {
+            return async function(TT, UT) {
+              return uT(TT, "POST", "/v1/accounts:signInWithPhoneNumber", FT(TT, Object.assign(Object.assign({}, UT), {
                 operation: "REAUTH"
-              })), Ki)
-            }(pp, this._makeVerificationRequest())
+              })), hU)
+            }(TT, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
-              temporaryProof: pp,
-              phoneNumber: ip,
-              verificationId: cp,
-              verificationCode: Op
+              temporaryProof: TT,
+              phoneNumber: UT,
+              verificationId: mT,
+              verificationCode: WT
             } = this.params;
-            return pp && ip ? {
-              temporaryProof: pp,
-              phoneNumber: ip
+            return TT && UT ? {
+              temporaryProof: TT,
+              phoneNumber: UT
             } : {
-              sessionInfo: cp,
-              code: Op
+              sessionInfo: mT,
+              code: WT
             }
           }
           toJSON() {
-            const pp = {
+            const TT = {
               providerId: this.providerId
             };
-            return this.params.phoneNumber && (pp.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (pp.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (pp.verificationCode = this.params.verificationCode), this.params.verificationId && (pp.verificationId = this.params.verificationId), pp
+            return this.params.phoneNumber && (TT.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (TT.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (TT.verificationCode = this.params.verificationCode), this.params.verificationId && (TT.verificationId = this.params.verificationId), TT
           }
-          static fromJSON(pp) {
-            "string" === typeof pp && (pp = JSON.parse(pp));
+          static fromJSON(TT) {
+            "string" === typeof TT && (TT = JSON.parse(TT));
             const {
-              verificationId: ip,
-              verificationCode: cp,
-              phoneNumber: Op,
-              temporaryProof: op
-            } = pp;
-            return cp || ip || Op || op ? new Vi({
-              verificationId: ip,
-              verificationCode: cp,
-              phoneNumber: Op,
-              temporaryProof: op
+              verificationId: UT,
+              verificationCode: mT,
+              phoneNumber: WT,
+              temporaryProof: zT
+            } = TT;
+            return mT || UT || WT || zT ? new DU({
+              verificationId: UT,
+              verificationCode: mT,
+              phoneNumber: WT,
+              temporaryProof: zT
             }) : null
           }
         }
-        class pc {
-          constructor(pp) {
-            var ip, cp, op, Ip, Sp, xp;
-            const Lp = (0, Op._)((0, Op.A)(pp)),
-              Yp = null !== (ip = Lp.apiKey) && void 0 !== ip ? ip : null,
-              Dp = null !== (cp = Lp.oobCode) && void 0 !== cp ? cp : null,
-              Ap = function(pp) {
-                switch (pp) {
+        class oU {
+          constructor(TT) {
+            var UT, mT, zT, MT, gT, nT;
+            const HT = (0, WT.lb)((0, WT.E)(TT)),
+              kT = null !== (UT = HT.apiKey) && void 0 !== UT ? UT : null,
+              jT = null !== (mT = HT.oobCode) && void 0 !== mT ? mT : null,
+              lT = function(TT) {
+                switch (TT) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
                   case "resetPassword":
@@ -1866,226 +1866,226 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (op = Lp.mode) && void 0 !== op ? op : null);
-            Rp(Yp && Dp && Ap, "argument-error"), this.apiKey = Yp, this.operation = Ap, this.code = Dp, this.continueUrl = null !== (Ip = Lp.continueUrl) && void 0 !== Ip ? Ip : null, this.languageCode = null !== (Sp = Lp.languageCode) && void 0 !== Sp ? Sp : null, this.tenantId = null !== (xp = Lp.tenantId) && void 0 !== xp ? xp : null
+              }(null !== (zT = HT.mode) && void 0 !== zT ? zT : null);
+            JT(kT && jT && lT, "argument-error"), this.apiKey = kT, this.operation = lT, this.code = jT, this.continueUrl = null !== (MT = HT.continueUrl) && void 0 !== MT ? MT : null, this.languageCode = null !== (gT = HT.languageCode) && void 0 !== gT ? gT : null, this.tenantId = null !== (nT = HT.tenantId) && void 0 !== nT ? nT : null
           }
-          static parseLink(pp) {
-            const ip = function(pp) {
-              const ip = (0, Op._)((0, Op.A)(pp)).link,
-                cp = ip ? (0, Op._)((0, Op.A)(ip)).deep_link_id : null,
-                op = (0, Op._)((0, Op.A)(pp)).deep_link_id;
-              return (op ? (0, Op._)((0, Op.A)(op)).link : null) || op || cp || ip || pp
-            }(pp);
+          static parseLink(TT) {
+            const UT = function(TT) {
+              const UT = (0, WT.lb)((0, WT.E)(TT)).link,
+                mT = UT ? (0, WT.lb)((0, WT.E)(UT)).deep_link_id : null,
+                zT = (0, WT.lb)((0, WT.E)(TT)).deep_link_id;
+              return (zT ? (0, WT.lb)((0, WT.E)(zT)).link : null) || zT || mT || UT || TT
+            }(TT);
             try {
-              return new pc(ip)
-            } catch (cp) {
+              return new oU(UT)
+            } catch (mT) {
               return null
             }
           }
         }
 
-        function ic(pp) {
-          return pc.parseLink(pp)
+        function AU(TT) {
+          return oU.parseLink(TT)
         }
-        class cc {
+        class RU {
           constructor() {
-            this.providerId = cc.PROVIDER_ID
+            this.providerId = RU.PROVIDER_ID
           }
-          static credential(pp, ip) {
-            return Zi._fromEmailAndPassword(pp, ip)
+          static credential(TT, UT) {
+            return GU._fromEmailAndPassword(TT, UT)
           }
-          static credentialWithLink(pp, ip) {
-            const cp = pc.parseLink(ip);
-            return Rp(cp, "argument-error"), Zi._fromEmailAndCode(pp, cp.code, cp.tenantId)
+          static credentialWithLink(TT, UT) {
+            const mT = oU.parseLink(UT);
+            return JT(mT, "argument-error"), GU._fromEmailAndCode(TT, mT.code, mT.tenantId)
           }
         }
-        cc.PROVIDER_ID = "password", cc.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", cc.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class Oc {
-          constructor(pp) {
-            this.providerId = pp, this.defaultLanguageCode = null, this.customParameters = {}
+        RU.PROVIDER_ID = "password", RU.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", RU.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class Tm {
+          constructor(TT) {
+            this.providerId = TT, this.defaultLanguageCode = null, this.customParameters = {}
           }
-          setDefaultLanguage(pp) {
-            this.defaultLanguageCode = pp
+          setDefaultLanguage(TT) {
+            this.defaultLanguageCode = TT
           }
-          setCustomParameters(pp) {
-            return this.customParameters = pp, this
+          setCustomParameters(TT) {
+            return this.customParameters = TT, this
           }
           getCustomParameters() {
             return this.customParameters
           }
         }
-        class oc extends Oc {
+        class Um extends Tm {
           constructor() {
             super(...arguments), this.scopes = []
           }
-          addScope(pp) {
-            return this.scopes.includes(pp) || this.scopes.push(pp), this
+          addScope(TT) {
+            return this.scopes.includes(TT) || this.scopes.push(TT), this
           }
           getScopes() {
             return [...this.scopes]
           }
         }
-        class Ic extends oc {
-          static credentialFromJSON(pp) {
-            const ip = "string" === typeof pp ? JSON.parse(pp) : pp;
-            return Rp("providerId" in ip && "signInMethod" in ip, "argument-error"), si._fromParams(ip)
+        class mm extends Um {
+          static credentialFromJSON(TT) {
+            const UT = "string" === typeof TT ? JSON.parse(TT) : TT;
+            return JT("providerId" in UT && "signInMethod" in UT, "argument-error"), EU._fromParams(UT)
           }
-          credential(pp) {
-            return this._credential(Object.assign(Object.assign({}, pp), {
-              nonce: pp.rawNonce
+          credential(TT) {
+            return this._credential(Object.assign(Object.assign({}, TT), {
+              nonce: TT.rawNonce
             }))
           }
-          _credential(pp) {
-            return Rp(pp.idToken || pp.accessToken, "argument-error"), si._fromParams(Object.assign(Object.assign({}, pp), {
+          _credential(TT) {
+            return JT(TT.idToken || TT.accessToken, "argument-error"), EU._fromParams(Object.assign(Object.assign({}, TT), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
-          static credentialFromResult(pp) {
-            return Ic.oauthCredentialFromTaggedObject(pp)
+          static credentialFromResult(TT) {
+            return mm.oauthCredentialFromTaggedObject(TT)
           }
-          static credentialFromError(pp) {
-            return Ic.oauthCredentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return mm.oauthCredentialFromTaggedObject(TT.customData || {})
           }
-          static oauthCredentialFromTaggedObject(pp) {
+          static oauthCredentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT) return null;
             const {
-              oauthIdToken: cp,
-              oauthAccessToken: Op,
-              oauthTokenSecret: op,
-              pendingToken: Ip,
-              nonce: Sp,
-              providerId: xp
-            } = ip;
-            if (!Op && !op && !cp && !Ip) return null;
-            if (!xp) return null;
+              oauthIdToken: mT,
+              oauthAccessToken: WT,
+              oauthTokenSecret: zT,
+              pendingToken: MT,
+              nonce: gT,
+              providerId: nT
+            } = UT;
+            if (!WT && !zT && !mT && !MT) return null;
+            if (!nT) return null;
             try {
-              return new Ic(xp)._credential({
-                idToken: cp,
-                accessToken: Op,
-                nonce: Sp,
-                pendingToken: Ip
+              return new mm(nT)._credential({
+                idToken: mT,
+                accessToken: WT,
+                nonce: gT,
+                pendingToken: MT
               })
-            } catch (Lp) {
+            } catch (HT) {
               return null
             }
           }
         }
-        class Sc extends oc {
+        class Wm extends Um {
           constructor() {
             super("facebook.com")
           }
-          static credential(pp) {
-            return si._fromParams({
-              providerId: Sc.PROVIDER_ID,
-              signInMethod: Sc.FACEBOOK_SIGN_IN_METHOD,
-              accessToken: pp
+          static credential(TT) {
+            return EU._fromParams({
+              providerId: Wm.PROVIDER_ID,
+              signInMethod: Wm.FACEBOOK_SIGN_IN_METHOD,
+              accessToken: TT
             })
           }
-          static credentialFromResult(pp) {
-            return Sc.credentialFromTaggedObject(pp)
+          static credentialFromResult(TT) {
+            return Wm.credentialFromTaggedObject(TT)
           }
-          static credentialFromError(pp) {
-            return Sc.credentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return Wm.credentialFromTaggedObject(TT.customData || {})
           }
-          static credentialFromTaggedObject(pp) {
+          static credentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip || !("oauthAccessToken" in ip)) return null;
-            if (!ip.oauthAccessToken) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT || !("oauthAccessToken" in UT)) return null;
+            if (!UT.oauthAccessToken) return null;
             try {
-              return Sc.credential(ip.oauthAccessToken)
-            } catch (cp) {
+              return Wm.credential(UT.oauthAccessToken)
+            } catch (mT) {
               return null
             }
           }
         }
-        Sc.FACEBOOK_SIGN_IN_METHOD = "facebook.com", Sc.PROVIDER_ID = "facebook.com";
-        class xc extends oc {
+        Wm.FACEBOOK_SIGN_IN_METHOD = "facebook.com", Wm.PROVIDER_ID = "facebook.com";
+        class zm extends Um {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(pp, ip) {
-            return si._fromParams({
-              providerId: xc.PROVIDER_ID,
-              signInMethod: xc.GOOGLE_SIGN_IN_METHOD,
-              idToken: pp,
-              accessToken: ip
+          static credential(TT, UT) {
+            return EU._fromParams({
+              providerId: zm.PROVIDER_ID,
+              signInMethod: zm.GOOGLE_SIGN_IN_METHOD,
+              idToken: TT,
+              accessToken: UT
             })
           }
-          static credentialFromResult(pp) {
-            return xc.credentialFromTaggedObject(pp)
+          static credentialFromResult(TT) {
+            return zm.credentialFromTaggedObject(TT)
           }
-          static credentialFromError(pp) {
-            return xc.credentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return zm.credentialFromTaggedObject(TT.customData || {})
           }
-          static credentialFromTaggedObject(pp) {
+          static credentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT) return null;
             const {
-              oauthIdToken: cp,
-              oauthAccessToken: Op
-            } = ip;
-            if (!cp && !Op) return null;
+              oauthIdToken: mT,
+              oauthAccessToken: WT
+            } = UT;
+            if (!mT && !WT) return null;
             try {
-              return xc.credential(cp, Op)
-            } catch (op) {
+              return zm.credential(mT, WT)
+            } catch (zT) {
               return null
             }
           }
         }
-        xc.GOOGLE_SIGN_IN_METHOD = "google.com", xc.PROVIDER_ID = "google.com";
-        class Lc extends oc {
+        zm.GOOGLE_SIGN_IN_METHOD = "google.com", zm.PROVIDER_ID = "google.com";
+        class Mm extends Um {
           constructor() {
             super("github.com")
           }
-          static credential(pp) {
-            return si._fromParams({
-              providerId: Lc.PROVIDER_ID,
-              signInMethod: Lc.GITHUB_SIGN_IN_METHOD,
-              accessToken: pp
+          static credential(TT) {
+            return EU._fromParams({
+              providerId: Mm.PROVIDER_ID,
+              signInMethod: Mm.GITHUB_SIGN_IN_METHOD,
+              accessToken: TT
             })
           }
-          static credentialFromResult(pp) {
-            return Lc.credentialFromTaggedObject(pp)
+          static credentialFromResult(TT) {
+            return Mm.credentialFromTaggedObject(TT)
           }
-          static credentialFromError(pp) {
-            return Lc.credentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return Mm.credentialFromTaggedObject(TT.customData || {})
           }
-          static credentialFromTaggedObject(pp) {
+          static credentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip || !("oauthAccessToken" in ip)) return null;
-            if (!ip.oauthAccessToken) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT || !("oauthAccessToken" in UT)) return null;
+            if (!UT.oauthAccessToken) return null;
             try {
-              return Lc.credential(ip.oauthAccessToken)
-            } catch (cp) {
+              return Mm.credential(UT.oauthAccessToken)
+            } catch (mT) {
               return null
             }
           }
         }
-        Lc.GITHUB_SIGN_IN_METHOD = "github.com", Lc.PROVIDER_ID = "github.com";
-        class Yc extends bi {
-          constructor(pp, ip) {
-            super(pp, pp), this.pendingToken = ip
+        Mm.GITHUB_SIGN_IN_METHOD = "github.com", Mm.PROVIDER_ID = "github.com";
+        class gm extends PU {
+          constructor(TT, UT) {
+            super(TT, TT), this.pendingToken = UT
           }
-          _getIdTokenResponse(pp) {
-            return zi(pp, this.buildRequest())
+          _getIdTokenResponse(TT) {
+            return NU(TT, this.buildRequest())
           }
-          _linkToIdToken(pp, ip) {
-            const cp = this.buildRequest();
-            return cp.idToken = ip, zi(pp, cp)
+          _linkToIdToken(TT, UT) {
+            const mT = this.buildRequest();
+            return mT.idToken = UT, NU(TT, mT)
           }
-          _getReauthenticationResolver(pp) {
-            const ip = this.buildRequest();
-            return ip.autoCreate = !1, zi(pp, ip)
+          _getReauthenticationResolver(TT) {
+            const UT = this.buildRequest();
+            return UT.autoCreate = !1, NU(TT, UT)
           }
           toJSON() {
             return {
@@ -2094,17 +2094,17 @@ export const modules = {
               pendingToken: this.pendingToken
             }
           }
-          static fromJSON(pp) {
-            const ip = "string" === typeof pp ? JSON.parse(pp) : pp,
+          static fromJSON(TT) {
+            const UT = "string" === typeof TT ? JSON.parse(TT) : TT,
               {
-                providerId: cp,
-                signInMethod: Op,
-                pendingToken: op
-              } = ip;
-            return cp && Op && op && cp === Op ? new Yc(cp, op) : null
+                providerId: mT,
+                signInMethod: WT,
+                pendingToken: zT
+              } = UT;
+            return mT && WT && zT && mT === WT ? new gm(mT, zT) : null
           }
-          static _create(pp, ip) {
-            return new Yc(pp, ip)
+          static _create(TT, UT) {
+            return new gm(TT, UT)
           }
           buildRequest() {
             return {
@@ -2114,753 +2114,753 @@ export const modules = {
             }
           }
         }
-        class Dc extends Oc {
-          constructor(pp) {
-            Rp(pp.startsWith("saml."), "argument-error"), super(pp)
+        class nm extends Tm {
+          constructor(TT) {
+            JT(TT.startsWith("saml."), "argument-error"), super(TT)
           }
-          static credentialFromResult(pp) {
-            return Dc.samlCredentialFromTaggedObject(pp)
+          static credentialFromResult(TT) {
+            return nm.samlCredentialFromTaggedObject(TT)
           }
-          static credentialFromError(pp) {
-            return Dc.samlCredentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return nm.samlCredentialFromTaggedObject(TT.customData || {})
           }
-          static credentialFromJSON(pp) {
-            const ip = Yc.fromJSON(pp);
-            return Rp(ip, "argument-error"), ip
+          static credentialFromJSON(TT) {
+            const UT = gm.fromJSON(TT);
+            return JT(UT, "argument-error"), UT
           }
-          static samlCredentialFromTaggedObject(pp) {
+          static samlCredentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT) return null;
             const {
-              pendingToken: cp,
-              providerId: Op
-            } = ip;
-            if (!cp || !Op) return null;
+              pendingToken: mT,
+              providerId: WT
+            } = UT;
+            if (!mT || !WT) return null;
             try {
-              return Yc._create(Op, cp)
-            } catch (op) {
+              return gm._create(WT, mT)
+            } catch (zT) {
               return null
             }
           }
         }
-        class Ac extends oc {
+        class Hm extends Um {
           constructor() {
             super("twitter.com")
           }
-          static credential(pp, ip) {
-            return si._fromParams({
-              providerId: Ac.PROVIDER_ID,
-              signInMethod: Ac.TWITTER_SIGN_IN_METHOD,
-              oauthToken: pp,
-              oauthTokenSecret: ip
+          static credential(TT, UT) {
+            return EU._fromParams({
+              providerId: Hm.PROVIDER_ID,
+              signInMethod: Hm.TWITTER_SIGN_IN_METHOD,
+              oauthToken: TT,
+              oauthTokenSecret: UT
             })
           }
-          static credentialFromResult(pp) {
-            return Ac.credentialFromTaggedObject(pp)
+          static credentialFromResult(TT) {
+            return Hm.credentialFromTaggedObject(TT)
           }
-          static credentialFromError(pp) {
-            return Ac.credentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return Hm.credentialFromTaggedObject(TT.customData || {})
           }
-          static credentialFromTaggedObject(pp) {
+          static credentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT) return null;
             const {
-              oauthAccessToken: cp,
-              oauthTokenSecret: Op
-            } = ip;
-            if (!cp || !Op) return null;
+              oauthAccessToken: mT,
+              oauthTokenSecret: WT
+            } = UT;
+            if (!mT || !WT) return null;
             try {
-              return Ac.credential(cp, Op)
-            } catch (op) {
+              return Hm.credential(mT, WT)
+            } catch (zT) {
               return null
             }
           }
         }
-        async function Pc(pp, ip) {
-          return hp(pp, "POST", "/v1/accounts:signUp", Tp(pp, ip))
+        async function km(TT, UT) {
+          return uT(TT, "POST", "/v1/accounts:signUp", FT(TT, UT))
         }
-        Ac.TWITTER_SIGN_IN_METHOD = "twitter.com", Ac.PROVIDER_ID = "twitter.com";
-        class Wc {
-          constructor(pp) {
-            this.user = pp.user, this.providerId = pp.providerId, this._tokenResponse = pp._tokenResponse, this.operationType = pp.operationType
+        Hm.TWITTER_SIGN_IN_METHOD = "twitter.com", Hm.PROVIDER_ID = "twitter.com";
+        class jm {
+          constructor(TT) {
+            this.user = TT.user, this.providerId = TT.providerId, this._tokenResponse = TT._tokenResponse, this.operationType = TT.operationType
           }
-          static async _fromIdTokenResponse(pp, ip, cp) {
-            let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const op = await Ii._fromIdTokenResponse(pp, cp, Op),
-              Ip = yc(cp);
-            return new Wc({
-              user: op,
-              providerId: Ip,
-              _tokenResponse: cp,
-              operationType: ip
+          static async _fromIdTokenResponse(TT, UT, mT) {
+            let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const zT = await WU._fromIdTokenResponse(TT, mT, WT),
+              MT = lm(mT);
+            return new jm({
+              user: zT,
+              providerId: MT,
+              _tokenResponse: mT,
+              operationType: UT
             })
           }
-          static async _forOperation(pp, ip, cp) {
-            await pp._updateTokensIfNecessary(cp, !0);
-            const Op = yc(cp);
-            return new Wc({
-              user: pp,
-              providerId: Op,
-              _tokenResponse: cp,
-              operationType: ip
+          static async _forOperation(TT, UT, mT) {
+            await TT._updateTokensIfNecessary(mT, !0);
+            const WT = lm(mT);
+            return new jm({
+              user: TT,
+              providerId: WT,
+              _tokenResponse: mT,
+              operationType: UT
             })
           }
         }
 
-        function yc(pp) {
-          return pp.providerId ? pp.providerId : "phoneNumber" in pp ? "phone" : null
+        function lm(TT) {
+          return TT.providerId ? TT.providerId : "phoneNumber" in TT ? "phone" : null
         }
-        async function Uc(pp) {
-          var ip;
-          const cp = Qi(pp);
-          if (await cp._initializationPromise, null === (ip = cp.currentUser) || void 0 === ip ? void 0 : ip.isAnonymous) return new Wc({
-            user: cp.currentUser,
+        async function Lm(TT) {
+          var UT;
+          const mT = yU(TT);
+          if (await mT._initializationPromise, null === (UT = mT.currentUser) || void 0 === UT ? void 0 : UT.isAnonymous) return new jm({
+            user: mT.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const Op = await Pc(cp, {
+          const WT = await km(mT, {
               returnSecureToken: !0
             }),
-            op = await Wc._fromIdTokenResponse(cp, "signIn", Op, !0);
-          return await cp._updateCurrentUser(op.user), op
+            zT = await jm._fromIdTokenResponse(mT, "signIn", WT, !0);
+          return await mT._updateCurrentUser(zT.user), zT
         }
-        class wc extends Op.l {
-          constructor(pp, ip, cp, Op) {
-            var op;
-            super(ip.code, ip.message), this.operationType = cp, this.user = Op, Object.setPrototypeOf(this, wc.prototype), this.customData = {
-              appName: pp.name,
-              tenantId: null !== (op = pp.tenantId) && void 0 !== op ? op : void 0,
-              _serverResponse: ip.customData._serverResponse,
-              operationType: cp
+        class pm extends WT.i {
+          constructor(TT, UT, mT, WT) {
+            var zT;
+            super(UT.code, UT.message), this.operationType = mT, this.user = WT, Object.setPrototypeOf(this, pm.prototype), this.customData = {
+              appName: TT.name,
+              tenantId: null !== (zT = TT.tenantId) && void 0 !== zT ? zT : void 0,
+              _serverResponse: UT.customData._serverResponse,
+              operationType: mT
             }
           }
-          static _fromErrorAndOperation(pp, ip, cp, Op) {
-            return new wc(pp, ip, cp, Op)
+          static _fromErrorAndOperation(TT, UT, mT, WT) {
+            return new pm(TT, UT, mT, WT)
           }
         }
 
-        function vc(pp, ip, cp, Op) {
-          return ("reauthenticate" === ip ? cp._getReauthenticationResolver(pp) : cp._getIdTokenResponse(pp)).catch((cp => {
-            if ("auth/multi-factor-auth-required" === cp.code) throw wc._fromErrorAndOperation(pp, cp, ip, Op);
-            throw cp
+        function Bm(TT, UT, mT, WT) {
+          return ("reauthenticate" === UT ? mT._getReauthenticationResolver(TT) : mT._getIdTokenResponse(TT)).catch((mT => {
+            if ("auth/multi-factor-auth-required" === mT.code) throw pm._fromErrorAndOperation(TT, mT, UT, WT);
+            throw mT
           }))
         }
 
-        function tc(pp) {
-          return new Set(pp.map((pp => {
+        function Zm(TT) {
+          return new Set(TT.map((TT => {
             let {
-              providerId: ip
-            } = pp;
-            return ip
-          })).filter((pp => !!pp)))
+              providerId: UT
+            } = TT;
+            return UT
+          })).filter((TT => !!TT)))
         }
-        async function Hc(pp, ip) {
-          const cp = (0, Op.F)(pp);
-          await ec(!0, cp, ip);
+        async function cm(TT, UT) {
+          const mT = (0, WT.P)(TT);
+          await qm(!0, mT, UT);
           const {
-            providerUserInfo: op
-          } = await async function(pp, ip) {
-            return fp(pp, "POST", "/v1/accounts:update", ip)
-          }(cp.auth, {
-            idToken: await cp.getIdToken(),
-            deleteProvider: [ip]
-          }), Ip = tc(op || []);
-          return cp.providerData = cp.providerData.filter((pp => Ip.has(pp.providerId))), Ip.has("phone") || (cp.phoneNumber = null), await cp.auth._persistUserIfCurrent(cp), cp
+            providerUserInfo: zT
+          } = await async function(TT, UT) {
+            return PT(TT, "POST", "/v1/accounts:update", UT)
+          }(mT.auth, {
+            idToken: await mT.getIdToken(),
+            deleteProvider: [UT]
+          }), MT = Zm(zT || []);
+          return mT.providerData = mT.providerData.filter((TT => MT.has(TT.providerId))), MT.has("phone") || (mT.phoneNumber = null), await mT.auth._persistUserIfCurrent(mT), mT
         }
-        async function dc(pp, ip) {
-          let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Op = await sp(pp, ip._linkToIdToken(pp.auth, await pp.getIdToken()), cp);
-          return Wc._forOperation(pp, "link", Op)
+        async function fm(TT, UT) {
+          let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const WT = await DT(TT, UT._linkToIdToken(TT.auth, await TT.getIdToken()), mT);
+          return jm._forOperation(TT, "link", WT)
         }
-        async function ec(pp, ip, cp) {
-          await ii(ip);
-          const Op = !1 === pp ? "provider-already-linked" : "no-such-provider";
-          Rp(tc(ip.providerData).has(cp) === pp, ip.auth, Op)
+        async function qm(TT, UT, mT) {
+          await RT(UT);
+          const WT = !1 === TT ? "provider-already-linked" : "no-such-provider";
+          JT(Zm(UT.providerData).has(mT) === TT, UT.auth, WT)
         }
-        async function uc(pp, ip) {
-          let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function im(TT, UT) {
+          let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: Op
-          } = pp, op = "reauthenticate";
+            auth: WT
+          } = TT, zT = "reauthenticate";
           try {
-            const Ip = await sp(pp, vc(Op, op, ip, pp), cp);
-            Rp(Ip.idToken, Op, "internal-error");
-            const Sp = zp(Ip.idToken);
-            Rp(Sp, Op, "internal-error");
+            const MT = await DT(TT, Bm(WT, zT, UT, TT), mT);
+            JT(MT.idToken, WT, "internal-error");
+            const gT = hT(MT.idToken);
+            JT(gT, WT, "internal-error");
             const {
-              sub: xp
-            } = Sp;
-            return Rp(pp.uid === xp, Op, "user-mismatch"), Wc._forOperation(pp, op, Ip)
-          } catch (Ip) {
-            throw "auth/user-not-found" === (null === Ip || void 0 === Ip ? void 0 : Ip.code) && dp(Op, "user-mismatch"), Ip
+              sub: nT
+            } = gT;
+            return JT(TT.uid === nT, WT, "user-mismatch"), jm._forOperation(TT, zT, MT)
+          } catch (MT) {
+            throw "auth/user-not-found" === (null === MT || void 0 === MT ? void 0 : MT.code) && iT(WT, "user-mismatch"), MT
           }
         }
-        async function jc(pp, ip) {
-          let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Op = "signIn",
-            op = await vc(pp, Op, ip),
-            Ip = await Wc._fromIdTokenResponse(pp, Op, op);
-          return cp || await pp._updateCurrentUser(Ip.user), Ip
+        async function bm(TT, UT) {
+          let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const WT = "signIn",
+            zT = await Bm(TT, WT, UT),
+            MT = await jm._fromIdTokenResponse(TT, WT, zT);
+          return mT || await TT._updateCurrentUser(MT.user), MT
         }
-        async function kc(pp, ip) {
-          return jc(Qi(pp), ip)
+        async function Om(TT, UT) {
+          return bm(yU(TT), UT)
         }
-        async function mc(pp, ip) {
-          const cp = (0, Op.F)(pp);
-          return await ec(!1, cp, ip.providerId), dc(cp, ip)
+        async function em(TT, UT) {
+          const mT = (0, WT.P)(TT);
+          return await qm(!1, mT, UT.providerId), fm(mT, UT)
         }
-        async function Rc(pp, ip) {
-          return uc((0, Op.F)(pp), ip)
+        async function Ym(TT, UT) {
+          return im((0, WT.P)(TT), UT)
         }
-        async function qc(pp, ip) {
-          const cp = Qi(pp),
-            Op = await async function(pp, ip) {
-              return hp(pp, "POST", "/v1/accounts:signInWithCustomToken", Tp(pp, ip))
-            }(cp, {
-              token: ip,
+        async function Jm(TT, UT) {
+          const mT = yU(TT),
+            WT = await async function(TT, UT) {
+              return uT(TT, "POST", "/v1/accounts:signInWithCustomToken", FT(TT, UT))
+            }(mT, {
+              token: UT,
               returnSecureToken: !0
-            }), op = await Wc._fromIdTokenResponse(cp, "signIn", Op);
-          return await cp._updateCurrentUser(op.user), op
+            }), zT = await jm._fromIdTokenResponse(mT, "signIn", WT);
+          return await mT._updateCurrentUser(zT.user), zT
         }
-        class Mc {
-          constructor(pp, ip) {
-            this.factorId = pp, this.uid = ip.mfaEnrollmentId, this.enrollmentTime = new Date(ip.enrolledAt).toUTCString(), this.displayName = ip.displayName
+        class xm {
+          constructor(TT, UT) {
+            this.factorId = TT, this.uid = UT.mfaEnrollmentId, this.enrollmentTime = new Date(UT.enrolledAt).toUTCString(), this.displayName = UT.displayName
           }
-          static _fromServerResponse(pp, ip) {
-            return "phoneInfo" in ip ? Cc._fromServerResponse(pp, ip) : "totpInfo" in ip ? Ec._fromServerResponse(pp, ip) : dp(pp, "internal-error")
-          }
-        }
-        class Cc extends Mc {
-          constructor(pp) {
-            super("phone", pp), this.phoneNumber = pp.phoneInfo
-          }
-          static _fromServerResponse(pp, ip) {
-            return new Cc(ip)
+          static _fromServerResponse(TT, UT) {
+            return "phoneInfo" in UT ? dm._fromServerResponse(TT, UT) : "totpInfo" in UT ? wm._fromServerResponse(TT, UT) : iT(TT, "internal-error")
           }
         }
-        class Ec extends Mc {
-          constructor(pp) {
-            super("totp", pp)
+        class dm extends xm {
+          constructor(TT) {
+            super("phone", TT), this.phoneNumber = TT.phoneInfo
           }
-          static _fromServerResponse(pp, ip) {
-            return new Ec(ip)
+          static _fromServerResponse(TT, UT) {
+            return new dm(UT)
+          }
+        }
+        class wm extends xm {
+          constructor(TT) {
+            super("totp", TT)
+          }
+          static _fromServerResponse(TT, UT) {
+            return new wm(UT)
           }
         }
 
-        function Xc(pp, ip, cp) {
-          var Op;
-          Rp((null === (Op = cp.url) || void 0 === Op ? void 0 : Op.length) > 0, pp, "invalid-continue-uri"), Rp("undefined" === typeof cp.dynamicLinkDomain || cp.dynamicLinkDomain.length > 0, pp, "invalid-dynamic-link-domain"), ip.continueUrl = cp.url, ip.dynamicLinkDomain = cp.dynamicLinkDomain, ip.canHandleCodeInApp = cp.handleCodeInApp, cp.iOS && (Rp(cp.iOS.bundleId.length > 0, pp, "missing-ios-bundle-id"), ip.iOSBundleId = cp.iOS.bundleId), cp.android && (Rp(cp.android.packageName.length > 0, pp, "missing-android-pkg-name"), ip.androidInstallApp = cp.android.installApp, ip.androidMinimumVersionCode = cp.android.minimumVersion, ip.androidPackageName = cp.android.packageName)
+        function tm(TT, UT, mT) {
+          var WT;
+          JT((null === (WT = mT.url) || void 0 === WT ? void 0 : WT.length) > 0, TT, "invalid-continue-uri"), JT("undefined" === typeof mT.dynamicLinkDomain || mT.dynamicLinkDomain.length > 0, TT, "invalid-dynamic-link-domain"), UT.continueUrl = mT.url, UT.dynamicLinkDomain = mT.dynamicLinkDomain, UT.canHandleCodeInApp = mT.handleCodeInApp, mT.iOS && (JT(mT.iOS.bundleId.length > 0, TT, "missing-ios-bundle-id"), UT.iOSBundleId = mT.iOS.bundleId), mT.android && (JT(mT.android.packageName.length > 0, TT, "missing-android-pkg-name"), UT.androidInstallApp = mT.android.installApp, UT.androidMinimumVersionCode = mT.android.minimumVersion, UT.androidPackageName = mT.android.packageName)
         }
-        async function lc(pp, ip, cp) {
-          var Op;
-          const op = Qi(pp),
-            Ip = {
+        async function am(TT, UT, mT) {
+          var WT;
+          const zT = yU(TT),
+            MT = {
               requestType: "PASSWORD_RESET",
-              email: ip,
+              email: UT,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (Op = op._getRecaptchaConfig()) || void 0 === Op ? void 0 : Op.emailPasswordEnabled) {
-            const pp = await Ei(op, Ip, "getOobCode", !0);
-            cp && Xc(op, pp, cp), await Gi(op, pp)
-          } else cp && Xc(op, Ip, cp), await Gi(op, Ip).catch((async pp => {
-            if ("auth/missing-recaptcha-token" !== pp.code) return Promise.reject(pp);
+          if (null === (WT = zT._getRecaptchaConfig()) || void 0 === WT ? void 0 : WT.emailPasswordEnabled) {
+            const TT = await wU(zT, MT, "getOobCode", !0);
+            mT && tm(zT, TT, mT), await KU(zT, TT)
+          } else mT && tm(zT, MT, mT), await KU(zT, MT).catch((async TT => {
+            if ("auth/missing-recaptcha-token" !== TT.code) return Promise.reject(TT);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const pp = await Ei(op, Ip, "getOobCode", !0);
-              cp && Xc(op, pp, cp), await Gi(op, pp)
+              const TT = await wU(zT, MT, "getOobCode", !0);
+              mT && tm(zT, TT, mT), await KU(zT, TT)
             }
           }))
         }
-        async function Qc(pp, ip, cp) {
-          await ai((0, Op.F)(pp), {
-            oobCode: ip,
-            newPassword: cp
+        async function ym(TT, UT, mT) {
+          await VU((0, WT.P)(TT), {
+            oobCode: UT,
+            newPassword: mT
           })
         }
-        async function Jc(pp, ip) {
-          await async function(pp, ip) {
-            return fp(pp, "POST", "/v1/accounts:update", Tp(pp, ip))
-          }((0, Op.F)(pp), {
-            oobCode: ip
+        async function Xm(TT, UT) {
+          await async function(TT, UT) {
+            return PT(TT, "POST", "/v1/accounts:update", FT(TT, UT))
+          }((0, WT.P)(TT), {
+            oobCode: UT
           })
         }
-        async function Bc(pp, ip) {
-          const cp = (0, Op.F)(pp),
-            op = await ai(cp, {
-              oobCode: ip
+        async function Im(TT, UT) {
+          const mT = (0, WT.P)(TT),
+            zT = await VU(mT, {
+              oobCode: UT
             }),
-            Ip = op.requestType;
-          switch (Rp(Ip, cp, "internal-error"), Ip) {
+            MT = zT.requestType;
+          switch (JT(MT, mT, "internal-error"), MT) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              Rp(op.newEmail, cp, "internal-error");
+              JT(zT.newEmail, mT, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              Rp(op.mfaInfo, cp, "internal-error");
+              JT(zT.mfaInfo, mT, "internal-error");
             default:
-              Rp(op.email, cp, "internal-error")
+              JT(zT.email, mT, "internal-error")
           }
-          let Sp = null;
-          return op.mfaInfo && (Sp = Mc._fromServerResponse(Qi(cp), op.mfaInfo)), {
+          let gT = null;
+          return zT.mfaInfo && (gT = xm._fromServerResponse(yU(mT), zT.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === op.requestType ? op.newEmail : op.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === op.requestType ? op.email : op.newEmail) || null,
-              multiFactorInfo: Sp
+              email: ("VERIFY_AND_CHANGE_EMAIL" === zT.requestType ? zT.newEmail : zT.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === zT.requestType ? zT.email : zT.newEmail) || null,
+              multiFactorInfo: gT
             },
-            operation: Ip
+            operation: MT
           }
         }
-        async function Nc(pp, ip) {
+        async function Qm(TT, UT) {
           const {
-            data: cp
-          } = await Bc((0, Op.F)(pp), ip);
-          return cp.email
+            data: mT
+          } = await Im((0, WT.P)(TT), UT);
+          return mT.email
         }
-        async function Tc(pp, ip, cp) {
-          var Op;
-          const op = Qi(pp),
-            Ip = {
+        async function sm(TT, UT, mT) {
+          var WT;
+          const zT = yU(TT),
+            MT = {
               returnSecureToken: !0,
-              email: ip,
-              password: cp,
+              email: UT,
+              password: mT,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let Sp;
-          if (null === (Op = op._getRecaptchaConfig()) || void 0 === Op ? void 0 : Op.emailPasswordEnabled) {
-            const pp = await Ei(op, Ip, "signUpPassword");
-            Sp = Pc(op, pp)
-          } else Sp = Pc(op, Ip).catch((async pp => {
-            if ("auth/missing-recaptcha-token" === pp.code) {
+          let gT;
+          if (null === (WT = zT._getRecaptchaConfig()) || void 0 === WT ? void 0 : WT.emailPasswordEnabled) {
+            const TT = await wU(zT, MT, "signUpPassword");
+            gT = km(zT, TT)
+          } else gT = km(zT, MT).catch((async TT => {
+            if ("auth/missing-recaptcha-token" === TT.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const pp = await Ei(op, Ip, "signUpPassword");
-              return Pc(op, pp)
+              const TT = await wU(zT, MT, "signUpPassword");
+              return km(zT, TT)
             }
-            return Promise.reject(pp)
+            return Promise.reject(TT)
           }));
-          const xp = await Sp.catch((pp => Promise.reject(pp))),
-            Lp = await Wc._fromIdTokenResponse(op, "signIn", xp);
-          return await op._updateCurrentUser(Lp.user), Lp
+          const nT = await gT.catch((TT => Promise.reject(TT))),
+            HT = await jm._fromIdTokenResponse(zT, "signIn", nT);
+          return await zT._updateCurrentUser(HT.user), HT
         }
 
-        function fc(pp, ip, cp) {
-          return kc((0, Op.F)(pp), cc.credential(ip, cp))
+        function Fm(TT, UT, mT) {
+          return Om((0, WT.P)(TT), RU.credential(UT, mT))
         }
-        async function bc(pp, ip, cp) {
-          var Op;
-          const op = Qi(pp),
-            Ip = {
+        async function Pm(TT, UT, mT) {
+          var WT;
+          const zT = yU(TT),
+            MT = {
               requestType: "EMAIL_SIGNIN",
-              email: ip,
+              email: UT,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function Sp(pp, ip) {
-            Rp(ip.handleCodeInApp, op, "argument-error"), ip && Xc(op, pp, ip)
+          function gT(TT, UT) {
+            JT(UT.handleCodeInApp, zT, "argument-error"), UT && tm(zT, TT, UT)
           }
-          if (null === (Op = op._getRecaptchaConfig()) || void 0 === Op ? void 0 : Op.emailPasswordEnabled) {
-            const pp = await Ei(op, Ip, "getOobCode", !0);
-            Sp(pp, cp), await ri(op, pp)
-          } else Sp(Ip, cp), await ri(op, Ip).catch((async pp => {
-            if ("auth/missing-recaptcha-token" !== pp.code) return Promise.reject(pp);
+          if (null === (WT = zT._getRecaptchaConfig()) || void 0 === WT ? void 0 : WT.emailPasswordEnabled) {
+            const TT = await wU(zT, MT, "getOobCode", !0);
+            gT(TT, mT), await SU(zT, TT)
+          } else gT(MT, mT), await SU(zT, MT).catch((async TT => {
+            if ("auth/missing-recaptcha-token" !== TT.code) return Promise.reject(TT);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const pp = await Ei(op, Ip, "getOobCode", !0);
-              Sp(pp, cp), await ri(op, pp)
+              const TT = await wU(zT, MT, "getOobCode", !0);
+              gT(TT, mT), await SU(zT, TT)
             }
           }))
         }
 
-        function hc(pp, ip) {
-          const cp = pc.parseLink(ip);
-          return "EMAIL_SIGNIN" === (null === cp || void 0 === cp ? void 0 : cp.operation)
+        function Vm(TT, UT) {
+          const mT = oU.parseLink(UT);
+          return "EMAIL_SIGNIN" === (null === mT || void 0 === mT ? void 0 : mT.operation)
         }
-        async function ac(pp, ip, cp) {
-          const op = (0, Op.F)(pp),
-            Ip = cc.credentialWithLink(ip, cp || Cp());
-          return Rp(Ip._tenantId === (op.tenantId || null), op, "tenant-id-mismatch"), kc(op, Ip)
+        async function um(TT, UT, mT) {
+          const zT = (0, WT.P)(TT),
+            MT = RU.credentialWithLink(UT, mT || wT());
+          return JT(MT._tenantId === (zT.tenantId || null), zT, "tenant-id-mismatch"), Om(zT, MT)
         }
-        async function nc(pp, ip) {
-          const cp = {
-              identifier: ip,
-              continueUri: Ep() ? Cp() : "http://localhost"
+        async function Cm(TT, UT) {
+          const mT = {
+              identifier: UT,
+              continueUri: tT() ? wT() : "http://localhost"
             },
             {
-              signinMethods: op
-            } = await async function(pp, ip) {
-              return fp(pp, "POST", "/v1/accounts:createAuthUri", Tp(pp, ip))
-            }((0, Op.F)(pp), cp);
-          return op || []
+              signinMethods: zT
+            } = await async function(TT, UT) {
+              return PT(TT, "POST", "/v1/accounts:createAuthUri", FT(TT, UT))
+            }((0, WT.P)(TT), mT);
+          return zT || []
         }
-        async function Fc(pp, ip) {
-          const cp = (0, Op.F)(pp),
-            op = {
+        async function rm(TT, UT) {
+          const mT = (0, WT.P)(TT),
+            zT = {
               requestType: "VERIFY_EMAIL",
-              idToken: await pp.getIdToken()
+              idToken: await TT.getIdToken()
             };
-          ip && Xc(cp.auth, op, ip);
+          UT && tm(mT.auth, zT, UT);
           const {
-            email: Ip
-          } = await async function(pp, ip) {
-            return gi(pp, ip)
-          }(cp.auth, op);
-          Ip !== pp.email && await pp.reload()
+            email: MT
+          } = await async function(TT, UT) {
+            return rU(TT, UT)
+          }(mT.auth, zT);
+          MT !== TT.email && await TT.reload()
         }
-        async function gc(pp, ip, cp) {
-          const op = (0, Op.F)(pp),
-            Ip = {
+        async function Km(TT, UT, mT) {
+          const zT = (0, WT.P)(TT),
+            MT = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
-              idToken: await pp.getIdToken(),
-              newEmail: ip
+              idToken: await TT.getIdToken(),
+              newEmail: UT
             };
-          cp && Xc(op.auth, Ip, cp);
+          mT && tm(zT.auth, MT, mT);
           const {
-            email: Sp
-          } = await async function(pp, ip) {
-            return gi(pp, ip)
-          }(op.auth, Ip);
-          Sp !== pp.email && await pp.reload()
+            email: gT
+          } = await async function(TT, UT) {
+            return rU(TT, UT)
+          }(zT.auth, MT);
+          gT !== TT.email && await TT.reload()
         }
-        async function Gc(pp, ip) {
+        async function Sm(TT, UT) {
           let {
-            displayName: cp,
-            photoURL: op
-          } = ip;
-          if (void 0 === cp && void 0 === op) return;
-          const Ip = (0, Op.F)(pp),
-            Sp = {
-              idToken: await Ip.getIdToken(),
-              displayName: cp,
-              photoUrl: op,
+            displayName: mT,
+            photoURL: zT
+          } = UT;
+          if (void 0 === mT && void 0 === zT) return;
+          const MT = (0, WT.P)(TT),
+            gT = {
+              idToken: await MT.getIdToken(),
+              displayName: mT,
+              photoUrl: zT,
               returnSecureToken: !0
             },
-            xp = await sp(Ip, async function(pp, ip) {
-              return fp(pp, "POST", "/v1/accounts:update", ip)
-            }(Ip.auth, Sp));
-          Ip.displayName = xp.displayName || null, Ip.photoURL = xp.photoUrl || null;
-          const Lp = Ip.providerData.find((pp => {
+            nT = await DT(MT, async function(TT, UT) {
+              return PT(TT, "POST", "/v1/accounts:update", UT)
+            }(MT.auth, gT));
+          MT.displayName = nT.displayName || null, MT.photoURL = nT.photoUrl || null;
+          const HT = MT.providerData.find((TT => {
             let {
-              providerId: ip
-            } = pp;
-            return "password" === ip
+              providerId: UT
+            } = TT;
+            return "password" === UT
           }));
-          Lp && (Lp.displayName = Ip.displayName, Lp.photoURL = Ip.photoURL), await Ip._updateTokensIfNecessary(xp)
+          HT && (HT.displayName = MT.displayName, HT.photoURL = MT.photoURL), await MT._updateTokensIfNecessary(nT)
         }
 
-        function rc(pp, ip) {
-          return zc((0, Op.F)(pp), ip, null)
+        function Gm(TT, UT) {
+          return Em((0, WT.P)(TT), UT, null)
         }
 
-        function Zc(pp, ip) {
-          return zc((0, Op.F)(pp), null, ip)
+        function Nm(TT, UT) {
+          return Em((0, WT.P)(TT), null, UT)
         }
-        async function zc(pp, ip, cp) {
+        async function Em(TT, UT, mT) {
           const {
-            auth: Op
-          } = pp, op = {
-            idToken: await pp.getIdToken(),
+            auth: WT
+          } = TT, zT = {
+            idToken: await TT.getIdToken(),
             returnSecureToken: !0
           };
-          ip && (op.email = ip), cp && (op.password = cp);
-          const Ip = await sp(pp, ni(Op, op));
-          await pp._updateTokensIfNecessary(Ip, !0)
+          UT && (zT.email = UT), mT && (zT.password = mT);
+          const MT = await DT(TT, uU(WT, zT));
+          await TT._updateTokensIfNecessary(MT, !0)
         }
-        class sc {
-          constructor(pp, ip) {
-            let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = pp, this.providerId = ip, this.profile = cp
+        class hm {
+          constructor(TT, UT) {
+            let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = TT, this.providerId = UT, this.profile = mT
           }
         }
-        class Kc extends sc {
-          constructor(pp, ip, cp, Op) {
-            super(pp, ip, cp), this.username = Op
+        class Dm extends hm {
+          constructor(TT, UT, mT, WT) {
+            super(TT, UT, mT), this.username = WT
           }
         }
-        class Vc extends sc {
-          constructor(pp, ip) {
-            super(pp, "facebook.com", ip)
+        class om extends hm {
+          constructor(TT, UT) {
+            super(TT, "facebook.com", UT)
           }
         }
-        class pO extends Kc {
-          constructor(pp, ip) {
-            super(pp, "github.com", ip, "string" === typeof(null === ip || void 0 === ip ? void 0 : ip.login) ? null === ip || void 0 === ip ? void 0 : ip.login : null)
+        class Am extends Dm {
+          constructor(TT, UT) {
+            super(TT, "github.com", UT, "string" === typeof(null === UT || void 0 === UT ? void 0 : UT.login) ? null === UT || void 0 === UT ? void 0 : UT.login : null)
           }
         }
-        class iO extends sc {
-          constructor(pp, ip) {
-            super(pp, "google.com", ip)
+        class Rm extends hm {
+          constructor(TT, UT) {
+            super(TT, "google.com", UT)
           }
         }
-        class cO extends Kc {
-          constructor(pp, ip, cp) {
-            super(pp, "twitter.com", ip, cp)
+        class TW extends Dm {
+          constructor(TT, UT, mT) {
+            super(TT, "twitter.com", UT, mT)
           }
         }
 
-        function OO(pp) {
+        function UW(TT) {
           const {
-            user: ip,
-            _tokenResponse: cp
-          } = pp;
-          return ip.isAnonymous && !cp ? {
+            user: UT,
+            _tokenResponse: mT
+          } = TT;
+          return UT.isAnonymous && !mT ? {
             providerId: null,
             isNewUser: !1,
             profile: null
-          } : function(pp) {
-            var ip, cp;
-            if (!pp) return null;
+          } : function(TT) {
+            var UT, mT;
+            if (!TT) return null;
             const {
-              providerId: Op
-            } = pp, op = pp.rawUserInfo ? JSON.parse(pp.rawUserInfo) : {}, Ip = pp.isNewUser || "identitytoolkit#SignupNewUserResponse" === pp.kind;
-            if (!Op && (null === pp || void 0 === pp ? void 0 : pp.idToken)) {
-              const Op = null === (cp = null === (ip = zp(pp.idToken)) || void 0 === ip ? void 0 : ip.firebase) || void 0 === cp ? void 0 : cp.sign_in_provider;
-              if (Op) return new sc(Ip, "anonymous" !== Op && "custom" !== Op ? Op : null)
+              providerId: WT
+            } = TT, zT = TT.rawUserInfo ? JSON.parse(TT.rawUserInfo) : {}, MT = TT.isNewUser || "identitytoolkit#SignupNewUserResponse" === TT.kind;
+            if (!WT && (null === TT || void 0 === TT ? void 0 : TT.idToken)) {
+              const WT = null === (mT = null === (UT = hT(TT.idToken)) || void 0 === UT ? void 0 : UT.firebase) || void 0 === mT ? void 0 : mT.sign_in_provider;
+              if (WT) return new hm(MT, "anonymous" !== WT && "custom" !== WT ? WT : null)
             }
-            if (!Op) return null;
-            switch (Op) {
+            if (!WT) return null;
+            switch (WT) {
               case "facebook.com":
-                return new Vc(Ip, op);
+                return new om(MT, zT);
               case "github.com":
-                return new pO(Ip, op);
+                return new Am(MT, zT);
               case "google.com":
-                return new iO(Ip, op);
+                return new Rm(MT, zT);
               case "twitter.com":
-                return new cO(Ip, op, pp.screenName || null);
+                return new TW(MT, zT, TT.screenName || null);
               case "custom":
               case "anonymous":
-                return new sc(Ip, null);
+                return new hm(MT, null);
               default:
-                return new sc(Ip, Op, op)
+                return new hm(MT, WT, zT)
             }
-          }(cp)
+          }(mT)
         }
 
-        function oO(pp, ip) {
-          return (0, Op.F)(pp).setPersistence(ip)
+        function mW(TT, UT) {
+          return (0, WT.P)(TT).setPersistence(UT)
         }
 
-        function IO(pp) {
-          return Qi(pp).initializeRecaptchaConfig()
+        function WW(TT) {
+          return yU(TT).initializeRecaptchaConfig()
         }
 
-        function SO(pp, ip, cp, op) {
-          return (0, Op.F)(pp).onIdTokenChanged(ip, cp, op)
+        function zW(TT, UT, mT, zT) {
+          return (0, WT.P)(TT).onIdTokenChanged(UT, mT, zT)
         }
 
-        function xO(pp, ip, cp) {
-          return (0, Op.F)(pp).beforeAuthStateChanged(ip, cp)
+        function MW(TT, UT, mT) {
+          return (0, WT.P)(TT).beforeAuthStateChanged(UT, mT)
         }
 
-        function LO(pp, ip, cp, op) {
-          return (0, Op.F)(pp).onAuthStateChanged(ip, cp, op)
+        function gW(TT, UT, mT, zT) {
+          return (0, WT.P)(TT).onAuthStateChanged(UT, mT, zT)
         }
 
-        function YO(pp) {
-          (0, Op.F)(pp).useDeviceLanguage()
+        function nW(TT) {
+          (0, WT.P)(TT).useDeviceLanguage()
         }
 
-        function DO(pp, ip) {
-          return (0, Op.F)(pp).updateCurrentUser(ip)
+        function HW(TT, UT) {
+          return (0, WT.P)(TT).updateCurrentUser(UT)
         }
 
-        function AO(pp) {
-          return (0, Op.F)(pp).signOut()
+        function kW(TT) {
+          return (0, WT.P)(TT).signOut()
         }
-        async function PO(pp) {
-          return (0, Op.F)(pp).delete()
+        async function jW(TT) {
+          return (0, WT.P)(TT).delete()
         }
-        class WO {
-          constructor(pp, ip, cp) {
-            this.type = pp, this.credential = ip, this.auth = cp
+        class lW {
+          constructor(TT, UT, mT) {
+            this.type = TT, this.credential = UT, this.auth = mT
           }
-          static _fromIdtoken(pp, ip) {
-            return new WO("enroll", pp, ip)
+          static _fromIdtoken(TT, UT) {
+            return new lW("enroll", TT, UT)
           }
-          static _fromMfaPendingCredential(pp) {
-            return new WO("signin", pp)
+          static _fromMfaPendingCredential(TT) {
+            return new lW("signin", TT)
           }
           toJSON() {
-            const pp = "enroll" === this.type ? "idToken" : "pendingCredential";
+            const TT = "enroll" === this.type ? "idToken" : "pendingCredential";
             return {
               multiFactorSession: {
-                [pp]: this.credential
+                [TT]: this.credential
               }
             }
           }
-          static fromJSON(pp) {
-            var ip, cp;
-            if (null === pp || void 0 === pp ? void 0 : pp.multiFactorSession) {
-              if (null === (ip = pp.multiFactorSession) || void 0 === ip ? void 0 : ip.pendingCredential) return WO._fromMfaPendingCredential(pp.multiFactorSession.pendingCredential);
-              if (null === (cp = pp.multiFactorSession) || void 0 === cp ? void 0 : cp.idToken) return WO._fromIdtoken(pp.multiFactorSession.idToken)
+          static fromJSON(TT) {
+            var UT, mT;
+            if (null === TT || void 0 === TT ? void 0 : TT.multiFactorSession) {
+              if (null === (UT = TT.multiFactorSession) || void 0 === UT ? void 0 : UT.pendingCredential) return lW._fromMfaPendingCredential(TT.multiFactorSession.pendingCredential);
+              if (null === (mT = TT.multiFactorSession) || void 0 === mT ? void 0 : mT.idToken) return lW._fromIdtoken(TT.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class yO {
-          constructor(pp, ip, cp) {
-            this.session = pp, this.hints = ip, this.signInResolver = cp
+        class LW {
+          constructor(TT, UT, mT) {
+            this.session = TT, this.hints = UT, this.signInResolver = mT
           }
-          static _fromError(pp, ip) {
-            const cp = Qi(pp),
-              Op = ip.customData._serverResponse,
-              op = (Op.mfaInfo || []).map((pp => Mc._fromServerResponse(cp, pp)));
-            Rp(Op.mfaPendingCredential, cp, "internal-error");
-            const Ip = WO._fromMfaPendingCredential(Op.mfaPendingCredential);
-            return new yO(Ip, op, (async pp => {
-              const op = await pp._process(cp, Ip);
-              delete Op.mfaInfo, delete Op.mfaPendingCredential;
-              const Sp = Object.assign(Object.assign({}, Op), {
-                idToken: op.idToken,
-                refreshToken: op.refreshToken
+          static _fromError(TT, UT) {
+            const mT = yU(TT),
+              WT = UT.customData._serverResponse,
+              zT = (WT.mfaInfo || []).map((TT => xm._fromServerResponse(mT, TT)));
+            JT(WT.mfaPendingCredential, mT, "internal-error");
+            const MT = lW._fromMfaPendingCredential(WT.mfaPendingCredential);
+            return new LW(MT, zT, (async TT => {
+              const zT = await TT._process(mT, MT);
+              delete WT.mfaInfo, delete WT.mfaPendingCredential;
+              const gT = Object.assign(Object.assign({}, WT), {
+                idToken: zT.idToken,
+                refreshToken: zT.refreshToken
               });
-              switch (ip.operationType) {
+              switch (UT.operationType) {
                 case "signIn":
-                  const pp = await Wc._fromIdTokenResponse(cp, ip.operationType, Sp);
-                  return await cp._updateCurrentUser(pp.user), pp;
+                  const TT = await jm._fromIdTokenResponse(mT, UT.operationType, gT);
+                  return await mT._updateCurrentUser(TT.user), TT;
                 case "reauthenticate":
-                  return Rp(ip.user, cp, "internal-error"), Wc._forOperation(ip.user, ip.operationType, Sp);
+                  return JT(UT.user, mT, "internal-error"), jm._forOperation(UT.user, UT.operationType, gT);
                 default:
-                  dp(cp, "internal-error")
+                  iT(mT, "internal-error")
               }
             }))
           }
-          async resolveSignIn(pp) {
-            const ip = pp;
-            return this.signInResolver(ip)
+          async resolveSignIn(TT) {
+            const UT = TT;
+            return this.signInResolver(UT)
           }
         }
 
-        function UO(pp, ip) {
-          var cp;
-          const op = (0, Op.F)(pp),
-            Ip = ip;
-          return Rp(ip.customData.operationType, op, "argument-error"), Rp(null === (cp = Ip.customData._serverResponse) || void 0 === cp ? void 0 : cp.mfaPendingCredential, op, "argument-error"), yO._fromError(op, Ip)
+        function pW(TT, UT) {
+          var mT;
+          const zT = (0, WT.P)(TT),
+            MT = UT;
+          return JT(UT.customData.operationType, zT, "argument-error"), JT(null === (mT = MT.customData._serverResponse) || void 0 === mT ? void 0 : mT.mfaPendingCredential, zT, "argument-error"), LW._fromError(zT, MT)
         }
-        class wO {
-          constructor(pp) {
-            this.user = pp, this.enrolledFactors = [], pp._onReload((ip => {
-              ip.mfaInfo && (this.enrolledFactors = ip.mfaInfo.map((ip => Mc._fromServerResponse(pp.auth, ip))))
+        class BW {
+          constructor(TT) {
+            this.user = TT, this.enrolledFactors = [], TT._onReload((UT => {
+              UT.mfaInfo && (this.enrolledFactors = UT.mfaInfo.map((UT => xm._fromServerResponse(TT.auth, UT))))
             }))
           }
-          static _fromUser(pp) {
-            return new wO(pp)
+          static _fromUser(TT) {
+            return new BW(TT)
           }
           async getSession() {
-            return WO._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return lW._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(pp, ip) {
-            const cp = pp,
-              Op = await this.getSession(),
-              op = await sp(this.user, cp._process(this.user.auth, Op, ip));
-            return await this.user._updateTokensIfNecessary(op), this.user.reload()
+          async enroll(TT, UT) {
+            const mT = TT,
+              WT = await this.getSession(),
+              zT = await DT(this.user, mT._process(this.user.auth, WT, UT));
+            return await this.user._updateTokensIfNecessary(zT), this.user.reload()
           }
-          async unenroll(pp) {
-            const ip = "string" === typeof pp ? pp : pp.uid,
-              cp = await this.user.getIdToken();
+          async unenroll(TT) {
+            const UT = "string" === typeof TT ? TT : TT.uid,
+              mT = await this.user.getIdToken();
             try {
-              const pp = await sp(this.user, (Op = this.user.auth, op = {
-                idToken: cp,
-                mfaEnrollmentId: ip
-              }, fp(Op, "POST", "/v2/accounts/mfaEnrollment:withdraw", Tp(Op, op))));
-              this.enrolledFactors = this.enrolledFactors.filter((pp => {
+              const TT = await DT(this.user, (WT = this.user.auth, zT = {
+                idToken: mT,
+                mfaEnrollmentId: UT
+              }, PT(WT, "POST", "/v2/accounts/mfaEnrollment:withdraw", FT(WT, zT))));
+              this.enrolledFactors = this.enrolledFactors.filter((TT => {
                 let {
-                  uid: cp
-                } = pp;
-                return cp !== ip
-              })), await this.user._updateTokensIfNecessary(pp), await this.user.reload()
-            } catch (Ip) {
-              throw Ip
+                  uid: mT
+                } = TT;
+                return mT !== UT
+              })), await this.user._updateTokensIfNecessary(TT), await this.user.reload()
+            } catch (MT) {
+              throw MT
             }
-            var Op, op
+            var WT, zT
           }
         }
-        const vO = new WeakMap;
+        const ZW = new WeakMap;
 
-        function tO(pp) {
-          const ip = (0, Op.F)(pp);
-          return vO.has(ip) || vO.set(ip, wO._fromUser(ip)), vO.get(ip)
+        function cW(TT) {
+          const UT = (0, WT.P)(TT);
+          return ZW.has(UT) || ZW.set(UT, BW._fromUser(UT)), ZW.get(UT)
         }
-        const HO = "__sak";
-        class dO {
-          constructor(pp, ip) {
-            this.storageRetriever = pp, this.type = ip
+        const vW = "__sak";
+        class fW {
+          constructor(TT, UT) {
+            this.storageRetriever = TT, this.type = UT
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(HO, "1"), this.storage.removeItem(HO), Promise.resolve(!0)) : Promise.resolve(!1)
-            } catch (pp) {
+              return this.storage ? (this.storage.setItem(vW, "1"), this.storage.removeItem(vW), Promise.resolve(!0)) : Promise.resolve(!1)
+            } catch (TT) {
               return Promise.resolve(!1)
             }
           }
-          _set(pp, ip) {
-            return this.storage.setItem(pp, JSON.stringify(ip)), Promise.resolve()
+          _set(TT, UT) {
+            return this.storage.setItem(TT, JSON.stringify(UT)), Promise.resolve()
           }
-          _get(pp) {
-            const ip = this.storage.getItem(pp);
-            return Promise.resolve(ip ? JSON.parse(ip) : null)
+          _get(TT) {
+            const UT = this.storage.getItem(TT);
+            return Promise.resolve(UT ? JSON.parse(UT) : null)
           }
-          _remove(pp) {
-            return this.storage.removeItem(pp), Promise.resolve()
+          _remove(TT) {
+            return this.storage.removeItem(TT), Promise.resolve()
           }
           get storage() {
             return this.storageRetriever()
           }
         }
-        class eO extends dO {
+        class qW extends fW {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (pp, ip) => this.onStorageEvent(pp, ip), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const pp = (0, Op.H)();
-              return yi(pp) || di(pp)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (TT, UT) => this.onStorageEvent(TT, UT), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const TT = (0, WT.R)();
+              return LU(TT) || fU(TT)
             }() && function() {
               try {
                 return !(!window || window === window.top)
-              } catch (pp) {
+              } catch (TT) {
                 return !1
               }
-            }(), this.fallbackToPolling = ei(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = qU(), this._shouldAllowMigration = !0
           }
-          forAllChangedKeys(pp) {
-            for (const ip of Object.keys(this.listeners)) {
-              const cp = this.storage.getItem(ip),
-                Op = this.localCache[ip];
-              cp !== Op && pp(ip, Op, cp)
+          forAllChangedKeys(TT) {
+            for (const UT of Object.keys(this.listeners)) {
+              const mT = this.storage.getItem(UT),
+                WT = this.localCache[UT];
+              mT !== WT && TT(UT, WT, mT)
             }
           }
-          onStorageEvent(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!pp.key) return void this.forAllChangedKeys(((pp, ip, cp) => {
-              this.notifyListeners(pp, cp)
+          onStorageEvent(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!TT.key) return void this.forAllChangedKeys(((TT, UT, mT) => {
+              this.notifyListeners(TT, mT)
             }));
-            const cp = pp.key;
-            if (ip ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const Op = this.storage.getItem(cp);
-              if (pp.newValue !== Op) null !== pp.newValue ? this.storage.setItem(cp, pp.newValue) : this.storage.removeItem(cp);
-              else if (this.localCache[cp] === pp.newValue && !ip) return
+            const mT = TT.key;
+            if (UT ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const WT = this.storage.getItem(mT);
+              if (TT.newValue !== WT) null !== TT.newValue ? this.storage.setItem(mT, TT.newValue) : this.storage.removeItem(mT);
+              else if (this.localCache[mT] === TT.newValue && !UT) return
             }
-            const op = () => {
-                const pp = this.storage.getItem(cp);
-                (ip || this.localCache[cp] !== pp) && this.notifyListeners(cp, pp)
+            const zT = () => {
+                const TT = this.storage.getItem(mT);
+                (UT || this.localCache[mT] !== TT) && this.notifyListeners(mT, TT)
               },
-              Ip = this.storage.getItem(cp);
-            (0, Op.P)() && 10 === document.documentMode && Ip !== pp.newValue && pp.newValue !== pp.oldValue ? setTimeout(op, 10) : op()
+              MT = this.storage.getItem(mT);
+            (0, WT.$)() && 10 === document.documentMode && MT !== TT.newValue && TT.newValue !== TT.oldValue ? setTimeout(zT, 10) : zT()
           }
-          notifyListeners(pp, ip) {
-            this.localCache[pp] = ip;
-            const cp = this.listeners[pp];
-            if (cp)
-              for (const Op of Array.from(cp)) Op(ip ? JSON.parse(ip) : ip)
+          notifyListeners(TT, UT) {
+            this.localCache[TT] = UT;
+            const mT = this.listeners[TT];
+            if (mT)
+              for (const WT of Array.from(mT)) WT(UT ? JSON.parse(UT) : UT)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((pp, ip, cp) => {
+              this.forAllChangedKeys(((TT, UT, mT) => {
                 this.onStorageEvent(new StorageEvent("storage", {
-                  key: pp,
-                  oldValue: ip,
-                  newValue: cp
+                  key: TT,
+                  oldValue: UT,
+                  newValue: mT
                 }), !0)
               }))
             }), 1e3)
@@ -2874,313 +2874,313 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(pp, ip) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[pp] || (this.listeners[pp] = new Set, this.localCache[pp] = this.storage.getItem(pp)), this.listeners[pp].add(ip)
+          _addListener(TT, UT) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[TT] || (this.listeners[TT] = new Set, this.localCache[TT] = this.storage.getItem(TT)), this.listeners[TT].add(UT)
           }
-          _removeListener(pp, ip) {
-            this.listeners[pp] && (this.listeners[pp].delete(ip), 0 === this.listeners[pp].size && delete this.listeners[pp]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(TT, UT) {
+            this.listeners[TT] && (this.listeners[TT].delete(UT), 0 === this.listeners[TT].size && delete this.listeners[TT]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(pp, ip) {
-            await super._set(pp, ip), this.localCache[pp] = JSON.stringify(ip)
+          async _set(TT, UT) {
+            await super._set(TT, UT), this.localCache[TT] = JSON.stringify(UT)
           }
-          async _get(pp) {
-            const ip = await super._get(pp);
-            return this.localCache[pp] = JSON.stringify(ip), ip
+          async _get(TT) {
+            const UT = await super._get(TT);
+            return this.localCache[TT] = JSON.stringify(UT), UT
           }
-          async _remove(pp) {
-            await super._remove(pp), delete this.localCache[pp]
+          async _remove(TT) {
+            await super._remove(TT), delete this.localCache[TT]
           }
         }
-        eO.type = "LOCAL";
-        const uO = eO;
-        class jO extends dO {
+        qW.type = "LOCAL";
+        const iW = qW;
+        class bW extends fW {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(pp, ip) {}
-          _removeListener(pp, ip) {}
+          _addListener(TT, UT) {}
+          _removeListener(TT, UT) {}
         }
-        jO.type = "SESSION";
-        const kO = jO;
-        class mO {
-          constructor(pp) {
-            this.eventTarget = pp, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
+        bW.type = "SESSION";
+        const OW = bW;
+        class eW {
+          constructor(TT) {
+            this.eventTarget = TT, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
-          static _getInstance(pp) {
-            const ip = this.receivers.find((ip => ip.isListeningto(pp)));
-            if (ip) return ip;
-            const cp = new mO(pp);
-            return this.receivers.push(cp), cp
+          static _getInstance(TT) {
+            const UT = this.receivers.find((UT => UT.isListeningto(TT)));
+            if (UT) return UT;
+            const mT = new eW(TT);
+            return this.receivers.push(mT), mT
           }
-          isListeningto(pp) {
-            return this.eventTarget === pp
+          isListeningto(TT) {
+            return this.eventTarget === TT
           }
-          async handleEvent(pp) {
-            const ip = pp,
+          async handleEvent(TT) {
+            const UT = TT,
               {
-                eventId: cp,
-                eventType: Op,
-                data: op
-              } = ip.data,
-              Ip = this.handlersMap[Op];
-            if (!(null === Ip || void 0 === Ip ? void 0 : Ip.size)) return;
-            ip.ports[0].postMessage({
+                eventId: mT,
+                eventType: WT,
+                data: zT
+              } = UT.data,
+              MT = this.handlersMap[WT];
+            if (!(null === MT || void 0 === MT ? void 0 : MT.size)) return;
+            UT.ports[0].postMessage({
               status: "ack",
-              eventId: cp,
-              eventType: Op
+              eventId: mT,
+              eventType: WT
             });
-            const Sp = Array.from(Ip).map((async pp => pp(ip.origin, op))),
-              xp = await
-            function(pp) {
-              return Promise.all(pp.map((async pp => {
+            const gT = Array.from(MT).map((async TT => TT(UT.origin, zT))),
+              nT = await
+            function(TT) {
+              return Promise.all(TT.map((async TT => {
                 try {
                   return {
                     fulfilled: !0,
-                    value: await pp
+                    value: await TT
                   }
-                } catch (ip) {
+                } catch (UT) {
                   return {
                     fulfilled: !1,
-                    reason: ip
+                    reason: UT
                   }
                 }
               })))
-            }(Sp);
-            ip.ports[0].postMessage({
+            }(gT);
+            UT.ports[0].postMessage({
               status: "done",
-              eventId: cp,
-              eventType: Op,
-              response: xp
+              eventId: mT,
+              eventType: WT,
+              response: nT
             })
           }
-          _subscribe(pp, ip) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[pp] || (this.handlersMap[pp] = new Set), this.handlersMap[pp].add(ip)
+          _subscribe(TT, UT) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[TT] || (this.handlersMap[TT] = new Set), this.handlersMap[TT].add(UT)
           }
-          _unsubscribe(pp, ip) {
-            this.handlersMap[pp] && ip && this.handlersMap[pp].delete(ip), ip && 0 !== this.handlersMap[pp].size || delete this.handlersMap[pp], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(TT, UT) {
+            this.handlersMap[TT] && UT && this.handlersMap[TT].delete(UT), UT && 0 !== this.handlersMap[TT].size || delete this.handlersMap[TT], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function RO() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            cp = "";
-          for (let Op = 0; Op < ip; Op++) cp += Math.floor(10 * Math.random());
-          return pp + cp
+        function YW() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+            UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            mT = "";
+          for (let WT = 0; WT < UT; WT++) mT += Math.floor(10 * Math.random());
+          return TT + mT
         }
-        mO.receivers = [];
-        class qO {
-          constructor(pp) {
-            this.target = pp, this.handlers = new Set
+        eW.receivers = [];
+        class JW {
+          constructor(TT) {
+            this.target = TT, this.handlers = new Set
           }
-          removeMessageHandler(pp) {
-            pp.messageChannel && (pp.messageChannel.port1.removeEventListener("message", pp.ku), pp.messageChannel.port1.close()), this.handlers.delete(pp)
+          removeMessageHandler(TT) {
+            TT.messageChannel && (TT.messageChannel.port1.removeEventListener("message", TT.LO), TT.messageChannel.port1.close()), this.handlers.delete(TT)
           }
-          async _send(pp, ip) {
-            let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const Op = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!Op) throw new Error("connection_unavailable");
-            let op, Ip;
-            return new Promise(((Sp, xp) => {
-              const Lp = RO("", 20);
-              Op.port1.start();
-              const Yp = setTimeout((() => {
-                xp(new Error("unsupported_event"))
-              }), cp);
-              Ip = {
-                messageChannel: Op,
-                ku(pp) {
-                  const ip = pp;
-                  if (ip.data.eventId === Lp) switch (ip.data.status) {
+          async _send(TT, UT) {
+            let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const WT = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!WT) throw new Error("connection_unavailable");
+            let zT, MT;
+            return new Promise(((gT, nT) => {
+              const HT = YW("", 20);
+              WT.port1.start();
+              const kT = setTimeout((() => {
+                nT(new Error("unsupported_event"))
+              }), mT);
+              MT = {
+                messageChannel: WT,
+                LO(TT) {
+                  const UT = TT;
+                  if (UT.data.eventId === HT) switch (UT.data.status) {
                     case "ack":
-                      clearTimeout(Yp), op = setTimeout((() => {
-                        xp(new Error("timeout"))
+                      clearTimeout(kT), zT = setTimeout((() => {
+                        nT(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(op), Sp(ip.data.response);
+                      clearTimeout(zT), gT(UT.data.response);
                       break;
                     default:
-                      clearTimeout(Yp), clearTimeout(op), xp(new Error("invalid_response"))
+                      clearTimeout(kT), clearTimeout(zT), nT(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(Ip), Op.port1.addEventListener("message", Ip.ku), this.target.postMessage({
-                eventType: pp,
-                eventId: Lp,
-                data: ip
-              }, [Op.port2])
+              }, this.handlers.add(MT), WT.port1.addEventListener("message", MT.LO), this.target.postMessage({
+                eventType: TT,
+                eventId: HT,
+                data: UT
+              }, [WT.port2])
             })).finally((() => {
-              Ip && this.removeMessageHandler(Ip)
+              MT && this.removeMessageHandler(MT)
             }))
           }
         }
 
-        function MO() {
+        function xW() {
           return window
         }
 
-        function CO() {
-          return "undefined" !== typeof MO().WorkerGlobalScope && "function" === typeof MO().importScripts
+        function dW() {
+          return "undefined" !== typeof xW().WorkerGlobalScope && "function" === typeof xW().importScripts
         }
-        const EO = "firebaseLocalStorageDb",
-          XO = "firebaseLocalStorage",
-          lO = "fbase_key";
-        class QO {
-          constructor(pp) {
-            this.request = pp
+        const wW = "firebaseLocalStorageDb",
+          tW = "firebaseLocalStorage",
+          aW = "fbase_key";
+        class yW {
+          constructor(TT) {
+            this.request = TT
           }
           toPromise() {
-            return new Promise(((pp, ip) => {
+            return new Promise(((TT, UT) => {
               this.request.addEventListener("success", (() => {
-                pp(this.request.result)
+                TT(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                ip(this.request.error)
+                UT(this.request.error)
               }))
             }))
           }
         }
 
-        function JO(pp, ip) {
-          return pp.transaction([XO], ip ? "readwrite" : "readonly").objectStore(XO)
+        function XW(TT, UT) {
+          return TT.transaction([tW], UT ? "readwrite" : "readonly").objectStore(tW)
         }
 
-        function BO() {
-          const pp = indexedDB.open(EO, 1);
-          return new Promise(((ip, cp) => {
-            pp.addEventListener("error", (() => {
-              cp(pp.error)
-            })), pp.addEventListener("upgradeneeded", (() => {
-              const ip = pp.result;
+        function IW() {
+          const TT = indexedDB.open(wW, 1);
+          return new Promise(((UT, mT) => {
+            TT.addEventListener("error", (() => {
+              mT(TT.error)
+            })), TT.addEventListener("upgradeneeded", (() => {
+              const UT = TT.result;
               try {
-                ip.createObjectStore(XO, {
-                  keyPath: lO
+                UT.createObjectStore(tW, {
+                  keyPath: aW
                 })
-              } catch (Op) {
-                cp(Op)
+              } catch (WT) {
+                mT(WT)
               }
-            })), pp.addEventListener("success", (async () => {
-              const cp = pp.result;
-              cp.objectStoreNames.contains(XO) ? ip(cp) : (cp.close(), await
+            })), TT.addEventListener("success", (async () => {
+              const mT = TT.result;
+              mT.objectStoreNames.contains(tW) ? UT(mT) : (mT.close(), await
                 function() {
-                  const pp = indexedDB.deleteDatabase(EO);
-                  return new QO(pp).toPromise()
-                }(), ip(await BO()))
+                  const TT = indexedDB.deleteDatabase(wW);
+                  return new yW(TT).toPromise()
+                }(), UT(await IW()))
             }))
           }))
         }
-        async function NO(pp, ip, cp) {
-          const Op = JO(pp, !0).put({
-            [lO]: ip,
-            value: cp
+        async function QW(TT, UT, mT) {
+          const WT = XW(TT, !0).put({
+            [aW]: UT,
+            value: mT
           });
-          return new QO(Op).toPromise()
+          return new yW(WT).toPromise()
         }
 
-        function TO(pp, ip) {
-          const cp = JO(pp, !0).delete(ip);
-          return new QO(cp).toPromise()
+        function sW(TT, UT) {
+          const mT = XW(TT, !0).delete(UT);
+          return new yW(mT).toPromise()
         }
-        class fO {
+        class FW {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await BO()), this.db
+            return this.db || (this.db = await IW()), this.db
           }
-          async _withRetries(pp) {
-            let ip = 0;
+          async _withRetries(TT) {
+            let UT = 0;
             for (;;) try {
-              const ip = await this._openDb();
-              return await pp(ip)
-            } catch (cp) {
-              if (ip++ > 3) throw cp;
+              const UT = await this._openDb();
+              return await TT(UT)
+            } catch (mT) {
+              if (UT++ > 3) throw mT;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return CO() ? this.initializeReceiver() : this.initializeSender()
+            return dW() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = mO._getInstance(CO() ? self : null), this.receiver._subscribe("keyChanged", (async (pp, ip) => ({
-              keyProcessed: (await this._poll()).includes(ip.key)
-            }))), this.receiver._subscribe("ping", (async (pp, ip) => ["keyChanged"]))
+            this.receiver = eW._getInstance(dW() ? self : null), this.receiver._subscribe("keyChanged", (async (TT, UT) => ({
+              keyProcessed: (await this._poll()).includes(UT.key)
+            }))), this.receiver._subscribe("ping", (async (TT, UT) => ["keyChanged"]))
           }
           async initializeSender() {
-            var pp, ip;
+            var TT, UT;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
                   return (await navigator.serviceWorker.ready).active
-                } catch (pp) {
+                } catch (TT) {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new qO(this.activeServiceWorker);
-            const cp = await this.sender._send("ping", {}, 800);
-            cp && (null === (pp = cp[0]) || void 0 === pp ? void 0 : pp.fulfilled) && (null === (ip = cp[0]) || void 0 === ip ? void 0 : ip.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new JW(this.activeServiceWorker);
+            const mT = await this.sender._send("ping", {}, 800);
+            mT && (null === (TT = mT[0]) || void 0 === TT ? void 0 : TT.fulfilled) && (null === (UT = mT[0]) || void 0 === UT ? void 0 : UT.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
-          async notifyServiceWorker(pp) {
+          async notifyServiceWorker(TT) {
             if (this.sender && this.activeServiceWorker && function() {
-                var pp;
-                return (null === (pp = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === pp ? void 0 : pp.controller) || null
+                var TT;
+                return (null === (TT = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === TT ? void 0 : TT.controller) || null
               }() === this.activeServiceWorker) try {
               await this.sender._send("keyChanged", {
-                key: pp
+                key: TT
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (ip) {}
+            } catch (UT) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const pp = await BO();
-              return await NO(pp, HO, "1"), await TO(pp, HO), !0
-            } catch (pp) {}
+              const TT = await IW();
+              return await QW(TT, vW, "1"), await sW(TT, vW), !0
+            } catch (TT) {}
             return !1
           }
-          async _withPendingWrite(pp) {
+          async _withPendingWrite(TT) {
             this.pendingWrites++;
             try {
-              await pp()
+              await TT()
             } finally {
               this.pendingWrites--
             }
           }
-          async _set(pp, ip) {
-            return this._withPendingWrite((async () => (await this._withRetries((cp => NO(cp, pp, ip))), this.localCache[pp] = ip, this.notifyServiceWorker(pp))))
+          async _set(TT, UT) {
+            return this._withPendingWrite((async () => (await this._withRetries((mT => QW(mT, TT, UT))), this.localCache[TT] = UT, this.notifyServiceWorker(TT))))
           }
-          async _get(pp) {
-            const ip = await this._withRetries((ip => async function(pp, ip) {
-              const cp = JO(pp, !1).get(ip),
-                Op = await new QO(cp).toPromise();
-              return void 0 === Op ? null : Op.value
-            }(ip, pp)));
-            return this.localCache[pp] = ip, ip
+          async _get(TT) {
+            const UT = await this._withRetries((UT => async function(TT, UT) {
+              const mT = XW(TT, !1).get(UT),
+                WT = await new yW(mT).toPromise();
+              return void 0 === WT ? null : WT.value
+            }(UT, TT)));
+            return this.localCache[TT] = UT, UT
           }
-          async _remove(pp) {
-            return this._withPendingWrite((async () => (await this._withRetries((ip => TO(ip, pp))), delete this.localCache[pp], this.notifyServiceWorker(pp))))
+          async _remove(TT) {
+            return this._withPendingWrite((async () => (await this._withRetries((UT => sW(UT, TT))), delete this.localCache[TT], this.notifyServiceWorker(TT))))
           }
           async _poll() {
-            const pp = await this._withRetries((pp => {
-              const ip = JO(pp, !1).getAll();
-              return new QO(ip).toPromise()
+            const TT = await this._withRetries((TT => {
+              const UT = XW(TT, !1).getAll();
+              return new yW(UT).toPromise()
             }));
-            if (!pp) return [];
+            if (!TT) return [];
             if (0 !== this.pendingWrites) return [];
-            const ip = [],
-              cp = new Set;
+            const UT = [],
+              mT = new Set;
             for (const {
-                fbase_key: Op,
-                value: op
+                fbase_key: WT,
+                value: zT
               }
-              of pp) cp.add(Op), JSON.stringify(this.localCache[Op]) !== JSON.stringify(op) && (this.notifyListeners(Op, op), ip.push(Op));
-            for (const Op of Object.keys(this.localCache)) this.localCache[Op] && !cp.has(Op) && (this.notifyListeners(Op, null), ip.push(Op));
-            return ip
+              of TT) mT.add(WT), JSON.stringify(this.localCache[WT]) !== JSON.stringify(zT) && (this.notifyListeners(WT, zT), UT.push(WT));
+            for (const WT of Object.keys(this.localCache)) this.localCache[WT] && !mT.has(WT) && (this.notifyListeners(WT, null), UT.push(WT));
+            return UT
           }
-          notifyListeners(pp, ip) {
-            this.localCache[pp] = ip;
-            const cp = this.listeners[pp];
-            if (cp)
-              for (const Op of Array.from(cp)) Op(ip)
+          notifyListeners(TT, UT) {
+            this.localCache[TT] = UT;
+            const mT = this.listeners[TT];
+            if (mT)
+              for (const WT of Array.from(mT)) WT(UT)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(pp, ip) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[pp] || (this.listeners[pp] = new Set, this._get(pp)), this.listeners[pp].add(ip)
+          _addListener(TT, UT) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[TT] || (this.listeners[TT] = new Set, this._get(TT)), this.listeners[TT].add(UT)
           }
-          _removeListener(pp, ip) {
-            this.listeners[pp] && (this.listeners[pp].delete(ip), 0 === this.listeners[pp].size && delete this.listeners[pp]), 0 === Object.keys(this.listeners).length && this.stopPolling()
-          }
-        }
-        fO.type = "LOCAL";
-        const bO = fO;
-        const hO = 1e12;
-        class aO {
-          constructor(pp) {
-            this.auth = pp, this.counter = hO, this._widgets = new Map
-          }
-          render(pp, ip) {
-            const cp = this.counter;
-            return this._widgets.set(cp, new nO(pp, this.auth.name, ip || {})), this.counter++, cp
-          }
-          reset(pp) {
-            var ip;
-            const cp = pp || hO;
-            null === (ip = this._widgets.get(cp)) || void 0 === ip || ip.delete(), this._widgets.delete(cp)
-          }
-          getResponse(pp) {
-            var ip;
-            const cp = pp || hO;
-            return (null === (ip = this._widgets.get(cp)) || void 0 === ip ? void 0 : ip.getResponse()) || ""
-          }
-          async execute(pp) {
-            var ip;
-            const cp = pp || hO;
-            return null === (ip = this._widgets.get(cp)) || void 0 === ip || ip.execute(), ""
+          _removeListener(TT, UT) {
+            this.listeners[TT] && (this.listeners[TT].delete(UT), 0 === this.listeners[TT].size && delete this.listeners[TT]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        class nO {
-          constructor(pp, ip, cp) {
-            this.params = cp, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        FW.type = "LOCAL";
+        const PW = FW;
+        const VW = 1e12;
+        class uW {
+          constructor(TT) {
+            this.auth = TT, this.counter = VW, this._widgets = new Map
+          }
+          render(TT, UT) {
+            const mT = this.counter;
+            return this._widgets.set(mT, new CW(TT, this.auth.name, UT || {})), this.counter++, mT
+          }
+          reset(TT) {
+            var UT;
+            const mT = TT || VW;
+            null === (UT = this._widgets.get(mT)) || void 0 === UT || UT.delete(), this._widgets.delete(mT)
+          }
+          getResponse(TT) {
+            var UT;
+            const mT = TT || VW;
+            return (null === (UT = this._widgets.get(mT)) || void 0 === UT ? void 0 : UT.getResponse()) || ""
+          }
+          async execute(TT) {
+            var UT;
+            const mT = TT || VW;
+            return null === (UT = this._widgets.get(mT)) || void 0 === UT || UT.execute(), ""
+          }
+        }
+        class CW {
+          constructor(TT, UT, mT) {
+            this.params = mT, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const Op = "string" === typeof pp ? document.getElementById(pp) : pp;
-            Rp(Op, "argument-error", {
-              appName: ip
-            }), this.container = Op, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const WT = "string" === typeof TT ? document.getElementById(TT) : TT;
+            JT(WT, "argument-error", {
+              appName: UT
+            }), this.container = WT, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3240,23 +3240,23 @@ export const modules = {
           }
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
-              this.responseToken = function(pp) {
-                const ip = [],
-                  cp = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let Op = 0; Op < pp; Op++) ip.push(cp.charAt(Math.floor(Math.random() * cp.length)));
-                return ip.join("")
+              this.responseToken = function(TT) {
+                const UT = [],
+                  mT = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let WT = 0; WT < TT; WT++) UT.push(mT.charAt(Math.floor(Math.random() * mT.length)));
+                return UT.join("")
               }(50);
               const {
-                callback: pp,
-                "expired-callback": ip
+                callback: TT,
+                "expired-callback": UT
               } = this.params;
-              if (pp) try {
-                pp(this.responseToken)
-              } catch (cp) {}
+              if (TT) try {
+                TT(this.responseToken)
+              } catch (mT) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, ip) try {
-                  ip()
-                } catch (cp) {}
+                if (this.timerId = null, this.responseToken = null, UT) try {
+                  UT()
+                } catch (mT) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,268 +3265,268 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const FO = Mi("rcb"),
-          gO = new lp(3e4, 6e4);
-        class GO {
+        const rW = xU("rcb"),
+          KW = new yT(3e4, 6e4);
+        class SW {
           constructor() {
-            var pp;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (pp = MO().grecaptcha) || void 0 === pp ? void 0 : pp.render)
+            var TT;
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (TT = xW().grecaptcha) || void 0 === TT ? void 0 : TT.render)
           }
-          load(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return Rp(function(pp) {
-              return pp.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(pp)
-            }(ip), pp, "argument-error"), this.shouldResolveImmediately(ip) && ki(MO().grecaptcha) ? Promise.resolve(MO().grecaptcha) : new Promise(((cp, op) => {
-              const Ip = MO().setTimeout((() => {
-                op(ep(pp, "network-request-failed"))
-              }), gO.get());
-              MO()[FO] = () => {
-                MO().clearTimeout(Ip), delete MO()[FO];
-                const Op = MO().grecaptcha;
-                if (!Op || !ki(Op)) return void op(ep(pp, "internal-error"));
-                const Sp = Op.render;
-                Op.render = (pp, ip) => {
-                  const cp = Sp(pp, ip);
-                  return this.counter++, cp
-                }, this.hostLanguage = ip, cp(Op)
+          load(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return JT(function(TT) {
+              return TT.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(TT)
+            }(UT), TT, "argument-error"), this.shouldResolveImmediately(UT) && OU(xW().grecaptcha) ? Promise.resolve(xW().grecaptcha) : new Promise(((mT, zT) => {
+              const MT = xW().setTimeout((() => {
+                zT(bT(TT, "network-request-failed"))
+              }), KW.get());
+              xW()[rW] = () => {
+                xW().clearTimeout(MT), delete xW()[rW];
+                const WT = xW().grecaptcha;
+                if (!WT || !OU(WT)) return void zT(bT(TT, "internal-error"));
+                const gT = WT.render;
+                WT.render = (TT, UT) => {
+                  const mT = gT(TT, UT);
+                  return this.counter++, mT
+                }, this.hostLanguage = UT, mT(WT)
               };
-              qi(`https://www.google.com/recaptcha/api.js??${(0,Op.cb)({onload:FO,render:"explicit",hl:ip})}`).catch((() => {
-                clearTimeout(Ip), op(ep(pp, "internal-error"))
+              JU(`https://www.google.com/recaptcha/api.js??${(0,WT.pb)({onload:rW,render:"explicit",hl:UT})}`).catch((() => {
+                clearTimeout(MT), zT(bT(TT, "internal-error"))
               }))
             }))
           }
           clearedOneInstance() {
             this.counter--
           }
-          shouldResolveImmediately(pp) {
-            var ip;
-            return !!(null === (ip = MO().grecaptcha) || void 0 === ip ? void 0 : ip.render) && (pp === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+          shouldResolveImmediately(TT) {
+            var UT;
+            return !!(null === (UT = xW().grecaptcha) || void 0 === UT ? void 0 : UT.render) && (TT === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class rO {
-          async load(pp) {
-            return new aO(pp)
+        class GW {
+          async load(TT) {
+            return new uW(TT)
           }
           clearedOneInstance() {}
         }
-        const ZO = "recaptcha",
-          zO = {
+        const NW = "recaptcha",
+          EW = {
             theme: "light",
             type: "image"
           };
-        class sO {
-          constructor(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, zO),
-              cp = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = ip, this.type = ZO, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = Qi(cp), this.isInvisible = "invisible" === this.parameters.size, Rp("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const Op = "string" === typeof pp ? document.getElementById(pp) : pp;
-            Rp(Op, this.auth, "argument-error"), this.container = Op, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new rO : new GO, this.validateStartingState()
+        class hW {
+          constructor(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, EW),
+              mT = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = UT, this.type = NW, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = yU(mT), this.isInvisible = "invisible" === this.parameters.size, JT("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const WT = "string" === typeof TT ? document.getElementById(TT) : TT;
+            JT(WT, this.auth, "argument-error"), this.container = WT, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new GW : new SW, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
-            const pp = await this.render(),
-              ip = this.getAssertedRecaptcha(),
-              cp = ip.getResponse(pp);
-            return cp || new Promise((cp => {
-              const Op = pp => {
-                pp && (this.tokenChangeListeners.delete(Op), cp(pp))
+            const TT = await this.render(),
+              UT = this.getAssertedRecaptcha(),
+              mT = UT.getResponse(TT);
+            return mT || new Promise((mT => {
+              const WT = TT => {
+                TT && (this.tokenChangeListeners.delete(WT), mT(TT))
               };
-              this.tokenChangeListeners.add(Op), this.isInvisible && ip.execute(pp)
+              this.tokenChangeListeners.add(WT), this.isInvisible && UT.execute(TT)
             }))
           }
           render() {
             try {
               this.assertNotDestroyed()
-            } catch (pp) {
-              return Promise.reject(pp)
+            } catch (TT) {
+              return Promise.reject(TT)
             }
-            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((pp => {
-              throw this.renderPromise = null, pp
+            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((TT => {
+              throw this.renderPromise = null, TT
             }))), this.renderPromise
           }
           _reset() {
             this.assertNotDestroyed(), null !== this.widgetId && this.getAssertedRecaptcha().reset(this.widgetId)
           }
           clear() {
-            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((pp => {
-              this.container.removeChild(pp)
+            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((TT => {
+              this.container.removeChild(TT)
             }))
           }
           validateStartingState() {
-            Rp(!this.parameters.sitekey, this.auth, "argument-error"), Rp(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), Rp("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            JT(!this.parameters.sitekey, this.auth, "argument-error"), JT(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), JT("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
-          makeTokenCallback(pp) {
-            return ip => {
-              if (this.tokenChangeListeners.forEach((pp => pp(ip))), "function" === typeof pp) pp(ip);
-              else if ("string" === typeof pp) {
-                const cp = MO()[pp];
-                "function" === typeof cp && cp(ip)
+          makeTokenCallback(TT) {
+            return UT => {
+              if (this.tokenChangeListeners.forEach((TT => TT(UT))), "function" === typeof TT) TT(UT);
+              else if ("string" === typeof TT) {
+                const mT = xW()[TT];
+                "function" === typeof mT && mT(UT)
               }
             }
           }
           assertNotDestroyed() {
-            Rp(!this.destroyed, this.auth, "internal-error")
+            JT(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
-              let pp = this.container;
+              let TT = this.container;
               if (!this.isInvisible) {
-                const ip = document.createElement("div");
-                pp.appendChild(ip), pp = ip
+                const UT = document.createElement("div");
+                TT.appendChild(UT), TT = UT
               }
-              this.widgetId = this.getAssertedRecaptcha().render(pp, this.parameters)
+              this.widgetId = this.getAssertedRecaptcha().render(TT, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            Rp(Ep() && !CO(), this.auth, "internal-error"), await
+            JT(tT() && !dW(), this.auth, "internal-error"), await
             function() {
-              let pp = null;
-              return new Promise((ip => {
-                "complete" !== document.readyState ? (pp = () => ip(), window.addEventListener("load", pp)) : ip()
-              })).catch((ip => {
-                throw pp && window.removeEventListener("load", pp), ip
+              let TT = null;
+              return new Promise((UT => {
+                "complete" !== document.readyState ? (TT = () => UT(), window.addEventListener("load", TT)) : UT()
+              })).catch((UT => {
+                throw TT && window.removeEventListener("load", TT), UT
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
-            const pp = await async function(pp) {
-              return (await fp(pp, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+            const TT = await async function(TT) {
+              return (await PT(TT, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            Rp(pp, this.auth, "internal-error"), this.parameters.sitekey = pp
+            JT(TT, this.auth, "internal-error"), this.parameters.sitekey = TT
           }
           getAssertedRecaptcha() {
-            return Rp(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return JT(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class KO {
-          constructor(pp, ip) {
-            this.verificationId = pp, this.onConfirmation = ip
+        class DW {
+          constructor(TT, UT) {
+            this.verificationId = TT, this.onConfirmation = UT
           }
-          confirm(pp) {
-            const ip = Vi._fromVerification(this.verificationId, pp);
-            return this.onConfirmation(ip)
+          confirm(TT) {
+            const UT = DU._fromVerification(this.verificationId, TT);
+            return this.onConfirmation(UT)
           }
         }
-        async function VO(pp, ip, cp) {
-          const op = Qi(pp),
-            Ip = await co(op, ip, (0, Op.F)(cp));
-          return new KO(Ip, (pp => kc(op, pp)))
+        async function oW(TT, UT, mT) {
+          const zT = yU(TT),
+            MT = await Tz(zT, UT, (0, WT.P)(mT));
+          return new DW(MT, (TT => Om(zT, TT)))
         }
-        async function po(pp, ip, cp) {
-          const op = (0, Op.F)(pp);
-          await ec(!1, op, "phone");
-          const Ip = await co(op.auth, ip, (0, Op.F)(cp));
-          return new KO(Ip, (pp => mc(op, pp)))
+        async function AW(TT, UT, mT) {
+          const zT = (0, WT.P)(TT);
+          await qm(!1, zT, "phone");
+          const MT = await Tz(zT.auth, UT, (0, WT.P)(mT));
+          return new DW(MT, (TT => em(zT, TT)))
         }
-        async function io(pp, ip, cp) {
-          const op = (0, Op.F)(pp),
-            Ip = await co(op.auth, ip, (0, Op.F)(cp));
-          return new KO(Ip, (pp => Rc(op, pp)))
+        async function RW(TT, UT, mT) {
+          const zT = (0, WT.P)(TT),
+            MT = await Tz(zT.auth, UT, (0, WT.P)(mT));
+          return new DW(MT, (TT => Ym(zT, TT)))
         }
-        async function co(pp, ip, cp) {
-          var Op;
-          const op = await cp.verify();
+        async function Tz(TT, UT, mT) {
+          var WT;
+          const zT = await mT.verify();
           try {
-            let Ip;
-            if (Rp("string" === typeof op, pp, "argument-error"), Rp(cp.type === ZO, pp, "argument-error"), Ip = "string" === typeof ip ? {
-                phoneNumber: ip
-              } : ip, "session" in Ip) {
-              const ip = Ip.session;
-              if ("phoneNumber" in Ip) {
-                Rp("enroll" === ip.type, pp, "internal-error");
-                const cp = await
-                function(pp, ip) {
-                  return fp(pp, "POST", "/v2/accounts/mfaEnrollment:start", Tp(pp, ip))
-                }(pp, {
-                  idToken: ip.credential,
+            let MT;
+            if (JT("string" === typeof zT, TT, "argument-error"), JT(mT.type === NW, TT, "argument-error"), MT = "string" === typeof UT ? {
+                phoneNumber: UT
+              } : UT, "session" in MT) {
+              const UT = MT.session;
+              if ("phoneNumber" in MT) {
+                JT("enroll" === UT.type, TT, "internal-error");
+                const mT = await
+                function(TT, UT) {
+                  return PT(TT, "POST", "/v2/accounts/mfaEnrollment:start", FT(TT, UT))
+                }(TT, {
+                  idToken: UT.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: Ip.phoneNumber,
-                    recaptchaToken: op
+                    phoneNumber: MT.phoneNumber,
+                    recaptchaToken: zT
                   }
                 });
-                return cp.phoneSessionInfo.sessionInfo
+                return mT.phoneSessionInfo.sessionInfo
               } {
-                Rp("signin" === ip.type, pp, "internal-error");
-                const cp = (null === (Op = Ip.multiFactorHint) || void 0 === Op ? void 0 : Op.uid) || Ip.multiFactorUid;
-                Rp(cp, pp, "missing-multi-factor-info");
-                const Sp = await
-                function(pp, ip) {
-                  return fp(pp, "POST", "/v2/accounts/mfaSignIn:start", Tp(pp, ip))
-                }(pp, {
-                  mfaPendingCredential: ip.credential,
-                  mfaEnrollmentId: cp,
+                JT("signin" === UT.type, TT, "internal-error");
+                const mT = (null === (WT = MT.multiFactorHint) || void 0 === WT ? void 0 : WT.uid) || MT.multiFactorUid;
+                JT(mT, TT, "missing-multi-factor-info");
+                const gT = await
+                function(TT, UT) {
+                  return PT(TT, "POST", "/v2/accounts/mfaSignIn:start", FT(TT, UT))
+                }(TT, {
+                  mfaPendingCredential: UT.credential,
+                  mfaEnrollmentId: mT,
                   phoneSignInInfo: {
-                    recaptchaToken: op
+                    recaptchaToken: zT
                   }
                 });
-                return Sp.phoneResponseInfo.sessionInfo
+                return gT.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: ip
-              } = await async function(pp, ip) {
-                return fp(pp, "POST", "/v1/accounts:sendVerificationCode", Tp(pp, ip))
-              }(pp, {
-                phoneNumber: Ip.phoneNumber,
-                recaptchaToken: op
+                sessionInfo: UT
+              } = await async function(TT, UT) {
+                return PT(TT, "POST", "/v1/accounts:sendVerificationCode", FT(TT, UT))
+              }(TT, {
+                phoneNumber: MT.phoneNumber,
+                recaptchaToken: zT
               });
-              return ip
+              return UT
             }
           } finally {
-            cp._reset()
+            mT._reset()
           }
         }
-        async function Oo(pp, ip) {
-          await dc((0, Op.F)(pp), ip)
+        async function Uz(TT, UT) {
+          await fm((0, WT.P)(TT), UT)
         }
-        class oo {
-          constructor(pp) {
-            this.providerId = oo.PROVIDER_ID, this.auth = Qi(pp)
+        class mz {
+          constructor(TT) {
+            this.providerId = mz.PROVIDER_ID, this.auth = yU(TT)
           }
-          verifyPhoneNumber(pp, ip) {
-            return co(this.auth, pp, (0, Op.F)(ip))
+          verifyPhoneNumber(TT, UT) {
+            return Tz(this.auth, TT, (0, WT.P)(UT))
           }
-          static credential(pp, ip) {
-            return Vi._fromVerification(pp, ip)
+          static credential(TT, UT) {
+            return DU._fromVerification(TT, UT)
           }
-          static credentialFromResult(pp) {
-            const ip = pp;
-            return oo.credentialFromTaggedObject(ip)
+          static credentialFromResult(TT) {
+            const UT = TT;
+            return mz.credentialFromTaggedObject(UT)
           }
-          static credentialFromError(pp) {
-            return oo.credentialFromTaggedObject(pp.customData || {})
+          static credentialFromError(TT) {
+            return mz.credentialFromTaggedObject(TT.customData || {})
           }
-          static credentialFromTaggedObject(pp) {
+          static credentialFromTaggedObject(TT) {
             let {
-              _tokenResponse: ip
-            } = pp;
-            if (!ip) return null;
+              _tokenResponse: UT
+            } = TT;
+            if (!UT) return null;
             const {
-              phoneNumber: cp,
-              temporaryProof: Op
-            } = ip;
-            return cp && Op ? Vi._fromTokenResponse(cp, Op) : null
+              phoneNumber: mT,
+              temporaryProof: WT
+            } = UT;
+            return mT && WT ? DU._fromTokenResponse(mT, WT) : null
           }
         }
 
-        function Io(pp, ip) {
-          return ip ? xi(ip) : (Rp(pp._popupRedirectResolver, pp, "argument-error"), pp._popupRedirectResolver)
+        function Wz(TT, UT) {
+          return UT ? MU(UT) : (JT(TT._popupRedirectResolver, TT, "argument-error"), TT._popupRedirectResolver)
         }
-        oo.PROVIDER_ID = "phone", oo.PHONE_SIGN_IN_METHOD = "phone";
-        class So extends bi {
-          constructor(pp) {
-            super("custom", "custom"), this.params = pp
+        mz.PROVIDER_ID = "phone", mz.PHONE_SIGN_IN_METHOD = "phone";
+        class zz extends PU {
+          constructor(TT) {
+            super("custom", "custom"), this.params = TT
           }
-          _getIdTokenResponse(pp) {
-            return zi(pp, this._buildIdpRequest())
+          _getIdTokenResponse(TT) {
+            return NU(TT, this._buildIdpRequest())
           }
-          _linkToIdToken(pp, ip) {
-            return zi(pp, this._buildIdpRequest(ip))
+          _linkToIdToken(TT, UT) {
+            return NU(TT, this._buildIdpRequest(UT))
           }
-          _getReauthenticationResolver(pp) {
-            return zi(pp, this._buildIdpRequest())
+          _getReauthenticationResolver(TT) {
+            return NU(TT, this._buildIdpRequest())
           }
-          _buildIdpRequest(pp) {
-            const ip = {
+          _buildIdpRequest(TT) {
+            const UT = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,187 +3535,187 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return pp && (ip.idToken = pp), ip
+            return TT && (UT.idToken = TT), UT
           }
         }
 
-        function xo(pp) {
-          return jc(pp.auth, new So(pp), pp.bypassAuthState)
+        function Mz(TT) {
+          return bm(TT.auth, new zz(TT), TT.bypassAuthState)
         }
 
-        function Lo(pp) {
+        function gz(TT) {
           const {
-            auth: ip,
-            user: cp
-          } = pp;
-          return Rp(cp, ip, "internal-error"), uc(cp, new So(pp), pp.bypassAuthState)
+            auth: UT,
+            user: mT
+          } = TT;
+          return JT(mT, UT, "internal-error"), im(mT, new zz(TT), TT.bypassAuthState)
         }
-        async function Yo(pp) {
+        async function nz(TT) {
           const {
-            auth: ip,
-            user: cp
-          } = pp;
-          return Rp(cp, ip, "internal-error"), dc(cp, new So(pp), pp.bypassAuthState)
+            auth: UT,
+            user: mT
+          } = TT;
+          return JT(mT, UT, "internal-error"), fm(mT, new zz(TT), TT.bypassAuthState)
         }
-        class Do {
-          constructor(pp, ip, cp, Op) {
-            let op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = pp, this.resolver = cp, this.user = Op, this.bypassAuthState = op, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(ip) ? ip : [ip]
+        class Hz {
+          constructor(TT, UT, mT, WT) {
+            let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = TT, this.resolver = mT, this.user = WT, this.bypassAuthState = zT, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(UT) ? UT : [UT]
           }
           execute() {
-            return new Promise((async (pp, ip) => {
+            return new Promise((async (TT, UT) => {
               this.pendingPromise = {
-                resolve: pp,
-                reject: ip
+                resolve: TT,
+                reject: UT
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (cp) {
-                this.reject(cp)
+              } catch (mT) {
+                this.reject(mT)
               }
             }))
           }
-          async onAuthEvent(pp) {
+          async onAuthEvent(TT) {
             const {
-              urlResponse: ip,
-              sessionId: cp,
-              postBody: Op,
-              tenantId: op,
-              error: Ip,
-              type: Sp
-            } = pp;
-            if (Ip) return void this.reject(Ip);
-            const xp = {
+              urlResponse: UT,
+              sessionId: mT,
+              postBody: WT,
+              tenantId: zT,
+              error: MT,
+              type: gT
+            } = TT;
+            if (MT) return void this.reject(MT);
+            const nT = {
               auth: this.auth,
-              requestUri: ip,
-              sessionId: cp,
-              tenantId: op || void 0,
-              postBody: Op || void 0,
+              requestUri: UT,
+              sessionId: mT,
+              tenantId: zT || void 0,
+              postBody: WT || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(Sp)(xp))
-            } catch (Lp) {
-              this.reject(Lp)
+              this.resolve(await this.getIdpTask(gT)(nT))
+            } catch (HT) {
+              this.reject(HT)
             }
           }
-          onError(pp) {
-            this.reject(pp)
+          onError(TT) {
+            this.reject(TT)
           }
-          getIdpTask(pp) {
-            switch (pp) {
+          getIdpTask(TT) {
+            switch (TT) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return xo;
+                return Mz;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return Yo;
+                return nz;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return Lo;
+                return gz;
               default:
-                dp(this.auth, "internal-error")
+                iT(this.auth, "internal-error")
             }
           }
-          resolve(pp) {
-            Mp(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(pp), this.unregisterAndCleanUp()
+          resolve(TT) {
+            dT(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(TT), this.unregisterAndCleanUp()
           }
-          reject(pp) {
-            Mp(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(pp), this.unregisterAndCleanUp()
+          reject(TT) {
+            dT(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(TT), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const Ao = new lp(2e3, 1e4);
-        async function Po(pp, ip, cp) {
-          const Op = Qi(pp);
-          kp(pp, ip, Oc);
-          const op = Io(Op, cp);
-          return new Uo(Op, "signInViaPopup", ip, op).executeNotNull()
+        const kz = new yT(2e3, 1e4);
+        async function jz(TT, UT, mT) {
+          const WT = yU(TT);
+          eT(TT, UT, Tm);
+          const zT = Wz(WT, mT);
+          return new pz(WT, "signInViaPopup", UT, zT).executeNotNull()
         }
-        async function Wo(pp, ip, cp) {
-          const op = (0, Op.F)(pp);
-          kp(op.auth, ip, Oc);
-          const Ip = Io(op.auth, cp);
-          return new Uo(op.auth, "reauthViaPopup", ip, Ip, op).executeNotNull()
+        async function lz(TT, UT, mT) {
+          const zT = (0, WT.P)(TT);
+          eT(zT.auth, UT, Tm);
+          const MT = Wz(zT.auth, mT);
+          return new pz(zT.auth, "reauthViaPopup", UT, MT, zT).executeNotNull()
         }
-        async function yo(pp, ip, cp) {
-          const op = (0, Op.F)(pp);
-          kp(op.auth, ip, Oc);
-          const Ip = Io(op.auth, cp);
-          return new Uo(op.auth, "linkViaPopup", ip, Ip, op).executeNotNull()
+        async function Lz(TT, UT, mT) {
+          const zT = (0, WT.P)(TT);
+          eT(zT.auth, UT, Tm);
+          const MT = Wz(zT.auth, mT);
+          return new pz(zT.auth, "linkViaPopup", UT, MT, zT).executeNotNull()
         }
-        class Uo extends Do {
-          constructor(pp, ip, cp, Op, op) {
-            super(pp, ip, Op, op), this.provider = cp, this.authWindow = null, this.pollId = null, Uo.currentPopupAction && Uo.currentPopupAction.cancel(), Uo.currentPopupAction = this
+        class pz extends Hz {
+          constructor(TT, UT, mT, WT, zT) {
+            super(TT, UT, WT, zT), this.provider = mT, this.authWindow = null, this.pollId = null, pz.currentPopupAction && pz.currentPopupAction.cancel(), pz.currentPopupAction = this
           }
           async executeNotNull() {
-            const pp = await this.execute();
-            return Rp(pp, this.auth, "internal-error"), pp
+            const TT = await this.execute();
+            return JT(TT, this.auth, "internal-error"), TT
           }
           async onExecution() {
-            Mp(1 === this.filter.length, "Popup operations only handle one event");
-            const pp = RO();
-            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], pp), this.authWindow.associatedEvent = pp, this.resolver._originValidation(this.auth).catch((pp => {
-              this.reject(pp)
-            })), this.resolver._isIframeWebStorageSupported(this.auth, (pp => {
-              pp || this.reject(ep(this.auth, "web-storage-unsupported"))
+            dT(1 === this.filter.length, "Popup operations only handle one event");
+            const TT = YW();
+            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], TT), this.authWindow.associatedEvent = TT, this.resolver._originValidation(this.auth).catch((TT => {
+              this.reject(TT)
+            })), this.resolver._isIframeWebStorageSupported(this.auth, (TT => {
+              TT || this.reject(bT(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
-            var pp;
-            return (null === (pp = this.authWindow) || void 0 === pp ? void 0 : pp.associatedEvent) || null
+            var TT;
+            return (null === (TT = this.authWindow) || void 0 === TT ? void 0 : TT.associatedEvent) || null
           }
           cancel() {
-            this.reject(ep(this.auth, "cancelled-popup-request"))
+            this.reject(bT(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, Uo.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, pz.currentPopupAction = null
           }
           pollUserCancellation() {
-            const pp = () => {
-              var ip, cp;
-              (null === (cp = null === (ip = this.authWindow) || void 0 === ip ? void 0 : ip.window) || void 0 === cp ? void 0 : cp.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(ep(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(pp, Ao.get())
+            const TT = () => {
+              var UT, mT;
+              (null === (mT = null === (UT = this.authWindow) || void 0 === UT ? void 0 : UT.window) || void 0 === mT ? void 0 : mT.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(bT(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(TT, kz.get())
             };
-            pp()
+            TT()
           }
         }
-        Uo.currentPopupAction = null;
-        const wo = "pendingRedirect",
-          vo = new Map;
-        class to extends Do {
-          constructor(pp, ip) {
-            super(pp, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], ip, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        pz.currentPopupAction = null;
+        const Bz = "pendingRedirect",
+          Zz = new Map;
+        class cz extends Hz {
+          constructor(TT, UT) {
+            super(TT, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], UT, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let pp = vo.get(this.auth._key());
-            if (!pp) {
+            let TT = Zz.get(this.auth._key());
+            if (!TT) {
               try {
-                const ip = await async function(pp, ip) {
-                  const cp = jo(ip),
-                    Op = uo(pp);
-                  if (!await Op._isAvailable()) return !1;
-                  const op = "true" === await Op._get(cp);
-                  return await Op._remove(cp), op
+                const UT = await async function(TT, UT) {
+                  const mT = iz(UT),
+                    WT = qz(TT);
+                  if (!await WT._isAvailable()) return !1;
+                  const zT = "true" === await WT._get(mT);
+                  return await WT._remove(mT), zT
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                pp = () => Promise.resolve(ip)
-              } catch (ip) {
-                pp = () => Promise.reject(ip)
+                TT = () => Promise.resolve(UT)
+              } catch (UT) {
+                TT = () => Promise.reject(UT)
               }
-              vo.set(this.auth._key(), pp)
+              Zz.set(this.auth._key(), TT)
             }
-            return this.bypassAuthState || vo.set(this.auth._key(), (() => Promise.resolve(null))), pp()
+            return this.bypassAuthState || Zz.set(this.auth._key(), (() => Promise.resolve(null))), TT()
           }
-          async onAuthEvent(pp) {
-            if ("signInViaRedirect" === pp.type) return super.onAuthEvent(pp);
-            if ("unknown" !== pp.type) {
-              if (pp.eventId) {
-                const ip = await this.auth._redirectUserForId(pp.eventId);
-                if (ip) return this.user = ip, super.onAuthEvent(pp);
+          async onAuthEvent(TT) {
+            if ("signInViaRedirect" === TT.type) return super.onAuthEvent(TT);
+            if ("unknown" !== TT.type) {
+              if (TT.eventId) {
+                const UT = await this.auth._redirectUserForId(TT.eventId);
+                if (UT) return this.user = UT, super.onAuthEvent(TT);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,199 +3723,199 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function Ho(pp, ip) {
-          return uo(pp)._set(jo(ip), "true")
+        async function vz(TT, UT) {
+          return qz(TT)._set(iz(UT), "true")
         }
 
-        function eo(pp, ip) {
-          vo.set(pp._key(), ip)
+        function fz(TT, UT) {
+          Zz.set(TT._key(), UT)
         }
 
-        function uo(pp) {
-          return xi(pp._redirectPersistence)
+        function qz(TT) {
+          return MU(TT._redirectPersistence)
         }
 
-        function jo(pp) {
-          return Di(wo, pp.config.apiKey, pp.name)
+        function iz(TT) {
+          return HU(Bz, TT.config.apiKey, TT.name)
         }
 
-        function ko(pp, ip, cp) {
-          return async function(pp, ip, cp) {
-            const Op = Qi(pp);
-            kp(pp, ip, Oc), await Op._initializationPromise;
-            const op = Io(Op, cp);
-            return await Ho(op, Op), op._openRedirect(Op, ip, "signInViaRedirect")
-          }(pp, ip, cp)
+        function bz(TT, UT, mT) {
+          return async function(TT, UT, mT) {
+            const WT = yU(TT);
+            eT(TT, UT, Tm), await WT._initializationPromise;
+            const zT = Wz(WT, mT);
+            return await vz(zT, WT), zT._openRedirect(WT, UT, "signInViaRedirect")
+          }(TT, UT, mT)
         }
 
-        function mo(pp, ip, cp) {
-          return async function(pp, ip, cp) {
-            const op = (0, Op.F)(pp);
-            kp(op.auth, ip, Oc), await op.auth._initializationPromise;
-            const Ip = Io(op.auth, cp);
-            await Ho(Ip, op.auth);
-            const Sp = await Co(op);
-            return Ip._openRedirect(op.auth, ip, "reauthViaRedirect", Sp)
-          }(pp, ip, cp)
+        function Oz(TT, UT, mT) {
+          return async function(TT, UT, mT) {
+            const zT = (0, WT.P)(TT);
+            eT(zT.auth, UT, Tm), await zT.auth._initializationPromise;
+            const MT = Wz(zT.auth, mT);
+            await vz(MT, zT.auth);
+            const gT = await xz(zT);
+            return MT._openRedirect(zT.auth, UT, "reauthViaRedirect", gT)
+          }(TT, UT, mT)
         }
 
-        function Ro(pp, ip, cp) {
-          return async function(pp, ip, cp) {
-            const op = (0, Op.F)(pp);
-            kp(op.auth, ip, Oc), await op.auth._initializationPromise;
-            const Ip = Io(op.auth, cp);
-            await ec(!1, op, ip.providerId), await Ho(Ip, op.auth);
-            const Sp = await Co(op);
-            return Ip._openRedirect(op.auth, ip, "linkViaRedirect", Sp)
-          }(pp, ip, cp)
+        function ez(TT, UT, mT) {
+          return async function(TT, UT, mT) {
+            const zT = (0, WT.P)(TT);
+            eT(zT.auth, UT, Tm), await zT.auth._initializationPromise;
+            const MT = Wz(zT.auth, mT);
+            await qm(!1, zT, UT.providerId), await vz(MT, zT.auth);
+            const gT = await xz(zT);
+            return MT._openRedirect(zT.auth, UT, "linkViaRedirect", gT)
+          }(TT, UT, mT)
         }
-        async function qo(pp, ip) {
-          return await Qi(pp)._initializationPromise, Mo(pp, ip, !1)
+        async function Yz(TT, UT) {
+          return await yU(TT)._initializationPromise, Jz(TT, UT, !1)
         }
-        async function Mo(pp, ip) {
-          let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Op = Qi(pp),
-            op = Io(Op, ip),
-            Ip = new to(Op, op, cp),
-            Sp = await Ip.execute();
-          return Sp && !cp && (delete Sp.user._redirectEventId, await Op._persistUserIfCurrent(Sp.user), await Op._setRedirectUser(null, ip)), Sp
+        async function Jz(TT, UT) {
+          let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const WT = yU(TT),
+            zT = Wz(WT, UT),
+            MT = new cz(WT, zT, mT),
+            gT = await MT.execute();
+          return gT && !mT && (delete gT.user._redirectEventId, await WT._persistUserIfCurrent(gT.user), await WT._setRedirectUser(null, UT)), gT
         }
-        async function Co(pp) {
-          const ip = RO(`${pp.uid}:::`);
-          return pp._redirectEventId = ip, await pp.auth._setRedirectUser(pp), await pp.auth._persistUserIfCurrent(pp), ip
+        async function xz(TT) {
+          const UT = YW(`${TT.uid}:::`);
+          return TT._redirectEventId = UT, await TT.auth._setRedirectUser(TT), await TT.auth._persistUserIfCurrent(TT), UT
         }
-        class Eo {
-          constructor(pp) {
-            this.auth = pp, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
+        class dz {
+          constructor(TT) {
+            this.auth = TT, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
-          registerConsumer(pp) {
-            this.consumers.add(pp), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, pp) && (this.sendToConsumer(this.queuedRedirectEvent, pp), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
+          registerConsumer(TT) {
+            this.consumers.add(TT), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, TT) && (this.sendToConsumer(this.queuedRedirectEvent, TT), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
           }
-          unregisterConsumer(pp) {
-            this.consumers.delete(pp)
+          unregisterConsumer(TT) {
+            this.consumers.delete(TT)
           }
-          onEvent(pp) {
-            if (this.hasEventBeenHandled(pp)) return !1;
-            let ip = !1;
-            return this.consumers.forEach((cp => {
-              this.isEventForConsumer(pp, cp) && (ip = !0, this.sendToConsumer(pp, cp), this.saveEventToCache(pp))
-            })), this.hasHandledPotentialRedirect || ! function(pp) {
-              switch (pp.type) {
+          onEvent(TT) {
+            if (this.hasEventBeenHandled(TT)) return !1;
+            let UT = !1;
+            return this.consumers.forEach((mT => {
+              this.isEventForConsumer(TT, mT) && (UT = !0, this.sendToConsumer(TT, mT), this.saveEventToCache(TT))
+            })), this.hasHandledPotentialRedirect || ! function(TT) {
+              switch (TT.type) {
                 case "signInViaRedirect":
                 case "linkViaRedirect":
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return Qo(pp);
+                  return tz(TT);
                 default:
                   return !1
               }
-            }(pp) || (this.hasHandledPotentialRedirect = !0, ip || (this.queuedRedirectEvent = pp, ip = !0)), ip
+            }(TT) || (this.hasHandledPotentialRedirect = !0, UT || (this.queuedRedirectEvent = TT, UT = !0)), UT
           }
-          sendToConsumer(pp, ip) {
-            var cp;
-            if (pp.error && !Qo(pp)) {
-              const Op = (null === (cp = pp.error.code) || void 0 === cp ? void 0 : cp.split("auth/")[1]) || "internal-error";
-              ip.onError(ep(this.auth, Op))
-            } else ip.onAuthEvent(pp)
+          sendToConsumer(TT, UT) {
+            var mT;
+            if (TT.error && !tz(TT)) {
+              const WT = (null === (mT = TT.error.code) || void 0 === mT ? void 0 : mT.split("auth/")[1]) || "internal-error";
+              UT.onError(bT(this.auth, WT))
+            } else UT.onAuthEvent(TT)
           }
-          isEventForConsumer(pp, ip) {
-            const cp = null === ip.eventId || !!pp.eventId && pp.eventId === ip.eventId;
-            return ip.filter.includes(pp.type) && cp
+          isEventForConsumer(TT, UT) {
+            const mT = null === UT.eventId || !!TT.eventId && TT.eventId === UT.eventId;
+            return UT.filter.includes(TT.type) && mT
           }
-          hasEventBeenHandled(pp) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(Xo(pp))
+          hasEventBeenHandled(TT) {
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(wz(TT))
           }
-          saveEventToCache(pp) {
-            this.cachedEventUids.add(Xo(pp)), this.lastProcessedEventTime = Date.now()
+          saveEventToCache(TT) {
+            this.cachedEventUids.add(wz(TT)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function Xo(pp) {
-          return [pp.type, pp.eventId, pp.sessionId, pp.tenantId].filter((pp => pp)).join("-")
+        function wz(TT) {
+          return [TT.type, TT.eventId, TT.sessionId, TT.tenantId].filter((TT => TT)).join("-")
         }
 
-        function Qo(pp) {
+        function tz(TT) {
           let {
-            type: ip,
-            error: cp
-          } = pp;
-          return "unknown" === ip && "auth/no-auth-event" === (null === cp || void 0 === cp ? void 0 : cp.code)
+            type: UT,
+            error: mT
+          } = TT;
+          return "unknown" === UT && "auth/no-auth-event" === (null === mT || void 0 === mT ? void 0 : mT.code)
         }
-        const Jo = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          Bo = /^https?/;
-        async function No(pp) {
-          if (pp.config.emulator) return;
+        const az = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          yz = /^https?/;
+        async function Xz(TT) {
+          if (TT.config.emulator) return;
           const {
-            authorizedDomains: ip
-          } = await async function(pp) {
-            return fp(pp, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }(pp);
-          for (const Op of ip) try {
-            if (To(Op)) return
-          } catch (cp) {}
-          dp(pp, "unauthorized-domain")
+            authorizedDomains: UT
+          } = await async function(TT) {
+            return PT(TT, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+          }(TT);
+          for (const WT of UT) try {
+            if (Iz(WT)) return
+          } catch (mT) {}
+          iT(TT, "unauthorized-domain")
         }
 
-        function To(pp) {
-          const ip = Cp(),
+        function Iz(TT) {
+          const UT = wT(),
             {
-              protocol: cp,
-              hostname: Op
-            } = new URL(ip);
-          if (pp.startsWith("chrome-extension://")) {
-            const op = new URL(pp);
-            return "" === op.hostname && "" === Op ? "chrome-extension:" === cp && pp.replace("chrome-extension://", "") === ip.replace("chrome-extension://", "") : "chrome-extension:" === cp && op.hostname === Op
+              protocol: mT,
+              hostname: WT
+            } = new URL(UT);
+          if (TT.startsWith("chrome-extension://")) {
+            const zT = new URL(TT);
+            return "" === zT.hostname && "" === WT ? "chrome-extension:" === mT && TT.replace("chrome-extension://", "") === UT.replace("chrome-extension://", "") : "chrome-extension:" === mT && zT.hostname === WT
           }
-          if (!Bo.test(cp)) return !1;
-          if (Jo.test(pp)) return Op === pp;
-          const op = pp.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + op + "|" + op + ")$", "i").test(Op)
+          if (!yz.test(mT)) return !1;
+          if (az.test(TT)) return WT === TT;
+          const zT = TT.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + zT + "|" + zT + ")$", "i").test(WT)
         }
-        const fo = new lp(3e4, 6e4);
+        const Qz = new yT(3e4, 6e4);
 
-        function bo() {
-          const pp = MO().___jsl;
-          if (null === pp || void 0 === pp ? void 0 : pp.H)
-            for (const ip of Object.keys(pp.H))
-              if (pp.H[ip].r = pp.H[ip].r || [], pp.H[ip].L = pp.H[ip].L || [], pp.H[ip].r = [...pp.H[ip].L], pp.CP)
-                for (let cp = 0; cp < pp.CP.length; cp++) pp.CP[cp] = null
+        function sz() {
+          const TT = xW().___jsl;
+          if (null === TT || void 0 === TT ? void 0 : TT.H)
+            for (const UT of Object.keys(TT.H))
+              if (TT.H[UT].r = TT.H[UT].r || [], TT.H[UT].L = TT.H[UT].L || [], TT.H[UT].r = [...TT.H[UT].L], TT.CP)
+                for (let mT = 0; mT < TT.CP.length; mT++) TT.CP[mT] = null
         }
-        let ho = null;
+        let Fz = null;
 
-        function ao(pp) {
-          return ho = ho || function(pp) {
-            return new Promise(((ip, cp) => {
-              var Op, op, Ip;
+        function Pz(TT) {
+          return Fz = Fz || function(TT) {
+            return new Promise(((UT, mT) => {
+              var WT, zT, MT;
 
-              function Sp() {
-                bo(), gapi.load("gapi.iframes", {
+              function gT() {
+                sz(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    ip(gapi.iframes.getContext())
+                    UT(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    bo(), cp(ep(pp, "network-request-failed"))
+                    sz(), mT(bT(TT, "network-request-failed"))
                   },
-                  timeout: fo.get()
+                  timeout: Qz.get()
                 })
               }
-              if (null === (op = null === (Op = MO().gapi) || void 0 === Op ? void 0 : Op.iframes) || void 0 === op ? void 0 : op.Iframe) ip(gapi.iframes.getContext());
+              if (null === (zT = null === (WT = xW().gapi) || void 0 === WT ? void 0 : WT.iframes) || void 0 === zT ? void 0 : zT.Iframe) UT(gapi.iframes.getContext());
               else {
-                if (!(null === (Ip = MO().gapi) || void 0 === Ip ? void 0 : Ip.load)) {
-                  const ip = Mi("iframefcb");
-                  return MO()[ip] = () => {
-                    gapi.load ? Sp() : cp(ep(pp, "network-request-failed"))
-                  }, qi(`https://apis.google.com/js/api.js?onload=${ip}`).catch((pp => cp(pp)))
+                if (!(null === (MT = xW().gapi) || void 0 === MT ? void 0 : MT.load)) {
+                  const UT = xU("iframefcb");
+                  return xW()[UT] = () => {
+                    gapi.load ? gT() : mT(bT(TT, "network-request-failed"))
+                  }, JU(`https://apis.google.com/js/api.js?onload=${UT}`).catch((TT => mT(TT)))
                 }
-                Sp()
+                gT()
               }
-            })).catch((pp => {
-              throw ho = null, pp
+            })).catch((TT => {
+              throw Fz = null, TT
             }))
-          }(pp), ho
+          }(TT), Fz
         }
-        const no = new lp(5e3, 15e3),
-          Fo = {
+        const Vz = new yT(5e3, 15e3),
+          uz = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,102 +3925,102 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          go = new Map([
+          Cz = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function Go(pp) {
-          const ip = pp.config;
-          Rp(ip.authDomain, pp, "auth-domain-config-required");
-          const cp = ip.emulator ? Qp(ip, "emulator/auth/iframe") : `https://${pp.config.authDomain}/__/auth/iframe`,
-            Ip = {
-              apiKey: ip.apiKey,
-              appName: pp.name,
-              v: op.f
+        function rz(TT) {
+          const UT = TT.config;
+          JT(UT.authDomain, TT, "auth-domain-config-required");
+          const mT = UT.emulator ? XT(UT, "emulator/auth/iframe") : `https://${TT.config.authDomain}/__/auth/iframe`,
+            MT = {
+              apiKey: UT.apiKey,
+              appName: TT.name,
+              v: zT.f
             },
-            Sp = go.get(pp.config.apiHost);
-          Sp && (Ip.eid = Sp);
-          const xp = pp._getFrameworks();
-          return xp.length && (Ip.fw = xp.join(",")), `${cp}?${(0,Op.cb)(Ip).slice(1)}`
+            gT = Cz.get(TT.config.apiHost);
+          gT && (MT.eid = gT);
+          const nT = TT._getFrameworks();
+          return nT.length && (MT.fw = nT.join(",")), `${mT}?${(0,WT.pb)(MT).slice(1)}`
         }
-        const ro = {
+        const Kz = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class Zo {
-          constructor(pp) {
-            this.window = pp, this.associatedEvent = null
+        class Sz {
+          constructor(TT) {
+            this.window = TT, this.associatedEvent = null
           }
           close() {
             if (this.window) try {
               this.window.close()
-            } catch (pp) {}
+            } catch (TT) {}
           }
         }
 
-        function zo(pp, ip, cp) {
-          let op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const Sp = Math.max((window.screen.availHeight - Ip) / 2, 0).toString(),
-            xp = Math.max((window.screen.availWidth - op) / 2, 0).toString();
-          let Lp = "";
-          const Yp = Object.assign(Object.assign({}, ro), {
-              width: op.toString(),
-              height: Ip.toString(),
-              top: Sp,
-              left: xp
+        function Gz(TT, UT, mT) {
+          let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const gT = Math.max((window.screen.availHeight - MT) / 2, 0).toString(),
+            nT = Math.max((window.screen.availWidth - zT) / 2, 0).toString();
+          let HT = "";
+          const kT = Object.assign(Object.assign({}, Kz), {
+              width: zT.toString(),
+              height: MT.toString(),
+              top: gT,
+              left: nT
             }),
-            Dp = (0, Op.H)().toLowerCase();
-          cp && (Lp = Ui(Dp) ? "_blank" : cp), Wi(Dp) && (ip = ip || "http://localhost", Yp.scrollbars = "yes");
-          const Ap = Object.entries(Yp).reduce(((pp, ip) => {
-            let [cp, Op] = ip;
-            return `${pp}${cp}=${Op},`
+            jT = (0, WT.R)().toLowerCase();
+          mT && (HT = pU(jT) ? "_blank" : mT), lU(jT) && (UT = UT || "http://localhost", kT.scrollbars = "yes");
+          const lT = Object.entries(kT).reduce(((TT, UT) => {
+            let [mT, WT] = UT;
+            return `${TT}${mT}=${WT},`
           }), "");
           if (function() {
-              var pp;
-              return di(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.H)()) && !!(null === (pp = window.navigator) || void 0 === pp ? void 0 : pp.standalone)
-            }(Dp) && "_self" !== Lp) return function(pp, ip) {
-            const cp = document.createElement("a");
-            cp.href = pp, cp.target = ip;
-            const Op = document.createEvent("MouseEvent");
-            Op.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), cp.dispatchEvent(Op)
-          }(ip || "", Lp), new Zo(null);
-          const Pp = window.open(ip || "", Lp, Ap);
-          Rp(Pp, pp, "popup-blocked");
+              var TT;
+              return fU(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, WT.R)()) && !!(null === (TT = window.navigator) || void 0 === TT ? void 0 : TT.standalone)
+            }(jT) && "_self" !== HT) return function(TT, UT) {
+            const mT = document.createElement("a");
+            mT.href = TT, mT.target = UT;
+            const WT = document.createEvent("MouseEvent");
+            WT.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), mT.dispatchEvent(WT)
+          }(UT || "", HT), new Sz(null);
+          const LT = window.open(UT || "", HT, lT);
+          JT(LT, TT, "popup-blocked");
           try {
-            Pp.focus()
-          } catch (Wp) {}
-          return new Zo(Pp)
+            LT.focus()
+          } catch (pT) {}
+          return new Sz(LT)
         }
-        const so = "__/auth/handler",
-          Ko = "emulator/auth/handler",
-          Vo = encodeURIComponent("fac");
-        async function pI(pp, ip, cp, Ip, Sp, xp) {
-            Rp(pp.config.authDomain, pp, "auth-domain-config-required"), Rp(pp.config.apiKey, pp, "invalid-api-key");
-            const Lp = {
-              apiKey: pp.config.apiKey,
-              appName: pp.name,
-              authType: cp,
-              redirectUrl: Ip,
-              v: op.f,
-              eventId: Sp
+        const Nz = "__/auth/handler",
+          Ez = "emulator/auth/handler",
+          hz = encodeURIComponent("fac");
+        async function Dz(TT, UT, mT, MT, gT, nT) {
+            JT(TT.config.authDomain, TT, "auth-domain-config-required"), JT(TT.config.apiKey, TT, "invalid-api-key");
+            const HT = {
+              apiKey: TT.config.apiKey,
+              appName: TT.name,
+              authType: mT,
+              redirectUrl: MT,
+              v: zT.f,
+              eventId: gT
             };
-            if (ip instanceof Oc) {
-              ip.setDefaultLanguage(pp.languageCode), Lp.providerId = ip.providerId || "", (0, Op.L)(ip.getCustomParameters()) || (Lp.customParameters = JSON.stringify(ip.getCustomParameters()));
-              for (const [pp, ip] of Object.entries(xp || {})) Lp[pp] = ip
+            if (UT instanceof Tm) {
+              UT.setDefaultLanguage(TT.languageCode), HT.providerId = UT.providerId || "", (0, WT.Z)(UT.getCustomParameters()) || (HT.customParameters = JSON.stringify(UT.getCustomParameters()));
+              for (const [TT, UT] of Object.entries(nT || {})) HT[TT] = UT
             }
-            if (ip instanceof oc) {
-              const pp = ip.getScopes().filter((pp => "" !== pp));
-              pp.length > 0 && (Lp.scopes = pp.join(","))
+            if (UT instanceof Um) {
+              const TT = UT.getScopes().filter((TT => "" !== TT));
+              TT.length > 0 && (HT.scopes = TT.join(","))
             }
-            pp.tenantId && (Lp.tid = pp.tenantId);
-            const Yp = Lp;
-            for (const Op of Object.keys(Yp)) void 0 === Yp[Op] && delete Yp[Op];
-            const Dp = await pp._getAppCheckToken(),
-              Ap = Dp ? `#${Vo}=${encodeURIComponent(Dp)}` : "";
-            return `${function(pp){let{config:ip}=pp;if(!ip.emulator)return`
-            https: //${ip.authDomain}/${so}`;return Qp(ip,Ko)}(pp)}?${(0,Op.cb)(Yp).slice(1)}${Ap}`}const iI="webStorageSupport";const cI=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=kO,this._completeRedirectFn=Mo,this._overrideRedirectResult=eo}async _openPopup(pp,ip,cp,Op){var op;Mp(null===(op=this.eventManagers[pp._key()])||void 0===op?void 0:op.manager,"_initialize() not called before _openPopup()");return zo(pp,await pI(pp,ip,cp,Cp(),Op),RO())}async _openRedirect(pp,ip,cp,Op){await this._originValidation(pp);return function(pp){MO().location.href=pp}(await pI(pp,ip,cp,Cp(),Op)),new Promise((()=>{}))}_initialize(pp){const ip=pp._key();if(this.eventManagers[ip]){const{manager:pp,promise:cp}=this.eventManagers[ip];return pp?Promise.resolve(pp):(Mp(cp,"If manager is not set, promise should be"),cp)}const cp=this.initAndGetManager(pp);return this.eventManagers[ip]={promise:cp},cp.catch((()=>{delete this.eventManagers[ip]})),cp}async initAndGetManager(pp){const ip=await async function(pp){const ip=await ao(pp),cp=MO().gapi;return Rp(cp,pp,"internal-error"),ip.open({where:document.body,url:Go(pp),messageHandlersFilter:cp.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:Fo,dontclear:!0},(ip=>new Promise((async(cp,Op)=>{await ip.restyle({setHideOnLeave:!1});const op=ep(pp,"network-request-failed"),Ip=MO().setTimeout((()=>{Op(op)}),no.get());function Sp(){MO().clearTimeout(Ip),cp(ip)}ip.ping(Sp).then(Sp,(()=>{Op(op)}))}))))}(pp),cp=new Eo(pp);return ip.register("authEvent",(ip=>{Rp(null===ip||void 0===ip?void 0:ip.authEvent,pp,"invalid-auth-event");return{status:cp.onEvent(ip.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[pp._key()]={manager:cp},this.iframes[pp._key()]=ip,cp}_isIframeWebStorageSupported(pp,ip){this.iframes[pp._key()].send(iI,{type:iI},(cp=>{var Op;const op=null===(Op=null===cp||void 0===cp?void 0:cp[0])||void 0===Op?void 0:Op[iI];void 0!==op&&ip(!!op),dp(pp,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(pp){const ip=pp._key();return this.originValidationPromises[ip]||(this.originValidationPromises[ip]=No(pp)),this.originValidationPromises[ip]}get _shouldInitProactively(){return ei()||yi()||di()}};class OI{constructor(pp){this.factorId=pp}_process(pp,ip,cp){switch(ip.type){case"enroll":return this._finalizeEnroll(pp,ip.credential,cp);case"signin":return this._finalizeSignIn(pp,ip.credential);default:return qp("unexpected MultiFactorSessionType")}}}class oI extends OI{constructor(pp){super("phone"),this.credential=pp}static _fromCredential(pp){return new oI(pp)}_finalizeEnroll(pp,ip,cp){return function(pp,ip){return fp(pp,"POST","/v2/accounts/mfaEnrollment:finalize",Tp(pp,ip))}(pp,{idToken:ip,displayName:cp,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(pp,ip){return function(pp,ip){return fp(pp,"POST","/v2/accounts/mfaSignIn:finalize",Tp(pp,ip))}(pp,{mfaPendingCredential:ip,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class II{constructor(){}static assertion(pp){return oI._fromCredential(pp)}}II.FACTOR_ID="phone";class SI{static assertionForEnrollment(pp,ip){return xI._fromSecret(pp,ip)}static assertionForSignIn(pp,ip){return xI._fromEnrollmentId(pp,ip)}static async generateSecret(pp){const ip=pp;Rp("undefined"!==typeof ip.auth,"internal-error");const cp=await(Op=ip.auth,op={idToken:ip.credential,totpEnrollmentInfo:{}},fp(Op,"POST","/v2/accounts/mfaEnrollment:start",Tp(Op,op)));var Op,op;return LI._fromStartTotpMfaEnrollmentResponse(cp,ip.auth)}}SI.FACTOR_ID="totp";class xI extends OI{constructor(pp,ip,cp){super("totp"),this.otp=pp,this.enrollmentId=ip,this.secret=cp}static _fromSecret(pp,ip){return new xI(ip,void 0,pp)}static _fromEnrollmentId(pp,ip){return new xI(ip,pp)}async _finalizeEnroll(pp,ip,cp){return Rp("undefined"!==typeof this.secret,pp,"argument-error"),function(pp,ip){return fp(pp,"POST","/v2/accounts/mfaEnrollment:finalize",Tp(pp,ip))}(pp,{idToken:ip,displayName:cp,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(pp,ip){Rp(void 0!==this.enrollmentId&&void 0!==this.otp,pp,"argument-error");const cp={verificationCode:this.otp};return function(pp,ip){return fp(pp,"POST","/v2/accounts/mfaSignIn:finalize",Tp(pp,ip))}(pp,{mfaPendingCredential:ip,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:cp})}}class LI{constructor(pp,ip,cp,Op,op,Ip,Sp){this.sessionInfo=Ip,this.auth=Sp,this.secretKey=pp,this.hashingAlgorithm=ip,this.codeLength=cp,this.codeIntervalSeconds=Op,this.enrollmentCompletionDeadline=op}static _fromStartTotpMfaEnrollmentResponse(pp,ip){return new LI(pp.totpSessionInfo.sharedSecretKey,pp.totpSessionInfo.hashingAlgorithm,pp.totpSessionInfo.verificationCodeLength,pp.totpSessionInfo.periodSec,new Date(pp.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),pp.totpSessionInfo.sessionInfo,ip)}_makeTotpVerificationInfo(pp){return{sessionInfo:this.sessionInfo,verificationCode:pp}}generateQrCodeUrl(pp,ip){var cp;let Op=!1;return(YI(pp)||YI(ip))&&(Op=!0),Op&&(YI(pp)&&(pp=(null===(cp=this.auth.currentUser)||void 0===cp?void 0:cp.email)||"unknownuser"),YI(ip)&&(ip=this.auth.name)),`otpauth://totp/${ip}:${pp}?secret=${this.secretKey}&issuer=${ip}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function YI(pp){return"undefined"===typeof pp||0===(null===pp||void 0===pp?void 0:pp.length)}var DI="@firebase/auth",AI="0.23.2";class PI{constructor(pp){this.auth=pp,this.internalListeners=new Map}getUid(){var pp;return this.assertAuthConfigured(),(null===(pp=this.auth.currentUser)||void 0===pp?void 0:pp.uid)||null}async getToken(pp){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(pp)}}addAuthTokenListener(pp){if(this.assertAuthConfigured(),this.internalListeners.has(pp))return;const ip=this.auth.onIdTokenChanged((ip=>{pp((null===ip||void 0===ip?void 0:ip.stsTokenManager.accessToken)||null)}));this.internalListeners.set(pp,ip),this.updateProactiveRefresh()}removeAuthTokenListener(pp){this.assertAuthConfigured();const ip=this.internalListeners.get(pp);ip&&(this.internalListeners.delete(pp),ip(),this.updateProactiveRefresh())}assertAuthConfigured(){Rp(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const WI=(0,Op.E)("authIdTokenMaxAge")||300;let yI=null;const UI=pp=>async ip=>{const cp=ip&&await ip.getIdTokenResult(),Op=cp&&((new Date).getTime()-Date.parse(cp.issuedAtTime))/1e3;if(Op&&Op>WI)return;const op=null===cp||void 0===cp?void 0:cp.token;yI!==op&&(yI=op,await fetch(pp,{method:op?"POST":"DELETE",headers:op?{Authorization:`Bearer ${op}`}:{}}))};function wI(){let pp=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,op.J)();const ip=(0,op.x)(pp,"auth");if(ip.isInitialized())return ip.getImmediate();const cp=Bi(pp,{popupRedirectResolver:cI,persistence:[bO,uO,kO]}),Ip=(0,Op.E)("authTokenSyncURL");if(Ip){const pp=UI(Ip);xO(cp,pp,(()=>pp(cp.currentUser))),SO(cp,(ip=>pp(ip)))}const Sp=(0,Op.D)("auth");return Sp&&Ni(cp,`http://${Sp}`),cp}var vI;vI="Browser",(0,op.z)(new xp.d("auth",((pp,ip)=>{let{options:cp}=ip;const Op=pp.getProvider("app").getImmediate(),op=pp.getProvider("heartbeat"),Ip=pp.getProvider("app-check-internal"),{apiKey:Sp,authDomain:xp}=Op.options;Rp(Sp&&!Sp.includes(":"),"invalid-api-key",{appName:Op.name});const Lp={apiKey:Sp,authDomain:xp,clientPlatform:vI,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:ui(vI)},Yp=new li(Op,op,Ip,Lp);return function(pp,ip){const cp=(null===ip||void 0===ip?void 0:ip.persistence)||[],Op=(Array.isArray(cp)?cp:[cp]).map(xi);(null===ip||void 0===ip?void 0:ip.errorMap)&&pp._updateErrorMap(ip.errorMap),pp._initializeWithPersistence(Op,null===ip||void 0===ip?void 0:ip.popupRedirectResolver)}(Yp,cp),Yp}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((pp,ip,cp)=>{pp.getProvider("auth-internal").initialize()}))),(0,op.z)(new xp.d("auth-internal",(pp=>(pp=>new PI(pp))(Qi(pp.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,op.S)(DI,AI,function(pp){switch(pp){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(vI)),(0,op.S)(DI,AI,"esm2017")}};Object.freeze(modules);for(const pp in modules)Object.freeze(modules[pp]);
+            TT.tenantId && (HT.tid = TT.tenantId);
+            const kT = HT;
+            for (const WT of Object.keys(kT)) void 0 === kT[WT] && delete kT[WT];
+            const jT = await TT._getAppCheckToken(),
+              lT = jT ? `#${hz}=${encodeURIComponent(jT)}` : "";
+            return `${function(TT){let{config:UT}=TT;if(!UT.emulator)return`
+            https: //${UT.authDomain}/${Nz}`;return XT(UT,Ez)}(TT)}?${(0,WT.pb)(kT).slice(1)}${lT}`}const oz="webStorageSupport";const Az=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=OW,this._completeRedirectFn=Jz,this._overrideRedirectResult=fz}async _openPopup(TT,UT,mT,WT){var zT;dT(null===(zT=this.eventManagers[TT._key()])||void 0===zT?void 0:zT.manager,"_initialize() not called before _openPopup()");return Gz(TT,await Dz(TT,UT,mT,wT(),WT),YW())}async _openRedirect(TT,UT,mT,WT){await this._originValidation(TT);return function(TT){xW().location.href=TT}(await Dz(TT,UT,mT,wT(),WT)),new Promise((()=>{}))}_initialize(TT){const UT=TT._key();if(this.eventManagers[UT]){const{manager:TT,promise:mT}=this.eventManagers[UT];return TT?Promise.resolve(TT):(dT(mT,"If manager is not set, promise should be"),mT)}const mT=this.initAndGetManager(TT);return this.eventManagers[UT]={promise:mT},mT.catch((()=>{delete this.eventManagers[UT]})),mT}async initAndGetManager(TT){const UT=await async function(TT){const UT=await Pz(TT),mT=xW().gapi;return JT(mT,TT,"internal-error"),UT.open({where:document.body,url:rz(TT),messageHandlersFilter:mT.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:uz,dontclear:!0},(UT=>new Promise((async(mT,WT)=>{await UT.restyle({setHideOnLeave:!1});const zT=bT(TT,"network-request-failed"),MT=xW().setTimeout((()=>{WT(zT)}),Vz.get());function gT(){xW().clearTimeout(MT),mT(UT)}UT.ping(gT).then(gT,(()=>{WT(zT)}))}))))}(TT),mT=new dz(TT);return UT.register("authEvent",(UT=>{JT(null===UT||void 0===UT?void 0:UT.authEvent,TT,"invalid-auth-event");return{status:mT.onEvent(UT.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[TT._key()]={manager:mT},this.iframes[TT._key()]=UT,mT}_isIframeWebStorageSupported(TT,UT){this.iframes[TT._key()].send(oz,{type:oz},(mT=>{var WT;const zT=null===(WT=null===mT||void 0===mT?void 0:mT[0])||void 0===WT?void 0:WT[oz];void 0!==zT&&UT(!!zT),iT(TT,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(TT){const UT=TT._key();return this.originValidationPromises[UT]||(this.originValidationPromises[UT]=Xz(TT)),this.originValidationPromises[UT]}get _shouldInitProactively(){return qU()||LU()||fU()}};class Rz{constructor(TT){this.factorId=TT}_process(TT,UT,mT){switch(UT.type){case"enroll":return this._finalizeEnroll(TT,UT.credential,mT);case"signin":return this._finalizeSignIn(TT,UT.credential);default:return xT("unexpected MultiFactorSessionType")}}}class TM extends Rz{constructor(TT){super("phone"),this.credential=TT}static _fromCredential(TT){return new TM(TT)}_finalizeEnroll(TT,UT,mT){return function(TT,UT){return PT(TT,"POST","/v2/accounts/mfaEnrollment:finalize",FT(TT,UT))}(TT,{idToken:UT,displayName:mT,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(TT,UT){return function(TT,UT){return PT(TT,"POST","/v2/accounts/mfaSignIn:finalize",FT(TT,UT))}(TT,{mfaPendingCredential:UT,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class UM{constructor(){}static assertion(TT){return TM._fromCredential(TT)}}UM.FACTOR_ID="phone";class mM{static assertionForEnrollment(TT,UT){return WM._fromSecret(TT,UT)}static assertionForSignIn(TT,UT){return WM._fromEnrollmentId(TT,UT)}static async generateSecret(TT){const UT=TT;JT("undefined"!==typeof UT.auth,"internal-error");const mT=await(WT=UT.auth,zT={idToken:UT.credential,totpEnrollmentInfo:{}},PT(WT,"POST","/v2/accounts/mfaEnrollment:start",FT(WT,zT)));var WT,zT;return zM._fromStartTotpMfaEnrollmentResponse(mT,UT.auth)}}mM.FACTOR_ID="totp";class WM extends Rz{constructor(TT,UT,mT){super("totp"),this.otp=TT,this.enrollmentId=UT,this.secret=mT}static _fromSecret(TT,UT){return new WM(UT,void 0,TT)}static _fromEnrollmentId(TT,UT){return new WM(UT,TT)}async _finalizeEnroll(TT,UT,mT){return JT("undefined"!==typeof this.secret,TT,"argument-error"),function(TT,UT){return PT(TT,"POST","/v2/accounts/mfaEnrollment:finalize",FT(TT,UT))}(TT,{idToken:UT,displayName:mT,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(TT,UT){JT(void 0!==this.enrollmentId&&void 0!==this.otp,TT,"argument-error");const mT={verificationCode:this.otp};return function(TT,UT){return PT(TT,"POST","/v2/accounts/mfaSignIn:finalize",FT(TT,UT))}(TT,{mfaPendingCredential:UT,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:mT})}}class zM{constructor(TT,UT,mT,WT,zT,MT,gT){this.sessionInfo=MT,this.auth=gT,this.secretKey=TT,this.hashingAlgorithm=UT,this.codeLength=mT,this.codeIntervalSeconds=WT,this.enrollmentCompletionDeadline=zT}static _fromStartTotpMfaEnrollmentResponse(TT,UT){return new zM(TT.totpSessionInfo.sharedSecretKey,TT.totpSessionInfo.hashingAlgorithm,TT.totpSessionInfo.verificationCodeLength,TT.totpSessionInfo.periodSec,new Date(TT.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),TT.totpSessionInfo.sessionInfo,UT)}_makeTotpVerificationInfo(TT){return{sessionInfo:this.sessionInfo,verificationCode:TT}}generateQrCodeUrl(TT,UT){var mT;let WT=!1;return(MM(TT)||MM(UT))&&(WT=!0),WT&&(MM(TT)&&(TT=(null===(mT=this.auth.currentUser)||void 0===mT?void 0:mT.email)||"unknownuser"),MM(UT)&&(UT=this.auth.name)),`otpauth://totp/${UT}:${TT}?secret=${this.secretKey}&issuer=${UT}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function MM(TT){return"undefined"===typeof TT||0===(null===TT||void 0===TT?void 0:TT.length)}var gM="@firebase/auth",nM="0.23.2";class HM{constructor(TT){this.auth=TT,this.internalListeners=new Map}getUid(){var TT;return this.assertAuthConfigured(),(null===(TT=this.auth.currentUser)||void 0===TT?void 0:TT.uid)||null}async getToken(TT){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(TT)}}addAuthTokenListener(TT){if(this.assertAuthConfigured(),this.internalListeners.has(TT))return;const UT=this.auth.onIdTokenChanged((UT=>{TT((null===UT||void 0===UT?void 0:UT.stsTokenManager.accessToken)||null)}));this.internalListeners.set(TT,UT),this.updateProactiveRefresh()}removeAuthTokenListener(TT){this.assertAuthConfigured();const UT=this.internalListeners.get(TT);UT&&(this.internalListeners.delete(TT),UT(),this.updateProactiveRefresh())}assertAuthConfigured(){JT(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const kM=(0,WT.N)("authIdTokenMaxAge")||300;let jM=null;const lM=TT=>async UT=>{const mT=UT&&await UT.getIdTokenResult(),WT=mT&&((new Date).getTime()-Date.parse(mT.issuedAtTime))/1e3;if(WT&&WT>kM)return;const zT=null===mT||void 0===mT?void 0:mT.token;jM!==zT&&(jM=zT,await fetch(TT,{method:zT?"POST":"DELETE",headers:zT?{Authorization:`Bearer ${zT}`}:{}}))};function LM(){let TT=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,zT.I)();const UT=(0,zT.B)(TT,"auth");if(UT.isInitialized())return UT.getImmediate();const mT=IU(TT,{popupRedirectResolver:Az,persistence:[PW,iW,OW]}),MT=(0,WT.N)("authTokenSyncURL");if(MT){const TT=lM(MT);MW(mT,TT,(()=>TT(mT.currentUser))),zW(mT,(UT=>TT(UT)))}const gT=(0,WT.K)("auth");return gT&&QU(mT,`http://${gT}`),mT}var pM;pM="Browser",(0,zT.D)(new nT.g("auth",((TT,UT)=>{let{options:mT}=UT;const WT=TT.getProvider("app").getImmediate(),zT=TT.getProvider("heartbeat"),MT=TT.getProvider("app-check-internal"),{apiKey:gT,authDomain:nT}=WT.options;JT(gT&&!gT.includes(":"),"invalid-api-key",{appName:WT.name});const HT={apiKey:gT,authDomain:nT,clientPlatform:pM,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:iU(pM)},kT=new aU(WT,zT,MT,HT);return function(TT,UT){const mT=(null===UT||void 0===UT?void 0:UT.persistence)||[],WT=(Array.isArray(mT)?mT:[mT]).map(MU);(null===UT||void 0===UT?void 0:UT.errorMap)&&TT._updateErrorMap(UT.errorMap),TT._initializeWithPersistence(WT,null===UT||void 0===UT?void 0:UT.popupRedirectResolver)}(kT,mT),kT}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((TT,UT,mT)=>{TT.getProvider("auth-internal").initialize()}))),(0,zT.D)(new nT.g("auth-internal",(TT=>(TT=>new HM(TT))(yU(TT.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,zT.N)(gM,nM,function(TT){switch(TT){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(pM)),(0,zT.N)(gM,nM,"esm2017")}};Object.freeze(modules);for(const TT in modules)Object.freeze(modules[TT]);

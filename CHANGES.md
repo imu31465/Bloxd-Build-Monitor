@@ -1,4 +1,4 @@
-Bloxd build update — 2026-11-25T01:10 JST (bloxd.io=sn3sfj.2522680a, staging.bloxd.io=sn3sfj.2522680a)
+Bloxd build update — 2026-11-25T04:31 JST (bloxd.io=yma3ej.f92ebd70, staging.bloxd.io=yma3ej.f92ebd70)
 
 Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.
 Fixed reports: [Added](changes/added.md) · [Removed](changes/removed.md) · [Changed](changes/changed.md) · [Build History](HISTORY.md)
@@ -7,52 +7,48 @@ Readable per-file diff: [changes/changed.md](changes/changed.md)
 
 | Environment | Previous Build | Current Build | Added | Removed | Changed | Size Delta | GitHub Diff |
 |---|---|---|---:|---:|---:|---:|---|
-| bloxd.io | `tz47m9.2cb7e113` | `sn3sfj.2522680a` | [829](changes/added.md) | [772](changes/removed.md) | [24482](changes/changed.md) | +467.02 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/d3bc9efbb1bd236678e74e8712f9ff32b6d8fc86...build/bloxd.io/sn3sfj.2522680a) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/bloxd.io/sn3sfj.2522680a) |
-| staging.bloxd.io | `tz47m9.2cb7e113` | `sn3sfj.2522680a` | [829](changes/added.md) | [772](changes/removed.md) | [24482](changes/changed.md) | +467.02 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/d3bc9efbb1bd236678e74e8712f9ff32b6d8fc86...build/staging.bloxd.io/sn3sfj.2522680a) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/staging.bloxd.io/sn3sfj.2522680a) |
+| bloxd.io | `sn3sfj.2522680a` | `yma3ej.f92ebd70` | [236](changes/added.md) | [242](changes/removed.md) | [61727](changes/changed.md) | +62.87 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/058c9f4e1b9c3d594eaf591327c888eaca6eb505...build/bloxd.io/yma3ej.f92ebd70) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/bloxd.io/yma3ej.f92ebd70) |
+| staging.bloxd.io | `sn3sfj.2522680a` | `yma3ej.f92ebd70` | [236](changes/added.md) | [242](changes/removed.md) | [61727](changes/changed.md) | +62.87 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/058c9f4e1b9c3d594eaf591327c888eaca6eb505...build/staging.bloxd.io/yma3ej.f92ebd70) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/staging.bloxd.io/yma3ej.f92ebd70) |
 
-## bloxd.io — tz47m9.2cb7e113 → sn3sfj.2522680a
+## bloxd.io — sn3sfj.2522680a → yma3ej.f92ebd70
 
 ```diff
-- Files: 443 files
-+ Files: 447 files (changed 406, added 34, removed 30, unchanged 7)
-- Total size: 45.99 MB
-+ Total size: 46.44 MB (+467.02 KB)
-+ Diff items (2-char JS identifiers filtered): Added 829, Removed 772, Changed 24482
+- Files: 447 files
++ Files: 447 files (changed 397, added 0, removed 0, unchanged 50)
+- Total size: 46.44 MB
++ Total size: 46.50 MB (+62.87 KB)
++ Diff items (2-char JS identifiers filtered): Added 236, Removed 242, Changed 61727
 + Largest changes:
-+ chunks/js/303.js increased 5.20 MB (b783c893 → 11e4b4d3)
-- chunks/js/298.js decreased 4.73 MB (45ea6013 → b3b5a61a)
-+ chunks/js/100.js increased 4.50 MB (af957d6a → 4a9d86af)
-- chunks/js/98.js decreased 4.46 MB (337c68c9 → 090b1c89)
-+ chunks/js/188.js increased 2.60 MB (26ac43bb → a5de9900)
-- chunks/js/186.js decreased 2.60 MB (a66c661d → 0018eb5c)
-+ chunks/js/77.js increased 2.08 MB (86819dea → 5eded716)
-- chunks/js/119.js decreased 1.34 MB (19e5833f → 6ce20181)
-+ chunks/js/94.js increased 1.31 MB (342b7c98 → c8dde514)
-+ chunks/js/106.js increased 1.20 MB (6d57864c → 20214e86)
-+ Added files: chunks/css/103.css, chunks/css/107.css, chunks/css/108.css, chunks/css/113.css, chunks/css/123.css, chunks/css/128.css, chunks/css/131.css, chunks/css/192.css (+26 more)
-- Removed files: chunks/css/100.css, chunks/css/105.css, chunks/css/109.css, chunks/css/122.css, chunks/css/125.css, chunks/css/126.css, chunks/css/156.css, chunks/css/190.css (+22 more)
++ chunks/js/86.js increased 28.86 KB (b9639a50 → db6f216e)
++ chunks/js/94.js increased 25.47 KB (c8dde514 → a92f2fa2)
++ main.js increased 9.93 KB (2522680a → f92ebd70)
+- chunks/js/wasmPlay.js decreased 8.84 KB (12e67459 → 850e5d8f)
++ chunks/js/77.js increased 7.32 KB (5eded716 → 9aa74ece)
+- chunks/js/230.js decreased 6.26 KB (56a520ce → 860e4a19)
++ chunks/js/248.js increased 5.36 KB (83986717 → 0a208477)
++ chunks/js/worldgenWorker.js increased 434 B (98fc8e5b → 3fa02f4b)
++ chunks/js/140.js increased 340 B (3f94843a → 93ebc9d7)
++ chunks/js/meshWorkerLoader.js increased 273 B (c7c14c75 → 46f828c4)
 ```
 
 
-## staging.bloxd.io — tz47m9.2cb7e113 → sn3sfj.2522680a
+## staging.bloxd.io — sn3sfj.2522680a → yma3ej.f92ebd70
 
 ```diff
-- Files: 443 files
-+ Files: 447 files (changed 406, added 34, removed 30, unchanged 7)
-- Total size: 45.99 MB
-+ Total size: 46.44 MB (+467.02 KB)
-+ Diff items (2-char JS identifiers filtered): Added 829, Removed 772, Changed 24482
+- Files: 447 files
++ Files: 447 files (changed 397, added 0, removed 0, unchanged 50)
+- Total size: 46.44 MB
++ Total size: 46.50 MB (+62.87 KB)
++ Diff items (2-char JS identifiers filtered): Added 236, Removed 242, Changed 61727
 + Largest changes:
-+ chunks/js/303.js increased 5.20 MB (b783c893 → 11e4b4d3)
-- chunks/js/298.js decreased 4.73 MB (45ea6013 → b3b5a61a)
-+ chunks/js/100.js increased 4.50 MB (af957d6a → 4a9d86af)
-- chunks/js/98.js decreased 4.46 MB (337c68c9 → 090b1c89)
-+ chunks/js/188.js increased 2.60 MB (26ac43bb → a5de9900)
-- chunks/js/186.js decreased 2.60 MB (a66c661d → 0018eb5c)
-+ chunks/js/77.js increased 2.08 MB (86819dea → 5eded716)
-- chunks/js/119.js decreased 1.34 MB (19e5833f → 6ce20181)
-+ chunks/js/94.js increased 1.31 MB (342b7c98 → c8dde514)
-+ chunks/js/106.js increased 1.20 MB (6d57864c → 20214e86)
-+ Added files: chunks/css/103.css, chunks/css/107.css, chunks/css/108.css, chunks/css/113.css, chunks/css/123.css, chunks/css/128.css, chunks/css/131.css, chunks/css/192.css (+26 more)
-- Removed files: chunks/css/100.css, chunks/css/105.css, chunks/css/109.css, chunks/css/122.css, chunks/css/125.css, chunks/css/126.css, chunks/css/156.css, chunks/css/190.css (+22 more)
++ chunks/js/86.js increased 28.86 KB (b9639a50 → db6f216e)
++ chunks/js/94.js increased 25.47 KB (c8dde514 → a92f2fa2)
++ main.js increased 9.93 KB (2522680a → f92ebd70)
+- chunks/js/wasmPlay.js decreased 8.84 KB (12e67459 → 850e5d8f)
++ chunks/js/77.js increased 7.32 KB (5eded716 → 9aa74ece)
+- chunks/js/230.js decreased 6.26 KB (56a520ce → 860e4a19)
++ chunks/js/248.js increased 5.36 KB (83986717 → 0a208477)
++ chunks/js/worldgenWorker.js increased 434 B (98fc8e5b → 3fa02f4b)
++ chunks/js/140.js increased 340 B (3f94843a → 93ebc9d7)
++ chunks/js/meshWorkerLoader.js increased 273 B (c7c14c75 → 46f828c4)
 ```

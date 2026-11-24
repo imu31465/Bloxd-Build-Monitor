@@ -1,127 +1,127 @@
 export const id = 234;
 export const ids = [234, 241, 244];
 export const modules = {
-  40435: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      f: () => xp
+  40354: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      g: () => nT
     });
-    var Op = cp(38905),
-      op = cp(40233),
-      Ip = cp(40411),
-      Sp = {};
-    class xp {
-      constructor(pp) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = pp, this.checkInputs = () => {}
+    var WT = mT(38800),
+      zT = mT(40122),
+      MT = mT(40330),
+      gT = {};
+    class nT {
+      constructor(TT) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = TT, this.checkInputs = () => {}
       }
-      add(pp) {
-        const ip = pp.getSimpleName();
-        this.attached[ip] ? Op.e.Warn("camera input of type " + ip + " already exists on camera") : (this.attached[ip] = pp, pp.camera = this.camera, pp.checkInputs && (this.checkInputs = this._addCheckInputs(pp.checkInputs.bind(pp))), this.attachedToElement && pp.attachControl(this.noPreventDefault))
+      add(TT) {
+        const UT = TT.getSimpleName();
+        this.attached[UT] ? WT.b.Warn("camera input of type " + UT + " already exists on camera") : (this.attached[UT] = TT, TT.camera = this.camera, TT.checkInputs && (this.checkInputs = this._addCheckInputs(TT.checkInputs.bind(TT))), this.attachedToElement && TT.attachControl(this.noPreventDefault))
       }
-      remove(pp) {
-        for (const ip in this.attached) {
-          const cp = this.attached[ip];
-          if (cp === pp) return cp.detachControl(), cp.camera = null, delete this.attached[ip], void this.rebuildInputCheck()
+      remove(TT) {
+        for (const UT in this.attached) {
+          const mT = this.attached[UT];
+          if (mT === TT) return mT.detachControl(), mT.camera = null, delete this.attached[UT], void this.rebuildInputCheck()
         }
       }
-      removeByType(pp) {
-        for (const ip in this.attached) {
-          const cp = this.attached[ip];
-          cp.getClassName() === pp && (cp.detachControl(), cp.camera = null, delete this.attached[ip], this.rebuildInputCheck())
+      removeByType(TT) {
+        for (const UT in this.attached) {
+          const mT = this.attached[UT];
+          mT.getClassName() === TT && (mT.detachControl(), mT.camera = null, delete this.attached[UT], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(pp) {
-        const ip = this.checkInputs;
+      _addCheckInputs(TT) {
+        const UT = this.checkInputs;
         return () => {
-          ip(), pp()
+          UT(), TT()
         }
       }
-      attachInput(pp) {
-        this.attachedToElement && pp.attachControl(this.noPreventDefault)
+      attachInput(TT) {
+        this.attachedToElement && TT.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          pp = !Ip.d.ForceAttachControlToAlwaysPreventDefault && pp, this.attachedToElement = !0, this.noPreventDefault = pp;
-          for (const ip in this.attached) this.attached[ip].attachControl(pp)
+          TT = !MT.b.ForceAttachControlToAlwaysPreventDefault && TT, this.attachedToElement = !0, this.noPreventDefault = TT;
+          for (const UT in this.attached) this.attached[UT].attachControl(TT)
         }
       }
       detachElement() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const ip in this.attached) this.attached[ip].detachControl(), pp && (this.attached[ip].camera = null);
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const UT in this.attached) this.attached[UT].detachControl(), TT && (this.attached[UT].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const pp in this.attached) {
-          const ip = this.attached[pp];
-          ip.checkInputs && (this.checkInputs = this._addCheckInputs(ip.checkInputs.bind(ip)))
+        for (const TT in this.attached) {
+          const UT = this.attached[TT];
+          UT.checkInputs && (this.checkInputs = this._addCheckInputs(UT.checkInputs.bind(UT)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(pp) {
-        const ip = {};
-        for (const cp in this.attached) {
-          const pp = this.attached[cp],
-            Op = op.c.Serialize(pp);
-          ip[pp.getClassName()] = Op
+      serialize(TT) {
+        const UT = {};
+        for (const mT in this.attached) {
+          const TT = this.attached[mT],
+            WT = zT.e.Serialize(TT);
+          UT[TT.getClassName()] = WT
         }
-        pp.inputsmgr = ip
+        TT.inputsmgr = UT
       }
-      parse(pp) {
-        const ip = pp.inputsmgr;
-        if (ip) {
+      parse(TT) {
+        const UT = TT.inputsmgr;
+        if (UT) {
           this.clear();
-          for (const pp in ip) {
-            const cp = Sp[pp];
-            if (cp) {
-              const Op = ip[pp],
-                Ip = op.c.Parse((() => new cp), Op, null);
-              this.add(Ip)
+          for (const TT in UT) {
+            const mT = gT[TT];
+            if (mT) {
+              const WT = UT[TT],
+                MT = zT.e.Parse((() => new mT), WT, null);
+              this.add(MT)
             }
           }
         } else
-          for (const cp in this.attached) {
-            const ip = Sp[this.attached[cp].getClassName()];
-            if (ip) {
-              const Op = op.c.Parse((() => new ip), pp, null);
-              this.remove(this.attached[cp]), this.add(Op)
+          for (const mT in this.attached) {
+            const UT = gT[this.attached[mT].getClassName()];
+            if (UT) {
+              const WT = zT.e.Parse((() => new UT), TT, null);
+              this.remove(this.attached[mT]), this.add(WT)
             }
           }
       }
     }
   },
-  40443: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op.b
+  40362: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT.d
     });
-    var Op = cp(40445);
-    (0, Op.d)()
+    var WT = mT(40369);
+    (0, WT.e)()
   },
-  40445: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      d: () => Pp
+  40369: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => jT,
+      e: () => LT
     });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(37320),
-      Sp = cp(37487),
-      xp = cp(40451),
-      Lp = cp(40415),
-      Yp = cp(37368);
-    let Dp = (() => {
-        var pp;
-        let ip, cp, Lp = xp.d,
-          Yp = [],
-          Dp = [],
-          Ap = [],
-          Pp = [];
-        return pp = class extends Lp {
-          constructor(pp, ip, cp, op) {
-            super(pp, cp, op), this.groundColor = (0, Op.l)(this, Yp, new Sp.d(0, 0, 0)), this.direction = ((0, Op.l)(this, Dp), (0, Op.l)(this, Ap, void 0)), (0, Op.l)(this, Pp), this.direction = ip || Ip.o.Up()
+    var WT = mT(40095),
+      zT = mT(40102),
+      MT = mT(37188),
+      gT = mT(37367),
+      nT = mT(40373),
+      HT = mT(40335),
+      kT = mT(37239);
+    let jT = (() => {
+        var TT;
+        let UT, mT, HT = nT.e,
+          kT = [],
+          jT = [],
+          lT = [],
+          LT = [];
+        return TT = class extends HT {
+          constructor(TT, UT, mT, zT) {
+            super(TT, mT, zT), this.groundColor = (0, WT.k)(this, kT, new gT.d(0, 0, 0)), this.direction = ((0, WT.k)(this, jT), (0, WT.k)(this, lT, void 0)), (0, WT.k)(this, LT), this.direction = UT || MT.p.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(pp) {
-            return this.direction = Ip.o.Normalize(pp.subtract(Ip.o.Zero())), this.direction
+          setDirectionToTarget(TT) {
+            return this.direction = MT.p.Normalize(TT.subtract(MT.p.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(pp, ip) {
-            const cp = Ip.o.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", cp.x, cp.y, cp.z, 0, ip), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), ip), this
+          transferToEffect(TT, UT) {
+            const mT = MT.p.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", mT.x, mT.y, mT.z, 0, UT), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), UT), this
           }
-          transferToNodeMaterialEffect(pp, ip) {
-            const cp = Ip.o.Normalize(this.direction);
-            return pp.setFloat3(ip, cp.x, cp.y, cp.z), this
+          transferToNodeMaterialEffect(TT, UT) {
+            const mT = MT.p.Normalize(this.direction);
+            return TT.setFloat3(UT, mT.x, mT.y, mT.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = Ip.b.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = MT.e.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return xp.d.LIGHTTYPEID_HEMISPHERICLIGHT
+            return nT.e.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(pp, ip) {
-            pp["HEMILIGHT" + ip] = !0
+          prepareLightSpecificDefines(TT, UT) {
+            TT["HEMILIGHT" + UT] = !0
           }
         }, (() => {
-          const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Lp[Symbol.metadata] ?? null) : void 0;
-          ip = [(0, op.n)()], cp = [(0, op.H)()], (0, Op.j)(null, null, ip, {
+          const MT = "function" === typeof Symbol && Symbol.metadata ? Object.create(HT[Symbol.metadata] ?? null) : void 0;
+          UT = [(0, zT.l)()], mT = [(0, zT.J)()], (0, WT.h)(null, null, UT, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: pp => "groundColor" in pp,
-              get: pp => pp.groundColor,
-              set: (pp, ip) => {
-                pp.groundColor = ip
+              has: TT => "groundColor" in TT,
+              get: TT => TT.groundColor,
+              set: (TT, UT) => {
+                TT.groundColor = UT
               }
             },
-            metadata: Ip
-          }, Yp, Dp), (0, Op.j)(null, null, cp, {
+            metadata: MT
+          }, kT, jT), (0, WT.h)(null, null, mT, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: pp => "direction" in pp,
-              get: pp => pp.direction,
-              set: (pp, ip) => {
-                pp.direction = ip
+              has: TT => "direction" in TT,
+              get: TT => TT.direction,
+              set: (TT, UT) => {
+                TT.direction = UT
               }
             },
-            metadata: Ip
-          }, Ap, Pp), Ip && Object.defineProperty(pp, Symbol.metadata, {
+            metadata: MT
+          }, lT, LT), MT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Ip
+            value: MT
           })
-        })(), pp
+        })(), TT
       })(),
-      Ap = !1;
+      lT = !1;
 
-    function Pp() {
-      Ap || (Ap = !0, Lp.b.AddNodeConstructor("Light_Type_3", ((pp, ip) => () => new Dp(pp, Ip.o.Zero(), ip))), (0, Yp.g)("BABYLON.HemisphericLight", Dp))
+    function LT() {
+      lT || (lT = !0, HT.d.AddNodeConstructor("Light_Type_3", ((TT, UT) => () => new jT(TT, MT.p.Zero(), UT))), (0, kT.h)("BABYLON.HemisphericLight", jT))
     }
   },
-  37479: (pp, ip, cp) => {
-    cp.d(ip, {
-      Color3: () => Op.d,
-      b: () => Op.h
+  37364: (TT, UT, mT) => {
+    mT.d(UT, {
+      Color3: () => WT.d,
+      e: () => WT.g
     });
-    var Op = cp(37487);
-    (0, Op.i)()
+    var WT = mT(37367);
+    (0, WT.k)()
   },
-  37985: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op
+  37885: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT
     });
-    var Op = cp(37989);
-    class op {
-      static GetPlanes(pp) {
-        const ip = [];
-        for (let cp = 0; cp < 6; cp++) ip.push(new Op.e(0, 0, 0, 0));
-        return op.GetPlanesToRef(pp, ip), ip
+    var WT = mT(37889);
+    class zT {
+      static GetPlanes(TT) {
+        const UT = [];
+        for (let mT = 0; mT < 6; mT++) UT.push(new WT.e(0, 0, 0, 0));
+        return zT.GetPlanesToRef(TT, UT), UT
       }
-      static GetNearPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[2], ip.normal.y = cp[7] + cp[6], ip.normal.z = cp[11] + cp[10], ip.d = cp[15] + cp[14], ip.normalize()
+      static GetNearPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] + mT[2], UT.normal.y = mT[7] + mT[6], UT.normal.z = mT[11] + mT[10], UT.d = mT[15] + mT[14], UT.normalize()
       }
-      static GetFarPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[2], ip.normal.y = cp[7] - cp[6], ip.normal.z = cp[11] - cp[10], ip.d = cp[15] - cp[14], ip.normalize()
+      static GetFarPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] - mT[2], UT.normal.y = mT[7] - mT[6], UT.normal.z = mT[11] - mT[10], UT.d = mT[15] - mT[14], UT.normalize()
       }
-      static GetLeftPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[0], ip.normal.y = cp[7] + cp[4], ip.normal.z = cp[11] + cp[8], ip.d = cp[15] + cp[12], ip.normalize()
+      static GetLeftPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] + mT[0], UT.normal.y = mT[7] + mT[4], UT.normal.z = mT[11] + mT[8], UT.d = mT[15] + mT[12], UT.normalize()
       }
-      static GetRightPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[0], ip.normal.y = cp[7] - cp[4], ip.normal.z = cp[11] - cp[8], ip.d = cp[15] - cp[12], ip.normalize()
+      static GetRightPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] - mT[0], UT.normal.y = mT[7] - mT[4], UT.normal.z = mT[11] - mT[8], UT.d = mT[15] - mT[12], UT.normalize()
       }
-      static GetTopPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[1], ip.normal.y = cp[7] - cp[5], ip.normal.z = cp[11] - cp[9], ip.d = cp[15] - cp[13], ip.normalize()
+      static GetTopPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] - mT[1], UT.normal.y = mT[7] - mT[5], UT.normal.z = mT[11] - mT[9], UT.d = mT[15] - mT[13], UT.normalize()
       }
-      static GetBottomPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[1], ip.normal.y = cp[7] + cp[5], ip.normal.z = cp[11] + cp[9], ip.d = cp[15] + cp[13], ip.normalize()
+      static GetBottomPlaneToRef(TT, UT) {
+        const mT = TT.m;
+        UT.normal.x = mT[3] + mT[1], UT.normal.y = mT[7] + mT[5], UT.normal.z = mT[11] + mT[9], UT.d = mT[15] + mT[13], UT.normalize()
       }
-      static GetPlanesToRef(pp, ip) {
-        op.GetNearPlaneToRef(pp, ip[0]), op.GetFarPlaneToRef(pp, ip[1]), op.GetLeftPlaneToRef(pp, ip[2]), op.GetRightPlaneToRef(pp, ip[3]), op.GetTopPlaneToRef(pp, ip[4]), op.GetBottomPlaneToRef(pp, ip[5])
+      static GetPlanesToRef(TT, UT) {
+        zT.GetNearPlaneToRef(TT, UT[0]), zT.GetFarPlaneToRef(TT, UT[1]), zT.GetLeftPlaneToRef(TT, UT[2]), zT.GetRightPlaneToRef(TT, UT[3]), zT.GetTopPlaneToRef(TT, UT[4]), zT.GetBottomPlaneToRef(TT, UT[5])
       }
-      static IsPointInFrustum(pp, ip) {
-        for (let cp = 0; cp < 6; cp++)
-          if (ip[cp].dotCoordinate(pp) < 0) return !1;
+      static IsPointInFrustum(TT, UT) {
+        for (let mT = 0; mT < 6; mT++)
+          if (UT[mT].dotCoordinate(TT) < 0) return !1;
         return !0
       }
     }
   },
-  37989: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op
+  37889: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => zT
     });
-    var Op = cp(37320);
-    class op {
-      constructor(pp, ip, cp, op) {
-        this.normal = new Op.o(pp, ip, cp), this.d = op
+    var WT = mT(37188);
+    class zT {
+      constructor(TT, UT, mT, zT) {
+        this.normal = new WT.p(TT, UT, mT), this.d = zT
       }
-      BOp() {
+      cWT() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new op(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new zT(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let pp = this.normal.getHashCode();
-        return pp = 397 * pp ^ this.d, pp
+        let TT = this.normal.getHashCode();
+        return TT = 397 * TT ^ this.d, TT
       }
       normalize() {
-        const pp = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let ip = 0;
-        return 0 !== pp && (ip = 1 / pp), this.normal.x *= ip, this.normal.y *= ip, this.normal.z *= ip, this.d *= ip, this
+        const TT = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let UT = 0;
+        return 0 !== TT && (UT = 1 / TT), this.normal.x *= UT, this.normal.y *= UT, this.normal.z *= UT, this.d *= UT, this
       }
-      transform(pp) {
-        const ip = op._TmpMatrix;
-        pp.invertToRef(ip);
-        const cp = ip.m,
-          Op = this.normal.x,
-          Ip = this.normal.y,
-          Sp = this.normal.z,
-          xp = this.d,
-          Lp = Op * cp[0] + Ip * cp[1] + Sp * cp[2] + xp * cp[3],
-          Yp = Op * cp[4] + Ip * cp[5] + Sp * cp[6] + xp * cp[7],
-          Dp = Op * cp[8] + Ip * cp[9] + Sp * cp[10] + xp * cp[11],
-          Ap = Op * cp[12] + Ip * cp[13] + Sp * cp[14] + xp * cp[15];
-        return new op(Lp, Yp, Dp, Ap)
+      transform(TT) {
+        const UT = zT._TmpMatrix;
+        TT.invertToRef(UT);
+        const mT = UT.m,
+          WT = this.normal.x,
+          MT = this.normal.y,
+          gT = this.normal.z,
+          nT = this.d,
+          HT = WT * mT[0] + MT * mT[1] + gT * mT[2] + nT * mT[3],
+          kT = WT * mT[4] + MT * mT[5] + gT * mT[6] + nT * mT[7],
+          jT = WT * mT[8] + MT * mT[9] + gT * mT[10] + nT * mT[11],
+          lT = WT * mT[12] + MT * mT[13] + gT * mT[14] + nT * mT[15];
+        return new zT(HT, kT, jT, lT)
       }
-      dotCoordinate(pp) {
-        return this.normal.x * pp.x + this.normal.y * pp.y + this.normal.z * pp.z + this.d
+      dotCoordinate(TT) {
+        return this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z + this.d
       }
-      copyFromPoints(pp, ip, cp) {
-        const Op = ip.x - pp.x,
-          op = ip.y - pp.y,
-          Ip = ip.z - pp.z,
-          Sp = cp.x - pp.x,
-          xp = cp.y - pp.y,
-          Lp = cp.z - pp.z,
-          Yp = op * Lp - Ip * xp,
-          Dp = Ip * Sp - Op * Lp,
-          Ap = Op * xp - op * Sp,
-          Pp = Math.sqrt(Yp * Yp + Dp * Dp + Ap * Ap);
-        let Wp;
-        return Wp = 0 !== Pp ? 1 / Pp : 0, this.normal.x = Yp * Wp, this.normal.y = Dp * Wp, this.normal.z = Ap * Wp, this.d = -(this.normal.x * pp.x + this.normal.y * pp.y + this.normal.z * pp.z), this
+      copyFromPoints(TT, UT, mT) {
+        const WT = UT.x - TT.x,
+          zT = UT.y - TT.y,
+          MT = UT.z - TT.z,
+          gT = mT.x - TT.x,
+          nT = mT.y - TT.y,
+          HT = mT.z - TT.z,
+          kT = zT * HT - MT * nT,
+          jT = MT * gT - WT * HT,
+          lT = WT * nT - zT * gT,
+          LT = Math.sqrt(kT * kT + jT * jT + lT * lT);
+        let pT;
+        return pT = 0 !== LT ? 1 / LT : 0, this.normal.x = kT * pT, this.normal.y = jT * pT, this.normal.z = lT * pT, this.d = -(this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z), this
       }
-      isFrontFacingTo(pp, ip) {
-        return Op.o.Dot(this.normal, pp) <= ip
+      isFrontFacingTo(TT, UT) {
+        return WT.p.Dot(this.normal, TT) <= UT
       }
-      signedDistanceTo(pp) {
-        return Op.o.Dot(pp, this.normal) + this.d
+      signedDistanceTo(TT) {
+        return WT.p.Dot(TT, this.normal) + this.d
       }
-      static FromArray(pp) {
-        return new op(pp[0], pp[1], pp[2], pp[3])
+      static FromArray(TT) {
+        return new zT(TT[0], TT[1], TT[2], TT[3])
       }
-      static FromPoints(pp, ip, cp) {
-        const Op = new op(0, 0, 0, 0);
-        return Op.copyFromPoints(pp, ip, cp), Op
+      static FromPoints(TT, UT, mT) {
+        const WT = new zT(0, 0, 0, 0);
+        return WT.copyFromPoints(TT, UT, mT), WT
       }
-      static FromPositionAndNormal(pp, ip) {
-        const cp = new op(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(pp, ip, cp)
+      static FromPositionAndNormal(TT, UT) {
+        const mT = new zT(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(TT, UT, mT)
       }
-      static FromPositionAndNormalToRef(pp, ip, cp) {
-        return cp.normal.rM(ip), cp.normal.normalize(), cp.d = -pp.dot(cp.normal), cp
+      static FromPositionAndNormalToRef(TT, UT, mT) {
+        return mT.normal.Gw(UT), mT.normal.normalize(), mT.d = -TT.dot(mT.normal), mT
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(pp, ip, cp) {
-        const op = -(ip.x * pp.x + ip.y * pp.y + ip.z * pp.z);
-        return Op.o.Dot(cp, ip) + op
+      static SignedDistanceToPlaneFromPositionAndNormal(TT, UT, mT) {
+        const zT = -(UT.x * TT.x + UT.y * TT.y + UT.z * TT.z);
+        return WT.p.Dot(mT, UT) + zT
       }
     }
-    op._TmpMatrix = Op.b.Identity()
+    zT._TmpMatrix = WT.e.Identity()
   },
-  37313: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      Matrix: () => Op.b,
-      Quaternion: () => Op.f,
-      RegisterMathVector: () => Op.h,
-      TmpVectors: () => Op.i,
-      Vector2: () => Op.l,
-      Zy: () => Op.o,
-      Vector4: () => Op.q
+  37185: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      Matrix: () => WT.e,
+      Quaternion: () => WT.f,
+      RegisterMathVector: () => WT.j,
+      TmpVectors: () => WT.l,
+      Vector2: () => WT.o,
+      JB: () => WT.p,
+      Vector4: () => WT.t
     });
-    var Op = cp(37320);
-    (0, Op.h)()
+    var WT = mT(37188);
+    (0, WT.j)()
   },
-  38313: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  38229: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    class Op {
-      constructor(pp, ip, cp, Op) {
-        this.x = pp, this.y = ip, this.width = cp, this.height = Op
+    class WT {
+      constructor(TT, UT, mT, WT) {
+        this.x = TT, this.y = UT, this.width = mT, this.height = WT
       }
-      toGlobal(pp, ip) {
-        return new Op(this.x * pp, this.y * ip, this.width * pp, this.height * ip)
+      toGlobal(TT, UT) {
+        return new WT(this.x * TT, this.y * UT, this.width * TT, this.height * UT)
       }
-      toGlobalToRef(pp, ip, cp) {
-        return cp.x = this.x * pp, cp.y = this.y * ip, cp.width = this.width * pp, cp.height = this.height * ip, this
+      toGlobalToRef(TT, UT, mT) {
+        return mT.x = this.x * TT, mT.y = this.y * UT, mT.width = this.width * TT, mT.height = this.height * UT, this
       }
       clone() {
-        return new Op(this.x, this.y, this.width, this.height)
+        return new WT(this.x, this.y, this.width, this.height)
       }
     }
   },
-  40568: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp
+  40526: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => kT
     });
-    var Op = cp(37320),
-      op = cp(37487),
-      Ip = cp(40577),
-      Sp = cp(40589),
-      xp = cp(40605);
+    var WT = mT(37188),
+      zT = mT(37367),
+      MT = mT(40535),
+      gT = mT(40546),
+      nT = mT(40564);
 
-    function Lp(pp) {
-      let ip = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const cp = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        Ip = [],
-        Lp = pp.width || pp.size || 1,
-        Yp = pp.height || pp.size || 1,
-        Dp = pp.depth || pp.size || 1,
-        Ap = pp.wrap || !1;
-      let Pp = void 0 === pp.topBaseAt ? 1 : pp.topBaseAt,
-        Wp = void 0 === pp.bottomBaseAt ? 0 : pp.bottomBaseAt;
-      Pp = (Pp + 4) % 4, Wp = (Wp + 4) % 4;
-      let yp = [2, 0, 3, 1][Pp],
-        Up = [2, 0, 1, 3][Wp],
-        wp = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (Ap) {
-        ip = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], wp = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let pp = [
+    function HT(TT) {
+      let UT = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const mT = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        MT = [],
+        HT = TT.width || TT.size || 1,
+        kT = TT.height || TT.size || 1,
+        jT = TT.depth || TT.size || 1,
+        lT = TT.wrap || !1;
+      let LT = void 0 === TT.topBaseAt ? 1 : TT.topBaseAt,
+        pT = void 0 === TT.bottomBaseAt ? 0 : TT.bottomBaseAt;
+      LT = (LT + 4) % 4, pT = (pT + 4) % 4;
+      let BT = [2, 0, 3, 1][LT],
+        ZT = [2, 0, 1, 3][pT],
+        cT = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (lT) {
+        UT = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], cT = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let TT = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          cp = [
+          mT = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const Op = [17, 18, 19, 16],
-          op = [22, 23, 20, 21];
-        for (; yp > 0;) pp.unshift(pp.pop()), Op.unshift(Op.pop()), yp--;
-        for (; Up > 0;) cp.unshift(cp.pop()), op.unshift(op.pop()), Up--;
-        pp = pp.flat(), cp = cp.flat(), wp = wp.concat(pp).concat(cp), ip.push(Op[0], Op[2], Op[3], Op[0], Op[1], Op[2]), ip.push(op[0], op[2], op[3], op[0], op[1], op[2])
+        const WT = [17, 18, 19, 16],
+          zT = [22, 23, 20, 21];
+        for (; BT > 0;) TT.unshift(TT.pop()), WT.unshift(WT.pop()), BT--;
+        for (; ZT > 0;) mT.unshift(mT.pop()), zT.unshift(zT.pop()), ZT--;
+        TT = TT.flat(), mT = mT.flat(), cT = cT.concat(TT).concat(mT), UT.push(WT[0], WT[2], WT[3], WT[0], WT[1], WT[2]), UT.push(zT[0], zT[2], zT[3], zT[0], zT[1], zT[2])
       }
-      const vp = [Lp / 2, Yp / 2, Dp / 2],
-        tp = wp.reduce(((pp, ip, cp) => pp.concat(ip * vp[cp % 3])), []),
-        Hp = 0 === pp.sideOrientation ? 0 : pp.sideOrientation || Sp.d.DEFAULTSIDE,
-        dp = pp.faceUV || new Array(6),
-        ep = pp.faceColors,
-        jp = [];
-      for (let Sp = 0; Sp < 6; Sp++) void 0 === dp[Sp] && (dp[Sp] = new Op.q(0, 0, 1, 1)), ep && void 0 === ep[Sp] && (ep[Sp] = new op.h(1, 1, 1, 1));
-      for (let Op = 0; Op < 6; Op++)
-        if (Ip.push(dp[Op].z, xp.c ? 1 - dp[Op].w : dp[Op].w), Ip.push(dp[Op].x, xp.c ? 1 - dp[Op].w : dp[Op].w), Ip.push(dp[Op].x, xp.c ? 1 - dp[Op].y : dp[Op].y), Ip.push(dp[Op].z, xp.c ? 1 - dp[Op].y : dp[Op].y), ep)
-          for (let pp = 0; pp < 4; pp++) jp.push(ep[Op].r, ep[Op].g, ep[Op].b, ep[Op].a);
-      Sp.d._ComputeSides(Hp, tp, ip, cp, Ip, pp.frontUVs, pp.backUVs);
-      const kp = new Sp.d;
-      if (kp.indices = ip, kp.positions = tp, kp.normals = cp, kp.uvs = Ip, ep) {
-        const pp = Hp === Sp.d.DOUBLESIDE ? jp.concat(jp) : jp;
-        kp.colors = pp
+      const vT = [HT / 2, kT / 2, jT / 2],
+        fT = cT.reduce(((TT, UT, mT) => TT.concat(UT * vT[mT % 3])), []),
+        qT = 0 === TT.sideOrientation ? 0 : TT.sideOrientation || gT.d.DEFAULTSIDE,
+        iT = TT.faceUV || new Array(6),
+        bT = TT.faceColors,
+        OT = [];
+      for (let gT = 0; gT < 6; gT++) void 0 === iT[gT] && (iT[gT] = new WT.t(0, 0, 1, 1)), bT && void 0 === bT[gT] && (bT[gT] = new zT.g(1, 1, 1, 1));
+      for (let WT = 0; WT < 6; WT++)
+        if (MT.push(iT[WT].z, nT.c ? 1 - iT[WT].w : iT[WT].w), MT.push(iT[WT].x, nT.c ? 1 - iT[WT].w : iT[WT].w), MT.push(iT[WT].x, nT.c ? 1 - iT[WT].y : iT[WT].y), MT.push(iT[WT].z, nT.c ? 1 - iT[WT].y : iT[WT].y), bT)
+          for (let TT = 0; TT < 4; TT++) OT.push(bT[WT].r, bT[WT].g, bT[WT].b, bT[WT].a);
+      gT.d._ComputeSides(qT, fT, UT, mT, MT, TT.frontUVs, TT.backUVs);
+      const eT = new gT.d;
+      if (eT.indices = UT, eT.positions = fT, eT.normals = mT, eT.uvs = MT, bT) {
+        const TT = qT === gT.d.DOUBLESIDE ? OT.concat(OT) : OT;
+        eT.colors = TT
       }
-      return kp
+      return eT
     }
 
-    function Yp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Op = new Ip.d(pp, cp);
-      ip.sideOrientation = Ip.d._GetDefaultSideOrientation(ip.sideOrientation), Op._originalBuilderSideOrientation = ip.sideOrientation;
-      return Lp(ip).applyToMesh(Op, ip.updatable), Op
+    function kT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const WT = new MT.d(TT, mT);
+      UT.sideOrientation = MT.d._GetDefaultSideOrientation(UT.sideOrientation), WT._originalBuilderSideOrientation = UT.sideOrientation;
+      return HT(UT).applyToMesh(WT, UT.updatable), WT
     }
-    let Dp = !1;
-    Dp || (Dp = !0, Sp.d.CreateBox = Lp, Ip.d.CreateBox = function(pp, ip) {
-      return Yp(pp, {
-        size: ip,
+    let jT = !1;
+    jT || (jT = !0, gT.d.CreateBox = HT, MT.d.CreateBox = function(TT, UT) {
+      return kT(TT, {
+        size: UT,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  40626: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ap
+  40574: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => lT
     });
-    var Op = cp(37320),
-      op = cp(40577),
-      Ip = cp(40589),
-      Sp = cp(40631),
-      xp = cp(40342),
-      Lp = cp(38905);
+    var WT = mT(37188),
+      zT = mT(40535),
+      MT = mT(40546),
+      gT = mT(40576),
+      nT = mT(40257),
+      HT = mT(38800);
 
-    function Yp(pp) {
-      const ip = [],
-        cp = [],
-        Op = pp.lines,
-        op = pp.colors,
-        Sp = [];
-      let xp = 0;
-      for (let Ip = 0; Ip < Op.length; Ip++) {
-        const pp = Op[Ip];
-        for (let Op = 0; Op < pp.length; Op++) {
+    function kT(TT) {
+      const UT = [],
+        mT = [],
+        WT = TT.lines,
+        zT = TT.colors,
+        gT = [];
+      let nT = 0;
+      for (let MT = 0; MT < WT.length; MT++) {
+        const TT = WT[MT];
+        for (let WT = 0; WT < TT.length; WT++) {
           const {
-            x: Lp,
-            y: Yp,
-            z: Dp
-          } = pp[Op];
-          if (cp.push(Lp, Yp, Dp), op) {
-            const pp = op[Ip],
+            x: HT,
+            y: kT,
+            z: jT
+          } = TT[WT];
+          if (mT.push(HT, kT, jT), zT) {
+            const TT = zT[MT],
               {
-                r: ip,
-                g: cp,
-                b: xp,
-                a: Lp
-              } = pp[Op];
-            Sp.push(ip, cp, xp, Lp)
+                r: UT,
+                g: mT,
+                b: nT,
+                a: HT
+              } = TT[WT];
+            gT.push(UT, mT, nT, HT)
           }
-          Op > 0 && (ip.push(xp - 1), ip.push(xp)), xp++
+          WT > 0 && (UT.push(nT - 1), UT.push(nT)), nT++
         }
       }
-      const Lp = new Ip.d;
-      return Lp.indices = ip, Lp.positions = cp, op && (Lp.colors = Sp), Lp
+      const HT = new MT.d;
+      return HT.indices = UT, HT.positions = mT, zT && (HT.colors = gT), HT
     }
 
-    function Dp(pp) {
-      const ip = pp.dashSize || 3,
-        cp = pp.gapSize || 1,
-        op = pp.dashNb || 200,
-        Sp = pp.points,
-        xp = [],
-        Lp = [],
-        Yp = Op.o.Zero();
-      let Dp, Ap, Pp, Wp = 0,
-        yp = 0;
-      for (Pp = 0; Pp < Sp.length - 1; Pp++) Sp[Pp + 1].subtractToRef(Sp[Pp], Yp), Wp += Yp.length();
-      const Up = Wp / op,
-        wp = ip * Up / (ip + cp);
-      for (Pp = 0; Pp < Sp.length - 1; Pp++) {
-        Sp[Pp + 1].subtractToRef(Sp[Pp], Yp), Dp = Math.floor(Yp.length() / Up), Yp.normalize();
-        for (let pp = 0; pp < Dp; pp++) Ap = Up * pp, xp.push(Sp[Pp].x + Ap * Yp.x, Sp[Pp].y + Ap * Yp.y, Sp[Pp].z + Ap * Yp.z), xp.push(Sp[Pp].x + (Ap + wp) * Yp.x, Sp[Pp].y + (Ap + wp) * Yp.y, Sp[Pp].z + (Ap + wp) * Yp.z), Lp.push(yp, yp + 1), yp += 2
+    function jT(TT) {
+      const UT = TT.dashSize || 3,
+        mT = TT.gapSize || 1,
+        zT = TT.dashNb || 200,
+        gT = TT.points,
+        nT = [],
+        HT = [],
+        kT = WT.p.Zero();
+      let jT, lT, LT, pT = 0,
+        BT = 0;
+      for (LT = 0; LT < gT.length - 1; LT++) gT[LT + 1].subtractToRef(gT[LT], kT), pT += kT.length();
+      const ZT = pT / zT,
+        cT = UT * ZT / (UT + mT);
+      for (LT = 0; LT < gT.length - 1; LT++) {
+        gT[LT + 1].subtractToRef(gT[LT], kT), jT = Math.floor(kT.length() / ZT), kT.normalize();
+        for (let TT = 0; TT < jT; TT++) lT = ZT * TT, nT.push(gT[LT].x + lT * kT.x, gT[LT].y + lT * kT.y, gT[LT].z + lT * kT.z), nT.push(gT[LT].x + (lT + cT) * kT.x, gT[LT].y + (lT + cT) * kT.y, gT[LT].z + (lT + cT) * kT.z), HT.push(BT, BT + 1), BT += 2
       }
-      const vp = new Ip.d;
-      return vp.positions = xp, vp.indices = Lp, vp
+      const vT = new MT.d;
+      return vT.positions = nT, vT.indices = HT, vT
     }
 
-    function Ap(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Op = ip.instance,
-        op = ip.lines,
-        Ip = ip.colors;
-      if (Op) {
-        const pp = Op.getVerticesData(xp.j.PositionKind);
-        let ip, cp;
-        Ip && (ip = Op.getVerticesData(xp.j.ColorKind));
-        let Sp = 0,
-          Lp = 0;
-        for (let Op = 0; Op < op.length; Op++) {
-          const xp = op[Op];
-          for (let op = 0; op < xp.length; op++) pp[Sp] = xp[op].x, pp[Sp + 1] = xp[op].y, pp[Sp + 2] = xp[op].z, Ip && ip && (cp = Ip[Op], ip[Lp] = cp[op].r, ip[Lp + 1] = cp[op].g, ip[Lp + 2] = cp[op].b, ip[Lp + 3] = cp[op].a, Lp += 4), Sp += 3
+    function lT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const WT = UT.instance,
+        zT = UT.lines,
+        MT = UT.colors;
+      if (WT) {
+        const TT = WT.getVerticesData(nT.i.PositionKind);
+        let UT, mT;
+        MT && (UT = WT.getVerticesData(nT.i.ColorKind));
+        let gT = 0,
+          HT = 0;
+        for (let WT = 0; WT < zT.length; WT++) {
+          const nT = zT[WT];
+          for (let zT = 0; zT < nT.length; zT++) TT[gT] = nT[zT].x, TT[gT + 1] = nT[zT].y, TT[gT + 2] = nT[zT].z, MT && UT && (mT = MT[WT], UT[HT] = mT[zT].r, UT[HT + 1] = mT[zT].g, UT[HT + 2] = mT[zT].b, UT[HT + 3] = mT[zT].a, HT += 4), gT += 3
         }
-        return Op.updateVerticesData(xp.j.PositionKind, pp, !1, !1), Ip && ip && Op.updateVerticesData(xp.j.ColorKind, ip, !1, !1), Op.refreshBoundingInfo(), Op
+        return WT.updateVerticesData(nT.i.PositionKind, TT, !1, !1), MT && UT && WT.updateVerticesData(nT.i.ColorKind, UT, !1, !1), WT.refreshBoundingInfo(), WT
       }
-      const Lp = !!Ip,
-        Dp = new Sp.e(pp, cp, null, void 0, void 0, Lp, ip.useVertexAlpha, ip.material);
-      return Yp(ip).applyToMesh(Dp, ip.updatable), Dp
+      const HT = !!MT,
+        jT = new gT.d(TT, mT, null, void 0, void 0, HT, UT.useVertexAlpha, UT.material);
+      return kT(UT).applyToMesh(jT, UT.updatable), jT
     }
 
-    function Pp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Op = ip.colors ? [ip.colors] : null;
-      return Ap(pp, {
-        lines: [ip.points],
-        updatable: ip.updatable,
-        instance: ip.instance,
-        colors: Op,
-        useVertexAlpha: ip.useVertexAlpha,
-        material: ip.material
-      }, cp)
+    function LT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const WT = UT.colors ? [UT.colors] : null;
+      return lT(TT, {
+        lines: [UT.points],
+        updatable: UT.updatable,
+        instance: UT.instance,
+        colors: WT,
+        useVertexAlpha: UT.useVertexAlpha,
+        material: UT.material
+      }, mT)
     }
 
-    function Wp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Ip = ip.points,
-        xp = ip.instance,
-        Yp = ip.gapSize || 1,
-        Ap = ip.dashSize || 3;
-      if (xp) {
-        const pp = pp => {
-          const ip = Op.o.Zero(),
-            cp = pp.length / 6;
-          let op, Sp, Lp, Yp, Dp = 0,
-            Ap = 0;
-          for (Lp = 0; Lp < Ip.length - 1; Lp++) Ip[Lp + 1].subtractToRef(Ip[Lp], ip), Dp += ip.length();
-          const Pp = Dp / cp,
-            Wp = xp._creationDataStorage.dashSize,
-            yp = Wp * Pp / (Wp + xp._creationDataStorage.gapSize);
-          for (Lp = 0; Lp < Ip.length - 1; Lp++)
-            for (Ip[Lp + 1].subtractToRef(Ip[Lp], ip), op = Math.floor(ip.length() / Pp), ip.normalize(), Yp = 0; Yp < op && Ap < pp.length;) Sp = Pp * Yp, pp[Ap] = Ip[Lp].x + Sp * ip.x, pp[Ap + 1] = Ip[Lp].y + Sp * ip.y, pp[Ap + 2] = Ip[Lp].z + Sp * ip.z, pp[Ap + 3] = Ip[Lp].x + (Sp + yp) * ip.x, pp[Ap + 4] = Ip[Lp].y + (Sp + yp) * ip.y, pp[Ap + 5] = Ip[Lp].z + (Sp + yp) * ip.z, Ap += 6, Yp++;
-          for (; Ap < pp.length;) pp[Ap] = Ip[Lp].x, pp[Ap + 1] = Ip[Lp].y, pp[Ap + 2] = Ip[Lp].z, Ap += 3
+    function pT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const MT = UT.points,
+        nT = UT.instance,
+        kT = UT.gapSize || 1,
+        lT = UT.dashSize || 3;
+      if (nT) {
+        const TT = TT => {
+          const UT = WT.p.Zero(),
+            mT = TT.length / 6;
+          let zT, gT, HT, kT, jT = 0,
+            lT = 0;
+          for (HT = 0; HT < MT.length - 1; HT++) MT[HT + 1].subtractToRef(MT[HT], UT), jT += UT.length();
+          const LT = jT / mT,
+            pT = nT._creationDataStorage.dashSize,
+            BT = pT * LT / (pT + nT._creationDataStorage.gapSize);
+          for (HT = 0; HT < MT.length - 1; HT++)
+            for (MT[HT + 1].subtractToRef(MT[HT], UT), zT = Math.floor(UT.length() / LT), UT.normalize(), kT = 0; kT < zT && lT < TT.length;) gT = LT * kT, TT[lT] = MT[HT].x + gT * UT.x, TT[lT + 1] = MT[HT].y + gT * UT.y, TT[lT + 2] = MT[HT].z + gT * UT.z, TT[lT + 3] = MT[HT].x + (gT + BT) * UT.x, TT[lT + 4] = MT[HT].y + (gT + BT) * UT.y, TT[lT + 5] = MT[HT].z + (gT + BT) * UT.z, lT += 6, kT++;
+          for (; lT < TT.length;) TT[lT] = MT[HT].x, TT[lT + 1] = MT[HT].y, TT[lT + 2] = MT[HT].z, lT += 3
         };
-        return (ip.dashNb || ip.dashSize || ip.gapSize || ip.useVertexAlpha || ip.material) && Lp.e.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), xp.updateMeshPositions(pp, !1), xp
+        return (UT.dashNb || UT.dashSize || UT.gapSize || UT.useVertexAlpha || UT.material) && HT.b.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), nT.updateMeshPositions(TT, !1), nT
       }
-      const Pp = new Sp.e(pp, cp, null, void 0, void 0, void 0, ip.useVertexAlpha, ip.material);
-      return Dp(ip).applyToMesh(Pp, ip.updatable), Pp._creationDataStorage = new op.h, Pp._creationDataStorage.dashSize = Ap, Pp._creationDataStorage.gapSize = Yp, Pp
+      const LT = new gT.d(TT, mT, null, void 0, void 0, void 0, UT.useVertexAlpha, UT.material);
+      return jT(UT).applyToMesh(LT, UT.updatable), LT._creationDataStorage = new zT.h, LT._creationDataStorage.dashSize = lT, LT._creationDataStorage.gapSize = kT, LT
     }
-    let yp = !1;
-    yp || (yp = !0, Ip.d.CreateLineSystem = Yp, Ip.d.CreateDashedLines = Dp, op.d.CreateLines = function(pp, ip) {
-      return Pp(pp, {
-        points: ip,
+    let BT = !1;
+    BT || (BT = !0, MT.d.CreateLineSystem = kT, MT.d.CreateDashedLines = jT, zT.d.CreateLines = function(TT, UT) {
+      return LT(TT, {
+        points: UT,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, op.d.CreateDashedLines = function(pp, ip, cp, Op, op) {
-      return Wp(pp, {
-        points: ip,
-        dashSize: cp,
-        gapSize: Op,
-        dashNb: op,
+    }, zT.d.CreateDashedLines = function(TT, UT, mT, WT, zT) {
+      return pT(TT, {
+        points: UT,
+        dashSize: mT,
+        gapSize: WT,
+        dashNb: zT,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  40631: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Pp,
-      h: () => Up
+  40576: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => LT,
+      e: () => ZT
     });
-    var Op, op, Ip = cp(37487),
-      Sp = cp(40342),
-      xp = cp(40577),
-      Lp = cp(40638),
-      Yp = cp(40476),
-      Dp = cp(40647),
-      Ap = cp(40096);
-    class Pp extends xp.d {
-      _isShaderMaterial(pp) {
-        return !!pp && "ShaderMaterial" === pp.getClassName()
+    var WT, zT, MT = mT(37367),
+      gT = mT(40257),
+      nT = mT(40535),
+      HT = mT(40585),
+      kT = mT(40413),
+      jT = mT(40593),
+      lT = mT(39965);
+    class LT extends nT.d {
+      _isShaderMaterial(TT) {
+        return !!TT && "ShaderMaterial" === TT.getClassName()
       }
-      constructor(pp) {
-        let ip = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Op = arguments.length > 5 ? arguments[5] : void 0,
-          op = arguments.length > 6 ? arguments[6] : void 0,
-          xp = arguments.length > 7 ? arguments[7] : void 0;
-        super(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, ip, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Op, this.useVertexAlpha = op, this.color = new Ip.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, ip && (this.color = ip.color.clone(), this.alpha = ip.alpha, this.useVertexColor = ip.useVertexColor, this.useVertexAlpha = ip.useVertexAlpha), this.intersectionThreshold = .1;
-        const Lp = {
-          attributes: [Sp.j.PositionKind],
+      constructor(TT) {
+        let UT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          WT = arguments.length > 5 ? arguments[5] : void 0,
+          zT = arguments.length > 6 ? arguments[6] : void 0,
+          nT = arguments.length > 7 ? arguments[7] : void 0;
+        super(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, UT, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = WT, this.useVertexAlpha = zT, this.color = new MT.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, UT && (this.color = UT.color.clone(), this.alpha = UT.alpha, this.useVertexColor = UT.useVertexColor, this.useVertexAlpha = UT.useVertexAlpha), this.intersectionThreshold = .1;
+        const HT = {
+          attributes: [gT.i.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? Lp.defines.push("#define VERTEXALPHA") : Lp.needAlphaBlending = !1, this.useVertexColor ? (Lp.defines.push("#define VERTEXCOLOR"), Lp.attributes.push(Sp.j.ColorKind)) : (Lp.uniforms.push("color"), this._color4 = new Ip.h), xp) this.material = xp;
+        if (this.useVertexAlpha ? HT.defines.push("#define VERTEXALPHA") : HT.needAlphaBlending = !1, this.useVertexColor ? (HT.defines.push("#define VERTEXCOLOR"), HT.attributes.push(gT.i.ColorKind)) : (HT.uniforms.push("color"), this._color4 = new MT.g), nT) this.material = nT;
         else {
-          this.Gl().gy().isWebGPU && !Pp.ForceGLSL && (this._shaderLanguage = 1), Lp.shaderLanguage = this._shaderLanguage, Lp.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([cp.e(349).then((() => cp(42847))), cp.e(355).then((() => cp(42853)))]) : await Promise.all([cp.e(331).then((() => cp(42861))), cp.e(337).then((() => cp(42863)))])
+          this.KF().eB().isWebGPU && !LT.ForceGLSL && (this._shaderLanguage = 1), HT.shaderLanguage = this._shaderLanguage, HT.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([mT.e(349).then((() => mT(42722))), mT.e(355).then((() => mT(42726)))]) : await Promise.all([mT.e(331).then((() => mT(42731))), mT.e(337).then((() => mT(42735)))])
           };
-          const pp = new Dp.q("colorShader", this.Gl(), "color", Lp, !1);
-          pp.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(pp)
+          const TT = new jT.o("colorShader", this.KF(), "color", HT, !1);
+          TT.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(TT)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(pp) {
-        const ip = this.material;
-        if (ip === pp) return;
-        const cp = ip && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(pp), cp && ip?.dispose()
+      set material(TT) {
+        const UT = this.material;
+        if (UT === TT) return;
+        const mT = UT && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(TT), mT && UT?.dispose()
       }
-      _setInternalMaterial(pp) {
-        this._setMaterial(pp), this.material && (this.material.fillMode = Yp.b.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(TT) {
+        this._setMaterial(TT), this.material && (this.material.fillMode = kT.b.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(pp) {}
-      _bind(pp, ip) {
+      set checkCollisions(TT) {}
+      _bind(TT, UT) {
         if (!this._geometry) return this;
-        const cp = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(ip, cp) : this._geometry._bind(ip, cp, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const mT = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(UT, mT) : this._geometry._bind(UT, mT, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: pp,
-            g: ip,
-            b: cp
+            r: TT,
+            g: UT,
+            b: mT
           } = this.color;
-          this._color4.set(pp, ip, cp, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(TT, UT, mT, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(pp, ip, cp) {
+      _draw(TT, UT, mT) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const Op = this.Gl().gy();
-        return this._unIndexed ? Op.drawArraysType(Yp.b.LineListDrawMode, pp.verticesStart, pp.verticesCount, cp) : Op.drawElementsType(Yp.b.LineListDrawMode, pp.indexStart, pp.indexCount, cp), this
+        const WT = this.KF().eB();
+        return this._unIndexed ? WT.drawArraysType(kT.b.LineListDrawMode, TT.verticesStart, TT.verticesCount, mT) : WT.drawElementsType(kT.b.LineListDrawMode, TT.indexStart, TT.indexCount, mT), this
       }
-      dispose(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || ip) && this.material?.dispose(!1, !1, !0), super.dispose(pp)
+      dispose(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || UT) && this.material?.dispose(!1, !1, !0), super.dispose(TT)
       }
-      clone(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        if (ip && void 0 === ip._addToSceneRootNodes) {
-          const cp = ip;
-          return cp.source = this, new Pp(pp, this.Gl(), cp.parent, cp.source, cp.doNotCloneChildren)
+      clone(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        if (UT && void 0 === UT._addToSceneRootNodes) {
+          const mT = UT;
+          return mT.source = this, new LT(TT, this.KF(), mT.parent, mT.source, mT.doNotCloneChildren)
         }
-        return new Pp(pp, this.Gl(), ip, this, cp)
+        return new LT(TT, this.KF(), UT, this, mT)
       }
-      createInstance(pp) {
-        const ip = new Wp(pp, this);
-        if (this.MJ) {
-          ip.MJ = {};
-          for (const pp in this.MJ) ip.MJ[pp] = this.MJ[pp]
+      createInstance(TT) {
+        const UT = new pT(TT, this);
+        if (this.XV) {
+          UT.XV = {};
+          for (const TT in this.XV) UT.XV[TT] = this.XV[TT]
         }
-        return ip
+        return UT
       }
-      serialize(pp) {
-        super.serialize(pp), pp.color = this.color.BOp(), pp.alpha = this.alpha
+      serialize(TT) {
+        super.serialize(TT), TT.color = this.color.cWT(), TT.alpha = this.alpha
       }
-      static Parse(pp, ip) {
-        const cp = new Pp(pp.name, ip);
-        return cp.color = Ip.d.FromArray(pp.color), cp.alpha = pp.alpha, cp
+      static Parse(TT, UT) {
+        const mT = new LT(TT.name, UT);
+        return mT.color = MT.d.FromArray(TT.color), mT.alpha = TT.alpha, mT
       }
     }
-    Pp.ForceGLSL = !1;
-    class Wp extends Lp.d {
-      constructor(pp, ip) {
-        super(pp, ip), this.intersectionThreshold = ip.intersectionThreshold
+    LT.ForceGLSL = !1;
+    class pT extends HT.d {
+      constructor(TT, UT) {
+        super(TT, UT), this.intersectionThreshold = UT.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let yp = !1;
+    let BT = !1;
 
-    function Up() {
-      yp || (yp = !0, xp.d._LinesMeshParser = (pp, ip) => Pp.Parse(pp, ip))
-    }(Op = Pp.prototype).enableEdgesRendering ?? (Op.enableEdgesRendering = (0, Ap.k)("LinesMesh", "enableEdgesRendering")), (op = Wp.prototype).enableEdgesRendering ?? (op.enableEdgesRendering = (0, Ap.k)("InstancedLinesMesh", "enableEdgesRendering"))
+    function ZT() {
+      BT || (BT = !0, nT.d._LinesMeshParser = (TT, UT) => LT.Parse(TT, UT))
+    }(WT = LT.prototype).enableEdgesRendering ?? (WT.enableEdgesRendering = (0, lT.j)("LinesMesh", "enableEdgesRendering")), (zT = pT.prototype).enableEdgesRendering ?? (zT.enableEdgesRendering = (0, lT.j)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38900: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
+  38793: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT
     });
-    var Op = cp(38905);
-    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
-      ...pp
-    } : null : pp.clone(ip) : null;
-    class Ip {
-      static DeepCopy(pp, ip, cp, Ip) {
-        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xp = function(pp) {
-          const ip = [];
+    var WT = mT(38800);
+    const zT = (TT, UT, mT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : mT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(UT) : null;
+    class MT {
+      static DeepCopy(TT, UT, mT, MT) {
+        let gT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const nT = function(TT) {
+          const UT = [];
           do {
-            const cp = Object.getOwnPropertyNames(pp);
-            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
-          } while (pp = Object.getPrototypeOf(pp));
-          return ip
-        }(pp);
-        for (const Yp of xp) {
-          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
-          if (Yp.endsWith("Observable")) continue;
-          if (cp && -1 !== cp.indexOf(Yp)) continue;
-          const xp = pp[Yp],
-            Dp = typeof xp;
-          if ("function" !== Dp) try {
-            if ("object" === Dp)
-              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
-              else if (xp instanceof Array) {
-              if (ip[Yp] = [], xp.length > 0)
-                if ("object" == typeof xp[0])
-                  for (let pp = 0; pp < xp.length; pp++) {
-                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
-                  } else ip[Yp] = xp.slice(0)
-            } else ip[Yp] = op(xp, ip, Sp);
-            else ip[Yp] = xp
-          } catch (Lp) {
-            Op.e.Warn(Lp.message)
+            const mT = Object.getOwnPropertyNames(TT);
+            for (const TT of mT) - 1 === UT.indexOf(TT) && UT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return UT
+        }(TT);
+        for (const kT of nT) {
+          if ("_" === kT[0] && (!MT || -1 === MT.indexOf(kT))) continue;
+          if (kT.endsWith("Observable")) continue;
+          if (mT && -1 !== mT.indexOf(kT)) continue;
+          const nT = TT[kT],
+            jT = typeof nT;
+          if ("function" !== jT) try {
+            if ("object" === jT)
+              if (nT instanceof Uint8Array) UT[kT] = Uint8Array.from(nT);
+              else if (nT instanceof Array) {
+              if (UT[kT] = [], nT.length > 0)
+                if ("object" == typeof nT[0])
+                  for (let TT = 0; TT < nT.length; TT++) {
+                    const mT = zT(nT[TT], UT, gT); - 1 === UT[kT].indexOf(mT) && UT[kT].push(mT)
+                  } else UT[kT] = nT.slice(0)
+            } else UT[kT] = zT(nT, UT, gT);
+            else UT[kT] = nT
+          } catch (HT) {
+            WT.b.Warn(HT.message)
           }
         }
       }
     }
   },
-  38124: (pp, ip, cp) => {
-    function Op() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (pp => {
-        const ip = 16 * Math.random() | 0;
-        return ("x" === pp ? ip : 3 & ip | 8).toString(16)
+  38045: (TT, UT, mT) => {
+    function WT() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (TT => {
+        const UT = 16 * Math.random() | 0;
+        return ("x" === TT ? UT : 3 & UT | 8).toString(16)
       }))
     }
-    cp.d(ip, {
-      e: () => Op
+    mT.d(UT, {
+      c: () => WT
     })
   },
-  38905: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  38800: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
-      static _CheckLimit(pp, ip) {
-        let cp = Op._LogLimitOutputs[pp];
-        return cp ? cp.current++ : (cp = {
-          limit: ip,
+    class WT {
+      static _CheckLimit(TT, UT) {
+        let mT = WT._LogLimitOutputs[TT];
+        return mT ? mT.current++ : (mT = {
+          limit: UT,
           current: 1
-        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
+        }, WT._LogLimitOutputs[TT] = mT), mT.current <= mT.limit
       }
-      static _GenerateLimitMessage(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cp = Op._LogLimitOutputs[pp];
-        if (!cp || !Op.MessageLimitReached) return;
-        const op = this._Levels[ip];
-        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const mT = WT._LogLimitOutputs[TT];
+        if (!mT || !WT.MessageLimitReached) return;
+        const zT = this._Levels[UT];
+        mT.current === mT.limit && WT[zT.name](WT.MessageLimitReached.replace(/%LIMIT%/g, "" + mT.limit).replace(/%TYPE%/g, zT.name ?? ""))
       }
-      static _AddLogEntry(pp) {
-        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
+      static _AddLogEntry(TT) {
+        WT._LogCache = TT + WT._LogCache, WT.OnNewCacheEntry && WT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(pp) {
-        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
-          cp = new Date;
-        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
+      static _FormatMessage(TT) {
+        const UT = TT => TT < 10 ? "0" + TT : "" + TT,
+          mT = new Date;
+        return "[" + UT(mT.getHours()) + ":" + UT(mT.getMinutes()) + ":" + UT(mT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(pp, ip) {}
+      static _LogDisabled(TT, UT) {}
       static _LogEnabled() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        const op = Array.isArray(ip) ? ip[0] : ip;
-        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
-        const Ip = Op._FormatMessage(op),
-          Sp = this._Levels[pp],
-          xp = Array.isArray(ip) ? ip.slice(1) : [];
-        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
-        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
-        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          UT = arguments.length > 1 ? arguments[1] : void 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        const zT = Array.isArray(UT) ? UT[0] : UT;
+        if (void 0 !== mT && !WT._CheckLimit(zT, mT)) return;
+        const MT = WT._FormatMessage(zT),
+          gT = this._Levels[TT],
+          nT = Array.isArray(UT) ? UT.slice(1) : [];
+        gT.logFunc && gT.logFunc("BJS - " + MT, ...nT);
+        const HT = `<div style='color:${gT.color}'>${MT}</div><br>`;
+        WT._AddLogEntry(HT), WT._GenerateLimitMessage(zT, TT)
       }
       static get LogCache() {
-        return Op._LogCache
+        return WT._LogCache
       }
       static ClearLogCache() {
-        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
+        WT._LogCache = "", WT._LogLimitOutputs = {}, WT.errorsCount = 0
       }
-      static set LogLevels(pp) {
-        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
-        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
-        for (const cp of ip)
-          if ((pp & cp) === cp) {
-            const pp = this._Levels[cp];
-            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
+      static set LogLevels(TT) {
+        WT.Log = WT._LogDisabled, WT.Warn = WT._LogDisabled, WT.Error = WT._LogDisabled;
+        const UT = [WT.MessageLogLevel, WT.WarningLogLevel, WT.ErrorLogLevel];
+        for (const mT of UT)
+          if ((TT & mT) === mT) {
+            const TT = this._Levels[mT];
+            WT[TT.name] = WT._LogEnabled.bind(WT, mT)
           }
       }
     }
-    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
+    WT.NoneLogLevel = 0, WT.MessageLogLevel = 1, WT.WarningLogLevel = 2, WT.ErrorLogLevel = 4, WT.AllLogLevel = 7, WT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", WT._LogCache = "", WT._LogLimitOutputs = {}, WT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+    }], WT.errorsCount = 0, WT.Log = WT._LogEnabled.bind(WT, WT.MessageLogLevel), WT.Warn = WT._LogEnabled.bind(WT, WT.WarningLogLevel), WT.Error = WT._LogEnabled.bind(WT, WT.ErrorLogLevel)
   },
-  40289: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op.f
+  40192: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT.i
     });
-    var Op = cp(40296);
-    (0, Op.c)()
+    var WT = mT(40198);
+    (0, WT.e)()
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

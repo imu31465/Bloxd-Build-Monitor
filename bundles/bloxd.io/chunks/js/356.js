@@ -1,68 +1,68 @@
 export const id = 356;
 export const ids = [356];
 export const modules = {
-  42843: (pp, ip, cp) => {
-    function Op(pp) {
-      return Math.floor(pp / 8)
+  42719: (TT, UT, mT) => {
+    function WT(TT) {
+      return Math.floor(TT / 8)
     }
 
-    function op(pp) {
-      return 1 << pp % 8
+    function zT(TT) {
+      return 1 << TT % 8
     }
-    cp.d(ip, {
-      OptimizeIndices: () => Sp
+    mT.d(UT, {
+      OptimizeIndices: () => gT
     });
-    class Ip {
-      constructor(pp) {
-        this.size = pp, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class MT {
+      constructor(TT) {
+        this.size = TT, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(pp) {
-        if (pp >= this.size) throw new RangeError("Bit index out of range");
-        const ip = Op(pp),
-          cp = op(pp);
-        return 0 !== (this._byteArray[ip] & cp)
+      get(TT) {
+        if (TT >= this.size) throw new RangeError("Bit index out of range");
+        const UT = WT(TT),
+          mT = zT(TT);
+        return 0 !== (this._byteArray[UT] & mT)
       }
-      set(pp, ip) {
-        if (pp >= this.size) throw new RangeError("Bit index out of range");
-        const cp = Op(pp),
-          Ip = op(pp);
-        ip ? this._byteArray[cp] |= Ip : this._byteArray[cp] &= ~Ip
+      set(TT, UT) {
+        if (TT >= this.size) throw new RangeError("Bit index out of range");
+        const mT = WT(TT),
+          MT = zT(TT);
+        UT ? this._byteArray[mT] |= MT : this._byteArray[mT] &= ~MT
       }
     }
 
-    function Sp(pp) {
-      const ip = [],
-        cp = pp.length / 3;
-      for (let Ip = 0; Ip < cp; Ip++) ip.push([pp[3 * Ip], pp[3 * Ip + 1], pp[3 * Ip + 2]]);
-      const Op = new Map;
-      for (let Ip = 0; Ip < ip.length; Ip++) {
-        const pp = ip[Ip];
-        for (const ip of pp) {
-          let pp = Op.get(ip);
-          pp || Op.set(ip, pp = []), pp.push(Ip)
+    function gT(TT) {
+      const UT = [],
+        mT = TT.length / 3;
+      for (let MT = 0; MT < mT; MT++) UT.push([TT[3 * MT], TT[3 * MT + 1], TT[3 * MT + 2]]);
+      const WT = new Map;
+      for (let MT = 0; MT < UT.length; MT++) {
+        const TT = UT[MT];
+        for (const UT of TT) {
+          let TT = WT.get(UT);
+          TT || WT.set(UT, TT = []), TT.push(MT)
         }
       }
-      const op = new Ip(cp),
-        Sp = [],
-        xp = pp => {
-          const cp = [pp];
-          for (; cp.length > 0;) {
-            const pp = cp.pop();
-            if (!op.get(pp)) {
-              op.set(pp, !0), Sp.push(ip[pp]);
-              for (const Ip of ip[pp]) {
-                const pp = Op.get(Ip);
-                if (!pp) return;
-                for (const ip of pp) op.get(ip) || cp.push(ip)
+      const zT = new MT(mT),
+        gT = [],
+        nT = TT => {
+          const mT = [TT];
+          for (; mT.length > 0;) {
+            const TT = mT.pop();
+            if (!zT.get(TT)) {
+              zT.set(TT, !0), gT.push(UT[TT]);
+              for (const MT of UT[TT]) {
+                const TT = WT.get(MT);
+                if (!TT) return;
+                for (const UT of TT) zT.get(UT) || mT.push(UT)
               }
             }
           }
         };
-      for (let Ip = 0; Ip < cp; Ip++) op.get(Ip) || xp(Ip);
-      let Lp = 0;
-      for (const Ip of Sp) pp[Lp++] = Ip[0], pp[Lp++] = Ip[1], pp[Lp++] = Ip[2]
+      for (let MT = 0; MT < mT; MT++) zT.get(MT) || nT(MT);
+      let HT = 0;
+      for (const MT of gT) TT[HT++] = MT[0], TT[HT++] = MT[1], TT[HT++] = MT[2]
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

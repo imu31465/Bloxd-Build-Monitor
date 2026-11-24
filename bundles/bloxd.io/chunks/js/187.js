@@ -1,2445 +1,2445 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  9322: (pp, ip) => {
-    ip.discordURLBuilder = function(pp) {
-      var ip;
-      const cp = (null === (ip = null === window || void 0 === window ? void 0 : window.location) || void 0 === ip ? void 0 : ip.hostname) || "localhost",
-        Op = pp.hostname.split("."),
-        op = !pp.hostname.includes("trycloudflare.com") && !pp.hostname.includes("discordsays.com") && Op.length > 2 ? `/${Op[0]}` : "";
-      return pp.pathname.startsWith("/.proxy") ? `${pp.protocol}//${cp}${op}${pp.pathname}${pp.search}` : `${pp.protocol}//${cp}/.proxy/colyseus${op}${pp.pathname}${pp.search}`
+  9316: (TT, UT) => {
+    UT.discordURLBuilder = function(TT) {
+      var UT;
+      const mT = (null === (UT = null === window || void 0 === window ? void 0 : window.location) || void 0 === UT ? void 0 : UT.hostname) || "localhost",
+        WT = TT.hostname.split("."),
+        zT = !TT.hostname.includes("trycloudflare.com") && !TT.hostname.includes("discordsays.com") && WT.length > 2 ? `/${WT[0]}` : "";
+      return TT.pathname.startsWith("/.proxy") ? `${TT.protocol}//${mT}${zT}${TT.pathname}${TT.search}` : `${TT.protocol}//${mT}/.proxy/colyseus${zT}${TT.pathname}${TT.search}`
     }
   },
-  9314: (pp, ip, cp) => {
-    var Op, op, Ip, Sp, xp = cp(9230),
-      Lp = cp(9318),
-      Yp = cp(9281);
-    Op = new WeakMap, op = new WeakMap, Ip = new WeakMap, Sp = new WeakMap, ip.Auth = class {
-      constructor(pp) {
-        this.http = pp, this.settings = {
+  9306: (TT, UT, mT) => {
+    var WT, zT, MT, gT, nT = mT(9217),
+      HT = mT(9314),
+      kT = mT(9265);
+    WT = new WeakMap, zT = new WeakMap, MT = new WeakMap, gT = new WeakMap, UT.Auth = class {
+      constructor(TT) {
+        this.http = TT, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Op.set(this, !1), op.set(this, void 0), Ip.set(this, void 0), Sp.set(this, Yp.createNanoEvents()), Lp.getItem(this.settings.key, (pp => this.token = pp))
+        }, WT.set(this, !1), zT.set(this, void 0), MT.set(this, void 0), gT.set(this, kT.createNanoEvents()), HT.getItem(this.settings.key, (TT => this.token = TT))
       }
-      set token(pp) {
-        this.http.authToken = pp
+      set token(TT) {
+        this.http.authToken = TT
       }
       get token() {
         return this.http.authToken
       }
-      onChange(pp) {
-        const ip = xp.__classPrivateFieldGet(this, Sp, "f").on("change", pp);
-        return xp.__classPrivateFieldGet(this, Op, "f") || xp.__classPrivateFieldSet(this, op, new Promise(((pp, ip) => {
-          this.getUserData().then((pp => {
-            this.emitChange(Object.assign(Object.assign({}, pp), {
+      onChange(TT) {
+        const UT = nT.__classPrivateFieldGet(this, gT, "f").on("change", TT);
+        return nT.__classPrivateFieldGet(this, WT, "f") || nT.__classPrivateFieldSet(this, zT, new Promise(((TT, UT) => {
+          this.getUserData().then((TT => {
+            this.emitChange(Object.assign(Object.assign({}, TT), {
               token: this.token
             }))
-          })).catch((pp => {
+          })).catch((TT => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            pp()
+            TT()
           }))
-        })), "f"), xp.__classPrivateFieldSet(this, Op, !0, "f"), ip
+        })), "f"), nT.__classPrivateFieldSet(this, WT, !0, "f"), UT
       }
       getUserData() {
-        return xp.__awaiter(this, void 0, void 0, (function*() {
+        return nT.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(pp, ip, cp) {
-        return xp.__awaiter(this, void 0, void 0, (function*() {
-          const Op = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(TT, UT, mT) {
+        return nT.__awaiter(this, void 0, void 0, (function*() {
+          const WT = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: pp,
-              password: ip,
-              options: cp
+              email: TT,
+              password: UT,
+              options: mT
             }
           })).data;
-          return this.emitChange(Op), Op
+          return this.emitChange(WT), WT
         }))
       }
-      signInWithEmailAndPassword(pp, ip) {
-        return xp.__awaiter(this, void 0, void 0, (function*() {
-          const cp = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(TT, UT) {
+        return nT.__awaiter(this, void 0, void 0, (function*() {
+          const mT = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: pp,
-              password: ip
+              email: TT,
+              password: UT
             }
           })).data;
-          return this.emitChange(cp), cp
+          return this.emitChange(mT), mT
         }))
       }
-      signInAnonymously(pp) {
-        return xp.__awaiter(this, void 0, void 0, (function*() {
-          const ip = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(TT) {
+        return nT.__awaiter(this, void 0, void 0, (function*() {
+          const UT = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: pp
+              options: TT
             }
           })).data;
-          return this.emitChange(ip), ip
+          return this.emitChange(UT), UT
         }))
       }
-      sendPasswordResetEmail(pp) {
-        return xp.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(TT) {
+        return nT.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: pp
+              email: TT
             }
           })).data
         }))
       }
-      signInWithProvider(pp) {
-        return xp.__awaiter(this, arguments, void 0, (function*(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((cp, Op) => {
-            const op = ip.width || 480,
-              Sp = ip.height || 768,
-              Lp = this.token ? `?token=${this.token}` : "",
-              Yp = `Login with ${pp[0].toUpperCase()+pp.substring(1)}`,
-              Dp = this.http.client.getHttpEndpoint(`${ip.prefix||`${this.settings.path}/provider`}/${pp}${Lp}`),
-              Ap = screen.width / 2 - op / 2,
-              Pp = screen.height / 2 - Sp / 2;
-            xp.__classPrivateFieldSet(this, Ip, window.open(Dp, Yp, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + op + ", height=" + Sp + ", top=" + Pp + ", left=" + Ap), "f");
-            const Wp = pp => {
-                void 0 === pp.data.user && void 0 === pp.data.token || (clearInterval(yp), xp.__classPrivateFieldGet(this, Ip, "f").close(), xp.__classPrivateFieldSet(this, Ip, void 0, "f"), window.removeEventListener("message", Wp), void 0 !== pp.data.error ? Op(pp.data.error) : (cp(pp.data), this.emitChange(pp.data)))
+      signInWithProvider(TT) {
+        return nT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((mT, WT) => {
+            const zT = UT.width || 480,
+              gT = UT.height || 768,
+              HT = this.token ? `?token=${this.token}` : "",
+              kT = `Login with ${TT[0].toUpperCase()+TT.substring(1)}`,
+              jT = this.http.client.getHttpEndpoint(`${UT.prefix||`${this.settings.path}/provider`}/${TT}${HT}`),
+              lT = screen.width / 2 - zT / 2,
+              LT = screen.height / 2 - gT / 2;
+            nT.__classPrivateFieldSet(this, MT, window.open(jT, kT, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + zT + ", height=" + gT + ", top=" + LT + ", left=" + lT), "f");
+            const pT = TT => {
+                void 0 === TT.data.user && void 0 === TT.data.token || (clearInterval(BT), nT.__classPrivateFieldGet(this, MT, "f").close(), nT.__classPrivateFieldSet(this, MT, void 0, "f"), window.removeEventListener("message", pT), void 0 !== TT.data.error ? WT(TT.data.error) : (mT(TT.data), this.emitChange(TT.data)))
               },
-              yp = setInterval((() => {
-                xp.__classPrivateFieldGet(this, Ip, "f") && !xp.__classPrivateFieldGet(this, Ip, "f").closed || (xp.__classPrivateFieldSet(this, Ip, void 0, "f"), Op("OO"), window.removeEventListener("message", Wp))
+              BT = setInterval((() => {
+                nT.__classPrivateFieldGet(this, MT, "f") && !nT.__classPrivateFieldGet(this, MT, "f").closed || (nT.__classPrivateFieldSet(this, MT, void 0, "f"), WT("Km"), window.removeEventListener("message", pT))
               }), 200);
-            window.addEventListener("message", Wp)
+            window.addEventListener("message", pT)
           }))
         }))
       }
       signOut() {
-        return xp.__awaiter(this, void 0, void 0, (function*() {
+        return nT.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(pp) {
-        void 0 !== pp.token && (this.token = pp.token, null === pp.token ? Lp.removeItem(this.settings.key) : Lp.setItem(this.settings.key, pp.token)), xp.__classPrivateFieldGet(this, Sp, "f").emit("change", pp)
+      emitChange(TT) {
+        void 0 !== TT.token && (this.token = TT.token, null === TT.token ? HT.removeItem(this.settings.key) : HT.setItem(this.settings.key, TT.token)), nT.__classPrivateFieldGet(this, gT, "f").emit("change", TT)
       }
     }
   },
-  9224: (pp, ip, cp) => {
-    var Op, op = cp(9230),
-      Ip = cp(9237),
-      Sp = cp(9242),
-      xp = cp(9303),
-      Lp = cp(9314),
-      Yp = cp(9322);
-    class Dp extends Error {
-      constructor(pp, ip) {
-        super(pp), this.code = ip, this.name = "MatchMakeError", Object.setPrototypeOf(this, Dp.prototype)
+  9210: (TT, UT, mT) => {
+    var WT, zT = mT(9217),
+      MT = mT(9219),
+      gT = mT(9228),
+      nT = mT(9294),
+      HT = mT(9306),
+      kT = mT(9316);
+    class jT extends Error {
+      constructor(TT, UT) {
+        super(TT), this.code = UT, this.name = "MatchMakeError", Object.setPrototypeOf(this, jT.prototype)
       }
     }
-    const Ap = "undefined" !== typeof window && "undefined" !== typeof(null === (Op = null === window || void 0 === window ? void 0 : window.location) || void 0 === Op ? void 0 : Op.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class Pp {
+    const lT = "undefined" !== typeof window && "undefined" !== typeof(null === (WT = null === window || void 0 === window ? void 0 : window.location) || void 0 === WT ? void 0 : WT.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class LT {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ap,
-          ip = arguments.length > 1 ? arguments[1] : void 0;
-        var cp, Op;
-        if ("string" === typeof pp) {
-          const ip = pp.startsWith("/") ? new URL(pp, Ap) : new URL(pp),
-            cp = "https:" === ip.protocol || "wss:" === ip.protocol,
-            Op = Number(ip.port || (cp ? 443 : 80));
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lT,
+          UT = arguments.length > 1 ? arguments[1] : void 0;
+        var mT, WT;
+        if ("string" === typeof TT) {
+          const UT = TT.startsWith("/") ? new URL(TT, lT) : new URL(TT),
+            mT = "https:" === UT.protocol || "wss:" === UT.protocol,
+            WT = Number(UT.port || (mT ? 443 : 80));
           this.settings = {
-            hostname: ip.hostname,
-            pathname: ip.pathname,
-            port: Op,
-            secure: cp,
-            searchParams: ip.searchParams.toString() || void 0
+            hostname: UT.hostname,
+            pathname: UT.pathname,
+            port: WT,
+            secure: mT,
+            searchParams: UT.searchParams.toString() || void 0
           }
-        } else void 0 === pp.port && (pp.port = pp.secure ? 443 : 80), void 0 === pp.pathname && (pp.pathname = ""), this.settings = pp;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new xp.HTTP(this, (null === ip || void 0 === ip ? void 0 : ip.headers) || {}), this.auth = new Lp.Auth(this.http), this.urlBuilder = null === ip || void 0 === ip ? void 0 : ip.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Op = null === (cp = null === window || void 0 === window ? void 0 : window.location) || void 0 === cp ? void 0 : cp.hostname) || void 0 === Op ? void 0 : Op.includes("discordsays.com")) && (this.urlBuilder = Yp.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === TT.port && (TT.port = TT.secure ? 443 : 80), void 0 === TT.pathname && (TT.pathname = ""), this.settings = TT;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new nT.HTTP(this, (null === UT || void 0 === UT ? void 0 : UT.headers) || {}), this.auth = new HT.Auth(this.http), this.urlBuilder = null === UT || void 0 === UT ? void 0 : UT.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (WT = null === (mT = null === window || void 0 === window ? void 0 : window.location) || void 0 === mT ? void 0 : mT.hostname) || void 0 === WT ? void 0 : WT.includes("discordsays.com")) && (this.urlBuilder = kT.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(pp) {
-        return op.__awaiter(this, arguments, void 0, (function*(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            cp = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", pp, ip, cp)
+      joinOrCreate(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            mT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", TT, UT, mT)
         }))
       }
-      create(pp) {
-        return op.__awaiter(this, arguments, void 0, (function*(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            cp = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", pp, ip, cp)
+      create(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            mT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", TT, UT, mT)
         }))
       }
-      join(pp) {
-        return op.__awaiter(this, arguments, void 0, (function*(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            cp = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", pp, ip, cp)
+      join(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            mT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", TT, UT, mT)
         }))
       }
-      joinById(pp) {
-        return op.__awaiter(this, arguments, void 0, (function*(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            cp = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", pp, ip, cp)
+      joinById(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            mT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", TT, UT, mT)
         }))
       }
-      reconnect(pp, ip) {
-        return op.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof pp && "string" === typeof ip) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [cp, Op] = pp.split(":");
-          if (!cp || !Op) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", cp, {
-            reconnectionToken: Op
-          }, ip)
+      reconnect(TT, UT) {
+        return zT.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof TT && "string" === typeof UT) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [mT, WT] = TT.split(":");
+          if (!mT || !WT) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", mT, {
+            reconnectionToken: WT
+          }, UT)
         }))
       }
-      consumeSeatReservation(pp, ip, cp) {
-        return op.__awaiter(this, void 0, void 0, (function*() {
-          const Op = this.createRoom(pp.room.name, ip);
-          Op.roomId = pp.room.roomId, Op.sessionId = pp.sessionId;
-          const Sp = {
-            sessionId: Op.sessionId
+      consumeSeatReservation(TT, UT, mT) {
+        return zT.__awaiter(this, void 0, void 0, (function*() {
+          const WT = this.createRoom(TT.room.name, UT);
+          WT.roomId = TT.room.roomId, WT.sessionId = TT.sessionId;
+          const gT = {
+            sessionId: WT.sessionId
           };
-          pp.reconnectionToken && (Sp.reconnectionToken = pp.reconnectionToken);
-          const xp = cp || Op;
-          return Op.connect(this.buildEndpoint(pp.room, Sp, pp.protocol), pp.devMode && (() => op.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Op.roomId}'...`);
-            let cp = 0;
-            const Ip = () => op.__awaiter(this, void 0, void 0, (function*() {
-              cp++;
+          TT.reconnectionToken && (gT.reconnectionToken = TT.reconnectionToken);
+          const nT = mT || WT;
+          return WT.connect(this.buildEndpoint(TT.room, gT, TT.protocol), TT.devMode && (() => zT.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${WT.roomId}'...`);
+            let mT = 0;
+            const MT = () => zT.__awaiter(this, void 0, void 0, (function*() {
+              mT++;
               try {
-                yield this.consumeSeatReservation(pp, ip, xp), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Op.roomId}'`)
-              } catch (op) {
-                cp < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${cp} out of 8)`), setTimeout(Ip, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(TT, UT, nT), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${WT.roomId}'`)
+              } catch (zT) {
+                mT < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${mT} out of 8)`), setTimeout(MT, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(Ip, 2e3)
-          }))), xp, pp, this.http.headers), new Promise(((pp, ip) => {
-            const cp = (pp, cp) => ip(new Ip.ServerError(pp, cp));
-            xp.onError.once(cp), xp.onJoin.once((() => {
-              xp.onError.remove(cp), setTimeout((() => {
+            setTimeout(MT, 2e3)
+          }))), nT, TT, this.http.headers), new Promise(((TT, UT) => {
+            const mT = (TT, mT) => UT(new MT.ServerError(TT, mT));
+            nT.onError.once(mT), nT.onJoin.once((() => {
+              nT.onError.remove(mT), setTimeout((() => {
                 try {
-                  const pp = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
-                  pp && xp.bC(128, new Uint8Array(pp))
+                  const TT = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
+                  TT && nT.yX(128, new Uint8Array(TT))
                 } catch {}
-              }), 3e3), pp(xp)
+              }), 3e3), TT(nT)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(pp, ip) {
-        return op.__awaiter(this, arguments, void 0, (function*(pp, ip) {
-          let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Op = arguments.length > 3 ? arguments[3] : void 0,
-            op = arguments.length > 4 ? arguments[4] : void 0;
-          const Ip = (yield this.http.post(`matchmake/${pp}/${ip}`, {
+      createMatchMakeRequest(TT, UT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT, UT) {
+          let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            WT = arguments.length > 3 ? arguments[3] : void 0,
+            zT = arguments.length > 4 ? arguments[4] : void 0;
+          const MT = (yield this.http.post(`matchmake/${TT}/${UT}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(cp)
+            body: JSON.stringify(mT)
           })).data;
-          if (Ip.error) throw new Dp(Ip.error, Ip.code);
-          return "reconnect" === pp && (Ip.reconnectionToken = cp.reconnectionToken), yield this.consumeSeatReservation(Ip, Op, op)
+          if (MT.error) throw new jT(MT.error, MT.code);
+          return "reconnect" === TT && (MT.reconnectionToken = mT.reconnectionToken), yield this.consumeSeatReservation(MT, WT, zT)
         }))
       }
-      createRoom(pp, ip) {
-        return new Sp.OP(pp, ip)
+      createRoom(TT, UT) {
+        return new gT.sl(TT, UT)
       }
-      buildEndpoint(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Op = this.settings.searchParams || "";
-        this.http.authToken && (ip._authToken = this.http.authToken);
-        for (const Sp in ip) ip.hasOwnProperty(Sp) && (Op += (Op ? "&" : "") + `${Sp}=${ip[Sp]}`);
-        "h3" === cp && (cp = "http");
-        let op = this.settings.secure ? `${cp}s://` : `${cp}://`;
-        pp.publicAddress ? op += `${pp.publicAddress}` : op += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const Ip = `${op}/${pp.processId}/${pp.roomId}?${Op}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(Ip)) : Ip
+      buildEndpoint(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          WT = this.settings.searchParams || "";
+        this.http.authToken && (UT._authToken = this.http.authToken);
+        for (const gT in UT) UT.hasOwnProperty(gT) && (WT += (WT ? "&" : "") + `${gT}=${UT[gT]}`);
+        "h3" === mT && (mT = "http");
+        let zT = this.settings.secure ? `${mT}s://` : `${mT}://`;
+        TT.publicAddress ? zT += `${TT.publicAddress}` : zT += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const MT = `${zT}/${TT.processId}/${TT.roomId}?${WT}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(MT)) : MT
       }
       getHttpEndpoint() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const ip = pp.startsWith("/") ? pp : `/${pp}`;
-        let cp = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${ip}`;
-        return this.settings.searchParams && (cp += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(cp)) : cp
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const UT = TT.startsWith("/") ? TT : `/${TT}`;
+        let mT = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${UT}`;
+        return this.settings.searchParams && (mT += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(mT)) : mT
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    Pp.VERSION = "0.16.22", ip.Client = Pp, ip.MatchMakeError = Dp
+    LT.VERSION = "0.16.22", UT.Client = LT, UT.MatchMakeError = jT
   },
-  9246: (pp, ip, cp) => {
-    var Op = cp(9249),
-      op = cp(9257);
-    ip.Connection = class {
-      constructor(pp) {
-        if (this.events = {}, "h3" === pp) this.transport = new Op.H3TransportTransport(this.events);
-        else this.transport = new op.WebSocketTransport(this.events)
+  9230: (TT, UT, mT) => {
+    var WT = mT(9237),
+      zT = mT(9246);
+    UT.Connection = class {
+      constructor(TT) {
+        if (this.events = {}, "h3" === TT) this.transport = new WT.H3TransportTransport(this.events);
+        else this.transport = new zT.WebSocketTransport(this.events)
       }
-      connect(pp, ip) {
-        this.transport.connect.call(this.transport, pp, ip)
+      connect(TT, UT) {
+        this.transport.connect.call(this.transport, TT, UT)
       }
-      send(pp) {
-        this.transport.send(pp)
+      send(TT) {
+        this.transport.send(TT)
       }
-      sendUnreliable(pp) {
-        this.transport.sendUnreliable(pp)
+      sendUnreliable(TT) {
+        this.transport.sendUnreliable(TT)
       }
-      close(pp, ip) {
-        this.transport.close(pp, ip)
+      close(TT, UT) {
+        this.transport.close(TT, UT)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9303: (pp, ip, cp) => {
-    var Op = cp(9237);
+  9294: (TT, UT, mT) => {
+    var WT = mT(9219);
 
-    function op(pp) {
-      var ip = Object.create(null);
-      return pp && Object.keys(pp).forEach((function(cp) {
-        if ("default" !== cp) {
-          var Op = Object.getOwnPropertyDescriptor(pp, cp);
-          Object.defineProperty(ip, cp, Op.get ? Op : {
+    function zT(TT) {
+      var UT = Object.create(null);
+      return TT && Object.keys(TT).forEach((function(mT) {
+        if ("default" !== mT) {
+          var WT = Object.getOwnPropertyDescriptor(TT, mT);
+          Object.defineProperty(UT, mT, WT.get ? WT : {
             enumerable: !0,
             get: function() {
-              return pp[cp]
+              return TT[mT]
             }
           })
         }
-      })), ip.default = pp, Object.freeze(ip)
+      })), UT.default = TT, Object.freeze(UT)
     }
-    var Ip = op(cp(9310));
-    ip.HTTP = class {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = pp, this.headers = ip
+    var MT = zT(mT(9299));
+    UT.HTTP = class {
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = TT, this.headers = UT
       }
-      get(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", pp, ip)
+      get(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", TT, UT)
       }
-      post(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", pp, ip)
+      post(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", TT, UT)
       }
-      del(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", pp, ip)
+      del(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", TT, UT)
       }
-      put(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", pp, ip)
+      put(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", TT, UT)
       }
-      request(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Ip[pp](this.client.getHttpEndpoint(ip), this.getOptions(cp)).catch((pp => {
-          var ip;
-          if (pp.aborted) throw new Op.AbortError("Request aborted");
-          const cp = pp.statusCode,
-            op = (null === (ip = pp.data) || void 0 === ip ? void 0 : ip.error) || pp.statusMessage || pp.message;
-          if (!cp && !op) throw pp;
-          throw new Op.ServerError(cp, op)
+      request(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return MT[TT](this.client.getHttpEndpoint(UT), this.getOptions(mT)).catch((TT => {
+          var UT;
+          if (TT.aborted) throw new WT.AbortError("Request aborted");
+          const mT = TT.statusCode,
+            zT = (null === (UT = TT.data) || void 0 === UT ? void 0 : UT.error) || TT.statusMessage || TT.message;
+          if (!mT && !zT) throw TT;
+          throw new WT.ServerError(mT, zT)
         }))
       }
-      getOptions(pp) {
-        return pp.headers = Object.assign({}, this.headers, pp.headers), this.authToken && (pp.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (pp.withCredentials = !0), pp
+      getOptions(TT) {
+        return TT.headers = Object.assign({}, this.headers, TT.headers), this.authToken && (TT.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (TT.withCredentials = !0), TT
       }
     }
   },
-  9271: (pp, ip) => {
-    var cp, Op;
-    ip.Protocol = void 0, (cp = ip.Protocol || (ip.Protocol = {}))[cp.HANDSHAKE = 9] = "HANDSHAKE", cp[cp.JOIN_ROOM = 10] = "JOIN_ROOM", cp[cp.ERROR = 11] = "ERROR", cp[cp.LEAVE_ROOM = 12] = "LEAVE_ROOM", cp[cp.ROOM_DATA = 13] = "ROOM_DATA", cp[cp.ROOM_STATE = 14] = "ROOM_STATE", cp[cp.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", cp[cp.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", cp[cp.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", ip.ErrorCode = void 0, (Op = ip.ErrorCode || (ip.ErrorCode = {}))[Op.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Op[Op.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Op[Op.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Op[Op.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Op[Op.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Op[Op.AUTH_FAILED = 4215] = "AUTH_FAILED", Op[Op.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9261: (TT, UT) => {
+    var mT, WT;
+    UT.Protocol = void 0, (mT = UT.Protocol || (UT.Protocol = {}))[mT.HANDSHAKE = 9] = "HANDSHAKE", mT[mT.JOIN_ROOM = 10] = "JOIN_ROOM", mT[mT.ERROR = 11] = "ERROR", mT[mT.LEAVE_ROOM = 12] = "LEAVE_ROOM", mT[mT.ROOM_DATA = 13] = "ROOM_DATA", mT[mT.ROOM_STATE = 14] = "ROOM_STATE", mT[mT.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", mT[mT.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", mT[mT.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", UT.ErrorCode = void 0, (WT = UT.ErrorCode || (UT.ErrorCode = {}))[WT.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", WT[WT.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", WT[WT.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", WT[WT.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", WT[WT.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", WT[WT.AUTH_FAILED = 4215] = "AUTH_FAILED", WT[WT.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9242: (pp, ip, cp) => {
-    var Op = cp(9246),
-      op = cp(9271),
-      Ip = cp(9276),
-      Sp = cp(9281),
-      xp = cp(9289),
-      Lp = cp(9253),
-      Yp = cp(9291),
-      Dp = cp(9237),
-      Ap = cp(9298);
-    class Pp {
-      constructor(pp, ip) {
-        this.onStateChange = xp.createSignal(), this.onError = xp.createSignal(), this.Eu = xp.createSignal(), this.onJoin = xp.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Sp.createNanoEvents(), this.roomId = null, this.name = pp, this.packr = new Ap.Packr, this.packr.encode(void 0), ip && (this.DH = new(Ip.getSerializer("schema")), this.rootSchema = ip, this.DH.state = new ip), this.onError(((pp, ip) => {
-          var cp;
-          return null === (cp = console.warn) || void 0 === cp ? void 0 : cp.call(console, `colyseus.js - onError => (${pp}) ${ip}`)
-        })), this.Eu((() => this.YH()))
+  9228: (TT, UT, mT) => {
+    var WT = mT(9230),
+      zT = mT(9261),
+      MT = mT(9263),
+      gT = mT(9265),
+      nT = mT(9274),
+      HT = mT(9242),
+      kT = mT(9282),
+      jT = mT(9219),
+      lT = mT(9287);
+    class LT {
+      constructor(TT, UT) {
+        this.onStateChange = nT.createSignal(), this.onError = nT.createSignal(), this.TY = nT.createSignal(), this.onJoin = nT.createSignal(), this.hasJoined = !1, this.onMessageHandlers = gT.createNanoEvents(), this.roomId = null, this.name = TT, this.packr = new lT.Packr, this.packr.encode(void 0), UT && (this.bq = new(MT.getSerializer("schema")), this.rootSchema = UT, this.bq.state = new UT), this.onError(((TT, UT) => {
+          var mT;
+          return null === (mT = console.warn) || void 0 === mT ? void 0 : mT.call(console, `colyseus.js - onError => (${TT}) ${UT}`)
+        })), this.TY((() => this.lq()))
       }
-      connect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          op = arguments.length > 3 ? arguments[3] : void 0,
-          Ip = arguments.length > 4 ? arguments[4] : void 0;
-        const Sp = new Op.Connection(op.protocol);
-        if (cp.connection = Sp, Sp.events.onmessage = Pp.prototype.onMessageCallback.bind(cp), Sp.events.onclose = function(pp) {
-            var Op;
-            if (!cp.hasJoined) return null === (Op = console.warn) || void 0 === Op || Op.call(console, `Room connection was closed unexpectedly (${pp.code}): ${pp.reason}`), void cp.onError.invoke(pp.code, pp.reason);
-            pp.code === Dp.CloseCode.DEVMODE_RESTART && ip ? ip() : (cp.Eu.invoke(pp.code, pp.reason), cp.destroy())
-          }, Sp.events.onerror = function(pp) {
-            var ip;
-            null === (ip = console.warn) || void 0 === ip || ip.call(console, `Room, onError (${pp.code}): ${pp.reason}`), cp.onError.invoke(pp.code, pp.reason)
-          }, "h3" === op.protocol) {
-          const ip = new URL(pp);
-          Sp.connect(ip.origin, op)
-        } else Sp.connect(pp, Ip)
+      connect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          zT = arguments.length > 3 ? arguments[3] : void 0,
+          MT = arguments.length > 4 ? arguments[4] : void 0;
+        const gT = new WT.Connection(zT.protocol);
+        if (mT.connection = gT, gT.events.onmessage = LT.prototype.onMessageCallback.bind(mT), gT.events.onclose = function(TT) {
+            var WT;
+            if (!mT.hasJoined) return null === (WT = console.warn) || void 0 === WT || WT.call(console, `Room connection was closed unexpectedly (${TT.code}): ${TT.reason}`), void mT.onError.invoke(TT.code, TT.reason);
+            TT.code === jT.CloseCode.DEVMODE_RESTART && UT ? UT() : (mT.TY.invoke(TT.code, TT.reason), mT.destroy())
+          }, gT.events.onerror = function(TT) {
+            var UT;
+            null === (UT = console.warn) || void 0 === UT || UT.call(console, `Room, onError (${TT.code}): ${TT.reason}`), mT.onError.invoke(TT.code, TT.reason)
+          }, "h3" === zT.protocol) {
+          const UT = new URL(TT);
+          gT.connect(UT.origin, zT)
+        } else gT.connect(TT, MT)
       }
       leave() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((ip => {
-          this.Eu((pp => ip(pp))), this.connection ? pp ? (this.packr.buffer[0] = op.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Eu.invoke(Dp.CloseCode.CONSENTED)
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((UT => {
+          this.TY((TT => UT(TT))), this.connection ? TT ? (this.packr.buffer[0] = zT.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.TY.invoke(jT.CloseCode.CONSENTED)
         }))
       }
-      ku(pp, ip) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(pp), ip)
+      LO(TT, UT) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(TT), UT)
       }
-      send(pp, ip) {
-        const cp = {
+      send(TT, UT) {
+        const mT = {
           offset: 1
         };
-        this.packr.buffer[0] = op.Protocol.ROOM_DATA, "string" === typeof pp ? Lp.encode.string(this.packr.buffer, pp, cp) : Lp.encode.number(this.packr.buffer, pp, cp), this.packr.position = 0;
-        const Op = void 0 !== ip ? this.packr.pack(ip, 2048 + cp.offset) : this.packr.buffer.subarray(0, cp.offset);
-        this.connection.send(Op)
+        this.packr.buffer[0] = zT.Protocol.ROOM_DATA, "string" === typeof TT ? HT.encode.string(this.packr.buffer, TT, mT) : HT.encode.number(this.packr.buffer, TT, mT), this.packr.position = 0;
+        const WT = void 0 !== UT ? this.packr.pack(UT, 2048 + mT.offset) : this.packr.buffer.subarray(0, mT.offset);
+        this.connection.send(WT)
       }
-      sendUnreliable(pp, ip) {
-        const cp = {
+      sendUnreliable(TT, UT) {
+        const mT = {
           offset: 1
         };
-        this.packr.buffer[0] = op.Protocol.ROOM_DATA, "string" === typeof pp ? Lp.encode.string(this.packr.buffer, pp, cp) : Lp.encode.number(this.packr.buffer, pp, cp), this.packr.position = 0;
-        const Op = void 0 !== ip ? this.packr.pack(ip, 2048 + cp.offset) : this.packr.buffer.subarray(0, cp.offset);
-        this.connection.sendUnreliable(Op)
+        this.packr.buffer[0] = zT.Protocol.ROOM_DATA, "string" === typeof TT ? HT.encode.string(this.packr.buffer, TT, mT) : HT.encode.number(this.packr.buffer, TT, mT), this.packr.position = 0;
+        const WT = void 0 !== UT ? this.packr.pack(UT, 2048 + mT.offset) : this.packr.buffer.subarray(0, mT.offset);
+        this.connection.sendUnreliable(WT)
       }
-      bC(pp, ip) {
-        const cp = {
+      yX(TT, UT) {
+        const mT = {
           offset: 1
         };
-        if (this.packr.buffer[0] = op.Protocol.ROOM_DATA_BYTES, "string" === typeof pp ? Lp.encode.string(this.packr.buffer, pp, cp) : Lp.encode.number(this.packr.buffer, pp, cp), ip.byteLength + cp.offset > this.packr.buffer.byteLength) {
-          const pp = new Uint8Array(cp.offset + ip.byteLength);
-          pp.set(this.packr.buffer), this.packr.useBuffer(pp)
+        if (this.packr.buffer[0] = zT.Protocol.ROOM_DATA_BYTES, "string" === typeof TT ? HT.encode.string(this.packr.buffer, TT, mT) : HT.encode.number(this.packr.buffer, TT, mT), UT.byteLength + mT.offset > this.packr.buffer.byteLength) {
+          const TT = new Uint8Array(mT.offset + UT.byteLength);
+          TT.set(this.packr.buffer), this.packr.useBuffer(TT)
         }
-        this.packr.buffer.set(ip, cp.offset), this.connection.send(this.packr.buffer.subarray(0, cp.offset + ip.byteLength))
+        this.packr.buffer.set(UT, mT.offset), this.connection.send(this.packr.buffer.subarray(0, mT.offset + UT.byteLength))
       }
       get state() {
-        return this.DH.getState()
+        return this.bq.getState()
       }
-      YH() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Eu.clear(), this.onMessageHandlers.events = {}, this.DH instanceof Yp.aE && (this.DH.Wy.root.callbacks = {})
+      lq() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.TY.clear(), this.onMessageHandlers.events = {}, this.bq instanceof kT.Fs && (this.bq.Dp.root.callbacks = {})
       }
-      onMessageCallback(pp) {
-        const ip = new Uint8Array(pp.data),
-          cp = {
+      onMessageCallback(TT) {
+        const UT = new Uint8Array(TT.data),
+          mT = {
             offset: 1
           },
-          Op = ip[0];
-        if (Op === op.Protocol.JOIN_ROOM) {
-          const pp = Lp.decode.utf8Read(ip, cp, ip[cp.offset++]);
-          if (this.serializerId = Lp.decode.utf8Read(ip, cp, ip[cp.offset++]), !this.DH) {
-            const pp = Ip.getSerializer(this.serializerId);
-            this.DH = new pp
+          WT = UT[0];
+        if (WT === zT.Protocol.JOIN_ROOM) {
+          const TT = HT.decode.utf8Read(UT, mT, UT[mT.offset++]);
+          if (this.serializerId = HT.decode.utf8Read(UT, mT, UT[mT.offset++]), !this.bq) {
+            const TT = MT.getSerializer(this.serializerId);
+            this.bq = new TT
           }
-          ip.byteLength > cp.offset && this.DH.handshake && this.DH.handshake(ip, cp), this.reconnectionToken = `${this.roomId}:${pp}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = op.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Op === op.Protocol.ERROR) {
-          const pp = Lp.decode.number(ip, cp),
-            Op = Lp.decode.string(ip, cp);
-          this.onError.invoke(pp, Op)
-        } else if (Op === op.Protocol.LEAVE_ROOM) this.leave();
-        else if (Op === op.Protocol.ROOM_STATE) this.DH.setState(ip, cp), this.onStateChange.invoke(this.DH.getState());
-        else if (Op === op.Protocol.ROOM_STATE_PATCH) this.DH.patch(ip, cp), this.onStateChange.invoke(this.DH.getState());
-        else if (Op === op.Protocol.ROOM_DATA) {
-          const pp = Lp.decode.stringCheck(ip, cp) ? Lp.decode.string(ip, cp) : Lp.decode.number(ip, cp),
-            Op = ip.byteLength > cp.offset ? Ap.unpack(ip, {
-              start: cp.offset
+          UT.byteLength > mT.offset && this.bq.handshake && this.bq.handshake(UT, mT), this.reconnectionToken = `${this.roomId}:${TT}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = zT.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (WT === zT.Protocol.ERROR) {
+          const TT = HT.decode.number(UT, mT),
+            WT = HT.decode.string(UT, mT);
+          this.onError.invoke(TT, WT)
+        } else if (WT === zT.Protocol.LEAVE_ROOM) this.leave();
+        else if (WT === zT.Protocol.ROOM_STATE) this.bq.setState(UT, mT), this.onStateChange.invoke(this.bq.getState());
+        else if (WT === zT.Protocol.ROOM_STATE_PATCH) this.bq.patch(UT, mT), this.onStateChange.invoke(this.bq.getState());
+        else if (WT === zT.Protocol.ROOM_DATA) {
+          const TT = HT.decode.stringCheck(UT, mT) ? HT.decode.string(UT, mT) : HT.decode.number(UT, mT),
+            WT = UT.byteLength > mT.offset ? lT.unpack(UT, {
+              start: mT.offset
             }) : void 0;
-          this.dispatchMessage(pp, Op)
-        } else if (Op === op.Protocol.ROOM_DATA_BYTES) {
-          const pp = Lp.decode.stringCheck(ip, cp) ? Lp.decode.string(ip, cp) : Lp.decode.number(ip, cp);
-          this.dispatchMessage(pp, ip.subarray(cp.offset))
+          this.dispatchMessage(TT, WT)
+        } else if (WT === zT.Protocol.ROOM_DATA_BYTES) {
+          const TT = HT.decode.stringCheck(UT, mT) ? HT.decode.string(UT, mT) : HT.decode.number(UT, mT);
+          this.dispatchMessage(TT, UT.subarray(mT.offset))
         }
       }
-      dispatchMessage(pp, ip) {
-        var cp;
-        const Op = this.getMessageHandlerKey(pp);
-        this.onMessageHandlers.events[Op] ? this.onMessageHandlers.emit(Op, ip) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", pp, ip) : null === (cp = console.warn) || void 0 === cp || cp.call(console, `colyseus.js: onMessage() not registered for type '${pp}'.`)
+      dispatchMessage(TT, UT) {
+        var mT;
+        const WT = this.getMessageHandlerKey(TT);
+        this.onMessageHandlers.events[WT] ? this.onMessageHandlers.emit(WT, UT) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", TT, UT) : null === (mT = console.warn) || void 0 === mT || mT.call(console, `colyseus.js: onMessage() not registered for type '${TT}'.`)
       }
       destroy() {
-        this.DH && this.DH.teardown()
+        this.bq && this.bq.teardown()
       }
-      getMessageHandlerKey(pp) {
-        switch (typeof pp) {
+      getMessageHandlerKey(TT) {
+        switch (typeof TT) {
           case "string":
-            return pp;
+            return TT;
           case "number":
-            return `i${pp}`;
+            return `i${TT}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    ip.OP = Pp
+    UT.sl = LT
   },
-  9318: (pp, ip, cp) => {
-    var Op = cp(9230);
-    let op;
+  9314: (TT, UT, mT) => {
+    var WT = mT(9217);
+    let zT;
 
-    function Ip() {
-      if (!op) try {
-        op = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (pp) {}
-      return op || "undefined" === typeof globalThis.indexedDB || (op = new Sp), op || (op = {
+    function MT() {
+      if (!zT) try {
+        zT = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (TT) {}
+      return zT || "undefined" === typeof globalThis.indexedDB || (zT = new gT), zT || (zT = {
         cache: {},
-        setItem: function(pp, ip) {
-          this.cache[pp] = ip
+        setItem: function(TT, UT) {
+          this.cache[TT] = UT
         },
-        getItem: function(pp) {
-          this.cache[pp]
+        getItem: function(TT) {
+          this.cache[TT]
         },
-        removeItem: function(pp) {
-          delete this.cache[pp]
+        removeItem: function(TT) {
+          delete this.cache[TT]
         }
-      }), op
+      }), zT
     }
-    class Sp {
+    class gT {
       constructor() {
-        this.dbPromise = new Promise((pp => {
-          const ip = indexedDB.open("_colyseus_storage", 1);
-          ip.onupgradeneeded = () => ip.result.createObjectStore("store"), ip.onsuccess = () => pp(ip.result)
+        this.dbPromise = new Promise((TT => {
+          const UT = indexedDB.open("_colyseus_storage", 1);
+          UT.onupgradeneeded = () => UT.result.createObjectStore("store"), UT.onsuccess = () => TT(UT.result)
         }))
       }
-      tx(pp, ip) {
-        return Op.__awaiter(this, void 0, void 0, (function*() {
-          const cp = (yield this.dbPromise).transaction("store", pp).objectStore("store");
-          return ip(cp)
+      tx(TT, UT) {
+        return WT.__awaiter(this, void 0, void 0, (function*() {
+          const mT = (yield this.dbPromise).transaction("store", TT).objectStore("store");
+          return UT(mT)
         }))
       }
-      setItem(pp, ip) {
-        return this.tx("readwrite", (cp => cp.put(ip, pp))).then()
+      setItem(TT, UT) {
+        return this.tx("readwrite", (mT => mT.put(UT, TT))).then()
       }
-      getItem(pp) {
-        return Op.__awaiter(this, void 0, void 0, (function*() {
-          const ip = yield this.tx("readonly", (ip => ip.get(pp)));
-          return new Promise((pp => {
-            ip.onsuccess = () => pp(ip.result)
+      getItem(TT) {
+        return WT.__awaiter(this, void 0, void 0, (function*() {
+          const UT = yield this.tx("readonly", (UT => UT.get(TT)));
+          return new Promise((TT => {
+            UT.onsuccess = () => TT(UT.result)
           }))
         }))
       }
-      removeItem(pp) {
-        return this.tx("readwrite", (ip => ip.delete(pp))).then()
+      removeItem(TT) {
+        return this.tx("readwrite", (UT => UT.delete(TT))).then()
       }
     }
-    ip.getItem = function(pp, ip) {
-      const cp = Ip().getItem(pp);
-      "undefined" !== typeof Promise && cp instanceof Promise ? cp.then((pp => ip(pp))) : ip(cp)
-    }, ip.removeItem = function(pp) {
-      Ip().removeItem(pp)
-    }, ip.setItem = function(pp, ip) {
-      Ip().setItem(pp, ip)
+    UT.getItem = function(TT, UT) {
+      const mT = MT().getItem(TT);
+      "undefined" !== typeof Promise && mT instanceof Promise ? mT.then((TT => UT(TT))) : UT(mT)
+    }, UT.removeItem = function(TT) {
+      MT().removeItem(TT)
+    }, UT.setItem = function(TT, UT) {
+      MT().setItem(TT, UT)
     }
   },
-  9281: (pp, ip) => {
-    ip.createNanoEvents = () => ({
-      emit(pp) {
-        let ip = this.events[pp] || [];
-        for (var cp = arguments.length, Op = new Array(cp > 1 ? cp - 1 : 0), op = 1; op < cp; op++) Op[op - 1] = arguments[op];
-        for (let Ip = 0, Sp = ip.length; Ip < Sp; Ip++) ip[Ip](...Op)
+  9265: (TT, UT) => {
+    UT.createNanoEvents = () => ({
+      emit(TT) {
+        let UT = this.events[TT] || [];
+        for (var mT = arguments.length, WT = new Array(mT > 1 ? mT - 1 : 0), zT = 1; zT < mT; zT++) WT[zT - 1] = arguments[zT];
+        for (let MT = 0, gT = UT.length; MT < gT; MT++) UT[MT](...WT)
       },
       events: {},
-      on(pp, ip) {
-        var cp;
-        return (null === (cp = this.events[pp]) || void 0 === cp ? void 0 : cp.push(ip)) || (this.events[pp] = [ip]), () => {
-          var cp;
-          this.events[pp] = null === (cp = this.events[pp]) || void 0 === cp ? void 0 : cp.filter((pp => ip !== pp))
+      on(TT, UT) {
+        var mT;
+        return (null === (mT = this.events[TT]) || void 0 === mT ? void 0 : mT.push(UT)) || (this.events[TT] = [UT]), () => {
+          var mT;
+          this.events[TT] = null === (mT = this.events[TT]) || void 0 === mT ? void 0 : mT.filter((TT => UT !== TT))
         }
       }
     })
   },
-  9289: (pp, ip) => {
-    class cp {
+  9274: (TT, UT) => {
+    class mT {
       constructor() {
         this.handlers = []
       }
-      register(pp) {
-        return this.handlers.push(pp), this
+      register(TT) {
+        return this.handlers.push(TT), this
       }
       invoke() {
-        for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-        this.handlers.forEach((pp => pp.apply(this, ip)))
+        for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+        this.handlers.forEach((TT => TT.apply(this, UT)))
       }
       invokeAsync() {
-        for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-        return Promise.all(this.handlers.map((pp => pp.apply(this, ip))))
+        for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+        return Promise.all(this.handlers.map((TT => TT.apply(this, UT))))
       }
-      remove(pp) {
-        const ip = this.handlers.indexOf(pp);
-        this.handlers[ip] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(TT) {
+        const UT = this.handlers.indexOf(TT);
+        this.handlers[UT] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    ip.EventEmitter = cp, ip.createSignal = function() {
-      const pp = new cp;
+    UT.EventEmitter = mT, UT.createSignal = function() {
+      const TT = new mT;
 
-      function ip(ip) {
-        return pp.register(ip, null === this)
+      function UT(UT) {
+        return TT.register(UT, null === this)
       }
-      return ip.once = ip => {
-        const cp = function() {
-          for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
-          ip.apply(this, op), pp.remove(cp)
+      return UT.once = UT => {
+        const mT = function() {
+          for (var WT = arguments.length, zT = new Array(WT), MT = 0; MT < WT; MT++) zT[MT] = arguments[MT];
+          UT.apply(this, zT), TT.remove(mT)
         };
-        pp.register(cp)
-      }, ip.remove = ip => pp.remove(ip), ip.invoke = function() {
-        return pp.invoke(...arguments)
-      }, ip.invokeAsync = function() {
-        return pp.invokeAsync(...arguments)
-      }, ip.clear = () => pp.clear(), ip
+        TT.register(mT)
+      }, UT.remove = UT => TT.remove(UT), UT.invoke = function() {
+        return TT.invoke(...arguments)
+      }, UT.invokeAsync = function() {
+        return TT.invokeAsync(...arguments)
+      }, UT.clear = () => TT.clear(), UT
     }
   },
-  9237: (pp, ip) => {
-    var cp;
-    ip.CloseCode = void 0, (cp = ip.CloseCode || (ip.CloseCode = {}))[cp.CONSENTED = 4e3] = "CONSENTED", cp[cp.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Op extends Error {
-      constructor(pp, ip) {
-        super(ip), this.name = "ServerError", this.code = pp
+  9219: (TT, UT) => {
+    var mT;
+    UT.CloseCode = void 0, (mT = UT.CloseCode || (UT.CloseCode = {}))[mT.CONSENTED = 4e3] = "CONSENTED", mT[mT.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class WT extends Error {
+      constructor(TT, UT) {
+        super(UT), this.name = "ServerError", this.code = TT
       }
     }
-    class op extends Error {
-      constructor(pp) {
-        super(pp), this.name = "AbortError"
+    class zT extends Error {
+      constructor(TT) {
+        super(TT), this.name = "AbortError"
       }
     }
-    ip.AbortError = op, ip.ServerError = Op
+    UT.AbortError = zT, UT.ServerError = WT
   },
-  9211: (pp, ip, cp) => {
-    cp(9219);
-    var Op = cp(9224),
-      op = cp(9271),
-      Ip = cp(9242),
-      Sp = cp(9314),
-      xp = cp(9237),
-      Lp = cp(9291),
-      Yp = cp(9324),
-      Dp = cp(9276);
-    Dp.registerSerializer("schema", Lp.aE), Dp.registerSerializer("none", Yp.NoneSerializer), ip.Client = Op.Client, ip.MatchMakeError = Op.MatchMakeError, Object.defineProperty(ip, "ErrorCode", {
+  9195: (TT, UT, mT) => {
+    mT(9203);
+    var WT = mT(9210),
+      zT = mT(9261),
+      MT = mT(9228),
+      gT = mT(9306),
+      nT = mT(9219),
+      HT = mT(9282),
+      kT = mT(9322),
+      jT = mT(9263);
+    jT.registerSerializer("schema", HT.Fs), jT.registerSerializer("none", kT.NoneSerializer), UT.Client = WT.Client, UT.MatchMakeError = WT.MatchMakeError, Object.defineProperty(UT, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return op.ErrorCode
+        return zT.ErrorCode
       }
-    }), Object.defineProperty(ip, "Protocol", {
+    }), Object.defineProperty(UT, "Protocol", {
       enumerable: !0,
       get: function() {
-        return op.Protocol
+        return zT.Protocol
       }
-    }), ip.OP = Ip.OP, ip.Auth = Sp.Auth, ip.ServerError = xp.ServerError, ip.aE = Lp.aE, ip.getStateCallbacks = Lp.getStateCallbacks, ip.registerSerializer = Dp.registerSerializer
+    }), UT.sl = MT.sl, UT.Auth = gT.Auth, UT.ServerError = nT.ServerError, UT.Fs = HT.Fs, UT.getStateCallbacks = HT.getStateCallbacks, UT.registerSerializer = jT.registerSerializer
   },
-  9219: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = pp => null !== pp && "object" === typeof pp && pp.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9203: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = TT => null !== TT && "object" === typeof TT && TT.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9324: (pp, ip) => {
-    ip.NoneSerializer = class {
-      setState(pp) {}
+  9322: (TT, UT) => {
+    UT.NoneSerializer = class {
+      setState(TT) {}
       getState() {
         return null
       }
-      patch(pp) {}
+      patch(TT) {}
       teardown() {}
-      handshake(pp) {}
+      handshake(TT) {}
     }
   },
-  9291: (pp, ip, cp) => {
-    var Op = cp(9253);
-    ip.aE = class {
-      setState(pp, ip) {
-        this.Wy.decode(pp, ip)
+  9282: (TT, UT, mT) => {
+    var WT = mT(9242);
+    UT.Fs = class {
+      setState(TT, UT) {
+        this.Dp.decode(TT, UT)
       }
       getState() {
         return this.state
       }
-      patch(pp, ip) {
-        return this.Wy.decode(pp, ip)
+      patch(TT, UT) {
+        return this.Dp.decode(TT, UT)
       }
       teardown() {
-        this.Wy.root.clearRefs()
+        this.Dp.root.clearRefs()
       }
-      handshake(pp, ip) {
-        this.state ? (Op.Reflection.decode(pp, ip), this.Wy = new Op.Decoder(this.state)) : (this.Wy = Op.Reflection.decode(pp, ip), this.state = this.Wy.state)
+      handshake(TT, UT) {
+        this.state ? (WT.Reflection.decode(TT, UT), this.Dp = new WT.Decoder(this.state)) : (this.Dp = WT.Reflection.decode(TT, UT), this.state = this.Dp.state)
       }
-    }, ip.getStateCallbacks = function(pp) {
+    }, UT.getStateCallbacks = function(TT) {
       try {
-        return Op.getDecoderStateCallbacks(pp.DH.Wy)
-      } catch (ip) {
+        return WT.getDecoderStateCallbacks(TT.bq.Dp)
+      } catch (UT) {
         return
       }
     }
   },
-  9276: (pp, ip) => {
-    const cp = {};
-    ip.getSerializer = function(pp) {
-      const ip = cp[pp];
-      if (!ip) throw new Error("missing serializer: " + pp);
-      return ip
-    }, ip.registerSerializer = function(pp, ip) {
-      cp[pp] = ip
+  9263: (TT, UT) => {
+    const mT = {};
+    UT.getSerializer = function(TT) {
+      const UT = mT[TT];
+      if (!UT) throw new Error("missing serializer: " + TT);
+      return UT
+    }, UT.registerSerializer = function(TT, UT) {
+      mT[TT] = UT
     }
   },
-  9249: (pp, ip, cp) => {
-    var Op = cp(9230),
-      op = cp(9253);
-    ip.H3TransportTransport = class {
-      constructor(pp) {
-        this.events = pp, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9237: (TT, UT, mT) => {
+    var WT = mT(9217),
+      zT = mT(9242);
+    UT.H3TransportTransport = class {
+      constructor(TT) {
+        this.events = TT, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const cp = ip.fingerprint && {
+      connect(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const mT = UT.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(ip.fingerprint).buffer
+            value: new Uint8Array(UT.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(pp, cp), this.wt.ready.then((pp => {
-          console.log("WebTransport ready!", pp), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((pp => {
-            this.reader = pp.value.readable.getReader(), this.writer = pp.value.writable.getWriter(), this.sendSeatReservation(ip.room.roomId, ip.sessionId, ip.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((pp => {
-            console.error("failed to read incoming stream", pp), console.error("TODO: close the connection")
+        this.wt = new WebTransport(TT, mT), this.wt.ready.then((TT => {
+          console.log("WebTransport ready!", TT), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((TT => {
+            this.reader = TT.value.readable.getReader(), this.writer = TT.value.writable.getWriter(), this.sendSeatReservation(UT.room.roomId, UT.sessionId, UT.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((TT => {
+            console.error("failed to read incoming stream", TT), console.error("TODO: close the connection")
           }))
-        })).catch((pp => {
-          console.log("WebTransport not ready!", pp), this._close()
-        })), this.wt.closed.then((pp => {
-          console.log("WebTransport closed w/ success", pp), this.events.onclose({
-            code: pp.closeCode,
-            reason: pp.reason
+        })).catch((TT => {
+          console.log("WebTransport not ready!", TT), this._close()
+        })), this.wt.closed.then((TT => {
+          console.log("WebTransport closed w/ success", TT), this.events.onclose({
+            code: TT.closeCode,
+            reason: TT.reason
           })
-        })).catch((pp => {
-          console.log("WebTransport closed w/ error", pp), this.events.onerror(pp), this.events.onclose({
-            code: pp.closeCode,
-            reason: pp.reason
+        })).catch((TT => {
+          console.log("WebTransport closed w/ error", TT), this.events.onerror(TT), this.events.onclose({
+            code: TT.closeCode,
+            reason: TT.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(pp) {
-        const ip = op.encode.number(this.lengthPrefixBuffer, pp.length, {
+      send(TT) {
+        const UT = zT.encode.number(this.lengthPrefixBuffer, TT.length, {
             offset: 0
           }),
-          cp = new Uint8Array(ip + pp.length);
-        cp.set(this.lengthPrefixBuffer.subarray(0, ip), 0), cp.set(pp, ip), this.writer.write(cp)
+          mT = new Uint8Array(UT + TT.length);
+        mT.set(this.lengthPrefixBuffer.subarray(0, UT), 0), mT.set(TT, UT), this.writer.write(mT)
       }
-      sendUnreliable(pp) {
-        const ip = op.encode.number(this.lengthPrefixBuffer, pp.length, {
+      sendUnreliable(TT) {
+        const UT = zT.encode.number(this.lengthPrefixBuffer, TT.length, {
             offset: 0
           }),
-          cp = new Uint8Array(ip + pp.length);
-        cp.set(this.lengthPrefixBuffer.subarray(0, ip), 0), cp.set(pp, ip), this.unreliableWriter.write(cp)
+          mT = new Uint8Array(UT + TT.length);
+        mT.set(this.lengthPrefixBuffer.subarray(0, UT), 0), mT.set(TT, UT), this.unreliableWriter.write(mT)
       }
-      close(pp, ip) {
+      close(TT, UT) {
         try {
           this.wt.close({
-            closeCode: pp,
-            reason: ip
+            closeCode: TT,
+            reason: UT
           })
-        } catch (cp) {
-          console.error(cp)
+        } catch (mT) {
+          console.error(mT)
         }
       }
       readIncomingData() {
-        return Op.__awaiter(this, void 0, void 0, (function*() {
-          let pp;
+        return WT.__awaiter(this, void 0, void 0, (function*() {
+          let TT;
           for (; this.isOpen;) {
             try {
-              pp = yield this.reader.read();
-              const ip = pp.value,
-                cp = {
+              TT = yield this.reader.read();
+              const UT = TT.value,
+                mT = {
                   offset: 0
                 };
               do {
-                const pp = op.decode.number(ip, cp);
+                const TT = zT.decode.number(UT, mT);
                 this.events.onmessage({
-                  data: ip.subarray(cp.offset, cp.offset + pp)
-                }), cp.offset += pp
-              } while (cp.offset < ip.length)
-            } catch (ip) {
-              -1 === ip.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", ip);
+                  data: UT.subarray(mT.offset, mT.offset + TT)
+                }), mT.offset += TT
+              } while (mT.offset < UT.length)
+            } catch (UT) {
+              -1 === UT.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", UT);
               break
             }
-            if (pp.done) break
+            if (TT.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Op.__awaiter(this, void 0, void 0, (function*() {
-          let pp;
+        return WT.__awaiter(this, void 0, void 0, (function*() {
+          let TT;
           for (; this.isOpen;) {
             try {
-              pp = yield this.unreliableReader.read();
-              const ip = pp.value,
-                cp = {
+              TT = yield this.unreliableReader.read();
+              const UT = TT.value,
+                mT = {
                   offset: 0
                 };
               do {
-                const pp = op.decode.number(ip, cp);
+                const TT = zT.decode.number(UT, mT);
                 this.events.onmessage({
-                  data: ip.subarray(cp.offset, cp.offset + pp)
-                }), cp.offset += pp
-              } while (cp.offset < ip.length)
-            } catch (ip) {
-              -1 === ip.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", ip);
+                  data: UT.subarray(mT.offset, mT.offset + TT)
+                }), mT.offset += TT
+              } while (mT.offset < UT.length)
+            } catch (UT) {
+              -1 === UT.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", UT);
               break
             }
-            if (pp.done) break
+            if (TT.done) break
           }
         }))
       }
-      sendSeatReservation(pp, ip, cp) {
-        const Op = {
+      sendSeatReservation(TT, UT, mT) {
+        const WT = {
             offset: 0
           },
-          Ip = [];
-        op.encode.string(Ip, pp, Op), op.encode.string(Ip, ip, Op), cp && op.encode.string(Ip, cp, Op), this.writer.write(new Uint8Array(Ip).buffer)
+          MT = [];
+        zT.encode.string(MT, TT, WT), zT.encode.string(MT, UT, WT), mT && zT.encode.string(MT, mT, WT), this.writer.write(new Uint8Array(MT).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9257: (pp, ip, cp) => {
-    var Op = cp(9263);
-    const op = globalThis.WebSocket || Op;
-    ip.WebSocketTransport = class {
-      constructor(pp) {
-        this.events = pp
+  9246: (TT, UT, mT) => {
+    var WT = mT(9253);
+    const zT = globalThis.WebSocket || WT;
+    UT.WebSocketTransport = class {
+      constructor(TT) {
+        this.events = TT
       }
-      send(pp) {
-        this.ws.send(pp)
+      send(TT) {
+        this.ws.send(TT)
       }
-      sendUnreliable(pp) {
+      sendUnreliable(TT) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(pp, ip) {
+      connect(TT, UT) {
         try {
-          this.ws = new op(pp, {
-            headers: ip,
+          this.ws = new zT(TT, {
+            headers: UT,
             protocols: this.protocols
           })
-        } catch (cp) {
-          this.ws = new op(pp, this.protocols)
+        } catch (mT) {
+          this.ws = new zT(TT, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(pp, ip) {
-        this.ws.close(pp, ip)
+      close(TT, UT) {
+        this.ws.close(TT, UT)
       }
       get isOpen() {
-        return this.ws.readyState === op.OPEN
+        return this.ws.readyState === zT.OPEN
       }
     }
   },
-  9263: pp => {
-    pp.exports = function() {
+  9253: TT => {
+    TT.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9310: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      ip.headers = pp.headers || {}, ip.statusMessage = pp.statusText, ip.statusCode = pp.status, ip.data = pp.response
+  9299: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      UT.headers = TT.headers || {}, UT.statusMessage = TT.statusText, UT.statusCode = TT.status, UT.data = TT.response
     }
 
-    function op(pp, ip, cp) {
-      return new Promise((function(op, Ip) {
-        cp = cp || {};
-        var Sp, xp, Lp, Yp = new XMLHttpRequest,
-          Dp = cp.body,
-          Ap = cp.headers || {};
-        for (Sp in cp.timeout && (Yp.timeout = cp.timeout), Yp.ontimeout = Yp.onerror = function(pp) {
-            pp.timeout = "timeout" == pp.type, Ip(pp)
-          }, Yp.onabort = function(pp) {
-            pp.aborted = !0, Ip(pp)
-          }, Yp.open(pp, ip.href || ip), Yp.onload = function() {
-            for (Lp = Yp.getAllResponseHeaders().trim().split(/[\r\n]+/), Op(Yp, Yp); xp = Lp.shift();) xp = xp.split(": "), Yp.headers[xp.shift().toLowerCase()] = xp.join(": ");
-            if ((xp = Yp.headers["content-type"]) && ~xp.indexOf("application/json")) try {
-              Yp.data = JSON.parse(Yp.data, cp.reviver)
-            } catch (pp) {
-              return Op(Yp, pp), Ip(pp)
-            }(Yp.status >= 400 ? Ip : op)(Yp)
-          }, typeof FormData < "u" && Dp instanceof FormData || Dp && "object" == typeof Dp && (Ap["content-type"] = "application/json", Dp = JSON.stringify(Dp)), Yp.withCredentials = !!cp.withCredentials, Ap) Yp.setRequestHeader(Sp, Ap[Sp]);
-        Yp.send(Dp), cp.signal && cp.signal.addEventListener("abort", (function() {
-          Yp.abort()
+    function zT(TT, UT, mT) {
+      return new Promise((function(zT, MT) {
+        mT = mT || {};
+        var gT, nT, HT, kT = new XMLHttpRequest,
+          jT = mT.body,
+          lT = mT.headers || {};
+        for (gT in mT.timeout && (kT.timeout = mT.timeout), kT.ontimeout = kT.onerror = function(TT) {
+            TT.timeout = "timeout" == TT.type, MT(TT)
+          }, kT.onabort = function(TT) {
+            TT.aborted = !0, MT(TT)
+          }, kT.open(TT, UT.href || UT), kT.onload = function() {
+            for (HT = kT.getAllResponseHeaders().trim().split(/[\r\n]+/), WT(kT, kT); nT = HT.shift();) nT = nT.split(": "), kT.headers[nT.shift().toLowerCase()] = nT.join(": ");
+            if ((nT = kT.headers["content-type"]) && ~nT.indexOf("application/json")) try {
+              kT.data = JSON.parse(kT.data, mT.reviver)
+            } catch (TT) {
+              return WT(kT, TT), MT(TT)
+            }(kT.status >= 400 ? MT : zT)(kT)
+          }, typeof FormData < "u" && jT instanceof FormData || jT && "object" == typeof jT && (lT["content-type"] = "application/json", jT = JSON.stringify(jT)), kT.withCredentials = !!mT.withCredentials, lT) kT.setRequestHeader(gT, lT[gT]);
+        kT.send(jT), mT.signal && mT.signal.addEventListener("abort", (function() {
+          kT.abort()
         }))
       }))
     }
-    cp.r(ip), cp.d(ip, {
-      del: () => Lp,
-      get: () => Ip,
-      patch: () => xp,
-      post: () => Sp,
-      put: () => Yp,
-      send: () => op
+    mT.r(UT), mT.d(UT, {
+      del: () => HT,
+      get: () => MT,
+      patch: () => nT,
+      post: () => gT,
+      put: () => kT,
+      send: () => zT
     });
-    var Ip = op.bind(op, "GET"),
-      Sp = op.bind(op, "POST"),
-      xp = op.bind(op, "PATCH"),
-      Lp = op.bind(op, "DELETE"),
-      Yp = op.bind(op, "PUT")
+    var MT = zT.bind(zT, "GET"),
+      gT = zT.bind(zT, "POST"),
+      nT = zT.bind(zT, "PATCH"),
+      HT = zT.bind(zT, "DELETE"),
+      kT = zT.bind(zT, "PUT")
   },
-  9298: (pp, ip, cp) => {
-    var Op, op, Ip;
-    cp.r(ip), cp.d(ip, {
-      ALWAYS: () => zi,
-      C1: () => ep,
-      DECIMAL_FIT: () => Ki,
-      DECIMAL_ROUND: () => si,
-      Decoder: () => Di,
-      Encoder: () => ri,
-      FLOAT32_OPTIONS: () => Ui,
-      NEVER: () => Zi,
-      Packr: () => Bi,
-      RESERVE_START_SPACE: () => ic,
-      RESET_BUFFER_MODE: () => pc,
-      REUSE_BUFFER_MODE: () => Vi,
-      Unpackr: () => Mp,
-      addExtension: () => ai,
-      clearSource: () => Li,
-      decode: () => yi,
-      decodeIter: () => cc,
-      encode: () => Gi,
-      encodeIter: () => Oc,
-      isNativeAccelerationEnabled: () => hp,
-      mapsAsObjects: () => Ic,
-      pack: () => gi,
-      roundFloat32: () => ei,
-      unpack: () => Pi,
-      unpackMultiple: () => Wi,
-      useRecords: () => oc
+  9287: (TT, UT, mT) => {
+    var WT, zT, MT;
+    mT.r(UT), mT.d(UT, {
+      ALWAYS: () => NU,
+      C1: () => bT,
+      DECIMAL_FIT: () => hU,
+      DECIMAL_ROUND: () => EU,
+      Decoder: () => HU,
+      Encoder: () => SU,
+      FLOAT32_OPTIONS: () => pU,
+      NEVER: () => GU,
+      Packr: () => IU,
+      RESERVE_START_SPACE: () => AU,
+      RESET_BUFFER_MODE: () => oU,
+      REUSE_BUFFER_MODE: () => DU,
+      Unpackr: () => dT,
+      addExtension: () => VU,
+      clearSource: () => gU,
+      decode: () => LU,
+      decodeIter: () => RU,
+      encode: () => KU,
+      encodeIter: () => Tm,
+      isNativeAccelerationEnabled: () => uT,
+      mapsAsObjects: () => mm,
+      pack: () => rU,
+      roundFloat32: () => qU,
+      unpack: () => jU,
+      unpackMultiple: () => lU,
+      useRecords: () => Um
     });
     try {
-      Op = new TextDecoder
-    } catch (Sc) {}
-    var Sp = 0;
-    const xp = [];
-    var Lp, Yp, Dp, Ap, Pp, Wp = xp,
-      yp = 0,
-      Up = {},
-      wp = 0,
-      vp = 0,
-      tp = [],
-      Hp = {
+      WT = new TextDecoder
+    } catch (Wm) {}
+    var gT = 0;
+    const nT = [];
+    var HT, kT, jT, lT, LT, pT = nT,
+      BT = 0,
+      ZT = {},
+      cT = 0,
+      vT = 0,
+      fT = [],
+      qT = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class dp {}
-    const ep = new dp;
-    ep.name = "MessagePack 0xC1";
-    var jp, kp, mp, Rp = !1,
-      qp = 2;
+    class iT {}
+    const bT = new iT;
+    bT.name = "MessagePack 0xC1";
+    var OT, eT, YT, JT = !1,
+      xT = 2;
     try {
       new Function("")
-    } catch (Sc) {
-      qp = 1 / 0
+    } catch (Wm) {
+      xT = 1 / 0
     }
-    class Mp {
-      constructor(pp) {
-        pp && (!1 === pp.useRecords && void 0 === pp.mapsAsObjects && (pp.mapsAsObjects = !0), pp.sequential && !1 !== pp.trusted && (pp.trusted = !0, pp.structures || 0 == pp.useRecords || (pp.structures = [], pp.maxSharedStructures || (pp.maxSharedStructures = 0))), pp.structures ? pp.structures.sharedLength = pp.structures.length : pp.getStructures && ((pp.structures = []).uninitialized = !0, pp.structures.sharedLength = 0), pp.int64AsNumber && (pp.int64AsType = "number")), Object.assign(this, pp)
+    class dT {
+      constructor(TT) {
+        TT && (!1 === TT.useRecords && void 0 === TT.mapsAsObjects && (TT.mapsAsObjects = !0), TT.sequential && !1 !== TT.trusted && (TT.trusted = !0, TT.structures || 0 == TT.useRecords || (TT.structures = [], TT.maxSharedStructures || (TT.maxSharedStructures = 0))), TT.structures ? TT.structures.sharedLength = TT.structures.length : TT.getStructures && ((TT.structures = []).uninitialized = !0, TT.structures.sharedLength = 0), TT.int64AsNumber && (TT.int64AsType = "number")), Object.assign(this, TT)
       }
-      unpack(pp, ip) {
-        if (op) return xi((() => (Li(), this ? this.unpack(pp, ip) : Mp.prototype.unpack.call(Hp, pp, ip))));
-        pp.buffer || pp.constructor !== ArrayBuffer || (pp = "undefined" !== typeof Buffer ? Buffer.from(pp) : new Uint8Array(pp)), "object" === typeof ip ? (Ip = ip.end || pp.length, Sp = ip.start || 0) : (Sp = 0, Ip = ip > -1 ? ip : pp.length), yp = 0, vp = 0, Yp = null, Wp = xp, Dp = null, op = pp;
+      unpack(TT, UT) {
+        if (zT) return MU((() => (gU(), this ? this.unpack(TT, UT) : dT.prototype.unpack.call(qT, TT, UT))));
+        TT.buffer || TT.constructor !== ArrayBuffer || (TT = "undefined" !== typeof Buffer ? Buffer.from(TT) : new Uint8Array(TT)), "object" === typeof UT ? (MT = UT.end || TT.length, gT = UT.start || 0) : (gT = 0, MT = UT > -1 ? UT : TT.length), BT = 0, vT = 0, kT = null, pT = nT, jT = null, zT = TT;
         try {
-          Pp = pp.dataView || (pp.dataView = new DataView(pp.buffer, pp.byteOffset, pp.byteLength))
-        } catch (Sc) {
-          if (op = null, pp instanceof Uint8Array) throw Sc;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (pp && "object" == typeof pp ? pp.constructor.name : typeof pp))
+          LT = TT.dataView || (TT.dataView = new DataView(TT.buffer, TT.byteOffset, TT.byteLength))
+        } catch (Wm) {
+          if (zT = null, TT instanceof Uint8Array) throw Wm;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (TT && "object" == typeof TT ? TT.constructor.name : typeof TT))
         }
-        if (this instanceof Mp) {
-          if (Up = this, this.structures) return Lp = this.structures, Cp(ip);
-          (!Lp || Lp.length > 0) && (Lp = [])
-        } else Up = Hp, (!Lp || Lp.length > 0) && (Lp = []);
-        return Cp(ip)
+        if (this instanceof dT) {
+          if (ZT = this, this.structures) return HT = this.structures, wT(UT);
+          (!HT || HT.length > 0) && (HT = [])
+        } else ZT = qT, (!HT || HT.length > 0) && (HT = []);
+        return wT(UT)
       }
-      unpackMultiple(pp, ip) {
-        let cp, Op = 0;
+      unpackMultiple(TT, UT) {
+        let mT, WT = 0;
         try {
-          Rp = !0;
-          let op = pp.length,
-            Ip = this ? this.unpack(pp, op) : Ai.unpack(pp, op);
-          if (!ip) {
-            for (cp = [Ip]; Sp < op;) Op = Sp, cp.push(Cp());
-            return cp
+          JT = !0;
+          let zT = TT.length,
+            MT = this ? this.unpack(TT, zT) : kU.unpack(TT, zT);
+          if (!UT) {
+            for (mT = [MT]; gT < zT;) WT = gT, mT.push(wT());
+            return mT
           }
-          if (!1 === ip(Ip, Op, Sp)) return;
-          for (; Sp < op;)
-            if (Op = Sp, !1 === ip(Cp(), Op, Sp)) return
-        } catch (Sc) {
-          throw Sc.lastPosition = Op, Sc.values = cp, Sc
+          if (!1 === UT(MT, WT, gT)) return;
+          for (; gT < zT;)
+            if (WT = gT, !1 === UT(wT(), WT, gT)) return
+        } catch (Wm) {
+          throw Wm.lastPosition = WT, Wm.values = mT, Wm
         } finally {
-          Rp = !1, Li()
+          JT = !1, gU()
         }
       }
-      _mergeStructures(pp, ip) {
-        kp && (pp = kp.call(this, pp)), pp = pp || [], Object.isFrozen(pp) && (pp = pp.map((pp => pp.slice(0))));
-        for (let cp = 0, Op = pp.length; cp < Op; cp++) {
-          let ip = pp[cp];
-          ip && (ip.isShared = !0, cp >= 32 && (ip.highByte = cp - 32 >> 5))
+      _mergeStructures(TT, UT) {
+        eT && (TT = eT.call(this, TT)), TT = TT || [], Object.isFrozen(TT) && (TT = TT.map((TT => TT.slice(0))));
+        for (let mT = 0, WT = TT.length; mT < WT; mT++) {
+          let UT = TT[mT];
+          UT && (UT.isShared = !0, mT >= 32 && (UT.highByte = mT - 32 >> 5))
         }
-        pp.sharedLength = pp.length;
-        for (let cp in ip || [])
-          if (cp >= 0) {
-            let Op = pp[cp],
-              op = ip[cp];
-            op && (Op && ((pp.restoreStructures || (pp.restoreStructures = []))[cp] = Op), pp[cp] = op)
-          } return this.structures = pp
+        TT.sharedLength = TT.length;
+        for (let mT in UT || [])
+          if (mT >= 0) {
+            let WT = TT[mT],
+              zT = UT[mT];
+            zT && (WT && ((TT.restoreStructures || (TT.restoreStructures = []))[mT] = WT), TT[mT] = zT)
+          } return this.structures = TT
       }
-      decode(pp, ip) {
-        return this.unpack(pp, ip)
+      decode(TT, UT) {
+        return this.unpack(TT, UT)
       }
     }
 
-    function Cp(pp) {
+    function wT(TT) {
       try {
-        if (!Up.trusted && !Rp) {
-          let pp = Lp.sharedLength || 0;
-          pp < Lp.length && (Lp.length = pp)
+        if (!ZT.trusted && !JT) {
+          let TT = HT.sharedLength || 0;
+          TT < HT.length && (HT.length = TT)
         }
-        let ip;
-        if (Up.randomAccessStructure && op[Sp] < 64 && op[Sp] >= 32 && jp ? (ip = jp(op, Sp, Ip, Up), op = null, pp && pp.lazy || !ip || (ip = ip.toJSON()), Sp = Ip) : ip = Xp(), Dp && (Sp = Dp.postBundlePosition, Dp = null), Rp && (Lp.restoreStructures = null), Sp == Ip) Lp && Lp.restoreStructures && Ep(), Lp = null, op = null, Ap && (Ap = null);
+        let UT;
+        if (ZT.randomAccessStructure && zT[gT] < 64 && zT[gT] >= 32 && OT ? (UT = OT(zT, gT, MT, ZT), zT = null, TT && TT.lazy || !UT || (UT = UT.toJSON()), gT = MT) : UT = aT(), jT && (gT = jT.postBundlePosition, jT = null), JT && (HT.restoreStructures = null), gT == MT) HT && HT.restoreStructures && tT(), HT = null, zT = null, lT && (lT = null);
         else {
-          if (Sp > Ip) throw new Error("Unexpected end of MessagePack data");
-          if (!Rp) {
-            let pp;
+          if (gT > MT) throw new Error("Unexpected end of MessagePack data");
+          if (!JT) {
+            let TT;
             try {
-              pp = JSON.stringify(ip, ((pp, ip) => "bigint" === typeof ip ? `${ip}n` : ip)).slice(0, 100)
-            } catch (Sc) {
-              pp = "(JSON view not available " + Sc + ")"
+              TT = JSON.stringify(UT, ((TT, UT) => "bigint" === typeof UT ? `${UT}n` : UT)).slice(0, 100)
+            } catch (Wm) {
+              TT = "(JSON view not available " + Wm + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + pp)
+            throw new Error("Data read, but end of buffer not reached " + TT)
           }
         }
-        return ip
-      } catch (Sc) {
-        throw Lp && Lp.restoreStructures && Ep(), Li(), (Sc instanceof RangeError || Sc.message.startsWith("Unexpected end of buffer") || Sp > Ip) && (Sc.incomplete = !0), Sc
+        return UT
+      } catch (Wm) {
+        throw HT && HT.restoreStructures && tT(), gU(), (Wm instanceof RangeError || Wm.message.startsWith("Unexpected end of buffer") || gT > MT) && (Wm.incomplete = !0), Wm
       }
     }
 
-    function Ep() {
-      for (let pp in Lp.restoreStructures) Lp[pp] = Lp.restoreStructures[pp];
-      Lp.restoreStructures = null
+    function tT() {
+      for (let TT in HT.restoreStructures) HT[TT] = HT.restoreStructures[TT];
+      HT.restoreStructures = null
     }
 
-    function Xp() {
-      let pp = op[Sp++];
-      if (pp < 160) {
-        if (pp < 128) {
-          if (pp < 64) return pp;
+    function aT() {
+      let TT = zT[gT++];
+      if (TT < 160) {
+        if (TT < 128) {
+          if (TT < 64) return TT;
           {
-            let ip = Lp[63 & pp] || Up.getStructures && Bp()[63 & pp];
-            return ip ? (ip.read || (ip.read = Qp(ip, 63 & pp)), ip.read()) : pp
+            let UT = HT[63 & TT] || ZT.getStructures && QT()[63 & TT];
+            return UT ? (UT.read || (UT.read = XT(UT, 63 & TT)), UT.read()) : TT
           }
         }
-        if (pp < 144) {
-          if (pp -= 128, Up.mapsAsObjects) {
-            let ip = {};
-            for (let cp = 0; cp < pp; cp++) {
-              let pp = Vp();
-              "__proto__" === pp && (pp = "__proto_"), ip[pp] = Xp()
+        if (TT < 144) {
+          if (TT -= 128, ZT.mapsAsObjects) {
+            let UT = {};
+            for (let mT = 0; mT < TT; mT++) {
+              let TT = AT();
+              "__proto__" === TT && (TT = "__proto_"), UT[TT] = aT()
             }
-            return ip
+            return UT
           } {
-            let ip = new Map;
-            for (let cp = 0; cp < pp; cp++) ip.set(Xp(), Xp());
-            return ip
+            let UT = new Map;
+            for (let mT = 0; mT < TT; mT++) UT.set(aT(), aT());
+            return UT
           }
         } {
-          pp -= 144;
-          let ip = new Array(pp);
-          for (let cp = 0; cp < pp; cp++) ip[cp] = Xp();
-          return Up.freezeData ? Object.freeze(ip) : ip
+          TT -= 144;
+          let UT = new Array(TT);
+          for (let mT = 0; mT < TT; mT++) UT[mT] = aT();
+          return ZT.freezeData ? Object.freeze(UT) : UT
         }
       }
-      if (pp < 192) {
-        let ip = pp - 160;
-        if (vp >= Sp) return Yp.slice(Sp - wp, (Sp += ip) - wp);
-        if (0 == vp && Ip < 140) {
-          let pp = ip < 16 ? rp(ip) : Gp(ip);
-          if (null != pp) return pp
+      if (TT < 192) {
+        let UT = TT - 160;
+        if (vT >= gT) return kT.slice(gT - cT, (gT += UT) - cT);
+        if (0 == vT && MT < 140) {
+          let TT = UT < 16 ? NT(UT) : GT(UT);
+          if (null != TT) return TT
         }
-        return Np(ip)
+        return sT(UT)
       } {
-        let ip;
-        switch (pp) {
+        let UT;
+        switch (TT) {
           case 192:
             return null;
           case 193:
-            return Dp ? (ip = Xp(), ip > 0 ? Dp[1].slice(Dp.position1, Dp.position1 += ip) : Dp[0].slice(Dp.position0, Dp.position0 -= ip)) : ep;
+            return jT ? (UT = aT(), UT > 0 ? jT[1].slice(jT.position1, jT.position1 += UT) : jT[0].slice(jT.position0, jT.position0 -= UT)) : bT;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (ip = op[Sp++], void 0 === ip) throw new Error("Unexpected end of buffer");
-            return zp(ip);
+            if (UT = zT[gT++], void 0 === UT) throw new Error("Unexpected end of buffer");
+            return hT(UT);
           case 197:
-            return ip = Pp.getUint16(Sp), Sp += 2, zp(ip);
+            return UT = LT.getUint16(gT), gT += 2, hT(UT);
           case 198:
-            return ip = Pp.getUint32(Sp), Sp += 4, zp(ip);
+            return UT = LT.getUint32(gT), gT += 4, hT(UT);
           case 199:
-            return sp(op[Sp++]);
+            return DT(zT[gT++]);
           case 200:
-            return ip = Pp.getUint16(Sp), Sp += 2, sp(ip);
+            return UT = LT.getUint16(gT), gT += 2, DT(UT);
           case 201:
-            return ip = Pp.getUint32(Sp), Sp += 4, sp(ip);
+            return UT = LT.getUint32(gT), gT += 4, DT(UT);
           case 202:
-            if (ip = Pp.getFloat32(Sp), Up.useFloat32 > 2) {
-              let pp = Yi[(127 & op[Sp]) << 1 | op[Sp + 1] >> 7];
-              return Sp += 4, (pp * ip + (ip > 0 ? .5 : -.5) | 0) / pp
+            if (UT = LT.getFloat32(gT), ZT.useFloat32 > 2) {
+              let TT = nU[(127 & zT[gT]) << 1 | zT[gT + 1] >> 7];
+              return gT += 4, (TT * UT + (UT > 0 ? .5 : -.5) | 0) / TT
             }
-            return Sp += 4, ip;
+            return gT += 4, UT;
           case 203:
-            return ip = Pp.getFloat64(Sp), Sp += 8, ip;
+            return UT = LT.getFloat64(gT), gT += 8, UT;
           case 204:
-            return op[Sp++];
+            return zT[gT++];
           case 205:
-            return ip = Pp.getUint16(Sp), Sp += 2, ip;
+            return UT = LT.getUint16(gT), gT += 2, UT;
           case 206:
-            return ip = Pp.getUint32(Sp), Sp += 4, ip;
+            return UT = LT.getUint32(gT), gT += 4, UT;
           case 207:
-            return "number" === Up.int64AsType ? (ip = 4294967296 * Pp.getUint32(Sp), ip += Pp.getUint32(Sp + 4)) : "string" === Up.int64AsType ? ip = Pp.getBigUint64(Sp).toString() : "auto" === Up.int64AsType ? (ip = Pp.getBigUint64(Sp), ip <= BigInt(2) << BigInt(52) && (ip = Number(ip))) : ip = Pp.getBigUint64(Sp), Sp += 8, ip;
+            return "number" === ZT.int64AsType ? (UT = 4294967296 * LT.getUint32(gT), UT += LT.getUint32(gT + 4)) : "string" === ZT.int64AsType ? UT = LT.getBigUint64(gT).toString() : "auto" === ZT.int64AsType ? (UT = LT.getBigUint64(gT), UT <= BigInt(2) << BigInt(52) && (UT = Number(UT))) : UT = LT.getBigUint64(gT), gT += 8, UT;
           case 208:
-            return Pp.getInt8(Sp++);
+            return LT.getInt8(gT++);
           case 209:
-            return ip = Pp.getInt16(Sp), Sp += 2, ip;
+            return UT = LT.getInt16(gT), gT += 2, UT;
           case 210:
-            return ip = Pp.getInt32(Sp), Sp += 4, ip;
+            return UT = LT.getInt32(gT), gT += 4, UT;
           case 211:
-            return "number" === Up.int64AsType ? (ip = 4294967296 * Pp.getInt32(Sp), ip += Pp.getUint32(Sp + 4)) : "string" === Up.int64AsType ? ip = Pp.getBigInt64(Sp).toString() : "auto" === Up.int64AsType ? (ip = Pp.getBigInt64(Sp), ip >= BigInt(-2) << BigInt(52) && ip <= BigInt(2) << BigInt(52) && (ip = Number(ip))) : ip = Pp.getBigInt64(Sp), Sp += 8, ip;
+            return "number" === ZT.int64AsType ? (UT = 4294967296 * LT.getInt32(gT), UT += LT.getUint32(gT + 4)) : "string" === ZT.int64AsType ? UT = LT.getBigInt64(gT).toString() : "auto" === ZT.int64AsType ? (UT = LT.getBigInt64(gT), UT >= BigInt(-2) << BigInt(52) && UT <= BigInt(2) << BigInt(52) && (UT = Number(UT))) : UT = LT.getBigInt64(gT), gT += 8, UT;
           case 212:
-            if (ip = op[Sp++], 114 == ip) return ci(63 & op[Sp++]);
+            if (UT = zT[gT++], 114 == UT) return TU(63 & zT[gT++]);
             {
-              let pp = tp[ip];
-              if (pp) return pp.read ? (Sp++, pp.read(Xp())) : pp.noBuffer ? (Sp++, pp()) : pp(op.subarray(Sp, ++Sp));
-              throw new Error("Unknown extension " + ip)
+              let TT = fT[UT];
+              if (TT) return TT.read ? (gT++, TT.read(aT())) : TT.noBuffer ? (gT++, TT()) : TT(zT.subarray(gT, ++gT));
+              throw new Error("Unknown extension " + UT)
             }
           case 213:
-            return ip = op[Sp], 114 == ip ? (Sp++, ci(63 & op[Sp++], op[Sp++])) : sp(2);
+            return UT = zT[gT], 114 == UT ? (gT++, TU(63 & zT[gT++], zT[gT++])) : DT(2);
           case 214:
-            return sp(4);
+            return DT(4);
           case 215:
-            return sp(8);
+            return DT(8);
           case 216:
-            return sp(16);
+            return DT(16);
           case 217:
-            return ip = op[Sp++], vp >= Sp ? Yp.slice(Sp - wp, (Sp += ip) - wp) : Tp(ip);
+            return UT = zT[gT++], vT >= gT ? kT.slice(gT - cT, (gT += UT) - cT) : FT(UT);
           case 218:
-            return ip = Pp.getUint16(Sp), vp >= (Sp += 2) ? Yp.slice(Sp - wp, (Sp += ip) - wp) : fp(ip);
+            return UT = LT.getUint16(gT), vT >= (gT += 2) ? kT.slice(gT - cT, (gT += UT) - cT) : PT(UT);
           case 219:
-            return ip = Pp.getUint32(Sp), vp >= (Sp += 4) ? Yp.slice(Sp - wp, (Sp += ip) - wp) : bp(ip);
+            return UT = LT.getUint32(gT), vT >= (gT += 4) ? kT.slice(gT - cT, (gT += UT) - cT) : VT(UT);
           case 220:
-            return ip = Pp.getUint16(Sp), Sp += 2, np(ip);
+            return UT = LT.getUint16(gT), gT += 2, rT(UT);
           case 221:
-            return ip = Pp.getUint32(Sp), Sp += 4, np(ip);
+            return UT = LT.getUint32(gT), gT += 4, rT(UT);
           case 222:
-            return ip = Pp.getUint16(Sp), Sp += 2, Fp(ip);
+            return UT = LT.getUint16(gT), gT += 2, KT(UT);
           case 223:
-            return ip = Pp.getUint32(Sp), Sp += 4, Fp(ip);
+            return UT = LT.getUint32(gT), gT += 4, KT(UT);
           default:
-            if (pp >= 224) return pp - 256;
-            if (void 0 === pp) {
-              let pp = new Error("Unexpected end of MessagePack data");
-              throw pp.incomplete = !0, pp
+            if (TT >= 224) return TT - 256;
+            if (void 0 === TT) {
+              let TT = new Error("Unexpected end of MessagePack data");
+              throw TT.incomplete = !0, TT
             }
-            throw new Error("Unknown MessagePack token " + pp)
+            throw new Error("Unknown MessagePack token " + TT)
         }
       }
     }
-    const lp = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const yT = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function Qp(pp, ip) {
-      function cp() {
-        if (cp.count++ > qp) {
-          let cp = pp.read = new Function("r", "return function(){return " + (Up.freezeData ? "Object.freeze" : "") + "({" + pp.map((pp => "__proto__" === pp ? "__proto_:r()" : lp.test(pp) ? pp + ":r()" : "[" + JSON.stringify(pp) + "]:r()")).join(",") + "})}")(Xp);
-          return 0 === pp.highByte && (pp.read = Jp(ip, pp.read)), cp()
+    function XT(TT, UT) {
+      function mT() {
+        if (mT.count++ > xT) {
+          let mT = TT.read = new Function("r", "return function(){return " + (ZT.freezeData ? "Object.freeze" : "") + "({" + TT.map((TT => "__proto__" === TT ? "__proto_:r()" : yT.test(TT) ? TT + ":r()" : "[" + JSON.stringify(TT) + "]:r()")).join(",") + "})}")(aT);
+          return 0 === TT.highByte && (TT.read = IT(UT, TT.read)), mT()
         }
-        let Op = {};
-        for (let ip = 0, cp = pp.length; ip < cp; ip++) {
-          let cp = pp[ip];
-          "__proto__" === cp && (cp = "__proto_"), Op[cp] = Xp()
+        let WT = {};
+        for (let UT = 0, mT = TT.length; UT < mT; UT++) {
+          let mT = TT[UT];
+          "__proto__" === mT && (mT = "__proto_"), WT[mT] = aT()
         }
-        return Up.freezeData ? Object.freeze(Op) : Op
+        return ZT.freezeData ? Object.freeze(WT) : WT
       }
-      return cp.count = 0, 0 === pp.highByte ? Jp(ip, cp) : cp
+      return mT.count = 0, 0 === TT.highByte ? IT(UT, mT) : mT
     }
-    const Jp = (pp, ip) => function() {
-      let cp = op[Sp++];
-      if (0 === cp) return ip();
-      let Op = pp < 32 ? -(pp + (cp << 5)) : pp + (cp << 5),
-        Ip = Lp[Op] || Bp()[Op];
-      if (!Ip) throw new Error("Record id is not defined for " + Op);
-      return Ip.read || (Ip.read = Qp(Ip, pp)), Ip.read()
+    const IT = (TT, UT) => function() {
+      let mT = zT[gT++];
+      if (0 === mT) return UT();
+      let WT = TT < 32 ? -(TT + (mT << 5)) : TT + (mT << 5),
+        MT = HT[WT] || QT()[WT];
+      if (!MT) throw new Error("Record id is not defined for " + WT);
+      return MT.read || (MT.read = XT(MT, TT)), MT.read()
     };
 
-    function Bp() {
-      let pp = xi((() => (op = null, Up.getStructures())));
-      return Lp = Up._mergeStructures(pp, Lp)
+    function QT() {
+      let TT = MU((() => (zT = null, ZT.getStructures())));
+      return HT = ZT._mergeStructures(TT, HT)
     }
-    var Np = ap,
-      Tp = ap,
-      fp = ap,
-      bp = ap;
-    let hp = !1;
+    var sT = CT,
+      FT = CT,
+      PT = CT,
+      VT = CT;
+    let uT = !1;
 
-    function ap(pp) {
-      let ip;
-      if (pp < 16 && (ip = rp(pp))) return ip;
-      if (pp > 64 && Op) return Op.decode(op.subarray(Sp, Sp += pp));
-      const cp = Sp + pp,
-        Ip = [];
-      for (ip = ""; Sp < cp;) {
-        const pp = op[Sp++];
-        if (0 === (128 & pp)) Ip.push(pp);
-        else if (192 === (224 & pp)) {
-          const ip = 63 & op[Sp++];
-          Ip.push((31 & pp) << 6 | ip)
-        } else if (224 === (240 & pp)) {
-          const ip = 63 & op[Sp++],
-            cp = 63 & op[Sp++];
-          Ip.push((31 & pp) << 12 | ip << 6 | cp)
-        } else if (240 === (248 & pp)) {
-          let ip = (7 & pp) << 18 | (63 & op[Sp++]) << 12 | (63 & op[Sp++]) << 6 | 63 & op[Sp++];
-          ip > 65535 && (ip -= 65536, Ip.push(ip >>> 10 & 1023 | 55296), ip = 56320 | 1023 & ip), Ip.push(ip)
-        } else Ip.push(pp);
-        Ip.length >= 4096 && (ip += gp.apply(String, Ip), Ip.length = 0)
+    function CT(TT) {
+      let UT;
+      if (TT < 16 && (UT = NT(TT))) return UT;
+      if (TT > 64 && WT) return WT.decode(zT.subarray(gT, gT += TT));
+      const mT = gT + TT,
+        MT = [];
+      for (UT = ""; gT < mT;) {
+        const TT = zT[gT++];
+        if (0 === (128 & TT)) MT.push(TT);
+        else if (192 === (224 & TT)) {
+          const UT = 63 & zT[gT++];
+          MT.push((31 & TT) << 6 | UT)
+        } else if (224 === (240 & TT)) {
+          const UT = 63 & zT[gT++],
+            mT = 63 & zT[gT++];
+          MT.push((31 & TT) << 12 | UT << 6 | mT)
+        } else if (240 === (248 & TT)) {
+          let UT = (7 & TT) << 18 | (63 & zT[gT++]) << 12 | (63 & zT[gT++]) << 6 | 63 & zT[gT++];
+          UT > 65535 && (UT -= 65536, MT.push(UT >>> 10 & 1023 | 55296), UT = 56320 | 1023 & UT), MT.push(UT)
+        } else MT.push(TT);
+        MT.length >= 4096 && (UT += ST.apply(String, MT), MT.length = 0)
       }
-      return Ip.length > 0 && (ip += gp.apply(String, Ip)), ip
+      return MT.length > 0 && (UT += ST.apply(String, MT)), UT
     }
 
-    function np(pp) {
-      let ip = new Array(pp);
-      for (let cp = 0; cp < pp; cp++) ip[cp] = Xp();
-      return Up.freezeData ? Object.freeze(ip) : ip
+    function rT(TT) {
+      let UT = new Array(TT);
+      for (let mT = 0; mT < TT; mT++) UT[mT] = aT();
+      return ZT.freezeData ? Object.freeze(UT) : UT
     }
 
-    function Fp(pp) {
-      if (Up.mapsAsObjects) {
-        let ip = {};
-        for (let cp = 0; cp < pp; cp++) {
-          let pp = Vp();
-          "__proto__" === pp && (pp = "__proto_"), ip[pp] = Xp()
+    function KT(TT) {
+      if (ZT.mapsAsObjects) {
+        let UT = {};
+        for (let mT = 0; mT < TT; mT++) {
+          let TT = AT();
+          "__proto__" === TT && (TT = "__proto_"), UT[TT] = aT()
         }
-        return ip
+        return UT
       } {
-        let ip = new Map;
-        for (let cp = 0; cp < pp; cp++) ip.set(Xp(), Xp());
-        return ip
+        let UT = new Map;
+        for (let mT = 0; mT < TT; mT++) UT.set(aT(), aT());
+        return UT
       }
     }
-    var gp = String.fromCharCode;
+    var ST = String.fromCharCode;
 
-    function Gp(pp) {
-      let ip = Sp,
-        cp = new Array(pp);
-      for (let Op = 0; Op < pp; Op++) {
-        const pp = op[Sp++];
-        if ((128 & pp) > 0) return void(Sp = ip);
-        cp[Op] = pp
+    function GT(TT) {
+      let UT = gT,
+        mT = new Array(TT);
+      for (let WT = 0; WT < TT; WT++) {
+        const TT = zT[gT++];
+        if ((128 & TT) > 0) return void(gT = UT);
+        mT[WT] = TT
       }
-      return gp.apply(String, cp)
+      return ST.apply(String, mT)
     }
 
-    function rp(pp) {
-      if (pp < 4) {
-        if (pp < 2) {
-          if (0 === pp) return "";
+    function NT(TT) {
+      if (TT < 4) {
+        if (TT < 2) {
+          if (0 === TT) return "";
           {
-            let pp = op[Sp++];
-            return (128 & pp) > 1 ? void(Sp -= 1) : gp(pp)
+            let TT = zT[gT++];
+            return (128 & TT) > 1 ? void(gT -= 1) : ST(TT)
           }
         } {
-          let ip = op[Sp++],
-            cp = op[Sp++];
-          if ((128 & ip) > 0 || (128 & cp) > 0) return void(Sp -= 2);
-          if (pp < 3) return gp(ip, cp);
-          let Op = op[Sp++];
-          return (128 & Op) > 0 ? void(Sp -= 3) : gp(ip, cp, Op)
+          let UT = zT[gT++],
+            mT = zT[gT++];
+          if ((128 & UT) > 0 || (128 & mT) > 0) return void(gT -= 2);
+          if (TT < 3) return ST(UT, mT);
+          let WT = zT[gT++];
+          return (128 & WT) > 0 ? void(gT -= 3) : ST(UT, mT, WT)
         }
       } {
-        let ip = op[Sp++],
-          cp = op[Sp++],
-          Op = op[Sp++],
-          Ip = op[Sp++];
-        if ((128 & ip) > 0 || (128 & cp) > 0 || (128 & Op) > 0 || (128 & Ip) > 0) return void(Sp -= 4);
-        if (pp < 6) {
-          if (4 === pp) return gp(ip, cp, Op, Ip);
+        let UT = zT[gT++],
+          mT = zT[gT++],
+          WT = zT[gT++],
+          MT = zT[gT++];
+        if ((128 & UT) > 0 || (128 & mT) > 0 || (128 & WT) > 0 || (128 & MT) > 0) return void(gT -= 4);
+        if (TT < 6) {
+          if (4 === TT) return ST(UT, mT, WT, MT);
           {
-            let pp = op[Sp++];
-            return (128 & pp) > 0 ? void(Sp -= 5) : gp(ip, cp, Op, Ip, pp)
+            let TT = zT[gT++];
+            return (128 & TT) > 0 ? void(gT -= 5) : ST(UT, mT, WT, MT, TT)
           }
         }
-        if (pp < 8) {
-          let xp = op[Sp++],
-            Lp = op[Sp++];
-          if ((128 & xp) > 0 || (128 & Lp) > 0) return void(Sp -= 6);
-          if (pp < 7) return gp(ip, cp, Op, Ip, xp, Lp);
-          let Yp = op[Sp++];
-          return (128 & Yp) > 0 ? void(Sp -= 7) : gp(ip, cp, Op, Ip, xp, Lp, Yp)
+        if (TT < 8) {
+          let nT = zT[gT++],
+            HT = zT[gT++];
+          if ((128 & nT) > 0 || (128 & HT) > 0) return void(gT -= 6);
+          if (TT < 7) return ST(UT, mT, WT, MT, nT, HT);
+          let kT = zT[gT++];
+          return (128 & kT) > 0 ? void(gT -= 7) : ST(UT, mT, WT, MT, nT, HT, kT)
         } {
-          let xp = op[Sp++],
-            Lp = op[Sp++],
-            Yp = op[Sp++],
-            Dp = op[Sp++];
-          if ((128 & xp) > 0 || (128 & Lp) > 0 || (128 & Yp) > 0 || (128 & Dp) > 0) return void(Sp -= 8);
-          if (pp < 10) {
-            if (8 === pp) return gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp);
+          let nT = zT[gT++],
+            HT = zT[gT++],
+            kT = zT[gT++],
+            jT = zT[gT++];
+          if ((128 & nT) > 0 || (128 & HT) > 0 || (128 & kT) > 0 || (128 & jT) > 0) return void(gT -= 8);
+          if (TT < 10) {
+            if (8 === TT) return ST(UT, mT, WT, MT, nT, HT, kT, jT);
             {
-              let pp = op[Sp++];
-              return (128 & pp) > 0 ? void(Sp -= 9) : gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, pp)
+              let TT = zT[gT++];
+              return (128 & TT) > 0 ? void(gT -= 9) : ST(UT, mT, WT, MT, nT, HT, kT, jT, TT)
             }
           }
-          if (pp < 12) {
-            let Ap = op[Sp++],
-              Pp = op[Sp++];
-            if ((128 & Ap) > 0 || (128 & Pp) > 0) return void(Sp -= 10);
-            if (pp < 11) return gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, Ap, Pp);
-            let Wp = op[Sp++];
-            return (128 & Wp) > 0 ? void(Sp -= 11) : gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, Ap, Pp, Wp)
+          if (TT < 12) {
+            let lT = zT[gT++],
+              LT = zT[gT++];
+            if ((128 & lT) > 0 || (128 & LT) > 0) return void(gT -= 10);
+            if (TT < 11) return ST(UT, mT, WT, MT, nT, HT, kT, jT, lT, LT);
+            let pT = zT[gT++];
+            return (128 & pT) > 0 ? void(gT -= 11) : ST(UT, mT, WT, MT, nT, HT, kT, jT, lT, LT, pT)
           } {
-            let Ap = op[Sp++],
-              Pp = op[Sp++],
-              Wp = op[Sp++],
-              yp = op[Sp++];
-            if ((128 & Ap) > 0 || (128 & Pp) > 0 || (128 & Wp) > 0 || (128 & yp) > 0) return void(Sp -= 12);
-            if (pp < 14) {
-              if (12 === pp) return gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp);
+            let lT = zT[gT++],
+              LT = zT[gT++],
+              pT = zT[gT++],
+              BT = zT[gT++];
+            if ((128 & lT) > 0 || (128 & LT) > 0 || (128 & pT) > 0 || (128 & BT) > 0) return void(gT -= 12);
+            if (TT < 14) {
+              if (12 === TT) return ST(UT, mT, WT, MT, nT, HT, kT, jT, lT, LT, pT, BT);
               {
-                let pp = op[Sp++];
-                return (128 & pp) > 0 ? void(Sp -= 13) : gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, pp)
+                let TT = zT[gT++];
+                return (128 & TT) > 0 ? void(gT -= 13) : ST(UT, mT, WT, MT, nT, HT, kT, jT, lT, LT, pT, BT, TT)
               }
             } {
-              let Up = op[Sp++],
-                wp = op[Sp++];
-              if ((128 & Up) > 0 || (128 & wp) > 0) return void(Sp -= 14);
-              if (pp < 15) return gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, Up, wp);
-              let vp = op[Sp++];
-              return (128 & vp) > 0 ? void(Sp -= 15) : gp(ip, cp, Op, Ip, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, Up, wp, vp)
+              let ZT = zT[gT++],
+                cT = zT[gT++];
+              if ((128 & ZT) > 0 || (128 & cT) > 0) return void(gT -= 14);
+              if (TT < 15) return ST(UT, mT, WT, MT, nT, HT, kT, jT, lT, LT, pT, BT, ZT, cT);
+              let vT = zT[gT++];
+              return (128 & vT) > 0 ? void(gT -= 15) : ST(UT, mT, WT, MT, nT, HT, kT, jT, lT, LT, pT, BT, ZT, cT, vT)
             }
           }
         }
       }
     }
 
-    function Zp() {
-      let pp, ip = op[Sp++];
-      if (ip < 192) pp = ip - 160;
-      else switch (ip) {
+    function ET() {
+      let TT, UT = zT[gT++];
+      if (UT < 192) TT = UT - 160;
+      else switch (UT) {
         case 217:
-          pp = op[Sp++];
+          TT = zT[gT++];
           break;
         case 218:
-          pp = Pp.getUint16(Sp), Sp += 2;
+          TT = LT.getUint16(gT), gT += 2;
           break;
         case 219:
-          pp = Pp.getUint32(Sp), Sp += 4;
+          TT = LT.getUint32(gT), gT += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return ap(pp)
+      return CT(TT)
     }
 
-    function zp(pp) {
-      return Up.copyBuffers ? Uint8Array.prototype.slice.call(op, Sp, Sp += pp) : op.subarray(Sp, Sp += pp)
+    function hT(TT) {
+      return ZT.copyBuffers ? Uint8Array.prototype.slice.call(zT, gT, gT += TT) : zT.subarray(gT, gT += TT)
     }
 
-    function sp(pp) {
-      let ip = op[Sp++];
-      if (tp[ip]) {
-        let cp;
-        return tp[ip](op.subarray(Sp, cp = Sp += pp), (pp => {
-          Sp = pp;
+    function DT(TT) {
+      let UT = zT[gT++];
+      if (fT[UT]) {
+        let mT;
+        return fT[UT](zT.subarray(gT, mT = gT += TT), (TT => {
+          gT = TT;
           try {
-            return Xp()
+            return aT()
           } finally {
-            Sp = cp
+            gT = mT
           }
         }))
       }
-      throw new Error("Unknown extension type " + ip)
+      throw new Error("Unknown extension type " + UT)
     }
-    var Kp = new Array(4096);
+    var oT = new Array(4096);
 
-    function Vp() {
-      let pp = op[Sp++];
-      if (!(pp >= 160 && pp < 192)) return Sp--, ii(Xp());
-      if (pp -= 160, vp >= Sp) return Yp.slice(Sp - wp, (Sp += pp) - wp);
-      if (!(0 == vp && Ip < 180)) return Np(pp);
-      let ip, cp = 4095 & (pp << 5 ^ (pp > 1 ? Pp.getUint16(Sp) : pp > 0 ? op[Sp] : 0)),
-        Op = Kp[cp],
-        xp = Sp,
-        Lp = Sp + pp - 3,
-        Dp = 0;
-      if (Op && Op.bytes == pp) {
-        for (; xp < Lp;) {
-          if (ip = Pp.getUint32(xp), ip != Op[Dp++]) {
-            xp = 1879048192;
+    function AT() {
+      let TT = zT[gT++];
+      if (!(TT >= 160 && TT < 192)) return gT--, RT(aT());
+      if (TT -= 160, vT >= gT) return kT.slice(gT - cT, (gT += TT) - cT);
+      if (!(0 == vT && MT < 180)) return sT(TT);
+      let UT, mT = 4095 & (TT << 5 ^ (TT > 1 ? LT.getUint16(gT) : TT > 0 ? zT[gT] : 0)),
+        WT = oT[mT],
+        nT = gT,
+        HT = gT + TT - 3,
+        jT = 0;
+      if (WT && WT.bytes == TT) {
+        for (; nT < HT;) {
+          if (UT = LT.getUint32(nT), UT != WT[jT++]) {
+            nT = 1879048192;
             break
           }
-          xp += 4
+          nT += 4
         }
-        for (Lp += 3; xp < Lp;)
-          if (ip = op[xp++], ip != Op[Dp++]) {
-            xp = 1879048192;
+        for (HT += 3; nT < HT;)
+          if (UT = zT[nT++], UT != WT[jT++]) {
+            nT = 1879048192;
             break
-          } if (xp === Lp) return Sp = xp, Op.string;
-        Lp -= 3, xp = Sp
+          } if (nT === HT) return gT = nT, WT.string;
+        HT -= 3, nT = gT
       }
-      for (Op = [], Kp[cp] = Op, Op.bytes = pp; xp < Lp;) ip = Pp.getUint32(xp), Op.push(ip), xp += 4;
-      for (Lp += 3; xp < Lp;) ip = op[xp++], Op.push(ip);
-      let Ap = pp < 16 ? rp(pp) : Gp(pp);
-      return Op.string = null != Ap ? Ap : Np(pp)
+      for (WT = [], oT[mT] = WT, WT.bytes = TT; nT < HT;) UT = LT.getUint32(nT), WT.push(UT), nT += 4;
+      for (HT += 3; nT < HT;) UT = zT[nT++], WT.push(UT);
+      let lT = TT < 16 ? NT(TT) : GT(TT);
+      return WT.string = null != lT ? lT : sT(TT)
     }
 
-    function ii(pp) {
-      if ("string" === typeof pp) return pp;
-      if ("number" === typeof pp || "boolean" === typeof pp || "bigint" === typeof pp) return pp.toString();
-      if (null == pp) return pp + "";
-      if (Up.allowArraysInMapKeys && Array.isArray(pp) && pp.flat().every((pp => ["string", "number", "boolean", "bigint"].includes(typeof pp)))) return pp.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof pp)
+    function RT(TT) {
+      if ("string" === typeof TT) return TT;
+      if ("number" === typeof TT || "boolean" === typeof TT || "bigint" === typeof TT) return TT.toString();
+      if (null == TT) return TT + "";
+      if (ZT.allowArraysInMapKeys && Array.isArray(TT) && TT.flat().every((TT => ["string", "number", "boolean", "bigint"].includes(typeof TT)))) return TT.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof TT)
     }
-    const ci = (pp, ip) => {
-      let cp = Xp().map(ii),
-        Op = pp;
-      void 0 !== ip && (pp = pp < 32 ? -((ip << 5) + pp) : (ip << 5) + pp, cp.highByte = ip);
-      let op = Lp[pp];
-      return op && (op.isShared || Rp) && ((Lp.restoreStructures || (Lp.restoreStructures = []))[pp] = op), Lp[pp] = cp, cp.read = Qp(cp, Op), cp.read()
+    const TU = (TT, UT) => {
+      let mT = aT().map(RT),
+        WT = TT;
+      void 0 !== UT && (TT = TT < 32 ? -((UT << 5) + TT) : (UT << 5) + TT, mT.highByte = UT);
+      let zT = HT[TT];
+      return zT && (zT.isShared || JT) && ((HT.restoreStructures || (HT.restoreStructures = []))[TT] = zT), HT[TT] = mT, mT.read = XT(mT, WT), mT.read()
     };
-    tp[0] = () => {}, tp[0].noBuffer = !0, tp[66] = pp => {
-      let ip = pp.length,
-        cp = BigInt(128 & pp[0] ? pp[0] - 256 : pp[0]);
-      for (let Op = 1; Op < ip; Op++) cp <<= BigInt(8), cp += BigInt(pp[Op]);
-      return cp
+    fT[0] = () => {}, fT[0].noBuffer = !0, fT[66] = TT => {
+      let UT = TT.length,
+        mT = BigInt(128 & TT[0] ? TT[0] - 256 : TT[0]);
+      for (let WT = 1; WT < UT; WT++) mT <<= BigInt(8), mT += BigInt(TT[WT]);
+      return mT
     };
-    let Oi = {
+    let UU = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    tp[101] = () => {
-      let pp = Xp();
-      return (Oi[pp[0]] || Error)(pp[1], {
-        cause: pp[2]
+    fT[101] = () => {
+      let TT = aT();
+      return (UU[TT[0]] || Error)(TT[1], {
+        cause: TT[2]
       })
-    }, tp[105] = pp => {
-      if (!1 === Up.structuredClone) throw new Error("Structured clone extension is disabled");
-      let ip = Pp.getUint32(Sp - 4);
-      Ap || (Ap = new Map);
-      let cp, Op = op[Sp];
-      cp = Op >= 144 && Op < 160 || 220 == Op || 221 == Op ? [] : {};
-      let Ip = {
-        target: cp
+    }, fT[105] = TT => {
+      if (!1 === ZT.structuredClone) throw new Error("Structured clone extension is disabled");
+      let UT = LT.getUint32(gT - 4);
+      lT || (lT = new Map);
+      let mT, WT = zT[gT];
+      mT = WT >= 144 && WT < 160 || 220 == WT || 221 == WT ? [] : {};
+      let MT = {
+        target: mT
       };
-      Ap.set(ip, Ip);
-      let xp = Xp();
-      return Ip.used ? Object.assign(cp, xp) : (Ip.target = xp, xp)
-    }, tp[112] = pp => {
-      if (!1 === Up.structuredClone) throw new Error("Structured clone extension is disabled");
-      let ip = Pp.getUint32(Sp - 4),
-        cp = Ap.get(ip);
-      return cp.used = !0, cp.target
-    }, tp[115] = () => new Set(Xp());
-    const oi = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((pp => pp + "Array"));
-    let Ii = "object" === typeof globalThis ? globalThis : window;
-    tp[116] = pp => {
-      let ip = pp[0],
-        cp = oi[ip];
-      if (!cp) {
-        if (16 === ip) {
-          let ip = new ArrayBuffer(pp.length - 1);
-          return new Uint8Array(ip).set(pp.subarray(1)), ip
+      lT.set(UT, MT);
+      let nT = aT();
+      return MT.used ? Object.assign(mT, nT) : (MT.target = nT, nT)
+    }, fT[112] = TT => {
+      if (!1 === ZT.structuredClone) throw new Error("Structured clone extension is disabled");
+      let UT = LT.getUint32(gT - 4),
+        mT = lT.get(UT);
+      return mT.used = !0, mT.target
+    }, fT[115] = () => new Set(aT());
+    const mU = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((TT => TT + "Array"));
+    let WU = "object" === typeof globalThis ? globalThis : window;
+    fT[116] = TT => {
+      let UT = TT[0],
+        mT = mU[UT];
+      if (!mT) {
+        if (16 === UT) {
+          let UT = new ArrayBuffer(TT.length - 1);
+          return new Uint8Array(UT).set(TT.subarray(1)), UT
         }
-        throw new Error("Could not find typed array for code " + ip)
+        throw new Error("Could not find typed array for code " + UT)
       }
-      return new Ii[cp](Uint8Array.prototype.slice.call(pp, 1).buffer)
-    }, tp[120] = () => {
-      let pp = Xp();
-      return new RegExp(pp[0], pp[1])
+      return new WU[mT](Uint8Array.prototype.slice.call(TT, 1).buffer)
+    }, fT[120] = () => {
+      let TT = aT();
+      return new RegExp(TT[0], TT[1])
     };
-    const Si = [];
+    const zU = [];
 
-    function xi(pp) {
-      mp && mp();
-      let ip = Ip,
-        cp = Sp,
-        Op = yp,
-        xp = wp,
-        tp = vp,
-        Hp = Yp,
-        dp = Wp,
-        ep = Ap,
-        jp = Dp,
-        kp = new Uint8Array(op.slice(0, Ip)),
-        qp = Lp,
-        Mp = Lp.slice(0, Lp.length),
-        Cp = Up,
-        Ep = Rp,
-        Xp = pp();
-      return Ip = ip, Sp = cp, yp = Op, wp = xp, vp = tp, Yp = Hp, Wp = dp, Ap = ep, Dp = jp, op = kp, Rp = Ep, (Lp = qp).splice(0, Lp.length, ...Mp), Up = Cp, Pp = new DataView(op.buffer, op.byteOffset, op.byteLength), Xp
+    function MU(TT) {
+      YT && YT();
+      let UT = MT,
+        mT = gT,
+        WT = BT,
+        nT = cT,
+        fT = vT,
+        qT = kT,
+        iT = pT,
+        bT = lT,
+        OT = jT,
+        eT = new Uint8Array(zT.slice(0, MT)),
+        xT = HT,
+        dT = HT.slice(0, HT.length),
+        wT = ZT,
+        tT = JT,
+        aT = TT();
+      return MT = UT, gT = mT, BT = WT, cT = nT, vT = fT, kT = qT, pT = iT, lT = bT, jT = OT, zT = eT, JT = tT, (HT = xT).splice(0, HT.length, ...dT), ZT = wT, LT = new DataView(zT.buffer, zT.byteOffset, zT.byteLength), aT
     }
 
-    function Li() {
-      op = null, Ap = null, Lp = null
+    function gU() {
+      zT = null, lT = null, HT = null
     }
-    tp[98] = pp => {
-      let ip = (pp[0] << 24) + (pp[1] << 16) + (pp[2] << 8) + pp[3],
-        cp = Sp;
-      return Sp += ip - pp.length, Dp = Si, (Dp = [Zp(), Zp()]).position0 = 0, Dp.position1 = 0, Dp.postBundlePosition = Sp, Sp = cp, Xp()
-    }, tp[255] = pp => 4 == pp.length ? new Date(1e3 * (16777216 * pp[0] + (pp[1] << 16) + (pp[2] << 8) + pp[3])) : 8 == pp.length ? new Date(((pp[0] << 22) + (pp[1] << 14) + (pp[2] << 6) + (pp[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & pp[3]) + 16777216 * pp[4] + (pp[5] << 16) + (pp[6] << 8) + pp[7])) : 12 == pp.length ? new Date(((pp[0] << 24) + (pp[1] << 16) + (pp[2] << 8) + pp[3]) / 1e6 + 1e3 * ((128 & pp[4] ? -281474976710656 : 0) + 1099511627776 * pp[6] + 4294967296 * pp[7] + 16777216 * pp[8] + (pp[9] << 16) + (pp[10] << 8) + pp[11])) : new Date("invalid");
-    const Yi = new Array(147);
-    for (let xc = 0; xc < 256; xc++) Yi[xc] = +("1e" + Math.floor(45.15 - .30103 * xc));
-    const Di = Mp;
-    var Ai = new Mp({
+    fT[98] = TT => {
+      let UT = (TT[0] << 24) + (TT[1] << 16) + (TT[2] << 8) + TT[3],
+        mT = gT;
+      return gT += UT - TT.length, jT = zU, (jT = [ET(), ET()]).position0 = 0, jT.position1 = 0, jT.postBundlePosition = gT, gT = mT, aT()
+    }, fT[255] = TT => 4 == TT.length ? new Date(1e3 * (16777216 * TT[0] + (TT[1] << 16) + (TT[2] << 8) + TT[3])) : 8 == TT.length ? new Date(((TT[0] << 22) + (TT[1] << 14) + (TT[2] << 6) + (TT[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & TT[3]) + 16777216 * TT[4] + (TT[5] << 16) + (TT[6] << 8) + TT[7])) : 12 == TT.length ? new Date(((TT[0] << 24) + (TT[1] << 16) + (TT[2] << 8) + TT[3]) / 1e6 + 1e3 * ((128 & TT[4] ? -281474976710656 : 0) + 1099511627776 * TT[6] + 4294967296 * TT[7] + 16777216 * TT[8] + (TT[9] << 16) + (TT[10] << 8) + TT[11])) : new Date("invalid");
+    const nU = new Array(147);
+    for (let zm = 0; zm < 256; zm++) nU[zm] = +("1e" + Math.floor(45.15 - .30103 * zm));
+    const HU = dT;
+    var kU = new dT({
       useRecords: !1
     });
-    const Pi = Ai.unpack,
-      Wi = Ai.unpackMultiple,
-      yi = Ai.unpack,
-      Ui = {
+    const jU = kU.unpack,
+      lU = kU.unpackMultiple,
+      LU = kU.unpack,
+      pU = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let wi, vi, ti, Hi = new Float32Array(1),
-      di = new Uint8Array(Hi.buffer, 0, 4);
+    let BU, ZU, cU, vU = new Float32Array(1),
+      fU = new Uint8Array(vU.buffer, 0, 4);
 
-    function ei(pp) {
-      Hi[0] = pp;
-      let ip = Yi[(127 & di[3]) << 1 | di[2] >> 7];
-      return (ip * pp + (pp > 0 ? .5 : -.5) | 0) / ip
+    function qU(TT) {
+      vU[0] = TT;
+      let UT = nU[(127 & fU[3]) << 1 | fU[2] >> 7];
+      return (UT * TT + (TT > 0 ? .5 : -.5) | 0) / UT
     }
     try {
-      wi = new TextEncoder
-    } catch (Sc) {}
-    const ui = "undefined" !== typeof Buffer,
-      ji = ui ? function(pp) {
-        return Buffer.allocUnsafeSlow(pp)
+      BU = new TextEncoder
+    } catch (Wm) {}
+    const iU = "undefined" !== typeof Buffer,
+      bU = iU ? function(TT) {
+        return Buffer.allocUnsafeSlow(TT)
       } : Uint8Array,
-      ki = ui ? Buffer : Uint8Array,
-      mi = ui ? 4294967296 : 2144337920;
-    let Ri, qi, Mi, Ci, Ei, Xi = 0,
-      li = null;
-    const Qi = /[\u0080-\uFFFF]/,
-      Ji = Symbol("record-id");
-    class Bi extends Mp {
-      constructor(pp) {
-        let ip, cp, Op, op;
-        super(pp), this.offset = 0;
-        let Ip = ki.prototype.utf8Write ? function(pp, ip) {
-            return Ri.utf8Write(pp, ip, Ri.byteLength - ip)
-          } : !(!wi || !wi.encodeInto) && function(pp, ip) {
-            return wi.encodeInto(pp, Ri.subarray(ip)).written
+      OU = iU ? Buffer : Uint8Array,
+      eU = iU ? 4294967296 : 2144337920;
+    let YU, JU, xU, dU, wU, tU = 0,
+      aU = null;
+    const yU = /[\u0080-\uFFFF]/,
+      XU = Symbol("record-id");
+    class IU extends dT {
+      constructor(TT) {
+        let UT, mT, WT, zT;
+        super(TT), this.offset = 0;
+        let MT = OU.prototype.utf8Write ? function(TT, UT) {
+            return YU.utf8Write(TT, UT, YU.byteLength - UT)
+          } : !(!BU || !BU.encodeInto) && function(TT, UT) {
+            return BU.encodeInto(TT, YU.subarray(UT)).written
           },
-          Sp = this;
-        pp || (pp = {});
-        let xp = pp && pp.sequential,
-          Lp = pp.structures || pp.saveStructures,
-          Yp = pp.maxSharedStructures;
-        if (null == Yp && (Yp = Lp ? 32 : 0), Yp > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        pp.structuredClone && void 0 == pp.moreTypes && (this.moreTypes = !0);
-        let Dp = pp.maxOwnStructures;
-        null == Dp && (Dp = Lp ? 32 : 64), this.structures || 0 == pp.useRecords || (this.structures = []);
-        let Ap = Yp > 32 || Dp + Yp > 64,
-          Pp = Yp + 64,
-          Wp = Yp + Dp + 64;
-        if (Wp > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let yp = [],
-          Up = 0,
-          wp = 0;
-        this.pack = this.encode = function(pp, Ip) {
-          if (Ri || (Ri = new ji(8192), Mi = Ri.dataView || (Ri.dataView = new DataView(Ri.buffer, 0, 8192)), Xi = 0), Ci = Ri.length - 10, Ci - Xi < 2048 ? (Ri = new ji(Ri.length), Mi = Ri.dataView || (Ri.dataView = new DataView(Ri.buffer, 0, Ri.length)), Ci = Ri.length - 10, Xi = 0) : Xi = Xi + 7 & 2147483640, ip = Xi, Ip & ic && (Xi += 255 & Ip), op = Sp.structuredClone ? new Map : null, Sp.bundleStrings && "string" !== typeof pp ? (li = [], li.size = 1 / 0) : li = null, Op = Sp.structures, Op) {
-            Op.uninitialized && (Op = Sp._mergeStructures(Sp.getStructures()));
-            let pp = Op.sharedLength || 0;
-            if (pp > Yp) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Op.sharedLength);
-            if (!Op.transitions) {
-              Op.transitions = Object.create(null);
-              for (let ip = 0; ip < pp; ip++) {
-                let pp = Op[ip];
-                if (!pp) continue;
-                let cp, op = Op.transitions;
-                for (let ip = 0, Op = pp.length; ip < Op; ip++) {
-                  let Op = pp[ip];
-                  cp = op[Op], cp || (cp = op[Op] = Object.create(null)), op = cp
+          gT = this;
+        TT || (TT = {});
+        let nT = TT && TT.sequential,
+          HT = TT.structures || TT.saveStructures,
+          kT = TT.maxSharedStructures;
+        if (null == kT && (kT = HT ? 32 : 0), kT > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        TT.structuredClone && void 0 == TT.moreTypes && (this.moreTypes = !0);
+        let jT = TT.maxOwnStructures;
+        null == jT && (jT = HT ? 32 : 64), this.structures || 0 == TT.useRecords || (this.structures = []);
+        let lT = kT > 32 || jT + kT > 64,
+          LT = kT + 64,
+          pT = kT + jT + 64;
+        if (pT > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let BT = [],
+          ZT = 0,
+          cT = 0;
+        this.pack = this.encode = function(TT, MT) {
+          if (YU || (YU = new bU(8192), xU = YU.dataView || (YU.dataView = new DataView(YU.buffer, 0, 8192)), tU = 0), dU = YU.length - 10, dU - tU < 2048 ? (YU = new bU(YU.length), xU = YU.dataView || (YU.dataView = new DataView(YU.buffer, 0, YU.length)), dU = YU.length - 10, tU = 0) : tU = tU + 7 & 2147483640, UT = tU, MT & AU && (tU += 255 & MT), zT = gT.structuredClone ? new Map : null, gT.bundleStrings && "string" !== typeof TT ? (aU = [], aU.size = 1 / 0) : aU = null, WT = gT.structures, WT) {
+            WT.uninitialized && (WT = gT._mergeStructures(gT.getStructures()));
+            let TT = WT.sharedLength || 0;
+            if (TT > kT) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + WT.sharedLength);
+            if (!WT.transitions) {
+              WT.transitions = Object.create(null);
+              for (let UT = 0; UT < TT; UT++) {
+                let TT = WT[UT];
+                if (!TT) continue;
+                let mT, zT = WT.transitions;
+                for (let UT = 0, WT = TT.length; UT < WT; UT++) {
+                  let WT = TT[UT];
+                  mT = zT[WT], mT || (mT = zT[WT] = Object.create(null)), zT = mT
                 }
-                op[Ji] = ip + 64
+                zT[XU] = UT + 64
               }
-              this.lastNamedStructuresLength = pp
+              this.lastNamedStructuresLength = TT
             }
-            xp || (Op.nextId = pp + 64)
+            nT || (WT.nextId = TT + 64)
           }
-          let Lp;
-          cp && (cp = !1);
+          let HT;
+          mT && (mT = !1);
           try {
-            Sp.randomAccessStructure && pp && pp.constructor && pp.constructor === Object ? Mp(pp) : Hp(pp);
-            let cp = li;
-            if (li && bi(ip, Hp, 0), op && op.idsToInsert) {
-              let pp = op.idsToInsert.sort(((pp, ip) => pp.offset > ip.offset ? 1 : -1)),
-                Op = pp.length,
-                Ip = -1;
-              for (; cp && Op > 0;) {
-                let op = pp[--Op].offset + ip;
-                op < cp.stringsPosition + ip && -1 === Ip && (Ip = 0), op > cp.position + ip ? Ip >= 0 && (Ip += 6) : (Ip >= 0 && (Mi.setUint32(cp.position + ip, Mi.getUint32(cp.position + ip) + Ip), Ip = -1), cp = cp.previous, Op++)
+            gT.randomAccessStructure && TT && TT.constructor && TT.constructor === Object ? dT(TT) : qT(TT);
+            let mT = aU;
+            if (aU && PU(UT, qT, 0), zT && zT.idsToInsert) {
+              let TT = zT.idsToInsert.sort(((TT, UT) => TT.offset > UT.offset ? 1 : -1)),
+                WT = TT.length,
+                MT = -1;
+              for (; mT && WT > 0;) {
+                let zT = TT[--WT].offset + UT;
+                zT < mT.stringsPosition + UT && -1 === MT && (MT = 0), zT > mT.position + UT ? MT >= 0 && (MT += 6) : (MT >= 0 && (xU.setUint32(mT.position + UT, xU.getUint32(mT.position + UT) + MT), MT = -1), mT = mT.previous, WT++)
               }
-              Ip >= 0 && cp && Mi.setUint32(cp.position + ip, Mi.getUint32(cp.position + ip) + Ip), Xi += 6 * pp.length, Xi > Ci && mp(Xi), Sp.offset = Xi;
-              let xp = function(pp, ip) {
-                let cp, Op = 6 * ip.length,
-                  op = pp.length - Op;
-                for (; cp = ip.pop();) {
-                  let ip = cp.offset,
-                    Ip = cp.id;
-                  pp.copyWithin(ip + Op, ip, op), Op -= 6;
-                  let Sp = ip + Op;
-                  pp[Sp++] = 214, pp[Sp++] = 105, pp[Sp++] = Ip >> 24, pp[Sp++] = Ip >> 16 & 255, pp[Sp++] = Ip >> 8 & 255, pp[Sp++] = 255 & Ip, op = ip
+              MT >= 0 && mT && xU.setUint32(mT.position + UT, xU.getUint32(mT.position + UT) + MT), tU += 6 * TT.length, tU > dU && YT(tU), gT.offset = tU;
+              let nT = function(TT, UT) {
+                let mT, WT = 6 * UT.length,
+                  zT = TT.length - WT;
+                for (; mT = UT.pop();) {
+                  let UT = mT.offset,
+                    MT = mT.id;
+                  TT.copyWithin(UT + WT, UT, zT), WT -= 6;
+                  let gT = UT + WT;
+                  TT[gT++] = 214, TT[gT++] = 105, TT[gT++] = MT >> 24, TT[gT++] = MT >> 16 & 255, TT[gT++] = MT >> 8 & 255, TT[gT++] = 255 & MT, zT = UT
                 }
-                return pp
-              }(Ri.subarray(ip, Xi), pp);
-              return op = null, xp
+                return TT
+              }(YU.subarray(UT, tU), TT);
+              return zT = null, nT
             }
-            return Sp.offset = Xi, Ip & Vi ? (Ri.start = ip, Ri.end = Xi, Ri) : Ri.subarray(ip, Xi)
-          } catch (Sc) {
-            throw Lp = Sc, Sc
+            return gT.offset = tU, MT & DU ? (YU.start = UT, YU.end = tU, YU) : YU.subarray(UT, tU)
+          } catch (Wm) {
+            throw HT = Wm, Wm
           } finally {
-            if (Op && (vp(), cp && Sp.saveStructures)) {
-              let cp = Op.sharedLength || 0,
-                op = Ri.subarray(ip, Xi),
-                xp = ni(Op, Sp);
-              if (!Lp) return !1 === Sp.saveStructures(xp, xp.isCompatible) ? Sp.pack(pp, Ip) : (Sp.lastNamedStructuresLength = cp, Ri.length > 1073741824 && (Ri = null), op)
+            if (WT && (vT(), mT && gT.saveStructures)) {
+              let mT = WT.sharedLength || 0,
+                zT = YU.subarray(UT, tU),
+                nT = uU(WT, gT);
+              if (!HT) return !1 === gT.saveStructures(nT, nT.isCompatible) ? gT.pack(TT, MT) : (gT.lastNamedStructuresLength = mT, YU.length > 1073741824 && (YU = null), zT)
             }
-            Ri.length > 1073741824 && (Ri = null), Ip & pc && (Xi = ip)
+            YU.length > 1073741824 && (YU = null), MT & oU && (tU = UT)
           }
         };
-        const vp = () => {
-            wp < 10 && wp++;
-            let pp = Op.sharedLength || 0;
-            if (Op.length > pp && !xp && (Op.length = pp), Up > 1e4) Op.transitions = null, wp = 0, Up = 0, yp.length > 0 && (yp = []);
-            else if (yp.length > 0 && !xp) {
-              for (let pp = 0, ip = yp.length; pp < ip; pp++) yp[pp][Ji] = 0;
-              yp = []
+        const vT = () => {
+            cT < 10 && cT++;
+            let TT = WT.sharedLength || 0;
+            if (WT.length > TT && !nT && (WT.length = TT), ZT > 1e4) WT.transitions = null, cT = 0, ZT = 0, BT.length > 0 && (BT = []);
+            else if (BT.length > 0 && !nT) {
+              for (let TT = 0, UT = BT.length; TT < UT; TT++) BT[TT][XU] = 0;
+              BT = []
             }
           },
-          tp = pp => {
-            var ip = pp.length;
-            ip < 16 ? Ri[Xi++] = 144 | ip : ip < 65536 ? (Ri[Xi++] = 220, Ri[Xi++] = ip >> 8, Ri[Xi++] = 255 & ip) : (Ri[Xi++] = 221, Mi.setUint32(Xi, ip), Xi += 4);
-            for (let cp = 0; cp < ip; cp++) Hp(pp[cp])
+          fT = TT => {
+            var UT = TT.length;
+            UT < 16 ? YU[tU++] = 144 | UT : UT < 65536 ? (YU[tU++] = 220, YU[tU++] = UT >> 8, YU[tU++] = 255 & UT) : (YU[tU++] = 221, xU.setUint32(tU, UT), tU += 4);
+            for (let mT = 0; mT < UT; mT++) qT(TT[mT])
           },
-          Hp = pp => {
-            Xi > Ci && (Ri = mp(Xi));
-            var cp, Op = typeof pp;
-            if ("string" === Op) {
-              let Op, op = pp.length;
-              if (li && op >= 4 && op < 4096) {
-                if ((li.size += op) > 21760) {
-                  let pp, cp, Op = (li[0] ? 3 * li[0].length + li[1].length : 0) + 10;
-                  Xi + Op > Ci && (Ri = mp(Xi + Op)), li.position ? (cp = li, Ri[Xi] = 200, Xi += 3, Ri[Xi++] = 98, pp = Xi - ip, Xi += 4, bi(ip, Hp, 0), Mi.setUint16(pp + ip - 3, Xi - ip - pp)) : (Ri[Xi++] = 214, Ri[Xi++] = 98, pp = Xi - ip, Xi += 4), li = ["", ""], li.previous = cp, li.size = 0, li.position = pp
+          qT = TT => {
+            tU > dU && (YU = YT(tU));
+            var mT, WT = typeof TT;
+            if ("string" === WT) {
+              let WT, zT = TT.length;
+              if (aU && zT >= 4 && zT < 4096) {
+                if ((aU.size += zT) > 21760) {
+                  let TT, mT, WT = (aU[0] ? 3 * aU[0].length + aU[1].length : 0) + 10;
+                  tU + WT > dU && (YU = YT(tU + WT)), aU.position ? (mT = aU, YU[tU] = 200, tU += 3, YU[tU++] = 98, TT = tU - UT, tU += 4, PU(UT, qT, 0), xU.setUint16(TT + UT - 3, tU - UT - TT)) : (YU[tU++] = 214, YU[tU++] = 98, TT = tU - UT, tU += 4), aU = ["", ""], aU.previous = mT, aU.size = 0, aU.position = TT
                 }
-                let cp = Qi.test(pp);
-                return li[cp ? 0 : 1] += pp, Ri[Xi++] = 193, void Hp(cp ? -op : op)
+                let mT = yU.test(TT);
+                return aU[mT ? 0 : 1] += TT, YU[tU++] = 193, void qT(mT ? -zT : zT)
               }
-              Op = op < 32 ? 1 : op < 256 ? 2 : op < 65536 ? 3 : 5;
-              let Sp = 3 * op;
-              if (Xi + Sp > Ci && (Ri = mp(Xi + Sp)), op < 64 || !Ip) {
-                let ip, Ip, Sp, xp = Xi + Op;
-                for (ip = 0; ip < op; ip++) Ip = pp.charCodeAt(ip), Ip < 128 ? Ri[xp++] = Ip : Ip < 2048 ? (Ri[xp++] = Ip >> 6 | 192, Ri[xp++] = 63 & Ip | 128) : 55296 === (64512 & Ip) && 56320 === (64512 & (Sp = pp.charCodeAt(ip + 1))) ? (Ip = 65536 + ((1023 & Ip) << 10) + (1023 & Sp), ip++, Ri[xp++] = Ip >> 18 | 240, Ri[xp++] = Ip >> 12 & 63 | 128, Ri[xp++] = Ip >> 6 & 63 | 128, Ri[xp++] = 63 & Ip | 128) : (Ri[xp++] = Ip >> 12 | 224, Ri[xp++] = Ip >> 6 & 63 | 128, Ri[xp++] = 63 & Ip | 128);
-                cp = xp - Xi - Op
-              } else cp = Ip(pp, Xi + Op);
-              cp < 32 ? Ri[Xi++] = 160 | cp : cp < 256 ? (Op < 2 && Ri.copyWithin(Xi + 2, Xi + 1, Xi + 1 + cp), Ri[Xi++] = 217, Ri[Xi++] = cp) : cp < 65536 ? (Op < 3 && Ri.copyWithin(Xi + 3, Xi + 2, Xi + 2 + cp), Ri[Xi++] = 218, Ri[Xi++] = cp >> 8, Ri[Xi++] = 255 & cp) : (Op < 5 && Ri.copyWithin(Xi + 5, Xi + 3, Xi + 3 + cp), Ri[Xi++] = 219, Mi.setUint32(Xi, cp), Xi += 4), Xi += cp
-            } else if ("number" === Op)
-              if (pp >>> 0 === pp) pp < 32 || pp < 128 && !1 === this.useRecords || pp < 64 && !this.randomAccessStructure ? Ri[Xi++] = pp : pp < 256 ? (Ri[Xi++] = 204, Ri[Xi++] = pp) : pp < 65536 ? (Ri[Xi++] = 205, Ri[Xi++] = pp >> 8, Ri[Xi++] = 255 & pp) : (Ri[Xi++] = 206, Mi.setUint32(Xi, pp), Xi += 4);
-              else if ((pp | 0) === pp) pp >= -32 ? Ri[Xi++] = 256 + pp : pp >= -128 ? (Ri[Xi++] = 208, Ri[Xi++] = pp + 256) : pp >= -32768 ? (Ri[Xi++] = 209, Mi.setInt16(Xi, pp), Xi += 2) : (Ri[Xi++] = 210, Mi.setInt32(Xi, pp), Xi += 4);
+              WT = zT < 32 ? 1 : zT < 256 ? 2 : zT < 65536 ? 3 : 5;
+              let gT = 3 * zT;
+              if (tU + gT > dU && (YU = YT(tU + gT)), zT < 64 || !MT) {
+                let UT, MT, gT, nT = tU + WT;
+                for (UT = 0; UT < zT; UT++) MT = TT.charCodeAt(UT), MT < 128 ? YU[nT++] = MT : MT < 2048 ? (YU[nT++] = MT >> 6 | 192, YU[nT++] = 63 & MT | 128) : 55296 === (64512 & MT) && 56320 === (64512 & (gT = TT.charCodeAt(UT + 1))) ? (MT = 65536 + ((1023 & MT) << 10) + (1023 & gT), UT++, YU[nT++] = MT >> 18 | 240, YU[nT++] = MT >> 12 & 63 | 128, YU[nT++] = MT >> 6 & 63 | 128, YU[nT++] = 63 & MT | 128) : (YU[nT++] = MT >> 12 | 224, YU[nT++] = MT >> 6 & 63 | 128, YU[nT++] = 63 & MT | 128);
+                mT = nT - tU - WT
+              } else mT = MT(TT, tU + WT);
+              mT < 32 ? YU[tU++] = 160 | mT : mT < 256 ? (WT < 2 && YU.copyWithin(tU + 2, tU + 1, tU + 1 + mT), YU[tU++] = 217, YU[tU++] = mT) : mT < 65536 ? (WT < 3 && YU.copyWithin(tU + 3, tU + 2, tU + 2 + mT), YU[tU++] = 218, YU[tU++] = mT >> 8, YU[tU++] = 255 & mT) : (WT < 5 && YU.copyWithin(tU + 5, tU + 3, tU + 3 + mT), YU[tU++] = 219, xU.setUint32(tU, mT), tU += 4), tU += mT
+            } else if ("number" === WT)
+              if (TT >>> 0 === TT) TT < 32 || TT < 128 && !1 === this.useRecords || TT < 64 && !this.randomAccessStructure ? YU[tU++] = TT : TT < 256 ? (YU[tU++] = 204, YU[tU++] = TT) : TT < 65536 ? (YU[tU++] = 205, YU[tU++] = TT >> 8, YU[tU++] = 255 & TT) : (YU[tU++] = 206, xU.setUint32(tU, TT), tU += 4);
+              else if ((TT | 0) === TT) TT >= -32 ? YU[tU++] = 256 + TT : TT >= -128 ? (YU[tU++] = 208, YU[tU++] = TT + 256) : TT >= -32768 ? (YU[tU++] = 209, xU.setInt16(tU, TT), tU += 2) : (YU[tU++] = 210, xU.setInt32(tU, TT), tU += 4);
             else {
-              let ip;
-              if ((ip = this.useFloat32) > 0 && pp < 4294967296 && pp >= -2147483648) {
-                let cp;
-                if (Ri[Xi++] = 202, Mi.setFloat32(Xi, pp), ip < 4 || ((cp = pp * Yi[(127 & Ri[Xi]) << 1 | Ri[Xi + 1] >> 7]) | 0) === cp) return void(Xi += 4);
-                Xi--
+              let UT;
+              if ((UT = this.useFloat32) > 0 && TT < 4294967296 && TT >= -2147483648) {
+                let mT;
+                if (YU[tU++] = 202, xU.setFloat32(tU, TT), UT < 4 || ((mT = TT * nU[(127 & YU[tU]) << 1 | YU[tU + 1] >> 7]) | 0) === mT) return void(tU += 4);
+                tU--
               }
-              Ri[Xi++] = 203, Mi.setFloat64(Xi, pp), Xi += 8
-            } else if ("object" === Op || "function" === Op)
-              if (pp) {
-                if (op) {
-                  let cp = op.get(pp);
-                  if (cp) {
-                    if (!cp.id) {
-                      let pp = op.idsToInsert || (op.idsToInsert = []);
-                      cp.id = pp.push(cp)
+              YU[tU++] = 203, xU.setFloat64(tU, TT), tU += 8
+            } else if ("object" === WT || "function" === WT)
+              if (TT) {
+                if (zT) {
+                  let mT = zT.get(TT);
+                  if (mT) {
+                    if (!mT.id) {
+                      let TT = zT.idsToInsert || (zT.idsToInsert = []);
+                      mT.id = TT.push(mT)
                     }
-                    return Ri[Xi++] = 214, Ri[Xi++] = 112, Mi.setUint32(Xi, cp.id), void(Xi += 4)
+                    return YU[tU++] = 214, YU[tU++] = 112, xU.setUint32(tU, mT.id), void(tU += 4)
                   }
-                  op.set(pp, {
-                    offset: Xi - ip
+                  zT.set(TT, {
+                    offset: tU - UT
                   })
                 }
-                let Ip = pp.constructor;
-                if (Ip === Object) kp(pp);
-                else if (Ip === Array) tp(pp);
-                else if (Ip === Map)
-                  if (this.mapAsEmptyObject) Ri[Xi++] = 128;
+                let MT = TT.constructor;
+                if (MT === Object) eT(TT);
+                else if (MT === Array) fT(TT);
+                else if (MT === Map)
+                  if (this.mapAsEmptyObject) YU[tU++] = 128;
                   else {
-                    (cp = pp.size) < 16 ? Ri[Xi++] = 128 | cp : cp < 65536 ? (Ri[Xi++] = 222, Ri[Xi++] = cp >> 8, Ri[Xi++] = 255 & cp) : (Ri[Xi++] = 223, Mi.setUint32(Xi, cp), Xi += 4);
-                    for (let [ip, cp] of pp) Hp(ip), Hp(cp)
+                    (mT = TT.size) < 16 ? YU[tU++] = 128 | mT : mT < 65536 ? (YU[tU++] = 222, YU[tU++] = mT >> 8, YU[tU++] = 255 & mT) : (YU[tU++] = 223, xU.setUint32(tU, mT), tU += 4);
+                    for (let [UT, mT] of TT) qT(UT), qT(mT)
                   }
                 else {
-                  for (let ip = 0, cp = vi.length; ip < cp; ip++) {
-                    if (pp instanceof ti[ip]) {
-                      let cp = vi[ip];
-                      if (cp.write) {
-                        cp.type && (Ri[Xi++] = 212, Ri[Xi++] = cp.type, Ri[Xi++] = 0);
-                        let ip = cp.write.call(this, pp);
-                        return void(ip === pp ? Array.isArray(pp) ? tp(pp) : kp(pp) : Hp(ip))
+                  for (let UT = 0, mT = ZU.length; UT < mT; UT++) {
+                    if (TT instanceof cU[UT]) {
+                      let mT = ZU[UT];
+                      if (mT.write) {
+                        mT.type && (YU[tU++] = 212, YU[tU++] = mT.type, YU[tU++] = 0);
+                        let UT = mT.write.call(this, TT);
+                        return void(UT === TT ? Array.isArray(TT) ? fT(TT) : eT(TT) : qT(UT))
                       }
-                      let Op, op = Ri,
-                        Ip = Mi,
-                        Sp = Xi;
-                      Ri = null;
+                      let WT, zT = YU,
+                        MT = xU,
+                        gT = tU;
+                      YU = null;
                       try {
-                        Op = cp.pack.call(this, pp, (pp => (Ri = op, op = null, Xi += pp, Xi > Ci && mp(Xi), {
-                          target: Ri,
-                          targetView: Mi,
-                          position: Xi - pp
-                        })), Hp)
+                        WT = mT.pack.call(this, TT, (TT => (YU = zT, zT = null, tU += TT, tU > dU && YT(tU), {
+                          target: YU,
+                          targetView: xU,
+                          position: tU - TT
+                        })), qT)
                       } finally {
-                        op && (Ri = op, Mi = Ip, Xi = Sp, Ci = Ri.length - 10)
+                        zT && (YU = zT, xU = MT, tU = gT, dU = YU.length - 10)
                       }
-                      return void(Op && (Op.length + Xi > Ci && mp(Op.length + Xi), Xi = fi(Op, Ri, Xi, cp.type)))
+                      return void(WT && (WT.length + tU > dU && YT(WT.length + tU), tU = FU(WT, YU, tU, mT.type)))
                     }
                   }
-                  if (Array.isArray(pp)) tp(pp);
+                  if (Array.isArray(TT)) fT(TT);
                   else {
-                    if (pp.toJSON) {
-                      const ip = pp.toJSON();
-                      if (ip !== pp) return Hp(ip)
+                    if (TT.toJSON) {
+                      const UT = TT.toJSON();
+                      if (UT !== TT) return qT(UT)
                     }
-                    if ("function" === Op) return Hp(this.writeFunction && this.writeFunction(pp));
-                    kp(pp)
+                    if ("function" === WT) return qT(this.writeFunction && this.writeFunction(TT));
+                    eT(TT)
                   }
                 }
-              } else Ri[Xi++] = 192;
-            else if ("boolean" === Op) Ri[Xi++] = pp ? 195 : 194;
-            else if ("bigint" === Op) {
-              if (pp < BigInt(1) << BigInt(63) && pp >= -(BigInt(1) << BigInt(63))) Ri[Xi++] = 211, Mi.setBigInt64(Xi, pp);
-              else if (pp < BigInt(1) << BigInt(64) && pp > 0) Ri[Xi++] = 207, Mi.setBigUint64(Xi, pp);
+              } else YU[tU++] = 192;
+            else if ("boolean" === WT) YU[tU++] = TT ? 195 : 194;
+            else if ("bigint" === WT) {
+              if (TT < BigInt(1) << BigInt(63) && TT >= -(BigInt(1) << BigInt(63))) YU[tU++] = 211, xU.setBigInt64(tU, TT);
+              else if (TT < BigInt(1) << BigInt(64) && TT > 0) YU[tU++] = 207, xU.setBigUint64(tU, TT);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Hp(pp.toString());
-                  if (this.useBigIntExtension && pp < BigInt(2) ** BigInt(1023) && pp > -(BigInt(2) ** BigInt(1023))) {
-                    Ri[Xi++] = 199, Xi++, Ri[Xi++] = 66;
-                    let ip, cp = [];
+                  if (this.largeBigIntToString) return qT(TT.toString());
+                  if (this.useBigIntExtension && TT < BigInt(2) ** BigInt(1023) && TT > -(BigInt(2) ** BigInt(1023))) {
+                    YU[tU++] = 199, tU++, YU[tU++] = 66;
+                    let UT, mT = [];
                     do {
-                      let Op = pp & BigInt(255);
-                      ip = (Op & BigInt(128)) === (pp < BigInt(0) ? BigInt(128) : BigInt(0)), cp.push(Op), pp >>= BigInt(8)
-                    } while (pp !== BigInt(0) && pp !== BigInt(-1) || !ip);
-                    Ri[Xi - 2] = cp.length;
-                    for (let pp = cp.length; pp > 0;) Ri[Xi++] = Number(cp[--pp]);
+                      let WT = TT & BigInt(255);
+                      UT = (WT & BigInt(128)) === (TT < BigInt(0) ? BigInt(128) : BigInt(0)), mT.push(WT), TT >>= BigInt(8)
+                    } while (TT !== BigInt(0) && TT !== BigInt(-1) || !UT);
+                    YU[tU - 2] = mT.length;
+                    for (let TT = mT.length; TT > 0;) YU[tU++] = Number(mT[--TT]);
                     return
                   }
-                  throw new RangeError(pp + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(TT + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                Ri[Xi++] = 203, Mi.setFloat64(Xi, Number(pp))
+                YU[tU++] = 203, xU.setFloat64(tU, Number(TT))
               }
-              Xi += 8
+              tU += 8
             } else {
-              if ("undefined" !== Op) throw new Error("Unknown type: " + Op);
-              this.encodeUndefinedAsNil ? Ri[Xi++] = 192 : (Ri[Xi++] = 212, Ri[Xi++] = 0, Ri[Xi++] = 0)
+              if ("undefined" !== WT) throw new Error("Unknown type: " + WT);
+              this.encodeUndefinedAsNil ? YU[tU++] = 192 : (YU[tU++] = 212, YU[tU++] = 0, YU[tU++] = 0)
             }
           },
-          dp = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? pp => {
-            let ip;
+          iT = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? TT => {
+            let UT;
             if (this.skipValues) {
-              ip = [];
-              for (let cp in pp) "function" === typeof pp.hasOwnProperty && !pp.hasOwnProperty(cp) || this.skipValues.includes(pp[cp]) || ip.push(cp)
-            } else ip = Object.keys(pp);
-            let cp, Op = ip.length;
-            if (Op < 16 ? Ri[Xi++] = 128 | Op : Op < 65536 ? (Ri[Xi++] = 222, Ri[Xi++] = Op >> 8, Ri[Xi++] = 255 & Op) : (Ri[Xi++] = 223, Mi.setUint32(Xi, Op), Xi += 4), this.coercibleKeyAsNumber)
-              for (let op = 0; op < Op; op++) {
-                cp = ip[op];
-                let Op = Number(cp);
-                Hp(isNaN(Op) ? cp : Op), Hp(pp[cp])
+              UT = [];
+              for (let mT in TT) "function" === typeof TT.hasOwnProperty && !TT.hasOwnProperty(mT) || this.skipValues.includes(TT[mT]) || UT.push(mT)
+            } else UT = Object.keys(TT);
+            let mT, WT = UT.length;
+            if (WT < 16 ? YU[tU++] = 128 | WT : WT < 65536 ? (YU[tU++] = 222, YU[tU++] = WT >> 8, YU[tU++] = 255 & WT) : (YU[tU++] = 223, xU.setUint32(tU, WT), tU += 4), this.coercibleKeyAsNumber)
+              for (let zT = 0; zT < WT; zT++) {
+                mT = UT[zT];
+                let WT = Number(mT);
+                qT(isNaN(WT) ? mT : WT), qT(TT[mT])
               } else
-                for (let op = 0; op < Op; op++) Hp(cp = ip[op]), Hp(pp[cp])
-          } : pp => {
-            Ri[Xi++] = 222;
-            let cp = Xi - ip;
-            Xi += 2;
-            let Op = 0;
-            for (let ip in pp)("function" !== typeof pp.hasOwnProperty || pp.hasOwnProperty(ip)) && (Hp(ip), Hp(pp[ip]), Op++);
-            if (Op > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            Ri[cp++ + ip] = Op >> 8, Ri[cp + ip] = 255 & Op
+                for (let zT = 0; zT < WT; zT++) qT(mT = UT[zT]), qT(TT[mT])
+          } : TT => {
+            YU[tU++] = 222;
+            let mT = tU - UT;
+            tU += 2;
+            let WT = 0;
+            for (let UT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(UT)) && (qT(UT), qT(TT[UT]), WT++);
+            if (WT > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            YU[mT++ + UT] = WT >> 8, YU[mT + UT] = 255 & WT
           },
-          ep = !1 === this.useRecords ? dp : pp.progressiveRecords && !Ap ? pp => {
-            let cp, op, Ip = Op.transitions || (Op.transitions = Object.create(null)),
-              Sp = Xi++ - ip;
-            for (let xp in pp)
-              if ("function" !== typeof pp.hasOwnProperty || pp.hasOwnProperty(xp)) {
-                if (cp = Ip[xp], cp) Ip = cp;
+          bT = !1 === this.useRecords ? iT : TT.progressiveRecords && !lT ? TT => {
+            let mT, zT, MT = WT.transitions || (WT.transitions = Object.create(null)),
+              gT = tU++ - UT;
+            for (let nT in TT)
+              if ("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(nT)) {
+                if (mT = MT[nT], mT) MT = mT;
                 else {
-                  let Lp = Object.keys(pp),
-                    Yp = Ip;
-                  Ip = Op.transitions;
-                  let Dp = 0;
-                  for (let pp = 0, ip = Lp.length; pp < ip; pp++) {
-                    let ip = Lp[pp];
-                    cp = Ip[ip], cp || (cp = Ip[ip] = Object.create(null), Dp++), Ip = cp
+                  let HT = Object.keys(TT),
+                    kT = MT;
+                  MT = WT.transitions;
+                  let jT = 0;
+                  for (let TT = 0, UT = HT.length; TT < UT; TT++) {
+                    let UT = HT[TT];
+                    mT = MT[UT], mT || (mT = MT[UT] = Object.create(null), jT++), MT = mT
                   }
-                  Sp + ip + 1 == Xi ? (Xi--, Rp(Ip, Lp, Dp)) : qp(Ip, Lp, Sp, Dp), op = !0, Ip = Yp[xp]
+                  gT + UT + 1 == tU ? (tU--, JT(MT, HT, jT)) : xT(MT, HT, gT, jT), zT = !0, MT = kT[nT]
                 }
-                Hp(pp[xp])
-              } if (!op) {
-              let cp = Ip[Ji];
-              cp ? Ri[Sp + ip] = cp : qp(Ip, Object.keys(pp), Sp, 0)
+                qT(TT[nT])
+              } if (!zT) {
+              let mT = MT[XU];
+              mT ? YU[gT + UT] = mT : xT(MT, Object.keys(TT), gT, 0)
             }
-          } : pp => {
-            let ip, cp = Op.transitions || (Op.transitions = Object.create(null)),
-              op = 0;
-            for (let Op in pp)("function" !== typeof pp.hasOwnProperty || pp.hasOwnProperty(Op)) && (ip = cp[Op], ip || (ip = cp[Op] = Object.create(null), op++), cp = ip);
-            let Ip = cp[Ji];
-            Ip ? Ip >= 96 && Ap ? (Ri[Xi++] = 96 + (31 & (Ip -= 96)), Ri[Xi++] = Ip >> 5) : Ri[Xi++] = Ip : Rp(cp, cp.__keys__ || Object.keys(pp), op);
-            for (let Op in pp)("function" !== typeof pp.hasOwnProperty || pp.hasOwnProperty(Op)) && Hp(pp[Op])
+          } : TT => {
+            let UT, mT = WT.transitions || (WT.transitions = Object.create(null)),
+              zT = 0;
+            for (let WT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(WT)) && (UT = mT[WT], UT || (UT = mT[WT] = Object.create(null), zT++), mT = UT);
+            let MT = mT[XU];
+            MT ? MT >= 96 && lT ? (YU[tU++] = 96 + (31 & (MT -= 96)), YU[tU++] = MT >> 5) : YU[tU++] = MT : JT(mT, mT.__keys__ || Object.keys(TT), zT);
+            for (let WT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(WT)) && qT(TT[WT])
           },
-          jp = "function" == typeof this.useRecords && this.useRecords,
-          kp = jp ? pp => {
-            jp(pp) ? ep(pp) : dp(pp)
-          } : ep,
-          mp = pp => {
-            let cp;
-            if (pp > 16777216) {
-              if (pp - ip > mi) throw new Error("Packed buffer would be larger than maximum buffer size");
-              cp = Math.min(mi, 4096 * Math.round(Math.max((pp - ip) * (pp > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else cp = 1 + (Math.max(pp - ip << 2, Ri.length - 1) >> 12) << 12;
-            let Op = new ji(cp);
-            return Mi = Op.dataView || (Op.dataView = new DataView(Op.buffer, 0, cp)), pp = Math.min(pp, Ri.length), Ri.copy ? Ri.copy(Op, 0, ip, pp) : Op.set(Ri.slice(ip, pp)), Xi -= ip, ip = 0, Ci = Op.length - 10, Ri = Op
+          OT = "function" == typeof this.useRecords && this.useRecords,
+          eT = OT ? TT => {
+            OT(TT) ? bT(TT) : iT(TT)
+          } : bT,
+          YT = TT => {
+            let mT;
+            if (TT > 16777216) {
+              if (TT - UT > eU) throw new Error("Packed buffer would be larger than maximum buffer size");
+              mT = Math.min(eU, 4096 * Math.round(Math.max((TT - UT) * (TT > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else mT = 1 + (Math.max(TT - UT << 2, YU.length - 1) >> 12) << 12;
+            let WT = new bU(mT);
+            return xU = WT.dataView || (WT.dataView = new DataView(WT.buffer, 0, mT)), TT = Math.min(TT, YU.length), YU.copy ? YU.copy(WT, 0, UT, TT) : WT.set(YU.slice(UT, TT)), tU -= UT, UT = 0, dU = WT.length - 10, YU = WT
           },
-          Rp = (pp, ip, op) => {
-            let Ip = Op.nextId;
-            Ip || (Ip = 64), Ip < Pp && this.shouldShareStructure && !this.shouldShareStructure(ip) ? (Ip = Op.nextOwnId, Ip < Wp || (Ip = Pp), Op.nextOwnId = Ip + 1) : (Ip >= Wp && (Ip = Pp), Op.nextId = Ip + 1);
-            let Sp = ip.highByte = Ip >= 96 && Ap ? Ip - 96 >> 5 : -1;
-            pp[Ji] = Ip, pp.__keys__ = ip, Op[Ip - 64] = ip, Ip < Pp ? (ip.isShared = !0, Op.sharedLength = Ip - 63, cp = !0, Sp >= 0 ? (Ri[Xi++] = 96 + (31 & Ip), Ri[Xi++] = Sp) : Ri[Xi++] = Ip) : (Sp >= 0 ? (Ri[Xi++] = 213, Ri[Xi++] = 114, Ri[Xi++] = 96 + (31 & Ip), Ri[Xi++] = Sp) : (Ri[Xi++] = 212, Ri[Xi++] = 114, Ri[Xi++] = Ip), op && (Up += wp * op), yp.length >= Dp && (yp.shift()[Ji] = 0), yp.push(pp), Hp(ip))
+          JT = (TT, UT, zT) => {
+            let MT = WT.nextId;
+            MT || (MT = 64), MT < LT && this.shouldShareStructure && !this.shouldShareStructure(UT) ? (MT = WT.nextOwnId, MT < pT || (MT = LT), WT.nextOwnId = MT + 1) : (MT >= pT && (MT = LT), WT.nextId = MT + 1);
+            let gT = UT.highByte = MT >= 96 && lT ? MT - 96 >> 5 : -1;
+            TT[XU] = MT, TT.__keys__ = UT, WT[MT - 64] = UT, MT < LT ? (UT.isShared = !0, WT.sharedLength = MT - 63, mT = !0, gT >= 0 ? (YU[tU++] = 96 + (31 & MT), YU[tU++] = gT) : YU[tU++] = MT) : (gT >= 0 ? (YU[tU++] = 213, YU[tU++] = 114, YU[tU++] = 96 + (31 & MT), YU[tU++] = gT) : (YU[tU++] = 212, YU[tU++] = 114, YU[tU++] = MT), zT && (ZT += cT * zT), BT.length >= jT && (BT.shift()[XU] = 0), BT.push(TT), qT(UT))
           },
-          qp = (pp, cp, Op, op) => {
-            let Ip = Ri,
-              Sp = Xi,
-              xp = Ci,
-              Lp = ip;
-            Ri = qi, Xi = 0, ip = 0, Ri || (qi = Ri = new ji(8192)), Ci = Ri.length - 10, Rp(pp, cp, op), qi = Ri;
-            let Yp = Xi;
-            if (Ri = Ip, Xi = Sp, Ci = xp, ip = Lp, Yp > 1) {
-              let pp = Xi + Yp - 1;
-              pp > Ci && mp(pp);
-              let cp = Op + ip;
-              Ri.copyWithin(cp + Yp, cp + 1, Xi), Ri.set(qi.slice(0, Yp), cp), Xi = pp
-            } else Ri[Op + ip] = qi[0]
+          xT = (TT, mT, WT, zT) => {
+            let MT = YU,
+              gT = tU,
+              nT = dU,
+              HT = UT;
+            YU = JU, tU = 0, UT = 0, YU || (JU = YU = new bU(8192)), dU = YU.length - 10, JT(TT, mT, zT), JU = YU;
+            let kT = tU;
+            if (YU = MT, tU = gT, dU = nT, UT = HT, kT > 1) {
+              let TT = tU + kT - 1;
+              TT > dU && YT(TT);
+              let mT = WT + UT;
+              YU.copyWithin(mT + kT, mT + 1, tU), YU.set(JU.slice(0, kT), mT), tU = TT
+            } else YU[WT + UT] = JU[0]
           },
-          Mp = pp => {
-            let op = Ei(pp, Ri, ip, Xi, Op, mp, ((pp, ip, Op) => {
-              if (Op) return cp = !0;
-              Xi = ip;
-              let op = Ri;
-              return Hp(pp), vp(), op !== Ri ? {
-                position: Xi,
-                targetView: Mi,
-                target: Ri
-              } : Xi
+          dT = TT => {
+            let zT = wU(TT, YU, UT, tU, WT, YT, ((TT, UT, WT) => {
+              if (WT) return mT = !0;
+              tU = UT;
+              let zT = YU;
+              return qT(TT), vT(), zT !== YU ? {
+                position: tU,
+                targetView: xU,
+                target: YU
+              } : tU
             }), this);
-            if (0 === op) return kp(pp);
-            Xi = op
+            if (0 === zT) return eT(TT);
+            tU = zT
           }
       }
-      useBuffer(pp) {
-        Ri = pp, Mi = Ri.dataView || (Ri.dataView = new DataView(Ri.buffer, Ri.byteOffset, Ri.byteLength)), Xi = 0
+      useBuffer(TT) {
+        YU = TT, xU = YU.dataView || (YU.dataView = new DataView(YU.buffer, YU.byteOffset, YU.byteLength)), tU = 0
       }
-      set position(pp) {
-        Xi = pp
+      set position(TT) {
+        tU = TT
       }
       get position() {
-        return Xi
+        return tU
       }
-      set buffer(pp) {
-        Ri = pp
+      set buffer(TT) {
+        YU = TT
       }
       get buffer() {
-        return Ri
+        return YU
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function Ni(pp, ip, cp, Op) {
-      let op = pp.byteLength;
-      if (op + 1 < 256) {
+    function QU(TT, UT, mT, WT) {
+      let zT = TT.byteLength;
+      if (zT + 1 < 256) {
         var {
-          target: Ip,
-          position: Sp
-        } = cp(4 + op);
-        Ip[Sp++] = 199, Ip[Sp++] = op + 1
-      } else if (op + 1 < 65536) {
+          target: MT,
+          position: gT
+        } = mT(4 + zT);
+        MT[gT++] = 199, MT[gT++] = zT + 1
+      } else if (zT + 1 < 65536) {
         var {
-          target: Ip,
-          position: Sp
-        } = cp(5 + op);
-        Ip[Sp++] = 200, Ip[Sp++] = op + 1 >> 8, Ip[Sp++] = op + 1 & 255
+          target: MT,
+          position: gT
+        } = mT(5 + zT);
+        MT[gT++] = 200, MT[gT++] = zT + 1 >> 8, MT[gT++] = zT + 1 & 255
       } else {
         var {
-          target: Ip,
-          position: Sp,
-          targetView: xp
-        } = cp(7 + op);
-        Ip[Sp++] = 201, xp.setUint32(Sp, op + 1), Sp += 4
+          target: MT,
+          position: gT,
+          targetView: nT
+        } = mT(7 + zT);
+        MT[gT++] = 201, nT.setUint32(gT, zT + 1), gT += 4
       }
-      Ip[Sp++] = 116, Ip[Sp++] = ip, pp.buffer || (pp = new Uint8Array(pp)), Ip.set(new Uint8Array(pp.buffer, pp.byteOffset, pp.byteLength), Sp)
+      MT[gT++] = 116, MT[gT++] = UT, TT.buffer || (TT = new Uint8Array(TT)), MT.set(new Uint8Array(TT.buffer, TT.byteOffset, TT.byteLength), gT)
     }
 
-    function Ti(pp, ip) {
-      let cp = pp.byteLength;
-      var Op, op;
-      if (cp < 256) {
+    function sU(TT, UT) {
+      let mT = TT.byteLength;
+      var WT, zT;
+      if (mT < 256) {
         var {
-          target: Op,
-          position: op
-        } = ip(cp + 2);
-        Op[op++] = 196, Op[op++] = cp
-      } else if (cp < 65536) {
+          target: WT,
+          position: zT
+        } = UT(mT + 2);
+        WT[zT++] = 196, WT[zT++] = mT
+      } else if (mT < 65536) {
         var {
-          target: Op,
-          position: op
-        } = ip(cp + 3);
-        Op[op++] = 197, Op[op++] = cp >> 8, Op[op++] = 255 & cp
+          target: WT,
+          position: zT
+        } = UT(mT + 3);
+        WT[zT++] = 197, WT[zT++] = mT >> 8, WT[zT++] = 255 & mT
       } else {
         var {
-          target: Op,
-          position: op,
-          targetView: Ip
-        } = ip(cp + 5);
-        Op[op++] = 198, Ip.setUint32(op, cp), op += 4
+          target: WT,
+          position: zT,
+          targetView: MT
+        } = UT(mT + 5);
+        WT[zT++] = 198, MT.setUint32(zT, mT), zT += 4
       }
-      Op.set(pp, op)
+      WT.set(TT, zT)
     }
 
-    function fi(pp, ip, cp, Op) {
-      let op = pp.length;
-      switch (op) {
+    function FU(TT, UT, mT, WT) {
+      let zT = TT.length;
+      switch (zT) {
         case 1:
-          ip[cp++] = 212;
+          UT[mT++] = 212;
           break;
         case 2:
-          ip[cp++] = 213;
+          UT[mT++] = 213;
           break;
         case 4:
-          ip[cp++] = 214;
+          UT[mT++] = 214;
           break;
         case 8:
-          ip[cp++] = 215;
+          UT[mT++] = 215;
           break;
         case 16:
-          ip[cp++] = 216;
+          UT[mT++] = 216;
           break;
         default:
-          op < 256 ? (ip[cp++] = 199, ip[cp++] = op) : op < 65536 ? (ip[cp++] = 200, ip[cp++] = op >> 8, ip[cp++] = 255 & op) : (ip[cp++] = 201, ip[cp++] = op >> 24, ip[cp++] = op >> 16 & 255, ip[cp++] = op >> 8 & 255, ip[cp++] = 255 & op)
+          zT < 256 ? (UT[mT++] = 199, UT[mT++] = zT) : zT < 65536 ? (UT[mT++] = 200, UT[mT++] = zT >> 8, UT[mT++] = 255 & zT) : (UT[mT++] = 201, UT[mT++] = zT >> 24, UT[mT++] = zT >> 16 & 255, UT[mT++] = zT >> 8 & 255, UT[mT++] = 255 & zT)
       }
-      return ip[cp++] = Op, ip.set(pp, cp), cp += op
+      return UT[mT++] = WT, UT.set(TT, mT), mT += zT
     }
 
-    function bi(pp, ip, cp) {
-      if (li.length > 0) {
-        Mi.setUint32(li.position + pp, Xi + cp - li.position - pp), li.stringsPosition = Xi - pp;
-        let Op = li;
-        li = null, ip(Op[0]), ip(Op[1])
+    function PU(TT, UT, mT) {
+      if (aU.length > 0) {
+        xU.setUint32(aU.position + TT, tU + mT - aU.position - TT), aU.stringsPosition = tU - TT;
+        let WT = aU;
+        aU = null, UT(WT[0]), UT(WT[1])
       }
     }
 
-    function ai(pp) {
-      if (pp.Class) {
-        if (!pp.pack && !pp.write) throw new Error("Extension has no pack or write function");
-        if (pp.pack && !pp.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        ti.unshift(pp.Class), vi.unshift(pp)
-      }! function(pp) {
-        pp.unpack ? tp[pp.type] = pp.unpack : tp[pp.type] = pp
-      }(pp)
+    function VU(TT) {
+      if (TT.Class) {
+        if (!TT.pack && !TT.write) throw new Error("Extension has no pack or write function");
+        if (TT.pack && !TT.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        cU.unshift(TT.Class), ZU.unshift(TT)
+      }! function(TT) {
+        TT.unpack ? fT[TT.type] = TT.unpack : fT[TT.type] = TT
+      }(TT)
     }
 
-    function ni(pp, ip) {
-      return pp.isCompatible = pp => {
-        let cp = !pp || (ip.lastNamedStructuresLength || 0) === pp.length;
-        return cp || ip._mergeStructures(pp), cp
-      }, pp
+    function uU(TT, UT) {
+      return TT.isCompatible = TT => {
+        let mT = !TT || (UT.lastNamedStructuresLength || 0) === TT.length;
+        return mT || UT._mergeStructures(TT), mT
+      }, TT
     }
-    ti = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, dp], vi = [{
-      pack(pp, ip, cp) {
-        let Op = pp.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === pp.getMilliseconds()) && Op >= 0 && Op < 4294967296) {
+    cU = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, iT], ZU = [{
+      pack(TT, UT, mT) {
+        let WT = TT.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === TT.getMilliseconds()) && WT >= 0 && WT < 4294967296) {
           let {
-            target: pp,
-            targetView: cp,
-            position: op
-          } = ip(6);
-          pp[op++] = 214, pp[op++] = 255, cp.setUint32(op, Op)
-        } else if (Op > 0 && Op < 4294967296) {
+            target: TT,
+            targetView: mT,
+            position: zT
+          } = UT(6);
+          TT[zT++] = 214, TT[zT++] = 255, mT.setUint32(zT, WT)
+        } else if (WT > 0 && WT < 4294967296) {
           let {
-            target: cp,
-            targetView: op,
-            position: Ip
-          } = ip(10);
-          cp[Ip++] = 215, cp[Ip++] = 255, op.setUint32(Ip, 4e6 * pp.getMilliseconds() + (Op / 1e3 / 4294967296 | 0)), op.setUint32(Ip + 4, Op)
-        } else if (isNaN(Op)) {
-          if (this.onInvalidDate) return ip(0), cp(this.onInvalidDate());
+            target: mT,
+            targetView: zT,
+            position: MT
+          } = UT(10);
+          mT[MT++] = 215, mT[MT++] = 255, zT.setUint32(MT, 4e6 * TT.getMilliseconds() + (WT / 1e3 / 4294967296 | 0)), zT.setUint32(MT + 4, WT)
+        } else if (isNaN(WT)) {
+          if (this.onInvalidDate) return UT(0), mT(this.onInvalidDate());
           let {
-            target: pp,
-            targetView: Op,
-            position: op
-          } = ip(3);
-          pp[op++] = 212, pp[op++] = 255, pp[op++] = 255
+            target: TT,
+            targetView: WT,
+            position: zT
+          } = UT(3);
+          TT[zT++] = 212, TT[zT++] = 255, TT[zT++] = 255
         } else {
           let {
-            target: cp,
-            targetView: op,
-            position: Ip
-          } = ip(15);
-          cp[Ip++] = 199, cp[Ip++] = 12, cp[Ip++] = 255, op.setUint32(Ip, 1e6 * pp.getMilliseconds()), op.setBigInt64(Ip + 4, BigInt(Math.floor(Op)))
+            target: mT,
+            targetView: zT,
+            position: MT
+          } = UT(15);
+          mT[MT++] = 199, mT[MT++] = 12, mT[MT++] = 255, zT.setUint32(MT, 1e6 * TT.getMilliseconds()), zT.setBigInt64(MT + 4, BigInt(Math.floor(WT)))
         }
       }
     }, {
-      pack(pp, ip, cp) {
-        if (this.setAsEmptyObject) return ip(0), cp({});
-        let Op = Array.from(pp),
+      pack(TT, UT, mT) {
+        if (this.setAsEmptyObject) return UT(0), mT({});
+        let WT = Array.from(TT),
           {
-            target: op,
-            position: Ip
-          } = ip(this.moreTypes ? 3 : 0);
-        this.moreTypes && (op[Ip++] = 212, op[Ip++] = 115, op[Ip++] = 0), cp(Op)
+            target: zT,
+            position: MT
+          } = UT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (zT[MT++] = 212, zT[MT++] = 115, zT[MT++] = 0), mT(WT)
       }
     }, {
-      pack(pp, ip, cp) {
+      pack(TT, UT, mT) {
         let {
-          target: Op,
-          position: op
-        } = ip(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Op[op++] = 212, Op[op++] = 101, Op[op++] = 0), cp([pp.name, pp.message, pp.cause])
+          target: WT,
+          position: zT
+        } = UT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (WT[zT++] = 212, WT[zT++] = 101, WT[zT++] = 0), mT([TT.name, TT.message, TT.cause])
       }
     }, {
-      pack(pp, ip, cp) {
+      pack(TT, UT, mT) {
         let {
-          target: Op,
-          position: op
-        } = ip(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Op[op++] = 212, Op[op++] = 120, Op[op++] = 0), cp([pp.source, pp.flags])
+          target: WT,
+          position: zT
+        } = UT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (WT[zT++] = 212, WT[zT++] = 120, WT[zT++] = 0), mT([TT.source, TT.flags])
       }
     }, {
-      pack(pp, ip) {
-        this.moreTypes ? Ni(pp, 16, ip) : Ti(ui ? Buffer.from(pp) : new Uint8Array(pp), ip)
+      pack(TT, UT) {
+        this.moreTypes ? QU(TT, 16, UT) : sU(iU ? Buffer.from(TT) : new Uint8Array(TT), UT)
       }
     }, {
-      pack(pp, ip) {
-        let cp = pp.constructor;
-        cp !== ki && this.moreTypes ? Ni(pp, oi.indexOf(cp.name), ip) : Ti(pp, ip)
+      pack(TT, UT) {
+        let mT = TT.constructor;
+        mT !== OU && this.moreTypes ? QU(TT, mU.indexOf(mT.name), UT) : sU(TT, UT)
       }
     }, {
-      pack(pp, ip) {
+      pack(TT, UT) {
         let {
-          target: cp,
-          position: Op
-        } = ip(1);
-        cp[Op] = 193
+          target: mT,
+          position: WT
+        } = UT(1);
+        mT[WT] = 193
       }
     }];
-    let Fi = new Bi({
+    let CU = new IU({
       useRecords: !1
     });
-    const gi = Fi.pack,
-      Gi = Fi.pack,
-      ri = Bi,
+    const rU = CU.pack,
+      KU = CU.pack,
+      SU = IU,
       {
-        NEVER: Zi,
-        ALWAYS: zi,
-        DECIMAL_ROUND: si,
-        DECIMAL_FIT: Ki
-      } = Ui,
-      Vi = 512,
-      pc = 1024,
-      ic = 2048;
-    const cc = function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!pp || "object" !== typeof pp) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const cp = new Mp(ip);
-        let Op;
-        const op = pp => {
-          let ip;
-          Op && (pp = Buffer.concat([Op, pp]), Op = void 0);
+        NEVER: GU,
+        ALWAYS: NU,
+        DECIMAL_ROUND: EU,
+        DECIMAL_FIT: hU
+      } = pU,
+      DU = 512,
+      oU = 1024,
+      AU = 2048;
+    const RU = function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!TT || "object" !== typeof TT) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const mT = new dT(UT);
+        let WT;
+        const zT = TT => {
+          let UT;
+          WT && (TT = Buffer.concat([WT, TT]), WT = void 0);
           try {
-            ip = cp.unpackMultiple(pp)
-          } catch (op) {
-            if (!op.incomplete) throw op;
-            Op = pp.slice(op.lastPosition), ip = op.values
+            UT = mT.unpackMultiple(TT)
+          } catch (zT) {
+            if (!zT.incomplete) throw zT;
+            WT = TT.slice(zT.lastPosition), UT = zT.values
           }
-          return ip
+          return UT
         };
-        return "function" === typeof pp[Symbol.iterator] ? function*() {
-          for (const ip of pp) yield* op(ip)
-        }() : "function" === typeof pp[Symbol.asyncIterator] ? async function*() {
-          for await (const ip of pp) yield* op(ip)
+        return "function" === typeof TT[Symbol.iterator] ? function*() {
+          for (const UT of TT) yield* zT(UT)
+        }() : "function" === typeof TT[Symbol.asyncIterator] ? async function*() {
+          for await (const UT of TT) yield* zT(UT)
         }(): void 0
       },
-      Oc = function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (pp && "object" === typeof pp) {
-          if ("function" === typeof pp[Symbol.iterator]) return function*(pp, ip) {
-            const cp = new Bi(ip);
-            for (const Op of pp) yield cp.pack(Op)
-          }(pp, ip);
-          if ("function" === typeof pp.then || "function" === typeof pp[Symbol.asyncIterator]) return async function*(pp, ip) {
-            const cp = new Bi(ip);
-            for await (const Op of pp) yield cp.pack(Op)
-          }(pp, ip);
+      Tm = function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (TT && "object" === typeof TT) {
+          if ("function" === typeof TT[Symbol.iterator]) return function*(TT, UT) {
+            const mT = new IU(UT);
+            for (const WT of TT) yield mT.pack(WT)
+          }(TT, UT);
+          if ("function" === typeof TT.then || "function" === typeof TT[Symbol.asyncIterator]) return async function*(TT, UT) {
+            const mT = new IU(UT);
+            for await (const WT of TT) yield mT.pack(WT)
+          }(TT, UT);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      oc = !1,
-      Ic = !0
+      Um = !1,
+      mm = !0
   },
-  9253: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      $changes: () => Up,
-      $childType: () => wp,
-      $decoder: () => Dp,
-      $deleteByIndex: () => Wp,
-      $encoder: () => Yp,
-      $filter: () => Ap,
-      $getByIndex: () => Pp,
-      $numFields: () => qp,
-      $refId: () => xp,
-      $track: () => Lp,
-      $values: () => ep,
-      ArraySchema: () => IO,
-      Callbacks: () => Io,
-      ChangeTree: () => lc,
-      CollectionSchema: () => LO,
-      Decoder: () => sO,
-      Encoder: () => GO,
-      FieldBuilder: () => AO,
-      MapSchema: () => xO,
-      Metadata: () => si,
-      OPERATION: () => op,
-      Reflection: () => io,
-      ReflectionField: () => VO,
-      ReflectionType: () => po,
-      Root: () => QO,
-      Schema: () => XO,
-      SetSchema: () => YO,
-      StateCallbackStrategy: () => oo,
-      StateView: () => fO,
-      StreamSchema: () => DO,
-      TypeContext: () => ni,
-      createPool: () => xo,
-      decode: () => ei,
-      decodeKeyValueOperation: () => Vc,
-      decodeSchemaOperation: () => Kc,
-      defineCustomTypes: () => mi,
-      defineTypes: () => MO,
-      deprecated: () => RO,
-      dumpChanges: () => EO,
-      encode: () => Oi,
-      encodeArray: () => hc,
-      encodeIndexedEntry: () => fc,
-      encodeKeyValueOperation: () => bc,
-      encodeMapEntry: () => Tc,
-      encodeSchemaOperation: () => Nc,
-      vy: () => tO,
-      fullStateOnly: () => uO,
-      getDecoderStateCallbacks: () => co,
-      getEncodeDescriptor: () => Oc,
-      getRawChangesCallback: () => Oo,
-      isBuilder: () => PO,
-      patchOnly: () => eO,
-      registerType: () => ki,
-      schema: () => CO,
-      t: () => wO,
-      type: () => jO,
-      unreliable: () => dO,
-      view: () => HO
+  9242: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      $changes: () => ZT,
+      $childType: () => cT,
+      $decoder: () => jT,
+      $deleteByIndex: () => pT,
+      $encoder: () => kT,
+      $filter: () => lT,
+      $getByIndex: () => LT,
+      $numFields: () => xT,
+      $refId: () => nT,
+      $track: () => HT,
+      $values: () => bT,
+      ArraySchema: () => WW,
+      Callbacks: () => Wz,
+      ChangeTree: () => am,
+      CollectionSchema: () => gW,
+      Decoder: () => hW,
+      Encoder: () => SW,
+      FieldBuilder: () => kW,
+      MapSchema: () => MW,
+      Metadata: () => EU,
+      OPERATION: () => zT,
+      Reflection: () => RW,
+      ReflectionField: () => oW,
+      ReflectionType: () => AW,
+      Root: () => yW,
+      Schema: () => tW,
+      SetSchema: () => nW,
+      StateCallbackStrategy: () => mz,
+      StateView: () => FW,
+      StreamSchema: () => HW,
+      TypeContext: () => uU,
+      createPool: () => Mz,
+      decode: () => qU,
+      decodeKeyValueOperation: () => om,
+      decodeSchemaOperation: () => Dm,
+      defineCustomTypes: () => eU,
+      defineTypes: () => xW,
+      deprecated: () => YW,
+      dumpChanges: () => wW,
+      encode: () => UU,
+      encodeArray: () => Vm,
+      encodeIndexedEntry: () => Fm,
+      encodeKeyValueOperation: () => Pm,
+      encodeMapEntry: () => sm,
+      encodeSchemaOperation: () => Qm,
+      UB: () => cW,
+      fullStateOnly: () => iW,
+      getDecoderStateCallbacks: () => Tz,
+      getEncodeDescriptor: () => Tm,
+      getRawChangesCallback: () => Uz,
+      isBuilder: () => jW,
+      patchOnly: () => qW,
+      registerType: () => OU,
+      schema: () => dW,
+      t: () => BW,
+      type: () => bW,
+      unreliable: () => fW,
+      view: () => vW
     });
-    const Op = 255;
-    var op;
+    const WT = 255;
+    var zT;
 
-    function Ip(pp) {
-      Object.defineProperty(pp, Symbol.metadata, {
+    function MT(TT) {
+      Object.defineProperty(TT, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(pp) {
-      pp[pp.ADD = 128] = "ADD", pp[pp.REPLACE = 0] = "REPLACE", pp[pp.DELETE = 64] = "DELETE", pp[pp.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", pp[pp.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", pp[pp.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", pp[pp.CLEAR = 10] = "CLEAR", pp[pp.REVERSE = 15] = "REVERSE", pp[pp.MOVE = 32] = "MOVE", pp[pp.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", pp[pp.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(op || (op = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const Sp = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(TT) {
+      TT[TT.ADD = 128] = "ADD", TT[TT.REPLACE = 0] = "REPLACE", TT[TT.DELETE = 64] = "DELETE", TT[TT.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", TT[TT.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", TT[TT.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", TT[TT.CLEAR = 10] = "CLEAR", TT[TT.REVERSE = 15] = "REVERSE", TT[TT.MOVE = 32] = "MOVE", TT[TT.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", TT[TT.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(zT || (zT = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const gT = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const pp = "colyseus.symbolRegistry",
-        ip = Sp[pp] || (Sp[pp] = Object.create(null));
-      Symbol.for = function(pp) {
-        return ip[pp] || (ip[pp] = Symbol(pp))
-      }, Symbol.keyFor = function(pp) {
-        for (const cp in ip)
-          if (ip[cp] === pp) return cp
+      const TT = "colyseus.symbolRegistry",
+        UT = gT[TT] || (gT[TT] = Object.create(null));
+      Symbol.for = function(TT) {
+        return UT[TT] || (UT[TT] = Symbol(TT))
+      }, Symbol.keyFor = function(TT) {
+        for (const mT in UT)
+          if (UT[mT] === TT) return mT
       }
     }
-    const xp = Symbol.for("$refId"),
-      Lp = "~track",
-      Yp = "~encoder",
-      Dp = "~decoder",
-      Ap = "~filter",
-      Pp = "~getByIndex",
-      Wp = "~deleteByIndex",
-      yp = "~resyncPrune",
-      Up = Symbol.for("$changes"),
-      wp = Symbol.for("$childType"),
-      vp = Symbol.for("$proxyTarget"),
-      tp = "~onEncodeEnd",
-      Hp = "~reset",
-      dp = "~onDecodeEnd",
-      ep = Symbol.for("$values"),
-      jp = "~builder",
-      kp = "~descriptors",
-      mp = "~__encodeDescriptor",
-      Rp = "~encoders",
-      qp = "~__numFields",
-      Mp = "~__refTypeFieldIndexes",
-      Cp = "~__viewFieldIndexes",
-      Ep = "$__fieldIndexesByViewTag",
-      Xp = "~__unreliableFieldIndexes",
-      lp = "~__patchOnlyFieldIndexes",
-      Qp = "~__fullSyncSkipIndexes",
-      Jp = "~__fullStateOnlyFieldIndexes",
-      Bp = "~__streamFieldIndexes",
-      Np = "~__streamPriorities";
-    let Tp;
+    const nT = Symbol.for("$refId"),
+      HT = "~track",
+      kT = "~encoder",
+      jT = "~decoder",
+      lT = "~filter",
+      LT = "~getByIndex",
+      pT = "~deleteByIndex",
+      BT = "~resyncPrune",
+      ZT = Symbol.for("$changes"),
+      cT = Symbol.for("$childType"),
+      vT = Symbol.for("$proxyTarget"),
+      fT = "~onEncodeEnd",
+      qT = "~reset",
+      iT = "~onDecodeEnd",
+      bT = Symbol.for("$values"),
+      OT = "~builder",
+      eT = "~descriptors",
+      YT = "~__encodeDescriptor",
+      JT = "~encoders",
+      xT = "~__numFields",
+      dT = "~__refTypeFieldIndexes",
+      wT = "~__viewFieldIndexes",
+      tT = "$__fieldIndexesByViewTag",
+      aT = "~__unreliableFieldIndexes",
+      yT = "~__patchOnlyFieldIndexes",
+      XT = "~__fullSyncSkipIndexes",
+      IT = "~__fullStateOnlyFieldIndexes",
+      QT = "~__streamFieldIndexes",
+      sT = "~__streamPriorities";
+    let FT;
     try {
-      Tp = new TextEncoder
-    } catch (Lo) {}
-    const fp = new ArrayBuffer(8),
-      bp = new Int32Array(fp),
-      hp = new Float32Array(fp),
-      ap = new Float64Array(fp),
-      np = new BigInt64Array(fp),
-      Fp = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(pp, ip) {
-        for (var cp = 0, Op = 0, op = 0, Ip = pp.length; op < Ip; op++)(cp = pp.charCodeAt(op)) < 128 ? Op += 1 : cp < 2048 ? Op += 2 : cp < 55296 || cp >= 57344 ? Op += 3 : (op++, Op += 4);
-        return Op
+      FT = new TextEncoder
+    } catch (gz) {}
+    const PT = new ArrayBuffer(8),
+      VT = new Int32Array(PT),
+      uT = new Float32Array(PT),
+      CT = new Float64Array(PT),
+      rT = new BigInt64Array(PT),
+      KT = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(TT, UT) {
+        for (var mT = 0, WT = 0, zT = 0, MT = TT.length; zT < MT; zT++)(mT = TT.charCodeAt(zT)) < 128 ? WT += 1 : mT < 2048 ? WT += 2 : mT < 55296 || mT >= 57344 ? WT += 3 : (zT++, WT += 4);
+        return WT
       };
 
-    function gp(pp, ip, cp) {
-      for (var Op = 0, op = 0, Ip = ip.length; op < Ip; op++)(Op = ip.charCodeAt(op)) < 128 ? pp[cp.offset++] = Op : Op < 2048 ? (pp[cp.offset] = 192 | Op >> 6, pp[cp.offset + 1] = 128 | 63 & Op, cp.offset += 2) : Op < 55296 || Op >= 57344 ? (pp[cp.offset] = 224 | Op >> 12, pp[cp.offset + 1] = 128 | Op >> 6 & 63, pp[cp.offset + 2] = 128 | 63 & Op, cp.offset += 3) : (op++, Op = 65536 + ((1023 & Op) << 10 | 1023 & ip.charCodeAt(op)), pp[cp.offset] = 240 | Op >> 18, pp[cp.offset + 1] = 128 | Op >> 12 & 63, pp[cp.offset + 2] = 128 | Op >> 6 & 63, pp[cp.offset + 3] = 128 | 63 & Op, cp.offset += 4)
+    function ST(TT, UT, mT) {
+      for (var WT = 0, zT = 0, MT = UT.length; zT < MT; zT++)(WT = UT.charCodeAt(zT)) < 128 ? TT[mT.offset++] = WT : WT < 2048 ? (TT[mT.offset] = 192 | WT >> 6, TT[mT.offset + 1] = 128 | 63 & WT, mT.offset += 2) : WT < 55296 || WT >= 57344 ? (TT[mT.offset] = 224 | WT >> 12, TT[mT.offset + 1] = 128 | WT >> 6 & 63, TT[mT.offset + 2] = 128 | 63 & WT, mT.offset += 3) : (zT++, WT = 65536 + ((1023 & WT) << 10 | 1023 & UT.charCodeAt(zT)), TT[mT.offset] = 240 | WT >> 18, TT[mT.offset + 1] = 128 | WT >> 12 & 63, TT[mT.offset + 2] = 128 | WT >> 6 & 63, TT[mT.offset + 3] = 128 | 63 & WT, mT.offset += 4)
     }
 
-    function Gp(pp, ip, cp) {
-      pp[cp.offset++] = 255 & ip
+    function GT(TT, UT, mT) {
+      TT[mT.offset++] = 255 & UT
     }
 
-    function rp(pp, ip, cp) {
-      pp[cp.offset++] = 255 & ip, pp[cp.offset++] = ip >> 8 & 255
+    function NT(TT, UT, mT) {
+      TT[mT.offset++] = 255 & UT, TT[mT.offset++] = UT >> 8 & 255
     }
 
-    function Zp(pp, ip, cp) {
-      pp[cp.offset++] = 255 & ip, pp[cp.offset++] = ip >> 8 & 255
+    function ET(TT, UT, mT) {
+      TT[mT.offset++] = 255 & UT, TT[mT.offset++] = UT >> 8 & 255
     }
 
-    function zp(pp, ip, cp) {
-      pp[cp.offset++] = 255 & ip, pp[cp.offset++] = ip >> 8 & 255, pp[cp.offset++] = ip >> 16 & 255, pp[cp.offset++] = ip >> 24 & 255
+    function hT(TT, UT, mT) {
+      TT[mT.offset++] = 255 & UT, TT[mT.offset++] = UT >> 8 & 255, TT[mT.offset++] = UT >> 16 & 255, TT[mT.offset++] = UT >> 24 & 255
     }
 
-    function sp(pp, ip, cp) {
-      const Op = ip >> 24,
-        op = ip >> 16,
-        Ip = ip >> 8,
-        Sp = ip;
-      pp[cp.offset++] = 255 & Sp, pp[cp.offset++] = 255 & Ip, pp[cp.offset++] = 255 & op, pp[cp.offset++] = 255 & Op
+    function DT(TT, UT, mT) {
+      const WT = UT >> 24,
+        zT = UT >> 16,
+        MT = UT >> 8,
+        gT = UT;
+      TT[mT.offset++] = 255 & gT, TT[mT.offset++] = 255 & MT, TT[mT.offset++] = 255 & zT, TT[mT.offset++] = 255 & WT
     }
 
-    function Kp(pp, ip, cp) {
-      const Op = Math.floor(ip / Math.pow(2, 32));
-      sp(pp, ip >>> 0, cp), sp(pp, Op, cp)
+    function oT(TT, UT, mT) {
+      const WT = Math.floor(UT / Math.pow(2, 32));
+      DT(TT, UT >>> 0, mT), DT(TT, WT, mT)
     }
 
-    function Vp(pp, ip, cp) {
-      const Op = ip / Math.pow(2, 32) | 0;
-      sp(pp, ip >>> 0, cp), sp(pp, Op, cp)
+    function AT(TT, UT, mT) {
+      const WT = UT / Math.pow(2, 32) | 0;
+      DT(TT, UT >>> 0, mT), DT(TT, WT, mT)
     }
 
-    function ii(pp, ip, cp) {
-      hp[0] = ip, zp(pp, bp[0], cp)
+    function RT(TT, UT, mT) {
+      uT[0] = UT, hT(TT, VT[0], mT)
     }
 
-    function ci(pp, ip, cp) {
-      ap[0] = ip, zp(pp, bp[0], cp), zp(pp, bp[1], cp)
+    function TU(TT, UT, mT) {
+      CT[0] = UT, hT(TT, VT[0], mT), hT(TT, VT[1], mT)
     }
-    const Oi = {
-        int8: Gp,
-        uint8: function(pp, ip, cp) {
-          pp[cp.offset++] = 255 & ip
+    const UU = {
+        int8: GT,
+        uint8: function(TT, UT, mT) {
+          TT[mT.offset++] = 255 & UT
         },
-        int16: rp,
-        uint16: Zp,
-        int32: zp,
-        uint32: sp,
-        int64: Kp,
-        uint64: Vp,
-        bigint64: function(pp, ip, cp) {
-          np[0] = BigInt.asIntN(64, ip), zp(pp, bp[0], cp), zp(pp, bp[1], cp)
+        int16: NT,
+        uint16: ET,
+        int32: hT,
+        uint32: DT,
+        int64: oT,
+        uint64: AT,
+        bigint64: function(TT, UT, mT) {
+          rT[0] = BigInt.asIntN(64, UT), hT(TT, VT[0], mT), hT(TT, VT[1], mT)
         },
-        biguint64: function(pp, ip, cp) {
-          np[0] = BigInt.asIntN(64, ip), zp(pp, bp[0], cp), zp(pp, bp[1], cp)
+        biguint64: function(TT, UT, mT) {
+          rT[0] = BigInt.asIntN(64, UT), hT(TT, VT[0], mT), hT(TT, VT[1], mT)
         },
-        float32: ii,
-        float64: ci,
-        boolean: function(pp, ip, cp) {
-          pp[cp.offset++] = ip ? 1 : 0
+        float32: RT,
+        float64: TU,
+        boolean: function(TT, UT, mT) {
+          TT[mT.offset++] = UT ? 1 : 0
         },
-        string: function(pp, ip, cp) {
-          ip || (ip = "");
-          let Op = Fp(ip, "utf8"),
-            op = 0;
-          if (Op < 32) pp[cp.offset++] = 160 | Op, op = 1;
-          else if (Op < 256) pp[cp.offset++] = 217, pp[cp.offset++] = Op, op = 2;
-          else if (Op < 65536) pp[cp.offset++] = 218, Zp(pp, Op, cp), op = 3;
+        string: function(TT, UT, mT) {
+          UT || (UT = "");
+          let WT = KT(UT, "utf8"),
+            zT = 0;
+          if (WT < 32) TT[mT.offset++] = 160 | WT, zT = 1;
+          else if (WT < 256) TT[mT.offset++] = 217, TT[mT.offset++] = WT, zT = 2;
+          else if (WT < 65536) TT[mT.offset++] = 218, ET(TT, WT, mT), zT = 3;
           else {
-            if (!(Op < 4294967296)) throw new Error("String too long");
-            pp[cp.offset++] = 219, sp(pp, Op, cp), op = 5
+            if (!(WT < 4294967296)) throw new Error("String too long");
+            TT[mT.offset++] = 219, DT(TT, WT, mT), zT = 5
           }
-          return gp(pp, ip, cp), op + Op
+          return ST(TT, UT, mT), zT + WT
         },
-        number: function pp(ip, cp, Op) {
-          return isNaN(cp) ? pp(ip, 0, Op) : isFinite(cp) ? cp !== (0 | cp) ? Math.abs(cp) <= 34028235e31 && (hp[0] = cp, Math.abs(Math.abs(hp[0]) - Math.abs(cp)) < 1e-4) ? (ip[Op.offset++] = 202, ii(ip, cp, Op), 5) : (ip[Op.offset++] = 203, ci(ip, cp, Op), 9) : cp >= 0 ? cp < 128 ? (ip[Op.offset++] = 255 & cp, 1) : cp < 256 ? (ip[Op.offset++] = 204, ip[Op.offset++] = 255 & cp, 2) : cp < 65536 ? (ip[Op.offset++] = 205, Zp(ip, cp, Op), 3) : cp < 4294967296 ? (ip[Op.offset++] = 206, sp(ip, cp, Op), 5) : (ip[Op.offset++] = 207, Vp(ip, cp, Op), 9) : cp >= -32 ? (ip[Op.offset++] = 224 | cp + 32, 1) : cp >= -128 ? (ip[Op.offset++] = 208, Gp(ip, cp, Op), 2) : cp >= -32768 ? (ip[Op.offset++] = 209, rp(ip, cp, Op), 3) : cp >= -2147483648 ? (ip[Op.offset++] = 210, zp(ip, cp, Op), 5) : (ip[Op.offset++] = 211, Kp(ip, cp, Op), 9) : pp(ip, cp > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Op)
+        number: function TT(UT, mT, WT) {
+          return isNaN(mT) ? TT(UT, 0, WT) : isFinite(mT) ? mT !== (0 | mT) ? Math.abs(mT) <= 34028235e31 && (uT[0] = mT, Math.abs(Math.abs(uT[0]) - Math.abs(mT)) < 1e-4) ? (UT[WT.offset++] = 202, RT(UT, mT, WT), 5) : (UT[WT.offset++] = 203, TU(UT, mT, WT), 9) : mT >= 0 ? mT < 128 ? (UT[WT.offset++] = 255 & mT, 1) : mT < 256 ? (UT[WT.offset++] = 204, UT[WT.offset++] = 255 & mT, 2) : mT < 65536 ? (UT[WT.offset++] = 205, ET(UT, mT, WT), 3) : mT < 4294967296 ? (UT[WT.offset++] = 206, DT(UT, mT, WT), 5) : (UT[WT.offset++] = 207, AT(UT, mT, WT), 9) : mT >= -32 ? (UT[WT.offset++] = 224 | mT + 32, 1) : mT >= -128 ? (UT[WT.offset++] = 208, GT(UT, mT, WT), 2) : mT >= -32768 ? (UT[WT.offset++] = 209, NT(UT, mT, WT), 3) : mT >= -2147483648 ? (UT[WT.offset++] = 210, hT(UT, mT, WT), 5) : (UT[WT.offset++] = 211, oT(UT, mT, WT), 9) : TT(UT, mT > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, WT)
         },
-        utf8Write: gp,
-        utf8Length: Fp
+        utf8Write: ST,
+        utf8Length: KT
       },
-      oi = new ArrayBuffer(8),
-      Ii = new Int32Array(oi),
-      Si = new Float32Array(oi),
-      xi = new Float64Array(oi),
-      Li = new BigUint64Array(oi),
-      Yi = new BigInt64Array(oi);
+      mU = new ArrayBuffer(8),
+      WU = new Int32Array(mU),
+      zU = new Float32Array(mU),
+      MU = new Float64Array(mU),
+      gU = new BigUint64Array(mU),
+      nU = new BigInt64Array(mU);
 
-    function Di(pp, ip, cp) {
-      cp > pp.length - ip.offset && (cp = pp.length - ip.offset);
-      for (var Op = "", op = 0, Ip = ip.offset, Sp = ip.offset + cp; Ip < Sp; Ip++) {
-        var xp = pp[Ip];
-        if (0 !== (128 & xp))
-          if (192 !== (224 & xp))
-            if (224 !== (240 & xp)) {
-              if (240 !== (248 & xp)) {
-                console.error("decode.utf8Read(): Invalid byte " + xp + " at offset " + Ip + ". Skip to end of string: " + (ip.offset + cp));
+    function HU(TT, UT, mT) {
+      mT > TT.length - UT.offset && (mT = TT.length - UT.offset);
+      for (var WT = "", zT = 0, MT = UT.offset, gT = UT.offset + mT; MT < gT; MT++) {
+        var nT = TT[MT];
+        if (0 !== (128 & nT))
+          if (192 !== (224 & nT))
+            if (224 !== (240 & nT)) {
+              if (240 !== (248 & nT)) {
+                console.error("decode.utf8Read(): Invalid byte " + nT + " at offset " + MT + ". Skip to end of string: " + (UT.offset + mT));
                 break
-              }(op = (7 & xp) << 18 | (63 & pp[++Ip]) << 12 | (63 & pp[++Ip]) << 6 | 63 & pp[++Ip]) >= 65536 ? (op -= 65536, Op += String.fromCharCode(55296 + (op >>> 10), 56320 + (1023 & op))) : Op += String.fromCharCode(op)
-            } else Op += String.fromCharCode((15 & xp) << 12 | (63 & pp[++Ip]) << 6 | 63 & pp[++Ip]);
-        else Op += String.fromCharCode((31 & xp) << 6 | 63 & pp[++Ip]);
-        else Op += String.fromCharCode(xp)
+              }(zT = (7 & nT) << 18 | (63 & TT[++MT]) << 12 | (63 & TT[++MT]) << 6 | 63 & TT[++MT]) >= 65536 ? (zT -= 65536, WT += String.fromCharCode(55296 + (zT >>> 10), 56320 + (1023 & zT))) : WT += String.fromCharCode(zT)
+            } else WT += String.fromCharCode((15 & nT) << 12 | (63 & TT[++MT]) << 6 | 63 & TT[++MT]);
+        else WT += String.fromCharCode((31 & nT) << 6 | 63 & TT[++MT]);
+        else WT += String.fromCharCode(nT)
       }
-      return ip.offset += cp, Op
+      return UT.offset += mT, WT
     }
 
-    function Ai(pp, ip) {
-      return Pi(pp, ip) << 24 >> 24
+    function kU(TT, UT) {
+      return jU(TT, UT) << 24 >> 24
     }
 
-    function Pi(pp, ip) {
-      return pp[ip.offset++]
+    function jU(TT, UT) {
+      return TT[UT.offset++]
     }
 
-    function Wi(pp, ip) {
-      return yi(pp, ip) << 16 >> 16
+    function lU(TT, UT) {
+      return LU(TT, UT) << 16 >> 16
     }
 
-    function yi(pp, ip) {
-      return pp[ip.offset++] | pp[ip.offset++] << 8
+    function LU(TT, UT) {
+      return TT[UT.offset++] | TT[UT.offset++] << 8
     }
 
-    function Ui(pp, ip) {
-      return pp[ip.offset++] | pp[ip.offset++] << 8 | pp[ip.offset++] << 16 | pp[ip.offset++] << 24
+    function pU(TT, UT) {
+      return TT[UT.offset++] | TT[UT.offset++] << 8 | TT[UT.offset++] << 16 | TT[UT.offset++] << 24
     }
 
-    function wi(pp, ip) {
-      return Ui(pp, ip) >>> 0
+    function BU(TT, UT) {
+      return pU(TT, UT) >>> 0
     }
 
-    function vi(pp, ip) {
-      return Ii[0] = Ui(pp, ip), Si[0]
+    function ZU(TT, UT) {
+      return WU[0] = pU(TT, UT), zU[0]
     }
 
-    function ti(pp, ip) {
-      return Ii[0] = Ui(pp, ip), Ii[1] = Ui(pp, ip), xi[0]
+    function cU(TT, UT) {
+      return WU[0] = pU(TT, UT), WU[1] = pU(TT, UT), MU[0]
     }
 
-    function Hi(pp, ip) {
-      const cp = wi(pp, ip);
-      return Ui(pp, ip) * Math.pow(2, 32) + cp
+    function vU(TT, UT) {
+      const mT = BU(TT, UT);
+      return pU(TT, UT) * Math.pow(2, 32) + mT
     }
 
-    function di(pp, ip) {
-      const cp = wi(pp, ip);
-      return wi(pp, ip) * Math.pow(2, 32) + cp
+    function fU(TT, UT) {
+      const mT = BU(TT, UT);
+      return BU(TT, UT) * Math.pow(2, 32) + mT
     }
-    const ei = {
-        utf8Read: Di,
-        int8: Ai,
-        uint8: Pi,
-        int16: Wi,
-        uint16: yi,
-        int32: Ui,
-        uint32: wi,
-        float32: vi,
-        float64: ti,
-        int64: Hi,
-        uint64: di,
-        bigint64: function(pp, ip) {
-          return Ii[0] = Ui(pp, ip), Ii[1] = Ui(pp, ip), Yi[0]
+    const qU = {
+        utf8Read: HU,
+        int8: kU,
+        uint8: jU,
+        int16: lU,
+        uint16: LU,
+        int32: pU,
+        uint32: BU,
+        float32: ZU,
+        float64: cU,
+        int64: vU,
+        uint64: fU,
+        bigint64: function(TT, UT) {
+          return WU[0] = pU(TT, UT), WU[1] = pU(TT, UT), nU[0]
         },
-        biguint64: function(pp, ip) {
-          return Ii[0] = Ui(pp, ip), Ii[1] = Ui(pp, ip), Li[0]
+        biguint64: function(TT, UT) {
+          return WU[0] = pU(TT, UT), WU[1] = pU(TT, UT), gU[0]
         },
-        boolean: function(pp, ip) {
-          return Pi(pp, ip) > 0
+        boolean: function(TT, UT) {
+          return jU(TT, UT) > 0
         },
-        string: function(pp, ip) {
-          const cp = pp[ip.offset++];
-          let Op;
-          return cp < 192 ? Op = 31 & cp : 217 === cp ? Op = Pi(pp, ip) : 218 === cp ? Op = yi(pp, ip) : 219 === cp && (Op = wi(pp, ip)), Di(pp, ip, Op)
+        string: function(TT, UT) {
+          const mT = TT[UT.offset++];
+          let WT;
+          return mT < 192 ? WT = 31 & mT : 217 === mT ? WT = jU(TT, UT) : 218 === mT ? WT = LU(TT, UT) : 219 === mT && (WT = BU(TT, UT)), HU(TT, UT, WT)
         },
-        number: function(pp, ip) {
-          const cp = pp[ip.offset++];
-          return cp < 128 ? cp : 202 === cp ? vi(pp, ip) : 203 === cp ? ti(pp, ip) : 204 === cp ? Pi(pp, ip) : 205 === cp ? yi(pp, ip) : 206 === cp ? wi(pp, ip) : 207 === cp ? di(pp, ip) : 208 === cp ? Ai(pp, ip) : 209 === cp ? Wi(pp, ip) : 210 === cp ? Ui(pp, ip) : 211 === cp ? Hi(pp, ip) : cp > 223 ? -1 * (255 - cp + 1) : void 0
+        number: function(TT, UT) {
+          const mT = TT[UT.offset++];
+          return mT < 128 ? mT : 202 === mT ? ZU(TT, UT) : 203 === mT ? cU(TT, UT) : 204 === mT ? jU(TT, UT) : 205 === mT ? LU(TT, UT) : 206 === mT ? BU(TT, UT) : 207 === mT ? fU(TT, UT) : 208 === mT ? kU(TT, UT) : 209 === mT ? lU(TT, UT) : 210 === mT ? pU(TT, UT) : 211 === mT ? vU(TT, UT) : mT > 223 ? -1 * (255 - mT + 1) : void 0
         },
-        stringCheck: function(pp, ip) {
-          const cp = pp[ip.offset];
-          return cp < 192 && cp > 160 || 217 === cp || 218 === cp || 219 === cp
+        stringCheck: function(TT, UT) {
+          const mT = TT[UT.offset];
+          return mT < 192 && mT > 160 || 217 === mT || 218 === mT || 219 === mT
         }
       },
-      ui = {},
-      ji = new Map;
+      iU = {},
+      bU = new Map;
 
-    function ki(pp, ip) {
-      ip.constructor && (Object.prototype.hasOwnProperty.call(ip, "constructor") && null == ip.constructor[Symbol.metadata] && Ip(ip.constructor), ji.set(ip.constructor, pp), ui[pp] = ip), ip.encode && (Oi[pp] = ip.encode), ip.decode && (ei[pp] = ip.decode)
+    function OU(TT, UT) {
+      UT.constructor && (Object.prototype.hasOwnProperty.call(UT, "constructor") && null == UT.constructor[Symbol.metadata] && MT(UT.constructor), bU.set(UT.constructor, TT), iU[TT] = UT), UT.encode && (UU[TT] = UT.encode), UT.decode && (qU[TT] = UT.decode)
     }
 
-    function mi(pp) {
-      for (const ip in pp) ki(ip, pp[ip]);
-      return pp => jO(pp)
+    function eU(TT) {
+      for (const UT in TT) OU(UT, TT[UT]);
+      return TT => bW(TT)
     }
-    const Ri = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const YU = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function qi() {
+    function JU() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function Mi(pp) {
-      return pp._stream ??= qi()
+    function xU(TT) {
+      return TT._stream ??= JU()
     }
 
-    function Ci(pp, ip, cp) {
-      0 === ip.activeViews.size && Mi(pp).broadcastPending.add(cp)
+    function dU(TT, UT, mT) {
+      0 === UT.activeViews.size && xU(TT).broadcastPending.add(mT)
     }
 
-    function Ei(pp, ip, cp, Op) {
-      const Ip = pp._stream;
-      if (void 0 === Ip) return !0;
-      let Sp = !1;
-      return Ip.broadcastPending.delete(Op) ? Sp = !0 : Ip.sentBroadcast.delete(Op) && Ip.broadcastDeletes.add(Op), ip.forEachActiveView((pp => {
-        const ip = Ip.pendingByView.get(pp.id);
-        if (ip?.has(Op)) return ip.delete(Op), void(Sp = !0);
-        const xp = Ip.sentByView.get(pp.id);
-        if (xp?.has(Op)) {
-          xp.delete(Op);
-          let ip = pp.changes.get(cp);
-          void 0 === ip && (ip = new Map, pp.changes.set(cp, ip)), ip.set(Op, op.DELETE)
+    function wU(TT, UT, mT, WT) {
+      const MT = TT._stream;
+      if (void 0 === MT) return !0;
+      let gT = !1;
+      return MT.broadcastPending.delete(WT) ? gT = !0 : MT.sentBroadcast.delete(WT) && MT.broadcastDeletes.add(WT), UT.forEachActiveView((TT => {
+        const UT = MT.pendingByView.get(TT.id);
+        if (UT?.has(WT)) return UT.delete(WT), void(gT = !0);
+        const nT = MT.sentByView.get(TT.id);
+        if (nT?.has(WT)) {
+          nT.delete(WT);
+          let UT = TT.changes.get(mT);
+          void 0 === UT && (UT = new Map, TT.changes.set(mT, UT)), UT.set(WT, zT.DELETE)
         }
-      })), Sp
+      })), gT
     }
 
-    function Xi(pp, ip) {
-      const cp = pp._stream?.pendingByView;
-      if (void 0 === cp) return !1;
-      for (const [Op, op] of cp)
-        if (op.size > 0 && void 0 !== ip.activeViews.get(Op)?.deref()) return !0;
+    function tU(TT, UT) {
+      const mT = TT._stream?.pendingByView;
+      if (void 0 === mT) return !1;
+      for (const [WT, zT] of mT)
+        if (zT.size > 0 && void 0 !== UT.activeViews.get(WT)?.deref()) return !0;
       return !1
     }
 
-    function li(pp) {
-      const ip = pp._stream;
-      return void 0 !== ip && (ip.broadcastPending.size > 0 || ip.broadcastDeletes.size > 0)
+    function aU(TT) {
+      const UT = TT._stream;
+      return void 0 !== UT && (UT.broadcastPending.size > 0 || UT.broadcastDeletes.size > 0)
     }
 
-    function Qi(pp, ip, cp) {
-      const Op = Mi(pp);
-      let op = Op.pendingByView.get(ip);
-      void 0 === op && (op = new Set, Op.pendingByView.set(ip, op)), op.add(cp)
+    function yU(TT, UT, mT) {
+      const WT = xU(TT);
+      let zT = WT.pendingByView.get(UT);
+      void 0 === zT && (zT = new Set, WT.pendingByView.set(UT, zT)), zT.add(mT)
     }
 
-    function Ji(pp, ip) {
-      const cp = pp._stream;
-      void 0 !== cp && (cp.pendingByView.delete(ip), cp.sentByView.delete(ip), cp.priorityByView?.delete(ip))
+    function XU(TT, UT) {
+      const mT = TT._stream;
+      void 0 !== mT && (mT.pendingByView.delete(UT), mT.sentByView.delete(UT), mT.priorityByView?.delete(UT))
     }
-    const Bi = {
+    const IU = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function Ni(pp) {
-      if (null == pp || "object" !== typeof pp) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function QU(TT) {
+      if (null == TT || "object" !== typeof TT) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: ip,
-        max: cp
-      } = pp;
-      if ("number" !== typeof ip || "number" !== typeof cp || !(cp > ip) || !Number.isFinite(ip) || !Number.isFinite(cp)) throw new Error(`t.quantized(): require finite min < max (got min=${ip}, max=${cp}).`);
-      const Op = pp.bits ?? 16;
-      if (8 !== Op && 16 !== Op && 32 !== Op) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Op}).`);
-      const op = pp.mode ?? "clamp";
-      if ("clamp" !== op && "wrap" !== op) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(op)}).`);
-      const Ip = "wrap" === op,
-        Sp = Math.pow(2, Op);
+        min: UT,
+        max: mT
+      } = TT;
+      if ("number" !== typeof UT || "number" !== typeof mT || !(mT > UT) || !Number.isFinite(UT) || !Number.isFinite(mT)) throw new Error(`t.quantized(): require finite min < max (got min=${UT}, max=${mT}).`);
+      const WT = TT.bits ?? 16;
+      if (8 !== WT && 16 !== WT && 32 !== WT) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${WT}).`);
+      const zT = TT.mode ?? "clamp";
+      if ("clamp" !== zT && "wrap" !== zT) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(zT)}).`);
+      const MT = "wrap" === zT,
+        gT = Math.pow(2, WT);
       return {
-        min: ip,
-        max: cp,
-        bits: Op,
-        wrap: Ip,
-        wire: Bi[Op],
-        range: cp - ip,
-        span: Ip ? Sp : ip === -cp ? Sp - 2 : Sp - 1
+        min: UT,
+        max: mT,
+        bits: WT,
+        wrap: MT,
+        wire: IU[WT],
+        range: mT - UT,
+        span: MT ? gT : UT === -mT ? gT - 2 : gT - 1
       }
     }
 
-    function Ti(pp) {
-      return null !== pp && "object" === typeof pp && void 0 !== pp.quantized
+    function sU(TT) {
+      return null !== TT && "object" === typeof TT && void 0 !== TT.quantized
     }
 
-    function fi(pp, ip) {
-      if (pp.wrap) {
-        if (!Number.isFinite(ip)) return 0;
-        const cp = pp.range;
-        let Op = (ip - pp.min) % cp;
-        Op < 0 && (Op += cp);
-        const op = pp.span;
-        return Math.floor(Op / cp * op + .5) % op
+    function FU(TT, UT) {
+      if (TT.wrap) {
+        if (!Number.isFinite(UT)) return 0;
+        const mT = TT.range;
+        let WT = (UT - TT.min) % mT;
+        WT < 0 && (WT += mT);
+        const zT = TT.span;
+        return Math.floor(WT / mT * zT + .5) % zT
       }
-      if (ip !== ip) return 0;
-      const cp = ip < pp.min ? pp.min : ip > pp.max ? pp.max : ip;
-      return Math.floor((cp - pp.min) / pp.range * pp.span + .5)
+      if (UT !== UT) return 0;
+      const mT = UT < TT.min ? TT.min : UT > TT.max ? TT.max : UT;
+      return Math.floor((mT - TT.min) / TT.range * TT.span + .5)
     }
 
-    function bi(pp, ip) {
-      return pp.min + ip / pp.span * pp.range
+    function PU(TT, UT) {
+      return TT.min + UT / TT.span * TT.range
     }
 
-    function ai(pp) {
-      const ip = Oi[pp.wire];
-      return (cp, Op, op) => ip(cp, fi(pp, Op), op)
+    function VU(TT) {
+      const UT = UU[TT.wire];
+      return (mT, WT, zT) => UT(mT, FU(TT, WT), zT)
     }
-    class ni {
+    class uU {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(pp) {
-        const ip = Object.getPrototypeOf(pp);
-        if (ip !== XO) {
-          let cp = ni.inheritedTypes.get(ip);
-          cp || (cp = new Set, ni.inheritedTypes.set(ip, cp)), cp.add(pp)
+      static register(TT) {
+        const UT = Object.getPrototypeOf(TT);
+        if (UT !== tW) {
+          let mT = uU.inheritedTypes.get(UT);
+          mT || (mT = new Set, uU.inheritedTypes.set(UT, mT)), mT.add(TT)
         }
       }
-      static cache(pp) {
-        let ip = ni.cachedContexts.get(pp);
-        return ip || (ip = new ni(pp), ni.cachedContexts.set(pp, ip)), ip
+      static cache(TT) {
+        let UT = uU.cachedContexts.get(TT);
+        return UT || (UT = new uU(TT), uU.cachedContexts.set(TT, UT)), UT
       }
-      constructor(pp) {
-        pp && this.discoverTypes(pp)
+      constructor(TT) {
+        TT && this.discoverTypes(TT)
       }
-      has(pp) {
-        return this.schemas.has(pp)
+      has(TT) {
+        return this.schemas.has(TT)
       }
-      get(pp) {
-        return this.types[pp]
+      get(TT) {
+        return this.types[TT]
       }
-      add(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(pp) && (this.types[ip] = pp, null == pp[Symbol.metadata] && si.initialize(pp), this.schemas.set(pp, ip), !0)
+      add(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(TT) && (this.types[UT] = TT, null == TT[Symbol.metadata] && EU.initialize(TT), this.schemas.set(TT, UT), !0)
       }
-      getTypeId(pp) {
-        return this.schemas.get(pp)
+      getTypeId(TT) {
+        return this.schemas.get(TT)
       }
-      discoverTypes(pp) {
-        if (!this.add(pp)) return;
-        ni.inheritedTypes.get(pp)?.forEach((pp => {
-          this.discoverTypes(pp)
+      discoverTypes(TT) {
+        if (!this.add(TT)) return;
+        uU.inheritedTypes.get(TT)?.forEach((TT => {
+          this.discoverTypes(TT)
         }));
-        let ip = pp;
+        let UT = TT;
         for (;
-          (ip = Object.getPrototypeOf(ip)) && ip !== XO && ip !== Function.prototype;) this.discoverTypes(ip);
-        const cp = pp[Symbol.metadata];
-        (cp[Cp] || cp[Bp]) && (this.hasFilters = !0);
-        for (const Op in cp) {
-          const pp = cp[Op].type;
-          if ("string" !== typeof pp && !Ti(pp))
-            if ("function" === typeof pp) this.discoverTypes(pp);
+          (UT = Object.getPrototypeOf(UT)) && UT !== tW && UT !== Function.prototype;) this.discoverTypes(UT);
+        const mT = TT[Symbol.metadata];
+        (mT[wT] || mT[QT]) && (this.hasFilters = !0);
+        for (const WT in mT) {
+          const TT = mT[WT].type;
+          if ("string" !== typeof TT && !sU(TT))
+            if ("function" === typeof TT) this.discoverTypes(TT);
             else {
-              const ip = Object.values(pp)[0];
-              if ("string" === typeof ip) continue;
-              this.discoverTypes(ip)
+              const UT = Object.values(TT)[0];
+              if ("string" === typeof UT) continue;
+              this.discoverTypes(UT)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function Fi(pp) {
-      const ip = Gi(pp);
-      return ip ? {
-        complexTypeKlass: ui[ip],
-        childType: pp[ip]
+    function CU(TT) {
+      const UT = KU(TT);
+      return UT ? {
+        complexTypeKlass: iU[UT],
+        childType: TT[UT]
       } : {
         complexTypeKlass: !1,
-        childType: pp
+        childType: TT
       }
     }
 
-    function gi(pp, ip) {
-      const cp = ri(pp),
-        Op = Gi(cp),
-        op = Op && Gi(cp[Op]);
-      if (op) throw new Error(`${ip?`${ip}: `:""}@colyseus/schema: nested collections are not supported ("${Op}" of "${op}"). Collections can only hold primitive types or Schema classes, wrap the inner ${op} in a Schema class.`);
-      return cp
+    function rU(TT, UT) {
+      const mT = SU(TT),
+        WT = KU(mT),
+        zT = WT && KU(mT[WT]);
+      if (zT) throw new Error(`${UT?`${UT}: `:""}@colyseus/schema: nested collections are not supported ("${WT}" of "${zT}"). Collections can only hold primitive types or Schema classes, wrap the inner ${zT} in a Schema class.`);
+      return mT
     }
 
-    function Gi(pp) {
-      return "object" === typeof pp && null !== pp ? Object.keys(pp).find((pp => void 0 !== ui[pp])) : void 0
+    function KU(TT) {
+      return "object" === typeof TT && null !== TT ? Object.keys(TT).find((TT => void 0 !== iU[TT])) : void 0
     }
 
-    function ri(pp) {
-      if ("object" !== typeof pp || null === pp) return pp;
-      if (Array.isArray(pp)) return {
-        array: ri(pp[0])
+    function SU(TT) {
+      if ("object" !== typeof TT || null === TT) return TT;
+      if (Array.isArray(TT)) return {
+        array: SU(TT[0])
       };
-      const ip = function(pp) {
-        const ip = Object.keys(pp),
-          cp = ip.filter((pp => /\d+/.test(pp)));
-        if (cp.length > 0 && cp.length === ip.length / 2 && pp[pp[cp[0]]] == cp[0]) return "number";
-        if (ip.length > 0 && ip.every((ip => pp[ip] === ip))) return "string"
-      }(pp);
-      if (ip) return ip;
-      if (Ti(pp)) return "string" === typeof pp.quantized.wire ? pp : {
-        quantized: Ni(pp.quantized)
+      const UT = function(TT) {
+        const UT = Object.keys(TT),
+          mT = UT.filter((TT => /\d+/.test(TT)));
+        if (mT.length > 0 && mT.length === UT.length / 2 && TT[TT[mT[0]]] == mT[0]) return "number";
+        if (UT.length > 0 && UT.every((UT => TT[UT] === UT))) return "string"
+      }(TT);
+      if (UT) return UT;
+      if (sU(TT)) return "string" === typeof TT.quantized.wire ? TT : {
+        quantized: QU(TT.quantized)
       };
-      if (void 0 !== pp.type) return ri(pp.type);
-      const cp = Gi(pp);
-      return cp && (pp[cp] = ri(pp[cp])), pp
+      if (void 0 !== TT.type) return SU(TT.type);
+      const mT = KU(TT);
+      return mT && (TT[mT] = SU(TT[mT])), TT
     }
-    const Zi = [Mp, Xp, lp, Qp, Jp, Bp, Rp];
+    const GU = [dT, aT, yT, XT, IT, QT, JT];
 
-    function zi(pp, ip, cp) {
-      pp[ip] || Object.defineProperty(pp, ip, {
+    function NU(TT, UT, mT) {
+      TT[UT] || Object.defineProperty(TT, UT, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), pp[ip].push(cp)
+      }), TT[UT].push(mT)
     }
-    const si = {
-        addField(pp, ip, cp, Op, op) {
-          if (ip >= 63) throw new Error(`Can't define field '${cp}'.\nSchema instances may only have up to 63 fields.`);
-          pp[ip] = Object.assign(pp[ip] || {}, {
-            type: Op,
-            index: ip,
-            name: cp
-          }), Object.defineProperty(pp, kp, {
-            value: pp[kp] || {},
+    const EU = {
+        addField(TT, UT, mT, WT, zT) {
+          if (UT >= 63) throw new Error(`Can't define field '${mT}'.\nSchema instances may only have up to 63 fields.`);
+          TT[UT] = Object.assign(TT[UT] || {}, {
+            type: WT,
+            index: UT,
+            name: mT
+          }), Object.defineProperty(TT, eT, {
+            value: TT[eT] || {},
             enumerable: !1,
             configurable: !0
-          }), pp[kp][cp] = op || {
+          }), TT[eT][mT] = zT || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(pp, qp, {
-            value: ip,
+          }, Object.defineProperty(TT, xT, {
+            value: UT,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(pp, cp, {
-            value: ip,
+          }), Object.defineProperty(TT, mT, {
+            value: UT,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof pp[ip].type || Ti(pp[ip].type) || (void 0 === pp[Mp] && Object.defineProperty(pp, Mp, {
+          }), "string" === typeof TT[UT].type || sU(TT[UT].type) || (void 0 === TT[dT] && Object.defineProperty(TT, dT, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), pp[Mp].push(ip));
-          const Ip = pp[ip].type;
-          if (Ip && "object" === typeof Ip && void 0 !== Ip.stream) {
-            if (void 0 !== Ip.array) throw new Error(Ri);
-            pp[ip].stream = !0, pp[Bp] || Object.defineProperty(pp, Bp, {
+          }), TT[dT].push(UT));
+          const MT = TT[UT].type;
+          if (MT && "object" === typeof MT && void 0 !== MT.stream) {
+            if (void 0 !== MT.array) throw new Error(YU);
+            TT[UT].stream = !0, TT[QT] || Object.defineProperty(TT, QT, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), pp[Bp].includes(ip) || pp[Bp].push(ip);
-            const op = Op?.priority;
-            "function" === typeof op && si.setStreamPriority(pp, cp, op)
+            }), TT[QT].includes(UT) || TT[QT].push(UT);
+            const zT = WT?.priority;
+            "function" === typeof zT && EU.setStreamPriority(TT, mT, zT)
           }
         },
-        setTag(pp, ip, cp) {
-          const Op = pp[ip];
-          if (pp[Op].tag = cp, pp[Cp] || (Object.defineProperty(pp, Cp, {
+        setTag(TT, UT, mT) {
+          const WT = TT[UT];
+          if (TT[WT].tag = mT, TT[wT] || (Object.defineProperty(TT, wT, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(pp, Ep, {
+            }), Object.defineProperty(TT, tT, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), pp[Cp].push(Op), cp < 0) pp[Ep][cp] || (pp[Ep][cp] = []), pp[Ep][cp].push(Op);
+            })), TT[wT].push(WT), mT < 0) TT[tT][mT] || (TT[tT][mT] = []), TT[tT][mT].push(WT);
           else
-            for (let op = cp; op > 0; op &= op - 1) {
-              const ip = op & -op;
-              pp[Ep][ip] || (pp[Ep][ip] = []), pp[Ep][ip].push(Op)
+            for (let zT = mT; zT > 0; zT &= zT - 1) {
+              const UT = zT & -zT;
+              TT[tT][UT] || (TT[tT][UT] = []), TT[tT][UT].push(WT)
             }
         },
-        setUnreliable(pp, ip) {
-          const cp = pp[ip];
-          if ("string" !== typeof pp[cp].type) throw new Error(`@unreliable cannot be applied to ref-type field "${ip}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          pp[cp].unreliable = !0, pp[Xp] || Object.defineProperty(pp, Xp, {
+        setUnreliable(TT, UT) {
+          const mT = TT[UT];
+          if ("string" !== typeof TT[mT].type) throw new Error(`@unreliable cannot be applied to ref-type field "${UT}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          TT[mT].unreliable = !0, TT[aT] || Object.defineProperty(TT, aT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), pp[Xp].push(cp)
+          }), TT[aT].push(mT)
         },
-        setPatchOnly(pp, ip) {
-          const cp = pp[ip];
-          if (pp[cp].fullStateOnly) throw new Error(`field "${ip}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          pp[cp].patchOnly = !0, zi(pp, lp, cp), zi(pp, Qp, cp)
+        setPatchOnly(TT, UT) {
+          const mT = TT[UT];
+          if (TT[mT].fullStateOnly) throw new Error(`field "${UT}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          TT[mT].patchOnly = !0, NU(TT, yT, mT), NU(TT, XT, mT)
         },
-        setDeprecated(pp, ip) {
-          const cp = pp[ip];
-          pp[cp].deprecated = !0, zi(pp, Qp, cp), Object.defineProperty(pp, cp, {
-            value: pp[cp],
+        setDeprecated(TT, UT) {
+          const mT = TT[UT];
+          TT[mT].deprecated = !0, NU(TT, XT, mT), Object.defineProperty(TT, mT, {
+            value: TT[mT],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(pp, ip) {
-          const cp = pp[ip];
-          if (pp[cp].patchOnly) throw new Error(`field "${ip}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          pp[cp].fullStateOnly = !0, zi(pp, Jp, cp)
+        setFullStateOnly(TT, UT) {
+          const mT = TT[UT];
+          if (TT[mT].patchOnly) throw new Error(`field "${UT}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          TT[mT].fullStateOnly = !0, NU(TT, IT, mT)
         },
-        setStream(pp, ip) {
-          const cp = pp[ip];
-          pp[cp].stream = !0, pp[Bp] || Object.defineProperty(pp, Bp, {
+        setStream(TT, UT) {
+          const mT = TT[UT];
+          TT[mT].stream = !0, TT[QT] || Object.defineProperty(TT, QT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), pp[Bp].push(cp)
+          }), TT[QT].push(mT)
         },
-        setStreamPriority(pp, ip, cp) {
-          const Op = pp[ip];
-          pp[Np] || Object.defineProperty(pp, Np, {
+        setStreamPriority(TT, UT, mT) {
+          const WT = TT[UT];
+          TT[sT] || Object.defineProperty(TT, sT, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), pp[Np][Op] = cp
+          }), TT[sT][WT] = mT
         },
-        getStreamPriority: (pp, ip) => pp?.[Np]?.[ip],
-        defineField(pp, ip, cp, Op, op) {
-          const Ip = gi(op, `${pp.name}.${Op}`),
+        getStreamPriority: (TT, UT) => TT?.[sT]?.[UT],
+        defineField(TT, UT, mT, WT, zT) {
+          const MT = rU(zT, `${TT.name}.${WT}`),
             {
-              complexTypeKlass: Sp,
-              childType: xp
-            } = Fi(Ip);
-          si.addField(ip, cp, Op, Ip, mO(Op, cp, xp, Sp)), ip[kp][Op] && Object.defineProperty(pp.prototype, Op, ip[kp][Op]), ("string" === typeof Ip || Ti(Ip)) && (ip[Rp] || Object.defineProperty(ip, Rp, {
+              complexTypeKlass: gT,
+              childType: nT
+            } = CU(MT);
+          EU.addField(UT, mT, WT, MT, eW(WT, mT, nT, gT)), UT[eT][WT] && Object.defineProperty(TT.prototype, WT, UT[eT][WT]), ("string" === typeof MT || sU(MT)) && (UT[JT] || Object.defineProperty(UT, JT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), ip[Rp][cp] = "string" === typeof Ip ? Oi[Ip] : ai(Ip.quantized))
+          }), UT[JT][mT] = "string" === typeof MT ? UU[MT] : VU(MT.quantized))
         },
-        setFields(pp, ip) {
-          const cp = pp.prototype.constructor;
-          ni.register(cp);
-          const Op = Object.getPrototypeOf(cp),
-            op = Op && Op[Symbol.metadata],
-            Ip = si.initialize(cp);
-          cp[Lp] || (cp[Lp] = XO[Lp]), cp[Yp] || (cp[Yp] = XO[Yp]), cp[Dp] || (cp[Dp] = XO[Dp]), cp.prototype.toJSON || (cp.prototype.toJSON = XO.prototype.toJSON);
-          let Sp = Ip[qp] ?? (op && op[qp]) ?? -1;
-          Sp++, Ip[Rp] || Object.defineProperty(Ip, Rp, {
-            value: op?.[Rp] ? [...op[Rp]] : [],
+        setFields(TT, UT) {
+          const mT = TT.prototype.constructor;
+          uU.register(mT);
+          const WT = Object.getPrototypeOf(mT),
+            zT = WT && WT[Symbol.metadata],
+            MT = EU.initialize(mT);
+          mT[HT] || (mT[HT] = tW[HT]), mT[kT] || (mT[kT] = tW[kT]), mT[jT] || (mT[jT] = tW[jT]), mT.prototype.toJSON || (mT.prototype.toJSON = tW.prototype.toJSON);
+          let gT = MT[xT] ?? (zT && zT[xT]) ?? -1;
+          gT++, MT[JT] || Object.defineProperty(MT, JT, {
+            value: zT?.[JT] ? [...zT[JT]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const xp in ip) {
-            if (void 0 !== Ip[xp]) throw new Error(`@colyseus/schema: Duplicate '${xp}' definition on '${cp.name||"(anonymous)"}'.`);
-            si.defineField(cp, Ip, Sp, xp, ip[xp]), Sp++
+          for (const nT in UT) {
+            if (void 0 !== MT[nT]) throw new Error(`@colyseus/schema: Duplicate '${nT}' definition on '${mT.name||"(anonymous)"}'.`);
+            EU.defineField(mT, MT, gT, nT, UT[nT]), gT++
           }
-          return pp
+          return TT
         },
-        isDeprecated: (pp, ip) => !0 === pp[ip].deprecated,
-        initialize(pp) {
-          const ip = Object.getPrototypeOf(pp),
-            cp = ip[Symbol.metadata];
-          let Op = pp[Symbol.metadata] ?? Object.create(null);
-          if (ip !== XO && Op === cp && (Op = Object.create(null), cp)) {
-            Object.setPrototypeOf(Op, cp), Object.defineProperty(Op, qp, {
-              value: cp[qp],
+        isDeprecated: (TT, UT) => !0 === TT[UT].deprecated,
+        initialize(TT) {
+          const UT = Object.getPrototypeOf(TT),
+            mT = UT[Symbol.metadata];
+          let WT = TT[Symbol.metadata] ?? Object.create(null);
+          if (UT !== tW && WT === mT && (WT = Object.create(null), mT)) {
+            Object.setPrototypeOf(WT, mT), Object.defineProperty(WT, xT, {
+              value: mT[xT],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== cp[Cp] && (Object.defineProperty(Op, Cp, {
-              value: [...cp[Cp]],
+            }), void 0 !== mT[wT] && (Object.defineProperty(WT, wT, {
+              value: [...mT[wT]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Op, Ep, {
+            }), Object.defineProperty(WT, tT, {
               value: {
-                ...cp[Ep]
+                ...mT[tT]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const pp of Zi) {
-              const ip = cp[pp];
-              void 0 !== ip && Object.defineProperty(Op, pp, {
-                value: [...ip],
+            for (const TT of GU) {
+              const UT = mT[TT];
+              void 0 !== UT && Object.defineProperty(WT, TT, {
+                value: [...UT],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Op, kp, {
+            Object.defineProperty(WT, eT, {
               value: {
-                ...cp[kp]
+                ...mT[eT]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(pp, Symbol.metadata, {
-            value: Op,
+          return Object.defineProperty(TT, Symbol.metadata, {
+            value: WT,
             writable: !1,
             configurable: !0
-          }), Op
+          }), WT
         },
-        isValidInstance: pp => pp.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(pp.constructor[Symbol.metadata], qp),
-        getFields(pp) {
-          const ip = pp[Symbol.metadata],
-            cp = {};
-          for (let Op = 0; Op <= ip[qp]; Op++) cp[ip[Op].name] = ip[Op].type;
-          return cp
+        isValidInstance: TT => TT.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(TT.constructor[Symbol.metadata], xT),
+        getFields(TT) {
+          const UT = TT[Symbol.metadata],
+            mT = {};
+          for (let WT = 0; WT <= UT[xT]; WT++) mT[UT[WT].name] = UT[WT].type;
+          return mT
         },
-        hasViewTagAtIndex: (pp, ip) => pp?.[Cp]?.includes(ip),
-        hasUnreliableAtIndex: (pp, ip) => pp?.[Xp]?.includes(ip),
-        hasPatchOnlyAtIndex: (pp, ip) => pp?.[lp]?.includes(ip),
-        hasFullStateOnlyAtIndex: (pp, ip) => pp?.[Jp]?.includes(ip),
-        hasStreamAtIndex: (pp, ip) => pp?.[Bp]?.includes(ip)
+        hasViewTagAtIndex: (TT, UT) => TT?.[wT]?.includes(UT),
+        hasUnreliableAtIndex: (TT, UT) => TT?.[aT]?.includes(UT),
+        hasPatchOnlyAtIndex: (TT, UT) => TT?.[yT]?.includes(UT),
+        hasFullStateOnlyAtIndex: (TT, UT) => TT?.[IT]?.includes(UT),
+        hasStreamAtIndex: (TT, UT) => TT?.[QT]?.includes(UT)
       },
-      Ki = (pp, ip, cp) => pp(ip, cp);
-    class Vi {
+      hU = (TT, UT, mT) => TT(UT, mT);
+    class DU {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(pp) {
-        this.ops = new Uint8Array(Math.max(pp + 1, 1))
+      constructor(TT) {
+        this.ops = new Uint8Array(Math.max(TT + 1, 1))
       }
-      record(pp, ip) {
-        const cp = this.ops[pp];
-        0 === cp ? this.ops[pp] = ip : (cp === op.DELETE || cp === op.ADD && ip === op.DELETE_AND_ADD) && (this.ops[pp] = op.DELETE_AND_ADD), pp < 32 ? this.dirtyLow |= 1 << pp : this.dirtyHigh |= 1 << pp - 32
+      record(TT, UT) {
+        const mT = this.ops[TT];
+        0 === mT ? this.ops[TT] = UT : (mT === zT.DELETE || mT === zT.ADD && UT === zT.DELETE_AND_ADD) && (this.ops[TT] = zT.DELETE_AND_ADD), TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      recordDelete(pp, ip) {
-        this.ops[pp] = ip, pp < 32 ? this.dirtyLow |= 1 << pp : this.dirtyHigh |= 1 << pp - 32
+      recordDelete(TT, UT) {
+        this.ops[TT] = UT, TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      recordRaw(pp, ip) {
-        this.record(pp, ip)
+      recordRaw(TT, UT) {
+        this.record(TT, UT)
       }
-      operationAt(pp) {
-        const ip = this.ops[pp];
-        return 0 === ip ? void 0 : ip
+      operationAt(TT) {
+        const UT = this.ops[TT];
+        return 0 === UT ? void 0 : UT
       }
-      setOperationAt(pp, ip) {
-        this.ops[pp] = ip
+      setOperationAt(TT, UT) {
+        this.ops[TT] = UT
       }
-      forEach(pp) {
-        this.forEachWithCtx(pp, Ki)
+      forEach(TT) {
+        this.forEachWithCtx(TT, hU)
       }
-      forEachWithCtx(pp, ip) {
-        let cp = this.dirtyLow,
-          Op = this.dirtyHigh;
-        const op = this.ops;
-        for (; 0 !== cp;) {
-          const Op = cp & -cp,
-            Ip = 31 - Math.clz32(Op);
-          cp ^= Op, ip(pp, Ip, op[Ip])
+      forEachWithCtx(TT, UT) {
+        let mT = this.dirtyLow,
+          WT = this.dirtyHigh;
+        const zT = this.ops;
+        for (; 0 !== mT;) {
+          const WT = mT & -mT,
+            MT = 31 - Math.clz32(WT);
+          mT ^= WT, UT(TT, MT, zT[MT])
         }
-        for (; 0 !== Op;) {
-          const cp = Op & -Op,
-            Ip = 31 - Math.clz32(cp) + 32;
-          Op ^= cp, ip(pp, Ip, op[Ip])
+        for (; 0 !== WT;) {
+          const mT = WT & -WT,
+            MT = 31 - Math.clz32(mT) + 32;
+          WT ^= mT, UT(TT, MT, zT[MT])
         }
       }
       size() {
-        return ic(this.dirtyLow) + ic(this.dirtyHigh)
+        return AU(this.dirtyLow) + AU(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class pc {
-      pU = new Map;
+    class oU {
+      aB = new Map;
       pureOps = [];
-      record(pp, ip) {
-        const cp = this.pU.get(pp);
-        void 0 === cp ? this.pU.set(pp, ip) : (cp === op.DELETE || cp === op.ADD && ip === op.DELETE_AND_ADD) && this.pU.set(pp, op.DELETE_AND_ADD)
+      record(TT, UT) {
+        const mT = this.aB.get(TT);
+        void 0 === mT ? this.aB.set(TT, UT) : (mT === zT.DELETE || mT === zT.ADD && UT === zT.DELETE_AND_ADD) && this.aB.set(TT, zT.DELETE_AND_ADD)
       }
-      recordDelete(pp, ip) {
-        this.pU.set(pp, ip)
+      recordDelete(TT, UT) {
+        this.aB.set(TT, UT)
       }
-      recordRaw(pp, ip) {
-        this.pU.set(pp, ip)
+      recordRaw(TT, UT) {
+        this.aB.set(TT, UT)
       }
-      recordPure(pp) {
-        this.pureOps.push([this.pU.size, pp])
+      recordPure(TT) {
+        this.pureOps.push([this.aB.size, TT])
       }
-      operationAt(pp) {
-        return this.pU.get(pp)
+      operationAt(TT) {
+        return this.aB.get(TT)
       }
-      setOperationAt(pp, ip) {
-        this.pU.has(pp) && this.pU.set(pp, ip)
+      setOperationAt(TT, UT) {
+        this.aB.has(TT) && this.aB.set(TT, UT)
       }
-      forEach(pp) {
-        this.forEachWithCtx(pp, Ki)
+      forEach(TT) {
+        this.forEachWithCtx(TT, hU)
       }
-      forEachWithCtx(pp, ip) {
-        const cp = this.pureOps;
-        if (cp.length > 0) {
-          let Op = 0,
-            op = 0;
-          for (const [Ip, Sp] of this.pU) {
-            for (; Op < cp.length && cp[Op][0] <= op;) {
-              const op = cp[Op++][1];
-              ip(pp, -op, op)
+      forEachWithCtx(TT, UT) {
+        const mT = this.pureOps;
+        if (mT.length > 0) {
+          let WT = 0,
+            zT = 0;
+          for (const [MT, gT] of this.aB) {
+            for (; WT < mT.length && mT[WT][0] <= zT;) {
+              const zT = mT[WT++][1];
+              UT(TT, -zT, zT)
             }
-            ip(pp, Ip, Sp), op++
+            UT(TT, MT, gT), zT++
           }
-          for (; Op < cp.length;) {
-            const op = cp[Op++][1];
-            ip(pp, -op, op)
+          for (; WT < mT.length;) {
+            const zT = mT[WT++][1];
+            UT(TT, -zT, zT)
           }
         } else
-          for (const [Op, op] of this.pU) ip(pp, Op, op)
+          for (const [WT, zT] of this.aB) UT(TT, WT, zT)
       }
       size() {
-        return this.pU.size + this.pureOps.length
+        return this.aB.size + this.pureOps.length
       }
       has() {
-        return this.pU.size > 0 || this.pureOps.length > 0
+        return this.aB.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.pU.clear(), this.pureOps.length = 0
+        this.aB.clear(), this.pureOps.length = 0
       }
-      shift(pp) {
-        const ip = new Map;
-        for (const [cp, Op] of this.pU) ip.set(cp + pp, Op);
-        this.pU = ip
+      shift(TT) {
+        const UT = new Map;
+        for (const [mT, WT] of this.aB) UT.set(mT + TT, WT);
+        this.aB = UT
       }
     }
 
-    function ic(pp) {
-      return 16843009 * ((pp = (858993459 & (pp -= pp >>> 1 & 1431655765)) + (pp >>> 2 & 858993459)) + (pp >>> 4) & 252645135) >>> 24
+    function AU(TT) {
+      return 16843009 * ((TT = (858993459 & (TT -= TT >>> 1 & 1431655765)) + (TT >>> 2 & 858993459)) + (TT >>> 4) & 252645135) >>> 24
     }
 
-    function cc(pp) {
-      if (void 0 === pp) return 0;
-      let ip = 0;
-      for (let cp = 0, Op = pp.length; cp < Op; cp++) {
-        const Op = pp[cp];
-        Op < 32 && (ip |= 1 << Op)
+    function RU(TT) {
+      if (void 0 === TT) return 0;
+      let UT = 0;
+      for (let mT = 0, WT = TT.length; mT < WT; mT++) {
+        const WT = TT[mT];
+        WT < 32 && (UT |= 1 << WT)
       }
-      return ip
+      return UT
     }
 
-    function Oc(pp) {
-      const ip = pp.constructor;
-      if (Object.prototype.hasOwnProperty.call(ip, mp)) return ip[mp];
-      const cp = ip[Symbol.metadata],
-        Op = si.isValidInstance(pp),
-        op = (cp?.[Cp]?.length ?? 0) > 0,
-        Ip = function(pp) {
-          const ip = [],
-            cp = [],
-            Op = [],
-            op = [],
-            Ip = pp?.[qp];
-          if (void 0 === Ip) return {
-            names: ip,
-            types: cp,
-            tags: Op,
-            encoders: op
+    function Tm(TT) {
+      const UT = TT.constructor;
+      if (Object.prototype.hasOwnProperty.call(UT, YT)) return UT[YT];
+      const mT = UT[Symbol.metadata],
+        WT = EU.isValidInstance(TT),
+        zT = (mT?.[wT]?.length ?? 0) > 0,
+        MT = function(TT) {
+          const UT = [],
+            mT = [],
+            WT = [],
+            zT = [],
+            MT = TT?.[xT];
+          if (void 0 === MT) return {
+            names: UT,
+            types: mT,
+            tags: WT,
+            encoders: zT
           };
-          const Sp = pp[Rp];
-          for (let xp = 0; xp <= Ip; xp++) {
-            const Ip = pp[xp];
-            void 0 !== Ip ? (ip[xp] = Ip.name, cp[xp] = Ip.type, Op[xp] = Ip.tag, op[xp] = Sp?.[xp]) : (ip[xp] = void 0, cp[xp] = void 0, Op[xp] = void 0, op[xp] = void 0)
+          const gT = TT[JT];
+          for (let nT = 0; nT <= MT; nT++) {
+            const MT = TT[nT];
+            void 0 !== MT ? (UT[nT] = MT.name, mT[nT] = MT.type, WT[nT] = MT.tag, zT[nT] = gT?.[nT]) : (UT[nT] = void 0, mT[nT] = void 0, WT[nT] = void 0, zT[nT] = void 0)
           }
           return {
-            names: ip,
-            types: cp,
-            tags: Op,
-            encoders: op
+            names: UT,
+            types: mT,
+            tags: WT,
+            encoders: zT
           }
-        }(cp),
-        Sp = Op && !op ? void 0 : ip[Ap],
-        xp = {
-          encoder: ip[Yp],
-          filter: Sp,
-          metadata: cp,
-          isSchema: Op,
-          filterBitmask: Op ? cc(cp?.[Cp]) : 0,
-          hasAnyFullStateOnly: (cp?.[Jp]?.length ?? 0) > 0,
-          hasAnyUnreliable: (cp?.[Xp]?.length ?? 0) > 0,
-          hasAnyStream: (cp?.[Bp]?.length ?? 0) > 0,
-          hasAnyView: op,
-          fullStateOnlyBitmask: cc(cp?.[Jp]),
-          unreliableBitmask: cc(cp?.[Xp]),
-          streamBitmask: cc(cp?.[Bp]),
-          names: Ip.names,
-          types: Ip.types,
-          tags: Ip.tags,
-          encoders: Ip.encoders
+        }(mT),
+        gT = WT && !zT ? void 0 : UT[lT],
+        nT = {
+          encoder: UT[kT],
+          filter: gT,
+          metadata: mT,
+          isSchema: WT,
+          filterBitmask: WT ? RU(mT?.[wT]) : 0,
+          hasAnyFullStateOnly: (mT?.[IT]?.length ?? 0) > 0,
+          hasAnyUnreliable: (mT?.[aT]?.length ?? 0) > 0,
+          hasAnyStream: (mT?.[QT]?.length ?? 0) > 0,
+          hasAnyView: zT,
+          fullStateOnlyBitmask: RU(mT?.[IT]),
+          unreliableBitmask: RU(mT?.[aT]),
+          streamBitmask: RU(mT?.[QT]),
+          names: MT.names,
+          types: MT.types,
+          tags: MT.tags,
+          encoders: MT.encoders
         };
-      return Object.defineProperty(ip, mp, {
-        value: xp,
+      return Object.defineProperty(UT, YT, {
+        value: nT,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), xp
+      }), nT
     }
 
-    function oc(pp, ip) {
-      if (void 0 !== pp.parentRef && ip(pp.parentRef, pp._parentIndex)) return !0;
-      for (let cp = pp.extraParents; void 0 !== cp; cp = cp.next)
-        if (ip(cp.ref, cp.index)) return !0;
+    function Um(TT, UT) {
+      if (void 0 !== TT.parentRef && UT(TT.parentRef, TT._parentIndex)) return !0;
+      for (let mT = TT.extraParents; void 0 !== mT; mT = mT.next)
+        if (UT(mT.ref, mT.index)) return !0;
       return !1
     }
-    const Ic = (pp, ip) => {
-        pp.isFieldUnreliable(ip) ? pp.ensureUnreliableRecorder().record(ip, op.ADD) : pp.record(ip, op.ADD)
+    const mm = (TT, UT) => {
+        TT.isFieldUnreliable(UT) ? TT.ensureUnreliableRecorder().record(UT, zT.ADD) : TT.record(UT, zT.ADD)
       },
-      Sc = (pp, ip) => pp(ip);
+      Wm = (TT, UT) => TT(UT);
 
-    function xc(pp, ip, cp) {
-      const Op = pp.refTarget;
-      if (void 0 !== Op[wp]) {
-        if (pp.isPatchOnly) return;
-        if (Array.isArray(Op.items)) {
-          const pp = Op.items;
-          for (let Op = 0, op = pp.length; Op < op; Op++) void 0 !== pp[Op] && cp(ip, Op)
-        } else if (void 0 !== Op.journal)
-          for (const [pp, op] of Op.journal.keyByIndex) Op.$items.has(op) && cp(ip, pp);
-        else if (void 0 !== Op.$items)
-          for (const pp of Op.$items.keys()) cp(ip, pp)
+    function zm(TT, UT, mT) {
+      const WT = TT.refTarget;
+      if (void 0 !== WT[cT]) {
+        if (TT.isPatchOnly) return;
+        if (Array.isArray(WT.items)) {
+          const TT = WT.items;
+          for (let WT = 0, zT = TT.length; WT < zT; WT++) void 0 !== TT[WT] && mT(UT, WT)
+        } else if (void 0 !== WT.journal)
+          for (const [TT, zT] of WT.journal.keyByIndex) WT.$items.has(zT) && mT(UT, TT);
+        else if (void 0 !== WT.$items)
+          for (const TT of WT.$items.keys()) mT(UT, TT)
       } else {
-        const op = pp.metadata;
-        if (!op) return;
-        const Ip = op[qp] ?? -1,
-          Sp = op[Qp],
-          xp = pp.encDescriptor.names;
-        for (let pp = 0; pp <= Ip; pp++) {
-          const op = xp[pp];
-          if (void 0 === op) continue;
-          if (Sp && Sp.includes(pp)) continue;
-          const Ip = Op[op];
-          void 0 !== Ip && null !== Ip && cp(ip, pp)
+        const zT = TT.metadata;
+        if (!zT) return;
+        const MT = zT[xT] ?? -1,
+          gT = zT[XT],
+          nT = TT.encDescriptor.names;
+        for (let TT = 0; TT <= MT; TT++) {
+          const zT = nT[TT];
+          if (void 0 === zT) continue;
+          if (gT && gT.includes(TT)) continue;
+          const MT = WT[zT];
+          void 0 !== MT && null !== MT && mT(UT, TT)
         }
       }
     }
 
-    function Lc(pp, ip, cp, Op) {
-      ! function(pp, ip, cp) {
-        if (!ip) return;
-        const Op = ip[Up],
-          op = !Op._isSchema;
-        let Ip;
-        op ? (ip = Op.parent, cp = Op.parentIndex, Ip = ip?.[Up].metadata) : Ip = Op.metadata;
-        const Sp = (Ip?.[lp]?.includes(cp) ? qc : 0) | (Ip?.[Jp]?.includes(cp) ? Mc : 0),
-          xp = Op.flags & Xc | Sp,
-          Lp = pp.flags;
-        pp.flags = Lp | xp;
-        xp & ~Lp & Mc && (pp.reset(), pp.unreliableRecorder?.reset());
-        const Yp = pp.root?.types;
-        if (!Yp?.hasFilters) return;
-        const Dp = Ip?.[Cp]?.includes(cp) ?? !1,
-          Ap = Ip?.[Bp]?.includes(cp) ?? !1,
-          Pp = Op.isFiltered || Dp || Ap;
-        if (pp.isFiltered = Pp, Ap && !op) {
-          pp.isStreamCollection = !0;
-          const ip = Mi(pp.ref);
-          if (void 0 === ip.priority) {
-            const pp = si.getStreamPriority(Ip, cp);
-            void 0 !== pp && (ip.priority = pp)
+    function Mm(TT, UT, mT, WT) {
+      ! function(TT, UT, mT) {
+        if (!UT) return;
+        const WT = UT[ZT],
+          zT = !WT._isSchema;
+        let MT;
+        zT ? (UT = WT.parent, mT = WT.parentIndex, MT = UT?.[ZT].metadata) : MT = WT.metadata;
+        const gT = (MT?.[yT]?.includes(mT) ? Jm : 0) | (MT?.[IT]?.includes(mT) ? xm : 0),
+          nT = WT.flags & tm | gT,
+          HT = TT.flags;
+        TT.flags = HT | nT;
+        nT & ~HT & xm && (TT.reset(), TT.unreliableRecorder?.reset());
+        const kT = TT.root?.types;
+        if (!kT?.hasFilters) return;
+        const jT = MT?.[wT]?.includes(mT) ?? !1,
+          lT = MT?.[QT]?.includes(mT) ?? !1,
+          LT = WT.isFiltered || jT || lT;
+        if (TT.isFiltered = LT, lT && !zT) {
+          TT.isStreamCollection = !0;
+          const UT = xU(TT.ref);
+          if (void 0 === UT.priority) {
+            const TT = EU.getStreamPriority(MT, mT);
+            void 0 !== TT && (UT.priority = TT)
           }
-          pp.root?.registerStream(pp.ref)
+          TT.root?.registerStream(TT.ref)
         }
-        if (Pp) {
-          const ip = Dc(pp);
-          pp.isVisibilitySharedWithParent = Op.isFiltered && ip && !Ap && (!Dp || op && Ip[cp].tag !== vO)
+        if (LT) {
+          const UT = nm(TT);
+          TT.isVisibilitySharedWithParent = WT.isFiltered && UT && !lT && (!jT || zT && MT[mT].tag !== ZW)
         }
-      }(pp, ip, cp), pp.isFullStateOnly || (pp.has() && pp.root?.enqueueChangeTree(pp), pp.unreliableRecorder?.has() && pp.root?.enqueueUnreliable(pp), pp.has() || pp.unreliableRecorder?.has() || pp.root?.enqueueChangeTree(pp))
+      }(TT, UT, mT), TT.isFullStateOnly || (TT.has() && TT.root?.enqueueChangeTree(TT), TT.unreliableRecorder?.has() && TT.root?.enqueueUnreliable(TT), TT.has() || TT.unreliableRecorder?.has() || TT.root?.enqueueChangeTree(TT))
     }
 
-    function Yc(pp) {
-      const ip = pp.pendingFilterRefresh;
-      for (let cp = 0; cp < ip.length; cp++) {
-        const pp = ip[cp];
-        0 !== (pp.flags & Ec) && Ac(pp)
+    function gm(TT) {
+      const UT = TT.pendingFilterRefresh;
+      for (let mT = 0; mT < UT.length; mT++) {
+        const TT = UT[mT];
+        0 !== (TT.flags & wm) && Hm(TT)
       }
-      ip.length = 0
+      UT.length = 0
     }
 
-    function Dc(pp) {
-      return pp._isSchema || "string" !== typeof pp.refTarget[wp]
+    function nm(TT) {
+      return TT._isSchema || "string" !== typeof TT.refTarget[cT]
     }
 
-    function Ac(pp) {
-      pp.flags &= ~Ec;
-      const ip = pp.root;
-      if (void 0 === ip || void 0 === pp.parentRef) return;
-      const cp = Dc(pp);
-      let Op = wc(pp, pp.parentRef, pp._parentIndex, cp);
-      for (let Ip = pp.extraParents; void 0 !== Ip && Op !== Uc; Ip = Ip.next) Op |= wc(pp, Ip.ref, Ip.index, cp);
-      if (0 === Op) return;
-      pp.isVisibilitySharedWithParent = 0 !== (Op & yc);
-      const op = 0 === (Op & Wc);
-      op !== pp.isFiltered && (pp.isFiltered = op, op || pp.isFullStateOnly || (pp.forEachLiveWithCtx(pp, Ic), pp.has() && ip.enqueueChangeTree(pp), pp.unreliableRecorder?.has() && ip.enqueueUnreliable(pp)), pp.forEachChildWithCtx(pp, vc))
+    function Hm(TT) {
+      TT.flags &= ~wm;
+      const UT = TT.root;
+      if (void 0 === UT || void 0 === TT.parentRef) return;
+      const mT = nm(TT);
+      let WT = pm(TT, TT.parentRef, TT._parentIndex, mT);
+      for (let MT = TT.extraParents; void 0 !== MT && WT !== Lm; MT = MT.next) WT |= pm(TT, MT.ref, MT.index, mT);
+      if (0 === WT) return;
+      TT.isVisibilitySharedWithParent = 0 !== (WT & lm);
+      const zT = 0 === (WT & jm);
+      zT !== TT.isFiltered && (TT.isFiltered = zT, zT || TT.isFullStateOnly || (TT.forEachLiveWithCtx(TT, mm), TT.has() && UT.enqueueChangeTree(TT), TT.unreliableRecorder?.has() && UT.enqueueUnreliable(TT)), TT.forEachChildWithCtx(TT, Bm))
     }
-    const Pc = 1,
-      Wc = 2,
-      yc = 4,
-      Uc = Pc | Wc | yc;
+    const km = 1,
+      jm = 2,
+      lm = 4,
+      Lm = km | jm | lm;
 
-    function wc(pp, ip, cp, Op) {
-      const op = ip[Up];
-      if (op.root !== pp.root || ! function(pp, ip, cp) {
-          const Op = ip.refTarget;
-          if (ip.isArray) {
-            const ip = Op.items,
-              op = ip[cp];
-            if (void 0 !== op && op[Up] === pp) return !0;
-            for (let cp = 0, Op = ip.length; cp < Op; cp++) {
-              const Op = ip[cp];
-              if (void 0 !== Op && Op[Up] === pp) return !0
+    function pm(TT, UT, mT, WT) {
+      const zT = UT[ZT];
+      if (zT.root !== TT.root || ! function(TT, UT, mT) {
+          const WT = UT.refTarget;
+          if (UT.isArray) {
+            const UT = WT.items,
+              zT = UT[mT];
+            if (void 0 !== zT && zT[ZT] === TT) return !0;
+            for (let mT = 0, WT = UT.length; mT < WT; mT++) {
+              const WT = UT[mT];
+              if (void 0 !== WT && WT[ZT] === TT) return !0
             }
             return !1
           }
-          const op = ip.getValue(cp);
-          return void 0 !== op && op[Up] === pp
-        }(pp, op, cp)) return 0;
-      op.flags & Ec && Ac(op);
-      let Ip = Pc;
-      if (op._isSchema) {
-        void 0 !== op.encDescriptor.tags[cp] || op.isFieldStream(cp) || (op.isFiltered ? Op && (Ip |= yc) : Ip |= Wc)
-      } else if (op.isFiltered) {
-        if (Op && !op.isStreamCollection) {
-          const pp = op.parent?.[Up];
-          (pp?._isSchema ? pp.encDescriptor.tags[op.parentIndex] : void 0) !== vO && (Ip |= yc)
+          const zT = UT.getValue(mT);
+          return void 0 !== zT && zT[ZT] === TT
+        }(TT, zT, mT)) return 0;
+      zT.flags & wm && Hm(zT);
+      let MT = km;
+      if (zT._isSchema) {
+        void 0 !== zT.encDescriptor.tags[mT] || zT.isFieldStream(mT) || (zT.isFiltered ? WT && (MT |= lm) : MT |= jm)
+      } else if (zT.isFiltered) {
+        if (WT && !zT.isStreamCollection) {
+          const TT = zT.parent?.[ZT];
+          (TT?._isSchema ? TT.encDescriptor.tags[zT.parentIndex] : void 0) !== ZW && (MT |= lm)
         }
-      } else Ip |= Wc;
-      return Ip
+      } else MT |= jm;
+      return MT
     }
-    const vc = (pp, ip, cp) => {
-      Ac(ip)
+    const Bm = (TT, UT, mT) => {
+      Hm(UT)
     };
 
-    function tc(pp, ip, cp, Op) {
-      if (pp.addParent(ip, Op), !cp) return;
-      const op = cp.add(pp);
-      cp !== pp.root && (pp.root = cp, Lc(pp, ip, Op));
-      const Ip = ip?.[Up];
-      if (void 0 !== Ip && void 0 !== Ip.subscribedViews && void 0 !== ip[wp] && function(pp, ip, cp, Op) {
-          const op = pp.subscribedViews;
-          if (void 0 === op) return;
-          const Ip = pp.isStreamCollection,
-            Sp = Ip ? pp.ref : void 0,
-            xp = Ip ? void 0 : cp[Up];
-          for (let Lp = 0, Yp = op.length; Lp < Yp; Lp++) {
-            let pp = op[Lp];
-            for (; 0 !== pp;) {
-              const cp = pp & -pp;
-              pp ^= cp;
-              const Yp = 32 * Lp + (31 - Math.clz32(cp)),
-                Dp = Op.activeViews.get(Yp),
-                Ap = Dp?.deref();
-              void 0 !== Ap ? Ip ? Qi(Sp, Yp, ip) : void 0 !== xp && Ap.markVisible(xp) : op[Lp] &= ~cp
+    function Zm(TT, UT, mT, WT) {
+      if (TT.addParent(UT, WT), !mT) return;
+      const zT = mT.add(TT);
+      mT !== TT.root && (TT.root = mT, Mm(TT, UT, WT));
+      const MT = UT?.[ZT];
+      if (void 0 !== MT && void 0 !== MT.subscribedViews && void 0 !== UT[cT] && function(TT, UT, mT, WT) {
+          const zT = TT.subscribedViews;
+          if (void 0 === zT) return;
+          const MT = TT.isStreamCollection,
+            gT = MT ? TT.ref : void 0,
+            nT = MT ? void 0 : mT[ZT];
+          for (let HT = 0, kT = zT.length; HT < kT; HT++) {
+            let TT = zT[HT];
+            for (; 0 !== TT;) {
+              const mT = TT & -TT;
+              TT ^= mT;
+              const kT = 32 * HT + (31 - Math.clz32(mT)),
+                jT = WT.activeViews.get(kT),
+                lT = jT?.deref();
+              void 0 !== lT ? MT ? yU(gT, kT, UT) : void 0 !== nT && lT.markVisible(nT) : zT[HT] &= ~mT
             }
           }
-        }(Ip, Op, pp.ref, cp), op) {
-        let ip = uc[jc];
-        void 0 === ip && (ip = {
+        }(MT, WT, TT.ref, mT), zT) {
+        let UT = im[bm];
+        void 0 === UT && (UT = {
           parentRef: void 0,
           root: void 0
-        }, uc[jc] = ip), ip.parentRef = pp.ref, ip.root = cp, jc++, dc(pp, ip, kc), jc--
+        }, im[bm] = UT), UT.parentRef = TT.ref, UT.root = mT, bm++, fm(TT, UT, Om), bm--
       }
     }
 
-    function Hc(pp, ip, cp) {
-      pp(ip, cp)
+    function cm(TT, UT, mT) {
+      TT(UT, mT)
     }
 
-    function dc(pp, ip, cp) {
-      const Op = pp.refTarget;
-      if (Op[wp]) {
-        if ("string" !== typeof Op[wp]) {
-          const pp = Op.items;
-          if (void 0 !== pp)
-            for (let Op = 0, op = pp.length; Op < op; Op++) {
-              const op = pp[Op];
-              op && cp(ip, op[Up], Op)
+    function fm(TT, UT, mT) {
+      const WT = TT.refTarget;
+      if (WT[cT]) {
+        if ("string" !== typeof WT[cT]) {
+          const TT = WT.items;
+          if (void 0 !== TT)
+            for (let WT = 0, zT = TT.length; WT < zT; WT++) {
+              const zT = TT[WT];
+              zT && mT(UT, zT[ZT], WT)
             } else {
-              const pp = Op.$items,
-                op = Op._collectionIndexes;
-              for (const Op of pp.keys()) {
-                const Ip = pp.get(Op);
-                Ip && cp(ip, Ip[Up], op?.[Op] ?? Op)
+              const TT = WT.$items,
+                zT = WT._collectionIndexes;
+              for (const WT of TT.keys()) {
+                const MT = TT.get(WT);
+                MT && mT(UT, MT[ZT], zT?.[WT] ?? WT)
               }
             }
         }
       } else {
-        const op = pp.metadata,
-          Ip = op?.[Mp];
-        if (!Ip) return;
-        const Sp = pp.encDescriptor.names;
-        for (let pp = 0, xp = Ip.length; pp < xp; pp++) {
-          const op = Ip[pp],
-            xp = Op[Sp[op]];
-          xp && cp(ip, xp[Up], op)
+        const zT = TT.metadata,
+          MT = zT?.[dT];
+        if (!MT) return;
+        const gT = TT.encDescriptor.names;
+        for (let TT = 0, nT = MT.length; TT < nT; TT++) {
+          const zT = MT[TT],
+            nT = WT[gT[zT]];
+          nT && mT(UT, nT[ZT], zT)
         }
       }
     }
 
-    function ec(pp, ip, cp) {
-      ip.root !== pp ? ip.setRoot(pp) : pp.add(ip)
+    function qm(TT, UT, mT) {
+      UT.root !== TT ? UT.setRoot(TT) : TT.add(UT)
     }
-    const uc = [];
-    let jc = 0;
+    const im = [];
+    let bm = 0;
 
-    function kc(pp, ip, cp) {
-      if (ip.root === pp.root) return pp.root.add(ip), void pp.root.moveNextToParent(ip);
-      ip.setParent(pp.parentRef, pp.root, cp)
+    function Om(TT, UT, mT) {
+      if (UT.root === TT.root) return TT.root.add(UT), void TT.root.moveNextToParent(UT);
+      UT.setParent(TT.parentRef, TT.root, mT)
     }
 
-    function mc(pp, ip, cp) {
-      const Op = (3 & cp) << 3;
-      return cp < 4 ? pp >>> Op & 255 : ip >>> Op & 255
+    function em(TT, UT, mT) {
+      const WT = (3 & mT) << 3;
+      return mT < 4 ? TT >>> WT & 255 : UT >>> WT & 255
     }
-    const Rc = (pp, ip, cp) => pp(ip, cp);
-    const qc = 16,
-      Mc = 32,
-      Cc = 128,
-      Ec = 256,
-      Xc = qc | Mc;
-    class lc {
+    const Ym = (TT, UT, mT) => TT(UT, mT);
+    const Jm = 16,
+      xm = 32,
+      dm = 128,
+      wm = 256,
+      tm = Jm | xm;
+    class am {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(pp) {
-        this.flags = pp ? 1 | this.flags : -2 & this.flags
+      set isFiltered(TT) {
+        this.flags = TT ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(pp) {
-        this.flags = pp ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(TT) {
+        this.flags = TT ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(pp) {
-        this.flags = pp ? 4 | this.flags : -5 & this.flags
+      set isNew(TT) {
+        this.flags = TT ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(pp) {
-        this.flags = pp ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(TT) {
+        this.flags = TT ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & qc)
+        return 0 !== (this.flags & Jm)
       }
-      set isPatchOnly(pp) {
-        this.flags = pp ? this.flags | qc : this.flags & ~qc
+      set isPatchOnly(TT) {
+        this.flags = TT ? this.flags | Jm : this.flags & ~Jm
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & Mc)
+        return 0 !== (this.flags & xm)
       }
-      set isFullStateOnly(pp) {
-        this.flags = pp ? this.flags | Mc : this.flags & ~Mc
+      set isFullStateOnly(TT) {
+        this.flags = TT ? this.flags | xm : this.flags & ~xm
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(pp) {
-        this.flags = pp ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(TT) {
+        this.flags = TT ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Cc)
+        return 0 !== (this.flags & dm)
       }
-      set needsRestage(pp) {
-        this.flags = pp ? this.flags | Cc : -129 & this.flags
+      set needsRestage(TT) {
+        this.flags = TT ? this.flags | dm : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Vi(this.metadata?.[qp] ?? 0) : new pc), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new DU(this.metadata?.[xT] ?? 0) : new oU), this.unreliableRecorder
       }
-      isFieldUnreliable(pp) {
-        const ip = this.encDescriptor;
-        return !!ip.hasAnyUnreliable && (pp < 32 ? 0 !== (ip.unreliableBitmask & 1 << pp) : si.hasUnreliableAtIndex(this.metadata, pp))
+      isFieldUnreliable(TT) {
+        const UT = this.encDescriptor;
+        return !!UT.hasAnyUnreliable && (TT < 32 ? 0 !== (UT.unreliableBitmask & 1 << TT) : EU.hasUnreliableAtIndex(this.metadata, TT))
       }
-      isFieldFullStateOnly(pp) {
+      isFieldFullStateOnly(TT) {
         if (this.isFullStateOnly) return !0;
-        const ip = this.encDescriptor;
-        return !!ip.hasAnyFullStateOnly && (pp < 32 ? 0 !== (ip.fullStateOnlyBitmask & 1 << pp) : si.hasFullStateOnlyAtIndex(this.metadata, pp))
+        const UT = this.encDescriptor;
+        return !!UT.hasAnyFullStateOnly && (TT < 32 ? 0 !== (UT.fullStateOnlyBitmask & 1 << TT) : EU.hasFullStateOnlyAtIndex(this.metadata, TT))
       }
-      isFieldStream(pp) {
-        const ip = this.encDescriptor;
-        return !!ip.hasAnyStream && (pp < 32 ? 0 !== (ip.streamBitmask & 1 << pp) : si.hasStreamAtIndex(this.metadata, pp))
+      isFieldStream(TT) {
+        const UT = this.encDescriptor;
+        return !!UT.hasAnyStream && (TT < 32 ? 0 !== (UT.streamBitmask & 1 << TT) : EU.hasStreamAtIndex(this.metadata, TT))
       }
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pp;
-        this.ref = pp, this.refTarget = ip;
-        const cp = Oc(pp);
-        this.encDescriptor = cp, this.metadata = cp.metadata;
-        const Op = cp.isSchema;
-        if (this._isSchema = Op, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Op) {
-          const pp = this.metadata?.[qp] ?? 0;
-          pp > 7 && (this.ops = new Uint8Array(pp + 1))
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+        this.ref = TT, this.refTarget = UT;
+        const mT = Tm(TT);
+        this.encDescriptor = mT, this.metadata = mT.metadata;
+        const WT = mT.isSchema;
+        if (this._isSchema = WT, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, WT) {
+          const TT = this.metadata?.[xT] ?? 0;
+          TT > 7 && (this.ops = new Uint8Array(TT + 1))
         } else this.collDirty = new Map
       }
-      _opAt(pp) {
-        const ip = this.ops;
-        if (void 0 !== ip) return ip[pp];
-        const cp = (3 & pp) << 3;
-        return pp < 4 ? this.opsLow >>> cp & 255 : this.opsHigh >>> cp & 255
+      _opAt(TT) {
+        const UT = this.ops;
+        if (void 0 !== UT) return UT[TT];
+        const mT = (3 & TT) << 3;
+        return TT < 4 ? this.opsLow >>> mT & 255 : this.opsHigh >>> mT & 255
       }
-      _opPut(pp, ip) {
-        const cp = this.ops;
-        if (void 0 !== cp) return void(cp[pp] = ip);
-        const Op = (3 & pp) << 3,
-          op = ~(255 << Op);
-        pp < 4 ? this.opsLow = this.opsLow & op | ip << Op : this.opsHigh = this.opsHigh & op | ip << Op
+      _opPut(TT, UT) {
+        const mT = this.ops;
+        if (void 0 !== mT) return void(mT[TT] = UT);
+        const WT = (3 & TT) << 3,
+          zT = ~(255 << WT);
+        TT < 4 ? this.opsLow = this.opsLow & zT | UT << WT : this.opsHigh = this.opsHigh & zT | UT << WT
       }
-      _markDirty(pp) {
-        pp < 32 ? this.dirtyLow |= 1 << pp : this.dirtyHigh |= 1 << pp - 32
+      _markDirty(TT) {
+        TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      record(pp, ip) {
+      record(TT, UT) {
         if (this._isSchema) {
-          const cp = this._opAt(pp);
-          0 === cp ? this._opPut(pp, ip) : (cp === op.DELETE || cp === op.ADD && ip === op.DELETE_AND_ADD) && this._opPut(pp, op.DELETE_AND_ADD), this._markDirty(pp)
+          const mT = this._opAt(TT);
+          0 === mT ? this._opPut(TT, UT) : (mT === zT.DELETE || mT === zT.ADD && UT === zT.DELETE_AND_ADD) && this._opPut(TT, zT.DELETE_AND_ADD), this._markDirty(TT)
         } else {
-          const cp = this.collDirty,
-            Op = cp.get(pp);
-          let Ip;
-          Ip = void 0 === Op ? ip : Op === op.DELETE || Op === op.ADD && ip === op.DELETE_AND_ADD ? op.DELETE_AND_ADD : Op, cp.set(pp, Ip)
+          const mT = this.collDirty,
+            WT = mT.get(TT);
+          let MT;
+          MT = void 0 === WT ? UT : WT === zT.DELETE || WT === zT.ADD && UT === zT.DELETE_AND_ADD ? zT.DELETE_AND_ADD : WT, mT.set(TT, MT)
         }
       }
-      recordDelete(pp, ip) {
-        this._isSchema ? (this._opPut(pp, ip), this._markDirty(pp)) : this.collDirty.set(pp, ip)
+      recordDelete(TT, UT) {
+        this._isSchema ? (this._opPut(TT, UT), this._markDirty(TT)) : this.collDirty.set(TT, UT)
       }
-      recordRaw(pp, ip) {
-        this._isSchema ? (this._opPut(pp, ip), this._markDirty(pp)) : this.collDirty.set(pp, ip)
+      recordRaw(TT, UT) {
+        this._isSchema ? (this._opPut(TT, UT), this._markDirty(TT)) : this.collDirty.set(TT, UT)
       }
-      recordPure(pp) {
+      recordPure(TT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, pp])
+        (this.collPureOps ??= []).push([this.collDirty.size, TT])
       }
-      operationAt(pp) {
+      operationAt(TT) {
         if (this._isSchema) {
-          const ip = this._opAt(pp);
-          return 0 === ip ? void 0 : ip
+          const UT = this._opAt(TT);
+          return 0 === UT ? void 0 : UT
         }
-        return this.collDirty.get(pp)
+        return this.collDirty.get(TT)
       }
-      setOperationAt(pp, ip) {
-        if (this._isSchema) this._opPut(pp, ip);
+      setOperationAt(TT, UT) {
+        if (this._isSchema) this._opPut(TT, UT);
         else {
-          const cp = this.collDirty;
-          cp.has(pp) && cp.set(pp, ip)
+          const mT = this.collDirty;
+          mT.has(TT) && mT.set(TT, UT)
         }
       }
-      forEach(pp) {
-        this.forEachWithCtx(pp, Rc)
+      forEach(TT) {
+        this.forEachWithCtx(TT, Ym)
       }
-      forEachWithCtx(pp, ip) {
+      forEachWithCtx(TT, UT) {
         if (this._isSchema) {
-          let cp = this.dirtyLow,
-            Op = this.dirtyHigh;
-          const op = this.ops;
-          if (void 0 !== op) {
-            for (; 0 !== cp;) {
-              const Op = cp & -cp,
-                Ip = 31 - Math.clz32(Op);
-              cp ^= Op, ip(pp, Ip, op[Ip])
+          let mT = this.dirtyLow,
+            WT = this.dirtyHigh;
+          const zT = this.ops;
+          if (void 0 !== zT) {
+            for (; 0 !== mT;) {
+              const WT = mT & -mT,
+                MT = 31 - Math.clz32(WT);
+              mT ^= WT, UT(TT, MT, zT[MT])
             }
-            for (; 0 !== Op;) {
-              const cp = Op & -Op,
-                Ip = 31 - Math.clz32(cp) + 32;
-              Op ^= cp, ip(pp, Ip, op[Ip])
+            for (; 0 !== WT;) {
+              const mT = WT & -WT,
+                MT = 31 - Math.clz32(mT) + 32;
+              WT ^= mT, UT(TT, MT, zT[MT])
             }
           } else {
-            const Op = this.opsLow,
-              op = this.opsHigh;
-            for (; 0 !== cp;) {
-              const Ip = cp & -cp,
-                Sp = 31 - Math.clz32(Ip);
-              cp ^= Ip, ip(pp, Sp, mc(Op, op, Sp))
+            const WT = this.opsLow,
+              zT = this.opsHigh;
+            for (; 0 !== mT;) {
+              const MT = mT & -mT,
+                gT = 31 - Math.clz32(MT);
+              mT ^= MT, UT(TT, gT, em(WT, zT, gT))
             }
           }
           return
         }
-        const cp = this.collDirty,
-          Op = this.collPureOps;
-        if (void 0 !== Op && Op.length > 0) {
-          let op = 0,
-            Ip = 0;
-          for (const [Sp, xp] of cp) {
-            for (; op < Op.length && Op[op][0] <= Ip;) {
-              const cp = Op[op++][1];
-              ip(pp, -cp, cp)
+        const mT = this.collDirty,
+          WT = this.collPureOps;
+        if (void 0 !== WT && WT.length > 0) {
+          let zT = 0,
+            MT = 0;
+          for (const [gT, nT] of mT) {
+            for (; zT < WT.length && WT[zT][0] <= MT;) {
+              const mT = WT[zT++][1];
+              UT(TT, -mT, mT)
             }
-            ip(pp, Sp, xp), Ip++
+            UT(TT, gT, nT), MT++
           }
-          for (; op < Op.length;) {
-            const cp = Op[op++][1];
-            ip(pp, -cp, cp)
+          for (; zT < WT.length;) {
+            const mT = WT[zT++][1];
+            UT(TT, -mT, mT)
           }
         } else
-          for (const [op, Ip] of cp) ip(pp, op, Ip)
+          for (const [zT, MT] of mT) UT(TT, zT, MT)
       }
       size() {
-        return this._isSchema ? ic(this.dirtyLow) + ic(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? AU(this.dirtyLow) + AU(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(pp, ip) {
+      insertAt(TT, UT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const cp = this.collDirty,
-          Op = new Map,
-          Ip = !this.paused && !this.isFullStateOnly;
-        if (pp > 0)
-          for (const [op, Sp] of cp) op < pp && Op.set(op, Sp);
-        if (Ip)
-          for (let Sp = 0; Sp < ip; Sp++) Op.set(pp + Sp, op.ADD);
-        for (const [op, Sp] of cp) op >= pp && Op.set(op + ip, Sp);
-        this.collDirty = Op, Ip && this.root?.enqueueChangeTree(this)
+        const mT = this.collDirty,
+          WT = new Map,
+          MT = !this.paused && !this.isFullStateOnly;
+        if (TT > 0)
+          for (const [zT, gT] of mT) zT < TT && WT.set(zT, gT);
+        if (MT)
+          for (let gT = 0; gT < UT; gT++) WT.set(TT + gT, zT.ADD);
+        for (const [zT, gT] of mT) zT >= TT && WT.set(zT + UT, gT);
+        this.collDirty = WT, MT && this.root?.enqueueChangeTree(this)
       }
-      removeAt(pp, ip) {
+      removeAt(TT, UT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const cp = this.collDirty,
-          Op = pp + ip;
-        let op = !1;
-        for (const Sp of cp.keys())
-          if (Sp >= Op) {
-            op = !0;
+        const mT = this.collDirty,
+          WT = TT + UT;
+        let zT = !1;
+        for (const gT of mT.keys())
+          if (gT >= WT) {
+            zT = !0;
             break
-          } if (!op) {
-          for (let ip = pp; ip < Op; ip++) cp.delete(ip);
+          } if (!zT) {
+          for (let UT = TT; UT < WT; UT++) mT.delete(UT);
           return
         }
-        const Ip = new Map;
-        for (const [Sp, xp] of cp) Sp < pp ? Ip.set(Sp, xp) : Sp >= Op && Ip.set(Sp - ip, xp);
-        this.collDirty = Ip
+        const MT = new Map;
+        for (const [gT, nT] of mT) gT < TT ? MT.set(gT, nT) : gT >= WT && MT.set(gT - UT, nT);
+        this.collDirty = MT
       }
-      unshift(pp) {
-        this.insertAt(0, pp)
+      unshift(TT) {
+        this.insertAt(0, TT)
       }
-      setRoot(pp) {
-        ! function(pp, ip) {
-          pp.root = ip;
-          const cp = ip.add(pp);
-          Lc(pp, pp.parent, pp.parentIndex), cp && dc(pp, ip, ec)
-        }(this, pp)
+      setRoot(TT) {
+        ! function(TT, UT) {
+          TT.root = UT;
+          const mT = UT.add(TT);
+          Mm(TT, TT.parent, TT.parentIndex), mT && fm(TT, UT, qm)
+        }(this, TT)
       }
-      setParent(pp, ip, cp) {
-        tc(this, pp, ip, cp)
+      setParent(TT, UT, mT) {
+        Zm(this, TT, UT, mT)
       }
-      forEachChild(pp) {
-        dc(this, pp, Hc)
+      forEachChild(TT) {
+        fm(this, TT, cm)
       }
-      forEachChildWithCtx(pp, ip) {
-        dc(this, pp, ip)
+      forEachChildWithCtx(TT, UT) {
+        fm(this, TT, UT)
       }
-      forEachLive(pp) {
-        xc(this, pp, Sc)
+      forEachLive(TT) {
+        zm(this, TT, Wm)
       }
-      forEachLiveWithCtx(pp, ip) {
-        xc(this, pp, ip)
+      forEachLiveWithCtx(TT, UT) {
+        zm(this, TT, UT)
       }
-      operation(pp) {
-        this.paused || this.isFullStateOnly || (this.recordPure(pp), this.root?.enqueueChangeTree(this))
+      operation(TT) {
+        this.paused || this.isFullStateOnly || (this.recordPure(TT), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(pp, ip, cp) {
-        if (!this.paused && !this.isFieldFullStateOnly(pp)) {
-          if (this.isFieldUnreliable(pp) && !this.isNew) {
-            const Op = this.ensureUnreliableRecorder();
-            return cp ? Op.recordRaw(pp, ip) : Op.record(pp, ip), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(TT, UT, mT) {
+        if (!this.paused && !this.isFieldFullStateOnly(TT)) {
+          if (this.isFieldUnreliable(TT) && !this.isNew) {
+            const WT = this.ensureUnreliableRecorder();
+            return mT ? WT.recordRaw(TT, UT) : WT.record(TT, UT), void this.root?.enqueueUnreliable(this)
           }
-          cp ? this.recordRaw(pp, ip) : this.record(pp, ip), this.root?.enqueueChangeTree(this)
+          mT ? this.recordRaw(TT, UT) : this.record(TT, UT), this.root?.enqueueChangeTree(this)
         }
       }
-      change(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op.ADD;
-        this._routeAndRecord(pp, ip, !1)
+      change(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.ADD;
+        this._routeAndRecord(TT, UT, !1)
       }
-      indexedOperation(pp, ip) {
-        this._routeAndRecord(pp, ip, !0)
+      indexedOperation(TT, UT) {
+        this._routeAndRecord(TT, UT, !0)
       }
-      getChange(pp) {
-        return this.operationAt(pp)
+      getChange(TT) {
+        return this.operationAt(TT)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(pp) {
-        const ip = this.paused;
+      untracked(TT) {
+        const UT = this.paused;
         this.paused = !0;
         try {
-          return pp()
+          return TT()
         } finally {
-          this.paused = ip
+          this.paused = UT
         }
       }
-      markDirty(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op.ADD;
-        const cp = this.paused;
+      markDirty(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.ADD;
+        const mT = this.paused;
         this.paused = !1;
         try {
-          this.change(pp, ip)
+          this.change(TT, UT)
         } finally {
-          this.paused = cp
+          this.paused = mT
         }
       }
-      getValue(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[Pp](pp, ip)
+      getValue(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[LT](TT, UT)
       }
-      delete(pp, ip) {
-        if (void 0 === pp) {
+      delete(TT, UT) {
+        if (void 0 === TT) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${pp}'`)
-          } catch (Lo) {
-            console.warn(Lo)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${TT}'`)
+          } catch (gz) {
+            console.warn(gz)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(pp)) return this.getValue(pp);
-        const cp = this.isFieldUnreliable(pp) && !this.isNew;
-        cp ? this.ensureUnreliableRecorder().recordDelete(pp, ip ?? op.DELETE) : this.recordDelete(pp, ip ?? op.DELETE);
-        const Op = this.getValue(pp);
-        return Op && Op[Up] && this.root?.remove(Op[Up]), cp ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Op
+        if (this.paused || this.isFieldFullStateOnly(TT)) return this.getValue(TT);
+        const mT = this.isFieldUnreliable(TT) && !this.isNew;
+        mT ? this.ensureUnreliableRecorder().recordDelete(TT, UT ?? zT.DELETE) : this.recordDelete(TT, UT ?? zT.DELETE);
+        const WT = this.getValue(TT);
+        return WT && WT[ZT] && this.root?.remove(WT[ZT]), mT ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), WT
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[tp]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[fT]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[tp]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[fT]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[tp]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[fT]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const pp = pp => {
-          if (pp < 0) return;
-          const ip = this.getValue(pp);
-          ip && ip[Up] && ip[Up].discardAll()
+        const TT = TT => {
+          if (TT < 0) return;
+          const UT = this.getValue(TT);
+          UT && UT[ZT] && UT[ZT].discardAll()
         };
-        this.forEach(pp), this.unreliableRecorder?.forEach(pp), this.discard()
+        this.forEach(TT), this.unreliableRecorder?.forEach(TT), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(pp, ip) {
-        ! function(pp, ip, cp) {
-          if (pp.parentRef) {
-            if (pp.parentRef[Up] === ip[Up]) return void(pp._parentIndex = cp);
-            if (oc(pp, ((pp, cp) => pp[Up] === ip[Up]))) return void(pp._parentIndex = cp)
+      addParent(TT, UT) {
+        ! function(TT, UT, mT) {
+          if (TT.parentRef) {
+            if (TT.parentRef[ZT] === UT[ZT]) return void(TT._parentIndex = mT);
+            if (Um(TT, ((TT, mT) => TT[ZT] === UT[ZT]))) return void(TT._parentIndex = mT)
           }
-          void 0 === pp.parentRef ? (pp.parentRef = ip, pp._parentIndex = cp) : (pp.extraParents = {
-            ref: pp.parentRef,
-            index: pp._parentIndex,
-            next: pp.extraParents
-          }, pp.parentRef = ip, pp._parentIndex = cp)
-        }(this, pp, ip)
+          void 0 === TT.parentRef ? (TT.parentRef = UT, TT._parentIndex = mT) : (TT.extraParents = {
+            ref: TT.parentRef,
+            index: TT._parentIndex,
+            next: TT.extraParents
+          }, TT.parentRef = UT, TT._parentIndex = mT)
+        }(this, TT, UT)
       }
-      setParentIndex(pp, ip) {
-        ! function(pp, ip, cp) {
-          if (void 0 !== pp.extraParents)
-            if (pp.parentRef[Up] !== ip[Up]) {
-              for (let Op = pp.extraParents; void 0 !== Op; Op = Op.next)
-                if (Op.ref[Up] === ip[Up]) return void(Op.index = cp)
-            } else pp._parentIndex = cp;
-          else pp._parentIndex = cp
-        }(this, pp, ip)
+      setParentIndex(TT, UT) {
+        ! function(TT, UT, mT) {
+          if (void 0 !== TT.extraParents)
+            if (TT.parentRef[ZT] !== UT[ZT]) {
+              for (let WT = TT.extraParents; void 0 !== WT; WT = WT.next)
+                if (WT.ref[ZT] === UT[ZT]) return void(WT.index = mT)
+            } else TT._parentIndex = mT;
+          else TT._parentIndex = mT
+        }(this, TT, UT)
       }
       removeParent() {
-        return function(pp, ip) {
-          if (pp.parentRef && pp.parentRef[Up] === ip[Up]) return pp.extraParents ? (pp.parentRef = pp.extraParents.ref, pp._parentIndex = pp.extraParents.index, pp.extraParents = pp.extraParents.next) : (pp.parentRef = void 0, pp._parentIndex = void 0), !0;
-          let cp = pp.extraParents,
-            Op = null;
-          for (; cp;) {
-            if (cp.ref[Up] === ip[Up]) return Op ? Op.next = cp.next : pp.extraParents = cp.next, !0;
-            Op = cp, cp = cp.next
+        return function(TT, UT) {
+          if (TT.parentRef && TT.parentRef[ZT] === UT[ZT]) return TT.extraParents ? (TT.parentRef = TT.extraParents.ref, TT._parentIndex = TT.extraParents.index, TT.extraParents = TT.extraParents.next) : (TT.parentRef = void 0, TT._parentIndex = void 0), !0;
+          let mT = TT.extraParents,
+            WT = null;
+          for (; mT;) {
+            if (mT.ref[ZT] === UT[ZT]) return WT ? WT.next = mT.next : TT.extraParents = mT.next, !0;
+            WT = mT, mT = mT.next
           }
-          return void 0 === pp.parentRef
+          return void 0 === TT.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(pp) {
-        return function(pp, ip) {
-          if (void 0 !== pp.parentRef && ip(pp.parentRef, pp._parentIndex)) return {
-            ref: pp.parentRef,
-            index: pp._parentIndex
+      findParent(TT) {
+        return function(TT, UT) {
+          if (void 0 !== TT.parentRef && UT(TT.parentRef, TT._parentIndex)) return {
+            ref: TT.parentRef,
+            index: TT._parentIndex
           };
-          for (let cp = pp.extraParents; void 0 !== cp; cp = cp.next)
-            if (ip(cp.ref, cp.index)) return {
-              ref: cp.ref,
-              index: cp.index
+          for (let mT = TT.extraParents; void 0 !== mT; mT = mT.next)
+            if (UT(mT.ref, mT.index)) return {
+              ref: mT.ref,
+              index: mT.index
             }
-        }(this, pp)
+        }(this, TT)
       }
-      hasParent(pp) {
-        return oc(this, pp)
+      hasParent(TT) {
+        return Um(this, TT)
       }
-      indexInParent(pp) {
-        return function(pp, ip) {
-          if (pp.parentRef && pp.parentRef[Up] === ip[Up]) return pp._parentIndex;
-          for (let cp = pp.extraParents; void 0 !== cp; cp = cp.next)
-            if (cp.ref[Up] === ip[Up]) return cp.index
-        }(this, pp)
+      indexInParent(TT) {
+        return function(TT, UT) {
+          if (TT.parentRef && TT.parentRef[ZT] === UT[ZT]) return TT._parentIndex;
+          for (let mT = TT.extraParents; void 0 !== mT; mT = mT.next)
+            if (mT.ref[ZT] === UT[ZT]) return mT.index
+        }(this, TT)
       }
       getAllParents() {
-        return function(pp) {
-          const ip = [];
-          pp.parentRef && ip.push({
-            ref: pp.parentRef,
-            index: pp._parentIndex
+        return function(TT) {
+          const UT = [];
+          TT.parentRef && UT.push({
+            ref: TT.parentRef,
+            index: TT._parentIndex
           });
-          let cp = pp.extraParents;
-          for (; cp;) ip.push({
-            ref: cp.ref,
-            index: cp.index
-          }), cp = cp.next;
-          return ip
+          let mT = TT.extraParents;
+          for (; mT;) UT.push({
+            ref: mT.ref,
+            index: mT.index
+          }), mT = mT.next;
+          return UT
         }(this)
       }
     }
-    class Qc {
+    class ym {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(pp) {
-        this.ref = pp
+      constructor(TT) {
+        this.ref = TT
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(pp) {
-        return pp()
+      untracked(TT) {
+        return TT()
       }
       markDirty() {}
-      forEachChild(pp) {
-        const ip = this.ref;
-        if (ip[wp]) {
-          if ("string" !== typeof ip[wp])
-            for (const [cp, Op] of ip.entries()) Op && pp(Op[Up], ip._collectionIndexes?.[cp] ?? cp);
+      forEachChild(TT) {
+        const UT = this.ref;
+        if (UT[cT]) {
+          if ("string" !== typeof UT[cT])
+            for (const [mT, WT] of UT.entries()) WT && TT(WT[ZT], UT._collectionIndexes?.[mT] ?? mT);
           return
         }
-        const cp = ip.constructor,
-          Op = cp?.[Symbol.metadata];
-        if (!Op) return;
-        const op = Op[Mp] ?? [];
-        for (let Ip = 0; Ip < op.length; Ip++) {
-          const cp = op[Ip],
-            Sp = ip[Op[cp].name];
-          Sp && pp(Sp[Up], cp)
+        const mT = UT.constructor,
+          WT = mT?.[Symbol.metadata];
+        if (!WT) return;
+        const zT = WT[dT] ?? [];
+        for (let MT = 0; MT < zT.length; MT++) {
+          const mT = zT[MT],
+            gT = UT[WT[mT].name];
+          gT && TT(gT[ZT], mT)
         }
       }
-      forEachChildWithCtx(pp, ip) {
-        this.forEachChild(((cp, Op) => ip(pp, cp, Op)))
+      forEachChildWithCtx(TT, UT) {
+        this.forEachChild(((mT, WT) => UT(TT, mT, WT)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Jc(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pp;
-      var cp;
-      Object.defineProperty(pp, Up, {
-        value: (cp = ip, new Qc(cp)),
+    function Xm(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+      var mT;
+      Object.defineProperty(TT, ZT, {
+        value: (mT = UT, new ym(mT)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function Bc(pp, ip, cp, Op, Ip, Sp, Lp) {
-      void 0 !== Lp ? Lp(ip, Op, Sp) : "string" === typeof cp ? Oi[cp]?.(ip, Op, Sp) : null != cp[Symbol.metadata] ? (Oi.number(ip, Op[xp], Sp), (Ip & op.ADD) === op.ADD && pp.tryEncodeTypeId(ip, cp, Op.constructor, Sp)) : Oi.number(ip, Op[xp], Sp)
+    function Im(TT, UT, mT, WT, MT, gT, HT) {
+      void 0 !== HT ? HT(UT, WT, gT) : "string" === typeof mT ? UU[mT]?.(UT, WT, gT) : null != mT[Symbol.metadata] ? (UU.number(UT, WT[nT], gT), (MT & zT.ADD) === zT.ADD && TT.tryEncodeTypeId(UT, mT, WT.constructor, gT)) : UU.number(UT, WT[nT], gT)
     }
-    const Nc = function(pp, ip, cp, Op, Ip, Sp, xp, Lp) {
-        if (ip[Sp.offset++] = 255 & (Op | Ip), Ip === op.DELETE) return;
-        const Yp = cp.encDescriptor,
-          Dp = cp.ref,
-          Ap = Dp[ep][Op] ?? Dp[Yp.names[Op]];
-        Bc(pp, ip, Yp.types[Op], Ap, Ip, Sp, Yp.encoders[Op])
+    const Qm = function(TT, UT, mT, WT, MT, gT, nT, HT) {
+        if (UT[gT.offset++] = 255 & (WT | MT), MT === zT.DELETE) return;
+        const kT = mT.encDescriptor,
+          jT = mT.ref,
+          lT = jT[bT][WT] ?? jT[kT.names[WT]];
+        Im(TT, UT, kT.types[WT], lT, MT, gT, kT.encoders[WT])
       },
-      Tc = function(pp, ip, cp, Op, Ip, Sp) {
-        if (ip[Sp.offset++] = 255 & Ip, Oi.number(ip, Op, Sp), Ip === op.DELETE) return;
-        const xp = cp.ref;
-        if ((Ip & op.ADD) === op.ADD) {
-          const pp = xp.$indexes.get(Op);
-          Oi.string(ip, pp, Sp)
+      sm = function(TT, UT, mT, WT, MT, gT) {
+        if (UT[gT.offset++] = 255 & MT, UU.number(UT, WT, gT), MT === zT.DELETE) return;
+        const nT = mT.ref;
+        if ((MT & zT.ADD) === zT.ADD) {
+          const TT = nT.$indexes.get(WT);
+          UU.string(UT, TT, gT)
         }
-        Bc(pp, ip, xp[wp], xp[Pp](Op), Ip, Sp)
+        Im(TT, UT, nT[cT], nT[LT](WT), MT, gT)
       },
-      fc = function(pp, ip, cp, Op, Ip, Sp) {
-        if (ip[Sp.offset++] = 255 & Ip, Oi.number(ip, Op, Sp), Ip === op.DELETE) return;
-        const xp = cp.ref;
-        Bc(pp, ip, xp[wp], xp[Pp](Op), Ip, Sp)
+      Fm = function(TT, UT, mT, WT, MT, gT) {
+        if (UT[gT.offset++] = 255 & MT, UU.number(UT, WT, gT), MT === zT.DELETE) return;
+        const nT = mT.ref;
+        Im(TT, UT, nT[cT], nT[LT](WT), MT, gT)
       },
-      bc = function(pp, ip, cp, Op, Ip, Sp) {
-        const xp = cp.ref;
-        (Ip & op.ADD) === op.ADD && "function" === typeof xp.set ? Tc(pp, ip, cp, Op, Ip, Sp) : fc(pp, ip, cp, Op, Ip, Sp)
+      Pm = function(TT, UT, mT, WT, MT, gT) {
+        const nT = mT.ref;
+        (MT & zT.ADD) === zT.ADD && "function" === typeof nT.set ? sm(TT, UT, mT, WT, MT, gT) : Fm(TT, UT, mT, WT, MT, gT)
       },
-      hc = function(pp, ip, cp, Op, Ip, Sp, Lp, Yp) {
-        const Dp = cp.refTarget,
-          Ap = Dp[wp],
-          Wp = "string" !== typeof Ap;
-        let yp;
-        if (Yp && cp.isFiltered && Wp) {
-          const pp = Dp.tmpItems[Op];
-          if (!pp) return;
-          if (yp = pp[xp], Ip === op.DELETE) Ip = op.DELETE_BY_REFID;
-          else if ((Ip & op.ADD) === op.ADD) Ip = op.ADD_BY_REFID;
-          else if ((Ip & op.MOVE) === op.MOVE) return
-        } else if (Ip === op.DELETE && Wp) {
-          const pp = Dp.tmpItems[Op];
-          if (!pp) return;
-          yp = pp[xp], Ip = op.DELETE_BY_REFID
-        } else yp = Op;
-        if (ip[Sp.offset++] = 255 & Ip, Oi.number(ip, yp, Sp), Ip === op.DELETE || Ip === op.DELETE_BY_REFID) return;
-        Bc(pp, ip, Ap, Dp[Pp](Op, Lp), Ip, Sp)
+      Vm = function(TT, UT, mT, WT, MT, gT, HT, kT) {
+        const jT = mT.refTarget,
+          lT = jT[cT],
+          pT = "string" !== typeof lT;
+        let BT;
+        if (kT && mT.isFiltered && pT) {
+          const TT = jT.tmpItems[WT];
+          if (!TT) return;
+          if (BT = TT[nT], MT === zT.DELETE) MT = zT.DELETE_BY_REFID;
+          else if ((MT & zT.ADD) === zT.ADD) MT = zT.ADD_BY_REFID;
+          else if ((MT & zT.MOVE) === zT.MOVE) return
+        } else if (MT === zT.DELETE && pT) {
+          const TT = jT.tmpItems[WT];
+          if (!TT) return;
+          BT = TT[nT], MT = zT.DELETE_BY_REFID
+        } else BT = WT;
+        if (UT[gT.offset++] = 255 & MT, UU.number(UT, BT, gT), MT === zT.DELETE || MT === zT.DELETE_BY_REFID) return;
+        Im(TT, UT, lT, jT[LT](WT, HT), MT, gT)
       };
 
-    function ac(pp, ip, cp, Op, Ip, Sp, Lp) {
-      const Yp = pp.resyncVisited;
-      let Dp = Yp.get(pp.currentRefId);
-      if (void 0 === Dp && Yp.set(pp.currentRefId, Dp = new Set), Dp.add(Op), void 0 !== Ip && cp === op.ADD && Ip !== Sp) {
-        const cp = Ip[xp];
-        void 0 !== cp && (pp.root.removeRef(cp), Lp?.push({
-          ref: ip,
-          refId: pp.currentRefId,
-          op: op.DELETE,
-          dynamicIndex: Op,
+    function um(TT, UT, mT, WT, MT, gT, HT) {
+      const kT = TT.resyncVisited;
+      let jT = kT.get(TT.currentRefId);
+      if (void 0 === jT && kT.set(TT.currentRefId, jT = new Set), jT.add(WT), void 0 !== MT && mT === zT.ADD && MT !== gT) {
+        const mT = MT[nT];
+        void 0 !== mT && (TT.root.removeRef(mT), HT?.push({
+          ref: UT,
+          refId: TT.currentRefId,
+          op: zT.DELETE,
+          dynamicIndex: WT,
           value: void 0,
-          previousValue: Ip
+          previousValue: MT
         }))
       }
     }
 
-    function nc(pp, ip, cp, Op) {
-      const op = ip[xp];
-      if (void 0 === op || cp.has(op)) return;
-      cp.add(op);
-      const Ip = ip.constructor[Symbol.metadata],
-        Sp = Ip?.[Mp];
-      if (void 0 === Sp) return;
-      const Lp = Ip[lp];
-      for (let xp = 0; xp < Sp.length; xp++) {
-        const op = Sp[xp];
-        if (void 0 !== Lp && Lp.includes(op)) continue;
-        const Yp = Ip[op],
-          Dp = ip[Yp.name];
-        Dp && (XO.is(Yp.type) ? nc(pp, Dp, cp, Op) : Fc(pp, Dp, cp, Op))
+    function Cm(TT, UT, mT, WT) {
+      const zT = UT[nT];
+      if (void 0 === zT || mT.has(zT)) return;
+      mT.add(zT);
+      const MT = UT.constructor[Symbol.metadata],
+        gT = MT?.[dT];
+      if (void 0 === gT) return;
+      const HT = MT[yT];
+      for (let nT = 0; nT < gT.length; nT++) {
+        const zT = gT[nT];
+        if (void 0 !== HT && HT.includes(zT)) continue;
+        const kT = MT[zT],
+          jT = UT[kT.name];
+        jT && (tW.is(kT.type) ? Cm(TT, jT, mT, WT) : rm(TT, jT, mT, WT))
       }
     }
 
-    function Fc(pp, ip, cp, Op) {
-      const Ip = ip[vp] ?? ip,
-        Sp = Ip[xp];
-      if (void 0 === Sp || cp.has(Sp)) return;
-      cp.add(Sp);
-      const Lp = pp.resyncVisited.get(Sp);
-      if (void 0 === Lp) return;
-      const Yp = pp.root;
-      Ip[yp](Lp, ((pp, cp) => {
-        Op?.push({
-          ref: ip,
-          refId: Sp,
-          op: op.DELETE,
-          dynamicIndex: cp,
+    function rm(TT, UT, mT, WT) {
+      const MT = UT[vT] ?? UT,
+        gT = MT[nT];
+      if (void 0 === gT || mT.has(gT)) return;
+      mT.add(gT);
+      const HT = TT.resyncVisited.get(gT);
+      if (void 0 === HT) return;
+      const kT = TT.root;
+      MT[BT](HT, ((TT, mT) => {
+        WT?.push({
+          ref: UT,
+          refId: gT,
+          op: zT.DELETE,
+          dynamicIndex: mT,
           value: void 0,
-          previousValue: pp
+          previousValue: TT
         });
-        const Ip = pp?.[xp];
-        void 0 !== Ip && Yp.removeRef(Ip)
-      }), (ip => {
-        XO.isSchema(ip) && nc(pp, ip, cp, Op)
+        const MT = TT?.[nT];
+        void 0 !== MT && kT.removeRef(MT)
+      }), (UT => {
+        tW.isSchema(UT) && Cm(TT, UT, mT, WT)
       }))
     }
-    const gc = 1,
-      Gc = 2,
-      rc = 3,
-      Zc = 4,
-      zc = 5;
+    const Km = 1,
+      Sm = 2,
+      Gm = 3,
+      Nm = 4,
+      Em = 5;
 
-    function sc(pp, ip, cp, Op, Ip, Sp, Lp, Yp, Dp) {
-      const Ap = pp.root;
-      let Pp;
-      if ((ip & op.DELETE) === op.DELETE) {
-        const pp = Ip?.[xp];
-        void 0 !== pp && Ap.removeRef(pp), ip !== op.DELETE_AND_ADD && cp[Wp](Op), Pp = void 0
+    function hm(TT, UT, mT, WT, MT, gT, HT, kT, jT) {
+      const lT = TT.root;
+      let LT;
+      if ((UT & zT.DELETE) === zT.DELETE) {
+        const TT = MT?.[nT];
+        void 0 !== TT && lT.removeRef(TT), UT !== zT.DELETE_AND_ADD && mT[pT](WT), LT = void 0
       }
-      if (ip === op.DELETE);
-      else if ("string" === typeof Sp) Pp = ei[Sp](Lp, Yp);
-      else if (Ti(Sp)) Pp = function(pp, ip, cp) {
-        return bi(pp, (0, ei[pp.wire])(ip, cp))
-      }(Sp.quantized, Lp, Yp);
-      else if (XO.is(Sp)) {
-        const cp = ei.number(Lp, Yp);
-        if (Pp = Ap.refs.get(cp), (ip & op.ADD) === op.ADD) {
-          const Op = pp.getInstanceType(Lp, Yp, Sp);
-          Pp || (Pp = pp.createInstanceOfType(Op)), Ap.addRef(cp, Pp, Pp !== Ip || ip === op.DELETE_AND_ADD && Pp === Ip)
+      if (UT === zT.DELETE);
+      else if ("string" === typeof gT) LT = qU[gT](HT, kT);
+      else if (sU(gT)) LT = function(TT, UT, mT) {
+        return PU(TT, (0, qU[TT.wire])(UT, mT))
+      }(gT.quantized, HT, kT);
+      else if (tW.is(gT)) {
+        const mT = qU.number(HT, kT);
+        if (LT = lT.refs.get(mT), (UT & zT.ADD) === zT.ADD) {
+          const WT = TT.getInstanceType(HT, kT, gT);
+          LT || (LT = TT.createInstanceOfType(WT)), lT.addRef(mT, LT, LT !== MT || UT === zT.DELETE_AND_ADD && LT === MT)
         }
       } else {
-        const cp = (yp = Object.keys(Sp)[0], ui[yp]),
-          Op = ei.number(Lp, Yp);
-        null !== pp.resyncVisited && function(pp, ip) {
-          const cp = pp.resyncVisited;
-          cp.has(ip) || cp.set(ip, new Set)
-        }(pp, Op);
-        const Wp = Ap.refs.has(Op) ? Ip || Ap.refs.get(Op) : cp.constructor.initializeForDecoder();
-        if (Pp = Wp.clone(!0), Pp[wp] = Object.values(Sp)[0], Ip) {
-          let pp = Ip[xp];
-          if (void 0 !== pp && Op !== pp) {
-            (ip & op.DELETE) !== op.DELETE && Ap.removeRef(pp);
-            const cp = Ip.entries();
-            let Op;
+        const mT = (BT = Object.keys(gT)[0], iU[BT]),
+          WT = qU.number(HT, kT);
+        null !== TT.resyncVisited && function(TT, UT) {
+          const mT = TT.resyncVisited;
+          mT.has(UT) || mT.set(UT, new Set)
+        }(TT, WT);
+        const pT = lT.refs.has(WT) ? MT || lT.refs.get(WT) : mT.constructor.initializeForDecoder();
+        if (LT = pT.clone(!0), LT[cT] = Object.values(gT)[0], MT) {
+          let TT = MT[nT];
+          if (void 0 !== TT && WT !== TT) {
+            (UT & zT.DELETE) !== zT.DELETE && lT.removeRef(TT);
+            const mT = MT.entries();
+            let WT;
             for (;
-              (Op = cp.next()) && !Op.done;) {
-              const [ip, cp] = Op.value;
-              "object" === typeof cp && (pp = cp[xp]), Dp?.push({
-                ref: Ip,
-                refId: pp,
-                op: op.DELETE,
-                field: ip,
+              (WT = mT.next()) && !WT.done;) {
+              const [UT, mT] = WT.value;
+              "object" === typeof mT && (TT = mT[nT]), jT?.push({
+                ref: MT,
+                refId: TT,
+                op: zT.DELETE,
+                field: UT,
                 value: void 0,
-                previousValue: cp
+                previousValue: mT
               })
             }
           }
         }
-        Ap.addRef(Op, Pp, Wp !== Ip || ip === op.DELETE_AND_ADD && Wp === Ip)
+        lT.addRef(WT, LT, pT !== MT || UT === zT.DELETE_AND_ADD && pT === MT)
       }
-      var yp;
-      return Pp
+      var BT;
+      return LT
     }
-    const Kc = function(pp, ip, cp, Op, op) {
-        const Ip = ip[cp.offset++],
-          Sp = Op.constructor[Symbol.metadata],
-          xp = Ip >> 6 << 6,
-          Lp = Ip % (xp || 255),
-          Yp = Sp[Lp];
-        if (void 0 === Yp) return console.warn("@colyseus/schema: field not defined at", {
-          index: Lp,
-          ref: Op.constructor.name,
-          metadata: Sp
+    const Dm = function(TT, UT, mT, WT, zT) {
+        const MT = UT[mT.offset++],
+          gT = WT.constructor[Symbol.metadata],
+          nT = MT >> 6 << 6,
+          HT = MT % (nT || 255),
+          kT = gT[HT];
+        if (void 0 === kT) return console.warn("@colyseus/schema: field not defined at", {
+          index: HT,
+          ref: WT.constructor.name,
+          metadata: gT
         }), -1;
-        const Dp = !0 === Yp.deprecated,
-          Ap = Dp ? void 0 : Op[Pp](Lp),
-          Wp = sc(pp, xp, Op, Lp, Ap, Yp.type, ip, cp, op);
-        Dp || (null !== Wp && void 0 !== Wp && (Op[Yp.name] = Wp), Ap !== Wp && op?.push({
-          ref: Op,
-          refId: pp.currentRefId,
-          op: xp,
-          field: Yp.name,
-          value: Wp,
-          previousValue: Ap
+        const jT = !0 === kT.deprecated,
+          lT = jT ? void 0 : WT[LT](HT),
+          pT = hm(TT, nT, WT, HT, lT, kT.type, UT, mT, zT);
+        jT || (null !== pT && void 0 !== pT && (WT[kT.name] = pT), lT !== pT && zT?.push({
+          ref: WT,
+          refId: TT.currentRefId,
+          op: nT,
+          field: kT.name,
+          value: pT,
+          previousValue: lT
         }))
       },
-      Vc = function(pp, ip, cp, Op, Ip) {
-        const Sp = Op[vp] ?? Op,
-          xp = ip[cp.offset++];
-        if (xp === op.CLEAR) return pp.removeChildRefs(Sp, Ip), void Sp.clear();
-        const Lp = ei.number(ip, cp),
-          Yp = Sp[wp],
-          Dp = Sp.constructor.COLLECTION_KIND;
-        let Ap;
-        (xp & op.ADD) === op.ADD ? Dp === gc ? (Ap = ei.string(ip, cp), Sp.setIndex(Lp, Ap)) : Ap = Lp : Ap = Sp.getIndex(Lp);
-        const Wp = Sp[Pp](Lp),
-          yp = sc(pp, xp, Op, Lp, Wp, Yp, ip, cp, Ip);
-        if (null !== pp.resyncVisited && ac(pp, Op, xp, Ap, Wp, yp, Ip), null !== yp && void 0 !== yp) switch (Dp) {
-          case gc:
-            Sp.$items.set(Ap, yp);
+      om = function(TT, UT, mT, WT, MT) {
+        const gT = WT[vT] ?? WT,
+          nT = UT[mT.offset++];
+        if (nT === zT.CLEAR) return TT.removeChildRefs(gT, MT), void gT.clear();
+        const HT = qU.number(UT, mT),
+          kT = gT[cT],
+          jT = gT.constructor.COLLECTION_KIND;
+        let lT;
+        (nT & zT.ADD) === zT.ADD ? jT === Km ? (lT = qU.string(UT, mT), gT.setIndex(HT, lT)) : lT = HT : lT = gT.getIndex(HT);
+        const pT = gT[LT](HT),
+          BT = hm(TT, nT, WT, HT, pT, kT, UT, mT, MT);
+        if (null !== TT.resyncVisited && um(TT, WT, nT, lT, pT, BT, MT), null !== BT && void 0 !== BT) switch (jT) {
+          case Km:
+            gT.$items.set(lT, BT);
             break;
-          case Gc:
-            Sp.$setAt(Lp, yp, null !== pp.resyncVisited && xp === op.ADD ? op.REPLACE : xp);
+          case Sm:
+            gT.$setAt(HT, BT, null !== TT.resyncVisited && nT === zT.ADD ? zT.REPLACE : nT);
             break;
-          case rc:
-          case Zc:
-          case zc:
-            Sp.$items.has(Lp) || (Sp.$items.set(Lp, yp), "number" === typeof Sp.$refId && Lp >= Sp.$refId && (Sp.$refId = Lp + 1));
+          case Gm:
+          case Nm:
+          case Em:
+            gT.$items.has(HT) || (gT.$items.set(HT, BT), "number" === typeof gT.$refId && HT >= gT.$refId && (gT.$refId = HT + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Sp.constructor?.name} \u2014 item at index ${Lp} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${gT.constructor?.name} \u2014 item at index ${HT} was not stored.`)
         }
-        Wp !== yp && Ip?.push({
-          ref: Op,
-          refId: pp.currentRefId,
-          op: xp,
-          dynamicIndex: Ap,
-          value: yp,
-          previousValue: Wp
+        pT !== BT && MT?.push({
+          ref: WT,
+          refId: TT.currentRefId,
+          op: nT,
+          dynamicIndex: lT,
+          value: BT,
+          previousValue: pT
         })
       },
-      pO = function(pp, ip, cp, Op, Ip) {
-        const Sp = Op[vp] ?? Op;
-        let xp, Lp = ip[cp.offset++];
-        if (Lp === op.CLEAR) return pp.removeChildRefs(Sp, Ip), void Sp.clear();
-        if (Lp === op.REVERSE) return void Sp.items.reverse();
-        if (Lp === op.DELETE_BY_REFID) {
-          const Lp = ei.number(ip, cp),
-            Yp = pp.root.refs.get(Lp);
-          if (void 0 === Yp) return;
-          if (pp.root.removeRef(Lp), xp = Sp.findIndex((pp => pp === Yp)), -1 === xp) return;
-          return Sp[Wp](xp), void Ip?.push({
-            ref: Op,
-            refId: pp.currentRefId,
-            op: op.DELETE,
-            dynamicIndex: xp,
+      Am = function(TT, UT, mT, WT, MT) {
+        const gT = WT[vT] ?? WT;
+        let nT, HT = UT[mT.offset++];
+        if (HT === zT.CLEAR) return TT.removeChildRefs(gT, MT), void gT.clear();
+        if (HT === zT.REVERSE) return void gT.items.reverse();
+        if (HT === zT.DELETE_BY_REFID) {
+          const HT = qU.number(UT, mT),
+            kT = TT.root.refs.get(HT);
+          if (void 0 === kT) return;
+          if (TT.root.removeRef(HT), nT = gT.findIndex((TT => TT === kT)), -1 === nT) return;
+          return gT[pT](nT), void MT?.push({
+            ref: WT,
+            refId: TT.currentRefId,
+            op: zT.DELETE,
+            dynamicIndex: nT,
             value: void 0,
-            previousValue: Yp
+            previousValue: kT
           })
         }
-        if (Lp === op.ADD_BY_REFID) {
-          const Op = ei.number(ip, cp),
-            op = pp.root.refs.get(Op);
-          op && (xp = Sp.findIndex((pp => pp === op))), -1 !== xp && void 0 !== xp || (xp = Sp.length)
-        } else xp = ei.number(ip, cp);
-        const Yp = Sp[wp];
-        let Dp = xp;
-        const Ap = Sp.items[xp],
-          Pp = sc(pp, Lp, Op, xp, Ap, Yp, ip, cp, Ip);
-        null !== pp.resyncVisited && ac(pp, Op, Lp, xp, Ap, Pp, Ip), null !== Pp && void 0 !== Pp && Pp !== Ap && Sp.$setAt(xp, Pp, null !== pp.resyncVisited && Lp === op.ADD ? op.REPLACE : Lp), Ap !== Pp && Ip?.push({
-          ref: Op,
-          refId: pp.currentRefId,
-          op: Lp,
-          dynamicIndex: Dp,
-          value: Pp,
-          previousValue: Ap
+        if (HT === zT.ADD_BY_REFID) {
+          const WT = qU.number(UT, mT),
+            zT = TT.root.refs.get(WT);
+          zT && (nT = gT.findIndex((TT => TT === zT))), -1 !== nT && void 0 !== nT || (nT = gT.length)
+        } else nT = qU.number(UT, mT);
+        const kT = gT[cT];
+        let jT = nT;
+        const lT = gT.items[nT],
+          LT = hm(TT, HT, WT, nT, lT, kT, UT, mT, MT);
+        null !== TT.resyncVisited && um(TT, WT, HT, nT, lT, LT, MT), null !== LT && void 0 !== LT && LT !== lT && gT.$setAt(nT, LT, null !== TT.resyncVisited && HT === zT.ADD ? zT.REPLACE : HT), lT !== LT && MT?.push({
+          ref: WT,
+          refId: TT.currentRefId,
+          op: HT,
+          dynamicIndex: jT,
+          value: LT,
+          previousValue: lT
         })
       };
-    class iO extends Error {}
+    class Rm extends Error {}
 
-    function cO(pp, ip, cp, Op) {
-      if (!(pp instanceof ip)) throw new iO(`a '${ip.name}' was expected, but '${pp&&pp.constructor.name}' was provided in ${cp.constructor.name}#${Op}`)
+    function TW(TT, UT, mT, WT) {
+      if (!(TT instanceof UT)) throw new Rm(`a '${UT.name}' was expected, but '${TT&&TT.constructor.name}' was provided in ${mT.constructor.name}#${WT}`)
     }
-    const OO = (pp, ip) => {
-        const cp = pp.toString(),
-          Op = ip.toString();
-        return cp < Op ? -1 : cp > Op ? 1 : 0
+    const UW = (TT, UT) => {
+        const mT = TT.toString(),
+          WT = UT.toString();
+        return mT < WT ? -1 : mT > WT ? 1 : 0
       },
-      oO = {
-        get: (pp, ip) => "symbol" === typeof ip || isNaN(ip) ? Reflect.get(pp, ip) : pp.items[ip],
-        set: (pp, ip, cp) => {
-          if ("symbol" !== typeof ip && !isNaN(ip)) {
-            if (void 0 === cp || null === cp) pp.$deleteAt(ip);
+      mW = {
+        get: (TT, UT) => "symbol" === typeof UT || isNaN(UT) ? Reflect.get(TT, UT) : TT.items[UT],
+        set: (TT, UT, mT) => {
+          if ("symbol" !== typeof UT && !isNaN(UT)) {
+            if (void 0 === mT || null === mT) TT.$deleteAt(UT);
             else {
-              let Op;
-              if (cp[Up]) {
-                cO(cp, pp[wp], pp, ip);
-                const Ip = pp.items[ip];
-                pp.isMovingItems ? (Op = pp.$wireIndex(Number(ip)), void 0 !== Ip ? cp[Up].isNew ? pp[Up].indexedOperation(Op, op.MOVE_AND_ADD) : (pp[Up].getChange(Op) & op.DELETE) === op.DELETE ? pp[Up].indexedOperation(Op, op.DELETE_AND_MOVE) : pp[Up].indexedOperation(Op, op.MOVE) : cp[Up].isNew && pp[Up].indexedOperation(Op, op.ADD), cp[Up].setParent(pp, pp[Up].root, Op)) : Op = pp.$changeAt(Number(ip), cp), void 0 !== Ip && Ip[Up].root?.remove(Ip[Up])
-              } else Op = pp.$changeAt(Number(ip), cp);
-              pp.items[ip] = cp, void 0 !== Op && (pp.tmpItems[Op] = cp)
+              let WT;
+              if (mT[ZT]) {
+                TW(mT, TT[cT], TT, UT);
+                const MT = TT.items[UT];
+                TT.isMovingItems ? (WT = TT.$wireIndex(Number(UT)), void 0 !== MT ? mT[ZT].isNew ? TT[ZT].indexedOperation(WT, zT.MOVE_AND_ADD) : (TT[ZT].getChange(WT) & zT.DELETE) === zT.DELETE ? TT[ZT].indexedOperation(WT, zT.DELETE_AND_MOVE) : TT[ZT].indexedOperation(WT, zT.MOVE) : mT[ZT].isNew && TT[ZT].indexedOperation(WT, zT.ADD), mT[ZT].setParent(TT, TT[ZT].root, WT)) : WT = TT.$changeAt(Number(UT), mT), void 0 !== MT && MT[ZT].root?.remove(MT[ZT])
+              } else WT = TT.$changeAt(Number(UT), mT);
+              TT.items[UT] = mT, void 0 !== WT && (TT.tmpItems[WT] = mT)
             }
             return !0
           }
-          return Reflect.set(pp, ip, cp)
+          return Reflect.set(TT, UT, mT)
         },
-        deleteProperty: (pp, ip) => ("number" === typeof ip ? pp.$deleteAt(ip) : delete pp[ip], !0),
-        has: (pp, ip) => "symbol" === typeof ip || isNaN(Number(ip)) ? Reflect.has(pp, ip) : Reflect.has(pp.items, ip)
+        deleteProperty: (TT, UT) => ("number" === typeof UT ? TT.$deleteAt(UT) : delete TT[UT], !0),
+        has: (TT, UT) => "symbol" === typeof UT || isNaN(Number(UT)) ? Reflect.has(TT, UT) : Reflect.has(TT.items, UT)
       };
-    class IO {
-      [Up];
-      [xp];
-      [vp];
-      [wp];
+    class WW {
+      [ZT];
+      [nT];
+      [vT];
+      [cT];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Yp] = hc;
-      static[Dp] = pO;
-      static COLLECTION_KIND = Gc;
-      static[Ap](pp, ip, cp) {
-        if (!cp) return !0;
-        const Op = pp[vp] ?? pp;
-        return "string" === typeof Op[wp] || cp.isChangeTreeVisible(Op.tmpItems[ip]?.[Up])
+      static[kT] = Vm;
+      static[jT] = Am;
+      static COLLECTION_KIND = Sm;
+      static[lT](TT, UT, mT) {
+        if (!mT) return !0;
+        const WT = TT[vT] ?? TT;
+        return "string" === typeof WT[cT] || mT.isChangeTreeVisible(WT.tmpItems[UT]?.[ZT])
       }
-      static is(pp) {
-        return Array.isArray(pp) || void 0 !== pp.array
+      static is(TT) {
+        return Array.isArray(TT) || void 0 !== TT.array
       }
-      static from(pp) {
-        return new IO(...Array.from(pp))
+      static from(TT) {
+        return new WW(...Array.from(TT))
       }
       constructor() {
-        this[wp] = void 0, this[vp] = this;
-        const pp = new Proxy(this, oO);
-        return Object.defineProperty(this, Up, {
-          value: new lc(pp, this),
+        this[cT] = void 0, this[vT] = this;
+        const TT = new Proxy(this, mW);
+        return Object.defineProperty(this, ZT, {
+          value: new am(TT, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), pp
+        }), arguments.length > 0 && this.push(...arguments), TT
       }
       static initializeForDecoder() {
-        const pp = Object.create(IO.prototype);
-        pp.items = [], pp.isMovingItems = !1, pp._needsCompaction = !1, pp[wp] = void 0, pp[vp] = pp;
-        const ip = new Proxy(pp, oO);
-        return Jc(pp, ip), ip
+        const TT = Object.create(WW.prototype);
+        TT.items = [], TT.isMovingItems = !1, TT._needsCompaction = !1, TT[cT] = void 0, TT[vT] = TT;
+        const UT = new Proxy(TT, mW);
+        return Xm(TT, UT), UT
       }
-      set length(pp) {
-        0 === pp ? this.clear() : pp < this.items.length ? this.splice(pp, this.length - pp) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(TT) {
+        0 === TT ? this.clear() : TT < this.items.length ? this.splice(TT, this.length - TT) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[Up].pause()
+        this[ZT].pause()
       }
       resumeTracking() {
-        this[Up].resume()
+        this[ZT].resume()
       }
-      untracked(pp) {
-        return this[Up].untracked(pp)
+      untracked(TT) {
+        return this[ZT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[Up].paused
+        return this[ZT].paused
       }
       push() {
-        const pp = this[vp],
-          ip = pp.items,
-          cp = pp.tmpItems,
-          Op = pp[Up],
-          Ip = pp[wp];
-        let Sp = cp.length;
-        for (let xp = 0, Lp = arguments.length; xp < Lp; xp++, Sp++) {
-          const Lp = xp < 0 || arguments.length <= xp ? void 0 : arguments[xp];
-          if (void 0 === Lp || null === Lp) return;
-          "object" === typeof Lp && Ip && cO(Lp, Ip, pp, xp), Op.indexedOperation(Sp, op.ADD), ip.push(Lp), cp.push(Lp), Lp[Up]?.setParent(this, Op.root, Sp)
+        const TT = this[vT],
+          UT = TT.items,
+          mT = TT.tmpItems,
+          WT = TT[ZT],
+          MT = TT[cT];
+        let gT = mT.length;
+        for (let nT = 0, HT = arguments.length; nT < HT; nT++, gT++) {
+          const HT = nT < 0 || arguments.length <= nT ? void 0 : arguments[nT];
+          if (void 0 === HT || null === HT) return;
+          "object" === typeof HT && MT && TW(HT, MT, TT, nT), WT.indexedOperation(gT, zT.ADD), UT.push(HT), mT.push(HT), HT[ZT]?.setParent(this, WT.root, gT)
         }
-        return Sp
+        return gT
       }
       pop() {
-        const pp = this[vp],
-          ip = pp.tmpItems,
-          cp = pp.deletedIndexes;
-        let Op = -1;
-        for (let Ip = ip.length - 1; Ip >= 0; Ip--)
-          if (!0 !== cp[Ip]) {
-            Op = Ip;
+        const TT = this[vT],
+          UT = TT.tmpItems,
+          mT = TT.deletedIndexes;
+        let WT = -1;
+        for (let MT = UT.length - 1; MT >= 0; MT--)
+          if (!0 !== mT[MT]) {
+            WT = MT;
             break
-          } if (Op < 0) return;
-        const op = pp.$isUnsentAdd(Op);
-        return pp[Up].delete(Op), op ? pp.$cancelAdd(Op) : cp[Op] = !0, pp.items.pop()
+          } if (WT < 0) return;
+        const zT = TT.$isUnsentAdd(WT);
+        return TT[ZT].delete(WT), zT ? TT.$cancelAdd(WT) : mT[WT] = !0, TT.items.pop()
       }
-      at(pp) {
-        return pp < 0 && (pp += this.length), this.items[pp]
+      at(TT) {
+        return TT < 0 && (TT += this.length), this.items[TT]
       }
-      $wireIndex(pp) {
-        const ip = this.deletedIndexes;
-        if (0 === ip.length) return pp;
-        const cp = this.tmpItems;
-        let Op = 0;
-        for (let op = 0; op < cp.length; op++)
-          if (!0 !== ip[op]) {
-            if (Op === pp) return op;
-            Op++
-          } return cp.length + (pp - Op)
+      $wireIndex(TT) {
+        const UT = this.deletedIndexes;
+        if (0 === UT.length) return TT;
+        const mT = this.tmpItems;
+        let WT = 0;
+        for (let zT = 0; zT < mT.length; zT++)
+          if (!0 !== UT[zT]) {
+            if (WT === TT) return zT;
+            WT++
+          } return mT.length + (TT - WT)
       }
-      $isUnsentAdd(pp) {
-        const ip = this[Up];
-        return 0 === (576 & ip.flags) && !ip.paused && "string" !== typeof this[wp] && ip.operationAt(pp) === op.ADD
+      $isUnsentAdd(TT) {
+        const UT = this[ZT];
+        return 0 === (576 & UT.flags) && !UT.paused && "string" !== typeof this[cT] && UT.operationAt(TT) === zT.ADD
       }
-      $cancelAdd(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const cp = this[Up],
-          Op = this.tmpItems[pp];
-        this.tmpItems.splice(pp, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(pp, 1), cp.removeAt(pp, 1);
-        const op = Op?.[Up];
-        void 0 !== op && void 0 === op.root && op.removeParent(this), ip && this.$reindexChildren(pp)
+      $cancelAdd(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const mT = this[ZT],
+          WT = this.tmpItems[TT];
+        this.tmpItems.splice(TT, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(TT, 1), mT.removeAt(TT, 1);
+        const zT = WT?.[ZT];
+        void 0 !== zT && void 0 === zT.root && zT.removeParent(this), UT && this.$reindexChildren(TT)
       }
-      $reindexChildren(pp, ip) {
-        if (!this[Up].hasFilteredFields) return;
-        if ("string" === typeof this[wp]) return;
-        const cp = this.tmpItems,
-          Op = cp.length;
-        if (void 0 !== ip)
-          for (; pp < Op && cp[pp] === ip[pp];) pp++;
-        for (let op = pp; op < Op; op++) cp[op]?.[Up]?.setParentIndex(this, op)
+      $reindexChildren(TT, UT) {
+        if (!this[ZT].hasFilteredFields) return;
+        if ("string" === typeof this[cT]) return;
+        const mT = this.tmpItems,
+          WT = mT.length;
+        if (void 0 !== UT)
+          for (; TT < WT && mT[TT] === UT[TT];) TT++;
+        for (let zT = TT; zT < WT; zT++) mT[zT]?.[ZT]?.setParentIndex(this, zT)
       }
-      $changeAt(pp, ip) {
-        if (void 0 === ip || null === ip) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[pp] === ip) return;
-        const cp = void 0 !== this.items[pp] ? "object" === typeof ip ? op.DELETE_AND_ADD : op.REPLACE : op.ADD,
-          Op = this.$wireIndex(pp),
-          Ip = this[Up];
-        return Ip.change(Op, cp), ip[Up]?.setParent(this, Ip.root, Op), Op
+      $changeAt(TT, UT) {
+        if (void 0 === UT || null === UT) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[TT] === UT) return;
+        const mT = void 0 !== this.items[TT] ? "object" === typeof UT ? zT.DELETE_AND_ADD : zT.REPLACE : zT.ADD,
+          WT = this.$wireIndex(TT),
+          MT = this[ZT];
+        return MT.change(WT, mT), UT[ZT]?.setParent(this, MT.root, WT), WT
       }
-      $deleteAt(pp, ip) {
-        this[Up].delete(this.$wireIndex(pp), ip)
+      $deleteAt(TT, UT) {
+        this[ZT].delete(this.$wireIndex(TT), UT)
       }
-      $setAt(pp, ip, cp) {
-        cp === op.ADD && void 0 !== this.items[pp] ? this.items.splice(pp, 0, ip) : cp === op.DELETE_AND_MOVE ? (this.items.splice(pp, 1), this.items[pp] = ip) : (pp > this.items.length && (this._needsCompaction = !0), this.items[pp] = ip)
+      $setAt(TT, UT, mT) {
+        mT === zT.ADD && void 0 !== this.items[TT] ? this.items.splice(TT, 0, UT) : mT === zT.DELETE_AND_MOVE ? (this.items.splice(TT, 1), this.items[TT] = UT) : (TT > this.items.length && (this._needsCompaction = !0), this.items[TT] = UT)
       }
       clear() {
-        const pp = this[vp];
-        if (0 === pp.items.length) return;
-        const ip = pp[Up];
-        ip.forEachChild(((pp, cp) => {
-          ip.root?.remove(pp)
-        })), ip.discard(), ip.operation(op.CLEAR), pp.items.length = 0, pp.tmpItems.length = 0
-      } [Hp]() {
-        const pp = this[vp] ?? this,
-          ip = pp[Up];
-        if (ip.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const cp = pp.items;
-        for (let Op = 0; Op < cp.length; Op++) cp[Op]?.[Hp]?.();
-        pp.items.length = 0, pp.tmpItems.length = 0, pp.deletedIndexes.length = 0, ip.recycle(), pp[xp] = void 0
+        const TT = this[vT];
+        if (0 === TT.items.length) return;
+        const UT = TT[ZT];
+        UT.forEachChild(((TT, mT) => {
+          UT.root?.remove(TT)
+        })), UT.discard(), UT.operation(zT.CLEAR), TT.items.length = 0, TT.tmpItems.length = 0
+      } [qT]() {
+        const TT = this[vT] ?? this,
+          UT = TT[ZT];
+        if (UT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const mT = TT.items;
+        for (let WT = 0; WT < mT.length; WT++) mT[WT]?.[qT]?.();
+        TT.items.length = 0, TT.tmpItems.length = 0, TT.deletedIndexes.length = 0, UT.recycle(), TT[nT] = void 0
       }
       concat() {
-        return new IO(...this.items.concat(...arguments))
+        return new WW(...this.items.concat(...arguments))
       }
-      join(pp) {
-        return this.items.join(pp)
+      join(TT) {
+        return this.items.join(TT)
       }
       reverse() {
-        const pp = this[vp],
-          ip = pp[Up];
-        if (ip.has() || pp.deletedIndexes.length > 0) {
-          const ip = pp.items.slice().reverse();
-          return this.clear(), this.push(...ip), this
+        const TT = this[vT],
+          UT = TT[ZT];
+        if (UT.has() || TT.deletedIndexes.length > 0) {
+          const UT = TT.items.slice().reverse();
+          return this.clear(), this.push(...UT), this
         }
-        return ip.operation(op.REVERSE), pp.items.reverse(), pp.tmpItems.reverse(), pp.$reindexChildren(0), this
+        return UT.operation(zT.REVERSE), TT.items.reverse(), TT.tmpItems.reverse(), TT.$reindexChildren(0), this
       }
       shift() {
-        const pp = this[vp],
-          ip = pp.items;
-        if (0 === ip.length) return;
-        const cp = pp[Up],
-          Op = pp.deletedIndexes;
-        let Ip = 0;
-        for (; !0 === Op[Ip];) Ip++;
-        const Sp = pp.$isUnsentAdd(Ip);
-        return cp.delete(Ip, op.DELETE), Sp ? pp.$cancelAdd(Ip) : Op[Ip] = !0, ip.shift()
+        const TT = this[vT],
+          UT = TT.items;
+        if (0 === UT.length) return;
+        const mT = TT[ZT],
+          WT = TT.deletedIndexes;
+        let MT = 0;
+        for (; !0 === WT[MT];) MT++;
+        const gT = TT.$isUnsentAdd(MT);
+        return mT.delete(MT, zT.DELETE), gT ? TT.$cancelAdd(MT) : WT[MT] = !0, UT.shift()
       }
-      slice(pp, ip) {
-        const cp = new IO;
-        return cp.push(...this.items.slice(pp, ip)), cp
+      slice(TT, UT) {
+        const mT = new WW;
+        return mT.push(...this.items.slice(TT, UT)), mT
       }
       sort() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : OO;
-        const ip = this[vp];
-        ip.isMovingItems = !0;
-        const cp = ip[Up];
-        return ip.items.sort(pp).forEach(((pp, ip) => cp.change(ip, op.REPLACE))), ip.tmpItems.sort(pp), ip.$reindexChildren(0), ip.isMovingItems = !1, this
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : UW;
+        const UT = this[vT];
+        UT.isMovingItems = !0;
+        const mT = UT[ZT];
+        return UT.items.sort(TT).forEach(((TT, UT) => mT.change(UT, zT.REPLACE))), UT.tmpItems.sort(TT), UT.$reindexChildren(0), UT.isMovingItems = !1, this
       }
-      splice(pp, ip) {
-        const cp = this[vp],
-          Op = cp[Up],
-          Ip = cp.items,
-          Sp = cp.tmpItems,
-          xp = cp.deletedIndexes,
-          Lp = Ip.length,
-          Yp = Sp.length;
-        for (var Dp = arguments.length, Ap = new Array(Dp > 2 ? Dp - 2 : 0), Pp = 2; Pp < Dp; Pp++) Ap[Pp - 2] = arguments[Pp];
-        const Wp = Ap.length,
-          yp = [];
-        for (let op = 0; op < Yp; op++) !0 !== xp[op] && yp.push(op);
-        let wp;
-        if (Lp > pp) {
-          void 0 === ip && (ip = Lp - pp);
-          for (let Ip = pp; Ip < pp + ip; Ip++) {
-            const pp = yp[Ip],
-              ip = cp.$isUnsentAdd(pp);
-            Op.delete(pp, op.DELETE), ip ? (wp ??= []).push(pp) : xp[pp] = !0
+      splice(TT, UT) {
+        const mT = this[vT],
+          WT = mT[ZT],
+          MT = mT.items,
+          gT = mT.tmpItems,
+          nT = mT.deletedIndexes,
+          HT = MT.length,
+          kT = gT.length;
+        for (var jT = arguments.length, lT = new Array(jT > 2 ? jT - 2 : 0), LT = 2; LT < jT; LT++) lT[LT - 2] = arguments[LT];
+        const pT = lT.length,
+          BT = [];
+        for (let zT = 0; zT < kT; zT++) !0 !== nT[zT] && BT.push(zT);
+        let cT;
+        if (HT > TT) {
+          void 0 === UT && (UT = HT - TT);
+          for (let MT = TT; MT < TT + UT; MT++) {
+            const TT = BT[MT],
+              UT = mT.$isUnsentAdd(TT);
+            WT.delete(TT, zT.DELETE), UT ? (cT ??= []).push(TT) : nT[TT] = !0
           }
-        } else ip = 0;
-        if (Wp > 0) {
-          const Ip = yp[pp] ?? Lp,
-            Yp = Math.min(Wp, ip);
-          for (let pp = 0; pp < Yp; pp++) {
-            const ip = Ip + pp;
-            let cp;
-            const Lp = void 0 !== wp ? wp.indexOf(ip) : -1; - 1 !== Lp ? (wp.splice(Lp, 1), cp = op.ADD) : cp = xp[ip] ? op.DELETE_AND_ADD : op.ADD, Op.indexedOperation(ip, cp), Sp[ip] = Ap[pp], xp[ip] = !1, Ap[pp][Up]?.setParent(this, Op.root, ip)
+        } else UT = 0;
+        if (pT > 0) {
+          const MT = BT[TT] ?? HT,
+            kT = Math.min(pT, UT);
+          for (let TT = 0; TT < kT; TT++) {
+            const UT = MT + TT;
+            let mT;
+            const HT = void 0 !== cT ? cT.indexOf(UT) : -1; - 1 !== HT ? (cT.splice(HT, 1), mT = zT.ADD) : mT = nT[UT] ? zT.DELETE_AND_ADD : zT.ADD, WT.indexedOperation(UT, mT), gT[UT] = lT[TT], nT[UT] = !1, lT[TT][ZT]?.setParent(this, WT.root, UT)
           }
-          const Dp = Wp - Yp;
-          if (Dp > 0) {
-            const pp = Ip + Yp;
-            Op.insertAt(pp, Dp);
-            for (let ip = 0; ip < Dp; ip++) Ap[Yp + ip][Up]?.setParent(this, Op.root, pp + ip);
-            xp.length > 0 && xp.splice(pp, 0, ...new Array(Dp).fill(!1)), Sp.splice(pp, 0, ...Ap.slice(Yp)), cp.$reindexChildren(pp + Dp)
+          const jT = pT - kT;
+          if (jT > 0) {
+            const TT = MT + kT;
+            WT.insertAt(TT, jT);
+            for (let UT = 0; UT < jT; UT++) lT[kT + UT][ZT]?.setParent(this, WT.root, TT + UT);
+            nT.length > 0 && nT.splice(TT, 0, ...new Array(jT).fill(!1)), gT.splice(TT, 0, ...lT.slice(kT)), mT.$reindexChildren(TT + jT)
           }
         }
-        if (void 0 !== wp && wp.length > 0) {
-          for (let pp = wp.length - 1; pp >= 0; pp--) cp.$cancelAdd(wp[pp], !1);
-          cp.$reindexChildren(wp[0])
+        if (void 0 !== cT && cT.length > 0) {
+          for (let TT = cT.length - 1; TT >= 0; TT--) mT.$cancelAdd(cT[TT], !1);
+          mT.$reindexChildren(cT[0])
         }
-        return Op.root?.enqueueChangeTree(Op), Ip.splice(pp, ip, ...Ap)
+        return WT.root?.enqueueChangeTree(WT), MT.splice(TT, UT, ...lT)
       }
       unshift() {
-        const pp = this[vp],
-          ip = pp[Up];
-        ip.unshift(arguments.length);
-        for (let Op = 0; Op < arguments.length; Op++)(Op < 0 || arguments.length <= Op ? void 0 : arguments[Op])?.[Up]?.setParent(this, ip.root, Op);
-        const cp = pp.deletedIndexes;
-        return cp.length > 0 && cp.unshift(...new Array(arguments.length).fill(!1)), pp.tmpItems.unshift(...arguments), pp.$reindexChildren(arguments.length), pp.items.unshift(...arguments)
+        const TT = this[vT],
+          UT = TT[ZT];
+        UT.unshift(arguments.length);
+        for (let WT = 0; WT < arguments.length; WT++)(WT < 0 || arguments.length <= WT ? void 0 : arguments[WT])?.[ZT]?.setParent(this, UT.root, WT);
+        const mT = TT.deletedIndexes;
+        return mT.length > 0 && mT.unshift(...new Array(arguments.length).fill(!1)), TT.tmpItems.unshift(...arguments), TT.$reindexChildren(arguments.length), TT.items.unshift(...arguments)
       }
-      indexOf(pp, ip) {
-        return this.items.indexOf(pp, ip)
+      indexOf(TT, UT) {
+        return this.items.indexOf(TT, UT)
       }
-      lastIndexOf(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(pp, ip)
+      lastIndexOf(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(TT, UT)
       }
-      every(pp, ip) {
-        return this.items.every(pp, ip)
+      every(TT, UT) {
+        return this.items.every(TT, UT)
       }
-      some(pp, ip) {
-        return this.items.some(pp, ip)
+      some(TT, UT) {
+        return this.items.some(TT, UT)
       }
-      forEach(pp, ip) {
-        return this.items.forEach(pp, ip)
+      forEach(TT, UT) {
+        return this.items.forEach(TT, UT)
       }
-      map(pp, ip) {
-        return this.items.map(pp, ip)
+      map(TT, UT) {
+        return this.items.map(TT, UT)
       }
-      filter(pp, ip) {
-        return this.items.filter(pp, ip)
+      filter(TT, UT) {
+        return this.items.filter(TT, UT)
       }
-      reduce(pp, ip) {
+      reduce(TT, UT) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(pp, ip) {
+      reduceRight(TT, UT) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(pp, ip) {
-        return this.items.find(pp, ip)
+      find(TT, UT) {
+        return this.items.find(TT, UT)
       }
-      findIndex(pp, ip) {
-        return this.items.findIndex(pp, ip)
+      findIndex(TT, UT) {
+        return this.items.findIndex(TT, UT)
       }
-      fill(pp, ip, cp) {
+      fill(TT, UT, mT) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(pp, ip, cp) {
+      copyWithin(TT, UT, mT) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return IO
+        return WW
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(pp, ip) {
-        return this.items.includes(pp, ip)
+      includes(TT, UT) {
+        return this.items.includes(TT, UT)
       }
-      flatMap(pp, ip) {
+      flatMap(TT, UT) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(pp) {
+      flat(TT) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+        for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(pp, ip) {
-        const cp = this.items.slice();
-        return pp < 0 && (pp += this.length), cp[pp] = ip, new IO(...cp)
+      with(TT, UT) {
+        const mT = this.items.slice();
+        return TT < 0 && (TT += this.length), mT[TT] = UT, new WW(...mT)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(pp) {
-        return this.items.slice().sort(pp)
+      toSorted(TT) {
+        return this.items.slice().sort(TT)
       }
-      toSpliced(pp, ip) {
-        for (var cp = arguments.length, Op = new Array(cp > 2 ? cp - 2 : 0), op = 2; op < cp; op++) Op[op - 2] = arguments[op];
-        const Ip = this.items.slice();
-        return Ip.splice.apply(Ip, arguments), Ip
+      toSpliced(TT, UT) {
+        for (var mT = arguments.length, WT = new Array(mT > 2 ? mT - 2 : 0), zT = 2; zT < mT; zT++) WT[zT - 2] = arguments[zT];
+        const MT = this.items.slice();
+        return MT.splice.apply(MT, arguments), MT
       }
       shuffle() {
-        return this.move((pp => {
-          let ip = this.items.length;
-          for (; 0 != ip;) {
-            let pp = Math.floor(Math.random() * ip);
-            ip--, [this[ip], this[pp]] = [this[pp], this[ip]]
+        return this.move((TT => {
+          let UT = this.items.length;
+          for (; 0 != UT;) {
+            let TT = Math.floor(Math.random() * UT);
+            UT--, [this[UT], this[TT]] = [this[TT], this[UT]]
           }
         }))
       }
-      move(pp) {
-        return this.isMovingItems = !0, pp(this), this.isMovingItems = !1, this
-      } [Pp](pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const cp = this[vp] ?? this;
-        return ip || cp.deletedIndexes[pp] ? cp.items[pp] : cp.tmpItems[pp] || cp.items[pp]
-      } [Wp](pp) {
-        const ip = this[vp] ?? this;
-        ip.items[pp] = void 0, ip._needsCompaction = !0
-      } [tp]() {
-        const pp = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, pp), this.deletedIndexes.length = 0)
-      } [dp]() {
-        const pp = this[vp] ?? this;
-        pp._needsCompaction && (pp._needsCompaction = !1, pp.items = pp.items.filter((pp => void 0 !== pp)))
-      } [yp](pp, ip, cp) {
-        const Op = this[vp] ?? this,
-          op = Op.items;
-        let Ip = !1;
-        for (let Sp = 0; Sp < op.length; Sp++) {
-          const xp = op[Sp];
-          pp.has(Sp) ? cp(xp) : (Ip = !0, ip(xp, Sp), Op[Wp](Sp))
+      move(TT) {
+        return this.isMovingItems = !0, TT(this), this.isMovingItems = !1, this
+      } [LT](TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const mT = this[vT] ?? this;
+        return UT || mT.deletedIndexes[TT] ? mT.items[TT] : mT.tmpItems[TT] || mT.items[TT]
+      } [pT](TT) {
+        const UT = this[vT] ?? this;
+        UT.items[TT] = void 0, UT._needsCompaction = !0
+      } [fT]() {
+        const TT = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, TT), this.deletedIndexes.length = 0)
+      } [iT]() {
+        const TT = this[vT] ?? this;
+        TT._needsCompaction && (TT._needsCompaction = !1, TT.items = TT.items.filter((TT => void 0 !== TT)))
+      } [BT](TT, UT, mT) {
+        const WT = this[vT] ?? this,
+          zT = WT.items;
+        let MT = !1;
+        for (let gT = 0; gT < zT.length; gT++) {
+          const nT = zT[gT];
+          TT.has(gT) ? mT(nT) : (MT = !0, UT(nT, gT), WT[pT](gT))
         }
-        Ip && Op[dp]()
+        MT && WT[iT]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((pp => "function" === typeof pp.toJSON ? pp.toJSON() : pp))
+        return this.toArray().map((TT => "function" === typeof TT.toJSON ? TT.toJSON() : TT))
       }
-      clone(pp) {
-        let ip;
-        return pp ? (ip = new IO, ip.push(...this.items)) : ip = new IO(...this.map((pp => pp[Up] ? pp.clone() : pp))), ip
+      clone(TT) {
+        let UT;
+        return TT ? (UT = new WW, UT.push(...this.items)) : UT = new WW(...this.map((TT => TT[ZT] ? TT.clone() : TT))), UT
       }
     }
-    ki("array", {
-      constructor: IO
+    OU("array", {
+      constructor: WW
     });
-    class SO {
+    class zW {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(pp) {
-        const ip = this.indexByKey[pp];
-        return void 0 === ip ? void 0 : ip
+      indexOf(TT) {
+        const UT = this.indexByKey[TT];
+        return void 0 === UT ? void 0 : UT
       }
-      assign(pp) {
-        const ip = this.nextIndex++;
-        return this.indexByKey[pp] = ip, this.keyByIndex.set(ip, pp), ip
+      assign(TT) {
+        const UT = this.nextIndex++;
+        return this.indexByKey[TT] = UT, this.keyByIndex.set(UT, TT), UT
       }
-      snapshot(pp, ip) {
-        (this.snapshots ??= new Map).set(pp, ip)
+      snapshot(TT, UT) {
+        (this.snapshots ??= new Map).set(TT, UT)
       }
-      forgetSnapshot(pp) {
-        this.snapshots?.delete(pp)
+      forgetSnapshot(TT) {
+        this.snapshots?.delete(TT)
       }
-      snapshotAt(pp) {
-        return this.snapshots?.get(pp)
+      snapshotAt(TT) {
+        return this.snapshots?.get(TT)
       }
-      setIndex(pp, ip) {
-        this.keyByIndex.set(pp, ip), this.indexByKey[ip] = pp
+      setIndex(TT, UT) {
+        this.keyByIndex.set(TT, UT), this.indexByKey[UT] = TT
       }
-      keyOf(pp) {
-        return this.keyByIndex.get(pp)
+      keyOf(TT) {
+        return this.keyByIndex.get(TT)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [pp] of this.snapshots) {
-            const ip = this.keyByIndex.get(pp);
-            void 0 !== ip && (delete this.indexByKey[ip], this.keyByIndex.delete(pp))
+          for (const [TT] of this.snapshots) {
+            const UT = this.keyByIndex.get(TT);
+            void 0 !== UT && (delete this.indexByKey[UT], this.keyByIndex.delete(TT))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class xO {
-      [Up];
-      [xp];
+    class MW {
+      [ZT];
+      [nT];
       childType;
-      [wp];
+      [cT];
       $items = new Map;
-      journal = new SO;
+      journal = new zW;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(pp) {
-        (this._stream ??= qi()).maxPerTick = pp
+      set maxPerTick(TT) {
+        (this._stream ??= JU()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(pp) {
-        (this._stream ??= qi()).priority = pp
+      set priority(TT) {
+        (this._stream ??= JU()).priority = TT
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Yp] = Tc;
-      static[Dp] = Vc;
-      static COLLECTION_KIND = gc;
-      static[Ap](pp, ip, cp) {
-        if (!cp || "string" === typeof pp[wp]) return !0;
-        const Op = pp[Pp](ip) ?? pp.journal.snapshotAt(ip);
-        return cp.isChangeTreeVisible(Op[Up])
+      static[kT] = sm;
+      static[jT] = om;
+      static COLLECTION_KIND = Km;
+      static[lT](TT, UT, mT) {
+        if (!mT || "string" === typeof TT[cT]) return !0;
+        const WT = TT[LT](UT) ?? TT.journal.snapshotAt(UT);
+        return mT.isChangeTreeVisible(WT[ZT])
       }
-      static is(pp) {
-        return void 0 !== pp.map
+      static is(TT) {
+        return void 0 !== TT.map
       }
-      constructor(pp) {
-        if (Object.defineProperty(this, Up, {
-            value: new lc(this),
+      constructor(TT) {
+        if (Object.defineProperty(this, ZT, {
+            value: new am(this),
             enumerable: !1,
             writable: !0
-          }), this[wp] = void 0, pp)
-          if (pp instanceof Map || pp instanceof xO) pp.forEach(((pp, ip) => this.set(ip, pp)));
+          }), this[cT] = void 0, TT)
+          if (TT instanceof Map || TT instanceof MW) TT.forEach(((TT, UT) => this.set(UT, TT)));
           else
-            for (const ip in pp) this.set(ip, pp[ip])
+            for (const UT in TT) this.set(UT, TT[UT])
       }
       static initializeForDecoder() {
-        const pp = Object.create(xO.prototype);
-        return pp.$items = new Map, pp.journal = new SO, pp[wp] = void 0, Jc(pp), pp
+        const TT = Object.create(MW.prototype);
+        return TT.$items = new Map, TT.journal = new zW, TT[cT] = void 0, Xm(TT), TT
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return xO
+        return MW
       }
-      set(pp, ip) {
-        if (void 0 === ip || null === ip) throw new Error(`MapSchema#set('${pp}', ${ip}): trying to set ${ip} value on '${pp}'.`);
-        "object" === typeof ip && this[wp] && cO(ip, this[wp], this, pp), pp = pp.toString();
-        const cp = this[Up],
-          Op = void 0 !== ip[Up],
-          Ip = this.journal;
-        let Sp, xp = Ip.indexOf(pp);
-        if (void 0 !== xp) {
-          Sp = op.REPLACE;
-          const cp = this.$items.get(pp);
-          if (cp === ip) return;
-          Op && (Sp = op.DELETE_AND_ADD, void 0 !== cp && cp[Up].root?.remove(cp[Up])), void 0 !== Ip.snapshotAt(xp) && Ip.forgetSnapshot(xp)
-        } else xp = Ip.assign(pp), Sp = op.ADD;
-        return this.$items.set(pp, ip), Sp === op.ADD && cp.isStreamCollection ? void 0 !== cp.root && Ci(this, cp.root, xp) : cp.change(xp, Sp), Op && ip[Up].setParent(this, cp.root, xp), this
+      set(TT, UT) {
+        if (void 0 === UT || null === UT) throw new Error(`MapSchema#set('${TT}', ${UT}): trying to set ${UT} value on '${TT}'.`);
+        "object" === typeof UT && this[cT] && TW(UT, this[cT], this, TT), TT = TT.toString();
+        const mT = this[ZT],
+          WT = void 0 !== UT[ZT],
+          MT = this.journal;
+        let gT, nT = MT.indexOf(TT);
+        if (void 0 !== nT) {
+          gT = zT.REPLACE;
+          const mT = this.$items.get(TT);
+          if (mT === UT) return;
+          WT && (gT = zT.DELETE_AND_ADD, void 0 !== mT && mT[ZT].root?.remove(mT[ZT])), void 0 !== MT.snapshotAt(nT) && MT.forgetSnapshot(nT)
+        } else nT = MT.assign(TT), gT = zT.ADD;
+        return this.$items.set(TT, UT), gT === zT.ADD && mT.isStreamCollection ? void 0 !== mT.root && dU(this, mT.root, nT) : mT.change(nT, gT), WT && UT[ZT].setParent(this, mT.root, nT), this
       }
-      get(pp) {
-        return this.$items.get(pp)
+      get(TT) {
+        return this.$items.get(TT)
       }
-      getOrInsert(pp, ip) {
-        return this.$items.has(pp) ? this.$items.get(pp) : (this.set(pp, ip), ip)
+      getOrInsert(TT, UT) {
+        return this.$items.has(TT) ? this.$items.get(TT) : (this.set(TT, UT), UT)
       }
-      getOrInsertComputed(pp, ip) {
-        if (this.$items.has(pp)) return this.$items.get(pp);
-        const cp = ip(pp);
-        return this.set(pp, cp), cp
+      getOrInsertComputed(TT, UT) {
+        if (this.$items.has(TT)) return this.$items.get(TT);
+        const mT = UT(TT);
+        return this.set(TT, mT), mT
       }
-      delete(pp) {
-        if (!this.$items.has(pp)) return !1;
-        const ip = this.journal.indexOf(pp),
-          cp = this.$items.get(pp),
-          Op = this[Up];
-        if (Op.isStreamCollection) {
-          const op = Op.root;
-          let Ip = !1;
-          return void 0 !== op && (Ip = Ei(this, op, this[xp], ip)), void 0 !== cp?.[Up] && op?.remove(cp[Up]), this.$items.delete(pp), Ip || this.journal.snapshot(ip, cp), !0
+      delete(TT) {
+        if (!this.$items.has(TT)) return !1;
+        const UT = this.journal.indexOf(TT),
+          mT = this.$items.get(TT),
+          WT = this[ZT];
+        if (WT.isStreamCollection) {
+          const zT = WT.root;
+          let MT = !1;
+          return void 0 !== zT && (MT = wU(this, zT, this[nT], UT)), void 0 !== mT?.[ZT] && zT?.remove(mT[ZT]), this.$items.delete(TT), MT || this.journal.snapshot(UT, mT), !0
         }
-        return this.journal.snapshot(ip, cp), Op.delete(ip), this.$items.delete(pp)
+        return this.journal.snapshot(UT, mT), WT.delete(UT), this.$items.delete(TT)
       }
       clear() {
-        const pp = this[Up];
-        pp.discard(), pp.forEachChild(((ip, cp) => {
-          pp.root?.remove(ip)
-        })), this.journal.reset(), this.$items.clear(), pp.operation(op.CLEAR)
-      } [Hp]() {
-        const pp = this[Up];
-        if (pp.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((pp => pp?.[Hp]?.())), this.$items.clear(), this.journal.reset(), pp.recycle(), this[xp] = void 0
+        const TT = this[ZT];
+        TT.discard(), TT.forEachChild(((UT, mT) => {
+          TT.root?.remove(UT)
+        })), this.journal.reset(), this.$items.clear(), TT.operation(zT.CLEAR)
+      } [qT]() {
+        const TT = this[ZT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[qT]?.())), this.$items.clear(), this.journal.reset(), TT.recycle(), this[nT] = void 0
       }
-      has(pp) {
-        return this.$items.has(pp)
+      has(TT) {
+        return this.$items.has(TT)
       }
-      forEach(pp) {
-        this.$items.forEach(pp)
+      forEach(TT) {
+        this.$items.forEach(TT)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Up].pause()
+        this[ZT].pause()
       }
       resumeTracking() {
-        this[Up].resume()
+        this[ZT].resume()
       }
-      untracked(pp) {
-        return this[Up].untracked(pp)
+      untracked(TT) {
+        return this[ZT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[Up].paused
+        return this[ZT].paused
       }
-      setIndex(pp, ip) {
-        this.journal.setIndex(pp, ip)
+      setIndex(TT, UT) {
+        this.journal.setIndex(TT, UT)
       }
-      getIndex(pp) {
-        return this.journal.keyOf(pp)
-      } [Pp](pp) {
-        const ip = this.journal.keyOf(pp);
-        return void 0 !== ip ? this.$items.get(ip) : void 0
-      } [Wp](pp) {
-        const ip = this.journal.keyOf(pp);
-        void 0 !== ip && (this.$items.delete(ip), this.journal.keyByIndex.delete(pp))
-      } [yp](pp, ip, cp) {
-        let Op = null;
-        if (this.$items.forEach(((op, Ip) => {
-            pp.has(Ip) ? cp(op) : ((Op ??= new Set).add(Ip), ip(op, Ip))
-          })), null !== Op) {
-          Op.forEach((pp => {
-            this.$items.delete(pp), delete this.journal.indexByKey[pp]
+      getIndex(TT) {
+        return this.journal.keyOf(TT)
+      } [LT](TT) {
+        const UT = this.journal.keyOf(TT);
+        return void 0 !== UT ? this.$items.get(UT) : void 0
+      } [pT](TT) {
+        const UT = this.journal.keyOf(TT);
+        void 0 !== UT && (this.$items.delete(UT), this.journal.keyByIndex.delete(TT))
+      } [BT](TT, UT, mT) {
+        let WT = null;
+        if (this.$items.forEach(((zT, MT) => {
+            TT.has(MT) ? mT(zT) : ((WT ??= new Set).add(MT), UT(zT, MT))
+          })), null !== WT) {
+          WT.forEach((TT => {
+            this.$items.delete(TT), delete this.journal.indexByKey[TT]
           }));
-          const pp = [];
-          this.journal.keyByIndex.forEach(((ip, cp) => {
-            Op.has(ip) && pp.push(cp)
+          const TT = [];
+          this.journal.keyByIndex.forEach(((UT, mT) => {
+            WT.has(UT) && TT.push(mT)
           }));
-          for (let ip = 0; ip < pp.length; ip++) this.journal.keyByIndex.delete(pp[ip])
+          for (let UT = 0; UT < TT.length; UT++) this.journal.keyByIndex.delete(TT[UT])
         }
-      } [tp]() {
+      } [fT]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(pp) {
-        Ji(this, pp)
+      _dropView(TT) {
+        XU(this, TT)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (pp => {
-          let [ip, cp] = pp;
-          return [ip, "function" === typeof cp.toJSON ? cp.toJSON() : cp]
+        return Object.fromEntries(Array.from(this, (TT => {
+          let [UT, mT] = TT;
+          return [UT, "function" === typeof mT.toJSON ? mT.toJSON() : mT]
         })))
       }
-      clone(pp) {
-        let ip;
-        return pp ? ip = Object.assign(new xO, this) : (ip = new xO, this.forEach(((pp, cp) => {
-          pp[Up] ? ip.set(cp, pp.clone()) : ip.set(cp, pp)
-        }))), ip
+      clone(TT) {
+        let UT;
+        return TT ? UT = Object.assign(new MW, this) : (UT = new MW, this.forEach(((TT, mT) => {
+          TT[ZT] ? UT.set(mT, TT.clone()) : UT.set(mT, TT)
+        }))), UT
       }
     }
-    ki("map", {
-      constructor: xO
+    OU("map", {
+      constructor: MW
     });
-    class LO {
-      [Up];
-      [xp];
-      [wp];
+    class gW {
+      [ZT];
+      [nT];
+      [cT];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(pp) {
-        (this._stream ??= qi()).maxPerTick = pp
+      set maxPerTick(TT) {
+        (this._stream ??= JU()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(pp) {
-        (this._stream ??= qi()).priority = pp
+      set priority(TT) {
+        (this._stream ??= JU()).priority = TT
       }
-      static[Yp] = fc;
-      static[Dp] = Vc;
-      static COLLECTION_KIND = Zc;
-      static[Ap](pp, ip, cp) {
-        return !cp || "string" === typeof pp[wp] || cp.isChangeTreeVisible((pp[Pp](ip) ?? pp.deletedItems[ip])[Up])
+      static[kT] = Fm;
+      static[jT] = om;
+      static COLLECTION_KIND = Nm;
+      static[lT](TT, UT, mT) {
+        return !mT || "string" === typeof TT[cT] || mT.isChangeTreeVisible((TT[LT](UT) ?? TT.deletedItems[UT])[ZT])
       }
-      static is(pp) {
-        return void 0 !== pp.collection
+      static is(TT) {
+        return void 0 !== TT.collection
       }
-      constructor(pp) {
-        Object.defineProperty(this, Up, {
-          value: new lc(this),
+      constructor(TT) {
+        Object.defineProperty(this, ZT, {
+          value: new am(this),
           enumerable: !1,
           writable: !0
-        }), this[wp] = void 0, pp && pp.forEach((pp => this.add(pp)))
+        }), this[cT] = void 0, TT && TT.forEach((TT => this.add(TT)))
       }
       static initializeForDecoder() {
-        const pp = Object.create(LO.prototype);
-        return pp.$items = new Map, pp.deletedItems = {}, pp.$refId = 0, pp[wp] = void 0, Jc(pp), pp
+        const TT = Object.create(gW.prototype);
+        return TT.$items = new Map, TT.deletedItems = {}, TT.$refId = 0, TT[cT] = void 0, Xm(TT), TT
       }
-      add(pp) {
-        const ip = this.$refId++,
-          cp = this[Up];
-        return this.$items.set(ip, pp), cp.isStreamCollection ? void 0 !== cp.root && Ci(this, cp.root, ip) : cp.change(ip), void 0 !== pp[Up] && pp[Up].setParent(this, cp.root, ip), ip
+      add(TT) {
+        const UT = this.$refId++,
+          mT = this[ZT];
+        return this.$items.set(UT, TT), mT.isStreamCollection ? void 0 !== mT.root && dU(this, mT.root, UT) : mT.change(UT), void 0 !== TT[ZT] && TT[ZT].setParent(this, mT.root, UT), UT
       }
-      at(pp) {
-        const ip = Array.from(this.$items.keys())[pp];
-        return this.$items.get(ip)
+      at(TT) {
+        const UT = Array.from(this.$items.keys())[TT];
+        return this.$items.get(UT)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(pp) {
-        const ip = this.$items.entries();
-        let cp, Op;
+      delete(TT) {
+        const UT = this.$items.entries();
+        let mT, WT;
         for (;
-          (Op = ip.next()) && !Op.done;)
-          if (pp === Op.value[1]) {
-            cp = Op.value[0];
+          (WT = UT.next()) && !WT.done;)
+          if (TT === WT.value[1]) {
+            mT = WT.value[0];
             break
-          } if (void 0 === cp) return !1;
-        const op = this[Up];
-        if (op.isStreamCollection) {
-          const pp = op.root,
-            ip = this.$items.get(cp);
-          return void 0 !== pp && Ei(this, pp, this[xp], cp), void 0 !== ip?.[Up] && pp?.remove(ip[Up]), this.deletedItems[cp] = ip, this.$items.delete(cp)
+          } if (void 0 === mT) return !1;
+        const zT = this[ZT];
+        if (zT.isStreamCollection) {
+          const TT = zT.root,
+            UT = this.$items.get(mT);
+          return void 0 !== TT && wU(this, TT, this[nT], mT), void 0 !== UT?.[ZT] && TT?.remove(UT[ZT]), this.deletedItems[mT] = UT, this.$items.delete(mT)
         }
-        return this.deletedItems[cp] = op.delete(cp), this.$items.delete(cp)
+        return this.deletedItems[mT] = zT.delete(mT), this.$items.delete(mT)
       }
       clear() {
-        const pp = this[Up];
-        pp.discard(), pp.forEachChild(((ip, cp) => {
-          pp.root?.remove(ip)
-        })), this.$items.clear(), pp.operation(op.CLEAR)
-      } [Hp]() {
-        const pp = this[Up];
-        if (pp.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((pp => pp?.[Hp]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, pp.recycle(), this[xp] = void 0
+        const TT = this[ZT];
+        TT.discard(), TT.forEachChild(((UT, mT) => {
+          TT.root?.remove(UT)
+        })), this.$items.clear(), TT.operation(zT.CLEAR)
+      } [qT]() {
+        const TT = this[ZT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[qT]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, TT.recycle(), this[nT] = void 0
       }
-      has(pp) {
-        return Array.from(this.$items.values()).some((ip => ip === pp))
+      has(TT) {
+        return Array.from(this.$items.values()).some((UT => UT === TT))
       }
-      forEach(pp) {
-        this.$items.forEach(((ip, cp, Op) => pp(ip, cp, this)))
+      forEach(TT) {
+        this.$items.forEach(((UT, mT, WT) => TT(UT, mT, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Up].pause()
+        this[ZT].pause()
       }
       resumeTracking() {
-        this[Up].resume()
+        this[ZT].resume()
       }
-      untracked(pp) {
-        return this[Up].untracked(pp)
+      untracked(TT) {
+        return this[ZT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[Up].paused
+        return this[ZT].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(pp, ip) {}
-      getIndex(pp) {
-        return pp
-      } [Pp](pp) {
-        return this.$items.get(pp)
-      } [Wp](pp) {
-        this.$items.delete(pp)
-      } [yp](pp, ip, cp) {
-        let Op = null;
-        if (this.$items.forEach(((op, Ip) => {
-            pp.has(Ip) ? cp(op) : ((Op ??= []).push(Ip), ip(op, Ip))
-          })), null !== Op)
-          for (let op = 0; op < Op.length; op++) this[Wp](Op[op])
-      } [tp]() {
-        for (const pp in this.deletedItems) delete this.deletedItems[pp]
+      setIndex(TT, UT) {}
+      getIndex(TT) {
+        return TT
+      } [LT](TT) {
+        return this.$items.get(TT)
+      } [pT](TT) {
+        this.$items.delete(TT)
+      } [BT](TT, UT, mT) {
+        let WT = null;
+        if (this.$items.forEach(((zT, MT) => {
+            TT.has(MT) ? mT(zT) : ((WT ??= []).push(MT), UT(zT, MT))
+          })), null !== WT)
+          for (let zT = 0; zT < WT.length; zT++) this[pT](WT[zT])
+      } [fT]() {
+        for (const TT in this.deletedItems) delete this.deletedItems[TT]
       }
-      _dropView(pp) {
-        Ji(this, pp)
+      _dropView(TT) {
+        XU(this, TT)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const pp = [];
-        return this.forEach(((ip, cp) => {
-          pp.push("function" === typeof ip.toJSON ? ip.toJSON() : ip)
-        })), pp
+        const TT = [];
+        return this.forEach(((UT, mT) => {
+          TT.push("function" === typeof UT.toJSON ? UT.toJSON() : UT)
+        })), TT
       }
-      clone(pp) {
-        let ip;
-        return pp ? ip = Object.assign(new LO, this) : (ip = new LO, this.forEach((pp => {
-          pp[Up] ? ip.add(pp.clone()) : ip.add(pp)
-        }))), ip
+      clone(TT) {
+        let UT;
+        return TT ? UT = Object.assign(new gW, this) : (UT = new gW, this.forEach((TT => {
+          TT[ZT] ? UT.add(TT.clone()) : UT.add(TT)
+        }))), UT
       }
     }
-    ki("collection", {
-      constructor: LO
+    OU("collection", {
+      constructor: gW
     });
-    class YO {
-      [Up];
-      [xp];
-      [wp];
+    class nW {
+      [ZT];
+      [nT];
+      [cT];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(pp) {
-        (this._stream ??= qi()).maxPerTick = pp
+      set maxPerTick(TT) {
+        (this._stream ??= JU()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(pp) {
-        (this._stream ??= qi()).priority = pp
+      set priority(TT) {
+        (this._stream ??= JU()).priority = TT
       }
-      static[Yp] = fc;
-      static[Dp] = Vc;
-      static COLLECTION_KIND = rc;
-      static[Ap](pp, ip, cp) {
-        return !cp || "string" === typeof pp[wp] || cp.isVisible((pp[Pp](ip) ?? pp.deletedItems[ip])[Up])
+      static[kT] = Fm;
+      static[jT] = om;
+      static COLLECTION_KIND = Gm;
+      static[lT](TT, UT, mT) {
+        return !mT || "string" === typeof TT[cT] || mT.isVisible((TT[LT](UT) ?? TT.deletedItems[UT])[ZT])
       }
-      static is(pp) {
-        return void 0 !== pp.set
+      static is(TT) {
+        return void 0 !== TT.set
       }
-      constructor(pp) {
-        Object.defineProperty(this, Up, {
-          value: new lc(this),
+      constructor(TT) {
+        Object.defineProperty(this, ZT, {
+          value: new am(this),
           enumerable: !1,
           writable: !0
-        }), this[wp] = void 0, pp && pp.forEach((pp => this.add(pp)))
+        }), this[cT] = void 0, TT && TT.forEach((TT => this.add(TT)))
       }
       static initializeForDecoder() {
-        const pp = Object.create(YO.prototype);
-        return pp.$items = new Map, pp.deletedItems = {}, pp.$refId = 0, pp[wp] = void 0, Jc(pp), pp
+        const TT = Object.create(nW.prototype);
+        return TT.$items = new Map, TT.deletedItems = {}, TT.$refId = 0, TT[cT] = void 0, Xm(TT), TT
       }
-      add(pp) {
-        if (this.has(pp)) return !1;
-        const ip = this.$refId++,
-          cp = this[Up];
-        return this.$items.set(ip, pp), cp.isStreamCollection ? void 0 !== cp.root && Ci(this, cp.root, ip) : cp.change(ip, op.ADD), void 0 !== pp[Up] && pp[Up].setParent(this, cp.root, ip), ip
+      add(TT) {
+        if (this.has(TT)) return !1;
+        const UT = this.$refId++,
+          mT = this[ZT];
+        return this.$items.set(UT, TT), mT.isStreamCollection ? void 0 !== mT.root && dU(this, mT.root, UT) : mT.change(UT, zT.ADD), void 0 !== TT[ZT] && TT[ZT].setParent(this, mT.root, UT), UT
       }
       entries() {
         return this.$items.entries()
       }
-      delete(pp) {
-        const ip = this.$items.entries();
-        let cp, Op;
+      delete(TT) {
+        const UT = this.$items.entries();
+        let mT, WT;
         for (;
-          (Op = ip.next()) && !Op.done;)
-          if (pp === Op.value[1]) {
-            cp = Op.value[0];
+          (WT = UT.next()) && !WT.done;)
+          if (TT === WT.value[1]) {
+            mT = WT.value[0];
             break
-          } if (void 0 === cp) return !1;
-        const op = this[Up];
-        if (op.isStreamCollection) {
-          const pp = op.root,
-            ip = this.$items.get(cp);
-          return void 0 !== pp && Ei(this, pp, this[xp], cp), void 0 !== ip?.[Up] && pp?.remove(ip[Up]), this.deletedItems[cp] = ip, this.$items.delete(cp)
+          } if (void 0 === mT) return !1;
+        const zT = this[ZT];
+        if (zT.isStreamCollection) {
+          const TT = zT.root,
+            UT = this.$items.get(mT);
+          return void 0 !== TT && wU(this, TT, this[nT], mT), void 0 !== UT?.[ZT] && TT?.remove(UT[ZT]), this.deletedItems[mT] = UT, this.$items.delete(mT)
         }
-        return this.deletedItems[cp] = op.delete(cp), this.$items.delete(cp)
+        return this.deletedItems[mT] = zT.delete(mT), this.$items.delete(mT)
       }
       clear() {
-        const pp = this[Up];
-        pp.discard(), this.$items.clear(), pp.operation(op.CLEAR)
-      } [Hp]() {
-        const pp = this[Up];
-        if (pp.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((pp => pp?.[Hp]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, pp.recycle(), this[xp] = void 0
+        const TT = this[ZT];
+        TT.discard(), this.$items.clear(), TT.operation(zT.CLEAR)
+      } [qT]() {
+        const TT = this[ZT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[qT]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, TT.recycle(), this[nT] = void 0
       }
-      has(pp) {
-        const ip = this.$items.values();
-        let cp, Op = !1;
+      has(TT) {
+        const UT = this.$items.values();
+        let mT, WT = !1;
         for (;
-          (cp = ip.next()) && !cp.done;)
-          if (pp === cp.value) {
-            Op = !0;
+          (mT = UT.next()) && !mT.done;)
+          if (TT === mT.value) {
+            WT = !0;
             break
-          } return Op
+          } return WT
       }
-      forEach(pp) {
-        this.$items.forEach(((ip, cp, Op) => pp(ip, cp, this)))
+      forEach(TT) {
+        this.$items.forEach(((UT, mT, WT) => TT(UT, mT, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Up].pause()
+        this[ZT].pause()
       }
       resumeTracking() {
-        this[Up].resume()
+        this[ZT].resume()
       }
-      untracked(pp) {
-        return this[Up].untracked(pp)
+      untracked(TT) {
+        return this[ZT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[Up].paused
+        return this[ZT].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(pp, ip) {}
-      getIndex(pp) {
-        return pp
-      } [Pp](pp) {
-        return this.$items.get(pp)
-      } [Wp](pp) {
-        this.$items.delete(pp)
-      } [yp](pp, ip, cp) {
-        let Op = null;
-        if (this.$items.forEach(((op, Ip) => {
-            pp.has(Ip) ? cp(op) : ((Op ??= []).push(Ip), ip(op, Ip))
-          })), null !== Op)
-          for (let op = 0; op < Op.length; op++) this[Wp](Op[op])
-      } [tp]() {
-        for (const pp in this.deletedItems) delete this.deletedItems[pp]
+      setIndex(TT, UT) {}
+      getIndex(TT) {
+        return TT
+      } [LT](TT) {
+        return this.$items.get(TT)
+      } [pT](TT) {
+        this.$items.delete(TT)
+      } [BT](TT, UT, mT) {
+        let WT = null;
+        if (this.$items.forEach(((zT, MT) => {
+            TT.has(MT) ? mT(zT) : ((WT ??= []).push(MT), UT(zT, MT))
+          })), null !== WT)
+          for (let zT = 0; zT < WT.length; zT++) this[pT](WT[zT])
+      } [fT]() {
+        for (const TT in this.deletedItems) delete this.deletedItems[TT]
       }
-      _dropView(pp) {
-        Ji(this, pp)
+      _dropView(TT) {
+        XU(this, TT)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const pp = [];
-        return this.forEach(((ip, cp) => {
-          pp.push("function" === typeof ip.toJSON ? ip.toJSON() : ip)
-        })), pp
+        const TT = [];
+        return this.forEach(((UT, mT) => {
+          TT.push("function" === typeof UT.toJSON ? UT.toJSON() : UT)
+        })), TT
       }
-      clone(pp) {
-        let ip;
-        return pp ? ip = Object.assign(new YO, this) : (ip = new YO, this.forEach((pp => {
-          pp[Up] ? ip.add(pp.clone()) : ip.add(pp)
-        }))), ip
+      clone(TT) {
+        let UT;
+        return TT ? UT = Object.assign(new nW, this) : (UT = new nW, this.forEach((TT => {
+          TT[ZT] ? UT.add(TT.clone()) : UT.add(TT)
+        }))), UT
       }
     }
-    ki("set", {
-      constructor: YO
+    OU("set", {
+      constructor: nW
     });
-    class DO {
-      [Up];
-      [xp];
-      [wp];
+    class HW {
+      [ZT];
+      [nT];
+      [cT];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(pp) {
-        (this._stream ??= qi()).maxPerTick = pp
+      set maxPerTick(TT) {
+        (this._stream ??= JU()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(pp) {
-        (this._stream ??= qi()).priority = pp
+      set priority(TT) {
+        (this._stream ??= JU()).priority = TT
       }
       static $isStream = !0;
-      static[Yp] = fc;
-      static[Dp] = Vc;
-      static COLLECTION_KIND = zc;
-      static[Ap](pp, ip, cp) {
-        if (!cp) return !0;
-        const Op = pp[Pp](ip);
-        return void 0 !== Op && cp.isVisible(Op[Up])
+      static[kT] = Fm;
+      static[jT] = om;
+      static COLLECTION_KIND = Em;
+      static[lT](TT, UT, mT) {
+        if (!mT) return !0;
+        const WT = TT[LT](UT);
+        return void 0 !== WT && mT.isVisible(WT[ZT])
       }
-      static is(pp) {
-        return pp && void 0 !== pp.stream
+      static is(TT) {
+        return TT && void 0 !== TT.stream
       }
       constructor() {
-        Object.defineProperty(this, Up, {
-          value: new lc(this),
+        Object.defineProperty(this, ZT, {
+          value: new am(this),
           enumerable: !1,
           writable: !0
-        }), this[wp] = void 0
+        }), this[cT] = void 0
       }
       static initializeForDecoder() {
-        const pp = Object.create(DO.prototype);
-        return pp.$items = new Map, pp.$nextPosition = 0, pp._itemIndex = new Map, pp[wp] = void 0, Jc(pp), pp
+        const TT = Object.create(HW.prototype);
+        return TT.$items = new Map, TT.$nextPosition = 0, TT._itemIndex = new Map, TT[cT] = void 0, Xm(TT), TT
       }
-      add(pp) {
-        if (this._itemIndex.has(pp)) return -1;
-        const ip = this.$nextPosition++;
-        this.$items.set(ip, pp), this._itemIndex.set(pp, ip);
-        const cp = this[Up].root;
-        return void 0 !== pp[Up] && pp[Up].setParent(this, cp, ip), void 0 !== cp && Ci(this, cp, ip), ip
+      add(TT) {
+        if (this._itemIndex.has(TT)) return -1;
+        const UT = this.$nextPosition++;
+        this.$items.set(UT, TT), this._itemIndex.set(TT, UT);
+        const mT = this[ZT].root;
+        return void 0 !== TT[ZT] && TT[ZT].setParent(this, mT, UT), void 0 !== mT && dU(this, mT, UT), UT
       }
-      remove(pp) {
-        const ip = this._itemIndex.get(pp);
-        if (void 0 === ip) return !1;
-        this._itemIndex.delete(pp), this.$items.delete(ip);
-        const cp = this[Up].root;
-        return void 0 !== cp && (Ei(this, cp, this[xp], ip), void 0 !== pp[Up] && cp.remove(pp[Up])), !0
+      remove(TT) {
+        const UT = this._itemIndex.get(TT);
+        if (void 0 === UT) return !1;
+        this._itemIndex.delete(TT), this.$items.delete(UT);
+        const mT = this[ZT].root;
+        return void 0 !== mT && (wU(this, mT, this[nT], UT), void 0 !== TT[ZT] && mT.remove(TT[ZT])), !0
       }
-      has(pp) {
-        return this._itemIndex.has(pp)
+      has(TT) {
+        return this._itemIndex.has(TT)
       }
       clear() {
-        const pp = this[Up].root;
-        if (void 0 !== pp) {
-          ! function(pp, ip, cp) {
-            const Op = pp._stream;
-            if (void 0 !== Op) {
-              Op.broadcastPending.clear();
-              for (const pp of Op.sentBroadcast) Op.broadcastDeletes.add(pp);
-              Op.sentBroadcast.clear(), ip.forEachActiveView((pp => {
-                Op.pendingByView.get(pp.id)?.clear();
-                const ip = Op.sentByView.get(pp.id);
-                if (void 0 !== ip && ip.size > 0) {
-                  let Op = pp.changes.get(cp);
-                  void 0 === Op && (Op = new Map, pp.changes.set(cp, Op));
-                  for (const pp of ip) Op.set(pp, op.DELETE);
-                  ip.clear()
+        const TT = this[ZT].root;
+        if (void 0 !== TT) {
+          ! function(TT, UT, mT) {
+            const WT = TT._stream;
+            if (void 0 !== WT) {
+              WT.broadcastPending.clear();
+              for (const TT of WT.sentBroadcast) WT.broadcastDeletes.add(TT);
+              WT.sentBroadcast.clear(), UT.forEachActiveView((TT => {
+                WT.pendingByView.get(TT.id)?.clear();
+                const UT = WT.sentByView.get(TT.id);
+                if (void 0 !== UT && UT.size > 0) {
+                  let WT = TT.changes.get(mT);
+                  void 0 === WT && (WT = new Map, TT.changes.set(mT, WT));
+                  for (const TT of UT) WT.set(TT, zT.DELETE);
+                  UT.clear()
                 }
               }))
             }
-          }(this, pp, this[xp]);
-          for (const ip of this.$items.values()) void 0 !== ip[Up] && pp.remove(ip[Up])
+          }(this, TT, this[nT]);
+          for (const UT of this.$items.values()) void 0 !== UT[ZT] && TT.remove(UT[ZT])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(pp) {
-        for (const [ip, cp] of this.$items) pp(cp, ip, this)
+      forEach(TT) {
+        for (const [UT, mT] of this.$items) TT(mT, UT, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(pp, ip) {}
-      getIndex(pp) {
-        return pp
-      } [Pp](pp) {
-        return this.$items.get(pp)
-      } [Wp](pp) {
-        const ip = this.$items.get(pp);
-        void 0 !== ip && (this._itemIndex.delete(ip), this.$items.delete(pp))
-      } [yp]() {} [tp]() {}
+      setIndex(TT, UT) {}
+      getIndex(TT) {
+        return TT
+      } [LT](TT) {
+        return this.$items.get(TT)
+      } [pT](TT) {
+        const UT = this.$items.get(TT);
+        void 0 !== UT && (this._itemIndex.delete(UT), this.$items.delete(TT))
+      } [BT]() {} [fT]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const pp = [];
-        return this.forEach((ip => {
-          pp.push("function" === typeof ip?.toJSON ? ip.toJSON() : ip)
-        })), pp
+        const TT = [];
+        return this.forEach((UT => {
+          TT.push("function" === typeof UT?.toJSON ? UT.toJSON() : UT)
+        })), TT
       }
-      clone(pp) {
-        if (pp) {
-          return Object.assign(new DO, this)
+      clone(TT) {
+        if (TT) {
+          return Object.assign(new HW, this)
         }
-        const ip = new DO;
-        return ip.maxPerTick = this.maxPerTick, this.forEach((pp => {
-          ip.add("function" === typeof pp?.clone ? pp.clone() : pp)
-        })), ip
+        const UT = new HW;
+        return UT.maxPerTick = this.maxPerTick, this.forEach((TT => {
+          UT.add("function" === typeof TT?.clone ? TT.clone() : TT)
+        })), UT
       }
-      _dropView(pp) {
-        Ji(this, pp)
+      _dropView(TT) {
+        XU(this, TT)
       }
       _unregister() {}
     }
-    ki("stream", {
-      constructor: DO
+    OU("stream", {
+      constructor: HW
     });
-    class AO {
-      [jp] = !0;
+    class kW {
+      [OT] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(pp) {
-        this._type = pp
+      constructor(TT) {
+        this._type = TT
       }
-      default (pp) {
-        return this._default = pp, this._hasDefault = !0, this
+      default (TT) {
+        return this._default = TT, this._hasDefault = !0, this
       }
-      view(pp) {
-        return this._view = pp ?? -1, this
+      view(TT) {
+        return this._view = TT ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const pp = this._type;
-        if (pp && "object" === typeof pp && void 0 !== pp.array) throw new Error(Ri);
+        const TT = this._type;
+        if (TT && "object" === typeof TT && void 0 !== TT.array) throw new Error(YU);
         return this._stream = !0, this
       }
-      priority(pp) {
-        return this._streamPriority = pp, this
+      priority(TT) {
+        return this._streamPriority = TT, this
       }
       deprecated() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = pp, this
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = TT, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function PO(pp) {
-      return null != pp && !0 === pp[jp]
+    function jW(TT) {
+      return null != TT && !0 === TT[OT]
     }
 
-    function WO(pp) {
-      return () => new AO(pp)
+    function lW(TT) {
+      return () => new kW(TT)
     }
 
-    function yO(pp) {
-      if (PO(pp)) {
-        const ip = pp._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof ip?`use the type name instead: t.array("${ip}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function LW(TT) {
+      if (jW(TT)) {
+        const UT = TT._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof UT?`use the type name instead: t.array("${UT}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return pp
+      return TT
     }
 
-    function UO(pp) {
-      return new AO({
-        quantized: Ni(pp)
+    function pW(TT) {
+      return new kW({
+        quantized: QU(TT)
       })
     }
-    const wO = Object.freeze({
-        string: WO("string"),
-        number: WO("number"),
-        boolean: WO("boolean"),
-        int8: WO("int8"),
-        uint8: WO("uint8"),
-        int16: WO("int16"),
-        uint16: WO("uint16"),
-        int32: WO("int32"),
-        uint32: WO("uint32"),
-        int64: WO("int64"),
-        uint64: WO("uint64"),
-        float32: WO("float32"),
-        float64: WO("float64"),
-        bigint64: WO("bigint64"),
-        biguint64: WO("biguint64"),
-        ref: pp => new AO(pp),
-        array: pp => new AO({
-          array: yO(pp)
+    const BW = Object.freeze({
+        string: lW("string"),
+        number: lW("number"),
+        boolean: lW("boolean"),
+        int8: lW("int8"),
+        uint8: lW("uint8"),
+        int16: lW("int16"),
+        uint16: lW("uint16"),
+        int32: lW("int32"),
+        uint32: lW("uint32"),
+        int64: lW("int64"),
+        uint64: lW("uint64"),
+        float32: lW("float32"),
+        float64: lW("float64"),
+        bigint64: lW("bigint64"),
+        biguint64: lW("biguint64"),
+        ref: TT => new kW(TT),
+        array: TT => new kW({
+          array: LW(TT)
         }),
-        map: pp => new AO({
-          map: yO(pp)
+        map: TT => new kW({
+          map: LW(TT)
         }),
-        set: pp => new AO({
-          set: yO(pp)
+        set: TT => new kW({
+          set: LW(TT)
         }),
-        collection: pp => new AO({
-          collection: yO(pp)
+        collection: TT => new kW({
+          collection: LW(TT)
         }),
-        stream: pp => {
-          const ip = new AO({
-            stream: yO(pp)
+        stream: TT => {
+          const UT = new kW({
+            stream: LW(TT)
           });
-          return ip._stream = !0, ip
+          return UT._stream = !0, UT
         },
-        quantized: UO,
-        angle: pp => UO({
+        quantized: pW,
+        angle: TT => pW({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: pp?.bits ?? 16
+          bits: TT?.bits ?? 16
         })
       }),
-      vO = -1;
+      ZW = -1;
 
-    function tO(pp) {
-      return ni.register(pp), pp
+    function cW(TT) {
+      return uU.register(TT), TT
     }
 
-    function HO() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : vO;
-      return function(ip, cp) {
-        const Op = si.initialize(ip.constructor);
-        si.setTag(Op, cp, pp)
+    function vW() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ZW;
+      return function(UT, mT) {
+        const WT = EU.initialize(UT.constructor);
+        EU.setTag(WT, mT, TT)
       }
     }
 
-    function dO(pp, ip) {
-      const cp = si.initialize(pp.constructor);
-      si.setUnreliable(cp, ip)
+    function fW(TT, UT) {
+      const mT = EU.initialize(TT.constructor);
+      EU.setUnreliable(mT, UT)
     }
 
-    function eO(pp, ip) {
-      const cp = si.initialize(pp.constructor);
-      si.setPatchOnly(cp, ip)
+    function qW(TT, UT) {
+      const mT = EU.initialize(TT.constructor);
+      EU.setPatchOnly(mT, UT)
     }
 
-    function uO(pp, ip) {
-      const cp = si.initialize(pp.constructor);
-      si.setFullStateOnly(cp, ip)
+    function iW(TT, UT) {
+      const mT = EU.initialize(TT.constructor);
+      EU.setFullStateOnly(mT, UT)
     }
 
-    function jO(pp, ip) {
-      return function(cp, Op) {
-        const op = cp.constructor;
-        if (!pp) throw new Error(`${op.name}: @type() reference provided for "${Op}" is undefined. Make sure you don't have any circular dependencies.`);
-        pp = gi(pp, `${op.name}.${Op}`), ni.register(op);
-        const Ip = Object.getPrototypeOf(op)[Symbol.metadata],
-          Sp = si.initialize(op);
-        let xp = Sp[Op];
-        if (void 0 !== Sp[xp]) {
-          if (Sp[xp].deprecated) return;
-          if (void 0 !== Sp[xp].type) {
-            const pp = new Error(`@colyseus/schema: Duplicate '${Op}' definition on '${op.name}'.\nCheck @type() annotation`);
-            throw new Error(`${pp.message} ${pp.stack.split("\n")[4].trim()}`)
+    function bW(TT, UT) {
+      return function(mT, WT) {
+        const zT = mT.constructor;
+        if (!TT) throw new Error(`${zT.name}: @type() reference provided for "${WT}" is undefined. Make sure you don't have any circular dependencies.`);
+        TT = rU(TT, `${zT.name}.${WT}`), uU.register(zT);
+        const MT = Object.getPrototypeOf(zT)[Symbol.metadata],
+          gT = EU.initialize(zT);
+        let nT = gT[WT];
+        if (void 0 !== gT[nT]) {
+          if (gT[nT].deprecated) return;
+          if (void 0 !== gT[nT].type) {
+            const TT = new Error(`@colyseus/schema: Duplicate '${WT}' definition on '${zT.name}'.\nCheck @type() annotation`);
+            throw new Error(`${TT.message} ${TT.stack.split("\n")[4].trim()}`)
           }
-        } else xp = Sp[qp] ?? (Ip && Ip[qp]) ?? -1, xp++;
-        if (ip && ip.manual) si.addField(Sp, xp, Op, pp, {
+        } else nT = gT[xT] ?? (MT && MT[xT]) ?? -1, nT++;
+        if (UT && UT.manual) EU.addField(gT, nT, WT, TT, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: ip,
-            childType: cp
-          } = Fi(pp);
-          si.addField(Sp, xp, Op, pp, mO(Op, xp, cp, ip))
+            complexTypeKlass: UT,
+            childType: mT
+          } = CU(TT);
+          EU.addField(gT, nT, WT, TT, eW(WT, nT, mT, UT))
         }
-        Sp[kp][Op] && Object.defineProperty(cp, Op, Sp[kp][Op]), ("string" === typeof pp || Ti(pp)) && (Sp[Rp] || Object.defineProperty(Sp, Rp, {
+        gT[eT][WT] && Object.defineProperty(mT, WT, gT[eT][WT]), ("string" === typeof TT || sU(TT)) && (gT[JT] || Object.defineProperty(gT, JT, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), Sp[Rp][xp] = "string" === typeof pp ? Oi[pp] : ai(pp.quantized))
+        }), gT[JT][nT] = "string" === typeof TT ? UU[TT] : VU(TT.quantized))
       }
     }
-    const kO = {
+    const OW = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function mO(pp, ip, cp, Op) {
-      let Ip;
-      return Ip = Op ? function(pp, ip, cp, Op) {
-        const Ip = Op.constructor === IO,
-          Sp = Op.constructor === xO;
-        return function(pp) {
-          const Op = this[ep],
-            xp = Op[ip];
-          if (pp !== xp) {
-            if (void 0 !== pp && null !== pp) {
-              if (!Ip || pp instanceof IO)
-                if (!Sp || pp instanceof xO) pp[wp] = cp;
+    function eW(TT, UT, mT, WT) {
+      let MT;
+      return MT = WT ? function(TT, UT, mT, WT) {
+        const MT = WT.constructor === WW,
+          gT = WT.constructor === MW;
+        return function(TT) {
+          const WT = this[bT],
+            nT = WT[UT];
+          if (TT !== nT) {
+            if (void 0 !== TT && null !== TT) {
+              if (!MT || TT instanceof WW)
+                if (!gT || TT instanceof MW) TT[cT] = mT;
                 else {
-                  const ip = new xO;
-                  if (ip[wp] = cp, pp instanceof Map) pp.forEach(((pp, cp) => ip.set(cp, pp)));
+                  const UT = new MW;
+                  if (UT[cT] = mT, TT instanceof Map) TT.forEach(((TT, mT) => UT.set(mT, TT)));
                   else
-                    for (const cp in pp) ip.set(cp, pp[cp]);
-                  pp = ip
+                    for (const mT in TT) UT.set(mT, TT[mT]);
+                  TT = UT
                 }
               else {
-                const ip = new IO;
-                ip[wp] = cp, ip.push(...pp), pp = ip
+                const UT = new WW;
+                UT[cT] = mT, UT.push(...TT), TT = UT
               }
-              const Op = this[Up],
-                Yp = this.constructor;
-              void 0 !== xp && null !== xp && xp[Up] ? (Op.root?.remove(xp[Up]), Yp[Lp](Op, ip, op.DELETE_AND_ADD)) : Yp[Lp](Op, ip, op.ADD), pp[Up]?.setParent(this, Op.root, ip)
-            } else void 0 !== xp && null !== xp && this[Up].delete(ip);
-            Op[ip] = pp
+              const WT = this[ZT],
+                kT = this.constructor;
+              void 0 !== nT && null !== nT && nT[ZT] ? (WT.root?.remove(nT[ZT]), kT[HT](WT, UT, zT.DELETE_AND_ADD)) : kT[HT](WT, UT, zT.ADD), TT[ZT]?.setParent(this, WT.root, UT)
+            } else void 0 !== nT && null !== nT && this[ZT].delete(UT);
+            WT[UT] = TT
           }
         }
-      }(0, ip, cp, Op) : "string" === typeof cp ? function(pp, ip, cp) {
-        const Op = kO[cp],
-          Ip = "string" === cp,
-          Sp = "boolean" === cp;
-        return function(cp) {
-          const xp = this[ep],
-            Yp = xp[ip];
-          if (cp !== Yp) {
-            if (void 0 !== cp && null !== cp) {
-              if (!Sp && void 0 !== Op && typeof cp !== Op && (!Ip || null !== cp)) {
-                const ip = cp && cp.constructor ? ` (${cp.constructor.name})` : "";
-                throw new iO(`a '${Op}' was expected, but '${JSON.stringify(cp)}'${ip} was provided in ${this.constructor.name}#${pp}`)
+      }(0, UT, mT, WT) : "string" === typeof mT ? function(TT, UT, mT) {
+        const WT = OW[mT],
+          MT = "string" === mT,
+          gT = "boolean" === mT;
+        return function(mT) {
+          const nT = this[bT],
+            kT = nT[UT];
+          if (mT !== kT) {
+            if (void 0 !== mT && null !== mT) {
+              if (!gT && void 0 !== WT && typeof mT !== WT && (!MT || null !== mT)) {
+                const UT = mT && mT.constructor ? ` (${mT.constructor.name})` : "";
+                throw new Rm(`a '${WT}' was expected, but '${JSON.stringify(mT)}'${UT} was provided in ${this.constructor.name}#${TT}`)
               }
-              this.constructor[Lp](this[Up], ip, op.ADD)
-            } else void 0 !== Yp && null !== Yp && this[Up].delete(ip);
-            xp[ip] = cp
+              this.constructor[HT](this[ZT], UT, zT.ADD)
+            } else void 0 !== kT && null !== kT && this[ZT].delete(UT);
+            nT[UT] = mT
           }
         }
-      }(pp, ip, cp) : Ti(cp) ? function(pp, ip, cp) {
-        return function(Op) {
-          const Ip = this[ep],
-            Sp = Ip[ip];
-          if (void 0 !== Op && null !== Op) {
-            if ("number" !== typeof Op) throw new iO(`a 'number' was expected, but '${JSON.stringify(Op)}' was provided in ${this.constructor.name}#${pp}`);
-            if ((Op = bi(cp, fi(cp, Op))) === Sp) return;
-            this.constructor[Lp](this[Up], ip, op.ADD)
+      }(TT, UT, mT) : sU(mT) ? function(TT, UT, mT) {
+        return function(WT) {
+          const MT = this[bT],
+            gT = MT[UT];
+          if (void 0 !== WT && null !== WT) {
+            if ("number" !== typeof WT) throw new Rm(`a 'number' was expected, but '${JSON.stringify(WT)}' was provided in ${this.constructor.name}#${TT}`);
+            if ((WT = PU(mT, FU(mT, WT))) === gT) return;
+            this.constructor[HT](this[ZT], UT, zT.ADD)
           } else {
-            if (Op === Sp) return;
-            void 0 !== Sp && null !== Sp && this[Up].delete(ip)
+            if (WT === gT) return;
+            void 0 !== gT && null !== gT && this[ZT].delete(UT)
           }
-          Ip[ip] = Op
+          MT[UT] = WT
         }
-      }(pp, ip, cp.quantized) : function(pp, ip, cp) {
-        return function(Op) {
-          const Ip = this[ep],
-            Sp = Ip[ip];
-          if (Op !== Sp) {
-            if (void 0 !== Op && null !== Op) {
-              cO(Op, cp, this, pp);
-              const Ip = this[Up],
-                xp = this.constructor;
-              void 0 !== Sp && null !== Sp && Sp[Up] ? (Ip.root?.remove(Sp[Up]), xp[Lp](Ip, ip, op.DELETE_AND_ADD)) : xp[Lp](Ip, ip, op.ADD), Op[Up]?.setParent(this, Ip.root, ip)
-            } else void 0 !== Sp && null !== Sp && this[Up].delete(ip);
-            Ip[ip] = Op
+      }(TT, UT, mT.quantized) : function(TT, UT, mT) {
+        return function(WT) {
+          const MT = this[bT],
+            gT = MT[UT];
+          if (WT !== gT) {
+            if (void 0 !== WT && null !== WT) {
+              TW(WT, mT, this, TT);
+              const MT = this[ZT],
+                nT = this.constructor;
+              void 0 !== gT && null !== gT && gT[ZT] ? (MT.root?.remove(gT[ZT]), nT[HT](MT, UT, zT.DELETE_AND_ADD)) : nT[HT](MT, UT, zT.ADD), WT[ZT]?.setParent(this, MT.root, UT)
+            } else void 0 !== gT && null !== gT && this[ZT].delete(UT);
+            MT[UT] = WT
           }
         }
-      }(pp, ip, cp), {
+      }(TT, UT, mT), {
         get: function() {
-          return this[ep][ip]
+          return this[bT][UT]
         },
-        set: Ip,
+        set: MT,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function RO() {
-      let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(ip, cp) {
-        const Op = si.initialize(ip.constructor);
-        si.setDeprecated(Op, cp), pp && (Op[kp] ??= {}, Op[kp][cp] = {
+    function YW() {
+      let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(UT, mT) {
+        const WT = EU.initialize(UT.constructor);
+        EU.setDeprecated(WT, mT), TT && (WT[eT] ??= {}, WT[eT][mT] = {
           get: function() {
-            throw new Error(`${cp} is deprecated.`)
+            throw new Error(`${mT} is deprecated.`)
           },
-          set: function(pp) {},
+          set: function(TT) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(ip, cp, Op[kp][cp]))
+        }, Object.defineProperty(UT, mT, WT[eT][mT]))
       }
     }
-    let qO = !1;
+    let JW = !1;
 
-    function MO(pp, ip, cp) {
-      qO || (qO = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Op in ip) jO(ip[Op], cp)(pp.prototype, Op);
-      return pp
+    function xW(TT, UT, mT) {
+      JW || (JW = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let WT in UT) bW(UT[WT], mT)(TT.prototype, WT);
+      return TT
     }
 
-    function CO(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : XO;
-      if (null == pp || "object" !== typeof pp) throw new Error(`schema(): first argument must be a fields object (got ${typeof pp}).`);
-      const Op = {},
-        op = {},
-        Ip = {},
-        Sp = {},
-        xp = (pp, ip) => {
-          if (ip.hasDefault)((pp, ip) => {
-            "function" === typeof ip ? Sp[pp] = ip : ip && "function" === typeof ip.clone ? Sp[pp] = () => ip.clone() : Ip[pp] = ip
-          })(pp, ip.default);
-          else if (!ip.optional) {
-            const cp = function(pp) {
-              if (pp && "object" === typeof pp) {
-                if (void 0 !== pp.array) return () => new IO;
-                if (void 0 !== pp.map) return () => new xO;
-                if (void 0 !== pp.set) return () => new YO;
-                if (void 0 !== pp.collection) return () => new LO;
-                if (void 0 !== pp.stream) return () => new DO
-              } else if ("function" === typeof pp && XO.is(pp) && (!pp.prototype.initialize || 0 === pp.prototype.initialize.length)) return () => new pp
-            }(ip.type);
-            cp && (Sp[pp] = cp)
+    function dW(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tW;
+      if (null == TT || "object" !== typeof TT) throw new Error(`schema(): first argument must be a fields object (got ${typeof TT}).`);
+      const WT = {},
+        zT = {},
+        MT = {},
+        gT = {},
+        nT = (TT, UT) => {
+          if (UT.hasDefault)((TT, UT) => {
+            "function" === typeof UT ? gT[TT] = UT : UT && "function" === typeof UT.clone ? gT[TT] = () => UT.clone() : MT[TT] = UT
+          })(TT, UT.default);
+          else if (!UT.optional) {
+            const mT = function(TT) {
+              if (TT && "object" === typeof TT) {
+                if (void 0 !== TT.array) return () => new WW;
+                if (void 0 !== TT.map) return () => new MW;
+                if (void 0 !== TT.set) return () => new nW;
+                if (void 0 !== TT.collection) return () => new gW;
+                if (void 0 !== TT.stream) return () => new HW
+              } else if ("function" === typeof TT && tW.is(TT) && (!TT.prototype.initialize || 0 === TT.prototype.initialize.length)) return () => new TT
+            }(UT.type);
+            mT && (gT[TT] = mT)
           }
         },
-        Lp = {},
-        Yp = [],
-        Dp = [],
-        Ap = {},
-        Pp = [],
-        Wp = [],
-        yp = {},
-        Up = [];
-      for (const ep in pp) {
-        const cp = pp[ep],
-          Ip = `schema(${ip?`'${ip}'`:""}): field '${ep}'`;
-        if (PO(cp)) {
-          const pp = cp.toDefinition();
-          if (pp.noSync) {
-            if (void 0 !== pp.view || pp.unreliable || pp.patchOnly || pp.fullStateOnly || pp.stream) throw new Error(`${Ip} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            xp(ep, pp);
+        HT = {},
+        kT = [],
+        jT = [],
+        lT = {},
+        LT = [],
+        pT = [],
+        BT = {},
+        ZT = [];
+      for (const bT in TT) {
+        const mT = TT[bT],
+          MT = `schema(${UT?`'${UT}'`:""}): field '${bT}'`;
+        if (jW(mT)) {
+          const TT = mT.toDefinition();
+          if (TT.noSync) {
+            if (void 0 !== TT.view || TT.unreliable || TT.patchOnly || TT.fullStateOnly || TT.stream) throw new Error(`${MT} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            nT(bT, TT);
             continue
           }
-          if (pp.patchOnly && pp.fullStateOnly) throw new Error(`${Ip} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const ip = gi(pp.type, Ip);
-          if ("function" === typeof ip && !XO.is(ip)) throw new Error(`${Ip} is a synced ref to non-Schema class '${ip.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Op[ep] = ip, void 0 !== pp.view && (Lp[ep] = pp.view), pp.unreliable && Yp.push(ep), pp.patchOnly && Dp.push(ep), pp.deprecated && (Ap[ep] = pp.deprecatedThrows), pp.fullStateOnly && Pp.push(ep), pp.stream && Wp.push(ep), void 0 !== pp.streamPriority && (yp[ep] = pp.streamPriority), pp.optional && Up.push(ep), xp(ep, pp)
+          if (TT.patchOnly && TT.fullStateOnly) throw new Error(`${MT} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const UT = rU(TT.type, MT);
+          if ("function" === typeof UT && !tW.is(UT)) throw new Error(`${MT} is a synced ref to non-Schema class '${UT.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          WT[bT] = UT, void 0 !== TT.view && (HT[bT] = TT.view), TT.unreliable && kT.push(bT), TT.patchOnly && jT.push(bT), TT.deprecated && (lT[bT] = TT.deprecatedThrows), TT.fullStateOnly && LT.push(bT), TT.stream && pT.push(bT), void 0 !== TT.streamPriority && (BT[bT] = TT.streamPriority), TT.optional && ZT.push(bT), nT(bT, TT)
         } else {
-          if ("function" !== typeof cp) throw new Error(`${Ip} must be a t.* builder, Schema subclass, or method (got ${typeof cp}).`);
-          XO.is(cp) ? (Op[ep] = cp, cp.prototype.initialize && 0 !== cp.prototype.initialize.length || (Sp[ep] = () => new cp)) : op[ep] = cp
+          if ("function" !== typeof mT) throw new Error(`${MT} must be a t.* builder, Schema subclass, or method (got ${typeof mT}).`);
+          tW.is(mT) ? (WT[bT] = mT, mT.prototype.initialize && 0 !== mT.prototype.initialize.length || (gT[bT] = () => new mT)) : zT[bT] = mT
         }
       }
-      const wp = pp => {
-          for (const ip in Ip) pp[ip] = Ip[ip];
-          for (const ip in Sp) pp[ip] = Sp[ip]()
+      const cT = TT => {
+          for (const UT in MT) TT[UT] = MT[UT];
+          for (const UT in gT) TT[UT] = gT[UT]()
         },
-        vp = () => {
-          const pp = {};
-          return wp(pp), pp
+        vT = () => {
+          const TT = {};
+          return cT(TT), TT
         },
-        tp = "function" === typeof op.initialize,
-        Hp = op.initialize ?? cp._initialize,
-        dp = class extends cp {
+        fT = "function" === typeof zT.initialize,
+        qT = zT.initialize ?? mT._initialize,
+        iT = class extends mT {
           constructor() {
-            for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-            const op = ip[0];
-            void 0 === op ? (super(), wp(this)) : super(Object.assign(vp(), tp ? (pp => {
-              const ip = Object.keys(Op),
-                cp = {};
-              for (const Op in pp) ip.includes(Op) || (cp[Op] = pp[Op]);
-              return cp
-            })(op) : op)), Hp && new.target === dp && Hp.apply(this, ip)
+            for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+            const zT = UT[0];
+            void 0 === zT ? (super(), cT(this)) : super(Object.assign(vT(), fT ? (TT => {
+              const UT = Object.keys(WT),
+                mT = {};
+              for (const WT in TT) UT.includes(WT) || (mT[WT] = TT[WT]);
+              return mT
+            })(zT) : zT)), qT && new.target === iT && qT.apply(this, UT)
           }
         };
-      ip && Object.defineProperty(dp, "name", {
-        value: ip
-      }), si.setFields(dp, Op), dp._getDefaultValues = vp, dp._initialize = Hp, Object.assign(dp.prototype, op);
-      for (const ep in Lp) HO(Lp[ep])(dp.prototype, ep);
-      for (const ep of Yp) dO(dp.prototype, ep);
-      for (const ep of Dp) eO(dp.prototype, ep);
-      for (const ep in Ap) RO(Ap[ep])(dp.prototype, ep);
-      if (Pp.length > 0 || Wp.length > 0) {
-        const pp = dp[Symbol.metadata];
-        for (const ip of Pp) si.setFullStateOnly(pp, ip);
-        for (const ip of Wp) si.setStream(pp, ip);
-        for (const ip in yp) si.setStreamPriority(pp, ip, yp[ip])
+      UT && Object.defineProperty(iT, "name", {
+        value: UT
+      }), EU.setFields(iT, WT), iT._getDefaultValues = vT, iT._initialize = qT, Object.assign(iT.prototype, zT);
+      for (const bT in HT) vW(HT[bT])(iT.prototype, bT);
+      for (const bT of kT) fW(iT.prototype, bT);
+      for (const bT of jT) qW(iT.prototype, bT);
+      for (const bT in lT) YW(lT[bT])(iT.prototype, bT);
+      if (LT.length > 0 || pT.length > 0) {
+        const TT = iT[Symbol.metadata];
+        for (const UT of LT) EU.setFullStateOnly(TT, UT);
+        for (const UT of pT) EU.setStream(TT, UT);
+        for (const UT in BT) EU.setStreamPriority(TT, UT, BT[UT])
       }
-      if (Up.length > 0) {
-        const pp = dp[Symbol.metadata];
-        for (const ip of Up) pp[pp[ip]].optional = !0
+      if (ZT.length > 0) {
+        const TT = iT[Symbol.metadata];
+        for (const UT of ZT) TT[TT[UT]].optional = !0
       }
-      return dp.extend = (pp, ip) => CO(pp, ip, dp), dp
+      return iT.extend = (TT, UT) => dW(TT, UT, iT), iT
     }
 
-    function EO(pp) {
-      const ip = pp[Up].root,
-        cp = {
+    function wW(TT) {
+      const UT = TT[ZT].root,
+        mT = {
           ops: {},
           refs: []
         };
-      let Op = ip.changes.next;
-      for (; Op;) {
-        const pp = Op.changeTree;
-        void 0 !== pp ? (cp.refs.push(`refId#${pp.ref[xp]}`), pp.forEach(((pp, ip) => {
-          if (pp < 0 || !ip) return;
-          const Op = op[ip];
-          cp.ops[Op] || (cp.ops[Op] = 0), cp.ops[Op]++
-        })), Op = Op.next) : Op = Op.next
+      let WT = UT.changes.next;
+      for (; WT;) {
+        const TT = WT.changeTree;
+        void 0 !== TT ? (mT.refs.push(`refId#${TT.ref[nT]}`), TT.forEach(((TT, UT) => {
+          if (TT < 0 || !UT) return;
+          const WT = zT[UT];
+          mT.ops[WT] || (mT.ops[WT] = 0), mT.ops[WT]++
+        })), WT = WT.next) : WT = WT.next
       }
-      return cp
+      return mT
     }
-    class XO {
-      static[Yp] = Nc;
-      static[Dp] = Kc;
-      [xp];
-      [ep];
-      static initialize(pp) {
-        Object.defineProperty(pp, Up, {
-          value: new lc(pp),
+    class tW {
+      static[kT] = Qm;
+      static[jT] = Dm;
+      [nT];
+      [bT];
+      static initialize(TT) {
+        Object.defineProperty(TT, ZT, {
+          value: new am(TT),
           enumerable: !1,
           writable: !0
-        }), pp[ep] = []
+        }), TT[bT] = []
       }
       static initializeForDecoder() {
-        const pp = Object.create(this.prototype);
-        return Jc(pp), pp[ep] = [], pp
+        const TT = Object.create(this.prototype);
+        return Xm(TT), TT[bT] = [], TT
       }
-      static reset(pp) {
-        const ip = pp?.[Up];
-        if (void 0 === ip || "function" !== typeof ip.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== ip.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${pp.constructor.name}) with multiple parents.`);
-        pp[Hp]()
-      } [Hp]() {
-        const pp = this.constructor[Symbol.metadata],
-          ip = pp?.[Mp] ?? [],
-          cp = this[ep];
-        for (let Op = 0; Op < ip.length; Op++) {
-          const pp = cp[ip[Op]];
-          pp?.[Hp]?.()
+      static reset(TT) {
+        const UT = TT?.[ZT];
+        if (void 0 === UT || "function" !== typeof UT.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== UT.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${TT.constructor.name}) with multiple parents.`);
+        TT[qT]()
+      } [qT]() {
+        const TT = this.constructor[Symbol.metadata],
+          UT = TT?.[dT] ?? [],
+          mT = this[bT];
+        for (let WT = 0; WT < UT.length; WT++) {
+          const TT = mT[UT[WT]];
+          TT?.[qT]?.()
         }
-        this[Up].recycle(), this[xp] = void 0
+        this[ZT].recycle(), this[nT] = void 0
       }
-      static is(pp) {
-        const ip = pp[Symbol.metadata];
-        return "object" === typeof ip && null !== ip
+      static is(TT) {
+        const UT = TT[Symbol.metadata];
+        return "object" === typeof UT && null !== UT
       }
-      static isSchema(pp) {
-        return "function" === typeof pp?.assign
+      static isSchema(TT) {
+        return "function" === typeof TT?.assign
       }
-      static[Lp](pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : op.ADD;
-        pp.change(ip, cp)
+      static[HT](TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zT.ADD;
+        TT.change(UT, mT)
       }
-      static[Ap](pp, ip, cp) {
-        const Op = pp.constructor[Symbol.metadata],
-          op = Op[ip]?.tag;
-        return void 0 === cp ? void 0 === op : void 0 === op || (op === vO ? cp.isChangeTreeVisible(pp[Up]) : cp.hasTagOnTree(pp[Up], op))
+      static[lT](TT, UT, mT) {
+        const WT = TT.constructor[Symbol.metadata],
+          zT = WT[UT]?.tag;
+        return void 0 === mT ? void 0 === zT : void 0 === zT || (zT === ZW ? mT.isChangeTreeVisible(TT[ZT]) : mT.hasTagOnTree(TT[ZT], zT))
       }
-      constructor(pp) {
-        XO.initialize(this), pp && XO.assignProps(this, pp)
+      constructor(TT) {
+        tW.initialize(this), TT && tW.assignProps(this, TT)
       }
-      assign(pp) {
-        return XO.assignProps(this, pp), this
+      assign(TT) {
+        return tW.assignProps(this, TT), this
       }
-      static assignProps(pp, ip) {
-        const cp = pp.constructor[Symbol.metadata];
-        if (cp && void 0 !== cp[qp])
-          for (let op = 0; op <= cp[qp]; op++) {
-            const Op = cp[op];
-            if (!Op) continue;
-            const Ip = ip[Op.name];
-            void 0 !== Ip && (pp[Op.name] = Ip)
+      static assignProps(TT, UT) {
+        const mT = TT.constructor[Symbol.metadata];
+        if (mT && void 0 !== mT[xT])
+          for (let zT = 0; zT <= mT[xT]; zT++) {
+            const WT = mT[zT];
+            if (!WT) continue;
+            const MT = UT[WT.name];
+            void 0 !== MT && (TT[WT.name] = MT)
           }
-        const Op = Object.keys(ip);
-        for (let op = 0; op < Op.length; op++) {
-          const Ip = Op[op];
-          cp && void 0 !== cp[Ip] || (pp[Ip] = ip[Ip])
+        const WT = Object.keys(UT);
+        for (let zT = 0; zT < WT.length; zT++) {
+          const MT = WT[zT];
+          mT && void 0 !== mT[MT] || (TT[MT] = UT[MT])
         }
       }
-      restore(pp) {
-        const ip = this.constructor[Symbol.metadata];
-        for (const cp in ip) {
-          const Op = ip[cp],
-            op = Op.name,
-            Ip = Op.type,
-            Sp = pp[op];
-          if (void 0 !== Sp && null !== Sp)
-            if ("string" === typeof Ip) this[op] = Sp;
-            else if (XO.is(Ip)) {
-            const pp = new Ip;
-            pp.restore(Sp), this[op] = pp
-          } else if ("object" === typeof Ip) {
-            const pp = Object.keys(Ip)[0],
-              ip = Ip[pp];
-            if ("map" === pp) {
-              const pp = this[op];
-              for (const cp in Sp)
-                if (XO.is(ip)) {
-                  const Op = new ip;
-                  Op.restore(Sp[cp]), pp.set(cp, Op)
-                } else pp.set(cp, Sp[cp])
-            } else if ("array" === pp) {
-              const pp = this[op];
-              for (let cp = 0; cp < Sp.length; cp++)
-                if (XO.is(ip)) {
-                  const Op = new ip;
-                  Op.restore(Sp[cp]), pp.push(Op)
-                } else pp.push(Sp[cp])
+      restore(TT) {
+        const UT = this.constructor[Symbol.metadata];
+        for (const mT in UT) {
+          const WT = UT[mT],
+            zT = WT.name,
+            MT = WT.type,
+            gT = TT[zT];
+          if (void 0 !== gT && null !== gT)
+            if ("string" === typeof MT) this[zT] = gT;
+            else if (tW.is(MT)) {
+            const TT = new MT;
+            TT.restore(gT), this[zT] = TT
+          } else if ("object" === typeof MT) {
+            const TT = Object.keys(MT)[0],
+              UT = MT[TT];
+            if ("map" === TT) {
+              const TT = this[zT];
+              for (const mT in gT)
+                if (tW.is(UT)) {
+                  const WT = new UT;
+                  WT.restore(gT[mT]), TT.set(mT, WT)
+                } else TT.set(mT, gT[mT])
+            } else if ("array" === TT) {
+              const TT = this[zT];
+              for (let mT = 0; mT < gT.length; mT++)
+                if (tW.is(UT)) {
+                  const WT = new UT;
+                  WT.restore(gT[mT]), TT.push(WT)
+                } else TT.push(gT[mT])
             }
           }
         }
         return this
       }
-      setDirty(pp, ip) {
-        const cp = this.constructor[Symbol.metadata];
-        this[Up].change(cp[cp[pp]].index, ip)
+      setDirty(TT, UT) {
+        const mT = this.constructor[Symbol.metadata];
+        this[ZT].change(mT[mT[TT]].index, UT)
       }
       pauseTracking() {
-        this[Up].pause()
+        this[ZT].pause()
       }
       resumeTracking() {
-        this[Up].resume()
+        this[ZT].resume()
       }
-      untracked(pp) {
-        return this[Up].untracked(pp)
+      untracked(TT) {
+        return this[ZT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[Up].paused
+        return this[ZT].paused
       }
       clone() {
-        const pp = Object.create(this.constructor.prototype);
-        XO.initialize(pp);
-        const ip = this.constructor[Symbol.metadata];
-        for (const cp in ip) {
-          const Op = ip[cp].name;
-          "object" === typeof this[Op] && "function" === typeof this[Op]?.clone ? pp[Op] = this[Op].clone() : pp[Op] = this[Op]
+        const TT = Object.create(this.constructor.prototype);
+        tW.initialize(TT);
+        const UT = this.constructor[Symbol.metadata];
+        for (const mT in UT) {
+          const WT = UT[mT].name;
+          "object" === typeof this[WT] && "function" === typeof this[WT]?.clone ? TT[WT] = this[WT].clone() : TT[WT] = this[WT]
         }
-        return pp
+        return TT
       }
       toJSON() {
-        const pp = {},
-          ip = this.constructor[Symbol.metadata];
-        for (const cp in ip) {
-          const Op = ip[cp],
-            op = Op.name;
-          Op.deprecated || null === this[op] || "undefined" === typeof this[op] || (pp[op] = "function" === typeof this[op].toJSON ? this[op].toJSON() : this[op])
+        const TT = {},
+          UT = this.constructor[Symbol.metadata];
+        for (const mT in UT) {
+          const WT = UT[mT],
+            zT = WT.name;
+          WT.deprecated || null === this[zT] || "undefined" === typeof this[zT] || (TT[zT] = "function" === typeof this[zT].toJSON ? this[zT].toJSON() : this[zT])
         }
-        return pp
+        return TT
       }
       discardAllChanges() {
-        this[Up].discardAll()
-      } [Pp](pp) {
-        return this[this.constructor[Symbol.metadata][pp].name]
-      } [Wp](pp) {
-        this[this.constructor[Symbol.metadata][pp].name] = void 0
+        this[ZT].discardAll()
+      } [LT](TT) {
+        return this[this.constructor[Symbol.metadata][TT].name]
+      } [pT](TT) {
+        this[this.constructor[Symbol.metadata][TT].name] = void 0
       }
-      static debugRefIds(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Op = arguments.length > 3 ? arguments[3] : void 0,
-          op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const Ip = ip ? ` - ${JSON.stringify(pp.toJSON())}` : "",
-          Sp = pp[Up],
-          Lp = pp[xp],
-          Yp = Op ? Op.root.refCount[Lp] : Sp.refCount,
-          Dp = Yp > 1 ? ` [\xd7${Yp}]` : "";
-        let Ap = `${function(pp){return new Array(pp).fill(0).map(((ip,cp)=>cp===pp-1?"\u2514\u2500 ":"   ")).join("")}(cp)}${op}${pp.constructor.name} (refId: ${Lp})${Dp}${Ip}\n`;
-        return Sp.forEachChild(((op, Ip) => {
-          let Sp = Ip;
-          "number" === typeof Ip && pp.$indexes && (Sp = pp.$indexes.get(Ip) ?? Ip);
-          const xp = void 0 !== pp.forEach && void 0 !== Sp ? `["${Sp}"]: ` : "";
-          Ap += this.debugRefIds(op.ref, ip, cp + 1, Op, xp)
-        })), Ap
+      static debugRefIds(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          WT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const MT = UT ? ` - ${JSON.stringify(TT.toJSON())}` : "",
+          gT = TT[ZT],
+          HT = TT[nT],
+          kT = WT ? WT.root.refCount[HT] : gT.refCount,
+          jT = kT > 1 ? ` [\xd7${kT}]` : "";
+        let lT = `${function(TT){return new Array(TT).fill(0).map(((UT,mT)=>mT===TT-1?"\u2514\u2500 ":"   ")).join("")}(mT)}${zT}${TT.constructor.name} (refId: ${HT})${jT}${MT}\n`;
+        return gT.forEachChild(((zT, MT) => {
+          let gT = MT;
+          "number" === typeof MT && TT.$indexes && (gT = TT.$indexes.get(MT) ?? MT);
+          const nT = void 0 !== TT.forEach && void 0 !== gT ? `["${gT}"]: ` : "";
+          lT += this.debugRefIds(zT.ref, UT, mT + 1, WT, nT)
+        })), lT
       }
-      static debugRefIdEncodingOrder(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const cp = [],
-          Op = pp[Up];
-        if ("changes" === ip) {
-          let pp = Op.root.changes?.next;
-          for (; pp;) pp.changeTree && cp.push(pp.changeTree.ref[xp]), pp = pp.next;
-          return cp
+      static debugRefIdEncodingOrder(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const mT = [],
+          WT = TT[ZT];
+        if ("changes" === UT) {
+          let TT = WT.root.changes?.next;
+          for (; TT;) TT.changeTree && mT.push(TT.changeTree.ref[nT]), TT = TT.next;
+          return mT
         }
-        const op = "allFilteredChanges" === ip,
-          Ip = new Set,
-          Sp = pp => {
-            Ip.has(pp) || (Ip.add(pp), pp.isFiltered === op && cp.push(pp.ref[xp]), pp.forEachChild(((pp, ip) => Sp(pp))))
+        const zT = "allFilteredChanges" === UT,
+          MT = new Set,
+          gT = TT => {
+            MT.has(TT) || (MT.add(TT), TT.isFiltered === zT && mT.push(TT.ref[nT]), TT.forEachChild(((TT, UT) => gT(TT))))
           };
-        return Sp(Op), cp
+        return gT(WT), mT
       }
-      static debugRefIdsFromDecoder(pp) {
-        return this.debugRefIds(pp.state, !1, 0, pp)
+      static debugRefIdsFromDecoder(TT) {
+        return this.debugRefIds(TT.state, !1, 0, TT)
       }
-      static debugChanges(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const cp = pp[Up],
-          Op = ip ? "allChanges" : "changes";
-        let Ip = `${pp.constructor.name} (${pp[xp]}) -> .${Op}:\n`;
-        return ip ? cp.forEachLive((pp => {
-          Ip += `- [${pp}]: ADD (${JSON.stringify(cp.getValue(Number(pp),!0))})\n`
-        })) : cp.forEach(((pp, ip) => {
-          pp < 0 || !ip || (Ip += `- [${pp}]: ${op[ip]} (${JSON.stringify(cp.getValue(Number(pp),!1))})\n`)
-        })), Ip
+      static debugChanges(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const mT = TT[ZT],
+          WT = UT ? "allChanges" : "changes";
+        let MT = `${TT.constructor.name} (${TT[nT]}) -> .${WT}:\n`;
+        return UT ? mT.forEachLive((TT => {
+          MT += `- [${TT}]: ADD (${JSON.stringify(mT.getValue(Number(TT),!0))})\n`
+        })) : mT.forEach(((TT, UT) => {
+          TT < 0 || !UT || (MT += `- [${TT}]: ${zT[UT]} (${JSON.stringify(mT.getValue(Number(TT),!1))})\n`)
+        })), MT
       }
     }
-    Ip(XO);
-    const lO = {
+    MT(tW);
+    const aW = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class QO {
+    class yW {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const pp = {};
-        for (const ip in this.changeTrees) pp[ip] = this.changeTrees[ip].refCount;
-        return pp
+        const TT = {};
+        for (const UT in this.changeTrees) TT[UT] = this.changeTrees[UT].refCount;
+        return TT
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(pp) {
-        this.types.hasFilters && (pp.flags & Ec || (pp.flags |= Ec, this.pendingFilterRefresh.push(pp)))
+      enqueueFilterRefresh(TT) {
+        this.types.hasFilters && (TT.flags & wm || (TT.flags |= wm, this.pendingFilterRefresh.push(TT)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(pp) {
-        this._freeViewIds.push(pp)
+      releaseViewId(TT) {
+        this._freeViewIds.push(TT)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(pp) {
-        this.activeViews.set(pp.id, new WeakRef(pp))
+      registerView(TT) {
+        this.activeViews.set(TT.id, new WeakRef(TT))
       }
-      unregisterView(pp) {
-        this.activeViews.delete(pp.id);
-        const ip = pp.id;
-        for (const cp of this.streamTrees) cp._dropView(ip)
+      unregisterView(TT) {
+        this.activeViews.delete(TT.id);
+        const UT = TT.id;
+        for (const mT of this.streamTrees) mT._dropView(UT)
       }
-      forEachActiveView(pp) {
-        for (const [ip, cp] of this.activeViews) {
-          const Op = cp.deref();
-          if (void 0 !== Op) pp(Op);
+      forEachActiveView(TT) {
+        for (const [UT, mT] of this.activeViews) {
+          const WT = mT.deref();
+          if (void 0 !== WT) TT(WT);
           else {
-            this.activeViews.delete(ip);
-            for (const pp of this.streamTrees) pp._dropView(ip)
+            this.activeViews.delete(UT);
+            for (const TT of this.streamTrees) TT._dropView(UT)
           }
         }
       }
-      registerStream(pp) {
-        this.streamTrees.add(pp)
+      registerStream(TT) {
+        this.streamTrees.add(TT)
       }
-      unregisterStream(pp) {
-        this.streamTrees.delete(pp)
+      unregisterStream(TT) {
+        this.streamTrees.delete(TT)
       }
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = pp, this.nextUniqueId = ip
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = TT, this.nextUniqueId = UT
       }
-      add(pp) {
-        const ip = pp.ref;
-        void 0 === ip[xp] && (lO.value = this.nextUniqueId++, Object.defineProperty(ip, xp, lO));
-        const cp = ip[xp],
-          Op = void 0 === this.changeTrees[cp];
-        Op && (this.changeTrees[cp] = pp), pp.needsRestage && (pp.needsRestage = !1, pp.forEachLiveWithCtx(pp, Ic));
-        const op = Op ? 0 : pp.refCount;
-        return pp.refCount = op + 1, op > 0 && this.enqueueFilterRefresh(pp), Op
+      add(TT) {
+        const UT = TT.ref;
+        void 0 === UT[nT] && (aW.value = this.nextUniqueId++, Object.defineProperty(UT, nT, aW));
+        const mT = UT[nT],
+          WT = void 0 === this.changeTrees[mT];
+        WT && (this.changeTrees[mT] = TT), TT.needsRestage && (TT.needsRestage = !1, TT.forEachLiveWithCtx(TT, mm));
+        const zT = WT ? 0 : TT.refCount;
+        return TT.refCount = zT + 1, zT > 0 && this.enqueueFilterRefresh(TT), WT
       }
-      remove(pp) {
-        const ip = pp.refCount - 1;
-        if (ip <= 0) {
-          if (pp.root = void 0, delete this.changeTrees[pp.ref[xp]], pp.isStreamCollection) {
-            const ip = pp.ref;
-            ip._unregister?.(), this.unregisterStream(ip)
+      remove(TT) {
+        const UT = TT.refCount - 1;
+        if (UT <= 0) {
+          if (TT.root = void 0, delete this.changeTrees[TT.ref[nT]], TT.isStreamCollection) {
+            const UT = TT.ref;
+            UT._unregister?.(), this.unregisterStream(UT)
           }
-          this.removeFromQueue(pp), this.removeFromUnreliableQueue(pp), pp.refCount = 0, pp.needsRestage = !0, pp.forEachChild(((ip, cp) => {
-            ip.removeParent(pp.ref) && (void 0 === ip.parentRef || ip.refCount > 0 ? this.remove(ip) : this.moveNextToParent(ip))
+          this.removeFromQueue(TT), this.removeFromUnreliableQueue(TT), TT.refCount = 0, TT.needsRestage = !0, TT.forEachChild(((UT, mT) => {
+            UT.removeParent(TT.ref) && (void 0 === UT.parentRef || UT.refCount > 0 ? this.remove(UT) : this.moveNextToParent(UT))
           }))
-        } else pp.refCount = ip, this.enqueueFilterRefresh(pp), this.recursivelyMoveNextToParent(pp);
-        return ip
+        } else TT.refCount = UT, this.enqueueFilterRefresh(TT), this.recursivelyMoveNextToParent(TT);
+        return UT
       }
-      recursivelyMoveNextToParent(pp) {
-        this.moveNextToParent(pp), pp.forEachChild(((pp, ip) => this.recursivelyMoveNextToParent(pp)))
+      recursivelyMoveNextToParent(TT) {
+        this.moveNextToParent(TT), TT.forEachChild(((TT, UT) => this.recursivelyMoveNextToParent(TT)))
       }
-      moveNextToParent(pp) {
-        pp.changesNode && this._moveNextToParentInList(this.changes, pp, pp.changesNode, "changesNode"), pp.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, pp, pp.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(TT) {
+        TT.changesNode && this._moveNextToParentInList(this.changes, TT, TT.changesNode, "changesNode"), TT.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, TT, TT.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(pp, ip, cp, Op) {
-        const op = ip.parent;
-        if (!op || !op[Up]) return;
-        const Ip = op[Up][Op];
-        Ip && Ip !== cp && (cp.position > Ip.position || (cp.prev ? cp.prev.next = cp.next : pp.next = cp.next, cp.next ? cp.next.prev = cp.prev : pp.tail = cp.prev, cp.prev = pp.tail, cp.next = void 0, pp.tail.next = cp, pp.tail = cp, cp.position = pp.nextPosition++))
+      _moveNextToParentInList(TT, UT, mT, WT) {
+        const zT = UT.parent;
+        if (!zT || !zT[ZT]) return;
+        const MT = zT[ZT][WT];
+        MT && MT !== mT && (mT.position > MT.position || (mT.prev ? mT.prev.next = mT.next : TT.next = mT.next, mT.next ? mT.next.prev = mT.prev : TT.tail = mT.prev, mT.prev = TT.tail, mT.next = void 0, TT.tail.next = mT, TT.tail = mT, mT.position = TT.nextPosition++))
       }
-      enqueueChangeTree(pp) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pp.changesNode) || (pp.changesNode = this._appendToList(this.changes, pp))
+      enqueueChangeTree(TT) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.changesNode) || (TT.changesNode = this._appendToList(this.changes, TT))
       }
-      enqueueUnreliable(pp) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pp.unreliableChangesNode) || (pp.unreliableChangesNode = this._appendToList(this.unreliableChanges, pp))
+      enqueueUnreliable(TT) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.unreliableChangesNode) || (TT.unreliableChangesNode = this._appendToList(this.unreliableChanges, TT))
       }
-      _appendToList(pp, ip) {
-        const cp = this._nodePool;
-        let Op;
-        return cp.length > 0 ? (Op = cp.pop(), Op.changeTree = ip, Op.next = void 0, Op.prev = void 0) : Op = {
-          changeTree: ip,
+      _appendToList(TT, UT) {
+        const mT = this._nodePool;
+        let WT;
+        return mT.length > 0 ? (WT = mT.pop(), WT.changeTree = UT, WT.next = void 0, WT.prev = void 0) : WT = {
+          changeTree: UT,
           next: void 0,
           prev: void 0,
           position: 0
-        }, pp.next ? (Op.prev = pp.tail, pp.tail.next = Op, pp.tail = Op) : (pp.nextPosition = 0, pp.next = Op, pp.tail = Op), Op.position = pp.nextPosition++, Op
+        }, TT.next ? (WT.prev = TT.tail, TT.tail.next = WT, TT.tail = WT) : (TT.nextPosition = 0, TT.next = WT, TT.tail = WT), WT.position = TT.nextPosition++, WT
       }
-      releaseNode(pp) {
-        pp.changeTree = void 0, pp.prev = void 0, pp.next = void 0, this._nodePool.push(pp)
+      releaseNode(TT) {
+        TT.changeTree = void 0, TT.prev = void 0, TT.next = void 0, this._nodePool.push(TT)
       }
-      removeFromQueue(pp) {
-        return this._removeNode(this.changes, pp, pp.changesNode, "changesNode")
+      removeFromQueue(TT) {
+        return this._removeNode(this.changes, TT, TT.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(pp) {
-        return this._removeNode(this.unreliableChanges, pp, pp.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(TT) {
+        return this._removeNode(this.unreliableChanges, TT, TT.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(pp, ip, cp, Op) {
-        return !(!cp || cp.changeTree !== ip) && (cp.prev ? cp.prev.next = cp.next : pp.next = cp.next, cp.next ? cp.next.prev = cp.prev : pp.tail = cp.prev, ip[Op] = void 0, this.releaseNode(cp), !0)
+      _removeNode(TT, UT, mT, WT) {
+        return !(!mT || mT.changeTree !== UT) && (mT.prev ? mT.prev.next = mT.next : TT.next = mT.next, mT.next ? mT.next.prev = mT.prev : TT.tail = mT.prev, UT[WT] = void 0, this.releaseNode(mT), !0)
       }
     }
 
-    function JO(pp, ip) {
-      if (-1 === ip || ip >= pp.length) return !1;
-      const cp = pp.length - 1;
-      for (let Op = ip; Op < cp; Op++) pp[Op] = pp[Op + 1];
-      return pp.length = cp, !0
+    function XW(TT, UT) {
+      if (-1 === UT || UT >= TT.length) return !1;
+      const mT = TT.length - 1;
+      for (let WT = UT; WT < mT; WT++) TT[WT] = TT[WT + 1];
+      return TT.length = mT, !0
     }
 
-    function BO(pp, ip, cp) {
-      const Op = ~cp,
-        op = pp.changeTrees;
-      for (const Ip in op) {
-        const pp = op[Ip],
-          cp = pp.visibleViews;
-        void 0 !== cp && ip < cp.length && (cp[ip] &= Op);
-        const Sp = pp.subscribedViews;
-        void 0 !== Sp && ip < Sp.length && (Sp[ip] &= Op);
-        const xp = pp.tagViews;
-        void 0 !== xp && xp.forEach((pp => {
-          ip < pp.length && (pp[ip] &= Op)
+    function IW(TT, UT, mT) {
+      const WT = ~mT,
+        zT = TT.changeTrees;
+      for (const MT in zT) {
+        const TT = zT[MT],
+          mT = TT.visibleViews;
+        void 0 !== mT && UT < mT.length && (mT[UT] &= WT);
+        const gT = TT.subscribedViews;
+        void 0 !== gT && UT < gT.length && (gT[UT] &= WT);
+        const nT = TT.tagViews;
+        void 0 !== nT && nT.forEach((TT => {
+          UT < TT.length && (TT[UT] &= WT)
         }))
       }
     }
-    const NO = new FinalizationRegistry((pp => {
+    const QW = new FinalizationRegistry((TT => {
       let {
-        root: ip,
-        id: cp,
-        slot: Op,
-        bit: op
-      } = pp;
-      BO(ip, Op, op), ip.activeViews.delete(cp);
-      for (const Ip of ip.streamTrees) Ip._dropView(cp);
-      ip.releaseViewId(cp)
+        root: UT,
+        id: mT,
+        slot: WT,
+        bit: zT
+      } = TT;
+      IW(UT, WT, zT), UT.activeViews.delete(mT);
+      for (const MT of UT.streamTrees) MT._dropView(mT);
+      UT.releaseViewId(mT)
     }));
 
-    function TO(pp) {
-      if (void 0 === pp) return "undefined";
-      if (null === pp) return "null";
-      const ip = typeof pp;
-      return "string" === ip ? JSON.stringify(pp.length > 30 ? `${pp.slice(0,30)}\u2026` : pp) : "object" !== ip && "function" !== ip ? `${ip} ${String(pp)}` : Array.isArray(pp) ? `Array(${pp.length})` : pp.constructor?.name ?? "Object"
+    function sW(TT) {
+      if (void 0 === TT) return "undefined";
+      if (null === TT) return "null";
+      const UT = typeof TT;
+      return "string" === UT ? JSON.stringify(TT.length > 30 ? `${TT.slice(0,30)}\u2026` : TT) : "object" !== UT && "function" !== UT ? `${UT} ${String(TT)}` : Array.isArray(TT) ? `Array(${TT.length})` : TT.constructor?.name ?? "Object"
     }
-    class fO {
+    class FW {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = pp, pp && (this.items = [])
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = TT, TT && (this.items = [])
       }
-      _bindRoot(pp) {
-        void 0 === this._root && (this._root = pp, this.id = pp.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), pp.registerView(this), NO.register(this, {
-          root: pp,
+      _bindRoot(TT) {
+        void 0 === this._root && (this._root = TT, this.id = TT.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), TT.registerView(this), QW.register(this, {
+          root: TT,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), BO(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), NO.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), IW(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), QW.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(pp) {
-        const ip = pp.visibleViews,
-          cp = this._slot;
-        return void 0 !== ip && cp < ip.length && 0 !== (ip[cp] & this._bit)
+      isVisible(TT) {
+        const UT = TT.visibleViews,
+          mT = this._slot;
+        return void 0 !== UT && mT < UT.length && 0 !== (UT[mT] & this._bit)
       }
-      markVisible(pp) {
-        const ip = this._slot;
-        let cp = pp.visibleViews;
-        for (void 0 === cp && (cp = pp.visibleViews = []); cp.length <= ip;) cp.push(0);
-        cp[ip] |= this._bit
+      markVisible(TT) {
+        const UT = this._slot;
+        let mT = TT.visibleViews;
+        for (void 0 === mT && (mT = TT.visibleViews = []); mT.length <= UT;) mT.push(0);
+        mT[UT] |= this._bit
       }
-      unmarkVisible(pp) {
-        const ip = pp.visibleViews;
-        if (void 0 === ip) return;
-        const cp = this._slot;
-        cp < ip.length && (ip[cp] &= ~this._bit)
+      unmarkVisible(TT) {
+        const UT = TT.visibleViews;
+        if (void 0 === UT) return;
+        const mT = this._slot;
+        mT < UT.length && (UT[mT] &= ~this._bit)
       }
-      isSubscribed(pp) {
-        const ip = pp.subscribedViews,
-          cp = this._slot;
-        return void 0 !== ip && cp < ip.length && 0 !== (ip[cp] & this._bit)
+      isSubscribed(TT) {
+        const UT = TT.subscribedViews,
+          mT = this._slot;
+        return void 0 !== UT && mT < UT.length && 0 !== (UT[mT] & this._bit)
       }
-      _setSubscribed(pp) {
-        const ip = this._slot;
-        let cp = pp.subscribedViews;
-        for (void 0 === cp && (cp = pp.subscribedViews = []); cp.length <= ip;) cp.push(0);
-        cp[ip] |= this._bit
+      _setSubscribed(TT) {
+        const UT = this._slot;
+        let mT = TT.subscribedViews;
+        for (void 0 === mT && (mT = TT.subscribedViews = []); mT.length <= UT;) mT.push(0);
+        mT[UT] |= this._bit
       }
-      _clearSubscribed(pp) {
-        const ip = pp.subscribedViews;
-        if (void 0 === ip) return;
-        const cp = this._slot;
-        cp < ip.length && (ip[cp] &= ~this._bit)
+      _clearSubscribed(TT) {
+        const UT = TT.subscribedViews;
+        if (void 0 === UT) return;
+        const mT = this._slot;
+        mT < UT.length && (UT[mT] &= ~this._bit)
       }
-      hasTagOnTree(pp, ip) {
-        const cp = pp.tagViews;
-        if (void 0 === cp) return !1;
-        const Op = this._slot,
-          op = this._bit;
-        for (let Ip = ip; 0 !== Ip; Ip &= Ip - 1) {
-          const pp = cp.get(Ip & -Ip);
-          if (void 0 !== pp && Op < pp.length && 0 !== (pp[Op] & op)) return !0
+      hasTagOnTree(TT, UT) {
+        const mT = TT.tagViews;
+        if (void 0 === mT) return !1;
+        const WT = this._slot,
+          zT = this._bit;
+        for (let MT = UT; 0 !== MT; MT &= MT - 1) {
+          const TT = mT.get(MT & -MT);
+          if (void 0 !== TT && WT < TT.length && 0 !== (TT[WT] & zT)) return !0
         }
         return !1
       }
-      addTag(pp, ip) {
-        if (ip === vO) return;
-        let cp = pp.tagViews;
-        void 0 === cp && (cp = pp.tagViews = new Map);
-        const Op = this._slot,
-          op = this._bit;
-        for (let Ip = ip; Ip > 0; Ip &= Ip - 1) {
-          const pp = Ip & -Ip;
-          let ip = cp.get(pp);
-          for (void 0 === ip && (ip = [], cp.set(pp, ip)); ip.length <= Op;) ip.push(0);
-          ip[Op] |= op
+      addTag(TT, UT) {
+        if (UT === ZW) return;
+        let mT = TT.tagViews;
+        void 0 === mT && (mT = TT.tagViews = new Map);
+        const WT = this._slot,
+          zT = this._bit;
+        for (let MT = UT; MT > 0; MT &= MT - 1) {
+          const TT = MT & -MT;
+          let UT = mT.get(TT);
+          for (void 0 === UT && (UT = [], mT.set(TT, UT)); UT.length <= WT;) UT.push(0);
+          UT[WT] |= zT
         }
       }
-      removeTag(pp, ip) {
-        if (ip === vO) return;
-        const cp = pp.tagViews;
-        if (void 0 === cp) return;
-        const Op = this._slot,
-          op = ~this._bit;
-        for (let Ip = ip; Ip > 0; Ip &= Ip - 1) {
-          const pp = cp.get(Ip & -Ip);
-          void 0 !== pp && Op < pp.length && (pp[Op] &= op)
+      removeTag(TT, UT) {
+        if (UT === ZW) return;
+        const mT = TT.tagViews;
+        if (void 0 === mT) return;
+        const WT = this._slot,
+          zT = ~this._bit;
+        for (let MT = UT; MT > 0; MT &= MT - 1) {
+          const TT = mT.get(MT & -MT);
+          void 0 !== TT && WT < TT.length && (TT[WT] &= zT)
         }
       }
-      removeAllTagsOnTree(pp) {
-        const ip = pp.tagViews;
-        if (void 0 === ip) return;
-        const cp = this._slot,
-          Op = ~this._bit;
-        ip.forEach((pp => {
-          cp < pp.length && (pp[cp] &= Op)
+      removeAllTagsOnTree(TT) {
+        const UT = TT.tagViews;
+        if (void 0 === UT) return;
+        const mT = this._slot,
+          WT = ~this._bit;
+        UT.forEach((TT => {
+          mT < TT.length && (TT[mT] &= WT)
         }))
       }
-      add(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vO,
-          cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(pp, ip, cp, !1)
+      add(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZW,
+          mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(TT, UT, mT, !1)
       }
-      _addImmediate(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vO;
-        this._add(pp, ip, !0, !0)
+      _addImmediate(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZW;
+        this._add(TT, UT, !0, !0)
       }
-      _add(pp, ip, cp, Op) {
-        const Ip = pp?.[Up];
-        if (!Ip) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${TO(pp)}`), !1;
-        const Sp = Ip.parent;
-        if (!Sp && 0 !== pp[xp]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Ip.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== Ip.root && this._bindRoot(Ip.root);
-        const Lp = Sp?.[Up];
-        if (!Op && Lp?.isStreamCollection) return Qi(Sp, this.id, Ip.parentIndex), !0;
-        const Yp = pp.constructor[Symbol.metadata],
-          Dp = this.isVisible(Ip);
-        if (!this.iterable || !cp || Dp && -1 !== this.items.indexOf(pp) || this.items.push(pp), this.markVisible(Ip), cp && Sp && this.addParentOf(Ip, ip), !Op && Ip.isStreamCollection) return !0;
-        if (ip === vO && Ip.isNew) return this._markSubtreeVisible(Ip, ip), !1;
-        let Ap = this.changes.get(pp[xp]);
-        void 0 === Ap && (Ap = new Map, this.changes.set(pp[xp], Ap));
-        let Pp = !1;
-        const Wp = Ip.encDescriptor.tags;
-        if (Ip.forEachChild(((pp, cp) => {
-            const Op = Wp[cp];
-            if (void 0 !== Op) {
-              if (!(Op === vO || ip !== vO && 0 !== (Op & ip))) return
+      _add(TT, UT, mT, WT) {
+        const MT = TT?.[ZT];
+        if (!MT) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${sW(TT)}`), !1;
+        const gT = MT.parent;
+        if (!gT && 0 !== TT[nT]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${MT.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== MT.root && this._bindRoot(MT.root);
+        const HT = gT?.[ZT];
+        if (!WT && HT?.isStreamCollection) return yU(gT, this.id, MT.parentIndex), !0;
+        const kT = TT.constructor[Symbol.metadata],
+          jT = this.isVisible(MT);
+        if (!this.iterable || !mT || jT && -1 !== this.items.indexOf(TT) || this.items.push(TT), this.markVisible(MT), mT && gT && this.addParentOf(MT, UT), !WT && MT.isStreamCollection) return !0;
+        if (UT === ZW && MT.isNew) return this._markSubtreeVisible(MT, UT), !1;
+        let lT = this.changes.get(TT[nT]);
+        void 0 === lT && (lT = new Map, this.changes.set(TT[nT], lT));
+        let LT = !1;
+        const pT = MT.encDescriptor.tags;
+        if (MT.forEachChild(((TT, mT) => {
+            const WT = pT[mT];
+            if (void 0 !== WT) {
+              if (!(WT === ZW || UT !== ZW && 0 !== (WT & UT))) return
             }
-            this.add(pp.ref, ip, !1) && (Pp = !0)
-          })), ip !== vO) {
-          this.addTag(Ip, ip);
-          const pp = Yp?.[Ep];
-          if (void 0 !== pp)
-            for (let cp = ip; cp > 0; cp &= cp - 1) pp[cp & -cp]?.forEach((pp => {
-              Ip.getChange(pp) !== op.DELETE && Ap.set(pp, op.ADD)
+            this.add(TT.ref, UT, !1) && (LT = !0)
+          })), UT !== ZW) {
+          this.addTag(MT, UT);
+          const TT = kT?.[tT];
+          if (void 0 !== TT)
+            for (let mT = UT; mT > 0; mT &= mT - 1) TT[mT & -mT]?.forEach((TT => {
+              MT.getChange(TT) !== zT.DELETE && lT.set(TT, zT.ADD)
             }))
         }
-        if ((ip === vO || !Dp) && (!Ip.isNew || Pp))
-          if (Ip.isArray && "string" !== typeof Ip.refTarget[wp]) Ip.refTarget.items.length > 0 && (Ap.set(-1, op.ADD), Pp = !0);
+        if ((UT === ZW || !jT) && (!MT.isNew || LT))
+          if (MT.isArray && "string" !== typeof MT.refTarget[cT]) MT.refTarget.items.length > 0 && (lT.set(-1, zT.ADD), LT = !0);
           else {
-            const pp = Ip.encDescriptor.tags;
-            Ip.forEachLive((cp => {
-              const Op = pp[cp];
-              (void 0 === Op || Op === vO || ip !== vO && 0 !== (Op & ip)) && (Ap.set(cp, op.ADD), Pp = !0)
+            const TT = MT.encDescriptor.tags;
+            MT.forEachLive((mT => {
+              const WT = TT[mT];
+              (void 0 === WT || WT === ZW || UT !== ZW && 0 !== (WT & UT)) && (lT.set(mT, zT.ADD), LT = !0)
             }))
-          } return Pp
+          } return LT
       }
-      _markSubtreeVisible(pp, ip) {
-        const cp = pp.encDescriptor.tags;
-        pp.forEachChild(((pp, Op) => {
-          const op = cp[Op];
-          if (void 0 !== op) {
-            if (!(op === vO || ip !== vO && 0 !== (op & ip))) return
+      _markSubtreeVisible(TT, UT) {
+        const mT = TT.encDescriptor.tags;
+        TT.forEachChild(((TT, WT) => {
+          const zT = mT[WT];
+          if (void 0 !== zT) {
+            if (!(zT === ZW || UT !== ZW && 0 !== (zT & UT))) return
           }
-          pp.isNew ? (this.markVisible(pp), this._markSubtreeVisible(pp, ip)) : this._add(pp.ref, ip, !1, !1)
+          TT.isNew ? (this.markVisible(TT), this._markSubtreeVisible(TT, UT)) : this._add(TT.ref, UT, !1, !1)
         }))
       }
-      addParentOf(pp, ip) {
-        const cp = pp.parent[Up],
-          Op = pp.parentIndex;
-        this.isVisible(cp) || this.markVisible(cp);
-        const Ip = cp.parent?.[Up];
-        if (Ip && this.addParentOf(cp, ip), cp.hasFilteredFields && cp.getChange(Op) !== op.DELETE) {
-          let Ip = this.changes.get(cp.ref[xp]);
-          void 0 === Ip && (Ip = new Map, this.changes.set(cp.ref[xp], Ip));
-          const Sp = cp.encDescriptor.tags[Op];
-          void 0 !== Sp && Sp !== vO && 0 !== (Sp & ip) && this.addTag(cp, ip), Ip.set(cp.isArray ? pp : Op, op.ADD)
+      addParentOf(TT, UT) {
+        const mT = TT.parent[ZT],
+          WT = TT.parentIndex;
+        this.isVisible(mT) || this.markVisible(mT);
+        const MT = mT.parent?.[ZT];
+        if (MT && this.addParentOf(mT, UT), mT.hasFilteredFields && mT.getChange(WT) !== zT.DELETE) {
+          let MT = this.changes.get(mT.ref[nT]);
+          void 0 === MT && (MT = new Map, this.changes.set(mT.ref[nT], MT));
+          const gT = mT.encDescriptor.tags[WT];
+          void 0 !== gT && gT !== ZW && 0 !== (gT & UT) && this.addTag(mT, UT), MT.set(mT.isArray ? TT : WT, zT.ADD)
         }
       }
-      _touchAncestorsOf(pp) {
-        let ip = pp.parent?.[Up];
-        if (void 0 === ip) return;
-        const cp = [];
-        for (; void 0 !== ip;) {
-          if (ip.hasFilteredFields) {
-            const pp = ip.ref[xp];
-            if (this.changes.has(pp)) break;
-            cp.push(ip)
+      _touchAncestorsOf(TT) {
+        let UT = TT.parent?.[ZT];
+        if (void 0 === UT) return;
+        const mT = [];
+        for (; void 0 !== UT;) {
+          if (UT.hasFilteredFields) {
+            const TT = UT.ref[nT];
+            if (this.changes.has(TT)) break;
+            mT.push(UT)
           }
-          ip = ip.parent?.[Up]
+          UT = UT.parent?.[ZT]
         }
-        for (let Op = cp.length - 1; Op >= 0; Op--) this.changes.set(cp[Op].ref[xp], new Map)
+        for (let WT = mT.length - 1; WT >= 0; WT--) this.changes.set(mT[WT].ref[nT], new Map)
       }
-      remove(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vO,
-          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Op = pp?.[Up];
-        if (!Op) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${TO(pp)}`), this;
-        const Ip = Op.parent?.[Up];
-        if (Ip?.isStreamCollection) return this.unmarkVisible(Op), this.iterable && !cp && JO(this.items, this.items.indexOf(pp)),
-          function(pp, ip, cp, Op, Ip) {
-            const Sp = pp._stream;
-            if (void 0 === Sp) return !1;
-            const xp = Sp.pendingByView.get(ip);
-            if (xp?.has(Op)) return xp.delete(Op), !1;
-            const Lp = Sp.sentByView.get(ip);
-            if (Lp?.has(Op)) {
-              Lp.delete(Op);
-              let pp = Ip.get(cp);
-              return void 0 === pp && (pp = new Map, Ip.set(cp, pp)), pp.set(Op, op.DELETE), !0
+      remove(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZW,
+          mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const WT = TT?.[ZT];
+        if (!WT) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${sW(TT)}`), this;
+        const MT = WT.parent?.[ZT];
+        if (MT?.isStreamCollection) return this.unmarkVisible(WT), this.iterable && !mT && XW(this.items, this.items.indexOf(TT)),
+          function(TT, UT, mT, WT, MT) {
+            const gT = TT._stream;
+            if (void 0 === gT) return !1;
+            const nT = gT.pendingByView.get(UT);
+            if (nT?.has(WT)) return nT.delete(WT), !1;
+            const HT = gT.sentByView.get(UT);
+            if (HT?.has(WT)) {
+              HT.delete(WT);
+              let TT = MT.get(mT);
+              return void 0 === TT && (TT = new Map, MT.set(mT, TT)), TT.set(WT, zT.DELETE), !0
             }
-          }(Op.parent, this.id, Op.parent[xp], Op.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Op), this;
-        if (Op.isStreamCollection) {
-          this.unmarkVisible(Op), this.iterable && !cp && JO(this.items, this.items.indexOf(pp));
-          const ip = Op.ref,
-            Ip = ip._stream;
-          if (void 0 !== Ip) {
-            Ip.pendingByView.get(this.id)?.clear();
-            const pp = Ip.sentByView.get(this.id);
-            if (void 0 !== pp && pp.size > 0) {
-              const cp = ip[xp];
-              let Op = this.changes.get(cp);
-              void 0 === Op && (Op = new Map, this.changes.set(cp, Op));
-              for (const ip of pp) Op.set(ip, op.DELETE);
-              pp.clear()
+          }(WT.parent, this.id, WT.parent[nT], WT.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(WT), this;
+        if (WT.isStreamCollection) {
+          this.unmarkVisible(WT), this.iterable && !mT && XW(this.items, this.items.indexOf(TT));
+          const UT = WT.ref,
+            MT = UT._stream;
+          if (void 0 !== MT) {
+            MT.pendingByView.get(this.id)?.clear();
+            const TT = MT.sentByView.get(this.id);
+            if (void 0 !== TT && TT.size > 0) {
+              const mT = UT[nT];
+              let WT = this.changes.get(mT);
+              void 0 === WT && (WT = new Map, this.changes.set(mT, WT));
+              for (const UT of TT) WT.set(UT, zT.DELETE);
+              TT.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Op), this.iterable && !cp && JO(this.items, this.items.indexOf(pp));
-        const Sp = Op.ref,
-          Lp = Sp.constructor[Symbol.metadata],
-          Yp = Sp[xp];
-        this._touchAncestorsOf(Op);
-        let Dp = this.changes.get(Yp);
-        if (void 0 === Dp && (Dp = new Map, this.changes.set(Yp, Dp)), ip === vO) {
-          const pp = Op.parent;
-          if (pp && !si.isValidInstance(pp) && Op.isFiltered) {
-            const ip = Ip.isArray ? Op : Op.parentIndex,
-              cp = pp[xp];
-            let Sp = this.changes.get(cp);
-            void 0 === Sp ? (Sp = new Map, this.changes.set(cp, Sp)) : Sp.get(ip) === op.ADD && this._dropPendingEntries(Op), Sp.set(ip, op.DELETE), this._recursiveDeleteVisibleChangeTree(Op)
-          } else Lp?.[Cp]?.forEach((pp => this._removeViewField(Op, Dp, pp)))
+        this.unmarkVisible(WT), this.iterable && !mT && XW(this.items, this.items.indexOf(TT));
+        const gT = WT.ref,
+          HT = gT.constructor[Symbol.metadata],
+          kT = gT[nT];
+        this._touchAncestorsOf(WT);
+        let jT = this.changes.get(kT);
+        if (void 0 === jT && (jT = new Map, this.changes.set(kT, jT)), UT === ZW) {
+          const TT = WT.parent;
+          if (TT && !EU.isValidInstance(TT) && WT.isFiltered) {
+            const UT = MT.isArray ? WT : WT.parentIndex,
+              mT = TT[nT];
+            let gT = this.changes.get(mT);
+            void 0 === gT ? (gT = new Map, this.changes.set(mT, gT)) : gT.get(UT) === zT.ADD && this._dropPendingEntries(WT), gT.set(UT, zT.DELETE), this._recursiveDeleteVisibleChangeTree(WT)
+          } else HT?.[wT]?.forEach((TT => this._removeViewField(WT, jT, TT)))
         } else {
-          const pp = Lp?.[Ep];
-          if (void 0 !== pp)
-            for (let cp = ip; cp > 0; cp &= cp - 1) pp[cp & -cp]?.forEach((pp => this._removeViewField(Op, Dp, pp)))
+          const TT = HT?.[tT];
+          if (void 0 !== TT)
+            for (let mT = UT; mT > 0; mT &= mT - 1) TT[mT & -mT]?.forEach((TT => this._removeViewField(WT, jT, TT)))
         }
-        return void 0 === ip ? this.removeAllTagsOnTree(Op) : this.removeTag(Op, ip), this
+        return void 0 === UT ? this.removeAllTagsOnTree(WT) : this.removeTag(WT, UT), this
       }
-      has(pp) {
-        return this.isVisible(pp[Up])
+      has(TT) {
+        return this.isVisible(TT[ZT])
       }
-      hasTag(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vO;
-        return this.hasTagOnTree(pp[Up], ip)
+      hasTag(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZW;
+        return this.hasTagOnTree(TT[ZT], UT)
       }
-      subscribe(pp, ip) {
-        const cp = pp?.[Up];
-        if (!cp) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${TO(pp)}`), this;
-        if (void 0 === this._root && void 0 !== cp.root && this._bindRoot(cp.root), void 0 !== ip)
-          if (cp.isStreamCollection) {
-            const cp = Mi(pp);
-            null === ip ? cp.priorityByView?.delete(this.id) : (cp.priorityByView ??= new Map).set(this.id, ip)
+      subscribe(TT, UT) {
+        const mT = TT?.[ZT];
+        if (!mT) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${sW(TT)}`), this;
+        if (void 0 === this._root && void 0 !== mT.root && this._bindRoot(mT.root), void 0 !== UT)
+          if (mT.isStreamCollection) {
+            const mT = xU(TT);
+            null === UT ? mT.priorityByView?.delete(this.id) : (mT.priorityByView ??= new Map).set(this.id, UT)
           } else {
-            const ip = pp?.constructor?.name ?? "collection",
-              Op = cp.parent;
-            if (void 0 === Op) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${ip} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const UT = TT?.constructor?.name ?? "collection",
+              WT = mT.parent;
+            if (void 0 === WT) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${UT} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const pp = Op?.constructor?.[Symbol.metadata]?.[cp.parentIndex]?.name,
-                op = pp ? `${Op.constructor.name}#${pp}` : ip;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${op} is a ${ip}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const TT = WT?.constructor?.[Symbol.metadata]?.[mT.parentIndex]?.name,
+                zT = TT ? `${WT.constructor.name}#${TT}` : UT;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${zT} is a ${UT}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(cp)) return this;
-        const Op = void 0 !== cp.parent && !this.isVisible(cp);
-        if (Op ? (this.addParentOf(cp, vO), this._add(pp, vO, !1, !1)) : this.markVisible(cp), this._setSubscribed(cp), cp.isStreamCollection) {
-          const ip = pp;
-          cp.forEachChild(((pp, cp) => {
-            Qi(ip, this.id, cp)
+          } if (this.isSubscribed(mT)) return this;
+        const WT = void 0 !== mT.parent && !this.isVisible(mT);
+        if (WT ? (this.addParentOf(mT, ZW), this._add(TT, ZW, !1, !1)) : this.markVisible(mT), this._setSubscribed(mT), mT.isStreamCollection) {
+          const UT = TT;
+          mT.forEachChild(((TT, mT) => {
+            yU(UT, this.id, mT)
           }))
-        } else Op || cp.forEachChild((pp => {
-          this.markVisible(pp)
+        } else WT || mT.forEachChild((TT => {
+          this.markVisible(TT)
         }));
         return this
       }
-      unsubscribe(pp) {
-        const ip = pp?.[Up];
-        if (!ip) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${TO(pp)}`), this;
-        if (!this.isSubscribed(ip)) return this;
-        this._clearSubscribed(ip);
-        const cp = ip.ref[xp];
-        if (ip.isStreamCollection) {
-          const ip = pp._stream;
-          if (void 0 !== ip) {
-            ip.pendingByView.get(this.id)?.clear();
-            const pp = ip.sentByView.get(this.id);
-            if (void 0 !== pp && pp.size > 0) {
-              let ip = this.changes.get(cp);
-              void 0 === ip && (ip = new Map, this.changes.set(cp, ip));
-              for (const cp of pp) ip.set(cp, op.DELETE);
-              pp.clear()
+      unsubscribe(TT) {
+        const UT = TT?.[ZT];
+        if (!UT) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${sW(TT)}`), this;
+        if (!this.isSubscribed(UT)) return this;
+        this._clearSubscribed(UT);
+        const mT = UT.ref[nT];
+        if (UT.isStreamCollection) {
+          const UT = TT._stream;
+          if (void 0 !== UT) {
+            UT.pendingByView.get(this.id)?.clear();
+            const TT = UT.sentByView.get(this.id);
+            if (void 0 !== TT && TT.size > 0) {
+              let UT = this.changes.get(mT);
+              void 0 === UT && (UT = new Map, this.changes.set(mT, UT));
+              for (const mT of TT) UT.set(mT, zT.DELETE);
+              TT.clear()
             }
           }
         } else {
-          const pp = ip.isArray;
-          let Op = this.changes.get(cp);
-          ip.forEachChild(((ip, Ip) => {
-            void 0 === Op && (Op = new Map, this.changes.set(cp, Op)), Op.set(pp ? ip : Ip, op.DELETE), this.unmarkVisible(ip)
+          const TT = UT.isArray;
+          let WT = this.changes.get(mT);
+          UT.forEachChild(((UT, MT) => {
+            void 0 === WT && (WT = new Map, this.changes.set(mT, WT)), WT.set(TT ? UT : MT, zT.DELETE), this.unmarkVisible(UT)
           }))
         }
-        return this.unmarkVisible(ip), this
+        return this.unmarkVisible(UT), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let pp = 0, ip = this.items.length; pp < ip; pp++) this.remove(this.items[pp], vO, !0);
+        for (let TT = 0, UT = this.items.length; TT < UT; TT++) this.remove(this.items[TT], ZW, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(pp) {
-        let ip = this.isVisible(pp);
-        if (!ip && pp.isVisibilitySharedWithParent)
-          if (this.isVisible(pp.parent[Up])) this.markVisible(pp), ip = !0;
+      isChangeTreeVisible(TT) {
+        let UT = this.isVisible(TT);
+        if (!UT && TT.isVisibilitySharedWithParent)
+          if (this.isVisible(TT.parent[ZT])) this.markVisible(TT), UT = !0;
           else
-            for (let cp = pp.extraParents; void 0 !== cp; cp = cp.next) {
-              const Op = cp.ref[Up];
-              if (Op.isFiltered && this.isVisible(Op)) {
-                this.markVisible(pp), ip = !0;
+            for (let mT = TT.extraParents; void 0 !== mT; mT = mT.next) {
+              const WT = mT.ref[ZT];
+              if (WT.isFiltered && this.isVisible(WT)) {
+                this.markVisible(TT), UT = !0;
                 break
               }
             }
-        return ip
+        return UT
       }
-      _recursiveDeleteVisibleChangeTree(pp) {
-        pp.forEachChild((pp => {
-          this.unmarkVisible(pp), this._recursiveDeleteVisibleChangeTree(pp)
+      _recursiveDeleteVisibleChangeTree(TT) {
+        TT.forEachChild((TT => {
+          this.unmarkVisible(TT), this._recursiveDeleteVisibleChangeTree(TT)
         }))
       }
-      _dropPendingEntries(pp) {
-        this.changes.delete(pp.ref[xp]), pp.forEachChild((pp => this._dropPendingEntries(pp)))
+      _dropPendingEntries(TT) {
+        this.changes.delete(TT.ref[nT]), TT.forEachChild((TT => this._dropPendingEntries(TT)))
       }
-      _removeViewField(pp, ip, cp) {
-        const Op = ip.get(cp) === op.ADD;
-        ip.set(cp, op.DELETE);
-        const Ip = pp.ref[pp.encDescriptor.names[cp]],
-          Sp = Ip?.[Up];
-        Sp && (this.unmarkVisible(Sp), this._recursiveDeleteVisibleChangeTree(Sp), Op && this._dropPendingEntries(Sp))
+      _removeViewField(TT, UT, mT) {
+        const WT = UT.get(mT) === zT.ADD;
+        UT.set(mT, zT.DELETE);
+        const MT = TT.ref[TT.encDescriptor.names[mT]],
+          gT = MT?.[ZT];
+        gT && (this.unmarkVisible(gT), this._recursiveDeleteVisibleChangeTree(gT), WT && this._dropPendingEntries(gT))
       }
     }
 
-    function bO(pp) {
-      pp.structSwitchEmitted || (pp.shouldEmitSwitch && (pp.buffer[pp.it.offset++] = 255, Oi.number(pp.buffer, pp.ref[xp], pp.it)), pp.structSwitchEmitted = !0)
+    function PW(TT) {
+      TT.structSwitchEmitted || (TT.shouldEmitSwitch && (TT.buffer[TT.it.offset++] = 255, UU.number(TT.buffer, TT.ref[nT], TT.it)), TT.structSwitchEmitted = !0)
     }
 
-    function hO(pp, ip) {
-      FO(pp, ip, op.ADD)
+    function VW(TT, UT) {
+      rW(TT, UT, zT.ADD)
     }
 
-    function aO(pp, ip) {
-      if (ip._fullSyncGen === pp.gen) return;
-      ip._fullSyncGen = pp.gen;
-      if (!pp.hasView || pp.view.isChangeTreeVisible(ip)) {
-        const cp = ip.encDescriptor;
-        pp.changeTree = ip, pp.ref = ip.ref, pp.encoder = cp.encoder, pp.filter = cp.filter, pp.metadata = cp.metadata, pp.treeIsFiltered = ip.isFiltered, pp.isSchema = cp.isSchema, pp.filterBitmask = cp.filterBitmask, pp.tags = cp.tags, pp.structSwitchEmitted = !1, pp.shouldEmitSwitch = pp.hasView || pp.it.offset > pp.initialOffset || ip !== pp.rootChangeTree, ip.isArray && ip.collDirty.size > 0 && (ip.flags |= 512), xc(ip, pp, hO)
+    function uW(TT, UT) {
+      if (UT._fullSyncGen === TT.gen) return;
+      UT._fullSyncGen = TT.gen;
+      if (!TT.hasView || TT.view.isChangeTreeVisible(UT)) {
+        const mT = UT.encDescriptor;
+        TT.changeTree = UT, TT.ref = UT.ref, TT.encoder = mT.encoder, TT.filter = mT.filter, TT.metadata = mT.metadata, TT.treeIsFiltered = UT.isFiltered, TT.isSchema = mT.isSchema, TT.filterBitmask = mT.filterBitmask, TT.tags = mT.tags, TT.structSwitchEmitted = !1, TT.shouldEmitSwitch = TT.hasView || TT.it.offset > TT.initialOffset || UT !== TT.rootChangeTree, UT.isArray && UT.collDirty.size > 0 && (UT.flags |= 512), zm(UT, TT, VW)
       }
-      dc(ip, pp, nO)
+      fm(UT, TT, CW)
     }
 
-    function nO(pp, ip, cp) {
-      aO(pp, ip)
+    function CW(TT, UT, mT) {
+      uW(TT, UT)
     }
 
-    function FO(pp, ip, cp) {
-      if (ip < 0) {
-        if (pp.treeIsFiltered !== pp.emitFiltered) return;
-        return bO(pp), void(pp.buffer[pp.it.offset++] = 255 & Math.abs(ip))
+    function rW(TT, UT, mT) {
+      if (UT < 0) {
+        if (TT.treeIsFiltered !== TT.emitFiltered) return;
+        return PW(TT), void(TT.buffer[TT.it.offset++] = 255 & Math.abs(UT))
       }
-      if ((pp.isSchema ? pp.treeIsFiltered || (ip < 32 ? 0 !== (pp.filterBitmask & 1 << ip) : void 0 !== pp.tags[ip]) : pp.treeIsFiltered) !== pp.emitFiltered) return;
-      const Op = pp.isEncodeAll ? op.ADD : cp;
-      void 0 !== Op && (void 0 === pp.filter || pp.filter(pp.ref, ip, pp.view)) && (bO(pp), pp.encoder(pp.self, pp.buffer, pp.changeTree, ip, Op, pp.it, pp.isEncodeAll, pp.hasView, pp.metadata))
+      if ((TT.isSchema ? TT.treeIsFiltered || (UT < 32 ? 0 !== (TT.filterBitmask & 1 << UT) : void 0 !== TT.tags[UT]) : TT.treeIsFiltered) !== TT.emitFiltered) return;
+      const WT = TT.isEncodeAll ? zT.ADD : mT;
+      void 0 !== WT && (void 0 === TT.filter || TT.filter(TT.ref, UT, TT.view)) && (PW(TT), TT.encoder(TT.self, TT.buffer, TT.changeTree, UT, WT, TT.it, TT.isEncodeAll, TT.hasView, TT.metadata))
     }
 
-    function gO(pp, ip) {
-      const cp = new Uint8Array(pp.length + ip.length);
-      return cp.set(pp, 0), cp.set(ip, pp.length), cp
+    function KW(TT, UT) {
+      const mT = new Uint8Array(TT.length + UT.length);
+      return mT.set(TT, 0), mT.set(UT, TT.length), mT
     }
-    class GO {
+    class SW {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(GO.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(SW.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(pp, ip) {
-        this.context = ni.cache(pp.constructor), this.root = ip ?? new QO(this.context), this.setState(pp)
+      constructor(TT, UT) {
+        this.context = uU.cache(TT.constructor), this.root = UT ?? new yW(this.context), this.setState(TT)
       }
-      setState(pp) {
-        this.state = pp, this.state[Up].setRoot(this.root)
+      setState(TT) {
+        this.state = TT, this.state[ZT].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pp.offset;
-        return this._encodeChannel(pp, ip, cp, Op, !1)
+          UT = arguments.length > 1 ? arguments[1] : void 0,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.offset;
+        return this._encodeChannel(TT, UT, mT, WT, !1)
       }
       encodeUnreliable() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pp.offset;
-        return this._encodeChannel(pp, ip, cp, Op, !0)
+          UT = arguments.length > 1 ? arguments[1] : void 0,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.offset;
+        return this._encodeChannel(TT, UT, mT, WT, !0)
       }
-      _encodeChannel(pp, ip, cp, Op, op) {
-        this.root.pendingFilterRefresh.length > 0 && Yc(this.root);
-        const Ip = void 0 !== ip,
-          Sp = this.state[Up],
-          xp = this._encodeCtx;
-        xp.self = this, xp.buffer = cp, xp.it = pp, xp.view = ip, xp.isEncodeAll = !1, xp.hasView = Ip, xp.emitFiltered = Ip;
-        let Lp = op ? this.root.unreliableChanges : this.root.changes;
-        for (; Lp = Lp.next;) {
-          const cp = Lp.changeTree;
-          if (Ip && !ip.isChangeTreeVisible(cp)) continue;
-          const Yp = op ? cp.unreliableRecorder : cp;
-          if (!Yp || !Yp.has()) continue;
-          const Dp = cp.encDescriptor;
-          xp.changeTree = cp, xp.ref = cp.ref, xp.encoder = Dp.encoder, xp.filter = Dp.filter, xp.metadata = Dp.metadata, xp.treeIsFiltered = cp.isFiltered, xp.isSchema = Dp.isSchema, xp.filterBitmask = Dp.filterBitmask, xp.tags = Dp.tags, xp.structSwitchEmitted = !1, xp.isRootTree = cp === Sp, xp.shouldEmitSwitch = Ip || pp.offset > Op || !xp.isRootTree, Yp.forEachWithCtx(xp, FO)
+      _encodeChannel(TT, UT, mT, WT, zT) {
+        this.root.pendingFilterRefresh.length > 0 && gm(this.root);
+        const MT = void 0 !== UT,
+          gT = this.state[ZT],
+          nT = this._encodeCtx;
+        nT.self = this, nT.buffer = mT, nT.it = TT, nT.view = UT, nT.isEncodeAll = !1, nT.hasView = MT, nT.emitFiltered = MT;
+        let HT = zT ? this.root.unreliableChanges : this.root.changes;
+        for (; HT = HT.next;) {
+          const mT = HT.changeTree;
+          if (MT && !UT.isChangeTreeVisible(mT)) continue;
+          const kT = zT ? mT.unreliableRecorder : mT;
+          if (!kT || !kT.has()) continue;
+          const jT = mT.encDescriptor;
+          nT.changeTree = mT, nT.ref = mT.ref, nT.encoder = jT.encoder, nT.filter = jT.filter, nT.metadata = jT.metadata, nT.treeIsFiltered = mT.isFiltered, nT.isSchema = jT.isSchema, nT.filterBitmask = jT.filterBitmask, nT.tags = jT.tags, nT.structSwitchEmitted = !1, nT.isRootTree = mT === gT, nT.shouldEmitSwitch = MT || TT.offset > WT || !nT.isRootTree, kT.forEachWithCtx(nT, rW)
         }
-        return op || Ip || !this._isStreamBroadcastMode || this._emitStreamBroadcast(cp, pp), pp.offset > cp.byteLength ? (cp = this._resizeBuffer(cp, pp.offset), pp.offset = Op, this._encodeChannel(pp, ip, cp, Op, op)) : cp.subarray(0, pp.offset)
+        return zT || MT || !this._isStreamBroadcastMode || this._emitStreamBroadcast(mT, TT), TT.offset > mT.byteLength ? (mT = this._resizeBuffer(mT, TT.offset), TT.offset = WT, this._encodeChannel(TT, UT, mT, WT, zT)) : mT.subarray(0, TT.offset)
       }
-      encodeFullSync(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : pp.offset;
-        this.root.pendingFilterRefresh.length > 0 && Yc(this.root);
-        const Ip = void 0 !== Op,
-          Sp = this.state[Up],
-          xp = this._encodeCtx;
-        return xp.self = this, xp.buffer = ip, xp.it = pp, xp.view = Op, xp.isEncodeAll = !0, xp.hasView = Ip, xp.emitFiltered = cp, xp.gen = ++this._fullSyncGen, xp.initialOffset = op, xp.rootChangeTree = Sp, aO(xp, Sp), pp.offset > ip.byteLength ? (ip = this._resizeBuffer(ip, pp.offset), pp.offset = op, this.encodeFullSync(pp, ip, cp, Op, op)) : ip.subarray(0, pp.offset)
+      encodeFullSync(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : TT.offset;
+        this.root.pendingFilterRefresh.length > 0 && gm(this.root);
+        const MT = void 0 !== WT,
+          gT = this.state[ZT],
+          nT = this._encodeCtx;
+        return nT.self = this, nT.buffer = UT, nT.it = TT, nT.view = WT, nT.isEncodeAll = !0, nT.hasView = MT, nT.emitFiltered = mT, nT.gen = ++this._fullSyncGen, nT.initialOffset = zT, nT.rootChangeTree = gT, uW(nT, gT), TT.offset > UT.byteLength ? (UT = this._resizeBuffer(UT, TT.offset), TT.offset = zT, this.encodeFullSync(TT, UT, mT, WT, zT)) : UT.subarray(0, TT.offset)
       }
-      _resizeBuffer(pp, ip) {
-        const cp = Math.ceil(ip / GO.BUFFER_SIZE) * GO.BUFFER_SIZE,
-          Op = new Uint8Array(cp);
-        return Op.set(pp), pp === this.sharedBuffer && (this.sharedBuffer = Op), Op
+      _resizeBuffer(TT, UT) {
+        const mT = Math.ceil(UT / SW.BUFFER_SIZE) * SW.BUFFER_SIZE,
+          WT = new Uint8Array(mT);
+        return WT.set(TT), TT === this.sharedBuffer && (this.sharedBuffer = WT), WT
       }
       encodeAll() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(pp, ip, !1)
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(TT, UT, !1)
       }
-      encodeAllView(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const op = cp.offset;
-        return Op = this.encodeFullSync(cp, Op, !0, pp, op), gO(Op.subarray(0, ip), Op.subarray(op, cp.offset))
+      encodeAllView(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const zT = mT.offset;
+        return WT = this.encodeFullSync(mT, WT, !0, TT, zT), KW(WT.subarray(0, UT), WT.subarray(zT, mT.offset))
       }
-      ensureCapacity(pp, ip) {
-        if (ip + GO.BUFFER_SIZE <= pp.byteLength) return pp;
-        const cp = Math.ceil((ip + GO.BUFFER_SIZE) / GO.BUFFER_SIZE) * GO.BUFFER_SIZE,
-          Op = new Uint8Array(cp);
-        return Op.set(pp.subarray(0, ip)), pp === this.sharedBuffer && (this.sharedBuffer = Op), Op
+      ensureCapacity(TT, UT) {
+        if (UT + SW.BUFFER_SIZE <= TT.byteLength) return TT;
+        const mT = Math.ceil((UT + SW.BUFFER_SIZE) / SW.BUFFER_SIZE) * SW.BUFFER_SIZE,
+          WT = new Uint8Array(mT);
+        return WT.set(TT.subarray(0, UT)), TT === this.sharedBuffer && (this.sharedBuffer = WT), WT
       }
-      encodeView(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          Ip = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const Sp = cp.offset;
-        this._emitStreamPriority(pp);
-        for (const Lp of pp.changes.keys()) {
-          const ip = pp.changes.get(Lp),
-            Ip = this.root.changeTrees[Lp];
-          if (void 0 === Ip) {
-            pp.changes.delete(Lp);
+      encodeView(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          MT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const gT = mT.offset;
+        this._emitStreamPriority(TT);
+        for (const HT of TT.changes.keys()) {
+          const UT = TT.changes.get(HT),
+            MT = this.root.changeTrees[HT];
+          if (void 0 === MT) {
+            TT.changes.delete(HT);
             continue
           }
-          if (0 === ip.size) continue;
-          const Sp = Ip.encDescriptor,
-            Yp = Sp.encoder,
-            Dp = Sp.metadata,
-            Ap = Ip.ref,
-            Wp = Ip.refTarget;
-          Op = this.ensureCapacity(Op, cp.offset), Op[cp.offset++] = 255, Oi.number(Op, Ap[xp], cp);
-          for (const [Lp, yp] of ip) {
-            let ip;
-            if (-1 === Lp) {
-              const pp = Wp.tmpItems,
-                ip = Wp.deletedIndexes;
-              for (let Sp = 0; Sp < pp.length; Sp++) void 0 !== pp[Sp] && !0 !== ip[Sp] && Yp(this, Op, Ip, Sp, op.ADD, cp, !1, !0, Dp);
+          if (0 === UT.size) continue;
+          const gT = MT.encDescriptor,
+            kT = gT.encoder,
+            jT = gT.metadata,
+            lT = MT.ref,
+            pT = MT.refTarget;
+          WT = this.ensureCapacity(WT, mT.offset), WT[mT.offset++] = 255, UU.number(WT, lT[nT], mT);
+          for (const [HT, BT] of UT) {
+            let UT;
+            if (-1 === HT) {
+              const TT = pT.tmpItems,
+                UT = pT.deletedIndexes;
+              for (let gT = 0; gT < TT.length; gT++) void 0 !== TT[gT] && !0 !== UT[gT] && kT(this, WT, MT, gT, zT.ADD, mT, !1, !0, jT);
               continue
             }
-            if ("number" === typeof Lp) ip = Lp;
+            if ("number" === typeof HT) UT = HT;
             else {
-              const cp = Lp.indexInParent(Ap);
-              if (void 0 === cp) continue;
-              if (ip = cp, yp === op.ADD && Ip.getChange(ip) === op.DELETE) {
-                pp.changes.delete(Lp.ref[xp]);
+              const mT = HT.indexInParent(lT);
+              if (void 0 === mT) continue;
+              if (UT = mT, BT === zT.ADD && MT.getChange(UT) === zT.DELETE) {
+                TT.changes.delete(HT.ref[nT]);
                 continue
               }
             }
-            Yp(this, Op, Ip, ip, void 0 !== Wp[Pp](ip) && yp || op.DELETE, cp, !1, !0, Dp)
+            kT(this, WT, MT, UT, void 0 !== pT[LT](UT) && BT || zT.DELETE, mT, !1, !0, jT)
           }
         }
-        return pp.changes.clear(), Op = this.encode(cp, pp, Op), Ip ? gO(Op.subarray(0, ip), Op.subarray(Sp, cp.offset)) : Op.subarray(Sp, cp.offset)
+        return TT.changes.clear(), WT = this.encode(mT, TT, WT), MT ? KW(WT.subarray(0, UT), WT.subarray(gT, mT.offset)) : WT.subarray(gT, mT.offset)
       }
-      encodeUnreliableView(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const op = cp.offset;
-        return Op = this.encodeUnreliable(cp, pp, Op, op), gO(Op.subarray(0, ip), Op.subarray(op, cp.offset))
+      encodeUnreliableView(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const zT = mT.offset;
+        return WT = this.encodeUnreliable(mT, TT, WT, zT), KW(WT.subarray(0, UT), WT.subarray(zT, mT.offset))
       }
-      _emitStreamBroadcast(pp, ip) {
-        const cp = this.root.streamTrees;
-        for (const Op of cp) {
-          const cp = Op,
-            Ip = cp[Up],
-            Sp = cp[xp];
-          if (void 0 === Sp) continue;
-          const Lp = cp._stream,
-            Yp = Lp.broadcastDeletes,
-            Dp = Lp.broadcastPending,
-            Ap = Lp.sentBroadcast,
-            Wp = Yp.size > 0,
-            yp = Dp.size > 0,
-            wp = Ip.encDescriptor,
-            vp = wp.encoder,
-            tp = wp.metadata;
-          if (Wp || yp) {
-            if (pp[ip.offset++] = 255, Oi.number(pp, Sp, ip), Wp) {
-              for (const cp of Yp) vp(this, pp, Ip, cp, op.DELETE, ip, !1, !1, tp);
-              Yp.clear()
+      _emitStreamBroadcast(TT, UT) {
+        const mT = this.root.streamTrees;
+        for (const WT of mT) {
+          const mT = WT,
+            MT = mT[ZT],
+            gT = mT[nT];
+          if (void 0 === gT) continue;
+          const HT = mT._stream,
+            kT = HT.broadcastDeletes,
+            jT = HT.broadcastPending,
+            lT = HT.sentBroadcast,
+            pT = kT.size > 0,
+            BT = jT.size > 0,
+            cT = MT.encDescriptor,
+            vT = cT.encoder,
+            fT = cT.metadata;
+          if (pT || BT) {
+            if (TT[UT.offset++] = 255, UU.number(TT, gT, UT), pT) {
+              for (const mT of kT) vT(this, TT, MT, mT, zT.DELETE, UT, !1, !1, fT);
+              kT.clear()
             }
-            const Op = Lp.maxPerTick,
-              yp = [];
-            let wp = 0;
-            const Hp = [];
-            for (const Sp of Dp) {
-              if (wp >= Op) break;
-              const xp = cp[Pp](Sp);
-              void 0 !== xp ? (vp(this, pp, Ip, Sp, op.ADD, ip, !1, !1, tp), Ap.add(Sp), yp.push(xp), Hp.push(Sp), wp++) : Hp.push(Sp)
+            const WT = HT.maxPerTick,
+              BT = [];
+            let cT = 0;
+            const qT = [];
+            for (const gT of jT) {
+              if (cT >= WT) break;
+              const nT = mT[LT](gT);
+              void 0 !== nT ? (vT(this, TT, MT, gT, zT.ADD, UT, !1, !1, fT), lT.add(gT), BT.push(nT), qT.push(gT), cT++) : qT.push(gT)
             }
-            for (const pp of Hp) Dp.delete(pp);
-            for (const cp of yp) {
-              const Op = cp[Up];
-              if (void 0 === Op) continue;
-              const Ip = cp[xp];
-              if (void 0 === Ip) continue;
-              pp[ip.offset++] = 255, Oi.number(pp, Ip, ip);
-              const Sp = Op.encDescriptor,
-                Lp = Sp.encoder,
-                Yp = Sp.metadata;
-              Op.forEachLive((cp => {
-                si.hasUnreliableAtIndex(Yp, cp) || Lp(this, pp, Op, cp, op.ADD, ip, !1, !1, Yp)
+            for (const TT of qT) jT.delete(TT);
+            for (const mT of BT) {
+              const WT = mT[ZT];
+              if (void 0 === WT) continue;
+              const MT = mT[nT];
+              if (void 0 === MT) continue;
+              TT[UT.offset++] = 255, UU.number(TT, MT, UT);
+              const gT = WT.encDescriptor,
+                HT = gT.encoder,
+                kT = gT.metadata;
+              WT.forEachLive((mT => {
+                EU.hasUnreliableAtIndex(kT, mT) || HT(this, TT, WT, mT, zT.ADD, UT, !1, !1, kT)
               }))
             }
           }
-          for (const Op of Ap) {
-            const op = cp[Pp](Op);
-            if (void 0 === op) continue;
-            const Ip = op[Up];
-            if (void 0 === Ip || !Ip.has()) continue;
-            const Sp = op[xp];
-            if (void 0 === Sp) continue;
-            pp[ip.offset++] = 255, Oi.number(pp, Sp, ip);
-            const Lp = Ip.encDescriptor,
-              Yp = Lp.encoder,
-              Dp = Lp.metadata;
-            Ip.forEach(((cp, Op) => {
-              cp < 0 || si.hasUnreliableAtIndex(Dp, cp) || Yp(this, pp, Ip, cp, Op, ip, !1, !1, Dp)
+          for (const WT of lT) {
+            const zT = mT[LT](WT);
+            if (void 0 === zT) continue;
+            const MT = zT[ZT];
+            if (void 0 === MT || !MT.has()) continue;
+            const gT = zT[nT];
+            if (void 0 === gT) continue;
+            TT[UT.offset++] = 255, UU.number(TT, gT, UT);
+            const HT = MT.encDescriptor,
+              kT = HT.encoder,
+              jT = HT.metadata;
+            MT.forEach(((mT, WT) => {
+              mT < 0 || EU.hasUnreliableAtIndex(jT, mT) || kT(this, TT, MT, mT, WT, UT, !1, !1, jT)
             }))
           }
         }
       }
-      _emitStreamPriority(pp) {
-        const ip = this.root.streamTrees;
-        if (0 === ip.size) return;
-        const cp = pp.id;
-        for (const Op of ip) {
-          const ip = Op,
-            Ip = ip._stream,
-            Sp = Ip.pendingByView.get(cp);
-          if (void 0 === Sp || 0 === Sp.size) continue;
-          const Lp = Ip.priorityByView?.get(cp),
-            Yp = void 0 !== Lp,
-            Dp = Ip.priority,
-            Ap = Ip.maxPerTick,
-            Wp = [],
-            yp = [];
-          if (Yp || void 0 !== Dp) {
-            const cp = [],
-              Op = [];
-            let op = 0;
-            for (const Ip of Sp) {
-              const Sp = ip[Pp](Ip);
-              if (void 0 === Sp) {
-                yp.push(Ip);
+      _emitStreamPriority(TT) {
+        const UT = this.root.streamTrees;
+        if (0 === UT.size) return;
+        const mT = TT.id;
+        for (const WT of UT) {
+          const UT = WT,
+            MT = UT._stream,
+            gT = MT.pendingByView.get(mT);
+          if (void 0 === gT || 0 === gT.size) continue;
+          const HT = MT.priorityByView?.get(mT),
+            kT = void 0 !== HT,
+            jT = MT.priority,
+            lT = MT.maxPerTick,
+            pT = [],
+            BT = [];
+          if (kT || void 0 !== jT) {
+            const mT = [],
+              WT = [];
+            let zT = 0;
+            for (const MT of gT) {
+              const gT = UT[LT](MT);
+              if (void 0 === gT) {
+                BT.push(MT);
                 continue
               }
-              const xp = Yp ? Lp(Sp) : Dp(pp, Sp);
-              if (op < Ap) {
-                let pp = op++;
-                for (; pp > 0 && Op[pp - 1] < xp;) Op[pp] = Op[pp - 1], cp[pp] = cp[pp - 1], pp--;
-                Op[pp] = xp, cp[pp] = Ip
-              } else if (xp > Op[Ap - 1]) {
-                let pp = Ap - 1;
-                for (; pp > 0 && Op[pp - 1] < xp;) Op[pp] = Op[pp - 1], cp[pp] = cp[pp - 1], pp--;
-                Op[pp] = xp, cp[pp] = Ip
+              const nT = kT ? HT(gT) : jT(TT, gT);
+              if (zT < lT) {
+                let TT = zT++;
+                for (; TT > 0 && WT[TT - 1] < nT;) WT[TT] = WT[TT - 1], mT[TT] = mT[TT - 1], TT--;
+                WT[TT] = nT, mT[TT] = MT
+              } else if (nT > WT[lT - 1]) {
+                let TT = lT - 1;
+                for (; TT > 0 && WT[TT - 1] < nT;) WT[TT] = WT[TT - 1], mT[TT] = mT[TT - 1], TT--;
+                WT[TT] = nT, mT[TT] = MT
               }
             }
-            for (let pp = 0; pp < op; pp++) Wp.push(cp[pp])
+            for (let TT = 0; TT < zT; TT++) pT.push(mT[TT])
           } else
-            for (const pp of Sp) {
-              if (Wp.length >= Ap) break;
-              Wp.push(pp)
+            for (const TT of gT) {
+              if (pT.length >= lT) break;
+              pT.push(TT)
             }
-          for (const pp of yp) Sp.delete(pp);
-          const wp = Wp.length;
-          let vp = Ip.sentByView.get(cp);
-          void 0 === vp && (vp = new Set, Ip.sentByView.set(cp, vp));
-          for (let cp = 0; cp < wp; cp++) {
-            const Op = Wp[cp],
-              Ip = ip[Pp](Op);
-            if (void 0 === Ip) {
-              Sp.delete(Op);
+          for (const TT of BT) gT.delete(TT);
+          const cT = pT.length;
+          let vT = MT.sentByView.get(mT);
+          void 0 === vT && (vT = new Set, MT.sentByView.set(mT, vT));
+          for (let mT = 0; mT < cT; mT++) {
+            const WT = pT[mT],
+              MT = UT[LT](WT);
+            if (void 0 === MT) {
+              gT.delete(WT);
               continue
             }
-            pp._addImmediate(Ip);
-            const Lp = Ip[Up];
-            if (void 0 !== Lp) {
-              const ip = Ip[xp];
-              let cp = pp.changes.get(ip);
-              void 0 === cp && (cp = new Map, pp.changes.set(ip, cp));
-              const Op = Lp.metadata;
-              Lp.forEachLive((pp => {
-                si.hasUnreliableAtIndex(Op, pp) || cp.set(pp, op.ADD)
+            TT._addImmediate(MT);
+            const HT = MT[ZT];
+            if (void 0 !== HT) {
+              const UT = MT[nT];
+              let mT = TT.changes.get(UT);
+              void 0 === mT && (mT = new Map, TT.changes.set(UT, mT));
+              const WT = HT.metadata;
+              HT.forEachLive((TT => {
+                EU.hasUnreliableAtIndex(WT, TT) || mT.set(TT, zT.ADD)
               }))
             }
-            Sp.delete(Op), vp.add(Op)
+            gT.delete(WT), vT.add(WT)
           }
         }
       }
       discardChanges() {
-        const pp = this.root.changes;
-        let ip = pp.next;
-        const cp = this.root;
-        for (; ip;) {
-          const pp = ip.next;
-          ip.changeTree.endEncode(), cp.releaseNode(ip), ip = pp
+        const TT = this.root.changes;
+        let UT = TT.next;
+        const mT = this.root;
+        for (; UT;) {
+          const TT = UT.next;
+          UT.changeTree.endEncode(), mT.releaseNode(UT), UT = TT
         }
-        pp.next = void 0, pp.tail = void 0
+        TT.next = void 0, TT.tail = void 0
       }
       discardUnreliableChanges() {
-        const pp = this.root.unreliableChanges;
-        let ip = pp.next;
-        const cp = this.root;
-        for (; ip;) {
-          const pp = ip.next;
-          ip.changeTree.endEncodeUnreliable(), cp.releaseNode(ip), ip = pp
+        const TT = this.root.unreliableChanges;
+        let UT = TT.next;
+        const mT = this.root;
+        for (; UT;) {
+          const TT = UT.next;
+          UT.changeTree.endEncodeUnreliable(), mT.releaseNode(UT), UT = TT
         }
-        pp.next = void 0, pp.tail = void 0
+        TT.next = void 0, TT.tail = void 0
       }
-      tryEncodeTypeId(pp, ip, cp, Op) {
-        const op = this.context.getTypeId(ip),
-          Ip = this.context.getTypeId(cp);
-        void 0 !== Ip ? op !== Ip && (pp[Op.offset++] = 213, Oi.number(pp, Ip, Op)) : console.warn(`@colyseus/schema WARNING: Class "${cp.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(TT, UT, mT, WT) {
+        const zT = this.context.getTypeId(UT),
+          MT = this.context.getTypeId(mT);
+        void 0 !== MT ? zT !== MT && (TT[WT.offset++] = 213, UU.number(TT, MT, WT)) : console.warn(`@colyseus/schema WARNING: Class "${mT.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const pp = this.root;
-        if (0 === pp.streamTrees.size) return !1;
-        const ip = 0 === pp.activeViews.size;
-        for (const cp of pp.streamTrees)
-          if (ip ? li(cp) : Xi(cp, pp)) return !0;
+        const TT = this.root;
+        if (0 === TT.streamTrees.size) return !1;
+        const UT = 0 === TT.activeViews.size;
+        for (const mT of TT.streamTrees)
+          if (UT ? aU(mT) : tU(mT, TT)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class rO extends Error {
-      constructor(pp) {
-        super(pp), this.name = "DecodingWarning"
+    class GW extends Error {
+      constructor(TT) {
+        super(TT), this.name = "DecodingWarning"
       }
     }
-    const ZO = {
+    const NW = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class zO {
+    class EW {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(pp, ip) {
-        let cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(pp, ip), void 0 === ip[xp] ? (ZO.value = pp, Object.defineProperty(ip, xp, ZO)) : ip[xp] !== pp && (ip[xp] = pp), cp && (this.refCount[pp] = (this.refCount[pp] || 0) + 1), this.deletedRefs.has(pp) && this.deletedRefs.delete(pp)
+      addRef(TT, UT) {
+        let mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(TT, UT), void 0 === UT[nT] ? (NW.value = TT, Object.defineProperty(UT, nT, NW)) : UT[nT] !== TT && (UT[nT] = TT), mT && (this.refCount[TT] = (this.refCount[TT] || 0) + 1), this.deletedRefs.has(TT) && this.deletedRefs.delete(TT)
       }
-      removeRef(pp) {
-        const ip = this.refCount[pp];
-        if (void 0 !== ip)
-          if (0 !== ip)(this.refCount[pp] = ip - 1) <= 0 && this.deletedRefs.add(pp);
+      removeRef(TT) {
+        const UT = this.refCount[TT];
+        if (void 0 !== UT)
+          if (0 !== UT)(this.refCount[TT] = UT - 1) <= 0 && this.deletedRefs.add(TT);
           else try {
-            const ip = this.refs.get(pp);
-            throw new rO(`trying to remove refId '${pp}' with 0 refCount (${ip.constructor.name}: ${JSON.stringify(ip)})`)
-          } catch (Lo) {
-            console.warn(Lo)
+            const UT = this.refs.get(TT);
+            throw new GW(`trying to remove refId '${TT}' with 0 refCount (${UT.constructor.name}: ${JSON.stringify(UT)})`)
+          } catch (gz) {
+            console.warn(gz)
           } else try {
-            throw new rO("trying to remove refId that doesn't exist: " + pp)
-          } catch (Lo) {
-            console.warn(Lo)
+            throw new GW("trying to remove refId that doesn't exist: " + TT)
+          } catch (gz) {
+            console.warn(gz)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((pp => {
-          if (this.refCount[pp] > 0) return;
-          const ip = this.refs.get(pp),
-            cp = ip.constructor[Symbol.metadata];
-          if (null != cp)
-            for (const Op in cp) {
-              const pp = ip[cp[Op].name];
-              if ("object" === typeof pp && pp) {
-                const ip = pp[xp];
-                void 0 === ip || this.deletedRefs.has(ip) || this.removeRef(ip)
+        this.deletedRefs.forEach((TT => {
+          if (this.refCount[TT] > 0) return;
+          const UT = this.refs.get(TT),
+            mT = UT.constructor[Symbol.metadata];
+          if (null != mT)
+            for (const WT in mT) {
+              const TT = UT[mT[WT].name];
+              if ("object" === typeof TT && TT) {
+                const UT = TT[nT];
+                void 0 === UT || this.deletedRefs.has(UT) || this.removeRef(UT)
               }
-            } else "function" === typeof ip[wp] && Array.from(ip.values()).forEach((pp => {
-              const ip = pp[xp];
-              void 0 === ip || this.deletedRefs.has(ip) || this.removeRef(ip)
+            } else "function" === typeof UT[cT] && Array.from(UT.values()).forEach((TT => {
+              const UT = TT[nT];
+              void 0 === UT || this.deletedRefs.has(UT) || this.removeRef(UT)
             }));
-          this.refs.delete(pp), delete this.refCount[pp], delete this.callbacks[pp]
+          this.refs.delete(TT), delete this.refCount[TT], delete this.callbacks[TT]
         })), this.deletedRefs.clear()
       }
-      addCallback(pp, ip, cp) {
-        if (void 0 === pp) {
-          const pp = "number" === typeof ip ? op[ip] : ip;
-          throw new Error(`Can't addCallback on '${pp}' (refId is undefined)`)
+      addCallback(TT, UT, mT) {
+        if (void 0 === TT) {
+          const TT = "number" === typeof UT ? zT[UT] : UT;
+          throw new Error(`Can't addCallback on '${TT}' (refId is undefined)`)
         }
-        return this.callbacks[pp] || (this.callbacks[pp] = {}), this.callbacks[pp][ip] || (this.callbacks[pp][ip] = []), this.callbacks[pp][ip].push(cp), () => this.removeCallback(pp, ip, cp)
+        return this.callbacks[TT] || (this.callbacks[TT] = {}), this.callbacks[TT][UT] || (this.callbacks[TT][UT] = []), this.callbacks[TT][UT].push(mT), () => this.removeCallback(TT, UT, mT)
       }
-      removeCallback(pp, ip, cp) {
-        const Op = this.callbacks?.[pp]?.[ip]?.indexOf(cp);
-        void 0 !== Op && -1 !== Op && JO(this.callbacks[pp][ip], Op)
+      removeCallback(TT, UT, mT) {
+        const WT = this.callbacks?.[TT]?.[UT]?.indexOf(mT);
+        void 0 !== WT && -1 !== WT && XW(this.callbacks[TT][UT], WT)
       }
     }
-    class sO {
+    class hW {
       context;
       state;
       root;
       currentRefId = 0;
-      ZE;
+      Gs;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(pp, ip) {
-        this.setState(pp), this.context = ip || new ni(pp.constructor)
+      constructor(TT, UT) {
+        this.setState(TT), this.context = UT || new uU(TT.constructor)
       }
-      setState(pp) {
-        this.state = pp, this.root = new zO, this.root.addRef(0, pp)
+      setState(TT) {
+        this.state = TT, this.root = new EW, this.root.addRef(0, TT)
       }
-      decode(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const op = void 0 !== this.ZE ? [] : null,
-          Ip = this.root,
-          Sp = pp.byteLength;
-        let xp = cp.constructor[Dp];
-        for (this.currentRefId = 0; ip.offset < Sp;) {
-          if (pp[ip.offset] == Op) {
-            ip.offset++, cp[dp]?.();
-            const Op = ei.number(pp, ip),
-              op = Ip.refs.get(Op);
-            op ? (cp = op, xp = cp.constructor[Dp], this.currentRefId = Op) : (console.error(`"refId" not found: ${Op}`, {
-              previousRef: cp,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const zT = void 0 !== this.Gs ? [] : null,
+          MT = this.root,
+          gT = TT.byteLength;
+        let nT = mT.constructor[jT];
+        for (this.currentRefId = 0; UT.offset < gT;) {
+          if (TT[UT.offset] == WT) {
+            UT.offset++, mT[iT]?.();
+            const WT = qU.number(TT, UT),
+              zT = MT.refs.get(WT);
+            zT ? (mT = zT, nT = mT.constructor[jT], this.currentRefId = WT) : (console.error(`"refId" not found: ${WT}`, {
+              previousRef: mT,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(pp, ip, Sp));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(TT, UT, gT));
             continue
-          } - 1 !== xp(this, pp, ip, cp, op) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(pp, ip, Sp))
+          } - 1 !== nT(this, TT, UT, mT, zT) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(TT, UT, gT))
         }
-        return cp[dp]?.(), null !== this.resyncVisited && function(pp, ip) {
-          pp.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : nc(pp, pp.state, new Set, ip)
-        }(this, op), null !== op && this.ZE?.(op), Ip.garbageCollectDeletedRefs(), op
+        return mT[iT]?.(), null !== this.resyncVisited && function(TT, UT) {
+          TT.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Cm(TT, TT.state, new Set, UT)
+        }(this, zT), null !== zT && this.Gs?.(zT), MT.garbageCollectDeletedRefs(), zT
       }
-      decodeResync(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(pp, ip)
+          return this.decode(TT, UT)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(pp, ip, cp) {
+      skipCurrentStructure(TT, UT, mT) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const op = {
-          offset: ip.offset
+        const zT = {
+          offset: UT.offset
         };
-        for (; ip.offset < cp && (pp[ip.offset] !== Op || (op.offset = ip.offset + 1, !this.root.refs.has(ei.number(pp, op))));) ip.offset++
+        for (; UT.offset < mT && (TT[UT.offset] !== WT || (zT.offset = UT.offset + 1, !this.root.refs.has(qU.number(TT, zT))));) UT.offset++
       }
-      getInstanceType(pp, ip, cp) {
-        let Op;
-        if (213 === pp[ip.offset]) {
-          ip.offset++;
-          const cp = ei.number(pp, ip);
-          Op = this.context.get(cp)
+      getInstanceType(TT, UT, mT) {
+        let WT;
+        if (213 === TT[UT.offset]) {
+          UT.offset++;
+          const mT = qU.number(TT, UT);
+          WT = this.context.get(mT)
         }
-        return Op || cp
+        return WT || mT
       }
-      createInstanceOfType(pp) {
-        return pp.initializeForDecoder()
+      createInstanceOfType(TT) {
+        return TT.initializeForDecoder()
       }
-      removeChildRefs(pp, ip) {
-        const cp = "string" !== typeof pp[wp],
-          Op = pp[xp];
-        pp.forEach(((Ip, Sp) => {
-          ip?.push({
-            ref: pp,
-            refId: Op,
-            op: op.DELETE,
-            field: Sp,
+      removeChildRefs(TT, UT) {
+        const mT = "string" !== typeof TT[cT],
+          WT = TT[nT];
+        TT.forEach(((MT, gT) => {
+          UT?.push({
+            ref: TT,
+            refId: WT,
+            op: zT.DELETE,
+            field: gT,
             value: void 0,
-            previousValue: Ip
-          }), cp && this.root.removeRef(Ip[xp])
+            previousValue: MT
+          }), mT && this.root.removeRef(MT[nT])
         }))
       }
     }
-    const KO = CO({
-        min: wO.float64(),
-        max: wO.float64(),
-        bits: wO.uint8(),
-        mode: wO.uint8()
+    const DW = dW({
+        min: BW.float64(),
+        max: BW.float64(),
+        bits: BW.uint8(),
+        mode: BW.uint8()
       }, "QuantizedDescriptor"),
-      VO = CO({
-        name: wO.string(),
-        type: wO.string(),
-        referencedType: wO.number(),
-        childPrimitive: wO.string(),
-        quantized: wO.ref(KO).optional()
+      oW = dW({
+        name: BW.string(),
+        type: BW.string(),
+        referencedType: BW.number(),
+        childPrimitive: BW.string(),
+        quantized: BW.ref(DW).optional()
       }, "ReflectionField"),
-      po = CO({
-        id: wO.number(),
-        extendsId: wO.number(),
-        fields: wO.array(VO)
+      AW = dW({
+        id: BW.number(),
+        extendsId: BW.number(),
+        fields: BW.array(oW)
       }, "ReflectionType"),
-      io = CO({
-        types: wO.array(po),
-        rootType: wO.number()
+      RW = dW({
+        types: BW.array(AW),
+        rootType: BW.number()
       }, "Reflection");
 
-    function co(pp) {
-      const ip = pp.root,
-        cp = ip.callbacks,
-        Op = new WeakMap;
-      let Ip;
+    function Tz(TT) {
+      const UT = TT.root,
+        mT = UT.callbacks,
+        WT = new WeakMap;
+      let MT;
 
-      function Sp(pp, cp) {
-        let Yp = cp.instance?.constructor[Symbol.metadata] || pp,
-          Dp = cp.instance && "function" === typeof cp.instance.forEach || pp && !XO.is(pp);
-        if (Yp && !Dp) {
-          const pp = function(pp, op, Sp, Lp) {
-            return Lp && void 0 !== cp.instance[op] && !Op.has(Ip) && Sp(cp.instance[op], void 0), ip.addCallback(pp[xp], op, Sp)
+      function gT(TT, mT) {
+        let kT = mT.instance?.constructor[Symbol.metadata] || TT,
+          jT = mT.instance && "function" === typeof mT.instance.forEach || TT && !tW.is(TT);
+        if (kT && !jT) {
+          const TT = function(TT, zT, gT, HT) {
+            return HT && void 0 !== mT.instance[zT] && !WT.has(MT) && gT(mT.instance[zT], void 0), UT.addCallback(TT[nT], zT, gT)
           };
           return new Proxy({
-            listen: function(ip, op) {
-              let Sp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (cp.instance) return pp(cp.instance, ip, op, Sp);
+            listen: function(UT, zT) {
+              let gT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (mT.instance) return TT(mT.instance, UT, zT, gT);
               {
-                let xp = () => {};
-                return cp.onInstanceAvailable(((cp, Lp) => {
-                  xp = pp(cp, ip, op, Sp && Lp && !Op.has(Ip))
-                })), () => xp()
+                let nT = () => {};
+                return mT.onInstanceAvailable(((mT, HT) => {
+                  nT = TT(mT, UT, zT, gT && HT && !WT.has(MT))
+                })), () => nT()
               }
             },
-            onChange: function(pp) {
-              return ip.addCallback(cp.instance[xp], op.REPLACE, pp)
+            onChange: function(TT) {
+              return UT.addCallback(mT.instance[nT], zT.REPLACE, TT)
             },
-            bindTo: function(pp, Op) {
-              return Op || (Op = Object.keys(Yp).map((pp => Yp[pp].name))), ip.addCallback(cp.instance[xp], op.REPLACE, (() => {
-                Op.forEach((ip => pp[ip] = cp.instance[ip]))
+            bindTo: function(TT, WT) {
+              return WT || (WT = Object.keys(kT).map((TT => kT[TT].name))), UT.addCallback(mT.instance[nT], zT.REPLACE, (() => {
+                WT.forEach((UT => TT[UT] = mT.instance[UT]))
               }))
             }
           }, {
-            get(pp, ip) {
-              const Op = Yp[Yp[ip]];
-              if (Op) {
-                const pp = cp.instance?.[ip],
-                  op = Op => {
-                    const op = Lp(cp.instance).listen(ip, ((pp, ip) => {
-                      Op(pp, !1), op?.()
+            get(TT, UT) {
+              const WT = kT[kT[UT]];
+              if (WT) {
+                const TT = mT.instance?.[UT],
+                  zT = WT => {
+                    const zT = HT(mT.instance).listen(UT, ((TT, UT) => {
+                      WT(TT, !1), zT?.()
                     }), !1);
-                    void 0 !== pp?.[xp] && Op(pp, !0)
+                    void 0 !== TT?.[nT] && WT(TT, !0)
                   };
-                return Sp(Op.type, {
-                  instance: void 0 !== pp?.[xp] && pp,
-                  parentInstance: cp.instance,
-                  onInstanceAvailable: op
+                return gT(WT.type, {
+                  instance: void 0 !== TT?.[nT] && TT,
+                  parentInstance: mT.instance,
+                  onInstanceAvailable: zT
                 })
               }
-              return pp[ip]
+              return TT[UT]
             },
-            has: (pp, ip) => void 0 !== Yp[ip],
-            set(pp, ip, cp) {
+            has: (TT, UT) => void 0 !== kT[UT],
+            set(TT, UT, mT) {
               throw new Error("not allowed")
             },
-            deleteProperty(pp, ip) {
+            deleteProperty(TT, UT) {
               throw new Error("not allowed")
             }
           })
         } {
-          const pp = function(pp, cp, Sp) {
-              return Sp && pp.forEach(((pp, ip) => cp(pp, ip))), ip.addCallback(pp[xp], op.ADD, ((pp, ip) => {
-                Op.set(cp, !0), Ip = cp, cp(pp, ip), Op.delete(cp), Ip = void 0
+          const TT = function(TT, mT, gT) {
+              return gT && TT.forEach(((TT, UT) => mT(TT, UT))), UT.addCallback(TT[nT], zT.ADD, ((TT, UT) => {
+                WT.set(mT, !0), MT = mT, mT(TT, UT), WT.delete(mT), MT = void 0
               }))
             },
-            Sp = function(pp, cp) {
-              return ip.addCallback(pp[xp], op.DELETE, cp)
+            gT = function(TT, mT) {
+              return UT.addCallback(TT[nT], zT.DELETE, mT)
             },
-            Lp = function(pp, cp) {
-              return ip.addCallback(pp[xp], op.REPLACE, cp)
+            HT = function(TT, mT) {
+              return UT.addCallback(TT[nT], zT.REPLACE, mT)
             };
           return new Proxy({
-            Lk: function(ip) {
-              let op = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (cp.instance) return pp(cp.instance, ip, op && !Op.has(Ip));
-              if (cp.onInstanceAvailable) {
-                let Sp = () => {};
-                return cp.onInstanceAvailable(((cp, xp) => {
-                  Sp = pp(cp, ip, op && xp && !Op.has(Ip))
-                })), () => Sp()
+            lY: function(UT) {
+              let zT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (mT.instance) return TT(mT.instance, UT, zT && !WT.has(MT));
+              if (mT.onInstanceAvailable) {
+                let gT = () => {};
+                return mT.onInstanceAvailable(((mT, nT) => {
+                  gT = TT(mT, UT, zT && nT && !WT.has(MT))
+                })), () => gT()
               }
             },
-            uE: function(pp) {
-              if (cp.instance) return Sp(cp.instance, pp);
-              if (cp.onInstanceAvailable) {
-                let ip = () => {};
-                return cp.onInstanceAvailable((cp => {
-                  ip = Sp(cp, pp)
-                })), () => ip()
+            yI: function(TT) {
+              if (mT.instance) return gT(mT.instance, TT);
+              if (mT.onInstanceAvailable) {
+                let UT = () => {};
+                return mT.onInstanceAvailable((mT => {
+                  UT = gT(mT, TT)
+                })), () => UT()
               }
             },
-            onChange: function(pp) {
-              if (cp.instance) return Lp(cp.instance, pp);
-              if (cp.onInstanceAvailable) {
-                let ip = () => {};
-                return cp.onInstanceAvailable((cp => {
-                  ip = Lp(cp, pp)
-                })), () => ip()
+            onChange: function(TT) {
+              if (mT.instance) return HT(mT.instance, TT);
+              if (mT.onInstanceAvailable) {
+                let UT = () => {};
+                return mT.onInstanceAvailable((mT => {
+                  UT = HT(mT, TT)
+                })), () => UT()
               }
             }
           }, {
-            get(pp, ip) {
-              if (!pp[ip]) throw new Error(`Can't access '${ip}' through callback proxy. access the instance directly.`);
-              return pp[ip]
+            get(TT, UT) {
+              if (!TT[UT]) throw new Error(`Can't access '${UT}' through callback proxy. access the instance directly.`);
+              return TT[UT]
             },
-            has: (pp, ip) => void 0 !== pp[ip],
-            set(pp, ip, cp) {
+            has: (TT, UT) => void 0 !== TT[UT],
+            set(TT, UT, mT) {
               throw new Error("not allowed")
             },
-            deleteProperty(pp, ip) {
+            deleteProperty(TT, UT) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function Lp(pp) {
-        return Sp(void 0, {
-          instance: pp
+      function HT(TT) {
+        return gT(void 0, {
+          instance: TT
         })
       }
-      return pp.ZE = function(pp) {
-        const ip = new Set;
-        for (let Op = 0, Ip = pp.length; Op < Ip; Op++) {
-          const Ip = pp[Op],
-            Sp = Ip.refId,
-            Lp = Ip.ref,
-            Yp = cp[Sp];
-          if (Yp) {
-            if ((Ip.op & op.DELETE) === op.DELETE && XO.isSchema(Ip.previousValue)) {
-              const pp = cp[Ip.previousValue[xp]]?.[op.DELETE];
-              for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip]()
+      return TT.Gs = function(TT) {
+        const UT = new Set;
+        for (let WT = 0, MT = TT.length; WT < MT; WT++) {
+          const MT = TT[WT],
+            gT = MT.refId,
+            HT = MT.ref,
+            kT = mT[gT];
+          if (kT) {
+            if ((MT.op & zT.DELETE) === zT.DELETE && tW.isSchema(MT.previousValue)) {
+              const TT = mT[MT.previousValue[nT]]?.[zT.DELETE];
+              for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT]()
             }
-            if (XO.isSchema(Lp)) {
-              if (!ip.has(Sp)) {
-                const pp = Yp?.[op.REPLACE];
-                for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip]()
+            if (tW.isSchema(HT)) {
+              if (!UT.has(gT)) {
+                const TT = kT?.[zT.REPLACE];
+                for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT]()
               }
-              if (Yp.hasOwnProperty(Ip.field)) {
-                const pp = Yp[Ip.field];
-                for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip](Ip.value, Ip.previousValue)
+              if (kT.hasOwnProperty(MT.field)) {
+                const TT = kT[MT.field];
+                for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT](MT.value, MT.previousValue)
               }
             } else {
-              if ((Ip.op & op.DELETE) === op.DELETE) {
-                if (void 0 !== Ip.previousValue) {
-                  const pp = Yp[op.DELETE];
-                  for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip](Ip.previousValue, Ip.dynamicIndex ?? Ip.field)
+              if ((MT.op & zT.DELETE) === zT.DELETE) {
+                if (void 0 !== MT.previousValue) {
+                  const TT = kT[zT.DELETE];
+                  for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT](MT.previousValue, MT.dynamicIndex ?? MT.field)
                 }
-                if ((Ip.op & op.ADD) === op.ADD) {
-                  const pp = Yp[op.ADD];
-                  for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip](Ip.value, Ip.dynamicIndex ?? Ip.field)
+                if ((MT.op & zT.ADD) === zT.ADD) {
+                  const TT = kT[zT.ADD];
+                  for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT](MT.value, MT.dynamicIndex ?? MT.field)
                 }
-              } else if ((Ip.op & op.ADD) === op.ADD && Ip.previousValue !== Ip.value) {
-                const pp = Yp[op.ADD];
-                for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip](Ip.value, Ip.dynamicIndex ?? Ip.field)
+              } else if ((MT.op & zT.ADD) === zT.ADD && MT.previousValue !== MT.value) {
+                const TT = kT[zT.ADD];
+                for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT](MT.value, MT.dynamicIndex ?? MT.field)
               }
-              if (Ip.value !== Ip.previousValue && (void 0 !== Ip.value || void 0 !== Ip.previousValue)) {
-                const pp = Yp[op.REPLACE];
-                for (let ip = pp?.length - 1; ip >= 0; ip--) pp[ip](Ip.value, Ip.dynamicIndex ?? Ip.field)
+              if (MT.value !== MT.previousValue && (void 0 !== MT.value || void 0 !== MT.previousValue)) {
+                const TT = kT[zT.REPLACE];
+                for (let UT = TT?.length - 1; UT >= 0; UT--) TT[UT](MT.value, MT.dynamicIndex ?? MT.field)
               }
             }
-            ip.add(Sp)
+            UT.add(gT)
           }
         }
-      }, Lp
+      }, HT
     }
 
-    function Oo(pp, ip) {
-      pp.ZE = ip
+    function Uz(TT, UT) {
+      TT.Gs = UT
     }
-    io.encode = function(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    RW.encode = function(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const cp = pp.context,
-        Op = new io,
-        op = new GO(Op),
-        Ip = cp.schemas.get(pp.state.constructor);
-      Ip > 0 && (Op.rootType = Ip);
-      const Sp = new Set,
-        xp = {},
-        Lp = pp => {
-          if (void 0 === pp.extendsId || Sp.has(pp.extendsId)) {
-            Sp.add(pp.id), Op.types.push(pp);
-            const ip = xp[pp.id];
-            void 0 !== ip && (delete xp[pp.id], ip.forEach((pp => Lp(pp))))
-          } else void 0 === xp[pp.extendsId] && (xp[pp.extendsId] = []), xp[pp.extendsId].push(pp)
+      const mT = TT.context,
+        WT = new RW,
+        zT = new SW(WT),
+        MT = mT.schemas.get(TT.state.constructor);
+      MT > 0 && (WT.rootType = MT);
+      const gT = new Set,
+        nT = {},
+        HT = TT => {
+          if (void 0 === TT.extendsId || gT.has(TT.extendsId)) {
+            gT.add(TT.id), WT.types.push(TT);
+            const UT = nT[TT.id];
+            void 0 !== UT && (delete nT[TT.id], UT.forEach((TT => HT(TT))))
+          } else void 0 === nT[TT.extendsId] && (nT[TT.extendsId] = []), nT[TT.extendsId].push(TT)
         };
-      cp.schemas.forEach(((pp, ip) => {
-        const Op = new po;
-        Op.id = Number(pp);
-        const op = Object.getPrototypeOf(ip);
-        op !== XO && (Op.extendsId = cp.schemas.get(op));
-        const Ip = ip[Symbol.metadata];
-        if (Ip !== op[Symbol.metadata]) {
-          const pp = Ip[qp] ?? -1;
-          for (let ip = 0; ip <= pp; ip++) {
-            const pp = Ip[ip];
-            if (void 0 === pp) continue;
-            const op = pp.name;
-            if (!Object.prototype.hasOwnProperty.call(Ip, op)) continue;
-            const Sp = new VO;
-            let xp;
-            if (Sp.name = op, "string" === typeof pp.type) xp = pp.type;
-            else if (Ti(pp.type)) {
-              const ip = pp.type.quantized;
-              xp = "quantized";
-              const cp = new KO;
-              cp.min = ip.min, cp.max = ip.max, cp.bits = ip.bits, cp.mode = ip.wrap ? 1 : 0, Sp.quantized = cp
+      mT.schemas.forEach(((TT, UT) => {
+        const WT = new AW;
+        WT.id = Number(TT);
+        const zT = Object.getPrototypeOf(UT);
+        zT !== tW && (WT.extendsId = mT.schemas.get(zT));
+        const MT = UT[Symbol.metadata];
+        if (MT !== zT[Symbol.metadata]) {
+          const TT = MT[xT] ?? -1;
+          for (let UT = 0; UT <= TT; UT++) {
+            const TT = MT[UT];
+            if (void 0 === TT) continue;
+            const zT = TT.name;
+            if (!Object.prototype.hasOwnProperty.call(MT, zT)) continue;
+            const gT = new oW;
+            let nT;
+            if (gT.name = zT, "string" === typeof TT.type) nT = TT.type;
+            else if (sU(TT.type)) {
+              const UT = TT.type.quantized;
+              nT = "quantized";
+              const mT = new DW;
+              mT.min = UT.min, mT.max = UT.max, mT.bits = UT.bits, mT.mode = UT.wrap ? 1 : 0, gT.quantized = mT
             } else {
-              let ip;
-              XO.is(pp.type) ? (xp = "ref", ip = pp.type) : (xp = Object.keys(pp.type)[0], "string" === typeof pp.type[xp] ? Sp.childPrimitive = pp.type[xp] : ip = pp.type[xp]), Sp.referencedType = ip ? cp.getTypeId(ip) : -1
+              let UT;
+              tW.is(TT.type) ? (nT = "ref", UT = TT.type) : (nT = Object.keys(TT.type)[0], "string" === typeof TT.type[nT] ? gT.childPrimitive = TT.type[nT] : UT = TT.type[nT]), gT.referencedType = UT ? mT.getTypeId(UT) : -1
             }
-            Sp.type = xp, Op.fields.push(Sp)
+            gT.type = nT, WT.fields.push(gT)
           }
         }
-        Lp(Op)
+        HT(WT)
       }));
-      for (const Yp in xp) xp[Yp].forEach((pp => Op.types.push(pp)));
-      return op.encodeAll(ip).slice(0, ip.offset)
-    }, io.decode = function(pp, ip) {
-      const cp = new io;
-      new sO(cp).decode(pp, ip);
-      const Op = new ni;
-      cp.types.forEach((pp => {
-        const ip = Op.get(pp.extendsId) ?? XO,
-          cp = class extends ip {};
-        ni.register(cp), Op.add(cp, pp.id)
+      for (const kT in nT) nT[kT].forEach((TT => WT.types.push(TT)));
+      return zT.encodeAll(UT).slice(0, UT.offset)
+    }, RW.decode = function(TT, UT) {
+      const mT = new RW;
+      new hW(mT).decode(TT, UT);
+      const WT = new uU;
+      mT.types.forEach((TT => {
+        const UT = WT.get(TT.extendsId) ?? tW,
+          mT = class extends UT {};
+        uU.register(mT), WT.add(mT, TT.id)
       }), {});
-      cp.types.forEach((pp => {
-        const ip = Op.get(pp.id),
-          op = si.initialize(ip),
-          Ip = [];
-        let Sp = pp;
+      mT.types.forEach((TT => {
+        const UT = WT.get(TT.id),
+          zT = EU.initialize(UT),
+          MT = [];
+        let gT = TT;
         do {
-          Ip.push(Sp), Sp = cp.types.find((pp => pp.id === Sp.extendsId))
-        } while (Sp);
-        let xp = 0;
-        Ip.reverse().forEach((pp => {
-          ((pp, ip, cp) => {
-            ip.fields.forEach(((ip, op) => {
-              const Ip = cp + op;
-              if (void 0 !== ip.quantized) {
-                const cp = ip.quantized;
-                si.addField(pp, Ip, ip.name, {
-                  quantized: Ni({
-                    min: cp.min,
-                    max: cp.max,
-                    bits: cp.bits,
-                    mode: 1 === cp.mode ? "wrap" : "clamp"
+          MT.push(gT), gT = mT.types.find((TT => TT.id === gT.extendsId))
+        } while (gT);
+        let nT = 0;
+        MT.reverse().forEach((TT => {
+          ((TT, UT, mT) => {
+            UT.fields.forEach(((UT, zT) => {
+              const MT = mT + zT;
+              if (void 0 !== UT.quantized) {
+                const mT = UT.quantized;
+                EU.addField(TT, MT, UT.name, {
+                  quantized: QU({
+                    min: mT.min,
+                    max: mT.max,
+                    bits: mT.bits,
+                    mode: 1 === mT.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== ip.referencedType) {
-                const cp = ip.type,
-                  op = Op.get(ip.referencedType) ?? ip.childPrimitive;
-                "ref" === cp ? si.addField(pp, Ip, ip.name, op) : si.addField(pp, Ip, ip.name, {
-                  [cp]: op
+              } else if (void 0 !== UT.referencedType) {
+                const mT = UT.type,
+                  zT = WT.get(UT.referencedType) ?? UT.childPrimitive;
+                "ref" === mT ? EU.addField(TT, MT, UT.name, zT) : EU.addField(TT, MT, UT.name, {
+                  [mT]: zT
                 })
-              } else si.addField(pp, Ip, ip.name, ip.type)
+              } else EU.addField(TT, MT, UT.name, UT.type)
             }))
-          })(op, pp, xp), xp += pp.fields.length
+          })(zT, TT, nT), nT += TT.fields.length
         }))
       }));
-      const op = new(Op.get(cp.rootType || 0));
-      return new sO(op, Op)
-    }, io.makeEncodable = function(pp) {
-      const ip = pp[Symbol.metadata];
-      if (!ip) return pp;
-      const cp = ip[qp];
-      if (void 0 === cp) return pp;
-      for (let Op = 0; Op <= cp; Op++) {
-        const cp = ip[Op];
-        cp && si.defineField(pp, ip, Op, cp.name, cp.type)
+      const zT = new(WT.get(mT.rootType || 0));
+      return new hW(zT, WT)
+    }, RW.makeEncodable = function(TT) {
+      const UT = TT[Symbol.metadata];
+      if (!UT) return TT;
+      const mT = UT[xT];
+      if (void 0 === mT) return TT;
+      for (let WT = 0; WT <= mT; WT++) {
+        const mT = UT[WT];
+        mT && EU.defineField(TT, UT, WT, mT.name, mT.type)
       }
-      return Object.prototype.hasOwnProperty.call(pp, mp) && delete pp[mp], pp
+      return Object.prototype.hasOwnProperty.call(TT, YT) && delete TT[YT], TT
     };
-    class oo {
-      Wy;
+    class mz {
+      Dp;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(pp) {
-        this.Wy = pp, this.Wy.ZE = this.ZE.bind(this)
+      constructor(TT) {
+        this.Dp = TT, this.Dp.Gs = this.Gs.bind(this)
       }
       get callbacks() {
-        return this.Wy.root.callbacks
+        return this.Dp.root.callbacks
       }
       get state() {
-        return this.Wy.state
+        return this.Dp.state
       }
-      addCallback(pp, ip, cp) {
-        return this.Wy.root.addCallback(pp, ip, cp)
+      addCallback(TT, UT, mT) {
+        return this.Dp.root.addCallback(TT, UT, mT)
       }
-      addCallbackOrWaitCollectionAvailable(pp, ip, cp, Op) {
-        let Ip = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Sp = () => {};
-        const Lp = () => Sp(),
-          Yp = pp[ip];
-        if (Yp && void 0 !== Yp[xp]) return Ip = Ip && !1 === this.isTriggering, cp === op.ADD && Ip && Yp.forEach(((pp, ip) => {
-          Op(pp, ip)
-        })), this.addCallback(Yp[xp], cp, Op);
+      addCallbackOrWaitCollectionAvailable(TT, UT, mT, WT) {
+        let MT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          gT = () => {};
+        const HT = () => gT(),
+          kT = TT[UT];
+        if (kT && void 0 !== kT[nT]) return MT = MT && !1 === this.isTriggering, mT === zT.ADD && MT && kT.forEach(((TT, UT) => {
+          WT(TT, UT)
+        })), this.addCallback(kT[nT], mT, WT);
         {
-          let op;
-          return op = this.addCallback(pp[xp], ip, ((pp, ip) => {
-            null !== pp && void 0 !== pp && (op(), Sp = this.addCallback(pp[xp], cp, Op))
-          })), Sp = op, Lp
+          let zT;
+          return zT = this.addCallback(TT[nT], UT, ((TT, UT) => {
+            null !== TT && void 0 !== TT && (zT(), gT = this.addCallback(TT[nT], mT, WT))
+          })), gT = zT, HT
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(pp, ip, cp) {
-        let Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Op = Op && !1 === this.isTriggering;
-        const op = pp[ip];
-        return Op && null !== op && void 0 !== op && cp(op, void 0), this.addCallback(pp[xp], ip, cp)
+      listenInstance(TT, UT, mT) {
+        let WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        WT = WT && !1 === this.isTriggering;
+        const zT = TT[UT];
+        return WT && null !== zT && void 0 !== zT && mT(zT, void 0), this.addCallback(TT[nT], UT, mT)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const pp = arguments.length <= 0 ? void 0 : arguments[0],
-            ip = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(pp[xp], op.REPLACE, ip)
+          const TT = arguments.length <= 0 ? void 0 : arguments[0],
+            UT = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(TT[nT], zT.REPLACE, UT)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], op.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], op.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], zT.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], zT.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      Lk() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], op.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], op.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      lY() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], zT.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], zT.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      uE() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], op.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], op.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      yI() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], zT.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], zT.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(pp, ip, cp) {
-        let Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Ip = pp.constructor[Symbol.metadata];
-        cp || (cp = Object.keys(Ip).filter((pp => !isNaN(Number(pp)))).map((pp => Ip[pp].name)));
-        const Sp = () => {
-          for (const Op of cp) {
-            const cp = pp[Op];
-            void 0 !== cp && (ip[Op] = cp)
+      bindTo(TT, UT, mT) {
+        let WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const MT = TT.constructor[Symbol.metadata];
+        mT || (mT = Object.keys(MT).filter((TT => !isNaN(Number(TT)))).map((TT => MT[TT].name)));
+        const gT = () => {
+          for (const WT of mT) {
+            const mT = TT[WT];
+            void 0 !== mT && (UT[WT] = mT)
           }
         };
-        return Op && Sp(), this.addCallback(pp[xp], op.REPLACE, Sp)
+        return WT && gT(), this.addCallback(TT[nT], zT.REPLACE, gT)
       }
-      ZE(pp) {
+      Gs(TT) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let ip = 0, cp = pp.length; ip < cp; ip++) {
-          const cp = pp[ip],
-            Op = cp.refId,
-            Ip = cp.ref,
-            Sp = this.callbacks[Op];
-          if (Sp) {
-            if ((cp.op & op.DELETE) === op.DELETE && XO.isSchema(cp.previousValue)) {
-              const pp = cp.previousValue[xp],
-                ip = this.callbacks[pp]?.[op.DELETE];
-              if (ip)
-                for (let cp = ip.length - 1; cp >= 0; cp--) try {
-                  ip[cp]()
-                } catch (Lo) {
-                  console.error(Lo)
+        for (let UT = 0, mT = TT.length; UT < mT; UT++) {
+          const mT = TT[UT],
+            WT = mT.refId,
+            MT = mT.ref,
+            gT = this.callbacks[WT];
+          if (gT) {
+            if ((mT.op & zT.DELETE) === zT.DELETE && tW.isSchema(mT.previousValue)) {
+              const TT = mT.previousValue[nT],
+                UT = this.callbacks[TT]?.[zT.DELETE];
+              if (UT)
+                for (let mT = UT.length - 1; mT >= 0; mT--) try {
+                  UT[mT]()
+                } catch (gz) {
+                  console.error(gz)
                 }
             }
-            if (XO.isSchema(Ip)) {
-              if (!this.uniqueRefIds.has(Op)) {
-                const pp = Sp[op.REPLACE];
-                if (pp)
-                  for (let ip = pp.length - 1; ip >= 0; ip--) try {
-                    pp[ip]()
-                  } catch (Lo) {
-                    console.error(Lo)
+            if (tW.isSchema(MT)) {
+              if (!this.uniqueRefIds.has(WT)) {
+                const TT = gT[zT.REPLACE];
+                if (TT)
+                  for (let UT = TT.length - 1; UT >= 0; UT--) try {
+                    TT[UT]()
+                  } catch (gz) {
+                    console.error(gz)
                   }
               }
-              const pp = Sp[cp.field];
-              if (pp)
-                for (let ip = pp.length - 1; ip >= 0; ip--) try {
-                  pp[ip](cp.value, cp.previousValue)
-                } catch (Lo) {
-                  console.error(Lo)
+              const TT = gT[mT.field];
+              if (TT)
+                for (let UT = TT.length - 1; UT >= 0; UT--) try {
+                  TT[UT](mT.value, mT.previousValue)
+                } catch (gz) {
+                  console.error(gz)
                 }
             } else {
-              const pp = cp.dynamicIndex ?? cp.field;
-              if ((cp.op & op.DELETE) === op.DELETE) {
-                if (void 0 !== cp.previousValue) {
-                  const ip = Sp[op.DELETE];
-                  if (ip)
-                    for (let Op = ip.length - 1; Op >= 0; Op--) try {
-                      ip[Op](cp.previousValue, pp)
-                    } catch (Lo) {
-                      console.error(Lo)
+              const TT = mT.dynamicIndex ?? mT.field;
+              if ((mT.op & zT.DELETE) === zT.DELETE) {
+                if (void 0 !== mT.previousValue) {
+                  const UT = gT[zT.DELETE];
+                  if (UT)
+                    for (let WT = UT.length - 1; WT >= 0; WT--) try {
+                      UT[WT](mT.previousValue, TT)
+                    } catch (gz) {
+                      console.error(gz)
                     }
                 }
-                if ((cp.op & op.ADD) === op.ADD) {
-                  const ip = Sp[op.ADD];
-                  if (ip)
-                    for (let Op = ip.length - 1; Op >= 0; Op--) try {
-                      ip[Op](cp.value, pp)
-                    } catch (Lo) {
-                      console.error(Lo)
+                if ((mT.op & zT.ADD) === zT.ADD) {
+                  const UT = gT[zT.ADD];
+                  if (UT)
+                    for (let WT = UT.length - 1; WT >= 0; WT--) try {
+                      UT[WT](mT.value, TT)
+                    } catch (gz) {
+                      console.error(gz)
                     }
                 }
-              } else if ((cp.op & op.ADD) === op.ADD && cp.previousValue !== cp.value) {
-                const ip = Sp[op.ADD];
-                if (ip)
-                  for (let Op = ip.length - 1; Op >= 0; Op--) try {
-                    ip[Op](cp.value, pp)
-                  } catch (Lo) {
-                    console.error(Lo)
+              } else if ((mT.op & zT.ADD) === zT.ADD && mT.previousValue !== mT.value) {
+                const UT = gT[zT.ADD];
+                if (UT)
+                  for (let WT = UT.length - 1; WT >= 0; WT--) try {
+                    UT[WT](mT.value, TT)
+                  } catch (gz) {
+                    console.error(gz)
                   }
               }
-              if (cp.value !== cp.previousValue) {
-                const ip = Sp[op.REPLACE];
-                if (ip)
-                  for (let Op = ip.length - 1; Op >= 0; Op--) try {
-                    ip[Op](pp, cp.value)
-                  } catch (Lo) {
-                    console.error(Lo)
+              if (mT.value !== mT.previousValue) {
+                const UT = gT[zT.REPLACE];
+                if (UT)
+                  for (let WT = UT.length - 1; WT >= 0; WT--) try {
+                    UT[WT](TT, mT.value)
+                  } catch (gz) {
+                    console.error(gz)
                   }
               }
             }
-            this.uniqueRefIds.add(Op)
+            this.uniqueRefIds.add(WT)
           }
         }
         this.isTriggering = !1
       }
     }
-    const Io = {
-      get(pp) {
-        if (pp instanceof sO) return new oo(pp);
-        if ("Wy" in pp.DH) return new oo(pp.DH.Wy);
+    const Wz = {
+      get(TT) {
+        if (TT instanceof hW) return new mz(TT);
+        if ("Dp" in TT.bq) return new mz(TT.bq.Dp);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(pp) {
-        if (pp instanceof sO) return co(pp);
-        if ("Wy" in pp.DH) return co(pp.DH.Wy);
+      getLegacy(TT) {
+        if (TT instanceof hW) return Tz(TT);
+        if ("Dp" in TT.bq) return Tz(TT.bq.Dp);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (pp, ip) => Oo(pp, ip)
+      getRawChanges: (TT, UT) => Uz(TT, UT)
     };
-    class So {
+    class zz {
       _free = [];
       _factory;
       _maxSize;
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = pp, this._maxSize = ip.maxSize ?? 1 / 0;
-        const cp = ip.preallocate ?? 0;
-        for (let Op = 0; Op < cp; Op++) this._free.push(pp())
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = TT, this._maxSize = UT.maxSize ?? 1 / 0;
+        const mT = UT.preallocate ?? 0;
+        for (let WT = 0; WT < mT; WT++) this._free.push(TT())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(pp) {
-        XO.reset(pp), this._free.length < this._maxSize && this._free.push(pp)
+      release(TT) {
+        tW.reset(TT), this._free.length < this._maxSize && this._free.push(TT)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function xo(pp) {
-      return new So((() => new pp), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function Mz(TT) {
+      return new zz((() => new TT), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    ki("map", {
-      constructor: xO
-    }), ki("array", {
-      constructor: IO
-    }), ki("set", {
-      constructor: YO
-    }), ki("collection", {
-      constructor: LO
+    OU("map", {
+      constructor: MW
+    }), OU("array", {
+      constructor: WW
+    }), OU("set", {
+      constructor: nW
+    }), OU("collection", {
+      constructor: gW
     })
   },
-  9230: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      __addDisposableResource: () => Np,
-      __assign: () => Ip,
-      __asyncDelegator: () => Rp,
-      __asyncGenerator: () => mp,
-      __asyncValues: () => qp,
-      __await: () => kp,
-      __awaiter: () => yp,
-      __classPrivateFieldGet: () => Qp,
-      __classPrivateFieldIn: () => Bp,
-      __classPrivateFieldSet: () => Jp,
-      __createBinding: () => wp,
-      __decorate: () => xp,
-      __disposeResources: () => fp,
-      __esDecorate: () => Yp,
-      __exportStar: () => vp,
-      __extends: () => op,
-      __generator: () => Up,
-      __importDefault: () => lp,
-      __importStar: () => Xp,
-      __makeTemplateObject: () => Mp,
-      __metadata: () => Wp,
-      __param: () => Lp,
-      __propKey: () => Ap,
-      __read: () => Hp,
-      __rest: () => Sp,
-      __rewriteRelativeImportExtension: () => bp,
-      __runInitializers: () => Dp,
-      __setFunctionName: () => Pp,
-      __spread: () => dp,
-      __spreadArray: () => jp,
-      __spreadArrays: () => ep,
-      __values: () => tp,
-      default: () => hp
+  9217: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      __addDisposableResource: () => sT,
+      __assign: () => MT,
+      __asyncDelegator: () => JT,
+      __asyncGenerator: () => YT,
+      __asyncValues: () => xT,
+      __await: () => eT,
+      __awaiter: () => BT,
+      __classPrivateFieldGet: () => XT,
+      __classPrivateFieldIn: () => QT,
+      __classPrivateFieldSet: () => IT,
+      __createBinding: () => cT,
+      __decorate: () => nT,
+      __disposeResources: () => PT,
+      __esDecorate: () => kT,
+      __exportStar: () => vT,
+      __extends: () => zT,
+      __generator: () => ZT,
+      __importDefault: () => yT,
+      __importStar: () => aT,
+      __makeTemplateObject: () => dT,
+      __metadata: () => pT,
+      __param: () => HT,
+      __propKey: () => lT,
+      __read: () => qT,
+      __rest: () => gT,
+      __rewriteRelativeImportExtension: () => VT,
+      __runInitializers: () => jT,
+      __setFunctionName: () => LT,
+      __spread: () => iT,
+      __spreadArray: () => OT,
+      __spreadArrays: () => bT,
+      __values: () => fT,
+      default: () => uT
     });
-    var Op = function(pp, ip) {
-      return Op = Object.setPrototypeOf || {
+    var WT = function(TT, UT) {
+      return WT = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(pp, ip) {
-        pp.__proto__ = ip
-      } || function(pp, ip) {
-        for (var cp in ip) Object.prototype.hasOwnProperty.call(ip, cp) && (pp[cp] = ip[cp])
-      }, Op(pp, ip)
+      instanceof Array && function(TT, UT) {
+        TT.__proto__ = UT
+      } || function(TT, UT) {
+        for (var mT in UT) Object.prototype.hasOwnProperty.call(UT, mT) && (TT[mT] = UT[mT])
+      }, WT(TT, UT)
     };
 
-    function op(pp, ip) {
-      if ("function" !== typeof ip && null !== ip) throw new TypeError("Class extends value " + String(ip) + " is not a constructor or null");
+    function zT(TT, UT) {
+      if ("function" !== typeof UT && null !== UT) throw new TypeError("Class extends value " + String(UT) + " is not a constructor or null");
 
-      function cp() {
-        this.constructor = pp
+      function mT() {
+        this.constructor = TT
       }
-      Op(pp, ip), pp.prototype = null === ip ? Object.create(ip) : (cp.prototype = ip.prototype, new cp)
+      WT(TT, UT), TT.prototype = null === UT ? Object.create(UT) : (mT.prototype = UT.prototype, new mT)
     }
-    var Ip = function() {
-      return Ip = Object.assign || function(pp) {
-        for (var ip, cp = 1, Op = arguments.length; cp < Op; cp++)
-          for (var op in ip = arguments[cp]) Object.prototype.hasOwnProperty.call(ip, op) && (pp[op] = ip[op]);
-        return pp
-      }, Ip.apply(this, arguments)
+    var MT = function() {
+      return MT = Object.assign || function(TT) {
+        for (var UT, mT = 1, WT = arguments.length; mT < WT; mT++)
+          for (var zT in UT = arguments[mT]) Object.prototype.hasOwnProperty.call(UT, zT) && (TT[zT] = UT[zT]);
+        return TT
+      }, MT.apply(this, arguments)
     };
 
-    function Sp(pp, ip) {
-      var cp = {};
-      for (var Op in pp) Object.prototype.hasOwnProperty.call(pp, Op) && ip.indexOf(Op) < 0 && (cp[Op] = pp[Op]);
-      if (null != pp && "function" === typeof Object.getOwnPropertySymbols) {
-        var op = 0;
-        for (Op = Object.getOwnPropertySymbols(pp); op < Op.length; op++) ip.indexOf(Op[op]) < 0 && Object.prototype.propertyIsEnumerable.call(pp, Op[op]) && (cp[Op[op]] = pp[Op[op]])
+    function gT(TT, UT) {
+      var mT = {};
+      for (var WT in TT) Object.prototype.hasOwnProperty.call(TT, WT) && UT.indexOf(WT) < 0 && (mT[WT] = TT[WT]);
+      if (null != TT && "function" === typeof Object.getOwnPropertySymbols) {
+        var zT = 0;
+        for (WT = Object.getOwnPropertySymbols(TT); zT < WT.length; zT++) UT.indexOf(WT[zT]) < 0 && Object.prototype.propertyIsEnumerable.call(TT, WT[zT]) && (mT[WT[zT]] = TT[WT[zT]])
       }
-      return cp
+      return mT
     }
 
-    function xp(pp, ip, cp, Op) {
-      var op, Ip = arguments.length,
-        Sp = Ip < 3 ? ip : null === Op ? Op = Object.getOwnPropertyDescriptor(ip, cp) : Op;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Sp = Reflect.decorate(pp, ip, cp, Op);
+    function nT(TT, UT, mT, WT) {
+      var zT, MT = arguments.length,
+        gT = MT < 3 ? UT : null === WT ? WT = Object.getOwnPropertyDescriptor(UT, mT) : WT;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) gT = Reflect.decorate(TT, UT, mT, WT);
       else
-        for (var xp = pp.length - 1; xp >= 0; xp--)(op = pp[xp]) && (Sp = (Ip < 3 ? op(Sp) : Ip > 3 ? op(ip, cp, Sp) : op(ip, cp)) || Sp);
-      return Ip > 3 && Sp && Object.defineProperty(ip, cp, Sp), Sp
+        for (var nT = TT.length - 1; nT >= 0; nT--)(zT = TT[nT]) && (gT = (MT < 3 ? zT(gT) : MT > 3 ? zT(UT, mT, gT) : zT(UT, mT)) || gT);
+      return MT > 3 && gT && Object.defineProperty(UT, mT, gT), gT
     }
 
-    function Lp(pp, ip) {
-      return function(cp, Op) {
-        ip(cp, Op, pp)
+    function HT(TT, UT) {
+      return function(mT, WT) {
+        UT(mT, WT, TT)
       }
     }
 
-    function Yp(pp, ip, cp, Op, op, Ip) {
-      function Sp(pp) {
-        if (void 0 !== pp && "function" !== typeof pp) throw new TypeError("Function expected");
-        return pp
+    function kT(TT, UT, mT, WT, zT, MT) {
+      function gT(TT) {
+        if (void 0 !== TT && "function" !== typeof TT) throw new TypeError("Function expected");
+        return TT
       }
-      for (var xp, Lp = Op.kind, Yp = "getter" === Lp ? "get" : "setter" === Lp ? "set" : "value", Dp = !ip && pp ? Op.static ? pp : pp.prototype : null, Ap = ip || (Dp ? Object.getOwnPropertyDescriptor(Dp, Op.name) : {}), Pp = !1, Wp = cp.length - 1; Wp >= 0; Wp--) {
-        var yp = {};
-        for (var Up in Op) yp[Up] = "access" === Up ? {} : Op[Up];
-        for (var Up in Op.access) yp.access[Up] = Op.access[Up];
-        yp.addInitializer = function(pp) {
-          if (Pp) throw new TypeError("Cannot add initializers after decoration has completed");
-          Ip.push(Sp(pp || null))
+      for (var nT, HT = WT.kind, kT = "getter" === HT ? "get" : "setter" === HT ? "set" : "value", jT = !UT && TT ? WT.static ? TT : TT.prototype : null, lT = UT || (jT ? Object.getOwnPropertyDescriptor(jT, WT.name) : {}), LT = !1, pT = mT.length - 1; pT >= 0; pT--) {
+        var BT = {};
+        for (var ZT in WT) BT[ZT] = "access" === ZT ? {} : WT[ZT];
+        for (var ZT in WT.access) BT.access[ZT] = WT.access[ZT];
+        BT.addInitializer = function(TT) {
+          if (LT) throw new TypeError("Cannot add initializers after decoration has completed");
+          MT.push(gT(TT || null))
         };
-        var wp = (0, cp[Wp])("accessor" === Lp ? {
-          get: Ap.get,
-          set: Ap.set
-        } : Ap[Yp], yp);
-        if ("accessor" === Lp) {
-          if (void 0 === wp) continue;
-          if (null === wp || "object" !== typeof wp) throw new TypeError("Object expected");
-          (xp = Sp(wp.get)) && (Ap.get = xp), (xp = Sp(wp.set)) && (Ap.set = xp), (xp = Sp(wp.init)) && op.unshift(xp)
-        } else(xp = Sp(wp)) && ("field" === Lp ? op.unshift(xp) : Ap[Yp] = xp)
+        var cT = (0, mT[pT])("accessor" === HT ? {
+          get: lT.get,
+          set: lT.set
+        } : lT[kT], BT);
+        if ("accessor" === HT) {
+          if (void 0 === cT) continue;
+          if (null === cT || "object" !== typeof cT) throw new TypeError("Object expected");
+          (nT = gT(cT.get)) && (lT.get = nT), (nT = gT(cT.set)) && (lT.set = nT), (nT = gT(cT.init)) && zT.unshift(nT)
+        } else(nT = gT(cT)) && ("field" === HT ? zT.unshift(nT) : lT[kT] = nT)
       }
-      Dp && Object.defineProperty(Dp, Op.name, Ap), Pp = !0
+      jT && Object.defineProperty(jT, WT.name, lT), LT = !0
     }
 
-    function Dp(pp, ip, cp) {
-      for (var Op = arguments.length > 2, op = 0; op < ip.length; op++) cp = Op ? ip[op].call(pp, cp) : ip[op].call(pp);
-      return Op ? cp : void 0
+    function jT(TT, UT, mT) {
+      for (var WT = arguments.length > 2, zT = 0; zT < UT.length; zT++) mT = WT ? UT[zT].call(TT, mT) : UT[zT].call(TT);
+      return WT ? mT : void 0
     }
 
-    function Ap(pp) {
-      return "symbol" === typeof pp ? pp : "".concat(pp)
+    function lT(TT) {
+      return "symbol" === typeof TT ? TT : "".concat(TT)
     }
 
-    function Pp(pp, ip, cp) {
-      return "symbol" === typeof ip && (ip = ip.description ? "[".concat(ip.description, "]") : ""), Object.defineProperty(pp, "name", {
+    function LT(TT, UT, mT) {
+      return "symbol" === typeof UT && (UT = UT.description ? "[".concat(UT.description, "]") : ""), Object.defineProperty(TT, "name", {
         configurable: !0,
-        value: cp ? "".concat(cp, " ", ip) : ip
+        value: mT ? "".concat(mT, " ", UT) : UT
       })
     }
 
-    function Wp(pp, ip) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(pp, ip)
+    function pT(TT, UT) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(TT, UT)
     }
 
-    function yp(pp, ip, cp, Op) {
-      return new(cp || (cp = Promise))((function(op, Ip) {
-        function Sp(pp) {
+    function BT(TT, UT, mT, WT) {
+      return new(mT || (mT = Promise))((function(zT, MT) {
+        function gT(TT) {
           try {
-            Lp(Op.next(pp))
-          } catch (ip) {
-            Ip(ip)
+            HT(WT.next(TT))
+          } catch (UT) {
+            MT(UT)
           }
         }
 
-        function xp(pp) {
+        function nT(TT) {
           try {
-            Lp(Op.throw(pp))
-          } catch (ip) {
-            Ip(ip)
+            HT(WT.throw(TT))
+          } catch (UT) {
+            MT(UT)
           }
         }
 
-        function Lp(pp) {
-          var ip;
-          pp.done ? op(pp.value) : (ip = pp.value, ip instanceof cp ? ip : new cp((function(pp) {
-            pp(ip)
-          }))).then(Sp, xp)
+        function HT(TT) {
+          var UT;
+          TT.done ? zT(TT.value) : (UT = TT.value, UT instanceof mT ? UT : new mT((function(TT) {
+            TT(UT)
+          }))).then(gT, nT)
         }
-        Lp((Op = Op.apply(pp, ip || [])).next())
+        HT((WT = WT.apply(TT, UT || [])).next())
       }))
     }
 
-    function Up(pp, ip) {
-      var cp, Op, op, Ip = {
+    function ZT(TT, UT) {
+      var mT, WT, zT, MT = {
           label: 0,
           sent: function() {
-            if (1 & op[0]) throw op[1];
-            return op[1]
+            if (1 & zT[0]) throw zT[1];
+            return zT[1]
           },
           trys: [],
           ops: []
         },
-        Sp = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return Sp.next = xp(0), Sp.throw = xp(1), Sp.return = xp(2), "function" === typeof Symbol && (Sp[Symbol.iterator] = function() {
+        gT = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return gT.next = nT(0), gT.throw = nT(1), gT.return = nT(2), "function" === typeof Symbol && (gT[Symbol.iterator] = function() {
         return this
-      }), Sp;
+      }), gT;
 
-      function xp(xp) {
-        return function(Lp) {
-          return function(xp) {
-            if (cp) throw new TypeError("Generator is already executing.");
-            for (; Sp && (Sp = 0, xp[0] && (Ip = 0)), Ip;) try {
-              if (cp = 1, Op && (op = 2 & xp[0] ? Op.return : xp[0] ? Op.throw || ((op = Op.return) && op.call(Op), 0) : Op.next) && !(op = op.call(Op, xp[1])).done) return op;
-              switch (Op = 0, op && (xp = [2 & xp[0], op.value]), xp[0]) {
+      function nT(nT) {
+        return function(HT) {
+          return function(nT) {
+            if (mT) throw new TypeError("Generator is already executing.");
+            for (; gT && (gT = 0, nT[0] && (MT = 0)), MT;) try {
+              if (mT = 1, WT && (zT = 2 & nT[0] ? WT.return : nT[0] ? WT.throw || ((zT = WT.return) && zT.call(WT), 0) : WT.next) && !(zT = zT.call(WT, nT[1])).done) return zT;
+              switch (WT = 0, zT && (nT = [2 & nT[0], zT.value]), nT[0]) {
                 case 0:
                 case 1:
-                  op = xp;
+                  zT = nT;
                   break;
                 case 4:
-                  return Ip.label++, {
-                    value: xp[1],
+                  return MT.label++, {
+                    value: nT[1],
                     done: !1
                   };
                 case 5:
-                  Ip.label++, Op = xp[1], xp = [0];
+                  MT.label++, WT = nT[1], nT = [0];
                   continue;
                 case 7:
-                  xp = Ip.ops.pop(), Ip.trys.pop();
+                  nT = MT.ops.pop(), MT.trys.pop();
                   continue;
                 default:
-                  if (!(op = (op = Ip.trys).length > 0 && op[op.length - 1]) && (6 === xp[0] || 2 === xp[0])) {
-                    Ip = 0;
+                  if (!(zT = (zT = MT.trys).length > 0 && zT[zT.length - 1]) && (6 === nT[0] || 2 === nT[0])) {
+                    MT = 0;
                     continue
                   }
-                  if (3 === xp[0] && (!op || xp[1] > op[0] && xp[1] < op[3])) {
-                    Ip.label = xp[1];
+                  if (3 === nT[0] && (!zT || nT[1] > zT[0] && nT[1] < zT[3])) {
+                    MT.label = nT[1];
                     break
                   }
-                  if (6 === xp[0] && Ip.label < op[1]) {
-                    Ip.label = op[1], op = xp;
+                  if (6 === nT[0] && MT.label < zT[1]) {
+                    MT.label = zT[1], zT = nT;
                     break
                   }
-                  if (op && Ip.label < op[2]) {
-                    Ip.label = op[2], Ip.ops.push(xp);
+                  if (zT && MT.label < zT[2]) {
+                    MT.label = zT[2], MT.ops.push(nT);
                     break
                   }
-                  op[2] && Ip.ops.pop(), Ip.trys.pop();
+                  zT[2] && MT.ops.pop(), MT.trys.pop();
                   continue
               }
-              xp = ip.call(pp, Ip)
-            } catch (Lp) {
-              xp = [6, Lp], Op = 0
+              nT = UT.call(TT, MT)
+            } catch (HT) {
+              nT = [6, HT], WT = 0
             } finally {
-              cp = op = 0
+              mT = zT = 0
             }
-            if (5 & xp[0]) throw xp[1];
+            if (5 & nT[0]) throw nT[1];
             return {
-              value: xp[0] ? xp[1] : void 0,
+              value: nT[0] ? nT[1] : void 0,
               done: !0
             }
-          }([xp, Lp])
+          }([nT, HT])
         }
       }
     }
-    var wp = Object.create ? function(pp, ip, cp, Op) {
-      void 0 === Op && (Op = cp);
-      var op = Object.getOwnPropertyDescriptor(ip, cp);
-      op && !("get" in op ? !ip.__esModule : op.writable || op.configurable) || (op = {
+    var cT = Object.create ? function(TT, UT, mT, WT) {
+      void 0 === WT && (WT = mT);
+      var zT = Object.getOwnPropertyDescriptor(UT, mT);
+      zT && !("get" in zT ? !UT.__esModule : zT.writable || zT.configurable) || (zT = {
         enumerable: !0,
         get: function() {
-          return ip[cp]
+          return UT[mT]
         }
-      }), Object.defineProperty(pp, Op, op)
-    } : function(pp, ip, cp, Op) {
-      void 0 === Op && (Op = cp), pp[Op] = ip[cp]
+      }), Object.defineProperty(TT, WT, zT)
+    } : function(TT, UT, mT, WT) {
+      void 0 === WT && (WT = mT), TT[WT] = UT[mT]
     };
 
-    function vp(pp, ip) {
-      for (var cp in pp) "default" === cp || Object.prototype.hasOwnProperty.call(ip, cp) || wp(ip, pp, cp)
+    function vT(TT, UT) {
+      for (var mT in TT) "default" === mT || Object.prototype.hasOwnProperty.call(UT, mT) || cT(UT, TT, mT)
     }
 
-    function tp(pp) {
-      var ip = "function" === typeof Symbol && Symbol.iterator,
-        cp = ip && pp[ip],
-        Op = 0;
-      if (cp) return cp.call(pp);
-      if (pp && "number" === typeof pp.length) return {
+    function fT(TT) {
+      var UT = "function" === typeof Symbol && Symbol.iterator,
+        mT = UT && TT[UT],
+        WT = 0;
+      if (mT) return mT.call(TT);
+      if (TT && "number" === typeof TT.length) return {
         next: function() {
-          return pp && Op >= pp.length && (pp = void 0), {
-            value: pp && pp[Op++],
-            done: !pp
+          return TT && WT >= TT.length && (TT = void 0), {
+            value: TT && TT[WT++],
+            done: !TT
           }
         }
       };
-      throw new TypeError(ip ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(UT ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Hp(pp, ip) {
-      var cp = "function" === typeof Symbol && pp[Symbol.iterator];
-      if (!cp) return pp;
-      var Op, op, Ip = cp.call(pp),
-        Sp = [];
+    function qT(TT, UT) {
+      var mT = "function" === typeof Symbol && TT[Symbol.iterator];
+      if (!mT) return TT;
+      var WT, zT, MT = mT.call(TT),
+        gT = [];
       try {
         for (;
-          (void 0 === ip || ip-- > 0) && !(Op = Ip.next()).done;) Sp.push(Op.value)
-      } catch (xp) {
-        op = {
-          error: xp
+          (void 0 === UT || UT-- > 0) && !(WT = MT.next()).done;) gT.push(WT.value)
+      } catch (nT) {
+        zT = {
+          error: nT
         }
       } finally {
         try {
-          Op && !Op.done && (cp = Ip.return) && cp.call(Ip)
+          WT && !WT.done && (mT = MT.return) && mT.call(MT)
         } finally {
-          if (op) throw op.error
+          if (zT) throw zT.error
         }
       }
-      return Sp
+      return gT
     }
 
-    function dp() {
-      for (var pp = [], ip = 0; ip < arguments.length; ip++) pp = pp.concat(Hp(arguments[ip]));
-      return pp
+    function iT() {
+      for (var TT = [], UT = 0; UT < arguments.length; UT++) TT = TT.concat(qT(arguments[UT]));
+      return TT
     }
 
-    function ep() {
-      for (var pp = 0, ip = 0, cp = arguments.length; ip < cp; ip++) pp += arguments[ip].length;
-      var Op = Array(pp),
-        op = 0;
-      for (ip = 0; ip < cp; ip++)
-        for (var Ip = arguments[ip], Sp = 0, xp = Ip.length; Sp < xp; Sp++, op++) Op[op] = Ip[Sp];
-      return Op
+    function bT() {
+      for (var TT = 0, UT = 0, mT = arguments.length; UT < mT; UT++) TT += arguments[UT].length;
+      var WT = Array(TT),
+        zT = 0;
+      for (UT = 0; UT < mT; UT++)
+        for (var MT = arguments[UT], gT = 0, nT = MT.length; gT < nT; gT++, zT++) WT[zT] = MT[gT];
+      return WT
     }
 
-    function jp(pp, ip, cp) {
-      if (cp || 2 === arguments.length)
-        for (var Op, op = 0, Ip = ip.length; op < Ip; op++) !Op && op in ip || (Op || (Op = Array.prototype.slice.call(ip, 0, op)), Op[op] = ip[op]);
-      return pp.concat(Op || Array.prototype.slice.call(ip))
+    function OT(TT, UT, mT) {
+      if (mT || 2 === arguments.length)
+        for (var WT, zT = 0, MT = UT.length; zT < MT; zT++) !WT && zT in UT || (WT || (WT = Array.prototype.slice.call(UT, 0, zT)), WT[zT] = UT[zT]);
+      return TT.concat(WT || Array.prototype.slice.call(UT))
     }
 
-    function kp(pp) {
-      return this instanceof kp ? (this.v = pp, this) : new kp(pp)
+    function eT(TT) {
+      return this instanceof eT ? (this.v = TT, this) : new eT(TT)
     }
 
-    function mp(pp, ip, cp) {
+    function YT(TT, UT, mT) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Op, op = cp.apply(pp, ip || []),
-        Ip = [];
-      return Op = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Sp("next"), Sp("throw"), Sp("return", (function(pp) {
-        return function(ip) {
-          return Promise.resolve(ip).then(pp, Yp)
+      var WT, zT = mT.apply(TT, UT || []),
+        MT = [];
+      return WT = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), gT("next"), gT("throw"), gT("return", (function(TT) {
+        return function(UT) {
+          return Promise.resolve(UT).then(TT, kT)
         }
-      })), Op[Symbol.asyncIterator] = function() {
+      })), WT[Symbol.asyncIterator] = function() {
         return this
-      }, Op;
+      }, WT;
 
-      function Sp(pp, ip) {
-        op[pp] && (Op[pp] = function(ip) {
-          return new Promise((function(cp, Op) {
-            Ip.push([pp, ip, cp, Op]) > 1 || xp(pp, ip)
+      function gT(TT, UT) {
+        zT[TT] && (WT[TT] = function(UT) {
+          return new Promise((function(mT, WT) {
+            MT.push([TT, UT, mT, WT]) > 1 || nT(TT, UT)
           }))
-        }, ip && (Op[pp] = ip(Op[pp])))
+        }, UT && (WT[TT] = UT(WT[TT])))
       }
 
-      function xp(pp, ip) {
+      function nT(TT, UT) {
         try {
-          (cp = op[pp](ip)).value instanceof kp ? Promise.resolve(cp.value.v).then(Lp, Yp) : Dp(Ip[0][2], cp)
-        } catch (Op) {
-          Dp(Ip[0][3], Op)
+          (mT = zT[TT](UT)).value instanceof eT ? Promise.resolve(mT.value.v).then(HT, kT) : jT(MT[0][2], mT)
+        } catch (WT) {
+          jT(MT[0][3], WT)
         }
-        var cp
+        var mT
       }
 
-      function Lp(pp) {
-        xp("next", pp)
+      function HT(TT) {
+        nT("next", TT)
       }
 
-      function Yp(pp) {
-        xp("throw", pp)
+      function kT(TT) {
+        nT("throw", TT)
       }
 
-      function Dp(pp, ip) {
-        pp(ip), Ip.shift(), Ip.length && xp(Ip[0][0], Ip[0][1])
+      function jT(TT, UT) {
+        TT(UT), MT.shift(), MT.length && nT(MT[0][0], MT[0][1])
       }
     }
 
-    function Rp(pp) {
-      var ip, cp;
-      return ip = {}, Op("next"), Op("throw", (function(pp) {
-        throw pp
-      })), Op("return"), ip[Symbol.iterator] = function() {
+    function JT(TT) {
+      var UT, mT;
+      return UT = {}, WT("next"), WT("throw", (function(TT) {
+        throw TT
+      })), WT("return"), UT[Symbol.iterator] = function() {
         return this
-      }, ip;
+      }, UT;
 
-      function Op(Op, op) {
-        ip[Op] = pp[Op] ? function(ip) {
-          return (cp = !cp) ? {
-            value: kp(pp[Op](ip)),
+      function WT(WT, zT) {
+        UT[WT] = TT[WT] ? function(UT) {
+          return (mT = !mT) ? {
+            value: eT(TT[WT](UT)),
             done: !1
-          } : op ? op(ip) : ip
-        } : op
+          } : zT ? zT(UT) : UT
+        } : zT
       }
     }
 
-    function qp(pp) {
+    function xT(TT) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var ip, cp = pp[Symbol.asyncIterator];
-      return cp ? cp.call(pp) : (pp = tp(pp), ip = {}, Op("next"), Op("throw"), Op("return"), ip[Symbol.asyncIterator] = function() {
+      var UT, mT = TT[Symbol.asyncIterator];
+      return mT ? mT.call(TT) : (TT = fT(TT), UT = {}, WT("next"), WT("throw"), WT("return"), UT[Symbol.asyncIterator] = function() {
         return this
-      }, ip);
+      }, UT);
 
-      function Op(cp) {
-        ip[cp] = pp[cp] && function(ip) {
-          return new Promise((function(Op, op) {
-            (function(pp, ip, cp, Op) {
-              Promise.resolve(Op).then((function(ip) {
-                pp({
-                  value: ip,
-                  done: cp
+      function WT(mT) {
+        UT[mT] = TT[mT] && function(UT) {
+          return new Promise((function(WT, zT) {
+            (function(TT, UT, mT, WT) {
+              Promise.resolve(WT).then((function(UT) {
+                TT({
+                  value: UT,
+                  done: mT
                 })
-              }), ip)
-            })(Op, op, (ip = pp[cp](ip)).done, ip.value)
+              }), UT)
+            })(WT, zT, (UT = TT[mT](UT)).done, UT.value)
           }))
         }
       }
     }
 
-    function Mp(pp, ip) {
-      return Object.defineProperty ? Object.defineProperty(pp, "raw", {
-        value: ip
-      }) : pp.raw = ip, pp
+    function dT(TT, UT) {
+      return Object.defineProperty ? Object.defineProperty(TT, "raw", {
+        value: UT
+      }) : TT.raw = UT, TT
     }
-    var Cp = Object.create ? function(pp, ip) {
-        Object.defineProperty(pp, "default", {
+    var wT = Object.create ? function(TT, UT) {
+        Object.defineProperty(TT, "default", {
           enumerable: !0,
-          value: ip
+          value: UT
         })
-      } : function(pp, ip) {
-        pp.default = ip
+      } : function(TT, UT) {
+        TT.default = UT
       },
-      Ep = function(pp) {
-        return Ep = Object.getOwnPropertyNames || function(pp) {
-          var ip = [];
-          for (var cp in pp) Object.prototype.hasOwnProperty.call(pp, cp) && (ip[ip.length] = cp);
-          return ip
-        }, Ep(pp)
+      tT = function(TT) {
+        return tT = Object.getOwnPropertyNames || function(TT) {
+          var UT = [];
+          for (var mT in TT) Object.prototype.hasOwnProperty.call(TT, mT) && (UT[UT.length] = mT);
+          return UT
+        }, tT(TT)
       };
 
-    function Xp(pp) {
-      if (pp && pp.__esModule) return pp;
-      var ip = {};
-      if (null != pp)
-        for (var cp = Ep(pp), Op = 0; Op < cp.length; Op++) "default" !== cp[Op] && wp(ip, pp, cp[Op]);
-      return Cp(ip, pp), ip
+    function aT(TT) {
+      if (TT && TT.__esModule) return TT;
+      var UT = {};
+      if (null != TT)
+        for (var mT = tT(TT), WT = 0; WT < mT.length; WT++) "default" !== mT[WT] && cT(UT, TT, mT[WT]);
+      return wT(UT, TT), UT
     }
 
-    function lp(pp) {
-      return pp && pp.__esModule ? pp : {
-        default: pp
+    function yT(TT) {
+      return TT && TT.__esModule ? TT : {
+        default: TT
       }
     }
 
-    function Qp(pp, ip, cp, Op) {
-      if ("a" === cp && !Op) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof ip ? pp !== ip || !Op : !ip.has(pp)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === cp ? Op : "a" === cp ? Op.call(pp) : Op ? Op.value : ip.get(pp)
+    function XT(TT, UT, mT, WT) {
+      if ("a" === mT && !WT) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof UT ? TT !== UT || !WT : !UT.has(TT)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === mT ? WT : "a" === mT ? WT.call(TT) : WT ? WT.value : UT.get(TT)
     }
 
-    function Jp(pp, ip, cp, Op, op) {
-      if ("m" === Op) throw new TypeError("Private method is not writable");
-      if ("a" === Op && !op) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof ip ? pp !== ip || !op : !ip.has(pp)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Op ? op.call(pp, cp) : op ? op.value = cp : ip.set(pp, cp), cp
+    function IT(TT, UT, mT, WT, zT) {
+      if ("m" === WT) throw new TypeError("Private method is not writable");
+      if ("a" === WT && !zT) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof UT ? TT !== UT || !zT : !UT.has(TT)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === WT ? zT.call(TT, mT) : zT ? zT.value = mT : UT.set(TT, mT), mT
     }
 
-    function Bp(pp, ip) {
-      if (null === ip || "object" !== typeof ip && "function" !== typeof ip) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof pp ? ip === pp : pp.has(ip)
+    function QT(TT, UT) {
+      if (null === UT || "object" !== typeof UT && "function" !== typeof UT) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof TT ? UT === TT : TT.has(UT)
     }
 
-    function Np(pp, ip, cp) {
-      if (null !== ip && void 0 !== ip) {
-        if ("object" !== typeof ip && "function" !== typeof ip) throw new TypeError("Object expected.");
-        var Op, op;
-        if (cp) {
+    function sT(TT, UT, mT) {
+      if (null !== UT && void 0 !== UT) {
+        if ("object" !== typeof UT && "function" !== typeof UT) throw new TypeError("Object expected.");
+        var WT, zT;
+        if (mT) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Op = ip[Symbol.asyncDispose]
+          WT = UT[Symbol.asyncDispose]
         }
-        if (void 0 === Op) {
+        if (void 0 === WT) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Op = ip[Symbol.dispose], cp && (op = Op)
+          WT = UT[Symbol.dispose], mT && (zT = WT)
         }
-        if ("function" !== typeof Op) throw new TypeError("Object not disposable.");
-        op && (Op = function() {
+        if ("function" !== typeof WT) throw new TypeError("Object not disposable.");
+        zT && (WT = function() {
           try {
-            op.call(this)
-          } catch (pp) {
-            return Promise.reject(pp)
+            zT.call(this)
+          } catch (TT) {
+            return Promise.reject(TT)
           }
-        }), pp.stack.push({
-          value: ip,
-          dispose: Op,
-          async: cp
+        }), TT.stack.push({
+          value: UT,
+          dispose: WT,
+          async: mT
         })
-      } else cp && pp.stack.push({
+      } else mT && TT.stack.push({
         async: !0
       });
-      return ip
+      return UT
     }
-    var Tp = "function" === typeof SuppressedError ? SuppressedError : function(pp, ip, cp) {
-      var Op = new Error(cp);
-      return Op.name = "SuppressedError", Op.error = pp, Op.suppressed = ip, Op
+    var FT = "function" === typeof SuppressedError ? SuppressedError : function(TT, UT, mT) {
+      var WT = new Error(mT);
+      return WT.name = "SuppressedError", WT.error = TT, WT.suppressed = UT, WT
     };
 
-    function fp(pp) {
-      function ip(ip) {
-        pp.error = pp.hasError ? new Tp(ip, pp.error, "An error was suppressed during disposal.") : ip, pp.hasError = !0
+    function PT(TT) {
+      function UT(UT) {
+        TT.error = TT.hasError ? new FT(UT, TT.error, "An error was suppressed during disposal.") : UT, TT.hasError = !0
       }
-      var cp, Op = 0;
-      return function op() {
-        for (; cp = pp.stack.pop();) try {
-          if (!cp.async && 1 === Op) return Op = 0, pp.stack.push(cp), Promise.resolve().then(op);
-          if (cp.dispose) {
-            var Ip = cp.dispose.call(cp.value);
-            if (cp.async) return Op |= 2, Promise.resolve(Ip).then(op, (function(pp) {
-              return ip(pp), op()
+      var mT, WT = 0;
+      return function zT() {
+        for (; mT = TT.stack.pop();) try {
+          if (!mT.async && 1 === WT) return WT = 0, TT.stack.push(mT), Promise.resolve().then(zT);
+          if (mT.dispose) {
+            var MT = mT.dispose.call(mT.value);
+            if (mT.async) return WT |= 2, Promise.resolve(MT).then(zT, (function(TT) {
+              return UT(TT), zT()
             }))
-          } else Op |= 1
-        } catch (Sp) {
-          ip(Sp)
+          } else WT |= 1
+        } catch (gT) {
+          UT(gT)
         }
-        if (1 === Op) return pp.hasError ? Promise.reject(pp.error) : Promise.resolve();
-        if (pp.hasError) throw pp.error
+        if (1 === WT) return TT.hasError ? Promise.reject(TT.error) : Promise.resolve();
+        if (TT.hasError) throw TT.error
       }()
     }
 
-    function bp(pp, ip) {
-      return "string" === typeof pp && /^\.\.?\//.test(pp) ? pp.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(pp, cp, Op, op, Ip) {
-        return cp ? ip ? ".jsx" : ".js" : !Op || op && Ip ? Op + op + "." + Ip.toLowerCase() + "js" : pp
-      })) : pp
+    function VT(TT, UT) {
+      return "string" === typeof TT && /^\.\.?\//.test(TT) ? TT.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(TT, mT, WT, zT, MT) {
+        return mT ? UT ? ".jsx" : ".js" : !WT || zT && MT ? WT + zT + "." + MT.toLowerCase() + "js" : TT
+      })) : TT
     }
-    const hp = {
-      __extends: op,
-      __assign: Ip,
-      __rest: Sp,
-      __decorate: xp,
-      __param: Lp,
-      __esDecorate: Yp,
-      __runInitializers: Dp,
-      __propKey: Ap,
-      __setFunctionName: Pp,
-      __metadata: Wp,
-      __awaiter: yp,
-      __generator: Up,
-      __createBinding: wp,
-      __exportStar: vp,
-      __values: tp,
-      __read: Hp,
-      __spread: dp,
-      __spreadArrays: ep,
-      __spreadArray: jp,
-      __await: kp,
-      __asyncGenerator: mp,
-      __asyncDelegator: Rp,
-      __asyncValues: qp,
-      __makeTemplateObject: Mp,
-      __importStar: Xp,
-      __importDefault: lp,
-      __classPrivateFieldGet: Qp,
-      __classPrivateFieldSet: Jp,
-      __classPrivateFieldIn: Bp,
-      __addDisposableResource: Np,
-      __disposeResources: fp,
-      __rewriteRelativeImportExtension: bp
+    const uT = {
+      __extends: zT,
+      __assign: MT,
+      __rest: gT,
+      __decorate: nT,
+      __param: HT,
+      __esDecorate: kT,
+      __runInitializers: jT,
+      __propKey: lT,
+      __setFunctionName: LT,
+      __metadata: pT,
+      __awaiter: BT,
+      __generator: ZT,
+      __createBinding: cT,
+      __exportStar: vT,
+      __values: fT,
+      __read: qT,
+      __spread: iT,
+      __spreadArrays: bT,
+      __spreadArray: OT,
+      __await: eT,
+      __asyncGenerator: YT,
+      __asyncDelegator: JT,
+      __asyncValues: xT,
+      __makeTemplateObject: dT,
+      __importStar: aT,
+      __importDefault: yT,
+      __classPrivateFieldGet: XT,
+      __classPrivateFieldSet: IT,
+      __classPrivateFieldIn: QT,
+      __addDisposableResource: sT,
+      __disposeResources: PT,
+      __rewriteRelativeImportExtension: VT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

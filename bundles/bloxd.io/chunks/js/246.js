@@ -1,15 +1,15 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  38033: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ap,
-      f: () => Sp
+  37936: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => lT,
+      i: () => gT
     });
-    var Op = cp(9359),
-      op = cp(9338),
-      Ip = cp(337);
-    const Sp = {
+    var WT = mT(9351),
+      zT = mT(9330),
+      MT = mT(366);
+    const gT = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...xp("White"),
-      ...xp("Orange"),
-      ...xp("Magenta"),
-      ...xp("Light Blue"),
-      ...xp("Yellow"),
-      ...xp("Lime"),
-      ...xp("Pink"),
-      ...xp("Gray"),
-      ...xp("Light Gray"),
-      ...xp("Cyan"),
-      ...xp("Purple"),
-      ...xp("Blue"),
-      ...xp("Brown"),
-      ...xp("Green"),
-      ...xp("Red"),
-      ...xp("Black"),
-      ...xp("Draugr"),
-      ...xp("Skull"),
-      ...xp("Rainbow"),
-      ...Lp("Sheep"),
-      ...Lp("Cow"),
-      ...Lp("Pig"),
-      ...Lp("Horse"),
-      ...Lp("Camel"),
-      ...Lp("Wolf"),
-      ...Lp("Deer"),
-      ...Lp("Wildcat"),
-      ...Yp("Radar"),
-      ...Yp("Inactive Radar"),
-      ...Yp("Active Radar"),
-      ...Dp("Magenta"),
-      ...Dp("Light Gray"),
-      ...Dp("Red"),
-      ...Dp("White"),
-      ...Dp("Orange"),
-      ...Dp("Light Blue"),
-      ...Dp("Yellow"),
-      ...Dp("Lime"),
-      ...Dp("Pink"),
-      ...Dp("Gray"),
-      ...Dp("Cyan"),
-      ...Dp("Purple"),
-      ...Dp("Blue"),
-      ...Dp("Brown"),
-      ...Dp("Green"),
-      ...Dp("Black"),
+      ...nT("White"),
+      ...nT("Orange"),
+      ...nT("Magenta"),
+      ...nT("Light Blue"),
+      ...nT("Yellow"),
+      ...nT("Lime"),
+      ...nT("Pink"),
+      ...nT("Gray"),
+      ...nT("Light Gray"),
+      ...nT("Cyan"),
+      ...nT("Purple"),
+      ...nT("Blue"),
+      ...nT("Brown"),
+      ...nT("Green"),
+      ...nT("Red"),
+      ...nT("Black"),
+      ...nT("Draugr"),
+      ...nT("Skull"),
+      ...nT("Rainbow"),
+      ...HT("Sheep"),
+      ...HT("Cow"),
+      ...HT("Pig"),
+      ...HT("Horse"),
+      ...HT("Camel"),
+      ...HT("Wolf"),
+      ...HT("Deer"),
+      ...HT("Wildcat"),
+      ...kT("Radar"),
+      ...kT("Inactive Radar"),
+      ...kT("Active Radar"),
+      ...jT("Magenta"),
+      ...jT("Light Gray"),
+      ...jT("Red"),
+      ...jT("White"),
+      ...jT("Orange"),
+      ...jT("Light Blue"),
+      ...jT("Yellow"),
+      ...jT("Lime"),
+      ...jT("Pink"),
+      ...jT("Gray"),
+      ...jT("Cyan"),
+      ...jT("Purple"),
+      ...jT("Blue"),
+      ...jT("Brown"),
+      ...jT("Green"),
+      ...jT("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3107,11 +3107,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const pp = "Lunite Auto Miner";
+        const TT = "Lunite Auto Miner";
         return {
-          [pp]: {
+          [TT]: {
             positions: [{
-              block: pp,
+              block: TT,
               x: 0,
               y: 0,
               z: 0
@@ -3137,9 +3137,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${pp}|meta|rot2`]: {
+          [`${TT}|meta|rot2`]: {
             positions: [{
-              block: `${pp}|meta|rot2`,
+              block: `${TT}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3165,9 +3165,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${pp}|meta|rot3`]: {
+          [`${TT}|meta|rot3`]: {
             positions: [{
-              block: `${pp}|meta|rot3`,
+              block: `${TT}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3193,9 +3193,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${pp}|meta|rot4`]: {
+          [`${TT}|meta|rot4`]: {
             positions: [{
-              block: `${pp}|meta|rot4`,
+              block: `${TT}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3224,74 +3224,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const pp = {
-            1: pp => ({
+        const TT = {
+            1: TT => ({
               x: 0,
-              z: pp
+              z: TT
             }),
-            2: pp => ({
-              x: pp,
+            2: TT => ({
+              x: TT,
               z: 0
             }),
-            3: pp => ({
+            3: TT => ({
               x: 0,
-              z: -pp
+              z: -TT
             }),
-            4: pp => ({
-              x: -pp,
+            4: TT => ({
+              x: -TT,
               z: 0
             })
           },
-          ip = {};
-        for (let cp = 1; cp <= 4; cp++) {
-          const op = 1 === cp ? "" : `|meta|rot${cp}`;
-          ip[`${Op.d[0].block}${op}`] = {
-            positions: Op.d.map((ip => {
+          UT = {};
+        for (let mT = 1; mT <= 4; mT++) {
+          const zT = 1 === mT ? "" : `|meta|rot${mT}`;
+          UT[`${WT.d[0].block}${zT}`] = {
+            positions: WT.d.map((UT => {
               let {
-                block: Op,
-                y: Ip,
-                z: Sp
-              } = ip;
+                block: WT,
+                y: MT,
+                z: gT
+              } = UT;
               return {
-                block: `${Op}${op}`,
-                y: Ip,
-                ...pp[cp](Sp)
+                block: `${WT}${zT}`,
+                y: MT,
+                ...TT[mT](gT)
               }
             }))
           }
         }
-        return ip
+        return UT
       }(),
       ... function() {
-        const pp = {};
-        for (let ip = 1; ip <= Op.r; ip++) {
-          const cp = (0, Op.gc)(ip),
-            op = Op.u[ip - 1],
-            Ip = [{
-              block: cp,
+        const TT = {};
+        for (let UT = 1; UT <= WT.r; UT++) {
+          const mT = (0, WT.lc)(UT),
+            zT = WT.t[UT - 1],
+            MT = [{
+              block: mT,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const pp of Op.k)
-            for (let ip = 1; ip <= op; ip++) {
-              if ("southwest" === pp && 1 === ip) continue;
+          for (const TT of WT.j)
+            for (let UT = 1; UT <= zT; UT++) {
+              if ("southwest" === TT && 1 === UT) continue;
               const {
-                x: cp,
-                z: op
-              } = Op.n[pp];
-              Ip.push({
-                block: (0, Op.cc)(pp, ip),
-                x: cp,
-                y: ip - 1,
-                z: op
+                x: mT,
+                z: zT
+              } = WT.n[TT];
+              MT.push({
+                block: (0, WT.hc)(TT, UT),
+                x: mT,
+                y: UT - 1,
+                z: zT
               })
             }
-          pp[cp] = {
-            positions: Ip
+          TT[mT] = {
+            positions: MT
           }
         }
-        return pp
+        return TT
       }(),
       "Solar Panel": {
         positions: [{
@@ -3405,159 +3405,159 @@ export const modules = {
       }
     };
 
-    function xp(pp) {
+    function nT(TT) {
       return {
-        [`${pp} Banner`]: {
+        [`${TT} Banner`]: {
           positions: [{
-            block: `${pp} Banner`,
+            block: `${TT} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot1|bot`,
+            block: `_${TT} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot2|bot`]: {
+        [`${TT} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot2|bot`,
+            block: `${TT} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot2|bot`,
+            block: `_${TT} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot3|bot`]: {
+        [`${TT} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot3|bot`,
+            block: `${TT} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot3|bot`,
+            block: `_${TT} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot4|bot`]: {
+        [`${TT} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot4|bot`,
+            block: `${TT} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot4|bot`,
+            block: `_${TT} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot1|side`]: {
+        [`${TT} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot1|side`,
+            block: `${TT} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot1|side`,
+            block: `_${TT} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot2|side`]: {
+        [`${TT} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot2|side`,
+            block: `${TT} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot2|side`,
+            block: `_${TT} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot3|side`]: {
+        [`${TT} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot3|side`,
+            block: `${TT} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot3|side`,
+            block: `_${TT} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot4|side`]: {
+        [`${TT} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot4|side`,
+            block: `${TT} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot4|side`,
+            block: `_${TT} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot1|top`]: {
+        [`${TT} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot1|top`,
+            block: `${TT} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag`,
+            block: `_${TT} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot2|top`]: {
+        [`${TT} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot2|top`,
+            block: `${TT} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot2|top`,
+            block: `_${TT} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot3|top`]: {
+        [`${TT} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot3|top`,
+            block: `${TT} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot3|top`,
+            block: `_${TT} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${pp} Banner|meta|rot4|top`]: {
+        [`${TT} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${pp} Banner|meta|rot4|top`,
+            block: `${TT} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${pp} Banner Flag|meta|rot4|top`,
+            block: `_${TT} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function Lp(pp) {
-      const ip = (0, Ip.Ob)(pp);
+    function HT(TT) {
+      const UT = (0, MT.hc)(TT);
       return {
-        [ip]: {
+        [UT]: {
           positions: [{
-            block: ip,
+            block: UT,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${ip} Top Left`,
+            block: `_${UT} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${ip} Top Right`,
+            block: `_${UT} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${ip} Bottom Right`,
+            block: `_${UT} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${ip}|meta|rot2`]: {
+        [`${UT}|meta|rot2`]: {
           positions: [{
-            block: `${ip}|meta|rot2`,
+            block: `${UT}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${ip} Top Left|meta|rot2`,
+            block: `_${UT} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${ip} Top Right|meta|rot2`,
+            block: `_${UT} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${ip} Bottom Right|meta|rot2`,
+            block: `_${UT} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${ip}|meta|rot3`]: {
+        [`${UT}|meta|rot3`]: {
           positions: [{
-            block: `${ip}|meta|rot3`,
+            block: `${UT}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${ip} Top Left|meta|rot3`,
+            block: `_${UT} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${ip} Top Right|meta|rot3`,
+            block: `_${UT} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${ip} Bottom Right|meta|rot3`,
+            block: `_${UT} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${ip}|meta|rot4`]: {
+        [`${UT}|meta|rot4`]: {
           positions: [{
-            block: `${ip}|meta|rot4`,
+            block: `${UT}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${ip} Top Left|meta|rot4`,
+            block: `_${UT} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${ip} Top Right|meta|rot4`,
+            block: `_${UT} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${ip} Bottom Right|meta|rot4`,
+            block: `_${UT} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,77 +3664,77 @@ export const modules = {
       }
     }
 
-    function Yp(pp) {
-      const ip = `_${pp} Back`,
-        cp = `_${pp} Dish`;
+    function kT(TT) {
+      const UT = `_${TT} Back`,
+        mT = `_${TT} Dish`;
       return {
-        [pp]: {
+        [TT]: {
           positions: [{
-            block: pp,
+            block: TT,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: ip,
+            block: UT,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: cp,
+            block: mT,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${pp}|meta|rot2`]: {
+        [`${TT}|meta|rot2`]: {
           positions: [{
-            block: `${pp}|meta|rot2`,
+            block: `${TT}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${ip}|meta|rot2`,
+            block: `${UT}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${cp}|meta|rot2`,
+            block: `${mT}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${pp}|meta|rot3`]: {
+        [`${TT}|meta|rot3`]: {
           positions: [{
-            block: `${pp}|meta|rot3`,
+            block: `${TT}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${ip}|meta|rot3`,
+            block: `${UT}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${cp}|meta|rot3`,
+            block: `${mT}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${pp}|meta|rot4`]: {
+        [`${TT}|meta|rot4`]: {
           positions: [{
-            block: `${pp}|meta|rot4`,
+            block: `${TT}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${ip}|meta|rot4`,
+            block: `${UT}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${cp}|meta|rot4`,
+            block: `${mT}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,22 +3743,22 @@ export const modules = {
       }
     }
 
-    function Dp(pp) {
-      const ip = `Small ${pp} Pod`;
+    function jT(TT) {
+      const UT = `Small ${TT} Pod`;
       return {
-        [ip]: {
+        [UT]: {
           positions: [{
-            block: ip,
+            block: UT,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${pp} Pod Mid`,
+            block: `_Small ${TT} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${pp} Pod Top`,
+            block: `_Small ${TT} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3766,280 +3766,280 @@ export const modules = {
         }
       }
     }
-    for (const Pp in Sp) {
-      for (const pp of Sp[Pp].positions)
-        if (pp.id = op.e[pp.block].id, Pp === pp.block && (0 !== pp.x || 0 !== pp.y || 0 !== pp.z)) throw new Error(`Multiblock "${Pp}" has main block "${pp.block}" at non-origin position (${pp.x}, ${pp.y}, ${pp.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      Sp[op.e[Pp].id] = Sp[Pp]
+    for (const LT in gT) {
+      for (const TT of gT[LT].positions)
+        if (TT.id = zT.g[TT.block].id, LT === TT.block && (0 !== TT.x || 0 !== TT.y || 0 !== TT.z)) throw new Error(`Multiblock "${LT}" has main block "${TT.block}" at non-origin position (${TT.x}, ${TT.y}, ${TT.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      gT[zT.g[LT].id] = gT[LT]
     }
-    const Ap = {};
-    for (const Pp in Sp)
+    const lT = {};
+    for (const LT in gT)
       for (const {
-          block: pp,
-          x: ip,
-          y: cp,
-          z: Op
+          block: TT,
+          x: UT,
+          y: mT,
+          z: WT
         }
-        of Sp[Pp].positions) {
-        const Ip = {
-          mainMultiblock: Pp,
-          compX: ip,
-          compY: cp,
-          compZ: Op
+        of gT[LT].positions) {
+        const MT = {
+          mainMultiblock: LT,
+          compX: UT,
+          compY: mT,
+          compZ: WT
         };
-        Ap[pp] = Ip, Ap[op.e[pp].id] = Ip
+        lT[TT] = MT, lT[zT.g[TT].id] = MT
       }
   },
-  38438: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Lp,
-      g: () => xp
+  38364: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      f: () => nT
     });
-    var Op = cp(9338),
-      op = cp(9392),
-      Ip = cp(9399);
-    const Sp = op.s.map((pp => {
+    var WT = mT(9330),
+      zT = mT(9376),
+      MT = mT(9380);
+    const gT = zT.t.map((TT => {
       let {
-        dx: ip,
-        dz: cp
-      } = pp;
-      return [ip, 0, cp]
+        dx: UT,
+        dz: mT
+      } = TT;
+      return [UT, 0, mT]
     }));
 
-    function xp(pp) {
-      const ip = Op.e[pp];
-      return !!ip && pp !== Op.c && !ip.model && !ip.tW && !1 !== ip.solid && !ip.Ww
+    function nT(TT) {
+      const UT = WT.g[TT];
+      return !!UT && TT !== WT.c && !UT.model && !UT.RL && !1 !== UT.solid && !UT.oZ
     }
-    class Lp {
-      constructor(pp) {
-        this.model = pp, this.reshapeOffsets = [...Sp, [0, -1, 0]]
+    class HT {
+      constructor(TT) {
+        this.model = TT, this.reshapeOffsets = [...gT, [0, -1, 0]]
       }
-      handles(pp) {
-        const ip = Op.e[pp];
-        return (null === ip || void 0 === ip ? void 0 : ip.model) === this.model && void 0 !== ip.attachedTop
+      handles(TT) {
+        const UT = WT.g[TT];
+        return (null === UT || void 0 === UT ? void 0 : UT.model) === this.model && void 0 !== UT.attachedTop
       }
-      affects(pp) {
-        return this.handles(pp) || xp(pp) || (0, Ip.F)(Op.e[pp])
+      affects(TT) {
+        return this.handles(TT) || nT(TT) || (0, MT.u)(WT.g[TT])
       }
-      shape(pp, ip, cp, Sp, Lp) {
-        let Yp = this.handles(pp(ip, cp + 1, Sp)) ? op.h : 0;
-        return op.s.forEach(((Lp, Dp) => {
+      shape(TT, UT, mT, gT, HT) {
+        let kT = this.handles(TT(UT, mT + 1, gT)) ? zT.j : 0;
+        return zT.t.forEach(((HT, jT) => {
           let {
-            dx: Ap,
-            dz: Pp
-          } = Lp;
-          const Wp = pp(ip + Ap, cp, Sp + Pp);
-          (this.handles(Wp) || xp(Wp) || function(pp, ip) {
-            const cp = Op.e[pp];
-            return (0, Ip.F)(cp) && (0, Ip.x)(cp.meta.rot) === (0 !== op.s[ip].dx)
-          }(Wp, Dp)) && (Yp |= 1 << Dp)
-        })), (0, Op.f)((0, op.j)(Op.e[Lp].meta.rootName, Yp))
+            dx: lT,
+            dz: LT
+          } = HT;
+          const pT = TT(UT + lT, mT, gT + LT);
+          (this.handles(pT) || nT(pT) || function(TT, UT) {
+            const mT = WT.g[TT];
+            return (0, MT.u)(mT) && (0, MT.p)(mT.meta.rot) === (0 !== zT.t[UT].dx)
+          }(pT, jT)) && (kT |= 1 << jT)
+        })), (0, WT.j)((0, zT.l)(WT.g[HT].meta.rootName, kT))
       }
     }
   },
-  38218: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      var cp;
-      ip || (ip = {});
-      const Op = null !== (cp = ip.customAttributes) && void 0 !== cp ? cp : {};
-      var op, Ip, Sp;
-      "Gun" === (null === pp || void 0 === pp ? void 0 : pp.type) && (Op.shotsLeft = null !== (op = null !== (Ip = Op.shotsLeft) && void 0 !== Ip ? Ip : null === (Sp = Op.gunStats) || void 0 === Sp ? void 0 : Sp.clipSize) && void 0 !== op ? op : pp.clipSize);
-      if (Op.enchantmentTier && (Op.enchantmentTier = Op.enchantmentTier.toString()), Op.enchantments)
-        for (const Ap in Op.enchantments) {
-          const pp = Op.enchantments[Ap];
-          if ("number" !== typeof pp) {
-            const ip = parseInt(pp);
-            isNaN(ip) || ip < 0 ? Op.enchantments[Ap] = void 0 : Op.enchantments[Ap] = ip > 1e9 ? 1e9 : ip
+  38136: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      var mT;
+      UT || (UT = {});
+      const WT = null !== (mT = UT.customAttributes) && void 0 !== mT ? mT : {};
+      var zT, MT, gT;
+      "Gun" === (null === TT || void 0 === TT ? void 0 : TT.type) && (WT.shotsLeft = null !== (zT = null !== (MT = WT.shotsLeft) && void 0 !== MT ? MT : null === (gT = WT.gunStats) || void 0 === gT ? void 0 : gT.clipSize) && void 0 !== zT ? zT : TT.clipSize);
+      if (WT.enchantmentTier && (WT.enchantmentTier = WT.enchantmentTier.toString()), WT.enchantments)
+        for (const lT in WT.enchantments) {
+          const TT = WT.enchantments[lT];
+          if ("number" !== typeof TT) {
+            const UT = parseInt(TT);
+            isNaN(UT) || UT < 0 ? WT.enchantments[lT] = void 0 : WT.enchantments[lT] = UT > 1e9 ? 1e9 : UT
           }
         }
-      if (Op.enchantmentData)
-        for (const Ap in Op.enchantmentData) {
-          const pp = Op.enchantmentData[Ap];
-          if (!pp) continue;
-          if ("object" !== typeof pp) {
-            Op.enchantmentData[Ap] = void 0;
+      if (WT.enchantmentData)
+        for (const lT in WT.enchantmentData) {
+          const TT = WT.enchantmentData[lT];
+          if (!TT) continue;
+          if ("object" !== typeof TT) {
+            WT.enchantmentData[lT] = void 0;
             continue
           }
-          const ip = pp.icon,
-            cp = pp.description;
-          var xp, Lp, Yp, Dp;
-          if ("string" !== typeof ip) Op.enchantmentData[Ap].icon = null !== (xp = null === ip || void 0 === ip || null === (Lp = ip.toString) || void 0 === Lp ? void 0 : Lp.call(ip)) && void 0 !== xp ? xp : void 0;
-          if ("string" !== typeof cp) Op.enchantmentData[Ap].description = null !== (Yp = null === cp || void 0 === cp || null === (Dp = cp.toString) || void 0 === Dp ? void 0 : Dp.call(cp)) && void 0 !== Yp ? Yp : void 0
+          const UT = TT.icon,
+            mT = TT.description;
+          var nT, HT, kT, jT;
+          if ("string" !== typeof UT) WT.enchantmentData[lT].icon = null !== (nT = null === UT || void 0 === UT || null === (HT = UT.toString) || void 0 === HT ? void 0 : HT.call(UT)) && void 0 !== nT ? nT : void 0;
+          if ("string" !== typeof mT) WT.enchantmentData[lT].description = null !== (kT = null === mT || void 0 === mT || null === (jT = mT.toString) || void 0 === jT ? void 0 : jT.call(mT)) && void 0 !== kT ? kT : void 0
         }
-      return ip.customAttributes = Op, ip
+      return UT.customAttributes = WT, UT
     }
-    cp.d(ip, {
-      e: () => Op
+    mT.d(UT, {
+      c: () => WT
     })
   },
-  38430: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => kp,
-      c: () => vp,
-      d: () => Lp,
-      e: () => Ap,
-      i: () => mp
+  38357: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => eT,
+      h: () => vT,
+      l: () => HT,
+      p: () => lT,
+      q: () => YT
     });
-    var Op = cp(9338),
-      op = cp(9375),
-      Ip = cp(38438);
-    const Sp = (0, Op.f)("Noticeboard"),
-      xp = (0, Op.f)("Standing Noticeboard|meta|rot4|lrud");
+    var WT = mT(9330),
+      zT = mT(9360),
+      MT = mT(38364);
+    const gT = (0, WT.j)("Noticeboard"),
+      nT = (0, WT.j)("Standing Noticeboard|meta|rot4|lrud");
 
-    function Lp(pp) {
-      return Sp <= pp && pp <= xp
+    function HT(TT) {
+      return gT <= TT && TT <= nT
     }
-    const Yp = new Uint8Array(xp - Sp + 1);
-    for (let Rp = Sp; Rp <= xp; Rp++) Yp[Rp - Sp] = (0, op.t)(Op.e[Rp].meta.metaStr);
-    const Dp = 64,
-      Ap = Dp * Dp,
-      [Pp, Wp, yp, Up] = [0, 1, 2, 3];
+    const kT = new Uint8Array(nT - gT + 1);
+    for (let JT = gT; JT <= nT; JT++) kT[JT - gT] = (0, zT.u)(WT.g[JT].meta.metaStr);
+    const jT = 64,
+      lT = jT * jT,
+      [LT, pT, BT, ZT] = [0, 1, 2, 3];
 
-    function wp(pp) {
-      var ip, cp;
-      return "string" === typeof(null === pp || void 0 === pp || null === (ip = pp.persisted) || void 0 === ip || null === (cp = ip.shared) || void 0 === cp ? void 0 : cp.text)
-    }
-
-    function vp(pp) {
-      return wp(pp) && "" !== pp.persisted.shared.text.trim()
+    function cT(TT) {
+      var UT, mT;
+      return "string" === typeof(null === TT || void 0 === TT || null === (UT = TT.persisted) || void 0 === UT || null === (mT = UT.shared) || void 0 === mT ? void 0 : mT.text)
     }
 
-    function tp(pp, ip) {
-      let [cp, , Op] = ip;
-      const [Ip, , Sp] = op.x[pp][Wp];
-      return cp * Ip + Op * Sp
+    function vT(TT) {
+      return cT(TT) && "" !== TT.persisted.shared.text.trim()
     }
 
-    function Hp(pp, ip, cp) {
-      return cp[1] - ip[1] || tp(pp, ip) - tp(pp, cp)
+    function fT(TT, UT) {
+      let [mT, , WT] = UT;
+      const [MT, , gT] = zT.A[TT][pT];
+      return mT * MT + WT * gT
     }
 
-    function dp(pp, ip, cp, Ip, xp) {
-      var Lp;
-      let Dp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : pp(ip[0], ip[1], ip[2]);
-      if (!(Yp[Dp - Sp] & 1 << cp)) return null;
-      const [Ap, Pp, Wp] = op.x[xp][cp], yp = [ip[0] + Ap, ip[1] + Pp, ip[2] + Wp], Up = pp(yp[0], yp[1], yp[2]), wp = null === (Lp = Op.e[Up]) || void 0 === Lp ? void 0 : Lp.meta;
-      return (null === wp || void 0 === wp ? void 0 : wp.rootId) === Ip && wp.rot === xp && Yp[Up - Sp] & 1 << (1 ^ cp) ? yp : null
+    function qT(TT, UT, mT) {
+      return mT[1] - UT[1] || fT(TT, UT) - fT(TT, mT)
     }
 
-    function ep(pp, ip, cp, Ip) {
-      const Sp = pp(ip, cp, Ip);
-      if (!Lp(Sp)) return null;
+    function iT(TT, UT, mT, MT, nT) {
+      var HT;
+      let jT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : TT(UT[0], UT[1], UT[2]);
+      if (!(kT[jT - gT] & 1 << mT)) return null;
+      const [lT, LT, pT] = zT.A[nT][mT], BT = [UT[0] + lT, UT[1] + LT, UT[2] + pT], ZT = TT(BT[0], BT[1], BT[2]), cT = null === (HT = WT.g[ZT]) || void 0 === HT ? void 0 : HT.meta;
+      return (null === cT || void 0 === cT ? void 0 : cT.rootId) === MT && cT.rot === nT && kT[ZT - gT] & 1 << (1 ^ mT) ? BT : null
+    }
+
+    function bT(TT, UT, mT, MT) {
+      const gT = TT(UT, mT, MT);
+      if (!HT(gT)) return null;
       const {
-        rootId: xp,
-        rot: Yp
-      } = Op.e[Sp].meta, Ap = (ip, cp) => {
-        let Op = ip,
-          op = 1;
-        for (let Ip = dp(pp, Op, cp, xp, Yp); Ip && op < Dp; Ip = dp(pp, Op, cp, xp, Yp)) Op = Ip, op++;
+        rootId: nT,
+        rot: kT
+      } = WT.g[gT].meta, lT = (UT, mT) => {
+        let WT = UT,
+          zT = 1;
+        for (let MT = iT(TT, WT, mT, nT, kT); MT && zT < jT; MT = iT(TT, WT, mT, nT, kT)) WT = MT, zT++;
         return {
-          end: Op,
-          cells: op
+          end: WT,
+          cells: zT
         }
-      }, wp = Ap(Ap([ip, cp, Ip], Pp).end, yp).end, vp = Ap(wp, Wp).cells, [tp, , Hp] = op.x[Yp][Wp];
-      let ep = 1;
-      pp: for (; ep < Dp; ep++)
-        for (let ip = 0; ip < vp; ip++)
-          if (!dp(pp, [wp[0] + tp * ip, wp[1] - ep + 1, wp[2] + Hp * ip], Up, xp, Yp)) break pp;
+      }, cT = lT(lT([UT, mT, MT], LT).end, BT).end, vT = lT(cT, pT).cells, [fT, , qT] = zT.A[kT][pT];
+      let bT = 1;
+      TT: for (; bT < jT; bT++)
+        for (let UT = 0; UT < vT; UT++)
+          if (!iT(TT, [cT[0] + fT * UT, cT[1] - bT + 1, cT[2] + qT * UT], ZT, nT, kT)) break TT;
       return {
-        anchor: wp,
-        rootId: xp,
-        rot: Yp,
-        width: vp,
-        height: ep
+        anchor: cT,
+        rootId: nT,
+        rot: kT,
+        width: vT,
+        height: bT
       }
     }
 
-    function jp(pp, ip) {
-      for (const cp of function(pp) {
+    function OT(TT, UT) {
+      for (const mT of function(TT) {
           let {
-            anchor: ip,
-            rot: cp,
-            width: Op,
-            height: Ip
-          } = pp;
-          const [Sp, , xp] = op.x[cp][Wp], Lp = [];
-          for (let op = 0; op < Ip; op++)
-            for (let pp = 0; pp < Op; pp++) Lp.push([ip[0] + Sp * pp, ip[1] - op, ip[2] + xp * pp]);
-          return Lp
-        }(pp))
-        if (wp(ip(cp[0], cp[1], cp[2]))) return cp;
+            anchor: UT,
+            rot: mT,
+            width: WT,
+            height: MT
+          } = TT;
+          const [gT, , nT] = zT.A[mT][pT], HT = [];
+          for (let zT = 0; zT < MT; zT++)
+            for (let TT = 0; TT < WT; TT++) HT.push([UT[0] + gT * TT, UT[1] - zT, UT[2] + nT * TT]);
+          return HT
+        }(TT))
+        if (cT(UT(mT[0], mT[1], mT[2]))) return mT;
       return null
     }
 
-    function kp(pp, ip, cp, op, Ip) {
-      const Sp = pp(cp, op, Ip);
-      if (!Lp(Sp)) return null;
+    function eT(TT, UT, mT, zT, MT) {
+      const gT = TT(mT, zT, MT);
+      if (!HT(gT)) return null;
       const {
-        rootId: xp,
-        rot: Yp
-      } = Op.e[Sp].meta, Dp = [
-        [cp, op, Ip]
-      ], Pp = new Set([Dp[0].join()]);
-      let Wp = Dp[0],
-        yp = null;
-      for (let Op = 0; Op < Dp.length; Op++) {
-        const cp = Dp[Op];
-        if (Hp(Yp, cp, Wp) < 0 && (Wp = cp), wp(ip(cp[0], cp[1], cp[2]))) {
-          const ip = ep(pp, cp[0], cp[1], cp[2]);
-          (!yp || Hp(Yp, ip.anchor, yp.anchor) < 0) && (yp = ip)
+        rootId: nT,
+        rot: kT
+      } = WT.g[gT].meta, jT = [
+        [mT, zT, MT]
+      ], LT = new Set([jT[0].join()]);
+      let pT = jT[0],
+        BT = null;
+      for (let WT = 0; WT < jT.length; WT++) {
+        const mT = jT[WT];
+        if (qT(kT, mT, pT) < 0 && (pT = mT), cT(UT(mT[0], mT[1], mT[2]))) {
+          const UT = bT(TT, mT[0], mT[1], mT[2]);
+          (!BT || qT(kT, UT.anchor, BT.anchor) < 0) && (BT = UT)
         }
-        for (let ip = 0; ip < 4 && Dp.length < Ap; ip++) {
-          const Op = dp(pp, cp, ip, xp, Yp);
-          Op && !Pp.has(Op.join()) && (Pp.add(Op.join()), Dp.push(Op))
+        for (let UT = 0; UT < 4 && jT.length < lT; UT++) {
+          const WT = iT(TT, mT, UT, nT, kT);
+          WT && !LT.has(WT.join()) && (LT.add(WT.join()), jT.push(WT))
         }
       }
-      return yp ??= ep(pp, Wp[0], Wp[1], Wp[2]), {
-        cells: Dp,
-        topLeft: Wp,
-        rect: yp,
-        textCell: jp(yp, ip)
+      return BT ??= bT(TT, pT[0], pT[1], pT[2]), {
+        cells: jT,
+        topLeft: pT,
+        rect: BT,
+        textCell: OT(BT, UT)
       }
     }
 
-    function mp(pp, ip, cp, Sp, xp) {
-      if (null !== cp && Lp(cp)) {
+    function YT(TT, UT, mT, gT, nT) {
+      if (null !== mT && HT(mT)) {
         const {
-          rootName: pp,
-          rot: ip
-        } = Op.e[cp].meta;
-        if (op.x[ip].some((pp => {
-            let [ip, cp, Op] = pp;
-            return ip === Sp[0] && cp === Sp[1] && Op === Sp[2]
+          rootName: TT,
+          rot: UT
+        } = WT.g[mT].meta;
+        if (zT.A[UT].some((TT => {
+            let [UT, mT, WT] = TT;
+            return UT === gT[0] && mT === gT[1] && WT === gT[2]
           }))) return {
-          root: pp,
-          rot: ip
+          root: TT,
+          rot: UT
         }
       }
-      const [Yp, Dp] = op.n[xp], Ap = pp(ip[0] - Yp, ip[1], ip[2] - Dp);
+      const [kT, jT] = zT.p[nT], lT = TT(UT[0] - kT, UT[1], UT[2] - jT);
       return {
-        root: (0, Ip.g)(Ap) ? op.A : op.y,
-        rot: xp
+        root: (0, MT.f)(lT) ? zT.G : zT.D,
+        rot: nT
       }
     }
   },
-  38443: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ip,
-      f: () => Sp,
-      g: () => op,
-      k: () => xp
+  38372: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => MT,
+      g: () => gT,
+      k: () => zT,
+      n: () => nT
     });
-    var Op = cp(341);
-    const op = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...cp(636).r.map((pp => `${pp} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Op.h, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      Ip = ["Obby RPG"];
+    var WT = mT(373);
+    const zT = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...mT(649).t.map((TT => `${TT} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...WT.i, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      MT = ["Obby RPG"];
 
-    function Sp(pp) {
-      const ip = pp.indexOf("|");
-      return -1 === ip ? {
-        item: pp,
+    function gT(TT) {
+      const UT = TT.indexOf("|");
+      return -1 === UT ? {
+        item: TT,
         clientPredictedThrower: null
       } : {
-        item: pp.slice(0, ip),
-        clientPredictedThrower: pp.slice(ip + 1)
+        item: TT.slice(0, UT),
+        clientPredictedThrower: TT.slice(UT + 1)
       }
     }
-    const xp = [...op, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const nT = [...zT, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,73 +1,73 @@
 export const id = 69;
 export const ids = [69];
 export const modules = {
-  36647: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      noteJsEngine: () => bp,
-      noteJsJoin: () => np,
-      noteWasmJoin: () => Fp,
-      noteWasmPick: () => hp,
-      noteWebGpuLoss: () => gp,
-      startWebGpuLossDebug: () => fp
+  36496: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      noteJsEngine: () => VT,
+      noteJsJoin: () => rT,
+      noteWasmJoin: () => KT,
+      noteWasmPick: () => uT,
+      noteWebGpuLoss: () => ST,
+      startWebGpuLossDebug: () => PT
     });
-    var Op = cp(322),
-      op = cp(25),
-      Ip = cp(2860),
-      Sp = cp(3564),
-      xp = cp(657),
-      Lp = cp(104),
-      Yp = cp(108),
-      Dp = cp(2865),
-      Ap = cp(44),
-      Pp = cp(118),
-      Wp = cp(314),
-      yp = cp(650),
-      Up = cp(2908),
-      wp = cp(337),
-      vp = cp(335),
-      tp = cp(34354);
-    const Hp = 40,
-      dp = 160;
+    var WT = mT(351),
+      zT = mT(25),
+      MT = mT(2891),
+      gT = mT(3551),
+      nT = mT(681),
+      HT = mT(102),
+      kT = mT(108),
+      jT = mT(2893),
+      lT = mT(44),
+      LT = mT(117),
+      pT = mT(340),
+      BT = mT(675),
+      ZT = mT(2929),
+      cT = mT(366),
+      vT = mT(363),
+      fT = mT(34198);
+    const qT = 40,
+      iT = 160;
 
-    function ep(pp, ip) {
-      return `"${(pp.length>ip?`${pp.slice(0,ip)}...`:pp).replace(/[^ -~]|["\\]/g,"?")}"`
+    function bT(TT, UT) {
+      return `"${(TT.length>UT?`${TT.slice(0,UT)}...`:TT).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function jp(pp) {
-      return pp ? "yes" : "no"
+    function OT(TT) {
+      return TT ? "yes" : "no"
     }
 
-    function kp(pp) {
-      var ip;
-      const cp = pp.storedRenderer;
-      return [`loss holds ${jp(pp.lossHolds)}`, `stops packs ${jp(pp.lossStopsPack)}`, `any loss ${jp(pp.anyLoss)}`, `old intel ${jp(pp.oldIntelDriver)}`, `default off for packs ${jp(pp.defaultOffForPacks)}`, `default off reason ${null!==(ip=pp.defaultOffReason)&&void 0!==ip?ip:"none"}`, `setting ${pp.setting?"on":"off"} (stored ${null===pp.settingStored?"unset":pp.settingStored?"on":"off"})`, `renderer url ${null===pp.urlRenderer?"none":ep(pp.urlRenderer,12)}, stored ${null===cp||void 0===cp?"none":ep(String(cp),12)}`].join(", ")
+    function eT(TT) {
+      var UT;
+      const mT = TT.storedRenderer;
+      return [`loss holds ${OT(TT.lossHolds)}`, `stops packs ${OT(TT.lossStopsPack)}`, `any loss ${OT(TT.anyLoss)}`, `old intel ${OT(TT.oldIntelDriver)}`, `default off for packs ${OT(TT.defaultOffForPacks)}`, `default off reason ${null!==(UT=TT.defaultOffReason)&&void 0!==UT?UT:"none"}`, `setting ${TT.setting?"on":"off"} (stored ${null===TT.settingStored?"unset":TT.settingStored?"on":"off"})`, `renderer url ${null===TT.urlRenderer?"none":bT(TT.urlRenderer,12)}, stored ${null===mT||void 0===mT?"none":bT(String(mT),12)}`].join(", ")
     }
 
-    function mp(pp) {
-      if (null === pp) return "no renderer settled";
+    function YT(TT) {
+      if (null === TT) return "no renderer settled";
       const {
-        requested: ip,
-        choice: cp,
-        source: Op,
-        fallbackReason: op
-      } = pp;
-      return `renderer requested ${ip}, runs ${cp}, from ${Op}${null===op?"":`, fell back: ${ep(op,80)}`}`
+        requested: UT,
+        choice: mT,
+        source: WT,
+        fallbackReason: zT
+      } = TT;
+      return `renderer requested ${UT}, runs ${mT}, from ${WT}${null===zT?"":`, fell back: ${bT(zT,80)}`}`
     }
 
-    function Rp(pp, ip) {
-      return pp ? `stopping packs: iOS, ${null!==ip&&void 0!==ip?ip:1} losses in a row within a day` : "stopping packs"
+    function JT(TT, UT) {
+      return TT ? `stopping packs: iOS, ${null!==UT&&void 0!==UT?UT:1} losses in a row within a day` : "stopping packs"
     }
 
-    function qp(pp) {
-      var ip, cp, Op;
-      return `pick (wasm): backend ${null!==(ip=pp.backend)&&void 0!==ip?ip:"none"}, webgpu fallback ${null!==(cp=pp.reason)&&void 0!==cp?cp:"none"}, from ${null!==(Op=pp.source)&&void 0!==Op?Op:"none"}, storage pull breaks ${jp(pp.storagePullBreaks)}; packs run ${jp("webgpu"===pp.backend)}, else ${pp.noWebGpu}`
+    function xT(TT) {
+      var UT, mT, WT;
+      return `pick (wasm): backend ${null!==(UT=TT.backend)&&void 0!==UT?UT:"none"}, webgpu fallback ${null!==(mT=TT.reason)&&void 0!==mT?mT:"none"}, from ${null!==(WT=TT.source)&&void 0!==WT?WT:"none"}, storage pull breaks ${OT(TT.storagePullBreaks)}; packs run ${OT("webgpu"===TT.backend)}, else ${TT.noWebGpu}`
     }
 
-    function Mp(pp, ip, cp) {
-      return `pack ${null===pp?"(name not read)":ep(pp,Hp)} ${ip}${null===cp?"":`, ${cp} variants`}`
+    function dT(TT, UT, mT) {
+      return `pack ${null===TT?"(name not read)":bT(TT,qT)} ${UT}${null===mT?"":`, ${mT} variants`}`
     }
-    const Cp = "shaderPack:failedWebGpuOff",
-      Ep = new class {
+    const wT = "shaderPack:failedWebGpuOff",
+      tT = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -75,170 +75,170 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const pp = !this.noPackSaid;
-          return this.noPackSaid = !0, pp
+          const TT = !this.noPackSaid;
+          return this.noPackSaid = !0, TT
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let Xp = null,
-      lp = null,
-      Qp = 0;
+    let aT = null,
+      yT = null,
+      XT = 0;
 
-    function Jp(pp) {
-      (0, Up.n)("webgpuloss", pp)
+    function IT(TT) {
+      (0, ZT.m)("webgpuloss", TT)
     }
 
-    function Bp() {
+    function QT() {
       return {
-        lossHolds: (0, Wp.y)(),
-        lossStopsPack: (0, Wp.E)(),
-        anyLoss: (0, Wp.f)(),
-        oldIntelDriver: !0 === Ap.h.getItem(Pp.D),
-        defaultOffForPacks: op.c.isWebGpuDefaultOff(),
-        defaultOffReason: op.c.webGpuDefaultOffReason(),
-        settingStored: Ap.h.getItem(Op.tc),
-        setting: op.c.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: Yp.currentUrl.getSearchParam(Dp.c),
-        storedRenderer: Ap.h.getItem(Dp.g)
+        lossHolds: (0, pT.u)(),
+        lossStopsPack: (0, pT.z)(),
+        anyLoss: (0, pT.h)(),
+        oldIntelDriver: !0 === lT.l.getItem(LT.E),
+        defaultOffForPacks: zT.b.isWebGpuDefaultOff(),
+        defaultOffReason: zT.b.webGpuDefaultOffReason(),
+        settingStored: lT.l.getItem(WT.ac),
+        setting: zT.b.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: kT.currentUrl.getSearchParam(jT.c),
+        storedRenderer: lT.l.getItem(jT.e)
       }
     }
 
-    function Np(pp) {
-      return function(pp, ip, cp) {
-        if (null === pp || void 0 === pp) return "none";
-        if ("object" !== typeof pp) return `unreadable (${typeof pp})`;
-        const Op = pp,
-          op = "number" === typeof Op.at ? Op.at : null,
-          Ip = ["browser " + (ip ? "this one" : "another"), null === op ? "no time" : `set ${((cp-op)/wp.m).toFixed(1)} h ago`, `losses ${"number"===typeof Op.losses?Op.losses:"unset (1)"}${null!==op&&cp-op<wp.i?", the last within a day":""}`, `first page ${"hidden"===Op.firstPage||"visible"===Op.firstPage?Op.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof Op.holdStep?Op.holdStep:"unset (1)"}`];
-        if (void 0 !== Op.reason || void 0 !== Op.message) {
-          const pp = "string" === typeof Op.reason ? ep(Op.reason, vp.d) : "no reason";
-          Ip.push(`cause ${pp} ${!0===Op.causeSent?"reported":"unreported"}`)
+    function sT(TT) {
+      return function(TT, UT, mT) {
+        if (null === TT || void 0 === TT) return "none";
+        if ("object" !== typeof TT) return `unreadable (${typeof TT})`;
+        const WT = TT,
+          zT = "number" === typeof WT.at ? WT.at : null,
+          MT = ["browser " + (UT ? "this one" : "another"), null === zT ? "no time" : `set ${((mT-zT)/cT.o).toFixed(1)} h ago`, `losses ${"number"===typeof WT.losses?WT.losses:"unset (1)"}${null!==zT&&mT-zT<cT.k?", the last within a day":""}`, `first page ${"hidden"===WT.firstPage||"visible"===WT.firstPage?WT.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof WT.holdStep?WT.holdStep:"unset (1)"}`];
+        if (void 0 !== WT.reason || void 0 !== WT.message) {
+          const TT = "string" === typeof WT.reason ? bT(WT.reason, vT.d) : "no reason";
+          MT.push(`cause ${TT} ${!0===WT.causeSent?"reported":"unreported"}`)
         }
-        return Ip.join(", ")
-      }(pp, function(pp) {
+        return MT.join(", ")
+      }(TT, function(TT) {
         try {
-          return "object" === typeof pp && null !== pp && pp.browser === (0, Wp.c)()
+          return "object" === typeof TT && null !== TT && TT.browser === (0, pT.f)()
         } catch {
           return !1
         }
-      }(pp), Date.now())
+      }(TT), Date.now())
     }
 
-    function Tp() {
-      const pp = (0, Wp.p)().now;
-      return "number" === typeof(null === pp || void 0 === pp ? void 0 : pp.losses) ? pp.losses : null
+    function FT() {
+      const TT = (0, pT.l)().now;
+      return "number" === typeof(null === TT || void 0 === TT ? void 0 : TT.losses) ? TT.losses : null
     }
 
-    function fp() {
+    function PT() {
       const {
-        atLoad: pp,
-        now: ip,
-        unreported: cp
-      } = (0, Wp.p)(), Op = JSON.stringify(pp) === JSON.stringify(ip) ? "aW" : `now ${Np(ip)}`;
-      Jp(`load (${xp.z?"wasm":"js"}, os ${(0,Lp.getOperatingSystem)()}): stored loss ${Np(pp)}; ${Op}; cause kept apart ${function(pp,ip){if(null===pp||void 0===pp)return"none";const{reason:cp,at:Op}="object"===typeof pp?pp:{},op="number"===typeof Op?`
+        atLoad: TT,
+        now: UT,
+        unreported: mT
+      } = (0, pT.l)(), WT = JSON.stringify(TT) === JSON.stringify(UT) ? "Jp" : `now ${sT(UT)}`;
+      IT(`load (${nT.B?"wasm":"js"}, os ${(0,HT.getOperatingSystem)()}): stored loss ${sT(TT)}; ${WT}; cause kept apart ${function(TT,UT){if(null===TT||void 0===TT)return"none";const{reason:mT,at:WT}="object"===typeof TT?TT:{},zT="number"===typeof WT?`
         set $ {
-          ((ip - Op) / wp.m).toFixed(1)
+          ((UT - WT) / cT.o).toFixed(1)
         }
         h ago`:"no time";return`
         $ {
-          "string" === typeof cp ? ep(cp, vp.d) : "no reason"
+          "string" === typeof mT ? bT(mT, vT.d) : "no reason"
         }, $ {
-          op
+          zT
         }
-        `}((0,yp.f)(),Date.now())}; unreported ${function(pp,ip){if(null===pp||void 0===pp||"object"!==typeof pp)return"none";const cp=pp;return ip.map((pp=>`${pp} ${"number"===typeof cp[pp]?cp[pp]:0}`)).join(", ")}(cp,Wp.b)}; webgpu_loss_page ${Wp.C}`), Jp(`load: ${kp(Bp())}; pack expected ${(0,Sp.e)(Lp.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}((0,BT.g)(),Date.now())}; unreported ${function(TT,UT){if(null===TT||void 0===TT||"object"!==typeof TT)return"none";const mT=TT;return UT.map((TT=>`${TT} ${"number"===typeof mT[TT]?mT[TT]:0}`)).join(", ")}(mT,pT.e)}; webgpu_loss_page ${pT.v}`), IT(`load: ${eT(QT())}; pack expected ${(0,gT.i)(HT.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function bp(pp) {
-      Xp = pp, Jp(function(pp, ip, cp) {
-        const Op = pp.setting ? "the setting is on" : (0, tp.c)(pp.packActive, pp.defaultOffForPacks) ? "the pack forces it" : pp.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${jp(pp.useWebGpu)} (${Op}); ${mp(ip)}; webgpu fallback ${null!==cp&&void 0!==cp?cp:"unset"}`
-      }(pp, (0, Ip.j)(), (0, Lp.getWebGpuFallbackReason)()))
+    function VT(TT) {
+      aT = TT, IT(function(TT, UT, mT) {
+        const WT = TT.setting ? "the setting is on" : (0, fT.c)(TT.packActive, TT.defaultOffForPacks) ? "the pack forces it" : TT.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${OT(TT.useWebGpu)} (${WT}); ${YT(UT)}; webgpu fallback ${null!==mT&&void 0!==mT?mT:"unset"}`
+      }(TT, (0, MT.j)(), (0, HT.getWebGpuFallbackReason)()))
     }
 
-    function hp(pp) {
-      lp = pp, Jp(qp(pp))
+    function uT(TT) {
+      yT = TT, IT(xT(TT))
     }
-    async function ap(pp, ip, Op, op) {
-      const Ip = ++Qp,
-        Sp = await async function(pp) {
-          var ip, Op;
+    async function CT(TT, UT, WT, zT) {
+      const MT = ++XT,
+        gT = await async function(TT) {
+          var UT, WT;
           const [{
-            shaderPackPage: op,
-            harnessShaderPackMode: Ip
+            shaderPackPage: zT,
+            harnessShaderPackMode: MT
           }, {
-            getShaderPackPolicy: Sp
+            getShaderPackPolicy: gT
           }, {
-            packRunsIn: xp
-          }] = await Promise.all([cp.e(117).then((() => cp(39396))), cp.e(93).then((() => cp(41507))), cp.e(141).then((() => cp(41515)))]), Lp = await op.load();
-          if ("none" === Lp.status) return null;
-          const Yp = null !== (ip = Ip()) && void 0 !== ip ? ip : Sp(pp),
-            Dp = "active" === Lp.status ? Lp.pack.variants : Lp.variants,
-            Ap = xp(Dp, Yp);
+            packRunsIn: nT
+          }] = await Promise.all([mT.e(117).then((() => mT(39343))), mT.e(93).then((() => mT(41427))), mT.e(141).then((() => mT(41429)))]), HT = await zT.load();
+          if ("none" === HT.status) return null;
+          const kT = null !== (UT = MT()) && void 0 !== UT ? UT : gT(TT),
+            jT = "active" === HT.status ? HT.pack.variants : HT.variants,
+            lT = nT(jT, kT);
           return {
-            text: `${"active"===Lp.status?Mp(Lp.pack.name,"active",Dp.length):Mp(null,`blocked (${Lp.messageKey})`,null!==(Op=null===Dp||void 0===Dp?void 0:Dp.length)&&void 0!==Op?Op:null)}; game policy ${Yp}, runs in it ${Ap?"yes":"no"}`,
-            runs: Ap
+            text: `${"active"===HT.status?dT(HT.pack.name,"active",jT.length):dT(null,`blocked (${HT.messageKey})`,null!==(WT=null===jT||void 0===jT?void 0:jT.length)&&void 0!==WT?WT:null)}; game policy ${kT}, runs in it ${lT?"yes":"no"}`,
+            runs: lT
           }
-        }(pp);
-      if (null === Sp) return void(Ep.noPack() && Jp(`join ${Ip}: no shader pack on this page (further joins without one not logged)`));
-      const xp = Ep.join();
-      if ("none" === xp) return;
-      if ("cap" === xp) return void Jp(`join ${Ip}: further joins not logged`);
-      const Lp = function(pp) {
-          switch (pp.status) {
+        }(TT);
+      if (null === gT) return void(tT.noPack() && IT(`join ${MT}: no shader pack on this page (further joins without one not logged)`));
+      const nT = tT.join();
+      if ("none" === nT) return;
+      if ("cap" === nT) return void IT(`join ${MT}: further joins not logged`);
+      const HT = function(TT) {
+          switch (TT.status) {
             case "ok":
-              return void 0 === pp.couldntRun ? "joined" : `joined without the pack: ${pp.couldntRun}`;
-            case "OO":
-              return "OO";
+              return void 0 === TT.couldntRun ? "joined" : `joined without the pack: ${TT.couldntRun}`;
+            case "Km":
+              return "Km";
             case "failed":
-              return `failed: ${pp.messageKey}`
+              return `failed: ${TT.messageKey}`
           }
-        }(ip),
-        Yp = ("ok" === ip.status ? ip.couldntRun : "failed" === ip.status ? ip.messageKey : void 0) === Cp ? `; cause: ${op()}` : "";
-      "outcome" !== xp ? (Jp(`join ${Ip}: ${Sp.text}`), Sp.runs && (Jp(`join ${Ip}: needs WebGPU; ${Op()}`), Jp(`join ${Ip}: ${kp(Bp())}`)), Jp(`join ${Ip}: ${Lp}${Yp}`)) : Jp(`join ${Ip}: ${Lp}${Yp}`)
+        }(UT),
+        kT = ("ok" === UT.status ? UT.couldntRun : "failed" === UT.status ? UT.messageKey : void 0) === wT ? `; cause: ${zT()}` : "";
+      "outcome" !== nT ? (IT(`join ${MT}: ${gT.text}`), gT.runs && (IT(`join ${MT}: needs WebGPU; ${WT()}`), IT(`join ${MT}: ${eT(QT())}`)), IT(`join ${MT}: ${HT}${kT}`)) : IT(`join ${MT}: ${HT}${kT}`)
     }
 
-    function np(pp, ip, cp) {
-      var Op;
-      const op = null !== (Op = null === ip || void 0 === ip ? void 0 : ip.isRunning()) && void 0 !== Op && Op;
-      return ap(pp, cp, (() => `Lite runtime ${null===ip?"no":"yes, running "+(op?"yes":"no")}; ${mp((0,Ip.j)())}`), (() => {
-        return pp = Xp, ip = Bp(), cp = "ios" === (0, Lp.getOperatingSystem)(), Op = Tp(), null === pp ? "engine choice not seen" : pp.packActive ? (0, tp.c)(pp.packActive, pp.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : ip.lossStopsPack ? `a loss ${Rp(cp,Op)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (ip.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var pp, ip, cp, Op
+    function rT(TT, UT, mT) {
+      var WT;
+      const zT = null !== (WT = null === UT || void 0 === UT ? void 0 : UT.isRunning()) && void 0 !== WT && WT;
+      return CT(TT, mT, (() => `Lite runtime ${null===UT?"no":"yes, running "+(zT?"yes":"no")}; ${YT((0,MT.j)())}`), (() => {
+        return TT = aT, UT = QT(), mT = "ios" === (0, HT.getOperatingSystem)(), WT = FT(), null === TT ? "engine choice not seen" : TT.packActive ? (0, fT.c)(TT.packActive, TT.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : UT.lossStopsPack ? `a loss ${JT(mT,WT)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (UT.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var TT, UT, mT, WT
       }))
     }
 
-    function Fp(pp, ip, cp) {
-      return ap(pp, null !== ip ? {
+    function KT(TT, UT, mT) {
+      return CT(TT, null !== UT ? {
         status: "failed",
-        messageKey: ip
+        messageKey: UT
       } : {
         status: "ok",
-        couldntRun: null !== cp && void 0 !== cp ? cp : void 0
-      }, (() => null === lp ? "pick not seen" : qp(lp)), (() => function(pp, ip, cp, Op) {
-        var op, Ip, Sp, xp;
-        return null === pp ? "pick not seen" : "off_after_loss" === pp.reason ? `off after a loss, ${"pack"===pp.source?Rp(cp,Op):`from ${null!==(xp=pp.source)&&void 0!==xp?xp:"none"}`}` : "not_requested" === pp.reason ? `not requested, from ${null!==(Sp=pp.source)&&void 0!==Sp?Sp:"none"} (setting ${ip.setting?"on":"off"})` : `${null!==(op=pp.reason)&&void 0!==op?op:"none"}, from ${null!==(Ip=pp.source)&&void 0!==Ip?Ip:"none"}`
-      }(lp, Bp(), "ios" === (0, Lp.getOperatingSystem)(), Tp())))
+        couldntRun: null !== mT && void 0 !== mT ? mT : void 0
+      }, (() => null === yT ? "pick not seen" : xT(yT)), (() => function(TT, UT, mT, WT) {
+        var zT, MT, gT, nT;
+        return null === TT ? "pick not seen" : "off_after_loss" === TT.reason ? `off after a loss, ${"pack"===TT.source?JT(mT,WT):`from ${null!==(nT=TT.source)&&void 0!==nT?nT:"none"}`}` : "not_requested" === TT.reason ? `not requested, from ${null!==(gT=TT.source)&&void 0!==gT?gT:"none"} (setting ${UT.setting?"on":"off"})` : `${null!==(zT=TT.reason)&&void 0!==zT?zT:"none"}, from ${null!==(MT=TT.source)&&void 0!==MT?MT:"none"}`
+      }(yT, QT(), "ios" === (0, HT.getOperatingSystem)(), FT())))
     }
 
-    function gp(pp, ip, cp) {
-      const Op = Ep.loss();
-      if ("none" === Op) return;
-      if ("cap" === Op) return void Jp("further losses not logged");
-      const op = Bp();
-      Jp(function(pp, ip, cp, Op) {
-        return `loss (${pp}): ${ip}${null===cp?"":` ${ep(cp,dp)}`}; ${Op}`
-      }(pp, ip, cp, `stored ${Np((0,Wp.p)().now)}; holds ${op.lossHolds?"yes":"no"}, stops packs ${op.lossStopsPack?"yes":"no"}`))
+    function ST(TT, UT, mT) {
+      const WT = tT.loss();
+      if ("none" === WT) return;
+      if ("cap" === WT) return void IT("further losses not logged");
+      const zT = QT();
+      IT(function(TT, UT, mT, WT) {
+        return `loss (${TT}): ${UT}${null===mT?"":` ${bT(mT,iT)}`}; ${WT}`
+      }(TT, UT, mT, `stored ${sT((0,pT.l)().now)}; holds ${zT.lossHolds?"yes":"no"}, stops packs ${zT.lossStopsPack?"yes":"no"}`))
     }
   },
-  34354: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      return pp && !ip
+  34198: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      return TT && !UT
     }
-    cp.d(ip, {
-      c: () => Op
+    mT.d(UT, {
+      c: () => WT
     })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

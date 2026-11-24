@@ -1,148 +1,148 @@
 export const id = 261;
 export const ids = [261];
 export const modules = {
-  40435: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      f: () => xp
+  40354: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      g: () => nT
     });
-    var Op = cp(38905),
-      op = cp(40233),
-      Ip = cp(40411),
-      Sp = {};
-    class xp {
-      constructor(pp) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = pp, this.checkInputs = () => {}
+    var WT = mT(38800),
+      zT = mT(40122),
+      MT = mT(40330),
+      gT = {};
+    class nT {
+      constructor(TT) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = TT, this.checkInputs = () => {}
       }
-      add(pp) {
-        const ip = pp.getSimpleName();
-        this.attached[ip] ? Op.e.Warn("camera input of type " + ip + " already exists on camera") : (this.attached[ip] = pp, pp.camera = this.camera, pp.checkInputs && (this.checkInputs = this._addCheckInputs(pp.checkInputs.bind(pp))), this.attachedToElement && pp.attachControl(this.noPreventDefault))
+      add(TT) {
+        const UT = TT.getSimpleName();
+        this.attached[UT] ? WT.b.Warn("camera input of type " + UT + " already exists on camera") : (this.attached[UT] = TT, TT.camera = this.camera, TT.checkInputs && (this.checkInputs = this._addCheckInputs(TT.checkInputs.bind(TT))), this.attachedToElement && TT.attachControl(this.noPreventDefault))
       }
-      remove(pp) {
-        for (const ip in this.attached) {
-          const cp = this.attached[ip];
-          if (cp === pp) return cp.detachControl(), cp.camera = null, delete this.attached[ip], void this.rebuildInputCheck()
+      remove(TT) {
+        for (const UT in this.attached) {
+          const mT = this.attached[UT];
+          if (mT === TT) return mT.detachControl(), mT.camera = null, delete this.attached[UT], void this.rebuildInputCheck()
         }
       }
-      removeByType(pp) {
-        for (const ip in this.attached) {
-          const cp = this.attached[ip];
-          cp.getClassName() === pp && (cp.detachControl(), cp.camera = null, delete this.attached[ip], this.rebuildInputCheck())
+      removeByType(TT) {
+        for (const UT in this.attached) {
+          const mT = this.attached[UT];
+          mT.getClassName() === TT && (mT.detachControl(), mT.camera = null, delete this.attached[UT], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(pp) {
-        const ip = this.checkInputs;
+      _addCheckInputs(TT) {
+        const UT = this.checkInputs;
         return () => {
-          ip(), pp()
+          UT(), TT()
         }
       }
-      attachInput(pp) {
-        this.attachedToElement && pp.attachControl(this.noPreventDefault)
+      attachInput(TT) {
+        this.attachedToElement && TT.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          pp = !Ip.d.ForceAttachControlToAlwaysPreventDefault && pp, this.attachedToElement = !0, this.noPreventDefault = pp;
-          for (const ip in this.attached) this.attached[ip].attachControl(pp)
+          TT = !MT.b.ForceAttachControlToAlwaysPreventDefault && TT, this.attachedToElement = !0, this.noPreventDefault = TT;
+          for (const UT in this.attached) this.attached[UT].attachControl(TT)
         }
       }
       detachElement() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const ip in this.attached) this.attached[ip].detachControl(), pp && (this.attached[ip].camera = null);
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const UT in this.attached) this.attached[UT].detachControl(), TT && (this.attached[UT].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const pp in this.attached) {
-          const ip = this.attached[pp];
-          ip.checkInputs && (this.checkInputs = this._addCheckInputs(ip.checkInputs.bind(ip)))
+        for (const TT in this.attached) {
+          const UT = this.attached[TT];
+          UT.checkInputs && (this.checkInputs = this._addCheckInputs(UT.checkInputs.bind(UT)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(pp) {
-        const ip = {};
-        for (const cp in this.attached) {
-          const pp = this.attached[cp],
-            Op = op.c.Serialize(pp);
-          ip[pp.getClassName()] = Op
+      serialize(TT) {
+        const UT = {};
+        for (const mT in this.attached) {
+          const TT = this.attached[mT],
+            WT = zT.e.Serialize(TT);
+          UT[TT.getClassName()] = WT
         }
-        pp.inputsmgr = ip
+        TT.inputsmgr = UT
       }
-      parse(pp) {
-        const ip = pp.inputsmgr;
-        if (ip) {
+      parse(TT) {
+        const UT = TT.inputsmgr;
+        if (UT) {
           this.clear();
-          for (const pp in ip) {
-            const cp = Sp[pp];
-            if (cp) {
-              const Op = ip[pp],
-                Ip = op.c.Parse((() => new cp), Op, null);
-              this.add(Ip)
+          for (const TT in UT) {
+            const mT = gT[TT];
+            if (mT) {
+              const WT = UT[TT],
+                MT = zT.e.Parse((() => new mT), WT, null);
+              this.add(MT)
             }
           }
         } else
-          for (const cp in this.attached) {
-            const ip = Sp[this.attached[cp].getClassName()];
-            if (ip) {
-              const Op = op.c.Parse((() => new ip), pp, null);
-              this.remove(this.attached[cp]), this.add(Op)
+          for (const mT in this.attached) {
+            const UT = gT[this.attached[mT].getClassName()];
+            if (UT) {
+              const WT = zT.e.Parse((() => new UT), TT, null);
+              this.remove(this.attached[mT]), this.add(WT)
             }
           }
       }
     }
   },
-  41347: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Hp
+  41277: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => qT
     });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(40107),
-      Sp = cp(37320),
-      xp = cp(40195),
-      Lp = cp(40654),
-      Yp = cp(37368),
-      Dp = cp(37349),
-      Ap = cp(40233),
-      Pp = cp(40033),
-      Wp = cp(38905),
-      yp = cp(40257),
-      Up = cp(38124),
-      wp = cp(40286);
-    var vp = cp(40113);
-    let tp = !1;
-    let Hp = (() => {
-        var pp;
-        let ip, cp, Yp, Hp, dp, ep, jp, kp, mp, Rp = xp.d,
-          qp = [],
-          Mp = [],
-          Cp = [],
-          Ep = [],
-          Xp = [],
-          lp = [],
-          Qp = [],
-          Jp = [],
-          Bp = [],
-          Np = [],
-          Tp = [],
-          fp = [],
-          bp = [],
-          hp = [],
-          ap = [];
-        return pp = class extends Rp {
-          set boundingBoxSize(pp) {
-            if (this._boundingBoxSize && this._boundingBoxSize.equals(pp)) return;
-            this._boundingBoxSize = pp;
-            const ip = this.Gl();
-            ip && ip.markAllMaterialsAsDirty(1)
+    var WT = mT(40095),
+      zT = mT(40102),
+      MT = mT(39975),
+      gT = mT(37188),
+      nT = mT(40088),
+      HT = mT(40602),
+      kT = mT(37239),
+      jT = mT(37219),
+      lT = mT(40122),
+      LT = mT(39913),
+      pT = mT(38800),
+      BT = mT(40151),
+      ZT = mT(38045),
+      cT = mT(40183);
+    var vT = mT(39982);
+    let fT = !1;
+    let qT = (() => {
+        var TT;
+        let UT, mT, kT, qT, iT, bT, OT, eT, YT, JT = nT.c,
+          xT = [],
+          dT = [],
+          wT = [],
+          tT = [],
+          aT = [],
+          yT = [],
+          XT = [],
+          IT = [],
+          QT = [],
+          sT = [],
+          FT = [],
+          PT = [],
+          VT = [],
+          uT = [],
+          CT = [];
+        return TT = class extends JT {
+          set boundingBoxSize(TT) {
+            if (this._boundingBoxSize && this._boundingBoxSize.equals(TT)) return;
+            this._boundingBoxSize = TT;
+            const UT = this.KF();
+            UT && UT.markAllMaterialsAsDirty(1)
           }
           get boundingBoxSize() {
             return this._boundingBoxSize
           }
-          set rotationY(pp) {
-            this._rotationY = pp, this.setReflectionTextureMatrix(Sp.b.RotationY(this._rotationY))
+          set rotationY(TT) {
+            this._rotationY = TT, this.setReflectionTextureMatrix(gT.e.RotationY(this._rotationY))
           }
           get rotationY() {
             return this._rotationY
@@ -153,362 +153,362 @@ export const modules = {
           get forcedExtension() {
             return this._forcedExtension
           }
-          constructor(pp, ip) {
-            let cp, op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Ip = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              xp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Yp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              Ap = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              Hp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
-              dp = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              ep = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              jp = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-              kp = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
-              mp = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
-              Rp = arguments.length > 13 ? arguments[13] : void 0,
-              np = arguments.length > 14 ? arguments[14] : void 0;
-            super(ip), this._delayedOnLoad = (0, Op.l)(this, qp), this.onLoadObservable = new Dp.d, this.url = (0, Op.l)(this, Mp, void 0), this.boundingBoxPosition = ((0, Op.l)(this, Cp), (0, Op.l)(this, Ep, Sp.o.Zero())), this._boundingBoxSize = (0, Op.l)(this, Xp), this._rotationY = 0, this._files = (0, Op.l)(this, lp, null), this._forcedExtension = ((0, Op.l)(this, Qp), (0, Op.l)(this, Jp, null)), this._extensions = ((0, Op.l)(this, Bp), (0, Op.l)(this, Np, null)), this._textureMatrix = ((0, Op.l)(this, Tp), (0, Op.l)(this, fp, void 0)), this._textureMatrixRefraction = ((0, Op.l)(this, bp), (0, Op.l)(this, hp, new Sp.b)), this._format = (0, Op.l)(this, ap), this._buffer = null, tp || (tp = !0, vp.b.prototype._partialLoadFile = function(pp, ip, cp, Op) {
-              let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-              this._loadFile(pp, (pp => {
-                cp[ip] = pp, cp._internalCount++, 6 === cp._internalCount && Op(cp)
-              }), void 0, void 0, !0, ((pp, ip) => {
-                op && pp && op(pp.status + " " + pp.statusText, ip)
+          constructor(TT, UT) {
+            let mT, zT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              MT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              nT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              lT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              qT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
+              iT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              bT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              OT = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+              eT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
+              YT = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
+              JT = arguments.length > 13 ? arguments[13] : void 0,
+              rT = arguments.length > 14 ? arguments[14] : void 0;
+            super(UT), this._delayedOnLoad = (0, WT.k)(this, xT), this.onLoadObservable = new jT.d, this.url = (0, WT.k)(this, dT, void 0), this.boundingBoxPosition = ((0, WT.k)(this, wT), (0, WT.k)(this, tT, gT.p.Zero())), this._boundingBoxSize = (0, WT.k)(this, aT), this._rotationY = 0, this._files = (0, WT.k)(this, yT, null), this._forcedExtension = ((0, WT.k)(this, XT), (0, WT.k)(this, IT, null)), this._extensions = ((0, WT.k)(this, QT), (0, WT.k)(this, sT, null)), this._textureMatrix = ((0, WT.k)(this, FT), (0, WT.k)(this, PT, void 0)), this._textureMatrixRefraction = ((0, WT.k)(this, VT), (0, WT.k)(this, uT, new gT.e)), this._format = (0, WT.k)(this, CT), this._buffer = null, fT || (fT = !0, vT.c.prototype._partialLoadFile = function(TT, UT, mT, WT) {
+              let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+              this._loadFile(TT, (TT => {
+                mT[UT] = TT, mT._internalCount++, 6 === mT._internalCount && WT(mT)
+              }), void 0, void 0, !0, ((TT, UT) => {
+                zT && TT && zT(TT.status + " " + TT.statusText, UT)
               }))
-            }, vp.b.prototype._cascadeLoadFiles = function(pp, ip, cp) {
-              let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-              const op = [];
-              op._internalCount = 0;
-              for (let Ip = 0; Ip < 6; Ip++) this._partialLoadFile(cp[Ip], Ip, op, ip, Op)
-            }, vp.b.prototype._cascadeLoadImgs = function(pp, ip, cp, Op) {
-              let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Ip = arguments.length > 5 ? arguments[5] : void 0;
-              const Sp = [];
-              Sp._internalCount = 0;
-              for (let xp = 0; xp < 6; xp++) this._partialLoadImg(Op[xp], xp, Sp, pp, ip, cp, op, Ip)
-            }, vp.b.prototype._partialLoadImg = function(pp, ip, cp, Op, op, Ip) {
-              let Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-                xp = arguments.length > 7 ? arguments[7] : void 0;
-              const Lp = (0, Up.e)();
-              (0, yp.p)(pp, (pp => {
-                cp[ip] = pp, cp._internalCount++, Op && Op.removePendingData(Lp), 6 === cp._internalCount && Ip && Ip(op, cp)
-              }), ((pp, ip) => {
-                Op && Op.removePendingData(Lp), Sp && Sp(pp, ip)
-              }), Op ? Op.offlineProvider : null, xp), Op && Op.addPendingData(Lp)
-            }, vp.b.prototype.createCubeTextureBase = function(pp, ip, cp, Op) {
-              let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-                Sp = arguments.length > 6 ? arguments[6] : void 0,
-                xp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-                Lp = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-                Yp = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-                Dp = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-                Ap = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-                yp = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-                Up = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
-                vp = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
-                tp = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
-              const Hp = Ap || new Pp.b(this, 7);
-              Hp.isCube = !0, Hp.url = pp, Hp.generateMipMaps = !Op, Hp._lodGenerationScale = Yp, Hp._lodGenerationOffset = Dp, Hp._useSRGBBuffer = !!vp && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!Op), Hp !== Ap && (Hp.label = pp.substring(0, 60)), this._doNotHandleContextLost || (Hp._extension = xp, Hp._files = cp, Hp._buffer = tp);
-              const dp = pp;
-              this._transformTextureUrl && !Ap && (pp = this._transformTextureUrl(pp));
-              const ep = xp ?? function(pp) {
-                  const ip = pp.split("?")[0],
-                    cp = ip.lastIndexOf(".");
-                  return cp > -1 ? ip.substring(cp).toLowerCase() : ""
-                }(pp),
-                jp = (0, wp.d)(ep),
-                kp = (pp, ip) => {
-                  Hp.dispose(), Ip ? Ip(pp, ip) : pp && Wp.e.Warn(pp)
+            }, vT.c.prototype._cascadeLoadFiles = function(TT, UT, mT) {
+              let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+              const zT = [];
+              zT._internalCount = 0;
+              for (let MT = 0; MT < 6; MT++) this._partialLoadFile(mT[MT], MT, zT, UT, WT)
+            }, vT.c.prototype._cascadeLoadImgs = function(TT, UT, mT, WT) {
+              let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                MT = arguments.length > 5 ? arguments[5] : void 0;
+              const gT = [];
+              gT._internalCount = 0;
+              for (let nT = 0; nT < 6; nT++) this._partialLoadImg(WT[nT], nT, gT, TT, UT, mT, zT, MT)
+            }, vT.c.prototype._partialLoadImg = function(TT, UT, mT, WT, zT, MT) {
+              let gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+                nT = arguments.length > 7 ? arguments[7] : void 0;
+              const HT = (0, ZT.c)();
+              (0, BT.q)(TT, (TT => {
+                mT[UT] = TT, mT._internalCount++, WT && WT.removePendingData(HT), 6 === mT._internalCount && MT && MT(zT, mT)
+              }), ((TT, UT) => {
+                WT && WT.removePendingData(HT), gT && gT(TT, UT)
+              }), WT ? WT.offlineProvider : null, nT), WT && WT.addPendingData(HT)
+            }, vT.c.prototype.createCubeTextureBase = function(TT, UT, mT, WT) {
+              let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+                gT = arguments.length > 6 ? arguments[6] : void 0,
+                nT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+                HT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+                kT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+                jT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+                lT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+                BT = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
+                ZT = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
+                vT = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
+                fT = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
+              const qT = lT || new LT.b(this, 7);
+              qT.isCube = !0, qT.url = TT, qT.generateMipMaps = !WT, qT._lodGenerationScale = kT, qT._lodGenerationOffset = jT, qT._useSRGBBuffer = !!vT && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!WT), qT !== lT && (qT.label = TT.substring(0, 60)), this._doNotHandleContextLost || (qT._extension = nT, qT._files = mT, qT._buffer = fT);
+              const iT = TT;
+              this._transformTextureUrl && !lT && (TT = this._transformTextureUrl(TT));
+              const bT = nT ?? function(TT) {
+                  const UT = TT.split("?")[0],
+                    mT = UT.lastIndexOf(".");
+                  return mT > -1 ? UT.substring(mT).toLowerCase() : ""
+                }(TT),
+                OT = (0, cT.c)(bT),
+                eT = (TT, UT) => {
+                  qT.dispose(), MT ? MT(TT, UT) : TT && pT.b.Warn(TT)
                 },
-                mp = (Ip, Ap) => {
-                  pp === dp ? Ip && kp(Ip.status + " " + Ip.statusText, Ap) : (Wp.e.Warn(`Failed to load ${pp}, falling back to the ${dp}`), this.createCubeTextureBase(dp, ip, cp, !!Op, op, kp, Sp, xp, Lp, Yp, Dp, Hp, yp, Up, vp, tp))
+                YT = (MT, lT) => {
+                  TT === iT ? MT && eT(MT.status + " " + MT.statusText, lT) : (pT.b.Warn(`Failed to load ${TT}, falling back to the ${iT}`), this.createCubeTextureBase(iT, UT, mT, !!WT, zT, eT, gT, nT, HT, kT, jT, qT, BT, ZT, vT, fT))
                 };
-              if (jp) jp.then((Op => {
-                const Ip = pp => {
-                  yp && yp(Hp, pp), Op.loadCubeData(pp, Hp, Lp, op, ((pp, ip) => {
-                    kp(pp, ip)
+              if (OT) OT.then((WT => {
+                const MT = TT => {
+                  BT && BT(qT, TT), WT.loadCubeData(TT, qT, HT, zT, ((TT, UT) => {
+                    eT(TT, UT)
                   }))
                 };
-                tp ? Ip(tp) : cp && 6 === cp.length ? Op.supportCascades ? this._cascadeLoadFiles(ip, (pp => Ip(pp.map((pp => new Uint8Array(pp))))), cp, kp) : kp("Textures type does not support cascades.") : this._loadFile(pp, (pp => Ip(new Uint8Array(pp))), void 0, ip ? ip.offlineProvider || null : void 0, !0, mp)
+                fT ? MT(fT) : mT && 6 === mT.length ? WT.supportCascades ? this._cascadeLoadFiles(UT, (TT => MT(TT.map((TT => new Uint8Array(TT))))), mT, eT) : eT("Textures type does not support cascades.") : this._loadFile(TT, (TT => MT(new Uint8Array(TT))), void 0, UT ? UT.offlineProvider || null : void 0, !0, YT)
               }));
               else {
-                if (!cp || 0 === cp.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
-                this._cascadeLoadImgs(ip, Hp, ((pp, ip) => {
-                  Up && Up(pp, ip)
-                }), cp, kp)
+                if (!mT || 0 === mT.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
+                this._cascadeLoadImgs(UT, qT, ((TT, UT) => {
+                  ZT && ZT(TT, UT)
+                }), mT, eT)
               }
-              return this._internalTexturesCache.push(Hp), Hp
-            }), this.name = pp, this.url = pp, this._noMipmap = Ip, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = Sp.b.Identity(), this.coordinatesMode = Lp.d.CUBIC_MODE;
-            let Fp = null;
-            null === op || Array.isArray(op) ? (this._noMipmap = Ip, this._format = Hp, this._createPolynomials = jp, cp = op, this._loaderOptions = Rp, this._useSRGBBuffer = np, this._lodScale = kp, this._lodOffset = mp) : (cp = op.extensions ?? null, this._noMipmap = op.noMipmap ?? !1, xp = op.files ?? null, Fp = op.buffer ?? null, this._format = op.format ?? 5, dp = op.prefiltered ?? !1, ep = op.forcedExtension ?? null, this._createPolynomials = op.createPolynomials ?? !1, this._lodScale = op.lodScale ?? .8, this._lodOffset = op.lodOffset ?? 0, this._loaderOptions = op.loaderOptions, this._useSRGBBuffer = op.useSRGBBuffer, this._sphericalPolynomialTargetSize = op.sphericalPolynomialTargetSize ?? 0, Yp = op.onLoad ?? null, Ap = op.onError ?? null), (pp || xp) && this.updateURL(pp, ep, Yp, dp, Ap, cp, this.Gl()?.useDelayedTextureLoading, xp, Fp)
+              return this._internalTexturesCache.push(qT), qT
+            }), this.name = TT, this.url = TT, this._noMipmap = MT, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = gT.e.Identity(), this.coordinatesMode = HT.g.CUBIC_MODE;
+            let KT = null;
+            null === zT || Array.isArray(zT) ? (this._noMipmap = MT, this._format = qT, this._createPolynomials = OT, mT = zT, this._loaderOptions = JT, this._useSRGBBuffer = rT, this._lodScale = eT, this._lodOffset = YT) : (mT = zT.extensions ?? null, this._noMipmap = zT.noMipmap ?? !1, nT = zT.files ?? null, KT = zT.buffer ?? null, this._format = zT.format ?? 5, iT = zT.prefiltered ?? !1, bT = zT.forcedExtension ?? null, this._createPolynomials = zT.createPolynomials ?? !1, this._lodScale = zT.lodScale ?? .8, this._lodOffset = zT.lodOffset ?? 0, this._loaderOptions = zT.loaderOptions, this._useSRGBBuffer = zT.useSRGBBuffer, this._sphericalPolynomialTargetSize = zT.sphericalPolynomialTargetSize ?? 0, kT = zT.onLoad ?? null, lT = zT.onError ?? null), (TT || nT) && this.updateURL(TT, bT, kT, iT, lT, mT, this.KF()?.useDelayedTextureLoading, nT, KT)
           }
           getClassName() {
             return "CubeTexture"
           }
-          updateURL(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              Sp = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-              xp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              Lp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
-            this.name && !this.name.startsWith("data:") || (this.name = pp), this.url = pp, ip && (this._forcedExtension = ip);
-            const Yp = pp.lastIndexOf("."),
-              Dp = ip || (Yp > -1 ? pp.substring(Yp).toLowerCase() : ""),
-              Ap = 0 === Dp.indexOf(".dds"),
-              Pp = 0 === Dp.indexOf(".env"),
-              Wp = 0 === Dp.indexOf(".basis");
-            if (Pp ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = Op, Op && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), xp) this._files = xp;
-            else if (Wp || Pp || Ap || Ip || (Ip = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, Ip) {
-              for (let ip = 0; ip < Ip.length; ip++) this._files.push(pp + Ip[ip]);
-              this._extensions = Ip
+          updateURL(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              gT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+              nT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              HT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
+            this.name && !this.name.startsWith("data:") || (this.name = TT), this.url = TT, UT && (this._forcedExtension = UT);
+            const kT = TT.lastIndexOf("."),
+              jT = UT || (kT > -1 ? TT.substring(kT).toLowerCase() : ""),
+              lT = 0 === jT.indexOf(".dds"),
+              LT = 0 === jT.indexOf(".env"),
+              pT = 0 === jT.indexOf(".basis");
+            if (LT ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = WT, WT && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), nT) this._files = nT;
+            else if (pT || LT || lT || MT || (MT = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, MT) {
+              for (let UT = 0; UT < MT.length; UT++) this._files.push(TT + MT[UT]);
+              this._extensions = MT
             }
-            this._buffer = Lp, Sp ? (this.delayLoadState = 4, this._delayedOnLoad = cp, this._delayedOnError = op) : this._loadTexture(cp, op)
+            this._buffer = HT, gT ? (this.delayLoadState = 4, this._delayedOnLoad = mT, this._delayedOnError = zT) : this._loadTexture(mT, zT)
           }
-          delayLoad(pp) {
-            4 === this.delayLoadState && (pp && (this._forcedExtension = pp), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
+          delayLoad(TT) {
+            4 === this.delayLoadState && (TT && (this._forcedExtension = TT), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
           }
           getReflectionTextureMatrix() {
             return this._textureMatrix
           }
-          setReflectionTextureMatrix(pp) {
-            if (pp.updateFlag === this._textureMatrix.updateFlag) return;
-            if (pp.isIdentity() !== this._textureMatrix.isIdentity() && this.Gl()?.markAllMaterialsAsDirty(1, (pp => -1 !== pp.getActiveTextures().indexOf(this))), this._textureMatrix = pp, !this.Gl()?.useRightHandedSystem) return;
-            const ip = Sp.i.Zy[0],
-              cp = Sp.i.Quaternion[0],
-              Op = Sp.i.Zy[1];
-            this._textureMatrix.decompose(ip, cp, Op), cp.z *= -1, cp.w *= -1, Sp.b.ComposeToRef(ip, cp, Op, this._textureMatrixRefraction)
+          setReflectionTextureMatrix(TT) {
+            if (TT.updateFlag === this._textureMatrix.updateFlag) return;
+            if (TT.isIdentity() !== this._textureMatrix.isIdentity() && this.KF()?.markAllMaterialsAsDirty(1, (TT => -1 !== TT.getActiveTextures().indexOf(this))), this._textureMatrix = TT, !this.KF()?.useRightHandedSystem) return;
+            const UT = gT.l.JB[0],
+              mT = gT.l.Quaternion[0],
+              WT = gT.l.JB[1];
+            this._textureMatrix.decompose(UT, mT, WT), mT.z *= -1, mT.w *= -1, gT.e.ComposeToRef(UT, mT, WT, this._textureMatrixRefraction)
           }
           getRefractionTextureMatrix() {
-            return this.Gl()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
+            return this.KF()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
           }
           _loadTexture() {
-            let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            const cp = this.Gl(),
-              Op = this._texture;
+            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            const mT = this.KF(),
+              WT = this._texture;
             this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
-            const op = () => {
-                this.onLoadObservable.notifyObservers(this), Op && (Op.dispose(), this.Gl()?.markAllMaterialsAsDirty(1)), pp && pp()
+            const zT = () => {
+                this.onLoadObservable.notifyObservers(this), WT && (WT.dispose(), this.KF()?.markAllMaterialsAsDirty(1)), TT && TT()
               },
-              Sp = (pp, cp) => {
+              gT = (TT, mT) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: pp,
-                  exception: cp
-                }, ip && ip(pp, cp), Lp.d.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: TT,
+                  exception: mT
+                }, UT && UT(TT, mT), HT.g.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            this._texture ? this._texture.isReady ? Ip.b.SetImmediate((() => op())) : this._texture.onLoadedObservable.add((() => op())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, cp, this._lodScale, this._lodOffset, pp, Sp, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, cp, this._files, this._noMipmap, pp, Sp, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
+            this._texture ? this._texture.isReady ? MT.e.SetImmediate((() => zT())) : this._texture.onLoadedObservable.add((() => zT())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, mT, this._lodScale, this._lodOffset, TT, gT, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, mT, this._files, this._noMipmap, TT, gT, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
           }
           clone() {
-            let ip = 0;
-            const cp = this.irradianceTexture,
-              Op = Ap.c.Clone((() => {
-                const cp = new pp(this.url, this.Gl() || this._getEngine(), this._extensions, this._noMipmap, this._files);
-                return ip = cp.uniqueId, cp
+            let UT = 0;
+            const mT = this.irradianceTexture,
+              WT = lT.e.Clone((() => {
+                const mT = new TT(this.url, this.KF() || this._getEngine(), this._extensions, this._noMipmap, this._files);
+                return UT = mT.uniqueId, mT
               }), this);
-            return Op.uniqueId = ip, cp && !this.irradianceTexture && (this.irradianceTexture = cp), Op
+            return WT.uniqueId = UT, mT && !this.irradianceTexture && (this.irradianceTexture = mT), WT
           }
         }, (() => {
-          const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Rp[Symbol.metadata] ?? null) : void 0;
-          ip = [(0, op.K)()], cp = [(0, op.H)()], Yp = [(0, op.H)()], Hp = [(0, op.K)("rotationY")], dp = [(0, op.K)("files")], ep = [(0, op.K)("forcedExtension")], jp = [(0, op.K)("extensions")], kp = [(0, op.s)("textureMatrix")], mp = [(0, op.s)("textureMatrixRefraction")], (0, Op.j)(pp, null, Yp, {
+          const MT = "function" === typeof Symbol && Symbol.metadata ? Object.create(JT[Symbol.metadata] ?? null) : void 0;
+          UT = [(0, zT.L)()], mT = [(0, zT.J)()], kT = [(0, zT.J)()], qT = [(0, zT.L)("rotationY")], iT = [(0, zT.L)("files")], bT = [(0, zT.L)("forcedExtension")], OT = [(0, zT.L)("extensions")], eT = [(0, zT.v)("textureMatrix")], YT = [(0, zT.v)("textureMatrixRefraction")], (0, WT.h)(TT, null, kT, {
             kind: "getter",
             name: "boundingBoxSize",
             static: !1,
             private: !1,
             access: {
-              has: pp => "boundingBoxSize" in pp,
-              get: pp => pp.boundingBoxSize
+              has: TT => "boundingBoxSize" in TT,
+              get: TT => TT.boundingBoxSize
             },
-            metadata: Ip
-          }, null, qp), (0, Op.j)(pp, null, Hp, {
+            metadata: MT
+          }, null, xT), (0, WT.h)(TT, null, qT, {
             kind: "setter",
             name: "rotationY",
             static: !1,
             private: !1,
             access: {
-              has: pp => "rotationY" in pp,
-              set: (pp, ip) => {
-                pp.rotationY = ip
+              has: TT => "rotationY" in TT,
+              set: (TT, UT) => {
+                TT.rotationY = UT
               }
             },
-            metadata: Ip
-          }, null, qp), (0, Op.j)(null, null, ip, {
+            metadata: MT
+          }, null, xT), (0, WT.h)(null, null, UT, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: pp => "url" in pp,
-              get: pp => pp.url,
-              set: (pp, ip) => {
-                pp.url = ip
+              has: TT => "url" in TT,
+              get: TT => TT.url,
+              set: (TT, UT) => {
+                TT.url = UT
               }
             },
-            metadata: Ip
-          }, Mp, Cp), (0, Op.j)(null, null, cp, {
+            metadata: MT
+          }, dT, wT), (0, WT.h)(null, null, mT, {
             kind: "field",
             name: "boundingBoxPosition",
             static: !1,
             private: !1,
             access: {
-              has: pp => "boundingBoxPosition" in pp,
-              get: pp => pp.boundingBoxPosition,
-              set: (pp, ip) => {
-                pp.boundingBoxPosition = ip
+              has: TT => "boundingBoxPosition" in TT,
+              get: TT => TT.boundingBoxPosition,
+              set: (TT, UT) => {
+                TT.boundingBoxPosition = UT
               }
             },
-            metadata: Ip
-          }, Ep, Xp), (0, Op.j)(null, null, dp, {
+            metadata: MT
+          }, tT, aT), (0, WT.h)(null, null, iT, {
             kind: "field",
             name: "_files",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_files" in pp,
-              get: pp => pp._files,
-              set: (pp, ip) => {
-                pp._files = ip
+              has: TT => "_files" in TT,
+              get: TT => TT._files,
+              set: (TT, UT) => {
+                TT._files = UT
               }
             },
-            metadata: Ip
-          }, lp, Qp), (0, Op.j)(null, null, ep, {
+            metadata: MT
+          }, yT, XT), (0, WT.h)(null, null, bT, {
             kind: "field",
             name: "_forcedExtension",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_forcedExtension" in pp,
-              get: pp => pp._forcedExtension,
-              set: (pp, ip) => {
-                pp._forcedExtension = ip
+              has: TT => "_forcedExtension" in TT,
+              get: TT => TT._forcedExtension,
+              set: (TT, UT) => {
+                TT._forcedExtension = UT
               }
             },
-            metadata: Ip
-          }, Jp, Bp), (0, Op.j)(null, null, jp, {
+            metadata: MT
+          }, IT, QT), (0, WT.h)(null, null, OT, {
             kind: "field",
             name: "_extensions",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_extensions" in pp,
-              get: pp => pp._extensions,
-              set: (pp, ip) => {
-                pp._extensions = ip
+              has: TT => "_extensions" in TT,
+              get: TT => TT._extensions,
+              set: (TT, UT) => {
+                TT._extensions = UT
               }
             },
-            metadata: Ip
-          }, Np, Tp), (0, Op.j)(null, null, kp, {
+            metadata: MT
+          }, sT, FT), (0, WT.h)(null, null, eT, {
             kind: "field",
             name: "_textureMatrix",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_textureMatrix" in pp,
-              get: pp => pp._textureMatrix,
-              set: (pp, ip) => {
-                pp._textureMatrix = ip
+              has: TT => "_textureMatrix" in TT,
+              get: TT => TT._textureMatrix,
+              set: (TT, UT) => {
+                TT._textureMatrix = UT
               }
             },
-            metadata: Ip
-          }, fp, bp), (0, Op.j)(null, null, mp, {
+            metadata: MT
+          }, PT, VT), (0, WT.h)(null, null, YT, {
             kind: "field",
             name: "_textureMatrixRefraction",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_textureMatrixRefraction" in pp,
-              get: pp => pp._textureMatrixRefraction,
-              set: (pp, ip) => {
-                pp._textureMatrixRefraction = ip
+              has: TT => "_textureMatrixRefraction" in TT,
+              get: TT => TT._textureMatrixRefraction,
+              set: (TT, UT) => {
+                TT._textureMatrixRefraction = UT
               }
             },
-            metadata: Ip
-          }, hp, ap), Ip && Object.defineProperty(pp, Symbol.metadata, {
+            metadata: MT
+          }, uT, CT), MT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Ip
+            value: MT
           })
-        })(), pp
+        })(), TT
       })(),
-      dp = !1;
+      iT = !1;
 
-    function ep(pp, ip, cp) {
-      let Op = "";
-      for (const op of pp) Op += op;
-      return new Hp(Op, ip, null, cp, pp)
+    function bT(TT, UT, mT) {
+      let WT = "";
+      for (const zT of TT) WT += zT;
+      return new qT(WT, UT, null, mT, TT)
     }
 
-    function jp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const op = ip.useDelayedTextureLoading;
-      ip.useDelayedTextureLoading = !1;
-      const Ip = new Hp(pp, ip, null, !1, null, null, null, void 0, !0, cp, Op);
-      return ip.useDelayedTextureLoading = op, Ip
+    function OT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const zT = UT.useDelayedTextureLoading;
+      UT.useDelayedTextureLoading = !1;
+      const MT = new qT(TT, UT, null, !1, null, null, null, void 0, !0, mT, WT);
+      return UT.useDelayedTextureLoading = zT, MT
     }
 
-    function kp(pp, ip, cp) {
-      const Op = Ap.c.Parse((() => {
-        let Op = !1;
-        return pp.prefiltered && (Op = pp.prefiltered), new Hp(cp + (pp.url ?? pp.name), ip, pp.extensions, !1, pp.files || null, null, null, void 0, Op, pp.forcedExtension)
-      }), pp, ip);
-      if (pp.boundingBoxPosition && (Op.boundingBoxPosition = Sp.o.FromArray(pp.boundingBoxPosition)), pp.boundingBoxSize && (Op.boundingBoxSize = Sp.o.FromArray(pp.boundingBoxSize)), pp.animations)
-        for (let op = 0; op < pp.animations.length; op++) {
-          const ip = pp.animations[op],
-            cp = (0, Yp.d)("BABYLON.Animation");
-          cp && Op.animations.push(cp.Parse(ip))
+    function eT(TT, UT, mT) {
+      const WT = lT.e.Parse((() => {
+        let WT = !1;
+        return TT.prefiltered && (WT = TT.prefiltered), new qT(mT + (TT.url ?? TT.name), UT, TT.extensions, !1, TT.files || null, null, null, void 0, WT, TT.forcedExtension)
+      }), TT, UT);
+      if (TT.boundingBoxPosition && (WT.boundingBoxPosition = gT.p.FromArray(TT.boundingBoxPosition)), TT.boundingBoxSize && (WT.boundingBoxSize = gT.p.FromArray(TT.boundingBoxSize)), TT.animations)
+        for (let zT = 0; zT < TT.animations.length; zT++) {
+          const UT = TT.animations[zT],
+            mT = (0, kT.d)("BABYLON.Animation");
+          mT && WT.animations.push(mT.Parse(UT))
         }
-      return Op
+      return WT
     }
-    dp || (dp = !0, Hp.CreateFromImages = ep, Hp.CreateFromPrefilteredData = jp, Hp.Parse = kp, Lp.d._CubeTextureParser = kp, (0, Yp.g)("BABYLON.CubeTexture", Hp))
+    iT || (iT = !0, qT.CreateFromImages = bT, qT.CreateFromPrefilteredData = OT, qT.Parse = eT, HT.g._CubeTextureParser = eT, (0, kT.h)("BABYLON.CubeTexture", qT))
   },
-  41393: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp
+  41334: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => kT
     });
-    var Op = cp(38905),
-      op = cp(40654),
-      Ip = cp(40143),
-      Sp = cp(40050),
-      xp = cp(40033);
-    let Lp = !1;
-    class Yp extends op.d {
-      constructor(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Yp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          Dp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
-          Ap = arguments.length > 6 ? arguments[6] : void 0;
-        const Pp = !cp || cp._isScene;
-        super(null, Pp ? cp : cp?.pw, Pp ? !Op : cp, Ap, Yp, void 0, void 0, void 0, void 0, Dp), Lp || (Lp = !0, Sp.ThinEngine.prototype.createDynamicTexture = function(pp, ip, cp, Op) {
-          const op = new xp.b(this, 4);
-          return op.baseWidth = pp, op.baseHeight = ip, cp && (pp = this.needPOTTextures ? (0, Ip.e)(pp, this._caps.maxTextureSize) : pp, ip = this.needPOTTextures ? (0, Ip.e)(ip, this._caps.maxTextureSize) : ip), op.width = pp, op.height = ip, op.isReady = !1, op.generateMipMaps = cp, op.samplingMode = Op, this.updateTextureSamplingMode(Op, op), this._internalTexturesCache.push(op), op
-        }, Sp.ThinEngine.prototype.updateDynamicTexture = function(pp, ip, cp) {
-          let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            op = arguments.length > 4 ? arguments[4] : void 0,
-            Ip = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-          if (!pp) return;
-          const Sp = this._gl,
-            xp = Sp.TEXTURE_2D,
-            Lp = this._bindTextureDirectly(xp, pp, !0, Ip);
-          this._unpackFlipY(void 0 === cp ? pp.invertY : cp), Op && Sp.pixelStorei(Sp.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
-          const Yp = this._getWebGLTextureType(pp.type),
-            Dp = this._getInternalFormat(op || pp.format),
-            Ap = this._getRGBABufferInternalSizedFormat(pp.type, Dp);
-          Sp.texImage2D(xp, 0, Ap, Dp, Yp, ip), pp.generateMipMaps && Sp.generateMipmap(xp), Lp || this._bindTextureDirectly(xp, null), Op && Sp.pixelStorei(Sp.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), op && (pp.format = op), pp._dynamicTextureSource = ip, pp._premulAlpha = Op, pp.invertY = cp || !1, pp.isReady = !0
-        }), this.name = pp, this.wrapU = op.d.CLAMP_ADDRESSMODE, this.wrapV = op.d.CLAMP_ADDRESSMODE, this._generateMipMaps = Op;
-        const Wp = this._getEngine();
-        if (!Wp) return;
-        if (ip.getContext) this._canvas = ip, this._ownCanvas = !1, this._texture = Wp.createDynamicTexture(this._canvas.width, this._canvas.height, Op, Yp);
+    var WT = mT(38800),
+      zT = mT(40602),
+      MT = mT(40022),
+      gT = mT(39922),
+      nT = mT(39913);
+    let HT = !1;
+    class kT extends zT.g {
+      constructor(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          jT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
+          lT = arguments.length > 6 ? arguments[6] : void 0;
+        const LT = !mT || mT._isScene;
+        super(null, LT ? mT : mT?.XZ, LT ? !WT : mT, lT, kT, void 0, void 0, void 0, void 0, jT), HT || (HT = !0, gT.ThinEngine.prototype.createDynamicTexture = function(TT, UT, mT, WT) {
+          const zT = new nT.b(this, 4);
+          return zT.baseWidth = TT, zT.baseHeight = UT, mT && (TT = this.needPOTTextures ? (0, MT.f)(TT, this._caps.maxTextureSize) : TT, UT = this.needPOTTextures ? (0, MT.f)(UT, this._caps.maxTextureSize) : UT), zT.width = TT, zT.height = UT, zT.isReady = !1, zT.generateMipMaps = mT, zT.samplingMode = WT, this.updateTextureSamplingMode(WT, zT), this._internalTexturesCache.push(zT), zT
+        }, gT.ThinEngine.prototype.updateDynamicTexture = function(TT, UT, mT) {
+          let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            zT = arguments.length > 4 ? arguments[4] : void 0,
+            MT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+          if (!TT) return;
+          const gT = this._gl,
+            nT = gT.TEXTURE_2D,
+            HT = this._bindTextureDirectly(nT, TT, !0, MT);
+          this._unpackFlipY(void 0 === mT ? TT.invertY : mT), WT && gT.pixelStorei(gT.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
+          const kT = this._getWebGLTextureType(TT.type),
+            jT = this._getInternalFormat(zT || TT.format),
+            lT = this._getRGBABufferInternalSizedFormat(TT.type, jT);
+          gT.texImage2D(nT, 0, lT, jT, kT, UT), TT.generateMipMaps && gT.generateMipmap(nT), HT || this._bindTextureDirectly(nT, null), WT && gT.pixelStorei(gT.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), zT && (TT.format = zT), TT._dynamicTextureSource = UT, TT._premulAlpha = WT, TT.invertY = mT || !1, TT.isReady = !0
+        }), this.name = TT, this.wrapU = zT.g.CLAMP_ADDRESSMODE, this.wrapV = zT.g.CLAMP_ADDRESSMODE, this._generateMipMaps = WT;
+        const pT = this._getEngine();
+        if (!pT) return;
+        if (UT.getContext) this._canvas = UT, this._ownCanvas = !1, this._texture = pT.createDynamicTexture(this._canvas.width, this._canvas.height, WT, kT);
         else {
-          this._canvas = Wp.createCanvas(1, 1), this._ownCanvas = !0;
-          const pp = ip;
-          pp.width || 0 === pp.width ? this._texture = Wp.createDynamicTexture(pp.width, pp.height, Op, Yp) : this._texture = Wp.createDynamicTexture(ip, ip, Op, Yp)
+          this._canvas = pT.createCanvas(1, 1), this._ownCanvas = !0;
+          const TT = UT;
+          TT.width || 0 === TT.width ? this._texture = pT.createDynamicTexture(TT.width, TT.height, WT, kT) : this._texture = pT.createDynamicTexture(UT, UT, WT, kT)
         }
-        const yp = this.getSize();
-        this._canvas.width !== yp.width && (this._canvas.width = yp.width), this._canvas.height !== yp.height && (this._canvas.height = yp.height), this._context = this._canvas.getContext("2d")
+        const BT = this.getSize();
+        this._canvas.width !== BT.width && (this._canvas.width = BT.width), this._canvas.height !== BT.height && (this._canvas.height = BT.height), this._context = this._canvas.getContext("2d")
       }
       getClassName() {
         return "DynamicTexture"
@@ -516,109 +516,109 @@ export const modules = {
       get canRescale() {
         return !0
       }
-      _recreate(pp) {
-        this._canvas.width = pp.width, this._canvas.height = pp.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(pp.width, pp.height, this._generateMipMaps, this.samplingMode)
+      _recreate(TT) {
+        this._canvas.width = TT.width, this._canvas.height = TT.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(TT.width, TT.height, this._generateMipMaps, this.samplingMode)
       }
-      scale(pp) {
-        const ip = this.getSize();
-        ip.width *= pp, ip.height *= pp, this._recreate(ip)
+      scale(TT) {
+        const UT = this.getSize();
+        UT.width *= TT, UT.height *= TT, this._recreate(UT)
       }
-      scaleTo(pp, ip) {
-        const cp = this.getSize();
-        cp.width = pp, cp.height = ip, this._recreate(cp)
+      scaleTo(TT, UT) {
+        const mT = this.getSize();
+        mT.width = TT, mT.height = UT, this._recreate(mT)
       }
       getContext() {
         return this._context
       }
-      clear(pp) {
-        const ip = this.getSize();
-        pp && (this._context.fillStyle = pp), this._context.clearRect(0, 0, ip.width, ip.height)
+      clear(TT) {
+        const UT = this.getSize();
+        TT && (this._context.fillStyle = TT), this._context.clearRect(0, 0, UT.width, UT.height)
       }
-      update(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === pp || pp, ip, this._format || void 0, void 0, cp)
+      update(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === TT || TT, UT, this._format || void 0, void 0, mT)
       }
-      drawText(pp, ip, cp, Op, op, Ip, Sp) {
-        let xp = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const Lp = this.getSize();
-        if (Ip && (this._context.fillStyle = Ip, this._context.fillRect(0, 0, Lp.width, Lp.height)), this._context.font = Op, null === ip || void 0 === ip) {
-          const cp = this._context.measureText(pp);
-          ip = (Lp.width - cp.width) / 2
+      drawText(TT, UT, mT, WT, zT, MT, gT) {
+        let nT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
+        const HT = this.getSize();
+        if (MT && (this._context.fillStyle = MT, this._context.fillRect(0, 0, HT.width, HT.height)), this._context.font = WT, null === UT || void 0 === UT) {
+          const mT = this._context.measureText(TT);
+          UT = (HT.width - mT.width) / 2
         }
-        if (null === cp || void 0 === cp) {
-          const pp = parseInt(Op.replace(/\D/g, ""));
-          cp = Lp.height / 2 + pp / 3.65
+        if (null === mT || void 0 === mT) {
+          const TT = parseInt(WT.replace(/\D/g, ""));
+          mT = HT.height / 2 + TT / 3.65
         }
-        this._context.fillStyle = op || "", this._context.fillText(pp, ip, cp), xp && this.update(Sp)
+        this._context.fillStyle = zT || "", this._context.fillText(TT, UT, mT), nT && this.update(gT)
       }
       dispose() {
         super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
       }
       clone() {
-        const pp = this.Gl();
-        if (!pp) return this;
-        const ip = this.getSize(),
-          cp = new Yp(this.name, ip, pp, this._generateMipMaps);
-        return cp.hasAlpha = this.hasAlpha, cp.level = this.level, cp.wrapU = this.wrapU, cp.wrapV = this.wrapV, cp
+        const TT = this.KF();
+        if (!TT) return this;
+        const UT = this.getSize(),
+          mT = new kT(this.name, UT, TT, this._generateMipMaps);
+        return mT.hasAlpha = this.hasAlpha, mT.level = this.level, mT.wrapU = this.wrapU, mT.wrapV = this.wrapV, mT
       }
       serialize() {
-        const pp = this.Gl();
-        pp && !pp.isReady() && Op.e.Warn("The scene must be ready before serializing the dynamic texture");
-        const ip = super.serialize();
-        return Yp._IsCanvasElement(this._canvas) && (ip.base64String = this._canvas.toDataURL()), ip.invertY = this._invertY, ip.samplingMode = this.samplingMode, ip
+        const TT = this.KF();
+        TT && !TT.isReady() && WT.b.Warn("The scene must be ready before serializing the dynamic texture");
+        const UT = super.serialize();
+        return kT._IsCanvasElement(this._canvas) && (UT.base64String = this._canvas.toDataURL()), UT.invertY = this._invertY, UT.samplingMode = this.samplingMode, UT
       }
-      static _IsCanvasElement(pp) {
-        return void 0 !== pp.toDataURL
+      static _IsCanvasElement(TT) {
+        return void 0 !== TT.toDataURL
       }
       _rebuild() {
         this.update()
       }
     }
   },
-  41367: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op
+  41291: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => zT
     });
-    var Op = cp(40654);
-    class op extends Op.d {
+    var WT = mT(40602);
+    class zT extends WT.g {
       get depth() {
         return this._depth
       }
-      constructor(pp, ip, cp, op, Ip, Sp) {
-        let xp = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          Lp = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          Yp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Op.d.TRILINEAR_SAMPLINGMODE,
-          Dp = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          Ap = arguments.length > 10 ? arguments[10] : void 0,
-          Pp = arguments.length > 11 ? arguments[11] : void 0;
-        super(null, Sp, !xp, Lp), this.format = Ip, this._texture = Sp.gy().createRawTexture2DArray(pp, ip, cp, op, Ip, xp, Lp, Yp, null, Dp, Ap ?? 0, Pp), this._depth = op, this.is2DArray = !0
+      constructor(TT, UT, mT, zT, MT, gT) {
+        let nT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          HT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+          kT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : WT.g.TRILINEAR_SAMPLINGMODE,
+          jT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+          lT = arguments.length > 10 ? arguments[10] : void 0,
+          LT = arguments.length > 11 ? arguments[11] : void 0;
+        super(null, gT, !nT, HT), this.format = MT, this._texture = gT.eB().createRawTexture2DArray(TT, UT, mT, zT, MT, nT, HT, kT, null, jT, lT ?? 0, LT), this._depth = zT, this.is2DArray = !0
       }
-      update(pp) {
-        this.updateMipLevel(pp, 0)
+      update(TT) {
+        this.updateMipLevel(TT, 0)
       }
-      updateMipLevel(pp, ip) {
-        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, pp, this._texture.format, this._texture.invertY, null, this._texture.type, ip)
+      updateMipLevel(TT, UT) {
+        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, TT, this._texture.format, this._texture.invertY, null, this._texture.type, UT)
       }
-      static CreateRGBATexture(pp, ip, cp, Op, Ip) {
-        return new op(pp, ip, cp, Op, 5, Ip, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
+      static CreateRGBATexture(TT, UT, mT, WT, MT) {
+        return new zT(TT, UT, mT, WT, 5, MT, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
       }
     }
   },
-  41359: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op.b
+  41286: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT.e
     });
-    var Op = cp(40538);
-    (0, Op.e)()
+    var WT = mT(40487);
+    (0, WT.g)()
   },
-  40289: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op.f
+  40192: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT.i
     });
-    var Op = cp(40296);
-    (0, Op.c)()
+    var WT = mT(40198);
+    (0, WT.e)()
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

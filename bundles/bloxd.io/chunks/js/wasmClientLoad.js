@@ -1,262 +1,262 @@
 export const id = 59;
 export const ids = [59];
 export const modules = {
-  36986: (pp, ip, cp) => {
-    async function Op(pp) {
-      const ip = await fetch(pp, {
+  36894: (TT, UT, mT) => {
+    async function WT(TT) {
+      const UT = await fetch(TT, {
         priority: "low"
       });
-      if (!ip.ok) throw new Error(`Fetching ${pp} failed: HTTP ${ip.status}`);
-      const cp = ip.body.getReader();
-      for (; !(await cp.read()).done;);
+      if (!UT.ok) throw new Error(`Fetching ${TT} failed: HTTP ${UT.status}`);
+      const mT = UT.body.getReader();
+      for (; !(await mT.read()).done;);
     }
-    cp.d(ip, {
-      c: () => Op
+    mT.d(UT, {
+      e: () => WT
     })
   },
-  39241: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Lp
+  39207: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => HT
     });
-    var Op = cp(9034),
-      op = cp(36689),
-      Ip = cp(39244);
-    const Sp = {
+    var WT = mT(9025),
+      zT = mT(36565),
+      MT = mT(39216);
+    const gT = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      xp = {
+      nT = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function Lp(pp, ip) {
-      if (pp instanceof op.f) return {
-        at: Sp[ip],
+    function HT(TT, UT) {
+      if (TT instanceof zT.d) return {
+        at: gT[UT],
         code: 0
       };
-      const cp = (0, Op.f)(pp),
-        Lp = "number" === typeof cp ? cp : 0;
-      return null !== (0, Ip.h)(Lp).name ? {
+      const mT = (0, WT.e)(TT),
+        HT = "number" === typeof mT ? mT : 0;
+      return null !== (0, MT.o)(HT).name ? {
         at: "refused",
-        code: Lp
+        code: HT
       } : {
-        at: xp[ip],
-        code: Lp
+        at: nT[UT],
+        code: HT
       }
     }
   },
-  9034: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      f: () => Sp,
-      h: () => xp,
-      l: () => Yp,
-      o: () => Lp
+  9025: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT,
+      e: () => gT,
+      i: () => nT,
+      k: () => kT,
+      o: () => HT
     });
-    var Op = cp(195),
-      op = cp(4719);
+    var WT = mT(208),
+      zT = mT(4719);
 
-    function Ip(pp) {
-      return Sp(pp) === Op.e.gameOrPluginOnPlayerAuthRejected.code
+    function MT(TT) {
+      return gT(TT) === WT.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function Sp(pp) {
-      return "object" === typeof pp && null !== pp ? pp.code : void 0
+    function gT(TT) {
+      return "object" === typeof TT && null !== TT ? TT.code : void 0
     }
 
-    function xp(pp) {
-      var ip;
-      return null !== (ip = Object.keys(op.c).find((ip => op.c[ip] === pp))) && void 0 !== ip ? ip : null
+    function nT(TT) {
+      var UT;
+      return null !== (UT = Object.keys(zT.c).find((UT => zT.c[UT] === TT))) && void 0 !== UT ? UT : null
     }
 
-    function Lp(pp) {
-      return "notWhitelisted" === pp ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function HT(TT) {
+      return "notWhitelisted" === TT ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const Yp = {
+    const kT = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  41270: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      prefetchWasmClient: () => jp,
-      startJoinLoad: () => tp,
-      startLoadAheadOfJoin: () => dp
+  41189: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      prefetchWasmClient: () => OT,
+      startJoinLoad: () => fT,
+      startLoadAheadOfJoin: () => iT
     });
-    var Op = cp(2963),
-      op = cp(36519),
-      Ip = cp(41058),
-      Sp = cp(1080),
-      xp = cp(40911),
-      Lp = (cp(40976), cp(36986)),
-      Yp = cp(40902),
-      Dp = cp(41185),
-      Ap = cp(41046);
-    const Pp = "[bloxd-wasm-client]";
-    let Wp = null,
-      yp = null,
-      Up = null,
-      wp = null,
-      vp = null;
+    var WT = mT(2992),
+      zT = mT(36394),
+      MT = mT(41009),
+      gT = mT(1153),
+      nT = mT(40860),
+      HT = (mT(40912), mT(36894)),
+      kT = mT(40855),
+      jT = mT(41117),
+      lT = mT(40991);
+    const LT = "[bloxd-wasm-client]";
+    let pT = null,
+      BT = null,
+      ZT = null,
+      cT = null,
+      vT = null;
 
-    function tp() {
-      return wp ??= (async () => {
+    function fT() {
+      return cT ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const pp = await (0, Yp.L)();
-        if (null === pp) return;
-        if ((0, xp.s)(pp)) return (0, Yp.N)("none"), void Hp("none");
-        (0, Yp.N)(pp.backend);
-        const ip = await pp.load();
-        Hp(ip.name);
-        const cp = "unloaded" === (0, Op.E)();
-        if (cp && (0, Yp.j)(), !await (0, Dp.e)(ip)) return void console.warn(`${Pp} the join's early wasm load failed: the boot loads the client itself`);
-        if (!cp) return;
-        const Ip = (0, op.i)(ip.name);
-        void 0 !== Ip ? (0, Sp.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(Ip.ms)
+        const TT = await (0, kT.R)();
+        if (null === TT) return;
+        if ((0, nT.n)(TT)) return (0, kT.U)("none"), void qT("none");
+        (0, kT.U)(TT.backend);
+        const UT = await TT.load();
+        qT(UT.name);
+        const mT = "unloaded" === (0, WT.A)();
+        if (mT && (0, kT.o)(), !await (0, jT.d)(UT)) return void console.warn(`${LT} the join's early wasm load failed: the boot loads the client itself`);
+        if (!mT) return;
+        const MT = (0, zT.g)(UT.name);
+        void 0 !== MT ? (0, gT.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(MT.ms)
         }, {
-          path: Ip.path,
-          build: ip.name
-        }) : console.warn(`${Pp} the join's wasm load left no record of how it compiled ${ip.name}`)
-      })().catch((pp => {
-        console.warn(`${Pp} the join's early wasm load did not start: the boot loads the client itself`, pp)
-      })), wp
+          path: MT.path,
+          build: UT.name
+        }) : console.warn(`${LT} the join's wasm load left no record of how it compiled ${UT.name}`)
+      })().catch((TT => {
+        console.warn(`${LT} the join's early wasm load did not start: the boot loads the client itself`, TT)
+      })), cT
     }
 
-    function Hp(pp) {
-      null !== vp && (0, Sp.logClientMeasurement)("wasm_compile_ahead", {
-        hit: vp === pp ? 1 : 0
+    function qT(TT) {
+      null !== vT && (0, gT.logClientMeasurement)("wasm_compile_ahead", {
+        hit: vT === TT ? 1 : 0
       }, {
-        guessed: vp,
-        loaded: pp
+        guessed: vT,
+        loaded: TT
       })
     }
 
-    function dp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === Up) {
-        var ip;
-        const cp = null !== (ip = pp.joinStarted) && void 0 !== ip ? ip : () => !1;
-        Up = Promise.all([jp(pp), ep(cp)]).then((() => {}))
+    function iT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === ZT) {
+        var UT;
+        const mT = null !== (UT = TT.joinStarted) && void 0 !== UT ? UT : () => !1;
+        ZT = Promise.all([OT(TT), bT(mT)]).then((() => {}))
       }
-      return Up
+      return ZT
     }
 
-    function ep(pp) {
-      return yp ??= (async () => {
+    function bT(TT) {
+      return BT ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const ip = await (0, Yp.f)();
-        null === ip || pp() || "unloaded" !== (0, Op.E)() || (vp = ip.name, await (0, op.e)([ip, Ip.g], "low"))
-      })().catch((pp => {
-        console.warn(`${Pp} the compile ahead of the join did not start: the join loads the client itself`, pp)
-      })), yp
+        const UT = await (0, kT.i)();
+        null === UT || TT() || "unloaded" !== (0, WT.A)() || (vT = UT.name, await (0, zT.d)([UT, MT.g], "low"))
+      })().catch((TT => {
+        console.warn(`${LT} the compile ahead of the join did not start: the join loads the client itself`, TT)
+      })), BT
     }
 
-    function jp() {
+    function OT() {
       let {
-        joinStarted: pp = () => !1,
-        language: ip = ""
+        joinStarted: TT = () => !1,
+        language: UT = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return Wp ??= async function(pp, ip) {
-        if (!await async function(pp) {
-            if (pp()) return !1;
-            let ip;
+      return pT ??= async function(TT, UT) {
+        if (!await async function(TT) {
+            if (TT()) return !1;
+            let UT;
             try {
-              var Op;
-              const pp = await fetch(`${cp.p}static/js/sn3sfj.wasmJoinFiles.json`, {
+              var WT;
+              const TT = await fetch(`${mT.p}static/js/yma3ej.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!pp.ok) throw new Error(`HTTP ${pp.status}`);
-              if (/\bno-store\b/.test(null !== (Op = pp.headers.get("Cache-Control")) && void 0 !== Op ? Op : "")) return !1;
-              const op = await pp.json();
-              if (!Array.isArray(op)) throw new Error("not a list");
-              ip = op
-            } catch (Ip) {
-              return console.warn(`${Pp} the join's chunk list did not load: the join downloads its chunks itself`, Ip), !pp()
+              if (!TT.ok) throw new Error(`HTTP ${TT.status}`);
+              if (/\bno-store\b/.test(null !== (WT = TT.headers.get("Cache-Control")) && void 0 !== WT ? WT : "")) return !1;
+              const zT = await TT.json();
+              if (!Array.isArray(zT)) throw new Error("not a list");
+              UT = zT
+            } catch (MT) {
+              return console.warn(`${LT} the join's chunk list did not load: the join downloads its chunks itself`, MT), !TT()
             }
-            if (pp()) return !1;
-            const op = document.createElement("link").relList.supports("prefetch");
-            for (const Sp of ip) {
-              const pp = `${cp.p}${Sp}`;
-              op ? kp(pp) : (0, Lp.c)(pp).catch((ip => {
-                console.warn(`${Pp} prefetching ${pp} failed`, ip)
+            if (TT()) return !1;
+            const zT = document.createElement("link").relList.supports("prefetch");
+            for (const gT of UT) {
+              const TT = `${mT.p}${gT}`;
+              zT ? eT(TT) : (0, HT.e)(TT).catch((UT => {
+                console.warn(`${LT} prefetching ${TT} failed`, UT)
               }))
             }
             return !0
-          }(pp)) return;
-        const Op = [(0, Lp.c)((0, Ap.f)())];
-        (0, Ap.e)(ip) && Op.push((0, Lp.c)((0, Ap.j)()));
-        await Promise.all(Op)
-      }(pp, ip).catch((pp => {
-        console.warn(`${Pp} the prefetch failed: the join downloads the client itself`, pp)
-      })), Wp
+          }(TT)) return;
+        const WT = [(0, HT.e)((0, lT.h)())];
+        (0, lT.e)(UT) && WT.push((0, HT.e)((0, lT.i)()));
+        await Promise.all(WT)
+      }(TT, UT).catch((TT => {
+        console.warn(`${LT} the prefetch failed: the join downloads the client itself`, TT)
+      })), pT
     }
 
-    function kp(pp) {
-      const ip = document.createElement("link");
-      ip.rel = "prefetch", ip.href = pp, pp.endsWith(".js") && (ip.crossOrigin = "anonymous"), document.head.appendChild(ip)
+    function eT(TT) {
+      const UT = document.createElement("link");
+      UT.rel = "prefetch", UT.href = TT, TT.endsWith(".js") && (UT.crossOrigin = "anonymous"), document.head.appendChild(UT)
     }
   },
-  39244: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      e: () => Ip,
-      g: () => xp,
-      h: () => Dp,
-      k: () => Lp,
-      n: () => Sp
+  39216: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      g: () => MT,
+      k: () => nT,
+      o: () => jT,
+      p: () => HT,
+      s: () => gT
     });
-    var Op = cp(195);
-    const op = 3e3,
-      Ip = 15e3;
+    var WT = mT(208);
+    const zT = 3e3,
+      MT = 15e3;
 
-    function Sp(pp) {
-      const ip = pp.endsWith(Op.l);
+    function gT(TT) {
+      const UT = TT.endsWith(WT.l);
       return {
-        text: (ip ? pp.slice(0, -Op.l.length) : pp) || null,
-        dropsCache: ip
+        text: (UT ? TT.slice(0, -WT.l.length) : TT) || null,
+        dropsCache: UT
       }
     }
-    const xp = "Either your internet isn't working or this is a bug.";
+    const nT = "Either your internet isn't working or this is a bug.";
 
-    function Lp(pp, ip) {
-      const cp = Dp(pp);
-      return null !== cp.name && "" === Op.e[cp.name].text && null !== ip ? ip : cp.reason
+    function HT(TT, UT) {
+      const mT = jT(TT);
+      return null !== mT.name && "" === WT.e[mT.name].text && null !== UT ? UT : mT.reason
     }
-    const Yp = "You were removed from the game.";
+    const kT = "You were removed from the game.";
 
-    function Dp(pp) {
-      var ip;
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const op = null !== (ip = Object.keys(Op.e).find((ip => Op.e[ip].code === pp))) && void 0 !== ip ? ip : null;
-      if (null === op) return {
-        code: pp,
-        name: op,
-        reason: null !== cp && void 0 !== cp ? cp : `${xp}\nCode: ${pp}`,
+    function jT(TT) {
+      var UT;
+      let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const zT = null !== (UT = Object.keys(WT.e).find((UT => WT.e[UT].code === TT))) && void 0 !== UT ? UT : null;
+      if (null === zT) return {
+        code: TT,
+        name: zT,
+        reason: null !== mT && void 0 !== mT ? mT : `${nT}\nCode: ${TT}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: Ip,
-        canReconnect: Sp = !1
-      } = Op.e[op], Lp = pp === Op.e.outdatedVersion.code || pp === Op.e.loadRecaptchaError.code;
+        text: MT,
+        canReconnect: gT = !1
+      } = WT.e[zT], HT = TT === WT.e.outdatedVersion.code || TT === WT.e.loadRecaptchaError.code;
       return {
-        code: pp,
-        name: op,
-        reason: "" !== Ip ? Ip : null !== cp && void 0 !== cp ? cp : pp === Op.e.gameOrPluginKick.code ? Yp : `Code: ${pp}`,
-        canReconnect: Sp,
-        automaticallyReconnect: pp === Op.e.customGameUpdated.code || pp === Op.e.duplicateLobbyNameError.code,
-        requiresRefresh: Lp
+        code: TT,
+        name: zT,
+        reason: "" !== MT ? MT : null !== mT && void 0 !== mT ? mT : TT === WT.e.gameOrPluginKick.code ? kT : `Code: ${TT}`,
+        canReconnect: gT,
+        automaticallyReconnect: TT === WT.e.customGameUpdated.code || TT === WT.e.duplicateLobbyNameError.code,
+        requiresRefresh: HT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

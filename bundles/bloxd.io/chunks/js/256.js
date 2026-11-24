@@ -1,36 +1,36 @@
 export const id = 256;
 export const ids = [256];
 export const modules = {
-  40342: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      f: () => Up,
-      i: () => Yp,
-      j: () => Lp
+  40257: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => nT,
+      d: () => ZT,
+      e: () => kT,
+      i: () => HT
     });
-    var Op = cp(40140),
-      op = cp(38905),
-      Ip = cp(40273),
-      Sp = cp(40179);
-    class xp {
-      get uR() {
+    var WT = mT(40016),
+      zT = mT(38800),
+      MT = mT(40171),
+      gT = mT(40062);
+    class nT {
+      get bJ() {
         return this._isDisposed
       }
-      constructor(pp, ip, cp) {
-        let op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Ip = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          xp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          Lp = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          Yp = arguments.length > 7 ? arguments[7] : void 0,
-          Dp = arguments.length > 8 ? arguments[8] : void 0;
-        this._isAlreadyOwned = !1, this._isDisposed = !1, (0, Sp.d)(), pp && pp.Gl ? this._engine = pp.Gl().gy() : this._engine = pp, this._updatable = cp, this._instanced = xp, this._divisor = Yp || 1, this._label = Dp, ip instanceof Op.c ? (this._data = null, this._buffer = ip) : (this._data = ip, this._buffer = null), this.byteStride = Lp ? op : op * Float32Array.BYTES_PER_ELEMENT, Ip || this.create()
+      constructor(TT, UT, mT) {
+        let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          nT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          HT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          kT = arguments.length > 7 ? arguments[7] : void 0,
+          jT = arguments.length > 8 ? arguments[8] : void 0;
+        this._isAlreadyOwned = !1, this._isDisposed = !1, (0, gT.d)(), TT && TT.KF ? this._engine = TT.KF().eB() : this._engine = TT, this._updatable = mT, this._instanced = nT, this._divisor = kT || 1, this._label = jT, UT instanceof WT.e ? (this._data = null, this._buffer = UT) : (this._data = UT, this._buffer = null), this.byteStride = HT ? zT : zT * Float32Array.BYTES_PER_ELEMENT, MT || this.create()
       }
-      createVertexBuffer(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          Sp = arguments.length > 6 ? arguments[6] : void 0;
-        const xp = Ip ? ip : ip * Float32Array.BYTES_PER_ELEMENT,
-          Yp = Op ? Ip ? Op : Op * Float32Array.BYTES_PER_ELEMENT : this.byteStride;
-        return new Lp(this._engine, this, pp, this._updatable, !0, Yp, void 0 === op ? this._instanced : op, xp, cp, void 0, void 0, !0, this._divisor || Sp)
+      createVertexBuffer(TT, UT, mT, WT, zT) {
+        let MT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          gT = arguments.length > 6 ? arguments[6] : void 0;
+        const nT = MT ? UT : UT * Float32Array.BYTES_PER_ELEMENT,
+          kT = WT ? MT ? WT : WT * Float32Array.BYTES_PER_ELEMENT : this.byteStride;
+        return new HT(this._engine, this, TT, this._updatable, !0, kT, void 0 === zT ? this._instanced : zT, nT, mT, void 0, void 0, !0, this._divisor || gT)
       }
       isUpdatable() {
         return this._updatable
@@ -45,23 +45,23 @@ export const modules = {
         return this.byteStride / Float32Array.BYTES_PER_ELEMENT
       }
       create() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        !pp && this._buffer || (pp = pp || this._data, pp && (this._buffer ? this._updatable && (this._engine.updateDynamicVertexBuffer(this._buffer, pp), this._data = pp) : this._updatable ? (this._buffer = this._engine.createDynamicVertexBuffer(pp, this._label), this._data = pp) : this._buffer = this._engine.createVertexBuffer(pp, void 0, this._label)))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        !TT && this._buffer || (TT = TT || this._data, TT && (this._buffer ? this._updatable && (this._engine.updateDynamicVertexBuffer(this._buffer, TT), this._data = TT) : this._updatable ? (this._buffer = this._engine.createDynamicVertexBuffer(TT, this._label), this._data = TT) : this._buffer = this._engine.createVertexBuffer(TT, void 0, this._label)))
       }
       _rebuild() {
         if (this._data) this._buffer = null, this.create(this._data);
         else {
           if (!this._buffer) return;
-          if (this._buffer.TA > 0) return void(this._updatable ? this._buffer = this._engine.createDynamicVertexBuffer(this._buffer.TA, this._label) : this._buffer = this._engine.createVertexBuffer(this._buffer.TA, void 0, this._label));
-          op.e.Warn(`Missing data for buffer "${this._label}" ${this._buffer?"(uniqueId: "+this._buffer.uniqueId+")":""}. Buffer reconstruction failed.`), this._buffer = null
+          if (this._buffer.fl > 0) return void(this._updatable ? this._buffer = this._engine.createDynamicVertexBuffer(this._buffer.fl, this._label) : this._buffer = this._engine.createVertexBuffer(this._buffer.fl, void 0, this._label));
+          zT.b.Warn(`Missing data for buffer "${this._label}" ${this._buffer?"(uniqueId: "+this._buffer.uniqueId+")":""}. Buffer reconstruction failed.`), this._buffer = null
         }
       }
-      update(pp) {
-        this.create(pp)
+      update(TT) {
+        this.create(TT)
       }
-      updateDirectly(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        this._buffer && this._updatable && (this._engine.updateDynamicVertexBuffer(this._buffer, pp, Op ? ip : ip * Float32Array.BYTES_PER_ELEMENT, cp ? cp * this.byteStride : void 0), this._data = 0 === ip && void 0 === cp ? pp : null)
+      updateDirectly(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        this._buffer && this._updatable && (this._engine.updateDynamicVertexBuffer(this._buffer, TT, WT ? UT : UT * Float32Array.BYTES_PER_ELEMENT, mT ? mT * this.byteStride : void 0), this._data = 0 === UT && void 0 === mT ? TT : null)
       }
       _increaseReferences() {
         this._buffer && (this._isAlreadyOwned ? this._buffer.references++ : this._isAlreadyOwned = !0)
@@ -70,57 +70,57 @@ export const modules = {
         this._buffer && this._engine._releaseBuffer(this._buffer) && (this._isDisposed = !0, this._data = null, this._buffer = null)
       }
     }
-    class Lp {
-      get uR() {
+    class HT {
+      get bJ() {
         return this._isDisposed
       }
       get instanceDivisor() {
         return this._instanceDivisor
       }
-      set instanceDivisor(pp) {
-        const ip = 0 != pp;
-        this._instanceDivisor = pp, ip !== this._instanced && (this._instanced = ip, this._computeHashCode())
+      set instanceDivisor(TT) {
+        const UT = 0 != TT;
+        this._instanceDivisor = TT, UT !== this._instanced && (this._instanced = UT, this._computeHashCode())
       }
       get _maxVerticesCount() {
-        const pp = this.getData();
-        return pp ? Array.isArray(pp) ? pp.length / (this.byteStride / 4) - this.byteOffset / 4 : (pp.byteLength - this.byteOffset) / this.byteStride : 0
+        const TT = this.getData();
+        return TT ? Array.isArray(TT) ? TT.length / (this.byteStride / 4) - this.byteOffset / 4 : (TT.byteLength - this.byteOffset) / this.byteStride : 0
       }
-      constructor(pp, ip, cp, Op, op, Sp, Ap, Pp, Wp, yp) {
-        let Up, wp = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-          vp = arguments.length > 11 && void 0 !== arguments[11] && arguments[11],
-          tp = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 1,
-          Hp = arguments.length > 13 && void 0 !== arguments[13] && arguments[13];
-        if (this._isDisposed = !1, this.engine = pp, "object" === typeof Op && null !== Op ? (Up = Op.updatable ?? !1, op = Op.postponeInternalCreation, Sp = Op.stride, Ap = Op.instanced, Pp = Op.offset, Wp = Op.size, yp = Op.type, wp = Op.normalized ?? !1, vp = Op.useBytes ?? !1, tp = Op.divisor ?? 1, Hp = Op.takeBufferOwnership ?? !1, this._label = Op.label) : Up = !!Op, ip instanceof xp ? (this._buffer = ip, this._ownsBuffer = Hp) : (this._buffer = new xp(pp, ip, Up, Sp, op, Ap, vp, tp, this._label), this._ownsBuffer = !0), this.uniqueId = Lp._Counter++, this._kind = cp, void 0 === yp) {
-          const pp = this.getData();
-          this.type = pp ? Dp(pp) : Lp.FLOAT
-        } else this.type = yp;
-        const dp = (0, Ip.p)(this.type);
-        vp ? (this._size = Wp || (Sp ? Sp / dp : Yp(cp)), this.byteStride = Sp || this._buffer.byteStride || this._size * dp, this.byteOffset = Pp || 0) : (this._size = Wp || Sp || Yp(cp), this.byteStride = Sp ? Sp * dp : this._buffer.byteStride || this._size * dp, this.byteOffset = (Pp || 0) * dp), this.normalized = wp, this._instanced = void 0 !== Ap && Ap, this._instanceDivisor = Ap ? tp : 0, this._alignBuffer(), this._computeHashCode()
+      constructor(TT, UT, mT, WT, zT, gT, lT, LT, pT, BT) {
+        let ZT, cT = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+          vT = arguments.length > 11 && void 0 !== arguments[11] && arguments[11],
+          fT = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 1,
+          qT = arguments.length > 13 && void 0 !== arguments[13] && arguments[13];
+        if (this._isDisposed = !1, this.engine = TT, "object" === typeof WT && null !== WT ? (ZT = WT.updatable ?? !1, zT = WT.postponeInternalCreation, gT = WT.stride, lT = WT.instanced, LT = WT.offset, pT = WT.size, BT = WT.type, cT = WT.normalized ?? !1, vT = WT.useBytes ?? !1, fT = WT.divisor ?? 1, qT = WT.takeBufferOwnership ?? !1, this._label = WT.label) : ZT = !!WT, UT instanceof nT ? (this._buffer = UT, this._ownsBuffer = qT) : (this._buffer = new nT(TT, UT, ZT, gT, zT, lT, vT, fT, this._label), this._ownsBuffer = !0), this.uniqueId = HT._Counter++, this._kind = mT, void 0 === BT) {
+          const TT = this.getData();
+          this.type = TT ? jT(TT) : HT.FLOAT
+        } else this.type = BT;
+        const iT = (0, MT.s)(this.type);
+        vT ? (this._size = pT || (gT ? gT / iT : kT(mT)), this.byteStride = gT || this._buffer.byteStride || this._size * iT, this.byteOffset = LT || 0) : (this._size = pT || gT || kT(mT), this.byteStride = gT ? gT * iT : this._buffer.byteStride || this._size * iT, this.byteOffset = (LT || 0) * iT), this.normalized = cT, this._instanced = void 0 !== lT && lT, this._instanceDivisor = lT ? fT : 0, this._alignBuffer(), this._computeHashCode()
       }
-      static _GetTypeHashIndex(pp) {
-        switch (pp) {
-          case Lp.BYTE:
+      static _GetTypeHashIndex(TT) {
+        switch (TT) {
+          case HT.BYTE:
             return 0;
-          case Lp.UNSIGNED_BYTE:
+          case HT.UNSIGNED_BYTE:
             return 1;
-          case Lp.SHORT:
+          case HT.SHORT:
             return 2;
-          case Lp.UNSIGNED_SHORT:
+          case HT.UNSIGNED_SHORT:
             return 3;
-          case Lp.INT:
+          case HT.INT:
             return 4;
-          case Lp.UNSIGNED_INT:
+          case HT.UNSIGNED_INT:
             return 5;
-          case Lp.FLOAT:
+          case HT.FLOAT:
             return 6;
-          case Lp.HALF_FLOAT:
+          case HT.HALF_FLOAT:
             return 7;
           default:
-            throw new Error(`Invalid vertex buffer type '${pp}'`)
+            throw new Error(`Invalid vertex buffer type '${TT}'`)
         }
       }
       _computeHashCode() {
-        this.hashCode = (Lp._GetTypeHashIndex(this.type) | 0) + ((this.normalized ? 1 : 0) << 3) + (this._size - 1 << 4) + ((this._instanced ? 1 : 0) << 6) + (this.byteStride << 12)
+        this.hashCode = (HT._GetTypeHashIndex(this.type) | 0) + ((this.normalized ? 1 : 0) << 3) + (this._size - 1 << 4) + ((this._instanced ? 1 : 0) << 6) + (this.byteStride << 12)
       }
       _rebuild() {
         this._buffer?._rebuild()
@@ -134,9 +134,9 @@ export const modules = {
       getData() {
         return this._buffer.getData()
       }
-      getFloatData(pp, ip) {
-        const cp = this.getData();
-        return cp ? (0, Ip.m)(cp, this._size, this.type, this.byteOffset, this.byteStride, this.normalized, pp, ip) : null
+      getFloatData(TT, UT) {
+        const mT = this.getData();
+        return mT ? (0, MT.p)(mT, this._size, this.type, this.byteOffset, this.byteStride, this.normalized, TT, UT) : null
       }
       getBuffer() {
         return this._buffer.getBuffer()
@@ -145,13 +145,13 @@ export const modules = {
         return this._buffer
       }
       getStrideSize() {
-        return this.byteStride / (0, Ip.p)(this.type)
+        return this.byteStride / (0, MT.s)(this.type)
       }
-      Jcp() {
-        return this.byteOffset / (0, Ip.p)(this.type)
+      qmT() {
+        return this.byteOffset / (0, MT.s)(this.type)
       }
       getSize() {
-        return arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? this._size * (0, Ip.p)(this.type) : this._size
+        return arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? this._size * (0, MT.s)(this.type) : this._size
       }
       getIsInstanced() {
         return this._instanced
@@ -159,227 +159,227 @@ export const modules = {
       getInstanceDivisor() {
         return this._instanceDivisor
       }
-      create(pp) {
-        this._buffer.create(pp), this._alignBuffer()
+      create(TT) {
+        this._buffer.create(TT), this._alignBuffer()
       }
-      update(pp) {
-        this._buffer.update(pp), this._alignBuffer()
+      update(TT) {
+        this._buffer.update(TT), this._alignBuffer()
       }
-      updateDirectly(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._buffer.updateDirectly(pp, ip, void 0, cp), this._alignBuffer()
+      updateDirectly(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this._buffer.updateDirectly(TT, UT, void 0, mT), this._alignBuffer()
       }
       dispose() {
         this._ownsBuffer && this._buffer.dispose(), this._isDisposed = !0
       }
-      forEach(pp, ip) {
-        (0, Ip.f)(this._buffer.getData(), this.byteOffset, this.byteStride, this._size, this.type, pp, this.normalized, ((pp, cp) => {
-          for (let Op = 0; Op < this._size; Op++) ip(pp[Op], cp + Op)
+      forEach(TT, UT) {
+        (0, MT.l)(this._buffer.getData(), this.byteOffset, this.byteStride, this._size, this.type, TT, this.normalized, ((TT, mT) => {
+          for (let WT = 0; WT < this._size; WT++) UT(TT[WT], mT + WT)
         }))
       }
       _alignBuffer() {}
     }
 
-    function Yp(pp) {
-      switch (pp) {
-        case Lp.UVKind:
-        case Lp.UV2Kind:
-        case Lp.UV3Kind:
-        case Lp.UV4Kind:
-        case Lp.UV5Kind:
-        case Lp.UV6Kind:
+    function kT(TT) {
+      switch (TT) {
+        case HT.UVKind:
+        case HT.UV2Kind:
+        case HT.UV3Kind:
+        case HT.UV4Kind:
+        case HT.UV5Kind:
+        case HT.UV6Kind:
           return 2;
-        case Lp.NormalKind:
-        case Lp.PositionKind:
+        case HT.NormalKind:
+        case HT.PositionKind:
           return 3;
-        case Lp.ColorKind:
-        case Lp.ColorInstanceKind:
-        case Lp.MatricesIndicesKind:
-        case Lp.MatricesIndicesExtraKind:
-        case Lp.MatricesWeightsKind:
-        case Lp.MatricesWeightsExtraKind:
-        case Lp.TangentKind:
+        case HT.ColorKind:
+        case HT.ColorInstanceKind:
+        case HT.MatricesIndicesKind:
+        case HT.MatricesIndicesExtraKind:
+        case HT.MatricesWeightsKind:
+        case HT.MatricesWeightsExtraKind:
+        case HT.TangentKind:
           return 4;
         default:
-          throw new Error("Invalid kind '" + pp + "'")
+          throw new Error("Invalid kind '" + TT + "'")
       }
     }
 
-    function Dp(pp) {
-      return pp instanceof Int8Array ? Lp.BYTE : pp instanceof Uint8Array ? Lp.UNSIGNED_BYTE : pp instanceof Int16Array ? Lp.SHORT : pp instanceof Uint16Array ? Lp.UNSIGNED_SHORT : pp instanceof Int32Array ? Lp.INT : pp instanceof Uint32Array ? Lp.UNSIGNED_INT : Lp.FLOAT
+    function jT(TT) {
+      return TT instanceof Int8Array ? HT.BYTE : TT instanceof Uint8Array ? HT.UNSIGNED_BYTE : TT instanceof Int16Array ? HT.SHORT : TT instanceof Uint16Array ? HT.UNSIGNED_SHORT : TT instanceof Int32Array ? HT.INT : TT instanceof Uint32Array ? HT.UNSIGNED_INT : HT.FLOAT
     }
 
-    function Ap(pp) {
-      return (0, Ip.p)(pp)
+    function lT(TT) {
+      return (0, MT.s)(TT)
     }
 
-    function Pp(pp, ip, cp, Op, op, Sp, xp, Lp) {
-      (0, Ip.f)(pp, ip, cp, Op, op, Sp, xp, ((pp, ip) => {
-        for (let cp = 0; cp < Op; cp++) Lp(pp[cp], ip + cp)
+    function LT(TT, UT, mT, WT, zT, gT, nT, HT) {
+      (0, MT.l)(TT, UT, mT, WT, zT, gT, nT, ((TT, UT) => {
+        for (let mT = 0; mT < WT; mT++) HT(TT[mT], UT + mT)
       }))
     }
 
-    function Wp(pp, ip, cp, Op, op, Sp, xp, Lp) {
-      return (0, Ip.m)(pp, ip, cp, Op, op, Sp, xp, Lp)
+    function pT(TT, UT, mT, WT, zT, gT, nT, HT) {
+      return (0, MT.p)(TT, UT, mT, WT, zT, gT, nT, HT)
     }
-    Lp._Counter = 0, Lp.BYTE = 5120, Lp.UNSIGNED_BYTE = 5121, Lp.SHORT = 5122, Lp.UNSIGNED_SHORT = 5123, Lp.INT = 5124, Lp.UNSIGNED_INT = 5125, Lp.FLOAT = 5126, Lp.HALF_FLOAT = 5131, Lp.PositionKind = "position", Lp.NormalKind = "normal", Lp.TangentKind = "tangent", Lp.UVKind = "uv", Lp.UV2Kind = "uv2", Lp.UV3Kind = "uv3", Lp.UV4Kind = "uv4", Lp.UV5Kind = "uv5", Lp.UV6Kind = "uv6", Lp.ColorKind = "color", Lp.ColorInstanceKind = "instanceColor", Lp.MatricesIndicesKind = "matricesIndices", Lp.MatricesWeightsKind = "matricesWeights", Lp.MatricesIndicesExtraKind = "matricesIndicesExtra", Lp.MatricesWeightsExtraKind = "matricesWeightsExtra";
-    let yp = !1;
+    HT._Counter = 0, HT.BYTE = 5120, HT.UNSIGNED_BYTE = 5121, HT.SHORT = 5122, HT.UNSIGNED_SHORT = 5123, HT.INT = 5124, HT.UNSIGNED_INT = 5125, HT.FLOAT = 5126, HT.HALF_FLOAT = 5131, HT.PositionKind = "position", HT.NormalKind = "normal", HT.TangentKind = "tangent", HT.UVKind = "uv", HT.UV2Kind = "uv2", HT.UV3Kind = "uv3", HT.UV4Kind = "uv4", HT.UV5Kind = "uv5", HT.UV6Kind = "uv6", HT.ColorKind = "color", HT.ColorInstanceKind = "instanceColor", HT.MatricesIndicesKind = "matricesIndices", HT.MatricesWeightsKind = "matricesWeights", HT.MatricesIndicesExtraKind = "matricesIndicesExtra", HT.MatricesWeightsExtraKind = "matricesWeightsExtra";
+    let BT = !1;
 
-    function Up() {
-      yp || (yp = !0, Lp.DeduceStride = Yp, Lp.GetDataType = Dp, Lp.GetTypeByteLength = Ap, Lp.ForEach = Pp, Lp.GetFloatData = Wp)
+    function ZT() {
+      BT || (BT = !0, HT.DeduceStride = kT, HT.GetDataType = jT, HT.GetTypeByteLength = lT, HT.ForEach = LT, HT.GetFloatData = pT)
     }
   },
-  40140: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  40016: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT
     });
-    class Op {
+    class WT {
       get underlyingResource() {
         return null
       }
       constructor() {
-        this.references = 0, this.TA = 0, this.is32Bits = !1, this.uniqueId = Op._Counter++
+        this.references = 0, this.fl = 0, this.is32Bits = !1, this.uniqueId = WT._Counter++
       }
     }
-    Op._Counter = 0
+    WT._Counter = 0
   },
-  40334: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip
+  40251: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT
     });
-    var Op = cp(37320),
-      op = cp(40342);
-    class Ip {
+    var WT = mT(37188),
+      zT = mT(40257);
+    class MT {
       constructor() {
         this.hit = !1, this.distance = 0, this.pickedPoint = null, this.pickedMesh = null, this.bu = 0, this.bv = 0, this.faceId = -1, this.subMeshFaceId = -1, this.subMeshId = 0, this.pickedSprite = null, this.thinInstanceIndex = -1, this.ray = null, this.originMesh = null, this.aimTransform = null, this.gripTransform = null
       }
       getNormal() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!this.pickedMesh || ip && !this.pickedMesh.isVerticesDataPresent(op.j.NormalKind)) return null;
-        let cp, Ip = this.pickedMesh.NOp();
-        0 === Ip?.length && (Ip = null);
-        const Sp = Op.i.Zy[0],
-          xp = Op.i.Zy[1],
-          Lp = Op.i.Zy[2];
-        if (ip) {
-          const pp = this.pickedMesh.getVerticesData(op.j.NormalKind);
-          let ip = Ip ? Op.o.FromArrayToRef(pp, 3 * Ip[3 * this.faceId], Sp) : Sp.i5(pp[3 * this.faceId * 3], pp[3 * this.faceId * 3 + 1], pp[3 * this.faceId * 3 + 2]),
-            Yp = Ip ? Op.o.FromArrayToRef(pp, 3 * Ip[3 * this.faceId + 1], xp) : xp.i5(pp[3 * (3 * this.faceId + 1)], pp[3 * (3 * this.faceId + 1) + 1], pp[3 * (3 * this.faceId + 1) + 2]),
-            Dp = Ip ? Op.o.FromArrayToRef(pp, 3 * Ip[3 * this.faceId + 2], Lp) : Lp.i5(pp[3 * (3 * this.faceId + 2)], pp[3 * (3 * this.faceId + 2) + 1], pp[3 * (3 * this.faceId + 2) + 2]);
-          ip = ip.scale(this.bu), Yp = Yp.scale(this.bv), Dp = Dp.scale(1 - this.bu - this.bv), cp = new Op.o(ip.x + Yp.x + Dp.x, ip.y + Yp.y + Dp.y, ip.z + Yp.z + Dp.z)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!this.pickedMesh || UT && !this.pickedMesh.isVerticesDataPresent(zT.i.NormalKind)) return null;
+        let mT, MT = this.pickedMesh.vWT();
+        0 === MT?.length && (MT = null);
+        const gT = WT.l.JB[0],
+          nT = WT.l.JB[1],
+          HT = WT.l.JB[2];
+        if (UT) {
+          const TT = this.pickedMesh.getVerticesData(zT.i.NormalKind);
+          let UT = MT ? WT.p.FromArrayToRef(TT, 3 * MT[3 * this.faceId], gT) : gT.J9(TT[3 * this.faceId * 3], TT[3 * this.faceId * 3 + 1], TT[3 * this.faceId * 3 + 2]),
+            kT = MT ? WT.p.FromArrayToRef(TT, 3 * MT[3 * this.faceId + 1], nT) : nT.J9(TT[3 * (3 * this.faceId + 1)], TT[3 * (3 * this.faceId + 1) + 1], TT[3 * (3 * this.faceId + 1) + 2]),
+            jT = MT ? WT.p.FromArrayToRef(TT, 3 * MT[3 * this.faceId + 2], HT) : HT.J9(TT[3 * (3 * this.faceId + 2)], TT[3 * (3 * this.faceId + 2) + 1], TT[3 * (3 * this.faceId + 2) + 2]);
+          UT = UT.scale(this.bu), kT = kT.scale(this.bv), jT = jT.scale(1 - this.bu - this.bv), mT = new WT.p(UT.x + kT.x + jT.x, UT.y + kT.y + jT.y, UT.z + kT.z + jT.z)
         } else {
-          const pp = this.pickedMesh.getVerticesData(op.j.PositionKind),
-            ip = Ip ? Op.o.FromArrayToRef(pp, 3 * Ip[3 * this.faceId], Sp) : Sp.i5(pp[3 * this.faceId * 3], pp[3 * this.faceId * 3 + 1], pp[3 * this.faceId * 3 + 2]),
-            Yp = Ip ? Op.o.FromArrayToRef(pp, 3 * Ip[3 * this.faceId + 1], xp) : xp.i5(pp[3 * (3 * this.faceId + 1)], pp[3 * (3 * this.faceId + 1) + 1], pp[3 * (3 * this.faceId + 1) + 2]),
-            Dp = Ip ? Op.o.FromArrayToRef(pp, 3 * Ip[3 * this.faceId + 2], Lp) : Lp.i5(pp[3 * (3 * this.faceId + 2)], pp[3 * (3 * this.faceId + 2) + 1], pp[3 * (3 * this.faceId + 2) + 2]),
-            Ap = ip.subtract(Yp),
-            Pp = Dp.subtract(Yp);
-          cp = Op.o.Cross(Ap, Pp)
+          const TT = this.pickedMesh.getVerticesData(zT.i.PositionKind),
+            UT = MT ? WT.p.FromArrayToRef(TT, 3 * MT[3 * this.faceId], gT) : gT.J9(TT[3 * this.faceId * 3], TT[3 * this.faceId * 3 + 1], TT[3 * this.faceId * 3 + 2]),
+            kT = MT ? WT.p.FromArrayToRef(TT, 3 * MT[3 * this.faceId + 1], nT) : nT.J9(TT[3 * (3 * this.faceId + 1)], TT[3 * (3 * this.faceId + 1) + 1], TT[3 * (3 * this.faceId + 1) + 2]),
+            jT = MT ? WT.p.FromArrayToRef(TT, 3 * MT[3 * this.faceId + 2], HT) : HT.J9(TT[3 * (3 * this.faceId + 2)], TT[3 * (3 * this.faceId + 2) + 1], TT[3 * (3 * this.faceId + 2) + 2]),
+            lT = UT.subtract(kT),
+            LT = jT.subtract(kT);
+          mT = WT.p.Cross(lT, LT)
         }
-        const Yp = (pp, ip) => {
+        const kT = (TT, UT) => {
           if (-1 !== this.thinInstanceIndex) {
-            const cp = pp._thinInstanceDataStorage.matrixData,
-              op = this.thinInstanceIndex << 4;
-            if (cp && cp.length > op) {
-              const pp = Op.i.Matrix[0];
-              Op.b.FromArrayToRef(cp, op, pp), Op.o.TransformNormalToRef(ip, pp, ip)
+            const mT = TT._thinInstanceDataStorage.matrixData,
+              zT = this.thinInstanceIndex << 4;
+            if (mT && mT.length > zT) {
+              const TT = WT.l.Matrix[0];
+              WT.e.FromArrayToRef(mT, zT, TT), WT.p.TransformNormalToRef(UT, TT, UT)
             }
           }
-          let cp = pp.getWorldMatrix();
-          pp.nonUniformScaling && (Op.i.Matrix[0].rM(cp), cp = Op.i.Matrix[0], cp.setTranslationFromFloats(0, 0, 0), cp.invert(), cp.transposeToRef(Op.i.Matrix[1]), cp = Op.i.Matrix[1]), Op.o.TransformNormalToRef(ip, cp, ip)
+          let mT = TT.getWorldMatrix();
+          TT.nonUniformScaling && (WT.l.Matrix[0].Gw(mT), mT = WT.l.Matrix[0], mT.setTranslationFromFloats(0, 0, 0), mT.invert(), mT.transposeToRef(WT.l.Matrix[1]), mT = WT.l.Matrix[1]), WT.p.TransformNormalToRef(UT, mT, UT)
         };
-        if (pp && Yp(this.pickedMesh, cp), this.ray) {
-          const ip = Op.i.Zy[0].rM(cp);
-          pp || Yp(this.pickedMesh, ip), Op.o.Dot(ip, this.ray.direction) > 0 && cp.negateInPlace()
+        if (TT && kT(this.pickedMesh, mT), this.ray) {
+          const UT = WT.l.JB[0].Gw(mT);
+          TT || kT(this.pickedMesh, UT), WT.p.Dot(UT, this.ray.direction) > 0 && mT.negateInPlace()
         }
-        return cp.normalize(), cp
+        return mT.normalize(), mT
       }
       getTextureCoordinates() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : op.j.UVKind;
-        if (!this.pickedMesh || !this.pickedMesh.isVerticesDataPresent(pp)) return null;
-        const ip = this.pickedMesh.NOp();
-        if (!ip) return null;
-        const cp = this.pickedMesh.getVerticesData(pp);
-        if (!cp) return null;
-        let Ip = Op.l.FromArray(cp, 2 * ip[3 * this.faceId]),
-          Sp = Op.l.FromArray(cp, 2 * ip[3 * this.faceId + 1]),
-          xp = Op.l.FromArray(cp, 2 * ip[3 * this.faceId + 2]);
-        return Ip = Ip.scale(this.bu), Sp = Sp.scale(this.bv), xp = xp.scale(1 - this.bu - this.bv), new Op.l(Ip.x + Sp.x + xp.x, Ip.y + Sp.y + xp.y)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zT.i.UVKind;
+        if (!this.pickedMesh || !this.pickedMesh.isVerticesDataPresent(TT)) return null;
+        const UT = this.pickedMesh.vWT();
+        if (!UT) return null;
+        const mT = this.pickedMesh.getVerticesData(TT);
+        if (!mT) return null;
+        let MT = WT.o.FromArray(mT, 2 * UT[3 * this.faceId]),
+          gT = WT.o.FromArray(mT, 2 * UT[3 * this.faceId + 1]),
+          nT = WT.o.FromArray(mT, 2 * UT[3 * this.faceId + 2]);
+        return MT = MT.scale(this.bu), gT = gT.scale(this.bv), nT = nT.scale(1 - this.bu - this.bv), new WT.o(MT.x + gT.x + nT.x, MT.y + gT.y + nT.y)
       }
     }
   },
-  40179: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip
+  40062: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => MT
     });
-    var Op = cp(40050);
-    let op = !1;
+    var WT = mT(39922);
+    let zT = !1;
 
-    function Ip() {
-      op || (op = !0, Op.ThinEngine.prototype.updateDynamicIndexBuffer = function(pp, ip) {
-        let cp;
-        this._currentBoundBuffer[this._gl.ELEMENT_ARRAY_BUFFER] = null, this.bindIndexBuffer(pp), cp = pp.is32Bits ? ip instanceof Uint32Array ? ip : new Uint32Array(ip) : ip instanceof Uint16Array ? ip : new Uint16Array(ip), this._gl.bufferData(this._gl.ELEMENT_ARRAY_BUFFER, cp, this._gl.DYNAMIC_DRAW), this._resetIndexBufferBinding()
-      }, Op.ThinEngine.prototype.updateDynamicVertexBuffer = function(pp, ip, cp, Op) {
-        this.bindArrayBuffer(pp), void 0 === cp && (cp = 0);
-        const op = ip.byteLength || ip.length;
-        void 0 === Op || Op >= op && 0 === cp ? ip instanceof Array ? this._gl.bufferSubData(this._gl.ARRAY_BUFFER, cp, new Float32Array(ip)) : this._gl.bufferSubData(this._gl.ARRAY_BUFFER, cp, ip) : ip instanceof Array ? this._gl.bufferSubData(this._gl.ARRAY_BUFFER, cp, new Float32Array(ip).subarray(0, Op / 4)) : (ip = ArrayBuffer.isView(ip) ? new Uint8Array(ip.buffer, ip.byteOffset, Op) : new Uint8Array(ip, 0, Op), this._gl.bufferSubData(this._gl.ARRAY_BUFFER, cp, ip)), this._resetVertexBufferBinding()
+    function MT() {
+      zT || (zT = !0, WT.ThinEngine.prototype.updateDynamicIndexBuffer = function(TT, UT) {
+        let mT;
+        this._currentBoundBuffer[this._gl.ELEMENT_ARRAY_BUFFER] = null, this.bindIndexBuffer(TT), mT = TT.is32Bits ? UT instanceof Uint32Array ? UT : new Uint32Array(UT) : UT instanceof Uint16Array ? UT : new Uint16Array(UT), this._gl.bufferData(this._gl.ELEMENT_ARRAY_BUFFER, mT, this._gl.DYNAMIC_DRAW), this._resetIndexBufferBinding()
+      }, WT.ThinEngine.prototype.updateDynamicVertexBuffer = function(TT, UT, mT, WT) {
+        this.bindArrayBuffer(TT), void 0 === mT && (mT = 0);
+        const zT = UT.byteLength || UT.length;
+        void 0 === WT || WT >= zT && 0 === mT ? UT instanceof Array ? this._gl.bufferSubData(this._gl.ARRAY_BUFFER, mT, new Float32Array(UT)) : this._gl.bufferSubData(this._gl.ARRAY_BUFFER, mT, UT) : UT instanceof Array ? this._gl.bufferSubData(this._gl.ARRAY_BUFFER, mT, new Float32Array(UT).subarray(0, WT / 4)) : (UT = ArrayBuffer.isView(UT) ? new Uint8Array(UT.buffer, UT.byteOffset, WT) : new Uint8Array(UT, 0, WT), this._gl.bufferSubData(this._gl.ARRAY_BUFFER, mT, UT)), this._resetVertexBufferBinding()
       })
     }
   },
-  40149: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  40029: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT
     });
-    class Op {
+    class WT {
       get underlyingResource() {
         return this._webGLTexture
       }
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ip = arguments.length > 1 ? arguments[1] : void 0;
-        if (this._MSAARenderBuffers = null, this._context = ip, !pp && (pp = ip.createTexture(), !pp)) throw new Error("Unable to create webGL texture");
-        this.set(pp)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          UT = arguments.length > 1 ? arguments[1] : void 0;
+        if (this._MSAARenderBuffers = null, this._context = UT, !TT && (TT = UT.createTexture(), !TT)) throw new Error("Unable to create webGL texture");
+        this.set(TT)
       }
       setUsage() {}
-      set(pp) {
-        this._webGLTexture = pp
+      set(TT) {
+        this._webGLTexture = TT
       }
       reset() {
         this._webGLTexture = null, this._MSAARenderBuffers = null
       }
-      addMSAARenderBuffer(pp) {
-        this._MSAARenderBuffers || (this._MSAARenderBuffers = []), this._MSAARenderBuffers.push(pp)
+      addMSAARenderBuffer(TT) {
+        this._MSAARenderBuffers || (this._MSAARenderBuffers = []), this._MSAARenderBuffers.push(TT)
       }
       releaseMSAARenderBuffers() {
         if (this._MSAARenderBuffers) {
-          for (const pp of this._MSAARenderBuffers) this._context.deleteRenderbuffer(pp);
+          for (const TT of this._MSAARenderBuffers) this._context.deleteRenderbuffer(TT);
           this._MSAARenderBuffers = null
         }
       }
       getMSAARenderBuffer() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._MSAARenderBuffers?.[pp] ?? null
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._MSAARenderBuffers?.[TT] ?? null
       }
       release() {
         this.releaseMSAARenderBuffers(), this._webGLTexture && this._context.deleteTexture(this._webGLTexture), this.reset()
       }
     }
   },
-  40113: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => tp
+  39982: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => fT
     });
-    var Op = cp(37349),
-      op = cp(40053),
-      Ip = cp(37345),
-      Sp = cp(38905),
-      xp = cp(37338),
-      Lp = cp(40122);
-    class Yp {
+    var WT = mT(37219),
+      zT = mT(39926),
+      MT = mT(37216),
+      gT = mT(38800),
+      nT = mT(37211),
+      HT = mT(39986);
+    class kT {
       constructor() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._isDepthTestDirty = !1, this._isDepthMaskDirty = !1, this._isDepthFuncDirty = !1, this._isCullFaceDirty = !1, this._isCullDirty = !1, this._isZOffsetDirty = !1, this._isFrontFaceDirty = !1, pp && this.reset()
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this._isDepthTestDirty = !1, this._isDepthMaskDirty = !1, this._isDepthFuncDirty = !1, this._isCullFaceDirty = !1, this._isCullDirty = !1, this._isZOffsetDirty = !1, this._isFrontFaceDirty = !1, TT && this.reset()
       }
       get isDirty() {
         return this._isDepthFuncDirty || this._isDepthTestDirty || this._isDepthMaskDirty || this._isCullFaceDirty || this._isCullDirty || this._isZOffsetDirty || this._isFrontFaceDirty
@@ -387,257 +387,257 @@ export const modules = {
       get zOffset() {
         return this._zOffset
       }
-      set zOffset(pp) {
-        this._zOffset !== pp && (this._zOffset = pp, this._isZOffsetDirty = !0)
+      set zOffset(TT) {
+        this._zOffset !== TT && (this._zOffset = TT, this._isZOffsetDirty = !0)
       }
       get zOffsetUnits() {
         return this._zOffsetUnits
       }
-      set zOffsetUnits(pp) {
-        this._zOffsetUnits !== pp && (this._zOffsetUnits = pp, this._isZOffsetDirty = !0)
+      set zOffsetUnits(TT) {
+        this._zOffsetUnits !== TT && (this._zOffsetUnits = TT, this._isZOffsetDirty = !0)
       }
       get cullFace() {
         return this._cullFace
       }
-      set cullFace(pp) {
-        this._cullFace !== pp && (this._cullFace = pp, this._isCullFaceDirty = !0)
+      set cullFace(TT) {
+        this._cullFace !== TT && (this._cullFace = TT, this._isCullFaceDirty = !0)
       }
       get cull() {
         return this._cull
       }
-      set cull(pp) {
-        this._cull !== pp && (this._cull = pp, this._isCullDirty = !0)
+      set cull(TT) {
+        this._cull !== TT && (this._cull = TT, this._isCullDirty = !0)
       }
       get depthFunc() {
         return this._depthFunc
       }
-      set depthFunc(pp) {
-        this._depthFunc !== pp && (this._depthFunc = pp, this._isDepthFuncDirty = !0)
+      set depthFunc(TT) {
+        this._depthFunc !== TT && (this._depthFunc = TT, this._isDepthFuncDirty = !0)
       }
       get depthMask() {
         return this._depthMask
       }
-      set depthMask(pp) {
-        this._depthMask !== pp && (this._depthMask = pp, this._isDepthMaskDirty = !0)
+      set depthMask(TT) {
+        this._depthMask !== TT && (this._depthMask = TT, this._isDepthMaskDirty = !0)
       }
       get depthTest() {
         return this._depthTest
       }
-      set depthTest(pp) {
-        this._depthTest !== pp && (this._depthTest = pp, this._isDepthTestDirty = !0)
+      set depthTest(TT) {
+        this._depthTest !== TT && (this._depthTest = TT, this._isDepthTestDirty = !0)
       }
       get frontFace() {
         return this._frontFace
       }
-      set frontFace(pp) {
-        this._frontFace !== pp && (this._frontFace = pp, this._isFrontFaceDirty = !0)
+      set frontFace(TT) {
+        this._frontFace !== TT && (this._frontFace = TT, this._isFrontFaceDirty = !0)
       }
       reset() {
         this._depthMask = !0, this._depthTest = !0, this._depthFunc = null, this._cullFace = null, this._cull = null, this._zOffset = 0, this._zOffsetUnits = 0, this._frontFace = null, this._isDepthTestDirty = !0, this._isDepthMaskDirty = !0, this._isDepthFuncDirty = !1, this._isCullFaceDirty = !1, this._isCullDirty = !1, this._isZOffsetDirty = !0, this._isFrontFaceDirty = !1
       }
-      apply(pp) {
-        this.isDirty && (this._isCullDirty && (this.cull ? pp.enable(pp.CULL_FACE) : pp.disable(pp.CULL_FACE), this._isCullDirty = !1), this._isCullFaceDirty && (pp.cullFace(this.cullFace), this._isCullFaceDirty = !1), this._isDepthMaskDirty && (pp.depthMask(this.depthMask), this._isDepthMaskDirty = !1), this._isDepthTestDirty && (this.depthTest ? pp.enable(pp.DEPTH_TEST) : pp.disable(pp.DEPTH_TEST), this._isDepthTestDirty = !1), this._isDepthFuncDirty && (pp.depthFunc(this.depthFunc), this._isDepthFuncDirty = !1), this._isZOffsetDirty && (this.zOffset || this.zOffsetUnits ? (pp.enable(pp.POLYGON_OFFSET_FILL), pp.polygonOffset(this.zOffset, this.zOffsetUnits)) : pp.disable(pp.POLYGON_OFFSET_FILL), this._isZOffsetDirty = !1), this._isFrontFaceDirty && (pp.frontFace(this.frontFace), this._isFrontFaceDirty = !1))
+      apply(TT) {
+        this.isDirty && (this._isCullDirty && (this.cull ? TT.enable(TT.CULL_FACE) : TT.disable(TT.CULL_FACE), this._isCullDirty = !1), this._isCullFaceDirty && (TT.cullFace(this.cullFace), this._isCullFaceDirty = !1), this._isDepthMaskDirty && (TT.depthMask(this.depthMask), this._isDepthMaskDirty = !1), this._isDepthTestDirty && (this.depthTest ? TT.enable(TT.DEPTH_TEST) : TT.disable(TT.DEPTH_TEST), this._isDepthTestDirty = !1), this._isDepthFuncDirty && (TT.depthFunc(this.depthFunc), this._isDepthFuncDirty = !1), this._isZOffsetDirty && (this.zOffset || this.zOffsetUnits ? (TT.enable(TT.POLYGON_OFFSET_FILL), TT.polygonOffset(this.zOffset, this.zOffsetUnits)) : TT.disable(TT.POLYGON_OFFSET_FILL), this._isZOffsetDirty = !1), this._isFrontFaceDirty && (TT.frontFace(this.frontFace), this._isFrontFaceDirty = !1))
       }
     }
-    class Dp {
+    class jT {
       get isDirty() {
         return this._isStencilTestDirty || this._isStencilMaskDirty || this._isStencilFuncDirty || this._isStencilOpDirty
       }
       get func() {
         return this._func
       }
-      set func(pp) {
-        this._func !== pp && (this._func = pp, this._isStencilFuncDirty = !0)
+      set func(TT) {
+        this._func !== TT && (this._func = TT, this._isStencilFuncDirty = !0)
       }
       get backFunc() {
         return this._func
       }
-      set backFunc(pp) {
-        this._backFunc !== pp && (this._backFunc = pp, this._isStencilFuncDirty = !0)
+      set backFunc(TT) {
+        this._backFunc !== TT && (this._backFunc = TT, this._isStencilFuncDirty = !0)
       }
       get funcRef() {
         return this._funcRef
       }
-      set funcRef(pp) {
-        this._funcRef !== pp && (this._funcRef = pp, this._isStencilFuncDirty = !0)
+      set funcRef(TT) {
+        this._funcRef !== TT && (this._funcRef = TT, this._isStencilFuncDirty = !0)
       }
       get funcMask() {
         return this._funcMask
       }
-      set funcMask(pp) {
-        this._funcMask !== pp && (this._funcMask = pp, this._isStencilFuncDirty = !0)
+      set funcMask(TT) {
+        this._funcMask !== TT && (this._funcMask = TT, this._isStencilFuncDirty = !0)
       }
       get opStencilFail() {
         return this._opStencilFail
       }
-      set opStencilFail(pp) {
-        this._opStencilFail !== pp && (this._opStencilFail = pp, this._isStencilOpDirty = !0)
+      set opStencilFail(TT) {
+        this._opStencilFail !== TT && (this._opStencilFail = TT, this._isStencilOpDirty = !0)
       }
       get opDepthFail() {
         return this._opDepthFail
       }
-      set opDepthFail(pp) {
-        this._opDepthFail !== pp && (this._opDepthFail = pp, this._isStencilOpDirty = !0)
+      set opDepthFail(TT) {
+        this._opDepthFail !== TT && (this._opDepthFail = TT, this._isStencilOpDirty = !0)
       }
       get opStencilDepthPass() {
         return this._opStencilDepthPass
       }
-      set opStencilDepthPass(pp) {
-        this._opStencilDepthPass !== pp && (this._opStencilDepthPass = pp, this._isStencilOpDirty = !0)
+      set opStencilDepthPass(TT) {
+        this._opStencilDepthPass !== TT && (this._opStencilDepthPass = TT, this._isStencilOpDirty = !0)
       }
       get backOpStencilFail() {
         return this._backOpStencilFail
       }
-      set backOpStencilFail(pp) {
-        this._backOpStencilFail !== pp && (this._backOpStencilFail = pp, this._isStencilOpDirty = !0)
+      set backOpStencilFail(TT) {
+        this._backOpStencilFail !== TT && (this._backOpStencilFail = TT, this._isStencilOpDirty = !0)
       }
       get backOpDepthFail() {
         return this._backOpDepthFail
       }
-      set backOpDepthFail(pp) {
-        this._backOpDepthFail !== pp && (this._backOpDepthFail = pp, this._isStencilOpDirty = !0)
+      set backOpDepthFail(TT) {
+        this._backOpDepthFail !== TT && (this._backOpDepthFail = TT, this._isStencilOpDirty = !0)
       }
       get backOpStencilDepthPass() {
         return this._backOpStencilDepthPass
       }
-      set backOpStencilDepthPass(pp) {
-        this._backOpStencilDepthPass !== pp && (this._backOpStencilDepthPass = pp, this._isStencilOpDirty = !0)
+      set backOpStencilDepthPass(TT) {
+        this._backOpStencilDepthPass !== TT && (this._backOpStencilDepthPass = TT, this._isStencilOpDirty = !0)
       }
       get mask() {
         return this._mask
       }
-      set mask(pp) {
-        this._mask !== pp && (this._mask = pp, this._isStencilMaskDirty = !0)
+      set mask(TT) {
+        this._mask !== TT && (this._mask = TT, this._isStencilMaskDirty = !0)
       }
       get enabled() {
         return this._enabled
       }
-      set enabled(pp) {
-        this._enabled !== pp && (this._enabled = pp, this._isStencilTestDirty = !0)
+      set enabled(TT) {
+        this._enabled !== TT && (this._enabled = TT, this._isStencilTestDirty = !0)
       }
       constructor() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._isStencilTestDirty = !1, this._isStencilMaskDirty = !1, this._isStencilFuncDirty = !1, this._isStencilOpDirty = !1, this.useStencilGlobalOnly = !1, pp && this.reset()
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this._isStencilTestDirty = !1, this._isStencilMaskDirty = !1, this._isStencilFuncDirty = !1, this._isStencilOpDirty = !1, this.useStencilGlobalOnly = !1, TT && this.reset()
       }
       reset() {
         this.stencilMaterial = void 0, this.stencilGlobal?.reset(), this._isStencilTestDirty = !0, this._isStencilMaskDirty = !0, this._isStencilFuncDirty = !0, this._isStencilOpDirty = !0
       }
-      apply(pp) {
-        if (!pp) return;
-        const ip = !this.useStencilGlobalOnly && !!this.stencilMaterial?.enabled;
-        this.enabled = ip ? this.stencilMaterial.enabled : this.stencilGlobal.enabled, this.func = ip ? this.stencilMaterial.func : this.stencilGlobal.func, this.backFunc = ip ? this.stencilMaterial.backFunc : this.stencilGlobal.backFunc, this.funcRef = ip ? this.stencilMaterial.funcRef : this.stencilGlobal.funcRef, this.funcMask = ip ? this.stencilMaterial.funcMask : this.stencilGlobal.funcMask, this.opStencilFail = ip ? this.stencilMaterial.opStencilFail : this.stencilGlobal.opStencilFail, this.opDepthFail = ip ? this.stencilMaterial.opDepthFail : this.stencilGlobal.opDepthFail, this.opStencilDepthPass = ip ? this.stencilMaterial.opStencilDepthPass : this.stencilGlobal.opStencilDepthPass, this.backOpStencilFail = ip ? this.stencilMaterial.backOpStencilFail : this.stencilGlobal.backOpStencilFail, this.backOpDepthFail = ip ? this.stencilMaterial.backOpDepthFail : this.stencilGlobal.backOpDepthFail, this.backOpStencilDepthPass = ip ? this.stencilMaterial.backOpStencilDepthPass : this.stencilGlobal.backOpStencilDepthPass, this.mask = ip ? this.stencilMaterial.mask : this.stencilGlobal.mask, this.isDirty && (this._isStencilTestDirty && (this.enabled ? pp.enable(pp.STENCIL_TEST) : pp.disable(pp.STENCIL_TEST), this._isStencilTestDirty = !1), this._isStencilMaskDirty && (pp.stencilMask(this.mask), this._isStencilMaskDirty = !1), this._isStencilFuncDirty && (pp.stencilFuncSeparate(pp.FRONT, this.func, this.funcRef, this.funcMask), pp.stencilFuncSeparate(pp.BACK, this.backFunc, this.funcRef, this.funcMask), this._isStencilFuncDirty = !1), this._isStencilOpDirty && (pp.stencilOpSeparate(pp.FRONT, this.opStencilFail, this.opDepthFail, this.opStencilDepthPass), pp.stencilOpSeparate(pp.BACK, this.backOpStencilFail, this.backOpDepthFail, this.backOpStencilDepthPass), this._isStencilOpDirty = !1))
+      apply(TT) {
+        if (!TT) return;
+        const UT = !this.useStencilGlobalOnly && !!this.stencilMaterial?.enabled;
+        this.enabled = UT ? this.stencilMaterial.enabled : this.stencilGlobal.enabled, this.func = UT ? this.stencilMaterial.func : this.stencilGlobal.func, this.backFunc = UT ? this.stencilMaterial.backFunc : this.stencilGlobal.backFunc, this.funcRef = UT ? this.stencilMaterial.funcRef : this.stencilGlobal.funcRef, this.funcMask = UT ? this.stencilMaterial.funcMask : this.stencilGlobal.funcMask, this.opStencilFail = UT ? this.stencilMaterial.opStencilFail : this.stencilGlobal.opStencilFail, this.opDepthFail = UT ? this.stencilMaterial.opDepthFail : this.stencilGlobal.opDepthFail, this.opStencilDepthPass = UT ? this.stencilMaterial.opStencilDepthPass : this.stencilGlobal.opStencilDepthPass, this.backOpStencilFail = UT ? this.stencilMaterial.backOpStencilFail : this.stencilGlobal.backOpStencilFail, this.backOpDepthFail = UT ? this.stencilMaterial.backOpDepthFail : this.stencilGlobal.backOpDepthFail, this.backOpStencilDepthPass = UT ? this.stencilMaterial.backOpStencilDepthPass : this.stencilGlobal.backOpStencilDepthPass, this.mask = UT ? this.stencilMaterial.mask : this.stencilGlobal.mask, this.isDirty && (this._isStencilTestDirty && (this.enabled ? TT.enable(TT.STENCIL_TEST) : TT.disable(TT.STENCIL_TEST), this._isStencilTestDirty = !1), this._isStencilMaskDirty && (TT.stencilMask(this.mask), this._isStencilMaskDirty = !1), this._isStencilFuncDirty && (TT.stencilFuncSeparate(TT.FRONT, this.func, this.funcRef, this.funcMask), TT.stencilFuncSeparate(TT.BACK, this.backFunc, this.funcRef, this.funcMask), this._isStencilFuncDirty = !1), this._isStencilOpDirty && (TT.stencilOpSeparate(TT.FRONT, this.opStencilFail, this.opDepthFail, this.opStencilDepthPass), TT.stencilOpSeparate(TT.BACK, this.backOpStencilFail, this.backOpDepthFail, this.backOpStencilDepthPass), this._isStencilOpDirty = !1))
       }
     }
-    class Ap {
+    class lT {
       constructor() {
         this.reset()
       }
       reset() {
-        this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = Ap.ALWAYS, this.opStencilFail = Ap.KEEP, this.opDepthFail = Ap.KEEP, this.opStencilDepthPass = Ap.REPLACE, this.backFunc = Ap.ALWAYS, this.backOpStencilFail = Ap.KEEP, this.backOpDepthFail = Ap.KEEP, this.backOpStencilDepthPass = Ap.REPLACE
+        this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = lT.ALWAYS, this.opStencilFail = lT.KEEP, this.opDepthFail = lT.KEEP, this.opStencilDepthPass = lT.REPLACE, this.backFunc = lT.ALWAYS, this.backOpStencilFail = lT.KEEP, this.backOpDepthFail = lT.KEEP, this.backOpStencilDepthPass = lT.REPLACE
       }
       get stencilFunc() {
         return this.func
       }
-      set stencilFunc(pp) {
-        this.func = pp
+      set stencilFunc(TT) {
+        this.func = TT
       }
       get stencilBackFunc() {
         return this.backFunc
       }
-      set stencilBackFunc(pp) {
-        this.backFunc = pp
+      set stencilBackFunc(TT) {
+        this.backFunc = TT
       }
       get stencilFuncRef() {
         return this.funcRef
       }
-      set stencilFuncRef(pp) {
-        this.funcRef = pp
+      set stencilFuncRef(TT) {
+        this.funcRef = TT
       }
       get stencilFuncMask() {
         return this.funcMask
       }
-      set stencilFuncMask(pp) {
-        this.funcMask = pp
+      set stencilFuncMask(TT) {
+        this.funcMask = TT
       }
       get stencilOpStencilFail() {
         return this.opStencilFail
       }
-      set stencilOpStencilFail(pp) {
-        this.opStencilFail = pp
+      set stencilOpStencilFail(TT) {
+        this.opStencilFail = TT
       }
       get stencilOpDepthFail() {
         return this.opDepthFail
       }
-      set stencilOpDepthFail(pp) {
-        this.opDepthFail = pp
+      set stencilOpDepthFail(TT) {
+        this.opDepthFail = TT
       }
       get stencilOpStencilDepthPass() {
         return this.opStencilDepthPass
       }
-      set stencilOpStencilDepthPass(pp) {
-        this.opStencilDepthPass = pp
+      set stencilOpStencilDepthPass(TT) {
+        this.opStencilDepthPass = TT
       }
       get stencilBackOpStencilFail() {
         return this.backOpStencilFail
       }
-      set stencilBackOpStencilFail(pp) {
-        this.backOpStencilFail = pp
+      set stencilBackOpStencilFail(TT) {
+        this.backOpStencilFail = TT
       }
       get stencilBackOpDepthFail() {
         return this.backOpDepthFail
       }
-      set stencilBackOpDepthFail(pp) {
-        this.backOpDepthFail = pp
+      set stencilBackOpDepthFail(TT) {
+        this.backOpDepthFail = TT
       }
       get stencilBackOpStencilDepthPass() {
         return this.backOpStencilDepthPass
       }
-      set stencilBackOpStencilDepthPass(pp) {
-        this.backOpStencilDepthPass = pp
+      set stencilBackOpStencilDepthPass(TT) {
+        this.backOpStencilDepthPass = TT
       }
       get stencilMask() {
         return this.mask
       }
-      set stencilMask(pp) {
-        this.mask = pp
+      set stencilMask(TT) {
+        this.mask = TT
       }
       get stencilTest() {
         return this.enabled
       }
-      set stencilTest(pp) {
-        this.enabled = pp
+      set stencilTest(TT) {
+        this.enabled = TT
       }
     }
-    Ap.ALWAYS = 519, Ap.KEEP = 7680, Ap.REPLACE = 7681;
-    var Pp = cp(40124),
-      Wp = cp(40096),
-      yp = cp(40033),
-      Up = cp(40071),
-      wp = cp(40088);
+    lT.ALWAYS = 519, lT.KEEP = 7680, lT.REPLACE = 7681;
+    var LT = mT(39994),
+      pT = mT(39965),
+      BT = mT(39913),
+      ZT = mT(39946),
+      cT = mT(39957);
 
-    function vp(pp, ip) {
-      if (ip) {
+    function vT(TT, UT) {
+      if (UT) {
         const {
-          requestAnimationFrame: cp
-        } = ip;
-        if ("function" === typeof cp) return cp(pp)
+          requestAnimationFrame: mT
+        } = UT;
+        if ("function" === typeof mT) return mT(TT)
       }
-      if ((0, Up.j)()) {
+      if ((0, ZT.j)()) {
         const {
-          requestAnimationFrame: cp
-        } = ip || window;
-        if ("function" === typeof cp) return cp(pp)
-      } else if ("function" === typeof requestAnimationFrame) return requestAnimationFrame(pp);
-      return setTimeout(pp, 16)
+          requestAnimationFrame: mT
+        } = UT || window;
+        if ("function" === typeof mT) return mT(TT)
+      } else if ("function" === typeof requestAnimationFrame) return requestAnimationFrame(TT);
+      return setTimeout(TT, 16)
     }
-    class tp {
+    class fT {
       get frameId() {
         return this._frameId
       }
       get isWebGPU() {
         return this._isWebGPU
       }
-      _getShaderProcessor(pp) {
+      _getShaderProcessor(TT) {
         return this._shaderProcessor
       }
       _resetAlphaMode() {
@@ -649,14 +649,14 @@ export const modules = {
       _clearEmptyResources() {
         this._emptyTexture = null, this._emptyCubeTexture = null, this._emptyTexture3D = null, this._emptyTexture2DArray = null
       }
-      get lOp() {
+      get pWT() {
         return this._useReverseDepthBuffer
       }
-      set lOp(pp) {
-        pp !== this._useReverseDepthBuffer && (this._useReverseDepthBuffer = pp, this._depthCullingState.depthFunc = pp ? 518 : 515)
+      set pWT(TT) {
+        TT !== this._useReverseDepthBuffer && (this._useReverseDepthBuffer = TT, this._depthCullingState.depthFunc = TT ? 518 : 515)
       }
-      setColorWrite(pp) {
-        pp !== this._colorWrite && (this._colorWriteChanged = !0, this._colorWrite = pp)
+      setColorWrite(TT) {
+        TT !== this._colorWrite && (this._colorWriteChanged = !0, this._colorWrite = TT)
       }
       getColorWrite() {
         return this._colorWrite
@@ -673,55 +673,55 @@ export const modules = {
       get stencilStateComposer() {
         return this._stencilStateComposer
       }
-      _getGlobalDefines(pp) {
-        if (pp) return this.isNDCHalfZRange ? pp.IS_NDC_HALF_ZRANGE = "" : delete pp.IS_NDC_HALF_ZRANGE, this.lOp ? pp.USE_REVERSE_DEPTHBUFFER = "" : delete pp.USE_REVERSE_DEPTHBUFFER, void(this.useExactSrgbConversions ? pp.USE_EXACT_SRGB_CONVERSIONS = "" : delete pp.USE_EXACT_SRGB_CONVERSIONS);
+      _getGlobalDefines(TT) {
+        if (TT) return this.isNDCHalfZRange ? TT.IS_NDC_HALF_ZRANGE = "" : delete TT.IS_NDC_HALF_ZRANGE, this.pWT ? TT.USE_REVERSE_DEPTHBUFFER = "" : delete TT.USE_REVERSE_DEPTHBUFFER, void(this.useExactSrgbConversions ? TT.USE_EXACT_SRGB_CONVERSIONS = "" : delete TT.USE_EXACT_SRGB_CONVERSIONS);
         {
-          let pp = "";
-          return this.isNDCHalfZRange && (pp += "#define IS_NDC_HALF_ZRANGE"), this.lOp && (pp && (pp += "\n"), pp += "#define USE_REVERSE_DEPTHBUFFER"), this.useExactSrgbConversions && (pp && (pp += "\n"), pp += "#define USE_EXACT_SRGB_CONVERSIONS"), pp
+          let TT = "";
+          return this.isNDCHalfZRange && (TT += "#define IS_NDC_HALF_ZRANGE"), this.pWT && (TT && (TT += "\n"), TT += "#define USE_REVERSE_DEPTHBUFFER"), this.useExactSrgbConversions && (TT && (TT += "\n"), TT += "#define USE_EXACT_SRGB_CONVERSIONS"), TT
         }
       }
       _rebuildInternalTextures() {
-        const pp = this._internalTexturesCache.slice();
-        for (const ip of pp) ip._rebuild()
+        const TT = this._internalTexturesCache.slice();
+        for (const UT of TT) UT._rebuild()
       }
       _rebuildRenderTargetWrappers() {
-        const pp = this._renderTargetWrapperCache.slice();
-        for (const ip of pp) ip.textures?.some((pp => 15 === pp.source)) || ip._rebuild()
+        const TT = this._renderTargetWrapperCache.slice();
+        for (const UT of TT) UT.textures?.some((TT => 15 === TT.source)) || UT._rebuild()
       }
       _rebuildEffects() {
-        for (const pp in this._compiledEffects) {
-          const ip = this._compiledEffects[pp];
-          ip._pipelineContext = null, ip._prepareEffect()
+        for (const TT in this._compiledEffects) {
+          const UT = this._compiledEffects[TT];
+          UT._pipelineContext = null, UT._prepareEffect()
         }
-        op.e.ResetCache()
+        zT.b.ResetCache()
       }
       _rebuildGraphicsResources() {
         this.wipeCaches(!0), this._rebuildEffects(), this._rebuildComputeEffects?.(), this._rebuildBuffers(), this._rebuildInternalTextures(), this._rebuildTextures(), this._rebuildRenderTargetWrappers(), this.wipeCaches(!0)
       }
       _flagContextRestored() {
-        Sp.e.Warn(this.name + " context successfully restored."), this.Fy.notifyObservers(this), this._contextWasLost = !1
+        gT.b.Warn(this.name + " context successfully restored."), this.OB.notifyObservers(this), this._contextWasLost = !1
       }
-      _restoreEngineAfterContextLost(pp) {
+      _restoreEngineAfterContextLost(TT) {
         setTimeout((() => {
           this._clearEmptyResources();
-          const ip = this._depthCullingState.depthTest,
-            cp = this._depthCullingState.depthFunc,
-            Op = this._depthCullingState.depthMask,
-            op = this._stencilState.stencilTest;
-          pp(), this._rebuildGraphicsResources(), this._depthCullingState.depthTest = ip, this._depthCullingState.depthFunc = cp, this._depthCullingState.depthMask = Op, this._stencilState.stencilTest = op, this._flagContextRestored()
+          const UT = this._depthCullingState.depthTest,
+            mT = this._depthCullingState.depthFunc,
+            WT = this._depthCullingState.depthMask,
+            zT = this._stencilState.stencilTest;
+          TT(), this._rebuildGraphicsResources(), this._depthCullingState.depthTest = UT, this._depthCullingState.depthFunc = mT, this._depthCullingState.depthMask = WT, this._stencilState.stencilTest = zT, this._flagContextRestored()
         }), 0)
       }
-      get uR() {
+      get bJ() {
         return this._isDisposed
       }
       get snapshotRendering() {
         return !1
       }
-      set snapshotRendering(pp) {}
+      set snapshotRendering(TT) {}
       get snapshotRenderingMode() {
         return 0
       }
-      set snapshotRenderingMode(pp) {}
+      set snapshotRenderingMode(TT) {}
       getClassName() {
         return "AbstractEngine"
       }
@@ -736,222 +736,222 @@ export const modules = {
       }
       get emptyCubeTexture() {
         if (!this._emptyCubeTexture) {
-          const pp = new Uint8Array(4),
-            ip = [pp, pp, pp, pp, pp, pp];
-          this._emptyCubeTexture = this.createRawCubeTexture(ip, 1, 5, 0, !1, !1, 1)
+          const TT = new Uint8Array(4),
+            UT = [TT, TT, TT, TT, TT, TT];
+          this._emptyCubeTexture = this.createRawCubeTexture(UT, 1, 5, 0, !1, !1, 1)
         }
         return this._emptyCubeTexture
       }
-      set framebufferDimensionsObject(pp) {
-        this._framebufferDimensionsObject = pp
+      set framebufferDimensionsObject(TT) {
+        this._framebufferDimensionsObject = TT
       }
       get activeRenderLoops() {
         return this._activeRenderLoops
       }
-      stopRenderLoop(pp) {
-        if (!pp) return this._activeRenderLoops.length = 0, void this._cancelFrame();
-        const ip = this._activeRenderLoops.indexOf(pp);
-        ip >= 0 && (this._activeRenderLoops.splice(ip, 1), 0 == this._activeRenderLoops.length && this._cancelFrame())
+      stopRenderLoop(TT) {
+        if (!TT) return this._activeRenderLoops.length = 0, void this._cancelFrame();
+        const UT = this._activeRenderLoops.indexOf(TT);
+        UT >= 0 && (this._activeRenderLoops.splice(UT, 1), 0 == this._activeRenderLoops.length && this._cancelFrame())
       }
       _cancelFrame() {
         if (this.customAnimationFrameRequester) {
           if (0 !== this._frameHandler) {
             this._frameHandler = 0;
             const {
-              cancelAnimationFrame: pp
+              cancelAnimationFrame: TT
             } = this.customAnimationFrameRequester;
-            pp && pp(this.customAnimationFrameRequester.zy), delete this.customAnimationFrameRequester.zy
+            TT && TT(this.customAnimationFrameRequester.xB), delete this.customAnimationFrameRequester.xB
           }
         } else if (0 !== this._frameHandler) {
-          const pp = this._frameHandler;
-          if (this._frameHandler = 0, (0, Up.j)()) {
+          const TT = this._frameHandler;
+          if (this._frameHandler = 0, (0, ZT.j)()) {
             const {
-              cancelAnimationFrame: ip
+              cancelAnimationFrame: UT
             } = this.getHostWindow() || window;
-            if ("function" === typeof ip) return ip(pp)
-          } else if ("function" === typeof cancelAnimationFrame) return cancelAnimationFrame(pp);
-          return clearTimeout(pp)
+            if ("function" === typeof UT) return UT(TT)
+          } else if ("function" === typeof cancelAnimationFrame) return cancelAnimationFrame(TT);
+          return clearTimeout(TT)
         }
       }
-      Hk() {
+      fY() {
         this.onBeginFrameObservable.notifyObservers(this)
       }
-      Rk() {
+      qY() {
         this._frameId++, this.onEndFrameObservable.notifyObservers(this)
       }
       get maxFPS() {
         return this._maxFPS
       }
-      set maxFPS(pp) {
-        this._maxFPS = pp, void 0 !== pp && (this._minFrameTime = pp <= 0 ? Number.MAX_VALUE : 1e3 / pp)
+      set maxFPS(TT) {
+        this._maxFPS = TT, void 0 !== TT && (this._minFrameTime = TT <= 0 ? Number.MAX_VALUE : 1e3 / TT)
       }
-      _isOverFrameTime(pp) {
-        if (!pp || void 0 === this._maxFPS) return !1;
-        const ip = pp - this._lastFrameTime;
-        return this._lastFrameTime = pp, this._renderAccumulator += ip, this._renderAccumulator < this._minFrameTime || (this._renderAccumulator -= this._minFrameTime, this._renderAccumulator > this._minFrameTime && (this._renderAccumulator = this._minFrameTime), !1)
+      _isOverFrameTime(TT) {
+        if (!TT || void 0 === this._maxFPS) return !1;
+        const UT = TT - this._lastFrameTime;
+        return this._lastFrameTime = TT, this._renderAccumulator += UT, this._renderAccumulator < this._minFrameTime || (this._renderAccumulator -= this._minFrameTime, this._renderAccumulator > this._minFrameTime && (this._renderAccumulator = this._minFrameTime), !1)
       }
-      _processFrame(pp) {
-        if (this._frameHandler = 0, !this._contextWasLost && !this._isOverFrameTime(pp)) {
-          let pp = !0;
-          (this.uR || !this.renderEvenInBackground && this._windowIsBackground) && (pp = !1), pp && (this.Hk(), this.skipFrameRender || this._renderViews() || this._renderFrame(), this.Rk())
+      _processFrame(TT) {
+        if (this._frameHandler = 0, !this._contextWasLost && !this._isOverFrameTime(TT)) {
+          let TT = !0;
+          (this.bJ || !this.renderEvenInBackground && this._windowIsBackground) && (TT = !1), TT && (this.fY(), this.skipFrameRender || this._renderViews() || this._renderFrame(), this.qY())
         }
       }
-      _renderLoop(pp) {
-        this._processFrame(pp), this._activeRenderLoops.length > 0 && 0 === this._frameHandler && this._queueNewFrameForRenderLoop()
+      _renderLoop(TT) {
+        this._processFrame(TT), this._activeRenderLoops.length > 0 && 0 === this._frameHandler && this._queueNewFrameForRenderLoop()
       }
       _renderFrame() {
-        for (let pp = 0; pp < this._activeRenderLoops.length; pp++) {
-          (0, this._activeRenderLoops[pp])()
+        for (let TT = 0; TT < this._activeRenderLoops.length; TT++) {
+          (0, this._activeRenderLoops[TT])()
         }
       }
       _renderViews() {
         return !1
       }
-      _queueNewFrame(pp, ip) {
-        return vp(pp, ip)
+      _queueNewFrame(TT, UT) {
+        return vT(TT, UT)
       }
       _queueNewFrameForRenderLoop() {
-        this.customAnimationFrameRequester ? (this.customAnimationFrameRequester.zy = this._queueNewFrame(this.customAnimationFrameRequester.renderFunction || this._boundRenderFunction, this.customAnimationFrameRequester), this._frameHandler = this.customAnimationFrameRequester.zy) : this._frameHandler = this._queueNewFrame(this._boundRenderFunction, this.getHostWindow())
+        this.customAnimationFrameRequester ? (this.customAnimationFrameRequester.xB = this._queueNewFrame(this.customAnimationFrameRequester.renderFunction || this._boundRenderFunction, this.customAnimationFrameRequester), this._frameHandler = this.customAnimationFrameRequester.xB) : this._frameHandler = this._queueNewFrame(this._boundRenderFunction, this.getHostWindow())
       }
-      runRenderLoop(pp) {
-        -1 === this._activeRenderLoops.indexOf(pp) && (this._activeRenderLoops.push(pp), 1 === this._activeRenderLoops.length && 0 === this._frameHandler && this._queueNewFrameForRenderLoop())
+      runRenderLoop(TT) {
+        -1 === this._activeRenderLoops.indexOf(TT) && (this._activeRenderLoops.push(TT), 1 === this._activeRenderLoops.length && 0 === this._frameHandler && this._queueNewFrameForRenderLoop())
       }
       getDepthBuffer() {
         return this._depthCullingState.depthTest
       }
-      setDepthBuffer(pp) {
-        this._depthCullingState.depthTest = pp
+      setDepthBuffer(TT) {
+        this._depthCullingState.depthTest = TT
       }
-      setZOffset(pp) {
-        this._depthCullingState.zOffset = this.lOp ? -pp : pp
+      setZOffset(TT) {
+        this._depthCullingState.zOffset = this.pWT ? -TT : TT
       }
       getZOffset() {
-        const pp = this._depthCullingState.zOffset;
-        return this.lOp ? -pp : pp
+        const TT = this._depthCullingState.zOffset;
+        return this.pWT ? -TT : TT
       }
-      setZOffsetUnits(pp) {
-        this._depthCullingState.zOffsetUnits = this.lOp ? -pp : pp
+      setZOffsetUnits(TT) {
+        this._depthCullingState.zOffsetUnits = this.pWT ? -TT : TT
       }
       getZOffsetUnits() {
-        const pp = this._depthCullingState.zOffsetUnits;
-        return this.lOp ? -pp : pp
+        const TT = this._depthCullingState.zOffsetUnits;
+        return this.pWT ? -TT : TT
       }
       getHostWindow() {
-        return (0, Up.j)() ? this._renderingCanvas && this._renderingCanvas.ownerDocument && this._renderingCanvas.ownerDocument.defaultView ? this._renderingCanvas.ownerDocument.defaultView : window : null
+        return (0, ZT.j)() ? this._renderingCanvas && this._renderingCanvas.ownerDocument && this._renderingCanvas.ownerDocument.defaultView ? this._renderingCanvas.ownerDocument.defaultView : window : null
       }
       get compatibilityMode() {
         return this._compatibilityMode
       }
-      set compatibilityMode(pp) {
+      set compatibilityMode(TT) {
         this._compatibilityMode = !0
       }
       _rebuildTextures() {
-        for (const pp of this.scenes) pp._rebuildTextures();
-        for (const pp of this._virtualScenes) pp._rebuildTextures()
+        for (const TT of this.scenes) TT._rebuildTextures();
+        for (const TT of this._virtualScenes) TT._rebuildTextures()
       }
-      _releaseRenderTargetWrapper(pp) {
-        const ip = this._renderTargetWrapperCache.indexOf(pp); - 1 !== ip && this._renderTargetWrapperCache.splice(ip, 1)
+      _releaseRenderTargetWrapper(TT) {
+        const UT = this._renderTargetWrapperCache.indexOf(TT); - 1 !== UT && this._renderTargetWrapperCache.splice(UT, 1)
       }
       get currentViewport() {
         return this._cachedViewport
       }
-      setViewport(pp, ip, cp) {
-        const Op = ip || this.getRenderWidth(),
-          op = cp || this.getRenderHeight(),
-          Ip = pp.x || 0,
-          Sp = pp.y || 0;
-        this._cachedViewport = pp, this._viewport(Ip * Op, Sp * op, Op * pp.width, op * pp.height)
+      setViewport(TT, UT, mT) {
+        const WT = UT || this.getRenderWidth(),
+          zT = mT || this.getRenderHeight(),
+          MT = TT.x || 0,
+          gT = TT.y || 0;
+        this._cachedViewport = TT, this._viewport(MT * WT, gT * zT, WT * TT.width, zT * TT.height)
       }
       createCanvasImage() {
         return document.createElement("img")
       }
-      createCanvasPath2D(pp) {
-        return new Path2D(pp)
+      createCanvasPath2D(TT) {
+        return new Path2D(TT)
       }
       get description() {
-        let pp = this.name + this.version;
-        return this._caps.parallelShaderCompile && (pp += " - Parallel shader compilation"), pp
+        let TT = this.name + this.version;
+        return this._caps.parallelShaderCompile && (TT += " - Parallel shader compilation"), TT
       }
-      _createTextureBase(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          xp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          Lp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-          Yp = arguments.length > 7 ? arguments[7] : void 0,
-          Dp = arguments.length > 8 ? arguments[8] : void 0,
-          Ap = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-          Pp = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null,
-          Wp = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-          Up = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-          wp = arguments.length > 13 ? arguments[13] : void 0,
-          vp = arguments.length > 14 ? arguments[14] : void 0,
-          Hp = arguments.length > 15 ? arguments[15] : void 0;
-        const dp = "data:" === (pp = pp || "").substring(0, 5),
-          ep = "blob:" === pp.substring(0, 5),
-          jp = dp && -1 !== pp.indexOf(";base64,"),
-          kp = Pp || new yp.b(this, 1);
-        kp !== Pp && (kp.label = pp.substring(0, 60));
-        const mp = pp;
-        !this._transformTextureUrl || jp || Pp || Ap || (pp = this._transformTextureUrl(pp)), mp !== pp && (kp._originalUrl = mp);
-        const Rp = pp.lastIndexOf(".");
-        let qp = Up || (Rp > -1 ? pp.substring(Rp).toLowerCase() : "");
-        qp.indexOf("?") > -1 && (qp = qp.split("?")[0]);
-        const Mp = tp.GetCompatibleTextureLoader(qp, wp);
-        Op && Op.addPendingData(kp), kp.url = pp, kp.generateMipMaps = !ip, kp.samplingMode = op, kp.invertY = cp, kp._useSRGBBuffer = this._getUseSRGBBuffer(!!Hp, ip), this._doNotHandleContextLost || (kp._buffer = Ap);
-        let Cp = null;
-        xp && !Pp && (Cp = kp.onLoadedObservable.add(xp)), Pp || this._internalTexturesCache.push(kp);
-        const Ep = (cp, Pp) => {
-          Op && Op.removePendingData(kp), pp === mp ? (Cp && kp.onLoadedObservable.remove(Cp), Ip.e.UseFallbackTexture && pp !== Ip.e.FallbackTexture && this._createTextureBase(Ip.e.FallbackTexture, ip, kp.invertY, Op, op, null, Lp, Yp, Dp, Ap, kp), cp = (cp || "Unknown error") + (Ip.e.UseFallbackTexture ? " - Fallback texture was used" : ""), kp.onErrorObservable.notifyObservers({
-            message: cp,
-            exception: Pp
-          }), Lp && Lp(cp, Pp)) : (Sp.e.Warn(`Failed to load ${pp}, falling back to ${mp}`), this._createTextureBase(mp, ip, kp.invertY, Op, op, xp, Lp, Yp, Dp, Ap, kp, Wp, Up, wp, vp, Hp))
+      _createTextureBase(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          nT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          HT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+          kT = arguments.length > 7 ? arguments[7] : void 0,
+          jT = arguments.length > 8 ? arguments[8] : void 0,
+          lT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+          LT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null,
+          pT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+          ZT = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
+          cT = arguments.length > 13 ? arguments[13] : void 0,
+          vT = arguments.length > 14 ? arguments[14] : void 0,
+          qT = arguments.length > 15 ? arguments[15] : void 0;
+        const iT = "data:" === (TT = TT || "").substring(0, 5),
+          bT = "blob:" === TT.substring(0, 5),
+          OT = iT && -1 !== TT.indexOf(";base64,"),
+          eT = LT || new BT.b(this, 1);
+        eT !== LT && (eT.label = TT.substring(0, 60));
+        const YT = TT;
+        !this._transformTextureUrl || OT || LT || lT || (TT = this._transformTextureUrl(TT)), YT !== TT && (eT._originalUrl = YT);
+        const JT = TT.lastIndexOf(".");
+        let xT = ZT || (JT > -1 ? TT.substring(JT).toLowerCase() : "");
+        xT.indexOf("?") > -1 && (xT = xT.split("?")[0]);
+        const dT = fT.GetCompatibleTextureLoader(xT, cT);
+        WT && WT.addPendingData(eT), eT.url = TT, eT.generateMipMaps = !UT, eT.samplingMode = zT, eT.invertY = mT, eT._useSRGBBuffer = this._getUseSRGBBuffer(!!qT, UT), this._doNotHandleContextLost || (eT._buffer = lT);
+        let wT = null;
+        nT && !LT && (wT = eT.onLoadedObservable.add(nT)), LT || this._internalTexturesCache.push(eT);
+        const tT = (mT, LT) => {
+          WT && WT.removePendingData(eT), TT === YT ? (wT && eT.onLoadedObservable.remove(wT), MT.c.UseFallbackTexture && TT !== MT.c.FallbackTexture && this._createTextureBase(MT.c.FallbackTexture, UT, eT.invertY, WT, zT, null, HT, kT, jT, lT, eT), mT = (mT || "Unknown error") + (MT.c.UseFallbackTexture ? " - Fallback texture was used" : ""), eT.onErrorObservable.notifyObservers({
+            message: mT,
+            exception: LT
+          }), HT && HT(mT, LT)) : (gT.b.Warn(`Failed to load ${TT}, falling back to ${YT}`), this._createTextureBase(YT, UT, eT.invertY, WT, zT, nT, HT, kT, jT, lT, eT, pT, ZT, cT, vT, qT))
         };
-        if (Mp) {
-          const ip = async pp => {
-            (await Mp).loadData(pp, kp, ((pp, ip, cp, Ip, Sp, xp) => {
-              xp ? Ep("TextureLoader failed to load data") : Yp(kp, qp, Op, {
-                width: pp,
-                height: ip
-              }, kp.invertY, !cp, Ip, (() => (Sp(), !1)), op)
-            }), vp)
+        if (dT) {
+          const UT = async TT => {
+            (await dT).loadData(TT, eT, ((TT, UT, mT, MT, gT, nT) => {
+              nT ? tT("TextureLoader failed to load data") : kT(eT, xT, WT, {
+                width: TT,
+                height: UT
+              }, eT.invertY, !mT, MT, (() => (gT(), !1)), zT)
+            }), vT)
           };
-          if (Ap) {
-            const pp = async pp => {
+          if (lT) {
+            const TT = async TT => {
               try {
-                await ip(pp)
-              } catch (cp) {
-                Ep("Failed to parse texture data", cp)
+                await UT(TT)
+              } catch (mT) {
+                tT("Failed to parse texture data", mT)
               }
             };
-            Ap instanceof ArrayBuffer ? pp(new Uint8Array(Ap)) : ArrayBuffer.isView(Ap) ? pp(Ap) : Lp && Lp("Unable to load: only ArrayBuffer or ArrayBufferView is supported", null)
-          } else this._loadFile(pp, (async pp => {
+            lT instanceof ArrayBuffer ? TT(new Uint8Array(lT)) : ArrayBuffer.isView(lT) ? TT(lT) : HT && HT("Unable to load: only ArrayBuffer or ArrayBufferView is supported", null)
+          } else this._loadFile(TT, (async TT => {
             try {
-              await ip(new Uint8Array(pp))
-            } catch (cp) {
-              Ep("Failed to parse texture data", cp)
+              await UT(new Uint8Array(TT))
+            } catch (mT) {
+              tT("Failed to parse texture data", mT)
             }
-          }), void 0, Op ? Op.offlineProvider : void 0, !0, ((pp, ip) => {
-            Ep("Unable to load " + (pp && pp.responseURL, ip))
+          }), void 0, WT ? WT.offlineProvider : void 0, !0, ((TT, UT) => {
+            tT("Unable to load " + (TT && TT.responseURL, UT))
           }))
         } else {
-          const cp = pp => {
-            ep && !this._doNotHandleContextLost && (kp._buffer = pp), Yp(kp, qp, Op, pp, kp.invertY, ip, !1, Dp, op)
+          const mT = TT => {
+            bT && !this._doNotHandleContextLost && (eT._buffer = TT), kT(eT, xT, WT, TT, eT.invertY, UT, !1, jT, zT)
           };
-          !dp || jp ? Ap && ("string" === typeof Ap.decoding || Ap.close) ? cp(Ap) : tp._FileToolsLoadImage(pp || "", cp, Ep, Op ? Op.offlineProvider : null, wp, kp.invertY && this._features.needsInvertingBitmap ? {
+          !iT || OT ? lT && ("string" === typeof lT.decoding || lT.close) ? mT(lT) : fT._FileToolsLoadImage(TT || "", mT, tT, WT ? WT.offlineProvider : null, cT, eT.invertY && this._features.needsInvertingBitmap ? {
             imageOrientation: "flipY"
-          } : void 0, this) : "string" === typeof Ap || Ap instanceof ArrayBuffer || ArrayBuffer.isView(Ap) || Ap instanceof Blob ? tp._FileToolsLoadImage(Ap, cp, Ep, Op ? Op.offlineProvider : null, wp, kp.invertY && this._features.needsInvertingBitmap ? {
+          } : void 0, this) : "string" === typeof lT || lT instanceof ArrayBuffer || ArrayBuffer.isView(lT) || lT instanceof Blob ? fT._FileToolsLoadImage(lT, mT, tT, WT ? WT.offlineProvider : null, cT, eT.invertY && this._features.needsInvertingBitmap ? {
             imageOrientation: "flipY"
-          } : void 0, this) : Ap && cp(Ap)
+          } : void 0, this) : lT && mT(lT)
         }
-        return kp
+        return eT
       }
       _rebuildBuffers() {
-        for (const pp of this._uniformBuffers) pp._rebuildAfterContextLost()
+        for (const TT of this._uniformBuffers) TT._rebuildAfterContextLost()
       }
       get _shouldUseHighPrecisionShader() {
         return !(!this._caps.highPrecisionShaderSupported || !this._highPrecisionShadersAllowed)
       }
       getHostDocument() {
-        return this._renderingCanvas && this._renderingCanvas.ownerDocument ? this._renderingCanvas.ownerDocument : (0, Up.f)() ? document : null
+        return this._renderingCanvas && this._renderingCanvas.ownerDocument ? this._renderingCanvas.ownerDocument : (0, ZT.d)() ? document : null
       }
       getLoadedTexturesCache() {
         return this._internalTexturesCache
@@ -963,14 +963,14 @@ export const modules = {
         return this._caps
       }
       resetTextureCache() {
-        for (const pp in this._boundTexturesCache) Object.prototype.hasOwnProperty.call(this._boundTexturesCache, pp) && (this._boundTexturesCache[pp] = null);
+        for (const TT in this._boundTexturesCache) Object.prototype.hasOwnProperty.call(this._boundTexturesCache, TT) && (this._boundTexturesCache[TT] = null);
         this._currentTextureChannel = -1
       }
       get name() {
         return this._name
       }
-      set name(pp) {
-        this._name = pp
+      set name(TT) {
+        this._name = TT
       }
       static get NpmPackage() {
         return "babylonjs@9.28.0"
@@ -987,8 +987,8 @@ export const modules = {
       getAudioDestination() {
         return this._audioDestination
       }
-      setHardwareScalingLevel(pp) {
-        this._hardwareScalingLevel = pp, this.resize()
+      setHardwareScalingLevel(TT) {
+        this._hardwareScalingLevel = TT, this.resize()
       }
       getHardwareScalingLevel() {
         return this._hardwareScalingLevel
@@ -996,8 +996,8 @@ export const modules = {
       get doNotHandleContextLost() {
         return this._doNotHandleContextLost
       }
-      set doNotHandleContextLost(pp) {
-        this._doNotHandleContextLost = pp
+      set doNotHandleContextLost(TT) {
+        this._doNotHandleContextLost = TT
       }
       get isStencilEnable() {
         return this._isStencilEnable
@@ -1005,76 +1005,76 @@ export const modules = {
       getCreationOptions() {
         return this._creationOptions
       }
-      constructor(pp, ip, cp) {
-        this._colorWrite = !0, this._colorWriteChanged = !0, this._depthCullingState = new Yp, this._stencilStateComposer = new Dp, this._stencilState = new Ap, this._alphaState = new Pp.c(!1), this._alphaMode = Array(8).fill(-1), this._alphaEquation = Array(8).fill(-1), this._activeRequests = [], this._badOS = !1, this._badDesktopOS = !1, this._compatibilityMode = !0, this._internalTexturesCache = new Array, this._currentRenderTarget = null, this._boundTexturesCache = {}, this._activeChannel = 0, this._currentTextureChannel = -1, this._viewportCached = {
+      constructor(TT, UT, mT) {
+        this._colorWrite = !0, this._colorWriteChanged = !0, this._depthCullingState = new kT, this._stencilStateComposer = new jT, this._stencilState = new lT, this._alphaState = new LT.b(!1), this._alphaMode = Array(8).fill(-1), this._alphaEquation = Array(8).fill(-1), this._activeRequests = [], this._badOS = !1, this._badDesktopOS = !1, this._compatibilityMode = !0, this._internalTexturesCache = new Array, this._currentRenderTarget = null, this._boundTexturesCache = {}, this._activeChannel = 0, this._currentTextureChannel = -1, this._viewportCached = {
           x: 0,
           y: 0,
           z: 0,
           w: 0
-        }, this._isWebGPU = !1, this._enableGPUDebugMarkers = !1, this.onCanvasBlurObservable = new Op.d, this.onCanvasFocusObservable = new Op.d, this.onNewSceneAddedObservable = new Op.d, this.onResizeObservable = new Op.d, this.onCanvasPointerOutObservable = new Op.d, this.onEffectErrorObservable = new Op.d, this.disablePerformanceMonitorInBackground = !1, this.disableVertexArrayObjects = !1, this._frameId = 0, this.hostInformation = {
+        }, this._isWebGPU = !1, this._enableGPUDebugMarkers = !1, this.onCanvasBlurObservable = new WT.d, this.onCanvasFocusObservable = new WT.d, this.onNewSceneAddedObservable = new WT.d, this.onResizeObservable = new WT.d, this.onCanvasPointerOutObservable = new WT.d, this.onEffectErrorObservable = new WT.d, this.disablePerformanceMonitorInBackground = !1, this.disableVertexArrayObjects = !1, this._frameId = 0, this.hostInformation = {
           isMobile: !1
-        }, this.isFullscreen = !1, this.enableOfflineSupport = !1, this.disableManifestCheck = !1, this.disableContextMenu = !0, this.currentRenderPassId = 0, this.isPointerLock = !1, this.postProcesses = [], this.canvasTabIndex = 1, this._contextWasLost = !1, this._useReverseDepthBuffer = !1, this.isNDCHalfZRange = !1, this.hasOriginBottomLeft = !0, this._renderTargetWrapperCache = new Array, this._compiledEffects = {}, this._isDisposed = !1, this.scenes = [], this._virtualScenes = new Array, this.onBeforeTextureInitObservable = new Op.d, this.renderEvenInBackground = !0, this.preventCacheWipeBetweenFrames = !1, this._frameHandler = 0, this._activeRenderLoops = new Array, this.customAnimationFrameRequester = null, this._windowIsBackground = !1, this._boundRenderFunction = pp => this._renderLoop(pp), this._lastFrameTime = 0, this._renderAccumulator = 0, this.skipFrameRender = !1, this.onBeforeShaderCompilationObservable = new Op.d, this.onAfterShaderCompilationObservable = new Op.d, this.onBeginFrameObservable = new Op.d, this.onEndFrameObservable = new Op.d, this._transformTextureUrl = null, this._uniformBuffers = new Array, this._storageBuffers = new Array, this._highPrecisionShadersAllowed = !0, this.onContextLostObservable = new Op.d, this.Fy = new Op.d, this._name = "", this.premultipliedAlpha = !0, this.adaptToDeviceRatio = !1, this._lastDevicePixelRatio = 1, this._doNotHandleContextLost = !1, this.cullBackFaces = null, this._renderPassNames = ["main"], this._onReleaseRenderPassObservable = null, this._fps = 60, this._deltaTime = 0, this._deterministicLockstep = !1, this._lockstepMaxSteps = 4, this._timeStep = 1 / 60, this.Kl = new Op.d, this.onReleaseEffectsObservable = new Op.d, Ip.e.Instances.push(this), this.startTime = Lp.e.Now, this._stencilStateComposer.stencilGlobal = this._stencilState, xp.e.SetMatrixPrecision(!!ip.useLargeWorldRendering || !!ip.useHighPrecisionMatrix), (0, Up.h)() && navigator.userAgent && (this._badOS = /iPad/i.test(navigator.userAgent) || /iPhone/i.test(navigator.userAgent), this._badDesktopOS = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)), ip.antialias = pp ?? ip.antialias, ip.deterministicLockstep = ip.deterministicLockstep ?? !1, ip.lockstepMaxSteps = ip.lockstepMaxSteps ?? 4, ip.timeStep = ip.timeStep ?? 1 / 60, ip.stencil = ip.stencil ?? !0, this._audioContext = ip.audioEngineOptions?.audioContext ?? null, this._audioDestination = ip.audioEngineOptions?.audioDestination ?? null, this.premultipliedAlpha = ip.premultipliedAlpha ?? !0, this._doNotHandleContextLost = !!ip.doNotHandleContextLost, this._isStencilEnable = !!ip.stencil, this.useExactSrgbConversions = ip.useExactSrgbConversions ?? !1, this.canvasTabIndex = ip.canvasTabIndex ?? this.canvasTabIndex;
-        const op = (0, Up.j)() && window.devicePixelRatio || 1,
-          Sp = ip.limitDeviceRatio || op;
-        cp = cp || ip.adaptToDeviceRatio || !1, this.adaptToDeviceRatio = cp, this._hardwareScalingLevel = cp ? 1 / Math.min(Sp, op) : 1, this._lastDevicePixelRatio = op, this._creationOptions = ip
+        }, this.isFullscreen = !1, this.enableOfflineSupport = !1, this.disableManifestCheck = !1, this.disableContextMenu = !0, this.currentRenderPassId = 0, this.isPointerLock = !1, this.postProcesses = [], this.canvasTabIndex = 1, this._contextWasLost = !1, this._useReverseDepthBuffer = !1, this.isNDCHalfZRange = !1, this.hasOriginBottomLeft = !0, this._renderTargetWrapperCache = new Array, this._compiledEffects = {}, this._isDisposed = !1, this.scenes = [], this._virtualScenes = new Array, this.onBeforeTextureInitObservable = new WT.d, this.renderEvenInBackground = !0, this.preventCacheWipeBetweenFrames = !1, this._frameHandler = 0, this._activeRenderLoops = new Array, this.customAnimationFrameRequester = null, this._windowIsBackground = !1, this._boundRenderFunction = TT => this._renderLoop(TT), this._lastFrameTime = 0, this._renderAccumulator = 0, this.skipFrameRender = !1, this.onBeforeShaderCompilationObservable = new WT.d, this.onAfterShaderCompilationObservable = new WT.d, this.onBeginFrameObservable = new WT.d, this.onEndFrameObservable = new WT.d, this._transformTextureUrl = null, this._uniformBuffers = new Array, this._storageBuffers = new Array, this._highPrecisionShadersAllowed = !0, this.onContextLostObservable = new WT.d, this.OB = new WT.d, this._name = "", this.premultipliedAlpha = !0, this.adaptToDeviceRatio = !1, this._lastDevicePixelRatio = 1, this._doNotHandleContextLost = !1, this.cullBackFaces = null, this._renderPassNames = ["main"], this._onReleaseRenderPassObservable = null, this._fps = 60, this._deltaTime = 0, this._deterministicLockstep = !1, this._lockstepMaxSteps = 4, this._timeStep = 1 / 60, this.SF = new WT.d, this.onReleaseEffectsObservable = new WT.d, MT.c.Instances.push(this), this.startTime = HT.c.Now, this._stencilStateComposer.stencilGlobal = this._stencilState, nT.c.SetMatrixPrecision(!!UT.useLargeWorldRendering || !!UT.useHighPrecisionMatrix), (0, ZT.f)() && navigator.userAgent && (this._badOS = /iPad/i.test(navigator.userAgent) || /iPhone/i.test(navigator.userAgent), this._badDesktopOS = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)), UT.antialias = TT ?? UT.antialias, UT.deterministicLockstep = UT.deterministicLockstep ?? !1, UT.lockstepMaxSteps = UT.lockstepMaxSteps ?? 4, UT.timeStep = UT.timeStep ?? 1 / 60, UT.stencil = UT.stencil ?? !0, this._audioContext = UT.audioEngineOptions?.audioContext ?? null, this._audioDestination = UT.audioEngineOptions?.audioDestination ?? null, this.premultipliedAlpha = UT.premultipliedAlpha ?? !0, this._doNotHandleContextLost = !!UT.doNotHandleContextLost, this._isStencilEnable = !!UT.stencil, this.useExactSrgbConversions = UT.useExactSrgbConversions ?? !1, this.canvasTabIndex = UT.canvasTabIndex ?? this.canvasTabIndex;
+        const zT = (0, ZT.j)() && window.devicePixelRatio || 1,
+          gT = UT.limitDeviceRatio || zT;
+        mT = mT || UT.adaptToDeviceRatio || !1, this.adaptToDeviceRatio = mT, this._hardwareScalingLevel = mT ? 1 / Math.min(gT, zT) : 1, this._lastDevicePixelRatio = zT, this._creationOptions = UT
       }
       resize() {
-        let pp, ip, cp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let TT, UT, mT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this.adaptToDeviceRatio) {
-          const pp = (0, Up.j)() && window.devicePixelRatio || 1,
-            ip = this._lastDevicePixelRatio / pp;
-          this._lastDevicePixelRatio = pp, this._hardwareScalingLevel *= ip
+          const TT = (0, ZT.j)() && window.devicePixelRatio || 1,
+            UT = this._lastDevicePixelRatio / TT;
+          this._lastDevicePixelRatio = TT, this._hardwareScalingLevel *= UT
         }
-        if ((0, Up.j)() && (0, Up.f)())
+        if ((0, ZT.j)() && (0, ZT.d)())
           if (this._renderingCanvas) {
-            const cp = this._renderingCanvas.getBoundingClientRect?.();
-            pp = this._renderingCanvas.clientWidth || cp?.width || this._renderingCanvas.width * this._hardwareScalingLevel || 100, ip = this._renderingCanvas.clientHeight || cp?.height || this._renderingCanvas.height * this._hardwareScalingLevel || 100
-          } else pp = window.innerWidth, ip = window.innerHeight;
-        else pp = this._renderingCanvas ? this._renderingCanvas.width : 100, ip = this._renderingCanvas ? this._renderingCanvas.height : 100;
-        this.setSize(pp / this._hardwareScalingLevel, ip / this._hardwareScalingLevel, cp)
+            const mT = this._renderingCanvas.getBoundingClientRect?.();
+            TT = this._renderingCanvas.clientWidth || mT?.width || this._renderingCanvas.width * this._hardwareScalingLevel || 100, UT = this._renderingCanvas.clientHeight || mT?.height || this._renderingCanvas.height * this._hardwareScalingLevel || 100
+          } else TT = window.innerWidth, UT = window.innerHeight;
+        else TT = this._renderingCanvas ? this._renderingCanvas.width : 100, UT = this._renderingCanvas ? this._renderingCanvas.height : 100;
+        this.setSize(TT / this._hardwareScalingLevel, UT / this._hardwareScalingLevel, mT)
       }
-      setSize(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      setSize(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (!this._renderingCanvas) return !1;
-        if (pp |= 0, ip |= 0, !cp && this._renderingCanvas.width === pp && this._renderingCanvas.height === ip) return !1;
-        if (this._renderingCanvas.width = pp, this._renderingCanvas.height = ip, this.scenes) {
-          for (let pp = 0; pp < this.scenes.length; pp++) {
-            const ip = this.scenes[pp];
-            for (let pp = 0; pp < ip.cameras.length; pp++) {
-              ip.cameras[pp]._currentRenderId = 0
+        if (TT |= 0, UT |= 0, !mT && this._renderingCanvas.width === TT && this._renderingCanvas.height === UT) return !1;
+        if (this._renderingCanvas.width = TT, this._renderingCanvas.height = UT, this.scenes) {
+          for (let TT = 0; TT < this.scenes.length; TT++) {
+            const UT = this.scenes[TT];
+            for (let TT = 0; TT < UT.cameras.length; TT++) {
+              UT.cameras[TT]._currentRenderId = 0
             }
           }
           this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this)
         }
         return !0
       }
-      createRawTexture(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-        throw (0, Wp.o)("engine.rawTexture")
+      createRawTexture(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT) {
+        throw (0, pT.k)("engine.rawTexture")
       }
-      createRawCubeTexture(pp, ip, cp, Op, op, Ip, Sp, xp) {
-        throw (0, Wp.o)("engine.rawTexture")
+      createRawCubeTexture(TT, UT, mT, WT, zT, MT, gT, nT) {
+        throw (0, pT.k)("engine.rawTexture")
       }
-      createRawTexture3D(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp) {
-        throw (0, Wp.o)("engine.rawTexture")
+      createRawTexture3D(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT) {
+        throw (0, pT.k)("engine.rawTexture")
       }
-      createRawTexture2DArray(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-        throw (0, Wp.o)("engine.rawTexture")
+      createRawTexture2DArray(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT) {
+        throw (0, pT.k)("engine.rawTexture")
       }
-      _sharedInit(pp) {
-        this._renderingCanvas = pp
+      _sharedInit(TT) {
+        this._renderingCanvas = TT
       }
       _setupMobileChecks() {
         navigator && navigator.userAgent && (this._checkForMobile = () => {
-          const pp = navigator.userAgent;
-          this.hostInformation.isMobile = -1 !== pp.indexOf("Mobile") || -1 !== pp.indexOf("Mac") && (0, Up.f)() && "ontouchend" in document
-        }, this._checkForMobile(), (0, Up.j)() && window.addEventListener("resize", this._checkForMobile))
+          const TT = navigator.userAgent;
+          this.hostInformation.isMobile = -1 !== TT.indexOf("Mobile") || -1 !== TT.indexOf("Mac") && (0, ZT.d)() && "ontouchend" in document
+        }, this._checkForMobile(), (0, ZT.j)() && window.addEventListener("resize", this._checkForMobile))
       }
-      createVideoElement(pp) {
+      createVideoElement(TT) {
         return document.createElement("video")
       }
       _reportDrawCall() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        this._drawCalls?.addCount(pp, !1)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        this._drawCalls?.addCount(TT, !1)
       }
       getFps() {
         return this._fps
@@ -1091,97 +1091,97 @@ export const modules = {
       getTimeStep() {
         return 1e3 * this._timeStep
       }
-      _createImageBitmapFromSource(pp, ip) {
+      _createImageBitmapFromSource(TT, UT) {
         throw new Error("createImageBitmapFromSource is not implemented")
       }
-      createImageBitmap(pp, ip) {
-        return createImageBitmap(pp, ip)
+      createImageBitmap(TT, UT) {
+        return createImageBitmap(TT, UT)
       }
-      resizeImageBitmap(pp, ip, cp) {
+      resizeImageBitmap(TT, UT, mT) {
         throw new Error("resizeImageBitmap is not implemented")
       }
-      getFontOffset(pp) {
+      getFontOffset(TT) {
         throw new Error("getFontOffset is not implemented")
       }
-      static _CreateCanvas(pp, ip) {
-        if ("undefined" === typeof document) return new OffscreenCanvas(pp, ip);
-        const cp = document.createElement("canvas");
-        return cp.width = pp, cp.height = ip, cp
+      static _CreateCanvas(TT, UT) {
+        if ("undefined" === typeof document) return new OffscreenCanvas(TT, UT);
+        const mT = document.createElement("canvas");
+        return mT.width = TT, mT.height = UT, mT
       }
-      createCanvas(pp, ip) {
-        return tp._CreateCanvas(pp, ip)
+      createCanvas(TT, UT) {
+        return fT._CreateCanvas(TT, UT)
       }
-      static _FileToolsLoadImage(pp, ip, cp, Op, op, Ip, Sp) {
-        if (!wp.c.loadImage) throw (0, Wp.o)("FileTools");
-        return wp.c.loadImage(pp, ip, cp, Op, op, Ip, Sp)
+      static _FileToolsLoadImage(TT, UT, mT, WT, zT, MT, gT) {
+        if (!cT.d.loadImage) throw (0, pT.k)("FileTools");
+        return cT.d.loadImage(TT, UT, mT, WT, zT, MT, gT)
       }
-      _loadFile(pp, ip, cp, Op, op, Ip) {
-        const Sp = (0, wp.n)(pp, ip, cp, Op, op, Ip);
-        return this._activeRequests.push(Sp), Sp.onCompleteObservable.add((() => {
-          const pp = this._activeRequests.indexOf(Sp); - 1 !== pp && this._activeRequests.splice(pp, 1)
-        })), Sp
+      _loadFile(TT, UT, mT, WT, zT, MT) {
+        const gT = (0, cT.m)(TT, UT, mT, WT, zT, MT);
+        return this._activeRequests.push(gT), gT.onCompleteObservable.add((() => {
+          const TT = this._activeRequests.indexOf(gT); - 1 !== TT && this._activeRequests.splice(TT, 1)
+        })), gT
       }
-      static _FileToolsLoadFile(pp, ip, cp, Op, op, Ip) {
-        if (wp.c.loadFile) return wp.c.loadFile(pp, ip, cp, Op, op, Ip);
-        throw (0, Wp.o)("FileTools")
+      static _FileToolsLoadFile(TT, UT, mT, WT, zT, MT) {
+        if (cT.d.loadFile) return cT.d.loadFile(TT, UT, mT, WT, zT, MT);
+        throw (0, pT.k)("FileTools")
       }
       dispose() {
         for (this.releaseEffects(), this._isDisposed = !0, this.stopRenderLoop(), this._emptyTexture && (this._releaseTexture(this._emptyTexture), this._emptyTexture = null), this._emptyCubeTexture && (this._releaseTexture(this._emptyCubeTexture), this._emptyCubeTexture = null), this._renderingCanvas = null, this.onBeforeTextureInitObservable && this.onBeforeTextureInitObservable.clear(); this.postProcesses.length;) this.postProcesses[0].dispose();
         for (; this.scenes.length;) this.scenes[0].dispose();
         for (; this._virtualScenes.length;) this._virtualScenes[0].dispose();
-        this.releaseComputeEffects?.(), op.e.ResetCache();
-        for (const ip of this._activeRequests) ip.abort();
-        this._boundRenderFunction = null, this.Kl.notifyObservers(this), this.Kl.clear(), this.onResizeObservable.clear(), this.onCanvasBlurObservable.clear(), this.onCanvasFocusObservable.clear(), this.onCanvasPointerOutObservable.clear(), this.onNewSceneAddedObservable.clear(), this.onEffectErrorObservable.clear(), (0, Up.j)() && window.removeEventListener("resize", this._checkForMobile);
-        const pp = Ip.e.Instances.indexOf(this);
-        pp >= 0 && Ip.e.Instances.splice(pp, 1), Ip.e.Instances.length || (Ip.e.OnEnginesDisposedObservable.notifyObservers(this), Ip.e.OnEnginesDisposedObservable.clear()), this.onBeginFrameObservable.clear(), this.onEndFrameObservable.clear(), this._onReleaseRenderPassObservable?.clear(), this._onReleaseRenderPassObservable = null
+        this.releaseComputeEffects?.(), zT.b.ResetCache();
+        for (const UT of this._activeRequests) UT.abort();
+        this._boundRenderFunction = null, this.SF.notifyObservers(this), this.SF.clear(), this.onResizeObservable.clear(), this.onCanvasBlurObservable.clear(), this.onCanvasFocusObservable.clear(), this.onCanvasPointerOutObservable.clear(), this.onNewSceneAddedObservable.clear(), this.onEffectErrorObservable.clear(), (0, ZT.j)() && window.removeEventListener("resize", this._checkForMobile);
+        const TT = MT.c.Instances.indexOf(this);
+        TT >= 0 && MT.c.Instances.splice(TT, 1), MT.c.Instances.length || (MT.c.OnEnginesDisposedObservable.notifyObservers(this), MT.c.OnEnginesDisposedObservable.clear()), this.onBeginFrameObservable.clear(), this.onEndFrameObservable.clear(), this._onReleaseRenderPassObservable?.clear(), this._onReleaseRenderPassObservable = null
       }
-      static DefaultLoadingScreenFactory(pp) {
-        throw (0, Wp.o)("LoadingScreen")
+      static DefaultLoadingScreenFactory(TT) {
+        throw (0, pT.k)("LoadingScreen")
       }
-      static MarkAllMaterialsAsDirty(pp, ip) {
-        for (let cp = 0; cp < Ip.e.Instances.length; cp++) {
-          const Op = Ip.e.Instances[cp];
-          for (let cp = 0; cp < Op.scenes.length; cp++) Op.scenes[cp].markAllMaterialsAsDirty(pp, ip)
+      static MarkAllMaterialsAsDirty(TT, UT) {
+        for (let mT = 0; mT < MT.c.Instances.length; mT++) {
+          const WT = MT.c.Instances[mT];
+          for (let mT = 0; mT < WT.scenes.length; mT++) WT.scenes[mT].markAllMaterialsAsDirty(TT, UT)
         }
       }
-      static GetCompatibleTextureLoader(pp, ip) {
+      static GetCompatibleTextureLoader(TT, UT) {
         return null
       }
     }
-    tp._RenderPassIdCounter = 0, tp._RescalePostProcessFactory = null, tp.CollisionsEpsilon = .001, tp.QueueNewFrame = vp
+    fT._RenderPassIdCounter = 0, fT._RescalePostProcessFactory = null, fT.CollisionsEpsilon = .001, fT.QueueNewFrame = vT
   },
-  40062: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  39934: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    class Op {
+    class WT {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.ShadersRepository : Op.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.ShadersRepository : WT.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.ShadersStore : Op.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.ShadersStore : WT.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Op.IncludesShadersStore : Op.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? WT.IncludesShadersStore : WT.IncludesShadersStoreWGSL
       }
     }
-    Op.ShadersRepository = "src/Shaders/", Op.ShadersStore = {}, Op.IncludesShadersStore = {}, Op.ShadersRepositoryWGSL = "src/ShadersWGSL/", Op.ShadersStoreWGSL = {}, Op.IncludesShadersStoreWGSL = {}
+    WT.ShadersRepository = "src/Shaders/", WT.ShadersStore = {}, WT.IncludesShadersStore = {}, WT.ShadersRepositoryWGSL = "src/ShadersWGSL/", WT.ShadersStoreWGSL = {}, WT.IncludesShadersStoreWGSL = {}
   },
-  40079: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Pp,
-      g: () => Hp,
-      h: () => yp,
-      l: () => Wp,
-      o: () => Up,
-      s: () => tp,
-      u: () => Ap,
-      y: () => Yp,
-      C: () => Dp,
-      F: () => Lp,
-      J: () => xp
+  39949: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => LT,
+      f: () => qT,
+      g: () => BT,
+      h: () => pT,
+      l: () => ZT,
+      o: () => fT,
+      q: () => lT,
+      u: () => kT,
+      w: () => jT,
+      y: () => HT,
+      A: () => nT
     });
-    class Op {
+    class WT {
       constructor() {
         this._valueCache = {}, this._matrixValueCache = {}, this.vertexCompilationError = null, this.fragmentCompilationError = null, this.programLinkError = null, this.programValidationError = null, this._isDisposed = !1
       }
@@ -1191,171 +1191,171 @@ export const modules = {
       get isReady() {
         return !!this.program && (!this.isParallelCompiled || this.engine._isRenderingStateCompiled(this))
       }
-      _handlesSpectorRebuildCallback(pp) {
-        pp && this.program && pp(this.program)
+      _handlesSpectorRebuildCallback(TT) {
+        TT && this.program && TT(this.program)
       }
-      setEngine(pp) {
-        this.engine = pp
+      setEngine(TT) {
+        this.engine = TT
       }
-      _fillEffectInformation(pp, ip, cp, Op, op, Ip, Sp, xp) {
-        const Lp = this.engine;
-        if (Lp.supportsUniformBuffers)
-          for (const Dp in ip) pp.bindUniformBlock(Dp, ip[Dp]);
-        let Yp;
-        for (this.engine.getUniforms(this, cp).forEach(((pp, ip) => {
-            Op[cp[ip]] = pp
-          })), this._uniforms = Op, Yp = 0; Yp < op.length; Yp++) {
-          null == pp.getUniform(op[Yp]) && (op.splice(Yp, 1), Yp--)
+      _fillEffectInformation(TT, UT, mT, WT, zT, MT, gT, nT) {
+        const HT = this.engine;
+        if (HT.supportsUniformBuffers)
+          for (const jT in UT) TT.bindUniformBlock(jT, UT[jT]);
+        let kT;
+        for (this.engine.getUniforms(this, mT).forEach(((TT, UT) => {
+            WT[mT[UT]] = TT
+          })), this._uniforms = WT, kT = 0; kT < zT.length; kT++) {
+          null == TT.getUniform(zT[kT]) && (zT.splice(kT, 1), kT--)
         }
-        op.forEach(((pp, ip) => {
-          Ip[pp] = ip
+        zT.forEach(((TT, UT) => {
+          MT[TT] = UT
         }));
-        for (const Dp of Lp.getAttributes(this, Sp)) xp.push(Dp)
+        for (const jT of HT.getAttributes(this, gT)) nT.push(jT)
       }
       dispose() {
         this._uniforms = {}, this._isDisposed = !0
       }
-      _cacheMatrix(pp, ip) {
-        const cp = this._valueCache[pp],
-          Op = ip.updateFlag;
-        if (void 0 !== cp && cp === Op) return !1;
-        const op = ip.BOp();
-        let Ip = this._matrixValueCache[pp];
-        if (void 0 !== cp && null !== cp && void 0 !== Ip) {
-          let ip = !0;
-          for (let pp = 15; pp >= 0; pp--)
-            if (Ip[pp] !== op[pp]) {
-              ip = !1;
+      _cacheMatrix(TT, UT) {
+        const mT = this._valueCache[TT],
+          WT = UT.updateFlag;
+        if (void 0 !== mT && mT === WT) return !1;
+        const zT = UT.cWT();
+        let MT = this._matrixValueCache[TT];
+        if (void 0 !== mT && null !== mT && void 0 !== MT) {
+          let UT = !0;
+          for (let TT = 15; TT >= 0; TT--)
+            if (MT[TT] !== zT[TT]) {
+              UT = !1;
               break
-            } if (ip) return this._valueCache[pp] = Op, !1
+            } if (UT) return this._valueCache[TT] = WT, !1
         }
-        return void 0 === Ip && (Ip = this._matrixValueCache[pp] = new Float32Array(16)), Ip.set(op), this._valueCache[pp] = Op, !0
+        return void 0 === MT && (MT = this._matrixValueCache[TT] = new Float32Array(16)), MT.set(zT), this._valueCache[TT] = WT, !0
       }
-      _cacheFloat2(pp, ip, cp) {
-        let Op = this._valueCache[pp];
-        if (!Op || 2 !== Op.length) return Op = [ip, cp], this._valueCache[pp] = Op, !0;
-        let op = !1;
-        return Op[0] !== ip && (Op[0] = ip, op = !0), Op[1] !== cp && (Op[1] = cp, op = !0), op
+      _cacheFloat2(TT, UT, mT) {
+        let WT = this._valueCache[TT];
+        if (!WT || 2 !== WT.length) return WT = [UT, mT], this._valueCache[TT] = WT, !0;
+        let zT = !1;
+        return WT[0] !== UT && (WT[0] = UT, zT = !0), WT[1] !== mT && (WT[1] = mT, zT = !0), zT
       }
-      _cacheFloat3(pp, ip, cp, Op) {
-        let op = this._valueCache[pp];
-        if (!op || 3 !== op.length) return op = [ip, cp, Op], this._valueCache[pp] = op, !0;
-        let Ip = !1;
-        return op[0] !== ip && (op[0] = ip, Ip = !0), op[1] !== cp && (op[1] = cp, Ip = !0), op[2] !== Op && (op[2] = Op, Ip = !0), Ip
+      _cacheFloat3(TT, UT, mT, WT) {
+        let zT = this._valueCache[TT];
+        if (!zT || 3 !== zT.length) return zT = [UT, mT, WT], this._valueCache[TT] = zT, !0;
+        let MT = !1;
+        return zT[0] !== UT && (zT[0] = UT, MT = !0), zT[1] !== mT && (zT[1] = mT, MT = !0), zT[2] !== WT && (zT[2] = WT, MT = !0), MT
       }
-      _cacheFloat4(pp, ip, cp, Op, op) {
-        let Ip = this._valueCache[pp];
-        if (!Ip || 4 !== Ip.length) return Ip = [ip, cp, Op, op], this._valueCache[pp] = Ip, !0;
-        let Sp = !1;
-        return Ip[0] !== ip && (Ip[0] = ip, Sp = !0), Ip[1] !== cp && (Ip[1] = cp, Sp = !0), Ip[2] !== Op && (Ip[2] = Op, Sp = !0), Ip[3] !== op && (Ip[3] = op, Sp = !0), Sp
+      _cacheFloat4(TT, UT, mT, WT, zT) {
+        let MT = this._valueCache[TT];
+        if (!MT || 4 !== MT.length) return MT = [UT, mT, WT, zT], this._valueCache[TT] = MT, !0;
+        let gT = !1;
+        return MT[0] !== UT && (MT[0] = UT, gT = !0), MT[1] !== mT && (MT[1] = mT, gT = !0), MT[2] !== WT && (MT[2] = WT, gT = !0), MT[3] !== zT && (MT[3] = zT, gT = !0), gT
       }
-      setInt(pp, ip) {
-        const cp = this._valueCache[pp];
-        void 0 !== cp && cp === ip || this.engine.setInt(this._uniforms[pp], ip) && (this._valueCache[pp] = ip)
+      setInt(TT, UT) {
+        const mT = this._valueCache[TT];
+        void 0 !== mT && mT === UT || this.engine.setInt(this._uniforms[TT], UT) && (this._valueCache[TT] = UT)
       }
-      setInt2(pp, ip, cp) {
-        this._cacheFloat2(pp, ip, cp) && (this.engine.setInt2(this._uniforms[pp], ip, cp) || (this._valueCache[pp] = null))
+      setInt2(TT, UT, mT) {
+        this._cacheFloat2(TT, UT, mT) && (this.engine.setInt2(this._uniforms[TT], UT, mT) || (this._valueCache[TT] = null))
       }
-      setInt3(pp, ip, cp, Op) {
-        this._cacheFloat3(pp, ip, cp, Op) && (this.engine.setInt3(this._uniforms[pp], ip, cp, Op) || (this._valueCache[pp] = null))
+      setInt3(TT, UT, mT, WT) {
+        this._cacheFloat3(TT, UT, mT, WT) && (this.engine.setInt3(this._uniforms[TT], UT, mT, WT) || (this._valueCache[TT] = null))
       }
-      setInt4(pp, ip, cp, Op, op) {
-        this._cacheFloat4(pp, ip, cp, Op, op) && (this.engine.setInt4(this._uniforms[pp], ip, cp, Op, op) || (this._valueCache[pp] = null))
+      setInt4(TT, UT, mT, WT, zT) {
+        this._cacheFloat4(TT, UT, mT, WT, zT) && (this.engine.setInt4(this._uniforms[TT], UT, mT, WT, zT) || (this._valueCache[TT] = null))
       }
-      setIntArray(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setIntArray(this._uniforms[pp], ip)
+      setIntArray(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setIntArray(this._uniforms[TT], UT)
       }
-      setIntArray2(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setIntArray2(this._uniforms[pp], ip)
+      setIntArray2(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setIntArray2(this._uniforms[TT], UT)
       }
-      setIntArray3(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setIntArray3(this._uniforms[pp], ip)
+      setIntArray3(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setIntArray3(this._uniforms[TT], UT)
       }
-      setIntArray4(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setIntArray4(this._uniforms[pp], ip)
+      setIntArray4(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setIntArray4(this._uniforms[TT], UT)
       }
-      setUInt(pp, ip) {
-        const cp = this._valueCache[pp];
-        void 0 !== cp && cp === ip || this.engine.setUInt(this._uniforms[pp], ip) && (this._valueCache[pp] = ip)
+      setUInt(TT, UT) {
+        const mT = this._valueCache[TT];
+        void 0 !== mT && mT === UT || this.engine.setUInt(this._uniforms[TT], UT) && (this._valueCache[TT] = UT)
       }
-      setUInt2(pp, ip, cp) {
-        this._cacheFloat2(pp, ip, cp) && (this.engine.setUInt2(this._uniforms[pp], ip, cp) || (this._valueCache[pp] = null))
+      setUInt2(TT, UT, mT) {
+        this._cacheFloat2(TT, UT, mT) && (this.engine.setUInt2(this._uniforms[TT], UT, mT) || (this._valueCache[TT] = null))
       }
-      setUInt3(pp, ip, cp, Op) {
-        this._cacheFloat3(pp, ip, cp, Op) && (this.engine.setUInt3(this._uniforms[pp], ip, cp, Op) || (this._valueCache[pp] = null))
+      setUInt3(TT, UT, mT, WT) {
+        this._cacheFloat3(TT, UT, mT, WT) && (this.engine.setUInt3(this._uniforms[TT], UT, mT, WT) || (this._valueCache[TT] = null))
       }
-      setUInt4(pp, ip, cp, Op, op) {
-        this._cacheFloat4(pp, ip, cp, Op, op) && (this.engine.setUInt4(this._uniforms[pp], ip, cp, Op, op) || (this._valueCache[pp] = null))
+      setUInt4(TT, UT, mT, WT, zT) {
+        this._cacheFloat4(TT, UT, mT, WT, zT) && (this.engine.setUInt4(this._uniforms[TT], UT, mT, WT, zT) || (this._valueCache[TT] = null))
       }
-      setUIntArray(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setUIntArray(this._uniforms[pp], ip)
+      setUIntArray(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setUIntArray(this._uniforms[TT], UT)
       }
-      setUIntArray2(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setUIntArray2(this._uniforms[pp], ip)
+      setUIntArray2(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setUIntArray2(this._uniforms[TT], UT)
       }
-      setUIntArray3(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setUIntArray3(this._uniforms[pp], ip)
+      setUIntArray3(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setUIntArray3(this._uniforms[TT], UT)
       }
-      setUIntArray4(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setUIntArray4(this._uniforms[pp], ip)
+      setUIntArray4(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setUIntArray4(this._uniforms[TT], UT)
       }
-      setArray(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setArray(this._uniforms[pp], ip)
+      setArray(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setArray(this._uniforms[TT], UT)
       }
-      setArray2(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setArray2(this._uniforms[pp], ip)
+      setArray2(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setArray2(this._uniforms[TT], UT)
       }
-      setArray3(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setArray3(this._uniforms[pp], ip)
+      setArray3(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setArray3(this._uniforms[TT], UT)
       }
-      setArray4(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setArray4(this._uniforms[pp], ip)
+      setArray4(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setArray4(this._uniforms[TT], UT)
       }
-      setMatrices(pp, ip) {
-        ip && (this._valueCache[pp] = null, this.engine.setMatrices(this._uniforms[pp], ip))
+      setMatrices(TT, UT) {
+        UT && (this._valueCache[TT] = null, this.engine.setMatrices(this._uniforms[TT], UT))
       }
-      setMatrix(pp, ip) {
-        this._cacheMatrix(pp, ip) && (this.engine.setMatrices(this._uniforms[pp], ip.BOp()) || (this._valueCache[pp] = null))
+      setMatrix(TT, UT) {
+        this._cacheMatrix(TT, UT) && (this.engine.setMatrices(this._uniforms[TT], UT.cWT()) || (this._valueCache[TT] = null))
       }
-      setMatrix3x3(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setMatrix3x3(this._uniforms[pp], ip)
+      setMatrix3x3(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setMatrix3x3(this._uniforms[TT], UT)
       }
-      setMatrix2x2(pp, ip) {
-        this._valueCache[pp] = null, this.engine.setMatrix2x2(this._uniforms[pp], ip)
+      setMatrix2x2(TT, UT) {
+        this._valueCache[TT] = null, this.engine.setMatrix2x2(this._uniforms[TT], UT)
       }
-      setFloat(pp, ip) {
-        const cp = this._valueCache[pp];
-        void 0 !== cp && cp === ip || this.engine.setFloat(this._uniforms[pp], ip) && (this._valueCache[pp] = ip)
+      setFloat(TT, UT) {
+        const mT = this._valueCache[TT];
+        void 0 !== mT && mT === UT || this.engine.setFloat(this._uniforms[TT], UT) && (this._valueCache[TT] = UT)
       }
-      setVector2(pp, ip) {
-        this._cacheFloat2(pp, ip.x, ip.y) && (this.engine.setFloat2(this._uniforms[pp], ip.x, ip.y) || (this._valueCache[pp] = null))
+      setVector2(TT, UT) {
+        this._cacheFloat2(TT, UT.x, UT.y) && (this.engine.setFloat2(this._uniforms[TT], UT.x, UT.y) || (this._valueCache[TT] = null))
       }
-      setFloat2(pp, ip, cp) {
-        this._cacheFloat2(pp, ip, cp) && (this.engine.setFloat2(this._uniforms[pp], ip, cp) || (this._valueCache[pp] = null))
+      setFloat2(TT, UT, mT) {
+        this._cacheFloat2(TT, UT, mT) && (this.engine.setFloat2(this._uniforms[TT], UT, mT) || (this._valueCache[TT] = null))
       }
-      setVector3(pp, ip) {
-        this._cacheFloat3(pp, ip.x, ip.y, ip.z) && (this.engine.setFloat3(this._uniforms[pp], ip.x, ip.y, ip.z) || (this._valueCache[pp] = null))
+      setVector3(TT, UT) {
+        this._cacheFloat3(TT, UT.x, UT.y, UT.z) && (this.engine.setFloat3(this._uniforms[TT], UT.x, UT.y, UT.z) || (this._valueCache[TT] = null))
       }
-      setFloat3(pp, ip, cp, Op) {
-        this._cacheFloat3(pp, ip, cp, Op) && (this.engine.setFloat3(this._uniforms[pp], ip, cp, Op) || (this._valueCache[pp] = null))
+      setFloat3(TT, UT, mT, WT) {
+        this._cacheFloat3(TT, UT, mT, WT) && (this.engine.setFloat3(this._uniforms[TT], UT, mT, WT) || (this._valueCache[TT] = null))
       }
-      setVector4(pp, ip) {
-        this._cacheFloat4(pp, ip.x, ip.y, ip.z, ip.w) && (this.engine.setFloat4(this._uniforms[pp], ip.x, ip.y, ip.z, ip.w) || (this._valueCache[pp] = null))
+      setVector4(TT, UT) {
+        this._cacheFloat4(TT, UT.x, UT.y, UT.z, UT.w) && (this.engine.setFloat4(this._uniforms[TT], UT.x, UT.y, UT.z, UT.w) || (this._valueCache[TT] = null))
       }
-      setQuaternion(pp, ip) {
-        this._cacheFloat4(pp, ip.x, ip.y, ip.z, ip.w) && (this.engine.setFloat4(this._uniforms[pp], ip.x, ip.y, ip.z, ip.w) || (this._valueCache[pp] = null))
+      setQuaternion(TT, UT) {
+        this._cacheFloat4(TT, UT.x, UT.y, UT.z, UT.w) && (this.engine.setFloat4(this._uniforms[TT], UT.x, UT.y, UT.z, UT.w) || (this._valueCache[TT] = null))
       }
-      setFloat4(pp, ip, cp, Op, op) {
-        this._cacheFloat4(pp, ip, cp, Op, op) && (this.engine.setFloat4(this._uniforms[pp], ip, cp, Op, op) || (this._valueCache[pp] = null))
+      setFloat4(TT, UT, mT, WT, zT) {
+        this._cacheFloat4(TT, UT, mT, WT, zT) && (this.engine.setFloat4(this._uniforms[TT], UT, mT, WT, zT) || (this._valueCache[TT] = null))
       }
-      setColor3(pp, ip) {
-        this._cacheFloat3(pp, ip.r, ip.g, ip.b) && (this.engine.setFloat3(this._uniforms[pp], ip.r, ip.g, ip.b) || (this._valueCache[pp] = null))
+      setColor3(TT, UT) {
+        this._cacheFloat3(TT, UT.r, UT.g, UT.b) && (this.engine.setFloat3(this._uniforms[TT], UT.r, UT.g, UT.b) || (this._valueCache[TT] = null))
       }
-      setColor4(pp, ip, cp) {
-        this._cacheFloat4(pp, ip.r, ip.g, ip.b, cp) && (this.engine.setFloat4(this._uniforms[pp], ip.r, ip.g, ip.b, cp) || (this._valueCache[pp] = null))
+      setColor4(TT, UT, mT) {
+        this._cacheFloat4(TT, UT.r, UT.g, UT.b, mT) && (this.engine.setFloat4(this._uniforms[TT], UT.r, UT.g, UT.b, mT) || (this._valueCache[TT] = null))
       }
-      setDirectColor4(pp, ip) {
-        this._cacheFloat4(pp, ip.r, ip.g, ip.b, ip.a) && (this.engine.setFloat4(this._uniforms[pp], ip.r, ip.g, ip.b, ip.a) || (this._valueCache[pp] = null))
+      setDirectColor4(TT, UT) {
+        this._cacheFloat4(TT, UT.r, UT.g, UT.b, UT.a) && (this.engine.setFloat4(this._uniforms[TT], UT.r, UT.g, UT.b, UT.a) || (this._valueCache[TT] = null))
       }
       _getVertexShaderCode() {
         return this.vertexShader ? this.engine._getShaderSource(this.vertexShader) : null
@@ -1364,208 +1364,208 @@ export const modules = {
         return this.fragmentShader ? this.engine._getShaderSource(this.fragmentShader) : null
       }
     }
-    var op = cp(40088);
-    const Ip = new WeakMap,
-      Sp = {
+    var zT = mT(39957);
+    const MT = new WeakMap,
+      gT = {
         _webGLVersion: 2,
         cachedPipelines: {}
       };
 
-    function xp(pp) {
-      let ip = Ip.get(pp);
-      if (!ip) {
-        if (!pp) return Sp;
-        ip = {
-          _webGLVersion: pp.TEXTURE_BINDING_3D ? 2 : 1,
-          _context: pp,
-          parallelShaderCompile: pp.getExtension("KHR_parallel_shader_compile") || void 0,
+    function nT(TT) {
+      let UT = MT.get(TT);
+      if (!UT) {
+        if (!TT) return gT;
+        UT = {
+          _webGLVersion: TT.TEXTURE_BINDING_3D ? 2 : 1,
+          _context: TT,
+          parallelShaderCompile: TT.getExtension("KHR_parallel_shader_compile") || void 0,
           cachedPipelines: {}
-        }, Ip.set(pp, ip)
+        }, MT.set(TT, UT)
       }
-      return ip
+      return UT
     }
 
-    function Lp(pp) {
-      Ip.delete(pp)
+    function HT(TT) {
+      MT.delete(TT)
     }
 
-    function Yp(pp, ip, cp, Op, op, Ip) {
-      const Sp = xp(Op);
-      Ip || (Ip = Sp._createShaderProgramInjection ?? Pp);
-      return Ip(pp, vp(ip, "vertex", Op, Sp._contextWasLost), vp(cp, "fragment", Op, Sp._contextWasLost), Op, op, Sp.validateShaderPrograms)
+    function kT(TT, UT, mT, WT, zT, MT) {
+      const gT = nT(WT);
+      MT || (MT = gT._createShaderProgramInjection ?? LT);
+      return MT(TT, vT(UT, "vertex", WT, gT._contextWasLost), vT(mT, "fragment", WT, gT._contextWasLost), WT, zT, gT.validateShaderPrograms)
     }
 
-    function Dp(pp, ip, cp, Op, op) {
-      let Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        Sp = arguments.length > 6 ? arguments[6] : void 0;
-      const Lp = xp(op);
-      Sp || (Sp = Lp._createShaderProgramInjection ?? Pp);
-      const Yp = Lp._webGLVersion > 1 ? "#version 300 es\n#define WEBGL2 \n" : "";
-      return Sp(pp, wp(ip, "vertex", Op, Yp, op, Lp._contextWasLost), wp(cp, "fragment", Op, Yp, op, Lp._contextWasLost), op, Ip, Lp.validateShaderPrograms)
+    function jT(TT, UT, mT, WT, zT) {
+      let MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        gT = arguments.length > 6 ? arguments[6] : void 0;
+      const HT = nT(zT);
+      gT || (gT = HT._createShaderProgramInjection ?? LT);
+      const kT = HT._webGLVersion > 1 ? "#version 300 es\n#define WEBGL2 \n" : "";
+      return gT(TT, cT(UT, "vertex", WT, kT, zT, HT._contextWasLost), cT(mT, "fragment", WT, kT, zT, HT._contextWasLost), zT, MT, HT.validateShaderPrograms)
     }
 
-    function Ap(pp, ip) {
-      const cp = new Op,
-        op = xp(pp);
-      return op.parallelShaderCompile && !op.disableParallelShaderCompile && (cp.isParallelCompiled = !0), cp.context = op._context, cp
+    function lT(TT, UT) {
+      const mT = new WT,
+        zT = nT(TT);
+      return zT.parallelShaderCompile && !zT.disableParallelShaderCompile && (mT.isParallelCompiled = !0), mT.context = zT._context, mT
     }
 
-    function Pp(pp, ip, cp, Op) {
-      let op = arguments.length > 5 ? arguments[5] : void 0;
-      const Ip = Op.createProgram();
-      if (pp.program = Ip, !Ip) throw new Error("Unable to create program");
-      return Op.attachShader(Ip, ip), Op.attachShader(Ip, cp), Op.linkProgram(Ip), pp.context = Op, pp.vertexShader = ip, pp.fragmentShader = cp, pp.isParallelCompiled || yp(pp, Op, op), Ip
+    function LT(TT, UT, mT, WT) {
+      let zT = arguments.length > 5 ? arguments[5] : void 0;
+      const MT = WT.createProgram();
+      if (TT.program = MT, !MT) throw new Error("Unable to create program");
+      return WT.attachShader(MT, UT), WT.attachShader(MT, mT), WT.linkProgram(MT), TT.context = WT, TT.vertexShader = UT, TT.fragmentShader = mT, TT.isParallelCompiled || BT(TT, WT, zT), MT
     }
 
-    function Wp(pp, ip, cp) {
-      const Op = pp;
-      if (Op._isDisposed) return !1;
-      const op = xp(ip);
-      return !!(op && op.parallelShaderCompile && op.parallelShaderCompile.COMPLETION_STATUS_KHR && Op.program && ip.getProgramParameter(Op.program, op.parallelShaderCompile.COMPLETION_STATUS_KHR)) && (yp(Op, ip, cp), !0)
+    function pT(TT, UT, mT) {
+      const WT = TT;
+      if (WT._isDisposed) return !1;
+      const zT = nT(UT);
+      return !!(zT && zT.parallelShaderCompile && zT.parallelShaderCompile.COMPLETION_STATUS_KHR && WT.program && UT.getProgramParameter(WT.program, zT.parallelShaderCompile.COMPLETION_STATUS_KHR)) && (BT(WT, UT, mT), !0)
     }
 
-    function yp(pp, ip, cp) {
-      const Op = pp.context,
-        op = pp.vertexShader,
-        Ip = pp.fragmentShader,
-        Sp = pp.program;
-      if (!Op.getProgramParameter(Sp, Op.LINK_STATUS)) {
-        if (!ip.getShaderParameter(op, ip.COMPILE_STATUS)) {
-          const cp = ip.getShaderInfoLog(op);
-          if (cp) throw pp.vertexCompilationError = cp, new Error("VERTEX SHADER " + cp)
+    function BT(TT, UT, mT) {
+      const WT = TT.context,
+        zT = TT.vertexShader,
+        MT = TT.fragmentShader,
+        gT = TT.program;
+      if (!WT.getProgramParameter(gT, WT.LINK_STATUS)) {
+        if (!UT.getShaderParameter(zT, UT.COMPILE_STATUS)) {
+          const mT = UT.getShaderInfoLog(zT);
+          if (mT) throw TT.vertexCompilationError = mT, new Error("VERTEX SHADER " + mT)
         }
-        if (!ip.getShaderParameter(Ip, ip.COMPILE_STATUS)) {
-          const cp = ip.getShaderInfoLog(Ip);
-          if (cp) throw pp.fragmentCompilationError = cp, new Error("FRAGMENT SHADER " + cp)
+        if (!UT.getShaderParameter(MT, UT.COMPILE_STATUS)) {
+          const mT = UT.getShaderInfoLog(MT);
+          if (mT) throw TT.fragmentCompilationError = mT, new Error("FRAGMENT SHADER " + mT)
         }
-        const cp = Op.getProgramInfoLog(Sp);
-        if (cp) throw pp.programLinkError = cp, new Error(cp)
+        const mT = WT.getProgramInfoLog(gT);
+        if (mT) throw TT.programLinkError = mT, new Error(mT)
       }
-      if (cp) {
-        Op.validateProgram(Sp);
-        if (!Op.getProgramParameter(Sp, Op.VALIDATE_STATUS)) {
-          const ip = Op.getProgramInfoLog(Sp);
-          if (ip) throw pp.programValidationError = ip, new Error(ip)
+      if (mT) {
+        WT.validateProgram(gT);
+        if (!WT.getProgramParameter(gT, WT.VALIDATE_STATUS)) {
+          const UT = WT.getProgramInfoLog(gT);
+          if (UT) throw TT.programValidationError = UT, new Error(UT)
         }
       }
-      Op.deleteShader(op), Op.deleteShader(Ip), pp.vertexShader = void 0, pp.fragmentShader = void 0, pp.onCompiled && (pp.onCompiled(), pp.onCompiled = void 0)
+      WT.deleteShader(zT), WT.deleteShader(MT), TT.vertexShader = void 0, TT.fragmentShader = void 0, TT.onCompiled && (TT.onCompiled(), TT.onCompiled = void 0)
     }
 
-    function Up(pp, ip, cp, Op, op, Ip, Sp, Lp, Ap) {
-      let Pp = arguments.length > 10 ? arguments[10] : void 0,
-        Wp = arguments.length > 11 ? arguments[11] : void 0,
-        yp = arguments.length > 12 ? arguments[12] : void 0;
-      const Up = xp(pp.context);
-      Wp || (Wp = Up.createRawShaderProgramInjection ?? Yp), yp || (yp = Up.createShaderProgramInjection ?? Dp);
-      const wp = pp;
-      wp.program = Op ? Wp(wp, ip, cp, wp.context, Ap) : yp(wp, ip, cp, Lp, wp.context, Ap), wp.program.__SPECTOR_rebuildProgram = Sp, Pp()
+    function ZT(TT, UT, mT, WT, zT, MT, gT, HT, lT) {
+      let LT = arguments.length > 10 ? arguments[10] : void 0,
+        pT = arguments.length > 11 ? arguments[11] : void 0,
+        BT = arguments.length > 12 ? arguments[12] : void 0;
+      const ZT = nT(TT.context);
+      pT || (pT = ZT.createRawShaderProgramInjection ?? kT), BT || (BT = ZT.createShaderProgramInjection ?? jT);
+      const cT = TT;
+      cT.program = WT ? pT(cT, UT, mT, cT.context, lT) : BT(cT, UT, mT, HT, cT.context, lT), cT.program.__SPECTOR_rebuildProgram = gT, LT()
     }
 
-    function wp(pp, ip, cp, Op, Ip, Sp) {
-      return vp((0, op.g)(pp, cp, Op), ip, Ip, Sp)
+    function cT(TT, UT, mT, WT, MT, gT) {
+      return vT((0, zT.g)(TT, mT, WT), UT, MT, gT)
     }
 
-    function vp(pp, ip, cp, Op) {
-      const op = cp.createShader("vertex" === ip ? cp.VERTEX_SHADER : cp.FRAGMENT_SHADER);
-      if (!op) {
-        let pp, op = cp.NO_ERROR;
+    function vT(TT, UT, mT, WT) {
+      const zT = mT.createShader("vertex" === UT ? mT.VERTEX_SHADER : mT.FRAGMENT_SHADER);
+      if (!zT) {
+        let TT, zT = mT.NO_ERROR;
         for (;
-          (pp = cp.getError()) !== cp.NO_ERROR;) op = pp;
-        throw new Error(`Something went wrong while creating a gl ${ip} shader object. gl error=${op}, gl isContextLost=${cp.isContextLost()}, _contextWasLost=${Op}`)
+          (TT = mT.getError()) !== mT.NO_ERROR;) zT = TT;
+        throw new Error(`Something went wrong while creating a gl ${UT} shader object. gl error=${zT}, gl isContextLost=${mT.isContextLost()}, _contextWasLost=${WT}`)
       }
-      return cp.shaderSource(op, pp), cp.compileShader(op), op
+      return mT.shaderSource(zT, TT), mT.compileShader(zT), zT
     }
 
-    function tp(pp, ip) {
-      ip.useProgram(pp)
+    function fT(TT, UT) {
+      UT.useProgram(TT)
     }
 
-    function Hp(pp, ip) {
-      const cp = pp;
-      if (!cp.isParallelCompiled) return void ip(pp);
-      const Op = cp.onCompiled;
-      cp.onCompiled = () => {
-        Op?.(), ip(pp)
+    function qT(TT, UT) {
+      const mT = TT;
+      if (!mT.isParallelCompiled) return void UT(TT);
+      const WT = mT.onCompiled;
+      mT.onCompiled = () => {
+        WT?.(), UT(TT)
       }
     }
   },
-  40050: (pp, ip, cp) => {
-    cp.d(ip, {
-      ThinEngine: () => ep
+  39922: (TT, UT, mT) => {
+    mT.d(UT, {
+      ThinEngine: () => bT
     });
-    var Op = cp(40053),
-      op = cp(40079),
-      Ip = cp(40113),
-      Sp = cp(40127),
-      xp = cp(38905),
-      Lp = cp(40071);
-    class Yp {
+    var WT = mT(39926),
+      zT = mT(39949),
+      MT = mT(39982),
+      gT = mT(40001),
+      nT = mT(38800),
+      HT = mT(39946);
+    class kT {
       constructor() {
         this.shaderLanguage = 0
       }
-      postProcessor(pp, ip, cp, Op, op) {
-        if (op.drawBuffersExtensionDisabled) {
-          const ip = /#extension.+GL_EXT_draw_buffers.+(enable|require)/g;
-          pp = pp.replace(ip, "")
+      postProcessor(TT, UT, mT, WT, zT) {
+        if (zT.drawBuffersExtensionDisabled) {
+          const UT = /#extension.+GL_EXT_draw_buffers.+(enable|require)/g;
+          TT = TT.replace(UT, "")
         }
-        return pp
+        return TT
       }
     }
-    const Dp = /(flat\s)?\s*varying\s*.*/;
-    class Ap {
+    const jT = /(flat\s)?\s*varying\s*.*/;
+    class lT {
       constructor() {
         this.shaderLanguage = 0
       }
-      attributeProcessor(pp) {
-        return pp.replace("attribute", "in")
+      attributeProcessor(TT) {
+        return TT.replace("attribute", "in")
       }
-      varyingCheck(pp, ip) {
-        return Dp.test(pp)
+      varyingCheck(TT, UT) {
+        return jT.test(TT)
       }
-      varyingProcessor(pp, ip) {
-        return pp.replace("varying", ip ? "in" : "out")
+      varyingProcessor(TT, UT) {
+        return TT.replace("varying", UT ? "in" : "out")
       }
-      postProcessor(pp, ip, cp) {
-        const Op = -1 !== pp.search(/#extension.+GL_EXT_draw_buffers.+require/);
-        if (pp = (pp = pp.replace(/#extension.+(GL_OVR_multiview2|GL_OES_standard_derivatives|GL_EXT_shader_texture_lod|GL_EXT_frag_depth|GL_EXT_draw_buffers).+(enable|require)/g, "")).replace(/texture2D\s*\(/g, "texture("), cp) {
-          const cp = -1 !== pp.search(/layout *\(location *= *0\) *out/g),
-            op = -1 !== ip.indexOf("#define DUAL_SOURCE_BLENDING"),
-            Ip = op ? "layout(location = 0, index = 0) out vec4 glFragColor;\nlayout(location = 0, index = 1) out vec4 glFragColor2;\n" : "layout(location = 0) out vec4 glFragColor;\n";
-          op && (pp = "#extension GL_EXT_blend_func_extended : require\n" + pp), pp = (pp = (pp = (pp = (pp = (pp = (pp = pp.replace(/texture2DLodEXT\s*\(/g, "textureLod(")).replace(/textureCubeLodEXT\s*\(/g, "textureLod(")).replace(/textureCube\s*\(/g, "texture(")).replace(/gl_FragDepthEXT/g, "gl_FragDepth")).replace(/gl_FragColor/g, "glFragColor")).replace(/gl_FragData/g, "glFragData")).replace(/void\s+?main\s*\(/g, (Op || cp ? "" : Ip) + "void main(")
+      postProcessor(TT, UT, mT) {
+        const WT = -1 !== TT.search(/#extension.+GL_EXT_draw_buffers.+require/);
+        if (TT = (TT = TT.replace(/#extension.+(GL_OVR_multiview2|GL_OES_standard_derivatives|GL_EXT_shader_texture_lod|GL_EXT_frag_depth|GL_EXT_draw_buffers).+(enable|require)/g, "")).replace(/texture2D\s*\(/g, "texture("), mT) {
+          const mT = -1 !== TT.search(/layout *\(location *= *0\) *out/g),
+            zT = -1 !== UT.indexOf("#define DUAL_SOURCE_BLENDING"),
+            MT = zT ? "layout(location = 0, index = 0) out vec4 glFragColor;\nlayout(location = 0, index = 1) out vec4 glFragColor2;\n" : "layout(location = 0) out vec4 glFragColor;\n";
+          zT && (TT = "#extension GL_EXT_blend_func_extended : require\n" + TT), TT = (TT = (TT = (TT = (TT = (TT = (TT = TT.replace(/texture2DLodEXT\s*\(/g, "textureLod(")).replace(/textureCubeLodEXT\s*\(/g, "textureLod(")).replace(/textureCube\s*\(/g, "texture(")).replace(/gl_FragDepthEXT/g, "gl_FragDepth")).replace(/gl_FragColor/g, "glFragColor")).replace(/gl_FragData/g, "glFragData")).replace(/void\s+?main\s*\(/g, (WT || mT ? "" : MT) + "void main(")
         } else {
-          ip.indexOf("#define VERTEXOUTPUT_INVARIANT") >= 0 && (pp = "invariant gl_Position;\n" + pp);
-          if (-1 !== ip.indexOf("#define MULTIVIEW")) return "#extension GL_OVR_multiview2 : require\nlayout (num_views = 2) in;\n" + pp
+          UT.indexOf("#define VERTEXOUTPUT_INVARIANT") >= 0 && (TT = "invariant gl_Position;\n" + TT);
+          if (-1 !== UT.indexOf("#define MULTIVIEW")) return "#extension GL_OVR_multiview2 : require\nlayout (num_views = 2) in;\n" + TT
         }
-        return pp
+        return TT
       }
     }
-    var Pp = cp(40134),
-      Wp = cp(40143),
-      yp = cp(40149),
-      Up = cp(40033),
-      wp = cp(40088),
-      vp = cp(40068),
-      tp = cp(40151),
-      Hp = cp(40124);
-    class dp {}
-    class ep extends Ip.b {
+    var LT = mT(40007),
+      pT = mT(40022),
+      BT = mT(40029),
+      ZT = mT(39913),
+      cT = mT(39957),
+      vT = mT(39938),
+      fT = mT(40036),
+      qT = mT(39994);
+    class iT {}
+    class bT extends MT.c {
       get name() {
         return this._name
       }
-      set name(pp) {
-        this._name = pp
+      set name(TT) {
+        this._name = TT
       }
       get version() {
         return this._webGLVersion
       }
       static get ShadersRepository() {
-        return Op.e.ShadersRepository
+        return WT.b.ShadersRepository
       }
-      static set ShadersRepository(pp) {
-        Op.e.ShadersRepository = pp
+      static set ShadersRepository(TT) {
+        WT.b.ShadersRepository = TT
       }
       get supportsUniformBuffers() {
-        return this.eU > 1 && !this.disableUniformBuffers
+        return this.TZ > 1 && !this.disableUniformBuffers
       }
       get needPOTTextures() {
         return this._webGLVersion < 2 || this.forcePOTTextures
@@ -1576,26 +1576,26 @@ export const modules = {
       snapshotRenderingReset() {
         this.snapshotRendering = !1
       }
-      constructor(pp, ip, cp, Op) {
-        if (cp = cp || {}, super(ip ?? cp.antialias, cp, Op), this._name = "WebGL", this.forcePOTTextures = !1, this.validateShaderPrograms = !1, this.disableUniformBuffers = !1, this._webGLVersion = 1, this._integerMRTAttachmentsMask = 0, this._vertexAttribArraysEnabled = [], this._uintIndicesCurrentlySet = !1, this._currentBoundBuffer = new Array, this._currentFramebuffer = null, this._dummyFramebuffer = null, this._currentBufferPointers = new Array, this._currentInstanceLocations = new Array, this._currentInstanceBuffers = new Array, this._vaoRecordInProgress = !1, this._mustWipeVertexAttributes = !1, this._nextFreeTextureSlots = new Array, this._maxSimultaneousTextures = 0, this._maxMSAASamplesOverride = null, this._unpackFlipYCached = null, this.enableUnpackFlipYCached = !0, this._boundUniforms = {}, !pp) return;
-        let Ip;
-        if (pp.getContext) {
-          if (Ip = pp, void 0 === cp.preserveDrawingBuffer && (cp.preserveDrawingBuffer = !1), void 0 === cp.xrCompatible && (cp.xrCompatible = !1), navigator && navigator.userAgent) {
+      constructor(TT, UT, mT, WT) {
+        if (mT = mT || {}, super(UT ?? mT.antialias, mT, WT), this._name = "WebGL", this.forcePOTTextures = !1, this.validateShaderPrograms = !1, this.disableUniformBuffers = !1, this._webGLVersion = 1, this._integerMRTAttachmentsMask = 0, this._vertexAttribArraysEnabled = [], this._uintIndicesCurrentlySet = !1, this._currentBoundBuffer = new Array, this._currentFramebuffer = null, this._dummyFramebuffer = null, this._currentBufferPointers = new Array, this._currentInstanceLocations = new Array, this._currentInstanceBuffers = new Array, this._vaoRecordInProgress = !1, this._mustWipeVertexAttributes = !1, this._nextFreeTextureSlots = new Array, this._maxSimultaneousTextures = 0, this._maxMSAASamplesOverride = null, this._unpackFlipYCached = null, this.enableUnpackFlipYCached = !0, this._boundUniforms = {}, !TT) return;
+        let MT;
+        if (TT.getContext) {
+          if (MT = TT, void 0 === mT.preserveDrawingBuffer && (mT.preserveDrawingBuffer = !1), void 0 === mT.xrCompatible && (mT.xrCompatible = !1), navigator && navigator.userAgent) {
             this._setupMobileChecks();
-            const pp = navigator.userAgent;
-            for (const ip of ep.ExceptionList) {
-              const Op = ip.key,
-                op = ip.targets;
-              if (new RegExp(Op).test(pp)) {
-                if (ip.capture && ip.captureConstraint) {
-                  const cp = ip.capture,
-                    Op = ip.captureConstraint,
-                    op = new RegExp(cp).exec(pp);
-                  if (op && op.length > 0) {
-                    if (parseInt(op[op.length - 1]) >= Op) continue
+            const TT = navigator.userAgent;
+            for (const UT of bT.ExceptionList) {
+              const WT = UT.key,
+                zT = UT.targets;
+              if (new RegExp(WT).test(TT)) {
+                if (UT.capture && UT.captureConstraint) {
+                  const mT = UT.capture,
+                    WT = UT.captureConstraint,
+                    zT = new RegExp(mT).exec(TT);
+                  if (zT && zT.length > 0) {
+                    if (parseInt(zT[zT.length - 1]) >= WT) continue
                   }
                 }
-                for (const pp of op) switch (pp) {
+                for (const TT of zT) switch (TT) {
                   case "uniformBuffer":
                     this.disableUniformBuffers = !0;
                     break;
@@ -1603,7 +1603,7 @@ export const modules = {
                     this.disableVertexArrayObjects = !0;
                     break;
                   case "antialias":
-                    cp.antialias = !1;
+                    mT.antialias = !1;
                     break;
                   case "maxMSAASamples":
                     this._maxMSAASamplesOverride = 1
@@ -1612,47 +1612,47 @@ export const modules = {
             }
           }
           if (this._doNotHandleContextLost ? this._onContextLost = () => {
-              (0, op.F)(this._gl)
-            } : (this._onContextLost = pp => {
-              pp.preventDefault(), this._contextWasLost = !0, (0, op.F)(this._gl), xp.e.Warn("WebGL context lost."), this.onContextLostObservable.notifyObservers(this)
+              (0, zT.y)(this._gl)
+            } : (this._onContextLost = TT => {
+              TT.preventDefault(), this._contextWasLost = !0, (0, zT.y)(this._gl), nT.b.Warn("WebGL context lost."), this.onContextLostObservable.notifyObservers(this)
             }, this._onContextRestored = () => {
               this._restoreEngineAfterContextLost((() => this._initGLContext()))
-            }, Ip.addEventListener("webglcontextrestored", this._onContextRestored, !1), cp.powerPreference = cp.powerPreference || "high-performance"), Ip.addEventListener("webglcontextlost", this._onContextLost, !1), this._badDesktopOS && (cp.xrCompatible = !1), !cp.disableWebGL2Support) try {
-            this._gl = Ip.getContext("webgl2", cp) || Ip.getContext("experimental-webgl2", cp), this._gl && (this._webGLVersion = 2, this._shaderPlatformName = "WEBGL2", this._gl.deleteQuery || (this._webGLVersion = 1, this._shaderPlatformName = "WEBGL1"))
-          } catch (Dp) {}
+            }, MT.addEventListener("webglcontextrestored", this._onContextRestored, !1), mT.powerPreference = mT.powerPreference || "high-performance"), MT.addEventListener("webglcontextlost", this._onContextLost, !1), this._badDesktopOS && (mT.xrCompatible = !1), !mT.disableWebGL2Support) try {
+            this._gl = MT.getContext("webgl2", mT) || MT.getContext("experimental-webgl2", mT), this._gl && (this._webGLVersion = 2, this._shaderPlatformName = "WEBGL2", this._gl.deleteQuery || (this._webGLVersion = 1, this._shaderPlatformName = "WEBGL1"))
+          } catch (jT) {}
           if (!this._gl) {
-            if (!Ip) throw new Error("The provided canvas is null or undefined.");
+            if (!MT) throw new Error("The provided canvas is null or undefined.");
             try {
-              this._gl = Ip.getContext("webgl", cp) || Ip.getContext("experimental-webgl", cp)
-            } catch (Dp) {
+              this._gl = MT.getContext("webgl", mT) || MT.getContext("experimental-webgl", mT)
+            } catch (jT) {
               throw new Error("WebGL not supported", {
-                cause: Dp
+                cause: jT
               })
             }
           }
           if (!this._gl) throw new Error("WebGL not supported")
         } else {
-          this._gl = pp, Ip = this._gl.canvas, this._gl.renderbufferStorageMultisample ? (this._webGLVersion = 2, this._shaderPlatformName = "WEBGL2") : this._shaderPlatformName = "WEBGL1";
-          const ip = this._gl.getContextAttributes();
-          ip && (cp.stencil = ip.stencil)
+          this._gl = TT, MT = this._gl.canvas, this._gl.renderbufferStorageMultisample ? (this._webGLVersion = 2, this._shaderPlatformName = "WEBGL2") : this._shaderPlatformName = "WEBGL1";
+          const UT = this._gl.getContextAttributes();
+          UT && (mT.stencil = UT.stencil)
         }
-        this._sharedInit(Ip), this._gl.pixelStorei(this._gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, this._gl.NONE), void 0 !== cp.useHighPrecisionFloats && (this._highPrecisionShadersAllowed = cp.useHighPrecisionFloats), this.resize(), this._initGLContext(), this._initFeatures();
-        for (let op = 0; op < this._caps.maxVertexAttribs; op++) this._currentBufferPointers[op] = new dp;
-        this._shaderProcessor = this.eU > 1 ? new Ap : new Yp;
-        const Sp = `Babylon.js v${ep.Version}`;
-        xp.e.Log(Sp + ` - ${this.description}`), this._renderingCanvas && this._renderingCanvas.setAttribute && this._renderingCanvas.setAttribute("data-engine", Sp);
-        const Lp = (0, op.J)(this._gl);
-        Lp.validateShaderPrograms = this.validateShaderPrograms, Lp.parallelShaderCompile = this._caps.parallelShaderCompile
+        this._sharedInit(MT), this._gl.pixelStorei(this._gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, this._gl.NONE), void 0 !== mT.useHighPrecisionFloats && (this._highPrecisionShadersAllowed = mT.useHighPrecisionFloats), this.resize(), this._initGLContext(), this._initFeatures();
+        for (let zT = 0; zT < this._caps.maxVertexAttribs; zT++) this._currentBufferPointers[zT] = new iT;
+        this._shaderProcessor = this.TZ > 1 ? new lT : new kT;
+        const gT = `Babylon.js v${bT.Version}`;
+        nT.b.Log(gT + ` - ${this.description}`), this._renderingCanvas && this._renderingCanvas.setAttribute && this._renderingCanvas.setAttribute("data-engine", gT);
+        const HT = (0, zT.A)(this._gl);
+        HT.validateShaderPrograms = this.validateShaderPrograms, HT.parallelShaderCompile = this._caps.parallelShaderCompile
       }
       _clearEmptyResources() {
         this._dummyFramebuffer = null, super._clearEmptyResources()
       }
-      _getShaderProcessingContext(pp) {
+      _getShaderProcessingContext(TT) {
         return null
       }
       areAllEffectsReady() {
-        for (const pp in this._compiledEffects) {
-          if (!this._compiledEffects[pp].isReady()) return !1
+        for (const TT in this._compiledEffects) {
+          if (!this._compiledEffects[TT].isReady()) return !1
         }
         return !0
       }
@@ -1721,47 +1721,47 @@ export const modules = {
           dualSourceBlending: !1,
           supportReadWriteStorageTextures: !1
         }, this._caps.supportFloatTexturesResolve = this._caps.colorBufferFloat, this._caps.rg11b10ufColorRenderable = this._caps.colorBufferFloat, this._glVersion = this._gl.getParameter(this._gl.VERSION);
-        const pp = this._gl.getExtension("WEBGL_debug_renderer_info");
-        null != pp && (this._glRenderer = this._gl.getParameter(pp.UNMASKED_RENDERER_WEBGL), this._glVendor = this._gl.getParameter(pp.UNMASKED_VENDOR_WEBGL)), this._glVendor || (this._glVendor = this._gl.getParameter(this._gl.VENDOR) || "Unknown vendor"), this._glRenderer || (this._glRenderer = this._gl.getParameter(this._gl.RENDERER) || "Unknown renderer"), 36193 !== this._gl.HALF_FLOAT_OES && (this._gl.HALF_FLOAT_OES = 36193), 34842 !== this._gl.RGBA16F && (this._gl.RGBA16F = 34842), 34836 !== this._gl.RGBA32F && (this._gl.RGBA32F = 34836), 35056 !== this._gl.DEPTH24_STENCIL8 && (this._gl.DEPTH24_STENCIL8 = 35056), this._caps.timerQuery && (1 === this._webGLVersion && (this._gl.getQuery = this._caps.timerQuery.getQueryEXT.bind(this._caps.timerQuery)), this._caps.canUseTimestampForTimerQuery = (this._gl.getQuery(this._caps.timerQuery.TIMESTAMP_EXT, this._caps.timerQuery.QUERY_COUNTER_BITS_EXT) ?? 0) > 0), this._caps.maxAnisotropy = this._caps.textureAnisotropicFilterExtension ? this._gl.getParameter(this._caps.textureAnisotropicFilterExtension.MAX_TEXTURE_MAX_ANISOTROPY_EXT) : 0, this._caps.textureFloatLinearFiltering = !(!this._caps.textureFloat || !this._gl.getExtension("OES_texture_float_linear")), this._caps.textureFloatRender = !(!this._caps.textureFloat || !this._canRenderToFloatFramebuffer()), this._caps.textureHalfFloatLinearFiltering = !!(this._webGLVersion > 1 || this._caps.textureHalfFloat && this._gl.getExtension("OES_texture_half_float_linear")), this._caps.textureNorm16 && (this._gl.R16_EXT = 33322, this._gl.RG16_EXT = 33324, this._gl.RGB16_EXT = 32852, this._gl.RGBA16_EXT = 32859, this._gl.R16_SNORM_EXT = 36760, this._gl.RG16_SNORM_EXT = 36761, this._gl.RGB16_SNORM_EXT = 36762, this._gl.RGBA16_SNORM_EXT = 36763);
-        const ip = this._gl.getExtension("OES_draw_buffers_indexed");
-        if (this._caps.blendParametersPerTarget = !!ip, this._alphaState = new Hp.c(this._caps.blendParametersPerTarget), ip && (this._gl.blendEquationSeparateIndexed = ip.blendEquationSeparateiOES.bind(ip), this._gl.blendEquationIndexed = ip.blendEquationiOES.bind(ip), this._gl.blendFuncSeparateIndexed = ip.blendFuncSeparateiOES.bind(ip), this._gl.blendFuncIndexed = ip.blendFunciOES.bind(ip), this._gl.colorMaskIndexed = ip.colorMaskiOES.bind(ip), this._gl.disableIndexed = ip.disableiOES.bind(ip), this._gl.enableIndexed = ip.enableiOES.bind(ip)), this._caps.dualSourceBlending = !!this._gl.getExtension("WEBGL_blend_func_extended"), this._caps.astc && (this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR), this._caps.bptc && (this._gl.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT = this._caps.bptc.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT), this._caps.s3tc_srgb && (this._gl.COMPRESSED_SRGB_S3TC_DXT1_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_S3TC_DXT1_EXT, this._gl.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT, this._gl.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT), this._caps.etc2 && (this._gl.COMPRESSED_SRGB8_ETC2 = this._caps.etc2.COMPRESSED_SRGB8_ETC2, this._gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = this._caps.etc2.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC), this._webGLVersion > 1 && 5131 !== this._gl.HALF_FLOAT_OES && (this._gl.HALF_FLOAT_OES = 5131), this._caps.textureHalfFloatRender = this._caps.textureHalfFloat && this._canRenderToHalfFloatFramebuffer(), this._webGLVersion > 1) this._caps.drawBuffersExtension = !0, this._caps.maxMSAASamples = null !== this._maxMSAASamplesOverride ? this._maxMSAASamplesOverride : this._gl.getParameter(this._gl.MAX_SAMPLES), this._caps.maxDrawBuffers = this._gl.getParameter(this._gl.MAX_DRAW_BUFFERS);
+        const TT = this._gl.getExtension("WEBGL_debug_renderer_info");
+        null != TT && (this._glRenderer = this._gl.getParameter(TT.UNMASKED_RENDERER_WEBGL), this._glVendor = this._gl.getParameter(TT.UNMASKED_VENDOR_WEBGL)), this._glVendor || (this._glVendor = this._gl.getParameter(this._gl.VENDOR) || "Unknown vendor"), this._glRenderer || (this._glRenderer = this._gl.getParameter(this._gl.RENDERER) || "Unknown renderer"), 36193 !== this._gl.HALF_FLOAT_OES && (this._gl.HALF_FLOAT_OES = 36193), 34842 !== this._gl.RGBA16F && (this._gl.RGBA16F = 34842), 34836 !== this._gl.RGBA32F && (this._gl.RGBA32F = 34836), 35056 !== this._gl.DEPTH24_STENCIL8 && (this._gl.DEPTH24_STENCIL8 = 35056), this._caps.timerQuery && (1 === this._webGLVersion && (this._gl.getQuery = this._caps.timerQuery.getQueryEXT.bind(this._caps.timerQuery)), this._caps.canUseTimestampForTimerQuery = (this._gl.getQuery(this._caps.timerQuery.TIMESTAMP_EXT, this._caps.timerQuery.QUERY_COUNTER_BITS_EXT) ?? 0) > 0), this._caps.maxAnisotropy = this._caps.textureAnisotropicFilterExtension ? this._gl.getParameter(this._caps.textureAnisotropicFilterExtension.MAX_TEXTURE_MAX_ANISOTROPY_EXT) : 0, this._caps.textureFloatLinearFiltering = !(!this._caps.textureFloat || !this._gl.getExtension("OES_texture_float_linear")), this._caps.textureFloatRender = !(!this._caps.textureFloat || !this._canRenderToFloatFramebuffer()), this._caps.textureHalfFloatLinearFiltering = !!(this._webGLVersion > 1 || this._caps.textureHalfFloat && this._gl.getExtension("OES_texture_half_float_linear")), this._caps.textureNorm16 && (this._gl.R16_EXT = 33322, this._gl.RG16_EXT = 33324, this._gl.RGB16_EXT = 32852, this._gl.RGBA16_EXT = 32859, this._gl.R16_SNORM_EXT = 36760, this._gl.RG16_SNORM_EXT = 36761, this._gl.RGB16_SNORM_EXT = 36762, this._gl.RGBA16_SNORM_EXT = 36763);
+        const UT = this._gl.getExtension("OES_draw_buffers_indexed");
+        if (this._caps.blendParametersPerTarget = !!UT, this._alphaState = new qT.b(this._caps.blendParametersPerTarget), UT && (this._gl.blendEquationSeparateIndexed = UT.blendEquationSeparateiOES.bind(UT), this._gl.blendEquationIndexed = UT.blendEquationiOES.bind(UT), this._gl.blendFuncSeparateIndexed = UT.blendFuncSeparateiOES.bind(UT), this._gl.blendFuncIndexed = UT.blendFunciOES.bind(UT), this._gl.colorMaskIndexed = UT.colorMaskiOES.bind(UT), this._gl.disableIndexed = UT.disableiOES.bind(UT), this._gl.enableIndexed = UT.enableiOES.bind(UT)), this._caps.dualSourceBlending = !!this._gl.getExtension("WEBGL_blend_func_extended"), this._caps.astc && (this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR), this._caps.bptc && (this._gl.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT = this._caps.bptc.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT), this._caps.s3tc_srgb && (this._gl.COMPRESSED_SRGB_S3TC_DXT1_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_S3TC_DXT1_EXT, this._gl.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT, this._gl.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT), this._caps.etc2 && (this._gl.COMPRESSED_SRGB8_ETC2 = this._caps.etc2.COMPRESSED_SRGB8_ETC2, this._gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = this._caps.etc2.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC), this._webGLVersion > 1 && 5131 !== this._gl.HALF_FLOAT_OES && (this._gl.HALF_FLOAT_OES = 5131), this._caps.textureHalfFloatRender = this._caps.textureHalfFloat && this._canRenderToHalfFloatFramebuffer(), this._webGLVersion > 1) this._caps.drawBuffersExtension = !0, this._caps.maxMSAASamples = null !== this._maxMSAASamplesOverride ? this._maxMSAASamplesOverride : this._gl.getParameter(this._gl.MAX_SAMPLES), this._caps.maxDrawBuffers = this._gl.getParameter(this._gl.MAX_DRAW_BUFFERS);
         else {
-          const pp = this._gl.getExtension("WEBGL_draw_buffers");
-          if (null !== pp) {
-            this._caps.drawBuffersExtension = !0, this._gl.drawBuffers = pp.drawBuffersWEBGL.bind(pp), this._caps.maxDrawBuffers = this._gl.getParameter(pp.MAX_DRAW_BUFFERS_WEBGL), this._gl.DRAW_FRAMEBUFFER = this._gl.FRAMEBUFFER;
-            for (let ip = 0; ip < 16; ip++) this._gl["COLOR_ATTACHMENT" + ip + "_WEBGL"] = pp["COLOR_ATTACHMENT" + ip + "_WEBGL"]
+          const TT = this._gl.getExtension("WEBGL_draw_buffers");
+          if (null !== TT) {
+            this._caps.drawBuffersExtension = !0, this._gl.drawBuffers = TT.drawBuffersWEBGL.bind(TT), this._caps.maxDrawBuffers = this._gl.getParameter(TT.MAX_DRAW_BUFFERS_WEBGL), this._gl.DRAW_FRAMEBUFFER = this._gl.FRAMEBUFFER;
+            for (let UT = 0; UT < 16; UT++) this._gl["COLOR_ATTACHMENT" + UT + "_WEBGL"] = TT["COLOR_ATTACHMENT" + UT + "_WEBGL"]
           }
         }
         if (this._webGLVersion > 1) this._caps.depthTextureExtension = !0;
         else {
-          const pp = this._gl.getExtension("WEBGL_depth_texture");
-          null != pp && (this._caps.depthTextureExtension = !0, this._gl.UNSIGNED_INT_24_8 = pp.UNSIGNED_INT_24_8_WEBGL)
+          const TT = this._gl.getExtension("WEBGL_depth_texture");
+          null != TT && (this._caps.depthTextureExtension = !0, this._gl.UNSIGNED_INT_24_8 = TT.UNSIGNED_INT_24_8_WEBGL)
         }
         if (this.disableVertexArrayObjects) this._caps.vertexArrayObject = !1;
         else if (this._webGLVersion > 1) this._caps.vertexArrayObject = !0;
         else {
-          const pp = this._gl.getExtension("OES_vertex_array_object");
-          null != pp && (this._caps.vertexArrayObject = !0, this._gl.createVertexArray = pp.createVertexArrayOES.bind(pp), this._gl.bindVertexArray = pp.bindVertexArrayOES.bind(pp), this._gl.deleteVertexArray = pp.deleteVertexArrayOES.bind(pp))
+          const TT = this._gl.getExtension("OES_vertex_array_object");
+          null != TT && (this._caps.vertexArrayObject = !0, this._gl.createVertexArray = TT.createVertexArrayOES.bind(TT), this._gl.bindVertexArray = TT.bindVertexArrayOES.bind(TT), this._gl.deleteVertexArray = TT.deleteVertexArrayOES.bind(TT))
         }
         if (this._webGLVersion > 1) this._caps.instancedArrays = !0;
         else {
-          const pp = this._gl.getExtension("ANGLE_instanced_arrays");
-          null != pp ? (this._caps.instancedArrays = !0, this._gl.drawArraysInstanced = pp.drawArraysInstancedANGLE.bind(pp), this._gl.drawElementsInstanced = pp.drawElementsInstancedANGLE.bind(pp), this._gl.vertexAttribDivisor = pp.vertexAttribDivisorANGLE.bind(pp)) : this._caps.instancedArrays = !1
+          const TT = this._gl.getExtension("ANGLE_instanced_arrays");
+          null != TT ? (this._caps.instancedArrays = !0, this._gl.drawArraysInstanced = TT.drawArraysInstancedANGLE.bind(TT), this._gl.drawElementsInstanced = TT.drawElementsInstancedANGLE.bind(TT), this._gl.vertexAttribDivisor = TT.vertexAttribDivisorANGLE.bind(TT)) : this._caps.instancedArrays = !1
         }
         if (this._gl.getShaderPrecisionFormat) {
-          const pp = this._gl.getShaderPrecisionFormat(this._gl.VERTEX_SHADER, this._gl.HIGH_FLOAT),
-            ip = this._gl.getShaderPrecisionFormat(this._gl.FRAGMENT_SHADER, this._gl.HIGH_FLOAT);
-          if (pp && ip && (this._caps.highPrecisionShaderSupported = 0 !== pp.precision && 0 !== ip.precision, this._caps.shaderFloatPrecision = Math.min(pp.precision, ip.precision)), !this._shouldUseHighPrecisionShader) {
-            const pp = this._gl.getShaderPrecisionFormat(this._gl.VERTEX_SHADER, this._gl.MEDIUM_FLOAT),
-              ip = this._gl.getShaderPrecisionFormat(this._gl.FRAGMENT_SHADER, this._gl.MEDIUM_FLOAT);
-            pp && ip && (this._caps.shaderFloatPrecision = Math.min(pp.precision, ip.precision))
+          const TT = this._gl.getShaderPrecisionFormat(this._gl.VERTEX_SHADER, this._gl.HIGH_FLOAT),
+            UT = this._gl.getShaderPrecisionFormat(this._gl.FRAGMENT_SHADER, this._gl.HIGH_FLOAT);
+          if (TT && UT && (this._caps.highPrecisionShaderSupported = 0 !== TT.precision && 0 !== UT.precision, this._caps.shaderFloatPrecision = Math.min(TT.precision, UT.precision)), !this._shouldUseHighPrecisionShader) {
+            const TT = this._gl.getShaderPrecisionFormat(this._gl.VERTEX_SHADER, this._gl.MEDIUM_FLOAT),
+              UT = this._gl.getShaderPrecisionFormat(this._gl.FRAGMENT_SHADER, this._gl.MEDIUM_FLOAT);
+            TT && UT && (this._caps.shaderFloatPrecision = Math.min(TT.precision, UT.precision))
           }
           this._caps.shaderFloatPrecision < 10 && (this._caps.shaderFloatPrecision = 10)
         }
         if (this._webGLVersion > 1) this._caps.blendMinMax = !0;
         else {
-          const pp = this._gl.getExtension("EXT_blend_minmax");
-          null != pp && (this._caps.blendMinMax = !0, this._gl.MAX = pp.MAX_EXT, this._gl.MIN = pp.MIN_EXT)
+          const TT = this._gl.getExtension("EXT_blend_minmax");
+          null != TT && (this._caps.blendMinMax = !0, this._gl.MAX = TT.MAX_EXT, this._gl.MIN = TT.MIN_EXT)
         }
         if (!this._caps.supportSRGBBuffers) {
           if (this._webGLVersion > 1) this._caps.supportSRGBBuffers = !0, this._glSRGBExtensionValues = {
@@ -1770,20 +1770,20 @@ export const modules = {
             SRGB8_ALPHA8: WebGL2RenderingContext.SRGB8_ALPHA8
           };
           else {
-            const pp = this._gl.getExtension("EXT_sRGB");
-            null != pp && (this._caps.supportSRGBBuffers = !0, this._glSRGBExtensionValues = {
-              SRGB: pp.SRGB_EXT,
-              SRGB8: pp.SRGB_ALPHA_EXT,
-              SRGB8_ALPHA8: pp.SRGB_ALPHA_EXT
+            const TT = this._gl.getExtension("EXT_sRGB");
+            null != TT && (this._caps.supportSRGBBuffers = !0, this._glSRGBExtensionValues = {
+              SRGB: TT.SRGB_EXT,
+              SRGB8: TT.SRGB_ALPHA_EXT,
+              SRGB8_ALPHA8: TT.SRGB_ALPHA_EXT
             })
           }
           if (this._creationOptions) {
-            const pp = this._creationOptions.forceSRGBBufferSupportState;
-            void 0 !== pp && (this._caps.supportSRGBBuffers = this._caps.supportSRGBBuffers && pp)
+            const TT = this._creationOptions.forceSRGBBufferSupportState;
+            void 0 !== TT && (this._caps.supportSRGBBuffers = this._caps.supportSRGBBuffers && TT)
           }
         }
         this._depthCullingState.depthTest = !0, this._depthCullingState.depthFunc = this._gl.LEQUAL, this._depthCullingState.depthMask = !0, this._maxSimultaneousTextures = this._caps.maxCombinedTexturesImageUnits;
-        for (let cp = 0; cp < this._maxSimultaneousTextures; cp++) this._nextFreeTextureSlots.push(cp);
+        for (let mT = 0; mT < this._maxSimultaneousTextures; mT++) this._nextFreeTextureSlots.push(mT);
         "Mali-G72" === this._glRenderer && (this._caps.disableMorphTargetTexture = !0)
       }
       _initFeatures() {
@@ -1816,7 +1816,7 @@ export const modules = {
           _checkNonFloatVertexBuffersDontRecreatePipelineContext: !1
         }
       }
-      get eU() {
+      get TZ() {
         return this._webGLVersion
       }
       getClassName() {
@@ -1825,8 +1825,8 @@ export const modules = {
       _prepareWorkingCanvas() {
         if (this._workingCanvas) return;
         this._workingCanvas = this.createCanvas(1, 1);
-        const pp = this._workingCanvas.getContext("2d");
-        pp && (this._workingContext = pp)
+        const TT = this._workingCanvas.getContext("2d");
+        TT && (this._workingContext = TT)
       }
       getInfo() {
         return this.getGlInfo()
@@ -1839,8 +1839,8 @@ export const modules = {
         }
       }
       extractDriverInfo() {
-        const pp = this.getGlInfo();
-        return pp && pp.renderer ? pp.renderer : ""
+        const TT = this.getGlInfo();
+        return TT && TT.renderer ? TT.renderer : ""
       }
       getRenderWidth() {
         return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && this._currentRenderTarget ? this._currentRenderTarget.width : this._framebufferDimensionsObject ? this._framebufferDimensionsObject.framebufferWidth : this._gl.drawingBufferWidth
@@ -1848,103 +1848,103 @@ export const modules = {
       getRenderHeight() {
         return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && this._currentRenderTarget ? this._currentRenderTarget.height : this._framebufferDimensionsObject ? this._framebufferDimensionsObject.framebufferHeight : this._gl.drawingBufferHeight
       }
-      clear(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-        const Ip = this.stencilStateComposer.useStencilGlobalOnly;
-        this.stencilStateComposer.useStencilGlobalOnly = !0, this.applyStates(), this.stencilStateComposer.useStencilGlobalOnly = Ip;
-        let Sp = 0;
-        if (ip && pp) {
-          let ip = !0;
+      clear(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+        const MT = this.stencilStateComposer.useStencilGlobalOnly;
+        this.stencilStateComposer.useStencilGlobalOnly = !0, this.applyStates(), this.stencilStateComposer.useStencilGlobalOnly = MT;
+        let gT = 0;
+        if (UT && TT) {
+          let UT = !0;
           if (this._currentRenderTarget) {
-            const cp = this._currentRenderTarget.texture?.format;
-            if (void 0 !== cp && (0, tp.i)(cp)) {
-              const cp = this._currentRenderTarget.texture?.type;
-              void 0 !== cp && (0, tp.k)(cp) ? (ep._TempClearColorUint32[0] = 255 * pp.r, ep._TempClearColorUint32[1] = 255 * pp.g, ep._TempClearColorUint32[2] = 255 * pp.b, ep._TempClearColorUint32[3] = 255 * pp.a, this._gl.clearBufferuiv(this._gl.COLOR, 0, ep._TempClearColorUint32), ip = !1) : (ep._TempClearColorInt32[0] = 255 * pp.r, ep._TempClearColorInt32[1] = 255 * pp.g, ep._TempClearColorInt32[2] = 255 * pp.b, ep._TempClearColorInt32[3] = 255 * pp.a, this._gl.clearBufferiv(this._gl.COLOR, 0, ep._TempClearColorInt32), ip = !1)
+            const mT = this._currentRenderTarget.texture?.format;
+            if (void 0 !== mT && (0, fT.k)(mT)) {
+              const mT = this._currentRenderTarget.texture?.type;
+              void 0 !== mT && (0, fT.m)(mT) ? (bT._TempClearColorUint32[0] = 255 * TT.r, bT._TempClearColorUint32[1] = 255 * TT.g, bT._TempClearColorUint32[2] = 255 * TT.b, bT._TempClearColorUint32[3] = 255 * TT.a, this._gl.clearBufferuiv(this._gl.COLOR, 0, bT._TempClearColorUint32), UT = !1) : (bT._TempClearColorInt32[0] = 255 * TT.r, bT._TempClearColorInt32[1] = 255 * TT.g, bT._TempClearColorInt32[2] = 255 * TT.b, bT._TempClearColorInt32[3] = 255 * TT.a, this._gl.clearBufferiv(this._gl.COLOR, 0, bT._TempClearColorInt32), UT = !1)
             }
           }
-          ip && (this._gl.clearColor(pp.r, pp.g, pp.b, void 0 !== pp.a ? pp.a : 1), Sp |= this._gl.COLOR_BUFFER_BIT)
+          UT && (this._gl.clearColor(TT.r, TT.g, TT.b, void 0 !== TT.a ? TT.a : 1), gT |= this._gl.COLOR_BUFFER_BIT)
         }
-        cp && (this.lOp ? (this._depthCullingState.depthFunc = this._gl.GEQUAL, this._gl.clearDepth(0)) : this._gl.clearDepth(1), Sp |= this._gl.DEPTH_BUFFER_BIT), Op && (this._gl.clearStencil(op), Sp |= this._gl.STENCIL_BUFFER_BIT), this._gl.clear(Sp)
+        mT && (this.pWT ? (this._depthCullingState.depthFunc = this._gl.GEQUAL, this._gl.clearDepth(0)) : this._gl.clearDepth(1), gT |= this._gl.DEPTH_BUFFER_BIT), WT && (this._gl.clearStencil(zT), gT |= this._gl.STENCIL_BUFFER_BIT), this._gl.clear(gT)
       }
-      _clearColorAttachment(pp, ip, cp, Op) {
-        if ((0, tp.i)(cp)) {
-          const cp = (0, tp.k)(Op),
-            op = cp ? ep._TempClearColorUint32 : ep._TempClearColorInt32;
-          return op[0] = ip.r, op[1] = ip.g, op[2] = ip.b, op[3] = ip.a, void(cp ? this._gl.clearBufferuiv(this._gl.COLOR, pp, op) : this._gl.clearBufferiv(this._gl.COLOR, pp, op))
+      _clearColorAttachment(TT, UT, mT, WT) {
+        if ((0, fT.k)(mT)) {
+          const mT = (0, fT.m)(WT),
+            zT = mT ? bT._TempClearColorUint32 : bT._TempClearColorInt32;
+          return zT[0] = UT.r, zT[1] = UT.g, zT[2] = UT.b, zT[3] = UT.a, void(mT ? this._gl.clearBufferuiv(this._gl.COLOR, TT, zT) : this._gl.clearBufferiv(this._gl.COLOR, TT, zT))
         }
-        ep._TempClearColorFloat32[0] = ip.r, ep._TempClearColorFloat32[1] = ip.g, ep._TempClearColorFloat32[2] = ip.b, ep._TempClearColorFloat32[3] = ip.a, this._gl.clearBufferfv(this._gl.COLOR, pp, ep._TempClearColorFloat32)
+        bT._TempClearColorFloat32[0] = UT.r, bT._TempClearColorFloat32[1] = UT.g, bT._TempClearColorFloat32[2] = UT.b, bT._TempClearColorFloat32[3] = UT.a, this._gl.clearBufferfv(this._gl.COLOR, TT, bT._TempClearColorFloat32)
       }
-      _viewport(pp, ip, cp, Op) {
-        pp === this._viewportCached.x && ip === this._viewportCached.y && cp === this._viewportCached.z && Op === this._viewportCached.w || (this._viewportCached.x = pp, this._viewportCached.y = ip, this._viewportCached.z = cp, this._viewportCached.w = Op, this._gl.viewport(pp, ip, cp, Op))
+      _viewport(TT, UT, mT, WT) {
+        TT === this._viewportCached.x && UT === this._viewportCached.y && mT === this._viewportCached.z && WT === this._viewportCached.w || (this._viewportCached.x = TT, this._viewportCached.y = UT, this._viewportCached.z = mT, this._viewportCached.w = WT, this._gl.viewport(TT, UT, mT, WT))
       }
-      Rk() {
-        super.Rk(), this._badOS && this.flushFramebuffer()
+      qY() {
+        super.qY(), this._badOS && this.flushFramebuffer()
       }
       get performanceMonitor() {
         throw new Error("Not Supported by ThinEngine")
       }
-      bindFramebuffer(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0,
-          Op = arguments.length > 3 ? arguments[3] : void 0,
-          op = arguments.length > 4 ? arguments[4] : void 0,
-          Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const Lp = pp;
-        this._currentRenderTarget && this._resolveAndGenerateMipMapsFramebuffer(this._currentRenderTarget), this._currentRenderTarget = pp, this._integerMRTAttachmentsMask = !pp.isMulti && pp.texture && (0, tp.i)(pp.texture.format) ? 1 : 0, this._bindUnboundFramebuffer(Lp._framebuffer);
-        const Yp = this._gl;
-        pp.isMulti || (pp.is2DArray || pp.is3D ? (Yp.framebufferTextureLayer(Yp.FRAMEBUFFER, Yp.COLOR_ATTACHMENT0, pp.texture._hardwareTexture?.underlyingResource, Ip, Sp), Lp._currentLOD = Ip) : pp.isCube ? Yp.framebufferTexture2D(Yp.FRAMEBUFFER, Yp.COLOR_ATTACHMENT0, Yp.TEXTURE_CUBE_MAP_POSITIVE_X + ip, pp.texture._hardwareTexture?.underlyingResource, Ip) : Lp._currentLOD !== Ip && (Yp.framebufferTexture2D(Yp.FRAMEBUFFER, Yp.COLOR_ATTACHMENT0, Yp.TEXTURE_2D, pp.texture._hardwareTexture?.underlyingResource, Ip), Lp._currentLOD = Ip));
-        const Dp = pp._depthStencilTexture;
-        if (Dp) {
-          pp.is3D && (pp.texture.width === Dp.width && pp.texture.height === Dp.height && pp.texture.depth === Dp.depth || xp.e.Warn("Depth/Stencil attachment for 3D target must have same dimensions as color attachment"));
-          const cp = pp._depthStencilTextureWithStencil ? Yp.DEPTH_STENCIL_ATTACHMENT : Yp.DEPTH_ATTACHMENT;
-          pp.is2DArray || pp.is3D ? Yp.framebufferTextureLayer(Yp.FRAMEBUFFER, cp, Dp._hardwareTexture?.underlyingResource, Ip, Sp) : pp.isCube ? Yp.framebufferTexture2D(Yp.FRAMEBUFFER, cp, Yp.TEXTURE_CUBE_MAP_POSITIVE_X + ip, Dp._hardwareTexture?.underlyingResource, Ip) : Yp.framebufferTexture2D(Yp.FRAMEBUFFER, cp, Yp.TEXTURE_2D, Dp._hardwareTexture?.underlyingResource, Ip)
+      bindFramebuffer(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0,
+          WT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 ? arguments[4] : void 0,
+          MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        const HT = TT;
+        this._currentRenderTarget && this._resolveAndGenerateMipMapsFramebuffer(this._currentRenderTarget), this._currentRenderTarget = TT, this._integerMRTAttachmentsMask = !TT.isMulti && TT.texture && (0, fT.k)(TT.texture.format) ? 1 : 0, this._bindUnboundFramebuffer(HT._framebuffer);
+        const kT = this._gl;
+        TT.isMulti || (TT.is2DArray || TT.is3D ? (kT.framebufferTextureLayer(kT.FRAMEBUFFER, kT.COLOR_ATTACHMENT0, TT.texture._hardwareTexture?.underlyingResource, MT, gT), HT._currentLOD = MT) : TT.isCube ? kT.framebufferTexture2D(kT.FRAMEBUFFER, kT.COLOR_ATTACHMENT0, kT.TEXTURE_CUBE_MAP_POSITIVE_X + UT, TT.texture._hardwareTexture?.underlyingResource, MT) : HT._currentLOD !== MT && (kT.framebufferTexture2D(kT.FRAMEBUFFER, kT.COLOR_ATTACHMENT0, kT.TEXTURE_2D, TT.texture._hardwareTexture?.underlyingResource, MT), HT._currentLOD = MT));
+        const jT = TT._depthStencilTexture;
+        if (jT) {
+          TT.is3D && (TT.texture.width === jT.width && TT.texture.height === jT.height && TT.texture.depth === jT.depth || nT.b.Warn("Depth/Stencil attachment for 3D target must have same dimensions as color attachment"));
+          const mT = TT._depthStencilTextureWithStencil ? kT.DEPTH_STENCIL_ATTACHMENT : kT.DEPTH_ATTACHMENT;
+          TT.is2DArray || TT.is3D ? kT.framebufferTextureLayer(kT.FRAMEBUFFER, mT, jT._hardwareTexture?.underlyingResource, MT, gT) : TT.isCube ? kT.framebufferTexture2D(kT.FRAMEBUFFER, mT, kT.TEXTURE_CUBE_MAP_POSITIVE_X + UT, jT._hardwareTexture?.underlyingResource, MT) : kT.framebufferTexture2D(kT.FRAMEBUFFER, mT, kT.TEXTURE_2D, jT._hardwareTexture?.underlyingResource, MT)
         }
-        Lp._MSAAFramebuffer && this._bindUnboundFramebuffer(Lp._MSAAFramebuffer), this._cachedViewport && !op ? this.setViewport(this._cachedViewport, cp, Op) : (cp || (cp = pp.width, Ip && (cp /= Math.pow(2, Ip))), Op || (Op = pp.height, Ip && (Op /= Math.pow(2, Ip))), this._viewport(0, 0, cp, Op)), this.wipeCaches()
+        HT._MSAAFramebuffer && this._bindUnboundFramebuffer(HT._MSAAFramebuffer), this._cachedViewport && !zT ? this.setViewport(this._cachedViewport, mT, WT) : (mT || (mT = TT.width, MT && (mT /= Math.pow(2, MT))), WT || (WT = TT.height, MT && (WT /= Math.pow(2, MT))), this._viewport(0, 0, mT, WT)), this.wipeCaches()
       }
-      setStateCullFaceType(pp, ip) {
-        const cp = this.cullBackFaces ?? pp ?? 1 ? this._gl.BACK : this._gl.FRONT;
-        (this._depthCullingState.cullFace !== cp || ip) && (this._depthCullingState.cullFace = cp)
+      setStateCullFaceType(TT, UT) {
+        const mT = this.cullBackFaces ?? TT ?? 1 ? this._gl.BACK : this._gl.FRONT;
+        (this._depthCullingState.cullFace !== mT || UT) && (this._depthCullingState.cullFace = mT)
       }
-      setState(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0,
-          Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          op = arguments.length > 4 ? arguments[4] : void 0,
-          Ip = arguments.length > 5 ? arguments[5] : void 0,
-          Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        (this._depthCullingState.cull !== pp || cp) && (this._depthCullingState.cull = pp), this.setStateCullFaceType(op, cp), this.setZOffset(ip), this.setZOffsetUnits(Sp);
-        const xp = Op ? this._gl.CW : this._gl.CCW;
-        (this._depthCullingState.frontFace !== xp || cp) && (this._depthCullingState.frontFace = xp), this._stencilStateComposer.stencilMaterial = Ip
+      setState(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0,
+          WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          zT = arguments.length > 4 ? arguments[4] : void 0,
+          MT = arguments.length > 5 ? arguments[5] : void 0,
+          gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        (this._depthCullingState.cull !== TT || mT) && (this._depthCullingState.cull = TT), this.setStateCullFaceType(zT, mT), this.setZOffset(UT), this.setZOffsetUnits(gT);
+        const nT = WT ? this._gl.CW : this._gl.CCW;
+        (this._depthCullingState.frontFace !== nT || mT) && (this._depthCullingState.frontFace = nT), this._stencilStateComposer.stencilMaterial = MT
       }
-      _resolveAndGenerateMipMapsFramebuffer(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        pp.disableAutomaticMSAAResolve || (pp.isMulti ? this.resolveMultiFramebuffer(pp) : this.resolveFramebuffer(pp)), ip || (pp.isMulti ? this.generateMipMapsMultiFramebuffer(pp) : this.generateMipMapsFramebuffer(pp))
+      _resolveAndGenerateMipMapsFramebuffer(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        TT.disableAutomaticMSAAResolve || (TT.isMulti ? this.resolveMultiFramebuffer(TT) : this.resolveFramebuffer(TT)), UT || (TT.isMulti ? this.generateMipMapsMultiFramebuffer(TT) : this.generateMipMapsFramebuffer(TT))
       }
-      _bindUnboundFramebuffer(pp) {
-        this._currentFramebuffer !== pp && (this._gl.bindFramebuffer(this._gl.FRAMEBUFFER, pp), this._currentFramebuffer = pp)
+      _bindUnboundFramebuffer(TT) {
+        this._currentFramebuffer !== TT && (this._gl.bindFramebuffer(this._gl.FRAMEBUFFER, TT), this._currentFramebuffer = TT)
       }
       _currentFrameBufferIsDefaultFrameBuffer() {
         return null === this._currentFramebuffer
       }
-      generateMipmaps(pp) {
-        const ip = this._getTextureTarget(pp);
-        this._bindTextureDirectly(ip, pp, !0), this._gl.generateMipmap(ip), this._bindTextureDirectly(ip, null)
+      generateMipmaps(TT) {
+        const UT = this._getTextureTarget(TT);
+        this._bindTextureDirectly(UT, TT, !0), this._gl.generateMipmap(UT), this._bindTextureDirectly(UT, null)
       }
-      unBindFramebuffer(pp, ip, cp) {
-        const Op = pp;
-        this._currentRenderTarget = null, this._integerMRTAttachmentsMask = 0, this._resolveAndGenerateMipMapsFramebuffer(pp, ip), cp && (Op._MSAAFramebuffer && this._bindUnboundFramebuffer(Op._framebuffer), cp()), this._bindUnboundFramebuffer(null)
+      unBindFramebuffer(TT, UT, mT) {
+        const WT = TT;
+        this._currentRenderTarget = null, this._integerMRTAttachmentsMask = 0, this._resolveAndGenerateMipMapsFramebuffer(TT, UT), mT && (WT._MSAAFramebuffer && this._bindUnboundFramebuffer(WT._framebuffer), mT()), this._bindUnboundFramebuffer(null)
       }
-      generateMipMapsFramebuffer(pp) {
-        pp.isMulti || !pp.texture?.generateMipMaps || pp.isCube || this.generateMipmaps(pp.texture)
+      generateMipMapsFramebuffer(TT) {
+        TT.isMulti || !TT.texture?.generateMipMaps || TT.isCube || this.generateMipmaps(TT.texture)
       }
-      resolveFramebuffer(pp) {
-        const ip = pp,
-          cp = this._gl;
-        if (!ip._MSAAFramebuffer || ip.isMulti) return;
-        let Op = ip.resolveMSAAColors ? cp.COLOR_BUFFER_BIT : 0;
-        Op |= ip._generateDepthBuffer && ip.resolveMSAADepth ? cp.DEPTH_BUFFER_BIT : 0, Op |= ip._generateStencilBuffer && ip.resolveMSAAStencil ? cp.STENCIL_BUFFER_BIT : 0, cp.bindFramebuffer(cp.READ_FRAMEBUFFER, ip._MSAAFramebuffer), cp.bindFramebuffer(cp.DRAW_FRAMEBUFFER, ip._framebuffer), cp.blitFramebuffer(0, 0, pp.width, pp.height, 0, 0, pp.width, pp.height, Op, cp.NEAREST)
+      resolveFramebuffer(TT) {
+        const UT = TT,
+          mT = this._gl;
+        if (!UT._MSAAFramebuffer || UT.isMulti) return;
+        let WT = UT.resolveMSAAColors ? mT.COLOR_BUFFER_BIT : 0;
+        WT |= UT._generateDepthBuffer && UT.resolveMSAADepth ? mT.DEPTH_BUFFER_BIT : 0, WT |= UT._generateStencilBuffer && UT.resolveMSAAStencil ? mT.STENCIL_BUFFER_BIT : 0, mT.bindFramebuffer(mT.READ_FRAMEBUFFER, UT._MSAAFramebuffer), mT.bindFramebuffer(mT.DRAW_FRAMEBUFFER, UT._framebuffer), mT.blitFramebuffer(0, 0, TT.width, TT.height, 0, 0, TT.width, TT.height, WT, mT.NEAREST)
       }
       flushFramebuffer() {
         this._gl.flush()
@@ -1955,184 +1955,184 @@ export const modules = {
       _resetVertexBufferBinding() {
         this.bindArrayBuffer(null), this._cachedVertexBuffers = null
       }
-      createVertexBuffer(pp, ip, cp) {
-        return this._createVertexBuffer(pp, this._gl.STATIC_DRAW)
+      createVertexBuffer(TT, UT, mT) {
+        return this._createVertexBuffer(TT, this._gl.STATIC_DRAW)
       }
-      _createVertexBuffer(pp, ip) {
-        const cp = this._gl.createBuffer();
-        if (!cp) throw new Error("Unable to create vertex buffer");
-        const Op = new Pp.d(cp);
-        return this.bindArrayBuffer(Op), "number" !== typeof pp ? pp instanceof Array ? (this._gl.bufferData(this._gl.ARRAY_BUFFER, new Float32Array(pp), ip), Op.TA = 4 * pp.length) : (this._gl.bufferData(this._gl.ARRAY_BUFFER, pp, ip), Op.TA = pp.byteLength) : (this._gl.bufferData(this._gl.ARRAY_BUFFER, new Uint8Array(pp), ip), Op.TA = pp), this._resetVertexBufferBinding(), Op.references = 1, Op
+      _createVertexBuffer(TT, UT) {
+        const mT = this._gl.createBuffer();
+        if (!mT) throw new Error("Unable to create vertex buffer");
+        const WT = new LT.c(mT);
+        return this.bindArrayBuffer(WT), "number" !== typeof TT ? TT instanceof Array ? (this._gl.bufferData(this._gl.ARRAY_BUFFER, new Float32Array(TT), UT), WT.fl = 4 * TT.length) : (this._gl.bufferData(this._gl.ARRAY_BUFFER, TT, UT), WT.fl = TT.byteLength) : (this._gl.bufferData(this._gl.ARRAY_BUFFER, new Uint8Array(TT), UT), WT.fl = TT), this._resetVertexBufferBinding(), WT.references = 1, WT
       }
-      createDynamicVertexBuffer(pp, ip) {
-        return this._createVertexBuffer(pp, this._gl.DYNAMIC_DRAW)
+      createDynamicVertexBuffer(TT, UT) {
+        return this._createVertexBuffer(TT, this._gl.DYNAMIC_DRAW)
       }
       _resetIndexBufferBinding() {
         this.bindIndexBuffer(null), this._cachedIndexBuffer = null
       }
-      createIndexBuffer(pp, ip, cp) {
-        const Op = this._gl.createBuffer(),
-          op = new Pp.d(Op);
-        if (!Op) throw new Error("Unable to create index buffer");
-        this.bindIndexBuffer(op);
-        const Ip = this._normalizeIndexData(pp);
-        return this._gl.bufferData(this._gl.ELEMENT_ARRAY_BUFFER, Ip, ip ? this._gl.DYNAMIC_DRAW : this._gl.STATIC_DRAW), this._resetIndexBufferBinding(), op.references = 1, op.is32Bits = 4 === Ip.BYTES_PER_ELEMENT, op
+      createIndexBuffer(TT, UT, mT) {
+        const WT = this._gl.createBuffer(),
+          zT = new LT.c(WT);
+        if (!WT) throw new Error("Unable to create index buffer");
+        this.bindIndexBuffer(zT);
+        const MT = this._normalizeIndexData(TT);
+        return this._gl.bufferData(this._gl.ELEMENT_ARRAY_BUFFER, MT, UT ? this._gl.DYNAMIC_DRAW : this._gl.STATIC_DRAW), this._resetIndexBufferBinding(), zT.references = 1, zT.is32Bits = 4 === MT.BYTES_PER_ELEMENT, zT
       }
-      _normalizeIndexData(pp) {
-        if (2 === pp.BYTES_PER_ELEMENT) return pp;
+      _normalizeIndexData(TT) {
+        if (2 === TT.BYTES_PER_ELEMENT) return TT;
         if (this._caps.uintIndices) {
-          if (pp instanceof Uint32Array) return pp;
-          for (let ip = 0; ip < pp.length; ip++)
-            if (pp[ip] >= 65535) return new Uint32Array(pp);
-          return new Uint16Array(pp)
+          if (TT instanceof Uint32Array) return TT;
+          for (let UT = 0; UT < TT.length; UT++)
+            if (TT[UT] >= 65535) return new Uint32Array(TT);
+          return new Uint16Array(TT)
         }
-        return new Uint16Array(pp)
+        return new Uint16Array(TT)
       }
-      bindArrayBuffer(pp) {
-        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this._bindBuffer(pp, this._gl.ARRAY_BUFFER)
+      bindArrayBuffer(TT) {
+        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this._bindBuffer(TT, this._gl.ARRAY_BUFFER)
       }
-      bindUniformBlock(pp, ip, cp) {
-        const Op = pp.program,
-          op = this._gl.getUniformBlockIndex(Op, ip);
-        this._gl.uniformBlockBinding(Op, op, cp)
+      bindUniformBlock(TT, UT, mT) {
+        const WT = TT.program,
+          zT = this._gl.getUniformBlockIndex(WT, UT);
+        this._gl.uniformBlockBinding(WT, zT, mT)
       }
-      bindIndexBuffer(pp) {
-        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this._bindBuffer(pp, this._gl.ELEMENT_ARRAY_BUFFER)
+      bindIndexBuffer(TT) {
+        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this._bindBuffer(TT, this._gl.ELEMENT_ARRAY_BUFFER)
       }
-      _bindBuffer(pp, ip) {
-        (this._vaoRecordInProgress || this._currentBoundBuffer[ip] !== pp) && (this._gl.bindBuffer(ip, pp ? pp.underlyingResource : null), this._currentBoundBuffer[ip] = pp)
+      _bindBuffer(TT, UT) {
+        (this._vaoRecordInProgress || this._currentBoundBuffer[UT] !== TT) && (this._gl.bindBuffer(UT, TT ? TT.underlyingResource : null), this._currentBoundBuffer[UT] = TT)
       }
-      updateArrayBuffer(pp) {
-        this._gl.bufferSubData(this._gl.ARRAY_BUFFER, 0, pp)
+      updateArrayBuffer(TT) {
+        this._gl.bufferSubData(this._gl.ARRAY_BUFFER, 0, TT)
       }
-      _vertexAttribPointer(pp, ip, cp, Op, op, Ip, Sp) {
-        const xp = this._currentBufferPointers[ip];
-        if (!xp) return;
-        let Lp = !1;
-        xp.active ? (xp.buffer !== pp && (xp.buffer = pp, Lp = !0), xp.size !== cp && (xp.size = cp, Lp = !0), xp.type !== Op && (xp.type = Op, Lp = !0), xp.normalized !== op && (xp.normalized = op, Lp = !0), xp.stride !== Ip && (xp.stride = Ip, Lp = !0), xp.offset !== Sp && (xp.offset = Sp, Lp = !0)) : (Lp = !0, xp.active = !0, xp.index = ip, xp.size = cp, xp.type = Op, xp.normalized = op, xp.stride = Ip, xp.offset = Sp, xp.buffer = pp), (Lp || this._vaoRecordInProgress) && (this.bindArrayBuffer(pp), Op === this._gl.UNSIGNED_INT || Op === this._gl.INT ? this._gl.vertexAttribIPointer(ip, cp, Op, Ip, Sp) : this._gl.vertexAttribPointer(ip, cp, Op, op, Ip, Sp))
+      _vertexAttribPointer(TT, UT, mT, WT, zT, MT, gT) {
+        const nT = this._currentBufferPointers[UT];
+        if (!nT) return;
+        let HT = !1;
+        nT.active ? (nT.buffer !== TT && (nT.buffer = TT, HT = !0), nT.size !== mT && (nT.size = mT, HT = !0), nT.type !== WT && (nT.type = WT, HT = !0), nT.normalized !== zT && (nT.normalized = zT, HT = !0), nT.stride !== MT && (nT.stride = MT, HT = !0), nT.offset !== gT && (nT.offset = gT, HT = !0)) : (HT = !0, nT.active = !0, nT.index = UT, nT.size = mT, nT.type = WT, nT.normalized = zT, nT.stride = MT, nT.offset = gT, nT.buffer = TT), (HT || this._vaoRecordInProgress) && (this.bindArrayBuffer(TT), WT === this._gl.UNSIGNED_INT || WT === this._gl.INT ? this._gl.vertexAttribIPointer(UT, mT, WT, MT, gT) : this._gl.vertexAttribPointer(UT, mT, WT, zT, MT, gT))
       }
-      _bindIndexBufferWithCache(pp) {
-        null != pp && this._cachedIndexBuffer !== pp && (this._cachedIndexBuffer = pp, this.bindIndexBuffer(pp), this._uintIndicesCurrentlySet = pp.is32Bits)
+      _bindIndexBufferWithCache(TT) {
+        null != TT && this._cachedIndexBuffer !== TT && (this._cachedIndexBuffer = TT, this.bindIndexBuffer(TT), this._uintIndicesCurrentlySet = TT.is32Bits)
       }
-      _bindVertexBuffersAttributes(pp, ip, cp) {
-        const Op = ip.getAttributesNames();
+      _bindVertexBuffersAttributes(TT, UT, mT) {
+        const WT = UT.getAttributesNames();
         this._vaoRecordInProgress || this._unbindVertexArrayObject(), this.unbindAllAttributes();
-        for (let op = 0; op < Op.length; op++) {
-          const Ip = ip.getAttributeLocation(op);
-          if (Ip >= 0) {
-            const ip = Op[op];
-            let Sp = null;
-            if (cp && (Sp = cp[ip]), Sp || (Sp = pp[ip]), !Sp) continue;
-            this._gl.enableVertexAttribArray(Ip), this._vaoRecordInProgress || (this._vertexAttribArraysEnabled[Ip] = !0);
-            const xp = Sp.getBuffer();
-            xp && (this._vertexAttribPointer(xp, Ip, Sp.getSize(), Sp.type, Sp.normalized, Sp.byteStride, Sp.byteOffset), Sp.getIsInstanced() && (this._gl.vertexAttribDivisor(Ip, Sp.getInstanceDivisor()), this._vaoRecordInProgress || (this._currentInstanceLocations.push(Ip), this._currentInstanceBuffers.push(xp))))
+        for (let zT = 0; zT < WT.length; zT++) {
+          const MT = UT.getAttributeLocation(zT);
+          if (MT >= 0) {
+            const UT = WT[zT];
+            let gT = null;
+            if (mT && (gT = mT[UT]), gT || (gT = TT[UT]), !gT) continue;
+            this._gl.enableVertexAttribArray(MT), this._vaoRecordInProgress || (this._vertexAttribArraysEnabled[MT] = !0);
+            const nT = gT.getBuffer();
+            nT && (this._vertexAttribPointer(nT, MT, gT.getSize(), gT.type, gT.normalized, gT.byteStride, gT.byteOffset), gT.getIsInstanced() && (this._gl.vertexAttribDivisor(MT, gT.getInstanceDivisor()), this._vaoRecordInProgress || (this._currentInstanceLocations.push(MT), this._currentInstanceBuffers.push(nT))))
           }
         }
       }
-      recordVertexArrayObject(pp, ip, cp, Op) {
-        const op = this._gl.createVertexArray();
-        if (!op) throw new Error("Unable to create VAO");
-        return this._vaoRecordInProgress = !0, this._gl.bindVertexArray(op), this._mustWipeVertexAttributes = !0, this._bindVertexBuffersAttributes(pp, cp, Op), this.bindIndexBuffer(ip), this._vaoRecordInProgress = !1, this._gl.bindVertexArray(null), op
+      recordVertexArrayObject(TT, UT, mT, WT) {
+        const zT = this._gl.createVertexArray();
+        if (!zT) throw new Error("Unable to create VAO");
+        return this._vaoRecordInProgress = !0, this._gl.bindVertexArray(zT), this._mustWipeVertexAttributes = !0, this._bindVertexBuffersAttributes(TT, mT, WT), this.bindIndexBuffer(UT), this._vaoRecordInProgress = !1, this._gl.bindVertexArray(null), zT
       }
-      bindVertexArrayObject(pp, ip) {
-        this._cachedVertexArrayObject !== pp && (this._cachedVertexArrayObject = pp, this._gl.bindVertexArray(pp), this._cachedVertexBuffers = null, this._cachedIndexBuffer = null, this._uintIndicesCurrentlySet = null != ip && ip.is32Bits, this._mustWipeVertexAttributes = !0)
+      bindVertexArrayObject(TT, UT) {
+        this._cachedVertexArrayObject !== TT && (this._cachedVertexArrayObject = TT, this._gl.bindVertexArray(TT), this._cachedVertexBuffers = null, this._cachedIndexBuffer = null, this._uintIndicesCurrentlySet = null != UT && UT.is32Bits, this._mustWipeVertexAttributes = !0)
       }
-      bindBuffersDirectly(pp, ip, cp, Op, op) {
-        if (this._cachedVertexBuffers !== pp || this._cachedEffectForVertexBuffers !== op) {
-          this._cachedVertexBuffers = pp, this._cachedEffectForVertexBuffers = op;
-          const ip = op.getAttributesCount();
+      bindBuffersDirectly(TT, UT, mT, WT, zT) {
+        if (this._cachedVertexBuffers !== TT || this._cachedEffectForVertexBuffers !== zT) {
+          this._cachedVertexBuffers = TT, this._cachedEffectForVertexBuffers = zT;
+          const UT = zT.getAttributesCount();
           this._unbindVertexArrayObject(), this.unbindAllAttributes();
-          let Ip = 0;
-          for (let Sp = 0; Sp < ip; Sp++)
-            if (Sp < cp.length) {
-              const ip = op.getAttributeLocation(Sp);
-              ip >= 0 && (this._gl.enableVertexAttribArray(ip), this._vertexAttribArraysEnabled[ip] = !0, this._vertexAttribPointer(pp, ip, cp[Sp], this._gl.FLOAT, !1, Op, Ip)), Ip += 4 * cp[Sp]
+          let MT = 0;
+          for (let gT = 0; gT < UT; gT++)
+            if (gT < mT.length) {
+              const UT = zT.getAttributeLocation(gT);
+              UT >= 0 && (this._gl.enableVertexAttribArray(UT), this._vertexAttribArraysEnabled[UT] = !0, this._vertexAttribPointer(TT, UT, mT[gT], this._gl.FLOAT, !1, WT, MT)), MT += 4 * mT[gT]
             }
         }
-        this._bindIndexBufferWithCache(ip)
+        this._bindIndexBufferWithCache(UT)
       }
       _unbindVertexArrayObject() {
         this._cachedVertexArrayObject && (this._cachedVertexArrayObject = null, this._gl.bindVertexArray(null))
       }
-      bindBuffers(pp, ip, cp, Op) {
-        this._cachedVertexBuffers === pp && this._cachedEffectForVertexBuffers === cp || (this._cachedVertexBuffers = pp, this._cachedEffectForVertexBuffers = cp, this._bindVertexBuffersAttributes(pp, cp, Op)), this._bindIndexBufferWithCache(ip)
+      bindBuffers(TT, UT, mT, WT) {
+        this._cachedVertexBuffers === TT && this._cachedEffectForVertexBuffers === mT || (this._cachedVertexBuffers = TT, this._cachedEffectForVertexBuffers = mT, this._bindVertexBuffersAttributes(TT, mT, WT)), this._bindIndexBufferWithCache(UT)
       }
       unbindInstanceAttributes() {
-        let pp;
-        for (let ip = 0, cp = this._currentInstanceLocations.length; ip < cp; ip++) {
-          const cp = this._currentInstanceBuffers[ip];
-          pp != cp && cp.references && (pp = cp, this.bindArrayBuffer(cp));
-          const Op = this._currentInstanceLocations[ip];
-          this._gl.vertexAttribDivisor(Op, 0)
+        let TT;
+        for (let UT = 0, mT = this._currentInstanceLocations.length; UT < mT; UT++) {
+          const mT = this._currentInstanceBuffers[UT];
+          TT != mT && mT.references && (TT = mT, this.bindArrayBuffer(mT));
+          const WT = this._currentInstanceLocations[UT];
+          this._gl.vertexAttribDivisor(WT, 0)
         }
         this._currentInstanceBuffers.length = 0, this._currentInstanceLocations.length = 0
       }
-      releaseVertexArrayObject(pp) {
-        this._gl.deleteVertexArray(pp)
+      releaseVertexArrayObject(TT) {
+        this._gl.deleteVertexArray(TT)
       }
-      _releaseBuffer(pp) {
-        return pp.references--, 0 === pp.references && (this._deleteBuffer(pp), !0)
+      _releaseBuffer(TT) {
+        return TT.references--, 0 === TT.references && (this._deleteBuffer(TT), !0)
       }
-      _deleteBuffer(pp) {
-        this._gl.deleteBuffer(pp.underlyingResource)
+      _deleteBuffer(TT) {
+        this._gl.deleteBuffer(TT.underlyingResource)
       }
-      updateAndBindInstancesBuffer(pp, ip, cp) {
-        if (this.bindArrayBuffer(pp), ip && this._gl.bufferSubData(this._gl.ARRAY_BUFFER, 0, ip), void 0 !== cp[0].index) this.bindInstancesBuffer(pp, cp, !0);
+      updateAndBindInstancesBuffer(TT, UT, mT) {
+        if (this.bindArrayBuffer(TT), UT && this._gl.bufferSubData(this._gl.ARRAY_BUFFER, 0, UT), void 0 !== mT[0].index) this.bindInstancesBuffer(TT, mT, !0);
         else
-          for (let Op = 0; Op < 4; Op++) {
-            const ip = cp[Op];
-            this._vertexAttribArraysEnabled[ip] || (this._gl.enableVertexAttribArray(ip), this._vertexAttribArraysEnabled[ip] = !0), this._vertexAttribPointer(pp, ip, 4, this._gl.FLOAT, !1, 64, 16 * Op), this._gl.vertexAttribDivisor(ip, 1), this._currentInstanceLocations.push(ip), this._currentInstanceBuffers.push(pp)
+          for (let WT = 0; WT < 4; WT++) {
+            const UT = mT[WT];
+            this._vertexAttribArraysEnabled[UT] || (this._gl.enableVertexAttribArray(UT), this._vertexAttribArraysEnabled[UT] = !0), this._vertexAttribPointer(TT, UT, 4, this._gl.FLOAT, !1, 64, 16 * WT), this._gl.vertexAttribDivisor(UT, 1), this._currentInstanceLocations.push(UT), this._currentInstanceBuffers.push(TT)
           }
       }
-      bindInstancesBuffer(pp, ip) {
-        let cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.bindArrayBuffer(pp);
-        let Op = 0;
-        if (cp)
-          for (let op = 0; op < ip.length; op++) {
-            Op += 4 * ip[op].attributeSize
+      bindInstancesBuffer(TT, UT) {
+        let mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.bindArrayBuffer(TT);
+        let WT = 0;
+        if (mT)
+          for (let zT = 0; zT < UT.length; zT++) {
+            WT += 4 * UT[zT].attributeSize
           }
-        for (let op = 0; op < ip.length; op++) {
-          const cp = ip[op];
-          void 0 === cp.index && (cp.index = this._currentEffect.getAttributeLocationByName(cp.attributeName)), cp.index < 0 || (this._vertexAttribArraysEnabled[cp.index] || (this._gl.enableVertexAttribArray(cp.index), this._vertexAttribArraysEnabled[cp.index] = !0), this._vertexAttribPointer(pp, cp.index, cp.attributeSize, cp.attributeType || this._gl.FLOAT, cp.normalized || !1, Op, cp.offset), this._gl.vertexAttribDivisor(cp.index, void 0 === cp.divisor ? 1 : cp.divisor), this._currentInstanceLocations.push(cp.index), this._currentInstanceBuffers.push(pp))
+        for (let zT = 0; zT < UT.length; zT++) {
+          const mT = UT[zT];
+          void 0 === mT.index && (mT.index = this._currentEffect.getAttributeLocationByName(mT.attributeName)), mT.index < 0 || (this._vertexAttribArraysEnabled[mT.index] || (this._gl.enableVertexAttribArray(mT.index), this._vertexAttribArraysEnabled[mT.index] = !0), this._vertexAttribPointer(TT, mT.index, mT.attributeSize, mT.attributeType || this._gl.FLOAT, mT.normalized || !1, WT, mT.offset), this._gl.vertexAttribDivisor(mT.index, void 0 === mT.divisor ? 1 : mT.divisor), this._currentInstanceLocations.push(mT.index), this._currentInstanceBuffers.push(TT))
         }
       }
-      disableInstanceAttributeByName(pp) {
+      disableInstanceAttributeByName(TT) {
         if (!this._currentEffect) return;
-        const ip = this._currentEffect.getAttributeLocationByName(pp);
-        this.disableInstanceAttribute(ip)
+        const UT = this._currentEffect.getAttributeLocationByName(TT);
+        this.disableInstanceAttribute(UT)
       }
-      disableInstanceAttribute(pp) {
-        let ip, cp = !1;
-        for (; - 1 !== (ip = this._currentInstanceLocations.indexOf(pp));) this._currentInstanceLocations.splice(ip, 1), this._currentInstanceBuffers.splice(ip, 1), cp = !0;
-        cp && (this._gl.vertexAttribDivisor(pp, 0), this.disableAttributeByIndex(pp))
+      disableInstanceAttribute(TT) {
+        let UT, mT = !1;
+        for (; - 1 !== (UT = this._currentInstanceLocations.indexOf(TT));) this._currentInstanceLocations.splice(UT, 1), this._currentInstanceBuffers.splice(UT, 1), mT = !0;
+        mT && (this._gl.vertexAttribDivisor(TT, 0), this.disableAttributeByIndex(TT))
       }
-      disableAttributeByIndex(pp) {
-        this._gl.disableVertexAttribArray(pp), this._vertexAttribArraysEnabled[pp] = !1, this._currentBufferPointers[pp].active = !1
+      disableAttributeByIndex(TT) {
+        this._gl.disableVertexAttribArray(TT), this._vertexAttribArraysEnabled[TT] = !1, this._currentBufferPointers[TT].active = !1
       }
-      draw(pp, ip, cp, Op) {
-        this.drawElementsType(pp ? 0 : 1, ip, cp, Op)
+      draw(TT, UT, mT, WT) {
+        this.drawElementsType(TT ? 0 : 1, UT, mT, WT)
       }
-      drawPointClouds(pp, ip, cp) {
-        this.drawArraysType(2, pp, ip, cp)
+      drawPointClouds(TT, UT, mT) {
+        this.drawArraysType(2, TT, UT, mT)
       }
-      drawUnIndexed(pp, ip, cp, Op) {
-        this.drawArraysType(pp ? 0 : 1, ip, cp, Op)
+      drawUnIndexed(TT, UT, mT, WT) {
+        this.drawArraysType(TT ? 0 : 1, UT, mT, WT)
       }
-      drawElementsType(pp, ip, cp, Op) {
+      drawElementsType(TT, UT, mT, WT) {
         this.applyStates(), this._reportDrawCall();
-        const op = this._drawMode(pp),
-          Ip = this._uintIndicesCurrentlySet ? this._gl.UNSIGNED_INT : this._gl.UNSIGNED_SHORT,
-          Sp = this._uintIndicesCurrentlySet ? 4 : 2;
-        Op ? this._gl.drawElementsInstanced(op, cp, Ip, ip * Sp, Op) : this._gl.drawElements(op, cp, Ip, ip * Sp)
+        const zT = this._drawMode(TT),
+          MT = this._uintIndicesCurrentlySet ? this._gl.UNSIGNED_INT : this._gl.UNSIGNED_SHORT,
+          gT = this._uintIndicesCurrentlySet ? 4 : 2;
+        WT ? this._gl.drawElementsInstanced(zT, mT, MT, UT * gT, WT) : this._gl.drawElements(zT, mT, MT, UT * gT)
       }
-      drawArraysType(pp, ip, cp, Op) {
+      drawArraysType(TT, UT, mT, WT) {
         this.applyStates(), this._reportDrawCall();
-        const op = this._drawMode(pp);
-        Op ? this._gl.drawArraysInstanced(op, ip, cp, Op) : this._gl.drawArrays(op, ip, cp)
+        const zT = this._drawMode(TT);
+        WT ? this._gl.drawArraysInstanced(zT, UT, mT, WT) : this._gl.drawArrays(zT, UT, mT)
       }
-      _drawMode(pp) {
-        switch (pp) {
+      _drawMode(TT) {
+        switch (TT) {
           case 0:
           default:
             return this._gl.TRIANGLES;
@@ -2152,564 +2152,564 @@ export const modules = {
             return this._gl.TRIANGLE_FAN
         }
       }
-      _releaseEffect(pp) {
-        this._compiledEffects[pp._key] && delete this._compiledEffects[pp._key];
-        const ip = pp.getPipelineContext();
-        ip && this._deletePipelineContext(ip)
+      _releaseEffect(TT) {
+        this._compiledEffects[TT._key] && delete this._compiledEffects[TT._key];
+        const UT = TT.getPipelineContext();
+        UT && this._deletePipelineContext(UT)
       }
-      _deletePipelineContext(pp) {
-        const ip = pp;
-        ip && ip.program && (ip.program.__SPECTOR_rebuildProgram = null, (0, vp.o)(ip), this._gl && (this._currentProgram === ip.program && this._setProgram(null), this._gl.deleteProgram(ip.program)))
+      _deletePipelineContext(TT) {
+        const UT = TT;
+        UT && UT.program && (UT.program.__SPECTOR_rebuildProgram = null, (0, vT.h)(UT), this._gl && (this._currentProgram === UT.program && this._setProgram(null), this._gl.deleteProgram(UT.program)))
       }
-      _getGlobalDefines(pp) {
-        return (0, wp.j)(pp, this.isNDCHalfZRange, this.lOp, this.useExactSrgbConversions)
+      _getGlobalDefines(TT) {
+        return (0, cT.j)(TT, this.isNDCHalfZRange, this.pWT, this.useExactSrgbConversions)
       }
-      createEffect(pp, ip, cp, Ip, Sp, xp, Lp, Yp, Dp) {
-        let Ap = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          Pp = arguments.length > 10 ? arguments[10] : void 0;
-        const Wp = "string" === typeof pp ? pp : pp.vertexToken || pp.vertexSource || pp.vertexElement || pp.vertex,
-          yp = "string" === typeof pp ? pp : pp.fragmentToken || pp.fragmentSource || pp.fragmentElement || pp.fragment,
-          Up = this._getGlobalDefines(),
-          wp = void 0 !== ip.attributes;
-        let vp = Sp ?? ip.defines ?? "";
-        Up && (vp += Up);
-        const tp = Wp + "+" + yp + "@" + vp;
-        if (this._compiledEffects[tp]) {
-          const pp = this._compiledEffects[tp];
-          return Lp && pp.isReady() && Lp(pp), pp._refCount++, pp
+      createEffect(TT, UT, mT, MT, gT, nT, HT, kT, jT) {
+        let lT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+          LT = arguments.length > 10 ? arguments[10] : void 0;
+        const pT = "string" === typeof TT ? TT : TT.vertexToken || TT.vertexSource || TT.vertexElement || TT.vertex,
+          BT = "string" === typeof TT ? TT : TT.fragmentToken || TT.fragmentSource || TT.fragmentElement || TT.fragment,
+          ZT = this._getGlobalDefines(),
+          cT = void 0 !== UT.attributes;
+        let vT = gT ?? UT.defines ?? "";
+        ZT && (vT += ZT);
+        const fT = pT + "+" + BT + "@" + vT;
+        if (this._compiledEffects[fT]) {
+          const TT = this._compiledEffects[fT];
+          return HT && TT.isReady() && HT(TT), TT._refCount++, TT
         }
-        this._gl && (0, op.J)(this._gl);
-        const Hp = new Op.e(pp, ip, wp ? this : cp, Ip, this, Sp, xp, Lp, Yp, Dp, tp, ip.shaderLanguage ?? Ap, ip.extraInitializationsAsync ?? Pp);
-        return this._compiledEffects[tp] = Hp, Hp
+        this._gl && (0, zT.A)(this._gl);
+        const qT = new WT.b(TT, UT, cT ? this : mT, MT, this, gT, nT, HT, kT, jT, fT, UT.shaderLanguage ?? lT, UT.extraInitializationsAsync ?? LT);
+        return this._compiledEffects[fT] = qT, qT
       }
-      _getShaderSource(pp) {
-        return this._gl.getShaderSource(pp)
+      _getShaderSource(TT) {
+        return this._gl.getShaderSource(TT)
       }
-      createRawShaderProgram(pp, ip, cp, Op) {
-        let Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        const Sp = (0, op.J)(this._gl);
-        return Sp._contextWasLost = this._contextWasLost, Sp.validateShaderPrograms = this.validateShaderPrograms, (0, op.y)(pp, ip, cp, Op || this._gl, Ip)
+      createRawShaderProgram(TT, UT, mT, WT) {
+        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        const gT = (0, zT.A)(this._gl);
+        return gT._contextWasLost = this._contextWasLost, gT.validateShaderPrograms = this.validateShaderPrograms, (0, zT.u)(TT, UT, mT, WT || this._gl, MT)
       }
-      createShaderProgram(pp, ip, cp, Op, Ip) {
-        let Sp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
-        const xp = (0, op.J)(this._gl);
-        return xp._contextWasLost = this._contextWasLost, xp.validateShaderPrograms = this.validateShaderPrograms, (0, op.C)(pp, ip, cp, Op, Ip || this._gl, Sp)
+      createShaderProgram(TT, UT, mT, WT, MT) {
+        let gT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+        const nT = (0, zT.A)(this._gl);
+        return nT._contextWasLost = this._contextWasLost, nT.validateShaderPrograms = this.validateShaderPrograms, (0, zT.w)(TT, UT, mT, WT, MT || this._gl, gT)
       }
-      inlineShaderCode(pp) {
-        return pp
+      inlineShaderCode(TT) {
+        return TT
       }
-      createPipelineContext(pp) {
+      createPipelineContext(TT) {
         if (this._gl) {
-          (0, op.J)(this._gl).parallelShaderCompile = this._caps.parallelShaderCompile
+          (0, zT.A)(this._gl).parallelShaderCompile = this._caps.parallelShaderCompile
         }
-        const ip = (0, op.u)(this._gl, pp);
-        return ip.engine = this, ip
+        const UT = (0, zT.q)(this._gl, TT);
+        return UT.engine = this, UT
       }
       createMaterialContext() {}
       createDrawContext() {}
-      _finalizePipelineContext(pp) {
-        return (0, op.h)(pp, this._gl, this.validateShaderPrograms)
+      _finalizePipelineContext(TT) {
+        return (0, zT.g)(TT, this._gl, this.validateShaderPrograms)
       }
-      _preparePipelineContextAsync(pp, ip, cp, Op, Ip, Sp, xp, Lp, Yp, Dp, Ap) {
-        const Pp = (0, op.J)(this._gl);
-        return Pp._contextWasLost = this._contextWasLost, Pp.validateShaderPrograms = this.validateShaderPrograms, Pp._createShaderProgramInjection = this._createShaderProgram.bind(this), Pp.createRawShaderProgramInjection = this.createRawShaderProgram.bind(this), Pp.createShaderProgramInjection = this.createShaderProgram.bind(this), Pp.loadFileInjection = this._loadFile.bind(this), (0, op.o)(pp, ip, cp, Op, Ip, Sp, xp, Lp, Yp, Dp, Ap)
+      _preparePipelineContextAsync(TT, UT, mT, WT, MT, gT, nT, HT, kT, jT, lT) {
+        const LT = (0, zT.A)(this._gl);
+        return LT._contextWasLost = this._contextWasLost, LT.validateShaderPrograms = this.validateShaderPrograms, LT._createShaderProgramInjection = this._createShaderProgram.bind(this), LT.createRawShaderProgramInjection = this.createRawShaderProgram.bind(this), LT.createShaderProgramInjection = this.createShaderProgram.bind(this), LT.loadFileInjection = this._loadFile.bind(this), (0, zT.l)(TT, UT, mT, WT, MT, gT, nT, HT, kT, jT, lT)
       }
-      _createShaderProgram(pp, ip, cp, Op) {
-        let Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        return (0, op.d)(pp, ip, cp, Op, Ip)
+      _createShaderProgram(TT, UT, mT, WT) {
+        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        return (0, zT.e)(TT, UT, mT, WT, MT)
       }
-      _isRenderingStateCompiled(pp) {
-        return !this._isDisposed && (0, op.l)(pp, this._gl, this.validateShaderPrograms)
+      _isRenderingStateCompiled(TT) {
+        return !this._isDisposed && (0, zT.h)(TT, this._gl, this.validateShaderPrograms)
       }
-      _executeWhenRenderingStateIsCompiled(pp, ip) {
-        (0, op.g)(pp, ip)
+      _executeWhenRenderingStateIsCompiled(TT, UT) {
+        (0, zT.f)(TT, UT)
       }
-      getUniforms(pp, ip) {
-        const cp = new Array,
-          Op = pp;
-        for (let op = 0; op < ip.length; op++) cp.push(this._gl.getUniformLocation(Op.program, ip[op]));
-        return cp
+      getUniforms(TT, UT) {
+        const mT = new Array,
+          WT = TT;
+        for (let zT = 0; zT < UT.length; zT++) mT.push(this._gl.getUniformLocation(WT.program, UT[zT]));
+        return mT
       }
-      getAttributes(pp, ip) {
-        const cp = [],
-          Op = pp;
-        for (let Ip = 0; Ip < ip.length; Ip++) try {
-          cp.push(this._gl.getAttribLocation(Op.program, ip[Ip]))
-        } catch (op) {
-          cp.push(-1)
+      getAttributes(TT, UT) {
+        const mT = [],
+          WT = TT;
+        for (let MT = 0; MT < UT.length; MT++) try {
+          mT.push(this._gl.getAttribLocation(WT.program, UT[MT]))
+        } catch (zT) {
+          mT.push(-1)
         }
-        return cp
+        return mT
       }
-      enableEffect(pp) {
-        (pp = null !== pp && (0, Sp.e)(pp) ? pp.effect : pp) && pp !== this._currentEffect && (this._stencilStateComposer.stencilMaterial = void 0, this.bindSamplers(pp), this._currentEffect = pp, pp.onBind && pp.onBind(pp), pp._onBindObservable && pp._onBindObservable.notifyObservers(pp))
+      enableEffect(TT) {
+        (TT = null !== TT && (0, gT.b)(TT) ? TT.effect : TT) && TT !== this._currentEffect && (this._stencilStateComposer.stencilMaterial = void 0, this.bindSamplers(TT), this._currentEffect = TT, TT.onBind && TT.onBind(TT), TT._onBindObservable && TT._onBindObservable.notifyObservers(TT))
       }
-      setInt(pp, ip) {
-        return !!pp && (this._gl.uniform1i(pp, ip), !0)
+      setInt(TT, UT) {
+        return !!TT && (this._gl.uniform1i(TT, UT), !0)
       }
-      setInt2(pp, ip, cp) {
-        return !!pp && (this._gl.uniform2i(pp, ip, cp), !0)
+      setInt2(TT, UT, mT) {
+        return !!TT && (this._gl.uniform2i(TT, UT, mT), !0)
       }
-      setInt3(pp, ip, cp, Op) {
-        return !!pp && (this._gl.uniform3i(pp, ip, cp, Op), !0)
+      setInt3(TT, UT, mT, WT) {
+        return !!TT && (this._gl.uniform3i(TT, UT, mT, WT), !0)
       }
-      setInt4(pp, ip, cp, Op, op) {
-        return !!pp && (this._gl.uniform4i(pp, ip, cp, Op, op), !0)
+      setInt4(TT, UT, mT, WT, zT) {
+        return !!TT && (this._gl.uniform4i(TT, UT, mT, WT, zT), !0)
       }
-      setIntArray(pp, ip) {
-        return !!pp && (this._gl.uniform1iv(pp, ip), !0)
+      setIntArray(TT, UT) {
+        return !!TT && (this._gl.uniform1iv(TT, UT), !0)
       }
-      setIntArray2(pp, ip) {
-        return !(!pp || ip.length % 2 !== 0) && (this._gl.uniform2iv(pp, ip), !0)
+      setIntArray2(TT, UT) {
+        return !(!TT || UT.length % 2 !== 0) && (this._gl.uniform2iv(TT, UT), !0)
       }
-      setIntArray3(pp, ip) {
-        return !(!pp || ip.length % 3 !== 0) && (this._gl.uniform3iv(pp, ip), !0)
+      setIntArray3(TT, UT) {
+        return !(!TT || UT.length % 3 !== 0) && (this._gl.uniform3iv(TT, UT), !0)
       }
-      setIntArray4(pp, ip) {
-        return !(!pp || ip.length % 4 !== 0) && (this._gl.uniform4iv(pp, ip), !0)
+      setIntArray4(TT, UT) {
+        return !(!TT || UT.length % 4 !== 0) && (this._gl.uniform4iv(TT, UT), !0)
       }
-      setUInt(pp, ip) {
-        return !!pp && (this._gl.uniform1ui(pp, ip), !0)
+      setUInt(TT, UT) {
+        return !!TT && (this._gl.uniform1ui(TT, UT), !0)
       }
-      setUInt2(pp, ip, cp) {
-        return !!pp && (this._gl.uniform2ui(pp, ip, cp), !0)
+      setUInt2(TT, UT, mT) {
+        return !!TT && (this._gl.uniform2ui(TT, UT, mT), !0)
       }
-      setUInt3(pp, ip, cp, Op) {
-        return !!pp && (this._gl.uniform3ui(pp, ip, cp, Op), !0)
+      setUInt3(TT, UT, mT, WT) {
+        return !!TT && (this._gl.uniform3ui(TT, UT, mT, WT), !0)
       }
-      setUInt4(pp, ip, cp, Op, op) {
-        return !!pp && (this._gl.uniform4ui(pp, ip, cp, Op, op), !0)
+      setUInt4(TT, UT, mT, WT, zT) {
+        return !!TT && (this._gl.uniform4ui(TT, UT, mT, WT, zT), !0)
       }
-      setUIntArray(pp, ip) {
-        return !!pp && (this._gl.uniform1uiv(pp, ip), !0)
+      setUIntArray(TT, UT) {
+        return !!TT && (this._gl.uniform1uiv(TT, UT), !0)
       }
-      setUIntArray2(pp, ip) {
-        return !(!pp || ip.length % 2 !== 0) && (this._gl.uniform2uiv(pp, ip), !0)
+      setUIntArray2(TT, UT) {
+        return !(!TT || UT.length % 2 !== 0) && (this._gl.uniform2uiv(TT, UT), !0)
       }
-      setUIntArray3(pp, ip) {
-        return !(!pp || ip.length % 3 !== 0) && (this._gl.uniform3uiv(pp, ip), !0)
+      setUIntArray3(TT, UT) {
+        return !(!TT || UT.length % 3 !== 0) && (this._gl.uniform3uiv(TT, UT), !0)
       }
-      setUIntArray4(pp, ip) {
-        return !(!pp || ip.length % 4 !== 0) && (this._gl.uniform4uiv(pp, ip), !0)
+      setUIntArray4(TT, UT) {
+        return !(!TT || UT.length % 4 !== 0) && (this._gl.uniform4uiv(TT, UT), !0)
       }
-      setArray(pp, ip) {
-        return !!pp && (!(ip.length < 1) && (this._gl.uniform1fv(pp, ip), !0))
+      setArray(TT, UT) {
+        return !!TT && (!(UT.length < 1) && (this._gl.uniform1fv(TT, UT), !0))
       }
-      setArray2(pp, ip) {
-        return !(!pp || ip.length % 2 !== 0) && (this._gl.uniform2fv(pp, ip), !0)
+      setArray2(TT, UT) {
+        return !(!TT || UT.length % 2 !== 0) && (this._gl.uniform2fv(TT, UT), !0)
       }
-      setArray3(pp, ip) {
-        return !(!pp || ip.length % 3 !== 0) && (this._gl.uniform3fv(pp, ip), !0)
+      setArray3(TT, UT) {
+        return !(!TT || UT.length % 3 !== 0) && (this._gl.uniform3fv(TT, UT), !0)
       }
-      setArray4(pp, ip) {
-        return !(!pp || ip.length % 4 !== 0) && (this._gl.uniform4fv(pp, ip), !0)
+      setArray4(TT, UT) {
+        return !(!TT || UT.length % 4 !== 0) && (this._gl.uniform4fv(TT, UT), !0)
       }
-      setMatrices(pp, ip) {
-        return !!pp && (this._gl.uniformMatrix4fv(pp, !1, ip), !0)
+      setMatrices(TT, UT) {
+        return !!TT && (this._gl.uniformMatrix4fv(TT, !1, UT), !0)
       }
-      setMatrix3x3(pp, ip) {
-        return !!pp && (this._gl.uniformMatrix3fv(pp, !1, ip), !0)
+      setMatrix3x3(TT, UT) {
+        return !!TT && (this._gl.uniformMatrix3fv(TT, !1, UT), !0)
       }
-      setMatrix2x2(pp, ip) {
-        return !!pp && (this._gl.uniformMatrix2fv(pp, !1, ip), !0)
+      setMatrix2x2(TT, UT) {
+        return !!TT && (this._gl.uniformMatrix2fv(TT, !1, UT), !0)
       }
-      setFloat(pp, ip) {
-        return !!pp && (this._gl.uniform1f(pp, ip), !0)
+      setFloat(TT, UT) {
+        return !!TT && (this._gl.uniform1f(TT, UT), !0)
       }
-      setFloat2(pp, ip, cp) {
-        return !!pp && (this._gl.uniform2f(pp, ip, cp), !0)
+      setFloat2(TT, UT, mT) {
+        return !!TT && (this._gl.uniform2f(TT, UT, mT), !0)
       }
-      setFloat3(pp, ip, cp, Op) {
-        return !!pp && (this._gl.uniform3f(pp, ip, cp, Op), !0)
+      setFloat3(TT, UT, mT, WT) {
+        return !!TT && (this._gl.uniform3f(TT, UT, mT, WT), !0)
       }
-      setFloat4(pp, ip, cp, Op, op) {
-        return !!pp && (this._gl.uniform4f(pp, ip, cp, Op, op), !0)
+      setFloat4(TT, UT, mT, WT, zT) {
+        return !!TT && (this._gl.uniform4f(TT, UT, mT, WT, zT), !0)
       }
       _applyColorWriteState() {
         if (this._colorWriteChanged) {
           this._colorWriteChanged = !1;
-          const pp = this._colorWrite;
-          this._gl.colorMask(pp, pp, pp, pp)
+          const TT = this._colorWrite;
+          this._gl.colorMask(TT, TT, TT, TT)
         }
       }
       applyStates() {
         this._depthCullingState.apply(this._gl), this._stencilStateComposer.apply(this._gl), this._alphaState.apply(this._gl, this._currentRenderTarget && this._currentRenderTarget.textures ? this._currentRenderTarget.textures.length : 1, this._integerMRTAttachmentsMask), this._applyColorWriteState()
       }
-      wipeCaches(pp) {
-        this.preventCacheWipeBetweenFrames && !pp || (this._currentEffect = null, this._viewportCached.x = 0, this._viewportCached.y = 0, this._viewportCached.z = 0, this._viewportCached.w = 0, this._unbindVertexArrayObject(), pp && (this._currentProgram = null, this.resetTextureCache(), this._stencilStateComposer.reset(), this._depthCullingState.reset(), this._depthCullingState.depthFunc = this._gl.LEQUAL, this._alphaState.reset(), this._resetAlphaMode(), this._colorWrite = !0, this._colorWriteChanged = !0, this._unpackFlipYCached = null, this._gl.pixelStorei(this._gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, this._gl.NONE), this._gl.pixelStorei(this._gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), this._mustWipeVertexAttributes = !0, this.unbindAllAttributes()), this._resetVertexBufferBinding(), this._cachedIndexBuffer = null, this._cachedEffectForVertexBuffers = null, this.bindIndexBuffer(null))
+      wipeCaches(TT) {
+        this.preventCacheWipeBetweenFrames && !TT || (this._currentEffect = null, this._viewportCached.x = 0, this._viewportCached.y = 0, this._viewportCached.z = 0, this._viewportCached.w = 0, this._unbindVertexArrayObject(), TT && (this._currentProgram = null, this.resetTextureCache(), this._stencilStateComposer.reset(), this._depthCullingState.reset(), this._depthCullingState.depthFunc = this._gl.LEQUAL, this._alphaState.reset(), this._resetAlphaMode(), this._colorWrite = !0, this._colorWriteChanged = !0, this._unpackFlipYCached = null, this._gl.pixelStorei(this._gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, this._gl.NONE), this._gl.pixelStorei(this._gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), this._mustWipeVertexAttributes = !0, this.unbindAllAttributes()), this._resetVertexBufferBinding(), this._cachedIndexBuffer = null, this._cachedEffectForVertexBuffers = null, this.bindIndexBuffer(null))
       }
-      _getSamplingParameters(pp, ip) {
-        const cp = this._gl;
-        let Op = cp.NEAREST,
-          op = cp.NEAREST,
-          Ip = !1;
-        switch (pp) {
+      _getSamplingParameters(TT, UT) {
+        const mT = this._gl;
+        let WT = mT.NEAREST,
+          zT = mT.NEAREST,
+          MT = !1;
+        switch (TT) {
           case 11:
-            Op = cp.LINEAR, op = ip ? cp.LINEAR_MIPMAP_NEAREST : cp.LINEAR;
+            WT = mT.LINEAR, zT = UT ? mT.LINEAR_MIPMAP_NEAREST : mT.LINEAR;
             break;
           case 3:
-            Op = cp.LINEAR, Ip = !0, op = ip ? cp.LINEAR_MIPMAP_LINEAR : cp.LINEAR;
+            WT = mT.LINEAR, MT = !0, zT = UT ? mT.LINEAR_MIPMAP_LINEAR : mT.LINEAR;
             break;
           case 8:
-            Ip = !0, Op = cp.NEAREST, op = ip ? cp.NEAREST_MIPMAP_LINEAR : cp.NEAREST;
+            MT = !0, WT = mT.NEAREST, zT = UT ? mT.NEAREST_MIPMAP_LINEAR : mT.NEAREST;
             break;
           case 4:
-            Op = cp.NEAREST, op = ip ? cp.NEAREST_MIPMAP_NEAREST : cp.NEAREST;
+            WT = mT.NEAREST, zT = UT ? mT.NEAREST_MIPMAP_NEAREST : mT.NEAREST;
             break;
           case 5:
-            Op = cp.NEAREST, op = ip ? cp.LINEAR_MIPMAP_NEAREST : cp.LINEAR;
+            WT = mT.NEAREST, zT = UT ? mT.LINEAR_MIPMAP_NEAREST : mT.LINEAR;
             break;
           case 6:
-            Ip = !0, Op = cp.NEAREST, op = ip ? cp.LINEAR_MIPMAP_LINEAR : cp.LINEAR;
+            MT = !0, WT = mT.NEAREST, zT = UT ? mT.LINEAR_MIPMAP_LINEAR : mT.LINEAR;
             break;
           case 7:
-            Op = cp.NEAREST, op = cp.LINEAR;
+            WT = mT.NEAREST, zT = mT.LINEAR;
             break;
           case 1:
-            Op = cp.NEAREST, op = cp.NEAREST;
+            WT = mT.NEAREST, zT = mT.NEAREST;
             break;
           case 9:
-            Op = cp.LINEAR, op = ip ? cp.NEAREST_MIPMAP_NEAREST : cp.NEAREST;
+            WT = mT.LINEAR, zT = UT ? mT.NEAREST_MIPMAP_NEAREST : mT.NEAREST;
             break;
           case 10:
-            Ip = !0, Op = cp.LINEAR, op = ip ? cp.NEAREST_MIPMAP_LINEAR : cp.NEAREST;
+            MT = !0, WT = mT.LINEAR, zT = UT ? mT.NEAREST_MIPMAP_LINEAR : mT.NEAREST;
             break;
           case 2:
-            Op = cp.LINEAR, op = cp.LINEAR;
+            WT = mT.LINEAR, zT = mT.LINEAR;
             break;
           case 12:
-            Op = cp.LINEAR, op = cp.NEAREST
+            WT = mT.LINEAR, zT = mT.NEAREST
         }
         return {
-          min: op,
-          mag: Op,
-          hasMipMaps: Ip
+          min: zT,
+          mag: WT,
+          hasMipMaps: MT
         }
       }
       _createTexture() {
-        const pp = this._gl.createTexture();
-        if (!pp) throw new Error("Unable to create texture");
-        return pp
+        const TT = this._gl.createTexture();
+        if (!TT) throw new Error("Unable to create texture");
+        return TT
       }
       _createHardwareTexture() {
-        return new yp.b(this._createTexture(), this._gl)
+        return new BT.e(this._createTexture(), this._gl)
       }
-      _createInternalTexture(pp, ip) {
-        let cp, Op, op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Ip = !1,
-          Sp = 0,
-          Lp = 3,
-          Yp = 5,
-          Dp = !1,
-          Ap = 1,
-          Pp = !1,
-          Wp = 0,
-          yp = !1;
-        void 0 !== ip && "object" === typeof ip ? (cp = !!ip.generateMipMaps, Ip = !!ip.createMipMaps, Sp = void 0 === ip.type ? 0 : ip.type, Lp = void 0 === ip.samplingMode ? 3 : ip.samplingMode, Yp = void 0 === ip.format ? 5 : ip.format, Dp = void 0 !== ip.useSRGBBuffer && ip.useSRGBBuffer, Ap = ip.samples ?? 1, Op = ip.label, Pp = !!ip.createMSAATexture, Wp = ip.comparisonFunction || 0, yp = !!ip.isCube) : cp = !!ip, Dp && (Dp = this._caps.supportSRGBBuffers && (this.eU > 1 || this.isWebGPU)), (1 !== Sp || this._caps.textureFloatLinearFiltering) && (2 !== Sp || this._caps.textureHalfFloatLinearFiltering) || (Lp = 1), 1 !== Sp || this._caps.textureFloat || (Sp = 0, xp.e.Warn("Float textures are not supported. Type forced to TEXTURETYPE_UNSIGNED_BYTE"));
-        const wp = (0, tp.e)(Yp),
-          vp = (0, tp.c)(Yp),
-          Hp = this._gl,
-          dp = new Up.b(this, op),
-          ep = pp.width || pp,
-          jp = pp.height || pp,
-          kp = pp.depth || 0,
-          mp = pp.layers || 0,
-          Rp = this._getSamplingParameters(Lp, (cp || Ip) && !wp),
-          qp = 0 !== mp ? Hp.TEXTURE_2D_ARRAY : 0 !== kp ? Hp.TEXTURE_3D : yp ? Hp.TEXTURE_CUBE_MAP : Hp.TEXTURE_2D,
-          Mp = wp ? this._getInternalFormatFromDepthTextureFormat(Yp, !0, vp) : this._getRGBABufferInternalSizedFormat(Sp, Yp, Dp),
-          Cp = wp ? vp ? Hp.DEPTH_STENCIL : Hp.DEPTH_COMPONENT : this._getInternalFormat(Yp),
-          Ep = wp ? this._getWebGLTextureTypeFromDepthTextureFormat(Yp) : this._getWebGLTextureType(Sp);
-        if (this._bindTextureDirectly(qp, dp), 0 !== mp) dp.is2DArray = !0, Hp.texImage3D(qp, 0, Mp, ep, jp, mp, 0, Cp, Ep, null);
-        else if (0 !== kp) dp.is3D = !0, Hp.texImage3D(qp, 0, Mp, ep, jp, kp, 0, Cp, Ep, null);
-        else if (yp) {
-          dp.isCube = !0;
-          for (let pp = 0; pp < 6; pp++) Hp.texImage2D(Hp.TEXTURE_CUBE_MAP_POSITIVE_X + pp, 0, Mp, ep, jp, 0, Cp, Ep, null)
-        } else Hp.texImage2D(qp, 0, Mp, ep, jp, 0, Cp, Ep, null);
-        if (Hp.texParameteri(qp, Hp.TEXTURE_MAG_FILTER, Rp.mag), Hp.texParameteri(qp, Hp.TEXTURE_MIN_FILTER, Rp.min), Hp.texParameteri(qp, Hp.TEXTURE_WRAP_S, Hp.CLAMP_TO_EDGE), Hp.texParameteri(qp, Hp.TEXTURE_WRAP_T, Hp.CLAMP_TO_EDGE), wp && this.eU > 1 && (0 === Wp ? (Hp.texParameteri(qp, Hp.TEXTURE_COMPARE_FUNC, 515), Hp.texParameteri(qp, Hp.TEXTURE_COMPARE_MODE, Hp.NONE)) : (Hp.texParameteri(qp, Hp.TEXTURE_COMPARE_FUNC, Wp), Hp.texParameteri(qp, Hp.TEXTURE_COMPARE_MODE, Hp.COMPARE_REF_TO_TEXTURE))), (cp || Ip) && this._gl.generateMipmap(qp), this._bindTextureDirectly(qp, null), dp._useSRGBBuffer = Dp, dp.baseWidth = ep, dp.baseHeight = jp, dp.width = ep, dp.height = jp, dp.depth = mp || kp, dp.isReady = !0, dp.samples = Ap, dp.generateMipMaps = cp, dp.samplingMode = Lp, dp.type = Sp, dp.format = Yp, dp.label = Op, dp.comparisonFunction = Wp, this._internalTexturesCache.push(dp), Pp) {
-          let pp;
-          if (pp = (0, tp.e)(dp.format) ? this._setupFramebufferDepthAttachments((0, tp.c)(dp.format), 19 !== dp.format, dp.width, dp.height, Ap, dp.format, !0) : this._createRenderBuffer(dp.width, dp.height, Ap, -1, this._getRGBABufferInternalSizedFormat(dp.type, dp.format, dp._useSRGBBuffer), -1), !pp) throw new Error("Unable to create render buffer");
-          dp._autoMSAAManagement = !0;
-          let ip = dp._hardwareTexture;
-          ip || (ip = dp._hardwareTexture = this._createHardwareTexture()), ip.addMSAARenderBuffer(pp)
+      _createInternalTexture(TT, UT) {
+        let mT, WT, zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          MT = !1,
+          gT = 0,
+          HT = 3,
+          kT = 5,
+          jT = !1,
+          lT = 1,
+          LT = !1,
+          pT = 0,
+          BT = !1;
+        void 0 !== UT && "object" === typeof UT ? (mT = !!UT.generateMipMaps, MT = !!UT.createMipMaps, gT = void 0 === UT.type ? 0 : UT.type, HT = void 0 === UT.samplingMode ? 3 : UT.samplingMode, kT = void 0 === UT.format ? 5 : UT.format, jT = void 0 !== UT.useSRGBBuffer && UT.useSRGBBuffer, lT = UT.samples ?? 1, WT = UT.label, LT = !!UT.createMSAATexture, pT = UT.comparisonFunction || 0, BT = !!UT.isCube) : mT = !!UT, jT && (jT = this._caps.supportSRGBBuffers && (this.TZ > 1 || this.isWebGPU)), (1 !== gT || this._caps.textureFloatLinearFiltering) && (2 !== gT || this._caps.textureHalfFloatLinearFiltering) || (HT = 1), 1 !== gT || this._caps.textureFloat || (gT = 0, nT.b.Warn("Float textures are not supported. Type forced to TEXTURETYPE_UNSIGNED_BYTE"));
+        const cT = (0, fT.g)(kT),
+          vT = (0, fT.c)(kT),
+          qT = this._gl,
+          iT = new ZT.b(this, zT),
+          bT = TT.width || TT,
+          OT = TT.height || TT,
+          eT = TT.depth || 0,
+          YT = TT.layers || 0,
+          JT = this._getSamplingParameters(HT, (mT || MT) && !cT),
+          xT = 0 !== YT ? qT.TEXTURE_2D_ARRAY : 0 !== eT ? qT.TEXTURE_3D : BT ? qT.TEXTURE_CUBE_MAP : qT.TEXTURE_2D,
+          dT = cT ? this._getInternalFormatFromDepthTextureFormat(kT, !0, vT) : this._getRGBABufferInternalSizedFormat(gT, kT, jT),
+          wT = cT ? vT ? qT.DEPTH_STENCIL : qT.DEPTH_COMPONENT : this._getInternalFormat(kT),
+          tT = cT ? this._getWebGLTextureTypeFromDepthTextureFormat(kT) : this._getWebGLTextureType(gT);
+        if (this._bindTextureDirectly(xT, iT), 0 !== YT) iT.is2DArray = !0, qT.texImage3D(xT, 0, dT, bT, OT, YT, 0, wT, tT, null);
+        else if (0 !== eT) iT.is3D = !0, qT.texImage3D(xT, 0, dT, bT, OT, eT, 0, wT, tT, null);
+        else if (BT) {
+          iT.isCube = !0;
+          for (let TT = 0; TT < 6; TT++) qT.texImage2D(qT.TEXTURE_CUBE_MAP_POSITIVE_X + TT, 0, dT, bT, OT, 0, wT, tT, null)
+        } else qT.texImage2D(xT, 0, dT, bT, OT, 0, wT, tT, null);
+        if (qT.texParameteri(xT, qT.TEXTURE_MAG_FILTER, JT.mag), qT.texParameteri(xT, qT.TEXTURE_MIN_FILTER, JT.min), qT.texParameteri(xT, qT.TEXTURE_WRAP_S, qT.CLAMP_TO_EDGE), qT.texParameteri(xT, qT.TEXTURE_WRAP_T, qT.CLAMP_TO_EDGE), cT && this.TZ > 1 && (0 === pT ? (qT.texParameteri(xT, qT.TEXTURE_COMPARE_FUNC, 515), qT.texParameteri(xT, qT.TEXTURE_COMPARE_MODE, qT.NONE)) : (qT.texParameteri(xT, qT.TEXTURE_COMPARE_FUNC, pT), qT.texParameteri(xT, qT.TEXTURE_COMPARE_MODE, qT.COMPARE_REF_TO_TEXTURE))), (mT || MT) && this._gl.generateMipmap(xT), this._bindTextureDirectly(xT, null), iT._useSRGBBuffer = jT, iT.baseWidth = bT, iT.baseHeight = OT, iT.width = bT, iT.height = OT, iT.depth = YT || eT, iT.isReady = !0, iT.samples = lT, iT.generateMipMaps = mT, iT.samplingMode = HT, iT.type = gT, iT.format = kT, iT.label = WT, iT.comparisonFunction = pT, this._internalTexturesCache.push(iT), LT) {
+          let TT;
+          if (TT = (0, fT.g)(iT.format) ? this._setupFramebufferDepthAttachments((0, fT.c)(iT.format), 19 !== iT.format, iT.width, iT.height, lT, iT.format, !0) : this._createRenderBuffer(iT.width, iT.height, lT, -1, this._getRGBABufferInternalSizedFormat(iT.type, iT.format, iT._useSRGBBuffer), -1), !TT) throw new Error("Unable to create render buffer");
+          iT._autoMSAAManagement = !0;
+          let UT = iT._hardwareTexture;
+          UT || (UT = iT._hardwareTexture = this._createHardwareTexture()), UT.addMSAARenderBuffer(TT)
         }
-        return dp
+        return iT
       }
-      _getUseSRGBBuffer(pp, ip) {
-        return pp && this._caps.supportSRGBBuffers && (this.eU > 1 || ip)
+      _getUseSRGBBuffer(TT, UT) {
+        return TT && this._caps.supportSRGBBuffers && (this.TZ > 1 || UT)
       }
-      createTexture(pp, ip, cp, Op) {
-        var op = this;
-        let Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          Sp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-          Lp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-          Yp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-          Dp = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-          Ap = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null,
-          Pp = arguments.length > 11 ? arguments[11] : void 0,
-          Wp = arguments.length > 12 ? arguments[12] : void 0,
-          yp = arguments.length > 13 ? arguments[13] : void 0,
-          wp = arguments.length > 14 ? arguments[14] : void 0;
-        return this._createTextureBase(pp, ip, cp, Op, Ip, Sp, xp, (function() {
-          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-          return op._prepareWebGLTexture(...ip, Dp)
-        }), ((pp, ip, cp, op, Ip, Sp) => {
-          const xp = this._gl,
-            Lp = cp.width === pp && cp.height === ip;
-          Ip._creationFlags = yp ?? 0;
-          const Yp = this._getTexImageParametersForCreateTexture(Ip.format, Ip._useSRGBBuffer);
-          if (Lp) return xp.texImage2D(xp.TEXTURE_2D, 0, Yp.internalFormat, Yp.format, Yp.type, cp), !1;
-          const Dp = this._caps.maxTextureSize;
-          if (cp.width > Dp || cp.height > Dp || !this._supportsHardwareTextureRescaling) return this._prepareWorkingCanvas(), !(!this._workingCanvas || !this._workingContext) && (this._workingCanvas.width = pp, this._workingCanvas.height = ip, this._workingContext.drawImage(cp, 0, 0, cp.width, cp.height, 0, 0, pp, ip), xp.texImage2D(xp.TEXTURE_2D, 0, Yp.internalFormat, Yp.format, Yp.type, this._workingCanvas), Ip.width = pp, Ip.height = ip, !1);
+      createTexture(TT, UT, mT, WT) {
+        var zT = this;
+        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          gT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          nT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+          HT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+          kT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+          jT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+          lT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null,
+          LT = arguments.length > 11 ? arguments[11] : void 0,
+          pT = arguments.length > 12 ? arguments[12] : void 0,
+          BT = arguments.length > 13 ? arguments[13] : void 0,
+          cT = arguments.length > 14 ? arguments[14] : void 0;
+        return this._createTextureBase(TT, UT, mT, WT, MT, gT, nT, (function() {
+          for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+          return zT._prepareWebGLTexture(...UT, jT)
+        }), ((TT, UT, mT, zT, MT, gT) => {
+          const nT = this._gl,
+            HT = mT.width === TT && mT.height === UT;
+          MT._creationFlags = BT ?? 0;
+          const kT = this._getTexImageParametersForCreateTexture(MT.format, MT._useSRGBBuffer);
+          if (HT) return nT.texImage2D(nT.TEXTURE_2D, 0, kT.internalFormat, kT.format, kT.type, mT), !1;
+          const jT = this._caps.maxTextureSize;
+          if (mT.width > jT || mT.height > jT || !this._supportsHardwareTextureRescaling) return this._prepareWorkingCanvas(), !(!this._workingCanvas || !this._workingContext) && (this._workingCanvas.width = TT, this._workingCanvas.height = UT, this._workingContext.drawImage(mT, 0, 0, mT.width, mT.height, 0, 0, TT, UT), nT.texImage2D(nT.TEXTURE_2D, 0, kT.internalFormat, kT.format, kT.type, this._workingCanvas), MT.width = TT, MT.height = UT, !1);
           {
-            const pp = new Up.b(this, 2);
-            this._bindTextureDirectly(xp.TEXTURE_2D, pp, !0), xp.texImage2D(xp.TEXTURE_2D, 0, Yp.internalFormat, Yp.format, Yp.type, cp), this._rescaleTexture(pp, Ip, Op, Yp.format, (() => {
-              this._releaseTexture(pp), this._bindTextureDirectly(xp.TEXTURE_2D, Ip, !0), Sp()
+            const TT = new ZT.b(this, 2);
+            this._bindTextureDirectly(nT.TEXTURE_2D, TT, !0), nT.texImage2D(nT.TEXTURE_2D, 0, kT.internalFormat, kT.format, kT.type, mT), this._rescaleTexture(TT, MT, WT, kT.format, (() => {
+              this._releaseTexture(TT), this._bindTextureDirectly(nT.TEXTURE_2D, MT, !0), gT()
             }))
           }
           return !0
-        }), Lp, Yp, Dp, Ap, Pp, Wp, wp)
+        }), HT, kT, jT, lT, LT, pT, cT)
       }
-      _getTexImageParametersForCreateTexture(pp, ip) {
-        let cp, Op;
-        return 1 === this.eU ? (cp = this._getInternalFormat(pp, ip), Op = cp) : (cp = this._getInternalFormat(pp, !1), Op = this._getRGBABufferInternalSizedFormat(0, pp, ip)), {
-          internalFormat: Op,
-          format: cp,
+      _getTexImageParametersForCreateTexture(TT, UT) {
+        let mT, WT;
+        return 1 === this.TZ ? (mT = this._getInternalFormat(TT, UT), WT = mT) : (mT = this._getInternalFormat(TT, !1), WT = this._getRGBABufferInternalSizedFormat(0, TT, UT)), {
+          internalFormat: WT,
+          format: mT,
           type: this._gl.UNSIGNED_BYTE
         }
       }
-      _rescaleTexture(pp, ip, cp, Op, op) {}
-      _unpackFlipY(pp) {
-        this._unpackFlipYCached !== pp && (this._gl.pixelStorei(this._gl.UNPACK_FLIP_Y_WEBGL, pp ? 1 : 0), this.enableUnpackFlipYCached && (this._unpackFlipYCached = pp))
+      _rescaleTexture(TT, UT, mT, WT, zT) {}
+      _unpackFlipY(TT) {
+        this._unpackFlipYCached !== TT && (this._gl.pixelStorei(this._gl.UNPACK_FLIP_Y_WEBGL, TT ? 1 : 0), this.enableUnpackFlipYCached && (this._unpackFlipYCached = TT))
       }
       _getUnpackAlignement() {
         return this._gl.getParameter(this._gl.UNPACK_ALIGNMENT)
       }
-      _getTextureTarget(pp) {
-        return pp.isCube ? this._gl.TEXTURE_CUBE_MAP : pp.is3D ? this._gl.TEXTURE_3D : pp.is2DArray || pp.isMultiview ? this._gl.TEXTURE_2D_ARRAY : this._gl.TEXTURE_2D
+      _getTextureTarget(TT) {
+        return TT.isCube ? this._gl.TEXTURE_CUBE_MAP : TT.is3D ? this._gl.TEXTURE_3D : TT.is2DArray || TT.isMultiview ? this._gl.TEXTURE_2D_ARRAY : this._gl.TEXTURE_2D
       }
-      updateTextureSamplingMode(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Op = this._getTextureTarget(ip),
-          op = this._getSamplingParameters(pp, ip.useMipMaps || cp);
-        this._setTextureParameterInteger(Op, this._gl.TEXTURE_MAG_FILTER, op.mag, ip), this._setTextureParameterInteger(Op, this._gl.TEXTURE_MIN_FILTER, op.min), cp && op.hasMipMaps && (ip.generateMipMaps = !0, this._gl.generateMipmap(Op)), this._bindTextureDirectly(Op, null), ip.samplingMode = pp
+      updateTextureSamplingMode(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const WT = this._getTextureTarget(UT),
+          zT = this._getSamplingParameters(TT, UT.useMipMaps || mT);
+        this._setTextureParameterInteger(WT, this._gl.TEXTURE_MAG_FILTER, zT.mag, UT), this._setTextureParameterInteger(WT, this._gl.TEXTURE_MIN_FILTER, zT.min), mT && zT.hasMipMaps && (UT.generateMipMaps = !0, this._gl.generateMipmap(WT)), this._bindTextureDirectly(WT, null), UT.samplingMode = TT
       }
-      updateTextureDimensions(pp, ip, cp) {}
-      updateTextureWrappingMode(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const op = this._getTextureTarget(pp);
-        null !== ip && (this._setTextureParameterInteger(op, this._gl.TEXTURE_WRAP_S, this._getTextureWrapMode(ip), pp), pp._cachedWrapU = ip), null !== cp && (this._setTextureParameterInteger(op, this._gl.TEXTURE_WRAP_T, this._getTextureWrapMode(cp), pp), pp._cachedWrapV = cp), (pp.is2DArray || pp.is3D) && null !== Op && (this._setTextureParameterInteger(op, this._gl.TEXTURE_WRAP_R, this._getTextureWrapMode(Op), pp), pp._cachedWrapR = Op), this._bindTextureDirectly(op, null)
+      updateTextureDimensions(TT, UT, mT) {}
+      updateTextureWrappingMode(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const zT = this._getTextureTarget(TT);
+        null !== UT && (this._setTextureParameterInteger(zT, this._gl.TEXTURE_WRAP_S, this._getTextureWrapMode(UT), TT), TT._cachedWrapU = UT), null !== mT && (this._setTextureParameterInteger(zT, this._gl.TEXTURE_WRAP_T, this._getTextureWrapMode(mT), TT), TT._cachedWrapV = mT), (TT.is2DArray || TT.is3D) && null !== WT && (this._setTextureParameterInteger(zT, this._gl.TEXTURE_WRAP_R, this._getTextureWrapMode(WT), TT), TT._cachedWrapR = WT), this._bindTextureDirectly(zT, null)
       }
-      _uploadCompressedDataToTextureDirectly(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const xp = this._gl;
-        let Lp = xp.TEXTURE_2D;
-        if (pp.isCube && (Lp = xp.TEXTURE_CUBE_MAP_POSITIVE_X + Ip), pp._useSRGBBuffer) switch (ip) {
+      _uploadCompressedDataToTextureDirectly(TT, UT, mT, WT, zT) {
+        let MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        const nT = this._gl;
+        let HT = nT.TEXTURE_2D;
+        if (TT.isCube && (HT = nT.TEXTURE_CUBE_MAP_POSITIVE_X + MT), TT._useSRGBBuffer) switch (UT) {
           case 37492:
           case 36196:
-            this._caps.etc2 ? ip = xp.COMPRESSED_SRGB8_ETC2 : pp._useSRGBBuffer = !1;
+            this._caps.etc2 ? UT = nT.COMPRESSED_SRGB8_ETC2 : TT._useSRGBBuffer = !1;
             break;
           case 37496:
-            this._caps.etc2 ? ip = xp.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC : pp._useSRGBBuffer = !1;
+            this._caps.etc2 ? UT = nT.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC : TT._useSRGBBuffer = !1;
             break;
           case 36492:
-            ip = xp.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT;
+            UT = nT.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT;
             break;
           case 37808:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR;
             break;
           case 37809:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR;
             break;
           case 37810:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR;
             break;
           case 37811:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR;
             break;
           case 37812:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR;
             break;
           case 37813:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR;
             break;
           case 37814:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR;
             break;
           case 37815:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR;
             break;
           case 37816:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR;
             break;
           case 37817:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR;
             break;
           case 37818:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR;
             break;
           case 37819:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR;
             break;
           case 37820:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR;
             break;
           case 37821:
-            ip = xp.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR;
+            UT = nT.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR;
             break;
           case 33776:
-            this._caps.s3tc_srgb ? ip = xp.COMPRESSED_SRGB_S3TC_DXT1_EXT : pp._useSRGBBuffer = !1;
+            this._caps.s3tc_srgb ? UT = nT.COMPRESSED_SRGB_S3TC_DXT1_EXT : TT._useSRGBBuffer = !1;
             break;
           case 33777:
-            this._caps.s3tc_srgb ? ip = xp.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT : pp._useSRGBBuffer = !1;
+            this._caps.s3tc_srgb ? UT = nT.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT : TT._useSRGBBuffer = !1;
             break;
           case 33779:
-            this._caps.s3tc_srgb ? ip = xp.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT : pp._useSRGBBuffer = !1;
+            this._caps.s3tc_srgb ? UT = nT.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT : TT._useSRGBBuffer = !1;
             break;
           default:
-            pp._useSRGBBuffer = !1
+            TT._useSRGBBuffer = !1
         }
-        if (pp.generateMipMaps) {
-          const Ip = pp._hardwareTexture;
-          Ip.memoryAllocated || (xp.texStorage2D(pp.isCube ? xp.TEXTURE_CUBE_MAP : xp.TEXTURE_2D, Math.floor(Math.log2(Math.max(cp, Op))) + 1, ip, pp.width, pp.height), Ip.memoryAllocated = !0), this._gl.compressedTexSubImage2D(Lp, Sp, 0, 0, cp, Op, ip, op)
-        } else this._gl.compressedTexImage2D(Lp, Sp, ip, cp, Op, 0, op)
+        if (TT.generateMipMaps) {
+          const MT = TT._hardwareTexture;
+          MT.memoryAllocated || (nT.texStorage2D(TT.isCube ? nT.TEXTURE_CUBE_MAP : nT.TEXTURE_2D, Math.floor(Math.log2(Math.max(mT, WT))) + 1, UT, TT.width, TT.height), MT.memoryAllocated = !0), this._gl.compressedTexSubImage2D(HT, gT, 0, 0, mT, WT, UT, zT)
+        } else this._gl.compressedTexImage2D(HT, gT, UT, mT, WT, 0, zT)
       }
-      _uploadDataToTextureDirectly(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          op = arguments.length > 4 ? arguments[4] : void 0,
-          Ip = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const Sp = this._gl,
-          xp = this._getWebGLTextureType(pp.type),
-          Lp = this._getInternalFormat(pp.format),
-          Yp = void 0 === op ? this._getRGBABufferInternalSizedFormat(pp.type, pp.format, pp._useSRGBBuffer) : this._getInternalFormat(op, pp._useSRGBBuffer);
-        this._unpackFlipY(pp.invertY);
-        let Dp = Sp.TEXTURE_2D;
-        pp.isCube && (Dp = Sp.TEXTURE_CUBE_MAP_POSITIVE_X + cp);
-        const Ap = Math.round(Math.log(pp.width) * Math.LOG2E),
-          Pp = Math.round(Math.log(pp.height) * Math.LOG2E),
-          Wp = Ip ? pp.width : Math.pow(2, Math.max(Ap - Op, 0)),
-          yp = Ip ? pp.height : Math.pow(2, Math.max(Pp - Op, 0));
-        Sp.texImage2D(Dp, Op, Yp, Wp, yp, 0, Lp, xp, ip)
+      _uploadDataToTextureDirectly(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          zT = arguments.length > 4 ? arguments[4] : void 0,
+          MT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const gT = this._gl,
+          nT = this._getWebGLTextureType(TT.type),
+          HT = this._getInternalFormat(TT.format),
+          kT = void 0 === zT ? this._getRGBABufferInternalSizedFormat(TT.type, TT.format, TT._useSRGBBuffer) : this._getInternalFormat(zT, TT._useSRGBBuffer);
+        this._unpackFlipY(TT.invertY);
+        let jT = gT.TEXTURE_2D;
+        TT.isCube && (jT = gT.TEXTURE_CUBE_MAP_POSITIVE_X + mT);
+        const lT = Math.round(Math.log(TT.width) * Math.LOG2E),
+          LT = Math.round(Math.log(TT.height) * Math.LOG2E),
+          pT = MT ? TT.width : Math.pow(2, Math.max(lT - WT, 0)),
+          BT = MT ? TT.height : Math.pow(2, Math.max(LT - WT, 0));
+        gT.texImage2D(jT, WT, kT, pT, BT, 0, HT, nT, UT)
       }
-      updateTextureData(pp, ip, cp, Op, op, Ip) {
-        let Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
-          xp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          Lp = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const Yp = this._gl,
-          Dp = this._getWebGLTextureType(pp.type),
-          Ap = this._getInternalFormat(pp.format);
-        this._unpackFlipY(pp.invertY);
-        let Pp = Yp.TEXTURE_2D,
-          Wp = Yp.TEXTURE_2D;
-        pp.isCube && (Wp = Yp.TEXTURE_CUBE_MAP_POSITIVE_X + Sp, Pp = Yp.TEXTURE_CUBE_MAP), this._bindTextureDirectly(Pp, pp, !0), Yp.texSubImage2D(Wp, xp, cp, Op, op, Ip, Ap, Dp, ip), Lp && this._gl.generateMipmap(Wp), this._bindTextureDirectly(Pp, null)
+      updateTextureData(TT, UT, mT, WT, zT, MT) {
+        let gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+          nT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          HT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const kT = this._gl,
+          jT = this._getWebGLTextureType(TT.type),
+          lT = this._getInternalFormat(TT.format);
+        this._unpackFlipY(TT.invertY);
+        let LT = kT.TEXTURE_2D,
+          pT = kT.TEXTURE_2D;
+        TT.isCube && (pT = kT.TEXTURE_CUBE_MAP_POSITIVE_X + gT, LT = kT.TEXTURE_CUBE_MAP), this._bindTextureDirectly(LT, TT, !0), kT.texSubImage2D(pT, nT, mT, WT, zT, MT, lT, jT, UT), HT && this._gl.generateMipmap(pT), this._bindTextureDirectly(LT, null)
       }
-      _uploadArrayBufferViewToTexture(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const op = this._gl,
-          Ip = pp.isCube ? op.TEXTURE_CUBE_MAP : op.TEXTURE_2D;
-        this._bindTextureDirectly(Ip, pp, !0), this._uploadDataToTextureDirectly(pp, ip, cp, Op), this._bindTextureDirectly(Ip, null, !0)
+      _uploadArrayBufferViewToTexture(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const zT = this._gl,
+          MT = TT.isCube ? zT.TEXTURE_CUBE_MAP : zT.TEXTURE_2D;
+        this._bindTextureDirectly(MT, TT, !0), this._uploadDataToTextureDirectly(TT, UT, mT, WT), this._bindTextureDirectly(MT, null, !0)
       }
-      _prepareWebGLTextureContinuation(pp, ip, cp, Op, op) {
-        const Ip = this._gl;
-        if (!Ip) return;
-        const Sp = this._getSamplingParameters(op, !cp);
-        Ip.texParameteri(Ip.TEXTURE_2D, Ip.TEXTURE_MAG_FILTER, Sp.mag), Ip.texParameteri(Ip.TEXTURE_2D, Ip.TEXTURE_MIN_FILTER, Sp.min), cp || Op || Ip.generateMipmap(Ip.TEXTURE_2D), this._bindTextureDirectly(Ip.TEXTURE_2D, null), ip && ip.removePendingData(pp), pp.onLoadedObservable.notifyObservers(pp), pp.onLoadedObservable.clear()
+      _prepareWebGLTextureContinuation(TT, UT, mT, WT, zT) {
+        const MT = this._gl;
+        if (!MT) return;
+        const gT = this._getSamplingParameters(zT, !mT);
+        MT.texParameteri(MT.TEXTURE_2D, MT.TEXTURE_MAG_FILTER, gT.mag), MT.texParameteri(MT.TEXTURE_2D, MT.TEXTURE_MIN_FILTER, gT.min), mT || WT || MT.generateMipmap(MT.TEXTURE_2D), this._bindTextureDirectly(MT.TEXTURE_2D, null), UT && UT.removePendingData(TT), TT.onLoadedObservable.notifyObservers(TT), TT.onLoadedObservable.clear()
       }
-      _prepareWebGLTexture(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-        const Dp = this.getCaps().maxTextureSize,
-          Ap = Math.min(Dp, this.needPOTTextures ? (0, Wp.e)(Op.width, Dp) : Op.width),
-          Pp = Math.min(Dp, this.needPOTTextures ? (0, Wp.e)(Op.height, Dp) : Op.height),
-          yp = this._gl;
-        yp && (pp._hardwareTexture ? (this._bindTextureDirectly(yp.TEXTURE_2D, pp, !0), this._unpackFlipY(void 0 === op || !!op), pp.baseWidth = Op.width, pp.baseHeight = Op.height, pp.width = Ap, pp.height = Pp, pp.isReady = !0, pp.type = -1 !== pp.type ? pp.type : 0, pp.format = -1 !== pp.format ? pp.format : Yp ?? (".jpg" !== ip || pp._useSRGBBuffer ? 5 : 4), xp(Ap, Pp, Op, ip, pp, (() => {
-          this._prepareWebGLTextureContinuation(pp, cp, Ip, Sp, Lp)
-        })) || this._prepareWebGLTextureContinuation(pp, cp, Ip, Sp, Lp)) : cp && cp.removePendingData(pp))
+      _prepareWebGLTexture(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+        const jT = this.getCaps().maxTextureSize,
+          lT = Math.min(jT, this.needPOTTextures ? (0, pT.f)(WT.width, jT) : WT.width),
+          LT = Math.min(jT, this.needPOTTextures ? (0, pT.f)(WT.height, jT) : WT.height),
+          BT = this._gl;
+        BT && (TT._hardwareTexture ? (this._bindTextureDirectly(BT.TEXTURE_2D, TT, !0), this._unpackFlipY(void 0 === zT || !!zT), TT.baseWidth = WT.width, TT.baseHeight = WT.height, TT.width = lT, TT.height = LT, TT.isReady = !0, TT.type = -1 !== TT.type ? TT.type : 0, TT.format = -1 !== TT.format ? TT.format : kT ?? (".jpg" !== UT || TT._useSRGBBuffer ? 5 : 4), nT(lT, LT, WT, UT, TT, (() => {
+          this._prepareWebGLTextureContinuation(TT, mT, MT, gT, HT)
+        })) || this._prepareWebGLTextureContinuation(TT, mT, MT, gT, HT)) : mT && mT.removePendingData(TT))
       }
-      _getInternalFormatFromDepthTextureFormat(pp, ip, cp) {
-        const Op = this._gl;
-        if (!ip) return Op.STENCIL_INDEX8;
-        let op = cp ? Op.DEPTH_STENCIL : Op.DEPTH_COMPONENT;
-        return this.eU > 1 ? 15 === pp ? op = Op.DEPTH_COMPONENT16 : 16 === pp ? op = Op.DEPTH_COMPONENT24 : 17 === pp || 13 === pp ? op = cp ? Op.DEPTH24_STENCIL8 : Op.DEPTH_COMPONENT24 : 14 === pp ? op = Op.DEPTH_COMPONENT32F : 18 === pp && (op = cp ? Op.DEPTH32F_STENCIL8 : Op.DEPTH_COMPONENT32F) : op = Op.DEPTH_COMPONENT16, op
+      _getInternalFormatFromDepthTextureFormat(TT, UT, mT) {
+        const WT = this._gl;
+        if (!UT) return WT.STENCIL_INDEX8;
+        let zT = mT ? WT.DEPTH_STENCIL : WT.DEPTH_COMPONENT;
+        return this.TZ > 1 ? 15 === TT ? zT = WT.DEPTH_COMPONENT16 : 16 === TT ? zT = WT.DEPTH_COMPONENT24 : 17 === TT || 13 === TT ? zT = mT ? WT.DEPTH24_STENCIL8 : WT.DEPTH_COMPONENT24 : 14 === TT ? zT = WT.DEPTH_COMPONENT32F : 18 === TT && (zT = mT ? WT.DEPTH32F_STENCIL8 : WT.DEPTH_COMPONENT32F) : zT = WT.DEPTH_COMPONENT16, zT
       }
-      _getWebGLTextureTypeFromDepthTextureFormat(pp) {
-        const ip = this._gl;
-        let cp = ip.UNSIGNED_INT;
-        return 15 === pp ? cp = ip.UNSIGNED_SHORT : 17 === pp || 13 === pp ? cp = ip.UNSIGNED_INT_24_8 : 14 === pp ? cp = ip.FLOAT : 18 === pp ? cp = ip.FLOAT_32_UNSIGNED_INT_24_8_REV : 19 === pp && (cp = ip.UNSIGNED_BYTE), cp
+      _getWebGLTextureTypeFromDepthTextureFormat(TT) {
+        const UT = this._gl;
+        let mT = UT.UNSIGNED_INT;
+        return 15 === TT ? mT = UT.UNSIGNED_SHORT : 17 === TT || 13 === TT ? mT = UT.UNSIGNED_INT_24_8 : 14 === TT ? mT = UT.FLOAT : 18 === TT ? mT = UT.FLOAT_32_UNSIGNED_INT_24_8_REV : 19 === TT && (mT = UT.UNSIGNED_BYTE), mT
       }
-      _setupFramebufferDepthAttachments(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          Ip = arguments.length > 5 ? arguments[5] : void 0,
-          Sp = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const xp = this._gl;
-        Ip = Ip ?? (pp ? 13 : 14);
-        const Lp = this._getInternalFormatFromDepthTextureFormat(Ip, ip, pp);
-        return pp && ip ? this._createRenderBuffer(cp, Op, op, xp.DEPTH_STENCIL, Lp, Sp ? -1 : xp.DEPTH_STENCIL_ATTACHMENT) : ip ? this._createRenderBuffer(cp, Op, op, Lp, Lp, Sp ? -1 : xp.DEPTH_ATTACHMENT) : pp ? this._createRenderBuffer(cp, Op, op, Lp, Lp, Sp ? -1 : xp.STENCIL_ATTACHMENT) : null
+      _setupFramebufferDepthAttachments(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+          MT = arguments.length > 5 ? arguments[5] : void 0,
+          gT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const nT = this._gl;
+        MT = MT ?? (TT ? 13 : 14);
+        const HT = this._getInternalFormatFromDepthTextureFormat(MT, UT, TT);
+        return TT && UT ? this._createRenderBuffer(mT, WT, zT, nT.DEPTH_STENCIL, HT, gT ? -1 : nT.DEPTH_STENCIL_ATTACHMENT) : UT ? this._createRenderBuffer(mT, WT, zT, HT, HT, gT ? -1 : nT.DEPTH_ATTACHMENT) : TT ? this._createRenderBuffer(mT, WT, zT, HT, HT, gT ? -1 : nT.STENCIL_ATTACHMENT) : null
       }
-      _createRenderBuffer(pp, ip, cp, Op, op, Ip) {
-        let Sp = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-        const xp = this._gl.createRenderbuffer();
-        return this._updateRenderBuffer(xp, pp, ip, cp, Op, op, Ip, Sp)
+      _createRenderBuffer(TT, UT, mT, WT, zT, MT) {
+        let gT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+        const nT = this._gl.createRenderbuffer();
+        return this._updateRenderBuffer(nT, TT, UT, mT, WT, zT, MT, gT)
       }
-      _updateRenderBuffer(pp, ip, cp, Op, op, Ip, Sp) {
-        let xp = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const Lp = this._gl;
-        return Lp.bindRenderbuffer(Lp.RENDERBUFFER, pp), Op > 1 && Lp.renderbufferStorageMultisample ? Lp.renderbufferStorageMultisample(Lp.RENDERBUFFER, Op, Ip, ip, cp) : Lp.renderbufferStorage(Lp.RENDERBUFFER, op, ip, cp), -1 !== Sp && Lp.framebufferRenderbuffer(Lp.FRAMEBUFFER, Sp, Lp.RENDERBUFFER, pp), xp && Lp.bindRenderbuffer(Lp.RENDERBUFFER, null), pp
+      _updateRenderBuffer(TT, UT, mT, WT, zT, MT, gT) {
+        let nT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
+        const HT = this._gl;
+        return HT.bindRenderbuffer(HT.RENDERBUFFER, TT), WT > 1 && HT.renderbufferStorageMultisample ? HT.renderbufferStorageMultisample(HT.RENDERBUFFER, WT, MT, UT, mT) : HT.renderbufferStorage(HT.RENDERBUFFER, zT, UT, mT), -1 !== gT && HT.framebufferRenderbuffer(HT.FRAMEBUFFER, gT, HT.RENDERBUFFER, TT), nT && HT.bindRenderbuffer(HT.RENDERBUFFER, null), TT
       }
-      _releaseTexture(pp) {
-        this._deleteTexture(pp._hardwareTexture), this.unbindAllTextures();
-        const ip = this._internalTexturesCache.indexOf(pp); - 1 !== ip && this._internalTexturesCache.splice(ip, 1), pp._lodTextureHigh && pp._lodTextureHigh.dispose(), pp._lodTextureMid && pp._lodTextureMid.dispose(), pp._lodTextureLow && pp._lodTextureLow.dispose(), pp._irradianceTexture && pp._irradianceTexture.dispose()
+      _releaseTexture(TT) {
+        this._deleteTexture(TT._hardwareTexture), this.unbindAllTextures();
+        const UT = this._internalTexturesCache.indexOf(TT); - 1 !== UT && this._internalTexturesCache.splice(UT, 1), TT._lodTextureHigh && TT._lodTextureHigh.dispose(), TT._lodTextureMid && TT._lodTextureMid.dispose(), TT._lodTextureLow && TT._lodTextureLow.dispose(), TT._irradianceTexture && TT._irradianceTexture.dispose()
       }
-      _deleteTexture(pp) {
-        pp?.release()
+      _deleteTexture(TT) {
+        TT?.release()
       }
-      _setProgram(pp) {
-        this._currentProgram !== pp && ((0, op.s)(pp, this._gl), this._currentProgram = pp)
+      _setProgram(TT) {
+        this._currentProgram !== TT && ((0, zT.o)(TT, this._gl), this._currentProgram = TT)
       }
-      bindSamplers(pp) {
-        const ip = pp.getPipelineContext();
-        this._setProgram(ip.program);
-        const cp = pp.getSamplers();
-        for (let Op = 0; Op < cp.length; Op++) {
-          const ip = pp.getUniform(cp[Op]);
-          ip && (this._boundUniforms[Op] = ip)
+      bindSamplers(TT) {
+        const UT = TT.getPipelineContext();
+        this._setProgram(UT.program);
+        const mT = TT.getSamplers();
+        for (let WT = 0; WT < mT.length; WT++) {
+          const UT = TT.getUniform(mT[WT]);
+          UT && (this._boundUniforms[WT] = UT)
         }
         this._currentEffect = null
       }
       _activateCurrentTexture() {
         this._currentTextureChannel !== this._activeChannel && (this._gl.activeTexture(this._gl.TEXTURE0 + this._activeChannel), this._currentTextureChannel = this._activeChannel)
       }
-      _bindTextureDirectly(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          op = !1;
-        const Ip = ip && ip._associatedChannel > -1;
-        cp && Ip && (this._activeChannel = ip._associatedChannel);
-        if (this._boundTexturesCache[this._activeChannel] !== ip || Op) {
-          if (this._activateCurrentTexture(), ip && ip.isMultiview) throw xp.e.Error(["_bindTextureDirectly called with a multiview texture!", pp, ip]), "_bindTextureDirectly called with a multiview texture!";
-          this._gl.bindTexture(pp, ip?._hardwareTexture?.underlyingResource ?? null), this._boundTexturesCache[this._activeChannel] = ip, ip && (ip._associatedChannel = this._activeChannel)
-        } else cp && (op = !0, this._activateCurrentTexture());
-        return Ip && !cp && this._bindSamplerUniformToChannel(ip._associatedChannel, this._activeChannel), op
+      _bindTextureDirectly(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          zT = !1;
+        const MT = UT && UT._associatedChannel > -1;
+        mT && MT && (this._activeChannel = UT._associatedChannel);
+        if (this._boundTexturesCache[this._activeChannel] !== UT || WT) {
+          if (this._activateCurrentTexture(), UT && UT.isMultiview) throw nT.b.Error(["_bindTextureDirectly called with a multiview texture!", TT, UT]), "_bindTextureDirectly called with a multiview texture!";
+          this._gl.bindTexture(TT, UT?._hardwareTexture?.underlyingResource ?? null), this._boundTexturesCache[this._activeChannel] = UT, UT && (UT._associatedChannel = this._activeChannel)
+        } else mT && (zT = !0, this._activateCurrentTexture());
+        return MT && !mT && this._bindSamplerUniformToChannel(UT._associatedChannel, this._activeChannel), zT
       }
-      _bindTexture(pp, ip, cp) {
-        if (void 0 === pp) return;
-        ip && (ip._associatedChannel = pp), this._activeChannel = pp;
-        const Op = ip ? this._getTextureTarget(ip) : this._gl.TEXTURE_2D;
-        this._bindTextureDirectly(Op, ip)
+      _bindTexture(TT, UT, mT) {
+        if (void 0 === TT) return;
+        UT && (UT._associatedChannel = TT), this._activeChannel = TT;
+        const WT = UT ? this._getTextureTarget(UT) : this._gl.TEXTURE_2D;
+        this._bindTextureDirectly(WT, UT)
       }
       unbindAllTextures() {
-        for (let pp = 0; pp < this._maxSimultaneousTextures; pp++) this._activeChannel = pp, this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), this.eU > 1 && (this._bindTextureDirectly(this._gl.TEXTURE_3D, null), this._bindTextureDirectly(this._gl.TEXTURE_2D_ARRAY, null))
+        for (let TT = 0; TT < this._maxSimultaneousTextures; TT++) this._activeChannel = TT, this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), this.TZ > 1 && (this._bindTextureDirectly(this._gl.TEXTURE_3D, null), this._bindTextureDirectly(this._gl.TEXTURE_2D_ARRAY, null))
       }
-      setTexture(pp, ip, cp, Op) {
-        void 0 !== pp && (ip && (this._boundUniforms[pp] = ip), this._setTexture(pp, cp))
+      setTexture(TT, UT, mT, WT) {
+        void 0 !== TT && (UT && (this._boundUniforms[TT] = UT), this._setTexture(TT, mT))
       }
-      _bindSamplerUniformToChannel(pp, ip) {
-        const cp = this._boundUniforms[pp];
-        cp && cp._currentState !== ip && (this._gl.uniform1i(cp, ip), cp._currentState = ip)
+      _bindSamplerUniformToChannel(TT, UT) {
+        const mT = this._boundUniforms[TT];
+        mT && mT._currentState !== UT && (this._gl.uniform1i(mT, UT), mT._currentState = UT)
       }
-      _getTextureWrapMode(pp) {
-        switch (pp) {
+      _getTextureWrapMode(TT) {
+        switch (TT) {
           case 1:
             return this._gl.REPEAT;
           case 0:
@@ -2719,68 +2719,68 @@ export const modules = {
         }
         return this._gl.REPEAT
       }
-      _setTexture(pp, ip) {
-        let cp, Op = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!ip) return null != this._boundTexturesCache[pp] && (this._activeChannel = pp, this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), this.eU > 1 && (this._bindTextureDirectly(this._gl.TEXTURE_3D, null), this._bindTextureDirectly(this._gl.TEXTURE_2D_ARRAY, null))), !1;
-        if (ip.video) {
-          this._activeChannel = pp;
-          const cp = ip.getInternalTexture();
-          cp && (cp._associatedChannel = pp), ip.update()
-        } else if (4 === ip.delayLoadState) return ip.delayLoad(), !1;
-        cp = op ? ip.depthStencilTexture : ip.isReady() ? ip.getInternalTexture() : ip.isCube ? this.emptyCubeTexture : ip.is3D ? this.emptyTexture3D : ip.is2DArray ? this.emptyTexture2DArray : this.emptyTexture, !Op && cp && (cp._associatedChannel = pp);
-        let Ip = !0;
-        this._boundTexturesCache[pp] === cp && (Op || this._bindSamplerUniformToChannel(cp._associatedChannel, pp), Ip = !1), this._activeChannel = pp;
-        const Sp = this._getTextureTarget(cp);
-        if (Ip && this._bindTextureDirectly(Sp, cp, Op), cp && !cp.isMultiview) {
-          if (cp.isCube && cp._cachedCoordinatesMode !== ip.coordinatesMode) {
-            cp._cachedCoordinatesMode = ip.coordinatesMode;
-            const pp = 3 !== ip.coordinatesMode && 5 !== ip.coordinatesMode ? 1 : 0;
-            ip.wrapU = pp, ip.wrapV = pp
+      _setTexture(TT, UT) {
+        let mT, WT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          zT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (!UT) return null != this._boundTexturesCache[TT] && (this._activeChannel = TT, this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), this.TZ > 1 && (this._bindTextureDirectly(this._gl.TEXTURE_3D, null), this._bindTextureDirectly(this._gl.TEXTURE_2D_ARRAY, null))), !1;
+        if (UT.video) {
+          this._activeChannel = TT;
+          const mT = UT.getInternalTexture();
+          mT && (mT._associatedChannel = TT), UT.update()
+        } else if (4 === UT.delayLoadState) return UT.delayLoad(), !1;
+        mT = zT ? UT.depthStencilTexture : UT.isReady() ? UT.getInternalTexture() : UT.isCube ? this.emptyCubeTexture : UT.is3D ? this.emptyTexture3D : UT.is2DArray ? this.emptyTexture2DArray : this.emptyTexture, !WT && mT && (mT._associatedChannel = TT);
+        let MT = !0;
+        this._boundTexturesCache[TT] === mT && (WT || this._bindSamplerUniformToChannel(mT._associatedChannel, TT), MT = !1), this._activeChannel = TT;
+        const gT = this._getTextureTarget(mT);
+        if (MT && this._bindTextureDirectly(gT, mT, WT), mT && !mT.isMultiview) {
+          if (mT.isCube && mT._cachedCoordinatesMode !== UT.coordinatesMode) {
+            mT._cachedCoordinatesMode = UT.coordinatesMode;
+            const TT = 3 !== UT.coordinatesMode && 5 !== UT.coordinatesMode ? 1 : 0;
+            UT.wrapU = TT, UT.wrapV = TT
           }
-          cp._cachedWrapU !== ip.wrapU && (cp._cachedWrapU = ip.wrapU, this._setTextureParameterInteger(Sp, this._gl.TEXTURE_WRAP_S, this._getTextureWrapMode(ip.wrapU), cp)), cp._cachedWrapV !== ip.wrapV && (cp._cachedWrapV = ip.wrapV, this._setTextureParameterInteger(Sp, this._gl.TEXTURE_WRAP_T, this._getTextureWrapMode(ip.wrapV), cp)), cp.is3D && cp._cachedWrapR !== ip.wrapR && (cp._cachedWrapR = ip.wrapR, this._setTextureParameterInteger(Sp, this._gl.TEXTURE_WRAP_R, this._getTextureWrapMode(ip.wrapR), cp)), this._setAnisotropicLevel(Sp, cp, ip.anisotropicFilteringLevel)
+          mT._cachedWrapU !== UT.wrapU && (mT._cachedWrapU = UT.wrapU, this._setTextureParameterInteger(gT, this._gl.TEXTURE_WRAP_S, this._getTextureWrapMode(UT.wrapU), mT)), mT._cachedWrapV !== UT.wrapV && (mT._cachedWrapV = UT.wrapV, this._setTextureParameterInteger(gT, this._gl.TEXTURE_WRAP_T, this._getTextureWrapMode(UT.wrapV), mT)), mT.is3D && mT._cachedWrapR !== UT.wrapR && (mT._cachedWrapR = UT.wrapR, this._setTextureParameterInteger(gT, this._gl.TEXTURE_WRAP_R, this._getTextureWrapMode(UT.wrapR), mT)), this._setAnisotropicLevel(gT, mT, UT.anisotropicFilteringLevel)
         }
         return !0
       }
-      setTextureArray(pp, ip, cp, Op) {
-        if (void 0 !== pp && ip) {
-          this._textureUnits && this._textureUnits.length === cp.length || (this._textureUnits = new Int32Array(cp.length));
-          for (let ip = 0; ip < cp.length; ip++) {
-            const Op = cp[ip].getInternalTexture();
-            Op ? (this._textureUnits[ip] = pp + ip, Op._associatedChannel = pp + ip) : this._textureUnits[ip] = -1
+      setTextureArray(TT, UT, mT, WT) {
+        if (void 0 !== TT && UT) {
+          this._textureUnits && this._textureUnits.length === mT.length || (this._textureUnits = new Int32Array(mT.length));
+          for (let UT = 0; UT < mT.length; UT++) {
+            const WT = mT[UT].getInternalTexture();
+            WT ? (this._textureUnits[UT] = TT + UT, WT._associatedChannel = TT + UT) : this._textureUnits[UT] = -1
           }
-          this._gl.uniform1iv(ip, this._textureUnits);
-          for (let pp = 0; pp < cp.length; pp++) this._setTexture(this._textureUnits[pp], cp[pp], !0)
+          this._gl.uniform1iv(UT, this._textureUnits);
+          for (let TT = 0; TT < mT.length; TT++) this._setTexture(this._textureUnits[TT], mT[TT], !0)
         }
       }
-      _setAnisotropicLevel(pp, ip, cp) {
-        const Op = this._caps.textureAnisotropicFilterExtension;
-        11 !== ip.samplingMode && 3 !== ip.samplingMode && 2 !== ip.samplingMode && (cp = 1), Op && ip._cachedAnisotropicFilteringLevel !== cp && (this._setTextureParameterFloat(pp, Op.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(cp, this._caps.maxAnisotropy), ip), ip._cachedAnisotropicFilteringLevel = cp)
+      _setAnisotropicLevel(TT, UT, mT) {
+        const WT = this._caps.textureAnisotropicFilterExtension;
+        11 !== UT.samplingMode && 3 !== UT.samplingMode && 2 !== UT.samplingMode && (mT = 1), WT && UT._cachedAnisotropicFilteringLevel !== mT && (this._setTextureParameterFloat(TT, WT.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(mT, this._caps.maxAnisotropy), UT), UT._cachedAnisotropicFilteringLevel = mT)
       }
-      _setTextureParameterFloat(pp, ip, cp, Op) {
-        this._bindTextureDirectly(pp, Op, !0, !0), this._gl.texParameterf(pp, ip, cp)
+      _setTextureParameterFloat(TT, UT, mT, WT) {
+        this._bindTextureDirectly(TT, WT, !0, !0), this._gl.texParameterf(TT, UT, mT)
       }
-      _setTextureParameterInteger(pp, ip, cp, Op) {
-        Op && this._bindTextureDirectly(pp, Op, !0, !0), this._gl.texParameteri(pp, ip, cp)
+      _setTextureParameterInteger(TT, UT, mT, WT) {
+        WT && this._bindTextureDirectly(TT, WT, !0, !0), this._gl.texParameteri(TT, UT, mT)
       }
       unbindAllAttributes() {
         if (this._mustWipeVertexAttributes) {
           this._mustWipeVertexAttributes = !1;
-          for (let pp = 0; pp < this._caps.maxVertexAttribs; pp++) this.disableAttributeByIndex(pp)
+          for (let TT = 0; TT < this._caps.maxVertexAttribs; TT++) this.disableAttributeByIndex(TT)
         } else
-          for (let pp = 0, ip = this._vertexAttribArraysEnabled.length; pp < ip; pp++) pp >= this._caps.maxVertexAttribs || !this._vertexAttribArraysEnabled[pp] || this.disableAttributeByIndex(pp)
+          for (let TT = 0, UT = this._vertexAttribArraysEnabled.length; TT < UT; TT++) TT >= this._caps.maxVertexAttribs || !this._vertexAttribArraysEnabled[TT] || this.disableAttributeByIndex(TT)
       }
       releaseEffects() {
         this._compiledEffects = {}, this.onReleaseEffectsObservable.notifyObservers(this)
       }
       dispose() {
-        (0, Lp.j)() && this._renderingCanvas && (this._renderingCanvas.removeEventListener("webglcontextlost", this._onContextLost), this._onContextRestored && this._renderingCanvas.removeEventListener("webglcontextrestored", this._onContextRestored)), super.dispose(), this._dummyFramebuffer && this._gl.deleteFramebuffer(this._dummyFramebuffer), this.unbindAllAttributes(), this._boundUniforms = {}, this._workingCanvas = null, this._workingContext = null, this._currentBufferPointers.length = 0, this._currentProgram = null, this._creationOptions.loseContextOnDispose && this._gl.getExtension("WEBGL_lose_context")?.loseContext(), (0, op.F)(this._gl)
+        (0, HT.j)() && this._renderingCanvas && (this._renderingCanvas.removeEventListener("webglcontextlost", this._onContextLost), this._onContextRestored && this._renderingCanvas.removeEventListener("webglcontextrestored", this._onContextRestored)), super.dispose(), this._dummyFramebuffer && this._gl.deleteFramebuffer(this._dummyFramebuffer), this.unbindAllAttributes(), this._boundUniforms = {}, this._workingCanvas = null, this._workingContext = null, this._currentBufferPointers.length = 0, this._currentProgram = null, this._creationOptions.loseContextOnDispose && this._gl.getExtension("WEBGL_lose_context")?.loseContext(), (0, zT.y)(this._gl)
       }
-      attachContextLostEvent(pp) {
-        this._renderingCanvas && this._renderingCanvas.addEventListener("webglcontextlost", pp, !1)
+      attachContextLostEvent(TT) {
+        this._renderingCanvas && this._renderingCanvas.addEventListener("webglcontextlost", TT, !1)
       }
-      attachContextRestoredEvent(pp) {
-        this._renderingCanvas && this._renderingCanvas.addEventListener("webglcontextrestored", pp, !1)
+      attachContextRestoredEvent(TT) {
+        this._renderingCanvas && this._renderingCanvas.addEventListener("webglcontextrestored", TT, !1)
       }
       getError() {
         return this._gl.getError()
@@ -2791,28 +2791,28 @@ export const modules = {
       _canRenderToHalfFloatFramebuffer() {
         return this._webGLVersion > 1 ? this._caps.colorBufferFloat : this._canRenderToFramebuffer(2)
       }
-      _canRenderToFramebuffer(pp) {
-        const ip = this._gl;
-        for (; ip.getError() !== ip.NO_ERROR;);
-        let cp = !0;
-        const Op = ip.createTexture();
-        ip.bindTexture(ip.TEXTURE_2D, Op), ip.texImage2D(ip.TEXTURE_2D, 0, this._getRGBABufferInternalSizedFormat(pp), 1, 1, 0, ip.RGBA, this._getWebGLTextureType(pp), null), ip.texParameteri(ip.TEXTURE_2D, ip.TEXTURE_MIN_FILTER, ip.NEAREST), ip.texParameteri(ip.TEXTURE_2D, ip.TEXTURE_MAG_FILTER, ip.NEAREST);
-        const op = ip.createFramebuffer();
-        ip.bindFramebuffer(ip.FRAMEBUFFER, op), ip.framebufferTexture2D(ip.FRAMEBUFFER, ip.COLOR_ATTACHMENT0, ip.TEXTURE_2D, Op, 0);
-        const Ip = ip.checkFramebufferStatus(ip.FRAMEBUFFER);
-        if (cp = cp && Ip === ip.FRAMEBUFFER_COMPLETE, cp = cp && ip.getError() === ip.NO_ERROR, cp && (ip.clear(ip.COLOR_BUFFER_BIT), cp = cp && ip.getError() === ip.NO_ERROR), cp) {
-          ip.bindFramebuffer(ip.FRAMEBUFFER, null);
-          const pp = ip.RGBA,
-            Op = ip.UNSIGNED_BYTE,
-            op = new Uint8Array(4);
-          ip.readPixels(0, 0, 1, 1, pp, Op, op), cp = cp && ip.getError() === ip.NO_ERROR
+      _canRenderToFramebuffer(TT) {
+        const UT = this._gl;
+        for (; UT.getError() !== UT.NO_ERROR;);
+        let mT = !0;
+        const WT = UT.createTexture();
+        UT.bindTexture(UT.TEXTURE_2D, WT), UT.texImage2D(UT.TEXTURE_2D, 0, this._getRGBABufferInternalSizedFormat(TT), 1, 1, 0, UT.RGBA, this._getWebGLTextureType(TT), null), UT.texParameteri(UT.TEXTURE_2D, UT.TEXTURE_MIN_FILTER, UT.NEAREST), UT.texParameteri(UT.TEXTURE_2D, UT.TEXTURE_MAG_FILTER, UT.NEAREST);
+        const zT = UT.createFramebuffer();
+        UT.bindFramebuffer(UT.FRAMEBUFFER, zT), UT.framebufferTexture2D(UT.FRAMEBUFFER, UT.COLOR_ATTACHMENT0, UT.TEXTURE_2D, WT, 0);
+        const MT = UT.checkFramebufferStatus(UT.FRAMEBUFFER);
+        if (mT = mT && MT === UT.FRAMEBUFFER_COMPLETE, mT = mT && UT.getError() === UT.NO_ERROR, mT && (UT.clear(UT.COLOR_BUFFER_BIT), mT = mT && UT.getError() === UT.NO_ERROR), mT) {
+          UT.bindFramebuffer(UT.FRAMEBUFFER, null);
+          const TT = UT.RGBA,
+            WT = UT.UNSIGNED_BYTE,
+            zT = new Uint8Array(4);
+          UT.readPixels(0, 0, 1, 1, TT, WT, zT), mT = mT && UT.getError() === UT.NO_ERROR
         }
-        for (ip.deleteTexture(Op), ip.deleteFramebuffer(op), ip.bindFramebuffer(ip.FRAMEBUFFER, null); !cp && ip.getError() !== ip.NO_ERROR;);
-        return cp
+        for (UT.deleteTexture(WT), UT.deleteFramebuffer(zT), UT.bindFramebuffer(UT.FRAMEBUFFER, null); !mT && UT.getError() !== UT.NO_ERROR;);
+        return mT
       }
-      _getWebGLTextureType(pp) {
+      _getWebGLTextureType(TT) {
         if (1 === this._webGLVersion) {
-          switch (pp) {
+          switch (TT) {
             case 1:
               return this._gl.FLOAT;
             case 2:
@@ -2828,7 +2828,7 @@ export const modules = {
           }
           return this._gl.UNSIGNED_BYTE
         }
-        switch (pp) {
+        switch (TT) {
           case 3:
             return this._gl.BYTE;
           case 0:
@@ -2864,58 +2864,58 @@ export const modules = {
         }
         return this._gl.UNSIGNED_BYTE
       }
-      _getInternalFormat(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = ip ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA;
-        switch (pp) {
+      _getInternalFormat(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          mT = UT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA;
+        switch (TT) {
           case 0:
-            cp = this._gl.ALPHA;
+            mT = this._gl.ALPHA;
             break;
           case 1:
-            cp = this._gl.LUMINANCE;
+            mT = this._gl.LUMINANCE;
             break;
           case 2:
-            cp = this._gl.LUMINANCE_ALPHA;
+            mT = this._gl.LUMINANCE_ALPHA;
             break;
           case 6:
           case 33322:
           case 36760:
-            cp = this._gl.RED;
+            mT = this._gl.RED;
             break;
           case 7:
           case 33324:
           case 36761:
-            cp = this._gl.RG;
+            mT = this._gl.RG;
             break;
           case 4:
           case 32852:
           case 36762:
-            cp = ip ? this._glSRGBExtensionValues.SRGB : this._gl.RGB;
+            mT = UT ? this._glSRGBExtensionValues.SRGB : this._gl.RGB;
             break;
           case 5:
           case 32859:
           case 36763:
-            cp = ip ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA
+            mT = UT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA
         }
-        if (this._webGLVersion > 1) switch (pp) {
+        if (this._webGLVersion > 1) switch (TT) {
           case 8:
-            cp = this._gl.RED_INTEGER;
+            mT = this._gl.RED_INTEGER;
             break;
           case 9:
-            cp = this._gl.RG_INTEGER;
+            mT = this._gl.RG_INTEGER;
             break;
           case 10:
-            cp = this._gl.RGB_INTEGER;
+            mT = this._gl.RGB_INTEGER;
             break;
           case 11:
-            cp = this._gl.RGBA_INTEGER
+            mT = this._gl.RGBA_INTEGER
         }
-        return cp
+        return mT
       }
-      _getRGBABufferInternalSizedFormat(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      _getRGBABufferInternalSizedFormat(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (1 === this._webGLVersion) {
-          if (void 0 !== ip) switch (ip) {
+          if (void 0 !== UT) switch (UT) {
             case 0:
               return this._gl.ALPHA;
             case 1:
@@ -2923,13 +2923,13 @@ export const modules = {
             case 2:
               return this._gl.LUMINANCE_ALPHA;
             case 4:
-              return cp ? this._glSRGBExtensionValues.SRGB : this._gl.RGB
+              return mT ? this._glSRGBExtensionValues.SRGB : this._gl.RGB
           }
           return this._gl.RGBA
         }
-        switch (pp) {
+        switch (TT) {
           case 3:
-            switch (ip) {
+            switch (UT) {
               case 6:
                 return this._gl.R8_SNORM;
               case 7:
@@ -2948,15 +2948,15 @@ export const modules = {
                 return this._gl.RGBA8_SNORM
             }
           case 0:
-            switch (ip) {
+            switch (UT) {
               case 6:
                 return this._gl.R8;
               case 7:
                 return this._gl.RG8;
               case 4:
-                return cp ? this._glSRGBExtensionValues.SRGB8 : this._gl.RGB8;
+                return mT ? this._glSRGBExtensionValues.SRGB8 : this._gl.RGB8;
               case 5:
-                return cp ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA8;
+                return mT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA8;
               case 8:
                 return this._gl.R8UI;
               case 9:
@@ -2975,7 +2975,7 @@ export const modules = {
                 return this._gl.RGBA8
             }
           case 4:
-            switch (ip) {
+            switch (UT) {
               case 8:
                 return this._gl.R16I;
               case 36760:
@@ -2994,7 +2994,7 @@ export const modules = {
                 return this._gl.RGBA16I
             }
           case 5:
-            switch (ip) {
+            switch (UT) {
               case 8:
                 return this._gl.R16UI;
               case 33322:
@@ -3013,7 +3013,7 @@ export const modules = {
                 return this._gl.RGBA16UI
             }
           case 6:
-            switch (ip) {
+            switch (UT) {
               case 8:
                 return this._gl.R32I;
               case 9:
@@ -3024,7 +3024,7 @@ export const modules = {
                 return this._gl.RGBA32I
             }
           case 7:
-            switch (ip) {
+            switch (UT) {
               case 8:
                 return this._gl.R32UI;
               case 9:
@@ -3035,7 +3035,7 @@ export const modules = {
                 return this._gl.RGBA32UI
             }
           case 1:
-            switch (ip) {
+            switch (UT) {
               case 6:
                 return this._gl.R32F;
               case 7:
@@ -3046,7 +3046,7 @@ export const modules = {
                 return this._gl.RGBA32F
             }
           case 2:
-            switch (ip) {
+            switch (UT) {
               case 6:
                 return this._gl.R16F;
               case 7:
@@ -3067,7 +3067,7 @@ export const modules = {
           case 9:
             return this._gl.RGB5_A1;
           case 11:
-            switch (ip) {
+            switch (UT) {
               case 5:
               default:
                 return this._gl.RGB10_A2;
@@ -3075,19 +3075,19 @@ export const modules = {
                 return this._gl.RGB10_A2UI
             }
         }
-        return cp ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA8
+        return mT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA8
       }
-      readPixels(pp, ip, cp, Op) {
-        let op = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Ip = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const Lp = op ? 4 : 3,
-          Yp = op ? this._gl.RGBA : this._gl.RGB,
-          Dp = cp * Op * Lp;
-        if (Sp) {
-          if (Sp.length < Dp) return xp.e.Error(`Data buffer is too small to store the read pixels (${Sp.length} should be more than ${Dp})`), Promise.resolve(Sp)
-        } else Sp = new Uint8Array(Dp);
-        return Ip && this.flushFramebuffer(), this._gl.readPixels(pp, ip, cp, Op, Yp, this._gl.UNSIGNED_BYTE, Sp), Promise.resolve(Sp)
+      readPixels(TT, UT, mT, WT) {
+        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          MT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        const HT = zT ? 4 : 3,
+          kT = zT ? this._gl.RGBA : this._gl.RGB,
+          jT = mT * WT * HT;
+        if (gT) {
+          if (gT.length < jT) return nT.b.Error(`Data buffer is too small to store the read pixels (${gT.length} should be more than ${jT})`), Promise.resolve(gT)
+        } else gT = new Uint8Array(jT);
+        return MT && this.flushFramebuffer(), this._gl.readPixels(TT, UT, mT, WT, kT, this._gl.UNSIGNED_BYTE, gT), Promise.resolve(gT)
       }
       static get IsSupportedAsync() {
         return Promise.resolve(this.isSupported())
@@ -3098,30 +3098,30 @@ export const modules = {
       static isSupported() {
         if (null !== this._HasMajorPerformanceCaveat) return !this._HasMajorPerformanceCaveat;
         if (null === this._IsSupported) try {
-          const pp = Ip.b._CreateCanvas(1, 1),
-            ip = pp.getContext("webgl") || pp.getContext("experimental-webgl");
-          this._IsSupported = null != ip && !!globalThis.WebGLRenderingContext
-        } catch (pp) {
+          const TT = MT.c._CreateCanvas(1, 1),
+            UT = TT.getContext("webgl") || TT.getContext("experimental-webgl");
+          this._IsSupported = null != UT && !!globalThis.WebGLRenderingContext
+        } catch (TT) {
           this._IsSupported = !1
         }
         return this._IsSupported
       }
       static get HasMajorPerformanceCaveat() {
         if (null === this._HasMajorPerformanceCaveat) try {
-          const pp = Ip.b._CreateCanvas(1, 1),
-            ip = pp.getContext("webgl", {
+          const TT = MT.c._CreateCanvas(1, 1),
+            UT = TT.getContext("webgl", {
               failIfMajorPerformanceCaveat: !0
-            }) || pp.getContext("experimental-webgl", {
+            }) || TT.getContext("experimental-webgl", {
               failIfMajorPerformanceCaveat: !0
             });
-          this._HasMajorPerformanceCaveat = !ip
-        } catch (pp) {
+          this._HasMajorPerformanceCaveat = !UT
+        } catch (TT) {
           this._HasMajorPerformanceCaveat = !1
         }
         return this._HasMajorPerformanceCaveat
       }
     }
-    ep._TempClearColorUint32 = new Uint32Array(4), ep._TempClearColorInt32 = new Int32Array(4), ep._TempClearColorFloat32 = new Float32Array(4), ep.ExceptionList = [{
+    bT._TempClearColorUint32 = new Uint32Array(4), bT._TempClearColorInt32 = new Int32Array(4), bT._TempClearColorFloat32 = new Float32Array(4), bT.ExceptionList = [{
       key: "Chrome/63.0",
       capture: "63\\.0\\.3239\\.(\\d+)",
       captureConstraint: 108,
@@ -3181,135 +3181,135 @@ export const modules = {
       capture: null,
       captureConstraint: null,
       targets: ["antialias", "maxMSAASamples"]
-    }], ep._ConcatenateShader = wp.g, ep._IsSupported = null, ep._HasMajorPerformanceCaveat = null
+    }], bT._ConcatenateShader = cT.g, bT._IsSupported = null, bT._HasMajorPerformanceCaveat = null
   },
-  40388: (pp, ip, cp) => {
-    var Op;
-    cp.d(ip, {
-        c: () => op
+  40297: (TT, UT, mT) => {
+    var WT;
+    mT.d(UT, {
+        c: () => zT
       }),
-      function(pp) {
-        pp[pp.PointerMove = 0] = "PointerMove", pp[pp.PointerDown = 1] = "PointerDown", pp[pp.PointerUp = 2] = "PointerUp"
-      }(Op || (Op = {}));
-    class op {}
-    op.DOM_DELTA_PIXEL = 0, op.DOM_DELTA_LINE = 1, op.DOM_DELTA_PAGE = 2
+      function(TT) {
+        TT[TT.PointerMove = 0] = "PointerMove", TT[TT.PointerDown = 1] = "PointerDown", TT[TT.PointerUp = 2] = "PointerUp"
+      }(WT || (WT = {}));
+    class zT {}
+    zT.DOM_DELTA_PIXEL = 0, zT.DOM_DELTA_LINE = 1, zT.DOM_DELTA_PAGE = 2
   },
-  40380: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op,
-      e: () => Ip,
-      f: () => op
+  40290: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT,
+      i: () => MT,
+      k: () => zT
     });
-    class Op {}
-    Op.KEYDOWN = 1, Op.KEYUP = 2;
-    class op {
-      constructor(pp, ip) {
-        this.type = pp, this.event = ip
+    class WT {}
+    WT.KEYDOWN = 1, WT.KEYUP = 2;
+    class zT {
+      constructor(TT, UT) {
+        this.type = TT, this.event = UT
       }
     }
-    class Ip extends op {
+    class MT extends zT {
       get skipOnPointerObservable() {
         return this.skipOnKeyboardObservable
       }
-      set skipOnPointerObservable(pp) {
-        this.skipOnKeyboardObservable = pp
+      set skipOnPointerObservable(TT) {
+        this.skipOnKeyboardObservable = TT
       }
-      constructor(pp, ip) {
-        super(pp, ip), this.type = pp, this.event = ip, this.skipOnKeyboardObservable = !1
+      constructor(TT, UT) {
+        super(TT, UT), this.type = TT, this.event = UT, this.skipOnKeyboardObservable = !1
       }
     }
   },
-  40372: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      h: () => Sp,
-      i: () => xp
+  40288: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      f: () => gT,
+      h: () => nT
     });
-    var Op = cp(37320);
-    class op {}
-    op.POINTERDOWN = 1, op.POINTERUP = 2, op.POINTERMOVE = 4, op.POINTERWHEEL = 8, op.POINTERPICK = 16, op.POINTERTAP = 32, op.POINTERDOUBLETAP = 64;
-    class Ip {
-      constructor(pp, ip) {
-        this.type = pp, this.event = ip
+    var WT = mT(37188);
+    class zT {}
+    zT.POINTERDOWN = 1, zT.POINTERUP = 2, zT.POINTERMOVE = 4, zT.POINTERWHEEL = 8, zT.POINTERPICK = 16, zT.POINTERTAP = 32, zT.POINTERDOUBLETAP = 64;
+    class MT {
+      constructor(TT, UT) {
+        this.type = TT, this.event = UT
       }
     }
-    class Sp extends Ip {
-      constructor(pp, ip, cp, op) {
-        super(pp, ip), this.ray = null, this.originalPickingInfo = null, this.skipOnPointerObservable = !1, this.localPosition = new Op.l(cp, op)
+    class gT extends MT {
+      constructor(TT, UT, mT, zT) {
+        super(TT, UT), this.ray = null, this.originalPickingInfo = null, this.skipOnPointerObservable = !1, this.localPosition = new WT.o(mT, zT)
       }
     }
-    class xp extends Ip {
+    class nT extends MT {
       get pickInfo() {
         return this._pickInfo || this._generatePickInfo(), this._pickInfo
       }
-      constructor(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(pp, ip), this._pickInfo = cp, this._inputManager = Op
+      constructor(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(TT, UT), this._pickInfo = mT, this._inputManager = WT
       }
       _generatePickInfo() {
         this._inputManager && (this._pickInfo = this._inputManager._pickMove(this.event), this._inputManager._setRayOnPointerInfo(this._pickInfo, this.event), this._inputManager = null)
       }
     }
   },
-  40398: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  40310: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
-      static CompareLightsPriority(pp, ip) {
-        return pp.shadowEnabled !== ip.shadowEnabled ? (ip.shadowEnabled ? 1 : 0) - (pp.shadowEnabled ? 1 : 0) : ip.renderPriority - pp.renderPriority
+    class WT {
+      static CompareLightsPriority(TT, UT) {
+        return TT.shadowEnabled !== UT.shadowEnabled ? (UT.shadowEnabled ? 1 : 0) - (TT.shadowEnabled ? 1 : 0) : UT.renderPriority - TT.renderPriority
       }
     }
-    Op.FALLOFF_DEFAULT = 0, Op.FALLOFF_PHYSICAL = 1, Op.FALLOFF_GLTF = 2, Op.FALLOFF_STANDARD = 3, Op.LIGHTMAP_DEFAULT = 0, Op.LIGHTMAP_SPECULAR = 1, Op.LIGHTMAP_SHADOWSONLY = 2, Op.INTENSITYMODE_AUTOMATIC = 0, Op.INTENSITYMODE_LUMINOUSPOWER = 1, Op.INTENSITYMODE_LUMINOUSINTENSITY = 2, Op.INTENSITYMODE_ILLUMINANCE = 3, Op.INTENSITYMODE_LUMINANCE = 4, Op.LIGHTTYPEID_POINTLIGHT = 0, Op.LIGHTTYPEID_DIRECTIONALLIGHT = 1, Op.LIGHTTYPEID_SPOTLIGHT = 2, Op.LIGHTTYPEID_HEMISPHERICLIGHT = 3, Op.LIGHTTYPEID_RECT_AREALIGHT = 4, Op.LIGHTTYPEID_CLUSTERED_CONTAINER = 5
+    WT.FALLOFF_DEFAULT = 0, WT.FALLOFF_PHYSICAL = 1, WT.FALLOFF_GLTF = 2, WT.FALLOFF_STANDARD = 3, WT.LIGHTMAP_DEFAULT = 0, WT.LIGHTMAP_SPECULAR = 1, WT.LIGHTMAP_SHADOWSONLY = 2, WT.INTENSITYMODE_AUTOMATIC = 0, WT.INTENSITYMODE_LUMINOUSPOWER = 1, WT.INTENSITYMODE_LUMINOUSINTENSITY = 2, WT.INTENSITYMODE_ILLUMINANCE = 3, WT.INTENSITYMODE_LUMINANCE = 4, WT.LIGHTTYPEID_POINTLIGHT = 0, WT.LIGHTTYPEID_DIRECTIONALLIGHT = 1, WT.LIGHTTYPEID_SPOTLIGHT = 2, WT.LIGHTTYPEID_HEMISPHERICLIGHT = 3, WT.LIGHTTYPEID_RECT_AREALIGHT = 4, WT.LIGHTTYPEID_CLUSTERED_CONTAINER = 5
   },
-  40033: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  39913: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op, op = cp(37349),
-      Ip = cp(40042);
-    ! function(pp) {
-      pp[pp.Unknown = 0] = "Unknown", pp[pp.Url = 1] = "Url", pp[pp.Temp = 2] = "Temp", pp[pp.Raw = 3] = "Raw", pp[pp.Dynamic = 4] = "Dynamic", pp[pp.RenderTarget = 5] = "RenderTarget", pp[pp.MultiRenderTarget = 6] = "MultiRenderTarget", pp[pp.Cube = 7] = "Cube", pp[pp.CubeRaw = 8] = "CubeRaw", pp[pp.CubePrefiltered = 9] = "CubePrefiltered", pp[pp.Raw3D = 10] = "Raw3D", pp[pp.Raw2DArray = 11] = "Raw2DArray", pp[pp.DepthStencil = 12] = "DepthStencil", pp[pp.CubeRawRGBD = 13] = "CubeRawRGBD", pp[pp.Depth = 14] = "Depth", pp[pp.External = 15] = "External"
-    }(Op || (Op = {}));
-    class Sp extends Ip.c {
+    var WT, zT = mT(37219),
+      MT = mT(39916);
+    ! function(TT) {
+      TT[TT.Unknown = 0] = "Unknown", TT[TT.Url = 1] = "Url", TT[TT.Temp = 2] = "Temp", TT[TT.Raw = 3] = "Raw", TT[TT.Dynamic = 4] = "Dynamic", TT[TT.RenderTarget = 5] = "RenderTarget", TT[TT.MultiRenderTarget = 6] = "MultiRenderTarget", TT[TT.Cube = 7] = "Cube", TT[TT.CubeRaw = 8] = "CubeRaw", TT[TT.CubePrefiltered = 9] = "CubePrefiltered", TT[TT.Raw3D = 10] = "Raw3D", TT[TT.Raw2DArray = 11] = "Raw2DArray", TT[TT.DepthStencil = 12] = "DepthStencil", TT[TT.CubeRawRGBD = 13] = "CubeRawRGBD", TT[TT.Depth = 14] = "Depth", TT[TT.External = 15] = "External"
+    }(WT || (WT = {}));
+    class gT extends MT.b {
       get useMipMaps() {
         return null === this._useMipMaps ? this.generateMipMaps : this._useMipMaps
       }
-      set useMipMaps(pp) {
-        this._useMipMaps = pp
+      set useMipMaps(TT) {
+        this._useMipMaps = TT
       }
       get uniqueId() {
         return this._uniqueId
       }
-      _setUniqueId(pp) {
-        this._uniqueId = pp
+      _setUniqueId(TT) {
+        this._uniqueId = TT
       }
-      gy() {
+      eB() {
         return this._engine
       }
       get source() {
         return this._source
       }
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(), this.isReady = !1, this.isCube = !1, this.is3D = !1, this.is2DArray = !1, this.isMultiview = !1, this.url = "", this.generateMipMaps = !1, this._useMipMaps = null, this.mipLevelCount = 1, this.samples = 0, this.type = -1, this.format = -1, this.onLoadedObservable = new op.d, this.onErrorObservable = new op.d, this.onRebuildCallback = null, this.width = 0, this.height = 0, this.depth = 0, this.baseWidth = 0, this.baseHeight = 0, this.baseDepth = 0, this.invertY = !1, this._invertVScale = !1, this._associatedChannel = -1, this._source = 0, this._buffer = null, this._bufferView = null, this._bufferViewArray = null, this._bufferViewArrayArray = null, this._size = 0, this._extension = "", this._files = null, this._workingCanvas = null, this._workingContext = null, this._cachedCoordinatesMode = null, this._isDisabled = !1, this._compression = null, this._sphericalPolynomial = null, this._sphericalPolynomialPromise = null, this._sphericalPolynomialComputed = !1, this._lodGenerationScale = 0, this._lodGenerationOffset = 0, this._useSRGBBuffer = !1, this._creationFlags = 0, this._lodTextureHigh = null, this._lodTextureMid = null, this._lodTextureLow = null, this._isRGBD = !1, this._linearSpecularLOD = !1, this._irradianceTexture = null, this._hardwareTexture = null, this._maxLodLevel = null, this._references = 1, this._gammaSpace = null, this._premulAlpha = !1, this._dynamicTextureSource = null, this._autoMSAAManagement = !1, this._engine = pp, this._source = ip, this._uniqueId = Sp._Counter++, cp || (this._hardwareTexture = pp._createHardwareTexture())
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(), this.isReady = !1, this.isCube = !1, this.is3D = !1, this.is2DArray = !1, this.isMultiview = !1, this.url = "", this.generateMipMaps = !1, this._useMipMaps = null, this.mipLevelCount = 1, this.samples = 0, this.type = -1, this.format = -1, this.onLoadedObservable = new zT.d, this.onErrorObservable = new zT.d, this.onRebuildCallback = null, this.width = 0, this.height = 0, this.depth = 0, this.baseWidth = 0, this.baseHeight = 0, this.baseDepth = 0, this.invertY = !1, this._invertVScale = !1, this._associatedChannel = -1, this._source = 0, this._buffer = null, this._bufferView = null, this._bufferViewArray = null, this._bufferViewArrayArray = null, this._size = 0, this._extension = "", this._files = null, this._workingCanvas = null, this._workingContext = null, this._cachedCoordinatesMode = null, this._isDisabled = !1, this._compression = null, this._sphericalPolynomial = null, this._sphericalPolynomialPromise = null, this._sphericalPolynomialComputed = !1, this._lodGenerationScale = 0, this._lodGenerationOffset = 0, this._useSRGBBuffer = !1, this._creationFlags = 0, this._lodTextureHigh = null, this._lodTextureMid = null, this._lodTextureLow = null, this._isRGBD = !1, this._linearSpecularLOD = !1, this._irradianceTexture = null, this._hardwareTexture = null, this._maxLodLevel = null, this._references = 1, this._gammaSpace = null, this._premulAlpha = !1, this._dynamicTextureSource = null, this._autoMSAAManagement = !1, this._engine = TT, this._source = UT, this._uniqueId = gT._Counter++, mT || (this._hardwareTexture = TT._createHardwareTexture())
       }
       incrementReferences() {
         this._references++
       }
-      updateSize(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        this._engine.updateTextureDimensions(this, pp, ip, cp), this.width = pp, this.height = ip, this.depth = cp, this.baseWidth = pp, this.baseHeight = ip, this.baseDepth = cp, this._size = pp * ip * cp
+      updateSize(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+        this._engine.updateTextureDimensions(this, TT, UT, mT), this.width = TT, this.height = UT, this.depth = mT, this.baseWidth = TT, this.baseHeight = UT, this.baseDepth = mT, this._size = TT * UT * mT
       }
       _rebuild() {
         if (this.isReady = !1, this._cachedCoordinatesMode = null, this._cachedWrapU = null, this._cachedWrapV = null, this._cachedWrapR = null, this._cachedAnisotropicFilteringLevel = null, this.onRebuildCallback) {
-          const pp = this.onRebuildCallback(this),
-            ip = ip => {
-              ip._swapAndDie(this, !1), this.isReady = pp.isReady
+          const TT = this.onRebuildCallback(this),
+            UT = UT => {
+              UT._swapAndDie(this, !1), this.isReady = TT.isReady
             };
-          return void(pp.isAsync ? pp.proxy.then(ip) : ip(pp.proxy))
+          return void(TT.isAsync ? TT.proxy.then(UT) : UT(TT.proxy))
         }
-        let pp;
+        let TT;
         switch (this.source) {
           case 2:
           case 12:
@@ -3317,179 +3317,179 @@ export const modules = {
           case 15:
             break;
           case 1:
-            return void(pp = this._engine.createTexture(this._originalUrl ?? this.url, !this.generateMipMaps, this.invertY, null, this.samplingMode, (pp => {
-              pp._swapAndDie(this, !1), this.isReady = !0
+            return void(TT = this._engine.createTexture(this._originalUrl ?? this.url, !this.generateMipMaps, this.invertY, null, this.samplingMode, (TT => {
+              TT._swapAndDie(this, !1), this.isReady = !0
             }), null, this._buffer, void 0, this.format, this._extension, void 0, void 0, void 0, this._useSRGBBuffer));
           case 3:
-            if (pp = this._engine.createRawTexture(this._bufferView, this.baseWidth, this.baseHeight, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type, this._creationFlags, this._useSRGBBuffer, this.mipLevelCount), pp._swapAndDie(this, !1), this._bufferViewArray)
-              for (let pp = 0; pp < this._bufferViewArray.length; pp++) {
-                const ip = this._bufferViewArray[pp];
-                ip && this._engine.updateRawTexture(this, ip, this.format, this.invertY, this._compression, this.type, this._useSRGBBuffer, pp)
+            if (TT = this._engine.createRawTexture(this._bufferView, this.baseWidth, this.baseHeight, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type, this._creationFlags, this._useSRGBBuffer, this.mipLevelCount), TT._swapAndDie(this, !1), this._bufferViewArray)
+              for (let TT = 0; TT < this._bufferViewArray.length; TT++) {
+                const UT = this._bufferViewArray[TT];
+                UT && this._engine.updateRawTexture(this, UT, this.format, this.invertY, this._compression, this.type, this._useSRGBBuffer, TT)
               }
             this.isReady = !0;
             break;
           case 10:
-            pp = this._engine.createRawTexture3D(this._bufferView, this.baseWidth, this.baseHeight, this.baseDepth, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type), pp._swapAndDie(this, !1), this.isReady = !0;
+            TT = this._engine.createRawTexture3D(this._bufferView, this.baseWidth, this.baseHeight, this.baseDepth, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type), TT._swapAndDie(this, !1), this.isReady = !0;
             break;
           case 11:
-            if (pp = this._engine.createRawTexture2DArray(this._bufferView, this.baseWidth, this.baseHeight, this.baseDepth, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type, this._creationFlags, this.mipLevelCount), pp._swapAndDie(this, !1), this._bufferViewArray)
-              for (let pp = 0; pp < this._bufferViewArray.length; pp++) {
-                const ip = this._bufferViewArray[pp];
-                ip && this._engine.updateRawTexture2DArray(this, ip, this.format, this.invertY, this._compression, this.type, pp)
+            if (TT = this._engine.createRawTexture2DArray(this._bufferView, this.baseWidth, this.baseHeight, this.baseDepth, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type, this._creationFlags, this.mipLevelCount), TT._swapAndDie(this, !1), this._bufferViewArray)
+              for (let TT = 0; TT < this._bufferViewArray.length; TT++) {
+                const UT = this._bufferViewArray[TT];
+                UT && this._engine.updateRawTexture2DArray(this, UT, this.format, this.invertY, this._compression, this.type, TT)
               }
             this.isReady = !0;
             break;
           case 4:
-            pp = this._engine.createDynamicTexture(this.baseWidth, this.baseHeight, this.generateMipMaps, this.samplingMode), pp._swapAndDie(this, !1), this._dynamicTextureSource && this._engine.updateDynamicTexture(this, this._dynamicTextureSource, this.invertY, this._premulAlpha, this.format, !0);
+            TT = this._engine.createDynamicTexture(this.baseWidth, this.baseHeight, this.generateMipMaps, this.samplingMode), TT._swapAndDie(this, !1), this._dynamicTextureSource && this._engine.updateDynamicTexture(this, this._dynamicTextureSource, this.invertY, this._premulAlpha, this.format, !0);
             break;
           case 7:
-            return void(pp = this._engine.createCubeTexture(this.url, null, this._files, !this.generateMipMaps, (() => {
-              pp._swapAndDie(this, !1), this.isReady = !0
+            return void(TT = this._engine.createCubeTexture(this.url, null, this._files, !this.generateMipMaps, (() => {
+              TT._swapAndDie(this, !1), this.isReady = !0
             }), null, this.format, this._extension, !1, 0, 0, null, void 0, this._useSRGBBuffer, ArrayBuffer.isView(this._buffer) ? this._buffer : null));
           case 8:
-            pp = this._engine.createRawCubeTexture(this._bufferViewArray, this.width, this._originalFormat ?? this.format, this.type, this.generateMipMaps, this.invertY, this.samplingMode, this._compression), pp._swapAndDie(this, !1), this.isReady = !0;
+            TT = this._engine.createRawCubeTexture(this._bufferViewArray, this.width, this._originalFormat ?? this.format, this.type, this.generateMipMaps, this.invertY, this.samplingMode, this._compression), TT._swapAndDie(this, !1), this.isReady = !0;
             break;
           case 13:
             return;
           case 9:
-            return pp = this._engine.createPrefilteredCubeTexture(this.url, null, this._lodGenerationScale, this._lodGenerationOffset, (pp => {
-              pp && pp._swapAndDie(this, !1), this.isReady = !0
-            }), null, this.format, this._extension, void 0, ArrayBuffer.isView(this._buffer) ? this._buffer : null), void(pp._sphericalPolynomial = this._sphericalPolynomial)
+            return TT = this._engine.createPrefilteredCubeTexture(this.url, null, this._lodGenerationScale, this._lodGenerationOffset, (TT => {
+              TT && TT._swapAndDie(this, !1), this.isReady = !0
+            }), null, this.format, this._extension, void 0, ArrayBuffer.isView(this._buffer) ? this._buffer : null), void(TT._sphericalPolynomial = this._sphericalPolynomial)
         }
       }
-      _swapAndDie(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._hardwareTexture?.setUsage(pp._source, this.generateMipMaps, this.is2DArray, this.isCube, this.is3D, this.width, this.height, this.depth), pp._hardwareTexture = this._hardwareTexture, pp._setUniqueId(Sp._Counter++), ip && (pp._isRGBD = this._isRGBD), this._lodTextureHigh && (pp._lodTextureHigh && pp._lodTextureHigh.dispose(), pp._lodTextureHigh = this._lodTextureHigh), this._lodTextureMid && (pp._lodTextureMid && pp._lodTextureMid.dispose(), pp._lodTextureMid = this._lodTextureMid), this._lodTextureLow && (pp._lodTextureLow && pp._lodTextureLow.dispose(), pp._lodTextureLow = this._lodTextureLow), this._irradianceTexture && (pp._irradianceTexture && pp._irradianceTexture.dispose(), pp._irradianceTexture = this._irradianceTexture);
-        const cp = this._engine.getLoadedTexturesCache();
-        let Op = cp.indexOf(this); - 1 !== Op && cp.splice(Op, 1), Op = cp.indexOf(pp), -1 === Op && cp.push(pp)
+      _swapAndDie(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        this._hardwareTexture?.setUsage(TT._source, this.generateMipMaps, this.is2DArray, this.isCube, this.is3D, this.width, this.height, this.depth), TT._hardwareTexture = this._hardwareTexture, TT._setUniqueId(gT._Counter++), UT && (TT._isRGBD = this._isRGBD), this._lodTextureHigh && (TT._lodTextureHigh && TT._lodTextureHigh.dispose(), TT._lodTextureHigh = this._lodTextureHigh), this._lodTextureMid && (TT._lodTextureMid && TT._lodTextureMid.dispose(), TT._lodTextureMid = this._lodTextureMid), this._lodTextureLow && (TT._lodTextureLow && TT._lodTextureLow.dispose(), TT._lodTextureLow = this._lodTextureLow), this._irradianceTexture && (TT._irradianceTexture && TT._irradianceTexture.dispose(), TT._irradianceTexture = this._irradianceTexture);
+        const mT = this._engine.getLoadedTexturesCache();
+        let WT = mT.indexOf(this); - 1 !== WT && mT.splice(WT, 1), WT = mT.indexOf(TT), -1 === WT && mT.push(TT)
       }
       dispose() {
         this._references--, 0 === this._references && (this.onLoadedObservable.clear(), this.onErrorObservable.clear(), this._engine._releaseTexture(this), this._hardwareTexture = null, this._dynamicTextureSource = null)
       }
     }
-    Sp._Counter = 0
+    gT._Counter = 0
   },
-  40151: (pp, ip, cp) => {
-    function Op(pp) {
-      return 13 === pp || 14 === pp || 15 === pp || 16 === pp || 17 === pp || 18 === pp || 19 === pp
+  40036: (TT, UT, mT) => {
+    function WT(TT) {
+      return 13 === TT || 14 === TT || 15 === TT || 16 === TT || 17 === TT || 18 === TT || 19 === TT
     }
 
-    function op(pp) {
-      return 8 === pp || 9 === pp || 10 === pp || 11 === pp
+    function zT(TT) {
+      return 8 === TT || 9 === TT || 10 === TT || 11 === TT
     }
 
-    function Ip(pp) {
-      return 0 === pp || 5 === pp || 7 === pp || 11 === pp
+    function MT(TT) {
+      return 0 === TT || 5 === TT || 7 === TT || 11 === TT
     }
 
-    function Sp(pp) {
-      return 13 === pp || 17 === pp || 18 === pp || 19 === pp
+    function gT(TT) {
+      return 13 === TT || 17 === TT || 18 === TT || 19 === TT
     }
-    cp.d(ip, {
-      c: () => Sp,
-      e: () => Op,
-      i: () => op,
-      k: () => Ip
+    mT.d(UT, {
+      c: () => gT,
+      g: () => WT,
+      k: () => zT,
+      m: () => MT
     })
   },
-  40042: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  39916: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
+    class WT {
       get wrapU() {
         return this._cachedWrapU
       }
-      set wrapU(pp) {
-        this._cachedWrapU = pp
+      set wrapU(TT) {
+        this._cachedWrapU = TT
       }
       get wrapV() {
         return this._cachedWrapV
       }
-      set wrapV(pp) {
-        this._cachedWrapV = pp
+      set wrapV(TT) {
+        this._cachedWrapV = TT
       }
       get wrapR() {
         return this._cachedWrapR
       }
-      set wrapR(pp) {
-        this._cachedWrapR = pp
+      set wrapR(TT) {
+        this._cachedWrapR = TT
       }
       get anisotropicFilteringLevel() {
         return this._cachedAnisotropicFilteringLevel
       }
-      set anisotropicFilteringLevel(pp) {
-        this._cachedAnisotropicFilteringLevel = pp
+      set anisotropicFilteringLevel(TT) {
+        this._cachedAnisotropicFilteringLevel = TT
       }
       get comparisonFunction() {
         return this._comparisonFunction
       }
-      set comparisonFunction(pp) {
-        this._comparisonFunction = pp
+      set comparisonFunction(TT) {
+        this._comparisonFunction = TT
       }
       get useMipMaps() {
         return this._useMipMaps
       }
-      set useMipMaps(pp) {
-        this._useMipMaps = pp
+      set useMipMaps(TT) {
+        this._useMipMaps = TT
       }
       constructor() {
         this.samplingMode = -1, this._useMipMaps = !0, this._cachedWrapU = null, this._cachedWrapV = null, this._cachedWrapR = null, this._cachedAnisotropicFilteringLevel = null, this._comparisonFunction = 0
       }
       setParameters() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2,
-          Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return this._cachedWrapU = pp, this._cachedWrapV = ip, this._cachedWrapR = cp, this._cachedAnisotropicFilteringLevel = Op, this.samplingMode = op, this._comparisonFunction = Ip, this
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2,
+          MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return this._cachedWrapU = TT, this._cachedWrapV = UT, this._cachedWrapR = mT, this._cachedAnisotropicFilteringLevel = WT, this.samplingMode = zT, this._comparisonFunction = MT, this
       }
-      compareSampler(pp) {
-        return this._cachedWrapU === pp._cachedWrapU && this._cachedWrapV === pp._cachedWrapV && this._cachedWrapR === pp._cachedWrapR && this._cachedAnisotropicFilteringLevel === pp._cachedAnisotropicFilteringLevel && this.samplingMode === pp.samplingMode && this._comparisonFunction === pp._comparisonFunction && this._useMipMaps === pp._useMipMaps
+      compareSampler(TT) {
+        return this._cachedWrapU === TT._cachedWrapU && this._cachedWrapV === TT._cachedWrapV && this._cachedWrapR === TT._cachedWrapR && this._cachedAnisotropicFilteringLevel === TT._cachedAnisotropicFilteringLevel && this.samplingMode === TT.samplingMode && this._comparisonFunction === TT._comparisonFunction && this._useMipMaps === TT._useMipMaps
       }
     }
   },
-  40322: (pp, ip, cp) => {
-    function Op(pp) {
-      pp.push("vCameraColorCurveNeutral", "vCameraColorCurvePositive", "vCameraColorCurveNegative")
+  40228: (TT, UT, mT) => {
+    function WT(TT) {
+      TT.push("vCameraColorCurveNeutral", "vCameraColorCurvePositive", "vCameraColorCurveNegative")
     }
-    cp.d(ip, {
-      c: () => Op
+    mT.d(UT, {
+      d: () => WT
     })
   },
-  40127: (pp, ip, cp) => {
-    function Op(pp) {
-      return void 0 === pp.getPipelineContext
+  40001: (TT, UT, mT) => {
+    function WT(TT) {
+      return void 0 === TT.getPipelineContext
     }
-    cp.d(ip, {
-      e: () => Op
+    mT.d(UT, {
+      b: () => WT
     })
   },
-  40509: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op
+  40449: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT
     });
-    var Op = cp(40107);
-    class op {
-      static GetEffect(pp) {
-        return void 0 === pp.getPipelineContext ? pp.effect : pp
+    var WT = mT(39975);
+    class zT {
+      static GetEffect(TT) {
+        return void 0 === TT.getPipelineContext ? TT.effect : TT
       }
-      constructor(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._wasPreviouslyReady = !1, this._forceRebindOnNextCall = !0, this._wasPreviouslyUsingInstances = null, this.effect = null, this.defines = null, this.drawContext = pp.createDrawContext(), ip && (this.materialContext = pp.createMaterialContext())
+      constructor(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        this._wasPreviouslyReady = !1, this._forceRebindOnNextCall = !0, this._wasPreviouslyUsingInstances = null, this.effect = null, this.defines = null, this.drawContext = TT.createDrawContext(), UT && (this.materialContext = TT.createMaterialContext())
       }
-      setEffect(pp, ip) {
-        let cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        cp || this.effect === pp || this.drawContext?._releaseUniformBufferSlots?.(), this.effect = pp, void 0 !== ip && (this.defines = ip), cp && this.drawContext?.reset()
+      setEffect(TT, UT) {
+        let mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        mT || this.effect === TT || this.drawContext?._releaseUniformBufferSlots?.(), this.effect = TT, void 0 !== UT && (this.defines = UT), mT && this.drawContext?.reset()
       }
       dispose() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this.effect) {
-          const ip = this.effect;
-          pp ? ip.dispose() : Op.b.SetImmediate((() => {
-            ip.gy().onEndFrameObservable.addOnce((() => {
-              ip.dispose()
+          const UT = this.effect;
+          TT ? UT.dispose() : WT.e.SetImmediate((() => {
+            UT.eB().onEndFrameObservable.addOnce((() => {
+              UT.dispose()
             }))
           })), this.effect = null
         }
@@ -3497,180 +3497,180 @@ export const modules = {
       }
     }
   },
-  40068: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ap,
-      i: () => Wp,
-      l: () => Yp,
-      o: () => Dp
+  39938: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => lT,
+      f: () => pT,
+      g: () => kT,
+      h: () => jT
     });
-    var Op = cp(40071),
-      op = cp(40079),
-      Ip = cp(40062),
-      Sp = cp(38905),
-      xp = cp(40103),
-      Lp = cp(40088);
+    var WT = mT(39946),
+      zT = mT(39949),
+      MT = mT(39934),
+      gT = mT(38800),
+      nT = mT(39972),
+      HT = mT(39957);
 
-    function Yp(pp, ip) {
-      return (0, op.J)(ip).cachedPipelines[pp]
+    function kT(TT, UT) {
+      return (0, zT.A)(UT).cachedPipelines[TT]
     }
 
-    function Dp(pp) {
-      const ip = pp._name,
-        cp = pp.context;
-      if (ip && cp) {
-        const pp = (0, op.J)(cp),
-          Op = pp.cachedPipelines[ip];
-        Op?.dispose(), delete pp.cachedPipelines[ip]
+    function jT(TT) {
+      const UT = TT._name,
+        mT = TT.context;
+      if (UT && mT) {
+        const TT = (0, zT.A)(mT),
+          WT = TT.cachedPipelines[UT];
+        WT?.dispose(), delete TT.cachedPipelines[UT]
       }
     }
 
-    function Ap(pp, ip, cp, op, Ip, Sp, Lp) {
-      let Yp, Dp;
-      const Ap = (0, Op.j)() ? Sp?.getHostDocument() : null;
-      Yp = "string" === typeof ip ? ip : "string" === typeof ip.vertexSource ? "source:" + ip.vertexSource : "string" === typeof ip.vertexElement ? Ap?.getElementById(ip.vertexElement) || ip.vertexElement : ip.vertex || ip, Dp = "string" === typeof ip ? ip : "string" === typeof ip.fragmentSource ? "source:" + ip.fragmentSource : "string" === typeof ip.fragmentElement ? Ap?.getElementById(ip.fragmentElement) || ip.fragmentElement : ip.fragment || ip;
-      const Wp = [void 0, void 0],
-        yp = () => {
-          if (Wp[0] && Wp[1]) {
-            const [Op, Yp] = Wp;
-            (0, xp.c)(pp), (0, xp.j)(Op, pp, ((Op, Dp) => {
-              Lp && (Lp._vertexSourceCodeBeforeMigration = Dp), cp && (Op = cp("vertex", Op)), pp.isFragment = !0, (0, xp.j)(Yp, pp, ((Sp, Yp) => {
-                Lp && (Lp._fragmentSourceCodeBeforeMigration = Yp), cp && (Sp = cp("fragment", Sp));
-                const Dp = (0, xp.b)(Op, Sp, pp);
-                pp = null;
-                const Ap = function(pp, ip, cp, Op) {
-                  if (cp) {
+    function lT(TT, UT, mT, zT, MT, gT, HT) {
+      let kT, jT;
+      const lT = (0, WT.j)() ? gT?.getHostDocument() : null;
+      kT = "string" === typeof UT ? UT : "string" === typeof UT.vertexSource ? "source:" + UT.vertexSource : "string" === typeof UT.vertexElement ? lT?.getElementById(UT.vertexElement) || UT.vertexElement : UT.vertex || UT, jT = "string" === typeof UT ? UT : "string" === typeof UT.fragmentSource ? "source:" + UT.fragmentSource : "string" === typeof UT.fragmentElement ? lT?.getElementById(UT.fragmentElement) || UT.fragmentElement : UT.fragment || UT;
+      const pT = [void 0, void 0],
+        BT = () => {
+          if (pT[0] && pT[1]) {
+            const [WT, kT] = pT;
+            (0, nT.d)(TT), (0, nT.h)(WT, TT, ((WT, jT) => {
+              HT && (HT._vertexSourceCodeBeforeMigration = jT), mT && (WT = mT("vertex", WT)), TT.isFragment = !0, (0, nT.h)(kT, TT, ((gT, kT) => {
+                HT && (HT._fragmentSourceCodeBeforeMigration = kT), mT && (gT = mT("fragment", gT));
+                const jT = (0, nT.b)(WT, gT, TT);
+                TT = null;
+                const lT = function(TT, UT, mT, WT) {
+                  if (mT) {
                     return {
-                      vertexSourceCode: (1 === Op ? "//" : "") + "#define SHADER_NAME vertex:" + (cp.vertexElement || cp.vertex || cp.spectorName || cp) + "\n" + pp,
-                      fragmentSourceCode: (1 === Op ? "//" : "") + "#define SHADER_NAME fragment:" + (cp.fragmentElement || cp.fragment || cp.spectorName || cp) + "\n" + ip
+                      vertexSourceCode: (1 === WT ? "//" : "") + "#define SHADER_NAME vertex:" + (mT.vertexElement || mT.vertex || mT.spectorName || mT) + "\n" + TT,
+                      fragmentSourceCode: (1 === WT ? "//" : "") + "#define SHADER_NAME fragment:" + (mT.fragmentElement || mT.fragment || mT.spectorName || mT) + "\n" + UT
                     }
                   }
                   return {
-                    vertexSourceCode: pp,
-                    fragmentSourceCode: ip
+                    vertexSourceCode: TT,
+                    fragmentSourceCode: UT
                   }
-                }(Dp.vertexCode, Dp.fragmentCode, ip, Ip);
-                op?.(Ap.vertexSourceCode, Ap.fragmentSourceCode)
-              }), Sp)
-            }), Sp)
+                }(jT.vertexCode, jT.fragmentCode, UT, MT);
+                zT?.(lT.vertexSourceCode, lT.fragmentSourceCode)
+              }), gT)
+            }), gT)
           }
         };
-      Pp(Yp, "Vertex", "", (pp => {
-        Lp && (Lp._rawVertexSourceCode = pp), Wp[0] = pp, yp()
-      }), Ip), Pp(Dp, "Fragment", "Pixel", (pp => {
-        Lp && (Lp._rawFragmentSourceCode = pp), Wp[1] = pp, yp()
-      }), Ip)
+      LT(kT, "Vertex", "", (TT => {
+        HT && (HT._rawVertexSourceCode = TT), pT[0] = TT, BT()
+      }), MT), LT(jT, "Fragment", "Pixel", (TT => {
+        HT && (HT._rawFragmentSourceCode = TT), pT[1] = TT, BT()
+      }), MT)
     }
 
-    function Pp(pp, ip, cp, op, Sp, xp) {
-      if ("undefined" !== typeof HTMLElement && pp instanceof HTMLElement) {
-        return void op((0, Op.d)(pp))
+    function LT(TT, UT, mT, zT, gT, nT) {
+      if ("undefined" !== typeof HTMLElement && TT instanceof HTMLElement) {
+        return void zT((0, WT.c)(TT))
       }
-      if ("source:" === pp.substring(0, 7)) return void op(pp.substring(7));
-      if ("base64:" === pp.substring(0, 7)) {
-        return void op(window.atob(pp.substring(7)))
+      if ("source:" === TT.substring(0, 7)) return void zT(TT.substring(7));
+      if ("base64:" === TT.substring(0, 7)) {
+        return void zT(window.atob(TT.substring(7)))
       }
-      const Yp = Ip.b.GetShadersStore(Sp);
-      if (Yp[pp + ip + "Shader"]) return void op(Yp[pp + ip + "Shader"]);
-      if (cp && Yp[pp + cp + "Shader"]) return void op(Yp[pp + cp + "Shader"]);
-      let Dp;
-      if (Dp = "." === pp[0] || "/" === pp[0] || pp.indexOf("http") > -1 ? pp : Ip.b.GetShadersRepository(Sp) + pp, !(xp = xp || Lp.n)) throw new Error("loadFileInjection is not defined");
-      xp(Dp + "." + ip.toLowerCase() + ".fx", op)
+      const kT = MT.d.GetShadersStore(gT);
+      if (kT[TT + UT + "Shader"]) return void zT(kT[TT + UT + "Shader"]);
+      if (mT && kT[TT + mT + "Shader"]) return void zT(kT[TT + mT + "Shader"]);
+      let jT;
+      if (jT = "." === TT[0] || "/" === TT[0] || TT.indexOf("http") > -1 ? TT : MT.d.GetShadersRepository(gT) + TT, !(nT = nT || HT.m)) throw new Error("loadFileInjection is not defined");
+      nT(jT + "." + UT.toLowerCase() + ".fx", zT)
     }
-    const Wp = (pp, ip, cp, Op) => {
+    const pT = (TT, UT, mT, WT) => {
       try {
-        const Ip = pp.context ? (0, op.J)(pp.context) : null;
-        Ip && (Ip.disableParallelShaderCompile = pp.disableParallelCompilation);
-        const Sp = pp.existingPipelineContext || ip(pp.shaderProcessingContext);
-        return Sp._name = pp.name, pp.name && Ip && (Ip.cachedPipelines[pp.name] = Sp), cp(Sp, pp.vertex, pp.fragment, !!pp.createAsRaw, "", "", pp.rebuildRebind, pp.defines, pp.transformFeedbackVaryings, "", (() => {
-          Op(Sp, (() => {
-            pp.onRenderingStateCompiled?.(Sp)
+        const MT = TT.context ? (0, zT.A)(TT.context) : null;
+        MT && (MT.disableParallelShaderCompile = TT.disableParallelCompilation);
+        const gT = TT.existingPipelineContext || UT(TT.shaderProcessingContext);
+        return gT._name = TT.name, TT.name && MT && (MT.cachedPipelines[TT.name] = gT), mT(gT, TT.vertex, TT.fragment, !!TT.createAsRaw, "", "", TT.rebuildRebind, TT.defines, TT.transformFeedbackVaryings, "", (() => {
+          WT(gT, (() => {
+            TT.onRenderingStateCompiled?.(gT)
           }))
-        })), Sp
-      } catch (Ip) {
-        throw Sp.e.Error("Error compiling effect"), Ip
+        })), gT
+      } catch (MT) {
+        throw gT.b.Error("Error compiling effect"), MT
       }
     }
   },
-  40053: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Lp
+  39926: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => HT
     });
-    var Op = cp(37349),
-      op = cp(38905),
-      Ip = cp(40062),
-      Sp = cp(40068),
-      xp = cp(40107);
-    class Lp {
+    var WT = mT(37219),
+      zT = mT(38800),
+      MT = mT(39934),
+      gT = mT(39938),
+      nT = mT(39975);
+    class HT {
       static get ShadersRepository() {
-        return Ip.b.ShadersRepository
+        return MT.d.ShadersRepository
       }
-      static set ShadersRepository(pp) {
-        Ip.b.ShadersRepository = pp
+      static set ShadersRepository(TT) {
+        MT.d.ShadersRepository = TT
       }
-      get uR() {
+      get bJ() {
         return this._isDisposed
       }
       get onBindObservable() {
-        return this._onBindObservable || (this._onBindObservable = new Op.d), this._onBindObservable
+        return this._onBindObservable || (this._onBindObservable = new WT.d), this._onBindObservable
       }
       get shaderLanguage() {
         return this._shaderLanguage
       }
-      constructor(pp, ip, cp) {
-        let op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Ip = arguments.length > 4 ? arguments[4] : void 0,
-          xp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          Yp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-          Dp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-          Ap = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-          Pp = arguments.length > 9 ? arguments[9] : void 0,
-          Wp = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : "",
-          yp = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0,
-          Up = arguments.length > 12 ? arguments[12] : void 0;
-        this.defines = "", this.onCompiled = null, this.onError = null, this.onBind = null, this.uniqueId = 0, this.onCompileObservable = new Op.d, this.onErrorObservable = new Op.d, this._onBindObservable = null, this._isDisposed = !1, this._refCount = 1, this._bonesComputationForcedToCPU = !1, this._uniformBuffersNames = {}, this._multiTarget = !1, this._samplers = {}, this._isReady = !1, this._compilationError = "", this._allFallbacksProcessed = !1, this._uniforms = {}, this._key = "", this._fallbacks = null, this._vertexSourceCodeOverride = "", this._fragmentSourceCodeOverride = "", this._transformFeedbackVaryings = null, this._disableParallelShaderCompilation = !1, this._pipelineContext = null, this._vertexSourceCode = "", this._fragmentSourceCode = "", this._vertexSourceCodeBeforeMigration = "", this._fragmentSourceCodeBeforeMigration = "", this._rawVertexSourceCode = "", this._rawFragmentSourceCode = "", this._processCodeAfterIncludes = void 0, this._processFinalCode = null, this._onReleaseEffectsObserver = null, this.name = pp, this._key = Wp;
-        const wp = this._key.replace(/\r/g, "").replace(/\n/g, "|");
-        let vp;
-        if (ip.attributes) {
-          const pp = ip;
-          if (this._engine = cp, this._attributesNames = pp.attributes, this._uniformsNames = pp.uniformsNames.concat(pp.samplers), this._samplerList = pp.samplers.slice(), this.defines = pp.defines, this.onError = pp.onError, this.onCompiled = pp.onCompiled, this._fallbacks = pp.fallbacks, this._indexParameters = pp.indexParameters, this._transformFeedbackVaryings = pp.transformFeedbackVaryings || null, this._multiTarget = !!pp.multiTarget, this._shaderLanguage = pp.shaderLanguage ?? 0, this._disableParallelShaderCompilation = !!pp.disableParallelShaderCompilation, pp.uniformBuffersNames) {
-            this._uniformBuffersNamesList = pp.uniformBuffersNames.slice();
-            for (let ip = 0; ip < pp.uniformBuffersNames.length; ip++) this._uniformBuffersNames[pp.uniformBuffersNames[ip]] = ip
+      constructor(TT, UT, mT) {
+        let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          MT = arguments.length > 4 ? arguments[4] : void 0,
+          nT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          kT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+          jT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+          lT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+          LT = arguments.length > 9 ? arguments[9] : void 0,
+          pT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : "",
+          BT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0,
+          ZT = arguments.length > 12 ? arguments[12] : void 0;
+        this.defines = "", this.onCompiled = null, this.onError = null, this.onBind = null, this.uniqueId = 0, this.onCompileObservable = new WT.d, this.onErrorObservable = new WT.d, this._onBindObservable = null, this._isDisposed = !1, this._refCount = 1, this._bonesComputationForcedToCPU = !1, this._uniformBuffersNames = {}, this._multiTarget = !1, this._samplers = {}, this._isReady = !1, this._compilationError = "", this._allFallbacksProcessed = !1, this._uniforms = {}, this._key = "", this._fallbacks = null, this._vertexSourceCodeOverride = "", this._fragmentSourceCodeOverride = "", this._transformFeedbackVaryings = null, this._disableParallelShaderCompilation = !1, this._pipelineContext = null, this._vertexSourceCode = "", this._fragmentSourceCode = "", this._vertexSourceCodeBeforeMigration = "", this._fragmentSourceCodeBeforeMigration = "", this._rawVertexSourceCode = "", this._rawFragmentSourceCode = "", this._processCodeAfterIncludes = void 0, this._processFinalCode = null, this._onReleaseEffectsObserver = null, this.name = TT, this._key = pT;
+        const cT = this._key.replace(/\r/g, "").replace(/\n/g, "|");
+        let vT;
+        if (UT.attributes) {
+          const TT = UT;
+          if (this._engine = mT, this._attributesNames = TT.attributes, this._uniformsNames = TT.uniformsNames.concat(TT.samplers), this._samplerList = TT.samplers.slice(), this.defines = TT.defines, this.onError = TT.onError, this.onCompiled = TT.onCompiled, this._fallbacks = TT.fallbacks, this._indexParameters = TT.indexParameters, this._transformFeedbackVaryings = TT.transformFeedbackVaryings || null, this._multiTarget = !!TT.multiTarget, this._shaderLanguage = TT.shaderLanguage ?? 0, this._disableParallelShaderCompilation = !!TT.disableParallelShaderCompilation, TT.uniformBuffersNames) {
+            this._uniformBuffersNamesList = TT.uniformBuffersNames.slice();
+            for (let UT = 0; UT < TT.uniformBuffersNames.length; UT++) this._uniformBuffersNames[TT.uniformBuffersNames[UT]] = UT
           }
-          this._processFinalCode = pp.processFinalCode ?? null, this._processCodeAfterIncludes = pp.processCodeAfterIncludes ?? void 0, Up = pp.extraInitializationsAsync, vp = pp.existingPipelineContext
-        } else this._engine = Ip, this.defines = null == xp ? "" : xp, this._uniformsNames = cp.concat(op), this._samplerList = op ? op.slice() : [], this._attributesNames = ip, this._uniformBuffersNamesList = [], this._shaderLanguage = yp, this.onError = Ap, this.onCompiled = Dp, this._indexParameters = Pp, this._fallbacks = Yp;
-        "WEBGL2" === this._engine.shaderPlatformName && (vp = (0, Sp.l)(wp, this._engine._gl) ?? vp), this._attributeLocationByName = {}, this.uniqueId = Lp._UniqueIdSeed++, vp ? (this._pipelineContext = vp, this._pipelineContext.setEngine(this._engine), this._onRenderingStateCompiled(this._pipelineContext), this._pipelineContext.program && (this._pipelineContext.program.__SPECTOR_rebuildProgram = this._rebuildProgram.bind(this))) : this._processShaderCodeAsync(null, !1, null, Up).catch((pp => {
-          const ip = pp?.message ?? String(pp),
-            cp = new Error(`Effect async shader preparation failed for "${String(this.name)}": ${ip}`);
-          pp && "string" === typeof pp.stack && (cp.stack = `${cp.message}\nCaused by: ${pp.stack}`), this._processCompilationErrors(cp)
+          this._processFinalCode = TT.processFinalCode ?? null, this._processCodeAfterIncludes = TT.processCodeAfterIncludes ?? void 0, ZT = TT.extraInitializationsAsync, vT = TT.existingPipelineContext
+        } else this._engine = MT, this.defines = null == nT ? "" : nT, this._uniformsNames = mT.concat(zT), this._samplerList = zT ? zT.slice() : [], this._attributesNames = UT, this._uniformBuffersNamesList = [], this._shaderLanguage = BT, this.onError = lT, this.onCompiled = jT, this._indexParameters = LT, this._fallbacks = kT;
+        "WEBGL2" === this._engine.shaderPlatformName && (vT = (0, gT.g)(cT, this._engine._gl) ?? vT), this._attributeLocationByName = {}, this.uniqueId = HT._UniqueIdSeed++, vT ? (this._pipelineContext = vT, this._pipelineContext.setEngine(this._engine), this._onRenderingStateCompiled(this._pipelineContext), this._pipelineContext.program && (this._pipelineContext.program.__SPECTOR_rebuildProgram = this._rebuildProgram.bind(this))) : this._processShaderCodeAsync(null, !1, null, ZT).catch((TT => {
+          const UT = TT?.message ?? String(TT),
+            mT = new Error(`Effect async shader preparation failed for "${String(this.name)}": ${UT}`);
+          TT && "string" === typeof TT.stack && (mT.stack = `${mT.message}\nCaused by: ${TT.stack}`), this._processCompilationErrors(mT)
         })), this._onReleaseEffectsObserver = this._engine.onReleaseEffectsObservable.addOnce((() => {
-          this._onReleaseEffectsObserver = null, this.uR || this.dispose(!0)
+          this._onReleaseEffectsObserver = null, this.bJ || this.dispose(!0)
         }))
       }
       async _processShaderCodeAsync() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Op = arguments.length > 3 ? arguments[3] : void 0;
-        Op && await Op(), this._processingContext = cp || this._engine._getShaderProcessingContext(this._shaderLanguage, !1);
-        const op = {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          WT = arguments.length > 3 ? arguments[3] : void 0;
+        WT && await WT(), this._processingContext = mT || this._engine._getShaderProcessingContext(this._shaderLanguage, !1);
+        const zT = {
           defines: this.defines.split("\n"),
           indexParameters: this._indexParameters,
           isFragment: !1,
           shouldUseHighPrecisionShader: this._engine._shouldUseHighPrecisionShader,
-          processor: pp ?? this._engine._getShaderProcessor(this._shaderLanguage),
+          processor: TT ?? this._engine._getShaderProcessor(this._shaderLanguage),
           supportsUniformBuffers: this._engine.supportsUniformBuffers,
-          shadersRepository: Ip.b.GetShadersRepository(this._shaderLanguage),
-          includesShadersStore: Ip.b.GetIncludesShadersStore(this._shaderLanguage),
+          shadersRepository: MT.d.GetShadersRepository(this._shaderLanguage),
+          includesShadersStore: MT.d.GetIncludesShadersStore(this._shaderLanguage),
           version: (100 * this._engine.version).toString(),
           platformName: this._engine.shaderPlatformName,
           processingContext: this._processingContext,
           isNDCHalfZRange: this._engine.isNDCHalfZRange,
-          lOp: this._engine.lOp,
+          pWT: this._engine.pWT,
           processCodeAfterIncludes: this._processCodeAfterIncludes
         };
-        (0, Sp.e)(op, this.name, this._processFinalCode, ((pp, cp) => {
-          this._vertexSourceCode = pp, this._fragmentSourceCode = cp, this._prepareEffect(ip)
+        (0, gT.c)(zT, this.name, this._processFinalCode, ((TT, mT) => {
+          this._vertexSourceCode = TT, this._fragmentSourceCode = mT, this._prepareEffect(UT)
         }), this._shaderLanguage, this._engine, this)
       }
       get key() {
@@ -3684,9 +3684,9 @@ export const modules = {
         }
       }
       _isReadyInternal() {
-        return !!this._engine.uR || (!!this._isReady || !!this._pipelineContext && this._pipelineContext.isReady)
+        return !!this._engine.bJ || (!!this._isReady || !!this._pipelineContext && this._pipelineContext.isReady)
       }
-      gy() {
+      eB() {
         return this._engine
       }
       getPipelineContext() {
@@ -3695,20 +3695,20 @@ export const modules = {
       getAttributesNames() {
         return this._attributesNames
       }
-      getAttributeLocation(pp) {
-        return this._attributes[pp]
+      getAttributeLocation(TT) {
+        return this._attributes[TT]
       }
-      getAttributeLocationByName(pp) {
-        return this._attributeLocationByName[pp]
+      getAttributeLocationByName(TT) {
+        return this._attributeLocationByName[TT]
       }
       getAttributesCount() {
         return this._attributes.length
       }
-      getUniformIndex(pp) {
-        return this._uniformsNames.indexOf(pp)
+      getUniformIndex(TT) {
+        return this._uniformsNames.indexOf(TT)
       }
-      getUniform(pp) {
-        return this._uniforms[pp]
+      getUniform(TT) {
+        return this._uniforms[TT]
       }
       getSamplers() {
         return this._samplerList
@@ -3729,18 +3729,18 @@ export const modules = {
         return this._allFallbacksProcessed
       }
       async whenCompiledAsync() {
-        return await new Promise((pp => {
-          this.executeWhenCompiled(pp)
+        return await new Promise((TT => {
+          this.executeWhenCompiled(TT)
         }))
       }
-      executeWhenCompiled(pp) {
-        this.isReady() ? pp(this) : (this.onCompileObservable.add((ip => {
-          pp(ip)
+      executeWhenCompiled(TT) {
+        this.isReady() ? TT(this) : (this.onCompileObservable.add((UT => {
+          TT(UT)
         })), this._pipelineContext && !this._pipelineContext.isAsync || this._checkIsReady(null))
       }
-      _checkIsReady(pp) {
-        (0, xp.c)((() => this._isReadyInternal() || this._isDisposed), (() => {}), (ip => {
-          this._processCompilationErrors(ip, pp)
+      _checkIsReady(TT) {
+        (0, nT.i)((() => this._isReadyInternal() || this._isDisposed), (() => {}), (UT => {
+          this._processCompilationErrors(UT, TT)
         }), 16, 12e4, !0, ` - Effect: ${"string"===typeof this.name?this.name:this.key}`)
       }
       get vertexSourceCode() {
@@ -3772,7 +3772,7 @@ export const modules = {
           extendedProcessingOptions: {
             indexParameters: this._indexParameters,
             isNDCHalfZRange: this._engine.isNDCHalfZRange,
-            lOp: this._engine.lOp,
+            pWT: this._engine.pWT,
             supportsUniformBuffers: this._engine.supportsUniformBuffers
           },
           extendedCreatePipelineOptions: {
@@ -3781,234 +3781,234 @@ export const modules = {
           }
         }
       }
-      _rebuildProgram(pp, ip, cp, Op) {
-        this._isReady = !1, this._vertexSourceCodeOverride = pp, this._fragmentSourceCodeOverride = ip, this.onError = (pp, ip) => {
-          Op && Op(ip)
+      _rebuildProgram(TT, UT, mT, WT) {
+        this._isReady = !1, this._vertexSourceCodeOverride = TT, this._fragmentSourceCodeOverride = UT, this.onError = (TT, UT) => {
+          WT && WT(UT)
         }, this.onCompiled = () => {
-          const pp = this.gy().scenes;
-          if (pp)
-            for (let ip = 0; ip < pp.length; ip++) pp[ip].markAllMaterialsAsDirty(127);
-          this._pipelineContext._handlesSpectorRebuildCallback?.(cp)
+          const TT = this.eB().scenes;
+          if (TT)
+            for (let UT = 0; UT < TT.length; UT++) TT[UT].markAllMaterialsAsDirty(127);
+          this._pipelineContext._handlesSpectorRebuildCallback?.(mT)
         }, this._fallbacks = null, this._prepareEffect()
       }
-      _onRenderingStateCompiled(pp) {
-        if (this._pipelineContext = pp, this._pipelineContext.setEngine(this._engine), this._attributes = [], this._pipelineContext._fillEffectInformation(this, this._uniformBuffersNames, this._uniformsNames, this._uniforms, this._samplerList, this._samplers, this._attributesNames, this._attributes), this._attributesNames)
-          for (let ip = 0; ip < this._attributesNames.length; ip++) {
-            const pp = this._attributesNames[ip];
-            this._attributeLocationByName[pp] = this._attributes[ip]
+      _onRenderingStateCompiled(TT) {
+        if (this._pipelineContext = TT, this._pipelineContext.setEngine(this._engine), this._attributes = [], this._pipelineContext._fillEffectInformation(this, this._uniformBuffersNames, this._uniformsNames, this._uniforms, this._samplerList, this._samplers, this._attributesNames, this._attributes), this._attributesNames)
+          for (let UT = 0; UT < this._attributesNames.length; UT++) {
+            const TT = this._attributesNames[UT];
+            this._attributeLocationByName[TT] = this._attributes[UT]
           }
-        this._engine.bindSamplers(this), this._compilationError = "", this._isReady = !0, this.onCompiled && this.onCompiled(this), this.onCompileObservable.notifyObservers(this), this.onCompileObservable.clear(), this._fallbacks && this._fallbacks.unBindMesh(), Lp.AutomaticallyClearCodeCache && this.clearCodeCache()
+        this._engine.bindSamplers(this), this._compilationError = "", this._isReady = !0, this.onCompiled && this.onCompiled(this), this.onCompileObservable.notifyObservers(this), this.onCompileObservable.clear(), this._fallbacks && this._fallbacks.unBindMesh(), HT.AutomaticallyClearCodeCache && this.clearCodeCache()
       }
       _prepareEffect() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ip = this._pipelineContext;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const UT = this._pipelineContext;
         this._isReady = !1;
         try {
-          const cp = !(!this._vertexSourceCodeOverride || !this._fragmentSourceCodeOverride),
-            Op = cp ? null : this.defines,
-            op = cp ? this._vertexSourceCodeOverride : this._vertexSourceCode,
-            Ip = cp ? this._fragmentSourceCodeOverride : this._fragmentSourceCode,
-            xp = this._engine;
-          this._pipelineContext = (0, Sp.i)({
-            existingPipelineContext: pp ? ip : null,
-            vertex: op,
-            fragment: Ip,
-            context: "WEBGL2" === xp.shaderPlatformName || "WEBGL1" === xp.shaderPlatformName ? xp._gl : void 0,
-            rebuildRebind: (pp, ip, cp, Op) => this._rebuildProgram(pp, ip, cp, Op),
-            defines: Op,
+          const mT = !(!this._vertexSourceCodeOverride || !this._fragmentSourceCodeOverride),
+            WT = mT ? null : this.defines,
+            zT = mT ? this._vertexSourceCodeOverride : this._vertexSourceCode,
+            MT = mT ? this._fragmentSourceCodeOverride : this._fragmentSourceCode,
+            nT = this._engine;
+          this._pipelineContext = (0, gT.f)({
+            existingPipelineContext: TT ? UT : null,
+            vertex: zT,
+            fragment: MT,
+            context: "WEBGL2" === nT.shaderPlatformName || "WEBGL1" === nT.shaderPlatformName ? nT._gl : void 0,
+            rebuildRebind: (TT, UT, mT, WT) => this._rebuildProgram(TT, UT, mT, WT),
+            defines: WT,
             transformFeedbackVaryings: this._transformFeedbackVaryings,
             name: this._key.replace(/\r/g, "").replace(/\n/g, "|"),
-            createAsRaw: cp,
+            createAsRaw: mT,
             disableParallelCompilation: this._disableParallelShaderCompilation,
             shaderProcessingContext: this._processingContext,
-            onRenderingStateCompiled: cp => {
-              ip && !pp && this._engine._deletePipelineContext(ip), cp && this._onRenderingStateCompiled(cp)
+            onRenderingStateCompiled: mT => {
+              UT && !TT && this._engine._deletePipelineContext(UT), mT && this._onRenderingStateCompiled(mT)
             }
-          }, this._engine.createPipelineContext.bind(this._engine), this._engine._preparePipelineContextAsync.bind(this._engine), this._engine._executeWhenRenderingStateIsCompiled.bind(this._engine)), this._pipelineContext.isAsync && this._checkIsReady(ip)
-        } catch (cp) {
-          this._processCompilationErrors(cp, ip)
+          }, this._engine.createPipelineContext.bind(this._engine), this._engine._preparePipelineContextAsync.bind(this._engine), this._engine._executeWhenRenderingStateIsCompiled.bind(this._engine)), this._pipelineContext.isAsync && this._checkIsReady(UT)
+        } catch (mT) {
+          this._processCompilationErrors(mT, UT)
         }
       }
-      _getShaderCodeAndErrorLine(pp, ip, cp) {
-        const Op = cp ? /FRAGMENT SHADER ERROR: 0:(\d+?):/ : /VERTEX SHADER ERROR: 0:(\d+?):/;
-        let op = null;
-        if (ip && pp) {
-          const Ip = ip.match(Op);
-          if (Ip && 2 === Ip.length) {
-            const ip = parseInt(Ip[1]),
-              Op = pp.split("\n", -1);
-            Op.length >= ip && (op = `Offending line [${ip}] in ${cp?"fragment":"vertex"} code: ${Op[ip-1]}`)
+      _getShaderCodeAndErrorLine(TT, UT, mT) {
+        const WT = mT ? /FRAGMENT SHADER ERROR: 0:(\d+?):/ : /VERTEX SHADER ERROR: 0:(\d+?):/;
+        let zT = null;
+        if (UT && TT) {
+          const MT = UT.match(WT);
+          if (MT && 2 === MT.length) {
+            const UT = parseInt(MT[1]),
+              WT = TT.split("\n", -1);
+            WT.length >= UT && (zT = `Offending line [${UT}] in ${mT?"fragment":"vertex"} code: ${WT[UT-1]}`)
           }
         }
-        return [pp, op]
+        return [TT, zT]
       }
-      _processCompilationErrors(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this._compilationError = "string" === typeof pp?.stack ? pp.stack : pp?.message ?? String(pp);
-        const cp = this._attributesNames,
-          Op = this._fallbacks;
-        if (op.e.Error("Unable to compile effect:"), op.e.Error(`Uniforms: ${this._uniformsNames.join(" ")}`), op.e.Error(`Attributes: ${cp.join(" ")}`), op.e.Error("Defines:\n" + this.defines), Lp.LogShaderCodeOnCompilationError) {
-          let pp, ip = null,
-            cp = null;
-          this._pipelineContext?._getVertexShaderCode() && ([pp, ip] = this._getShaderCodeAndErrorLine(this._pipelineContext._getVertexShaderCode(), this._compilationError, !1), pp && (op.e.Error("Vertex code:"), op.e.Error(pp))), this._pipelineContext?._getFragmentShaderCode() && ([pp, cp] = this._getShaderCodeAndErrorLine(this._pipelineContext?._getFragmentShaderCode(), this._compilationError, !0), pp && (op.e.Error("Fragment code:"), op.e.Error(pp))), ip && op.e.Error(ip), cp && op.e.Error(cp)
+      _processCompilationErrors(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this._compilationError = "string" === typeof TT?.stack ? TT.stack : TT?.message ?? String(TT);
+        const mT = this._attributesNames,
+          WT = this._fallbacks;
+        if (zT.b.Error("Unable to compile effect:"), zT.b.Error(`Uniforms: ${this._uniformsNames.join(" ")}`), zT.b.Error(`Attributes: ${mT.join(" ")}`), zT.b.Error("Defines:\n" + this.defines), HT.LogShaderCodeOnCompilationError) {
+          let TT, UT = null,
+            mT = null;
+          this._pipelineContext?._getVertexShaderCode() && ([TT, UT] = this._getShaderCodeAndErrorLine(this._pipelineContext._getVertexShaderCode(), this._compilationError, !1), TT && (zT.b.Error("Vertex code:"), zT.b.Error(TT))), this._pipelineContext?._getFragmentShaderCode() && ([TT, mT] = this._getShaderCodeAndErrorLine(this._pipelineContext?._getFragmentShaderCode(), this._compilationError, !0), TT && (zT.b.Error("Fragment code:"), zT.b.Error(TT))), UT && zT.b.Error(UT), mT && zT.b.Error(mT)
         }
-        op.e.Error("Error: " + this._compilationError);
-        const Ip = () => {
+        zT.b.Error("Error: " + this._compilationError);
+        const MT = () => {
           this.onError && this.onError(this, this._compilationError), this.onErrorObservable.notifyObservers(this), this._engine.onEffectErrorObservable.notifyObservers({
             effect: this,
             errors: this._compilationError
           })
         };
-        ip && (this._pipelineContext = ip, this._isReady = !0, Ip()), Op ? (this._pipelineContext = null, Op.hasMoreFallbacks ? (this._allFallbacksProcessed = !1, op.e.Error("Trying next fallback."), this.defines = Op.reduce(this.defines, this), this._prepareEffect()) : (this._allFallbacksProcessed = !0, Ip(), this.onErrorObservable.clear(), this._fallbacks && this._fallbacks.unBindMesh())) : (this._allFallbacksProcessed = !0, ip || Ip())
+        UT && (this._pipelineContext = UT, this._isReady = !0, MT()), WT ? (this._pipelineContext = null, WT.hasMoreFallbacks ? (this._allFallbacksProcessed = !1, zT.b.Error("Trying next fallback."), this.defines = WT.reduce(this.defines, this), this._prepareEffect()) : (this._allFallbacksProcessed = !0, MT(), this.onErrorObservable.clear(), this._fallbacks && this._fallbacks.unBindMesh())) : (this._allFallbacksProcessed = !0, UT || MT())
       }
       get isSupported() {
         return "" === this._compilationError
       }
-      _bindTexture(pp, ip) {
-        this._engine._bindTexture(this._samplers[pp], ip, pp)
+      _bindTexture(TT, UT) {
+        this._engine._bindTexture(this._samplers[TT], UT, TT)
       }
-      setTexture(pp, ip) {
-        this._engine.setTexture(this._samplers[pp], this._uniforms[pp], ip, pp)
+      setTexture(TT, UT) {
+        this._engine.setTexture(this._samplers[TT], this._uniforms[TT], UT, TT)
       }
-      setTextureArray(pp, ip) {
-        const cp = pp + "Ex";
-        if (-1 === this._samplerList.indexOf(cp + "0")) {
-          const Op = this._samplerList.indexOf(pp);
-          for (let pp = 1; pp < ip.length; pp++) {
-            const ip = cp + (pp - 1).toString();
-            this._samplerList.splice(Op + pp, 0, ip)
+      setTextureArray(TT, UT) {
+        const mT = TT + "Ex";
+        if (-1 === this._samplerList.indexOf(mT + "0")) {
+          const WT = this._samplerList.indexOf(TT);
+          for (let TT = 1; TT < UT.length; TT++) {
+            const UT = mT + (TT - 1).toString();
+            this._samplerList.splice(WT + TT, 0, UT)
           }
-          let op = 0;
-          for (const pp of this._samplerList) this._samplers[pp] = op, op += 1
+          let zT = 0;
+          for (const TT of this._samplerList) this._samplers[TT] = zT, zT += 1
         }
-        this._engine.setTextureArray(this._samplers[pp], this._uniforms[pp], ip, pp)
+        this._engine.setTextureArray(this._samplers[TT], this._uniforms[TT], UT, TT)
       }
-      bindUniformBuffer(pp, ip) {
-        const cp = this._uniformBuffersNames[ip];
-        void 0 === cp || Lp._BaseCache[cp] === pp && this._engine._features.useUBOBindingCache || (Lp._BaseCache[cp] = pp, this._engine.bindUniformBufferBase(pp, cp, ip))
+      bindUniformBuffer(TT, UT) {
+        const mT = this._uniformBuffersNames[UT];
+        void 0 === mT || HT._BaseCache[mT] === TT && this._engine._features.useUBOBindingCache || (HT._BaseCache[mT] = TT, this._engine.bindUniformBufferBase(TT, mT, UT))
       }
-      bindUniformBlock(pp, ip) {
-        this._engine.bindUniformBlock(this._pipelineContext, pp, ip)
+      bindUniformBlock(TT, UT) {
+        this._engine.bindUniformBlock(this._pipelineContext, TT, UT)
       }
-      setInt(pp, ip) {
-        return this._pipelineContext.setInt(pp, ip), this
+      setInt(TT, UT) {
+        return this._pipelineContext.setInt(TT, UT), this
       }
-      setInt2(pp, ip, cp) {
-        return this._pipelineContext.setInt2(pp, ip, cp), this
+      setInt2(TT, UT, mT) {
+        return this._pipelineContext.setInt2(TT, UT, mT), this
       }
-      setInt3(pp, ip, cp, Op) {
-        return this._pipelineContext.setInt3(pp, ip, cp, Op), this
+      setInt3(TT, UT, mT, WT) {
+        return this._pipelineContext.setInt3(TT, UT, mT, WT), this
       }
-      setInt4(pp, ip, cp, Op, op) {
-        return this._pipelineContext.setInt4(pp, ip, cp, Op, op), this
+      setInt4(TT, UT, mT, WT, zT) {
+        return this._pipelineContext.setInt4(TT, UT, mT, WT, zT), this
       }
-      setIntArray(pp, ip) {
-        return this._pipelineContext.setIntArray(pp, ip), this
+      setIntArray(TT, UT) {
+        return this._pipelineContext.setIntArray(TT, UT), this
       }
-      setIntArray2(pp, ip) {
-        return this._pipelineContext.setIntArray2(pp, ip), this
+      setIntArray2(TT, UT) {
+        return this._pipelineContext.setIntArray2(TT, UT), this
       }
-      setIntArray3(pp, ip) {
-        return this._pipelineContext.setIntArray3(pp, ip), this
+      setIntArray3(TT, UT) {
+        return this._pipelineContext.setIntArray3(TT, UT), this
       }
-      setIntArray4(pp, ip) {
-        return this._pipelineContext.setIntArray4(pp, ip), this
+      setIntArray4(TT, UT) {
+        return this._pipelineContext.setIntArray4(TT, UT), this
       }
-      setUInt(pp, ip) {
-        return this._pipelineContext.setUInt(pp, ip), this
+      setUInt(TT, UT) {
+        return this._pipelineContext.setUInt(TT, UT), this
       }
-      setUInt2(pp, ip, cp) {
-        return this._pipelineContext.setUInt2(pp, ip, cp), this
+      setUInt2(TT, UT, mT) {
+        return this._pipelineContext.setUInt2(TT, UT, mT), this
       }
-      setUInt3(pp, ip, cp, Op) {
-        return this._pipelineContext.setUInt3(pp, ip, cp, Op), this
+      setUInt3(TT, UT, mT, WT) {
+        return this._pipelineContext.setUInt3(TT, UT, mT, WT), this
       }
-      setUInt4(pp, ip, cp, Op, op) {
-        return this._pipelineContext.setUInt4(pp, ip, cp, Op, op), this
+      setUInt4(TT, UT, mT, WT, zT) {
+        return this._pipelineContext.setUInt4(TT, UT, mT, WT, zT), this
       }
-      setUIntArray(pp, ip) {
-        return this._pipelineContext.setUIntArray(pp, ip), this
+      setUIntArray(TT, UT) {
+        return this._pipelineContext.setUIntArray(TT, UT), this
       }
-      setUIntArray2(pp, ip) {
-        return this._pipelineContext.setUIntArray2(pp, ip), this
+      setUIntArray2(TT, UT) {
+        return this._pipelineContext.setUIntArray2(TT, UT), this
       }
-      setUIntArray3(pp, ip) {
-        return this._pipelineContext.setUIntArray3(pp, ip), this
+      setUIntArray3(TT, UT) {
+        return this._pipelineContext.setUIntArray3(TT, UT), this
       }
-      setUIntArray4(pp, ip) {
-        return this._pipelineContext.setUIntArray4(pp, ip), this
+      setUIntArray4(TT, UT) {
+        return this._pipelineContext.setUIntArray4(TT, UT), this
       }
-      setFloatArray(pp, ip) {
-        return this._pipelineContext.setArray(pp, ip), this
+      setFloatArray(TT, UT) {
+        return this._pipelineContext.setArray(TT, UT), this
       }
-      setFloatArray2(pp, ip) {
-        return this._pipelineContext.setArray2(pp, ip), this
+      setFloatArray2(TT, UT) {
+        return this._pipelineContext.setArray2(TT, UT), this
       }
-      setFloatArray3(pp, ip) {
-        return this._pipelineContext.setArray3(pp, ip), this
+      setFloatArray3(TT, UT) {
+        return this._pipelineContext.setArray3(TT, UT), this
       }
-      setFloatArray4(pp, ip) {
-        return this._pipelineContext.setArray4(pp, ip), this
+      setFloatArray4(TT, UT) {
+        return this._pipelineContext.setArray4(TT, UT), this
       }
-      setArray(pp, ip) {
-        return this._pipelineContext.setArray(pp, ip), this
+      setArray(TT, UT) {
+        return this._pipelineContext.setArray(TT, UT), this
       }
-      setArray2(pp, ip) {
-        return this._pipelineContext.setArray2(pp, ip), this
+      setArray2(TT, UT) {
+        return this._pipelineContext.setArray2(TT, UT), this
       }
-      setArray3(pp, ip) {
-        return this._pipelineContext.setArray3(pp, ip), this
+      setArray3(TT, UT) {
+        return this._pipelineContext.setArray3(TT, UT), this
       }
-      setArray4(pp, ip) {
-        return this._pipelineContext.setArray4(pp, ip), this
+      setArray4(TT, UT) {
+        return this._pipelineContext.setArray4(TT, UT), this
       }
-      setMatrices(pp, ip) {
-        return this._pipelineContext.setMatrices(pp, ip), this
+      setMatrices(TT, UT) {
+        return this._pipelineContext.setMatrices(TT, UT), this
       }
-      setMatrix(pp, ip) {
-        return this._pipelineContext.setMatrix(pp, ip), this
+      setMatrix(TT, UT) {
+        return this._pipelineContext.setMatrix(TT, UT), this
       }
-      setMatrix3x3(pp, ip) {
-        return this._pipelineContext.setMatrix3x3(pp, ip), this
+      setMatrix3x3(TT, UT) {
+        return this._pipelineContext.setMatrix3x3(TT, UT), this
       }
-      setMatrix2x2(pp, ip) {
-        return this._pipelineContext.setMatrix2x2(pp, ip), this
+      setMatrix2x2(TT, UT) {
+        return this._pipelineContext.setMatrix2x2(TT, UT), this
       }
-      setFloat(pp, ip) {
-        return this._pipelineContext.setFloat(pp, ip), this
+      setFloat(TT, UT) {
+        return this._pipelineContext.setFloat(TT, UT), this
       }
-      setBool(pp, ip) {
-        return this._pipelineContext.setInt(pp, ip ? 1 : 0), this
+      setBool(TT, UT) {
+        return this._pipelineContext.setInt(TT, UT ? 1 : 0), this
       }
-      setVector2(pp, ip) {
-        return this._pipelineContext.setVector2(pp, ip), this
+      setVector2(TT, UT) {
+        return this._pipelineContext.setVector2(TT, UT), this
       }
-      setFloat2(pp, ip, cp) {
-        return this._pipelineContext.setFloat2(pp, ip, cp), this
+      setFloat2(TT, UT, mT) {
+        return this._pipelineContext.setFloat2(TT, UT, mT), this
       }
-      setVector3(pp, ip) {
-        return this._pipelineContext.setVector3(pp, ip), this
+      setVector3(TT, UT) {
+        return this._pipelineContext.setVector3(TT, UT), this
       }
-      setFloat3(pp, ip, cp, Op) {
-        return this._pipelineContext.setFloat3(pp, ip, cp, Op), this
+      setFloat3(TT, UT, mT, WT) {
+        return this._pipelineContext.setFloat3(TT, UT, mT, WT), this
       }
-      setVector4(pp, ip) {
-        return this._pipelineContext.setVector4(pp, ip), this
+      setVector4(TT, UT) {
+        return this._pipelineContext.setVector4(TT, UT), this
       }
-      setQuaternion(pp, ip) {
-        return this._pipelineContext.setQuaternion(pp, ip), this
+      setQuaternion(TT, UT) {
+        return this._pipelineContext.setQuaternion(TT, UT), this
       }
-      setFloat4(pp, ip, cp, Op, op) {
-        return this._pipelineContext.setFloat4(pp, ip, cp, Op, op), this
+      setFloat4(TT, UT, mT, WT, zT) {
+        return this._pipelineContext.setFloat4(TT, UT, mT, WT, zT), this
       }
-      setColor3(pp, ip) {
-        return this._pipelineContext.setColor3(pp, ip), this
+      setColor3(TT, UT) {
+        return this._pipelineContext.setColor3(TT, UT), this
       }
-      setColor4(pp, ip, cp) {
-        return this._pipelineContext.setColor4(pp, ip, cp), this
+      setColor4(TT, UT, mT) {
+        return this._pipelineContext.setColor4(TT, UT, mT), this
       }
-      setDirectColor4(pp, ip) {
-        return this._pipelineContext.setDirectColor4(pp, ip), this
+      setDirectColor4(TT, UT) {
+        return this._pipelineContext.setDirectColor4(TT, UT), this
       }
       clearCodeCache() {
         this._vertexSourceCode = "", this._fragmentSourceCode = "", this._fragmentSourceCodeBeforeMigration = "", this._vertexSourceCodeBeforeMigration = ""
@@ -4016,142 +4016,142 @@ export const modules = {
       dispose() {
         if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) this._refCount = 0;
         else {
-          if (Lp.PersistentMode) return;
+          if (HT.PersistentMode) return;
           this._refCount--
         }
-        this._refCount > 0 || this._isDisposed || (this._onReleaseEffectsObserver && (this._engine.onReleaseEffectsObservable.remove(this._onReleaseEffectsObserver), this._onReleaseEffectsObserver = null), this._pipelineContext && (0, Sp.o)(this._pipelineContext), this._engine._releaseEffect(this), this.clearCodeCache(), this._isDisposed = !0)
+        this._refCount > 0 || this._isDisposed || (this._onReleaseEffectsObserver && (this._engine.onReleaseEffectsObservable.remove(this._onReleaseEffectsObserver), this._onReleaseEffectsObserver = null), this._pipelineContext && (0, gT.h)(this._pipelineContext), this._engine._releaseEffect(this), this.clearCodeCache(), this._isDisposed = !0)
       }
-      static RegisterShader(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        ip && (Ip.b.GetShadersStore(Op)[`${pp}PixelShader`] = ip), cp && (Ip.b.GetShadersStore(Op)[`${pp}VertexShader`] = cp)
+      static RegisterShader(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        UT && (MT.d.GetShadersStore(WT)[`${TT}PixelShader`] = UT), mT && (MT.d.GetShadersStore(WT)[`${TT}VertexShader`] = mT)
       }
       static ResetCache() {
-        Lp._BaseCache = {}
+        HT._BaseCache = {}
       }
     }
-    Lp.LogShaderCodeOnCompilationError = !0, Lp.PersistentMode = !1, Lp.AutomaticallyClearCodeCache = !1, Lp._UniqueIdSeed = 0, Lp._BaseCache = {}, Lp.ShadersStore = Ip.b.ShadersStore, Lp.IncludesShadersStore = Ip.b.IncludesShadersStore
+    HT.LogShaderCodeOnCompilationError = !0, HT.PersistentMode = !1, HT.AutomaticallyClearCodeCache = !1, HT._UniqueIdSeed = 0, HT._BaseCache = {}, HT.ShadersStore = MT.d.ShadersStore, HT.IncludesShadersStore = MT.d.IncludesShadersStore
   },
-  40352: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Dp,
-      g: () => kp,
-      i: () => jp
+  40263: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => jT,
+      c: () => eT,
+      d: () => OT
     });
-    var Op = cp(40053),
-      op = cp(37320),
-      Ip = cp(37359),
-      Sp = cp(40332);
-    const xp = new op.b,
-      Lp = new op.b,
-      Yp = new op.b,
-      Dp = {
-        Gl: () => {},
+    var WT = mT(39926),
+      zT = mT(37188),
+      MT = mT(37232),
+      gT = mT(40242);
+    const nT = new zT.e,
+      HT = new zT.e,
+      kT = new zT.e,
+      jT = {
+        KF: () => {},
         eyeAtCamera: !0
       };
 
-    function Ap(pp, ip, cp) {
-      const Op = cp.BOp(),
-        op = ip.BOp();
-      for (let Ip = 0; Ip < 16; Ip++) Op[Ip] = op[Ip];
-      return Op[12] -= pp.x, Op[13] -= pp.y, Op[14] -= pp.z, cp.markAsUpdated(), cp
+    function lT(TT, UT, mT) {
+      const WT = mT.cWT(),
+        zT = UT.cWT();
+      for (let MT = 0; MT < 16; MT++) WT[MT] = zT[MT];
+      return WT[12] -= TT.x, WT[13] -= TT.y, WT[14] -= TT.z, mT.markAsUpdated(), mT
     }
 
-    function Pp(pp, ip, cp) {
-      return (0, Ip.g)(ip, Lp), Ap(pp, Lp, Yp), (0, Ip.g)(Yp, cp), cp
+    function LT(TT, UT, mT) {
+      return (0, MT.l)(UT, HT), lT(TT, HT, kT), (0, MT.l)(kT, mT), mT
     }
 
-    function Wp(pp, ip, cp) {
-      if (!Dp.eyeAtCamera) return Pp(pp, ip, cp);
-      const Op = cp.BOp(),
-        op = ip.BOp();
-      for (let Ip = 0; Ip < 16; Ip++) Op[Ip] = op[Ip];
-      return Op[12] = 0, Op[13] = 0, Op[14] = 0, cp.markAsUpdated(), cp
+    function pT(TT, UT, mT) {
+      if (!jT.eyeAtCamera) return LT(TT, UT, mT);
+      const WT = mT.cWT(),
+        zT = UT.cWT();
+      for (let MT = 0; MT < 16; MT++) WT[MT] = zT[MT];
+      return WT[12] = 0, WT[13] = 0, WT[14] = 0, mT.markAsUpdated(), mT
     }
 
-    function yp(pp, ip, cp, Op) {
-      return (0, Ip.p)(Wp(pp, ip, Op), cp, Op), Op
+    function BT(TT, UT, mT, WT) {
+      return (0, MT.t)(pT(TT, UT, WT), mT, WT), WT
     }
 
-    function Up(pp, ip, cp, Op) {
-      return (0, Ip.g)(cp, Lp), (0, Ip.p)(ip, Lp, Yp), Ap(pp, Yp, Lp), Wp(pp, cp, Yp), (0, Ip.p)(Lp, Yp, Op), Op
+    function ZT(TT, UT, mT, WT) {
+      return (0, MT.l)(mT, HT), (0, MT.t)(UT, HT, kT), lT(TT, kT, HT), pT(TT, mT, kT), (0, MT.t)(HT, kT, WT), WT
     }
 
-    function wp(pp, ip, cp, Op, op, Sp) {
-      return (0, Ip.g)(cp, Lp), (0, Ip.p)(ip, Lp, Yp), Ap(pp, Yp, Lp), yp(pp, Op, op, Yp), (0, Ip.p)(Lp, Yp, Sp), Sp
+    function cT(TT, UT, mT, WT, zT, gT) {
+      return (0, MT.l)(mT, HT), (0, MT.t)(UT, HT, kT), lT(TT, kT, HT), BT(TT, WT, zT, kT), (0, MT.t)(HT, kT, gT), gT
     }
 
-    function vp(pp, ip) {
-      const cp = Dp.Gl();
-      if (!cp || xp === ip) return ip;
-      xp.updateFlag = ip.updateFlag;
-      const Op = cp.floatingOriginOffset;
-      switch (pp) {
+    function vT(TT, UT) {
+      const mT = jT.KF();
+      if (!mT || nT === UT) return UT;
+      nT.updateFlag = UT.updateFlag;
+      const WT = mT.floatingOriginOffset;
+      switch (TT) {
         case "world":
-          return Ap(Op, ip, xp);
+          return lT(WT, UT, nT);
         case "view":
-          return Wp(Op, ip, xp);
+          return pT(WT, UT, nT);
         case "worldView":
-          return Up(Op, ip, cp.getViewMatrix(), xp);
+          return ZT(WT, UT, mT.getViewMatrix(), nT);
         case "viewProjection":
-          return yp(Op, cp.getViewMatrix(), cp.getProjectionMatrix(), xp);
+          return BT(WT, mT.getViewMatrix(), mT.getProjectionMatrix(), nT);
         case "worldViewProjection":
-          return wp(Op, ip, cp.getTransformMatrix(), cp.getViewMatrix(), cp.getProjectionMatrix(), xp);
+          return cT(WT, UT, mT.getTransformMatrix(), mT.getViewMatrix(), mT.getProjectionMatrix(), nT);
         default:
-          if (pp.startsWith("u_")) {
-            const op = pp.toLowerCase();
-            if (op.startsWith("u_worldviewprojection")) return wp(Op, ip, cp.getTransformMatrix(), cp.getViewMatrix(), cp.getProjectionMatrix(), xp);
-            if (op.startsWith("u_viewprojection")) return yp(Op, cp.getViewMatrix(), cp.getProjectionMatrix(), xp);
-            if (op.startsWith("u_worldview")) return Up(Op, ip, cp.getViewMatrix(), xp);
-            if (op.startsWith("u_world")) return Ap(Op, ip, xp);
-            if (op.startsWith("u_view")) return Wp(Op, ip, xp)
+          if (TT.startsWith("u_")) {
+            const zT = TT.toLowerCase();
+            if (zT.startsWith("u_worldviewprojection")) return cT(WT, UT, mT.getTransformMatrix(), mT.getViewMatrix(), mT.getProjectionMatrix(), nT);
+            if (zT.startsWith("u_viewprojection")) return BT(WT, mT.getViewMatrix(), mT.getProjectionMatrix(), nT);
+            if (zT.startsWith("u_worldview")) return ZT(WT, UT, mT.getViewMatrix(), nT);
+            if (zT.startsWith("u_world")) return lT(WT, UT, nT);
+            if (zT.startsWith("u_view")) return pT(WT, UT, nT)
           }
-          return ip
+          return UT
       }
     }
-    const tp = Sp.b,
-      Hp = Op.e,
-      dp = tp.prototype._updateMatrixForUniform,
-      ep = Op.e.prototype.setMatrix;
+    const fT = gT.c,
+      qT = WT.b,
+      iT = fT.prototype._updateMatrixForUniform,
+      bT = WT.b.prototype.setMatrix;
 
-    function jp() {
-      Op.e.prototype.setMatrix = ep, Hp._setMatrixOverride = void 0, tp.prototype._updateMatrixForUniform = dp, tp.prototype._updateMatrixForUniformOverride = void 0
+    function OT() {
+      WT.b.prototype.setMatrix = bT, qT._setMatrixOverride = void 0, fT.prototype._updateMatrixForUniform = iT, fT.prototype._updateMatrixForUniformOverride = void 0
     }
 
-    function kp() {
-      Hp.prototype._setMatrixOverride = ep, Hp.prototype.setMatrix = function(pp, ip) {
-        return this._setMatrixOverride(pp, vp(pp, ip)), this
-      }, tp.prototype._updateMatrixForUniformOverride = dp, tp.prototype._updateMatrixForUniform = function(pp, ip) {
-        this._updateMatrixForUniformOverride(pp, vp(pp, ip))
+    function eT() {
+      qT.prototype._setMatrixOverride = bT, qT.prototype.setMatrix = function(TT, UT) {
+        return this._setMatrixOverride(TT, vT(TT, UT)), this
+      }, fT.prototype._updateMatrixForUniformOverride = iT, fT.prototype._updateMatrixForUniform = function(TT, UT) {
+        this._updateMatrixForUniformOverride(TT, vT(TT, UT))
       }
     }
   },
-  40324: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ip,
-      f: () => op
+  40235: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT,
+      e: () => zT
     });
-    var Op = cp(40322);
+    var WT = mT(40228);
 
-    function op(pp, ip) {
-      ip.WHITEBALANCE && pp.push("whiteBalanceMatrix"), ip.EXPOSURE && pp.push("exposureLinear"), ip.CONTRAST && pp.push("contrast"), ip.COLORGRADING && pp.push("colorTransformSettings"), (ip.VIGNETTE || ip.DITHER) && pp.push("vInverseScreenSize"), ip.VIGNETTE && (pp.push("vignetteSettings1"), pp.push("vignetteSettings2")), ip.COLORCURVES && (0, Op.c)(pp), ip.DITHER && pp.push("ditherIntensity")
+    function zT(TT, UT) {
+      UT.WHITEBALANCE && TT.push("whiteBalanceMatrix"), UT.EXPOSURE && TT.push("exposureLinear"), UT.CONTRAST && TT.push("contrast"), UT.COLORGRADING && TT.push("colorTransformSettings"), (UT.VIGNETTE || UT.DITHER) && TT.push("vInverseScreenSize"), UT.VIGNETTE && (TT.push("vignetteSettings1"), TT.push("vignetteSettings2")), UT.COLORCURVES && (0, WT.d)(TT), UT.DITHER && TT.push("ditherIntensity")
     }
 
-    function Ip(pp, ip) {
-      ip.COLORGRADING && pp.push("txColorTransform")
+    function MT(TT, UT) {
+      UT.COLORGRADING && TT.push("txColorTransform")
     }
   },
-  40318: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Cp,
-      g: () => lp
+  40223: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => wT,
+      d: () => yT
     });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(37349),
-      Sp = cp(37487),
-      xp = cp(37356),
-      Lp = cp(37320);
-    const Yp = [
+    var WT = mT(40095),
+      zT = mT(40102),
+      MT = mT(37219),
+      gT = mT(37367),
+      nT = mT(37226),
+      HT = mT(37188);
+    const kT = [
         [0, .18006, .26352, -.24341],
         [10, .18066, .26589, -.25479],
         [20, .18133, .26846, -.26876],
@@ -4184,609 +4184,609 @@ export const modules = {
         [575, .32931, .36038, -40.77],
         [600, .33724, .36051, -116.45]
       ],
-      Dp = 1e6 / Yp[Yp.length - 1][0],
-      Ap = 150;
+      jT = 1e6 / kT[kT.length - 1][0],
+      lT = 150;
 
-    function Pp(pp, ip) {
-      const cp = Number.isNaN(pp) ? Dp : Math.max(pp, Dp),
-        Op = (0, xp.Clamp)(1e6 / cp, Yp[0][0], Yp[Yp.length - 1][0]);
-      let op = 0,
-        Ip = Yp.length - 1;
-      for (; Ip - op > 1;) {
-        const pp = op + Ip >> 1;
-        Yp[pp][0] <= Op ? op = pp : Ip = pp
+    function LT(TT, UT) {
+      const mT = Number.isNaN(TT) ? jT : Math.max(TT, jT),
+        WT = (0, nT.Clamp)(1e6 / mT, kT[0][0], kT[kT.length - 1][0]);
+      let zT = 0,
+        MT = kT.length - 1;
+      for (; MT - zT > 1;) {
+        const TT = zT + MT >> 1;
+        kT[TT][0] <= WT ? zT = TT : MT = TT
       }
-      const Sp = op,
-        [Pp, Wp, yp, Up] = Yp[Sp],
-        [wp, vp, tp, Hp] = Yp[Sp + 1],
-        dp = (Op - Pp) / (wp - Pp),
-        ep = Lp.l.Lerp(new Lp.l(Wp, yp), new Lp.l(vp, tp), dp),
-        jp = Lp.l.Normalize(new Lp.l(1, Up)),
-        kp = Lp.l.Normalize(new Lp.l(1, Hp)),
-        mp = Lp.l.Normalize(Lp.l.Lerp(jp, kp, dp)),
-        Rp = (0, xp.Clamp)(ip, -150, Ap);
-      ep.Iop(mp.scale(Rp / 3e3));
-      const qp = 2 * ep.x - 8 * ep.y + 4,
-        Mp = 3 * ep.x / qp,
-        Cp = 2 * ep.y / qp;
-      return new Lp.o(Mp / Cp, 1, (1 - Mp - Cp) / Cp)
+      const gT = zT,
+        [LT, pT, BT, ZT] = kT[gT],
+        [cT, vT, fT, qT] = kT[gT + 1],
+        iT = (WT - LT) / (cT - LT),
+        bT = HT.o.Lerp(new HT.o(pT, BT), new HT.o(vT, fT), iT),
+        OT = HT.o.Normalize(new HT.o(1, ZT)),
+        eT = HT.o.Normalize(new HT.o(1, qT)),
+        YT = HT.o.Normalize(HT.o.Lerp(OT, eT, iT)),
+        JT = (0, nT.Clamp)(UT, -150, lT);
+      bT.FWT(YT.scale(JT / 3e3));
+      const xT = 2 * bT.x - 8 * bT.y + 4,
+        dT = 3 * bT.x / xT,
+        wT = 2 * bT.y / xT;
+      return new HT.p(dT / wT, 1, (1 - dT - wT) / wT)
     }
-    const Wp = Lp.b.FromArray([.8951, -.7502, .0389, 0, .2664, 1.7135, -.0685, 0, -.1614, .0367, 1.0296, 0, 0, 0, 0, 1]),
-      yp = Lp.b.Invert(Wp);
+    const pT = HT.e.FromArray([.8951, -.7502, .0389, 0, .2664, 1.7135, -.0685, 0, -.1614, .0367, 1.0296, 0, 0, 0, 0, 1]),
+      BT = HT.e.Invert(pT);
 
-    function Up(pp, ip) {
-      const cp = ip > 0 ? pp / ip : 10;
-      return (0, xp.Clamp)(cp, .1, 10)
+    function ZT(TT, UT) {
+      const mT = UT > 0 ? TT / UT : 10;
+      return (0, nT.Clamp)(mT, .1, 10)
     }
 
-    function wp(pp, ip) {
-      const cp = Lp.o.TransformNormal(pp, Wp),
-        Op = Lp.o.TransformNormal(ip, Wp),
-        op = Lp.b.FromArray([Up(Op.x, cp.x), 0, 0, 0, 0, Up(Op.y, cp.y), 0, 0, 0, 0, Up(Op.z, cp.z), 0, 0, 0, 0, 1]);
-      return Wp.multiply(op).multiply(yp)
+    function cT(TT, UT) {
+      const mT = HT.p.TransformNormal(TT, pT),
+        WT = HT.p.TransformNormal(UT, pT),
+        zT = HT.e.FromArray([ZT(WT.x, mT.x), 0, 0, 0, 0, ZT(WT.y, mT.y), 0, 0, 0, 0, ZT(WT.z, mT.z), 0, 0, 0, 0, 1]);
+      return pT.multiply(zT).multiply(BT)
     }
-    const vp = new Lp.o(.95047, 1, 1.08883),
-      tp = Lp.b.FromArray([.4124564, .2126729, .0193339, 0, .3575761, .7151522, .119192, 0, .1804375, .072175, .9503041, 0, 0, 0, 0, 1]).multiply(wp(vp, Pp(6500, 0))),
-      Hp = Lp.b.Invert(tp),
-      dp = Lp.o.TransformNormal(new Lp.o(1, 1, 1), tp);
-    var ep = cp(40233),
-      jp = cp(40322);
-    let kp = (() => {
-      var pp;
-      let ip, cp, Ip, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, Up, wp = [],
-        vp = [],
-        tp = [],
-        Hp = [],
-        dp = [],
-        kp = [],
-        mp = [],
-        Rp = [],
-        qp = [],
-        Mp = [],
-        Cp = [],
-        Ep = [],
-        Xp = [],
-        lp = [],
-        Qp = [],
-        Jp = [],
-        Bp = [],
-        Np = [],
-        Tp = [],
-        fp = [],
-        bp = [],
-        hp = [],
-        ap = [],
-        np = [];
-      return pp = class {
+    const vT = new HT.p(.95047, 1, 1.08883),
+      fT = HT.e.FromArray([.4124564, .2126729, .0193339, 0, .3575761, .7151522, .119192, 0, .1804375, .072175, .9503041, 0, 0, 0, 0, 1]).multiply(cT(vT, LT(6500, 0))),
+      qT = HT.e.Invert(fT),
+      iT = HT.p.TransformNormal(new HT.p(1, 1, 1), fT);
+    var bT = mT(40122),
+      OT = mT(40228);
+    let eT = (() => {
+      var TT;
+      let UT, mT, MT, nT, HT, kT, jT, lT, LT, pT, BT, ZT, cT = [],
+        vT = [],
+        fT = [],
+        qT = [],
+        iT = [],
+        eT = [],
+        YT = [],
+        JT = [],
+        xT = [],
+        dT = [],
+        wT = [],
+        tT = [],
+        aT = [],
+        yT = [],
+        XT = [],
+        IT = [],
+        QT = [],
+        sT = [],
+        FT = [],
+        PT = [],
+        VT = [],
+        uT = [],
+        CT = [],
+        rT = [];
+      return TT = class {
         constructor() {
-          this._dirty = !0, this._tempColor = new Sp.h(0, 0, 0, 0), this._globalCurve = new Sp.h(0, 0, 0, 0), this._highlightsCurve = new Sp.h(0, 0, 0, 0), this._midtonesCurve = new Sp.h(0, 0, 0, 0), this._shadowsCurve = new Sp.h(0, 0, 0, 0), this._positiveCurve = new Sp.h(0, 0, 0, 0), this._negativeCurve = new Sp.h(0, 0, 0, 0), this._globalHue = (0, Op.l)(this, wp, 30), this._globalDensity = ((0, Op.l)(this, vp), (0, Op.l)(this, tp, 0)), this._globalSaturation = ((0, Op.l)(this, Hp), (0, Op.l)(this, dp, 0)), this._globalExposure = ((0, Op.l)(this, kp), (0, Op.l)(this, mp, 0)), this._highlightsHue = ((0, Op.l)(this, Rp), (0, Op.l)(this, qp, 30)), this._highlightsDensity = ((0, Op.l)(this, Mp), (0, Op.l)(this, Cp, 0)), this._highlightsSaturation = ((0, Op.l)(this, Ep), (0, Op.l)(this, Xp, 0)), this._highlightsExposure = ((0, Op.l)(this, lp), (0, Op.l)(this, Qp, 0)), this._midtonesHue = ((0, Op.l)(this, Jp), (0, Op.l)(this, Bp, 30)), this._midtonesDensity = ((0, Op.l)(this, Np), (0, Op.l)(this, Tp, 0)), this._midtonesSaturation = ((0, Op.l)(this, fp), (0, Op.l)(this, bp, 0)), this._midtonesExposure = ((0, Op.l)(this, hp), (0, Op.l)(this, ap, 0)), this._shadowsHue = ((0, Op.l)(this, np), 30), this._shadowsDensity = 0, this._shadowsSaturation = 0, this._shadowsExposure = 0
+          this._dirty = !0, this._tempColor = new gT.g(0, 0, 0, 0), this._globalCurve = new gT.g(0, 0, 0, 0), this._highlightsCurve = new gT.g(0, 0, 0, 0), this._midtonesCurve = new gT.g(0, 0, 0, 0), this._shadowsCurve = new gT.g(0, 0, 0, 0), this._positiveCurve = new gT.g(0, 0, 0, 0), this._negativeCurve = new gT.g(0, 0, 0, 0), this._globalHue = (0, WT.k)(this, cT, 30), this._globalDensity = ((0, WT.k)(this, vT), (0, WT.k)(this, fT, 0)), this._globalSaturation = ((0, WT.k)(this, qT), (0, WT.k)(this, iT, 0)), this._globalExposure = ((0, WT.k)(this, eT), (0, WT.k)(this, YT, 0)), this._highlightsHue = ((0, WT.k)(this, JT), (0, WT.k)(this, xT, 30)), this._highlightsDensity = ((0, WT.k)(this, dT), (0, WT.k)(this, wT, 0)), this._highlightsSaturation = ((0, WT.k)(this, tT), (0, WT.k)(this, aT, 0)), this._highlightsExposure = ((0, WT.k)(this, yT), (0, WT.k)(this, XT, 0)), this._midtonesHue = ((0, WT.k)(this, IT), (0, WT.k)(this, QT, 30)), this._midtonesDensity = ((0, WT.k)(this, sT), (0, WT.k)(this, FT, 0)), this._midtonesSaturation = ((0, WT.k)(this, PT), (0, WT.k)(this, VT, 0)), this._midtonesExposure = ((0, WT.k)(this, uT), (0, WT.k)(this, CT, 0)), this._shadowsHue = ((0, WT.k)(this, rT), 30), this._shadowsDensity = 0, this._shadowsSaturation = 0, this._shadowsExposure = 0
         }
         get globalHue() {
           return this._globalHue
         }
-        set globalHue(pp) {
-          this._globalHue = pp, this._dirty = !0
+        set globalHue(TT) {
+          this._globalHue = TT, this._dirty = !0
         }
         get globalDensity() {
           return this._globalDensity
         }
-        set globalDensity(pp) {
-          this._globalDensity = pp, this._dirty = !0
+        set globalDensity(TT) {
+          this._globalDensity = TT, this._dirty = !0
         }
         get globalSaturation() {
           return this._globalSaturation
         }
-        set globalSaturation(pp) {
-          this._globalSaturation = pp, this._dirty = !0
+        set globalSaturation(TT) {
+          this._globalSaturation = TT, this._dirty = !0
         }
         get globalExposure() {
           return this._globalExposure
         }
-        set globalExposure(pp) {
-          this._globalExposure = pp, this._dirty = !0
+        set globalExposure(TT) {
+          this._globalExposure = TT, this._dirty = !0
         }
         get highlightsHue() {
           return this._highlightsHue
         }
-        set highlightsHue(pp) {
-          this._highlightsHue = pp, this._dirty = !0
+        set highlightsHue(TT) {
+          this._highlightsHue = TT, this._dirty = !0
         }
         get highlightsDensity() {
           return this._highlightsDensity
         }
-        set highlightsDensity(pp) {
-          this._highlightsDensity = pp, this._dirty = !0
+        set highlightsDensity(TT) {
+          this._highlightsDensity = TT, this._dirty = !0
         }
         get highlightsSaturation() {
           return this._highlightsSaturation
         }
-        set highlightsSaturation(pp) {
-          this._highlightsSaturation = pp, this._dirty = !0
+        set highlightsSaturation(TT) {
+          this._highlightsSaturation = TT, this._dirty = !0
         }
         get highlightsExposure() {
           return this._highlightsExposure
         }
-        set highlightsExposure(pp) {
-          this._highlightsExposure = pp, this._dirty = !0
+        set highlightsExposure(TT) {
+          this._highlightsExposure = TT, this._dirty = !0
         }
         get midtonesHue() {
           return this._midtonesHue
         }
-        set midtonesHue(pp) {
-          this._midtonesHue = pp, this._dirty = !0
+        set midtonesHue(TT) {
+          this._midtonesHue = TT, this._dirty = !0
         }
         get midtonesDensity() {
           return this._midtonesDensity
         }
-        set midtonesDensity(pp) {
-          this._midtonesDensity = pp, this._dirty = !0
+        set midtonesDensity(TT) {
+          this._midtonesDensity = TT, this._dirty = !0
         }
         get midtonesSaturation() {
           return this._midtonesSaturation
         }
-        set midtonesSaturation(pp) {
-          this._midtonesSaturation = pp, this._dirty = !0
+        set midtonesSaturation(TT) {
+          this._midtonesSaturation = TT, this._dirty = !0
         }
         get midtonesExposure() {
           return this._midtonesExposure
         }
-        set midtonesExposure(pp) {
-          this._midtonesExposure = pp, this._dirty = !0
+        set midtonesExposure(TT) {
+          this._midtonesExposure = TT, this._dirty = !0
         }
         get shadowsHue() {
           return this._shadowsHue
         }
-        set shadowsHue(pp) {
-          this._shadowsHue = pp, this._dirty = !0
+        set shadowsHue(TT) {
+          this._shadowsHue = TT, this._dirty = !0
         }
         get shadowsDensity() {
           return this._shadowsDensity
         }
-        set shadowsDensity(pp) {
-          this._shadowsDensity = pp, this._dirty = !0
+        set shadowsDensity(TT) {
+          this._shadowsDensity = TT, this._dirty = !0
         }
         get shadowsSaturation() {
           return this._shadowsSaturation
         }
-        set shadowsSaturation(pp) {
-          this._shadowsSaturation = pp, this._dirty = !0
+        set shadowsSaturation(TT) {
+          this._shadowsSaturation = TT, this._dirty = !0
         }
         get shadowsExposure() {
           return this._shadowsExposure
         }
-        set shadowsExposure(pp) {
-          this._shadowsExposure = pp, this._dirty = !0
+        set shadowsExposure(TT) {
+          this._shadowsExposure = TT, this._dirty = !0
         }
         getClassName() {
           return "ColorCurves"
         }
-        _getColorGradingDataToRef(ip, cp, Op, op, Ip) {
-          null != ip && (ip = pp._Clamp(ip, 0, 360), cp = pp._Clamp(cp, -100, 100), Op = pp._Clamp(Op, -100, 100), op = pp._Clamp(op, -100, 100), cp = pp._ApplyColorGradingSliderNonlinear(cp), cp *= .5, op = pp._ApplyColorGradingSliderNonlinear(op), cp < 0 && (cp *= -1, ip = (ip + 180) % 360), pp._FromHSBToRef(ip, cp, 50 + .25 * op, Ip), Ip.scaleToRef(2, Ip), Ip.a = 1 + .01 * Op)
+        _getColorGradingDataToRef(UT, mT, WT, zT, MT) {
+          null != UT && (UT = TT._Clamp(UT, 0, 360), mT = TT._Clamp(mT, -100, 100), WT = TT._Clamp(WT, -100, 100), zT = TT._Clamp(zT, -100, 100), mT = TT._ApplyColorGradingSliderNonlinear(mT), mT *= .5, zT = TT._ApplyColorGradingSliderNonlinear(zT), mT < 0 && (mT *= -1, UT = (UT + 180) % 360), TT._FromHSBToRef(UT, mT, 50 + .25 * zT, MT), MT.scaleToRef(2, MT), MT.a = 1 + .01 * WT)
         }
-        static _ApplyColorGradingSliderNonlinear(pp) {
-          pp /= 100;
-          let ip = Math.abs(pp);
-          return ip = Math.pow(ip, 2), pp < 0 && (ip *= -1), ip *= 100, ip
+        static _ApplyColorGradingSliderNonlinear(TT) {
+          TT /= 100;
+          let UT = Math.abs(TT);
+          return UT = Math.pow(UT, 2), TT < 0 && (UT *= -1), UT *= 100, UT
         }
-        static _FromHSBToRef(ip, cp, Op, op) {
-          let Ip = pp._Clamp(ip, 0, 360);
-          const Sp = pp._Clamp(cp / 100, 0, 1),
-            xp = pp._Clamp(Op / 100, 0, 1);
-          if (0 === Sp) op.r = xp, op.g = xp, op.b = xp;
+        static _FromHSBToRef(UT, mT, WT, zT) {
+          let MT = TT._Clamp(UT, 0, 360);
+          const gT = TT._Clamp(mT / 100, 0, 1),
+            nT = TT._Clamp(WT / 100, 0, 1);
+          if (0 === gT) zT.r = nT, zT.g = nT, zT.b = nT;
           else {
-            Ip /= 60;
-            const pp = Math.floor(Ip),
-              ip = Ip - pp,
-              cp = xp * (1 - Sp),
-              Op = xp * (1 - Sp * ip),
-              Lp = xp * (1 - Sp * (1 - ip));
-            switch (pp) {
+            MT /= 60;
+            const TT = Math.floor(MT),
+              UT = MT - TT,
+              mT = nT * (1 - gT),
+              WT = nT * (1 - gT * UT),
+              HT = nT * (1 - gT * (1 - UT));
+            switch (TT) {
               case 0:
-                op.r = xp, op.g = Lp, op.b = cp;
+                zT.r = nT, zT.g = HT, zT.b = mT;
                 break;
               case 1:
-                op.r = Op, op.g = xp, op.b = cp;
+                zT.r = WT, zT.g = nT, zT.b = mT;
                 break;
               case 2:
-                op.r = cp, op.g = xp, op.b = Lp;
+                zT.r = mT, zT.g = nT, zT.b = HT;
                 break;
               case 3:
-                op.r = cp, op.g = Op, op.b = xp;
+                zT.r = mT, zT.g = WT, zT.b = nT;
                 break;
               case 4:
-                op.r = Lp, op.g = cp, op.b = xp;
+                zT.r = HT, zT.g = mT, zT.b = nT;
                 break;
               default:
-                op.r = xp, op.g = cp, op.b = Op
+                zT.r = nT, zT.g = mT, zT.b = WT
             }
           }
-          op.a = 1
+          zT.a = 1
         }
-        static _Clamp(pp, ip, cp) {
-          return Math.min(Math.max(pp, ip), cp)
+        static _Clamp(TT, UT, mT) {
+          return Math.min(Math.max(TT, UT), mT)
         }
         clone() {
-          return ep.c.Clone((() => new pp), this)
+          return bT.e.Clone((() => new TT), this)
         }
         serialize() {
-          return ep.c.Serialize(this)
+          return bT.e.Serialize(this)
         }
-        _bind(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vCameraColorCurvePositive",
-            cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "vCameraColorCurveNeutral",
-            Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vCameraColorCurveNegative";
-          this._dirty && (this._dirty = !1, this._getColorGradingDataToRef(this._globalHue, this._globalDensity, this._globalSaturation, this._globalExposure, this._globalCurve), this._getColorGradingDataToRef(this._highlightsHue, this._highlightsDensity, this._highlightsSaturation, this._highlightsExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._highlightsCurve), this._getColorGradingDataToRef(this._midtonesHue, this._midtonesDensity, this._midtonesSaturation, this._midtonesExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._midtonesCurve), this._getColorGradingDataToRef(this._shadowsHue, this._shadowsDensity, this._shadowsSaturation, this._shadowsExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._shadowsCurve), this._highlightsCurve.subtractToRef(this._midtonesCurve, this._positiveCurve), this._midtonesCurve.subtractToRef(this._shadowsCurve, this._negativeCurve)), pp && (pp.setFloat4(ip, this._positiveCurve.r, this._positiveCurve.g, this._positiveCurve.b, this._positiveCurve.a), pp.setFloat4(cp, this._midtonesCurve.r, this._midtonesCurve.g, this._midtonesCurve.b, this._midtonesCurve.a), pp.setFloat4(Op, this._negativeCurve.r, this._negativeCurve.g, this._negativeCurve.b, this._negativeCurve.a))
+        _bind(TT) {
+          let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vCameraColorCurvePositive",
+            mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "vCameraColorCurveNeutral",
+            WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vCameraColorCurveNegative";
+          this._dirty && (this._dirty = !1, this._getColorGradingDataToRef(this._globalHue, this._globalDensity, this._globalSaturation, this._globalExposure, this._globalCurve), this._getColorGradingDataToRef(this._highlightsHue, this._highlightsDensity, this._highlightsSaturation, this._highlightsExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._highlightsCurve), this._getColorGradingDataToRef(this._midtonesHue, this._midtonesDensity, this._midtonesSaturation, this._midtonesExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._midtonesCurve), this._getColorGradingDataToRef(this._shadowsHue, this._shadowsDensity, this._shadowsSaturation, this._shadowsExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._shadowsCurve), this._highlightsCurve.subtractToRef(this._midtonesCurve, this._positiveCurve), this._midtonesCurve.subtractToRef(this._shadowsCurve, this._negativeCurve)), TT && (TT.setFloat4(UT, this._positiveCurve.r, this._positiveCurve.g, this._positiveCurve.b, this._positiveCurve.a), TT.setFloat4(mT, this._midtonesCurve.r, this._midtonesCurve.g, this._midtonesCurve.b, this._midtonesCurve.a), TT.setFloat4(WT, this._negativeCurve.r, this._negativeCurve.g, this._negativeCurve.b, this._negativeCurve.a))
         }
       }, (() => {
-        const Sp = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ip = [(0, op.K)()], cp = [(0, op.K)()], Ip = [(0, op.K)()], xp = [(0, op.K)()], Lp = [(0, op.K)()], Yp = [(0, op.K)()], Dp = [(0, op.K)()], Ap = [(0, op.K)()], Pp = [(0, op.K)()], Wp = [(0, op.K)()], yp = [(0, op.K)()], Up = [(0, op.K)()], (0, Op.j)(null, null, ip, {
+        const gT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        UT = [(0, zT.L)()], mT = [(0, zT.L)()], MT = [(0, zT.L)()], nT = [(0, zT.L)()], HT = [(0, zT.L)()], kT = [(0, zT.L)()], jT = [(0, zT.L)()], lT = [(0, zT.L)()], LT = [(0, zT.L)()], pT = [(0, zT.L)()], BT = [(0, zT.L)()], ZT = [(0, zT.L)()], (0, WT.h)(null, null, UT, {
           kind: "field",
           name: "_globalHue",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_globalHue" in pp,
-            get: pp => pp._globalHue,
-            set: (pp, ip) => {
-              pp._globalHue = ip
+            has: TT => "_globalHue" in TT,
+            get: TT => TT._globalHue,
+            set: (TT, UT) => {
+              TT._globalHue = UT
             }
           },
-          metadata: Sp
-        }, wp, vp), (0, Op.j)(null, null, cp, {
+          metadata: gT
+        }, cT, vT), (0, WT.h)(null, null, mT, {
           kind: "field",
           name: "_globalDensity",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_globalDensity" in pp,
-            get: pp => pp._globalDensity,
-            set: (pp, ip) => {
-              pp._globalDensity = ip
+            has: TT => "_globalDensity" in TT,
+            get: TT => TT._globalDensity,
+            set: (TT, UT) => {
+              TT._globalDensity = UT
             }
           },
-          metadata: Sp
-        }, tp, Hp), (0, Op.j)(null, null, Ip, {
+          metadata: gT
+        }, fT, qT), (0, WT.h)(null, null, MT, {
           kind: "field",
           name: "_globalSaturation",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_globalSaturation" in pp,
-            get: pp => pp._globalSaturation,
-            set: (pp, ip) => {
-              pp._globalSaturation = ip
+            has: TT => "_globalSaturation" in TT,
+            get: TT => TT._globalSaturation,
+            set: (TT, UT) => {
+              TT._globalSaturation = UT
             }
           },
-          metadata: Sp
-        }, dp, kp), (0, Op.j)(null, null, xp, {
+          metadata: gT
+        }, iT, eT), (0, WT.h)(null, null, nT, {
           kind: "field",
           name: "_globalExposure",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_globalExposure" in pp,
-            get: pp => pp._globalExposure,
-            set: (pp, ip) => {
-              pp._globalExposure = ip
+            has: TT => "_globalExposure" in TT,
+            get: TT => TT._globalExposure,
+            set: (TT, UT) => {
+              TT._globalExposure = UT
             }
           },
-          metadata: Sp
-        }, mp, Rp), (0, Op.j)(null, null, Lp, {
+          metadata: gT
+        }, YT, JT), (0, WT.h)(null, null, HT, {
           kind: "field",
           name: "_highlightsHue",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_highlightsHue" in pp,
-            get: pp => pp._highlightsHue,
-            set: (pp, ip) => {
-              pp._highlightsHue = ip
+            has: TT => "_highlightsHue" in TT,
+            get: TT => TT._highlightsHue,
+            set: (TT, UT) => {
+              TT._highlightsHue = UT
             }
           },
-          metadata: Sp
-        }, qp, Mp), (0, Op.j)(null, null, Yp, {
+          metadata: gT
+        }, xT, dT), (0, WT.h)(null, null, kT, {
           kind: "field",
           name: "_highlightsDensity",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_highlightsDensity" in pp,
-            get: pp => pp._highlightsDensity,
-            set: (pp, ip) => {
-              pp._highlightsDensity = ip
+            has: TT => "_highlightsDensity" in TT,
+            get: TT => TT._highlightsDensity,
+            set: (TT, UT) => {
+              TT._highlightsDensity = UT
             }
           },
-          metadata: Sp
-        }, Cp, Ep), (0, Op.j)(null, null, Dp, {
+          metadata: gT
+        }, wT, tT), (0, WT.h)(null, null, jT, {
           kind: "field",
           name: "_highlightsSaturation",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_highlightsSaturation" in pp,
-            get: pp => pp._highlightsSaturation,
-            set: (pp, ip) => {
-              pp._highlightsSaturation = ip
+            has: TT => "_highlightsSaturation" in TT,
+            get: TT => TT._highlightsSaturation,
+            set: (TT, UT) => {
+              TT._highlightsSaturation = UT
             }
           },
-          metadata: Sp
-        }, Xp, lp), (0, Op.j)(null, null, Ap, {
+          metadata: gT
+        }, aT, yT), (0, WT.h)(null, null, lT, {
           kind: "field",
           name: "_highlightsExposure",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_highlightsExposure" in pp,
-            get: pp => pp._highlightsExposure,
-            set: (pp, ip) => {
-              pp._highlightsExposure = ip
+            has: TT => "_highlightsExposure" in TT,
+            get: TT => TT._highlightsExposure,
+            set: (TT, UT) => {
+              TT._highlightsExposure = UT
             }
           },
-          metadata: Sp
-        }, Qp, Jp), (0, Op.j)(null, null, Pp, {
+          metadata: gT
+        }, XT, IT), (0, WT.h)(null, null, LT, {
           kind: "field",
           name: "_midtonesHue",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_midtonesHue" in pp,
-            get: pp => pp._midtonesHue,
-            set: (pp, ip) => {
-              pp._midtonesHue = ip
+            has: TT => "_midtonesHue" in TT,
+            get: TT => TT._midtonesHue,
+            set: (TT, UT) => {
+              TT._midtonesHue = UT
             }
           },
-          metadata: Sp
-        }, Bp, Np), (0, Op.j)(null, null, Wp, {
+          metadata: gT
+        }, QT, sT), (0, WT.h)(null, null, pT, {
           kind: "field",
           name: "_midtonesDensity",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_midtonesDensity" in pp,
-            get: pp => pp._midtonesDensity,
-            set: (pp, ip) => {
-              pp._midtonesDensity = ip
+            has: TT => "_midtonesDensity" in TT,
+            get: TT => TT._midtonesDensity,
+            set: (TT, UT) => {
+              TT._midtonesDensity = UT
             }
           },
-          metadata: Sp
-        }, Tp, fp), (0, Op.j)(null, null, yp, {
+          metadata: gT
+        }, FT, PT), (0, WT.h)(null, null, BT, {
           kind: "field",
           name: "_midtonesSaturation",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_midtonesSaturation" in pp,
-            get: pp => pp._midtonesSaturation,
-            set: (pp, ip) => {
-              pp._midtonesSaturation = ip
+            has: TT => "_midtonesSaturation" in TT,
+            get: TT => TT._midtonesSaturation,
+            set: (TT, UT) => {
+              TT._midtonesSaturation = UT
             }
           },
-          metadata: Sp
-        }, bp, hp), (0, Op.j)(null, null, Up, {
+          metadata: gT
+        }, VT, uT), (0, WT.h)(null, null, ZT, {
           kind: "field",
           name: "_midtonesExposure",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_midtonesExposure" in pp,
-            get: pp => pp._midtonesExposure,
-            set: (pp, ip) => {
-              pp._midtonesExposure = ip
+            has: TT => "_midtonesExposure" in TT,
+            get: TT => TT._midtonesExposure,
+            set: (TT, UT) => {
+              TT._midtonesExposure = UT
             }
           },
-          metadata: Sp
-        }, ap, np), Sp && Object.defineProperty(pp, Symbol.metadata, {
+          metadata: gT
+        }, CT, rT), gT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Sp
+          value: gT
         })
-      })(), pp.PrepareUniforms = jp.c, pp
+      })(), TT.PrepareUniforms = OT.d, TT
     })();
 
-    function mp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "vCameraColorCurvePositive",
-        Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vCameraColorCurveNeutral",
-        op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "vCameraColorCurveNegative";
-      pp._bind(ip, cp, Op, op)
+    function YT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "vCameraColorCurvePositive",
+        WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vCameraColorCurveNeutral",
+        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "vCameraColorCurveNegative";
+      TT._bind(UT, mT, WT, zT)
     }
-    var Rp = cp(40143),
-      qp = cp(40324),
-      Mp = cp(37368);
-    let Cp = (() => {
-        var pp;
-        let ip, cp, Yp, Wp, yp, Up, vp, jp, Mp, Cp, Ep, Xp, lp, Qp, Jp, Bp, Np, Tp, fp, bp, hp, ap, np, Fp, gp, Gp, rp, Zp, zp = [],
-          sp = [],
-          Kp = [],
-          Vp = [],
-          ii = [],
-          ci = [],
-          Oi = [],
-          oi = [],
-          Ii = [],
-          Si = [],
-          xi = [],
-          Li = [],
-          Yi = [],
-          Di = [],
-          Ai = [],
-          Pi = [],
-          Wi = [],
-          yi = [],
-          Ui = [],
-          wi = [],
-          vi = [],
-          ti = [],
-          Hi = [],
-          di = [],
-          ei = [],
-          ui = [],
-          ji = [],
-          ki = [],
-          mi = [],
-          Ri = [],
-          qi = [],
-          Mi = [],
-          Ci = [],
-          Ei = [],
-          Xi = [],
-          li = [],
-          Qi = [],
-          Ji = [],
-          Bi = [],
-          Ni = [],
-          Ti = [],
-          fi = [],
-          bi = [],
-          ai = [],
-          ni = [],
-          Fi = [],
-          gi = [],
-          Gi = [],
-          ri = [],
-          Zi = [],
-          zi = [],
-          si = [],
-          Ki = [],
-          Vi = [],
-          pc = [],
-          ic = [];
-        return pp = class {
+    var JT = mT(40022),
+      xT = mT(40235),
+      dT = mT(37239);
+    let wT = (() => {
+        var TT;
+        let UT, mT, kT, pT, BT, ZT, vT, OT, dT, wT, tT, aT, yT, XT, IT, QT, sT, FT, PT, VT, uT, CT, rT, KT, ST, GT, NT, ET, hT = [],
+          DT = [],
+          oT = [],
+          AT = [],
+          RT = [],
+          TU = [],
+          UU = [],
+          mU = [],
+          WU = [],
+          zU = [],
+          MU = [],
+          gU = [],
+          nU = [],
+          HU = [],
+          kU = [],
+          jU = [],
+          lU = [],
+          LU = [],
+          pU = [],
+          BU = [],
+          ZU = [],
+          cU = [],
+          vU = [],
+          fU = [],
+          qU = [],
+          iU = [],
+          bU = [],
+          OU = [],
+          eU = [],
+          YU = [],
+          JU = [],
+          xU = [],
+          dU = [],
+          wU = [],
+          tU = [],
+          aU = [],
+          yU = [],
+          XU = [],
+          IU = [],
+          QU = [],
+          sU = [],
+          FU = [],
+          PU = [],
+          VU = [],
+          uU = [],
+          CU = [],
+          rU = [],
+          KU = [],
+          SU = [],
+          GU = [],
+          NU = [],
+          EU = [],
+          hU = [],
+          DU = [],
+          oU = [],
+          AU = [];
+        return TT = class {
           constructor() {
-            this.colorCurves = (0, Op.l)(this, zp, new kp), this._colorCurvesEnabled = ((0, Op.l)(this, sp), (0, Op.l)(this, Kp, !1)), this._colorGradingTexture = ((0, Op.l)(this, Vp), (0, Op.l)(this, ii, void 0)), this._colorGradingEnabled = ((0, Op.l)(this, ci), (0, Op.l)(this, Oi, !1)), this._colorGradingWithGreenDepth = ((0, Op.l)(this, oi), (0, Op.l)(this, Ii, !0)), this._colorGradingBGR = ((0, Op.l)(this, Si), (0, Op.l)(this, xi, !0)), this._exposure = ((0, Op.l)(this, Li), (0, Op.l)(this, Yi, 1)), this._toneMappingEnabled = ((0, Op.l)(this, Di), (0, Op.l)(this, Ai, !1)), this._toneMappingType = ((0, Op.l)(this, Pi), (0, Op.l)(this, Wi, pp.TONEMAPPING_STANDARD)), this._contrast = ((0, Op.l)(this, yi), (0, Op.l)(this, Ui, 1)), this._whiteBalanceEnabled = ((0, Op.l)(this, wi), (0, Op.l)(this, vi, !1)), this._temperature = ((0, Op.l)(this, ti), (0, Op.l)(this, Hi, 6500)), this._tint = ((0, Op.l)(this, di), (0, Op.l)(this, ei, 0)), this._whiteBalanceMatrix = ((0, Op.l)(this, ui), null), this._whiteBalanceMatrixTemperature = null, this._whiteBalanceMatrixTint = null, this.vignetteStretch = (0, Op.l)(this, ji, 0), this.vignetteCenterX = ((0, Op.l)(this, ki), (0, Op.l)(this, mi, 0)), this.vignetteCenterY = ((0, Op.l)(this, Ri), (0, Op.l)(this, qi, 0)), this.vignetteWeight = ((0, Op.l)(this, Mi), (0, Op.l)(this, Ci, 1.5)), this.vignetteColor = ((0, Op.l)(this, Ei), (0, Op.l)(this, Xi, new Sp.h(0, 0, 0, 0))), this.vignetteCameraFov = ((0, Op.l)(this, li), (0, Op.l)(this, Qi, .5)), this._vignetteBlendMode = ((0, Op.l)(this, Ji), (0, Op.l)(this, Bi, pp.VIGNETTEMODE_MULTIPLY)), this._vignetteEnabled = ((0, Op.l)(this, Ni), (0, Op.l)(this, Ti, !1)), this._ditheringEnabled = ((0, Op.l)(this, fi), (0, Op.l)(this, bi, !1)), this._ditheringIntensity = ((0, Op.l)(this, ai), (0, Op.l)(this, ni, 1 / 255)), this._skipFinalColorClamp = ((0, Op.l)(this, Fi), (0, Op.l)(this, gi, !1)), this._applyByPostProcess = ((0, Op.l)(this, Gi), (0, Op.l)(this, ri, !1)), this._isEnabled = ((0, Op.l)(this, Zi), (0, Op.l)(this, zi, !0)), this.outputTextureWidth = ((0, Op.l)(this, si), (0, Op.l)(this, Ki, 0)), this.outputTextureHeight = ((0, Op.l)(this, Vi), (0, Op.l)(this, pc, 0)), this.onUpdateParameters = ((0, Op.l)(this, ic), new Ip.d)
+            this.colorCurves = (0, WT.k)(this, hT, new eT), this._colorCurvesEnabled = ((0, WT.k)(this, DT), (0, WT.k)(this, oT, !1)), this._colorGradingTexture = ((0, WT.k)(this, AT), (0, WT.k)(this, RT, void 0)), this._colorGradingEnabled = ((0, WT.k)(this, TU), (0, WT.k)(this, UU, !1)), this._colorGradingWithGreenDepth = ((0, WT.k)(this, mU), (0, WT.k)(this, WU, !0)), this._colorGradingBGR = ((0, WT.k)(this, zU), (0, WT.k)(this, MU, !0)), this._exposure = ((0, WT.k)(this, gU), (0, WT.k)(this, nU, 1)), this._toneMappingEnabled = ((0, WT.k)(this, HU), (0, WT.k)(this, kU, !1)), this._toneMappingType = ((0, WT.k)(this, jU), (0, WT.k)(this, lU, TT.TONEMAPPING_STANDARD)), this._contrast = ((0, WT.k)(this, LU), (0, WT.k)(this, pU, 1)), this._whiteBalanceEnabled = ((0, WT.k)(this, BU), (0, WT.k)(this, ZU, !1)), this._temperature = ((0, WT.k)(this, cU), (0, WT.k)(this, vU, 6500)), this._tint = ((0, WT.k)(this, fU), (0, WT.k)(this, qU, 0)), this._whiteBalanceMatrix = ((0, WT.k)(this, iU), null), this._whiteBalanceMatrixTemperature = null, this._whiteBalanceMatrixTint = null, this.vignetteStretch = (0, WT.k)(this, bU, 0), this.vignetteCenterX = ((0, WT.k)(this, OU), (0, WT.k)(this, eU, 0)), this.vignetteCenterY = ((0, WT.k)(this, YU), (0, WT.k)(this, JU, 0)), this.vignetteWeight = ((0, WT.k)(this, xU), (0, WT.k)(this, dU, 1.5)), this.vignetteColor = ((0, WT.k)(this, wU), (0, WT.k)(this, tU, new gT.g(0, 0, 0, 0))), this.vignetteCameraFov = ((0, WT.k)(this, aU), (0, WT.k)(this, yU, .5)), this._vignetteBlendMode = ((0, WT.k)(this, XU), (0, WT.k)(this, IU, TT.VIGNETTEMODE_MULTIPLY)), this._vignetteEnabled = ((0, WT.k)(this, QU), (0, WT.k)(this, sU, !1)), this._ditheringEnabled = ((0, WT.k)(this, FU), (0, WT.k)(this, PU, !1)), this._ditheringIntensity = ((0, WT.k)(this, VU), (0, WT.k)(this, uU, 1 / 255)), this._skipFinalColorClamp = ((0, WT.k)(this, CU), (0, WT.k)(this, rU, !1)), this._applyByPostProcess = ((0, WT.k)(this, KU), (0, WT.k)(this, SU, !1)), this._isEnabled = ((0, WT.k)(this, GU), (0, WT.k)(this, NU, !0)), this.outputTextureWidth = ((0, WT.k)(this, EU), (0, WT.k)(this, hU, 0)), this.outputTextureHeight = ((0, WT.k)(this, DU), (0, WT.k)(this, oU, 0)), this.onUpdateParameters = ((0, WT.k)(this, AU), new MT.d)
           }
           get colorCurvesEnabled() {
             return this._colorCurvesEnabled
           }
-          set colorCurvesEnabled(pp) {
-            this._colorCurvesEnabled !== pp && (this._colorCurvesEnabled = pp, this._updateParameters())
+          set colorCurvesEnabled(TT) {
+            this._colorCurvesEnabled !== TT && (this._colorCurvesEnabled = TT, this._updateParameters())
           }
           get colorGradingTexture() {
             return this._colorGradingTexture
           }
-          set colorGradingTexture(pp) {
-            this._colorGradingTexture !== pp && (this._colorGradingTexture = pp, this._updateParameters())
+          set colorGradingTexture(TT) {
+            this._colorGradingTexture !== TT && (this._colorGradingTexture = TT, this._updateParameters())
           }
           get colorGradingEnabled() {
             return this._colorGradingEnabled
           }
-          set colorGradingEnabled(pp) {
-            this._colorGradingEnabled !== pp && (this._colorGradingEnabled = pp, this._updateParameters())
+          set colorGradingEnabled(TT) {
+            this._colorGradingEnabled !== TT && (this._colorGradingEnabled = TT, this._updateParameters())
           }
           get colorGradingWithGreenDepth() {
             return this._colorGradingWithGreenDepth
           }
-          set colorGradingWithGreenDepth(pp) {
-            this._colorGradingWithGreenDepth !== pp && (this._colorGradingWithGreenDepth = pp, this._updateParameters())
+          set colorGradingWithGreenDepth(TT) {
+            this._colorGradingWithGreenDepth !== TT && (this._colorGradingWithGreenDepth = TT, this._updateParameters())
           }
           get colorGradingBGR() {
             return this._colorGradingBGR
           }
-          set colorGradingBGR(pp) {
-            this._colorGradingBGR !== pp && (this._colorGradingBGR = pp, this._updateParameters())
+          set colorGradingBGR(TT) {
+            this._colorGradingBGR !== TT && (this._colorGradingBGR = TT, this._updateParameters())
           }
           get exposure() {
             return this._exposure
           }
-          set exposure(pp) {
-            this._exposure !== pp && (this._exposure = pp, this._updateParameters())
+          set exposure(TT) {
+            this._exposure !== TT && (this._exposure = TT, this._updateParameters())
           }
           get toneMappingEnabled() {
             return this._toneMappingEnabled
           }
-          set toneMappingEnabled(pp) {
-            this._toneMappingEnabled !== pp && (this._toneMappingEnabled = pp, this._updateParameters())
+          set toneMappingEnabled(TT) {
+            this._toneMappingEnabled !== TT && (this._toneMappingEnabled = TT, this._updateParameters())
           }
           get toneMappingType() {
             return this._toneMappingType
           }
-          set toneMappingType(pp) {
-            this._toneMappingType !== pp && (this._toneMappingType = pp, this._updateParameters())
+          set toneMappingType(TT) {
+            this._toneMappingType !== TT && (this._toneMappingType = TT, this._updateParameters())
           }
           get contrast() {
             return this._contrast
           }
-          set contrast(pp) {
-            this._contrast !== pp && (this._contrast = pp, this._updateParameters())
+          set contrast(TT) {
+            this._contrast !== TT && (this._contrast = TT, this._updateParameters())
           }
           get whiteBalanceEnabled() {
             return this._whiteBalanceEnabled
           }
-          set whiteBalanceEnabled(pp) {
-            this._whiteBalanceEnabled !== pp && (this._whiteBalanceEnabled = pp, this._updateParameters())
+          set whiteBalanceEnabled(TT) {
+            this._whiteBalanceEnabled !== TT && (this._whiteBalanceEnabled = TT, this._updateParameters())
           }
           get temperature() {
             return this._temperature
           }
-          set temperature(pp) {
-            pp = Number.isNaN(pp) ? Dp : Math.max(pp, Dp), this._temperature !== pp && (this._temperature = pp, this._updateParameters())
+          set temperature(TT) {
+            TT = Number.isNaN(TT) ? jT : Math.max(TT, jT), this._temperature !== TT && (this._temperature = TT, this._updateParameters())
           }
           get tint() {
             return this._tint
           }
-          set tint(pp) {
-            pp = (0, xp.Clamp)(pp, -150, Ap), this._tint !== pp && (this._tint = pp, this._updateParameters())
+          set tint(TT) {
+            TT = (0, nT.Clamp)(TT, -150, lT), this._tint !== TT && (this._tint = TT, this._updateParameters())
           }
           _getWhiteBalanceMatrix() {
-            return null !== this._whiteBalanceMatrix && this._whiteBalanceMatrixTemperature === this._temperature && this._whiteBalanceMatrixTint === this._tint || (this._whiteBalanceMatrixTemperature = this._temperature, this._whiteBalanceMatrixTint = this._tint, this._whiteBalanceMatrix = function(pp, ip) {
-              const cp = wp(Pp(pp, ip), dp),
-                Op = tp.multiply(cp).multiply(Hp);
-              return Lp.b.GetAsMatrix3x3(Op)
+            return null !== this._whiteBalanceMatrix && this._whiteBalanceMatrixTemperature === this._temperature && this._whiteBalanceMatrixTint === this._tint || (this._whiteBalanceMatrixTemperature = this._temperature, this._whiteBalanceMatrixTint = this._tint, this._whiteBalanceMatrix = function(TT, UT) {
+              const mT = cT(LT(TT, UT), iT),
+                WT = fT.multiply(mT).multiply(qT);
+              return HT.e.GetAsMatrix3x3(WT)
             }(this._temperature, this._tint)), this._whiteBalanceMatrix
           }
           get vignetteCentreY() {
             return this.vignetteCenterY
           }
-          set vignetteCentreY(pp) {
-            this.vignetteCenterY = pp
+          set vignetteCentreY(TT) {
+            this.vignetteCenterY = TT
           }
           get vignetteCentreX() {
             return this.vignetteCenterX
           }
-          set vignetteCentreX(pp) {
-            this.vignetteCenterX = pp
+          set vignetteCentreX(TT) {
+            this.vignetteCenterX = TT
           }
           get vignetteBlendMode() {
             return this._vignetteBlendMode
           }
-          set vignetteBlendMode(pp) {
-            this._vignetteBlendMode !== pp && (this._vignetteBlendMode = pp, this._updateParameters())
+          set vignetteBlendMode(TT) {
+            this._vignetteBlendMode !== TT && (this._vignetteBlendMode = TT, this._updateParameters())
           }
           get vignetteEnabled() {
             return this._vignetteEnabled
           }
-          set vignetteEnabled(pp) {
-            this._vignetteEnabled !== pp && (this._vignetteEnabled = pp, this._updateParameters())
+          set vignetteEnabled(TT) {
+            this._vignetteEnabled !== TT && (this._vignetteEnabled = TT, this._updateParameters())
           }
           get ditheringEnabled() {
             return this._ditheringEnabled
           }
-          set ditheringEnabled(pp) {
-            this._ditheringEnabled !== pp && (this._ditheringEnabled = pp, this._updateParameters())
+          set ditheringEnabled(TT) {
+            this._ditheringEnabled !== TT && (this._ditheringEnabled = TT, this._updateParameters())
           }
           get ditheringIntensity() {
             return this._ditheringIntensity
           }
-          set ditheringIntensity(pp) {
-            this._ditheringIntensity !== pp && (this._ditheringIntensity = pp, this._updateParameters())
+          set ditheringIntensity(TT) {
+            this._ditheringIntensity !== TT && (this._ditheringIntensity = TT, this._updateParameters())
           }
           get skipFinalColorClamp() {
             return this._skipFinalColorClamp
           }
-          set skipFinalColorClamp(pp) {
-            this._skipFinalColorClamp !== pp && (this._skipFinalColorClamp = pp, this._updateParameters())
+          set skipFinalColorClamp(TT) {
+            this._skipFinalColorClamp !== TT && (this._skipFinalColorClamp = TT, this._updateParameters())
           }
           get applyByPostProcess() {
             return this._applyByPostProcess
           }
-          set applyByPostProcess(pp) {
-            this._applyByPostProcess !== pp && (this._applyByPostProcess = pp, this._updateParameters())
+          set applyByPostProcess(TT) {
+            this._applyByPostProcess !== TT && (this._applyByPostProcess = TT, this._updateParameters())
           }
           get isEnabled() {
             return this._isEnabled
           }
-          set isEnabled(pp) {
-            this._isEnabled !== pp && (this._isEnabled = pp, this._updateParameters())
+          set isEnabled(TT) {
+            this._isEnabled !== TT && (this._isEnabled = TT, this._updateParameters())
           }
           _updateParameters() {
             this.onUpdateParameters.notifyObservers(this)
@@ -4794,48 +4794,48 @@ export const modules = {
           getClassName() {
             return "ImageProcessingConfiguration"
           }
-          prepareDefines(ip) {
-            if ((arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) !== this.applyByPostProcess || !this._isEnabled) return ip.WHITEBALANCE = !1, ip.VIGNETTE = !1, ip.TONEMAPPING = 0, ip.CONTRAST = !1, ip.EXPOSURE = !1, ip.COLORCURVES = !1, ip.COLORGRADING = !1, ip.COLORGRADING3D = !1, ip.DITHER = !1, ip.IMAGEPROCESSING = !1, ip.SKIPFINALCOLORCLAMP = this.skipFinalColorClamp, void(ip.IMAGEPROCESSINGPOSTPROCESS = this.applyByPostProcess && this._isEnabled);
-            if (ip.WHITEBALANCE = this._whiteBalanceEnabled, ip.VIGNETTE = this.vignetteEnabled, ip.VIGNETTEBLENDMODEMULTIPLY = this.vignetteBlendMode === pp._VIGNETTEMODE_MULTIPLY, ip.VIGNETTEBLENDMODEOPAQUE = !ip.VIGNETTEBLENDMODEMULTIPLY, this._toneMappingEnabled) switch (this._toneMappingType) {
-              case pp.TONEMAPPING_KHR_PBR_NEUTRAL:
-                ip.TONEMAPPING = 3;
+          prepareDefines(UT) {
+            if ((arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) !== this.applyByPostProcess || !this._isEnabled) return UT.WHITEBALANCE = !1, UT.VIGNETTE = !1, UT.TONEMAPPING = 0, UT.CONTRAST = !1, UT.EXPOSURE = !1, UT.COLORCURVES = !1, UT.COLORGRADING = !1, UT.COLORGRADING3D = !1, UT.DITHER = !1, UT.IMAGEPROCESSING = !1, UT.SKIPFINALCOLORCLAMP = this.skipFinalColorClamp, void(UT.IMAGEPROCESSINGPOSTPROCESS = this.applyByPostProcess && this._isEnabled);
+            if (UT.WHITEBALANCE = this._whiteBalanceEnabled, UT.VIGNETTE = this.vignetteEnabled, UT.VIGNETTEBLENDMODEMULTIPLY = this.vignetteBlendMode === TT._VIGNETTEMODE_MULTIPLY, UT.VIGNETTEBLENDMODEOPAQUE = !UT.VIGNETTEBLENDMODEMULTIPLY, this._toneMappingEnabled) switch (this._toneMappingType) {
+              case TT.TONEMAPPING_KHR_PBR_NEUTRAL:
+                UT.TONEMAPPING = 3;
                 break;
-              case pp.TONEMAPPING_ACES:
-                ip.TONEMAPPING = 2;
+              case TT.TONEMAPPING_ACES:
+                UT.TONEMAPPING = 2;
                 break;
               default:
-                ip.TONEMAPPING = 1
-            } else ip.TONEMAPPING = 0;
-            ip.CONTRAST = 1 !== this.contrast, ip.EXPOSURE = 1 !== this.exposure, ip.COLORCURVES = this.colorCurvesEnabled && !!this.colorCurves, ip.COLORGRADING = this.colorGradingEnabled && !!this.colorGradingTexture, ip.COLORGRADING ? ip.COLORGRADING3D = this.colorGradingTexture.is3D : ip.COLORGRADING3D = !1, ip.SAMPLER3DGREENDEPTH = this.colorGradingWithGreenDepth, ip.SAMPLER3DBGRMAP = this.colorGradingBGR, ip.DITHER = this._ditheringEnabled, ip.IMAGEPROCESSINGPOSTPROCESS = this.applyByPostProcess, ip.SKIPFINALCOLORCLAMP = this.skipFinalColorClamp, ip.IMAGEPROCESSING = ip.WHITEBALANCE || ip.VIGNETTE || !!ip.TONEMAPPING || ip.CONTRAST || ip.EXPOSURE || ip.COLORCURVES || ip.COLORGRADING || ip.DITHER
+                UT.TONEMAPPING = 1
+            } else UT.TONEMAPPING = 0;
+            UT.CONTRAST = 1 !== this.contrast, UT.EXPOSURE = 1 !== this.exposure, UT.COLORCURVES = this.colorCurvesEnabled && !!this.colorCurves, UT.COLORGRADING = this.colorGradingEnabled && !!this.colorGradingTexture, UT.COLORGRADING ? UT.COLORGRADING3D = this.colorGradingTexture.is3D : UT.COLORGRADING3D = !1, UT.SAMPLER3DGREENDEPTH = this.colorGradingWithGreenDepth, UT.SAMPLER3DBGRMAP = this.colorGradingBGR, UT.DITHER = this._ditheringEnabled, UT.IMAGEPROCESSINGPOSTPROCESS = this.applyByPostProcess, UT.SKIPFINALCOLORCLAMP = this.skipFinalColorClamp, UT.IMAGEPROCESSING = UT.WHITEBALANCE || UT.VIGNETTE || !!UT.TONEMAPPING || UT.CONTRAST || UT.EXPOSURE || UT.COLORCURVES || UT.COLORGRADING || UT.DITHER
           }
           isReady() {
             return !this.colorGradingEnabled || !this.colorGradingTexture || this.colorGradingTexture.isReady()
           }
-          bind(pp, ip) {
-            if (this._whiteBalanceEnabled && pp.setMatrix3x3("whiteBalanceMatrix", this._getWhiteBalanceMatrix()), this._colorCurvesEnabled && this.colorCurves && mp(this.colorCurves, pp), this._vignetteEnabled || this._ditheringEnabled) {
-              const cp = 1 / (this.outputTextureWidth || pp.gy().getRenderWidth()),
-                Op = 1 / (this.outputTextureHeight || pp.gy().getRenderHeight());
-              if (pp.setFloat2("vInverseScreenSize", cp, Op), this._ditheringEnabled && pp.setFloat("ditherIntensity", .5 * this._ditheringIntensity), this._vignetteEnabled) {
-                const op = null != ip ? ip : Op / cp;
-                let Ip = Math.tan(.5 * this.vignetteCameraFov),
-                  Sp = Ip * op;
-                const xp = Math.sqrt(Sp * Ip);
-                Sp = (0, Rp.i)(Sp, xp, this.vignetteStretch), Ip = (0, Rp.i)(Ip, xp, this.vignetteStretch), pp.setFloat4("vignetteSettings1", Sp, Ip, -Sp * this.vignetteCenterX, -Ip * this.vignetteCenterY);
-                const Lp = -2 * this.vignetteWeight;
-                pp.setFloat4("vignetteSettings2", this.vignetteColor.r, this.vignetteColor.g, this.vignetteColor.b, Lp)
+          bind(TT, UT) {
+            if (this._whiteBalanceEnabled && TT.setMatrix3x3("whiteBalanceMatrix", this._getWhiteBalanceMatrix()), this._colorCurvesEnabled && this.colorCurves && YT(this.colorCurves, TT), this._vignetteEnabled || this._ditheringEnabled) {
+              const mT = 1 / (this.outputTextureWidth || TT.eB().getRenderWidth()),
+                WT = 1 / (this.outputTextureHeight || TT.eB().getRenderHeight());
+              if (TT.setFloat2("vInverseScreenSize", mT, WT), this._ditheringEnabled && TT.setFloat("ditherIntensity", .5 * this._ditheringIntensity), this._vignetteEnabled) {
+                const zT = null != UT ? UT : WT / mT;
+                let MT = Math.tan(.5 * this.vignetteCameraFov),
+                  gT = MT * zT;
+                const nT = Math.sqrt(gT * MT);
+                gT = (0, JT.m)(gT, nT, this.vignetteStretch), MT = (0, JT.m)(MT, nT, this.vignetteStretch), TT.setFloat4("vignetteSettings1", gT, MT, -gT * this.vignetteCenterX, -MT * this.vignetteCenterY);
+                const HT = -2 * this.vignetteWeight;
+                TT.setFloat4("vignetteSettings2", this.vignetteColor.r, this.vignetteColor.g, this.vignetteColor.b, HT)
               }
             }
-            if (pp.setFloat("exposureLinear", this.exposure), pp.setFloat("contrast", this.contrast), this.colorGradingTexture) {
-              pp.setTexture("txColorTransform", this.colorGradingTexture);
-              const ip = this.colorGradingTexture.getSize().height;
-              pp.setFloat4("colorTransformSettings", (ip - 1) / ip, .5 / ip, ip, this.colorGradingTexture.level)
+            if (TT.setFloat("exposureLinear", this.exposure), TT.setFloat("contrast", this.contrast), this.colorGradingTexture) {
+              TT.setTexture("txColorTransform", this.colorGradingTexture);
+              const UT = this.colorGradingTexture.getSize().height;
+              TT.setFloat4("colorTransformSettings", (UT - 1) / UT, .5 / UT, UT, this.colorGradingTexture.level)
             }
           }
           clone() {
-            return ep.c.Clone((() => new pp), this)
+            return bT.e.Clone((() => new TT), this)
           }
           serialize() {
-            return ep.c.Serialize(this)
+            return bT.e.Serialize(this)
           }
           static get VIGNETTEMODE_MULTIPLY() {
             return this._VIGNETTEMODE_MULTIPLY
@@ -4844,403 +4844,403 @@ export const modules = {
             return this._VIGNETTEMODE_OPAQUE
           }
         }, (() => {
-          const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          ip = [(0, op.j)()], cp = [(0, op.K)()], Yp = [(0, op.C)("colorGradingTexture")], Wp = [(0, op.K)()], yp = [(0, op.K)()], Up = [(0, op.K)()], vp = [(0, op.K)()], jp = [(0, op.K)()], Mp = [(0, op.K)()], Cp = [(0, op.K)()], Ep = [(0, op.K)()], Xp = [(0, op.K)()], lp = [(0, op.K)()], Qp = [(0, op.K)()], Jp = [(0, op.K)()], Bp = [(0, op.K)()], Np = [(0, op.K)()], Tp = [(0, op.q)()], fp = [(0, op.K)()], bp = [(0, op.K)()], hp = [(0, op.K)()], ap = [(0, op.K)()], np = [(0, op.K)()], Fp = [(0, op.K)()], gp = [(0, op.K)()], Gp = [(0, op.K)()], rp = [(0, op.K)()], Zp = [(0, op.K)()], (0, Op.j)(null, null, ip, {
+          const MT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          UT = [(0, zT.k)()], mT = [(0, zT.L)()], kT = [(0, zT.C)("colorGradingTexture")], pT = [(0, zT.L)()], BT = [(0, zT.L)()], ZT = [(0, zT.L)()], vT = [(0, zT.L)()], OT = [(0, zT.L)()], dT = [(0, zT.L)()], wT = [(0, zT.L)()], tT = [(0, zT.L)()], aT = [(0, zT.L)()], yT = [(0, zT.L)()], XT = [(0, zT.L)()], IT = [(0, zT.L)()], QT = [(0, zT.L)()], sT = [(0, zT.L)()], FT = [(0, zT.n)()], PT = [(0, zT.L)()], VT = [(0, zT.L)()], uT = [(0, zT.L)()], CT = [(0, zT.L)()], rT = [(0, zT.L)()], KT = [(0, zT.L)()], ST = [(0, zT.L)()], GT = [(0, zT.L)()], NT = [(0, zT.L)()], ET = [(0, zT.L)()], (0, WT.h)(null, null, UT, {
             kind: "field",
             name: "colorCurves",
             static: !1,
             private: !1,
             access: {
-              has: pp => "colorCurves" in pp,
-              get: pp => pp.colorCurves,
-              set: (pp, ip) => {
-                pp.colorCurves = ip
+              has: TT => "colorCurves" in TT,
+              get: TT => TT.colorCurves,
+              set: (TT, UT) => {
+                TT.colorCurves = UT
               }
             },
-            metadata: Ip
-          }, zp, sp), (0, Op.j)(null, null, cp, {
+            metadata: MT
+          }, hT, DT), (0, WT.h)(null, null, mT, {
             kind: "field",
             name: "_colorCurvesEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_colorCurvesEnabled" in pp,
-              get: pp => pp._colorCurvesEnabled,
-              set: (pp, ip) => {
-                pp._colorCurvesEnabled = ip
+              has: TT => "_colorCurvesEnabled" in TT,
+              get: TT => TT._colorCurvesEnabled,
+              set: (TT, UT) => {
+                TT._colorCurvesEnabled = UT
               }
             },
-            metadata: Ip
-          }, Kp, Vp), (0, Op.j)(null, null, Yp, {
+            metadata: MT
+          }, oT, AT), (0, WT.h)(null, null, kT, {
             kind: "field",
             name: "_colorGradingTexture",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_colorGradingTexture" in pp,
-              get: pp => pp._colorGradingTexture,
-              set: (pp, ip) => {
-                pp._colorGradingTexture = ip
+              has: TT => "_colorGradingTexture" in TT,
+              get: TT => TT._colorGradingTexture,
+              set: (TT, UT) => {
+                TT._colorGradingTexture = UT
               }
             },
-            metadata: Ip
-          }, ii, ci), (0, Op.j)(null, null, Wp, {
+            metadata: MT
+          }, RT, TU), (0, WT.h)(null, null, pT, {
             kind: "field",
             name: "_colorGradingEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_colorGradingEnabled" in pp,
-              get: pp => pp._colorGradingEnabled,
-              set: (pp, ip) => {
-                pp._colorGradingEnabled = ip
+              has: TT => "_colorGradingEnabled" in TT,
+              get: TT => TT._colorGradingEnabled,
+              set: (TT, UT) => {
+                TT._colorGradingEnabled = UT
               }
             },
-            metadata: Ip
-          }, Oi, oi), (0, Op.j)(null, null, yp, {
+            metadata: MT
+          }, UU, mU), (0, WT.h)(null, null, BT, {
             kind: "field",
             name: "_colorGradingWithGreenDepth",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_colorGradingWithGreenDepth" in pp,
-              get: pp => pp._colorGradingWithGreenDepth,
-              set: (pp, ip) => {
-                pp._colorGradingWithGreenDepth = ip
+              has: TT => "_colorGradingWithGreenDepth" in TT,
+              get: TT => TT._colorGradingWithGreenDepth,
+              set: (TT, UT) => {
+                TT._colorGradingWithGreenDepth = UT
               }
             },
-            metadata: Ip
-          }, Ii, Si), (0, Op.j)(null, null, Up, {
+            metadata: MT
+          }, WU, zU), (0, WT.h)(null, null, ZT, {
             kind: "field",
             name: "_colorGradingBGR",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_colorGradingBGR" in pp,
-              get: pp => pp._colorGradingBGR,
-              set: (pp, ip) => {
-                pp._colorGradingBGR = ip
+              has: TT => "_colorGradingBGR" in TT,
+              get: TT => TT._colorGradingBGR,
+              set: (TT, UT) => {
+                TT._colorGradingBGR = UT
               }
             },
-            metadata: Ip
-          }, xi, Li), (0, Op.j)(null, null, vp, {
+            metadata: MT
+          }, MU, gU), (0, WT.h)(null, null, vT, {
             kind: "field",
             name: "_exposure",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_exposure" in pp,
-              get: pp => pp._exposure,
-              set: (pp, ip) => {
-                pp._exposure = ip
+              has: TT => "_exposure" in TT,
+              get: TT => TT._exposure,
+              set: (TT, UT) => {
+                TT._exposure = UT
               }
             },
-            metadata: Ip
-          }, Yi, Di), (0, Op.j)(null, null, jp, {
+            metadata: MT
+          }, nU, HU), (0, WT.h)(null, null, OT, {
             kind: "field",
             name: "_toneMappingEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_toneMappingEnabled" in pp,
-              get: pp => pp._toneMappingEnabled,
-              set: (pp, ip) => {
-                pp._toneMappingEnabled = ip
+              has: TT => "_toneMappingEnabled" in TT,
+              get: TT => TT._toneMappingEnabled,
+              set: (TT, UT) => {
+                TT._toneMappingEnabled = UT
               }
             },
-            metadata: Ip
-          }, Ai, Pi), (0, Op.j)(null, null, Mp, {
+            metadata: MT
+          }, kU, jU), (0, WT.h)(null, null, dT, {
             kind: "field",
             name: "_toneMappingType",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_toneMappingType" in pp,
-              get: pp => pp._toneMappingType,
-              set: (pp, ip) => {
-                pp._toneMappingType = ip
+              has: TT => "_toneMappingType" in TT,
+              get: TT => TT._toneMappingType,
+              set: (TT, UT) => {
+                TT._toneMappingType = UT
               }
             },
-            metadata: Ip
-          }, Wi, yi), (0, Op.j)(null, null, Cp, {
+            metadata: MT
+          }, lU, LU), (0, WT.h)(null, null, wT, {
             kind: "field",
             name: "_contrast",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_contrast" in pp,
-              get: pp => pp._contrast,
-              set: (pp, ip) => {
-                pp._contrast = ip
+              has: TT => "_contrast" in TT,
+              get: TT => TT._contrast,
+              set: (TT, UT) => {
+                TT._contrast = UT
               }
             },
-            metadata: Ip
-          }, Ui, wi), (0, Op.j)(null, null, Ep, {
+            metadata: MT
+          }, pU, BU), (0, WT.h)(null, null, tT, {
             kind: "field",
             name: "_whiteBalanceEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_whiteBalanceEnabled" in pp,
-              get: pp => pp._whiteBalanceEnabled,
-              set: (pp, ip) => {
-                pp._whiteBalanceEnabled = ip
+              has: TT => "_whiteBalanceEnabled" in TT,
+              get: TT => TT._whiteBalanceEnabled,
+              set: (TT, UT) => {
+                TT._whiteBalanceEnabled = UT
               }
             },
-            metadata: Ip
-          }, vi, ti), (0, Op.j)(null, null, Xp, {
+            metadata: MT
+          }, ZU, cU), (0, WT.h)(null, null, aT, {
             kind: "field",
             name: "_temperature",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_temperature" in pp,
-              get: pp => pp._temperature,
-              set: (pp, ip) => {
-                pp._temperature = ip
+              has: TT => "_temperature" in TT,
+              get: TT => TT._temperature,
+              set: (TT, UT) => {
+                TT._temperature = UT
               }
             },
-            metadata: Ip
-          }, Hi, di), (0, Op.j)(null, null, lp, {
+            metadata: MT
+          }, vU, fU), (0, WT.h)(null, null, yT, {
             kind: "field",
             name: "_tint",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_tint" in pp,
-              get: pp => pp._tint,
-              set: (pp, ip) => {
-                pp._tint = ip
+              has: TT => "_tint" in TT,
+              get: TT => TT._tint,
+              set: (TT, UT) => {
+                TT._tint = UT
               }
             },
-            metadata: Ip
-          }, ei, ui), (0, Op.j)(null, null, Qp, {
+            metadata: MT
+          }, qU, iU), (0, WT.h)(null, null, XT, {
             kind: "field",
             name: "vignetteStretch",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vignetteStretch" in pp,
-              get: pp => pp.vignetteStretch,
-              set: (pp, ip) => {
-                pp.vignetteStretch = ip
+              has: TT => "vignetteStretch" in TT,
+              get: TT => TT.vignetteStretch,
+              set: (TT, UT) => {
+                TT.vignetteStretch = UT
               }
             },
-            metadata: Ip
-          }, ji, ki), (0, Op.j)(null, null, Jp, {
+            metadata: MT
+          }, bU, OU), (0, WT.h)(null, null, IT, {
             kind: "field",
             name: "vignetteCenterX",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vignetteCenterX" in pp,
-              get: pp => pp.vignetteCenterX,
-              set: (pp, ip) => {
-                pp.vignetteCenterX = ip
+              has: TT => "vignetteCenterX" in TT,
+              get: TT => TT.vignetteCenterX,
+              set: (TT, UT) => {
+                TT.vignetteCenterX = UT
               }
             },
-            metadata: Ip
-          }, mi, Ri), (0, Op.j)(null, null, Bp, {
+            metadata: MT
+          }, eU, YU), (0, WT.h)(null, null, QT, {
             kind: "field",
             name: "vignetteCenterY",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vignetteCenterY" in pp,
-              get: pp => pp.vignetteCenterY,
-              set: (pp, ip) => {
-                pp.vignetteCenterY = ip
+              has: TT => "vignetteCenterY" in TT,
+              get: TT => TT.vignetteCenterY,
+              set: (TT, UT) => {
+                TT.vignetteCenterY = UT
               }
             },
-            metadata: Ip
-          }, qi, Mi), (0, Op.j)(null, null, Np, {
+            metadata: MT
+          }, JU, xU), (0, WT.h)(null, null, sT, {
             kind: "field",
             name: "vignetteWeight",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vignetteWeight" in pp,
-              get: pp => pp.vignetteWeight,
-              set: (pp, ip) => {
-                pp.vignetteWeight = ip
+              has: TT => "vignetteWeight" in TT,
+              get: TT => TT.vignetteWeight,
+              set: (TT, UT) => {
+                TT.vignetteWeight = UT
               }
             },
-            metadata: Ip
-          }, Ci, Ei), (0, Op.j)(null, null, Tp, {
+            metadata: MT
+          }, dU, wU), (0, WT.h)(null, null, FT, {
             kind: "field",
             name: "vignetteColor",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vignetteColor" in pp,
-              get: pp => pp.vignetteColor,
-              set: (pp, ip) => {
-                pp.vignetteColor = ip
+              has: TT => "vignetteColor" in TT,
+              get: TT => TT.vignetteColor,
+              set: (TT, UT) => {
+                TT.vignetteColor = UT
               }
             },
-            metadata: Ip
-          }, Xi, li), (0, Op.j)(null, null, fp, {
+            metadata: MT
+          }, tU, aU), (0, WT.h)(null, null, PT, {
             kind: "field",
             name: "vignetteCameraFov",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vignetteCameraFov" in pp,
-              get: pp => pp.vignetteCameraFov,
-              set: (pp, ip) => {
-                pp.vignetteCameraFov = ip
+              has: TT => "vignetteCameraFov" in TT,
+              get: TT => TT.vignetteCameraFov,
+              set: (TT, UT) => {
+                TT.vignetteCameraFov = UT
               }
             },
-            metadata: Ip
-          }, Qi, Ji), (0, Op.j)(null, null, bp, {
+            metadata: MT
+          }, yU, XU), (0, WT.h)(null, null, VT, {
             kind: "field",
             name: "_vignetteBlendMode",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_vignetteBlendMode" in pp,
-              get: pp => pp._vignetteBlendMode,
-              set: (pp, ip) => {
-                pp._vignetteBlendMode = ip
+              has: TT => "_vignetteBlendMode" in TT,
+              get: TT => TT._vignetteBlendMode,
+              set: (TT, UT) => {
+                TT._vignetteBlendMode = UT
               }
             },
-            metadata: Ip
-          }, Bi, Ni), (0, Op.j)(null, null, hp, {
+            metadata: MT
+          }, IU, QU), (0, WT.h)(null, null, uT, {
             kind: "field",
             name: "_vignetteEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_vignetteEnabled" in pp,
-              get: pp => pp._vignetteEnabled,
-              set: (pp, ip) => {
-                pp._vignetteEnabled = ip
+              has: TT => "_vignetteEnabled" in TT,
+              get: TT => TT._vignetteEnabled,
+              set: (TT, UT) => {
+                TT._vignetteEnabled = UT
               }
             },
-            metadata: Ip
-          }, Ti, fi), (0, Op.j)(null, null, ap, {
+            metadata: MT
+          }, sU, FU), (0, WT.h)(null, null, CT, {
             kind: "field",
             name: "_ditheringEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_ditheringEnabled" in pp,
-              get: pp => pp._ditheringEnabled,
-              set: (pp, ip) => {
-                pp._ditheringEnabled = ip
+              has: TT => "_ditheringEnabled" in TT,
+              get: TT => TT._ditheringEnabled,
+              set: (TT, UT) => {
+                TT._ditheringEnabled = UT
               }
             },
-            metadata: Ip
-          }, bi, ai), (0, Op.j)(null, null, np, {
+            metadata: MT
+          }, PU, VU), (0, WT.h)(null, null, rT, {
             kind: "field",
             name: "_ditheringIntensity",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_ditheringIntensity" in pp,
-              get: pp => pp._ditheringIntensity,
-              set: (pp, ip) => {
-                pp._ditheringIntensity = ip
+              has: TT => "_ditheringIntensity" in TT,
+              get: TT => TT._ditheringIntensity,
+              set: (TT, UT) => {
+                TT._ditheringIntensity = UT
               }
             },
-            metadata: Ip
-          }, ni, Fi), (0, Op.j)(null, null, Fp, {
+            metadata: MT
+          }, uU, CU), (0, WT.h)(null, null, KT, {
             kind: "field",
             name: "_skipFinalColorClamp",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_skipFinalColorClamp" in pp,
-              get: pp => pp._skipFinalColorClamp,
-              set: (pp, ip) => {
-                pp._skipFinalColorClamp = ip
+              has: TT => "_skipFinalColorClamp" in TT,
+              get: TT => TT._skipFinalColorClamp,
+              set: (TT, UT) => {
+                TT._skipFinalColorClamp = UT
               }
             },
-            metadata: Ip
-          }, gi, Gi), (0, Op.j)(null, null, gp, {
+            metadata: MT
+          }, rU, KU), (0, WT.h)(null, null, ST, {
             kind: "field",
             name: "_applyByPostProcess",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_applyByPostProcess" in pp,
-              get: pp => pp._applyByPostProcess,
-              set: (pp, ip) => {
-                pp._applyByPostProcess = ip
+              has: TT => "_applyByPostProcess" in TT,
+              get: TT => TT._applyByPostProcess,
+              set: (TT, UT) => {
+                TT._applyByPostProcess = UT
               }
             },
-            metadata: Ip
-          }, ri, Zi), (0, Op.j)(null, null, Gp, {
+            metadata: MT
+          }, SU, GU), (0, WT.h)(null, null, GT, {
             kind: "field",
             name: "_isEnabled",
             static: !1,
             private: !1,
             access: {
-              has: pp => "_isEnabled" in pp,
-              get: pp => pp._isEnabled,
-              set: (pp, ip) => {
-                pp._isEnabled = ip
+              has: TT => "_isEnabled" in TT,
+              get: TT => TT._isEnabled,
+              set: (TT, UT) => {
+                TT._isEnabled = UT
               }
             },
-            metadata: Ip
-          }, zi, si), (0, Op.j)(null, null, rp, {
+            metadata: MT
+          }, NU, EU), (0, WT.h)(null, null, NT, {
             kind: "field",
             name: "outputTextureWidth",
             static: !1,
             private: !1,
             access: {
-              has: pp => "outputTextureWidth" in pp,
-              get: pp => pp.outputTextureWidth,
-              set: (pp, ip) => {
-                pp.outputTextureWidth = ip
+              has: TT => "outputTextureWidth" in TT,
+              get: TT => TT.outputTextureWidth,
+              set: (TT, UT) => {
+                TT.outputTextureWidth = UT
               }
             },
-            metadata: Ip
-          }, Ki, Vi), (0, Op.j)(null, null, Zp, {
+            metadata: MT
+          }, hU, DU), (0, WT.h)(null, null, ET, {
             kind: "field",
             name: "outputTextureHeight",
             static: !1,
             private: !1,
             access: {
-              has: pp => "outputTextureHeight" in pp,
-              get: pp => pp.outputTextureHeight,
-              set: (pp, ip) => {
-                pp.outputTextureHeight = ip
+              has: TT => "outputTextureHeight" in TT,
+              get: TT => TT.outputTextureHeight,
+              set: (TT, UT) => {
+                TT.outputTextureHeight = UT
               }
             },
-            metadata: Ip
-          }, pc, ic), Ip && Object.defineProperty(pp, Symbol.metadata, {
+            metadata: MT
+          }, oU, AU), MT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Ip
+            value: MT
           })
-        })(), pp.TONEMAPPING_STANDARD = 0, pp.TONEMAPPING_ACES = 1, pp.TONEMAPPING_KHR_PBR_NEUTRAL = 2, pp.PrepareUniforms = qp.f, pp.PrepareSamplers = qp.c, pp._VIGNETTEMODE_MULTIPLY = 0, pp._VIGNETTEMODE_OPAQUE = 1, pp
+        })(), TT.TONEMAPPING_STANDARD = 0, TT.TONEMAPPING_ACES = 1, TT.TONEMAPPING_KHR_PBR_NEUTRAL = 2, TT.PrepareUniforms = xT.e, TT.PrepareSamplers = xT.b, TT._VIGNETTEMODE_MULTIPLY = 0, TT._VIGNETTEMODE_OPAQUE = 1, TT
       })(),
-      Ep = !1;
+      tT = !1;
 
-    function Xp(pp) {
-      const ip = ep.c.Parse((() => new Cp), pp, null, null);
-      return void 0 !== pp.vignetteCentreX && (ip.vignetteCenterX = pp.vignetteCentreX), void 0 !== pp.vignetteCentreY && (ip.vignetteCenterY = pp.vignetteCentreY), ip
+    function aT(TT) {
+      const UT = bT.e.Parse((() => new wT), TT, null, null);
+      return void 0 !== TT.vignetteCentreX && (UT.vignetteCenterX = TT.vignetteCentreX), void 0 !== TT.vignetteCentreY && (UT.vignetteCenterY = TT.vignetteCentreY), UT
     }
 
-    function lp() {
-      Ep || (Ep = !0, Cp.Parse = Xp, ep.c._ImageProcessingConfigurationParser = Xp, (0, Mp.g)("BABYLON.ImageProcessingConfiguration", Cp))
+    function yT() {
+      tT || (tT = !0, wT.Parse = aT, bT.e._ImageProcessingConfigurationParser = aT, (0, dT.h)("BABYLON.ImageProcessingConfiguration", wT))
     }
   },
-  40332: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip
+  40242: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT
     });
-    var Op = cp(38905),
-      op = cp(40304);
-    class Ip {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Op = arguments.length > 3 ? arguments[3] : void 0,
-          op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          Ip = arguments.length > 5 ? arguments[5] : void 0;
-        this._uniformNames = [], this._valueCache = {}, this._engine = pp, this._noUBO = !pp.supportsUniformBuffers || op, this._dynamic = cp, this._name = Op ?? "no-name", this._data = ip || [], this._uniformLocations = {}, this._uniformSizes = {}, this._uniformArraySizes = {}, this._uniformLocationPointer = 0, this._needSync = !1, this._dataGeneration = 0, this._trackUBOsInFrame = !1, (void 0 === Ip && this._engine._features.trackUbosInFrame || !0 === Ip) && (this._buffers = [], this._bufferIndex = -1, this._bufferUpdatedLastFrame = !1, this._createBufferOnWrite = !1, this._currentFrameId = 0, this._trackUBOsInFrame = !0, this._resetOwnerSlots()), this._noUBO ? (this.updateMatrix3x3 = this._updateMatrix3x3ForEffect, this.updateMatrix2x2 = this._updateMatrix2x2ForEffect, this.updateFloat = this._updateFloatForEffect, this.updateFloat2 = this._updateFloat2ForEffect, this.updateFloat3 = this._updateFloat3ForEffect, this.updateFloat4 = this._updateFloat4ForEffect, this.updateFloatArray = this._updateFloatArrayForEffect, this.updateArray = this._updateArrayForEffect, this.updateIntArray = this._updateIntArrayForEffect, this.updateUIntArray = this._updateUIntArrayForEffect, this.I3 = this._updateMatrixForEffect, this.updateMatrices = this._updateMatricesForEffect, this.updateVector3 = this._updateVector3ForEffect, this.updateVector4 = this._updateVector4ForEffect, this.updateColor3 = this._updateColor3ForEffect, this.updateColor4 = this._updateColor4ForEffect, this.updateDirectColor4 = this._updateDirectColor4ForEffect, this.updateInt = this._updateIntForEffect, this.updateInt2 = this._updateInt2ForEffect, this.updateInt3 = this._updateInt3ForEffect, this.updateInt4 = this._updateInt4ForEffect, this.updateUInt = this._updateUIntForEffect, this.updateUInt2 = this._updateUInt2ForEffect, this.updateUInt3 = this._updateUInt3ForEffect, this.updateUInt4 = this._updateUInt4ForEffect) : (this._engine._uniformBuffers.push(this), this.updateMatrix3x3 = this._updateMatrix3x3ForUniform, this.updateMatrix2x2 = this._updateMatrix2x2ForUniform, this.updateFloat = this._updateFloatForUniform, this.updateFloat2 = this._updateFloat2ForUniform, this.updateFloat3 = this._updateFloat3ForUniform, this.updateFloat4 = this._updateFloat4ForUniform, this.updateFloatArray = this._updateFloatArrayForUniform, this.updateArray = this._updateArrayForUniform, this.updateIntArray = this._updateIntArrayForUniform, this.updateUIntArray = this._updateUIntArrayForUniform, this.I3 = this._updateMatrixForUniform, this.updateMatrices = this._updateMatricesForUniform, this.updateVector3 = this._updateVector3ForUniform, this.updateVector4 = this._updateVector4ForUniform, this.updateColor3 = this._updateColor3ForUniform, this.updateColor4 = this._updateColor4ForUniform, this.updateDirectColor4 = this._updateDirectColor4ForUniform, this.updateInt = this._updateIntForUniform, this.updateInt2 = this._updateInt2ForUniform, this.updateInt3 = this._updateInt3ForUniform, this.updateInt4 = this._updateInt4ForUniform, this.updateUInt = this._updateUIntForUniform, this.updateUInt2 = this._updateUInt2ForUniform, this.updateUInt3 = this._updateUInt3ForUniform, this.updateUInt4 = this._updateUInt4ForUniform)
+    var WT = mT(38800),
+      zT = mT(40201);
+    class MT {
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          WT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          MT = arguments.length > 5 ? arguments[5] : void 0;
+        this._uniformNames = [], this._valueCache = {}, this._engine = TT, this._noUBO = !TT.supportsUniformBuffers || zT, this._dynamic = mT, this._name = WT ?? "no-name", this._data = UT || [], this._uniformLocations = {}, this._uniformSizes = {}, this._uniformArraySizes = {}, this._uniformLocationPointer = 0, this._needSync = !1, this._dataGeneration = 0, this._trackUBOsInFrame = !1, (void 0 === MT && this._engine._features.trackUbosInFrame || !0 === MT) && (this._buffers = [], this._bufferIndex = -1, this._bufferUpdatedLastFrame = !1, this._createBufferOnWrite = !1, this._currentFrameId = 0, this._trackUBOsInFrame = !0, this._resetOwnerSlots()), this._noUBO ? (this.updateMatrix3x3 = this._updateMatrix3x3ForEffect, this.updateMatrix2x2 = this._updateMatrix2x2ForEffect, this.updateFloat = this._updateFloatForEffect, this.updateFloat2 = this._updateFloat2ForEffect, this.updateFloat3 = this._updateFloat3ForEffect, this.updateFloat4 = this._updateFloat4ForEffect, this.updateFloatArray = this._updateFloatArrayForEffect, this.updateArray = this._updateArrayForEffect, this.updateIntArray = this._updateIntArrayForEffect, this.updateUIntArray = this._updateUIntArrayForEffect, this.R7 = this._updateMatrixForEffect, this.updateMatrices = this._updateMatricesForEffect, this.updateVector3 = this._updateVector3ForEffect, this.updateVector4 = this._updateVector4ForEffect, this.updateColor3 = this._updateColor3ForEffect, this.updateColor4 = this._updateColor4ForEffect, this.updateDirectColor4 = this._updateDirectColor4ForEffect, this.updateInt = this._updateIntForEffect, this.updateInt2 = this._updateInt2ForEffect, this.updateInt3 = this._updateInt3ForEffect, this.updateInt4 = this._updateInt4ForEffect, this.updateUInt = this._updateUIntForEffect, this.updateUInt2 = this._updateUInt2ForEffect, this.updateUInt3 = this._updateUInt3ForEffect, this.updateUInt4 = this._updateUInt4ForEffect) : (this._engine._uniformBuffers.push(this), this.updateMatrix3x3 = this._updateMatrix3x3ForUniform, this.updateMatrix2x2 = this._updateMatrix2x2ForUniform, this.updateFloat = this._updateFloatForUniform, this.updateFloat2 = this._updateFloat2ForUniform, this.updateFloat3 = this._updateFloat3ForUniform, this.updateFloat4 = this._updateFloat4ForUniform, this.updateFloatArray = this._updateFloatArrayForUniform, this.updateArray = this._updateArrayForUniform, this.updateIntArray = this._updateIntArrayForUniform, this.updateUIntArray = this._updateUIntArrayForUniform, this.R7 = this._updateMatrixForUniform, this.updateMatrices = this._updateMatricesForUniform, this.updateVector3 = this._updateVector3ForUniform, this.updateVector4 = this._updateVector4ForUniform, this.updateColor3 = this._updateColor3ForUniform, this.updateColor4 = this._updateColor4ForUniform, this.updateDirectColor4 = this._updateDirectColor4ForUniform, this.updateInt = this._updateIntForUniform, this.updateInt2 = this._updateInt2ForUniform, this.updateInt3 = this._updateInt3ForUniform, this.updateInt4 = this._updateInt4ForUniform, this.updateUInt = this._updateUIntForUniform, this.updateUInt2 = this._updateUInt2ForUniform, this.updateUInt3 = this._updateUInt3ForUniform, this.updateUInt4 = this._updateUInt4ForUniform)
       }
       get useUbo() {
         return !this._noUBO
@@ -5260,80 +5260,80 @@ export const modules = {
       getUniformNames() {
         return this._uniformNames
       }
-      _fillAlignment(pp) {
-        let ip;
-        if (ip = pp <= 2 ? pp : 4, this._uniformLocationPointer % ip !== 0) {
-          const pp = this._uniformLocationPointer;
-          this._uniformLocationPointer += ip - this._uniformLocationPointer % ip;
-          const cp = this._uniformLocationPointer - pp;
-          for (let ip = 0; ip < cp; ip++) this._data.push(0)
+      _fillAlignment(TT) {
+        let UT;
+        if (UT = TT <= 2 ? TT : 4, this._uniformLocationPointer % UT !== 0) {
+          const TT = this._uniformLocationPointer;
+          this._uniformLocationPointer += UT - this._uniformLocationPointer % UT;
+          const mT = this._uniformLocationPointer - TT;
+          for (let UT = 0; UT < mT; UT++) this._data.push(0)
         }
       }
-      addUniform(pp, ip) {
-        let cp, Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (Op > 0 && "number" === typeof ip && (this._uniformArraySizes[pp] = {
-            strideSize: ip,
-            arraySize: Op
-          }), void 0 === this._uniformLocations[pp] && (this._uniformNames.push(pp), !this._noUBO)) {
-          if (Op > 0) {
-            if (ip instanceof Array) throw "addUniform should not be use with Array in UBO: " + pp;
-            if (this._fillAlignment(4), 16 == ip) ip *= Op;
+      addUniform(TT, UT) {
+        let mT, WT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (WT > 0 && "number" === typeof UT && (this._uniformArraySizes[TT] = {
+            strideSize: UT,
+            arraySize: WT
+          }), void 0 === this._uniformLocations[TT] && (this._uniformNames.push(TT), !this._noUBO)) {
+          if (WT > 0) {
+            if (UT instanceof Array) throw "addUniform should not be use with Array in UBO: " + TT;
+            if (this._fillAlignment(4), 16 == UT) UT *= WT;
             else {
-              ip = ip * Op + (4 - ip) * Op
+              UT = UT * WT + (4 - UT) * WT
             }
-            cp = [];
-            for (let pp = 0; pp < ip; pp++) cp.push(0)
+            mT = [];
+            for (let TT = 0; TT < UT; TT++) mT.push(0)
           } else {
-            if (ip instanceof Array) cp = ip, ip = cp.length;
+            if (UT instanceof Array) mT = UT, UT = mT.length;
             else {
-              cp = [];
-              for (let pp = 0; pp < ip; pp++) cp.push(0)
+              mT = [];
+              for (let TT = 0; TT < UT; TT++) mT.push(0)
             }
-            this._fillAlignment(ip)
+            this._fillAlignment(UT)
           }
-          this._uniformSizes[pp] = ip, this._uniformLocations[pp] = this._uniformLocationPointer, this._uniformLocationPointer += ip;
-          for (let pp = 0; pp < ip; pp++) this._data.push(cp[pp]);
+          this._uniformSizes[TT] = UT, this._uniformLocations[TT] = this._uniformLocationPointer, this._uniformLocationPointer += UT;
+          for (let TT = 0; TT < UT; TT++) this._data.push(mT[TT]);
           this._needSync = !0
         }
       }
-      addMatrix(pp, ip) {
-        this.addUniform(pp, Array.prototype.slice.call(ip.BOp()))
+      addMatrix(TT, UT) {
+        this.addUniform(TT, Array.prototype.slice.call(UT.cWT()))
       }
-      addFloat2(pp, ip, cp) {
-        const Op = [ip, cp];
-        this.addUniform(pp, Op)
+      addFloat2(TT, UT, mT) {
+        const WT = [UT, mT];
+        this.addUniform(TT, WT)
       }
-      addFloat3(pp, ip, cp, Op) {
-        const op = [ip, cp, Op];
-        this.addUniform(pp, op)
+      addFloat3(TT, UT, mT, WT) {
+        const zT = [UT, mT, WT];
+        this.addUniform(TT, zT)
       }
-      addColor3(pp, ip) {
-        const cp = [ip.r, ip.g, ip.b];
-        this.addUniform(pp, cp)
+      addColor3(TT, UT) {
+        const mT = [UT.r, UT.g, UT.b];
+        this.addUniform(TT, mT)
       }
-      addColor4(pp, ip, cp) {
-        const Op = [ip.r, ip.g, ip.b, cp];
-        this.addUniform(pp, Op)
+      addColor4(TT, UT, mT) {
+        const WT = [UT.r, UT.g, UT.b, mT];
+        this.addUniform(TT, WT)
       }
-      addVector3(pp, ip) {
-        const cp = [ip.x, ip.y, ip.z];
-        this.addUniform(pp, cp)
+      addVector3(TT, UT) {
+        const mT = [UT.x, UT.y, UT.z];
+        this.addUniform(TT, mT)
       }
-      addMatrix3x3(pp) {
-        this.addUniform(pp, 12)
+      addMatrix3x3(TT) {
+        this.addUniform(TT, 12)
       }
-      addMatrix2x2(pp) {
-        this.addUniform(pp, 8)
+      addMatrix2x2(TT) {
+        this.addUniform(TT, 8)
       }
       create() {
         this._noUBO || this._buffer || (this._fillAlignment(4), this._bufferData = new Float32Array(this._data), this._dataGeneration++, this._rebuild(), this._needSync = !0)
       }
       _getNamesDebug() {
-        const pp = [];
-        let ip = 0;
-        for (const cp in this._uniformLocations)
-          if (pp.push(cp), 10 === ++ip) break;
-        return pp.join(",")
+        const TT = [];
+        let UT = 0;
+        for (const mT in this._uniformLocations)
+          if (TT.push(mT), 10 === ++UT) break;
+        return TT.join(",")
       }
       _rebuild() {
         !this._noUBO && this._bufferData && (this._dynamic ? this._buffer = this._engine.createDynamicUniformBuffer(this._bufferData, this._name + "_UniformList:" + this._getNamesDebug()) : this._buffer = this._engine.createUniformBuffer(this._bufferData, this._name + "_UniformList:" + this._getNamesDebug()), this._trackUBOsInFrame && (this._buffers.push([this._buffer, this._engine._features.checkUbosContentBeforeUpload ? this._bufferData.slice() : void 0]), this._bufferIndex = this._buffers.length - 1, this._createBufferOnWrite = !1))
@@ -5343,7 +5343,7 @@ export const modules = {
       }
       _resetOwnerSlots() {
         if (this._ownerListsBySlot)
-          for (const pp of this._ownerListsBySlot.values()) this._removeOwnerBacklink(pp);
+          for (const TT of this._ownerListsBySlot.values()) this._removeOwnerBacklink(TT);
         this._ownerListsBySlot = new Map, this._slotByOwner = new WeakMap, this._slotFrameId = [], this._ownerCount = 0, this._freeSlots = [], this._slotGeneration = []
       }
       get _numBuffers() {
@@ -5355,19 +5355,19 @@ export const modules = {
       get name() {
         return this._name
       }
-      set name(pp) {
-        this._name = pp
+      set name(TT) {
+        this._name = TT
       }
       get currentEffect() {
         return this._currentEffect
       }
-      _buffersEqual(pp, ip) {
-        for (let cp = 0; cp < pp.length; ++cp)
-          if (pp[cp] !== ip[cp]) return !1;
+      _buffersEqual(TT, UT) {
+        for (let mT = 0; mT < TT.length; ++mT)
+          if (TT[mT] !== UT[mT]) return !1;
         return !0
       }
-      _copyBuffer(pp, ip) {
-        for (let cp = 0; cp < pp.length; ++cp) ip[cp] = pp[cp]
+      _copyBuffer(TT, UT) {
+        for (let mT = 0; mT < TT.length; ++mT) UT[mT] = TT[mT]
       }
       update() {
         if (!this._noUBO)
@@ -5381,34 +5381,34 @@ export const modules = {
             } else this._createBufferOnWrite = this._trackUBOsInFrame;
         else this.create()
       }
-      _updateOwnerKeyed(pp) {
+      _updateOwnerKeyed(TT) {
         if (this._noUBO || !this._trackUBOsInFrame) return void this.update();
         this._buffer || this.create(), this._checkNewFrame();
-        let ip = this._slotByOwner.get(pp);
-        if (void 0 === ip && (ip = 0 === this._ownerCount && 1 === this._buffers.length && 0 === this._freeSlots.length ? 0 : this._takeFreeSlot(!0), this._slotByOwner.set(pp, ip), this._ownerCount++, pp._uniformBuffersWithOwnedSlot || (pp._uniformBuffersWithOwnedSlot = []), pp._uniformBuffersWithOwnedSlot.push(this), this._ownerListsBySlot.set(ip, pp._uniformBuffersWithOwnedSlot)), this._slotGeneration[ip] === this._dataGeneration) return this._bufferIndex = ip, this._buffer = this._buffers[ip][0], this.bindUniformBuffer(), this._slotFrameId[ip] = this._currentFrameId, this._needSync = !1, void(this._createBufferOnWrite = !1);
-        const cp = this._buffers[ip][1];
-        this._slotFrameId[ip] === this._currentFrameId && cp && !this._buffersEqual(this._bufferData, cp) && (ip = this._takeFreeSlot(!1)), this._bufferIndex = ip, this._buffer = this._buffers[ip][0], this.bindUniformBuffer();
-        const Op = this._buffers[ip][1];
-        Op && this._buffersEqual(this._bufferData, Op) || (Op && this._copyBuffer(this._bufferData, Op), this._bufferUpdatedLastFrame = !0, this._engine.updateUniformBuffer(this._buffer, this._bufferData)), this._slotFrameId[ip] = this._currentFrameId, this._slotGeneration[ip] = this._dataGeneration, this._needSync = !1, this._createBufferOnWrite = !1
+        let UT = this._slotByOwner.get(TT);
+        if (void 0 === UT && (UT = 0 === this._ownerCount && 1 === this._buffers.length && 0 === this._freeSlots.length ? 0 : this._takeFreeSlot(!0), this._slotByOwner.set(TT, UT), this._ownerCount++, TT._uniformBuffersWithOwnedSlot || (TT._uniformBuffersWithOwnedSlot = []), TT._uniformBuffersWithOwnedSlot.push(this), this._ownerListsBySlot.set(UT, TT._uniformBuffersWithOwnedSlot)), this._slotGeneration[UT] === this._dataGeneration) return this._bufferIndex = UT, this._buffer = this._buffers[UT][0], this.bindUniformBuffer(), this._slotFrameId[UT] = this._currentFrameId, this._needSync = !1, void(this._createBufferOnWrite = !1);
+        const mT = this._buffers[UT][1];
+        this._slotFrameId[UT] === this._currentFrameId && mT && !this._buffersEqual(this._bufferData, mT) && (UT = this._takeFreeSlot(!1)), this._bufferIndex = UT, this._buffer = this._buffers[UT][0], this.bindUniformBuffer();
+        const WT = this._buffers[UT][1];
+        WT && this._buffersEqual(this._bufferData, WT) || (WT && this._copyBuffer(this._bufferData, WT), this._bufferUpdatedLastFrame = !0, this._engine.updateUniformBuffer(this._buffer, this._bufferData)), this._slotFrameId[UT] = this._currentFrameId, this._slotGeneration[UT] = this._dataGeneration, this._needSync = !1, this._createBufferOnWrite = !1
       }
-      _takeFreeSlot(pp) {
-        for (let cp = 0; cp < this._freeSlots.length; ++cp) {
-          const ip = this._freeSlots[cp];
-          if (this._slotFrameId[ip] !== this._currentFrameId) return pp && (this._freeSlots[cp] = this._freeSlots[this._freeSlots.length - 1], this._freeSlots.pop()), ip
+      _takeFreeSlot(TT) {
+        for (let mT = 0; mT < this._freeSlots.length; ++mT) {
+          const UT = this._freeSlots[mT];
+          if (this._slotFrameId[UT] !== this._currentFrameId) return TT && (this._freeSlots[mT] = this._freeSlots[this._freeSlots.length - 1], this._freeSlots.pop()), UT
         }
         this._rebuild();
-        const ip = this._buffers.length - 1;
-        return pp || this._freeSlots.push(ip), ip
+        const UT = this._buffers.length - 1;
+        return TT || this._freeSlots.push(UT), UT
       }
-      _releaseOwnerSlot(pp) {
-        const ip = this._slotByOwner?.get(pp);
-        if (void 0 === ip) return;
-        this._slotByOwner.delete(pp);
-        const cp = this._ownerListsBySlot.get(ip);
-        cp && (this._removeOwnerBacklink(cp), this._ownerListsBySlot.delete(ip)), this._ownerCount--, this._freeSlots.push(ip)
+      _releaseOwnerSlot(TT) {
+        const UT = this._slotByOwner?.get(TT);
+        if (void 0 === UT) return;
+        this._slotByOwner.delete(TT);
+        const mT = this._ownerListsBySlot.get(UT);
+        mT && (this._removeOwnerBacklink(mT), this._ownerListsBySlot.delete(UT)), this._ownerCount--, this._freeSlots.push(UT)
       }
-      _removeOwnerBacklink(pp) {
-        const ip = pp.indexOf(this); - 1 !== ip && (pp[ip] = pp[pp.length - 1], pp.pop())
+      _removeOwnerBacklink(TT) {
+        const UT = TT.indexOf(this); - 1 !== UT && (TT[UT] = TT[TT.length - 1], TT.pop())
       }
       _createNewBuffer() {
         this._bufferIndex + 1 < this._buffers.length ? (this._bufferIndex++, this._buffer = this._buffers[this._bufferIndex][0], this._createBufferOnWrite = !1, this._needSync = !0) : this._rebuild()
@@ -5416,242 +5416,242 @@ export const modules = {
       _checkNewFrame() {
         this._trackUBOsInFrame && this._currentFrameId !== this._engine.frameId && (this._currentFrameId = this._engine.frameId, this._createBufferOnWrite = !1, this._buffers && this._buffers.length > 0 ? (1 === this._buffers.length ? this._needSync = !this._bufferUpdatedLastFrame : this._needSync = 0 !== this._bufferIndex, this._bufferIndex = 0, this._buffer = this._buffers[this._bufferIndex][0]) : this._bufferIndex = -1)
       }
-      updateUniform(pp, ip, cp) {
+      updateUniform(TT, UT, mT) {
         this._checkNewFrame();
-        let op = this._uniformLocations[pp];
-        if (void 0 === op) {
-          if (this._buffer) return void Op.e.Error("Cannot add an uniform after UBO has been created. uniformName=" + pp);
-          this.addUniform(pp, cp), op = this._uniformLocations[pp]
+        let zT = this._uniformLocations[TT];
+        if (void 0 === zT) {
+          if (this._buffer) return void WT.b.Error("Cannot add an uniform after UBO has been created. uniformName=" + TT);
+          this.addUniform(TT, mT), zT = this._uniformLocations[TT]
         }
         if (this._buffer || this.create(), this._dynamic) {
-          for (let pp = 0; pp < cp; pp++) this._bufferData[op + pp] = ip[pp];
+          for (let TT = 0; TT < mT; TT++) this._bufferData[zT + TT] = UT[TT];
           this._dataGeneration++
         } else {
-          let pp = !1;
-          for (let Op = 0; Op < cp; Op++)(16 === cp && !this._engine._features.uniformBufferHardCheckMatrix || this._bufferData[op + Op] !== Math.fround(ip[Op])) && (pp = !0, this._createBufferOnWrite && this._createNewBuffer(), this._bufferData[op + Op] = ip[Op]);
-          this._needSync = this._needSync || pp, pp && this._dataGeneration++
+          let TT = !1;
+          for (let WT = 0; WT < mT; WT++)(16 === mT && !this._engine._features.uniformBufferHardCheckMatrix || this._bufferData[zT + WT] !== Math.fround(UT[WT])) && (TT = !0, this._createBufferOnWrite && this._createNewBuffer(), this._bufferData[zT + WT] = UT[WT]);
+          this._needSync = this._needSync || TT, TT && this._dataGeneration++
         }
       }
-      updateUniformArray(pp, ip, cp) {
+      updateUniformArray(TT, UT, mT) {
         this._checkNewFrame();
-        const Ip = this._uniformLocations[pp];
-        if (void 0 === Ip) return void Op.e.Error("Cannot add an uniform Array dynamically. Please, add it using addUniform and make sure that uniform buffers are supported by the current engine.");
+        const MT = this._uniformLocations[TT];
+        if (void 0 === MT) return void WT.b.Error("Cannot add an uniform Array dynamically. Please, add it using addUniform and make sure that uniform buffers are supported by the current engine.");
         this._buffer || this.create();
-        const Sp = this._uniformArraySizes[pp];
+        const gT = this._uniformArraySizes[TT];
         if (this._dynamic) {
-          for (let pp = 0; pp < cp; pp++) this._bufferData[Ip + pp] = ip[pp];
+          for (let TT = 0; TT < mT; TT++) this._bufferData[MT + TT] = UT[TT];
           this._dataGeneration++
         } else {
-          let pp = !1,
-            Op = 0,
-            xp = 0;
-          for (let Lp = 0; Lp < cp; Lp++)
-            if (this._bufferData[Ip + 4 * xp + Op] !== op.i.FloatRound(ip[Lp]) && (pp = !0, this._createBufferOnWrite && this._createNewBuffer(), this._bufferData[Ip + 4 * xp + Op] = ip[Lp]), Op++, Op === Sp.strideSize) {
-              for (; Op < 4; Op++) this._bufferData[Ip + 4 * xp + Op] = 0;
-              Op = 0, xp++
-            } this._needSync = this._needSync || pp, pp && this._dataGeneration++
+          let TT = !1,
+            WT = 0,
+            nT = 0;
+          for (let HT = 0; HT < mT; HT++)
+            if (this._bufferData[MT + 4 * nT + WT] !== zT.j.FloatRound(UT[HT]) && (TT = !0, this._createBufferOnWrite && this._createNewBuffer(), this._bufferData[MT + 4 * nT + WT] = UT[HT]), WT++, WT === gT.strideSize) {
+              for (; WT < 4; WT++) this._bufferData[MT + 4 * nT + WT] = 0;
+              WT = 0, nT++
+            } this._needSync = this._needSync || TT, TT && this._dataGeneration++
         }
       }
-      _cacheMatrix(pp, ip) {
+      _cacheMatrix(TT, UT) {
         this._checkNewFrame();
-        const cp = this._valueCache[pp],
-          Op = ip.updateFlag;
-        return (void 0 === cp || cp !== Op) && (this._valueCache[pp] = Op, !0)
+        const mT = this._valueCache[TT],
+          WT = UT.updateFlag;
+        return (void 0 === mT || mT !== WT) && (this._valueCache[TT] = WT, !0)
       }
-      _updateMatrix3x3ForUniform(pp, ip) {
-        for (let cp = 0; cp < 3; cp++) Ip._TempBuffer[4 * cp] = ip[3 * cp], Ip._TempBuffer[4 * cp + 1] = ip[3 * cp + 1], Ip._TempBuffer[4 * cp + 2] = ip[3 * cp + 2], Ip._TempBuffer[4 * cp + 3] = 0;
-        this.updateUniform(pp, Ip._TempBuffer, 12)
+      _updateMatrix3x3ForUniform(TT, UT) {
+        for (let mT = 0; mT < 3; mT++) MT._TempBuffer[4 * mT] = UT[3 * mT], MT._TempBuffer[4 * mT + 1] = UT[3 * mT + 1], MT._TempBuffer[4 * mT + 2] = UT[3 * mT + 2], MT._TempBuffer[4 * mT + 3] = 0;
+        this.updateUniform(TT, MT._TempBuffer, 12)
       }
-      _updateMatrix3x3ForEffect(pp, ip) {
-        this._currentEffect.setMatrix3x3(pp, ip)
+      _updateMatrix3x3ForEffect(TT, UT) {
+        this._currentEffect.setMatrix3x3(TT, UT)
       }
-      _updateMatrix2x2ForEffect(pp, ip) {
-        this._currentEffect.setMatrix2x2(pp, ip)
+      _updateMatrix2x2ForEffect(TT, UT) {
+        this._currentEffect.setMatrix2x2(TT, UT)
       }
-      _updateMatrix2x2ForUniform(pp, ip) {
-        for (let cp = 0; cp < 2; cp++) Ip._TempBuffer[4 * cp] = ip[2 * cp], Ip._TempBuffer[4 * cp + 1] = ip[2 * cp + 1], Ip._TempBuffer[4 * cp + 2] = 0, Ip._TempBuffer[4 * cp + 3] = 0;
-        this.updateUniform(pp, Ip._TempBuffer, 8)
+      _updateMatrix2x2ForUniform(TT, UT) {
+        for (let mT = 0; mT < 2; mT++) MT._TempBuffer[4 * mT] = UT[2 * mT], MT._TempBuffer[4 * mT + 1] = UT[2 * mT + 1], MT._TempBuffer[4 * mT + 2] = 0, MT._TempBuffer[4 * mT + 3] = 0;
+        this.updateUniform(TT, MT._TempBuffer, 8)
       }
-      _updateFloatForEffect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setFloat(pp + cp, ip)
+      _updateFloatForEffect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        this._currentEffect.setFloat(TT + mT, UT)
       }
-      _updateFloatForUniform(pp, ip) {
-        Ip._TempBuffer[0] = ip, this.updateUniform(pp, Ip._TempBuffer, 1)
+      _updateFloatForUniform(TT, UT) {
+        MT._TempBuffer[0] = UT, this.updateUniform(TT, MT._TempBuffer, 1)
       }
-      _updateFloat2ForEffect(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setFloat2(pp + Op, ip, cp)
+      _updateFloat2ForEffect(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+        this._currentEffect.setFloat2(TT + WT, UT, mT)
       }
-      _updateFloat2ForUniform(pp, ip, cp) {
-        Ip._TempBuffer[0] = ip, Ip._TempBuffer[1] = cp, this.updateUniform(pp, Ip._TempBuffer, 2)
+      _updateFloat2ForUniform(TT, UT, mT) {
+        MT._TempBuffer[0] = UT, MT._TempBuffer[1] = mT, this.updateUniform(TT, MT._TempBuffer, 2)
       }
-      _updateFloat3ForEffect(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        this._currentEffect.setFloat3(pp + op, ip, cp, Op)
+      _updateFloat3ForEffect(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        this._currentEffect.setFloat3(TT + zT, UT, mT, WT)
       }
-      _updateFloat3ForUniform(pp, ip, cp, Op) {
-        Ip._TempBuffer[0] = ip, Ip._TempBuffer[1] = cp, Ip._TempBuffer[2] = Op, this.updateUniform(pp, Ip._TempBuffer, 3)
+      _updateFloat3ForUniform(TT, UT, mT, WT) {
+        MT._TempBuffer[0] = UT, MT._TempBuffer[1] = mT, MT._TempBuffer[2] = WT, this.updateUniform(TT, MT._TempBuffer, 3)
       }
-      _updateFloat4ForEffect(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
-        this._currentEffect.setFloat4(pp + Ip, ip, cp, Op, op)
+      _updateFloat4ForEffect(TT, UT, mT, WT, zT) {
+        let MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
+        this._currentEffect.setFloat4(TT + MT, UT, mT, WT, zT)
       }
-      _updateFloat4ForUniform(pp, ip, cp, Op, op) {
-        Ip._TempBuffer[0] = ip, Ip._TempBuffer[1] = cp, Ip._TempBuffer[2] = Op, Ip._TempBuffer[3] = op, this.updateUniform(pp, Ip._TempBuffer, 4)
+      _updateFloat4ForUniform(TT, UT, mT, WT, zT) {
+        MT._TempBuffer[0] = UT, MT._TempBuffer[1] = mT, MT._TempBuffer[2] = WT, MT._TempBuffer[3] = zT, this.updateUniform(TT, MT._TempBuffer, 4)
       }
-      _updateFloatArrayForEffect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        switch (this._uniformArraySizes[pp]?.strideSize) {
+      _updateFloatArrayForEffect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        switch (this._uniformArraySizes[TT]?.strideSize) {
           case 2:
-            this._currentEffect.setFloatArray2(pp + cp, ip);
+            this._currentEffect.setFloatArray2(TT + mT, UT);
             break;
           case 3:
-            this._currentEffect.setFloatArray3(pp + cp, ip);
+            this._currentEffect.setFloatArray3(TT + mT, UT);
             break;
           case 4:
-            this._currentEffect.setFloatArray4(pp + cp, ip);
+            this._currentEffect.setFloatArray4(TT + mT, UT);
             break;
           default:
-            this._currentEffect.setFloatArray(pp + cp, ip)
+            this._currentEffect.setFloatArray(TT + mT, UT)
         }
       }
-      _updateFloatArrayForUniform(pp, ip) {
-        this.updateUniformArray(pp, ip, ip.length)
+      _updateFloatArrayForUniform(TT, UT) {
+        this.updateUniformArray(TT, UT, UT.length)
       }
-      _updateArrayForEffect(pp, ip) {
-        this._currentEffect.setArray(pp, ip)
+      _updateArrayForEffect(TT, UT) {
+        this._currentEffect.setArray(TT, UT)
       }
-      _updateArrayForUniform(pp, ip) {
-        this.updateUniformArray(pp, ip, ip.length)
+      _updateArrayForUniform(TT, UT) {
+        this.updateUniformArray(TT, UT, UT.length)
       }
-      _updateIntArrayForEffect(pp, ip) {
-        this._currentEffect.setIntArray(pp, ip)
+      _updateIntArrayForEffect(TT, UT) {
+        this._currentEffect.setIntArray(TT, UT)
       }
-      _updateIntArrayForUniform(pp, ip) {
-        Ip._TempBufferInt32View.set(ip), this.updateUniformArray(pp, Ip._TempBuffer, ip.length)
+      _updateIntArrayForUniform(TT, UT) {
+        MT._TempBufferInt32View.set(UT), this.updateUniformArray(TT, MT._TempBuffer, UT.length)
       }
-      _updateUIntArrayForEffect(pp, ip) {
-        this._currentEffect.setUIntArray(pp, ip)
+      _updateUIntArrayForEffect(TT, UT) {
+        this._currentEffect.setUIntArray(TT, UT)
       }
-      _updateUIntArrayForUniform(pp, ip) {
-        Ip._TempBufferUInt32View.set(ip), this.updateUniformArray(pp, Ip._TempBuffer, ip.length)
+      _updateUIntArrayForUniform(TT, UT) {
+        MT._TempBufferUInt32View.set(UT), this.updateUniformArray(TT, MT._TempBuffer, UT.length)
       }
-      _updateMatrixForEffect(pp, ip) {
-        this._currentEffect.setMatrix(pp, ip)
+      _updateMatrixForEffect(TT, UT) {
+        this._currentEffect.setMatrix(TT, UT)
       }
-      _updateMatrixForUniform(pp, ip) {
-        this._cacheMatrix(pp, ip) && this.updateUniform(pp, ip.BOp(), 16)
+      _updateMatrixForUniform(TT, UT) {
+        this._cacheMatrix(TT, UT) && this.updateUniform(TT, UT.cWT(), 16)
       }
-      _updateMatricesForEffect(pp, ip) {
-        this._currentEffect.setMatrices(pp, ip)
+      _updateMatricesForEffect(TT, UT) {
+        this._currentEffect.setMatrices(TT, UT)
       }
-      _updateMatricesForUniform(pp, ip) {
-        this.updateUniform(pp, ip, ip.length)
+      _updateMatricesForUniform(TT, UT) {
+        this.updateUniform(TT, UT, UT.length)
       }
-      _updateVector3ForEffect(pp, ip) {
-        this._currentEffect.setVector3(pp, ip)
+      _updateVector3ForEffect(TT, UT) {
+        this._currentEffect.setVector3(TT, UT)
       }
-      _updateVector3ForUniform(pp, ip) {
-        Ip._TempBuffer[0] = ip.x, Ip._TempBuffer[1] = ip.y, Ip._TempBuffer[2] = ip.z, this.updateUniform(pp, Ip._TempBuffer, 3)
+      _updateVector3ForUniform(TT, UT) {
+        MT._TempBuffer[0] = UT.x, MT._TempBuffer[1] = UT.y, MT._TempBuffer[2] = UT.z, this.updateUniform(TT, MT._TempBuffer, 3)
       }
-      _updateVector4ForEffect(pp, ip) {
-        this._currentEffect.setVector4(pp, ip)
+      _updateVector4ForEffect(TT, UT) {
+        this._currentEffect.setVector4(TT, UT)
       }
-      _updateVector4ForUniform(pp, ip) {
-        Ip._TempBuffer[0] = ip.x, Ip._TempBuffer[1] = ip.y, Ip._TempBuffer[2] = ip.z, Ip._TempBuffer[3] = ip.w, this.updateUniform(pp, Ip._TempBuffer, 4)
+      _updateVector4ForUniform(TT, UT) {
+        MT._TempBuffer[0] = UT.x, MT._TempBuffer[1] = UT.y, MT._TempBuffer[2] = UT.z, MT._TempBuffer[3] = UT.w, this.updateUniform(TT, MT._TempBuffer, 4)
       }
-      _updateColor3ForEffect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setColor3(pp + cp, ip)
+      _updateColor3ForEffect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        this._currentEffect.setColor3(TT + mT, UT)
       }
-      _updateColor3ForUniform(pp, ip) {
-        Ip._TempBuffer[0] = ip.r, Ip._TempBuffer[1] = ip.g, Ip._TempBuffer[2] = ip.b, this.updateUniform(pp, Ip._TempBuffer, 3)
+      _updateColor3ForUniform(TT, UT) {
+        MT._TempBuffer[0] = UT.r, MT._TempBuffer[1] = UT.g, MT._TempBuffer[2] = UT.b, this.updateUniform(TT, MT._TempBuffer, 3)
       }
-      _updateColor4ForEffect(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setColor4(pp + Op, ip, cp)
+      _updateColor4ForEffect(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+        this._currentEffect.setColor4(TT + WT, UT, mT)
       }
-      _updateDirectColor4ForEffect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setDirectColor4(pp + cp, ip)
+      _updateDirectColor4ForEffect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        this._currentEffect.setDirectColor4(TT + mT, UT)
       }
-      _updateColor4ForUniform(pp, ip, cp) {
-        Ip._TempBuffer[0] = ip.r, Ip._TempBuffer[1] = ip.g, Ip._TempBuffer[2] = ip.b, Ip._TempBuffer[3] = cp, this.updateUniform(pp, Ip._TempBuffer, 4)
+      _updateColor4ForUniform(TT, UT, mT) {
+        MT._TempBuffer[0] = UT.r, MT._TempBuffer[1] = UT.g, MT._TempBuffer[2] = UT.b, MT._TempBuffer[3] = mT, this.updateUniform(TT, MT._TempBuffer, 4)
       }
-      _updateDirectColor4ForUniform(pp, ip) {
-        Ip._TempBuffer[0] = ip.r, Ip._TempBuffer[1] = ip.g, Ip._TempBuffer[2] = ip.b, Ip._TempBuffer[3] = ip.a, this.updateUniform(pp, Ip._TempBuffer, 4)
+      _updateDirectColor4ForUniform(TT, UT) {
+        MT._TempBuffer[0] = UT.r, MT._TempBuffer[1] = UT.g, MT._TempBuffer[2] = UT.b, MT._TempBuffer[3] = UT.a, this.updateUniform(TT, MT._TempBuffer, 4)
       }
-      _updateIntForEffect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setInt(pp + cp, ip)
+      _updateIntForEffect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        this._currentEffect.setInt(TT + mT, UT)
       }
-      _updateIntForUniform(pp, ip) {
-        Ip._TempBufferInt32View[0] = ip, this.updateUniform(pp, Ip._TempBuffer, 1)
+      _updateIntForUniform(TT, UT) {
+        MT._TempBufferInt32View[0] = UT, this.updateUniform(TT, MT._TempBuffer, 1)
       }
-      _updateInt2ForEffect(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setInt2(pp + Op, ip, cp)
+      _updateInt2ForEffect(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+        this._currentEffect.setInt2(TT + WT, UT, mT)
       }
-      _updateInt2ForUniform(pp, ip, cp) {
-        Ip._TempBufferInt32View[0] = ip, Ip._TempBufferInt32View[1] = cp, this.updateUniform(pp, Ip._TempBuffer, 2)
+      _updateInt2ForUniform(TT, UT, mT) {
+        MT._TempBufferInt32View[0] = UT, MT._TempBufferInt32View[1] = mT, this.updateUniform(TT, MT._TempBuffer, 2)
       }
-      _updateInt3ForEffect(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        this._currentEffect.setInt3(pp + op, ip, cp, Op)
+      _updateInt3ForEffect(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        this._currentEffect.setInt3(TT + zT, UT, mT, WT)
       }
-      _updateInt3ForUniform(pp, ip, cp, Op) {
-        Ip._TempBufferInt32View[0] = ip, Ip._TempBufferInt32View[1] = cp, Ip._TempBufferInt32View[2] = Op, this.updateUniform(pp, Ip._TempBuffer, 3)
+      _updateInt3ForUniform(TT, UT, mT, WT) {
+        MT._TempBufferInt32View[0] = UT, MT._TempBufferInt32View[1] = mT, MT._TempBufferInt32View[2] = WT, this.updateUniform(TT, MT._TempBuffer, 3)
       }
-      _updateInt4ForEffect(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
-        this._currentEffect.setInt4(pp + Ip, ip, cp, Op, op)
+      _updateInt4ForEffect(TT, UT, mT, WT, zT) {
+        let MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
+        this._currentEffect.setInt4(TT + MT, UT, mT, WT, zT)
       }
-      _updateInt4ForUniform(pp, ip, cp, Op, op) {
-        Ip._TempBufferInt32View[0] = ip, Ip._TempBufferInt32View[1] = cp, Ip._TempBufferInt32View[2] = Op, Ip._TempBufferInt32View[3] = op, this.updateUniform(pp, Ip._TempBuffer, 4)
+      _updateInt4ForUniform(TT, UT, mT, WT, zT) {
+        MT._TempBufferInt32View[0] = UT, MT._TempBufferInt32View[1] = mT, MT._TempBufferInt32View[2] = WT, MT._TempBufferInt32View[3] = zT, this.updateUniform(TT, MT._TempBuffer, 4)
       }
-      _updateUIntForEffect(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setUInt(pp + cp, ip)
+      _updateUIntForEffect(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        this._currentEffect.setUInt(TT + mT, UT)
       }
-      _updateUIntForUniform(pp, ip) {
-        Ip._TempBufferUInt32View[0] = ip, this.updateUniform(pp, Ip._TempBuffer, 1)
+      _updateUIntForUniform(TT, UT) {
+        MT._TempBufferUInt32View[0] = UT, this.updateUniform(TT, MT._TempBuffer, 1)
       }
-      _updateUInt2ForEffect(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setUInt2(pp + Op, ip, cp)
+      _updateUInt2ForEffect(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+        this._currentEffect.setUInt2(TT + WT, UT, mT)
       }
-      _updateUInt2ForUniform(pp, ip, cp) {
-        Ip._TempBufferUInt32View[0] = ip, Ip._TempBufferUInt32View[1] = cp, this.updateUniform(pp, Ip._TempBuffer, 2)
+      _updateUInt2ForUniform(TT, UT, mT) {
+        MT._TempBufferUInt32View[0] = UT, MT._TempBufferUInt32View[1] = mT, this.updateUniform(TT, MT._TempBuffer, 2)
       }
-      _updateUInt3ForEffect(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        this._currentEffect.setUInt3(pp + op, ip, cp, Op)
+      _updateUInt3ForEffect(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        this._currentEffect.setUInt3(TT + zT, UT, mT, WT)
       }
-      _updateUInt3ForUniform(pp, ip, cp, Op) {
-        Ip._TempBufferUInt32View[0] = ip, Ip._TempBufferUInt32View[1] = cp, Ip._TempBufferUInt32View[2] = Op, this.updateUniform(pp, Ip._TempBuffer, 3)
+      _updateUInt3ForUniform(TT, UT, mT, WT) {
+        MT._TempBufferUInt32View[0] = UT, MT._TempBufferUInt32View[1] = mT, MT._TempBufferUInt32View[2] = WT, this.updateUniform(TT, MT._TempBuffer, 3)
       }
-      _updateUInt4ForEffect(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
-        this._currentEffect.setUInt4(pp + Ip, ip, cp, Op, op)
+      _updateUInt4ForEffect(TT, UT, mT, WT, zT) {
+        let MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
+        this._currentEffect.setUInt4(TT + MT, UT, mT, WT, zT)
       }
-      _updateUInt4ForUniform(pp, ip, cp, Op, op) {
-        Ip._TempBufferUInt32View[0] = ip, Ip._TempBufferUInt32View[1] = cp, Ip._TempBufferUInt32View[2] = Op, Ip._TempBufferUInt32View[3] = op, this.updateUniform(pp, Ip._TempBuffer, 4)
+      _updateUInt4ForUniform(TT, UT, mT, WT, zT) {
+        MT._TempBufferUInt32View[0] = UT, MT._TempBufferUInt32View[1] = mT, MT._TempBufferUInt32View[2] = WT, MT._TempBufferUInt32View[3] = zT, this.updateUniform(TT, MT._TempBuffer, 4)
       }
-      setTexture(pp, ip) {
-        this._currentEffect.setTexture(pp, ip)
+      setTexture(TT, UT) {
+        this._currentEffect.setTexture(TT, UT)
       }
-      setTextureArray(pp, ip) {
-        this._currentEffect.setTextureArray(pp, ip)
+      setTextureArray(TT, UT) {
+        this._currentEffect.setTextureArray(TT, UT)
       }
-      bindTexture(pp, ip) {
-        this._currentEffect._bindTexture(pp, ip)
+      bindTexture(TT, UT) {
+        this._currentEffect._bindTexture(TT, UT)
       }
-      updateUniformDirectly(pp, ip) {
-        this.updateUniform(pp, ip, ip.length), this.update()
+      updateUniformDirectly(TT, UT) {
+        this.updateUniform(TT, UT, UT.length), this.update()
       }
-      bindToEffect(pp, ip) {
-        this._currentEffect = pp, this._currentEffectName = ip
+      bindToEffect(TT, UT) {
+        this._currentEffect = TT, this._currentEffectName = UT
       }
       bindUniformBuffer() {
         !this._noUBO && this._buffer && this._currentEffect && this._currentEffect.bindUniformBuffer(this._buffer, this._currentEffectName)
@@ -5659,255 +5659,255 @@ export const modules = {
       unbindEffect() {
         this._currentEffect = void 0, this._currentEffectName = void 0
       }
-      setDataBuffer(pp) {
-        if (!this._buffers) return this._buffer === pp;
-        for (let ip = 0; ip < this._buffers.length; ++ip) {
-          if (this._buffers[ip][0] === pp) return this._bufferIndex = ip, this._buffer = pp, this._createBufferOnWrite = !1, this._currentEffect = void 0, this._buffers.length > 1 && this._buffers[ip][1] && (this._bufferData.set(this._buffers[ip][1]), this._dataGeneration++), this._valueCache = {}, this._currentFrameId = this._engine.frameId, !0
+      setDataBuffer(TT) {
+        if (!this._buffers) return this._buffer === TT;
+        for (let UT = 0; UT < this._buffers.length; ++UT) {
+          if (this._buffers[UT][0] === TT) return this._bufferIndex = UT, this._buffer = TT, this._createBufferOnWrite = !1, this._currentEffect = void 0, this._buffers.length > 1 && this._buffers[UT][1] && (this._bufferData.set(this._buffers[UT][1]), this._dataGeneration++), this._valueCache = {}, this._currentFrameId = this._engine.frameId, !0
         }
         return !1
       }
-      has(pp) {
-        return void 0 !== this._uniformLocations[pp]
+      has(TT) {
+        return void 0 !== this._uniformLocations[TT]
       }
       dispose() {
         if (this._noUBO) return;
-        const pp = this._engine._uniformBuffers,
-          ip = pp.indexOf(this);
-        if (-1 !== ip && (pp[ip] = pp[pp.length - 1], pp.pop()), this._trackUBOsInFrame && this._buffers) {
+        const TT = this._engine._uniformBuffers,
+          UT = TT.indexOf(this);
+        if (-1 !== UT && (TT[UT] = TT[TT.length - 1], TT.pop()), this._trackUBOsInFrame && this._buffers) {
           this._resetOwnerSlots();
-          for (let pp = 0; pp < this._buffers.length; ++pp) {
-            const ip = this._buffers[pp][0];
-            this._engine._releaseBuffer(ip)
+          for (let TT = 0; TT < this._buffers.length; ++TT) {
+            const UT = this._buffers[TT][0];
+            this._engine._releaseBuffer(UT)
           }
           this._buffers = [], this._buffer = null, this._bufferIndex = -1
         } else this._buffer && this._engine._releaseBuffer(this._buffer) && (this._buffer = null)
       }
     }
-    Ip._MAX_UNIFORM_SIZE = 256, Ip._TempBuffer = new Float32Array(Ip._MAX_UNIFORM_SIZE), Ip._TempBufferInt32View = new Int32Array(Ip._TempBuffer.buffer), Ip._TempBufferUInt32View = new Uint32Array(Ip._TempBuffer.buffer)
+    MT._MAX_UNIFORM_SIZE = 256, MT._TempBuffer = new Float32Array(MT._MAX_UNIFORM_SIZE), MT._TempBufferInt32View = new Int32Array(MT._TempBuffer.buffer), MT._TempBufferUInt32View = new Uint32Array(MT._TempBuffer.buffer)
   },
-  40134: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op
+  40007: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT
     });
-    var Op = cp(40140);
-    class op extends Op.c {
-      constructor(pp) {
-        super(), this._buffer = pp
+    var WT = mT(40016);
+    class zT extends WT.e {
+      constructor(TT) {
+        super(), this._buffer = TT
       }
       get underlyingResource() {
         return this._buffer
       }
     }
   },
-  40217: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Lp,
-      f: () => Yp
+  40106: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      g: () => kT
     });
-    const Op = "__bjs_serializable__",
-      op = new WeakMap;
+    const WT = "__bjs_serializable__",
+      zT = new WeakMap;
 
-    function Ip(pp, ip) {
-      return Object.prototype.hasOwnProperty.call(pp, ip)
+    function MT(TT, UT) {
+      return Object.prototype.hasOwnProperty.call(TT, UT)
     }
-    const Sp = function() {
-      let pp = Symbol.metadata;
-      return pp || (pp = Symbol("Symbol.metadata"), Object.defineProperty(Symbol, "metadata", {
+    const gT = function() {
+      let TT = Symbol.metadata;
+      return TT || (TT = Symbol("Symbol.metadata"), Object.defineProperty(Symbol, "metadata", {
         configurable: !0,
         writable: !0,
-        value: pp
-      })), pp
+        value: TT
+      })), TT
     }();
 
-    function xp(pp) {
-      return "function" === typeof pp ? pp : pp?.constructor
+    function nT(TT) {
+      return "function" === typeof TT ? TT : TT?.constructor
     }
 
-    function Lp(pp) {
-      if (!pp) throw new Error(`Decorator metadata is unavailable; the Symbol.metadata (${String(Sp)}) polyfill must run before decorated classes are evaluated.`);
-      return Ip(pp, Op) || (pp[Op] = {}), pp[Op]
+    function HT(TT) {
+      if (!TT) throw new Error(`Decorator metadata is unavailable; the Symbol.metadata (${String(gT)}) polyfill must run before decorated classes are evaluated.`);
+      return MT(TT, WT) || (TT[WT] = {}), TT[WT]
     }
 
-    function Yp(pp) {
-      const ip = xp(pp),
-        cp = ip ? ip[Sp] : void 0;
-      if (!cp) return {};
-      const Lp = op.get(cp);
-      if (Lp) return Lp;
-      const Yp = {},
-        Dp = [];
-      let Ap = cp;
-      for (; Ap;) Dp.push(Ap), Ap = Object.getPrototypeOf(Ap);
-      for (const op of Dp)
-        if (Ip(op, Op)) {
-          const pp = op[Op];
-          for (const ip in pp) Yp[ip] = pp[ip]
-        } return op.set(cp, Yp), Yp
+    function kT(TT) {
+      const UT = nT(TT),
+        mT = UT ? UT[gT] : void 0;
+      if (!mT) return {};
+      const HT = zT.get(mT);
+      if (HT) return HT;
+      const kT = {},
+        jT = [];
+      let lT = mT;
+      for (; lT;) jT.push(lT), lT = Object.getPrototypeOf(lT);
+      for (const zT of jT)
+        if (MT(zT, WT)) {
+          const TT = zT[WT];
+          for (const UT in TT) kT[UT] = TT[UT]
+        } return zT.set(mT, kT), kT
     }
   },
-  40210: (pp, ip, cp) => {
-    cp.d(ip, {
-      C: () => xp,
-      F: () => Dp,
-      H: () => Ap,
-      K: () => Sp,
-      b: () => Hp,
-      e: () => Ip,
-      f: () => tp,
-      j: () => Wp,
-      n: () => Lp,
-      q: () => yp,
-      r: () => Yp,
-      s: () => wp,
-      u: () => Pp,
-      y: () => Up
+  40102: (TT, UT, mT) => {
+    mT.d(UT, {
+      B: () => ZT,
+      C: () => nT,
+      F: () => jT,
+      J: () => lT,
+      L: () => gT,
+      d: () => qT,
+      g: () => MT,
+      i: () => fT,
+      k: () => pT,
+      l: () => HT,
+      n: () => BT,
+      r: () => kT,
+      v: () => cT,
+      x: () => LT
     });
-    var Op = cp(40217);
+    var WT = mT(40106);
 
-    function op(pp, ip) {
-      return (cp, op) => {
-        if (!op.metadata) return;
-        const Ip = String(op.name),
-          Sp = (0, Op.c)(op.metadata);
-        Sp[Ip] || (Sp[Ip] = {
-          type: pp,
-          sourceName: ip
+    function zT(TT, UT) {
+      return (mT, zT) => {
+        if (!zT.metadata) return;
+        const MT = String(zT.name),
+          gT = (0, WT.c)(zT.metadata);
+        gT[MT] || (gT[MT] = {
+          type: TT,
+          sourceName: UT
         })
       }
     }
 
-    function Ip(pp) {
-      return function(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (cp, Op) => {
-          const op = ip || "_" + String(Op.name);
+    function MT(TT) {
+      return function(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        return (mT, WT) => {
+          const zT = UT || "_" + String(WT.name);
           return {
-            init(pp) {
-              return void 0 === pp && op in this || (this[op] = pp), pp
+            init(TT) {
+              return void 0 === TT && zT in this || (this[zT] = TT), TT
             },
             get() {
-              return this[op]
+              return this[zT]
             },
-            set(ip) {
-              "function" === typeof this[op]?.equals && this[op].equals(ip) || this[op] !== ip && (this[op] = ip, this[pp]())
+            set(UT) {
+              "function" === typeof this[zT]?.equals && this[zT].equals(UT) || this[zT] !== UT && (this[zT] = UT, this[TT]())
             }
           }
         }
-      }(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null)
+      }(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null)
     }
 
-    function Sp(pp) {
-      return op(0, pp)
+    function gT(TT) {
+      return zT(0, TT)
     }
 
-    function xp(pp) {
-      return op(1, pp)
+    function nT(TT) {
+      return zT(1, TT)
     }
 
-    function Lp(pp) {
-      return op(2, pp)
+    function HT(TT) {
+      return zT(2, TT)
     }
 
-    function Yp(pp) {
-      return op(3, pp)
+    function kT(TT) {
+      return zT(3, TT)
     }
 
-    function Dp(pp) {
-      return op(4, pp)
+    function jT(TT) {
+      return zT(4, TT)
     }
 
-    function Ap(pp) {
-      return op(5, pp)
+    function lT(TT) {
+      return zT(5, TT)
     }
 
-    function Pp(pp) {
-      return op(6, pp)
+    function LT(TT) {
+      return zT(6, TT)
     }
 
-    function Wp(pp) {
-      return op(7, pp)
+    function pT(TT) {
+      return zT(7, TT)
     }
 
-    function yp(pp) {
-      return op(8, pp)
+    function BT(TT) {
+      return zT(8, TT)
     }
 
-    function Up(pp) {
-      return op(10, pp)
+    function ZT(TT) {
+      return zT(10, TT)
     }
 
-    function wp(pp) {
-      return op(12, pp)
+    function cT(TT) {
+      return zT(12, TT)
     }
 
-    function vp(pp, ip, cp) {
-      const Op = String(ip.name);
-      let op = null;
-      const Ip = function() {
-        if (null === op) {
-          op = pp, "undefined" !== typeof _native && _native[Op] && (op = cp(_native[Op], pp));
-          const Sp = this && (ip.static ? this : Object.getPrototypeOf(this));
-          Sp?.[Op] === Ip && (Sp[Op] = op)
+    function vT(TT, UT, mT) {
+      const WT = String(UT.name);
+      let zT = null;
+      const MT = function() {
+        if (null === zT) {
+          zT = TT, "undefined" !== typeof _native && _native[WT] && (zT = mT(_native[WT], TT));
+          const gT = this && (UT.static ? this : Object.getPrototypeOf(this));
+          gT?.[WT] === MT && (gT[WT] = zT)
         }
-        for (var Sp = arguments.length, xp = new Array(Sp), Lp = 0; Lp < Sp; Lp++) xp[Lp] = arguments[Lp];
-        return op.apply(this, xp)
+        for (var gT = arguments.length, nT = new Array(gT), HT = 0; HT < gT; HT++) nT[HT] = arguments[HT];
+        return zT.apply(this, nT)
       };
-      return Ip
+      return MT
     }
 
-    function tp(pp, ip) {
-      return vp(pp, ip, (pp => pp))
+    function fT(TT, UT) {
+      return vT(TT, UT, (TT => TT))
     }
 
-    function Hp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return (cp, Op) => {
-        const op = ip || "_" + String(Op.name);
+    function qT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return (mT, WT) => {
+        const zT = UT || "_" + String(WT.name);
         return {
           get() {
-            return this[op]?.value
+            return this[zT]?.value
           },
-          set(ip) {
-            "function" === typeof this[op]?.value?.equals && this[op].value.equals(ip) || this[op].value !== ip && (this[op].value = ip, this[pp]())
+          set(UT) {
+            "function" === typeof this[zT]?.value?.equals && this[zT].value.equals(UT) || this[zT].value !== UT && (this[zT].value = UT, this[TT]())
           }
         }
       }
     }
-    tp.filter = function(pp) {
-      return (ip, cp) => vp(ip, cp, ((ip, cp) => function() {
-        for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
-        return pp(...op) ? ip(...op) : cp.apply(this, op)
+    fT.filter = function(TT) {
+      return (UT, mT) => vT(UT, mT, ((UT, mT) => function() {
+        for (var WT = arguments.length, zT = new Array(WT), MT = 0; MT < WT; MT++) zT[MT] = arguments[MT];
+        return TT(...zT) ? UT(...zT) : mT.apply(this, zT)
       }))
     }
   },
-  40233: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp
+  40122: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT
     });
-    var Op = cp(40096),
-      op = cp(40236),
-      Ip = cp(37487),
-      Sp = cp(37320),
-      xp = cp(40217);
-    const Lp = function(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Ip = pp();
-      op.b && op.b.HasTags(ip) && op.b.AddTagsTo(Ip, op.b.GetTags(ip, !0));
-      const Sp = (0, xp.f)(Ip),
-        Lp = {};
-      for (const op in Sp) {
-        const pp = Sp[op],
-          xp = ip[op],
-          Dp = pp.type;
-        if (void 0 !== xp && null !== xp && ("uniqueId" !== op || Yp.AllowLoadingUniqueId)) switch (Dp) {
+    var WT = mT(39965),
+      zT = mT(40129),
+      MT = mT(37367),
+      gT = mT(37188),
+      nT = mT(40106);
+    const HT = function(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const MT = TT();
+      zT.b && zT.b.HasTags(UT) && zT.b.AddTagsTo(MT, zT.b.GetTags(UT, !0));
+      const gT = (0, nT.g)(MT),
+        HT = {};
+      for (const zT in gT) {
+        const TT = gT[zT],
+          nT = UT[zT],
+          jT = TT.type;
+        if (void 0 !== nT && null !== nT && ("uniqueId" !== zT || kT.AllowLoadingUniqueId)) switch (jT) {
           case 0:
           case 6:
           case 9:
           case 11:
-            "function" === typeof xp.slice ? Ip[op] = xp.slice() : Ip[op] = xp;
+            "function" === typeof nT.slice ? MT[zT] = nT.slice() : MT[zT] = nT;
             break;
           case 1:
-            Op.cloneTexturesOnlyOnce && Lp[xp.uniqueId] ? Ip[op] = Lp[xp.uniqueId] : (Ip[op] = cp || xp.isRenderTarget ? xp : xp.clone(), Lp[xp.uniqueId] = Ip[op]);
+            WT.cloneTexturesOnlyOnce && HT[nT.uniqueId] ? MT[zT] = HT[nT.uniqueId] : (MT[zT] = mT || nT.isRenderTarget ? nT : nT.clone(), HT[nT.uniqueId] = MT[zT]);
             break;
           case 2:
           case 3:
@@ -5918,38 +5918,38 @@ export const modules = {
           case 10:
           case 12:
           case 13:
-            Ip[op] = cp ? xp : xp.clone()
+            MT[zT] = mT ? nT : nT.clone()
         }
       }
-      return Ip
+      return MT
     };
-    class Yp {
-      static AppendSerializedAnimations(pp, ip) {
-        if (pp.animations) {
-          ip.animations = [];
-          for (let cp = 0; cp < pp.animations.length; cp++) {
-            const Op = pp.animations[cp];
-            ip.animations.push(Op.serialize())
+    class kT {
+      static AppendSerializedAnimations(TT, UT) {
+        if (TT.animations) {
+          UT.animations = [];
+          for (let mT = 0; mT < TT.animations.length; mT++) {
+            const WT = TT.animations[mT];
+            UT.animations.push(WT.serialize())
           }
         }
       }
-      static Serialize(pp, ip) {
-        ip || (ip = {}), op.b && (ip.tags = op.b.GetTags(pp));
-        const cp = (0, xp.f)(pp);
-        for (const Op in cp) {
-          const op = cp[Op],
-            Ip = op.sourceName || Op,
-            Sp = op.type,
-            xp = pp[Op];
-          if (void 0 !== xp && null !== xp && ("uniqueId" !== Op || Yp.AllowLoadingUniqueId)) switch (Sp) {
+      static Serialize(TT, UT) {
+        UT || (UT = {}), zT.b && (UT.tags = zT.b.GetTags(TT));
+        const mT = (0, nT.g)(TT);
+        for (const WT in mT) {
+          const zT = mT[WT],
+            MT = zT.sourceName || WT,
+            gT = zT.type,
+            nT = TT[WT];
+          if (void 0 !== nT && null !== nT && ("uniqueId" !== WT || kT.AllowLoadingUniqueId)) switch (gT) {
             case 0:
-              Array.isArray(xp) ? ip[Ip] = xp.slice() : ip[Ip] = xp;
+              Array.isArray(nT) ? UT[MT] = nT.slice() : UT[MT] = nT;
               break;
             case 1:
             case 3:
             case 7:
             case 9:
-              ip[Ip] = xp.serialize();
+              UT[MT] = nT.serialize();
               break;
             case 2:
             case 4:
@@ -5958,98 +5958,98 @@ export const modules = {
             case 10:
             case 12:
             case 13:
-              ip[Ip] = xp.BOp();
+              UT[MT] = nT.cWT();
               break;
             case 6:
             case 11:
-              ip[Ip] = xp.id
+              UT[MT] = nT.id
           }
         }
-        return ip
+        return UT
       }
-      static ParseProperties(pp, ip, cp, Op) {
-        Op || (Op = "");
-        const op = (0, xp.f)(ip);
-        for (const xp in op) {
-          const Lp = op[xp],
-            Dp = pp[Lp.sourceName || xp],
-            Ap = Lp.type;
-          if (void 0 !== Dp && null !== Dp && ("uniqueId" !== xp || Yp.AllowLoadingUniqueId)) {
-            const pp = ip;
-            switch (Ap) {
+      static ParseProperties(TT, UT, mT, WT) {
+        WT || (WT = "");
+        const zT = (0, nT.g)(UT);
+        for (const nT in zT) {
+          const HT = zT[nT],
+            jT = TT[HT.sourceName || nT],
+            lT = HT.type;
+          if (void 0 !== jT && null !== jT && ("uniqueId" !== nT || kT.AllowLoadingUniqueId)) {
+            const TT = UT;
+            switch (lT) {
               case 0:
-                pp[xp] = Dp;
+                TT[nT] = jT;
                 break;
               case 1:
-                cp && (pp[xp] = Yp._TextureParser(Dp, cp, Op));
+                mT && (TT[nT] = kT._TextureParser(jT, mT, WT));
                 break;
               case 2:
-                pp[xp] = Ip.d.FromArray(Dp);
+                TT[nT] = MT.d.FromArray(jT);
                 break;
               case 3:
-                pp[xp] = Yp._FresnelParametersParser(Dp);
+                TT[nT] = kT._FresnelParametersParser(jT);
                 break;
               case 4:
-                pp[xp] = Sp.l.FromArray(Dp);
+                TT[nT] = gT.o.FromArray(jT);
                 break;
               case 5:
-                pp[xp] = Sp.o.FromArray(Dp);
+                TT[nT] = gT.p.FromArray(jT);
                 break;
               case 6:
-                cp && (pp[xp] = cp.getLastMeshById(Dp));
+                mT && (TT[nT] = mT.getLastMeshById(jT));
                 break;
               case 7:
-                pp[xp] = Yp._ColorCurvesParser(Dp);
+                TT[nT] = kT._ColorCurvesParser(jT);
                 break;
               case 8:
-                pp[xp] = Ip.h.FromArray(Dp);
+                TT[nT] = MT.g.FromArray(jT);
                 break;
               case 9:
-                pp[xp] = Yp._ImageProcessingConfigurationParser(Dp);
+                TT[nT] = kT._ImageProcessingConfigurationParser(jT);
                 break;
               case 10:
-                pp[xp] = Sp.f.FromArray(Dp);
+                TT[nT] = gT.f.FromArray(jT);
                 break;
               case 11:
-                cp && (pp[xp] = cp.getCameraById(Dp));
+                mT && (TT[nT] = mT.getCameraById(jT));
                 break;
               case 12:
-                pp[xp] = Sp.b.FromArray(Dp);
+                TT[nT] = gT.e.FromArray(jT);
                 break;
               case 13:
-                pp[xp] = Sp.q.FromArray(Dp)
+                TT[nT] = gT.t.FromArray(jT)
             }
           }
         }
       }
-      static Parse(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const Ip = pp();
-        return op.b && op.b.AddTagsTo(Ip, ip.tags), Yp.ParseProperties(ip, Ip, cp, Op), Ip
+      static Parse(TT, UT, mT) {
+        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const MT = TT();
+        return zT.b && zT.b.AddTagsTo(MT, UT.tags), kT.ParseProperties(UT, MT, mT, WT), MT
       }
-      static Clone(pp, ip) {
-        return Lp(pp, ip, !1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {})
+      static Clone(TT, UT) {
+        return HT(TT, UT, !1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {})
       }
-      static Instanciate(pp, ip) {
-        return Lp(pp, ip, !0)
+      static Instanciate(TT, UT) {
+        return HT(TT, UT, !0)
       }
     }
-    Yp.AllowLoadingUniqueId = !1, Yp._ImageProcessingConfigurationParser = pp => {
-      throw (0, Op.o)("ImageProcessingConfiguration")
-    }, Yp._FresnelParametersParser = pp => {
-      throw (0, Op.o)("FresnelParameters")
-    }, Yp._ColorCurvesParser = pp => {
-      throw (0, Op.o)("ColorCurves")
-    }, Yp._TextureParser = (pp, ip, cp) => {
-      throw (0, Op.o)("Texture")
+    kT.AllowLoadingUniqueId = !1, kT._ImageProcessingConfigurationParser = TT => {
+      throw (0, WT.k)("ImageProcessingConfiguration")
+    }, kT._FresnelParametersParser = TT => {
+      throw (0, WT.k)("FresnelParameters")
+    }, kT._ColorCurvesParser = TT => {
+      throw (0, WT.k)("ColorCurves")
+    }, kT._TextureParser = (TT, UT, mT) => {
+      throw (0, WT.k)("Texture")
     }
   },
-  40159: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op
+  40039: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT
     });
-    var Op = cp(40122);
-    class op {
+    var WT = mT(39986);
+    class zT {
       get min() {
         return this._min
       }
@@ -6075,50 +6075,50 @@ export const modules = {
         this._startMonitoringTime = 0, this._min = 0, this._max = 0, this._hasResult = !1, this._hasCurrentValue = !1, this._average = 0, this._lastSecAverage = 0, this._current = 0, this._totalValueCount = 0, this._totalAccumulated = 0, this._lastSecAccumulated = 0, this._lastSecTime = 0, this._lastSecValueCount = 0
       }
       fetchNewFrame() {
-        this._totalValueCount++, this._current = 0, this._hasCurrentValue = op.Enabled, this._lastSecValueCount++
+        this._totalValueCount++, this._current = 0, this._hasCurrentValue = zT.Enabled, this._lastSecValueCount++
       }
-      addCount(pp, ip) {
-        op.Enabled && (this._current += pp, this._hasCurrentValue = !0, ip && this._fetchResult())
+      addCount(TT, UT) {
+        zT.Enabled && (this._current += TT, this._hasCurrentValue = !0, UT && this._fetchResult())
       }
       beginMonitoring() {
-        op.Enabled && (this._startMonitoringTime = Op.e.Now)
+        zT.Enabled && (this._startMonitoringTime = WT.c.Now)
       }
       endMonitoring() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        if (!op.Enabled) return;
-        pp && this.fetchNewFrame();
-        const ip = Op.e.Now;
-        this._current = ip - this._startMonitoringTime, this._hasCurrentValue = !0, pp && this._fetchResult()
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        if (!zT.Enabled) return;
+        TT && this.fetchNewFrame();
+        const UT = WT.c.Now;
+        this._current = UT - this._startMonitoringTime, this._hasCurrentValue = !0, TT && this._fetchResult()
       }
-      Rk() {
+      qY() {
         this._fetchResult()
       }
       _fetchResult() {
         if (!this._hasCurrentValue) return;
         this._totalAccumulated += this._current, this._lastSecAccumulated += this._current, this._hasResult ? (this._min = Math.min(this._min, this._current), this._max = Math.max(this._max, this._current)) : (this._min = this._current, this._max = this._current, this._hasResult = !0), this._average = this._totalAccumulated / this._totalValueCount;
-        const pp = Op.e.Now;
-        pp - this._lastSecTime > 1e3 && (this._lastSecAverage = this._lastSecAccumulated / this._lastSecValueCount, this._lastSecTime = pp, this._lastSecAccumulated = 0, this._lastSecValueCount = 0)
+        const TT = WT.c.Now;
+        TT - this._lastSecTime > 1e3 && (this._lastSecAverage = this._lastSecAccumulated / this._lastSecValueCount, this._lastSecTime = TT, this._lastSecAccumulated = 0, this._lastSecValueCount = 0)
       }
     }
-    op.Enabled = !0
+    zT.Enabled = !0
   },
-  40314: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      g: () => Op
+  40215: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      f: () => WT
     });
-    class Op {
-      constructor(pp) {
-        this.length = 0, this.data = new Array(pp), this._id = Op._GlobalId++
+    class WT {
+      constructor(TT) {
+        this.length = 0, this.data = new Array(TT), this._id = WT._GlobalId++
       }
-      push(pp) {
-        this.data[this.length++] = pp, this.length > this.data.length && (this.data.length *= 2)
+      push(TT) {
+        this.data[this.length++] = TT, this.length > this.data.length && (this.data.length *= 2)
       }
-      forEach(pp) {
-        for (let ip = 0; ip < this.length; ip++) pp(this.data[ip])
+      forEach(TT) {
+        for (let UT = 0; UT < this.length; UT++) TT(this.data[UT])
       }
-      sort(pp) {
-        this.data.sort(pp)
+      sort(TT) {
+        this.data.sort(TT)
       }
       reset() {
         this.length = 0
@@ -6126,353 +6126,353 @@ export const modules = {
       dispose() {
         this.reset(), this.data && (this.data.length = 0)
       }
-      concat(pp) {
-        if (0 !== pp.length) {
-          this.length + pp.length > this.data.length && (this.data.length = 2 * (this.length + pp.length));
-          for (let ip = 0; ip < pp.length; ip++) this.data[this.length++] = (pp.data || pp)[ip]
+      concat(TT) {
+        if (0 !== TT.length) {
+          this.length + TT.length > this.data.length && (this.data.length = 2 * (this.length + TT.length));
+          for (let UT = 0; UT < TT.length; UT++) this.data[this.length++] = (TT.data || TT)[UT]
         }
       }
-      indexOf(pp) {
-        const ip = this.data.indexOf(pp);
-        return ip >= this.length ? -1 : ip
+      indexOf(TT) {
+        const UT = this.data.indexOf(TT);
+        return UT >= this.length ? -1 : UT
       }
-      contains(pp) {
-        return -1 !== this.indexOf(pp)
+      contains(TT) {
+        return -1 !== this.indexOf(TT)
       }
     }
-    Op._GlobalId = 0;
-    class op extends Op {
+    WT._GlobalId = 0;
+    class zT extends WT {
       constructor() {
         super(...arguments), this._duplicateId = 0
       }
-      push(pp) {
-        super.push(pp), pp.__smartArrayFlags || (pp.__smartArrayFlags = {}), pp.__smartArrayFlags[this._id] = this._duplicateId
+      push(TT) {
+        super.push(TT), TT.__smartArrayFlags || (TT.__smartArrayFlags = {}), TT.__smartArrayFlags[this._id] = this._duplicateId
       }
-      pushNoDuplicate(pp) {
-        return (!pp.__smartArrayFlags || pp.__smartArrayFlags[this._id] !== this._duplicateId) && (this.push(pp), !0)
+      pushNoDuplicate(TT) {
+        return (!TT.__smartArrayFlags || TT.__smartArrayFlags[this._id] !== this._duplicateId) && (this.push(TT), !0)
       }
       reset() {
         super.reset(), this._duplicateId++
       }
-      concatWithNoDuplicate(pp) {
-        if (0 !== pp.length) {
-          this.length + pp.length > this.data.length && (this.data.length = 2 * (this.length + pp.length));
-          for (let ip = 0; ip < pp.length; ip++) {
-            const cp = (pp.data || pp)[ip];
-            this.pushNoDuplicate(cp)
+      concatWithNoDuplicate(TT) {
+        if (0 !== TT.length) {
+          this.length + TT.length > this.data.length && (this.data.length = 2 * (this.length + TT.length));
+          for (let UT = 0; UT < TT.length; UT++) {
+            const mT = (TT.data || TT)[UT];
+            this.pushNoDuplicate(mT)
           }
         }
       }
     }
   },
-  40236: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op
+  40129: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT
     });
-    class Op {
-      static Eval(pp, ip) {
-        return "true" === (pp = pp.match(/\([^()]*\)/g) ? pp.replace(/\([^()]*\)/g, (pp => (pp = pp.slice(1, pp.length - 1), Op._HandleParenthesisContent(pp, ip)))) : Op._HandleParenthesisContent(pp, ip)) || "false" !== pp && Op.Eval(pp, ip)
+    class WT {
+      static Eval(TT, UT) {
+        return "true" === (TT = TT.match(/\([^()]*\)/g) ? TT.replace(/\([^()]*\)/g, (TT => (TT = TT.slice(1, TT.length - 1), WT._HandleParenthesisContent(TT, UT)))) : WT._HandleParenthesisContent(TT, UT)) || "false" !== TT && WT.Eval(TT, UT)
       }
-      static _HandleParenthesisContent(pp, ip) {
-        let cp;
-        ip = ip || (pp => "true" === pp);
-        const op = pp.split("||");
-        for (const Ip in op)
-          if (Object.prototype.hasOwnProperty.call(op, Ip)) {
-            let pp = Op._SimplifyNegation(op[Ip].trim());
-            const Sp = pp.split("&&");
-            if (Sp.length > 1)
-              for (let op = 0; op < Sp.length; ++op) {
-                const Ip = Op._SimplifyNegation(Sp[op].trim());
-                if (cp = "true" !== Ip && "false" !== Ip ? "!" === Ip[0] ? !ip(Ip.substring(1)) : ip(Ip) : "true" === Ip, !cp) {
-                  pp = "false";
+      static _HandleParenthesisContent(TT, UT) {
+        let mT;
+        UT = UT || (TT => "true" === TT);
+        const zT = TT.split("||");
+        for (const MT in zT)
+          if (Object.prototype.hasOwnProperty.call(zT, MT)) {
+            let TT = WT._SimplifyNegation(zT[MT].trim());
+            const gT = TT.split("&&");
+            if (gT.length > 1)
+              for (let zT = 0; zT < gT.length; ++zT) {
+                const MT = WT._SimplifyNegation(gT[zT].trim());
+                if (mT = "true" !== MT && "false" !== MT ? "!" === MT[0] ? !UT(MT.substring(1)) : UT(MT) : "true" === MT, !mT) {
+                  TT = "false";
                   break
                 }
               }
-            if (cp || "true" === pp) {
-              cp = !0;
+            if (mT || "true" === TT) {
+              mT = !0;
               break
             }
-            cp = "true" !== pp && "false" !== pp ? "!" === pp[0] ? !ip(pp.substring(1)) : ip(pp) : "true" === pp
-          } return cp ? "true" : "false"
+            mT = "true" !== TT && "false" !== TT ? "!" === TT[0] ? !UT(TT.substring(1)) : UT(TT) : "true" === TT
+          } return mT ? "true" : "false"
       }
-      static _SimplifyNegation(pp) {
-        return "!true" === (pp = (pp = pp.replace(/^[\s!]+/, (pp => (pp = pp.replace(/[\s]/g, (() => ""))).length % 2 ? "!" : ""))).trim()) ? pp = "false" : "!false" === pp && (pp = "true"), pp
+      static _SimplifyNegation(TT) {
+        return "!true" === (TT = (TT = TT.replace(/^[\s!]+/, (TT => (TT = TT.replace(/[\s]/g, (() => ""))).length % 2 ? "!" : ""))).trim()) ? TT = "false" : "!false" === TT && (TT = "true"), TT
       }
     }
-    class op {
-      static EnableFor(pp) {
-        pp._tags = pp._tags || {}, pp.hasTags = () => op.HasTags(pp), pp.addTags = ip => op.AddTagsTo(pp, ip), pp.removeTags = ip => op.RemoveTagsFrom(pp, ip), pp.matchesTagsQuery = ip => op.MatchesQuery(pp, ip)
+    class zT {
+      static EnableFor(TT) {
+        TT._tags = TT._tags || {}, TT.hasTags = () => zT.HasTags(TT), TT.addTags = UT => zT.AddTagsTo(TT, UT), TT.removeTags = UT => zT.RemoveTagsFrom(TT, UT), TT.matchesTagsQuery = UT => zT.MatchesQuery(TT, UT)
       }
-      static DisableFor(pp) {
-        delete pp._tags, delete pp.hasTags, delete pp.addTags, delete pp.removeTags, delete pp.matchesTagsQuery
+      static DisableFor(TT) {
+        delete TT._tags, delete TT.hasTags, delete TT.addTags, delete TT.removeTags, delete TT.matchesTagsQuery
       }
-      static HasTags(pp) {
-        if (!pp._tags) return !1;
-        const ip = pp._tags;
-        for (const cp in ip)
-          if (Object.prototype.hasOwnProperty.call(ip, cp)) return !0;
+      static HasTags(TT) {
+        if (!TT._tags) return !1;
+        const UT = TT._tags;
+        for (const mT in UT)
+          if (Object.prototype.hasOwnProperty.call(UT, mT)) return !0;
         return !1
       }
-      static GetTags(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!pp._tags) return null;
-        if (ip) {
-          const ip = [];
-          for (const cp in pp._tags) Object.prototype.hasOwnProperty.call(pp._tags, cp) && !0 === pp._tags[cp] && ip.push(cp);
-          return ip.join(" ")
+      static GetTags(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!TT._tags) return null;
+        if (UT) {
+          const UT = [];
+          for (const mT in TT._tags) Object.prototype.hasOwnProperty.call(TT._tags, mT) && !0 === TT._tags[mT] && UT.push(mT);
+          return UT.join(" ")
         }
-        return pp._tags
+        return TT._tags
       }
-      static AddTagsTo(pp, ip) {
-        if (!ip) return;
-        if ("string" !== typeof ip) return;
-        const cp = ip.split(" ");
-        for (const Op of cp) op._AddTagTo(pp, Op)
+      static AddTagsTo(TT, UT) {
+        if (!UT) return;
+        if ("string" !== typeof UT) return;
+        const mT = UT.split(" ");
+        for (const WT of mT) zT._AddTagTo(TT, WT)
       }
-      static _AddTagTo(pp, ip) {
-        "" !== (ip = ip.trim()) && "true" !== ip && "false" !== ip && (ip.match(/[\s]/) || ip.match(/^([!]|([|]|[&]){2})/) || (op.EnableFor(pp), pp._tags[ip] = !0))
+      static _AddTagTo(TT, UT) {
+        "" !== (UT = UT.trim()) && "true" !== UT && "false" !== UT && (UT.match(/[\s]/) || UT.match(/^([!]|([|]|[&]){2})/) || (zT.EnableFor(TT), TT._tags[UT] = !0))
       }
-      static RemoveTagsFrom(pp, ip) {
-        if (!op.HasTags(pp)) return;
-        const cp = ip.split(" ");
-        for (const Op in cp) op._RemoveTagFrom(pp, cp[Op])
+      static RemoveTagsFrom(TT, UT) {
+        if (!zT.HasTags(TT)) return;
+        const mT = UT.split(" ");
+        for (const WT in mT) zT._RemoveTagFrom(TT, mT[WT])
       }
-      static _RemoveTagFrom(pp, ip) {
-        delete pp._tags[ip]
+      static _RemoveTagFrom(TT, UT) {
+        delete TT._tags[UT]
       }
-      static MatchesQuery(pp, ip) {
-        return void 0 === ip || ("" === ip ? op.HasTags(pp) : Op.Eval(ip, (ip => op.HasTags(pp) && pp._tags[ip])))
+      static MatchesQuery(TT, UT) {
+        return void 0 === UT || ("" === UT ? zT.HasTags(TT) : WT.Eval(UT, (UT => zT.HasTags(TT) && TT._tags[UT])))
       }
     }
   },
-  40345: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
+  40260: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT
     });
-    var Op = cp(40342),
-      op = cp(37349);
-    class Ip {
-      constructor(pp) {
-        this._vertexBuffers = {}, this._activePostProcesses = [], this.onBeforeRenderObservable = new op.d, this._scene = pp
+    var WT = mT(40257),
+      zT = mT(37219);
+    class MT {
+      constructor(TT) {
+        this._vertexBuffers = {}, this._activePostProcesses = [], this.onBeforeRenderObservable = new zT.d, this._scene = TT
       }
       _prepareBuffers() {
-        if (this._vertexBuffers[Op.j.PositionKind]) return;
-        const pp = [];
-        pp.push(1, 1), pp.push(-1, 1), pp.push(-1, -1), pp.push(1, -1), this._vertexBuffers[Op.j.PositionKind] = new Op.j(this._scene.gy(), pp, Op.j.PositionKind, !1, !1, 2), this._buildIndexBuffer()
+        if (this._vertexBuffers[WT.i.PositionKind]) return;
+        const TT = [];
+        TT.push(1, 1), TT.push(-1, 1), TT.push(-1, -1), TT.push(1, -1), this._vertexBuffers[WT.i.PositionKind] = new WT.i(this._scene.eB(), TT, WT.i.PositionKind, !1, !1, 2), this._buildIndexBuffer()
       }
       _buildIndexBuffer() {
-        const pp = [];
-        pp.push(0), pp.push(1), pp.push(2), pp.push(0), pp.push(2), pp.push(3), this._indexBuffer = this._scene.gy().createIndexBuffer(pp)
+        const TT = [];
+        TT.push(0), TT.push(1), TT.push(2), TT.push(0), TT.push(2), TT.push(3), this._indexBuffer = this._scene.eB().createIndexBuffer(TT)
       }
-      _getActivePostProcesses(pp) {
-        const ip = this._activePostProcesses;
-        ip.length = 0;
-        for (let cp = 0; cp < pp.length; cp++) {
-          const Op = pp[cp];
-          Op && ip.push(Op)
+      _getActivePostProcesses(TT) {
+        const UT = this._activePostProcesses;
+        UT.length = 0;
+        for (let mT = 0; mT < TT.length; mT++) {
+          const WT = TT[mT];
+          WT && UT.push(WT)
         }
-        return ip
+        return UT
       }
       _rebuild() {
-        const pp = this._vertexBuffers[Op.j.PositionKind];
-        pp && (pp._rebuild(), this._buildIndexBuffer())
+        const TT = this._vertexBuffers[WT.i.PositionKind];
+        TT && (TT._rebuild(), this._buildIndexBuffer())
       }
       _prepareFrame() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const cp = this._scene.activeCamera;
-        return !!cp && (ip = ip || this._getActivePostProcesses(cp._postProcesses), !(!ip || 0 === ip.length || !this._scene.postProcessesEnabled) && (ip[0].activate(cp, pp, null !== ip && void 0 !== ip), !0))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const mT = this._scene.activeCamera;
+        return !!mT && (UT = UT || this._getActivePostProcesses(mT._postProcesses), !(!UT || 0 === UT.length || !this._scene.postProcessesEnabled) && (UT[0].activate(mT, TT, null !== UT && void 0 !== UT), !0))
       }
-      directRender(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-          Ip = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : pp.length;
-        const xp = this._scene.gy();
-        for (let Lp = 0; Lp < Sp; Lp++) {
-          Lp < pp.length - 1 ? pp[Lp + 1].activate(this._scene.activeCamera || this._scene, ip?.texture) : (ip ? xp.bindFramebuffer(ip, Op, void 0, void 0, cp, op) : Ip || xp.restoreDefaultFramebuffer(), xp._debugInsertMarker?.(`post process ${pp[Lp].name} output`));
-          const Sp = pp[Lp],
-            Yp = Sp.apply();
-          Yp && (Sp.onBeforeRenderObservable.notifyObservers(Yp), this._prepareBuffers(), xp.bindBuffers(this._vertexBuffers, this._indexBuffer, Yp), xp.drawElementsType(0, 0, 6), Sp.onAfterRenderObservable.notifyObservers(Yp))
+      directRender(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+          MT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : TT.length;
+        const nT = this._scene.eB();
+        for (let HT = 0; HT < gT; HT++) {
+          HT < TT.length - 1 ? TT[HT + 1].activate(this._scene.activeCamera || this._scene, UT?.texture) : (UT ? nT.bindFramebuffer(UT, WT, void 0, void 0, mT, zT) : MT || nT.restoreDefaultFramebuffer(), nT._debugInsertMarker?.(`post process ${TT[HT].name} output`));
+          const gT = TT[HT],
+            kT = gT.apply();
+          kT && (gT.onBeforeRenderObservable.notifyObservers(kT), this._prepareBuffers(), nT.bindBuffers(this._vertexBuffers, this._indexBuffer, kT), nT.drawElementsType(0, 0, 6), gT.onAfterRenderObservable.notifyObservers(kT))
         }
-        xp.setDepthBuffer(!0), xp.setDepthWrite(!0)
+        nT.setDepthBuffer(!0), nT.setDepthWrite(!0)
       }
-      _finalizeFrame(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Ip = this._scene.activeCamera;
-        if (!Ip) return;
-        if (this.onBeforeRenderObservable.notifyObservers(this), 0 === (Op = Op || this._getActivePostProcesses(Ip._postProcesses)).length || !this._scene.postProcessesEnabled) return;
-        const Sp = this._scene.gy();
-        for (let xp = 0, Lp = Op.length; xp < Lp; xp++) {
-          const Yp = Op[xp];
-          if (xp < Lp - 1 ? Yp._outputTexture = Op[xp + 1].activate(Ip, ip?.texture) : (ip ? (Sp.bindFramebuffer(ip, cp, void 0, void 0, op), Yp._outputTexture = ip) : (Sp.restoreDefaultFramebuffer(), Yp._outputTexture = null), Sp._debugInsertMarker?.(`post process ${Op[xp].name} output`)), pp) break;
-          const Dp = Yp.apply();
-          Dp && (Yp.onBeforeRenderObservable.notifyObservers(Dp), this._prepareBuffers(), Sp.bindBuffers(this._vertexBuffers, this._indexBuffer, Dp), Sp.drawElementsType(0, 0, 6), Yp.onAfterRenderObservable.notifyObservers(Dp))
+      _finalizeFrame(TT, UT, mT, WT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const MT = this._scene.activeCamera;
+        if (!MT) return;
+        if (this.onBeforeRenderObservable.notifyObservers(this), 0 === (WT = WT || this._getActivePostProcesses(MT._postProcesses)).length || !this._scene.postProcessesEnabled) return;
+        const gT = this._scene.eB();
+        for (let nT = 0, HT = WT.length; nT < HT; nT++) {
+          const kT = WT[nT];
+          if (nT < HT - 1 ? kT._outputTexture = WT[nT + 1].activate(MT, UT?.texture) : (UT ? (gT.bindFramebuffer(UT, mT, void 0, void 0, zT), kT._outputTexture = UT) : (gT.restoreDefaultFramebuffer(), kT._outputTexture = null), gT._debugInsertMarker?.(`post process ${WT[nT].name} output`)), TT) break;
+          const jT = kT.apply();
+          jT && (kT.onBeforeRenderObservable.notifyObservers(jT), this._prepareBuffers(), gT.bindBuffers(this._vertexBuffers, this._indexBuffer, jT), gT.drawElementsType(0, 0, 6), kT.onAfterRenderObservable.notifyObservers(jT))
         }
-        Sp.setDepthBuffer(!0), Sp.setDepthWrite(!0), Sp.setAlphaMode(0)
+        gT.setDepthBuffer(!0), gT.setDepthWrite(!0), gT.setAlphaMode(0)
       }
       dispose() {
-        const pp = this._vertexBuffers[Op.j.PositionKind];
-        pp && (pp.dispose(), this._vertexBuffers[Op.j.PositionKind] = null), this._indexBuffer && (this._scene.gy()._releaseBuffer(this._indexBuffer), this._indexBuffer = null)
+        const TT = this._vertexBuffers[WT.i.PositionKind];
+        TT && (TT.dispose(), this._vertexBuffers[WT.i.PositionKind] = null), this._indexBuffer && (this._scene.eB()._releaseBuffer(this._indexBuffer), this._indexBuffer = null)
       }
     }
   },
-  40365: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Yp
+  40274: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => kT
     });
-    var Op = cp(40314),
-      op = cp(37320);
-    const Ip = [],
-      Sp = [];
-    let xp = !1;
+    var WT = mT(40215),
+      zT = mT(37188);
+    const MT = [],
+      gT = [];
+    let nT = !1;
 
-    function Lp(pp, ip) {
-      for (; pp.length < ip;) pp.push(void 0)
+    function HT(TT, UT) {
+      for (; TT.length < UT;) TT.push(void 0)
     }
-    class Yp {
-      set opaqueSortCompareFn(pp) {
-        this._opaqueSortCompareFn = pp || Yp.PainterSortCompare, this._renderOpaque = this._renderOpaqueSorted
+    class kT {
+      set opaqueSortCompareFn(TT) {
+        this._opaqueSortCompareFn = TT || kT.PainterSortCompare, this._renderOpaque = this._renderOpaqueSorted
       }
-      set alphaTestSortCompareFn(pp) {
-        this._alphaTestSortCompareFn = pp || Yp.PainterSortCompare, this._renderAlphaTest = this._renderAlphaTestSorted
+      set alphaTestSortCompareFn(TT) {
+        this._alphaTestSortCompareFn = TT || kT.PainterSortCompare, this._renderAlphaTest = this._renderAlphaTestSorted
       }
-      set transparentSortCompareFn(pp) {
-        this._transparentSortCompareFn = pp || Yp.defaultTransparentSortCompare, this._renderTransparent = this._renderTransparentSorted
+      set transparentSortCompareFn(TT) {
+        this._transparentSortCompareFn = TT || kT.defaultTransparentSortCompare, this._renderTransparent = this._renderTransparentSorted
       }
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        this.index = pp, this._opaqueSubMeshes = new Op.g(256), this._transparentSubMeshes = new Op.g(256), this._alphaTestSubMeshes = new Op.g(256), this._depthOnlySubMeshes = new Op.g(256), this._particleSystems = new Op.g(256), this._spriteManagers = new Op.g(256), this._empty = !0, this._edgesRenderers = new Op.d(16), this.disableDepthPrePass = !1, this._scene = ip, this.opaqueSortCompareFn = cp, this.alphaTestSortCompareFn = op, this.transparentSortCompareFn = Ip
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        this.index = TT, this._opaqueSubMeshes = new WT.f(256), this._transparentSubMeshes = new WT.f(256), this._alphaTestSubMeshes = new WT.f(256), this._depthOnlySubMeshes = new WT.f(256), this._particleSystems = new WT.f(256), this._spriteManagers = new WT.f(256), this._empty = !0, this._edgesRenderers = new WT.c(16), this.disableDepthPrePass = !1, this._scene = UT, this.opaqueSortCompareFn = mT, this.alphaTestSortCompareFn = zT, this.transparentSortCompareFn = MT
       }
-      render(pp, ip, cp, Op) {
-        let op = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Ip = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Sp = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          xp = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Lp = arguments.length > 8 ? arguments[8] : void 0;
-        if (pp) return void pp(this._opaqueSubMeshes, this._alphaTestSubMeshes, this._transparentSubMeshes, this._depthOnlySubMeshes);
-        const Yp = this._scene.gy();
-        op && 0 !== this._depthOnlySubMeshes.length && (Yp.setColorWrite(!1), this._renderAlphaTest(this._depthOnlySubMeshes), Yp.setColorWrite(!0)), Ip && 0 !== this._opaqueSubMeshes.length && this._renderOpaque(this._opaqueSubMeshes), Sp && 0 !== this._alphaTestSubMeshes.length && this._renderAlphaTest(this._alphaTestSubMeshes);
-        const Dp = Yp.getStencilBuffer();
-        if (Yp.setStencilBuffer(!1), ip && this._renderSprites(), cp && this._renderParticles(Op), this.onBeforeTransparentRendering && this.onBeforeTransparentRendering(), xp && (Lp || 0 !== this._transparentSubMeshes.length || this._scene.useOrderIndependentTransparency)) {
-          if (Yp.setStencilBuffer(Dp), Lp) Lp(this._transparentSubMeshes, this);
+      render(TT, UT, mT, WT) {
+        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          MT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          gT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          nT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          HT = arguments.length > 8 ? arguments[8] : void 0;
+        if (TT) return void TT(this._opaqueSubMeshes, this._alphaTestSubMeshes, this._transparentSubMeshes, this._depthOnlySubMeshes);
+        const kT = this._scene.eB();
+        zT && 0 !== this._depthOnlySubMeshes.length && (kT.setColorWrite(!1), this._renderAlphaTest(this._depthOnlySubMeshes), kT.setColorWrite(!0)), MT && 0 !== this._opaqueSubMeshes.length && this._renderOpaque(this._opaqueSubMeshes), gT && 0 !== this._alphaTestSubMeshes.length && this._renderAlphaTest(this._alphaTestSubMeshes);
+        const jT = kT.getStencilBuffer();
+        if (kT.setStencilBuffer(!1), UT && this._renderSprites(), mT && this._renderParticles(WT), this.onBeforeTransparentRendering && this.onBeforeTransparentRendering(), nT && (HT || 0 !== this._transparentSubMeshes.length || this._scene.useOrderIndependentTransparency)) {
+          if (kT.setStencilBuffer(jT), HT) HT(this._transparentSubMeshes, this);
           else if (this._scene.useOrderIndependentTransparency) {
-            const pp = this._scene.depthPeelingRenderer.render(this._transparentSubMeshes);
-            pp.length && this._renderTransparent(pp)
+            const TT = this._scene.depthPeelingRenderer.render(this._transparentSubMeshes);
+            TT.length && this._renderTransparent(TT)
           } else this._renderTransparent(this._transparentSubMeshes);
-          Yp.setAlphaMode(0)
+          kT.setAlphaMode(0)
         }
-        if (Yp.setStencilBuffer(!1), Ip && this._edgesRenderers.length) {
-          for (let pp = 0; pp < this._edgesRenderers.length; pp++) this._edgesRenderers.data[pp].render();
-          Yp.setAlphaMode(0)
+        if (kT.setStencilBuffer(!1), MT && this._edgesRenderers.length) {
+          for (let TT = 0; TT < this._edgesRenderers.length; TT++) this._edgesRenderers.data[TT].render();
+          kT.setAlphaMode(0)
         }
-        Yp.setStencilBuffer(Dp)
+        kT.setStencilBuffer(jT)
       }
-      _renderOpaqueSorted(pp) {
-        Yp._RenderSorted(pp, this._opaqueSortCompareFn, this._scene.activeCamera, !1, this.disableDepthPrePass)
+      _renderOpaqueSorted(TT) {
+        kT._RenderSorted(TT, this._opaqueSortCompareFn, this._scene.activeCamera, !1, this.disableDepthPrePass)
       }
-      _renderAlphaTestSorted(pp) {
-        Yp._RenderSorted(pp, this._alphaTestSortCompareFn, this._scene.activeCamera, !1, this.disableDepthPrePass)
+      _renderAlphaTestSorted(TT) {
+        kT._RenderSorted(TT, this._alphaTestSortCompareFn, this._scene.activeCamera, !1, this.disableDepthPrePass)
       }
-      _renderTransparentSorted(pp) {
-        Yp._RenderSorted(pp, this._transparentSortCompareFn, this._scene.activeCamera, !0, this.disableDepthPrePass)
+      _renderTransparentSorted(TT) {
+        kT._RenderSorted(TT, this._transparentSortCompareFn, this._scene.activeCamera, !0, this.disableDepthPrePass)
       }
-      static _RenderSorted(pp, ip, cp, Op, Ip) {
-        let Dp, Ap = 0;
-        const Pp = cp ? cp.globalPosition : Yp._ZeroVector;
-        if (Op && ip !== Yp.PainterSortCompare)
-          for (; Ap < pp.length; Ap++) Dp = pp.data[Ap], Dp._alphaIndex = Dp.getMesh().alphaIndex, Dp._distanceToCamera = op.o.Distance(Dp.bJ().Yop.centerWorld, Pp);
-        const Wp = pp.length;
-        let yp = pp.data;
-        const Up = Wp !== yp.length && !xp;
-        if (Up) {
-          for (xp = !0, Lp(Sp, Wp), Ap = 0; Ap < Wp; Ap++) Sp[Ap] = yp[Ap];
-          yp = Sp
-        } else Wp !== yp.length && (yp = yp.slice(0, Wp));
+      static _RenderSorted(TT, UT, mT, WT, MT) {
+        let jT, lT = 0;
+        const LT = mT ? mT.globalPosition : kT._ZeroVector;
+        if (WT && UT !== kT.PainterSortCompare)
+          for (; lT < TT.length; lT++) jT = TT.data[lT], jT._alphaIndex = jT.getMesh().alphaIndex, jT._distanceToCamera = zT.p.Distance(jT.rV().rWT.centerWorld, LT);
+        const pT = TT.length;
+        let BT = TT.data;
+        const ZT = pT !== BT.length && !nT;
+        if (ZT) {
+          for (nT = !0, HT(gT, pT), lT = 0; lT < pT; lT++) gT[lT] = BT[lT];
+          BT = gT
+        } else pT !== BT.length && (BT = BT.slice(0, pT));
         try {
-          ip && Yp._StableSort(yp, Wp, ip), Yp._DrawSorted(yp, Wp, Op, Ip)
+          UT && kT._StableSort(BT, pT, UT), kT._DrawSorted(BT, pT, WT, MT)
         } finally {
-          Up && (Sp.fill(void 0, 0, Wp), xp = !1)
+          ZT && (gT.fill(void 0, 0, pT), nT = !1)
         }
       }
-      static _DrawSorted(pp, ip, cp, Op) {
-        let op;
-        const Ip = pp[0].getMesh().Gl();
-        for (let Sp = 0; Sp < ip; Sp++) {
-          if (op = pp[Sp], Ip._activeMeshesFrozenButKeepClipping && !op.isInFrustum(Ip._frustumPlanes)) continue;
-          let ip = !1;
-          if (cp) {
-            const pp = op.Ky();
-            if (pp && pp.needDepthPrePass && !Op) {
-              ip = !0;
-              const cp = pp.Gl().gy();
-              cp.setColorWrite(!1), cp.setAlphaMode(0), op.render(!1), cp.setColorWrite(!0)
+      static _DrawSorted(TT, UT, mT, WT) {
+        let zT;
+        const MT = TT[0].getMesh().KF();
+        for (let gT = 0; gT < UT; gT++) {
+          if (zT = TT[gT], MT._activeMeshesFrozenButKeepClipping && !zT.isInFrustum(MT._frustumPlanes)) continue;
+          let UT = !1;
+          if (mT) {
+            const TT = zT.wB();
+            if (TT && TT.needDepthPrePass && !WT) {
+              UT = !0;
+              const mT = TT.KF().eB();
+              mT.setColorWrite(!1), mT.setAlphaMode(0), zT.render(!1), mT.setColorWrite(!0)
             }
           }
-          const xp = op._renderingMesh;
-          !ip && xp._renderRunFollower(op, cp) || op.render(cp)
+          const nT = zT._renderingMesh;
+          !UT && nT._renderRunFollower(zT, mT) || zT.render(mT)
         }
       }
-      static _StableSort(pp, ip, cp) {
-        for (let Op = 0; Op < ip; Op += 16) {
-          const op = Math.min(Op + 16, ip);
-          for (let ip = Op + 1; ip < op; ip++) {
-            const op = pp[ip];
-            let Ip = Op,
-              Sp = ip;
-            for (; Ip < Sp;) {
-              const ip = Ip + Sp >>> 1;
-              cp(op, pp[ip]) < 0 ? Sp = ip : Ip = ip + 1
+      static _StableSort(TT, UT, mT) {
+        for (let WT = 0; WT < UT; WT += 16) {
+          const zT = Math.min(WT + 16, UT);
+          for (let UT = WT + 1; UT < zT; UT++) {
+            const zT = TT[UT];
+            let MT = WT,
+              gT = UT;
+            for (; MT < gT;) {
+              const UT = MT + gT >>> 1;
+              mT(zT, TT[UT]) < 0 ? gT = UT : MT = UT + 1
             }
-            for (let cp = ip; cp > Ip; cp--) pp[cp] = pp[cp - 1];
-            pp[Ip] = op
+            for (let mT = UT; mT > MT; mT--) TT[mT] = TT[mT - 1];
+            TT[MT] = zT
           }
         }
-        if (!(ip <= 16)) {
-          Lp(Ip, ip);
+        if (!(UT <= 16)) {
+          HT(MT, UT);
           try {
-            let Op = pp,
-              op = Ip;
-            for (let pp = 16; pp < ip; pp *= 2) {
-              for (let Sp = 0; Sp < ip; Sp += 2 * pp) {
-                const Ip = Math.min(Sp + pp, ip),
-                  xp = Math.min(Sp + 2 * pp, ip);
-                let Lp = Sp,
-                  Yp = Ip,
-                  Dp = Sp;
-                if (Ip < xp && cp(Op[Ip], Op[Ip - 1]) < 0)
-                  for (; Lp < Ip && Yp < xp;) op[Dp++] = cp(Op[Yp], Op[Lp]) < 0 ? Op[Yp++] : Op[Lp++];
-                for (; Lp < Ip;) op[Dp++] = Op[Lp++];
-                for (; Yp < xp;) op[Dp++] = Op[Yp++]
+            let WT = TT,
+              zT = MT;
+            for (let TT = 16; TT < UT; TT *= 2) {
+              for (let gT = 0; gT < UT; gT += 2 * TT) {
+                const MT = Math.min(gT + TT, UT),
+                  nT = Math.min(gT + 2 * TT, UT);
+                let HT = gT,
+                  kT = MT,
+                  jT = gT;
+                if (MT < nT && mT(WT[MT], WT[MT - 1]) < 0)
+                  for (; HT < MT && kT < nT;) zT[jT++] = mT(WT[kT], WT[HT]) < 0 ? WT[kT++] : WT[HT++];
+                for (; HT < MT;) zT[jT++] = WT[HT++];
+                for (; kT < nT;) zT[jT++] = WT[kT++]
               }
-              const Ip = op;
-              op = Op, Op = Ip
+              const MT = zT;
+              zT = WT, WT = MT
             }
-            if (Op !== pp)
-              for (let cp = 0; cp < ip; cp++) pp[cp] = Op[cp]
+            if (WT !== TT)
+              for (let mT = 0; mT < UT; mT++) TT[mT] = WT[mT]
           } finally {
-            Ip.fill(void 0, 0, ip)
+            MT.fill(void 0, 0, UT)
           }
         }
       }
-      static defaultTransparentSortCompare(pp, ip) {
-        return pp._alphaIndex > ip._alphaIndex ? 1 : pp._alphaIndex < ip._alphaIndex ? -1 : Yp.backToFrontSortCompare(pp, ip)
+      static defaultTransparentSortCompare(TT, UT) {
+        return TT._alphaIndex > UT._alphaIndex ? 1 : TT._alphaIndex < UT._alphaIndex ? -1 : kT.backToFrontSortCompare(TT, UT)
       }
-      static backToFrontSortCompare(pp, ip) {
-        return pp._distanceToCamera < ip._distanceToCamera ? 1 : pp._distanceToCamera > ip._distanceToCamera ? -1 : 0
+      static backToFrontSortCompare(TT, UT) {
+        return TT._distanceToCamera < UT._distanceToCamera ? 1 : TT._distanceToCamera > UT._distanceToCamera ? -1 : 0
       }
-      static frontToBackSortCompare(pp, ip) {
-        return pp._distanceToCamera < ip._distanceToCamera ? -1 : pp._distanceToCamera > ip._distanceToCamera ? 1 : 0
+      static frontToBackSortCompare(TT, UT) {
+        return TT._distanceToCamera < UT._distanceToCamera ? -1 : TT._distanceToCamera > UT._distanceToCamera ? 1 : 0
       }
-      static PainterSortCompare(pp, ip) {
-        const cp = pp.getMesh(),
-          Op = ip.getMesh();
-        return cp.material && Op.material ? cp.material.uniqueId - Op.material.uniqueId : cp.uniqueId - Op.uniqueId
+      static PainterSortCompare(TT, UT) {
+        const mT = TT.getMesh(),
+          WT = UT.getMesh();
+        return mT.material && WT.material ? mT.material.uniqueId - WT.material.uniqueId : mT.uniqueId - WT.uniqueId
       }
       prepare() {
         this._opaqueSubMeshes.reset(), this._transparentSubMeshes.reset(), this._alphaTestSubMeshes.reset(), this._depthOnlySubMeshes.reset(), this._particleSystems.reset(), this.prepareSprites(), this._edgesRenderers.reset(), this._empty = !0
@@ -6483,71 +6483,71 @@ export const modules = {
       dispose() {
         this._opaqueSubMeshes.dispose(), this._transparentSubMeshes.dispose(), this._alphaTestSubMeshes.dispose(), this._depthOnlySubMeshes.dispose(), this._particleSystems.dispose(), this._spriteManagers.dispose(), this._edgesRenderers.dispose()
       }
-      dispatch(pp, ip, cp) {
-        void 0 === ip && (ip = pp.getMesh()), void 0 === cp && (cp = pp.Ky()), null !== cp && void 0 !== cp && (cp.needAlphaBlendingForMesh(ip) ? this._transparentSubMeshes.push(pp) : cp.needAlphaTestingForMesh(ip) ? (cp.needDepthPrePass && !this.disableDepthPrePass && this._depthOnlySubMeshes.push(pp), this._alphaTestSubMeshes.push(pp)) : (cp.needDepthPrePass && !this.disableDepthPrePass && this._depthOnlySubMeshes.push(pp), this._opaqueSubMeshes.push(pp)), ip._renderingGroup = this, ip._edgesRenderer && ip.isEnabled() && ip.isVisible && ip._edgesRenderer.isEnabled && this._edgesRenderers.pushNoDuplicate(ip._edgesRenderer), this._empty = !1)
+      dispatch(TT, UT, mT) {
+        void 0 === UT && (UT = TT.getMesh()), void 0 === mT && (mT = TT.wB()), null !== mT && void 0 !== mT && (mT.needAlphaBlendingForMesh(UT) ? this._transparentSubMeshes.push(TT) : mT.needAlphaTestingForMesh(UT) ? (mT.needDepthPrePass && !this.disableDepthPrePass && this._depthOnlySubMeshes.push(TT), this._alphaTestSubMeshes.push(TT)) : (mT.needDepthPrePass && !this.disableDepthPrePass && this._depthOnlySubMeshes.push(TT), this._opaqueSubMeshes.push(TT)), UT._renderingGroup = this, UT._edgesRenderer && UT.isEnabled() && UT.isVisible && UT._edgesRenderer.isEnabled && this._edgesRenderers.pushNoDuplicate(UT._edgesRenderer), this._empty = !1)
       }
-      dispatchSprites(pp) {
-        this._spriteManagers.push(pp), this._empty = !1
+      dispatchSprites(TT) {
+        this._spriteManagers.push(TT), this._empty = !1
       }
-      dispatchParticles(pp) {
-        this._particleSystems.push(pp), this._empty = !1
+      dispatchParticles(TT) {
+        this._particleSystems.push(TT), this._empty = !1
       }
-      _renderParticles(pp) {
+      _renderParticles(TT) {
         if (0 === this._particleSystems.length) return;
-        const ip = this._scene.activeCamera;
+        const UT = this._scene.activeCamera;
         this._scene.onBeforeParticlesRenderingObservable.notifyObservers(this._scene);
-        for (let cp = 0; cp < this._particleSystems.length; cp++) {
-          const Op = this._particleSystems.data[cp];
-          if (0 === (ip && ip.layerMask & Op.layerMask)) continue;
-          const op = Op.emitter;
-          op.position && pp && -1 === pp.indexOf(op) || this._scene._activeParticles.addCount(Op.render(), !1)
+        for (let mT = 0; mT < this._particleSystems.length; mT++) {
+          const WT = this._particleSystems.data[mT];
+          if (0 === (UT && UT.layerMask & WT.layerMask)) continue;
+          const zT = WT.emitter;
+          zT.position && TT && -1 === TT.indexOf(zT) || this._scene._activeParticles.addCount(WT.render(), !1)
         }
         this._scene.onAfterParticlesRenderingObservable.notifyObservers(this._scene)
       }
       _renderSprites() {
         if (!this._scene.spritesEnabled || 0 === this._spriteManagers.length) return;
-        const pp = this._scene.activeCamera;
+        const TT = this._scene.activeCamera;
         this._scene.onBeforeSpritesRenderingObservable.notifyObservers(this._scene);
-        for (let ip = 0; ip < this._spriteManagers.length; ip++) {
-          const cp = this._spriteManagers.data[ip];
-          0 !== (pp && pp.layerMask & cp.layerMask) && cp.render()
+        for (let UT = 0; UT < this._spriteManagers.length; UT++) {
+          const mT = this._spriteManagers.data[UT];
+          0 !== (TT && TT.layerMask & mT.layerMask) && mT.render()
         }
         this._scene.onAfterSpritesRenderingObservable.notifyObservers(this._scene)
       }
     }
-    Yp._ZeroVector = op.o.Zero()
+    kT._ZeroVector = zT.p.Zero()
   },
-  40358: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip
+  40270: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => MT
     });
-    var Op = cp(40365);
-    class op {}
-    class Ip {
+    var WT = mT(40274);
+    class zT {}
+    class MT {
       get disableDepthPrePass() {
         return this._disableDepthPrePass
       }
-      set disableDepthPrePass(pp) {
-        this._disableDepthPrePass = pp;
-        for (const ip of this._renderingGroups) ip.disableDepthPrePass = pp
+      set disableDepthPrePass(TT) {
+        this._disableDepthPrePass = TT;
+        for (const UT of this._renderingGroups) UT.disableDepthPrePass = TT
       }
       get maintainStateBetweenFrames() {
         return this._maintainStateBetweenFrames
       }
-      set maintainStateBetweenFrames(pp) {
-        pp !== this._maintainStateBetweenFrames && (this._maintainStateBetweenFrames = pp, this._maintainStateBetweenFrames || this.restoreDispachedFlags())
+      set maintainStateBetweenFrames(TT) {
+        TT !== this._maintainStateBetweenFrames && (this._maintainStateBetweenFrames = TT, this._maintainStateBetweenFrames || this.restoreDispachedFlags())
       }
       restoreDispachedFlags() {
-        for (const pp of this._scene.meshes)
-          if (pp.Am)
-            for (const ip of pp.Am) ip._wasDispatched = !1;
+        for (const TT of this._scene.meshes)
+          if (TT.rY)
+            for (const UT of TT.rY) UT._wasDispatched = !1;
         if (this._scene.spriteManagers)
-          for (const pp of this._scene.spriteManagers) pp._wasDispatched = !1;
-        for (const pp of this._scene.Wm) pp._wasDispatched = !1
+          for (const TT of this._scene.spriteManagers) TT._wasDispatched = !1;
+        for (const TT of this._scene.EY) TT._wasDispatched = !1
       }
-      constructor(pp) {
-        this._useSceneAutoClearSetup = !1, this._disableDepthPrePass = !1, this._renderingGroups = new Array, this._autoClearDepthStencil = {}, this._customOpaqueSortCompareFn = {}, this._customAlphaTestSortCompareFn = {}, this._customTransparentSortCompareFn = {}, this._renderingGroupInfo = new op, this._maintainStateBetweenFrames = !1, this._scene = pp;
-        for (let ip = Ip.MIN_RENDERINGGROUPS; ip < Ip.MAX_RENDERINGGROUPS; ip++) this._autoClearDepthStencil[ip] = {
+      constructor(TT) {
+        this._useSceneAutoClearSetup = !1, this._disableDepthPrePass = !1, this._renderingGroups = new Array, this._autoClearDepthStencil = {}, this._customOpaqueSortCompareFn = {}, this._customAlphaTestSortCompareFn = {}, this._customTransparentSortCompareFn = {}, this._renderingGroupInfo = new zT, this._maintainStateBetweenFrames = !1, this._scene = TT;
+        for (let UT = MT.MIN_RENDERINGGROUPS; UT < MT.MAX_RENDERINGGROUPS; UT++) this._autoClearDepthStencil[UT] = {
           autoClear: !0,
           depth: !0,
           stencil: !0
@@ -6556,115 +6556,115 @@ export const modules = {
       get renderingGroups() {
         return this._renderingGroups
       }
-      getRenderingGroup(pp) {
-        const ip = pp || 0;
-        return this._prepareRenderingGroup(ip), this._renderingGroups[ip]
+      getRenderingGroup(TT) {
+        const UT = TT || 0;
+        return this._prepareRenderingGroup(UT), this._renderingGroups[UT]
       }
       _clearDepthStencilBuffer() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._depthStencilBufferAlreadyCleaned || (this._scene.gy().clear(null, !1, pp, ip), this._depthStencilBufferAlreadyCleaned = !0)
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        this._depthStencilBufferAlreadyCleaned || (this._scene.eB().clear(null, !1, TT, UT), this._depthStencilBufferAlreadyCleaned = !0)
       }
-      render(pp, ip, cp, Op) {
-        let op = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Sp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          xp = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          Lp = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Yp = arguments.length > 8 ? arguments[8] : void 0,
-          Dp = arguments.length > 9 ? arguments[9] : void 0;
-        const Ap = this._renderingGroupInfo;
-        Ap.pw = this._scene, Ap.camera = this._scene.activeCamera, Ap.renderingManager = this;
-        const Pp = Dp ?? this._scene.spriteManagers;
-        if (Pp && Op)
-          for (let Ip = 0; Ip < Pp.length; Ip++) {
-            const pp = Pp[Ip];
-            this.dispatchSprites(pp)
+      render(TT, UT, mT, WT) {
+        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          gT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          nT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          HT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          kT = arguments.length > 8 ? arguments[8] : void 0,
+          jT = arguments.length > 9 ? arguments[9] : void 0;
+        const lT = this._renderingGroupInfo;
+        lT.XZ = this._scene, lT.camera = this._scene.activeCamera, lT.renderingManager = this;
+        const LT = jT ?? this._scene.spriteManagers;
+        if (LT && WT)
+          for (let MT = 0; MT < LT.length; MT++) {
+            const TT = LT[MT];
+            this.dispatchSprites(TT)
           }
-        for (let Wp = Ip.MIN_RENDERINGGROUPS; Wp < Ip.MAX_RENDERINGGROUPS; Wp++) {
-          this._depthStencilBufferAlreadyCleaned = Wp === Ip.MIN_RENDERINGGROUPS;
-          const Dp = this._renderingGroups[Wp];
-          if (!Dp || Dp._empty) continue;
-          const Pp = 1 << Wp;
-          if (Ap.renderingGroupId = Wp, this._scene.onBeforeRenderingGroupObservable.notifyObservers(Ap, Pp), Ip.AUTOCLEAR) {
-            const pp = this._useSceneAutoClearSetup ? this._scene.getAutoClearDepthStencilSetup(Wp) : this._autoClearDepthStencil[Wp];
-            pp && pp.autoClear && this._clearDepthStencilBuffer(pp.depth, pp.stencil)
+        for (let pT = MT.MIN_RENDERINGGROUPS; pT < MT.MAX_RENDERINGGROUPS; pT++) {
+          this._depthStencilBufferAlreadyCleaned = pT === MT.MIN_RENDERINGGROUPS;
+          const jT = this._renderingGroups[pT];
+          if (!jT || jT._empty) continue;
+          const LT = 1 << pT;
+          if (lT.renderingGroupId = pT, this._scene.onBeforeRenderingGroupObservable.notifyObservers(lT, LT), MT.AUTOCLEAR) {
+            const TT = this._useSceneAutoClearSetup ? this._scene.getAutoClearDepthStencilSetup(pT) : this._autoClearDepthStencil[pT];
+            TT && TT.autoClear && this._clearDepthStencilBuffer(TT.depth, TT.stencil)
           }
-          for (let pp = 0, ip = this._scene._beforeRenderingGroupDrawStage; pp < ip.length; pp++) {
-            ip[pp].action(Wp)
+          for (let TT = 0, UT = this._scene._beforeRenderingGroupDrawStage; TT < UT.length; TT++) {
+            UT[TT].action(pT)
           }
-          Dp.render(pp, Op, cp, ip, op, Sp, xp, Lp, Yp);
-          for (let pp = 0, ip = this._scene._afterRenderingGroupDrawStage; pp < ip.length; pp++) {
-            ip[pp].action(Wp)
+          jT.render(TT, WT, mT, UT, zT, gT, nT, HT, kT);
+          for (let TT = 0, UT = this._scene._afterRenderingGroupDrawStage; TT < UT.length; TT++) {
+            UT[TT].action(pT)
           }
-          this._scene.onAfterRenderingGroupObservable.notifyObservers(Ap, Pp)
+          this._scene.onAfterRenderingGroupObservable.notifyObservers(lT, LT)
         }
       }
       reset() {
         if (!this.maintainStateBetweenFrames)
-          for (let pp = Ip.MIN_RENDERINGGROUPS; pp < Ip.MAX_RENDERINGGROUPS; pp++) {
-            const ip = this._renderingGroups[pp];
-            ip && ip.prepare()
+          for (let TT = MT.MIN_RENDERINGGROUPS; TT < MT.MAX_RENDERINGGROUPS; TT++) {
+            const UT = this._renderingGroups[TT];
+            UT && UT.prepare()
           }
       }
       resetSprites() {
         if (!this.maintainStateBetweenFrames)
-          for (let pp = Ip.MIN_RENDERINGGROUPS; pp < Ip.MAX_RENDERINGGROUPS; pp++) {
-            const ip = this._renderingGroups[pp];
-            ip && ip.prepareSprites()
+          for (let TT = MT.MIN_RENDERINGGROUPS; TT < MT.MAX_RENDERINGGROUPS; TT++) {
+            const UT = this._renderingGroups[TT];
+            UT && UT.prepareSprites()
           }
       }
       dispose() {
         this.freeRenderingGroups(), this._renderingGroups.length = 0, this._renderingGroupInfo = null
       }
       freeRenderingGroups() {
-        for (let pp = Ip.MIN_RENDERINGGROUPS; pp < Ip.MAX_RENDERINGGROUPS; pp++) {
-          const ip = this._renderingGroups[pp];
-          ip && ip.dispose()
+        for (let TT = MT.MIN_RENDERINGGROUPS; TT < MT.MAX_RENDERINGGROUPS; TT++) {
+          const UT = this._renderingGroups[TT];
+          UT && UT.dispose()
         }
       }
-      _prepareRenderingGroup(pp) {
-        void 0 === this._renderingGroups[pp] && (this._renderingGroups[pp] = new Op.b(pp, this._scene, this._customOpaqueSortCompareFn[pp], this._customAlphaTestSortCompareFn[pp], this._customTransparentSortCompareFn[pp]), this._renderingGroups[pp].disableDepthPrePass = this._disableDepthPrePass)
+      _prepareRenderingGroup(TT) {
+        void 0 === this._renderingGroups[TT] && (this._renderingGroups[TT] = new WT.b(TT, this._scene, this._customOpaqueSortCompareFn[TT], this._customAlphaTestSortCompareFn[TT], this._customTransparentSortCompareFn[TT]), this._renderingGroups[TT].disableDepthPrePass = this._disableDepthPrePass)
       }
-      dispatchSprites(pp) {
-        this.maintainStateBetweenFrames && pp._wasDispatched || (pp._wasDispatched = !0, this.getRenderingGroup(pp.renderingGroupId).dispatchSprites(pp))
+      dispatchSprites(TT) {
+        this.maintainStateBetweenFrames && TT._wasDispatched || (TT._wasDispatched = !0, this.getRenderingGroup(TT.renderingGroupId).dispatchSprites(TT))
       }
-      dispatchParticles(pp) {
-        this.maintainStateBetweenFrames && pp._wasDispatched || (pp._wasDispatched = !0, this.getRenderingGroup(pp.renderingGroupId).dispatchParticles(pp))
+      dispatchParticles(TT) {
+        this.maintainStateBetweenFrames && TT._wasDispatched || (TT._wasDispatched = !0, this.getRenderingGroup(TT.renderingGroupId).dispatchParticles(TT))
       }
-      dispatch(pp, ip, cp) {
-        void 0 === ip && (ip = pp.getMesh()), this.maintainStateBetweenFrames && pp._wasDispatched || (pp._wasDispatched = !0, this.getRenderingGroup(ip.renderingGroupId).dispatch(pp, ip, cp))
+      dispatch(TT, UT, mT) {
+        void 0 === UT && (UT = TT.getMesh()), this.maintainStateBetweenFrames && TT._wasDispatched || (TT._wasDispatched = !0, this.getRenderingGroup(UT.renderingGroupId).dispatch(TT, UT, mT))
       }
-      setRenderingOrder(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (this._customOpaqueSortCompareFn[pp] = ip, this._customAlphaTestSortCompareFn[pp] = cp, this._customTransparentSortCompareFn[pp] = Op, this._renderingGroups[pp]) {
-          const ip = this._renderingGroups[pp];
-          ip.opaqueSortCompareFn = this._customOpaqueSortCompareFn[pp], ip.alphaTestSortCompareFn = this._customAlphaTestSortCompareFn[pp], ip.transparentSortCompareFn = this._customTransparentSortCompareFn[pp]
+      setRenderingOrder(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        if (this._customOpaqueSortCompareFn[TT] = UT, this._customAlphaTestSortCompareFn[TT] = mT, this._customTransparentSortCompareFn[TT] = WT, this._renderingGroups[TT]) {
+          const UT = this._renderingGroups[TT];
+          UT.opaqueSortCompareFn = this._customOpaqueSortCompareFn[TT], UT.alphaTestSortCompareFn = this._customAlphaTestSortCompareFn[TT], UT.transparentSortCompareFn = this._customTransparentSortCompareFn[TT]
         }
       }
-      setRenderingAutoClearDepthStencil(pp, ip) {
-        let cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._autoClearDepthStencil[pp] = {
-          autoClear: ip,
-          depth: cp,
-          stencil: Op
+      setRenderingAutoClearDepthStencil(TT, UT) {
+        let mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._autoClearDepthStencil[TT] = {
+          autoClear: UT,
+          depth: mT,
+          stencil: WT
         }
       }
-      getAutoClearDepthStencilSetup(pp) {
-        return this._autoClearDepthStencil[pp]
+      getAutoClearDepthStencilSetup(TT) {
+        return this._autoClearDepthStencil[TT]
       }
     }
-    Ip.MAX_RENDERINGGROUPS = 4, Ip.MIN_RENDERINGGROUPS = 0, Ip.AUTOCLEAR = !0
+    MT.MAX_RENDERINGGROUPS = 4, MT.MIN_RENDERINGGROUPS = 0, MT.AUTOCLEAR = !0
   },
-  40124: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  39994: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
-      constructor(pp) {
-        this._supportBlendParametersPerTarget = pp, this._blendFunctionParameters = new Array(32), this._blendEquationParameters = new Array(16), this._blendConstants = new Array(4), this._isBlendConstantsDirty = !1, this._alphaBlend = Array(8).fill(!1), this._numTargetEnabled = 0, this._isAlphaBlendDirty = !1, this._isBlendFunctionParametersDirty = !1, this._isBlendEquationParametersDirty = !1, this._blendDisabledTargetsMask = 0, this._numTargets = 1, this.reset()
+    class WT {
+      constructor(TT) {
+        this._supportBlendParametersPerTarget = TT, this._blendFunctionParameters = new Array(32), this._blendEquationParameters = new Array(16), this._blendConstants = new Array(4), this._isBlendConstantsDirty = !1, this._alphaBlend = Array(8).fill(!1), this._numTargetEnabled = 0, this._isAlphaBlendDirty = !1, this._isBlendFunctionParametersDirty = !1, this._isBlendEquationParametersDirty = !1, this._blendDisabledTargetsMask = 0, this._numTargets = 1, this.reset()
       }
       get isDirty() {
         return this._isAlphaBlendDirty || this._isBlendFunctionParametersDirty || this._isBlendEquationParametersDirty
@@ -6672,182 +6672,182 @@ export const modules = {
       get alphaBlend() {
         return this._numTargetEnabled > 0
       }
-      set alphaBlend(pp) {
-        this.setAlphaBlend(pp)
+      set alphaBlend(TT) {
+        this.setAlphaBlend(TT)
       }
-      setAlphaBlend(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this._alphaBlend[ip] !== pp && (pp ? this._numTargetEnabled++ : this._numTargetEnabled--, this._alphaBlend[ip] = pp, this._isAlphaBlendDirty = !0)
+      setAlphaBlend(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this._alphaBlend[UT] !== TT && (TT ? this._numTargetEnabled++ : this._numTargetEnabled--, this._alphaBlend[UT] = TT, this._isAlphaBlendDirty = !0)
       }
-      setAlphaBlendConstants(pp, ip, cp, Op) {
-        this._blendConstants[0] === pp && this._blendConstants[1] === ip && this._blendConstants[2] === cp && this._blendConstants[3] === Op || (this._blendConstants[0] = pp, this._blendConstants[1] = ip, this._blendConstants[2] = cp, this._blendConstants[3] = Op, this._isBlendConstantsDirty = !0)
+      setAlphaBlendConstants(TT, UT, mT, WT) {
+        this._blendConstants[0] === TT && this._blendConstants[1] === UT && this._blendConstants[2] === mT && this._blendConstants[3] === WT || (this._blendConstants[0] = TT, this._blendConstants[1] = UT, this._blendConstants[2] = mT, this._blendConstants[3] = WT, this._isBlendConstantsDirty = !0)
       }
-      setAlphaBlendFunctionParameters(pp, ip, cp, Op) {
-        const op = 4 * (arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0);
-        this._blendFunctionParameters[op + 0] === pp && this._blendFunctionParameters[op + 1] === ip && this._blendFunctionParameters[op + 2] === cp && this._blendFunctionParameters[op + 3] === Op || (this._blendFunctionParameters[op + 0] = pp, this._blendFunctionParameters[op + 1] = ip, this._blendFunctionParameters[op + 2] = cp, this._blendFunctionParameters[op + 3] = Op, this._isBlendFunctionParametersDirty = !0)
+      setAlphaBlendFunctionParameters(TT, UT, mT, WT) {
+        const zT = 4 * (arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0);
+        this._blendFunctionParameters[zT + 0] === TT && this._blendFunctionParameters[zT + 1] === UT && this._blendFunctionParameters[zT + 2] === mT && this._blendFunctionParameters[zT + 3] === WT || (this._blendFunctionParameters[zT + 0] = TT, this._blendFunctionParameters[zT + 1] = UT, this._blendFunctionParameters[zT + 2] = mT, this._blendFunctionParameters[zT + 3] = WT, this._isBlendFunctionParametersDirty = !0)
       }
-      setAlphaEquationParameters(pp, ip) {
-        const cp = 2 * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0);
-        this._blendEquationParameters[cp + 0] === pp && this._blendEquationParameters[cp + 1] === ip || (this._blendEquationParameters[cp + 0] = pp, this._blendEquationParameters[cp + 1] = ip, this._isBlendEquationParametersDirty = !0)
+      setAlphaEquationParameters(TT, UT) {
+        const mT = 2 * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0);
+        this._blendEquationParameters[mT + 0] === TT && this._blendEquationParameters[mT + 1] === UT || (this._blendEquationParameters[mT + 0] = TT, this._blendEquationParameters[mT + 1] = UT, this._isBlendEquationParametersDirty = !0)
       }
       reset() {
         this._alphaBlend.fill(!1), this._numTargetEnabled = 0, this._blendFunctionParameters.fill(null), this._blendEquationParameters.fill(null), this._blendConstants[0] = null, this._blendConstants[1] = null, this._blendConstants[2] = null, this._blendConstants[3] = null, this._isAlphaBlendDirty = !0, this._isBlendFunctionParametersDirty = !1, this._isBlendEquationParametersDirty = !1, this._isBlendConstantsDirty = !1, this._blendDisabledTargetsMask = 0, this._numTargets = 1
       }
-      apply(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this._numTargets !== ip && (this._numTargets = ip, this._isAlphaBlendDirty = !0), this._blendDisabledTargetsMask !== cp && (this._blendDisabledTargetsMask = cp, this._isAlphaBlendDirty = !0), !this.isDirty) return;
-        if (this._isBlendConstantsDirty && (pp.blendColor(this._blendConstants[0], this._blendConstants[1], this._blendConstants[2], this._blendConstants[3]), this._isBlendConstantsDirty = !1), 1 === ip || !this._supportBlendParametersPerTarget) {
+      apply(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this._numTargets !== UT && (this._numTargets = UT, this._isAlphaBlendDirty = !0), this._blendDisabledTargetsMask !== mT && (this._blendDisabledTargetsMask = mT, this._isAlphaBlendDirty = !0), !this.isDirty) return;
+        if (this._isBlendConstantsDirty && (TT.blendColor(this._blendConstants[0], this._blendConstants[1], this._blendConstants[2], this._blendConstants[3]), this._isBlendConstantsDirty = !1), 1 === UT || !this._supportBlendParametersPerTarget) {
           if (this._isAlphaBlendDirty) {
-            if (ip > 1 && 0 !== cp && this.alphaBlend) throw new Error("AlphaState: blending with integer MRT attachments requires per-target blend parameters");
-            this._alphaBlend[0] && 0 === (1 & cp) ? pp.enable(pp.BLEND) : pp.disable(pp.BLEND), this._isAlphaBlendDirty = !1
+            if (UT > 1 && 0 !== mT && this.alphaBlend) throw new Error("AlphaState: blending with integer MRT attachments requires per-target blend parameters");
+            this._alphaBlend[0] && 0 === (1 & mT) ? TT.enable(TT.BLEND) : TT.disable(TT.BLEND), this._isAlphaBlendDirty = !1
           }
-          return this._isBlendFunctionParametersDirty && (pp.blendFuncSeparate(this._blendFunctionParameters[0], this._blendFunctionParameters[1], this._blendFunctionParameters[2], this._blendFunctionParameters[3]), this._isBlendFunctionParametersDirty = !1), void(this._isBlendEquationParametersDirty && (pp.blendEquationSeparate(this._blendEquationParameters[0], this._blendEquationParameters[1]), this._isBlendEquationParametersDirty = !1))
+          return this._isBlendFunctionParametersDirty && (TT.blendFuncSeparate(this._blendFunctionParameters[0], this._blendFunctionParameters[1], this._blendFunctionParameters[2], this._blendFunctionParameters[3]), this._isBlendFunctionParametersDirty = !1), void(this._isBlendEquationParametersDirty && (TT.blendEquationSeparate(this._blendEquationParameters[0], this._blendEquationParameters[1]), this._isBlendEquationParametersDirty = !1))
         }
-        const Op = pp;
+        const WT = TT;
         if (this._isAlphaBlendDirty) {
-          for (let op = 0; op < ip; op++) {
-            const ip = op < this._numTargetEnabled ? op : 0;
-            this._alphaBlend[ip] && 0 === (cp & 1 << op) ? Op.enableIndexed(pp.BLEND, op) : Op.disableIndexed(pp.BLEND, op)
+          for (let zT = 0; zT < UT; zT++) {
+            const UT = zT < this._numTargetEnabled ? zT : 0;
+            this._alphaBlend[UT] && 0 === (mT & 1 << zT) ? WT.enableIndexed(TT.BLEND, zT) : WT.disableIndexed(TT.BLEND, zT)
           }
           this._isAlphaBlendDirty = !1
         }
         if (this._isBlendFunctionParametersDirty) {
-          for (let pp = 0; pp < ip; pp++) {
-            const ip = pp < this._numTargetEnabled ? 4 * pp : 0;
-            Op.blendFuncSeparateIndexed(pp, this._blendFunctionParameters[ip + 0], this._blendFunctionParameters[ip + 1], this._blendFunctionParameters[ip + 2], this._blendFunctionParameters[ip + 3])
+          for (let TT = 0; TT < UT; TT++) {
+            const UT = TT < this._numTargetEnabled ? 4 * TT : 0;
+            WT.blendFuncSeparateIndexed(TT, this._blendFunctionParameters[UT + 0], this._blendFunctionParameters[UT + 1], this._blendFunctionParameters[UT + 2], this._blendFunctionParameters[UT + 3])
           }
           this._isBlendFunctionParametersDirty = !1
         }
         if (this._isBlendEquationParametersDirty) {
-          for (let pp = 0; pp < ip; pp++) {
-            const ip = pp < this._numTargetEnabled ? 2 * pp : 0;
-            Op.blendEquationSeparateIndexed(pp, this._blendEquationParameters[ip + 0], this._blendEquationParameters[ip + 1])
+          for (let TT = 0; TT < UT; TT++) {
+            const UT = TT < this._numTargetEnabled ? 2 * TT : 0;
+            WT.blendEquationSeparateIndexed(TT, this._blendEquationParameters[UT + 0], this._blendEquationParameters[UT + 1])
           }
           this._isBlendEquationParametersDirty = !1
         }
       }
-      setAlphaMode(pp, ip) {
-        let cp = 32774;
-        switch (pp) {
+      setAlphaMode(TT, UT) {
+        let mT = 32774;
+        switch (TT) {
           case 0:
             break;
           case 7:
-            this.setAlphaBlendFunctionParameters(1, 771, 1, 1, ip);
+            this.setAlphaBlendFunctionParameters(1, 771, 1, 1, UT);
             break;
           case 8:
           case 14:
-            this.setAlphaBlendFunctionParameters(1, 771, 1, 771, ip);
+            this.setAlphaBlendFunctionParameters(1, 771, 1, 771, UT);
             break;
           case 2:
-            this.setAlphaBlendFunctionParameters(770, 771, 1, 1, ip);
+            this.setAlphaBlendFunctionParameters(770, 771, 1, 1, UT);
             break;
           case 6:
-            this.setAlphaBlendFunctionParameters(1, 1, 0, 1, ip);
+            this.setAlphaBlendFunctionParameters(1, 1, 0, 1, UT);
             break;
           case 1:
-            this.setAlphaBlendFunctionParameters(770, 1, 0, 1, ip);
+            this.setAlphaBlendFunctionParameters(770, 1, 0, 1, UT);
             break;
           case 3:
-            this.setAlphaBlendFunctionParameters(0, 769, 1, 1, ip);
+            this.setAlphaBlendFunctionParameters(0, 769, 1, 1, UT);
             break;
           case 4:
-            this.setAlphaBlendFunctionParameters(774, 0, 1, 1, ip);
+            this.setAlphaBlendFunctionParameters(774, 0, 1, 1, UT);
             break;
           case 5:
-            this.setAlphaBlendFunctionParameters(770, 769, 1, 1, ip);
+            this.setAlphaBlendFunctionParameters(770, 769, 1, 1, UT);
             break;
           case 9:
-            this.setAlphaBlendFunctionParameters(32769, 32770, 32771, 32772, ip);
+            this.setAlphaBlendFunctionParameters(32769, 32770, 32771, 32772, UT);
             break;
           case 10:
-            this.setAlphaBlendFunctionParameters(1, 769, 1, 771, ip);
+            this.setAlphaBlendFunctionParameters(1, 769, 1, 771, UT);
             break;
           case 11:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, ip);
+            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, UT);
             break;
           case 12:
-            this.setAlphaBlendFunctionParameters(772, 1, 0, 0, ip);
+            this.setAlphaBlendFunctionParameters(772, 1, 0, 0, UT);
             break;
           case 13:
-            this.setAlphaBlendFunctionParameters(775, 769, 773, 771, ip);
+            this.setAlphaBlendFunctionParameters(775, 769, 773, 771, UT);
             break;
           case 15:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 0, ip);
+            this.setAlphaBlendFunctionParameters(1, 1, 1, 0, UT);
             break;
           case 16:
-            this.setAlphaBlendFunctionParameters(775, 769, 0, 1, ip);
+            this.setAlphaBlendFunctionParameters(775, 769, 0, 1, UT);
             break;
           case 17:
-            this.setAlphaBlendFunctionParameters(770, 771, 1, 771, ip);
+            this.setAlphaBlendFunctionParameters(770, 771, 1, 771, UT);
             break;
           case 18:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, ip), cp = 32775;
+            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, UT), mT = 32775;
             break;
           case 19:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, ip), cp = 32776;
+            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, UT), mT = 32776;
             break;
           case 20:
-            this.setAlphaBlendFunctionParameters(1, 35065, 0, 1, ip);
+            this.setAlphaBlendFunctionParameters(1, 35065, 0, 1, UT);
             break;
           case 21:
-            this.setAlphaBlendFunctionParameters(1, 0, 1, 771, ip)
+            this.setAlphaBlendFunctionParameters(1, 0, 1, 771, UT)
         }
-        this.setAlphaEquationParameters(cp, cp, ip)
+        this.setAlphaEquationParameters(mT, mT, UT)
       }
     }
   },
-  40390: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  40305: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT
     });
-    class Op {}
-    Op._IsPickingAvailable = !1
+    class WT {}
+    WT._IsPickingAvailable = !1
   },
-  40296: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Dc,
-      f: () => Lc
+  40198: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => nm,
+      i: () => Mm
     });
-    var Op = cp(40304),
-      op = cp(40107),
-      Ip = cp(40122),
-      Sp = cp(37349),
-      xp = cp(40314);
-    class Lp {
+    var WT = mT(40201),
+      zT = mT(39975),
+      MT = mT(39986),
+      gT = mT(37219),
+      nT = mT(40215);
+    class HT {
       constructor() {
         this._count = 0, this._data = {}
       }
-      rM(pp) {
-        this.clear(), pp.forEach(((pp, ip) => this.add(pp, ip)))
+      Gw(TT) {
+        this.clear(), TT.forEach(((TT, UT) => this.add(TT, UT)))
       }
-      get(pp) {
-        const ip = this._data[pp];
-        if (void 0 !== ip) return ip
+      get(TT) {
+        const UT = this._data[TT];
+        if (void 0 !== UT) return UT
       }
-      getOrAddWithFactory(pp, ip) {
-        let cp = this.get(pp);
-        return void 0 !== cp || (cp = ip(pp), cp && this.add(pp, cp)), cp
+      getOrAddWithFactory(TT, UT) {
+        let mT = this.get(TT);
+        return void 0 !== mT || (mT = UT(TT), mT && this.add(TT, mT)), mT
       }
-      getOrAdd(pp, ip) {
-        const cp = this.get(pp);
-        return void 0 !== cp ? cp : (this.add(pp, ip), ip)
+      getOrAdd(TT, UT) {
+        const mT = this.get(TT);
+        return void 0 !== mT ? mT : (this.add(TT, UT), UT)
       }
-      contains(pp) {
-        return void 0 !== this._data[pp]
+      contains(TT) {
+        return void 0 !== this._data[TT]
       }
-      add(pp, ip) {
-        return void 0 === this._data[pp] && (this._data[pp] = ip, ++this._count, !0)
+      add(TT, UT) {
+        return void 0 === this._data[TT] && (this._data[TT] = UT, ++this._count, !0)
       }
-      set(pp, ip) {
-        return void 0 !== this._data[pp] && (this._data[pp] = ip, !0)
+      set(TT, UT) {
+        return void 0 !== this._data[TT] && (this._data[TT] = UT, !0)
       }
-      getAndRemove(pp) {
-        const ip = this.get(pp);
-        return void 0 !== ip ? (delete this._data[pp], --this._count, ip) : null
+      getAndRemove(TT) {
+        const UT = this.get(TT);
+        return void 0 !== UT ? (delete this._data[TT], --this._count, UT) : null
       }
-      remove(pp) {
-        return !!this.contains(pp) && (delete this._data[pp], --this._count, !0)
+      remove(TT) {
+        return !!this.contains(TT) && (delete this._data[TT], --this._count, !0)
       }
       clear() {
         this._data = {}, this._count = 0
@@ -6855,167 +6855,167 @@ export const modules = {
       get count() {
         return this._count
       }
-      forEach(pp) {
-        for (const ip in this._data) {
-          pp(ip, this._data[ip])
+      forEach(TT) {
+        for (const UT in this._data) {
+          TT(UT, this._data[UT])
         }
       }
-      first(pp) {
-        for (const ip in this._data) {
-          const cp = pp(ip, this._data[ip]);
-          if (cp) return cp
+      first(TT) {
+        for (const UT in this._data) {
+          const mT = TT(UT, this._data[UT]);
+          if (mT) return mT
         }
         return null
       }
     }
-    var Yp = cp(40236),
-      Dp = cp(37320),
-      Ap = cp(40318),
-      Pp = cp(40332),
-      Wp = cp(40334);
-    class yp {
-      constructor(pp, ip, cp, Op, op, Ip) {
-        this.source = pp, this.pointerX = ip, this.pointerY = cp, this.meshUnderPointer = Op, this.sourceEvent = op, this.additionalData = Ip
+    var kT = mT(40129),
+      jT = mT(37188),
+      lT = mT(40223),
+      LT = mT(40242),
+      pT = mT(40251);
+    class BT {
+      constructor(TT, UT, mT, WT, zT, MT) {
+        this.source = TT, this.pointerX = UT, this.pointerY = mT, this.meshUnderPointer = WT, this.sourceEvent = zT, this.additionalData = MT
       }
-      static CreateNew(pp, ip, cp) {
-        const Op = pp.Gl();
-        return new yp(pp, Op.pointerX, Op.pointerY, Op.meshUnderPointer || pp, ip, cp)
+      static CreateNew(TT, UT, mT) {
+        const WT = TT.KF();
+        return new BT(TT, WT.pointerX, WT.pointerY, WT.meshUnderPointer || TT, UT, mT)
       }
-      static CreateNewFromSprite(pp, ip, cp, Op) {
-        return new yp(pp, ip.pointerX, ip.pointerY, ip.meshUnderPointer, cp, Op)
+      static CreateNewFromSprite(TT, UT, mT, WT) {
+        return new BT(TT, UT.pointerX, UT.pointerY, UT.meshUnderPointer, mT, WT)
       }
-      static CreateNewFromScene(pp, ip) {
-        return new yp(null, pp.pointerX, pp.pointerY, pp.meshUnderPointer, ip)
+      static CreateNewFromScene(TT, UT) {
+        return new BT(null, TT.pointerX, TT.pointerY, TT.meshUnderPointer, UT)
       }
-      static CreateNewFromPrimitive(pp, ip, cp, Op) {
-        return new yp(pp, ip.x, ip.y, null, cp, Op)
+      static CreateNewFromPrimitive(TT, UT, mT, WT) {
+        return new BT(TT, UT.x, UT.y, null, mT, WT)
       }
     }
-    var Up = cp(40345),
-      wp = cp(40352),
-      vp = cp(40358),
-      tp = cp(40368),
-      Hp = cp(40071),
-      dp = cp(37345),
-      ep = cp(40096),
-      jp = cp(40372);
-    class kp {
+    var ZT = mT(40260),
+      cT = mT(40263),
+      vT = mT(40270),
+      fT = mT(40283),
+      qT = mT(39946),
+      iT = mT(37216),
+      bT = mT(39965),
+      OT = mT(40288);
+    class eT {
       constructor() {
         this.hoverCursor = "", this.actions = [], this.isRecursive = !1, this.disposeWhenUnowned = !0
       }
       static get HasTriggers() {
-        for (const pp in kp.Triggers)
-          if (Object.prototype.hasOwnProperty.call(kp.Triggers, pp)) return !0;
+        for (const TT in eT.Triggers)
+          if (Object.prototype.hasOwnProperty.call(eT.Triggers, TT)) return !0;
         return !1
       }
       static get HasPickTriggers() {
-        for (const pp in kp.Triggers)
-          if (Object.prototype.hasOwnProperty.call(kp.Triggers, pp)) {
-            const ip = parseInt(pp);
-            if (ip >= 1 && ip <= 7) return !0
+        for (const TT in eT.Triggers)
+          if (Object.prototype.hasOwnProperty.call(eT.Triggers, TT)) {
+            const UT = parseInt(TT);
+            if (UT >= 1 && UT <= 7) return !0
           } return !1
       }
-      static HasSpecificTrigger(pp) {
-        for (const ip in kp.Triggers)
-          if (Object.prototype.hasOwnProperty.call(kp.Triggers, ip)) {
-            if (parseInt(ip) === pp) return !0
+      static HasSpecificTrigger(TT) {
+        for (const UT in eT.Triggers)
+          if (Object.prototype.hasOwnProperty.call(eT.Triggers, UT)) {
+            if (parseInt(UT) === TT) return !0
           } return !1
       }
     }
-    kp.Triggers = {};
-    var mp, Rp, qp, Mp, Cp, Ep, Xp, lp = cp(40380);
-    ! function(pp) {
-      pp[pp.Generic = 0] = "Generic", pp[pp.Keyboard = 1] = "Keyboard", pp[pp.Mouse = 2] = "Mouse", pp[pp.Touch = 3] = "Touch", pp[pp.DualShock = 4] = "DualShock", pp[pp.Xbox = 5] = "Xbox", pp[pp.Switch = 6] = "Switch", pp[pp.DualSense = 7] = "DualSense"
-    }(mp || (mp = {})),
-    function(pp) {
-      pp[pp.Horizontal = 0] = "Horizontal", pp[pp.Vertical = 1] = "Vertical", pp[pp.LeftClick = 2] = "LeftClick", pp[pp.MiddleClick = 3] = "MiddleClick", pp[pp.RightClick = 4] = "RightClick", pp[pp.BrowserBack = 5] = "BrowserBack", pp[pp.BrowserForward = 6] = "BrowserForward", pp[pp.MouseWheelX = 7] = "MouseWheelX", pp[pp.MouseWheelY = 8] = "MouseWheelY", pp[pp.MouseWheelZ = 9] = "MouseWheelZ", pp[pp.Move = 12] = "Move"
-    }(Rp || (Rp = {})),
-    function(pp) {
-      pp[pp.Horizontal = 0] = "Horizontal", pp[pp.Vertical = 1] = "Vertical", pp[pp.LeftClick = 2] = "LeftClick", pp[pp.MiddleClick = 3] = "MiddleClick", pp[pp.RightClick = 4] = "RightClick", pp[pp.BrowserBack = 5] = "BrowserBack", pp[pp.BrowserForward = 6] = "BrowserForward", pp[pp.MouseWheelX = 7] = "MouseWheelX", pp[pp.MouseWheelY = 8] = "MouseWheelY", pp[pp.MouseWheelZ = 9] = "MouseWheelZ", pp[pp.DeltaHorizontal = 10] = "DeltaHorizontal", pp[pp.DeltaVertical = 11] = "DeltaVertical"
-    }(qp || (qp = {})),
-    function(pp) {
-      pp[pp.Cross = 0] = "Cross", pp[pp.Circle = 1] = "Circle", pp[pp.Square = 2] = "Square", pp[pp.Triangle = 3] = "Triangle", pp[pp.L1 = 4] = "L1", pp[pp.R1 = 5] = "R1", pp[pp.L2 = 6] = "L2", pp[pp.R2 = 7] = "R2", pp[pp.Share = 8] = "Share", pp[pp.Options = 9] = "Options", pp[pp.L3 = 10] = "L3", pp[pp.R3 = 11] = "R3", pp[pp.DPadUp = 12] = "DPadUp", pp[pp.DPadDown = 13] = "DPadDown", pp[pp.DPadLeft = 14] = "DPadLeft", pp[pp.DPadRight = 15] = "DPadRight", pp[pp.Home = 16] = "Home", pp[pp.TouchPad = 17] = "TouchPad", pp[pp.LStickXAxis = 18] = "LStickXAxis", pp[pp.LStickYAxis = 19] = "LStickYAxis", pp[pp.RStickXAxis = 20] = "RStickXAxis", pp[pp.RStickYAxis = 21] = "RStickYAxis"
-    }(Mp || (Mp = {})),
-    function(pp) {
-      pp[pp.Cross = 0] = "Cross", pp[pp.Circle = 1] = "Circle", pp[pp.Square = 2] = "Square", pp[pp.Triangle = 3] = "Triangle", pp[pp.L1 = 4] = "L1", pp[pp.R1 = 5] = "R1", pp[pp.L2 = 6] = "L2", pp[pp.R2 = 7] = "R2", pp[pp.Create = 8] = "Create", pp[pp.Options = 9] = "Options", pp[pp.L3 = 10] = "L3", pp[pp.R3 = 11] = "R3", pp[pp.DPadUp = 12] = "DPadUp", pp[pp.DPadDown = 13] = "DPadDown", pp[pp.DPadLeft = 14] = "DPadLeft", pp[pp.DPadRight = 15] = "DPadRight", pp[pp.Home = 16] = "Home", pp[pp.TouchPad = 17] = "TouchPad", pp[pp.LStickXAxis = 18] = "LStickXAxis", pp[pp.LStickYAxis = 19] = "LStickYAxis", pp[pp.RStickXAxis = 20] = "RStickXAxis", pp[pp.RStickYAxis = 21] = "RStickYAxis"
-    }(Cp || (Cp = {})),
-    function(pp) {
-      pp[pp.A = 0] = "A", pp[pp.B = 1] = "B", pp[pp.X = 2] = "X", pp[pp.Y = 3] = "Y", pp[pp.LB = 4] = "LB", pp[pp.RB = 5] = "RB", pp[pp.LT = 6] = "LT", pp[pp.RT = 7] = "RT", pp[pp.Back = 8] = "Back", pp[pp.Start = 9] = "Start", pp[pp.LS = 10] = "LS", pp[pp.RS = 11] = "RS", pp[pp.DPadUp = 12] = "DPadUp", pp[pp.DPadDown = 13] = "DPadDown", pp[pp.DPadLeft = 14] = "DPadLeft", pp[pp.DPadRight = 15] = "DPadRight", pp[pp.Home = 16] = "Home", pp[pp.LStickXAxis = 17] = "LStickXAxis", pp[pp.LStickYAxis = 18] = "LStickYAxis", pp[pp.RStickXAxis = 19] = "RStickXAxis", pp[pp.RStickYAxis = 20] = "RStickYAxis"
-    }(Ep || (Ep = {})),
-    function(pp) {
-      pp[pp.B = 0] = "B", pp[pp.A = 1] = "A", pp[pp.Y = 2] = "Y", pp[pp.X = 3] = "X", pp[pp.L = 4] = "L", pp[pp.R = 5] = "R", pp[pp.ZL = 6] = "ZL", pp[pp.ZR = 7] = "ZR", pp[pp.Minus = 8] = "Minus", pp[pp.Plus = 9] = "Plus", pp[pp.LS = 10] = "LS", pp[pp.RS = 11] = "RS", pp[pp.DPadUp = 12] = "DPadUp", pp[pp.DPadDown = 13] = "DPadDown", pp[pp.DPadLeft = 14] = "DPadLeft", pp[pp.DPadRight = 15] = "DPadRight", pp[pp.Home = 16] = "Home", pp[pp.Capture = 17] = "Capture", pp[pp.LStickXAxis = 18] = "LStickXAxis", pp[pp.LStickYAxis = 19] = "LStickYAxis", pp[pp.RStickXAxis = 20] = "RStickXAxis", pp[pp.RStickYAxis = 21] = "RStickYAxis"
-    }(Xp || (Xp = {}));
-    var Qp = cp(40388);
-    class Jp {
-      static CreateDeviceEvent(pp, ip, cp, Op, op, Ip, Sp) {
-        switch (pp) {
-          case mp.Keyboard:
-            return this._CreateKeyboardEvent(cp, Op, op, Ip);
-          case mp.Mouse:
-            if (cp === Rp.MouseWheelX || cp === Rp.MouseWheelY || cp === Rp.MouseWheelZ) return this._CreateWheelEvent(pp, ip, cp, Op, op, Ip);
-          case mp.Touch:
-            return this._CreatePointerEvent(pp, ip, cp, Op, op, Ip, Sp);
+    eT.Triggers = {};
+    var YT, JT, xT, dT, wT, tT, aT, yT = mT(40290);
+    ! function(TT) {
+      TT[TT.Generic = 0] = "Generic", TT[TT.Keyboard = 1] = "Keyboard", TT[TT.Mouse = 2] = "Mouse", TT[TT.Touch = 3] = "Touch", TT[TT.DualShock = 4] = "DualShock", TT[TT.Xbox = 5] = "Xbox", TT[TT.Switch = 6] = "Switch", TT[TT.DualSense = 7] = "DualSense"
+    }(YT || (YT = {})),
+    function(TT) {
+      TT[TT.Horizontal = 0] = "Horizontal", TT[TT.Vertical = 1] = "Vertical", TT[TT.LeftClick = 2] = "LeftClick", TT[TT.MiddleClick = 3] = "MiddleClick", TT[TT.RightClick = 4] = "RightClick", TT[TT.BrowserBack = 5] = "BrowserBack", TT[TT.BrowserForward = 6] = "BrowserForward", TT[TT.MouseWheelX = 7] = "MouseWheelX", TT[TT.MouseWheelY = 8] = "MouseWheelY", TT[TT.MouseWheelZ = 9] = "MouseWheelZ", TT[TT.Move = 12] = "Move"
+    }(JT || (JT = {})),
+    function(TT) {
+      TT[TT.Horizontal = 0] = "Horizontal", TT[TT.Vertical = 1] = "Vertical", TT[TT.LeftClick = 2] = "LeftClick", TT[TT.MiddleClick = 3] = "MiddleClick", TT[TT.RightClick = 4] = "RightClick", TT[TT.BrowserBack = 5] = "BrowserBack", TT[TT.BrowserForward = 6] = "BrowserForward", TT[TT.MouseWheelX = 7] = "MouseWheelX", TT[TT.MouseWheelY = 8] = "MouseWheelY", TT[TT.MouseWheelZ = 9] = "MouseWheelZ", TT[TT.DeltaHorizontal = 10] = "DeltaHorizontal", TT[TT.DeltaVertical = 11] = "DeltaVertical"
+    }(xT || (xT = {})),
+    function(TT) {
+      TT[TT.Cross = 0] = "Cross", TT[TT.Circle = 1] = "Circle", TT[TT.Square = 2] = "Square", TT[TT.Triangle = 3] = "Triangle", TT[TT.L1 = 4] = "L1", TT[TT.R1 = 5] = "R1", TT[TT.L2 = 6] = "L2", TT[TT.R2 = 7] = "R2", TT[TT.Share = 8] = "Share", TT[TT.Options = 9] = "Options", TT[TT.L3 = 10] = "L3", TT[TT.R3 = 11] = "R3", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.TouchPad = 17] = "TouchPad", TT[TT.LStickXAxis = 18] = "LStickXAxis", TT[TT.LStickYAxis = 19] = "LStickYAxis", TT[TT.RStickXAxis = 20] = "RStickXAxis", TT[TT.RStickYAxis = 21] = "RStickYAxis"
+    }(dT || (dT = {})),
+    function(TT) {
+      TT[TT.Cross = 0] = "Cross", TT[TT.Circle = 1] = "Circle", TT[TT.Square = 2] = "Square", TT[TT.Triangle = 3] = "Triangle", TT[TT.L1 = 4] = "L1", TT[TT.R1 = 5] = "R1", TT[TT.L2 = 6] = "L2", TT[TT.R2 = 7] = "R2", TT[TT.Create = 8] = "Create", TT[TT.Options = 9] = "Options", TT[TT.L3 = 10] = "L3", TT[TT.R3 = 11] = "R3", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.TouchPad = 17] = "TouchPad", TT[TT.LStickXAxis = 18] = "LStickXAxis", TT[TT.LStickYAxis = 19] = "LStickYAxis", TT[TT.RStickXAxis = 20] = "RStickXAxis", TT[TT.RStickYAxis = 21] = "RStickYAxis"
+    }(wT || (wT = {})),
+    function(TT) {
+      TT[TT.A = 0] = "A", TT[TT.B = 1] = "B", TT[TT.X = 2] = "X", TT[TT.Y = 3] = "Y", TT[TT.LB = 4] = "LB", TT[TT.RB = 5] = "RB", TT[TT.LT = 6] = "LT", TT[TT.RT = 7] = "RT", TT[TT.Back = 8] = "Back", TT[TT.Start = 9] = "Start", TT[TT.LS = 10] = "LS", TT[TT.RS = 11] = "RS", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.LStickXAxis = 17] = "LStickXAxis", TT[TT.LStickYAxis = 18] = "LStickYAxis", TT[TT.RStickXAxis = 19] = "RStickXAxis", TT[TT.RStickYAxis = 20] = "RStickYAxis"
+    }(tT || (tT = {})),
+    function(TT) {
+      TT[TT.B = 0] = "B", TT[TT.A = 1] = "A", TT[TT.Y = 2] = "Y", TT[TT.X = 3] = "X", TT[TT.L = 4] = "L", TT[TT.R = 5] = "R", TT[TT.ZL = 6] = "ZL", TT[TT.ZR = 7] = "ZR", TT[TT.Minus = 8] = "Minus", TT[TT.Plus = 9] = "Plus", TT[TT.LS = 10] = "LS", TT[TT.RS = 11] = "RS", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.Capture = 17] = "Capture", TT[TT.LStickXAxis = 18] = "LStickXAxis", TT[TT.LStickYAxis = 19] = "LStickYAxis", TT[TT.RStickXAxis = 20] = "RStickXAxis", TT[TT.RStickYAxis = 21] = "RStickYAxis"
+    }(aT || (aT = {}));
+    var XT = mT(40297);
+    class IT {
+      static CreateDeviceEvent(TT, UT, mT, WT, zT, MT, gT) {
+        switch (TT) {
+          case YT.Keyboard:
+            return this._CreateKeyboardEvent(mT, WT, zT, MT);
+          case YT.Mouse:
+            if (mT === JT.MouseWheelX || mT === JT.MouseWheelY || mT === JT.MouseWheelZ) return this._CreateWheelEvent(TT, UT, mT, WT, zT, MT);
+          case YT.Touch:
+            return this._CreatePointerEvent(TT, UT, mT, WT, zT, MT, gT);
           default:
-            throw `Unable to generate event for device ${mp[pp]}`
+            throw `Unable to generate event for device ${YT[TT]}`
         }
       }
-      static _CreatePointerEvent(pp, ip, cp, Op, op, Ip, Sp) {
-        const xp = this._CreateMouseEvent(pp, ip, cp, Op, op, Ip);
-        pp === mp.Mouse ? (xp.deviceType = mp.Mouse, xp.pointerId = 1, xp.pointerType = "mouse") : (xp.deviceType = mp.Touch, xp.pointerId = Sp ?? ip, xp.pointerType = "touch");
-        let Lp = 0;
-        return Lp += op.pollInput(pp, ip, Rp.LeftClick), Lp += 2 * op.pollInput(pp, ip, Rp.RightClick), Lp += 4 * op.pollInput(pp, ip, Rp.MiddleClick), xp.buttons = Lp, cp === Rp.Move ? xp.type = "pointermove" : cp >= Rp.LeftClick && cp <= Rp.RightClick && (xp.type = 1 === Op ? "pointerdown" : "pointerup", xp.button = cp - 2), xp
+      static _CreatePointerEvent(TT, UT, mT, WT, zT, MT, gT) {
+        const nT = this._CreateMouseEvent(TT, UT, mT, WT, zT, MT);
+        TT === YT.Mouse ? (nT.deviceType = YT.Mouse, nT.pointerId = 1, nT.pointerType = "mouse") : (nT.deviceType = YT.Touch, nT.pointerId = gT ?? UT, nT.pointerType = "touch");
+        let HT = 0;
+        return HT += zT.pollInput(TT, UT, JT.LeftClick), HT += 2 * zT.pollInput(TT, UT, JT.RightClick), HT += 4 * zT.pollInput(TT, UT, JT.MiddleClick), nT.buttons = HT, mT === JT.Move ? nT.type = "pointermove" : mT >= JT.LeftClick && mT <= JT.RightClick && (nT.type = 1 === WT ? "pointerdown" : "pointerup", nT.button = mT - 2), nT
       }
-      static _CreateWheelEvent(pp, ip, cp, Op, op, Ip) {
-        const Sp = this._CreateMouseEvent(pp, ip, cp, Op, op, Ip);
-        switch (Sp.pointerId = 1, Sp.type = "wheel", Sp.deltaMode = Qp.c.DOM_DELTA_PIXEL, Sp.deltaX = 0, Sp.deltaY = 0, Sp.deltaZ = 0, cp) {
-          case Rp.MouseWheelX:
-            Sp.deltaX = Op;
+      static _CreateWheelEvent(TT, UT, mT, WT, zT, MT) {
+        const gT = this._CreateMouseEvent(TT, UT, mT, WT, zT, MT);
+        switch (gT.pointerId = 1, gT.type = "wheel", gT.deltaMode = XT.c.DOM_DELTA_PIXEL, gT.deltaX = 0, gT.deltaY = 0, gT.deltaZ = 0, mT) {
+          case JT.MouseWheelX:
+            gT.deltaX = WT;
             break;
-          case Rp.MouseWheelY:
-            Sp.deltaY = Op;
+          case JT.MouseWheelY:
+            gT.deltaY = WT;
             break;
-          case Rp.MouseWheelZ:
-            Sp.deltaZ = Op
+          case JT.MouseWheelZ:
+            gT.deltaZ = WT
         }
-        return Sp
+        return gT
       }
-      static _CreateMouseEvent(pp, ip, cp, Op, op, Ip) {
-        const Sp = this._CreateEvent(Ip),
-          xp = op.pollInput(pp, ip, Rp.Horizontal),
-          Lp = op.pollInput(pp, ip, Rp.Vertical);
-        return Ip ? (Sp.movementX = 0, Sp.movementY = 0, Sp.offsetX = Sp.movementX - Ip.getBoundingClientRect().x, Sp.offsetY = Sp.movementY - Ip.getBoundingClientRect().y) : (Sp.movementX = op.pollInput(pp, ip, 10), Sp.movementY = op.pollInput(pp, ip, 11), Sp.offsetX = 0, Sp.offsetY = 0), this._CheckNonCharacterKeys(Sp, op), Sp.clientX = xp, Sp.clientY = Lp, Sp.x = xp, Sp.y = Lp, Sp.deviceType = pp, Sp.deviceSlot = ip, Sp.inputIndex = cp, Sp
+      static _CreateMouseEvent(TT, UT, mT, WT, zT, MT) {
+        const gT = this._CreateEvent(MT),
+          nT = zT.pollInput(TT, UT, JT.Horizontal),
+          HT = zT.pollInput(TT, UT, JT.Vertical);
+        return MT ? (gT.movementX = 0, gT.movementY = 0, gT.offsetX = gT.movementX - MT.getBoundingClientRect().x, gT.offsetY = gT.movementY - MT.getBoundingClientRect().y) : (gT.movementX = zT.pollInput(TT, UT, 10), gT.movementY = zT.pollInput(TT, UT, 11), gT.offsetX = 0, gT.offsetY = 0), this._CheckNonCharacterKeys(gT, zT), gT.clientX = nT, gT.clientY = HT, gT.x = nT, gT.y = HT, gT.deviceType = TT, gT.deviceSlot = UT, gT.inputIndex = mT, gT
       }
-      static _CreateKeyboardEvent(pp, ip, cp, Op) {
-        const op = this._CreateEvent(Op);
-        return this._CheckNonCharacterKeys(op, cp), op.deviceType = mp.Keyboard, op.deviceSlot = 0, op.inputIndex = pp, op.type = 1 === ip ? "keydown" : "keyup", op.key = String.fromCharCode(pp), op.keyCode = pp, op
+      static _CreateKeyboardEvent(TT, UT, mT, WT) {
+        const zT = this._CreateEvent(WT);
+        return this._CheckNonCharacterKeys(zT, mT), zT.deviceType = YT.Keyboard, zT.deviceSlot = 0, zT.inputIndex = TT, zT.type = 1 === UT ? "keydown" : "keyup", zT.key = String.fromCharCode(TT), zT.keyCode = TT, zT
       }
-      static _CheckNonCharacterKeys(pp, ip) {
-        const cp = ip.isDeviceAvailable(mp.Keyboard),
-          Op = cp && 1 === ip.pollInput(mp.Keyboard, 0, 18),
-          op = cp && 1 === ip.pollInput(mp.Keyboard, 0, 17),
-          Ip = cp && (1 === ip.pollInput(mp.Keyboard, 0, 91) || 1 === ip.pollInput(mp.Keyboard, 0, 92) || 1 === ip.pollInput(mp.Keyboard, 0, 93)),
-          Sp = cp && 1 === ip.pollInput(mp.Keyboard, 0, 16);
-        pp.altKey = Op, pp.ctrlKey = op, pp.metaKey = Ip, pp.shiftKey = Sp
+      static _CheckNonCharacterKeys(TT, UT) {
+        const mT = UT.isDeviceAvailable(YT.Keyboard),
+          WT = mT && 1 === UT.pollInput(YT.Keyboard, 0, 18),
+          zT = mT && 1 === UT.pollInput(YT.Keyboard, 0, 17),
+          MT = mT && (1 === UT.pollInput(YT.Keyboard, 0, 91) || 1 === UT.pollInput(YT.Keyboard, 0, 92) || 1 === UT.pollInput(YT.Keyboard, 0, 93)),
+          gT = mT && 1 === UT.pollInput(YT.Keyboard, 0, 16);
+        TT.altKey = WT, TT.ctrlKey = zT, TT.metaKey = MT, TT.shiftKey = gT
       }
-      static _CreateEvent(pp) {
-        const ip = {
+      static _CreateEvent(TT) {
+        const UT = {
           preventDefault: () => {}
         };
-        return ip.target = pp, ip
+        return UT.target = TT, UT
       }
     }
-    class Bp {
-      constructor(pp, ip, cp) {
-        this._nativeInput = _native.DeviceInputSystem ? new _native.DeviceInputSystem(pp, ip, ((pp, ip, Op, op) => {
-          const Ip = Jp.CreateDeviceEvent(pp, ip, Op, op, this);
-          cp(pp, ip, Ip)
+    class QT {
+      constructor(TT, UT, mT) {
+        this._nativeInput = _native.DeviceInputSystem ? new _native.DeviceInputSystem(TT, UT, ((TT, UT, WT, zT) => {
+          const MT = IT.CreateDeviceEvent(TT, UT, WT, zT, this);
+          mT(TT, UT, MT)
         })) : this._createDummyNativeInput()
       }
-      pollInput(pp, ip, cp) {
-        return this._nativeInput.pollInput(pp, ip, cp)
+      pollInput(TT, UT, mT) {
+        return this._nativeInput.pollInput(TT, UT, mT)
       }
-      isDeviceAvailable(pp) {
-        return pp === mp.Mouse || pp === mp.Touch
+      isDeviceAvailable(TT) {
+        return TT === YT.Mouse || TT === YT.Touch
       }
       dispose() {
         this._nativeInput.dispose()
@@ -7028,39 +7028,39 @@ export const modules = {
         }
       }
     }
-    const Np = Object.keys(Rp).length / 2;
-    class Tp {
-      constructor(pp, ip, cp, op) {
-        this._inputs = [], this._keyboardActive = !1, this._pointerActive = !1, this._usingSafari = Op.i.IsSafari(), this._usingMacOs = (0, Hp.h)() && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform), this._keyboardDownEvent = pp => {}, this._keyboardUpEvent = pp => {}, this._keyboardBlurEvent = pp => {}, this._pointerMoveEvent = pp => {}, this._pointerDownEvent = pp => {}, this._pointerUpEvent = pp => {}, this._pointerCancelEvent = pp => {}, this._pointerCancelTouch = pp => {}, this._pointerLeaveEvent = pp => {}, this._pointerWheelEvent = pp => {}, this._pointerBlurEvent = pp => {}, this._pointerMacOsChromeOutEvent = pp => {}, this._eventsAttached = !1, this._mouseId = -1, this._isUsingFirefox = (0, Hp.h)() && navigator.userAgent && -1 !== navigator.userAgent.indexOf("Firefox"), this._isUsingChromium = (0, Hp.h)() && navigator.userAgent && -1 !== navigator.userAgent.indexOf("Chrome"), this._maxTouchPoints = 0, this._pointerInputClearObserver = null, this._gamepadConnectedEvent = pp => {}, this._gamepadDisconnectedEvent = pp => {}, this._eventPrefix = Op.i.GetPointerPrefix(pp), this._engine = pp, this._onDeviceConnected = ip, this._onDeviceDisconnected = cp, this._onInputChanged = op, this._mouseId = this._isUsingFirefox ? 0 : 1, this._enableEvents(), this._usingMacOs && (this._metaKeys = []), this._engine._onEngineViewChanged || (this._engine._onEngineViewChanged = () => {
+    const sT = Object.keys(JT).length / 2;
+    class FT {
+      constructor(TT, UT, mT, zT) {
+        this._inputs = [], this._keyboardActive = !1, this._pointerActive = !1, this._usingSafari = WT.j.IsSafari(), this._usingMacOs = (0, qT.f)() && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform), this._keyboardDownEvent = TT => {}, this._keyboardUpEvent = TT => {}, this._keyboardBlurEvent = TT => {}, this._pointerMoveEvent = TT => {}, this._pointerDownEvent = TT => {}, this._pointerUpEvent = TT => {}, this._pointerCancelEvent = TT => {}, this._pointerCancelTouch = TT => {}, this._pointerLeaveEvent = TT => {}, this._pointerWheelEvent = TT => {}, this._pointerBlurEvent = TT => {}, this._pointerMacOsChromeOutEvent = TT => {}, this._eventsAttached = !1, this._mouseId = -1, this._isUsingFirefox = (0, qT.f)() && navigator.userAgent && -1 !== navigator.userAgent.indexOf("Firefox"), this._isUsingChromium = (0, qT.f)() && navigator.userAgent && -1 !== navigator.userAgent.indexOf("Chrome"), this._maxTouchPoints = 0, this._pointerInputClearObserver = null, this._gamepadConnectedEvent = TT => {}, this._gamepadDisconnectedEvent = TT => {}, this._eventPrefix = WT.j.GetPointerPrefix(TT), this._engine = TT, this._onDeviceConnected = UT, this._onDeviceDisconnected = mT, this._onInputChanged = zT, this._mouseId = this._isUsingFirefox ? 0 : 1, this._enableEvents(), this._usingMacOs && (this._metaKeys = []), this._engine._onEngineViewChanged || (this._engine._onEngineViewChanged = () => {
           this._enableEvents()
         })
       }
-      pollInput(pp, ip, cp) {
-        const op = this._inputs[pp][ip];
-        if (!op) throw `Unable to find device ${mp[pp]}`;
-        pp >= mp.DualShock && pp <= mp.DualSense && this._updateDevice(pp, ip, cp);
-        const Ip = op[cp];
-        if (void 0 === Ip) throw `Unable to find input ${cp} for device ${mp[pp]} in slot ${ip}`;
-        return cp === Rp.Move && Op.i.Warn("Unable to provide information for PointerInput.Move.  Try using PointerInput.Horizontal or PointerInput.Vertical for move data."), Ip
+      pollInput(TT, UT, mT) {
+        const zT = this._inputs[TT][UT];
+        if (!zT) throw `Unable to find device ${YT[TT]}`;
+        TT >= YT.DualShock && TT <= YT.DualSense && this._updateDevice(TT, UT, mT);
+        const MT = zT[mT];
+        if (void 0 === MT) throw `Unable to find input ${mT} for device ${YT[TT]} in slot ${UT}`;
+        return mT === JT.Move && WT.j.Warn("Unable to provide information for PointerInput.Move.  Try using PointerInput.Horizontal or PointerInput.Vertical for move data."), MT
       }
-      isDeviceAvailable(pp) {
-        return void 0 !== this._inputs[pp]
+      isDeviceAvailable(TT) {
+        return void 0 !== this._inputs[TT]
       }
       dispose() {
         this._onDeviceConnected = () => {}, this._onDeviceDisconnected = () => {}, this._onInputChanged = () => {}, delete this._engine._onEngineViewChanged, this._elementToAttachTo && this._disableEvents()
       }
       _enableEvents() {
-        const pp = this?._engine.getInputElement();
-        if (pp && (!this._eventsAttached || this._elementToAttachTo !== pp)) {
+        const TT = this?._engine.getInputElement();
+        if (TT && (!this._eventsAttached || this._elementToAttachTo !== TT)) {
           if (this._disableEvents(), this._inputs)
-            for (const pp of this._inputs)
-              if (pp)
-                for (const ip in pp) {
-                  const cp = pp[+ip];
-                  if (cp)
-                    for (let pp = 0; pp < cp.length; pp++) cp[pp] = 0
+            for (const TT of this._inputs)
+              if (TT)
+                for (const UT in TT) {
+                  const mT = TT[+UT];
+                  if (mT)
+                    for (let TT = 0; TT < mT.length; TT++) mT[TT] = 0
                 }
-          this._elementToAttachTo = pp, this._elementToAttachTo.tabIndex = -1 !== this._elementToAttachTo.tabIndex ? this._elementToAttachTo.tabIndex : this._engine.canvasTabIndex, this._handleKeyActions(), this._handlePointerActions(), this._handleGamepadActions(), this._eventsAttached = !0, this._checkForConnectedDevices()
+          this._elementToAttachTo = TT, this._elementToAttachTo.tabIndex = -1 !== this._elementToAttachTo.tabIndex ? this._elementToAttachTo.tabIndex : this._engine.canvasTabIndex, this._handleKeyActions(), this._handlePointerActions(), this._handleGamepadActions(), this._eventsAttached = !0, this._checkForConnectedDevices()
         }
       }
       _disableEvents() {
@@ -7068,338 +7068,338 @@ export const modules = {
       }
       _checkForConnectedDevices() {
         if (navigator.getGamepads) {
-          const pp = navigator.getGamepads();
-          for (const ip of pp) ip && this._addGamePad(ip)
+          const TT = navigator.getGamepads();
+          for (const UT of TT) UT && this._addGamePad(UT)
         }
-        "function" === typeof matchMedia && matchMedia("(pointer:fine)").matches && this._addPointerDevice(mp.Mouse, 0, 0, 0)
+        "function" === typeof matchMedia && matchMedia("(pointer:fine)").matches && this._addPointerDevice(YT.Mouse, 0, 0, 0)
       }
-      _addGamePad(pp) {
-        const ip = this._getGamepadDeviceType(pp.id),
-          cp = pp.index;
-        this._gamepads = this._gamepads || new Array(pp.index + 1), this._registerDevice(ip, cp, pp.buttons.length + pp.axes.length), this._gamepads[cp] = ip
+      _addGamePad(TT) {
+        const UT = this._getGamepadDeviceType(TT.id),
+          mT = TT.index;
+        this._gamepads = this._gamepads || new Array(TT.index + 1), this._registerDevice(UT, mT, TT.buttons.length + TT.axes.length), this._gamepads[mT] = UT
       }
-      _addPointerDevice(pp, ip, cp, Op) {
-        this._pointerActive || (this._pointerActive = !0), this._registerDevice(pp, ip, Np);
-        const op = this._inputs[pp][ip];
-        op[0] = cp, op[1] = Op
+      _addPointerDevice(TT, UT, mT, WT) {
+        this._pointerActive || (this._pointerActive = !0), this._registerDevice(TT, UT, sT);
+        const zT = this._inputs[TT][UT];
+        zT[0] = mT, zT[1] = WT
       }
-      _registerDevice(pp, ip, cp) {
-        if (void 0 === ip) throw `Unable to register device ${mp[pp]} to undefined slot.`;
-        if (this._inputs[pp] || (this._inputs[pp] = {}), !this._inputs[pp][ip]) {
-          const Op = new Array(cp);
-          Op.fill(0), this._inputs[pp][ip] = Op, this._onDeviceConnected(pp, ip)
+      _registerDevice(TT, UT, mT) {
+        if (void 0 === UT) throw `Unable to register device ${YT[TT]} to undefined slot.`;
+        if (this._inputs[TT] || (this._inputs[TT] = {}), !this._inputs[TT][UT]) {
+          const WT = new Array(mT);
+          WT.fill(0), this._inputs[TT][UT] = WT, this._onDeviceConnected(TT, UT)
         }
       }
-      _unregisterDevice(pp, ip) {
-        this._inputs[pp][ip] && (delete this._inputs[pp][ip], this._onDeviceDisconnected(pp, ip))
+      _unregisterDevice(TT, UT) {
+        this._inputs[TT][UT] && (delete this._inputs[TT][UT], this._onDeviceDisconnected(TT, UT))
       }
       _handleKeyActions() {
-        this._keyboardDownEvent = pp => {
-          this._keyboardActive || (this._keyboardActive = !0, this._registerDevice(mp.Keyboard, 0, 255));
-          const ip = this._inputs[mp.Keyboard][0];
-          if (ip) {
-            ip[pp.keyCode] = 1;
-            const cp = pp;
-            cp.inputIndex = pp.keyCode, this._usingMacOs && pp.metaKey && "Meta" !== pp.key && (this._metaKeys.includes(pp.keyCode) || this._metaKeys.push(pp.keyCode)), this._onInputChanged(mp.Keyboard, 0, cp)
+        this._keyboardDownEvent = TT => {
+          this._keyboardActive || (this._keyboardActive = !0, this._registerDevice(YT.Keyboard, 0, 255));
+          const UT = this._inputs[YT.Keyboard][0];
+          if (UT) {
+            UT[TT.keyCode] = 1;
+            const mT = TT;
+            mT.inputIndex = TT.keyCode, this._usingMacOs && TT.metaKey && "Meta" !== TT.key && (this._metaKeys.includes(TT.keyCode) || this._metaKeys.push(TT.keyCode)), this._onInputChanged(YT.Keyboard, 0, mT)
           }
-        }, this._keyboardUpEvent = pp => {
-          this._keyboardActive || (this._keyboardActive = !0, this._registerDevice(mp.Keyboard, 0, 255));
-          const ip = this._inputs[mp.Keyboard][0];
-          if (ip) {
-            ip[pp.keyCode] = 0;
-            const cp = pp;
-            if (cp.inputIndex = pp.keyCode, this._usingMacOs && "Meta" === pp.key && this._metaKeys.length > 0) {
-              for (const pp of this._metaKeys) {
-                const cp = Jp.CreateDeviceEvent(mp.Keyboard, 0, pp, 0, this, this._elementToAttachTo);
-                ip[pp] = 0, this._onInputChanged(mp.Keyboard, 0, cp)
+        }, this._keyboardUpEvent = TT => {
+          this._keyboardActive || (this._keyboardActive = !0, this._registerDevice(YT.Keyboard, 0, 255));
+          const UT = this._inputs[YT.Keyboard][0];
+          if (UT) {
+            UT[TT.keyCode] = 0;
+            const mT = TT;
+            if (mT.inputIndex = TT.keyCode, this._usingMacOs && "Meta" === TT.key && this._metaKeys.length > 0) {
+              for (const TT of this._metaKeys) {
+                const mT = IT.CreateDeviceEvent(YT.Keyboard, 0, TT, 0, this, this._elementToAttachTo);
+                UT[TT] = 0, this._onInputChanged(YT.Keyboard, 0, mT)
               }
               this._metaKeys.splice(0, this._metaKeys.length)
             }
-            this._onInputChanged(mp.Keyboard, 0, cp)
+            this._onInputChanged(YT.Keyboard, 0, mT)
           }
         }, this._keyboardBlurEvent = () => {
           if (this._keyboardActive) {
-            const pp = this._inputs[mp.Keyboard][0];
-            for (let ip = 0; ip < pp.length; ip++)
-              if (0 !== pp[ip]) {
-                pp[ip] = 0;
-                const cp = Jp.CreateDeviceEvent(mp.Keyboard, 0, ip, 0, this, this._elementToAttachTo);
-                this._onInputChanged(mp.Keyboard, 0, cp)
+            const TT = this._inputs[YT.Keyboard][0];
+            for (let UT = 0; UT < TT.length; UT++)
+              if (0 !== TT[UT]) {
+                TT[UT] = 0;
+                const mT = IT.CreateDeviceEvent(YT.Keyboard, 0, UT, 0, this, this._elementToAttachTo);
+                this._onInputChanged(YT.Keyboard, 0, mT)
               } this._usingMacOs && this._metaKeys.splice(0, this._metaKeys.length)
           }
         }, this._elementToAttachTo.addEventListener("keydown", this._keyboardDownEvent), this._elementToAttachTo.addEventListener("keyup", this._keyboardUpEvent), this._elementToAttachTo.addEventListener("blur", this._keyboardBlurEvent)
       }
       _handlePointerActions() {
-        this._maxTouchPoints = (0, Hp.h)() && navigator.maxTouchPoints || 2, this._activeTouchIds || (this._activeTouchIds = new Array(this._maxTouchPoints));
-        for (let Op = 0; Op < this._maxTouchPoints; Op++) this._activeTouchIds[Op] = -1;
-        this._pointerMoveEvent = pp => {
-          const ip = this._getPointerType(pp);
-          let cp = ip === mp.Mouse ? 0 : this._activeTouchIds.indexOf(pp.pointerId);
-          if (ip === mp.Touch && -1 === cp) {
-            if (0 === pp.buttons) return;
-            const op = this._activeTouchIds.indexOf(-1);
-            if (!(op >= 0)) return void Op.i.Warn(`Max number of touches exceeded.  Ignoring touches in excess of ${this._maxTouchPoints}`);
-            cp = op, this._activeTouchIds[op] = pp.pointerId, this._onDeviceConnected(ip, cp)
+        this._maxTouchPoints = (0, qT.f)() && navigator.maxTouchPoints || 2, this._activeTouchIds || (this._activeTouchIds = new Array(this._maxTouchPoints));
+        for (let WT = 0; WT < this._maxTouchPoints; WT++) this._activeTouchIds[WT] = -1;
+        this._pointerMoveEvent = TT => {
+          const UT = this._getPointerType(TT);
+          let mT = UT === YT.Mouse ? 0 : this._activeTouchIds.indexOf(TT.pointerId);
+          if (UT === YT.Touch && -1 === mT) {
+            if (0 === TT.buttons) return;
+            const zT = this._activeTouchIds.indexOf(-1);
+            if (!(zT >= 0)) return void WT.j.Warn(`Max number of touches exceeded.  Ignoring touches in excess of ${this._maxTouchPoints}`);
+            mT = zT, this._activeTouchIds[zT] = TT.pointerId, this._onDeviceConnected(UT, mT)
           }
-          this._inputs[ip] || (this._inputs[ip] = {}), this._inputs[ip][cp] || this._addPointerDevice(ip, cp, pp.clientX, pp.clientY);
-          const op = this._inputs[ip][cp];
-          if (op) {
-            const Op = pp;
-            Op.inputIndex = Rp.Move, op[Rp.Horizontal] = pp.clientX, op[Rp.Vertical] = pp.clientY, ip === mp.Touch && 0 === op[Rp.LeftClick] && (op[Rp.LeftClick] = 1), void 0 === pp.pointerId && (pp.pointerId = this._mouseId), this._onInputChanged(ip, cp, Op), this._usingSafari || -1 === pp.button || (Op.inputIndex = pp.button + 2, op[pp.button + 2] = op[pp.button + 2] ? 0 : 1, this._onInputChanged(ip, cp, Op))
+          this._inputs[UT] || (this._inputs[UT] = {}), this._inputs[UT][mT] || this._addPointerDevice(UT, mT, TT.clientX, TT.clientY);
+          const zT = this._inputs[UT][mT];
+          if (zT) {
+            const WT = TT;
+            WT.inputIndex = JT.Move, zT[JT.Horizontal] = TT.clientX, zT[JT.Vertical] = TT.clientY, UT === YT.Touch && 0 === zT[JT.LeftClick] && (zT[JT.LeftClick] = 1), void 0 === TT.pointerId && (TT.pointerId = this._mouseId), this._onInputChanged(UT, mT, WT), this._usingSafari || -1 === TT.button || (WT.inputIndex = TT.button + 2, zT[TT.button + 2] = zT[TT.button + 2] ? 0 : 1, this._onInputChanged(UT, mT, WT))
           }
-        }, this._pointerDownEvent = pp => {
-          const ip = this._getPointerType(pp);
-          let cp = ip === mp.Mouse ? 0 : pp.pointerId;
-          if (ip === mp.Touch) {
-            let ip = this._activeTouchIds.indexOf(pp.pointerId);
-            if (-1 === ip && (ip = this._activeTouchIds.indexOf(-1)), !(ip >= 0)) return void Op.i.Warn(`Max number of touches exceeded.  Ignoring touches in excess of ${this._maxTouchPoints}`);
-            cp = ip, this._activeTouchIds[ip] = pp.pointerId
+        }, this._pointerDownEvent = TT => {
+          const UT = this._getPointerType(TT);
+          let mT = UT === YT.Mouse ? 0 : TT.pointerId;
+          if (UT === YT.Touch) {
+            let UT = this._activeTouchIds.indexOf(TT.pointerId);
+            if (-1 === UT && (UT = this._activeTouchIds.indexOf(-1)), !(UT >= 0)) return void WT.j.Warn(`Max number of touches exceeded.  Ignoring touches in excess of ${this._maxTouchPoints}`);
+            mT = UT, this._activeTouchIds[UT] = TT.pointerId
           }
-          this._inputs[ip] || (this._inputs[ip] = {}), this._inputs[ip][cp] ? ip === mp.Touch && this._onDeviceConnected(ip, cp) : this._addPointerDevice(ip, cp, pp.clientX, pp.clientY);
-          const op = this._inputs[ip][cp];
-          if (op) {
-            const Op = op[Rp.Horizontal],
-              Sp = op[Rp.Vertical];
-            if (ip === mp.Mouse) {
-              if (void 0 === pp.pointerId && (pp.pointerId = this._mouseId), !document.pointerLockElement) try {
+          this._inputs[UT] || (this._inputs[UT] = {}), this._inputs[UT][mT] ? UT === YT.Touch && this._onDeviceConnected(UT, mT) : this._addPointerDevice(UT, mT, TT.clientX, TT.clientY);
+          const zT = this._inputs[UT][mT];
+          if (zT) {
+            const WT = zT[JT.Horizontal],
+              gT = zT[JT.Vertical];
+            if (UT === YT.Mouse) {
+              if (void 0 === TT.pointerId && (TT.pointerId = this._mouseId), !document.pointerLockElement) try {
                 this._elementToAttachTo.setPointerCapture(this._mouseId)
-              } catch (Ip) {}
-            } else if (pp.pointerId && !document.pointerLockElement) try {
-              this._elementToAttachTo.setPointerCapture(pp.pointerId)
-            } catch (Ip) {}
-            op[Rp.Horizontal] = pp.clientX, op[Rp.Vertical] = pp.clientY, op[pp.button + 2] = 1;
-            const xp = pp;
-            xp.inputIndex = pp.button + 2, this._onInputChanged(ip, cp, xp), Op === pp.clientX && Sp === pp.clientY || (xp.inputIndex = Rp.Move, this._onInputChanged(ip, cp, xp))
+              } catch (MT) {}
+            } else if (TT.pointerId && !document.pointerLockElement) try {
+              this._elementToAttachTo.setPointerCapture(TT.pointerId)
+            } catch (MT) {}
+            zT[JT.Horizontal] = TT.clientX, zT[JT.Vertical] = TT.clientY, zT[TT.button + 2] = 1;
+            const nT = TT;
+            nT.inputIndex = TT.button + 2, this._onInputChanged(UT, mT, nT), WT === TT.clientX && gT === TT.clientY || (nT.inputIndex = JT.Move, this._onInputChanged(UT, mT, nT))
           }
-        }, this._pointerUpEvent = pp => {
-          const ip = this._getPointerType(pp),
-            cp = ip === mp.Mouse ? 0 : this._activeTouchIds.indexOf(pp.pointerId);
-          if (ip === mp.Touch) {
-            if (-1 === cp) return;
-            this._activeTouchIds[cp] = -1
+        }, this._pointerUpEvent = TT => {
+          const UT = this._getPointerType(TT),
+            mT = UT === YT.Mouse ? 0 : this._activeTouchIds.indexOf(TT.pointerId);
+          if (UT === YT.Touch) {
+            if (-1 === mT) return;
+            this._activeTouchIds[mT] = -1
           }
-          const Op = this._inputs[ip]?.[cp];
-          let op = pp.button,
-            Ip = Op && 0 !== Op[op + 2];
-          if (!Ip && this._isUsingFirefox && this._usingMacOs && Op && (op = 2 === op ? 0 : 2, Ip = 0 !== Op[op + 2]), Ip) {
-            const Ip = Op[Rp.Horizontal],
-              Sp = Op[Rp.Vertical];
-            Op[Rp.Horizontal] = pp.clientX, Op[Rp.Vertical] = pp.clientY, Op[op + 2] = 0;
-            const xp = pp;
-            void 0 === pp.pointerId && (pp.pointerId = this._mouseId), Ip === pp.clientX && Sp === pp.clientY || (xp.inputIndex = Rp.Move, this._onInputChanged(ip, cp, xp)), xp.inputIndex = op + 2, ip === mp.Mouse && this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) ? this._elementToAttachTo.releasePointerCapture(this._mouseId) : pp.pointerId && this._elementToAttachTo.hasPointerCapture?.(pp.pointerId) && this._elementToAttachTo.releasePointerCapture(pp.pointerId), this._onInputChanged(ip, cp, xp), ip === mp.Touch && this._onDeviceDisconnected(ip, cp)
+          const WT = this._inputs[UT]?.[mT];
+          let zT = TT.button,
+            MT = WT && 0 !== WT[zT + 2];
+          if (!MT && this._isUsingFirefox && this._usingMacOs && WT && (zT = 2 === zT ? 0 : 2, MT = 0 !== WT[zT + 2]), MT) {
+            const MT = WT[JT.Horizontal],
+              gT = WT[JT.Vertical];
+            WT[JT.Horizontal] = TT.clientX, WT[JT.Vertical] = TT.clientY, WT[zT + 2] = 0;
+            const nT = TT;
+            void 0 === TT.pointerId && (TT.pointerId = this._mouseId), MT === TT.clientX && gT === TT.clientY || (nT.inputIndex = JT.Move, this._onInputChanged(UT, mT, nT)), nT.inputIndex = zT + 2, UT === YT.Mouse && this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) ? this._elementToAttachTo.releasePointerCapture(this._mouseId) : TT.pointerId && this._elementToAttachTo.hasPointerCapture?.(TT.pointerId) && this._elementToAttachTo.releasePointerCapture(TT.pointerId), this._onInputChanged(UT, mT, nT), UT === YT.Touch && this._onDeviceDisconnected(UT, mT)
           }
-        }, this._pointerCancelTouch = pp => {
-          const ip = this._activeTouchIds.indexOf(pp);
-          if (-1 === ip) return;
-          this._elementToAttachTo.hasPointerCapture?.(pp) && this._elementToAttachTo.releasePointerCapture(pp), this._inputs[mp.Touch][ip][Rp.LeftClick] = 0;
-          const cp = Jp.CreateDeviceEvent(mp.Touch, ip, Rp.LeftClick, 0, this, this._elementToAttachTo, pp);
-          this._onInputChanged(mp.Touch, ip, cp), this._activeTouchIds[ip] = -1, this._onDeviceDisconnected(mp.Touch, ip)
-        }, this._pointerCancelEvent = pp => {
-          if ("mouse" === pp.pointerType) {
-            const pp = this._inputs[mp.Mouse][0];
+        }, this._pointerCancelTouch = TT => {
+          const UT = this._activeTouchIds.indexOf(TT);
+          if (-1 === UT) return;
+          this._elementToAttachTo.hasPointerCapture?.(TT) && this._elementToAttachTo.releasePointerCapture(TT), this._inputs[YT.Touch][UT][JT.LeftClick] = 0;
+          const mT = IT.CreateDeviceEvent(YT.Touch, UT, JT.LeftClick, 0, this, this._elementToAttachTo, TT);
+          this._onInputChanged(YT.Touch, UT, mT), this._activeTouchIds[UT] = -1, this._onDeviceDisconnected(YT.Touch, UT)
+        }, this._pointerCancelEvent = TT => {
+          if ("mouse" === TT.pointerType) {
+            const TT = this._inputs[YT.Mouse][0];
             this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) && this._elementToAttachTo.releasePointerCapture(this._mouseId);
-            for (let ip = Rp.LeftClick; ip <= Rp.BrowserForward; ip++)
-              if (1 === pp[ip]) {
-                pp[ip] = 0;
-                const cp = Jp.CreateDeviceEvent(mp.Mouse, 0, ip, 0, this, this._elementToAttachTo);
-                this._onInputChanged(mp.Mouse, 0, cp)
+            for (let UT = JT.LeftClick; UT <= JT.BrowserForward; UT++)
+              if (1 === TT[UT]) {
+                TT[UT] = 0;
+                const mT = IT.CreateDeviceEvent(YT.Mouse, 0, UT, 0, this, this._elementToAttachTo);
+                this._onInputChanged(YT.Mouse, 0, mT)
               }
-          } else this._pointerCancelTouch(pp.pointerId)
-        }, this._pointerLeaveEvent = pp => {
-          "pen" === pp.pointerType && this._pointerCancelTouch(pp.pointerId)
+          } else this._pointerCancelTouch(TT.pointerId)
+        }, this._pointerLeaveEvent = TT => {
+          "pen" === TT.pointerType && this._pointerCancelTouch(TT.pointerId)
         }, this._wheelEventName = "onwheel" in document.createElement("div") ? "wheel" : void 0 !== document.onmousewheel ? "mousewheel" : "DOMMouseScroll";
-        let pp = !1;
-        const ip = function() {};
+        let TT = !1;
+        const UT = function() {};
         try {
-          const cp = Object.defineProperty({}, "passive", {
+          const mT = Object.defineProperty({}, "passive", {
             get: function() {
-              pp = !0
+              TT = !0
             }
           });
-          this._elementToAttachTo.addEventListener("test", ip, cp), this._elementToAttachTo.removeEventListener("test", ip, cp)
-        } catch (cp) {}
+          this._elementToAttachTo.addEventListener("test", UT, mT), this._elementToAttachTo.removeEventListener("test", UT, mT)
+        } catch (mT) {}
         this._pointerBlurEvent = () => {
-          if (this.isDeviceAvailable(mp.Mouse)) {
-            const pp = this._inputs[mp.Mouse][0];
+          if (this.isDeviceAvailable(YT.Mouse)) {
+            const TT = this._inputs[YT.Mouse][0];
             this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) && this._elementToAttachTo.releasePointerCapture(this._mouseId);
-            for (let ip = Rp.LeftClick; ip <= Rp.BrowserForward; ip++)
-              if (1 === pp[ip]) {
-                pp[ip] = 0;
-                const cp = Jp.CreateDeviceEvent(mp.Mouse, 0, ip, 0, this, this._elementToAttachTo);
-                this._onInputChanged(mp.Mouse, 0, cp)
+            for (let UT = JT.LeftClick; UT <= JT.BrowserForward; UT++)
+              if (1 === TT[UT]) {
+                TT[UT] = 0;
+                const mT = IT.CreateDeviceEvent(YT.Mouse, 0, UT, 0, this, this._elementToAttachTo);
+                this._onInputChanged(YT.Mouse, 0, mT)
               }
           }
-          if (this.isDeviceAvailable(mp.Touch)) {
-            const pp = this._inputs[mp.Touch];
-            for (let ip = 0; ip < this._activeTouchIds.length; ip++) {
-              const cp = this._activeTouchIds[ip];
-              if (this._elementToAttachTo.hasPointerCapture?.(cp) && this._elementToAttachTo.releasePointerCapture(cp), -1 !== cp && 1 === pp[ip]?.[Rp.LeftClick]) {
-                pp[ip][Rp.LeftClick] = 0;
-                const Op = Jp.CreateDeviceEvent(mp.Touch, ip, Rp.LeftClick, 0, this, this._elementToAttachTo, cp);
-                this._onInputChanged(mp.Touch, ip, Op), this._activeTouchIds[ip] = -1, this._onDeviceDisconnected(mp.Touch, ip)
+          if (this.isDeviceAvailable(YT.Touch)) {
+            const TT = this._inputs[YT.Touch];
+            for (let UT = 0; UT < this._activeTouchIds.length; UT++) {
+              const mT = this._activeTouchIds[UT];
+              if (this._elementToAttachTo.hasPointerCapture?.(mT) && this._elementToAttachTo.releasePointerCapture(mT), -1 !== mT && 1 === TT[UT]?.[JT.LeftClick]) {
+                TT[UT][JT.LeftClick] = 0;
+                const WT = IT.CreateDeviceEvent(YT.Touch, UT, JT.LeftClick, 0, this, this._elementToAttachTo, mT);
+                this._onInputChanged(YT.Touch, UT, WT), this._activeTouchIds[UT] = -1, this._onDeviceDisconnected(YT.Touch, UT)
               }
             }
           }
-        }, this._pointerWheelEvent = pp => {
-          const ip = mp.Mouse;
-          this._inputs[ip] || (this._inputs[ip] = []), this._inputs[ip][0] || (this._pointerActive = !0, this._registerDevice(ip, 0, Np));
-          const cp = this._inputs[ip][0];
-          if (cp) {
-            cp[Rp.MouseWheelX] = pp.deltaX || 0, cp[Rp.MouseWheelY] = pp.deltaY || pp.wheelDelta || 0, cp[Rp.MouseWheelZ] = pp.deltaZ || 0;
-            const Op = pp;
-            void 0 === pp.pointerId && (pp.pointerId = this._mouseId), 0 !== cp[Rp.MouseWheelX] && (Op.inputIndex = Rp.MouseWheelX, this._onInputChanged(ip, 0, Op)), 0 !== cp[Rp.MouseWheelY] && (Op.inputIndex = Rp.MouseWheelY, this._onInputChanged(ip, 0, Op)), 0 !== cp[Rp.MouseWheelZ] && (Op.inputIndex = Rp.MouseWheelZ, this._onInputChanged(ip, 0, Op))
+        }, this._pointerWheelEvent = TT => {
+          const UT = YT.Mouse;
+          this._inputs[UT] || (this._inputs[UT] = []), this._inputs[UT][0] || (this._pointerActive = !0, this._registerDevice(UT, 0, sT));
+          const mT = this._inputs[UT][0];
+          if (mT) {
+            mT[JT.MouseWheelX] = TT.deltaX || 0, mT[JT.MouseWheelY] = TT.deltaY || TT.wheelDelta || 0, mT[JT.MouseWheelZ] = TT.deltaZ || 0;
+            const WT = TT;
+            void 0 === TT.pointerId && (TT.pointerId = this._mouseId), 0 !== mT[JT.MouseWheelX] && (WT.inputIndex = JT.MouseWheelX, this._onInputChanged(UT, 0, WT)), 0 !== mT[JT.MouseWheelY] && (WT.inputIndex = JT.MouseWheelY, this._onInputChanged(UT, 0, WT)), 0 !== mT[JT.MouseWheelZ] && (WT.inputIndex = JT.MouseWheelZ, this._onInputChanged(UT, 0, WT))
           }
-        }, this._usingMacOs && this._isUsingChromium && (this._pointerMacOsChromeOutEvent = pp => {
-          pp.buttons > 1 && this._pointerCancelEvent(pp)
-        }, this._elementToAttachTo.addEventListener("lostpointercapture", this._pointerMacOsChromeOutEvent)), this._elementToAttachTo.addEventListener(this._eventPrefix + "move", this._pointerMoveEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "down", this._pointerDownEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "up", this._pointerUpEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "cancel", this._pointerCancelEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "leave", this._pointerLeaveEvent), this._elementToAttachTo.addEventListener("blur", this._pointerBlurEvent), this._elementToAttachTo.addEventListener(this._wheelEventName, this._pointerWheelEvent, !!pp && {
+        }, this._usingMacOs && this._isUsingChromium && (this._pointerMacOsChromeOutEvent = TT => {
+          TT.buttons > 1 && this._pointerCancelEvent(TT)
+        }, this._elementToAttachTo.addEventListener("lostpointercapture", this._pointerMacOsChromeOutEvent)), this._elementToAttachTo.addEventListener(this._eventPrefix + "move", this._pointerMoveEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "down", this._pointerDownEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "up", this._pointerUpEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "cancel", this._pointerCancelEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "leave", this._pointerLeaveEvent), this._elementToAttachTo.addEventListener("blur", this._pointerBlurEvent), this._elementToAttachTo.addEventListener(this._wheelEventName, this._pointerWheelEvent, !!TT && {
           passive: !1
         }), this._pointerInputClearObserver = this._engine.onEndFrameObservable.add((() => {
-          if (this.isDeviceAvailable(mp.Mouse)) {
-            const pp = this._inputs[mp.Mouse][0];
-            pp[Rp.MouseWheelX] = 0, pp[Rp.MouseWheelY] = 0, pp[Rp.MouseWheelZ] = 0
+          if (this.isDeviceAvailable(YT.Mouse)) {
+            const TT = this._inputs[YT.Mouse][0];
+            TT[JT.MouseWheelX] = 0, TT[JT.MouseWheelY] = 0, TT[JT.MouseWheelZ] = 0
           }
         }))
       }
       _handleGamepadActions() {
-        this._gamepadConnectedEvent = pp => {
-          this._addGamePad(pp.gamepad)
-        }, this._gamepadDisconnectedEvent = pp => {
+        this._gamepadConnectedEvent = TT => {
+          this._addGamePad(TT.gamepad)
+        }, this._gamepadDisconnectedEvent = TT => {
           if (this._gamepads) {
-            const ip = this._getGamepadDeviceType(pp.gamepad.id),
-              cp = pp.gamepad.index;
-            this._unregisterDevice(ip, cp), delete this._gamepads[cp]
+            const UT = this._getGamepadDeviceType(TT.gamepad.id),
+              mT = TT.gamepad.index;
+            this._unregisterDevice(UT, mT), delete this._gamepads[mT]
           }
         }, window.addEventListener("gamepadconnected", this._gamepadConnectedEvent), window.addEventListener("gamepaddisconnected", this._gamepadDisconnectedEvent)
       }
-      _updateDevice(pp, ip, cp) {
-        const Op = navigator.getGamepads()[ip];
-        if (Op && pp === this._gamepads[ip]) {
-          const op = this._inputs[pp][ip];
-          cp >= Op.buttons.length ? op[cp] = Op.axes[cp - Op.buttons.length].valueOf() : op[cp] = Op.buttons[cp].value
+      _updateDevice(TT, UT, mT) {
+        const WT = navigator.getGamepads()[UT];
+        if (WT && TT === this._gamepads[UT]) {
+          const zT = this._inputs[TT][UT];
+          mT >= WT.buttons.length ? zT[mT] = WT.axes[mT - WT.buttons.length].valueOf() : zT[mT] = WT.buttons[mT].value
         }
       }
-      _getGamepadDeviceType(pp) {
-        return -1 !== pp.indexOf("054c") ? -1 !== pp.indexOf("0ce6") ? mp.DualSense : mp.DualShock : -1 !== pp.indexOf("Xbox One") || -1 !== pp.search("Xbox 360") || -1 !== pp.search("xinput") || -1 !== pp.indexOf("045e") && -1 === pp.indexOf("Surface Dock") ? mp.Xbox : -1 !== pp.indexOf("057e") ? mp.Switch : mp.Generic
+      _getGamepadDeviceType(TT) {
+        return -1 !== TT.indexOf("054c") ? -1 !== TT.indexOf("0ce6") ? YT.DualSense : YT.DualShock : -1 !== TT.indexOf("Xbox One") || -1 !== TT.search("Xbox 360") || -1 !== TT.search("xinput") || -1 !== TT.indexOf("045e") && -1 === TT.indexOf("Surface Dock") ? YT.Xbox : -1 !== TT.indexOf("057e") ? YT.Switch : YT.Generic
       }
-      _getPointerType(pp) {
-        let ip = mp.Mouse;
-        return ("touch" === pp.pointerType || "pen" === pp.pointerType || pp.touches) && (ip = mp.Touch), ip
-      }
-    }
-    class fp {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.deviceType = ip, this.deviceSlot = cp, this.onInputChangedObservable = new Sp.d, this._deviceInputSystem = pp
-      }
-      getInput(pp) {
-        return this._deviceInputSystem.pollInput(this.deviceType, this.deviceSlot, pp)
+      _getPointerType(TT) {
+        let UT = YT.Mouse;
+        return ("touch" === TT.pointerType || "pen" === TT.pointerType || TT.touches) && (UT = YT.Touch), UT
       }
     }
-    class bp {
-      constructor(pp) {
-        this._registeredManagers = new Array, this._refCount = 0, this.registerManager = pp => {
-          for (let ip = 0; ip < this._devices.length; ip++) {
-            const cp = this._devices[ip];
-            for (const Op in cp) {
-              const cp = +Op;
-              pp._addDevice(new fp(this._deviceInputSystem, ip, cp))
+    class PT {
+      constructor(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.deviceType = UT, this.deviceSlot = mT, this.onInputChangedObservable = new gT.d, this._deviceInputSystem = TT
+      }
+      getInput(TT) {
+        return this._deviceInputSystem.pollInput(this.deviceType, this.deviceSlot, TT)
+      }
+    }
+    class VT {
+      constructor(TT) {
+        this._registeredManagers = new Array, this._refCount = 0, this.registerManager = TT => {
+          for (let UT = 0; UT < this._devices.length; UT++) {
+            const mT = this._devices[UT];
+            for (const WT in mT) {
+              const mT = +WT;
+              TT._addDevice(new PT(this._deviceInputSystem, UT, mT))
             }
           }
-          this._registeredManagers.push(pp)
-        }, this.unregisterManager = pp => {
-          const ip = this._registeredManagers.indexOf(pp);
-          ip > -1 && this._registeredManagers.splice(ip, 1)
+          this._registeredManagers.push(TT)
+        }, this.unregisterManager = TT => {
+          const UT = this._registeredManagers.indexOf(TT);
+          UT > -1 && this._registeredManagers.splice(UT, 1)
         };
-        const ip = Object.keys(mp).length / 2;
-        this._devices = new Array(ip);
-        const cp = (pp, ip) => {
-            this._devices[pp] || (this._devices[pp] = new Array), this._devices[pp][ip] || (this._devices[pp][ip] = ip);
-            for (const cp of this._registeredManagers) {
-              const Op = new fp(this._deviceInputSystem, pp, ip);
-              cp._addDevice(Op)
+        const UT = Object.keys(YT).length / 2;
+        this._devices = new Array(UT);
+        const mT = (TT, UT) => {
+            this._devices[TT] || (this._devices[TT] = new Array), this._devices[TT][UT] || (this._devices[TT][UT] = UT);
+            for (const mT of this._registeredManagers) {
+              const WT = new PT(this._deviceInputSystem, TT, UT);
+              mT._addDevice(WT)
             }
           },
-          Op = (pp, ip) => {
-            this._devices[pp]?.[ip] && delete this._devices[pp][ip];
-            for (const cp of this._registeredManagers) cp._removeDevice(pp, ip)
+          WT = (TT, UT) => {
+            this._devices[TT]?.[UT] && delete this._devices[TT][UT];
+            for (const mT of this._registeredManagers) mT._removeDevice(TT, UT)
           },
-          op = (pp, ip, cp) => {
-            if (cp)
-              for (const Op of this._registeredManagers) Op._onInputChanged(pp, ip, cp)
+          zT = (TT, UT, mT) => {
+            if (mT)
+              for (const WT of this._registeredManagers) WT._onInputChanged(TT, UT, mT)
           };
-        "undefined" !== typeof _native ? this._deviceInputSystem = new Bp(cp, Op, op) : this._deviceInputSystem = new Tp(pp, cp, Op, op)
+        "undefined" !== typeof _native ? this._deviceInputSystem = new QT(mT, WT, zT) : this._deviceInputSystem = new FT(TT, mT, WT, zT)
       }
       dispose() {
         this._deviceInputSystem.dispose()
       }
     }
-    class hp {
-      getDeviceSource(pp, ip) {
-        if (void 0 === ip) {
-          if (void 0 === this._firstDevice[pp]) return null;
-          ip = this._firstDevice[pp]
+    class uT {
+      getDeviceSource(TT, UT) {
+        if (void 0 === UT) {
+          if (void 0 === this._firstDevice[TT]) return null;
+          UT = this._firstDevice[TT]
         }
-        return this._devices[pp] && void 0 !== this._devices[pp][ip] ? this._devices[pp][ip] : null
+        return this._devices[TT] && void 0 !== this._devices[TT][UT] ? this._devices[TT][UT] : null
       }
-      getDeviceSources(pp) {
-        return this._devices[pp] ? this._devices[pp].filter((pp => !!pp)) : []
+      getDeviceSources(TT) {
+        return this._devices[TT] ? this._devices[TT].filter((TT => !!TT)) : []
       }
-      constructor(pp) {
-        const ip = Object.keys(mp).length / 2;
-        this._devices = new Array(ip), this._firstDevice = new Array(ip), this._engine = pp, this._engine._deviceSourceManager || (this._engine._deviceSourceManager = new bp(pp)), this._engine._deviceSourceManager._refCount++, this.onDeviceConnectedObservable = new Sp.d((pp => {
-          for (const ip of this._devices)
-            if (ip)
-              for (const cp of ip) cp && this.onDeviceConnectedObservable.notifyObserver(pp, cp)
-        })), this.onDeviceDisconnectedObservable = new Sp.d, this._engine._deviceSourceManager.registerManager(this), this._onDisposeObserver = pp.Kl.add((() => {
+      constructor(TT) {
+        const UT = Object.keys(YT).length / 2;
+        this._devices = new Array(UT), this._firstDevice = new Array(UT), this._engine = TT, this._engine._deviceSourceManager || (this._engine._deviceSourceManager = new VT(TT)), this._engine._deviceSourceManager._refCount++, this.onDeviceConnectedObservable = new gT.d((TT => {
+          for (const UT of this._devices)
+            if (UT)
+              for (const mT of UT) mT && this.onDeviceConnectedObservable.notifyObserver(TT, mT)
+        })), this.onDeviceDisconnectedObservable = new gT.d, this._engine._deviceSourceManager.registerManager(this), this._onDisposeObserver = TT.SF.add((() => {
           this.dispose()
         }))
       }
       dispose() {
-        this.onDeviceConnectedObservable.clear(), this.onDeviceDisconnectedObservable.clear(), this._engine._deviceSourceManager && (this._engine._deviceSourceManager.unregisterManager(this), --this._engine._deviceSourceManager._refCount < 1 && (this._engine._deviceSourceManager.dispose(), delete this._engine._deviceSourceManager)), this._engine.Kl.remove(this._onDisposeObserver)
+        this.onDeviceConnectedObservable.clear(), this.onDeviceDisconnectedObservable.clear(), this._engine._deviceSourceManager && (this._engine._deviceSourceManager.unregisterManager(this), --this._engine._deviceSourceManager._refCount < 1 && (this._engine._deviceSourceManager.dispose(), delete this._engine._deviceSourceManager)), this._engine.SF.remove(this._onDisposeObserver)
       }
-      _addDevice(pp) {
-        this._devices[pp.deviceType] || (this._devices[pp.deviceType] = []), this._devices[pp.deviceType][pp.deviceSlot] || (this._devices[pp.deviceType][pp.deviceSlot] = pp, this._updateFirstDevices(pp.deviceType)), this.onDeviceConnectedObservable.notifyObservers(pp)
+      _addDevice(TT) {
+        this._devices[TT.deviceType] || (this._devices[TT.deviceType] = []), this._devices[TT.deviceType][TT.deviceSlot] || (this._devices[TT.deviceType][TT.deviceSlot] = TT, this._updateFirstDevices(TT.deviceType)), this.onDeviceConnectedObservable.notifyObservers(TT)
       }
-      _removeDevice(pp, ip) {
-        const cp = this._devices[pp]?.[ip];
-        this.onDeviceDisconnectedObservable.notifyObservers(cp), this._devices[pp]?.[ip] && delete this._devices[pp][ip], this._updateFirstDevices(pp)
+      _removeDevice(TT, UT) {
+        const mT = this._devices[TT]?.[UT];
+        this.onDeviceDisconnectedObservable.notifyObservers(mT), this._devices[TT]?.[UT] && delete this._devices[TT][UT], this._updateFirstDevices(TT)
       }
-      _onInputChanged(pp, ip, cp) {
-        this._devices[pp]?.[ip]?.onInputChangedObservable.notifyObservers(cp)
+      _onInputChanged(TT, UT, mT) {
+        this._devices[TT]?.[UT]?.onInputChangedObservable.notifyObservers(mT)
       }
-      _updateFirstDevices(pp) {
-        switch (pp) {
-          case mp.Keyboard:
-          case mp.Mouse:
-            this._firstDevice[pp] = 0;
+      _updateFirstDevices(TT) {
+        switch (TT) {
+          case YT.Keyboard:
+          case YT.Mouse:
+            this._firstDevice[TT] = 0;
             break;
-          case mp.Touch:
-          case mp.DualSense:
-          case mp.DualShock:
-          case mp.Xbox:
-          case mp.Switch:
-          case mp.Generic: {
-            delete this._firstDevice[pp];
-            const ip = this._devices[pp];
-            if (ip)
-              for (let cp = 0; cp < ip.length; cp++)
-                if (ip[cp]) {
-                  this._firstDevice[pp] = cp;
+          case YT.Touch:
+          case YT.DualSense:
+          case YT.DualShock:
+          case YT.Xbox:
+          case YT.Switch:
+          case YT.Generic: {
+            delete this._firstDevice[TT];
+            const UT = this._devices[TT];
+            if (UT)
+              for (let mT = 0; mT < UT.length; mT++)
+                if (UT[mT]) {
+                  this._firstDevice[TT] = mT;
                   break
                 } break
           }
         }
       }
     }
-    var ap = cp(40390);
-    class np {
+    var CT = mT(40305);
+    class rT {
       constructor() {
         this._singleClick = !1, this._doubleClick = !1, this._hasSwiped = !1, this._ignore = !1
       }
       get singleClick() {
         return this._singleClick
       }
-      get xA() {
+      get Cj() {
         return this._doubleClick
       }
       get hasSwiped() {
@@ -7408,370 +7408,370 @@ export const modules = {
       get ignore() {
         return this._ignore
       }
-      set singleClick(pp) {
-        this._singleClick = pp
+      set singleClick(TT) {
+        this._singleClick = TT
       }
-      set xA(pp) {
-        this._doubleClick = pp
+      set Cj(TT) {
+        this._doubleClick = TT
       }
-      set hasSwiped(pp) {
-        this._hasSwiped = pp
+      set hasSwiped(TT) {
+        this._hasSwiped = TT
       }
-      set ignore(pp) {
-        this._ignore = pp
+      set ignore(TT) {
+        this._ignore = TT
       }
     }
-    class Fp {
-      constructor(pp) {
-        this._alreadyAttached = !1, this._meshPickProceed = !1, this._currentPickResult = null, this._previousPickResult = null, this._activePointerIds = new Array, this._activePointerIdsCount = 0, this._doubleClickOccured = !1, this._isSwiping = !1, this._swipeButtonPressed = -1, this._skipPointerTap = !1, this._isMultiTouchGesture = !1, this._pointerX = 0, this._pointerY = 0, this._startingPointerPosition = new Dp.l(0, 0), this._previousStartingPointerPosition = new Dp.l(0, 0), this._startingPointerTime = 0, this._previousStartingPointerTime = 0, this._pointerCaptures = {}, this._meshUnderPointerId = {}, this._movePointerInfo = null, this._latestPointerMoveEvents = new Map, this._cameraObserverCount = 0, this._delayedClicks = [null, null, null, null, null], this._deviceSourceManager = null, this._scene = pp || dp.e.LastCreatedScene, this._scene
+    class KT {
+      constructor(TT) {
+        this._alreadyAttached = !1, this._meshPickProceed = !1, this._currentPickResult = null, this._previousPickResult = null, this._activePointerIds = new Array, this._activePointerIdsCount = 0, this._doubleClickOccured = !1, this._isSwiping = !1, this._swipeButtonPressed = -1, this._skipPointerTap = !1, this._isMultiTouchGesture = !1, this._pointerX = 0, this._pointerY = 0, this._startingPointerPosition = new jT.o(0, 0), this._previousStartingPointerPosition = new jT.o(0, 0), this._startingPointerTime = 0, this._previousStartingPointerTime = 0, this._pointerCaptures = {}, this._meshUnderPointerId = {}, this._movePointerInfo = null, this._latestPointerMoveEvents = new Map, this._cameraObserverCount = 0, this._delayedClicks = [null, null, null, null, null], this._deviceSourceManager = null, this._scene = TT || iT.c.LastCreatedScene, this._scene
       }
       get meshUnderPointer() {
         return this._movePointerInfo && (this._movePointerInfo._generatePickInfo(), this._movePointerInfo = null), this._pointerOverMesh
       }
-      getMeshUnderPointerByPointerId(pp) {
-        return this._meshUnderPointerId[pp] || null
+      getMeshUnderPointerByPointerId(TT) {
+        return this._meshUnderPointerId[TT] || null
       }
       get unTranslatedPointer() {
-        return new Dp.l(this._unTranslatedPointerX, this._unTranslatedPointerY)
+        return new jT.o(this._unTranslatedPointerX, this._unTranslatedPointerY)
       }
       get pointerX() {
         return this._pointerX
       }
-      set pointerX(pp) {
-        this._pointerX = pp
+      set pointerX(TT) {
+        this._pointerX = TT
       }
       get pointerY() {
         return this._pointerY
       }
-      set pointerY(pp) {
-        this._pointerY = pp
+      set pointerY(TT) {
+        this._pointerY = TT
       }
-      _updatePointerPosition(pp) {
-        const ip = this._scene.gy().getInputElementClientRect();
-        ip && (this._pointerX = pp.clientX - ip.left, this._pointerY = pp.clientY - ip.top, this._unTranslatedPointerX = this._pointerX, this._unTranslatedPointerY = this._pointerY)
+      _updatePointerPosition(TT) {
+        const UT = this._scene.eB().getInputElementClientRect();
+        UT && (this._pointerX = TT.clientX - UT.left, this._pointerY = TT.clientY - UT.top, this._unTranslatedPointerX = this._pointerX, this._unTranslatedPointerY = this._pointerY)
       }
-      _processPointerMove(pp, ip) {
-        const cp = this._scene,
-          Op = cp.gy(),
-          op = Op.getInputElement();
-        op && (op.tabIndex = Op.canvasTabIndex, cp.doNotHandleCursors || (op.style.cursor = cp.defaultCursor)), this._setCursorAndPointerOverMesh(pp, ip, cp);
-        for (const xp of cp._pointerMoveStage) {
-          pp = pp || this._pickMove(ip);
-          const cp = !!pp?.pickedMesh;
-          pp = xp.action(this._unTranslatedPointerX, this._unTranslatedPointerY, pp, cp, op)
+      _processPointerMove(TT, UT) {
+        const mT = this._scene,
+          WT = mT.eB(),
+          zT = WT.getInputElement();
+        zT && (zT.tabIndex = WT.canvasTabIndex, mT.doNotHandleCursors || (zT.style.cursor = mT.defaultCursor)), this._setCursorAndPointerOverMesh(TT, UT, mT);
+        for (const nT of mT._pointerMoveStage) {
+          TT = TT || this._pickMove(UT);
+          const mT = !!TT?.pickedMesh;
+          TT = nT.action(this._unTranslatedPointerX, this._unTranslatedPointerY, TT, mT, zT)
         }
-        const Ip = ip.inputIndex >= Rp.MouseWheelX && ip.inputIndex <= Rp.MouseWheelZ ? jp.d.POINTERWHEEL : jp.d.POINTERMOVE;
-        let Sp;
-        cp.onPointerMove && (pp = pp || this._pickMove(ip), cp.onPointerMove(ip, pp, Ip)), pp ? (Sp = new jp.i(Ip, ip, pp), this._setRayOnPointerInfo(pp, ip)) : (Sp = new jp.i(Ip, ip, null, this), this._movePointerInfo = Sp), cp.onPointerObservable.hasObservers() && cp.onPointerObservable.notifyObservers(Sp, Ip)
+        const MT = UT.inputIndex >= JT.MouseWheelX && UT.inputIndex <= JT.MouseWheelZ ? OT.d.POINTERWHEEL : OT.d.POINTERMOVE;
+        let gT;
+        mT.onPointerMove && (TT = TT || this._pickMove(UT), mT.onPointerMove(UT, TT, MT)), TT ? (gT = new OT.h(MT, UT, TT), this._setRayOnPointerInfo(TT, UT)) : (gT = new OT.h(MT, UT, null, this), this._movePointerInfo = gT), mT.onPointerObservable.hasObservers() && mT.onPointerObservable.notifyObservers(gT, MT)
       }
-      _setRayOnPointerInfo(pp, ip) {
-        const cp = this._scene;
-        pp && ap.c._IsPickingAvailable && (pp.ray || (pp.ray = cp.createPickingRay(ip.offsetX, ip.offsetY, Dp.b.Identity(), cp.activeCamera)))
+      _setRayOnPointerInfo(TT, UT) {
+        const mT = this._scene;
+        TT && CT.c._IsPickingAvailable && (TT.ray || (TT.ray = mT.createPickingRay(UT.offsetX, UT.offsetY, jT.e.Identity(), mT.activeCamera)))
       }
-      _addCameraPointerObserver(pp, ip) {
-        return this._cameraObserverCount++, this._scene.onPointerObservable.add(pp, ip)
+      _addCameraPointerObserver(TT, UT) {
+        return this._cameraObserverCount++, this._scene.onPointerObservable.add(TT, UT)
       }
-      _removeCameraPointerObserver(pp) {
-        return this._cameraObserverCount--, this._scene.onPointerObservable.remove(pp)
+      _removeCameraPointerObserver(TT) {
+        return this._cameraObserverCount--, this._scene.onPointerObservable.remove(TT)
       }
       _checkForPicking() {
         return !!(this._scene.onPointerObservable.observers.length > this._cameraObserverCount || this._scene.onPointerPick)
       }
-      _checkPrePointerObservable(pp, ip, cp) {
-        const Op = this._scene,
-          op = new jp.h(cp, ip, this._unTranslatedPointerX, this._unTranslatedPointerY);
-        return pp && (op.originalPickingInfo = pp, op.ray = pp.ray, "xr-near" === ip.pointerType && pp.originMesh && (op.nearInteractionPickingInfo = pp)), Op.onPrePointerObservable.notifyObservers(op, cp), !!op.skipOnPointerObservable
+      _checkPrePointerObservable(TT, UT, mT) {
+        const WT = this._scene,
+          zT = new OT.f(mT, UT, this._unTranslatedPointerX, this._unTranslatedPointerY);
+        return TT && (zT.originalPickingInfo = TT, zT.ray = TT.ray, "xr-near" === UT.pointerType && TT.originMesh && (zT.nearInteractionPickingInfo = TT)), WT.onPrePointerObservable.notifyObservers(zT, mT), !!zT.skipOnPointerObservable
       }
-      _pickMove(pp) {
-        const ip = this._scene,
-          cp = ip.SW(this._unTranslatedPointerX, this._unTranslatedPointerY, ip.pointerMovePredicate, ip.pointerMoveFastCheck, ip.cameraToUseForPointers, ip.pointerMoveTrianglePredicate);
-        return this._setCursorAndPointerOverMesh(cp, pp, ip), cp
+      _pickMove(TT) {
+        const UT = this._scene,
+          mT = UT.VL(this._unTranslatedPointerX, this._unTranslatedPointerY, UT.pointerMovePredicate, UT.pointerMoveFastCheck, UT.cameraToUseForPointers, UT.pointerMoveTrianglePredicate);
+        return this._setCursorAndPointerOverMesh(mT, TT, UT), mT
       }
       _updateMeshUnderPointer() {
-        const pp = this._scene;
-        if (!pp.constantlyUpdateMeshUnderPointer || 0 === this._latestPointerMoveEvents.size || pp.skipPointerMovePicking || !pp.cameraToUseForPointers && !pp.activeCamera) return;
+        const TT = this._scene;
+        if (!TT.constantlyUpdateMeshUnderPointer || 0 === this._latestPointerMoveEvents.size || TT.skipPointerMovePicking || !TT.cameraToUseForPointers && !TT.activeCamera) return;
         this._ensurePointerMovePredicate();
-        const ip = this._pointerX,
-          cp = this._pointerY,
-          Op = this._unTranslatedPointerX,
-          op = this._unTranslatedPointerY;
-        for (const Ip of this._latestPointerMoveEvents.values()) this._pointerX = Ip.pointerX, this._pointerY = Ip.pointerY, this._unTranslatedPointerX = Ip.unTranslatedPointerX, this._unTranslatedPointerY = Ip.unTranslatedPointerY, this._pickMove(Ip.event);
-        this._pointerX = ip, this._pointerY = cp, this._unTranslatedPointerX = Op, this._unTranslatedPointerY = op
+        const UT = this._pointerX,
+          mT = this._pointerY,
+          WT = this._unTranslatedPointerX,
+          zT = this._unTranslatedPointerY;
+        for (const MT of this._latestPointerMoveEvents.values()) this._pointerX = MT.pointerX, this._pointerY = MT.pointerY, this._unTranslatedPointerX = MT.unTranslatedPointerX, this._unTranslatedPointerY = MT.unTranslatedPointerY, this._pickMove(MT.event);
+        this._pointerX = UT, this._pointerY = mT, this._unTranslatedPointerX = WT, this._unTranslatedPointerY = zT
       }
       _ensurePointerMovePredicate() {
-        const pp = this._scene;
-        pp.pointerMovePredicate || (pp.pointerMovePredicate = ip => (ip._isPointerMovePickable ?? ip.Ow) && ip.isVisible && ip.isReady() && ip.isEnabled() && (ip.enablePointerMoveEvents || pp.constantlyUpdateMeshUnderPointer || null !== ip._getActionManagerForTrigger()) && (!pp.cameraToUseForPointers || 0 !== (pp.cameraToUseForPointers.layerMask & ip.layerMask)))
+        const TT = this._scene;
+        TT.pointerMovePredicate || (TT.pointerMovePredicate = UT => (UT._isPointerMovePickable ?? UT.QZ) && UT.isVisible && UT.isReady() && UT.isEnabled() && (UT.enablePointerMoveEvents || TT.constantlyUpdateMeshUnderPointer || null !== UT._getActionManagerForTrigger()) && (!TT.cameraToUseForPointers || 0 !== (TT.cameraToUseForPointers.layerMask & UT.layerMask)))
       }
-      _setCursorAndPointerOverMesh(pp, ip, cp) {
-        const Op = cp.gy().getInputElement();
-        if (pp?.pickedMesh) {
-          if (this.setPointerOverMesh(pp.pickedMesh, ip.pointerId, pp, ip), !cp.doNotHandleCursors && Op && this._pointerOverMesh) {
-            const pp = this._pointerOverMesh._getActionManagerForTrigger();
-            pp && pp.hasPointerTriggers && (Op.style.cursor = pp.hoverCursor || cp.hoverCursor)
+      _setCursorAndPointerOverMesh(TT, UT, mT) {
+        const WT = mT.eB().getInputElement();
+        if (TT?.pickedMesh) {
+          if (this.setPointerOverMesh(TT.pickedMesh, UT.pointerId, TT, UT), !mT.doNotHandleCursors && WT && this._pointerOverMesh) {
+            const TT = this._pointerOverMesh._getActionManagerForTrigger();
+            TT && TT.hasPointerTriggers && (WT.style.cursor = TT.hoverCursor || mT.hoverCursor)
           }
-        } else this.setPointerOverMesh(null, ip.pointerId, pp, ip)
+        } else this.setPointerOverMesh(null, UT.pointerId, TT, UT)
       }
-      simulatePointerMove(pp, ip) {
-        const cp = new PointerEvent("pointermove", ip);
-        cp.inputIndex = Rp.Move, this._checkPrePointerObservable(pp, cp, jp.d.POINTERMOVE) || this._processPointerMove(pp, cp)
+      simulatePointerMove(TT, UT) {
+        const mT = new PointerEvent("pointermove", UT);
+        mT.inputIndex = JT.Move, this._checkPrePointerObservable(TT, mT, OT.d.POINTERMOVE) || this._processPointerMove(TT, mT)
       }
-      simulatePointerDown(pp, ip) {
-        const cp = new PointerEvent("pointerdown", ip);
-        cp.inputIndex = cp.button + 2, this._checkPrePointerObservable(pp, cp, jp.d.POINTERDOWN) || this._processPointerDown(pp, cp)
+      simulatePointerDown(TT, UT) {
+        const mT = new PointerEvent("pointerdown", UT);
+        mT.inputIndex = mT.button + 2, this._checkPrePointerObservable(TT, mT, OT.d.POINTERDOWN) || this._processPointerDown(TT, mT)
       }
-      _processPointerDown(pp, ip) {
-        const cp = this._scene;
-        if (pp?.pickedMesh) {
-          this._pickedDownMesh = pp.pickedMesh;
-          const Op = pp.pickedMesh._getActionManagerForTrigger();
-          if (Op) {
-            if (Op.hasPickTriggers) switch (Op.processTrigger(5, new yp(pp.pickedMesh, cp.pointerX, cp.pointerY, pp.pickedMesh, ip, pp)), ip.button) {
+      _processPointerDown(TT, UT) {
+        const mT = this._scene;
+        if (TT?.pickedMesh) {
+          this._pickedDownMesh = TT.pickedMesh;
+          const WT = TT.pickedMesh._getActionManagerForTrigger();
+          if (WT) {
+            if (WT.hasPickTriggers) switch (WT.processTrigger(5, new BT(TT.pickedMesh, mT.pointerX, mT.pointerY, TT.pickedMesh, UT, TT)), UT.button) {
               case 0:
-                Op.processTrigger(2, new yp(pp.pickedMesh, cp.pointerX, cp.pointerY, pp.pickedMesh, ip, pp));
+                WT.processTrigger(2, new BT(TT.pickedMesh, mT.pointerX, mT.pointerY, TT.pickedMesh, UT, TT));
                 break;
               case 1:
-                Op.processTrigger(4, new yp(pp.pickedMesh, cp.pointerX, cp.pointerY, pp.pickedMesh, ip, pp));
+                WT.processTrigger(4, new BT(TT.pickedMesh, mT.pointerX, mT.pointerY, TT.pickedMesh, UT, TT));
                 break;
               case 2:
-                Op.processTrigger(3, new yp(pp.pickedMesh, cp.pointerX, cp.pointerY, pp.pickedMesh, ip, pp))
+                WT.processTrigger(3, new BT(TT.pickedMesh, mT.pointerX, mT.pointerY, TT.pickedMesh, UT, TT))
             }
-            Op.hasSpecificTrigger(8) && window.setTimeout((() => {
-              const pp = cp.SW(this._unTranslatedPointerX, this._unTranslatedPointerY, (pp => pp.Ow && pp.isVisible && pp.isReady() && pp.actionManager && pp.actionManager.hasSpecificTrigger(8) && pp === this._pickedDownMesh), !1, cp.cameraToUseForPointers);
-              pp?.pickedMesh && Op && 0 !== this._activePointerIdsCount && Date.now() - this._startingPointerTime > Fp.LongPressDelay && !this._isPointerSwiping() && (this._startingPointerTime = 0, Op.processTrigger(8, yp.CreateNew(pp.pickedMesh, ip)))
-            }), Fp.LongPressDelay)
+            WT.hasSpecificTrigger(8) && window.setTimeout((() => {
+              const TT = mT.VL(this._unTranslatedPointerX, this._unTranslatedPointerY, (TT => TT.QZ && TT.isVisible && TT.isReady() && TT.actionManager && TT.actionManager.hasSpecificTrigger(8) && TT === this._pickedDownMesh), !1, mT.cameraToUseForPointers);
+              TT?.pickedMesh && WT && 0 !== this._activePointerIdsCount && Date.now() - this._startingPointerTime > KT.LongPressDelay && !this._isPointerSwiping() && (this._startingPointerTime = 0, WT.processTrigger(8, BT.CreateNew(TT.pickedMesh, UT)))
+            }), KT.LongPressDelay)
           }
         } else
-          for (const Ip of cp._pointerDownStage) pp = Ip.action(this._unTranslatedPointerX, this._unTranslatedPointerY, pp, ip, !1);
-        let Op;
-        const op = jp.d.POINTERDOWN;
-        pp ? (cp.onPointerDown && cp.onPointerDown(ip, pp, op), Op = new jp.i(op, ip, pp), this._setRayOnPointerInfo(pp, ip)) : Op = new jp.i(op, ip, null, this), cp.onPointerObservable.hasObservers() && cp.onPointerObservable.notifyObservers(Op, op)
+          for (const MT of mT._pointerDownStage) TT = MT.action(this._unTranslatedPointerX, this._unTranslatedPointerY, TT, UT, !1);
+        let WT;
+        const zT = OT.d.POINTERDOWN;
+        TT ? (mT.onPointerDown && mT.onPointerDown(UT, TT, zT), WT = new OT.h(zT, UT, TT), this._setRayOnPointerInfo(TT, UT)) : WT = new OT.h(zT, UT, null, this), mT.onPointerObservable.hasObservers() && mT.onPointerObservable.notifyObservers(WT, zT)
       }
       _isPointerSwiping() {
         return this._isSwiping
       }
-      simulatePointerUp(pp, ip, cp) {
-        const Op = new PointerEvent("pointerup", ip);
-        Op.inputIndex = Rp.Move;
-        const op = new np;
-        cp ? op.xA = !0 : op.singleClick = !0, this._checkPrePointerObservable(pp, Op, jp.d.POINTERUP) || this._processPointerUp(pp, Op, op)
+      simulatePointerUp(TT, UT, mT) {
+        const WT = new PointerEvent("pointerup", UT);
+        WT.inputIndex = JT.Move;
+        const zT = new rT;
+        mT ? zT.Cj = !0 : zT.singleClick = !0, this._checkPrePointerObservable(TT, WT, OT.d.POINTERUP) || this._processPointerUp(TT, WT, zT)
       }
-      _processPointerUp(pp, ip, cp) {
-        const Op = this._scene;
-        if (pp?.pickedMesh) {
-          if (this._pickedUpMesh = pp.pickedMesh, this._pickedDownMesh === this._pickedUpMesh && (Op.onPointerPick && Op.onPointerPick(ip, pp), cp.singleClick && !cp.ignore && Op.onPointerObservable.observers.length > this._cameraObserverCount)) {
-            const cp = jp.d.POINTERPICK,
-              op = new jp.i(cp, ip, pp);
-            this._setRayOnPointerInfo(pp, ip), Op.onPointerObservable.notifyObservers(op, cp)
+      _processPointerUp(TT, UT, mT) {
+        const WT = this._scene;
+        if (TT?.pickedMesh) {
+          if (this._pickedUpMesh = TT.pickedMesh, this._pickedDownMesh === this._pickedUpMesh && (WT.onPointerPick && WT.onPointerPick(UT, TT), mT.singleClick && !mT.ignore && WT.onPointerObservable.observers.length > this._cameraObserverCount)) {
+            const mT = OT.d.POINTERPICK,
+              zT = new OT.h(mT, UT, TT);
+            this._setRayOnPointerInfo(TT, UT), WT.onPointerObservable.notifyObservers(zT, mT)
           }
-          const op = pp.pickedMesh._getActionManagerForTrigger();
-          if (op && !cp.ignore) {
-            op.processTrigger(7, yp.CreateNew(pp.pickedMesh, ip, pp)), !cp.hasSwiped && cp.singleClick && op.processTrigger(1, yp.CreateNew(pp.pickedMesh, ip, pp));
-            const Op = pp.pickedMesh._getActionManagerForTrigger(6);
-            cp.xA && Op && Op.processTrigger(6, yp.CreateNew(pp.pickedMesh, ip, pp))
+          const zT = TT.pickedMesh._getActionManagerForTrigger();
+          if (zT && !mT.ignore) {
+            zT.processTrigger(7, BT.CreateNew(TT.pickedMesh, UT, TT)), !mT.hasSwiped && mT.singleClick && zT.processTrigger(1, BT.CreateNew(TT.pickedMesh, UT, TT));
+            const WT = TT.pickedMesh._getActionManagerForTrigger(6);
+            mT.Cj && WT && WT.processTrigger(6, BT.CreateNew(TT.pickedMesh, UT, TT))
           }
-        } else if (!cp.ignore)
-          for (const op of Op._pointerUpStage) pp = op.action(this._unTranslatedPointerX, this._unTranslatedPointerY, pp, ip, cp.xA);
+        } else if (!mT.ignore)
+          for (const zT of WT._pointerUpStage) TT = zT.action(this._unTranslatedPointerX, this._unTranslatedPointerY, TT, UT, mT.Cj);
         if (this._pickedDownMesh && this._pickedDownMesh !== this._pickedUpMesh) {
-          const pp = this._pickedDownMesh._getActionManagerForTrigger(16);
-          pp && pp.processTrigger(16, yp.CreateNew(this._pickedDownMesh, ip))
+          const TT = this._pickedDownMesh._getActionManagerForTrigger(16);
+          TT && TT.processTrigger(16, BT.CreateNew(this._pickedDownMesh, UT))
         }
-        if (!cp.ignore) {
-          const op = new jp.i(jp.d.POINTERUP, ip, pp);
-          if (this._setRayOnPointerInfo(pp, ip), Op.onPointerObservable.notifyObservers(op, jp.d.POINTERUP), Op.onPointerUp && Op.onPointerUp(ip, pp, jp.d.POINTERUP), !cp.hasSwiped && !this._skipPointerTap && !this._isMultiTouchGesture) {
-            let op = 0;
-            if (cp.singleClick ? op = jp.d.POINTERTAP : cp.xA && (op = jp.d.POINTERDOUBLETAP), op) {
-              const cp = new jp.i(op, ip, pp);
-              Op.onPointerObservable.hasObservers() && Op.onPointerObservable.hasSpecificMask(op) && Op.onPointerObservable.notifyObservers(cp, op)
+        if (!mT.ignore) {
+          const zT = new OT.h(OT.d.POINTERUP, UT, TT);
+          if (this._setRayOnPointerInfo(TT, UT), WT.onPointerObservable.notifyObservers(zT, OT.d.POINTERUP), WT.onPointerUp && WT.onPointerUp(UT, TT, OT.d.POINTERUP), !mT.hasSwiped && !this._skipPointerTap && !this._isMultiTouchGesture) {
+            let zT = 0;
+            if (mT.singleClick ? zT = OT.d.POINTERTAP : mT.Cj && (zT = OT.d.POINTERDOUBLETAP), zT) {
+              const mT = new OT.h(zT, UT, TT);
+              WT.onPointerObservable.hasObservers() && WT.onPointerObservable.hasSpecificMask(zT) && WT.onPointerObservable.notifyObservers(mT, zT)
             }
           }
         }
       }
       isPointerCaptured() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._pointerCaptures[pp]
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._pointerCaptures[TT]
       }
       attachControl() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const op = this._scene,
-          Ip = op.gy();
-        Op || (Op = Ip.getInputElement()), this._alreadyAttached && this.detachControl(), Op && (this._alreadyAttachedTo = Op), this._deviceSourceManager = new hp(Ip), this._initActionManager = pp => {
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const zT = this._scene,
+          MT = zT.eB();
+        WT || (WT = MT.getInputElement()), this._alreadyAttached && this.detachControl(), WT && (this._alreadyAttachedTo = WT), this._deviceSourceManager = new uT(MT), this._initActionManager = TT => {
           if (!this._meshPickProceed) {
-            const ip = op.skipPointerUpPicking || 0 === op._registeredActions && !this._checkForPicking() && !op.onPointerUp ? null : op.SW(this._unTranslatedPointerX, this._unTranslatedPointerY, op.pointerUpPredicate, op.pointerUpFastCheck, op.cameraToUseForPointers, op.pointerUpTrianglePredicate);
-            this._currentPickResult = ip, ip && (pp = ip.hit && ip.pickedMesh ? ip.pickedMesh._getActionManagerForTrigger() : null), this._meshPickProceed = !0
+            const UT = zT.skipPointerUpPicking || 0 === zT._registeredActions && !this._checkForPicking() && !zT.onPointerUp ? null : zT.VL(this._unTranslatedPointerX, this._unTranslatedPointerY, zT.pointerUpPredicate, zT.pointerUpFastCheck, zT.cameraToUseForPointers, zT.pointerUpTrianglePredicate);
+            this._currentPickResult = UT, UT && (TT = UT.hit && UT.pickedMesh ? UT.pickedMesh._getActionManagerForTrigger() : null), this._meshPickProceed = !0
           }
-          return pp
-        }, this._delayedSimpleClick = (pp, ip, cp) => {
-          if ((Date.now() - this._previousStartingPointerTime > Fp.DoubleClickDelay && !this._doubleClickOccured || pp !== this._previousButtonPressed) && (this._doubleClickOccured = !1, ip.singleClick = !0, ip.ignore = !1, this._delayedClicks[pp])) {
-            const ip = this._delayedClicks[pp].evt,
-              cp = jp.d.POINTERTAP,
-              Op = new jp.i(cp, ip, this._currentPickResult);
-            op.onPointerObservable.hasObservers() && op.onPointerObservable.hasSpecificMask(cp) && op.onPointerObservable.notifyObservers(Op, cp), this._delayedClicks[pp] = null
+          return TT
+        }, this._delayedSimpleClick = (TT, UT, mT) => {
+          if ((Date.now() - this._previousStartingPointerTime > KT.DoubleClickDelay && !this._doubleClickOccured || TT !== this._previousButtonPressed) && (this._doubleClickOccured = !1, UT.singleClick = !0, UT.ignore = !1, this._delayedClicks[TT])) {
+            const UT = this._delayedClicks[TT].evt,
+              mT = OT.d.POINTERTAP,
+              WT = new OT.h(mT, UT, this._currentPickResult);
+            zT.onPointerObservable.hasObservers() && zT.onPointerObservable.hasSpecificMask(mT) && zT.onPointerObservable.notifyObservers(WT, mT), this._delayedClicks[TT] = null
           }
-        }, this._initClickEvent = (pp, ip, cp, Op) => {
-          const op = new np;
+        }, this._initClickEvent = (TT, UT, mT, WT) => {
+          const zT = new rT;
           this._currentPickResult = null;
-          let Ip = null,
-            Sp = pp.hasSpecificMask(jp.d.POINTERPICK) || ip.hasSpecificMask(jp.d.POINTERPICK) || pp.hasSpecificMask(jp.d.POINTERTAP) || ip.hasSpecificMask(jp.d.POINTERTAP) || pp.hasSpecificMask(jp.d.POINTERDOUBLETAP) || ip.hasSpecificMask(jp.d.POINTERDOUBLETAP);
-          !Sp && kp && (Ip = this._initActionManager(Ip, op), Ip && (Sp = Ip.hasPickTriggers));
-          let xp = !1;
-          if (Sp = Sp && !this._isMultiTouchGesture, Sp) {
-            const Sp = cp.button;
-            if (op.hasSwiped = this._isPointerSwiping(), !op.hasSwiped) {
-              let Lp = !Fp.ExclusiveDoubleClickMode;
-              if (Lp || (Lp = !pp.hasSpecificMask(jp.d.POINTERDOUBLETAP) && !ip.hasSpecificMask(jp.d.POINTERDOUBLETAP), Lp && !kp.HasSpecificTrigger(6) && (Ip = this._initActionManager(Ip, op), Ip && (Lp = !Ip.hasSpecificTrigger(6)))), Lp)(Date.now() - this._previousStartingPointerTime > Fp.DoubleClickDelay || Sp !== this._previousButtonPressed) && (op.singleClick = !0, Op(op, this._currentPickResult), xp = !0);
+          let MT = null,
+            gT = TT.hasSpecificMask(OT.d.POINTERPICK) || UT.hasSpecificMask(OT.d.POINTERPICK) || TT.hasSpecificMask(OT.d.POINTERTAP) || UT.hasSpecificMask(OT.d.POINTERTAP) || TT.hasSpecificMask(OT.d.POINTERDOUBLETAP) || UT.hasSpecificMask(OT.d.POINTERDOUBLETAP);
+          !gT && eT && (MT = this._initActionManager(MT, zT), MT && (gT = MT.hasPickTriggers));
+          let nT = !1;
+          if (gT = gT && !this._isMultiTouchGesture, gT) {
+            const gT = mT.button;
+            if (zT.hasSwiped = this._isPointerSwiping(), !zT.hasSwiped) {
+              let HT = !KT.ExclusiveDoubleClickMode;
+              if (HT || (HT = !TT.hasSpecificMask(OT.d.POINTERDOUBLETAP) && !UT.hasSpecificMask(OT.d.POINTERDOUBLETAP), HT && !eT.HasSpecificTrigger(6) && (MT = this._initActionManager(MT, zT), MT && (HT = !MT.hasSpecificTrigger(6)))), HT)(Date.now() - this._previousStartingPointerTime > KT.DoubleClickDelay || gT !== this._previousButtonPressed) && (zT.singleClick = !0, WT(zT, this._currentPickResult), nT = !0);
               else {
-                const pp = {
-                  evt: cp,
-                  clickInfo: op,
-                  timeoutId: window.setTimeout(this._delayedSimpleClick.bind(this, Sp, op, Op), Fp.DoubleClickDelay)
+                const TT = {
+                  evt: mT,
+                  clickInfo: zT,
+                  timeoutId: window.setTimeout(this._delayedSimpleClick.bind(this, gT, zT, WT), KT.DoubleClickDelay)
                 };
-                this._delayedClicks[Sp] = pp
+                this._delayedClicks[gT] = TT
               }
-              let Yp = pp.hasSpecificMask(jp.d.POINTERDOUBLETAP) || ip.hasSpecificMask(jp.d.POINTERDOUBLETAP);
-              !Yp && kp.HasSpecificTrigger(6) && (Ip = this._initActionManager(Ip, op), Ip && (Yp = Ip.hasSpecificTrigger(6))), Yp && (Sp === this._previousButtonPressed && Date.now() - this._previousStartingPointerTime < Fp.DoubleClickDelay && !this._doubleClickOccured ? (op.hasSwiped || this._isPointerSwiping() ? (this._doubleClickOccured = !1, this._previousStartingPointerTime = this._startingPointerTime, this._previousStartingPointerPosition.x = this._startingPointerPosition.x, this._previousStartingPointerPosition.y = this._startingPointerPosition.y, this._previousButtonPressed = Sp, Fp.ExclusiveDoubleClickMode ? (this._delayedClicks[Sp] && (clearTimeout(this._delayedClicks[Sp]?.timeoutId), this._delayedClicks[Sp] = null), Op(op, this._previousPickResult)) : Op(op, this._currentPickResult)) : (this._previousStartingPointerTime = 0, this._doubleClickOccured = !0, op.xA = !0, op.ignore = !1, Fp.ExclusiveDoubleClickMode && this._delayedClicks[Sp] && (clearTimeout(this._delayedClicks[Sp]?.timeoutId), this._delayedClicks[Sp] = null), Op(op, this._currentPickResult)), xp = !0) : (this._doubleClickOccured = !1, this._previousStartingPointerTime = this._startingPointerTime, this._previousStartingPointerPosition.x = this._startingPointerPosition.x, this._previousStartingPointerPosition.y = this._startingPointerPosition.y, this._previousButtonPressed = Sp))
+              let kT = TT.hasSpecificMask(OT.d.POINTERDOUBLETAP) || UT.hasSpecificMask(OT.d.POINTERDOUBLETAP);
+              !kT && eT.HasSpecificTrigger(6) && (MT = this._initActionManager(MT, zT), MT && (kT = MT.hasSpecificTrigger(6))), kT && (gT === this._previousButtonPressed && Date.now() - this._previousStartingPointerTime < KT.DoubleClickDelay && !this._doubleClickOccured ? (zT.hasSwiped || this._isPointerSwiping() ? (this._doubleClickOccured = !1, this._previousStartingPointerTime = this._startingPointerTime, this._previousStartingPointerPosition.x = this._startingPointerPosition.x, this._previousStartingPointerPosition.y = this._startingPointerPosition.y, this._previousButtonPressed = gT, KT.ExclusiveDoubleClickMode ? (this._delayedClicks[gT] && (clearTimeout(this._delayedClicks[gT]?.timeoutId), this._delayedClicks[gT] = null), WT(zT, this._previousPickResult)) : WT(zT, this._currentPickResult)) : (this._previousStartingPointerTime = 0, this._doubleClickOccured = !0, zT.Cj = !0, zT.ignore = !1, KT.ExclusiveDoubleClickMode && this._delayedClicks[gT] && (clearTimeout(this._delayedClicks[gT]?.timeoutId), this._delayedClicks[gT] = null), WT(zT, this._currentPickResult)), nT = !0) : (this._doubleClickOccured = !1, this._previousStartingPointerTime = this._startingPointerTime, this._previousStartingPointerPosition.x = this._startingPointerPosition.x, this._previousStartingPointerPosition.y = this._startingPointerPosition.y, this._previousButtonPressed = gT))
             }
           }
-          xp || Op(op, this._currentPickResult)
-        }, this._onPointerMove = pp => {
-          if (this._updatePointerPosition(pp), this._latestPointerMoveEvents.set(pp.pointerId, {
-              event: pp,
+          nT || WT(zT, this._currentPickResult)
+        }, this._onPointerMove = TT => {
+          if (this._updatePointerPosition(TT), this._latestPointerMoveEvents.set(TT.pointerId, {
+              event: TT,
               pointerX: this._pointerX,
               pointerY: this._pointerY,
               unTranslatedPointerX: this._unTranslatedPointerX,
               unTranslatedPointerY: this._unTranslatedPointerY
-            }), this._isSwiping || -1 === this._swipeButtonPressed || (this._isSwiping = Math.abs(this._startingPointerPosition.x - this._pointerX) > Fp.DragMovementThreshold || Math.abs(this._startingPointerPosition.y - this._pointerY) > Fp.DragMovementThreshold), Ip.isPointerLock && Ip._verifyPointerLock(), this._checkPrePointerObservable(null, pp, pp.inputIndex >= Rp.MouseWheelX && pp.inputIndex <= Rp.MouseWheelZ ? jp.d.POINTERWHEEL : jp.d.POINTERMOVE)) return;
-          if (!op.cameraToUseForPointers && !op.activeCamera) return;
-          if (op.skipPointerMovePicking) return void this._processPointerMove(new Wp.b, pp);
+            }), this._isSwiping || -1 === this._swipeButtonPressed || (this._isSwiping = Math.abs(this._startingPointerPosition.x - this._pointerX) > KT.DragMovementThreshold || Math.abs(this._startingPointerPosition.y - this._pointerY) > KT.DragMovementThreshold), MT.isPointerLock && MT._verifyPointerLock(), this._checkPrePointerObservable(null, TT, TT.inputIndex >= JT.MouseWheelX && TT.inputIndex <= JT.MouseWheelZ ? OT.d.POINTERWHEEL : OT.d.POINTERMOVE)) return;
+          if (!zT.cameraToUseForPointers && !zT.activeCamera) return;
+          if (zT.skipPointerMovePicking) return void this._processPointerMove(new pT.c, TT);
           this._ensurePointerMovePredicate();
-          const ip = op._registeredActions > 0 || op.constantlyUpdateMeshUnderPointer ? this._pickMove(pp) : null;
-          this._processPointerMove(ip, pp)
-        }, this._onPointerDown = pp => {
-          const ip = this._activePointerIds.indexOf(-1);
-          if (-1 === ip ? this._activePointerIds.push(pp.pointerId) : this._activePointerIds[ip] = pp.pointerId, this._activePointerIdsCount++, this._pickedDownMesh = null, this._meshPickProceed = !1, Fp.ExclusiveDoubleClickMode)
-            for (let Op = 0; Op < this._delayedClicks.length; Op++)
-              if (this._delayedClicks[Op])
-                if (pp.button === Op) clearTimeout(this._delayedClicks[Op]?.timeoutId);
+          const UT = zT._registeredActions > 0 || zT.constantlyUpdateMeshUnderPointer ? this._pickMove(TT) : null;
+          this._processPointerMove(UT, TT)
+        }, this._onPointerDown = TT => {
+          const UT = this._activePointerIds.indexOf(-1);
+          if (-1 === UT ? this._activePointerIds.push(TT.pointerId) : this._activePointerIds[UT] = TT.pointerId, this._activePointerIdsCount++, this._pickedDownMesh = null, this._meshPickProceed = !1, KT.ExclusiveDoubleClickMode)
+            for (let WT = 0; WT < this._delayedClicks.length; WT++)
+              if (this._delayedClicks[WT])
+                if (TT.button === WT) clearTimeout(this._delayedClicks[WT]?.timeoutId);
                 else {
-                  const pp = this._delayedClicks[Op].clickInfo;
-                  this._doubleClickOccured = !1, pp.singleClick = !0, pp.ignore = !1;
-                  const ip = this._delayedClicks[Op].evt,
-                    cp = jp.d.POINTERTAP,
-                    Ip = new jp.i(cp, ip, this._currentPickResult);
-                  op.onPointerObservable.hasObservers() && op.onPointerObservable.hasSpecificMask(cp) && op.onPointerObservable.notifyObservers(Ip, cp), this._delayedClicks[Op] = null
-                } if (this._updatePointerPosition(pp), -1 === this._swipeButtonPressed && (this._swipeButtonPressed = pp.button), op.preventDefaultOnPointerDown && Op && (pp.preventDefault(), Op.focus()), this._startingPointerPosition.x = this._pointerX, this._startingPointerPosition.y = this._pointerY, this._startingPointerTime = Date.now(), this._checkPrePointerObservable(null, pp, jp.d.POINTERDOWN)) return;
-          if (!op.cameraToUseForPointers && !op.activeCamera) return;
-          let cp;
-          this._pointerCaptures[pp.pointerId] = !0, op.pointerDownPredicate || (op.pointerDownPredicate = pp => pp.Ow && pp.isVisible && pp.isReady() && pp.isEnabled() && (!op.cameraToUseForPointers || 0 !== (op.cameraToUseForPointers.layerMask & pp.layerMask))), this._pickedDownMesh = null, cp = op.skipPointerDownPicking || 0 === op._registeredActions && !this._checkForPicking() && !op.onPointerDown ? new Wp.b : op.SW(this._unTranslatedPointerX, this._unTranslatedPointerY, op.pointerDownPredicate, op.pointerDownFastCheck, op.cameraToUseForPointers, op.pointerDownTrianglePredicate), this._processPointerDown(cp, pp)
-        }, this._onPointerUp = pp => {
-          const ip = this._activePointerIds.indexOf(pp.pointerId); - 1 !== ip && (this._activePointerIds[ip] = -1, this._activePointerIdsCount--, "touch" === pp.pointerType && this._latestPointerMoveEvents.delete(pp.pointerId), this._pickedUpMesh = null, this._meshPickProceed = !1, this._updatePointerPosition(pp), op.preventDefaultOnPointerUp && Op && (pp.preventDefault(), Op.focus()), this._initClickEvent(op.onPrePointerObservable, op.onPointerObservable, pp, ((ip, cp) => {
-            if (op.onPrePointerObservable.hasObservers() && (this._skipPointerTap = !1, !ip.ignore)) {
-              if (this._checkPrePointerObservable(null, pp, jp.d.POINTERUP)) return this._swipeButtonPressed === pp.button && (this._isSwiping = !1, this._swipeButtonPressed = -1), void(0 === pp.buttons && (this._pointerCaptures[pp.pointerId] = !1));
-              ip.hasSwiped || (ip.singleClick && op.onPrePointerObservable.hasSpecificMask(jp.d.POINTERTAP) && this._checkPrePointerObservable(null, pp, jp.d.POINTERTAP) && (this._skipPointerTap = !0), ip.xA && op.onPrePointerObservable.hasSpecificMask(jp.d.POINTERDOUBLETAP) && this._checkPrePointerObservable(null, pp, jp.d.POINTERDOUBLETAP) && (this._skipPointerTap = !0))
+                  const TT = this._delayedClicks[WT].clickInfo;
+                  this._doubleClickOccured = !1, TT.singleClick = !0, TT.ignore = !1;
+                  const UT = this._delayedClicks[WT].evt,
+                    mT = OT.d.POINTERTAP,
+                    MT = new OT.h(mT, UT, this._currentPickResult);
+                  zT.onPointerObservable.hasObservers() && zT.onPointerObservable.hasSpecificMask(mT) && zT.onPointerObservable.notifyObservers(MT, mT), this._delayedClicks[WT] = null
+                } if (this._updatePointerPosition(TT), -1 === this._swipeButtonPressed && (this._swipeButtonPressed = TT.button), zT.preventDefaultOnPointerDown && WT && (TT.preventDefault(), WT.focus()), this._startingPointerPosition.x = this._pointerX, this._startingPointerPosition.y = this._pointerY, this._startingPointerTime = Date.now(), this._checkPrePointerObservable(null, TT, OT.d.POINTERDOWN)) return;
+          if (!zT.cameraToUseForPointers && !zT.activeCamera) return;
+          let mT;
+          this._pointerCaptures[TT.pointerId] = !0, zT.pointerDownPredicate || (zT.pointerDownPredicate = TT => TT.QZ && TT.isVisible && TT.isReady() && TT.isEnabled() && (!zT.cameraToUseForPointers || 0 !== (zT.cameraToUseForPointers.layerMask & TT.layerMask))), this._pickedDownMesh = null, mT = zT.skipPointerDownPicking || 0 === zT._registeredActions && !this._checkForPicking() && !zT.onPointerDown ? new pT.c : zT.VL(this._unTranslatedPointerX, this._unTranslatedPointerY, zT.pointerDownPredicate, zT.pointerDownFastCheck, zT.cameraToUseForPointers, zT.pointerDownTrianglePredicate), this._processPointerDown(mT, TT)
+        }, this._onPointerUp = TT => {
+          const UT = this._activePointerIds.indexOf(TT.pointerId); - 1 !== UT && (this._activePointerIds[UT] = -1, this._activePointerIdsCount--, "touch" === TT.pointerType && this._latestPointerMoveEvents.delete(TT.pointerId), this._pickedUpMesh = null, this._meshPickProceed = !1, this._updatePointerPosition(TT), zT.preventDefaultOnPointerUp && WT && (TT.preventDefault(), WT.focus()), this._initClickEvent(zT.onPrePointerObservable, zT.onPointerObservable, TT, ((UT, mT) => {
+            if (zT.onPrePointerObservable.hasObservers() && (this._skipPointerTap = !1, !UT.ignore)) {
+              if (this._checkPrePointerObservable(null, TT, OT.d.POINTERUP)) return this._swipeButtonPressed === TT.button && (this._isSwiping = !1, this._swipeButtonPressed = -1), void(0 === TT.buttons && (this._pointerCaptures[TT.pointerId] = !1));
+              UT.hasSwiped || (UT.singleClick && zT.onPrePointerObservable.hasSpecificMask(OT.d.POINTERTAP) && this._checkPrePointerObservable(null, TT, OT.d.POINTERTAP) && (this._skipPointerTap = !0), UT.Cj && zT.onPrePointerObservable.hasSpecificMask(OT.d.POINTERDOUBLETAP) && this._checkPrePointerObservable(null, TT, OT.d.POINTERDOUBLETAP) && (this._skipPointerTap = !0))
             }
-            this._pointerCaptures[pp.pointerId] ? (0 === pp.buttons && (this._pointerCaptures[pp.pointerId] = !1), (op.cameraToUseForPointers || op.activeCamera) && (op.pointerUpPredicate || (op.pointerUpPredicate = pp => pp.Ow && pp.isVisible && pp.isReady() && pp.isEnabled() && (!op.cameraToUseForPointers || 0 !== (op.cameraToUseForPointers.layerMask & pp.layerMask))), !this._meshPickProceed && (kp && kp.HasTriggers || this._checkForPicking() || op.onPointerUp) && this._initActionManager(null, ip), cp || (cp = this._currentPickResult), this._processPointerUp(cp, pp, ip), this._previousPickResult = this._currentPickResult, this._swipeButtonPressed === pp.button && (this._isSwiping = !1, this._swipeButtonPressed = -1))) : this._swipeButtonPressed === pp.button && (this._isSwiping = !1, this._swipeButtonPressed = -1)
+            this._pointerCaptures[TT.pointerId] ? (0 === TT.buttons && (this._pointerCaptures[TT.pointerId] = !1), (zT.cameraToUseForPointers || zT.activeCamera) && (zT.pointerUpPredicate || (zT.pointerUpPredicate = TT => TT.QZ && TT.isVisible && TT.isReady() && TT.isEnabled() && (!zT.cameraToUseForPointers || 0 !== (zT.cameraToUseForPointers.layerMask & TT.layerMask))), !this._meshPickProceed && (eT && eT.HasTriggers || this._checkForPicking() || zT.onPointerUp) && this._initActionManager(null, UT), mT || (mT = this._currentPickResult), this._processPointerUp(mT, TT, UT), this._previousPickResult = this._currentPickResult, this._swipeButtonPressed === TT.button && (this._isSwiping = !1, this._swipeButtonPressed = -1))) : this._swipeButtonPressed === TT.button && (this._isSwiping = !1, this._swipeButtonPressed = -1)
           })))
-        }, this._onKeyDown = pp => {
-          const ip = lp.d.KEYDOWN;
-          if (op.onPreKeyboardObservable.hasObservers()) {
-            const cp = new lp.e(ip, pp);
-            if (op.onPreKeyboardObservable.notifyObservers(cp, ip), cp.skipOnKeyboardObservable) return
+        }, this._onKeyDown = TT => {
+          const UT = yT.e.KEYDOWN;
+          if (zT.onPreKeyboardObservable.hasObservers()) {
+            const mT = new yT.i(UT, TT);
+            if (zT.onPreKeyboardObservable.notifyObservers(mT, UT), mT.skipOnKeyboardObservable) return
           }
-          if (op.onKeyboardObservable.hasObservers()) {
-            const cp = new lp.f(ip, pp);
-            op.onKeyboardObservable.notifyObservers(cp, ip)
+          if (zT.onKeyboardObservable.hasObservers()) {
+            const mT = new yT.k(UT, TT);
+            zT.onKeyboardObservable.notifyObservers(mT, UT)
           }
-          op.actionManager && op.actionManager.processTrigger(14, yp.CreateNewFromScene(op, pp))
-        }, this._onKeyUp = pp => {
-          const ip = lp.d.KEYUP;
-          if (op.onPreKeyboardObservable.hasObservers()) {
-            const cp = new lp.e(ip, pp);
-            if (op.onPreKeyboardObservable.notifyObservers(cp, ip), cp.skipOnKeyboardObservable) return
+          zT.actionManager && zT.actionManager.processTrigger(14, BT.CreateNewFromScene(zT, TT))
+        }, this._onKeyUp = TT => {
+          const UT = yT.e.KEYUP;
+          if (zT.onPreKeyboardObservable.hasObservers()) {
+            const mT = new yT.i(UT, TT);
+            if (zT.onPreKeyboardObservable.notifyObservers(mT, UT), mT.skipOnKeyboardObservable) return
           }
-          if (op.onKeyboardObservable.hasObservers()) {
-            const cp = new lp.f(ip, pp);
-            op.onKeyboardObservable.notifyObservers(cp, ip)
+          if (zT.onKeyboardObservable.hasObservers()) {
+            const mT = new yT.k(UT, TT);
+            zT.onKeyboardObservable.notifyObservers(mT, UT)
           }
-          op.actionManager && op.actionManager.processTrigger(15, yp.CreateNewFromScene(op, pp))
-        }, this._deviceSourceManager.onDeviceConnectedObservable.add((Op => {
-          Op.deviceType === mp.Mouse ? Op.onInputChangedObservable.add((op => {
-            this._originMouseEvent = op, op.inputIndex === Rp.LeftClick || op.inputIndex === Rp.MiddleClick || op.inputIndex === Rp.RightClick || op.inputIndex === Rp.BrowserBack || op.inputIndex === Rp.BrowserForward ? ip && 1 === Op.getInput(op.inputIndex) ? this._onPointerDown(op) : pp && 0 === Op.getInput(op.inputIndex) && this._onPointerUp(op) : cp && (op.inputIndex === Rp.Move ? this._onPointerMove(op) : op.inputIndex !== Rp.MouseWheelX && op.inputIndex !== Rp.MouseWheelY && op.inputIndex !== Rp.MouseWheelZ || this._onPointerMove(op))
-          })) : Op.deviceType === mp.Touch ? Op.onInputChangedObservable.add((op => {
-            op.inputIndex === Rp.LeftClick && (ip && 1 === Op.getInput(op.inputIndex) ? (this._onPointerDown(op), this._activePointerIdsCount > 1 && (this._isMultiTouchGesture = !0)) : pp && 0 === Op.getInput(op.inputIndex) && (this._onPointerUp(op), 0 === this._activePointerIdsCount && (this._isMultiTouchGesture = !1))), cp && op.inputIndex === Rp.Move && this._onPointerMove(op)
-          })) : Op.deviceType === mp.Keyboard && Op.onInputChangedObservable.add((pp => {
-            "keydown" === pp.type ? this._onKeyDown(pp) : "keyup" === pp.type && this._onKeyUp(pp)
+          zT.actionManager && zT.actionManager.processTrigger(15, BT.CreateNewFromScene(zT, TT))
+        }, this._deviceSourceManager.onDeviceConnectedObservable.add((WT => {
+          WT.deviceType === YT.Mouse ? WT.onInputChangedObservable.add((zT => {
+            this._originMouseEvent = zT, zT.inputIndex === JT.LeftClick || zT.inputIndex === JT.MiddleClick || zT.inputIndex === JT.RightClick || zT.inputIndex === JT.BrowserBack || zT.inputIndex === JT.BrowserForward ? UT && 1 === WT.getInput(zT.inputIndex) ? this._onPointerDown(zT) : TT && 0 === WT.getInput(zT.inputIndex) && this._onPointerUp(zT) : mT && (zT.inputIndex === JT.Move ? this._onPointerMove(zT) : zT.inputIndex !== JT.MouseWheelX && zT.inputIndex !== JT.MouseWheelY && zT.inputIndex !== JT.MouseWheelZ || this._onPointerMove(zT))
+          })) : WT.deviceType === YT.Touch ? WT.onInputChangedObservable.add((zT => {
+            zT.inputIndex === JT.LeftClick && (UT && 1 === WT.getInput(zT.inputIndex) ? (this._onPointerDown(zT), this._activePointerIdsCount > 1 && (this._isMultiTouchGesture = !0)) : TT && 0 === WT.getInput(zT.inputIndex) && (this._onPointerUp(zT), 0 === this._activePointerIdsCount && (this._isMultiTouchGesture = !1))), mT && zT.inputIndex === JT.Move && this._onPointerMove(zT)
+          })) : WT.deviceType === YT.Keyboard && WT.onInputChangedObservable.add((TT => {
+            "keydown" === TT.type ? this._onKeyDown(TT) : "keyup" === TT.type && this._onKeyUp(TT)
           }))
         })), this._alreadyAttached = !0
       }
       detachControl() {
         this._alreadyAttached && (this._deviceSourceManager.dispose(), this._deviceSourceManager = null, this._alreadyAttachedTo && !this._scene.doNotHandleCursors && (this._alreadyAttachedTo.style.cursor = this._scene.defaultCursor), this._alreadyAttached = !1, this._alreadyAttachedTo = null, this._latestPointerMoveEvents.clear())
       }
-      setPointerOverMesh(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0,
-          Op = arguments.length > 3 ? arguments[3] : void 0;
-        if (this._meshUnderPointerId[ip] === pp && (!pp || !pp._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting)) return;
-        const op = this._meshUnderPointerId[ip];
-        let Ip;
-        op && (Ip = op._getActionManagerForTrigger(10), Ip && Ip.processTrigger(10, new yp(op, this._pointerX, this._pointerY, pp, Op, {
-          pointerId: ip
-        }))), pp ? (this._meshUnderPointerId[ip] = pp, this._pointerOverMesh = pp, Ip = pp._getActionManagerForTrigger(9), Ip && Ip.processTrigger(9, new yp(pp, this._pointerX, this._pointerY, pp, Op, {
-          pointerId: ip,
-          pickResult: cp
-        }))) : (delete this._meshUnderPointerId[ip], this._pointerOverMesh = null), this._scene.onMeshUnderPointerUpdatedObservable.hasObservers() && this._scene.onMeshUnderPointerUpdatedObservable.notifyObservers({
-          mesh: pp,
-          pointerId: ip
+      setPointerOverMesh(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0,
+          WT = arguments.length > 3 ? arguments[3] : void 0;
+        if (this._meshUnderPointerId[UT] === TT && (!TT || !TT._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting)) return;
+        const zT = this._meshUnderPointerId[UT];
+        let MT;
+        zT && (MT = zT._getActionManagerForTrigger(10), MT && MT.processTrigger(10, new BT(zT, this._pointerX, this._pointerY, TT, WT, {
+          pointerId: UT
+        }))), TT ? (this._meshUnderPointerId[UT] = TT, this._pointerOverMesh = TT, MT = TT._getActionManagerForTrigger(9), MT && MT.processTrigger(9, new BT(TT, this._pointerX, this._pointerY, TT, WT, {
+          pointerId: UT,
+          pickResult: mT
+        }))) : (delete this._meshUnderPointerId[UT], this._pointerOverMesh = null), this._scene.onMeshUnderPointerUpdatedObservable.hasObservers() && this._scene.onMeshUnderPointerUpdatedObservable.notifyObservers({
+          mesh: TT,
+          pointerId: UT
         })
       }
       getPointerOverMesh() {
         return this.meshUnderPointer
       }
-      _invalidateMesh(pp) {
-        this._pointerOverMesh === pp && (this._pointerOverMesh = null), this._pickedDownMesh === pp && (this._pickedDownMesh = null), this._pickedUpMesh === pp && (this._pickedUpMesh = null);
-        for (const ip in this._meshUnderPointerId) this._meshUnderPointerId[ip] === pp && delete this._meshUnderPointerId[ip]
+      _invalidateMesh(TT) {
+        this._pointerOverMesh === TT && (this._pointerOverMesh = null), this._pickedDownMesh === TT && (this._pickedDownMesh = null), this._pickedUpMesh === TT && (this._pickedUpMesh = null);
+        for (const UT in this._meshUnderPointerId) this._meshUnderPointerId[UT] === TT && delete this._meshUnderPointerId[UT]
       }
     }
-    Fp.DragMovementThreshold = 10, Fp.LongPressDelay = 500, Fp.DoubleClickDelay = 300, Fp.ExclusiveDoubleClickMode = !1;
-    var gp = cp(40159),
-      Gp = cp(37487),
-      rp = cp(37985);
-    class Zp {
+    KT.DragMovementThreshold = 10, KT.LongPressDelay = 500, KT.DoubleClickDelay = 300, KT.ExclusiveDoubleClickMode = !1;
+    var ST = mT(40039),
+      GT = mT(37367),
+      NT = mT(37885);
+    class ET {
       static get UniqueId() {
-        const pp = this._UniqueIdCounter;
-        return this._UniqueIdCounter++, pp
+        const TT = this._UniqueIdCounter;
+        return this._UniqueIdCounter++, TT
       }
     }
-    Zp._UniqueIdCounter = 1;
-    var zp = cp(40257),
-      sp = cp(40398),
-      Kp = cp(37329);
-    class Vp {
+    ET._UniqueIdCounter = 1;
+    var hT = mT(40151),
+      DT = mT(40310),
+      oT = mT(37205);
+    class AT {
       constructor() {
         this.pointerDownFastCheck = !1, this.pointerUpFastCheck = !1, this.pointerMoveFastCheck = !1, this.skipPointerMovePicking = !1, this.skipPointerDownPicking = !1, this.skipPointerUpPicking = !1
       }
     }
-    var ii, ci, Oi, oi, Ii, Si, xi, Li, Yi, Di, Ai, Pi, Wi, yi, Ui, wi, vi, ti, Hi, di, ei, ui, ji, ki, mi, Ri, qi, Mi, Ci, Ei, Xi, li, Qi, Ji, Bi, Ni, Ti, fi, bi, ai, ni, Fi, gi, Gi, ri, Zi, zi, si, Ki, Vi, pc, ic, cc, Oc = cp(38905),
-      oc = cp(37368);
-    const Ic = new Dp.q,
-      Sc = new Dp.q;
-    var xc;
-    ! function(pp) {
-      pp[pp.BackwardCompatible = 0] = "BackwardCompatible", pp[pp.Intermediate = 1] = "Intermediate", pp[pp.Aggressive = 2] = "Aggressive"
-    }(xc || (xc = {}));
-    class Lc {
-      static DefaultMaterialFactory(pp) {
-        throw (0, ep.o)("StandardMaterial")
+    var RT, TU, UU, mU, WU, zU, MU, gU, nU, HU, kU, jU, lU, LU, pU, BU, ZU, cU, vU, fU, qU, iU, bU, OU, eU, YU, JU, xU, dU, wU, tU, aU, yU, XU, IU, QU, sU, FU, PU, VU, uU, CU, rU, KU, SU, GU, NU, EU, hU, DU, oU, AU, RU, Tm = mT(38800),
+      Um = mT(37239);
+    const mm = new jT.t,
+      Wm = new jT.t;
+    var zm;
+    ! function(TT) {
+      TT[TT.BackwardCompatible = 0] = "BackwardCompatible", TT[TT.Intermediate = 1] = "Intermediate", TT[TT.Aggressive = 2] = "Aggressive"
+    }(zm || (zm = {}));
+    class Mm {
+      static DefaultMaterialFactory(TT) {
+        throw (0, bT.k)("StandardMaterial")
       }
       static CollisionCoordinatorFactory() {
-        throw (0, ep.o)("DefaultCollisionCoordinator")
+        throw (0, bT.k)("DefaultCollisionCoordinator")
       }
       get clearColor() {
         return this._clearColor
       }
-      set clearColor(pp) {
-        pp !== this._clearColor && (this._clearColor = pp, this.onClearColorChangedObservable.notifyObservers(this._clearColor))
+      set clearColor(TT) {
+        TT !== this._clearColor && (this._clearColor = TT, this.onClearColorChangedObservable.notifyObservers(this._clearColor))
       }
       get imageProcessingConfiguration() {
         return this._imageProcessingConfiguration
@@ -7779,9 +7779,9 @@ export const modules = {
       get performancePriority() {
         return this._performancePriority
       }
-      set performancePriority(pp) {
-        if (pp !== this._performancePriority) {
-          switch (this._performancePriority = pp, pp) {
+      set performancePriority(TT) {
+        if (TT !== this._performancePriority) {
+          switch (this._performancePriority = TT, TT) {
             case 0:
               this.skipFrustumClipping = !1, this._renderingManager.maintainStateBetweenFrames = !1, this.skipPointerMovePicking = !1, this.autoClear = !0;
               break;
@@ -7791,23 +7791,23 @@ export const modules = {
             case 2:
               this.skipFrustumClipping = !0, this._renderingManager.maintainStateBetweenFrames = !0, this.skipPointerMovePicking = !0, this.autoClear = !1
           }
-          this.onScenePerformancePriorityChangedObservable.notifyObservers(pp)
+          this.onScenePerformancePriorityChangedObservable.notifyObservers(TT)
         }
       }
-      set forceWireframe(pp) {
-        this._forceWireframe !== pp && (this._forceWireframe = pp, this.markAllMaterialsAsDirty(16))
+      set forceWireframe(TT) {
+        this._forceWireframe !== TT && (this._forceWireframe = TT, this.markAllMaterialsAsDirty(16))
       }
       get forceWireframe() {
         return this._forceWireframe
       }
-      set skipFrustumClipping(pp) {
-        this._skipFrustumClipping !== pp && (this._skipFrustumClipping = pp)
+      set skipFrustumClipping(TT) {
+        this._skipFrustumClipping !== TT && (this._skipFrustumClipping = TT)
       }
       get skipFrustumClipping() {
         return this._skipFrustumClipping
       }
-      set forcePointsCloud(pp) {
-        this._forcePointsCloud !== pp && (this._forcePointsCloud = pp, this.markAllMaterialsAsDirty(16))
+      set forcePointsCloud(TT) {
+        this._forcePointsCloud !== TT && (this._forcePointsCloud = TT, this.markAllMaterialsAsDirty(16))
       }
       get forcePointsCloud() {
         return this._forcePointsCloud
@@ -7815,144 +7815,144 @@ export const modules = {
       get environmentTexture() {
         return this._environmentTexture
       }
-      set environmentTexture(pp) {
-        this._environmentTexture !== pp && (this._environmentTexture = pp, this.onEnvironmentTextureChangedObservable.notifyObservers(pp), this.markAllMaterialsAsDirty(1))
+      set environmentTexture(TT) {
+        this._environmentTexture !== TT && (this._environmentTexture = TT, this.onEnvironmentTextureChangedObservable.notifyObservers(TT), this.markAllMaterialsAsDirty(1))
       }
       getNodes() {
-        let pp = [];
-        pp = pp.concat(this.meshes), pp = pp.concat(this.lights), pp = pp.concat(this.cameras), pp = pp.concat(this.transformNodes);
-        for (const ip of this.skeletons) pp = pp.concat(ip.bones);
-        return pp
+        let TT = [];
+        TT = TT.concat(this.meshes), TT = TT.concat(this.lights), TT = TT.concat(this.cameras), TT = TT.concat(this.transformNodes);
+        for (const UT of this.skeletons) TT = TT.concat(UT.bones);
+        return TT
       }
       get animationPropertiesOverride() {
         return this._animationPropertiesOverride
       }
-      set animationPropertiesOverride(pp) {
-        this._animationPropertiesOverride = pp
+      set animationPropertiesOverride(TT) {
+        this._animationPropertiesOverride = TT
       }
-      set onDispose(pp) {
-        this._onDisposeObserver && this.Kl.remove(this._onDisposeObserver), this._onDisposeObserver = this.Kl.add(pp)
+      set onDispose(TT) {
+        this._onDisposeObserver && this.SF.remove(this._onDisposeObserver), this._onDisposeObserver = this.SF.add(TT)
       }
-      set beforeRender(pp) {
-        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), pp && (this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(pp))
+      set beforeRender(TT) {
+        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), TT && (this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(TT))
       }
-      set afterRender(pp) {
-        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), pp && (this._onAfterRenderObserver = this.onAfterRenderObservable.add(pp))
+      set afterRender(TT) {
+        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), TT && (this._onAfterRenderObserver = this.onAfterRenderObservable.add(TT))
       }
-      set beforeCameraRender(pp) {
-        this._onBeforeCameraRenderObserver && this.onBeforeCameraRenderObservable.remove(this._onBeforeCameraRenderObserver), this._onBeforeCameraRenderObserver = this.onBeforeCameraRenderObservable.add(pp)
+      set beforeCameraRender(TT) {
+        this._onBeforeCameraRenderObserver && this.onBeforeCameraRenderObservable.remove(this._onBeforeCameraRenderObserver), this._onBeforeCameraRenderObserver = this.onBeforeCameraRenderObservable.add(TT)
       }
-      set afterCameraRender(pp) {
-        this._onAfterCameraRenderObserver && this.onAfterCameraRenderObservable.remove(this._onAfterCameraRenderObserver), this._onAfterCameraRenderObserver = this.onAfterCameraRenderObservable.add(pp)
+      set afterCameraRender(TT) {
+        this._onAfterCameraRenderObserver && this.onAfterCameraRenderObservable.remove(this._onAfterCameraRenderObserver), this._onAfterCameraRenderObserver = this.onAfterCameraRenderObservable.add(TT)
       }
       get pointerDownPredicate() {
         return this._pointerPickingConfiguration.pointerDownPredicate
       }
-      set pointerDownPredicate(pp) {
-        this._pointerPickingConfiguration.pointerDownPredicate = pp
+      set pointerDownPredicate(TT) {
+        this._pointerPickingConfiguration.pointerDownPredicate = TT
       }
       get pointerUpPredicate() {
         return this._pointerPickingConfiguration.pointerUpPredicate
       }
-      set pointerUpPredicate(pp) {
-        this._pointerPickingConfiguration.pointerUpPredicate = pp
+      set pointerUpPredicate(TT) {
+        this._pointerPickingConfiguration.pointerUpPredicate = TT
       }
       get pointerMovePredicate() {
         return this._pointerPickingConfiguration.pointerMovePredicate
       }
-      set pointerMovePredicate(pp) {
-        this._pointerPickingConfiguration.pointerMovePredicate = pp
+      set pointerMovePredicate(TT) {
+        this._pointerPickingConfiguration.pointerMovePredicate = TT
       }
       get pointerDownFastCheck() {
         return this._pointerPickingConfiguration.pointerDownFastCheck
       }
-      set pointerDownFastCheck(pp) {
-        this._pointerPickingConfiguration.pointerDownFastCheck = pp
+      set pointerDownFastCheck(TT) {
+        this._pointerPickingConfiguration.pointerDownFastCheck = TT
       }
       get pointerUpFastCheck() {
         return this._pointerPickingConfiguration.pointerUpFastCheck
       }
-      set pointerUpFastCheck(pp) {
-        this._pointerPickingConfiguration.pointerUpFastCheck = pp
+      set pointerUpFastCheck(TT) {
+        this._pointerPickingConfiguration.pointerUpFastCheck = TT
       }
       get pointerMoveFastCheck() {
         return this._pointerPickingConfiguration.pointerMoveFastCheck
       }
-      set pointerMoveFastCheck(pp) {
-        this._pointerPickingConfiguration.pointerMoveFastCheck = pp
+      set pointerMoveFastCheck(TT) {
+        this._pointerPickingConfiguration.pointerMoveFastCheck = TT
       }
       get skipPointerMovePicking() {
         return this._pointerPickingConfiguration.skipPointerMovePicking
       }
-      set skipPointerMovePicking(pp) {
-        this._pointerPickingConfiguration.skipPointerMovePicking = pp
+      set skipPointerMovePicking(TT) {
+        this._pointerPickingConfiguration.skipPointerMovePicking = TT
       }
       get skipPointerDownPicking() {
         return this._pointerPickingConfiguration.skipPointerDownPicking
       }
-      set skipPointerDownPicking(pp) {
-        this._pointerPickingConfiguration.skipPointerDownPicking = pp
+      set skipPointerDownPicking(TT) {
+        this._pointerPickingConfiguration.skipPointerDownPicking = TT
       }
       get skipPointerUpPicking() {
         return this._pointerPickingConfiguration.skipPointerUpPicking
       }
-      set skipPointerUpPicking(pp) {
-        this._pointerPickingConfiguration.skipPointerUpPicking = pp
+      set skipPointerUpPicking(TT) {
+        this._pointerPickingConfiguration.skipPointerUpPicking = TT
       }
       get unTranslatedPointer() {
         return this._inputManager.unTranslatedPointer
       }
       static get DragMovementThreshold() {
-        return Fp.DragMovementThreshold
+        return KT.DragMovementThreshold
       }
-      static set DragMovementThreshold(pp) {
-        Fp.DragMovementThreshold = pp
+      static set DragMovementThreshold(TT) {
+        KT.DragMovementThreshold = TT
       }
       static get LongPressDelay() {
-        return Fp.LongPressDelay
+        return KT.LongPressDelay
       }
-      static set LongPressDelay(pp) {
-        Fp.LongPressDelay = pp
+      static set LongPressDelay(TT) {
+        KT.LongPressDelay = TT
       }
       static get DoubleClickDelay() {
-        return Fp.DoubleClickDelay
+        return KT.DoubleClickDelay
       }
-      static set DoubleClickDelay(pp) {
-        Fp.DoubleClickDelay = pp
+      static set DoubleClickDelay(TT) {
+        KT.DoubleClickDelay = TT
       }
       static get ExclusiveDoubleClickMode() {
-        return Fp.ExclusiveDoubleClickMode
+        return KT.ExclusiveDoubleClickMode
       }
-      static set ExclusiveDoubleClickMode(pp) {
-        Fp.ExclusiveDoubleClickMode = pp
+      static set ExclusiveDoubleClickMode(TT) {
+        KT.ExclusiveDoubleClickMode = TT
       }
       get _eyePosition() {
-        return this._forcedViewPosition ?? this.activeCamera?.globalPosition ?? Dp.o.ZeroReadOnly
+        return this._forcedViewPosition ?? this.activeCamera?.globalPosition ?? jT.p.ZeroReadOnly
       }
-      bindEyePosition(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vEyePosition",
-          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Op = this._eyePosition,
-          op = this.useRightHandedSystem === (null != this._mirroredCameraPosition),
-          Ip = this.floatingOriginOffset,
-          Sp = Ic.set(Op.x, Op.y, Op.z, op ? -1 : 1),
-          xp = Sp.subtractFromFloatsToRef(Ip.x, Ip.y, Ip.z, 0, Sc);
-        return pp && (cp ? pp.setFloat3(ip, xp.x, xp.y, xp.z) : pp.setVector4(ip, xp)), Sp
+      bindEyePosition(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vEyePosition",
+          mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const WT = this._eyePosition,
+          zT = this.useRightHandedSystem === (null != this._mirroredCameraPosition),
+          MT = this.floatingOriginOffset,
+          gT = mm.set(WT.x, WT.y, WT.z, zT ? -1 : 1),
+          nT = gT.subtractFromFloatsToRef(MT.x, MT.y, MT.z, 0, Wm);
+        return TT && (mT ? TT.setFloat3(UT, nT.x, nT.y, nT.z) : TT.setVector4(UT, nT)), gT
       }
       finalizeSceneUbo() {
-        const pp = this.getSceneUniformBuffer(),
-          ip = this.bindEyePosition(null),
-          cp = this.floatingOriginOffset;
-        return pp.updateFloat4("vEyePosition", ip.x - cp.x, ip.y - cp.y, ip.z - cp.z, ip.w), pp.update(), pp
+        const TT = this.getSceneUniformBuffer(),
+          UT = this.bindEyePosition(null),
+          mT = this.floatingOriginOffset;
+        return TT.updateFloat4("vEyePosition", UT.x - mT.x, UT.y - mT.y, UT.z - mT.z, UT.w), TT.update(), TT
       }
-      set useRightHandedSystem(pp) {
-        this._useRightHandedSystem !== pp && (this._useRightHandedSystem = pp, this.markAllMaterialsAsDirty(16))
+      set useRightHandedSystem(TT) {
+        this._useRightHandedSystem !== TT && (this._useRightHandedSystem = TT, this.markAllMaterialsAsDirty(16))
       }
       get useRightHandedSystem() {
         return this._useRightHandedSystem
       }
-      setStepId(pp) {
-        this._currentStepId = pp
+      setStepId(TT) {
+        this._currentStepId = TT
       }
       getStepId() {
         return this._currentStepId
@@ -7960,14 +7960,14 @@ export const modules = {
       getInternalStep() {
         return this._currentInternalStep
       }
-      set fogEnabled(pp) {
-        this._fogEnabled !== pp && (this._fogEnabled = pp, this.markAllMaterialsAsDirty(16))
+      set fogEnabled(TT) {
+        this._fogEnabled !== TT && (this._fogEnabled = TT, this.markAllMaterialsAsDirty(16))
       }
       get fogEnabled() {
         return this._fogEnabled
       }
-      set fogMode(pp) {
-        this._fogMode !== pp && (this._fogMode = pp, this.markAllMaterialsAsDirty(16))
+      set fogMode(TT) {
+        this._fogMode !== TT && (this._fogMode = TT, this.markAllMaterialsAsDirty(16))
       }
       get fogMode() {
         return this._fogMode
@@ -7975,14 +7975,14 @@ export const modules = {
       get prePass() {
         return !!this.prePassRenderer && this.prePassRenderer.defaultRT.enabled
       }
-      set shadowsEnabled(pp) {
-        this._shadowsEnabled !== pp && (this._shadowsEnabled = pp, this.markAllMaterialsAsDirty(2))
+      set shadowsEnabled(TT) {
+        this._shadowsEnabled !== TT && (this._shadowsEnabled = TT, this.markAllMaterialsAsDirty(2))
       }
       get shadowsEnabled() {
         return this._shadowsEnabled
       }
-      set lightsEnabled(pp) {
-        this._lightsEnabled !== pp && (this._lightsEnabled = pp, this.markAllMaterialsAsDirty(2))
+      set lightsEnabled(TT) {
+        this._lightsEnabled !== TT && (this._lightsEnabled = TT, this.markAllMaterialsAsDirty(2))
       }
       get lightsEnabled() {
         return this._lightsEnabled
@@ -7990,28 +7990,28 @@ export const modules = {
       get activeCameras() {
         return this._activeCameras
       }
-      set activeCameras(pp) {
-        this._unObserveActiveCameras && (this._unObserveActiveCameras(), this._unObserveActiveCameras = null), pp && (this._unObserveActiveCameras = (0, Kp.j)(pp, (() => {
+      set activeCameras(TT) {
+        this._unObserveActiveCameras && (this._unObserveActiveCameras(), this._unObserveActiveCameras = null), TT && (this._unObserveActiveCameras = (0, oT.e)(TT, (() => {
           this.onActiveCamerasChanged.notifyObservers(this)
-        }))), this._activeCameras = pp
+        }))), this._activeCameras = TT
       }
       get activeCamera() {
         return this._activeCamera
       }
-      set activeCamera(pp) {
-        pp !== this._activeCamera && (this._activeCamera = pp, this.onActiveCameraChanged.notifyObservers(this))
+      set activeCamera(TT) {
+        TT !== this._activeCamera && (this._activeCamera = TT, this.onActiveCameraChanged.notifyObservers(this))
       }
       get _hasDefaultMaterial() {
-        return Lc.DefaultMaterialFactory !== Lc._OriginalDefaultMaterialFactory
+        return Mm.DefaultMaterialFactory !== Mm._OriginalDefaultMaterialFactory
       }
       get defaultMaterial() {
-        return this._defaultMaterial || (this._defaultMaterial = Lc.DefaultMaterialFactory(this)), this._defaultMaterial
+        return this._defaultMaterial || (this._defaultMaterial = Mm.DefaultMaterialFactory(this)), this._defaultMaterial
       }
-      set defaultMaterial(pp) {
-        this._defaultMaterial = pp
+      set defaultMaterial(TT) {
+        this._defaultMaterial = TT
       }
-      set texturesEnabled(pp) {
-        this._texturesEnabled !== pp && (this._texturesEnabled = pp, this.markAllMaterialsAsDirty(1))
+      set texturesEnabled(TT) {
+        this._texturesEnabled !== TT && (this._texturesEnabled = TT, this.markAllMaterialsAsDirty(1))
       }
       get texturesEnabled() {
         return this._texturesEnabled
@@ -8019,18 +8019,18 @@ export const modules = {
       get frameGraph() {
         return this._frameGraph
       }
-      set frameGraph(pp) {
-        if (this._frameGraph) return this._frameGraph = pp, void(pp || (this.customRenderFunction = this._currentCustomRenderFunction));
-        this._frameGraph = pp, pp && (this._currentCustomRenderFunction = this.customRenderFunction, this.customRenderFunction = this._renderWithFrameGraph, this.activeCamera = null)
+      set frameGraph(TT) {
+        if (this._frameGraph) return this._frameGraph = TT, void(TT || (this.customRenderFunction = this._currentCustomRenderFunction));
+        this._frameGraph = TT, TT && (this._currentCustomRenderFunction = this.customRenderFunction, this.customRenderFunction = this._renderWithFrameGraph, this.activeCamera = null)
       }
-      set skeletonsEnabled(pp) {
-        this._skeletonsEnabled !== pp && (this._skeletonsEnabled = pp, this.markAllMaterialsAsDirty(8))
+      set skeletonsEnabled(TT) {
+        this._skeletonsEnabled !== TT && (this._skeletonsEnabled = TT, this.markAllMaterialsAsDirty(8))
       }
       get skeletonsEnabled() {
         return this._skeletonsEnabled
       }
       get collisionCoordinator() {
-        return this._collisionCoordinator || (this._collisionCoordinator = Lc.CollisionCoordinatorFactory(), this._collisionCoordinator.init(this)), this._collisionCoordinator
+        return this._collisionCoordinator || (this._collisionCoordinator = Mm.CollisionCoordinatorFactory(), this._collisionCoordinator.init(this)), this._collisionCoordinator
       }
       get renderingManager() {
         return this._renderingManager
@@ -8040,41 +8040,41 @@ export const modules = {
       }
       _registerTransientComponents() {
         if (this._transientComponents.length > 0) {
-          for (const pp of this._transientComponents) pp.register();
+          for (const TT of this._transientComponents) TT.register();
           this._transientComponents.length = 0
         }
       }
-      uOp(pp) {
-        this._components.push(pp), this._transientComponents.push(pp);
-        const ip = pp;
-        ip.addFromContainer && ip.serialize && this._serializableComponents.push(ip)
+      WWT(TT) {
+        this._components.push(TT), this._transientComponents.push(TT);
+        const UT = TT;
+        UT.addFromContainer && UT.serialize && this._serializableComponents.push(UT)
       }
-      _getComponent(pp) {
-        for (const ip of this._components)
-          if (ip.name === pp) return ip;
+      _getComponent(TT) {
+        for (const UT of this._components)
+          if (UT.name === TT) return UT;
         return null
       }
       get uniqueId() {
         return this._uniqueId
       }
-      constructor(pp, ip) {
-        this._inputManager = new Fp(this), this.cameraToUseForPointers = null, this._isScene = !0, this._blockEntityCollection = !1, this.autoClear = !0, this.autoClearDepthAndStencil = !0, this._clearColor = new Gp.h(.2, .2, .3, 1), this.onClearColorChangedObservable = new Sp.d, this.ambientColor = new Gp.d(0, 0, 0), this.environmentIntensity = 1, this.iblIntensity = 1, this._performancePriority = 0, this.onScenePerformancePriorityChangedObservable = new Sp.d, this._forceWireframe = !1, this._skipFrustumClipping = !1, this._forcePointsCloud = !1, this.rootNodes = [], this.cameras = [], this.lights = [], this.meshes = [], this.skeletons = [], this.Wm = [], this.animations = [], this.animationGroups = [], this.multiMaterials = [], this.materials = [], this.morphTargetManagers = [], this.geometries = [], this.transformNodes = [], this.actionManagers = [], this.objectRenderers = [], this.textures = [], this._environmentTexture = null, this.postProcesses = [], this.effectLayers = [], this.sounds = null, this.layers = [], this.lensFlareSystems = [], this.proceduralTextures = [], this.animationsEnabled = !0, this._animationPropertiesOverride = null, this.useConstantAnimationDeltaTime = !1, this.constantlyUpdateMeshUnderPointer = !1, this.hoverCursor = "pointer", this.defaultCursor = "", this.doNotHandleCursors = !1, this.preventDefaultOnPointerDown = !0, this.preventDefaultOnPointerUp = !0, this.metadata = null, this.reservedDataStore = null, this.disableOfflineSupportExceptionRules = [], this.Kl = new Sp.d, this._onDisposeObserver = null, this.onBeforeRenderObservable = new Sp.d, this._onBeforeRenderObserver = null, this.onAfterRenderObservable = new Sp.d, this.onAfterRenderCameraObservable = new Sp.d, this._onAfterRenderObserver = null, this.onBeforeAnimationsObservable = new Sp.d, this.onAfterAnimationsObservable = new Sp.d, this.onBeforeDrawPhaseObservable = new Sp.d, this.onAfterDrawPhaseObservable = new Sp.d, this.onReadyObservable = new Sp.d, this.onBeforeCameraRenderObservable = new Sp.d, this._onBeforeCameraRenderObserver = null, this.onAfterCameraRenderObservable = new Sp.d, this._onAfterCameraRenderObserver = null, this.onBeforeActiveMeshesEvaluationObservable = new Sp.d, this.onAfterActiveMeshesEvaluationObservable = new Sp.d, this.onBeforeParticlesRenderingObservable = new Sp.d, this.onAfterParticlesRenderingObservable = new Sp.d, this.onDataLoadedObservable = new Sp.d, this.onNewCameraAddedObservable = new Sp.d, this.onCameraRemovedObservable = new Sp.d, this.onNewLightAddedObservable = new Sp.d, this.onLightRemovedObservable = new Sp.d, this.onNewGeometryAddedObservable = new Sp.d, this.onGeometryRemovedObservable = new Sp.d, this.onNewTransformNodeAddedObservable = new Sp.d, this.onTransformNodeRemovedObservable = new Sp.d, this.onNewMeshAddedObservable = new Sp.d, this.onMeshRemovedObservable = new Sp.d, this.onNewSkeletonAddedObservable = new Sp.d, this.onSkeletonRemovedObservable = new Sp.d, this.onNewParticleSystemAddedObservable = new Sp.d, this.onParticleSystemRemovedObservable = new Sp.d, this.onNewAnimationGroupAddedObservable = new Sp.d, this.onAnimationGroupRemovedObservable = new Sp.d, this.onNewMaterialAddedObservable = new Sp.d, this.onNewMultiMaterialAddedObservable = new Sp.d, this.onMaterialRemovedObservable = new Sp.d, this.onMultiMaterialRemovedObservable = new Sp.d, this.onNewTextureAddedObservable = new Sp.d, this.onTextureRemovedObservable = new Sp.d, this.onNewFrameGraphAddedObservable = new Sp.d, this.onFrameGraphRemovedObservable = new Sp.d, this.onNewObjectRendererAddedObservable = new Sp.d, this.onObjectRendererRemovedObservable = new Sp.d, this.onNewPostProcessAddedObservable = new Sp.d, this.onPostProcessRemovedObservable = new Sp.d, this.onNewEffectLayerAddedObservable = new Sp.d, this.onEffectLayerRemovedObservable = new Sp.d, this.onBeforeRenderTargetsRenderObservable = new Sp.d, this.onAfterRenderTargetsRenderObservable = new Sp.d, this.onBeforeStepObservable = new Sp.d, this.onAfterStepObservable = new Sp.d, this.onActiveCameraChanged = new Sp.d, this.onActiveCamerasChanged = new Sp.d, this.onBeforeRenderingGroupObservable = new Sp.d, this.onAfterRenderingGroupObservable = new Sp.d, this.onMeshImportedObservable = new Sp.d, this.onAnimationFileImportedObservable = new Sp.d, this.onEnvironmentTextureChangedObservable = new Sp.d, this.onMeshUnderPointerUpdatedObservable = new Sp.d, this._registeredForLateAnimationBindings = new xp.d(256), this._pointerPickingConfiguration = new Vp, this.onPrePointerObservable = new Sp.d, this.onPointerObservable = new Sp.d, this.onPreKeyboardObservable = new Sp.d, this.onKeyboardObservable = new Sp.d, this._useRightHandedSystem = !1, this._timeAccumulator = 0, this._currentStepId = 0, this._currentInternalStep = 0, this._fogEnabled = !0, this._fogMode = Lc.FOGMODE_NONE, this.fogColor = new Gp.d(.2, .2, .3), this.fogDensity = .1, this.fogStart = 0, this.fogEnd = 1e3, this.needsPreviousWorldMatrices = !1, this._shadowsEnabled = !0, this._lightsEnabled = !0, this._unObserveActiveCameras = null, this._texturesEnabled = !0, this._frameGraph = null, this.frameGraphs = [], this.hN = !0, this.particlesEnabled = !0, this.spritesEnabled = !0, this._skeletonsEnabled = !0, this.lensFlaresEnabled = !0, this.collisionsEnabled = !0, this.gravity = new Dp.o(0, -9.807, 0), this.postProcessesEnabled = !0, this.renderTargetsEnabled = !0, this.dumpNextRenderTargets = !1, this.customRenderTargets = [], this.importedMeshesFiles = [], this.probesEnabled = !0, this._meshesForIntersections = new xp.d(256), this.proceduralTexturesEnabled = !0, this._totalVertices = new gp.b, this._activeIndices = new gp.b, this._activeParticles = new gp.b, this._activeBones = new gp.b, this._animationTime = 0, this.animationTimeScale = 1, this._renderId = 0, this._frameId = 0, this._renderingMeshEvaluationDepth = 0, this._executeWhenReadyTimeoutId = null, this._intermediateRendering = !1, this._defaultFrameBufferCleared = !1, this._viewUpdateFlag = -1, this._projectionUpdateFlag = -1, this._toBeDisposed = new Array(256), this._activeRequests = new Array, this._delayedFileRequests = null, this._pendingData = [], this._isDisposed = !1, this._isDisposing = !1, this._isReadyChecks = [], this.dispatchAllSubMeshesOfActiveMeshes = !1, this._activeMeshes = new xp.g(256), this._processedMaterials = new xp.g(256), this._renderTargets = new xp.d(256), this._materialsRenderTargets = new xp.d(256), this._activeParticleSystems = new xp.g(256), this._activeSkeletons = new xp.d(32), this._softwareSkinnedMeshes = new xp.d(32), this._activeAnimatables = new Array, this._animationWrites = new Array, this._animationWriteCount = 0, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, this._transformMatrix = Dp.b.Zero(), this.requireLightSorting = !1, this._components = [], this._serializableComponents = [], this._transientComponents = [], this._beforeCameraUpdateStage = tp.i.Create(), this._beforeClearStage = tp.i.Create(), this._beforeRenderTargetClearStage = tp.i.Create(), this._gatherRenderTargetsStage = tp.i.Create(), this._gatherActiveCameraRenderTargetsStage = tp.i.Create(), this._isReadyForMeshStage = tp.i.Create(), this._beforeEvaluateActiveMeshStage = tp.i.Create(), this._evaluateSubMeshStage = tp.i.Create(), this._preActiveMeshStage = tp.i.Create(), this._cameraDrawRenderTargetStage = tp.i.Create(), this._beforeCameraDrawStage = tp.i.Create(), this._beforeRenderTargetDrawStage = tp.i.Create(), this._beforeRenderingGroupDrawStage = tp.i.Create(), this._beforeRenderingMeshStage = tp.i.Create(), this._afterRenderingMeshStage = tp.i.Create(), this._afterRenderingGroupDrawStage = tp.i.Create(), this._afterCameraDrawStage = tp.i.Create(), this._afterCameraPostProcessStage = tp.i.Create(), this._afterRenderTargetDrawStage = tp.i.Create(), this._afterRenderTargetPostProcessStage = tp.i.Create(), this._afterRenderStage = tp.i.Create(), this._pointerMoveStage = tp.i.Create(), this._pointerDownStage = tp.i.Create(), this._pointerUpStage = tp.i.Create(), this._geometriesByUniqueId = null, this._uniqueId = 0, this._defaultMeshCandidates = {
+      constructor(TT, UT) {
+        this._inputManager = new KT(this), this.cameraToUseForPointers = null, this._isScene = !0, this._blockEntityCollection = !1, this.autoClear = !0, this.autoClearDepthAndStencil = !0, this._clearColor = new GT.g(.2, .2, .3, 1), this.onClearColorChangedObservable = new gT.d, this.ambientColor = new GT.d(0, 0, 0), this.environmentIntensity = 1, this.iblIntensity = 1, this._performancePriority = 0, this.onScenePerformancePriorityChangedObservable = new gT.d, this._forceWireframe = !1, this._skipFrustumClipping = !1, this._forcePointsCloud = !1, this.rootNodes = [], this.cameras = [], this.lights = [], this.meshes = [], this.skeletons = [], this.EY = [], this.animations = [], this.animationGroups = [], this.multiMaterials = [], this.materials = [], this.morphTargetManagers = [], this.geometries = [], this.transformNodes = [], this.actionManagers = [], this.objectRenderers = [], this.textures = [], this._environmentTexture = null, this.postProcesses = [], this.effectLayers = [], this.sounds = null, this.layers = [], this.lensFlareSystems = [], this.proceduralTextures = [], this.animationsEnabled = !0, this._animationPropertiesOverride = null, this.useConstantAnimationDeltaTime = !1, this.constantlyUpdateMeshUnderPointer = !1, this.hoverCursor = "pointer", this.defaultCursor = "", this.doNotHandleCursors = !1, this.preventDefaultOnPointerDown = !0, this.preventDefaultOnPointerUp = !0, this.metadata = null, this.reservedDataStore = null, this.disableOfflineSupportExceptionRules = [], this.SF = new gT.d, this._onDisposeObserver = null, this.onBeforeRenderObservable = new gT.d, this._onBeforeRenderObserver = null, this.onAfterRenderObservable = new gT.d, this.onAfterRenderCameraObservable = new gT.d, this._onAfterRenderObserver = null, this.onBeforeAnimationsObservable = new gT.d, this.onAfterAnimationsObservable = new gT.d, this.onBeforeDrawPhaseObservable = new gT.d, this.onAfterDrawPhaseObservable = new gT.d, this.onReadyObservable = new gT.d, this.onBeforeCameraRenderObservable = new gT.d, this._onBeforeCameraRenderObserver = null, this.onAfterCameraRenderObservable = new gT.d, this._onAfterCameraRenderObserver = null, this.onBeforeActiveMeshesEvaluationObservable = new gT.d, this.onAfterActiveMeshesEvaluationObservable = new gT.d, this.onBeforeParticlesRenderingObservable = new gT.d, this.onAfterParticlesRenderingObservable = new gT.d, this.onDataLoadedObservable = new gT.d, this.onNewCameraAddedObservable = new gT.d, this.onCameraRemovedObservable = new gT.d, this.onNewLightAddedObservable = new gT.d, this.onLightRemovedObservable = new gT.d, this.onNewGeometryAddedObservable = new gT.d, this.onGeometryRemovedObservable = new gT.d, this.onNewTransformNodeAddedObservable = new gT.d, this.onTransformNodeRemovedObservable = new gT.d, this.onNewMeshAddedObservable = new gT.d, this.onMeshRemovedObservable = new gT.d, this.onNewSkeletonAddedObservable = new gT.d, this.onSkeletonRemovedObservable = new gT.d, this.onNewParticleSystemAddedObservable = new gT.d, this.onParticleSystemRemovedObservable = new gT.d, this.onNewAnimationGroupAddedObservable = new gT.d, this.onAnimationGroupRemovedObservable = new gT.d, this.onNewMaterialAddedObservable = new gT.d, this.onNewMultiMaterialAddedObservable = new gT.d, this.onMaterialRemovedObservable = new gT.d, this.onMultiMaterialRemovedObservable = new gT.d, this.onNewTextureAddedObservable = new gT.d, this.onTextureRemovedObservable = new gT.d, this.onNewFrameGraphAddedObservable = new gT.d, this.onFrameGraphRemovedObservable = new gT.d, this.onNewObjectRendererAddedObservable = new gT.d, this.onObjectRendererRemovedObservable = new gT.d, this.onNewPostProcessAddedObservable = new gT.d, this.onPostProcessRemovedObservable = new gT.d, this.onNewEffectLayerAddedObservable = new gT.d, this.onEffectLayerRemovedObservable = new gT.d, this.onBeforeRenderTargetsRenderObservable = new gT.d, this.onAfterRenderTargetsRenderObservable = new gT.d, this.onBeforeStepObservable = new gT.d, this.onAfterStepObservable = new gT.d, this.onActiveCameraChanged = new gT.d, this.onActiveCamerasChanged = new gT.d, this.onBeforeRenderingGroupObservable = new gT.d, this.onAfterRenderingGroupObservable = new gT.d, this.onMeshImportedObservable = new gT.d, this.onAnimationFileImportedObservable = new gT.d, this.onEnvironmentTextureChangedObservable = new gT.d, this.onMeshUnderPointerUpdatedObservable = new gT.d, this._registeredForLateAnimationBindings = new nT.c(256), this._pointerPickingConfiguration = new AT, this.onPrePointerObservable = new gT.d, this.onPointerObservable = new gT.d, this.onPreKeyboardObservable = new gT.d, this.onKeyboardObservable = new gT.d, this._useRightHandedSystem = !1, this._timeAccumulator = 0, this._currentStepId = 0, this._currentInternalStep = 0, this._fogEnabled = !0, this._fogMode = Mm.FOGMODE_NONE, this.fogColor = new GT.d(.2, .2, .3), this.fogDensity = .1, this.fogStart = 0, this.fogEnd = 1e3, this.needsPreviousWorldMatrices = !1, this._shadowsEnabled = !0, this._lightsEnabled = !0, this._unObserveActiveCameras = null, this._texturesEnabled = !0, this._frameGraph = null, this.frameGraphs = [], this.RC = !0, this.particlesEnabled = !0, this.spritesEnabled = !0, this._skeletonsEnabled = !0, this.lensFlaresEnabled = !0, this.collisionsEnabled = !0, this.gravity = new jT.p(0, -9.807, 0), this.postProcessesEnabled = !0, this.renderTargetsEnabled = !0, this.dumpNextRenderTargets = !1, this.customRenderTargets = [], this.importedMeshesFiles = [], this.probesEnabled = !0, this._meshesForIntersections = new nT.c(256), this.proceduralTexturesEnabled = !0, this._totalVertices = new ST.b, this._activeIndices = new ST.b, this._activeParticles = new ST.b, this._activeBones = new ST.b, this._animationTime = 0, this.animationTimeScale = 1, this._renderId = 0, this._frameId = 0, this._renderingMeshEvaluationDepth = 0, this._executeWhenReadyTimeoutId = null, this._intermediateRendering = !1, this._defaultFrameBufferCleared = !1, this._viewUpdateFlag = -1, this._projectionUpdateFlag = -1, this._toBeDisposed = new Array(256), this._activeRequests = new Array, this._delayedFileRequests = null, this._pendingData = [], this._isDisposed = !1, this._isDisposing = !1, this._isReadyChecks = [], this.dispatchAllSubMeshesOfActiveMeshes = !1, this._activeMeshes = new nT.f(256), this._processedMaterials = new nT.f(256), this._renderTargets = new nT.c(256), this._materialsRenderTargets = new nT.c(256), this._activeParticleSystems = new nT.f(256), this._activeSkeletons = new nT.c(32), this._softwareSkinnedMeshes = new nT.c(32), this._activeAnimatables = new Array, this._animationWrites = new Array, this._animationWriteCount = 0, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, this._transformMatrix = jT.e.Zero(), this.requireLightSorting = !1, this._components = [], this._serializableComponents = [], this._transientComponents = [], this._beforeCameraUpdateStage = fT.d.Create(), this._beforeClearStage = fT.d.Create(), this._beforeRenderTargetClearStage = fT.d.Create(), this._gatherRenderTargetsStage = fT.d.Create(), this._gatherActiveCameraRenderTargetsStage = fT.d.Create(), this._isReadyForMeshStage = fT.d.Create(), this._beforeEvaluateActiveMeshStage = fT.d.Create(), this._evaluateSubMeshStage = fT.d.Create(), this._preActiveMeshStage = fT.d.Create(), this._cameraDrawRenderTargetStage = fT.d.Create(), this._beforeCameraDrawStage = fT.d.Create(), this._beforeRenderTargetDrawStage = fT.d.Create(), this._beforeRenderingGroupDrawStage = fT.d.Create(), this._beforeRenderingMeshStage = fT.d.Create(), this._afterRenderingMeshStage = fT.d.Create(), this._afterRenderingGroupDrawStage = fT.d.Create(), this._afterCameraDrawStage = fT.d.Create(), this._afterCameraPostProcessStage = fT.d.Create(), this._afterRenderTargetDrawStage = fT.d.Create(), this._afterRenderTargetPostProcessStage = fT.d.Create(), this._afterRenderStage = fT.d.Create(), this._pointerMoveStage = fT.d.Create(), this._pointerDownStage = fT.d.Create(), this._pointerUpStage = fT.d.Create(), this._geometriesByUniqueId = null, this._uniqueId = 0, this._defaultMeshCandidates = {
           data: [],
           length: 0
         }, this._defaultSubMeshCandidates = {
           data: [],
           length: 0
-        }, this.onReadyTimeoutObservable = new Sp.d, this.onReadyTimeoutDuration = 12e4, this._timeoutChecksStartTime = 0, this._floatingOriginScene = void 0, this._preventFreeActiveMeshesAndRenderingGroups = !1, this._activeMeshesFrozen = !1, this._activeMeshesFrozenButKeepClipping = !1, this._skipEvaluateActiveMeshesCompletely = !1, this._freezeActiveMeshesCancel = null, this._useCurrentFrameBuffer = !1, this._allowPostProcessClearColor = !0, this.getDeterministicFrameTime = () => this._engine.getTimeStep(), this._getFloatingOriginScene = () => this._floatingOriginScene, this._registeredActions = 0, this._blockMaterialDirtyMechanism = !1, this._perfCollector = null, this.activeCameras = [], this._uniqueId = this.getUniqueId();
-        const cp = {
+        }, this.onReadyTimeoutObservable = new gT.d, this.onReadyTimeoutDuration = 12e4, this._timeoutChecksStartTime = 0, this._floatingOriginScene = void 0, this._preventFreeActiveMeshesAndRenderingGroups = !1, this._activeMeshesFrozen = !1, this._activeMeshesFrozenButKeepClipping = !1, this._skipEvaluateActiveMeshesCompletely = !1, this._freezeActiveMeshesCancel = null, this._useCurrentFrameBuffer = !1, this._allowPostProcessClearColor = !0, this.getDeterministicFrameTime = () => this._engine.getTimeStep(), this._getFloatingOriginScene = () => this._floatingOriginScene, this._registeredActions = 0, this._blockMaterialDirtyMechanism = !1, this._perfCollector = null, this.activeCameras = [], this._uniqueId = this.getUniqueId();
+        const mT = {
           useGeometryUniqueIdsMap: !0,
           useMaterialMeshMap: !0,
           useClonedMeshMap: !0,
           virtual: !1,
           defaultCameraLayerMask: 268435455,
           defaultRenderableLayerMask: 268435455,
-          ...ip
+          ...UT
         };
-        this.defaultCameraLayerMask = cp.defaultCameraLayerMask, this.defaultRenderableLayerMask = cp.defaultRenderableLayerMask, pp = this._engine = pp || dp.e.LastCreatedEngine, cp.virtual ? pp._virtualScenes.push(this) : (dp.e._LastCreatedScene = this, pp.scenes.push(this)), (pp.getCreationOptions().useLargeWorldRendering || ip?.useFloatingOrigin) && ((0, wp.g)(), this._floatingOriginScene = this, wp.c.Gl = this._getFloatingOriginScene), this._uid = null, this._renderingManager = new vp.d(this), Up.e && (this.postProcessManager = new Up.e(this)), (0, Hp.j)() && this.attachControl(), this._createUbo(), Ap.c && (this._imageProcessingConfiguration = new Ap.c), this.setDefaultCandidateProviders(), cp.useGeometryUniqueIdsMap && (this._geometriesByUniqueId = {}), this.useMaterialMeshMap = cp.useMaterialMeshMap, this.useClonedMeshMap = cp.useClonedMeshMap, ip && ip.virtual || pp.onNewSceneAddedObservable.notifyObservers(this)
+        this.defaultCameraLayerMask = mT.defaultCameraLayerMask, this.defaultRenderableLayerMask = mT.defaultRenderableLayerMask, TT = this._engine = TT || iT.c.LastCreatedEngine, mT.virtual ? TT._virtualScenes.push(this) : (iT.c._LastCreatedScene = this, TT.scenes.push(this)), (TT.getCreationOptions().useLargeWorldRendering || UT?.useFloatingOrigin) && ((0, cT.c)(), this._floatingOriginScene = this, cT.b.KF = this._getFloatingOriginScene), this._uid = null, this._renderingManager = new vT.d(this), ZT.b && (this.postProcessManager = new ZT.b(this)), (0, qT.j)() && this.attachControl(), this._createUbo(), lT.b && (this._imageProcessingConfiguration = new lT.b), this.setDefaultCandidateProviders(), mT.useGeometryUniqueIdsMap && (this._geometriesByUniqueId = {}), this.useMaterialMeshMap = mT.useMaterialMeshMap, this.useClonedMeshMap = mT.useClonedMeshMap, UT && UT.virtual || TT.onNewSceneAddedObservable.notifyObservers(this)
       }
       getClassName() {
         return "Scene"
@@ -8082,11 +8082,11 @@ export const modules = {
       _getDefaultMeshCandidates() {
         return this._defaultMeshCandidates.data = this.meshes, this._defaultMeshCandidates.length = this.meshes.length, this._defaultMeshCandidates
       }
-      _getDefaultSubMeshCandidates(pp) {
-        return this._defaultSubMeshCandidates.data = pp.Am, this._defaultSubMeshCandidates.length = pp.Am.length, this._defaultSubMeshCandidates
+      _getDefaultSubMeshCandidates(TT) {
+        return this._defaultSubMeshCandidates.data = TT.rY, this._defaultSubMeshCandidates.length = TT.rY.length, this._defaultSubMeshCandidates
       }
       setDefaultCandidateProviders() {
-        this.getActiveMeshCandidates = () => this._getDefaultMeshCandidates(), this.getActiveSubMeshCandidates = pp => this._getDefaultSubMeshCandidates(pp), this.getIntersectingSubMeshCandidates = (pp, ip) => this._getDefaultSubMeshCandidates(pp), this.getCollidingSubMeshCandidates = (pp, ip) => this._getDefaultSubMeshCandidates(pp)
+        this.getActiveMeshCandidates = () => this._getDefaultMeshCandidates(), this.getActiveSubMeshCandidates = TT => this._getDefaultSubMeshCandidates(TT), this.getIntersectingSubMeshCandidates = (TT, UT) => this._getDefaultSubMeshCandidates(TT), this.getCollidingSubMeshCandidates = (TT, UT) => this._getDefaultSubMeshCandidates(TT)
       }
       get meshUnderPointer() {
         return this._inputManager.meshUnderPointer
@@ -8094,14 +8094,14 @@ export const modules = {
       get pointerX() {
         return this._inputManager.pointerX
       }
-      set pointerX(pp) {
-        this._inputManager.pointerX = pp
+      set pointerX(TT) {
+        this._inputManager.pointerX = TT
       }
       get pointerY() {
         return this._inputManager.pointerY
       }
-      set pointerY(pp) {
-        this._inputManager.pointerY = pp
+      set pointerY(TT) {
+        this._inputManager.pointerY = TT
       }
       getCachedMaterial() {
         return this._cachedMaterial
@@ -8112,11 +8112,11 @@ export const modules = {
       getCachedVisibility() {
         return this._cachedVisibility
       }
-      isCachedMaterialInvalid(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        return this._cachedEffect !== ip || this._cachedMaterial !== pp || this._cachedVisibility !== cp
+      isCachedMaterialInvalid(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+        return this._cachedEffect !== UT || this._cachedMaterial !== TT || this._cachedVisibility !== mT
       }
-      gy() {
+      eB() {
         return this._engine
       }
       getTotalVertices() {
@@ -8161,113 +8161,113 @@ export const modules = {
       _createUbo() {
         this.setSceneUniformBuffer(this.createSceneUniformBuffer())
       }
-      simulatePointerMove(pp, ip) {
-        return this._inputManager.simulatePointerMove(pp, ip), this
+      simulatePointerMove(TT, UT) {
+        return this._inputManager.simulatePointerMove(TT, UT), this
       }
-      simulatePointerDown(pp, ip) {
-        return this._inputManager.simulatePointerDown(pp, ip), this
+      simulatePointerDown(TT, UT) {
+        return this._inputManager.simulatePointerDown(TT, UT), this
       }
-      simulatePointerUp(pp, ip, cp) {
-        return this._inputManager.simulatePointerUp(pp, ip, cp), this
+      simulatePointerUp(TT, UT, mT) {
+        return this._inputManager.simulatePointerUp(TT, UT, mT), this
       }
       isPointerCaptured() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._inputManager.isPointerCaptured(pp)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._inputManager.isPointerCaptured(TT)
       }
       attachControl() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._inputManager.attachControl(pp, ip, cp)
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._inputManager.attachControl(TT, UT, mT)
       }
       detachControl() {
         this._inputManager.detachControl()
       }
       isReady() {
-        let pp, ip = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        let TT, UT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
         if (this._isDisposed) return !1;
-        const cp = this.gy(),
-          Op = cp.currentRenderPassId;
-        cp.currentRenderPassId = this.activeCamera?.renderPassId ?? Op;
-        let op = !0;
-        for (this._pendingData.length > 0 && (op = !1), this.prePassRenderer?.update(), this.useOrderIndependentTransparency && this.depthPeelingRenderer && op && (op = this.depthPeelingRenderer.isReady()), ip && (this._processedMaterials.reset(), this._materialsRenderTargets.reset()), pp = 0; pp < this.meshes.length; pp++) {
-          const Op = this.meshes[pp];
-          if (!Op.Am || 0 === Op.Am.length) continue;
-          if (!Op.isReady(!0)) {
-            op = !1;
+        const mT = this.eB(),
+          WT = mT.currentRenderPassId;
+        mT.currentRenderPassId = this.activeCamera?.renderPassId ?? WT;
+        let zT = !0;
+        for (this._pendingData.length > 0 && (zT = !1), this.prePassRenderer?.update(), this.useOrderIndependentTransparency && this.depthPeelingRenderer && zT && (zT = this.depthPeelingRenderer.isReady()), UT && (this._processedMaterials.reset(), this._materialsRenderTargets.reset()), TT = 0; TT < this.meshes.length; TT++) {
+          const WT = this.meshes[TT];
+          if (!WT.rY || 0 === WT.rY.length) continue;
+          if (!WT.isReady(!0)) {
+            zT = !1;
             continue
           }
-          const Ip = Op.hasThinInstances || "InstancedMesh" === Op.getClassName() || "InstancedLinesMesh" === Op.getClassName() || cp.getCaps().instancedArrays && Op.instances.length > 0;
-          for (let pp = 0, ip = this._isReadyForMeshStage; pp < ip.length; pp++) {
-            ip[pp].action(Op, Ip) || (op = !1)
+          const MT = WT.hasThinInstances || "InstancedMesh" === WT.getClassName() || "InstancedLinesMesh" === WT.getClassName() || mT.getCaps().instancedArrays && WT.instances.length > 0;
+          for (let TT = 0, UT = this._isReadyForMeshStage; TT < UT.length; TT++) {
+            UT[TT].action(WT, MT) || (zT = !1)
           }
-          if (!ip) continue;
-          const Sp = Op.material || this.defaultMaterial;
-          if (Sp)
-            if (Sp._storeEffectOnSubMeshes)
-              for (const pp of Op.Am) {
-                const ip = pp.Ky();
-                ip && ip.hasRenderTargetTextures && null != ip.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(ip) && (this._processedMaterials.push(ip), this._materialsRenderTargets.concatWithNoDuplicate(ip.getRenderTargetTextures()))
-              } else Sp.hasRenderTargetTextures && null != Sp.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(Sp) && (this._processedMaterials.push(Sp), this._materialsRenderTargets.concatWithNoDuplicate(Sp.getRenderTargetTextures()))
+          if (!UT) continue;
+          const gT = WT.material || this.defaultMaterial;
+          if (gT)
+            if (gT._storeEffectOnSubMeshes)
+              for (const TT of WT.rY) {
+                const UT = TT.wB();
+                UT && UT.hasRenderTargetTextures && null != UT.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(UT) && (this._processedMaterials.push(UT), this._materialsRenderTargets.concatWithNoDuplicate(UT.getRenderTargetTextures()))
+              } else gT.hasRenderTargetTextures && null != gT.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(gT) && (this._processedMaterials.push(gT), this._materialsRenderTargets.concatWithNoDuplicate(gT.getRenderTargetTextures()))
         }
-        if (ip) {
-          for (pp = 0; pp < this._materialsRenderTargets.length; ++pp) {
-            this._materialsRenderTargets.data[pp].isReadyForRendering() || (op = !1)
+        if (UT) {
+          for (TT = 0; TT < this._materialsRenderTargets.length; ++TT) {
+            this._materialsRenderTargets.data[TT].isReadyForRendering() || (zT = !1)
           }
-          for (pp = 0; pp < this.customRenderTargets.length; ++pp) {
-            this.customRenderTargets[pp].isReadyForRendering() || (op = !1)
+          for (TT = 0; TT < this.customRenderTargets.length; ++TT) {
+            this.customRenderTargets[TT].isReadyForRendering() || (zT = !1)
           }
         }
-        for (pp = 0; pp < this.geometries.length; pp++) {
-          2 === this.geometries[pp].delayLoadState && (op = !1)
+        for (TT = 0; TT < this.geometries.length; TT++) {
+          2 === this.geometries[TT].delayLoadState && (zT = !1)
         }
         if (this.activeCameras && this.activeCameras.length > 0)
-          for (const Ip of this.activeCameras) Ip.isReady(!0) || (op = !1);
-        else this.activeCamera && (this.activeCamera.isReady(!0) || (op = !1));
-        for (const Ip of this.Wm) Ip.isReady() || (op = !1);
+          for (const MT of this.activeCameras) MT.isReady(!0) || (zT = !1);
+        else this.activeCamera && (this.activeCamera.isReady(!0) || (zT = !1));
+        for (const MT of this.EY) MT.isReady() || (zT = !1);
         if (this.proceduralTexturesEnabled)
-          for (const Ip of this.proceduralTextures) Ip.isReady() || (op = !1);
+          for (const MT of this.proceduralTextures) MT.isReady() || (zT = !1);
         if (this.layers)
-          for (const Ip of this.layers) Ip.isReady() || (op = !1);
+          for (const MT of this.layers) MT.isReady() || (zT = !1);
         if (this.effectLayers)
-          for (const Ip of this.effectLayers) Ip.isLayerReady() || (op = !1);
-        for (const Ip of this._isReadyChecks) Ip.isReady() || (op = !1);
-        return cp.areAllEffectsReady() || (op = !1), cp.currentRenderPassId = Op, op
+          for (const MT of this.effectLayers) MT.isLayerReady() || (zT = !1);
+        for (const MT of this._isReadyChecks) MT.isReady() || (zT = !1);
+        return mT.areAllEffectsReady() || (zT = !1), mT.currentRenderPassId = WT, zT
       }
       resetCachedMaterial() {
         this._cachedMaterial = null, this._cachedEffect = null, this._cachedVisibility = null
       }
-      registerBeforeRender(pp) {
-        this.onBeforeRenderObservable.add(pp)
+      registerBeforeRender(TT) {
+        this.onBeforeRenderObservable.add(TT)
       }
-      unregisterBeforeRender(pp) {
-        this.onBeforeRenderObservable.removeCallback(pp)
+      unregisterBeforeRender(TT) {
+        this.onBeforeRenderObservable.removeCallback(TT)
       }
-      registerAfterRender(pp) {
-        this.onAfterRenderObservable.add(pp)
+      registerAfterRender(TT) {
+        this.onAfterRenderObservable.add(TT)
       }
-      unregisterAfterRender(pp) {
-        this.onAfterRenderObservable.removeCallback(pp)
+      unregisterAfterRender(TT) {
+        this.onAfterRenderObservable.removeCallback(TT)
       }
-      _executeOnceBeforeRender(pp) {
-        const ip = () => {
-          pp(), setTimeout((() => {
-            this.unregisterBeforeRender(ip)
+      _executeOnceBeforeRender(TT) {
+        const UT = () => {
+          TT(), setTimeout((() => {
+            this.unregisterBeforeRender(UT)
           }))
         };
-        this.registerBeforeRender(ip)
+        this.registerBeforeRender(UT)
       }
-      executeOnceBeforeRender(pp, ip) {
-        void 0 !== ip ? setTimeout((() => {
-          this._executeOnceBeforeRender(pp)
-        }), ip) : this._executeOnceBeforeRender(pp)
+      executeOnceBeforeRender(TT, UT) {
+        void 0 !== UT ? setTimeout((() => {
+          this._executeOnceBeforeRender(TT)
+        }), UT) : this._executeOnceBeforeRender(TT)
       }
-      addPendingData(pp) {
-        this._pendingData.push(pp)
+      addPendingData(TT) {
+        this._pendingData.push(TT)
       }
-      removePendingData(pp) {
-        const ip = this.isLoading,
-          cp = this._pendingData.indexOf(pp); - 1 !== cp && this._pendingData.splice(cp, 1), ip && !this.isLoading && this.onDataLoadedObservable.notifyObservers(this)
+      removePendingData(TT) {
+        const UT = this.isLoading,
+          mT = this._pendingData.indexOf(TT); - 1 !== mT && this._pendingData.splice(mT, 1), UT && !this.isLoading && this.onDataLoadedObservable.notifyObservers(this)
       }
       getWaitingItemsCount() {
         return this._pendingData.length
@@ -8275,41 +8275,41 @@ export const modules = {
       get isLoading() {
         return this._pendingData.length > 0
       }
-      addIsReadyCheck(pp) {
-        -1 === this._isReadyChecks.indexOf(pp) && this._isReadyChecks.push(pp)
+      addIsReadyCheck(TT) {
+        -1 === this._isReadyChecks.indexOf(TT) && this._isReadyChecks.push(TT)
       }
-      removeIsReadyCheck(pp) {
-        const ip = this._isReadyChecks.indexOf(pp); - 1 !== ip && this._isReadyChecks.splice(ip, 1)
+      removeIsReadyCheck(TT) {
+        const UT = this._isReadyChecks.indexOf(TT); - 1 !== UT && this._isReadyChecks.splice(UT, 1)
       }
-      executeWhenReady(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.onReadyObservable.addOnce(pp), null === this._executeWhenReadyTimeoutId && this._checkIsReady(ip)
+      executeWhenReady(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.onReadyObservable.addOnce(TT), null === this._executeWhenReadyTimeoutId && this._checkIsReady(UT)
       }
       async whenReadyAsync() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return await new Promise((ip => {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return await new Promise((UT => {
           this.executeWhenReady((() => {
-            ip()
-          }), pp)
+            UT()
+          }), TT)
         }))
       }
       _clearReadynessChecksData() {
         this._timeoutChecksStartTime = 0, this.onReadyTimeoutObservable.clear(), this.onReadyObservable.clear(), this._executeWhenReadyTimeoutId = null
       }
       _checkIsReady() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this._registerTransientComponents(), 0 === this._timeoutChecksStartTime) this._timeoutChecksStartTime = Ip.e.Now;
-        else if (this.onReadyTimeoutDuration > 0 && Ip.e.Now - this._timeoutChecksStartTime > this.onReadyTimeoutDuration) return this.onReadyTimeoutObservable.notifyObservers(this), void this._clearReadynessChecksData();
-        if (this.isReady(pp)) return this.onReadyObservable.notifyObservers(this), void this._clearReadynessChecksData();
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (this._registerTransientComponents(), 0 === this._timeoutChecksStartTime) this._timeoutChecksStartTime = MT.c.Now;
+        else if (this.onReadyTimeoutDuration > 0 && MT.c.Now - this._timeoutChecksStartTime > this.onReadyTimeoutDuration) return this.onReadyTimeoutObservable.notifyObservers(this), void this._clearReadynessChecksData();
+        if (this.isReady(TT)) return this.onReadyObservable.notifyObservers(this), void this._clearReadynessChecksData();
         this._isDisposed ? this._clearReadynessChecksData() : this._executeWhenReadyTimeoutId = setTimeout((() => {
-          this.incrementRenderId(), this._checkIsReady(pp)
+          this.incrementRenderId(), this._checkIsReady(TT)
         }), 100)
       }
       get animatables() {
         return this._activeAnimatables
       }
       resetLastAnimationTimeFrame() {
-        this._animationTimeLast = Ip.e.Now
+        this._animationTimeLast = MT.c.Now
       }
       getViewMatrix() {
         return this._viewMatrix
@@ -8323,534 +8323,534 @@ export const modules = {
       getTransformMatrix() {
         return this._transformMatrix
       }
-      setTransformMatrix(pp, ip, cp, Op) {
-        this._multiviewSceneUboIsActive = !!(cp && Op && this._multiviewSceneUbo), this._viewUpdateFlag === pp.updateFlag && this._projectionUpdateFlag === ip.updateFlag || (this._viewUpdateFlag = pp.updateFlag, this._projectionUpdateFlag = ip.updateFlag, this._viewMatrix = pp, this._projectionMatrix = ip, this._inverseProjectionMatrix || (this._inverseProjectionMatrix = new Dp.b), this._projectionMatrix.invertToRef(this._inverseProjectionMatrix), this._viewMatrix.multiplyToRef(this._projectionMatrix, this._transformMatrix), this._frustumPlanes ? rp.c.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = rp.c.GetPlanes(this._transformMatrix), this._multiviewSceneUboIsActive && this._multiviewSceneUbo.useUbo ? this._updateMultiviewUbo(cp, Op) : this._sceneUbo.useUbo && (this._sceneUbo.I3("viewProjection", this._transformMatrix), this._sceneUbo.I3("view", this._viewMatrix), this._sceneUbo.I3("projection", this._projectionMatrix), this._sceneUbo.I3("inverseProjection", this._inverseProjectionMatrix)))
+      setTransformMatrix(TT, UT, mT, WT) {
+        this._multiviewSceneUboIsActive = !!(mT && WT && this._multiviewSceneUbo), this._viewUpdateFlag === TT.updateFlag && this._projectionUpdateFlag === UT.updateFlag || (this._viewUpdateFlag = TT.updateFlag, this._projectionUpdateFlag = UT.updateFlag, this._viewMatrix = TT, this._projectionMatrix = UT, this._inverseProjectionMatrix || (this._inverseProjectionMatrix = new jT.e), this._projectionMatrix.invertToRef(this._inverseProjectionMatrix), this._viewMatrix.multiplyToRef(this._projectionMatrix, this._transformMatrix), this._frustumPlanes ? NT.d.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = NT.d.GetPlanes(this._transformMatrix), this._multiviewSceneUboIsActive && this._multiviewSceneUbo.useUbo ? this._updateMultiviewUbo(mT, WT) : this._sceneUbo.useUbo && (this._sceneUbo.R7("viewProjection", this._transformMatrix), this._sceneUbo.R7("view", this._viewMatrix), this._sceneUbo.R7("projection", this._projectionMatrix), this._sceneUbo.R7("inverseProjection", this._inverseProjectionMatrix)))
       }
       getSceneUniformBuffer() {
         return this._multiviewSceneUboIsActive && this._multiviewSceneUbo ? this._multiviewSceneUbo : this._sceneUbo
       }
-      createSceneUniformBuffer(pp, ip) {
-        const cp = "boolean" === typeof ip ? ip : ip?.trackUBOsInFrame,
-          Op = new Pp.b(this._engine, void 0, !1, pp ?? "pw", void 0, cp);
-        return Op.addUniform("viewProjection", 16), Op.addUniform("view", 16), Op.addUniform("projection", 16), Op.addUniform("vEyePosition", 4), Op.addUniform("inverseProjection", 16), Op
+      createSceneUniformBuffer(TT, UT) {
+        const mT = "boolean" === typeof UT ? UT : UT?.trackUBOsInFrame,
+          WT = new LT.c(this._engine, void 0, !1, TT ?? "XZ", void 0, mT);
+        return WT.addUniform("viewProjection", 16), WT.addUniform("view", 16), WT.addUniform("projection", 16), WT.addUniform("vEyePosition", 4), WT.addUniform("inverseProjection", 16), WT
       }
-      setSceneUniformBuffer(pp) {
-        this._sceneUbo = pp, this._viewUpdateFlag = -1, this._projectionUpdateFlag = -1
+      setSceneUniformBuffer(TT) {
+        this._sceneUbo = TT, this._viewUpdateFlag = -1, this._projectionUpdateFlag = -1
       }
       get floatingOriginMode() {
         return void 0 !== this._floatingOriginScene
       }
       get floatingOriginOffset() {
-        return this.floatingOriginMode ? this._eyePosition : Dp.o.ZeroReadOnly
+        return this.floatingOriginMode ? this._eyePosition : jT.p.ZeroReadOnly
       }
       getUniqueId() {
-        return Zp.UniqueId
+        return ET.UniqueId
       }
-      TOp(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (!this._blockEntityCollection && (this.meshes.push(pp), pp._resyncLightSources(), pp.parent || pp._addToSceneRootNodes(), op.b.SetImmediate((() => {
-            this.onNewMeshAddedObservable.notifyObservers(pp)
-          })), ip)) {
-          const ip = pp.getChildMeshes();
-          for (const pp of ip) this.TOp(pp)
+      fWT(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (!this._blockEntityCollection && (this.meshes.push(TT), TT._resyncLightSources(), TT.parent || TT._addToSceneRootNodes(), zT.e.SetImmediate((() => {
+            this.onNewMeshAddedObservable.notifyObservers(TT)
+          })), UT)) {
+          const UT = TT.getChildMeshes();
+          for (const TT of UT) this.fWT(TT)
         }
       }
-      xJ(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const cp = this.meshes.indexOf(pp);
-        if (-1 !== cp && (this.meshes.splice(cp, 1), pp.parent || pp._removeFromSceneRootNodes()), this._inputManager._invalidateMesh(pp), this.onMeshRemovedObservable.notifyObservers(pp), ip) {
-          const ip = pp.getChildMeshes();
-          for (const pp of ip) this.xJ(pp)
+      cV(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const mT = this.meshes.indexOf(TT);
+        if (-1 !== mT && (this.meshes.splice(mT, 1), TT.parent || TT._removeFromSceneRootNodes()), this._inputManager._invalidateMesh(TT), this.onMeshRemovedObservable.notifyObservers(TT), UT) {
+          const UT = TT.getChildMeshes();
+          for (const TT of UT) this.cV(TT)
         }
-        return cp
+        return mT
       }
-      addTransformNode(pp) {
-        this._blockEntityCollection || pp.Gl() === this && -1 !== pp._indexInSceneTransformNodesArray || (pp._indexInSceneTransformNodesArray = this.transformNodes.length, this.transformNodes.push(pp), pp.parent || pp._addToSceneRootNodes(), this.onNewTransformNodeAddedObservable.notifyObservers(pp))
+      addTransformNode(TT) {
+        this._blockEntityCollection || TT.KF() === this && -1 !== TT._indexInSceneTransformNodesArray || (TT._indexInSceneTransformNodesArray = this.transformNodes.length, this.transformNodes.push(TT), TT.parent || TT._addToSceneRootNodes(), this.onNewTransformNodeAddedObservable.notifyObservers(TT))
       }
-      removeTransformNode(pp) {
-        const ip = pp._indexInSceneTransformNodesArray;
-        if (-1 !== ip) {
-          if (ip !== this.transformNodes.length - 1) {
-            const pp = this.transformNodes[this.transformNodes.length - 1];
-            this.transformNodes[ip] = pp, pp._indexInSceneTransformNodesArray = ip
+      removeTransformNode(TT) {
+        const UT = TT._indexInSceneTransformNodesArray;
+        if (-1 !== UT) {
+          if (UT !== this.transformNodes.length - 1) {
+            const TT = this.transformNodes[this.transformNodes.length - 1];
+            this.transformNodes[UT] = TT, TT._indexInSceneTransformNodesArray = UT
           }
-          pp._indexInSceneTransformNodesArray = -1, this.transformNodes.pop(), pp.parent || pp._removeFromSceneRootNodes()
+          TT._indexInSceneTransformNodesArray = -1, this.transformNodes.pop(), TT.parent || TT._removeFromSceneRootNodes()
         }
-        return this.onTransformNodeRemovedObservable.notifyObservers(pp), ip
+        return this.onTransformNodeRemovedObservable.notifyObservers(TT), UT
       }
-      removeSkeleton(pp) {
-        const ip = this.skeletons.indexOf(pp);
-        return -1 !== ip && (this.skeletons.splice(ip, 1), this.onSkeletonRemovedObservable.notifyObservers(pp), this._executeActiveContainerCleanup(this._activeSkeletons)), ip
+      removeSkeleton(TT) {
+        const UT = this.skeletons.indexOf(TT);
+        return -1 !== UT && (this.skeletons.splice(UT, 1), this.onSkeletonRemovedObservable.notifyObservers(TT), this._executeActiveContainerCleanup(this._activeSkeletons)), UT
       }
-      removeMorphTargetManager(pp) {
-        const ip = this.morphTargetManagers.indexOf(pp);
-        return -1 !== ip && this.morphTargetManagers.splice(ip, 1), ip
+      removeMorphTargetManager(TT) {
+        const UT = this.morphTargetManagers.indexOf(TT);
+        return -1 !== UT && this.morphTargetManagers.splice(UT, 1), UT
       }
-      removeLight(pp) {
-        const ip = this.lights.indexOf(pp);
-        if (-1 !== ip) {
-          for (const ip of this.meshes) ip._removeLightSource(pp, !1);
-          this.lights.splice(ip, 1), this.sortLightsByPriority(), pp.parent || pp._removeFromSceneRootNodes(), this.onLightRemovedObservable.notifyObservers(pp)
+      removeLight(TT) {
+        const UT = this.lights.indexOf(TT);
+        if (-1 !== UT) {
+          for (const UT of this.meshes) UT._removeLightSource(TT, !1);
+          this.lights.splice(UT, 1), this.sortLightsByPriority(), TT.parent || TT._removeFromSceneRootNodes(), this.onLightRemovedObservable.notifyObservers(TT)
         }
-        return ip
+        return UT
       }
-      removeCamera(pp) {
-        const ip = this.cameras.indexOf(pp);
-        if (-1 !== ip && (this.cameras.splice(ip, 1), pp.parent || pp._removeFromSceneRootNodes()), this.activeCameras) {
-          const ip = this.activeCameras.indexOf(pp); - 1 !== ip && this.activeCameras.splice(ip, 1)
+      removeCamera(TT) {
+        const UT = this.cameras.indexOf(TT);
+        if (-1 !== UT && (this.cameras.splice(UT, 1), TT.parent || TT._removeFromSceneRootNodes()), this.activeCameras) {
+          const UT = this.activeCameras.indexOf(TT); - 1 !== UT && this.activeCameras.splice(UT, 1)
         }
-        return this.activeCamera === pp && (this.cameras.length > 0 ? this.activeCamera = this.cameras[0] : this.activeCamera = null), this.onCameraRemovedObservable.notifyObservers(pp), ip
+        return this.activeCamera === TT && (this.cameras.length > 0 ? this.activeCamera = this.cameras[0] : this.activeCamera = null), this.onCameraRemovedObservable.notifyObservers(TT), UT
       }
-      removeParticleSystem(pp) {
-        const ip = this.Wm.indexOf(pp);
-        return -1 !== ip && (this.Wm.splice(ip, 1), this._executeActiveContainerCleanup(this._activeParticleSystems)), this.onParticleSystemRemovedObservable.notifyObservers(pp), ip
+      removeParticleSystem(TT) {
+        const UT = this.EY.indexOf(TT);
+        return -1 !== UT && (this.EY.splice(UT, 1), this._executeActiveContainerCleanup(this._activeParticleSystems)), this.onParticleSystemRemovedObservable.notifyObservers(TT), UT
       }
-      removeAnimation(pp) {
-        const ip = this.animations.indexOf(pp);
-        return -1 !== ip && this.animations.splice(ip, 1), ip
+      removeAnimation(TT) {
+        const UT = this.animations.indexOf(TT);
+        return -1 !== UT && this.animations.splice(UT, 1), UT
       }
-      stopAnimation(pp, ip, cp) {}
-      removeAnimationGroup(pp) {
-        const ip = this.animationGroups.indexOf(pp);
-        return -1 !== ip && this.animationGroups.splice(ip, 1), this.onAnimationGroupRemovedObservable.notifyObservers(pp), ip
+      stopAnimation(TT, UT, mT) {}
+      removeAnimationGroup(TT) {
+        const UT = this.animationGroups.indexOf(TT);
+        return -1 !== UT && this.animationGroups.splice(UT, 1), this.onAnimationGroupRemovedObservable.notifyObservers(TT), UT
       }
-      removeMultiMaterial(pp) {
-        const ip = this.multiMaterials.indexOf(pp);
-        return -1 !== ip && this.multiMaterials.splice(ip, 1), this.onMultiMaterialRemovedObservable.notifyObservers(pp), ip
+      removeMultiMaterial(TT) {
+        const UT = this.multiMaterials.indexOf(TT);
+        return -1 !== UT && this.multiMaterials.splice(UT, 1), this.onMultiMaterialRemovedObservable.notifyObservers(TT), UT
       }
-      removeMaterial(pp) {
-        const ip = pp._indexInSceneMaterialArray;
-        if (-1 !== ip && ip < this.materials.length) {
-          if (ip !== this.materials.length - 1) {
-            const pp = this.materials[this.materials.length - 1];
-            this.materials[ip] = pp, pp._indexInSceneMaterialArray = ip
+      removeMaterial(TT) {
+        const UT = TT._indexInSceneMaterialArray;
+        if (-1 !== UT && UT < this.materials.length) {
+          if (UT !== this.materials.length - 1) {
+            const TT = this.materials[this.materials.length - 1];
+            this.materials[UT] = TT, TT._indexInSceneMaterialArray = UT
           }
-          pp._indexInSceneMaterialArray = -1, this.materials.pop()
+          TT._indexInSceneMaterialArray = -1, this.materials.pop()
         }
-        return this.onMaterialRemovedObservable.notifyObservers(pp), ip
+        return this.onMaterialRemovedObservable.notifyObservers(TT), UT
       }
-      removeActionManager(pp) {
-        const ip = this.actionManagers.indexOf(pp);
-        return -1 !== ip && this.actionManagers.splice(ip, 1), ip
+      removeActionManager(TT) {
+        const UT = this.actionManagers.indexOf(TT);
+        return -1 !== UT && this.actionManagers.splice(UT, 1), UT
       }
-      removeTexture(pp) {
-        const ip = this.textures.indexOf(pp);
-        return -1 !== ip && this.textures.splice(ip, 1), this.onTextureRemovedObservable.notifyObservers(pp), ip
+      removeTexture(TT) {
+        const UT = this.textures.indexOf(TT);
+        return -1 !== UT && this.textures.splice(UT, 1), this.onTextureRemovedObservable.notifyObservers(TT), UT
       }
-      removeFrameGraph(pp) {
-        const ip = this.frameGraphs.indexOf(pp);
-        return -1 !== ip && this.frameGraphs.splice(ip, 1), this.onFrameGraphRemovedObservable.notifyObservers(pp), ip
+      removeFrameGraph(TT) {
+        const UT = this.frameGraphs.indexOf(TT);
+        return -1 !== UT && this.frameGraphs.splice(UT, 1), this.onFrameGraphRemovedObservable.notifyObservers(TT), UT
       }
-      removeObjectRenderer(pp) {
-        const ip = this.objectRenderers.indexOf(pp);
-        return -1 !== ip && this.objectRenderers.splice(ip, 1), this.onObjectRendererRemovedObservable.notifyObservers(pp), ip
+      removeObjectRenderer(TT) {
+        const UT = this.objectRenderers.indexOf(TT);
+        return -1 !== UT && this.objectRenderers.splice(UT, 1), this.onObjectRendererRemovedObservable.notifyObservers(TT), UT
       }
-      removePostProcess(pp) {
-        const ip = this.postProcesses.indexOf(pp);
-        return -1 !== ip && this.postProcesses.splice(ip, 1), this.onPostProcessRemovedObservable.notifyObservers(pp), ip
+      removePostProcess(TT) {
+        const UT = this.postProcesses.indexOf(TT);
+        return -1 !== UT && this.postProcesses.splice(UT, 1), this.onPostProcessRemovedObservable.notifyObservers(TT), UT
       }
-      removeEffectLayer(pp) {
-        const ip = this.effectLayers.indexOf(pp);
-        return -1 !== ip && this.effectLayers.splice(ip, 1), this.onEffectLayerRemovedObservable.notifyObservers(pp), ip
+      removeEffectLayer(TT) {
+        const UT = this.effectLayers.indexOf(TT);
+        return -1 !== UT && this.effectLayers.splice(UT, 1), this.onEffectLayerRemovedObservable.notifyObservers(TT), UT
       }
-      addLight(pp) {
+      addLight(TT) {
         if (!this._blockEntityCollection) {
-          this.lights.push(pp), this.sortLightsByPriority(), pp.parent || pp._addToSceneRootNodes();
-          for (const ip of this.meshes) - 1 === ip.lightSources.indexOf(pp) && (ip.lightSources.push(pp), ip._resyncLightSources());
-          op.b.SetImmediate((() => {
-            this.onNewLightAddedObservable.notifyObservers(pp)
+          this.lights.push(TT), this.sortLightsByPriority(), TT.parent || TT._addToSceneRootNodes();
+          for (const UT of this.meshes) - 1 === UT.lightSources.indexOf(TT) && (UT.lightSources.push(TT), UT._resyncLightSources());
+          zT.e.SetImmediate((() => {
+            this.onNewLightAddedObservable.notifyObservers(TT)
           }))
         }
       }
       sortLightsByPriority() {
-        this.requireLightSorting && this.lights.sort(sp.b.CompareLightsPriority)
+        this.requireLightSorting && this.lights.sort(DT.b.CompareLightsPriority)
       }
-      addCamera(pp) {
-        this._blockEntityCollection || (this.cameras.push(pp), op.b.SetImmediate((() => {
-          this.onNewCameraAddedObservable.notifyObservers(pp)
-        })), pp.parent || pp._addToSceneRootNodes())
+      addCamera(TT) {
+        this._blockEntityCollection || (this.cameras.push(TT), zT.e.SetImmediate((() => {
+          this.onNewCameraAddedObservable.notifyObservers(TT)
+        })), TT.parent || TT._addToSceneRootNodes())
       }
-      addSkeleton(pp) {
-        this._blockEntityCollection || (this.skeletons.push(pp), op.b.SetImmediate((() => {
-          this.onNewSkeletonAddedObservable.notifyObservers(pp)
+      addSkeleton(TT) {
+        this._blockEntityCollection || (this.skeletons.push(TT), zT.e.SetImmediate((() => {
+          this.onNewSkeletonAddedObservable.notifyObservers(TT)
         })))
       }
-      addParticleSystem(pp) {
-        this._blockEntityCollection || (this.Wm.push(pp), op.b.SetImmediate((() => {
-          this.onNewParticleSystemAddedObservable.notifyObservers(pp)
+      addParticleSystem(TT) {
+        this._blockEntityCollection || (this.EY.push(TT), zT.e.SetImmediate((() => {
+          this.onNewParticleSystemAddedObservable.notifyObservers(TT)
         })))
       }
-      addAnimation(pp) {
-        this._blockEntityCollection || this.animations.push(pp)
+      addAnimation(TT) {
+        this._blockEntityCollection || this.animations.push(TT)
       }
-      addAnimationGroup(pp) {
-        this._blockEntityCollection || (this.animationGroups.push(pp), op.b.SetImmediate((() => {
-          this.onNewAnimationGroupAddedObservable.notifyObservers(pp)
+      addAnimationGroup(TT) {
+        this._blockEntityCollection || (this.animationGroups.push(TT), zT.e.SetImmediate((() => {
+          this.onNewAnimationGroupAddedObservable.notifyObservers(TT)
         })))
       }
-      addMultiMaterial(pp) {
-        this._blockEntityCollection || (this.multiMaterials.push(pp), op.b.SetImmediate((() => {
-          this.onNewMultiMaterialAddedObservable.notifyObservers(pp)
+      addMultiMaterial(TT) {
+        this._blockEntityCollection || (this.multiMaterials.push(TT), zT.e.SetImmediate((() => {
+          this.onNewMultiMaterialAddedObservable.notifyObservers(TT)
         })))
       }
-      addMaterial(pp) {
-        this._blockEntityCollection || pp.Gl() === this && -1 !== pp._indexInSceneMaterialArray || (pp._indexInSceneMaterialArray = this.materials.length, this.materials.push(pp), op.b.SetImmediate((() => {
-          this.onNewMaterialAddedObservable.notifyObservers(pp)
+      addMaterial(TT) {
+        this._blockEntityCollection || TT.KF() === this && -1 !== TT._indexInSceneMaterialArray || (TT._indexInSceneMaterialArray = this.materials.length, this.materials.push(TT), zT.e.SetImmediate((() => {
+          this.onNewMaterialAddedObservable.notifyObservers(TT)
         })))
       }
-      addMorphTargetManager(pp) {
-        this._blockEntityCollection || this.morphTargetManagers.push(pp)
+      addMorphTargetManager(TT) {
+        this._blockEntityCollection || this.morphTargetManagers.push(TT)
       }
-      addGeometry(pp) {
-        this._blockEntityCollection || (this._geometriesByUniqueId && (this._geometriesByUniqueId[pp.uniqueId] = this.geometries.length), this.geometries.push(pp))
+      addGeometry(TT) {
+        this._blockEntityCollection || (this._geometriesByUniqueId && (this._geometriesByUniqueId[TT.uniqueId] = this.geometries.length), this.geometries.push(TT))
       }
-      addActionManager(pp) {
-        this.actionManagers.push(pp)
+      addActionManager(TT) {
+        this.actionManagers.push(TT)
       }
-      addTexture(pp) {
-        this._blockEntityCollection || (this.textures.push(pp), this.onNewTextureAddedObservable.notifyObservers(pp))
+      addTexture(TT) {
+        this._blockEntityCollection || (this.textures.push(TT), this.onNewTextureAddedObservable.notifyObservers(TT))
       }
-      addFrameGraph(pp) {
-        this.frameGraphs.push(pp), op.b.SetImmediate((() => {
-          this.onNewFrameGraphAddedObservable.notifyObservers(pp)
+      addFrameGraph(TT) {
+        this.frameGraphs.push(TT), zT.e.SetImmediate((() => {
+          this.onNewFrameGraphAddedObservable.notifyObservers(TT)
         }))
       }
-      addObjectRenderer(pp) {
-        this.objectRenderers.push(pp), op.b.SetImmediate((() => {
-          this.onNewObjectRendererAddedObservable.notifyObservers(pp)
+      addObjectRenderer(TT) {
+        this.objectRenderers.push(TT), zT.e.SetImmediate((() => {
+          this.onNewObjectRendererAddedObservable.notifyObservers(TT)
         }))
       }
-      addPostProcess(pp) {
-        this._blockEntityCollection || (this.postProcesses.push(pp), op.b.SetImmediate((() => {
-          this.onNewPostProcessAddedObservable.notifyObservers(pp)
+      addPostProcess(TT) {
+        this._blockEntityCollection || (this.postProcesses.push(TT), zT.e.SetImmediate((() => {
+          this.onNewPostProcessAddedObservable.notifyObservers(TT)
         })))
       }
-      addEffectLayer(pp) {
-        this._blockEntityCollection || (this.effectLayers.push(pp), op.b.SetImmediate((() => {
-          this.onNewEffectLayerAddedObservable.notifyObservers(pp)
+      addEffectLayer(TT) {
+        this._blockEntityCollection || (this.effectLayers.push(TT), zT.e.SetImmediate((() => {
+          this.onNewEffectLayerAddedObservable.notifyObservers(TT)
         })))
       }
-      switchActiveCamera(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._engine.getInputElement() && (this.activeCamera && this.activeCamera.detachControl(), this.activeCamera = pp, ip && pp.attachControl())
+      switchActiveCamera(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        this._engine.getInputElement() && (this.activeCamera && this.activeCamera.detachControl(), this.activeCamera = TT, UT && TT.attachControl())
       }
-      setActiveCameraById(pp) {
-        const ip = this.getCameraById(pp);
-        return ip ? (this.activeCamera = ip, ip) : null
+      setActiveCameraById(TT) {
+        const UT = this.getCameraById(TT);
+        return UT ? (this.activeCamera = UT, UT) : null
       }
-      setActiveCameraByName(pp) {
-        const ip = this.getCameraByName(pp);
-        return ip ? (this.activeCamera = ip, ip) : null
+      setActiveCameraByName(TT) {
+        const UT = this.getCameraByName(TT);
+        return UT ? (this.activeCamera = UT, UT) : null
       }
-      getAnimationGroupByName(pp) {
-        for (let ip = 0; ip < this.animationGroups.length; ip++)
-          if (this.animationGroups[ip].name === pp) return this.animationGroups[ip];
+      getAnimationGroupByName(TT) {
+        for (let UT = 0; UT < this.animationGroups.length; UT++)
+          if (this.animationGroups[UT].name === TT) return this.animationGroups[UT];
         return null
       }
-      _getMaterial(pp, ip) {
-        for (let cp = 0; cp < this.materials.length; cp++) {
-          const pp = this.materials[cp];
-          if (ip(pp)) return pp
+      _getMaterial(TT, UT) {
+        for (let mT = 0; mT < this.materials.length; mT++) {
+          const TT = this.materials[mT];
+          if (UT(TT)) return TT
         }
-        if (pp)
-          for (let cp = 0; cp < this.multiMaterials.length; cp++) {
-            const pp = this.multiMaterials[cp];
-            if (ip(pp)) return pp
+        if (TT)
+          for (let mT = 0; mT < this.multiMaterials.length; mT++) {
+            const TT = this.multiMaterials[mT];
+            if (UT(TT)) return TT
           }
         return null
       }
-      getMaterialByUniqueID(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.getMaterialByUniqueId(pp, ip)
+      getMaterialByUniqueID(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.getMaterialByUniqueId(TT, UT)
       }
-      getMaterialByUniqueId(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this._getMaterial(ip, (ip => ip.uniqueId === pp))
+      getMaterialByUniqueId(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this._getMaterial(UT, (UT => UT.uniqueId === TT))
       }
-      getMaterialById(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this._getMaterial(ip, (ip => ip.id === pp))
+      getMaterialById(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this._getMaterial(UT, (UT => UT.id === TT))
       }
-      getMaterialByName(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this._getMaterial(ip, (ip => ip.name === pp))
+      getMaterialByName(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this._getMaterial(UT, (UT => UT.name === TT))
       }
-      getLastMaterialById(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        for (let cp = this.materials.length - 1; cp >= 0; cp--)
-          if (this.materials[cp].id === pp) return this.materials[cp];
-        if (ip)
-          for (let cp = this.multiMaterials.length - 1; cp >= 0; cp--)
-            if (this.multiMaterials[cp].id === pp) return this.multiMaterials[cp];
+      getLastMaterialById(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        for (let mT = this.materials.length - 1; mT >= 0; mT--)
+          if (this.materials[mT].id === TT) return this.materials[mT];
+        if (UT)
+          for (let mT = this.multiMaterials.length - 1; mT >= 0; mT--)
+            if (this.multiMaterials[mT].id === TT) return this.multiMaterials[mT];
         return null
       }
-      getTextureByUniqueId(pp) {
-        for (let ip = 0; ip < this.textures.length; ip++)
-          if (this.textures[ip].uniqueId === pp) return this.textures[ip];
+      getTextureByUniqueId(TT) {
+        for (let UT = 0; UT < this.textures.length; UT++)
+          if (this.textures[UT].uniqueId === TT) return this.textures[UT];
         return null
       }
-      getTextureByName(pp) {
-        for (let ip = 0; ip < this.textures.length; ip++)
-          if (this.textures[ip].name === pp) return this.textures[ip];
+      getTextureByName(TT) {
+        for (let UT = 0; UT < this.textures.length; UT++)
+          if (this.textures[UT].name === TT) return this.textures[UT];
         return null
       }
-      getCameraById(pp) {
-        for (let ip = 0; ip < this.cameras.length; ip++)
-          if (this.cameras[ip].id === pp) return this.cameras[ip];
+      getCameraById(TT) {
+        for (let UT = 0; UT < this.cameras.length; UT++)
+          if (this.cameras[UT].id === TT) return this.cameras[UT];
         return null
       }
-      getCameraByUniqueId(pp) {
-        for (let ip = 0; ip < this.cameras.length; ip++)
-          if (this.cameras[ip].uniqueId === pp) return this.cameras[ip];
+      getCameraByUniqueId(TT) {
+        for (let UT = 0; UT < this.cameras.length; UT++)
+          if (this.cameras[UT].uniqueId === TT) return this.cameras[UT];
         return null
       }
-      getCameraByName(pp) {
-        for (let ip = 0; ip < this.cameras.length; ip++)
-          if (this.cameras[ip].name === pp) return this.cameras[ip];
+      getCameraByName(TT) {
+        for (let UT = 0; UT < this.cameras.length; UT++)
+          if (this.cameras[UT].name === TT) return this.cameras[UT];
         return null
       }
-      getBoneById(pp) {
-        for (let ip = 0; ip < this.skeletons.length; ip++) {
-          const cp = this.skeletons[ip];
-          for (let ip = 0; ip < cp.bones.length; ip++)
-            if (cp.bones[ip].id === pp) return cp.bones[ip]
+      getBoneById(TT) {
+        for (let UT = 0; UT < this.skeletons.length; UT++) {
+          const mT = this.skeletons[UT];
+          for (let UT = 0; UT < mT.bones.length; UT++)
+            if (mT.bones[UT].id === TT) return mT.bones[UT]
         }
         return null
       }
-      getBoneByName(pp) {
-        for (let ip = 0; ip < this.skeletons.length; ip++) {
-          const cp = this.skeletons[ip];
-          for (let ip = 0; ip < cp.bones.length; ip++)
-            if (cp.bones[ip].name === pp) return cp.bones[ip]
+      getBoneByName(TT) {
+        for (let UT = 0; UT < this.skeletons.length; UT++) {
+          const mT = this.skeletons[UT];
+          for (let UT = 0; UT < mT.bones.length; UT++)
+            if (mT.bones[UT].name === TT) return mT.bones[UT]
         }
         return null
       }
-      getLightByName(pp) {
-        for (let ip = 0; ip < this.lights.length; ip++)
-          if (this.lights[ip].name === pp) return this.lights[ip];
+      getLightByName(TT) {
+        for (let UT = 0; UT < this.lights.length; UT++)
+          if (this.lights[UT].name === TT) return this.lights[UT];
         return null
       }
-      getLightById(pp) {
-        for (let ip = 0; ip < this.lights.length; ip++)
-          if (this.lights[ip].id === pp) return this.lights[ip];
+      getLightById(TT) {
+        for (let UT = 0; UT < this.lights.length; UT++)
+          if (this.lights[UT].id === TT) return this.lights[UT];
         return null
       }
-      getLightByUniqueId(pp) {
-        for (let ip = 0; ip < this.lights.length; ip++)
-          if (this.lights[ip].uniqueId === pp) return this.lights[ip];
+      getLightByUniqueId(TT) {
+        for (let UT = 0; UT < this.lights.length; UT++)
+          if (this.lights[UT].uniqueId === TT) return this.lights[UT];
         return null
       }
-      getParticleSystemById(pp) {
-        for (let ip = 0; ip < this.Wm.length; ip++)
-          if (this.Wm[ip].id === pp) return this.Wm[ip];
+      getParticleSystemById(TT) {
+        for (let UT = 0; UT < this.EY.length; UT++)
+          if (this.EY[UT].id === TT) return this.EY[UT];
         return null
       }
-      getGeometryById(pp) {
-        for (let ip = 0; ip < this.geometries.length; ip++)
-          if (this.geometries[ip].id === pp) return this.geometries[ip];
+      getGeometryById(TT) {
+        for (let UT = 0; UT < this.geometries.length; UT++)
+          if (this.geometries[UT].id === TT) return this.geometries[UT];
         return null
       }
-      _getGeometryByUniqueId(pp) {
+      _getGeometryByUniqueId(TT) {
         if (this._geometriesByUniqueId) {
-          const ip = this._geometriesByUniqueId[pp];
-          if (void 0 !== ip) return this.geometries[ip]
+          const UT = this._geometriesByUniqueId[TT];
+          if (void 0 !== UT) return this.geometries[UT]
         } else
-          for (let ip = 0; ip < this.geometries.length; ip++)
-            if (this.geometries[ip].uniqueId === pp) return this.geometries[ip];
+          for (let UT = 0; UT < this.geometries.length; UT++)
+            if (this.geometries[UT].uniqueId === TT) return this.geometries[UT];
         return null
       }
-      getFrameGraphByName(pp) {
-        for (let ip = 0; ip < this.frameGraphs.length; ip++)
-          if (this.frameGraphs[ip].name === pp) return this.frameGraphs[ip];
+      getFrameGraphByName(TT) {
+        for (let UT = 0; UT < this.frameGraphs.length; UT++)
+          if (this.frameGraphs[UT].name === TT) return this.frameGraphs[UT];
         return null
       }
-      pushGeometry(pp, ip) {
-        return !(!ip && this._getGeometryByUniqueId(pp.uniqueId)) && (this.addGeometry(pp), op.b.SetImmediate((() => {
-          this.onNewGeometryAddedObservable.notifyObservers(pp)
+      pushGeometry(TT, UT) {
+        return !(!UT && this._getGeometryByUniqueId(TT.uniqueId)) && (this.addGeometry(TT), zT.e.SetImmediate((() => {
+          this.onNewGeometryAddedObservable.notifyObservers(TT)
         })), !0)
       }
-      removeGeometry(pp) {
-        let ip;
+      removeGeometry(TT) {
+        let UT;
         if (this._geometriesByUniqueId) {
-          if (ip = this._geometriesByUniqueId[pp.uniqueId], void 0 === ip) return !1
-        } else if (ip = this.geometries.indexOf(pp), ip < 0) return !1;
-        if (ip !== this.geometries.length - 1) {
-          const pp = this.geometries[this.geometries.length - 1];
-          pp && (this.geometries[ip] = pp, this._geometriesByUniqueId && (this._geometriesByUniqueId[pp.uniqueId] = ip))
+          if (UT = this._geometriesByUniqueId[TT.uniqueId], void 0 === UT) return !1
+        } else if (UT = this.geometries.indexOf(TT), UT < 0) return !1;
+        if (UT !== this.geometries.length - 1) {
+          const TT = this.geometries[this.geometries.length - 1];
+          TT && (this.geometries[UT] = TT, this._geometriesByUniqueId && (this._geometriesByUniqueId[TT.uniqueId] = UT))
         }
-        return this._geometriesByUniqueId && (this._geometriesByUniqueId[pp.uniqueId] = void 0), this.geometries.pop(), this.onGeometryRemovedObservable.notifyObservers(pp), !0
+        return this._geometriesByUniqueId && (this._geometriesByUniqueId[TT.uniqueId] = void 0), this.geometries.pop(), this.onGeometryRemovedObservable.notifyObservers(TT), !0
       }
       getGeometries() {
         return this.geometries
       }
-      getMeshById(pp) {
-        for (let ip = 0; ip < this.meshes.length; ip++)
-          if (this.meshes[ip].id === pp) return this.meshes[ip];
+      getMeshById(TT) {
+        for (let UT = 0; UT < this.meshes.length; UT++)
+          if (this.meshes[UT].id === TT) return this.meshes[UT];
         return null
       }
-      getMeshesById(pp) {
-        return this.meshes.filter((function(ip) {
-          return ip.id === pp
+      getMeshesById(TT) {
+        return this.meshes.filter((function(UT) {
+          return UT.id === TT
         }))
       }
-      getTransformNodeById(pp) {
-        for (let ip = 0; ip < this.transformNodes.length; ip++)
-          if (this.transformNodes[ip].id === pp) return this.transformNodes[ip];
+      getTransformNodeById(TT) {
+        for (let UT = 0; UT < this.transformNodes.length; UT++)
+          if (this.transformNodes[UT].id === TT) return this.transformNodes[UT];
         return null
       }
-      getTransformNodeByUniqueId(pp) {
-        for (let ip = 0; ip < this.transformNodes.length; ip++)
-          if (this.transformNodes[ip].uniqueId === pp) return this.transformNodes[ip];
+      getTransformNodeByUniqueId(TT) {
+        for (let UT = 0; UT < this.transformNodes.length; UT++)
+          if (this.transformNodes[UT].uniqueId === TT) return this.transformNodes[UT];
         return null
       }
-      getTransformNodesById(pp) {
-        return this.transformNodes.filter((function(ip) {
-          return ip.id === pp
+      getTransformNodesById(TT) {
+        return this.transformNodes.filter((function(UT) {
+          return UT.id === TT
         }))
       }
-      getMeshByUniqueId(pp) {
-        for (let ip = 0; ip < this.meshes.length; ip++)
-          if (this.meshes[ip].uniqueId === pp) return this.meshes[ip];
+      getMeshByUniqueId(TT) {
+        for (let UT = 0; UT < this.meshes.length; UT++)
+          if (this.meshes[UT].uniqueId === TT) return this.meshes[UT];
         return null
       }
-      getLastMeshById(pp) {
-        for (let ip = this.meshes.length - 1; ip >= 0; ip--)
-          if (this.meshes[ip].id === pp) return this.meshes[ip];
+      getLastMeshById(TT) {
+        for (let UT = this.meshes.length - 1; UT >= 0; UT--)
+          if (this.meshes[UT].id === TT) return this.meshes[UT];
         return null
       }
-      getLastTransformNodeById(pp) {
-        for (let ip = this.transformNodes.length - 1; ip >= 0; ip--)
-          if (this.transformNodes[ip].id === pp) return this.transformNodes[ip];
+      getLastTransformNodeById(TT) {
+        for (let UT = this.transformNodes.length - 1; UT >= 0; UT--)
+          if (this.transformNodes[UT].id === TT) return this.transformNodes[UT];
         return null
       }
-      getLastEntryById(pp) {
-        let ip;
-        for (ip = this.meshes.length - 1; ip >= 0; ip--)
-          if (this.meshes[ip].id === pp) return this.meshes[ip];
-        for (ip = this.transformNodes.length - 1; ip >= 0; ip--)
-          if (this.transformNodes[ip].id === pp) return this.transformNodes[ip];
-        for (ip = this.cameras.length - 1; ip >= 0; ip--)
-          if (this.cameras[ip].id === pp) return this.cameras[ip];
-        for (ip = this.lights.length - 1; ip >= 0; ip--)
-          if (this.lights[ip].id === pp) return this.lights[ip];
-        for (ip = this.skeletons.length - 1; ip >= 0; ip--) {
-          const cp = this.skeletons[ip];
-          for (let ip = cp.bones.length - 1; ip >= 0; ip--)
-            if (cp.bones[ip].id === pp) return cp.bones[ip]
+      getLastEntryById(TT) {
+        let UT;
+        for (UT = this.meshes.length - 1; UT >= 0; UT--)
+          if (this.meshes[UT].id === TT) return this.meshes[UT];
+        for (UT = this.transformNodes.length - 1; UT >= 0; UT--)
+          if (this.transformNodes[UT].id === TT) return this.transformNodes[UT];
+        for (UT = this.cameras.length - 1; UT >= 0; UT--)
+          if (this.cameras[UT].id === TT) return this.cameras[UT];
+        for (UT = this.lights.length - 1; UT >= 0; UT--)
+          if (this.lights[UT].id === TT) return this.lights[UT];
+        for (UT = this.skeletons.length - 1; UT >= 0; UT--) {
+          const mT = this.skeletons[UT];
+          for (let UT = mT.bones.length - 1; UT >= 0; UT--)
+            if (mT.bones[UT].id === TT) return mT.bones[UT]
         }
         return null
       }
-      getNodeById(pp) {
-        const ip = this.getMeshById(pp);
-        if (ip) return ip;
-        const cp = this.getTransformNodeById(pp);
-        if (cp) return cp;
-        const Op = this.getLightById(pp);
-        if (Op) return Op;
-        const op = this.getCameraById(pp);
-        if (op) return op;
-        const Ip = this.getBoneById(pp);
-        return Ip || null
+      getNodeById(TT) {
+        const UT = this.getMeshById(TT);
+        if (UT) return UT;
+        const mT = this.getTransformNodeById(TT);
+        if (mT) return mT;
+        const WT = this.getLightById(TT);
+        if (WT) return WT;
+        const zT = this.getCameraById(TT);
+        if (zT) return zT;
+        const MT = this.getBoneById(TT);
+        return MT || null
       }
-      getNodeByName(pp) {
-        const ip = this.getMeshByName(pp);
-        if (ip) return ip;
-        const cp = this.getTransformNodeByName(pp);
-        if (cp) return cp;
-        const Op = this.getLightByName(pp);
-        if (Op) return Op;
-        const op = this.getCameraByName(pp);
-        if (op) return op;
-        const Ip = this.getBoneByName(pp);
-        return Ip || null
+      getNodeByName(TT) {
+        const UT = this.getMeshByName(TT);
+        if (UT) return UT;
+        const mT = this.getTransformNodeByName(TT);
+        if (mT) return mT;
+        const WT = this.getLightByName(TT);
+        if (WT) return WT;
+        const zT = this.getCameraByName(TT);
+        if (zT) return zT;
+        const MT = this.getBoneByName(TT);
+        return MT || null
       }
-      getMeshByName(pp) {
-        for (let ip = 0; ip < this.meshes.length; ip++)
-          if (this.meshes[ip].name === pp) return this.meshes[ip];
+      getMeshByName(TT) {
+        for (let UT = 0; UT < this.meshes.length; UT++)
+          if (this.meshes[UT].name === TT) return this.meshes[UT];
         return null
       }
-      getTransformNodeByName(pp) {
-        for (let ip = 0; ip < this.transformNodes.length; ip++)
-          if (this.transformNodes[ip].name === pp) return this.transformNodes[ip];
+      getTransformNodeByName(TT) {
+        for (let UT = 0; UT < this.transformNodes.length; UT++)
+          if (this.transformNodes[UT].name === TT) return this.transformNodes[UT];
         return null
       }
-      getLastSkeletonById(pp) {
-        for (let ip = this.skeletons.length - 1; ip >= 0; ip--)
-          if (this.skeletons[ip].id === pp) return this.skeletons[ip];
+      getLastSkeletonById(TT) {
+        for (let UT = this.skeletons.length - 1; UT >= 0; UT--)
+          if (this.skeletons[UT].id === TT) return this.skeletons[UT];
         return null
       }
-      getSkeletonByUniqueId(pp) {
-        for (let ip = 0; ip < this.skeletons.length; ip++)
-          if (this.skeletons[ip].uniqueId === pp) return this.skeletons[ip];
+      getSkeletonByUniqueId(TT) {
+        for (let UT = 0; UT < this.skeletons.length; UT++)
+          if (this.skeletons[UT].uniqueId === TT) return this.skeletons[UT];
         return null
       }
-      getSkeletonById(pp) {
-        for (let ip = 0; ip < this.skeletons.length; ip++)
-          if (this.skeletons[ip].id === pp) return this.skeletons[ip];
+      getSkeletonById(TT) {
+        for (let UT = 0; UT < this.skeletons.length; UT++)
+          if (this.skeletons[UT].id === TT) return this.skeletons[UT];
         return null
       }
-      getSkeletonByName(pp) {
-        for (let ip = 0; ip < this.skeletons.length; ip++)
-          if (this.skeletons[ip].name === pp) return this.skeletons[ip];
+      getSkeletonByName(TT) {
+        for (let UT = 0; UT < this.skeletons.length; UT++)
+          if (this.skeletons[UT].name === TT) return this.skeletons[UT];
         return null
       }
-      getMorphTargetManagerById(pp) {
-        for (let ip = 0; ip < this.morphTargetManagers.length; ip++)
-          if (this.morphTargetManagers[ip].uniqueId === pp) return this.morphTargetManagers[ip];
+      getMorphTargetManagerById(TT) {
+        for (let UT = 0; UT < this.morphTargetManagers.length; UT++)
+          if (this.morphTargetManagers[UT].uniqueId === TT) return this.morphTargetManagers[UT];
         return null
       }
-      getMorphTargetById(pp) {
-        for (let ip = 0; ip < this.morphTargetManagers.length; ++ip) {
-          const cp = this.morphTargetManagers[ip];
-          for (let ip = 0; ip < cp.numTargets; ++ip) {
-            const Op = cp.getTarget(ip);
-            if (Op.id === pp) return Op
+      getMorphTargetById(TT) {
+        for (let UT = 0; UT < this.morphTargetManagers.length; ++UT) {
+          const mT = this.morphTargetManagers[UT];
+          for (let UT = 0; UT < mT.numTargets; ++UT) {
+            const WT = mT.getTarget(UT);
+            if (WT.id === TT) return WT
           }
         }
         return null
       }
-      getMorphTargetByName(pp) {
-        for (let ip = 0; ip < this.morphTargetManagers.length; ++ip) {
-          const cp = this.morphTargetManagers[ip];
-          for (let ip = 0; ip < cp.numTargets; ++ip) {
-            const Op = cp.getTarget(ip);
-            if (Op.name === pp) return Op
+      getMorphTargetByName(TT) {
+        for (let UT = 0; UT < this.morphTargetManagers.length; ++UT) {
+          const mT = this.morphTargetManagers[UT];
+          for (let UT = 0; UT < mT.numTargets; ++UT) {
+            const WT = mT.getTarget(UT);
+            if (WT.name === TT) return WT
           }
         }
         return null
       }
-      getPostProcessByName(pp) {
-        for (let ip = 0; ip < this.postProcesses.length; ++ip) {
-          const cp = this.postProcesses[ip];
-          if (cp.name === pp) return cp
+      getPostProcessByName(TT) {
+        for (let UT = 0; UT < this.postProcesses.length; ++UT) {
+          const mT = this.postProcesses[UT];
+          if (mT.name === TT) return mT
         }
         return null
       }
-      isActiveMesh(pp) {
-        return -1 !== this._activeMeshes.indexOf(pp)
+      isActiveMesh(TT) {
+        return -1 !== this._activeMeshes.indexOf(TT)
       }
       get uid() {
-        return this._uid || (this._uid = Op.i.RandomId()), this._uid
+        return this._uid || (this._uid = WT.j.RandomId()), this._uid
       }
-      addExternalData(pp, ip) {
-        return this._externalData || (this._externalData = new Lp), this._externalData.add(pp, ip)
+      addExternalData(TT, UT) {
+        return this._externalData || (this._externalData = new HT), this._externalData.add(TT, UT)
       }
-      getExternalData(pp) {
-        return this._externalData ? this._externalData.get(pp) : null
+      getExternalData(TT) {
+        return this._externalData ? this._externalData.get(TT) : null
       }
-      getOrAddExternalDataWithFactory(pp, ip) {
-        return this._externalData || (this._externalData = new Lp), this._externalData.getOrAddWithFactory(pp, ip)
+      getOrAddExternalDataWithFactory(TT, UT) {
+        return this._externalData || (this._externalData = new HT), this._externalData.getOrAddWithFactory(TT, UT)
       }
-      removeExternalData(pp) {
-        return this._externalData.remove(pp)
+      removeExternalData(TT) {
+        return this._externalData.remove(TT)
       }
-      _evaluateSubMesh(pp, ip, cp, Op) {
-        if (Op || pp.isInFrustum(this._frustumPlanes)) {
-          for (let Op = 0, op = this._evaluateSubMeshStage; Op < op.length; Op++) {
-            op[Op].action(ip, pp)
+      _evaluateSubMesh(TT, UT, mT, WT) {
+        if (WT || TT.isInFrustum(this._frustumPlanes)) {
+          for (let WT = 0, zT = this._evaluateSubMeshStage; WT < zT.length; WT++) {
+            zT[WT].action(UT, TT)
           }
-          const cp = pp.Ky();
-          null !== cp && void 0 !== cp && (cp.hasRenderTargetTextures && null != cp.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(cp) && (this._processedMaterials.push(cp), this._materialsRenderTargets.concatWithNoDuplicate(cp.getRenderTargetTextures())), this._renderingManager.dispatch(pp, ip, cp))
+          const mT = TT.wB();
+          null !== mT && void 0 !== mT && (mT.hasRenderTargetTextures && null != mT.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(mT) && (this._processedMaterials.push(mT), this._materialsRenderTargets.concatWithNoDuplicate(mT.getRenderTargetTextures())), this._renderingManager.dispatch(TT, UT, mT))
         }
       }
       freeProcessedMaterials() {
@@ -8859,21 +8859,21 @@ export const modules = {
       get blockfreeActiveMeshesAndRenderingGroups() {
         return this._preventFreeActiveMeshesAndRenderingGroups
       }
-      set blockfreeActiveMeshesAndRenderingGroups(pp) {
-        this._preventFreeActiveMeshesAndRenderingGroups !== pp && (pp && (this.freeActiveMeshes(), this.freeRenderingGroups()), this._preventFreeActiveMeshesAndRenderingGroups = pp)
+      set blockfreeActiveMeshesAndRenderingGroups(TT) {
+        this._preventFreeActiveMeshesAndRenderingGroups !== TT && (TT && (this.freeActiveMeshes(), this.freeRenderingGroups()), this._preventFreeActiveMeshesAndRenderingGroups = TT)
       }
       freeActiveMeshes() {
         if (!this.blockfreeActiveMeshesAndRenderingGroups && (this._activeMeshes.dispose(), this.activeCamera && this.activeCamera._activeMeshes && this.activeCamera._activeMeshes.dispose(), this.activeCameras))
-          for (let pp = 0; pp < this.activeCameras.length; pp++) {
-            const ip = this.activeCameras[pp];
-            ip && ip._activeMeshes && ip._activeMeshes.dispose()
+          for (let TT = 0; TT < this.activeCameras.length; TT++) {
+            const UT = this.activeCameras[TT];
+            UT && UT._activeMeshes && UT._activeMeshes.dispose()
           }
       }
       freeRenderingGroups() {
         if (!this.blockfreeActiveMeshesAndRenderingGroups && (this._renderingManager && this._renderingManager.freeRenderingGroups(), this.textures))
-          for (let pp = 0; pp < this.textures.length; pp++) {
-            const ip = this.textures[pp];
-            ip && ip.renderList && ip.freeRenderingGroups()
+          for (let TT = 0; TT < this.textures.length; TT++) {
+            const UT = this.textures[TT];
+            UT && UT.renderList && UT.freeRenderingGroups()
           }
       }
       _isInIntermediateRendering() {
@@ -8883,744 +8883,744 @@ export const modules = {
         return this._renderingMeshEvaluationDepth > 0
       }
       freezeActiveMeshes() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0,
-          Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-          Ip = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          UT = arguments.length > 1 ? arguments[1] : void 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0,
+          WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+          MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if (this.frameGraph) {
           this._renderWithFrameGraph(!0, !1, !0);
-          const Sp = this.frameGraph.getTasksByClassName(["FrameGraphObjectRendererTask", "FrameGraphGeometryRendererTask"]);
-          for (const pp of Sp) pp.objectRenderer._freezeActiveMeshes(Op);
-          return this._freezeActiveMeshesCancel = (0, op.c)((() => {
-            let pp = !0,
-              ip = !0;
-            for (const cp of Sp) pp && (pp = cp.objectRenderer._isFrozen), ip && (ip = null !== cp.objectRenderer._freezeActiveMeshesCancel);
-            if (pp) return !0;
-            if (!ip) throw new Error("Freezing active meshes was cancelled");
+          const gT = this.frameGraph.getTasksByClassName(["FrameGraphObjectRendererTask", "FrameGraphGeometryRendererTask"]);
+          for (const TT of gT) TT.objectRenderer._freezeActiveMeshes(WT);
+          return this._freezeActiveMeshesCancel = (0, zT.i)((() => {
+            let TT = !0,
+              UT = !0;
+            for (const mT of gT) TT && (TT = mT.objectRenderer._isFrozen), UT && (UT = null !== mT.objectRenderer._freezeActiveMeshesCancel);
+            if (TT) return !0;
+            if (!UT) throw new Error("Freezing active meshes was cancelled");
             return !1
           }), (() => {
-            this._freezeActiveMeshesCancel = null, this._activeMeshesFrozen = !0, this._activeMeshesFrozenButKeepClipping = Ip, this._skipEvaluateActiveMeshesCompletely = pp, ip?.()
-          }), ((pp, ip) => {
-            if (this._freezeActiveMeshesCancel = null, this.unfreezeActiveMeshes(), ip) {
-              const ip = "Scene: Timeout while waiting for meshes to be frozen.";
-              cp ? cp(ip) : (Oc.e.Error(ip), pp && Oc.e.Error(pp))
+            this._freezeActiveMeshesCancel = null, this._activeMeshesFrozen = !0, this._activeMeshesFrozenButKeepClipping = MT, this._skipEvaluateActiveMeshesCompletely = TT, UT?.()
+          }), ((TT, UT) => {
+            if (this._freezeActiveMeshesCancel = null, this.unfreezeActiveMeshes(), UT) {
+              const UT = "Scene: Timeout while waiting for meshes to be frozen.";
+              mT ? mT(UT) : (Tm.b.Error(UT), TT && Tm.b.Error(TT))
             } else {
-              const ip = "Scene: An unexpected error occurred while trying to freeze active meshes.";
-              cp ? cp(ip) : (Oc.e.Error(ip), pp && (Oc.e.Error(pp), pp.stack && Oc.e.Error(pp.stack)))
+              const UT = "Scene: An unexpected error occurred while trying to freeze active meshes.";
+              mT ? mT(UT) : (Tm.b.Error(UT), TT && (Tm.b.Error(TT), TT.stack && Tm.b.Error(TT.stack)))
             }
           })), this
         }
         return this.executeWhenReady((() => {
           if (this.activeCamera) {
-            if (this._frustumPlanes || this.updateTransformMatrix(), this._evaluateActiveMeshes(), this._activeMeshesFrozen = !0, this._activeMeshesFrozenButKeepClipping = Ip, this._skipEvaluateActiveMeshesCompletely = pp, Op)
-              for (let pp = 0; pp < this._activeMeshes.length; pp++) this._activeMeshes.data[pp]._freeze();
-            ip && ip()
-          } else cp && cp("No active camera found")
+            if (this._frustumPlanes || this.updateTransformMatrix(), this._evaluateActiveMeshes(), this._activeMeshesFrozen = !0, this._activeMeshesFrozenButKeepClipping = MT, this._skipEvaluateActiveMeshesCompletely = TT, WT)
+              for (let TT = 0; TT < this._activeMeshes.length; TT++) this._activeMeshes.data[TT]._freeze();
+            UT && UT()
+          } else mT && mT("No active camera found")
         })), this
       }
       unfreezeActiveMeshes() {
-        for (let pp = 0; pp < this.meshes.length; pp++) {
-          const ip = this.meshes[pp];
-          ip._internalAbstractMeshDataInfo && (ip._internalAbstractMeshDataInfo._isActive = !1)
+        for (let TT = 0; TT < this.meshes.length; TT++) {
+          const UT = this.meshes[TT];
+          UT._internalAbstractMeshDataInfo && (UT._internalAbstractMeshDataInfo._isActive = !1)
         }
         if (this._freezeActiveMeshesCancel?.(), this._freezeActiveMeshesCancel = null, this.frameGraph) {
-          const pp = this.frameGraph.getTasksByClassName(["FrameGraphObjectRendererTask", "FrameGraphGeometryRendererTask"]);
-          for (const ip of pp) ip.objectRenderer._unfreezeActiveMeshes()
+          const TT = this.frameGraph.getTasksByClassName(["FrameGraphObjectRendererTask", "FrameGraphGeometryRendererTask"]);
+          for (const UT of TT) UT.objectRenderer._unfreezeActiveMeshes()
         } else
-          for (let pp = 0; pp < this._activeMeshes.length; pp++) this._activeMeshes.data[pp]._unFreeze();
+          for (let TT = 0; TT < this._activeMeshes.length; TT++) this._activeMeshes.data[TT]._unFreeze();
         return this._activeMeshesFrozen = !1, this
       }
-      _executeActiveContainerCleanup(pp) {
-        (!this._engine.snapshotRendering || 1 !== this._engine.snapshotRenderingMode) && this._activeMeshesFrozen && this._activeMeshes.length || this.onBeforeRenderObservable.addOnce((() => pp.dispose()))
+      _executeActiveContainerCleanup(TT) {
+        (!this._engine.snapshotRendering || 1 !== this._engine.snapshotRenderingMode) && this._activeMeshesFrozen && this._activeMeshes.length || this.onBeforeRenderObservable.addOnce((() => TT.dispose()))
       }
       _evaluateActiveMeshes() {
         if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) return void(this._activeMeshes.length > 0 && (this.activeCamera?._activeMeshes.reset(), this._activeMeshes.reset(), this._renderingManager.reset(), this._processedMaterials.reset(), this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset()));
         if (this._activeMeshesFrozen && this._activeMeshes.length) {
           if (!this._skipEvaluateActiveMeshesCompletely) {
-            const pp = this._activeMeshes.length;
-            for (let ip = 0; ip < pp; ip++) {
-              this._activeMeshes.data[ip].computeWorldMatrix()
+            const TT = this._activeMeshes.length;
+            for (let UT = 0; UT < TT; UT++) {
+              this._activeMeshes.data[UT].computeWorldMatrix()
             }
           }
           if (this._activeParticleSystems) {
-            const pp = this._activeParticleSystems.length;
-            for (let ip = 0; ip < pp; ip++) this._activeParticleSystems.data[ip].animate()
+            const TT = this._activeParticleSystems.length;
+            for (let UT = 0; UT < TT; UT++) this._activeParticleSystems.data[UT].animate()
           }
           return void this._renderingManager.resetSprites()
         }
         if (!this.activeCamera) return;
         this.onBeforeActiveMeshesEvaluationObservable.notifyObservers(this), this.activeCamera._activeMeshes.reset(), this._activeMeshes.reset(), this._renderingManager.reset(), this._processedMaterials.reset(), this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset(), this._materialsRenderTargets.reset();
-        for (let op = 0, Ip = this._beforeEvaluateActiveMeshStage; op < Ip.length; op++) {
-          Ip[op].action()
+        for (let zT = 0, MT = this._beforeEvaluateActiveMeshStage; zT < MT.length; zT++) {
+          MT[zT].action()
         }
-        const pp = this.getActiveMeshCandidates(),
-          ip = pp.length,
-          cp = gp.b.Enabled,
-          Op = this.customLODSelector;
-        for (let op = 0; op < ip; op++) {
-          const ip = pp.data[op],
-            Ip = !Op && !ip.Vl && !ip._internalMeshDataInfo?._LODLevels.length;
-          let Sp, xp;
-          if ((Ip || (Sp = ip._internalAbstractMeshDataInfo._currentLOD.get(this.activeCamera), Sp ? Sp[1] = -1 : (Sp = [ip, -1], ip._internalAbstractMeshDataInfo._currentLOD.set(this.activeCamera, Sp))), !ip.isBlocked) && (cp && this._totalVertices.addCount(ip.getTotalVertices(), !1), ip.isReady() && ip.isEnabled() && !ip.ei.hasAZeroComponent)) {
-            if (ip.computeWorldMatrix(), ip.actionManager && ip.actionManager.hasSpecificTriggers2(12, 13) && this._meshesForIntersections.pushNoDuplicate(ip), Ip) xp = ip;
-            else if (xp = Op ? Op(ip, this.activeCamera) : ip.getLOD(this.activeCamera), Sp[0] = xp, Sp[1] = this._frameId, void 0 === xp || null === xp) continue;
-            if (xp !== ip && 0 !== xp.billboardMode && xp.computeWorldMatrix(), ip._preActivate(), ip.isVisible && ip.visibility > 0 && 0 !== (ip.layerMask & this.activeCamera.layerMask) && (this._skipFrustumClipping || ip.Gy || ip.isInFrustum(this._frustumPlanes))) {
-              this._activeMeshes.push(ip), this.activeCamera._activeMeshes.push(ip), xp !== ip && xp._activate(this._renderId, !1);
-              for (let pp = 0, cp = this._preActiveMeshStage; pp < cp.length; pp++) {
-                cp[pp].action(ip)
+        const TT = this.getActiveMeshCandidates(),
+          UT = TT.length,
+          mT = ST.b.Enabled,
+          WT = this.customLODSelector;
+        for (let zT = 0; zT < UT; zT++) {
+          const UT = TT.data[zT],
+            MT = !WT && !UT.RP && !UT._internalMeshDataInfo?._LODLevels.length;
+          let gT, nT;
+          if ((MT || (gT = UT._internalAbstractMeshDataInfo._currentLOD.get(this.activeCamera), gT ? gT[1] = -1 : (gT = [UT, -1], UT._internalAbstractMeshDataInfo._currentLOD.set(this.activeCamera, gT))), !UT.isBlocked) && (mT && this._totalVertices.addCount(UT.getTotalVertices(), !1), UT.isReady() && UT.isEnabled() && !UT.gp.hasAZeroComponent)) {
+            if (UT.computeWorldMatrix(), UT.actionManager && UT.actionManager.hasSpecificTriggers2(12, 13) && this._meshesForIntersections.pushNoDuplicate(UT), MT) nT = UT;
+            else if (nT = WT ? WT(UT, this.activeCamera) : UT.getLOD(this.activeCamera), gT[0] = nT, gT[1] = this._frameId, void 0 === nT || null === nT) continue;
+            if (nT !== UT && 0 !== nT.billboardMode && nT.computeWorldMatrix(), UT._preActivate(), UT.isVisible && UT.visibility > 0 && 0 !== (UT.layerMask & this.activeCamera.layerMask) && (this._skipFrustumClipping || UT.YB || UT.isInFrustum(this._frustumPlanes))) {
+              this._activeMeshes.push(UT), this.activeCamera._activeMeshes.push(UT), nT !== UT && nT._activate(this._renderId, !1);
+              for (let TT = 0, mT = this._preActiveMeshStage; TT < mT.length; TT++) {
+                mT[TT].action(UT)
               }
-              ip._activate(this._renderId, !1) && (ip.Vl ? ip._internalAbstractMeshDataInfo._actAsRegularMesh && (xp = ip) : xp._internalAbstractMeshDataInfo._onlyForInstances = !1, xp._internalAbstractMeshDataInfo._isActive = !0, this._activeMesh(ip, xp)), ip._postActivate()
+              UT._activate(this._renderId, !1) && (UT.RP ? UT._internalAbstractMeshDataInfo._actAsRegularMesh && (nT = UT) : nT._internalAbstractMeshDataInfo._onlyForInstances = !1, nT._internalAbstractMeshDataInfo._isActive = !0, this._activeMesh(UT, nT)), UT._postActivate()
             }
           }
         }
         if (this.onAfterActiveMeshesEvaluationObservable.notifyObservers(this), this.particlesEnabled) {
           this.onBeforeParticlesRenderingObservable.notifyObservers(this);
-          for (let pp = 0; pp < this.Wm.length; pp++) {
-            const ip = this.Wm[pp];
-            if (!ip.isStarted() || !ip.emitter) continue;
-            const cp = ip.emitter;
-            cp.position && !cp.isEnabled() || (this._activeParticleSystems.push(ip), ip.animate(), this._renderingManager.dispatchParticles(ip))
+          for (let TT = 0; TT < this.EY.length; TT++) {
+            const UT = this.EY[TT];
+            if (!UT.isStarted() || !UT.emitter) continue;
+            const mT = UT.emitter;
+            mT.position && !mT.isEnabled() || (this._activeParticleSystems.push(UT), UT.animate(), this._renderingManager.dispatchParticles(UT))
           }
           this.onAfterParticlesRenderingObservable.notifyObservers(this)
         }
       }
-      _prepareSkeleton(pp) {
-        this._skeletonsEnabled && pp.skeleton && (this._activeSkeletons.pushNoDuplicate(pp.skeleton) && (pp.skeleton.prepare(), this._activeBones.addCount(pp.skeleton.bones.length, !1)), pp.computeBonesUsingShaders || this._softwareSkinnedMeshes.pushNoDuplicate(pp) && this.frameGraph && pp.applySkeleton(pp.skeleton))
+      _prepareSkeleton(TT) {
+        this._skeletonsEnabled && TT.skeleton && (this._activeSkeletons.pushNoDuplicate(TT.skeleton) && (TT.skeleton.prepare(), this._activeBones.addCount(TT.skeleton.bones.length, !1)), TT.computeBonesUsingShaders || this._softwareSkinnedMeshes.pushNoDuplicate(TT) && this.frameGraph && TT.applySkeleton(TT.skeleton))
       }
-      _activeMesh(pp, ip) {
-        this._prepareSkeleton(ip);
-        let cp = pp.fop || pp.Vl || this.dispatchAllSubMeshesOfActiveMeshes || this._skipFrustumClipping || ip.Gy;
-        if (ip && ip.Am && ip.Am.length > 0) {
-          const Op = this.getActiveSubMeshCandidates(ip),
-            op = Op.length;
-          cp = cp || 1 === op;
-          for (let Ip = 0; Ip < op; Ip++) {
-            const op = Op.data[Ip];
-            this._evaluateSubMesh(op, ip, pp, cp)
+      _activeMesh(TT, UT) {
+        this._prepareSkeleton(UT);
+        let mT = TT.ZzT || TT.RP || this.dispatchAllSubMeshesOfActiveMeshes || this._skipFrustumClipping || UT.YB;
+        if (UT && UT.rY && UT.rY.length > 0) {
+          const WT = this.getActiveSubMeshCandidates(UT),
+            zT = WT.length;
+          mT = mT || 1 === zT;
+          for (let MT = 0; MT < zT; MT++) {
+            const zT = WT.data[MT];
+            this._evaluateSubMesh(zT, UT, TT, mT)
           }
         }
       }
-      updateTransformMatrix(pp) {
-        const ip = this.activeCamera;
-        if (ip)
-          if (ip._renderingMultiview) {
-            const cp = ip._rigCameras[0],
-              Op = ip._rigCameras[1];
-            this.setTransformMatrix(cp.getViewMatrix(), cp.getProjectionMatrix(pp), Op.getViewMatrix(), Op.getProjectionMatrix(pp))
-          } else this.setTransformMatrix(ip.getViewMatrix(), ip.getProjectionMatrix(pp))
+      updateTransformMatrix(TT) {
+        const UT = this.activeCamera;
+        if (UT)
+          if (UT._renderingMultiview) {
+            const mT = UT._rigCameras[0],
+              WT = UT._rigCameras[1];
+            this.setTransformMatrix(mT.getViewMatrix(), mT.getProjectionMatrix(TT), WT.getViewMatrix(), WT.getProjectionMatrix(TT))
+          } else this.setTransformMatrix(UT.getViewMatrix(), UT.getProjectionMatrix(TT))
       }
-      _bindFrameBuffer(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._useCurrentFrameBuffer || (pp && pp._multiviewTexture ? pp._multiviewTexture._bindFrameBuffer() : pp && pp.outputRenderTarget ? pp.outputRenderTarget._bindFrameBuffer() : this._engine._currentFrameBufferIsDefaultFrameBuffer() || this._engine.restoreDefaultFramebuffer()), ip && this._clearFrameBuffer(pp)
+      _bindFrameBuffer(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        this._useCurrentFrameBuffer || (TT && TT._multiviewTexture ? TT._multiviewTexture._bindFrameBuffer() : TT && TT.outputRenderTarget ? TT.outputRenderTarget._bindFrameBuffer() : this._engine._currentFrameBufferIsDefaultFrameBuffer() || this._engine.restoreDefaultFramebuffer()), UT && this._clearFrameBuffer(TT)
       }
-      _clearFrameBuffer(pp) {
-        if (pp && pp._multiviewTexture);
-        else if (pp && pp.outputRenderTarget && !pp._renderingMultiview) {
-          const ip = pp.outputRenderTarget;
-          ip.onClearObservable.hasObservers() ? ip.onClearObservable.notifyObservers(this._engine) : ip.skipInitialClear || pp.isRightCamera || (this.autoClear && this._engine.clear(ip.clearColor || this._clearColor, !ip._cleared, !0, !0), ip._cleared = !0)
+      _clearFrameBuffer(TT) {
+        if (TT && TT._multiviewTexture);
+        else if (TT && TT.outputRenderTarget && !TT._renderingMultiview) {
+          const UT = TT.outputRenderTarget;
+          UT.onClearObservable.hasObservers() ? UT.onClearObservable.notifyObservers(this._engine) : UT.skipInitialClear || TT.isRightCamera || (this.autoClear && this._engine.clear(UT.clearColor || this._clearColor, !UT._cleared, !0, !0), UT._cleared = !0)
         } else this._defaultFrameBufferCleared ? this._engine.clear(null, !1, !0, !0) : (this._defaultFrameBufferCleared = !0, this._clear())
       }
-      _renderForCamera(pp, ip) {
-        let cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        if (pp && pp._skipRendering) return;
-        const op = this._engine;
-        if (this._activeCamera = pp, !this.activeCamera) throw new Error("Active camera not set");
-        if (op.setViewport(this.activeCamera.viewport), this.resetCachedMaterial(), this._renderId++, !this.prePass && cp) {
-          let ip = !0;
-          pp._renderingMultiview && pp.outputRenderTarget && (ip = pp.outputRenderTarget.skipInitialClear, this.autoClear && (this._defaultFrameBufferCleared = !1, pp.outputRenderTarget.skipInitialClear = !1)), this._bindFrameBuffer(this._activeCamera), pp._renderingMultiview && pp.outputRenderTarget && (pp.outputRenderTarget.skipInitialClear = ip)
+      _renderForCamera(TT, UT) {
+        let mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        if (TT && TT._skipRendering) return;
+        const zT = this._engine;
+        if (this._activeCamera = TT, !this.activeCamera) throw new Error("Active camera not set");
+        if (zT.setViewport(this.activeCamera.viewport), this.resetCachedMaterial(), this._renderId++, !this.prePass && mT) {
+          let UT = !0;
+          TT._renderingMultiview && TT.outputRenderTarget && (UT = TT.outputRenderTarget.skipInitialClear, this.autoClear && (this._defaultFrameBufferCleared = !1, TT.outputRenderTarget.skipInitialClear = !1)), this._bindFrameBuffer(this._activeCamera), TT._renderingMultiview && TT.outputRenderTarget && (TT.outputRenderTarget.skipInitialClear = UT)
         }
-        this.updateTransformMatrix(), this.onBeforeCameraRenderObservable.notifyObservers(this.activeCamera), this._engine.currentRenderPassId = pp.outputRenderTarget?.renderPassId ?? pp.renderPassId ?? 0, this._evaluateActiveMeshes();
-        for (let Op = 0; Op < this._softwareSkinnedMeshes.length; Op++) {
-          const pp = this._softwareSkinnedMeshes.data[Op];
-          pp.applySkeleton(pp.skeleton)
+        this.updateTransformMatrix(), this.onBeforeCameraRenderObservable.notifyObservers(this.activeCamera), this._engine.currentRenderPassId = TT.outputRenderTarget?.renderPassId ?? TT.renderPassId ?? 0, this._evaluateActiveMeshes();
+        for (let WT = 0; WT < this._softwareSkinnedMeshes.length; WT++) {
+          const TT = this._softwareSkinnedMeshes.data[WT];
+          TT.applySkeleton(TT.skeleton)
         }
-        this.onBeforeRenderTargetsRenderObservable.notifyObservers(this), this._renderTargets.concatWithNoDuplicate(this._materialsRenderTargets), pp.customRenderTargets && pp.customRenderTargets.length > 0 && this._renderTargets.concatWithNoDuplicate(pp.customRenderTargets), ip && ip.customRenderTargets && ip.customRenderTargets.length > 0 && this._renderTargets.concatWithNoDuplicate(ip.customRenderTargets), this.environmentTexture && this.environmentTexture.isRenderTarget && this._renderTargets.pushNoDuplicate(this.environmentTexture);
-        for (let Op = 0, xp = this._gatherActiveCameraRenderTargetsStage; Op < xp.length; Op++) {
-          xp[Op].action(this._renderTargets)
+        this.onBeforeRenderTargetsRenderObservable.notifyObservers(this), this._renderTargets.concatWithNoDuplicate(this._materialsRenderTargets), TT.customRenderTargets && TT.customRenderTargets.length > 0 && this._renderTargets.concatWithNoDuplicate(TT.customRenderTargets), UT && UT.customRenderTargets && UT.customRenderTargets.length > 0 && this._renderTargets.concatWithNoDuplicate(UT.customRenderTargets), this.environmentTexture && this.environmentTexture.isRenderTarget && this._renderTargets.pushNoDuplicate(this.environmentTexture);
+        for (let WT = 0, nT = this._gatherActiveCameraRenderTargetsStage; WT < nT.length; WT++) {
+          nT[WT].action(this._renderTargets)
         }
-        let Ip = !1;
+        let MT = !1;
         if (this.renderTargetsEnabled) {
-          let pp;
+          let TT;
           if (this._intermediateRendering = !0, this._renderTargets.length > 0) {
-            Op.i.StartPerformanceCounter("Render targets", this._renderTargets.length > 0);
-            const ip = this.getBoundingBoxRenderer?.();
-            for (let cp = 0; cp < this._renderTargets.length; cp++) {
-              const Op = this._renderTargets.data[cp];
-              if (Op._shouldRender()) {
+            WT.j.StartPerformanceCounter("Render targets", this._renderTargets.length > 0);
+            const UT = this.getBoundingBoxRenderer?.();
+            for (let mT = 0; mT < this._renderTargets.length; mT++) {
+              const WT = this._renderTargets.data[mT];
+              if (WT._shouldRender()) {
                 this._renderId++;
-                const cp = Op.activeCamera && Op.activeCamera !== this.activeCamera;
-                ip && !pp && (pp = ip.renderList.length > 0 ? ip.renderList.data.slice() : [], pp.length = ip.renderList.length), Op.render(cp, this.dumpNextRenderTargets), Ip = !0
+                const mT = WT.activeCamera && WT.activeCamera !== this.activeCamera;
+                UT && !TT && (TT = UT.renderList.length > 0 ? UT.renderList.data.slice() : [], TT.length = UT.renderList.length), WT.render(mT, this.dumpNextRenderTargets), MT = !0
               }
             }
-            ip && pp && (ip.renderList.data = pp, ip.renderList.length = pp.length), Op.i.EndPerformanceCounter("Render targets", this._renderTargets.length > 0), this._renderId++
+            UT && TT && (UT.renderList.data = TT, UT.renderList.length = TT.length), WT.j.EndPerformanceCounter("Render targets", this._renderTargets.length > 0), this._renderId++
           }
           if (this._cameraDrawRenderTargetStage.length > 0) {
-            const ip = this.getBoundingBoxRenderer?.();
-            ip && !pp && (pp = ip.renderList.length > 0 ? ip.renderList.data.slice() : [], pp.length = ip.renderList.length);
-            for (let pp = 0, cp = this._cameraDrawRenderTargetStage; pp < cp.length; pp++) {
-              Ip = cp[pp].action(this.activeCamera) || Ip
+            const UT = this.getBoundingBoxRenderer?.();
+            UT && !TT && (TT = UT.renderList.length > 0 ? UT.renderList.data.slice() : [], TT.length = UT.renderList.length);
+            for (let TT = 0, mT = this._cameraDrawRenderTargetStage; TT < mT.length; TT++) {
+              MT = mT[TT].action(this.activeCamera) || MT
             }
-            ip && pp && (ip.renderList.data = pp, ip.renderList.length = pp.length)
+            UT && TT && (UT.renderList.data = TT, UT.renderList.length = TT.length)
           }
           this._intermediateRendering = !1
         }
-        Ip && !this.prePass && (this._bindFrameBuffer(this._activeCamera, !1), this.updateTransformMatrix()), this.onAfterRenderTargetsRenderObservable.notifyObservers(this), !this.postProcessManager || pp._multiviewTexture || this.prePass || this.postProcessManager._prepareFrame();
-        for (let Op = 0, xp = this._beforeCameraDrawStage; Op < xp.length; Op++) {
-          xp[Op].action(this.activeCamera)
+        MT && !this.prePass && (this._bindFrameBuffer(this._activeCamera, !1), this.updateTransformMatrix()), this.onAfterRenderTargetsRenderObservable.notifyObservers(this), !this.postProcessManager || TT._multiviewTexture || this.prePass || this.postProcessManager._prepareFrame();
+        for (let WT = 0, nT = this._beforeCameraDrawStage; WT < nT.length; WT++) {
+          nT[WT].action(this.activeCamera)
         }
         this.onBeforeDrawPhaseObservable.notifyObservers(this);
-        const Sp = op.snapshotRendering && 1 === op.snapshotRenderingMode;
-        Sp && this.finalizeSceneUbo(), this._renderingManager.render(null, null, !0, !Sp), this.onAfterDrawPhaseObservable.notifyObservers(this);
-        for (let Op = 0, xp = this._afterCameraDrawStage; Op < xp.length; Op++) {
-          xp[Op].action(this.activeCamera)
+        const gT = zT.snapshotRendering && 1 === zT.snapshotRenderingMode;
+        gT && this.finalizeSceneUbo(), this._renderingManager.render(null, null, !0, !gT), this.onAfterDrawPhaseObservable.notifyObservers(this);
+        for (let WT = 0, nT = this._afterCameraDrawStage; WT < nT.length; WT++) {
+          nT[WT].action(this.activeCamera)
         }
-        if (this.postProcessManager && !pp._multiviewTexture) {
-          const ip = pp.outputRenderTarget ? pp.outputRenderTarget.renderTarget : void 0;
-          this.postProcessManager._finalizeFrame(pp.isIntermediate, ip)
+        if (this.postProcessManager && !TT._multiviewTexture) {
+          const UT = TT.outputRenderTarget ? TT.outputRenderTarget.renderTarget : void 0;
+          this.postProcessManager._finalizeFrame(TT.isIntermediate, UT)
         }
-        for (let Op = 0, xp = this._afterCameraPostProcessStage; Op < xp.length; Op++) {
-          xp[Op].action(this.activeCamera)
+        for (let WT = 0, nT = this._afterCameraPostProcessStage; WT < nT.length; WT++) {
+          nT[WT].action(this.activeCamera)
         }
         this._renderTargets.reset(), this.onAfterCameraRenderObservable.notifyObservers(this.activeCamera)
       }
-      _processSubCameras(pp) {
-        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (0 === pp.cameraRigMode || pp._renderingMultiview) return pp._renderingMultiview && !this._multiviewSceneUbo && this._createMultiviewUbo(), this._renderForCamera(pp, void 0, ip), void this.onAfterRenderCameraObservable.notifyObservers(pp);
-        if (pp._useMultiviewToSingleView) this._renderMultiviewToSingleView(pp);
+      _processSubCameras(TT) {
+        let UT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (0 === TT.cameraRigMode || TT._renderingMultiview) return TT._renderingMultiview && !this._multiviewSceneUbo && this._createMultiviewUbo(), this._renderForCamera(TT, void 0, UT), void this.onAfterRenderCameraObservable.notifyObservers(TT);
+        if (TT._useMultiviewToSingleView) this._renderMultiviewToSingleView(TT);
         else {
-          this.onBeforeCameraRenderObservable.notifyObservers(pp);
-          for (let ip = 0; ip < pp._rigCameras.length; ip++) this._renderForCamera(pp._rigCameras[ip], pp)
+          this.onBeforeCameraRenderObservable.notifyObservers(TT);
+          for (let UT = 0; UT < TT._rigCameras.length; UT++) this._renderForCamera(TT._rigCameras[UT], TT)
         }
-        this._activeCamera = pp, this.updateTransformMatrix(), this.onAfterRenderCameraObservable.notifyObservers(pp)
+        this._activeCamera = TT, this.updateTransformMatrix(), this.onAfterRenderCameraObservable.notifyObservers(TT)
       }
       _checkIntersections() {
-        for (let pp = 0; pp < this._meshesForIntersections.length; pp++) {
-          const ip = this._meshesForIntersections.data[pp];
-          if (ip.actionManager)
-            for (let pp = 0; ip.actionManager && pp < ip.actionManager.actions.length; pp++) {
-              const cp = ip.actionManager.actions[pp];
-              if (12 === cp.trigger || 13 === cp.trigger) {
-                const pp = cp.getTriggerParameter(),
-                  Op = pp.mesh ? pp.mesh : pp,
-                  op = Op.Eop(ip, pp.usePreciseIntersection),
-                  Ip = ip._intersectionsInProgress.indexOf(Op);
-                op && -1 === Ip ? 12 === cp.trigger ? (cp._executeCurrent(yp.CreateNew(ip, void 0, Op)), ip._intersectionsInProgress.push(Op)) : 13 === cp.trigger && ip._intersectionsInProgress.push(Op) : !op && Ip > -1 && (13 === cp.trigger && cp._executeCurrent(yp.CreateNew(ip, void 0, Op)), ip.actionManager.hasSpecificTrigger(13, (pp => {
-                  const ip = pp.mesh ? pp.mesh : pp;
-                  return Op === ip
-                })) && 13 !== cp.trigger || ip._intersectionsInProgress.splice(Ip, 1))
+        for (let TT = 0; TT < this._meshesForIntersections.length; TT++) {
+          const UT = this._meshesForIntersections.data[TT];
+          if (UT.actionManager)
+            for (let TT = 0; UT.actionManager && TT < UT.actionManager.actions.length; TT++) {
+              const mT = UT.actionManager.actions[TT];
+              if (12 === mT.trigger || 13 === mT.trigger) {
+                const TT = mT.getTriggerParameter(),
+                  WT = TT.mesh ? TT.mesh : TT,
+                  zT = WT.HzT(UT, TT.usePreciseIntersection),
+                  MT = UT._intersectionsInProgress.indexOf(WT);
+                zT && -1 === MT ? 12 === mT.trigger ? (mT._executeCurrent(BT.CreateNew(UT, void 0, WT)), UT._intersectionsInProgress.push(WT)) : 13 === mT.trigger && UT._intersectionsInProgress.push(WT) : !zT && MT > -1 && (13 === mT.trigger && mT._executeCurrent(BT.CreateNew(UT, void 0, WT)), UT.actionManager.hasSpecificTrigger(13, (TT => {
+                  const UT = TT.mesh ? TT.mesh : TT;
+                  return WT === UT
+                })) && 13 !== mT.trigger || UT._intersectionsInProgress.splice(MT, 1))
               }
             }
         }
       }
-      _advancePhysicsEngineStep(pp) {}
-      _animate(pp) {}
+      _advancePhysicsEngineStep(TT) {}
+      _animate(TT) {}
       animate() {
         if (this._engine.isDeterministicLockStep()) {
-          let pp = Math.max(Lc.MinDeltaTime, Math.min(this._engine.getDeltaTime(), Lc.MaxDeltaTime)) + this._timeAccumulator;
-          const ip = this._engine.getTimeStep(),
-            cp = 1e3 / ip / 1e3;
-          let Op = 0;
-          const op = this._engine.getLockstepMaxSteps();
-          let Ip = Math.floor(pp / ip);
-          for (Ip = Math.min(Ip, op); pp > 0 && Op < Ip;) this.onBeforeStepObservable.notifyObservers(this), this._animationRatio = ip * cp, this._animate(ip), this.onAfterAnimationsObservable.notifyObservers(this), this.hN && this._advancePhysicsEngineStep(ip), this.onAfterStepObservable.notifyObservers(this), this._currentStepId++, Op++, pp -= ip;
-          this._timeAccumulator = pp < 0 ? 0 : pp
+          let TT = Math.max(Mm.MinDeltaTime, Math.min(this._engine.getDeltaTime(), Mm.MaxDeltaTime)) + this._timeAccumulator;
+          const UT = this._engine.getTimeStep(),
+            mT = 1e3 / UT / 1e3;
+          let WT = 0;
+          const zT = this._engine.getLockstepMaxSteps();
+          let MT = Math.floor(TT / UT);
+          for (MT = Math.min(MT, zT); TT > 0 && WT < MT;) this.onBeforeStepObservable.notifyObservers(this), this._animationRatio = UT * mT, this._animate(UT), this.onAfterAnimationsObservable.notifyObservers(this), this.RC && this._advancePhysicsEngineStep(UT), this.onAfterStepObservable.notifyObservers(this), this._currentStepId++, WT++, TT -= UT;
+          this._timeAccumulator = TT < 0 ? 0 : TT
         } else {
-          const pp = this.useConstantAnimationDeltaTime ? 16 : Math.max(Lc.MinDeltaTime, Math.min(this._engine.getDeltaTime(), Lc.MaxDeltaTime));
-          this._animationRatio = .06 * pp, this._animate(), this.onAfterAnimationsObservable.notifyObservers(this), this.hN && this._advancePhysicsEngineStep(pp)
+          const TT = this.useConstantAnimationDeltaTime ? 16 : Math.max(Mm.MinDeltaTime, Math.min(this._engine.getDeltaTime(), Mm.MaxDeltaTime));
+          this._animationRatio = .06 * TT, this._animate(), this.onAfterAnimationsObservable.notifyObservers(this), this.RC && this._advancePhysicsEngineStep(TT)
         }
       }
       _clear() {
         (this.autoClearDepthAndStencil || this.autoClear) && this._engine.clear(this._clearColor, this.autoClear || this.forceWireframe || this.forcePointsCloud, this.autoClearDepthAndStencil, this.autoClearDepthAndStencil)
       }
-      _checkCameraRenderTarget(pp) {
-        if (pp?.outputRenderTarget && !pp?.isRigCamera && (pp.outputRenderTarget._cleared = !1), pp?.rigCameras?.length)
-          for (let ip = 0; ip < pp.rigCameras.length; ++ip) {
-            const cp = pp.rigCameras[ip].outputRenderTarget;
-            cp && (cp._cleared = !1)
+      _checkCameraRenderTarget(TT) {
+        if (TT?.outputRenderTarget && !TT?.isRigCamera && (TT.outputRenderTarget._cleared = !1), TT?.rigCameras?.length)
+          for (let UT = 0; UT < TT.rigCameras.length; ++UT) {
+            const mT = TT.rigCameras[UT].outputRenderTarget;
+            mT && (mT._cleared = !1)
           }
       }
-      resetDrawCache(pp) {
+      resetDrawCache(TT) {
         if (this.meshes)
-          for (const ip of this.meshes) ip.resetDrawCache(pp)
+          for (const UT of this.meshes) UT.resetDrawCache(TT)
       }
       _renderWithFrameGraph() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this.activeCamera = null, this.activeCameras = null, pp)
-          for (const cp of this.cameras)
-            if (cp.update(), 0 !== cp.cameraRigMode)
-              for (let pp = 0; pp < cp._rigCameras.length; pp++) cp._rigCameras[pp].update();
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          UT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this.activeCamera = null, this.activeCameras = null, TT)
+          for (const mT of this.cameras)
+            if (mT.update(), 0 !== mT.cameraRigMode)
+              for (let TT = 0; TT < mT._rigCameras.length; TT++) mT._rigCameras[TT].update();
         this.onBeforeRenderObservable.notifyObservers(this), this._renderingMeshEvaluationDepth++;
         try {
-          this._renderWithFrameGraphAfterBeforeRender(ip)
+          this._renderWithFrameGraphAfterBeforeRender(UT)
         } finally {
           this._renderingMeshEvaluationDepth--
         }
       }
-      _renderWithFrameGraphAfterBeforeRender(pp) {
+      _renderWithFrameGraphAfterBeforeRender(TT) {
         this.onBeforeRenderTargetsRenderObservable.notifyObservers(this), this._renderTargets.reset();
-        const ip = this._frameGraph?.findMainCamera() ?? null;
+        const UT = this._frameGraph?.findMainCamera() ?? null;
         if (this.renderTargetsEnabled) {
-          this.environmentTexture && this.environmentTexture.isRenderTarget && this._renderTargets.pushNoDuplicate(this.environmentTexture), this._renderTargets.concatWithNoDuplicate(this.customRenderTargets), Op.i.StartPerformanceCounter("Custom render targets", this._renderTargets.length > 0);
-          for (let pp = 0; pp < this._renderTargets.length; pp++) {
-            const cp = this._renderTargets.data[pp],
-              Op = cp.activeCamera || ip;
-            this._renderRenderTarget(cp, Op, !0, this.dumpNextRenderTargets)
+          this.environmentTexture && this.environmentTexture.isRenderTarget && this._renderTargets.pushNoDuplicate(this.environmentTexture), this._renderTargets.concatWithNoDuplicate(this.customRenderTargets), WT.j.StartPerformanceCounter("Custom render targets", this._renderTargets.length > 0);
+          for (let TT = 0; TT < this._renderTargets.length; TT++) {
+            const mT = this._renderTargets.data[TT],
+              WT = mT.activeCamera || UT;
+            this._renderRenderTarget(mT, WT, !0, this.dumpNextRenderTargets)
           }
-          Op.i.EndPerformanceCounter("Custom render targets", this._renderTargets.length > 0), this._renderId++
+          WT.j.EndPerformanceCounter("Custom render targets", this._renderTargets.length > 0), this._renderId++
         }
         this.onAfterRenderTargetsRenderObservable.notifyObservers(this);
-        for (let cp = 0, Op = this._beforeClearStage; cp < Op.length; cp++) {
-          Op[cp].action()
+        for (let mT = 0, WT = this._beforeClearStage; mT < WT.length; mT++) {
+          WT[mT].action()
         }
         if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset();
         else {
-          const ip = this.getActiveMeshCandidates(),
-            cp = ip.length;
+          const UT = this.getActiveMeshCandidates(),
+            mT = UT.length;
           if (this._activeMeshesFrozen) {
             if (!this._skipEvaluateActiveMeshesCompletely)
-              for (let pp = 0; pp < cp; pp++) {
-                const cp = ip.data[pp];
-                cp._internalAbstractMeshDataInfo._wasActiveLastFrame && cp.computeWorldMatrix()
+              for (let TT = 0; TT < mT; TT++) {
+                const mT = UT.data[TT];
+                mT._internalAbstractMeshDataInfo._wasActiveLastFrame && mT.computeWorldMatrix()
               }
             if (this.particlesEnabled) {
-              const pp = this._activeParticleSystems.length;
-              for (let ip = 0; ip < pp; ip++) this._activeParticleSystems.data[ip].animate()
+              const TT = this._activeParticleSystems.length;
+              for (let UT = 0; UT < TT; UT++) this._activeParticleSystems.data[UT].animate()
             }
           } else {
             this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset();
-            for (let Op = 0; Op < cp; Op++) {
-              const cp = ip.data[Op];
-              cp._internalAbstractMeshDataInfo._wasActiveLastFrame = !1, cp.isBlocked || (this._totalVertices.addCount(cp.getTotalVertices(), !1), cp.isReady() && cp.isEnabled() && !cp.ei.hasAZeroComponent && (cp.computeWorldMatrix(pp), cp.actionManager && cp.actionManager.hasSpecificTriggers2(12, 13) && this._meshesForIntersections.pushNoDuplicate(cp)))
+            for (let WT = 0; WT < mT; WT++) {
+              const mT = UT.data[WT];
+              mT._internalAbstractMeshDataInfo._wasActiveLastFrame = !1, mT.isBlocked || (this._totalVertices.addCount(mT.getTotalVertices(), !1), mT.isReady() && mT.isEnabled() && !mT.gp.hasAZeroComponent && (mT.computeWorldMatrix(TT), mT.actionManager && mT.actionManager.hasSpecificTriggers2(12, 13) && this._meshesForIntersections.pushNoDuplicate(mT)))
             }
             if (this.particlesEnabled)
-              for (let pp = 0; pp < this.Wm.length; pp++) {
-                const ip = this.Wm[pp];
-                if (!ip.isStarted() || !ip.emitter) continue;
-                const cp = ip.emitter;
-                cp.position && !cp.isEnabled() || (this._activeParticleSystems.push(ip), ip.animate())
+              for (let TT = 0; TT < this.EY.length; TT++) {
+                const UT = this.EY[TT];
+                if (!UT.isStarted() || !UT.emitter) continue;
+                const mT = UT.emitter;
+                mT.position && !mT.isEnabled() || (this._activeParticleSystems.push(UT), UT.animate())
               }
           }
         }
         this.frameGraph?.execute()
       }
-      _renderRenderTarget(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this._intermediateRendering = !0, pp._shouldRender()) {
-          if (this._renderId++, this.activeCamera = ip, !this.activeCamera) throw new Error("Active camera not set");
-          this._engine.setViewport(this.activeCamera.viewport), this.updateTransformMatrix(), pp.render(cp, Op)
+      _renderRenderTarget(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this._intermediateRendering = !0, TT._shouldRender()) {
+          if (this._renderId++, this.activeCamera = UT, !this.activeCamera) throw new Error("Active camera not set");
+          this._engine.setViewport(this.activeCamera.viewport), this.updateTransformMatrix(), TT.render(mT, WT)
         }
         this._intermediateRendering = !1
       }
       render() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.uR) return;
-        const cp = this._renderingMeshEvaluationDepth;
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.bJ) return;
+        const mT = this._renderingMeshEvaluationDepth;
         try {
-          this._renderFrame(pp, ip)
+          this._renderFrame(TT, UT)
         } finally {
-          this._renderingMeshEvaluationDepth = cp
+          this._renderingMeshEvaluationDepth = mT
         }
       }
-      _renderFrame(pp, ip) {
-        if (this.onReadyObservable.hasObservers() && null === this._executeWhenReadyTimeoutId && this._checkIsReady(), wp.c.Gl = this._getFloatingOriginScene, this._frameId++, this._defaultFrameBufferCleared = !1, this._checkCameraRenderTarget(this.activeCamera), this.activeCameras?.length)
-          for (const cp of this.activeCameras) this._checkCameraRenderTarget(cp);
-        this._registerTransientComponents(), this._activeParticles.fetchNewFrame(), this._totalVertices.fetchNewFrame(), this._activeIndices.fetchNewFrame(), this._activeBones.fetchNewFrame(), this._meshesForIntersections.reset(), this.resetCachedMaterial(), this.onBeforeAnimationsObservable.notifyObservers(this), this.actionManager && this.actionManager.processTrigger(11), ip || this.animate();
-        for (let cp = 0, Op = this._beforeCameraUpdateStage; cp < Op.length; cp++) {
-          Op[cp].action()
+      _renderFrame(TT, UT) {
+        if (this.onReadyObservable.hasObservers() && null === this._executeWhenReadyTimeoutId && this._checkIsReady(), cT.b.KF = this._getFloatingOriginScene, this._frameId++, this._defaultFrameBufferCleared = !1, this._checkCameraRenderTarget(this.activeCamera), this.activeCameras?.length)
+          for (const mT of this.activeCameras) this._checkCameraRenderTarget(mT);
+        this._registerTransientComponents(), this._activeParticles.fetchNewFrame(), this._totalVertices.fetchNewFrame(), this._activeIndices.fetchNewFrame(), this._activeBones.fetchNewFrame(), this._meshesForIntersections.reset(), this.resetCachedMaterial(), this.onBeforeAnimationsObservable.notifyObservers(this), this.actionManager && this.actionManager.processTrigger(11), UT || this.animate();
+        for (let mT = 0, WT = this._beforeCameraUpdateStage; mT < WT.length; mT++) {
+          WT[mT].action()
         }
-        if (pp)
+        if (TT)
           if (this.activeCameras && this.activeCameras.length > 0)
-            for (let cp = 0; cp < this.activeCameras.length; cp++) {
-              const pp = this.activeCameras[cp];
-              if (pp.update(), 0 !== pp.cameraRigMode)
-                for (let ip = 0; ip < pp._rigCameras.length; ip++) pp._rigCameras[ip].update()
+            for (let mT = 0; mT < this.activeCameras.length; mT++) {
+              const TT = this.activeCameras[mT];
+              if (TT.update(), 0 !== TT.cameraRigMode)
+                for (let UT = 0; UT < TT._rigCameras.length; UT++) TT._rigCameras[UT].update()
             } else if (this.activeCamera && (this.activeCamera.update(), 0 !== this.activeCamera.cameraRigMode))
-              for (let cp = 0; cp < this.activeCamera._rigCameras.length; cp++) this.activeCamera._rigCameras[cp].update();
-        if (this.customRenderFunction) this._renderId++, this._engine.currentRenderPassId = 0, this._renderingMeshEvaluationDepth++, this.customRenderFunction(pp, ip);
+              for (let mT = 0; mT < this.activeCamera._rigCameras.length; mT++) this.activeCamera._rigCameras[mT].update();
+        if (this.customRenderFunction) this._renderId++, this._engine.currentRenderPassId = 0, this._renderingMeshEvaluationDepth++, this.customRenderFunction(TT, UT);
         else {
           this.onBeforeRenderObservable.notifyObservers(this), this._renderingMeshEvaluationDepth++, this.onBeforeRenderTargetsRenderObservable.notifyObservers(this);
-          const pp = this.activeCameras?.length ? this.activeCameras[0] : this.activeCamera;
+          const TT = this.activeCameras?.length ? this.activeCameras[0] : this.activeCamera;
           if (this.renderTargetsEnabled) {
-            Op.i.StartPerformanceCounter("Custom render targets", this.customRenderTargets.length > 0);
-            for (let ip = 0; ip < this.customRenderTargets.length; ip++) {
-              const cp = this.customRenderTargets[ip],
-                Op = cp.activeCamera || this.activeCamera;
-              this._renderRenderTarget(cp, Op, pp !== Op, this.dumpNextRenderTargets)
+            WT.j.StartPerformanceCounter("Custom render targets", this.customRenderTargets.length > 0);
+            for (let UT = 0; UT < this.customRenderTargets.length; UT++) {
+              const mT = this.customRenderTargets[UT],
+                WT = mT.activeCamera || this.activeCamera;
+              this._renderRenderTarget(mT, WT, TT !== WT, this.dumpNextRenderTargets)
             }
-            Op.i.EndPerformanceCounter("Custom render targets", this.customRenderTargets.length > 0), this._renderId++
+            WT.j.EndPerformanceCounter("Custom render targets", this.customRenderTargets.length > 0), this._renderId++
           }
-          this._engine.currentRenderPassId = pp?.renderPassId ?? 0, this.activeCamera = pp, this._activeCamera && 22 !== this._activeCamera.cameraRigMode && !this.prePass && this._bindFrameBuffer(this._activeCamera, !1), this.onAfterRenderTargetsRenderObservable.notifyObservers(this);
-          for (let ip = 0, cp = this._beforeClearStage; ip < cp.length; ip++) {
-            cp[ip].action()
+          this._engine.currentRenderPassId = TT?.renderPassId ?? 0, this.activeCamera = TT, this._activeCamera && 22 !== this._activeCamera.cameraRigMode && !this.prePass && this._bindFrameBuffer(this._activeCamera, !1), this.onAfterRenderTargetsRenderObservable.notifyObservers(this);
+          for (let UT = 0, mT = this._beforeClearStage; UT < mT.length; UT++) {
+            mT[UT].action()
           }
           this._clearFrameBuffer(this.activeCamera);
-          for (let ip = 0, cp = this._gatherRenderTargetsStage; ip < cp.length; ip++) {
-            cp[ip].action(this._renderTargets)
+          for (let UT = 0, mT = this._gatherRenderTargetsStage; UT < mT.length; UT++) {
+            mT[UT].action(this._renderTargets)
           }
           if (this.activeCameras && this.activeCameras.length > 0)
-            for (let ip = 0; ip < this.activeCameras.length; ip++) this._processSubCameras(this.activeCameras[ip], ip > 0);
+            for (let UT = 0; UT < this.activeCameras.length; UT++) this._processSubCameras(this.activeCameras[UT], UT > 0);
           else {
             if (!this.activeCamera) throw new Error("No camera defined");
             this._processSubCameras(this.activeCamera, !!this.activeCamera.outputRenderTarget)
           }
         }
         this._inputManager._updateMeshUnderPointer(), this._checkIntersections();
-        for (let cp = 0, Op = this._afterRenderStage; cp < Op.length; cp++) {
-          Op[cp].action()
+        for (let mT = 0, WT = this._afterRenderStage; mT < WT.length; mT++) {
+          WT[mT].action()
         }
         if (this.afterRender && this.afterRender(), this.onAfterRenderObservable.notifyObservers(this), this._toBeDisposed.length) {
-          for (let pp = 0; pp < this._toBeDisposed.length; pp++) {
-            const ip = this._toBeDisposed[pp];
-            ip && ip.dispose()
+          for (let TT = 0; TT < this._toBeDisposed.length; TT++) {
+            const UT = this._toBeDisposed[TT];
+            UT && UT.dispose()
           }
           this._toBeDisposed.length = 0
         }
         this.dumpNextRenderTargets && (this.dumpNextRenderTargets = !1), this._activeBones.addCount(0, !0), this._activeIndices.addCount(0, !0), this._activeParticles.addCount(0, !0), this._engine.restoreDefaultFramebuffer()
       }
       freezeMaterials() {
-        for (let pp = 0; pp < this.materials.length; pp++) this.materials[pp].freeze()
+        for (let TT = 0; TT < this.materials.length; TT++) this.materials[TT].freeze()
       }
       unfreezeMaterials() {
-        for (let pp = 0; pp < this.materials.length; pp++) this.materials[pp].unfreeze()
+        for (let TT = 0; TT < this.materials.length; TT++) this.materials[TT].unfreeze()
       }
       dispose() {
-        if (this.uR) return;
-        if (this._isDisposing = !0, this.beforeRender = null, this.afterRender = null, this.metadata = null, this.skeletons.length = 0, this.morphTargetManagers.length = 0, this._transientComponents.length = 0, this._isReadyForMeshStage.clear(), this._beforeEvaluateActiveMeshStage.clear(), this._evaluateSubMeshStage.clear(), this._preActiveMeshStage.clear(), this._cameraDrawRenderTargetStage.clear(), this._beforeCameraDrawStage.clear(), this._beforeRenderTargetDrawStage.clear(), this._beforeRenderingGroupDrawStage.clear(), this._beforeRenderingMeshStage.clear(), this._afterRenderingMeshStage.clear(), this._afterRenderingGroupDrawStage.clear(), this._afterCameraDrawStage.clear(), this._afterRenderTargetDrawStage.clear(), this._afterRenderStage.clear(), this._beforeCameraUpdateStage.clear(), this._beforeClearStage.clear(), this._gatherRenderTargetsStage.clear(), this._gatherActiveCameraRenderTargetsStage.clear(), this._pointerMoveStage.clear(), this._pointerDownStage.clear(), this._pointerUpStage.clear(), this._isReadyChecks.length = 0, this.importedMeshesFiles = [], this._activeAnimatables && (0, ep.d)(this.stopAllAnimations)) {
-          for (const pp of this._activeAnimatables) pp.onAnimationEndObservable.clear(), pp.onAnimationEnd = null;
+        if (this.bJ) return;
+        if (this._isDisposing = !0, this.beforeRender = null, this.afterRender = null, this.metadata = null, this.skeletons.length = 0, this.morphTargetManagers.length = 0, this._transientComponents.length = 0, this._isReadyForMeshStage.clear(), this._beforeEvaluateActiveMeshStage.clear(), this._evaluateSubMeshStage.clear(), this._preActiveMeshStage.clear(), this._cameraDrawRenderTargetStage.clear(), this._beforeCameraDrawStage.clear(), this._beforeRenderTargetDrawStage.clear(), this._beforeRenderingGroupDrawStage.clear(), this._beforeRenderingMeshStage.clear(), this._afterRenderingMeshStage.clear(), this._afterRenderingGroupDrawStage.clear(), this._afterCameraDrawStage.clear(), this._afterRenderTargetDrawStage.clear(), this._afterRenderStage.clear(), this._beforeCameraUpdateStage.clear(), this._beforeClearStage.clear(), this._gatherRenderTargetsStage.clear(), this._gatherActiveCameraRenderTargetsStage.clear(), this._pointerMoveStage.clear(), this._pointerDownStage.clear(), this._pointerUpStage.clear(), this._isReadyChecks.length = 0, this.importedMeshesFiles = [], this._activeAnimatables && (0, bT.e)(this.stopAllAnimations)) {
+          for (const TT of this._activeAnimatables) TT.onAnimationEndObservable.clear(), TT.onAnimationEnd = null;
           this.stopAllAnimations()
         }
         this.resetCachedMaterial(), this.activeCamera && (this.activeCamera._activeMeshes.dispose(), this.activeCamera = null), this.activeCameras = null, this._activeMeshes.dispose(), this._renderingManager.dispose(), this._processedMaterials.dispose(), this._activeParticleSystems.dispose(), this._activeSkeletons.dispose(), this._softwareSkinnedMeshes.dispose(), this._renderTargets.dispose(), this._materialsRenderTargets.dispose(), this._registeredForLateAnimationBindings.dispose(), this._animationWrites.length = 0, this._animationWriteCount = 0, this._animationStepWriteCount = 0, this._meshesForIntersections.dispose(), this._toBeDisposed.length = 0;
-        const pp = this._activeRequests.slice();
-        for (const Ip of pp) Ip.abort();
+        const TT = this._activeRequests.slice();
+        for (const MT of TT) MT.abort();
         this._activeRequests.length = 0;
         try {
-          this.Kl.notifyObservers(this)
-        } catch (op) {
-          Oc.e.Error("An error occurred while calling onDisposeObservable!", op)
+          this.SF.notifyObservers(this)
+        } catch (zT) {
+          Tm.b.Error("An error occurred while calling onDisposeObservable!", zT)
         }
         this.detachControl();
-        const ip = this._engine.getInputElement?.();
-        if (ip)
-          for (let Ip = 0; Ip < this.cameras.length; Ip++) this.cameras[Ip].detachControl();
-        this._disposeList(this.animationGroups), this._disposeList(this.lights), this._defaultMaterial && this._defaultMaterial.dispose(), this._disposeList(this.multiMaterials), this._disposeList(this.materials), this._disposeList(this.meshes, (pp => pp.dispose(!0))), this._disposeList(this.transformNodes, (pp => pp.dispose(!0)));
-        const cp = this.cameras;
-        this._disposeList(cp), this._disposeList(this.Wm), this._disposeList(this.postProcesses), this._disposeList(this.textures), this._disposeList(this.morphTargetManagers), this._disposeList(this.frameGraphs), this._sceneUbo.dispose(), this._multiviewSceneUbo && this._multiviewSceneUbo.dispose(), this.postProcessManager.dispose(), this._disposeList(this._components);
-        let Op = this._engine.scenes.indexOf(this);
-        if (Op > -1 && this._engine.scenes.splice(Op, 1), this._floatingOriginScene = void 0, 0 === this._engine.scenes.length && (0, wp.i)(), dp.e._LastCreatedScene === this) {
-          dp.e._LastCreatedScene = null;
-          let pp = dp.e.Instances.length - 1;
-          for (; pp >= 0;) {
-            const ip = dp.e.Instances[pp];
-            if (ip.scenes.length > 0) {
-              dp.e._LastCreatedScene = ip.scenes[this._engine.scenes.length - 1];
+        const UT = this._engine.getInputElement?.();
+        if (UT)
+          for (let MT = 0; MT < this.cameras.length; MT++) this.cameras[MT].detachControl();
+        this._disposeList(this.animationGroups), this._disposeList(this.lights), this._defaultMaterial && this._defaultMaterial.dispose(), this._disposeList(this.multiMaterials), this._disposeList(this.materials), this._disposeList(this.meshes, (TT => TT.dispose(!0))), this._disposeList(this.transformNodes, (TT => TT.dispose(!0)));
+        const mT = this.cameras;
+        this._disposeList(mT), this._disposeList(this.EY), this._disposeList(this.postProcesses), this._disposeList(this.textures), this._disposeList(this.morphTargetManagers), this._disposeList(this.frameGraphs), this._sceneUbo.dispose(), this._multiviewSceneUbo && this._multiviewSceneUbo.dispose(), this.postProcessManager.dispose(), this._disposeList(this._components);
+        let WT = this._engine.scenes.indexOf(this);
+        if (WT > -1 && this._engine.scenes.splice(WT, 1), this._floatingOriginScene = void 0, 0 === this._engine.scenes.length && (0, cT.d)(), iT.c._LastCreatedScene === this) {
+          iT.c._LastCreatedScene = null;
+          let TT = iT.c.Instances.length - 1;
+          for (; TT >= 0;) {
+            const UT = iT.c.Instances[TT];
+            if (UT.scenes.length > 0) {
+              iT.c._LastCreatedScene = UT.scenes[this._engine.scenes.length - 1];
               break
             }
-            pp--
+            TT--
           }
         }
-        Op = this._engine._virtualScenes.indexOf(this), Op > -1 && this._engine._virtualScenes.splice(Op, 1), this._engine.wipeCaches(!0), this.Kl.clear(), this.onBeforeRenderObservable.clear(), this.onAfterRenderObservable.clear(), this.onBeforeRenderTargetsRenderObservable.clear(), this.onAfterRenderTargetsRenderObservable.clear(), this.onAfterStepObservable.clear(), this.onBeforeStepObservable.clear(), this.onBeforeActiveMeshesEvaluationObservable.clear(), this.onAfterActiveMeshesEvaluationObservable.clear(), this.onBeforeParticlesRenderingObservable.clear(), this.onAfterParticlesRenderingObservable.clear(), this.onBeforeDrawPhaseObservable.clear(), this.onAfterDrawPhaseObservable.clear(), this.onBeforeAnimationsObservable.clear(), this.onAfterAnimationsObservable.clear(), this.onDataLoadedObservable.clear(), this.onBeforeRenderingGroupObservable.clear(), this.onAfterRenderingGroupObservable.clear(), this.onMeshImportedObservable.clear(), this.onBeforeCameraRenderObservable.clear(), this.onAfterCameraRenderObservable.clear(), this.onAfterRenderCameraObservable.clear(), this.onReadyObservable.clear(), this.onNewCameraAddedObservable.clear(), this.onCameraRemovedObservable.clear(), this.onNewLightAddedObservable.clear(), this.onLightRemovedObservable.clear(), this.onNewGeometryAddedObservable.clear(), this.onGeometryRemovedObservable.clear(), this.onNewTransformNodeAddedObservable.clear(), this.onTransformNodeRemovedObservable.clear(), this.onNewMeshAddedObservable.clear(), this.onMeshRemovedObservable.clear(), this.onNewSkeletonAddedObservable.clear(), this.onSkeletonRemovedObservable.clear(), this.onNewMaterialAddedObservable.clear(), this.onNewMultiMaterialAddedObservable.clear(), this.onMaterialRemovedObservable.clear(), this.onMultiMaterialRemovedObservable.clear(), this.onNewTextureAddedObservable.clear(), this.onTextureRemovedObservable.clear(), this.onNewFrameGraphAddedObservable.clear(), this.onFrameGraphRemovedObservable.clear(), this.onNewObjectRendererAddedObservable.clear(), this.onObjectRendererRemovedObservable.clear(), this.onPrePointerObservable.clear(), this.onPointerObservable.clear(), this.onPreKeyboardObservable.clear(), this.onKeyboardObservable.clear(), this.onActiveCameraChanged.clear(), this.onScenePerformancePriorityChangedObservable.clear(), this.onClearColorChangedObservable.clear(), this.onEnvironmentTextureChangedObservable.clear(), this.onMeshUnderPointerUpdatedObservable.clear(), this._isDisposed = !0
+        WT = this._engine._virtualScenes.indexOf(this), WT > -1 && this._engine._virtualScenes.splice(WT, 1), this._engine.wipeCaches(!0), this.SF.clear(), this.onBeforeRenderObservable.clear(), this.onAfterRenderObservable.clear(), this.onBeforeRenderTargetsRenderObservable.clear(), this.onAfterRenderTargetsRenderObservable.clear(), this.onAfterStepObservable.clear(), this.onBeforeStepObservable.clear(), this.onBeforeActiveMeshesEvaluationObservable.clear(), this.onAfterActiveMeshesEvaluationObservable.clear(), this.onBeforeParticlesRenderingObservable.clear(), this.onAfterParticlesRenderingObservable.clear(), this.onBeforeDrawPhaseObservable.clear(), this.onAfterDrawPhaseObservable.clear(), this.onBeforeAnimationsObservable.clear(), this.onAfterAnimationsObservable.clear(), this.onDataLoadedObservable.clear(), this.onBeforeRenderingGroupObservable.clear(), this.onAfterRenderingGroupObservable.clear(), this.onMeshImportedObservable.clear(), this.onBeforeCameraRenderObservable.clear(), this.onAfterCameraRenderObservable.clear(), this.onAfterRenderCameraObservable.clear(), this.onReadyObservable.clear(), this.onNewCameraAddedObservable.clear(), this.onCameraRemovedObservable.clear(), this.onNewLightAddedObservable.clear(), this.onLightRemovedObservable.clear(), this.onNewGeometryAddedObservable.clear(), this.onGeometryRemovedObservable.clear(), this.onNewTransformNodeAddedObservable.clear(), this.onTransformNodeRemovedObservable.clear(), this.onNewMeshAddedObservable.clear(), this.onMeshRemovedObservable.clear(), this.onNewSkeletonAddedObservable.clear(), this.onSkeletonRemovedObservable.clear(), this.onNewMaterialAddedObservable.clear(), this.onNewMultiMaterialAddedObservable.clear(), this.onMaterialRemovedObservable.clear(), this.onMultiMaterialRemovedObservable.clear(), this.onNewTextureAddedObservable.clear(), this.onTextureRemovedObservable.clear(), this.onNewFrameGraphAddedObservable.clear(), this.onFrameGraphRemovedObservable.clear(), this.onNewObjectRendererAddedObservable.clear(), this.onObjectRendererRemovedObservable.clear(), this.onPrePointerObservable.clear(), this.onPointerObservable.clear(), this.onPreKeyboardObservable.clear(), this.onKeyboardObservable.clear(), this.onActiveCameraChanged.clear(), this.onScenePerformancePriorityChangedObservable.clear(), this.onClearColorChangedObservable.clear(), this.onEnvironmentTextureChangedObservable.clear(), this.onMeshUnderPointerUpdatedObservable.clear(), this._isDisposed = !0
       }
-      _disposeList(pp, ip) {
-        const cp = pp.slice(0);
-        ip = ip ?? (pp => pp.dispose());
-        for (const Op of cp) ip(Op);
-        pp.length = 0
+      _disposeList(TT, UT) {
+        const mT = TT.slice(0);
+        UT = UT ?? (TT => TT.dispose());
+        for (const WT of mT) UT(WT);
+        TT.length = 0
       }
-      get uR() {
+      get bJ() {
         return this._isDisposed
       }
       clearCachedVertexData() {
-        for (let pp = 0; pp < this.meshes.length; pp++) {
-          const ip = this.meshes[pp].geometry;
-          ip && ip.clearCachedData()
+        for (let TT = 0; TT < this.meshes.length; TT++) {
+          const UT = this.meshes[TT].geometry;
+          UT && UT.clearCachedData()
         }
       }
       cleanCachedTextureBuffer() {
-        for (const pp of this.textures) {
-          pp._buffer && (pp._buffer = null)
+        for (const TT of this.textures) {
+          TT._buffer && (TT._buffer = null)
         }
       }
-      getWorldExtends(pp) {
-        const ip = new Dp.o(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          cp = new Dp.o(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        pp = pp || (() => !0);
-        const Op = this.meshes.filter(pp);
-        for (const op of Op) {
-          if (op.computeWorldMatrix(!0), !op.Am || 0 === op.Am.length || op.infiniteDistance) continue;
-          const pp = op.bJ(),
-            Op = pp.boundingBox.minimumWorld,
-            Ip = pp.boundingBox.maximumWorld;
-          Dp.o.CheckExtends(Op, ip, cp), Dp.o.CheckExtends(Ip, ip, cp)
+      getWorldExtends(TT) {
+        const UT = new jT.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+          mT = new jT.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+        TT = TT || (() => !0);
+        const WT = this.meshes.filter(TT);
+        for (const zT of WT) {
+          if (zT.computeWorldMatrix(!0), !zT.rY || 0 === zT.rY.length || zT.infiniteDistance) continue;
+          const TT = zT.rV(),
+            WT = TT.boundingBox.minimumWorld,
+            MT = TT.boundingBox.maximumWorld;
+          jT.p.CheckExtends(WT, UT, mT), jT.p.CheckExtends(MT, UT, mT)
         }
-        return ip.x === Number.MAX_VALUE ? {
-          min: Dp.o.Zero(),
-          max: Dp.o.Zero()
+        return UT.x === Number.MAX_VALUE ? {
+          min: jT.p.Zero(),
+          max: jT.p.Zero()
         } : {
-          min: ip,
-          max: cp
+          min: UT,
+          max: mT
         }
       }
-      createPickingRay(pp, ip, cp, Op) {
-        throw (0, ep.o)("Ray")
+      createPickingRay(TT, UT, mT, WT) {
+        throw (0, bT.k)("Ray")
       }
-      createPickingRayToRef(pp, ip, cp, Op, op) {
-        throw (0, ep.o)("Ray")
+      createPickingRayToRef(TT, UT, mT, WT, zT) {
+        throw (0, bT.k)("Ray")
       }
-      createPickingRayInCameraSpace(pp, ip, cp) {
-        throw (0, ep.o)("Ray")
+      createPickingRayInCameraSpace(TT, UT, mT) {
+        throw (0, bT.k)("Ray")
       }
-      createPickingRayInCameraSpaceToRef(pp, ip, cp, Op) {
-        throw (0, ep.o)("Ray")
+      createPickingRayInCameraSpaceToRef(TT, UT, mT, WT) {
+        throw (0, bT.k)("Ray")
       }
-      SW(pp, ip, cp, Op, op, Ip) {
-        const Sp = (0, ep.o)("Ray", !0);
-        return Sp && Oc.e.Warn(Sp), new Wp.b
+      VL(TT, UT, mT, WT, zT, MT) {
+        const gT = (0, bT.k)("Ray", !0);
+        return gT && Tm.b.Warn(gT), new pT.c
       }
-      pickWithBoundingInfo(pp, ip, cp, Op, op) {
-        const Ip = (0, ep.o)("Ray", !0);
-        return Ip && Oc.e.Warn(Ip), new Wp.b
+      pickWithBoundingInfo(TT, UT, mT, WT, zT) {
+        const MT = (0, bT.k)("Ray", !0);
+        return MT && Tm.b.Warn(MT), new pT.c
       }
-      pickWithRay(pp, ip, cp, Op) {
-        throw (0, ep.o)("Ray")
+      pickWithRay(TT, UT, mT, WT) {
+        throw (0, bT.k)("Ray")
       }
-      multiPick(pp, ip, cp, Op, op) {
-        throw (0, ep.o)("Ray")
+      multiPick(TT, UT, mT, WT, zT) {
+        throw (0, bT.k)("Ray")
       }
-      multiPickWithRay(pp, ip, cp) {
-        throw (0, ep.o)("Ray")
+      multiPickWithRay(TT, UT, mT) {
+        throw (0, bT.k)("Ray")
       }
-      setPointerOverMesh(pp, ip, cp) {
-        this._inputManager.setPointerOverMesh(pp, ip, cp)
+      setPointerOverMesh(TT, UT, mT) {
+        this._inputManager.setPointerOverMesh(TT, UT, mT)
       }
       getPointerOverMesh() {
         return this._inputManager.getPointerOverMesh()
       }
       _rebuildGeometries() {
-        for (const pp of this.geometries) pp._rebuild();
-        for (const pp of this.meshes) pp._rebuild();
+        for (const TT of this.geometries) TT._rebuild();
+        for (const TT of this.meshes) TT._rebuild();
         this.postProcessManager && this.postProcessManager._rebuild();
-        for (const pp of this._components) pp.rebuild();
-        for (const pp of this.Wm) pp.rebuild();
+        for (const TT of this._components) TT.rebuild();
+        for (const TT of this.EY) TT.rebuild();
         if (this.spriteManagers)
-          for (const pp of this.spriteManagers) pp.rebuild()
+          for (const TT of this.spriteManagers) TT.rebuild()
       }
       _rebuildTextures() {
-        for (const pp of this.textures) pp._rebuild(!0);
+        for (const TT of this.textures) TT._rebuild(!0);
         this.markAllMaterialsAsDirty(1)
       }
-      _getByTags(pp, ip, cp) {
-        if (void 0 === ip) return pp;
-        const Op = [];
-        for (const op in pp) {
-          const Ip = pp[op];
-          Yp.b && Yp.b.MatchesQuery(Ip, ip) && (!cp || cp(Ip)) && Op.push(Ip)
+      _getByTags(TT, UT, mT) {
+        if (void 0 === UT) return TT;
+        const WT = [];
+        for (const zT in TT) {
+          const MT = TT[zT];
+          kT.b && kT.b.MatchesQuery(MT, UT) && (!mT || mT(MT)) && WT.push(MT)
         }
-        return Op
+        return WT
       }
-      getMeshesByTags(pp, ip) {
-        return this._getByTags(this.meshes, pp, ip)
+      getMeshesByTags(TT, UT) {
+        return this._getByTags(this.meshes, TT, UT)
       }
-      getCamerasByTags(pp, ip) {
-        return this._getByTags(this.cameras, pp, ip)
+      getCamerasByTags(TT, UT) {
+        return this._getByTags(this.cameras, TT, UT)
       }
-      getLightsByTags(pp, ip) {
-        return this._getByTags(this.lights, pp, ip)
+      getLightsByTags(TT, UT) {
+        return this._getByTags(this.lights, TT, UT)
       }
-      getMaterialByTags(pp, ip) {
-        return this._getByTags(this.materials, pp, ip).concat(this._getByTags(this.multiMaterials, pp, ip))
+      getMaterialByTags(TT, UT) {
+        return this._getByTags(this.materials, TT, UT).concat(this._getByTags(this.multiMaterials, TT, UT))
       }
-      getTransformNodesByTags(pp, ip) {
-        return this._getByTags(this.transformNodes, pp, ip)
+      getTransformNodesByTags(TT, UT) {
+        return this._getByTags(this.transformNodes, TT, UT)
       }
-      setRenderingOrder(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._renderingManager.setRenderingOrder(pp, ip, cp, Op)
+      setRenderingOrder(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._renderingManager.setRenderingOrder(TT, UT, mT, WT)
       }
-      setRenderingAutoClearDepthStencil(pp, ip) {
-        let cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._renderingManager.setRenderingAutoClearDepthStencil(pp, ip, cp, Op)
+      setRenderingAutoClearDepthStencil(TT, UT) {
+        let mT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._renderingManager.setRenderingAutoClearDepthStencil(TT, UT, mT, WT)
       }
-      getAutoClearDepthStencilSetup(pp) {
-        return this._renderingManager.getAutoClearDepthStencilSetup(pp)
+      getAutoClearDepthStencilSetup(TT) {
+        return this._renderingManager.getAutoClearDepthStencilSetup(TT)
       }
-      _forceBlockMaterialDirtyMechanism(pp) {
-        this._blockMaterialDirtyMechanism = pp
+      _forceBlockMaterialDirtyMechanism(TT) {
+        this._blockMaterialDirtyMechanism = TT
       }
       get blockMaterialDirtyMechanism() {
         return this._blockMaterialDirtyMechanism
       }
-      set blockMaterialDirtyMechanism(pp) {
-        this._blockMaterialDirtyMechanism !== pp && (this._blockMaterialDirtyMechanism = pp, pp || this.markAllMaterialsAsDirty(127))
+      set blockMaterialDirtyMechanism(TT) {
+        this._blockMaterialDirtyMechanism !== TT && (this._blockMaterialDirtyMechanism = TT, TT || this.markAllMaterialsAsDirty(127))
       }
-      markAllMaterialsAsDirty(pp, ip) {
+      markAllMaterialsAsDirty(TT, UT) {
         if (!this._blockMaterialDirtyMechanism)
-          for (const cp of this.materials) ip && !ip(cp) || cp.ocp(pp)
+          for (const mT of this.materials) UT && !UT(mT) || mT.NUT(TT)
       }
-      _loadFile(pp, ip, cp, Op, op, Ip, Sp) {
-        const xp = (0, zp.l)(pp, ip, cp, Op ? this.offlineProvider : void 0, op, Ip, Sp);
-        return this._activeRequests.push(xp), xp.onCompleteObservable.add((pp => {
-          this._activeRequests.splice(this._activeRequests.indexOf(pp), 1)
-        })), xp
+      _loadFile(TT, UT, mT, WT, zT, MT, gT) {
+        const nT = (0, hT.n)(TT, UT, mT, WT ? this.offlineProvider : void 0, zT, MT, gT);
+        return this._activeRequests.push(nT), nT.onCompleteObservable.add((TT => {
+          this._activeRequests.splice(this._activeRequests.indexOf(TT), 1)
+        })), nT
       }
-      async _loadFileAsync(pp, ip, cp, Op, op) {
-        return await new Promise(((Ip, Sp) => {
-          this._loadFile(pp, (pp => {
-            Ip(pp)
-          }), ip, cp, Op, ((pp, ip) => {
-            Sp(ip)
-          }), op)
+      async _loadFileAsync(TT, UT, mT, WT, zT) {
+        return await new Promise(((MT, gT) => {
+          this._loadFile(TT, (TT => {
+            MT(TT)
+          }), UT, mT, WT, ((TT, UT) => {
+            gT(UT)
+          }), zT)
         }))
       }
-      async _loadDelayedFileAsync(pp, ip, cp) {
+      async _loadDelayedFileAsync(TT, UT, mT) {
         this._delayedFileRequests || (this._delayedFileRequests = new Map);
-        const Op = `${pp}|${ip?"binary":"string"}`;
-        let op = this._delayedFileRequests.get(Op);
-        if (!op) {
-          op = ip ? this._loadFileAsync(pp, void 0, cp, !0) : this._loadFileAsync(pp, void 0, cp, !1);
-          const Ip = op;
+        const WT = `${TT}|${UT?"binary":"string"}`;
+        let zT = this._delayedFileRequests.get(WT);
+        if (!zT) {
+          zT = UT ? this._loadFileAsync(TT, void 0, mT, !0) : this._loadFileAsync(TT, void 0, mT, !1);
+          const MT = zT;
           (async () => {
             try {
-              await Ip
+              await MT
             } catch {}
-            this._delayedFileRequests?.delete(Op)
-          })(), this._delayedFileRequests.set(Op, op)
+            this._delayedFileRequests?.delete(WT)
+          })(), this._delayedFileRequests.set(WT, zT)
         }
-        return await op
+        return await zT
       }
-      _requestFile(pp, ip, cp, Op, op, Ip, Sp) {
-        const xp = (0, zp.v)(pp, ip, cp, Op ? this.offlineProvider : void 0, op, Ip, Sp);
-        return this._activeRequests.push(xp), xp.onCompleteObservable.add((pp => {
-          this._activeRequests.splice(this._activeRequests.indexOf(pp), 1)
-        })), xp
+      _requestFile(TT, UT, mT, WT, zT, MT, gT) {
+        const nT = (0, hT.z)(TT, UT, mT, WT ? this.offlineProvider : void 0, zT, MT, gT);
+        return this._activeRequests.push(nT), nT.onCompleteObservable.add((TT => {
+          this._activeRequests.splice(this._activeRequests.indexOf(TT), 1)
+        })), nT
       }
-      async _requestFileAsync(pp, ip, cp, Op, op) {
-        return await new Promise(((Ip, Sp) => {
-          this._requestFile(pp, (pp => {
-            Ip(pp)
-          }), ip, cp, Op, (pp => {
-            Sp(pp)
-          }), op)
+      async _requestFileAsync(TT, UT, mT, WT, zT) {
+        return await new Promise(((MT, gT) => {
+          this._requestFile(TT, (TT => {
+            MT(TT)
+          }), UT, mT, WT, (TT => {
+            gT(TT)
+          }), zT)
         }))
       }
-      _readFile(pp, ip, cp, Op, op) {
-        const Ip = (0, zp.r)(pp, ip, cp, Op, op);
-        return this._activeRequests.push(Ip), Ip.onCompleteObservable.add((pp => {
-          this._activeRequests.splice(this._activeRequests.indexOf(pp), 1)
-        })), Ip
+      _readFile(TT, UT, mT, WT, zT) {
+        const MT = (0, hT.u)(TT, UT, mT, WT, zT);
+        return this._activeRequests.push(MT), MT.onCompleteObservable.add((TT => {
+          this._activeRequests.splice(this._activeRequests.indexOf(TT), 1)
+        })), MT
       }
-      async _readFileAsync(pp, ip, cp) {
-        return await new Promise(((Op, op) => {
-          this._readFile(pp, (pp => {
-            Op(pp)
-          }), ip, cp, (pp => {
-            op(pp)
+      async _readFileAsync(TT, UT, mT) {
+        return await new Promise(((WT, zT) => {
+          this._readFile(TT, (TT => {
+            WT(TT)
+          }), UT, mT, (TT => {
+            zT(TT)
           }))
         }))
       }
       getPerfCollector() {
-        throw (0, ep.o)("performanceViewerSceneExtension")
+        throw (0, bT.k)("performanceViewerSceneExtension")
       }
-      setActiveCameraByID(pp) {
-        return this.setActiveCameraById(pp)
+      setActiveCameraByID(TT) {
+        return this.setActiveCameraById(TT)
       }
-      getMaterialByID(pp) {
-        return this.getMaterialById(pp)
+      getMaterialByID(TT) {
+        return this.getMaterialById(TT)
       }
-      getLastMaterialByID(pp) {
-        return this.getLastMaterialById(pp)
+      getLastMaterialByID(TT) {
+        return this.getLastMaterialById(TT)
       }
-      getTextureByUniqueID(pp) {
-        return this.getTextureByUniqueId(pp)
+      getTextureByUniqueID(TT) {
+        return this.getTextureByUniqueId(TT)
       }
-      getCameraByID(pp) {
-        return this.getCameraById(pp)
+      getCameraByID(TT) {
+        return this.getCameraById(TT)
       }
-      getCameraByUniqueID(pp) {
-        return this.getCameraByUniqueId(pp)
+      getCameraByUniqueID(TT) {
+        return this.getCameraByUniqueId(TT)
       }
-      getBoneByID(pp) {
-        return this.getBoneById(pp)
+      getBoneByID(TT) {
+        return this.getBoneById(TT)
       }
-      getLightByID(pp) {
-        return this.getLightById(pp)
+      getLightByID(TT) {
+        return this.getLightById(TT)
       }
-      getLightByUniqueID(pp) {
-        return this.getLightByUniqueId(pp)
+      getLightByUniqueID(TT) {
+        return this.getLightByUniqueId(TT)
       }
-      getParticleSystemByID(pp) {
-        return this.getParticleSystemById(pp)
+      getParticleSystemByID(TT) {
+        return this.getParticleSystemById(TT)
       }
-      getGeometryByID(pp) {
-        return this.getGeometryById(pp)
+      getGeometryByID(TT) {
+        return this.getGeometryById(TT)
       }
-      getMeshByID(pp) {
-        return this.getMeshById(pp)
+      getMeshByID(TT) {
+        return this.getMeshById(TT)
       }
-      getMeshByUniqueID(pp) {
-        return this.getMeshByUniqueId(pp)
+      getMeshByUniqueID(TT) {
+        return this.getMeshByUniqueId(TT)
       }
-      getLastMeshByID(pp) {
-        return this.getLastMeshById(pp)
+      getLastMeshByID(TT) {
+        return this.getLastMeshById(TT)
       }
-      getMeshesByID(pp) {
-        return this.getMeshesById(pp)
+      getMeshesByID(TT) {
+        return this.getMeshesById(TT)
       }
-      getTransformNodeByID(pp) {
-        return this.getTransformNodeById(pp)
+      getTransformNodeByID(TT) {
+        return this.getTransformNodeById(TT)
       }
-      getTransformNodeByUniqueID(pp) {
-        return this.getTransformNodeByUniqueId(pp)
+      getTransformNodeByUniqueID(TT) {
+        return this.getTransformNodeByUniqueId(TT)
       }
-      getTransformNodesByID(pp) {
-        return this.getTransformNodesById(pp)
+      getTransformNodesByID(TT) {
+        return this.getTransformNodesById(TT)
       }
-      getNodeByID(pp) {
-        return this.getNodeById(pp)
+      getNodeByID(TT) {
+        return this.getNodeById(TT)
       }
-      getLastEntryByID(pp) {
-        return this.getLastEntryById(pp)
+      getLastEntryByID(TT) {
+        return this.getLastEntryById(TT)
       }
-      getLastSkeletonByID(pp) {
-        return this.getLastSkeletonById(pp)
+      getLastSkeletonByID(TT) {
+        return this.getLastSkeletonById(TT)
       }
     }
-    Lc.FOGMODE_NONE = 0, Lc.FOGMODE_EXP = 1, Lc.FOGMODE_EXP2 = 2, Lc.FOGMODE_LINEAR = 3, Lc.MinDeltaTime = 1, Lc.MaxDeltaTime = 1e3, Lc._OriginalDefaultMaterialFactory = Lc.DefaultMaterialFactory;
-    let Yc = !1;
+    Mm.FOGMODE_NONE = 0, Mm.FOGMODE_EXP = 1, Mm.FOGMODE_EXP2 = 2, Mm.FOGMODE_LINEAR = 3, Mm.MinDeltaTime = 1, Mm.MaxDeltaTime = 1e3, Mm._OriginalDefaultMaterialFactory = Mm.DefaultMaterialFactory;
+    let gm = !1;
 
-    function Dc() {
-      Yc || (Yc = !0, (0, oc.g)("BABYLON.Scene", Lc))
-    }(ii = Lc.prototype).sortActiveAnimatables ?? (ii.sortActiveAnimatables = (0, ep.k)("Scene", "sortActiveAnimatables")), (ci = Lc.prototype).beginWeightedAnimation ?? (ci.beginWeightedAnimation = (0, ep.k)("Scene", "beginWeightedAnimation")), (Oi = Lc.prototype).beginAnimation ?? (Oi.beginAnimation = (0, ep.k)("Scene", "beginAnimation")), (oi = Lc.prototype).beginHierarchyAnimation ?? (oi.beginHierarchyAnimation = (0, ep.k)("Scene", "beginHierarchyAnimation")), (Ii = Lc.prototype).beginDirectAnimation ?? (Ii.beginDirectAnimation = (0, ep.k)("Scene", "beginDirectAnimation")), (Si = Lc.prototype).beginDirectHierarchyAnimation ?? (Si.beginDirectHierarchyAnimation = (0, ep.k)("Scene", "beginDirectHierarchyAnimation")), (xi = Lc.prototype).getAnimatableByTarget ?? (xi.getAnimatableByTarget = (0, ep.k)("Scene", "getAnimatableByTarget")), (Li = Lc.prototype).getAllAnimatablesByTarget ?? (Li.getAllAnimatablesByTarget = (0, ep.k)("Scene", "getAllAnimatablesByTarget")), (Yi = Lc.prototype).stopAllAnimations ?? (Yi.stopAllAnimations = (0, ep.k)("Scene", "stopAllAnimations")), (Di = Lc.prototype).getSoundByName ?? (Di.getSoundByName = (0, ep.k)("Scene", "getSoundByName")), (Ai = Lc.prototype).createOrUpdateSelectionOctree ?? (Ai.createOrUpdateSelectionOctree = (0, ep.k)("Scene", "createOrUpdateSelectionOctree")), (Pi = Lc.prototype).createDefaultLight ?? (Pi.createDefaultLight = (0, ep.k)("Scene", "createDefaultLight")), (Wi = Lc.prototype).createDefaultCamera ?? (Wi.createDefaultCamera = (0, ep.k)("Scene", "createDefaultCamera")), (yi = Lc.prototype).createDefaultCameraOrLight ?? (yi.createDefaultCameraOrLight = (0, ep.k)("Scene", "createDefaultCameraOrLight")), (Ui = Lc.prototype).createDefaultSkybox ?? (Ui.createDefaultSkybox = (0, ep.k)("Scene", "createDefaultSkybox")), (wi = Lc.prototype).createDefaultEnvironment ?? (wi.createDefaultEnvironment = (0, ep.k)("Scene", "createDefaultEnvironment")), (vi = Lc.prototype).createDefaultVRExperience ?? (vi.createDefaultVRExperience = (0, ep.k)("Scene", "createDefaultVRExperience")), (ti = Lc.prototype).createDefaultXRExperienceAsync ?? (ti.createDefaultXRExperienceAsync = (0, ep.k)("Scene", "createDefaultXRExperienceAsync")), (Hi = Lc.prototype).getGlowLayerByName ?? (Hi.getGlowLayerByName = (0, ep.k)("Scene", "getGlowLayerByName")), (di = Lc.prototype).getHighlightLayerByName ?? (di.getHighlightLayerByName = (0, ep.k)("Scene", "getHighlightLayerByName")), (ei = Lc.prototype).getSelectionOutlineLayerByName ?? (ei.getSelectionOutlineLayerByName = (0, ep.k)("Scene", "getSelectionOutlineLayerByName")), (ui = Lc.prototype).removeLensFlareSystem ?? (ui.removeLensFlareSystem = (0, ep.k)("Scene", "removeLensFlareSystem")), (ji = Lc.prototype).addLensFlareSystem ?? (ji.addLensFlareSystem = (0, ep.k)("Scene", "addLensFlareSystem")), (ki = Lc.prototype).getLensFlareSystemByName ?? (ki.getLensFlareSystemByName = (0, ep.k)("Scene", "getLensFlareSystemByName")), (mi = Lc.prototype).getLensFlareSystemByID ?? (mi.getLensFlareSystemByID = (0, ep.k)("Scene", "getLensFlareSystemByID")), (Ri = Lc.prototype).getLensFlareSystemById ?? (Ri.getLensFlareSystemById = (0, ep.k)("Scene", "getLensFlareSystemById")), (qi = Lc.prototype).getPhysicsEngine ?? (qi.getPhysicsEngine = (0, ep.k)("Scene", "getPhysicsEngine")), (Mi = Lc.prototype).enablePhysics ?? (Mi.enablePhysics = (0, ep.k)("Scene", "enablePhysics")), (Ci = Lc.prototype).disablePhysicsEngine ?? (Ci.disablePhysicsEngine = (0, ep.k)("Scene", "disablePhysicsEngine")), (Ei = Lc.prototype).isPhysicsEnabled ?? (Ei.isPhysicsEnabled = (0, ep.k)("Scene", "isPhysicsEnabled")), (Xi = Lc.prototype).deleteCompoundImpostor ?? (Xi.deleteCompoundImpostor = (0, ep.k)("Scene", "deleteCompoundImpostor")), (li = Lc.prototype).removeReflectionProbe ?? (li.removeReflectionProbe = (0, ep.k)("Scene", "removeReflectionProbe")), (Qi = Lc.prototype).addReflectionProbe ?? (Qi.addReflectionProbe = (0, ep.k)("Scene", "addReflectionProbe")), (Ji = Lc.prototype).getBoundingBoxRenderer ?? (Ji.getBoundingBoxRenderer = (0, ep.k)("Scene", "getBoundingBoxRenderer")), (Bi = Lc.prototype).enableDepthRenderer ?? (Bi.enableDepthRenderer = (0, ep.k)("Scene", "enableDepthRenderer")), (Ni = Lc.prototype).disableDepthRenderer ?? (Ni.disableDepthRenderer = (0, ep.k)("Scene", "disableDepthRenderer")), (Ti = Lc.prototype).enableFluidRenderer ?? (Ti.enableFluidRenderer = (0, ep.k)("Scene", "enableFluidRenderer")), (fi = Lc.prototype).disableFluidRenderer ?? (fi.disableFluidRenderer = (0, ep.k)("Scene", "disableFluidRenderer")), (bi = Lc.prototype).enableGeometryBufferRenderer ?? (bi.enableGeometryBufferRenderer = (0, ep.k)("Scene", "enableGeometryBufferRenderer")), (ai = Lc.prototype).disableGeometryBufferRenderer ?? (ai.disableGeometryBufferRenderer = (0, ep.k)("Scene", "disableGeometryBufferRenderer")), (ni = Lc.prototype).enableIblCdfGenerator ?? (ni.enableIblCdfGenerator = (0, ep.k)("Scene", "enableIblCdfGenerator")), (Fi = Lc.prototype).disableIblCdfGenerator ?? (Fi.disableIblCdfGenerator = (0, ep.k)("Scene", "disableIblCdfGenerator")), (gi = Lc.prototype).getOutlineRenderer ?? (gi.getOutlineRenderer = (0, ep.k)("Scene", "getOutlineRenderer")), (Gi = Lc.prototype).enablePrePassRenderer ?? (Gi.enablePrePassRenderer = (0, ep.k)("Scene", "enablePrePassRenderer")), (ri = Lc.prototype).disablePrePassRenderer ?? (ri.disablePrePassRenderer = (0, ep.k)("Scene", "disablePrePassRenderer")), (Zi = Lc.prototype).enableSubSurfaceForPrePass ?? (Zi.enableSubSurfaceForPrePass = (0, ep.k)("Scene", "enableSubSurfaceForPrePass")), (zi = Lc.prototype).disableSubSurfaceForPrePass ?? (zi.disableSubSurfaceForPrePass = (0, ep.k)("Scene", "disableSubSurfaceForPrePass")), (si = Lc.prototype).pickSprite ?? (si.pickSprite = (0, ep.k)("Scene", "pickSprite")), (Ki = Lc.prototype).pickSpriteWithRay ?? (Ki.pickSpriteWithRay = (0, ep.k)("Scene", "pickSpriteWithRay")), (Vi = Lc.prototype).multiPickSprite ?? (Vi.multiPickSprite = (0, ep.k)("Scene", "multiPickSprite")), (pc = Lc.prototype).multiPickSpriteWithRay ?? (pc.multiPickSpriteWithRay = (0, ep.k)("Scene", "multiPickSpriteWithRay")), (ic = Lc.prototype).setPointerOverSprite ?? (ic.setPointerOverSprite = (0, ep.k)("Scene", "setPointerOverSprite")), (cc = Lc.prototype).getPointerOverSprite ?? (cc.getPointerOverSprite = (0, ep.k)("Scene", "getPointerOverSprite")), Object.getOwnPropertyDescriptor(Lc.prototype, "mainSoundTrack") || Object.defineProperty(Lc.prototype, "mainSoundTrack", (0, ep.h)("Scene", "mainSoundTrack")), Object.getOwnPropertyDescriptor(Lc.prototype, "soundTracks") || Object.defineProperty(Lc.prototype, "soundTracks", (0, ep.h)("Scene", "soundTracks")), Object.getOwnPropertyDescriptor(Lc.prototype, "audioEnabled") || Object.defineProperty(Lc.prototype, "audioEnabled", (0, ep.h)("Scene", "audioEnabled")), Object.getOwnPropertyDescriptor(Lc.prototype, "headphone") || Object.defineProperty(Lc.prototype, "headphone", (0, ep.h)("Scene", "headphone")), Object.getOwnPropertyDescriptor(Lc.prototype, "audioListenerPositionProvider") || Object.defineProperty(Lc.prototype, "audioListenerPositionProvider", (0, ep.h)("Scene", "audioListenerPositionProvider")), Object.getOwnPropertyDescriptor(Lc.prototype, "audioListenerRotationProvider") || Object.defineProperty(Lc.prototype, "audioListenerRotationProvider", (0, ep.h)("Scene", "audioListenerRotationProvider")), Object.getOwnPropertyDescriptor(Lc.prototype, "audioPositioningRefreshRate") || Object.defineProperty(Lc.prototype, "audioPositioningRefreshRate", (0, ep.h)("Scene", "audioPositioningRefreshRate")), Object.getOwnPropertyDescriptor(Lc.prototype, "selectionOctree") || Object.defineProperty(Lc.prototype, "selectionOctree", (0, ep.h)("Scene", "selectionOctree")), Object.getOwnPropertyDescriptor(Lc.prototype, "debugLayer") || Object.defineProperty(Lc.prototype, "debugLayer", (0, ep.h)("Scene", "debugLayer")), Object.getOwnPropertyDescriptor(Lc.prototype, "gamepadManager") || Object.defineProperty(Lc.prototype, "gamepadManager", (0, ep.h)("Scene", "gamepadManager")), Object.getOwnPropertyDescriptor(Lc.prototype, "simplificationQueue") || Object.defineProperty(Lc.prototype, "simplificationQueue", (0, ep.h)("Scene", "simplificationQueue")), Object.getOwnPropertyDescriptor(Lc.prototype, "onBeforePhysicsObservable") || Object.defineProperty(Lc.prototype, "onBeforePhysicsObservable", (0, ep.h)("Scene", "onBeforePhysicsObservable")), Object.getOwnPropertyDescriptor(Lc.prototype, "onAfterPhysicsObservable") || Object.defineProperty(Lc.prototype, "onAfterPhysicsObservable", (0, ep.h)("Scene", "onAfterPhysicsObservable")), Object.getOwnPropertyDescriptor(Lc.prototype, "reflectionProbes") || Object.defineProperty(Lc.prototype, "reflectionProbes", (0, ep.h)("Scene", "reflectionProbes")), Object.getOwnPropertyDescriptor(Lc.prototype, "forceShowBoundingBoxes") || Object.defineProperty(Lc.prototype, "forceShowBoundingBoxes", (0, ep.h)("Scene", "forceShowBoundingBoxes")), Object.getOwnPropertyDescriptor(Lc.prototype, "depthPeelingRenderer") || Object.defineProperty(Lc.prototype, "depthPeelingRenderer", (0, ep.h)("Scene", "depthPeelingRenderer")), Object.getOwnPropertyDescriptor(Lc.prototype, "useOrderIndependentTransparency") || Object.defineProperty(Lc.prototype, "useOrderIndependentTransparency", (0, ep.h)("Scene", "useOrderIndependentTransparency")), Object.getOwnPropertyDescriptor(Lc.prototype, "fluidRenderer") || Object.defineProperty(Lc.prototype, "fluidRenderer", (0, ep.h)("Scene", "fluidRenderer")), Object.getOwnPropertyDescriptor(Lc.prototype, "geometryBufferRenderer") || Object.defineProperty(Lc.prototype, "geometryBufferRenderer", (0, ep.h)("Scene", "geometryBufferRenderer")), Object.getOwnPropertyDescriptor(Lc.prototype, "iblCdfGenerator") || Object.defineProperty(Lc.prototype, "iblCdfGenerator", (0, ep.h)("Scene", "iblCdfGenerator")), Object.getOwnPropertyDescriptor(Lc.prototype, "prePassRenderer") || Object.defineProperty(Lc.prototype, "prePassRenderer", (0, ep.h)("Scene", "prePassRenderer")), Object.getOwnPropertyDescriptor(Lc.prototype, "subSurfaceConfiguration") || Object.defineProperty(Lc.prototype, "subSurfaceConfiguration", (0, ep.h)("Scene", "subSurfaceConfiguration")), Object.getOwnPropertyDescriptor(Lc.prototype, "spriteManagers") || Object.defineProperty(Lc.prototype, "spriteManagers", (0, ep.h)("Scene", "spriteManagers")), Object.getOwnPropertyDescriptor(Lc.prototype, "onBeforeSpritesRenderingObservable") || Object.defineProperty(Lc.prototype, "onBeforeSpritesRenderingObservable", (0, ep.h)("Scene", "onBeforeSpritesRenderingObservable")), Object.getOwnPropertyDescriptor(Lc.prototype, "onAfterSpritesRenderingObservable") || Object.defineProperty(Lc.prototype, "onAfterSpritesRenderingObservable", (0, ep.h)("Scene", "onAfterSpritesRenderingObservable"))
+    function nm() {
+      gm || (gm = !0, (0, Um.h)("BABYLON.Scene", Mm))
+    }(RT = Mm.prototype).sortActiveAnimatables ?? (RT.sortActiveAnimatables = (0, bT.j)("Scene", "sortActiveAnimatables")), (TU = Mm.prototype).beginWeightedAnimation ?? (TU.beginWeightedAnimation = (0, bT.j)("Scene", "beginWeightedAnimation")), (UU = Mm.prototype).beginAnimation ?? (UU.beginAnimation = (0, bT.j)("Scene", "beginAnimation")), (mU = Mm.prototype).beginHierarchyAnimation ?? (mU.beginHierarchyAnimation = (0, bT.j)("Scene", "beginHierarchyAnimation")), (WU = Mm.prototype).beginDirectAnimation ?? (WU.beginDirectAnimation = (0, bT.j)("Scene", "beginDirectAnimation")), (zU = Mm.prototype).beginDirectHierarchyAnimation ?? (zU.beginDirectHierarchyAnimation = (0, bT.j)("Scene", "beginDirectHierarchyAnimation")), (MU = Mm.prototype).getAnimatableByTarget ?? (MU.getAnimatableByTarget = (0, bT.j)("Scene", "getAnimatableByTarget")), (gU = Mm.prototype).getAllAnimatablesByTarget ?? (gU.getAllAnimatablesByTarget = (0, bT.j)("Scene", "getAllAnimatablesByTarget")), (nU = Mm.prototype).stopAllAnimations ?? (nU.stopAllAnimations = (0, bT.j)("Scene", "stopAllAnimations")), (HU = Mm.prototype).getSoundByName ?? (HU.getSoundByName = (0, bT.j)("Scene", "getSoundByName")), (kU = Mm.prototype).createOrUpdateSelectionOctree ?? (kU.createOrUpdateSelectionOctree = (0, bT.j)("Scene", "createOrUpdateSelectionOctree")), (jU = Mm.prototype).createDefaultLight ?? (jU.createDefaultLight = (0, bT.j)("Scene", "createDefaultLight")), (lU = Mm.prototype).createDefaultCamera ?? (lU.createDefaultCamera = (0, bT.j)("Scene", "createDefaultCamera")), (LU = Mm.prototype).createDefaultCameraOrLight ?? (LU.createDefaultCameraOrLight = (0, bT.j)("Scene", "createDefaultCameraOrLight")), (pU = Mm.prototype).createDefaultSkybox ?? (pU.createDefaultSkybox = (0, bT.j)("Scene", "createDefaultSkybox")), (BU = Mm.prototype).createDefaultEnvironment ?? (BU.createDefaultEnvironment = (0, bT.j)("Scene", "createDefaultEnvironment")), (ZU = Mm.prototype).createDefaultVRExperience ?? (ZU.createDefaultVRExperience = (0, bT.j)("Scene", "createDefaultVRExperience")), (cU = Mm.prototype).createDefaultXRExperienceAsync ?? (cU.createDefaultXRExperienceAsync = (0, bT.j)("Scene", "createDefaultXRExperienceAsync")), (vU = Mm.prototype).getGlowLayerByName ?? (vU.getGlowLayerByName = (0, bT.j)("Scene", "getGlowLayerByName")), (fU = Mm.prototype).getHighlightLayerByName ?? (fU.getHighlightLayerByName = (0, bT.j)("Scene", "getHighlightLayerByName")), (qU = Mm.prototype).getSelectionOutlineLayerByName ?? (qU.getSelectionOutlineLayerByName = (0, bT.j)("Scene", "getSelectionOutlineLayerByName")), (iU = Mm.prototype).removeLensFlareSystem ?? (iU.removeLensFlareSystem = (0, bT.j)("Scene", "removeLensFlareSystem")), (bU = Mm.prototype).addLensFlareSystem ?? (bU.addLensFlareSystem = (0, bT.j)("Scene", "addLensFlareSystem")), (OU = Mm.prototype).getLensFlareSystemByName ?? (OU.getLensFlareSystemByName = (0, bT.j)("Scene", "getLensFlareSystemByName")), (eU = Mm.prototype).getLensFlareSystemByID ?? (eU.getLensFlareSystemByID = (0, bT.j)("Scene", "getLensFlareSystemByID")), (YU = Mm.prototype).getLensFlareSystemById ?? (YU.getLensFlareSystemById = (0, bT.j)("Scene", "getLensFlareSystemById")), (JU = Mm.prototype).getPhysicsEngine ?? (JU.getPhysicsEngine = (0, bT.j)("Scene", "getPhysicsEngine")), (xU = Mm.prototype).enablePhysics ?? (xU.enablePhysics = (0, bT.j)("Scene", "enablePhysics")), (dU = Mm.prototype).disablePhysicsEngine ?? (dU.disablePhysicsEngine = (0, bT.j)("Scene", "disablePhysicsEngine")), (wU = Mm.prototype).isPhysicsEnabled ?? (wU.isPhysicsEnabled = (0, bT.j)("Scene", "isPhysicsEnabled")), (tU = Mm.prototype).deleteCompoundImpostor ?? (tU.deleteCompoundImpostor = (0, bT.j)("Scene", "deleteCompoundImpostor")), (aU = Mm.prototype).removeReflectionProbe ?? (aU.removeReflectionProbe = (0, bT.j)("Scene", "removeReflectionProbe")), (yU = Mm.prototype).addReflectionProbe ?? (yU.addReflectionProbe = (0, bT.j)("Scene", "addReflectionProbe")), (XU = Mm.prototype).getBoundingBoxRenderer ?? (XU.getBoundingBoxRenderer = (0, bT.j)("Scene", "getBoundingBoxRenderer")), (IU = Mm.prototype).enableDepthRenderer ?? (IU.enableDepthRenderer = (0, bT.j)("Scene", "enableDepthRenderer")), (QU = Mm.prototype).disableDepthRenderer ?? (QU.disableDepthRenderer = (0, bT.j)("Scene", "disableDepthRenderer")), (sU = Mm.prototype).enableFluidRenderer ?? (sU.enableFluidRenderer = (0, bT.j)("Scene", "enableFluidRenderer")), (FU = Mm.prototype).disableFluidRenderer ?? (FU.disableFluidRenderer = (0, bT.j)("Scene", "disableFluidRenderer")), (PU = Mm.prototype).enableGeometryBufferRenderer ?? (PU.enableGeometryBufferRenderer = (0, bT.j)("Scene", "enableGeometryBufferRenderer")), (VU = Mm.prototype).disableGeometryBufferRenderer ?? (VU.disableGeometryBufferRenderer = (0, bT.j)("Scene", "disableGeometryBufferRenderer")), (uU = Mm.prototype).enableIblCdfGenerator ?? (uU.enableIblCdfGenerator = (0, bT.j)("Scene", "enableIblCdfGenerator")), (CU = Mm.prototype).disableIblCdfGenerator ?? (CU.disableIblCdfGenerator = (0, bT.j)("Scene", "disableIblCdfGenerator")), (rU = Mm.prototype).getOutlineRenderer ?? (rU.getOutlineRenderer = (0, bT.j)("Scene", "getOutlineRenderer")), (KU = Mm.prototype).enablePrePassRenderer ?? (KU.enablePrePassRenderer = (0, bT.j)("Scene", "enablePrePassRenderer")), (SU = Mm.prototype).disablePrePassRenderer ?? (SU.disablePrePassRenderer = (0, bT.j)("Scene", "disablePrePassRenderer")), (GU = Mm.prototype).enableSubSurfaceForPrePass ?? (GU.enableSubSurfaceForPrePass = (0, bT.j)("Scene", "enableSubSurfaceForPrePass")), (NU = Mm.prototype).disableSubSurfaceForPrePass ?? (NU.disableSubSurfaceForPrePass = (0, bT.j)("Scene", "disableSubSurfaceForPrePass")), (EU = Mm.prototype).pickSprite ?? (EU.pickSprite = (0, bT.j)("Scene", "pickSprite")), (hU = Mm.prototype).pickSpriteWithRay ?? (hU.pickSpriteWithRay = (0, bT.j)("Scene", "pickSpriteWithRay")), (DU = Mm.prototype).multiPickSprite ?? (DU.multiPickSprite = (0, bT.j)("Scene", "multiPickSprite")), (oU = Mm.prototype).multiPickSpriteWithRay ?? (oU.multiPickSpriteWithRay = (0, bT.j)("Scene", "multiPickSpriteWithRay")), (AU = Mm.prototype).setPointerOverSprite ?? (AU.setPointerOverSprite = (0, bT.j)("Scene", "setPointerOverSprite")), (RU = Mm.prototype).getPointerOverSprite ?? (RU.getPointerOverSprite = (0, bT.j)("Scene", "getPointerOverSprite")), Object.getOwnPropertyDescriptor(Mm.prototype, "mainSoundTrack") || Object.defineProperty(Mm.prototype, "mainSoundTrack", (0, bT.h)("Scene", "mainSoundTrack")), Object.getOwnPropertyDescriptor(Mm.prototype, "soundTracks") || Object.defineProperty(Mm.prototype, "soundTracks", (0, bT.h)("Scene", "soundTracks")), Object.getOwnPropertyDescriptor(Mm.prototype, "audioEnabled") || Object.defineProperty(Mm.prototype, "audioEnabled", (0, bT.h)("Scene", "audioEnabled")), Object.getOwnPropertyDescriptor(Mm.prototype, "headphone") || Object.defineProperty(Mm.prototype, "headphone", (0, bT.h)("Scene", "headphone")), Object.getOwnPropertyDescriptor(Mm.prototype, "audioListenerPositionProvider") || Object.defineProperty(Mm.prototype, "audioListenerPositionProvider", (0, bT.h)("Scene", "audioListenerPositionProvider")), Object.getOwnPropertyDescriptor(Mm.prototype, "audioListenerRotationProvider") || Object.defineProperty(Mm.prototype, "audioListenerRotationProvider", (0, bT.h)("Scene", "audioListenerRotationProvider")), Object.getOwnPropertyDescriptor(Mm.prototype, "audioPositioningRefreshRate") || Object.defineProperty(Mm.prototype, "audioPositioningRefreshRate", (0, bT.h)("Scene", "audioPositioningRefreshRate")), Object.getOwnPropertyDescriptor(Mm.prototype, "selectionOctree") || Object.defineProperty(Mm.prototype, "selectionOctree", (0, bT.h)("Scene", "selectionOctree")), Object.getOwnPropertyDescriptor(Mm.prototype, "debugLayer") || Object.defineProperty(Mm.prototype, "debugLayer", (0, bT.h)("Scene", "debugLayer")), Object.getOwnPropertyDescriptor(Mm.prototype, "gamepadManager") || Object.defineProperty(Mm.prototype, "gamepadManager", (0, bT.h)("Scene", "gamepadManager")), Object.getOwnPropertyDescriptor(Mm.prototype, "simplificationQueue") || Object.defineProperty(Mm.prototype, "simplificationQueue", (0, bT.h)("Scene", "simplificationQueue")), Object.getOwnPropertyDescriptor(Mm.prototype, "onBeforePhysicsObservable") || Object.defineProperty(Mm.prototype, "onBeforePhysicsObservable", (0, bT.h)("Scene", "onBeforePhysicsObservable")), Object.getOwnPropertyDescriptor(Mm.prototype, "onAfterPhysicsObservable") || Object.defineProperty(Mm.prototype, "onAfterPhysicsObservable", (0, bT.h)("Scene", "onAfterPhysicsObservable")), Object.getOwnPropertyDescriptor(Mm.prototype, "reflectionProbes") || Object.defineProperty(Mm.prototype, "reflectionProbes", (0, bT.h)("Scene", "reflectionProbes")), Object.getOwnPropertyDescriptor(Mm.prototype, "forceShowBoundingBoxes") || Object.defineProperty(Mm.prototype, "forceShowBoundingBoxes", (0, bT.h)("Scene", "forceShowBoundingBoxes")), Object.getOwnPropertyDescriptor(Mm.prototype, "depthPeelingRenderer") || Object.defineProperty(Mm.prototype, "depthPeelingRenderer", (0, bT.h)("Scene", "depthPeelingRenderer")), Object.getOwnPropertyDescriptor(Mm.prototype, "useOrderIndependentTransparency") || Object.defineProperty(Mm.prototype, "useOrderIndependentTransparency", (0, bT.h)("Scene", "useOrderIndependentTransparency")), Object.getOwnPropertyDescriptor(Mm.prototype, "fluidRenderer") || Object.defineProperty(Mm.prototype, "fluidRenderer", (0, bT.h)("Scene", "fluidRenderer")), Object.getOwnPropertyDescriptor(Mm.prototype, "geometryBufferRenderer") || Object.defineProperty(Mm.prototype, "geometryBufferRenderer", (0, bT.h)("Scene", "geometryBufferRenderer")), Object.getOwnPropertyDescriptor(Mm.prototype, "iblCdfGenerator") || Object.defineProperty(Mm.prototype, "iblCdfGenerator", (0, bT.h)("Scene", "iblCdfGenerator")), Object.getOwnPropertyDescriptor(Mm.prototype, "prePassRenderer") || Object.defineProperty(Mm.prototype, "prePassRenderer", (0, bT.h)("Scene", "prePassRenderer")), Object.getOwnPropertyDescriptor(Mm.prototype, "subSurfaceConfiguration") || Object.defineProperty(Mm.prototype, "subSurfaceConfiguration", (0, bT.h)("Scene", "subSurfaceConfiguration")), Object.getOwnPropertyDescriptor(Mm.prototype, "spriteManagers") || Object.defineProperty(Mm.prototype, "spriteManagers", (0, bT.h)("Scene", "spriteManagers")), Object.getOwnPropertyDescriptor(Mm.prototype, "onBeforeSpritesRenderingObservable") || Object.defineProperty(Mm.prototype, "onBeforeSpritesRenderingObservable", (0, bT.h)("Scene", "onBeforeSpritesRenderingObservable")), Object.getOwnPropertyDescriptor(Mm.prototype, "onAfterSpritesRenderingObservable") || Object.defineProperty(Mm.prototype, "onAfterSpritesRenderingObservable", (0, bT.h)("Scene", "onAfterSpritesRenderingObservable"))
   },
-  40368: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op,
-      i: () => op
+  40283: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT,
+      d: () => zT
     });
-    class Op {}
-    Op.NAME_EFFECTLAYER = "EffectLayer", Op.NAME_LAYER = "Layer", Op.NAME_LENSFLARESYSTEM = "LensFlareSystem", Op.NAME_BOUNDINGBOXRENDERER = "BoundingBoxRenderer", Op.NAME_PARTICLESYSTEM = "ParticleSystem", Op.NAME_GAMEPAD = "Gamepad", Op.NAME_SIMPLIFICATIONQUEUE = "SimplificationQueue", Op.NAME_GEOMETRYBUFFERRENDERER = "GeometryBufferRenderer", Op.NAME_PREPASSRENDERER = "PrePassRenderer", Op.NAME_DEPTHRENDERER = "DepthRenderer", Op.NAME_DEPTHPEELINGRENDERER = "DepthPeelingRenderer", Op.NAME_POSTPROCESSRENDERPIPELINEMANAGER = "PostProcessRenderPipelineManager", Op.NAME_SPRITE = "Sprite", Op.NAME_SUBSURFACE = "SubSurface", Op.NAME_OUTLINERENDERER = "Outline", Op.NAME_PROCEDURALTEXTURE = "ProceduralTexture", Op.NAME_SHADOWGENERATOR = "ShadowGenerator", Op.NAME_OCTREE = "GOp", Op.NAME_PHYSICSENGINE = "PhysicsEngine", Op.NAME_AUDIO = "Audio", Op.NAME_FLUIDRENDERER = "FluidRenderer", Op.NAME_IBLCDFGENERATOR = "iblCDFGenerator", Op.NAME_CLUSTEREDLIGHTING = "ClusteredLighting", Op.STEP_ISREADYFORMESH_EFFECTLAYER = 0, Op.STEP_ISREADYFORMESH_DEPTHRENDERER = 1, Op.STEP_BEFOREEVALUATEACTIVEMESH_BOUNDINGBOXRENDERER = 0, Op.STEP_EVALUATESUBMESH_BOUNDINGBOXRENDERER = 0, Op.STEP_PREACTIVEMESH_BOUNDINGBOXRENDERER = 0, Op.STEP_CAMERADRAWRENDERTARGET_EFFECTLAYER = 1, Op.STEP_BEFORECAMERADRAW_PREPASS = 0, Op.STEP_BEFORECAMERADRAW_EFFECTLAYER = 1, Op.STEP_BEFORECAMERADRAW_LAYER = 2, Op.STEP_BEFORERENDERTARGETDRAW_PREPASS = 0, Op.STEP_BEFORERENDERTARGETDRAW_LAYER = 1, Op.STEP_BEFORERENDERINGMESH_PREPASS = 0, Op.STEP_BEFORERENDERINGMESH_OUTLINE = 1, Op.STEP_AFTERRENDERINGMESH_PREPASS = 0, Op.STEP_AFTERRENDERINGMESH_OUTLINE = 1, Op.STEP_AFTERRENDERINGGROUPDRAW_EFFECTLAYER_DRAW = 0, Op.STEP_AFTERRENDERINGGROUPDRAW_BOUNDINGBOXRENDERER = 1, Op.STEP_BEFORECAMERAUPDATE_SIMPLIFICATIONQUEUE = 0, Op.STEP_BEFORECLEAR_PROCEDURALTEXTURE = 0, Op.STEP_BEFORECLEAR_PREPASS = 1, Op.STEP_BEFORERENDERTARGETCLEAR_PREPASS = 0, Op.STEP_AFTERRENDERTARGETDRAW_PREPASS = 0, Op.STEP_AFTERRENDERTARGETDRAW_LAYER = 1, Op.STEP_AFTERCAMERADRAW_PREPASS = 0, Op.STEP_AFTERCAMERADRAW_EFFECTLAYER = 1, Op.STEP_AFTERCAMERADRAW_LENSFLARESYSTEM = 2, Op.STEP_AFTERCAMERADRAW_EFFECTLAYER_DRAW = 3, Op.STEP_AFTERCAMERADRAW_LAYER = 4, Op.STEP_AFTERCAMERADRAW_FLUIDRENDERER = 5, Op.STEP_AFTERCAMERAPOSTPROCESS_LAYER = 0, Op.STEP_AFTERRENDERTARGETPOSTPROCESS_LAYER = 0, Op.STEP_AFTERRENDER_AUDIO = 0, Op.STEP_GATHERRENDERTARGETS_DEPTHRENDERER = 0, Op.STEP_GATHERRENDERTARGETS_GEOMETRYBUFFERRENDERER = 1, Op.STEP_GATHERRENDERTARGETS_SHADOWGENERATOR = 2, Op.STEP_GATHERRENDERTARGETS_POSTPROCESSRENDERPIPELINEMANAGER = 3, Op.STEP_GATHERACTIVECAMERARENDERTARGETS_DEPTHRENDERER = 0, Op.STEP_GATHERACTIVECAMERARENDERTARGETS_FLUIDRENDERER = 1, Op.STEP_GATHERACTIVECAMERARENDERTARGETS_CLUSTEREDLIGHTING = 2, Op.STEP_POINTERMOVE_SPRITE = 0, Op.STEP_POINTERDOWN_SPRITE = 0, Op.STEP_POINTERUP_SPRITE = 0;
-    class op extends Array {
-      constructor(pp) {
-        super(...pp)
+    class WT {}
+    WT.NAME_EFFECTLAYER = "EffectLayer", WT.NAME_LAYER = "Layer", WT.NAME_LENSFLARESYSTEM = "LensFlareSystem", WT.NAME_BOUNDINGBOXRENDERER = "BoundingBoxRenderer", WT.NAME_PARTICLESYSTEM = "ParticleSystem", WT.NAME_GAMEPAD = "Gamepad", WT.NAME_SIMPLIFICATIONQUEUE = "SimplificationQueue", WT.NAME_GEOMETRYBUFFERRENDERER = "GeometryBufferRenderer", WT.NAME_PREPASSRENDERER = "PrePassRenderer", WT.NAME_DEPTHRENDERER = "DepthRenderer", WT.NAME_DEPTHPEELINGRENDERER = "DepthPeelingRenderer", WT.NAME_POSTPROCESSRENDERPIPELINEMANAGER = "PostProcessRenderPipelineManager", WT.NAME_SPRITE = "Sprite", WT.NAME_SUBSURFACE = "SubSurface", WT.NAME_OUTLINERENDERER = "Outline", WT.NAME_PROCEDURALTEXTURE = "ProceduralTexture", WT.NAME_SHADOWGENERATOR = "ShadowGenerator", WT.NAME_OCTREE = "dWT", WT.NAME_PHYSICSENGINE = "PhysicsEngine", WT.NAME_AUDIO = "Audio", WT.NAME_FLUIDRENDERER = "FluidRenderer", WT.NAME_IBLCDFGENERATOR = "iblCDFGenerator", WT.NAME_CLUSTEREDLIGHTING = "ClusteredLighting", WT.STEP_ISREADYFORMESH_EFFECTLAYER = 0, WT.STEP_ISREADYFORMESH_DEPTHRENDERER = 1, WT.STEP_BEFOREEVALUATEACTIVEMESH_BOUNDINGBOXRENDERER = 0, WT.STEP_EVALUATESUBMESH_BOUNDINGBOXRENDERER = 0, WT.STEP_PREACTIVEMESH_BOUNDINGBOXRENDERER = 0, WT.STEP_CAMERADRAWRENDERTARGET_EFFECTLAYER = 1, WT.STEP_BEFORECAMERADRAW_PREPASS = 0, WT.STEP_BEFORECAMERADRAW_EFFECTLAYER = 1, WT.STEP_BEFORECAMERADRAW_LAYER = 2, WT.STEP_BEFORERENDERTARGETDRAW_PREPASS = 0, WT.STEP_BEFORERENDERTARGETDRAW_LAYER = 1, WT.STEP_BEFORERENDERINGMESH_PREPASS = 0, WT.STEP_BEFORERENDERINGMESH_OUTLINE = 1, WT.STEP_AFTERRENDERINGMESH_PREPASS = 0, WT.STEP_AFTERRENDERINGMESH_OUTLINE = 1, WT.STEP_AFTERRENDERINGGROUPDRAW_EFFECTLAYER_DRAW = 0, WT.STEP_AFTERRENDERINGGROUPDRAW_BOUNDINGBOXRENDERER = 1, WT.STEP_BEFORECAMERAUPDATE_SIMPLIFICATIONQUEUE = 0, WT.STEP_BEFORECLEAR_PROCEDURALTEXTURE = 0, WT.STEP_BEFORECLEAR_PREPASS = 1, WT.STEP_BEFORERENDERTARGETCLEAR_PREPASS = 0, WT.STEP_AFTERRENDERTARGETDRAW_PREPASS = 0, WT.STEP_AFTERRENDERTARGETDRAW_LAYER = 1, WT.STEP_AFTERCAMERADRAW_PREPASS = 0, WT.STEP_AFTERCAMERADRAW_EFFECTLAYER = 1, WT.STEP_AFTERCAMERADRAW_LENSFLARESYSTEM = 2, WT.STEP_AFTERCAMERADRAW_EFFECTLAYER_DRAW = 3, WT.STEP_AFTERCAMERADRAW_LAYER = 4, WT.STEP_AFTERCAMERADRAW_FLUIDRENDERER = 5, WT.STEP_AFTERCAMERAPOSTPROCESS_LAYER = 0, WT.STEP_AFTERRENDERTARGETPOSTPROCESS_LAYER = 0, WT.STEP_AFTERRENDER_AUDIO = 0, WT.STEP_GATHERRENDERTARGETS_DEPTHRENDERER = 0, WT.STEP_GATHERRENDERTARGETS_GEOMETRYBUFFERRENDERER = 1, WT.STEP_GATHERRENDERTARGETS_SHADOWGENERATOR = 2, WT.STEP_GATHERRENDERTARGETS_POSTPROCESSRENDERPIPELINEMANAGER = 3, WT.STEP_GATHERACTIVECAMERARENDERTARGETS_DEPTHRENDERER = 0, WT.STEP_GATHERACTIVECAMERARENDERTARGETS_FLUIDRENDERER = 1, WT.STEP_GATHERACTIVECAMERARENDERTARGETS_CLUSTEREDLIGHTING = 2, WT.STEP_POINTERMOVE_SPRITE = 0, WT.STEP_POINTERDOWN_SPRITE = 0, WT.STEP_POINTERUP_SPRITE = 0;
+    class zT extends Array {
+      constructor(TT) {
+        super(...TT)
       }
       static Create() {
-        return Object.create(op.prototype)
+        return Object.create(zT.prototype)
       }
-      registerStep(pp, ip, cp) {
-        let Op, op = 0;
-        for (; op < this.length; op++) {
-          if (Op = this[op].index, pp < Op) break
+      registerStep(TT, UT, mT) {
+        let WT, zT = 0;
+        for (; zT < this.length; zT++) {
+          if (WT = this[zT].index, TT < WT) break
         }
-        this.splice(op, 0, {
-          index: pp,
-          component: ip,
-          action: cp.bind(ip)
+        this.splice(zT, 0, {
+          index: TT,
+          component: UT,
+          action: mT.bind(UT)
         })
       }
       clear() {
@@ -9628,69 +9628,69 @@ export const modules = {
       }
     }
   },
-  40203: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      f: () => xp,
-      j: () => Op,
-      l: () => op,
-      m: () => Ip
+  40095: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      e: () => nT,
+      h: () => WT,
+      k: () => zT,
+      m: () => MT
     });
 
-    function Op(pp, ip, cp, Op, op, Ip) {
-      function Sp(pp) {
-        if (void 0 !== pp && "function" !== typeof pp) throw new TypeError("Function expected");
-        return pp
+    function WT(TT, UT, mT, WT, zT, MT) {
+      function gT(TT) {
+        if (void 0 !== TT && "function" !== typeof TT) throw new TypeError("Function expected");
+        return TT
       }
-      for (var xp, Lp = Op.kind, Yp = "getter" === Lp ? "get" : "setter" === Lp ? "set" : "value", Dp = !ip && pp ? Op.static ? pp : pp.prototype : null, Ap = ip || (Dp ? Object.getOwnPropertyDescriptor(Dp, Op.name) : {}), Pp = !1, Wp = cp.length - 1; Wp >= 0; Wp--) {
-        var yp = {};
-        for (var Up in Op) yp[Up] = "access" === Up ? {} : Op[Up];
-        for (var Up in Op.access) yp.access[Up] = Op.access[Up];
-        yp.addInitializer = function(pp) {
-          if (Pp) throw new TypeError("Cannot add initializers after decoration has completed");
-          Ip.push(Sp(pp || null))
+      for (var nT, HT = WT.kind, kT = "getter" === HT ? "get" : "setter" === HT ? "set" : "value", jT = !UT && TT ? WT.static ? TT : TT.prototype : null, lT = UT || (jT ? Object.getOwnPropertyDescriptor(jT, WT.name) : {}), LT = !1, pT = mT.length - 1; pT >= 0; pT--) {
+        var BT = {};
+        for (var ZT in WT) BT[ZT] = "access" === ZT ? {} : WT[ZT];
+        for (var ZT in WT.access) BT.access[ZT] = WT.access[ZT];
+        BT.addInitializer = function(TT) {
+          if (LT) throw new TypeError("Cannot add initializers after decoration has completed");
+          MT.push(gT(TT || null))
         };
-        var wp = (0, cp[Wp])("accessor" === Lp ? {
-          get: Ap.get,
-          set: Ap.set
-        } : Ap[Yp], yp);
-        if ("accessor" === Lp) {
-          if (void 0 === wp) continue;
-          if (null === wp || "object" !== typeof wp) throw new TypeError("Object expected");
-          (xp = Sp(wp.get)) && (Ap.get = xp), (xp = Sp(wp.set)) && (Ap.set = xp), (xp = Sp(wp.init)) && op.unshift(xp)
-        } else(xp = Sp(wp)) && ("field" === Lp ? op.unshift(xp) : Ap[Yp] = xp)
+        var cT = (0, mT[pT])("accessor" === HT ? {
+          get: lT.get,
+          set: lT.set
+        } : lT[kT], BT);
+        if ("accessor" === HT) {
+          if (void 0 === cT) continue;
+          if (null === cT || "object" !== typeof cT) throw new TypeError("Object expected");
+          (nT = gT(cT.get)) && (lT.get = nT), (nT = gT(cT.set)) && (lT.set = nT), (nT = gT(cT.init)) && zT.unshift(nT)
+        } else(nT = gT(cT)) && ("field" === HT ? zT.unshift(nT) : lT[kT] = nT)
       }
-      Dp && Object.defineProperty(Dp, Op.name, Ap), Pp = !0
+      jT && Object.defineProperty(jT, WT.name, lT), LT = !0
     }
 
-    function op(pp, ip, cp) {
-      for (var Op = arguments.length > 2, op = 0; op < ip.length; op++) cp = Op ? ip[op].call(pp, cp) : ip[op].call(pp);
-      return Op ? cp : void 0
+    function zT(TT, UT, mT) {
+      for (var WT = arguments.length > 2, zT = 0; zT < UT.length; zT++) mT = WT ? UT[zT].call(TT, mT) : UT[zT].call(TT);
+      return WT ? mT : void 0
     }
 
-    function Ip(pp, ip, cp) {
-      return "symbol" === typeof ip && (ip = ip.description ? "[".concat(ip.description, "]") : ""), Object.defineProperty(pp, "name", {
+    function MT(TT, UT, mT) {
+      return "symbol" === typeof UT && (UT = UT.description ? "[".concat(UT.description, "]") : ""), Object.defineProperty(TT, "name", {
         configurable: !0,
-        value: cp ? "".concat(cp, " ", ip) : ip
+        value: mT ? "".concat(mT, " ", UT) : UT
       })
     }
     Object.create;
     Object.create;
 
-    function Sp(pp, ip, cp, Op) {
-      if ("a" === cp && !Op) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof ip ? pp !== ip || !Op : !ip.has(pp)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === cp ? Op : "a" === cp ? Op.call(pp) : Op ? Op.value : ip.get(pp)
+    function gT(TT, UT, mT, WT) {
+      if ("a" === mT && !WT) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof UT ? TT !== UT || !WT : !UT.has(TT)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === mT ? WT : "a" === mT ? WT.call(TT) : WT ? WT.value : UT.get(TT)
     }
 
-    function xp(pp, ip, cp, Op, op) {
-      if ("m" === Op) throw new TypeError("Private method is not writable");
-      if ("a" === Op && !op) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof ip ? pp !== ip || !op : !ip.has(pp)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Op ? op.call(pp, cp) : op ? op.value = cp : ip.set(pp, cp), cp
+    function nT(TT, UT, mT, WT, zT) {
+      if ("m" === WT) throw new TypeError("Private method is not writable");
+      if ("a" === WT && !zT) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof UT ? TT !== UT || !zT : !UT.has(TT)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === WT ? zT.call(TT, mT) : zT ? zT.value = mT : UT.set(TT, mT), mT
     }
     "function" === typeof SuppressedError && SuppressedError
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

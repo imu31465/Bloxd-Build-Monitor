@@ -1,60 +1,60 @@
 export const id = 137;
 export const ids = [137];
 export const modules = {
-  36519: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => zp,
-      f: () => ii,
-      i: () => Kp,
-      k: () => Zp
+  36394: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => hT,
+      f: () => RT,
+      g: () => oT,
+      h: () => ET
     });
-    var Op = cp(2963),
-      op = cp(2980),
-      Ip = cp(6762),
-      Sp = cp(4791),
-      xp = cp(2975),
-      Lp = cp(2970);
-    const Yp = "bloxd-wasmDownloaded",
-      Dp = 12;
+    var WT = mT(2992),
+      zT = mT(3015),
+      MT = mT(6688),
+      gT = mT(4780),
+      nT = mT(3007),
+      HT = mT(3001);
+    const kT = "bloxd-wasmDownloaded",
+      jT = 12;
 
-    function Ap(pp) {
-      return pp.pathname.slice(pp.pathname.lastIndexOf("/") + 1)
+    function lT(TT) {
+      return TT.pathname.slice(TT.pathname.lastIndexOf("/") + 1)
     }
 
-    function Pp() {
+    function LT() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const pp = JSON.parse(localStorage.getItem(Yp) ?? "[]");
-        return Array.isArray(pp) ? pp.filter((pp => "string" === typeof pp)) : []
-      } catch (pp) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", pp), null
+        const TT = JSON.parse(localStorage.getItem(kT) ?? "[]");
+        return Array.isArray(TT) ? TT.filter((TT => "string" === typeof TT)) : []
+      } catch (TT) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", TT), null
       }
     }
-    const Wp = Reflect.apply,
-      yp = "undefined" === typeof Worker ? void 0 : Worker,
-      Up = yp?.prototype.postMessage,
-      wp = yp?.prototype.terminate,
-      vp = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      tp = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      Hp = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      dp = function() {
+    const pT = Reflect.apply,
+      BT = "undefined" === typeof Worker ? void 0 : Worker,
+      ZT = BT?.prototype.postMessage,
+      cT = BT?.prototype.terminate,
+      vT = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      fT = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      qT = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      iT = function() {
         try {
-          return (0, Sp.i)(yp, "Worker", !0) && (0, Sp.i)(Up, "postMessage") && (0, Sp.i)(wp, "terminate") && (0, Sp.i)(Hp, "buffer") && void 0 !== vp && void 0 !== tp
+          return (0, gT.j)(BT, "Worker", !0) && (0, gT.j)(ZT, "postMessage") && (0, gT.j)(cT, "terminate") && (0, gT.j)(qT, "buffer") && void 0 !== vT && void 0 !== fT
         } catch {
           return !1
         }
       }();
-    let ep = !1;
+    let bT = !1;
 
-    function jp() {
-      return dp && !ep
+    function OT() {
+      return iT && !bT
     }
-    class kp {
+    class eT {
       worker = null;
       failed = !1;
       constructor() {
-        if (jp()) try {
-          this.worker = Rp(), Wp(vp, this.worker, ["error", () => {
+        if (OT()) try {
+          this.worker = JT(), pT(vT, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -62,125 +62,125 @@ export const modules = {
         }
       }
       take() {
-        const pp = this.worker;
-        if (this.worker = null, null !== pp && this.failed) throw Wp(wp, pp, []), new Error("it did not run");
-        return pp
+        const TT = this.worker;
+        if (this.worker = null, null !== TT && this.failed) throw pT(cT, TT, []), new Error("it did not run");
+        return TT
       }
       stop() {
-        const pp = this.worker;
-        this.worker = null, null !== pp && Wp(wp, pp, [])
+        const TT = this.worker;
+        this.worker = null, null !== TT && pT(cT, TT, [])
       }
     }
-    class mp {
+    class YT {
       decoded;
       worker;
       reject;
-      constructor(pp, ip, cp, Op, Ip) {
+      constructor(TT, UT, mT, WT, MT) {
         try {
-          this.worker = Ip?.take() ?? Rp()
-        } catch (Yp) {
-          throw ep = !0, new Error(`The zstd decoder's worker did not start: ${(0,xp.f)(Yp)}`)
+          this.worker = MT?.take() ?? JT()
+        } catch (kT) {
+          throw bT = !0, new Error(`The zstd decoder's worker did not start: ${(0,nT.e)(kT)}`)
         }
-        const Sp = this.worker;
-        this.decoded = (0, op.j)(((ip, op) => {
-          this.reject = op;
-          const Ip = (pp, ip) => {
-            Wp(vp, Sp, [pp, ip])
+        const gT = this.worker;
+        this.decoded = (0, zT.i)(((UT, zT) => {
+          this.reject = zT;
+          const MT = (TT, UT) => {
+            pT(vT, gT, [TT, UT])
           };
-          Ip("message", (pp => {
-            Op();
+          MT("message", (TT => {
+            WT();
             try {
-              const Op = Wp(tp, pp, []);
-              if (!0 === Op) ip();
+              const WT = pT(fT, TT, []);
+              if (!0 === WT) UT();
               else {
-                if ("string" === typeof Op) throw Op.startsWith(xp.e) && (ep = !0), new Error(Op);
-                cp(Op, Wp(Lp.q, Op, []))
+                if ("string" === typeof WT) throw WT.startsWith(nT.d) && (bT = !0), new Error(WT);
+                mT(WT, pT(HT.w, WT, []))
               }
-            } catch (Yp) {
-              op(Yp)
+            } catch (kT) {
+              zT(kT)
             }
-          })), Ip("error", (() => {
-            ep = !0, op(new Error("The zstd decoder's worker did not run"))
-          })), Ip("messageerror", (() => {
-            op(new Error(`${pp}'s decoder sent a piece that could not be read`))
+          })), MT("error", (() => {
+            bT = !0, zT(new Error("The zstd decoder's worker did not run"))
+          })), MT("messageerror", (() => {
+            zT(new Error(`${TT}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, Lp.T)(this.decoded), Wp(Up, Sp, [
-          [pp, ip]
+        })), (0, HT.Z)(this.decoded), pT(ZT, gT, [
+          [TT, UT]
         ])
       }
-      push(pp) {
-        Wp(Up, this.worker, [pp, [Wp(Hp, pp, [])]])
+      push(TT) {
+        pT(ZT, this.worker, [TT, [pT(qT, TT, [])]])
       }
       end() {
-        Wp(Up, this.worker, [null])
+        pT(ZT, this.worker, [null])
       }
       markWorkerFailed() {
-        ep = !0
+        bT = !0
       }
-      fail(pp) {
-        this.reject(pp), this.terminate()
+      fail(TT) {
+        this.reject(TT), this.terminate()
       }
       terminate() {
-        Wp(wp, this.worker, [])
+        pT(cT, this.worker, [])
       }
     }
 
-    function Rp() {
-      if (globalThis.Worker !== yp) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(cp.p + cp.u(68), cp.b), {
+    function JT() {
+      if (globalThis.Worker !== BT) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(mT.p + mT.u(68), mT.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const qp = Reflect.apply,
-      Mp = ArrayBuffer,
-      Cp = "undefined" === typeof Response ? void 0 : Response,
-      Ep = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Xp = function() {
-        let pp;
-        void 0 !== Ep && new Ep({
+    const xT = Reflect.apply,
+      dT = ArrayBuffer,
+      wT = "undefined" === typeof Response ? void 0 : Response,
+      tT = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      aT = function() {
+        let TT;
+        void 0 !== tT && new tT({
           __proto__: null,
-          start(ip) {
+          start(UT) {
             const {
-              enqueue: cp,
-              close: Op,
-              error: op
-            } = Object.getPrototypeOf(ip);
-            pp = {
-              enqueue: cp,
-              close: Op,
-              error: op
+              enqueue: mT,
+              close: WT,
+              error: zT
+            } = Object.getPrototypeOf(UT);
+            TT = {
+              enqueue: mT,
+              close: WT,
+              error: zT
             }
           }
         }, {
           __proto__: null
         });
-        return pp
+        return TT
       }(),
-      lp = function() {
+      yT = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Xp && (0, Sp.i)(Cp, "Response", !0) && (0, Sp.i)(Ep, "ReadableStream", !0) && (0, Sp.i)(Xp.enqueue, "enqueue") && (0, Sp.i)(Xp.close, "close") && (0, Sp.i)(Xp.error, "error") && (0, Sp.i)(Lp.Y, "body") && (0, Sp.i)(Lp.K, "getReader") && (0, Sp.i)(Lp.V, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== aT && (0, gT.j)(wT, "Response", !0) && (0, gT.j)(tT, "ReadableStream", !0) && (0, gT.j)(aT.enqueue, "enqueue") && (0, gT.j)(aT.close, "close") && (0, gT.j)(aT.error, "error") && (0, gT.j)(HT.db, "body") && (0, gT.j)(HT.Q, "getReader") && (0, gT.j)(HT.$, "read")
         } catch {
           return !1
         }
       }();
-    async function Qp(pp, ip, cp, Op, Ip, Sp, Yp) {
-      const Dp = new Mp(ip),
+    async function XT(TT, UT, mT, WT, MT, gT, kT) {
+      const jT = new dT(UT),
         {
-          controller: Ap,
-          compiled: Pp
-        } = function(pp) {
+          controller: lT,
+          compiled: LT
+        } = function(TT) {
           try {
-            let pp;
-            const ip = new Ep({
+            let TT;
+            const UT = new tT({
                 __proto__: null,
-                start(ip) {
-                  pp = ip
+                start(UT) {
+                  TT = UT
                 }
               }, {
                 __proto__: null
               }),
-              cp = new Cp(ip, {
+              mT = new wT(UT, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -188,355 +188,355 @@ export const modules = {
                 }
               });
             return {
-              controller: pp,
-              compiled: (0, Lp.T)((0, Lp.x)((0, Lp.bb)(cp)))
+              controller: TT,
+              compiled: (0, HT.Z)((0, HT.D)((0, HT.kb)(mT)))
             }
-          } catch (ip) {
-            throw new Error(`${pp} could not be streamed into a compile: ${(0,xp.f)(ip)}`)
+          } catch (UT) {
+            throw new Error(`${TT} could not be streamed into a compile: ${(0,nT.e)(UT)}`)
           }
-        }(pp),
+        }(TT),
         {
-          enqueue: Wp,
-          close: yp,
-          error: Up
-        } = Xp,
-        wp = pp => {
+          enqueue: pT,
+          close: BT,
+          error: ZT
+        } = aT,
+        cT = TT => {
           try {
-            qp(Up, Ap, [pp])
+            xT(ZT, lT, [TT])
           } catch {}
         };
-      let vp = 0;
-      const tp = (cp, Op) => {
-        if (vp + Op > ip) throw new Error(`${pp} decoded past its module's ${ip} bytes`);
-        qp(Lp.Z, new Lp.k(Dp), [new Lp.k(cp), vp]);
+      let vT = 0;
+      const fT = (mT, WT) => {
+        if (vT + WT > UT) throw new Error(`${TT} decoded past its module's ${UT} bytes`);
+        xT(HT.eb, new HT.m(jT), [new HT.m(mT), vT]);
         try {
-          qp(Wp, Ap, [new Lp.k(Dp, vp, Op)])
+          xT(pT, lT, [new HT.m(jT, vT, WT)])
         } catch {}
-        vp += Op
+        vT += WT
       };
-      let Hp, dp;
+      let qT, iT;
       try {
-        Hp = new mp(pp, ip, tp, Op, Yp)
-      } catch (Rp) {
-        throw wp(Rp), Rp
+        qT = new YT(TT, UT, fT, WT, kT)
+      } catch (JT) {
+        throw cT(JT), JT
       }
-      const ep = pp => {
-        Hp.fail(pp), void 0 !== dp && Jp(dp)
+      const bT = TT => {
+        qT.fail(TT), void 0 !== iT && IT(iT)
       };
-      let jp = !1;
-      cp.addEventListener("abort", (() => {
-        jp && Hp.markWorkerFailed(), ep(new Error(`${pp} stalled`))
+      let OT = !1;
+      mT.addEventListener("abort", (() => {
+        OT && qT.markWorkerFailed(), bT(new Error(`${TT} stalled`))
       }), {
         once: !0
-      }), (0, op.u)(Pp, (() => {}), ep);
+      }), (0, zT.s)(LT, (() => {}), bT);
       try {
-        let Sp;
+        let gT;
         try {
-          Sp = await fetch(pp, {
-            signal: cp
+          gT = await fetch(TT, {
+            signal: mT
           })
-        } catch (Rp) {
-          throw new Error(`Fetching ${pp} failed: ${(0,xp.f)(Rp)}`)
+        } catch (JT) {
+          throw new Error(`Fetching ${TT} failed: ${(0,nT.e)(JT)}`)
         }
         const {
-          ok: Yp,
-          status: Dp,
-          body: Ap
-        } = function(pp, ip) {
+          ok: kT,
+          status: jT,
+          body: lT
+        } = function(TT, UT) {
           try {
             const {
-              ok: pp,
-              status: cp
-            } = ip;
+              ok: TT,
+              status: mT
+            } = UT;
             return {
-              ok: pp,
-              status: cp,
-              body: qp(Lp.Y, ip, [])
+              ok: TT,
+              status: mT,
+              body: xT(HT.db, UT, [])
             }
           } catch {
-            throw new Error(`${pp} came in a response a page script made`)
+            throw new Error(`${TT} came in a response a page script made`)
           }
-        }(pp, Sp);
-        if (!Yp) throw new Error(`Fetching ${pp} failed: HTTP ${Dp}`);
-        Op();
-        const Pp = qp(Lp.K, Ap, []);
-        dp = Pp;
-        const Wp = () => {
-          Jp(Pp)
+        }(TT, gT);
+        if (!kT) throw new Error(`Fetching ${TT} failed: HTTP ${jT}`);
+        WT();
+        const LT = xT(HT.Q, lT, []);
+        iT = LT;
+        const pT = () => {
+          IT(LT)
         };
-        for ((0, op.u)(Hp.decoded, Wp, Wp);;) {
-          let ip;
+        for ((0, zT.s)(qT.decoded, pT, pT);;) {
+          let UT;
           try {
-            ip = await qp(Lp.V, Pp, [])
-          } catch (Rp) {
-            throw new Error(`Downloading ${pp} failed: ${(0,xp.f)(Rp)}`)
+            UT = await xT(HT.$, LT, [])
+          } catch (JT) {
+            throw new Error(`Downloading ${TT} failed: ${(0,nT.e)(JT)}`)
           }
-          if (ip.done) break;
-          Op(), Hp.push(ip.value)
+          if (UT.done) break;
+          WT(), qT.push(UT.value)
         }
-        if (jp = !0, Hp.end(), await Hp.decoded, Ip(), vp !== ip) throw new Error(`${pp} ended before its module did`)
-      } catch (Rp) {
-        throw wp(Rp), ep(Rp), Rp
+        if (OT = !0, qT.end(), await qT.decoded, MT(), vT !== UT) throw new Error(`${TT} ended before its module did`)
+      } catch (JT) {
+        throw cT(JT), bT(JT), JT
       }
-      Hp.terminate();
+      qT.terminate();
       try {
-        qp(yp, Ap, [])
+        xT(BT, lT, [])
       } catch {}
-      const kp = await Pp;
-      return void 0 !== Sp && await (0, Lp.t)(pp, new Lp.k(Dp), {
-        sha256: Sp.sha256,
+      const eT = await LT;
+      return void 0 !== gT && await (0, HT.z)(TT, new HT.m(jT), {
+        sha256: gT.sha256,
         onMismatch: () => {}
-      }), kp
+      }), eT
     }
 
-    function Jp(pp) {
+    function IT(TT) {
       try {
-        (0, Lp.T)(pp.cancel())
+        (0, HT.Z)(TT.cancel())
       } catch {}
     }
-    const Bp = ".zst.bin",
-      Np = 1e3;
-    let Tp = null;
+    const QT = ".zst.bin",
+      sT = 1e3;
+    let FT = null;
 
-    function fp(pp) {
-      return Tp ??= function() {
-        const pp = new Map,
-          ip = "bloxd_wasm_webgpu:5136608,bloxd_wasm_webgl:5516677,bloxd_wasm_webgl1:4851495,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3713604";
-        for (const cp of ip?.split(",") ?? []) {
-          const [ip = "", Op] = cp.split(":"), op = Number(Op);
-          Number.isInteger(op) && op > 0 && pp.set(ip, op)
+    function PT(TT) {
+      return FT ??= function() {
+        const TT = new Map,
+          UT = "bloxd_wasm_webgpu:5136608,bloxd_wasm_webgl:5516677,bloxd_wasm_webgl1:4851495,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3713604";
+        for (const mT of UT?.split(",") ?? []) {
+          const [UT = "", WT] = mT.split(":"), zT = Number(WT);
+          Number.isInteger(zT) && zT > 0 && TT.set(UT, zT)
         }
-        return pp
-      }(), Tp.get(pp)
+        return TT
+      }(), FT.get(TT)
     }
-    async function bp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Op = fp(pp.name);
-      if (void 0 === Op) return hp(await ap(pp, ip, cp), "cold-wasm");
-      const Ip = lp ? new kp : null;
-      let Sp;
+    async function VT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const WT = PT(TT.name);
+      if (void 0 === WT) return uT(await CT(TT, UT, mT), "cold-wasm");
+      const MT = yT ? new eT : null;
+      let gT;
       try {
-        if (Yp = pp.url(), Pp()?.includes(Ap(Yp)) && await async function(pp) {
-            const ip = new AbortController;
-            let cp;
-            const Op = (0, op.j)((pp => {
-              cp = setTimeout((() => {
-                ip.abort(), pp(null)
-              }), Np)
+        if (kT = TT.url(), LT()?.includes(lT(kT)) && await async function(TT) {
+            const UT = new AbortController;
+            let mT;
+            const WT = (0, zT.i)((TT => {
+              mT = setTimeout((() => {
+                UT.abort(), TT(null)
+              }), sT)
             }));
             try {
-              const cp = fetch(pp.href, {
+              const mT = fetch(TT.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: ip.signal
+                  signal: UT.signal
                 }),
-                Ip = await (0, op.q)([cp, Op]);
-              return !!Ip?.ok && ((0, Lp.T)(Ip.body.cancel()), !0)
+                MT = await (0, zT.p)([mT, WT]);
+              return !!MT?.ok && ((0, HT.Z)(MT.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(cp)
+              clearTimeout(mT)
             }
-          }(pp.url())) return Ip?.stop(), await async function(pp, ip, cp, Op) {
-          let op = !1;
-          const Ip = cp && {
-            sha256: cp.sha256,
+          }(TT.url())) return MT?.stop(), await async function(TT, UT, mT, WT) {
+          let zT = !1;
+          const MT = mT && {
+            sha256: mT.sha256,
             onMismatch: () => {
-              op = !0
+              zT = !0
             }
           };
           try {
-            return hp(await ap(pp, Ip, Op), "warm")
-          } catch (Sp) {
-            const Op = await np(pp, ip, cp, null);
-            if (null === Op) throw op && cp.onMismatch(), Sp;
-            return console.warn(`${pp.url().href} from the HTTP cache failed: ${(0,xp.f)(Sp)}: loaded its copy instead`), hp(Op, op ? "warm-refused" : "warm-broken")
+            return uT(await CT(TT, MT, WT), "warm")
+          } catch (gT) {
+            const WT = await rT(TT, UT, mT, null);
+            if (null === WT) throw zT && mT.onMismatch(), gT;
+            return console.warn(`${TT.url().href} from the HTTP cache failed: ${(0,nT.e)(gT)}: loaded its copy instead`), uT(WT, zT ? "warm-refused" : "warm-broken")
           }
-        }(pp, Op, ip, cp);
-        Sp = await np(pp, Op, ip, Ip)
+        }(TT, WT, UT, mT);
+        gT = await rT(TT, WT, UT, MT)
       } finally {
-        Ip?.stop()
+        MT?.stop()
       }
-      var Yp;
-      return null !== Sp ? hp(Sp, "cold-worker") : hp(await ap(pp, ip, cp), "cold-wasm")
+      var kT;
+      return null !== gT ? uT(gT, "cold-worker") : uT(await CT(TT, UT, mT), "cold-wasm")
     }
 
-    function hp(pp, ip) {
+    function uT(TT, UT) {
       return {
         __proto__: null,
-        module: pp,
-        path: ip
+        module: TT,
+        path: UT
       }
     }
 
-    function ap(pp, ip, cp) {
-      return void 0 === fp(pp.name) ? (0, Lp.C)(pp.url(), ip, cp) : (0, Lp.C)(pp.url(), ip, {
-        ...cp,
+    function CT(TT, UT, mT) {
+      return void 0 === PT(TT.name) ? (0, HT.I)(TT.url(), UT, mT) : (0, HT.I)(TT.url(), UT, {
+        ...mT,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(pp) {
-            const ip = Pp();
-            if (null === ip) return;
-            const cp = Ap(pp),
-              Op = ip.filter((pp => pp !== cp));
-            Op.push(cp);
+          ! function(TT) {
+            const UT = LT();
+            if (null === UT) return;
+            const mT = lT(TT),
+              WT = UT.filter((TT => TT !== mT));
+            WT.push(mT);
             try {
-              localStorage.setItem(Yp, JSON.stringify(Op.slice(-Dp)))
-            } catch (op) {
-              console.warn(`Bloxd wasm: ${cp} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, op)
+              localStorage.setItem(kT, JSON.stringify(WT.slice(-jT)))
+            } catch (zT) {
+              console.warn(`Bloxd wasm: ${mT} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, zT)
             }
-          }(pp.url()), cp.onDownloaded?.()
+          }(TT.url()), mT.onDownloaded?.()
         }
       })
     }
-    async function np(pp, ip, cp, Op) {
-      if (!lp || !jp()) return null;
-      const op = pp.url(),
-        Ip = `${op.href}${Bp}`;
+    async function rT(TT, UT, mT, WT) {
+      if (!yT || !OT()) return null;
+      const zT = TT.url(),
+        MT = `${zT.href}${QT}`;
       try {
-        return await (0, Lp._)(Ip, ((pp, op, Sp) => Qp(Ip, ip, pp, op, Sp, cp, Op)))
-      } catch (Sp) {
-        return console.warn(`${(0,xp.f)(Sp)}: loading ${op.href} instead`), null
+        return await (0, HT.gb)(MT, ((TT, zT, gT) => XT(MT, UT, TT, zT, gT, mT, WT)))
+      } catch (gT) {
+        return console.warn(`${(0,nT.e)(gT)}: loading ${zT.href} instead`), null
       }
     }
-    let Fp = null,
-      gp = !1;
-    const Gp = new Map,
-      rp = new Map;
+    let KT = null,
+      ST = !1;
+    const GT = new Map,
+      NT = new Map;
 
-    function Zp(pp, ip, cp) {
-      return null === Fp ? Fp = sp(pp, ip, cp?.memoryMaximumBytes) : pp !== Fp.build ? console.warn(`Bloxd wasm: ${pp.name} was asked for after ${Fp.build.name} started loading, which this thread keeps`) : ip.name !== Fp.workers.name && console.warn(`Bloxd wasm: ${ip.name} was asked for workers after ${Fp.workers.name}, which this thread keeps`), cp?.reloadFailedDownload && !gp && (0, Op.fb)() && (gp = !0, Fp = sp(Fp.build, Fp.workers, Fp.memoryMaximumBytes)), Fp.loaded
+    function ET(TT, UT, mT) {
+      return null === KT ? KT = DT(TT, UT, mT?.memoryMaximumBytes) : TT !== KT.build ? console.warn(`Bloxd wasm: ${TT.name} was asked for after ${KT.build.name} started loading, which this thread keeps`) : UT.name !== KT.workers.name && console.warn(`Bloxd wasm: ${UT.name} was asked for workers after ${KT.workers.name}, which this thread keeps`), mT?.reloadFailedDownload && !ST && (0, WT._)() && (ST = !0, KT = DT(KT.build, KT.workers, KT.memoryMaximumBytes)), KT.loaded
     }
 
-    function zp(pp, ip) {
-      if (null !== Fp) return (0, op.f)([]);
-      const cp = pp.filter((pp => !Gp.has(pp.name))).map((pp => {
-        const cp = new AbortController,
-          Op = {
-            compiled: ap(pp, (0, Ip.e)(pp.name), {
-              priority: ip,
-              OO: cp.signal,
+    function hT(TT, UT) {
+      if (null !== KT) return (0, zT.h)([]);
+      const mT = TT.filter((TT => !GT.has(TT.name))).map((TT => {
+        const mT = new AbortController,
+          WT = {
+            compiled: CT(TT, (0, MT.b)(TT.name), {
+              priority: UT,
+              Km: mT.signal,
               onDownloaded: () => {
-                Op.downloaded = !0
+                WT.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Op.downloaded = !1, null !== Fp && cp.abort()
+                  WT.downloaded = !1, null !== KT && mT.abort()
                 }
               }
             }),
-            cancel: cp,
+            cancel: mT,
             downloaded: !1
           };
-        return Gp.set(pp.name, Op), (0, op.j)((ip => {
-          (0, op.u)(Op.compiled, (() => {
-            Op.downloaded = !0, ip()
-          }), (Op => {
-            cp.signal.aborted || console.warn(`Bloxd wasm: ${pp.name}'s compile ahead of the load failed: the load compiles it afresh`, Op), ip()
+        return GT.set(TT.name, WT), (0, zT.i)((UT => {
+          (0, zT.s)(WT.compiled, (() => {
+            WT.downloaded = !0, UT()
+          }), (WT => {
+            mT.signal.aborted || console.warn(`Bloxd wasm: ${TT.name}'s compile ahead of the load failed: the load compiles it afresh`, WT), UT()
           }))
         }))
       }));
-      return (0, op.f)(cp)
+      return (0, zT.h)(mT)
     }
 
-    function sp(pp, ip, cp) {
-      const Ip = (0, Op.O)((async () => {
-        (0, Sp.x)(), rp.clear();
-        const cp = Vp(pp),
-          Op = ip.name === pp.name ? cp : Vp(ip);
+    function DT(TT, UT, mT) {
+      const MT = (0, WT.I)((async () => {
+        (0, gT.C)(), NT.clear();
+        const mT = AT(TT),
+          WT = UT.name === TT.name ? mT : AT(UT);
         for (const {
-            cancel: pp
+            cancel: TT
           }
-          of Gp.values()) pp.abort();
-        Gp.clear(), await (0, op.f)([cp, Op]);
-        const Ip = await cp,
-          xp = await Op;
-        return (0, Sp.x)(), {
-          module: Ip,
-          workerModule: xp
+          of GT.values()) TT.abort();
+        GT.clear(), await (0, zT.h)([mT, WT]);
+        const MT = await mT,
+          nT = await WT;
+        return (0, gT.C)(), {
+          module: MT,
+          workerModule: nT
         }
-      }), pp, cp);
+      }), TT, mT);
       return {
-        build: pp,
-        workers: ip,
-        memoryMaximumBytes: cp,
-        loaded: Ip
+        build: TT,
+        workers: UT,
+        memoryMaximumBytes: mT,
+        loaded: MT
       }
     }
 
-    function Kp(pp) {
-      return rp.get(pp)
+    function oT(TT) {
+      return NT.get(TT)
     }
 
-    function Vp(pp) {
-      const ip = performance.now(),
-        cp = Gp.get(pp.name);
-      Gp.delete(pp.name);
-      const Op = !0 === cp?.downloaded ? cp : void 0;
-      return void 0 !== cp && void 0 === Op && cp.cancel.abort(), (0, op.j)(((cp, Ip) => {
-        const Sp = (Op, op) => {
-            rp.set(pp.name, {
-              path: op,
-              ms: performance.now() - ip
-            }), cp(Op)
+    function AT(TT) {
+      const UT = performance.now(),
+        mT = GT.get(TT.name);
+      GT.delete(TT.name);
+      const WT = !0 === mT?.downloaded ? mT : void 0;
+      return void 0 !== mT && void 0 === WT && mT.cancel.abort(), (0, zT.i)(((mT, MT) => {
+        const gT = (WT, zT) => {
+            NT.set(TT.name, {
+              path: zT,
+              ms: performance.now() - UT
+            }), mT(WT)
           },
-          xp = () => {
-            (0, op.u)(ci(pp), (pp => {
+          nT = () => {
+            (0, zT.s)(TU(TT), (TT => {
               let {
-                module: ip,
-                path: cp
-              } = pp;
-              Sp(ip, cp)
-            }), Ip)
+                module: UT,
+                path: mT
+              } = TT;
+              gT(UT, mT)
+            }), MT)
           };
-        void 0 === Op ? xp() : (0, op.u)(Op.compiled, (pp => {
-          Sp(pp, "ahead")
-        }), xp)
+        void 0 === WT ? nT() : (0, zT.s)(WT.compiled, (TT => {
+          gT(TT, "ahead")
+        }), nT)
       }))
     }
-    async function ii(pp, ip) {
+    async function RT(TT, UT) {
       const {
-        module: cp
-      } = await ci(pp, {
-        retries: ip
+        module: mT
+      } = await TU(TT, {
+        retries: UT
       });
-      return cp
+      return mT
     }
-    async function ci(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await bp(pp, (0, Ip.e)(pp.name), ip)
+    async function TU(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await VT(TT, (0, MT.b)(TT.name), UT)
     }
   },
-  6762: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  6688: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op = cp(2970);
-    const op = {
-      bloxd_wasm: () => "b2340e61a7d448277a389ebeac9c8ae332a7699b283661cfa159ae4f9b5e0b46",
-      bloxd_wasm_client: () => "fc04a63668a4bc6b8108c23defb833287279306fc25451198e7e46db490160bc",
-      bloxd_wasm_workers: () => "97593e648fa195611cb0537edc597de1fb35e0ff06c7ba452104e324f7e81a2a",
-      bloxd_wasm_models: () => "2bf3307bf44a828cd7c420818a0ed5b061472ebe327b277c5eba216bf14f6d21",
-      bloxd_wasm_webgpu: () => "bb0d39b71cbd62566055f119cdde94768780e27f37f323027d63e6b3a5a43b04",
-      bloxd_wasm_webgl: () => "9b5a782f90a35f11a25813cfef777f781fa19f7f35be550f5ba3ccd789c15381",
-      bloxd_wasm_webgl1: () => "53c64fa3997d454ee8786274e88a96df2e92e734612cf00e45f3b10812d8ed86",
-      bloxd_wasm_replay: () => "6da56602c0cf1eac0fee1a30eb3409cd19788e1cf0bf82c91f41e9dc2ec26a17",
-      bloxd_wasm_recorder: () => "f89c2afc61048a96a7ea68674c418202687a5df82028a7c7506a545f43cf8a00",
-      bloxd_wasm_anim: () => "12c4beb6cacfbdea124da1b78d9d3bb64d476f26a1d82ae9031fb1eb6b45b89d",
-      bloxd_wasm_textures: () => "8da34a927a2e21429dd7b220d476b1d909f2b62d3b85d0f3e892b23b3c44d36f",
-      bloxd_wasm_shader_pack: () => "5e1ab13681c364aca3fb9e7bad689eb7302538f98091c87c0994a7538b0e884b"
+    var WT = mT(3001);
+    const zT = {
+      bloxd_wasm: () => "f27f4f7ab88718881db9d78f55a901cbbb02cd6bf05768435c5f2febd84d596d",
+      bloxd_wasm_client: () => "fe788e9625b49e5678303f11a8ccc6a8c723d74fb00195130bf800992df44145",
+      bloxd_wasm_workers: () => "9fb7dbb4f3017c2cc6380a2c767b44a4b54fa9ed16a4abd92a7532b57861043e",
+      bloxd_wasm_models: () => "c20178931ac19cee58b7771522bf0ba147ea1510835a2c987e0b1db7fea6ed31",
+      bloxd_wasm_webgpu: () => "35eb5bbeecb540e751c7772a16e8c673eae334d8012cb03c16848cbcaead6ddb",
+      bloxd_wasm_webgl: () => "cec6d5fa8c55e39d3e1d139626227ac277edded615c086119498fb33675206ab",
+      bloxd_wasm_webgl1: () => "74b3f9f1c13416de2df904cf4e4ab62ffa42eac861f93b0a1bccb4d2143350c5",
+      bloxd_wasm_replay: () => "f779c38a59848818069249dcb1a8196265b0837c473149c9b69b1b4da8202e06",
+      bloxd_wasm_recorder: () => "51a9fb786a0c5f3456cd21a32d84b845b2ae56e9d50089027c682f1bd37ca3f5",
+      bloxd_wasm_anim: () => "9afb84ad58982f160166f83214a1898ab627c7d097478d5712c0084c9f41f151",
+      bloxd_wasm_textures: () => "4cb0448cd98b7a67e67215005f76b27fa8e465345a667579443082f00c6c20a6",
+      bloxd_wasm_shader_pack: () => "b8b683214f5ac4a8b9de92714a869aeb3ab931c2e3e084bdd9355b16df02f922"
     };
-    var Ip = cp(4791);
+    var MT = mT(4780);
 
-    function Sp(pp) {
-      const ip = Object.prototype.hasOwnProperty.call(op, pp) ? op[pp]() : void 0;
-      if (void 0 !== ip) return {
-        sha256: ip,
-        onMismatch: Ip.v
+    function gT(TT) {
+      const UT = Object.prototype.hasOwnProperty.call(zT, TT) ? zT[TT]() : void 0;
+      if (void 0 !== UT) return {
+        sha256: UT,
+        onMismatch: MT.z
       };
-      throw new Op.g(`${pp} has no release digest, so this build refuses it`)
+      throw new WT.i(`${TT} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

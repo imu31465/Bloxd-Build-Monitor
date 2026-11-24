@@ -1,99 +1,99 @@
 export const id = 80;
 export const ids = [80];
 export const modules = {
-  4824: pp => {
-    function ip(pp) {
-      return pp instanceof Map ? pp.clear = pp.delete = pp.set = function() {
+  4816: TT => {
+    function UT(TT) {
+      return TT instanceof Map ? TT.clear = TT.delete = TT.set = function() {
         throw new Error("map is read-only")
-      } : pp instanceof Set && (pp.add = pp.clear = pp.delete = function() {
+      } : TT instanceof Set && (TT.add = TT.clear = TT.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(pp), Object.getOwnPropertyNames(pp).forEach((cp => {
-        const Op = pp[cp],
-          op = typeof Op;
-        "object" !== op && "function" !== op || Object.isFrozen(Op) || ip(Op)
-      })), pp
+      }), Object.freeze(TT), Object.getOwnPropertyNames(TT).forEach((mT => {
+        const WT = TT[mT],
+          zT = typeof WT;
+        "object" !== zT && "function" !== zT || Object.isFrozen(WT) || UT(WT)
+      })), TT
     }
-    class cp {
-      constructor(pp) {
-        void 0 === pp.data && (pp.data = {}), this.data = pp.data, this.isMatchIgnored = !1
+    class mT {
+      constructor(TT) {
+        void 0 === TT.data && (TT.data = {}), this.data = TT.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function Op(pp) {
-      return pp.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function WT(TT) {
+      return TT.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function op(pp) {
-      const ip = Object.create(null);
-      for (const Ip in pp) ip[Ip] = pp[Ip];
-      for (var cp = arguments.length, Op = new Array(cp > 1 ? cp - 1 : 0), op = 1; op < cp; op++) Op[op - 1] = arguments[op];
-      return Op.forEach((function(pp) {
-        for (const cp in pp) ip[cp] = pp[cp]
-      })), ip
+    function zT(TT) {
+      const UT = Object.create(null);
+      for (const MT in TT) UT[MT] = TT[MT];
+      for (var mT = arguments.length, WT = new Array(mT > 1 ? mT - 1 : 0), zT = 1; zT < mT; zT++) WT[zT - 1] = arguments[zT];
+      return WT.forEach((function(TT) {
+        for (const mT in TT) UT[mT] = TT[mT]
+      })), UT
     }
-    const Ip = pp => !!pp.scope;
-    class Sp {
-      constructor(pp, ip) {
-        this.buffer = "", this.classPrefix = ip.classPrefix, pp.walk(this)
+    const MT = TT => !!TT.scope;
+    class gT {
+      constructor(TT, UT) {
+        this.buffer = "", this.classPrefix = UT.classPrefix, TT.walk(this)
       }
-      addText(pp) {
-        this.buffer += Op(pp)
+      addText(TT) {
+        this.buffer += WT(TT)
       }
-      openNode(pp) {
-        if (!Ip(pp)) return;
-        const ip = ((pp, ip) => {
+      openNode(TT) {
+        if (!MT(TT)) return;
+        const UT = ((TT, UT) => {
           let {
-            prefix: cp
-          } = ip;
-          if (pp.startsWith("language:")) return pp.replace("language:", "language-");
-          if (pp.includes(".")) {
-            const ip = pp.split(".");
-            return [`${cp}${ip.shift()}`, ...ip.map(((pp, ip) => `${pp}${"_".repeat(ip+1)}`))].join(" ")
+            prefix: mT
+          } = UT;
+          if (TT.startsWith("language:")) return TT.replace("language:", "language-");
+          if (TT.includes(".")) {
+            const UT = TT.split(".");
+            return [`${mT}${UT.shift()}`, ...UT.map(((TT, UT) => `${TT}${"_".repeat(UT+1)}`))].join(" ")
           }
-          return `${cp}${pp}`
-        })(pp.scope, {
+          return `${mT}${TT}`
+        })(TT.scope, {
           prefix: this.classPrefix
         });
-        this.span(ip)
+        this.span(UT)
       }
-      closeNode(pp) {
-        Ip(pp) && (this.buffer += "</span>")
+      closeNode(TT) {
+        MT(TT) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(pp) {
-        this.buffer += `<span class="${pp}">`
+      span(TT) {
+        this.buffer += `<span class="${TT}">`
       }
     }
-    const xp = function() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const ip = {
+    const nT = function() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const UT = {
         children: []
       };
-      return Object.assign(ip, pp), ip
+      return Object.assign(UT, TT), UT
     };
-    class Lp {
+    class HT {
       constructor() {
-        this.ZH = xp(), this.stack = [this.ZH]
+        this.oq = nT(), this.stack = [this.oq]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.ZH
+        return this.oq
       }
-      add(pp) {
-        this.top.children.push(pp)
+      add(TT) {
+        this.top.children.push(TT)
       }
-      openNode(pp) {
-        const ip = xp({
-          scope: pp
+      openNode(TT) {
+        const UT = nT({
+          scope: TT
         });
-        this.add(ip), this.stack.push(ip)
+        this.add(UT), this.stack.push(UT)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.ZH, null, 4)
+        return JSON.stringify(this.oq, null, 4)
       }
-      walk(pp) {
-        return this.constructor._walk(pp, this.ZH)
+      walk(TT) {
+        return this.constructor._walk(TT, this.oq)
       }
-      static _walk(pp, ip) {
-        return "string" === typeof ip ? pp.addText(ip) : ip.children && (pp.openNode(ip), ip.children.forEach((ip => this._walk(pp, ip))), pp.closeNode(ip)), pp
+      static _walk(TT, UT) {
+        return "string" === typeof UT ? TT.addText(UT) : UT.children && (TT.openNode(UT), UT.children.forEach((UT => this._walk(TT, UT))), TT.closeNode(UT)), TT
       }
-      static _collapse(pp) {
-        "string" !== typeof pp && pp.children && (pp.children.every((pp => "string" === typeof pp)) ? pp.children = [pp.children.join("")] : pp.children.forEach((pp => {
-          Lp._collapse(pp)
+      static _collapse(TT) {
+        "string" !== typeof TT && TT.children && (TT.children.every((TT => "string" === typeof TT)) ? TT.children = [TT.children.join("")] : TT.children.forEach((TT => {
+          HT._collapse(TT)
         })))
       }
     }
-    class Yp extends Lp {
-      constructor(pp) {
-        super(), this.options = pp
+    class kT extends HT {
+      constructor(TT) {
+        super(), this.options = TT
       }
-      addText(pp) {
-        "" !== pp && this.add(pp)
+      addText(TT) {
+        "" !== TT && this.add(TT)
       }
-      startScope(pp) {
-        this.openNode(pp)
+      startScope(TT) {
+        this.openNode(TT)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(pp, ip) {
-        const cp = pp.root;
-        ip && (cp.scope = `language:${ip}`), this.add(cp)
+      __addSublanguage(TT, UT) {
+        const mT = TT.root;
+        UT && (mT.scope = `language:${UT}`), this.add(mT)
       }
       toHTML() {
-        return new Sp(this, this.options).value()
+        return new gT(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function Dp(pp) {
-      return pp ? "string" === typeof pp ? pp : pp.source : null
+    function jT(TT) {
+      return TT ? "string" === typeof TT ? TT : TT.source : null
     }
 
-    function Ap(pp) {
-      return yp("(?=", pp, ")")
+    function lT(TT) {
+      return BT("(?=", TT, ")")
     }
 
-    function Pp(pp) {
-      return yp("(?:", pp, ")*")
+    function LT(TT) {
+      return BT("(?:", TT, ")*")
     }
 
-    function Wp(pp) {
-      return yp("(?:", pp, ")?")
+    function pT(TT) {
+      return BT("(?:", TT, ")?")
     }
 
-    function yp() {
-      for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-      return ip.map((pp => Dp(pp))).join("")
+    function BT() {
+      for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+      return UT.map((TT => jT(TT))).join("")
     }
 
-    function Up() {
-      for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-      const Op = function(pp) {
-        const ip = pp[pp.length - 1];
-        return "object" === typeof ip && ip.constructor === Object ? (pp.splice(pp.length - 1, 1), ip) : {}
-      }(ip);
-      return "(" + (Op.capture ? "" : "?:") + ip.map((pp => Dp(pp))).join("|") + ")"
+    function ZT() {
+      for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
+      const WT = function(TT) {
+        const UT = TT[TT.length - 1];
+        return "object" === typeof UT && UT.constructor === Object ? (TT.splice(TT.length - 1, 1), UT) : {}
+      }(UT);
+      return "(" + (WT.capture ? "" : "?:") + UT.map((TT => jT(TT))).join("|") + ")"
     }
 
-    function wp(pp) {
-      return new RegExp(pp.toString() + "|").exec("").length - 1
+    function cT(TT) {
+      return new RegExp(TT.toString() + "|").exec("").length - 1
     }
-    const vp = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const vT = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function tp(pp, ip) {
+    function fT(TT, UT) {
       let {
-        joinWith: cp
-      } = ip, Op = 0;
-      return pp.map((pp => {
-        Op += 1;
-        const ip = Op;
-        let cp = Dp(pp),
-          op = "";
-        for (; cp.length > 0;) {
-          const pp = vp.exec(cp);
-          if (!pp) {
-            op += cp;
+        joinWith: mT
+      } = UT, WT = 0;
+      return TT.map((TT => {
+        WT += 1;
+        const UT = WT;
+        let mT = jT(TT),
+          zT = "";
+        for (; mT.length > 0;) {
+          const TT = vT.exec(mT);
+          if (!TT) {
+            zT += mT;
             break
           }
-          op += cp.substring(0, pp.index), cp = cp.substring(pp.index + pp[0].length), "\\" === pp[0][0] && pp[1] ? op += "\\" + String(Number(pp[1]) + ip) : (op += pp[0], "(" === pp[0] && Op++)
+          zT += mT.substring(0, TT.index), mT = mT.substring(TT.index + TT[0].length), "\\" === TT[0][0] && TT[1] ? zT += "\\" + String(Number(TT[1]) + UT) : (zT += TT[0], "(" === TT[0] && WT++)
         }
-        return op
-      })).map((pp => `(${pp})`)).join(cp)
+        return zT
+      })).map((TT => `(${TT})`)).join(mT)
     }
-    const Hp = "[a-zA-Z]\\w*",
-      dp = "[a-zA-Z_]\\w*",
-      ep = "\\b\\d+(\\.\\d+)?",
-      jp = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      kp = "\\b(0b[01]+)",
-      mp = {
-        mW: "\\\\[\\s\\S]",
+    const qT = "[a-zA-Z]\\w*",
+      iT = "[a-zA-Z_]\\w*",
+      bT = "\\b\\d+(\\.\\d+)?",
+      OT = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      eT = "\\b(0b[01]+)",
+      YT = {
+        np: "\\\\[\\s\\S]",
         relevance: 0
       },
-      Rp = {
+      JT = {
         scope: "string",
-        mW: "'",
+        np: "'",
         end: "'",
         illegal: "\\n",
-        contains: [mp]
+        contains: [YT]
       },
-      qp = {
+      xT = {
         scope: "string",
-        mW: '"',
+        np: '"',
         end: '"',
         illegal: "\\n",
-        contains: [mp]
+        contains: [YT]
       },
-      Mp = function(pp, ip) {
-        const cp = op({
+      dT = function(TT, UT) {
+        const mT = zT({
           scope: "comment",
-          mW: pp,
-          end: ip,
+          np: TT,
+          end: UT,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        cp.contains.push({
+        mT.contains.push({
           scope: "doctag",
-          mW: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          np: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const Op = Up("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return cp.contains.push({
-          mW: yp(/[ ]+/, "(", Op, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), cp
+        const WT = ZT("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return mT.contains.push({
+          np: BT(/[ ]+/, "(", WT, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), mT
       },
-      Cp = Mp("//", "$"),
-      Ep = Mp("/\\*", "\\*/"),
-      Xp = Mp("#", "$"),
-      lp = {
+      wT = dT("//", "$"),
+      tT = dT("/\\*", "\\*/"),
+      aT = dT("#", "$"),
+      yT = {
         scope: "number",
-        mW: ep,
+        np: bT,
         relevance: 0
       },
-      Qp = {
+      XT = {
         scope: "number",
-        mW: jp,
+        np: OT,
         relevance: 0
       },
-      Jp = {
+      IT = {
         scope: "number",
-        mW: kp,
+        np: eT,
         relevance: 0
       },
-      Bp = {
+      QT = {
         scope: "regexp",
-        mW: /\/(?=[^/\n]*\/)/,
+        np: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [mp, {
-          mW: /\[/,
+        contains: [YT, {
+          np: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [mp]
+          contains: [YT]
         }]
       },
-      Np = {
+      sT = {
         scope: "title",
-        mW: Hp,
+        np: qT,
         relevance: 0
       },
-      Tp = {
+      FT = {
         scope: "title",
-        mW: dp,
+        np: iT,
         relevance: 0
       },
-      fp = {
-        mW: "\\.\\s*" + dp,
+      PT = {
+        np: "\\.\\s*" + iT,
         relevance: 0
       };
-    var bp = Object.freeze({
+    var VT = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: Rp,
-      BACKSLASH_ESCAPE: mp,
-      BINARY_NUMBER_MODE: Jp,
-      BINARY_NUMBER_RE: kp,
-      COMMENT: Mp,
-      C_BLOCK_COMMENT_MODE: Ep,
-      C_LINE_COMMENT_MODE: Cp,
-      C_NUMBER_MODE: Qp,
-      C_NUMBER_RE: jp,
-      END_SAME_AS_BEGIN: function(pp) {
-        return Object.assign(pp, {
-          "on:begin": (pp, ip) => {
-            ip.data._beginMatch = pp[1]
+      APOS_STRING_MODE: JT,
+      BACKSLASH_ESCAPE: YT,
+      BINARY_NUMBER_MODE: IT,
+      BINARY_NUMBER_RE: eT,
+      COMMENT: dT,
+      C_BLOCK_COMMENT_MODE: tT,
+      C_LINE_COMMENT_MODE: wT,
+      C_NUMBER_MODE: XT,
+      C_NUMBER_RE: OT,
+      END_SAME_AS_BEGIN: function(TT) {
+        return Object.assign(TT, {
+          "on:begin": (TT, UT) => {
+            UT.data._beginMatch = TT[1]
           },
-          "on:end": (pp, ip) => {
-            ip.data._beginMatch !== pp[1] && ip.ignoreMatch()
+          "on:end": (TT, UT) => {
+            UT.data._beginMatch !== TT[1] && UT.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: Xp,
-      IDENT_RE: Hp,
+      HASH_COMMENT_MODE: aT,
+      IDENT_RE: qT,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: fp,
-      NUMBER_MODE: lp,
-      NUMBER_RE: ep,
+      METHOD_GUARD: PT,
+      NUMBER_MODE: yT,
+      NUMBER_RE: bT,
       PHRASAL_WORDS_MODE: {
-        mW: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        np: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: qp,
-      REGEXP_MODE: Bp,
+      QUOTE_STRING_MODE: xT,
+      REGEXP_MODE: QT,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const ip = /^#![ ]*\//;
-        return pp.binary && (pp.mW = yp(ip, /.*\b/, pp.binary, /\b.*/)), op({
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const UT = /^#![ ]*\//;
+        return TT.binary && (TT.np = BT(UT, /.*\b/, TT.binary, /\b.*/)), zT({
           scope: "meta",
-          mW: ip,
+          np: UT,
           end: /$/,
           relevance: 0,
-          "on:begin": (pp, ip) => {
-            0 !== pp.index && ip.ignoreMatch()
+          "on:begin": (TT, UT) => {
+            0 !== TT.index && UT.ignoreMatch()
           }
-        }, pp)
+        }, TT)
       },
-      TITLE_MODE: Np,
-      UNDERSCORE_IDENT_RE: dp,
-      UNDERSCORE_TITLE_MODE: Tp
+      TITLE_MODE: sT,
+      UNDERSCORE_IDENT_RE: iT,
+      UNDERSCORE_TITLE_MODE: FT
     });
 
-    function hp(pp, ip) {
-      "." === pp.input[pp.index - 1] && ip.ignoreMatch()
+    function uT(TT, UT) {
+      "." === TT.input[TT.index - 1] && UT.ignoreMatch()
     }
 
-    function ap(pp, ip) {
-      void 0 !== pp.className && (pp.scope = pp.className, delete pp.className)
+    function CT(TT, UT) {
+      void 0 !== TT.className && (TT.scope = TT.className, delete TT.className)
     }
 
-    function np(pp, ip) {
-      ip && pp.beginKeywords && (pp.mW = "\\b(" + pp.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", pp.__beforeBegin = hp, pp.keywords = pp.keywords || pp.beginKeywords, delete pp.beginKeywords, void 0 === pp.relevance && (pp.relevance = 0))
+    function rT(TT, UT) {
+      UT && TT.beginKeywords && (TT.np = "\\b(" + TT.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", TT.__beforeBegin = uT, TT.keywords = TT.keywords || TT.beginKeywords, delete TT.beginKeywords, void 0 === TT.relevance && (TT.relevance = 0))
     }
 
-    function Fp(pp, ip) {
-      Array.isArray(pp.illegal) && (pp.illegal = Up(...pp.illegal))
+    function KT(TT, UT) {
+      Array.isArray(TT.illegal) && (TT.illegal = ZT(...TT.illegal))
     }
 
-    function gp(pp, ip) {
-      if (pp.match) {
-        if (pp.mW || pp.end) throw new Error("begin & end are not supported with match");
-        pp.mW = pp.match, delete pp.match
+    function ST(TT, UT) {
+      if (TT.match) {
+        if (TT.np || TT.end) throw new Error("begin & end are not supported with match");
+        TT.np = TT.match, delete TT.match
       }
     }
 
-    function Gp(pp, ip) {
-      void 0 === pp.relevance && (pp.relevance = 1)
+    function GT(TT, UT) {
+      void 0 === TT.relevance && (TT.relevance = 1)
     }
-    const rp = (pp, ip) => {
-        if (!pp.beforeMatch) return;
-        if (pp.starts) throw new Error("beforeMatch cannot be used with starts");
-        const cp = Object.assign({}, pp);
-        Object.keys(pp).forEach((ip => {
-          delete pp[ip]
-        })), pp.keywords = cp.keywords, pp.mW = yp(cp.beforeMatch, Ap(cp.mW)), pp.starts = {
+    const NT = (TT, UT) => {
+        if (!TT.beforeMatch) return;
+        if (TT.starts) throw new Error("beforeMatch cannot be used with starts");
+        const mT = Object.assign({}, TT);
+        Object.keys(TT).forEach((UT => {
+          delete TT[UT]
+        })), TT.keywords = mT.keywords, TT.np = BT(mT.beforeMatch, lT(mT.np)), TT.starts = {
           relevance: 0,
-          contains: [Object.assign(cp, {
+          contains: [Object.assign(mT, {
             endsParent: !0
           })]
-        }, pp.relevance = 0, delete cp.beforeMatch
+        }, TT.relevance = 0, delete mT.beforeMatch
       },
-      Zp = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      ET = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function zp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const Op = Object.create(null);
-      return "string" === typeof pp ? op(cp, pp.split(" ")) : Array.isArray(pp) ? op(cp, pp) : Object.keys(pp).forEach((function(cp) {
-        Object.assign(Op, zp(pp[cp], ip, cp))
-      })), Op;
+    function hT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const WT = Object.create(null);
+      return "string" === typeof TT ? zT(mT, TT.split(" ")) : Array.isArray(TT) ? zT(mT, TT) : Object.keys(TT).forEach((function(mT) {
+        Object.assign(WT, hT(TT[mT], UT, mT))
+      })), WT;
 
-      function op(pp, cp) {
-        ip && (cp = cp.map((pp => pp.toLowerCase()))), cp.forEach((function(ip) {
-          const cp = ip.split("|");
-          Op[cp[0]] = [pp, sp(cp[0], cp[1])]
+      function zT(TT, mT) {
+        UT && (mT = mT.map((TT => TT.toLowerCase()))), mT.forEach((function(UT) {
+          const mT = UT.split("|");
+          WT[mT[0]] = [TT, DT(mT[0], mT[1])]
         }))
       }
     }
 
-    function sp(pp, ip) {
-      return ip ? Number(ip) : function(pp) {
-        return Zp.includes(pp.toLowerCase())
-      }(pp) ? 0 : 1
+    function DT(TT, UT) {
+      return UT ? Number(UT) : function(TT) {
+        return ET.includes(TT.toLowerCase())
+      }(TT) ? 0 : 1
     }
-    const Kp = {},
-      Vp = pp => {
-        console.error(pp)
+    const oT = {},
+      AT = TT => {
+        console.error(TT)
       },
-      ii = function(pp) {
-        for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-        console.log(`WARN: ${pp}`, ...cp)
+      RT = function(TT) {
+        for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+        console.log(`WARN: ${TT}`, ...mT)
       },
-      ci = (pp, ip) => {
-        Kp[`${pp}/${ip}`] || (console.log(`Deprecated as of ${pp}. ${ip}`), Kp[`${pp}/${ip}`] = !0)
+      TU = (TT, UT) => {
+        oT[`${TT}/${UT}`] || (console.log(`Deprecated as of ${TT}. ${UT}`), oT[`${TT}/${UT}`] = !0)
       },
-      Oi = new Error;
+      UU = new Error;
 
-    function oi(pp, ip, cp) {
+    function mU(TT, UT, mT) {
       let {
-        key: Op
-      } = cp, op = 0;
-      const Ip = pp[Op],
-        Sp = {},
-        xp = {};
-      for (let Lp = 1; Lp <= ip.length; Lp++) xp[Lp + op] = Ip[Lp], Sp[Lp + op] = !0, op += wp(ip[Lp - 1]);
-      pp[Op] = xp, pp[Op]._emit = Sp, pp[Op]._multi = !0
+        key: WT
+      } = mT, zT = 0;
+      const MT = TT[WT],
+        gT = {},
+        nT = {};
+      for (let HT = 1; HT <= UT.length; HT++) nT[HT + zT] = MT[HT], gT[HT + zT] = !0, zT += cT(UT[HT - 1]);
+      TT[WT] = nT, TT[WT]._emit = gT, TT[WT]._multi = !0
     }
 
-    function Ii(pp) {
-      ! function(pp) {
-        pp.scope && "object" === typeof pp.scope && null !== pp.scope && (pp.beginScope = pp.scope, delete pp.scope)
-      }(pp), "string" === typeof pp.beginScope && (pp.beginScope = {
-          _wrap: pp.beginScope
-        }), "string" === typeof pp.endScope && (pp.endScope = {
-          _wrap: pp.endScope
+    function WU(TT) {
+      ! function(TT) {
+        TT.scope && "object" === typeof TT.scope && null !== TT.scope && (TT.beginScope = TT.scope, delete TT.scope)
+      }(TT), "string" === typeof TT.beginScope && (TT.beginScope = {
+          _wrap: TT.beginScope
+        }), "string" === typeof TT.endScope && (TT.endScope = {
+          _wrap: TT.endScope
         }),
-        function(pp) {
-          if (Array.isArray(pp.mW)) {
-            if (pp.skip || pp.excludeBegin || pp.returnBegin) throw Vp("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), Oi;
-            if ("object" !== typeof pp.beginScope || null === pp.beginScope) throw Vp("beginScope must be object"), Oi;
-            oi(pp, pp.mW, {
+        function(TT) {
+          if (Array.isArray(TT.np)) {
+            if (TT.skip || TT.excludeBegin || TT.returnBegin) throw AT("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), UU;
+            if ("object" !== typeof TT.beginScope || null === TT.beginScope) throw AT("beginScope must be object"), UU;
+            mU(TT, TT.np, {
               key: "beginScope"
-            }), pp.mW = tp(pp.mW, {
+            }), TT.np = fT(TT.np, {
               joinWith: ""
             })
           }
-        }(pp),
-        function(pp) {
-          if (Array.isArray(pp.end)) {
-            if (pp.skip || pp.excludeEnd || pp.returnEnd) throw Vp("skip, excludeEnd, returnEnd not compatible with endScope: {}"), Oi;
-            if ("object" !== typeof pp.endScope || null === pp.endScope) throw Vp("endScope must be object"), Oi;
-            oi(pp, pp.end, {
+        }(TT),
+        function(TT) {
+          if (Array.isArray(TT.end)) {
+            if (TT.skip || TT.excludeEnd || TT.returnEnd) throw AT("skip, excludeEnd, returnEnd not compatible with endScope: {}"), UU;
+            if ("object" !== typeof TT.endScope || null === TT.endScope) throw AT("endScope must be object"), UU;
+            mU(TT, TT.end, {
               key: "endScope"
-            }), pp.end = tp(pp.end, {
+            }), TT.end = fT(TT.end, {
               joinWith: ""
             })
           }
-        }(pp)
+        }(TT)
     }
 
-    function Si(pp) {
-      function ip(ip, cp) {
-        return new RegExp(Dp(ip), "m" + (pp.case_insensitive ? "i" : "") + (pp.unicodeRegex ? "u" : "") + (cp ? "g" : ""))
+    function zU(TT) {
+      function UT(UT, mT) {
+        return new RegExp(jT(UT), "m" + (TT.case_insensitive ? "i" : "") + (TT.unicodeRegex ? "u" : "") + (mT ? "g" : ""))
       }
-      class cp {
+      class mT {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(pp, ip) {
-          ip.position = this.position++, this.matchIndexes[this.matchAt] = ip, this.regexes.push([ip, pp]), this.matchAt += wp(pp) + 1
+        addRule(TT, UT) {
+          UT.position = this.position++, this.matchIndexes[this.matchAt] = UT, this.regexes.push([UT, TT]), this.matchAt += cT(TT) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const pp = this.regexes.map((pp => pp[1]));
-          this.matcherRe = ip(tp(pp, {
+          const TT = this.regexes.map((TT => TT[1]));
+          this.matcherRe = UT(fT(TT, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(pp) {
+        exec(TT) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const ip = this.matcherRe.exec(pp);
-          if (!ip) return null;
-          const cp = ip.findIndex(((pp, ip) => ip > 0 && void 0 !== pp)),
-            Op = this.matchIndexes[cp];
-          return ip.splice(0, cp), Object.assign(ip, Op)
+          const UT = this.matcherRe.exec(TT);
+          if (!UT) return null;
+          const mT = UT.findIndex(((TT, UT) => UT > 0 && void 0 !== TT)),
+            WT = this.matchIndexes[mT];
+          return UT.splice(0, mT), Object.assign(UT, WT)
         }
       }
-      class Op {
+      class WT {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(pp) {
-          if (this.multiRegexes[pp]) return this.multiRegexes[pp];
-          const ip = new cp;
-          return this.rules.slice(pp).forEach((pp => {
-            let [cp, Op] = pp;
-            return ip.addRule(cp, Op)
-          })), ip.compile(), this.multiRegexes[pp] = ip, ip
+        getMatcher(TT) {
+          if (this.multiRegexes[TT]) return this.multiRegexes[TT];
+          const UT = new mT;
+          return this.rules.slice(TT).forEach((TT => {
+            let [mT, WT] = TT;
+            return UT.addRule(mT, WT)
+          })), UT.compile(), this.multiRegexes[TT] = UT, UT
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(pp, ip) {
-          this.rules.push([pp, ip]), "mW" === ip.type && this.count++
+        addRule(TT, UT) {
+          this.rules.push([TT, UT]), "np" === UT.type && this.count++
         }
-        exec(pp) {
-          const ip = this.getMatcher(this.regexIndex);
-          ip.lastIndex = this.lastIndex;
-          let cp = ip.exec(pp);
+        exec(TT) {
+          const UT = this.getMatcher(this.regexIndex);
+          UT.lastIndex = this.lastIndex;
+          let mT = UT.exec(TT);
           if (this.resumingScanAtSamePosition())
-            if (cp && cp.index === this.lastIndex);
+            if (mT && mT.index === this.lastIndex);
             else {
-              const ip = this.getMatcher(0);
-              ip.lastIndex = this.lastIndex + 1, cp = ip.exec(pp)
-            } return cp && (this.regexIndex += cp.position + 1, this.regexIndex === this.count && this.considerAll()), cp
+              const UT = this.getMatcher(0);
+              UT.lastIndex = this.lastIndex + 1, mT = UT.exec(TT)
+            } return mT && (this.regexIndex += mT.position + 1, this.regexIndex === this.count && this.considerAll()), mT
         }
       }
-      if (pp.compilerExtensions || (pp.compilerExtensions = []), pp.contains && pp.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return pp.classNameAliases = op(pp.classNameAliases || {}),
-        function cp(Ip, Sp) {
-          const xp = Ip;
-          if (Ip.isCompiled) return xp;
-          [ap, gp, Ii, rp].forEach((pp => pp(Ip, Sp))), pp.compilerExtensions.forEach((pp => pp(Ip, Sp))), Ip.__beforeBegin = null, [np, Fp, Gp].forEach((pp => pp(Ip, Sp))), Ip.isCompiled = !0;
-          let Lp = null;
-          return "object" === typeof Ip.keywords && Ip.keywords.$pattern && (Ip.keywords = Object.assign({}, Ip.keywords), Lp = Ip.keywords.$pattern, delete Ip.keywords.$pattern), Lp = Lp || /\w+/, Ip.keywords && (Ip.keywords = zp(Ip.keywords, pp.case_insensitive)), xp.keywordPatternRe = ip(Lp, !0), Sp && (Ip.mW || (Ip.mW = /\B|\b/), xp.beginRe = ip(xp.mW), Ip.end || Ip.endsWithParent || (Ip.end = /\B|\b/), Ip.end && (xp.endRe = ip(xp.end)), xp.terminatorEnd = Dp(xp.end) || "", Ip.endsWithParent && Sp.terminatorEnd && (xp.terminatorEnd += (Ip.end ? "|" : "") + Sp.terminatorEnd)), Ip.illegal && (xp.illegalRe = ip(Ip.illegal)), Ip.contains || (Ip.contains = []), Ip.contains = [].concat(...Ip.contains.map((function(pp) {
-            return function(pp) {
-              pp.variants && !pp.cachedVariants && (pp.cachedVariants = pp.variants.map((function(ip) {
-                return op(pp, {
+      if (TT.compilerExtensions || (TT.compilerExtensions = []), TT.contains && TT.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return TT.classNameAliases = zT(TT.classNameAliases || {}),
+        function mT(MT, gT) {
+          const nT = MT;
+          if (MT.isCompiled) return nT;
+          [CT, ST, WU, NT].forEach((TT => TT(MT, gT))), TT.compilerExtensions.forEach((TT => TT(MT, gT))), MT.__beforeBegin = null, [rT, KT, GT].forEach((TT => TT(MT, gT))), MT.isCompiled = !0;
+          let HT = null;
+          return "object" === typeof MT.keywords && MT.keywords.$pattern && (MT.keywords = Object.assign({}, MT.keywords), HT = MT.keywords.$pattern, delete MT.keywords.$pattern), HT = HT || /\w+/, MT.keywords && (MT.keywords = hT(MT.keywords, TT.case_insensitive)), nT.keywordPatternRe = UT(HT, !0), gT && (MT.np || (MT.np = /\B|\b/), nT.beginRe = UT(nT.np), MT.end || MT.endsWithParent || (MT.end = /\B|\b/), MT.end && (nT.endRe = UT(nT.end)), nT.terminatorEnd = jT(nT.end) || "", MT.endsWithParent && gT.terminatorEnd && (nT.terminatorEnd += (MT.end ? "|" : "") + gT.terminatorEnd)), MT.illegal && (nT.illegalRe = UT(MT.illegal)), MT.contains || (MT.contains = []), MT.contains = [].concat(...MT.contains.map((function(TT) {
+            return function(TT) {
+              TT.variants && !TT.cachedVariants && (TT.cachedVariants = TT.variants.map((function(UT) {
+                return zT(TT, {
                   variants: null
-                }, ip)
+                }, UT)
               })));
-              if (pp.cachedVariants) return pp.cachedVariants;
-              if (xi(pp)) return op(pp, {
-                starts: pp.starts ? op(pp.starts) : null
+              if (TT.cachedVariants) return TT.cachedVariants;
+              if (MU(TT)) return zT(TT, {
+                starts: TT.starts ? zT(TT.starts) : null
               });
-              if (Object.isFrozen(pp)) return op(pp);
-              return pp
-            }("self" === pp ? Ip : pp)
-          }))), Ip.contains.forEach((function(pp) {
-            cp(pp, xp)
-          })), Ip.starts && cp(Ip.starts, Sp), xp.matcher = function(pp) {
-            const ip = new Op;
-            return pp.contains.forEach((pp => ip.addRule(pp.mW, {
-              rule: pp,
-              type: "mW"
-            }))), pp.terminatorEnd && ip.addRule(pp.terminatorEnd, {
+              if (Object.isFrozen(TT)) return zT(TT);
+              return TT
+            }("self" === TT ? MT : TT)
+          }))), MT.contains.forEach((function(TT) {
+            mT(TT, nT)
+          })), MT.starts && mT(MT.starts, gT), nT.matcher = function(TT) {
+            const UT = new WT;
+            return TT.contains.forEach((TT => UT.addRule(TT.np, {
+              rule: TT,
+              type: "np"
+            }))), TT.terminatorEnd && UT.addRule(TT.terminatorEnd, {
               type: "end"
-            }), pp.illegal && ip.addRule(pp.illegal, {
+            }), TT.illegal && UT.addRule(TT.illegal, {
               type: "illegal"
-            }), ip
-          }(xp), xp
-        }(pp)
+            }), UT
+          }(nT), nT
+        }(TT)
     }
 
-    function xi(pp) {
-      return !!pp && (pp.endsWithParent || xi(pp.starts))
+    function MU(TT) {
+      return !!TT && (TT.endsWithParent || MU(TT.starts))
     }
-    class Li extends Error {
-      constructor(pp, ip) {
-        super(pp), this.name = "HTMLInjectionError", this.html = ip
+    class gU extends Error {
+      constructor(TT, UT) {
+        super(TT), this.name = "HTMLInjectionError", this.html = UT
       }
     }
-    const Yi = Op,
-      Di = op,
-      Ai = Symbol("nomatch"),
-      Pi = function(pp) {
-        const Op = Object.create(null),
-          op = Object.create(null),
-          Ip = [];
-        let Sp = !0;
-        const xp = "Could not find the language '{}', did you forget to load/include a language module?",
-          Lp = {
+    const nU = WT,
+      HU = zT,
+      kU = Symbol("nomatch"),
+      jU = function(TT) {
+        const WT = Object.create(null),
+          zT = Object.create(null),
+          MT = [];
+        let gT = !0;
+        const nT = "Could not find the language '{}', did you forget to load/include a language module?",
+          HT = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let Dp = {
+        let jT = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: Yp
+          __emitter: kT
         };
 
-        function wp(pp) {
-          return Dp.noHighlightRe.test(pp)
+        function cT(TT) {
+          return jT.noHighlightRe.test(TT)
         }
 
-        function vp(pp, ip, cp) {
-          let Op = "",
-            op = "";
-          "object" === typeof ip ? (Op = pp, cp = ip.ignoreIllegals, op = ip.language) : (ci("10.7.0", "highlight(lang, code, ...args) has been deprecated."), ci("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), op = pp, Op = ip), void 0 === cp && (cp = !0);
-          const Ip = {
-            code: Op,
-            language: op
+        function vT(TT, UT, mT) {
+          let WT = "",
+            zT = "";
+          "object" === typeof UT ? (WT = TT, mT = UT.ignoreIllegals, zT = UT.language) : (TU("10.7.0", "highlight(lang, code, ...args) has been deprecated."), TU("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), zT = TT, WT = UT), void 0 === mT && (mT = !0);
+          const MT = {
+            code: WT,
+            language: zT
           };
-          qp("before:highlight", Ip);
-          const Sp = Ip.result ? Ip.result : tp(Ip.language, Ip.code, cp);
-          return Sp.code = Ip.code, qp("after:highlight", Sp), Sp
+          xT("before:highlight", MT);
+          const gT = MT.result ? MT.result : fT(MT.language, MT.code, mT);
+          return gT.code = MT.code, xT("after:highlight", gT), gT
         }
 
-        function tp(pp, ip, op, Ip) {
-          const Lp = Object.create(null);
+        function fT(TT, UT, zT, MT) {
+          const HT = Object.create(null);
 
-          function Yp() {
-            if (!qp.keywords) return void Cp.addText(Ep);
-            let pp = 0;
-            qp.keywordPatternRe.lastIndex = 0;
-            let ip = qp.keywordPatternRe.exec(Ep),
-              cp = "";
-            for (; ip;) {
-              cp += Ep.substring(pp, ip.index);
-              const op = jp.case_insensitive ? ip[0].toLowerCase() : ip[0],
-                Ip = (Op = op, qp.keywords[Op]);
-              if (Ip) {
-                const [pp, Op] = Ip;
-                if (Cp.addText(cp), cp = "", Lp[op] = (Lp[op] || 0) + 1, Lp[op] <= 7 && (Xp += Op), pp.startsWith("_")) cp += ip[0];
+          function kT() {
+            if (!xT.keywords) return void wT.addText(tT);
+            let TT = 0;
+            xT.keywordPatternRe.lastIndex = 0;
+            let UT = xT.keywordPatternRe.exec(tT),
+              mT = "";
+            for (; UT;) {
+              mT += tT.substring(TT, UT.index);
+              const zT = OT.case_insensitive ? UT[0].toLowerCase() : UT[0],
+                MT = (WT = zT, xT.keywords[WT]);
+              if (MT) {
+                const [TT, WT] = MT;
+                if (wT.addText(mT), mT = "", HT[zT] = (HT[zT] || 0) + 1, HT[zT] <= 7 && (aT += WT), TT.startsWith("_")) mT += UT[0];
                 else {
-                  const cp = jp.classNameAliases[pp] || pp;
-                  Pp(ip[0], cp)
+                  const mT = OT.classNameAliases[TT] || TT;
+                  LT(UT[0], mT)
                 }
-              } else cp += ip[0];
-              pp = qp.keywordPatternRe.lastIndex, ip = qp.keywordPatternRe.exec(Ep)
+              } else mT += UT[0];
+              TT = xT.keywordPatternRe.lastIndex, UT = xT.keywordPatternRe.exec(tT)
             }
-            var Op;
-            cp += Ep.substring(pp), Cp.addText(cp)
+            var WT;
+            mT += tT.substring(TT), wT.addText(mT)
           }
 
-          function Ap() {
-            null != qp.subLanguage ? function() {
-              if ("" === Ep) return;
-              let pp = null;
-              if ("string" === typeof qp.subLanguage) {
-                if (!Op[qp.subLanguage]) return void Cp.addText(Ep);
-                pp = tp(qp.subLanguage, Ep, !0, Mp[qp.subLanguage]), Mp[qp.subLanguage] = pp._top
-              } else pp = Hp(Ep, qp.subLanguage.length ? qp.subLanguage : null);
-              qp.relevance > 0 && (Xp += pp.relevance), Cp.__addSublanguage(pp._emitter, pp.language)
-            }() : Yp(), Ep = ""
+          function lT() {
+            null != xT.subLanguage ? function() {
+              if ("" === tT) return;
+              let TT = null;
+              if ("string" === typeof xT.subLanguage) {
+                if (!WT[xT.subLanguage]) return void wT.addText(tT);
+                TT = fT(xT.subLanguage, tT, !0, dT[xT.subLanguage]), dT[xT.subLanguage] = TT._top
+              } else TT = qT(tT, xT.subLanguage.length ? xT.subLanguage : null);
+              xT.relevance > 0 && (aT += TT.relevance), wT.__addSublanguage(TT._emitter, TT.language)
+            }() : kT(), tT = ""
           }
 
-          function Pp(pp, ip) {
-            "" !== pp && (Cp.startScope(ip), Cp.addText(pp), Cp.endScope())
+          function LT(TT, UT) {
+            "" !== TT && (wT.startScope(UT), wT.addText(TT), wT.endScope())
           }
 
-          function Wp(pp, ip) {
-            let cp = 1;
-            const Op = ip.length - 1;
-            for (; cp <= Op;) {
-              if (!pp._emit[cp]) {
-                cp++;
+          function pT(TT, UT) {
+            let mT = 1;
+            const WT = UT.length - 1;
+            for (; mT <= WT;) {
+              if (!TT._emit[mT]) {
+                mT++;
                 continue
               }
-              const Op = jp.classNameAliases[pp[cp]] || pp[cp],
-                op = ip[cp];
-              Op ? Pp(op, Op) : (Ep = op, Yp(), Ep = ""), cp++
+              const WT = OT.classNameAliases[TT[mT]] || TT[mT],
+                zT = UT[mT];
+              WT ? LT(zT, WT) : (tT = zT, kT(), tT = ""), mT++
             }
           }
 
-          function yp(pp, ip) {
-            return pp.scope && "string" === typeof pp.scope && Cp.openNode(jp.classNameAliases[pp.scope] || pp.scope), pp.beginScope && (pp.beginScope._wrap ? (Pp(Ep, jp.classNameAliases[pp.beginScope._wrap] || pp.beginScope._wrap), Ep = "") : pp.beginScope._multi && (Wp(pp.beginScope, ip), Ep = "")), qp = Object.create(pp, {
+          function BT(TT, UT) {
+            return TT.scope && "string" === typeof TT.scope && wT.openNode(OT.classNameAliases[TT.scope] || TT.scope), TT.beginScope && (TT.beginScope._wrap ? (LT(tT, OT.classNameAliases[TT.beginScope._wrap] || TT.beginScope._wrap), tT = "") : TT.beginScope._multi && (pT(TT.beginScope, UT), tT = "")), xT = Object.create(TT, {
               parent: {
-                value: qp
+                value: xT
               }
-            }), qp
+            }), xT
           }
 
-          function Up(pp, ip, Op) {
-            let op = function(pp, ip) {
-              const cp = pp && pp.exec(ip);
-              return cp && 0 === cp.index
-            }(pp.endRe, Op);
-            if (op) {
-              if (pp["on:end"]) {
-                const Op = new cp(pp);
-                pp["on:end"](ip, Op), Op.isMatchIgnored && (op = !1)
+          function ZT(TT, UT, WT) {
+            let zT = function(TT, UT) {
+              const mT = TT && TT.exec(UT);
+              return mT && 0 === mT.index
+            }(TT.endRe, WT);
+            if (zT) {
+              if (TT["on:end"]) {
+                const WT = new mT(TT);
+                TT["on:end"](UT, WT), WT.isMatchIgnored && (zT = !1)
               }
-              if (op) {
-                for (; pp.endsParent && pp.parent;) pp = pp.parent;
-                return pp
+              if (zT) {
+                for (; TT.endsParent && TT.parent;) TT = TT.parent;
+                return TT
               }
             }
-            if (pp.endsWithParent) return Up(pp.parent, ip, Op)
+            if (TT.endsWithParent) return ZT(TT.parent, UT, WT)
           }
 
-          function wp(pp) {
-            return 0 === qp.matcher.regexIndex ? (Ep += pp[0], 1) : (Jp = !0, 0)
+          function cT(TT) {
+            return 0 === xT.matcher.regexIndex ? (tT += TT[0], 1) : (IT = !0, 0)
           }
 
-          function vp(pp) {
-            const cp = pp[0],
-              Op = ip.substring(pp.index),
-              op = Up(qp, pp, Op);
-            if (!op) return Ai;
-            const Ip = qp;
-            qp.endScope && qp.endScope._wrap ? (Ap(), Pp(cp, qp.endScope._wrap)) : qp.endScope && qp.endScope._multi ? (Ap(), Wp(qp.endScope, pp)) : Ip.skip ? Ep += cp : (Ip.returnEnd || Ip.excludeEnd || (Ep += cp), Ap(), Ip.excludeEnd && (Ep = cp));
+          function vT(TT) {
+            const mT = TT[0],
+              WT = UT.substring(TT.index),
+              zT = ZT(xT, TT, WT);
+            if (!zT) return kU;
+            const MT = xT;
+            xT.endScope && xT.endScope._wrap ? (lT(), LT(mT, xT.endScope._wrap)) : xT.endScope && xT.endScope._multi ? (lT(), pT(xT.endScope, TT)) : MT.skip ? tT += mT : (MT.returnEnd || MT.excludeEnd || (tT += mT), lT(), MT.excludeEnd && (tT = mT));
             do {
-              qp.scope && Cp.closeNode(), qp.skip || qp.subLanguage || (Xp += qp.relevance), qp = qp.parent
-            } while (qp !== op.parent);
-            return op.starts && yp(op.starts, pp), Ip.returnEnd ? 0 : cp.length
+              xT.scope && wT.closeNode(), xT.skip || xT.subLanguage || (aT += xT.relevance), xT = xT.parent
+            } while (xT !== zT.parent);
+            return zT.starts && BT(zT.starts, TT), MT.returnEnd ? 0 : mT.length
           }
-          let dp = {};
+          let iT = {};
 
-          function ep(Op, Ip) {
-            const xp = Ip && Ip[0];
-            if (Ep += Op, null == xp) return Ap(), 0;
-            if ("mW" === dp.type && "end" === Ip.type && dp.index === Ip.index && "" === xp) {
-              if (Ep += ip.slice(Ip.index, Ip.index + 1), !Sp) {
-                const ip = new Error(`0 width match regex (${pp})`);
-                throw ip.languageName = pp, ip.badRule = dp.rule, ip
+          function bT(WT, MT) {
+            const nT = MT && MT[0];
+            if (tT += WT, null == nT) return lT(), 0;
+            if ("np" === iT.type && "end" === MT.type && iT.index === MT.index && "" === nT) {
+              if (tT += UT.slice(MT.index, MT.index + 1), !gT) {
+                const UT = new Error(`0 width match regex (${TT})`);
+                throw UT.languageName = TT, UT.badRule = iT.rule, UT
               }
               return 1
             }
-            if (dp = Ip, "mW" === Ip.type) return function(pp) {
-              const ip = pp[0],
-                Op = pp.rule,
-                op = new cp(Op),
-                Ip = [Op.__beforeBegin, Op["on:begin"]];
-              for (const cp of Ip)
-                if (cp && (cp(pp, op), op.isMatchIgnored)) return wp(ip);
-              return Op.skip ? Ep += ip : (Op.excludeBegin && (Ep += ip), Ap(), Op.returnBegin || Op.excludeBegin || (Ep = ip)), yp(Op, pp), Op.returnBegin ? 0 : ip.length
-            }(Ip);
-            if ("illegal" === Ip.type && !op) {
-              const pp = new Error('Illegal lexeme "' + xp + '" for mode "' + (qp.scope || "<unnamed>") + '"');
-              throw pp.mode = qp, pp
+            if (iT = MT, "np" === MT.type) return function(TT) {
+              const UT = TT[0],
+                WT = TT.rule,
+                zT = new mT(WT),
+                MT = [WT.__beforeBegin, WT["on:begin"]];
+              for (const mT of MT)
+                if (mT && (mT(TT, zT), zT.isMatchIgnored)) return cT(UT);
+              return WT.skip ? tT += UT : (WT.excludeBegin && (tT += UT), lT(), WT.returnBegin || WT.excludeBegin || (tT = UT)), BT(WT, TT), WT.returnBegin ? 0 : UT.length
+            }(MT);
+            if ("illegal" === MT.type && !zT) {
+              const TT = new Error('Illegal lexeme "' + nT + '" for mode "' + (xT.scope || "<unnamed>") + '"');
+              throw TT.mode = xT, TT
             }
-            if ("end" === Ip.type) {
-              const pp = vp(Ip);
-              if (pp !== Ai) return pp
+            if ("end" === MT.type) {
+              const TT = vT(MT);
+              if (TT !== kU) return TT
             }
-            if ("illegal" === Ip.type && "" === xp) return Ep += "\n", 1;
-            if (Qp > 1e5 && Qp > 3 * Ip.index) {
+            if ("illegal" === MT.type && "" === nT) return tT += "\n", 1;
+            if (XT > 1e5 && XT > 3 * MT.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return Ep += xp, xp.length
+            return tT += nT, nT.length
           }
-          const jp = kp(pp);
-          if (!jp) throw Vp(xp.replace("{}", pp)), new Error('Unknown language: "' + pp + '"');
-          const mp = Si(jp);
-          let Rp = "",
-            qp = Ip || mp;
-          const Mp = {},
-            Cp = new Dp.__emitter(Dp);
+          const OT = eT(TT);
+          if (!OT) throw AT(nT.replace("{}", TT)), new Error('Unknown language: "' + TT + '"');
+          const YT = zU(OT);
+          let JT = "",
+            xT = MT || YT;
+          const dT = {},
+            wT = new jT.__emitter(jT);
           ! function() {
-            const pp = [];
-            for (let ip = qp; ip !== jp; ip = ip.parent) ip.scope && pp.unshift(ip.scope);
-            pp.forEach((pp => Cp.openNode(pp)))
+            const TT = [];
+            for (let UT = xT; UT !== OT; UT = UT.parent) UT.scope && TT.unshift(UT.scope);
+            TT.forEach((TT => wT.openNode(TT)))
           }();
-          let Ep = "",
-            Xp = 0,
-            lp = 0,
-            Qp = 0,
-            Jp = !1;
+          let tT = "",
+            aT = 0,
+            yT = 0,
+            XT = 0,
+            IT = !1;
           try {
-            if (jp.__emitTokens) jp.__emitTokens(ip, Cp);
+            if (OT.__emitTokens) OT.__emitTokens(UT, wT);
             else {
-              for (qp.matcher.considerAll();;) {
-                Qp++, Jp ? Jp = !1 : qp.matcher.considerAll(), qp.matcher.lastIndex = lp;
-                const pp = qp.matcher.exec(ip);
-                if (!pp) break;
-                const cp = ep(ip.substring(lp, pp.index), pp);
-                lp = pp.index + cp
+              for (xT.matcher.considerAll();;) {
+                XT++, IT ? IT = !1 : xT.matcher.considerAll(), xT.matcher.lastIndex = yT;
+                const TT = xT.matcher.exec(UT);
+                if (!TT) break;
+                const mT = bT(UT.substring(yT, TT.index), TT);
+                yT = TT.index + mT
               }
-              ep(ip.substring(lp))
+              bT(UT.substring(yT))
             }
-            return Cp.finalize(), Rp = Cp.toHTML(), {
-              language: pp,
-              value: Rp,
-              relevance: Xp,
+            return wT.finalize(), JT = wT.toHTML(), {
+              language: TT,
+              value: JT,
+              relevance: aT,
               illegal: !1,
-              _emitter: Cp,
-              _top: qp
+              _emitter: wT,
+              _top: xT
             }
-          } catch (Bp) {
-            if (Bp.message && Bp.message.includes("Illegal")) return {
-              language: pp,
-              value: Yi(ip),
+          } catch (QT) {
+            if (QT.message && QT.message.includes("Illegal")) return {
+              language: TT,
+              value: nU(UT),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: Bp.message,
-                index: lp,
-                context: ip.slice(lp - 100, lp + 100),
-                mode: Bp.mode,
-                resultSoFar: Rp
+                message: QT.message,
+                index: yT,
+                context: UT.slice(yT - 100, yT + 100),
+                mode: QT.mode,
+                resultSoFar: JT
               },
-              _emitter: Cp
+              _emitter: wT
             };
-            if (Sp) return {
-              language: pp,
-              value: Yi(ip),
+            if (gT) return {
+              language: TT,
+              value: nU(UT),
               illegal: !1,
               relevance: 0,
-              errorRaised: Bp,
-              _emitter: Cp,
-              _top: qp
+              errorRaised: QT,
+              _emitter: wT,
+              _top: xT
             };
-            throw Bp
+            throw QT
           }
         }
 
-        function Hp(pp, ip) {
-          ip = ip || Dp.languages || Object.keys(Op);
-          const cp = function(pp) {
-              const ip = {
-                value: Yi(pp),
+        function qT(TT, UT) {
+          UT = UT || jT.languages || Object.keys(WT);
+          const mT = function(TT) {
+              const UT = {
+                value: nU(TT),
                 illegal: !1,
                 relevance: 0,
-                _top: Lp,
-                _emitter: new Dp.__emitter(Dp)
+                _top: HT,
+                _emitter: new jT.__emitter(jT)
               };
-              return ip._emitter.addText(pp), ip
-            }(pp),
-            op = ip.filter(kp).filter(Rp).map((ip => tp(ip, pp, !1)));
-          op.unshift(cp);
-          const Ip = op.sort(((pp, ip) => {
-              if (pp.relevance !== ip.relevance) return ip.relevance - pp.relevance;
-              if (pp.language && ip.language) {
-                if (kp(pp.language).supersetOf === ip.language) return 1;
-                if (kp(ip.language).supersetOf === pp.language) return -1
+              return UT._emitter.addText(TT), UT
+            }(TT),
+            zT = UT.filter(eT).filter(JT).map((UT => fT(UT, TT, !1)));
+          zT.unshift(mT);
+          const MT = zT.sort(((TT, UT) => {
+              if (TT.relevance !== UT.relevance) return UT.relevance - TT.relevance;
+              if (TT.language && UT.language) {
+                if (eT(TT.language).supersetOf === UT.language) return 1;
+                if (eT(UT.language).supersetOf === TT.language) return -1
               }
               return 0
             })),
-            [Sp, xp] = Ip,
-            Yp = Sp;
-          return Yp.secondBest = xp, Yp
+            [gT, nT] = MT,
+            kT = gT;
+          return kT.secondBest = nT, kT
         }
 
-        function dp(pp) {
-          let ip = null;
-          const cp = function(pp) {
-            let ip = pp.className + " ";
-            ip += pp.parentNode ? pp.parentNode.className : "";
-            const cp = Dp.languageDetectRe.exec(ip);
-            if (cp) {
-              const ip = kp(cp[1]);
-              return ip || (ii(xp.replace("{}", cp[1])), ii("Falling back to no-highlight mode for this block.", pp)), ip ? cp[1] : "no-highlight"
+        function iT(TT) {
+          let UT = null;
+          const mT = function(TT) {
+            let UT = TT.className + " ";
+            UT += TT.parentNode ? TT.parentNode.className : "";
+            const mT = jT.languageDetectRe.exec(UT);
+            if (mT) {
+              const UT = eT(mT[1]);
+              return UT || (RT(nT.replace("{}", mT[1])), RT("Falling back to no-highlight mode for this block.", TT)), UT ? mT[1] : "no-highlight"
             }
-            return ip.split(/\s+/).find((pp => wp(pp) || kp(pp)))
-          }(pp);
-          if (wp(cp)) return;
-          if (qp("before:highlightElement", {
-              el: pp,
-              language: cp
-            }), pp.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", pp);
-          if (pp.children.length > 0 && (Dp.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(pp)), Dp.throwUnescapedHTML)) {
-            throw new Li("One of your code blocks includes unescaped HTML.", pp.innerHTML)
+            return UT.split(/\s+/).find((TT => cT(TT) || eT(TT)))
+          }(TT);
+          if (cT(mT)) return;
+          if (xT("before:highlightElement", {
+              el: TT,
+              language: mT
+            }), TT.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", TT);
+          if (TT.children.length > 0 && (jT.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(TT)), jT.throwUnescapedHTML)) {
+            throw new gU("One of your code blocks includes unescaped HTML.", TT.innerHTML)
           }
-          ip = pp;
-          const Op = ip.textContent,
-            Ip = cp ? vp(Op, {
-              language: cp,
+          UT = TT;
+          const WT = UT.textContent,
+            MT = mT ? vT(WT, {
+              language: mT,
               ignoreIllegals: !0
-            }) : Hp(Op);
-          pp.innerHTML = Ip.value, pp.dataset.highlighted = "yes",
-            function(pp, ip, cp) {
-              const Op = ip && op[ip] || cp;
-              pp.classList.add("hljs"), pp.classList.add(`language-${Op}`)
-            }(pp, cp, Ip.language), pp.result = {
-              language: Ip.language,
-              re: Ip.relevance,
-              relevance: Ip.relevance
-            }, Ip.secondBest && (pp.secondBest = {
-              language: Ip.secondBest.language,
-              relevance: Ip.secondBest.relevance
-            }), qp("after:highlightElement", {
-              el: pp,
-              result: Ip,
-              text: Op
+            }) : qT(WT);
+          TT.innerHTML = MT.value, TT.dataset.highlighted = "yes",
+            function(TT, UT, mT) {
+              const WT = UT && zT[UT] || mT;
+              TT.classList.add("hljs"), TT.classList.add(`language-${WT}`)
+            }(TT, mT, MT.language), TT.result = {
+              language: MT.language,
+              re: MT.relevance,
+              relevance: MT.relevance
+            }, MT.secondBest && (TT.secondBest = {
+              language: MT.secondBest.language,
+              relevance: MT.secondBest.relevance
+            }), xT("after:highlightElement", {
+              el: TT,
+              result: MT,
+              text: WT
             })
         }
-        let ep = !1;
+        let bT = !1;
 
-        function jp() {
-          if ("loading" === document.readyState) return ep || window.addEventListener("DOMContentLoaded", (function() {
-            jp()
-          }), !1), void(ep = !0);
-          document.querySelectorAll(Dp.cssSelector).forEach(dp)
+        function OT() {
+          if ("loading" === document.readyState) return bT || window.addEventListener("DOMContentLoaded", (function() {
+            OT()
+          }), !1), void(bT = !0);
+          document.querySelectorAll(jT.cssSelector).forEach(iT)
         }
 
-        function kp(pp) {
-          return pp = (pp || "").toLowerCase(), Op[pp] || Op[op[pp]]
+        function eT(TT) {
+          return TT = (TT || "").toLowerCase(), WT[TT] || WT[zT[TT]]
         }
 
-        function mp(pp, ip) {
+        function YT(TT, UT) {
           let {
-            languageName: cp
-          } = ip;
-          "string" === typeof pp && (pp = [pp]), pp.forEach((pp => {
-            op[pp.toLowerCase()] = cp
+            languageName: mT
+          } = UT;
+          "string" === typeof TT && (TT = [TT]), TT.forEach((TT => {
+            zT[TT.toLowerCase()] = mT
           }))
         }
 
-        function Rp(pp) {
-          const ip = kp(pp);
-          return ip && !ip.disableAutodetect
+        function JT(TT) {
+          const UT = eT(TT);
+          return UT && !UT.disableAutodetect
         }
 
-        function qp(pp, ip) {
-          const cp = pp;
-          Ip.forEach((function(pp) {
-            pp[cp] && pp[cp](ip)
+        function xT(TT, UT) {
+          const mT = TT;
+          MT.forEach((function(TT) {
+            TT[mT] && TT[mT](UT)
           }))
         }
-        Object.assign(pp, {
-          highlight: vp,
-          highlightAuto: Hp,
-          highlightAll: jp,
-          highlightElement: dp,
-          highlightBlock: function(pp) {
-            return ci("10.7.0", "highlightBlock will be removed entirely in v12.0"), ci("10.7.0", "Please use highlightElement now."), dp(pp)
+        Object.assign(TT, {
+          highlight: vT,
+          highlightAuto: qT,
+          highlightAll: OT,
+          highlightElement: iT,
+          highlightBlock: function(TT) {
+            return TU("10.7.0", "highlightBlock will be removed entirely in v12.0"), TU("10.7.0", "Please use highlightElement now."), iT(TT)
           },
-          configure: function(pp) {
-            Dp = Di(Dp, pp)
+          configure: function(TT) {
+            jT = HU(jT, TT)
           },
           initHighlighting: () => {
-            jp(), ci("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            OT(), TU("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            jp(), ci("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            OT(), TU("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(ip, cp) {
-            let op = null;
+          registerLanguage: function(UT, mT) {
+            let zT = null;
             try {
-              op = cp(pp)
-            } catch (Ip) {
-              if (Vp("Language definition for '{}' could not be registered.".replace("{}", ip)), !Sp) throw Ip;
-              Vp(Ip), op = Lp
+              zT = mT(TT)
+            } catch (MT) {
+              if (AT("Language definition for '{}' could not be registered.".replace("{}", UT)), !gT) throw MT;
+              AT(MT), zT = HT
             }
-            op.name || (op.name = ip), Op[ip] = op, op.rawDefinition = cp.bind(null, pp), op.aliases && mp(op.aliases, {
-              languageName: ip
+            zT.name || (zT.name = UT), WT[UT] = zT, zT.rawDefinition = mT.bind(null, TT), zT.aliases && YT(zT.aliases, {
+              languageName: UT
             })
           },
-          unregisterLanguage: function(pp) {
-            delete Op[pp];
-            for (const ip of Object.keys(op)) op[ip] === pp && delete op[ip]
+          unregisterLanguage: function(TT) {
+            delete WT[TT];
+            for (const UT of Object.keys(zT)) zT[UT] === TT && delete zT[UT]
           },
           listLanguages: function() {
-            return Object.keys(Op)
+            return Object.keys(WT)
           },
-          getLanguage: kp,
-          registerAliases: mp,
-          autoDetection: Rp,
-          inherit: Di,
-          addPlugin: function(pp) {
-            ! function(pp) {
-              pp["before:highlightBlock"] && !pp["before:highlightElement"] && (pp["before:highlightElement"] = ip => {
-                pp["before:highlightBlock"](Object.assign({
-                  block: ip.el
-                }, ip))
-              }), pp["after:highlightBlock"] && !pp["after:highlightElement"] && (pp["after:highlightElement"] = ip => {
-                pp["after:highlightBlock"](Object.assign({
-                  block: ip.el
-                }, ip))
+          getLanguage: eT,
+          registerAliases: YT,
+          autoDetection: JT,
+          inherit: HU,
+          addPlugin: function(TT) {
+            ! function(TT) {
+              TT["before:highlightBlock"] && !TT["before:highlightElement"] && (TT["before:highlightElement"] = UT => {
+                TT["before:highlightBlock"](Object.assign({
+                  block: UT.el
+                }, UT))
+              }), TT["after:highlightBlock"] && !TT["after:highlightElement"] && (TT["after:highlightElement"] = UT => {
+                TT["after:highlightBlock"](Object.assign({
+                  block: UT.el
+                }, UT))
               })
-            }(pp), Ip.push(pp)
+            }(TT), MT.push(TT)
           },
-          removePlugin: function(pp) {
-            const ip = Ip.indexOf(pp); - 1 !== ip && Ip.splice(ip, 1)
+          removePlugin: function(TT) {
+            const UT = MT.indexOf(TT); - 1 !== UT && MT.splice(UT, 1)
           }
-        }), pp.debugMode = function() {
-          Sp = !1
-        }, pp.safeMode = function() {
-          Sp = !0
-        }, pp.versionString = "11.11.1", pp.regex = {
-          concat: yp,
-          lookahead: Ap,
-          either: Up,
-          optional: Wp,
-          anyNumberOfTimes: Pp
+        }), TT.debugMode = function() {
+          gT = !1
+        }, TT.safeMode = function() {
+          gT = !0
+        }, TT.versionString = "11.11.1", TT.regex = {
+          concat: BT,
+          lookahead: lT,
+          either: ZT,
+          optional: pT,
+          anyNumberOfTimes: LT
         };
-        for (const cp in bp) "object" === typeof bp[cp] && ip(bp[cp]);
-        return Object.assign(pp, bp), pp
+        for (const mT in VT) "object" === typeof VT[mT] && UT(VT[mT]);
+        return Object.assign(TT, VT), TT
       },
-      Wi = Pi({});
-    Wi.newInstance = () => Pi({}), pp.exports = Wi, Wi.HighlightJS = Wi, Wi.default = Wi
+      lU = jU({});
+    lU.newInstance = () => jU({}), TT.exports = lU, lU.HighlightJS = lU, lU.default = lU
   },
-  4819: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op
+  4808: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT
     });
-    const Op = cp(4824)
+    const WT = mT(4816)
   },
-  4831: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ap
+  4825: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => lT
     });
-    const Op = "[A-Za-z$_][0-9A-Za-z$_]*",
-      op = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      Ip = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      Sp = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      xp = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      Lp = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Yp = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Dp = [].concat(Lp, Sp, xp);
+    const WT = "[A-Za-z$_][0-9A-Za-z$_]*",
+      zT = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      MT = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      gT = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      nT = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      HT = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      kT = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      jT = [].concat(HT, gT, nT);
 
-    function Ap(pp) {
-      const ip = pp.regex,
-        cp = Op,
-        Ap = "<>",
-        Pp = "</>",
-        Wp = {
-          mW: /<[A-Za-z0-9\\._:-]+/,
+    function lT(TT) {
+      const UT = TT.regex,
+        mT = WT,
+        lT = "<>",
+        LT = "</>",
+        pT = {
+          np: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (pp, ip) => {
-            const cp = pp[0].length + pp.index,
-              Op = pp.input[cp];
-            if ("<" === Op || "," === Op) return void ip.ignoreMatch();
-            let op;
-            ">" === Op && (((pp, ip) => {
+          isTrulyOpeningTag: (TT, UT) => {
+            const mT = TT[0].length + TT.index,
+              WT = TT.input[mT];
+            if ("<" === WT || "," === WT) return void UT.ignoreMatch();
+            let zT;
+            ">" === WT && (((TT, UT) => {
               let {
-                after: cp
-              } = ip;
-              const Op = "</" + pp[0].slice(1);
-              return -1 !== pp.input.indexOf(Op, cp)
-            })(pp, {
-              after: cp
-            }) || ip.ignoreMatch());
-            const Ip = pp.input.substring(cp);
-            ((op = Ip.match(/^\s*=/)) || (op = Ip.match(/^\s+extends\s+/)) && 0 === op.index) && ip.ignoreMatch()
+                after: mT
+              } = UT;
+              const WT = "</" + TT[0].slice(1);
+              return -1 !== TT.input.indexOf(WT, mT)
+            })(TT, {
+              after: mT
+            }) || UT.ignoreMatch());
+            const MT = TT.input.substring(mT);
+            ((zT = MT.match(/^\s*=/)) || (zT = MT.match(/^\s+extends\s+/)) && 0 === zT.index) && UT.ignoreMatch()
           }
         },
-        yp = {
-          $pattern: Op,
-          keyword: op,
-          literal: Ip,
-          built_in: Dp,
-          "variable.language": Yp
+        BT = {
+          $pattern: WT,
+          keyword: zT,
+          literal: MT,
+          built_in: jT,
+          "variable.language": kT
         },
-        Up = "[0-9](_?[0-9])*",
-        wp = `\\.(${Up})`,
-        vp = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        tp = {
+        ZT = "[0-9](_?[0-9])*",
+        cT = `\\.(${ZT})`,
+        vT = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        fT = {
           className: "number",
           variants: [{
-            mW: `(\\b(${vp})((${wp})|\\.)?|(${wp}))[eE][+-]?(${Up})\\b`
+            np: `(\\b(${vT})((${cT})|\\.)?|(${cT}))[eE][+-]?(${ZT})\\b`
           }, {
-            mW: `\\b(${vp})\\b((${wp})\\b|\\.)?|(${wp})\\b`
+            np: `\\b(${vT})\\b((${cT})\\b|\\.)?|(${cT})\\b`
           }, {
-            mW: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            np: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            mW: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            np: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            mW: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            np: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            mW: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            np: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            mW: "\\b0[0-7]+n?\\b"
+            np: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        Hp = {
+        qT = {
           className: "subst",
-          mW: "\\$\\{",
+          np: "\\$\\{",
           end: "\\}",
-          keywords: yp,
+          keywords: BT,
           contains: []
         },
-        dp = {
-          mW: ".?html`",
+        iT = {
+          np: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            contains: [TT.BACKSLASH_ESCAPE, qT],
             subLanguage: "xml"
           }
         },
-        ep = {
-          mW: ".?css`",
+        bT = {
+          np: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            contains: [TT.BACKSLASH_ESCAPE, qT],
             subLanguage: "css"
           }
         },
-        jp = {
-          mW: ".?gql`",
+        OT = {
+          np: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            contains: [TT.BACKSLASH_ESCAPE, qT],
             subLanguage: "graphql"
           }
         },
-        kp = {
+        eT = {
           className: "string",
-          mW: "`",
+          np: "`",
           end: "`",
-          contains: [pp.BACKSLASH_ESCAPE, Hp]
+          contains: [TT.BACKSLASH_ESCAPE, qT]
         },
-        mp = {
+        YT = {
           className: "comment",
-          variants: [pp.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [TT.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              mW: "(?=@[A-Za-z]+)",
+              np: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                mW: "@[A-Za-z]+"
+                np: "@[A-Za-z]+"
               }, {
                 className: "type",
-                mW: "\\{",
+                np: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                mW: cp + "(?=\\s*(-)|$)",
+                np: mT + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                mW: /(?=[^\n])\s/,
+                np: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), pp.C_BLOCK_COMMENT_MODE, pp.C_LINE_COMMENT_MODE]
+          }), TT.C_BLOCK_COMMENT_MODE, TT.C_LINE_COMMENT_MODE]
         },
-        Rp = [pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, {
+        JT = [TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, {
           match: /\$\d+/
-        }, tp];
-      Hp.contains = Rp.concat({
-        mW: /\{/,
+        }, fT];
+      qT.contains = JT.concat({
+        np: /\{/,
         end: /\}/,
-        keywords: yp,
-        contains: ["self"].concat(Rp)
+        keywords: BT,
+        contains: ["self"].concat(JT)
       });
-      const qp = [].concat(mp, Hp.contains),
-        Mp = qp.concat([{
-          mW: /(\s*)\(/,
+      const xT = [].concat(YT, qT.contains),
+        dT = xT.concat([{
+          np: /(\s*)\(/,
           end: /\)/,
-          keywords: yp,
-          contains: ["self"].concat(qp)
+          keywords: BT,
+          contains: ["self"].concat(xT)
         }]),
-        Cp = {
+        wT = {
           className: "params",
-          mW: /(\s*)\(/,
+          np: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: yp,
-          contains: Mp
+          keywords: BT,
+          contains: dT
         },
-        Ep = {
+        tT = {
           variants: [{
-            match: [/class/, /\s+/, cp, /\s+/, /extends/, /\s+/, ip.concat(cp, "(", ip.concat(/\./, cp), ")*")],
+            match: [/class/, /\s+/, mT, /\s+/, /extends/, /\s+/, UT.concat(mT, "(", UT.concat(/\./, mT), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, cp],
+            match: [/class/, /\s+/, mT],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        Xp = {
+        aT = {
           relevance: 0,
-          match: ip.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: UT.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...Sp, ...xp]
+            _: [...gT, ...nT]
           }
         },
-        lp = {
+        yT = {
           variants: [{
-            match: [/function/, /\s+/, cp, /(?=\s*\()/]
+            match: [/function/, /\s+/, mT, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [Cp],
+          contains: [wT],
           illegal: /%/
         };
-      const Qp = {
-        match: ip.concat(/\b/, (Jp = [...Lp, "super", "import"].map((pp => `${pp}\\s*\\(`)), ip.concat("(?!", Jp.join("|"), ")")), cp, ip.lookahead(/\s*\(/)),
+      const XT = {
+        match: UT.concat(/\b/, (IT = [...HT, "super", "import"].map((TT => `${TT}\\s*\\(`)), UT.concat("(?!", IT.join("|"), ")")), mT, UT.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Jp;
-      const Bp = {
-          mW: ip.concat(/\./, ip.lookahead(ip.concat(cp, /(?![0-9A-Za-z$_(])/))),
-          end: cp,
+      var IT;
+      const QT = {
+          np: UT.concat(/\./, UT.lookahead(UT.concat(mT, /(?![0-9A-Za-z$_(])/))),
+          end: mT,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        Np = {
-          match: [/get|set/, /\s+/, cp, /(?=\()/],
+        sT = {
+          match: [/get|set/, /\s+/, mT, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            mW: /\(\)/
-          }, Cp]
+            np: /\(\)/
+          }, wT]
         },
-        Tp = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + pp.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        fp = {
-          match: [/const|var|let/, /\s+/, cp, /\s*/, /=\s*/, /(async\s*)?/, ip.lookahead(Tp)],
+        FT = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + TT.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        PT = {
+          match: [/const|var|let/, /\s+/, mT, /\s*/, /=\s*/, /(async\s*)?/, UT.lookahead(FT)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [Cp]
+          contains: [wT]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: yp,
+        keywords: BT,
         exports: {
-          PARAMS_CONTAINS: Mp,
-          CLASS_REFERENCE: Xp
+          PARAMS_CONTAINS: dT,
+          CLASS_REFERENCE: aT
         },
         illegal: /#(?![$_A-z])/,
-        contains: [pp.SHEBANG({
+        contains: [TT.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          mW: /^\s*['"]use (strict|asm)['"]/
-        }, pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, mp, {
+          np: /^\s*['"]use (strict|asm)['"]/
+        }, TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, YT, {
           match: /\$\d+/
-        }, tp, Xp, {
+        }, fT, aT, {
           scope: "attr",
-          match: cp + ip.lookahead(":"),
+          match: mT + UT.lookahead(":"),
           relevance: 0
-        }, fp, {
-          mW: "(" + pp.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, PT, {
+          np: "(" + TT.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [mp, pp.REGEXP_MODE, {
+          contains: [YT, TT.REGEXP_MODE, {
             className: "function",
-            mW: Tp,
+            np: FT,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                mW: pp.UNDERSCORE_IDENT_RE,
+                np: TT.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                mW: /\(\s*\)/,
+                np: /\(\s*\)/,
                 skip: !0
               }, {
-                mW: /(\s*)\(/,
+                np: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: yp,
-                contains: Mp
+                keywords: BT,
+                contains: dT
               }]
             }]
           }, {
-            mW: /,/,
+            np: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              mW: Ap,
-              end: Pp
+              np: lT,
+              end: LT
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              mW: Wp.mW,
-              "on:begin": Wp.isTrulyOpeningTag,
-              end: Wp.end
+              np: pT.np,
+              "on:begin": pT.isTrulyOpeningTag,
+              end: pT.end
             }],
             subLanguage: "xml",
             contains: [{
-              mW: Wp.mW,
-              end: Wp.end,
+              np: pT.np,
+              end: pT.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, lp, {
+        }, yT, {
           beginKeywords: "while if switch catch for"
         }, {
-          mW: "\\b(?!function)" + pp.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          np: "\\b(?!function)" + TT.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [Cp, pp.inherit(pp.TITLE_MODE, {
-            mW: cp,
+          contains: [wT, TT.inherit(TT.TITLE_MODE, {
+            np: mT,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, Bp, {
-          match: "\\$" + cp,
+        }, QT, {
+          match: "\\$" + mT,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [Cp]
-        }, Qp, {
+          contains: [wT]
+        }, XT, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, Ep, Np, {
+        }, tT, sT, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4838: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Pp
+  4833: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => LT
     });
-    const Op = "[A-Za-z$_][0-9A-Za-z$_]*",
-      op = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      Ip = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      Sp = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      xp = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      Lp = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Yp = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Dp = [].concat(Lp, Sp, xp);
+    const WT = "[A-Za-z$_][0-9A-Za-z$_]*",
+      zT = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      MT = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      gT = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      nT = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      HT = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      kT = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      jT = [].concat(HT, gT, nT);
 
-    function Ap(pp) {
-      const ip = pp.regex,
-        cp = Op,
-        Ap = "<>",
-        Pp = "</>",
-        Wp = {
-          mW: /<[A-Za-z0-9\\._:-]+/,
+    function lT(TT) {
+      const UT = TT.regex,
+        mT = WT,
+        lT = "<>",
+        LT = "</>",
+        pT = {
+          np: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (pp, ip) => {
-            const cp = pp[0].length + pp.index,
-              Op = pp.input[cp];
-            if ("<" === Op || "," === Op) return void ip.ignoreMatch();
-            let op;
-            ">" === Op && (((pp, ip) => {
+          isTrulyOpeningTag: (TT, UT) => {
+            const mT = TT[0].length + TT.index,
+              WT = TT.input[mT];
+            if ("<" === WT || "," === WT) return void UT.ignoreMatch();
+            let zT;
+            ">" === WT && (((TT, UT) => {
               let {
-                after: cp
-              } = ip;
-              const Op = "</" + pp[0].slice(1);
-              return -1 !== pp.input.indexOf(Op, cp)
-            })(pp, {
-              after: cp
-            }) || ip.ignoreMatch());
-            const Ip = pp.input.substring(cp);
-            ((op = Ip.match(/^\s*=/)) || (op = Ip.match(/^\s+extends\s+/)) && 0 === op.index) && ip.ignoreMatch()
+                after: mT
+              } = UT;
+              const WT = "</" + TT[0].slice(1);
+              return -1 !== TT.input.indexOf(WT, mT)
+            })(TT, {
+              after: mT
+            }) || UT.ignoreMatch());
+            const MT = TT.input.substring(mT);
+            ((zT = MT.match(/^\s*=/)) || (zT = MT.match(/^\s+extends\s+/)) && 0 === zT.index) && UT.ignoreMatch()
           }
         },
-        yp = {
-          $pattern: Op,
-          keyword: op,
-          literal: Ip,
-          built_in: Dp,
-          "variable.language": Yp
+        BT = {
+          $pattern: WT,
+          keyword: zT,
+          literal: MT,
+          built_in: jT,
+          "variable.language": kT
         },
-        Up = "[0-9](_?[0-9])*",
-        wp = `\\.(${Up})`,
-        vp = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        tp = {
+        ZT = "[0-9](_?[0-9])*",
+        cT = `\\.(${ZT})`,
+        vT = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        fT = {
           className: "number",
           variants: [{
-            mW: `(\\b(${vp})((${wp})|\\.)?|(${wp}))[eE][+-]?(${Up})\\b`
+            np: `(\\b(${vT})((${cT})|\\.)?|(${cT}))[eE][+-]?(${ZT})\\b`
           }, {
-            mW: `\\b(${vp})\\b((${wp})\\b|\\.)?|(${wp})\\b`
+            np: `\\b(${vT})\\b((${cT})\\b|\\.)?|(${cT})\\b`
           }, {
-            mW: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            np: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            mW: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            np: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            mW: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            np: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            mW: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            np: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            mW: "\\b0[0-7]+n?\\b"
+            np: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        Hp = {
+        qT = {
           className: "subst",
-          mW: "\\$\\{",
+          np: "\\$\\{",
           end: "\\}",
-          keywords: yp,
+          keywords: BT,
           contains: []
         },
-        dp = {
-          mW: ".?html`",
+        iT = {
+          np: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            contains: [TT.BACKSLASH_ESCAPE, qT],
             subLanguage: "xml"
           }
         },
-        ep = {
-          mW: ".?css`",
+        bT = {
+          np: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            contains: [TT.BACKSLASH_ESCAPE, qT],
             subLanguage: "css"
           }
         },
-        jp = {
-          mW: ".?gql`",
+        OT = {
+          np: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            contains: [TT.BACKSLASH_ESCAPE, qT],
             subLanguage: "graphql"
           }
         },
-        kp = {
+        eT = {
           className: "string",
-          mW: "`",
+          np: "`",
           end: "`",
-          contains: [pp.BACKSLASH_ESCAPE, Hp]
+          contains: [TT.BACKSLASH_ESCAPE, qT]
         },
-        mp = {
+        YT = {
           className: "comment",
-          variants: [pp.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [TT.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              mW: "(?=@[A-Za-z]+)",
+              np: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                mW: "@[A-Za-z]+"
+                np: "@[A-Za-z]+"
               }, {
                 className: "type",
-                mW: "\\{",
+                np: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                mW: cp + "(?=\\s*(-)|$)",
+                np: mT + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                mW: /(?=[^\n])\s/,
+                np: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), pp.C_BLOCK_COMMENT_MODE, pp.C_LINE_COMMENT_MODE]
+          }), TT.C_BLOCK_COMMENT_MODE, TT.C_LINE_COMMENT_MODE]
         },
-        Rp = [pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, {
+        JT = [TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, {
           match: /\$\d+/
-        }, tp];
-      Hp.contains = Rp.concat({
-        mW: /\{/,
+        }, fT];
+      qT.contains = JT.concat({
+        np: /\{/,
         end: /\}/,
-        keywords: yp,
-        contains: ["self"].concat(Rp)
+        keywords: BT,
+        contains: ["self"].concat(JT)
       });
-      const qp = [].concat(mp, Hp.contains),
-        Mp = qp.concat([{
-          mW: /(\s*)\(/,
+      const xT = [].concat(YT, qT.contains),
+        dT = xT.concat([{
+          np: /(\s*)\(/,
           end: /\)/,
-          keywords: yp,
-          contains: ["self"].concat(qp)
+          keywords: BT,
+          contains: ["self"].concat(xT)
         }]),
-        Cp = {
+        wT = {
           className: "params",
-          mW: /(\s*)\(/,
+          np: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: yp,
-          contains: Mp
+          keywords: BT,
+          contains: dT
         },
-        Ep = {
+        tT = {
           variants: [{
-            match: [/class/, /\s+/, cp, /\s+/, /extends/, /\s+/, ip.concat(cp, "(", ip.concat(/\./, cp), ")*")],
+            match: [/class/, /\s+/, mT, /\s+/, /extends/, /\s+/, UT.concat(mT, "(", UT.concat(/\./, mT), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, cp],
+            match: [/class/, /\s+/, mT],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        Xp = {
+        aT = {
           relevance: 0,
-          match: ip.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: UT.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...Sp, ...xp]
+            _: [...gT, ...nT]
           }
         },
-        lp = {
+        yT = {
           variants: [{
-            match: [/function/, /\s+/, cp, /(?=\s*\()/]
+            match: [/function/, /\s+/, mT, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [Cp],
+          contains: [wT],
           illegal: /%/
         };
-      const Qp = {
-        match: ip.concat(/\b/, (Jp = [...Lp, "super", "import"].map((pp => `${pp}\\s*\\(`)), ip.concat("(?!", Jp.join("|"), ")")), cp, ip.lookahead(/\s*\(/)),
+      const XT = {
+        match: UT.concat(/\b/, (IT = [...HT, "super", "import"].map((TT => `${TT}\\s*\\(`)), UT.concat("(?!", IT.join("|"), ")")), mT, UT.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Jp;
-      const Bp = {
-          mW: ip.concat(/\./, ip.lookahead(ip.concat(cp, /(?![0-9A-Za-z$_(])/))),
-          end: cp,
+      var IT;
+      const QT = {
+          np: UT.concat(/\./, UT.lookahead(UT.concat(mT, /(?![0-9A-Za-z$_(])/))),
+          end: mT,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        Np = {
-          match: [/get|set/, /\s+/, cp, /(?=\()/],
+        sT = {
+          match: [/get|set/, /\s+/, mT, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            mW: /\(\)/
-          }, Cp]
+            np: /\(\)/
+          }, wT]
         },
-        Tp = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + pp.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        fp = {
-          match: [/const|var|let/, /\s+/, cp, /\s*/, /=\s*/, /(async\s*)?/, ip.lookahead(Tp)],
+        FT = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + TT.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        PT = {
+          match: [/const|var|let/, /\s+/, mT, /\s*/, /=\s*/, /(async\s*)?/, UT.lookahead(FT)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [Cp]
+          contains: [wT]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: yp,
+        keywords: BT,
         exports: {
-          PARAMS_CONTAINS: Mp,
-          CLASS_REFERENCE: Xp
+          PARAMS_CONTAINS: dT,
+          CLASS_REFERENCE: aT
         },
         illegal: /#(?![$_A-z])/,
-        contains: [pp.SHEBANG({
+        contains: [TT.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          mW: /^\s*['"]use (strict|asm)['"]/
-        }, pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, mp, {
+          np: /^\s*['"]use (strict|asm)['"]/
+        }, TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, YT, {
           match: /\$\d+/
-        }, tp, Xp, {
+        }, fT, aT, {
           scope: "attr",
-          match: cp + ip.lookahead(":"),
+          match: mT + UT.lookahead(":"),
           relevance: 0
-        }, fp, {
-          mW: "(" + pp.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, PT, {
+          np: "(" + TT.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [mp, pp.REGEXP_MODE, {
+          contains: [YT, TT.REGEXP_MODE, {
             className: "function",
-            mW: Tp,
+            np: FT,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                mW: pp.UNDERSCORE_IDENT_RE,
+                np: TT.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                mW: /\(\s*\)/,
+                np: /\(\s*\)/,
                 skip: !0
               }, {
-                mW: /(\s*)\(/,
+                np: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: yp,
-                contains: Mp
+                keywords: BT,
+                contains: dT
               }]
             }]
           }, {
-            mW: /,/,
+            np: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              mW: Ap,
-              end: Pp
+              np: lT,
+              end: LT
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              mW: Wp.mW,
-              "on:begin": Wp.isTrulyOpeningTag,
-              end: Wp.end
+              np: pT.np,
+              "on:begin": pT.isTrulyOpeningTag,
+              end: pT.end
             }],
             subLanguage: "xml",
             contains: [{
-              mW: Wp.mW,
-              end: Wp.end,
+              np: pT.np,
+              end: pT.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, lp, {
+        }, yT, {
           beginKeywords: "while if switch catch for"
         }, {
-          mW: "\\b(?!function)" + pp.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          np: "\\b(?!function)" + TT.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [Cp, pp.inherit(pp.TITLE_MODE, {
-            mW: cp,
+          contains: [wT, TT.inherit(TT.TITLE_MODE, {
+            np: mT,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, Bp, {
-          match: "\\$" + cp,
+        }, QT, {
+          match: "\\$" + mT,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [Cp]
-        }, Qp, {
+          contains: [wT]
+        }, XT, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, Ep, Np, {
+        }, tT, sT, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function Pp(pp) {
-      const ip = pp.regex,
-        cp = Ap(pp),
-        Sp = Op,
-        xp = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        Lp = {
-          mW: [/namespace/, /\s+/, pp.IDENT_RE],
+    function LT(TT) {
+      const UT = TT.regex,
+        mT = lT(TT),
+        gT = WT,
+        nT = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        HT = {
+          np: [/namespace/, /\s+/, TT.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        Pp = {
+        LT = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: xp
+            built_in: nT
           },
-          contains: [cp.exports.CLASS_REFERENCE]
+          contains: [mT.exports.CLASS_REFERENCE]
         },
-        Wp = {
-          $pattern: Op,
-          keyword: op.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: Ip,
-          built_in: Dp.concat(xp),
-          "variable.language": Yp
+        pT = {
+          $pattern: WT,
+          keyword: zT.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: MT,
+          built_in: jT.concat(nT),
+          "variable.language": kT
         },
-        yp = {
+        BT = {
           className: "meta",
-          mW: "@" + Sp
+          np: "@" + gT
         },
-        Up = (pp, ip, cp) => {
-          const Op = pp.contains.findIndex((pp => pp.label === ip));
-          if (-1 === Op) throw new Error("can not find mode to replace");
-          pp.contains.splice(Op, 1, cp)
+        ZT = (TT, UT, mT) => {
+          const WT = TT.contains.findIndex((TT => TT.label === UT));
+          if (-1 === WT) throw new Error("can not find mode to replace");
+          TT.contains.splice(WT, 1, mT)
         };
-      Object.assign(cp.keywords, Wp), cp.exports.PARAMS_CONTAINS.push(yp);
-      const wp = cp.contains.find((pp => "attr" === pp.scope)),
-        vp = Object.assign({}, wp, {
-          match: ip.concat(Sp, ip.lookahead(/\s*\?:/))
+      Object.assign(mT.keywords, pT), mT.exports.PARAMS_CONTAINS.push(BT);
+      const cT = mT.contains.find((TT => "attr" === TT.scope)),
+        vT = Object.assign({}, cT, {
+          match: UT.concat(gT, UT.lookahead(/\s*\?:/))
         });
-      cp.exports.PARAMS_CONTAINS.push([cp.exports.CLASS_REFERENCE, wp, vp]), cp.contains = cp.contains.concat([yp, Lp, Pp, vp]), Up(cp, "shebang", pp.SHEBANG()), Up(cp, "use_strict", {
+      mT.exports.PARAMS_CONTAINS.push([mT.exports.CLASS_REFERENCE, cT, vT]), mT.contains = mT.contains.concat([BT, HT, LT, vT]), ZT(mT, "shebang", TT.SHEBANG()), ZT(mT, "use_strict", {
         className: "meta",
         relevance: 10,
-        mW: /^\s*['"]use strict['"]/
+        np: /^\s*['"]use strict['"]/
       });
-      return cp.contains.find((pp => "func.def" === pp.label)).relevance = 0, Object.assign(cp, {
+      return mT.contains.find((TT => "func.def" === TT.label)).relevance = 0, Object.assign(mT, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), cp
+      }), mT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

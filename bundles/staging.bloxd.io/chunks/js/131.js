@@ -1,40 +1,40 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41287: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      ShaderPackCategory: () => lp
+  41213: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      ShaderPackCategory: () => yT
     });
-    var Op = cp(62),
-      op = cp(1543),
-      Ip = cp(1480),
-      Sp = cp(1538),
-      xp = cp(1201),
-      Lp = cp(104),
-      Yp = cp(25),
-      Dp = cp(1650),
-      Ap = cp(6758),
-      Pp = cp(314),
-      Wp = cp(6798),
-      yp = cp(6792),
-      Up = cp(6804),
-      wp = cp(6698),
-      vp = cp(5113),
-      tp = cp(5156),
-      Hp = cp(6752),
-      dp = cp(3572);
+    var WT = mT(63),
+      zT = mT(1641),
+      MT = mT(1569),
+      gT = mT(1633),
+      nT = mT(1288),
+      HT = mT(102),
+      kT = mT(25),
+      jT = mT(1752),
+      lT = mT(6682),
+      LT = mT(340),
+      pT = mT(6719),
+      BT = mT(6716),
+      ZT = mT(6723),
+      cT = mT(6623),
+      vT = mT(5090),
+      fT = mT(5136),
+      qT = mT(6680),
+      iT = mT(3559);
 
-    function ep(pp, ip) {
-      const cp = (0, Wp.storedPackOutcome)(pp, ip);
-      return "none" !== cp.kind || "noCompiler" === cp.reason
+    function bT(TT, UT) {
+      const mT = (0, pT.storedPackOutcome)(TT, UT);
+      return "none" !== mT.kind || "noCompiler" === mT.reason
     }
-    var jp = cp(1049),
-      kp = cp.n(jp),
-      mp = cp(5159),
-      Rp = cp(1060),
-      qp = cp(6750),
-      Mp = cp(1112);
-    const Cp = {
+    var OT = mT(1126),
+      eT = mT.n(OT),
+      YT = mT(5139),
+      JT = mT(1135),
+      xT = mT(6674),
+      dT = mT(1188);
+    const wT = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function Ep(pp, ip) {
-      return "failedRecheck" === pp && ip.listing ? "shaderPack:statusFailedRecheckListed" : Cp[pp]
+    function tT(TT, UT) {
+      return "failedRecheck" === TT && UT.listing ? "shaderPack:statusFailedRecheckListed" : wT[TT]
     }
 
-    function Xp(pp) {
+    function aT(TT) {
       let {
-        stored: ip,
-        checking: cp,
-        webGpuUsable: Op,
-        changePending: op,
-        compiler: Ip,
-        t: Sp
-      } = pp;
-      const xp = function(pp, ip, cp, Op, op) {
-          const Ip = (0, Wp.storedPackOutcome)(pp, op);
-          return "none" === Ip.kind ? "noCompiler" === Ip.reason ? ip ? "checking" : "noCompiler" : "otherApiVersion" === Ip.reason ? "wrongApiVersion" : "failed" : (0, dp.e)() ? "harnessBuild" : "blocked" === Ip.kind ? (0, Wp.shaderPackNeedsCheck)(pp, op) ? ip ? "checking" : !1 === cp ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === cp ? "offNoWebGpu" : Op ? "readyAfterReload" : "ready"
-        }(ip, cp, Op, op, Ip),
-        Lp = "failed" === xp || "failedRecheck" === xp,
-        Yp = Lp || "wrongApiVersion" === xp || "noCompiler" === xp,
-        Dp = "ready" === xp || "readyAfterReload" === xp ? ip.validation.offInStrict : [];
-      return (0, Mp.jsxs)(Mp.Fragment, {
-        children: [(0, Mp.jsxs)("div", {
-          className: kp()("ShaderPackStatus", {
-            Ready: "ready" === xp,
-            Failed: Yp
+        stored: UT,
+        checking: mT,
+        webGpuUsable: WT,
+        changePending: zT,
+        compiler: MT,
+        t: gT
+      } = TT;
+      const nT = function(TT, UT, mT, WT, zT) {
+          const MT = (0, pT.storedPackOutcome)(TT, zT);
+          return "none" === MT.kind ? "noCompiler" === MT.reason ? UT ? "checking" : "noCompiler" : "otherApiVersion" === MT.reason ? "wrongApiVersion" : "failed" : (0, iT.c)() ? "harnessBuild" : "blocked" === MT.kind ? (0, pT.shaderPackNeedsCheck)(TT, zT) ? UT ? "checking" : !1 === mT ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === mT ? "offNoWebGpu" : WT ? "readyAfterReload" : "ready"
+        }(UT, mT, WT, zT, MT),
+        HT = "failed" === nT || "failedRecheck" === nT,
+        kT = HT || "wrongApiVersion" === nT || "noCompiler" === nT,
+        jT = "ready" === nT || "readyAfterReload" === nT ? UT.validation.offInStrict : [];
+      return (0, dT.jsxs)(dT.Fragment, {
+        children: [(0, dT.jsxs)("div", {
+          className: eT()("ShaderPackStatus", {
+            Ready: "ready" === nT,
+            Failed: kT
           }),
-          children: ["ready" === xp && (0, Mp.jsx)(Rp.d, {
+          children: ["ready" === nT && (0, dT.jsx)(JT.c, {
             name: "circle-check"
-          }), Yp && (0, Mp.jsx)(Rp.d, {
+          }), kT && (0, dT.jsx)(JT.c, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === xp ? (0, dp.c)() : Sp(Ep(xp, ip), {
-            packVersion: String(ip.manifest.apiVersion),
-            version: String(mp.e)
+          }), "harnessBuild" === nT ? (0, iT.b)() : gT(tT(nT, UT), {
+            packVersion: String(UT.manifest.apiVersion),
+            version: String(YT.b)
           })]
-        }), Lp && (0, Mp.jsx)(qp.b, {
-          diagnostics: ip.validation.errors,
-          more: ip.validation.moreErrors,
-          t: Sp
-        }), Dp.length > 0 && (0, Mp.jsxs)(Mp.Fragment, {
-          children: [(0, Mp.jsxs)("div", {
+        }), HT && (0, dT.jsx)(xT.b, {
+          diagnostics: UT.validation.errors,
+          more: UT.validation.moreErrors,
+          t: gT
+        }), jT.length > 0 && (0, dT.jsxs)(dT.Fragment, {
+          children: [(0, dT.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, Mp.jsx)(Rp.d, {
+            children: [(0, dT.jsx)(JT.c, {
               name: "triangle-exclamation"
-            }), Sp("shaderPack:offInStrict")]
-          }), (0, Mp.jsx)(qp.b, {
-            diagnostics: Dp,
-            t: Sp
+            }), gT("shaderPack:offInStrict")]
+          }), (0, dT.jsx)(xT.b, {
+            diagnostics: jT,
+            t: gT
           })]
         })]
       })
     }
 
-    function lp(pp) {
+    function yT(TT) {
       let {
-        setApplySettingsCallback: ip
-      } = pp;
+        setApplySettingsCallback: UT
+      } = TT;
       const {
-        t: cp
-      } = (0, xp.H)(), [op, Sp] = (0, Op.useState)(null), [Yp, Dp] = (0, Op.useState)(null), [dp, jp] = (0, Op.useState)(null), [kp] = (0, Op.useState)(Pp.f), [mp, Rp] = (0, Op.useState)(!0), [qp, Cp] = (0, Op.useState)(!1), {
-        loading: Ep,
-        error: lp,
-        setError: Jp,
-        onFiles: Bp
-      } = (0, Hp.f)((async pp => {
-        const ip = await (0, Ap.loadPageShaderPackCompiler)();
-        if (!ip) return void Jp(cp("shaderPack:compilerUnavailable"));
-        Dp(ip);
-        const Op = (0, Wp.toStoredShaderPack)(pp, await (0, yp.h)(ip, pp.files));
-        await (0, Wp.saveShaderPack)(Op, ip) ? (Sp(Op), Np(op, Op, ip)) : Jp(cp("shaderPack:saveFailed"))
+        t: mT
+      } = (0, nT.z)(), [zT, gT] = (0, WT.useState)(null), [kT, jT] = (0, WT.useState)(null), [iT, OT] = (0, WT.useState)(null), [eT] = (0, WT.useState)(LT.h), [YT, JT] = (0, WT.useState)(!0), [xT, wT] = (0, WT.useState)(!1), {
+        loading: tT,
+        error: yT,
+        setError: IT,
+        onFiles: QT
+      } = (0, qT.d)((async TT => {
+        const UT = await (0, lT.loadPageShaderPackCompiler)();
+        if (!UT) return void IT(mT("shaderPack:compilerUnavailable"));
+        jT(UT);
+        const WT = (0, pT.toStoredShaderPack)(TT, await (0, BT.f)(UT, TT.files));
+        await (0, pT.saveShaderPack)(WT, UT) ? (gT(WT), sT(zT, WT, UT)) : IT(mT("shaderPack:saveFailed"))
       }));
 
-      function Np(pp, cp, Op) {
-        (function(pp, ip, cp, Op) {
-          return cp || ep(pp, Op) || ep(ip, Op)
-        })(pp, cp, (0, Wp.isShaderPackChangePending)(), Op) && ((0, Wp.markShaderPackChangePending)(), ip((() => vp.l)))
+      function sT(TT, mT, WT) {
+        (function(TT, UT, mT, WT) {
+          return mT || bT(TT, WT) || bT(UT, WT)
+        })(TT, mT, (0, pT.isShaderPackChangePending)(), WT) && ((0, pT.markShaderPackChangePending)(), UT((() => vT.l)))
       }
-      return (0, Op.useEffect)((() => {
-        let pp = !1;
+      return (0, WT.useEffect)((() => {
+        let TT = !1;
         return async function() {
-          const ip = (0, Lp.hasUsableWebGpuAdapter)(),
-            cp = await (0, Up.f)();
-          if (pp) return;
-          Sp(cp), Cp(!0), Rp(!1);
-          const Op = null !== cp ? (0, Ap.loadPageShaderPackCompiler)() : null,
-            op = await ip;
-          if (pp) return;
-          jp(op);
-          const Ip = await Op;
-          if (!pp && (Dp(Ip), null !== cp && op && null !== Ip && (0, Wp.shaderPackNeedsCheck)(cp, Ip))) {
-            const ip = await (0, yp.e)(cp, Ip);
-            pp || Sp((pp => pp === cp ? ip : pp))
+          const UT = (0, HT.hasUsableWebGpuAdapter)(),
+            mT = await (0, ZT.h)();
+          if (TT) return;
+          gT(mT), wT(!0), JT(!1);
+          const WT = null !== mT ? (0, lT.loadPageShaderPackCompiler)() : null,
+            zT = await UT;
+          if (TT) return;
+          OT(zT);
+          const MT = await WT;
+          if (!TT && (jT(MT), null !== mT && zT && null !== MT && (0, pT.shaderPackNeedsCheck)(mT, MT))) {
+            const UT = await (0, BT.e)(mT, MT);
+            TT || gT((TT => TT === mT ? UT : TT))
           }
-        }().catch((ip => {
-          console.error("Failed to load the stored shader pack", ip), pp || Jp(cp("shaderPack:unexpectedError"))
+        }().catch((UT => {
+          console.error("Failed to load the stored shader pack", UT), TT || IT(mT("shaderPack:unexpectedError"))
         })).finally((() => {
-          pp || (Rp(!1), Cp(!1))
+          TT || (JT(!1), wT(!1))
         })), () => {
-          pp = !0
+          TT = !0
         }
-      }), []), (0, Mp.jsxs)("div", {
+      }), []), (0, dT.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, Mp.jsx)("div", {
+        children: [(0, dT.jsx)("div", {
           className: "ShaderPackIntro",
-          children: cp("shaderPack:intro")
-        }), (0, Mp.jsx)(Qp, {
-          to: wp.R,
+          children: mT("shaderPack:intro")
+        }), (0, dT.jsx)(XT, {
+          to: cT.K,
           className: "ShaderPackBrowseLink",
-          children: (0, Mp.jsx)(Ip.o, {
+          children: (0, dT.jsx)(MT.l, {
             className: "ShaderPackBrowseButton",
-            children: cp("shaderPackListing:browse")
+            children: mT("shaderPackListing:browse")
           })
-        }), !1 === dp && (0, Mp.jsx)("div", {
+        }), !1 === iT && (0, dT.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: cp(kp ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== lp && (0, Mp.jsxs)("div", {
+          children: mT(eT ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== yT && (0, dT.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [cp("general:error"), ": ", lp]
-        }), op && (0, Mp.jsxs)("div", {
+          children: [mT("general:error"), ": ", yT]
+        }), zT && (0, dT.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, Mp.jsxs)("div", {
+          children: [(0, dT.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, Mp.jsxs)("div", {
-              children: [(0, Mp.jsx)("div", {
+            children: [(0, dT.jsxs)("div", {
+              children: [(0, dT.jsx)("div", {
                 className: "ShaderPackName",
-                children: op.manifest.name
-              }), op.manifest.author && (0, Mp.jsx)("div", {
+                children: zT.manifest.name
+              }), zT.manifest.author && (0, dT.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, tp.f)(cp, "shaderPack:byAuthor", {
-                  author: op.manifest.author
+                children: (0, fT.f)(mT, "shaderPack:byAuthor", {
+                  author: zT.manifest.author
                 })
-              }), op.manifest.description && (0, Mp.jsx)("div", {
+              }), zT.manifest.description && (0, dT.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: op.manifest.description
-              }), op.listing && (0, Mp.jsx)("div", {
+                children: zT.manifest.description
+              }), zT.listing && (0, dT.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, Mp.jsx)(Qp, {
-                  to: (0, wp.V)(op.listing.packId),
+                children: (0, dT.jsx)(XT, {
+                  to: (0, cT.N)(zT.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: cp("shaderPackListing:openPackPage")
+                  children: mT("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, Mp.jsx)(Ip.N, {
-              disabled: mp || Ep,
+            }), (0, dT.jsx)(MT.J, {
+              disabled: YT || tT,
               onClick: async function() {
-                Rp(!0), Jp(null), await (0, Wp.removeShaderPack)(), Sp(null), Rp(!1), Np(op, null, Yp)
+                JT(!0), IT(null), await (0, pT.removeShaderPack)(), gT(null), JT(!1), sT(zT, null, kT)
               },
-              children: cp("shaderPack:removePack")
+              children: mT("shaderPack:removePack")
             })]
-          }), (0, Mp.jsx)(Xp, {
-            stored: op,
-            checking: qp,
-            webGpuUsable: dp,
-            changePending: (0, Wp.isShaderPackChangePending)(),
-            compiler: Yp,
-            t: cp
+          }), (0, dT.jsx)(aT, {
+            stored: zT,
+            checking: xT,
+            webGpuUsable: iT,
+            changePending: (0, pT.isShaderPackChangePending)(),
+            compiler: kT,
+            t: mT
           })]
-        }), (0, Mp.jsx)(Hp.b, {
-          busy: mp || Ep || qp,
-          disabled: mp || Ep || qp || !0 !== dp,
-          onFiles: Bp
+        }), (0, dT.jsx)(qT.b, {
+          busy: YT || tT || xT,
+          disabled: YT || tT || xT || !0 !== iT,
+          onFiles: QT
         })]
       })
     }
 
-    function Qp(pp) {
+    function XT(TT) {
       let {
-        to: ip,
-        className: cp,
-        children: Op
-      } = pp;
+        to: UT,
+        className: mT,
+        children: WT
+      } = TT;
       const {
-        gameState: Ip
-      } = (0, Yp.o)(["gameState"]), {
-        pathname: xp,
-        search: Lp
-      } = (0, op.r)(), Ap = "landingPage" !== Ip && "studio" !== Ip;
-      return (0, Mp.jsx)(Sp.LinkPreserveSearch, {
-        to: ip,
-        className: cp,
-        target: Ap ? "_blank" : void 0,
+        gameState: MT
+      } = (0, kT.h)(["gameState"]), {
+        pathname: nT,
+        search: HT
+      } = (0, zT.p)(), lT = "landingPage" !== MT && "studio" !== MT;
+      return (0, dT.jsx)(gT.LinkPreserveSearch, {
+        to: UT,
+        className: mT,
+        target: lT ? "_blank" : void 0,
         onClick: () => {
-          Ap || ((0, wp.E)(`${xp}${Lp}`), (0, Dp.e)())
+          lT || ((0, cT.z)(`${nT}${HT}`), (0, jT.c)())
         },
-        children: Op
+        children: WT
       })
     }
   },
-  6698: (pp, ip, cp) => {
-    cp.d(ip, {
-      C: () => Mp,
-      E: () => Dp,
-      H: () => Ep,
-      L: () => Up,
-      O: () => fp,
-      P: () => Np,
-      R: () => Sp,
-      S: () => Tp,
-      V: () => Lp,
-      X: () => xp,
-      Z: () => Jp,
-      ab: () => Bp,
-      b: () => tp,
-      bb: () => Hp,
-      d: () => Rp,
-      e: () => wp,
-      eb: () => Cp,
-      g: () => Pp,
-      k: () => Ap,
-      l: () => Xp,
-      n: () => Wp,
-      r: () => lp,
-      s: () => bp,
-      w: () => yp,
-      z: () => vp
+  6623: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => tT,
+      C: () => ZT,
+      G: () => PT,
+      J: () => sT,
+      K: () => gT,
+      M: () => FT,
+      N: () => HT,
+      O: () => nT,
+      R: () => IT,
+      U: () => QT,
+      W: () => qT,
+      _: () => wT,
+      b: () => fT,
+      c: () => JT,
+      e: () => cT,
+      h: () => LT,
+      k: () => lT,
+      l: () => aT,
+      o: () => pT,
+      r: () => yT,
+      s: () => VT,
+      t: () => BT,
+      u: () => vT,
+      x: () => dT,
+      z: () => jT
     });
-    var Op = cp(6704),
-      op = cp(156),
-      Ip = cp(4653);
-    const Sp = "/shader-packs",
-      xp = `${Sp}/publish`;
+    var WT = mT(6630),
+      zT = mT(166),
+      MT = mT(4660);
+    const gT = "/shader-packs",
+      nT = `${gT}/publish`;
 
-    function Lp(pp) {
-      return `${Sp}/${encodeURIComponent(pp)}`
+    function HT(TT) {
+      return `${gT}/${encodeURIComponent(TT)}`
     }
-    let Yp = null;
+    let kT = null;
 
-    function Dp(pp) {
-      Yp = pp
-    }
-
-    function Ap() {
-      return Yp
+    function jT(TT) {
+      kT = TT
     }
 
-    function Pp() {
-      Yp = null
+    function lT() {
+      return kT
     }
 
-    function Wp(pp) {
-      return pp.playerHasRank("developer") || pp.playerHasRank("admin")
+    function LT() {
+      kT = null
     }
-    const yp = ["terrain", "water", "models", "sunShadows", "strict"],
-      Up = {
+
+    function pT(TT) {
+      return TT.playerHasRank("developer") || TT.playerHasRank("admin")
+    }
+    const BT = ["terrain", "water", "models", "sunShadows", "strict"],
+      ZT = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function wp(pp, ip) {
-      return pp.withFeatures.includes(ip) ? "with" : pp.withoutFeatures.includes(ip) ? "without" : null
+    function cT(TT, UT) {
+      return TT.withFeatures.includes(UT) ? "with" : TT.withoutFeatures.includes(UT) ? "without" : null
     }
 
-    function vp(pp) {
-      return null === pp ? "with" : "with" === pp ? "without" : null
+    function vT(TT) {
+      return null === TT ? "with" : "with" === TT ? "without" : null
     }
 
-    function tp(pp) {
-      return "with" === pp ? "only" : null === pp ? "include" : void 0
+    function fT(TT) {
+      return "with" === TT ? "only" : null === TT ? "include" : void 0
     }
 
-    function Hp(pp, ip) {
-      const cp = wp(pp, ip),
-        Op = pp => pp.filter((pp => pp !== ip));
+    function qT(TT, UT) {
+      const mT = cT(TT, UT),
+        WT = TT => TT.filter((TT => TT !== UT));
       return {
-        withFeatures: null === cp ? [...pp.withFeatures, ip] : Op(pp.withFeatures),
-        withoutFeatures: "with" === cp ? [...pp.withoutFeatures, ip] : Op(pp.withoutFeatures)
+        withFeatures: null === mT ? [...TT.withFeatures, UT] : WT(TT.withFeatures),
+        withoutFeatures: "with" === mT ? [...TT.withoutFeatures, UT] : WT(TT.withoutFeatures)
       }
     }
-    const dp = "section",
-      ep = "sort",
-      jp = "filters",
-      kp = "q",
-      mp = "banned",
-      Rp = "popular",
-      qp = "strict";
+    const iT = "section",
+      bT = "sort",
+      OT = "filters",
+      eT = "q",
+      YT = "banned",
+      JT = "popular",
+      xT = "strict";
 
-    function Mp(pp) {
-      var ip, cp, op;
-      const Sp = pp.get(dp),
-        xp = (null !== (ip = pp.get(jp)) && void 0 !== ip ? ip : qp).split(","),
-        Lp = pp.get(mp);
+    function dT(TT) {
+      var UT, mT, zT;
+      const gT = TT.get(iT),
+        nT = (null !== (UT = TT.get(OT)) && void 0 !== UT ? UT : xT).split(","),
+        HT = TT.get(YT);
       return {
-        section: "favourites" === Sp || "mine" === Sp ? Sp : "explore",
-        sort: null !== (cp = Op.A.find((ip => ip === pp.get(ep)))) && void 0 !== cp ? cp : Rp,
-        withFeatures: yp.filter((pp => xp.includes(pp) && !xp.includes(`-${pp}`))),
-        withoutFeatures: yp.filter((pp => xp.includes(`-${pp}`))),
-        searchQuery: (null === (op = pp.get(kp)) || void 0 === op ? void 0 : op.slice(0, Op.P)) || null,
-        pageNumber: (0, Ip.e)(pp.get(Ip.c)),
-        banned: "only" === Lp ? "with" : "include" === Lp ? null : "without"
+        section: "favourites" === gT || "mine" === gT ? gT : "explore",
+        sort: null !== (mT = WT.z.find((UT => UT === TT.get(bT)))) && void 0 !== mT ? mT : JT,
+        withFeatures: BT.filter((TT => nT.includes(TT) && !nT.includes(`-${TT}`))),
+        withoutFeatures: BT.filter((TT => nT.includes(`-${TT}`))),
+        searchQuery: (null === (zT = TT.get(eT)) || void 0 === zT ? void 0 : zT.slice(0, WT.L)) || null,
+        pageNumber: (0, MT.f)(TT.get(MT.d)),
+        banned: "only" === HT ? "with" : "include" === HT ? null : "without"
       }
     }
 
-    function Cp(pp, ip) {
-      var cp;
-      const Op = Qp(ip);
-      (0, Ip.g)(pp, dp, "explore" === ip.section ? null : ip.section), (0, Ip.g)(pp, ep, ip.sort === Rp ? null : ip.sort), (0, Ip.g)(pp, jp, Op === qp ? null : Op), (0, Ip.g)(pp, kp, ip.searchQuery), (0, Ip.g)(pp, mp, null !== (cp = tp(ip.banned)) && void 0 !== cp ? cp : null), (0, Ip.k)(pp, ip.pageNumber)
+    function wT(TT, UT) {
+      var mT;
+      const WT = XT(UT);
+      (0, MT.j)(TT, iT, "explore" === UT.section ? null : UT.section), (0, MT.j)(TT, bT, UT.sort === JT ? null : UT.sort), (0, MT.j)(TT, OT, WT === xT ? null : WT), (0, MT.j)(TT, eT, UT.searchQuery), (0, MT.j)(TT, YT, null !== (mT = fT(UT.banned)) && void 0 !== mT ? mT : null), (0, MT.k)(TT, UT.pageNumber)
     }
 
-    function Ep(pp) {
-      const ip = new URLSearchParams;
-      return Cp(ip, {
+    function tT(TT) {
+      const UT = new URLSearchParams;
+      return wT(UT, {
         section: "explore",
-        sort: Rp,
-        withFeatures: "strict" === pp ? [pp] : [pp, "strict"],
+        sort: JT,
+        withFeatures: "strict" === TT ? [TT] : [TT, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${Sp}?${ip.toString()}`
+      }), `${gT}?${UT.toString()}`
     }
 
-    function Xp(pp) {
-      return Qp(pp) === qp
+    function aT(TT) {
+      return XT(TT) === xT
     }
 
-    function lp(pp) {
-      return null !== pp.searchQuery || "with" === pp.banned || Qp(pp) !== qp
+    function yT(TT) {
+      return null !== TT.searchQuery || "with" === TT.banned || XT(TT) !== xT
     }
 
-    function Qp(pp) {
-      return yp.flatMap((ip => {
-        const cp = wp(pp, ip);
-        return "with" === cp ? [ip] : "without" === cp ? [`-${ip}`] : []
+    function XT(TT) {
+      return BT.flatMap((UT => {
+        const mT = cT(TT, UT);
+        return "with" === mT ? [UT] : "without" === mT ? [`-${UT}`] : []
       })).join(",")
     }
-    const Jp = {
+    const IT = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      Bp = {
+      QT = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,79 +387,79 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Np(pp) {
-      return Math.round(100 * Math.max(0, 1 - 1 / pp))
+    function sT(TT) {
+      return Math.round(100 * Math.max(0, 1 - 1 / TT))
     }
 
-    function Tp(pp, ip, cp, op) {
-      const Ip = [];
-      pp.isBanned && Ip.push({
+    function FT(TT, UT, mT, zT) {
+      const MT = [];
+      TT.isBanned && MT.push({
         tone: "warning",
-        text: op("shaderPackListing:ownerBanned"),
+        text: zT("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: Sp
-      } = pp;
-      if (null === pp.brokenError || Sp && !Sp.error || Ip.push({
+        pending: gT
+      } = TT;
+      if (null === TT.brokenError || gT && !gT.error || MT.push({
           tone: "warning",
-          text: op("shaderPackListing:ownerBroken"),
-          detail: pp.brokenError
-        }), null !== Sp && void 0 !== Sp && Sp.error) Ip.push({
+          text: zT("shaderPackListing:ownerBroken"),
+          detail: TT.brokenError
+        }), null !== gT && void 0 !== gT && gT.error) MT.push({
         tone: "warning",
-        text: op(ip ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Op.n)(Sp.error) ? null : Sp.error
+        text: zT(UT ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, WT.n)(gT.error) ? null : gT.error
       });
-      else if (Sp) {
-        const pp = null === Sp.renderNotBefore ? 0 : Sp.renderNotBefore - cp,
-          Op = String(Math.ceil(pp / 6e4)),
-          xp = op(ip ? pp > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : pp > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Op
+      else if (gT) {
+        const TT = null === gT.renderNotBefore ? 0 : gT.renderNotBefore - mT,
+          WT = String(Math.ceil(TT / 6e4)),
+          nT = zT(UT ? TT > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : TT > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: WT
           });
-        Ip.push({
+        MT.push({
           tone: "info",
-          text: xp,
+          text: nT,
           detail: null
         })
       }
-      return pp.listed || Ip.push({
+      return TT.listed || MT.push({
         tone: "info",
-        text: op("shaderPackListing:ownerUnlisted"),
+        text: zT("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Ip
+      }), MT
     }
 
-    function fp(pp) {
-      return Math.max(1, Math.round(pp / 1024))
+    function PT(TT) {
+      return Math.max(1, Math.round(TT / 1024))
     }
 
-    function bp(pp, ip, cp) {
-      return pp instanceof op.e && pp.errorMessageForUser ? pp.errorMessageForUser : ip(cp)
+    function VT(TT, UT, mT) {
+      return TT instanceof zT.d && TT.errorMessageForUser ? TT.errorMessageForUser : UT(mT)
     }
   },
-  6704: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Ip,
-      D: () => xp,
-      G: () => Sp,
-      J: () => Op,
-      M: () => Pp,
-      P: () => Dp,
-      S: () => dp,
-      V: () => Ap,
-      W: () => Yp,
-      d: () => yp,
-      g: () => wp,
-      j: () => Up,
-      l: () => Wp,
-      n: () => Hp,
-      r: () => jp,
-      t: () => Lp,
-      u: () => op,
-      x: () => ep
+  6630: (TT, UT, mT) => {
+    mT.d(UT, {
+      C: () => nT,
+      F: () => gT,
+      G: () => WT,
+      K: () => LT,
+      L: () => jT,
+      O: () => iT,
+      S: () => lT,
+      T: () => kT,
+      e: () => BT,
+      h: () => cT,
+      i: () => ZT,
+      j: () => pT,
+      n: () => qT,
+      q: () => OT,
+      s: () => HT,
+      t: () => zT,
+      x: () => bT,
+      z: () => MT
     });
-    const Op = ["forest", "desert", "water", "night", "cave"];
-    const op = {
+    const WT = ["forest", "desert", "water", "night", "cave"];
+    const zT = {
         full: {
           width: 3840,
           height: 2160
@@ -473,49 +473,49 @@ export const modules = {
           height: 360
         }
       },
-      Ip = ["popular", "updated", "newest"],
-      Sp = 3,
-      xp = 32,
-      Lp = 300;
+      MT = ["popular", "updated", "newest"],
+      gT = 3,
+      nT = 32,
+      HT = 300;
 
-    function Yp(pp, ip) {
-      return pp.slice(0, ip).replace(/[\uD800-\uDBFF]$/, "")
+    function kT(TT, UT) {
+      return TT.slice(0, UT).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Dp = 64,
-      Ap = 512,
-      Pp = 18e5;
+    const jT = 64,
+      lT = 512,
+      LT = 18e5;
 
-    function Wp(pp) {
-      const ip = pp,
-        cp = null === ip || void 0 === ip ? void 0 : ip.files;
-      return "number" === typeof(null === ip || void 0 === ip ? void 0 : ip.apiVersion) && "string" === typeof ip.name && (null === ip.author || "string" === typeof ip.author) && (void 0 === ip.keepCircleShadows || "boolean" === typeof ip.keepCircleShadows) && "object" === typeof cp && null !== cp && Object.values(cp).every((pp => "string" === typeof pp))
+    function pT(TT) {
+      const UT = TT,
+        mT = null === UT || void 0 === UT ? void 0 : UT.files;
+      return "number" === typeof(null === UT || void 0 === UT ? void 0 : UT.apiVersion) && "string" === typeof UT.name && (null === UT.author || "string" === typeof UT.author) && (void 0 === UT.keepCircleShadows || "boolean" === typeof UT.keepCircleShadows) && "object" === typeof mT && null !== mT && Object.values(mT).every((TT => "string" === typeof TT))
     }
-    const yp = "Bloxdhub",
-      Up = "https://bloxdhub.com/shaders";
+    const BT = "Bloxdhub",
+      ZT = "https://bloxdhub.com/shaders";
 
-    function wp(pp) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(pp)}`
+    function cT(TT) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(TT)}`
     }
-    const vp = "Screenshot generation failed.",
-      tp = "Its screenshots couldn't be generated:";
+    const vT = "Screenshot generation failed.",
+      fT = "Its screenshots couldn't be generated:";
 
-    function Hp(pp) {
-      var ip;
-      return pp === vp || null !== (ip = null === pp || void 0 === pp ? void 0 : pp.startsWith(tp)) && void 0 !== ip && ip
-    }
-
-    function dp(pp, ip) {
-      return `shaderPacks/${pp}/${ip}.json`
+    function qT(TT) {
+      var UT;
+      return TT === vT || null !== (UT = null === TT || void 0 === TT ? void 0 : TT.startsWith(fT)) && void 0 !== UT && UT
     }
 
-    function ep(pp, ip, cp, Op) {
-      return null === ip.renderId ? jp(pp, ip.baselineVersion, cp, Op) : `${pp}/${function(pp,ip,cp,Op){return`shaderPacks/${pp}/${ip}/${cp}-${Op}.webp`}(ip.packId,ip.renderId,cp,Op)}`
+    function iT(TT, UT) {
+      return `shaderPacks/${TT}/${UT}.json`
     }
 
-    function jp(pp, ip, cp, Op) {
-      return `${pp}/${function(pp,ip,cp){return`shaderPacks/baseline/${pp}/${ip}-${cp}.webp`}(ip,cp,Op)}`
+    function bT(TT, UT, mT, WT) {
+      return null === UT.renderId ? OT(TT, UT.baselineVersion, mT, WT) : `${TT}/${function(TT,UT,mT,WT){return`shaderPacks/${TT}/${UT}/${mT}-${WT}.webp`}(UT.packId,UT.renderId,mT,WT)}`
+    }
+
+    function OT(TT, UT, mT, WT) {
+      return `${TT}/${function(TT,UT,mT){return`shaderPacks/baseline/${TT}/${UT}-${mT}.webp`}(UT,mT,WT)}`
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

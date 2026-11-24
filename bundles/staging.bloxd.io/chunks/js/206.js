@@ -1,14 +1,14 @@
 export const id = 206;
 export const ids = [206];
 export const modules = {
-  34493: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => lp,
-      e: () => Xp,
-      f: () => Ep
+  34350: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => yT,
+      g: () => aT,
+      j: () => tT
     });
-    var Op = cp(34496);
-    const op = {
+    var WT = mT(34358);
+    const zT = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      Ip = {
+      MT = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      Sp = 1048576,
-      xp = "is not a binary glTF 2.0 file",
-      Lp = "loads data from outside the file",
-      Yp = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      Dp = {
+      gT = 1048576,
+      nT = "is not a binary glTF 2.0 file",
+      HT = "loads data from outside the file",
+      kT = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      jT = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      Ap = {
+      lT = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      Pp = {
+      LT = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: Ap,
-        TEXCOORD_2: Ap,
-        TEXCOORD_3: Ap,
-        TEXCOORD_4: Ap,
-        TEXCOORD_5: Ap
+        TEXCOORD_1: lT,
+        TEXCOORD_2: lT,
+        TEXCOORD_3: lT,
+        TEXCOORD_4: lT,
+        TEXCOORD_5: lT
       },
-      Wp = new Set(Op.h.map((pp => {
-        let [ip] = pp;
-        return ip
+      pT = new Set(WT.g.map((TT => {
+        let [UT] = TT;
+        return UT
       }))),
-      yp = {
+      BT = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      Up = 5126;
+      ZT = 5126;
 
-    function wp(pp) {
-      return pp.toLocaleString("en-US")
+    function cT(TT) {
+      return TT.toLocaleString("en-US")
     }
 
-    function vp(pp, ip, cp) {
-      return pp > ip ? `has ${wp(pp)} ${cp} (the limit is ${wp(ip)})` : null
+    function vT(TT, UT, mT) {
+      return TT > UT ? `has ${cT(TT)} ${mT} (the limit is ${cT(UT)})` : null
     }
 
-    function tp(pp, ip) {
-      return Number.isInteger(pp) && pp >= 0 && pp < (null !== ip && void 0 !== ip ? ip : 0)
+    function fT(TT, UT) {
+      return Number.isInteger(TT) && TT >= 0 && TT < (null !== UT && void 0 !== UT ? UT : 0)
     }
 
-    function Hp(pp) {
-      return Number.isInteger(pp) && pp >= 0
+    function qT(TT) {
+      return Number.isInteger(TT) && TT >= 0
     }
 
-    function dp(pp, ip) {
-      return void 0 !== pp && (!Array.isArray(pp) || pp.length > ip)
+    function iT(TT, UT) {
+      return void 0 !== TT && (!Array.isArray(TT) || TT.length > UT)
     }
 
-    function ep(pp, ip) {
-      return "object" === typeof pp && null !== pp && Object.keys(pp).length > ip
+    function bT(TT, UT) {
+      return "object" === typeof TT && null !== TT && Object.keys(TT).length > UT
     }
 
-    function jp(pp) {
-      var ip;
-      return `${pp.normalized?"normalized ":""}${null!==(ip=Op.f[pp.componentType])&&void 0!==ip?ip:pp.componentType} ${pp.type}`
+    function OT(TT) {
+      var UT;
+      return `${TT.normalized?"normalized ":""}${null!==(UT=WT.e[TT.componentType])&&void 0!==UT?UT:TT.componentType} ${TT.type}`
     }
 
-    function kp(pp) {
-      const ip = ip => {
-        var cp;
-        return null !== (cp = pp[ip]) && void 0 !== cp ? cp : -1
+    function eT(TT) {
+      const UT = UT => {
+        var mT;
+        return null !== (mT = TT[UT]) && void 0 !== mT ? mT : -1
       };
-      return 255 === ip(0) && 216 === ip(1) ? "JPEG" : 82 === ip(0) && 73 === ip(1) && 87 === ip(8) && 69 === ip(9) ? "WebP" : 171 === ip(0) && 75 === ip(1) && 84 === ip(2) && 88 === ip(3) ? "KTX2" : "non-PNG"
+      return 255 === UT(0) && 216 === UT(1) ? "JPEG" : 82 === UT(0) && 73 === UT(1) && 87 === UT(8) && 69 === UT(9) ? "WebP" : 171 === UT(0) && 75 === UT(1) && 84 === UT(2) && 88 === UT(3) ? "KTX2" : "non-PNG"
     }
 
-    function mp(pp) {
-      return pp.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((ip, cp) => pp[cp] === ip)) && 73 === pp[12] && 72 === pp[13] && 68 === pp[14] && 82 === pp[15]
+    function YT(TT) {
+      return TT.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((UT, mT) => TT[mT] === UT)) && 73 === TT[12] && 72 === TT[13] && 68 === TT[14] && 82 === TT[15]
     }
 
-    function Rp(pp) {
-      return /^[aeiou]/i.test(pp) ? `an ${pp}` : `a ${pp}`
+    function JT(TT) {
+      return /^[aeiou]/i.test(TT) ? `an ${TT}` : `a ${TT}`
     }
 
-    function qp(pp) {
-      const ip = pp.byteStride;
-      return void 0 === ip || Number.isInteger(ip) && ip >= 4 && ip <= 252 && ip % 4 === 0
+    function xT(TT) {
+      const UT = TT.byteStride;
+      return void 0 === UT || Number.isInteger(UT) && UT >= 4 && UT <= 252 && UT % 4 === 0
     }
 
-    function Mp(pp, ip, cp) {
-      var Op, op;
-      const Ip = null === (Op = pp.bufferViews) || void 0 === Op ? void 0 : Op[cp];
-      if (!Ip || !ip || 0 !== Ip.buffer) return null;
-      const Sp = null !== (op = Ip.byteOffset) && void 0 !== op ? op : 0;
-      return !Hp(Sp) || !Hp(Ip.byteLength) || Sp + Ip.byteLength > ip.byteLength ? null : ip.subarray(Sp, Sp + Ip.byteLength)
+    function dT(TT, UT, mT) {
+      var WT, zT;
+      const MT = null === (WT = TT.bufferViews) || void 0 === WT ? void 0 : WT[mT];
+      if (!MT || !UT || 0 !== MT.buffer) return null;
+      const gT = null !== (zT = MT.byteOffset) && void 0 !== zT ? zT : 0;
+      return !qT(gT) || !qT(MT.byteLength) || gT + MT.byteLength > UT.byteLength ? null : UT.subarray(gT, gT + MT.byteLength)
     }
 
-    function Cp(pp, ip) {
-      var cp, op, Ip;
-      const Sp = Op.r[ip.type],
-        xp = Op.c[ip.componentType];
-      if (!Sp || !xp || !Number.isInteger(ip.count) || ip.count < 0) return !1;
-      if (void 0 === ip.bufferView) return !0;
-      const Lp = null === (cp = pp.bufferViews) || void 0 === cp ? void 0 : cp[ip.bufferView],
-        Yp = null !== (op = ip.byteOffset) && void 0 !== op ? op : 0;
-      if (!Lp || !Hp(Yp) || Yp % xp !== 0) return !1;
-      const Dp = Sp * xp,
-        Ap = null !== (Ip = Lp.byteStride) && void 0 !== Ip ? Ip : Dp;
-      if (Ap < Dp) return !1;
-      return (0 === ip.count ? 0 : Yp + Ap * (ip.count - 1) + Dp) <= Lp.byteLength
+    function wT(TT, UT) {
+      var mT, zT, MT;
+      const gT = WT.k[UT.type],
+        nT = WT.d[UT.componentType];
+      if (!gT || !nT || !Number.isInteger(UT.count) || UT.count < 0) return !1;
+      if (void 0 === UT.bufferView) return !0;
+      const HT = null === (mT = TT.bufferViews) || void 0 === mT ? void 0 : mT[UT.bufferView],
+        kT = null !== (zT = UT.byteOffset) && void 0 !== zT ? zT : 0;
+      if (!HT || !qT(kT) || kT % nT !== 0) return !1;
+      const jT = gT * nT,
+        lT = null !== (MT = HT.byteStride) && void 0 !== MT ? MT : jT;
+      if (lT < jT) return !1;
+      return (0 === UT.count ? 0 : kT + lT * (UT.count - 1) + jT) <= HT.byteLength
     }
 
-    function Ep(pp) {
-      return pp > op.fileBytes ? `is ${(pp/Sp).toFixed(1)} MiB (the limit is ${op.fileBytes/Sp} MiB)` : null
+    function tT(TT) {
+      return TT > zT.fileBytes ? `is ${(TT/gT).toFixed(1)} MiB (the limit is ${zT.fileBytes/gT} MiB)` : null
     }
 
-    function Xp(pp, ip) {
+    function aT(TT, UT) {
       try {
-        return function(pp, ip) {
-          var cp, Sp, Ap, wp, Hp, Ep, Xp, lp, Qp, Jp, Bp, Np, Tp, fp, bp, hp, ap;
-          const np = Array.isArray(pp.extensionsUsed) && pp.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(pp, ip) {
-              var cp, Op;
+        return function(TT, UT) {
+          var mT, gT, lT, cT, qT, tT, aT, yT, XT, IT, QT, sT, FT, PT, VT, uT, CT;
+          const rT = Array.isArray(TT.extensionsUsed) && TT.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(TT, UT) {
+              var mT, WT;
               const {
-                items: op,
-                perFile: Sp,
-                surfaces: xp,
-                few: Lp,
-                bounds: Yp,
-                attributeMembers: Dp
-              } = Ip;
-              if (dp(pp.extensionsRequired, Lp) || dp(pp.animations, 1 / 0) || dp(pp.skins, 1 / 0)) return !0;
-              if (null !== (cp = pp.animations) && void 0 !== cp && cp.length || null !== (Op = pp.skins) && void 0 !== Op && Op.length) return !1;
+                items: zT,
+                perFile: gT,
+                surfaces: nT,
+                few: HT,
+                bounds: kT,
+                attributeMembers: jT
+              } = MT;
+              if (iT(TT.extensionsRequired, HT) || iT(TT.animations, 1 / 0) || iT(TT.skins, 1 / 0)) return !0;
+              if (null !== (mT = TT.animations) && void 0 !== mT && mT.length || null !== (WT = TT.skins) && void 0 !== WT && WT.length) return !1;
               if ([
-                  [pp.buffers, Lp],
-                  [pp.scenes, Lp],
-                  [pp.bufferViews, op],
-                  [pp.accessors, op],
-                  [pp.nodes, op],
-                  [pp.meshes, op],
-                  [pp.materials, xp],
-                  [pp.textures, xp],
-                  [pp.samplers, xp],
-                  [pp.images, xp]
-                ].some((pp => {
-                  let [ip, cp] = pp;
-                  return dp(ip, cp)
+                  [TT.buffers, HT],
+                  [TT.scenes, HT],
+                  [TT.bufferViews, zT],
+                  [TT.accessors, zT],
+                  [TT.nodes, zT],
+                  [TT.meshes, zT],
+                  [TT.materials, nT],
+                  [TT.textures, nT],
+                  [TT.samplers, nT],
+                  [TT.images, nT]
+                ].some((TT => {
+                  let [UT, mT] = TT;
+                  return iT(UT, mT)
                 }))) return !0;
-              for (const Ip of null !== (Ap = pp.accessors) && void 0 !== Ap ? Ap : []) {
-                var Ap, Pp, Wp;
-                if (Number.isInteger(Ip.count) && (!Number.isSafeInteger(Ip.count) || Object.is(Ip.count, -0)) || dp(null !== (Pp = Ip.min) && void 0 !== Pp ? Pp : void 0, Yp) || dp(null !== (Wp = Ip.max) && void 0 !== Wp ? Wp : void 0, Yp)) return !0
+              for (const MT of null !== (lT = TT.accessors) && void 0 !== lT ? lT : []) {
+                var lT, LT, pT;
+                if (Number.isInteger(MT.count) && (!Number.isSafeInteger(MT.count) || Object.is(MT.count, -0)) || iT(null !== (LT = MT.min) && void 0 !== LT ? LT : void 0, kT) || iT(null !== (pT = MT.max) && void 0 !== pT ? pT : void 0, kT)) return !0
               }
-              for (const Ip of null !== (yp = pp.scenes) && void 0 !== yp ? yp : []) {
-                var yp;
-                if (dp(Ip.nodes, op)) return !0
+              for (const MT of null !== (BT = TT.scenes) && void 0 !== BT ? BT : []) {
+                var BT;
+                if (iT(MT.nodes, zT)) return !0
               }
-              let Up = 0;
-              for (const Ip of null !== (wp = pp.nodes) && void 0 !== wp ? wp : []) {
-                var wp, vp, tp;
-                if (dp(Ip.children, Sp)) return !0;
-                Up += null !== (vp = null === (tp = Ip.children) || void 0 === tp ? void 0 : tp.length) && void 0 !== vp ? vp : 0
+              let ZT = 0;
+              for (const MT of null !== (cT = TT.nodes) && void 0 !== cT ? cT : []) {
+                var cT, vT, fT;
+                if (iT(MT.children, gT)) return !0;
+                ZT += null !== (vT = null === (fT = MT.children) || void 0 === fT ? void 0 : fT.length) && void 0 !== vT ? vT : 0
               }
-              if (Up > Sp) return !0;
-              let Hp = 0;
-              for (const Ip of null !== (jp = pp.meshes) && void 0 !== jp ? jp : []) {
-                var jp;
-                if (!Array.isArray(Ip.primitives)) return !0;
-                if (Hp += Ip.primitives.length, Hp > Sp) return !0;
-                for (const pp of Ip.primitives) {
-                  var kp;
-                  const cp = ip ? null === (kp = pp.extensions) || void 0 === kp ? void 0 : kp.KHR_draco_mesh_compression : void 0;
-                  if (ep(pp.attributes, Dp) || ep(null === cp || void 0 === cp ? void 0 : cp.attributes, Dp)) return !0
+              if (ZT > gT) return !0;
+              let qT = 0;
+              for (const MT of null !== (OT = TT.meshes) && void 0 !== OT ? OT : []) {
+                var OT;
+                if (!Array.isArray(MT.primitives)) return !0;
+                if (qT += MT.primitives.length, qT > gT) return !0;
+                for (const TT of MT.primitives) {
+                  var eT;
+                  const mT = UT ? null === (eT = TT.extensions) || void 0 === eT ? void 0 : eT.KHR_draco_mesh_compression : void 0;
+                  if (bT(TT.attributes, jT) || bT(null === mT || void 0 === mT ? void 0 : mT.attributes, jT)) return !0
                 }
               }
               return !1
-            }(pp, np)) return xp;
-          const Fp = null === (cp = pp.asset) || void 0 === cp ? void 0 : cp.version;
-          if ("string" !== typeof Fp || !/^2\.\d+/.test(Fp)) return `uses glTF version ${null!==Fp&&void 0!==Fp?Fp:"(none)"}`;
-          const gp = null === (Sp = pp.asset) || void 0 === Sp ? void 0 : Sp.minVersion;
-          if (void 0 !== gp && "2.0" !== gp) return `uses glTF version ${gp}`;
-          for (const Op of null !== (Gp = pp.extensionsRequired) && void 0 !== Gp ? Gp : []) {
-            var Gp;
-            if (!Yp.has(Op)) return `requires the glTF extension ${Op}`
+            }(TT, rT)) return nT;
+          const KT = null === (mT = TT.asset) || void 0 === mT ? void 0 : mT.version;
+          if ("string" !== typeof KT || !/^2\.\d+/.test(KT)) return `uses glTF version ${null!==KT&&void 0!==KT?KT:"(none)"}`;
+          const ST = null === (gT = TT.asset) || void 0 === gT ? void 0 : gT.minVersion;
+          if (void 0 !== ST && "2.0" !== ST) return `uses glTF version ${ST}`;
+          for (const WT of null !== (GT = TT.extensionsRequired) && void 0 !== GT ? GT : []) {
+            var GT;
+            if (!kT.has(WT)) return `requires the glTF extension ${WT}`
           }
-          if (null !== (Ap = pp.animations) && void 0 !== Ap && Ap.length) return "has animations";
-          if (null !== (wp = pp.skins) && void 0 !== wp && wp.length) return "uses skins";
-          const rp = null !== (Hp = pp.buffers) && void 0 !== Hp ? Hp : [];
-          for (const [Op, op] of rp.entries()) {
-            if (void 0 !== op.uri) return Lp;
-            if (Op > 0 || !ip) return xp
+          if (null !== (lT = TT.animations) && void 0 !== lT && lT.length) return "has animations";
+          if (null !== (cT = TT.skins) && void 0 !== cT && cT.length) return "uses skins";
+          const NT = null !== (qT = TT.buffers) && void 0 !== qT ? qT : [];
+          for (const [WT, zT] of NT.entries()) {
+            if (void 0 !== zT.uri) return HT;
+            if (WT > 0 || !UT) return nT
           }
-          for (const [Op, op] of(null !== (Zp = pp.bufferViews) && void 0 !== Zp ? Zp : []).entries()) {
-            var Zp;
-            if (!Mp(pp, ip, Op) || !qp(op)) return xp
+          for (const [WT, zT] of(null !== (ET = TT.bufferViews) && void 0 !== ET ? ET : []).entries()) {
+            var ET;
+            if (!dT(TT, UT, WT) || !xT(zT)) return nT
           }
-          const zp = null !== (Ep = pp.accessors) && void 0 !== Ep ? Ep : [];
-          for (const Op of zp) {
-            if (void 0 !== Op.sparse) return "uses sparse accessors";
-            const ip = Number.isInteger(Op.count) ? vp(Op.count, op.accessorElements, "elements in an accessor") : null;
-            if (ip) return ip;
-            if (!Cp(pp, Op)) return xp
+          const hT = null !== (tT = TT.accessors) && void 0 !== tT ? tT : [];
+          for (const WT of hT) {
+            if (void 0 !== WT.sparse) return "uses sparse accessors";
+            const UT = Number.isInteger(WT.count) ? vT(WT.count, zT.accessorElements, "elements in an accessor") : null;
+            if (UT) return UT;
+            if (!wT(TT, WT)) return nT
           }
-          const sp = null !== (Xp = pp.scenes) && void 0 !== Xp ? Xp : [];
-          if (1 !== sp.length) return `has ${sp.length} scenes`;
-          const Kp = (0, Op.y)(pp);
-          if (void 0 !== Kp && 0 !== Kp) return xp;
-          const Vp = null !== (lp = pp.nodes) && void 0 !== lp ? lp : [],
-            ii = null !== (Qp = pp.meshes) && void 0 !== Qp ? Qp : [],
-            ci = null !== (Jp = pp.materials) && void 0 !== Jp ? Jp : [],
-            Oi = null !== (Bp = pp.textures) && void 0 !== Bp ? Bp : [],
-            oi = null !== (Np = pp.images) && void 0 !== Np ? Np : [],
-            Ii = null !== (Tp = null !== (fp = null !== (bp = vp(Vp.length, op.nodes, "nodes")) && void 0 !== bp ? bp : vp(ii.length, op.meshes, "meshes")) && void 0 !== fp ? fp : vp(ci.length, op.materials, "materials")) && void 0 !== Tp ? Tp : vp(oi.length, op.images, "images");
-          if (Ii) return Ii;
-          const Si = new Set;
-          for (const Op of Vp)
-            for (const pp of null !== (xi = Op.children) && void 0 !== xi ? xi : []) {
-              var xi;
-              if (!tp(pp, Vp.length) || Si.has(pp)) return xp;
-              Si.add(pp)
+          const DT = null !== (aT = TT.scenes) && void 0 !== aT ? aT : [];
+          if (1 !== DT.length) return `has ${DT.length} scenes`;
+          const oT = (0, WT.o)(TT);
+          if (void 0 !== oT && 0 !== oT) return nT;
+          const AT = null !== (yT = TT.nodes) && void 0 !== yT ? yT : [],
+            RT = null !== (XT = TT.meshes) && void 0 !== XT ? XT : [],
+            TU = null !== (IT = TT.materials) && void 0 !== IT ? IT : [],
+            UU = null !== (QT = TT.textures) && void 0 !== QT ? QT : [],
+            mU = null !== (sT = TT.images) && void 0 !== sT ? sT : [],
+            WU = null !== (FT = null !== (PT = null !== (VT = vT(AT.length, zT.nodes, "nodes")) && void 0 !== VT ? VT : vT(RT.length, zT.meshes, "meshes")) && void 0 !== PT ? PT : vT(TU.length, zT.materials, "materials")) && void 0 !== FT ? FT : vT(mU.length, zT.images, "images");
+          if (WU) return WU;
+          const zU = new Set;
+          for (const WT of AT)
+            for (const TT of null !== (MU = WT.children) && void 0 !== MU ? MU : []) {
+              var MU;
+              if (!fT(TT, AT.length) || zU.has(TT)) return nT;
+              zU.add(TT)
             }
-          const Li = new Set,
-            Yi = pp => {
-              var ip;
-              return !Li.has(pp) && (Li.add(pp), (null !== (ip = Vp[pp].children) && void 0 !== ip ? ip : []).every(Yi))
+          const gU = new Set,
+            nU = TT => {
+              var UT;
+              return !gU.has(TT) && (gU.add(TT), (null !== (UT = AT[TT].children) && void 0 !== UT ? UT : []).every(nU))
             };
-          for (const Op of null !== (Di = sp[0].nodes) && void 0 !== Di ? Di : []) {
-            var Di;
-            if (!tp(Op, Vp.length) || Si.has(Op) || !Yi(Op)) return xp
+          for (const WT of null !== (HU = DT[0].nodes) && void 0 !== HU ? HU : []) {
+            var HU;
+            if (!fT(WT, AT.length) || zU.has(WT) || !nU(WT)) return nT
           }
-          for (const Op of Vp) {
-            if (void 0 !== Op.matrix) return "uses node matrices";
-            if (void 0 !== Op.skin) return "uses skins";
-            if (void 0 !== Op.weights) return "uses morph targets";
-            if (void 0 !== Op.mesh && !tp(Op.mesh, ii.length)) return xp;
-            const pp = [
-              [Op.translation, 3],
-              [Op.rotation, 4],
-              [Op.scale, 3]
+          for (const WT of AT) {
+            if (void 0 !== WT.matrix) return "uses node matrices";
+            if (void 0 !== WT.skin) return "uses skins";
+            if (void 0 !== WT.weights) return "uses morph targets";
+            if (void 0 !== WT.mesh && !fT(WT.mesh, RT.length)) return nT;
+            const TT = [
+              [WT.translation, 3],
+              [WT.rotation, 4],
+              [WT.scale, 3]
             ];
-            for (const [ip, cp] of pp)
-              if (void 0 !== ip && (!Array.isArray(ip) || ip.length !== cp || !ip.every((pp => Number.isFinite(pp))))) return xp
+            for (const [UT, mT] of TT)
+              if (void 0 !== UT && (!Array.isArray(UT) || UT.length !== mT || !UT.every((TT => Number.isFinite(TT))))) return nT
           }
-          let Ai = -1,
-            Pi = 0,
-            Wi = 0,
-            yi = null;
-          for (const op of ii) {
-            if (void 0 !== op.weights) return "uses morph targets";
-            if (0 === op.primitives.length) return xp;
-            for (const cp of op.primitives) {
-              var Ui, wi;
-              const op = null !== (Ui = cp.mode) && void 0 !== Ui ? Ui : 4;
-              var vi;
-              if (4 !== op && 0 !== op) return `uses ${null!==(vi=yp[op])&&void 0!==vi?vi:`mode ${op}`} primitives`;
-              if (void 0 !== cp.targets) return "uses morph targets";
-              if (void 0 !== cp.material && !tp(cp.material, ci.length)) return xp;
-              const Ip = np ? null === (wi = cp.extensions) || void 0 === wi ? void 0 : wi.KHR_draco_mesh_compression : void 0;
-              if (Ip) {
-                if (4 !== op) return "uses Draco-compressed points";
-                if (!Mp(pp, ip, Ip.bufferView) || "object" !== typeof Ip.attributes) return xp
+          let kU = -1,
+            jU = 0,
+            lU = 0,
+            LU = null;
+          for (const zT of RT) {
+            if (void 0 !== zT.weights) return "uses morph targets";
+            if (0 === zT.primitives.length) return nT;
+            for (const mT of zT.primitives) {
+              var pU, BU;
+              const zT = null !== (pU = mT.mode) && void 0 !== pU ? pU : 4;
+              var ZU;
+              if (4 !== zT && 0 !== zT) return `uses ${null!==(ZU=BT[zT])&&void 0!==ZU?ZU:`mode ${zT}`} primitives`;
+              if (void 0 !== mT.targets) return "uses morph targets";
+              if (void 0 !== mT.material && !fT(mT.material, TU.length)) return nT;
+              const MT = rT ? null === (BU = mT.extensions) || void 0 === BU ? void 0 : BU.KHR_draco_mesh_compression : void 0;
+              if (MT) {
+                if (4 !== zT) return "uses Draco-compressed points";
+                if (!dT(TT, UT, MT.bufferView) || "object" !== typeof MT.attributes) return nT
               }
-              const Sp = cp.attributes;
-              if ("object" !== typeof Sp || null === Sp) return xp;
-              if (void 0 === Sp.POSITION) return "has a primitive with no positions";
-              if (!tp(Sp.POSITION, zp.length)) return xp;
-              const Lp = zp[Sp.POSITION].count;
-              for (const [pp, ip] of Object.entries(Sp)) {
-                if (!tp(ip, zp.length)) return xp;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(pp)) return "uses skins";
-                const cp = zp[ip],
-                  Op = Dp[pp];
-                if (Op && (cp.componentType !== Up || cp.normalized || cp.type !== Op)) return `stores ${pp} as ${jp(cp)}`;
-                const op = Pp[pp];
-                if (op && (cp.type !== op.type || !op.componentTypes.includes(cp.componentType) || cp.componentType === Up === !!cp.normalized)) return `stores ${pp} as ${jp(cp)}`;
-                if (Wp.has(pp) && cp.count !== Lp) return "has vertex attributes of different lengths"
+              const gT = mT.attributes;
+              if ("object" !== typeof gT || null === gT) return nT;
+              if (void 0 === gT.POSITION) return "has a primitive with no positions";
+              if (!fT(gT.POSITION, hT.length)) return nT;
+              const HT = hT[gT.POSITION].count;
+              for (const [TT, UT] of Object.entries(gT)) {
+                if (!fT(UT, hT.length)) return nT;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(TT)) return "uses skins";
+                const mT = hT[UT],
+                  WT = jT[TT];
+                if (WT && (mT.componentType !== ZT || mT.normalized || mT.type !== WT)) return `stores ${TT} as ${OT(mT)}`;
+                const zT = LT[TT];
+                if (zT && (mT.type !== zT.type || !zT.componentTypes.includes(mT.componentType) || mT.componentType === ZT === !!mT.normalized)) return `stores ${TT} as ${OT(mT)}`;
+                if (pT.has(TT) && mT.count !== HT) return "has vertex attributes of different lengths"
               }
-              if (Ip) {
-                if (void 0 === cp.indices) return xp;
-                for (const ip in Ip.attributes)
-                  if (Wp.has(ip) && void 0 === Sp[ip]) return xp;
-                if (void 0 === Ip.attributes.POSITION) return xp;
-                const pp = tp(cp.indices, zp.length) ? zp[cp.indices].count : -1;
-                if (0 === pp) return xp;
-                if (-1 === Ai) Ai = Ip.bufferView, Pi = Lp, Wi = pp;
+              if (MT) {
+                if (void 0 === mT.indices) return nT;
+                for (const UT in MT.attributes)
+                  if (pT.has(UT) && void 0 === gT[UT]) return nT;
+                if (void 0 === MT.attributes.POSITION) return nT;
+                const TT = fT(mT.indices, hT.length) ? hT[mT.indices].count : -1;
+                if (0 === TT) return nT;
+                if (-1 === kU) kU = MT.bufferView, jU = HT, lU = TT;
                 else {
-                  yi ??= new Map([
-                    [Ai, [Pi, Wi]]
+                  LU ??= new Map([
+                    [kU, [jU, lU]]
                   ]);
-                  const ip = yi.get(Ip.bufferView);
-                  if (ip && (ip[0] !== Lp || ip[1] !== pp)) return xp;
-                  yi.set(Ip.bufferView, null !== ip && void 0 !== ip ? ip : [Lp, pp])
+                  const UT = LU.get(MT.bufferView);
+                  if (UT && (UT[0] !== HT || UT[1] !== TT)) return nT;
+                  LU.set(MT.bufferView, null !== UT && void 0 !== UT ? UT : [HT, TT])
                 }
               }
-              let Yp = Lp;
-              if (void 0 !== cp.indices) {
-                if (!tp(cp.indices, zp.length)) return xp;
-                const pp = zp[cp.indices];
-                if ("SCALAR" !== pp.type) return xp;
-                if (5121 === pp.componentType) return "uses 8-bit indices";
-                var ti;
-                if (5123 !== pp.componentType && 5125 !== pp.componentType) return `stores indices as ${null!==(ti=Op.f[pp.componentType])&&void 0!==ti?ti:pp.componentType}`;
-                if (!Ip && void 0 === pp.bufferView) return xp;
-                Yp = pp.count
+              let kT = HT;
+              if (void 0 !== mT.indices) {
+                if (!fT(mT.indices, hT.length)) return nT;
+                const TT = hT[mT.indices];
+                if ("SCALAR" !== TT.type) return nT;
+                if (5121 === TT.componentType) return "uses 8-bit indices";
+                var cU;
+                if (5123 !== TT.componentType && 5125 !== TT.componentType) return `stores indices as ${null!==(cU=WT.e[TT.componentType])&&void 0!==cU?cU:TT.componentType}`;
+                if (!MT && void 0 === TT.bufferView) return nT;
+                kT = TT.count
               }
-              if (4 === op && Yp % 3 !== 0) return xp
+              if (4 === zT && kT % 3 !== 0) return nT
             }
           }
-          let Hi = 0,
-            di = 0,
-            ei = 0;
-          for (let Op = 0; Op < Vp.length; Op++) {
-            const pp = Vp[Op].mesh;
-            if (void 0 !== pp && Li.has(Op))
-              for (const ip of ii[pp].primitives) ei++, Hi += zp[ip.attributes.POSITION].count, void 0 !== ip.indices && (di += zp[ip.indices].count)
+          let vU = 0,
+            fU = 0,
+            qU = 0;
+          for (let WT = 0; WT < AT.length; WT++) {
+            const TT = AT[WT].mesh;
+            if (void 0 !== TT && gU.has(WT))
+              for (const UT of RT[TT].primitives) qU++, vU += hT[UT.attributes.POSITION].count, void 0 !== UT.indices && (fU += hT[UT.indices].count)
           }
-          const ui = null !== (hp = null !== (ap = vp(Hi, op.vertices, "vertices")) && void 0 !== ap ? ap : vp(di, op.indices, "indices")) && void 0 !== hp ? hp : vp(ei, op.primitives, "primitives");
-          if (ui) return ui;
-          for (const Op of ci) {
-            var ji, ki;
-            if (void 0 !== Op.emissiveTexture) return "uses an emissive texture";
-            const ip = null !== (ji = Op.alphaMode) && void 0 !== ji ? ji : "OPAQUE";
-            if ("OPAQUE" !== ip && "MASK" !== ip && "BLEND" !== ip) return xp;
-            const cp = null === (ki = Op.pbrMetallicRoughness) || void 0 === ki ? void 0 : ki.baseColorTexture;
-            if (cp) {
-              var mi, Ri, qi, Mi, Ci;
-              const ip = null !== (mi = pp.extensionsUsed) && void 0 !== mi && mi.includes("KHR_texture_transform") ? null === (Ri = cp.extensions) || void 0 === Ri ? void 0 : Ri.KHR_texture_transform : void 0;
-              if (0 !== (null !== (qi = cp.texCoord) && void 0 !== qi ? qi : 0) || 0 !== (null !== (Mi = null === ip || void 0 === ip ? void 0 : ip.texCoord) && void 0 !== Mi ? Mi : 0)) return "uses a second UV set";
-              const Op = Oi[cp.index];
-              if (!Op || !tp(Op.source, oi.length) || void 0 !== Op.sampler && !tp(Op.sampler, null === (Ci = pp.samplers) || void 0 === Ci ? void 0 : Ci.length)) return xp
+          const iU = null !== (uT = null !== (CT = vT(vU, zT.vertices, "vertices")) && void 0 !== CT ? CT : vT(fU, zT.indices, "indices")) && void 0 !== uT ? uT : vT(qU, zT.primitives, "primitives");
+          if (iU) return iU;
+          for (const WT of TU) {
+            var bU, OU;
+            if (void 0 !== WT.emissiveTexture) return "uses an emissive texture";
+            const UT = null !== (bU = WT.alphaMode) && void 0 !== bU ? bU : "OPAQUE";
+            if ("OPAQUE" !== UT && "MASK" !== UT && "BLEND" !== UT) return nT;
+            const mT = null === (OU = WT.pbrMetallicRoughness) || void 0 === OU ? void 0 : OU.baseColorTexture;
+            if (mT) {
+              var eU, YU, JU, xU, dU;
+              const UT = null !== (eU = TT.extensionsUsed) && void 0 !== eU && eU.includes("KHR_texture_transform") ? null === (YU = mT.extensions) || void 0 === YU ? void 0 : YU.KHR_texture_transform : void 0;
+              if (0 !== (null !== (JU = mT.texCoord) && void 0 !== JU ? JU : 0) || 0 !== (null !== (xU = null === UT || void 0 === UT ? void 0 : UT.texCoord) && void 0 !== xU ? xU : 0)) return "uses a second UV set";
+              const WT = UU[mT.index];
+              if (!WT || !fT(WT.source, mU.length) || void 0 !== WT.sampler && !fT(WT.sampler, null === (dU = TT.samplers) || void 0 === dU ? void 0 : dU.length)) return nT
             }
           }
-          for (const Op of oi) {
-            if (void 0 !== Op.uri) return Lp;
-            if (void 0 === Op.bufferView) return xp;
-            const cp = Mp(pp, ip, Op.bufferView);
-            if (!cp) return xp;
-            if ("image/png" !== Op.mimeType) {
-              var Ei, Xi, li;
-              return `has ${Rp(null!==(Ei=null!==(Xi={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(li=Op.mimeType)&&void 0!==li?li:""])&&void 0!==Xi?Xi:Op.mimeType)&&void 0!==Ei?Ei:"untyped")} image`
+          for (const WT of mU) {
+            if (void 0 !== WT.uri) return HT;
+            if (void 0 === WT.bufferView) return nT;
+            const mT = dT(TT, UT, WT.bufferView);
+            if (!mT) return nT;
+            if ("image/png" !== WT.mimeType) {
+              var wU, tU, aU;
+              return `has ${JT(null!==(wU=null!==(tU={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(aU=WT.mimeType)&&void 0!==aU?aU:""])&&void 0!==tU?tU:WT.mimeType)&&void 0!==wU?wU:"untyped")} image`
             }
-            if (!mp(cp)) return `has ${Rp(kp(cp))} image`;
-            const Ip = new DataView(cp.buffer, cp.byteOffset, cp.byteLength),
-              Sp = Ip.getUint32(16),
-              Yp = Ip.getUint32(20);
-            if (Sp > op.imageSide || Yp > op.imageSide) return `has a ${Sp} \xd7 ${Yp} image (the limit is ${op.imageSide})`
+            if (!YT(mT)) return `has ${JT(eT(mT))} image`;
+            const MT = new DataView(mT.buffer, mT.byteOffset, mT.byteLength),
+              gT = MT.getUint32(16),
+              kT = MT.getUint32(20);
+            if (gT > zT.imageSide || kT > zT.imageSide) return `has a ${gT} \xd7 ${kT} image (the limit is ${zT.imageSide})`
           }
           return null
-        }(pp, ip)
+        }(TT, UT)
       } catch {
-        return xp
+        return nT
       }
     }
 
-    function lp(pp) {
-      const ip = Ep(pp.byteLength);
-      if (ip) return ip;
+    function yT(TT) {
+      const UT = tT(TT.byteLength);
+      if (UT) return UT;
       try {
         const {
-          json: ip,
-          bin: cp
-        } = (0, Op.B)(pp);
-        return Xp(ip, cp)
-      } catch (cp) {
-        if (cp instanceof Op.o) return cp.reason;
-        throw cp
+          json: UT,
+          bin: mT
+        } = (0, WT.p)(TT);
+        return aT(UT, mT)
+      } catch (mT) {
+        if (mT instanceof WT.i) return mT.reason;
+        throw mT
       }
     }
   },
-  34496: (pp, ip, cp) => {
-    cp.d(ip, {
-      B: () => Yp,
-      c: () => Wp,
-      f: () => Pp,
-      h: () => Up,
-      k: () => Ip,
-      o: () => op,
-      r: () => yp,
-      s: () => Dp,
-      w: () => Ap,
-      y: () => Sp
+  34358: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => pT,
+      e: () => LT,
+      g: () => ZT,
+      h: () => MT,
+      i: () => zT,
+      k: () => BT,
+      m: () => jT,
+      n: () => lT,
+      o: () => gT,
+      p: () => kT
     });
-    var Op = cp(34503);
-    class op extends Error {
-      constructor(pp) {
-        super(`GLB refused: it ${pp}`), this.reason = pp, this.name = "GlbRefused"
+    var WT = mT(34363);
+    class zT extends Error {
+      constructor(TT) {
+        super(`GLB refused: it ${TT}`), this.reason = TT, this.name = "GlbRefused"
       }
     }
-    class Ip extends Error {
-      constructor(pp) {
-        super(pp), this.name = "GlbError"
+    class MT extends Error {
+      constructor(TT) {
+        super(TT), this.name = "GlbError"
       }
     }
 
-    function Sp(pp) {
-      return Reflect.get(pp, "scene")
+    function gT(TT) {
+      return Reflect.get(TT, "scene")
     }
-    const xp = 5130562,
-      Lp = "is not a binary glTF 2.0 file";
+    const nT = 5130562,
+      HT = "is not a binary glTF 2.0 file";
 
-    function Yp(pp) {
-      var ip;
-      const cp = pp instanceof Uint8Array ? pp : new Uint8Array(pp),
-        Ip = (0, Op.f)(cp);
-      if (null === Ip) throw new op(Lp);
-      const Sp = Ip.json,
+    function kT(TT) {
+      var UT;
+      const mT = TT instanceof Uint8Array ? TT : new Uint8Array(TT),
+        MT = (0, WT.g)(mT);
+      if (null === MT) throw new zT(HT);
+      const gT = MT.json,
         {
-          jsonEnd: Yp,
-          length: Dp
-        } = Ip,
-        Ap = new DataView(cp.buffer, cp.byteOffset, cp.byteLength);
-      let Pp = -1,
-        Wp = 0;
-      for (let wp = Yp; wp < Dp;) {
-        if (wp + 8 > Dp) throw new op(Lp);
-        const pp = Ap.getUint32(wp, !0),
-          ip = Ap.getUint32(wp + 4, !0);
-        if (wp + 8 + pp > Dp || ip === Op.b || ip === xp && -1 !== Pp) throw new op(Lp);
-        ip === xp && (Pp = wp + 8, Wp = pp), wp += 8 + pp
+          jsonEnd: kT,
+          length: jT
+        } = MT,
+        lT = new DataView(mT.buffer, mT.byteOffset, mT.byteLength);
+      let LT = -1,
+        pT = 0;
+      for (let cT = kT; cT < jT;) {
+        if (cT + 8 > jT) throw new zT(HT);
+        const TT = lT.getUint32(cT, !0),
+          UT = lT.getUint32(cT + 4, !0);
+        if (cT + 8 + TT > jT || UT === WT.e || UT === nT && -1 !== LT) throw new zT(HT);
+        UT === nT && (LT = cT + 8, pT = TT), cT += 8 + TT
       }
-      let yp = null;
-      const Up = null === (ip = Sp.buffers) || void 0 === ip ? void 0 : ip[0];
-      if (-1 !== Pp && Up && void 0 === Up.uri) {
-        if (!(Up.byteLength >= 0) || Up.byteLength > Wp) throw new op(Lp);
-        yp = new Uint8Array(cp.buffer, cp.byteOffset + Pp, Up.byteLength)
+      let BT = null;
+      const ZT = null === (UT = gT.buffers) || void 0 === UT ? void 0 : UT[0];
+      if (-1 !== LT && ZT && void 0 === ZT.uri) {
+        if (!(ZT.byteLength >= 0) || ZT.byteLength > pT) throw new zT(HT);
+        BT = new Uint8Array(mT.buffer, mT.byteOffset + LT, ZT.byteLength)
       }
       return {
-        json: Sp,
-        bin: yp,
-        fileBytes: cp.byteLength
+        json: gT,
+        bin: BT,
+        fileBytes: mT.byteLength
       }
     }
 
-    function Dp(pp) {
-      const ip = pp.slice(pp.indexOf(",") + 1),
-        cp = Uint8Array.fromBase64;
-      if (cp) return cp(ip).buffer;
-      const Op = atob(ip),
-        op = new Uint8Array(Op.length);
-      for (let Ip = 0; Ip < Op.length; Ip++) op[Ip] = Op.charCodeAt(Ip);
-      return op.buffer
+    function jT(TT) {
+      const UT = TT.slice(TT.indexOf(",") + 1),
+        mT = Uint8Array.fromBase64;
+      if (mT) return mT(UT).buffer;
+      const WT = atob(UT),
+        zT = new Uint8Array(WT.length);
+      for (let MT = 0; MT < WT.length; MT++) zT[MT] = WT.charCodeAt(MT);
+      return zT.buffer
     }
-    async function Ap(pp) {
-      if (pp.startsWith("data:")) return Dp(pp);
-      const ip = await fetch(pp);
-      if (!ip.ok) throw new Ip(`fetching ${pp} failed: ${ip.status} ${ip.statusText}`);
-      return await ip.arrayBuffer()
+    async function lT(TT) {
+      if (TT.startsWith("data:")) return jT(TT);
+      const UT = await fetch(TT);
+      if (!UT.ok) throw new MT(`fetching ${TT} failed: ${UT.status} ${UT.statusText}`);
+      return await UT.arrayBuffer()
     }
-    const Pp = {
+    const LT = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      Wp = {
+      pT = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      yp = {
+      BT = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      Up = [
+      ZT = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  34503: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      f: () => Ip,
-      h: () => Sp
+  34363: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => zT,
+      g: () => MT,
+      i: () => gT
     });
-    const Op = 1179937895,
-      op = 1313821514;
+    const WT = 1179937895,
+      zT = 1313821514;
 
-    function Ip(pp) {
-      const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      if (pp.byteLength < 20 || ip.getUint32(0, !0) !== Op || 2 !== ip.getUint32(4, !0)) return null;
-      const cp = Math.min(ip.getUint32(8, !0), pp.byteLength),
-        Ip = ip.getUint32(12, !0);
-      if (ip.getUint32(16, !0) !== op || 20 + Ip > cp) return null;
-      let Sp;
+    function MT(TT) {
+      const UT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      if (TT.byteLength < 20 || UT.getUint32(0, !0) !== WT || 2 !== UT.getUint32(4, !0)) return null;
+      const mT = Math.min(UT.getUint32(8, !0), TT.byteLength),
+        MT = UT.getUint32(12, !0);
+      if (UT.getUint32(16, !0) !== zT || 20 + MT > mT) return null;
+      let gT;
       try {
-        Sp = JSON.parse((new TextDecoder).decode(pp.subarray(20, 20 + Ip)))
+        gT = JSON.parse((new TextDecoder).decode(TT.subarray(20, 20 + MT)))
       } catch {
         return null
       }
-      return "object" === typeof Sp && null !== Sp ? {
-        json: Sp,
-        jsonEnd: 20 + Ip,
-        length: cp
+      return "object" === typeof gT && null !== gT ? {
+        json: gT,
+        jsonEnd: 20 + MT,
+        length: mT
       } : null
     }
 
-    function Sp(pp) {
-      var ip;
-      const cp = null === (ip = Ip(pp)) || void 0 === ip ? void 0 : ip.json;
-      if (void 0 === cp || !Array.isArray(cp.extensionsUsed) || !cp.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const Op = cp.meshes;
-      return Array.isArray(Op) && Op.some((pp => {
-        const ip = null === pp || void 0 === pp ? void 0 : pp.primitives;
-        return Array.isArray(ip) && ip.some((pp => {
-          const ip = null === pp || void 0 === pp ? void 0 : pp.extensions;
-          return null != (null === ip || void 0 === ip ? void 0 : ip.KHR_draco_mesh_compression)
+    function gT(TT) {
+      var UT;
+      const mT = null === (UT = MT(TT)) || void 0 === UT ? void 0 : UT.json;
+      if (void 0 === mT || !Array.isArray(mT.extensionsUsed) || !mT.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const WT = mT.meshes;
+      return Array.isArray(WT) && WT.some((TT => {
+        const UT = null === TT || void 0 === TT ? void 0 : TT.primitives;
+        return Array.isArray(UT) && UT.some((TT => {
+          const UT = null === TT || void 0 === TT ? void 0 : TT.extensions;
+          return null != (null === UT || void 0 === UT ? void 0 : UT.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

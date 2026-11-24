@@ -1,225 +1,225 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  36593: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      showOnboardingPopup: () => Bp
+  36458: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      showOnboardingPopup: () => QT
     });
-    var Op = cp(62),
-      op = cp(1201),
-      Ip = cp(1372),
-      Sp = cp(1480),
-      xp = cp(4417),
-      Lp = cp(1579),
-      Yp = cp(1577),
-      Dp = cp(2276),
-      Ap = cp(1049),
-      Pp = cp.n(Ap),
-      Wp = cp(1149),
-      yp = cp(36602),
-      Up = cp(1060),
-      wp = cp(2429),
-      vp = cp(3587),
-      tp = cp(1141),
-      Hp = cp(1112);
-    const dp = Object.entries(Lp.b).filter((pp => {
-      let [, ip] = pp;
-      return "default" === ip.cosmeticPack
+    var WT = mT(63),
+      zT = mT(1288),
+      MT = mT(1457),
+      gT = mT(1569),
+      nT = mT(4412),
+      HT = mT(1688),
+      kT = mT(1685),
+      jT = mT(2348),
+      lT = mT(1126),
+      LT = mT.n(lT),
+      pT = mT(1231),
+      BT = mT(36465),
+      ZT = mT(1135),
+      cT = mT(2493),
+      vT = mT(3582),
+      fT = mT(1225),
+      qT = mT(1188);
+    const iT = Object.entries(HT.e).filter((TT => {
+      let [, UT] = TT;
+      return "default" === UT.cosmeticPack
     }));
 
-    function ep(pp) {
-      return Yp.e.default.colourGroups[pp].colours.map(((pp, ip) => {
+    function bT(TT) {
+      return kT.b.default.colourGroups[TT].colours.map(((TT, UT) => {
         let {
-          rbg: cp,
-          order: Op
-        } = pp;
+          rbg: mT,
+          order: WT
+        } = TT;
         return {
-          rbg: cp,
-          order: Op,
-          index: ip
+          rbg: mT,
+          order: WT,
+          index: UT
         }
-      })).sort(((pp, ip) => pp.order - ip.order))
+      })).sort(((TT, UT) => TT.order - UT.order))
     }
-    const jp = ep("eyes"),
-      kp = ep("skin");
+    const OT = bT("eyes"),
+      eT = bT("skin");
 
-    function mp(pp, ip) {
-      var cp;
-      if (void 0 === ip || "default" !== (null === (cp = (0, Dp.m)(pp, ip)) || void 0 === cp ? void 0 : cp.cosmeticPack)) return null;
-      const Op = (0, Dp.j)(ip);
-      return Op && [Op[0], Number(Op[1])]
-    }
-
-    function Rp(pp, ip, cp) {
-      return `${pp}_${ip}_${cp}`
+    function YT(TT, UT) {
+      var mT;
+      if (void 0 === UT || "default" !== (null === (mT = (0, jT.j)(TT, UT)) || void 0 === mT ? void 0 : mT.cosmeticPack)) return null;
+      const WT = (0, jT.i)(UT);
+      return WT && [WT[0], Number(WT[1])]
     }
 
-    function qp(pp) {
+    function JT(TT, UT, mT) {
+      return `${TT}_${UT}_${mT}`
+    }
+
+    function xT(TT) {
       let {
-        label: ip,
-        colours: cp,
-        picked: Op,
-        onPick: Ip
-      } = pp;
+        label: UT,
+        colours: mT,
+        picked: WT,
+        onPick: MT
+      } = TT;
       const {
-        t: Sp
-      } = (0, op.H)();
-      return (0, Hp.jsxs)("div", {
+        t: gT
+      } = (0, zT.z)();
+      return (0, qT.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, Hp.jsx)("div", {
+        children: [(0, qT.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: ip
-        }), (0, Hp.jsx)("div", {
+          children: UT
+        }), (0, qT.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": ip,
-          children: cp.map(((pp, ip) => {
+          "aria-label": UT,
+          children: mT.map(((TT, UT) => {
             let {
-              rbg: cp,
-              index: op
-            } = pp;
-            return (0, Hp.jsx)("button", {
+              rbg: mT,
+              index: zT
+            } = TT;
+            return (0, qT.jsx)("button", {
               type: "button",
-              className: Pp()("OnboardingSwatch", {
-                OnboardingSwatchSelected: op === Op
+              className: LT()("OnboardingSwatch", {
+                OnboardingSwatchSelected: zT === WT
               }),
               style: {
-                backgroundColor: `rgb(${cp.join(",")})`
+                backgroundColor: `rgb(${mT.join(",")})`
               },
               role: "radio",
-              "aria-checked": op === Op,
-              "aria-label": Sp("homePage:onboardingColour", {
-                number: ip + 1
+              "aria-checked": zT === WT,
+              "aria-label": gT("homePage:onboardingColour", {
+                number: UT + 1
               }),
               onClick: () => {
-                Ip(op)
+                MT(zT)
               }
-            }, op)
+            }, zT)
           }))
         })]
       })
     }
 
-    function Mp() {
+    function dT() {
       const {
-        t: pp
-      } = (0, op.H)(), {
-        userContext: ip,
-        isUserContextUpdating: cp
-      } = (0, tp.b)(), [Ip, Sp] = (0, Op.useState)(!1), [, Lp] = (0, Op.useReducer)((pp => pp + 1), 0), Yp = (0, Op.useRef)({}), Dp = (0, Op.useRef)(null), Ap = (0, vp.b)(), ep = {
-        ...ip.getPlayerCosmetics(),
-        ...Dp.current
-      }, Mp = (0, Op.useRef)(null);
-      (0, Op.useEffect)((() => {
-        var pp;
-        Ip && (null === (pp = Mp.current) || void 0 === pp || pp.scrollIntoView({
+        t: TT
+      } = (0, zT.z)(), {
+        userContext: UT,
+        isUserContextUpdating: mT
+      } = (0, fT.d)(), [MT, gT] = (0, WT.useState)(!1), [, HT] = (0, WT.useReducer)((TT => TT + 1), 0), kT = (0, WT.useRef)({}), jT = (0, WT.useRef)(null), lT = (0, vT.c)(), bT = {
+        ...UT.getPlayerCosmetics(),
+        ...jT.current
+      }, dT = (0, WT.useRef)(null);
+      (0, WT.useEffect)((() => {
+        var TT;
+        MT && (null === (TT = dT.current) || void 0 === TT || TT.scrollIntoView({
           block: "nearest"
         }))
-      }), [Ip]);
-      const Cp = (pp, ip) => {
-          (0, yp.b)(pp, Object.entries(ip)), Ap.current ? Lp() : pp.publishUpdateIfCurrent()
+      }), [MT]);
+      const wT = (TT, UT) => {
+          (0, BT.b)(TT, Object.entries(UT)), lT.current ? HT() : TT.publishUpdateIfCurrent()
         },
-        Ep = pp => {
-          const Op = {
-            ...Dp.current,
-            ...pp
+        tT = TT => {
+          const WT = {
+            ...jT.current,
+            ...TT
           };
-          if (!cp) return Dp.current = null, void Cp(ip, Op);
-          Dp.current = Op, Lp(), Wp.userContextManager.getCurrentUserContext().then((pp => {
-            Dp.current === Op && (Dp.current = null, Cp(pp, Op))
-          })).catch((pp => {
-            console.warn("Couldn't put on the onboarding look held for the account", pp), Dp.current === Op && (Dp.current = null, Ap.current && Lp())
+          if (!mT) return jT.current = null, void wT(UT, WT);
+          jT.current = WT, HT(), pT.userContextManager.getCurrentUserContext().then((TT => {
+            jT.current === WT && (jT.current = null, wT(TT, WT))
+          })).catch((TT => {
+            console.warn("Couldn't put on the onboarding look held for the account", TT), jT.current === WT && (jT.current = null, lT.current && HT())
           }))
         };
-      (0, Op.useEffect)((() => () => {
-        ip.publishUpdateIfCurrent()
-      }), [ip]);
-      const Xp = mp("eyes", ep.eyes),
-        lp = mp("skin", ep.skin);
-      return (0, Hp.jsxs)(Hp.Fragment, {
-        children: [(0, Hp.jsx)("div", {
+      (0, WT.useEffect)((() => () => {
+        UT.publishUpdateIfCurrent()
+      }), [UT]);
+      const aT = YT("eyes", bT.eyes),
+        yT = YT("skin", bT.skin);
+      return (0, qT.jsxs)(qT.Fragment, {
+        children: [(0, qT.jsx)("div", {
           className: "OnboardingPresets",
-          children: dp.map(((ip, cp) => {
-            let [Op, {
-              cosmetics: op
-            }] = ip;
-            const Ip = function(pp, ip) {
-              return Object.entries(ip).every((ip => {
-                let [cp, Op] = ip;
-                return "skin" === cp || ("eyes" === cp ? (null === (op = mp("eyes", pp.eyes)) || void 0 === op ? void 0 : op[0]) === (null === (Ip = mp("eyes", Op)) || void 0 === Ip ? void 0 : Ip[0]) : pp[cp] === Op);
-                var op, Ip
+          children: iT.map(((UT, mT) => {
+            let [WT, {
+              cosmetics: zT
+            }] = UT;
+            const MT = function(TT, UT) {
+              return Object.entries(UT).every((UT => {
+                let [mT, WT] = UT;
+                return "skin" === mT || ("eyes" === mT ? (null === (zT = YT("eyes", TT.eyes)) || void 0 === zT ? void 0 : zT[0]) === (null === (MT = YT("eyes", WT)) || void 0 === MT ? void 0 : MT[0]) : TT[mT] === WT);
+                var zT, MT
               }))
-            }(ep, op);
-            return (0, Hp.jsx)("button", {
+            }(bT, zT);
+            return (0, qT.jsx)("button", {
               type: "button",
-              className: Pp()("OnboardingPreset", {
-                OnboardingPresetSelected: Ip
+              className: LT()("OnboardingPreset", {
+                OnboardingPresetSelected: MT
               }),
-              "aria-label": pp("homePage:onboardingPreset", {
-                number: cp + 1
+              "aria-label": TT("homePage:onboardingPreset", {
+                number: mT + 1
               }),
-              "aria-pressed": Ip,
+              "aria-pressed": MT,
               onClick: () => {
-                (0, xp.k)(`preset.${Op}`);
+                (0, nT.i)(`preset.${WT}`);
                 const {
-                  eyes: pp,
-                  skin: ip
-                } = Yp.current;
-                Ep({
-                  ...op,
-                  ...void 0 !== pp && {
-                    eyes: Rp("eyes", mp("eyes", op.eyes)[0], pp)
+                  eyes: TT,
+                  skin: UT
+                } = kT.current;
+                tT({
+                  ...zT,
+                  ...void 0 !== TT && {
+                    eyes: JT("eyes", YT("eyes", zT.eyes)[0], TT)
                   },
-                  ...void 0 !== ip && {
-                    skin: Rp("skin", "0", ip)
+                  ...void 0 !== UT && {
+                    skin: JT("skin", "0", UT)
                   }
                 })
               },
-              children: (0, Hp.jsx)("div", {
+              children: (0, qT.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${Op}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${WT}_preview.png)`
                 }
               })
-            }, Op)
+            }, WT)
           }))
-        }), (0, Hp.jsxs)("button", {
+        }), (0, qT.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": Ip,
+          "aria-expanded": MT,
           onClick: () => {
-            Ip || (0, xp.k)("more"), Sp(!Ip)
+            MT || (0, nT.i)("more"), gT(!MT)
           },
-          children: [pp("homePage:onboardingMoreOptions"), (0, Hp.jsx)(Up.d, {
-            name: Ip ? "caret-up" : "caret-down"
+          children: [TT("homePage:onboardingMoreOptions"), (0, qT.jsx)(ZT.c, {
+            name: MT ? "caret-up" : "caret-down"
           })]
-        }), Ip && (0, Hp.jsxs)("div", {
-          ref: Mp,
+        }), MT && (0, qT.jsxs)("div", {
+          ref: dT,
           className: "OnboardingMore",
-          children: [(0, Hp.jsx)("div", {
+          children: [(0, qT.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, Hp.jsx)(wp.c, {
-              cosmetics: ep
+            children: (0, qT.jsx)(cT.e, {
+              cosmetics: bT
             })
-          }), (0, Hp.jsxs)("div", {
+          }), (0, qT.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, Hp.jsx)(qp, {
-              label: pp("homePage:onboardingEyeColour"),
-              colours: jp,
-              picked: null === Xp || void 0 === Xp ? void 0 : Xp[1],
-              onPick: pp => {
-                var ip;
-                (0, xp.k)("eyes"), Yp.current.eyes = pp, Ep({
-                  eyes: Rp("eyes", null !== (ip = null === Xp || void 0 === Xp ? void 0 : Xp[0]) && void 0 !== ip ? ip : "0", pp)
+            children: [(0, qT.jsx)(xT, {
+              label: TT("homePage:onboardingEyeColour"),
+              colours: OT,
+              picked: null === aT || void 0 === aT ? void 0 : aT[1],
+              onPick: TT => {
+                var UT;
+                (0, nT.i)("eyes"), kT.current.eyes = TT, tT({
+                  eyes: JT("eyes", null !== (UT = null === aT || void 0 === aT ? void 0 : aT[0]) && void 0 !== UT ? UT : "0", TT)
                 })
               }
-            }), (0, Hp.jsx)(qp, {
-              label: pp("homePage:onboardingSkinColour"),
-              colours: kp,
-              picked: null === lp || void 0 === lp ? void 0 : lp[1],
-              onPick: pp => {
-                (0, xp.k)("skin"), Yp.current.skin = pp, Ep({
-                  skin: Rp("skin", "0", pp)
+            }), (0, qT.jsx)(xT, {
+              label: TT("homePage:onboardingSkinColour"),
+              colours: eT,
+              picked: null === yT || void 0 === yT ? void 0 : yT[1],
+              onPick: TT => {
+                (0, nT.i)("skin"), kT.current.skin = TT, tT({
+                  skin: JT("skin", "0", TT)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var Cp = cp(1284),
-      Ep = cp(25),
-      Xp = cp(34316),
-      lp = cp(1361),
-      Qp = cp(1692);
+    var wT = mT(1367),
+      tT = mT(25),
+      aT = mT(34164),
+      yT = mT(1446),
+      XT = mT(1792);
 
-    function Jp(pp) {
+    function IT(TT) {
       const {
-        t: ip
-      } = (0, op.H)(), {
-        userContext: cp,
-        isUserContextUpdating: Ip
-      } = (0, tp.b)(), Lp = Ip ? null : cp.getPlayerName(), Yp = (0, Op.useRef)(null), [Dp, Ap] = (0, Op.useState)((() => null === Lp ? (0, Cp.e)() : null)), [Pp, Wp] = (0, Op.useState)(null), [yp, wp] = (0, Op.useState)(!1), dp = (0, Op.useRef)("aW"), ep = (0, vp.b)(), jp = (0, Op.useRef)(null !== Dp), kp = (0, Op.useRef)(!1), mp = null !== Dp && void 0 !== Dp ? Dp : Lp, Rp = (0, Op.useRef)(null), qp = pp => {
-        Yp.current && (Yp.current.value = pp), Ap(pp)
-      }, Mp = (0, Op.useRef)(!1);
-      (0, Op.useEffect)((() => {
-        var pp, ip;
-        !yp && Mp.current && (Mp.current = !1, null === (pp = Yp.current) || void 0 === pp || pp.focus(), null === (ip = Yp.current) || void 0 === ip || ip.select())
-      }), [yp]);
-      const Jp = (0, Op.useRef)(null);
-      (0, Op.useEffect)((() => {
-        var pp;
-        null !== Pp && (null === (pp = Jp.current) || void 0 === pp || pp.scrollIntoView({
+        t: UT
+      } = (0, zT.z)(), {
+        userContext: mT,
+        isUserContextUpdating: MT
+      } = (0, fT.d)(), HT = MT ? null : mT.getPlayerName(), kT = (0, WT.useRef)(null), [jT, lT] = (0, WT.useState)((() => null === HT ? (0, wT.f)() : null)), [LT, pT] = (0, WT.useState)(null), [BT, cT] = (0, WT.useState)(!1), iT = (0, WT.useRef)("Jp"), bT = (0, vT.c)(), OT = (0, WT.useRef)(null !== jT), eT = (0, WT.useRef)(!1), YT = null !== jT && void 0 !== jT ? jT : HT, JT = (0, WT.useRef)(null), xT = TT => {
+        kT.current && (kT.current.value = TT), lT(TT)
+      }, dT = (0, WT.useRef)(!1);
+      (0, WT.useEffect)((() => {
+        var TT, UT;
+        !BT && dT.current && (dT.current = !1, null === (TT = kT.current) || void 0 === TT || TT.focus(), null === (UT = kT.current) || void 0 === UT || UT.select())
+      }), [BT]);
+      const IT = (0, WT.useRef)(null);
+      (0, WT.useEffect)((() => {
+        var TT;
+        null !== LT && (null === (TT = IT.current) || void 0 === TT || TT.scrollIntoView({
           block: "nearest"
         }))
-      }), [Pp]);
-      const Bp = (pp, ip) => {
-        const cp = document.activeElement === Yp.current || Mp.current;
-        wp(!0), Wp(null), pp.then((pp => {
-          ep.current && (wp(!1), Mp.current = cp, ip(pp))
+      }), [LT]);
+      const QT = (TT, UT) => {
+        const mT = document.activeElement === kT.current || dT.current;
+        cT(!0), pT(null), TT.then((TT => {
+          bT.current && (cT(!1), dT.current = mT, UT(TT))
         }))
       };
-      (0, Op.useEffect)((() => {
-        var pp, ip;
-        Ep.c.get("isTouchScreen") || (null === (pp = Yp.current) || void 0 === pp || pp.focus(), null === (ip = Yp.current) || void 0 === ip || ip.select())
+      (0, WT.useEffect)((() => {
+        var TT, UT;
+        tT.b.get("isTouchScreen") || (null === (TT = kT.current) || void 0 === TT || TT.focus(), null === (UT = kT.current) || void 0 === UT || UT.select())
       }), []);
-      const Np = () => {
-          (0, xp.n)(dp.current), pp()
+      const sT = () => {
+          (0, nT.k)(iT.current), TT()
         },
-        Tp = pp => "refused" === pp.outcome ? pp.message : ip((0, Xp.h)(pp.failure)),
-        fp = pp => !(pp.length >= Cp.m) && (Wp({
+        FT = TT => "refused" === TT.outcome ? TT.message : UT((0, aT.g)(TT.failure)),
+        PT = TT => !(TT.length >= wT.i) && (pT({
           kind: "error",
-          message: ip("homePage:changeNameMinLengthError", {
-            length: Cp.m
+          message: UT("homePage:changeNameMinLengthError", {
+            length: wT.i
           })
         }), !0),
-        bp = pp => {
-          var Op, op, Ip;
-          pp.toLowerCase() !== (null === (Op = null !== (op = null === (Ip = Rp.current) || void 0 === Ip ? void 0 : Ip.name) && void 0 !== op ? op : Lp) || void 0 === Op ? void 0 : Op.toLowerCase()) ? fp(pp) || Bp((0, Xp.d)(cp, pp), (cp => {
-            "taken" !== cp.outcome ? "refused" !== cp.outcome && "failed" !== cp.outcome ? cp.name !== pp ? (dp.current = "suffixed", Rp.current = {
-              name: cp.name,
-              outcome: dp.current
-            }, qp(cp.name), Wp({
+        VT = TT => {
+          var WT, zT, MT;
+          TT.toLowerCase() !== (null === (WT = null !== (zT = null === (MT = JT.current) || void 0 === MT ? void 0 : MT.name) && void 0 !== zT ? zT : HT) || void 0 === WT ? void 0 : WT.toLowerCase()) ? PT(TT) || QT((0, aT.e)(mT, TT), (mT => {
+            "taken" !== mT.outcome ? "refused" !== mT.outcome && "failed" !== mT.outcome ? mT.name !== TT ? (iT.current = "suffixed", JT.current = {
+              name: mT.name,
+              outcome: iT.current
+            }, xT(mT.name), pT({
               kind: "suffixed",
-              taken: pp,
-              name: cp.name
-            })) : Np() : Wp({
+              taken: TT,
+              name: mT.name
+            })) : sT() : pT({
               kind: "error",
-              message: Tp(cp)
-            }) : Wp({
+              message: FT(mT)
+            }) : pT({
               kind: "error",
-              message: ip("homePage:onboardingNameAllTaken")
+              message: UT("homePage:onboardingNameAllTaken")
             })
-          })) : Np()
+          })) : sT()
         };
-      (0, Op.useEffect)((() => {
-        if (!yp || null !== Lp || !kp.current) return;
-        const pp = setTimeout((() => {
-          kp.current = !1, wp(!1), Wp({
+      (0, WT.useEffect)((() => {
+        if (!BT || null !== HT || !eT.current) return;
+        const TT = setTimeout((() => {
+          eT.current = !1, cT(!1), pT({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(pp)
+          clearTimeout(TT)
         }
-      }), [yp, Lp]), (0, Op.useEffect)((() => {
-        if (null === Lp) return;
-        const pp = jp.current && "aW" === dp.current && cp.isLoggedIn();
-        jp.current = !1, "noAccount" === (null === Pp || void 0 === Pp ? void 0 : Pp.kind) && Wp(null), pp && qp(Lp), kp.current && (kp.current = !1, wp(!1), bp(pp ? Lp : mp))
-      }), [Lp]);
-      const hp = "error" === (null === Pp || void 0 === Pp ? void 0 : Pp.kind) ? Pp.message : "noAccount" === (null === Pp || void 0 === Pp ? void 0 : Pp.kind) ? ip("homePage:onboardingNameNoAccount") : null;
+      }), [BT, HT]), (0, WT.useEffect)((() => {
+        if (null === HT) return;
+        const TT = OT.current && "Jp" === iT.current && mT.isLoggedIn();
+        OT.current = !1, "noAccount" === (null === LT || void 0 === LT ? void 0 : LT.kind) && pT(null), TT && xT(HT), eT.current && (eT.current = !1, cT(!1), VT(TT ? HT : YT))
+      }), [HT]);
+      const uT = "error" === (null === LT || void 0 === LT ? void 0 : LT.kind) ? LT.message : "noAccount" === (null === LT || void 0 === LT ? void 0 : LT.kind) ? UT("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, Hp.jsxs)("div", {
+        field: (0, qT.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: Jp,
-          children: [(0, Hp.jsx)("div", {
+          ref: IT,
+          children: [(0, qT.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: ip("general:name")
-          }), null === mp && (0, Hp.jsx)(lp.c, {}), null !== mp && (0, Hp.jsxs)("div", {
+            children: UT("general:name")
+          }), null === YT && (0, qT.jsx)(yT.c, {}), null !== YT && (0, qT.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, Hp.jsx)(Qp.c, {
+            children: [(0, qT.jsx)(XT.e, {
               className: "OnboardingNameInput",
-              ariaLabel: ip("general:name"),
-              maxLength: Cp.i,
-              defaultValue: mp,
-              domRef: Yp,
-              forcedText: yp ? mp : null,
+              ariaLabel: UT("general:name"),
+              maxLength: wT.h,
+              defaultValue: YT,
+              domRef: kT,
+              forcedText: BT ? YT : null,
               onEnter: () => {
-                var pp;
-                null === (pp = Yp.current) || void 0 === pp || pp.blur()
+                var TT;
+                null === (TT = kT.current) || void 0 === TT || TT.blur()
               },
-              onValueChange: pp => {
-                const cp = (0, Cp.p)(pp);
-                cp !== pp && Yp.current && (Yp.current.value = cp), Wp(cp !== pp ? {
+              onValueChange: TT => {
+                const mT = (0, wT.n)(TT);
+                mT !== TT && kT.current && (kT.current.value = mT), pT(mT !== TT ? {
                   kind: "error",
-                  message: ip("homePage:nameCharacters")
-                } : null), cp !== mp && (dp.current = "changed"), Ap(cp)
+                  message: UT("homePage:nameCharacters")
+                } : null), mT !== YT && (iT.current = "changed"), lT(mT)
               }
-            }), (0, Hp.jsx)(Sp.f, {
+            }), (0, qT.jsx)(gT.e, {
               className: "OnboardingRandomName",
-              ariaLabel: ip("homePage:onboardingRandomName"),
-              disabled: yp,
+              ariaLabel: UT("homePage:onboardingRandomName"),
+              disabled: BT,
               onClick: () => {
                 (() => {
-                  if (Wp(null), null === Lp || cp.isLoggedIn()) return qp((0, Cp.e)()), void(dp.current = "rolled");
-                  Bp((0, Xp.n)(cp), (pp => {
-                    var ip, Op;
-                    if ("refused" === pp.outcome || "failed" === pp.outcome) return qp(cp.getPlayerName()), dp.current = null !== (ip = null === (Op = Rp.current) || void 0 === Op ? void 0 : Op.outcome) && void 0 !== ip ? ip : "aW", void Wp({
+                  if (pT(null), null === HT || mT.isLoggedIn()) return xT((0, wT.f)()), void(iT.current = "rolled");
+                  QT((0, aT.m)(mT), (TT => {
+                    var UT, WT;
+                    if ("refused" === TT.outcome || "failed" === TT.outcome) return xT(mT.getPlayerName()), iT.current = null !== (UT = null === (WT = JT.current) || void 0 === WT ? void 0 : WT.outcome) && void 0 !== UT ? UT : "Jp", void pT({
                       kind: "error",
-                      message: Tp(pp)
+                      message: FT(TT)
                     });
-                    dp.current = "rolled", Rp.current = {
-                      name: pp.name,
+                    iT.current = "rolled", JT.current = {
+                      name: TT.name,
                       outcome: "rolled"
-                    }, qp(pp.name)
+                    }, xT(TT.name)
                   }))
                 })()
               },
-              children: (0, Hp.jsx)(Up.d, {
+              children: (0, qT.jsx)(ZT.c, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === Pp || void 0 === Pp ? void 0 : Pp.kind) && (0, Hp.jsx)("div", {
+          }), "suffixed" === (null === LT || void 0 === LT ? void 0 : LT.kind) && (0, qT.jsx)("div", {
             className: "OnboardingNameNote",
-            children: ip("homePage:onboardingNameSuffixed", {
-              taken: Pp.taken,
-              name: Pp.name
+            children: UT("homePage:onboardingNameSuffixed", {
+              taken: LT.taken,
+              name: LT.name
             })
-          }), null !== hp && (0, Hp.jsx)("div", {
+          }), null !== uT && (0, qT.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: hp
+            children: uT
           })]
         }),
         submit: () => {
-          if (!yp && null !== mp) {
-            if (null === Lp) {
-              if (fp(mp)) return;
-              return Mp.current = document.activeElement === Yp.current, kp.current = !0, wp(!0), void Wp(null)
+          if (!BT && null !== YT) {
+            if (null === HT) {
+              if (PT(YT)) return;
+              return dT.current = document.activeElement === kT.current, eT.current = !0, cT(!0), void pT(null)
             }
-            bp(mp)
+            VT(YT)
           }
         },
-        busy: yp,
-        ready: null !== mp
+        busy: BT,
+        ready: null !== YT
       }
     }
 
-    function Bp() {
-      const pp = {
+    function QT() {
+      const TT = {
         finished: !1
       };
-      return Ip.NotificationProvider.showCustomPopup({
-        body: ip => (0, Hp.jsx)(Np, {
+      return MT.NotificationProvider.showCustomPopup({
+        body: UT => (0, qT.jsx)(sT, {
           onFinish: () => {
-            (0, xp.g)(), pp.finished = !0, ip()
+            (0, nT.e)(), TT.finished = !0, UT()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          pp.finished || (0, xp.d)()
+          TT.finished || (0, nT.c)()
         }
       })
     }
 
-    function Np(pp) {
+    function sT(TT) {
       let {
-        onFinish: ip
-      } = pp;
+        onFinish: UT
+      } = TT;
       const {
-        t: cp
-      } = (0, op.H)(), Ip = Jp(ip);
-      return (0, Op.useEffect)((() => {
-        (0, xp.p)()
-      }), []), (0, Hp.jsxs)("div", {
+        t: mT
+      } = (0, zT.z)(), MT = IT(UT);
+      return (0, WT.useEffect)((() => {
+        (0, nT.m)()
+      }), []), (0, qT.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, Hp.jsx)("div", {
+        children: [(0, qT.jsx)("div", {
           className: "OnboardingTitle",
-          children: cp("homePage:onboardingTitle")
-        }), (0, Hp.jsxs)("div", {
+          children: mT("homePage:onboardingTitle")
+        }), (0, qT.jsxs)("div", {
           className: "OnboardingBody",
-          children: [Ip.field, (0, Hp.jsx)(Mp, {})]
-        }), (0, Hp.jsx)("div", {
+          children: [MT.field, (0, qT.jsx)(dT, {})]
+        }), (0, qT.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, Hp.jsx)(Sp.o, {
+          children: (0, qT.jsx)(gT.l, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: Ip.busy,
-            disabled: !Ip.ready,
-            onClick: Ip.submit,
-            children: cp("homePage:onboardingDone")
+            loading: MT.busy,
+            disabled: !MT.ready,
+            onClick: MT.submit,
+            children: mT("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36602: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  36465: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op = cp(1956),
-      op = cp(1520);
-    const Ip = new class {
+    var WT = mT(2046),
+      zT = mT(1613);
+    const MT = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(pp, ip) {
-        pp !== this.userContext && this.sendHeld(), this.userContext = pp;
-        for (const [Op, op] of ip) this.pending.set(Op, op);
+      save(TT, UT) {
+        TT !== this.userContext && this.sendHeld(), this.userContext = TT;
+        for (const [WT, zT] of UT) this.pending.set(WT, zT);
         if (null !== this.timer) return;
-        const cp = this.lastSentAt + 1100 - Date.now();
-        cp <= 0 ? this.send(pp) : (this.timer = setTimeout((() => {
+        const mT = this.lastSentAt + 1100 - Date.now();
+        mT <= 0 ? this.send(TT) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), cp), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), mT), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(pp) {
-        const ip = Array.from(this.pending, (pp => {
-          let [ip, cp] = pp;
+      send(TT) {
+        const UT = Array.from(this.pending, (TT => {
+          let [UT, mT] = TT;
           return {
-            KI: ip,
-            VI: cp
+            wM: UT,
+            tM: mT
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), op.b.updateCosmetics(pp, ip).catch((pp => {
-          console.error("Failed to update cosmetics", pp)
+        this.pending.clear(), this.lastSentAt = Date.now(), zT.b.updateCosmetics(TT, UT).catch((TT => {
+          console.error("Failed to update cosmetics", TT)
         }))
       }
     };
 
-    function Sp(pp, ip) {
-      for (const [cp, Op] of ip) pp.setPlayerCosmetics(cp, Op);
-      if (null === Op.gameBridge.latest("connectedGame").websocketUrl) Ip.save(pp, ip);
+    function gT(TT, UT) {
+      for (const [mT, WT] of UT) TT.setPlayerCosmetics(mT, WT);
+      if (null === WT.gameBridge.latest("connectedGame").websocketUrl) MT.save(TT, UT);
       else
-        for (const [cp, op] of ip) Op.gameBridge.send("updateMyCosmetic", {
-          KI: cp,
-          VI: op
+        for (const [mT, zT] of UT) WT.gameBridge.send("updateMyCosmetic", {
+          wM: mT,
+          tM: zT
         })
     }
   },
-  34316: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => tp,
-      h: () => Yp,
-      l: () => Up,
-      n: () => yp
+  34164: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => fT,
+      g: () => kT,
+      k: () => ZT,
+      m: () => BT
     });
-    var Op = cp(156),
-      op = cp(1284),
-      Ip = cp(1211),
-      Sp = cp(1149),
-      xp = cp(1758);
-    const Lp = {
+    var WT = mT(166),
+      zT = mT(1367),
+      MT = mT(1302),
+      gT = mT(1231),
+      nT = mT(1854);
+    const HT = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function Yp(pp) {
-      return Lp[pp]
+    function kT(TT) {
+      return HT[TT]
     }
 
-    function Dp(pp) {
-      return (0, xp.e)(pp) ? "outdated" : pp instanceof Op.e ? 429 === pp.httpCode ? "busy" : "server" : "offline"
+    function jT(TT) {
+      return (0, nT.d)(TT) ? "outdated" : TT instanceof WT.d ? 429 === TT.httpCode ? "busy" : "server" : "offline"
     }
 
-    function Ap(pp, ip, cp) {
-      return (0, Sp.postJsonWithMetricsCookiesAndJsonResponse)(`${Ip.clientSideServerUrls.indexUrl}${ip}`, cp, {
+    function lT(TT, UT, mT) {
+      return (0, gT.postJsonWithMetricsCookiesAndJsonResponse)(`${MT.clientSideServerUrls.indexUrl}${UT}`, mT, {
         retries: 3
-      }, pp.getMetricsCookies()).catch((pp => (console.error("Bad response from the server when trying to change name:", ip, pp), {
+      }, TT.getMetricsCookies()).catch((TT => (console.error("Bad response from the server when trying to change name:", UT, TT), {
         outcome: "failed",
-        failure: Dp(pp)
+        failure: jT(TT)
       })))
     }
 
-    function Pp(pp) {
-      return "outcome" in pp && "failed" === pp.outcome
+    function LT(TT) {
+      return "outcome" in TT && "failed" === TT.outcome
     }
 
-    function Wp(pp) {
-      return console.error("Error when trying to get with new name from DB", pp), {
+    function pT(TT) {
+      return console.error("Error when trying to get with new name from DB", TT), {
         outcome: "refused",
-        message: pp
+        message: TT
       }
     }
-    async function yp(pp) {
-      const ip = await Ap(pp, "/index/name/random", {});
-      return Pp(ip) ? ip : "err" in ip ? Wp(ip.err) : (pp.setPlayerName(ip.name), {
+    async function BT(TT) {
+      const UT = await lT(TT, "/index/name/random", {});
+      return LT(UT) ? UT : "err" in UT ? pT(UT.err) : (TT.setPlayerName(UT.name), {
         outcome: "changed",
-        name: ip.name
+        name: UT.name
       })
     }
-    async function Up(pp, ip) {
-      const cp = await Ap(pp, "/index/name/update", {
-        name: ip
+    async function ZT(TT, UT) {
+      const mT = await lT(TT, "/index/name/update", {
+        name: UT
       });
-      return Pp(cp) ? cp : "err" in cp ? Wp(cp.err) : cp.nameExists ? {
+      return LT(mT) ? mT : "err" in mT ? pT(mT.err) : mT.nameExists ? {
         outcome: "taken"
-      } : (pp.setPlayerName(ip), {
+      } : (TT.setPlayerName(UT), {
         outcome: "changed",
-        name: ip
+        name: UT
       })
     }
 
-    function wp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const Op = 1 === ip ? 1 : 10 ** (ip - 1),
-        Ip = String(Op + Math.floor(cp() * (10 ** ip - Op)));
-      return `${pp.slice(0,op.i-ip)}${Ip}`
+    function cT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const WT = 1 === UT ? 1 : 10 ** (UT - 1),
+        MT = String(WT + Math.floor(mT() * (10 ** UT - WT)));
+      return `${TT.slice(0,zT.h-UT)}${MT}`
     }
-    const vp = [1, 2, 3, 4];
-    async function tp(pp, ip) {
-      const cp = await Up(pp, ip);
-      if ("taken" !== cp.outcome) return cp;
-      for (const Op of vp) {
-        const cp = wp(ip, Op),
-          op = await Up(pp, cp);
-        if ("taken" !== op.outcome) return op
+    const vT = [1, 2, 3, 4];
+    async function fT(TT, UT) {
+      const mT = await ZT(TT, UT);
+      if ("taken" !== mT.outcome) return mT;
+      for (const WT of vT) {
+        const mT = cT(UT, WT),
+          zT = await ZT(TT, mT);
+        if ("taken" !== zT.outcome) return zT
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

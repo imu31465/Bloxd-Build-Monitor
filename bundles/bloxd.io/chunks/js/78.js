@@ -1,509 +1,509 @@
 export const id = 78;
 export const ids = [78];
 export const modules = {
-  4791: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Fi,
-      f: () => yc,
-      g: () => pc,
-      i: () => oc,
-      j: () => si,
-      m: () => ic,
-      p: () => fi,
-      q: () => ri,
-      u: () => Ei,
-      v: () => Wc,
-      x: () => Pc,
-      A: () => Zi,
-      C: () => Ti
+  4780: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => CU,
+      f: () => lm,
+      g: () => oU,
+      j: () => Um,
+      k: () => EU,
+      n: () => AU,
+      r: () => FU,
+      s: () => SU,
+      w: () => wU,
+      z: () => jm,
+      C: () => km,
+      G: () => GU,
+      I: () => sU
     });
-    var Op = cp(2963);
-    const op = Function.prototype.toString,
-      Ip = RegExp.prototype.exec,
-      Sp = Reflect.apply,
-      xp = Function.prototype.call,
-      Lp = Function.prototype.apply,
-      Yp = Function.prototype.bind,
-      Dp = Object.defineProperty,
-      Ap = Uint8Array;
-    let Pp, Wp;
+    var WT = mT(2992);
+    const zT = Function.prototype.toString,
+      MT = RegExp.prototype.exec,
+      gT = Reflect.apply,
+      nT = Function.prototype.call,
+      HT = Function.prototype.apply,
+      kT = Function.prototype.bind,
+      jT = Object.defineProperty,
+      lT = Uint8Array;
+    let LT, pT;
     try {
-      Pp = globalThis.crypto, Wp = void 0 === Pp || null === Pp ? void 0 : Pp.getRandomValues
+      LT = globalThis.crypto, pT = void 0 === LT || null === LT ? void 0 : LT.getRandomValues
     } catch {}
-    const yp = "bloxdBindApply";
-    let Up;
+    const BT = "bloxdBindApply";
+    let ZT;
     try {
-      const pp = xp;
-      Dp(pp, yp, {
+      const TT = nT;
+      jT(TT, BT, {
         __proto__: null,
-        value: Yp,
+        value: kT,
         configurable: !0
       });
       try {
-        Up = pp[yp](Lp)
+        ZT = TT[BT](HT)
       } finally {
-        delete pp[yp]
+        delete TT[BT]
       }
     } catch {}
-    const wp = 16,
-      vp = 256,
-      tp = 0,
-      Hp = 1,
-      dp = 2,
-      ep = 3;
-    let jp, kp = tp,
-      mp = Sp,
-      Rp = 0;
+    const cT = 16,
+      vT = 256,
+      fT = 0,
+      qT = 1,
+      iT = 2,
+      bT = 3;
+    let OT, eT = fT,
+      YT = gT,
+      JT = 0;
 
-    function qp(pp, ip) {
-      return pp === `function ${ip}() { [native code] }` || pp === `function ${ip}() {\n    [native code]\n}`
+    function xT(TT, UT) {
+      return TT === `function ${UT}() { [native code] }` || TT === `function ${UT}() {\n    [native code]\n}`
     }
-    const Mp = 0,
-      Cp = 1,
-      Ep = 2;
-    let Xp = Mp;
+    const dT = 0,
+      wT = 1,
+      tT = 2;
+    let aT = dT;
 
-    function lp(pp, ip, cp) {
-      if (Xp === Ep && kp === Hp && ! function() {
-          const pp = jp;
-          return Rp >= vp && (mp(Wp, Pp, [pp]), Rp = 0), pp[Rp++] < 256 / wp
-        }()) return function(pp, ip, cp) {
-        return mp(pp, ip, cp ?? 0)
+    function yT(TT, UT, mT) {
+      if (aT === tT && eT === qT && ! function() {
+          const TT = OT;
+          return JT >= vT && (YT(pT, LT, [TT]), JT = 0), TT[JT++] < 256 / cT
+        }()) return function(TT, UT, mT) {
+        return YT(TT, UT, mT ?? 0)
       }(...arguments);
-      if (Xp === Mp || kp === dp) return Sp(pp, ip, cp);
-      let Op;
-      Xp = Mp;
+      if (aT === dT || eT === iT) return gT(TT, UT, mT);
+      let WT;
+      aT = dT;
       try {
-        kp === tp && (kp = ep, kp = function() {
-          const pp = Sp(op, Sp, []);
-          if (qp(pp, "apply")) return dp;
-          if (null === Sp(Ip, /\(\.\.\.arguments\)/, [pp]) && null === Sp(Ip, /^function\s*\(\.\.\.[\w$]+\)/, [pp])) return dp;
-          if ("function" !== typeof Up || "function" !== typeof xp || "function" !== typeof Lp || "function" !== typeof Yp || "function" !== typeof Dp || "function" !== typeof Wp || "function" !== typeof Ap || !qp(Sp(op, xp, []), "call") || !qp(Sp(op, Lp, []), "apply") || !qp(Sp(op, Yp, []), "bind") || !qp(Sp(op, Dp, []), "defineProperty") || !qp(Sp(op, Wp, []), "getRandomValues") || !qp(Sp(op, Ap, []), "Uint8Array")) return dp;
-          const ip = Up,
-            cp = {},
-            Op = function(pp) {
-              return this === cp && pp === cp
+        eT === fT && (eT = bT, eT = function() {
+          const TT = gT(zT, gT, []);
+          if (xT(TT, "apply")) return iT;
+          if (null === gT(MT, /\(\.\.\.arguments\)/, [TT]) && null === gT(MT, /^function\s*\(\.\.\.[\w$]+\)/, [TT])) return iT;
+          if ("function" !== typeof ZT || "function" !== typeof nT || "function" !== typeof HT || "function" !== typeof kT || "function" !== typeof jT || "function" !== typeof pT || "function" !== typeof lT || !xT(gT(zT, nT, []), "call") || !xT(gT(zT, HT, []), "apply") || !xT(gT(zT, kT, []), "bind") || !xT(gT(zT, jT, []), "defineProperty") || !xT(gT(zT, pT, []), "getRandomValues") || !xT(gT(zT, lT, []), "Uint8Array")) return iT;
+          const UT = ZT,
+            mT = {},
+            WT = function(TT) {
+              return this === mT && TT === mT
             };
           try {
-            if (!0 !== ip(Op, cp, [cp])) return dp;
-            const pp = new Ap(vp);
-            ip(Wp, Pp, [pp]), jp = pp
+            if (!0 !== UT(WT, mT, [mT])) return iT;
+            const TT = new lT(vT);
+            UT(pT, LT, [TT]), OT = TT
           } catch {
-            return dp
+            return iT
           }
-          return mp = ip, Hp
-        }()), Op = Sp(pp, ip, cp)
-      } catch (yp) {
-        throw kp = dp, yp
+          return YT = UT, qT
+        }()), WT = gT(TT, UT, mT)
+      } catch (BT) {
+        throw eT = iT, BT
       }
-      return Xp = Ep, Op
+      return aT = tT, WT
     }
-    let Qp = Sp;
+    let XT = gT;
 
-    function Jp() {
-      return (Qp === Sp ? 0 : 3) + Xp
-    }
-
-    function Bp() {
-      const pp = Jp();
-      return Qp = Sp, pp
+    function IT() {
+      return (XT === gT ? 0 : 3) + aT
     }
 
-    function Np(pp) {
-      Qp = pp >= 3 ? lp : Sp, Xp = pp % 3
-    }
-    const Tp = Function.prototype.toString,
-      fp = Object.getOwnPropertyDescriptor,
-      bp = Object.prototype.hasOwnProperty,
-      hp = RegExp.prototype.exec,
-      ap = TextEncoder.prototype.encodeInto,
-      np = String.prototype.startsWith,
-      Fp = Number.prototype.toString,
-      gp = WeakMap.prototype.get,
-      Gp = WeakMap.prototype.set,
-      rp = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      Zp = new TextEncoder,
-      zp = new Uint8Array(1024),
-      sp = 9999999,
-      Kp = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      Vp = new WeakMap;
-
-    function ii(pp) {
-      if ("function" !== typeof pp) return "#a0.0";
-      const ip = Qp(gp, Vp, [pp]);
-      if (void 0 !== ip) return ip;
-      const cp = Qp(Tp, pp, []),
-        Op = cp.length > sp ? sp : cp.length,
-        op = `#${function(pp,ip){const cp=Qp(hp,rp,[ip]);if(null===cp)return"s";const Op=cp[1];if("ProxyObject"===Op)return"p";if(""!==Op)return Qp(np,Op,["bound "])?"b":"n";try{const ip=fp(pp,"name"),cp=void 0!==ip&&Qp(bp,ip,["value"])?ip.value:void 0;return"string"===typeof cp&&Qp(np,cp,["bound "])?"b":"p"}catch{return"p"}}(pp,cp)}${Op}.${function(pp){const{written:ip}=Qp(ap,Zp,[pp,zp]);let cp=2166136261;for(let Op=0;Op<ip;Op++)cp=(cp^zp[Op])>>>0,cp=cp+(cp<<1)+(cp<<4)+(cp<<7)+(cp<<8)+(cp<<24)>>>0;return Qp(Fp,cp,[36])}(cp)}`;
-      return Qp(Gp, Vp, [pp, op]), op
+    function QT() {
+      const TT = IT();
+      return XT = gT, TT
     }
 
-    function ci(pp) {
-      const ip = Qp(hp, Kp, [pp]);
-      return null === ip ? pp : ip[1]
+    function sT(TT) {
+      XT = TT >= 3 ? yT : gT, aT = TT % 3
     }
-    var Oi = cp(2980);
-    const oi = Function.prototype.toString,
-      Ii = Object.getOwnPropertyDescriptor,
-      Si = RegExp.prototype.exec,
-      xi = Object.prototype.hasOwnProperty,
-      Li = Set.prototype.has,
-      Yi = WeakMap.prototype.get,
-      Di = WeakMap.prototype.set,
-      Ai = Reflect.get,
-      Pi = Object.getPrototypeOf,
-      Wi = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const FT = Function.prototype.toString,
+      PT = Object.getOwnPropertyDescriptor,
+      VT = Object.prototype.hasOwnProperty,
+      uT = RegExp.prototype.exec,
+      CT = TextEncoder.prototype.encodeInto,
+      rT = String.prototype.startsWith,
+      KT = Number.prototype.toString,
+      ST = WeakMap.prototype.get,
+      GT = WeakMap.prototype.set,
+      NT = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      ET = new TextEncoder,
+      hT = new Uint8Array(1024),
+      DT = 9999999,
+      oT = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      AT = new WeakMap;
 
-    function yi(pp, ip, cp) {
+    function RT(TT) {
+      if ("function" !== typeof TT) return "#a0.0";
+      const UT = XT(ST, AT, [TT]);
+      if (void 0 !== UT) return UT;
+      const mT = XT(FT, TT, []),
+        WT = mT.length > DT ? DT : mT.length,
+        zT = `#${function(TT,UT){const mT=XT(uT,NT,[UT]);if(null===mT)return"s";const WT=mT[1];if("ProxyObject"===WT)return"p";if(""!==WT)return XT(rT,WT,["bound "])?"b":"n";try{const UT=PT(TT,"name"),mT=void 0!==UT&&XT(VT,UT,["value"])?UT.value:void 0;return"string"===typeof mT&&XT(rT,mT,["bound "])?"b":"p"}catch{return"p"}}(TT,mT)}${WT}.${function(TT){const{written:UT}=XT(CT,ET,[TT,hT]);let mT=2166136261;for(let WT=0;WT<UT;WT++)mT=(mT^hT[WT])>>>0,mT=mT+(mT<<1)+(mT<<4)+(mT<<7)+(mT<<8)+(mT<<24)>>>0;return XT(KT,mT,[36])}(mT)}`;
+      return XT(GT, AT, [TT, zT]), zT
+    }
+
+    function TU(TT) {
+      const UT = XT(uT, oT, [TT]);
+      return null === UT ? TT : UT[1]
+    }
+    var UU = mT(3015);
+    const mU = Function.prototype.toString,
+      WU = Object.getOwnPropertyDescriptor,
+      zU = RegExp.prototype.exec,
+      MU = Object.prototype.hasOwnProperty,
+      gU = Set.prototype.has,
+      nU = WeakMap.prototype.get,
+      HU = WeakMap.prototype.set,
+      kU = Reflect.get,
+      jU = Object.getPrototypeOf,
+      lU = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function LU(TT, UT, mT) {
       return {
-        code: pp,
-        holder: ip,
-        key: cp,
+        code: TT,
+        holder: UT,
+        key: mT,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${cp}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${mT}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function Ui() {
-      return Wi
+    function pU() {
+      return lU
     }
-    const wi = Wi?.Instance.prototype,
-      vi = Wi?.Memory.prototype;
+    const BU = lU?.Instance.prototype,
+      ZU = lU?.Memory.prototype;
 
-    function ti() {
-      return vi
+    function cU() {
+      return ZU
     }
-    let Hi, di;
+    let vU, fU;
     try {
-      const pp = globalThis.crypto,
-        ip = pp?.subtle;
-      Hi = pp ? Pi(pp) : void 0, di = ip ? Pi(ip) : void 0
+      const TT = globalThis.crypto,
+        UT = TT?.subtle;
+      vU = TT ? jU(TT) : void 0, fU = UT ? jU(UT) : void 0
     } catch {}
 
-    function ei(pp, ip) {
-      for (let cp = pp; void 0 !== cp && null !== cp; cp = Pi(cp)) {
-        const pp = Ii(cp, ip);
-        if (pp) return pp
+    function qU(TT, UT) {
+      for (let mT = TT; void 0 !== mT && null !== mT; mT = jU(mT)) {
+        const TT = WU(mT, UT);
+        if (TT) return TT
       }
     }
-    const ui = [yi("in", Ui, "instantiate", {
+    const iU = [LU("in", pU, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), yi("is", Ui, "instantiateStreaming", {
+    }), LU("is", pU, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), yi("co", Ui, "compile", {
+    }), LU("co", pU, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), yi("cs", Ui, "compileStreaming", {
+    }), LU("cs", pU, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), yi("mo", Ui, "Module", {
+    }), LU("mo", pU, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), yi("it", Ui, "Instance", {
+    }), LU("it", pU, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), yi("me", Ui, "Memory", {
+    }), LU("me", pU, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), yi("ex", (function() {
-      return wi
+    }), LU("ex", (function() {
+      return BU
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), yi("bu", ti, "buffer", {
+    }), LU("bu", cU, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), yi("gr", ti, "grow", {
+    }), LU("gr", cU, "grow", {
       tier: "punished"
-    }), yi("rc", (function() {
+    }), LU("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), yi("cr", (function() {
+    }), "clone"), LU("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), yi("su", (function() {
-      return Hi
+    }), LU("su", (function() {
+      return vU
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), yi("dg", (function() {
-      return di
+    }), LU("dg", (function() {
+      return fU
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function ji(pp) {
-      let ip;
+    function bU(TT) {
+      let UT;
       try {
-        const cp = Ai(globalThis, pp);
-        ip = "function" === typeof cp ? cp.prototype : void 0
+        const mT = kU(globalThis, TT);
+        UT = "function" === typeof mT ? mT.prototype : void 0
       } catch {}
-      return () => ip
+      return () => UT
     }
 
-    function ki(pp, ip, cp) {
-      return cp.map((cp => yi(pp, ip, cp)))
+    function OU(TT, UT, mT) {
+      return mT.map((mT => LU(TT, UT, mT)))
     }
-    const mi = yi("rx", ji("HTMLCanvasElement"), "getContext"),
-      Ri = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      qi = {
-        webgpu: [...ki("gd", ji("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...ki("gq", ji("GPUQueue"), ["submit", "writeBuffer"]), ...ki("ge", ji("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...ki("gp", ji("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), mi],
-        webgl: [...ki("g2", ji("WebGL2RenderingContext"), [...Ri, "drawArraysInstanced", "drawElementsInstanced"]), mi],
-        webgl1: [...ki("g1", ji("WebGLRenderingContext"), Ri), mi]
+    const eU = LU("rx", bU("HTMLCanvasElement"), "getContext"),
+      YU = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      JU = {
+        webgpu: [...OU("gd", bU("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...OU("gq", bU("GPUQueue"), ["submit", "writeBuffer"]), ...OU("ge", bU("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...OU("gp", bU("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), eU],
+        webgl: [...OU("g2", bU("WebGL2RenderingContext"), [...YU, "drawArraysInstanced", "drawElementsInstanced"]), eU],
+        webgl1: [...OU("g1", bU("WebGLRenderingContext"), YU), eU]
       };
-    let Mi = [];
-    const Ci = new WeakMap;
+    let xU = [];
+    const dU = new WeakMap;
 
-    function Ei(pp, ip) {
-      const cp = Bp();
+    function wU(TT, UT) {
+      const mT = QT();
       try {
-        Qp(Di, Ci, [pp, ip])
+        XT(HU, dU, [TT, UT])
       } finally {
-        Np(cp)
+        sT(mT)
       }
     }
 
-    function Xi(pp) {
+    function tU(TT) {
       try {
-        const ip = Dc(pp),
-          cp = Qp(Yi, Ci, [ip]);
-        return Oc(cp, pp) ? li(pp, !0) : `${li(pp,!1)}${ii(cp??ip)}`
+        const UT = nm(TT),
+          mT = XT(nU, dU, [UT]);
+        return Tm(mT, TT) ? aU(TT, !0) : `${aU(TT,!1)}${RT(mT??UT)}`
       } catch {
-        return `${li(pp,!1)}${ii(void 0)}`
+        return `${aU(TT,!1)}${RT(void 0)}`
       }
     }
 
-    function li(pp, ip) {
+    function aU(TT, UT) {
       let {
-        code: cp,
-        key: Op
-      } = pp;
-      return `wh:${cp}${ip?"-dbg":""}:${Op}`
+        code: mT,
+        key: WT
+      } = TT;
+      return `wh:${mT}${UT?"-dbg":""}:${WT}`
     }
 
-    function Qi(pp) {
-      return Object.values(qi).flatMap((ip => ip.map((ip => li(ip, pp)))))
+    function yU(TT) {
+      return Object.values(JU).flatMap((UT => UT.map((UT => aU(UT, TT)))))
     }
-    const Ji = new Set(Qi(!0)),
-      Bi = new Set([...Qi(!1), ...Ji]),
-      Ni = li(mi, !1);
+    const XU = new Set(yU(!0)),
+      IU = new Set([...yU(!1), ...XU]),
+      QU = aU(eU, !1);
 
-    function Ti(pp) {
-      Mi = qi[pp]
+    function sU(TT) {
+      xU = JU[TT]
     }
 
-    function fi(pp) {
-      const ip = Bp();
+    function FU(TT) {
+      const UT = QT();
       try {
-        return bi(pp) || bi(ci(pp))
+        return PU(TT) || PU(TU(TT))
       } finally {
-        Np(ip)
+        sT(UT)
       }
     }
 
-    function bi(pp) {
-      return Qp(Li, Bi, [pp])
+    function PU(TT) {
+      return XT(gU, IU, [TT])
     }
 
-    function ai(pp) {
-      return new Set(ui.filter((ip => ip.tier === pp)).map((pp => `wh:${pp.code}`)))
+    function VU(TT) {
+      return new Set(iU.filter((UT => UT.tier === TT)).map((TT => `wh:${TT.code}`)))
     }
-    const ni = ai("punished"),
-      Fi = !1,
-      gi = new Set(Oi.e),
-      Gi = ai("weighted");
+    const uU = VU("punished"),
+      CU = !1,
+      rU = new Set(UU.e),
+      KU = VU("weighted");
 
-    function ri(pp) {
-      const ip = Bp();
+    function SU(TT) {
+      const UT = QT();
       try {
-        return zi(ci(pp))
+        return NU(TU(TT))
       } finally {
-        Np(ip)
+        sT(UT)
       }
     }
 
-    function Zi(pp) {
-      const ip = Bp();
+    function GU(TT) {
+      const UT = QT();
       try {
-        return ci(pp)
+        return TU(TT)
       } finally {
-        Np(ip)
+        sT(UT)
       }
     }
 
-    function zi(pp) {
-      return Qp(Li, Gi, [pp])
+    function NU(TT) {
+      return XT(gU, KU, [TT])
     }
 
-    function si(pp) {
-      const ip = Bp();
+    function EU(TT) {
+      const UT = QT();
       try {
-        return Ki(pp)
+        return hU(TT)
       } finally {
-        Np(ip)
+        sT(UT)
       }
     }
 
-    function Ki(pp) {
-      return Qp(Li, gi, [pp])
+    function hU(TT) {
+      return XT(gU, rU, [TT])
     }
 
-    function Vi(pp) {
-      return "wb" === pp || Qp(Li, ni, [pp])
+    function DU(TT) {
+      return "wb" === TT || XT(gU, uU, [TT])
     }
 
-    function pc(pp) {
-      const ip = Bp();
+    function oU(TT) {
+      const UT = QT();
       try {
-        return Vi(pp) || Ki(pp)
+        return DU(TT) || hU(TT)
       } finally {
-        Np(ip)
+        sT(UT)
       }
     }
 
-    function ic(pp) {
-      const ip = Bp();
+    function AU(TT) {
+      const UT = QT();
       try {
-        return "wb" === pp || Fi && Vi(pp)
+        return "wb" === TT || CU && DU(TT)
       } finally {
-        Np(ip)
+        sT(UT)
       }
     }
 
-    function cc(pp, ip) {
+    function RU(TT, UT) {
       let {
-        isGetter: cp
-      } = ip;
-      const Op = Ii(pp, cp ? "get" : "value");
-      return void 0 === Op ? void 0 : Op.value
+        isGetter: mT
+      } = UT;
+      const WT = WU(TT, mT ? "get" : "value");
+      return void 0 === WT ? void 0 : WT.value
     }
 
-    function Oc(pp, ip) {
+    function Tm(TT, UT) {
       let {
-        isConstructor: cp,
-        native: Op
-      } = ip;
-      return "function" === typeof pp && (!(!cp && Qp(xi, pp, ["prototype"])) && null !== Qp(Si, Op, [Qp(oi, pp, [])]))
+        isConstructor: mT,
+        native: WT
+      } = UT;
+      return "function" === typeof TT && (!(!mT && XT(MU, TT, ["prototype"])) && null !== XT(zU, WT, [XT(mU, TT, [])]))
     }
 
-    function oc(pp, ip) {
-      return Oc(pp, yi("", (() => {}), ip, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function Um(TT, UT) {
+      return Tm(TT, LU("", (() => {}), UT, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let Ic = null,
-      Sc = !1;
+    let mm = null,
+      Wm = !1;
 
-    function xc() {
+    function zm() {
       try {
-        return globalThis.WebAssembly === Wi
+        return globalThis.WebAssembly === lU
       } catch {
         return !1
       }
     }
 
-    function Lc(pp) {
+    function Mm(TT) {
       try {
-        return function(pp) {
+        return function(TT) {
           const {
-            holder: ip,
-            key: cp,
-            onNamespace: Op,
-            inSecureContext: op
-          } = pp, Ip = ip(), Sp = ei(Ip, cp);
-          if (!Sp) return !(op && !0 === globalThis.isSecureContext);
-          const xp = cc(Sp, pp);
-          if (!Oc(xp, pp)) return !1;
-          if (Op) {
-            const ip = globalThis.WebAssembly;
-            if (ip !== Ip && null !== ip && ("object" === typeof ip || "function" === typeof ip)) {
-              const Op = Ai(ip, cp);
-              return Op === xp || void 0 === Op || Oc(Op, pp)
+            holder: UT,
+            key: mT,
+            onNamespace: WT,
+            inSecureContext: zT
+          } = TT, MT = UT(), gT = qU(MT, mT);
+          if (!gT) return !(zT && !0 === globalThis.isSecureContext);
+          const nT = RU(gT, TT);
+          if (!Tm(nT, TT)) return !1;
+          if (WT) {
+            const UT = globalThis.WebAssembly;
+            if (UT !== MT && null !== UT && ("object" === typeof UT || "function" === typeof UT)) {
+              const WT = kU(UT, mT);
+              return WT === nT || void 0 === WT || Tm(WT, TT)
             }
           }
           return !0
-        }(pp)
+        }(TT)
       } catch {
         return !1
       }
     }
 
-    function Yc(pp) {
-      const ip = `wh:${pp.code}`;
-      if ("punished" === pp.tier) return ip;
+    function gm(TT) {
+      const UT = `wh:${TT.code}`;
+      if ("punished" === TT.tier) return UT;
       try {
-        return `${ip}${ii(Dc(pp))}`
+        return `${UT}${RT(nm(TT))}`
       } catch {
-        return `${ip}${ii(void 0)}`
+        return `${UT}${RT(void 0)}`
       }
     }
 
-    function Dc(pp) {
-      const ip = ei(pp.holder(), pp.key),
-        cp = void 0 === ip ? void 0 : cc(ip, pp);
-      return pp.onNamespace && !xc() && Oc(cp, pp) ? Ai(globalThis.WebAssembly, pp.key) : cp
+    function nm(TT) {
+      const UT = qU(TT.holder(), TT.key),
+        mT = void 0 === UT ? void 0 : RU(UT, TT);
+      return TT.onNamespace && !zm() && Tm(mT, TT) ? kU(globalThis.WebAssembly, TT.key) : mT
     }
 
-    function Ac(pp) {
-      if (Vi(pp)) return 5;
-      const ip = ci(pp);
-      return zi(ip) ? 4 : Ki(pp) ? 3 : bi(ip) ? function(pp) {
-        return Qp(Li, Ji, [pp])
-      }(ip) ? -1 : ip === Ni ? 0 : 1 : 2
+    function Hm(TT) {
+      if (DU(TT)) return 5;
+      const UT = TU(TT);
+      return NU(UT) ? 4 : hU(TT) ? 3 : PU(UT) ? function(TT) {
+        return XT(gU, XU, [TT])
+      }(UT) ? -1 : UT === QU ? 0 : 1 : 2
     }
 
-    function Pc() {
-      const pp = function() {
-        const pp = Jp();
-        return kp === tp || kp === Hp ? (Qp = lp, Xp = Cp) : Qp = Sp, pp
+    function km() {
+      const TT = function() {
+        const TT = IT();
+        return eT === fT || eT === qT ? (XT = yT, aT = wT) : XT = gT, TT
       }();
       try {
-        if (null === Ic || !Vi(Ic)) {
-          const pp = function() {
-            if (void 0 === Wi) return null;
-            let pp = xc() ? null : "wh:wa";
-            const ip = ip => {
-              null !== ip && (null === pp || Ac(ip) > Ac(pp)) && (pp = ip)
+        if (null === mm || !DU(mm)) {
+          const TT = function() {
+            if (void 0 === lU) return null;
+            let TT = zm() ? null : "wh:wa";
+            const UT = UT => {
+              null !== UT && (null === TT || Hm(UT) > Hm(TT)) && (TT = UT)
             };
-            for (let cp = 0; cp < ui.length; cp++) {
-              const pp = ui[cp];
-              void 0 === pp || Lc(pp) || ip(Yc(pp))
+            for (let mT = 0; mT < iU.length; mT++) {
+              const TT = iU[mT];
+              void 0 === TT || Mm(TT) || UT(gm(TT))
             }
-            ip((0, Oi.p)());
-            for (let cp = 0; cp < Mi.length; cp++) {
-              const pp = Mi[cp];
-              void 0 === pp || Lc(pp) || ip(Xi(pp))
+            UT((0, UU.l)());
+            for (let mT = 0; mT < xU.length; mT++) {
+              const TT = xU[mT];
+              void 0 === TT || Mm(TT) || UT(tU(TT))
             }
-            return pp
+            return TT
           }();
-          (null === Ic || null !== pp && Ac(pp) > Ac(Ic)) && (Ic = pp)
+          (null === mm || null !== TT && Hm(TT) > Hm(mm)) && (mm = TT)
         }
       } finally {
-        Np(pp)
+        sT(TT)
       }
     }
 
-    function Wc() {
-      Sc = !0
+    function jm() {
+      Wm = !0
     }
 
-    function yc() {
-      if (Sc) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Pc(), null !== Ic) return Ic;
-      if (void 0 === Wi) return "wn:unsupported";
-      const pp = (0, Op.r)();
-      return null === pp ? null : `wn:${pp}`
+    function lm() {
+      if (Wm) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && km(), null !== mm) return mm;
+      if (void 0 === lU) return "wn:unsupported";
+      const TT = (0, WT.s)();
+      return null === TT ? null : `wn:${TT}`
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

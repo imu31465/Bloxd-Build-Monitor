@@ -1,26 +1,26 @@
 export const id = 302;
 export const ids = [302];
 export const modules = {
-  41637: (pp, ip, cp) => {
-    function Op() {
-      return Op = Object.assign ? Object.assign.bind() : function(pp) {
-        for (var ip = 1; ip < arguments.length; ip++) {
-          var cp = arguments[ip];
-          for (var Op in cp)({}).hasOwnProperty.call(cp, Op) && (pp[Op] = cp[Op])
+  41538: (TT, UT, mT) => {
+    function WT() {
+      return WT = Object.assign ? Object.assign.bind() : function(TT) {
+        for (var UT = 1; UT < arguments.length; UT++) {
+          var mT = arguments[UT];
+          for (var WT in mT)({}).hasOwnProperty.call(mT, WT) && (TT[WT] = mT[WT])
         }
-        return pp
-      }, Op.apply(null, arguments)
+        return TT
+      }, WT.apply(null, arguments)
     }
-    cp.d(ip, {
-      d: () => Pp,
-      e: () => xp
+    mT.d(UT, {
+      c: () => LT,
+      d: () => nT
     });
-    var op = !1;
+    var zT = !1;
     try {
-      op = "undefined" !== typeof localStorage
-    } catch (yp) {}
-    var Ip = "undefined" !== typeof process,
-      Sp = op && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || Ip && {
+      zT = "undefined" !== typeof localStorage
+    } catch (BT) {}
+    var MT = "undefined" !== typeof process,
+      gT = zT && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || MT && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -28,141 +28,141 @@ export const modules = {
         WDS_SOCKET_PORT: void 0,
         FAST_REFRESH: !0,
         REACT_APP_DEV_URLS: "false"
-      }.DEBUG ? console.log : function(pp) {
+      }.DEBUG ? console.log : function(TT) {
         return ""
       };
 
-    function xp(pp, ip, cp, op, Ip) {
-      void 0 === op && (op = {});
-      var Sp = Op({}, Dp(cp), op),
-        xp = function(pp, ip, cp, op, Ip) {
-          var Sp = [].concat(ip),
-            xp = Wp(pp, cp, op),
-            Lp = xp.compilerHost,
-            Yp = xp.updateFile,
-            Dp = xp.deleteFile,
-            Ap = new Map,
-            Pp = 0,
-            yp = Op({}, Lp, {
+    function nT(TT, UT, mT, zT, MT) {
+      void 0 === zT && (zT = {});
+      var gT = WT({}, jT(mT), zT),
+        nT = function(TT, UT, mT, zT, MT) {
+          var gT = [].concat(UT),
+            nT = pT(TT, mT, zT),
+            HT = nT.compilerHost,
+            kT = nT.updateFile,
+            jT = nT.deleteFile,
+            lT = new Map,
+            LT = 0,
+            BT = WT({}, HT, {
               getProjectVersion: function() {
-                return Pp.toString()
+                return LT.toString()
               },
               getCompilationSettings: function() {
-                return cp
+                return mT
               },
               getCustomTransformers: function() {
-                return Ip
+                return MT
               },
               getScriptFileNames: function() {
-                return Sp.slice()
+                return gT.slice()
               },
-              getScriptSnapshot: function(ip) {
-                var cp = pp.readFile(ip);
-                if (cp && "string" === typeof cp) return op.ScriptSnapshot.fromString(cp)
+              getScriptSnapshot: function(UT) {
+                var mT = TT.readFile(UT);
+                if (mT && "string" === typeof mT) return zT.ScriptSnapshot.fromString(mT)
               },
-              getScriptVersion: function(pp) {
-                return Ap.get(pp) || "0"
+              getScriptVersion: function(TT) {
+                return lT.get(TT) || "0"
               },
-              writeFile: pp.writeFile
+              writeFile: TT.writeFile
             }),
-            Up = {
-              languageServiceHost: yp,
-              updateFile: function(pp) {
-                Pp++, Ap.set(pp.fileName, Pp.toString()), Sp.includes(pp.fileName) || Sp.push(pp.fileName), Yp(pp)
+            ZT = {
+              languageServiceHost: BT,
+              updateFile: function(TT) {
+                LT++, lT.set(TT.fileName, LT.toString()), gT.includes(TT.fileName) || gT.push(TT.fileName), kT(TT)
               },
-              deleteFile: function(pp) {
-                Pp++, Ap.set(pp.fileName, Pp.toString());
-                var ip = Sp.indexOf(pp.fileName); - 1 !== ip && Sp.splice(ip, 1), Dp(pp)
+              deleteFile: function(TT) {
+                LT++, lT.set(TT.fileName, LT.toString());
+                var UT = gT.indexOf(TT.fileName); - 1 !== UT && gT.splice(UT, 1), jT(TT)
               }
             };
-          return Up
-        }(pp, ip, Sp, cp, Ip),
-        Lp = xp.languageServiceHost,
-        Yp = xp.updateFile,
-        Ap = xp.deleteFile,
-        Pp = cp.createLanguageService(Lp),
-        yp = Pp.getCompilerOptionsDiagnostics();
-      if (yp.length) {
-        var Up = Wp(pp, op, cp);
-        throw new Error(cp.formatDiagnostics(yp, Up.compilerHost))
+          return ZT
+        }(TT, UT, gT, mT, MT),
+        HT = nT.languageServiceHost,
+        kT = nT.updateFile,
+        lT = nT.deleteFile,
+        LT = mT.createLanguageService(HT),
+        BT = LT.getCompilerOptionsDiagnostics();
+      if (BT.length) {
+        var ZT = pT(TT, zT, mT);
+        throw new Error(mT.formatDiagnostics(BT, ZT.compilerHost))
       }
       return {
         name: "vfs",
-        sys: pp,
-        languageService: Pp,
-        getSourceFile: function(pp) {
-          var ip;
-          return null == (ip = Pp.getProgram()) ? void 0 : ip.getSourceFile(pp)
+        sys: TT,
+        languageService: LT,
+        getSourceFile: function(TT) {
+          var UT;
+          return null == (UT = LT.getProgram()) ? void 0 : UT.getSourceFile(TT)
         },
-        createFile: function(pp, ip) {
-          Yp(cp.createSourceFile(pp, ip, Sp.target, !1))
+        createFile: function(TT, UT) {
+          kT(mT.createSourceFile(TT, UT, gT.target, !1))
         },
-        updateFile: function(pp, ip, Op) {
-          var op = Pp.getProgram().getSourceFile(pp);
-          if (!op) throw new Error("Did not find a source file for " + pp);
-          var Ip = op.text,
-            Sp = null != Op ? Op : cp.createTextSpan(0, Ip.length),
-            xp = Ip.slice(0, Sp.start) + ip + Ip.slice(Sp.start + Sp.length),
-            Lp = cp.updateSourceFile(op, xp, {
-              span: Sp,
-              newLength: ip.length
+        updateFile: function(TT, UT, WT) {
+          var zT = LT.getProgram().getSourceFile(TT);
+          if (!zT) throw new Error("Did not find a source file for " + TT);
+          var MT = zT.text,
+            gT = null != WT ? WT : mT.createTextSpan(0, MT.length),
+            nT = MT.slice(0, gT.start) + UT + MT.slice(gT.start + gT.length),
+            HT = mT.updateSourceFile(zT, nT, {
+              span: gT,
+              newLength: UT.length
             });
-          Yp(Lp)
+          kT(HT)
         },
-        deleteFile: function(pp) {
-          var ip = Pp.getProgram().getSourceFile(pp);
-          ip && Ap(ip)
+        deleteFile: function(TT) {
+          var UT = LT.getProgram().getSourceFile(TT);
+          UT && lT(UT)
         }
       }
     }
 
-    function Lp(pp) {
-      throw new Error("Method '" + pp + "' is not implemented.")
+    function HT(TT) {
+      throw new Error("Method '" + TT + "' is not implemented.")
     }
 
-    function Yp(pp, ip) {
+    function kT(TT, UT) {
       return function() {
-        for (var cp = arguments.length, Op = new Array(cp), op = 0; op < cp; op++) Op[op] = arguments[op];
-        var Ip = ip.apply(void 0, Op),
-          xp = "string" === typeof Ip ? Ip.slice(0, 80) + "..." : Ip;
-        return Sp.apply(void 0, ["> " + pp].concat(Op)), Sp("< " + xp), Ip
+        for (var mT = arguments.length, WT = new Array(mT), zT = 0; zT < mT; zT++) WT[zT] = arguments[zT];
+        var MT = UT.apply(void 0, WT),
+          nT = "string" === typeof MT ? MT.slice(0, 80) + "..." : MT;
+        return gT.apply(void 0, ["> " + TT].concat(WT)), gT("< " + nT), MT
       }
     }
-    var Dp = function(pp) {
-        return Op({}, pp.getDefaultCompilerOptions(), {
-          jsx: pp.JsxEmit.React,
+    var jT = function(TT) {
+        return WT({}, TT.getDefaultCompilerOptions(), {
+          jsx: TT.JsxEmit.React,
           strict: !0,
           esModuleInterop: !0,
-          module: pp.ModuleKind.ESNext,
+          module: TT.ModuleKind.ESNext,
           suppressOutputPathCheck: !0,
           skipLibCheck: !0,
           skipDefaultLibCheck: !0
-        }, pp.versionMajorMinor && Number(pp.versionMajorMinor.split(".")[0]) >= 6 ? {
+        }, TT.versionMajorMinor && Number(TT.versionMajorMinor.split(".")[0]) >= 6 ? {
           ignoreDeprecations: "6.0"
         } : {
-          moduleResolution: pp.ModuleResolutionKind.NodeJs
+          moduleResolution: TT.ModuleResolutionKind.NodeJs
         })
       },
-      Ap = function(pp) {
-        return pp.replace("/", "/lib.").toLowerCase()
+      lT = function(TT) {
+        return TT.replace("/", "/lib.").toLowerCase()
       };
 
-    function Pp(pp) {
+    function LT(TT) {
       return {
         args: [],
         createDirectory: function() {
-          return Lp("createDirectory")
+          return HT("createDirectory")
         },
-        directoryExists: Yp("directoryExists", (function(ip) {
-          return Array.from(pp.keys()).some((function(pp) {
-            return pp.startsWith(ip)
+        directoryExists: kT("directoryExists", (function(UT) {
+          return Array.from(TT.keys()).some((function(TT) {
+            return TT.startsWith(UT)
           }))
         })),
         exit: function() {
-          return Lp("exit")
+          return HT("exit")
         },
-        fileExists: Yp("fileExists", (function(ip) {
-          return pp.has(ip) || pp.has(Ap(ip))
+        fileExists: kT("fileExists", (function(UT) {
+          return TT.has(UT) || TT.has(lT(UT))
         })),
         getCurrentDirectory: function() {
           return "/"
@@ -171,64 +171,64 @@ export const modules = {
           return []
         },
         getExecutingFilePath: function() {
-          return Lp("getExecutingFilePath")
+          return HT("getExecutingFilePath")
         },
-        readDirectory: Yp("readDirectory", (function(ip) {
-          return "/" === ip ? Array.from(pp.keys()) : []
+        readDirectory: kT("readDirectory", (function(UT) {
+          return "/" === UT ? Array.from(TT.keys()) : []
         })),
-        readFile: Yp("readFile", (function(ip) {
-          var cp;
-          return null != (cp = pp.get(ip)) ? cp : pp.get(Ap(ip))
+        readFile: kT("readFile", (function(UT) {
+          var mT;
+          return null != (mT = TT.get(UT)) ? mT : TT.get(lT(UT))
         })),
-        resolvePath: function(pp) {
-          return pp
+        resolvePath: function(TT) {
+          return TT
         },
         newLine: "\n",
         useCaseSensitiveFileNames: !0,
         write: function() {
-          return Lp("write")
+          return HT("write")
         },
-        writeFile: function(ip, cp) {
-          pp.set(ip, cp)
+        writeFile: function(UT, mT) {
+          TT.set(UT, mT)
         },
-        deleteFile: function(ip) {
-          pp.delete(ip)
+        deleteFile: function(UT) {
+          TT.delete(UT)
         }
       }
     }
 
-    function Wp(pp, ip, cp) {
-      var op = new Map;
+    function pT(TT, UT, mT) {
+      var zT = new Map;
       return {
-        compilerHost: Op({}, pp, {
-          getCanonicalFileName: function(pp) {
-            return pp
+        compilerHost: WT({}, TT, {
+          getCanonicalFileName: function(TT) {
+            return TT
           },
           getDefaultLibFileName: function() {
-            return "/" + cp.getDefaultLibFileName(ip)
+            return "/" + mT.getDefaultLibFileName(UT)
           },
           getNewLine: function() {
-            return pp.newLine
+            return TT.newLine
           },
-          getSourceFile: function(Op, Ip) {
-            var Sp, xp;
-            return op.get(Op) || (xp = cp.createSourceFile(Op, pp.readFile(Op), null != (Sp = null != Ip ? Ip : ip.target) ? Sp : Dp(cp).target, !1), op.set(xp.fileName, xp), xp)
+          getSourceFile: function(WT, MT) {
+            var gT, nT;
+            return zT.get(WT) || (nT = mT.createSourceFile(WT, TT.readFile(WT), null != (gT = null != MT ? MT : UT.target) ? gT : jT(mT).target, !1), zT.set(nT.fileName, nT), nT)
           },
           useCaseSensitiveFileNames: function() {
-            return pp.useCaseSensitiveFileNames
+            return TT.useCaseSensitiveFileNames
           }
         }),
-        updateFile: function(ip) {
-          var cp = op.has(ip.fileName);
-          return pp.writeFile(ip.fileName, ip.text), op.set(ip.fileName, ip), cp
+        updateFile: function(UT) {
+          var mT = zT.has(UT.fileName);
+          return TT.writeFile(UT.fileName, UT.text), zT.set(UT.fileName, UT), mT
         },
-        deleteFile: function(ip) {
-          var cp = op.has(ip.fileName);
-          return op.delete(ip.fileName), pp.deleteFile(ip.fileName), cp
+        deleteFile: function(UT) {
+          var mT = zT.has(UT.fileName);
+          return zT.delete(UT.fileName), TT.deleteFile(UT.fileName), mT
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

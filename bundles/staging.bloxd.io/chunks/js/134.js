@@ -1,135 +1,135 @@
 export const id = 134;
 export const ids = [134, 196];
 export const modules = {
-  34434: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
+  34272: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT
     });
-    var Op = cp(337),
-      op = cp(34438);
+    var WT = mT(366),
+      zT = mT(34280);
 
-    function Ip(pp, ip, cp) {
-      const Ip = Object.entries(ip).sort(((pp, ip) => ip[1] - pp[1])),
-        Sp = (0, Op.sb)(pp);
-      Sp.push(pp ? "\n\n" : "\n");
-      for (const [op, yp] of Ip) {
-        var xp, Lp, Yp;
-        const pp = null !== (xp = null === cp || void 0 === cp || null === (Lp = cp[op]) || void 0 === Lp ? void 0 : Lp.icon) && void 0 !== xp ? xp : `${op} Enchantment`;
-        Sp.push({
-          icon: pp,
+    function MT(TT, UT, mT) {
+      const MT = Object.entries(UT).sort(((TT, UT) => UT[1] - TT[1])),
+        gT = (0, WT.Hb)(TT);
+      gT.push(TT ? "\n\n" : "\n");
+      for (const [zT, BT] of MT) {
+        var nT, HT, kT;
+        const TT = null !== (nT = null === mT || void 0 === mT || null === (HT = mT[zT]) || void 0 === HT ? void 0 : HT.icon) && void 0 !== nT ? nT : `${zT} Enchantment`;
+        gT.push({
+          icon: TT,
           style: {
             fontSize: "1.5rem"
           }
-        }), Sp.push({
-          str: `${op} ${null!==(Yp=(0,Op.V)(yp))&&void 0!==Yp?Yp:yp}\n`
+        }), gT.push({
+          str: `${zT} ${null!==(kT=(0,WT.Z)(BT))&&void 0!==kT?kT:BT}\n`
         })
       }
-      Sp.push({
+      gT.push({
         str: "\n"
       });
-      for (const [Op, yp] of Ip) {
-        var Dp, Ap, Pp, Wp;
-        const pp = null !== (Dp = null === cp || void 0 === cp || null === (Ap = cp[Op]) || void 0 === Ap ? void 0 : Ap.icon) && void 0 !== Dp ? Dp : `${Op} Enchantment`,
-          ip = null !== (Pp = null === cp || void 0 === cp || null === (Wp = cp[Op]) || void 0 === Wp ? void 0 : Wp.description) && void 0 !== Pp ? Pp : (0, op.m)(Op);
-        Sp.push({
-          icon: pp,
+      for (const [WT, BT] of MT) {
+        var jT, lT, LT, pT;
+        const TT = null !== (jT = null === mT || void 0 === mT || null === (lT = mT[WT]) || void 0 === lT ? void 0 : lT.icon) && void 0 !== jT ? jT : `${WT} Enchantment`,
+          UT = null !== (LT = null === mT || void 0 === mT || null === (pT = mT[WT]) || void 0 === pT ? void 0 : pT.description) && void 0 !== LT ? LT : (0, zT.l)(WT);
+        gT.push({
+          icon: TT,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), Sp.push({
-          str: ip,
+        }), gT.push({
+          str: UT,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), Sp.push({
+        }), gT.push({
           str: "\n"
         })
       }
-      return Sp
+      return gT
     }
   },
-  34443: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp,
-      e: () => tp,
-      i: () => wp,
-      j: () => Lp,
-      n: () => vp,
-      q: () => Dp,
-      s: () => Pp,
-      w: () => Up,
-      x: () => Ap
+  34288: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => kT,
+      g: () => fT,
+      i: () => cT,
+      l: () => HT,
+      p: () => vT,
+      s: () => jT,
+      u: () => LT,
+      w: () => ZT,
+      y: () => lT
     });
-    var Op = cp(322),
-      op = cp(640),
-      Ip = cp(337),
-      Sp = cp(4326),
-      xp = cp(34434);
+    var WT = mT(351),
+      zT = mT(653),
+      MT = mT(366),
+      gT = mT(4314),
+      nT = mT(34272);
 
-    function Lp(pp, ip) {
-      var cp;
+    function HT(TT, UT) {
+      var mT;
       let {
-        player: Op,
-        chestOrCreative: op
-      } = pp;
-      var Ip;
-      return ip < Op.length ? null !== (Ip = Op[ip]) && void 0 !== Ip ? Ip : null : null !== (cp = op[ip - Op.length]) && void 0 !== cp ? cp : null
+        player: WT,
+        chestOrCreative: zT
+      } = TT;
+      var MT;
+      return UT < WT.length ? null !== (MT = WT[UT]) && void 0 !== MT ? MT : null : null !== (mT = zT[UT - WT.length]) && void 0 !== mT ? mT : null
     }
 
-    function Yp(pp) {
-      var ip;
-      return null !== (ip = pp.amount) && void 0 !== ip ? ip : 0
+    function kT(TT) {
+      var UT;
+      return null !== (UT = TT.amount) && void 0 !== UT ? UT : 0
     }
 
-    function Dp(pp) {
-      return 0 === pp.button || void 0 === pp.button
+    function jT(TT) {
+      return 0 === TT.button || void 0 === TT.button
     }
 
-    function Ap(pp) {
-      return !!pp.shiftKey
+    function lT(TT) {
+      return !!TT.shiftKey
     }
 
-    function Pp(pp) {
-      return "touches" in pp || "touch" === pp.pointerType || "pen" === pp.pointerType
+    function LT(TT) {
+      return "touches" in TT || "touch" === TT.pointerType || "pen" === TT.pointerType
     }
-    const Wp = new Set,
-      yp = 50;
+    const pT = new Set,
+      BT = 50;
 
-    function Up(pp, ip) {
-      var cp;
-      const Op = null === (cp = pp[ip]) || void 0 === cp ? void 0 : cp.displayName;
-      return (0, op.G)(Op) ? "string" !== typeof ip ? "" : (!Wp.has(ip) && Wp.size < yp && (Wp.add(ip), console.warn(`No item called "${ip}", so its hover shows the name as given`)), ip) : Op
+    function ZT(TT, UT) {
+      var mT;
+      const WT = null === (mT = TT[UT]) || void 0 === mT ? void 0 : mT.displayName;
+      return (0, zT.E)(WT) ? "string" !== typeof UT ? "" : (!pT.has(UT) && pT.size < BT && (pT.add(UT), console.warn(`No item called "${UT}", so its hover shows the name as given`)), UT) : WT
     }
 
-    function wp(pp, ip, cp) {
-      var Lp, Yp, Dp, Ap, Pp, Wp, yp, wp, vp, tp, Hp, dp, ep, jp;
-      const kp = pp.attributes,
-        mp = null !== (Lp = null === (Yp = ip[pp.name]) || void 0 === Yp ? void 0 : Yp.rootName) && void 0 !== Lp ? Lp : pp.name,
-        Rp = null !== (Dp = null !== (Ap = kp.customDisplayName) && void 0 !== Ap ? Ap : null === (Pp = ip[pp.name]) || void 0 === Pp ? void 0 : Pp.displayName) && void 0 !== Dp ? Dp : Up(ip, mp);
-      let qp = Rp;
-      const Mp = null === (Wp = kp.customAttributes) || void 0 === Wp ? void 0 : Wp.enchantmentTier;
-      Mp && (qp = (0, Ip.sb)(Rp, {
-        colour: Ip.lb[Mp]
+    function cT(TT, UT, mT) {
+      var HT, kT, jT, lT, LT, pT, BT, cT, vT, fT, qT, iT, bT, OT;
+      const eT = TT.attributes,
+        YT = null !== (HT = null === (kT = UT[TT.name]) || void 0 === kT ? void 0 : kT.rootName) && void 0 !== HT ? HT : TT.name,
+        JT = null !== (jT = null !== (lT = eT.customDisplayName) && void 0 !== lT ? lT : null === (LT = UT[TT.name]) || void 0 === LT ? void 0 : LT.displayName) && void 0 !== jT ? jT : ZT(UT, YT);
+      let xT = JT;
+      const dT = null === (pT = eT.customAttributes) || void 0 === pT ? void 0 : pT.enchantmentTier;
+      dT && (xT = (0, MT.Hb)(JT, {
+        colour: MT.Cb[dT]
       }));
-      const Cp = null !== (yp = null !== (wp = null !== (vp = function(pp, ip) {
-        var cp;
-        if (void 0 === pp || null !== (cp = ip.customAttributes) && void 0 !== cp && cp.author) return pp;
-        const op = (0, Op.nc)(pp);
-        return op.every((pp => "string" === typeof pp)) ? pp : op.map((pp => "string" === typeof pp ? pp : {
-          icon: pp.icon,
+      const wT = null !== (BT = null !== (cT = null !== (vT = function(TT, UT) {
+        var mT;
+        if (void 0 === TT || null !== (mT = UT.customAttributes) && void 0 !== mT && mT.author) return TT;
+        const zT = (0, WT.Wb)(TT);
+        return zT.every((TT => "string" === typeof TT)) ? TT : zT.map((TT => "string" === typeof TT ? TT : {
+          icon: TT.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(kp.customDescription, kp)) && void 0 !== vp ? vp : null === (tp = ip[pp.name]) || void 0 === tp ? void 0 : tp.description) && void 0 !== wp ? wp : null === (Hp = ip[mp]) || void 0 === Hp ? void 0 : Hp.description) && void 0 !== yp ? yp : "";
-      let Ep = Cp;
-      if (null !== (dp = kp.customAttributes) && void 0 !== dp && dp.enchantments) Ep = (0, xp.e)(Cp, kp.customAttributes.enchantments, kp.customAttributes.enchantmentData);
-      else if (cp[mp]) Ep = (0, Ip.sb)(Cp), Ep.push({
+      }(eT.customDescription, eT)) && void 0 !== vT ? vT : null === (fT = UT[TT.name]) || void 0 === fT ? void 0 : fT.description) && void 0 !== cT ? cT : null === (qT = UT[YT]) || void 0 === qT ? void 0 : qT.description) && void 0 !== BT ? BT : "";
+      let tT = wT;
+      if (null !== (iT = eT.customAttributes) && void 0 !== iT && iT.enchantments) tT = (0, nT.b)(wT, eT.customAttributes.enchantments, eT.customAttributes.enchantmentData);
+      else if (mT[YT]) tT = (0, MT.Hb)(wT), tT.push({
         str: "\n"
-      }), Ep.push({
+      }), tT.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -137,719 +137,719 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (ep = kp.customAttributes) && void 0 !== ep && ep.mobSettings) {
-        var Xp, lp;
-        const pp = kp.customAttributes.mobSettings;
-        var Qp, Jp;
-        if (Ep = [], (0, op.G)(kp.customAttributes.health) || (Ep.push({
+      else if (null !== (bT = eT.customAttributes) && void 0 !== bT && bT.mobSettings) {
+        var aT, yT;
+        const TT = eT.customAttributes.mobSettings;
+        var XT, IT;
+        if (tT = [], (0, zT.E)(eT.customAttributes.health) || (tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
-          }), Ep.push({
-            str: kp.customAttributes.health.toString()
-          }), (0, op.G)(pp.maxHealth) || (Ep.push({
+          }), tT.push({
+            str: eT.customAttributes.health.toString()
+          }), (0, zT.E)(TT.maxHealth) || (tT.push({
             str: "/"
-          }), Ep.push({
-            str: pp.maxHealth.toString()
-          }))), !(0, op.G)(pp.attackDamage) && pp.attackDamage > 0 && (Ep.push({
+          }), tT.push({
+            str: TT.maxHealth.toString()
+          }))), !(0, zT.E)(TT.attackDamage) && TT.attackDamage > 0 && (tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
-          }), Ep.push({
-            str: pp.attackDamage.toString()
-          })), !(0, op.G)(pp.secondaryAttackDamage) && pp.secondaryAttackDamage > 0 && (Ep.push({
+          }), tT.push({
+            str: TT.attackDamage.toString()
+          })), !(0, zT.E)(TT.secondaryAttackDamage) && TT.secondaryAttackDamage > 0 && (tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
-          }), Ep.push({
-            str: pp.secondaryAttackDamage.toString()
-          })), (0, op.G)(pp.baseRunningSpeed) || (Ep.push({
+          }), tT.push({
+            str: TT.secondaryAttackDamage.toString()
+          })), (0, zT.E)(TT.baseRunningSpeed) || (tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
-          }), Ep.push({
-            str: pp.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === pp.metaInfo) Ep.push({
+          }), tT.push({
+            str: TT.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === TT.metaInfo) tT.push({
           str: "\n"
-        }), Ep.push({
+        }), tT.push({
           str: {
             translationKey: "general:has"
           }
-        }), Ep.push({
+        }), tT.push({
           str: " "
-        }), Ep.push({
-          icon: null !== (Qp = null === (Jp = pp.tameInfo) || void 0 === Jp ? void 0 : Jp.saddleItemName) && void 0 !== Qp ? Qp : "Saddle",
+        }), tT.push({
+          icon: null !== (XT = null === (IT = TT.tameInfo) || void 0 === IT ? void 0 : IT.saddleItemName) && void 0 !== XT ? XT : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (Ep.push({
+        if (tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             str: "\n"
-          }), pp.petInfo && null !== (Xp = pp.tameInfo) && void 0 !== Xp && Xp.supportsFriendship) {
-          const ip = Sp.e.getIconsFromFriendshipPoints(pp.petInfo.friendshipPoints);
-          for (const pp of ip) Ep.push({
-            icon: pp,
+          }), TT.petInfo && null !== (aT = TT.tameInfo) && void 0 !== aT && aT.supportsFriendship) {
+          const UT = gT.e.getIconsFromFriendshipPoints(TT.petInfo.friendshipPoints);
+          for (const TT of UT) tT.push({
+            icon: TT,
             style: {
               fontSize: "1.5em"
             }
           });
-          Ep.push({
+          tT.push({
             str: "\n"
           });
-          const cp = Sp.e.getMobHungerLevel(pp.petInfo.lastFedAt);
-          for (const pp of Sp.e.hungerLevelIcons[cp]) Ep.push({
-            icon: pp,
+          const mT = gT.e.getMobHungerLevel(TT.petInfo.lastFedAt);
+          for (const TT of gT.e.hungerLevelIcons[mT]) tT.push({
+            icon: TT,
             style: {
               fontSize: "1.5em"
             }
           });
-          Ep.push({
+          tT.push({
             str: " "
-          }), Ep.push({
-            str: Sp.e.hungerLevelTranslations[cp],
+          }), tT.push({
+            str: gT.e.hungerLevelTranslations[mT],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (pp.tameInfo && null !== (lp = pp.tameInfo) && void 0 !== lp && lp.supportsFriendship) {
-          var Bp, Np;
-          let ip = null !== (Bp = pp.tameInfo.likedFoods) && void 0 !== Bp ? Bp : [];
-          Ep.push({
+        if (TT.tameInfo && null !== (yT = TT.tameInfo) && void 0 !== yT && yT.supportsFriendship) {
+          var QT, sT;
+          let UT = null !== (QT = TT.tameInfo.likedFoods) && void 0 !== QT ? QT : [];
+          tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Sp.e.feedTextColours[Sp.e.MobFoodType.Superliked]
+              color: gT.e.feedTextColours[gT.e.MobFoodType.Superliked]
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
-          }), null !== (Np = pp.petInfo) && void 0 !== Np && Np.superlikedFoodKnown ? (Ep.push({
-            icon: pp.petInfo.superlikedFood,
+          }), null !== (sT = TT.petInfo) && void 0 !== sT && sT.superlikedFoodKnown ? (tT.push({
+            icon: TT.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), ip = ip.filter((ip => ip !== pp.petInfo.superlikedFood))) : Ep.push({
+          }), UT = UT.filter((UT => UT !== TT.petInfo.superlikedFood))) : tT.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), Ep.push({
+          }), tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Sp.e.feedTextColours[Sp.e.MobFoodType.Liked]
+              color: gT.e.feedTextColours[gT.e.MobFoodType.Liked]
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
           });
-          for (const pp of ip) Ep.push({
-            icon: pp,
+          for (const TT of UT) tT.push({
+            icon: TT,
             style: {
               fontSize: "1.5em"
             }
           });
-          Ep.push({
+          tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Sp.e.feedTextColours[Sp.e.MobFoodType.Neutral]
+              color: gT.e.feedTextColours[gT.e.MobFoodType.Neutral]
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
           });
-          for (const cp of null !== (Tp = pp.tameInfo.neutralFoods) && void 0 !== Tp ? Tp : []) {
-            var Tp;
-            Ep.push({
-              icon: cp,
+          for (const mT of null !== (FT = TT.tameInfo.neutralFoods) && void 0 !== FT ? FT : []) {
+            var FT;
+            tT.push({
+              icon: mT,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          Ep.push({
+          tT.push({
             str: "\n"
-          }), Ep.push({
+          }), tT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Sp.e.feedTextColours[Sp.e.MobFoodType.Disliked]
+              color: gT.e.feedTextColours[gT.e.MobFoodType.Disliked]
             }
-          }), Ep.push({
+          }), tT.push({
             str: " "
           });
-          for (const cp of null !== (fp = pp.tameInfo.dislikedFoods) && void 0 !== fp ? fp : []) {
-            var fp;
-            Ep.push({
-              icon: cp,
+          for (const mT of null !== (PT = TT.tameInfo.dislikedFoods) && void 0 !== PT ? PT : []) {
+            var PT;
+            tT.push({
+              icon: mT,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        Ep.length > 0 ? (Ep.shift(), Ep.unshift(...(0, Ip.sb)(Cp))) : Ep = (0, Ip.sb)(Cp)
+        tT.length > 0 ? (tT.shift(), tT.unshift(...(0, MT.Hb)(wT))) : tT = (0, MT.Hb)(wT)
       }
       return {
-        name: qp,
-        desc: Ep,
-        fontStyle: null !== (jp = kp.customAttributes) && void 0 !== jp && jp.author ? "italic" : "normal"
+        name: xT,
+        desc: tT,
+        fontStyle: null !== (OT = eT.customAttributes) && void 0 !== OT && OT.author ? "italic" : "normal"
       }
     }
 
-    function vp(pp, ip, cp, Op) {
-      const op = Lp(pp, cp),
-        Ip = Lp(pp, Op);
-      if (!op) return !1;
-      const Sp = ip[op.name].armourReduction,
-        xp = ip[Ip.name].armourReduction;
-      if (xp === Sp) {
-        var Yp, Dp, Ap, Pp;
-        const pp = null !== (Yp = null === (Dp = op.attributes.customAttributes) || void 0 === Dp ? void 0 : Dp.enchantmentTier) && void 0 !== Yp ? Yp : "Tier 0",
-          ip = null !== (Ap = null === (Pp = Ip.attributes.customAttributes) || void 0 === Pp ? void 0 : Pp.enchantmentTier) && void 0 !== Ap ? Ap : "Tier 0";
-        return parseInt(pp.replace("Tier ", "")) >= parseInt(ip.replace("Tier ", ""))
+    function vT(TT, UT, mT, WT) {
+      const zT = HT(TT, mT),
+        MT = HT(TT, WT);
+      if (!zT) return !1;
+      const gT = UT[zT.name].armourReduction,
+        nT = UT[MT.name].armourReduction;
+      if (nT === gT) {
+        var kT, jT, lT, LT;
+        const TT = null !== (kT = null === (jT = zT.attributes.customAttributes) || void 0 === jT ? void 0 : jT.enchantmentTier) && void 0 !== kT ? kT : "Tier 0",
+          UT = null !== (lT = null === (LT = MT.attributes.customAttributes) || void 0 === LT ? void 0 : LT.enchantmentTier) && void 0 !== lT ? lT : "Tier 0";
+        return parseInt(TT.replace("Tier ", "")) >= parseInt(UT.replace("Tier ", ""))
       }
-      return Sp > xp
+      return gT > nT
     }
 
-    function tp(pp) {
-      let ip;
-      if ("number" === typeof pp) {
-        const cp = document.querySelector(`[data-inven-idx="${pp}"]`);
-        if (!cp) return null;
-        ip = cp.getBoundingClientRect()
-      } else ip = pp.getBoundingClientRect();
+    function fT(TT) {
+      let UT;
+      if ("number" === typeof TT) {
+        const mT = document.querySelector(`[data-inven-idx="${TT}"]`);
+        if (!mT) return null;
+        UT = mT.getBoundingClientRect()
+      } else UT = TT.getBoundingClientRect();
       return {
-        x: ip.left + ip.width / 2,
-        y: ip.top + ip.height / 2
+        x: UT.left + UT.width / 2,
+        y: UT.top + UT.height / 2
       }
     }
   },
-  9024: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => vp,
-      d: () => dp
+  9011: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => vT,
+      h: () => iT
     });
-    var Op = cp(62),
-      op = cp(34),
-      Ip = cp(2543),
-      Sp = cp(3520);
-    const xp = 6,
-      Lp = 4;
+    var WT = mT(63),
+      zT = mT(31),
+      MT = mT(2608),
+      gT = mT(3511);
+    const nT = 6,
+      HT = 4;
 
-    function Yp(pp) {
+    function kT(TT) {
       let {
-        slotsLeft: ip,
-        slotsRight: cp,
-        width: Op,
-        height: op,
-        zoneRight: Ip,
-        rowTop: Sp,
-        besideBottom: Yp,
-        obstacles: Dp
-      } = pp;
-      const Ap = Math.max(0, Math.floor(cp - ip - Op)),
-        Pp = null === Ip ? 0 : Math.min(Ap, Math.max(0, Math.ceil(Ip + xp - ip))),
-        Wp = ip + Pp - xp,
-        yp = ip + Pp + Op + xp,
-        Up = Dp.filter((pp => pp.left < yp && pp.right > Wp));
-      let wp = Yp;
-      for (let xp = 0; xp <= Up.length; xp++) {
-        const pp = Up.filter((pp => pp.top < wp + Lp && pp.bottom > wp - op - Lp));
-        if (0 === pp.length) break;
-        wp = Math.min(...pp.map((pp => pp.top))) - Lp
+        slotsLeft: UT,
+        slotsRight: mT,
+        width: WT,
+        height: zT,
+        zoneRight: MT,
+        rowTop: gT,
+        besideBottom: kT,
+        obstacles: jT
+      } = TT;
+      const lT = Math.max(0, Math.floor(mT - UT - WT)),
+        LT = null === MT ? 0 : Math.min(lT, Math.max(0, Math.ceil(MT + nT - UT))),
+        pT = UT + LT - nT,
+        BT = UT + LT + WT + nT,
+        ZT = jT.filter((TT => TT.left < BT && TT.right > pT));
+      let cT = kT;
+      for (let nT = 0; nT <= ZT.length; nT++) {
+        const TT = ZT.filter((TT => TT.top < cT + HT && TT.bottom > cT - zT - HT));
+        if (0 === TT.length) break;
+        cT = Math.min(...TT.map((TT => TT.top))) - HT
       }
       return {
-        shift: Pp,
-        rise: wp === Yp ? null : Math.ceil(Sp - wp)
+        shift: LT,
+        rise: cT === kT ? null : Math.ceil(gT - cT)
       }
     }
 
-    function Dp(pp) {
-      return Array.from(pp.children).filter((pp => !pp.classList.contains("HotBarRow")))
+    function jT(TT) {
+      return Array.from(TT.children).filter((TT => !TT.classList.contains("HotBarRow")))
     }
 
-    function Ap(pp) {
-      return function(pp) {
-        const ip = [],
-          cp = (pp, Op) => {
-            const op = pp.getBoundingClientRect();
-            if (op.width > 0 && op.height > 0) ip.push(pp);
-            else if (Op < 2)
-              for (const ip of Array.from(pp.children)) cp(ip, Op + 1)
+    function lT(TT) {
+      return function(TT) {
+        const UT = [],
+          mT = (TT, WT) => {
+            const zT = TT.getBoundingClientRect();
+            if (zT.width > 0 && zT.height > 0) UT.push(TT);
+            else if (WT < 2)
+              for (const UT of Array.from(TT.children)) mT(UT, WT + 1)
           };
-        for (const Op of pp) cp(Op, 0);
-        return ip
-      }(Dp(pp).flatMap((pp => pp.classList.contains("AuraBarWrapper") ? [] : pp.classList.contains("BottomScreenStatBarList") ? Array.from(pp.children) : [pp])))
+        for (const WT of TT) mT(WT, 0);
+        return UT
+      }(jT(TT).flatMap((TT => TT.classList.contains("AuraBarWrapper") ? [] : TT.classList.contains("BottomScreenStatBarList") ? Array.from(TT.children) : [TT])))
     }
 
-    function Pp(pp) {
-      var ip;
-      const cp = pp.getBoundingClientRect();
-      if (0 === cp.width) return null;
-      const Op = null === (ip = pp.parentElement) || void 0 === ip ? void 0 : ip.getBoundingClientRect();
-      return Op && Op.width > 0 ? Math.min(cp.right, Op.left + Op.width * Wp) : cp.right
+    function LT(TT) {
+      var UT;
+      const mT = TT.getBoundingClientRect();
+      if (0 === mT.width) return null;
+      const WT = null === (UT = TT.parentElement) || void 0 === UT ? void 0 : UT.getBoundingClientRect();
+      return WT && WT.width > 0 ? Math.min(mT.right, WT.left + WT.width * pT) : mT.right
     }
-    const Wp = .35,
-      yp = new WeakMap,
-      Up = ".BottomScreenMessage, [role='status']",
-      wp = new WeakMap;
+    const pT = .35,
+      BT = new WeakMap,
+      ZT = ".BottomScreenMessage, [role='status']",
+      cT = new WeakMap;
 
-    function vp(pp) {
-      tp(pp) && tp(pp)
+    function vT(TT) {
+      fT(TT) && fT(TT)
     }
 
-    function tp(pp) {
-      var ip, cp, Op, op, Ip, Sp;
-      const xp = pp.documentElement.classList;
-      if (!xp.contains("TouchHotbar") || xp.contains("TouchHotbarKeysAbove") || xp.contains("HudMove-inventory") || xp.contains("HudLocked-inventory") || null === (ip = pp.defaultView) || void 0 === ip || null === (cp = ip.matchMedia) || void 0 === cp || !cp.call(ip, Hp).matches) return !1;
-      const Dp = pp.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
-        Wp = null === Dp || void 0 === Dp ? void 0 : Dp.parentElement,
-        vp = null === Dp || void 0 === Dp ? void 0 : Dp.closest(".BottomMiddleElements"),
-        tp = null === vp || void 0 === vp ? void 0 : vp.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
-      if (!Dp || !Wp || !vp || !tp || vp.classList.contains("TouchInventoryOpen")) return !1;
-      const dp = Dp.getBoundingClientRect();
-      if (0 === dp.width) return !1;
-      const ep = pp.querySelector(".JoystickZone"),
-        jp = tp.getBoundingClientRect(),
-        kp = Wp.getBoundingClientRect().top,
-        mp = null === (Op = vp.querySelector(":scope > .AuraBarWrapper")) || void 0 === Op ? void 0 : Op.getBoundingClientRect(),
-        Rp = Ap(vp),
-        qp = {
-          slotsLeft: jp.left,
-          slotsRight: jp.right,
-          width: dp.width,
-          height: dp.height,
-          zoneRight: ep ? Pp(ep) : null,
-          rowTop: kp,
-          besideBottom: (mp && mp.height > 0 ? mp.top : kp) - Lp,
-          obstacles: Rp.map((pp => pp.getBoundingClientRect()))
+    function fT(TT) {
+      var UT, mT, WT, zT, MT, gT;
+      const nT = TT.documentElement.classList;
+      if (!nT.contains("TouchHotbar") || nT.contains("TouchHotbarKeysAbove") || nT.contains("HudMove-inventory") || nT.contains("HudLocked-inventory") || null === (UT = TT.defaultView) || void 0 === UT || null === (mT = UT.matchMedia) || void 0 === mT || !mT.call(UT, qT).matches) return !1;
+      const jT = TT.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
+        pT = null === jT || void 0 === jT ? void 0 : jT.parentElement,
+        vT = null === jT || void 0 === jT ? void 0 : jT.closest(".BottomMiddleElements"),
+        fT = null === vT || void 0 === vT ? void 0 : vT.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
+      if (!jT || !pT || !vT || !fT || vT.classList.contains("TouchInventoryOpen")) return !1;
+      const iT = jT.getBoundingClientRect();
+      if (0 === iT.width) return !1;
+      const bT = TT.querySelector(".JoystickZone"),
+        OT = fT.getBoundingClientRect(),
+        eT = pT.getBoundingClientRect().top,
+        YT = null === (WT = vT.querySelector(":scope > .AuraBarWrapper")) || void 0 === WT ? void 0 : WT.getBoundingClientRect(),
+        JT = lT(vT),
+        xT = {
+          slotsLeft: OT.left,
+          slotsRight: OT.right,
+          width: iT.width,
+          height: iT.height,
+          zoneRight: bT ? LT(bT) : null,
+          rowTop: eT,
+          besideBottom: (YT && YT.height > 0 ? YT.top : eT) - HT,
+          obstacles: JT.map((TT => TT.getBoundingClientRect()))
         },
-        Mp = Yp({
-          ...qp,
-          obstacles: Rp.filter((pp => !pp.matches(Up))).map((pp => pp.getBoundingClientRect()))
+        dT = kT({
+          ...xT,
+          obstacles: JT.filter((TT => !TT.matches(ZT))).map((TT => TT.getBoundingClientRect()))
         }),
-        Cp = pp.defaultView,
-        Ep = `${null===Cp||void 0===Cp?void 0:Cp.innerWidth}x${null===Cp||void 0===Cp?void 0:Cp.innerHeight}:${Mp.shift}:${Math.round(dp.width)}:${Math.round(kp)}`,
-        Xp = wp.get(vp),
-        lp = (null === Xp || void 0 === Xp ? void 0 : Xp.at) === Ep ? (Qp = Xp.rise, Jp = Mp.rise, null === Qp ? Jp : null === Jp ? Qp : Math.max(Qp, Jp)) : Mp.rise;
-      var Qp, Jp;
-      const Bp = Yp({
-          ...qp,
-          besideBottom: null === lp ? qp.besideBottom : kp - lp
+        wT = TT.defaultView,
+        tT = `${null===wT||void 0===wT?void 0:wT.innerWidth}x${null===wT||void 0===wT?void 0:wT.innerHeight}:${dT.shift}:${Math.round(iT.width)}:${Math.round(eT)}`,
+        aT = cT.get(vT),
+        yT = (null === aT || void 0 === aT ? void 0 : aT.at) === tT ? (XT = aT.rise, IT = dT.rise, null === XT ? IT : null === IT ? XT : Math.max(XT, IT)) : dT.rise;
+      var XT, IT;
+      const QT = kT({
+          ...xT,
+          besideBottom: null === yT ? xT.besideBottom : eT - yT
         }),
-        Np = {
-          shift: Mp.shift,
-          rise: null !== (op = Bp.rise) && void 0 !== op ? op : lp
+        sT = {
+          shift: dT.shift,
+          rise: null !== (zT = QT.rise) && void 0 !== zT ? zT : yT
         },
-        Tp = yp.get(vp);
-      return (null !== (Ip = null === Tp || void 0 === Tp ? void 0 : Tp.shift) && void 0 !== Ip ? Ip : 0) === Np.shift && wp.set(vp, {
-        at: Ep,
-        rise: lp
-      }), (null === Tp || void 0 === Tp ? void 0 : Tp.shift) !== Np.shift && vp.style.setProperty("--touch-shop-above-shift", `${Np.shift}px`), (null === Tp || void 0 === Tp ? void 0 : Tp.rise) !== Np.rise && (vp.classList.toggle("ShopAboveUp", null !== Np.rise), null === Np.rise ? vp.style.removeProperty("--touch-shop-above-rise") : vp.style.setProperty("--touch-shop-above-rise", `${Np.rise}px`)), yp.set(vp, Np), (null !== (Sp = null === Tp || void 0 === Tp ? void 0 : Tp.shift) && void 0 !== Sp ? Sp : 0) !== Np.shift
+        FT = BT.get(vT);
+      return (null !== (MT = null === FT || void 0 === FT ? void 0 : FT.shift) && void 0 !== MT ? MT : 0) === sT.shift && cT.set(vT, {
+        at: tT,
+        rise: yT
+      }), (null === FT || void 0 === FT ? void 0 : FT.shift) !== sT.shift && vT.style.setProperty("--touch-shop-above-shift", `${sT.shift}px`), (null === FT || void 0 === FT ? void 0 : FT.rise) !== sT.rise && (vT.classList.toggle("ShopAboveUp", null !== sT.rise), null === sT.rise ? vT.style.removeProperty("--touch-shop-above-rise") : vT.style.setProperty("--touch-shop-above-rise", `${sT.rise}px`)), BT.set(vT, sT), (null !== (gT = null === FT || void 0 === FT ? void 0 : FT.shift) && void 0 !== gT ? gT : 0) !== sT.shift
     }
-    const Hp = "(orientation: landscape) and (max-height: 500px)";
+    const qT = "(orientation: landscape) and (max-height: 500px)";
 
-    function dp(pp, ip, cp) {
-      (0, Op.useLayoutEffect)((() => {
-        var ip;
-        const Op = null === (ip = pp.current) || void 0 === ip ? void 0 : ip.closest(".BottomMiddleElements");
-        if (!Op || cp) return;
-        const xp = new ResizeObserver((() => {
-            Wp(!1)
+    function iT(TT, UT, mT) {
+      (0, WT.useLayoutEffect)((() => {
+        var UT;
+        const WT = null === (UT = TT.current) || void 0 === UT ? void 0 : UT.closest(".BottomMiddleElements");
+        if (!WT || mT) return;
+        const nT = new ResizeObserver((() => {
+            pT(!1)
           })),
-          Lp = () => {
-            xp.disconnect();
-            const pp = document.querySelector(".JoystickZone");
-            for (const ip of [pp, Op, Op.querySelector(".HotBarGameItemsContainer"), ...Ap(Op)]) ip && xp.observe(ip)
+          HT = () => {
+            nT.disconnect();
+            const TT = document.querySelector(".JoystickZone");
+            for (const UT of [TT, WT, WT.querySelector(".HotBarGameItemsContainer"), ...lT(WT)]) UT && nT.observe(UT)
           };
-        let Yp = null,
-          Pp = !1;
-        const Wp = pp => {
-            Pp ||= pp, Yp ??= requestAnimationFrame((() => {
-              Yp = null, Pp && (Pp = !1, Lp()), vp(document)
+        let kT = null,
+          LT = !1;
+        const pT = TT => {
+            LT ||= TT, kT ??= requestAnimationFrame((() => {
+              kT = null, LT && (LT = !1, HT()), vT(document)
             }))
           },
-          yp = new MutationObserver((() => {
-            Wp(!0)
+          BT = new MutationObserver((() => {
+            pT(!0)
           }));
-        yp.observe(Op, {
+        BT.observe(WT, {
           childList: !0
         });
-        for (const pp of Dp(Op)) yp.observe(pp, {
+        for (const TT of jT(WT)) BT.observe(TT, {
           childList: !0,
           subtree: !0
         });
-        vp(document), Lp();
-        const Up = () => {
-            Wp(!0)
+        vT(document), HT();
+        const ZT = () => {
+            pT(!0)
           },
-          wp = [(0, op.n)(Ip.e, Up), (0, op.n)(Sp.e, Up)];
+          cT = [(0, zT.k)(MT.d, ZT), (0, zT.k)(gT.c, ZT)];
         return () => {
-          null !== Yp && cancelAnimationFrame(Yp), xp.disconnect(), yp.disconnect();
-          for (const pp of wp) pp()
+          null !== kT && cancelAnimationFrame(kT), nT.disconnect(), BT.disconnect();
+          for (const TT of cT) TT()
         }
-      }), [pp, ip, cp])
+      }), [TT, UT, mT])
     }
   },
-  34325: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Wp,
-      g: () => yp,
-      k: () => Up
+  34167: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => pT,
+      f: () => BT,
+      h: () => ZT
     });
-    var Op = cp(1480),
-      op = cp(62),
-      Ip = cp(1334),
-      Sp = cp(4621),
-      xp = cp(2413),
-      Lp = cp(1201),
-      Yp = cp(104),
-      Dp = cp(2004),
-      Ap = cp(1361),
-      Pp = cp(1112);
+    var WT = mT(1569),
+      zT = mT(63),
+      MT = mT(1416),
+      gT = mT(4639),
+      nT = mT(2486),
+      HT = mT(1288),
+      kT = mT(102),
+      jT = mT(2089),
+      lT = mT(1446),
+      LT = mT(1188);
 
-    function Wp(pp) {
+    function pT(TT) {
       let {
-        show: ip,
-        onClose: cp
-      } = pp;
+        show: UT,
+        onClose: mT
+      } = TT;
       const {
-        requestedGameNameWithVariation: Op,
-        lobbyName: op,
-        shownLobbyName: Ip
-      } = (0, Dp.g)("connectedGame"), Lp = (0, xp.c)(Op, op, !1);
-      return Yp.featureFlags.canUseInviteLinks && (0, Pp.jsx)(Sp.c, {
-        show: ip,
-        close: cp,
+        requestedGameNameWithVariation: WT,
+        lobbyName: zT,
+        shownLobbyName: MT
+      } = (0, jT.i)("connectedGame"), HT = (0, nT.e)(WT, zT, !1);
+      return kT.featureFlags.canUseInviteLinks && (0, LT.jsx)(gT.e, {
+        show: UT,
+        close: mT,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, Pp.jsxs)("div", {
+        children: (0, LT.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, Pp.jsx)("div", {
+          children: [(0, LT.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, Pp.jsxs)("div", {
+          }), (0, LT.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, Pp.jsx)("div", {
+            children: [(0, LT.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === Lp ? (0, Pp.jsx)(Ap.c, {}) : Lp, (0, Pp.jsx)("br", {}), "Lobby Name: ", Ip, (0, Pp.jsx)("br", {}), (0, Pp.jsx)("br", {}), (0, Pp.jsx)("br", {}), (0, Pp.jsx)("div", {
+            }), "Game: ", null === HT ? (0, LT.jsx)(lT.c, {}) : HT, (0, LT.jsx)("br", {}), "Lobby Name: ", MT, (0, LT.jsx)("br", {}), (0, LT.jsx)("br", {}), (0, LT.jsx)("br", {}), (0, LT.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, Pp.jsx)(yp, {})]
+          }), (0, LT.jsx)(BT, {})]
         })
       })
     }
 
-    function yp() {
-      var pp;
+    function BT() {
+      var TT;
       const {
-        t: ip
-      } = (0, Lp.H)(), cp = null !== (pp = Up(Yp.featureFlags.canUseInviteLinks)) && void 0 !== pp ? pp : "Loading Link...", [Ip, Sp] = (0, op.useState)(0), [xp, Dp] = (0, op.useReducer)((pp => pp + 1), 0);
-      return (0, op.useEffect)((() => {
-        const pp = setTimeout((() => {
-          Dp()
+        t: UT
+      } = (0, HT.z)(), mT = null !== (TT = ZT(kT.featureFlags.canUseInviteLinks)) && void 0 !== TT ? TT : "Loading Link...", [MT, gT] = (0, zT.useState)(0), [nT, jT] = (0, zT.useReducer)((TT => TT + 1), 0);
+      return (0, zT.useEffect)((() => {
+        const TT = setTimeout((() => {
+          jT()
         }), 1100);
         return () => {
-          clearTimeout(pp)
+          clearTimeout(TT)
         }
-      }), [Ip]), Yp.featureFlags.canUseInviteLinks && (0, Pp.jsxs)("div", {
+      }), [MT]), kT.featureFlags.canUseInviteLinks && (0, LT.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, Pp.jsx)("div", {
+        children: [(0, LT.jsx)("div", {
           className: "InviteLinkInner",
-          children: cp
-        }), (0, Pp.jsx)(Op.f, {
+          children: mT
+        }), (0, LT.jsx)(WT.e, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(cp).catch((pp => {
-              console.error("Failed to copy invite link:", pp)
-            })), Sp(Date.now())
+            navigator.clipboard.writeText(mT).catch((TT => {
+              console.error("Failed to copy invite link:", TT)
+            })), gT(Date.now())
           },
-          disabled: Date.now() - Ip < 1e3,
-          children: Date.now() - Ip < 1e3 ? ip("general:copied") : ip("general:copy")
+          disabled: Date.now() - MT < 1e3,
+          children: Date.now() - MT < 1e3 ? UT("general:copied") : UT("general:copy")
         })]
       })
     }
 
-    function Up(pp) {
-      const [ip, cp] = (0, op.useState)(null);
-      return (0, op.useEffect)((() => {
-        if (!pp) return;
-        let ip = !0;
-        return (0, Ip.w)().then((pp => {
-          ip && cp(pp)
-        })).catch((pp => {
-          console.error("Failed to get invite link:", pp)
+    function ZT(TT) {
+      const [UT, mT] = (0, zT.useState)(null);
+      return (0, zT.useEffect)((() => {
+        if (!TT) return;
+        let UT = !0;
+        return (0, MT.C)().then((TT => {
+          UT && mT(TT)
+        })).catch((TT => {
+          console.error("Failed to get invite link:", TT)
         })), () => {
-          ip = !1
+          UT = !1
         }
-      }), [pp]), ip
+      }), [TT]), UT
     }
   },
-  34427: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp
+  34262: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => kT
     });
-    var Op = cp(62),
-      op = cp(1049),
-      Ip = cp.n(op),
-      Sp = cp(2004),
-      xp = cp(1112);
+    var WT = mT(63),
+      zT = mT(1126),
+      MT = mT.n(zT),
+      gT = mT(2089),
+      nT = mT(1188);
 
-    function Lp(pp) {
-      const ip = Math.floor(pp / 3600),
-        cp = Math.floor(pp % 3600 / 60),
-        Op = Math.floor(pp % 60),
-        op = `${cp.toString().padStart(2,"0")}:${Op.toString().padStart(2,"0")}`;
-      return ip > 0 ? `${ip}:${op}` : op
+    function HT(TT) {
+      const UT = Math.floor(TT / 3600),
+        mT = Math.floor(TT % 3600 / 60),
+        WT = Math.floor(TT % 60),
+        zT = `${mT.toString().padStart(2,"0")}:${WT.toString().padStart(2,"0")}`;
+      return UT > 0 ? `${UT}:${zT}` : zT
     }
-    const Yp = (0, Op.memo)((function(pp) {
+    const kT = (0, WT.memo)((function(TT) {
       let {
-        className: ip
-      } = pp;
+        className: UT
+      } = TT;
       const {
-        recording: cp,
-        seconds: Op
-      } = (0, Sp.g)("replayRecorder");
-      return cp ? (0, xp.jsxs)("div", {
-        className: Ip()("RecordingIndicator", ip),
-        children: [(0, xp.jsx)("span", {
+        recording: mT,
+        seconds: WT
+      } = (0, gT.i)("replayRecorder");
+      return mT ? (0, nT.jsxs)("div", {
+        className: MT()("RecordingIndicator", UT),
+        children: [(0, nT.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, xp.jsx)("span", {
+        }), (0, nT.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, xp.jsx)("span", {
+        }), (0, nT.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: Lp(Op)
+          children: HT(WT)
         })]
       }) : null
     }))
   },
-  34430: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip
+  34270: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => MT
     });
-    var Op = cp(4628),
-      op = cp(4635);
+    var WT = mT(4641),
+      zT = mT(4650);
 
-    function Ip(pp) {
+    function MT(TT) {
       let {
-        children: ip,
-        showing: cp,
-        globallyUniqueKey: Ip,
-        alwaysMountChildren: Sp = !1,
-        doGameplayStartStopOnShow: xp = !0,
-        keepsMovement: Lp = !1
-      } = pp;
-      return (0, op.e)(!0, cp, Ip, Lp), (0, Op.d)(xp, cp), cp || Sp ? ip : null
+        children: UT,
+        showing: mT,
+        globallyUniqueKey: MT,
+        alwaysMountChildren: gT = !1,
+        doGameplayStartStopOnShow: nT = !0,
+        keepsMovement: HT = !1
+      } = TT;
+      return (0, zT.d)(!0, mT, MT, HT), (0, WT.c)(nT, mT), mT || gT ? UT : null
     }
   },
-  6724: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip
+  6648: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT
     });
-    var Op = cp(62),
-      op = cp(44);
+    var WT = mT(63),
+      zT = mT(44);
 
-    function Ip(pp, ip) {
-      var cp;
-      const [Ip, Sp] = (0, Op.useState)(null !== (cp = op.h.getItem(pp)) && void 0 !== cp ? cp : ip);
-      return [Ip, ip => {
-        op.h.setItem(pp, ip), Sp(ip)
+    function MT(TT, UT) {
+      var mT;
+      const [MT, gT] = (0, WT.useState)(null !== (mT = zT.l.getItem(TT)) && void 0 !== mT ? mT : UT);
+      return [MT, UT => {
+        zT.l.setItem(TT, UT), gT(UT)
       }]
     }
   },
-  9015: (pp, ip, cp) => {
-    cp.d(ip, {
-      B: () => Lp,
-      D: () => Pp,
-      H: () => Yp,
-      I: () => yp,
-      J: () => Ip,
-      d: () => op,
-      h: () => xp,
-      j: () => Op,
-      m: () => Up,
-      n: () => Wp,
-      o: () => Dp,
-      r: () => Sp,
-      u: () => wp,
-      y: () => Ap
+  8996: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => gT,
+      E: () => cT,
+      I: () => lT,
+      J: () => HT,
+      L: () => LT,
+      N: () => kT,
+      Q: () => BT,
+      T: () => MT,
+      e: () => zT,
+      i: () => nT,
+      m: () => WT,
+      q: () => ZT,
+      t: () => pT,
+      x: () => jT
     });
-    const Op = pp => ({
-      left: pp.left,
-      top: pp.top,
-      right: pp.right,
-      bottom: pp.bottom
+    const WT = TT => ({
+      left: TT.left,
+      top: TT.top,
+      right: TT.right,
+      bottom: TT.bottom
     });
 
-    function op(pp) {
+    function zT(TT) {
       return {
-        x: (pp.left + pp.right) / 2,
-        y: (pp.top + pp.bottom) / 2
+        x: (TT.left + TT.right) / 2,
+        y: (TT.top + TT.bottom) / 2
       }
     }
 
-    function Ip(pp) {
-      return 0 === pp.length ? null : pp.reduce(((pp, ip) => ({
-        left: Math.min(pp.left, ip.left),
-        top: Math.min(pp.top, ip.top),
-        right: Math.max(pp.right, ip.right),
-        bottom: Math.max(pp.bottom, ip.bottom)
+    function MT(TT) {
+      return 0 === TT.length ? null : TT.reduce(((TT, UT) => ({
+        left: Math.min(TT.left, UT.left),
+        top: Math.min(TT.top, UT.top),
+        right: Math.max(TT.right, UT.right),
+        bottom: Math.max(TT.bottom, UT.bottom)
       })))
     }
 
-    function Sp(pp, ip) {
-      const cp = Math.max(0, (ip - (pp.right - pp.left)) / 2),
-        Op = Math.max(0, (ip - (pp.bottom - pp.top)) / 2);
+    function gT(TT, UT) {
+      const mT = Math.max(0, (UT - (TT.right - TT.left)) / 2),
+        WT = Math.max(0, (UT - (TT.bottom - TT.top)) / 2);
       return {
-        left: pp.left - cp,
-        top: pp.top - Op,
-        right: pp.right + cp,
-        bottom: pp.bottom + Op
+        left: TT.left - mT,
+        top: TT.top - WT,
+        right: TT.right + mT,
+        bottom: TT.bottom + WT
       }
     }
 
-    function xp(pp, ip) {
-      return ip.x >= pp.left && ip.x <= pp.right && ip.y >= pp.top && ip.y <= pp.bottom
+    function nT(TT, UT) {
+      return UT.x >= TT.left && UT.x <= TT.right && UT.y >= TT.top && UT.y <= TT.bottom
     }
 
-    function Lp(pp, ip, cp) {
-      let Op = null,
-        Ip = 1 / 0;
+    function HT(TT, UT, mT) {
+      let WT = null,
+        MT = 1 / 0;
       for (const {
-          id: op,
-          box: Sp
+          id: zT,
+          box: gT
         }
-        of ip) {
-        const ip = (Sp.right - Sp.left) * (Sp.bottom - Sp.top);
-        xp(Sp, pp) && ip < Ip && (Ip = ip, Op = op)
+        of UT) {
+        const UT = (gT.right - gT.left) * (gT.bottom - gT.top);
+        nT(gT, TT) && UT < MT && (MT = UT, WT = zT)
       }
-      if (null !== Op) return Op;
-      let Lp = 1 / 0;
+      if (null !== WT) return WT;
+      let HT = 1 / 0;
       for (const {
-          id: Yp,
-          box: Dp
+          id: kT,
+          box: jT
         }
-        of ip) {
-        if (!xp(Sp(Dp, cp), pp)) continue;
-        const ip = op(Dp),
-          Ip = Math.hypot(pp.x - ip.x, pp.y - ip.y);
-        Ip < Lp && (Lp = Ip, Op = Yp)
+        of UT) {
+        if (!nT(gT(jT, mT), TT)) continue;
+        const UT = zT(jT),
+          MT = Math.hypot(TT.x - UT.x, TT.y - UT.y);
+        MT < HT && (HT = MT, WT = kT)
       }
-      return Op
+      return WT
     }
 
-    function Yp(pp, ip, cp) {
+    function kT(TT, UT, mT) {
       return {
-        left: cp.left,
-        top: cp.top,
-        right: pp - cp.right,
-        bottom: ip - cp.bottom
+        left: mT.left,
+        top: mT.top,
+        right: TT - mT.right,
+        bottom: UT - mT.bottom
       }
     }
 
-    function Dp(pp, ip, cp, Op) {
-      const op = (pp, ip, cp) => Math.max(Math.min(ip, 0), Math.min(Math.max(cp, 0), pp));
+    function jT(TT, UT, mT, WT) {
+      const zT = (TT, UT, mT) => Math.max(Math.min(UT, 0), Math.min(Math.max(mT, 0), TT));
       return {
-        x: op(ip, Op.left - pp.left, Op.right - pp.right),
-        y: op(cp, Op.top - pp.top, Op.bottom - pp.bottom)
+        x: zT(UT, WT.left - TT.left, WT.right - TT.right),
+        y: zT(mT, WT.top - TT.top, WT.bottom - TT.bottom)
       }
     }
 
-    function Ap(pp, ip, cp, Op, op) {
-      const Ip = pp.dx * Op + ip,
-        Sp = pp.dy * op + cp,
-        xp = pp => Math.max(-1, Math.min(1, pp));
+    function lT(TT, UT, mT, WT, zT) {
+      const MT = TT.dx * WT + UT,
+        gT = TT.dy * zT + mT,
+        nT = TT => Math.max(-1, Math.min(1, TT));
       return {
-        dx: xp(Ip / Op),
-        dy: xp(Sp / op)
+        dx: nT(MT / WT),
+        dy: nT(gT / zT)
       }
     }
 
-    function Pp(pp, ip, cp, Op) {
-      return ip <= 0 || cp <= 0 ? 1 : Math.max(.05, Math.min(1, pp / ip, Op / cp))
+    function LT(TT, UT, mT, WT) {
+      return UT <= 0 || mT <= 0 ? 1 : Math.max(.05, Math.min(1, TT / UT, WT / mT))
     }
 
-    function Wp(pp, ip, cp) {
-      return Math.min(pp.right, ip.right) - Math.max(pp.left, ip.left) > cp && Math.min(pp.bottom, ip.bottom) - Math.max(pp.top, ip.top) > cp
+    function pT(TT, UT, mT) {
+      return Math.min(TT.right, UT.right) - Math.max(TT.left, UT.left) > mT && Math.min(TT.bottom, UT.bottom) - Math.max(TT.top, UT.top) > mT
     }
 
-    function yp(pp, ip) {
-      const cp = (pp, ip, cp, Op) => ip - pp > Op - cp ? cp - pp > ip - Op ? Op - ip : cp - pp : pp < cp ? cp - pp : ip > Op ? Op - ip : 0;
+    function BT(TT, UT) {
+      const mT = (TT, UT, mT, WT) => UT - TT > WT - mT ? mT - TT > UT - WT ? WT - UT : mT - TT : TT < mT ? mT - TT : UT > WT ? WT - UT : 0;
       return {
-        x: cp(pp.left, pp.right, ip.left, ip.right),
-        y: cp(pp.top, pp.bottom, ip.top, ip.bottom)
+        x: mT(TT.left, TT.right, UT.left, UT.right),
+        y: mT(TT.top, TT.bottom, UT.top, UT.bottom)
       }
     }
 
-    function Up(pp, ip, cp) {
-      return Wp(pp, {
+    function ZT(TT, UT, mT) {
+      return pT(TT, {
         left: 0,
         top: 0,
-        right: ip,
-        bottom: cp
+        right: UT,
+        bottom: mT
       }, 0)
     }
 
-    function wp(pp, ip) {
+    function cT(TT, UT) {
       let {
-        avoid: cp = null,
-        bounds: Op = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, op = 0, Ip = 1 / 0;
-      return pp.forEach(((pp, Sp) => {
-        const xp = ip.filter((ip => Wp(pp, ip, 0))).length,
-          Lp = null !== Op && (pp.left < Op.left || pp.top < Op.top || pp.right > Op.right || pp.bottom > Op.bottom),
-          Yp = xp + (cp && Wp(pp, cp, 0) ? 1e3 : 0) + (Lp ? 1e6 : 0);
-        Yp < Ip && (op = Sp, Ip = Yp)
-      })), op
+        avoid: mT = null,
+        bounds: WT = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, zT = 0, MT = 1 / 0;
+      return TT.forEach(((TT, gT) => {
+        const nT = UT.filter((UT => pT(TT, UT, 0))).length,
+          HT = null !== WT && (TT.left < WT.left || TT.top < WT.top || TT.right > WT.right || TT.bottom > WT.bottom),
+          kT = nT + (mT && pT(TT, mT, 0) ? 1e3 : 0) + (HT ? 1e6 : 0);
+        kT < MT && (zT = gT, MT = kT)
+      })), zT
     }
   },
-  9019: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      c: () => Ip,
-      e: () => op,
-      f: () => Sp,
-      j: () => Ap,
-      n: () => Dp,
-      r: () => Yp,
-      s: () => Lp
+  9003: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => nT,
+      g: () => MT,
+      k: () => zT,
+      n: () => gT,
+      p: () => lT,
+      s: () => jT,
+      w: () => kT,
+      x: () => HT
     });
-    var Op = cp(2525);
-    const op = ["J", "C", "A", "P", "U", "X", "G"],
-      Ip = {
+    var WT = mT(2589);
+    const zT = ["J", "C", "A", "P", "U", "X", "G"],
+      MT = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -859,235 +859,235 @@ export const modules = {
         G: "game"
       };
 
-    function Sp(pp) {
-      return pp ? ["X"] : ["P", "X"]
+    function gT(TT) {
+      return TT ? ["X"] : ["P", "X"]
     }
-    const xp = Object.freeze({
+    const nT = Object.freeze({
       faces: null,
       names: Object.freeze({}),
       shop: !0,
       bag: !0,
       sprint: !0,
       items: null,
-      rowIcons: Op.A,
+      rowIcons: WT.B,
       pinnedIcons: Object.freeze({
         rightOfCamera: null,
         leftEnd: null
       })
     });
 
-    function Lp(pp, ip, cp) {
-      const Op = pp.querySelector(".InGameUi .TouchComponentsButtons");
-      if (!Op) return xp;
-      const Ip = {},
-        Sp = {};
-      for (const xp of op) {
-        const pp = Op.querySelector(`.TouchSlot${xp} > .TouchKey`);
-        if (pp) {
-          var Lp, Yp;
-          Ip[xp] = pp.cloneNode(!0);
-          const ip = (null !== (Lp = null === (Yp = pp.querySelector(".TouchKeyLabel")) || void 0 === Yp ? void 0 : Yp.textContent) && void 0 !== Lp ? Lp : "").split(/\s+/).filter((pp => !/[\d\xd7]/.test(pp))).join(" ");
-          ip && (Sp[xp] = ip)
+    function HT(TT, UT, mT) {
+      const WT = TT.querySelector(".InGameUi .TouchComponentsButtons");
+      if (!WT) return nT;
+      const MT = {},
+        gT = {};
+      for (const nT of zT) {
+        const TT = WT.querySelector(`.TouchSlot${nT} > .TouchKey`);
+        if (TT) {
+          var HT, kT;
+          MT[nT] = TT.cloneNode(!0);
+          const UT = (null !== (HT = null === (kT = TT.querySelector(".TouchKeyLabel")) || void 0 === kT ? void 0 : kT.textContent) && void 0 !== HT ? HT : "").split(/\s+/).filter((TT => !/[\d\xd7]/.test(TT))).join(" ");
+          UT && (gT[nT] = UT)
         }
       }
-      const Dp = ip => {
-          const cp = pp.querySelector(`.InGameUi ${ip}`);
-          return null !== cp && !cp.classList.contains("Hidden")
+      const jT = UT => {
+          const mT = TT.querySelector(`.InGameUi ${UT}`);
+          return null !== mT && !mT.classList.contains("Hidden")
         },
-        Ap = [...pp.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((pp => pp.cloneNode(!0)));
+        lT = [...TT.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((TT => TT.cloneNode(!0)));
       return {
-        faces: Object.keys(Ip).length > 0 ? Ip : null,
-        names: Sp,
-        shop: Dp(".TouchInventoryKey.ShopKey"),
-        bag: Dp(".TouchInventoryKey.BagKey"),
-        sprint: Dp(".TouchSprintHit"),
-        items: Ap.length > 0 ? Ap : null,
-        rowIcons: ip,
-        pinnedIcons: cp
+        faces: Object.keys(MT).length > 0 ? MT : null,
+        names: gT,
+        shop: jT(".TouchInventoryKey.ShopKey"),
+        bag: jT(".TouchInventoryKey.BagKey"),
+        sprint: jT(".TouchSprintHit"),
+        items: lT.length > 0 ? lT : null,
+        rowIcons: UT,
+        pinnedIcons: mT
       }
     }
 
-    function Yp(pp, ip) {
-      const cp = {};
-      for (const Op of [...Sp(ip), "G"]) {
-        const ip = pp.names[Op];
-        ip && (cp[Ip[Op]] = ip)
+    function kT(TT, UT) {
+      const mT = {};
+      for (const WT of [...gT(UT), "G"]) {
+        const UT = TT.names[WT];
+        UT && (mT[MT[WT]] = UT)
       }
-      return cp
+      return mT
     }
 
-    function Dp(pp, ip) {
+    function jT(TT, UT) {
       const {
-        faces: cp
-      } = pp;
-      if (null === cp) return [];
-      const Op = new Set(Object.keys(cp).map((pp => Ip[pp])));
-      return Sp(ip).filter((pp => !Op.has(Ip[pp])))
+        faces: mT
+      } = TT;
+      if (null === mT) return [];
+      const WT = new Set(Object.keys(mT).map((TT => MT[TT])));
+      return gT(UT).filter((TT => !WT.has(MT[TT])))
     }
 
-    function Ap(pp, ip) {
-      pp.replaceChildren(...[...ip.childNodes].map((pp => pp.cloneNode(!0))))
+    function lT(TT, UT) {
+      TT.replaceChildren(...[...UT.childNodes].map((TT => TT.cloneNode(!0))))
     }
   },
-  34336: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op,
-      g: () => Op
+  34176: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      h: () => WT
     });
-    const Op = "image/jpeg",
-      op = "jpg"
+    const WT = "image/jpeg",
+      zT = "jpg"
   },
-  34341: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Lp,
-      f: () => Yp,
-      j: () => Dp
+  34185: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => HT,
+      e: () => kT,
+      g: () => jT
     });
-    var Op = cp(1705),
-      op = cp(3309),
-      Ip = cp(104),
-      Sp = cp(1779),
-      xp = cp(34336);
+    var WT = mT(1802),
+      zT = mT(3327),
+      MT = mT(102),
+      gT = mT(1876),
+      nT = mT(34176);
 
-    function Lp() {
-      return !(0, Ip.isMobileApp)() || Op.b.supports("photos")
+    function HT() {
+      return !(0, MT.isMobileApp)() || WT.e.supports("photos")
     }
-    async function Yp(pp) {
-      var ip, cp;
-      if ((0, Ip.isMobileApp)()) {
+    async function kT(TT) {
+      var UT, mT;
+      if ((0, MT.isMobileApp)()) {
         const {
-          saved: ip
-        } = await Op.b.request("photos.save", {
-          data: await (0, op.g)(pp),
-          mimeType: xp.g
+          saved: UT
+        } = await WT.e.request("photos.save", {
+          data: await (0, zT.d)(TT),
+          mimeType: nT.h
         });
-        return ip ? "saved" : "denied"
+        return UT ? "saved" : "denied"
       }
-      return (0, Ip.isIOS)() && null !== (ip = (cp = navigator).canShare) && void 0 !== ip && ip.call(cp, {
-        files: [pp]
-      }) ? Dp(pp) : ((0, Sp.c)(pp, pp.name), "saved")
+      return (0, MT.isIOS)() && null !== (UT = (mT = navigator).canShare) && void 0 !== UT && UT.call(mT, {
+        files: [TT]
+      }) ? jT(TT) : ((0, gT.c)(TT, TT.name), "saved")
     }
-    async function Dp(pp) {
+    async function jT(TT) {
       try {
         return await navigator.share({
-          files: [pp]
+          files: [TT]
         }), "shared"
-      } catch (ip) {
-        if (ip instanceof DOMException && "AbortError" === ip.name) return "OO";
-        if (ip instanceof DOMException && "NotAllowedError" === ip.name) return "needsTap";
-        throw ip
+      } catch (UT) {
+        if (UT instanceof DOMException && "AbortError" === UT.name) return "Km";
+        if (UT instanceof DOMException && "NotAllowedError" === UT.name) return "needsTap";
+        throw UT
       }
     }
   },
-  34332: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Yp,
-      d: () => Dp,
-      f: () => Ap
+  34169: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => kT,
+      g: () => jT,
+      j: () => lT
     });
-    var Op = cp(25),
-      op = cp(34306),
-      Ip = cp(1650),
-      Sp = cp(34336);
-    const xp = 8294400,
-      Lp = .92;
+    var WT = mT(25),
+      zT = mT(34152),
+      MT = mT(1752),
+      gT = mT(34176);
+    const nT = 8294400,
+      HT = .92;
 
-    function Yp() {
-      (0, Ip.e)(), Op.c.set({
+    function kT() {
+      (0, MT.c)(), WT.b.set({
         screenshotMode: !0
       })
     }
 
-    function Dp() {
-      Op.c.set({
+    function jT() {
+      WT.b.set({
         screenshotMode: !1
       })
     }
-    async function Ap() {
+    async function lT() {
       const {
-        width: pp,
-        height: ip,
-        scale: cp
-      } = function(pp, ip, cp) {
-        const Op = Math.max(1, pp),
-          op = Math.max(1, ip),
-          Ip = Math.min(Math.max(1, cp), Math.sqrt(xp / (Op * op)));
+        width: TT,
+        height: UT,
+        scale: mT
+      } = function(TT, UT, mT) {
+        const WT = Math.max(1, TT),
+          zT = Math.max(1, UT),
+          MT = Math.min(Math.max(1, mT), Math.sqrt(nT / (WT * zT)));
         return {
-          width: Math.round(Op * Ip),
-          height: Math.round(op * Ip),
-          scale: Ip
+          width: Math.round(WT * MT),
+          height: Math.round(zT * MT),
+          scale: MT
         }
       }(window.innerWidth, window.innerHeight, window.devicePixelRatio), {
-        blob: Op
-      } = await op.devTools.capturePhoto(pp, ip, {
-        scale: cp,
-        type: Sp.g,
-        quality: Lp
+        blob: WT
+      } = await zT.devTools.capturePhoto(TT, UT, {
+        scale: mT,
+        type: gT.h,
+        quality: HT
       });
-      return new File([Op], function(pp) {
-        const ip = pp => String(pp).padStart(2, "0"),
-          cp = `${pp.getFullYear()}${ip(pp.getMonth()+1)}${ip(pp.getDate())}`,
-          Op = `${ip(pp.getHours())}${ip(pp.getMinutes())}${ip(pp.getSeconds())}`;
-        return `bloxd-${cp}-${Op}.${Sp.e}`
+      return new File([WT], function(TT) {
+        const UT = TT => String(TT).padStart(2, "0"),
+          mT = `${TT.getFullYear()}${UT(TT.getMonth()+1)}${UT(TT.getDate())}`,
+          WT = `${UT(TT.getHours())}${UT(TT.getMinutes())}${UT(TT.getSeconds())}`;
+        return `bloxd-${mT}-${WT}.${gT.d}`
       }(new Date), {
-        type: Sp.g
+        type: gT.h
       })
     }
   },
-  8807: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      e: () => Op
+  8804: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      g: () => WT
     });
-    const Op = "controllerOpenKeyboard",
-      op = "controllerKeyboardVisible"
+    const WT = "controllerOpenKeyboard",
+      zT = "controllerKeyboardVisible"
   },
-  34310: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op
+  34156: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT
     });
-    const Op = new Set(["chunkBorders"])
+    const WT = new Set(["chunkBorders"])
   },
-  34306: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      ALL_DEV_TOOLS: () => Sp,
-      coreDevTools: () => Yp,
-      devTools: () => Lp
+  34152: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      ALL_DEV_TOOLS: () => gT,
+      coreDevTools: () => kT,
+      devTools: () => HT
     });
-    var Op = cp(657),
-      op = cp(1317),
-      Ip = cp(34310);
-    const Sp = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function xp() {
+    var WT = mT(681),
+      zT = mT(1398),
+      MT = mT(34156);
+    const gT = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function nT() {
       const {
-        noaDevTools: pp
-      } = await cp.e(242).then((() => cp(41280)));
-      return pp
+        noaDevTools: TT
+      } = await mT.e(242).then((() => mT(41207)));
+      return TT
     }
-    const Lp = new class {
+    const HT = new class {
         constructor() {
-          this.loadHost = xp, this.tools = Sp
+          this.loadHost = nT, this.tools = gT
         }
-        setHost(pp) {
-          this.tools = null === pp ? Sp : pp.tools, this.loadHost = null === pp ? xp : async () => pp
+        setHost(TT) {
+          this.tools = null === TT ? gT : TT.tools, this.loadHost = null === TT ? nT : async () => TT
         }
-        supports(pp) {
-          return this.tools.has(pp)
+        supports(TT) {
+          return this.tools.has(TT)
         }
-        async downloadScene(pp, ip) {
-          const cp = await this.loadHost();
-          await cp.downloadScene(pp, ip)
+        async downloadScene(TT, UT) {
+          const mT = await this.loadHost();
+          await mT.downloadScene(TT, UT)
         }
-        async setAmbientLightIntensity(pp) {
-          const ip = await this.loadHost();
-          await ip.setAmbientLightIntensity(pp)
+        async setAmbientLightIntensity(TT) {
+          const UT = await this.loadHost();
+          await UT.setAmbientLightIntensity(TT)
         }
-        async capturePhoto(pp, ip, cp) {
-          return (await this.loadHost()).capturePhoto(pp, ip, cp)
+        async capturePhoto(TT, UT, mT) {
+          return (await this.loadHost()).capturePhoto(TT, UT, mT)
         }
       },
-      Yp = {
-        tools: Ip.d,
+      kT = {
+        tools: MT.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -1098,121 +1098,121 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    Op.z && Lp.setHost(Yp), (0, op.y)((() => {
-      Lp.setHost(Yp)
+    WT.B && HT.setHost(kT), (0, zT.q)((() => {
+      HT.setHost(kT)
     }))
   },
-  34466: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp,
-      e: () => op,
-      i: () => Dp
+  34315: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      e: () => zT,
+      i: () => jT
     });
-    var Op = cp(1579);
+    var WT = mT(1688);
 
-    function op(pp) {
-      var ip;
+    function zT(TT) {
+      var UT;
       return {
-        ...Sp.store,
-        yaw: Sp.store.yaw + (null !== (ip = Op.b[pp].previewYaw) && void 0 !== ip ? ip : 0)
+        ...gT.store,
+        yaw: gT.store.yaw + (null !== (UT = WT.e[TT].previewYaw) && void 0 !== UT ? UT : 0)
       }
     }
-    const Ip = {
+    const MT = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Sp = {
-        player: Ip,
+      gT = {
+        player: MT,
         store: {
-          ...Ip,
+          ...MT,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function xp(pp, ip) {
-      pp instanceof Promise ? pp.then(ip).catch((pp => {
-        console.error("Couldn't open the preview", pp)
-      })) : ip(pp)
+    function nT(TT, UT) {
+      TT instanceof Promise ? TT.then(UT).catch((TT => {
+        console.error("Couldn't open the preview", TT)
+      })) : UT(TT)
     }
-    class Lp {
-      constructor(pp) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, xp(pp, (pp => {
-          this.closed ? pp.close() : (this.opened = pp, null !== this.size && pp.resize(this.size.width, this.size.height), null !== this.view && pp.show(this.view))
+    class HT {
+      constructor(TT) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, nT(TT, (TT => {
+          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height), null !== this.view && TT.show(this.view))
         }))
       }
-      show(pp) {
-        var ip;
-        this.view = pp, null === (ip = this.opened) || void 0 === ip || ip.show(pp)
+      show(TT) {
+        var UT;
+        this.view = TT, null === (UT = this.opened) || void 0 === UT || UT.show(TT)
       }
-      resize(pp, ip) {
-        var cp;
+      resize(TT, UT) {
+        var mT;
         this.size = {
-          width: pp,
-          height: ip
-        }, null === (cp = this.opened) || void 0 === cp || cp.resize(pp, ip)
+          width: TT,
+          height: UT
+        }, null === (mT = this.opened) || void 0 === mT || mT.resize(TT, UT)
       }
       close() {
-        var pp;
-        this.closed = !0, null === (pp = this.opened) || void 0 === pp || pp.close(), this.opened = null
+        var TT;
+        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
       }
     }
-    class Yp {
-      constructor(pp) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(pp).then((pp => pp.ready)), xp(pp, (pp => {
-          this.closed ? pp.close() : (this.opened = pp, null !== this.size && pp.resize(this.size.width, this.size.height))
+    class kT {
+      constructor(TT) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(TT).then((TT => TT.ready)), nT(TT, (TT => {
+          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var pp, ip;
-        return null !== (pp = null === (ip = this.opened) || void 0 === ip ? void 0 : ip.isReady()) && void 0 !== pp && pp
+        var TT, UT;
+        return null !== (TT = null === (UT = this.opened) || void 0 === UT ? void 0 : UT.isReady()) && void 0 !== TT && TT
       }
-      setCosmetic(pp, ip) {
-        var cp;
-        null === (cp = this.opened) || void 0 === cp || cp.setCosmetic(pp, ip)
+      setCosmetic(TT, UT) {
+        var mT;
+        null === (mT = this.opened) || void 0 === mT || mT.setCosmetic(TT, UT)
       }
-      playEmote(pp) {
-        var ip;
-        null === (ip = this.opened) || void 0 === ip || ip.playEmote(pp)
+      playEmote(TT) {
+        var UT;
+        null === (UT = this.opened) || void 0 === UT || UT.playEmote(TT)
       }
-      setOrbit(pp) {
-        var ip;
-        null === (ip = this.opened) || void 0 === ip || ip.setOrbit(pp)
+      setOrbit(TT) {
+        var UT;
+        null === (UT = this.opened) || void 0 === UT || UT.setOrbit(TT)
       }
       resetCamera() {
-        var pp;
-        null === (pp = this.opened) || void 0 === pp || pp.resetCamera()
+        var TT;
+        null === (TT = this.opened) || void 0 === TT || TT.resetCamera()
       }
-      async untilDrawn(pp) {
-        var ip;
-        await this.ready, await (null === (ip = this.opened) || void 0 === ip ? void 0 : ip.untilDrawn(pp))
+      async untilDrawn(TT) {
+        var UT;
+        await this.ready, await (null === (UT = this.opened) || void 0 === UT ? void 0 : UT.untilDrawn(TT))
       }
-      resize(pp, ip) {
-        var cp;
+      resize(TT, UT) {
+        var mT;
         this.size = {
-          width: pp,
-          height: ip
-        }, null === (cp = this.opened) || void 0 === cp || cp.resize(pp, ip)
+          width: TT,
+          height: UT
+        }, null === (mT = this.opened) || void 0 === mT || mT.resize(TT, UT)
       }
       close() {
-        var pp;
-        this.closed = !0, null === (pp = this.opened) || void 0 === pp || pp.close(), this.opened = null
+        var TT;
+        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
       }
     }
-    const Dp = new class {
+    const jT = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(pp) {
-        this.host = pp
+      setHost(TT) {
+        this.host = TT
       }
-      setDefaultHost(pp) {
-        this.makeDefault = pp
+      setDefaultHost(TT) {
+        this.makeDefault = TT
       }
       current() {
         if (null === this.host) {
@@ -1221,78 +1221,78 @@ export const modules = {
         }
         return this.host
       }
-      openMob(pp) {
-        return new Lp(this.current().openMob(pp))
+      openMob(TT) {
+        return new HT(this.current().openMob(TT))
       }
-      openPet(pp) {
-        return new Lp(this.current().openPet(pp))
+      openPet(TT) {
+        return new HT(this.current().openPet(TT))
       }
-      openMobLineup(pp) {
-        return new Lp(this.current().openMobLineup(pp))
+      openMobLineup(TT) {
+        return new HT(this.current().openMobLineup(TT))
       }
-      openCharacter(pp, ip) {
-        return new Yp(this.current().openCharacter(pp, ip))
+      openCharacter(TT, UT) {
+        return new kT(this.current().openCharacter(TT, UT))
       }
     }
   },
-  34462: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op.b,
-      h: () => Op.e,
-      j: () => Op.i
+  34311: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT.d,
+      d: () => WT.e,
+      g: () => WT.i
     });
-    var Op = cp(34466);
-    class op {
-      constructor(pp) {
-        this.load = pp, this.loaded = null, this.loading = null
+    var WT = mT(34315);
+    class zT {
+      constructor(TT) {
+        this.load = TT, this.loaded = null, this.loading = null
       }
-      run(pp) {
-        return null !== this.loaded ? pp(this.loaded) : (this.loading ??= this.load().then((pp => (this.loaded = pp, pp)), (pp => {
-          throw this.loading = null, pp
-        })), this.loading.then(pp))
+      run(TT) {
+        return null !== this.loaded ? TT(this.loaded) : (this.loading ??= this.load().then((TT => (this.loaded = TT, TT)), (TT => {
+          throw this.loading = null, TT
+        })), this.loading.then(TT))
       }
     }
-    class Ip {
+    class MT {
       constructor() {
-        this.mobScene = new op((() => Promise.all([cp.e(73), cp.e(237), cp.e(236), cp.e(258), cp.e(98), cp.e(259), cp.e(76), cp.e(75), cp.e(256), cp.e(74), cp.e(266), cp.e(260), cp.e(265), cp.e(263), cp.e(255), cp.e(279), cp.e(233), cp.e(249), cp.e(261), cp.e(264), cp.e(78), cp.e(188), cp.e(227), cp.e(97), cp.e(239), cp.e(230), cp.e(246), cp.e(121), cp.e(247), cp.e(77), cp.e(251)]).then((() => cp(41295))))), this.characterScene = new op((() => Promise.all([cp.e(73), cp.e(237), cp.e(236), cp.e(258), cp.e(98), cp.e(259), cp.e(76), cp.e(75), cp.e(256), cp.e(74), cp.e(266), cp.e(260), cp.e(265), cp.e(263), cp.e(255), cp.e(279), cp.e(233), cp.e(249), cp.e(261), cp.e(264), cp.e(78), cp.e(188), cp.e(227), cp.e(97), cp.e(239), cp.e(230), cp.e(246), cp.e(121), cp.e(247), cp.e(77), cp.e(250)]).then((() => cp(41400)))))
+        this.mobScene = new zT((() => Promise.all([mT.e(73), mT.e(237), mT.e(236), mT.e(258), mT.e(98), mT.e(259), mT.e(76), mT.e(75), mT.e(256), mT.e(74), mT.e(266), mT.e(260), mT.e(265), mT.e(263), mT.e(255), mT.e(279), mT.e(233), mT.e(249), mT.e(261), mT.e(264), mT.e(78), mT.e(188), mT.e(227), mT.e(97), mT.e(239), mT.e(230), mT.e(246), mT.e(121), mT.e(247), mT.e(77), mT.e(251)]).then((() => mT(41227))))), this.characterScene = new zT((() => Promise.all([mT.e(73), mT.e(237), mT.e(236), mT.e(258), mT.e(98), mT.e(259), mT.e(76), mT.e(75), mT.e(256), mT.e(74), mT.e(266), mT.e(260), mT.e(265), mT.e(263), mT.e(255), mT.e(279), mT.e(233), mT.e(249), mT.e(261), mT.e(264), mT.e(78), mT.e(188), mT.e(227), mT.e(97), mT.e(239), mT.e(230), mT.e(246), mT.e(121), mT.e(247), mT.e(77), mT.e(250)]).then((() => mT(41341)))))
       }
-      openMob(pp) {
-        return this.mobScene.run((ip => ip.openMobPreview(pp)))
+      openMob(TT) {
+        return this.mobScene.run((UT => UT.openMobPreview(TT)))
       }
-      openPet(pp) {
-        return this.mobScene.run((ip => ip.openPetPreview(pp)))
+      openPet(TT) {
+        return this.mobScene.run((UT => UT.openPetPreview(TT)))
       }
-      openMobLineup(pp) {
-        return this.mobScene.run((ip => ip.openMobLineupPreview(pp)))
+      openMobLineup(TT) {
+        return this.mobScene.run((UT => UT.openMobLineupPreview(TT)))
       }
-      openCharacter(pp, ip) {
-        return this.characterScene.run((cp => cp.openCharacterPreview(pp, ip)))
+      openCharacter(TT, UT) {
+        return this.characterScene.run((mT => mT.openCharacterPreview(TT, UT)))
       }
     }
-    Op.i.setDefaultHost((() => new Ip))
+    WT.i.setDefaultHost((() => new MT))
   },
-  6804: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op,
-      f: () => Ip
+  6723: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      h: () => MT
     });
-    var Op = cp(44);
-    const op = "shaderPack";
-    async function Ip() {
-      var pp;
-      let ip = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (pp = await Op.g.getItem(op, ip)) && void 0 !== pp ? pp : null
+    var WT = mT(44);
+    const zT = "shaderPack";
+    async function MT() {
+      var TT;
+      let UT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await WT.h.getItem(zT, UT)) && void 0 !== TT ? TT : null
     }
   },
-  9002: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => xp,
-      f: () => Lp
+  8986: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => nT,
+      g: () => HT
     });
-    var Op = cp(25),
-      op = cp(1349),
-      Ip = cp(104);
-    const Sp = {
+    var WT = mT(25),
+      zT = mT(1429),
+      MT = mT(102);
+    const gT = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -1335,97 +1335,97 @@ export const modules = {
       }
     };
 
-    function xp() {
-      return (0, Ip.isMobile)() && "function" === typeof navigator.vibrate
+    function nT() {
+      return (0, MT.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Lp = new class {
-      constructor(pp) {
-        this.deps = pp, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const HT = new class {
+      constructor(TT) {
+        this.deps = TT, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(pp, ip) {
-        var cp;
+      play(TT, UT) {
+        var mT;
         if (!this.deps.enabled()) return;
-        const Op = Sp[pp],
-          op = null !== ip && void 0 !== ip ? ip : Op.pattern;
-        if (null === op) return void console.warn("No vibration pattern for", pp);
-        const Ip = this.deps.now();
-        Ip - this.lastAnyAt < 40 && Op.priority < this.playingPriority || Ip - (null !== (cp = this.lastAt.get(pp)) && void 0 !== cp ? cp : -1 / 0) < Op.minGapMs || Ip < this.playingUntil && Op.priority < this.playingPriority || (this.lastAt.set(pp, Ip), this.lastAnyAt = Ip, this.playingUntil = Ip + op.reduce(((pp, ip) => pp + ip), 0), this.playingPriority = Op.priority, this.deps.vibrate(op))
+        const WT = gT[TT],
+          zT = null !== UT && void 0 !== UT ? UT : WT.pattern;
+        if (null === zT) return void console.warn("No vibration pattern for", TT);
+        const MT = this.deps.now();
+        MT - this.lastAnyAt < 40 && WT.priority < this.playingPriority || MT - (null !== (mT = this.lastAt.get(TT)) && void 0 !== mT ? mT : -1 / 0) < WT.minGapMs || MT < this.playingUntil && WT.priority < this.playingPriority || (this.lastAt.set(TT, MT), this.lastAnyAt = MT, this.playingUntil = MT + zT.reduce(((TT, UT) => TT + UT), 0), this.playingPriority = WT.priority, this.deps.vibrate(zT))
       }
     }({
-      vibrate: pp => {
-        navigator.vibrate([...pp])
+      vibrate: TT => {
+        navigator.vibrate([...TT])
       },
       now: () => performance.now(),
-      enabled: () => xp() && Op.c.get("isTouchScreen") && Op.c.get("clientEscMenuOptions").vibration && !(0, op.e)()
+      enabled: () => nT() && WT.b.get("isTouchScreen") && WT.b.get("clientEscMenuOptions").vibration && !(0, zT.e)()
     })
   },
-  34346: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp,
-      e: () => Ap,
-      i: () => Dp
+  34191: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => kT,
+      g: () => lT,
+      j: () => jT
     });
-    var Op = cp(25),
-      op = cp(1705),
-      Ip = cp(44),
-      Sp = cp(3761);
-    const xp = 2592e5,
-      Lp = "notificationOptInLastPromptedAt";
-    async function Yp() {
-      var pp;
-      const ip = null !== (pp = Ip.h.getItem(Lp)) && void 0 !== pp ? pp : 0;
-      return Date.now() - ip < xp ? null : Ap()
+    var WT = mT(25),
+      zT = mT(1802),
+      MT = mT(44),
+      gT = mT(3762);
+    const nT = 2592e5,
+      HT = "notificationOptInLastPromptedAt";
+    async function kT() {
+      var TT;
+      const UT = null !== (TT = MT.l.getItem(HT)) && void 0 !== TT ? TT : 0;
+      return Date.now() - UT < nT ? null : lT()
     }
 
-    function Dp() {
-      Ip.h.setItem(Lp, Date.now())
+    function jT() {
+      MT.l.setItem(HT, Date.now())
     }
-    async function Ap() {
-      return await op.b.ready, op.b.supports("notifications") ? Op.c.get("mobilePushNotificationsCanAsk") ? async () => {
-        op.b.request("notifications.requestPermission", {}).then((pp => {
+    async function lT() {
+      return await zT.e.ready, zT.e.supports("notifications") ? WT.b.get("mobilePushNotificationsCanAsk") ? async () => {
+        zT.e.request("notifications.requestPermission", {}).then((TT => {
           let {
-            canAsk: ip
-          } = pp;
-          Op.c.set({
-            mobilePushNotificationsCanAsk: ip
+            canAsk: UT
+          } = TT;
+          WT.b.set({
+            mobilePushNotificationsCanAsk: UT
           })
-        }), (pp => {
-          console.error("The app couldn't ask for push notifications:", pp)
+        }), (TT => {
+          console.error("The app couldn't ask for push notifications:", TT)
         }))
-      }: null: await Sp.c.canAsk() ? () => Sp.c.requestPermission() : null
+      }: null: await gT.c.canAsk() ? () => gT.c.requestPermission() : null
     }
   },
-  8897: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      return !pp.hidden && (ip || !pp.isRewardedAd)
+  8901: (TT, UT, mT) => {
+    function WT(TT, UT) {
+      return !TT.hidden && (UT || !TT.isRewardedAd)
     }
 
-    function op(pp) {
-      return "object" === typeof pp ? pp.option : pp
+    function zT(TT) {
+      return "object" === typeof TT ? TT.option : TT
     }
 
-    function Ip(pp, ip) {
-      var cp;
-      if ("dropdown" === (null === (cp = pp.userInput) || void 0 === cp ? void 0 : cp.type) && "object" === typeof pp.userInput.dropdownOptions[0]) {
-        for (const cp of pp.userInput.dropdownOptions)
-          if (op(cp) === ip) return "object" === typeof cp ? cp.cost : pp.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", pp, "input:", ip)
+    function MT(TT, UT) {
+      var mT;
+      if ("dropdown" === (null === (mT = TT.userInput) || void 0 === mT ? void 0 : mT.type) && "object" === typeof TT.userInput.dropdownOptions[0]) {
+        for (const mT of TT.userInput.dropdownOptions)
+          if (zT(mT) === UT) return "object" === typeof mT ? mT.cost : TT.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", TT, "input:", UT)
       }
-      return pp.cost
+      return TT.cost
     }
 
-    function Sp(pp, ip, cp) {
-      var Op;
-      const op = null !== (Op = cp.excludedPlayers) && void 0 !== Op ? Op : [ip];
-      return pp.filter((pp => !op.includes(pp)))
+    function gT(TT, UT, mT) {
+      var WT;
+      const zT = null !== (WT = mT.excludedPlayers) && void 0 !== WT ? WT : [UT];
+      return TT.filter((TT => !zT.includes(TT)))
     }
-    cp.d(ip, {
-      b: () => Ip,
-      c: () => op,
-      g: () => Sp,
-      h: () => Op
+    mT.d(UT, {
+      e: () => MT,
+      g: () => zT,
+      i: () => gT,
+      j: () => WT
     })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

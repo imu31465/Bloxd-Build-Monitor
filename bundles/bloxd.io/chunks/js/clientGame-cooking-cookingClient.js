@@ -1,26 +1,26 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39608: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => op
+  39543: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => zT
     });
-    const Op = [
+    const WT = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      op = function(pp, ip, cp) {
-        let op;
+      zT = function(TT, UT, mT) {
+        let zT;
         return {
-          onCreate: pp => {
-            op = pp
+          onCreate: TT => {
+            zT = TT
           },
-          onPlayerAltAction: (pp, ip, cp, Ip, Sp, xp) => {
-            Op.some((pp => pp[0] === ip && pp[2] === Ip)) && op.openShop(pp, !1)
+          onPlayerAltAction: (TT, UT, mT, MT, gT, nT) => {
+            WT.some((TT => TT[0] === UT && TT[2] === MT)) && zT.openShop(TT, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

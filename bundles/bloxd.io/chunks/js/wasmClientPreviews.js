@@ -1,38 +1,38 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  38856: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      c: () => Ip
+  38762: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => zT,
+      f: () => MT
     });
-    const Op = new WeakMap;
+    const WT = new WeakMap;
 
-    function op(pp, ip) {
-      return Op.set(pp, ip), pp
+    function zT(TT, UT) {
+      return WT.set(TT, UT), TT
     }
 
-    function Ip(pp) {
-      var ip;
-      return null !== (ip = Op.get(pp)) && void 0 !== ip ? ip : null
+    function MT(TT) {
+      var UT;
+      return null !== (UT = WT.get(TT)) && void 0 !== UT ? UT : null
     }
   },
-  38883: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp
+  38782: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => nT
     });
-    var Op = cp(1234);
+    var WT = mT(1321);
 
-    function op(pp) {
-      const ip = /(\d*\.?\d+)px/.exec(pp);
-      return ip ? Number(ip[1]) : null
+    function zT(TT) {
+      const UT = /(\d*\.?\d+)px/.exec(TT);
+      return UT ? Number(UT[1]) : null
     }
 
-    function Ip(pp) {
-      return pp.split(/[\s,]+/).pop()
+    function MT(TT) {
+      return TT.split(/[\s,]+/).pop()
     }
-    let Sp = !1;
-    const xp = {
+    let gT = !1;
+    const nT = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,605 +43,605 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(pp, ip, Op, xp, Lp, Yp) {
-        if (Lp <= 0 || Yp <= 0 || this.fontSize <= 0) return {
+      drawText: function(TT, UT, WT, nT, HT, kT) {
+        if (HT <= 0 || kT <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Dp,
-          fontVariant: Ap,
-          fontWeight: Pp,
-          fontSize: Wp,
-          font: yp
-        } = this, Up = [Dp, Ap, Pp, `${Wp}px`, yp].filter(Boolean).join(" "), wp = [
-          [Pp, `${Wp}px`, Ip(yp)].filter(Boolean).join(" "), `${Wp}px sans-serif`
-        ], vp = pp.font, tp = function(pp, ip, cp) {
-          for (const Op of ip) {
-            pp.font = Op;
-            const ip = op(pp.font),
-              Sp = Ip(Op);
-            if (null !== ip && Math.abs(ip - cp) <= .5 && pp.font.toLowerCase().includes(Sp.toLowerCase())) return Op
+          fontStyle: jT,
+          fontVariant: lT,
+          fontWeight: LT,
+          fontSize: pT,
+          font: BT
+        } = this, ZT = [jT, lT, LT, `${pT}px`, BT].filter(Boolean).join(" "), cT = [
+          [LT, `${pT}px`, MT(BT)].filter(Boolean).join(" "), `${pT}px sans-serif`
+        ], vT = TT.font, fT = function(TT, UT, mT) {
+          for (const WT of UT) {
+            TT.font = WT;
+            const UT = zT(TT.font),
+              gT = MT(WT);
+            if (null !== UT && Math.abs(UT - mT) <= .5 && TT.font.toLowerCase().includes(gT.toLowerCase())) return WT
           }
           return null
-        }(pp, [Up, ...wp], Wp);
-        tp !== Up && function(pp, ip, Op) {
-          Sp || (Sp = !0, Promise.resolve().then((() => cp(1080))).then((cp => {
+        }(TT, [ZT, ...cT], pT);
+        fT !== ZT && function(TT, UT, WT) {
+          gT || (gT = !0, Promise.resolve().then((() => mT(1153))).then((mT => {
             let {
-              NU: op
-            } = cp;
-            op(new Error("A canvas didn't take canvasTxt's font"), {
-              font: pp,
-              aW: ip,
-              drawnWith: null !== Op && void 0 !== Op ? Op : "the kept font, scaled"
+              cZ: zT
+            } = mT;
+            zT(new Error("A canvas didn't take canvasTxt's font"), {
+              font: TT,
+              Jp: UT,
+              drawnWith: null !== WT && void 0 !== WT ? WT : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Up, vp, tp);
-        const Hp = op(pp.font);
-        if (null === tp && null !== Hp && Hp > 0) {
-          const cp = Wp / Hp;
-          pp.save();
+        }(ZT, vT, fT);
+        const qT = zT(TT.font);
+        if (null === fT && null !== qT && qT > 0) {
+          const mT = pT / qT;
+          TT.save();
           try {
-            return pp.scale(cp, cp), {
-              height: this.drawLines(pp, ip, Op / cp, xp / cp, Lp / cp, Yp / cp, Hp).height * cp
+            return TT.scale(mT, mT), {
+              height: this.drawLines(TT, UT, WT / mT, nT / mT, HT / mT, kT / mT, qT).height * mT
             }
           } finally {
-            pp.restore()
+            TT.restore()
           }
         }
-        return this.drawLines(pp, ip, Op, xp, Lp, Yp, Wp)
+        return this.drawLines(TT, UT, WT, nT, HT, kT, pT)
       },
-      drawLines: function(pp, ip, cp, op, Ip, Sp, xp) {
-        const Lp = cp + Ip,
-          Yp = op + Sp;
-        let Dp, Ap = op + Sp / 2 + xp / 2;
-        "right" === this.align ? (Dp = Lp, pp.textAlign = "right") : "left" === this.align ? (Dp = cp, pp.textAlign = "left") : (Dp = cp + Ip / 2, pp.textAlign = "center");
-        for (const Op of ip) {
-          pp.measureText(Op).width >= Ip && (ip = ip.replace(Op, ""))
+      drawLines: function(TT, UT, mT, zT, MT, gT, nT) {
+        const HT = mT + MT,
+          kT = zT + gT;
+        let jT, lT = zT + gT / 2 + nT / 2;
+        "right" === this.align ? (jT = HT, TT.textAlign = "right") : "left" === this.align ? (jT = mT, TT.textAlign = "left") : (jT = mT + MT / 2, TT.textAlign = "center");
+        for (const WT of UT) {
+          TT.measureText(WT).width >= MT && (UT = UT.replace(WT, ""))
         }
-        ip = (0, Op.P)(ip);
-        const Pp = [],
-          Wp = ip.split("\n"),
-          yp = this.justify ? pp.measureText("\u200a").width : 0;
-        Wp.forEach((ip => {
-          let cp = pp.measureText(ip).width;
-          if (cp <= Ip) Pp.push(ip);
+        UT = (0, WT.Z)(UT);
+        const LT = [],
+          pT = UT.split("\n"),
+          BT = this.justify ? TT.measureText("\u200a").width : 0;
+        pT.forEach((UT => {
+          let mT = TT.measureText(UT).width;
+          if (mT <= MT) LT.push(UT);
           else {
-            let Op = ip;
-            const op = Ip;
-            let Sp, xp, Lp;
-            for (cp = pp.measureText(Op).width; cp > op;) {
-              for (Sp = 0, xp = 0, Lp = ""; xp < op;) Sp++, Lp = Op.substr(0, Sp), xp = pp.measureText(Lp).width;
-              Sp--, Lp = Lp.substr(0, Sp);
-              const ip = Sp;
-              if (" " !== Op.substr(Sp, 1)) {
+            let WT = UT;
+            const zT = MT;
+            let gT, nT, HT;
+            for (mT = TT.measureText(WT).width; mT > zT;) {
+              for (gT = 0, nT = 0, HT = ""; nT < zT;) gT++, HT = WT.substr(0, gT), nT = TT.measureText(HT).width;
+              gT--, HT = HT.substr(0, gT);
+              const UT = gT;
+              if (" " !== WT.substr(gT, 1)) {
                 for (;
-                  " " !== Op.substr(Sp, 1) && 0 !== Sp;) Sp--;
-                0 === Sp && (Sp = ip), Lp = Op.substr(0, Sp)
+                  " " !== WT.substr(gT, 1) && 0 !== gT;) gT--;
+                0 === gT && (gT = UT), HT = WT.substr(0, gT)
               }
-              Lp = this.justify ? this.justifyLine(pp, Lp, yp, "\u200a", Ip) : Lp, Op = Op.substr(Sp), cp = pp.measureText(Op).width, Pp.push(Lp)
+              HT = this.justify ? this.justifyLine(TT, HT, BT, "\u200a", MT) : HT, WT = WT.substr(gT), mT = TT.measureText(WT).width, LT.push(HT)
             }
-            cp > 0 && Pp.push(Op)
+            mT > 0 && LT.push(WT)
           }
         }));
-        const Up = this.lineHeight ? this.lineHeight : this.getTextHeight(pp, ip),
-          wp = Up * (Pp.length - 1),
-          vp = wp / 2;
-        let tp = op;
-        "top" === this.vAlign ? Ap = op + xp : "bottom" === this.vAlign ? (Ap = Yp - wp, tp = Yp) : (tp = op + Sp / 2, Ap -= vp), Pp.forEach((ip => {
-          ip = ip.trim(), pp.fillText(ip, Dp, Ap), Ap += Up
-        })), this.debug && (pp.lineWidth = 3, pp.strokeStyle = "#00909e", pp.strokeRect(cp, op, Ip, Sp), pp.lineWidth = 2, pp.strokeStyle = "#f6d743", pp.beginPath(), pp.moveTo(Dp, op), pp.lineTo(Dp, Yp), pp.stroke(), pp.strokeStyle = "#ff6363", pp.beginPath(), pp.moveTo(cp, tp), pp.lineTo(Lp, tp), pp.stroke());
+        const ZT = this.lineHeight ? this.lineHeight : this.getTextHeight(TT, UT),
+          cT = ZT * (LT.length - 1),
+          vT = cT / 2;
+        let fT = zT;
+        "top" === this.vAlign ? lT = zT + nT : "bottom" === this.vAlign ? (lT = kT - cT, fT = kT) : (fT = zT + gT / 2, lT -= vT), LT.forEach((UT => {
+          UT = UT.trim(), TT.fillText(UT, jT, lT), lT += ZT
+        })), this.debug && (TT.lineWidth = 3, TT.strokeStyle = "#00909e", TT.strokeRect(mT, zT, MT, gT), TT.lineWidth = 2, TT.strokeStyle = "#f6d743", TT.beginPath(), TT.moveTo(jT, zT), TT.lineTo(jT, kT), TT.stroke(), TT.strokeStyle = "#ff6363", TT.beginPath(), TT.moveTo(mT, fT), TT.lineTo(HT, fT), TT.stroke());
         return {
-          height: wp + Up
+          height: cT + ZT
         }
       },
-      getTextHeight: function(pp, ip) {
-        const cp = pp.textBaseline;
-        pp.textBaseline = "bottom";
+      getTextHeight: function(TT, UT) {
+        const mT = TT.textBaseline;
+        TT.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Op
-        } = pp.measureText(ip);
-        return pp.textBaseline = cp, Op
+          actualBoundingBoxAscent: WT
+        } = TT.measureText(UT);
+        return TT.textBaseline = mT, WT
       },
-      justifyLine: function(pp, ip, cp, Op, op) {
-        const Ip = ip.trim(),
-          Sp = pp.measureText(Ip).width,
-          xp = Ip.split(/\s+/).length - 1,
-          Lp = Math.floor((op - Sp) / cp);
-        if (xp <= 0 || Lp <= 0) return Ip;
-        const Yp = Math.floor(Lp / xp);
-        let Dp = Lp - xp * Yp,
-          Ap = [];
-        for (let Pp = 0; Pp < Yp; Pp++) Ap.push(Op);
-        Ap = Ap.join("");
-        return Ip.replace(/\s+/g, (pp => {
-          const ip = Dp > 0 ? Ap + Op : Ap;
-          return Dp--, pp + ip
+      justifyLine: function(TT, UT, mT, WT, zT) {
+        const MT = UT.trim(),
+          gT = TT.measureText(MT).width,
+          nT = MT.split(/\s+/).length - 1,
+          HT = Math.floor((zT - gT) / mT);
+        if (nT <= 0 || HT <= 0) return MT;
+        const kT = Math.floor(HT / nT);
+        let jT = HT - nT * kT,
+          lT = [];
+        for (let LT = 0; LT < kT; LT++) lT.push(WT);
+        lT = lT.join("");
+        return MT.replace(/\s+/g, (TT => {
+          const UT = jT > 0 ? lT + WT : lT;
+          return jT--, TT + UT
         }))
       }
     }
   },
-  38890: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Up,
-      f: () => yp,
-      i: () => Pp,
-      l: () => Dp,
-      n: () => Ap
+  38788: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => ZT,
+      e: () => BT,
+      g: () => LT,
+      j: () => jT,
+      k: () => lT
     });
-    var Op = cp(4341),
-      op = cp(337);
-    const Ip = 1024,
-      Sp = 1536,
-      xp = 2 * Op.l + 1,
-      Lp = new Intl.NumberFormat("en", {
+    var WT = mT(4328),
+      zT = mT(366);
+    const MT = 1024,
+      gT = 1536,
+      nT = 2 * WT.i + 1,
+      HT = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Yp = 1.5;
+      kT = 1.5;
 
-    function Dp(pp, ip, cp) {
-      if ("string" !== typeof pp) return ip;
+    function jT(TT, UT, mT) {
+      if ("string" !== typeof TT) return UT;
       try {
-        const cp = JSON.parse(pp);
-        return cp && "object" === typeof cp ? cp : ip
-      } catch (Op) {
-        return void 0 !== cp && console.error(`Couldn't parse ${cp}`, Op), ip
+        const mT = JSON.parse(TT);
+        return mT && "object" === typeof mT ? mT : UT
+      } catch (WT) {
+        return void 0 !== mT && console.error(`Couldn't parse ${mT}`, WT), UT
       }
     }
 
-    function Ap(pp) {
-      return Dp(pp, null, "a leaderboard's rows")
+    function lT(TT) {
+      return jT(TT, null, "a leaderboard's rows")
     }
 
-    function Pp(pp, ip) {
-      var cp, Op;
-      return null !== ip && void 0 !== ip ? ip : {
-        status: null !== (cp = pp.status) && void 0 !== cp ? cp : "loading",
-        entries: null !== (Op = pp.entries) && void 0 !== Op ? Op : []
+    function LT(TT, UT) {
+      var mT, WT;
+      return null !== UT && void 0 !== UT ? UT : {
+        status: null !== (mT = TT.status) && void 0 !== mT ? mT : "loading",
+        entries: null !== (WT = TT.entries) && void 0 !== WT ? WT : []
       }
     }
 
-    function Wp(pp, ip) {
-      return "number" === typeof pp && Number.isFinite(pp) && pp > 0 ? pp : ip
+    function pT(TT, UT) {
+      return "number" === typeof TT && Number.isFinite(TT) && TT > 0 ? TT : UT
     }
 
-    function yp(pp, ip) {
-      const cp = Wp(pp.size, 1);
-      let Op = Wp(pp.width, Wp(2.5 * cp, 2.5)),
-        op = Wp(pp.height, Wp(3.75 * cp, 3.75));
-      Number.isFinite(Ip * op / Op) && Number.isFinite(Sp * Op / op) || (Op = 2.5, op = 3.75);
-      const xp = op / Op,
-        Lp = Math.max(1, Math.min(Ip, ip / xp));
+    function BT(TT, UT) {
+      const mT = pT(TT.size, 1);
+      let WT = pT(TT.width, pT(2.5 * mT, 2.5)),
+        zT = pT(TT.height, pT(3.75 * mT, 3.75));
+      Number.isFinite(MT * zT / WT) && Number.isFinite(gT * WT / zT) || (WT = 2.5, zT = 3.75);
+      const nT = zT / WT,
+        HT = Math.max(1, Math.min(MT, UT / nT));
       return {
-        width: Op,
-        height: op,
-        layoutWidth: Math.max(Ip, Sp / xp),
-        layoutHeight: Math.max(Sp, Ip * xp),
-        pixelWidth: Math.round(Lp),
-        pixelHeight: Math.round(Math.max(1, Math.min(ip, Lp * xp)))
+        width: WT,
+        height: zT,
+        layoutWidth: Math.max(MT, gT / nT),
+        layoutHeight: Math.max(gT, MT * nT),
+        pixelWidth: Math.round(HT),
+        pixelHeight: Math.round(Math.max(1, Math.min(UT, HT * nT)))
       }
     }
 
-    function Up(pp, ip, cp, Sp, Dp, Ap) {
-      pp.setTransform(1, 0, 0, 1, 0, 0), pp.fillStyle = op.N.defaultNameTagBackground, pp.fillRect(0, 0, ip, cp), pp.scale(ip / Sp.layoutWidth, cp / Sp.layoutHeight), pp.translate((Sp.layoutWidth - Ip) / 2, 0),
-        function(pp, ip, cp, Ip) {
-          var Sp, Dp, Ap, Pp;
+    function ZT(TT, UT, mT, gT, jT, lT) {
+      TT.setTransform(1, 0, 0, 1, 0, 0), TT.fillStyle = zT.R.defaultNameTagBackground, TT.fillRect(0, 0, UT, mT), TT.scale(UT / gT.layoutWidth, mT / gT.layoutHeight), TT.translate((gT.layoutWidth - MT) / 2, 0),
+        function(TT, UT, mT, MT) {
+          var gT, jT, lT, LT;
           const {
-            top: Wp,
-            around: yp,
-            showPlayerText: Up,
-            localPlayerDbId: tp
-          } = cp, {
-            whiteUiText: Hp,
-            grayUiText: dp,
-            yellowUiText: ep
-          } = op.N;
-          pp.textBaseline = "middle";
-          const jp = function(ip, cp, Op, op, Ip, Sp) {
-              let xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              pp.font = `bold ${op}px 'Jetbrains Mono', monospace`, pp.fillStyle = Ip, pp.textAlign = xp;
-              let Lp = ip.replace(/[\r\n\t]/g, " ");
-              if (pp.measureText(Lp).width > Sp) {
-                for (; Lp.length > 0 && pp.measureText(`${Lp}\u2026`).width > Sp;) Lp = Lp.slice(0, -1);
-                Lp += "\u2026"
+            top: pT,
+            around: BT,
+            showPlayerText: ZT,
+            localPlayerDbId: fT
+          } = mT, {
+            whiteUiText: qT,
+            grayUiText: iT,
+            yellowUiText: bT
+          } = zT.R;
+          TT.textBaseline = "middle";
+          const OT = function(UT, mT, WT, zT, MT, gT) {
+              let nT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              TT.font = `bold ${zT}px 'Jetbrains Mono', monospace`, TT.fillStyle = MT, TT.textAlign = nT;
+              let HT = UT.replace(/[\r\n\t]/g, " ");
+              if (TT.measureText(HT).width > gT) {
+                for (; HT.length > 0 && TT.measureText(`${HT}\u2026`).width > gT;) HT = HT.slice(0, -1);
+                HT += "\u2026"
               }
-              pp.fillText(Lp, cp, Op)
+              TT.fillText(HT, mT, WT)
             },
-            kp = ip => {
-              pp.fillStyle = Hp, pp.globalAlpha = .15, pp.fillRect(24, ip, 976, 2), pp.globalAlpha = 1
+            eT = UT => {
+              TT.fillStyle = qT, TT.globalAlpha = .15, TT.fillRect(24, UT, 976, 2), TT.globalAlpha = 1
             },
-            mp = null === tp ? null : (0, op.gc)(tp),
-            Rp = pp => null !== mp && pp.playerHash === mp,
-            qp = wp(Wp.entries, Op.n),
-            Mp = "ready" === Wp.status && qp.length > 0,
-            Cp = null === yp ? [] : wp(yp.entries, xp),
-            Ep = qp.some(Rp),
-            Xp = null === yp ? null : function(pp) {
-              const ip = pp;
-              if (!ip || !Number.isFinite(ip.rank) || !Number.isFinite(ip.tied) || !Number.isFinite(ip.total)) return null;
-              return ip
-            }(yp.standing),
-            lp = Cp.find(Rp),
-            Qp = qp.find(Rp),
-            Jp = null === Xp || void 0 === lp ? null : {
-              value: lp.value,
-              rank: Xp.rank
+            YT = null === fT ? null : (0, zT.Fc)(fT),
+            JT = TT => null !== YT && TT.playerHash === YT,
+            xT = cT(pT.entries, WT.k),
+            dT = "ready" === pT.status && xT.length > 0,
+            wT = null === BT ? [] : cT(BT.entries, nT),
+            tT = xT.some(JT),
+            aT = null === BT ? null : function(TT) {
+              const UT = TT;
+              if (!UT || !Number.isFinite(UT.rank) || !Number.isFinite(UT.tied) || !Number.isFinite(UT.total)) return null;
+              return UT
+            }(BT.standing),
+            yT = wT.find(JT),
+            XT = xT.find(JT),
+            IT = null === aT || void 0 === yT ? null : {
+              value: yT.value,
+              rank: aT.rank
             },
-            Bp = vp(qp, void 0 === Qp || Qp.value === (null === Jp || void 0 === Jp ? void 0 : Jp.value) ? Jp : null),
-            Np = vp(Cp, Jp),
-            Tp = (pp, ip) => {
-              const cp = pp.findIndex(Rp);
-              return cp >= 0 ? ip[cp] : null
+            QT = vT(xT, void 0 === XT || XT.value === (null === IT || void 0 === IT ? void 0 : IT.value) ? IT : null),
+            sT = vT(wT, IT),
+            FT = (TT, UT) => {
+              const mT = TT.findIndex(JT);
+              return mT >= 0 ? UT[mT] : null
             },
-            fp = null !== (Sp = null !== (Dp = null === Xp || void 0 === Xp ? void 0 : Xp.rank) && void 0 !== Dp ? Dp : Tp(Cp, Np)) && void 0 !== Sp ? Sp : Tp(qp, Bp);
-          pp.font = "bold 34px 'Jetbrains Mono', monospace";
-          const bp = [...Mp ? Bp : [], ...Ep ? [] : Np],
-            hp = Math.min(280, Math.max(0, ...bp.map((ip => pp.measureText(Lp.format(ip)).width)))),
-            ap = hp <= 80,
-            np = ap ? 80 : 32 + hp,
-            Fp = ap ? 148 : np + 28,
-            gp = 660 - Fp;
-          jp(`TOP ${Op.n}  /  ALL TIME`, 24, 52, 28, dp, 976), jp(Up ? String(null !== (Ap = ip.title) && void 0 !== Ap ? Ap : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hp, 976), jp("RANK", 32, 174, 28, dp, Fp - 40), jp("PLAYER", Fp, 174, 28, dp, gp), jp(Up ? String(null !== (Pp = ip.scoreLabel) && void 0 !== Pp ? Pp : "Score").slice(0, 24) : "Score", 992, 174, 28, dp, 304, "right"), kp(202);
-          const Gp = (Ip - 232) / (Op.n + Yp + xp),
-            rp = 208 + Op.n * Gp,
-            Zp = rp + Yp * Gp,
-            zp = (ip, cp, Op, op) => {
-              const Ip = Rp(ip);
-              pp.fillStyle = Ip ? ep : Hp, pp.globalAlpha = Ip ? .15 : op ? .035 : 0, pp.fillRect(24, Op - Gp / 2 + 1, 976, Gp - 2), pp.globalAlpha = 1;
-              const Sp = Ip ? ep : Hp;
-              jp(Lp.format(cp), np, Op, 34, Sp, ap ? 80 : hp, ap ? "center" : "right"), jp(Up ? String(ip.name).slice(0, 64) : "Player", Fp, Op, 34, Sp, gp);
-              const xp = Lp.format(ip.value);
-              jp(pp.measureText(xp).width > 304 ? ip.value.toExponential(6) : xp, 992, Op, 34, Sp, 304, "right")
+            PT = null !== (gT = null !== (jT = null === aT || void 0 === aT ? void 0 : aT.rank) && void 0 !== jT ? jT : FT(wT, sT)) && void 0 !== gT ? gT : FT(xT, QT);
+          TT.font = "bold 34px 'Jetbrains Mono', monospace";
+          const VT = [...dT ? QT : [], ...tT ? [] : sT],
+            uT = Math.min(280, Math.max(0, ...VT.map((UT => TT.measureText(HT.format(UT)).width)))),
+            CT = uT <= 80,
+            rT = CT ? 80 : 32 + uT,
+            KT = CT ? 148 : rT + 28,
+            ST = 660 - KT;
+          OT(`TOP ${WT.k}  /  ALL TIME`, 24, 52, 28, iT, 976), OT(ZT ? String(null !== (lT = UT.title) && void 0 !== lT ? lT : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, qT, 976), OT("RANK", 32, 174, 28, iT, KT - 40), OT("PLAYER", KT, 174, 28, iT, ST), OT(ZT ? String(null !== (LT = UT.scoreLabel) && void 0 !== LT ? LT : "Score").slice(0, 24) : "Score", 992, 174, 28, iT, 304, "right"), eT(202);
+          const GT = (MT - 232) / (WT.k + kT + nT),
+            NT = 208 + WT.k * GT,
+            ET = NT + kT * GT,
+            hT = (UT, mT, WT, zT) => {
+              const MT = JT(UT);
+              TT.fillStyle = MT ? bT : qT, TT.globalAlpha = MT ? .15 : zT ? .035 : 0, TT.fillRect(24, WT - GT / 2 + 1, 976, GT - 2), TT.globalAlpha = 1;
+              const gT = MT ? bT : qT;
+              OT(HT.format(mT), rT, WT, 34, gT, CT ? 80 : uT, CT ? "center" : "right"), OT(ZT ? String(UT.name).slice(0, 64) : "Player", KT, WT, 34, gT, ST);
+              const nT = HT.format(UT.value);
+              OT(TT.measureText(nT).width > 304 ? UT.value.toExponential(6) : nT, 992, WT, 34, gT, 304, "right")
             };
-          if (Mp)
-            for (const [Op, op] of qp.entries()) zp(op, Bp[Op], 208 + (Op + .5) * Gp, Op % 2 === 0);
+          if (dT)
+            for (const [WT, zT] of xT.entries()) hT(zT, QT[WT], 208 + (WT + .5) * GT, WT % 2 === 0);
           else {
-            const pp = "error" === Wp.status,
-              ip = pp ? "Couldn't load leaderboard" : "ready" === Wp.status ? "No scores yet" : "Loading leaderboard\u2026",
-              cp = pp ? "Trying again shortly" : "ready" === Wp.status ? "Be the first on the board!" : "Fetching the top players",
-              Op = (208 + rp) / 2;
-            jp(ip, 512, Op - 28, 40, pp ? op.N.redUiText : Hp, 960, "center"), jp(cp, 512, Op + 27, 30, dp, 960, "center")
+            const TT = "error" === pT.status,
+              UT = TT ? "Couldn't load leaderboard" : "ready" === pT.status ? "No scores yet" : "Loading leaderboard\u2026",
+              mT = TT ? "Trying again shortly" : "ready" === pT.status ? "Be the first on the board!" : "Fetching the top players",
+              WT = (208 + NT) / 2;
+            OT(UT, 512, WT - 28, 40, TT ? zT.R.redUiText : qT, 960, "center"), OT(mT, 512, WT + 27, 30, iT, 960, "center")
           }
-          const sp = rp + Yp * Gp / 2;
-          if (null === fp) kp(sp);
+          const DT = NT + kT * GT / 2;
+          if (null === PT) eT(DT);
           else {
-            const ip = null === Xp ? 0 : Xp.tied - 1,
-              cp = `YOUR RANK #${Lp.format(fp)}${null===Xp?"":` of ${Lp.format(Xp.total)}`}`;
-            pp.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Op = Math.max(20, Math.min(36, Math.floor(34560 / pp.measureText(cp).width)));
-            jp(cp, 512, sp - (ip > 0 ? 15 : 0), Op, ep, 960, "center"), ip > 0 && jp(`Tied with ${Lp.format(ip)} other${1===ip?"":"s"}`, 512, sp + 24, 24, dp, 960, "center")
+            const UT = null === aT ? 0 : aT.tied - 1,
+              mT = `YOUR RANK #${HT.format(PT)}${null===aT?"":` of ${HT.format(aT.total)}`}`;
+            TT.font = "bold 36px 'Jetbrains Mono', monospace";
+            const WT = Math.max(20, Math.min(36, Math.floor(34560 / TT.measureText(mT).width)));
+            OT(mT, 512, DT - (UT > 0 ? 15 : 0), WT, bT, 960, "center"), UT > 0 && OT(`Tied with ${HT.format(UT)} other${1===UT?"":"s"}`, 512, DT + 24, 24, iT, 960, "center")
           }
-          if (null === yp) return;
-          const Kp = Zp + xp * Gp / 2;
-          if (Ep) jp(`You're in the top ${Op.n}!`, 512, Kp, 40, ep, 960, "center");
-          else if (0 === Cp.length) jp("You're not on this board yet", 512, Kp, 34, dp, 960, "center");
+          if (null === BT) return;
+          const oT = ET + nT * GT / 2;
+          if (tT) OT(`You're in the top ${WT.k}!`, 512, oT, 40, bT, 960, "center");
+          else if (0 === wT.length) OT("You're not on this board yet", 512, oT, 34, iT, 960, "center");
           else
-            for (const [Op, op] of Cp.entries()) zp(op, Np[Op], Zp + (Op + .5) * Gp, Op % 2 === 0)
-        }(pp, Dp, Ap, Sp.layoutHeight)
+            for (const [WT, zT] of wT.entries()) hT(zT, sT[WT], ET + (WT + .5) * GT, WT % 2 === 0)
+        }(TT, jT, lT, gT.layoutHeight)
     }
 
-    function wp(pp, ip) {
-      return Array.isArray(pp) ? pp.slice(0, ip).filter((pp => pp && Number.isFinite(pp.rank) && Number.isFinite(pp.value))) : []
+    function cT(TT, UT) {
+      return Array.isArray(TT) ? TT.slice(0, UT).filter((TT => TT && Number.isFinite(TT.rank) && Number.isFinite(TT.value))) : []
     }
 
-    function vp(pp, ip) {
-      const cp = [];
-      let Op = !1;
-      return pp.forEach(((op, Ip) => {
-        if (null !== ip && op.value === ip.value) return void cp.push(ip.rank);
-        const Sp = Ip > 0 && op.value === pp[Ip - 1].value;
-        Sp || (Op = 0 === Ip && 1 !== op.rank), cp.push(Sp && !Op ? cp[Ip - 1] : op.rank)
-      })), cp
+    function vT(TT, UT) {
+      const mT = [];
+      let WT = !1;
+      return TT.forEach(((zT, MT) => {
+        if (null !== UT && zT.value === UT.value) return void mT.push(UT.rank);
+        const gT = MT > 0 && zT.value === TT[MT - 1].value;
+        gT || (WT = 0 === MT && 1 !== zT.rank), mT.push(gT && !WT ? mT[MT - 1] : zT.rank)
+      })), mT
     }
   },
-  39076: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      e: () => Ip
+  38992: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => zT,
+      g: () => MT
     });
-    const Op = 32;
+    const WT = 32;
 
-    function op(pp) {
-      return Array.from(pp).length
+    function zT(TT) {
+      return Array.from(TT).length
     }
 
-    function Ip(pp) {
-      const ip = [""];
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        op = "";
-      const Ip = () => {
-        ip.push(""), cp = 0, op = ""
+    function MT(TT) {
+      const UT = [""];
+      let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        zT = "";
+      const MT = () => {
+        UT.push(""), mT = 0, zT = ""
       };
-      for (const Sp of pp.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(Sp)) Ip();
-        else if (/^\s+$/.test(Sp)) op += Sp;
-      else if (Sp.length > 0) {
-        const pp = Array.from(Sp);
-        cp > 0 && cp + op.length + pp.length > Op && Ip(), ip[ip.length - 1] += op, cp += op.length, op = "";
-        for (const op of pp) cp >= Op && Ip(), ip[ip.length - 1] += op, cp++
+      for (const gT of TT.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(gT)) MT();
+        else if (/^\s+$/.test(gT)) zT += gT;
+      else if (gT.length > 0) {
+        const TT = Array.from(gT);
+        mT > 0 && mT + zT.length + TT.length > WT && MT(), UT[UT.length - 1] += zT, mT += zT.length, zT = "";
+        for (const zT of TT) mT >= WT && MT(), UT[UT.length - 1] += zT, mT++
       }
-      return ip[ip.length - 1] += op, ip
+      return UT[UT.length - 1] += zT, UT
     }
   },
-  51184: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      WasmPreviewHost: () => Ci,
-      pageBuiltInAnimationPack: () => Pp,
-      pagePreviews: () => Li,
-      previewModule: () => Kp
+  51100: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      WasmPreviewHost: () => dU,
+      pageBuiltInAnimationPack: () => LT,
+      pagePreviews: () => gU,
+      previewModule: () => oT
     });
-    var Op = cp(2970),
-      op = cp(643);
-    const Ip = "[bloxd-wasm-client]";
+    var WT = mT(3001),
+      zT = mT(662);
+    const MT = "[bloxd-wasm-client]";
 
-    function Sp(pp) {
-      const ip = {
+    function gT(TT) {
+      const UT = {
         wasm: "unknown",
-        client: String(op.c)
+        client: String(zT.d)
       };
       try {
-        var cp;
-        ip.wasm = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.JA()) && void 0 !== cp ? cp : ip.wasm
+        var mT;
+        UT.wasm = null !== (mT = null === TT || void 0 === TT ? void 0 : TT.Zl()) && void 0 !== mT ? mT : UT.wasm
       } catch {}
-      return ip
+      return UT
     }
-    async function xp(pp) {
-      if (pp.length < 2 || 31 !== pp[0] || 139 !== pp[1]) return pp;
+    async function nT(TT) {
+      if (TT.length < 2 || 31 !== TT[0] || 139 !== TT[1]) return TT;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: ip
-        } = await Promise.resolve().then((() => cp(2918)));
-        return ip(pp)
+          ungzip: UT
+        } = await Promise.resolve().then((() => mT(2943)));
+        return UT(TT)
       }
-      const ip = new Blob([pp]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(ip).arrayBuffer())
+      const UT = new Blob([TT]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(UT).arrayBuffer())
     }
 
-    function Lp(pp, ip, Op, op) {
-      Promise.resolve().then((() => cp(40945))).then((cp => {
+    function HT(TT, UT, WT, zT) {
+      Promise.resolve().then((() => mT(40887))).then((mT => {
         let {
-          reportDataLoadFailure: Ip
-        } = cp;
-        Ip(pp, ip, Op, op)
-      }), (ip => {
-        console.warn(`${Ip} ${pp} didn't load, and the report couldn't be sent`, Op.error, ip)
+          reportDataLoadFailure: MT
+        } = mT;
+        MT(TT, UT, WT, zT)
+      }), (UT => {
+        console.warn(`${MT} ${TT} didn't load, and the report couldn't be sent`, WT.error, UT)
       }))
     }
-    const Yp = [3e4, 12e4, 3e5];
-    class Dp {
-      constructor(pp) {
-        this.deps = pp, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((pp => {
-          this.resolveSet = pp
+    const kT = [3e4, 12e4, 3e5];
+    class jT {
+      constructor(TT) {
+        this.deps = TT, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((TT => {
+          this.resolveSet = TT
         }))
       }
-      provide(pp) {
-        return this.loading ??= this.load(pp), this.loading
+      provide(TT) {
+        return this.loading ??= this.load(TT), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(pp) {
-        const ip = Sp(pp),
-          cp = await async function(pp, ip) {
-            let cp;
+      async load(TT) {
+        const UT = gT(TT),
+          mT = await async function(TT, UT) {
+            let mT;
             try {
-              cp = await pp()
-            } catch (Op) {
+              mT = await TT()
+            } catch (WT) {
               return {
                 stage: "fetch",
-                error: Op
+                error: WT
               }
             }
             try {
-              return ip(cp) ? null : {
+              return UT(mT) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (Op) {
+            } catch (WT) {
               return {
                 stage: "decode",
-                error: Op
+                error: WT
               }
             }
-          }((() => this.deps.fetch()), (ip => {
-            const cp = pp.iSp(ip);
-            return cp && this.resolveSet(ip), cp
+          }((() => this.deps.fetch()), (UT => {
+            const mT = TT.yMT(UT);
+            return mT && this.resolveSet(UT), mT
           }));
-        if (null !== cp) {
-          if ("fetch" === cp.stage) {
+        if (null !== mT) {
+          if ("fetch" === mT.stage) {
             this.loading = null;
-            const ip = Yp[this.retries++];
-            void 0 !== ip && this.deps.later((() => {
-              this.provide(pp)
-            }), ip)
+            const UT = kT[this.retries++];
+            void 0 !== UT && this.deps.later((() => {
+              this.provide(TT)
+            }), UT)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(cp, ip))
+          this.reported || (this.reported = !0, this.deps.onFailed(mT, UT))
         }
       }
     }
-    let Ap = null;
+    let lT = null;
 
-    function Pp() {
-      return Ap ??= new Dp({
-        fetch: async () => xp(await (0, Op.F)(Wp(), {
+    function LT() {
+      return lT ??= new jT({
+        fetch: async () => nT(await (0, WT.M)(pT(), {
           priority: "low"
         })),
-        onFailed: (pp, ip) => {
-          Lp("builtInAnimations", Wp(), pp, ip)
+        onFailed: (TT, UT) => {
+          HT("builtInAnimations", pT(), TT, UT)
         },
-        later: (pp, ip) => {
-          setTimeout(pp, ip)
+        later: (TT, UT) => {
+          setTimeout(TT, UT)
         }
-      }), Ap
+      }), lT
     }
 
-    function Wp() {
-      return cp(51187)
+    function pT() {
+      return mT(51106)
     }
-    var yp = cp(2963),
-      Up = cp(1211),
-      wp = cp(316),
-      vp = cp(314),
-      tp = cp(657),
-      Hp = cp(4903),
-      dp = cp(40911),
-      ep = cp(40930),
-      jp = cp(41133),
-      kp = (cp(40976), cp(40988)),
-      mp = cp(40997),
-      Rp = cp(41001),
-      qp = cp(40923),
-      Mp = cp(41158),
-      Cp = cp(41165),
-      Ep = cp(40902),
-      Xp = cp(41185),
-      lp = cp(41038),
-      Qp = cp(41025),
-      Jp = cp(41087),
-      Bp = cp(41147),
-      Np = cp(42879),
-      Tp = cp(36484),
-      fp = cp(3801);
-    const bp = "[bloxd-previews]",
-      hp = 4e5,
-      ap = 0,
-      np = 1,
-      Fp = 2,
-      gp = 1,
-      Gp = 2,
-      rp = 3,
-      Zp = 0,
-      zp = 1,
-      sp = 2;
+    var BT = mT(2992),
+      ZT = mT(1302),
+      cT = mT(344),
+      vT = mT(340),
+      fT = mT(681),
+      qT = mT(4895),
+      iT = mT(40860),
+      bT = mT(40879),
+      OT = mT(41066),
+      eT = (mT(40912), mT(40926)),
+      YT = mT(40929),
+      JT = mT(40935),
+      xT = mT(40871),
+      dT = mT(41093),
+      wT = mT(41096),
+      tT = mT(40855),
+      aT = mT(41117),
+      yT = mT(40987),
+      XT = mT(40975),
+      IT = mT(41025),
+      QT = mT(41080),
+      sT = mT(42755),
+      FT = mT(36358),
+      PT = mT(3800);
+    const VT = "[bloxd-previews]",
+      uT = 4e5,
+      CT = 0,
+      rT = 1,
+      KT = 2,
+      ST = 1,
+      GT = 2,
+      NT = 3,
+      ET = 0,
+      hT = 1,
+      DT = 2;
 
-    function Kp(pp) {
-      const ip = pp,
-        cp = (0, dp.Y)(pp),
-        Op = (0, dp.o)(pp);
-      return null !== cp && null !== Op && "function" === typeof ip.KIp && "function" === typeof ip.VIp && "function" === typeof ip.pSp ? ip : null
-    }
-
-    function Vp(pp, ip, cp) {
-      let [Op, op] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [pp, ip], Ip = Math.min(Number.isFinite(cp) && cp > 0 ? cp : 1, 2);
-      const Sp = Math.max(0, Op, pp) * Math.max(0, op, ip) * Ip * Ip;
-      return Sp > hp && (Ip *= Math.sqrt(hp / Sp)), [Math.max(1, Math.floor(Math.max(0, pp) * Ip)), Math.max(1, Math.floor(Math.max(0, ip) * Ip))]
+    function oT(TT) {
+      const UT = TT,
+        mT = (0, iT.O)(TT),
+        WT = (0, iT.k)(TT);
+      return null !== mT && null !== WT && "function" === typeof UT.wMT && "function" === typeof UT.tMT && "function" === typeof UT.aMT ? UT : null
     }
 
-    function ii() {
-      return cp(51194)
+    function AT(TT, UT, mT) {
+      let [WT, zT] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [TT, UT], MT = Math.min(Number.isFinite(mT) && mT > 0 ? mT : 1, 2);
+      const gT = Math.max(0, WT, TT) * Math.max(0, zT, UT) * MT * MT;
+      return gT > uT && (MT *= Math.sqrt(uT / gT)), [Math.max(1, Math.floor(Math.max(0, TT) * MT)), Math.max(1, Math.floor(Math.max(0, UT) * MT))]
     }
-    async function ci(pp, ip, Op) {
-      var op;
-      let Ip = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === pp && (0, Ep.u)();
-      const xp = await (0, Ep.L)();
-      if (null === xp || (0, dp.s)(xp) || (0, Ep.b)()) return;
-      const Lp = "webgpu" === xp.backend;
-      if (!Lp && "lost" !== pp) return;
-      const Yp = Lp && (0, vp.m)(xp.adapter, null !== Op && void 0 !== Op ? Op : null, "lost" === pp, Ip),
-        Dp = null !== (op = "lost" === pp ? (0, ep.o)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null) : void 0) && void 0 !== op ? op : ip,
-        Ap = Lp ? (0, dp.gb)(pp, void 0, (0, ep.d)(Dp)) : null;
-      if (null === Ap) {
-        Lp || (0, tp.q)(), (0, Ep.l)();
+
+    function RT() {
+      return mT(51114)
+    }
+    async function TU(TT, UT, WT) {
+      var zT;
+      let MT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === TT && (0, tT.x)();
+      const nT = await (0, tT.R)();
+      if (null === nT || (0, iT.n)(nT) || (0, tT.d)()) return;
+      const HT = "webgpu" === nT.backend;
+      if (!HT && "lost" !== TT) return;
+      const kT = HT && (0, vT.j)(nT.adapter, null !== WT && void 0 !== WT ? WT : null, "lost" === TT, MT),
+        jT = null !== (zT = "lost" === TT ? (0, bT.j)((0, BT.Q)() ? (0, iT.O)((0, BT.C)()) : null) : void 0) && void 0 !== zT ? zT : UT,
+        lT = HT ? (0, iT.$)(TT, void 0, (0, bT.c)(jT)) : null;
+      if (null === lT) {
+        HT || (0, fT.u)(), (0, tT.r)();
         try {
-          await async function(pp, ip, Op, op, Ip) {
+          await async function(TT, UT, WT, zT, MT) {
             let {
-              restoreLost: xp,
-              adapterRemembered: Lp
-            } = Ip;
-            const Yp = (0, yp.X)(),
+              restoreLost: nT,
+              adapterRemembered: HT
+            } = MT;
+            const kT = (0, BT.Q)(),
               {
-                flushCrashReports: Dp,
-                reportRenderReload: Ap
-              } = await Promise.resolve().then((() => cp(40945)));
-            Ap(pp.backend, op, Sp(Yp ? (0, yp.H)() : null), {
+                flushCrashReports: jT,
+                reportRenderReload: lT
+              } = await Promise.resolve().then((() => mT(40887)));
+            lT(TT.backend, zT, gT(kT ? (0, BT.C)() : null), {
               from: "home",
-              cause: ip,
-              restoreLost: xp,
-              adapterRemembered: Lp,
-              ...Oi(pp, ip, Op)
-            }), await Dp(lp.b)
-          }(xp, pp, Dp, null !== Op && void 0 !== Op ? Op : "start_failed" === pp ? 0 : 1, {
-            restoreLost: Ip,
-            adapterRemembered: Yp
+              cause: UT,
+              restoreLost: nT,
+              adapterRemembered: HT,
+              ...UU(TT, UT, WT)
+            }), await jT(yT.c)
+          }(nT, TT, jT, null !== WT && void 0 !== WT ? WT : "start_failed" === TT ? 0 : 1, {
+            restoreLost: MT,
+            adapterRemembered: kT
           })
-        } catch (Wp) {
-          console.warn(`${bp} ${xp.backend} failed at home (${pp}), and its report couldn't be sent`, Wp)
-        }(0, lp.i)()
+        } catch (pT) {
+          console.warn(`${VT} ${nT.backend} failed at home (${TT}), and its report couldn't be sent`, pT)
+        }(0, yT.k)()
       } else {
-        var Pp;
-        const ip = Oi(xp, pp, Dp),
-          Op = `WebGPU failed at home (${pp}${void 0===ip.error?"":`: ${ip.error instanceof Error?ip.error.message:(0,Tp.h)(ip.error)}`}) and ${Ap}`;
-        console.warn(`${bp} ${Op}: the previews stop`, null !== (Pp = ip.error) && void 0 !== Pp ? Pp : ""), (0, Ep.m)(Op);
+        var LT;
+        const UT = UU(nT, TT, jT),
+          WT = `WebGPU failed at home (${TT}${void 0===UT.error?"":`: ${UT.error instanceof Error?UT.error.message:(0,FT.k)(UT.error)}`}) and ${lT}`;
+        console.warn(`${VT} ${WT}: the previews stop`, null !== (LT = UT.error) && void 0 !== LT ? LT : ""), (0, tT.s)(WT);
         try {
           const {
-            countRenderLost: Op
-          } = await Promise.resolve().then((() => cp(40945)));
-          Op(pp, ip.error, ip.context)
-        } catch (Up) {
-          console.warn(`${bp} WebGPU failed at home (${pp}), and its count couldn't be sent`, Up)
+            countRenderLost: WT
+          } = await Promise.resolve().then((() => mT(40887)));
+          WT(TT, UT.error, UT.context)
+        } catch (ZT) {
+          console.warn(`${VT} WebGPU failed at home (${TT}), and its count couldn't be sent`, ZT)
         }
       }
     }
 
-    function Oi(pp, ip, cp) {
+    function UU(TT, UT, mT) {
       let {
-        adapter: Op
-      } = pp;
+        adapter: WT
+      } = TT;
       return {
-        error: cp,
+        error: mT,
         context: {
-          adapter: Op,
-          boundAtMs: "start_failed" === ip ? null : (0, Ep.J)(),
-          indirectHangs: (0, Ep.x)(),
-          restoresSkipped: (0, Ep.K)()
+          adapter: WT,
+          boundAtMs: "start_failed" === UT ? null : (0, tT.L)(),
+          indirectHangs: (0, tT.A)(),
+          restoresSkipped: (0, tT.O)()
         }
       }
     }
-    async function oi() {
-      if (!(0, yp.X)()) {
-        const pp = await (0, Ep.L)();
-        if (null === pp || (0, dp.s)(pp)) return null;
-        if (await (0, Xp.e)(await pp.load()), !(0, yp.X)()) return null
+    async function mU() {
+      if (!(0, BT.Q)()) {
+        const TT = await (0, tT.R)();
+        if (null === TT || (0, iT.n)(TT)) return null;
+        if (await (0, aT.d)(await TT.load()), !(0, BT.Q)()) return null
       }
-      return Kp((0, yp.H)())
+      return oT((0, BT.C)())
     }
-    class Ii {
-      constructor(pp, ip, cp, Op, op, Ip) {
-        this.page = pp, this.host = ip, this.id = cp, this.canvas = Op, this.size = op, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const Sp = {
-            ...Ip.images,
-            glbUrl: pp => {
-              var ip;
-              return null !== (ip = this.models.drawnUrl(pp)) && void 0 !== ip ? ip : Ip.images.glbUrl(pp)
+    class WU {
+      constructor(TT, UT, mT, WT, zT, MT) {
+        this.page = TT, this.host = UT, this.id = mT, this.canvas = WT, this.size = zT, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const gT = {
+            ...MT.images,
+            glbUrl: TT => {
+              var UT;
+              return null !== (UT = this.models.drawnUrl(TT)) && void 0 !== UT ? UT : MT.images.glbUrl(TT)
             }
           },
-          xp = ip => pp.modelFile(ip);
-        this.images = new jp.e(Sp, (pp => {
-          console.warn(`${bp} image ${pp.key.kind}:${pp.key.index}:${pp.key.word} failed`, pp.error)
+          nT = UT => TT.modelFile(UT);
+        this.images = new OT.h(gT, (TT => {
+          console.warn(`${VT} image ${TT.key.kind}:${TT.key.index}:${TT.key.word} failed`, TT.error)
         }), {
-          fetchFile: xp,
-          fetchImage: ip => pp.imageFile(ip)
-        }), pp.startModels(), this.models = new kp.f(Ip.files, ((ip, cp) => pp.buildModel(ip, cp)), (pp => {
-          console.warn(`${bp} model file ${pp.file} (${pp.url}) failed`, pp.error)
+          fetchFile: nT,
+          fetchImage: UT => TT.imageFile(UT)
+        }), TT.startModels(), this.models = new eT.g(MT.files, ((UT, mT) => TT.buildModel(UT, mT)), (TT => {
+          console.warn(`${VT} model file ${TT.file} (${TT.url}) failed`, TT.error)
         }), {
-          fetchFile: xp,
-          onWritten: (pp, ip) => {
-            this.images.glbWritten(pp, ip)
+          fetchFile: nT,
+          onWritten: (TT, UT) => {
+            this.images.glbWritten(TT, UT)
           },
-          onTaken: (pp, ip) => {
-            this.images.glbTaken(pp, ip)
+          onTaken: (TT, UT) => {
+            this.images.glbTaken(TT, UT)
           }
-        }), this.write = (pp, ip, cp) => {
+        }), this.write = (TT, UT, mT) => {
           if (this.closed) return !0;
-          if (pp === kp.b) {
-            const pp = new DataView(cp.buffer, cp.byteOffset, Rp.d),
-              Op = pp.getUint32(0, !0),
-              op = pp.getUint32(Rp.g, !0),
-              Ip = this.page.hostCall(sp, (() => this.host.Sxp(this.id, Op, ip, cp.subarray(Rp.d))));
-            return this.outcomes.push([op, Ip]), !0
+          if (TT === eT.d) {
+            const TT = new DataView(mT.buffer, mT.byteOffset, JT.c),
+              WT = TT.getUint32(0, !0),
+              zT = TT.getUint32(JT.f, !0),
+              MT = this.page.hostCall(DT, (() => this.host.PgT(this.id, WT, UT, mT.subarray(JT.c))));
+            return this.outcomes.push([zT, MT]), !0
           }
-          return pp === jp.c && (this.page.hostCall(void 0, (() => {
-            this.host.Lxp(this.id, cp)
+          return TT === OT.d && (this.page.hostCall(void 0, (() => {
+            this.host.ugT(this.id, mT)
           })), !0)
         }
       }
@@ -651,74 +651,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(pp, ip, cp) {
+      resize(TT, UT, mT) {
         if (this.closed) return;
-        const [Op, op] = Vp(pp, ip, this.page.dpr(), cp);
-        Op === this.size[0] && op === this.size[1] || (this.size = [Op, op], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, Op, op)
+        const [WT, zT] = AT(TT, UT, this.page.dpr(), mT);
+        WT === this.size[0] && zT === this.size[1] || (this.size = [WT, zT], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, WT, zT)
         })))
       }
-      setMob(pp, ip, cp, Op) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Wxp(this.id, pp, ip, cp, Op))))
+      setMob(TT, UT, mT, WT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.GgT(this.id, TT, UT, mT, WT))))
       }
-      setPet(pp, ip, cp, Op) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Uxp(this.id, pp, ip, cp, Op))))
+      setPet(TT, UT, mT, WT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.EgT(this.id, TT, UT, mT, WT))))
       }
-      setPlayer(pp, ip, cp) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Dxp(this.id, pp, ip, cp))))
+      setPlayer(TT, UT, mT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.rgT(this.id, TT, UT, mT))))
       }
-      setFigure(pp, ip, cp, Op) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Axp(this.id, pp, ip, cp, Op))))
+      setFigure(TT, UT, mT, WT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.KgT(this.id, TT, UT, mT, WT))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const pp = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === pp || pp.length < 3 ? null : {
-          alpha: pp[0],
-          beta: pp[1],
-          radius: pp[2]
+        const TT = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === TT || TT.length < 3 ? null : {
+          alpha: TT[0],
+          beta: TT[1],
+          radius: TT[2]
         }
       }
-      setOrbit(pp) {
+      setOrbit(TT) {
         let {
-          alpha: ip,
-          beta: cp,
-          radius: Op
-        } = pp;
+          alpha: UT,
+          beta: mT,
+          radius: WT
+        } = TT;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.yxp(this.id, ip, cp, Op)
+          this.host.NgT(this.id, UT, mT, WT)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((pp => {
-          this.settled.push(pp)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((TT => {
+          this.settled.push(TT)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, Mp.g)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, dT.h)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [pp, ip] of this.outcomes) {
-          const cp = ip === Zp ? [] : [ip === zp ? pp : (pp | kp.e) >>> 0];
-          this.models.taken(pp, cp)
+        for (const [TT, UT] of this.outcomes) {
+          const mT = UT === ET ? [] : [UT === hT ? TT : (TT | eT.f) >>> 0];
+          this.models.taken(TT, mT)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(pp) {
-        let ip = !1;
-        if (pp) {
-          const pp = this.host.txp(this.id);
-          for (const ip of pp) this.models.request(ip);
-          const cp = this.host.vxp(this.id);
-          cp.length > 0 && this.images.onEvent(cp), ip = pp.length > 0 || cp.length > 0
+      collect(TT) {
+        let UT = !1;
+        if (TT) {
+          const TT = this.host.ogT(this.id);
+          for (const UT of TT) this.models.request(UT);
+          const mT = this.host.DgT(this.id);
+          mT.length > 0 && this.images.onEvent(mT), UT = TT.length > 0 || mT.length > 0
         }
-        const cp = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          Op = ip || cp > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = Op ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const mT = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          WT = UT || mT > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = WT ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -726,314 +726,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(pp) {
+      dispose(TT) {
         this.page.hostCall(void 0, (() => {
-          const ip = this.host.close(this.id);
-          ip.length > 0 && this.images.onEvent(ip), this.page.isTrapped || pp.pSp(this.id)
+          const UT = this.host.close(this.id);
+          UT.length > 0 && this.images.onEvent(UT), this.page.isTrapped || TT.aMT(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const pp = this.settled;
+        const TT = this.settled;
         this.settled = [];
-        for (const ip of pp) ip()
+        for (const UT of TT) UT()
       }
     }
-    class Si {
-      constructor(pp) {
-        this.deps = pp, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: pp => {
-            this.modelsFailed(pp)
+    class zU {
+      constructor(TT) {
+        this.deps = TT, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: TT => {
+            this.modelsFailed(TT)
           },
-          onDecoderFailed: pp => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${bp} the Draco decoder didn't load: models waiting on it won't draw`, pp))
+          onDecoderFailed: TT => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${VT} the Draco decoder didn't load: models waiting on it won't draw`, TT))
           },
-          onWorkerLost: pp => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${bp} a model worker was lost: ${pp}`))
+          onWorkerLost: TT => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${VT} a model worker was lost: ${TT}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Dy = {
-          setShaderPack: (pp, ip, cp, Op, op) => (this.shaderPackArgs = [pp, ip, cp, Op, op], this.handOverShaderPack(), !0)
-        }, this.frame = pp => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Np = {
+          setShaderPack: (TT, UT, mT, WT, zT) => (this.shaderPackArgs = [TT, UT, mT, WT, zT], this.handOverShaderPack(), !0)
+        }, this.frame = TT => {
           this.frameId = null;
-          const ip = this.host;
-          if (null !== ip && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(ip, pp)
-          } catch (cp) {
-            if (!this.stopIfTrapped(cp) && (this.stop(), (0, dp.w)(cp))) return void this.deps.onRenderFailed("frames_refused", cp);
-            console.warn(`${bp} the previews stopped: their frame threw`, cp)
+          const UT = this.host;
+          if (null !== UT && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(UT, TT)
+          } catch (mT) {
+            if (!this.stopIfTrapped(mT) && (this.stop(), (0, iT.p)(mT))) return void this.deps.onRenderFailed("frames_refused", mT);
+            console.warn(`${VT} the previews stopped: their frame threw`, mT)
           }
-        }, pp.pack.onChange((() => {
+        }, TT.pack.onChange((() => {
           this.packChanged()
-        })), pp.game.onGameChange((() => {
+        })), TT.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const pp of this.previews.values()) pp.packChanged()
+          for (const TT of this.previews.values()) TT.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var pp, ip;
-        return null !== (pp = null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && void 0 !== pp && pp
+        var TT, UT;
+        return null !== (TT = null === (UT = this.host) || void 0 === UT ? void 0 : UT.attached()) && void 0 !== TT && TT
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((pp, ip) => pp + ip), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((TT, UT) => TT + UT), 0) / this.costs.length
       }
-      async bindSession(pp, ip, cp) {
-        const Op = this.binding,
-          op = this.sessionEnds;
+      async bindSession(TT, UT, mT) {
+        const WT = this.binding,
+          zT = this.sessionEnds;
         try {
-          const Ip = this.hostOf(pp);
-          if (!Ip.xxp()) {
-            const ip = (0, Jp.g)().sampleCount,
-              Sp = await cp(ip);
-            if (this.sessionEnds !== op) return this.keepRendererOfEndedSession(pp, Ip, Sp, ip, Op), ip;
-            if (!Ip.FSp(Sp)) throw new Error("the page has a renderer already");
-            (0, Ep.q)(performance.now()), this.samples = ip, (0, Bp.h)((0, dp.o)(pp))
+          const MT = this.hostOf(TT);
+          if (!MT.VgT()) {
+            const UT = (0, IT.f)().sampleCount,
+              gT = await mT(UT);
+            if (this.sessionEnds !== zT) return this.keepRendererOfEndedSession(TT, MT, gT, UT, WT), UT;
+            if (!MT.OgT(gT)) throw new Error("the page has a renderer already");
+            (0, tT.w)(performance.now()), this.samples = UT, (0, QT.h)((0, iT.k)(TT))
           }
-          if (!Ip.attach(ip)) throw new Error("the page's renderer is lent to another session");
+          if (!MT.attach(UT)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === Op && this.endBinding()
+          this.binding === WT && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(pp, ip, cp, Op, op) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== op) try {
-          cp.free()
-        } catch (Ip) {
-          console.warn(`${bp} an ended session's renderer didn't free`, Ip)
-        } else ip.FSp(cp) && ((0, Ep.q)(performance.now()), this.samples = Op, (0, Bp.h)(this.registryOf(pp)))
+      keepRendererOfEndedSession(TT, UT, mT, WT, zT) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== zT) try {
+          mT.free()
+        } catch (MT) {
+          console.warn(`${VT} an ended session's renderer didn't free`, MT)
+        } else UT.OgT(mT) && ((0, tT.w)(performance.now()), this.samples = WT, (0, QT.h)(this.registryOf(TT)))
       }
       async beginSession() {
-        var pp;
-        let ip = () => {};
-        const cp = new Promise((pp => {
-          ip = pp
+        var TT;
+        let UT = () => {};
+        const mT = new Promise((TT => {
+          UT = TT
         }));
         this.binding = {
-          done: cp,
-          release: ip
-        }, await (null === (pp = this.opening) || void 0 === pp ? void 0 : pp.catch((() => null)));
-        const Op = this.pageCanvas;
-        return this.pageCanvas = null, Op
+          done: mT,
+          release: UT
+        }, await (null === (TT = this.opening) || void 0 === TT ? void 0 : TT.catch((() => null)));
+        const WT = this.pageCanvas;
+        return this.pageCanvas = null, WT
       }
-      endSession(pp) {
-        var ip, cp;
-        if (this.sessionEnds++, this.lastEndReturned = pp, this.endBinding(), pp) {
+      endSession(TT) {
+        var UT, mT;
+        if (this.sessionEnds++, this.lastEndReturned = TT, this.endBinding(), TT) {
           try {
-            var Op;
-            null === (Op = this.host) || void 0 === Op || Op.detach()
-          } catch (op) {
-            return void console.warn(`${bp} the session's core kept the page's renderer`, op)
-          }!0 === (null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && console.warn(`${bp} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (cp = this.host) || void 0 === cp ? void 0 : cp.xxp()) && (0, Bp.h)(this.registryOf(this.module))
+            var WT;
+            null === (WT = this.host) || void 0 === WT || WT.detach()
+          } catch (zT) {
+            return void console.warn(`${VT} the session's core kept the page's renderer`, zT)
+          }!0 === (null === (UT = this.host) || void 0 === UT ? void 0 : UT.attached()) && console.warn(`${VT} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (mT = this.host) || void 0 === mT ? void 0 : mT.VgT()) && (0, QT.h)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var pp;
-        null === (pp = this.binding) || void 0 === pp || pp.release(), this.binding = null
+        var TT;
+        null === (TT = this.binding) || void 0 === TT || TT.release(), this.binding = null
       }
-      async openPreview(pp, ip, cp, Op) {
-        const op = await this.renderingHost(),
-          Ip = this.module;
-        if (null === op || null === Ip) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(op), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(TT, UT, mT, WT) {
+        const zT = await this.renderingHost(),
+          MT = this.module;
+        if (null === zT || null === MT) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(zT), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(Ip)
+          this.deps.provideBuiltInAnimationPack(MT)
         }));
-        const Sp = this.nextId++,
-          xp = this.deps.createCanvas(),
-          [Lp, Yp] = Vp(ip, cp, this.deps.dpr(), Op);
-        xp.width = Lp, xp.height = Yp;
-        if (!this.guarded((() => (Ip.VIp(Sp, xp), op.open(Sp, Lp, Yp, pp))))) throw this.hostCall(void 0, (() => {
-          Ip.pSp(Sp)
+        const gT = this.nextId++,
+          nT = this.deps.createCanvas(),
+          [HT, kT] = AT(UT, mT, this.deps.dpr(), WT);
+        nT.width = HT, nT.height = kT;
+        if (!this.guarded((() => (MT.tMT(gT, nT), zT.open(gT, HT, kT, TT))))) throw this.hostCall(void 0, (() => {
+          MT.aMT(gT)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Dp = new Ii(this, op, Sp, xp, [Lp, Yp], this.deps);
-        return this.previews.set(Sp, Dp), this.startFrames(), Dp
+        const jT = new WU(this, zT, gT, nT, [HT, kT], this.deps);
+        return this.previews.set(gT, jT), this.startFrames(), jT
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, Ep.b)() || null !== (0, Ep.G)()) return;
+        if (this.prefetched || this.isStopped || (0, tT.d)() || null !== (0, tT.J)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((pp => {
-          null === pp || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((TT => {
+          null === TT || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(pp) {
-        return this.prefetchedOr(pp, this.deps.fetchModel)
+      modelFile(TT) {
+        return this.prefetchedOr(TT, this.deps.fetchModel)
       }
-      imageFile(pp) {
-        return this.prefetchedOr(pp, Op.F)
+      imageFile(TT) {
+        return this.prefetchedOr(TT, WT.M)
       }
-      prefetchedOr(pp, ip) {
-        const cp = this.prefetchedFiles.get(pp);
-        return void 0 === cp ? ip(pp) : cp.catch((() => ip(pp)))
+      prefetchedOr(TT, UT) {
+        const mT = this.prefetchedFiles.get(TT);
+        return void 0 === mT ? UT(TT) : mT.catch((() => UT(TT)))
       }
       async prefetchPlayerFiles() {
-        const pp = this.deps.playerFile().then((pp => this.deps.files.url(pp))),
-          ip = await Promise.all([pp, this.deps.images.lifeformAtlasUrl(Mp.b)]).catch((() => null));
-        if (null === ip) return;
-        const [cp, Op] = ip, op = (pp, ip) => {
-          if (null === pp) return;
-          const cp = ip(pp);
-          this.prefetchedFiles.set(pp, cp), cp.catch((() => {
-            this.prefetchedFiles.delete(pp)
+        const TT = this.deps.playerFile().then((TT => this.deps.files.url(TT))),
+          UT = await Promise.all([TT, this.deps.images.lifeformAtlasUrl(dT.c)]).catch((() => null));
+        if (null === UT) return;
+        const [mT, WT] = UT, zT = (TT, UT) => {
+          if (null === TT) return;
+          const mT = UT(TT);
+          this.prefetchedFiles.set(TT, mT), mT.catch((() => {
+            this.prefetchedFiles.delete(TT)
           }))
         };
-        op(cp, (pp => this.modelFile(pp))), op(Op, (pp => this.imageFile(pp)))
+        zT(mT, (TT => this.modelFile(TT))), zT(WT, (TT => this.imageFile(TT)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((pp => (null === pp && (this.moduleLoad = null), pp)), (pp => {
-          throw this.moduleLoad = null, pp
+        return this.moduleLoad ??= this.deps.loadModule().then((TT => (null === TT && (this.moduleLoad = null), TT)), (TT => {
+          throw this.moduleLoad = null, TT
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((pp => {
-          throw this.animationTable = null, pp
+        return this.animationTable ??= this.deps.fetchAnimations().catch((TT => {
+          throw this.animationTable = null, TT
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((pp => (this.modelsFailed(pp), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((TT => (this.modelsFailed(TT), () => new Promise((() => {})))))
       }
-      buildModel(pp, ip) {
-        return this.startModels(), this.models.then((cp => cp(pp, ip))).then((pp => this.unavailable ? new Promise((() => {})) : pp))
+      buildModel(TT, UT) {
+        return this.startModels(), this.models.then((mT => mT(TT, UT))).then((TT => this.unavailable ? new Promise((() => {})) : TT))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(pp) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${bp} the model workers didn't start: models won't draw in the previews`, pp))
+      modelsFailed(TT) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${VT} the model workers didn't start: models won't draw in the previews`, TT))
       }
-      called(pp) {
-        return 0 !== pp && this.logError(pp, 0), pp
+      called(TT) {
+        return 0 !== TT && this.logError(TT, 0), TT
       }
-      closePreview(pp) {
-        this.previews.delete(pp.id), null !== this.module && pp.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(TT) {
+        this.previews.delete(TT.id), null !== this.module && TT.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(pp) {
-        if (null !== this.module && this.module !== pp) throw new Error("a second renderer module on one page");
-        return this.module = pp, null === this.host && (this.host = this.guarded((() => new pp.KIp)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(TT) {
+        if (null !== this.module && this.module !== TT) throw new Error("a second renderer module on one page");
+        return this.module = TT, null === this.host && (this.host = this.guarded((() => new TT.wMT)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: pp
+          host: TT
         } = this;
-        null !== pp && this.outsideCall("the game's start or end", (() => {
-          pp.Pxp(this.deps.game.inGame())
+        null !== TT && this.outsideCall("the game's start or end", (() => {
+          TT.SgT(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: pp,
-          shaderPackArgs: ip
+          host: TT,
+          shaderPackArgs: UT
         } = this;
-        null !== pp && null !== ip && this.outsideCall("the shader pack's hand-over", (() => {
-          pp.fOp(...ip) || console.warn(`${bp} the host refused the shader pack: previews draw without it at home`)
+        null !== TT && null !== UT && this.outsideCall("the shader pack's hand-over", (() => {
+          TT.qWT(...UT) || console.warn(`${VT} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(pp, ip) {
+      outsideCall(TT, UT) {
         try {
-          this.hostCall(void 0, ip)
-        } catch (cp) {
-          this.stop(), console.warn(`${bp} the previews stopped: ${pp} threw`, cp)
+          this.hostCall(void 0, UT)
+        } catch (mT) {
+          this.stop(), console.warn(`${VT} the previews stopped: ${TT} threw`, mT)
         }
       }
-      async loadAnimations(pp) {
-        const ip = Sp(null),
-          cp = this.module;
+      async loadAnimations(TT) {
+        const UT = gT(null),
+          mT = this.module;
         try {
-          ip.wasm = null === cp ? ip.wasm : this.hostCall(ip.wasm, (() => cp.JA()))
+          UT.wasm = null === mT ? UT.wasm : this.hostCall(UT.wasm, (() => mT.Zl()))
         } catch {}
-        let Op, op;
+        let WT, zT;
         try {
-          Op = await this.fetchAnimationTable()
-        } catch (Ip) {
+          WT = await this.fetchAnimationTable()
+        } catch (MT) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: Ip
-          }, ip)
+            error: MT
+          }, UT)
         }
         if (!this.settleIfTrapped()) {
           try {
-            op = pp.Yxp(Op)
-          } catch (Ip) {
-            if (this.stopIfTrapped(Ip)) return;
+            zT = TT.CgT(WT)
+          } catch (MT) {
+            if (this.stopIfTrapped(MT)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: Ip
-            }, ip)
+              error: MT
+            }, UT)
           }
-          op || this.deps.onAnimationsFailed({
+          zT || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, ip)
+          }, UT)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const pp = this.host;
-        return null !== pp && this.guarded((() => pp.xxp())) ? pp : (this.opening ??= this.openAtHome().finally((() => {
+        const TT = this.host;
+        return null !== TT && this.guarded((() => TT.VgT())) ? TT : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var pp;
-        const ip = null !== (pp = this.module) && void 0 !== pp ? pp : await this.loadModule();
-        if (null === ip) return null;
-        const cp = this.hostOf(ip),
-          Op = () => this.guarded((() => cp.xxp()));
-        if (Op()) return cp;
-        if (null !== (0, Ep.G)() || (0, Ep.b)()) return null;
-        const op = this.deps.createCanvas();
-        op.width = 1, op.height = 1;
-        const Ip = await this.deps.openExtras();
+        var TT;
+        const UT = null !== (TT = this.module) && void 0 !== TT ? TT : await this.loadModule();
+        if (null === UT) return null;
+        const mT = this.hostOf(UT),
+          WT = () => this.guarded((() => mT.VgT()));
+        if (WT()) return mT;
+        if (null !== (0, tT.J)() || (0, tT.d)()) return null;
+        const zT = this.deps.createCanvas();
+        zT.width = 1, zT.height = 1;
+        const MT = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const Sp = (0, Jp.g)().sampleCount;
-        let xp;
+        const gT = (0, IT.f)().sampleCount;
+        let nT;
         try {
-          xp = await (0, dp.A)(ip, "previewRenderer", op, Sp, Np.d, Ip)
-        } catch (Lp) {
-          throw Lp instanceof qp.b ? this.stopForTrap(Lp) : (0, dp.z)(Lp) && await this.deps.onRenderFailed("start_failed", Lp), Lp
+          nT = await (0, iT.u)(UT, "previewRenderer", zT, gT, sT.b, MT)
+        } catch (HT) {
+          throw HT instanceof xT.b ? this.stopForTrap(HT) : (0, iT.s)(HT) && await this.deps.onRenderFailed("start_failed", HT), HT
         }
-        return this.guarded((() => cp.FSp(xp))) ? ((0, Ep.q)(performance.now()), this.samples = Sp, this.pageCanvas = op, (0, Bp.h)(this.registryOf(ip)), cp) : Op() ? cp : null
+        return this.guarded((() => mT.OgT(nT))) ? ((0, tT.w)(performance.now()), this.samples = gT, this.pageCanvas = zT, (0, QT.h)(this.registryOf(UT)), mT) : WT() ? mT : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(pp, ip) {
-        for (const Sp of this.previews.values()) Sp.feed();
+      drawFrame(TT, UT) {
+        for (const gT of this.previews.values()) gT.feed();
         if (this.stopped) return;
-        const cp = this.deps.now(),
-          Op = pp.frame(ip);
-        this.costs.push(this.deps.now() - cp), this.costs.length > 120 && this.costs.shift();
-        const op = 0 !== (256 & Op),
-          Ip = 255 & Op;
-        for (const Sp of this.previews.values()) {
+        const mT = this.deps.now(),
+          WT = TT.frame(UT);
+        this.costs.push(this.deps.now() - mT), this.costs.length > 120 && this.costs.shift();
+        const zT = 0 !== (256 & WT),
+          MT = 255 & WT;
+        for (const gT of this.previews.values()) {
           if (this.stopped) return;
-          Sp.collect(op)
+          gT.collect(zT)
         }
         if (!this.stopped) {
-          if (0 !== (512 & Op) && this.deps.onDrew(), op) {
-            const ip = pp.wxp();
-            for (let pp = 0; pp + 1 < ip.length; pp += 2) ip[pp] === Hp.M.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(ip[pp], ip[pp + 1])
+          if (0 !== (512 & WT) && this.deps.onDrew(), zT) {
+            const UT = TT.hgT();
+            for (let TT = 0; TT + 1 < UT.length; TT += 2) UT[TT] === qT.S.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(UT[TT], UT[TT + 1])
           }
-          if (Ip !== gp) {
-            if (Ip === Gp) return this.stop(), void this.deps.onFatal(pp.Oxp(), pp.oxp());
-            if (Ip === rp) return this.stop(), void console.warn(`${bp} the previews stopped: the page's renderer went with its session`);
-            (0, wp.e)(ip), this.startFrames()
+          if (MT !== ST) {
+            if (MT === GT) return this.stop(), void this.deps.onFatal(TT.QgT(), TT.sgT());
+            if (MT === NT) return this.stop(), void console.warn(`${VT} the previews stopped: the page's renderer went with its session`);
+            (0, cT.d)(UT), this.startFrames()
           } else {
-            const ip = pp.Ixp();
+            const UT = TT.FgT();
             this.stop();
-            const cp = ip[2] === Hp.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(cp, void 0, ip[1], ip[2] === Hp.Yc.RESTORE_LOST)
+            const mT = UT[2] === qT._c.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(mT, void 0, UT[1], UT[2] === qT._c.RESTORE_LOST)
           }
         }
       }
@@ -1041,115 +1041,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, qp.g)(this.module) || "failed" === (0, yp.E)())
+        return null !== this.module && ((0, xT.g)(this.module) || "failed" === (0, BT.A)())
       }
-      hostCall(pp, ip) {
-        if (this.settleIfTrapped()) return pp;
+      hostCall(TT, UT) {
+        if (this.settleIfTrapped()) return TT;
         try {
-          return ip()
-        } catch (cp) {
-          if (this.stopIfTrapped(cp)) return pp;
-          throw cp
+          return UT()
+        } catch (mT) {
+          if (this.stopIfTrapped(mT)) return TT;
+          throw mT
         }
       }
-      guarded(pp) {
+      guarded(TT) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return pp()
-        } catch (ip) {
-          throw this.stopIfTrapped(ip), ip
+          return TT()
+        } catch (UT) {
+          throw this.stopIfTrapped(UT), UT
         }
       }
-      registryOf(pp) {
+      registryOf(TT) {
         return {
-          kOp: (ip, cp) => {
+          MWT: (UT, mT) => {
             this.hostCall(void 0, (() => {
-              pp.kOp(ip, cp)
+              TT.MWT(UT, mT)
             }))
           },
-          mOp: ip => {
+          gWT: UT => {
             this.hostCall(void 0, (() => {
-              pp.mOp(ip)
+              TT.gWT(UT)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Bp.h)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, QT.h)(null)), !0)
       }
-      stopIfTrapped(pp) {
-        return !(null === this.module || !(0, qp.h)(this.module, pp)) && (this.stopForTrap(pp), !0)
+      stopIfTrapped(TT) {
+        return !(null === this.module || !(0, xT.i)(this.module, TT)) && (this.stopForTrap(TT), !0)
       }
-      stopForTrap(pp) {
-        this.stop(), (0, Bp.h)(null), (0, fp.e)("previews", pp)
+      stopForTrap(TT) {
+        this.stop(), (0, QT.h)(null), (0, PT.d)("previews", TT)
       }
       stop() {
         this.stopped = !0;
-        for (const pp of this.previews.values()) pp.abandon()
+        for (const TT of this.previews.values()) TT.abandon()
       }
-      logError(pp, ip) {
-        const cp = `${pp}:${ip}`;
-        this.loggedErrors.has(cp) || (this.loggedErrors.add(cp), console.warn(`${bp} error ${pp} (detail ${ip})`))
+      logError(TT, UT) {
+        const mT = `${TT}:${UT}`;
+        this.loggedErrors.has(mT) || (this.loggedErrors.add(mT), console.warn(`${VT} error ${TT} (detail ${UT})`))
       }
     }
-    let xi = null;
+    let MU = null;
 
-    function Li() {
-      return xi ??= new Si(function() {
-        const pp = (0, mp.r)(Up.clientSideServerUrls.staticUrl, {
-          packUrl: pp => {
-            var ip, cp;
-            return null !== (ip = null === (cp = Mp.e.current) || void 0 === cp ? void 0 : cp.modelUrl(pp)) && void 0 !== ip ? ip : null
+    function gU() {
+      return MU ??= new zU(function() {
+        const TT = (0, YT.s)(ZT.clientSideServerUrls.staticUrl, {
+          packUrl: TT => {
+            var UT, mT;
+            return null !== (UT = null === (mT = dT.e.current) || void 0 === mT ? void 0 : mT.modelUrl(TT)) && void 0 !== UT ? UT : null
           }
         });
         return {
-          loadModule: oi,
-          startModels: async pp => {
+          loadModule: mU,
+          startModels: async TT => {
             const {
-              pageModelPool: ip
-            } = await cp.e(43).then((() => cp(51251))), {
-              pool: Op
-            } = ip(pp);
-            return (pp, ip) => Op.build(pp, ip)
+              pageModelPool: UT
+            } = await mT.e(43).then((() => mT(51172))), {
+              pool: WT
+            } = UT(TT);
+            return (TT, UT) => WT.build(TT, UT)
           },
-          fetchAnimations: async () => xp(await (0, Op.F)(ii())),
-          playerFile: async () => (await (0, mp.o)()).PLAYER_FILE,
-          onAnimationsFailed: (pp, ip) => {
-            Lp("previewAnimations", ii(), pp, ip)
+          fetchAnimations: async () => nT(await (0, WT.M)(RT())),
+          playerFile: async () => (await (0, YT.q)()).PLAYER_FILE,
+          onAnimationsFailed: (TT, UT) => {
+            HT("previewAnimations", RT(), TT, UT)
           },
-          provideBuiltInAnimationPack: pp => {
-            Pp().provide(pp)
+          provideBuiltInAnimationPack: TT => {
+            LT().provide(TT)
           },
-          openExtras: Ep.A,
-          files: pp,
-          images: (0, Mp.i)((0, jp.k)(pp.url), (() => Mp.e.current)),
-          pack: Mp.e,
-          game: Cp.d,
-          fetchModel: pp => (0, mp.j)(pp),
+          openExtras: tT.C,
+          files: TT,
+          images: (0, dT.l)((0, OT.r)(TT.url), (() => dT.e.current)),
+          pack: dT.e,
+          game: wT.c,
+          fetchModel: TT => (0, YT.j)(TT),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: pp => requestAnimationFrame(pp),
-          cancelFrame: pp => {
-            cancelAnimationFrame(pp)
+          requestFrame: TT => requestAnimationFrame(TT),
+          cancelFrame: TT => {
+            cancelAnimationFrame(TT)
           },
-          onRenderFailed: ci,
-          onFatal: (pp, ip) => {
-            console.error(`${bp} the previews stopped: renderer error ${pp} (detail ${ip})`)
+          onRenderFailed: TU,
+          onFatal: (TT, UT) => {
+            console.error(`${VT} the previews stopped: renderer error ${TT} (detail ${UT})`)
           },
           onDeviceLost: () => {
-            (0, Ep.C)() === Qp.b.webgpu && ((0, ep.h)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null), vp.D.lost())
+            (0, tT.F)() === XT.e.webgpu && ((0, bT.e)((0, BT.Q)() ? (0, iT.O)((0, BT.C)()) : null), vT.y.lost())
           },
           onDrew: () => {
-            vp.D.drew()
+            vT.y.drew()
           }
         }
-      }()), xi
+      }()), MU
     }
-    var Yi = cp(629),
-      Di = cp(38856),
-      Ai = cp(3400);
-    const Pi = {
+    var nU = mT(643),
+      HU = mT(38762),
+      kU = mT(3411);
+    const jU = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1167,320 +1167,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const Wi = "[bloxd-previews]",
-      yi = new Uint32Array(5);
+    const lU = "[bloxd-previews]",
+      LU = new Uint32Array(5);
 
-    function Ui(pp) {
-      return Yi.i.indexOf(pp)
+    function pU(TT) {
+      return nU.j.indexOf(TT)
     }
-    const wi = new WeakSet;
+    const BU = new WeakSet;
 
-    function vi(pp) {
-      const ip = (0, Di.c)(pp),
-        cp = null === ip ? -1 : ti(ip);
-      return -1 !== cp ? cp : (wi.has(pp) || (wi.add(pp), console.warn(`${Wi} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function ti(pp) {
-      var ip;
-      return null !== (ip = Pi[pp]) && void 0 !== ip ? ip : -1
+    function ZU(TT) {
+      const UT = (0, HU.f)(TT),
+        mT = null === UT ? -1 : cU(UT);
+      return -1 !== mT ? mT : (BU.has(TT) || (BU.add(TT), console.warn(`${lU} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function Hi(pp, ip) {
+    function cU(TT) {
+      var UT;
+      return null !== (UT = jU[TT]) && void 0 !== UT ? UT : -1
+    }
+
+    function vU(TT, UT) {
       const {
-        canvas: cp
-      } = ip;
-      cp.style.width = "100%", cp.style.height = "100%", cp.style.display = "block", pp.appendChild(cp)
+        canvas: mT
+      } = UT;
+      mT.style.width = "100%", mT.style.height = "100%", mT.style.display = "block", TT.appendChild(mT)
     }
 
-    function di(pp) {
-      const ip = pp.getBoundingClientRect();
-      return [ip.width, ip.height]
+    function fU(TT) {
+      const UT = TT.getBoundingClientRect();
+      return [UT.width, UT.height]
     }
-    class ei {
-      constructor(pp, ip) {
-        this.preview = pp, this.showView = ip
+    class qU {
+      constructor(TT, UT) {
+        this.preview = TT, this.showView = UT
       }
-      show(pp) {
-        this.showView(this.preview, pp)
+      show(TT) {
+        this.showView(this.preview, TT)
       }
-      resize(pp, ip) {
-        this.preview.resize(pp, ip)
+      resize(TT, UT) {
+        this.preview.resize(TT, UT)
       }
       close() {
         this.preview.close()
       }
     }
-    class ui {
-      constructor(pp) {
-        this.preview = pp, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(pp) {
+    class iU {
+      constructor(TT) {
+        this.preview = TT, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(TT) {
           const {
-            canvas: ip
-          } = pp;
-          let cp = null;
-          const Op = pp => {
-              var Op;
-              cp = {
-                pointer: pp.pointerId,
-                x: pp.clientX,
-                y: pp.clientY
-              }, null === (Op = ip.setPointerCapture) || void 0 === Op || Op.call(ip, pp.pointerId)
+            canvas: UT
+          } = TT;
+          let mT = null;
+          const WT = TT => {
+              var WT;
+              mT = {
+                pointer: TT.pointerId,
+                x: TT.clientX,
+                y: TT.clientY
+              }, null === (WT = UT.setPointerCapture) || void 0 === WT || WT.call(UT, TT.pointerId)
             },
-            op = ip => {
-              var Op;
-              const op = pp.orbit;
-              if ((null === (Op = cp) || void 0 === Op ? void 0 : Op.pointer) !== ip.pointerId || null === op) return;
-              const Ip = ip.clientX - cp.x,
-                Sp = ip.clientY - cp.y;
-              cp = {
-                ...cp,
-                x: ip.clientX,
-                y: ip.clientY
-              }, pp.setOrbit({
-                alpha: op.alpha - .01 * Ip,
-                beta: Math.min(Math.PI - .01, Math.max(.01, op.beta - .01 * Sp)),
-                radius: op.radius
+            zT = UT => {
+              var WT;
+              const zT = TT.orbit;
+              if ((null === (WT = mT) || void 0 === WT ? void 0 : WT.pointer) !== UT.pointerId || null === zT) return;
+              const MT = UT.clientX - mT.x,
+                gT = UT.clientY - mT.y;
+              mT = {
+                ...mT,
+                x: UT.clientX,
+                y: UT.clientY
+              }, TT.setOrbit({
+                alpha: zT.alpha - .01 * MT,
+                beta: Math.min(Math.PI - .01, Math.max(.01, zT.beta - .01 * gT)),
+                radius: zT.radius
               })
             },
-            Ip = pp => {
-              var ip;
-              (null === (ip = cp) || void 0 === ip ? void 0 : ip.pointer) === pp.pointerId && (cp = null)
+            MT = TT => {
+              var UT;
+              (null === (UT = mT) || void 0 === UT ? void 0 : UT.pointer) === TT.pointerId && (mT = null)
             },
-            Sp = ip => {
-              const cp = pp.orbit;
-              if (null === cp) return;
-              ip.preventDefault();
-              const Op = ip.deltaY * (ip.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : ip.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                op = Math.min(100, Math.max(5, cp.radius + .08 * Op));
-              pp.setOrbit({
-                ...cp,
-                radius: op
+            gT = UT => {
+              const mT = TT.orbit;
+              if (null === mT) return;
+              UT.preventDefault();
+              const WT = UT.deltaY * (UT.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : UT.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                zT = Math.min(100, Math.max(5, mT.radius + .08 * WT));
+              TT.setOrbit({
+                ...mT,
+                radius: zT
               })
             };
-          return ip.style.touchAction = "none", ip.addEventListener("pointerdown", Op), ip.addEventListener("pointermove", op), ip.addEventListener("pointerup", Ip), ip.addEventListener("pointercancel", Ip), ip.addEventListener("wheel", Sp, {
+          return UT.style.touchAction = "none", UT.addEventListener("pointerdown", WT), UT.addEventListener("pointermove", zT), UT.addEventListener("pointerup", MT), UT.addEventListener("pointercancel", MT), UT.addEventListener("wheel", gT, {
             passive: !1
           }), () => {
-            ip.removeEventListener("pointerdown", Op), ip.removeEventListener("pointermove", op), ip.removeEventListener("pointerup", Ip), ip.removeEventListener("pointercancel", Ip), ip.removeEventListener("wheel", Sp)
+            UT.removeEventListener("pointerdown", WT), UT.removeEventListener("pointermove", zT), UT.removeEventListener("pointerup", MT), UT.removeEventListener("pointercancel", MT), UT.removeEventListener("wheel", gT)
           }
-        }(pp), this.dev = {
-          canvas: () => pp.canvas,
+        }(TT), this.dev = {
+          canvas: () => TT.canvas,
           isolateHead: () => {
-            console.warn(`${Wi} isolateHead: noa's character preview only`)
+            console.warn(`${lU} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = pp.untilSettled().then((() => {
-          if (pp.isStopped) throw new Error(`${Wi} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = TT.untilSettled().then((() => {
+          if (TT.isStopped) throw new Error(`${lU} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(pp, ip) {
-        this.cosmetics[pp] = ip, this.apply()
+      setCosmetic(TT, UT) {
+        this.cosmetics[TT] = UT, this.apply()
       }
-      playEmote(pp) {
-        null === pp || pp !== this.emote ? (this.emote = pp, this.apply()) : this.preview.replay()
+      playEmote(TT) {
+        null === TT || TT !== this.emote ? (this.emote = TT, this.apply()) : this.preview.replay()
       }
-      untilDrawn(pp) {
+      untilDrawn(TT) {
         return this.preview.untilSettled()
       }
-      setOrbit(pp) {
+      setOrbit(TT) {
         let {
-          yaw: ip,
-          pitch: cp,
-          radius: Op
-        } = pp;
-        const op = this.preview.orbit;
-        null !== op && this.preview.setOrbit({
-          alpha: ip,
-          beta: cp,
-          radius: null !== Op && void 0 !== Op ? Op : op.radius
+          yaw: UT,
+          pitch: mT,
+          radius: WT
+        } = TT;
+        const zT = this.preview.orbit;
+        null !== zT && this.preview.setOrbit({
+          alpha: UT,
+          beta: mT,
+          radius: null !== WT && void 0 !== WT ? WT : zT.radius
         })
       }
       resetCamera() {}
-      resize(pp, ip) {
-        this.preview.resize(pp, ip)
+      resize(TT, UT) {
+        this.preview.resize(TT, UT)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var pp;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), yi, null === (pp = this.emote) ? -1 : ti(pp))
+        var TT;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), LU, null === (TT = this.emote) ? -1 : cU(TT))
       }
     }
 
-    function ji(pp, ip) {
+    function bU(TT, UT) {
       let {
-        mobType: cp,
-        variation: Op,
-        animation: op
-      } = ip;
-      pp.setMob(Ui(cp), null !== Op && void 0 !== Op ? Op : "", 1, vi(op))
+        mobType: mT,
+        variation: WT,
+        animation: zT
+      } = UT;
+      TT.setMob(pU(mT), null !== WT && void 0 !== WT ? WT : "", 1, ZU(zT))
     }
 
-    function ki(pp, ip) {
+    function OU(TT, UT) {
       let {
-        mobType: cp,
-        variation: Op,
-        metaInfo: op,
-        tamed: Ip
-      } = ip;
-      pp.setPet(Ui(cp), Op, op, Ip)
+        mobType: mT,
+        variation: WT,
+        metaInfo: zT,
+        tamed: MT
+      } = UT;
+      TT.setPet(pU(mT), WT, zT, MT)
     }
-    const mi = {
+    const eU = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Ri {
-      constructor(pp, ip, cp, Op) {
+    class YU {
+      constructor(TT, UT, mT, WT) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, pp(cp.width, Op[1], Op).then((pp => {
-          if (this.closed) return void pp.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, TT(mT.width, WT[1], WT).then((TT => {
+          if (this.closed) return void TT.close();
           const {
-            style: cp
-          } = pp.canvas;
-          cp.position = "absolute", cp.top = "0", cp.visibility = "hidden", Hi(ip, pp), this.preview = pp, this.apply()
-        })).catch((pp => {
-          console.error(`${Wi} couldn't open a lineup figure`, pp)
+            style: mT
+          } = TT.canvas;
+          mT.position = "absolute", mT.top = "0", mT.visibility = "hidden", vU(UT, TT), this.preview = TT, this.apply()
+        })).catch((TT => {
+          console.error(`${lU} couldn't open a lineup figure`, TT)
         }))
       }
-      update(pp, ip, cp, Op, op) {
-        this.figure = pp, this.shown = ip, this.order = cp, this.span = Op, this.lineup = op, this.apply()
+      update(TT, UT, mT, WT, zT) {
+        this.figure = TT, this.shown = UT, this.order = mT, this.span = WT, this.lineup = zT, this.apply()
       }
       close() {
-        var pp;
-        this.closed = !0, null === (pp = this.preview) || void 0 === pp || pp.close(), this.preview = null
+        var TT;
+        this.closed = !0, null === (TT = this.preview) || void 0 === TT || TT.close(), this.preview = null
       }
       apply() {
         const {
-          preview: pp,
-          figure: ip,
-          lineup: cp
+          preview: TT,
+          figure: UT,
+          lineup: mT
         } = this;
-        if (null === pp || null === ip) return;
-        if (this.given !== ip) {
-          var Op;
-          this.given = ip, this.loaded = !1;
-          const cp = null === ip.qm ? 0 : null !== (Op = (0, Ai.c)(ip.qm)) && void 0 !== Op ? Op : 0;
-          pp.setFigure(function(pp) {
-            return JSON.stringify(Object.fromEntries(pp.cosmetics))
-          }(ip), cp, vi(ip.animation), ip.size), pp.untilSettled().then((() => {
-            this.given === ip && (this.loaded = !0, this.apply())
+        if (null === TT || null === UT) return;
+        if (this.given !== UT) {
+          var WT;
+          this.given = UT, this.loaded = !1;
+          const mT = null === UT.AY ? 0 : null !== (WT = (0, kU.c)(UT.AY)) && void 0 !== WT ? WT : 0;
+          TT.setFigure(function(TT) {
+            return JSON.stringify(Object.fromEntries(TT.cosmetics))
+          }(UT), mT, ZU(UT.animation), UT.size), TT.untilSettled().then((() => {
+            this.given === UT && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: op,
-          width: Ip
+          left: zT,
+          width: MT
         } = this.span;
-        pp.resize(Ip, cp[1], cp);
+        TT.resize(MT, mT[1], mT);
         const {
-          style: Sp
-        } = pp.canvas;
-        Sp.left = `${op}px`, Sp.width = `${Ip}px`, Sp.zIndex = this.order, Sp.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: gT
+        } = TT.canvas;
+        gT.left = `${zT}px`, gT.width = `${MT}px`, gT.zIndex = this.order, gT.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class qi {
-      constructor(pp, ip) {
-        this.open = ip, this.layer = void 0, this.figures = [], this.view = {
+    class JU {
+      constructor(TT, UT) {
+        this.open = UT, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = di(pp), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = fU(TT), this.layer = document.createElement("div");
         const {
-          style: cp
+          style: mT
         } = this.layer;
-        cp.position = "relative", cp.isolation = "isolate", cp.overflow = "hidden", cp.width = "100%", cp.height = "100%", cp.pointerEvents = "none", pp.appendChild(this.layer)
+        mT.position = "relative", mT.isolation = "isolate", mT.overflow = "hidden", mT.width = "100%", mT.height = "100%", mT.pointerEvents = "none", TT.appendChild(this.layer)
       }
-      show(pp) {
-        this.view = pp, this.place()
+      show(TT) {
+        this.view = TT, this.place()
       }
-      resize(pp, ip) {
-        this.size = [pp, ip], this.place()
+      resize(TT, UT) {
+        this.size = [TT, UT], this.place()
       }
       close() {
-        for (const pp of this.figures) pp.close();
+        for (const TT of this.figures) TT.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: pp,
-          shown: ip
+          figures: TT,
+          shown: UT
         } = this.view;
-        for (const Op of this.figures.splice(pp.length)) Op.close();
+        for (const WT of this.figures.splice(TT.length)) WT.close();
         const {
-          size: cp
+          size: mT
         } = this;
-        pp.forEach(((Op, op) => {
-          var Ip;
-          const Sp = function(pp, ip, cp, Op) {
-            let [op, Ip] = Op;
-            const Sp = (pp + .5) * op / ip,
-              xp = Math.min(Math.max(op / ip, 2 * cp * Ip), 2 * Math.max(Sp, op - Sp));
+        TT.forEach(((WT, zT) => {
+          var MT;
+          const gT = function(TT, UT, mT, WT) {
+            let [zT, MT] = WT;
+            const gT = (TT + .5) * zT / UT,
+              nT = Math.min(Math.max(zT / UT, 2 * mT * MT), 2 * Math.max(gT, zT - gT));
             return {
-              left: Sp - xp / 2,
-              width: xp
+              left: gT - nT / 2,
+              width: nT
             }
-          }(op, pp.length, function(pp) {
+          }(zT, TT.length, function(TT) {
             let {
-              animation: ip,
-              size: cp
-            } = pp;
+              animation: UT,
+              size: mT
+            } = TT;
             const {
-              aimed: Op,
-              ready: op
-            } = mi;
-            return (vi(ip) === Pi.gunAimed ? Op : op) * cp
-          }(Op), cp);
-          this.figures[op] ??= new Ri(this.open, this.layer, Sp, cp), this.figures[op].update(Op, null !== (Ip = ip[op]) && void 0 !== Ip && Ip, function(pp, ip) {
-            return String(Math.round(1e3 * pp) + ip)
-          }(Op.size, op), Sp, cp)
+              aimed: WT,
+              ready: zT
+            } = eU;
+            return (ZU(UT) === jU.gunAimed ? WT : zT) * mT
+          }(WT), mT);
+          this.figures[zT] ??= new YU(this.open, this.layer, gT, mT), this.figures[zT].update(WT, null !== (MT = UT[zT]) && void 0 !== MT && MT, function(TT, UT) {
+            return String(Math.round(1e3 * TT) + UT)
+          }(WT.size, zT), gT, mT)
         }))
       }
     }
-    const Mi = {
-      player: np,
-      store: Fp
+    const xU = {
+      player: rT,
+      store: KT
     };
-    class Ci {
-      constructor(pp) {
-        this.page = pp
+    class dU {
+      constructor(TT) {
+        this.page = TT
       }
-      async openMob(pp) {
-        return new ei(await this.open(pp, ap), ji)
+      async openMob(TT) {
+        return new qU(await this.open(TT, CT), bU)
       }
-      async openPet(pp) {
-        return new ei(await this.open(pp, ap), ki)
+      async openPet(TT) {
+        return new qU(await this.open(TT, CT), OU)
       }
-      openMobLineup(pp) {
-        return new qi(pp, ((pp, ip, cp) => this.page.openPreview(ap, pp, ip, cp)))
+      openMobLineup(TT) {
+        return new JU(TT, ((TT, UT, mT) => this.page.openPreview(CT, TT, UT, mT)))
       }
-      async openCharacter(pp, ip) {
-        return new ui(await this.open(pp, Mi[ip]))
+      async openCharacter(TT, UT) {
+        return new iU(await this.open(TT, xU[UT]))
       }
-      async open(pp, ip) {
-        const [cp, Op] = di(pp), op = await this.page.openPreview(ip, cp, Op);
-        return Hi(pp, op), op
+      async open(TT, UT) {
+        const [mT, WT] = fU(TT), zT = await this.page.openPreview(UT, mT, WT);
+        return vU(TT, zT), zT
       }
     }
   },
-  36939: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => yp,
-      E: () => Up,
-      H: () => vp,
-      e: () => Op,
-      h: () => op,
-      i: () => Pp,
-      j: () => wp,
-      l: () => Dp,
-      p: () => tp,
-      t: () => Lp,
-      v: () => Yp,
-      y: () => Wp
+  36843: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => ZT,
+      B: () => vT,
+      b: () => WT,
+      e: () => zT,
+      i: () => LT,
+      j: () => cT,
+      m: () => jT,
+      q: () => fT,
+      s: () => HT,
+      u: () => kT,
+      w: () => pT,
+      z: () => BT
     });
-    const Op = [{
+    const WT = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1497,64 +1497,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function op(pp, ip) {
+    function zT(TT, UT) {
       const {
-        numLines: cp,
-        charsPerLine: op
-      } = Op[ip];
-      return Hp(pp, cp, op, !1)
+        numLines: mT,
+        charsPerLine: zT
+      } = WT[UT];
+      return qT(TT, mT, zT, !1)
     }
-    const Ip = 7 / 8,
-      Sp = .25,
-      xp = 8;
+    const MT = 7 / 8,
+      gT = .25,
+      nT = 8;
 
-    function Lp(pp, ip) {
+    function HT(TT, UT) {
       return {
-        width: Math.min(pp, xp) - 2 * Sp,
-        height: Math.min(ip, xp) - 2 * Sp
+        width: Math.min(TT, nT) - 2 * gT,
+        height: Math.min(UT, nT) - 2 * gT
       }
     }
 
-    function Yp(pp, ip, cp) {
-      const op = Lp(pp, ip),
+    function kT(TT, UT, mT) {
+      const zT = HT(TT, UT),
         {
-          numLines: Sp,
-          charsPerLine: xp
-        } = Op[cp];
+          numLines: gT,
+          charsPerLine: nT
+        } = WT[mT];
       return {
-        numLines: Math.max(1, Math.floor(Sp / Ip * op.height)),
-        charsPerLine: Math.max(1, Math.floor(xp * op.width))
+        numLines: Math.max(1, Math.floor(gT / MT * zT.height)),
+        charsPerLine: Math.max(1, Math.floor(nT * zT.width))
       }
     }
 
-    function Dp(pp, ip, cp, Op) {
+    function jT(TT, UT, mT, WT) {
       const {
-        numLines: op,
-        charsPerLine: Ip
-      } = Yp(cp, Op, ip);
-      return Hp(pp, op, Ip, !1)
+        numLines: zT,
+        charsPerLine: MT
+      } = kT(mT, WT, UT);
+      return qT(TT, zT, MT, !1)
     }
-    const Ap = 32e3;
+    const lT = 32e3;
 
-    function Pp(pp) {
-      return pp.slice(0, Ap)
+    function LT(TT) {
+      return TT.slice(0, lT)
     }
-    const Wp = 512e3,
-      yp = 64,
-      Up = Wp;
+    const pT = 512e3,
+      BT = 64,
+      ZT = pT;
 
-    function wp(pp, ip) {
-      const cp = Math.max(0, Up - ip),
-        Op = Math.min(Wp, cp);
-      return pp.slice(0, Op)
+    function cT(TT, UT) {
+      const mT = Math.max(0, ZT - UT),
+        WT = Math.min(pT, mT);
+      return TT.slice(0, WT)
     }
-    const vp = {
+    const vT = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      Ux: {
+      rg: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1566,31 +1566,31 @@ export const modules = {
       }
     };
 
-    function tp(pp, ip) {
+    function fT(TT, UT) {
       const {
-        numLines: cp,
-        charsPerLine: Op
-      } = vp[ip];
-      return Hp(pp, cp, Op, !1)
+        numLines: mT,
+        charsPerLine: WT
+      } = vT[UT];
+      return qT(TT, mT, WT, !1)
     }
 
-    function Hp(pp, ip, cp, Op, op) {
-      (op || Op) && (pp = pp.slice(0, null !== op && void 0 !== op ? op : ip * cp));
-      const Ip = pp.split("\n");
-      if (Ip.length > ip && Ip.splice(ip, Ip.length - ip), !Op)
-        for (let Sp = 0; Sp < Ip.length; Sp++) {
-          const pp = Ip[Sp];
-          pp.length > cp && (Ip[Sp] = pp.substring(0, cp), Ip.length < ip && Ip.splice(Sp + 1, 0, pp.substring(cp)))
+    function qT(TT, UT, mT, WT, zT) {
+      (zT || WT) && (TT = TT.slice(0, null !== zT && void 0 !== zT ? zT : UT * mT));
+      const MT = TT.split("\n");
+      if (MT.length > UT && MT.splice(UT, MT.length - UT), !WT)
+        for (let gT = 0; gT < MT.length; gT++) {
+          const TT = MT[gT];
+          TT.length > mT && (MT[gT] = TT.substring(0, mT), MT.length < UT && MT.splice(gT + 1, 0, TT.substring(mT)))
         }
-      return Ip.join("\n")
+      return MT.join("\n")
     }
   },
-  51187: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  51106: (TT, UT, mT) => {
+    TT.exports = mT.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  51194: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  51114: (TT, UT, mT) => {
+    TT.exports = mT.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

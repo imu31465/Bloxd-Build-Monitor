@@ -1,203 +1,203 @@
 export const id = 130;
 export const ids = [130];
 export const modules = {
-  6712: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp
+  6633: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => nT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(1201),
-      Sp = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(1288),
+      gT = mT(1188);
 
-    function xp(pp) {
+    function nT(TT) {
       let {
-        item: ip,
-        className: cp
-      } = pp;
+        item: UT,
+        className: mT
+      } = TT;
       const {
-        t: Op
-      } = (0, Ip.H)();
-      return null === ip.renderId || ip.previewsOutdated ? (0, Sp.jsx)("div", {
-        className: op()("ShaderPackPreviewsNotice", cp),
-        children: (0, Sp.jsx)("span", {
-          children: Op(null === ip.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: WT
+      } = (0, MT.z)();
+      return null === UT.renderId || UT.previewsOutdated ? (0, gT.jsx)("div", {
+        className: zT()("ShaderPackPreviewsNotice", mT),
+        children: (0, gT.jsx)("span", {
+          children: WT(null === UT.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  6733: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp
+  6654: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => kT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(6704),
-      Sp = cp(1201),
-      xp = cp(6698),
-      Lp = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(6630),
+      gT = mT(1288),
+      nT = mT(6623),
+      HT = mT(1188);
 
-    function Yp(pp) {
+    function kT(TT) {
       let {
-        selected: ip,
-        onSelect: cp,
-        imageUrl: Op
-      } = pp;
+        selected: UT,
+        onSelect: mT,
+        imageUrl: WT
+      } = TT;
       const {
-        t: Yp
-      } = (0, Sp.H)();
-      return (0, Lp.jsx)("div", {
+        t: kT
+      } = (0, gT.z)();
+      return (0, HT.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: Ip.J.map((pp => {
-          const Ip = Op(pp);
-          return (0, Lp.jsxs)("button", {
+        children: MT.G.map((TT => {
+          const MT = WT(TT);
+          return (0, HT.jsxs)("button", {
             type: "button",
-            "aria-pressed": pp === ip,
-            className: op()("ShaderPackViewOption", {
-              Selected: pp === ip
+            "aria-pressed": TT === UT,
+            className: zT()("ShaderPackViewOption", {
+              Selected: TT === UT
             }),
             onClick: () => {
-              cp(pp)
+              mT(TT)
             },
-            children: [null !== Ip && (0, Lp.jsx)("img", {
-              src: Ip,
+            children: [null !== MT && (0, HT.jsx)("img", {
+              src: MT,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, Lp.jsx)("span", {
+            }), (0, HT.jsx)("span", {
               className: "SmallTextBold",
-              children: Yp(xp.ab[pp])
+              children: kT(nT.U[TT])
             })]
-          }, pp)
+          }, TT)
         }))
       })
     }
   },
-  6716: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Pp,
-      d: () => Wp,
-      h: () => Ap,
-      i: () => yp
+  6641: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => LT,
+      f: () => pT,
+      j: () => lT,
+      m: () => BT
     });
-    var Op = cp(62),
-      op = cp(6704),
-      Ip = cp(1520),
-      Sp = cp(6698),
-      xp = cp(6724),
-      Lp = cp(1141);
-    const Yp = "shaderPackListingView",
-      Dp = "shaderPackListingFilterOpen";
+    var WT = mT(63),
+      zT = mT(6630),
+      MT = mT(1613),
+      gT = mT(6623),
+      nT = mT(6648),
+      HT = mT(1225);
+    const kT = "shaderPackListingView",
+      jT = "shaderPackListingFilterOpen";
 
-    function Ap() {
-      var pp;
-      const [ip, cp] = (0, xp.d)(Yp, op.J[0]);
-      return [null !== (pp = op.J.find((pp => pp === ip))) && void 0 !== pp ? pp : op.J[0], cp]
+    function lT() {
+      var TT;
+      const [UT, mT] = (0, nT.b)(kT, zT.G[0]);
+      return [null !== (TT = zT.G.find((TT => TT === UT))) && void 0 !== TT ? TT : zT.G[0], mT]
     }
 
-    function Pp() {
-      (0, Op.useEffect)((() => () => {
-        window.location.pathname.startsWith(Sp.R) || (0, Sp.g)()
+    function LT() {
+      (0, WT.useEffect)((() => () => {
+        window.location.pathname.startsWith(gT.K) || (0, gT.h)()
       }), [])
     }
 
-    function Wp() {
-      return (0, xp.d)(Dp, !1)
+    function pT() {
+      return (0, nT.b)(jT, !1)
     }
 
-    function yp() {
+    function BT() {
       const {
-        userContext: pp,
-        isUserContextUpdating: ip
-      } = (0, Lp.b)(), [cp, op] = (0, Op.useState)(null), Sp = (0, Op.useRef)(new Set);
+        userContext: TT,
+        isUserContextUpdating: UT
+      } = (0, HT.d)(), [mT, zT] = (0, WT.useState)(null), gT = (0, WT.useRef)(new Set);
 
-      function xp(pp, ip) {
-        op((cp => {
-          const Op = new Set(cp);
-          return ip ? Op.add(pp) : Op.delete(pp), Op
+      function nT(TT, UT) {
+        zT((mT => {
+          const WT = new Set(mT);
+          return UT ? WT.add(TT) : WT.delete(TT), WT
         }))
       }
-      return (0, Op.useEffect)((() => {
-        if (ip) return;
-        let cp = !1;
-        return Ip.b.getFavouriteShaderPacks(pp).then((pp => {
-          cp || op(new Set(pp))
-        })).catch((pp => {
-          console.error("Failed to get favourite shader packs", pp), cp || op(new Set)
+      return (0, WT.useEffect)((() => {
+        if (UT) return;
+        let mT = !1;
+        return MT.b.getFavouriteShaderPacks(TT).then((TT => {
+          mT || zT(new Set(TT))
+        })).catch((TT => {
+          console.error("Failed to get favourite shader packs", TT), mT || zT(new Set)
         })), () => {
-          cp = !0
+          mT = !0
         }
-      }), [pp, ip]), {
-        isFavourite: pp => null === cp ? null : cp.has(pp),
-        toggle: function(ip) {
-          if (null === cp || Sp.current.has(ip)) return;
-          Sp.current.add(ip);
-          const Op = !cp.has(ip);
-          xp(ip, Op), (Op ? Ip.b.favouriteShaderPack(pp, ip) : Ip.b.unfavouriteShaderPack(pp, ip)).catch((pp => {
-            console.error("Failed to change a favourite shader pack", pp), xp(ip, !Op)
+      }), [TT, UT]), {
+        isFavourite: TT => null === mT ? null : mT.has(TT),
+        toggle: function(UT) {
+          if (null === mT || gT.current.has(UT)) return;
+          gT.current.add(UT);
+          const WT = !mT.has(UT);
+          nT(UT, WT), (WT ? MT.b.favouriteShaderPack(TT, UT) : MT.b.unfavouriteShaderPack(TT, UT)).catch((TT => {
+            console.error("Failed to change a favourite shader pack", TT), nT(UT, !WT)
           })).finally((() => {
-            Sp.current.delete(ip)
+            gT.current.delete(UT)
           }))
         }
       }
     }
   },
-  6698: (pp, ip, cp) => {
-    cp.d(ip, {
-      C: () => Mp,
-      E: () => Dp,
-      H: () => Ep,
-      L: () => Up,
-      O: () => fp,
-      P: () => Np,
-      R: () => Sp,
-      S: () => Tp,
-      V: () => Lp,
-      X: () => xp,
-      Z: () => Jp,
-      ab: () => Bp,
-      b: () => tp,
-      bb: () => Hp,
-      d: () => Rp,
-      e: () => wp,
-      eb: () => Cp,
-      g: () => Pp,
-      k: () => Ap,
-      l: () => Xp,
-      n: () => Wp,
-      r: () => lp,
-      s: () => bp,
-      w: () => yp,
-      z: () => vp
+  6623: (TT, UT, mT) => {
+    mT.d(UT, {
+      A: () => tT,
+      C: () => ZT,
+      G: () => PT,
+      J: () => sT,
+      K: () => gT,
+      M: () => FT,
+      N: () => HT,
+      O: () => nT,
+      R: () => IT,
+      U: () => QT,
+      W: () => qT,
+      _: () => wT,
+      b: () => fT,
+      c: () => JT,
+      e: () => cT,
+      h: () => LT,
+      k: () => lT,
+      l: () => aT,
+      o: () => pT,
+      r: () => yT,
+      s: () => VT,
+      t: () => BT,
+      u: () => vT,
+      x: () => dT,
+      z: () => jT
     });
-    var Op = cp(6704),
-      op = cp(156),
-      Ip = cp(4653);
-    const Sp = "/shader-packs",
-      xp = `${Sp}/publish`;
+    var WT = mT(6630),
+      zT = mT(166),
+      MT = mT(4660);
+    const gT = "/shader-packs",
+      nT = `${gT}/publish`;
 
-    function Lp(pp) {
-      return `${Sp}/${encodeURIComponent(pp)}`
+    function HT(TT) {
+      return `${gT}/${encodeURIComponent(TT)}`
     }
-    let Yp = null;
+    let kT = null;
 
-    function Dp(pp) {
-      Yp = pp
-    }
-
-    function Ap() {
-      return Yp
+    function jT(TT) {
+      kT = TT
     }
 
-    function Pp() {
-      Yp = null
+    function lT() {
+      return kT
     }
 
-    function Wp(pp) {
-      return pp.playerHasRank("developer") || pp.playerHasRank("admin")
+    function LT() {
+      kT = null
     }
-    const yp = ["terrain", "water", "models", "sunShadows", "strict"],
-      Up = {
+
+    function pT(TT) {
+      return TT.playerHasRank("developer") || TT.playerHasRank("admin")
+    }
+    const BT = ["terrain", "water", "models", "sunShadows", "strict"],
+      ZT = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function wp(pp, ip) {
-      return pp.withFeatures.includes(ip) ? "with" : pp.withoutFeatures.includes(ip) ? "without" : null
+    function cT(TT, UT) {
+      return TT.withFeatures.includes(UT) ? "with" : TT.withoutFeatures.includes(UT) ? "without" : null
     }
 
-    function vp(pp) {
-      return null === pp ? "with" : "with" === pp ? "without" : null
+    function vT(TT) {
+      return null === TT ? "with" : "with" === TT ? "without" : null
     }
 
-    function tp(pp) {
-      return "with" === pp ? "only" : null === pp ? "include" : void 0
+    function fT(TT) {
+      return "with" === TT ? "only" : null === TT ? "include" : void 0
     }
 
-    function Hp(pp, ip) {
-      const cp = wp(pp, ip),
-        Op = pp => pp.filter((pp => pp !== ip));
+    function qT(TT, UT) {
+      const mT = cT(TT, UT),
+        WT = TT => TT.filter((TT => TT !== UT));
       return {
-        withFeatures: null === cp ? [...pp.withFeatures, ip] : Op(pp.withFeatures),
-        withoutFeatures: "with" === cp ? [...pp.withoutFeatures, ip] : Op(pp.withoutFeatures)
+        withFeatures: null === mT ? [...TT.withFeatures, UT] : WT(TT.withFeatures),
+        withoutFeatures: "with" === mT ? [...TT.withoutFeatures, UT] : WT(TT.withoutFeatures)
       }
     }
-    const dp = "section",
-      ep = "sort",
-      jp = "filters",
-      kp = "q",
-      mp = "banned",
-      Rp = "popular",
-      qp = "strict";
+    const iT = "section",
+      bT = "sort",
+      OT = "filters",
+      eT = "q",
+      YT = "banned",
+      JT = "popular",
+      xT = "strict";
 
-    function Mp(pp) {
-      var ip, cp, op;
-      const Sp = pp.get(dp),
-        xp = (null !== (ip = pp.get(jp)) && void 0 !== ip ? ip : qp).split(","),
-        Lp = pp.get(mp);
+    function dT(TT) {
+      var UT, mT, zT;
+      const gT = TT.get(iT),
+        nT = (null !== (UT = TT.get(OT)) && void 0 !== UT ? UT : xT).split(","),
+        HT = TT.get(YT);
       return {
-        section: "favourites" === Sp || "mine" === Sp ? Sp : "explore",
-        sort: null !== (cp = Op.A.find((ip => ip === pp.get(ep)))) && void 0 !== cp ? cp : Rp,
-        withFeatures: yp.filter((pp => xp.includes(pp) && !xp.includes(`-${pp}`))),
-        withoutFeatures: yp.filter((pp => xp.includes(`-${pp}`))),
-        searchQuery: (null === (op = pp.get(kp)) || void 0 === op ? void 0 : op.slice(0, Op.P)) || null,
-        pageNumber: (0, Ip.e)(pp.get(Ip.c)),
-        banned: "only" === Lp ? "with" : "include" === Lp ? null : "without"
+        section: "favourites" === gT || "mine" === gT ? gT : "explore",
+        sort: null !== (mT = WT.z.find((UT => UT === TT.get(bT)))) && void 0 !== mT ? mT : JT,
+        withFeatures: BT.filter((TT => nT.includes(TT) && !nT.includes(`-${TT}`))),
+        withoutFeatures: BT.filter((TT => nT.includes(`-${TT}`))),
+        searchQuery: (null === (zT = TT.get(eT)) || void 0 === zT ? void 0 : zT.slice(0, WT.L)) || null,
+        pageNumber: (0, MT.f)(TT.get(MT.d)),
+        banned: "only" === HT ? "with" : "include" === HT ? null : "without"
       }
     }
 
-    function Cp(pp, ip) {
-      var cp;
-      const Op = Qp(ip);
-      (0, Ip.g)(pp, dp, "explore" === ip.section ? null : ip.section), (0, Ip.g)(pp, ep, ip.sort === Rp ? null : ip.sort), (0, Ip.g)(pp, jp, Op === qp ? null : Op), (0, Ip.g)(pp, kp, ip.searchQuery), (0, Ip.g)(pp, mp, null !== (cp = tp(ip.banned)) && void 0 !== cp ? cp : null), (0, Ip.k)(pp, ip.pageNumber)
+    function wT(TT, UT) {
+      var mT;
+      const WT = XT(UT);
+      (0, MT.j)(TT, iT, "explore" === UT.section ? null : UT.section), (0, MT.j)(TT, bT, UT.sort === JT ? null : UT.sort), (0, MT.j)(TT, OT, WT === xT ? null : WT), (0, MT.j)(TT, eT, UT.searchQuery), (0, MT.j)(TT, YT, null !== (mT = fT(UT.banned)) && void 0 !== mT ? mT : null), (0, MT.k)(TT, UT.pageNumber)
     }
 
-    function Ep(pp) {
-      const ip = new URLSearchParams;
-      return Cp(ip, {
+    function tT(TT) {
+      const UT = new URLSearchParams;
+      return wT(UT, {
         section: "explore",
-        sort: Rp,
-        withFeatures: "strict" === pp ? [pp] : [pp, "strict"],
+        sort: JT,
+        withFeatures: "strict" === TT ? [TT] : [TT, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${Sp}?${ip.toString()}`
+      }), `${gT}?${UT.toString()}`
     }
 
-    function Xp(pp) {
-      return Qp(pp) === qp
+    function aT(TT) {
+      return XT(TT) === xT
     }
 
-    function lp(pp) {
-      return null !== pp.searchQuery || "with" === pp.banned || Qp(pp) !== qp
+    function yT(TT) {
+      return null !== TT.searchQuery || "with" === TT.banned || XT(TT) !== xT
     }
 
-    function Qp(pp) {
-      return yp.flatMap((ip => {
-        const cp = wp(pp, ip);
-        return "with" === cp ? [ip] : "without" === cp ? [`-${ip}`] : []
+    function XT(TT) {
+      return BT.flatMap((UT => {
+        const mT = cT(TT, UT);
+        return "with" === mT ? [UT] : "without" === mT ? [`-${UT}`] : []
       })).join(",")
     }
-    const Jp = {
+    const IT = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      Bp = {
+      QT = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Np(pp) {
-      return Math.round(100 * Math.max(0, 1 - 1 / pp))
+    function sT(TT) {
+      return Math.round(100 * Math.max(0, 1 - 1 / TT))
     }
 
-    function Tp(pp, ip, cp, op) {
-      const Ip = [];
-      pp.isBanned && Ip.push({
+    function FT(TT, UT, mT, zT) {
+      const MT = [];
+      TT.isBanned && MT.push({
         tone: "warning",
-        text: op("shaderPackListing:ownerBanned"),
+        text: zT("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: Sp
-      } = pp;
-      if (null === pp.brokenError || Sp && !Sp.error || Ip.push({
+        pending: gT
+      } = TT;
+      if (null === TT.brokenError || gT && !gT.error || MT.push({
           tone: "warning",
-          text: op("shaderPackListing:ownerBroken"),
-          detail: pp.brokenError
-        }), null !== Sp && void 0 !== Sp && Sp.error) Ip.push({
+          text: zT("shaderPackListing:ownerBroken"),
+          detail: TT.brokenError
+        }), null !== gT && void 0 !== gT && gT.error) MT.push({
         tone: "warning",
-        text: op(ip ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Op.n)(Sp.error) ? null : Sp.error
+        text: zT(UT ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, WT.n)(gT.error) ? null : gT.error
       });
-      else if (Sp) {
-        const pp = null === Sp.renderNotBefore ? 0 : Sp.renderNotBefore - cp,
-          Op = String(Math.ceil(pp / 6e4)),
-          xp = op(ip ? pp > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : pp > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Op
+      else if (gT) {
+        const TT = null === gT.renderNotBefore ? 0 : gT.renderNotBefore - mT,
+          WT = String(Math.ceil(TT / 6e4)),
+          nT = zT(UT ? TT > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : TT > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: WT
           });
-        Ip.push({
+        MT.push({
           tone: "info",
-          text: xp,
+          text: nT,
           detail: null
         })
       }
-      return pp.listed || Ip.push({
+      return TT.listed || MT.push({
         tone: "info",
-        text: op("shaderPackListing:ownerUnlisted"),
+        text: zT("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Ip
+      }), MT
     }
 
-    function fp(pp) {
-      return Math.max(1, Math.round(pp / 1024))
+    function PT(TT) {
+      return Math.max(1, Math.round(TT / 1024))
     }
 
-    function bp(pp, ip, cp) {
-      return pp instanceof op.e && pp.errorMessageForUser ? pp.errorMessageForUser : ip(cp)
+    function VT(TT, UT, mT) {
+      return TT instanceof zT.d && TT.errorMessageForUser ? TT.errorMessageForUser : UT(mT)
     }
   },
-  6724: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip
+  6648: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => MT
     });
-    var Op = cp(62),
-      op = cp(44);
+    var WT = mT(63),
+      zT = mT(44);
 
-    function Ip(pp, ip) {
-      var cp;
-      const [Ip, Sp] = (0, Op.useState)(null !== (cp = op.h.getItem(pp)) && void 0 !== cp ? cp : ip);
-      return [Ip, ip => {
-        op.h.setItem(pp, ip), Sp(ip)
+    function MT(TT, UT) {
+      var mT;
+      const [MT, gT] = (0, WT.useState)(null !== (mT = zT.l.getItem(TT)) && void 0 !== mT ? mT : UT);
+      return [MT, UT => {
+        zT.l.setItem(TT, UT), gT(UT)
       }]
     }
   },
-  6704: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => Ip,
-      D: () => xp,
-      G: () => Sp,
-      J: () => Op,
-      M: () => Pp,
-      P: () => Dp,
-      S: () => dp,
-      V: () => Ap,
-      W: () => Yp,
-      d: () => yp,
-      g: () => wp,
-      j: () => Up,
-      l: () => Wp,
-      n: () => Hp,
-      r: () => jp,
-      t: () => Lp,
-      u: () => op,
-      x: () => ep
+  6630: (TT, UT, mT) => {
+    mT.d(UT, {
+      C: () => nT,
+      F: () => gT,
+      G: () => WT,
+      K: () => LT,
+      L: () => jT,
+      O: () => iT,
+      S: () => lT,
+      T: () => kT,
+      e: () => BT,
+      h: () => cT,
+      i: () => ZT,
+      j: () => pT,
+      n: () => qT,
+      q: () => OT,
+      s: () => HT,
+      t: () => zT,
+      x: () => bT,
+      z: () => MT
     });
-    const Op = ["forest", "desert", "water", "night", "cave"];
-    const op = {
+    const WT = ["forest", "desert", "water", "night", "cave"];
+    const zT = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      Ip = ["popular", "updated", "newest"],
-      Sp = 3,
-      xp = 32,
-      Lp = 300;
+      MT = ["popular", "updated", "newest"],
+      gT = 3,
+      nT = 32,
+      HT = 300;
 
-    function Yp(pp, ip) {
-      return pp.slice(0, ip).replace(/[\uD800-\uDBFF]$/, "")
+    function kT(TT, UT) {
+      return TT.slice(0, UT).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Dp = 64,
-      Ap = 512,
-      Pp = 18e5;
+    const jT = 64,
+      lT = 512,
+      LT = 18e5;
 
-    function Wp(pp) {
-      const ip = pp,
-        cp = null === ip || void 0 === ip ? void 0 : ip.files;
-      return "number" === typeof(null === ip || void 0 === ip ? void 0 : ip.apiVersion) && "string" === typeof ip.name && (null === ip.author || "string" === typeof ip.author) && (void 0 === ip.keepCircleShadows || "boolean" === typeof ip.keepCircleShadows) && "object" === typeof cp && null !== cp && Object.values(cp).every((pp => "string" === typeof pp))
+    function pT(TT) {
+      const UT = TT,
+        mT = null === UT || void 0 === UT ? void 0 : UT.files;
+      return "number" === typeof(null === UT || void 0 === UT ? void 0 : UT.apiVersion) && "string" === typeof UT.name && (null === UT.author || "string" === typeof UT.author) && (void 0 === UT.keepCircleShadows || "boolean" === typeof UT.keepCircleShadows) && "object" === typeof mT && null !== mT && Object.values(mT).every((TT => "string" === typeof TT))
     }
-    const yp = "Bloxdhub",
-      Up = "https://bloxdhub.com/shaders";
+    const BT = "Bloxdhub",
+      ZT = "https://bloxdhub.com/shaders";
 
-    function wp(pp) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(pp)}`
+    function cT(TT) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(TT)}`
     }
-    const vp = "Screenshot generation failed.",
-      tp = "Its screenshots couldn't be generated:";
+    const vT = "Screenshot generation failed.",
+      fT = "Its screenshots couldn't be generated:";
 
-    function Hp(pp) {
-      var ip;
-      return pp === vp || null !== (ip = null === pp || void 0 === pp ? void 0 : pp.startsWith(tp)) && void 0 !== ip && ip
-    }
-
-    function dp(pp, ip) {
-      return `shaderPacks/${pp}/${ip}.json`
+    function qT(TT) {
+      var UT;
+      return TT === vT || null !== (UT = null === TT || void 0 === TT ? void 0 : TT.startsWith(fT)) && void 0 !== UT && UT
     }
 
-    function ep(pp, ip, cp, Op) {
-      return null === ip.renderId ? jp(pp, ip.baselineVersion, cp, Op) : `${pp}/${function(pp,ip,cp,Op){return`shaderPacks/${pp}/${ip}/${cp}-${Op}.webp`}(ip.packId,ip.renderId,cp,Op)}`
+    function iT(TT, UT) {
+      return `shaderPacks/${TT}/${UT}.json`
     }
 
-    function jp(pp, ip, cp, Op) {
-      return `${pp}/${function(pp,ip,cp){return`shaderPacks/baseline/${pp}/${ip}-${cp}.webp`}(ip,cp,Op)}`
+    function bT(TT, UT, mT, WT) {
+      return null === UT.renderId ? OT(TT, UT.baselineVersion, mT, WT) : `${TT}/${function(TT,UT,mT,WT){return`shaderPacks/${TT}/${UT}/${mT}-${WT}.webp`}(UT.packId,UT.renderId,mT,WT)}`
+    }
+
+    function OT(TT, UT, mT, WT) {
+      return `${TT}/${function(TT,UT,mT){return`shaderPacks/baseline/${TT}/${UT}-${mT}.webp`}(UT,mT,WT)}`
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

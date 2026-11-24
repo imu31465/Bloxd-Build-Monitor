@@ -1,73 +1,73 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  39631: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => op
+  39559: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => zT
     });
-    const Op = .4,
-      op = function(pp, ip, cp, op) {
-        let Ip, {
-            localPlayerId: Sp
-          } = op,
-          xp = !1,
-          Lp = null,
-          Yp = null,
-          Dp = null,
-          Ap = 1,
-          Pp = null,
-          Wp = 0,
-          yp = 0;
+    const WT = .4,
+      zT = function(TT, UT, mT, zT) {
+        let MT, {
+            localPlayerId: gT
+          } = zT,
+          nT = !1,
+          HT = null,
+          kT = null,
+          jT = null,
+          lT = 1,
+          LT = null,
+          pT = 0,
+          BT = 0;
 
-        function Up() {
-          if (Pp) {
-            const pp = Pp;
-            pp.fade(pp.getVolume(), 0, 500), setTimeout((() => {
-              pp.stop()
-            }), 500), Pp = null
+        function ZT() {
+          if (LT) {
+            const TT = LT;
+            TT.fade(TT.getVolume(), 0, 500), setTimeout((() => {
+              TT.stop()
+            }), 500), LT = null
           }
-          yp = 0
+          BT = 0
         }
 
-        function wp(pp) {
-          var ip;
-          if (!Lp || xp || null === Yp) return void(Pp && Up());
-          const cp = Date.now();
-          if (!Pp || cp - Wp > 54e3) {
-            if (Pp) {
-              const pp = Pp;
-              pp.fade(pp.getVolume(), 0, 2e3), setTimeout((() => {
-                pp.stop()
+        function cT(TT) {
+          var UT;
+          if (!HT || nT || null === kT) return void(LT && ZT());
+          const mT = Date.now();
+          if (!LT || mT - pT > 54e3) {
+            if (LT) {
+              const TT = LT;
+              TT.fade(TT.getVolume(), 0, 2e3), setTimeout((() => {
+                TT.stop()
               }), 2e3)
             }
-            Pp = Ip.playSound(Sp, "crowdAmbience", Op, 1), Wp = cp, yp = Op
+            LT = MT.playSound(gT, "crowdAmbience", WT, 1), pT = mT, BT = WT
           }
-          const op = function() {
-              if (null === Yp || null === Dp || !Lp) return 0;
-              const pp = Ip.getPositionView(Lp);
-              if (!pp) return 0;
-              const ip = Math.abs(pp[2] - Yp),
-                cp = Math.abs(pp[2] - Dp),
-                Op = Math.min(ip, cp);
-              return Math.max(0, 1 - Op / Ap)
+          const zT = function() {
+              if (null === kT || null === jT || !HT) return 0;
+              const TT = MT.getPositionView(HT);
+              if (!TT) return 0;
+              const UT = Math.abs(TT[2] - kT),
+                mT = Math.abs(TT[2] - jT),
+                WT = Math.min(UT, mT);
+              return Math.max(0, 1 - WT / lT)
             }(),
-            wp = pp / 1e3;
-          yp += (Op + .6 * op - yp) * Math.min(1, 2 * wp), null === (ip = Pp) || void 0 === ip || ip.setRelativeVolume(yp)
+            cT = TT / 1e3;
+          BT += (WT + .6 * zT - BT) * Math.min(1, 2 * cT), null === (UT = LT) || void 0 === UT || UT.setRelativeVolume(BT)
         }
         return {
-          onCreate: pp => {
-            Ip = pp
+          onCreate: TT => {
+            MT = TT
           },
-          onReceivedMessageFromServer: (pp, ip) => {
-            var cp;
-            "ballState" === pp ? (Lp = null !== (cp = ip.eId) && void 0 !== cp ? cp : null, Lp || Up()) : "frozen" === pp ? xp = ip.frozen : "pitchInfo" === pp && (Yp = ip.goalZRed, Dp = ip.goalZBlue, Ap = Math.abs(Dp - Yp) / 2)
+          onReceivedMessageFromServer: (TT, UT) => {
+            var mT;
+            "ballState" === TT ? (HT = null !== (mT = UT.eId) && void 0 !== mT ? mT : null, HT || ZT()) : "frozen" === TT ? nT = UT.frozen : "pitchInfo" === TT && (kT = UT.goalZRed, jT = UT.goalZBlue, lT = Math.abs(jT - kT) / 2)
           },
-          LP: pp => {
-            wp(pp)
+          Cl: TT => {
+            cT(TT)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,20 +1,20 @@
 export const id = 276;
 export const ids = [276];
 export const modules = {
-  41273: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      gamePackSource: () => Ip
+  41194: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      gamePackSource: () => MT
     });
-    var Op = cp(5103),
-      op = cp(1520);
+    var WT = mT(5078),
+      zT = mT(1613);
 
-    function Ip(pp) {
+    function MT(TT) {
       return {
-        packKey: async ip => (await op.b.getGame(pp, ip, !0)).customTexturePackKey,
-        fetchPack: Op.d
+        packKey: async UT => (await zT.b.getGame(TT, UT, !0)).customTexturePackKey,
+        fetchPack: WT.c
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

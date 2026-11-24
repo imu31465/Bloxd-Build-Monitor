@@ -1,92 +1,92 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36642: (pp, ip, cp) => {
-    var Op = {
-      "./Artisan Bench.json": [41402, 280],
-      "./Aspen Item Pedestal.json": [41410, 281],
-      "./Cedar Item Pedestal.json": [41418, 282],
-      "./Cherry Item Pedestal.json": [41427, 283],
-      "./Furnace.json": [41432, 284],
-      "./Jungle Item Pedestal.json": [41440, 285],
-      "./Mango Item Pedestal.json": [41446, 286],
-      "./Palm Item Pedestal.json": [41454, 287],
-      "./Pear Item Pedestal.json": [41461, 288],
-      "./Pine Item Pedestal.json": [41467, 289],
-      "./Plum Item Pedestal.json": [41469, 290],
-      "./Potion Table.json": [41478, 291],
-      "./Salvaging Table.json": [41481, 292],
-      "./Showcase.json": [41484, 293],
-      "./Spectral Item Pedestal.json": [41492, 294],
-      "./Workbench.json": [41498, 295]
-    };
-
-    function op(pp) {
-      if (!cp.o(Op, pp)) return Promise.resolve().then((() => {
-        var ip = new Error("Cannot find module '" + pp + "'");
-        throw ip.code = "MODULE_NOT_FOUND", ip
-      }));
-      var ip = Op[pp],
-        op = ip[0];
-      return cp.e(ip[1]).then((() => cp(op)))
-    }
-    op.keys = () => Object.keys(Op), op.id = 36642, pp.exports = op
-  },
-  36635: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      getBlockModelIconUrl: () => Pp,
-      hasBlockModelIcon: () => Yp
+  36484: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      getBlockModelIconUrl: () => LT,
+      hasBlockModelIcon: () => kT
     });
-    var Op = cp(36622),
-      op = cp(36618);
-    const Ip = cp(36642),
-      Sp = new Map(Ip.keys().filter((pp => pp.startsWith("./"))).map((pp => [pp.slice(2, -5), pp]))),
-      xp = new Map,
-      Lp = new Map;
+    var WT = mT(36478),
+      zT = mT(36476);
+    const MT = mT(36487),
+      gT = new Map(MT.keys().filter((TT => TT.startsWith("./"))).map((TT => [TT.slice(2, -5), TT]))),
+      nT = new Map,
+      HT = new Map;
 
-    function Yp(pp) {
-      return Sp.has(pp)
+    function kT(TT) {
+      return gT.has(TT)
     }
 
-    function Dp(pp) {
-      return Ip(Sp.get(pp))
+    function jT(TT) {
+      return MT(gT.get(TT))
     }
-    async function Ap(pp, ip, cp) {
+    async function lT(TT, UT, mT) {
       const {
-        data: Op,
-        texture: Ip
+        data: WT,
+        texture: MT
       } = await
-      function(pp) {
-        let ip = xp.get(pp);
-        return ip || (ip = Dp(pp).then((async pp => {
-          const ip = new Image;
-          ip.src = pp.texture, await ip.decode();
-          const cp = document.createElement("canvas");
-          cp.width = ip.width, cp.height = ip.height;
-          const Op = cp.getContext("2d");
-          return Op.drawImage(ip, 0, 0), {
-            data: pp,
+      function(TT) {
+        let UT = nT.get(TT);
+        return UT || (UT = jT(TT).then((async TT => {
+          const UT = new Image;
+          UT.src = TT.texture, await UT.decode();
+          const mT = document.createElement("canvas");
+          mT.width = UT.width, mT.height = UT.height;
+          const WT = mT.getContext("2d");
+          return WT.drawImage(UT, 0, 0), {
+            data: TT,
             texture: {
-              width: ip.width,
-              height: ip.height,
-              pixels: Op.getImageData(0, 0, ip.width, ip.height).data
+              width: UT.width,
+              height: UT.height,
+              pixels: WT.getImageData(0, 0, UT.width, UT.height).data
             }
           }
-        })), ip.catch((() => {
-          xp.delete(pp)
-        })), xp.set(pp, ip)), ip
-      }(pp), Sp = document.createElement("canvas");
-      return Sp.width = ip, Sp.height = ip, Sp.getContext("2d").putImageData(new ImageData((0, op.m)(Op, Ip, ip, cp), ip, ip), 0, 0), Sp.toDataURL()
+        })), UT.catch((() => {
+          nT.delete(TT)
+        })), nT.set(TT, UT)), UT
+      }(TT), gT = document.createElement("canvas");
+      return gT.width = UT, gT.height = UT, gT.getContext("2d").putImageData(new ImageData((0, zT.l)(WT, MT, UT, mT), UT, UT), 0, 0), gT.toDataURL()
     }
 
-    function Pp(pp, ip, cp) {
-      const op = `${ip}|${cp}|${pp}`;
-      let Ip = Lp.get(op);
-      return Ip || (Ip = (0, Op.f)(pp, (() => Dp(pp)), ip, cp).then((Op => null !== Op && void 0 !== Op ? Op : Ap(pp, ip, cp))), Ip.catch((() => {
-        Lp.delete(op)
-      })), Lp.set(op, Ip)), Ip
+    function LT(TT, UT, mT) {
+      const zT = `${UT}|${mT}|${TT}`;
+      let MT = HT.get(zT);
+      return MT || (MT = (0, WT.e)(TT, (() => jT(TT)), UT, mT).then((WT => null !== WT && void 0 !== WT ? WT : lT(TT, UT, mT))), MT.catch((() => {
+        HT.delete(zT)
+      })), HT.set(zT, MT)), MT
     }
+  },
+  36487: (TT, UT, mT) => {
+    var WT = {
+      "./Artisan Bench.json": [41348, 280],
+      "./Aspen Item Pedestal.json": [41351, 281],
+      "./Cedar Item Pedestal.json": [41359, 282],
+      "./Cherry Item Pedestal.json": [41361, 283],
+      "./Furnace.json": [41364, 284],
+      "./Jungle Item Pedestal.json": [41367, 285],
+      "./Mango Item Pedestal.json": [41373, 286],
+      "./Palm Item Pedestal.json": [41375, 287],
+      "./Pear Item Pedestal.json": [41377, 288],
+      "./Pine Item Pedestal.json": [41384, 289],
+      "./Plum Item Pedestal.json": [41390, 290],
+      "./Potion Table.json": [41392, 291],
+      "./Salvaging Table.json": [41400, 292],
+      "./Showcase.json": [41407, 293],
+      "./Spectral Item Pedestal.json": [41412, 294],
+      "./Workbench.json": [41418, 295]
+    };
+
+    function zT(TT) {
+      if (!mT.o(WT, TT)) return Promise.resolve().then((() => {
+        var UT = new Error("Cannot find module '" + TT + "'");
+        throw UT.code = "MODULE_NOT_FOUND", UT
+      }));
+      var UT = WT[TT],
+        zT = UT[0];
+      return mT.e(UT[1]).then((() => mT(zT)))
+    }
+    zT.keys = () => Object.keys(WT), zT.id = 36487, TT.exports = zT
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

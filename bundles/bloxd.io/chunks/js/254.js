@@ -1,52 +1,52 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  40016: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Zp
+  39900: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => ET
     });
-    cp(6592);
-    var Op = cp(62),
-      op = cp(40024),
-      Ip = cp(40289),
-      Sp = cp(40405),
-      xp = cp(40443),
-      Lp = cp(40459),
-      Yp = cp(37479),
-      Dp = cp(37313),
-      Ap = cp(40568),
-      Pp = cp(40626),
-      Wp = (cp(40663), cp(1234)),
-      yp = cp(195),
-      Up = cp(1201),
-      wp = cp(25),
-      vp = cp(2835),
-      tp = cp(1480),
-      Hp = cp(1060),
-      dp = cp(6583),
-      ep = cp(6598),
-      jp = cp(4534),
-      kp = cp(1112);
-    const mp = 1.2,
-      Rp = .2,
-      qp = .0066 * Math.PI / 180,
-      Mp = new Set(["Escape", "KeyG"]),
-      Cp = {
+    mT(6530);
+    var WT = mT(63),
+      zT = mT(39907),
+      MT = mT(40192),
+      gT = mT(40316),
+      nT = mT(40362),
+      HT = mT(40379),
+      kT = mT(37364),
+      jT = mT(37185),
+      lT = mT(40526),
+      LT = mT(40574),
+      pT = (mT(40611), mT(1321)),
+      BT = mT(208),
+      ZT = mT(1288),
+      cT = mT(25),
+      vT = mT(2856),
+      fT = mT(1569),
+      qT = mT(1135),
+      iT = mT(6524),
+      bT = mT(6534),
+      OT = mT(4560),
+      eT = mT(1188);
+    const YT = 1.2,
+      JT = .2,
+      xT = .0066 * Math.PI / 180,
+      dT = new Set(["Escape", "KeyG"]),
+      wT = {
         ArrowLeft: -1,
         ArrowRight: 1
       },
-      Ep = "ArrowUp",
-      Xp = new Set([...Object.keys(Cp), Ep, "ArrowDown"]),
-      lp = 32,
-      Qp = 1,
-      Jp = 10,
-      Bp = "F4",
-      Np = "Period",
-      Tp = Math.PI / 2 - .001,
-      fp = Math.PI / 6,
-      bp = Math.PI / 6,
-      hp = 1.08,
-      ap = [{
+      tT = "ArrowUp",
+      aT = new Set([...Object.keys(wT), tT, "ArrowDown"]),
+      yT = 32,
+      XT = 1,
+      IT = 10,
+      QT = "F4",
+      sT = "Period",
+      FT = Math.PI / 2 - .001,
+      PT = Math.PI / 6,
+      VT = Math.PI / 6,
+      uT = 1.08,
+      CT = [{
         name: "X",
         direction: [1, 0, 0],
         colour: "#e5534b"
@@ -59,387 +59,387 @@ export const modules = {
         direction: [0, 0, 1],
         colour: "#539bf5"
       }],
-      np = 24,
-      Fp = 7,
-      gp = 4,
-      Gp = .01,
-      rp = 4;
+      rT = 24,
+      KT = 7,
+      ST = 4,
+      GT = .01,
+      NT = 4;
 
-    function Zp(pp) {
+    function ET(TT) {
       let {
-        heatmap: ip,
-        scale: cp,
-        fullyOpaqueFrom: Qp,
-        bounds: fp,
-        fitBounds: bp,
-        schematic: hp,
-        controls: ap,
-        onStepTime: np,
-        onShowAllTime: Fp,
-        onTogglePlaying: gp,
-        getReadout: rp = null
-      } = pp;
+        heatmap: UT,
+        scale: mT,
+        fullyOpaqueFrom: XT,
+        bounds: PT,
+        fitBounds: VT,
+        schematic: uT,
+        controls: CT,
+        onStepTime: rT,
+        onShowAllTime: KT,
+        onTogglePlaying: ST,
+        getReadout: NT = null
+      } = TT;
       const {
-        t: Zp
-      } = (0, Up.H)(), {
-        clientEscMenuOptions: xi
-      } = (0, wp.o)(["clientEscMenuOptions"]), Di = (0, Op.useRef)(null), Ai = (0, Op.useRef)(null), Pi = (0, Op.useRef)(null), Wi = (0, vp.d)(Di), [yi, Ui] = (0, Op.useState)(!1), [wi, vi] = (0, Op.useState)(!1), [ti, Hi] = (0, Op.useState)(!0), di = (0, Op.useRef)(!1), [ei, ui] = (0, Op.useState)(!1), ji = wi || !ti && ei, [ki, mi] = (0, Op.useState)(!1), [Ri, qi] = (0, Op.useState)(!0), [Mi, Ci] = (0, Op.useState)(null), Ei = fp.min, [Xi, li] = (0, Op.useState)(Ei);
-      Xi[0] === Ei[0] && Xi[1] === Ei[1] && Xi[2] === Ei[2] || (li(Ei), null !== Mi && Ci({
-        ...Mi,
-        position: Li(Mi.position, Li(Xi, Yi(Ei, -1)))
+        t: ET
+      } = (0, ZT.z)(), {
+        clientEscMenuOptions: MU
+      } = (0, cT.h)(["clientEscMenuOptions"]), HU = (0, WT.useRef)(null), kU = (0, WT.useRef)(null), jU = (0, WT.useRef)(null), lU = (0, vT.b)(HU), [LU, pU] = (0, WT.useState)(!1), [BU, ZU] = (0, WT.useState)(!1), [cU, vU] = (0, WT.useState)(!0), fU = (0, WT.useRef)(!1), [qU, iU] = (0, WT.useState)(!1), bU = BU || !cU && qU, [OU, eU] = (0, WT.useState)(!1), [YU, JU] = (0, WT.useState)(!0), [xU, dU] = (0, WT.useState)(null), wU = PT.min, [tU, aU] = (0, WT.useState)(wU);
+      tU[0] === wU[0] && tU[1] === wU[1] && tU[2] === wU[2] || (aU(wU), null !== xU && dU({
+        ...xU,
+        position: gU(xU.position, gU(tU, nU(wU, -1)))
       }));
-      const Qi = (0, Op.useMemo)((() => function(pp) {
-          return [pp.max[0] - pp.min[0] + 1, pp.max[1] - pp.min[1] + 1, pp.max[2] - pp.min[2] + 1]
-        }(fp)), [fp]),
-        Ji = (0, Op.useMemo)((() => function(pp, ip) {
-          const cp = [],
-            Op = [];
-          for (const [op, Ip] of Object.entries(pp.frequencies)) {
-            const pp = Number(op);
-            for (const [op, Sp] of Object.entries(Ip)) {
-              const Ip = Number(op);
-              for (const [op, xp] of Object.entries(Sp)) xp <= 0 || (cp.push(pp - ip[0], Ip - ip[1], Number(op) - ip[2]), Op.push(xp))
+      const yU = (0, WT.useMemo)((() => function(TT) {
+          return [TT.max[0] - TT.min[0] + 1, TT.max[1] - TT.min[1] + 1, TT.max[2] - TT.min[2] + 1]
+        }(PT)), [PT]),
+        XU = (0, WT.useMemo)((() => function(TT, UT) {
+          const mT = [],
+            WT = [];
+          for (const [zT, MT] of Object.entries(TT.frequencies)) {
+            const TT = Number(zT);
+            for (const [zT, gT] of Object.entries(MT)) {
+              const MT = Number(zT);
+              for (const [zT, nT] of Object.entries(gT)) nT <= 0 || (mT.push(TT - UT[0], MT - UT[1], Number(zT) - UT[2]), WT.push(nT))
             }
           }
           return {
-            positions: Int32Array.from(cp),
-            values: Float64Array.from(Op),
-            count: Op.length
+            positions: Int32Array.from(mT),
+            values: Float64Array.from(WT),
+            count: WT.length
           }
-        }(ip, Ei)), [ip, Ei]),
-        Bi = mp * xi.cameraFOV / 100,
-        Ni = Wi.height > 0 ? Wi.width / Wi.height : 1,
-        Ti = (0, Op.useMemo)((() => function(pp, ip) {
+        }(UT, wU)), [UT, wU]),
+        IU = YT * MU.cameraFOV / 100,
+        QU = lU.height > 0 ? lU.width / lU.height : 1,
+        sU = (0, WT.useMemo)((() => function(TT, UT) {
           return {
-            min: [pp.min[0] - ip[0], pp.min[1] - ip[1], pp.min[2] - ip[2]],
-            max: [pp.max[0] - ip[0] + 1, pp.max[1] - ip[1] + 1, pp.max[2] - ip[2] + 1]
+            min: [TT.min[0] - UT[0], TT.min[1] - UT[1], TT.min[2] - UT[2]],
+            max: [TT.max[0] - UT[0] + 1, TT.max[1] - UT[1] + 1, TT.max[2] - UT[2] + 1]
           }
-        }(bp, Ei)), [bp, Ei]),
-        fi = oi(Ti, Ni, Bi),
-        bi = null !== Mi && void 0 !== Mi ? Mi : fi,
-        ai = (0, Op.useRef)({
-          fittedView: fi,
-          fieldOfView: Bi,
-          mouseSensitivity: xi.mouseSensitivity,
-          canLock: ti
+        }(VT, wU)), [VT, wU]),
+        FU = mU(sU, QU, IU),
+        PU = null !== xU && void 0 !== xU ? xU : FU,
+        VU = (0, WT.useRef)({
+          fittedView: FU,
+          fieldOfView: IU,
+          mouseSensitivity: MU.mouseSensitivity,
+          canLock: cU
         });
-      ai.current = {
-        fittedView: fi,
-        fieldOfView: Bi,
-        mouseSensitivity: xi.mouseSensitivity,
-        canLock: ti
+      VU.current = {
+        fittedView: FU,
+        fieldOfView: IU,
+        mouseSensitivity: MU.mouseSensitivity,
+        canLock: cU
       };
-      const ni = (0, Op.useMemo)((() => {
-          if (!ji) return null;
-          const pp = (pp, cp, Op) => {
-              var op, Ip, Sp;
-              return null !== (op = null === (Ip = ip.frequencies[pp + Ei[0]]) || void 0 === Ip || null === (Sp = Ip[cp + Ei[1]]) || void 0 === Sp ? void 0 : Sp[Op + Ei[2]]) && void 0 !== op ? op : 0
+      const uU = (0, WT.useMemo)((() => {
+          if (!bU) return null;
+          const TT = (TT, mT, WT) => {
+              var zT, MT, gT;
+              return null !== (zT = null === (MT = UT.frequencies[TT + wU[0]]) || void 0 === MT || null === (gT = MT[mT + wU[1]]) || void 0 === gT ? void 0 : gT[WT + wU[2]]) && void 0 !== zT ? zT : 0
             },
-            Op = function(pp, ip, cp, Op) {
-              let op = 0,
-                Ip = 1 / 0;
-              for (const Ap of [0, 1, 2]) {
-                if (0 === ip[Ap]) {
-                  if (pp[Ap] < 0 || pp[Ap] > cp[Ap]) return null;
+            WT = function(TT, UT, mT, WT) {
+              let zT = 0,
+                MT = 1 / 0;
+              for (const lT of [0, 1, 2]) {
+                if (0 === UT[lT]) {
+                  if (TT[lT] < 0 || TT[lT] > mT[lT]) return null;
                   continue
                 }
-                const Op = (0 - pp[Ap]) / ip[Ap],
-                  Sp = (cp[Ap] - pp[Ap]) / ip[Ap];
-                op = Math.max(op, Math.min(Op, Sp)), Ip = Math.min(Ip, Math.max(Op, Sp))
+                const WT = (0 - TT[lT]) / UT[lT],
+                  gT = (mT[lT] - TT[lT]) / UT[lT];
+                zT = Math.max(zT, Math.min(WT, gT)), MT = Math.min(MT, Math.max(WT, gT))
               }
-              if (op > Ip) return null;
-              const Sp = [0, 1, 2].map((Op => Math.min(cp[Op] - 1, Math.max(0, Math.floor(pp[Op] + ip[Op] * op))))),
-                xp = [0, 1, 2].map((pp => Math.sign(ip[pp]))),
-                Lp = [0, 1, 2].map((cp => {
-                  if (0 === xp[cp]) return 1 / 0;
-                  return ((xp[cp] > 0 ? Sp[cp] + 1 : Sp[cp]) - pp[cp]) / ip[cp]
+              if (zT > MT) return null;
+              const gT = [0, 1, 2].map((WT => Math.min(mT[WT] - 1, Math.max(0, Math.floor(TT[WT] + UT[WT] * zT))))),
+                nT = [0, 1, 2].map((TT => Math.sign(UT[TT]))),
+                HT = [0, 1, 2].map((mT => {
+                  if (0 === nT[mT]) return 1 / 0;
+                  return ((nT[mT] > 0 ? gT[mT] + 1 : gT[mT]) - TT[mT]) / UT[mT]
                 })),
-                Yp = [0, 1, 2].map((pp => 0 === xp[pp] ? 1 / 0 : Math.abs(1 / ip[pp])));
-              let Dp = null;
+                kT = [0, 1, 2].map((TT => 0 === nT[TT] ? 1 / 0 : Math.abs(1 / UT[TT])));
+              let jT = null;
               for (;;) {
-                const pp = Op(Sp[0], Sp[1], Sp[2]);
-                if (pp >= 1) return Sp;
-                pp > 0 && (Dp = [Sp[0], Sp[1], Sp[2]]);
-                const ip = Lp[0] < Lp[1] ? Lp[0] < Lp[2] ? 0 : 2 : Lp[1] < Lp[2] ? 1 : 2;
-                if (Lp[ip] > Ip) return Dp;
-                if (Sp[ip] += xp[ip], Lp[ip] += Yp[ip], Sp[ip] < 0 || Sp[ip] >= cp[ip]) return Dp
+                const TT = WT(gT[0], gT[1], gT[2]);
+                if (TT >= 1) return gT;
+                TT > 0 && (jT = [gT[0], gT[1], gT[2]]);
+                const UT = HT[0] < HT[1] ? HT[0] < HT[2] ? 0 : 2 : HT[1] < HT[2] ? 1 : 2;
+                if (HT[UT] > MT) return jT;
+                if (gT[UT] += nT[UT], HT[UT] += kT[UT], gT[UT] < 0 || gT[UT] >= mT[UT]) return jT
               }
-            }(bi.position, ci(bi), Qi, ((ip, Op, op) => (0, dp.u)(pp(ip, Op, op), cp, Qp)));
-          return null === Op ? null : {
-            x: Op[0] + Ei[0],
-            y: Op[1] + Ei[1],
-            z: Op[2] + Ei[2],
-            value: pp(Op[0], Op[1], Op[2])
+            }(PU.position, TU(PU), yU, ((UT, WT, zT) => (0, iT.v)(TT(UT, WT, zT), mT, XT)));
+          return null === WT ? null : {
+            x: WT[0] + wU[0],
+            y: WT[1] + wU[1],
+            z: WT[2] + wU[2],
+            value: TT(WT[0], WT[1], WT[2])
           }
-        }), [ji, ip, Ei, bi, Qi, cp, Qp]),
+        }), [bU, UT, wU, PU, yU, mT, XT]),
         {
-          keyHandlers: Fi
-        } = (0, ep.f)({
-          isEnabled: ji,
-          claimedKeyCodes: Xp,
-          RP: pp => {
-            Ci((ip => function(pp, ip) {
-              const cp = [Math.sin(pp.heading), 0, Math.cos(pp.heading)],
-                Op = Li(Li(Yi(cp, ip.forward), Yi(Oi(pp.heading), ip.right)), [0, ip.up, 0]);
+          keyHandlers: CU
+        } = (0, bT.e)({
+          isEnabled: bU,
+          claimedKeyCodes: aT,
+          gL: TT => {
+            dU((UT => function(TT, UT) {
+              const mT = [Math.sin(TT.heading), 0, Math.cos(TT.heading)],
+                WT = gU(gU(nU(mT, UT.forward), nU(UU(TT.heading), UT.right)), [0, UT.up, 0]);
               return {
-                ...pp,
-                position: Li(pp.position, Op)
+                ...TT,
+                position: gU(TT.position, WT)
               }
-            }(null !== ip && void 0 !== ip ? ip : ai.current.fittedView, pp)))
+            }(null !== UT && void 0 !== UT ? UT : VU.current.fittedView, TT)))
           },
-          onZoomChange: mi
+          onZoomChange: eU
         });
-      (0, Op.useEffect)((() => {
-        const pp = Ai.current;
-        if (!pp) return;
-        let ip;
+      (0, WT.useEffect)((() => {
+        const TT = kU.current;
+        if (!TT) return;
+        let UT;
         try {
-          ip = function(pp, ip) {
-            const cp = new op.d(pp, !0, {
+          UT = function(TT, UT) {
+            const mT = new zT.b(TT, !0, {
                 stencil: !1
               }, !0),
-              Op = new Ip.c(cp),
-              [Wp, yp, Up] = dp.J;
-            Op.clearColor = new Yp.b(Wp / 255, yp / 255, Up / 255, 1);
-            const wp = new Sp.b("Heatmap3DCamera", Dp.Zy.Zero(), Op);
-            wp.fov = ip, wp.minZ = .05;
-            const vp = new xp.d("Heatmap3DLight", new Dp.Zy(.4, 1, -.6), Op);
-            vp.diffuse = Yp.Color3.White(), vp.groundColor = Yp.Color3.Black(), vp.specular = Yp.Color3.Black();
-            const tp = new Lp.StandardMaterial("Heatmap3DCellMaterial", Op);
-            tp.diffuseColor = new Yp.Color3(.4, .4, .4), tp.emissiveColor = new Yp.Color3(.62, .62, .62), tp.specularColor = Yp.Color3.Black();
-            const Hp = (0, Ap.e)("Heatmap3DCells", {
+              WT = new MT.b(mT),
+              [pT, BT, ZT] = iT.P;
+            WT.clearColor = new kT.e(pT / 255, BT / 255, ZT / 255, 1);
+            const cT = new gT.b("Heatmap3DCamera", jT.JB.Zero(), WT);
+            cT.fov = UT, cT.minZ = .05;
+            const vT = new nT.b("Heatmap3DLight", new jT.JB(.4, 1, -.6), WT);
+            vT.diffuse = kT.Color3.White(), vT.groundColor = kT.Color3.Black(), vT.specular = kT.Color3.Black();
+            const fT = new HT.StandardMaterial("Heatmap3DCellMaterial", WT);
+            fT.diffuseColor = new kT.Color3(.4, .4, .4), fT.emissiveColor = new kT.Color3(.62, .62, .62), fT.specularColor = kT.Color3.Black();
+            const qT = (0, lT.d)("Heatmap3DCells", {
               size: 1
-            }, Op);
-            Hp.material = tp, Hp.Ow = !1, Hp.Gy = !0, Hp.isVisible = !1;
-            const ep = (0, Ap.e)("Heatmap3DTranslucentCells", {
+            }, WT);
+            qT.material = fT, qT.QZ = !1, qT.YB = !0, qT.isVisible = !1;
+            const bT = (0, lT.d)("Heatmap3DTranslucentCells", {
               size: 1
-            }, Op);
-            ep.material = tp, ep.hasVertexAlpha = !0, ep.Ow = !1, ep.Gy = !0, ep.isVisible = !1;
-            const jp = new Lp.StandardMaterial("Heatmap3DSchematicMaterial", Op);
-            jp.diffuseColor = new Yp.Color3(.6, .6, .6), jp.emissiveColor = new Yp.Color3(.4, .4, .4), jp.specularColor = Yp.Color3.Black();
-            const kp = (0, Ap.e)("Heatmap3DSchematicBlocks", {
+            }, WT);
+            bT.material = fT, bT.hasVertexAlpha = !0, bT.QZ = !1, bT.YB = !0, bT.isVisible = !1;
+            const OT = new HT.StandardMaterial("Heatmap3DSchematicMaterial", WT);
+            OT.diffuseColor = new kT.Color3(.6, .6, .6), OT.emissiveColor = new kT.Color3(.4, .4, .4), OT.specularColor = kT.Color3.Black();
+            const eT = (0, lT.d)("Heatmap3DSchematicBlocks", {
               size: 1
-            }, Op);
-            kp.material = jp, kp.Ow = !1, kp.Gy = !0, kp.isVisible = !1;
-            const mp = (0, Pp.b)("Heatmap3DTarget", {
-              lines: ii([-.52, -.52, -.52], [.52, .52, .52])
-            }, Op);
-            return mp.color = new Yp.Color3(.06, .14, .23), mp.renderingGroupId = 1, mp.Ow = !1, mp.isVisible = !1, {
-              engine: cp,
-              pw: Op,
-              camera: wp,
-              cells: Hp,
-              translucentCells: ep,
+            }, WT);
+            eT.material = OT, eT.QZ = !1, eT.YB = !0, eT.isVisible = !1;
+            const YT = (0, LT.b)("Heatmap3DTarget", {
+              lines: RT([-.52, -.52, -.52], [.52, .52, .52])
+            }, WT);
+            return YT.color = new kT.Color3(.06, .14, .23), YT.renderingGroupId = 1, YT.QZ = !1, YT.isVisible = !1, {
+              engine: mT,
+              XZ: WT,
+              camera: cT,
+              cells: qT,
+              translucentCells: bT,
               translucent: {
-                rc: new Float32Array(0),
+                fp: new Float32Array(0),
                 colours: new Float32Array(0),
                 count: 0
               },
               translucentSortedFrom: null,
-              schematicBlocks: kp,
-              targetOutline: mp,
+              schematicBlocks: eT,
+              targetOutline: YT,
               chunkGrid: null,
               chunkGridCentre: null,
               chunkGridOrigin: null,
-              targetFieldOfView: ip,
+              targetFieldOfView: UT,
               needsRender: !0
             }
-          }(pp, ai.current.fieldOfView)
-        } catch (cp) {
-          return console.error("Failed to start the 3D heatmap", cp), void Ui(!0)
+          }(TT, VU.current.fieldOfView)
+        } catch (mT) {
+          return console.error("Failed to start the 3D heatmap", mT), void pU(!0)
         }
-        return Pi.current = ip, ip.engine.runRenderLoop((() => {
-          const pp = ip.camera;
-          pp.fov !== ip.targetFieldOfView && (pp.fov += (ip.targetFieldOfView - pp.fov) * (pp.fov > ip.targetFieldOfView ? .3 : .2), Math.abs(ip.targetFieldOfView - pp.fov) < 5e-4 && (pp.fov = ip.targetFieldOfView), ip.needsRender = !0), ip.needsRender && (ip.pw.render(), ip.needsRender = !ip.pw.isReady() || !ip.engine.areAllEffectsReady())
+        return jU.current = UT, UT.engine.runRenderLoop((() => {
+          const TT = UT.camera;
+          TT.fov !== UT.targetFieldOfView && (TT.fov += (UT.targetFieldOfView - TT.fov) * (TT.fov > UT.targetFieldOfView ? .3 : .2), Math.abs(UT.targetFieldOfView - TT.fov) < 5e-4 && (TT.fov = UT.targetFieldOfView), UT.needsRender = !0), UT.needsRender && (UT.XZ.render(), UT.needsRender = !UT.XZ.isReady() || !UT.engine.areAllEffectsReady())
         })), () => {
-          Pi.current = null, ip.engine.dispose()
+          jU.current = null, UT.engine.dispose()
         }
-      }), []), (0, Op.useEffect)((() => {
-        const pp = Ai.current;
-        if (!pp) return;
-        const ip = () => {
-            di.current = !1, vi(document.pointerLockElement === pp)
+      }), []), (0, WT.useEffect)((() => {
+        const TT = kU.current;
+        if (!TT) return;
+        const UT = () => {
+            fU.current = !1, ZU(document.pointerLockElement === TT)
           },
-          cp = () => {
-            di.current && (di.current = !1, Hi(!1))
+          mT = () => {
+            fU.current && (fU.current = !1, vU(!1))
           },
-          Op = ip => {
-            const cp = !ai.current.canLock && document.activeElement === pp && 0 !== (1 & ip.buttons);
-            if (document.pointerLockElement !== pp && !cp) return;
-            const Op = ai.current.mouseSensitivity * qp;
-            Ci((pp => function(pp, ip, cp) {
-              const Op = 2 * Math.PI;
+          WT = UT => {
+            const mT = !VU.current.canLock && document.activeElement === TT && 0 !== (1 & UT.buttons);
+            if (document.pointerLockElement !== TT && !mT) return;
+            const WT = VU.current.mouseSensitivity * xT;
+            dU((TT => function(TT, UT, mT) {
+              const WT = 2 * Math.PI;
               return {
-                ...pp,
-                heading: ((pp.heading + ip) % Op + Op) % Op,
-                pitch: Math.max(-Tp, Math.min(Tp, pp.pitch + cp))
+                ...TT,
+                heading: ((TT.heading + UT) % WT + WT) % WT,
+                pitch: Math.max(-FT, Math.min(FT, TT.pitch + mT))
               }
-            }(null !== pp && void 0 !== pp ? pp : ai.current.fittedView, ip.movementX * Op, ip.movementY * Op)))
+            }(null !== TT && void 0 !== TT ? TT : VU.current.fittedView, UT.movementX * WT, UT.movementY * WT)))
           };
-        return document.addEventListener("pointerlockchange", ip), document.addEventListener("pointerlockerror", cp), document.addEventListener("pointermove", Op), () => {
-          document.removeEventListener("pointerlockchange", ip), document.removeEventListener("pointerlockerror", cp), document.removeEventListener("pointermove", Op), document.pointerLockElement === pp && (0, jp.c)()
+        return document.addEventListener("pointerlockchange", UT), document.addEventListener("pointerlockerror", mT), document.addEventListener("pointermove", WT), () => {
+          document.removeEventListener("pointerlockchange", UT), document.removeEventListener("pointerlockerror", mT), document.removeEventListener("pointermove", WT), document.pointerLockElement === TT && (0, OT.d)()
         }
-      }), []), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && 0 !== Wi.width && 0 !== Wi.height && (pp.engine.resize(), pp.needsRender = !0)
-      }), [Wi.width, Wi.height]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && (pp.targetFieldOfView = Bi * (ki ? Rp : 1))
-      }), [Bi, ki]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && function(pp, ip, cp, Op) {
-          const op = [],
-            Ip = [],
-            Sp = [],
-            xp = [];
-          for (let Lp = 0; Lp < ip.count; Lp++) {
-            const pp = ip.values[Lp],
-              Yp = (0, dp.u)(pp, cp, Op);
-            if (Yp <= 0) continue;
-            const [Dp, Ap, Pp] = (0, dp.n)((0, dp.F)(pp, cp)), Wp = Yp >= 1;
-            (Wp ? op : Sp).push(ip.positions[3 * Lp] + .5, ip.positions[3 * Lp + 1] + .5, ip.positions[3 * Lp + 2] + .5), (Wp ? Ip : xp).push(Dp / 255, Ap / 255, Pp / 255, Yp)
+      }), []), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && 0 !== lU.width && 0 !== lU.height && (TT.engine.resize(), TT.needsRender = !0)
+      }), [lU.width, lU.height]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && (TT.targetFieldOfView = IU * (OU ? JT : 1))
+      }), [IU, OU]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && function(TT, UT, mT, WT) {
+          const zT = [],
+            MT = [],
+            gT = [],
+            nT = [];
+          for (let HT = 0; HT < UT.count; HT++) {
+            const TT = UT.values[HT],
+              kT = (0, iT.v)(TT, mT, WT);
+            if (kT <= 0) continue;
+            const [jT, lT, LT] = (0, iT.n)((0, iT.F)(TT, mT)), pT = kT >= 1;
+            (pT ? zT : gT).push(UT.positions[3 * HT] + .5, UT.positions[3 * HT + 1] + .5, UT.positions[3 * HT + 2] + .5), (pT ? MT : nT).push(jT / 255, lT / 255, LT / 255, kT)
           }
-          Kp(pp.cells, Float32Array.from(op), Float32Array.from(Ip), Ip.length / 4), pp.translucent = {
-            rc: Float32Array.from(Sp),
-            colours: Float32Array.from(xp),
-            count: xp.length / 4
-          }, pp.translucentSortedFrom = null, Vp(pp), pp.needsRender = !0
-        }(pp, Ji, cp, Qp)
-      }), [Ji, cp, Qp]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && function(pp, ip) {
-          pp.chunkGridOrigin = ip, pp.chunkGridCentre = null, sp(pp)
-        }(pp, fp.min)
-      }), [fp]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && function(pp, ip, cp) {
-          const Op = [],
-            op = [];
-          if (null !== ip) {
+          oT(TT.cells, Float32Array.from(zT), Float32Array.from(MT), MT.length / 4), TT.translucent = {
+            fp: Float32Array.from(gT),
+            colours: Float32Array.from(nT),
+            count: nT.length / 4
+          }, TT.translucentSortedFrom = null, AT(TT), TT.needsRender = !0
+        }(TT, XU, mT, XT)
+      }), [XU, mT, XT]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && function(TT, UT) {
+          TT.chunkGridOrigin = UT, TT.chunkGridCentre = null, DT(TT)
+        }(TT, PT.min)
+      }), [PT]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && function(TT, UT, mT) {
+          const WT = [],
+            zT = [];
+          if (null !== UT) {
             const {
-              positions: pp,
-              colours: Ip,
-              count: Sp
-            } = ip.surface;
-            for (let ip = 0; ip < Sp; ip++) {
-              const Sp = [pp[3 * ip], pp[3 * ip + 1], pp[3 * ip + 2]];
-              [0, 1, 2].every((pp => Sp[pp] >= cp.min[pp] - lp && Sp[pp] <= cp.max[pp] + lp)) && (Op.push(Sp[0] - cp.min[0] + .5, Sp[1] - cp.min[1] + .5, Sp[2] - cp.min[2] + .5), op.push(Ip[3 * ip] / 255, Ip[3 * ip + 1] / 255, Ip[3 * ip + 2] / 255, 1))
+              positions: TT,
+              colours: MT,
+              count: gT
+            } = UT.surface;
+            for (let UT = 0; UT < gT; UT++) {
+              const gT = [TT[3 * UT], TT[3 * UT + 1], TT[3 * UT + 2]];
+              [0, 1, 2].every((TT => gT[TT] >= mT.min[TT] - yT && gT[TT] <= mT.max[TT] + yT)) && (WT.push(gT[0] - mT.min[0] + .5, gT[1] - mT.min[1] + .5, gT[2] - mT.min[2] + .5), zT.push(MT[3 * UT] / 255, MT[3 * UT + 1] / 255, MT[3 * UT + 2] / 255, 1))
             }
           }
-          Kp(pp.schematicBlocks, Float32Array.from(Op), Float32Array.from(op), op.length / 4), pp.needsRender = !0
-        }(pp, hp, fp)
-      }), [hp, fp]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && null !== pp.chunkGrid && (pp.chunkGrid.isVisible = Ri, pp.needsRender = !0)
-      }), [Ri, fp]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && function(pp, ip, cp) {
+          oT(TT.schematicBlocks, Float32Array.from(WT), Float32Array.from(zT), zT.length / 4), TT.needsRender = !0
+        }(TT, uT, PT)
+      }), [uT, PT]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && null !== TT.chunkGrid && (TT.chunkGrid.isVisible = YU, TT.needsRender = !0)
+      }), [YU, PT]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && function(TT, UT, mT) {
           const {
-            camera: Op
-          } = pp;
-          Op.position.set(ip.position[0], ip.position[1], ip.position[2]), Op.rotation.set(ip.pitch, ip.heading, 0);
-          const op = (Jp + 1) * yp.g.Qy * Math.sqrt(3);
-          Op.maxZ = Math.max(op, Math.hypot(...Li(ip.position, Yi(Si({
+            camera: WT
+          } = TT;
+          WT.position.set(UT.position[0], UT.position[1], UT.position[2]), WT.rotation.set(UT.pitch, UT.heading, 0);
+          const zT = (IT + 1) * BT.f.cB * Math.sqrt(3);
+          WT.maxZ = Math.max(zT, Math.hypot(...gU(UT.position, nU(zU({
             min: [0, 0, 0],
-            max: cp
-          }), -1))) + 2 * Math.hypot(...cp)), sp(pp), Vp(pp), pp.needsRender = !0
-        }(pp, bi, Qi)
-      }), [bi, Qi]), (0, Op.useEffect)((() => {
-        const pp = Pi.current;
-        null !== pp && (pp.targetOutline.isVisible = null !== ni, null !== ni && pp.targetOutline.position.set(ni.x - Ei[0] + .5, ni.y - Ei[1] + .5, ni.z - Ei[2] + .5), pp.needsRender = !0)
-      }), [ni, Ei]);
-      return (0, kp.jsxs)("div", {
+            max: mT
+          }), -1))) + 2 * Math.hypot(...mT)), DT(TT), AT(TT), TT.needsRender = !0
+        }(TT, PU, yU)
+      }), [PU, yU]), (0, WT.useEffect)((() => {
+        const TT = jU.current;
+        null !== TT && (TT.targetOutline.isVisible = null !== uU, null !== uU && TT.targetOutline.position.set(uU.x - wU[0] + .5, uU.y - wU[1] + .5, uU.z - wU[2] + .5), TT.needsRender = !0)
+      }), [uU, wU]);
+      return (0, eT.jsxs)("div", {
         className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: Di,
-        children: [(0, kp.jsx)("canvas", {
+        ref: HU,
+        children: [(0, eT.jsx)("canvas", {
           className: "StudioHeatmapMapCanvas",
-          ref: Ai,
+          ref: kU,
           style: {
-            width: `${Wi.width}px`,
-            height: `${Wi.height}px`
+            width: `${lU.width}px`,
+            height: `${lU.height}px`
           },
           tabIndex: 0,
-          "aria-label": Zp("3D heatmap"),
+          "aria-label": ET("3D heatmap"),
           onClick: () => {
-            const pp = Ai.current;
-            if (null === pp) return;
-            if (pp.focus({
+            const TT = kU.current;
+            if (null === TT) return;
+            if (TT.focus({
                 preventScroll: !0
-              }), wi || !ti) return;
-            const ip = pp.requestPointerLock();
-            ip instanceof Promise ? ip.catch((pp => {
-              pp instanceof DOMException && ("WrongDocumentError" === pp.name || "NotSupportedError" === pp.name) && Hi(!1)
-            })) : di.current = !0
+              }), BU || !cU) return;
+            const UT = TT.requestPointerLock();
+            UT instanceof Promise ? UT.catch((TT => {
+              TT instanceof DOMException && ("WrongDocumentError" === TT.name || "NotSupportedError" === TT.name) && vU(!1)
+            })) : fU.current = !0
           },
-          ...Fi,
-          onKeyDown: pp => {
-            if (ji && Mp.has(pp.code)) return pp.preventDefault(), void(() => {
-              const pp = Ai.current;
-              null !== pp && document.pointerLockElement === pp ? (0, jp.c)() : null === pp || void 0 === pp || pp.blur()
+          ...CU,
+          onKeyDown: TT => {
+            if (bU && dT.has(TT.code)) return TT.preventDefault(), void(() => {
+              const TT = kU.current;
+              null !== TT && document.pointerLockElement === TT ? (0, OT.d)() : null === TT || void 0 === TT || TT.blur()
             })();
-            const ip = Cp[pp.code];
-            return ji && void 0 !== ip ? (pp.preventDefault(), void np(ip)) : ji && (0, ep.b)("replayPlayPause", pp.code) && !(0, ep.b)("Zoom", pp.code) ? (pp.preventDefault(), void(pp.repeat || gp())) : ji && pp.code === Ep ? (pp.preventDefault(), void Fp()) : ji && pp.code === Np ? (pp.preventDefault(), void Ci(null)) : ji && pp.code === Bp ? (pp.preventDefault(), void qi((pp => !pp))) : void Fi.onKeyDown(pp)
+            const UT = wT[TT.code];
+            return bU && void 0 !== UT ? (TT.preventDefault(), void rT(UT)) : bU && (0, bT.d)("replayPlayPause", TT.code) && !(0, bT.d)("Zoom", TT.code) ? (TT.preventDefault(), void(TT.repeat || ST())) : bU && TT.code === tT ? (TT.preventDefault(), void KT()) : bU && TT.code === sT ? (TT.preventDefault(), void dU(null)) : bU && TT.code === QT ? (TT.preventDefault(), void JU((TT => !TT))) : void CU.onKeyDown(TT)
           },
           onFocus: () => {
-            ui(!0)
+            iU(!0)
           },
           onBlur: () => {
-            ui(!1), Fi.onBlur()
+            iU(!1), CU.onBlur()
           }
-        }), yi && (0, kp.jsx)("div", {
+        }), LU && (0, eT.jsx)("div", {
           className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: Zp("3D view isn't available in this browser.")
-        }), ji && (0, kp.jsx)("div", {
+          children: ET("3D view isn't available in this browser.")
+        }), bU && (0, eT.jsx)("div", {
           className: "StudioHeatmap3DCrosshair"
-        }), (0, kp.jsx)("div", {
+        }), (0, eT.jsx)("div", {
           className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: bi.position.map(((pp, ip) => (pp + Ei[ip]).toFixed(2))).join(" ")
-        }), Ri && (0, kp.jsx)(zp, {
-          heading: bi.heading,
-          pitch: bi.pitch,
-          onViewFrom: pp => {
-            const ip = Yi(pp, -1),
-              cp = 0 === ip[1] ? {
-                heading: Math.atan2(ip[0], ip[2]),
+          children: PU.position.map(((TT, UT) => (TT + wU[UT]).toFixed(2))).join(" ")
+        }), YU && (0, eT.jsx)(hT, {
+          heading: PU.heading,
+          pitch: PU.pitch,
+          onViewFrom: TT => {
+            const UT = nU(TT, -1),
+              mT = 0 === UT[1] ? {
+                heading: Math.atan2(UT[0], UT[2]),
                 pitch: 0
               } : {
-                heading: bi.heading,
-                pitch: ip[1] < 0 ? Tp : -Tp
+                heading: PU.heading,
+                pitch: UT[1] < 0 ? FT : -FT
               };
-            Ci(oi(Ti, Ni, Bi, cp))
+            dU(mU(sU, QU, IU, mT))
           },
-          onTurn: (pp, ip) => {
-            Ci((cp => function(pp, ip, cp, Op) {
-              return Ii(pp, ip, {
-                heading: pp.heading + cp * Gp,
-                pitch: Math.max(-Tp, Math.min(Tp, pp.pitch + Op * Gp))
+          onTurn: (TT, UT) => {
+            dU((mT => function(TT, UT, mT, WT) {
+              return WU(TT, UT, {
+                heading: TT.heading + mT * GT,
+                pitch: Math.max(-FT, Math.min(FT, TT.pitch + WT * GT))
               })
-            }(null !== cp && void 0 !== cp ? cp : ai.current.fittedView, Si(Ti), pp, ip)))
+            }(null !== mT && void 0 !== mT ? mT : VU.current.fittedView, zU(sU), TT, UT)))
           },
           onFlip: () => {
-            Ci((pp => function(pp, ip) {
-              return Ii(pp, ip, {
-                heading: pp.heading + Math.PI,
-                pitch: -pp.pitch
+            dU((TT => function(TT, UT) {
+              return WU(TT, UT, {
+                heading: TT.heading + Math.PI,
+                pitch: -TT.pitch
               })
-            }(null !== pp && void 0 !== pp ? pp : ai.current.fittedView, Si(Ti))))
+            }(null !== TT && void 0 !== TT ? TT : VU.current.fittedView, zU(sU))))
           }
-        }), null !== ni && (0, kp.jsx)("div", {
+        }), null !== uU && (0, eT.jsx)("div", {
           className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === rp ? Zp("studio:heatmapBlockReadout", {
-            x: ni.x,
-            y: ni.y,
-            z: ni.z,
-            count: (0, Wp.O)(ni.value)
-          }) : rp(ni.x, ni.y, ni.z, ni.value)
-        }), (0, kp.jsxs)("div", {
+          children: null === NT ? ET("studio:heatmapBlockReadout", {
+            x: uU.x,
+            y: uU.y,
+            z: uU.z,
+            count: (0, pT.V)(uU.value)
+          }) : NT(uU.x, uU.y, uU.z, uU.value)
+        }), (0, eT.jsxs)("div", {
           className: "StudioHeatmapMapControls",
-          children: [ap, (0, kp.jsx)(tp.S, {
-            active: null === Mi,
+          children: [CT, (0, eT.jsx)(fT.L, {
+            active: null === xU,
             onClick: () => {
-              Ci(null)
+              dU(null)
             },
-            children: (0, kp.jsx)(Hp.d, {
+            children: (0, eT.jsx)(qT.c, {
               name: "eye"
             })
           })]
@@ -447,255 +447,255 @@ export const modules = {
       })
     }
 
-    function zp(pp) {
+    function hT(TT) {
       let {
-        heading: ip,
-        pitch: cp,
-        onViewFrom: op,
-        onTurn: Ip,
-        onFlip: Sp
-      } = pp;
+        heading: UT,
+        pitch: mT,
+        onViewFrom: zT,
+        onTurn: MT,
+        onFlip: gT
+      } = TT;
       const {
-        t: xp
-      } = (0, Up.H)(), Lp = (0, Op.useRef)(null), Yp = ci({
-        heading: ip,
-        pitch: cp
-      }), Dp = Oi(ip), Ap = Ai(Yp, Dp), Pp = np + Fp + 2, Wp = ap.flatMap((pp => [1, -1].map((ip => {
-        const cp = Yi(pp.direction, ip);
+        t: nT
+      } = (0, ZT.z)(), HT = (0, WT.useRef)(null), kT = TU({
+        heading: UT,
+        pitch: mT
+      }), jT = UU(UT), lT = kU(kT, jT), LT = rT + KT + 2, pT = CT.flatMap((TT => [1, -1].map((UT => {
+        const mT = nU(TT.direction, UT);
         return {
-          ...pp,
-          sign: ip,
-          direction: cp,
-          endX: Pp + Di(cp, Dp) * np,
-          endY: Pp - Di(cp, Ap) * np,
-          depth: Di(cp, Yp)
+          ...TT,
+          sign: UT,
+          direction: mT,
+          endX: LT + HU(mT, jT) * rT,
+          endY: LT - HU(mT, lT) * rT,
+          depth: HU(mT, kT)
         }
-      })))).sort(((pp, ip) => ip.depth - pp.depth));
-      return (0, kp.jsxs)("svg", {
+      })))).sort(((TT, UT) => UT.depth - TT.depth));
+      return (0, eT.jsxs)("svg", {
         className: "StudioHeatmap3DGizmo",
-        width: 2 * Pp,
-        height: 2 * Pp,
+        width: 2 * LT,
+        height: 2 * LT,
         "aria-hidden": !0,
-        onPointerDown: pp => {
-          var ip, cp;
-          pp.currentTarget.setPointerCapture(pp.pointerId);
-          const Op = pp.target,
-            op = Op.getAttribute("data-end");
-          Lp.current = {
-            pointerId: pp.pointerId,
-            x: pp.clientX,
-            y: pp.clientY,
+        onPointerDown: TT => {
+          var UT, mT;
+          TT.currentTarget.setPointerCapture(TT.pointerId);
+          const WT = TT.target,
+            zT = WT.getAttribute("data-end");
+          HT.current = {
+            pointerId: TT.pointerId,
+            x: TT.clientX,
+            y: TT.clientY,
             travel: 0,
-            side: null === op ? null : null !== (ip = null === (cp = Wp[Number(op)]) || void 0 === cp ? void 0 : cp.direction) && void 0 !== ip ? ip : null,
-            isOnMiddle: Op.hasAttribute("data-middle")
+            side: null === zT ? null : null !== (UT = null === (mT = pT[Number(zT)]) || void 0 === mT ? void 0 : mT.direction) && void 0 !== UT ? UT : null,
+            isOnMiddle: WT.hasAttribute("data-middle")
           }
         },
-        onPointerMove: pp => {
-          const ip = Lp.current;
-          if (null === ip || ip.pointerId !== pp.pointerId) return;
-          const cp = pp.clientX - ip.x,
-            Op = pp.clientY - ip.y;
-          ip.x = pp.clientX, ip.y = pp.clientY, ip.travel += Math.abs(cp) + Math.abs(Op), ip.travel >= rp && Ip(cp, Op)
+        onPointerMove: TT => {
+          const UT = HT.current;
+          if (null === UT || UT.pointerId !== TT.pointerId) return;
+          const mT = TT.clientX - UT.x,
+            WT = TT.clientY - UT.y;
+          UT.x = TT.clientX, UT.y = TT.clientY, UT.travel += Math.abs(mT) + Math.abs(WT), UT.travel >= NT && MT(mT, WT)
         },
-        onPointerUp: pp => {
-          const ip = Lp.current;
-          Lp.current = null, null === ip || ip.pointerId !== pp.pointerId || ip.travel >= rp || (null !== ip.side ? op(ip.side) : ip.isOnMiddle && Sp())
+        onPointerUp: TT => {
+          const UT = HT.current;
+          HT.current = null, null === UT || UT.pointerId !== TT.pointerId || UT.travel >= NT || (null !== UT.side ? zT(UT.side) : UT.isOnMiddle && gT())
         },
         onPointerCancel: () => {
-          Lp.current = null
+          HT.current = null
         },
-        children: [Wp.map(((pp, ip) => {
-          const cp = pp.sign > 0;
-          return (0, kp.jsxs)("g", {
-            children: [(0, kp.jsx)("line", {
-              x1: Pp,
-              y1: Pp,
-              x2: pp.endX,
-              y2: pp.endY,
-              stroke: pp.colour,
-              strokeOpacity: cp ? 1 : .5,
+        children: [pT.map(((TT, UT) => {
+          const mT = TT.sign > 0;
+          return (0, eT.jsxs)("g", {
+            children: [(0, eT.jsx)("line", {
+              x1: LT,
+              y1: LT,
+              x2: TT.endX,
+              y2: TT.endY,
+              stroke: TT.colour,
+              strokeOpacity: mT ? 1 : .5,
               strokeWidth: 2,
               strokeLinecap: "round"
-            }), (0, kp.jsx)("circle", {
+            }), (0, eT.jsx)("circle", {
               className: "StudioHeatmap3DGizmoEnd",
-              "data-end": ip,
-              cx: pp.endX,
-              cy: pp.endY,
-              r: cp ? Fp : Fp - 1,
-              fill: pp.colour,
-              fillOpacity: cp ? 1 : .3,
-              stroke: pp.colour,
-              strokeWidth: cp ? 0 : 1.5,
-              children: (0, kp.jsx)("title", {
-                children: `${xp("View from")} ${cp?"+":"\u2212"}${pp.name}`
+              "data-end": UT,
+              cx: TT.endX,
+              cy: TT.endY,
+              r: mT ? KT : KT - 1,
+              fill: TT.colour,
+              fillOpacity: mT ? 1 : .3,
+              stroke: TT.colour,
+              strokeWidth: mT ? 0 : 1.5,
+              children: (0, eT.jsx)("title", {
+                children: `${nT("View from")} ${mT?"+":"\u2212"}${TT.name}`
               })
-            }), cp && (0, kp.jsx)("text", {
+            }), mT && (0, eT.jsx)("text", {
               pointerEvents: "none",
-              x: pp.endX,
-              y: pp.endY,
+              x: TT.endX,
+              y: TT.endY,
               fill: "#151515",
               fontSize: 9,
               fontWeight: "bold",
               textAnchor: "middle",
               dominantBaseline: "central",
-              children: pp.name
+              children: TT.name
             })]
-          }, `${cp?"+":"-"}${pp.name}`)
-        })), (0, kp.jsx)("circle", {
+          }, `${mT?"+":"-"}${TT.name}`)
+        })), (0, eT.jsx)("circle", {
           className: "StudioHeatmap3DGizmoEnd",
           "data-middle": !0,
-          cx: Pp,
-          cy: Pp,
-          r: gp,
+          cx: LT,
+          cy: LT,
+          r: ST,
           fill: "#d0d0d0",
           fillOpacity: .85,
-          children: (0, kp.jsx)("title", {
-            children: xp("View from the opposite side")
+          children: (0, eT.jsx)("title", {
+            children: nT("View from the opposite side")
           })
         })]
       })
     }
 
-    function sp(pp) {
-      var ip, cp, Op;
+    function DT(TT) {
+      var UT, mT, WT;
       const {
-        chunkGridOrigin: op,
-        camera: Ip
-      } = pp;
-      if (null === op) return;
-      const Sp = [Ip.position.x, Ip.position.y, Ip.position.z],
-        xp = [0, 2].map((pp => Math.floor((Sp[pp] + op[pp]) / yp.g.Qy))),
-        Lp = pp.chunkGridCentre;
-      if (null !== Lp && Lp.every(((pp, ip) => pp === xp[ip]))) return;
-      const Ap = null === (ip = null === (cp = pp.chunkGrid) || void 0 === cp ? void 0 : cp.isVisible) || void 0 === ip || ip;
-      null === (Op = pp.chunkGrid) || void 0 === Op || Op.dispose();
-      const [Wp, Up] = [0, 2].map(((pp, ip) => {
-        const cp = [];
-        for (let Op = xp[ip] - Jp; Op <= xp[ip] + Jp + 1; Op++) cp.push(Op * yp.g.Qy - op[pp]);
-        return cp
-      })), wp = -op[1], vp = [];
-      for (const Yp of Up) vp.push([new Dp.Zy(Wp[0], wp, Yp), new Dp.Zy(Wp[Wp.length - 1], wp, Yp)]);
-      for (const Yp of Wp) vp.push([new Dp.Zy(Yp, wp, Up[0]), new Dp.Zy(Yp, wp, Up[Up.length - 1])]);
-      const tp = (0, Pp.b)("Heatmap3DChunkGrid", {
-        lines: vp
-      }, pp.pw);
-      tp.color = new Yp.Color3(.45, .6, .78), tp.Ow = !1, tp.isVisible = Ap, pp.chunkGrid = tp, pp.chunkGridCentre = xp, pp.needsRender = !0
+        chunkGridOrigin: zT,
+        camera: MT
+      } = TT;
+      if (null === zT) return;
+      const gT = [MT.position.x, MT.position.y, MT.position.z],
+        nT = [0, 2].map((TT => Math.floor((gT[TT] + zT[TT]) / BT.f.cB))),
+        HT = TT.chunkGridCentre;
+      if (null !== HT && HT.every(((TT, UT) => TT === nT[UT]))) return;
+      const lT = null === (UT = null === (mT = TT.chunkGrid) || void 0 === mT ? void 0 : mT.isVisible) || void 0 === UT || UT;
+      null === (WT = TT.chunkGrid) || void 0 === WT || WT.dispose();
+      const [pT, ZT] = [0, 2].map(((TT, UT) => {
+        const mT = [];
+        for (let WT = nT[UT] - IT; WT <= nT[UT] + IT + 1; WT++) mT.push(WT * BT.f.cB - zT[TT]);
+        return mT
+      })), cT = -zT[1], vT = [];
+      for (const kT of ZT) vT.push([new jT.JB(pT[0], cT, kT), new jT.JB(pT[pT.length - 1], cT, kT)]);
+      for (const kT of pT) vT.push([new jT.JB(kT, cT, ZT[0]), new jT.JB(kT, cT, ZT[ZT.length - 1])]);
+      const fT = (0, LT.b)("Heatmap3DChunkGrid", {
+        lines: vT
+      }, TT.XZ);
+      fT.color = new kT.Color3(.45, .6, .78), fT.QZ = !1, fT.isVisible = lT, TT.chunkGrid = fT, TT.chunkGridCentre = nT, TT.needsRender = !0
     }
 
-    function Kp(pp, ip, cp, Op) {
-      pp.I9("matrix", function(pp, ip) {
-        const cp = new Float32Array(16 * ip);
-        for (let Op = 0; Op < ip; Op++) {
-          const ip = 16 * Op;
-          cp[ip] = 1, cp[ip + 5] = 1, cp[ip + 10] = 1, cp[ip + 12] = pp[3 * Op], cp[ip + 13] = pp[3 * Op + 1], cp[ip + 14] = pp[3 * Op + 2], cp[ip + 15] = 1
+    function oT(TT, UT, mT, WT) {
+      TT.f6("matrix", function(TT, UT) {
+        const mT = new Float32Array(16 * UT);
+        for (let WT = 0; WT < UT; WT++) {
+          const UT = 16 * WT;
+          mT[UT] = 1, mT[UT + 5] = 1, mT[UT + 10] = 1, mT[UT + 12] = TT[3 * WT], mT[UT + 13] = TT[3 * WT + 1], mT[UT + 14] = TT[3 * WT + 2], mT[UT + 15] = 1
         }
-        return cp
-      }(ip, Op), 16, !0), pp.I9("color", cp, 4, !0), pp.isVisible = Op > 0
+        return mT
+      }(UT, WT), 16, !0), TT.f6("color", mT, 4, !0), TT.isVisible = WT > 0
     }
 
-    function Vp(pp) {
+    function AT(TT) {
       const {
-        camera: ip,
-        translucent: cp
-      } = pp, Op = [ip.position.x, ip.position.y, ip.position.z], op = pp.translucentSortedFrom;
-      if (null !== op && Math.hypot(Op[0] - op[0], Op[1] - op[1], Op[2] - op[2]) < Qp) return;
-      pp.translucentSortedFrom = Op;
-      const Ip = new Float64Array(cp.count),
-        Sp = new Uint32Array(cp.count);
-      for (let Yp = 0; Yp < cp.count; Yp++) {
-        const pp = cp.rc[3 * Yp] - Op[0],
-          ip = cp.rc[3 * Yp + 1] - Op[1],
-          op = cp.rc[3 * Yp + 2] - Op[2];
-        Ip[Yp] = pp * pp + ip * ip + op * op, Sp[Yp] = Yp
+        camera: UT,
+        translucent: mT
+      } = TT, WT = [UT.position.x, UT.position.y, UT.position.z], zT = TT.translucentSortedFrom;
+      if (null !== zT && Math.hypot(WT[0] - zT[0], WT[1] - zT[1], WT[2] - zT[2]) < XT) return;
+      TT.translucentSortedFrom = WT;
+      const MT = new Float64Array(mT.count),
+        gT = new Uint32Array(mT.count);
+      for (let kT = 0; kT < mT.count; kT++) {
+        const TT = mT.fp[3 * kT] - WT[0],
+          UT = mT.fp[3 * kT + 1] - WT[1],
+          zT = mT.fp[3 * kT + 2] - WT[2];
+        MT[kT] = TT * TT + UT * UT + zT * zT, gT[kT] = kT
       }
-      Sp.sort(((pp, ip) => Ip[ip] - Ip[pp]));
-      const xp = new Float32Array(3 * cp.count),
-        Lp = new Float32Array(4 * cp.count);
-      Sp.forEach(((pp, ip) => {
-        xp.set(cp.rc.subarray(3 * pp, 3 * pp + 3), 3 * ip), Lp.set(cp.colours.subarray(4 * pp, 4 * pp + 4), 4 * ip)
-      })), Kp(pp.translucentCells, xp, Lp, cp.count), pp.needsRender = !0
+      gT.sort(((TT, UT) => MT[UT] - MT[TT]));
+      const nT = new Float32Array(3 * mT.count),
+        HT = new Float32Array(4 * mT.count);
+      gT.forEach(((TT, UT) => {
+        nT.set(mT.fp.subarray(3 * TT, 3 * TT + 3), 3 * UT), HT.set(mT.colours.subarray(4 * TT, 4 * TT + 4), 4 * UT)
+      })), oT(TT.translucentCells, nT, HT, mT.count), TT.needsRender = !0
     }
 
-    function ii(pp, ip) {
-      const cp = (cp, Op, op) => new Dp.Zy(0 === cp ? pp[0] : ip[0], 0 === Op ? pp[1] : ip[1], 0 === op ? pp[2] : ip[2]),
-        Op = [];
-      for (const op of [0, 1])
-        for (const pp of [0, 1]) Op.push([cp(0, op, pp), cp(1, op, pp)], [cp(op, 0, pp), cp(op, 1, pp)], [cp(op, pp, 0), cp(op, pp, 1)]);
-      return Op
+    function RT(TT, UT) {
+      const mT = (mT, WT, zT) => new jT.JB(0 === mT ? TT[0] : UT[0], 0 === WT ? TT[1] : UT[1], 0 === zT ? TT[2] : UT[2]),
+        WT = [];
+      for (const zT of [0, 1])
+        for (const TT of [0, 1]) WT.push([mT(0, zT, TT), mT(1, zT, TT)], [mT(zT, 0, TT), mT(zT, 1, TT)], [mT(zT, TT, 0), mT(zT, TT, 1)]);
+      return WT
     }
 
-    function ci(pp) {
-      return [Math.sin(pp.heading) * Math.cos(pp.pitch), -Math.sin(pp.pitch), Math.cos(pp.heading) * Math.cos(pp.pitch)]
+    function TU(TT) {
+      return [Math.sin(TT.heading) * Math.cos(TT.pitch), -Math.sin(TT.pitch), Math.cos(TT.heading) * Math.cos(TT.pitch)]
     }
 
-    function Oi(pp) {
-      return [Math.cos(pp), 0, -Math.sin(pp)]
+    function UU(TT) {
+      return [Math.cos(TT), 0, -Math.sin(TT)]
     }
 
-    function oi(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: fp,
-        pitch: bp
+    function mU(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: PT,
+        pitch: VT
       };
-      const op = [pp.max[0] - pp.min[0], pp.max[1] - pp.min[1], pp.max[2] - pp.min[2]],
-        Ip = ci(Op),
-        Sp = Oi(Op.heading),
-        xp = Ai(Ip, Sp),
-        Lp = Math.tan(cp / 2),
-        Yp = Lp * ip;
-      let Dp = 1;
-      for (const Ap of [-op[0] / 2, op[0] / 2])
-        for (const pp of [-op[1] / 2, op[1] / 2])
-          for (const ip of [-op[2] / 2, op[2] / 2]) {
-            const cp = [Ap, pp, ip],
-              Op = Di(cp, Ip);
-            Dp = Math.max(Dp, Math.abs(Di(cp, Sp)) / Yp - Op, Math.abs(Di(cp, xp)) / Lp - Op)
+      const zT = [TT.max[0] - TT.min[0], TT.max[1] - TT.min[1], TT.max[2] - TT.min[2]],
+        MT = TU(WT),
+        gT = UU(WT.heading),
+        nT = kU(MT, gT),
+        HT = Math.tan(mT / 2),
+        kT = HT * UT;
+      let jT = 1;
+      for (const lT of [-zT[0] / 2, zT[0] / 2])
+        for (const TT of [-zT[1] / 2, zT[1] / 2])
+          for (const UT of [-zT[2] / 2, zT[2] / 2]) {
+            const mT = [lT, TT, UT],
+              WT = HU(mT, MT);
+            jT = Math.max(jT, Math.abs(HU(mT, gT)) / kT - WT, Math.abs(HU(mT, nT)) / HT - WT)
           }
       return {
-        position: Li([pp.min[0] + op[0] / 2, pp.min[1] + op[1] / 2, pp.min[2] + op[2] / 2], Yi(Ip, -Dp * hp)),
-        heading: Op.heading,
-        pitch: Op.pitch
+        position: gU([TT.min[0] + zT[0] / 2, TT.min[1] + zT[1] / 2, TT.min[2] + zT[2] / 2], nU(MT, -jT * uT)),
+        heading: WT.heading,
+        pitch: WT.pitch
       }
     }
 
-    function Ii(pp, ip, cp) {
-      const Op = xi(pp),
-        op = xi(cp),
-        Ip = Li(pp.position, Yi(ip, -1)),
-        Sp = [0, 1, 2].reduce(((pp, ip) => Li(pp, Yi(op[ip], Di(Ip, Op[ip])))), [0, 0, 0]);
+    function WU(TT, UT, mT) {
+      const WT = MU(TT),
+        zT = MU(mT),
+        MT = gU(TT.position, nU(UT, -1)),
+        gT = [0, 1, 2].reduce(((TT, UT) => gU(TT, nU(zT[UT], HU(MT, WT[UT])))), [0, 0, 0]);
       return {
-        position: Li(ip, Sp),
-        heading: cp.heading,
-        pitch: cp.pitch
+        position: gU(UT, gT),
+        heading: mT.heading,
+        pitch: mT.pitch
       }
     }
 
-    function Si(pp) {
-      return Yi(Li(pp.min, pp.max), .5)
+    function zU(TT) {
+      return nU(gU(TT.min, TT.max), .5)
     }
 
-    function xi(pp) {
-      const ip = ci(pp),
-        cp = Oi(pp.heading);
-      return [ip, cp, Ai(ip, cp)]
+    function MU(TT) {
+      const UT = TU(TT),
+        mT = UU(TT.heading);
+      return [UT, mT, kU(UT, mT)]
     }
 
-    function Li(pp, ip) {
-      return [pp[0] + ip[0], pp[1] + ip[1], pp[2] + ip[2]]
+    function gU(TT, UT) {
+      return [TT[0] + UT[0], TT[1] + UT[1], TT[2] + UT[2]]
     }
 
-    function Yi(pp, ip) {
-      return [pp[0] * ip, pp[1] * ip, pp[2] * ip]
+    function nU(TT, UT) {
+      return [TT[0] * UT, TT[1] * UT, TT[2] * UT]
     }
 
-    function Di(pp, ip) {
-      return pp[0] * ip[0] + pp[1] * ip[1] + pp[2] * ip[2]
+    function HU(TT, UT) {
+      return TT[0] * UT[0] + TT[1] * UT[1] + TT[2] * UT[2]
     }
 
-    function Ai(pp, ip) {
-      return [pp[1] * ip[2] - pp[2] * ip[1], pp[2] * ip[0] - pp[0] * ip[2], pp[0] * ip[1] - pp[1] * ip[0]]
+    function kU(TT, UT) {
+      return [TT[1] * UT[2] - TT[2] * UT[1], TT[2] * UT[0] - TT[0] * UT[2], TT[0] * UT[1] - TT[1] * UT[0]]
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

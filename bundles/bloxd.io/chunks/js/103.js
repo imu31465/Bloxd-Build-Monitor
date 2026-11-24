@@ -1,117 +1,117 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  5025: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Pp
+  5013: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => LT
     });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(1060),
-      Sp = cp(1361),
-      xp = cp(3607),
-      Lp = cp(131),
-      Yp = cp(3641),
-      Dp = cp(3628),
-      Ap = cp(1112);
+    var WT = mT(1126),
+      zT = mT.n(WT),
+      MT = mT(1135),
+      gT = mT(1446),
+      nT = mT(3599),
+      HT = mT(133),
+      kT = mT(3644),
+      jT = mT(3627),
+      lT = mT(1188);
 
-    function Pp(pp) {
+    function LT(TT) {
       let {
-        game: ip
-      } = pp;
-      const cp = (0, Lp.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Op = (0, Yp.f)(ip, cp),
-        Pp = (0, xp.d)(Op),
-        Wp = void 0 !== Pp.blurhash;
-      return (0, Ap.jsxs)("div", {
+        game: UT
+      } = TT;
+      const mT = (0, HT.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        WT = (0, kT.e)(UT, mT),
+        LT = (0, nT.e)(WT),
+        pT = void 0 !== LT.blurhash;
+      return (0, lT.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Pp.isLoading && !Wp && (0, Ap.jsx)(Sp.c, {
+        children: [LT.isLoading && !pT && (0, lT.jsx)(gT.c, {
           loaderType: "Secondary"
-        }), !Pp.failed && (null !== Pp.src || Wp) && (0, Ap.jsx)("div", {
-          className: op()("SchematicImage", Dp.g, {
-            SchematicImageFadeIn: Pp.fadeIn && !Wp
+        }), !LT.failed && (null !== LT.src || pT) && (0, lT.jsx)("div", {
+          className: zT()("SchematicImage", jT.h, {
+            SchematicImageFadeIn: LT.fadeIn && !pT
           }),
-          style: (0, Dp.f)(Pp),
-          children: (0, Ap.jsx)(Dp.c, {
-            image: Pp
+          style: (0, jT.e)(LT),
+          children: (0, lT.jsx)(jT.c, {
+            image: LT
           })
-        }), Pp.failed && (0, Ap.jsx)("div", {
+        }), LT.failed && (0, lT.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Ap.jsx)(Ip.d, {
+          children: (0, lT.jsx)(MT.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5011: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Rp
+  5006: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => JT
     });
-    cp(5017);
-    var Op = cp(62),
-      op = cp(1049),
-      Ip = cp.n(op),
-      Sp = cp(322),
-      xp = cp(1024),
-      Lp = cp(1234),
-      Yp = cp(1201),
-      Dp = cp(1141),
-      Ap = cp(1520),
-      Pp = cp(5025),
-      Wp = cp(1480),
-      yp = cp(5034),
-      Up = cp(1361),
-      wp = cp(1538),
-      vp = cp(4728),
-      tp = cp(1060),
-      Hp = cp(1005),
-      dp = cp(2580),
-      ep = cp(5040),
-      jp = cp(1563),
-      kp = cp(1112);
+    mT(5009);
+    var WT = mT(63),
+      zT = mT(1126),
+      MT = mT.n(zT),
+      gT = mT(351),
+      nT = mT(1099),
+      HT = mT(1321),
+      kT = mT(1288),
+      jT = mT(1225),
+      lT = mT(1613),
+      LT = mT(5013),
+      pT = mT(1569),
+      BT = mT(5017),
+      ZT = mT(1446),
+      cT = mT(1633),
+      vT = mT(4726),
+      fT = mT(1135),
+      qT = mT(1087),
+      iT = mT(2641),
+      bT = mT(5021),
+      OT = mT(1658),
+      eT = mT(1188);
 
-    function mp() {
+    function YT() {
       const {
-        t: pp
-      } = (0, Yp.H)(), ip = (0, wp.useNavigatePreserveSearch)(), cp = (0, dp.n)(), op = (0, Op.useMemo)((() => [...Hp.e].sort(((ip, Op) => {
-        var op, Ip;
-        const Sp = (null !== (op = (0, dp.c)(Op, cp)) && void 0 !== op ? op : 0) - (null !== (Ip = (0, dp.c)(ip, cp)) && void 0 !== Ip ? Ip : 0);
-        return 0 !== Sp ? Sp : (0, jp.k)(ip, pp).localeCompare((0, jp.k)(Op, pp))
-      }))), [cp, pp]);
-      return (0, kp.jsxs)(kp.Fragment, {
-        children: [(0, kp.jsx)("div", {
+        t: TT
+      } = (0, kT.z)(), UT = (0, cT.useNavigatePreserveSearch)(), mT = (0, iT.m)(), zT = (0, WT.useMemo)((() => [...qT.b].sort(((UT, WT) => {
+        var zT, MT;
+        const gT = (null !== (zT = (0, iT.c)(WT, mT)) && void 0 !== zT ? zT : 0) - (null !== (MT = (0, iT.c)(UT, mT)) && void 0 !== MT ? MT : 0);
+        return 0 !== gT ? gT : (0, OT.h)(UT, TT).localeCompare((0, OT.h)(WT, TT))
+      }))), [mT, TT]);
+      return (0, eT.jsxs)(eT.Fragment, {
+        children: [(0, eT.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, kp.jsx)("h1", {
+          children: (0, eT.jsx)("h1", {
             className: "StudioPageTitle",
-            children: pp("studio:firstPartyGames")
+            children: TT("studio:firstPartyGames")
           })
-        }), (0, kp.jsx)(yp.d, {
+        }), (0, eT.jsx)(BT.b, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: pp("general:game")
+            header: TT("general:game")
           }, {
             key: "ccu",
-            header: pp("studio:metricCcu")
+            header: TT("studio:metricCcu")
           }],
-          rows: op,
-          getRowKey: pp => pp,
-          renderRow: Op => {
-            var op;
-            return (0, kp.jsxs)("tr", {
+          rows: zT,
+          getRowKey: TT => TT,
+          renderRow: WT => {
+            var zT;
+            return (0, eT.jsxs)("tr", {
               onClick: () => {
-                ip((0, jp.n)((0, xp.g)(Op, !0)))
+                UT((0, OT.k)((0, nT.e)(WT, !0)))
               },
-              children: [(0, kp.jsx)("td", {
-                children: (0, kp.jsx)(ep.h, {
-                  thumbnail: (0, kp.jsx)(ep.e, {
-                    game: Op
+              children: [(0, eT.jsx)("td", {
+                children: (0, eT.jsx)(bT.f, {
+                  thumbnail: (0, eT.jsx)(bT.d, {
+                    game: WT
                   }),
-                  name: (0, jp.k)(Op, pp)
+                  name: (0, OT.h)(WT, TT)
                 })
-              }), (0, kp.jsx)("td", {
-                children: (0, Lp.O)(null !== (op = (0, dp.c)(Op, cp)) && void 0 !== op ? op : 0)
+              }), (0, eT.jsx)("td", {
+                children: (0, HT.V)(null !== (zT = (0, iT.c)(WT, mT)) && void 0 !== zT ? zT : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function Rp() {
+    function JT() {
       const {
-        t: pp
-      } = (0, Yp.H)(), ip = (0, wp.useNavigatePreserveSearch)(), {
-        userContext: cp,
-        isUserContextUpdating: op
-      } = (0, Dp.b)(), {
-        isCreating: Hp,
-        create: dp
-      } = (0, vp.e)(), [Rp, qp] = (0, Op.useState)(null), [Mp, Cp] = (0, Op.useState)(null), [Ep, Xp] = (0, Op.useState)(!1);
-      (0, Op.useEffect)((() => {
-        op || (Xp(!1), Ap.b.getPublishedGamePreviews(cp, {
+        t: TT
+      } = (0, kT.z)(), UT = (0, cT.useNavigatePreserveSearch)(), {
+        userContext: mT,
+        isUserContextUpdating: zT
+      } = (0, jT.d)(), {
+        isCreating: qT,
+        create: iT
+      } = (0, vT.c)(), [JT, xT] = (0, WT.useState)(null), [dT, wT] = (0, WT.useState)(null), [tT, aT] = (0, WT.useState)(!1);
+      (0, WT.useEffect)((() => {
+        zT || (aT(!1), lT.b.getPublishedGamePreviews(mT, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,162 +140,162 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((pp => {
-          qp({
-            ...pp,
-            results: (0, Sp.gb)(pp.results)
+        }).then((TT => {
+          xT({
+            ...TT,
+            results: (0, gT.V)(TT.results)
           })
-        })).catch((pp => {
-          console.error("Failed to get owned published games", pp), Xp(!0)
-        })), Ap.b.getOwnedUnpublishedGames(cp).then((pp => {
-          Cp(pp)
-        })).catch((pp => {
-          console.error("Failed to get owned unpublished games", pp), Xp(!0)
+        })).catch((TT => {
+          console.error("Failed to get owned published games", TT), aT(!0)
+        })), lT.b.getOwnedUnpublishedGames(mT).then((TT => {
+          wT(TT)
+        })).catch((TT => {
+          console.error("Failed to get owned unpublished games", TT), aT(!0)
         })))
-      }), [op, cp]);
-      const lp = null !== Rp && null !== Mp ? [...Rp.results, ...Mp] : [],
-        Qp = !Ep && (null === Rp || null === Mp),
-        Jp = !Qp && !Ep && 0 === lp.length,
-        Bp = !op && cp.playerHasRank("developer");
-      return (0, kp.jsxs)("div", {
+      }), [zT, mT]);
+      const yT = null !== JT && null !== dT ? [...JT.results, ...dT] : [],
+        XT = !tT && (null === JT || null === dT),
+        IT = !XT && !tT && 0 === yT.length,
+        QT = !zT && mT.playerHasRank("developer");
+      return (0, eT.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, kp.jsxs)("div", {
+        children: [(0, eT.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, kp.jsx)("h1", {
+          children: [(0, eT.jsx)("h1", {
             className: "StudioPageTitle",
-            children: pp("studio:myGames")
-          }), (0, kp.jsxs)(Wp.o, {
-            onClick: dp,
-            loading: Hp,
-            children: [(0, kp.jsx)(tp.d, {
+            children: TT("studio:myGames")
+          }), (0, eT.jsxs)(pT.l, {
+            onClick: iT,
+            loading: qT,
+            children: [(0, eT.jsx)(fT.c, {
               name: "plus"
-            }), " ", pp("homePage:createCustomGame")]
+            }), " ", TT("homePage:createCustomGame")]
           })]
-        }), Qp && (0, kp.jsx)("div", {
+        }), XT && (0, eT.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, kp.jsx)(Up.c, {})
-        }), Ep && (0, kp.jsx)("div", {
+          children: (0, eT.jsx)(ZT.c, {})
+        }), tT && (0, eT.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: pp("studio:failedToLoadGames")
-        }), Jp && (0, kp.jsx)("div", {
+          children: TT("studio:failedToLoadGames")
+        }), IT && (0, eT.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: pp("studio:noGamesYet")
-        }), !Qp && !Ep && !Jp && (0, kp.jsx)(yp.d, {
+          children: TT("studio:noGamesYet")
+        }), !XT && !tT && !IT && (0, eT.jsx)(BT.b, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: pp("general:game")
+            header: TT("general:game")
           }, {
             key: "status",
-            header: pp("general:status")
+            header: TT("general:status")
           }, {
             key: "ccu",
-            header: pp("studio:metricCcu")
+            header: TT("studio:metricCcu")
           }, {
             key: "favourites",
-            header: pp("general:favourites")
+            header: TT("general:favourites")
           }],
-          rows: lp,
-          getRowKey: pp => pp.schematicId,
-          renderRow: cp => (0, kp.jsxs)("tr", {
+          rows: yT,
+          getRowKey: TT => TT.schematicId,
+          renderRow: mT => (0, eT.jsxs)("tr", {
             onClick: () => {
-              var pp;
-              pp = cp.schematicId, ip((0, jp.n)((0, xp.e)(pp)))
+              var TT;
+              TT = mT.schematicId, UT((0, OT.k)((0, nT.d)(TT)))
             },
-            children: [(0, kp.jsx)("td", {
-              children: (0, kp.jsx)(ep.h, {
-                thumbnail: (0, kp.jsx)(Pp.b, {
-                  game: cp
+            children: [(0, eT.jsx)("td", {
+              children: (0, eT.jsx)(bT.f, {
+                thumbnail: (0, eT.jsx)(LT.c, {
+                  game: mT
                 }),
-                name: cp.name
+                name: mT.name
               })
-            }), (0, kp.jsx)("td", {
-              children: (0, kp.jsx)("span", {
-                className: Ip()("StudioGameListStatusChip", {
-                  StudioGameListStatusChipPublished: cp.gamePublished
+            }), (0, eT.jsx)("td", {
+              children: (0, eT.jsx)("span", {
+                className: MT()("StudioGameListStatusChip", {
+                  StudioGameListStatusChipPublished: mT.gamePublished
                 }),
-                children: cp.gamePublished ? pp("general:published") : pp("general:draft")
+                children: mT.gamePublished ? TT("general:published") : TT("general:draft")
               })
-            }), (0, kp.jsx)("td", {
-              children: (0, Lp.O)(cp.ccu)
-            }), (0, kp.jsx)("td", {
-              children: (0, Lp.O)(cp.favourites)
+            }), (0, eT.jsx)("td", {
+              children: (0, HT.V)(mT.ccu)
+            }), (0, eT.jsx)("td", {
+              children: (0, HT.V)(mT.favourites)
             })]
           })
-        }), Bp && (0, kp.jsx)(mp, {})]
+        }), QT && (0, eT.jsx)(YT, {})]
       })
     }
   },
-  5040: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      h: () => Ip
+  5021: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT,
+      f: () => MT
     });
-    var Op = cp(1563),
-      op = cp(1112);
+    var WT = mT(1658),
+      zT = mT(1188);
 
-    function Ip(pp) {
+    function MT(TT) {
       let {
-        thumbnail: ip,
-        name: cp
-      } = pp;
-      return (0, op.jsxs)("div", {
+        thumbnail: UT,
+        name: mT
+      } = TT;
+      return (0, zT.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, op.jsx)("div", {
+        children: [(0, zT.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: ip
-        }), (0, op.jsx)("span", {
+          children: UT
+        }), (0, zT.jsx)("span", {
           className: "StudioTableGameName",
-          children: cp
+          children: mT
         })]
       })
     }
 
-    function Sp(pp) {
+    function gT(TT) {
       let {
-        game: ip
-      } = pp;
-      return (0, op.jsx)("img", {
+        game: UT
+      } = TT;
+      return (0, zT.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, Op.h)(ip),
+        src: (0, WT.f)(UT),
         alt: ""
       })
     }
   },
-  5034: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp
+  5017: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => nT
     });
-    var Op = cp(62),
-      op = cp(1049),
-      Ip = cp.n(op),
-      Sp = cp(1112);
+    var WT = mT(63),
+      zT = mT(1126),
+      MT = mT.n(zT),
+      gT = mT(1188);
 
-    function xp(pp) {
+    function nT(TT) {
       let {
-        columns: ip,
-        rows: cp,
-        getRowKey: op,
-        renderRow: xp,
-        className: Lp
-      } = pp;
-      return (0, Sp.jsxs)("table", {
-        className: Ip()("Table", Lp),
-        children: [(0, Sp.jsx)("thead", {
-          children: (0, Sp.jsx)("tr", {
-            children: ip.map((pp => (0, Sp.jsx)("th", {
-              children: pp.header
-            }, pp.key)))
+        columns: UT,
+        rows: mT,
+        getRowKey: zT,
+        renderRow: nT,
+        className: HT
+      } = TT;
+      return (0, gT.jsxs)("table", {
+        className: MT()("Table", HT),
+        children: [(0, gT.jsx)("thead", {
+          children: (0, gT.jsx)("tr", {
+            children: UT.map((TT => (0, gT.jsx)("th", {
+              children: TT.header
+            }, TT.key)))
           })
-        }), (0, Sp.jsx)("tbody", {
-          children: cp.map((pp => (0, Sp.jsx)(Op.Fragment, {
-            children: xp(pp)
-          }, op(pp))))
+        }), (0, gT.jsx)("tbody", {
+          children: mT.map((TT => (0, gT.jsx)(WT.Fragment, {
+            children: nT(TT)
+          }, zT(TT))))
         })]
       })
     }
   },
-  5017: () => {}
+  5009: () => {}
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

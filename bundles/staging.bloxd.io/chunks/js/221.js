@@ -1,311 +1,311 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  36622: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => qp,
-      f: () => Mp,
-      h: () => Hp
+  36478: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => xT,
+      e: () => dT,
+      i: () => qT
     });
-    var Op = cp(272),
-      op = cp(104);
-    const Ip = new(cp(36630).b)(new URL(cp.p + cp.u(3), cp.b), {
+    var WT = mT(291),
+      zT = mT(102);
+    const MT = new(mT(36480).b)(new URL(mT.p + mT.u(3), mT.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var Sp = cp(1819),
-      xp = cp(2179);
-    const Lp = 1e4,
-      Yp = 3e4;
-    let Dp = null,
-      Ap = null,
-      Pp = null,
-      Wp = !1,
-      yp = 0;
-    const Up = new Map;
-    let wp = null;
-    const vp = new Map,
-      tp = new Map;
+    var gT = mT(1926),
+      nT = mT(2265);
+    const HT = 1e4,
+      kT = 3e4;
+    let jT = null,
+      lT = null,
+      LT = null,
+      pT = !1,
+      BT = 0;
+    const ZT = new Map;
+    let cT = null;
+    const vT = new Map,
+      fT = new Map;
 
-    function Hp(pp) {
-      const ip = new Promise(((ip, cp) => {
-        const Op = new Image;
-        Op.crossOrigin = "anonymous", Op.fetchPriority = "high", Op.onload = () => {
-          ip(Op)
-        }, Op.onerror = () => {
-          cp(new Error(`A block icon's texture did not load: ${pp.slice(0,100)}`))
-        }, Op.src = pp
+    function qT(TT) {
+      const UT = new Promise(((UT, mT) => {
+        const WT = new Image;
+        WT.crossOrigin = "anonymous", WT.fetchPriority = "high", WT.onload = () => {
+          UT(WT)
+        }, WT.onerror = () => {
+          mT(new Error(`A block icon's texture did not load: ${TT.slice(0,100)}`))
+        }, WT.src = TT
       }));
-      return (0, xp.g)(ip)
+      return (0, nT.f)(UT)
     }
 
-    function dp(pp) {
-      var ip, cp;
-      Wp || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${pp}`), Wp = !0, null === (ip = Dp) || void 0 === ip || ip.terminate(), Dp = null, Ap = null, vp.clear(), tp.clear();
-      for (const Op of Up.values()) Op(null);
-      Up.clear(), null === (cp = wp) || void 0 === cp || cp()
+    function iT(TT) {
+      var UT, mT;
+      pT || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${TT}`), pT = !0, null === (UT = jT) || void 0 === UT || UT.terminate(), jT = null, lT = null, vT.clear(), fT.clear();
+      for (const WT of ZT.values()) WT(null);
+      ZT.clear(), null === (mT = cT) || void 0 === mT || mT()
     }
 
-    function ep() {
-      return Pp ??= async function() {
+    function bT() {
+      return LT ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Op.d.ios_icon_worker_v1 && (0, op.isWebKit)()) return;
+        if ("page" === WT.b.ios_icon_worker_v1 && (0, zT.isWebKit)()) return;
         try {
-          Dp = await async function() {
-            return await Ip.ready(), Ip.start()
+          jT = await async function() {
+            return await MT.ready(), MT.start()
           }()
-        } catch (xp) {
-          return void dp(`did not start (${String(xp)})`)
+        } catch (nT) {
+          return void iT(`did not start (${String(nT)})`)
         }
-        let pp = () => {};
-        const ip = new Promise((ip => {
-          pp = ip
+        let TT = () => {};
+        const UT = new Promise((UT => {
+          TT = UT
         }));
-        Dp.onmessage = ip => {
+        jT.onmessage = UT => {
           let {
-            data: cp
-          } = ip;
-          if ("started" === cp.type) Ap = Dp, pp();
-          else if ("failed" === cp.type) dp(`failed a draw (${cp.message})`);
+            data: mT
+          } = UT;
+          if ("started" === mT.type) lT = jT, TT();
+          else if ("failed" === mT.type) iT(`failed a draw (${mT.message})`);
           else {
-            var Op, op;
-            null === (Op = Up.get(cp.id)) || void 0 === Op || Op(cp.url), Up.delete(cp.id), null === (op = wp) || void 0 === op || op()
+            var WT, zT;
+            null === (WT = ZT.get(mT.id)) || void 0 === WT || WT(mT.url), ZT.delete(mT.id), null === (zT = cT) || void 0 === zT || zT()
           }
-        }, Dp.onerror = ip => {
-          ip.preventDefault(), dp(`stopped (${ip.message||"its script did not load or run"})`), pp()
+        }, jT.onerror = UT => {
+          UT.preventDefault(), iT(`stopped (${UT.message||"its script did not load or run"})`), TT()
         };
-        const cp = `did not start in ${Yp/1e3} s`;
-        await (0, Sp.k)(ip, Yp, cp).catch((() => {
-          dp(cp)
+        const mT = `did not start in ${kT/1e3} s`;
+        await (0, gT.l)(UT, kT, mT).catch((() => {
+          iT(mT)
         }))
-      }(), Pp
+      }(), LT
     }
 
-    function jp() {
-      if (null !== wp || 0 === Up.size) return;
-      const pp = new Promise((pp => {
-          wp = pp
+    function OT() {
+      if (null !== cT || 0 === ZT.size) return;
+      const TT = new Promise((TT => {
+          cT = TT
         })),
-        ip = `did not answer in ${Lp/1e3} s`;
-      (0, Sp.k)(pp, Lp, ip).then((() => {
-        wp = null, jp()
+        UT = `did not answer in ${HT/1e3} s`;
+      (0, gT.l)(TT, HT, UT).then((() => {
+        cT = null, OT()
       }), (() => {
-        wp = null, dp(ip)
+        cT = null, iT(UT)
       }))
     }
 
-    function kp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      pp.postMessage(ip, cp)
+    function eT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      TT.postMessage(UT, mT)
     }
 
-    function mp(pp, ip, cp, Op) {
-      let op = ip.get(cp);
-      return void 0 === op && (op = Op().then((async ip => {
+    function YT(TT, UT, mT, WT) {
+      let zT = UT.get(mT);
+      return void 0 === zT && (zT = WT().then((async UT => {
         let {
-          image: cp,
-          request: Op
-        } = ip;
+          image: mT,
+          request: WT
+        } = UT;
         try {
-          const ip = await createImageBitmap(cp);
-          kp(pp, Op(ip), [ip])
-        } catch (op) {
-          dp(`could not take an image (${String(op)})`)
+          const UT = await createImageBitmap(mT);
+          eT(TT, WT(UT), [UT])
+        } catch (zT) {
+          iT(`could not take an image (${String(zT)})`)
         }
-      })), op.catch((() => {
-        ip.get(cp) === op && ip.delete(cp)
-      })), ip.set(cp, op)), op
+      })), zT.catch((() => {
+        UT.get(mT) === zT && UT.delete(mT)
+      })), UT.set(mT, zT)), zT
     }
-    async function Rp(pp, ip) {
-      ep();
-      const cp = Ap;
-      if (null === cp) return null;
-      if (await pp(cp), Ap !== cp) return null;
-      const Op = ++yp;
-      return new Promise((pp => {
-        Up.set(Op, pp), kp(cp, ip(Op)), jp()
+    async function JT(TT, UT) {
+      bT();
+      const mT = lT;
+      if (null === mT) return null;
+      if (await TT(mT), lT !== mT) return null;
+      const WT = ++BT;
+      return new Promise((TT => {
+        ZT.set(WT, TT), eT(mT, UT(WT)), OT()
       }))
     }
 
-    function qp(pp, ip, cp) {
-      return Rp((ip => Promise.all([pp.top, pp.left, pp.right].map((pp => function(pp, ip) {
-        return mp(pp, vp, ip, (async () => ({
-          image: await Hp(ip),
-          request: pp => ({
+    function xT(TT, UT, mT) {
+      return JT((UT => Promise.all([TT.top, TT.left, TT.right].map((TT => function(TT, UT) {
+        return YT(TT, vT, UT, (async () => ({
+          image: await qT(UT),
+          request: TT => ({
             type: "texture",
-            url: ip,
-            bitmap: pp
+            url: UT,
+            bitmap: TT
           })
         })))
-      }(ip, pp))))), (Op => ({
+      }(UT, TT))))), (WT => ({
         type: "draw",
-        id: Op,
-        ...pp,
-        size: ip,
-        outlineWidth: cp
+        id: WT,
+        ...TT,
+        size: UT,
+        outlineWidth: mT
       })))
     }
 
-    function Mp(pp, ip, cp, Op) {
-      return Rp((cp => function(pp, ip, cp) {
-        return mp(pp, tp, ip, (async () => {
+    function dT(TT, UT, mT, WT) {
+      return JT((mT => function(TT, UT, mT) {
+        return YT(TT, fT, UT, (async () => {
           const {
-            texture: pp,
-            ...Op
-          } = await cp();
+            texture: TT,
+            ...WT
+          } = await mT();
           return {
-            image: await Hp(pp),
-            request: pp => ({
+            image: await qT(TT),
+            request: TT => ({
               type: "model",
-              name: ip,
-              bitmap: pp,
-              geometry: Op
+              name: UT,
+              bitmap: TT,
+              geometry: WT
             })
           }
         }))
-      }(cp, pp, ip)), (ip => ({
+      }(mT, TT, UT)), (UT => ({
         type: "drawModel",
-        id: ip,
-        name: pp,
-        size: cp,
-        outlineWidth: Op
+        id: UT,
+        name: TT,
+        size: mT,
+        outlineWidth: WT
       })))
     }
   },
-  36618: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op,
-      d: () => Lp,
-      g: () => Sp,
-      k: () => Pp,
-      m: () => Yp
+  36476: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT,
+      e: () => HT,
+      f: () => gT,
+      h: () => LT,
+      l: () => kT
     });
-    const Op = {
+    const WT = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      op = .6,
-      Ip = {
-        width: 2 * Op.across,
-        height: 2 * Op.down + Op.up
+      zT = .6,
+      MT = {
+        width: 2 * WT.across,
+        height: 2 * WT.down + WT.up
       };
 
-    function Sp(pp, ip) {
-      const cp = ip > 0 ? ip + 1 : 0,
-        Sp = pp * op - ip / Op.across;
-      return Math.max(0, Math.min(Sp, (pp - 2 * cp) / Ip.height))
+    function gT(TT, UT) {
+      const mT = UT > 0 ? UT + 1 : 0,
+        gT = TT * zT - UT / WT.across;
+      return Math.max(0, Math.min(gT, (TT - 2 * mT) / MT.height))
     }
-    const xp = [15, 15, 15],
-      Lp = {
+    const nT = [15, 15, 15],
+      HT = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function Yp(pp, ip, cp, Op) {
+    function kT(TT, UT, mT, WT) {
       const {
-        vertices: op,
-        uvs: xp,
-        indices: Lp,
-        shades: Yp
-      } = pp, Dp = function(pp, ip) {
-        const cp = Sp(pp, ip),
-          Op = Ip.width * cp,
-          op = Ip.height * cp;
+        vertices: zT,
+        uvs: nT,
+        indices: HT,
+        shades: kT
+      } = TT, jT = function(TT, UT) {
+        const mT = gT(TT, UT),
+          WT = MT.width * mT,
+          zT = MT.height * mT;
         return {
-          left: (pp - Op) / 2,
-          top: (pp - op) / 2,
-          width: Op,
-          height: op
+          left: (TT - WT) / 2,
+          top: (TT - zT) / 2,
+          width: WT,
+          height: zT
         }
-      }(cp, Op), Ap = new Float32Array(op.length);
-      for (let Ip = 0; Ip < op.length; Ip += 3) Ap[Ip] = Dp.left + op[Ip] * Dp.width, Ap[Ip + 1] = Dp.top + op[Ip + 1] * Dp.height, Ap[Ip + 2] = op[Ip + 2];
-      const Wp = new Float32Array(cp * cp).fill(-1 / 0),
-        yp = new Uint8ClampedArray(cp * cp * 4),
-        Up = 255 * pp.alphaCutoff;
-      for (let Ip = 0; Ip < Lp.length; Ip += 3) {
-        const [pp, Op, op] = [Lp[Ip], Lp[Ip + 1], Lp[Ip + 2]], [Sp, Dp, Pp] = [3 * pp, 3 * Op, 3 * op], [wp, vp, tp, Hp, dp, ep] = [Ap[Sp], Ap[Sp + 1], Ap[Dp], Ap[Dp + 1], Ap[Pp], Ap[Pp + 1]], jp = (tp - wp) * (ep - vp) - (dp - wp) * (Hp - vp);
-        if (Math.abs(jp) < 1e-9) continue;
-        const kp = Yp[Ip / 3],
-          [mp, Rp, qp, Mp, Cp, Ep] = [xp[2 * pp], xp[2 * pp + 1], xp[2 * Op], xp[2 * Op + 1], xp[2 * op], xp[2 * op + 1]],
-          Xp = Math.max(0, Math.floor(Math.min(wp, tp, dp))),
-          lp = Math.min(cp - 1, Math.ceil(Math.max(wp, tp, dp))),
-          Qp = Math.max(0, Math.floor(Math.min(vp, Hp, ep))),
-          Jp = Math.min(cp - 1, Math.ceil(Math.max(vp, Hp, ep)));
-        for (let Ip = Qp; Ip <= Jp; Ip++)
-          for (let pp = Xp; pp <= lp; pp++) {
-            const [Op, op] = [pp + .5, Ip + .5], xp = ((Op - wp) * (ep - vp) - (dp - wp) * (op - vp)) / jp, Lp = ((tp - wp) * (op - vp) - (Op - wp) * (Hp - vp)) / jp, Yp = 1 - xp - Lp;
-            if (Yp < 0 || xp < 0 || Lp < 0) continue;
-            const Xp = Yp * Ap[Sp + 2] + xp * Ap[Dp + 2] + Lp * Ap[Pp + 2],
-              lp = Ip * cp + pp;
-            if (Xp <= Wp[lp]) continue;
-            const Qp = Math.max(0, Math.min(ip.width - 1, Math.floor((Yp * mp + xp * qp + Lp * Cp) * ip.width))),
-              Jp = 4 * (Math.max(0, Math.min(ip.height - 1, Math.floor((Yp * Rp + xp * Mp + Lp * Ep) * ip.height))) * ip.width + Qp);
-            ip.pixels[Jp + 3] < Up || (Wp[lp] = Xp, yp[4 * lp] = ip.pixels[Jp] * kp, yp[4 * lp + 1] = ip.pixels[Jp + 1] * kp, yp[4 * lp + 2] = ip.pixels[Jp + 2] * kp, yp[4 * lp + 3] = 255)
+      }(mT, WT), lT = new Float32Array(zT.length);
+      for (let MT = 0; MT < zT.length; MT += 3) lT[MT] = jT.left + zT[MT] * jT.width, lT[MT + 1] = jT.top + zT[MT + 1] * jT.height, lT[MT + 2] = zT[MT + 2];
+      const pT = new Float32Array(mT * mT).fill(-1 / 0),
+        BT = new Uint8ClampedArray(mT * mT * 4),
+        ZT = 255 * TT.alphaCutoff;
+      for (let MT = 0; MT < HT.length; MT += 3) {
+        const [TT, WT, zT] = [HT[MT], HT[MT + 1], HT[MT + 2]], [gT, jT, LT] = [3 * TT, 3 * WT, 3 * zT], [cT, vT, fT, qT, iT, bT] = [lT[gT], lT[gT + 1], lT[jT], lT[jT + 1], lT[LT], lT[LT + 1]], OT = (fT - cT) * (bT - vT) - (iT - cT) * (qT - vT);
+        if (Math.abs(OT) < 1e-9) continue;
+        const eT = kT[MT / 3],
+          [YT, JT, xT, dT, wT, tT] = [nT[2 * TT], nT[2 * TT + 1], nT[2 * WT], nT[2 * WT + 1], nT[2 * zT], nT[2 * zT + 1]],
+          aT = Math.max(0, Math.floor(Math.min(cT, fT, iT))),
+          yT = Math.min(mT - 1, Math.ceil(Math.max(cT, fT, iT))),
+          XT = Math.max(0, Math.floor(Math.min(vT, qT, bT))),
+          IT = Math.min(mT - 1, Math.ceil(Math.max(vT, qT, bT)));
+        for (let MT = XT; MT <= IT; MT++)
+          for (let TT = aT; TT <= yT; TT++) {
+            const [WT, zT] = [TT + .5, MT + .5], nT = ((WT - cT) * (bT - vT) - (iT - cT) * (zT - vT)) / OT, HT = ((fT - cT) * (zT - vT) - (WT - cT) * (qT - vT)) / OT, kT = 1 - nT - HT;
+            if (kT < 0 || nT < 0 || HT < 0) continue;
+            const aT = kT * lT[gT + 2] + nT * lT[jT + 2] + HT * lT[LT + 2],
+              yT = MT * mT + TT;
+            if (aT <= pT[yT]) continue;
+            const XT = Math.max(0, Math.min(UT.width - 1, Math.floor((kT * YT + nT * xT + HT * wT) * UT.width))),
+              IT = 4 * (Math.max(0, Math.min(UT.height - 1, Math.floor((kT * JT + nT * dT + HT * tT) * UT.height))) * UT.width + XT);
+            UT.pixels[IT + 3] < ZT || (pT[yT] = aT, BT[4 * yT] = UT.pixels[IT] * eT, BT[4 * yT + 1] = UT.pixels[IT + 1] * eT, BT[4 * yT + 2] = UT.pixels[IT + 2] * eT, BT[4 * yT + 3] = 255)
           }
       }
-      return Pp(yp, cp, Op), yp
+      return LT(BT, mT, WT), BT
     }
-    let Dp = NaN,
-      Ap = new Int32Array(0);
+    let jT = NaN,
+      lT = new Int32Array(0);
 
-    function Pp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ip => 0 !== pp[4 * ip + 3];
-      const op = new Uint8Array(ip * ip);
-      for (let xp = 0; xp < ip * ip; xp++) op[xp] = Op(xp) ? 1 : 0;
-      const Ip = (pp, cp) => pp >= 0 && cp >= 0 && pp < ip && cp < ip && 0 === op[cp * ip + pp],
-        Sp = new Float32Array(ip * ip).fill(1 / 0),
-        Lp = function(pp) {
-          if (pp !== Dp) {
-            const ip = Math.ceil(pp + 1),
-              cp = [];
-            for (let Op = -ip; Op <= ip; Op++)
-              for (let op = -ip; op <= ip; op++) {
-                const ip = op * op + Op * Op;
-                ip > 0 && ip < (pp + 1) ** 2 && cp.push(op, Op, ip)
+    function LT(TT, UT, mT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UT => 0 !== TT[4 * UT + 3];
+      const zT = new Uint8Array(UT * UT);
+      for (let nT = 0; nT < UT * UT; nT++) zT[nT] = WT(nT) ? 1 : 0;
+      const MT = (TT, mT) => TT >= 0 && mT >= 0 && TT < UT && mT < UT && 0 === zT[mT * UT + TT],
+        gT = new Float32Array(UT * UT).fill(1 / 0),
+        HT = function(TT) {
+          if (TT !== jT) {
+            const UT = Math.ceil(TT + 1),
+              mT = [];
+            for (let WT = -UT; WT <= UT; WT++)
+              for (let zT = -UT; zT <= UT; zT++) {
+                const UT = zT * zT + WT * WT;
+                UT > 0 && UT < (TT + 1) ** 2 && mT.push(zT, WT, UT)
               }
-            Dp = pp, Ap = Int32Array.from(cp)
+            jT = TT, lT = Int32Array.from(mT)
           }
-          return Ap
-        }(cp);
-      for (let xp = 0; xp < ip; xp++)
-        for (let pp = 0; pp < ip; pp++) {
-          if (1 === op[xp * ip + pp] && (Ip(pp - 1, xp) || Ip(pp + 1, xp) || Ip(pp, xp - 1) || Ip(pp, xp + 1)))
-            for (let cp = 0; cp < Lp.length; cp += 3) {
-              const Op = pp + Lp[cp],
-                op = xp + Lp[cp + 1];
-              if (Op >= 0 && op >= 0 && Op < ip && op < ip) {
-                const pp = op * ip + Op;
-                Sp[pp] = Math.min(Sp[pp], Lp[cp + 2])
+          return lT
+        }(mT);
+      for (let nT = 0; nT < UT; nT++)
+        for (let TT = 0; TT < UT; TT++) {
+          if (1 === zT[nT * UT + TT] && (MT(TT - 1, nT) || MT(TT + 1, nT) || MT(TT, nT - 1) || MT(TT, nT + 1)))
+            for (let mT = 0; mT < HT.length; mT += 3) {
+              const WT = TT + HT[mT],
+                zT = nT + HT[mT + 1];
+              if (WT >= 0 && zT >= 0 && WT < UT && zT < UT) {
+                const TT = zT * UT + WT;
+                gT[TT] = Math.min(gT[TT], HT[mT + 2])
               }
             }
         }
-      for (let Yp = 0; Yp < ip * ip; Yp++) 1 !== op[Yp] && Sp[Yp] !== 1 / 0 && (pp.set(xp, 4 * Yp), pp[4 * Yp + 3] = Math.round(255 * Math.min(1, cp + 1 - Math.sqrt(Sp[Yp]))))
+      for (let kT = 0; kT < UT * UT; kT++) 1 !== zT[kT] && gT[kT] !== 1 / 0 && (TT.set(nT, 4 * kT), TT[4 * kT + 3] = Math.round(255 * Math.min(1, mT + 1 - Math.sqrt(gT[kT]))))
     }
   },
-  36630: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op
+  36480: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT
     });
-    const Op = {
-      wait: function(pp) {
-        return new Promise((ip => {
-          setTimeout(ip, pp)
+    const WT = {
+      wait: function(TT) {
+        return new Promise((UT => {
+          setTimeout(UT, TT)
         }))
       },
       stallMs: 2e4
     };
-    class op {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Op;
-        this.url = pp, this.options = ip, this.timing = cp, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = pp
+    class zT {
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : WT;
+        this.url = TT, this.options = UT, this.timing = mT, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = TT
       }
       ready() {
         if (null === this.fetched) {
-          const pp = new AbortController;
-          this.fetchAbort = pp, this.fetched = this.fetchWithRetries(pp.signal).then((ip => (this.fetchAbort === pp && (this.fetchAbort = null), ip)))
+          const TT = new AbortController;
+          this.fetchAbort = TT, this.fetched = this.fetchWithRetries(TT.signal).then((UT => (this.fetchAbort === TT && (this.fetchAbort = null), UT)))
         }
         return this.fetched
       }
@@ -318,51 +318,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(pp) {
-        for (let ip = 0;; ip++) {
-          const cp = new URL(this.url);
-          if (ip > 0 && cp.searchParams.set("cache-bust", `${Date.now()}-${ip}`), await this.fetchWhole(cp, pp)) return this.scriptUrl = cp, !0;
-          if (ip >= 3 || pp.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** ip), pp.aborted) return !1
+      async fetchWithRetries(TT) {
+        for (let UT = 0;; UT++) {
+          const mT = new URL(this.url);
+          if (UT > 0 && mT.searchParams.set("cache-bust", `${Date.now()}-${UT}`), await this.fetchWhole(mT, TT)) return this.scriptUrl = mT, !0;
+          if (UT >= 3 || TT.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** UT), TT.aborted) return !1
         }
       }
-      async fetchWhole(pp, ip) {
-        const cp = new AbortController;
-        let Op;
-        const op = () => {
-            clearTimeout(Op), Op = setTimeout((() => {
-              cp.abort()
+      async fetchWhole(TT, UT) {
+        const mT = new AbortController;
+        let WT;
+        const zT = () => {
+            clearTimeout(WT), WT = setTimeout((() => {
+              mT.abort()
             }), this.timing.stallMs)
           },
-          Ip = () => {
-            cp.abort()
+          MT = () => {
+            mT.abort()
           };
-        ip.addEventListener("abort", Ip, {
+        UT.addEventListener("abort", MT, {
           once: !0
-        }), op();
+        }), zT();
         try {
-          var Sp;
-          const ip = await fetch(pp, {
-            signal: cp.signal
+          var gT;
+          const UT = await fetch(TT, {
+            signal: mT.signal
           });
-          if (!ip.ok) return !1;
-          const Op = null === (Sp = ip.body) || void 0 === Sp ? void 0 : Sp.getReader();
-          if (!Op) return !1;
+          if (!UT.ok) return !1;
+          const WT = null === (gT = UT.body) || void 0 === gT ? void 0 : gT.getReader();
+          if (!WT) return !1;
           for (;;) {
             const {
-              done: pp
-            } = await Op.read();
-            if (pp) return !0;
-            op()
+              done: TT
+            } = await WT.read();
+            if (TT) return !0;
+            zT()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Op), ip.removeEventListener("abort", Ip)
+          clearTimeout(WT), UT.removeEventListener("abort", MT)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

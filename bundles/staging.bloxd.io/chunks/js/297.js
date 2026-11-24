@@ -1,66 +1,66 @@
 export const id = 297;
 export const ids = [297];
 export const modules = {
-  41535: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Zi
+  41447: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => GU
     });
-    var Op = cp(41541),
-      op = cp(41591),
-      Ip = cp(41595),
-      Sp = cp(62),
-      xp = cp(82),
-      Lp = cp(41612),
-      Yp = cp(41621),
-      Dp = cp(4874),
-      Ap = cp(41630),
-      Pp = cp(1929),
-      Wp = cp(41637),
-      yp = cp(41647),
-      Up = cp.n(yp),
-      wp = cp(41597),
-      vp = cp(41603),
-      tp = cp(1361),
-      Hp = cp(37053),
-      dp = cp(1251),
-      ep = cp(2487),
-      jp = cp(36939),
-      kp = cp(1476),
-      mp = cp(640),
-      Rp = cp(1255),
-      qp = cp(41702),
-      Mp = cp(41548),
-      Cp = cp(41556),
-      Ep = cp(1956),
-      Xp = cp(3837),
-      lp = cp(34),
-      Qp = cp(1149);
-    const Jp = 1e4,
-      Bp = 250,
-      Np = 250;
-    var Tp = cp(41566);
-    const fp = 50,
-      bp = 100;
-    const hp = 2e3,
-      ap = Mp.C.define(),
-      np = Mp.C.define(),
-      Fp = Mp.C.define();
-    class gp extends Cp.l {
-      constructor(pp, ip, cp) {
-        super(), this.colour = pp, this.playerName = ip, this.showName = cp
+    var WT = mT(41451),
+      zT = mT(41500),
+      MT = mT(41506),
+      gT = mT(63),
+      nT = mT(85),
+      HT = mT(41524),
+      kT = mT(41530),
+      jT = mT(4866),
+      lT = mT(41535),
+      LT = mT(2023),
+      pT = mT(41538),
+      BT = mT(41556),
+      ZT = mT.n(BT),
+      cT = mT(41512),
+      vT = mT(41519),
+      fT = mT(1446),
+      qT = mT(36949),
+      iT = mT(1336),
+      bT = mT(2549),
+      OT = mT(36843),
+      eT = mT(1567),
+      YT = mT(653),
+      JT = mT(1341),
+      xT = mT(41590),
+      dT = mT(41459),
+      wT = mT(41466),
+      tT = mT(2046),
+      aT = mT(3841),
+      yT = mT(31),
+      XT = mT(1231);
+    const IT = 1e4,
+      QT = 250,
+      sT = 250;
+    var FT = mT(41482);
+    const PT = 50,
+      VT = 100;
+    const uT = 2e3,
+      CT = dT.B.define(),
+      rT = dT.B.define(),
+      KT = dT.B.define();
+    class ST extends wT.u {
+      constructor(TT, UT, mT) {
+        super(), this.colour = TT, this.playerName = UT, this.showName = mT
       }
       toDOM() {
-        const pp = document.createElement("span");
-        pp.className = "cm-remote-cursor-wrapper", pp.style.borderLeftColor = this.colour;
-        const ip = document.createElement("span");
-        if (ip.className = "cm-remote-cursor", ip.style.borderLeftColor = this.colour, pp.appendChild(ip), this.showName) {
-          const ip = document.createElement("span");
-          ip.className = "cm-remote-cursor-name", ip.style.backgroundColor = this.colour, ip.textContent = this.playerName, pp.appendChild(ip)
+        const TT = document.createElement("span");
+        TT.className = "cm-remote-cursor-wrapper", TT.style.borderLeftColor = this.colour;
+        const UT = document.createElement("span");
+        if (UT.className = "cm-remote-cursor", UT.style.borderLeftColor = this.colour, TT.appendChild(UT), this.showName) {
+          const UT = document.createElement("span");
+          UT.className = "cm-remote-cursor-name", UT.style.backgroundColor = this.colour, UT.textContent = this.playerName, TT.appendChild(UT)
         }
-        return pp
+        return TT
       }
-      eq(pp) {
-        return this.colour === pp.colour && this.playerName === pp.playerName && this.showName === pp.showName
+      eq(TT) {
+        return this.colour === TT.colour && this.playerName === TT.playerName && this.showName === TT.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function Gp(pp, ip) {
-      const cp = [],
-        Op = [];
-      for (const [, Sp] of pp) {
-        const pp = ip - Sp.lastMoved < hp;
-        if (cp.push({
-            pos: Sp.head,
-            decoration: Cp.c.widget({
-              widget: new gp(Sp.colour, Sp.playerName, pp),
+    function GT(TT, UT) {
+      const mT = [],
+        WT = [];
+      for (const [, gT] of TT) {
+        const TT = UT - gT.lastMoved < uT;
+        if (mT.push({
+            pos: gT.head,
+            decoration: wT.c.widget({
+              widget: new ST(gT.colour, gT.playerName, TT),
               side: 1
             })
-          }), Sp.anchor !== Sp.head) {
-          const pp = Math.min(Sp.anchor, Sp.head),
-            ip = Math.max(Sp.anchor, Sp.head);
-          Op.push({
-            from: pp,
-            to: ip,
-            decoration: Cp.c.mark({
+          }), gT.anchor !== gT.head) {
+          const TT = Math.min(gT.anchor, gT.head),
+            UT = Math.max(gT.anchor, gT.head);
+          WT.push({
+            from: TT,
+            to: UT,
+            decoration: wT.c.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${Sp.colour}33`
+                style: `background-color: ${gT.colour}33`
               }
             })
           })
         }
       }
-      const op = new Mp.w,
-        Ip = [];
-      for (const Sp of cp) Ip.push({
+      const zT = new dT.w,
+        MT = [];
+      for (const gT of mT) MT.push({
         bias: 1,
-        deco: Sp.decoration,
-        from: Sp.pos,
-        to: Sp.pos
+        deco: gT.decoration,
+        from: gT.pos,
+        to: gT.pos
       });
-      for (const Sp of Op) Ip.push({
+      for (const gT of WT) MT.push({
         bias: 0,
-        deco: Sp.decoration,
-        from: Sp.from,
-        to: Sp.to
+        deco: gT.decoration,
+        from: gT.from,
+        to: gT.to
       });
-      Ip.sort(((pp, ip) => pp.from - ip.from || pp.deco.startSide - ip.deco.startSide || pp.bias - ip.bias));
-      for (const Sp of Ip) op.add(Sp.from, Sp.to, Sp.deco);
-      return op.finish()
+      MT.sort(((TT, UT) => TT.from - UT.from || TT.deco.startSide - UT.deco.startSide || TT.bias - UT.bias));
+      for (const gT of MT) zT.add(gT.from, gT.to, gT.deco);
+      return zT.finish()
     }
-    const rp = Mp.E.define({
+    const NT = dT.E.define({
       create: () => ({
         cursors: new Map,
-        uO: Cp.c.none
+        HW: wT.c.none
       }),
-      update(pp, ip) {
-        let cp = pp.cursors,
-          Op = !1;
-        if (ip.docChanged) {
-          const pp = new Map;
-          for (const [Op, op] of cp) pp.set(Op, {
-            ...op,
-            anchor: ip.changes.mapPos(op.anchor, 1),
-            head: ip.changes.mapPos(op.head, 1)
+      update(TT, UT) {
+        let mT = TT.cursors,
+          WT = !1;
+        if (UT.docChanged) {
+          const TT = new Map;
+          for (const [WT, zT] of mT) TT.set(WT, {
+            ...zT,
+            anchor: UT.changes.mapPos(zT.anchor, 1),
+            head: UT.changes.mapPos(zT.head, 1)
           });
-          cp = pp, Op = !0
+          mT = TT, WT = !0
         }
-        for (const op of ip.effects)
-          if (op.is(ap)) {
-            if (!Number.isInteger(op.value.anchor) || !Number.isInteger(op.value.head)) {
-              console.warn(`Code Editor: ignored player ${op.value.playerId}'s cursor at ${op.value.anchor}-${op.value.head}`);
+        for (const zT of UT.effects)
+          if (zT.is(CT)) {
+            if (!Number.isInteger(zT.value.anchor) || !Number.isInteger(zT.value.head)) {
+              console.warn(`Code Editor: ignored player ${zT.value.playerId}'s cursor at ${zT.value.anchor}-${zT.value.head}`);
               continue
             }
-            const Ip = ip.state.doc.length,
-              Sp = {
-                ...op.value,
-                anchor: Math.min(op.value.anchor, Ip),
-                head: Math.min(op.value.head, Ip)
+            const MT = UT.state.doc.length,
+              gT = {
+                ...zT.value,
+                anchor: Math.min(zT.value.anchor, MT),
+                head: Math.min(zT.value.head, MT)
               };
-            cp === pp.cursors && (cp = new Map(cp)), cp.set(Sp.playerId, Sp), Op = !0
-          } else op.is(np) ? cp.has(op.value) && (cp === pp.cursors && (cp = new Map(cp)), cp.delete(op.value), Op = !0) : op.is(Fp) && (Op = !0);
-        return Op ? {
-          cursors: cp,
-          uO: Gp(cp, Date.now())
-        } : pp
+            mT === TT.cursors && (mT = new Map(mT)), mT.set(gT.playerId, gT), WT = !0
+          } else zT.is(rT) ? mT.has(zT.value) && (mT === TT.cursors && (mT = new Map(mT)), mT.delete(zT.value), WT = !0) : zT.is(KT) && (WT = !0);
+        return WT ? {
+          cursors: mT,
+          HW: GT(mT, Date.now())
+        } : TT
       },
-      provide: pp => Cp.f.uO.from(pp, (pp => pp.uO))
+      provide: TT => wT.i.HW.from(TT, (TT => TT.HW))
     });
-    const Zp = Mp.C.define(),
-      zp = Cp.c.mark({
+    const ET = dT.B.define(),
+      hT = wT.c.mark({
         class: "CodeInsertFlash"
       }),
-      sp = Mp.E.define({
-        create: () => Cp.c.none,
-        update(pp, ip) {
-          let cp = pp.map(ip.changes);
-          for (const Op of ip.effects) Op.is(Zp) && (cp = Op.value ? Cp.c.set(zp.range(Op.value.from, Op.value.to)) : Cp.c.none);
-          return cp
+      DT = dT.E.define({
+        create: () => wT.c.none,
+        update(TT, UT) {
+          let mT = TT.map(UT.changes);
+          for (const WT of UT.effects) WT.is(ET) && (mT = WT.value ? wT.c.set(hT.range(WT.value.from, WT.value.to)) : wT.c.none);
+          return mT
         },
-        provide: pp => Cp.f.uO.from(pp)
+        provide: TT => wT.i.HW.from(TT)
       }),
-      Kp = Mp.E.define({
+      oT = dT.E.define({
         create: () => !1,
-        update: (pp, ip) => pp || void 0 !== ip.annotation(Mp.I.userEvent) && !ip.annotation(Mp.I.remote)
+        update: (TT, UT) => TT || void 0 !== UT.annotation(dT.K.userEvent) && !UT.annotation(dT.K.remote)
       }),
-      Vp = [sp, Kp];
+      AT = [DT, oT];
 
-    function ii(pp) {
-      return pp.field(Kp)
+    function RT(TT) {
+      return TT.field(oT)
     }
-    const ci = 3e4;
+    const TU = 3e4;
 
-    function Oi(pp, ip) {
-      const cp = (0, Sp.useRef)(null);
-      (0, Sp.useEffect)((() => {
-        var pp;
-        (null === (pp = cp.current) || void 0 === pp ? void 0 : pp.path) !== ip && (cp.current = null)
-      }), [ip]);
-      const Op = pp => {
-        var Op;
-        const op = cp.current;
-        if (null === pp || void 0 === pp || !pp.dom.isConnected || !op || op.path !== ip) return;
-        cp.current = null;
+    function UU(TT, UT) {
+      const mT = (0, gT.useRef)(null);
+      (0, gT.useEffect)((() => {
+        var TT;
+        (null === (TT = mT.current) || void 0 === TT ? void 0 : TT.path) !== UT && (mT.current = null)
+      }), [UT]);
+      const WT = TT => {
+        var WT;
+        const zT = mT.current;
+        if (null === TT || void 0 === TT || !TT.dom.isConnected || !zT || zT.path !== UT) return;
+        mT.current = null;
         const {
-          aW: Sp
-        } = op;
-        if (Sp && null !== Sp.text && performance.now() - Sp.at < ci) {
-          const ip = function(pp, ip) {
-            if (pp === ip) return null;
-            const cp = Math.min(pp.length, ip.length);
-            let Op = 0;
-            for (; Op < cp && pp[Op] === ip[Op];) Op++;
-            let op = 0;
-            for (; op < cp - Op && pp[pp.length - 1 - op] === ip[ip.length - 1 - op];) op++;
+          Jp: gT
+        } = zT;
+        if (gT && null !== gT.text && performance.now() - gT.at < TU) {
+          const UT = function(TT, UT) {
+            if (TT === UT) return null;
+            const mT = Math.min(TT.length, UT.length);
+            let WT = 0;
+            for (; WT < mT && TT[WT] === UT[WT];) WT++;
+            let zT = 0;
+            for (; zT < mT - WT && TT[TT.length - 1 - zT] === UT[UT.length - 1 - zT];) zT++;
             return {
-              from: Op,
-              to: pp.length - op,
-              insert: ip.slice(Op, ip.length - op)
+              from: WT,
+              to: TT.length - zT,
+              insert: UT.slice(WT, UT.length - zT)
             }
-          }(pp.state.doc.toString(), Sp.text);
-          null !== ip && pp.dispatch({
-            changes: ip,
-            userEvent: Sp.placed ? "input" : void 0
+          }(TT.state.doc.toString(), gT.text);
+          null !== UT && TT.dispatch({
+            changes: UT,
+            userEvent: gT.placed ? "input" : void 0
           })
         }
         const {
-          doc: xp
-        } = pp.state, Lp = xp.line(Math.min(Math.max(op.line, 1), xp.lines)), Yp = Lp.from + Math.min(null !== (Op = op.column) && void 0 !== Op ? Op : 0, Lp.length);
-        pp.dispatch({
+          doc: nT
+        } = TT.state, HT = nT.line(Math.min(Math.max(zT.line, 1), nT.lines)), kT = HT.from + Math.min(null !== (WT = zT.column) && void 0 !== WT ? WT : 0, HT.length);
+        TT.dispatch({
           selection: {
-            anchor: Yp
+            anchor: kT
           },
-          effects: Ip.c.scrollIntoView(Yp, {
+          effects: MT.c.scrollIntoView(kT, {
             y: "center"
           }),
-          userEvent: null !== Sp && void 0 !== Sp && Sp.placed ? "select" : void 0
-        }), !1 !== (null === Sp || void 0 === Sp ? void 0 : Sp.focused) && pp.focus()
+          userEvent: null !== gT && void 0 !== gT && gT.placed ? "select" : void 0
+        }), !1 !== (null === gT || void 0 === gT ? void 0 : gT.focused) && TT.focus()
       };
-      return (0, kp.f)("CodeEditorGoToLine", (ip => {
-        cp.current = ip, Op(pp.current)
-      })), (0, kp.f)("CodeEditorKeepEdits", (() => {
-        const Op = pp.current;
-        if (null === Op || !Op.dom.isConnected || null === ip) return;
+      return (0, eT.g)("CodeEditorGoToLine", (UT => {
+        mT.current = UT, WT(TT.current)
+      })), (0, eT.g)("CodeEditorKeepEdits", (() => {
+        const WT = TT.current;
+        if (null === WT || !WT.dom.isConnected || null === UT) return;
         const {
-          doc: op,
-          selection: Ip
-        } = Op.state, {
-          head: Sp
-        } = Ip.main, xp = op.lineAt(Sp), Lp = {
-          text: (0, qp.g)(Op.state).length > 0 ? op.toString() : null,
+          doc: zT,
+          selection: MT
+        } = WT.state, {
+          head: gT
+        } = MT.main, nT = zT.lineAt(gT), HT = {
+          text: (0, xT.k)(WT.state).length > 0 ? zT.toString() : null,
           at: performance.now(),
-          focused: Op.hasFocus,
-          placed: ii(Op.state)
+          focused: WT.hasFocus,
+          placed: RT(WT.state)
         };
-        cp.current = {
-          path: ip,
-          line: xp.number,
-          column: Sp - xp.from,
-          aW: Lp
+        mT.current = {
+          path: UT,
+          line: nT.number,
+          column: gT - nT.from,
+          Jp: HT
         }
-      })), pp => {
-        var op;
-        const Ip = cp.current;
-        !1 === (null === Ip || void 0 === Ip || null === (op = Ip.aW) || void 0 === op ? void 0 : op.focused) && Ip.path === ip || pp.focus(), Op(pp)
+      })), TT => {
+        var zT;
+        const MT = mT.current;
+        !1 === (null === MT || void 0 === MT || null === (zT = MT.Jp) || void 0 === zT ? void 0 : zT.focused) && MT.path === UT || TT.focus(), WT(TT)
       }
     }
-    var oi = cp(4458),
-      Ii = cp(1201);
+    var mU = mT(4461),
+      WU = mT(1288);
 
-    function Si(pp, ip) {
+    function zU(TT, UT) {
       const {
-        t: cp
-      } = (0, Ii.H)();
-      (0, kp.f)("CodeEditorInsertText", (Op => {
+        t: mT
+      } = (0, WU.z)();
+      (0, eT.g)("CodeEditorInsertText", (WT => {
         let {
-          text: op,
-          focus: Ip
-        } = Op;
-        const Sp = pp.current,
-          xp = null !== Sp && void 0 !== Sp && Sp.dom.isConnected ? function(pp, ip) {
-            if (!ii(pp)) return null;
+          text: zT,
+          focus: MT
+        } = WT;
+        const gT = TT.current,
+          nT = null !== gT && void 0 !== gT && gT.dom.isConnected ? function(TT, UT) {
+            if (!RT(TT)) return null;
             const {
-              from: cp,
-              to: Op
-            } = pp.selection.main, op = cp + ip.length;
+              from: mT,
+              to: WT
+            } = TT.selection.main, zT = mT + UT.length;
             return {
               changes: {
-                from: cp,
-                to: Op,
-                insert: ip
+                from: mT,
+                to: WT,
+                insert: UT
               },
               selection: {
-                anchor: op
+                anchor: zT
               },
-              effects: [Cp.f.scrollIntoView(op, {
+              effects: [wT.i.scrollIntoView(zT, {
                 y: "center"
-              }), Zp.of({
-                from: cp,
-                to: op
+              }), ET.of({
+                from: mT,
+                to: zT
               })],
               userEvent: "input"
             }
-          }(Sp.state, op) : null;
-        null !== Sp && null !== xp ? (Sp.dispatch(xp), Ip && Sp.focus(), setTimeout((() => {
-          Sp.dom.isConnected && Sp.dispatch({
-            effects: Zp.of(null)
+          }(gT.state, zT) : null;
+        null !== gT && null !== nT ? (gT.dispatch(nT), MT && gT.focus(), setTimeout((() => {
+          gT.dom.isConnected && gT.dispatch({
+            effects: ET.of(null)
           })
-        }), 1500)) : (0, oi.d)(op).then((() => {
-          ip({
-            message: cp("codeEditorWorld:pickCopied", {
-              coords: op
+        }), 1500)) : (0, mU.b)(zT).then((() => {
+          UT({
+            message: mT("codeEditorWorld:pickCopied", {
+              coords: zT
             }),
             type: "success"
           })
-        }), (pp => {
-          console.error("Pick could not copy the coordinates", pp), ip({
-            message: cp("codeEditorWorld:pickPlaceCursor", {
-              coords: op
+        }), (TT => {
+          console.error("Pick could not copy the coordinates", TT), UT({
+            message: mT("codeEditorWorld:pickPlaceCursor", {
+              coords: zT
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var xi = cp(41583);
-    const Li = "#e45649",
-      Yi = "#383a42",
-      Di = "#696c77",
-      Ai = "#986801",
-      Pi = "#e5e5e6",
-      Wi = "#fafafa",
-      yi = "#eaeaeb",
-      Ui = "#526fff",
-      wi = Cp.f.theme({
+    var MU = mT(41493);
+    const gU = "#e45649",
+      nU = "#383a42",
+      HU = "#696c77",
+      kU = "#986801",
+      jU = "#e5e5e6",
+      lU = "#fafafa",
+      LU = "#eaeaeb",
+      pU = "#526fff",
+      BU = wT.i.theme({
         "&": {
-          color: Yi,
-          backgroundColor: Wi
+          color: nU,
+          backgroundColor: lU
         },
         ".cm-content": {
-          caretColor: Ui
+          caretColor: pU
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: Ui
+          borderLeftColor: pU
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: Yi
+          color: nU
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: Wi,
-          color: Di,
+          backgroundColor: lU,
+          color: HU,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: Pi
+          backgroundColor: jU
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: yi
+          backgroundColor: LU
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: yi,
-          borderBottomColor: yi
+          borderTopColor: LU,
+          borderBottomColor: LU
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: Pi,
-            color: Yi
+            backgroundColor: jU,
+            color: nU
           }
         }
       }, {
         dark: !1
       }),
-      vi = Tp.c.define([{
-        tag: xi.l.keyword,
+      ZU = FT.d.define([{
+        tag: MU.k.keyword,
         color: "#a626a4"
       }, {
-        tag: [xi.l.name, xi.l.deleted, xi.l.character, xi.l.propertyName, xi.l.macroName],
-        color: Li
+        tag: [MU.k.name, MU.k.deleted, MU.k.character, MU.k.propertyName, MU.k.macroName],
+        color: gU
       }, {
-        tag: [xi.l.function(xi.l.variableName), xi.l.labelName],
+        tag: [MU.k.function(MU.k.variableName), MU.k.labelName],
         color: "#4078f2"
       }, {
-        tag: [xi.l.color, xi.l.constant(xi.l.name), xi.l.standard(xi.l.name)],
-        color: Ai
+        tag: [MU.k.color, MU.k.constant(MU.k.name), MU.k.standard(MU.k.name)],
+        color: kU
       }, {
-        tag: [xi.l.definition(xi.l.name), xi.l.separator],
-        color: Yi
+        tag: [MU.k.definition(MU.k.name), MU.k.separator],
+        color: nU
       }, {
-        tag: [xi.l.typeName, xi.l.className, xi.l.number, xi.l.changed, xi.l.annotation, xi.l.modifier, xi.l.self, xi.l.namespace],
+        tag: [MU.k.typeName, MU.k.className, MU.k.number, MU.k.changed, MU.k.annotation, MU.k.modifier, MU.k.self, MU.k.namespace],
         color: "#c18401"
       }, {
-        tag: [xi.l.operator, xi.l.operatorKeyword, xi.l.url, xi.l.escape, xi.l.regexp, xi.l.link, xi.l.special(xi.l.string)],
+        tag: [MU.k.operator, MU.k.operatorKeyword, MU.k.url, MU.k.escape, MU.k.regexp, MU.k.link, MU.k.special(MU.k.string)],
         color: "#0184bc"
       }, {
-        tag: [xi.l.meta, xi.l.comment],
-        color: Di
+        tag: [MU.k.meta, MU.k.comment],
+        color: HU
       }, {
-        tag: xi.l.strong,
+        tag: MU.k.strong,
         fontWeight: "bold"
       }, {
-        tag: xi.l.emphasis,
+        tag: MU.k.emphasis,
         fontStyle: "italic"
       }, {
-        tag: xi.l.strikethrough,
+        tag: MU.k.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: xi.l.link,
-        color: Di,
+        tag: MU.k.link,
+        color: HU,
         textDecoration: "underline"
       }, {
-        tag: xi.l.heading,
+        tag: MU.k.heading,
         fontWeight: "bold",
-        color: Li
+        color: gU
       }, {
-        tag: [xi.l.atom, xi.l.bool, xi.l.special(xi.l.variableName)],
-        color: Ai
+        tag: [MU.k.atom, MU.k.bool, MU.k.special(MU.k.variableName)],
+        color: kU
       }, {
-        tag: [xi.l.processingInstruction, xi.l.string, xi.l.inserted],
+        tag: [MU.k.processingInstruction, MU.k.string, MU.k.inserted],
         color: "#50a14f"
       }, {
-        tag: xi.l.invalid,
+        tag: MU.k.invalid,
         color: "#000000"
       }]),
-      ti = [wi, (0, Tp.eb)(vi)];
-    var Hi = cp(37115),
-      di = cp(41707);
-    const ei = Ip.h.define(),
-      ui = Ip.j.define({
+      cU = [BU, (0, FT.bb)(ZU)];
+    var vU = mT(37007),
+      fU = mT(41599);
+    const qU = MT.j.define(),
+      iU = MT.n.define({
         create: () => !1,
-        update(pp, ip) {
-          for (const cp of ip.effects) cp.is(ei) && (pp = cp.value);
-          return pp
+        update(TT, UT) {
+          for (const mT of UT.effects) mT.is(qU) && (TT = mT.value);
+          return TT
         }
       }),
-      ji = [{
+      bU = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function ki(pp, ip) {
-      return [ui, Ip.m.fromClass(class {
-        constructor(pp) {
-          this.view = pp, this.onDown = pp => {
-            const ip = pp.target instanceof Element && null !== pp.target.closest(".cm-tooltip");
-            0 !== pp.button || ip || this.view.state.field(ui) || this.view.dispatch({
-              effects: ei.of(!0)
+    function OU(TT, UT) {
+      return [iU, MT.p.fromClass(class {
+        constructor(TT) {
+          this.view = TT, this.onDown = TT => {
+            const UT = TT.target instanceof Element && null !== TT.target.closest(".cm-tooltip");
+            0 !== TT.button || UT || this.view.state.field(iU) || this.view.dispatch({
+              effects: qU.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(ui) && this.view.dispatch({
-              effects: ei.of(!1)
+            this.view.state.field(iU) && this.view.dispatch({
+              effects: qU.of(!1)
             })
-          }, pp.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, TT.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), Ip.q.compute(["selection", ui], (cp => function(pp, ip, cp) {
-        const Op = pp.selection.main;
-        return Op.empty || pp.field(ui) || pp.sliceDoc(Op.from, Op.to).trim().length < 2 ? null : {
-          pos: Op.from,
+      }), MT.x.compute(["selection", iU], (mT => function(TT, UT, mT) {
+        const WT = TT.selection.main;
+        return WT.empty || TT.field(iU) || TT.sliceDoc(WT.from, WT.to).trim().length < 2 ? null : {
+          pos: WT.from,
           above: !0,
-          create: pp => {
-            const Op = document.createElement("div");
-            Op.className = "CodeSelectionActions", Op.setAttribute("role", "toolbar"), Op.setAttribute("aria-label", "AI Helper: picked code");
+          create: TT => {
+            const WT = document.createElement("div");
+            WT.className = "CodeSelectionActions", WT.setAttribute("role", "toolbar"), WT.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: op,
-                label: Ip
+                action: zT,
+                label: MT
               }
-              of ji) {
-              if (!cp && "explain" !== op) continue;
-              const Sp = document.createElement("button");
-              Sp.type = "button", Sp.textContent = Ip, "change" !== op && (Sp.title = di.e, Sp.dataset.asksAi = "true"), Sp.addEventListener("mousedown", (pp => {
-                pp.preventDefault()
-              })), Sp.addEventListener("click", (() => {
-                const cp = pp.state.selection.main;
-                if (cp.empty) return;
-                const Op = {
-                  action: op,
-                  path: ip,
-                  fromLine: pp.state.doc.lineAt(cp.from).number,
-                  toLine: pp.state.doc.lineAt(cp.to > cp.from && pp.state.doc.lineAt(cp.to).from === cp.to ? cp.to - 1 : cp.to).number,
-                  text: pp.state.sliceDoc(cp.from, cp.to)
+              of bU) {
+              if (!mT && "explain" !== zT) continue;
+              const gT = document.createElement("button");
+              gT.type = "button", gT.textContent = MT, "change" !== zT && (gT.title = fU.d, gT.dataset.asksAi = "true"), gT.addEventListener("mousedown", (TT => {
+                TT.preventDefault()
+              })), gT.addEventListener("click", (() => {
+                const mT = TT.state.selection.main;
+                if (mT.empty) return;
+                const WT = {
+                  action: zT,
+                  path: UT,
+                  fromLine: TT.state.doc.lineAt(mT.from).number,
+                  toLine: TT.state.doc.lineAt(mT.to > mT.from && TT.state.doc.lineAt(mT.to).from === mT.to ? mT.to - 1 : mT.to).number,
+                  text: TT.state.sliceDoc(mT.from, mT.to)
                 };
-                lp.m.GA("WorldCodeAiSelection", Op), pp.dispatch({
+                yT.j.EZ("WorldCodeAiSelection", WT), TT.dispatch({
                   selection: {
-                    anchor: cp.to
+                    anchor: mT.to
                   }
                 })
-              })), Op.appendChild(Sp)
+              })), WT.appendChild(gT)
             }
             return {
-              dom: Op
+              dom: WT
             }
           }
         }
-      }(cp, pp, ip)))]
+      }(mT, TT, UT)))]
     }
-    var mi = cp(1112);
-    const Ri = new Set(["(", "{", "[", "<"]),
-      qi = new Set([")", "}", "]", ">"]),
-      Mi = {
+    var eU = mT(1188);
+    const YU = new Set(["(", "{", "[", "<"]),
+      JU = new Set([")", "}", "]", ">"]),
+      xU = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function Ci(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function dU(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function cp(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Op = [];
-        for (const op of pp) {
-          let pp;
-          pp = "punctuation" === op.kind ? Mi.text : "parameterName" === op.kind ? Mi.parameterName : ip, Op.push({
-            str: op.text,
+      function mT(TT, UT) {
+        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const WT = [];
+        for (const zT of TT) {
+          let TT;
+          TT = "punctuation" === zT.kind ? xU.text : "parameterName" === zT.kind ? xU.parameterName : UT, WT.push({
+            str: zT.text,
             style: {
-              color: pp,
-              opacity: cp ? .5 : void 0
+              color: TT,
+              opacity: mT ? .5 : void 0
             }
           })
         }
-        return Op
+        return WT
       }
-      const Op = [];
-      if (Op.push(...cp(pp.prefixDisplayParts, Mi.text)), pp.parameters.length > 0) {
-        Op.push("\n");
-        for (let op = 0; op < pp.parameters.length; op++) {
-          const Ip = pp.parameters[op];
-          Op.push("\t"), Op.push(...cp(Ip.displayParts, Mi.parameter, null !== ip && op !== ip)), Op.push("\n")
+      const WT = [];
+      if (WT.push(...mT(TT.prefixDisplayParts, xU.text)), TT.parameters.length > 0) {
+        WT.push("\n");
+        for (let zT = 0; zT < TT.parameters.length; zT++) {
+          const MT = TT.parameters[zT];
+          WT.push("\t"), WT.push(...mT(MT.displayParts, xU.parameter, null !== UT && zT !== UT)), WT.push("\n")
         }
       }
-      return Op.push(...cp(pp.suffixDisplayParts, Mi.suffix)), pp.documentation && (Op.push("\n\n"), Op.push(...cp(pp.documentation, Mi.docs))), Op
+      return WT.push(...mT(TT.suffixDisplayParts, xU.suffix)), TT.documentation && (WT.push("\n\n"), WT.push(...mT(TT.documentation, xU.docs))), WT
     }
-    var Ei = function(pp) {
-      return pp[pp.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", pp[pp.DuplicateIdentifier = 2300] = "DuplicateIdentifier", pp
-    }(Ei || {});
-    const Xi = new Set([Ei.DuplicateIdentifier]),
-      li = new Set([Ei.VariableDefinedElsewhere]),
-      Qi = new Set([]),
-      Ji = "/index.js";
+    var wU = function(TT) {
+      return TT[TT.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", TT[TT.DuplicateIdentifier = 2300] = "DuplicateIdentifier", TT
+    }(wU || {});
+    const tU = new Set([wU.DuplicateIdentifier]),
+      aU = new Set([wU.VariableDefinedElsewhere]),
+      yU = new Set([]),
+      XU = "/index.js";
 
-    function Bi(pp) {
-      return "/" + pp
-    }
-
-    function Ni(pp, ip, cp) {
-      pp.getSourceFile(ip) && pp.deleteFile(ip), pp.createFile(ip, cp)
+    function IU(TT) {
+      return "/" + TT
     }
 
-    function Ti(pp) {
-      return !!pp && ((0, ep.p)(pp) || (0, ep.m)(pp))
+    function QU(TT, UT, mT) {
+      TT.getSourceFile(UT) && TT.deleteFile(UT), TT.createFile(UT, mT)
     }
 
-    function fi(pp, ip, cp) {
+    function sU(TT) {
+      return !!TT && ((0, bT.p)(TT) || (0, bT.m)(TT))
+    }
+
+    function FU(TT, UT, mT) {
       return () => {
-        let Op = [...ip.languageService.getSemanticDiagnostics(cp), ...ip.languageService.getSyntacticDiagnostics(cp)];
-        return Op = Op.filter((pp => !(0, mp.G)(pp.start) && !(0, mp.G)(pp.length) && !Xi.has(pp.code))), pp || (Op = Op.filter((pp => !li.has(pp.code)))), Op.map((pp => ({
-          from: pp.start,
-          to: pp.start + pp.length,
-          message: "string" === typeof pp.messageText ? pp.messageText : pp.messageText.messageText,
-          severity: Qi.has(pp.code) ? "warning" : "error"
+        let WT = [...UT.languageService.getSemanticDiagnostics(mT), ...UT.languageService.getSyntacticDiagnostics(mT)];
+        return WT = WT.filter((TT => !(0, YT.E)(TT.start) && !(0, YT.E)(TT.length) && !tU.has(TT.code))), TT || (WT = WT.filter((TT => !aU.has(TT.code)))), WT.map((TT => ({
+          from: TT.start,
+          to: TT.start + TT.length,
+          message: "string" === typeof TT.messageText ? TT.messageText : TT.messageText.messageText,
+          severity: yU.has(TT.code) ? "warning" : "error"
         })))
       }
     }
 
-    function bi(pp, ip) {
-      return cp => {
-        var Op, op;
-        const Ip = pp.languageService.getCompletionsAtPosition(ip, cp.pos, {});
-        if (!Ip) return {
-          from: cp.pos,
+    function PU(TT, UT) {
+      return mT => {
+        var WT, zT;
+        const MT = TT.languageService.getCompletionsAtPosition(UT, mT.pos, {});
+        if (!MT) return {
+          from: mT.pos,
           options: []
         };
-        let Sp = null !== (Op = null === (op = Ip.optionalReplacementSpan) || void 0 === op ? void 0 : op.start) && void 0 !== Op ? Op : cp.pos;
-        if (!Ip.optionalReplacementSpan) {
-          const pp = cp.state.doc.sliceString(0, cp.pos);
-          for (; Sp > 0 && /[\w$]/.test(pp[Sp - 1]);) Sp--
+        let gT = null !== (WT = null === (zT = MT.optionalReplacementSpan) || void 0 === zT ? void 0 : zT.start) && void 0 !== WT ? WT : mT.pos;
+        if (!MT.optionalReplacementSpan) {
+          const TT = mT.state.doc.sliceString(0, mT.pos);
+          for (; gT > 0 && /[\w$]/.test(TT[gT - 1]);) gT--
         }
-        return Ip.entries = Ip.entries.filter((pp => pp.kind !== Up().ScriptElementKind.warning)), {
-          from: Sp,
-          options: Ip.entries.map((Op => {
-            var op, Ip, xp, Lp;
-            const Yp = pp.languageService.getCompletionEntryDetails(ip, cp.pos, Op.name, {}, Op.source, {}, Op.data),
-              Dp = null !== (op = null === (Ip = Op.replacementSpan) || void 0 === Ip ? void 0 : Ip.start) && void 0 !== op ? op : Sp,
-              Ap = Op.replacementSpan ? Op.replacementSpan.start + Op.replacementSpan.length : cp.pos,
-              Pp = null !== (xp = Op.insertText) && void 0 !== xp ? xp : Op.name;
+        return MT.entries = MT.entries.filter((TT => TT.kind !== ZT().ScriptElementKind.warning)), {
+          from: gT,
+          options: MT.entries.map((WT => {
+            var zT, MT, nT, HT;
+            const kT = TT.languageService.getCompletionEntryDetails(UT, mT.pos, WT.name, {}, WT.source, {}, WT.data),
+              jT = null !== (zT = null === (MT = WT.replacementSpan) || void 0 === MT ? void 0 : MT.start) && void 0 !== zT ? zT : gT,
+              lT = WT.replacementSpan ? WT.replacementSpan.start + WT.replacementSpan.length : mT.pos,
+              LT = null !== (nT = WT.insertText) && void 0 !== nT ? nT : WT.name;
             return {
-              label: Op.name,
-              detail: null === Yp || void 0 === Yp ? void 0 : Yp.displayParts.map((pp => pp.text)).join(""),
-              info: null === Yp || void 0 === Yp || null === (Lp = Yp.documentation) || void 0 === Lp ? void 0 : Lp.map((pp => pp.text)).join(""),
-              apply: pp => {
-                pp.dispatch({
+              label: WT.name,
+              detail: null === kT || void 0 === kT ? void 0 : kT.displayParts.map((TT => TT.text)).join(""),
+              info: null === kT || void 0 === kT || null === (HT = kT.documentation) || void 0 === HT ? void 0 : HT.map((TT => TT.text)).join(""),
+              apply: TT => {
+                TT.dispatch({
                   changes: {
-                    from: Dp,
-                    to: Ap,
-                    insert: Pp
+                    from: jT,
+                    to: lT,
+                    insert: LT
                   },
                   selection: {
-                    anchor: Dp + Pp.length
+                    anchor: jT + LT.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function ai(pp) {
-      return ip => {
-        const cp = document.createElement("div");
-        cp.className = "CodeEditorTooltip";
-        let Op = !1;
+    function VU(TT) {
+      return UT => {
+        const mT = document.createElement("div");
+        mT.className = "CodeEditorTooltip";
+        let WT = !1;
         return queueMicrotask((() => {
-          Op || (xp.render((0, mi.jsx)(Pp.e, {
-            text: pp
-          }), cp), ip.requestMeasure())
+          WT || (nT.render((0, eU.jsx)(LT.e, {
+            text: TT
+          }), mT), UT.requestMeasure())
         })), {
-          dom: cp,
+          dom: mT,
           destroy() {
-            Op = !0, queueMicrotask((() => {
-              xp.unmountComponentAtNode(cp)
+            WT = !0, queueMicrotask((() => {
+              nT.unmountComponentAtNode(mT)
             }))
           }
         }
       }
     }
 
-    function ni(pp, ip, cp) {
-      return Op => {
-        var op;
-        if (!ip) return [];
-        const Ip = null === (op = Op.selection.By[0]) || void 0 === op ? void 0 : op.head;
-        if (void 0 === Ip) return [];
-        const Sp = pp.languageService.getSignatureHelpItems(cp, Ip, {});
-        if (!Sp || !Sp.items.length) return [];
-        const xp = Sp.applicableSpan.start - Sp.items[0].prefixDisplayParts.map((pp => pp.text)).join("").length,
-          Lp = Sp.applicableSpan.start,
-          Yp = Op.doc.lineAt(Ip),
-          Dp = Yp.from,
-          Ap = Math.min(Yp.to, Ip);
-        let Pp, Wp;
-        return xp < Dp ? (Pp = Dp, Wp = Ap) : (Pp = xp, Wp = Lp), [{
-          pos: Pp,
-          end: Wp,
+    function uU(TT, UT, mT) {
+      return WT => {
+        var zT;
+        if (!UT) return [];
+        const MT = null === (zT = WT.selection.hZ[0]) || void 0 === zT ? void 0 : zT.head;
+        if (void 0 === MT) return [];
+        const gT = TT.languageService.getSignatureHelpItems(mT, MT, {});
+        if (!gT || !gT.items.length) return [];
+        const nT = gT.applicableSpan.start - gT.items[0].prefixDisplayParts.map((TT => TT.text)).join("").length,
+          HT = gT.applicableSpan.start,
+          kT = WT.doc.lineAt(MT),
+          jT = kT.from,
+          lT = Math.min(kT.to, MT);
+        let LT, pT;
+        return nT < jT ? (LT = jT, pT = lT) : (LT = nT, pT = HT), [{
+          pos: LT,
+          end: pT,
           above: !1,
-          create: ai(Ci(Sp.items[0], Sp.argumentIndex))
+          create: VU(dU(gT.items[0], gT.argumentIndex))
         }]
       }
     }
 
-    function Fi(pp, ip) {
-      return (cp, Op, op) => {
-        const Ip = pp.languageService.getQuickInfoAtPosition(ip, Op);
-        if (!Ip) return [];
-        const Sp = Ip.textSpan.start,
-          xp = Ip.textSpan.start + Ip.textSpan.length;
-        if (Op < Sp || Op >= xp) return [];
-        if (Ip.kind === Up().ScriptElementKind.memberFunctionElement || Ip.kind === Up().ScriptElementKind.variableElement && "declare" === Ip.kindModifiers) {
-          const pp = Ip.displayParts.findIndex((pp => "space" === pp.kind)); - 1 !== pp && (Ip.displayParts = Ip.displayParts.slice(pp));
-          const ip = {
+    function CU(TT, UT) {
+      return (mT, WT, zT) => {
+        const MT = TT.languageService.getQuickInfoAtPosition(UT, WT);
+        if (!MT) return [];
+        const gT = MT.textSpan.start,
+          nT = MT.textSpan.start + MT.textSpan.length;
+        if (WT < gT || WT >= nT) return [];
+        if (MT.kind === ZT().ScriptElementKind.memberFunctionElement || MT.kind === ZT().ScriptElementKind.variableElement && "declare" === MT.kindModifiers) {
+          const TT = MT.displayParts.findIndex((TT => "space" === TT.kind)); - 1 !== TT && (MT.displayParts = MT.displayParts.slice(TT));
+          const UT = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            cp = Ip.displayParts.findIndex((pp => "punctuation" === pp.kind && "(" === pp.text)); - 1 !== cp && (ip.prefixDisplayParts = Ip.displayParts.slice(0, cp + 1), Ip.displayParts = Ip.displayParts.slice(cp + 1));
-          const Op = Ip.displayParts.findLastIndex((pp => "punctuation" === pp.kind && ")" === pp.text)); - 1 !== Op && (ip.suffixDisplayParts = Ip.displayParts.slice(Op), Ip.displayParts = Ip.displayParts.slice(0, Op));
-          let op = 0,
-            Lp = [];
-          for (const Sp of Ip.displayParts)
-            if (Ri.has(Sp.text) ? op++ : qi.has(Sp.text) && op--, "lineBreak" !== Sp.kind) {
-              if ("space" === Sp.kind) {
-                if (0 === Lp.length) continue;
-                Lp.push({
+            mT = MT.displayParts.findIndex((TT => "punctuation" === TT.kind && "(" === TT.text)); - 1 !== mT && (UT.prefixDisplayParts = MT.displayParts.slice(0, mT + 1), MT.displayParts = MT.displayParts.slice(mT + 1));
+          const WT = MT.displayParts.findLastIndex((TT => "punctuation" === TT.kind && ")" === TT.text)); - 1 !== WT && (UT.suffixDisplayParts = MT.displayParts.slice(WT), MT.displayParts = MT.displayParts.slice(0, WT));
+          let zT = 0,
+            HT = [];
+          for (const gT of MT.displayParts)
+            if (YU.has(gT.text) ? zT++ : JU.has(gT.text) && zT--, "lineBreak" !== gT.kind) {
+              if ("space" === gT.kind) {
+                if (0 === HT.length) continue;
+                HT.push({
                   kind: "space",
                   text: " "
                 })
-              } else Lp.push(Sp);
-              0 === op && "," === Sp.text && (ip.parameters.push({
-                displayParts: Lp
-              }), Lp = [])
-            } return Lp.length > 0 && ip.parameters.push({
-            displayParts: Lp
-          }), ip.documentation = Ip.documentation, [{
-            pos: Sp,
-            end: xp,
+              } else HT.push(gT);
+              0 === zT && "," === gT.text && (UT.parameters.push({
+                displayParts: HT
+              }), HT = [])
+            } return HT.length > 0 && UT.parameters.push({
+            displayParts: HT
+          }), UT.documentation = MT.documentation, [{
+            pos: gT,
+            end: nT,
             above: !0,
-            create: ai(Ci(ip))
+            create: VU(dU(UT))
           }]
         }
-        const Lp = [];
-        for (const pp of Ip.displayParts) Lp.push({
-          str: pp.text,
+        const HT = [];
+        for (const TT of MT.displayParts) HT.push({
+          str: TT.text,
           style: {
-            color: Mi.text
+            color: xU.text
           }
         });
-        if (Ip.documentation) {
-          Lp.push("\n\n");
-          for (const pp of Ip.documentation) Lp.push({
-            str: pp.text,
+        if (MT.documentation) {
+          HT.push("\n\n");
+          for (const TT of MT.documentation) HT.push({
+            str: TT.text,
             style: {
-              color: Mi.docs
+              color: xU.docs
             }
           })
         }
         return [{
-          pos: Sp,
-          end: xp,
+          pos: gT,
+          end: nT,
           above: !0,
-          create: ai(Lp)
+          create: VU(HT)
         }]
       }
     }
-    const gi = {
+    const rU = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: Up().SemicolonPreference.Insert
+      semicolons: ZT().SemicolonPreference.Insert
     };
-    const Gi = Ip.h.define(),
-      ri = {
+    const KU = MT.j.define(),
+      SU = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function Zi(pp) {
+    function GU(TT) {
       let {
-        isLobbyCode: ip,
-        code: cp,
-        onChange: xp,
-        canEditCode: Pp,
-        setTemporaryMessage: yp,
-        close: mp,
-        showTooltips: gp,
-        lightMode: Gp,
-        collabState: Zp,
-        onRemoteDocChange: zp,
-        files: sp,
-        activePath: Kp,
-        pluginName: ii,
-        pluginFile: ci,
-        pluginSource: oi,
-        setActiveDocReplacer: Ii,
-        showAiHints: xi,
-        canAiChangeCode: Li = Pp
-      } = pp;
-      const [Yi, Di] = (0, Sp.useState)(null), Ai = null === Zp || void 0 === Zp ? void 0 : Zp.version, Pi = null === Zp || void 0 === Zp ? void 0 : Zp.clientID, Wi = (0, Sp.useRef)({
-        isLobbyCode: ip,
-        files: sp,
-        code: cp,
-        activePath: Kp
-      }), yi = (0, Sp.useRef)(zp);
-      yi.current = zp;
-      const Ui = (0, Sp.useRef)(null),
-        wi = (0, Sp.useRef)(Zp);
-      wi.current = Zp;
-      const vi = (0, Sp.useRef)(null),
-        di = (0, Sp.useRef)(null),
-        ei = (0, Sp.useRef)(null),
-        ui = (0, Sp.useRef)(mp);
-      ui.current = mp;
-      const ji = (0, Sp.useRef)(cp);
-      ji.current = cp;
-      const Ri = (0, Sp.useRef)(oi);
-      Ri.current = oi;
-      const qi = function(pp, ip, cp, Op) {
-        return cp ? `/plugin-preview/${cp}/${null!==Op&&void 0!==Op?Op:"index.ts"}` : pp ? Bi(null !== ip && void 0 !== ip ? ip : dp.k) : Ji
-      }(ip, Kp, ii, ci);
-      (0, Sp.useEffect)((() => {
+        isLobbyCode: UT,
+        code: mT,
+        onChange: nT,
+        canEditCode: LT,
+        setTemporaryMessage: BT,
+        close: YT,
+        showTooltips: ST,
+        lightMode: GT,
+        collabState: ET,
+        onRemoteDocChange: hT,
+        files: DT,
+        activePath: oT,
+        pluginName: RT,
+        pluginFile: TU,
+        pluginSource: mU,
+        setActiveDocReplacer: WU,
+        showAiHints: MU,
+        canAiChangeCode: gU = LT
+      } = TT;
+      const [nU, HU] = (0, gT.useState)(null), kU = null === ET || void 0 === ET ? void 0 : ET.version, jU = null === ET || void 0 === ET ? void 0 : ET.clientID, lU = (0, gT.useRef)({
+        isLobbyCode: UT,
+        files: DT,
+        code: mT,
+        activePath: oT
+      }), LU = (0, gT.useRef)(hT);
+      LU.current = hT;
+      const pU = (0, gT.useRef)(null),
+        BU = (0, gT.useRef)(ET);
+      BU.current = ET;
+      const ZU = (0, gT.useRef)(null),
+        fU = (0, gT.useRef)(null),
+        qU = (0, gT.useRef)(null),
+        iU = (0, gT.useRef)(YT);
+      iU.current = YT;
+      const bU = (0, gT.useRef)(mT);
+      bU.current = mT;
+      const YU = (0, gT.useRef)(mU);
+      YU.current = mU;
+      const JU = function(TT, UT, mT, WT) {
+        return mT ? `/plugin-preview/${mT}/${null!==WT&&void 0!==WT?WT:"index.ts"}` : TT ? IU(null !== UT && void 0 !== UT ? UT : iT.e) : XU
+      }(UT, oT, RT, TU);
+      (0, gT.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: pp,
-            files: ip,
-            code: cp,
-            activePath: Op
-          } = Wi.current, op = {
+            isLobbyCode: TT,
+            files: UT,
+            code: mT,
+            activePath: WT
+          } = lU.current, zT = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: Up().ModuleKind.ESNext,
-            moduleResolution: Up().ModuleResolutionKind.Bundler,
-            target: Up().ScriptTarget.ES2015,
+            module: ZT().ModuleKind.ESNext,
+            moduleResolution: ZT().ModuleResolutionKind.Bundler,
+            target: ZT().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(Hp.e).map((pp => [pp.specifier, [pp.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(qT.e).map((TT => [TT.specifier, [TT.typesVfsPath]])))
             }
-          }, Ip = new Map, Sp = [];
-          if (pp) {
-            const pp = null !== ip && void 0 !== ip ? ip : {
-              [dp.k]: cp || "\n"
+          }, MT = new Map, gT = [];
+          if (TT) {
+            const TT = null !== UT && void 0 !== UT ? UT : {
+              [iT.e]: mT || "\n"
             };
-            for (const [ip, cp] of Object.entries(pp)) {
-              const pp = Bi(ip);
-              Ip.set(pp, cp || "\n"), Sp.push(pp)
+            for (const [UT, mT] of Object.entries(TT)) {
+              const TT = IU(UT);
+              MT.set(TT, mT || "\n"), gT.push(TT)
             }
-            const op = Bi(null !== Op && void 0 !== Op ? Op : dp.k);
-            Ip.has(op) ? Ip.set(op, cp || "\n") : (Ip.set(op, cp || "\n"), Sp.push(op)), Ip.set("/node_modules/@bloxd/index.d.ts", Dp.default), Sp.push("/node_modules/@bloxd/index.d.ts");
-            for (const ip of Object.values(Hp.e)) {
-              Ip.set(ip.typesVfsPath, ip.types), Sp.push(ip.typesVfsPath);
-              for (const [pp, cp] of Object.entries(ip.files)) {
-                const Op = `/plugin-preview/${ip.name}/${pp}`;
-                Ip.set(Op, cp || "\n"), Sp.push(Op)
+            const zT = IU(null !== WT && void 0 !== WT ? WT : iT.e);
+            MT.has(zT) ? MT.set(zT, mT || "\n") : (MT.set(zT, mT || "\n"), gT.push(zT)), MT.set("/node_modules/@bloxd/index.d.ts", jT.default), gT.push("/node_modules/@bloxd/index.d.ts");
+            for (const UT of Object.values(qT.e)) {
+              MT.set(UT.typesVfsPath, UT.types), gT.push(UT.typesVfsPath);
+              for (const [TT, mT] of Object.entries(UT.files)) {
+                const WT = `/plugin-preview/${UT.name}/${TT}`;
+                MT.set(WT, mT || "\n"), gT.push(WT)
               }
             }
-          } else Ip.set(Ji, cp || "\n"), Sp.push(Ji);
-          Ip.set("/globals.d.ts", pp ? Yp.d : Lp.b), Ip.set("/lib.d.ts", Ap.b), Sp.push("/globals.d.ts", "/lib.d.ts");
-          const xp = Wp.d(Ip),
-            Pp = Wp.e(xp, Sp, Up(), op);
-          Di({
-            Pw: Pp,
-            fsMap: Ip
+          } else MT.set(XU, mT || "\n"), gT.push(XU);
+          MT.set("/globals.d.ts", TT ? kT.d : HT.d), MT.set("/lib.d.ts", lT.b), gT.push("/globals.d.ts", "/lib.d.ts");
+          const nT = pT.c(MT),
+            LT = pT.d(nT, gT, ZT(), zT);
+          HU({
+            DZ: LT,
+            fsMap: MT
           })
         }()
-      }), []), (0, Sp.useEffect)((() => {
-        var pp, Op;
-        if (!Yi || !ip) return;
+      }), []), (0, gT.useEffect)((() => {
+        var TT, WT;
+        if (!nU || !UT) return;
         const {
-          Pw: op,
-          fsMap: Ip
-        } = Yi;
-        if (function(pp, ip, cp) {
-            const Op = new Set;
-            for (const [op, Ip] of Object.entries(cp)) {
-              const cp = Bi(op);
-              Op.add(cp);
-              const Sp = Ip || "\n";
-              ip.get(cp) !== Sp && (ip.set(cp, Sp), Ni(pp, cp, Sp))
+          DZ: zT,
+          fsMap: MT
+        } = nU;
+        if (function(TT, UT, mT) {
+            const WT = new Set;
+            for (const [zT, MT] of Object.entries(mT)) {
+              const mT = IU(zT);
+              WT.add(mT);
+              const gT = MT || "\n";
+              UT.get(mT) !== gT && (UT.set(mT, gT), QU(TT, mT, gT))
             }
-            for (const op of [...ip.keys()]) "/globals.d.ts" === op || "/lib.d.ts" === op || op.startsWith("/node_modules/") || op.startsWith("/plugin-preview/") || Op.has(op) || (ip.delete(op), pp.getSourceFile(op) && pp.deleteFile(op))
-          }(op, Ip, null !== sp && void 0 !== sp ? sp : {
-            [dp.k]: cp || "\n"
-          }), ii) return void Ni(op, qi, oi || "\n");
-        const Sp = null !== (pp = null === (Op = Ui.current) || void 0 === Op ? void 0 : Op.state.doc.toString()) && void 0 !== pp ? pp : cp;
-        Ni(op, qi, Sp || "\n")
-      }), [sp, Kp, Yi, ii, oi, qi, cp, ip]), (0, Sp.useEffect)((() => {
-        if (!Yi) return;
+            for (const zT of [...UT.keys()]) "/globals.d.ts" === zT || "/lib.d.ts" === zT || zT.startsWith("/node_modules/") || zT.startsWith("/plugin-preview/") || WT.has(zT) || (UT.delete(zT), TT.getSourceFile(zT) && TT.deleteFile(zT))
+          }(zT, MT, null !== DT && void 0 !== DT ? DT : {
+            [iT.e]: mT || "\n"
+          }), RT) return void QU(zT, JU, mU || "\n");
+        const gT = null !== (TT = null === (WT = pU.current) || void 0 === WT ? void 0 : WT.state.doc.toString()) && void 0 !== TT ? TT : mT;
+        QU(zT, JU, gT || "\n")
+      }), [DT, oT, nU, RT, mU, JU, mT, UT]), (0, gT.useEffect)((() => {
+        if (!nU) return;
         const {
-          Pw: pp
-        } = Yi;
-        Ni(pp, qi, (ii ? oi : cp) || "\n")
-      }), [cp, ii, oi, qi, Yi]), (0, Sp.useEffect)((() => () => {
-        di.current && (di.current(), di.current = null)
-      }), []), (0, Sp.useEffect)((() => (Ii(((pp, ip) => {
-        if (ii) return !1;
-        const cp = Ui.current,
-          Op = wi.current,
-          op = Op ? (0, ep.u)(Op.docKey) : null;
-        if (!cp || !Op || vi.current !== Op.clientID || pp !== op) return !1;
-        const Ip = cp.state.doc.toString();
-        return Ip !== ip && cp.dispatch({
+          DZ: TT
+        } = nU;
+        QU(TT, JU, (RT ? mU : mT) || "\n")
+      }), [mT, RT, mU, JU, nU]), (0, gT.useEffect)((() => () => {
+        fU.current && (fU.current(), fU.current = null)
+      }), []), (0, gT.useEffect)((() => (WU(((TT, UT) => {
+        if (RT) return !1;
+        const mT = pU.current,
+          WT = BU.current,
+          zT = WT ? (0, bT.A)(WT.docKey) : null;
+        if (!mT || !WT || ZU.current !== WT.clientID || TT !== zT) return !1;
+        const MT = mT.state.doc.toString();
+        return MT !== UT && mT.dispatch({
           changes: {
             from: 0,
-            to: Ip.length,
-            insert: ip
+            to: MT.length,
+            insert: UT
           }
         }), !0
       })), () => {
-        Ui.current = null, vi.current = null, Ii(null)
-      })), [Ii, ii]);
-      const Mi = ip ? ii ? null : null !== Kp && void 0 !== Kp ? Kp : dp.k : Hi.b,
-        Ci = Oi(Ui, Mi);
-      Si(Ui, yp), (0, kp.f)("FormatCode", (() => {
-        if (!Yi || !Ui.current || ii) return;
+        pU.current = null, ZU.current = null, WU(null)
+      })), [WU, RT]);
+      const xU = UT ? RT ? null : null !== oT && void 0 !== oT ? oT : iT.e : vU.d,
+        dU = UU(pU, xU);
+      zU(pU, BT), (0, eT.g)("FormatCode", (() => {
+        if (!nU || !pU.current || RT) return;
         const {
-          Pw: pp,
-          fsMap: cp
-        } = Yi, Op = pp.getSourceFile(qi).getFullText();
-        let op = 0;
-        if (ip && sp)
-          for (const [ip, xp] of Object.entries(sp)) ip !== (null !== Kp && void 0 !== Kp ? Kp : dp.k) && (op += xp.length);
-        const Ip = function(pp, ip, cp, Op, op) {
-          const Ip = pp.languageService.getFormattingEditsForDocument(Op, gi);
-          if (!Ip.length) return Rp.d.error("Code is already formatted.");
-          Ip.sort(((pp, ip) => ip.span.start - pp.span.start));
-          let Sp = pp.getSourceFile(Op).getFullText();
-          for (const xp of Ip) Sp = Sp.slice(0, xp.span.start) + xp.FL + Sp.slice(xp.span.start + xp.span.length);
-          return Sp !== (cp ? (0, jp.j)(Sp, op) : (0, jp.i)(Sp)) ? Rp.d.error("Formatting the code will go beyond the character limit.") : Rp.d.value(Sp)
-        }(pp, 0, ip, qi, op);
-        if (Ip.isError()) return void yp({
-          message: Ip.asError().message,
+          DZ: TT,
+          fsMap: mT
+        } = nU, WT = TT.getSourceFile(JU).getFullText();
+        let zT = 0;
+        if (UT && DT)
+          for (const [UT, nT] of Object.entries(DT)) UT !== (null !== oT && void 0 !== oT ? oT : iT.e) && (zT += nT.length);
+        const MT = function(TT, UT, mT, WT, zT) {
+          const MT = TT.languageService.getFormattingEditsForDocument(WT, rU);
+          if (!MT.length) return JT.c.error("Code is already formatted.");
+          MT.sort(((TT, UT) => UT.span.start - TT.span.start));
+          let gT = TT.getSourceFile(WT).getFullText();
+          for (const nT of MT) gT = gT.slice(0, nT.span.start) + nT.iH + gT.slice(nT.span.start + nT.span.length);
+          return gT !== (mT ? (0, OT.j)(gT, zT) : (0, OT.i)(gT)) ? JT.c.error("Formatting the code will go beyond the character limit.") : JT.c.value(gT)
+        }(TT, 0, UT, JU, zT);
+        if (MT.isError()) return void BT({
+          message: MT.asError().message,
           type: "warning"
         });
-        const Sp = Ip.getValue();
-        Sp && (Ui.current.dispatch({
+        const gT = MT.getValue();
+        gT && (pU.current.dispatch({
           changes: {
             from: 0,
-            to: Op.length,
-            insert: Sp
+            to: WT.length,
+            insert: gT
           },
           selection: {
-            anchor: Sp.length
+            anchor: gT.length
           }
-        }), Ni(pp, qi, Sp), xp(Sp))
+        }), QU(TT, JU, gT), nT(gT))
       }));
-      const Ei = (0, Sp.useMemo)((() => {
-        if (!Yi) return [];
+      const wU = (0, gT.useMemo)((() => {
+        if (!nU) return [];
         const {
-          Pw: pp,
-          fsMap: cp
-        } = Yi;
-        ! function(pp, ip, cp, Op) {
-          if (pp.getSourceFile(cp)) return;
-          const op = Op || "\n";
-          ip.set(cp, op), pp.createFile(cp, op)
-        }(pp, cp, qi, (ii ? Ri.current : ji.current) || "\n");
-        const Sp = ip && Ti(ii ? null !== ci && void 0 !== ci ? ci : "index.ts" : Kp),
-          xp = [(0, op.b)({
+          DZ: TT,
+          fsMap: mT
+        } = nU;
+        ! function(TT, UT, mT, WT) {
+          if (TT.getSourceFile(mT)) return;
+          const zT = WT || "\n";
+          UT.set(mT, zT), TT.createFile(mT, zT)
+        }(TT, mT, JU, (RT ? YU.current : bU.current) || "\n");
+        const gT = UT && sU(RT ? null !== TU && void 0 !== TU ? TU : "index.ts" : oT),
+          nT = [(0, zT.e)({
             jsx: !1,
-            typescript: Sp
-          }), Ip.g.highest(Ip.c.domEventHandlers({
-            keydown: pp => "Escape" === pp.key ? (ui.current(), pp.stopPropagation(), !0) : (pp.stopPropagation(), !1)
-          })), (0, Op.c)({
-            override: [bi(pp, qi)]
-          }), Cp.k.fromClass(class {
-            constructor(pp) {
-              this.view = pp, this.timeout = null, this.scheduleParse()
+            typescript: gT
+          }), MT.f.highest(MT.c.domEventHandlers({
+            keydown: TT => "Escape" === TT.key ? (iU.current(), TT.stopPropagation(), !0) : (TT.stopPropagation(), !1)
+          })), (0, WT.b)({
+            override: [PU(TT, JU)]
+          }), wT.q.fromClass(class {
+            constructor(TT) {
+              this.view = TT, this.timeout = null, this.scheduleParse()
             }
-            update(pp) {
-              (pp.docChanged || pp.viewportChanged) && this.scheduleParse()
+            update(TT) {
+              (TT.docChanged || TT.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const pp = this.view.viewport.to;
-                (0, Tp.ib)(this.view.state, pp) || (0, Tp.H)(this.view, pp, fp) || this.scheduleParse()
-              }), bp))
+                const TT = this.view.viewport.to;
+                (0, FT.fb)(this.view.state, TT) || (0, FT.J)(this.view, TT, PT) || this.scheduleParse()
+              }), VT))
             }
-          }), ...Vp, Ip.c.lineWrapping, Ip.j.define({
-            create: ni(pp, gp, qi),
-            update(ip, cp) {
-              const Op = cp.effects.some((pp => pp.is(Gi)));
-              return cp.docChanged || cp.selection || Op ? (Ni(pp, qi, cp.state.doc.toString() || " "), ni(pp, gp, qi)(cp.state)) : ip
+          }), ...AT, MT.c.lineWrapping, MT.n.define({
+            create: uU(TT, ST, JU),
+            update(UT, mT) {
+              const WT = mT.effects.some((TT => TT.is(KU)));
+              return mT.docChanged || mT.selection || WT ? (QU(TT, JU, mT.state.doc.toString() || " "), uU(TT, ST, JU)(mT.state)) : UT
             },
-            provide: pp => Ip.q.computeN([pp], (ip => ip.field(pp)))
-          }), (0, Ip.p)(Fi(pp, qi)), (0, vp.c)(fi(ip, pp, qi)), Ip.m.fromClass(class {
-            constructor(pp) {
-              this.view = pp, this.searchPanel = null
+            provide: TT => MT.x.computeN([TT], (UT => UT.field(TT)))
+          }), (0, MT.u)(CU(TT, JU)), (0, vT.h)(FU(UT, TT, JU)), MT.p.fromClass(class {
+            constructor(TT) {
+              this.view = TT, this.searchPanel = null
             }
-            update(pp) {
-              const ip = pp.view.dom.querySelector(".cm-search");
-              if (ip !== this.searchPanel) {
-                if (this.searchPanel = ip, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (pp => {
-                  "Escape" === pp.key && (0, wp.c)(this.view), pp.stopPropagation()
+            update(TT) {
+              const UT = TT.view.dom.querySelector(".cm-search");
+              if (UT !== this.searchPanel) {
+                if (this.searchPanel = UT, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (TT => {
+                  "Escape" === TT.key && (0, cT.b)(this.view), TT.stopPropagation()
                 }))
               }
             }
           })];
-        xi && !ii && xp.push(ki(ip ? null !== Kp && void 0 !== Kp ? Kp : dp.k : Hi.b, Li));
-        const Lp = wi.current;
-        if (Lp && !ii) {
-          xp.push(... function(pp, ip, cp, Op, op) {
-            let Ip = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const Sp = (0, ep.u)(cp),
-              xp = Cp.k.fromClass(class {
-                constructor(pp) {
-                  this.view = pp, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = lp.m.subscribe("codeCollab", (pp => {
-                    pp.docKey === Sp && pp.type === ep.f.Updates && (pp.updates ? this.applyUpdates(pp.updates) : this.pull())
+        MU && !RT && nT.push(OU(UT ? null !== oT && void 0 !== oT ? oT : iT.e : vU.d, gU));
+        const HT = BU.current;
+        if (HT && !RT) {
+          nT.push(... function(TT, UT, mT, WT, zT) {
+            let MT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const gT = (0, bT.A)(mT),
+              nT = wT.q.fromClass(class {
+                constructor(TT) {
+                  this.view = TT, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = yT.j.subscribe("codeCollab", (TT => {
+                    TT.docKey === gT && TT.type === bT.f.Updates && (TT.updates ? this.applyUpdates(TT.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(pp) {
-                  const ip = JSON.parse(pp).map((pp => ({
-                    clientID: pp.clientID,
-                    changes: Mp.ChangeSet.fromJSON(pp.changes)
+                applyUpdates(TT) {
+                  const UT = JSON.parse(TT).map((TT => ({
+                    clientID: TT.clientID,
+                    changes: dT.ChangeSet.fromJSON(TT.changes)
                   })));
-                  ip.length > 0 && (this.view.dispatch((0, qp.e)(this.view.state, ip)), op && op(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  UT.length > 0 && (this.view.dispatch((0, xT.i)(this.view.state, UT)), zT && zT(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(pp) {
-                  Ip && (pp.docChanged && this.push(), this.sendCursor())
+                update(TT) {
+                  MT && (TT.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const pp = (0, qp.g)(this.view.state);
-                  if (this.pushing || !pp.length) return;
-                  const ip = Date.now() - this.lastPushTime;
-                  if (ip < Np) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const TT = (0, xT.k)(this.view.state);
+                  if (this.pushing || !TT.length) return;
+                  const UT = Date.now() - this.lastPushTime;
+                  if (UT < sT) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), Np - ip)));
+                  }), sT - UT)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), Jp);
-                  const cp = (0, qp.d)(this.view.state),
-                    op = pp.map((pp => ({
-                      clientID: pp.clientID,
-                      changes: pp.changes.toJSON()
+                  }), IT);
+                  const mT = (0, xT.f)(this.view.state),
+                    zT = TT.map((TT => ({
+                      clientID: TT.clientID,
+                      changes: TT.changes.toJSON()
                     }))),
-                    Ip = JSON.stringify(op);
-                  Ip.length <= ep.g ? Ep.gameBridge.send("sendCodeCollab", {
-                    eI: ep.e.Push,
-                    uI: Sp,
-                    jI: cp,
-                    RI: Ip
-                  }) : (0, Qp.postJsonWithMetricsCookiesAndJsonResponse)(`${Op.gsUrl}/code/collab-push`, Xp.m["collab-push"].toBuffer({
-                    gameNameWithVariation: Op.gameNameWithVariation,
-                    lobbyName: Op.lobbyName,
-                    docKey: Sp,
-                    version: cp,
-                    updates: Ip
+                    MT = JSON.stringify(zT);
+                  MT.length <= bT.g ? tT.gameBridge.send("sendCodeCollab", {
+                    Rz: bT.c.Push,
+                    TM: gT,
+                    UM: mT,
+                    zM: MT
+                  }) : (0, XT.postJsonWithMetricsCookiesAndJsonResponse)(`${WT.gsUrl}/code/collab-push`, aT.s["collab-push"].toBuffer({
+                    gameNameWithVariation: WT.gameNameWithVariation,
+                    lobbyName: WT.lobbyName,
+                    docKey: gT,
+                    version: mT,
+                    updates: MT
                   }), {
                     retries: 0
-                  }).catch((pp => {
-                    console.error("[CodeCollab] HTTP push failed", pp)
+                  }).catch((TT => {
+                    console.error("[CodeCollab] HTTP push failed", TT)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const pp = (0, qp.d)(this.view.state);
-                  (0, Qp.postJsonWithMetricsCookiesAndJsonResponse)(`${Op.gsUrl}/code/collab-pull`, Xp.m["collab-pull"].toBuffer({
-                    gameNameWithVariation: Op.gameNameWithVariation,
-                    lobbyName: Op.lobbyName,
-                    docKey: Sp,
-                    fromVersion: pp
+                  const TT = (0, xT.f)(this.view.state);
+                  (0, XT.postJsonWithMetricsCookiesAndJsonResponse)(`${WT.gsUrl}/code/collab-pull`, aT.s["collab-pull"].toBuffer({
+                    gameNameWithVariation: WT.gameNameWithVariation,
+                    lobbyName: WT.lobbyName,
+                    docKey: gT,
+                    fromVersion: TT
                   }), {
                     retries: 1
-                  }).then((pp => {
-                    this.destroyed || (pp.fullDoc ? lp.m.GA("codeCollabRejoin", {
-                      docKey: Sp,
-                      doc: pp.fullDoc,
-                      version: pp.version
-                    }) : this.applyUpdates(pp.updates))
-                  })).catch((pp => {
-                    console.error("[CodeCollab] Pull failed", pp)
+                  }).then((TT => {
+                    this.destroyed || (TT.fullDoc ? yT.j.EZ("codeCollabRejoin", {
+                      docKey: gT,
+                      doc: TT.fullDoc,
+                      version: TT.version
+                    }) : this.applyUpdates(TT.updates))
+                  })).catch((TT => {
+                    console.error("[CodeCollab] Pull failed", TT)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const pp = Date.now();
-                  if (pp - this.lastCursorSent < Bp) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const TT = Date.now();
+                  if (TT - this.lastCursorSent < QT) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), Bp)));
-                  this.lastCursorSent = pp;
-                  const ip = this.view.state.selection.main;
-                  Ep.gameBridge.send("sendCodeCollab", {
-                    eI: ep.e.Cursor,
-                    uI: Sp,
-                    EI: ip.anchor,
-                    XI: ip.head
+                  }), QT)));
+                  this.lastCursorSent = TT;
+                  const UT = this.view.state.selection.main;
+                  tT.gameBridge.send("sendCodeCollab", {
+                    Rz: bT.c.Cursor,
+                    TM: gT,
+                    HM: UT.anchor,
+                    kM: UT.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, lp.m.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, yT.j.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, qp.c)({
-              startVersion: pp,
-              clientID: ip
-            }), xp]
-          }(Ai, Pi, Lp.docKey, Lp.httpConfig, (pp => {
-            var ip;
-            null === (ip = yi.current) || void 0 === ip || ip.call(yi, pp)
-          }), Pp));
-          const pp = function(pp, ip) {
-            const cp = (0, ep.u)(pp);
+            return [(0, xT.e)({
+              startVersion: TT,
+              clientID: UT
+            }), nT]
+          }(kU, jU, HT.docKey, HT.httpConfig, (TT => {
+            var UT;
+            null === (UT = LU.current) || void 0 === UT || UT.call(LU, TT)
+          }), LT));
+          const TT = function(TT, UT) {
+            const mT = (0, bT.A)(TT);
             return {
-              extensions: [rp],
-              connect(pp) {
-                if (ip) {
-                  const cp = ip.map((pp => ap.of({
-                    playerId: pp.playerId,
-                    playerName: pp.playerName,
-                    colour: pp.colour,
-                    anchor: pp.anchor,
-                    head: pp.head,
+              extensions: [NT],
+              connect(TT) {
+                if (UT) {
+                  const mT = UT.map((TT => CT.of({
+                    playerId: TT.playerId,
+                    playerName: TT.playerName,
+                    colour: TT.colour,
+                    anchor: TT.anchor,
+                    head: TT.head,
                     lastMoved: Date.now()
                   })));
-                  cp.length > 0 && pp.dispatch({
-                    effects: cp
+                  mT.length > 0 && TT.dispatch({
+                    effects: mT
                   })
                 }
-                const Op = lp.m.subscribe("codeCollab", (ip => {
-                    if (ip.docKey === cp)
-                      if (ip.type === ep.f.RemoteCursor) pp.dispatch({
-                        effects: ap.of({
-                          playerId: ip.playerId,
-                          playerName: ip.playerName,
-                          colour: ip.colour,
-                          anchor: ip.anchor,
-                          head: ip.head,
+                const WT = yT.j.subscribe("codeCollab", (UT => {
+                    if (UT.docKey === mT)
+                      if (UT.type === bT.f.RemoteCursor) TT.dispatch({
+                        effects: CT.of({
+                          playerId: UT.playerId,
+                          playerName: UT.playerName,
+                          colour: UT.colour,
+                          anchor: UT.anchor,
+                          head: UT.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (ip.type === ep.f.Presence) {
-                      const cp = JSON.parse(ip.peers),
-                        Op = new Set(cp.map((pp => pp.playerId))),
-                        op = pp.state.field(rp),
-                        Ip = [];
-                      for (const [pp] of op.cursors) Op.has(pp) || Ip.push(np.of(pp));
-                      Ip.length > 0 && pp.dispatch({
-                        effects: Ip
+                      else if (UT.type === bT.f.Presence) {
+                      const mT = JSON.parse(UT.peers),
+                        WT = new Set(mT.map((TT => TT.playerId))),
+                        zT = TT.state.field(NT),
+                        MT = [];
+                      for (const [TT] of zT.cursors) WT.has(TT) || MT.push(rT.of(TT));
+                      MT.length > 0 && TT.dispatch({
+                        effects: MT
                       })
                     }
                   })),
-                  op = setInterval((() => {
-                    pp.dom.isConnected ? pp.dispatch({
-                      effects: Fp.of(Date.now())
-                    }) : clearInterval(op)
-                  }), hp);
+                  zT = setInterval((() => {
+                    TT.dom.isConnected ? TT.dispatch({
+                      effects: KT.of(Date.now())
+                    }) : clearInterval(zT)
+                  }), uT);
                 return () => {
-                  lp.m.unsubscribe(Op), clearInterval(op)
+                  yT.j.unsubscribe(WT), clearInterval(zT)
                 }
               }
             }
-          }(Lp.docKey, Lp.existingCursors);
-          xp.push(...pp.extensions), ei.current = pp.connect
-        } else ei.current = null;
-        return xp
-      }), [ip, Yi, gp, Ai, Pi, qi, Kp, ii, ci, Pp, xi, Li]);
-      if (!Yi || !Zp && !ii) return (0, mi.jsx)("div", {
+          }(HT.docKey, HT.existingCursors);
+          nT.push(...TT.extensions), qU.current = TT.connect
+        } else qU.current = null;
+        return nT
+      }), [UT, nU, ST, kU, jU, JU, oT, RT, TU, LT, MU, gU]);
+      if (!nU || !ET && !RT) return (0, eU.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, mi.jsx)(tp.c, {})
+        children: (0, eU.jsx)(fT.c, {})
       });
-      const Xi = ii ? `plugin-${ii}-${null!==ci&&void 0!==ci?ci:"index.ts"}` : Zp ? `collab-${Zp.clientID}` : `local-${ip}`;
-      return (0, mi.jsx)(Ip.n, {
-        value: ii ? null !== oi && void 0 !== oi ? oi : "" : cp,
-        onChange: xp,
-        extensions: Ei,
+      const tU = RT ? `plugin-${RT}-${null!==TU&&void 0!==TU?TU:"index.ts"}` : ET ? `collab-${ET.clientID}` : `local-${UT}`;
+      return (0, eU.jsx)(MT.t, {
+        value: RT ? null !== mU && void 0 !== mU ? mU : "" : mT,
+        onChange: nT,
+        extensions: wU,
         className: "CodeEditorContent",
-        theme: Gp ? ti : "dark",
-        editable: Pp && !ii,
-        basicSetup: ri,
-        onCreateEditor: pp => {
-          var ip;
-          Ui.current = pp, vi.current = null !== (ip = null === Zp || void 0 === Zp ? void 0 : Zp.clientID) && void 0 !== ip ? ip : null, Ci(pp), di.current && di.current(), ei.current && (di.current = ei.current(pp))
+        theme: GT ? cU : "dark",
+        editable: LT && !RT,
+        basicSetup: SU,
+        onCreateEditor: TT => {
+          var UT;
+          pU.current = TT, ZU.current = null !== (UT = null === ET || void 0 === ET ? void 0 : ET.clientID) && void 0 !== UT ? UT : null, dU(TT), fU.current && fU.current(), qU.current && (fU.current = qU.current(TT))
         }
-      }, Xi)
+      }, tU)
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

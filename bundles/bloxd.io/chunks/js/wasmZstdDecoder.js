@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var pp = __webpack_require__.u,
-        ip = __webpack_require__.e,
-        cp = {},
-        Op = {};
-      __webpack_require__.u = function(ip) {
-        return pp(ip) + (cp.hasOwnProperty(ip) ? "?" + cp[ip] : "")
-      }, __webpack_require__.e = function(op) {
-        return ip(op).catch((function(ip) {
-          var Ip = Op.hasOwnProperty(op) ? Op[op] : 4;
-          if (Ip < 1) {
-            var Sp = pp(op);
-            if (ip.message = "Loading chunk " + op + " failed after 4 retries.\n(" + Sp + ")", ip.request = Sp, cp[op] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete Op[op]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === ip.code) {
-              var xp = __webpack_require__.miniCssF(op);
-              ip.message = ip.message.replace("Loading chunk", "Loading CSS chunk").replace(Sp, xp), ip.request = xp
+      var TT = __webpack_require__.u,
+        UT = __webpack_require__.e,
+        mT = {},
+        WT = {};
+      __webpack_require__.u = function(UT) {
+        return TT(UT) + (mT.hasOwnProperty(UT) ? "?" + mT[UT] : "")
+      }, __webpack_require__.e = function(zT) {
+        return UT(zT).catch((function(UT) {
+          var MT = WT.hasOwnProperty(zT) ? WT[zT] : 4;
+          if (MT < 1) {
+            var gT = TT(zT);
+            if (UT.message = "Loading chunk " + zT + " failed after 4 retries.\n(" + gT + ")", UT.request = gT, mT[zT] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete WT[zT]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === UT.code) {
+              var nT = __webpack_require__.miniCssF(zT);
+              UT.message = UT.message.replace("Loading chunk", "Loading CSS chunk").replace(gT, nT), UT.request = nT
             }
-            throw ip
+            throw UT
           }
-          return new Promise((function(pp) {
-            var ip = 4 - Ip + 1;
+          return new Promise((function(TT) {
+            var UT = 4 - MT + 1;
             setTimeout((function() {
-              var ip = "cache-bust=" + Date.now();
-              cp[op] = ip, Op[op] = Ip - 1, pp(__webpack_require__.e(op))
-            }), function(pp) {
-              return 500 * Math.pow(2, pp)
-            }(ip))
+              var UT = "cache-bust=" + Date.now();
+              mT[zT] = UT, WT[zT] = MT - 1, TT(__webpack_require__.e(zT))
+            }), function(TT) {
+              return 500 * Math.pow(2, TT)
+            }(UT))
           }))
         }))
       }
     }
   })();
 
-  function pp(pp) {
-    return pp instanceof Error ? pp.message : String(pp)
+  function TT(TT) {
+    return TT instanceof Error ? TT.message : String(TT)
   }
-  const ip = ArrayBuffer,
-    cp = Uint8Array,
-    Op = Uint16Array,
-    op = Int16Array,
-    Ip = Int32Array,
-    Sp = (pp, ip, Op) => {
-      if (cp.prototype.slice) return cp.prototype.slice.call(pp, ip, Op);
-      (null == ip || ip < 0) && (ip = 0), (null == Op || Op > pp.length) && (Op = pp.length);
-      const op = new cp(Op - ip);
-      return op.set(pp.subarray(ip, Op)), op
+  const UT = ArrayBuffer,
+    mT = Uint8Array,
+    WT = Uint16Array,
+    zT = Int16Array,
+    MT = Int32Array,
+    gT = (TT, UT, WT) => {
+      if (mT.prototype.slice) return mT.prototype.slice.call(TT, UT, WT);
+      (null == UT || UT < 0) && (UT = 0), (null == WT || WT > TT.length) && (WT = TT.length);
+      const zT = new mT(WT - UT);
+      return zT.set(TT.subarray(UT, WT)), zT
     },
-    xp = (pp, ip, Op, op) => {
-      if (cp.prototype.fill) return cp.prototype.fill.call(pp, ip, Op, op);
-      for ((null == Op || Op < 0) && (Op = 0), (null == op || op > pp.length) && (op = pp.length); Op < op; ++Op) pp[Op] = ip;
-      return pp
+    nT = (TT, UT, WT, zT) => {
+      if (mT.prototype.fill) return mT.prototype.fill.call(TT, UT, WT, zT);
+      for ((null == WT || WT < 0) && (WT = 0), (null == zT || zT > TT.length) && (zT = TT.length); WT < zT; ++WT) TT[WT] = UT;
+      return TT
     },
-    Lp = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    Yp = (pp, ip, cp) => {
-      const Op = new Error(ip || Lp[pp]);
-      if (Op.code = pp, Error.captureStackTrace && Error.captureStackTrace(Op, Yp), !cp) throw Op;
-      return Op
+    HT = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    kT = (TT, UT, mT) => {
+      const WT = new Error(UT || HT[TT]);
+      if (WT.code = TT, Error.captureStackTrace && Error.captureStackTrace(WT, kT), !mT) throw WT;
+      return WT
     },
-    Dp = (pp, ip, cp) => {
-      let Op = 0,
-        op = 0;
-      for (; Op < cp; ++Op) op |= pp[ip++] << (Op << 3);
-      return op
+    jT = (TT, UT, mT) => {
+      let WT = 0,
+        zT = 0;
+      for (; WT < mT; ++WT) zT |= TT[UT++] << (WT << 3);
+      return zT
     },
-    Ap = (pp, ip) => {
-      const Op = pp[0] | pp[1] << 8 | pp[2] << 16;
-      if (3126568 == Op && 253 == pp[3]) {
-        const Op = pp[4],
-          op = Op >> 5 & 1,
-          Sp = Op >> 2 & 1,
-          xp = 3 & Op,
-          Lp = Op >> 6;
-        8 & Op && Yp(0);
-        let Ap = 6 - op;
-        const Pp = 3 == xp ? 4 : xp,
-          Wp = Dp(pp, Ap, Pp);
-        Ap += Pp;
-        const yp = Lp ? 1 << Lp : op,
-          Up = Dp(pp, Ap, yp) + (1 == Lp && 256);
-        let wp = Up;
-        if (!op) {
-          const ip = 1 << 10 + (pp[5] >> 3);
-          wp = ip + (ip >> 3) * (7 & pp[5])
+    lT = (TT, UT) => {
+      const WT = TT[0] | TT[1] << 8 | TT[2] << 16;
+      if (3126568 == WT && 253 == TT[3]) {
+        const WT = TT[4],
+          zT = WT >> 5 & 1,
+          gT = WT >> 2 & 1,
+          nT = 3 & WT,
+          HT = WT >> 6;
+        8 & WT && kT(0);
+        let lT = 6 - zT;
+        const LT = 3 == nT ? 4 : nT,
+          pT = jT(TT, lT, LT);
+        lT += LT;
+        const BT = HT ? 1 << HT : zT,
+          ZT = jT(TT, lT, BT) + (1 == HT && 256);
+        let cT = ZT;
+        if (!zT) {
+          const UT = 1 << 10 + (TT[5] >> 3);
+          cT = UT + (UT >> 3) * (7 & TT[5])
         }
-        wp > 2145386496 && Yp(1);
-        const vp = new cp((1 == ip ? Up || wp : ip ? 0 : wp) + 12);
-        return vp[0] = 1, vp[4] = 4, vp[8] = 8, {
-          b: Ap + yp,
+        cT > 2145386496 && kT(1);
+        const vT = new mT((1 == UT ? ZT || cT : UT ? 0 : cT) + 12);
+        return vT[0] = 1, vT[4] = 4, vT[8] = 8, {
+          b: lT + BT,
           y: 0,
           l: 0,
-          d: Wp,
-          w: ip && 1 != ip ? ip : vp.subarray(12),
-          e: wp,
-          o: new Ip(vp.buffer, 0, 3),
-          u: Up,
-          c: Sp,
-          m: Math.min(131072, wp)
+          d: pT,
+          w: UT && 1 != UT ? UT : vT.subarray(12),
+          e: cT,
+          o: new MT(vT.buffer, 0, 3),
+          u: ZT,
+          c: gT,
+          m: Math.min(131072, cT)
         }
       }
-      if (25481893 == (Op >> 4 | pp[3] << 20)) return 8 + (((op = pp)[Sp = 4] | op[Sp + 1] << 8 | op[Sp + 2] << 16 | op[Sp + 3] << 24) >>> 0);
-      var op, Sp;
-      Yp(0)
+      if (25481893 == (WT >> 4 | TT[3] << 20)) return 8 + (((zT = TT)[gT = 4] | zT[gT + 1] << 8 | zT[gT + 2] << 16 | zT[gT + 3] << 24) >>> 0);
+      var zT, gT;
+      kT(0)
     },
-    Pp = pp => {
-      let ip = 0;
-      for (; 1 << ip <= pp; ++ip);
-      return ip - 1
+    LT = TT => {
+      let UT = 0;
+      for (; 1 << UT <= TT; ++UT);
+      return UT - 1
     },
-    Wp = (pp, Ip, Sp) => {
-      let xp = 4 + (Ip << 3);
-      const Lp = 5 + (15 & pp[Ip]);
-      Lp > Sp && Yp(3);
-      const Dp = 1 << Lp;
-      let Ap = Dp,
-        Wp = -1,
-        yp = -1,
-        Up = -1,
-        wp = Dp;
-      const vp = new ip(512 + (Dp << 2)),
-        tp = new op(vp, 0, 256),
-        Hp = new Op(vp, 0, 256),
-        dp = new Op(vp, 512, Dp),
-        ep = 512 + (Dp << 1),
-        jp = new cp(vp, ep, Dp),
-        kp = new cp(vp, ep + Dp);
-      for (; Wp < 255 && Ap > 0;) {
-        const ip = Pp(Ap + 1),
-          cp = xp >> 3,
-          Op = (1 << ip + 1) - 1;
-        let op = (pp[cp] | pp[cp + 1] << 8 | pp[cp + 2] << 16) >> (7 & xp) & Op;
-        const Ip = (1 << ip) - 1,
-          Sp = Op - Ap - 1,
-          Lp = op & Ip;
-        if (Lp < Sp ? (xp += ip, op = Lp) : (xp += ip + 1, op > Ip && (op -= Sp)), tp[++Wp] = --op, -1 == op ? (Ap += op, jp[--wp] = Wp) : Ap -= op, !op)
+    pT = (TT, MT, gT) => {
+      let nT = 4 + (MT << 3);
+      const HT = 5 + (15 & TT[MT]);
+      HT > gT && kT(3);
+      const jT = 1 << HT;
+      let lT = jT,
+        pT = -1,
+        BT = -1,
+        ZT = -1,
+        cT = jT;
+      const vT = new UT(512 + (jT << 2)),
+        fT = new zT(vT, 0, 256),
+        qT = new WT(vT, 0, 256),
+        iT = new WT(vT, 512, jT),
+        bT = 512 + (jT << 1),
+        OT = new mT(vT, bT, jT),
+        eT = new mT(vT, bT + jT);
+      for (; pT < 255 && lT > 0;) {
+        const UT = LT(lT + 1),
+          mT = nT >> 3,
+          WT = (1 << UT + 1) - 1;
+        let zT = (TT[mT] | TT[mT + 1] << 8 | TT[mT + 2] << 16) >> (7 & nT) & WT;
+        const MT = (1 << UT) - 1,
+          gT = WT - lT - 1,
+          HT = zT & MT;
+        if (HT < gT ? (nT += UT, zT = HT) : (nT += UT + 1, zT > MT && (zT -= gT)), fT[++pT] = --zT, -1 == zT ? (lT += zT, OT[--cT] = pT) : lT -= zT, !zT)
           do {
-            const ip = xp >> 3;
-            yp = (pp[ip] | pp[ip + 1] << 8) >> (7 & xp) & 3, xp += 2, Wp += yp
-          } while (3 == yp)
-      }(Wp > 255 || Ap) && Yp(0);
-      let mp = 0;
-      const Rp = (Dp >> 1) + (Dp >> 3) + 3,
-        qp = Dp - 1;
-      for (let ip = 0; ip <= Wp; ++ip) {
-        const pp = tp[ip];
-        if (pp < 1) Hp[ip] = -pp;
+            const UT = nT >> 3;
+            BT = (TT[UT] | TT[UT + 1] << 8) >> (7 & nT) & 3, nT += 2, pT += BT
+          } while (3 == BT)
+      }(pT > 255 || lT) && kT(0);
+      let YT = 0;
+      const JT = (jT >> 1) + (jT >> 3) + 3,
+        xT = jT - 1;
+      for (let UT = 0; UT <= pT; ++UT) {
+        const TT = fT[UT];
+        if (TT < 1) qT[UT] = -TT;
         else
-          for (Up = 0; Up < pp; ++Up) {
-            jp[mp] = ip;
+          for (ZT = 0; ZT < TT; ++ZT) {
+            OT[YT] = UT;
             do {
-              mp = mp + Rp & qp
-            } while (mp >= wp)
+              YT = YT + JT & xT
+            } while (YT >= cT)
           }
       }
-      for (mp && Yp(0), Up = 0; Up < Dp; ++Up) {
-        const pp = Hp[jp[Up]]++,
-          ip = kp[Up] = Lp - Pp(pp);
-        dp[Up] = (pp << ip) - Dp
+      for (YT && kT(0), ZT = 0; ZT < jT; ++ZT) {
+        const TT = qT[OT[ZT]]++,
+          UT = eT[ZT] = HT - LT(TT);
+        iT[ZT] = (TT << UT) - jT
       }
-      return [xp + 7 >> 3, {
-        b: Lp,
-        s: jp,
-        n: kp,
-        t: dp
+      return [nT + 7 >> 3, {
+        b: HT,
+        s: OT,
+        n: eT,
+        t: iT
       }]
     },
-    yp = Wp(new cp([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    Up = Wp(new cp([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    wp = Wp(new cp([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    vp = (pp, ip) => {
-      const cp = pp.length,
-        Op = new Ip(cp);
-      for (let op = 0; op < cp; ++op) Op[op] = ip, ip += 1 << pp[op];
-      return Op
+    BT = pT(new mT([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    ZT = pT(new mT([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    cT = pT(new mT([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    vT = (TT, UT) => {
+      const mT = TT.length,
+        WT = new MT(mT);
+      for (let zT = 0; zT < mT; ++zT) WT[zT] = UT, UT += 1 << TT[zT];
+      return WT
     },
-    tp = new cp(new Ip([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    Hp = vp(tp, 0),
-    dp = new cp(new Ip([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    ep = vp(dp, 3),
-    jp = (pp, ip, cp) => {
-      const Op = pp.length,
-        op = ip.length,
-        Ip = pp[Op - 1],
-        Sp = (1 << cp.b) - 1,
-        xp = -cp.b;
-      Ip || Yp(0);
-      let Lp = 0,
-        Dp = cp.b,
-        Ap = (Op << 3) - 8 + Pp(Ip) - Dp,
-        Wp = -1;
-      for (; Ap > xp && Wp < op;) {
-        const Op = Ap >> 3;
-        Lp = (Lp << Dp | (pp[Op] | pp[Op + 1] << 8 | pp[Op + 2] << 16) >> (7 & Ap)) & Sp, ip[++Wp] = cp.s[Lp], Ap -= Dp = cp.n[Lp]
+    fT = new mT(new MT([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    qT = vT(fT, 0),
+    iT = new mT(new MT([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    bT = vT(iT, 3),
+    OT = (TT, UT, mT) => {
+      const WT = TT.length,
+        zT = UT.length,
+        MT = TT[WT - 1],
+        gT = (1 << mT.b) - 1,
+        nT = -mT.b;
+      MT || kT(0);
+      let HT = 0,
+        jT = mT.b,
+        lT = (WT << 3) - 8 + LT(MT) - jT,
+        pT = -1;
+      for (; lT > nT && pT < zT;) {
+        const WT = lT >> 3;
+        HT = (HT << jT | (TT[WT] | TT[WT + 1] << 8 | TT[WT + 2] << 16) >> (7 & lT)) & gT, UT[++pT] = mT.s[HT], lT -= jT = mT.n[HT]
       }
-      Ap == xp && Wp + 1 == op || Yp(0)
+      lT == nT && pT + 1 == zT || kT(0)
     },
-    kp = (pp, ip, cp) => {
-      let Op = 6;
-      const op = ip.length + 3 >> 2,
-        Ip = op << 1,
-        Sp = op + Ip;
-      jp(pp.subarray(Op, Op += pp[0] | pp[1] << 8), ip.subarray(0, op), cp), jp(pp.subarray(Op, Op += pp[2] | pp[3] << 8), ip.subarray(op, Ip), cp), jp(pp.subarray(Op, Op += pp[4] | pp[5] << 8), ip.subarray(Ip, Sp), cp), jp(pp.subarray(Op), ip.subarray(Sp), cp)
+    eT = (TT, UT, mT) => {
+      let WT = 6;
+      const zT = UT.length + 3 >> 2,
+        MT = zT << 1,
+        gT = zT + MT;
+      OT(TT.subarray(WT, WT += TT[0] | TT[1] << 8), UT.subarray(0, zT), mT), OT(TT.subarray(WT, WT += TT[2] | TT[3] << 8), UT.subarray(zT, MT), mT), OT(TT.subarray(WT, WT += TT[4] | TT[5] << 8), UT.subarray(MT, gT), mT), OT(TT.subarray(WT), UT.subarray(gT), mT)
     },
-    mp = (pp, ip, op) => {
-      let Ip = ip.b;
-      const Lp = pp[Ip],
-        Dp = Lp >> 1 & 3;
-      ip.l = 1 & Lp;
-      const Ap = Lp >> 3 | pp[Ip + 1] << 5 | pp[Ip + 2] << 13,
-        vp = (Ip += 3) + Ap;
-      if (1 == Dp) {
-        if (Ip >= pp.length) return;
-        return ip.b = Ip + 1, op ? (xp(op, pp[Ip], ip.y, ip.y += Ap), op) : xp(new cp(Ap), pp[Ip])
+    YT = (TT, UT, zT) => {
+      let MT = UT.b;
+      const HT = TT[MT],
+        jT = HT >> 1 & 3;
+      UT.l = 1 & HT;
+      const lT = HT >> 3 | TT[MT + 1] << 5 | TT[MT + 2] << 13,
+        vT = (MT += 3) + lT;
+      if (1 == jT) {
+        if (MT >= TT.length) return;
+        return UT.b = MT + 1, zT ? (nT(zT, TT[MT], UT.y, UT.y += lT), zT) : nT(new mT(lT), TT[MT])
       }
-      if (!(vp > pp.length)) {
-        if (0 == Dp) return ip.b = vp, op ? (op.set(pp.subarray(Ip, vp), ip.y), ip.y += Ap, op) : Sp(pp, Ip, vp);
-        if (2 == Dp) {
-          const Lp = pp[Ip],
-            Dp = 3 & Lp,
-            Ap = Lp >> 2 & 3;
-          let mp = Lp >> 4,
-            Rp = 0,
-            qp = 0;
-          Dp < 2 ? 1 & Ap ? mp |= pp[++Ip] << 4 | (2 & Ap && pp[++Ip] << 12) : mp = Lp >> 3 : (qp = Ap, Ap < 2 ? (mp |= (63 & pp[++Ip]) << 4, Rp = pp[Ip] >> 6 | pp[++Ip] << 2) : 2 == Ap ? (mp |= pp[++Ip] << 4 | (3 & pp[++Ip]) << 12, Rp = pp[Ip] >> 2 | pp[++Ip] << 6) : (mp |= pp[++Ip] << 4 | (63 & pp[++Ip]) << 12, Rp = pp[Ip] >> 6 | pp[++Ip] << 2 | pp[++Ip] << 10)), ++Ip;
-          let Mp = op ? op.subarray(ip.y, ip.y + ip.m) : new cp(ip.m),
-            Cp = Mp.length - mp;
-          if (Cp < 0 && Yp(0), 0 == Dp) Mp.set(pp.subarray(Ip, Ip += mp), Cp);
-          else if (1 == Dp) xp(Mp, pp[Ip++], Cp);
+      if (!(vT > TT.length)) {
+        if (0 == jT) return UT.b = vT, zT ? (zT.set(TT.subarray(MT, vT), UT.y), UT.y += lT, zT) : gT(TT, MT, vT);
+        if (2 == jT) {
+          const HT = TT[MT],
+            jT = 3 & HT,
+            lT = HT >> 2 & 3;
+          let YT = HT >> 4,
+            JT = 0,
+            xT = 0;
+          jT < 2 ? 1 & lT ? YT |= TT[++MT] << 4 | (2 & lT && TT[++MT] << 12) : YT = HT >> 3 : (xT = lT, lT < 2 ? (YT |= (63 & TT[++MT]) << 4, JT = TT[MT] >> 6 | TT[++MT] << 2) : 2 == lT ? (YT |= TT[++MT] << 4 | (3 & TT[++MT]) << 12, JT = TT[MT] >> 2 | TT[++MT] << 6) : (YT |= TT[++MT] << 4 | (63 & TT[++MT]) << 12, JT = TT[MT] >> 6 | TT[++MT] << 2 | TT[++MT] << 10)), ++MT;
+          let dT = zT ? zT.subarray(UT.y, UT.y + UT.m) : new mT(UT.m),
+            wT = dT.length - YT;
+          if (wT < 0 && kT(0), 0 == jT) dT.set(TT.subarray(MT, MT += YT), wT);
+          else if (1 == jT) nT(dT, TT[MT++], wT);
           else {
-            let op = ip.h;
-            if (2 == Dp) {
-              const Sp = ((pp, ip) => {
-                let op = 0,
-                  Ip = -1;
-                const Sp = new cp(292),
-                  Lp = pp[ip],
-                  Dp = Sp.subarray(0, 256),
-                  Ap = Sp.subarray(256, 268),
-                  yp = new Op(Sp.buffer, 268);
-                if (Lp < 128) {
-                  const [cp, Op] = Wp(pp, ip + 1, 6), op = cp << 3, Sp = pp[ip += Lp];
-                  Sp || Yp(0);
-                  let xp = 0,
-                    Ap = 0,
-                    yp = Op.b,
-                    Up = yp,
-                    wp = (++ip << 3) - 8 + Pp(Sp);
-                  for (; Ip > 254 && Yp(0), wp -= yp, !(wp < op);) {
-                    let ip = wp >> 3;
-                    if (xp += (pp[ip] | pp[ip + 1] << 8) >> (7 & wp) & (1 << yp) - 1, Dp[++Ip] = Op.s[xp], wp -= Up, wp < op) break;
-                    ip = wp >> 3, Ap += (pp[ip] | pp[ip + 1] << 8) >> (7 & wp) & (1 << Up) - 1, Dp[++Ip] = Op.s[Ap], yp = Op.n[xp], xp = Op.t[xp], Up = Op.n[Ap], Ap = Op.t[Ap]
-                  }++Ip > 255 && Yp(0)
+            let zT = UT.h;
+            if (2 == jT) {
+              const gT = ((TT, UT) => {
+                let zT = 0,
+                  MT = -1;
+                const gT = new mT(292),
+                  HT = TT[UT],
+                  jT = gT.subarray(0, 256),
+                  lT = gT.subarray(256, 268),
+                  BT = new WT(gT.buffer, 268);
+                if (HT < 128) {
+                  const [mT, WT] = pT(TT, UT + 1, 6), zT = mT << 3, gT = TT[UT += HT];
+                  gT || kT(0);
+                  let nT = 0,
+                    lT = 0,
+                    BT = WT.b,
+                    ZT = BT,
+                    cT = (++UT << 3) - 8 + LT(gT);
+                  for (; MT > 254 && kT(0), cT -= BT, !(cT < zT);) {
+                    let UT = cT >> 3;
+                    if (nT += (TT[UT] | TT[UT + 1] << 8) >> (7 & cT) & (1 << BT) - 1, jT[++MT] = WT.s[nT], cT -= ZT, cT < zT) break;
+                    UT = cT >> 3, lT += (TT[UT] | TT[UT + 1] << 8) >> (7 & cT) & (1 << ZT) - 1, jT[++MT] = WT.s[lT], BT = WT.n[nT], nT = WT.t[nT], ZT = WT.n[lT], lT = WT.t[lT]
+                  }++MT > 255 && kT(0)
                 } else {
-                  for (Ip = Lp - 127; op < Ip; op += 2) {
-                    const cp = pp[++ip];
-                    Dp[op] = cp >> 4, Dp[op + 1] = 15 & cp
-                  }++ip
+                  for (MT = HT - 127; zT < MT; zT += 2) {
+                    const mT = TT[++UT];
+                    jT[zT] = mT >> 4, jT[zT + 1] = 15 & mT
+                  }++UT
                 }
-                let Up = 0;
-                for (op = 0; op < Ip; ++op) {
-                  const pp = Dp[op];
-                  pp > 11 && Yp(0), Up += pp && 1 << pp - 1
+                let ZT = 0;
+                for (zT = 0; zT < MT; ++zT) {
+                  const TT = jT[zT];
+                  TT > 11 && kT(0), ZT += TT && 1 << TT - 1
                 }
-                const wp = Pp(Up) + 1,
-                  vp = 1 << wp,
-                  tp = vp - Up;
-                for (tp & tp - 1 && Yp(0), Dp[Ip++] = Pp(tp) + 1, op = 0; op < Ip; ++op) {
-                  const pp = Dp[op];
-                  ++Ap[Dp[op] = pp && wp + 1 - pp]
+                const cT = LT(ZT) + 1,
+                  vT = 1 << cT,
+                  fT = vT - ZT;
+                for (fT & fT - 1 && kT(0), jT[MT++] = LT(fT) + 1, zT = 0; zT < MT; ++zT) {
+                  const TT = jT[zT];
+                  ++lT[jT[zT] = TT && cT + 1 - TT]
                 }
-                const Hp = new cp(vp << 1),
-                  dp = Hp.subarray(0, vp),
-                  ep = Hp.subarray(vp);
-                for (yp[wp] = 0, op = wp; op > 0; --op) {
-                  const pp = yp[op];
-                  xp(ep, op, pp, yp[op - 1] = pp + Ap[op] * (1 << wp - op))
+                const qT = new mT(vT << 1),
+                  iT = qT.subarray(0, vT),
+                  bT = qT.subarray(vT);
+                for (BT[cT] = 0, zT = cT; zT > 0; --zT) {
+                  const TT = BT[zT];
+                  nT(bT, zT, TT, BT[zT - 1] = TT + lT[zT] * (1 << cT - zT))
                 }
-                for (yp[0] != vp && Yp(0), op = 0; op < Ip; ++op) {
-                  const pp = Dp[op];
-                  if (pp) {
-                    const ip = yp[pp];
-                    xp(dp, op, ip, yp[pp] = ip + (1 << wp - pp))
+                for (BT[0] != vT && kT(0), zT = 0; zT < MT; ++zT) {
+                  const TT = jT[zT];
+                  if (TT) {
+                    const UT = BT[TT];
+                    nT(iT, zT, UT, BT[TT] = UT + (1 << cT - TT))
                   }
                 }
-                return [ip, {
-                  n: ep,
-                  b: wp,
-                  s: dp
+                return [UT, {
+                  n: bT,
+                  b: cT,
+                  s: iT
                 }]
-              })(pp, Ip);
-              Rp += Ip - (Ip = Sp[0]), ip.h = op = Sp[1]
-            } else op || Yp(0);
-            (qp ? kp : jp)(pp.subarray(Ip, Ip += Rp), Mp.subarray(Cp), op)
+              })(TT, MT);
+              JT += MT - (MT = gT[0]), UT.h = zT = gT[1]
+            } else zT || kT(0);
+            (xT ? eT : OT)(TT.subarray(MT, MT += JT), dT.subarray(wT), zT)
           }
-          let Ep = pp[Ip++];
-          if (Ep) {
-            255 == Ep ? Ep = 32512 + (pp[Ip++] | pp[Ip++] << 8) : Ep > 127 && (Ep = Ep - 128 << 8 | pp[Ip++]);
-            const xp = pp[Ip++];
-            3 & xp && Yp(0);
-            const Lp = [Up, wp, yp];
-            for (let op = 2; op > -1; --op) {
-              const Sp = xp >> 2 + (op << 1) & 3;
-              if (1 == Sp) {
-                const ip = new cp([0, 0, pp[Ip++]]);
-                Lp[op] = {
-                  s: ip.subarray(2, 3),
-                  n: ip.subarray(0, 1),
-                  t: new Op(ip.buffer, 0, 1),
+          let tT = TT[MT++];
+          if (tT) {
+            255 == tT ? tT = 32512 + (TT[MT++] | TT[MT++] << 8) : tT > 127 && (tT = tT - 128 << 8 | TT[MT++]);
+            const nT = TT[MT++];
+            3 & nT && kT(0);
+            const HT = [ZT, cT, BT];
+            for (let zT = 2; zT > -1; --zT) {
+              const gT = nT >> 2 + (zT << 1) & 3;
+              if (1 == gT) {
+                const UT = new mT([0, 0, TT[MT++]]);
+                HT[zT] = {
+                  s: UT.subarray(2, 3),
+                  n: UT.subarray(0, 1),
+                  t: new WT(UT.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == Sp ? [Ip, Lp[op]] = Wp(pp, Ip, 9 - (1 & op)) : 3 == Sp && (ip.t || Yp(0), Lp[op] = ip.t[op])
+              } else 2 == gT ? [MT, HT[zT]] = pT(TT, MT, 9 - (1 & zT)) : 3 == gT && (UT.t || kT(0), HT[zT] = UT.t[zT])
             }
-            const [Dp, Ap, jp] = ip.t = Lp, kp = pp[vp - 1];
-            kp || Yp(0);
-            let mp = (vp << 3) - 8 + Pp(kp) - jp.b,
-              Rp = mp >> 3,
-              qp = 0,
-              Xp = (pp[Rp] | pp[Rp + 1] << 8) >> (7 & mp) & (1 << jp.b) - 1;
-            Rp = (mp -= Ap.b) >> 3;
-            let lp = (pp[Rp] | pp[Rp + 1] << 8) >> (7 & mp) & (1 << Ap.b) - 1;
-            Rp = (mp -= Dp.b) >> 3;
-            let Qp = (pp[Rp] | pp[Rp + 1] << 8) >> (7 & mp) & (1 << Dp.b) - 1;
-            for (++Ep; --Ep;) {
-              const cp = jp.s[Xp],
-                Op = jp.n[Xp],
-                op = Dp.s[Qp],
-                Ip = Dp.n[Qp],
-                Sp = Ap.s[lp],
-                xp = Ap.n[lp];
-              Rp = (mp -= Sp) >> 3;
-              const Lp = 1 << Sp;
-              let Pp = Lp + ((pp[Rp] | pp[Rp + 1] << 8 | pp[Rp + 2] << 16 | pp[Rp + 3] << 24) >>> (7 & mp) & Lp - 1);
-              Rp = (mp -= dp[op]) >> 3;
-              let Wp = ep[op] + ((pp[Rp] | pp[Rp + 1] << 8 | pp[Rp + 2] << 16) >> (7 & mp) & (1 << dp[op]) - 1);
-              Rp = (mp -= tp[cp]) >> 3;
-              const yp = Hp[cp] + ((pp[Rp] | pp[Rp + 1] << 8 | pp[Rp + 2] << 16) >> (7 & mp) & (1 << tp[cp]) - 1);
-              if ((mp < 0 || Cp + yp > Mp.length || qp + yp + Wp > Mp.length) && Yp(0), Rp = (mp -= Op) >> 3, Xp = jp.t[Xp] + ((pp[Rp] | pp[Rp + 1] << 8) >> (7 & mp) & (1 << Op) - 1), Rp = (mp -= Ip) >> 3, Qp = Dp.t[Qp] + ((pp[Rp] | pp[Rp + 1] << 8) >> (7 & mp) & (1 << Ip) - 1), Rp = (mp -= xp) >> 3, lp = Ap.t[lp] + ((pp[Rp] | pp[Rp + 1] << 8) >> (7 & mp) & (1 << xp) - 1), Pp > 3) ip.o[2] = ip.o[1], ip.o[1] = ip.o[0], ip.o[0] = Pp -= 3;
+            const [jT, lT, OT] = UT.t = HT, eT = TT[vT - 1];
+            eT || kT(0);
+            let YT = (vT << 3) - 8 + LT(eT) - OT.b,
+              JT = YT >> 3,
+              xT = 0,
+              aT = (TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << OT.b) - 1;
+            JT = (YT -= lT.b) >> 3;
+            let yT = (TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << lT.b) - 1;
+            JT = (YT -= jT.b) >> 3;
+            let XT = (TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << jT.b) - 1;
+            for (++tT; --tT;) {
+              const mT = OT.s[aT],
+                WT = OT.n[aT],
+                zT = jT.s[XT],
+                MT = jT.n[XT],
+                gT = lT.s[yT],
+                nT = lT.n[yT];
+              JT = (YT -= gT) >> 3;
+              const HT = 1 << gT;
+              let LT = HT + ((TT[JT] | TT[JT + 1] << 8 | TT[JT + 2] << 16 | TT[JT + 3] << 24) >>> (7 & YT) & HT - 1);
+              JT = (YT -= iT[zT]) >> 3;
+              let pT = bT[zT] + ((TT[JT] | TT[JT + 1] << 8 | TT[JT + 2] << 16) >> (7 & YT) & (1 << iT[zT]) - 1);
+              JT = (YT -= fT[mT]) >> 3;
+              const BT = qT[mT] + ((TT[JT] | TT[JT + 1] << 8 | TT[JT + 2] << 16) >> (7 & YT) & (1 << fT[mT]) - 1);
+              if ((YT < 0 || wT + BT > dT.length || xT + BT + pT > dT.length) && kT(0), JT = (YT -= WT) >> 3, aT = OT.t[aT] + ((TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << WT) - 1), JT = (YT -= MT) >> 3, XT = jT.t[XT] + ((TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << MT) - 1), JT = (YT -= nT) >> 3, yT = lT.t[yT] + ((TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << nT) - 1), LT > 3) UT.o[2] = UT.o[1], UT.o[1] = UT.o[0], UT.o[0] = LT -= 3;
               else {
-                const pp = Pp - (0 != yp);
-                pp ? (Pp = 3 == pp ? ip.o[0] - 1 : ip.o[pp], pp > 1 && (ip.o[2] = ip.o[1]), ip.o[1] = ip.o[0], ip.o[0] = Pp) : Pp = ip.o[0]
+                const TT = LT - (0 != BT);
+                TT ? (LT = 3 == TT ? UT.o[0] - 1 : UT.o[TT], TT > 1 && (UT.o[2] = UT.o[1]), UT.o[1] = UT.o[0], UT.o[0] = LT) : LT = UT.o[0]
               }
-              for (let pp = 0; pp < yp; ++pp) Mp[qp + pp] = Mp[Cp + pp];
-              qp += yp, Cp += yp;
-              let Up = qp - Pp;
-              if (Up < 0) {
-                let pp = -Up;
-                const cp = ip.e + Up;
-                cp < 0 && Yp(4), pp > Wp && (pp = Wp);
-                for (let Op = 0; Op < pp; ++Op) Mp[qp + Op] = ip.w[cp + Op];
-                qp += pp, Wp -= pp, Up = 0
+              for (let TT = 0; TT < BT; ++TT) dT[xT + TT] = dT[wT + TT];
+              xT += BT, wT += BT;
+              let ZT = xT - LT;
+              if (ZT < 0) {
+                let TT = -ZT;
+                const mT = UT.e + ZT;
+                mT < 0 && kT(4), TT > pT && (TT = pT);
+                for (let WT = 0; WT < TT; ++WT) dT[xT + WT] = UT.w[mT + WT];
+                xT += TT, pT -= TT, ZT = 0
               }
-              for (let pp = 0; pp < Wp; ++pp) Mp[qp + pp] = Mp[Up + pp];
-              qp += Wp
+              for (let TT = 0; TT < pT; ++TT) dT[xT + TT] = dT[ZT + TT];
+              xT += pT
             }
-            if (qp != Cp)
-              for (; Cp < Mp.length;) Mp[qp++] = Mp[Cp++];
-            else qp = Mp.length;
-            op ? ip.y += qp : Mp = Sp(Mp, 0, qp)
-          } else if (op) {
-            if (ip.y += mp, Cp)
-              for (let pp = 0; pp < mp; ++pp) Mp[pp] = Mp[Cp + pp]
-          } else Cp && (Mp = Sp(Mp, Cp));
-          return ip.b = vp, Mp
+            if (xT != wT)
+              for (; wT < dT.length;) dT[xT++] = dT[wT++];
+            else xT = dT.length;
+            zT ? UT.y += xT : dT = gT(dT, 0, xT)
+          } else if (zT) {
+            if (UT.y += YT, wT)
+              for (let TT = 0; TT < YT; ++TT) dT[TT] = dT[wT + TT]
+          } else wT && (dT = gT(dT, wT));
+          return UT.b = vT, dT
         }
-        Yp(2)
+        kT(2)
       }
     };
-  class Rp {
+  class JT {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    sx = 0;
+    fn = 0;
     needed = 18;
     size;
-    constructor(pp) {
-      this.size = pp
+    constructor(TT) {
+      this.size = TT
     }
-    push(pp) {
+    push(TT) {
       if (this.done) return;
-      if (this.parts.push(pp), this.sx += pp.length, this.sx < this.needed) return;
-      const ip = ((pp, ip) => {
-        if (1 == pp.length) return pp[0];
-        const Op = new cp(ip);
-        for (let cp = 0, op = 0; cp < pp.length; ++cp) {
-          const ip = pp[cp];
-          Op.set(ip, op), op += ip.length
+      if (this.parts.push(TT), this.fn += TT.length, this.fn < this.needed) return;
+      const UT = ((TT, UT) => {
+        if (1 == TT.length) return TT[0];
+        const WT = new mT(UT);
+        for (let mT = 0, zT = 0; mT < TT.length; ++mT) {
+          const UT = TT[mT];
+          WT.set(UT, zT), zT += UT.length
         }
-        return Op
-      })(this.parts, this.sx);
-      let Op = this.st;
-      if (!Op) {
-        const pp = Ap(ip, new cp(0));
-        "number" != typeof pp && pp.u === this.size || Yp(0, `not a zstd frame of ${this.size} bytes`), Op = this.st = Ap(ip, 1), Op.e = 0, this.output = Op.w
+        return WT
+      })(this.parts, this.fn);
+      let WT = this.st;
+      if (!WT) {
+        const TT = lT(UT, new mT(0));
+        "number" != typeof TT && TT.u === this.size || kT(0, `not a zstd frame of ${this.size} bytes`), WT = this.st = lT(UT, 1), WT.e = 0, this.output = WT.w
       }
       for (;;) {
-        const pp = ip.length - Op.b;
-        if (pp < 3) {
+        const TT = UT.length - WT.b;
+        if (TT < 3) {
           this.needed = 3;
           break
         }
-        const cp = ip[Op.b],
-          op = cp >> 1 & 3;
-        3 == op && Yp(2);
-        const Ip = cp >> 3 | ip[Op.b + 1] << 5 | ip[Op.b + 2] << 13;
-        Ip > Op.m && Yp(0), 0 == op && Op.y + Ip > Op.u && Yp(0);
-        const Sp = 1 == op ? 4 : 3 + Ip;
-        if (pp < Sp) {
-          this.needed = Sp;
+        const mT = UT[WT.b],
+          zT = mT >> 1 & 3;
+        3 == zT && kT(2);
+        const MT = mT >> 3 | UT[WT.b + 1] << 5 | UT[WT.b + 2] << 13;
+        MT > WT.m && kT(0), 0 == zT && WT.y + MT > WT.u && kT(0);
+        const gT = 1 == zT ? 4 : 3 + MT;
+        if (TT < gT) {
+          this.needed = gT;
           break
         }
-        if (mp(ip, Op, Op.w) || Yp(5), Op.e = Op.y, (Op.y > Op.u || Op.l && Op.y != Op.u) && Yp(0), Op.l) {
+        if (YT(UT, WT, WT.w) || kT(5), WT.e = WT.y, (WT.y > WT.u || WT.l && WT.y != WT.u) && kT(0), WT.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = Op.y;
-      const op = ip.subarray(Op.b);
-      this.parts = op.length ? [op] : [], this.sx = op.length, Op.b = 0
+      this.decoded = WT.y;
+      const zT = UT.subarray(WT.b);
+      this.parts = zT.length ? [zT] : [], this.fn = zT.length, WT.b = 0
     }
   }
-  class qp {
+  class xT {
     post;
     href = "";
-    Wy = null;
+    Dp = null;
     given = 0;
     stopped = !1;
-    constructor(pp) {
-      this.post = pp
+    constructor(TT) {
+      this.post = TT
     }
-    take(ip) {
+    take(UT) {
       if (!this.stopped) try {
-        this.answer(ip)
-      } catch (cp) {
-        this.stop(cp instanceof RangeError ? `out of memory decoding ${this.href}: ${pp(cp)}` : `${this.href} did not decode: ${pp(cp)}`)
+        this.answer(UT)
+      } catch (mT) {
+        this.stop(mT instanceof RangeError ? `out of memory decoding ${this.href}: ${TT(mT)}` : `${this.href} did not decode: ${TT(mT)}`)
       }
     }
-    answer(pp) {
-      if (null === this.Wy) {
-        const [ip, cp] = pp;
-        return this.href = ip, void(this.Wy = new Rp(cp))
+    answer(TT) {
+      if (null === this.Dp) {
+        const [UT, mT] = TT;
+        return this.href = UT, void(this.Dp = new JT(mT))
       }
-      if (null === pp) return void this.stop(`${this.href} ended before its module did`);
-      const ip = this.Wy;
-      ip.push(pp);
+      if (null === TT) return void this.stop(`${this.href} ended before its module did`);
+      const UT = this.Dp;
+      UT.push(TT);
       const {
-        output: cp,
-        decoded: Op
-      } = ip;
-      if (null !== cp && Op > this.given) {
-        const pp = cp.slice(this.given, Op).buffer;
-        this.given = Op, this.post(pp, [pp])
+        output: mT,
+        decoded: WT
+      } = UT;
+      if (null !== mT && WT > this.given) {
+        const TT = mT.slice(this.given, WT).buffer;
+        this.given = WT, this.post(TT, [TT])
       }
-      ip.done && this.stop(!0)
+      UT.done && this.stop(!0)
     }
-    stop(pp) {
-      this.stopped = !0, this.post(pp)
+    stop(TT) {
+      this.stopped = !0, this.post(TT)
     }
   }
-  const Mp = globalThis.WorkerGlobalScope;
-  if (void 0 !== Mp && globalThis instanceof Mp) {
-    const pp = globalThis,
-      ip = new qp((function(ip) {
-        let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        pp.postMessage(ip, cp)
+  const dT = globalThis.WorkerGlobalScope;
+  if (void 0 !== dT && globalThis instanceof dT) {
+    const TT = globalThis,
+      UT = new xT((function(UT) {
+        let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        TT.postMessage(UT, mT)
       }));
-    pp.addEventListener("message", (pp => {
+    TT.addEventListener("message", (TT => {
       let {
-        data: cp
-      } = pp;
-      ip.take(cp)
+        data: mT
+      } = TT;
+      UT.take(mT)
     }))
   }
 })();

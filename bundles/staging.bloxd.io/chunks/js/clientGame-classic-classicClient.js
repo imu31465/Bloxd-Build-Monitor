@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  38724: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  38633: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT
     });
-    var Op = cp(38726);
-    const op = [0, 0, 0];
-    class Ip {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op;
-        this.pool = pp, this.origin = ip, this.count = 0, this.free = []
+    var WT = mT(38641);
+    const zT = [0, 0, 0];
+    class MT {
+      constructor(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT;
+        this.pool = TT, this.origin = UT, this.count = 0, this.free = []
       }
       take() {
-        var pp;
-        const ip = null !== (pp = this.free.pop()) && void 0 !== pp ? pp : this.count++;
-        return ip >= this.pool.TA && this.pool.grow(Math.max(2 * this.pool.TA, ip + 1)), this.hide(ip), ip
+        var TT;
+        const UT = null !== (TT = this.free.pop()) && void 0 !== TT ? TT : this.count++;
+        return UT >= this.pool.fl && this.pool.grow(Math.max(2 * this.pool.fl, UT + 1)), this.hide(UT), UT
       }
-      release(pp) {
-        this.hide(pp), this.free.push(pp)
+      release(TT) {
+        this.hide(TT), this.free.push(TT)
       }
-      write(pp, ip, cp, op) {
+      write(TT, UT, mT, zT) {
         const {
-          records: Ip
+          records: MT
         } = this.pool, {
-          origin: Sp
-        } = this, xp = pp * Op.e;
-        Ip[xp] = ip - Sp[0], Ip[xp + 1] = cp - Sp[1], Ip[xp + 2] = op - Sp[2], Ip[xp + Op.h] = 0, this.pool.markDirty(pp)
+          origin: gT
+        } = this, nT = TT * WT.b;
+        MT[nT] = UT - gT[0], MT[nT + 1] = mT - gT[1], MT[nT + 2] = zT - gT[2], MT[nT + WT.f] = 0, this.pool.markDirty(TT)
       }
-      hide(pp) {
-        this.pool.records[pp * Op.e + Op.h] = 1, this.pool.markDirty(pp)
+      hide(TT) {
+        this.pool.records[TT * WT.b + WT.f] = 1, this.pool.markDirty(TT)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class Sp {
-      constructor(pp, ip, cp) {
-        this.api = pp, this.model = ip, this.initialCapacity = cp, this.kinds = new Map, this.origin = [0, 0, 0]
+    class gT {
+      constructor(TT, UT, mT) {
+        this.api = TT, this.model = UT, this.initialCapacity = mT, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(pp) {
-        let ip = this.kinds.get(pp);
-        if (void 0 === ip) {
-          const cp = this.api.createInstancePool({
+      kindOf(TT) {
+        let UT = this.kinds.get(TT);
+        if (void 0 === UT) {
+          const mT = this.api.createInstancePool({
             ...this.model,
-            item: pp
+            item: TT
           }, this.initialCapacity);
-          null === cp || void 0 === cp || cp.setOrigin(this.origin[0], this.origin[1], this.origin[2]), ip = cp && new Ip(cp, this.origin), this.kinds.set(pp, ip)
+          null === mT || void 0 === mT || mT.setOrigin(this.origin[0], this.origin[1], this.origin[2]), UT = mT && new MT(mT, this.origin), this.kinds.set(TT, UT)
         }
-        return ip
+        return UT
       }
-      follow(pp) {
+      follow(TT) {
         const {
-          origin: ip
+          origin: UT
         } = this;
-        if (Math.abs(pp[0] - ip[0]) <= 512 && Math.abs(pp[1] - ip[1]) <= 512 && Math.abs(pp[2] - ip[2]) <= 512) return !1;
-        ip[0] = Math.floor(pp[0]), ip[1] = Math.floor(pp[1]), ip[2] = Math.floor(pp[2]);
-        for (const cp of this.kinds.values()) null === cp || void 0 === cp || cp.pool.setOrigin(ip[0], ip[1], ip[2]);
+        if (Math.abs(TT[0] - UT[0]) <= 512 && Math.abs(TT[1] - UT[1]) <= 512 && Math.abs(TT[2] - UT[2]) <= 512) return !1;
+        UT[0] = Math.floor(TT[0]), UT[1] = Math.floor(TT[1]), UT[2] = Math.floor(TT[2]);
+        for (const mT of this.kinds.values()) null === mT || void 0 === mT || mT.pool.setOrigin(UT[0], UT[1], UT[2]);
         return !0
       }
       commit() {
-        for (const pp of this.kinds.values()) null === pp || void 0 === pp || pp.commit()
+        for (const TT of this.kinds.values()) null === TT || void 0 === TT || TT.commit()
       }
       dispose() {
-        for (const pp of this.kinds.values()) null === pp || void 0 === pp || pp.dispose();
+        for (const TT of this.kinds.values()) null === TT || void 0 === TT || TT.dispose();
         this.kinds.clear()
       }
     }
   },
-  39464: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Ap
+  39403: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      default: () => lT
     });
-    const Op = "Pipe",
-      op = "Extractor Pipe",
-      Ip = (new Set([Op, op]), new Set([Op, op, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var Sp = cp(38724);
-    class xp {
-      constructor(pp) {
-        this.api = pp, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new Sp.b(pp, {
+    const WT = "Pipe",
+      zT = "Extractor Pipe",
+      MT = (new Set([WT, zT]), new Set([WT, zT, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var gT = mT(38633);
+    class nT {
+      constructor(TT) {
+        this.api = TT, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new gT.c(TT, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(pp) {
-        if (pp.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${pp.id} with < 2 waypoints`);
-        const ip = this.kinds.kindOf(pp.itemName);
-        if (!ip) return void(this.unshown.has(pp.itemName) || (this.unshown.add(pp.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${pp.itemName}"`)));
-        this.remove(pp.id);
-        const cp = function(pp) {
-          return (pp.waypoints.length - 1) / 2 * 1e3
-        }(pp);
-        if (Date.now() - pp.startTimeMs > cp + 2e3) return;
-        const Op = ip.take();
-        this.items.set(pp.id, {
-          kind: ip,
-          slot: Op,
-          waypoints: pp.waypoints,
-          startTimeMs: pp.startTimeMs,
-          durationMs: cp
+      onSpawn(TT) {
+        if (TT.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${TT.id} with < 2 waypoints`);
+        const UT = this.kinds.kindOf(TT.itemName);
+        if (!UT) return void(this.unshown.has(TT.itemName) || (this.unshown.add(TT.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${TT.itemName}"`)));
+        this.remove(TT.id);
+        const mT = function(TT) {
+          return (TT.waypoints.length - 1) / 2 * 1e3
+        }(TT);
+        if (Date.now() - TT.startTimeMs > mT + 2e3) return;
+        const WT = UT.take();
+        this.items.set(TT.id, {
+          kind: UT,
+          slot: WT,
+          waypoints: TT.waypoints,
+          startTimeMs: TT.startTimeMs,
+          durationMs: mT
         })
       }
-      onEnd(pp) {
-        this.remove(pp.id)
+      onEnd(TT) {
+        this.remove(TT.id)
       }
-      gH() {
+      hq() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const pp = Date.now();
+        const TT = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [ip, cp] of this.items) pp - cp.startTimeMs > cp.durationMs + 2e3 ? this.remove(ip) : this.write(cp, pp);
+        for (const [UT, mT] of this.items) TT - mT.startTimeMs > mT.durationMs + 2e3 ? this.remove(UT) : this.write(mT, TT);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(pp) {
-        const ip = this.items.get(pp);
-        ip && (ip.kind.release(ip.slot), this.items.delete(pp))
+      remove(TT) {
+        const UT = this.items.get(TT);
+        UT && (UT.kind.release(UT.slot), this.items.delete(TT))
       }
-      write(pp, ip) {
-        const cp = pp.waypoints.length - 1;
-        let Op = (ip - pp.startTimeMs) / pp.durationMs;
-        Op < 0 ? Op = 0 : Op > 1 && (Op = 1);
-        const op = Op * cp;
-        let Ip = Math.floor(op);
-        Ip >= cp && (Ip = cp - 1);
-        const Sp = op - Ip,
-          [xp, Lp, Yp] = pp.waypoints[Ip],
-          [Dp, Ap, Pp] = pp.waypoints[Ip + 1];
-        pp.kind.write(pp.slot, xp + (Dp - xp) * Sp + .5, Lp + (Ap - Lp) * Sp + .5, Yp + (Pp - Yp) * Sp + .5)
+      write(TT, UT) {
+        const mT = TT.waypoints.length - 1;
+        let WT = (UT - TT.startTimeMs) / TT.durationMs;
+        WT < 0 ? WT = 0 : WT > 1 && (WT = 1);
+        const zT = WT * mT;
+        let MT = Math.floor(zT);
+        MT >= mT && (MT = mT - 1);
+        const gT = zT - MT,
+          [nT, HT, kT] = TT.waypoints[MT],
+          [jT, lT, LT] = TT.waypoints[MT + 1];
+        TT.kind.write(TT.slot, nT + (jT - nT) * gT + .5, HT + (lT - HT) * gT + .5, kT + (LT - kT) * gT + .5)
       }
     }
-    const Lp = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      Yp = new Set(Lp);
-    class Dp {
+    const HT = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      kT = new Set(HT);
+    class jT {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(pp) {
-        this.api = pp, this.pipeVisualizer = new xp(pp)
+      onCreate(TT) {
+        this.api = TT, this.pipeVisualizer = new nT(TT)
       }
       onClose() {
-        var pp;
-        null === (pp = this.pipeVisualizer) || void 0 === pp || pp.dispose(), this.pipeVisualizer = null
+        var TT;
+        null === (TT = this.pipeVisualizer) || void 0 === TT || TT.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(pp, ip) {
+      onReceivedMessageFromServer(TT, UT) {
         const {
-          pipeVisualizer: cp
+          pipeVisualizer: mT
         } = this;
-        if (cp)
-          if ("pipeItemSpawnBatch" === pp)
-            for (const Op of ip.items) cp.onSpawn(Op);
-          else if ("pipeItemEndBatch" === pp)
-          for (const Op of ip.items) cp.onEnd(Op)
+        if (mT)
+          if ("pipeItemSpawnBatch" === TT)
+            for (const WT of UT.items) mT.onSpawn(WT);
+          else if ("pipeItemEndBatch" === TT)
+          for (const WT of UT.items) mT.onEnd(WT)
       }
-      gH() {
-        var pp;
-        null === (pp = this.pipeVisualizer) || void 0 === pp || pp.gH()
+      hq() {
+        var TT;
+        null === (TT = this.pipeVisualizer) || void 0 === TT || TT.hq()
       }
-      onPlayerAttemptAltAction(pp, ip, cp, Op, op, Sp) {
-        var xp;
-        if (!Yp.has(this.api.getMetaInfo(op).rootName)) return;
-        const Lp = null === (xp = this.api.Acp(pp)) || void 0 === xp ? void 0 : xp.name;
-        return void 0 !== Lp && Ip.has(Lp) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(TT, UT, mT, WT, zT, gT) {
+        var nT;
+        if (!kT.has(this.api.getMetaInfo(zT).rootName)) return;
+        const HT = null === (nT = this.api.RUT(TT)) || void 0 === nT ? void 0 : nT.name;
+        return void 0 !== HT && MT.has(HT) ? "preventAction" : void 0
       }
     }
-    const Ap = function(pp, ip, cp) {
-      if ("survivalFactory" !== cp && "survivalFactoryPersistent" !== cp) {
+    const lT = function(TT, UT, mT) {
+      if ("survivalFactory" !== mT && "survivalFactoryPersistent" !== mT) {
         return {}
       }
-      const Op = new Dp;
+      const WT = new jT;
       return {
-        onCreate: pp => {
-          Op.onCreate(pp)
+        onCreate: TT => {
+          WT.onCreate(TT)
         },
         onClose: () => {
-          Op.onClose()
+          WT.onClose()
         },
-        onReceivedMessageFromServer: (pp, ip) => {
-          Op.onReceivedMessageFromServer(pp, ip)
+        onReceivedMessageFromServer: (TT, UT) => {
+          WT.onReceivedMessageFromServer(TT, UT)
         },
-        LP: () => {
-          Op.gH()
+        Cl: () => {
+          WT.hq()
         },
-        altVetoBlocks: Lp,
-        onPlayerAttemptAltAction: (pp, ip, cp, op, Ip, Sp) => Op.onPlayerAttemptAltAction(pp, ip, cp, op, Ip, Sp)
+        altVetoBlocks: HT,
+        onPlayerAttemptAltAction: (TT, UT, mT, zT, MT, gT) => WT.onPlayerAttemptAltAction(TT, UT, mT, zT, MT, gT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

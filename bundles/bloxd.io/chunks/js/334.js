@@ -1,105 +1,105 @@
 export const id = 334;
 export const ids = [334];
 export const modules = {
-  42319: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  42168: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => gT
     });
-    var Op = cp(40062);
-    const op = "clipPlaneVertex",
-      Ip = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "clipPlaneVertex",
+      MT = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
+    WT.d.IncludesShadersStore[zT] || (WT.d.IncludesShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   },
-  42226: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  42080: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op = cp(40062);
-    const op = "clipPlaneVertexDeclaration",
-      Ip = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "clipPlaneVertexDeclaration",
+      MT = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
+    WT.d.IncludesShadersStore[zT] || (WT.d.IncludesShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   },
-  42327: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  42176: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT
     });
-    var Op = cp(40062);
-    const op = "fogVertex",
-      Ip = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "fogVertex",
+      MT = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
+    WT.d.IncludesShadersStore[zT] || (WT.d.IncludesShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   },
-  42232: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  42089: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => gT
     });
-    var Op = cp(40062);
-    const op = "fogVertexDeclaration",
-      Ip = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "fogVertexDeclaration",
+      MT = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
+    WT.d.IncludesShadersStore[zT] || (WT.d.IncludesShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   },
-  42266: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  42111: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT
     });
-    var Op = cp(40062);
-    const op = "logDepthDeclaration",
-      Ip = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "logDepthDeclaration",
+      MT = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
+    WT.d.IncludesShadersStore[zT] || (WT.d.IncludesShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   },
-  42346: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  42189: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => gT
     });
-    var Op = cp(40062);
-    const op = "logDepthVertex",
-      Ip = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var WT = mT(39934);
+    const zT = "logDepthVertex",
+      MT = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
+    WT.d.IncludesShadersStore[zT] || (WT.d.IncludesShadersStore[zT] = MT);
+    const gT = {
+      name: zT,
+      shader: MT
     }
   },
-  61413: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      particlesVertexShader: () => Wp
+  61187: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      particlesVertexShader: () => pT
     });
-    var Op = cp(40062),
-      op = cp(42226),
-      Ip = cp(42232),
-      Sp = cp(42266),
-      xp = cp(42319),
-      Lp = cp(42327),
-      Yp = cp(42346);
-    const Dp = "particlesVertexShader",
-      Ap = "attribute vec3 position;attribute vec4 color;attribute float angle;attribute vec2 size;\n#ifdef ANIMATESHEET\nattribute float cellIndex;\n#endif\n#ifndef BILLBOARD\nattribute vec3 direction;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute vec3 direction;\n#endif\n#ifdef RAMPGRADIENT\nattribute vec4 remapData;\n#endif\nattribute vec2 offset;uniform mat4 view;uniform mat4 projection;uniform vec2 translationPivot;\n#ifdef PREPASS\nuniform vec2 cameraInfo;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform mat4 inverseEmitterWM;uniform vec3 geometryWorldOffset;\n#endif\n#ifdef PREPASS_POSITION\nvarying vec3 vGeometryPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vec3 vGeometryNormalW;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vec3 vGeometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform vec3 particlesInfos; \n#endif\nvarying vec2 vUV;varying vec4 vColor;\n#ifdef POSITIONW_AS_VARYING\nvarying vec3 vPositionW;\n#endif\n#ifdef RAMPGRADIENT\nvarying vec4 remapRanges;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform mat4 invView;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform vec3 eyePosition;\n#endif\nvec3 rotate(vec3 yaxis,vec3 rotatedCorner) {vec3 xaxis=normalize(cross(vec3(0.,1.0,0.),yaxis));vec3 zaxis=normalize(cross(yaxis,xaxis));vec3 row0=vec3(xaxis.x,xaxis.y,xaxis.z);vec3 row1=vec3(yaxis.x,yaxis.y,yaxis.z);vec3 row2=vec3(zaxis.x,zaxis.y,zaxis.z);mat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nvec3 rotateAlign(vec3 toCamera,vec3 rotatedCorner) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(direction),normalizedToCamera));vec3 row0=vec3(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);vec3 row2=vec3(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(direction);\n#else\nvec3 crossProduct=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));vec3 row1=vec3(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nmat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\nvec3 stretchedNormal(vec3 toCamera,vec3 stretchDirection) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(stretchDirection);\n#else\nvec3 row1=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvec2 cornerPos;\n#ifndef POSITIONW_AS_VARYING\nvec3 vPositionW;\n#endif\n#ifdef PREPASS\nvec3 geometryNormalW;\n#endif\ncornerPos=(vec2(offset.x-0.5,offset.y -0.5)-translationPivot)*size;\n#ifdef BILLBOARD\nvec3 rotatedCorner;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=position-eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 toCamera=position-eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,direction);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 viewPos=(view*vec4(position,1.0)).xyz+rotatedCorner;vPositionW=(invView*vec4(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((invView*vec4(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nremapRanges=remapData;\n#endif\ngl_Position=projection*vec4(viewPos,1.0);\n#else\nvec3 rotatedCorner;rotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=normalize(direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\ngl_Position=projection*view*vec4(vPositionW,1.0);\n#endif\nvColor=color;\n#ifdef ANIMATESHEET\nfloat rowOffset=floor(cellIndex*particlesInfos.z);float columnOffset=cellIndex-rowOffset/particlesInfos.z;vec2 uvScale=particlesInfos.xy;vec2 uvOffset=vec2(offset.x ,1.0-offset.y);vUV=(uvOffset+vec2(columnOffset,rowOffset))*uvScale;\n#else\nvUV=offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvec4 worldPos=vec4(vPositionW,1.0);\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nvec4 geometryViewPosition=view*vec4(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvec3 geometryNormalV=normalize((view*vec4(geometryNormalW,0.0)).xyz);vec3 geometryViewDirection=projection[3][3]==0.0 ? geometryViewPosition.xyz : vec3(0.0,0.0,geometryViewPosition.z);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvec3 geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=position+(invView*vec4(rotatedCorner,0.0)).xyz;\n#endif\nvPosition=(inverseEmitterWM*vec4(geometryRenderPosition-geometryWorldOffset,1.0)).xyz;\n#else\nvPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=(geometryViewPosition.z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Op.b.ShadersStore[Dp] || (Op.b.ShadersStore[Dp] = Ap);
-    const Pp = [op.c, Ip.e, Sp.e, xp.c, Lp.c, Yp.b];
-    for (const yp of Pp) Op.b.IncludesShadersStore[yp.name] || (Op.b.IncludesShadersStore[yp.name] = yp.shader);
-    const Wp = {
-      name: Dp,
-      shader: Ap
+    var WT = mT(39934),
+      zT = mT(42080),
+      MT = mT(42089),
+      gT = mT(42111),
+      nT = mT(42168),
+      HT = mT(42176),
+      kT = mT(42189);
+    const jT = "particlesVertexShader",
+      lT = "attribute vec3 position;attribute vec4 color;attribute float angle;attribute vec2 size;\n#ifdef ANIMATESHEET\nattribute float cellIndex;\n#endif\n#ifndef BILLBOARD\nattribute vec3 direction;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute vec3 direction;\n#endif\n#ifdef RAMPGRADIENT\nattribute vec4 remapData;\n#endif\nattribute vec2 offset;uniform mat4 view;uniform mat4 projection;uniform vec2 translationPivot;\n#ifdef PREPASS\nuniform vec2 cameraInfo;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform mat4 inverseEmitterWM;uniform vec3 geometryWorldOffset;\n#endif\n#ifdef PREPASS_POSITION\nvarying vec3 vGeometryPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vec3 vGeometryNormalW;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vec3 vGeometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform vec3 particlesInfos; \n#endif\nvarying vec2 vUV;varying vec4 vColor;\n#ifdef POSITIONW_AS_VARYING\nvarying vec3 vPositionW;\n#endif\n#ifdef RAMPGRADIENT\nvarying vec4 remapRanges;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform mat4 invView;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform vec3 eyePosition;\n#endif\nvec3 rotate(vec3 yaxis,vec3 rotatedCorner) {vec3 xaxis=normalize(cross(vec3(0.,1.0,0.),yaxis));vec3 zaxis=normalize(cross(yaxis,xaxis));vec3 row0=vec3(xaxis.x,xaxis.y,xaxis.z);vec3 row1=vec3(yaxis.x,yaxis.y,yaxis.z);vec3 row2=vec3(zaxis.x,zaxis.y,zaxis.z);mat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nvec3 rotateAlign(vec3 toCamera,vec3 rotatedCorner) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(direction),normalizedToCamera));vec3 row0=vec3(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);vec3 row2=vec3(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(direction);\n#else\nvec3 crossProduct=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));vec3 row1=vec3(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nmat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\nvec3 stretchedNormal(vec3 toCamera,vec3 stretchDirection) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(stretchDirection);\n#else\nvec3 row1=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvec2 cornerPos;\n#ifndef POSITIONW_AS_VARYING\nvec3 vPositionW;\n#endif\n#ifdef PREPASS\nvec3 geometryNormalW;\n#endif\ncornerPos=(vec2(offset.x-0.5,offset.y -0.5)-translationPivot)*size;\n#ifdef BILLBOARD\nvec3 rotatedCorner;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=position-eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 toCamera=position-eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,direction);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 viewPos=(view*vec4(position,1.0)).xyz+rotatedCorner;vPositionW=(invView*vec4(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((invView*vec4(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nremapRanges=remapData;\n#endif\ngl_Position=projection*vec4(viewPos,1.0);\n#else\nvec3 rotatedCorner;rotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=normalize(direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\ngl_Position=projection*view*vec4(vPositionW,1.0);\n#endif\nvColor=color;\n#ifdef ANIMATESHEET\nfloat rowOffset=floor(cellIndex*particlesInfos.z);float columnOffset=cellIndex-rowOffset/particlesInfos.z;vec2 uvScale=particlesInfos.xy;vec2 uvOffset=vec2(offset.x ,1.0-offset.y);vUV=(uvOffset+vec2(columnOffset,rowOffset))*uvScale;\n#else\nvUV=offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvec4 worldPos=vec4(vPositionW,1.0);\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nvec4 geometryViewPosition=view*vec4(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvec3 geometryNormalV=normalize((view*vec4(geometryNormalW,0.0)).xyz);vec3 geometryViewDirection=projection[3][3]==0.0 ? geometryViewPosition.xyz : vec3(0.0,0.0,geometryViewPosition.z);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvec3 geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=position+(invView*vec4(rotatedCorner,0.0)).xyz;\n#endif\nvPosition=(inverseEmitterWM*vec4(geometryRenderPosition-geometryWorldOffset,1.0)).xyz;\n#else\nvPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=(geometryViewPosition.z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    WT.d.ShadersStore[jT] || (WT.d.ShadersStore[jT] = lT);
+    const LT = [zT.b, MT.e, gT.d, nT.c, HT.d, kT.e];
+    for (const BT of LT) WT.d.IncludesShadersStore[BT.name] || (WT.d.IncludesShadersStore[BT.name] = BT.shader);
+    const pT = {
+      name: jT,
+      shader: lT
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

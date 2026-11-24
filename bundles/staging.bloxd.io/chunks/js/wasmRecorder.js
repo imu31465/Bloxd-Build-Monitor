@@ -1,380 +1,380 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  61576: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/bloxd_wasm_recorder_bg.a17fd283244fec08ee33.wasm"
+  61344: (TT, UT, mT) => {
+    TT.exports = mT.p + "static/media/bloxd_wasm_recorder_bg.e96e82d846d8aabe3338.wasm"
   },
-  61572: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      BloxdRecorderWasmError: () => Jp,
-      RECORDER_MODULE_ID: () => Qp,
-      loadRecorderModule: () => Tp,
-      markRecorderTrapped: () => bp,
-      prefetchRecorderModule: () => fp,
-      recorderMemoryBytes: () => ap,
-      unloadRecorderModule: () => hp
+  61336: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      BloxdRecorderWasmError: () => IT,
+      RECORDER_MODULE_ID: () => XT,
+      loadRecorderModule: () => FT,
+      markRecorderTrapped: () => VT,
+      prefetchRecorderModule: () => PT,
+      recorderMemoryBytes: () => CT,
+      unloadRecorderModule: () => uT
     });
-    var Op = {};
-    cp.r(Op), cp.d(Op, {
-      lIp: () => op,
-      kxp: () => Ep,
-      dA: () => Ip,
-      default: () => Cp,
-      initSync: () => Mp,
-      eA: () => Sp,
-      EIp: () => xp,
-      jIp: () => Lp
+    var WT = {};
+    mT.r(WT), mT.d(WT, {
+      jMT: () => zT,
+      mnT: () => tT,
+      Ul: () => MT,
+      default: () => wT,
+      initSync: () => dT,
+      ml: () => gT,
+      HMT: () => nT,
+      RzT: () => HT
     });
-    class op {
+    class zT {
       __destroy_into_raw() {
-        const pp = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Dp.unregister(this), pp
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, jT.unregister(this), TT
       }
       free() {
-        const pp = this.__destroy_into_raw();
-        mp.AZgg(pp, 0)
+        const TT = this.__destroy_into_raw();
+        YT.P6Qd(TT, 0)
       }
       busy() {
-        return 0 !== mp.z75w(this.__wbg_ptr)
+        return 0 !== YT.FxIf(this.__wbg_ptr)
       }
-      command(pp, ip) {
-        return 0 !== mp.wGU5(this.__wbg_ptr, pp, ip)
+      command(TT, UT) {
+        return 0 !== YT.EyQZ(this.__wbg_ptr, TT, UT)
       }
-      kIp(pp) {
-        return mp.By1P(this.__wbg_ptr, pp) >>> 0
+      mMT(TT) {
+        return YT.bVmJ(this.__wbg_ptr, TT) >>> 0
       }
-      uIp() {
-        mp.XG0B(this.__wbg_ptr)
+      AzT() {
+        YT.mWtv(this.__wbg_ptr)
       }
-      eIp() {
-        return mp.qedR(this.__wbg_ptr) >>> 0
+      ozT() {
+        return YT.A87t(this.__wbg_ptr) >>> 0
       }
-      dIp() {
-        return mp.QAgo(this.__wbg_ptr)
+      DzT() {
+        return YT.QElT(this.__wbg_ptr)
       }
-      qIp() {
-        return mp.kzJQ(this.__wbg_ptr) >>> 0
+      MMT() {
+        return YT.tqOW(this.__wbg_ptr) >>> 0
       }
-      MIp() {
-        return mp.iwQo(this.__wbg_ptr) >>> 0
+      gMT() {
+        return YT.rabg(this.__wbg_ptr) >>> 0
       }
-      feed(pp) {
-        return mp.nj9i(this.__wbg_ptr, pp) >>> 0
+      feed(TT) {
+        return YT.txe6(this.__wbg_ptr, TT) >>> 0
       }
       constructor() {
-        const pp = mp.yf38();
-        return this.__wbg_ptr = pp, Dp.register(this, this.__wbg_ptr, this), this
+        const TT = YT.n0bW();
+        return this.__wbg_ptr = TT, jT.register(this, this.__wbg_ptr, this), this
       }
-      RIp() {
-        return mp.l8rH(this.__wbg_ptr) >>> 0
+      zMT() {
+        return YT.qEIR(this.__wbg_ptr) >>> 0
       }
-      mxp() {
-        return mp.WF0y(this.__wbg_ptr) >>> 0
+      WnT() {
+        return YT.wssx(this.__wbg_ptr) >>> 0
       }
-      HIp(pp, ip, cp) {
-        return 0 !== mp.M1ov(this.__wbg_ptr, pp, ip, cp)
+      hzT(TT, UT, mT) {
+        return 0 !== YT.kFI9(this.__wbg_ptr, TT, UT, mT)
       }
-      stage(pp) {
-        return mp.AWM1(this.__wbg_ptr, pp) >>> 0
+      stage(TT) {
+        return YT.MObI(this.__wbg_ptr, TT) >>> 0
       }
       step() {
-        return mp.yxRE(this.__wbg_ptr) >>> 0
+        return YT.B8MZ(this.__wbg_ptr) >>> 0
       }
     }
 
-    function Ip(pp, ip) {
-      const cp = function(pp, ip, cp) {
-          if (void 0 === cp) {
-            const cp = ep.encode(pp),
-              Op = ip(cp.length, 1) >>> 0;
-            return yp().subarray(Op, Op + cp.length).set(cp), Rp = cp.length, Op
+    function MT(TT, UT) {
+      const mT = function(TT, UT, mT) {
+          if (void 0 === mT) {
+            const mT = bT.encode(TT),
+              WT = UT(mT.length, 1) >>> 0;
+            return BT().subarray(WT, WT + mT.length).set(mT), JT = mT.length, WT
           }
-          let Op = pp.length,
-            op = ip(Op, 1) >>> 0;
-          const Ip = yp();
-          let Sp = 0;
-          for (; Sp < Op; Sp++) {
-            const ip = pp.charCodeAt(Sp);
-            if (ip > 127) break;
-            Ip[op + Sp] = ip
+          let WT = TT.length,
+            zT = UT(WT, 1) >>> 0;
+          const MT = BT();
+          let gT = 0;
+          for (; gT < WT; gT++) {
+            const UT = TT.charCodeAt(gT);
+            if (UT > 127) break;
+            MT[zT + gT] = UT
           }
-          if (Sp !== Op) {
-            0 !== Sp && (pp = pp.slice(Sp)), op = cp(op, Op, Op = Sp + 3 * pp.length, 1) >>> 0;
-            const ip = yp().subarray(op + Sp, op + Op);
-            Sp += ep.encodeInto(pp, ip).written, op = cp(op, Op, Sp, 1) >>> 0
+          if (gT !== WT) {
+            0 !== gT && (TT = TT.slice(gT)), zT = mT(zT, WT, WT = gT + 3 * TT.length, 1) >>> 0;
+            const UT = BT().subarray(zT + gT, zT + WT);
+            gT += bT.encodeInto(TT, UT).written, zT = mT(zT, WT, gT, 1) >>> 0
           }
-          return Rp = Sp, op
-        }(pp, mp.pARf, mp.KBSS),
-        Op = Rp,
-        op = mp.Zzvn(cp, Op, ip);
-      if (op[1]) throw vp(op[0])
+          return JT = gT, zT
+        }(TT, YT.zk4t, YT.q7j5),
+        WT = JT,
+        zT = YT.eJ07(mT, WT, UT);
+      if (zT[1]) throw vT(zT[0])
     }
 
-    function Sp() {
-      mp.P1jE()
+    function gT() {
+      YT.J3oO()
     }
 
-    function xp() {
-      return mp.P2m9() >>> 0
+    function nT() {
+      return YT.BuY8() >>> 0
     }
 
-    function Lp() {
-      return vp(mp.nG0g())
+    function HT() {
+      return vT(YT.pcbh())
     }
 
-    function Yp() {
+    function kT() {
       return {
         __proto__: null,
-        oySu: {
+        OIgK: {
           __proto__: null,
-          YYw2: function(pp, ip) {
-            return Ap(Error(Pp(pp, ip)))
+          YXaz: function(TT, UT) {
+            return lT(Error(LT(TT, UT)))
           },
-          isAq: function() {
-            return Ap(mp.memory)
+          sCsN: function() {
+            return lT(YT.memory)
           },
-          j52B: function(pp, ip) {
-            throw new Error(Pp(pp, ip))
+          kGeO: function(TT, UT) {
+            throw new Error(LT(TT, UT))
           },
-          JGLJ: function(pp, ip) {
-            console.error(Pp(pp, ip))
+          QRuL: function(TT, UT) {
+            console.error(LT(TT, UT))
           },
-          AWS0: function() {
+          dNQ0: function() {
             return performance.now()
           }
         }
       }
     }
-    Symbol.dispose && (op.prototype[Symbol.dispose] = op.prototype.free);
-    const Dp = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (zT.prototype[Symbol.dispose] = zT.prototype.free);
+    const jT = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((pp => mp?.__wbg_recordermodule_free(pp, 1)));
+    } : new FinalizationRegistry((TT => YT?.__wbg_recordermodule_free(TT, 1)));
 
-    function Ap(pp) {
-      wp === Up.length && Up.push(Up.length + 1);
-      const ip = wp;
-      return wp = Up[ip], Up[ip] = pp, ip
+    function lT(TT) {
+      cT === ZT.length && ZT.push(ZT.length + 1);
+      const UT = cT;
+      return cT = ZT[UT], ZT[UT] = TT, UT
     }
 
-    function Pp(pp, ip) {
-      return function(pp, ip) {
-        dp += ip, dp >= Hp && (tp = new TextDecoder("utf-8", {
+    function LT(TT, UT) {
+      return function(TT, UT) {
+        iT += UT, iT >= qT && (fT = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), tp.decode(), dp = ip);
-        return tp.decode(yp().subarray(pp, pp + ip))
-      }(pp >>> 0, ip)
+        }), fT.decode(), iT = UT);
+        return fT.decode(BT().subarray(TT, TT + UT))
+      }(TT >>> 0, UT)
     }
-    let Wp = null;
+    let pT = null;
 
-    function yp() {
-      return null !== Wp && 0 !== Wp.byteLength || (Wp = new Uint8Array(mp.memory.buffer)), Wp
+    function BT() {
+      return null !== pT && 0 !== pT.byteLength || (pT = new Uint8Array(YT.memory.buffer)), pT
     }
-    let Up = new Array(1024).fill(void 0);
-    Up.push(void 0, null, !0, !1);
-    let wp = Up.length;
+    let ZT = new Array(1024).fill(void 0);
+    ZT.push(void 0, null, !0, !1);
+    let cT = ZT.length;
 
-    function vp(pp) {
-      const ip = function(pp) {
-        return Up[pp]
-      }(pp);
-      return function(pp) {
-        pp < 1028 || (Up[pp] = wp, wp = pp)
-      }(pp), ip
+    function vT(TT) {
+      const UT = function(TT) {
+        return ZT[TT]
+      }(TT);
+      return function(TT) {
+        TT < 1028 || (ZT[TT] = cT, cT = TT)
+      }(TT), UT
     }
-    let tp = new TextDecoder("utf-8", {
+    let fT = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    tp.decode();
-    const Hp = 2146435072;
-    let dp = 0;
-    const ep = new TextEncoder;
-    "encodeInto" in ep || (ep.encodeInto = function(pp, ip) {
-      const cp = ep.encode(pp);
-      return ip.set(cp), {
-        read: pp.length,
-        written: cp.length
+    fT.decode();
+    const qT = 2146435072;
+    let iT = 0;
+    const bT = new TextEncoder;
+    "encodeInto" in bT || (bT.encodeInto = function(TT, UT) {
+      const mT = bT.encode(TT);
+      return UT.set(mT), {
+        read: TT.length,
+        written: mT.length
       }
     });
-    let jp, kp, mp, Rp = 0;
+    let OT, eT, YT, JT = 0;
 
-    function qp(pp, ip) {
-      return kp = pp, mp = pp.exports, jp = ip, Wp = null, mp.SiTI(), mp
+    function xT(TT, UT) {
+      return eT = TT, YT = TT.exports, OT = UT, pT = null, YT.MWsZ(), YT
     }
 
-    function Mp(pp) {
-      if (void 0 !== mp) return mp;
-      void 0 !== pp && (Object.getPrototypeOf(pp) === Object.prototype ? ({
-        module: pp
-      } = pp) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const ip = Yp();
-      pp instanceof WebAssembly.Module || (pp = new WebAssembly.Module(pp));
-      return qp(new WebAssembly.Instance(pp, ip), pp)
+    function dT(TT) {
+      if (void 0 !== YT) return YT;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module: TT
+      } = TT) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const UT = kT();
+      TT instanceof WebAssembly.Module || (TT = new WebAssembly.Module(TT));
+      return xT(new WebAssembly.Instance(TT, UT), TT)
     }
-    async function Cp(pp) {
-      if (void 0 !== mp) return mp;
-      void 0 !== pp && (Object.getPrototypeOf(pp) === Object.prototype ? ({
-        module_or_path: pp
-      } = pp) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const ip = Yp();
-      ("string" === typeof pp || "function" === typeof Request && pp instanceof Request || "function" === typeof URL && pp instanceof URL) && (pp = fetch(pp));
+    async function wT(TT) {
+      if (void 0 !== YT) return YT;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module_or_path: TT
+      } = TT) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const UT = kT();
+      ("string" === typeof TT || "function" === typeof Request && TT instanceof Request || "function" === typeof URL && TT instanceof URL) && (TT = fetch(TT));
       const {
-        instance: cp,
-        module: Op
-      } = await async function(pp, ip) {
-        if ("function" === typeof Response && pp instanceof Response) {
-          if (!pp.ok) throw new Error(`failed to fetch Wasm: ${pp.status} ${pp.statusText} fetching '${pp.url}'`);
+        instance: mT,
+        module: WT
+      } = await async function(TT, UT) {
+        if ("function" === typeof Response && TT instanceof Response) {
+          if (!TT.ok) throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching '${TT.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(pp, ip)
-          } catch (cp) {
-            if (! function(pp) {
-                switch (pp) {
+            return await WebAssembly.instantiateStreaming(TT, UT)
+          } catch (mT) {
+            if (! function(TT) {
+                switch (TT) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(pp.type) || "application/wasm" === pp.headers.get("Content-Type")) throw cp;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cp)
+              }(TT.type) || "application/wasm" === TT.headers.get("Content-Type")) throw mT;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", mT)
           }
-          const Op = await pp.arrayBuffer();
-          return await WebAssembly.instantiate(Op, ip)
+          const WT = await TT.arrayBuffer();
+          return await WebAssembly.instantiate(WT, UT)
         } {
-          const cp = await WebAssembly.instantiate(pp, ip);
-          return cp instanceof WebAssembly.Instance ? {
-            instance: cp,
-            module: pp
-          } : cp
+          const mT = await WebAssembly.instantiate(TT, UT);
+          return mT instanceof WebAssembly.Instance ? {
+            instance: mT,
+            module: TT
+          } : mT
         }
-      }(await pp, ip);
-      return qp(cp, Op)
+      }(await TT, UT);
+      return xT(mT, WT)
     }
 
-    function Ep() {
-      mp = void 0, kp = void 0, Wp = null, Up = new Array(1024).fill(void 0), Up.push(void 0, null, !0, !1), wp = Up.length
+    function tT() {
+      YT = void 0, eT = void 0, pT = null, ZT = new Array(1024).fill(void 0), ZT.push(void 0, null, !0, !1), cT = ZT.length
     }
-    var Xp = cp(2970),
-      lp = cp(6762);
-    const Qp = 2;
-    class Jp extends Error {
+    var aT = mT(3001),
+      yT = mT(6688);
+    const XT = 2;
+    class IT extends Error {
       stage;
-      constructor(pp, ip) {
-        super((0, Xp.B)(pp, ip), {
-          cause: ip
-        }), this.name = "BloxdRecorderWasmError", this.stage = pp
+      constructor(TT, UT) {
+        super((0, aT.F)(TT, UT), {
+          cause: UT
+        }), this.name = "BloxdRecorderWasmError", this.stage = TT
       }
     }
-    let Bp = null;
-    const Np = function(pp) {
-      let ip = null,
-        cp = null,
-        Op = null,
-        op = null;
-      const Ip = async () => {
-        let cp = null;
+    let QT = null;
+    const sT = function(TT) {
+      let UT = null,
+        mT = null,
+        WT = null,
+        zT = null;
+      const MT = async () => {
+        let mT = null;
         try {
-          return cp = ip ??= (0, Xp.C)(pp.url(), (0, lp.e)(pp.name)), await cp
-        } catch (Op) {
-          throw ip === cp && (ip = null), pp.error((0, Xp.J)(Op), Op)
+          return mT = UT ??= (0, aT.I)(TT.url(), (0, yT.b)(TT.name)), await mT
+        } catch (WT) {
+          throw UT === mT && (UT = null), TT.error((0, aT.P)(WT), WT)
         }
       };
       return {
         load: () => {
-          if (op) return Promise.reject(op);
-          if (cp) return cp;
-          const ip = (async () => {
-            const ip = await Ip();
+          if (zT) return Promise.reject(zT);
+          if (mT) return mT;
+          const UT = (async () => {
+            const UT = await MT();
             try {
-              await pp.init(ip)
-            } catch (cp) {
-              throw pp.error("instantiate", cp)
+              await TT.init(UT)
+            } catch (mT) {
+              throw TT.error("instantiate", mT)
             }
-            return pp.bindings
+            return TT.bindings
           })();
-          cp = ip, Op = ip;
-          const Sp = () => {
-            Op === ip && (Op = null)
+          mT = UT, WT = UT;
+          const gT = () => {
+            WT === UT && (WT = null)
           };
-          return ip.then(Sp, (() => {
-            Sp(), cp === ip && (cp = null)
-          })), ip
+          return UT.then(gT, (() => {
+            gT(), mT === UT && (mT = null)
+          })), UT
         },
         prefetch: async () => {
-          op || cp || await Ip()
+          zT || mT || await MT()
         },
-        markTrapped: ip => (op ??= pp.error("call", ip), op),
+        markTrapped: UT => (zT ??= TT.error("call", UT), zT),
         unload: () => {
-          op || !pp.reset || Op || (pp.reset(), cp = null)
+          zT || !TT.reset || WT || (TT.reset(), mT = null)
         }
       }
     }({
       name: "bloxd_wasm_recorder",
-      url: () => new cp.U(cp(61576)),
-      init: async pp => {
-        await Cp({
-          module_or_path: pp
-        }), Bp = Lp()
+      url: () => new mT.U(mT(61344)),
+      init: async TT => {
+        await wT({
+          module_or_path: TT
+        }), QT = HT()
       },
-      bindings: Op,
-      error: (pp, ip) => new Jp(pp, ip),
+      bindings: WT,
+      error: (TT, UT) => new IT(TT, UT),
       reset: () => {
-        Ep(), Bp = null
+        tT(), QT = null
       }
     });
 
-    function Tp() {
-      return Np.load()
+    function FT() {
+      return sT.load()
     }
 
-    function fp() {
-      return Np.prefetch()
+    function PT() {
+      return sT.prefetch()
     }
 
-    function bp(pp) {
-      return Np.markTrapped(pp)
+    function VT(TT) {
+      return sT.markTrapped(TT)
     }
 
-    function hp() {
-      Np.unload()
+    function uT() {
+      sT.unload()
     }
 
-    function ap() {
-      return Bp?.buffer.byteLength ?? 0
+    function CT() {
+      return QT?.buffer.byteLength ?? 0
     }
   },
-  6762: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  6688: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT
     });
-    var Op = cp(2970);
-    const op = {
-      bloxd_wasm: () => "b2340e61a7d448277a389ebeac9c8ae332a7699b283661cfa159ae4f9b5e0b46",
-      bloxd_wasm_client: () => "fc04a63668a4bc6b8108c23defb833287279306fc25451198e7e46db490160bc",
-      bloxd_wasm_workers: () => "97593e648fa195611cb0537edc597de1fb35e0ff06c7ba452104e324f7e81a2a",
-      bloxd_wasm_models: () => "2bf3307bf44a828cd7c420818a0ed5b061472ebe327b277c5eba216bf14f6d21",
-      bloxd_wasm_webgpu: () => "bb0d39b71cbd62566055f119cdde94768780e27f37f323027d63e6b3a5a43b04",
-      bloxd_wasm_webgl: () => "9b5a782f90a35f11a25813cfef777f781fa19f7f35be550f5ba3ccd789c15381",
-      bloxd_wasm_webgl1: () => "53c64fa3997d454ee8786274e88a96df2e92e734612cf00e45f3b10812d8ed86",
-      bloxd_wasm_replay: () => "6da56602c0cf1eac0fee1a30eb3409cd19788e1cf0bf82c91f41e9dc2ec26a17",
-      bloxd_wasm_recorder: () => "f89c2afc61048a96a7ea68674c418202687a5df82028a7c7506a545f43cf8a00",
-      bloxd_wasm_anim: () => "12c4beb6cacfbdea124da1b78d9d3bb64d476f26a1d82ae9031fb1eb6b45b89d",
-      bloxd_wasm_textures: () => "8da34a927a2e21429dd7b220d476b1d909f2b62d3b85d0f3e892b23b3c44d36f",
-      bloxd_wasm_shader_pack: () => "5e1ab13681c364aca3fb9e7bad689eb7302538f98091c87c0994a7538b0e884b"
+    var WT = mT(3001);
+    const zT = {
+      bloxd_wasm: () => "f27f4f7ab88718881db9d78f55a901cbbb02cd6bf05768435c5f2febd84d596d",
+      bloxd_wasm_client: () => "fe788e9625b49e5678303f11a8ccc6a8c723d74fb00195130bf800992df44145",
+      bloxd_wasm_workers: () => "9fb7dbb4f3017c2cc6380a2c767b44a4b54fa9ed16a4abd92a7532b57861043e",
+      bloxd_wasm_models: () => "c20178931ac19cee58b7771522bf0ba147ea1510835a2c987e0b1db7fea6ed31",
+      bloxd_wasm_webgpu: () => "35eb5bbeecb540e751c7772a16e8c673eae334d8012cb03c16848cbcaead6ddb",
+      bloxd_wasm_webgl: () => "cec6d5fa8c55e39d3e1d139626227ac277edded615c086119498fb33675206ab",
+      bloxd_wasm_webgl1: () => "74b3f9f1c13416de2df904cf4e4ab62ffa42eac861f93b0a1bccb4d2143350c5",
+      bloxd_wasm_replay: () => "f779c38a59848818069249dcb1a8196265b0837c473149c9b69b1b4da8202e06",
+      bloxd_wasm_recorder: () => "51a9fb786a0c5f3456cd21a32d84b845b2ae56e9d50089027c682f1bd37ca3f5",
+      bloxd_wasm_anim: () => "9afb84ad58982f160166f83214a1898ab627c7d097478d5712c0084c9f41f151",
+      bloxd_wasm_textures: () => "4cb0448cd98b7a67e67215005f76b27fa8e465345a667579443082f00c6c20a6",
+      bloxd_wasm_shader_pack: () => "b8b683214f5ac4a8b9de92714a869aeb3ab931c2e3e084bdd9355b16df02f922"
     };
-    var Ip = cp(4791);
+    var MT = mT(4780);
 
-    function Sp(pp) {
-      const ip = Object.prototype.hasOwnProperty.call(op, pp) ? op[pp]() : void 0;
-      if (void 0 !== ip) return {
-        sha256: ip,
-        onMismatch: Ip.v
+    function gT(TT) {
+      const UT = Object.prototype.hasOwnProperty.call(zT, TT) ? zT[TT]() : void 0;
+      if (void 0 !== UT) return {
+        sha256: UT,
+        onMismatch: MT.z
       };
-      throw new Op.g(`${pp} has no release digest, so this build refuses it`)
+      throw new WT.i(`${TT} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

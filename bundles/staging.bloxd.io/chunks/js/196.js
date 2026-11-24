@@ -1,46 +1,46 @@
 export const id = 196;
 export const ids = [196];
 export const modules = {
-  34306: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      ALL_DEV_TOOLS: () => Sp,
-      coreDevTools: () => Yp,
-      devTools: () => Lp
+  34152: (TT, UT, mT) => {
+    mT.r(UT), mT.d(UT, {
+      ALL_DEV_TOOLS: () => gT,
+      coreDevTools: () => kT,
+      devTools: () => HT
     });
-    var Op = cp(657),
-      op = cp(1317),
-      Ip = cp(34310);
-    const Sp = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function xp() {
+    var WT = mT(681),
+      zT = mT(1398),
+      MT = mT(34156);
+    const gT = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function nT() {
       const {
-        noaDevTools: pp
-      } = await cp.e(242).then((() => cp(41280)));
-      return pp
+        noaDevTools: TT
+      } = await mT.e(242).then((() => mT(41207)));
+      return TT
     }
-    const Lp = new class {
+    const HT = new class {
         constructor() {
-          this.loadHost = xp, this.tools = Sp
+          this.loadHost = nT, this.tools = gT
         }
-        setHost(pp) {
-          this.tools = null === pp ? Sp : pp.tools, this.loadHost = null === pp ? xp : async () => pp
+        setHost(TT) {
+          this.tools = null === TT ? gT : TT.tools, this.loadHost = null === TT ? nT : async () => TT
         }
-        supports(pp) {
-          return this.tools.has(pp)
+        supports(TT) {
+          return this.tools.has(TT)
         }
-        async downloadScene(pp, ip) {
-          const cp = await this.loadHost();
-          await cp.downloadScene(pp, ip)
+        async downloadScene(TT, UT) {
+          const mT = await this.loadHost();
+          await mT.downloadScene(TT, UT)
         }
-        async setAmbientLightIntensity(pp) {
-          const ip = await this.loadHost();
-          await ip.setAmbientLightIntensity(pp)
+        async setAmbientLightIntensity(TT) {
+          const UT = await this.loadHost();
+          await UT.setAmbientLightIntensity(TT)
         }
-        async capturePhoto(pp, ip, cp) {
-          return (await this.loadHost()).capturePhoto(pp, ip, cp)
+        async capturePhoto(TT, UT, mT) {
+          return (await this.loadHost()).capturePhoto(TT, UT, mT)
         }
       },
-      Yp = {
-        tools: Ip.d,
+      kT = {
+        tools: MT.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -51,10 +51,10 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    Op.z && Lp.setHost(Yp), (0, op.y)((() => {
-      Lp.setHost(Yp)
+    WT.B && HT.setHost(kT), (0, zT.q)((() => {
+      HT.setHost(kT)
     }))
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

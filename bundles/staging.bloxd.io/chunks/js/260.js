@@ -1,35 +1,35 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  40605: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  40564: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => WT
     });
-    let Op = !1
+    let WT = !1
   },
-  40195: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => yp
+  40088: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => BT
     });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(37349),
-      Sp = cp(37320),
-      xp = cp(37345),
-      Lp = cp(38124),
-      Yp = cp(40225);
-    class Dp {
+    var WT = mT(40095),
+      zT = mT(40102),
+      MT = mT(37219),
+      gT = mT(37188),
+      nT = mT(37216),
+      HT = mT(38045),
+      kT = mT(40114);
+    class jT {
       get wrapU() {
         return this._wrapU
       }
-      set wrapU(pp) {
-        this._wrapU = pp
+      set wrapU(TT) {
+        this._wrapU = TT
       }
       get wrapV() {
         return this._wrapV
       }
-      set wrapV(pp) {
-        this._wrapV = pp
+      set wrapV(TT) {
+        this._wrapV = TT
       }
       get coordinatesMode() {
         return 0
@@ -37,29 +37,29 @@ export const modules = {
       get isCube() {
         return !!this._texture && this._texture.isCube
       }
-      set isCube(pp) {
-        this._texture && (this._texture.isCube = pp)
+      set isCube(TT) {
+        this._texture && (this._texture.isCube = TT)
       }
       get is3D() {
         return !!this._texture && this._texture.is3D
       }
-      set is3D(pp) {
-        this._texture && (this._texture.is3D = pp)
+      set is3D(TT) {
+        this._texture && (this._texture.is3D = TT)
       }
       get is2DArray() {
         return !!this._texture && this._texture.is2DArray
       }
-      set is2DArray(pp) {
-        this._texture && (this._texture.is2DArray = pp)
+      set is2DArray(TT) {
+        this._texture && (this._texture.is2DArray = TT)
       }
       getClassName() {
         return "ThinTexture"
       }
-      static _IsRenderTargetWrapper(pp) {
-        return void 0 !== pp?.shareDepth
+      static _IsRenderTargetWrapper(TT) {
+        return void 0 !== TT?.shareDepth
       }
-      constructor(pp) {
-        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = Yp.c.Zero(), this._cachedBaseSize = Yp.c.Zero(), this._initialSamplingMode = 2, this._texture = Dp._IsRenderTargetWrapper(pp) ? pp.texture : pp, this._texture && (this._engine = this._texture.gy(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      constructor(TT) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = kT.d.Zero(), this._cachedBaseSize = kT.d.Zero(), this._initialSamplingMode = 2, this._texture = jT._IsRenderTargetWrapper(TT) ? TT.texture : TT, this._texture && (this._engine = this._texture.eB(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
       }
       isReady() {
         return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
@@ -81,9 +81,9 @@ export const modules = {
       get samplingMode() {
         return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      updateSamplingMode(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._texture && this._engine && this._engine.updateTextureSamplingMode(pp, this._texture, this._texture.generateMipMaps && ip)
+      updateSamplingMode(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(TT, this._texture, this._texture.generateMipMaps && UT)
       }
       releaseInternalTexture() {
         this._texture && (this._texture.dispose(), this._texture = null)
@@ -92,63 +92,63 @@ export const modules = {
         this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-    var Ap, Pp = cp(40233),
-      Wp = cp(40096);
-    let yp = (() => {
-      var pp;
-      let ip, cp, Yp, Ap, Wp, yp, Up, wp, vp, tp, Hp, dp, ep, jp, kp, mp, Rp, qp, Mp, Cp, Ep, Xp, lp, Qp, Jp, Bp = Dp,
-        Np = [],
-        Tp = [],
-        fp = [],
-        bp = [],
-        hp = [],
-        ap = [],
-        np = [],
-        Fp = [],
-        gp = [],
-        Gp = [],
-        rp = [],
-        Zp = [],
-        zp = [],
-        sp = [],
-        Kp = [],
-        Vp = [],
-        ii = [],
-        ci = [],
-        Oi = [],
-        oi = [],
-        Ii = [],
-        Si = [],
-        xi = [],
-        Li = [],
-        Yi = [],
-        Di = [],
-        Ai = [],
-        Pi = [],
-        Wi = [],
-        yi = [],
-        Ui = [];
-      return pp = class extends Bp {
-        set hasAlpha(pp) {
-          this._hasAlpha = pp
+    var lT, LT = mT(40122),
+      pT = mT(39965);
+    let BT = (() => {
+      var TT;
+      let UT, mT, kT, lT, pT, BT, ZT, cT, vT, fT, qT, iT, bT, OT, eT, YT, JT, xT, dT, wT, tT, aT, yT, XT, IT, QT = jT,
+        sT = [],
+        FT = [],
+        PT = [],
+        VT = [],
+        uT = [],
+        CT = [],
+        rT = [],
+        KT = [],
+        ST = [],
+        GT = [],
+        NT = [],
+        ET = [],
+        hT = [],
+        DT = [],
+        oT = [],
+        AT = [],
+        RT = [],
+        TU = [],
+        UU = [],
+        mU = [],
+        WU = [],
+        zU = [],
+        MU = [],
+        gU = [],
+        nU = [],
+        HU = [],
+        kU = [],
+        jU = [],
+        lU = [],
+        LU = [],
+        pU = [];
+      return TT = class extends QT {
+        set hasAlpha(TT) {
+          this._hasAlpha = TT
         }
         get hasAlpha() {
           return this._hasAlpha
         }
-        set getAlphaFromRGB(pp) {
-          this._getAlphaFromRGB !== pp && (this._getAlphaFromRGB = pp, this._scene && this._scene.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
+        set getAlphaFromRGB(TT) {
+          this._getAlphaFromRGB !== TT && (this._getAlphaFromRGB = TT, this._scene && this._scene.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
         }
         get getAlphaFromRGB() {
           return this._getAlphaFromRGB
         }
-        set coordinatesIndex(pp) {
-          this._coordinatesIndex !== pp && (this._coordinatesIndex = pp, this._scene && this._scene.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
+        set coordinatesIndex(TT) {
+          this._coordinatesIndex !== TT && (this._coordinatesIndex = TT, this._scene && this._scene.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
         }
         get coordinatesIndex() {
           return this._coordinatesIndex
         }
-        set coordinatesMode(pp) {
-          this._coordinatesMode !== pp && (this._coordinatesMode = pp, this._scene && this._scene.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
+        set coordinatesMode(TT) {
+          this._coordinatesMode !== TT && (this._coordinatesMode = TT, this._scene && this._scene.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
         }
         get coordinatesMode() {
           return this._coordinatesMode
@@ -156,51 +156,51 @@ export const modules = {
         get wrapU() {
           return this._wrapU
         }
-        set wrapU(pp) {
-          this._wrapU = pp
+        set wrapU(TT) {
+          this._wrapU = TT
         }
         get wrapV() {
           return this._wrapV
         }
-        set wrapV(pp) {
-          this._wrapV = pp
+        set wrapV(TT) {
+          this._wrapV = TT
         }
         get isCube() {
           return this._texture ? this._texture.isCube : this._isCube
         }
-        set isCube(pp) {
-          this._texture ? this._texture.isCube = pp : this._isCube = pp
+        set isCube(TT) {
+          this._texture ? this._texture.isCube = TT : this._isCube = TT
         }
         get is3D() {
           return !!this._texture && this._texture.is3D
         }
-        set is3D(pp) {
-          this._texture && (this._texture.is3D = pp)
+        set is3D(TT) {
+          this._texture && (this._texture.is3D = TT)
         }
         get is2DArray() {
           return !!this._texture && this._texture.is2DArray
         }
-        set is2DArray(pp) {
-          this._texture && (this._texture.is2DArray = pp)
+        set is2DArray(TT) {
+          this._texture && (this._texture.is2DArray = TT)
         }
         get gammaSpace() {
           return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
         }
-        set gammaSpace(pp) {
+        set gammaSpace(TT) {
           if (this._texture) {
-            if (this._texture._gammaSpace === pp) return;
-            this._texture._gammaSpace = pp
+            if (this._texture._gammaSpace === TT) return;
+            this._texture._gammaSpace = TT
           } else {
-            if (this._gammaSpace === pp) return;
-            this._gammaSpace = pp
+            if (this._gammaSpace === TT) return;
+            this._gammaSpace = TT
           }
-          this.Gl()?.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this)))
+          this.KF()?.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this)))
         }
         get isRGBD() {
           return null != this._texture && this._texture._isRGBD
         }
-        set isRGBD(pp) {
-          pp !== this.isRGBD && (this._texture && (this._texture._isRGBD = pp), this.Gl()?.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
+        set isRGBD(TT) {
+          TT !== this.isRGBD && (this._texture && (this._texture._isRGBD = TT), this.KF()?.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
         }
         get noMipmap() {
           return !1
@@ -208,29 +208,29 @@ export const modules = {
         get lodGenerationOffset() {
           return this._texture ? this._texture._lodGenerationOffset : 0
         }
-        set lodGenerationOffset(pp) {
-          this._texture && (this._texture._lodGenerationOffset = pp)
+        set lodGenerationOffset(TT) {
+          this._texture && (this._texture._lodGenerationOffset = TT)
         }
         get lodGenerationScale() {
           return this._texture ? this._texture._lodGenerationScale : 0
         }
-        set lodGenerationScale(pp) {
-          this._texture && (this._texture._lodGenerationScale = pp)
+        set lodGenerationScale(TT) {
+          this._texture && (this._texture._lodGenerationScale = TT)
         }
         get linearSpecularLOD() {
           return !!this._texture && this._texture._linearSpecularLOD
         }
-        set linearSpecularLOD(pp) {
-          this._texture && (this._texture._linearSpecularLOD = pp)
+        set linearSpecularLOD(TT) {
+          this._texture && (this._texture._linearSpecularLOD = TT)
         }
         get irradianceTexture() {
           return this._texture ? this._texture._irradianceTexture : null
         }
-        set irradianceTexture(pp) {
-          this._texture && (this._texture._irradianceTexture = pp)
+        set irradianceTexture(TT) {
+          this._texture && (this._texture._irradianceTexture = TT)
         }
         get uid() {
-          return this._uid || (this._uid = (0, Lp.e)()), this._uid
+          return this._uid || (this._uid = (0, HT.c)()), this._uid
         }
         toString() {
           return this.name
@@ -238,8 +238,8 @@ export const modules = {
         getClassName() {
           return "BaseTexture"
         }
-        set onDispose(pp) {
-          this._onDisposeObserver && this.Kl.remove(this._onDisposeObserver), this._onDisposeObserver = this.Kl.add(pp)
+        set onDispose(TT) {
+          this._onDisposeObserver && this.SF.remove(this._onDisposeObserver), this._onDisposeObserver = this.SF.add(TT)
         }
         get isBlocking() {
           return !0
@@ -250,21 +250,21 @@ export const modules = {
         get errorObject() {
           return this._errorObject
         }
-        constructor(ip) {
-          let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          super(null), this.uniqueId = ((0, Op.l)(this, Np), (0, Op.l)(this, Tp, void 0)), this.name = ((0, Op.l)(this, fp), (0, Op.l)(this, bp, void 0)), this.displayName = ((0, Op.l)(this, hp), (0, Op.l)(this, ap, void 0)), this.metadata = ((0, Op.l)(this, np), (0, Op.l)(this, Fp, null)), this._internalMetadata = (0, Op.l)(this, gp), this.reservedDataStore = null, this._hasAlpha = (0, Op.l)(this, Gp, !1), this._getAlphaFromRGB = ((0, Op.l)(this, rp), (0, Op.l)(this, Zp, !1)), this.level = ((0, Op.l)(this, zp), (0, Op.l)(this, sp, 1)), this._coordinatesIndex = ((0, Op.l)(this, Kp), (0, Op.l)(this, Vp, 0)), this.optimizeUVAllocation = ((0, Op.l)(this, ii), (0, Op.l)(this, ci, !0)), this._coordinatesMode = ((0, Op.l)(this, Oi), (0, Op.l)(this, oi, 0)), this.wrapR = ((0, Op.l)(this, Ii), (0, Op.l)(this, Si, 1)), this.anisotropicFilteringLevel = ((0, Op.l)(this, xi), (0, Op.l)(this, Li, pp.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, Op.l)(this, Yi), !1), this._gammaSpace = !0, this.invertZ = (0, Op.l)(this, Di, !1), this.lodLevelInAlpha = ((0, Op.l)(this, Ai), (0, Op.l)(this, Pi, !1)), this._dominantDirection = ((0, Op.l)(this, Wi), null), this.isRenderTarget = (0, Op.l)(this, yi, !1), this._prefiltered = ((0, Op.l)(this, Ui), !1), this._forceSerialize = !1, this.animations = [], this.Kl = new Ip.d, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, ip ? pp._IsScene(ip) ? this._scene = ip : this._engine = ip : this._scene = xp.e.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.gy()), this._texture = cp, this._uid = null
+        constructor(UT) {
+          let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, WT.k)(this, sT), (0, WT.k)(this, FT, void 0)), this.name = ((0, WT.k)(this, PT), (0, WT.k)(this, VT, void 0)), this.displayName = ((0, WT.k)(this, uT), (0, WT.k)(this, CT, void 0)), this.metadata = ((0, WT.k)(this, rT), (0, WT.k)(this, KT, null)), this._internalMetadata = (0, WT.k)(this, ST), this.reservedDataStore = null, this._hasAlpha = (0, WT.k)(this, GT, !1), this._getAlphaFromRGB = ((0, WT.k)(this, NT), (0, WT.k)(this, ET, !1)), this.level = ((0, WT.k)(this, hT), (0, WT.k)(this, DT, 1)), this._coordinatesIndex = ((0, WT.k)(this, oT), (0, WT.k)(this, AT, 0)), this.optimizeUVAllocation = ((0, WT.k)(this, RT), (0, WT.k)(this, TU, !0)), this._coordinatesMode = ((0, WT.k)(this, UU), (0, WT.k)(this, mU, 0)), this.wrapR = ((0, WT.k)(this, WU), (0, WT.k)(this, zU, 1)), this.anisotropicFilteringLevel = ((0, WT.k)(this, MU), (0, WT.k)(this, gU, TT.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, WT.k)(this, nU), !1), this._gammaSpace = !0, this.invertZ = (0, WT.k)(this, HU, !1), this.lodLevelInAlpha = ((0, WT.k)(this, kU), (0, WT.k)(this, jU, !1)), this._dominantDirection = ((0, WT.k)(this, lU), null), this.isRenderTarget = (0, WT.k)(this, LU, !1), this._prefiltered = ((0, WT.k)(this, pU), !1), this._forceSerialize = !1, this.animations = [], this.SF = new MT.d, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, UT ? TT._IsScene(UT) ? this._scene = UT : this._engine = UT : this._scene = nT.c.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.eB()), this._texture = mT, this._uid = null
         }
-        Gl() {
+        KF() {
           return this._scene
         }
         _getEngine() {
           return this._engine
         }
         getTextureMatrix() {
-          return Sp.b.IdentityReadOnly
+          return gT.e.IdentityReadOnly
         }
         getReflectionTextureMatrix() {
-          return Sp.b.IdentityReadOnly
+          return gT.e.IdentityReadOnly
         }
         getRefractionTextureMatrix() {
           return this.getReflectionTextureMatrix()
@@ -272,18 +272,18 @@ export const modules = {
         isReadyOrNotBlocking() {
           return !this.isBlocking || this.isReady() || this.loadingError
         }
-        scale(pp) {}
+        scale(TT) {}
         get canRescale() {
           return !1
         }
-        _getFromCache(pp, ip, cp, Op, op, Ip) {
-          const Sp = this._getEngine();
-          if (!Sp) return null;
-          const xp = Sp._getUseSRGBBuffer(!!op, ip),
-            Lp = Sp.getLoadedTexturesCache();
-          for (let Yp = 0; Yp < Lp.length; Yp++) {
-            const Sp = Lp[Yp];
-            if ((void 0 === op || xp === Sp._useSRGBBuffer) && (void 0 === Op || Op === Sp.invertY) && Sp.url === pp && Sp.generateMipMaps === !ip && (!cp || cp === Sp.samplingMode) && (void 0 === Ip || Ip === Sp.isCube)) return Sp.incrementReferences(), Sp
+        _getFromCache(TT, UT, mT, WT, zT, MT) {
+          const gT = this._getEngine();
+          if (!gT) return null;
+          const nT = gT._getUseSRGBBuffer(!!zT, UT),
+            HT = gT.getLoadedTexturesCache();
+          for (let kT = 0; kT < HT.length; kT++) {
+            const gT = HT[kT];
+            if ((void 0 === zT || nT === gT._useSRGBBuffer) && (void 0 === WT || WT === gT.invertY) && gT.url === TT && gT.generateMipMaps === !UT && (!mT || mT === gT.samplingMode) && (void 0 === MT || MT === gT.isCube)) return gT.incrementReferences(), gT
           }
           return null
         }
@@ -298,48 +298,48 @@ export const modules = {
           return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
         }
         _markAllSubMeshesAsTexturesDirty() {
-          const pp = this.Gl();
-          pp && pp.markAllMaterialsAsDirty(1)
+          const TT = this.KF();
+          TT && TT.markAllMaterialsAsDirty(1)
         }
         readPixels() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-            Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-            Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
-            xp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
-            Lp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            MT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            gT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            nT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            HT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
           if (!this._texture) return null;
-          const Yp = this._getEngine();
-          if (!Yp) return null;
-          const Dp = this.getSize();
-          let Ap = Dp.width,
-            Pp = Dp.height;
-          0 !== ip && (Ap /= Math.pow(2, ip), Pp /= Math.pow(2, ip), Ap = Math.round(Ap), Pp = Math.round(Pp)), xp = Math.min(Ap, xp), Lp = Math.min(Pp, Lp);
+          const kT = this._getEngine();
+          if (!kT) return null;
+          const jT = this.getSize();
+          let lT = jT.width,
+            LT = jT.height;
+          0 !== UT && (lT /= Math.pow(2, UT), LT /= Math.pow(2, UT), lT = Math.round(lT), LT = Math.round(LT)), nT = Math.min(lT, nT), HT = Math.min(LT, HT);
           try {
-            return this._texture.isCube || this._texture.is2DArray ? Yp._readTexturePixels(this._texture, xp, Lp, pp, ip, cp, Op, op, Ip, Sp) : Yp._readTexturePixels(this._texture, xp, Lp, -1, ip, cp, Op, op, Ip, Sp)
-          } catch (Wp) {
+            return this._texture.isCube || this._texture.is2DArray ? kT._readTexturePixels(this._texture, nT, HT, TT, UT, mT, WT, zT, MT, gT) : kT._readTexturePixels(this._texture, nT, HT, -1, UT, mT, WT, zT, MT, gT)
+          } catch (pT) {
             return null
           }
         }
         _readPixelsSync() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            WT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
           if (!this._texture) return null;
-          const Ip = this.getSize();
-          let Sp = Ip.width,
-            xp = Ip.height;
-          const Lp = this._getEngine();
-          if (!Lp) return null;
-          0 != ip && (Sp /= Math.pow(2, ip), xp /= Math.pow(2, ip), Sp = Math.round(Sp), xp = Math.round(xp));
+          const MT = this.getSize();
+          let gT = MT.width,
+            nT = MT.height;
+          const HT = this._getEngine();
+          if (!HT) return null;
+          0 != UT && (gT /= Math.pow(2, UT), nT /= Math.pow(2, UT), gT = Math.round(gT), nT = Math.round(nT));
           try {
-            return this._texture.isCube ? Lp._readTexturePixelsSync(this._texture, Sp, xp, pp, ip, cp, Op, op) : Lp._readTexturePixelsSync(this._texture, Sp, xp, -1, ip, cp, Op, op)
-          } catch (Yp) {
+            return this._texture.isCube ? HT._readTexturePixelsSync(this._texture, gT, nT, TT, UT, mT, WT, zT) : HT._readTexturePixelsSync(this._texture, gT, nT, -1, UT, mT, WT, zT)
+          } catch (kT) {
             return null
           }
         }
@@ -355,438 +355,438 @@ export const modules = {
         dispose() {
           if (this._scene) {
             this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
-            const pp = this._scene.textures.indexOf(this);
-            if (pp >= 0 && this._scene.textures.splice(pp, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
-              const pp = this._parentContainer.textures.indexOf(this);
-              pp > -1 && this._parentContainer.textures.splice(pp, 1), this._parentContainer = null
+            const TT = this._scene.textures.indexOf(this);
+            if (TT >= 0 && this._scene.textures.splice(TT, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const TT = this._parentContainer.textures.indexOf(this);
+              TT > -1 && this._parentContainer.textures.splice(TT, 1), this._parentContainer = null
             }
           }
-          this.Kl.notifyObservers(this), this.Kl.clear(), this.metadata = null, super.dispose()
+          this.SF.notifyObservers(this), this.SF.clear(), this.metadata = null, super.dispose()
         }
         serialize() {
-          let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (!this.name && !pp) return null;
-          const ip = Pp.c.Serialize(this);
-          return Pp.c.AppendSerializedAnimations(this, ip), ip
+          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !TT) return null;
+          const UT = LT.e.Serialize(this);
+          return LT.e.AppendSerializedAnimations(this, UT), UT
         }
-        static WhenAllReady(pp, ip) {
-          let cp = pp.length;
-          if (0 !== cp)
-            for (let Op = 0; Op < pp.length; Op++) {
-              const op = pp[Op];
-              if (op.isReady()) 0 === --cp && ip();
+        static WhenAllReady(TT, UT) {
+          let mT = TT.length;
+          if (0 !== mT)
+            for (let WT = 0; WT < TT.length; WT++) {
+              const zT = TT[WT];
+              if (zT.isReady()) 0 === --mT && UT();
               else {
-                const pp = op.onLoadObservable;
-                pp ? pp.addOnce((() => {
-                  0 === --cp && ip()
-                })) : 0 === --cp && ip()
+                const TT = zT.onLoadObservable;
+                TT ? TT.addOnce((() => {
+                  0 === --mT && UT()
+                })) : 0 === --mT && UT()
               }
-            } else ip()
+            } else UT()
         }
-        static _IsScene(pp) {
-          return "Scene" === pp.getClassName()
+        static _IsScene(TT) {
+          return "Scene" === TT.getClassName()
         }
       }, (() => {
-        const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Bp[Symbol.metadata] ?? null) : void 0;
-        ip = [(0, op.K)()], cp = [(0, op.K)()], Yp = [(0, op.K)()], Ap = [(0, op.K)()], Wp = [(0, op.K)("hasAlpha")], yp = [(0, op.K)("getAlphaFromRGB")], Up = [(0, op.K)()], wp = [(0, op.K)("coordinatesIndex")], vp = [(0, op.K)()], tp = [(0, op.K)("coordinatesMode")], Hp = [(0, op.K)()], dp = [(0, op.K)()], ep = [(0, op.K)()], jp = [(0, op.K)()], kp = [(0, op.K)()], mp = [(0, op.K)()], Rp = [(0, op.K)()], qp = [(0, op.K)()], Mp = [(0, op.K)()], Cp = [(0, op.K)()], Ep = [(0, op.K)()], Xp = [(0, op.K)()], lp = [(0, op.K)()], Qp = [(0, op.C)()], Jp = [(0, op.K)()], (0, Op.j)(pp, null, Hp, {
+        const MT = "function" === typeof Symbol && Symbol.metadata ? Object.create(QT[Symbol.metadata] ?? null) : void 0;
+        UT = [(0, zT.L)()], mT = [(0, zT.L)()], kT = [(0, zT.L)()], lT = [(0, zT.L)()], pT = [(0, zT.L)("hasAlpha")], BT = [(0, zT.L)("getAlphaFromRGB")], ZT = [(0, zT.L)()], cT = [(0, zT.L)("coordinatesIndex")], vT = [(0, zT.L)()], fT = [(0, zT.L)("coordinatesMode")], qT = [(0, zT.L)()], iT = [(0, zT.L)()], bT = [(0, zT.L)()], OT = [(0, zT.L)()], eT = [(0, zT.L)()], YT = [(0, zT.L)()], JT = [(0, zT.L)()], xT = [(0, zT.L)()], dT = [(0, zT.L)()], wT = [(0, zT.L)()], tT = [(0, zT.L)()], aT = [(0, zT.L)()], yT = [(0, zT.L)()], XT = [(0, zT.C)()], IT = [(0, zT.L)()], (0, WT.h)(TT, null, qT, {
           kind: "getter",
           name: "wrapU",
           static: !1,
           private: !1,
           access: {
-            has: pp => "wrapU" in pp,
-            get: pp => pp.wrapU
+            has: TT => "wrapU" in TT,
+            get: TT => TT.wrapU
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, dp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, iT, {
           kind: "getter",
           name: "wrapV",
           static: !1,
           private: !1,
           access: {
-            has: pp => "wrapV" in pp,
-            get: pp => pp.wrapV
+            has: TT => "wrapV" in TT,
+            get: TT => TT.wrapV
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, kp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, eT, {
           kind: "getter",
           name: "isCube",
           static: !1,
           private: !1,
           access: {
-            has: pp => "isCube" in pp,
-            get: pp => pp.isCube
+            has: TT => "isCube" in TT,
+            get: TT => TT.isCube
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, mp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, YT, {
           kind: "getter",
           name: "is3D",
           static: !1,
           private: !1,
           access: {
-            has: pp => "is3D" in pp,
-            get: pp => pp.is3D
+            has: TT => "is3D" in TT,
+            get: TT => TT.is3D
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, Rp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, JT, {
           kind: "getter",
           name: "is2DArray",
           static: !1,
           private: !1,
           access: {
-            has: pp => "is2DArray" in pp,
-            get: pp => pp.is2DArray
+            has: TT => "is2DArray" in TT,
+            get: TT => TT.is2DArray
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, qp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, xT, {
           kind: "getter",
           name: "gammaSpace",
           static: !1,
           private: !1,
           access: {
-            has: pp => "gammaSpace" in pp,
-            get: pp => pp.gammaSpace
+            has: TT => "gammaSpace" in TT,
+            get: TT => TT.gammaSpace
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, Ep, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, tT, {
           kind: "getter",
           name: "lodGenerationOffset",
           static: !1,
           private: !1,
           access: {
-            has: pp => "lodGenerationOffset" in pp,
-            get: pp => pp.lodGenerationOffset
+            has: TT => "lodGenerationOffset" in TT,
+            get: TT => TT.lodGenerationOffset
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, Xp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, aT, {
           kind: "getter",
           name: "lodGenerationScale",
           static: !1,
           private: !1,
           access: {
-            has: pp => "lodGenerationScale" in pp,
-            get: pp => pp.lodGenerationScale
+            has: TT => "lodGenerationScale" in TT,
+            get: TT => TT.lodGenerationScale
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, lp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, yT, {
           kind: "getter",
           name: "linearSpecularLOD",
           static: !1,
           private: !1,
           access: {
-            has: pp => "linearSpecularLOD" in pp,
-            get: pp => pp.linearSpecularLOD
+            has: TT => "linearSpecularLOD" in TT,
+            get: TT => TT.linearSpecularLOD
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(pp, null, Qp, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(TT, null, XT, {
           kind: "getter",
           name: "irradianceTexture",
           static: !1,
           private: !1,
           access: {
-            has: pp => "irradianceTexture" in pp,
-            get: pp => pp.irradianceTexture
+            has: TT => "irradianceTexture" in TT,
+            get: TT => TT.irradianceTexture
           },
-          metadata: Ip
-        }, null, Np), (0, Op.j)(null, null, ip, {
+          metadata: MT
+        }, null, sT), (0, WT.h)(null, null, UT, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: pp => "uniqueId" in pp,
-            get: pp => pp.uniqueId,
-            set: (pp, ip) => {
-              pp.uniqueId = ip
+            has: TT => "uniqueId" in TT,
+            get: TT => TT.uniqueId,
+            set: (TT, UT) => {
+              TT.uniqueId = UT
             }
           },
-          metadata: Ip
-        }, Tp, fp), (0, Op.j)(null, null, cp, {
+          metadata: MT
+        }, FT, PT), (0, WT.h)(null, null, mT, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: pp => "name" in pp,
-            get: pp => pp.name,
-            set: (pp, ip) => {
-              pp.name = ip
+            has: TT => "name" in TT,
+            get: TT => TT.name,
+            set: (TT, UT) => {
+              TT.name = UT
             }
           },
-          metadata: Ip
-        }, bp, hp), (0, Op.j)(null, null, Yp, {
+          metadata: MT
+        }, VT, uT), (0, WT.h)(null, null, kT, {
           kind: "field",
           name: "displayName",
           static: !1,
           private: !1,
           access: {
-            has: pp => "displayName" in pp,
-            get: pp => pp.displayName,
-            set: (pp, ip) => {
-              pp.displayName = ip
+            has: TT => "displayName" in TT,
+            get: TT => TT.displayName,
+            set: (TT, UT) => {
+              TT.displayName = UT
             }
           },
-          metadata: Ip
-        }, ap, np), (0, Op.j)(null, null, Ap, {
+          metadata: MT
+        }, CT, rT), (0, WT.h)(null, null, lT, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: pp => "metadata" in pp,
-            get: pp => pp.metadata,
-            set: (pp, ip) => {
-              pp.metadata = ip
+            has: TT => "metadata" in TT,
+            get: TT => TT.metadata,
+            set: (TT, UT) => {
+              TT.metadata = UT
             }
           },
-          metadata: Ip
-        }, Fp, gp), (0, Op.j)(null, null, Wp, {
+          metadata: MT
+        }, KT, ST), (0, WT.h)(null, null, pT, {
           kind: "field",
           name: "_hasAlpha",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_hasAlpha" in pp,
-            get: pp => pp._hasAlpha,
-            set: (pp, ip) => {
-              pp._hasAlpha = ip
+            has: TT => "_hasAlpha" in TT,
+            get: TT => TT._hasAlpha,
+            set: (TT, UT) => {
+              TT._hasAlpha = UT
             }
           },
-          metadata: Ip
-        }, Gp, rp), (0, Op.j)(null, null, yp, {
+          metadata: MT
+        }, GT, NT), (0, WT.h)(null, null, BT, {
           kind: "field",
           name: "_getAlphaFromRGB",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_getAlphaFromRGB" in pp,
-            get: pp => pp._getAlphaFromRGB,
-            set: (pp, ip) => {
-              pp._getAlphaFromRGB = ip
+            has: TT => "_getAlphaFromRGB" in TT,
+            get: TT => TT._getAlphaFromRGB,
+            set: (TT, UT) => {
+              TT._getAlphaFromRGB = UT
             }
           },
-          metadata: Ip
-        }, Zp, zp), (0, Op.j)(null, null, Up, {
+          metadata: MT
+        }, ET, hT), (0, WT.h)(null, null, ZT, {
           kind: "field",
           name: "level",
           static: !1,
           private: !1,
           access: {
-            has: pp => "level" in pp,
-            get: pp => pp.level,
-            set: (pp, ip) => {
-              pp.level = ip
+            has: TT => "level" in TT,
+            get: TT => TT.level,
+            set: (TT, UT) => {
+              TT.level = UT
             }
           },
-          metadata: Ip
-        }, sp, Kp), (0, Op.j)(null, null, wp, {
+          metadata: MT
+        }, DT, oT), (0, WT.h)(null, null, cT, {
           kind: "field",
           name: "_coordinatesIndex",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_coordinatesIndex" in pp,
-            get: pp => pp._coordinatesIndex,
-            set: (pp, ip) => {
-              pp._coordinatesIndex = ip
+            has: TT => "_coordinatesIndex" in TT,
+            get: TT => TT._coordinatesIndex,
+            set: (TT, UT) => {
+              TT._coordinatesIndex = UT
             }
           },
-          metadata: Ip
-        }, Vp, ii), (0, Op.j)(null, null, vp, {
+          metadata: MT
+        }, AT, RT), (0, WT.h)(null, null, vT, {
           kind: "field",
           name: "optimizeUVAllocation",
           static: !1,
           private: !1,
           access: {
-            has: pp => "optimizeUVAllocation" in pp,
-            get: pp => pp.optimizeUVAllocation,
-            set: (pp, ip) => {
-              pp.optimizeUVAllocation = ip
+            has: TT => "optimizeUVAllocation" in TT,
+            get: TT => TT.optimizeUVAllocation,
+            set: (TT, UT) => {
+              TT.optimizeUVAllocation = UT
             }
           },
-          metadata: Ip
-        }, ci, Oi), (0, Op.j)(null, null, tp, {
+          metadata: MT
+        }, TU, UU), (0, WT.h)(null, null, fT, {
           kind: "field",
           name: "_coordinatesMode",
           static: !1,
           private: !1,
           access: {
-            has: pp => "_coordinatesMode" in pp,
-            get: pp => pp._coordinatesMode,
-            set: (pp, ip) => {
-              pp._coordinatesMode = ip
+            has: TT => "_coordinatesMode" in TT,
+            get: TT => TT._coordinatesMode,
+            set: (TT, UT) => {
+              TT._coordinatesMode = UT
             }
           },
-          metadata: Ip
-        }, oi, Ii), (0, Op.j)(null, null, ep, {
+          metadata: MT
+        }, mU, WU), (0, WT.h)(null, null, bT, {
           kind: "field",
           name: "wrapR",
           static: !1,
           private: !1,
           access: {
-            has: pp => "wrapR" in pp,
-            get: pp => pp.wrapR,
-            set: (pp, ip) => {
-              pp.wrapR = ip
+            has: TT => "wrapR" in TT,
+            get: TT => TT.wrapR,
+            set: (TT, UT) => {
+              TT.wrapR = UT
             }
           },
-          metadata: Ip
-        }, Si, xi), (0, Op.j)(null, null, jp, {
+          metadata: MT
+        }, zU, MU), (0, WT.h)(null, null, OT, {
           kind: "field",
           name: "anisotropicFilteringLevel",
           static: !1,
           private: !1,
           access: {
-            has: pp => "anisotropicFilteringLevel" in pp,
-            get: pp => pp.anisotropicFilteringLevel,
-            set: (pp, ip) => {
-              pp.anisotropicFilteringLevel = ip
+            has: TT => "anisotropicFilteringLevel" in TT,
+            get: TT => TT.anisotropicFilteringLevel,
+            set: (TT, UT) => {
+              TT.anisotropicFilteringLevel = UT
             }
           },
-          metadata: Ip
-        }, Li, Yi), (0, Op.j)(null, null, Mp, {
+          metadata: MT
+        }, gU, nU), (0, WT.h)(null, null, dT, {
           kind: "field",
           name: "invertZ",
           static: !1,
           private: !1,
           access: {
-            has: pp => "invertZ" in pp,
-            get: pp => pp.invertZ,
-            set: (pp, ip) => {
-              pp.invertZ = ip
+            has: TT => "invertZ" in TT,
+            get: TT => TT.invertZ,
+            set: (TT, UT) => {
+              TT.invertZ = UT
             }
           },
-          metadata: Ip
-        }, Di, Ai), (0, Op.j)(null, null, Cp, {
+          metadata: MT
+        }, HU, kU), (0, WT.h)(null, null, wT, {
           kind: "field",
           name: "lodLevelInAlpha",
           static: !1,
           private: !1,
           access: {
-            has: pp => "lodLevelInAlpha" in pp,
-            get: pp => pp.lodLevelInAlpha,
-            set: (pp, ip) => {
-              pp.lodLevelInAlpha = ip
+            has: TT => "lodLevelInAlpha" in TT,
+            get: TT => TT.lodLevelInAlpha,
+            set: (TT, UT) => {
+              TT.lodLevelInAlpha = UT
             }
           },
-          metadata: Ip
-        }, Pi, Wi), (0, Op.j)(null, null, Jp, {
+          metadata: MT
+        }, jU, lU), (0, WT.h)(null, null, IT, {
           kind: "field",
           name: "isRenderTarget",
           static: !1,
           private: !1,
           access: {
-            has: pp => "isRenderTarget" in pp,
-            get: pp => pp.isRenderTarget,
-            set: (pp, ip) => {
-              pp.isRenderTarget = ip
+            has: TT => "isRenderTarget" in TT,
+            get: TT => TT.isRenderTarget,
+            set: (TT, UT) => {
+              TT.isRenderTarget = UT
             }
           },
-          metadata: Ip
-        }, yi, Ui), Ip && Object.defineProperty(pp, Symbol.metadata, {
+          metadata: MT
+        }, LU, pU), MT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Ip
+          value: MT
         })
-      })(), pp.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, pp
+      })(), TT.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, TT
     })();
-    (Ap = yp.prototype).forceSphericalPolynomialsRecompute ?? (Ap.forceSphericalPolynomialsRecompute = (0, Wp.k)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(yp.prototype, "sphericalPolynomial") || Object.defineProperty(yp.prototype, "sphericalPolynomial", (0, Wp.h)("BaseTexture", "sphericalPolynomial"))
+    (lT = BT.prototype).forceSphericalPolynomialsRecompute ?? (lT.forceSphericalPolynomialsRecompute = (0, pT.j)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(BT.prototype, "sphericalPolynomial") || Object.defineProperty(BT.prototype, "sphericalPolynomial", (0, pT.h)("BaseTexture", "sphericalPolynomial"))
   },
-  40654: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => ep,
-      d: () => Hp
+  40602: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => bT,
+      g: () => qT
     });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(37349),
-      Sp = cp(37320),
-      xp = cp(40195),
-      Lp = cp(37368),
-      Yp = cp(40096),
-      Dp = cp(40107),
-      Ap = cp(40306),
-      Pp = cp(37989),
-      Wp = cp(40269);
+    var WT = mT(40095),
+      zT = mT(40102),
+      MT = mT(37219),
+      gT = mT(37188),
+      nT = mT(40088),
+      HT = mT(37239),
+      kT = mT(39965),
+      jT = mT(39975),
+      lT = mT(40208),
+      LT = mT(37889),
+      pT = mT(40165);
 
-    function yp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Op = ip.width,
-        op = ip.height;
-      if (pp instanceof Float32Array) {
-        let ip = pp.byteLength / pp.BYTES_PER_ELEMENT;
-        const cp = new Uint8Array(ip);
-        for (; --ip >= 0;) {
-          let Op = pp[ip];
-          Op < 0 ? Op = 0 : Op > 1 && (Op = 1), cp[ip] = 255 * Op
+    function BT(TT, UT) {
+      let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const WT = UT.width,
+        zT = UT.height;
+      if (TT instanceof Float32Array) {
+        let UT = TT.byteLength / TT.BYTES_PER_ELEMENT;
+        const mT = new Uint8Array(UT);
+        for (; --UT >= 0;) {
+          let WT = TT[UT];
+          WT < 0 ? WT = 0 : WT > 1 && (WT = 1), mT[UT] = 255 * WT
         }
-        pp = cp
+        TT = mT
       }
-      const Ip = document.createElement("canvas");
-      Ip.width = Op, Ip.height = op;
-      const Sp = Ip.getContext("2d");
-      if (!Sp) return null;
-      const xp = Sp.createImageData(Op, op);
-      if (xp.data.set(pp), Sp.putImageData(xp, 0, 0), cp) {
-        const pp = document.createElement("canvas");
-        pp.width = Op, pp.height = op;
-        const ip = pp.getContext("2d");
-        return ip ? (ip.translate(0, op), ip.scale(1, -1), ip.drawImage(Ip, 0, 0), pp.toDataURL("image/png")) : null
+      const MT = document.createElement("canvas");
+      MT.width = WT, MT.height = zT;
+      const gT = MT.getContext("2d");
+      if (!gT) return null;
+      const nT = gT.createImageData(WT, zT);
+      if (nT.data.set(TT), gT.putImageData(nT, 0, 0), mT) {
+        const TT = document.createElement("canvas");
+        TT.width = WT, TT.height = zT;
+        const UT = TT.getContext("2d");
+        return UT ? (UT.translate(0, zT), UT.scale(1, -1), UT.drawImage(MT, 0, 0), TT.toDataURL("image/png")) : null
       }
-      return Ip.toDataURL("image/png")
+      return MT.toDataURL("image/png")
     }
 
-    function Up(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Op = pp.getInternalTexture();
-      if (!Op) return null;
-      const op = pp._readPixelsSync(ip, cp);
-      return op ? yp(op, pp.getSize(), Op.invertY) : null
+    function ZT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const WT = TT.getInternalTexture();
+      if (!WT) return null;
+      const zT = TT._readPixelsSync(UT, mT);
+      return zT ? BT(zT, TT.getSize(), WT.invertY) : null
     }
-    async function wp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Op = pp.getInternalTexture();
-      if (!Op) return null;
-      const op = await pp.readPixels(ip, cp);
-      return op ? yp(op, pp.getSize(), Op.invertY) : null
+    async function cT(TT) {
+      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const WT = TT.getInternalTexture();
+      if (!WT) return null;
+      const zT = await TT.readPixels(UT, mT);
+      return zT ? BT(zT, TT.getSize(), WT.invertY) : null
     }
-    var vp = cp(40605),
-      tp = cp(40233);
-    let Hp = (() => {
-        var pp;
-        let ip, cp, yp, Hp, dp, ep, jp, kp, mp, Rp, qp, Mp, Cp, Ep = xp.d,
-          Xp = [],
-          lp = [],
-          Qp = [],
-          Jp = [],
-          Bp = [],
-          Np = [],
-          Tp = [],
-          fp = [],
-          bp = [],
-          hp = [],
-          ap = [],
-          np = [],
-          Fp = [],
-          gp = [],
-          Gp = [],
-          rp = [],
-          Zp = [],
-          zp = [],
-          sp = [],
-          Kp = [],
-          Vp = [],
-          ii = [],
-          ci = [],
-          Oi = [],
-          oi = [];
-        return pp = class extends Ep {
-          static _CreateVideoTexture(ip, cp, Op) {
-            arguments.length > 5 && void 0 !== arguments[5] || pp.TRILINEAR_SAMPLINGMODE;
-            throw (0, Yp.o)("VideoTexture")
+    var vT = mT(40564),
+      fT = mT(40122);
+    let qT = (() => {
+        var TT;
+        let UT, mT, BT, qT, iT, bT, OT, eT, YT, JT, xT, dT, wT, tT = nT.c,
+          aT = [],
+          yT = [],
+          XT = [],
+          IT = [],
+          QT = [],
+          sT = [],
+          FT = [],
+          PT = [],
+          VT = [],
+          uT = [],
+          CT = [],
+          rT = [],
+          KT = [],
+          ST = [],
+          GT = [],
+          NT = [],
+          ET = [],
+          hT = [],
+          DT = [],
+          oT = [],
+          AT = [],
+          RT = [],
+          TU = [],
+          UU = [],
+          mU = [];
+        return TT = class extends tT {
+          static _CreateVideoTexture(UT, mT, WT) {
+            arguments.length > 5 && void 0 !== arguments[5] || TT.TRILINEAR_SAMPLINGMODE;
+            throw (0, kT.k)("VideoTexture")
           }
           get noMipmap() {
             return this._noMipmap
@@ -794,8 +794,8 @@ export const modules = {
           get mimeType() {
             return this._mimeType
           }
-          set isBlocking(pp) {
-            this._isBlocking = pp
+          set isBlocking(TT) {
+            this._isBlocking = TT
           }
           get isBlocking() {
             return this._isBlocking
@@ -803,109 +803,109 @@ export const modules = {
           get invertY() {
             return this._invertY
           }
-          constructor(ip, cp, op, Sp) {
-            let xp, Lp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : pp.TRILINEAR_SAMPLINGMODE,
-              Yp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              Ap = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              Pp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              Wp = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              yp = arguments.length > 9 ? arguments[9] : void 0,
-              Up = arguments.length > 10 ? arguments[10] : void 0,
-              wp = arguments.length > 11 ? arguments[11] : void 0,
-              tp = arguments.length > 12 ? arguments[12] : void 0,
-              Hp = arguments.length > 13 ? arguments[13] : void 0;
-            super(cp), this.url = ((0, Op.l)(this, Xp), (0, Op.l)(this, lp, null)), this.uOffset = ((0, Op.l)(this, Qp), (0, Op.l)(this, Jp, 0)), this.vOffset = ((0, Op.l)(this, Bp), (0, Op.l)(this, Np, 0)), this.uScale = ((0, Op.l)(this, Tp), (0, Op.l)(this, fp, 1)), this.vScale = ((0, Op.l)(this, bp), (0, Op.l)(this, hp, 1)), this.uAng = ((0, Op.l)(this, ap), (0, Op.l)(this, np, 0)), this.vAng = ((0, Op.l)(this, Fp), (0, Op.l)(this, gp, 0)), this.wAng = ((0, Op.l)(this, Gp), (0, Op.l)(this, rp, 0)), this.uRotationCenter = ((0, Op.l)(this, Zp), (0, Op.l)(this, zp, .5)), this.vRotationCenter = ((0, Op.l)(this, sp), (0, Op.l)(this, Kp, .5)), this.wRotationCenter = ((0, Op.l)(this, Vp), (0, Op.l)(this, ii, .5)), this.homogeneousRotationInUVTransform = ((0, Op.l)(this, ci), (0, Op.l)(this, Oi, !1)), this.inspectableCustomProperties = ((0, Op.l)(this, oi), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new Ip.d, this._isBlocking = !0, this.name = ip || "", this.url = ip;
-            let dp = !1,
-              ep = null,
-              jp = !0;
-            "object" === typeof op && null !== op ? (xp = op.noMipmap ?? !1, Sp = op.invertY ?? !vp.c, Lp = op.samplingMode ?? pp.TRILINEAR_SAMPLINGMODE, Yp = op.onLoad ?? null, Ap = op.onError ?? null, Pp = op.buffer ?? null, Wp = op.deleteBuffer ?? !1, yp = op.format, Up = op.mimeType, wp = op.loaderOptions, tp = op.creationFlags, dp = op.useSRGBBuffer ?? !1, ep = op.internalTexture ?? null, jp = op.gammaSpace ?? jp, Hp = op.forcedExtension ?? Hp) : xp = !!op, this._gammaSpace = jp, this._noMipmap = xp, this._invertY = void 0 === Sp ? !vp.c : Sp, this._initialSamplingMode = Lp, this._buffer = Pp, this._deleteBuffer = Wp, this._mimeType = Up, this._loaderOptions = wp, this._creationFlags = tp, this._useSRGBBuffer = dp, this._forcedExtension = Hp, void 0 !== yp && (this._format = yp);
-            const kp = this.Gl(),
-              mp = this._getEngine();
-            if (!mp) return;
-            mp.onBeforeTextureInitObservable.notifyObservers(this);
-            const Rp = () => {
-                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), Yp && Yp(), !this.isBlocking && kp && kp.resetCachedMaterial()
+          constructor(UT, mT, zT, gT) {
+            let nT, HT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : TT.TRILINEAR_SAMPLINGMODE,
+              kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              lT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              LT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              pT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              BT = arguments.length > 9 ? arguments[9] : void 0,
+              ZT = arguments.length > 10 ? arguments[10] : void 0,
+              cT = arguments.length > 11 ? arguments[11] : void 0,
+              fT = arguments.length > 12 ? arguments[12] : void 0,
+              qT = arguments.length > 13 ? arguments[13] : void 0;
+            super(mT), this.url = ((0, WT.k)(this, aT), (0, WT.k)(this, yT, null)), this.uOffset = ((0, WT.k)(this, XT), (0, WT.k)(this, IT, 0)), this.vOffset = ((0, WT.k)(this, QT), (0, WT.k)(this, sT, 0)), this.uScale = ((0, WT.k)(this, FT), (0, WT.k)(this, PT, 1)), this.vScale = ((0, WT.k)(this, VT), (0, WT.k)(this, uT, 1)), this.uAng = ((0, WT.k)(this, CT), (0, WT.k)(this, rT, 0)), this.vAng = ((0, WT.k)(this, KT), (0, WT.k)(this, ST, 0)), this.wAng = ((0, WT.k)(this, GT), (0, WT.k)(this, NT, 0)), this.uRotationCenter = ((0, WT.k)(this, ET), (0, WT.k)(this, hT, .5)), this.vRotationCenter = ((0, WT.k)(this, DT), (0, WT.k)(this, oT, .5)), this.wRotationCenter = ((0, WT.k)(this, AT), (0, WT.k)(this, RT, .5)), this.homogeneousRotationInUVTransform = ((0, WT.k)(this, TU), (0, WT.k)(this, UU, !1)), this.inspectableCustomProperties = ((0, WT.k)(this, mU), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new MT.d, this._isBlocking = !0, this.name = UT || "", this.url = UT;
+            let iT = !1,
+              bT = null,
+              OT = !0;
+            "object" === typeof zT && null !== zT ? (nT = zT.noMipmap ?? !1, gT = zT.invertY ?? !vT.c, HT = zT.samplingMode ?? TT.TRILINEAR_SAMPLINGMODE, kT = zT.onLoad ?? null, lT = zT.onError ?? null, LT = zT.buffer ?? null, pT = zT.deleteBuffer ?? !1, BT = zT.format, ZT = zT.mimeType, cT = zT.loaderOptions, fT = zT.creationFlags, iT = zT.useSRGBBuffer ?? !1, bT = zT.internalTexture ?? null, OT = zT.gammaSpace ?? OT, qT = zT.forcedExtension ?? qT) : nT = !!zT, this._gammaSpace = OT, this._noMipmap = nT, this._invertY = void 0 === gT ? !vT.c : gT, this._initialSamplingMode = HT, this._buffer = LT, this._deleteBuffer = pT, this._mimeType = ZT, this._loaderOptions = cT, this._creationFlags = fT, this._useSRGBBuffer = iT, this._forcedExtension = qT, void 0 !== BT && (this._format = BT);
+            const eT = this.KF(),
+              YT = this._getEngine();
+            if (!YT) return;
+            YT.onBeforeTextureInitObservable.notifyObservers(this);
+            const JT = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), kT && kT(), !this.isBlocking && eT && eT.resetCachedMaterial()
               },
-              qp = (ip, cp) => {
+              xT = (UT, mT) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: ip,
-                  exception: cp
-                }, Ap && Ap(ip, cp), pp.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: UT,
+                  exception: mT
+                }, lT && lT(UT, mT), TT.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            if (!this.url && !ep) return this._delayedOnLoad = Rp, void(this._delayedOnError = qp);
-            if (this._texture = ep ?? this._getFromCache(this.url, xp, Lp, this._invertY, dp, this.isCube), this._texture)
-              if (this._texture.isReady) Dp.b.SetImmediate((() => Rp()));
+            if (!this.url && !bT) return this._delayedOnLoad = JT, void(this._delayedOnError = xT);
+            if (this._texture = bT ?? this._getFromCache(this.url, nT, HT, this._invertY, iT, this.isCube), this._texture)
+              if (this._texture.isReady) jT.e.SetImmediate((() => JT()));
               else {
-                const pp = this._texture.onLoadedObservable.add(Rp);
-                this._texture.onErrorObservable.add((ip => {
-                  qp(ip.message, ip.exception), this._texture?.onLoadedObservable.remove(pp)
+                const TT = this._texture.onLoadedObservable.add(JT);
+                this._texture.onErrorObservable.add((UT => {
+                  xT(UT.message, UT.exception), this._texture?.onLoadedObservable.remove(TT)
                 }))
               }
-            else if (kp && kp.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = Rp, this._delayedOnError = qp;
+            else if (eT && eT.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = JT, this._delayedOnError = xT;
             else {
               try {
-                this._texture = mp.createTexture(this.url, xp, this._invertY, kp, Lp, Rp, qp, this._buffer, void 0, this._format, this._forcedExtension, Up, wp, tp, dp)
-              } catch (Mp) {
-                throw qp("error loading", Mp), Mp
+                this._texture = YT.createTexture(this.url, nT, this._invertY, eT, HT, JT, xT, this._buffer, void 0, this._format, this._forcedExtension, ZT, cT, fT, iT)
+              } catch (dT) {
+                throw xT("error loading", dT), dT
               }
-              Wp && (this._buffer = null)
+              pT && (this._buffer = null)
             }
           }
-          updateURL(pp) {
-            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              cp = arguments.length > 2 ? arguments[2] : void 0,
-              Op = arguments.length > 3 ? arguments[3] : void 0;
-            this.url && (this.releaseInternalTexture(), this.Gl().markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = pp), this.url = pp, this._buffer = ip, this._forcedExtension = Op, this.delayLoadState = 4;
-            const op = this._delayedOnLoad;
+          updateURL(TT) {
+            let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              mT = arguments.length > 2 ? arguments[2] : void 0,
+              WT = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.KF().markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = TT), this.url = TT, this._buffer = UT, this._forcedExtension = WT, this.delayLoadState = 4;
+            const zT = this._delayedOnLoad;
             this._delayedOnLoad = () => {
-              op ? op() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), cp && cp()
+              zT ? zT() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), mT && mT()
             }, this.delayLoad()
           }
           delayLoad() {
             if (4 !== this.delayLoadState) return;
-            const pp = this.Gl();
-            if (!pp) return;
-            let ip = this.url;
-            !ip && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (ip = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(ip, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? Dp.b.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = pp.gy().createTexture(ip, this._noMipmap, this._invertY, pp, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+            const TT = this.KF();
+            if (!TT) return;
+            let UT = this.url;
+            !UT && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (UT = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(UT, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? jT.e.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = TT.eB().createTexture(UT, this._noMipmap, this._invertY, TT, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
           }
-          _prepareRowForTextureGeneration(pp, ip, cp, Op) {
-            pp *= this._cachedUScale, ip *= this._cachedVScale, pp -= this.uRotationCenter * this._cachedUScale, ip -= this.vRotationCenter * this._cachedVScale, cp -= this.wRotationCenter, Sp.o.TransformCoordinatesFromFloatsToRef(pp, ip, cp, this._rowGenerationMatrix, Op), Op.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, Op.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, Op.z += this.wRotationCenter
+          _prepareRowForTextureGeneration(TT, UT, mT, WT) {
+            TT *= this._cachedUScale, UT *= this._cachedVScale, TT -= this.uRotationCenter * this._cachedUScale, UT -= this.vRotationCenter * this._cachedVScale, mT -= this.wRotationCenter, gT.p.TransformCoordinatesFromFloatsToRef(TT, UT, mT, this._rowGenerationMatrix, WT), WT.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, WT.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, WT.z += this.wRotationCenter
           }
           getTextureMatrix() {
-            let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * pp === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
-            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * pp, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = Sp.b.Zero(), this._rowGenerationMatrix = new Sp.b, this._t0 = Sp.o.Zero(), this._t1 = Sp.o.Zero(), this._t2 = Sp.o.Zero()), Sp.b.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (Sp.b.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, Sp.i.Matrix[0]), Sp.b.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, Sp.i.Matrix[1]), Sp.b.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, Sp.i.Matrix[2]), Sp.b.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, Sp.i.Matrix[3]), Sp.i.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Sp.i.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Sp.i.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Sp.i.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.Iop(this._t0), this._t2.Iop(this._t0), Sp.b.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
-            const ip = this.Gl();
-            if (!ip) return this._cachedTextureMatrix;
-            const cp = this._cachedIdentity3x2;
-            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && cp !== this._cachedIdentity3x2 && ip.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))), this._cachedTextureMatrix
+            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * TT === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * TT, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = gT.e.Zero(), this._rowGenerationMatrix = new gT.e, this._t0 = gT.p.Zero(), this._t1 = gT.p.Zero(), this._t2 = gT.p.Zero()), gT.e.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (gT.e.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, gT.l.Matrix[0]), gT.e.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, gT.l.Matrix[1]), gT.e.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, gT.l.Matrix[2]), gT.e.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, gT.l.Matrix[3]), gT.l.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(gT.l.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(gT.l.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(gT.l.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.FWT(this._t0), this._t2.FWT(this._t0), gT.e.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const UT = this.KF();
+            if (!UT) return this._cachedTextureMatrix;
+            const mT = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && mT !== this._cachedIdentity3x2 && UT.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))), this._cachedTextureMatrix
           }
           getReflectionTextureMatrix() {
-            const ip = this.Gl();
-            if (!ip) return this._cachedReflectionTextureMatrix;
+            const UT = this.KF();
+            if (!UT) return this._cachedReflectionTextureMatrix;
             if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
-              if (this.coordinatesMode !== pp.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
-              if (this._cachedReflectionProjectionMatrixId === ip.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+              if (this.coordinatesMode !== TT.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === UT.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
             }
-            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = Sp.b.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = Sp.b.Zero());
-            const cp = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = gT.e.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = gT.e.Zero());
+            const mT = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
             switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
-              case pp.PLANAR_MODE:
-                Sp.b.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+              case TT.PLANAR_MODE:
+                gT.e.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
                 break;
-              case pp.PROJECTION_MODE: {
-                Sp.b.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
-                const pp = ip.getProjectionMatrix();
-                this._cachedReflectionProjectionMatrixId = pp.updateFlag, pp.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+              case TT.PROJECTION_MODE: {
+                gT.e.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const TT = UT.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = TT.updateFlag, TT.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
                 break
               }
               default:
-                Sp.b.IdentityToRef(this._cachedReflectionTextureMatrix)
+                gT.e.IdentityToRef(this._cachedReflectionTextureMatrix)
             }
-            return cp && ip.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))), this._cachedReflectionTextureMatrix
+            return mT && UT.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))), this._cachedReflectionTextureMatrix
           }
           clone() {
-            const ip = {
+            const UT = {
               noMipmap: this._noMipmap,
               invertY: this._invertY,
               samplingMode: this.samplingMode,
@@ -919,20 +919,20 @@ export const modules = {
               creationFlags: this._creationFlags,
               useSRGBBuffer: this._useSRGBBuffer
             };
-            return tp.c.Clone((() => new pp(this._texture ? this._texture.url : null, this.Gl(), ip)), this)
+            return fT.e.Clone((() => new TT(this._texture ? this._texture.url : null, this.KF(), UT)), this)
           }
           serialize() {
-            const ip = this.name;
-            pp.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
-            const cp = super.serialize(pp._SerializeInternalTextureUniqueId);
-            if (!cp) return null;
-            if (pp.SerializeBuffers || pp.ForceSerializeBuffers)
-              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) cp.base64String = this._buffer, cp.name = cp.name.replace("data:", "");
+            const UT = this.name;
+            TT.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const mT = super.serialize(TT._SerializeInternalTextureUniqueId);
+            if (!mT) return null;
+            if (TT.SerializeBuffers || TT.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) mT.base64String = this._buffer, mT.name = mT.name.replace("data:", "");
               else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
-              const pp = this.mimeType || "image/png";
-              cp.base64String = `data:${pp};base64,${(0,Wp.i)(this._buffer)}`
-            } else(pp.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (cp.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? Up(this) : wp(this));
-            return cp.invertY = this._invertY, cp.samplingMode = this.samplingMode, cp._creationFlags = this._creationFlags, cp._useSRGBBuffer = this._useSRGBBuffer, pp._SerializeInternalTextureUniqueId && (cp.internalTextureUniqueId = this._texture?.uniqueId), cp.internalTextureLabel = this._texture?.label, cp.noMipmap = this._noMipmap, this.name = ip, cp
+              const TT = this.mimeType || "image/png";
+              mT.base64String = `data:${TT};base64,${(0,pT.j)(this._buffer)}`
+            } else(TT.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (mT.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? ZT(this) : cT(this));
+            return mT.invertY = this._invertY, mT.samplingMode = this.samplingMode, mT._creationFlags = this._creationFlags, mT._useSRGBBuffer = this._useSRGBBuffer, TT._SerializeInternalTextureUniqueId && (mT.internalTextureUniqueId = this._texture?.uniqueId), mT.internalTextureLabel = this._texture?.label, mT.noMipmap = this._noMipmap, this.name = UT, mT
           }
           getClassName() {
             return "Texture"
@@ -940,304 +940,304 @@ export const modules = {
           dispose() {
             super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
           }
-          static Parse(ip, cp, Op) {
-            if (ip.customType) {
-              const pp = Ap.d.Instantiate(ip.customType).Parse(ip, cp, Op);
-              return ip.samplingMode && pp.updateSamplingMode && pp._samplingMode && pp._samplingMode !== ip.samplingMode && pp.updateSamplingMode(ip.samplingMode), pp
+          static Parse(UT, mT, WT) {
+            if (UT.customType) {
+              const TT = lT.c.Instantiate(UT.customType).Parse(UT, mT, WT);
+              return UT.samplingMode && TT.updateSamplingMode && TT._samplingMode && TT._samplingMode !== UT.samplingMode && TT.updateSamplingMode(UT.samplingMode), TT
             }
-            if (ip.isCube && !ip.isRenderTarget) return pp._CubeTextureParser(ip, cp, Op);
-            const op = void 0 !== ip.internalTextureUniqueId;
-            if (!ip.name && !ip.isRenderTarget && !op) return null;
-            let Ip;
-            if (op) {
-              const pp = cp.gy().getLoadedTexturesCache();
-              for (const cp of pp)
-                if (cp.uniqueId === ip.internalTextureUniqueId) {
-                  Ip = cp;
+            if (UT.isCube && !UT.isRenderTarget) return TT._CubeTextureParser(UT, mT, WT);
+            const zT = void 0 !== UT.internalTextureUniqueId;
+            if (!UT.name && !UT.isRenderTarget && !zT) return null;
+            let MT;
+            if (zT) {
+              const TT = mT.eB().getLoadedTexturesCache();
+              for (const mT of TT)
+                if (mT.uniqueId === UT.internalTextureUniqueId) {
+                  MT = mT;
                   break
                 }
             }
-            const Sp = pp => {
-              if (pp && pp._texture && (pp._texture._cachedWrapU = null, pp._texture._cachedWrapV = null, pp._texture._cachedWrapR = null), ip.samplingMode) {
-                const cp = ip.samplingMode;
-                pp && pp.samplingMode !== cp && pp.updateSamplingMode(cp)
+            const gT = TT => {
+              if (TT && TT._texture && (TT._texture._cachedWrapU = null, TT._texture._cachedWrapV = null, TT._texture._cachedWrapR = null), UT.samplingMode) {
+                const mT = UT.samplingMode;
+                TT && TT.samplingMode !== mT && TT.updateSamplingMode(mT)
               }
-              if (pp && ip.animations)
-                for (let cp = 0; cp < ip.animations.length; cp++) {
-                  const Op = ip.animations[cp],
-                    op = (0, Lp.d)("BABYLON.Animation");
-                  op && pp.animations.push(op.Parse(Op))
+              if (TT && UT.animations)
+                for (let mT = 0; mT < UT.animations.length; mT++) {
+                  const WT = UT.animations[mT],
+                    zT = (0, HT.d)("BABYLON.Animation");
+                  zT && TT.animations.push(zT.Parse(WT))
                 }
-              pp && pp._texture && (op && !Ip && pp._texture._setUniqueId(ip.internalTextureUniqueId), pp._texture.label = ip.internalTextureLabel)
+              TT && TT._texture && (zT && !MT && TT._texture._setUniqueId(UT.internalTextureUniqueId), TT._texture.label = UT.internalTextureLabel)
             };
-            return tp.c.Parse((() => {
-              let op = !0;
-              if (ip.noMipmap && (op = !1), ip.mirrorPlane) {
-                const Op = pp._CreateMirror(ip.name, ip.renderTargetSize, cp, op);
-                return Op._waitingRenderList = ip.renderList, Op.mirrorPlane = Pp.e.FromArray(ip.mirrorPlane), Sp(Op), Op
+            return fT.e.Parse((() => {
+              let zT = !0;
+              if (UT.noMipmap && (zT = !1), UT.mirrorPlane) {
+                const WT = TT._CreateMirror(UT.name, UT.renderTargetSize, mT, zT);
+                return WT._waitingRenderList = UT.renderList, WT.mirrorPlane = LT.e.FromArray(UT.mirrorPlane), gT(WT), WT
               }
-              if (ip.isRenderTarget && !ip.base64String) {
-                let Op = null;
-                if (ip.isCube) {
-                  if (cp.reflectionProbes)
-                    for (let pp = 0; pp < cp.reflectionProbes.length; pp++) {
-                      const Op = cp.reflectionProbes[pp];
-                      if (Op.name === ip.name) return Op.cubeTexture
+              if (UT.isRenderTarget && !UT.base64String) {
+                let WT = null;
+                if (UT.isCube) {
+                  if (mT.reflectionProbes)
+                    for (let TT = 0; TT < mT.reflectionProbes.length; TT++) {
+                      const WT = mT.reflectionProbes[TT];
+                      if (WT.name === UT.name) return WT.cubeTexture
                     }
-                } else Op = pp._CreateRenderTargetTexture(ip.name, ip.renderTargetSize, cp, op, ip._creationFlags ?? 0), Op._waitingRenderList = ip.renderList;
-                return Sp(Op), Op
+                } else WT = TT._CreateRenderTargetTexture(UT.name, UT.renderTargetSize, mT, zT, UT._creationFlags ?? 0), WT._waitingRenderList = UT.renderList;
+                return gT(WT), WT
               }
-              if (ip.isVideo) {
-                const Ip = pp._CreateVideoTexture(Op + (ip.url || ip.name), Op + (ip.src || ip.url), cp, op, ip.invertY, ip.samplingMode, ip.settings || {});
-                return Sp(Ip), Ip
+              if (UT.isVideo) {
+                const MT = TT._CreateVideoTexture(WT + (UT.url || UT.name), WT + (UT.src || UT.url), mT, zT, UT.invertY, UT.samplingMode, UT.settings || {});
+                return gT(MT), MT
               } {
-                let xp;
-                if ("string" === typeof ip.base64String && ip.base64String && !Ip) {
-                  const Op = {
-                      buffer: ip.base64String,
-                      noMipmap: !op,
-                      invertY: ip.invertY,
-                      samplingMode: ip.samplingMode,
-                      useSRGBBuffer: ip._useSRGBBuffer ?? !1,
-                      creationFlags: ip._creationFlags ?? 0,
+                let nT;
+                if ("string" === typeof UT.base64String && UT.base64String && !MT) {
+                  const WT = {
+                      buffer: UT.base64String,
+                      noMipmap: !zT,
+                      invertY: UT.invertY,
+                      samplingMode: UT.samplingMode,
+                      useSRGBBuffer: UT._useSRGBBuffer ?? !1,
+                      creationFlags: UT._creationFlags ?? 0,
                       onLoad: () => {
-                        Sp(xp)
+                        gT(nT)
                       }
                     },
-                    Ip = ip.base64String,
-                    Lp = Ip.startsWith("data:") ? Ip.substring(5) : Ip;
-                  xp = pp.CreateFromBase64String("", Lp, cp, Op), xp.name = ip.name
+                    MT = UT.base64String,
+                    HT = MT.startsWith("data:") ? MT.substring(5) : MT;
+                  nT = TT.CreateFromBase64String("", HT, mT, WT), nT.name = UT.name
                 } else {
-                  let Lp;
-                  Lp = ip.name && (ip.name.indexOf("://") > 0 || ip.name.startsWith("data:")) ? ip.name : Op + ip.name, ip.url && (ip.url.startsWith("data:") || pp.UseSerializedUrlIfAny) && (Lp = ip.url);
-                  const Yp = {
-                    noMipmap: !op,
-                    invertY: ip.invertY,
-                    samplingMode: ip.samplingMode,
-                    useSRGBBuffer: ip._useSRGBBuffer ?? !1,
-                    creationFlags: ip._creationFlags ?? 0,
+                  let HT;
+                  HT = UT.name && (UT.name.indexOf("://") > 0 || UT.name.startsWith("data:")) ? UT.name : WT + UT.name, UT.url && (UT.url.startsWith("data:") || TT.UseSerializedUrlIfAny) && (HT = UT.url);
+                  const kT = {
+                    noMipmap: !zT,
+                    invertY: UT.invertY,
+                    samplingMode: UT.samplingMode,
+                    useSRGBBuffer: UT._useSRGBBuffer ?? !1,
+                    creationFlags: UT._creationFlags ?? 0,
                     onLoad: () => {
-                      Sp(xp)
+                      gT(nT)
                     },
-                    internalTexture: Ip
+                    internalTexture: MT
                   };
-                  xp = new pp(Lp, cp, Yp)
+                  nT = new TT(HT, mT, kT)
                 }
-                return xp
+                return nT
               }
-            }), ip, cp)
+            }), UT, mT)
           }
-          static CreateFromBase64String(ip, cp, Op, op, Ip) {
-            let Sp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : pp.TRILINEAR_SAMPLINGMODE;
-            return new pp("data:" + cp, Op, op, Ip, Sp, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, ip, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          static CreateFromBase64String(UT, mT, WT, zT, MT) {
+            let gT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : TT.TRILINEAR_SAMPLINGMODE;
+            return new TT("data:" + mT, WT, zT, MT, gT, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, UT, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
           }
-          static LoadFromDataString(ip, cp, Op) {
-            let op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              Ip = arguments.length > 4 ? arguments[4] : void 0,
-              Sp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-              xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : pp.TRILINEAR_SAMPLINGMODE,
-              Lp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              Yp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-              Dp = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
-              Ap = arguments.length > 10 ? arguments[10] : void 0,
-              Pp = arguments.length > 11 ? arguments[11] : void 0;
-            return "data:" !== ip.substring(0, 5) && (ip = "data:" + ip), new pp(ip, Op, Ip, Sp, xp, Lp, Yp, cp, op, Dp, void 0, void 0, Ap, Pp)
+          static LoadFromDataString(UT, mT, WT) {
+            let zT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              MT = arguments.length > 4 ? arguments[4] : void 0,
+              gT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              nT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : TT.TRILINEAR_SAMPLINGMODE,
+              HT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              kT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              jT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              lT = arguments.length > 10 ? arguments[10] : void 0,
+              LT = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== UT.substring(0, 5) && (UT = "data:" + UT), new TT(UT, WT, MT, gT, nT, HT, kT, mT, zT, jT, void 0, void 0, lT, LT)
           }
         }, (() => {
-          const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Ep[Symbol.metadata] ?? null) : void 0;
-          ip = [(0, op.K)()], cp = [(0, op.K)()], yp = [(0, op.K)()], Hp = [(0, op.K)()], dp = [(0, op.K)()], ep = [(0, op.K)()], jp = [(0, op.K)()], kp = [(0, op.K)()], mp = [(0, op.K)()], Rp = [(0, op.K)()], qp = [(0, op.K)()], Mp = [(0, op.K)()], Cp = [(0, op.K)()], (0, Op.j)(pp, null, Cp, {
+          const MT = "function" === typeof Symbol && Symbol.metadata ? Object.create(tT[Symbol.metadata] ?? null) : void 0;
+          UT = [(0, zT.L)()], mT = [(0, zT.L)()], BT = [(0, zT.L)()], qT = [(0, zT.L)()], iT = [(0, zT.L)()], bT = [(0, zT.L)()], OT = [(0, zT.L)()], eT = [(0, zT.L)()], YT = [(0, zT.L)()], JT = [(0, zT.L)()], xT = [(0, zT.L)()], dT = [(0, zT.L)()], wT = [(0, zT.L)()], (0, WT.h)(TT, null, wT, {
             kind: "getter",
             name: "isBlocking",
             static: !1,
             private: !1,
             access: {
-              has: pp => "isBlocking" in pp,
-              get: pp => pp.isBlocking
+              has: TT => "isBlocking" in TT,
+              get: TT => TT.isBlocking
             },
-            metadata: Ip
-          }, null, Xp), (0, Op.j)(null, null, ip, {
+            metadata: MT
+          }, null, aT), (0, WT.h)(null, null, UT, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: pp => "url" in pp,
-              get: pp => pp.url,
-              set: (pp, ip) => {
-                pp.url = ip
+              has: TT => "url" in TT,
+              get: TT => TT.url,
+              set: (TT, UT) => {
+                TT.url = UT
               }
             },
-            metadata: Ip
-          }, lp, Qp), (0, Op.j)(null, null, cp, {
+            metadata: MT
+          }, yT, XT), (0, WT.h)(null, null, mT, {
             kind: "field",
             name: "uOffset",
             static: !1,
             private: !1,
             access: {
-              has: pp => "uOffset" in pp,
-              get: pp => pp.uOffset,
-              set: (pp, ip) => {
-                pp.uOffset = ip
+              has: TT => "uOffset" in TT,
+              get: TT => TT.uOffset,
+              set: (TT, UT) => {
+                TT.uOffset = UT
               }
             },
-            metadata: Ip
-          }, Jp, Bp), (0, Op.j)(null, null, yp, {
+            metadata: MT
+          }, IT, QT), (0, WT.h)(null, null, BT, {
             kind: "field",
             name: "vOffset",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vOffset" in pp,
-              get: pp => pp.vOffset,
-              set: (pp, ip) => {
-                pp.vOffset = ip
+              has: TT => "vOffset" in TT,
+              get: TT => TT.vOffset,
+              set: (TT, UT) => {
+                TT.vOffset = UT
               }
             },
-            metadata: Ip
-          }, Np, Tp), (0, Op.j)(null, null, Hp, {
+            metadata: MT
+          }, sT, FT), (0, WT.h)(null, null, qT, {
             kind: "field",
             name: "uScale",
             static: !1,
             private: !1,
             access: {
-              has: pp => "uScale" in pp,
-              get: pp => pp.uScale,
-              set: (pp, ip) => {
-                pp.uScale = ip
+              has: TT => "uScale" in TT,
+              get: TT => TT.uScale,
+              set: (TT, UT) => {
+                TT.uScale = UT
               }
             },
-            metadata: Ip
-          }, fp, bp), (0, Op.j)(null, null, dp, {
+            metadata: MT
+          }, PT, VT), (0, WT.h)(null, null, iT, {
             kind: "field",
             name: "vScale",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vScale" in pp,
-              get: pp => pp.vScale,
-              set: (pp, ip) => {
-                pp.vScale = ip
+              has: TT => "vScale" in TT,
+              get: TT => TT.vScale,
+              set: (TT, UT) => {
+                TT.vScale = UT
               }
             },
-            metadata: Ip
-          }, hp, ap), (0, Op.j)(null, null, ep, {
+            metadata: MT
+          }, uT, CT), (0, WT.h)(null, null, bT, {
             kind: "field",
             name: "uAng",
             static: !1,
             private: !1,
             access: {
-              has: pp => "uAng" in pp,
-              get: pp => pp.uAng,
-              set: (pp, ip) => {
-                pp.uAng = ip
+              has: TT => "uAng" in TT,
+              get: TT => TT.uAng,
+              set: (TT, UT) => {
+                TT.uAng = UT
               }
             },
-            metadata: Ip
-          }, np, Fp), (0, Op.j)(null, null, jp, {
+            metadata: MT
+          }, rT, KT), (0, WT.h)(null, null, OT, {
             kind: "field",
             name: "vAng",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vAng" in pp,
-              get: pp => pp.vAng,
-              set: (pp, ip) => {
-                pp.vAng = ip
+              has: TT => "vAng" in TT,
+              get: TT => TT.vAng,
+              set: (TT, UT) => {
+                TT.vAng = UT
               }
             },
-            metadata: Ip
-          }, gp, Gp), (0, Op.j)(null, null, kp, {
+            metadata: MT
+          }, ST, GT), (0, WT.h)(null, null, eT, {
             kind: "field",
             name: "wAng",
             static: !1,
             private: !1,
             access: {
-              has: pp => "wAng" in pp,
-              get: pp => pp.wAng,
-              set: (pp, ip) => {
-                pp.wAng = ip
+              has: TT => "wAng" in TT,
+              get: TT => TT.wAng,
+              set: (TT, UT) => {
+                TT.wAng = UT
               }
             },
-            metadata: Ip
-          }, rp, Zp), (0, Op.j)(null, null, mp, {
+            metadata: MT
+          }, NT, ET), (0, WT.h)(null, null, YT, {
             kind: "field",
             name: "uRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: pp => "uRotationCenter" in pp,
-              get: pp => pp.uRotationCenter,
-              set: (pp, ip) => {
-                pp.uRotationCenter = ip
+              has: TT => "uRotationCenter" in TT,
+              get: TT => TT.uRotationCenter,
+              set: (TT, UT) => {
+                TT.uRotationCenter = UT
               }
             },
-            metadata: Ip
-          }, zp, sp), (0, Op.j)(null, null, Rp, {
+            metadata: MT
+          }, hT, DT), (0, WT.h)(null, null, JT, {
             kind: "field",
             name: "vRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: pp => "vRotationCenter" in pp,
-              get: pp => pp.vRotationCenter,
-              set: (pp, ip) => {
-                pp.vRotationCenter = ip
+              has: TT => "vRotationCenter" in TT,
+              get: TT => TT.vRotationCenter,
+              set: (TT, UT) => {
+                TT.vRotationCenter = UT
               }
             },
-            metadata: Ip
-          }, Kp, Vp), (0, Op.j)(null, null, qp, {
+            metadata: MT
+          }, oT, AT), (0, WT.h)(null, null, xT, {
             kind: "field",
             name: "wRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: pp => "wRotationCenter" in pp,
-              get: pp => pp.wRotationCenter,
-              set: (pp, ip) => {
-                pp.wRotationCenter = ip
+              has: TT => "wRotationCenter" in TT,
+              get: TT => TT.wRotationCenter,
+              set: (TT, UT) => {
+                TT.wRotationCenter = UT
               }
             },
-            metadata: Ip
-          }, ii, ci), (0, Op.j)(null, null, Mp, {
+            metadata: MT
+          }, RT, TU), (0, WT.h)(null, null, dT, {
             kind: "field",
             name: "homogeneousRotationInUVTransform",
             static: !1,
             private: !1,
             access: {
-              has: pp => "homogeneousRotationInUVTransform" in pp,
-              get: pp => pp.homogeneousRotationInUVTransform,
-              set: (pp, ip) => {
-                pp.homogeneousRotationInUVTransform = ip
+              has: TT => "homogeneousRotationInUVTransform" in TT,
+              get: TT => TT.homogeneousRotationInUVTransform,
+              set: (TT, UT) => {
+                TT.homogeneousRotationInUVTransform = UT
               }
             },
-            metadata: Ip
-          }, Oi, oi), Ip && Object.defineProperty(pp, Symbol.metadata, {
+            metadata: MT
+          }, UU, mU), MT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Ip
+            value: MT
           })
-        })(), pp.SerializeBuffers = !0, pp.ForceSerializeBuffers = !1, pp.OnTextureLoadErrorObservable = new Ip.d, pp._SerializeInternalTextureUniqueId = !1, pp._CubeTextureParser = (pp, ip, cp) => {
-          throw (0, Yp.o)("CubeTexture")
-        }, pp._CreateMirror = (pp, ip, cp, Op) => {
-          throw (0, Yp.o)("MirrorTexture")
-        }, pp._CreateRenderTargetTexture = (pp, ip, cp, Op, op) => {
-          throw (0, Yp.o)("RenderTargetTexture")
-        }, pp.NEAREST_SAMPLINGMODE = 1, pp.NEAREST_NEAREST_MIPLINEAR = 8, pp.BILINEAR_SAMPLINGMODE = 2, pp.LINEAR_LINEAR_MIPNEAREST = 11, pp.TRILINEAR_SAMPLINGMODE = 3, pp.LINEAR_LINEAR_MIPLINEAR = 3, pp.NEAREST_NEAREST_MIPNEAREST = 4, pp.NEAREST_LINEAR_MIPNEAREST = 5, pp.NEAREST_LINEAR_MIPLINEAR = 6, pp.NEAREST_LINEAR = 7, pp.NEAREST_NEAREST = 1, pp.LINEAR_NEAREST_MIPNEAREST = 9, pp.LINEAR_NEAREST_MIPLINEAR = 10, pp.LINEAR_LINEAR = 2, pp.LINEAR_NEAREST = 12, pp.EXPLICIT_MODE = 0, pp.SPHERICAL_MODE = 1, pp.PLANAR_MODE = 2, pp.CUBIC_MODE = 3, pp.PROJECTION_MODE = 4, pp.SKYBOX_MODE = 5, pp.INVCUBIC_MODE = 6, pp.EQUIRECTANGULAR_MODE = 7, pp.FIXED_EQUIRECTANGULAR_MODE = 8, pp.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, pp.CLAMP_ADDRESSMODE = 0, pp.WRAP_ADDRESSMODE = 1, pp.MIRROR_ADDRESSMODE = 2, pp.UseSerializedUrlIfAny = !1, pp
+        })(), TT.SerializeBuffers = !0, TT.ForceSerializeBuffers = !1, TT.OnTextureLoadErrorObservable = new MT.d, TT._SerializeInternalTextureUniqueId = !1, TT._CubeTextureParser = (TT, UT, mT) => {
+          throw (0, kT.k)("CubeTexture")
+        }, TT._CreateMirror = (TT, UT, mT, WT) => {
+          throw (0, kT.k)("MirrorTexture")
+        }, TT._CreateRenderTargetTexture = (TT, UT, mT, WT, zT) => {
+          throw (0, kT.k)("RenderTargetTexture")
+        }, TT.NEAREST_SAMPLINGMODE = 1, TT.NEAREST_NEAREST_MIPLINEAR = 8, TT.BILINEAR_SAMPLINGMODE = 2, TT.LINEAR_LINEAR_MIPNEAREST = 11, TT.TRILINEAR_SAMPLINGMODE = 3, TT.LINEAR_LINEAR_MIPLINEAR = 3, TT.NEAREST_NEAREST_MIPNEAREST = 4, TT.NEAREST_LINEAR_MIPNEAREST = 5, TT.NEAREST_LINEAR_MIPLINEAR = 6, TT.NEAREST_LINEAR = 7, TT.NEAREST_NEAREST = 1, TT.LINEAR_NEAREST_MIPNEAREST = 9, TT.LINEAR_NEAREST_MIPLINEAR = 10, TT.LINEAR_LINEAR = 2, TT.LINEAR_NEAREST = 12, TT.EXPLICIT_MODE = 0, TT.SPHERICAL_MODE = 1, TT.PLANAR_MODE = 2, TT.CUBIC_MODE = 3, TT.PROJECTION_MODE = 4, TT.SKYBOX_MODE = 5, TT.INVCUBIC_MODE = 6, TT.EQUIRECTANGULAR_MODE = 7, TT.FIXED_EQUIRECTANGULAR_MODE = 8, TT.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, TT.CLAMP_ADDRESSMODE = 0, TT.WRAP_ADDRESSMODE = 1, TT.MIRROR_ADDRESSMODE = 2, TT.UseSerializedUrlIfAny = !1, TT
       })(),
-      dp = !1;
+      iT = !1;
 
-    function ep() {
-      dp || (dp = !0, (0, Lp.g)("BABYLON.Texture", Hp), tp.c._TextureParser = Hp.Parse)
+    function bT() {
+      iT || (iT = !0, (0, HT.h)("BABYLON.Texture", qT), fT.e._TextureParser = qT.Parse)
     }
   },
-  40225: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  40114: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => WT
     });
-    class Op {
-      constructor(pp, ip) {
-        this.width = pp, this.height = ip
+    class WT {
+      constructor(TT, UT) {
+        this.width = TT, this.height = UT
       }
       toString() {
         return `{W: ${this.width}, H: ${this.height}}`
@@ -1246,49 +1246,49 @@ export const modules = {
         return "Size"
       }
       getHashCode() {
-        let pp = 0 | this.width;
-        return pp = 397 * pp ^ this.height, pp
+        let TT = 0 | this.width;
+        return TT = 397 * TT ^ this.height, TT
       }
-      rM(pp) {
-        this.width = pp.width, this.height = pp.height
+      Gw(TT) {
+        this.width = TT.width, this.height = TT.height
       }
-      i5(pp, ip) {
-        return this.width = pp, this.height = ip, this
+      J9(TT, UT) {
+        return this.width = TT, this.height = UT, this
       }
-      set(pp, ip) {
-        return this.i5(pp, ip)
+      set(TT, UT) {
+        return this.J9(TT, UT)
       }
-      multiplyByFloats(pp, ip) {
-        return new Op(this.width * pp, this.height * ip)
+      multiplyByFloats(TT, UT) {
+        return new WT(this.width * TT, this.height * UT)
       }
       clone() {
-        return new Op(this.width, this.height)
+        return new WT(this.width, this.height)
       }
-      equals(pp) {
-        return !!pp && (this.width === pp.width && this.height === pp.height)
+      equals(TT) {
+        return !!TT && (this.width === TT.width && this.height === TT.height)
       }
       get surface() {
         return this.width * this.height
       }
       static Zero() {
-        return new Op(0, 0)
+        return new WT(0, 0)
       }
-      add(pp) {
-        return new Op(this.width + pp.width, this.height + pp.height)
+      add(TT) {
+        return new WT(this.width + TT.width, this.height + TT.height)
       }
-      subtract(pp) {
-        return new Op(this.width - pp.width, this.height - pp.height)
+      subtract(TT) {
+        return new WT(this.width - TT.width, this.height - TT.height)
       }
-      scale(pp) {
-        return new Op(this.width * pp, this.height * pp)
+      scale(TT) {
+        return new WT(this.width * TT, this.height * TT)
       }
-      static Lerp(pp, ip, cp) {
-        const op = pp.width + (ip.width - pp.width) * cp,
-          Ip = pp.height + (ip.height - pp.height) * cp;
-        return new Op(op, Ip)
+      static Lerp(TT, UT, mT) {
+        const zT = TT.width + (UT.width - TT.width) * mT,
+          MT = TT.height + (UT.height - TT.height) * mT;
+        return new WT(zT, MT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

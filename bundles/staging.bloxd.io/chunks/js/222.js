@@ -1,240 +1,240 @@
-/*! For license information please see sn3sfj.222.002048ae.chunk.js.LICENSE.txt */
+/*! For license information please see yma3ej.222.a255cae5.chunk.js.LICENSE.txt */
 export const id = 222;
 export const ids = [222];
 export const modules = {
-  39775: (pp, ip, cp) => {
-    pp.exports = op;
-    var Op = cp(343);
+  39692: (TT, UT, mT) => {
+    TT.exports = zT;
+    var WT = mT(375);
 
-    function op(pp, ip) {
-      if (!(this instanceof op)) return new op(pp, ip);
-      var cp = Op.create();
-      Op.add(cp, pp, ip), this.base = Op.min(Op.create(), pp, cp), this.vec = Op.clone(ip), this.max = Op.max(Op.create(), pp, cp), this.mag = Op.length(this.vec)
+    function zT(TT, UT) {
+      if (!(this instanceof zT)) return new zT(TT, UT);
+      var mT = WT.create();
+      WT.add(mT, TT, UT), this.base = WT.min(WT.create(), TT, mT), this.vec = WT.clone(UT), this.max = WT.max(WT.create(), TT, mT), this.mag = WT.length(this.vec)
     }
-    var Ip = op.prototype;
-    Ip.width = function() {
+    var MT = zT.prototype;
+    MT.width = function() {
       return this.vec[0]
-    }, Ip.height = function() {
+    }, MT.height = function() {
       return this.vec[1]
-    }, Ip.depth = function() {
+    }, MT.depth = function() {
       return this.vec[2]
-    }, Ip.x0 = function() {
+    }, MT.x0 = function() {
       return this.base[0]
-    }, Ip.y0 = function() {
+    }, MT.y0 = function() {
       return this.base[1]
-    }, Ip.z0 = function() {
+    }, MT.z0 = function() {
       return this.base[2]
-    }, Ip.x1 = function() {
+    }, MT.x1 = function() {
       return this.max[0]
-    }, Ip.y1 = function() {
+    }, MT.y1 = function() {
       return this.max[1]
-    }, Ip.z1 = function() {
+    }, MT.z1 = function() {
       return this.max[2]
-    }, Ip.translate = function(pp) {
-      return Op.add(this.max, this.max, pp), Op.add(this.base, this.base, pp), this
-    }, Ip.setPosition = function(pp) {
-      return Op.add(this.max, pp, this.vec), Op.copy(this.base, pp), this
-    }, Ip.expand = function(pp) {
-      var ip = Op.create(),
-        cp = Op.create();
-      return Op.max(ip, pp.max, this.max), Op.min(cp, pp.base, this.base), Op.subtract(ip, ip, cp), new op(cp, ip)
-    }, Ip.intersects = function(pp) {
-      return !(pp.base[0] > this.max[0]) && (!(pp.base[1] > this.max[1]) && (!(pp.base[2] > this.max[2]) && (!(pp.max[0] < this.base[0]) && (!(pp.max[1] < this.base[1]) && !(pp.max[2] < this.base[2])))))
-    }, Ip.touches = function(pp) {
-      var ip = this.union(pp);
-      return null !== ip && (0 == ip.width() || 0 == ip.height() || 0 == ip.depth())
-    }, Ip.union = function(pp) {
-      if (!this.intersects(pp)) return null;
-      var ip = Math.max(pp.base[0], this.base[0]),
-        cp = Math.max(pp.base[1], this.base[1]),
-        Op = Math.max(pp.base[2], this.base[2]);
-      return new op([ip, cp, Op], [Math.min(pp.max[0], this.max[0]) - ip, Math.min(pp.max[1], this.max[1]) - cp, Math.min(pp.max[2], this.max[2]) - Op])
+    }, MT.translate = function(TT) {
+      return WT.add(this.max, this.max, TT), WT.add(this.base, this.base, TT), this
+    }, MT.setPosition = function(TT) {
+      return WT.add(this.max, TT, this.vec), WT.copy(this.base, TT), this
+    }, MT.expand = function(TT) {
+      var UT = WT.create(),
+        mT = WT.create();
+      return WT.max(UT, TT.max, this.max), WT.min(mT, TT.base, this.base), WT.subtract(UT, UT, mT), new zT(mT, UT)
+    }, MT.intersects = function(TT) {
+      return !(TT.base[0] > this.max[0]) && (!(TT.base[1] > this.max[1]) && (!(TT.base[2] > this.max[2]) && (!(TT.max[0] < this.base[0]) && (!(TT.max[1] < this.base[1]) && !(TT.max[2] < this.base[2])))))
+    }, MT.touches = function(TT) {
+      var UT = this.union(TT);
+      return null !== UT && (0 == UT.width() || 0 == UT.height() || 0 == UT.depth())
+    }, MT.union = function(TT) {
+      if (!this.intersects(TT)) return null;
+      var UT = Math.max(TT.base[0], this.base[0]),
+        mT = Math.max(TT.base[1], this.base[1]),
+        WT = Math.max(TT.base[2], this.base[2]);
+      return new zT([UT, mT, WT], [Math.min(TT.max[0], this.max[0]) - UT, Math.min(TT.max[1], this.max[1]) - mT, Math.min(TT.max[2], this.max[2]) - WT])
     }
   },
-  39773: pp => {
-    pp.exports = function(pp, ip, cp, Op, op, Ip) {
-      var Sp = +ip[0],
-        xp = +ip[1],
-        Lp = +ip[2],
-        Yp = +cp[0],
-        Dp = +cp[1],
-        Ap = +cp[2],
-        Pp = Math.sqrt(Yp * Yp + Dp * Dp + Ap * Ap);
-      if (0 === Pp) throw new Error("Can't raycast along a zero vector");
-      return function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-        for (var Dp = 0, Ap = Math.floor, Pp = 0 | Ap(ip), Wp = 0 | Ap(cp), yp = 0 | Ap(Op), Up = op > 0 ? 1 : -1, wp = Ip > 0 ? 1 : -1, vp = Sp > 0 ? 1 : -1, tp = Math.abs(1 / op), Hp = Math.abs(1 / Ip), dp = Math.abs(1 / Sp), ep = tp < 1 / 0 ? tp * (Up > 0 ? Pp + 1 - ip : ip - Pp) : 1 / 0, jp = Hp < 1 / 0 ? Hp * (wp > 0 ? Wp + 1 - cp : cp - Wp) : 1 / 0, kp = dp < 1 / 0 ? dp * (vp > 0 ? yp + 1 - Op : Op - yp) : 1 / 0, mp = -1; Dp <= xp;) {
-          var Rp = pp(Pp, Wp, yp);
-          if (Rp) return Lp && (Lp[0] = ip + Dp * op, Lp[1] = cp + Dp * Ip, Lp[2] = Op + Dp * Sp), Yp && (Yp[0] = Yp[1] = Yp[2] = 0, 0 === mp && (Yp[0] = -Up), 1 === mp && (Yp[1] = -wp), 2 === mp && (Yp[2] = -vp)), Rp;
-          ep < jp ? ep < kp ? (Pp += Up, Dp = ep, ep += tp, mp = 0) : (yp += vp, Dp = kp, kp += dp, mp = 2) : jp < kp ? (Wp += wp, Dp = jp, jp += Hp, mp = 1) : (yp += vp, Dp = kp, kp += dp, mp = 2)
+  39688: TT => {
+    TT.exports = function(TT, UT, mT, WT, zT, MT) {
+      var gT = +UT[0],
+        nT = +UT[1],
+        HT = +UT[2],
+        kT = +mT[0],
+        jT = +mT[1],
+        lT = +mT[2],
+        LT = Math.sqrt(kT * kT + jT * jT + lT * lT);
+      if (0 === LT) throw new Error("Can't raycast along a zero vector");
+      return function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
+        for (var jT = 0, lT = Math.floor, LT = 0 | lT(UT), pT = 0 | lT(mT), BT = 0 | lT(WT), ZT = zT > 0 ? 1 : -1, cT = MT > 0 ? 1 : -1, vT = gT > 0 ? 1 : -1, fT = Math.abs(1 / zT), qT = Math.abs(1 / MT), iT = Math.abs(1 / gT), bT = fT < 1 / 0 ? fT * (ZT > 0 ? LT + 1 - UT : UT - LT) : 1 / 0, OT = qT < 1 / 0 ? qT * (cT > 0 ? pT + 1 - mT : mT - pT) : 1 / 0, eT = iT < 1 / 0 ? iT * (vT > 0 ? BT + 1 - WT : WT - BT) : 1 / 0, YT = -1; jT <= nT;) {
+          var JT = TT(LT, pT, BT);
+          if (JT) return HT && (HT[0] = UT + jT * zT, HT[1] = mT + jT * MT, HT[2] = WT + jT * gT), kT && (kT[0] = kT[1] = kT[2] = 0, 0 === YT && (kT[0] = -ZT), 1 === YT && (kT[1] = -cT), 2 === YT && (kT[2] = -vT)), JT;
+          bT < OT ? bT < eT ? (LT += ZT, jT = bT, bT += fT, YT = 0) : (BT += vT, jT = eT, eT += iT, YT = 2) : OT < eT ? (pT += cT, jT = OT, OT += qT, YT = 1) : (BT += vT, jT = eT, eT += iT, YT = 2)
         }
-        return Lp && (Lp[0] = ip + Dp * op, Lp[1] = cp + Dp * Ip, Lp[2] = Op + Dp * Sp), Yp && (Yp[0] = Yp[1] = Yp[2] = 0), 0
-      }(pp, Sp, xp, Lp, Yp /= Pp, Dp /= Pp, Ap /= Pp, Op = "undefined" === typeof Op ? 64 : +Op, op, Ip)
+        return HT && (HT[0] = UT + jT * zT, HT[1] = mT + jT * MT, HT[2] = WT + jT * gT), kT && (kT[0] = kT[1] = kT[2] = 0), 0
+      }(TT, gT, nT, HT, kT /= LT, jT /= LT, lT /= LT, WT = "undefined" === typeof WT ? 64 : +WT, zT, MT)
     }
   },
-  39283: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      f: () => Ip
+  39256: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => nT,
+      e: () => MT
     });
-    var Op = cp(4176);
-    let op = null;
+    var WT = mT(4170);
+    let zT = null;
 
-    function Ip(pp) {
-      return null !== op && pp === op
+    function MT(TT) {
+      return null !== zT && TT === zT
     }
 
-    function Sp() {
-      this.YG = !1, this.stopPropagation = !1, this.WG = !1, this.disabled = !1
+    function gT() {
+      this.wG = !1, this.stopPropagation = !1, this.aG = !1, this.disabled = !1
     }
-    class xp {
-      constructor(pp, ip) {
+    class nT {
+      constructor(TT, UT) {
         this.version = "0.7.0";
-        var cp = Object.assign({}, new Sp, ip || {});
-        this.element = pp || document, this.YG = !!cp.YG, this.stopPropagation = !!cp.stopPropagation, this.WG = !!cp.WG, this.disabled = !!cp.disabled, this.filterEvents = (pp, ip) => !0, this.ignoreEvent = pp => !1, this.down = new Op.EventEmitter, this.up = new Op.EventEmitter, this.state = {}, this.yG = {
+        var mT = Object.assign({}, new gT, UT || {});
+        this.element = TT || document, this.wG = !!mT.wG, this.stopPropagation = !!mT.stopPropagation, this.aG = !!mT.aG, this.disabled = !!mT.disabled, this.filterEvents = (TT, UT) => !0, this.ignoreEvent = TT => !1, this.down = new WT.EventEmitter, this.up = new WT.EventEmitter, this.state = {}, this.yG = {
           dx: 0,
           dy: 0,
-          Aip: 0,
-          Wip: 0,
-          yip: 0
+          jUT: 0,
+          lUT: 0,
+          pUT: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Yp(this) : document.addEventListener("DOMContentLoaded", (pp => {
-          Yp(this)
+        }, "loading" !== document.readyState ? kT(this) : document.addEventListener("DOMContentLoaded", (TT => {
+          kT(this)
         }), {
           once: !0
         })
       }
-      bind(pp) {
-        for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
-        cp.forEach((ip => {
-          var cp = this._keyBindmap[ip] || [];
-          cp.includes(pp) || (cp.push(pp), this._keyBindmap[ip] = cp)
-        })), this.state[pp] = !!this.state[pp], this.pressCount[pp] = this.pressCount[pp] || 0, this.releaseCount[pp] = this.releaseCount[pp] || 0
+      bind(TT) {
+        for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
+        mT.forEach((UT => {
+          var mT = this._keyBindmap[UT] || [];
+          mT.includes(TT) || (mT.push(TT), this._keyBindmap[UT] = mT)
+        })), this.state[TT] = !!this.state[TT], this.pressCount[TT] = this.pressCount[TT] || 0, this.releaseCount[TT] = this.releaseCount[TT] || 0
       }
-      unbind(pp) {
-        for (var ip in this._keyBindmap) {
-          var cp = this._keyBindmap[ip],
-            Op = cp.indexOf(pp);
-          Op > -1 && cp.splice(Op, 1)
+      unbind(TT) {
+        for (var UT in this._keyBindmap) {
+          var mT = this._keyBindmap[UT],
+            WT = mT.indexOf(TT);
+          WT > -1 && mT.splice(WT, 1)
         }
       }
       getBindings() {
-        var pp = {};
-        for (var ip in this._keyBindmap) {
-          this._keyBindmap[ip].forEach((cp => {
-            pp[cp] = pp[cp] || [], pp[cp].push(ip)
+        var TT = {};
+        for (var UT in this._keyBindmap) {
+          this._keyBindmap[UT].forEach((mT => {
+            TT[mT] = TT[mT] || [], TT[mT].push(UT)
           }))
         }
-        return pp
+        return TT
       }
-      LP() {
-        Lp(this.yG), Lp(this.pressCount), Lp(this.releaseCount)
+      Cl() {
+        HT(this.yG), HT(this.pressCount), HT(this.releaseCount)
       }
     }
 
-    function Lp(pp) {
-      for (var ip in pp) pp[ip] = 0
+    function HT(TT) {
+      for (var UT in TT) TT[UT] = 0
     }
 
-    function Yp(pp) {
-      window.addEventListener("keydown", wp.bind(null, pp, !0), !1), window.addEventListener("keyup", wp.bind(null, pp, !1), !1);
-      var ip = {
+    function kT(TT) {
+      window.addEventListener("keydown", cT.bind(null, TT, !0), !1), window.addEventListener("keyup", cT.bind(null, TT, !1), !1);
+      var UT = {
         passive: !0
       };
-      pp.element.addEventListener("touchstart", Wp.bind(void 0, pp), {
+      TT.element.addEventListener("touchstart", pT.bind(void 0, TT), {
         passive: !1
-      }), pp.element.addEventListener("touchend", Up.bind(void 0, pp), ip), pp.element.addEventListener("mousedown", vp.bind(null, pp, !0), ip), window.document.addEventListener("mouseup", vp.bind(null, pp, !1), ip), pp.element.addEventListener("touchmove", tp.bind(null, pp), ip), pp.element.addEventListener("mousemove", tp.bind(null, pp), ip), window.PointerEvent, pp.element.addEventListener("wheel", Hp.bind(null, pp), ip), pp.element.addEventListener("contextmenu", dp.bind(null, pp), !1), window.addEventListener("blur", kp.bind(null, pp), !1)
+      }), TT.element.addEventListener("touchend", ZT.bind(void 0, TT), UT), TT.element.addEventListener("mousedown", vT.bind(null, TT, !0), UT), window.document.addEventListener("mouseup", vT.bind(null, TT, !1), UT), TT.element.addEventListener("touchmove", fT.bind(null, TT), UT), TT.element.addEventListener("mousemove", fT.bind(null, TT), UT), window.PointerEvent, TT.element.addEventListener("wheel", qT.bind(null, TT), UT), TT.element.addEventListener("contextmenu", iT.bind(null, TT), !1), window.addEventListener("blur", eT.bind(null, TT), !1)
     }
-    var Dp = 0,
-      Ap = 0,
-      Pp = null;
+    var jT = 0,
+      lT = 0,
+      LT = null;
 
-    function Wp(pp, ip) {
-      ip.preventDefault(), yp(ip)
+    function pT(TT, UT) {
+      UT.preventDefault(), BT(UT)
     }
 
-    function yp(pp) {
-      let ip = !1;
-      for (let cp = 0; cp < pp.touches.length; ++cp)
-        if (pp.touches[cp].identifier === Pp) {
-          ip = !0;
+    function BT(TT) {
+      let UT = !1;
+      for (let mT = 0; mT < TT.touches.length; ++mT)
+        if (TT.touches[mT].identifier === LT) {
+          UT = !0;
           break
-        } if (!ip) {
-        const ip = pp.changedTouches[0];
-        Dp = ip.clientX, Ap = ip.clientY, Pp = ip.identifier
+        } if (!UT) {
+        const UT = TT.changedTouches[0];
+        jT = UT.clientX, lT = UT.clientY, LT = UT.identifier
       }
     }
 
-    function Up(pp, ip) {
-      for (var cp = ip.changedTouches, Op = 0; Op < cp.length; ++Op) cp[Op].identifier === Pp && (Pp = null)
+    function ZT(TT, UT) {
+      for (var mT = UT.changedTouches, WT = 0; WT < mT.length; ++WT) mT[WT].identifier === LT && (LT = null)
     }
 
-    function wp(pp, ip, cp) {
-      if (!pp.ignoreEvent(cp)) try {
-        mp(pp, cp), ip && cp.isTrusted && !cp.repeat && pp._keyStates[cp.code] && Rp(pp, cp.code)
+    function cT(TT, UT, mT) {
+      if (!TT.ignoreEvent(mT)) try {
+        YT(TT, mT), UT && mT.isTrusted && !mT.repeat && TT._keyStates[mT.code] && JT(TT, mT.code)
       } finally {
-        qp(cp.code, ip, pp, cp)
+        xT(mT.code, UT, TT, mT)
       }
     }
 
-    function vp(pp, ip, cp) {
-      if (!pp.ignoreEvent(cp)) try {
-        mp(pp, cp)
+    function vT(TT, UT, mT) {
+      if (!TT.ignoreEvent(mT)) try {
+        YT(TT, mT)
       } finally {
-        ! function(pp, ip, cp) {
-          if ("pointerId" in cp)
-            if (ip) {
-              if (null !== pp._touches.currID) return;
-              pp._touches.currID = cp.pointerId
+        ! function(TT, UT, mT) {
+          if ("pointerId" in mT)
+            if (UT) {
+              if (null !== TT._touches.currID) return;
+              TT._touches.currID = mT.pointerId
             } else {
-              if (pp._touches.currID !== cp.pointerId) return;
-              pp._touches.currID = null
-            } var Op = "button" in cp ? cp.button + 1 : 1;
-          qp("Mouse" + Op, ip, pp, cp)
-        }(pp, ip, cp)
+              if (TT._touches.currID !== mT.pointerId) return;
+              TT._touches.currID = null
+            } var WT = "button" in mT ? mT.button + 1 : 1;
+          xT("Mouse" + WT, UT, TT, mT)
+        }(TT, UT, mT)
       }
     }
 
-    function tp(pp, ip) {
-      var cp = ip.movementX || ip.mozMovementX || 0,
-        Op = ip.movementY || ip.mozMovementY || 0;
-      if (ip.touches && 0 === (cp | Op)) {
-        var op = function(pp) {
-          yp(pp);
-          for (let ip = 0; ip < pp.changedTouches.length; ++ip)
-            if (pp.changedTouches[ip].identifier == Pp) {
-              const cp = pp.changedTouches[ip],
-                Op = [cp.clientX - Dp, cp.clientY - Ap];
-              return Dp = cp.clientX, Ap = cp.clientY, Op
-            } return console.error(`Did not find touch id ${Pp}`), [0, 0]
-        }(ip);
-        cp = op[0], Op = op[1]
+    function fT(TT, UT) {
+      var mT = UT.movementX || UT.mozMovementX || 0,
+        WT = UT.movementY || UT.mozMovementY || 0;
+      if (UT.touches && 0 === (mT | WT)) {
+        var zT = function(TT) {
+          BT(TT);
+          for (let UT = 0; UT < TT.changedTouches.length; ++UT)
+            if (TT.changedTouches[UT].identifier == LT) {
+              const mT = TT.changedTouches[UT],
+                WT = [mT.clientX - jT, mT.clientY - lT];
+              return jT = mT.clientX, lT = mT.clientY, WT
+            } return console.error(`Did not find touch id ${LT}`), [0, 0]
+        }(UT);
+        mT = zT[0], WT = zT[1]
       }
-      pp.yG.dx += cp, pp.yG.dy += Op
+      TT.yG.dx += mT, TT.yG.dy += WT
     }
 
-    function Hp(pp, ip) {
-      mp(pp, ip);
-      var cp = 1;
-      switch (ip.deltaMode) {
+    function qT(TT, UT) {
+      YT(TT, UT);
+      var mT = 1;
+      switch (UT.deltaMode) {
         case 0:
-          cp = 1;
+          mT = 1;
           break;
         case 1:
-          cp = 12;
+          mT = 12;
           break;
         case 2:
-          cp = pp.element.clientHeight || window.innerHeight
+          mT = TT.element.clientHeight || window.innerHeight
       }
-      pp.yG.Aip += (ip.deltaX || 0) * cp, pp.yG.Wip += (ip.deltaY || 0) * cp, pp.yG.yip += (ip.deltaZ || 0) * cp
+      TT.yG.jUT += (UT.deltaX || 0) * mT, TT.yG.lUT += (UT.deltaY || 0) * mT, TT.yG.pUT += (UT.deltaZ || 0) * mT
     }
 
-    function dp(pp, ip) {
-      if (!pp.WG) return ip.preventDefault(), !1
+    function iT(TT, UT) {
+      if (!TT.aG) return UT.preventDefault(), !1
     }
-    var ep = {
+    var bT = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function jp(pp, ip) {
-      return !!pp[ep[ip]] || ("AltRight" === ip || "ControlLeft" === ip) && "function" === typeof pp.getModifierState && !0 === pp.getModifierState("AltGraph")
+    function OT(TT, UT) {
+      return !!TT[bT[UT]] || ("AltRight" === UT || "ControlLeft" === UT) && "function" === typeof TT.getModifierState && !0 === TT.getModifierState("AltGraph")
     }
 
-    function kp(pp, ip) {
-      for (var cp in pp._modifiersHeldThroughBlur = {}, ep) pp._keyStates[cp] && (pp._modifiersHeldThroughBlur[cp] = !0);
-      ip && ip.isTrusted && function() {
+    function eT(TT, UT) {
+      for (var mT in TT._modifiersHeldThroughBlur = {}, bT) TT._keyStates[mT] && (TT._modifiersHeldThroughBlur[mT] = !0);
+      UT && UT.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (pp) {
+        } catch (TT) {
           return !0
         }
-      }() && (clearTimeout(pp._blurRelease), pp._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(TT._blurRelease), TT._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var ip in pp._modifiersHeldThroughBlur = {}, pp._keyStates) pp._keyStates[ip] && !/^Mouse\d/.test(ip) && Rp(pp, ip)
+          for (var UT in TT._modifiersHeldThroughBlur = {}, TT._keyStates) TT._keyStates[UT] && !/^Mouse\d/.test(UT) && JT(TT, UT)
       }), 0))
     }
 
-    function mp(pp, ip) {
-      var cp = pp._modifiersHeldThroughBlur;
-      if (cp && ip.isTrusted && document.hasFocus())
-        for (var Op in cp) delete cp[Op], pp._keyStates[Op] && Op !== ip.code && (jp(ip, Op) || Rp(pp, Op))
+    function YT(TT, UT) {
+      var mT = TT._modifiersHeldThroughBlur;
+      if (mT && UT.isTrusted && document.hasFocus())
+        for (var WT in mT) delete mT[WT], TT._keyStates[WT] && WT !== UT.code && (OT(UT, WT) || JT(TT, WT))
     }
 
-    function Rp(pp, ip) {
-      const cp = {
-          code: ip,
+    function JT(TT, UT) {
+      const mT = {
+          code: UT,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        Op = op;
-      op = cp;
+        WT = zT;
+      zT = mT;
       try {
-        qp(ip, !1, pp, cp)
+        xT(UT, !1, TT, mT)
       } finally {
-        op = Op
+        zT = WT
       }
     }
 
-    function qp(pp, ip, cp, Op) {
-      var op = cp._keyBindmap[pp];
-      op && (Mp(cp._keyStates[pp], ip) && (cp._keyStates[pp] = ip, op.forEach((pp => {
-        (!cp.filterEvents || cp.filterEvents(Op, pp)) && function(pp, ip, cp, Op) {
-          var op = ip ? cp.pressCount : cp.releaseCount;
-          op[pp] = (op[pp] || 0) + 1;
-          var Ip = cp._bindPressCount[pp] || 0;
-          (Ip += ip ? 1 : -1) < 0 && (Ip = 0);
-          cp._bindPressCount[pp] = Ip;
-          var Sp = cp.state[pp];
-          if (Mp(Sp, Ip)) {
-            cp.state[pp] = Ip > 0;
-            var xp = ip ? cp.down : cp.up;
-            cp.disabled || xp.emit(pp, Op)
+    function xT(TT, UT, mT, WT) {
+      var zT = mT._keyBindmap[TT];
+      zT && (dT(mT._keyStates[TT], UT) && (mT._keyStates[TT] = UT, zT.forEach((TT => {
+        (!mT.filterEvents || mT.filterEvents(WT, TT)) && function(TT, UT, mT, WT) {
+          var zT = UT ? mT.pressCount : mT.releaseCount;
+          zT[TT] = (zT[TT] || 0) + 1;
+          var MT = mT._bindPressCount[TT] || 0;
+          (MT += UT ? 1 : -1) < 0 && (MT = 0);
+          mT._bindPressCount[TT] = MT;
+          var gT = mT.state[TT];
+          if (dT(gT, MT)) {
+            mT.state[TT] = MT > 0;
+            var nT = UT ? mT.down : mT.up;
+            mT.disabled || nT.emit(TT, WT)
           }
-        }(pp, ip, cp, Op)
-      }))), "button" in Op || (cp.YG && !Op.defaultPrevented && Op.preventDefault(), cp.stopPropagation && Op.stopPropagation()))
+        }(TT, UT, mT, WT)
+      }))), "button" in WT || (mT.wG && !WT.defaultPrevented && WT.preventDefault(), mT.stopPropagation && WT.stopPropagation()))
     }
 
-    function Mp(pp, ip) {
-      return pp ? !ip : ip
+    function dT(TT, UT) {
+      return TT ? !UT : UT
     }
   },
-  36730: (pp, ip) => {
-    function cp(pp) {
-      if (pp && "object" === typeof pp) {
-        var ip = pp.which || pp.keyCode || pp.charCode;
-        ip && (pp = ip)
+  36617: (TT, UT) => {
+    function mT(TT) {
+      if (TT && "object" === typeof TT) {
+        var UT = TT.which || TT.keyCode || TT.charCode;
+        UT && (TT = UT)
       }
-      if ("number" === typeof pp) return Sp[pp];
-      var cp, Ip = String(pp);
-      return (cp = Op[Ip.toLowerCase()]) ? cp : (cp = op[Ip.toLowerCase()]) || (1 === Ip.length ? Ip.charCodeAt(0) : void 0)
+      if ("number" === typeof TT) return gT[TT];
+      var mT, MT = String(TT);
+      return (mT = WT[MT.toLowerCase()]) ? mT : (mT = zT[MT.toLowerCase()]) || (1 === MT.length ? MT.charCodeAt(0) : void 0)
     }
-    cp.isEventKey = function(pp, ip) {
-      if (pp && "object" === typeof pp) {
-        var cp = pp.which || pp.keyCode || pp.charCode;
-        if (null === cp || void 0 === cp) return !1;
-        if ("string" === typeof ip) {
-          var Ip;
-          if (Ip = Op[ip.toLowerCase()]) return Ip === cp;
-          if (Ip = op[ip.toLowerCase()]) return Ip === cp
-        } else if ("number" === typeof ip) return ip === cp;
+    mT.isEventKey = function(TT, UT) {
+      if (TT && "object" === typeof TT) {
+        var mT = TT.which || TT.keyCode || TT.charCode;
+        if (null === mT || void 0 === mT) return !1;
+        if ("string" === typeof UT) {
+          var MT;
+          if (MT = WT[UT.toLowerCase()]) return MT === mT;
+          if (MT = zT[UT.toLowerCase()]) return MT === mT
+        } else if ("number" === typeof UT) return UT === mT;
         return !1
       }
     };
-    var Op = (ip = pp.exports = cp).code = ip.codes = {
+    var WT = (UT = TT.exports = mT).code = UT.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      op = ip.aliases = {
+      zT = UT.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Ip = 97; Ip < 123; Ip++) Op[String.fromCharCode(Ip)] = Ip - 32;
-    for (var Ip = 48; Ip < 58; Ip++) Op[Ip - 48] = Ip;
-    for (Ip = 1; Ip < 13; Ip++) Op["f" + Ip] = Ip + 111;
-    for (Ip = 0; Ip < 10; Ip++) Op["numpad " + Ip] = Ip + 96;
-    var Sp = ip.names = ip.title = {};
-    for (Ip in Op) Sp[Op[Ip]] = Ip;
-    for (var xp in op) Op[xp] = op[xp]
+    for (MT = 97; MT < 123; MT++) WT[String.fromCharCode(MT)] = MT - 32;
+    for (var MT = 48; MT < 58; MT++) WT[MT - 48] = MT;
+    for (MT = 1; MT < 13; MT++) WT["f" + MT] = MT + 111;
+    for (MT = 0; MT < 10; MT++) WT["numpad " + MT] = MT + 96;
+    var gT = UT.names = UT.title = {};
+    for (MT in WT) gT[WT[MT]] = MT;
+    for (var nT in zT) WT[nT] = zT[nT]
   },
-  39757: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op
+  39674: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
+    class WT {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.qB = !1, this.XB = !1, this.Bl = 30, this.YB = 0, this.lB = 100, this.rw = !1, this.fullscreen = !1, this.gH = function(pp) {}, this.JB = function(pp, ip, cp) {}, this.pN = function() {}, this.mH = function() {}, this.nB = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(pp) {}, this._data = new op(ip),
-          function(pp) {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.zC = !1, this.gC = !1, this.sF = 30, this.Xu = 0, this.nC = 100, this.yc = !1, this.fullscreen = !1, this.hq = function(TT) {}, this.lC = function(TT, UT, mT) {}, this.fC = function() {}, this.Qq = function() {}, this.pC = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(TT) {}, this._data = new zT(UT),
+          function(TT) {
             if ("loading" === document.readyState) {
-              var ip = () => {
-                document.removeEventListener("readystatechange", ip), pp()
+              var UT = () => {
+                document.removeEventListener("readystatechange", UT), TT()
               };
-              document.addEventListener("readystatechange", ip)
-            } else setTimeout(pp, 0)
+              document.addEventListener("readystatechange", UT)
+            } else setTimeout(TT, 0)
           }((() => {
-            ! function(pp) {
-              var ip = pp._data,
-                cp = ip.nowObject.now();
-              ip.lastTickStarted = cp, ip.lastFrameStarted = cp, ip.lastRenderStarted = cp, ip.frameCB = () => function(pp) {
-                var ip = pp._data;
-                requestAnimationFrame(ip.frameCB), xp(pp);
-                var cp = ip.nowObject.now(),
-                  Op = cp - ip.lastFrameStarted;
-                if (ip.lastFrameStarted = cp, pp.YB > 0) {
-                  ip.renderAccum += Op;
-                  var op = 1e3 / pp.YB;
-                  if (ip.renderAccum < op) return;
-                  ip.renderAccum -= op, ip.renderAccum > op && (ip.renderAccum = op)
+            ! function(TT) {
+              var UT = TT._data,
+                mT = UT.nowObject.now();
+              UT.lastTickStarted = mT, UT.lastFrameStarted = mT, UT.lastRenderStarted = mT, UT.frameCB = () => function(TT) {
+                var UT = TT._data;
+                requestAnimationFrame(UT.frameCB), nT(TT);
+                var mT = UT.nowObject.now(),
+                  WT = mT - UT.lastFrameStarted;
+                if (UT.lastFrameStarted = mT, TT.Xu > 0) {
+                  UT.renderAccum += WT;
+                  var zT = 1e3 / TT.Xu;
+                  if (UT.renderAccum < zT) return;
+                  UT.renderAccum -= zT, UT.renderAccum > zT && (UT.renderAccum = zT)
                 }
-                var Ip = cp - ip.lastRenderStarted;
-                ip.lastRenderStarted = cp;
-                var Sp = 1e3 / pp.Bl,
-                  Lp = (cp - ip.lastTickStarted) / Sp;
-                Lp < 0 && (Lp = 0);
-                pp.JB(Ip, Lp, Sp), setTimeout(xp, 0, pp, !0)
-              }(pp), ip.intervalCB = () => xp(pp), requestAnimationFrame(ip.frameCB), ip.pollTime > 0 && (ip.intervalID = setInterval(ip.intervalCB, Math.max(ip.pollTime, 1e3 / pp.Bl / 2)))
+                var MT = mT - UT.lastRenderStarted;
+                UT.lastRenderStarted = mT;
+                var gT = 1e3 / TT.sF,
+                  HT = (mT - UT.lastTickStarted) / gT;
+                HT < 0 && (HT = 0);
+                TT.lC(MT, HT, gT), setTimeout(nT, 0, TT, !0)
+              }(TT), UT.intervalCB = () => nT(TT), requestAnimationFrame(UT.frameCB), UT.pollTime > 0 && (UT.intervalID = setInterval(UT.intervalCB, Math.max(UT.pollTime, 1e3 / TT.sF / 2)))
             }(this),
-            function(pp, ip) {
-              if (!ip) return;
-              var cp = !1,
-                Op = !1,
-                op = pp => {
-                  if (!!pp !== (cp = ip === document.pointerLockElement))
-                    if (pp) {
-                      var Op = ip.requestPointerLock();
-                      Op && Op.catch && Op.catch((pp => {}))
+            function(TT, UT) {
+              if (!UT) return;
+              var mT = !1,
+                WT = !1,
+                zT = TT => {
+                  if (!!TT !== (mT = UT === document.pointerLockElement))
+                    if (TT) {
+                      var WT = UT.requestPointerLock();
+                      WT && WT.catch && WT.catch((TT => {}))
                     } else document.exitPointerLock()
                 },
-                Ip = pp => {
-                  !!pp !== (Op = ip === document.fullscreenElement) && (pp ? ip.requestFullscreen ? ip.requestFullscreen() : ip.webkitRequestFullscreen && ip.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                MT = TT => {
+                  !!TT !== (WT = UT === document.fullscreenElement) && (TT ? UT.requestFullscreen ? UT.requestFullscreen() : UT.webkitRequestFullscreen && UT.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (Op => {
-                cp = ip === document.pointerLockElement, pp.nB(cp)
-              })), document.addEventListener("fullscreenchange", (cp => {
-                Op = ip === document.fullscreenElement, pp.onFullscreenChanged(Op)
-              })), document.addEventListener("pointerlockerror", (Op => {
-                cp = ip === document.pointerLockElement, pp.onPointerLockError(Op)
-              })), Object.defineProperty(pp, "rw", {
-                get: () => cp,
-                set: op
-              }), Object.defineProperty(pp, "fullscreen", {
-                get: () => Op,
-                set: Ip
-              }), ip.addEventListener("click", (ip => {
-                pp.qB && op(!0), pp.XB && Ip(!0)
+              document.addEventListener("pointerlockchange", (WT => {
+                mT = UT === document.pointerLockElement, TT.pC(mT)
+              })), document.addEventListener("fullscreenchange", (mT => {
+                WT = UT === document.fullscreenElement, TT.onFullscreenChanged(WT)
+              })), document.addEventListener("pointerlockerror", (WT => {
+                mT = UT === document.pointerLockElement, TT.onPointerLockError(WT)
+              })), Object.defineProperty(TT, "yc", {
+                get: () => mT,
+                set: zT
+              }), Object.defineProperty(TT, "fullscreen", {
+                get: () => WT,
+                set: MT
+              }), UT.addEventListener("click", (UT => {
+                TT.zC && zT(!0), TT.gC && MT(!0)
               }));
-              var Sp = () => pp.mH();
+              var gT = () => TT.Qq();
               if (window.ResizeObserver) {
-                new ResizeObserver(Sp).observe(ip)
-              } else window.addEventListener("resize", Sp)
-            }(this, pp), this.pN()
+                new ResizeObserver(gT).observe(UT)
+              } else window.addEventListener("resize", gT)
+            }(this, TT), this.fC()
           }))
       }
     }
 
-    function op() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = pp, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function zT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = TT, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var Ip = 3,
-      Sp = 20;
+    var MT = 3,
+      gT = 20;
 
-    function xp(pp) {
-      for (var ip = pp._data, cp = 1e3 / pp.Bl, Op = ip.nowObject.now() + Sp, op = 0; ip.nowObject.now() >= ip.lastTickStarted + cp && ip.nowObject.now() < Op && ++op <= Ip;) pp.gH(cp), ip.lastTickStarted += cp;
-      var xp = 5 * (cp + 5),
-        Lp = ip.nowObject.now();
-      if (Lp - ip.lastTickStarted > xp)
-        for (; Lp >= ip.lastTickStarted + cp;) ip.lastTickStarted += cp
+    function nT(TT) {
+      for (var UT = TT._data, mT = 1e3 / TT.sF, WT = UT.nowObject.now() + gT, zT = 0; UT.nowObject.now() >= UT.lastTickStarted + mT && UT.nowObject.now() < WT && ++zT <= MT;) TT.hq(mT), UT.lastTickStarted += mT;
+      var nT = 5 * (mT + 5),
+        HT = UT.nowObject.now();
+      if (HT - UT.lastTickStarted > nT)
+        for (; HT >= UT.lastTickStarted + mT;) UT.lastTickStarted += mT
     }
   },
-  36887: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  36791: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => gT
     });
-    var Op = cp(62);
-    const op = Op.useLayoutEffect;
-    const Ip = function(pp) {
-      var ip = (0, Op.useRef)(pp);
-      return op((function() {
-        ip.current = pp
-      })), ip
+    var WT = mT(63);
+    const zT = WT.useLayoutEffect;
+    const MT = function(TT) {
+      var UT = (0, WT.useRef)(TT);
+      return zT((function() {
+        UT.current = TT
+      })), UT
     };
-    var Sp = function(pp) {
-      var ip = Ip(pp);
-      (0, Op.useEffect)((function() {
-        var pp = function(pp) {
-          var cp;
-          if (null != ip.current && (cp = ip.current(pp)), pp.defaultPrevented && (pp.returnValue = ""), "string" === typeof cp) return pp.returnValue = cp, cp
+    var gT = function(TT) {
+      var UT = MT(TT);
+      (0, WT.useEffect)((function() {
+        var TT = function(TT) {
+          var mT;
+          if (null != UT.current && (mT = UT.current(TT)), TT.defaultPrevented && (TT.returnValue = ""), "string" === typeof mT) return TT.returnValue = mT, mT
         };
-        return window.addEventListener("beforeunload", pp),
+        return window.addEventListener("beforeunload", TT),
           function() {
-            window.removeEventListener("beforeunload", pp)
+            window.removeEventListener("beforeunload", TT)
           }
       }), [])
     }
   },
-  36772: pp => {
-    var ip, cp = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Op = /OS X/.test(cp),
-      op = /Opera/.test(cp),
-      Ip = !/like Gecko/.test(cp) && !op,
-      Sp = pp.exports = {
-        0: Op ? "<menu>" : "<UNK>",
+  36672: TT => {
+    var UT, mT = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      WT = /OS X/.test(mT),
+      zT = /Opera/.test(mT),
+      MT = !/like Gecko/.test(mT) && !zT,
+      gT = TT.exports = {
+        0: WT ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Op ? "<meta>" : "<menu>",
+        93: WT ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Op && Ip ? "-" : "<volume-mute>",
+        173: WT && MT ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: op ? "`" : "<unicode>",
+        231: zT ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (ip = 58; ip < 65; ++ip) Sp[ip] = String.fromCharCode(ip);
-    for (ip = 48; ip < 58; ++ip) Sp[ip] = ip - 48 + "";
-    for (ip = 65; ip < 91; ++ip) Sp[ip] = String.fromCharCode(ip);
-    for (ip = 96; ip < 106; ++ip) Sp[ip] = "<num-" + (ip - 96) + ">";
-    for (ip = 112; ip < 136; ++ip) Sp[ip] = "F" + (ip - 111)
+    for (UT = 58; UT < 65; ++UT) gT[UT] = String.fromCharCode(UT);
+    for (UT = 48; UT < 58; ++UT) gT[UT] = UT - 48 + "";
+    for (UT = 65; UT < 91; ++UT) gT[UT] = String.fromCharCode(UT);
+    for (UT = 96; UT < 106; ++UT) gT[UT] = "<num-" + (UT - 96) + ">";
+    for (UT = 112; UT < 136; ++UT) gT[UT] = "F" + (UT - 111)
   },
-  39169: (pp, ip, cp) => {
-    function Op(pp, ip, cp, Op, op) {
-      var Ip = {};
-      return Object.keys(Op).forEach((function(pp) {
-        Ip[pp] = Op[pp]
-      })), Ip.enumerable = !!Ip.enumerable, Ip.configurable = !!Ip.configurable, ("value" in Ip || Ip.initializer) && (Ip.writable = !0), Ip = cp.slice().reverse().reduce((function(cp, Op) {
-        return Op(pp, ip, cp) || cp
-      }), Ip), op && void 0 !== Ip.initializer && (Ip.value = Ip.initializer ? Ip.initializer.call(op) : void 0, Ip.initializer = void 0), void 0 === Ip.initializer && (Object.defineProperty(pp, ip, Ip), Ip = null), Ip
+  39114: (TT, UT, mT) => {
+    function WT(TT, UT, mT, WT, zT) {
+      var MT = {};
+      return Object.keys(WT).forEach((function(TT) {
+        MT[TT] = WT[TT]
+      })), MT.enumerable = !!MT.enumerable, MT.configurable = !!MT.configurable, ("value" in MT || MT.initializer) && (MT.writable = !0), MT = mT.slice().reverse().reduce((function(mT, WT) {
+        return WT(TT, UT, mT) || mT
+      }), MT), zT && void 0 !== MT.initializer && (MT.value = MT.initializer ? MT.initializer.call(zT) : void 0, MT.initializer = void 0), void 0 === MT.initializer && (Object.defineProperty(TT, UT, MT), MT = null), MT
     }
-    cp.d(ip, {
-      b: () => Op
+    mT.d(UT, {
+      e: () => WT
     })
   },
-  39164: (pp, ip, cp) => {
-    function Op(pp, ip, cp, Op) {
-      cp && Object.defineProperty(pp, ip, {
-        enumerable: cp.enumerable,
-        configurable: cp.configurable,
-        writable: cp.writable,
-        value: cp.initializer ? cp.initializer.call(Op) : void 0
+  39108: (TT, UT, mT) => {
+    function WT(TT, UT, mT, WT) {
+      mT && Object.defineProperty(TT, UT, {
+        enumerable: mT.enumerable,
+        configurable: mT.configurable,
+        writable: mT.writable,
+        value: mT.initializer ? mT.initializer.call(WT) : void 0
       })
     }
-    cp.d(ip, {
-      c: () => Op
+    mT.d(UT, {
+      d: () => WT
     })
   },
-  38900: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
+  38793: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT
     });
-    var Op = cp(38905);
-    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
-      ...pp
-    } : null : pp.clone(ip) : null;
-    class Ip {
-      static DeepCopy(pp, ip, cp, Ip) {
-        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xp = function(pp) {
-          const ip = [];
+    var WT = mT(38800);
+    const zT = (TT, UT, mT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : mT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(UT) : null;
+    class MT {
+      static DeepCopy(TT, UT, mT, MT) {
+        let gT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const nT = function(TT) {
+          const UT = [];
           do {
-            const cp = Object.getOwnPropertyNames(pp);
-            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
-          } while (pp = Object.getPrototypeOf(pp));
-          return ip
-        }(pp);
-        for (const Yp of xp) {
-          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
-          if (Yp.endsWith("Observable")) continue;
-          if (cp && -1 !== cp.indexOf(Yp)) continue;
-          const xp = pp[Yp],
-            Dp = typeof xp;
-          if ("function" !== Dp) try {
-            if ("object" === Dp)
-              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
-              else if (xp instanceof Array) {
-              if (ip[Yp] = [], xp.length > 0)
-                if ("object" == typeof xp[0])
-                  for (let pp = 0; pp < xp.length; pp++) {
-                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
-                  } else ip[Yp] = xp.slice(0)
-            } else ip[Yp] = op(xp, ip, Sp);
-            else ip[Yp] = xp
-          } catch (Lp) {
-            Op.e.Warn(Lp.message)
+            const mT = Object.getOwnPropertyNames(TT);
+            for (const TT of mT) - 1 === UT.indexOf(TT) && UT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return UT
+        }(TT);
+        for (const kT of nT) {
+          if ("_" === kT[0] && (!MT || -1 === MT.indexOf(kT))) continue;
+          if (kT.endsWith("Observable")) continue;
+          if (mT && -1 !== mT.indexOf(kT)) continue;
+          const nT = TT[kT],
+            jT = typeof nT;
+          if ("function" !== jT) try {
+            if ("object" === jT)
+              if (nT instanceof Uint8Array) UT[kT] = Uint8Array.from(nT);
+              else if (nT instanceof Array) {
+              if (UT[kT] = [], nT.length > 0)
+                if ("object" == typeof nT[0])
+                  for (let TT = 0; TT < nT.length; TT++) {
+                    const mT = zT(nT[TT], UT, gT); - 1 === UT[kT].indexOf(mT) && UT[kT].push(mT)
+                  } else UT[kT] = nT.slice(0)
+            } else UT[kT] = zT(nT, UT, gT);
+            else UT[kT] = nT
+          } catch (HT) {
+            WT.b.Warn(HT.message)
           }
         }
       }
     }
   },
-  38942: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      f: () => Ip,
-      h: () => Sp,
-      l: () => xp
+  38824: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => zT,
+      d: () => MT,
+      h: () => gT,
+      j: () => nT
     });
-    var Op = cp(37487);
-    class op {
-      constructor(pp, ip, cp) {
-        this.gradient = pp, this.color1 = ip, this.color2 = cp
+    var WT = mT(37367);
+    class zT {
+      constructor(TT, UT, mT) {
+        this.gradient = TT, this.color1 = UT, this.color2 = mT
       }
-      getColorToRef(pp) {
-        this.color2 ? Op.h.LerpToRef(this.color1, this.color2, Math.random(), pp) : pp.rM(this.color1)
-      }
-    }
-    class Ip {
-      constructor(pp, ip) {
-        this.gradient = pp, this.color = ip
+      getColorToRef(TT) {
+        this.color2 ? WT.g.LerpToRef(this.color1, this.color2, Math.random(), TT) : TT.Gw(this.color1)
       }
     }
-    class Sp {
-      constructor(pp, ip, cp) {
-        this.gradient = pp, this.factor1 = ip, this.factor2 = cp
+    class MT {
+      constructor(TT, UT) {
+        this.gradient = TT, this.color = UT
+      }
+    }
+    class gT {
+      constructor(TT, UT, mT) {
+        this.gradient = TT, this.factor1 = UT, this.factor2 = mT
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class xp {
-      static GetCurrentGradient(pp, ip, cp) {
-        if (ip[0].gradient > pp) return void cp(ip[0], ip[0], 1);
-        for (let op = 0; op < ip.length - 1; op++) {
-          const Op = ip[op],
-            Ip = ip[op + 1];
-          if (pp >= Op.gradient && pp <= Ip.gradient) {
-            return void cp(Op, Ip, (pp - Op.gradient) / (Ip.gradient - Op.gradient))
+    class nT {
+      static GetCurrentGradient(TT, UT, mT) {
+        if (UT[0].gradient > TT) return void mT(UT[0], UT[0], 1);
+        for (let zT = 0; zT < UT.length - 1; zT++) {
+          const WT = UT[zT],
+            MT = UT[zT + 1];
+          if (TT >= WT.gradient && TT <= MT.gradient) {
+            return void mT(WT, MT, (TT - WT.gradient) / (MT.gradient - WT.gradient))
           }
         }
-        const Op = ip.length - 1;
-        cp(ip[Op], ip[Op], 1)
+        const WT = UT.length - 1;
+        mT(UT[WT], UT[WT], 1)
       }
     }
   },
-  38905: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  38800: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => WT
     });
-    class Op {
-      static _CheckLimit(pp, ip) {
-        let cp = Op._LogLimitOutputs[pp];
-        return cp ? cp.current++ : (cp = {
-          limit: ip,
+    class WT {
+      static _CheckLimit(TT, UT) {
+        let mT = WT._LogLimitOutputs[TT];
+        return mT ? mT.current++ : (mT = {
+          limit: UT,
           current: 1
-        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
+        }, WT._LogLimitOutputs[TT] = mT), mT.current <= mT.limit
       }
-      static _GenerateLimitMessage(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cp = Op._LogLimitOutputs[pp];
-        if (!cp || !Op.MessageLimitReached) return;
-        const op = this._Levels[ip];
-        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const mT = WT._LogLimitOutputs[TT];
+        if (!mT || !WT.MessageLimitReached) return;
+        const zT = this._Levels[UT];
+        mT.current === mT.limit && WT[zT.name](WT.MessageLimitReached.replace(/%LIMIT%/g, "" + mT.limit).replace(/%TYPE%/g, zT.name ?? ""))
       }
-      static _AddLogEntry(pp) {
-        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
+      static _AddLogEntry(TT) {
+        WT._LogCache = TT + WT._LogCache, WT.OnNewCacheEntry && WT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(pp) {
-        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
-          cp = new Date;
-        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
+      static _FormatMessage(TT) {
+        const UT = TT => TT < 10 ? "0" + TT : "" + TT,
+          mT = new Date;
+        return "[" + UT(mT.getHours()) + ":" + UT(mT.getMinutes()) + ":" + UT(mT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(pp, ip) {}
+      static _LogDisabled(TT, UT) {}
       static _LogEnabled() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        const op = Array.isArray(ip) ? ip[0] : ip;
-        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
-        const Ip = Op._FormatMessage(op),
-          Sp = this._Levels[pp],
-          xp = Array.isArray(ip) ? ip.slice(1) : [];
-        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
-        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
-        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          UT = arguments.length > 1 ? arguments[1] : void 0,
+          mT = arguments.length > 2 ? arguments[2] : void 0;
+        const zT = Array.isArray(UT) ? UT[0] : UT;
+        if (void 0 !== mT && !WT._CheckLimit(zT, mT)) return;
+        const MT = WT._FormatMessage(zT),
+          gT = this._Levels[TT],
+          nT = Array.isArray(UT) ? UT.slice(1) : [];
+        gT.logFunc && gT.logFunc("BJS - " + MT, ...nT);
+        const HT = `<div style='color:${gT.color}'>${MT}</div><br>`;
+        WT._AddLogEntry(HT), WT._GenerateLimitMessage(zT, TT)
       }
       static get LogCache() {
-        return Op._LogCache
+        return WT._LogCache
       }
       static ClearLogCache() {
-        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
+        WT._LogCache = "", WT._LogLimitOutputs = {}, WT.errorsCount = 0
       }
-      static set LogLevels(pp) {
-        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
-        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
-        for (const cp of ip)
-          if ((pp & cp) === cp) {
-            const pp = this._Levels[cp];
-            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
+      static set LogLevels(TT) {
+        WT.Log = WT._LogDisabled, WT.Warn = WT._LogDisabled, WT.Error = WT._LogDisabled;
+        const UT = [WT.MessageLogLevel, WT.WarningLogLevel, WT.ErrorLogLevel];
+        for (const mT of UT)
+          if ((TT & mT) === mT) {
+            const TT = this._Levels[mT];
+            WT[TT.name] = WT._LogEnabled.bind(WT, mT)
           }
       }
     }
-    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
+    WT.NoneLogLevel = 0, WT.MessageLogLevel = 1, WT.WarningLogLevel = 2, WT.ErrorLogLevel = 4, WT.AllLogLevel = 7, WT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", WT._LogCache = "", WT._LogLimitOutputs = {}, WT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+    }], WT.errorsCount = 0, WT.Log = WT._LogEnabled.bind(WT, WT.MessageLogLevel), WT.Warn = WT._LogEnabled.bind(WT, WT.WarningLogLevel), WT.Error = WT._LogEnabled.bind(WT, WT.ErrorLogLevel)
   },
-  38944: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  38830: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => gT
     });
-    var Op = cp(37320),
-      op = cp(37356),
-      Ip = cp(38900);
-    class Sp {
+    var WT = mT(37188),
+      zT = mT(37226),
+      MT = mT(38793);
+    class gT {
       constructor() {
-        this.direction1 = new Op.o(0, 1, 0), this.direction2 = new Op.o(0, 1, 0), this.minEmitBox = new Op.o(-.5, -.5, -.5), this.maxEmitBox = new Op.o(.5, .5, .5)
+        this.direction1 = new WT.p(0, 1, 0), this.direction2 = new WT.p(0, 1, 0), this.minEmitBox = new WT.p(-.5, -.5, -.5), this.maxEmitBox = new WT.p(.5, .5, .5)
       }
-      startDirectionFunction(pp, ip, cp, Ip) {
-        const Sp = (0, op.RandomRange)(this.direction1.x, this.direction2.x),
-          xp = (0, op.RandomRange)(this.direction1.y, this.direction2.y),
-          Lp = (0, op.RandomRange)(this.direction1.z, this.direction2.z);
-        if (Ip) return ip.x = Sp, ip.y = xp, void(ip.z = Lp);
-        Op.o.TransformNormalFromFloatsToRef(Sp, xp, Lp, pp, ip)
+      startDirectionFunction(TT, UT, mT, MT) {
+        const gT = (0, zT.RandomRange)(this.direction1.x, this.direction2.x),
+          nT = (0, zT.RandomRange)(this.direction1.y, this.direction2.y),
+          HT = (0, zT.RandomRange)(this.direction1.z, this.direction2.z);
+        if (MT) return UT.x = gT, UT.y = nT, void(UT.z = HT);
+        WT.p.TransformNormalFromFloatsToRef(gT, nT, HT, TT, UT)
       }
-      startPositionFunction(pp, ip, cp, Ip) {
-        const Sp = (0, op.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          xp = (0, op.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          Lp = (0, op.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (Ip) return ip.x = Sp, ip.y = xp, void(ip.z = Lp);
-        Op.o.TransformCoordinatesFromFloatsToRef(Sp, xp, Lp, pp, ip)
+      startPositionFunction(TT, UT, mT, MT) {
+        const gT = (0, zT.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          nT = (0, zT.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          HT = (0, zT.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (MT) return UT.x = gT, UT.y = nT, void(UT.z = HT);
+        WT.p.TransformCoordinatesFromFloatsToRef(gT, nT, HT, TT, UT)
       }
       clone() {
-        const pp = new Sp;
-        return Ip.e.DeepCopy(this, pp), pp
+        const TT = new gT;
+        return MT.c.DeepCopy(this, TT), TT
       }
-      applyToShader(pp) {
-        pp.setVector3("direction1", this.direction1), pp.setVector3("direction2", this.direction2), pp.setVector3("minEmitBox", this.minEmitBox), pp.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(TT) {
+        TT.setVector3("direction1", this.direction1), TT.setVector3("direction2", this.direction2), TT.setVector3("minEmitBox", this.minEmitBox), TT.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(pp) {
-        pp.addUniform("direction1", 3), pp.addUniform("direction2", 3), pp.addUniform("minEmitBox", 3), pp.addUniform("maxEmitBox", 3)
+      buildUniformLayout(TT) {
+        TT.addUniform("direction1", 3), TT.addUniform("direction2", 3), TT.addUniform("minEmitBox", 3), TT.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const pp = {};
-        return pp.type = this.getClassName(), pp.direction1 = this.direction1.BOp(), pp.direction2 = this.direction2.BOp(), pp.minEmitBox = this.minEmitBox.BOp(), pp.maxEmitBox = this.maxEmitBox.BOp(), pp
+        const TT = {};
+        return TT.type = this.getClassName(), TT.direction1 = this.direction1.cWT(), TT.direction2 = this.direction2.cWT(), TT.minEmitBox = this.minEmitBox.cWT(), TT.maxEmitBox = this.maxEmitBox.cWT(), TT
       }
-      parse(pp) {
-        Op.o.FromArrayToRef(pp.direction1, 0, this.direction1), Op.o.FromArrayToRef(pp.direction2, 0, this.direction2), Op.o.FromArrayToRef(pp.minEmitBox, 0, this.minEmitBox), Op.o.FromArrayToRef(pp.maxEmitBox, 0, this.maxEmitBox)
+      parse(TT) {
+        WT.p.FromArrayToRef(TT.direction1, 0, this.direction1), WT.p.FromArrayToRef(TT.direction2, 0, this.direction2), WT.p.FromArrayToRef(TT.minEmitBox, 0, this.minEmitBox), WT.p.FromArrayToRef(TT.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38898: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => xp,
-      f: () => Sp
+  38791: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => nT,
+      f: () => gT
     });
-    var Op = cp(37320),
-      op = cp(37356),
-      Ip = cp(38900);
-    class Sp {
+    var WT = mT(37188),
+      zT = mT(37226),
+      MT = mT(38793);
+    class gT {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = pp, this.height = ip, this.radiusRange = cp, this.directionRandomizer = op, this._tempVector = Op.o.Zero()
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = TT, this.height = UT, this.radiusRange = mT, this.directionRandomizer = zT, this._tempVector = WT.p.Zero()
       }
-      startDirectionFunction(pp, ip, cp, Ip, Sp) {
-        cp.position.subtractToRef(pp.getTranslation(), this._tempVector), this._tempVector.normalize(), Op.o.TransformNormalToRef(this._tempVector, Sp, this._tempVector);
-        const xp = (0, op.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let Lp = Math.atan2(this._tempVector.x, this._tempVector.z);
-        Lp += (0, op.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = xp, this._tempVector.x = Math.sin(Lp), this._tempVector.z = Math.cos(Lp), this._tempVector.normalize(), Ip ? ip.rM(this._tempVector) : Op.o.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, pp, ip)
+      startDirectionFunction(TT, UT, mT, MT, gT) {
+        mT.position.subtractToRef(TT.getTranslation(), this._tempVector), this._tempVector.normalize(), WT.p.TransformNormalToRef(this._tempVector, gT, this._tempVector);
+        const nT = (0, zT.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let HT = Math.atan2(this._tempVector.x, this._tempVector.z);
+        HT += (0, zT.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = nT, this._tempVector.x = Math.sin(HT), this._tempVector.z = Math.cos(HT), this._tempVector.normalize(), MT ? UT.Gw(this._tempVector) : WT.p.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, TT, UT)
       }
-      startPositionFunction(pp, ip, cp, Ip) {
-        const Sp = (0, op.RandomRange)(-this.height / 2, this.height / 2),
-          xp = (0, op.RandomRange)(0, 2 * Math.PI),
-          Lp = (0, op.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          Yp = Math.sqrt(Lp) * this.radius,
-          Dp = Yp * Math.cos(xp),
-          Ap = Yp * Math.sin(xp);
-        Ip ? ip.i5(Dp, Sp, Ap) : Op.o.TransformCoordinatesFromFloatsToRef(Dp, Sp, Ap, pp, ip)
+      startPositionFunction(TT, UT, mT, MT) {
+        const gT = (0, zT.RandomRange)(-this.height / 2, this.height / 2),
+          nT = (0, zT.RandomRange)(0, 2 * Math.PI),
+          HT = (0, zT.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          kT = Math.sqrt(HT) * this.radius,
+          jT = kT * Math.cos(nT),
+          lT = kT * Math.sin(nT);
+        MT ? UT.J9(jT, gT, lT) : WT.p.TransformCoordinatesFromFloatsToRef(jT, gT, lT, TT, UT)
       }
       clone() {
-        const pp = new Sp(this.radius, this.directionRandomizer);
-        return Ip.e.DeepCopy(this, pp), pp
+        const TT = new gT(this.radius, this.directionRandomizer);
+        return MT.c.DeepCopy(this, TT), TT
       }
-      applyToShader(pp) {
-        pp.setFloat("radius", this.radius), pp.setFloat("height", this.height), pp.setFloat("radiusRange", this.radiusRange), pp.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(TT) {
+        TT.setFloat("radius", this.radius), TT.setFloat("height", this.height), TT.setFloat("radiusRange", this.radiusRange), TT.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(pp) {
-        pp.addUniform("radius", 1), pp.addUniform("height", 1), pp.addUniform("radiusRange", 1), pp.addUniform("directionRandomizer", 1)
+      buildUniformLayout(TT) {
+        TT.addUniform("radius", 1), TT.addUniform("height", 1), TT.addUniform("radiusRange", 1), TT.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const pp = {};
-        return pp.type = this.getClassName(), pp.radius = this.radius, pp.height = this.height, pp.radiusRange = this.radiusRange, pp.directionRandomizer = this.directionRandomizer, pp
+        const TT = {};
+        return TT.type = this.getClassName(), TT.radius = this.radius, TT.height = this.height, TT.radiusRange = this.radiusRange, TT.directionRandomizer = this.directionRandomizer, TT
       }
-      parse(pp) {
-        this.radius = pp.radius, this.height = pp.height, this.radiusRange = pp.radiusRange, this.directionRandomizer = pp.directionRandomizer
+      parse(TT) {
+        this.radius = TT.radius, this.height = TT.height, this.radiusRange = TT.radiusRange, this.directionRandomizer = TT.directionRandomizer
       }
     }
-    class xp extends Sp {
+    class nT extends gT {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Op.o(0, 1, 0),
-          Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Op.o(0, 1, 0);
-        super(pp, ip, cp), this.direction1 = op, this.direction2 = Ip
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new WT.p(0, 1, 0),
+          MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new WT.p(0, 1, 0);
+        super(TT, UT, mT), this.direction1 = zT, this.direction2 = MT
       }
-      startDirectionFunction(pp, ip, cp, Ip) {
-        const Sp = (0, op.RandomRange)(this.direction1.x, this.direction2.x),
-          xp = (0, op.RandomRange)(this.direction1.y, this.direction2.y),
-          Lp = (0, op.RandomRange)(this.direction1.z, this.direction2.z);
-        Ip ? ip.i5(Sp, xp, Lp) : Op.o.TransformNormalFromFloatsToRef(Sp, xp, Lp, pp, ip)
+      startDirectionFunction(TT, UT, mT, MT) {
+        const gT = (0, zT.RandomRange)(this.direction1.x, this.direction2.x),
+          nT = (0, zT.RandomRange)(this.direction1.y, this.direction2.y),
+          HT = (0, zT.RandomRange)(this.direction1.z, this.direction2.z);
+        MT ? UT.J9(gT, nT, HT) : WT.p.TransformNormalFromFloatsToRef(gT, nT, HT, TT, UT)
       }
       clone() {
-        const pp = new xp(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return Ip.e.DeepCopy(this, pp), pp
+        const TT = new nT(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return MT.c.DeepCopy(this, TT), TT
       }
-      applyToShader(pp) {
-        pp.setFloat("radius", this.radius), pp.setFloat("height", this.height), pp.setFloat("radiusRange", this.radiusRange), pp.setVector3("direction1", this.direction1), pp.setVector3("direction2", this.direction2)
+      applyToShader(TT) {
+        TT.setFloat("radius", this.radius), TT.setFloat("height", this.height), TT.setFloat("radiusRange", this.radiusRange), TT.setVector3("direction1", this.direction1), TT.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(pp) {
-        pp.addUniform("radius", 1), pp.addUniform("height", 1), pp.addUniform("radiusRange", 1), pp.addUniform("direction1", 3), pp.addUniform("direction2", 3)
+      buildUniformLayout(TT) {
+        TT.addUniform("radius", 1), TT.addUniform("height", 1), TT.addUniform("radiusRange", 1), TT.addUniform("direction1", 3), TT.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const pp = super.serialize();
-        return pp.direction1 = this.direction1.BOp(), pp.direction2 = this.direction2.BOp(), pp
+        const TT = super.serialize();
+        return TT.direction1 = this.direction1.cWT(), TT.direction2 = this.direction2.cWT(), TT
       }
-      parse(pp) {
-        super.parse(pp), Op.o.FromArrayToRef(pp.direction1, 0, this.direction1), Op.o.FromArrayToRef(pp.direction2, 0, this.direction2)
+      parse(TT) {
+        super.parse(TT), WT.p.FromArrayToRef(TT.direction1, 0, this.direction1), WT.p.FromArrayToRef(TT.direction2, 0, this.direction2)
       }
     }
   },
-  39012: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ap
+  38907: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => lT
     });
-    const Op = .5 * (Math.sqrt(3) - 1),
-      op = (3 - Math.sqrt(3)) / 6,
-      Ip = 1 / 3,
-      Sp = 1 / 6,
-      xp = (Math.sqrt(5) - 1) / 4,
-      Lp = (5 - Math.sqrt(5)) / 20,
-      Yp = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      Dp = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const Ap = class {
+    const WT = .5 * (Math.sqrt(3) - 1),
+      zT = (3 - Math.sqrt(3)) / 6,
+      MT = 1 / 3,
+      gT = 1 / 6,
+      nT = (Math.sqrt(5) - 1) / 4,
+      HT = (5 - Math.sqrt(5)) / 20,
+      kT = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      jT = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const lT = class {
       constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const ip = "function" == typeof pp ? pp : function(pp) {
-          let ip = 0,
-            cp = 0,
-            Op = 0,
-            op = 1;
-          const Ip = function() {
-            let pp = 4022871197;
-            return function(ip) {
-              ip = ip.toString();
-              for (let cp = 0; cp < ip.length; cp++) {
-                pp += ip.charCodeAt(cp);
-                let Op = .02519603282416938 * pp;
-                pp = Op >>> 0, Op -= pp, Op *= pp, pp = Op >>> 0, Op -= pp, pp += 4294967296 * Op
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const UT = "function" == typeof TT ? TT : function(TT) {
+          let UT = 0,
+            mT = 0,
+            WT = 0,
+            zT = 1;
+          const MT = function() {
+            let TT = 4022871197;
+            return function(UT) {
+              UT = UT.toString();
+              for (let mT = 0; mT < UT.length; mT++) {
+                TT += UT.charCodeAt(mT);
+                let WT = .02519603282416938 * TT;
+                TT = WT >>> 0, WT -= TT, WT *= TT, TT = WT >>> 0, WT -= TT, TT += 4294967296 * WT
               }
-              return 2.3283064365386963e-10 * (pp >>> 0)
+              return 2.3283064365386963e-10 * (TT >>> 0)
             }
           }();
-          ip = Ip(" "), cp = Ip(" "), Op = Ip(" "), ip -= Ip(pp), ip < 0 && (ip += 1);
-          cp -= Ip(pp), cp < 0 && (cp += 1);
-          Op -= Ip(pp), Op < 0 && (Op += 1);
+          UT = MT(" "), mT = MT(" "), WT = MT(" "), UT -= MT(TT), UT < 0 && (UT += 1);
+          mT -= MT(TT), mT < 0 && (mT += 1);
+          WT -= MT(TT), WT < 0 && (WT += 1);
           return function() {
-            const pp = 2091639 * ip + 2.3283064365386963e-10 * op;
-            return ip = cp, cp = Op, Op = pp - (op = 0 | pp)
+            const TT = 2091639 * UT + 2.3283064365386963e-10 * zT;
+            return UT = mT, mT = WT, WT = TT - (zT = 0 | TT)
           }
-        }(pp);
-        this.p = function(pp) {
-          const ip = new Uint8Array(256);
-          for (let cp = 0; cp < 256; cp++) ip[cp] = cp;
-          for (let cp = 0; cp < 255; cp++) {
-            const Op = cp + ~~(pp() * (256 - cp)),
-              op = ip[cp];
-            ip[cp] = ip[Op], ip[Op] = op
+        }(TT);
+        this.p = function(TT) {
+          const UT = new Uint8Array(256);
+          for (let mT = 0; mT < 256; mT++) UT[mT] = mT;
+          for (let mT = 0; mT < 255; mT++) {
+            const WT = mT + ~~(TT() * (256 - mT)),
+              zT = UT[mT];
+            UT[mT] = UT[WT], UT[WT] = zT
           }
-          return ip
-        }(ip), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let cp = 0; cp < 512; cp++) this.perm[cp] = this.p[255 & cp], this.permMod12[cp] = this.perm[cp] % 12
+          return UT
+        }(UT), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let mT = 0; mT < 512; mT++) this.perm[mT] = this.p[255 & mT], this.permMod12[mT] = this.perm[mT] % 12
       }
-      noise2D(pp, ip) {
-        const cp = this.permMod12,
-          Ip = this.perm;
-        let Sp = 0,
-          xp = 0,
-          Lp = 0;
-        const Dp = (pp + ip) * Op,
-          Ap = Math.floor(pp + Dp),
-          Pp = Math.floor(ip + Dp),
-          Wp = (Ap + Pp) * op,
-          yp = pp - (Ap - Wp),
-          Up = ip - (Pp - Wp);
-        let wp, vp;
-        yp > Up ? (wp = 1, vp = 0) : (wp = 0, vp = 1);
-        const tp = yp - wp + op,
-          Hp = Up - vp + op,
-          dp = yp - 1 + 2 * op,
-          ep = Up - 1 + 2 * op,
-          jp = 255 & Ap,
-          kp = 255 & Pp;
-        let mp = .5 - yp * yp - Up * Up;
-        if (mp >= 0) {
-          const pp = 3 * cp[jp + Ip[kp]];
-          mp *= mp, Sp = mp * mp * (Yp[pp] * yp + Yp[pp + 1] * Up)
+      noise2D(TT, UT) {
+        const mT = this.permMod12,
+          MT = this.perm;
+        let gT = 0,
+          nT = 0,
+          HT = 0;
+        const jT = (TT + UT) * WT,
+          lT = Math.floor(TT + jT),
+          LT = Math.floor(UT + jT),
+          pT = (lT + LT) * zT,
+          BT = TT - (lT - pT),
+          ZT = UT - (LT - pT);
+        let cT, vT;
+        BT > ZT ? (cT = 1, vT = 0) : (cT = 0, vT = 1);
+        const fT = BT - cT + zT,
+          qT = ZT - vT + zT,
+          iT = BT - 1 + 2 * zT,
+          bT = ZT - 1 + 2 * zT,
+          OT = 255 & lT,
+          eT = 255 & LT;
+        let YT = .5 - BT * BT - ZT * ZT;
+        if (YT >= 0) {
+          const TT = 3 * mT[OT + MT[eT]];
+          YT *= YT, gT = YT * YT * (kT[TT] * BT + kT[TT + 1] * ZT)
         }
-        let Rp = .5 - tp * tp - Hp * Hp;
-        if (Rp >= 0) {
-          const pp = 3 * cp[jp + wp + Ip[kp + vp]];
-          Rp *= Rp, xp = Rp * Rp * (Yp[pp] * tp + Yp[pp + 1] * Hp)
+        let JT = .5 - fT * fT - qT * qT;
+        if (JT >= 0) {
+          const TT = 3 * mT[OT + cT + MT[eT + vT]];
+          JT *= JT, nT = JT * JT * (kT[TT] * fT + kT[TT + 1] * qT)
         }
-        let qp = .5 - dp * dp - ep * ep;
-        if (qp >= 0) {
-          const pp = 3 * cp[jp + 1 + Ip[kp + 1]];
-          qp *= qp, Lp = qp * qp * (Yp[pp] * dp + Yp[pp + 1] * ep)
+        let xT = .5 - iT * iT - bT * bT;
+        if (xT >= 0) {
+          const TT = 3 * mT[OT + 1 + MT[eT + 1]];
+          xT *= xT, HT = xT * xT * (kT[TT] * iT + kT[TT + 1] * bT)
         }
-        return 70 * (Sp + xp + Lp)
+        return 70 * (gT + nT + HT)
       }
-      noise3D(pp, ip, cp) {
-        const Op = this.permMod12,
-          op = this.perm;
-        let xp, Lp, Dp, Ap;
-        const Pp = (pp + ip + cp) * Ip,
-          Wp = Math.floor(pp + Pp),
-          yp = Math.floor(ip + Pp),
-          Up = Math.floor(cp + Pp),
-          wp = (Wp + yp + Up) * Sp,
-          vp = pp - (Wp - wp),
-          tp = ip - (yp - wp),
-          Hp = cp - (Up - wp);
-        let dp, ep, jp, kp, mp, Rp;
-        vp >= tp ? tp >= Hp ? (dp = 1, ep = 0, jp = 0, kp = 1, mp = 1, Rp = 0) : vp >= Hp ? (dp = 1, ep = 0, jp = 0, kp = 1, mp = 0, Rp = 1) : (dp = 0, ep = 0, jp = 1, kp = 1, mp = 0, Rp = 1) : tp < Hp ? (dp = 0, ep = 0, jp = 1, kp = 0, mp = 1, Rp = 1) : vp < Hp ? (dp = 0, ep = 1, jp = 0, kp = 0, mp = 1, Rp = 1) : (dp = 0, ep = 1, jp = 0, kp = 1, mp = 1, Rp = 0);
-        const qp = vp - dp + Sp,
-          Mp = tp - ep + Sp,
-          Cp = Hp - jp + Sp,
-          Ep = vp - kp + 2 * Sp,
-          Xp = tp - mp + 2 * Sp,
-          lp = Hp - Rp + 2 * Sp,
-          Qp = vp - 1 + .5,
-          Jp = tp - 1 + .5,
-          Bp = Hp - 1 + .5,
-          Np = 255 & Wp,
-          Tp = 255 & yp,
-          fp = 255 & Up;
-        let bp = .6 - vp * vp - tp * tp - Hp * Hp;
-        if (bp < 0) xp = 0;
+      noise3D(TT, UT, mT) {
+        const WT = this.permMod12,
+          zT = this.perm;
+        let nT, HT, jT, lT;
+        const LT = (TT + UT + mT) * MT,
+          pT = Math.floor(TT + LT),
+          BT = Math.floor(UT + LT),
+          ZT = Math.floor(mT + LT),
+          cT = (pT + BT + ZT) * gT,
+          vT = TT - (pT - cT),
+          fT = UT - (BT - cT),
+          qT = mT - (ZT - cT);
+        let iT, bT, OT, eT, YT, JT;
+        vT >= fT ? fT >= qT ? (iT = 1, bT = 0, OT = 0, eT = 1, YT = 1, JT = 0) : vT >= qT ? (iT = 1, bT = 0, OT = 0, eT = 1, YT = 0, JT = 1) : (iT = 0, bT = 0, OT = 1, eT = 1, YT = 0, JT = 1) : fT < qT ? (iT = 0, bT = 0, OT = 1, eT = 0, YT = 1, JT = 1) : vT < qT ? (iT = 0, bT = 1, OT = 0, eT = 0, YT = 1, JT = 1) : (iT = 0, bT = 1, OT = 0, eT = 1, YT = 1, JT = 0);
+        const xT = vT - iT + gT,
+          dT = fT - bT + gT,
+          wT = qT - OT + gT,
+          tT = vT - eT + 2 * gT,
+          aT = fT - YT + 2 * gT,
+          yT = qT - JT + 2 * gT,
+          XT = vT - 1 + .5,
+          IT = fT - 1 + .5,
+          QT = qT - 1 + .5,
+          sT = 255 & pT,
+          FT = 255 & BT,
+          PT = 255 & ZT;
+        let VT = .6 - vT * vT - fT * fT - qT * qT;
+        if (VT < 0) nT = 0;
         else {
-          const pp = 3 * Op[Np + op[Tp + op[fp]]];
-          bp *= bp, xp = bp * bp * (Yp[pp] * vp + Yp[pp + 1] * tp + Yp[pp + 2] * Hp)
+          const TT = 3 * WT[sT + zT[FT + zT[PT]]];
+          VT *= VT, nT = VT * VT * (kT[TT] * vT + kT[TT + 1] * fT + kT[TT + 2] * qT)
         }
-        let hp = .6 - qp * qp - Mp * Mp - Cp * Cp;
-        if (hp < 0) Lp = 0;
+        let uT = .6 - xT * xT - dT * dT - wT * wT;
+        if (uT < 0) HT = 0;
         else {
-          const pp = 3 * Op[Np + dp + op[Tp + ep + op[fp + jp]]];
-          hp *= hp, Lp = hp * hp * (Yp[pp] * qp + Yp[pp + 1] * Mp + Yp[pp + 2] * Cp)
+          const TT = 3 * WT[sT + iT + zT[FT + bT + zT[PT + OT]]];
+          uT *= uT, HT = uT * uT * (kT[TT] * xT + kT[TT + 1] * dT + kT[TT + 2] * wT)
         }
-        let ap = .6 - Ep * Ep - Xp * Xp - lp * lp;
-        if (ap < 0) Dp = 0;
+        let CT = .6 - tT * tT - aT * aT - yT * yT;
+        if (CT < 0) jT = 0;
         else {
-          const pp = 3 * Op[Np + kp + op[Tp + mp + op[fp + Rp]]];
-          ap *= ap, Dp = ap * ap * (Yp[pp] * Ep + Yp[pp + 1] * Xp + Yp[pp + 2] * lp)
+          const TT = 3 * WT[sT + eT + zT[FT + YT + zT[PT + JT]]];
+          CT *= CT, jT = CT * CT * (kT[TT] * tT + kT[TT + 1] * aT + kT[TT + 2] * yT)
         }
-        let np = .6 - Qp * Qp - Jp * Jp - Bp * Bp;
-        if (np < 0) Ap = 0;
+        let rT = .6 - XT * XT - IT * IT - QT * QT;
+        if (rT < 0) lT = 0;
         else {
-          const pp = 3 * Op[Np + 1 + op[Tp + 1 + op[fp + 1]]];
-          np *= np, Ap = np * np * (Yp[pp] * Qp + Yp[pp + 1] * Jp + Yp[pp + 2] * Bp)
+          const TT = 3 * WT[sT + 1 + zT[FT + 1 + zT[PT + 1]]];
+          rT *= rT, lT = rT * rT * (kT[TT] * XT + kT[TT + 1] * IT + kT[TT + 2] * QT)
         }
-        return 32 * (xp + Lp + Dp + Ap)
+        return 32 * (nT + HT + jT + lT)
       }
-      noise4D(pp, ip, cp, Op) {
-        const op = this.perm;
-        let Ip, Sp, Yp, Ap, Pp;
-        const Wp = (pp + ip + cp + Op) * xp,
-          yp = Math.floor(pp + Wp),
-          Up = Math.floor(ip + Wp),
-          wp = Math.floor(cp + Wp),
-          vp = Math.floor(Op + Wp),
-          tp = (yp + Up + wp + vp) * Lp,
-          Hp = pp - (yp - tp),
-          dp = ip - (Up - tp),
-          ep = cp - (wp - tp),
-          jp = Op - (vp - tp);
-        let kp = 0,
-          mp = 0,
-          Rp = 0,
-          qp = 0;
-        Hp > dp ? kp++ : mp++, Hp > ep ? kp++ : Rp++, Hp > jp ? kp++ : qp++, dp > ep ? mp++ : Rp++, dp > jp ? mp++ : qp++, ep > jp ? Rp++ : qp++;
-        const Mp = kp >= 3 ? 1 : 0,
-          Cp = mp >= 3 ? 1 : 0,
-          Ep = Rp >= 3 ? 1 : 0,
-          Xp = qp >= 3 ? 1 : 0,
-          lp = kp >= 2 ? 1 : 0,
-          Qp = mp >= 2 ? 1 : 0,
-          Jp = Rp >= 2 ? 1 : 0,
-          Bp = qp >= 2 ? 1 : 0,
-          Np = kp >= 1 ? 1 : 0,
-          Tp = mp >= 1 ? 1 : 0,
-          fp = Rp >= 1 ? 1 : 0,
-          bp = qp >= 1 ? 1 : 0,
-          hp = Hp - Mp + Lp,
-          ap = dp - Cp + Lp,
-          np = ep - Ep + Lp,
-          Fp = jp - Xp + Lp,
-          gp = Hp - lp + 2 * Lp,
-          Gp = dp - Qp + 2 * Lp,
-          rp = ep - Jp + 2 * Lp,
-          Zp = jp - Bp + 2 * Lp,
-          zp = Hp - Np + 3 * Lp,
-          sp = dp - Tp + 3 * Lp,
-          Kp = ep - fp + 3 * Lp,
-          Vp = jp - bp + 3 * Lp,
-          ii = Hp - 1 + 4 * Lp,
-          ci = dp - 1 + 4 * Lp,
-          Oi = ep - 1 + 4 * Lp,
-          oi = jp - 1 + 4 * Lp,
-          Ii = 255 & yp,
-          Si = 255 & Up,
-          xi = 255 & wp,
-          Li = 255 & vp;
-        let Yi = .6 - Hp * Hp - dp * dp - ep * ep - jp * jp;
-        if (Yi < 0) Ip = 0;
+      noise4D(TT, UT, mT, WT) {
+        const zT = this.perm;
+        let MT, gT, kT, lT, LT;
+        const pT = (TT + UT + mT + WT) * nT,
+          BT = Math.floor(TT + pT),
+          ZT = Math.floor(UT + pT),
+          cT = Math.floor(mT + pT),
+          vT = Math.floor(WT + pT),
+          fT = (BT + ZT + cT + vT) * HT,
+          qT = TT - (BT - fT),
+          iT = UT - (ZT - fT),
+          bT = mT - (cT - fT),
+          OT = WT - (vT - fT);
+        let eT = 0,
+          YT = 0,
+          JT = 0,
+          xT = 0;
+        qT > iT ? eT++ : YT++, qT > bT ? eT++ : JT++, qT > OT ? eT++ : xT++, iT > bT ? YT++ : JT++, iT > OT ? YT++ : xT++, bT > OT ? JT++ : xT++;
+        const dT = eT >= 3 ? 1 : 0,
+          wT = YT >= 3 ? 1 : 0,
+          tT = JT >= 3 ? 1 : 0,
+          aT = xT >= 3 ? 1 : 0,
+          yT = eT >= 2 ? 1 : 0,
+          XT = YT >= 2 ? 1 : 0,
+          IT = JT >= 2 ? 1 : 0,
+          QT = xT >= 2 ? 1 : 0,
+          sT = eT >= 1 ? 1 : 0,
+          FT = YT >= 1 ? 1 : 0,
+          PT = JT >= 1 ? 1 : 0,
+          VT = xT >= 1 ? 1 : 0,
+          uT = qT - dT + HT,
+          CT = iT - wT + HT,
+          rT = bT - tT + HT,
+          KT = OT - aT + HT,
+          ST = qT - yT + 2 * HT,
+          GT = iT - XT + 2 * HT,
+          NT = bT - IT + 2 * HT,
+          ET = OT - QT + 2 * HT,
+          hT = qT - sT + 3 * HT,
+          DT = iT - FT + 3 * HT,
+          oT = bT - PT + 3 * HT,
+          AT = OT - VT + 3 * HT,
+          RT = qT - 1 + 4 * HT,
+          TU = iT - 1 + 4 * HT,
+          UU = bT - 1 + 4 * HT,
+          mU = OT - 1 + 4 * HT,
+          WU = 255 & BT,
+          zU = 255 & ZT,
+          MU = 255 & cT,
+          gU = 255 & vT;
+        let nU = .6 - qT * qT - iT * iT - bT * bT - OT * OT;
+        if (nU < 0) MT = 0;
         else {
-          const pp = op[Ii + op[Si + op[xi + op[Li]]]] % 32 * 4;
-          Yi *= Yi, Ip = Yi * Yi * (Dp[pp] * Hp + Dp[pp + 1] * dp + Dp[pp + 2] * ep + Dp[pp + 3] * jp)
+          const TT = zT[WU + zT[zU + zT[MU + zT[gU]]]] % 32 * 4;
+          nU *= nU, MT = nU * nU * (jT[TT] * qT + jT[TT + 1] * iT + jT[TT + 2] * bT + jT[TT + 3] * OT)
         }
-        let Di = .6 - hp * hp - ap * ap - np * np - Fp * Fp;
-        if (Di < 0) Sp = 0;
+        let HU = .6 - uT * uT - CT * CT - rT * rT - KT * KT;
+        if (HU < 0) gT = 0;
         else {
-          const pp = op[Ii + Mp + op[Si + Cp + op[xi + Ep + op[Li + Xp]]]] % 32 * 4;
-          Di *= Di, Sp = Di * Di * (Dp[pp] * hp + Dp[pp + 1] * ap + Dp[pp + 2] * np + Dp[pp + 3] * Fp)
+          const TT = zT[WU + dT + zT[zU + wT + zT[MU + tT + zT[gU + aT]]]] % 32 * 4;
+          HU *= HU, gT = HU * HU * (jT[TT] * uT + jT[TT + 1] * CT + jT[TT + 2] * rT + jT[TT + 3] * KT)
         }
-        let Ai = .6 - gp * gp - Gp * Gp - rp * rp - Zp * Zp;
-        if (Ai < 0) Yp = 0;
+        let kU = .6 - ST * ST - GT * GT - NT * NT - ET * ET;
+        if (kU < 0) kT = 0;
         else {
-          const pp = op[Ii + lp + op[Si + Qp + op[xi + Jp + op[Li + Bp]]]] % 32 * 4;
-          Ai *= Ai, Yp = Ai * Ai * (Dp[pp] * gp + Dp[pp + 1] * Gp + Dp[pp + 2] * rp + Dp[pp + 3] * Zp)
+          const TT = zT[WU + yT + zT[zU + XT + zT[MU + IT + zT[gU + QT]]]] % 32 * 4;
+          kU *= kU, kT = kU * kU * (jT[TT] * ST + jT[TT + 1] * GT + jT[TT + 2] * NT + jT[TT + 3] * ET)
         }
-        let Pi = .6 - zp * zp - sp * sp - Kp * Kp - Vp * Vp;
-        if (Pi < 0) Ap = 0;
+        let jU = .6 - hT * hT - DT * DT - oT * oT - AT * AT;
+        if (jU < 0) lT = 0;
         else {
-          const pp = op[Ii + Np + op[Si + Tp + op[xi + fp + op[Li + bp]]]] % 32 * 4;
-          Pi *= Pi, Ap = Pi * Pi * (Dp[pp] * zp + Dp[pp + 1] * sp + Dp[pp + 2] * Kp + Dp[pp + 3] * Vp)
+          const TT = zT[WU + sT + zT[zU + FT + zT[MU + PT + zT[gU + VT]]]] % 32 * 4;
+          jU *= jU, lT = jU * jU * (jT[TT] * hT + jT[TT + 1] * DT + jT[TT + 2] * oT + jT[TT + 3] * AT)
         }
-        let Wi = .6 - ii * ii - ci * ci - Oi * Oi - oi * oi;
-        if (Wi < 0) Pp = 0;
+        let lU = .6 - RT * RT - TU * TU - UU * UU - mU * mU;
+        if (lU < 0) LT = 0;
         else {
-          const pp = op[Ii + 1 + op[Si + 1 + op[xi + 1 + op[Li + 1]]]] % 32 * 4;
-          Wi *= Wi, Pp = Wi * Wi * (Dp[pp] * ii + Dp[pp + 1] * ci + Dp[pp + 2] * Oi + Dp[pp + 3] * oi)
+          const TT = zT[WU + 1 + zT[zU + 1 + zT[MU + 1 + zT[gU + 1]]]] % 32 * 4;
+          lU *= lU, LT = lU * lU * (jT[TT] * RT + jT[TT + 1] * TU + jT[TT + 2] * UU + jT[TT + 3] * mU)
         }
-        return 27 * (Ip + Sp + Yp + Ap + Pp)
+        return 27 * (MT + gT + kT + lT + LT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);

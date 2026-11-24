@@ -1,502 +1,502 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  41251: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip,
-      f: () => Sp
+  41169: (TT, UT, mT) => {
+    mT.d(UT, {
+      c: () => MT,
+      f: () => gT
     });
-    var Op = cp(1971);
-    let op = !1;
+    var WT = mT(2057);
+    let zT = !1;
 
-    function Ip() {
-      op = !0
+    function MT() {
+      zT = !0
     }
 
-    function Sp() {
-      op && (op = !1, (0, Op.b)())
+    function gT() {
+      zT && (zT = !1, (0, WT.c)())
     }
   },
-  41248: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp,
-      c: () => Ip,
-      d: () => xp
+  41163: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => gT,
+      d: () => MT,
+      f: () => nT
     });
-    var Op = cp(40769),
-      op = cp(40783);
+    var WT = mT(40709),
+      zT = mT(40724);
 
-    function Ip(pp) {
-      if (pp.queries.drawCensus() < Op.ob.BYTES) return null;
-      const ip = pp.memoryData(pp.scratch(), Op.ob.BYTES, 4, "the draw census");
-      return null === ip ? null : {
-        terrainOpaque: Op.ob.terrainOpaque(ip, 0),
-        terrainTransparent: Op.ob.terrainTransparent(ip, 0),
-        terrainPack: Op.ob.terrainPack(ip, 0),
-        earthSky: Op.ob.earthSky(ip, 0),
-        skyMeshes: Op.ob.skyMeshes(ip, 0),
-        regular: Op.ob.regular(ip, 0),
-        thin: Op.ob.thin(ip, 0),
-        line: Op.ob.line(ip, 0),
-        text: Op.ob.text(ip, 0),
-        particles: Op.ob.particles(ip, 0),
-        terrainParts: Op.ob.terrainParts(ip, 0),
-        terrainCompiling: Op.ob.terrainCompiling(ip, 0),
-        ringCopiesMax: Op.ob.ringCopiesMax(ip, 0),
-        ringBusyWrites: Op.ob.ringBusyWrites(ip, 0)
+    function MT(TT) {
+      if (TT.queries.drawCensus() < WT.Bb.BYTES) return null;
+      const UT = TT.memoryData(TT.scratch(), WT.Bb.BYTES, 4, "the draw census");
+      return null === UT ? null : {
+        terrainOpaque: WT.Bb.terrainOpaque(UT, 0),
+        terrainTransparent: WT.Bb.terrainTransparent(UT, 0),
+        terrainPack: WT.Bb.terrainPack(UT, 0),
+        earthSky: WT.Bb.earthSky(UT, 0),
+        skyMeshes: WT.Bb.skyMeshes(UT, 0),
+        regular: WT.Bb.regular(UT, 0),
+        thin: WT.Bb.thin(UT, 0),
+        line: WT.Bb.line(UT, 0),
+        text: WT.Bb.text(UT, 0),
+        particles: WT.Bb.particles(UT, 0),
+        terrainParts: WT.Bb.terrainParts(UT, 0),
+        terrainCompiling: WT.Bb.terrainCompiling(UT, 0),
+        ringCopiesMax: WT.Bb.ringCopiesMax(UT, 0),
+        ringBusyWrites: WT.Bb.ringBusyWrites(UT, 0)
       }
     }
 
-    function Sp(pp) {
+    function gT(TT) {
       const {
-        terrainOpaque: ip,
-        terrainTransparent: cp,
-        earthSky: Op,
-        skyMeshes: op,
-        regular: Ip,
-        thin: Sp,
-        line: xp,
-        text: Lp,
-        particles: Yp
-      } = pp;
-      return ip + cp + Op + op + Ip + Sp + xp + Lp + Yp
+        terrainOpaque: UT,
+        terrainTransparent: mT,
+        earthSky: WT,
+        skyMeshes: zT,
+        regular: MT,
+        thin: gT,
+        line: nT,
+        text: HT,
+        particles: kT
+      } = TT;
+      return UT + mT + WT + zT + MT + gT + nT + HT + kT
     }
 
-    function xp() {
-      const pp = (0, op.k)();
-      return !0 === (null === pp || void 0 === pp ? void 0 : pp.isCoreRunning) ? function(pp) {
-        const ip = Ip(pp);
-        if (null === ip) return [];
+    function nT() {
+      const TT = (0, zT.i)();
+      return !0 === (null === TT || void 0 === TT ? void 0 : TT.isCoreRunning) ? function(TT) {
+        const UT = MT(TT);
+        if (null === UT) return [];
         const {
-          terrainOpaque: cp,
-          terrainTransparent: Op,
-          terrainPack: op,
-          earthSky: xp,
-          skyMeshes: Lp,
-          regular: Yp,
-          thin: Dp,
-          line: Ap,
-          text: Pp,
-          particles: Wp
-        } = ip;
+          terrainOpaque: mT,
+          terrainTransparent: WT,
+          terrainPack: zT,
+          earthSky: nT,
+          skyMeshes: HT,
+          regular: kT,
+          thin: jT,
+          line: lT,
+          text: LT,
+          particles: pT
+        } = UT;
         return [{
           label: "Drawn",
-          value: `${Sp(ip)}`
+          value: `${gT(UT)}`
         }, {
           label: "Terrain",
-          value: `${cp} opaque / ${Op} transparent (${op} shader pack)`
+          value: `${mT} opaque / ${WT} transparent (${zT} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Yp} / ${Dp}`
+          value: `${kT} / ${jT}`
         }, {
           label: "Text / Lines",
-          value: `${Pp} / ${Ap}`
+          value: `${LT} / ${lT}`
         }, {
           label: "Sky / Particles",
-          value: `${xp+Lp} / ${Wp}`
+          value: `${nT+HT} / ${pT}`
         }]
-      }(pp.api) : []
+      }(TT.api) : []
     }
   },
-  41225: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => yp,
-      d: () => Pp,
-      h: () => Wp
+  41153: (TT, UT, mT) => {
+    mT.d(UT, {
+      d: () => BT,
+      f: () => LT,
+      i: () => pT
     });
-    var Op = cp(1975),
-      op = cp(1313),
-      Ip = cp(40783),
-      Sp = cp(40813),
-      xp = cp(40818),
-      Lp = cp(40837);
-    const Yp = new op.c;
-    let Dp = !1;
+    var WT = mT(2060),
+      zT = mT(1392),
+      MT = mT(40724),
+      gT = mT(40752),
+      nT = mT(40756),
+      HT = mT(40780);
+    const kT = new zT.d;
+    let jT = !1;
 
-    function Ap(pp) {
-      const ip = (0, Ip.k)();
-      return null !== ip && +pp === ip.api.localId
+    function lT(TT) {
+      const UT = (0, MT.i)();
+      return null !== UT && +TT === UT.api.localId
     }
 
-    function Pp() {
-      Dp || (Dp = !0, (0, Lp.h)(Sp.p, (pp => {
-        var ip, cp;
-        const Op = (0, xp.f)(Sp.p, pp);
-        if (!(0, xp.b)(Op)) return;
-        const op = Op;
-        Ap(op.Np) && Wp(op.Tp, {
-          icon: op.Oc,
-          level: op.Ic,
-          displayName: null !== (ip = op.bp) && void 0 !== ip ? ip : null,
-          durationMs: null !== (cp = op.oc) && void 0 !== cp ? cp : null
+    function LT() {
+      jT || (jT = !0, (0, HT.m)(gT.m, (TT => {
+        var UT, mT;
+        const WT = (0, nT.h)(gT.m, TT);
+        if (!(0, nT.d)(WT)) return;
+        const zT = WT;
+        lT(zT.XT) && pT(zT.IT, {
+          icon: zT.VU,
+          level: zT.CU,
+          displayName: null !== (UT = zT.QT) && void 0 !== UT ? UT : null,
+          durationMs: null !== (mT = zT.uU) && void 0 !== mT ? mT : null
         })
-      })), (0, Lp.h)(Sp.P, (pp => {
-        const ip = (0, xp.f)(Sp.P, pp);
-        if (!(0, xp.b)(ip)) return;
-        const cp = ip;
-        Ap(cp.Np) && Op.e.remove(cp.Tp)
-      })), (0, Lp.d)((() => {
-        Op.e.clear()
+      })), (0, HT.m)(gT.U, (TT => {
+        const UT = (0, nT.h)(gT.U, TT);
+        if (!(0, nT.d)(UT)) return;
+        const mT = UT;
+        lT(mT.XT) && WT.b.remove(mT.IT)
+      })), (0, HT.h)((() => {
+        WT.b.clear()
       })))
     }
 
-    function Wp(pp, ip) {
-      Op.e.update(pp, ip), Yp.forEach((ip => {
-        ip(pp)
+    function pT(TT, UT) {
+      WT.b.update(TT, UT), kT.forEach((UT => {
+        UT(TT)
       }))
     }
-    const yp = {
+    const BT = {
       localEffectUpdated: {
-        watch: pp => Yp.add(pp)
+        watch: TT => kT.add(TT)
       }
     }
   },
-  41233: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Dp
+  41156: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => jT
     });
-    var Op = cp(4911),
-      op = cp(4903),
-      Ip = cp(40824),
-      Sp = cp(40837);
-    const xp = new Set(Op.A),
-      Lp = Op.A.map((pp => (new TextEncoder).encode(pp))),
-      Yp = new Map;
+    var WT = mT(4904),
+      zT = mT(4895),
+      MT = mT(40765),
+      gT = mT(40780);
+    const nT = new Set(WT.K),
+      HT = WT.K.map((TT => (new TextEncoder).encode(TT))),
+      kT = new Map;
 
-    function Dp(pp, ip) {
-      var cp;
-      return null === (cp = Yp.get(pp)) || void 0 === cp ? void 0 : cp[ip]
-    }(0, Sp.h)(Op.Zb.NewOtherEntitySettings, (pp => {
-      pp.payloadKind === op.kc.Msgpack && Lp.some((ip => function(pp, ip) {
-        const cp = ip[0];
-        for (let Op = pp.indexOf(cp); - 1 !== Op && Op + ip.length <= pp.length; Op = pp.indexOf(cp, Op + 1)) {
-          let cp = 1;
-          for (; cp < ip.length && pp[Op + cp] === ip[cp];) cp++;
-          if (cp === ip.length) return !0
+    function jT(TT, UT) {
+      var mT;
+      return null === (mT = kT.get(TT)) || void 0 === mT ? void 0 : mT[UT]
+    }(0, gT.m)(WT.$b.NewOtherEntitySettings, (TT => {
+      TT.payloadKind === zT.lc.Msgpack && HT.some((UT => function(TT, UT) {
+        const mT = UT[0];
+        for (let WT = TT.indexOf(mT); - 1 !== WT && WT + UT.length <= TT.length; WT = TT.indexOf(mT, WT + 1)) {
+          let mT = 1;
+          for (; mT < UT.length && TT[WT + mT] === UT[mT];) mT++;
+          if (mT === UT.length) return !0
         }
         return !1
-      }(pp.payload, ip))) && function(pp) {
-        if (null === pp || "object" !== typeof pp || null === pp.settings || "object" !== typeof pp.settings) return;
-        const ip = String(pp.eId),
-          cp = pp.settings;
-        let Op = Yp.get(ip);
-        for (const op in cp) {
-          if (!xp.has(op)) continue;
-          const pp = cp[op];
-          null === pp || void 0 === pp ? Op && delete Op[op] : (Op ??= {}, Op[op] = pp)
+      }(TT.payload, UT))) && function(TT) {
+        if (null === TT || "object" !== typeof TT || null === TT.settings || "object" !== typeof TT.settings) return;
+        const UT = String(TT.eId),
+          mT = TT.settings;
+        let WT = kT.get(UT);
+        for (const zT in mT) {
+          if (!nT.has(zT)) continue;
+          const TT = mT[zT];
+          null === TT || void 0 === TT ? WT && delete WT[zT] : (WT ??= {}, WT[zT] = TT)
         }
-        Op && Yp.set(ip, Op)
-      }((0, Ip.c)(pp.payload))
-    })), (0, Sp.d)((() => {
-      Yp.clear()
+        WT && kT.set(UT, WT)
+      }((0, MT.c)(TT.payload))
+    })), (0, gT.h)((() => {
+      kT.clear()
     }))
   },
-  41221: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Wp,
-      d: () => Yp,
-      e: () => Ap
+  41145: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => pT,
+      h: () => kT,
+      k: () => lT
     });
-    var Op = cp(39182),
-      op = cp(1963),
-      Ip = cp(1313),
-      Sp = cp(40813),
-      xp = cp(40818),
-      Lp = cp(40837);
-    const Yp = new Op.e;
-    let Dp = {};
+    var WT = mT(39137),
+      zT = mT(2054),
+      MT = mT(1392),
+      gT = mT(40752),
+      nT = mT(40756),
+      HT = mT(40780);
+    const kT = new WT.e;
+    let jT = {};
 
-    function Ap(pp) {
-      return Dp[pp]
+    function lT(TT) {
+      return jT[TT]
     }
-    const Pp = new Ip.c;
+    const LT = new MT.d;
 
-    function Wp(pp) {
-      return Pp.add(pp)
+    function pT(TT) {
+      return LT.add(TT)
     }
 
-    function yp(pp) {
-      Pp.callEach(pp, "a roster listener")
-    }(0, Lp.h)(Sp.X, (pp => {
-      const ip = (0, xp.f)(Sp.X, pp);
-      if (void 0 === ip) return;
-      const cp = ip.hp.some((pp => {
+    function BT(TT) {
+      LT.callEach(TT, "a roster listener")
+    }(0, HT.m)(gT.bb, (TT => {
+      const UT = (0, nT.h)(gT.bb, TT);
+      if (void 0 === UT) return;
+      const mT = UT.sT.some((TT => {
           let {
-            ap: ip,
-            np: cp
-          } = pp;
-          return null !== cp && Yp.has(ip) && Yp.getName(ip) !== cp
+            FT: UT,
+            PT: mT
+          } = TT;
+          return null !== mT && kT.has(UT) && kT.getName(UT) !== mT
         })),
         {
-          added: Op,
-          removed: Ip,
-          settingChanges: Lp
-        } = Yp.apply(ip),
-        Dp = new Set;
-      for (const op of Lp)
-        for (const pp in op.settings) Dp.add(pp);
-      const Ap = cp || Op.length > 0 || Ip.length > 0;
-      (Ap || Dp.has("hideNameSeed")) && function() {
-        const pp = new Map;
-        for (const ip of Yp.ids()) {
-          const cp = Yp.getName(ip),
-            Op = Yp.getSetting(ip, "hideNameSeed");
-          void 0 !== cp && void 0 !== Op && null !== Op && pp.set(cp, Op)
+          added: WT,
+          removed: MT,
+          settingChanges: HT
+        } = kT.apply(UT),
+        jT = new Set;
+      for (const zT of HT)
+        for (const TT in zT.settings) jT.add(TT);
+      const lT = mT || WT.length > 0 || MT.length > 0;
+      (lT || jT.has("hideNameSeed")) && function() {
+        const TT = new Map;
+        for (const UT of kT.ids()) {
+          const mT = kT.getName(UT),
+            WT = kT.getSetting(UT, "hideNameSeed");
+          void 0 !== mT && void 0 !== WT && null !== WT && TT.set(mT, WT)
         }
-        op.d.replaceAll(pp)
-      }(), yp({
+        zT.d.replaceAll(TT)
+      }(), BT({
         kind: "roster",
-        members: Ap,
-        settings: Dp
+        members: lT,
+        settings: jT
       })
-    })), (0, Lp.h)(Sp.O, (pp => {
-      const ip = (0, xp.f)(Sp.O, pp);
-      if (void 0 !== ip) {
+    })), (0, HT.m)(gT.Q, (TT => {
+      const UT = (0, nT.h)(gT.Q, TT);
+      if (void 0 !== UT) {
         for (const {
-            sI: pp,
-            KI: cp,
-            VI: Op
+            dM: TT,
+            wM: mT,
+            tM: WT
           }
-          of ip) Dp[pp] = {
-          ...Dp[pp],
-          [cp]: Op
+          of UT) jT[TT] = {
+          ...jT[TT],
+          [mT]: WT
         };
-        yp({
+        BT({
           kind: "cosmetics",
-          updates: ip
+          updates: UT
         })
       }
-    })), (0, Lp.d)((() => {
-      Yp.clear(), Dp = {}, op.d.clear(), yp({
+    })), (0, HT.h)((() => {
+      kT.clear(), jT = {}, zT.d.clear(), BT({
         kind: "reset"
       })
-    })), (0, Lp.e)((() => {
-      Yp.clear(), yp({
+    })), (0, HT.l)((() => {
+      kT.clear(), BT({
         kind: "reset"
       })
     }))
   },
-  41240: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Mp,
-      h: () => wp,
-      j: () => lp,
-      k: () => Qp
+  41160: (TT, UT, mT) => {
+    mT.d(UT, {
+      b: () => dT,
+      c: () => cT,
+      f: () => yT,
+      i: () => XT
     });
-    var Op = cp(1284),
-      op = cp(629),
-      Ip = cp(104),
-      Sp = cp(4911),
-      xp = cp(40769),
-      Lp = cp(40806),
-      Yp = cp(40783),
-      Dp = cp(41233),
-      Ap = cp(41221),
-      Pp = cp(40818),
-      Wp = cp(40837);
+    var WT = mT(1367),
+      zT = mT(643),
+      MT = mT(102),
+      gT = mT(4904),
+      nT = mT(40709),
+      HT = mT(40743),
+      kT = mT(40724),
+      jT = mT(41156),
+      lT = mT(41145),
+      LT = mT(40756),
+      pT = mT(40780);
 
-    function yp(pp) {
+    function BT(TT) {
       let {
-        deadEId: ip,
-        killerEId: cp,
-        killerLifeformType: Op,
-        withItem: op,
-        killstreak: Ip
-      } = pp;
+        deadEId: UT,
+        killerEId: mT,
+        killerLifeformType: WT,
+        withItem: zT,
+        killstreak: MT
+      } = TT;
       return {
-        killer: dp({
-          eId: cp,
-          lifeformType: Op
+        killer: iT({
+          eId: mT,
+          lifeformType: WT
         }),
-        victim: dp({
-          eId: ip
+        victim: iT({
+          eId: UT
         }),
-        withItem: op,
-        killstreak: Ip
+        withItem: zT,
+        killstreak: MT
       }
     }
 
-    function Up(pp) {
+    function ZT(TT) {
       let {
-        killer: ip,
-        victim: cp,
-        withItem: Op
-      } = pp;
+        killer: UT,
+        victim: mT,
+        withItem: WT
+      } = TT;
       return {
-        killer: dp(ip),
-        victim: dp(cp),
-        withItem: Op,
+        killer: iT(UT),
+        victim: iT(mT),
+        withItem: WT,
         killstreak: 0
       }
     }
 
-    function wp(pp) {
-      mp && qp((() => "killed" === pp.kind ? yp(pp.body) : Up(pp.body)))
+    function cT(TT) {
+      YT && xT((() => "killed" === TT.kind ? BT(TT.body) : ZT(TT.body)))
     }
-    const vp = "#2727f1",
-      tp = "#912c2c";
+    const vT = "#2727f1",
+      fT = "#912c2c";
 
-    function Hp(pp, ip) {
-      var cp;
-      return Ap.d.has(pp) ? null === (cp = Ap.d.getSettings(pp)) || void 0 === cp ? void 0 : cp[ip] : (0, Dp.c)(pp, ip)
+    function qT(TT, UT) {
+      var mT;
+      return lT.h.has(TT) ? null === (mT = lT.h.getSettings(TT)) || void 0 === mT ? void 0 : mT[UT] : (0, jT.e)(TT, UT)
     }
 
-    function dp(pp) {
-      var ip, cp, Sp, xp, Dp;
+    function iT(TT) {
+      var UT, mT, gT, nT, jT;
       let {
-        eId: Pp,
-        name: Wp,
-        colour: yp,
-        lifeformType: Up
-      } = pp;
-      if (void 0 === Pp || null === Pp || "" === Pp) {
-        const pp = Wp || null;
+        eId: LT,
+        name: pT,
+        colour: BT,
+        lifeformType: ZT
+      } = TT;
+      if (void 0 === LT || null === LT || "" === LT) {
+        const TT = pT || null;
         return {
           id: null,
-          shownName: pp,
-          lifeformType: null === pp && null !== Up && void 0 !== Up ? Up : null,
-          colour: yp || null,
+          shownName: TT,
+          lifeformType: null === TT && null !== ZT && void 0 !== ZT ? ZT : null,
+          colour: BT || null,
           local: !1,
           realName: null
         }
       }
-      const wp = String(Pp),
-        dp = null === (ip = (0, Yp.k)()) || void 0 === ip ? void 0 : ip.api,
-        ep = void 0 !== dp && String(dp.localId) === wp,
-        jp = null !== (cp = Ap.d.getName(wp)) && void 0 !== cp ? cp : null,
-        kp = null !== (Sp = Hp(wp, "hideNameSeed")) && void 0 !== Sp ? Sp : null;
-      let mp = null === jp ? null : (0, Op.d)(jp, !Ip.featureFlags.canSeeRealPlayerNames, kp) || null,
-        Rp = null;
-      if (null === mp && void 0 !== dp) {
-        const pp = dp.getEntityType(wp);
-        "Player" !== pp && (mp = (0, Lp.k)(dp, +wp) || null), Rp = op.i.includes(pp) ? pp : null
+      const cT = String(LT),
+        iT = null === (UT = (0, kT.i)()) || void 0 === UT ? void 0 : UT.api,
+        bT = void 0 !== iT && String(iT.localId) === cT,
+        OT = null !== (mT = lT.h.getName(cT)) && void 0 !== mT ? mT : null,
+        eT = null !== (gT = qT(cT, "hideNameSeed")) && void 0 !== gT ? gT : null;
+      let YT = null === OT ? null : (0, WT.d)(OT, !MT.featureFlags.canSeeRealPlayerNames, eT) || null,
+        JT = null;
+      if (null === YT && void 0 !== iT) {
+        const TT = iT.getEntityType(cT);
+        "Player" !== TT && (YT = (0, HT.j)(iT, +cT) || null), JT = zT.j.includes(TT) ? TT : null
       }
       return {
-        id: wp,
-        shownName: mp,
-        lifeformType: null === mp && null !== (xp = null !== (Dp = Rp) && void 0 !== Dp ? Dp : Up) && void 0 !== xp ? xp : null,
-        colour: yp || Hp(wp, "killfeedColour") || (ep ? vp : tp),
-        local: ep,
-        realName: jp
+        id: cT,
+        shownName: YT,
+        lifeformType: null === YT && null !== (nT = null !== (jT = JT) && void 0 !== jT ? jT : ZT) && void 0 !== nT ? nT : null,
+        colour: BT || qT(cT, "killfeedColour") || (bT ? vT : fT),
+        local: bT,
+        realName: OT
       }
     }
-    const ep = 32;
-    let jp = [],
-      kp = null,
-      mp = !1,
-      Rp = !1;
+    const bT = 32;
+    let OT = [],
+      eT = null,
+      YT = !1,
+      JT = !1;
 
-    function qp(pp) {
-      null === kp ? (jp.length === ep && jp.shift(), jp.push(pp)) : kp(pp())
+    function xT(TT) {
+      null === eT ? (OT.length === bT && OT.shift(), OT.push(TT)) : eT(TT())
     }
 
-    function Mp() {
-      Rp || (Rp = !0, (0, Wp.h)(Sp.Zb.PlayerKilled, (pp => {
-        const ip = (0, Pp.i)(pp);
-        (0, Pp.b)(ip) && qp((() => yp(ip)))
-      })), (0, Wp.h)(Sp.Zb.CustomKillfeed, (pp => {
-        const ip = (0, Pp.i)(pp);
-        (0, Pp.b)(ip) && (0, Pp.b)(ip.killer) && (0, Pp.b)(ip.victim) && qp((() => Up(ip)))
-      })), (0, Wp.d)((() => {
-        jp = []
+    function dT() {
+      JT || (JT = !0, (0, pT.m)(gT.$b.PlayerKilled, (TT => {
+        const UT = (0, LT.k)(TT);
+        (0, LT.d)(UT) && xT((() => BT(UT)))
+      })), (0, pT.m)(gT.$b.CustomKillfeed, (TT => {
+        const UT = (0, LT.k)(TT);
+        (0, LT.d)(UT) && (0, LT.d)(UT.killer) && (0, LT.d)(UT.victim) && xT((() => ZT(UT)))
+      })), (0, pT.h)((() => {
+        OT = []
       })))
     }
-    const Cp = Object.freeze([0, 0, 0]),
-      Ep = [0, 0, 0],
-      Xp = [0, 0, 0],
-      lp = {
+    const wT = Object.freeze([0, 0, 0]),
+      tT = [0, 0, 0],
+      aT = [0, 0, 0],
+      yT = {
         kill: {
-          watch(pp) {
-            if (mp = !0, 0 === jp.length) return kp = pp, () => {
-              mp = !1, kp = null
+          watch(TT) {
+            if (YT = !0, 0 === OT.length) return eT = TT, () => {
+              YT = !1, eT = null
             };
-            const ip = setTimeout((() => {
-              const ip = jp;
-              jp = [], kp = pp;
-              for (const Op of ip) try {
-                pp(Op())
-              } catch (cp) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", cp)
+            const UT = setTimeout((() => {
+              const UT = OT;
+              OT = [], eT = TT;
+              for (const WT of UT) try {
+                TT(WT())
+              } catch (mT) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", mT)
               }
             }), 0);
             return () => {
-              clearTimeout(ip), mp = !1, kp = null
+              clearTimeout(UT), YT = !1, eT = null
             }
           }
         }
       },
-      Qp = {
+      XT = {
         localPos() {
-          const pp = (0, Yp.k)();
-          if (null === pp) return Cp;
-          const ip = pp.api.apiView;
-          for (let cp = 0; cp < 3; cp++) Ep[cp] = xp.q.localPos(ip, 0, cp);
-          return Ep
+          const TT = (0, kT.i)();
+          if (null === TT) return wT;
+          const UT = TT.api.apiView;
+          for (let mT = 0; mT < 3; mT++) tT[mT] = nT.x.localPos(UT, 0, mT);
+          return tT
         },
         targetedBlockPos() {
-          const pp = (0, Yp.k)();
-          if (null === pp || xp.q.targetBlockId(pp.api.apiView, 0) === xp.Rc) return null;
-          for (let ip = 0; ip < 3; ip++) Xp[ip] = xp.q.targetBlock(pp.api.apiView, 0, ip);
-          return Xp
+          const TT = (0, kT.i)();
+          if (null === TT || nT.x.targetBlockId(TT.api.apiView, 0) === nT.Wc) return null;
+          for (let UT = 0; UT < 3; UT++) aT[UT] = nT.x.targetBlock(TT.api.apiView, 0, UT);
+          return aT
         }
       }
   },
-  39182: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  39137: (TT, UT, mT) => {
+    mT.d(UT, {
+      e: () => WT
     });
-    class Op {
+    class WT {
       constructor() {
         this.members = new Map
       }
-      apply(pp) {
-        const ip = {
+      apply(TT) {
+        const UT = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Op of pp.hp) {
-          let pp = this.members.get(Op.ap);
-          if (pp || (pp = {
+        for (const WT of TT.sT) {
+          let TT = this.members.get(WT.FT);
+          if (TT || (TT = {
               name: null,
               settings: {}
-            }, this.members.set(Op.ap, pp), ip.added.push(Op.ap)), null !== Op.np && (pp.name = Op.np), null !== Op.Fp || Op.Gp.length > 0) {
-            const cp = null === Op.Fp ? {} : JSON.parse(Op.Fp);
-            Object.assign(pp.settings, cp);
-            for (const ip of Op.Gp) delete pp.settings[ip], cp[ip] = void 0;
-            ip.settingChanges.push({
-              playerId: Op.ap,
-              settings: cp
+            }, this.members.set(WT.FT, TT), UT.added.push(WT.FT)), null !== WT.PT && (TT.name = WT.PT), null !== WT.VT || WT.uT.length > 0) {
+            const mT = null === WT.VT ? {} : JSON.parse(WT.VT);
+            Object.assign(TT.settings, mT);
+            for (const UT of WT.uT) delete TT.settings[UT], mT[UT] = void 0;
+            UT.settingChanges.push({
+              playerId: WT.FT,
+              settings: mT
             })
           }
         }
-        for (const Op of pp.rp) {
-          const pp = this.members.get(Op);
-          var cp;
-          if (pp) this.members.delete(Op), ip.removed.push({
-            playerId: Op,
-            name: null !== (cp = pp.name) && void 0 !== cp ? cp : void 0
+        for (const WT of TT.CT) {
+          const TT = this.members.get(WT);
+          var mT;
+          if (TT) this.members.delete(WT), UT.removed.push({
+            playerId: WT,
+            name: null !== (mT = TT.name) && void 0 !== mT ? mT : void 0
           })
         }
-        return ip
+        return UT
       }
-      has(pp) {
-        return this.members.has(pp)
+      has(TT) {
+        return this.members.has(TT)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(pp) {
-        var ip, cp;
-        return null !== (ip = null === (cp = this.members.get(pp)) || void 0 === cp ? void 0 : cp.name) && void 0 !== ip ? ip : void 0
+      getName(TT) {
+        var UT, mT;
+        return null !== (UT = null === (mT = this.members.get(TT)) || void 0 === mT ? void 0 : mT.name) && void 0 !== UT ? UT : void 0
       }
-      getSettings(pp) {
-        var ip;
-        return null === (ip = this.members.get(pp)) || void 0 === ip ? void 0 : ip.settings
+      getSettings(TT) {
+        var UT;
+        return null === (UT = this.members.get(TT)) || void 0 === UT ? void 0 : UT.settings
       }
-      getSetting(pp, ip) {
-        var cp;
-        return null === (cp = this.members.get(pp)) || void 0 === cp ? void 0 : cp.settings[ip]
+      getSetting(TT, UT) {
+        var mT;
+        return null === (mT = this.members.get(TT)) || void 0 === mT ? void 0 : mT.settings[UT]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const TT in modules) Object.freeze(modules[TT]);
