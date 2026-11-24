@@ -1,18 +1,18 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  39370: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => QB
+  39354: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => TB
     });
-    const QB = function(BB, jB, zB) {
-      let QB;
+    const TB = function(BB, IB, ZB) {
+      let TB;
       return {
         onCreate: BB => {
-          QB = BB
+          TB = BB
         },
-        onPlayerAltAction: (BB, jB, zB, nB, dB, IB) => {
-          IB && "Mesh" === QB.getEntityType(IB) && "Quartermaster" === QB.getEntityName(IB) && QB.openShop(BB, !1, "Armoury")
+        onPlayerAltAction: (BB, IB, ZB, JB, oB, GB) => {
+          GB && "Mesh" === TB.getEntityType(GB) && "Quartermaster" === TB.getEntityName(GB) && TB.openShop(BB, !1, "Armoury")
         }
       }
     }

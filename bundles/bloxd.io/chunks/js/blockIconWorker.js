@@ -2,328 +2,328 @@
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
       var BB = __webpack_require__.u,
-        jB = __webpack_require__.e,
-        zB = {},
-        QB = {};
-      __webpack_require__.u = function(jB) {
-        return BB(jB) + (zB.hasOwnProperty(jB) ? "?" + zB[jB] : "")
-      }, __webpack_require__.e = function(nB) {
-        return jB(nB).catch((function(jB) {
-          var dB = QB.hasOwnProperty(nB) ? QB[nB] : 4;
-          if (dB < 1) {
-            var IB = BB(nB);
-            if (jB.message = "Loading chunk " + nB + " failed after 4 retries.\n(" + IB + ")", jB.request = IB, zB[nB] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete QB[nB]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === jB.code) {
-              var NB = __webpack_require__.miniCssF(nB);
-              jB.message = jB.message.replace("Loading chunk", "Loading CSS chunk").replace(IB, NB), jB.request = NB
+        IB = __webpack_require__.e,
+        ZB = {},
+        TB = {};
+      __webpack_require__.u = function(IB) {
+        return BB(IB) + (ZB.hasOwnProperty(IB) ? "?" + ZB[IB] : "")
+      }, __webpack_require__.e = function(JB) {
+        return IB(JB).catch((function(IB) {
+          var oB = TB.hasOwnProperty(JB) ? TB[JB] : 4;
+          if (oB < 1) {
+            var GB = BB(JB);
+            if (IB.message = "Loading chunk " + JB + " failed after 4 retries.\n(" + GB + ")", IB.request = GB, ZB[JB] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete TB[JB]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === IB.code) {
+              var vB = __webpack_require__.miniCssF(JB);
+              IB.message = IB.message.replace("Loading chunk", "Loading CSS chunk").replace(GB, vB), IB.request = vB
             }
-            throw jB
+            throw IB
           }
           return new Promise((function(BB) {
-            var jB = 4 - dB + 1;
+            var IB = 4 - oB + 1;
             setTimeout((function() {
-              var jB = "cache-bust=" + Date.now();
-              zB[nB] = jB, QB[nB] = dB - 1, BB(__webpack_require__.e(nB))
+              var IB = "cache-bust=" + Date.now();
+              ZB[JB] = IB, TB[JB] = oB - 1, BB(__webpack_require__.e(JB))
             }), function(BB) {
               return 500 * Math.pow(2, BB)
-            }(jB))
+            }(IB))
           }))
         }))
       }
     }
   })();
   const BB = Math.SQRT1_2,
-    jB = Math.SQRT1_2 / 2,
-    zB = Math.sqrt(3) / 2,
-    QB = 2 * BB,
-    nB = 2 * jB + zB;
+    IB = Math.SQRT1_2 / 2,
+    ZB = Math.sqrt(3) / 2,
+    TB = 2 * BB,
+    JB = 2 * IB + ZB;
 
-  function dB(jB, zB) {
-    const QB = zB > 0 ? zB + 1 : 0,
-      dB = .6 * jB - zB / BB;
-    return Math.max(0, Math.min(dB, (jB - 2 * QB) / nB))
+  function oB(IB, ZB) {
+    const TB = ZB > 0 ? ZB + 1 : 0,
+      oB = .6 * IB - ZB / BB;
+    return Math.max(0, Math.min(oB, (IB - 2 * TB) / JB))
   }
-  const IB = [15, 15, 15],
-    NB = {
+  const GB = [15, 15, 15],
+    vB = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function uB(BB, jB, zB, IB) {
+  function kB(BB, IB, ZB, GB) {
     const {
-      vertices: NB,
-      uvs: uB,
-      indices: UB,
-      shades: aB
-    } = BB, rB = function(BB, jB) {
-      const zB = dB(BB, jB),
-        IB = QB * zB,
-        NB = nB * zB;
+      vertices: vB,
+      uvs: kB,
+      indices: cB,
+      shades: nB
+    } = BB, zB = function(BB, IB) {
+      const ZB = oB(BB, IB),
+        GB = TB * ZB,
+        vB = JB * ZB;
       return {
-        left: (BB - IB) / 2,
-        top: (BB - NB) / 2,
-        width: IB,
-        height: NB
+        left: (BB - GB) / 2,
+        top: (BB - vB) / 2,
+        width: GB,
+        height: vB
       }
-    }(zB, IB), sB = new Float32Array(NB.length);
-    for (let QB = 0; QB < NB.length; QB += 3) sB[QB] = rB.left + NB[QB] * rB.width, sB[QB + 1] = rB.top + NB[QB + 1] * rB.height, sB[QB + 2] = NB[QB + 2];
-    const JB = new Float32Array(zB * zB).fill(-1 / 0),
-      mB = new Uint8ClampedArray(zB * zB * 4),
-      yB = 255 * BB.alphaCutoff;
-    for (let QB = 0; QB < UB.length; QB += 3) {
-      const [BB, nB, dB] = [UB[QB], UB[QB + 1], UB[QB + 2]], [IB, NB, pB] = [3 * BB, 3 * nB, 3 * dB], [rB, kB, GB, LB, gB, tB] = [sB[IB], sB[IB + 1], sB[NB], sB[NB + 1], sB[pB], sB[pB + 1]], SB = (GB - rB) * (tB - kB) - (gB - rB) * (LB - kB);
-      if (Math.abs(SB) < 1e-9) continue;
-      const MB = aB[QB / 3],
-        [EB, iB, qB, fB, oB, HB] = [uB[2 * BB], uB[2 * BB + 1], uB[2 * nB], uB[2 * nB + 1], uB[2 * dB], uB[2 * dB + 1]],
-        DB = Math.max(0, Math.floor(Math.min(rB, GB, gB))),
-        FB = Math.min(zB - 1, Math.ceil(Math.max(rB, GB, gB))),
-        YB = Math.max(0, Math.floor(Math.min(kB, LB, tB))),
-        VB = Math.min(zB - 1, Math.ceil(Math.max(kB, LB, tB)));
-      for (let QB = YB; QB <= VB; QB++)
-        for (let BB = DB; BB <= FB; BB++) {
-          const [nB, dB] = [BB + .5, QB + .5], uB = ((nB - rB) * (tB - kB) - (gB - rB) * (dB - kB)) / SB, UB = ((GB - rB) * (dB - kB) - (nB - rB) * (LB - kB)) / SB, aB = 1 - uB - UB;
-          if (aB < 0 || uB < 0 || UB < 0) continue;
-          const DB = aB * sB[IB + 2] + uB * sB[NB + 2] + UB * sB[pB + 2],
-            FB = QB * zB + BB;
-          if (DB <= JB[FB]) continue;
-          const YB = Math.max(0, Math.min(jB.width - 1, Math.floor((aB * EB + uB * qB + UB * oB) * jB.width))),
-            VB = 4 * (Math.max(0, Math.min(jB.height - 1, Math.floor((aB * iB + uB * fB + UB * HB) * jB.height))) * jB.width + YB);
-          jB.pixels[VB + 3] < yB || (JB[FB] = DB, mB[4 * FB] = jB.pixels[VB] * MB, mB[4 * FB + 1] = jB.pixels[VB + 1] * MB, mB[4 * FB + 2] = jB.pixels[VB + 2] * MB, mB[4 * FB + 3] = 255)
+    }(ZB, GB), FB = new Float32Array(vB.length);
+    for (let TB = 0; TB < vB.length; TB += 3) FB[TB] = zB.left + vB[TB] * zB.width, FB[TB + 1] = zB.top + vB[TB + 1] * zB.height, FB[TB + 2] = vB[TB + 2];
+    const NB = new Float32Array(ZB * ZB).fill(-1 / 0),
+      gB = new Uint8ClampedArray(ZB * ZB * 4),
+      qB = 255 * BB.alphaCutoff;
+    for (let TB = 0; TB < cB.length; TB += 3) {
+      const [BB, JB, oB] = [cB[TB], cB[TB + 1], cB[TB + 2]], [GB, vB, hB] = [3 * BB, 3 * JB, 3 * oB], [zB, yB, UB, WB, dB, CB] = [FB[GB], FB[GB + 1], FB[vB], FB[vB + 1], FB[hB], FB[hB + 1]], QB = (UB - zB) * (CB - yB) - (dB - zB) * (WB - yB);
+      if (Math.abs(QB) < 1e-9) continue;
+      const sB = nB[TB / 3],
+        [wB, OB, YB, iB, pB, aB] = [kB[2 * BB], kB[2 * BB + 1], kB[2 * JB], kB[2 * JB + 1], kB[2 * oB], kB[2 * oB + 1]],
+        HB = Math.max(0, Math.floor(Math.min(zB, UB, dB))),
+        MB = Math.min(ZB - 1, Math.ceil(Math.max(zB, UB, dB))),
+        jB = Math.max(0, Math.floor(Math.min(yB, WB, CB))),
+        PB = Math.min(ZB - 1, Math.ceil(Math.max(yB, WB, CB)));
+      for (let TB = jB; TB <= PB; TB++)
+        for (let BB = HB; BB <= MB; BB++) {
+          const [JB, oB] = [BB + .5, TB + .5], kB = ((JB - zB) * (CB - yB) - (dB - zB) * (oB - yB)) / QB, cB = ((UB - zB) * (oB - yB) - (JB - zB) * (WB - yB)) / QB, nB = 1 - kB - cB;
+          if (nB < 0 || kB < 0 || cB < 0) continue;
+          const HB = nB * FB[GB + 2] + kB * FB[vB + 2] + cB * FB[hB + 2],
+            MB = TB * ZB + BB;
+          if (HB <= NB[MB]) continue;
+          const jB = Math.max(0, Math.min(IB.width - 1, Math.floor((nB * wB + kB * YB + cB * pB) * IB.width))),
+            PB = 4 * (Math.max(0, Math.min(IB.height - 1, Math.floor((nB * OB + kB * iB + cB * aB) * IB.height))) * IB.width + jB);
+          IB.pixels[PB + 3] < qB || (NB[MB] = HB, gB[4 * MB] = IB.pixels[PB] * sB, gB[4 * MB + 1] = IB.pixels[PB + 1] * sB, gB[4 * MB + 2] = IB.pixels[PB + 2] * sB, gB[4 * MB + 3] = 255)
         }
     }
-    return pB(mB, zB, IB), mB
+    return hB(gB, ZB, GB), gB
   }
-  let UB = NaN,
-    aB = new Int32Array(0);
+  let cB = NaN,
+    nB = new Int32Array(0);
 
-  function pB(BB, jB, zB) {
-    let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : jB => 0 !== BB[4 * jB + 3];
-    const nB = new Uint8Array(jB * jB);
-    for (let IB = 0; IB < jB * jB; IB++) nB[IB] = QB(IB) ? 1 : 0;
-    const dB = (BB, zB) => BB >= 0 && zB >= 0 && BB < jB && zB < jB && 0 === nB[zB * jB + BB],
-      NB = new Float32Array(jB * jB).fill(1 / 0),
-      uB = function(BB) {
-        if (BB !== UB) {
-          const jB = Math.ceil(BB + 1),
-            zB = [];
-          for (let QB = -jB; QB <= jB; QB++)
-            for (let nB = -jB; nB <= jB; nB++) {
-              const jB = nB * nB + QB * QB;
-              jB > 0 && jB < (BB + 1) ** 2 && zB.push(nB, QB, jB)
+  function hB(BB, IB, ZB) {
+    let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : IB => 0 !== BB[4 * IB + 3];
+    const JB = new Uint8Array(IB * IB);
+    for (let GB = 0; GB < IB * IB; GB++) JB[GB] = TB(GB) ? 1 : 0;
+    const oB = (BB, ZB) => BB >= 0 && ZB >= 0 && BB < IB && ZB < IB && 0 === JB[ZB * IB + BB],
+      vB = new Float32Array(IB * IB).fill(1 / 0),
+      kB = function(BB) {
+        if (BB !== cB) {
+          const IB = Math.ceil(BB + 1),
+            ZB = [];
+          for (let TB = -IB; TB <= IB; TB++)
+            for (let JB = -IB; JB <= IB; JB++) {
+              const IB = JB * JB + TB * TB;
+              IB > 0 && IB < (BB + 1) ** 2 && ZB.push(JB, TB, IB)
             }
-          UB = BB, aB = Int32Array.from(zB)
+          cB = BB, nB = Int32Array.from(ZB)
         }
-        return aB
-      }(zB);
-    for (let IB = 0; IB < jB; IB++)
-      for (let BB = 0; BB < jB; BB++) {
-        if (1 === nB[IB * jB + BB] && (dB(BB - 1, IB) || dB(BB + 1, IB) || dB(BB, IB - 1) || dB(BB, IB + 1)))
-          for (let zB = 0; zB < uB.length; zB += 3) {
-            const QB = BB + uB[zB],
-              nB = IB + uB[zB + 1];
-            if (QB >= 0 && nB >= 0 && QB < jB && nB < jB) {
-              const BB = nB * jB + QB;
-              NB[BB] = Math.min(NB[BB], uB[zB + 2])
+        return nB
+      }(ZB);
+    for (let GB = 0; GB < IB; GB++)
+      for (let BB = 0; BB < IB; BB++) {
+        if (1 === JB[GB * IB + BB] && (oB(BB - 1, GB) || oB(BB + 1, GB) || oB(BB, GB - 1) || oB(BB, GB + 1)))
+          for (let ZB = 0; ZB < kB.length; ZB += 3) {
+            const TB = BB + kB[ZB],
+              JB = GB + kB[ZB + 1];
+            if (TB >= 0 && JB >= 0 && TB < IB && JB < IB) {
+              const BB = JB * IB + TB;
+              vB[BB] = Math.min(vB[BB], kB[ZB + 2])
             }
           }
       }
-    for (let UB = 0; UB < jB * jB; UB++) 1 !== nB[UB] && NB[UB] !== 1 / 0 && (BB.set(IB, 4 * UB), BB[4 * UB + 3] = Math.round(255 * Math.min(1, zB + 1 - Math.sqrt(NB[UB]))))
+    for (let cB = 0; cB < IB * IB; cB++) 1 !== JB[cB] && vB[cB] !== 1 / 0 && (BB.set(GB, 4 * cB), BB[4 * cB + 3] = Math.round(255 * Math.min(1, ZB + 1 - Math.sqrt(vB[cB]))))
   }
-  const rB = {
+  const zB = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    sB = {
+    FB = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    JB = {
+    NB = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const mB = 1e-6;
+  const gB = 1e-6;
 
-  function yB(BB, jB, zB, QB) {
+  function qB(BB, IB, ZB, TB) {
     let {
-      origin: nB,
-      across: dB,
-      down: IB,
-      texture: NB,
-      rect: [uB, UB, aB, pB],
-      shade: rB
-    } = QB;
-    const sB = dB.x * IB.y - dB.y * IB.x;
-    if (Math.abs(sB) < 1e-9) return;
-    const JB = [nB.x, nB.x + dB.x, nB.x + IB.x, nB.x + dB.x + IB.x],
-      yB = [nB.y, nB.y + dB.y, nB.y + IB.y, nB.y + dB.y + IB.y],
-      kB = Math.max(0, Math.floor(Math.min(...JB))),
-      GB = Math.min(zB - 1, Math.ceil(Math.max(...JB))),
-      LB = Math.max(0, Math.floor(Math.min(...yB))),
-      gB = Math.min(zB - 1, Math.ceil(Math.max(...yB)));
-    for (let tB = LB; tB <= gB; tB++)
-      for (let QB = kB; QB <= GB; QB++) {
-        const JB = QB + .5 - nB.x,
-          yB = tB + .5 - nB.y,
-          kB = (JB * IB.y - yB * IB.x) / sB,
-          GB = (dB.x * yB - dB.y * JB) / sB;
-        if (kB < -mB || kB > 1 + mB || GB < -mB || GB > 1 + mB) continue;
-        const LB = tB * zB + QB;
-        jB[LB] = 1;
-        const gB = uB + Math.min(Math.max(kB, 0), 1) * (aB - uB),
-          SB = UB + Math.min(Math.max(GB, 0), 1) * (pB - UB),
-          MB = Math.min(NB.width - 1, Math.floor(gB * NB.width)),
-          EB = 4 * (Math.min(NB.height - 1, Math.floor(SB * NB.height)) * NB.width + MB),
-          iB = NB.pixels[EB + 3] / 255;
-        if (0 === iB) continue;
-        const qB = 4 * LB,
-          fB = BB[qB + 3] / 255 * (1 - iB),
-          oB = iB + fB;
-        for (let jB = 0; jB < 3; jB++) BB[qB + jB] = (NB.pixels[EB + jB] * rB * iB + BB[qB + jB] * fB) / oB;
-        BB[qB + 3] = 255 * oB
+      origin: JB,
+      across: oB,
+      down: GB,
+      texture: vB,
+      rect: [kB, cB, nB, hB],
+      shade: zB
+    } = TB;
+    const FB = oB.x * GB.y - oB.y * GB.x;
+    if (Math.abs(FB) < 1e-9) return;
+    const NB = [JB.x, JB.x + oB.x, JB.x + GB.x, JB.x + oB.x + GB.x],
+      qB = [JB.y, JB.y + oB.y, JB.y + GB.y, JB.y + oB.y + GB.y],
+      yB = Math.max(0, Math.floor(Math.min(...NB))),
+      UB = Math.min(ZB - 1, Math.ceil(Math.max(...NB))),
+      WB = Math.max(0, Math.floor(Math.min(...qB))),
+      dB = Math.min(ZB - 1, Math.ceil(Math.max(...qB)));
+    for (let CB = WB; CB <= dB; CB++)
+      for (let TB = yB; TB <= UB; TB++) {
+        const NB = TB + .5 - JB.x,
+          qB = CB + .5 - JB.y,
+          yB = (NB * GB.y - qB * GB.x) / FB,
+          UB = (oB.x * qB - oB.y * NB) / FB;
+        if (yB < -gB || yB > 1 + gB || UB < -gB || UB > 1 + gB) continue;
+        const WB = CB * ZB + TB;
+        IB[WB] = 1;
+        const dB = kB + Math.min(Math.max(yB, 0), 1) * (nB - kB),
+          QB = cB + Math.min(Math.max(UB, 0), 1) * (hB - cB),
+          sB = Math.min(vB.width - 1, Math.floor(dB * vB.width)),
+          wB = 4 * (Math.min(vB.height - 1, Math.floor(QB * vB.height)) * vB.width + sB),
+          OB = vB.pixels[wB + 3] / 255;
+        if (0 === OB) continue;
+        const YB = 4 * WB,
+          iB = BB[YB + 3] / 255 * (1 - OB),
+          pB = OB + iB;
+        for (let IB = 0; IB < 3; IB++) BB[YB + IB] = (vB.pixels[wB + IB] * zB * OB + BB[YB + IB] * iB) / pB;
+        BB[YB + 3] = 255 * pB
       }
   }
 
-  function kB(BB, jB, zB) {
-    const QB = BB.get(jB);
-    if (void 0 === QB) throw new Error(`no ${zB} was sent for ${jB.slice(0,100)}`);
-    return QB
+  function yB(BB, IB, ZB) {
+    const TB = BB.get(IB);
+    if (void 0 === TB) throw new Error(`no ${ZB} was sent for ${IB.slice(0,100)}`);
+    return TB
   }
-  const GB = {
+  const UB = {
       pixelsOf(BB) {
-        const jB = new OffscreenCanvas(BB.width, BB.height),
-          zB = jB.getContext("2d");
-        if (!zB) throw new Error("no 2D context");
-        return zB.drawImage(BB, 0, 0), BB.close(), {
-          width: jB.width,
-          height: jB.height,
-          pixels: zB.getImageData(0, 0, jB.width, jB.height).data
+        const IB = new OffscreenCanvas(BB.width, BB.height),
+          ZB = IB.getContext("2d");
+        if (!ZB) throw new Error("no 2D context");
+        return ZB.drawImage(BB, 0, 0), BB.close(), {
+          width: IB.width,
+          height: IB.height,
+          pixels: ZB.getImageData(0, 0, IB.width, IB.height).data
         }
       },
-      async encode(BB, jB) {
-        const zB = new OffscreenCanvas(jB, jB),
-          QB = zB.getContext("2d");
-        if (!QB) throw new Error("no 2D context");
-        QB.putImageData(new ImageData(BB, jB, jB), 0, 0);
-        const nB = await zB.convertToBlob();
-        return new Promise(((BB, jB) => {
-          const zB = new FileReader;
-          zB.onload = () => {
-            BB(zB.result)
-          }, zB.onerror = () => {
+      async encode(BB, IB) {
+        const ZB = new OffscreenCanvas(IB, IB),
+          TB = ZB.getContext("2d");
+        if (!TB) throw new Error("no 2D context");
+        TB.putImageData(new ImageData(BB, IB, IB), 0, 0);
+        const JB = await ZB.convertToBlob();
+        return new Promise(((BB, IB) => {
+          const ZB = new FileReader;
+          ZB.onload = () => {
+            BB(ZB.result)
+          }, ZB.onerror = () => {
             var BB;
-            jB(null !== (BB = zB.error) && void 0 !== BB ? BB : new Error("the icon did not encode"))
-          }, zB.readAsDataURL(nB)
+            IB(null !== (BB = ZB.error) && void 0 !== BB ? BB : new Error("the icon did not encode"))
+          }, ZB.readAsDataURL(JB)
         }))
       }
     },
-    LB = globalThis.WorkerGlobalScope;
-  void 0 !== LB && globalThis instanceof LB && function(QB, nB) {
-    const IB = new Map,
-      UB = new Map,
-      aB = (BB, jB, zB) => {
+    WB = globalThis.WorkerGlobalScope;
+  void 0 !== WB && globalThis instanceof WB && function(TB, JB) {
+    const GB = new Map,
+      cB = new Map,
+      nB = (BB, IB, ZB) => {
         (async () => {
           try {
-            QB.postMessage({
+            TB.postMessage({
               type: "drawn",
               id: BB,
-              url: await nB.encode(zB(), jB)
+              url: await JB.encode(ZB(), IB)
             })
-          } catch (dB) {
-            QB.postMessage({
+          } catch (oB) {
+            TB.postMessage({
               type: "failed",
-              message: String(dB)
+              message: String(oB)
             })
           }
         })()
       };
-    QB.onmessage = QB => {
+    TB.onmessage = TB => {
       let {
-        data: mB
-      } = QB;
-      if ("texture" === mB.type) IB.set(mB.url, nB.pixelsOf(mB.bitmap));
-      else if ("model" === mB.type) UB.set(mB.name, {
-        geometry: mB.geometry,
-        texture: nB.pixelsOf(mB.bitmap)
+        data: gB
+      } = TB;
+      if ("texture" === gB.type) GB.set(gB.url, JB.pixelsOf(gB.bitmap));
+      else if ("model" === gB.type) cB.set(gB.name, {
+        geometry: gB.geometry,
+        texture: JB.pixelsOf(gB.bitmap)
       });
-      else if ("draw" === mB.type) {
+      else if ("draw" === gB.type) {
         const {
-          id: QB,
-          top: nB,
-          left: uB,
-          right: UB,
-          itemType: GB,
-          size: LB,
-          outlineWidth: gB
-        } = mB;
-        aB(QB, LB, (() => function(QB, nB, IB, uB) {
-          const UB = dB(IB, uB),
-            aB = UB * BB,
-            rB = UB * jB,
-            sB = UB * zB,
-            JB = Math.max(...nB.boxes.map((BB => BB[4]))),
-            mB = IB / 2,
-            kB = rB + (IB - rB - rB - JB * sB) / 2,
-            GB = (BB, jB, zB) => ({
-              x: mB + (BB - zB) * aB,
-              y: kB - rB + (BB + zB) * rB + (JB - jB) * sB
+          id: TB,
+          top: JB,
+          left: kB,
+          right: cB,
+          itemType: UB,
+          size: WB,
+          outlineWidth: dB
+        } = gB;
+        nB(TB, WB, (() => function(TB, JB, GB, kB) {
+          const cB = oB(GB, kB),
+            nB = cB * BB,
+            zB = cB * IB,
+            FB = cB * ZB,
+            NB = Math.max(...JB.boxes.map((BB => BB[4]))),
+            gB = GB / 2,
+            yB = zB + (GB - zB - zB - NB * FB) / 2,
+            UB = (BB, IB, ZB) => ({
+              x: gB + (BB - ZB) * nB,
+              y: yB - zB + (BB + ZB) * zB + (NB - IB) * FB
             }),
-            LB = (BB, jB, zB, QB, dB, IB) => ({
+            WB = (BB, IB, ZB, TB, oB, GB) => ({
               origin: BB,
               across: {
-                x: jB.x - BB.x,
-                y: jB.y - BB.y
+                x: IB.x - BB.x,
+                y: IB.y - BB.y
               },
               down: {
-                x: zB.x - BB.x,
-                y: zB.y - BB.y
+                x: ZB.x - BB.x,
+                y: ZB.y - BB.y
               },
-              texture: QB,
-              rect: nB.cropFaces ? dB : [0, 0, 1, 1],
-              shade: IB
+              texture: TB,
+              rect: JB.cropFaces ? oB : [0, 0, 1, 1],
+              shade: GB
             }),
-            gB = new Uint8ClampedArray(IB * IB * 4),
-            tB = new Uint8Array(IB * IB),
-            SB = NB;
-          for (const [BB, jB, zB, dB, NB, pB] of nB.boxes) {
-            const nB = LB(GB(dB, NB, pB), GB(dB, NB, zB), GB(dB, jB, pB), QB.right, [1 - pB, 1 - NB, 1 - zB, 1 - jB], SB.right),
-              uB = LB(GB(BB, NB, pB), GB(dB, NB, pB), GB(BB, jB, pB), QB.left, [BB, 1 - NB, dB, 1 - jB], SB.left),
-              UB = LB(GB(BB, NB, zB), GB(dB, NB, zB), GB(BB, NB, pB), QB.top, [BB, zB, dB, pB], SB.top);
-            for (const BB of [nB, uB, UB]) yB(gB, tB, IB, BB)
+            dB = new Uint8ClampedArray(GB * GB * 4),
+            CB = new Uint8Array(GB * GB),
+            QB = vB;
+          for (const [BB, IB, ZB, oB, vB, hB] of JB.boxes) {
+            const JB = WB(UB(oB, vB, hB), UB(oB, vB, ZB), UB(oB, IB, hB), TB.right, [1 - hB, 1 - vB, 1 - ZB, 1 - IB], QB.right),
+              kB = WB(UB(BB, vB, hB), UB(oB, vB, hB), UB(BB, IB, hB), TB.left, [BB, 1 - vB, oB, 1 - IB], QB.left),
+              cB = WB(UB(BB, vB, ZB), UB(oB, vB, ZB), UB(BB, vB, hB), TB.top, [BB, ZB, oB, hB], QB.top);
+            for (const BB of [JB, kB, cB]) qB(dB, CB, GB, BB)
           }
-          return pB(gB, IB, uB, (BB => 1 === tB[BB])), gB
+          return hB(dB, GB, kB, (BB => 1 === CB[BB])), dB
         }({
-          top: kB(IB, nB, "texture"),
-          left: kB(IB, uB, "texture"),
-          right: kB(IB, UB, "texture")
+          top: yB(GB, JB, "texture"),
+          left: yB(GB, kB, "texture"),
+          right: yB(GB, cB, "texture")
         }, function(BB) {
-          return "SlabBlock" === BB ? sB : "StairsBlock" === BB ? JB : rB
-        }(GB), LB, gB)))
+          return "SlabBlock" === BB ? FB : "StairsBlock" === BB ? NB : zB
+        }(UB), WB, dB)))
       } else {
         const {
           id: BB,
-          name: jB,
-          size: zB,
-          outlineWidth: QB
-        } = mB;
-        aB(BB, zB, (() => {
+          name: IB,
+          size: ZB,
+          outlineWidth: TB
+        } = gB;
+        nB(BB, ZB, (() => {
           const {
             geometry: BB,
-            texture: nB
-          } = kB(UB, jB, "model");
-          return uB(BB, nB, zB, QB)
+            texture: JB
+          } = yB(cB, IB, "model");
+          return kB(BB, JB, ZB, TB)
         }))
       }
-    }, QB.postMessage({
+    }, TB.postMessage({
       type: "started"
     })
-  }(globalThis, GB)
+  }(globalThis, UB)
 })();

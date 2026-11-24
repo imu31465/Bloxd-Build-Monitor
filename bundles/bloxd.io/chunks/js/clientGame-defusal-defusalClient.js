@@ -1,18 +1,18 @@
 export const id = 16;
 export const ids = [16];
 export const modules = {
-  39505: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => QB
+  39492: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => TB
     });
-    const QB = function(BB, jB, zB) {
-      let QB;
+    const TB = function(BB, IB, ZB) {
+      let TB;
       return {
         onCreate: BB => {
-          QB = BB
+          TB = BB
         },
-        onPlayerAltAction: (BB, jB, zB, nB, dB, IB) => {
-          IB && "Mesh" === QB.getEntityType(IB) && QB.openShop(BB, !0)
+        onPlayerAltAction: (BB, IB, ZB, JB, oB, GB) => {
+          GB && "Mesh" === TB.getEntityType(GB) && TB.openShop(BB, !0)
         }
       }
     }

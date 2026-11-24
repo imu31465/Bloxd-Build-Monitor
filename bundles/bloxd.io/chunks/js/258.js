@@ -1,82 +1,82 @@
 export const id = 258;
 export const ids = [258];
 export const modules = {
-  40125: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => rB,
-      c: () => pB,
-      e: () => uB,
-      i: () => sB,
-      m: () => UB,
-      p: () => NB,
-      t: () => aB
+  40129: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => zB,
+      i: () => hB,
+      j: () => kB,
+      l: () => FB,
+      p: () => cB,
+      q: () => vB,
+      s: () => nB
     });
-    var QB = zB(38783),
-      nB = zB(40130);
+    var TB = ZB(38718),
+      JB = ZB(40134);
 
-    function dB(BB, jB, zB, QB) {
-      switch (jB) {
+    function oB(BB, IB, ZB, TB) {
+      switch (IB) {
         case 5120: {
-          let jB = BB.getInt8(zB);
-          return QB && (jB = Math.max(jB / 127, -1)), jB
+          let IB = BB.getInt8(ZB);
+          return TB && (IB = Math.max(IB / 127, -1)), IB
         }
         case 5121: {
-          let jB = BB.getUint8(zB);
-          return QB && (jB /= 255), jB
+          let IB = BB.getUint8(ZB);
+          return TB && (IB /= 255), IB
         }
         case 5122: {
-          let jB = BB.getInt16(zB, !0);
-          return QB && (jB = Math.max(jB / 32767, -1)), jB
+          let IB = BB.getInt16(ZB, !0);
+          return TB && (IB = Math.max(IB / 32767, -1)), IB
         }
         case 5123: {
-          let jB = BB.getUint16(zB, !0);
-          return QB && (jB /= 65535), jB
+          let IB = BB.getUint16(ZB, !0);
+          return TB && (IB /= 65535), IB
         }
         case 5131:
-          return (0, nB.c)(BB.getUint16(zB, !0));
+          return (0, JB.c)(BB.getUint16(ZB, !0));
         case 5124:
-          return BB.getInt32(zB, !0);
+          return BB.getInt32(ZB, !0);
         case 5125:
-          return BB.getUint32(zB, !0);
+          return BB.getUint32(ZB, !0);
         case 5126:
-          return BB.getFloat32(zB, !0);
+          return BB.getFloat32(ZB, !0);
         default:
-          throw new Error(`Invalid component type ${jB}`)
+          throw new Error(`Invalid component type ${IB}`)
       }
     }
 
-    function IB(BB, jB, zB, QB, dB) {
-      switch (jB) {
+    function GB(BB, IB, ZB, TB, oB) {
+      switch (IB) {
         case 5120:
-          QB && (dB = Math.round(127 * dB)), BB.setInt8(zB, dB);
+          TB && (oB = Math.round(127 * oB)), BB.setInt8(ZB, oB);
           break;
         case 5121:
-          QB && (dB = Math.round(255 * dB)), BB.setUint8(zB, dB);
+          TB && (oB = Math.round(255 * oB)), BB.setUint8(ZB, oB);
           break;
         case 5122:
-          QB && (dB = Math.round(32767 * dB)), BB.setInt16(zB, dB, !0);
+          TB && (oB = Math.round(32767 * oB)), BB.setInt16(ZB, oB, !0);
           break;
         case 5123:
-          QB && (dB = Math.round(65535 * dB)), BB.setUint16(zB, dB, !0);
+          TB && (oB = Math.round(65535 * oB)), BB.setUint16(ZB, oB, !0);
           break;
         case 5131:
-          BB.setUint16(zB, (0, nB.f)(dB), !0);
+          BB.setUint16(ZB, (0, JB.h)(oB), !0);
           break;
         case 5124:
-          BB.setInt32(zB, dB, !0);
+          BB.setInt32(ZB, oB, !0);
           break;
         case 5125:
-          BB.setUint32(zB, dB, !0);
+          BB.setUint32(ZB, oB, !0);
           break;
         case 5126:
-          BB.setFloat32(zB, dB, !0);
+          BB.setFloat32(ZB, oB, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${jB}`)
+          throw new Error(`Invalid component type ${IB}`)
       }
     }
 
-    function NB(BB) {
+    function vB(BB) {
       switch (BB) {
         case 5120:
         case 5121:
@@ -94,56 +94,56 @@ export const modules = {
       }
     }
 
-    function uB(BB, jB, zB, QB, nB, uB, UB, aB) {
-      const pB = new Array(QB),
-        rB = new Array(QB);
+    function kB(BB, IB, ZB, TB, JB, kB, cB, nB) {
+      const hB = new Array(TB),
+        zB = new Array(TB);
       if (BB instanceof Array) {
-        let nB = jB / 4;
-        const dB = zB / 4;
-        for (let jB = 0; jB < uB; jB += QB) {
-          for (let jB = 0; jB < QB; jB++) pB[jB] = rB[jB] = BB[nB + jB];
-          aB(rB, jB);
-          for (let jB = 0; jB < QB; jB++) pB[jB] !== rB[jB] && (BB[nB + jB] = rB[jB]);
-          nB += dB
+        let JB = IB / 4;
+        const oB = ZB / 4;
+        for (let IB = 0; IB < kB; IB += TB) {
+          for (let IB = 0; IB < TB; IB++) hB[IB] = zB[IB] = BB[JB + IB];
+          nB(zB, IB);
+          for (let IB = 0; IB < TB; IB++) hB[IB] !== zB[IB] && (BB[JB + IB] = zB[IB]);
+          JB += oB
         }
       } else {
-        const sB = ArrayBuffer.isView(BB) ? new DataView(BB.buffer, BB.byteOffset, BB.byteLength) : new DataView(BB),
-          JB = NB(nB);
-        for (let BB = 0; BB < uB; BB += QB) {
-          for (let BB = 0, zB = jB; BB < QB; BB++, zB += JB) pB[BB] = rB[BB] = dB(sB, nB, zB, UB);
-          aB(rB, BB);
-          for (let BB = 0, zB = jB; BB < QB; BB++, zB += JB) pB[BB] !== rB[BB] && IB(sB, nB, zB, UB, rB[BB]);
-          jB += zB
+        const FB = ArrayBuffer.isView(BB) ? new DataView(BB.buffer, BB.byteOffset, BB.byteLength) : new DataView(BB),
+          NB = vB(JB);
+        for (let BB = 0; BB < kB; BB += TB) {
+          for (let BB = 0, ZB = IB; BB < TB; BB++, ZB += NB) hB[BB] = zB[BB] = oB(FB, JB, ZB, cB);
+          nB(zB, BB);
+          for (let BB = 0, ZB = IB; BB < TB; BB++, ZB += NB) hB[BB] !== zB[BB] && GB(FB, JB, ZB, cB, zB[BB]);
+          IB += ZB
         }
       }
     }
 
-    function UB(BB, jB, zB, nB, dB, IB, UB, aB) {
-      const pB = jB * NB(zB),
-        rB = UB * jB;
-      if (5126 !== zB || dB !== pB) {
-        const QB = new Float32Array(rB);
-        return uB(BB, nB, dB, jB, zB, rB, IB, ((BB, zB) => {
-          for (let nB = 0; nB < jB; nB++) QB[zB + nB] = BB[nB]
-        })), QB
+    function cB(BB, IB, ZB, JB, oB, GB, cB, nB) {
+      const hB = IB * vB(ZB),
+        zB = cB * IB;
+      if (5126 !== ZB || oB !== hB) {
+        const TB = new Float32Array(zB);
+        return kB(BB, JB, oB, IB, ZB, zB, GB, ((BB, ZB) => {
+          for (let JB = 0; JB < IB; JB++) TB[ZB + JB] = BB[JB]
+        })), TB
       }
-      if (!(BB instanceof Array || BB instanceof Float32Array) || 0 !== nB || BB.length !== rB) {
+      if (!(BB instanceof Array || BB instanceof Float32Array) || 0 !== JB || BB.length !== zB) {
         if (BB instanceof Array) {
-          const jB = nB / 4;
-          return BB.slice(jB, jB + rB)
+          const IB = JB / 4;
+          return BB.slice(IB, IB + zB)
         }
         if (ArrayBuffer.isView(BB)) {
-          const jB = BB.byteOffset + nB;
-          return 0 !== (3 & jB) && (QB.c.Warn("Float array must be aligned to 4-bytes border"), aB = !0), aB ? new Float32Array(BB.buffer.slice(jB, jB + rB * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(BB.buffer, jB, rB)
+          const IB = BB.byteOffset + JB;
+          return 0 !== (3 & IB) && (TB.d.Warn("Float array must be aligned to 4-bytes border"), nB = !0), nB ? new Float32Array(BB.buffer.slice(IB, IB + zB * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(BB.buffer, IB, zB)
         }
-        return new Float32Array(BB, nB, rB)
+        return new Float32Array(BB, JB, zB)
       }
-      return aB ? BB.slice() : BB
+      return nB ? BB.slice() : BB
     }
 
-    function aB(BB, jB, zB, nB, dB, IB, UB) {
-      const aB = NB(zB),
-        pB = function(BB) {
+    function nB(BB, IB, ZB, JB, oB, GB, cB) {
+      const nB = vB(ZB),
+        hB = function(BB) {
           switch (BB) {
             case 5120:
               return Int8Array;
@@ -163,118 +163,118 @@ export const modules = {
             default:
               throw new Error(`Invalid component type '${BB}'`)
           }
-        }(zB),
-        rB = IB * jB;
+        }(ZB),
+        zB = GB * IB;
       if (Array.isArray(BB)) {
-        if (0 !== (3 & nB) || 0 !== (3 & dB)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const QB = nB / 4,
-          NB = dB / 4;
-        if (QB + (IB - 1) * NB + jB > BB.length) throw new Error("Last accessed index is out of bounds.");
-        if (NB < jB) throw new Error("Data stride cannot be smaller than the component size.");
-        if (NB !== jB) {
-          const QB = new pB(rB);
-          return uB(BB, nB, dB, jB, zB, rB, !1, ((BB, zB) => {
-            for (let nB = 0; nB < jB; nB++) QB[zB + nB] = BB[nB]
-          })), QB
+        if (0 !== (3 & JB) || 0 !== (3 & oB)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const TB = JB / 4,
+          vB = oB / 4;
+        if (TB + (GB - 1) * vB + IB > BB.length) throw new Error("Last accessed index is out of bounds.");
+        if (vB < IB) throw new Error("Data stride cannot be smaller than the component size.");
+        if (vB !== IB) {
+          const TB = new hB(zB);
+          return kB(BB, JB, oB, IB, ZB, zB, !1, ((BB, ZB) => {
+            for (let JB = 0; JB < IB; JB++) TB[ZB + JB] = BB[JB]
+          })), TB
         }
-        return new pB(BB.slice(QB, QB + rB))
+        return new hB(BB.slice(TB, TB + zB))
       }
-      let sB, JB = nB;
-      ArrayBuffer.isView(BB) ? (sB = BB.buffer, JB += BB.byteOffset) : sB = BB;
-      if (JB + (IB - 1) * dB + jB * aB > sB.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const mB = jB * aB;
-      if (dB < mB) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (dB !== mB) {
-        const BB = new pB(rB),
-          zB = new Uint8Array(sB, JB),
-          QB = new Uint8Array(BB.buffer),
-          nB = jB * aB;
-        for (let jB = 0, NB = 0, uB = 0; jB < IB; jB++, NB += dB, uB += nB) QB.set(zB.subarray(NB, NB + nB), uB);
+      let FB, NB = JB;
+      ArrayBuffer.isView(BB) ? (FB = BB.buffer, NB += BB.byteOffset) : FB = BB;
+      if (NB + (GB - 1) * oB + IB * nB > FB.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const gB = IB * nB;
+      if (oB < gB) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (oB !== gB) {
+        const BB = new hB(zB),
+          ZB = new Uint8Array(FB, NB),
+          TB = new Uint8Array(BB.buffer),
+          JB = IB * nB;
+        for (let IB = 0, vB = 0, kB = 0; IB < GB; IB++, vB += oB, kB += JB) TB.set(ZB.subarray(vB, vB + JB), kB);
         return BB
       }
-      return 1 !== aB && 0 !== (JB & aB - 1) && (QB.c.Warn("Array must be aligned to border of element size. Data will be copied."), UB = !0), UB ? new pB(sB.slice(JB, JB + rB * aB)) : new pB(sB, JB, rB)
+      return 1 !== nB && 0 !== (NB & nB - 1) && (TB.d.Warn("Array must be aligned to border of element size. Data will be copied."), cB = !0), cB ? new hB(FB.slice(NB, NB + zB * nB)) : new hB(FB, NB, zB)
     }
 
-    function pB(BB, jB, zB, nB, dB, IB, UB, aB) {
-      const pB = jB * NB(zB),
-        rB = UB * jB;
-      if (aB.length !== rB) throw new Error("Output length is not valid");
-      if (5126 === zB && dB === pB)
+    function hB(BB, IB, ZB, JB, oB, GB, cB, nB) {
+      const hB = IB * vB(ZB),
+        zB = cB * IB;
+      if (nB.length !== zB) throw new Error("Output length is not valid");
+      if (5126 === ZB && oB === hB)
         if (BB instanceof Array) {
-          const jB = nB / 4;
-          aB.set(BB, jB)
+          const IB = JB / 4;
+          nB.set(BB, IB)
         } else if (ArrayBuffer.isView(BB)) {
-        const jB = BB.byteOffset + nB;
-        if (0 !== (3 & jB)) return QB.c.Warn("Float array must be aligned to 4-bytes border"), void aB.set(new Float32Array(BB.buffer.slice(jB, jB + rB * Float32Array.BYTES_PER_ELEMENT)));
-        const zB = new Float32Array(BB.buffer, jB, rB);
-        aB.set(zB)
+        const IB = BB.byteOffset + JB;
+        if (0 !== (3 & IB)) return TB.d.Warn("Float array must be aligned to 4-bytes border"), void nB.set(new Float32Array(BB.buffer.slice(IB, IB + zB * Float32Array.BYTES_PER_ELEMENT)));
+        const ZB = new Float32Array(BB.buffer, IB, zB);
+        nB.set(ZB)
       } else {
-        const jB = new Float32Array(BB, nB, rB);
-        aB.set(jB)
-      } else uB(BB, nB, dB, jB, zB, rB, IB, ((BB, zB) => {
-        for (let QB = 0; QB < jB; QB++) aB[zB + QB] = BB[QB]
+        const IB = new Float32Array(BB, JB, zB);
+        nB.set(IB)
+      } else kB(BB, JB, oB, IB, ZB, zB, GB, ((BB, ZB) => {
+        for (let TB = 0; TB < IB; TB++) nB[ZB + TB] = BB[TB]
       }))
     }
 
-    function rB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+    function zB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
       if (Array.isArray(BB)) {
-        for (let nB = 0; nB < jB; nB++)
-          if (BB[zB + nB] - QB > 65535) return !0;
+        for (let JB = 0; JB < IB; JB++)
+          if (BB[ZB + JB] - TB > 65535) return !0;
         return !1
       }
       return 4 === BB.BYTES_PER_ELEMENT
     }
 
-    function sB(BB) {
-      const jB = BB.buffer;
-      if (jB instanceof ArrayBuffer) return BB;
-      const zB = new ArrayBuffer(BB.byteLength);
-      return new Uint8Array(zB).set(new Uint8Array(jB, BB.byteOffset, BB.byteLength)), zB
+    function FB(BB) {
+      const IB = BB.buffer;
+      if (IB instanceof ArrayBuffer) return BB;
+      const ZB = new ArrayBuffer(BB.byteLength);
+      return new Uint8Array(ZB).set(new Uint8Array(IB, BB.byteOffset, BB.byteLength)), ZB
     }
   },
-  39974: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => EB,
-      f: () => SB,
-      i: () => MB,
-      h: () => FB,
-      m: () => YB
+  39939: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => wB,
+      i: () => QB,
+      l: () => sB,
+      j: () => MB,
+      n: () => jB
     });
-    class QB {
+    class TB {
       constructor() {
         this.children = []
       }
       isValid(BB) {
         return !0
       }
-      process(BB, jB, zB) {
-        let QB = "";
+      process(BB, IB, ZB) {
+        let TB = "";
         if (this.line) {
-          let zB = this.line;
-          const nB = jB.processor;
-          if (nB) {
-            nB.lineProcessor && (zB = nB.lineProcessor(zB, jB.isFragment, jB.processingContext));
-            const QB = jB.processor?.attributeKeywordName ?? "attribute",
-              dB = jB.isFragment && jB.processor?.varyingFragmentKeywordName ? jB.processor?.varyingFragmentKeywordName : !jB.isFragment && jB.processor?.varyingVertexKeywordName ? jB.processor?.varyingVertexKeywordName : "varying";
-            if (!jB.isFragment && nB.attributeProcessor && this.line.startsWith(QB)) zB = nB.attributeProcessor(this.line, BB, jB.processingContext);
-            else if (nB.varyingProcessor && (nB.varyingCheck?.(this.line, jB.isFragment) || !nB.varyingCheck && this.line.startsWith(dB))) zB = nB.varyingProcessor(this.line, jB.isFragment, BB, jB.processingContext);
-            else if (nB.uniformProcessor && nB.uniformRegexp && nB.uniformRegexp.test(this.line)) jB.lookForClosingBracketForUniformBuffer || (zB = nB.uniformProcessor(this.line, jB.isFragment, BB, jB.processingContext));
-            else if (nB.uniformBufferProcessor && nB.uniformBufferRegexp && nB.uniformBufferRegexp.test(this.line)) jB.lookForClosingBracketForUniformBuffer || (zB = nB.uniformBufferProcessor(this.line, jB.isFragment, jB.processingContext), jB.lookForClosingBracketForUniformBuffer = !0);
-            else if (nB.textureProcessor && nB.textureRegexp && nB.textureRegexp.test(this.line)) zB = nB.textureProcessor(this.line, jB.isFragment, BB, jB.processingContext);
-            else if ((nB.uniformProcessor || nB.uniformBufferProcessor) && this.line.startsWith("uniform") && !jB.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? nB.uniformProcessor && (zB = nB.uniformProcessor(this.line, jB.isFragment, BB, jB.processingContext)) : nB.uniformBufferProcessor && (zB = nB.uniformBufferProcessor(this.line, jB.isFragment, jB.processingContext), jB.lookForClosingBracketForUniformBuffer = !0)
+          let ZB = this.line;
+          const JB = IB.processor;
+          if (JB) {
+            JB.lineProcessor && (ZB = JB.lineProcessor(ZB, IB.isFragment, IB.processingContext));
+            const TB = IB.processor?.attributeKeywordName ?? "attribute",
+              oB = IB.isFragment && IB.processor?.varyingFragmentKeywordName ? IB.processor?.varyingFragmentKeywordName : !IB.isFragment && IB.processor?.varyingVertexKeywordName ? IB.processor?.varyingVertexKeywordName : "varying";
+            if (!IB.isFragment && JB.attributeProcessor && this.line.startsWith(TB)) ZB = JB.attributeProcessor(this.line, BB, IB.processingContext);
+            else if (JB.varyingProcessor && (JB.varyingCheck?.(this.line, IB.isFragment) || !JB.varyingCheck && this.line.startsWith(oB))) ZB = JB.varyingProcessor(this.line, IB.isFragment, BB, IB.processingContext);
+            else if (JB.uniformProcessor && JB.uniformRegexp && JB.uniformRegexp.test(this.line)) IB.lookForClosingBracketForUniformBuffer || (ZB = JB.uniformProcessor(this.line, IB.isFragment, BB, IB.processingContext));
+            else if (JB.uniformBufferProcessor && JB.uniformBufferRegexp && JB.uniformBufferRegexp.test(this.line)) IB.lookForClosingBracketForUniformBuffer || (ZB = JB.uniformBufferProcessor(this.line, IB.isFragment, IB.processingContext), IB.lookForClosingBracketForUniformBuffer = !0);
+            else if (JB.textureProcessor && JB.textureRegexp && JB.textureRegexp.test(this.line)) ZB = JB.textureProcessor(this.line, IB.isFragment, BB, IB.processingContext);
+            else if ((JB.uniformProcessor || JB.uniformBufferProcessor) && this.line.startsWith("uniform") && !IB.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? JB.uniformProcessor && (ZB = JB.uniformProcessor(this.line, IB.isFragment, BB, IB.processingContext)) : JB.uniformBufferProcessor && (ZB = JB.uniformBufferProcessor(this.line, IB.isFragment, IB.processingContext), IB.lookForClosingBracketForUniformBuffer = !0)
             }
-            jB.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (jB.lookForClosingBracketForUniformBuffer = !1, nB.endOfUniformBufferProcessor && (zB = nB.endOfUniformBufferProcessor(this.line, jB.isFragment, jB.processingContext)))
+            IB.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (IB.lookForClosingBracketForUniformBuffer = !1, JB.endOfUniformBufferProcessor && (ZB = JB.endOfUniformBufferProcessor(this.line, IB.isFragment, IB.processingContext)))
           }
-          QB += zB + "\n"
+          TB += ZB + "\n"
         }
-        for (const nB of this.children) QB += nB.process(BB, jB, zB);
-        return this.additionalDefineKey && (BB[this.additionalDefineKey] = this.additionalDefineValue || "true", zB[this.additionalDefineKey] = BB[this.additionalDefineKey]), QB
+        for (const JB of this.children) TB += JB.process(BB, IB, ZB);
+        return this.additionalDefineKey && (BB[this.additionalDefineKey] = this.additionalDefineValue || "true", ZB[this.additionalDefineKey] = BB[this.additionalDefineKey]), TB
       }
     }
-    class nB {
+    class JB {
       constructor() {
         this._lines = []
       }
@@ -286,271 +286,271 @@ export const modules = {
       }
       set lines(BB) {
         this._lines.length = 0;
-        for (const jB of BB) {
-          if (!jB || "\r" === jB) continue;
-          if ("#" === jB[0]) {
-            this._lines.push(jB);
+        for (const IB of BB) {
+          if (!IB || "\r" === IB) continue;
+          if ("#" === IB[0]) {
+            this._lines.push(IB);
             continue
           }
-          const BB = jB.trim();
+          const BB = IB.trim();
           if (!BB) continue;
           if (BB.startsWith("//")) {
-            this._lines.push(jB);
+            this._lines.push(IB);
             continue
           }
-          const zB = BB.indexOf(";");
-          if (-1 === zB) this._lines.push(BB);
-          else if (zB === BB.length - 1) BB.length > 1 && this._lines.push(BB);
+          const ZB = BB.indexOf(";");
+          if (-1 === ZB) this._lines.push(BB);
+          else if (ZB === BB.length - 1) BB.length > 1 && this._lines.push(BB);
           else {
-            const BB = jB.split(";");
-            for (let jB = 0; jB < BB.length; jB++) {
-              let zB = BB[jB];
-              zB && (zB = zB.trim(), zB && this._lines.push(zB + (jB !== BB.length - 1 ? ";" : "")))
+            const BB = IB.split(";");
+            for (let IB = 0; IB < BB.length; IB++) {
+              let ZB = BB[IB];
+              ZB && (ZB = ZB.trim(), ZB && this._lines.push(ZB + (IB !== BB.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class dB extends QB {
-      process(BB, jB, zB) {
-        for (let QB = 0; QB < this.children.length; QB++) {
-          const nB = this.children[QB];
-          if (nB.isValid(BB)) return nB.process(BB, jB, zB)
+    class oB extends TB {
+      process(BB, IB, ZB) {
+        for (let TB = 0; TB < this.children.length; TB++) {
+          const JB = this.children[TB];
+          if (JB.isValid(BB)) return JB.process(BB, IB, ZB)
         }
         return ""
       }
     }
-    class IB extends QB {
+    class GB extends TB {
       isValid(BB) {
         return this.testExpression.isTrue(BB)
       }
     }
-    class NB {
+    class vB {
       isTrue(BB) {
         return !0
       }
       static postfixToInfix(BB) {
-        const jB = [];
-        for (const zB of BB)
-          if (void 0 === NB._OperatorPriority[zB]) jB.push(zB);
+        const IB = [];
+        for (const ZB of BB)
+          if (void 0 === vB._OperatorPriority[ZB]) IB.push(ZB);
           else {
-            const BB = jB[jB.length - 1],
-              QB = jB[jB.length - 2];
-            jB.length -= 2, jB.push(`(${QB}${zB}${BB})`)
-          } return jB[jB.length - 1]
+            const BB = IB[IB.length - 1],
+              TB = IB[IB.length - 2];
+            IB.length -= 2, IB.push(`(${TB}${ZB}${BB})`)
+          } return IB[IB.length - 1]
       }
       static infixToPostfix(BB) {
-        const jB = NB._InfixToPostfixCache.get(BB);
-        if (jB) return jB.accessTime = Date.now(), jB.result;
+        const IB = vB._InfixToPostfixCache.get(BB);
+        if (IB) return IB.accessTime = Date.now(), IB.result;
         if (!BB.includes("&&") && !BB.includes("||") && !BB.includes(")") && !BB.includes("(")) return [BB];
-        const zB = [];
-        let QB = -1;
-        const nB = () => {
-            aB = aB.trim(), "" !== aB && (zB.push(aB), aB = "")
+        const ZB = [];
+        let TB = -1;
+        const JB = () => {
+            nB = nB.trim(), "" !== nB && (ZB.push(nB), nB = "")
           },
-          dB = BB => {
-            QB < NB._Stack.length - 1 && (NB._Stack[++QB] = BB)
+          oB = BB => {
+            TB < vB._Stack.length - 1 && (vB._Stack[++TB] = BB)
           },
-          IB = () => NB._Stack[QB],
-          uB = () => -1 === QB ? "!!INVALID EXPRESSION!!" : NB._Stack[QB--];
-        let UB = 0,
-          aB = "";
-        for (; UB < BB.length;) {
-          const jB = BB.charAt(UB),
-            pB = UB < BB.length - 1 ? BB.substring(UB, 2 + UB) : "";
-          if ("(" === jB) aB = "", dB(jB);
-          else if (")" === jB) {
-            for (nB(); - 1 !== QB && "(" !== IB();) zB.push(uB());
-            uB()
-          } else if (NB._OperatorPriority[pB] > 1) {
-            for (nB(); - 1 !== QB && NB._OperatorPriority[IB()] >= NB._OperatorPriority[pB];) zB.push(uB());
-            dB(pB), UB++
-          } else aB += jB;
-          UB++
+          GB = () => vB._Stack[TB],
+          kB = () => -1 === TB ? "!!INVALID EXPRESSION!!" : vB._Stack[TB--];
+        let cB = 0,
+          nB = "";
+        for (; cB < BB.length;) {
+          const IB = BB.charAt(cB),
+            hB = cB < BB.length - 1 ? BB.substring(cB, 2 + cB) : "";
+          if ("(" === IB) nB = "", oB(IB);
+          else if (")" === IB) {
+            for (JB(); - 1 !== TB && "(" !== GB();) ZB.push(kB());
+            kB()
+          } else if (vB._OperatorPriority[hB] > 1) {
+            for (JB(); - 1 !== TB && vB._OperatorPriority[GB()] >= vB._OperatorPriority[hB];) ZB.push(kB());
+            oB(hB), cB++
+          } else nB += IB;
+          cB++
         }
-        for (nB(); - 1 !== QB;) "(" === IB() ? uB() : zB.push(uB());
-        return NB._InfixToPostfixCache.size >= NB.InfixToPostfixCacheLimitSize && NB.ClearCache(), NB._InfixToPostfixCache.set(BB, {
-          result: zB,
+        for (JB(); - 1 !== TB;) "(" === GB() ? kB() : ZB.push(kB());
+        return vB._InfixToPostfixCache.size >= vB.InfixToPostfixCacheLimitSize && vB.ClearCache(), vB._InfixToPostfixCache.set(BB, {
+          result: ZB,
           accessTime: Date.now()
-        }), zB
+        }), ZB
       }
       static ClearCache() {
-        const BB = Array.from(NB._InfixToPostfixCache.entries()).sort(((BB, jB) => BB[1].accessTime - jB[1].accessTime));
-        for (let jB = 0; jB < NB.InfixToPostfixCacheCleanupSize; jB++) NB._InfixToPostfixCache.delete(BB[jB][0])
+        const BB = Array.from(vB._InfixToPostfixCache.entries()).sort(((BB, IB) => BB[1].accessTime - IB[1].accessTime));
+        for (let IB = 0; IB < vB.InfixToPostfixCacheCleanupSize; IB++) vB._InfixToPostfixCache.delete(BB[IB][0])
       }
     }
-    NB.InfixToPostfixCacheLimitSize = 5e4, NB.InfixToPostfixCacheCleanupSize = 25e3, NB._InfixToPostfixCache = new Map, NB._OperatorPriority = {
+    vB.InfixToPostfixCacheLimitSize = 5e4, vB.InfixToPostfixCacheCleanupSize = 25e3, vB._InfixToPostfixCache = new Map, vB._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, NB._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class uB extends NB {
+    }, vB._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class kB extends vB {
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = BB, this.not = jB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = BB, this.not = IB
       }
       isTrue(BB) {
-        let jB = void 0 !== BB[this.define];
-        return this.not && (jB = !jB), jB
+        let IB = void 0 !== BB[this.define];
+        return this.not && (IB = !IB), IB
       }
     }
-    class UB extends NB {
+    class cB extends vB {
       isTrue(BB) {
         return this.leftOperand.isTrue(BB) || this.rightOperand.isTrue(BB)
       }
     }
-    class aB extends NB {
+    class nB extends vB {
       isTrue(BB) {
         return this.leftOperand.isTrue(BB) && this.rightOperand.isTrue(BB)
       }
     }
-    class pB extends NB {
-      constructor(BB, jB, zB) {
-        super(), this.define = BB, this.operand = jB, this.testValue = zB
+    class hB extends vB {
+      constructor(BB, IB, ZB) {
+        super(), this.define = BB, this.operand = IB, this.testValue = ZB
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
       isTrue(BB) {
-        let jB = !1;
-        const zB = parseInt(void 0 != BB[this.define] ? BB[this.define] : this.define),
-          QB = parseInt(void 0 != BB[this.testValue] ? BB[this.testValue] : this.testValue);
-        if (isNaN(zB) || isNaN(QB)) return !1;
+        let IB = !1;
+        const ZB = parseInt(void 0 != BB[this.define] ? BB[this.define] : this.define),
+          TB = parseInt(void 0 != BB[this.testValue] ? BB[this.testValue] : this.testValue);
+        if (isNaN(ZB) || isNaN(TB)) return !1;
         switch (this.operand) {
           case ">":
-            jB = zB > QB;
+            IB = ZB > TB;
             break;
           case "<":
-            jB = zB < QB;
+            IB = ZB < TB;
             break;
           case "<=":
-            jB = zB <= QB;
+            IB = ZB <= TB;
             break;
           case ">=":
-            jB = zB >= QB;
+            IB = ZB >= TB;
             break;
           case "==":
-            jB = zB === QB;
+            IB = ZB === TB;
             break;
           case "!=":
-            jB = zB !== QB
+            IB = ZB !== TB
         }
-        return jB
+        return IB
       }
     }
-    var rB = zB(39965),
-      sB = zB(39958);
-    const JB = /defined\s*?\((.+?)\)/g,
-      mB = /defined\s*?\[(.+?)\]/g,
-      yB = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      kB = /__decl__/,
-      GB = /light\{X\}.(\w*)/g,
-      LB = /\{X\}/g,
-      gB = [],
-      tB = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var zB = ZB(39931),
+      FB = ZB(39926);
+    const NB = /defined\s*?\((.+?)\)/g,
+      gB = /defined\s*?\[(.+?)\]/g,
+      qB = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      yB = /__decl__/,
+      UB = /light\{X\}.(\w*)/g,
+      WB = /\{X\}/g,
+      dB = [],
+      CB = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function SB(BB) {
+    function QB(BB) {
       BB.processor && BB.processor.initializeShaders && BB.processor.initializeShaders(BB.processingContext)
     }
 
-    function MB(BB, jB, zB, QB) {
-      jB.processor?.preProcessShaderCode && (BB = jB.processor.preProcessShaderCode(BB, jB.isFragment)), FB(BB, jB, (BB => {
-        jB.processCodeAfterIncludes && (BB = jB.processCodeAfterIncludes(jB.isFragment ? "fragment" : "vertex", BB, jB.defines));
-        const nB = function(BB, jB, zB) {
-          let QB = function(BB, jB) {
-            if (jB.processor?.noPrecision) return BB;
-            const zB = jB.shouldUseHighPrecisionShader; - 1 === BB.indexOf("precision highp float") ? BB = zB ? "precision highp float;\n" + BB : "precision mediump float;\n" + BB : zB || (BB = BB.replace("precision highp float", "precision mediump float"));
+    function sB(BB, IB, ZB, TB) {
+      IB.processor?.preProcessShaderCode && (BB = IB.processor.preProcessShaderCode(BB, IB.isFragment)), MB(BB, IB, (BB => {
+        IB.processCodeAfterIncludes && (BB = IB.processCodeAfterIncludes(IB.isFragment ? "fragment" : "vertex", BB, IB.defines));
+        const JB = function(BB, IB, ZB) {
+          let TB = function(BB, IB) {
+            if (IB.processor?.noPrecision) return BB;
+            const ZB = IB.shouldUseHighPrecisionShader; - 1 === BB.indexOf("precision highp float") ? BB = ZB ? "precision highp float;\n" + BB : "precision mediump float;\n" + BB : ZB || (BB = BB.replace("precision highp float", "precision mediump float"));
             return BB
-          }(BB, jB);
-          if (!jB.processor) return QB;
-          if (0 === jB.processor.shaderLanguage && -1 !== QB.indexOf("#version 3") && (QB = QB.replace("#version 300 es", ""), !jB.processor.parseGLES3)) return QB;
-          const nB = jB.defines,
-            dB = DB(jB, zB);
-          jB.processor.preProcessor && (QB = jB.processor.preProcessor(QB, nB, dB, jB.isFragment, jB.processingContext));
-          const IB = {};
-          QB = HB(QB, dB, jB, IB), jB.processor.postProcessor && (QB = jB.processor.postProcessor(QB, nB, jB.isFragment, jB.processingContext, zB ? {
-            drawBuffersExtensionDisabled: !zB.getCaps().drawBuffersExtension
-          } : {}, dB, IB));
-          zB?._features.needShaderCodeInlining && (QB = zB.inlineShaderCode(QB));
-          return QB
-        }(BB, jB, QB);
-        zB(nB, BB)
+          }(BB, IB);
+          if (!IB.processor) return TB;
+          if (0 === IB.processor.shaderLanguage && -1 !== TB.indexOf("#version 3") && (TB = TB.replace("#version 300 es", ""), !IB.processor.parseGLES3)) return TB;
+          const JB = IB.defines,
+            oB = HB(IB, ZB);
+          IB.processor.preProcessor && (TB = IB.processor.preProcessor(TB, JB, oB, IB.isFragment, IB.processingContext));
+          const GB = {};
+          TB = aB(TB, oB, IB, GB), IB.processor.postProcessor && (TB = IB.processor.postProcessor(TB, JB, IB.isFragment, IB.processingContext, ZB ? {
+            drawBuffersExtensionDisabled: !ZB.getCaps().drawBuffersExtension
+          } : {}, oB, GB));
+          ZB?._features.needShaderCodeInlining && (TB = ZB.inlineShaderCode(TB));
+          return TB
+        }(BB, IB, TB);
+        ZB(JB, BB)
       }))
     }
 
-    function EB(BB, jB, zB) {
-      return zB.processor && zB.processor.finalizeShaders ? zB.processor.finalizeShaders(BB, jB, zB.processingContext) : {
+    function wB(BB, IB, ZB) {
+      return ZB.processor && ZB.processor.finalizeShaders ? ZB.processor.finalizeShaders(BB, IB, ZB.processingContext) : {
         vertexCode: BB,
-        fragmentCode: jB
+        fragmentCode: IB
       }
     }
 
-    function iB(BB) {
-      const jB = /defined\((.+)\)/.exec(BB);
-      if (jB && jB.length) return new uB(jB[1].trim(), "!" === BB[0]);
-      const zB = ["==", "!=", ">=", "<=", "<", ">"];
-      let QB = "",
-        nB = 0;
-      for (QB of zB)
-        if (nB = BB.indexOf(QB), nB > -1) break;
-      if (-1 === nB) return new uB(BB);
-      const dB = BB.substring(0, nB).trim(),
-        IB = BB.substring(nB + QB.length).trim();
-      return new pB(dB, QB, IB)
+    function OB(BB) {
+      const IB = /defined\((.+)\)/.exec(BB);
+      if (IB && IB.length) return new kB(IB[1].trim(), "!" === BB[0]);
+      const ZB = ["==", "!=", ">=", "<=", "<", ">"];
+      let TB = "",
+        JB = 0;
+      for (TB of ZB)
+        if (JB = BB.indexOf(TB), JB > -1) break;
+      if (-1 === JB) return new kB(BB);
+      const oB = BB.substring(0, JB).trim(),
+        GB = BB.substring(JB + TB.length).trim();
+      return new hB(oB, TB, GB)
     }
 
-    function qB(BB, jB) {
-      const zB = new IB,
-        QB = BB.substring(0, jB);
-      let nB = BB.substring(jB);
-      return nB = nB.substring(0, (nB.indexOf("//") + 1 || nB.length + 1) - 1).trim(), zB.testExpression = "#ifdef" === QB ? new uB(nB) : "#ifndef" === QB ? new uB(nB, !0) : function(BB) {
-        BB = BB.replace(JB, "defined[$1]");
-        const jB = NB.infixToPostfix(BB),
-          zB = [];
-        for (const nB of jB)
-          if ("||" !== nB && "&&" !== nB) zB.push(nB);
-          else if (zB.length >= 2) {
-          let BB = zB[zB.length - 1],
-            jB = zB[zB.length - 2];
-          zB.length -= 2;
-          const QB = "&&" == nB ? new aB : new UB;
-          "string" === typeof BB && (BB = BB.replace(mB, "defined($1)")), "string" === typeof jB && (jB = jB.replace(mB, "defined($1)")), QB.leftOperand = "string" === typeof jB ? iB(jB) : jB, QB.rightOperand = "string" === typeof BB ? iB(BB) : BB, zB.push(QB)
+    function YB(BB, IB) {
+      const ZB = new GB,
+        TB = BB.substring(0, IB);
+      let JB = BB.substring(IB);
+      return JB = JB.substring(0, (JB.indexOf("//") + 1 || JB.length + 1) - 1).trim(), ZB.testExpression = "#ifdef" === TB ? new kB(JB) : "#ifndef" === TB ? new kB(JB, !0) : function(BB) {
+        BB = BB.replace(NB, "defined[$1]");
+        const IB = vB.infixToPostfix(BB),
+          ZB = [];
+        for (const JB of IB)
+          if ("||" !== JB && "&&" !== JB) ZB.push(JB);
+          else if (ZB.length >= 2) {
+          let BB = ZB[ZB.length - 1],
+            IB = ZB[ZB.length - 2];
+          ZB.length -= 2;
+          const TB = "&&" == JB ? new nB : new cB;
+          "string" === typeof BB && (BB = BB.replace(gB, "defined($1)")), "string" === typeof IB && (IB = IB.replace(gB, "defined($1)")), TB.leftOperand = "string" === typeof IB ? OB(IB) : IB, TB.rightOperand = "string" === typeof BB ? OB(BB) : BB, ZB.push(TB)
         }
-        let QB = zB[zB.length - 1];
-        return "string" === typeof QB && (QB = QB.replace(mB, "defined($1)")), "string" === typeof QB ? iB(QB) : QB
-      }(nB), zB
+        let TB = ZB[ZB.length - 1];
+        return "string" === typeof TB && (TB = TB.replace(gB, "defined($1)")), "string" === typeof TB ? OB(TB) : TB
+      }(JB), ZB
     }
 
-    function fB(BB, jB, zB, nB) {
-      let dB;
-      for (; oB(BB, zB, nB);) {
-        dB = BB.currentLine;
-        const IB = dB.substring(0, 5).toLowerCase();
-        if ("#else" === IB) {
-          const zB = new QB;
-          return jB.children.push(zB), void oB(BB, zB, nB)
+    function iB(BB, IB, ZB, JB) {
+      let oB;
+      for (; pB(BB, ZB, JB);) {
+        oB = BB.currentLine;
+        const GB = oB.substring(0, 5).toLowerCase();
+        if ("#else" === GB) {
+          const ZB = new TB;
+          return IB.children.push(ZB), void pB(BB, ZB, JB)
         }
-        if ("#elif" === IB) {
-          const BB = qB(dB, 5);
-          jB.children.push(BB), zB = BB
+        if ("#elif" === GB) {
+          const BB = YB(oB, 5);
+          IB.children.push(BB), ZB = BB
         }
       }
     }
 
-    function oB(BB, jB, zB) {
+    function pB(BB, IB, ZB) {
       for (; BB.canRead;) {
         BB.lineIndex++;
-        const nB = BB.currentLine;
-        if (nB.indexOf("#") >= 0) {
-          const QB = tB.exec(nB);
-          if (QB && QB.length) {
-            switch (QB[0]) {
+        const JB = BB.currentLine;
+        if (JB.indexOf("#") >= 0) {
+          const TB = CB.exec(JB);
+          if (TB && TB.length) {
+            switch (TB[0]) {
               case "#ifdef": {
-                const QB = new dB;
-                jB.children.push(QB);
-                const IB = qB(nB, 6);
-                QB.children.push(IB), fB(BB, QB, IB, zB);
+                const TB = new oB;
+                IB.children.push(TB);
+                const GB = YB(JB, 6);
+                TB.children.push(GB), iB(BB, TB, GB, ZB);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const QB = new dB;
-                jB.children.push(QB);
-                const IB = qB(nB, 7);
-                QB.children.push(IB), fB(BB, QB, IB, zB);
+                const TB = new oB;
+                IB.children.push(TB);
+                const GB = YB(JB, 7);
+                TB.children.push(GB), iB(BB, TB, GB, ZB);
                 break
               }
               case "#if": {
-                const QB = new dB,
-                  IB = qB(nB, 3);
-                jB.children.push(QB), QB.children.push(IB), fB(BB, QB, IB, zB);
+                const TB = new oB,
+                  GB = YB(JB, 3);
+                IB.children.push(TB), TB.children.push(GB), iB(BB, TB, GB, ZB);
                 break
               }
             }
             continue
           }
         }
-        const IB = new QB;
-        if (IB.line = nB, jB.children.push(IB), "#" === nB[0] && "d" === nB[1]) {
-          const BB = nB.replace(";", "").split(" ");
-          IB.additionalDefineKey = BB[1], 3 === BB.length && (IB.additionalDefineValue = BB[2])
+        const GB = new TB;
+        if (GB.line = JB, IB.children.push(GB), "#" === JB[0] && "d" === JB[1]) {
+          const BB = JB.replace(";", "").split(" ");
+          GB.additionalDefineKey = BB[1], 3 === BB.length && (GB.additionalDefineValue = BB[2])
         }
       }
       return !1
     }
 
-    function HB(BB, jB, zB, dB) {
-      const IB = new QB,
-        NB = new nB;
-      return NB.lineIndex = -1, NB.lines = BB.split("\n"), oB(NB, IB, dB), IB.process(jB, zB, dB)
+    function aB(BB, IB, ZB, oB) {
+      const GB = new TB,
+        vB = new JB;
+      return vB.lineIndex = -1, vB.lines = BB.split("\n"), pB(vB, GB, oB), GB.process(IB, ZB, oB)
     }
 
-    function DB(BB, jB) {
-      const zB = BB.defines,
-        QB = {};
-      for (const nB of zB) {
-        const BB = nB.replace("#define", "").replace(";", "").trim().split(" ");
-        QB[BB[0]] = BB.length > 1 ? BB[1] : ""
+    function HB(BB, IB) {
+      const ZB = BB.defines,
+        TB = {};
+      for (const JB of ZB) {
+        const BB = JB.replace("#define", "").replace(";", "").trim().split(" ");
+        TB[BB[0]] = BB.length > 1 ? BB[1] : ""
       }
-      return 0 === BB.processor?.shaderLanguage && (QB.GL_ES = "true"), QB.__VERSION__ = BB.version, QB[BB.platformName] = "true", (0, sB.k)(QB, jB?.isNDCHalfZRange, jB?.jQB, jB?.useExactSrgbConversions), QB
+      return 0 === BB.processor?.shaderLanguage && (TB.GL_ES = "true"), TB.__VERSION__ = BB.version, TB[BB.platformName] = "true", (0, FB.j)(TB, IB?.isNDCHalfZRange, IB?.iTB, IB?.useExactSrgbConversions), TB
     }
 
-    function FB(BB, jB, zB) {
-      let QB;
-      for (gB.length = 0; null !== (QB = yB.exec(BB));) gB.push(QB);
-      let nB = [BB],
-        dB = !1;
-      for (const NB of gB) {
-        let BB = NB[1];
-        if (-1 !== BB.indexOf("__decl__") && (BB = BB.replace(kB, ""), jB.supportsUniformBuffers && (BB = BB.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), BB += "Declaration"), !jB.includesShadersStore[BB]) {
-          const QB = jB.shadersRepository + "ShadersInclude/" + BB + ".fx";
-          return void YB.loadFile(QB, (QB => {
-            jB.includesShadersStore[BB] = QB, FB(nB.join(""), jB, zB)
+    function MB(BB, IB, ZB) {
+      let TB;
+      for (dB.length = 0; null !== (TB = qB.exec(BB));) dB.push(TB);
+      let JB = [BB],
+        oB = !1;
+      for (const vB of dB) {
+        let BB = vB[1];
+        if (-1 !== BB.indexOf("__decl__") && (BB = BB.replace(yB, ""), IB.supportsUniformBuffers && (BB = BB.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), BB += "Declaration"), !IB.includesShadersStore[BB]) {
+          const TB = IB.shadersRepository + "ShadersInclude/" + BB + ".fx";
+          return void jB.loadFile(TB, (TB => {
+            IB.includesShadersStore[BB] = TB, MB(JB.join(""), IB, ZB)
           }))
         } {
-          let zB = jB.includesShadersStore[BB];
-          if (NB[2]) {
-            const BB = NB[3].split(",");
-            for (let jB = 0; jB < BB.length; jB += 2) {
-              const QB = new RegExp(BB[jB], "g"),
-                nB = BB[jB + 1];
-              zB = zB.replace(QB, nB)
+          let ZB = IB.includesShadersStore[BB];
+          if (vB[2]) {
+            const BB = vB[3].split(",");
+            for (let IB = 0; IB < BB.length; IB += 2) {
+              const TB = new RegExp(BB[IB], "g"),
+                JB = BB[IB + 1];
+              ZB = ZB.replace(TB, JB)
             }
           }
-          if (NB[4]) {
-            const BB = NB[5];
+          if (vB[4]) {
+            const BB = vB[5];
             if (-1 !== BB.indexOf("..")) {
-              const QB = BB.split(".."),
-                nB = parseInt(QB[0]);
-              let dB = parseInt(QB[1]),
-                IB = zB.slice(0);
-              zB = "", isNaN(dB) && (dB = jB.indexParameters[QB[1]]);
-              for (let BB = nB; BB < dB; BB++) jB.supportsUniformBuffers || (IB = IB.replace(GB, ((BB, jB) => jB + "{X}"))), zB += IB.replace(LB, BB.toString()) + "\n"
-            } else jB.supportsUniformBuffers || (zB = zB.replace(GB, ((BB, jB) => jB + "{X}"))), zB = zB.replace(LB, BB)
+              const TB = BB.split(".."),
+                JB = parseInt(TB[0]);
+              let oB = parseInt(TB[1]),
+                GB = ZB.slice(0);
+              ZB = "", isNaN(oB) && (oB = IB.indexParameters[TB[1]]);
+              for (let BB = JB; BB < oB; BB++) IB.supportsUniformBuffers || (GB = GB.replace(UB, ((BB, IB) => IB + "{X}"))), ZB += GB.replace(WB, BB.toString()) + "\n"
+            } else IB.supportsUniformBuffers || (ZB = ZB.replace(UB, ((BB, IB) => IB + "{X}"))), ZB = ZB.replace(WB, BB)
           }
-          const QB = [];
-          for (const BB of nB) {
-            const jB = BB.split(NB[0]);
-            for (let BB = 0; BB < jB.length - 1; BB++) QB.push(jB[BB]), QB.push(zB);
-            QB.push(jB[jB.length - 1])
+          const TB = [];
+          for (const BB of JB) {
+            const IB = BB.split(vB[0]);
+            for (let BB = 0; BB < IB.length - 1; BB++) TB.push(IB[BB]), TB.push(ZB);
+            TB.push(IB[IB.length - 1])
           }
-          nB = QB, dB = dB || zB.indexOf("#include<") >= 0 || zB.indexOf("#include <") >= 0
+          JB = TB, oB = oB || ZB.indexOf("#include<") >= 0 || ZB.indexOf("#include <") >= 0
         }
       }
-      gB.length = 0;
-      const IB = nB.join("");
-      dB ? FB(IB.toString(), jB, zB) : zB(IB)
+      dB.length = 0;
+      const GB = JB.join("");
+      oB ? MB(GB.toString(), IB, ZB) : ZB(GB)
     }
-    const YB = {
-      loadFile: (BB, jB, zB, QB, nB, dB) => {
-        throw (0, rB.k)("FileTools")
+    const jB = {
+      loadFile: (BB, IB, ZB, TB, JB, oB) => {
+        throw (0, zB.m)("FileTools")
       }
     }
   },
-  39958: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => nB,
-      i: () => dB,
-      k: () => NB,
-      m: () => IB,
-      o: () => uB
+  39926: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      g: () => oB,
+      j: () => vB,
+      k: () => GB,
+      n: () => kB
     });
-    var QB = zB(39965);
-    const nB = {};
+    var TB = ZB(39931);
+    const JB = {};
 
-    function dB(BB, jB) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (jB ? jB + "\n" : "") + BB
+    function oB(BB, IB) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (IB ? IB + "\n" : "") + BB
     }
 
-    function IB(BB, jB, zB, dB, IB, NB, uB) {
-      const UB = uB || nB.loadFile;
-      if (!UB) throw (0, QB.k)("FileTools");
-      return UB(BB, jB, zB, dB, IB, NB)
+    function GB(BB, IB, ZB, oB, GB, vB, kB) {
+      const cB = kB || JB.loadFile;
+      if (!cB) throw (0, TB.m)("FileTools");
+      return cB(BB, IB, ZB, oB, GB, vB)
     }
 
-    function NB(BB, jB, zB, QB) {
-      if (BB) return jB ? BB.IS_NDC_HALF_ZRANGE = "" : delete BB.IS_NDC_HALF_ZRANGE, zB ? BB.USE_REVERSE_DEPTHBUFFER = "" : delete BB.USE_REVERSE_DEPTHBUFFER, void(QB ? BB.USE_EXACT_SRGB_CONVERSIONS = "" : delete BB.USE_EXACT_SRGB_CONVERSIONS);
+    function vB(BB, IB, ZB, TB) {
+      if (BB) return IB ? BB.IS_NDC_HALF_ZRANGE = "" : delete BB.IS_NDC_HALF_ZRANGE, ZB ? BB.USE_REVERSE_DEPTHBUFFER = "" : delete BB.USE_REVERSE_DEPTHBUFFER, void(TB ? BB.USE_EXACT_SRGB_CONVERSIONS = "" : delete BB.USE_EXACT_SRGB_CONVERSIONS);
       {
         let BB = "";
-        return jB && (BB += "#define IS_NDC_HALF_ZRANGE"), zB && (BB && (BB += "\n"), BB += "#define USE_REVERSE_DEPTHBUFFER"), QB && (BB && (BB += "\n"), BB += "#define USE_EXACT_SRGB_CONVERSIONS"), BB
+        return IB && (BB += "#define IS_NDC_HALF_ZRANGE"), ZB && (BB && (BB += "\n"), BB += "#define USE_REVERSE_DEPTHBUFFER"), TB && (BB && (BB += "\n"), BB += "#define USE_EXACT_SRGB_CONVERSIONS"), BB
       }
     }
 
-    function uB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        QB = arguments.length > 3 ? arguments[3] : void 0;
+    function kB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        TB = arguments.length > 3 ? arguments[3] : void 0;
       switch (BB) {
         case 3: {
-          const BB = new Int8Array(jB);
-          return QB && BB.set(new Int8Array(QB)), BB
+          const BB = new Int8Array(IB);
+          return TB && BB.set(new Int8Array(TB)), BB
         }
         case 0: {
-          const BB = new Uint8Array(jB);
-          return QB && BB.set(new Uint8Array(QB)), BB
+          const BB = new Uint8Array(IB);
+          return TB && BB.set(new Uint8Array(TB)), BB
         }
         case 4: {
-          const BB = "number" !== typeof jB ? new Int16Array(jB) : new Int16Array(zB ? jB / 2 : jB);
-          return QB && BB.set(new Int16Array(QB)), BB
+          const BB = "number" !== typeof IB ? new Int16Array(IB) : new Int16Array(ZB ? IB / 2 : IB);
+          return TB && BB.set(new Int16Array(TB)), BB
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const BB = "number" !== typeof jB ? new Uint16Array(jB) : new Uint16Array(zB ? jB / 2 : jB);
-          return QB && BB.set(new Uint16Array(QB)), BB
+          const BB = "number" !== typeof IB ? new Uint16Array(IB) : new Uint16Array(ZB ? IB / 2 : IB);
+          return TB && BB.set(new Uint16Array(TB)), BB
         }
         case 6: {
-          const BB = "number" !== typeof jB ? new Int32Array(jB) : new Int32Array(zB ? jB / 4 : jB);
-          return QB && BB.set(new Int32Array(QB)), BB
+          const BB = "number" !== typeof IB ? new Int32Array(IB) : new Int32Array(ZB ? IB / 4 : IB);
+          return TB && BB.set(new Int32Array(TB)), BB
         }
         case 7:
         case 11:
@@ -715,54 +715,54 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const BB = "number" !== typeof jB ? new Uint32Array(jB) : new Uint32Array(zB ? jB / 4 : jB);
-          return QB && BB.set(new Uint32Array(QB)), BB
+          const BB = "number" !== typeof IB ? new Uint32Array(IB) : new Uint32Array(ZB ? IB / 4 : IB);
+          return TB && BB.set(new Uint32Array(TB)), BB
         }
         case 1: {
-          const BB = "number" !== typeof jB ? new Float32Array(jB) : new Float32Array(zB ? jB / 4 : jB);
-          return QB && BB.set(new Float32Array(QB)), BB
+          const BB = "number" !== typeof IB ? new Float32Array(IB) : new Float32Array(ZB ? IB / 4 : IB);
+          return TB && BB.set(new Float32Array(TB)), BB
         }
       }
-      const nB = new Uint8Array(jB);
-      return QB && nB.set(new Uint8Array(QB)), nB
+      const JB = new Uint8Array(IB);
+      return TB && JB.set(new Uint8Array(TB)), JB
     }
   },
-  39965: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => UB,
-      f: () => aB,
-      i: () => uB,
-      k: () => nB
+  39931: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => cB,
+      g: () => nB,
+      j: () => kB,
+      m: () => JB
     });
-    const QB = {};
+    const TB = {};
 
-    function nB(BB) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !QB[BB]) return QB[BB] = !0, `${BB} needs to be imported before as it contains a side-effect required by your code.`
+    function JB(BB) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !TB[BB]) return TB[BB] = !0, `${BB} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const dB = {};
-    let IB = !1,
-      NB = 0;
+    const oB = {};
+    let GB = !1,
+      vB = 0;
 
-    function uB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const QB = function() {
-        if ((zB || IB) && 0 === NB) {
-          const zB = `${BB}.${jB}`;
-          dB[zB] || (dB[zB] = !0, console.warn(`[Babylon.js] ${zB}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function kB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const TB = function() {
+        if ((ZB || GB) && 0 === vB) {
+          const ZB = `${BB}.${IB}`;
+          oB[ZB] || (oB[ZB] = !0, console.warn(`[Babylon.js] ${ZB}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return QB.__isSideEffectStub = !0, QB
+      return TB.__isSideEffectStub = !0, TB
     }
 
-    function UB(BB) {
+    function cB(BB) {
       return !!BB && !BB.__isSideEffectStub
     }
 
-    function aB(BB, jB) {
+    function nB(BB, IB) {
       return {
         get() {},
         set(BB) {
-          Object.defineProperty(this, jB, {
+          Object.defineProperty(this, IB, {
             value: BB,
             writable: !0,
             configurable: !0,
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39943: (BB, jB, zB) => {
-    function QB() {
+  39912: (BB, IB, ZB) => {
+    function TB() {
       return "undefined" !== typeof window
     }
 
-    function nB() {
+    function JB() {
       return "undefined" !== typeof navigator
     }
 
-    function dB() {
+    function oB() {
       return "undefined" !== typeof document
     }
 
-    function IB(BB) {
-      let jB = "",
-        zB = BB.firstChild;
-      for (; zB;) 3 === zB.nodeType && (jB += zB.textContent), zB = zB.nextSibling;
-      return jB
+    function GB(BB) {
+      let IB = "",
+        ZB = BB.firstChild;
+      for (; ZB;) 3 === ZB.nodeType && (IB += ZB.textContent), ZB = ZB.nextSibling;
+      return IB
     }
-    zB.d(jB, {
-      d: () => IB,
-      h: () => dB,
-      k: () => nB,
-      o: () => QB
+    ZB.d(IB, {
+      c: () => GB,
+      g: () => oB,
+      h: () => JB,
+      l: () => TB
     })
   },
-  40113: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => QB,
-      e: () => nB,
-      i: () => dB
+  40122: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => TB,
+      f: () => JB,
+      g: () => oB
     });
-    class QB extends Error {}
-    QB._setPrototypeOf = Object.setPrototypeOf || ((BB, jB) => (BB.__proto__ = jB, BB));
-    const nB = {
+    class TB extends Error {}
+    TB._setPrototypeOf = Object.setPrototypeOf || ((BB, IB) => (BB.__proto__ = IB, BB));
+    const JB = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,60 +817,60 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class dB extends QB {
-      constructor(BB, jB, zB) {
-        super(BB), this.errorCode = jB, this.innerError = zB, this.name = "RuntimeError", QB._setPrototypeOf(this, dB.prototype)
+    class oB extends TB {
+      constructor(BB, IB, ZB) {
+        super(BB), this.errorCode = IB, this.innerError = ZB, this.name = "RuntimeError", TB._setPrototypeOf(this, oB.prototype)
       }
     }
   },
-  40108: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => DB,
-      f: () => LB,
-      j: () => qB,
-      m: () => oB,
-      q: () => EB,
-      r: () => SB,
-      v: () => MB,
-      y: () => XB,
-      A: () => iB,
-      C: () => gB
+  40110: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => HB,
+      d: () => WB,
+      f: () => YB,
+      g: () => pB,
+      j: () => wB,
+      l: () => QB,
+      m: () => sB,
+      q: () => rB,
+      r: () => OB,
+      s: () => dB
     });
-    var QB = zB(40110),
-      nB = zB(39943),
-      dB = zB(37202);
-    class IB {}
-    IB.FilesToLoad = {};
-    var NB = zB(40113),
-      uB = zB(40120),
-      UB = zB(37197),
-      aB = zB(39958),
-      pB = zB(39974),
-      rB = zB(38783),
-      sB = zB(39976),
-      JB = zB(40125);
-    const mB = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class yB extends NB.i {
-      constructor(BB, jB) {
-        super(BB, NB.e.LoadFileError), this.name = "LoadFileError", NB.d._setPrototypeOf(this, yB.prototype), jB instanceof QB.b ? this.request = jB : this.file = jB
+    var TB = ZB(40118),
+      JB = ZB(39912),
+      oB = ZB(37153);
+    class GB {}
+    GB.FilesToLoad = {};
+    var vB = ZB(40122),
+      kB = ZB(40124),
+      cB = ZB(37147),
+      nB = ZB(39926),
+      hB = ZB(39939),
+      zB = ZB(38718),
+      FB = ZB(39943),
+      NB = ZB(40129);
+    const gB = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class qB extends vB.g {
+      constructor(BB, IB) {
+        super(BB, vB.f.LoadFileError), this.name = "LoadFileError", vB.c._setPrototypeOf(this, qB.prototype), IB instanceof TB.d ? this.request = IB : this.file = IB
       }
     }
-    class kB extends NB.i {
-      constructor(BB, jB) {
-        super(BB, NB.e.RequestFileError), this.request = jB, this.name = "RequestFileError", NB.d._setPrototypeOf(this, kB.prototype)
+    class yB extends vB.g {
+      constructor(BB, IB) {
+        super(BB, vB.f.RequestFileError), this.request = IB, this.name = "RequestFileError", vB.c._setPrototypeOf(this, yB.prototype)
       }
     }
-    class GB extends NB.i {
-      constructor(BB, jB) {
-        super(BB, NB.e.ReadFileError), this.file = jB, this.name = "ReadFileError", NB.d._setPrototypeOf(this, GB.prototype)
+    class UB extends vB.g {
+      constructor(BB, IB) {
+        super(BB, vB.f.ReadFileError), this.file = IB, this.name = "ReadFileError", vB.c._setPrototypeOf(this, UB.prototype)
       }
     }
-    const LB = {
+    const WB = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
             let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (zB, QB, nB) => 0 !== QB.status || nB >= BB || -1 !== zB.indexOf("file:") ? -1 : Math.pow(2, nB) * jB
+              IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (ZB, TB, JB) => 0 !== TB.status || JB >= BB || -1 !== ZB.indexOf("file:") ? -1 : Math.pow(2, JB) * IB
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
@@ -880,276 +880,276 @@ export const modules = {
         ScriptPreprocessUrl: BB => BB,
         CleanUrl: BB => BB = BB.replace(/#/gm, "%23")
       },
-      gB = (BB, jB) => {
-        if ((!BB || 0 !== BB.indexOf("data:")) && LB.CorsBehavior)
-          if ("string" === typeof LB.CorsBehavior || LB.CorsBehavior instanceof String) jB.crossOrigin = LB.CorsBehavior;
+      dB = (BB, IB) => {
+        if ((!BB || 0 !== BB.indexOf("data:")) && WB.CorsBehavior)
+          if ("string" === typeof WB.CorsBehavior || WB.CorsBehavior instanceof String) IB.crossOrigin = WB.CorsBehavior;
           else {
-            const zB = LB.CorsBehavior(BB);
-            zB && (jB.crossOrigin = zB)
+            const ZB = WB.CorsBehavior(BB);
+            ZB && (IB.crossOrigin = ZB)
           }
       },
-      tB = {
+      CB = {
         getRequiredSize: null
       },
-      SB = function(BB, jB, zB, nB) {
-        let dB, NB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          aB = arguments.length > 5 ? arguments[5] : void 0,
-          pB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : UB.c.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !pB?._features.forceBitmapOverHTMLImageElement) return zB("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (pB?._features.forceBitmapOverHTMLImageElement && "string" !== typeof BB && "undefined" !== typeof Blob) {
-          let QB;
-          if (BB instanceof Blob) QB = BB;
+      QB = function(BB, IB, ZB, JB) {
+        let oB, vB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          nB = arguments.length > 5 ? arguments[5] : void 0,
+          hB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : cB.e.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !hB?._features.forceBitmapOverHTMLImageElement) return ZB("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (hB?._features.forceBitmapOverHTMLImageElement && "string" !== typeof BB && "undefined" !== typeof Blob) {
+          let TB;
+          if (BB instanceof Blob) TB = BB;
           else {
-            const jB = BB instanceof ArrayBuffer ? BB : (0, JB.i)(BB);
-            QB = new Blob([jB], {
-              type: NB
+            const IB = BB instanceof ArrayBuffer ? BB : (0, NB.l)(BB);
+            TB = new Blob([IB], {
+              type: vB
             })
           }
-          return pB.createImageBitmap(QB, {
+          return hB.createImageBitmap(TB, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...aB
-          }).then(jB).catch((jB => {
-            zB && zB("Error while trying to load image: " + BB, jB)
+            ...nB
+          }).then(IB).catch((IB => {
+            ZB && ZB("Error while trying to load image: " + BB, IB)
           })), null
         }
-        let rB = !1;
+        let zB = !1;
         if (BB instanceof ArrayBuffer || ArrayBuffer.isView(BB))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let jB;
-            jB = BB instanceof ArrayBuffer ? BB : (0, JB.i)(BB), dB = URL.createObjectURL(new Blob([jB], {
-              type: NB
-            })), rB = !0
-          } else dB = `data:${NB};base64,` + (0, uB.e)(BB);
-        else BB instanceof Blob ? (dB = URL.createObjectURL(BB), rB = !0) : (dB = LB.CleanUrl(BB), dB = LB.PreprocessUrl(dB));
-        const sB = jB => {
-          if (zB) {
-            const QB = dB || BB.toString();
-            zB(`Error while trying to load image: ${0===QB.indexOf("http")||QB.length<=128?QB:QB.slice(0,128)+"..."}`, jB)
+            let IB;
+            IB = BB instanceof ArrayBuffer ? BB : (0, NB.l)(BB), oB = URL.createObjectURL(new Blob([IB], {
+              type: vB
+            })), zB = !0
+          } else oB = `data:${vB};base64,` + (0, kB.h)(BB);
+        else BB instanceof Blob ? (oB = URL.createObjectURL(BB), zB = !0) : (oB = WB.CleanUrl(BB), oB = WB.PreprocessUrl(oB));
+        const FB = IB => {
+          if (ZB) {
+            const TB = oB || BB.toString();
+            ZB(`Error while trying to load image: ${0===TB.indexOf("http")||TB.length<=128?TB:TB.slice(0,128)+"..."}`, IB)
           }
         };
-        if (pB?._features.forceBitmapOverHTMLImageElement) return EB(dB, (QB => {
-          pB.createImageBitmap(new Blob([QB], {
-            type: NB
+        if (hB?._features.forceBitmapOverHTMLImageElement) return wB(oB, (TB => {
+          hB.createImageBitmap(new Blob([TB], {
+            type: vB
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...aB
+            ...nB
           }).then((BB => {
-            jB(BB), rB && URL.revokeObjectURL(dB)
-          })).catch((jB => {
-            zB && zB("Error while trying to load image: " + BB, jB)
+            IB(BB), zB && URL.revokeObjectURL(oB)
+          })).catch((IB => {
+            ZB && ZB("Error while trying to load image: " + BB, IB)
           }))
-        }), void 0, nB || void 0, !0, ((BB, jB) => {
-          sB(jB)
+        }), void 0, JB || void 0, !0, ((BB, IB) => {
+          FB(IB)
         })), null;
-        const mB = new Image;
-        if (tB.getRequiredSize) {
-          const jB = tB.getRequiredSize(BB);
-          jB.width && (mB.width = jB.width), jB.height && (mB.height = jB.height)
+        const gB = new Image;
+        if (CB.getRequiredSize) {
+          const IB = CB.getRequiredSize(BB);
+          IB.width && (gB.width = IB.width), IB.height && (gB.height = IB.height)
         }
-        gB(dB, mB);
-        const yB = [],
-          kB = () => {
-            for (const BB of yB) BB.target.removeEventListener(BB.name, BB.handler);
-            yB.length = 0
+        dB(oB, gB);
+        const qB = [],
+          yB = () => {
+            for (const BB of qB) BB.target.removeEventListener(BB.name, BB.handler);
+            qB.length = 0
           };
-        yB.push({
-          target: mB,
+        qB.push({
+          target: gB,
           name: "load",
           handler: () => {
-            kB(), jB(mB), rB && mB.src && URL.revokeObjectURL(mB.src)
+            yB(), IB(gB), zB && gB.src && URL.revokeObjectURL(gB.src)
           }
-        }), yB.push({
-          target: mB,
+        }), qB.push({
+          target: gB,
           name: "error",
           handler: BB => {
-            kB(), sB(BB), rB && mB.src && URL.revokeObjectURL(mB.src)
+            yB(), FB(BB), zB && gB.src && URL.revokeObjectURL(gB.src)
           }
-        }), yB.push({
+        }), qB.push({
           target: document,
           name: "securitypolicyviolation",
           handler: BB => {
-            if (BB.blockedURI !== mB.src || "JJ" === BB.disposition) return;
-            kB();
-            const jB = new Error(`CSP violation of policy ${BB.effectiveDirective} ${BB.blockedURI}. Current policy is ${BB.originalPolicy}`);
-            UB.c.UseFallbackTexture = !1, sB(jB), rB && mB.src && URL.revokeObjectURL(mB.src), mB.src = ""
+            if (BB.blockedURI !== gB.src || "JN" === BB.disposition) return;
+            yB();
+            const IB = new Error(`CSP violation of policy ${BB.effectiveDirective} ${BB.blockedURI}. Current policy is ${BB.originalPolicy}`);
+            cB.e.UseFallbackTexture = !1, FB(IB), zB && gB.src && URL.revokeObjectURL(gB.src), gB.src = ""
           }
         }), (() => {
-          for (const BB of yB) BB.target.addEventListener(BB.name, BB.handler)
+          for (const BB of qB) BB.target.addEventListener(BB.name, BB.handler)
         })();
-        const GB = "blob:" === dB.substring(0, 5),
-          SB = "data:" === dB.substring(0, 5),
-          MB = () => {
-            GB || SB || !QB.b.IsCustomRequestAvailable ? mB.src = dB : EB(dB, ((BB, jB, zB) => {
-              const QB = new Blob([BB], {
-                  type: !NB && zB ? zB : NB
+        const UB = "blob:" === oB.substring(0, 5),
+          QB = "data:" === oB.substring(0, 5),
+          sB = () => {
+            UB || QB || !TB.d.IsCustomRequestAvailable ? gB.src = oB : wB(oB, ((BB, IB, ZB) => {
+              const TB = new Blob([BB], {
+                  type: !vB && ZB ? ZB : vB
                 }),
-                nB = URL.createObjectURL(QB);
-              rB = !0, mB.src = nB
-            }), void 0, nB || void 0, !0, ((BB, jB) => {
-              sB(jB)
+                JB = URL.createObjectURL(TB);
+              zB = !0, gB.src = JB
+            }), void 0, JB || void 0, !0, ((BB, IB) => {
+              FB(IB)
             }))
           },
-          iB = () => {
-            nB && nB.loadImage(dB, mB)
+          OB = () => {
+            JB && JB.loadImage(oB, gB)
           };
-        if (!GB && !SB && nB && nB.enableTexturesOffline) nB.open(iB, MB);
+        if (!UB && !QB && JB && JB.enableTexturesOffline) JB.open(OB, sB);
         else {
-          if (-1 !== dB.indexOf("file:")) {
-            const BB = decodeURIComponent(dB.substring(5).toLowerCase());
-            if (IB.FilesToLoad[BB] && "undefined" !== typeof URL) {
+          if (-1 !== oB.indexOf("file:")) {
+            const BB = decodeURIComponent(oB.substring(5).toLowerCase());
+            if (GB.FilesToLoad[BB] && "undefined" !== typeof URL) {
               try {
-                let jB;
+                let IB;
                 try {
-                  jB = URL.createObjectURL(IB.FilesToLoad[BB])
-                } catch (qB) {
-                  jB = URL.createObjectURL(IB.FilesToLoad[BB])
+                  IB = URL.createObjectURL(GB.FilesToLoad[BB])
+                } catch (YB) {
+                  IB = URL.createObjectURL(GB.FilesToLoad[BB])
                 }
-                mB.src = jB, rB = !0
-              } catch (fB) {
-                mB.src = ""
+                gB.src = IB, zB = !0
+              } catch (iB) {
+                gB.src = ""
               }
-              return mB
+              return gB
             }
           }
-          MB()
+          sB()
         }
-        return mB
+        return gB
       },
-      MB = (BB, jB, zB, QB, nB) => {
-        const IB = new FileReader,
-          NB = {
-            onCompleteObservable: new dB.c,
-            abort: () => IB.abort()
+      sB = (BB, IB, ZB, TB, JB) => {
+        const GB = new FileReader,
+          vB = {
+            onCompleteObservable: new oB.b,
+            abort: () => GB.abort()
           };
-        return IB.onloadend = () => NB.onCompleteObservable.notifyObservers(NB), nB && (IB.onerror = () => {
-          nB(new GB(`Unable to read ${BB.name}`, BB))
-        }), IB.onload = BB => {
-          jB(BB.target.result)
-        }, zB && (IB.onprogress = zB), QB ? IB.readAsArrayBuffer(BB) : IB.readAsText(BB), NB
+        return GB.onloadend = () => vB.onCompleteObservable.notifyObservers(vB), JB && (GB.onerror = () => {
+          JB(new UB(`Unable to read ${BB.name}`, BB))
+        }), GB.onload = BB => {
+          IB(BB.target.result)
+        }, ZB && (GB.onprogress = ZB), TB ? GB.readAsArrayBuffer(BB) : GB.readAsText(BB), vB
       },
-      EB = (BB, jB, zB, QB, nB, uB, UB) => {
-        if (BB.name) return MB(BB, jB, zB, nB, uB ? BB => {
-          uB(void 0, BB)
+      wB = (BB, IB, ZB, TB, JB, kB, cB) => {
+        if (BB.name) return sB(BB, IB, ZB, JB, kB ? BB => {
+          kB(void 0, BB)
         } : void 0);
-        const aB = BB;
-        if (-1 !== aB.indexOf("file:")) {
-          let BB = decodeURIComponent(aB.substring(5).toLowerCase());
+        const nB = BB;
+        if (-1 !== nB.indexOf("file:")) {
+          let BB = decodeURIComponent(nB.substring(5).toLowerCase());
           0 === BB.indexOf("./") && (BB = BB.substring(2));
-          const QB = IB.FilesToLoad[BB];
-          if (QB) return MB(QB, jB, zB, nB, uB ? BB => uB(void 0, new yB(BB.message, BB.file)) : void 0)
+          const TB = GB.FilesToLoad[BB];
+          if (TB) return sB(TB, IB, ZB, JB, kB ? BB => kB(void 0, new qB(BB.message, BB.file)) : void 0)
         }
         const {
-          match: pB,
-          type: JB
-        } = HB(aB);
-        if (pB) {
+          match: hB,
+          type: NB
+        } = aB(nB);
+        if (hB) {
           const BB = {
-            onCompleteObservable: new dB.c,
+            onCompleteObservable: new oB.b,
             abort: () => () => {}
           };
           try {
-            const BB = nB ? DB(aB) : FB(aB);
-            jB(BB, void 0, JB)
-          } catch (NB) {
-            uB ? uB(void 0, NB) : rB.c.Error(NB.message || "Failed to parse the Data URL")
+            const BB = JB ? HB(nB) : MB(nB);
+            IB(BB, void 0, NB)
+          } catch (vB) {
+            kB ? kB(void 0, vB) : zB.d.Error(vB.message || "Failed to parse the Data URL")
           }
-          return sB.b.SetImmediate((() => {
+          return FB.b.SetImmediate((() => {
             BB.onCompleteObservable.notifyObservers(BB)
           })), BB
         }
-        return iB(aB, ((BB, zB) => {
-          jB(BB, zB?.responseURL, zB?.getResponseHeader("content-type"))
-        }), zB, QB, nB, uB ? BB => {
-          uB(BB.request, new yB(BB.message, BB.request))
-        } : void 0, UB)
+        return OB(nB, ((BB, ZB) => {
+          IB(BB, ZB?.responseURL, ZB?.getResponseHeader("content-type"))
+        }), ZB, TB, JB, kB ? BB => {
+          kB(BB.request, new qB(BB.message, BB.request))
+        } : void 0, cB)
       },
-      iB = (BB, jB, zB, IB, NB, uB, aB) => {
-        null !== IB && (IB ?? (IB = UB.c.LastCreatedScene?.offlineProvider)), BB = LB.CleanUrl(BB), BB = LB.PreprocessUrl(BB);
-        const pB = LB.BaseUrl + BB;
-        let sB = !1;
-        const JB = {
-            onCompleteObservable: new dB.c,
-            abort: () => sB = !0
+      OB = (BB, IB, ZB, GB, vB, kB, nB) => {
+        null !== GB && (GB ?? (GB = cB.e.LastCreatedScene?.offlineProvider)), BB = WB.CleanUrl(BB), BB = WB.PreprocessUrl(BB);
+        const hB = WB.BaseUrl + BB;
+        let FB = !1;
+        const NB = {
+            onCompleteObservable: new oB.b,
+            abort: () => FB = !0
           },
-          mB = () => {
-            let BB, dB = new QB.b,
-              IB = null;
-            const UB = () => {
-              dB && (zB && dB.removeEventListener("progress", zB), BB && dB.removeEventListener("readystatechange", BB), dB.removeEventListener("loadend", mB))
+          gB = () => {
+            let BB, oB = new TB.d,
+              GB = null;
+            const cB = () => {
+              oB && (ZB && oB.removeEventListener("progress", ZB), BB && oB.removeEventListener("readystatechange", BB), oB.removeEventListener("loadend", gB))
             };
-            let mB = () => {
-              UB(), JB.onCompleteObservable.notifyObservers(JB), JB.onCompleteObservable.clear(), zB = void 0, BB = null, mB = null, uB = void 0, aB = void 0, jB = void 0
+            let gB = () => {
+              cB(), NB.onCompleteObservable.notifyObservers(NB), NB.onCompleteObservable.clear(), ZB = void 0, BB = null, gB = null, kB = void 0, nB = void 0, IB = void 0
             };
-            JB.abort = () => {
-              sB = !0, mB && mB(), dB && dB.readyState !== (XMLHttpRequest.DONE || 4) && dB.abort(), null !== IB && (clearTimeout(IB), IB = null), dB = null
+            NB.abort = () => {
+              FB = !0, gB && gB(), oB && oB.readyState !== (XMLHttpRequest.DONE || 4) && oB.abort(), null !== GB && (clearTimeout(GB), GB = null), oB = null
             };
-            const yB = BB => {
-                const jB = BB.message || "Unknown error";
-                uB && dB ? uB(new kB(jB, dB)) : rB.c.Error(jB)
+            const qB = BB => {
+                const IB = BB.message || "Unknown error";
+                kB && oB ? kB(new yB(IB, oB)) : zB.d.Error(IB)
               },
-              GB = rB => {
-                if (dB) {
-                  if (dB.open("GET", pB), aB) try {
-                    aB(dB)
-                  } catch (JB) {
-                    return void yB(JB)
+              UB = zB => {
+                if (oB) {
+                  if (oB.open("GET", hB), nB) try {
+                    nB(oB)
+                  } catch (NB) {
+                    return void qB(NB)
                   }
-                  NB && (dB.responseType = "arraybuffer"), zB && dB.addEventListener("progress", zB), mB && dB.addEventListener("loadend", mB), BB = () => {
-                    if (!sB && dB && dB.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (BB && dB.removeEventListener("readystatechange", BB), dB.status >= 200 && dB.status < 300 || 0 === dB.status && (!(0, nB.o)() || fB())) {
-                        const BB = NB ? dB.response : dB.responseText;
+                  vB && (oB.responseType = "arraybuffer"), ZB && oB.addEventListener("progress", ZB), gB && oB.addEventListener("loadend", gB), BB = () => {
+                    if (!FB && oB && oB.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (BB && oB.removeEventListener("readystatechange", BB), oB.status >= 200 && oB.status < 300 || 0 === oB.status && (!(0, JB.l)() || iB())) {
+                        const BB = vB ? oB.response : oB.responseText;
                         if (null !== BB) {
                           try {
-                            jB && jB(BB, dB)
-                          } catch (JB) {
-                            yB(JB)
+                            IB && IB(BB, oB)
+                          } catch (NB) {
+                            qB(NB)
                           }
                           return
                         }
                       }
-                      const zB = LB.DefaultRetryStrategy;
-                      if (zB) {
-                        const BB = zB(pB, dB, rB);
-                        if (-1 !== BB) return UB(), dB = new QB.b, void(IB = setTimeout((() => GB(rB + 1)), BB))
+                      const ZB = WB.DefaultRetryStrategy;
+                      if (ZB) {
+                        const BB = ZB(hB, oB, zB);
+                        if (-1 !== BB) return cB(), oB = new TB.d, void(GB = setTimeout((() => UB(zB + 1)), BB))
                       }
-                      const aB = new kB("Error status: " + dB.status + " " + dB.statusText + " - Unable to load " + pB, dB);
-                      uB && uB(aB)
+                      const nB = new yB("Error status: " + oB.status + " " + oB.statusText + " - Unable to load " + hB, oB);
+                      kB && kB(nB)
                     }
-                  }, dB.addEventListener("readystatechange", BB), dB.send()
+                  }, oB.addEventListener("readystatechange", BB), oB.send()
                 }
               };
-            GB(0)
+            UB(0)
           };
-        if (IB && IB.enableSceneOffline && !BB.startsWith("blob:")) {
-          const QB = BB => {
-              BB && BB.status > 400 ? uB && uB(BB) : mB()
+        if (GB && GB.enableSceneOffline && !BB.startsWith("blob:")) {
+          const TB = BB => {
+              BB && BB.status > 400 ? kB && kB(BB) : gB()
             },
-            nB = () => {
-              IB && IB.loadFile(LB.BaseUrl + BB, (BB => {
-                !sB && jB && jB(BB), JB.onCompleteObservable.notifyObservers(JB)
-              }), zB ? BB => {
-                !sB && zB && zB(BB)
-              } : void 0, QB, NB)
+            JB = () => {
+              GB && GB.loadFile(WB.BaseUrl + BB, (BB => {
+                !FB && IB && IB(BB), NB.onCompleteObservable.notifyObservers(NB)
+              }), ZB ? BB => {
+                !FB && ZB && ZB(BB)
+              } : void 0, TB, vB)
             };
-          IB.open(nB, QB)
-        } else mB();
-        return JB
+          GB.open(JB, TB)
+        } else gB();
+        return NB
       },
-      qB = BB => {
+      YB = BB => {
         const {
-          match: jB,
-          type: zB
-        } = HB(BB);
-        if (jB) return zB || void 0;
-        const QB = BB.lastIndexOf(".");
-        switch (BB.substring(QB + 1).toLowerCase()) {
+          match: IB,
+          type: ZB
+        } = aB(BB);
+        if (IB) return ZB || void 0;
+        const TB = BB.lastIndexOf(".");
+        switch (BB.substring(TB + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "sF":
+          case "uH":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      fB = () => "undefined" !== typeof location && "file:" === location.protocol,
-      oB = BB => mB.test(BB),
-      HB = BB => {
-        const jB = mB.exec(BB);
-        if (null === jB || 0 === jB.length) return {
+      iB = () => "undefined" !== typeof location && "file:" === location.protocol,
+      pB = BB => gB.test(BB),
+      aB = BB => {
+        const IB = gB.exec(BB);
+        if (null === IB || 0 === IB.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: jB[0].replace("data:", "").replace(";base64,", "")
+          type: IB[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function DB(BB) {
-      return (0, uB.b)(BB.split(",")[1])
+    function HB(BB) {
+      return (0, kB.b)(BB.split(",")[1])
     }
-    const FB = BB => (0, uB.d)(BB.split(",")[1]);
-    let YB;
-    const VB = (BB, jB, zB, QB, nB, dB, IB, NB, uB, UB) => {
-      YB = {
+    const MB = BB => (0, kB.d)(BB.split(",")[1]);
+    let jB;
+    const PB = (BB, IB, ZB, TB, JB, oB, GB, vB, kB, cB) => {
+      jB = {
         DecodeBase64UrlToBinary: BB,
-        DecodeBase64UrlToString: jB,
-        DefaultRetryStrategy: zB.DefaultRetryStrategy,
-        BaseUrl: zB.BaseUrl,
-        CorsBehavior: zB.CorsBehavior,
-        PreprocessUrl: zB.PreprocessUrl,
-        IsBase64DataUrl: QB,
-        IsFileURL: nB,
-        LoadFile: dB,
-        LoadImage: IB,
-        ReadFile: NB,
-        RequestFile: uB,
-        SetCorsBehavior: UB
-      }, Object.defineProperty(YB, "DefaultRetryStrategy", {
+        DecodeBase64UrlToString: IB,
+        DefaultRetryStrategy: ZB.DefaultRetryStrategy,
+        BaseUrl: ZB.BaseUrl,
+        CorsBehavior: ZB.CorsBehavior,
+        PreprocessUrl: ZB.PreprocessUrl,
+        IsBase64DataUrl: TB,
+        IsFileURL: JB,
+        LoadFile: oB,
+        LoadImage: GB,
+        ReadFile: vB,
+        RequestFile: kB,
+        SetCorsBehavior: cB
+      }, Object.defineProperty(jB, "DefaultRetryStrategy", {
         get: function() {
-          return zB.DefaultRetryStrategy
+          return ZB.DefaultRetryStrategy
         },
         set: function(BB) {
-          zB.DefaultRetryStrategy = BB
+          ZB.DefaultRetryStrategy = BB
         }
-      }), Object.defineProperty(YB, "BaseUrl", {
+      }), Object.defineProperty(jB, "BaseUrl", {
         get: function() {
-          return zB.BaseUrl
+          return ZB.BaseUrl
         },
         set: function(BB) {
-          zB.BaseUrl = BB
+          ZB.BaseUrl = BB
         }
-      }), Object.defineProperty(YB, "PreprocessUrl", {
+      }), Object.defineProperty(jB, "PreprocessUrl", {
         get: function() {
-          return zB.PreprocessUrl
+          return ZB.PreprocessUrl
         },
         set: function(BB) {
-          zB.PreprocessUrl = BB
+          ZB.PreprocessUrl = BB
         }
-      }), Object.defineProperty(YB, "CorsBehavior", {
+      }), Object.defineProperty(jB, "CorsBehavior", {
         get: function() {
-          return zB.CorsBehavior
+          return ZB.CorsBehavior
         },
         set: function(BB) {
-          zB.CorsBehavior = BB
+          ZB.CorsBehavior = BB
         }
       })
     };
-    let hB = !1;
+    let RB = !1;
 
-    function XB() {
-      hB || (hB = !0, VB(DB, FB, LB, oB, fB, EB, SB, MB, iB, gB), aB.e.loadFile = EB, aB.e.loadImage = SB, pB.m.loadFile = EB)
+    function rB() {
+      RB || (RB = !0, PB(HB, MB, WB, pB, iB, wB, QB, sB, OB, dB), nB.c.loadFile = wB, nB.c.loadImage = QB, hB.n.loadFile = wB)
     }
   },
-  40130: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => NB,
-      e: () => dB,
-      f: () => IB
+  40134: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => vB,
+      e: () => oB,
+      h: () => GB
     });
-    let QB = null;
+    let TB = null;
 
-    function nB() {
-      if (QB) return QB;
+    function JB() {
+      if (TB) return TB;
       const BB = new ArrayBuffer(4),
-        jB = new Float32Array(BB),
-        zB = new Uint32Array(BB),
-        nB = new Uint32Array(512),
-        dB = new Uint32Array(512);
-      for (let QB = 0; QB < 256; ++QB) {
-        const BB = QB - 127;
-        BB < -24 ? (nB[QB] = 0, nB[256 | QB] = 32768, dB[QB] = 24, dB[256 | QB] = 24) : BB < -14 ? (nB[QB] = 1024 >> -BB - 14, nB[256 | QB] = 1024 >> -BB - 14 | 32768, dB[QB] = -BB - 1, dB[256 | QB] = -BB - 1) : BB <= 15 ? (nB[QB] = BB + 15 << 10, nB[256 | QB] = BB + 15 << 10 | 32768, dB[QB] = 13, dB[256 | QB] = 13) : BB < 128 ? (nB[QB] = 31744, nB[256 | QB] = 64512, dB[QB] = 24, dB[256 | QB] = 24) : (nB[QB] = 31744, nB[256 | QB] = 64512, dB[QB] = 13, dB[256 | QB] = 13)
+        IB = new Float32Array(BB),
+        ZB = new Uint32Array(BB),
+        JB = new Uint32Array(512),
+        oB = new Uint32Array(512);
+      for (let TB = 0; TB < 256; ++TB) {
+        const BB = TB - 127;
+        BB < -24 ? (JB[TB] = 0, JB[256 | TB] = 32768, oB[TB] = 24, oB[256 | TB] = 24) : BB < -14 ? (JB[TB] = 1024 >> -BB - 14, JB[256 | TB] = 1024 >> -BB - 14 | 32768, oB[TB] = -BB - 1, oB[256 | TB] = -BB - 1) : BB <= 15 ? (JB[TB] = BB + 15 << 10, JB[256 | TB] = BB + 15 << 10 | 32768, oB[TB] = 13, oB[256 | TB] = 13) : BB < 128 ? (JB[TB] = 31744, JB[256 | TB] = 64512, oB[TB] = 24, oB[256 | TB] = 24) : (JB[TB] = 31744, JB[256 | TB] = 64512, oB[TB] = 13, oB[256 | TB] = 13)
       }
-      const IB = new Uint32Array(2048),
-        NB = new Uint32Array(64),
-        uB = new Uint32Array(64);
-      for (let QB = 1; QB < 1024; ++QB) {
-        let BB = QB << 13,
-          jB = 0;
-        for (; 0 === (8388608 & BB);) BB <<= 1, jB -= 8388608;
-        BB &= -8388609, jB += 947912704, IB[QB] = BB | jB
+      const GB = new Uint32Array(2048),
+        vB = new Uint32Array(64),
+        kB = new Uint32Array(64);
+      for (let TB = 1; TB < 1024; ++TB) {
+        let BB = TB << 13,
+          IB = 0;
+        for (; 0 === (8388608 & BB);) BB <<= 1, IB -= 8388608;
+        BB &= -8388609, IB += 947912704, GB[TB] = BB | IB
       }
-      for (let QB = 1024; QB < 2048; ++QB) IB[QB] = 939524096 + (QB - 1024 << 13);
-      for (let QB = 1; QB < 31; ++QB) NB[QB] = QB << 23;
-      NB[31] = 1199570944, NB[32] = 2147483648;
-      for (let QB = 33; QB < 63; ++QB) NB[QB] = 2147483648 + (QB - 32 << 23);
-      NB[63] = 3347054592;
-      for (let QB = 1; QB < 64; ++QB) 32 !== QB && (uB[QB] = 1024);
-      return QB = {
-        floatView: jB,
-        uint32View: zB,
-        baseTable: nB,
-        shiftTable: dB,
-        mantissaTable: IB,
-        exponentTable: NB,
-        offsetTable: uB
-      }, QB
+      for (let TB = 1024; TB < 2048; ++TB) GB[TB] = 939524096 + (TB - 1024 << 13);
+      for (let TB = 1; TB < 31; ++TB) vB[TB] = TB << 23;
+      vB[31] = 1199570944, vB[32] = 2147483648;
+      for (let TB = 33; TB < 63; ++TB) vB[TB] = 2147483648 + (TB - 32 << 23);
+      vB[63] = 3347054592;
+      for (let TB = 1; TB < 64; ++TB) 32 !== TB && (kB[TB] = 1024);
+      return TB = {
+        floatView: IB,
+        uint32View: ZB,
+        baseTable: JB,
+        shiftTable: oB,
+        mantissaTable: GB,
+        exponentTable: vB,
+        offsetTable: kB
+      }, TB
     }
-    const dB = 65504;
+    const oB = 65504;
 
-    function IB(BB) {
-      const jB = nB();
-      jB.floatView[0] = BB;
-      const zB = jB.uint32View[0],
-        QB = zB >> 23 & 511;
-      return jB.baseTable[QB] + ((8388607 & zB) >> jB.shiftTable[QB])
+    function GB(BB) {
+      const IB = JB();
+      IB.floatView[0] = BB;
+      const ZB = IB.uint32View[0],
+        TB = ZB >> 23 & 511;
+      return IB.baseTable[TB] + ((8388607 & ZB) >> IB.shiftTable[TB])
     }
 
-    function NB(BB) {
-      const jB = nB();
-      return jB.uint32View[0] = jB.mantissaTable[jB.offsetTable[BB >> 10] + (1023 & BB)] + jB.exponentTable[BB >> 10], jB.floatView[0]
+    function vB(BB) {
+      const IB = JB();
+      return IB.uint32View[0] = IB.mantissaTable[IB.offsetTable[BB >> 10] + (1023 & BB)] + IB.exponentTable[BB >> 10], IB.floatView[0]
     }
   },
-  40120: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => dB,
-      d: () => nB,
-      e: () => QB
+  40124: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB,
+      d: () => JB,
+      h: () => TB
     });
-    const QB = BB => {
-        const jB = ArrayBuffer.isView(BB) ? new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength) : new Uint8Array(BB);
-        return "function" === typeof jB.toBase64 ? jB.toBase64() : function(BB) {
-          const jB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let zB, QB, nB, dB, IB, NB, uB, UB = "",
-            aB = 0;
-          for (; aB < BB.length;) zB = BB[aB++], QB = aB < BB.length ? BB[aB++] : Number.NaN, nB = aB < BB.length ? BB[aB++] : Number.NaN, dB = zB >> 2, IB = (3 & zB) << 4 | QB >> 4, NB = (15 & QB) << 2 | nB >> 6, uB = 63 & nB, isNaN(QB) ? NB = uB = 64 : isNaN(nB) && (uB = 64), UB += jB.charAt(dB) + jB.charAt(IB) + jB.charAt(NB) + jB.charAt(uB);
-          return UB
-        }(jB)
+    const TB = BB => {
+        const IB = ArrayBuffer.isView(BB) ? new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength) : new Uint8Array(BB);
+        return "function" === typeof IB.toBase64 ? IB.toBase64() : function(BB) {
+          const IB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let ZB, TB, JB, oB, GB, vB, kB, cB = "",
+            nB = 0;
+          for (; nB < BB.length;) ZB = BB[nB++], TB = nB < BB.length ? BB[nB++] : Number.NaN, JB = nB < BB.length ? BB[nB++] : Number.NaN, oB = ZB >> 2, GB = (3 & ZB) << 4 | TB >> 4, vB = (15 & TB) << 2 | JB >> 6, kB = 63 & JB, isNaN(TB) ? vB = kB = 64 : isNaN(JB) && (kB = 64), cB += IB.charAt(oB) + IB.charAt(GB) + IB.charAt(vB) + IB.charAt(kB);
+          return cB
+        }(IB)
       },
-      nB = BB => atob(BB),
-      dB = BB => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(BB).buffer : function(BB) {
-        const jB = nB(BB),
-          zB = jB.length,
-          QB = new Uint8Array(new ArrayBuffer(zB));
-        for (let nB = 0; nB < zB; nB++) QB[nB] = jB.charCodeAt(nB);
-        return QB.buffer
+      JB = BB => atob(BB),
+      oB = BB => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(BB).buffer : function(BB) {
+        const IB = JB(BB),
+          ZB = IB.length,
+          TB = new Uint8Array(new ArrayBuffer(ZB));
+        for (let JB = 0; JB < ZB; JB++) TB[JB] = IB.charCodeAt(JB);
+        return TB.buffer
       }(BB)
   },
-  39976: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      e: () => IB
+  39943: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => JB,
+      f: () => GB
     });
-    let QB = [];
-    class nB {
+    let TB = [];
+    class JB {
       static SetImmediate(BB) {
-        0 === QB.length && setTimeout((() => {
-          const BB = QB;
-          QB = [];
-          for (const jB of BB) jB()
-        }), 1), QB.push(BB)
+        0 === TB.length && setTimeout((() => {
+          const BB = TB;
+          TB = [];
+          for (const IB of BB) IB()
+        }), 1), TB.push(BB)
       }
     }
 
-    function dB(BB, jB, zB) {
+    function oB(BB, IB, ZB) {
       try {
-        if (BB()) return jB(), !0
-      } catch (QB) {
-        return zB?.(QB), !0
+        if (BB()) return IB(), !0
+      } catch (TB) {
+        return ZB?.(TB), !0
       }
       return !1
     }
-    const IB = function(BB, jB, zB) {
-      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        nB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        IB = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && dB(BB, jB, zB)) return null;
-      const NB = setInterval((() => {
-        dB(BB, jB, zB) ? clearInterval(NB) : (nB -= QB, nB < 0 && (clearInterval(NB), zB?.(new Error("Operation timed out after maximum retries. " + (IB || "")), !0)))
-      }), QB);
-      return () => clearInterval(NB)
+    const GB = function(BB, IB, ZB) {
+      let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        GB = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && oB(BB, IB, ZB)) return null;
+      const vB = setInterval((() => {
+        oB(BB, IB, ZB) ? clearInterval(vB) : (JB -= TB, JB < 0 && (clearInterval(vB), ZB?.(new Error("Operation timed out after maximum retries. " + (GB || "")), !0)))
+      }), TB);
+      return () => clearInterval(vB)
     }
   },
-  40110: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => QB
+  40118: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => TB
     });
-    class QB {
+    class TB {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(QB.CustomRequestHeaders).length > 0 || QB.CustomRequestModifiers.length > 0
+        return Object.keys(TB.CustomRequestHeaders).length > 0 || TB.CustomRequestModifiers.length > 0
       }
       static _CleanUrl(BB) {
         return BB = (BB = BB.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
       static _ShouldSkipRequestModifications(BB) {
-        return QB.SkipRequestModificationForBabylonCDN && (BB.includes("preview.babylonjs.com") || BB.includes("cdn.babylonjs.com"))
+        return TB.SkipRequestModificationForBabylonCDN && (BB.includes("preview.babylonjs.com") || BB.includes("cdn.babylonjs.com"))
       }
       static _CollectCustomizations(BB) {
-        const jB = {
+        const IB = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (QB._ShouldSkipRequestModifications(BB)) return {
+        if (TB._ShouldSkipRequestModifications(BB)) return {
           url: BB,
-          headers: jB
+          headers: IB
         };
-        for (const nB in QB.CustomRequestHeaders) {
-          const BB = QB.CustomRequestHeaders[nB];
-          BB && (jB[nB] = BB)
+        for (const JB in TB.CustomRequestHeaders) {
+          const BB = TB.CustomRequestHeaders[JB];
+          BB && (IB[JB] = BB)
         }
-        const zB = {
-          setRequestHeader: (BB, zB) => {
-            jB[BB] = zB
+        const ZB = {
+          setRequestHeader: (BB, ZB) => {
+            IB[BB] = ZB
           }
         };
-        for (const nB of QB.CustomRequestModifiers) {
-          if (QB._ShouldSkipRequestModifications(BB)) break;
-          const jB = nB(zB, BB);
-          "string" === typeof jB && (BB = jB)
+        for (const JB of TB.CustomRequestModifiers) {
+          if (TB._ShouldSkipRequestModifications(BB)) break;
+          const IB = JB(ZB, BB);
+          "string" === typeof IB && (BB = IB)
         }
         return {
           url: BB,
-          headers: jB
+          headers: IB
         }
       }
       static async FetchAsync(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const zB = jB.method ?? "GET";
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZB = IB.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: nB,
-            headers: dB
-          } = QB._CollectCustomizations(QB._CleanUrl(BB), jB.headers ?? {});
-          return await fetch(nB, {
-            method: zB,
-            headers: dB,
-            body: jB.body ?? void 0
+            url: JB,
+            headers: oB
+          } = TB._CollectCustomizations(TB._CleanUrl(BB), IB.headers ?? {});
+          return await fetch(JB, {
+            method: ZB,
+            headers: oB,
+            body: IB.body ?? void 0
           })
         }
-        return await new Promise(((nB, dB) => {
-          const IB = new QB;
-          IB.responseType = "arraybuffer", IB.addEventListener("readystatechange", (() => {
-            if (4 === IB.readyState)
-              if (IB.status >= 200 && IB.status < 300) {
+        return await new Promise(((JB, oB) => {
+          const GB = new TB;
+          GB.responseType = "arraybuffer", GB.addEventListener("readystatechange", (() => {
+            if (4 === GB.readyState)
+              if (GB.status >= 200 && GB.status < 300) {
                 const BB = "undefined" !== typeof Headers ? new Headers : void 0,
-                  jB = IB.getResponseHeader("Content-Type");
-                jB && BB && BB.set("Content-Type", jB), "undefined" !== typeof Response ? nB(new Response(IB.response, {
-                  status: IB.status,
-                  statusText: IB.statusText,
+                  IB = GB.getResponseHeader("Content-Type");
+                IB && BB && BB.set("Content-Type", IB), "undefined" !== typeof Response ? JB(new Response(GB.response, {
+                  status: GB.status,
+                  statusText: GB.statusText,
                   headers: BB
-                })) : nB({
+                })) : JB({
                   ok: !0,
-                  status: IB.status,
-                  statusText: IB.statusText,
+                  status: GB.status,
+                  statusText: GB.statusText,
                   headers: {
-                    get: BB => IB.getResponseHeader(BB)
+                    get: BB => GB.getResponseHeader(BB)
                   },
-                  arrayBuffer: async () => await Promise.resolve(IB.response)
+                  arrayBuffer: async () => await Promise.resolve(GB.response)
                 })
-              } else dB(new Error(`HTTP ${IB.status} loading '${IB.requestURL}': ${IB.statusText}`))
-          })), IB.open(zB, BB, jB.headers), IB.send(jB.body ?? null)
+              } else oB(new Error(`HTTP ${GB.status} loading '${GB.requestURL}': ${GB.statusText}`))
+          })), GB.open(ZB, BB, IB.headers), GB.send(IB.body ?? null)
         }))
       }
       get requestURL() {
@@ -1478,11 +1478,11 @@ export const modules = {
       set timeout(BB) {
         this._xhr.timeout = BB
       }
-      addEventListener(BB, jB, zB) {
-        this._xhr.addEventListener(BB, jB, zB)
+      addEventListener(BB, IB, ZB) {
+        this._xhr.addEventListener(BB, IB, ZB)
       }
-      removeEventListener(BB, jB, zB) {
-        this._xhr.removeEventListener(BB, jB, zB)
+      removeEventListener(BB, IB, ZB) {
+        this._xhr.removeEventListener(BB, IB, ZB)
       }
       abort() {
         this._xhr.abort()
@@ -1490,22 +1490,22 @@ export const modules = {
       send(BB) {
         this._xhr.send(BB)
       }
-      open(BB, jB, zB) {
+      open(BB, IB, ZB) {
         const {
-          url: nB,
-          headers: dB
-        } = QB._CollectCustomizations(jB, zB);
-        this._requestURL = QB._CleanUrl(nB), this._xhr.open(BB, this._requestURL, !0);
-        for (const QB in dB) this._xhr.setRequestHeader(QB, dB[QB])
+          url: JB,
+          headers: oB
+        } = TB._CollectCustomizations(IB, ZB);
+        this._requestURL = TB._CleanUrl(JB), this._xhr.open(BB, this._requestURL, !0);
+        for (const TB in oB) this._xhr.setRequestHeader(TB, oB[TB])
       }
-      setRequestHeader(BB, jB) {
-        this._xhr.setRequestHeader(BB, jB)
+      setRequestHeader(BB, IB) {
+        this._xhr.setRequestHeader(BB, IB)
       }
       getResponseHeader(BB) {
         return this._xhr.getResponseHeader(BB)
       }
     }
-    QB.CustomRequestHeaders = {}, QB.CustomRequestModifiers = new Array, QB.SkipRequestModificationForBabylonCDN = !0
+    TB.CustomRequestHeaders = {}, TB.CustomRequestModifiers = new Array, TB.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);

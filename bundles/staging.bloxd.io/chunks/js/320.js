@@ -1,579 +1,579 @@
 export const id = 320;
 export const ids = [320];
 export const modules = {
-  41950: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      ReadExrDataAsync: () => pj,
-      _ExrTextureLoader: () => aj
+  41891: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      ReadExrDataAsync: () => hI,
+      _ExrTextureLoader: () => nI
     });
-    var QB = zB(38783),
-      nB = zB(37208),
-      dB = zB(40130);
-    const IB = 4,
-      NB = 4,
-      uB = 1,
-      UB = 2,
-      aB = 8,
-      pB = 65536,
-      rB = pB >> 3,
-      sB = 14,
-      JB = 65537,
-      mB = 1 << sB,
-      yB = mB - 1,
-      kB = 59,
-      GB = 63,
-      LB = 2 + GB - kB;
-    var gB, tB;
+    var TB = ZB(38718),
+      JB = ZB(37158),
+      oB = ZB(40134);
+    const GB = 4,
+      vB = 4,
+      kB = 1,
+      cB = 2,
+      nB = 8,
+      hB = 65536,
+      zB = hB >> 3,
+      FB = 14,
+      NB = 65537,
+      gB = 1 << FB,
+      qB = gB - 1,
+      yB = 59,
+      UB = 63,
+      WB = 2 + UB - yB;
+    var dB, CB;
 
-    function SB(BB, jB) {
-      const zB = new Uint8Array(BB);
-      let QB = 0;
-      for (; 0 != zB[jB.value + QB];) QB += 1;
-      const nB = (new TextDecoder).decode(zB.slice(jB.value, jB.value + QB));
-      return jB.value = jB.value + QB + 1, nB
+    function QB(BB, IB) {
+      const ZB = new Uint8Array(BB);
+      let TB = 0;
+      for (; 0 != ZB[IB.value + TB];) TB += 1;
+      const JB = (new TextDecoder).decode(ZB.slice(IB.value, IB.value + TB));
+      return IB.value = IB.value + TB + 1, JB
     }
 
-    function MB(BB, jB) {
-      const zB = BB.getInt32(jB.value, !0);
-      return jB.value += IB, zB
+    function sB(BB, IB) {
+      const ZB = BB.getInt32(IB.value, !0);
+      return IB.value += GB, ZB
     }
 
-    function EB(BB, jB) {
-      const zB = BB.getUint32(jB.value, !0);
-      return jB.value += IB, zB
+    function wB(BB, IB) {
+      const ZB = BB.getUint32(IB.value, !0);
+      return IB.value += GB, ZB
     }
 
-    function iB(BB, jB) {
-      const zB = BB.getUint8(jB.value);
-      return jB.value += uB, zB
+    function OB(BB, IB) {
+      const ZB = BB.getUint8(IB.value);
+      return IB.value += kB, ZB
     }
 
-    function qB(BB, jB) {
-      const zB = BB.getUint16(jB.value, !0);
-      return jB.value += UB, zB
+    function YB(BB, IB) {
+      const ZB = BB.getUint16(IB.value, !0);
+      return IB.value += cB, ZB
     }
 
-    function fB(BB, jB) {
-      const zB = BB[jB.value];
-      return jB.value += uB, zB
+    function iB(BB, IB) {
+      const ZB = BB[IB.value];
+      return IB.value += kB, ZB
     }
 
-    function oB(BB, jB) {
-      let zB;
-      return zB = "getBigInt64" in DataView.prototype ? Number(BB.getBigInt64(jB.value, !0)) : BB.getUint32(jB.value + 4, !0) + Number(BB.getUint32(jB.value, !0) << 32), jB.value += aB, zB
+    function pB(BB, IB) {
+      let ZB;
+      return ZB = "getBigInt64" in DataView.prototype ? Number(BB.getBigInt64(IB.value, !0)) : BB.getUint32(IB.value + 4, !0) + Number(BB.getUint32(IB.value, !0) << 32), IB.value += nB, ZB
     }
 
-    function HB(BB, jB) {
-      const zB = BB.getFloat32(jB.value, !0);
-      return jB.value += NB, zB
+    function aB(BB, IB) {
+      const ZB = BB.getFloat32(IB.value, !0);
+      return IB.value += vB, ZB
     }
 
-    function DB(BB, jB) {
-      return (0, dB.c)(qB(BB, jB))
+    function HB(BB, IB) {
+      return (0, oB.c)(YB(BB, IB))
     }
 
-    function FB(BB, jB) {
-      return (0, dB.f)((0, nB.Clamp)(HB(BB, jB), -dB.e, dB.e))
+    function MB(BB, IB) {
+      return (0, oB.h)((0, JB.Clamp)(aB(BB, IB), -oB.e, oB.e))
     }
 
-    function YB(BB, jB, zB, QB) {
-      switch (zB) {
+    function jB(BB, IB, ZB, TB) {
+      switch (ZB) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(BB, jB, zB) {
-            const QB = (new TextDecoder).decode(new Uint8Array(BB).slice(jB.value, jB.value + zB));
-            return jB.value = jB.value + zB, QB
-          }(BB.buffer, jB, QB);
+          return function(BB, IB, ZB) {
+            const TB = (new TextDecoder).decode(new Uint8Array(BB).slice(IB.value, IB.value + ZB));
+            return IB.value = IB.value + ZB, TB
+          }(BB.buffer, IB, TB);
         case "chlist":
-          return function(BB, jB, zB) {
-            const QB = jB.value,
-              nB = [];
-            for (; jB.value < QB + zB - 1;) {
-              const zB = SB(BB.buffer, jB),
-                QB = MB(BB, jB),
-                dB = iB(BB, jB);
-              jB.value += 3;
-              const IB = MB(BB, jB),
-                NB = MB(BB, jB);
-              nB.push({
-                name: zB,
-                pixelType: QB,
-                pLinear: dB,
-                xSampling: IB,
-                ySampling: NB
+          return function(BB, IB, ZB) {
+            const TB = IB.value,
+              JB = [];
+            for (; IB.value < TB + ZB - 1;) {
+              const ZB = QB(BB.buffer, IB),
+                TB = sB(BB, IB),
+                oB = OB(BB, IB);
+              IB.value += 3;
+              const GB = sB(BB, IB),
+                vB = sB(BB, IB);
+              JB.push({
+                name: ZB,
+                pixelType: TB,
+                pLinear: oB,
+                xSampling: GB,
+                ySampling: vB
               })
             }
-            return jB.value += 1, nB
-          }(BB, jB, QB);
+            return IB.value += 1, JB
+          }(BB, IB, TB);
         case "chromaticities":
-          return function(BB, jB) {
+          return function(BB, IB) {
             return {
-              redX: HB(BB, jB),
-              redY: HB(BB, jB),
-              greenX: HB(BB, jB),
-              greenY: HB(BB, jB),
-              blueX: HB(BB, jB),
-              blueY: HB(BB, jB),
-              whiteX: HB(BB, jB),
-              whiteY: HB(BB, jB)
+              redX: aB(BB, IB),
+              redY: aB(BB, IB),
+              greenX: aB(BB, IB),
+              greenY: aB(BB, IB),
+              blueX: aB(BB, IB),
+              blueY: aB(BB, IB),
+              whiteX: aB(BB, IB),
+              whiteY: aB(BB, IB)
             }
-          }(BB, jB);
+          }(BB, IB);
         case "compression":
-          return function(BB, jB) {
-            return iB(BB, jB)
-          }(BB, jB);
+          return function(BB, IB) {
+            return OB(BB, IB)
+          }(BB, IB);
         case "box2i":
-          return function(BB, jB) {
+          return function(BB, IB) {
             return {
-              xMin: MB(BB, jB),
-              yMin: MB(BB, jB),
-              xMax: MB(BB, jB),
-              yMax: MB(BB, jB)
+              xMin: sB(BB, IB),
+              yMin: sB(BB, IB),
+              xMax: sB(BB, IB),
+              yMax: sB(BB, IB)
             }
-          }(BB, jB);
+          }(BB, IB);
         case "lineOrder":
-          return function(BB, jB) {
-            const zB = iB(BB, jB);
-            return tB[zB]
-          }(BB, jB);
+          return function(BB, IB) {
+            const ZB = OB(BB, IB);
+            return CB[ZB]
+          }(BB, IB);
         case "float":
-          return HB(BB, jB);
+          return aB(BB, IB);
         case "v2f":
-          return function(BB, jB) {
-            return [HB(BB, jB), HB(BB, jB)]
-          }(BB, jB);
+          return function(BB, IB) {
+            return [aB(BB, IB), aB(BB, IB)]
+          }(BB, IB);
         case "v3f":
-          return function(BB, jB) {
-            return [HB(BB, jB), HB(BB, jB), HB(BB, jB)]
-          }(BB, jB);
+          return function(BB, IB) {
+            return [aB(BB, IB), aB(BB, IB), aB(BB, IB)]
+          }(BB, IB);
         case "int":
-          return MB(BB, jB);
+          return sB(BB, IB);
         case "rational":
-          return function(BB, jB) {
-            return [MB(BB, jB), EB(BB, jB)]
-          }(BB, jB);
+          return function(BB, IB) {
+            return [sB(BB, IB), wB(BB, IB)]
+          }(BB, IB);
         case "timecode":
-          return function(BB, jB) {
-            return [EB(BB, jB), EB(BB, jB)]
-          }(BB, jB);
+          return function(BB, IB) {
+            return [wB(BB, IB), wB(BB, IB)]
+          }(BB, IB);
         case "preview":
-          return jB.value += QB, "skipped";
+          return IB.value += TB, "skipped";
         default:
-          return void(jB.value += QB)
+          return void(IB.value += TB)
       }
     }
 
-    function VB(BB) {
-      for (let jB = 1; jB < BB.length; jB++) {
-        const zB = BB[jB - 1] + BB[jB] - 128;
-        BB[jB] = zB
+    function PB(BB) {
+      for (let IB = 1; IB < BB.length; IB++) {
+        const ZB = BB[IB - 1] + BB[IB] - 128;
+        BB[IB] = ZB
       }
     }
 
-    function hB(BB, jB) {
-      let zB = 0,
-        QB = Math.floor((BB.length + 1) / 2),
-        nB = 0;
-      const dB = BB.length - 1;
-      for (; !(nB > dB) && (jB[nB++] = BB[zB++], !(nB > dB));) jB[nB++] = BB[QB++]
+    function RB(BB, IB) {
+      let ZB = 0,
+        TB = Math.floor((BB.length + 1) / 2),
+        JB = 0;
+      const oB = BB.length - 1;
+      for (; !(JB > oB) && (IB[JB++] = BB[ZB++], !(JB > oB));) IB[JB++] = BB[TB++]
     }! function(BB) {
       BB[BB.NO_COMPRESSION = 0] = "NO_COMPRESSION", BB[BB.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", BB[BB.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", BB[BB.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", BB[BB.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", BB[BB.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(gB || (gB = {})),
+    }(dB || (dB = {})),
     function(BB) {
       BB[BB.INCREASING_Y = 0] = "INCREASING_Y", BB[BB.DECREASING_Y = 1] = "DECREASING_Y"
-    }(tB || (tB = {}));
-    const XB = 20000630;
+    }(CB || (CB = {}));
+    const rB = 20000630;
 
-    function ZB(BB, jB) {
-      if (BB.getUint32(0, !0) != XB) throw new Error("Incorrect OpenEXR format");
-      const zB = BB.getUint8(4),
-        nB = BB.getUint8(5),
-        dB = {
-          singleTile: !!(2 & nB),
-          longName: !!(4 & nB),
-          deepFormat: !!(8 & nB),
-          multiPart: !!(16 & nB)
+    function mB(BB, IB) {
+      if (BB.getUint32(0, !0) != rB) throw new Error("Incorrect OpenEXR format");
+      const ZB = BB.getUint8(4),
+        JB = BB.getUint8(5),
+        oB = {
+          singleTile: !!(2 & JB),
+          longName: !!(4 & JB),
+          deepFormat: !!(8 & JB),
+          multiPart: !!(16 & JB)
         };
-      jB.value = 8;
-      const IB = {};
-      let NB = !0;
-      for (; NB;) {
-        const zB = SB(BB.buffer, jB);
-        if (zB) {
-          const nB = SB(BB.buffer, jB),
-            dB = YB(BB, jB, nB, EB(BB, jB));
-          void 0 === dB ? QB.c.Warn(`Unknown header attribute type ${nB}'.`) : IB[zB] = dB
-        } else NB = !1
+      IB.value = 8;
+      const GB = {};
+      let vB = !0;
+      for (; vB;) {
+        const ZB = QB(BB.buffer, IB);
+        if (ZB) {
+          const JB = QB(BB.buffer, IB),
+            oB = jB(BB, IB, JB, wB(BB, IB));
+          void 0 === oB ? TB.d.Warn(`Unknown header attribute type ${JB}'.`) : GB[ZB] = oB
+        } else vB = !1
       }
-      if (0 != (-5 & nB)) throw new Error("Unsupported file format");
+      if (0 != (-5 & JB)) throw new Error("Unsupported file format");
       return {
-        version: zB,
-        spec: dB,
-        ...IB
-      }
-    }
-    const AB = 32768,
-      TB = 65535;
-
-    function PB(BB, jB, zB, QB, nB) {
-      for (; zB < BB;) jB = jB << 8 | fB(QB, nB), zB += 8;
-      return {
-        l: jB >> (zB -= BB) & (1 << BB) - 1,
-        c: jB,
-        lc: zB
+        version: ZB,
+        spec: oB,
+        ...GB
       }
     }
+    const XB = 32768,
+      LB = 65535;
 
-    function WB(BB, jB, zB, QB) {
+    function eB(BB, IB, ZB, TB, JB) {
+      for (; ZB < BB;) IB = IB << 8 | iB(TB, JB), ZB += 8;
       return {
-        c: BB = BB << 8 | fB(zB, QB),
-        lc: jB += 8
+        l: IB >> (ZB -= BB) & (1 << BB) - 1,
+        c: IB,
+        lc: ZB
       }
     }
 
-    function eB(BB, jB, zB, QB, nB, dB, IB, NB, uB) {
-      if (BB == jB) {
-        if (QB < 8) {
-          const BB = WB(zB, QB, nB, dB);
-          zB = BB.c, QB = BB.lc
+    function uB(BB, IB, ZB, TB) {
+      return {
+        c: BB = BB << 8 | iB(ZB, TB),
+        lc: IB += 8
+      }
+    }
+
+    function fB(BB, IB, ZB, TB, JB, oB, GB, vB, kB) {
+      if (BB == IB) {
+        if (TB < 8) {
+          const BB = uB(ZB, TB, JB, oB);
+          ZB = BB.c, TB = BB.lc
         }
-        let BB = zB >> (QB -= 8);
-        if (BB = new Uint8Array([BB])[0], NB.value + BB > uB) return null;
-        const jB = IB[NB.value - 1];
-        for (; BB-- > 0;) IB[NB.value++] = jB
+        let BB = ZB >> (TB -= 8);
+        if (BB = new Uint8Array([BB])[0], vB.value + BB > kB) return null;
+        const IB = GB[vB.value - 1];
+        for (; BB-- > 0;) GB[vB.value++] = IB
       } else {
-        if (!(NB.value < uB)) return null;
-        IB[NB.value++] = BB
+        if (!(vB.value < kB)) return null;
+        GB[vB.value++] = BB
       }
       return {
-        c: zB,
-        lc: QB
+        c: ZB,
+        lc: TB
       }
     }
     const lB = new Array(59);
 
-    function wB(BB, jB, zB, QB, nB, dB) {
-      const IB = jB;
-      let NB = 0,
-        uB = 0;
-      for (; QB <= nB; QB++) {
-        if (IB.value - jB.value > zB) return;
-        let UB = PB(6, NB, uB, BB, IB);
-        const aB = UB.l;
-        if (NB = UB.c, uB = UB.lc, dB[QB] = aB, aB == GB) {
-          if (IB.value - jB.value > zB) throw new Error("Error in HufUnpackEncTable");
-          UB = PB(8, NB, uB, BB, IB);
-          let aB = UB.l + LB;
-          if (NB = UB.c, uB = UB.lc, QB + aB > nB + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; aB--;) dB[QB++] = 0;
-          QB--
-        } else if (aB >= kB) {
-          let BB = aB - kB + 2;
-          if (QB + BB > nB + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; BB--;) dB[QB++] = 0;
-          QB--
+    function AB(BB, IB, ZB, TB, JB, oB) {
+      const GB = IB;
+      let vB = 0,
+        kB = 0;
+      for (; TB <= JB; TB++) {
+        if (GB.value - IB.value > ZB) return;
+        let cB = eB(6, vB, kB, BB, GB);
+        const nB = cB.l;
+        if (vB = cB.c, kB = cB.lc, oB[TB] = nB, nB == UB) {
+          if (GB.value - IB.value > ZB) throw new Error("Error in HufUnpackEncTable");
+          cB = eB(8, vB, kB, BB, GB);
+          let nB = cB.l + WB;
+          if (vB = cB.c, kB = cB.lc, TB + nB > JB + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; nB--;) oB[TB++] = 0;
+          TB--
+        } else if (nB >= yB) {
+          let BB = nB - yB + 2;
+          if (TB + BB > JB + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; BB--;) oB[TB++] = 0;
+          TB--
         }
       }! function(BB) {
-        for (let zB = 0; zB <= 58; ++zB) lB[zB] = 0;
-        for (let zB = 0; zB < JB; ++zB) lB[BB[zB]] += 1;
-        let jB = 0;
-        for (let zB = 58; zB > 0; --zB) {
-          const BB = jB + lB[zB] >> 1;
-          lB[zB] = jB, jB = BB
+        for (let ZB = 0; ZB <= 58; ++ZB) lB[ZB] = 0;
+        for (let ZB = 0; ZB < NB; ++ZB) lB[BB[ZB]] += 1;
+        let IB = 0;
+        for (let ZB = 58; ZB > 0; --ZB) {
+          const BB = IB + lB[ZB] >> 1;
+          lB[ZB] = IB, IB = BB
         }
-        for (let zB = 0; zB < JB; ++zB) {
-          const jB = BB[zB];
-          jB > 0 && (BB[zB] = jB | lB[jB]++ << 6)
+        for (let ZB = 0; ZB < NB; ++ZB) {
+          const IB = BB[ZB];
+          IB > 0 && (BB[ZB] = IB | lB[IB]++ << 6)
         }
-      }(dB)
+      }(oB)
     }
 
-    function xB(BB) {
+    function tB(BB) {
       return 63 & BB
     }
 
-    function KB(BB) {
+    function bB(BB) {
       return BB >> 6
     }
 
-    function CB(BB, jB, zB, QB, nB, dB) {
-      const IB = zB.value,
-        NB = EB(jB, zB),
-        uB = EB(jB, zB);
-      zB.value += 4;
-      const UB = EB(jB, zB);
-      if (zB.value += 4, NB < 0 || NB >= JB || uB < 0 || uB >= JB) throw new Error("Wrong HUF_ENCSIZE");
-      const aB = new Array(JB),
-        pB = new Array(mB);
+    function xB(BB, IB, ZB, TB, JB, oB) {
+      const GB = ZB.value,
+        vB = wB(IB, ZB),
+        kB = wB(IB, ZB);
+      ZB.value += 4;
+      const cB = wB(IB, ZB);
+      if (ZB.value += 4, vB < 0 || vB >= NB || kB < 0 || kB >= NB) throw new Error("Wrong HUF_ENCSIZE");
+      const nB = new Array(NB),
+        hB = new Array(gB);
       ! function(BB) {
-        for (let jB = 0; jB < mB; jB++) BB[jB] = {}, BB[jB].len = 0, BB[jB].lit = 0, BB[jB].p = null
-      }(pB);
-      if (wB(BB, zB, QB - (zB.value - IB), NB, uB, aB), UB > 8 * (QB - (zB.value - IB))) throw new Error("Wrong hufUncompress");
-      ! function(BB, jB, zB, QB) {
-        for (; jB <= zB; jB++) {
-          const zB = KB(BB[jB]),
-            nB = xB(BB[jB]);
-          if (zB >> nB) throw new Error("Invalid table entry");
-          if (nB > sB) {
-            const BB = QB[zB >> nB - sB];
+        for (let IB = 0; IB < gB; IB++) BB[IB] = {}, BB[IB].len = 0, BB[IB].lit = 0, BB[IB].p = null
+      }(hB);
+      if (AB(BB, ZB, TB - (ZB.value - GB), vB, kB, nB), cB > 8 * (TB - (ZB.value - GB))) throw new Error("Wrong hufUncompress");
+      ! function(BB, IB, ZB, TB) {
+        for (; IB <= ZB; IB++) {
+          const ZB = bB(BB[IB]),
+            JB = tB(BB[IB]);
+          if (ZB >> JB) throw new Error("Invalid table entry");
+          if (JB > FB) {
+            const BB = TB[ZB >> JB - FB];
             if (BB.len) throw new Error("Invalid table entry");
             if (BB.lit++, BB.p) {
-              const jB = BB.p;
+              const IB = BB.p;
               BB.p = new Array(BB.lit);
-              for (let zB = 0; zB < BB.lit - 1; ++zB) BB.p[zB] = jB[zB]
+              for (let ZB = 0; ZB < BB.lit - 1; ++ZB) BB.p[ZB] = IB[ZB]
             } else BB.p = new Array(1);
-            BB.p[BB.lit - 1] = jB
-          } else if (nB) {
+            BB.p[BB.lit - 1] = IB
+          } else if (JB) {
             let BB = 0;
-            for (let dB = 1 << sB - nB; dB > 0; dB--) {
-              const dB = QB[(zB << sB - nB) + BB];
-              if (dB.len || dB.p) throw new Error("Invalid table entry");
-              dB.len = nB, dB.lit = jB, BB++
+            for (let oB = 1 << FB - JB; oB > 0; oB--) {
+              const oB = TB[(ZB << FB - JB) + BB];
+              if (oB.len || oB.p) throw new Error("Invalid table entry");
+              oB.len = JB, oB.lit = IB, BB++
             }
           }
         }
-      }(aB, NB, uB, pB),
-      function(BB, jB, zB, QB, nB, dB, IB, NB, uB) {
-        let UB = 0,
-          aB = 0;
-        const pB = IB,
-          rB = Math.trunc(QB.value + (nB + 7) / 8);
-        for (; QB.value < rB;) {
-          let nB = WB(UB, aB, zB, QB);
-          for (UB = nB.c, aB = nB.lc; aB >= sB;) {
-            const IB = jB[UB >> aB - sB & yB];
-            if (IB.len) {
-              aB -= IB.len;
-              const BB = eB(IB.lit, dB, UB, aB, zB, QB, NB, uB, pB);
-              BB && (UB = BB.c, aB = BB.lc)
+      }(nB, vB, kB, hB),
+      function(BB, IB, ZB, TB, JB, oB, GB, vB, kB) {
+        let cB = 0,
+          nB = 0;
+        const hB = GB,
+          zB = Math.trunc(TB.value + (JB + 7) / 8);
+        for (; TB.value < zB;) {
+          let JB = uB(cB, nB, ZB, TB);
+          for (cB = JB.c, nB = JB.lc; nB >= FB;) {
+            const GB = IB[cB >> nB - FB & qB];
+            if (GB.len) {
+              nB -= GB.len;
+              const BB = fB(GB.lit, oB, cB, nB, ZB, TB, vB, kB, hB);
+              BB && (cB = BB.c, nB = BB.lc)
             } else {
-              if (!IB.p) throw new Error("hufDecode issues");
-              let jB;
-              for (jB = 0; jB < IB.lit; jB++) {
-                const sB = xB(BB[IB.p[jB]]);
-                for (; aB < sB && QB.value < rB;) nB = WB(UB, aB, zB, QB), UB = nB.c, aB = nB.lc;
-                if (aB >= sB && KB(BB[IB.p[jB]]) == (UB >> aB - sB & (1 << sB) - 1)) {
-                  aB -= sB;
-                  const BB = eB(IB.p[jB], dB, UB, aB, zB, QB, NB, uB, pB);
-                  BB && (UB = BB.c, aB = BB.lc);
+              if (!GB.p) throw new Error("hufDecode issues");
+              let IB;
+              for (IB = 0; IB < GB.lit; IB++) {
+                const FB = tB(BB[GB.p[IB]]);
+                for (; nB < FB && TB.value < zB;) JB = uB(cB, nB, ZB, TB), cB = JB.c, nB = JB.lc;
+                if (nB >= FB && bB(BB[GB.p[IB]]) == (cB >> nB - FB & (1 << FB) - 1)) {
+                  nB -= FB;
+                  const BB = fB(GB.p[IB], oB, cB, nB, ZB, TB, vB, kB, hB);
+                  BB && (cB = BB.c, nB = BB.lc);
                   break
                 }
               }
-              if (jB == IB.lit) throw new Error("HufDecode issues")
+              if (IB == GB.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const JB = 8 - nB & 7;
-        for (UB >>= JB, aB -= JB; aB > 0;) {
-          const BB = jB[UB << sB - aB & yB];
+        const NB = 8 - JB & 7;
+        for (cB >>= NB, nB -= NB; nB > 0;) {
+          const BB = IB[cB << FB - nB & qB];
           if (!BB.len) throw new Error("HufDecode issues");
           {
-            aB -= BB.len;
-            const jB = eB(BB.lit, dB, UB, aB, zB, QB, NB, uB, pB);
-            jB && (UB = jB.c, aB = jB.lc)
+            nB -= BB.len;
+            const IB = fB(BB.lit, oB, cB, nB, ZB, TB, vB, kB, hB);
+            IB && (cB = IB.c, nB = IB.lc)
           }
         }
-      }(aB, pB, BB, zB, UB, uB, dB, nB, {
+      }(nB, hB, BB, ZB, cB, kB, oB, JB, {
         value: 0
       })
     }
 
-    function cB(BB) {
+    function EB(BB) {
       return 65535 & BB
     }
 
-    function bB(BB) {
-      const jB = cB(BB);
-      return jB > 32767 ? jB - 65536 : jB
+    function DB(BB) {
+      const IB = EB(BB);
+      return IB > 32767 ? IB - 65536 : IB
     }
 
-    function vB(BB, jB) {
-      const zB = bB(BB),
-        QB = bB(jB),
-        nB = zB + (1 & QB) + (QB >> 1);
+    function KB(BB, IB) {
+      const ZB = DB(BB),
+        TB = DB(IB),
+        JB = ZB + (1 & TB) + (TB >> 1);
       return {
-        a: nB,
-        b: nB - QB
+        a: JB,
+        b: JB - TB
       }
     }
 
-    function RB(BB, jB) {
-      const zB = cB(BB),
-        QB = cB(jB),
-        nB = zB - (QB >> 1) & TB;
+    function VB(BB, IB) {
+      const ZB = EB(BB),
+        TB = EB(IB),
+        JB = ZB - (TB >> 1) & LB;
       return {
-        a: QB + nB - AB & TB,
-        b: nB
+        a: TB + JB - XB & LB,
+        b: JB
       }
     }
 
-    function OB(BB, jB, zB, QB, nB, dB, IB) {
-      const NB = IB < 16384,
-        uB = zB > nB ? nB : zB;
-      let UB, aB, pB = 1;
-      for (; pB <= uB;) pB <<= 1;
-      for (pB >>= 1, UB = pB, pB >>= 1; pB >= 1;) {
-        aB = 0;
-        const IB = aB + dB * (nB - UB),
-          uB = dB * pB,
-          rB = dB * UB,
-          sB = QB * pB,
-          JB = QB * UB;
-        let mB, yB, kB, GB;
-        for (; aB <= IB; aB += rB) {
-          let nB = aB;
-          const dB = aB + QB * (zB - UB);
-          for (; nB <= dB; nB += JB) {
-            const zB = nB + sB,
-              QB = nB + uB,
-              dB = QB + sB;
-            if (NB) {
-              let IB = vB(BB[nB + jB], BB[QB + jB]);
-              mB = IB.a, kB = IB.b, IB = vB(BB[zB + jB], BB[dB + jB]), yB = IB.a, GB = IB.b, IB = vB(mB, yB), BB[nB + jB] = IB.a, BB[zB + jB] = IB.b, IB = vB(kB, GB), BB[QB + jB] = IB.a, BB[dB + jB] = IB.b
+    function SB(BB, IB, ZB, TB, JB, oB, GB) {
+      const vB = GB < 16384,
+        kB = ZB > JB ? JB : ZB;
+      let cB, nB, hB = 1;
+      for (; hB <= kB;) hB <<= 1;
+      for (hB >>= 1, cB = hB, hB >>= 1; hB >= 1;) {
+        nB = 0;
+        const GB = nB + oB * (JB - cB),
+          kB = oB * hB,
+          zB = oB * cB,
+          FB = TB * hB,
+          NB = TB * cB;
+        let gB, qB, yB, UB;
+        for (; nB <= GB; nB += zB) {
+          let JB = nB;
+          const oB = nB + TB * (ZB - cB);
+          for (; JB <= oB; JB += NB) {
+            const ZB = JB + FB,
+              TB = JB + kB,
+              oB = TB + FB;
+            if (vB) {
+              let GB = KB(BB[JB + IB], BB[TB + IB]);
+              gB = GB.a, yB = GB.b, GB = KB(BB[ZB + IB], BB[oB + IB]), qB = GB.a, UB = GB.b, GB = KB(gB, qB), BB[JB + IB] = GB.a, BB[ZB + IB] = GB.b, GB = KB(yB, UB), BB[TB + IB] = GB.a, BB[oB + IB] = GB.b
             } else {
-              let IB = RB(BB[nB + jB], BB[QB + jB]);
-              mB = IB.a, kB = IB.b, IB = RB(BB[zB + jB], BB[dB + jB]), yB = IB.a, GB = IB.b, IB = RB(mB, yB), BB[nB + jB] = IB.a, BB[zB + jB] = IB.b, IB = RB(kB, GB), BB[QB + jB] = IB.a, BB[dB + jB] = IB.b
+              let GB = VB(BB[JB + IB], BB[TB + IB]);
+              gB = GB.a, yB = GB.b, GB = VB(BB[ZB + IB], BB[oB + IB]), qB = GB.a, UB = GB.b, GB = VB(gB, qB), BB[JB + IB] = GB.a, BB[ZB + IB] = GB.b, GB = VB(yB, UB), BB[TB + IB] = GB.a, BB[oB + IB] = GB.b
             }
           }
-          if (zB & pB) {
-            const zB = nB + uB;
-            let QB;
-            QB = NB ? vB(BB[nB + jB], BB[zB + jB]) : RB(BB[nB + jB], BB[zB + jB]), mB = QB.a, BB[zB + jB] = QB.b, BB[nB + jB] = mB
+          if (ZB & hB) {
+            const ZB = JB + kB;
+            let TB;
+            TB = vB ? KB(BB[JB + IB], BB[ZB + IB]) : VB(BB[JB + IB], BB[ZB + IB]), gB = TB.a, BB[ZB + IB] = TB.b, BB[JB + IB] = gB
           }
         }
-        if (nB & pB) {
-          let nB = aB;
-          const dB = aB + QB * (zB - UB);
-          for (; nB <= dB; nB += JB) {
-            const zB = nB + sB;
-            let QB;
-            QB = NB ? vB(BB[nB + jB], BB[zB + jB]) : RB(BB[nB + jB], BB[zB + jB]), mB = QB.a, BB[zB + jB] = QB.b, BB[nB + jB] = mB
+        if (JB & hB) {
+          let JB = nB;
+          const oB = nB + TB * (ZB - cB);
+          for (; JB <= oB; JB += NB) {
+            const ZB = JB + FB;
+            let TB;
+            TB = vB ? KB(BB[JB + IB], BB[ZB + IB]) : VB(BB[JB + IB], BB[ZB + IB]), gB = TB.a, BB[ZB + IB] = TB.b, BB[JB + IB] = gB
           }
         }
-        UB = pB, pB >>= 1
+        cB = hB, hB >>= 1
       }
-      return aB
+      return nB
     }
 
-    function Bj(BB) {
+    function BI(BB) {
       return new DataView(BB.array.buffer, BB.offset.value, BB.size)
     }
 
-    function jj(BB) {
-      const jB = BB.viewer.buffer.slice(BB.offset.value, BB.offset.value + BB.size),
-        zB = new Uint8Array(function(BB) {
-          let jB = BB.byteLength;
-          const zB = [];
-          let QB = 0;
-          const nB = new DataView(BB);
-          for (; jB > 0;) {
-            const BB = nB.getInt8(QB++);
+    function II(BB) {
+      const IB = BB.viewer.buffer.slice(BB.offset.value, BB.offset.value + BB.size),
+        ZB = new Uint8Array(function(BB) {
+          let IB = BB.byteLength;
+          const ZB = [];
+          let TB = 0;
+          const JB = new DataView(BB);
+          for (; IB > 0;) {
+            const BB = JB.getInt8(TB++);
             if (BB < 0) {
-              const dB = -BB;
-              jB -= dB + 1;
-              for (let BB = 0; BB < dB; BB++) zB.push(nB.getUint8(QB++))
+              const oB = -BB;
+              IB -= oB + 1;
+              for (let BB = 0; BB < oB; BB++) ZB.push(JB.getUint8(TB++))
             } else {
-              const dB = BB;
-              jB -= 2;
-              const IB = nB.getUint8(QB++);
-              for (let BB = 0; BB < dB + 1; BB++) zB.push(IB)
+              const oB = BB;
+              IB -= 2;
+              const GB = JB.getUint8(TB++);
+              for (let BB = 0; BB < oB + 1; BB++) ZB.push(GB)
             }
           }
-          return zB
-        }(jB)),
-        QB = new Uint8Array(zB.length);
-      return VB(zB), hB(zB, QB), new DataView(QB.buffer)
+          return ZB
+        }(IB)),
+        TB = new Uint8Array(ZB.length);
+      return PB(ZB), RB(ZB, TB), new DataView(TB.buffer)
     }
 
-    function zj(BB) {
-      const jB = BB.array.slice(BB.offset.value, BB.offset.value + BB.size),
-        zB = fflate.unzlibSync(jB),
-        QB = new Uint8Array(zB.length);
-      return VB(zB), hB(zB, QB), new DataView(QB.buffer)
+    function ZI(BB) {
+      const IB = BB.array.slice(BB.offset.value, BB.offset.value + BB.size),
+        ZB = fflate.unzlibSync(IB),
+        TB = new Uint8Array(ZB.length);
+      return PB(ZB), RB(ZB, TB), new DataView(TB.buffer)
     }
 
-    function Qj(BB) {
-      const jB = BB.array.slice(BB.offset.value, BB.offset.value + BB.size),
-        zB = fflate.unzlibSync(jB),
-        QB = BB.lines * BB.channels * BB.width,
-        nB = 1 == BB.type ? new Uint16Array(QB) : new Uint32Array(QB);
-      let dB = 0,
-        IB = 0;
-      const NB = new Array(4);
-      for (let uB = 0; uB < BB.lines; uB++)
-        for (let jB = 0; jB < BB.channels; jB++) {
-          let jB = 0;
+    function TI(BB) {
+      const IB = BB.array.slice(BB.offset.value, BB.offset.value + BB.size),
+        ZB = fflate.unzlibSync(IB),
+        TB = BB.lines * BB.channels * BB.width,
+        JB = 1 == BB.type ? new Uint16Array(TB) : new Uint32Array(TB);
+      let oB = 0,
+        GB = 0;
+      const vB = new Array(4);
+      for (let kB = 0; kB < BB.lines; kB++)
+        for (let IB = 0; IB < BB.channels; IB++) {
+          let IB = 0;
           switch (BB.type) {
             case 1:
-              NB[0] = dB, NB[1] = NB[0] + BB.width, dB = NB[1] + BB.width;
-              for (let QB = 0; QB < BB.width; ++QB) {
-                jB += zB[NB[0]++] << 8 | zB[NB[1]++], nB[IB] = jB, IB++
+              vB[0] = oB, vB[1] = vB[0] + BB.width, oB = vB[1] + BB.width;
+              for (let TB = 0; TB < BB.width; ++TB) {
+                IB += ZB[vB[0]++] << 8 | ZB[vB[1]++], JB[GB] = IB, GB++
               }
               break;
             case 2:
-              NB[0] = dB, NB[1] = NB[0] + BB.width, NB[2] = NB[1] + BB.width, dB = NB[2] + BB.width;
-              for (let QB = 0; QB < BB.width; ++QB) {
-                jB += zB[NB[0]++] << 24 | zB[NB[1]++] << 16 | zB[NB[2]++] << 8, nB[IB] = jB, IB++
+              vB[0] = oB, vB[1] = vB[0] + BB.width, vB[2] = vB[1] + BB.width, oB = vB[2] + BB.width;
+              for (let TB = 0; TB < BB.width; ++TB) {
+                IB += ZB[vB[0]++] << 24 | ZB[vB[1]++] << 16 | ZB[vB[2]++] << 8, JB[GB] = IB, GB++
               }
           }
         }
-      return new DataView(nB.buffer)
+      return new DataView(JB.buffer)
     }
 
-    function nj(BB) {
-      const jB = BB.viewer,
-        zB = {
+    function JI(BB) {
+      const IB = BB.viewer,
+        ZB = {
           value: BB.offset.value
         },
-        QB = new Uint16Array(BB.width * BB.scanlineBlockSize * (BB.channels * BB.type)),
-        nB = new Uint8Array(rB);
-      let dB = 0;
-      const IB = new Array(BB.channels);
-      for (let UB = 0; UB < BB.channels; UB++) IB[UB] = {}, IB[UB].start = dB, IB[UB].end = IB[UB].start, IB[UB].nx = BB.width, IB[UB].ny = BB.lines, IB[UB].size = BB.type, dB += IB[UB].nx * IB[UB].ny * IB[UB].size;
-      const NB = qB(jB, zB),
-        uB = qB(jB, zB);
-      if (uB >= rB) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (NB <= uB)
-        for (let UB = 0; UB < uB - NB + 1; UB++) nB[UB + NB] = iB(jB, zB);
-      const aB = new Uint16Array(pB),
-        sB = function(BB, jB) {
-          let zB = 0;
-          for (let nB = 0; nB < pB; ++nB)(0 == nB || BB[nB >> 3] & 1 << (7 & nB)) && (jB[zB++] = nB);
-          const QB = zB - 1;
-          for (; zB < pB;) jB[zB++] = 0;
-          return QB
-        }(nB, aB),
-        JB = EB(jB, zB);
-      CB(BB.array, jB, zB, JB, QB, dB);
-      for (let UB = 0; UB < BB.channels; ++UB) {
-        const BB = IB[UB];
-        for (let jB = 0; jB < IB[UB].size; ++jB) OB(QB, BB.start + jB, BB.nx, BB.size, BB.ny, BB.nx * BB.size, sB)
-      }! function(BB, jB, zB) {
-        for (let QB = 0; QB < zB; ++QB) jB[QB] = BB[jB[QB]]
-      }(aB, QB, dB);
-      let mB = 0;
-      const yB = new Uint8Array(QB.buffer.byteLength);
-      for (let pB = 0; pB < BB.lines; pB++)
-        for (let jB = 0; jB < BB.channels; jB++) {
-          const BB = IB[jB],
-            zB = BB.nx * BB.size,
-            nB = new Uint8Array(QB.buffer, BB.end * UB, zB * UB);
-          yB.set(nB, mB), mB += zB * UB, BB.end += zB
+        TB = new Uint16Array(BB.width * BB.scanlineBlockSize * (BB.channels * BB.type)),
+        JB = new Uint8Array(zB);
+      let oB = 0;
+      const GB = new Array(BB.channels);
+      for (let cB = 0; cB < BB.channels; cB++) GB[cB] = {}, GB[cB].start = oB, GB[cB].end = GB[cB].start, GB[cB].nx = BB.width, GB[cB].ny = BB.lines, GB[cB].size = BB.type, oB += GB[cB].nx * GB[cB].ny * GB[cB].size;
+      const vB = YB(IB, ZB),
+        kB = YB(IB, ZB);
+      if (kB >= zB) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (vB <= kB)
+        for (let cB = 0; cB < kB - vB + 1; cB++) JB[cB + vB] = OB(IB, ZB);
+      const nB = new Uint16Array(hB),
+        FB = function(BB, IB) {
+          let ZB = 0;
+          for (let JB = 0; JB < hB; ++JB)(0 == JB || BB[JB >> 3] & 1 << (7 & JB)) && (IB[ZB++] = JB);
+          const TB = ZB - 1;
+          for (; ZB < hB;) IB[ZB++] = 0;
+          return TB
+        }(JB, nB),
+        NB = wB(IB, ZB);
+      xB(BB.array, IB, ZB, NB, TB, oB);
+      for (let cB = 0; cB < BB.channels; ++cB) {
+        const BB = GB[cB];
+        for (let IB = 0; IB < GB[cB].size; ++IB) SB(TB, BB.start + IB, BB.nx, BB.size, BB.ny, BB.nx * BB.size, FB)
+      }! function(BB, IB, ZB) {
+        for (let TB = 0; TB < ZB; ++TB) IB[TB] = BB[IB[TB]]
+      }(nB, TB, oB);
+      let gB = 0;
+      const qB = new Uint8Array(TB.buffer.byteLength);
+      for (let hB = 0; hB < BB.lines; hB++)
+        for (let IB = 0; IB < BB.channels; IB++) {
+          const BB = GB[IB],
+            ZB = BB.nx * BB.size,
+            JB = new Uint8Array(TB.buffer, BB.end * cB, ZB * cB);
+          qB.set(JB, gB), gB += ZB * cB, BB.end += ZB
         }
-      return new DataView(yB.buffer)
+      return new DataView(qB.buffer)
     }
-    var dj, Ij = zB(40164);
+    var oI, GI = ZB(40152);
     ! function(BB) {
       BB[BB.Float = 0] = "Float", BB[BB.HalfFloat = 1] = "HalfFloat"
-    }(dj || (dj = {}));
-    class Nj {}
-    async function uj(BB, jB, zB, QB) {
-      const nB = {
+    }(oI || (oI = {}));
+    class vI {}
+    async function kI(BB, IB, ZB, TB) {
+      const JB = {
         size: 0,
-        viewer: jB,
-        array: new Uint8Array(jB.buffer),
-        offset: zB,
+        viewer: IB,
+        array: new Uint8Array(IB.buffer),
+        offset: ZB,
         width: BB.dataWindow.xMax - BB.dataWindow.xMin + 1,
         height: BB.dataWindow.yMax - BB.dataWindow.yMin + 1,
         channels: BB.channels.length,
@@ -596,173 +596,173 @@ export const modules = {
         textureType: 0
       };
       switch (BB.compression) {
-        case gB.NO_COMPRESSION:
-          nB.lines = 1, nB.uncompress = Bj;
+        case dB.NO_COMPRESSION:
+          JB.lines = 1, JB.uncompress = BI;
           break;
-        case gB.RLE_COMPRESSION:
-          nB.lines = 1, nB.uncompress = jj;
+        case dB.RLE_COMPRESSION:
+          JB.lines = 1, JB.uncompress = II;
           break;
-        case gB.ZIPS_COMPRESSION:
-          nB.lines = 1, nB.uncompress = zj, await Ij.i.LoadScriptAsync(Nj.FFLATEUrl);
+        case dB.ZIPS_COMPRESSION:
+          JB.lines = 1, JB.uncompress = ZI, await GI.j.LoadScriptAsync(vI.FFLATEUrl);
           break;
-        case gB.ZIP_COMPRESSION:
-          nB.lines = 16, nB.uncompress = zj, await Ij.i.LoadScriptAsync(Nj.FFLATEUrl);
+        case dB.ZIP_COMPRESSION:
+          JB.lines = 16, JB.uncompress = ZI, await GI.j.LoadScriptAsync(vI.FFLATEUrl);
           break;
-        case gB.PIZ_COMPRESSION:
-          nB.lines = 32, nB.uncompress = nj;
+        case dB.PIZ_COMPRESSION:
+          JB.lines = 32, JB.uncompress = JI;
           break;
-        case gB.PXR24_COMPRESSION:
-          nB.lines = 16, nB.uncompress = Qj, await Ij.i.LoadScriptAsync(Nj.FFLATEUrl);
+        case dB.PXR24_COMPRESSION:
+          JB.lines = 16, JB.uncompress = TI, await GI.j.LoadScriptAsync(vI.FFLATEUrl);
           break;
         default:
-          throw new Error(gB[BB.compression] + " is unsupported")
+          throw new Error(dB[BB.compression] + " is unsupported")
       }
-      nB.scanlineBlockSize = nB.lines;
-      const dB = {};
-      for (const NB of BB.channels) switch (NB.name) {
+      JB.scanlineBlockSize = JB.lines;
+      const oB = {};
+      for (const vB of BB.channels) switch (vB.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          dB[NB.name] = !0, nB.type = NB.pixelType
+          oB[vB.name] = !0, JB.type = vB.pixelType
       }
-      let IB = !1;
-      if (dB.R && dB.G && dB.B && dB.A) nB.outputChannels = 4, nB.decodeChannels = {
+      let GB = !1;
+      if (oB.R && oB.G && oB.B && oB.A) JB.outputChannels = 4, JB.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (dB.R && dB.G && dB.B) IB = !0, nB.outputChannels = 4, nB.decodeChannels = {
+      else if (oB.R && oB.G && oB.B) GB = !0, JB.outputChannels = 4, JB.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (dB.R && dB.G) nB.outputChannels = 2, nB.decodeChannels = {
+      else if (oB.R && oB.G) JB.outputChannels = 2, JB.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (dB.R) nB.outputChannels = 1, nB.decodeChannels = {
+      else if (oB.R) JB.outputChannels = 1, JB.decodeChannels = {
         R: 0
       };
       else {
-        if (!dB.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        nB.outputChannels = 1, nB.decodeChannels = {
+        if (!oB.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        JB.outputChannels = 1, JB.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === nB.type) switch (QB) {
-        case dj.Float:
-          nB.getter = DB, nB.inputSize = UB;
+      if (1 === JB.type) switch (TB) {
+        case oI.Float:
+          JB.getter = HB, JB.inputSize = cB;
           break;
-        case dj.HalfFloat:
-          nB.getter = qB, nB.inputSize = UB
+        case oI.HalfFloat:
+          JB.getter = YB, JB.inputSize = cB
       } else {
-        if (2 !== nB.type) throw new Error("Unsupported pixelType " + nB.type + " for " + BB.compression);
-        switch (QB) {
-          case dj.Float:
-            nB.getter = HB, nB.inputSize = NB;
+        if (2 !== JB.type) throw new Error("Unsupported pixelType " + JB.type + " for " + BB.compression);
+        switch (TB) {
+          case oI.Float:
+            JB.getter = aB, JB.inputSize = vB;
             break;
-          case dj.HalfFloat:
-            nB.getter = FB, nB.inputSize = NB
+          case oI.HalfFloat:
+            JB.getter = MB, JB.inputSize = vB
         }
       }
-      nB.blockCount = nB.height / nB.scanlineBlockSize;
-      for (let NB = 0; NB < nB.blockCount; NB++) oB(jB, zB);
-      const uB = nB.width * nB.height * nB.outputChannels;
-      switch (QB) {
-        case dj.Float:
-          nB.byteArray = new Float32Array(uB), nB.textureType = 1, IB && nB.byteArray.fill(1, 0, uB);
+      JB.blockCount = JB.height / JB.scanlineBlockSize;
+      for (let vB = 0; vB < JB.blockCount; vB++) pB(IB, ZB);
+      const kB = JB.width * JB.height * JB.outputChannels;
+      switch (TB) {
+        case oI.Float:
+          JB.byteArray = new Float32Array(kB), JB.textureType = 1, GB && JB.byteArray.fill(1, 0, kB);
           break;
-        case dj.HalfFloat:
-          nB.byteArray = new Uint16Array(uB), nB.textureType = 2, IB && nB.byteArray.fill(15360, 0, uB);
+        case oI.HalfFloat:
+          JB.byteArray = new Uint16Array(kB), JB.textureType = 2, GB && JB.byteArray.fill(15360, 0, kB);
           break;
         default:
-          throw new Error("Unsupported type: " + QB)
+          throw new Error("Unsupported type: " + TB)
       }
-      let aB = 0;
-      for (const NB of BB.channels) void 0 !== nB.decodeChannels[NB.name] && (nB.channelLineOffsets[NB.name] = aB * nB.width), aB += 2 * NB.pixelType;
-      return nB.bytesPerLine = nB.width * aB, nB.outLineWidth = nB.width * nB.outputChannels, "INCREASING_Y" === BB.lineOrder ? nB.scanOrder = BB => BB : nB.scanOrder = BB => nB.height - 1 - BB, 4 == nB.outputChannels ? (nB.format = 5, nB.linearSpace = !0) : (nB.format = 6, nB.linearSpace = !1), nB
+      let nB = 0;
+      for (const vB of BB.channels) void 0 !== JB.decodeChannels[vB.name] && (JB.channelLineOffsets[vB.name] = nB * JB.width), nB += 2 * vB.pixelType;
+      return JB.bytesPerLine = JB.width * nB, JB.outLineWidth = JB.width * JB.outputChannels, "INCREASING_Y" === BB.lineOrder ? JB.scanOrder = BB => BB : JB.scanOrder = BB => JB.height - 1 - BB, 4 == JB.outputChannels ? (JB.format = 5, JB.linearSpace = !0) : (JB.format = 6, JB.linearSpace = !1), JB
     }
 
-    function Uj(BB, jB, zB, QB) {
-      const nB = {
+    function cI(BB, IB, ZB, TB) {
+      const JB = {
         value: 0
       };
-      for (let dB = 0; dB < BB.height / BB.scanlineBlockSize; dB++) {
-        const IB = MB(zB, QB) - jB.dataWindow.yMin;
-        BB.size = EB(zB, QB), BB.lines = IB + BB.scanlineBlockSize > BB.height ? BB.height - IB : BB.scanlineBlockSize;
-        const NB = BB.size < BB.lines * BB.bytesPerLine && BB.uncompress ? BB.uncompress(BB) : Bj(BB);
-        QB.value += BB.size;
-        for (let zB = 0; zB < BB.scanlineBlockSize; zB++) {
-          const QB = dB * BB.scanlineBlockSize,
-            IB = zB + BB.scanOrder(QB);
-          if (IB >= BB.height) continue;
-          const uB = zB * BB.bytesPerLine,
-            UB = (BB.height - 1 - IB) * BB.outLineWidth;
-          for (let zB = 0; zB < BB.channels; zB++) {
-            const QB = jB.channels[zB].name,
-              dB = BB.channelLineOffsets[QB],
-              IB = BB.decodeChannels[QB];
-            if (void 0 !== IB) {
-              nB.value = uB + dB;
-              for (let jB = 0; jB < BB.width; jB++) {
-                const zB = UB + jB * BB.outputChannels + IB;
-                BB.byteArray && (BB.byteArray[zB] = BB.getter(NB, nB))
+      for (let oB = 0; oB < BB.height / BB.scanlineBlockSize; oB++) {
+        const GB = sB(ZB, TB) - IB.dataWindow.yMin;
+        BB.size = wB(ZB, TB), BB.lines = GB + BB.scanlineBlockSize > BB.height ? BB.height - GB : BB.scanlineBlockSize;
+        const vB = BB.size < BB.lines * BB.bytesPerLine && BB.uncompress ? BB.uncompress(BB) : BI(BB);
+        TB.value += BB.size;
+        for (let ZB = 0; ZB < BB.scanlineBlockSize; ZB++) {
+          const TB = oB * BB.scanlineBlockSize,
+            GB = ZB + BB.scanOrder(TB);
+          if (GB >= BB.height) continue;
+          const kB = ZB * BB.bytesPerLine,
+            cB = (BB.height - 1 - GB) * BB.outLineWidth;
+          for (let ZB = 0; ZB < BB.channels; ZB++) {
+            const TB = IB.channels[ZB].name,
+              oB = BB.channelLineOffsets[TB],
+              GB = BB.decodeChannels[TB];
+            if (void 0 !== GB) {
+              JB.value = kB + oB;
+              for (let IB = 0; IB < BB.width; IB++) {
+                const ZB = cB + IB * BB.outputChannels + GB;
+                BB.byteArray && (BB.byteArray[ZB] = BB.getter(vB, JB))
               }
             }
           }
         }
       }
     }
-    Nj.DefaultOutputType = dj.HalfFloat, Nj.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class aj {
+    vI.DefaultOutputType = oI.HalfFloat, vI.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class nI {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(BB, jB, zB, QB, nB) {
+      loadCubeData(BB, IB, ZB, TB, JB) {
         throw ".exr not supported in Cube."
       }
-      loadData(BB, jB, zB) {
-        const nB = new DataView(BB.buffer),
-          dB = {
+      loadData(BB, IB, ZB) {
+        const JB = new DataView(BB.buffer),
+          oB = {
             value: 0
           },
-          IB = ZB(nB, dB);
-        uj(IB, nB, dB, Nj.DefaultOutputType).then((BB => {
-          Uj(BB, IB, nB, dB);
-          const QB = IB.dataWindow.xMax - IB.dataWindow.xMin + 1,
-            NB = IB.dataWindow.yMax - IB.dataWindow.yMin + 1;
-          zB(QB, NB, jB.generateMipMaps, !1, (() => {
-            const zB = jB.wJ();
-            jB.format = IB.format, jB.type = BB.textureType, jB.invertY = !1, jB._gammaSpace = !IB.linearSpace, BB.byteArray && zB._uploadDataToTextureDirectly(jB, BB.byteArray, 0, 0, void 0, !0)
+          GB = mB(JB, oB);
+        kI(GB, JB, oB, vI.DefaultOutputType).then((BB => {
+          cI(BB, GB, JB, oB);
+          const TB = GB.dataWindow.xMax - GB.dataWindow.xMin + 1,
+            vB = GB.dataWindow.yMax - GB.dataWindow.yMin + 1;
+          ZB(TB, vB, IB.generateMipMaps, !1, (() => {
+            const ZB = IB.PN();
+            IB.format = GB.format, IB.type = BB.textureType, IB.invertY = !1, IB._gammaSpace = !GB.linearSpace, BB.byteArray && ZB._uploadDataToTextureDirectly(IB, BB.byteArray, 0, 0, void 0, !0)
           }))
         })).catch((BB => {
-          QB.c.Error("Failed to load EXR texture: ", BB)
+          TB.d.Error("Failed to load EXR texture: ", BB)
         }))
       }
     }
-    async function pj(BB) {
-      const jB = new DataView(BB),
-        zB = {
+    async function hI(BB) {
+      const IB = new DataView(BB),
+        ZB = {
           value: 0
         },
-        nB = ZB(jB, zB);
+        JB = mB(IB, ZB);
       try {
-        const BB = await uj(nB, jB, zB, dj.Float);
-        return Uj(BB, nB, jB, zB), BB.byteArray ? {
-          width: nB.dataWindow.xMax - nB.dataWindow.xMin + 1,
-          height: nB.dataWindow.yMax - nB.dataWindow.yMin + 1,
+        const BB = await kI(JB, IB, ZB, oI.Float);
+        return cI(BB, JB, IB, ZB), BB.byteArray ? {
+          width: JB.dataWindow.xMax - JB.dataWindow.xMin + 1,
+          height: JB.dataWindow.yMax - JB.dataWindow.yMin + 1,
           data: new Float32Array(BB.byteArray)
-        } : (QB.c.Error("Failed to decode EXR data: No byte array available."), {
+        } : (TB.d.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (dB) {
-        QB.c.Error("Failed to load EXR data: ", dB)
+      } catch (oB) {
+        TB.d.Error("Failed to load EXR data: ", oB)
       }
       return {
         width: 0,

@@ -1,569 +1,569 @@
 export const id = 242;
 export const ids = [242];
 export const modules = {
-  41159: (BB, jB, zB) => {
-    zB.d(jB, {
-      noaDevTools: () => pB
+  41093: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      noaDevTools: () => hB
     });
-    var QB = zB(37647),
-      nB = zB(37629),
-      dB = zB(2863),
-      IB = zB(1778),
-      NB = zB(41052);
+    var TB = ZB(37613),
+      JB = ZB(37594),
+      oB = ZB(2912),
+      GB = ZB(1805),
+      vB = ZB(40999);
 
-    function uB(BB) {
+    function kB(BB) {
       const {
-        pm: jB
-      } = BB, zB = jB.engine, QB = {
-        width: zB.getRenderWidth(),
-        height: zB.getRenderHeight()
+        Ig: IB
+      } = BB, ZB = IB.engine, TB = {
+        width: ZB.getRenderWidth(),
+        height: ZB.getRenderHeight()
       };
       return {
-        canvas: zB.getRenderingCanvas(),
-        maxTextureSize: zB.getCaps().maxTextureSize,
-        drawing: () => !BB.qL,
-        resize: (BB, jB) => {
-          zB.setSize(BB, jB)
+        canvas: ZB.getRenderingCanvas(),
+        maxTextureSize: ZB.getCaps().maxTextureSize,
+        drawing: () => !BB.iW,
+        resize: (BB, IB) => {
+          ZB.setSize(BB, IB)
         },
         restoreSize: () => {
-          zB.setSize(QB.width, QB.height), jB.resize()
+          ZB.setSize(TB.width, TB.height), IB.resize()
         },
-        onFrameDrawn: jB => (BB.on("afterRender", jB), () => {
-          BB.off("afterRender", jB)
+        onFrameDrawn: IB => (BB.on("afterRender", IB), () => {
+          BB.off("afterRender", IB)
         })
       }
     }
-    var UB = zB(34126);
+    var cB = ZB(34060);
 
-    function aB(BB, jB) {
+    function nB(BB, IB) {
       let {
-        width: UB,
-        height: aB,
-        colouring: pB
-      } = jB;
-      const rB = "normals" === pB,
-        sB = "depth" === pB;
-      return new Promise((jB => {
+        width: cB,
+        height: nB,
+        colouring: hB
+      } = IB;
+      const zB = "normals" === hB,
+        FB = "depth" === hB;
+      return new Promise((IB => {
         try {
-          const JB = (0, dB.g)();
-          if (JB.pm.rm) return "screenshot" !== BB || null !== pB ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void jB()) : void(0, NB.h)(uB(JB), UB, aB).finally(jB);
-          const mB = JB.pm.engine,
-            yB = JB.pm.aY(),
-            kB = UB,
-            GB = aB;
-          Promise.all([Promise.all([zB.e(258), zB.e(259), zB.e(238)]).then((() => zB(61413))), Promise.all([zB.e(237), zB.e(236), zB.e(258), zB.e(259), zB.e(256), zB.e(260), zB.e(263), zB.e(316), zB.e(243)]).then((() => zB(61416))), Promise.all([zB.e(237), zB.e(236), zB.e(258), zB.e(259), zB.e(256), zB.e(266), zB.e(260), zB.e(268), zB.e(245)]).then((() => zB(61420))), zB.e(357).then((() => zB(61427))), Promise.all([zB.e(236), zB.e(232)]).then((() => zB(37166))), zB.e(257).then((() => zB(61435))), zB.e(240).then((() => zB(61439)))]).then((dB => {
+          const NB = (0, oB.h)();
+          if (NB.Ig.Zg) return "screenshot" !== BB || null !== hB ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void IB()) : void(0, vB.h)(kB(NB), cB, nB).finally(IB);
+          const gB = NB.Ig.engine,
+            qB = NB.Ig.JR(),
+            yB = cB,
+            UB = nB;
+          Promise.all([Promise.all([ZB.e(258), ZB.e(259), ZB.e(238)]).then((() => ZB(61291))), Promise.all([ZB.e(237), ZB.e(236), ZB.e(258), ZB.e(259), ZB.e(256), ZB.e(260), ZB.e(263), ZB.e(316), ZB.e(243)]).then((() => ZB(61297))), Promise.all([ZB.e(237), ZB.e(236), ZB.e(258), ZB.e(259), ZB.e(256), ZB.e(266), ZB.e(260), ZB.e(268), ZB.e(245)]).then((() => ZB(61306))), ZB.e(357).then((() => ZB(61309))), Promise.all([ZB.e(236), ZB.e(232)]).then((() => ZB(37113))), ZB.e(257).then((() => ZB(61317))), ZB.e(240).then((() => ZB(61319)))]).then((oB => {
             const {
-              CreateScreenshotUsingRenderTarget: NB
-            } = dB[1], {
-              ShaderMaterial: uB
-            } = dB[2], {
-              ShaderLanguage: UB
-            } = dB[3], {
-              KJ: aB
-            } = dB[4], {
-              registerDevtoolsShader: pB
-            } = dB[6], JB = UB.GLSL, LB = new Map, gB = yB.meshes.filter((BB => BB.material));
-            let tB = !1,
-              SB = null;
+              CreateScreenshotUsingRenderTarget: vB
+            } = oB[1], {
+              ShaderMaterial: kB
+            } = oB[2], {
+              ShaderLanguage: cB
+            } = oB[3], {
+              rN: nB
+            } = oB[4], {
+              registerDevtoolsShader: hB
+            } = oB[6], NB = cB.GLSL, WB = new Map, dB = qB.meshes.filter((BB => BB.material));
+            let CB = !1,
+              QB = null;
 
-            function MB() {
+            function sB() {
               var BB;
-              tB && (tB = !1, (0, QB.e)(yB.meshes, !1)), null === (BB = SB) || void 0 === BB || BB(), SB = null, gB.forEach((BB => {
-                const jB = LB.get(BB);
-                jB && (BB.material = jB)
+              CB && (CB = !1, (0, TB.h)(qB.meshes, !1)), null === (BB = QB) || void 0 === BB || BB(), QB = null, dB.forEach((BB => {
+                const IB = WB.get(BB);
+                IB && (BB.material = IB)
               }))
             }
-            if (rB) {
+            if (zB) {
               const BB = [],
-                jB = [];
-              gB.forEach((zB => {
-                const QB = zB.name.toLowerCase(),
-                  nB = zB.rV().boundingBox.center,
-                  dB = yB.activeCamera.position.subtract(nB).length();
-                QB.includes("sky") || QB.includes("background") || QB.includes("environment") || dB > 1e3 ? jB.push(zB) : BB.push(zB)
-              })), pB("devtoolsNormal", JB);
-              const zB = new uB("normalMaterial", yB, "devtoolsNormal", {
+                IB = [];
+              dB.forEach((ZB => {
+                const TB = ZB.name.toLowerCase(),
+                  JB = ZB.qm().boundingBox.center,
+                  oB = qB.activeCamera.position.subtract(JB).length();
+                TB.includes("sky") || TB.includes("background") || TB.includes("environment") || oB > 1e3 ? IB.push(ZB) : BB.push(ZB)
+              })), hB("devtoolsNormal", NB);
+              const ZB = new kB("normalMaterial", qB, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: JB
+                shaderLanguage: NB
               });
-              pB("devtoolsWhite", JB);
-              const QB = new uB("whiteMaterial", yB, "devtoolsWhite", {
+              hB("devtoolsWhite", NB);
+              const TB = new kB("whiteMaterial", qB, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: JB
+                shaderLanguage: NB
               });
               BB.forEach((BB => {
-                LB.set(BB, BB.material), BB.material = zB
-              })), jB.forEach((BB => {
-                LB.set(BB, BB.material), BB.material = QB
+                WB.set(BB, BB.material), BB.material = ZB
+              })), IB.forEach((BB => {
+                WB.set(BB, BB.material), BB.material = TB
               }))
-            } else if (sB) {
-              pB("devtoolsDepth", JB);
-              const BB = yB.activeCamera.position;
-              let jB = 0,
-                zB = 1 / 0;
-              gB.forEach((QB => {
-                const nB = QB.name.toLowerCase();
-                if (nB.includes("sky") || nB.includes("background") || nB.includes("environment")) return;
-                const dB = QB.rV().boundingBox.center,
-                  IB = aB.TransformCoordinates(dB, QB.getWorldMatrix()),
-                  NB = BB.subtract(IB).length();
-                NB > 1e3 || (jB = Math.max(jB, NB), zB = Math.min(zB, NB))
+            } else if (FB) {
+              hB("devtoolsDepth", NB);
+              const BB = qB.activeCamera.position;
+              let IB = 0,
+                ZB = 1 / 0;
+              dB.forEach((TB => {
+                const JB = TB.name.toLowerCase();
+                if (JB.includes("sky") || JB.includes("background") || JB.includes("environment")) return;
+                const oB = TB.qm().boundingBox.center,
+                  GB = nB.TransformCoordinates(oB, TB.getWorldMatrix()),
+                  vB = BB.subtract(GB).length();
+                vB > 1e3 || (IB = Math.max(IB, vB), ZB = Math.min(ZB, vB))
               }));
-              const QB = jB - zB;
-              jB += .1 * QB, zB = Math.max(0, zB - .1 * QB), console.log(`Depth range: min=${zB.toFixed(2)}, max=${jB.toFixed(2)}, range=${QB.toFixed(2)}`), QB < 1 && (jB = zB + 10);
-              const nB = new uB("depthMaterial", yB, "devtoolsDepth", {
+              const TB = IB - ZB;
+              IB += .1 * TB, ZB = Math.max(0, ZB - .1 * TB), console.log(`Depth range: min=${ZB.toFixed(2)}, max=${IB.toFixed(2)}, range=${TB.toFixed(2)}`), TB < 1 && (IB = ZB + 10);
+              const JB = new kB("depthMaterial", qB, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: JB
+                shaderLanguage: NB
               });
-              nB.setVector3("cameraPosition", BB), nB.setFloat("maxDepth", jB), nB.setFloat("minDepth", zB), gB.forEach((BB => {
-                LB.set(BB, BB.material), BB.material = nB
+              JB.setVector3("cameraPosition", BB), JB.setFloat("maxDepth", IB), JB.setFloat("minDepth", ZB), dB.forEach((BB => {
+                WB.set(BB, BB.material), BB.material = JB
               }))
             }
-            if ((0, QB.e)(yB.meshes, !0), tB = !0, "glb" === BB && (SB = (0, nB.d)(yB.meshes)), "screenshot" === BB) {
-              let BB = `bloxd-screenshot-${kB}x${GB}-${Date.now()}.png`;
-              rB ? BB = `bloxd-screenshot-normals-${kB}x${GB}-${Date.now()}.png` : sB && (BB = `bloxd-screenshot-depth-${kB}x${GB}-${Date.now()}.png`), NB(mB, yB.activeCamera, {
-                width: kB,
-                height: GB
-              }, (function(zB) {
-                MB(), fetch(zB).then((function(BB) {
+            if ((0, TB.h)(qB.meshes, !0), CB = !0, "glb" === BB && (QB = (0, JB.b)(qB.meshes)), "screenshot" === BB) {
+              let BB = `bloxd-screenshot-${yB}x${UB}-${Date.now()}.png`;
+              zB ? BB = `bloxd-screenshot-normals-${yB}x${UB}-${Date.now()}.png` : FB && (BB = `bloxd-screenshot-depth-${yB}x${UB}-${Date.now()}.png`), vB(gB, qB.activeCamera, {
+                width: yB,
+                height: UB
+              }, (function(ZB) {
+                sB(), fetch(ZB).then((function(BB) {
                   return BB.blob()
-                })).then((function(zB) {
-                  (0, IB.downloadBlob)(zB, BB), jB()
+                })).then((function(ZB) {
+                  (0, GB.downloadBlob)(ZB, BB), IB()
                 })).catch((function(BB) {
-                  console.error("Error processing screenshot:", BB), jB()
+                  console.error("Error processing screenshot:", BB), IB()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), MB(), jB()
+                console.error("Screenshot timed out"), sB(), IB()
               }))
             } else {
-              let BB = "ny";
-              rB ? BB = "scene-normals" : sB && (BB = "scene-depth"), rB || sB ? setTimeout((() => {
+              let BB = "lg";
+              zB ? BB = "scene-normals" : FB && (BB = "scene-depth"), zB || FB ? setTimeout((() => {
                 (async function() {
                   const {
                     StandardMaterial: BB
-                  } = await Promise.all([zB.e(237), zB.e(236), zB.e(258), zB.e(259), zB.e(256), zB.e(266), zB.e(265), zB.e(244)]).then((() => zB(40350))), {
-                    Color3: jB
-                  } = await Promise.all([zB.e(237), zB.e(241)]).then((() => zB(37372))), QB = [], nB = [];
-                  if (gB.forEach((BB => {
-                      const jB = BB.name.toLowerCase(),
-                        zB = BB.rV().boundingBox.center,
-                        dB = yB.activeCamera.position.subtract(zB).length();
-                      jB.includes("sky") || jB.includes("background") || jB.includes("environment") || dB > 1e3 ? nB.push(BB) : QB.push(BB)
-                    })), rB) QB.forEach(((zB, QB) => {
-                    const nB = zB.getVerticesData("normal");
-                    if (nB) {
-                      const dB = [];
-                      for (let BB = 0; BB < nB.length; BB += 3) {
-                        const jB = Math.abs(nB[BB]),
-                          zB = Math.abs(nB[BB + 1]),
-                          QB = Math.abs(nB[BB + 2]);
-                        dB.push(jB, zB, QB, 1)
+                  } = await Promise.all([ZB.e(237), ZB.e(236), ZB.e(258), ZB.e(259), ZB.e(256), ZB.e(266), ZB.e(265), ZB.e(244)]).then((() => ZB(40318))), {
+                    Color3: IB
+                  } = await Promise.all([ZB.e(237), ZB.e(241)]).then((() => ZB(37304))), TB = [], JB = [];
+                  if (dB.forEach((BB => {
+                      const IB = BB.name.toLowerCase(),
+                        ZB = BB.qm().boundingBox.center,
+                        oB = qB.activeCamera.position.subtract(ZB).length();
+                      IB.includes("sky") || IB.includes("background") || IB.includes("environment") || oB > 1e3 ? JB.push(BB) : TB.push(BB)
+                    })), zB) TB.forEach(((ZB, TB) => {
+                    const JB = ZB.getVerticesData("normal");
+                    if (JB) {
+                      const oB = [];
+                      for (let BB = 0; BB < JB.length; BB += 3) {
+                        const IB = Math.abs(JB[BB]),
+                          ZB = Math.abs(JB[BB + 1]),
+                          TB = Math.abs(JB[BB + 2]);
+                        oB.push(IB, ZB, TB, 1)
                       }
-                      zB.setVerticesData("color", dB);
-                      const IB = new BB(`vertexColorMat_${QB}`, yB);
-                      IB.disableLighting = !0, IB.emissiveColor = new jB(1, 1, 1), IB.specularColor = new jB(0, 0, 0), zB.material = IB
+                      ZB.setVerticesData("color", oB);
+                      const GB = new BB(`vertexColorMat_${TB}`, qB);
+                      GB.disableLighting = !0, GB.emissiveColor = new IB(1, 1, 1), GB.specularColor = new IB(0, 0, 0), ZB.material = GB
                     }
-                  })), nB.forEach(((zB, QB) => {
-                    const nB = zB.getVerticesData("position");
-                    if (nB) {
-                      const dB = [],
-                        IB = nB.length / 3;
-                      for (let BB = 0; BB < IB; BB++) dB.push(1, 1, 1, 1);
-                      zB.setVerticesData("color", dB);
-                      const NB = new BB(`whiteMat_${QB}`, yB);
-                      NB.disableLighting = !0, NB.emissiveColor = new jB(1, 1, 1), NB.specularColor = new jB(0, 0, 0), zB.material = NB
+                  })), JB.forEach(((ZB, TB) => {
+                    const JB = ZB.getVerticesData("position");
+                    if (JB) {
+                      const oB = [],
+                        GB = JB.length / 3;
+                      for (let BB = 0; BB < GB; BB++) oB.push(1, 1, 1, 1);
+                      ZB.setVerticesData("color", oB);
+                      const vB = new BB(`whiteMat_${TB}`, qB);
+                      vB.disableLighting = !0, vB.emissiveColor = new IB(1, 1, 1), vB.specularColor = new IB(0, 0, 0), ZB.material = vB
                     }
                   }));
-                  else if (sB) {
-                    const zB = yB.activeCamera.position;
-                    let nB = 0,
-                      dB = 1 / 0;
-                    QB.forEach((BB => {
-                      const jB = BB.rV().boundingBox.center,
-                        QB = aB.TransformCoordinates(jB, BB.getWorldMatrix()),
-                        IB = zB.subtract(QB).length();
-                      nB = Math.max(nB, IB), dB = Math.min(dB, IB)
+                  else if (FB) {
+                    const ZB = qB.activeCamera.position;
+                    let JB = 0,
+                      oB = 1 / 0;
+                    TB.forEach((BB => {
+                      const IB = BB.qm().boundingBox.center,
+                        TB = nB.TransformCoordinates(IB, BB.getWorldMatrix()),
+                        GB = ZB.subtract(TB).length();
+                      JB = Math.max(JB, GB), oB = Math.min(oB, GB)
                     }));
-                    const IB = nB - dB;
-                    nB += .1 * IB, dB = Math.max(0, dB - .1 * IB), IB < 1 && (nB = dB + 10), gB.forEach(((QB, IB) => {
-                      const NB = QB.name.toLowerCase(),
-                        uB = QB.rV().boundingBox.center,
-                        UB = aB.TransformCoordinates(uB, QB.getWorldMatrix()),
-                        pB = zB.subtract(UB).length();
-                      if (!(NB.includes("sky") || NB.includes("background") || NB.includes("environment") || pB > 1e3)) {
-                        const zB = 1 - Math.min(Math.max((pB - dB) / (nB - dB), 0), 1),
-                          NB = new BB(`depthMat_${IB}`, yB);
-                        NB.diffuseColor = new jB(zB, zB, zB), NB.specularColor = new jB(0, 0, 0), QB.material = NB
+                    const GB = JB - oB;
+                    JB += .1 * GB, oB = Math.max(0, oB - .1 * GB), GB < 1 && (JB = oB + 10), dB.forEach(((TB, GB) => {
+                      const vB = TB.name.toLowerCase(),
+                        kB = TB.qm().boundingBox.center,
+                        cB = nB.TransformCoordinates(kB, TB.getWorldMatrix()),
+                        hB = ZB.subtract(cB).length();
+                      if (!(vB.includes("sky") || vB.includes("background") || vB.includes("environment") || hB > 1e3)) {
+                        const ZB = 1 - Math.min(Math.max((hB - oB) / (JB - oB), 0), 1),
+                          vB = new BB(`depthMat_${GB}`, qB);
+                        vB.diffuseColor = new IB(ZB, ZB, ZB), vB.specularColor = new IB(0, 0, 0), TB.material = vB
                       }
                     }))
                   }
-                })().then((() => Promise.all([zB.e(237), zB.e(236), zB.e(258), zB.e(259), zB.e(256), zB.e(266), zB.e(260), zB.e(265), zB.e(263), zB.e(255), zB.e(268), zB.e(279), zB.e(316), zB.e(249), zB.e(267), zB.e(235)]).then((() => zB(61444))))).then((jB => jB.GLTF2Export.GLBAsync(yB, BB))).then((BB => {
-                  MB(), BB.downloadFiles(), jB()
+                })().then((() => Promise.all([ZB.e(237), ZB.e(236), ZB.e(258), ZB.e(259), ZB.e(256), ZB.e(266), ZB.e(260), ZB.e(265), ZB.e(263), ZB.e(255), ZB.e(268), ZB.e(279), ZB.e(316), ZB.e(249), ZB.e(267), ZB.e(235)]).then((() => ZB(61321))))).then((IB => IB.GLTF2Export.GLBAsync(qB, BB))).then((BB => {
+                  sB(), BB.downloadFiles(), IB()
                 })).catch((BB => {
-                  console.error("Error exporting GLB:", BB), MB(), jB()
+                  console.error("Error exporting GLB:", BB), sB(), IB()
                 }))
-              }), 100) : Promise.all([zB.e(237), zB.e(236), zB.e(258), zB.e(259), zB.e(256), zB.e(266), zB.e(260), zB.e(265), zB.e(263), zB.e(255), zB.e(268), zB.e(279), zB.e(316), zB.e(249), zB.e(267), zB.e(235)]).then((() => zB(61444))).then((zB => {
-                zB.GLTF2Export.GLBAsync(yB, BB).then((BB => {
-                  MB(), BB.downloadFiles(), jB()
+              }), 100) : Promise.all([ZB.e(237), ZB.e(236), ZB.e(258), ZB.e(259), ZB.e(256), ZB.e(266), ZB.e(260), ZB.e(265), ZB.e(263), ZB.e(255), ZB.e(268), ZB.e(279), ZB.e(316), ZB.e(249), ZB.e(267), ZB.e(235)]).then((() => ZB(61321))).then((ZB => {
+                ZB.GLTF2Export.GLBAsync(qB, BB).then((BB => {
+                  sB(), BB.downloadFiles(), IB()
                 })).catch((BB => {
-                  console.error("Error exporting GLB:", BB), MB(), jB()
+                  console.error("Error exporting GLB:", BB), sB(), IB()
                 }))
               })).catch((BB => {
-                console.error("Error importing serializers:", BB), MB(), jB()
+                console.error("Error importing serializers:", BB), sB(), IB()
               }))
             }
           })).catch((BB => {
-            console.error("Error downloading the scene:", BB), jB()
+            console.error("Error downloading the scene:", BB), IB()
           }))
-        } catch (JB) {
-          console.error("Error taking screenshot:", JB), jB()
+        } catch (NB) {
+          console.error("Error taking screenshot:", NB), IB()
         }
       }))
     }
-    const pB = new class {
+    const hB = new class {
       constructor() {
-        this.tools = UB.ALL_DEV_TOOLS
+        this.tools = cB.ALL_DEV_TOOLS
       }
-      downloadScene(BB, jB) {
-        return aB(BB, jB)
+      downloadScene(BB, IB) {
+        return nB(BB, IB)
       }
       async setAmbientLightIntensity(BB) {
         const {
-          Color3: jB
-        } = await Promise.all([zB.e(237), zB.e(241)]).then((() => zB(37372)));
-        (0, dB.g)().pm.aY().ambientColor = jB.FromArray([BB, BB, BB])
+          Color3: IB
+        } = await Promise.all([ZB.e(237), ZB.e(241)]).then((() => ZB(37304)));
+        (0, oB.h)().Ig.JR().ambientColor = IB.FromArray([BB, BB, BB])
       }
-      capturePhoto(BB, jB, zB) {
-        return function(BB, jB, zB, QB) {
-          return (0, NB.d)(uB(BB), jB, zB, QB)
-        }((0, dB.g)(), BB, jB, zB)
+      capturePhoto(BB, IB, ZB) {
+        return function(BB, IB, ZB, TB) {
+          return (0, vB.d)(kB(BB), IB, ZB, TB)
+        }((0, oB.h)(), BB, IB, ZB)
       }
     }
   },
-  41052: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => NB,
-      h: () => uB
+  40999: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => vB,
+      h: () => kB
     });
-    var QB = zB(1794);
-    const nB = 33177600,
-      dB = 3e4;
-    let IB = !1;
+    var TB = ZB(1821);
+    const JB = 33177600,
+      oB = 3e4;
+    let GB = !1;
 
-    function NB(BB, jB, zB) {
-      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function vB(BB, IB, ZB) {
+      let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: NB = 1,
-        type: uB = "image/png",
-        quality: UB
-      } = QB;
+        scale: vB = 1,
+        type: kB = "image/png",
+        quality: cB
+      } = TB;
       if (!BB.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (IB) return Promise.reject(new Error("A screenshot is already being taken"));
-      IB = !0;
-      const aB = function(BB, jB, zB) {
-        const QB = Math.max(1, BB),
-          dB = Math.max(1, jB),
-          IB = Math.min(1, zB / Math.max(QB, dB), Math.sqrt(nB / (QB * dB)));
+      if (GB) return Promise.reject(new Error("A screenshot is already being taken"));
+      GB = !0;
+      const nB = function(BB, IB, ZB) {
+        const TB = Math.max(1, BB),
+          oB = Math.max(1, IB),
+          GB = Math.min(1, ZB / Math.max(TB, oB), Math.sqrt(JB / (TB * oB)));
         return {
-          width: Math.max(1, Math.floor(QB * IB)),
-          height: Math.max(1, Math.floor(dB * IB))
+          width: Math.max(1, Math.floor(TB * GB)),
+          height: Math.max(1, Math.floor(oB * GB))
         }
-      }(jB, zB, BB.maxTextureSize);
-      return BB.resize(aB.width, aB.height, NB * aB.width / Math.max(1, jB)), new Promise(((jB, zB) => {
-        let QB, nB = 2,
-          NB = null;
-        const aB = () => {
-          var jB;
-          IB = !1, null === (jB = NB) || void 0 === jB || jB(), clearTimeout(QB), BB.restoreSize()
+      }(IB, ZB, BB.maxTextureSize);
+      return BB.resize(nB.width, nB.height, vB * nB.width / Math.max(1, IB)), new Promise(((IB, ZB) => {
+        let TB, JB = 2,
+          vB = null;
+        const nB = () => {
+          var IB;
+          GB = !1, null === (IB = vB) || void 0 === IB || IB(), clearTimeout(TB), BB.restoreSize()
         };
-        QB = setTimeout((() => {
-          aB(), zB(new Error("No frame was drawn to capture"))
-        }), dB), NB = BB.onFrameDrawn((() => {
-          if (nB--, nB > 0) return;
+        TB = setTimeout((() => {
+          nB(), ZB(new Error("No frame was drawn to capture"))
+        }), oB), vB = BB.onFrameDrawn((() => {
+          if (JB--, JB > 0) return;
           const {
-            canvas: QB
-          } = BB, dB = {
-            width: QB.width,
-            height: QB.height
+            canvas: TB
+          } = BB, oB = {
+            width: TB.width,
+            height: TB.height
           };
           try {
-            QB.toBlob((BB => {
-              BB ? jB({
+            TB.toBlob((BB => {
+              BB ? IB({
                 blob: BB,
-                ...dB
-              }) : zB(new Error("The canvas gave no image"))
-            }), uB, UB)
-          } catch (IB) {
-            zB(IB)
+                ...oB
+              }) : ZB(new Error("The canvas gave no image"))
+            }), kB, cB)
+          } catch (GB) {
+            ZB(GB)
           } finally {
-            aB()
+            nB()
           }
         }))
       }))
     }
-    async function uB(BB, jB, zB) {
+    async function kB(BB, IB, ZB) {
       try {
-        const nB = await NB(BB, jB, zB);
-        (0, QB.e)(nB.blob, `bloxd-screenshot-${nB.width}x${nB.height}-${Date.now()}.png`)
-      } catch (nB) {
-        console.error("Error taking screenshot:", nB)
+        const JB = await vB(BB, IB, ZB);
+        (0, TB.d)(JB.blob, `bloxd-screenshot-${JB.width}x${JB.height}-${Date.now()}.png`)
+      } catch (JB) {
+        console.error("Error taking screenshot:", JB)
       }
     }
   },
-  37647: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => UB,
-      e: () => NB,
-      i: () => IB
+  37613: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => cB,
+      h: () => vB,
+      i: () => GB
     });
-    var QB = zB(37640),
-      nB = zB(37655);
-    let dB = 0;
+    var TB = ZB(37609),
+      JB = ZB(37622);
+    let oB = 0;
 
-    function IB(BB, jB) {
-      const zB = BB;
-      zB._noaFaceGroups = null !== jB && void 0 !== jB ? jB : null, zB._noaFaceEpoch = -1, zB._noaFaceMask = -1, zB._noaFaceCount = -1, zB._noaFaceMaterial = null;
-      const QB = BB.cL;
-      QB && 1 === QB.length && (QB[0].indexStart = 0, QB[0].indexCount = BB.getTotalIndices())
+    function GB(BB, IB) {
+      const ZB = BB;
+      ZB._noaFaceGroups = null !== IB && void 0 !== IB ? IB : null, ZB._noaFaceEpoch = -1, ZB._noaFaceMask = -1, ZB._noaFaceCount = -1, ZB._noaFaceMaterial = null;
+      const TB = BB.EW;
+      TB && 1 === TB.length && (TB[0].indexStart = 0, TB[0].indexCount = BB.getTotalIndices())
     }
 
-    function NB(BB, jB) {
-      if (jB) {
-        dB++;
-        for (const jB of BB) {
-          const BB = jB._noaFaceGroups;
-          BB && IB(jB, BB)
+    function vB(BB, IB) {
+      if (IB) {
+        oB++;
+        for (const IB of BB) {
+          const BB = IB._noaFaceGroups;
+          BB && GB(IB, BB)
         }
-      } else dB = Math.max(0, dB - 1)
+      } else oB = Math.max(0, oB - 1)
     }
 
-    function uB(BB, jB, zB) {
-      let nB = -1,
-        dB = 0;
-      for (let IB = 0; IB < QB.d; IB++) {
-        const zB = BB[IB],
-          NB = BB[IB + 1];
-        NB > zB && jB & 1 << QB.c[IB] && (nB < 0 && (nB = zB), dB = NB)
+    function kB(BB, IB, ZB) {
+      let JB = -1,
+        oB = 0;
+      for (let GB = 0; GB < TB.g; GB++) {
+        const ZB = BB[GB],
+          vB = BB[GB + 1];
+        vB > ZB && IB & 1 << TB.c[GB] && (JB < 0 && (JB = ZB), oB = vB)
       }
-      return nB < 0 ? (zB[0] = 0, zB[1] = 0, 0) : (zB[0] = nB, zB[1] = dB - nB, dB - nB)
+      return JB < 0 ? (ZB[0] = 0, ZB[1] = 0, 0) : (ZB[0] = JB, ZB[1] = oB - JB, oB - JB)
     }
-    class UB {
-      constructor(BB, jB) {
-        this.ZJ = BB, this.engine = jB, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class cB {
+      constructor(BB, IB) {
+        this.YN = BB, this.engine = IB, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(BB, jB) {
-        if (!jB) return;
-        const zB = jB.getProjectionMatrix().m,
-          IB = 0 === dB && 0 === zB[15],
-          NB = jB.globalPosition,
+      apply(BB, IB) {
+        if (!IB) return;
+        const ZB = IB.getProjectionMatrix().m,
+          GB = 0 === oB && 0 === ZB[15],
+          vB = IB.globalPosition,
           {
-            engine: UB
+            engine: cB
           } = this,
-          aB = IB ? (0, nB.d)(zB, UB.getRenderWidth(), UB.getRenderHeight()) : 0;
-        NB.x === this.eyeX && NB.y === this.eyeY && NB.z === this.eyeZ && aB === this.focalPx && IB === this.culling || (this.epoch++, this.eyeX = NB.x, this.eyeY = NB.y, this.eyeZ = NB.z, this.focalPx = aB, this.culling = IB);
+          nB = GB ? (0, JB.e)(ZB, cB.getRenderWidth(), cB.getRenderHeight()) : 0;
+        vB.x === this.eyeX && vB.y === this.eyeY && vB.z === this.eyeZ && nB === this.focalPx && GB === this.culling || (this.epoch++, this.eyeX = vB.x, this.eyeY = vB.y, this.eyeZ = vB.z, this.focalPx = nB, this.culling = GB);
         const {
-          epoch: pB,
-          range: rB
-        } = this, sB = this.ZJ / 2, JB = sB * Math.sqrt(3), mB = BB.data, yB = BB.length;
-        let kB = 0;
-        for (let dB = 0; dB < yB; dB++) {
-          const BB = mB[dB],
-            jB = BB._noaFaceGroups;
-          if (jB && (BB._noaFaceEpoch !== pB || BB._noaFaceMaterial !== BB.material)) {
-            BB._noaFaceEpoch = pB, BB._noaFaceMaterial = BB.material;
-            const zB = BB.cL,
-              dB = zB && 1 === zB.length ? zB[0] : null;
-            let UB = -1;
-            if (IB && dB && (0, QB.x)(BB.material)) {
-              const zB = BB.position,
-                QB = NB.x - zB.x,
-                dB = NB.y - zB.y,
-                IB = NB.z - zB.z,
-                uB = QB - sB,
-                pB = dB - sB,
-                rB = IB - sB,
-                mB = Math.sqrt(uB * uB + pB * pB + rB * rB) + JB;
-              UB = (0, nB.j)(jB, QB, dB, IB, (0, nB.e)(mB, aB))
+          epoch: hB,
+          range: zB
+        } = this, FB = this.YN / 2, NB = FB * Math.sqrt(3), gB = BB.data, qB = BB.length;
+        let yB = 0;
+        for (let oB = 0; oB < qB; oB++) {
+          const BB = gB[oB],
+            IB = BB._noaFaceGroups;
+          if (IB && (BB._noaFaceEpoch !== hB || BB._noaFaceMaterial !== BB.material)) {
+            BB._noaFaceEpoch = hB, BB._noaFaceMaterial = BB.material;
+            const ZB = BB.EW,
+              oB = ZB && 1 === ZB.length ? ZB[0] : null;
+            let cB = -1;
+            if (GB && oB && (0, TB.r)(BB.material)) {
+              const ZB = BB.position,
+                TB = vB.x - ZB.x,
+                oB = vB.y - ZB.y,
+                GB = vB.z - ZB.z,
+                kB = TB - FB,
+                hB = oB - FB,
+                zB = GB - FB,
+                gB = Math.sqrt(kB * kB + hB * hB + zB * zB) + NB;
+              cB = (0, JB.l)(IB, TB, oB, GB, (0, JB.h)(gB, nB))
             }
-            if (dB && UB !== BB._noaFaceMask) {
-              BB._noaFaceMask = UB;
-              let zB = 0,
-                nB = jB[QB.d]; - 1 !== UB && (nB = uB(jB, UB, rB), zB = rB[0]), BB._noaFaceCount = nB, dB.indexStart = 6 * zB, dB.indexCount = 6 * nB, dB.setBoundingInfo(BB.rV())
+            if (oB && cB !== BB._noaFaceMask) {
+              BB._noaFaceMask = cB;
+              let ZB = 0,
+                JB = IB[TB.g]; - 1 !== cB && (JB = kB(IB, cB, zB), ZB = zB[0]), BB._noaFaceCount = JB, oB.indexStart = 6 * ZB, oB.indexCount = 6 * JB, oB.setBoundingInfo(BB.qm())
             }
           }
-          jB && 0 === BB._noaFaceCount || (mB[kB++] = BB)
+          IB && 0 === BB._noaFaceCount || (gB[yB++] = BB)
         }
-        BB.length = kB
+        BB.length = yB
       }
     }
   },
-  37629: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => uB,
-      f: () => NB
+  37594: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB,
+      c: () => vB
     });
-    const QB = new WeakSet;
-    let nB = 0;
-    const dB = new Set;
+    const TB = new WeakSet;
+    let JB = 0;
+    const oB = new Set;
 
-    function IB(BB, jB) {
-      BB._data = jB
+    function GB(BB, IB) {
+      BB._data = IB
     }
 
-    function NB(BB) {
-      var jB, zB;
-      (null !== (jB = null === (zB = BB.getBuffer()) || void 0 === zB ? void 0 : zB.Ep) && void 0 !== jB ? jB : 0) > 0 && (QB.add(BB), 0 === nB ? IB(BB, null) : dB.add(BB))
+    function vB(BB) {
+      var IB, ZB;
+      (null !== (IB = null === (ZB = BB.getBuffer()) || void 0 === ZB ? void 0 : ZB.ah) && void 0 !== IB ? IB : 0) > 0 && (TB.add(BB), 0 === JB ? GB(BB, null) : oB.add(BB))
     }
 
-    function uB(BB) {
-      nB++;
-      for (const zB of function(BB) {
-          const jB = new Set;
-          for (const nB of BB) {
-            const BB = nB.geometry;
-            for (const nB of Object.values(null !== (zB = null === BB || void 0 === BB ? void 0 : BB.getVertexBuffers()) && void 0 !== zB ? zB : {})) {
-              var zB;
-              const BB = nB.getWrapperBuffer();
-              QB.has(BB) && jB.add(BB)
+    function kB(BB) {
+      JB++;
+      for (const ZB of function(BB) {
+          const IB = new Set;
+          for (const JB of BB) {
+            const BB = JB.geometry;
+            for (const JB of Object.values(null !== (ZB = null === BB || void 0 === BB ? void 0 : BB.getVertexBuffers()) && void 0 !== ZB ? ZB : {})) {
+              var ZB;
+              const BB = JB.getWrapperBuffer();
+              TB.has(BB) && IB.add(BB)
             }
           }
-          return jB
-        }(BB)) zB.getData() || UB(zB), dB.add(zB);
-      let jB = !0;
+          return IB
+        }(BB)) ZB.getData() || cB(ZB), oB.add(ZB);
+      let IB = !0;
       return () => {
-        if (jB && (jB = !1, nB--, 0 === nB)) {
-          for (const BB of dB) IB(BB, null);
-          dB.clear()
+        if (IB && (IB = !1, JB--, 0 === JB)) {
+          for (const BB of oB) GB(BB, null);
+          oB.clear()
         }
       }
     }
 
-    function UB(BB) {
-      const jB = BB.getBuffer();
-      if (!jB || !(jB.Ep > 0)) return;
-      const zB = BB._engine,
-        QB = new Uint8Array(jB.Ep);
-      zB.bindArrayBuffer(jB), zB._gl.getBufferSubData(zB._gl.ARRAY_BUFFER, 0, QB), zB._resetVertexBufferBinding(), IB(BB, QB)
+    function cB(BB) {
+      const IB = BB.getBuffer();
+      if (!IB || !(IB.ah > 0)) return;
+      const ZB = BB._engine,
+        TB = new Uint8Array(IB.ah);
+      ZB.bindArrayBuffer(IB), ZB._gl.getBufferSubData(ZB._gl.ARRAY_BUFFER, 0, TB), ZB._resetVertexBufferBinding(), GB(BB, TB)
     }
   },
-  37640: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => IB,
-      d: () => dB,
-      h: () => uB,
-      l: () => QB,
-      p: () => NB,
-      t: () => nB,
-      x: () => UB
+  37609: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => GB,
+      g: () => oB,
+      h: () => kB,
+      l: () => TB,
+      o: () => vB,
+      p: () => JB,
+      r: () => cB
     });
-    const QB = 6,
-      nB = [0, 2, 4, 1, 3, 5, 0, 2],
-      dB = 6,
-      IB = [1, 0, 3, 2, 5, 4];
-    for (let aB = dB; aB < nB.length; aB++)
-      if (nB[aB] !== nB[aB - dB]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const NB = nB.length + 1,
-      uB = (() => {
+    const TB = 6,
+      JB = [0, 2, 4, 1, 3, 5, 0, 2],
+      oB = 6,
+      GB = [1, 0, 3, 2, 5, 4];
+    for (let nB = oB; nB < JB.length; nB++)
+      if (JB[nB] !== JB[nB - oB]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const vB = JB.length + 1,
+      kB = (() => {
         const BB = [];
-        for (let jB = 0; jB < dB; jB++) BB[nB[jB]] = jB;
+        for (let IB = 0; IB < oB; IB++) BB[JB[IB]] = IB;
         return BB
       })();
 
-    function UB(BB) {
+    function cB(BB) {
       return !!BB && BB.backFaceCulling && (0 === BB.transparencyMode || 1 === BB.transparencyMode)
     }
   },
-  37655: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => NB,
-      e: () => uB,
-      f: () => aB,
-      j: () => UB,
-      k: () => JB
+  37622: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => vB,
+      h: () => kB,
+      i: () => nB,
+      l: () => cB,
+      p: () => NB
     });
-    var QB = zB(37640);
-    const nB = 1 / 16,
-      dB = 1 / 64,
-      IB = 2048;
-    QB.l;
+    var TB = ZB(37609);
+    const JB = 1 / 16,
+      oB = 1 / 64,
+      GB = 2048;
+    TB.l;
 
-    function NB(BB, jB, zB) {
-      return Math.min(Math.abs(BB[0] * jB), Math.abs(BB[5] * zB)) / 2
+    function vB(BB, IB, ZB) {
+      return Math.min(Math.abs(BB[0] * IB), Math.abs(BB[5] * ZB)) / 2
     }
 
-    function uB(BB, jB) {
-      return nB + dB * BB * BB / jB
+    function kB(BB, IB) {
+      return JB + oB * BB * BB / IB
     }
 
-    function UB(BB, jB, zB, nB, dB) {
-      const IB = QB.p;
-      return aB(BB[IB], BB[IB + 1], BB[IB + 2], BB[IB + 3], BB[IB + 4], BB[IB + 5], jB, zB, nB, dB)
+    function cB(BB, IB, ZB, JB, oB) {
+      const GB = TB.o;
+      return nB(BB[GB], BB[GB + 1], BB[GB + 2], BB[GB + 3], BB[GB + 4], BB[GB + 5], IB, ZB, JB, oB)
     }
 
-    function aB(BB, jB, zB, QB, nB, dB, IB, NB, uB, UB) {
-      return (IB <= BB - UB ? 0 : 1) | (IB >= jB + UB ? 0 : 2) | (NB <= zB - UB ? 0 : 4) | (NB >= QB + UB ? 0 : 8) | (uB <= nB - UB ? 0 : 16) | (uB >= dB + UB ? 0 : 32)
+    function nB(BB, IB, ZB, TB, JB, oB, GB, vB, kB, cB) {
+      return (GB <= BB - cB ? 0 : 1) | (GB >= IB + cB ? 0 : 2) | (vB <= ZB - cB ? 0 : 4) | (vB >= TB + cB ? 0 : 8) | (kB <= JB - cB ? 0 : 16) | (kB >= oB + cB ? 0 : 32)
     }
-    const pB = (() => {
+    const hB = (() => {
         const BB = [];
-        for (let jB = 0; jB < QB.t.length; jB++) {
-          let zB = 0;
-          for (let nB = jB + 1; nB <= QB.t.length; nB++) {
-            const dB = 1 << QB.t[nB - 1];
-            if (zB & dB) break;
-            zB |= dB, BB.push({
-              start: jB,
-              end: nB,
-              Mz: zB
+        for (let IB = 0; IB < TB.p.length; IB++) {
+          let ZB = 0;
+          for (let JB = IB + 1; JB <= TB.p.length; JB++) {
+            const oB = 1 << TB.p[JB - 1];
+            if (ZB & oB) break;
+            ZB |= oB, BB.push({
+              start: IB,
+              end: JB,
+              QZ: ZB
             })
           }
         }
         return BB
       })(),
-      rB = [];
+      zB = [];
 
-    function sB(BB, jB) {
-      const zB = QB.h[jB];
-      return BB[zB + 1] - BB[zB]
+    function FB(BB, IB) {
+      const ZB = TB.h[IB];
+      return BB[ZB + 1] - BB[ZB]
     }
 
-    function JB(BB, jB, zB) {
-      let nB = 0;
-      for (let IB = 0; IB < QB.l; IB++) sB(BB, IB) > 0 && (nB |= 1 << IB);
-      if (0 === (jB &= nB)) return 0;
-      if (jB === nB) return zB[0] = 0, zB[1] = BB[QB.d], 1;
-      let dB = null,
-        NB = 1 / 0;
-      for (const UB of function(BB) {
-          let jB = rB[BB];
-          if (jB) return jB;
-          const zB = new Map,
-            QB = (BB, jB) => {
-              const QB = 4 * BB + jB.length / 2;
-              zB.has(QB) || zB.set(QB, {
-                Mz: BB,
-                windows: jB
+    function NB(BB, IB, ZB) {
+      let JB = 0;
+      for (let GB = 0; GB < TB.l; GB++) FB(BB, GB) > 0 && (JB |= 1 << GB);
+      if (0 === (IB &= JB)) return 0;
+      if (IB === JB) return ZB[0] = 0, ZB[1] = BB[TB.g], 1;
+      let oB = null,
+        vB = 1 / 0;
+      for (const cB of function(BB) {
+          let IB = zB[BB];
+          if (IB) return IB;
+          const ZB = new Map,
+            TB = (BB, IB) => {
+              const TB = 4 * BB + IB.length / 2;
+              ZB.has(TB) || ZB.set(TB, {
+                QZ: BB,
+                windows: IB
               })
             };
-          for (const dB of pB)
-            if ((dB.Mz & BB) === BB && QB(dB.Mz, [dB.start, dB.end]), 0 !== (dB.Mz & BB))
-              for (const jB of pB) jB.start < dB.end || 0 !== (dB.Mz & jB.Mz) || 0 === (jB.Mz & BB) || ((dB.Mz | jB.Mz) & BB) !== BB || QB(dB.Mz | jB.Mz, [dB.start, dB.end, jB.start, jB.end]);
-          const nB = [...zB.values()];
-          return jB = nB.filter((BB => !nB.some((jB => jB !== BB && (jB.Mz & BB.Mz) === jB.Mz && jB.windows.length <= BB.windows.length)))), rB[BB] = jB, jB
-        }(jB)) {
-        let zB = (UB.windows.length / 2 - 1) * IB;
-        const uB = UB.Mz & ~jB & nB;
-        for (let jB = 0; jB < QB.l; jB++) uB & 1 << jB && (zB += sB(BB, jB));
-        zB < NB && (dB = UB, NB = zB)
+          for (const oB of hB)
+            if ((oB.QZ & BB) === BB && TB(oB.QZ, [oB.start, oB.end]), 0 !== (oB.QZ & BB))
+              for (const IB of hB) IB.start < oB.end || 0 !== (oB.QZ & IB.QZ) || 0 === (IB.QZ & BB) || ((oB.QZ | IB.QZ) & BB) !== BB || TB(oB.QZ | IB.QZ, [oB.start, oB.end, IB.start, IB.end]);
+          const JB = [...ZB.values()];
+          return IB = JB.filter((BB => !JB.some((IB => IB !== BB && (IB.QZ & BB.QZ) === IB.QZ && IB.windows.length <= BB.windows.length)))), zB[BB] = IB, IB
+        }(IB)) {
+        let ZB = (cB.windows.length / 2 - 1) * GB;
+        const kB = cB.QZ & ~IB & JB;
+        for (let IB = 0; IB < TB.l; IB++) kB & 1 << IB && (ZB += FB(BB, IB));
+        ZB < vB && (oB = cB, vB = ZB)
       }
-      const uB = dB.windows;
-      for (let QB = 0; QB < uB.length; QB += 2) {
-        const jB = BB[uB[QB]];
-        zB[QB] = jB, zB[QB + 1] = BB[uB[QB + 1]] - jB
+      const kB = oB.windows;
+      for (let TB = 0; TB < kB.length; TB += 2) {
+        const IB = BB[kB[TB]];
+        ZB[TB] = IB, ZB[TB + 1] = BB[kB[TB + 1]] - IB
       }
-      return uB.length / 2
+      return kB.length / 2
     }
   }
 };

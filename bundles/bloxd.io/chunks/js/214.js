@@ -1,98 +1,98 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  40898: (BB, jB, zB) => {
-    function QB(BB, jB, zB) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(BB, jB).getContext("2d", zB);
-      const QB = document.createElement("canvas");
-      return QB.width = BB, QB.height = jB, QB.getContext("2d", zB)
+  40846: (BB, IB, ZB) => {
+    function TB(BB, IB, ZB) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(BB, IB).getContext("2d", ZB);
+      const TB = document.createElement("canvas");
+      return TB.width = BB, TB.height = IB, TB.getContext("2d", ZB)
     }
 
-    function nB(BB, jB) {
-      return BB.getContext("2d", jB)
+    function JB(BB, IB) {
+      return BB.getContext("2d", IB)
     }
-    zB.d(jB, {
-      e: () => nB,
-      g: () => QB
+    ZB.d(IB, {
+      b: () => JB,
+      f: () => TB
     })
   },
-  40865: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => NB
+  40811: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => vB
     });
-    const QB = 1 << 20,
-      nB = 1 << 21,
-      dB = 1024,
-      IB = 2048;
+    const TB = 1 << 20,
+      JB = 1 << 21,
+      oB = 1024,
+      GB = 2048;
 
-    function NB(BB, jB, zB) {
-      const NB = BB + QB,
-        uB = jB + dB,
-        UB = zB + QB;
-      return NB < 0 || NB >= nB || UB < 0 || UB >= nB || uB < 0 || uB >= IB ? -1 : (NB * nB + UB) * IB + uB
+    function vB(BB, IB, ZB) {
+      const vB = BB + TB,
+        kB = IB + oB,
+        cB = ZB + TB;
+      return vB < 0 || vB >= JB || cB < 0 || cB >= JB || kB < 0 || kB >= GB ? -1 : (vB * JB + cB) * GB + kB
     }
   },
-  40856: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB,
-      d: () => IB,
-      h: () => nB,
-      j: () => dB,
-      l: () => aB,
-      p: () => UB,
-      q: () => uB,
-      r: () => NB
+  40804: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB,
+      h: () => GB,
+      k: () => JB,
+      o: () => oB,
+      r: () => nB,
+      t: () => cB,
+      u: () => kB,
+      v: () => vB
     });
-    zB(3577);
-    zB(40865);
+    ZB(3649);
+    ZB(40811);
 
-    function QB(BB) {}
+    function TB(BB) {}
+
+    function JB(BB) {}
+
+    function oB(BB) {}
+
+    function GB(BB) {}
+
+    function vB(BB) {}
+
+    function kB(BB, IB, ZB) {}
+
+    function cB(BB) {}
 
     function nB(BB) {}
-
-    function dB(BB) {}
-
-    function IB(BB) {}
-
-    function NB(BB) {}
-
-    function uB(BB, jB, zB) {}
-
-    function UB(BB) {}
-
-    function aB(BB) {}
   },
-  40854: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => LB,
-      f: () => JB,
-      h: () => xB,
-      l: () => fB,
-      m: () => DB,
-      o: () => FB,
-      q: () => GB,
-      r: () => yB,
-      t: () => kB,
-      u: () => qB,
-      w: () => WB,
-      x: () => SB,
-      A: () => ZB,
-      B: () => wB,
-      C: () => YB,
-      F: () => hB
+  40801: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => WB,
+      d: () => NB,
+      h: () => tB,
+      k: () => iB,
+      m: () => HB,
+      o: () => MB,
+      r: () => UB,
+      s: () => qB,
+      w: () => yB,
+      A: () => YB,
+      D: () => uB,
+      H: () => QB,
+      J: () => mB,
+      K: () => AB,
+      O: () => jB,
+      R: () => RB
     });
-    var QB = zB(4887),
-      nB = zB(40730),
-      dB = (zB(40856), zB(12));
-    class IB {
-      constructor(BB, jB) {
-        this.memory = BB, this.access = jB, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.Ep = 0, this.u32 = new dB.h(0), this.f32 = new dB.e(0), this.u8 = new dB.d(0), this.dataView = new dB.g(new ArrayBuffer(0)), this.refresh()
+    var TB = ZB(4969),
+      JB = ZB(40701),
+      oB = (ZB(40804), ZB(11));
+    class GB {
+      constructor(BB, IB) {
+        this.memory = BB, this.access = IB, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.ah = 0, this.u32 = new oB.j(0), this.f32 = new oB.e(0), this.u8 = new oB.d(0), this.dataView = new oB.h(new ArrayBuffer(0)), this.refresh()
       }
       refresh() {
-        this.ptr = this.access.ptr(), this.Ep = this.access.Ep(), this.buffer = (0, dB.P)(this.memory()), this.u32 = new dB.h(this.buffer, this.ptr, this.Ep >>> 2), this.f32 = new dB.e(this.buffer, this.ptr, this.Ep >>> 2), this.u8 = new dB.d(this.buffer, this.ptr, this.Ep), this.dataView = new dB.g(this.buffer, this.ptr, this.Ep)
+        this.ptr = this.access.ptr(), this.ah = this.access.ah(), this.buffer = (0, oB.E)(this.memory()), this.u32 = new oB.j(this.buffer, this.ptr, this.ah >>> 2), this.f32 = new oB.e(this.buffer, this.ptr, this.ah >>> 2), this.u8 = new oB.d(this.buffer, this.ptr, this.ah), this.dataView = new oB.h(this.buffer, this.ptr, this.ah)
       }
       ensureViews() {
-        (0, dB.P)(this.memory()) !== this.buffer && this.refresh()
+        (0, oB.E)(this.memory()) !== this.buffer && this.refresh()
       }
       get view() {
         return this.ensureViews(), this.dataView
@@ -101,202 +101,202 @@ export const modules = {
         return !!this.fits(BB) || (this.dropped++, !1)
       }
       fits(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
         this.ensureViews();
-        const zB = jB + BB;
-        return zB <= this.Ep || zB <= QB.Ec && 0 !== this.access.reserve(zB) && (this.refresh(), zB <= this.Ep)
+        const ZB = IB + BB;
+        return ZB <= this.ah || ZB <= TB.Qc && 0 !== this.access.reserve(ZB) && (this.refresh(), ZB <= this.ah)
       }
       consume(BB) {
-        const jB = this.cursor - BB;
-        jB > 0 && BB > 0 && (this.ensureViews(), this.u8.copyWithin(0, BB, this.cursor)), this.cursor = jB > 0 ? jB : 0
+        const IB = this.cursor - BB;
+        IB > 0 && BB > 0 && (this.ensureViews(), this.u8.copyWithin(0, BB, this.cursor)), this.cursor = IB > 0 ? IB : 0
       }
-      writeRecord(BB, jB, zB, nB, dB) {
-        if (!this.room(QB.nb)) return !1;
-        const IB = this.cursor >>> 2;
-        return this.u32[IB] = 65535 & BB | (65535 & jB) << 16, this.f32[IB + 1] = zB, this.f32[IB + 2] = nB, this.u32[IB + 3] = dB >>> 0, this.cursor += QB.nb, !0
+      writeRecord(BB, IB, ZB, JB, oB) {
+        if (!this.room(TB.ub)) return !1;
+        const GB = this.cursor >>> 2;
+        return this.u32[GB] = 65535 & BB | (65535 & IB) << 16, this.f32[GB + 1] = ZB, this.f32[GB + 2] = JB, this.u32[GB + 3] = oB >>> 0, this.cursor += TB.ub, !0
       }
-      writeOptions(BB, jB) {
-        const zB = jB.byteLength,
-          nB = QB.nb + (0, QB.ie)(zB);
-        if (!this.fits(nB)) return !1;
-        const dB = this.cursor,
-          IB = dB >>> 2;
-        this.u32[IB] = QB.pb.Options, this.u32[IB + 1] = zB, this.u32[IB + 2] = 0, this.u32[IB + 3] = BB >>> 0;
-        const NB = dB + QB.nb;
-        return this.u8.set(jB, NB), this.u8.fill(0, NB + zB, dB + nB), this.cursor += nB, !0
+      writeOptions(BB, IB) {
+        const ZB = IB.byteLength,
+          JB = TB.ub + (0, TB.xe)(ZB);
+        if (!this.fits(JB)) return !1;
+        const oB = this.cursor,
+          GB = oB >>> 2;
+        this.u32[GB] = TB.vb.Options, this.u32[GB + 1] = ZB, this.u32[GB + 2] = 0, this.u32[GB + 3] = BB >>> 0;
+        const vB = oB + TB.ub;
+        return this.u8.set(IB, vB), this.u8.fill(0, vB + ZB, oB + JB), this.cursor += JB, !0
       }
-      writeWorkerRecord(BB, jB, zB, nB, dB, IB) {
-        const NB = IB.byteLength,
-          uB = QB.Bd + (0, QB.ie)(NB);
-        if (NB > QB.Ad) return this.dropped++, !1;
-        if (!this.room(uB)) return !1;
-        const UB = this.cursor,
-          aB = UB >>> 2;
-        this.u32[aB] = BB >>> 0, this.u32[aB + 1] = 65535 & jB | (65535 & zB) << 16, this.u32[aB + 2] = nB >>> 0, this.u32[aB + 3] = dB >>> 0, this.u32[aB + 4] = NB;
-        const pB = UB + QB.Bd;
-        return this.u8.set(IB, pB), this.u8.fill(0, pB + NB, UB + uB), this.cursor += uB, !0
+      writeWorkerRecord(BB, IB, ZB, JB, oB, GB) {
+        const vB = GB.byteLength,
+          kB = TB.Qd + (0, TB.xe)(vB);
+        if (vB > TB.Nd) return this.dropped++, !1;
+        if (!this.room(kB)) return !1;
+        const cB = this.cursor,
+          nB = cB >>> 2;
+        this.u32[nB] = BB >>> 0, this.u32[nB + 1] = 65535 & IB | (65535 & ZB) << 16, this.u32[nB + 2] = JB >>> 0, this.u32[nB + 3] = oB >>> 0, this.u32[nB + 4] = vB;
+        const hB = cB + TB.Qd;
+        return this.u8.set(GB, hB), this.u8.fill(0, hB + vB, cB + kB), this.cursor += kB, !0
       }
       written() {
         return this.ensureViews(), this.u8.subarray(0, this.cursor)
       }
-      writeFrame(BB, jB) {
-        return this.writeNet(QB.Tb.Frame, BB, jB)
+      writeFrame(BB, IB) {
+        return this.writeNet(TB.Yb.Frame, BB, IB)
       }
       writeOpen(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(QB.Tb.Open, BB, uB(jB))
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(TB.Yb.Open, BB, kB(IB))
       }
       writeClose(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(QB.Tb.Close, BB, uB(jB))
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(TB.Yb.Close, BB, kB(IB))
       }
-      writeNet(BB, jB, zB) {
-        const nB = zB.byteLength,
-          dB = QB.Rb + (0, QB.ie)(nB);
-        if (nB > QB.Mb) return this.dropped++, !1;
-        if (!this.room(dB)) return !1;
-        const IB = this.cursor;
-        this.u32[IB >>> 2] = nB, this.u32[1 + (IB >>> 2)] = (0, QB.de)(BB, jB);
-        const NB = IB + QB.Rb;
-        return this.u8.set(zB, NB), this.u8.fill(0, NB + nB, IB + dB), this.cursor += dB, !0
+      writeNet(BB, IB, ZB) {
+        const JB = ZB.byteLength,
+          oB = TB.Wb + (0, TB.xe)(JB);
+        if (JB > TB.Qb) return this.dropped++, !1;
+        if (!this.room(oB)) return !1;
+        const GB = this.cursor;
+        this.u32[GB >>> 2] = JB, this.u32[1 + (GB >>> 2)] = (0, TB.re)(BB, IB);
+        const vB = GB + TB.Wb;
+        return this.u8.set(ZB, vB), this.u8.fill(0, vB + JB, GB + oB), this.cursor += oB, !0
       }
-      Ds(BB, jB, zB) {
-        const nB = QB.u + (0, QB.ie)(zB);
-        if (!this.room(nB)) return -1;
-        const dB = this.cursor;
-        this.u32[dB >>> 2] = 65535 & BB | (65535 & jB) << 16, this.u32[1 + (dB >>> 2)] = zB;
-        const IB = dB + QB.u;
-        return this.u8.fill(0, IB, dB + nB), this.cursor += nB, IB
+      QF(BB, IB, ZB) {
+        const JB = TB.s + (0, TB.xe)(ZB);
+        if (!this.room(JB)) return -1;
+        const oB = this.cursor;
+        this.u32[oB >>> 2] = 65535 & BB | (65535 & IB) << 16, this.u32[1 + (oB >>> 2)] = ZB;
+        const GB = oB + TB.s;
+        return this.u8.fill(0, GB, oB + JB), this.cursor += JB, GB
       }
       growForCmd(BB) {
-        return this.fits(QB.u + (0, QB.ie)(BB), 0)
+        return this.fits(TB.s + (0, TB.xe)(BB), 0)
       }
-      writeCmd(BB, jB, zB) {
-        const QB = this.Ds(BB, jB, zB.byteLength);
-        return !(QB < 0) && (this.u8.set(zB, QB), !0)
+      writeCmd(BB, IB, ZB) {
+        const TB = this.QF(BB, IB, ZB.byteLength);
+        return !(TB < 0) && (this.u8.set(ZB, TB), !0)
       }
-      copyWritten(BB, jB) {
-        return this.ensureViews(), this.u8.slice(BB, BB + jB)
+      copyWritten(BB, IB) {
+        return this.ensureViews(), this.u8.slice(BB, BB + IB)
       }
     }
-    const NB = new dB.d(0);
+    const vB = new oB.d(0);
 
-    function uB(BB) {
-      if (0 === BB) return NB;
-      const jB = new dB.d(QB.Nb);
-      for (let zB = 0; zB < QB.Nb; zB++) jB[zB] = BB >>> 8 * zB & 255;
-      return jB
+    function kB(BB) {
+      if (0 === BB) return vB;
+      const IB = new oB.d(TB.Sb);
+      for (let ZB = 0; ZB < TB.Sb; ZB++) IB[ZB] = BB >>> 8 * ZB & 255;
+      return IB
     }
-    class UB {
-      constructor(BB, jB) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new IB(jB, {
-          ptr: () => BB.Pp(),
-          Ep: () => BB.HdB(),
-          reserve: jB => BB.WdB(jB)
-        }), this.net = new IB(jB, {
-          ptr: () => BB.AdB(),
-          Ep: () => BB.ZdB(),
-          reserve: jB => BB.edB(jB)
-        }), this.worker = new IB(jB, {
-          ptr: () => BB.aIB(),
-          Ep: () => BB.UIB(),
-          reserve: jB => BB.ldB(jB)
-        }), this.cmd = new IB(jB, {
-          ptr: () => BB.LdB(),
-          Ep: () => BB.kdB(),
-          reserve: jB => BB.GdB(jB)
+    class cB {
+      constructor(BB, IB) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new GB(IB, {
+          ptr: () => BB.Ah(),
+          ah: () => BB.oGB(),
+          reserve: IB => BB.qGB(IB)
+        }), this.net = new GB(IB, {
+          ptr: () => BB.FGB(),
+          ah: () => BB.zGB(),
+          reserve: IB => BB.yGB(IB)
+        }), this.worker = new GB(IB, {
+          ptr: () => BB.eGB(),
+          ah: () => BB.LGB(),
+          reserve: IB => BB.UGB(IB)
+        }), this.cmd = new GB(IB, {
+          ptr: () => BB.DoB(),
+          ah: () => BB.xoB(),
+          reserve: IB => BB.EoB(IB)
         })
       }
-      reset(BB, jB, zB) {
-        this.input.consume(BB), this.worker.consume(jB), this.cmd.consume(zB)
+      reset(BB, IB, ZB) {
+        this.input.consume(BB), this.worker.consume(IB), this.cmd.consume(ZB)
       }
     }
-    var aB = zB(36347),
-      pB = zB(2491),
-      rB = zB(4879),
-      sB = zB(40867);
-    const JB = "coreFrame",
-      mB = "fatalStatus",
-      yB = "otherCall",
-      kB = "coreRings",
-      GB = "netIn",
-      LB = "abi",
-      gB = "netOut",
-      tB = "workerOut",
-      SB = "worldgenHost",
-      MB = "eventWalker",
-      EB = "netEvent",
-      iB = "envEvent",
-      qB = "sharedTables",
-      fB = "inputAction",
-      oB = "frameSends",
-      HB = new Set([MB, EB, iB, oB, fB, qB]),
-      DB = "wasmMemory",
-      FB = "meshHost";
+    var nB = ZB(36297),
+      hB = ZB(2489),
+      zB = ZB(4960),
+      FB = ZB(40816);
+    const NB = "coreFrame",
+      gB = "fatalStatus",
+      qB = "otherCall",
+      yB = "coreRings",
+      UB = "netIn",
+      WB = "abi",
+      dB = "netOut",
+      CB = "workerOut",
+      QB = "worldgenHost",
+      sB = "eventWalker",
+      wB = "netEvent",
+      OB = "envEvent",
+      YB = "sharedTables",
+      iB = "inputAction",
+      pB = "frameSends",
+      aB = new Set([sB, wB, OB, pB, iB, YB]),
+      HB = "wasmMemory",
+      MB = "meshHost";
 
-    function YB(BB, jB) {
-      BB.forEachWorkerOut(((zB, nB, dB) => {
-        if ((0, QB.Wd)(zB)) try {
-          var IB;
-          null === (IB = jB.worldgen) || void 0 === IB || IB.take(zB, dB)
-        } catch (uB) {
-          BB.crash(SB, uB)
+    function jB(BB, IB) {
+      BB.forEachWorkerOut(((ZB, JB, oB) => {
+        if ((0, TB.ie)(ZB)) try {
+          var GB;
+          null === (GB = IB.worldgen) || void 0 === GB || GB.take(ZB, oB)
+        } catch (kB) {
+          BB.crash(QB, kB)
         } else try {
-          var NB;
-          null === (NB = jB.mesh) || void 0 === NB || NB.take(zB, nB, dB)
-        } catch (uB) {
-          BB.crash(FB, uB)
+          var vB;
+          null === (vB = IB.mesh) || void 0 === vB || vB.take(ZB, JB, oB)
+        } catch (kB) {
+          BB.crash(MB, kB)
         }
       }))
     }
-    const VB = 1048576;
+    const PB = 1048576;
 
-    function hB(BB, jB) {
-      let zB = !1;
-      const QB = () => {
-        zB = !1, jB()
+    function RB(BB, IB) {
+      let ZB = !1;
+      const TB = () => {
+        ZB = !1, IB()
       };
       return () => {
-        !zB && BB.cursor >= VB && (zB = !0, queueMicrotask(QB))
+        !ZB && BB.cursor >= PB && (ZB = !0, queueMicrotask(TB))
       }
     }
-    const XB = new Set([mB, yB, SB, FB]);
+    const rB = new Set([gB, qB, QB, MB]);
 
-    function ZB(BB) {
-      return HB.has(BB.site) ? BB.error instanceof WebAssembly.RuntimeError || (0, nB.l)(BB.error) : !XB.has(BB.site) && BB.error instanceof Error
+    function mB(BB) {
+      return aB.has(BB.site) ? BB.error instanceof WebAssembly.RuntimeError || (0, JB.n)(BB.error) : !rB.has(BB.site) && BB.error instanceof Error
     }
-    const AB = "events",
-      TB = [],
-      PB = "debugLog",
-      WB = "terrainTextures",
-      eB = "sunShadowTextures",
+    const XB = "events",
+      LB = [],
+      eB = "debugLog",
+      uB = "terrainTextures",
+      fB = "sunShadowTextures",
       lB = new TextDecoder;
 
-    function wB(BB, jB) {
+    function AB(BB, IB) {
       const {
-        site: zB,
-        error: nB,
-        header: dB
-      } = BB, IB = dB ? (0, QB.Od)(dB.lastError) : "noFrame", NB = `CORE-${zB===mB?IB:zB}`, uB = null === nB || void 0 === nB ? "" : ` ${(0,aB.m)(nB)}`, UB = {
-        site: zB,
-        wasmBuild: jB.wasm,
-        clientVersion: jB.client
+        site: ZB,
+        error: JB,
+        header: oB
+      } = BB, GB = oB ? (0, TB.fe)(oB.lastError) : "noFrame", vB = `CORE-${ZB===gB?GB:ZB}`, kB = null === JB || void 0 === JB ? "" : ` ${(0,nB.k)(JB)}`, cB = {
+        site: ZB,
+        wasmBuild: IB.wasm,
+        clientVersion: IB.client
       };
-      return dB && (UB.status = String(dB.status), UB.lastError = IB, UB.lastErrorCode = String(dB.lastError), UB.lastErrorDetail = String(dB.lastErrorDetail), UB.errorCount = String(dB.errorCount), UB.frameIndex = String(dB.frameIndex), UB.tickIndex = String(dB.tickIndex)), {
-        code: NB,
-        message: `core ${zB}, last error ${IB};${uB}`,
-        details: UB
+      return oB && (cB.status = String(oB.status), cB.lastError = GB, cB.lastErrorCode = String(oB.lastError), cB.lastErrorDetail = String(oB.lastErrorDetail), cB.errorCount = String(oB.errorCount), cB.frameIndex = String(oB.frameIndex), cB.tickIndex = String(oB.tickIndex)), {
+        code: vB,
+        message: `core ${ZB}, last error ${GB};${kB}`,
+        details: cB
       }
     }
-    class xB {
-      constructor(BB, jB, zB) {
-        this.core = BB, this.memory = jB, this.handlers = zB, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+    class tB {
+      constructor(BB, IB, ZB) {
+        this.core = BB, this.memory = IB, this.handlers = ZB, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
           ptr: 0,
           len: 0,
-          net: TB,
+          net: LB,
           netOffsets: this.netOffsets,
           kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new UB(BB, jB)
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new cB(BB, IB)
       }
       get netKeptFrames() {
         return this.keptFrames
@@ -310,113 +310,113 @@ export const modules = {
       framePaces(BB) {
         if (this.stopped || this.drawsHeld) return !1;
         try {
-          return this.core.qdB(BB)
-        } catch (jB) {
-          return this.crash(JB, jB), !1
+          return this.core.ZGB(BB)
+        } catch (IB) {
+          return this.crash(NB, IB), !1
         }
       }
       get isStopped() {
         return this.stopped
       }
-      frame(BB, jB) {
-        var zB;
-        let dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      frame(BB, IB) {
+        var ZB;
+        let oB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this.stopped) return !1;
         if (!this.writePendingInput()) return !1;
         const {
-          input: IB,
-          net: NB,
-          worker: uB,
-          cmd: UB
-        } = this.rings, aB = NB.cursor, pB = jB && !this.drawsHeld;
-        let yB = QB.K.Fatal;
-        const kB = IB.cursor,
-          LB = uB.cursor,
-          gB = UB.cursor;
-        let tB, SB = null;
-        const iB = this.handlers.onSends;
+          input: GB,
+          net: vB,
+          worker: kB,
+          cmd: cB
+        } = this.rings, nB = vB.cursor, hB = IB && !this.drawsHeld;
+        let qB = TB.L.Fatal;
+        const yB = GB.cursor,
+          WB = kB.cursor,
+          dB = cB.cursor;
+        let CB, QB = null;
+        const OB = this.handlers.onSends;
         try {
-          const jB = (pB ? QB._.Draws : 0) | (dB ? QB._.NetAll : 0) | (iB ? QB._.StopForSends : 0);
-          yB = (0, sB.c)((() => {
-            let zB = this.core.frame(BB, kB, NB.cursor, LB, jB, gB);
-            for (; zB === QB.jd && iB;) {
-              var nB;
-              if (tB ??= null === (nB = this.gameHost) || void 0 === nB ? void 0 : nB.takeFault(), void 0 === tB && !this.takeSends(iB)) return QB.K.Fatal;
-              zB = this.core.Cy()
+          const IB = (hB ? TB.cb.Draws : 0) | (oB ? TB.cb.NetAll : 0) | (OB ? TB.cb.StopForSends : 0);
+          qB = (0, FB.h)((() => {
+            let ZB = this.core.frame(BB, yB, vB.cursor, WB, IB, dB);
+            for (; ZB === TB.ud && OB;) {
+              var JB;
+              if (CB ??= null === (JB = this.gameHost) || void 0 === JB ? void 0 : JB.takeFault(), void 0 === CB && !this.takeSends(OB)) return TB.L.Fatal;
+              ZB = this.core.Xq()
             }
-            return zB
+            return ZB
           }))
         } catch (lB) {
-          SB = {
+          QB = {
             error: lB
           }
         }
-        tB ??= null === (zB = this.gameHost) || void 0 === zB ? void 0 : zB.takeFault();
-        const qB = this.stopped || null !== SB || void 0 !== tB;
-        this.rings.reset(qB ? IB.cursor : kB, qB ? uB.cursor : LB, qB ? UB.cursor : gB);
-        const fB = null === SB && void 0 === tB,
-          oB = fB && !this.stopped && yB === QB.K.Fatal && 0 === this.core.Fs(),
-          HB = fB && !oB ? this.headerView() : null,
-          DB = oB ? {
-            ...null !== (FB = this.lastHeader) && void 0 !== FB ? FB : (0, QB.le)(new Uint32Array(QB.fb)),
-            status: QB.K.Fatal,
-            lastError: QB.J.CoreBusy,
+        CB ??= null === (ZB = this.gameHost) || void 0 === ZB ? void 0 : ZB.takeFault();
+        const YB = this.stopped || null !== QB || void 0 !== CB;
+        this.rings.reset(YB ? GB.cursor : yB, YB ? kB.cursor : WB, YB ? cB.cursor : dB);
+        const iB = null === QB && void 0 === CB,
+          pB = iB && !this.stopped && qB === TB.L.Fatal && 0 === this.core.sF(),
+          aB = iB && !pB ? this.headerView() : null,
+          HB = pB ? {
+            ...null !== (MB = this.lastHeader) && void 0 !== MB ? MB : (0, TB.ze)(new Uint32Array(TB.kb)),
+            status: TB.L.Fatal,
+            lastError: TB.K.CoreBusy,
             lastErrorDetail: 0
-          } : null === HB ? null : (0, QB.le)(HB);
-        var FB;
-        null !== DB && (this.lastHeader = DB);
-        const YB = null !== DB && yB !== QB.K.Fatal,
-          VB = YB && null !== HB ? HB[QB.jb.NetInKept] : 0,
-          hB = YB && VB <= aB && VB % 4 === 0 ? VB : null;
-        var XB, ZB;
-        null !== DB && null !== hB && yB === QB.K.Errors && (null === (XB = (ZB = this.handlers).onErrors) || void 0 === XB || XB.call(ZB, DB));
-        const AB = null === hB ? TB : this.readEvents(aB);
-        if (NB.consume(aB - (null !== hB && void 0 !== hB ? hB : 0)), this.netKept = null !== hB && void 0 !== hB ? hB : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== SB) return this.crash(JB, void 0 === tB || tB instanceof nB.c ? SB.error : tB), !1;
-        if (void 0 !== tB || null === DB) return this.crashOn(JB, tB), !1;
-        if (oB) return this.crash(mB, null), !1;
-        const PB = this.headerView()[QB.jb.FrameDraw];
-        if (this.lastFrameKind = (0, rB.h)(pB, PB), yB === QB.K.Fatal) return this.crash(mB, null), !1;
-        if (null === hB) return this.crash(GB, `the core kept ${VB} of ${aB} net-in bytes`), !1;
+          } : null === aB ? null : (0, TB.ze)(aB);
+        var MB;
+        null !== HB && (this.lastHeader = HB);
+        const jB = null !== HB && qB !== TB.L.Fatal,
+          PB = jB && null !== aB ? aB[TB.mb.NetInKept] : 0,
+          RB = jB && PB <= nB && PB % 4 === 0 ? PB : null;
+        var rB, mB;
+        null !== HB && null !== RB && qB === TB.L.Errors && (null === (rB = (mB = this.handlers).onErrors) || void 0 === rB || rB.call(mB, HB));
+        const XB = null === RB ? LB : this.readEvents(nB);
+        if (vB.consume(nB - (null !== RB && void 0 !== RB ? RB : 0)), this.netKept = null !== RB && void 0 !== RB ? RB : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== QB) return this.crash(NB, void 0 === CB || CB instanceof JB.c ? QB.error : CB), !1;
+        if (void 0 !== CB || null === HB) return this.crashOn(NB, CB), !1;
+        if (pB) return this.crash(gB, null), !1;
+        const eB = this.headerView()[TB.mb.FrameDraw];
+        if (this.lastFrameKind = (0, zB.g)(hB, eB), qB === TB.L.Fatal) return this.crash(gB, null), !1;
+        if (null === RB) return this.crash(UB, `the core kept ${PB} of ${nB} net-in bytes`), !1;
         if (this.eventWalker) {
           if (this.stopped) return !1;
           const BB = this.frameEvents,
-            jB = this.headerView();
-          BB.ptr = jB[QB.jb.EventsPtr], BB.len = jB[QB.jb.EventsLen], BB.net = AB, BB.kind = this.lastFrameKind;
+            IB = this.headerView();
+          BB.ptr = IB[TB.mb.EventsPtr], BB.len = IB[TB.mb.EventsLen], BB.net = XB, BB.kind = this.lastFrameKind;
           try {
             this.eventWalker(BB)
           } catch (lB) {
-            return this.crashOn(MB, lB), !1
+            return this.crashOn(sB, lB), !1
           }
           return this.handEnvEvents()
         }
-        for (const QB of AB) {
+        for (const TB of XB) {
           if (this.stopped) return !1;
           try {
-            var WB, eB;
-            null === (WB = (eB = this.handlers).onNetEvent) || void 0 === WB || WB.call(eB, QB)
+            var uB, fB;
+            null === (uB = (fB = this.handlers).onNetEvent) || void 0 === uB || uB.call(fB, TB)
           } catch (lB) {
-            return this.crashOn(EB, lB), !1
+            return this.crashOn(wB, lB), !1
           }
         }
         return this.handEnvEvents()
       }
       handEnvEvents() {
-        for (const dB of this.graceEvents) {
+        for (const oB of this.graceEvents) {
           if (this.stopped) return !1;
           try {
-            var BB, jB;
-            null === (BB = (jB = this.handlers).onReconnectGrace) || void 0 === BB || BB.call(jB, dB)
-          } catch (nB) {
-            return this.crashOn(EB, nB), !1
+            var BB, IB;
+            null === (BB = (IB = this.handlers).onReconnectGrace) || void 0 === BB || BB.call(IB, oB)
+          } catch (JB) {
+            return this.crashOn(wB, JB), !1
           }
         }
-        for (const dB of this.envEvents) {
+        for (const oB of this.envEvents) {
           if (this.stopped) return !1;
           try {
-            var zB, QB;
-            null === (zB = (QB = this.handlers).onEnvEvent) || void 0 === zB || zB.call(QB, dB)
-          } catch (nB) {
-            return this.crashOn(iB, nB), !1
+            var ZB, TB;
+            null === (ZB = (TB = this.handlers).onEnvEvent) || void 0 === ZB || ZB.call(TB, oB)
+          } catch (JB) {
+            return this.crashOn(OB, JB), !1
           }
         }
         return !this.stopped
@@ -430,27 +430,27 @@ export const modules = {
           input: BB
         } = this.rings;
         try {
-          const jB = this.unsentUiPrefs;
-          jB && BB.writeRecord(QB.pb.UiPrefs, 0, jB.nametagCutDistance, 0, (0, QB.me)(jB)) && (this.unsentUiPrefs = null);
-          const zB = this.unsentEnvPrefs;
-          zB && BB.writeRecord(QB.pb.EnvPrefs, (0, QB.Sd)(zB), zB.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const nB = this.unsentLookPrefs;
-          nB && BB.writeRecord(QB.pb.Sensitivity, 0, nB.mouse, nB.touch, (0, pB.j)(nB.fovPercent)) && (this.unsentLookPrefs = null);
-          let dB = 0;
+          const IB = this.unsentUiPrefs;
+          IB && BB.writeRecord(TB.vb.UiPrefs, 0, IB.nametagCutDistance, 0, (0, TB.De)(IB)) && (this.unsentUiPrefs = null);
+          const ZB = this.unsentEnvPrefs;
+          ZB && BB.writeRecord(TB.vb.EnvPrefs, (0, TB.he)(ZB), ZB.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const JB = this.unsentLookPrefs;
+          JB && BB.writeRecord(TB.vb.Sensitivity, 0, JB.mouse, JB.touch, (0, hB.m)(JB.fovPercent)) && (this.unsentLookPrefs = null);
+          let oB = 0;
           for (const {
-              aux: QB,
-              payload: IB
+              aux: TB,
+              payload: GB
             }
             of this.unsentOptions) {
-            if (!BB.writeOptions(QB, IB)) {
+            if (!BB.writeOptions(TB, GB)) {
               if (BB.cursor > 0) break;
               this.optionsDropped++
             }
-            dB++
+            oB++
           }
-          dB > 0 && this.unsentOptions.splice(0, dB)
-        } catch (jB) {
-          return this.crash(kB, jB), !1
+          oB > 0 && this.unsentOptions.splice(0, oB)
+        } catch (IB) {
+          return this.crash(yB, IB), !1
         }
         return !0
       }
@@ -472,287 +472,287 @@ export const modules = {
           ...BB
         }
       }
-      queueOptions(BB, jB) {
-        return !this.isStopped && (jB.byteLength > QB.Zb.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+      queueOptions(BB, IB) {
+        return !this.isStopped && (IB.byteLength > TB.dc.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
           aux: BB,
-          payload: jB
+          payload: IB
         }), !0))
       }
       setChunkCap(BB) {
-        return this.callCore("setChunkCap", null, (jB => jB.bdB(BB)))
+        return this.callCore("setChunkCap", null, (IB => IB.wGB(BB)))
       }
       shedMemory(BB) {
-        const jB = this.callCore("shedMemory", null, (jB => jB.QIB(BB)));
-        return 0 === jB ? null : jB
+        const IB = this.callCore("shedMemory", null, (IB => IB.MGB(BB)));
+        return 0 === IB ? null : IB
       }
       addDistanceInUse() {
-        const BB = this.callCore("addDistanceInUse", null, (BB => BB.rdB()));
+        const BB = this.callCore("addDistanceInUse", null, (BB => BB.LoB()));
         return 0 === BB ? null : BB
       }
-      setChunkAddDistance(BB, jB) {
-        return this.callCore("setChunkAddDistance", !1, (zB => zB.cdB(BB, jB)))
+      setChunkAddDistance(BB, IB) {
+        return this.callCore("setChunkAddDistance", !1, (ZB => ZB.sGB(BB, IB)))
       }
       setGameHost(BB) {
-        return this.callCore("setGameHost", !1, (jB => (jB.EdB(BB), this.gameHost = BB, !0)))
+        return this.callCore("setGameHost", !1, (IB => (IB.IGB(BB), this.gameHost = BB, !0)))
       }
       setAntiCheatProbes(BB) {
-        return this.callCore("setAntiCheatProbes", !1, (jB => jB.KdB(BB)))
+        return this.callCore("setAntiCheatProbes", !1, (IB => IB.CGB(BB)))
       }
       setAmbientOcclusion(BB) {
-        this.callCore("setAmbientOcclusion", void 0, (jB => {
-          jB.xdB(BB)
+        this.callCore("setAmbientOcclusion", void 0, (IB => {
+          IB.dGB(BB)
         }))
       }
       setPoseLod(BB) {
-        this.callCore("setPoseLod", void 0, (jB => {
-          jB.RdB(BB)
+        this.callCore("setPoseLod", void 0, (IB => {
+          IB.YGB(BB)
         }))
       }
-      setDebugLog(BB, jB) {
-        this.callCore(PB, void 0, (zB => {
-          zB.ey(BB, jB)
+      setDebugLog(BB, IB) {
+        this.callCore(eB, void 0, (ZB => {
+          ZB.jq(BB, IB)
         }))
       }
       takeDebugLog(BB) {
-        return this.callCore(PB, [], (jB => jB.ly(BB)))
+        return this.callCore(eB, [], (IB => IB.Pq(BB)))
       }
       setTextureLayers(BB) {
-        return this.callCore("setTextureLayers", !1, (jB => jB.zIB(BB)))
+        return this.callCore("setTextureLayers", !1, (IB => IB.HGB(BB)))
       }
       setBlockColours(BB) {
         let {
-          blocks: jB,
-          counts: zB,
-          values: QB
+          blocks: IB,
+          counts: ZB,
+          values: TB
         } = BB;
-        return this.callCore("setBlockColours", !1, (BB => BB.czB(jB, zB, QB)))
+        return this.callCore("setBlockColours", !1, (BB => BB.CTB(IB, ZB, TB)))
       }
       terrainTextureNames() {
-        return this.callCore(WB, [], (BB => BB.uIB()))
+        return this.callCore(uB, [], (BB => BB.XGB()))
       }
-      setTerrainTextures(BB, jB, zB, QB) {
-        return this.callCore(WB, !1, (nB => nB.jIB(BB, zB, jB, QB)))
+      setTerrainTextures(BB, IB, ZB, TB) {
+        return this.callCore(uB, !1, (JB => JB.aGB(BB, ZB, IB, TB)))
       }
-      setShaderPack(BB, jB, zB, QB, nB, dB) {
-        return this.callCore("setShaderPack", !1, (IB => {
-          var NB, uB;
-          return null !== (NB = null === (uB = IB.NQB) || void 0 === uB ? void 0 : uB.call(IB, BB, jB, zB, QB, nB, dB)) && void 0 !== NB && NB
+      setShaderPack(BB, IB, ZB, TB, JB, oB) {
+        return this.callCore("setShaderPack", !1, (GB => {
+          var vB, kB;
+          return null !== (vB = null === (kB = GB.PTB) || void 0 === kB ? void 0 : kB.call(GB, BB, IB, ZB, TB, JB, oB)) && void 0 !== vB && vB
         }))
       }
       sunShadowWantedTextures() {
-        return this.callCore(eB, null, (BB => {
-          var jB, zB;
-          return null !== (jB = null === (zB = BB.nIB) || void 0 === zB ? void 0 : zB.call(BB)) && void 0 !== jB ? jB : null
+        return this.callCore(fB, null, (BB => {
+          var IB, ZB;
+          return null !== (IB = null === (ZB = BB.jGB) || void 0 === ZB ? void 0 : ZB.call(BB)) && void 0 !== IB ? IB : null
         }))
       }
-      setSunShadowTexture(BB, jB, zB, QB, nB) {
-        this.callCore(eB, void 0, (dB => {
-          var IB;
-          null === (IB = dB.BIB) || void 0 === IB || IB.call(dB, BB, jB, zB, QB, nB)
+      setSunShadowTexture(BB, IB, ZB, TB, JB) {
+        this.callCore(fB, void 0, (oB => {
+          var GB;
+          null === (GB = oB.pGB) || void 0 === GB || GB.call(oB, BB, IB, ZB, TB, JB)
         }))
       }
       takeSunShadowWarnings() {
-        return this.callCore(eB, [], (BB => {
-          var jB, zB;
-          return null !== (jB = null === (zB = BB.IIB) || void 0 === zB ? void 0 : zB.call(BB)) && void 0 !== jB ? jB : []
+        return this.callCore(fB, [], (BB => {
+          var IB, ZB;
+          return null !== (IB = null === (ZB = BB.rGB) || void 0 === ZB ? void 0 : ZB.call(BB)) && void 0 !== IB ? IB : []
         }))
       }
       sunShadowsHeld() {
-        return this.callCore(eB, null, (BB => {
-          var jB, zB;
-          return null !== (jB = null === (zB = BB.dIB) || void 0 === zB ? void 0 : zB.call(BB)) && void 0 !== jB ? jB : null
+        return this.callCore(fB, null, (BB => {
+          var IB, ZB;
+          return null !== (IB = null === (ZB = BB.PGB) || void 0 === ZB ? void 0 : ZB.call(BB)) && void 0 !== IB ? IB : null
         }))
       }
-      callCore(BB, jB, zB) {
-        if (this.stopped) return jB;
+      callCore(BB, IB, ZB) {
+        if (this.stopped) return IB;
         try {
-          return zB(this.core)
-        } catch (QB) {
-          return this.crash(BB, QB), jB
+          return ZB(this.core)
+        } catch (TB) {
+          return this.crash(BB, TB), IB
         }
       }
       readEvents(BB) {
         this.netOffsets.length = 0;
-        const jB = this.headerView(),
-          zB = jB[QB.jb.EventsPtr],
-          nB = jB[QB.jb.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === nB) return TB;
-        const dB = [],
-          IB = this.memory().buffer;
-        if (zB % 4 !== 0 || zB + nB > IB.byteLength) return this.crash(AB, `events of ${nB} bytes at ${zB} outside ${IB.byteLength} bytes of memory`), TB;
-        const NB = new DataView(IB, zB, nB),
-          uB = this.rings.net,
-          UB = (jB, zB) => jB + zB <= BB ? uB.copyWritten(jB, zB) : null;
-        let aB = 0;
-        for (; aB < nB;) {
-          const BB = aB + QB.Q,
-            jB = BB <= nB ? NB.getUint32(aB, !0) : -1,
-            uB = jB >>> 16;
-          if (jB < 0 || uB > nB - BB) return this.crash(AB, `event record at ${aB} overruns its ${nB} bytes`), TB;
-          const fB = 65535 & jB,
-            oB = jB => NB.getUint32(BB + 4 * jB, !0);
-          if (fB === QB.U.RawMessage) {
-            const BB = uB >= QB.Gc.BYTES ? 65535 & oB(1) : -1,
-              jB = BB === QB.Gc.STRING_TYPE,
-              zB = uB === (jB ? QB.Gc.STRING_TYPE_BYTES : QB.Gc.BYTES) ? UB(oB(2), oB(3)) : null,
-              nB = jB && zB ? UB(oB(4), oB(5)) : null;
-            if (!zB || jB && !nB) return this.crash(AB, `RawMessage at ${aB} of ${uB} bytes names bytes outside net-in`), TB;
-            this.netOffsets.push(aB), dB.push({
+        const IB = this.headerView(),
+          ZB = IB[TB.mb.EventsPtr],
+          JB = IB[TB.mb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === JB) return LB;
+        const oB = [],
+          GB = this.memory().buffer;
+        if (ZB % 4 !== 0 || ZB + JB > GB.byteLength) return this.crash(XB, `events of ${JB} bytes at ${ZB} outside ${GB.byteLength} bytes of memory`), LB;
+        const vB = new DataView(GB, ZB, JB),
+          kB = this.rings.net,
+          cB = (IB, ZB) => IB + ZB <= BB ? kB.copyWritten(IB, ZB) : null;
+        let nB = 0;
+        for (; nB < JB;) {
+          const BB = nB + TB.U,
+            IB = BB <= JB ? vB.getUint32(nB, !0) : -1,
+            kB = IB >>> 16;
+          if (IB < 0 || kB > JB - BB) return this.crash(XB, `event record at ${nB} overruns its ${JB} bytes`), LB;
+          const iB = 65535 & IB,
+            pB = IB => vB.getUint32(BB + 4 * IB, !0);
+          if (iB === TB.X.RawMessage) {
+            const BB = kB >= TB.Rc.BYTES ? 65535 & pB(1) : -1,
+              IB = BB === TB.Rc.STRING_TYPE,
+              ZB = kB === (IB ? TB.Rc.STRING_TYPE_BYTES : TB.Rc.BYTES) ? cB(pB(2), pB(3)) : null,
+              JB = IB && ZB ? cB(pB(4), pB(5)) : null;
+            if (!ZB || IB && !JB) return this.crash(XB, `RawMessage at ${nB} of ${kB} bytes names bytes outside net-in`), LB;
+            this.netOffsets.push(nB), oB.push({
               type: "message",
-              conn: oB(0),
-              ha: BB,
-              payloadKind: oB(1) >>> 16,
-              payload: zB,
-              stringType: nB ? lB.decode(nB) : null
+              conn: pB(0),
+              Xn: BB,
+              payloadKind: pB(1) >>> 16,
+              payload: ZB,
+              stringType: JB ? lB.decode(JB) : null
             })
-          } else if (fB === QB.U.CoreErrors) {
-            var pB, rB;
-            const BB = uB >= 4 ? oB(0) : -1;
-            if (BB < 0 || BB > QB.H.PAIRS_MAX || uB !== 4 * (QB.H.FIXED_WORDS + QB.H.PAIR_WORDS * BB)) return this.crash(AB, `CoreErrors at ${aB} of ${uB} bytes`), TB;
-            const jB = [];
-            for (let zB = 0; zB < BB; zB++) jB.push({
-              code: oB(1 + 2 * zB),
-              detail: oB(2 + 2 * zB)
+          } else if (iB === TB.X.CoreErrors) {
+            var hB, zB;
+            const BB = kB >= 4 ? pB(0) : -1;
+            if (BB < 0 || BB > TB.H.PAIRS_MAX || kB !== 4 * (TB.H.FIXED_WORDS + TB.H.PAIR_WORDS * BB)) return this.crash(XB, `CoreErrors at ${nB} of ${kB} bytes`), LB;
+            const IB = [];
+            for (let ZB = 0; ZB < BB; ZB++) IB.push({
+              code: pB(1 + 2 * ZB),
+              detail: pB(2 + 2 * ZB)
             });
-            null === (pB = (rB = this.handlers).onCoreErrors) || void 0 === pB || pB.call(rB, jB, oB(1 + 2 * BB))
-          } else if (fB === QB.U.RenderReload) {
-            var sB, JB;
-            if (uB !== QB.Tc.BYTES) return this.crash(AB, `RenderReload at ${aB} of ${uB} bytes`), TB;
-            null === (sB = (JB = this.handlers).onRenderReload) || void 0 === sB || sB.call(JB, oB(0), oB(1), oB(2))
-          } else if (fB === QB.U.JoinPreloadEnded) {
-            var mB, yB;
-            if (uB !== QB.tb.BYTES) return this.crash(AB, `JoinPreloadEnded at ${aB} of ${uB} bytes`), TB;
-            null === (mB = (yB = this.handlers).onJoinPreloadEnded) || void 0 === mB || mB.call(yB, {
-              chunks: oB(QB.tb.CHUNKS),
-              bytes: oB(QB.tb.BYTES_HELD),
-              asked: oB(QB.tb.ASKED),
-              replaced: oB(QB.tb.REPLACED),
-              dropped: oB(QB.tb.DROPPED)
+            null === (hB = (zB = this.handlers).onCoreErrors) || void 0 === hB || hB.call(zB, IB, pB(1 + 2 * BB))
+          } else if (iB === TB.X.RenderReload) {
+            var FB, NB;
+            if (kB !== TB.ed.BYTES) return this.crash(XB, `RenderReload at ${nB} of ${kB} bytes`), LB;
+            null === (FB = (NB = this.handlers).onRenderReload) || void 0 === FB || FB.call(NB, pB(0), pB(1), pB(2))
+          } else if (iB === TB.X.JoinPreloadEnded) {
+            var gB, qB;
+            if (kB !== TB.zb.BYTES) return this.crash(XB, `JoinPreloadEnded at ${nB} of ${kB} bytes`), LB;
+            null === (gB = (qB = this.handlers).onJoinPreloadEnded) || void 0 === gB || gB.call(qB, {
+              chunks: pB(TB.zb.CHUNKS),
+              bytes: pB(TB.zb.BYTES_HELD),
+              asked: pB(TB.zb.ASKED),
+              replaced: pB(TB.zb.REPLACED),
+              dropped: pB(TB.zb.DROPPED)
             })
-          } else if (fB === QB.U.Images) {
-            var kB, GB;
-            null === (kB = (GB = this.handlers).onImages) || void 0 === kB || kB.call(GB, new Uint8Array(IB.slice(zB + BB, zB + BB + uB)))
-          } else if (fB === QB.U.ModelRequests)
-            for (let zB = 0; zB < uB >>> 2; zB++) {
-              var LB, gB;
-              null === (LB = (gB = this.handlers).onModelRequest) || void 0 === LB || LB.call(gB, oB(zB))
-            } else if (fB === QB.U.ModelTaken) {
-              var tB, SB;
-              if (uB < 4) return this.crash(AB, `ModelTaken at ${aB} of ${uB} bytes`), TB;
-              const BB = new Uint32Array((uB >>> 2) - 1);
-              for (let jB = 0; jB < BB.length; jB++) BB[jB] = oB(1 + jB);
-              null === (tB = (SB = this.handlers).onModelTaken) || void 0 === tB || tB.call(SB, oB(0), BB)
-            } else if (fB === QB.U.TerrainTexturesWanted) {
-            var MB, EB;
-            if (0 !== uB) return this.crash(AB, `TerrainTexturesWanted at ${aB} of ${uB} bytes`), TB;
-            null === (MB = (EB = this.handlers).onTerrainTexturesWanted) || void 0 === MB || MB.call(EB)
-          } else if (fB === QB.U.KeepAliveDue) {
-            var iB, qB;
-            if (uB > QB.wb) return this.crash(AB, `KeepAliveDue at ${aB} of ${uB} bytes`), TB;
-            null === (iB = (qB = this.handlers).onKeepAlive) || void 0 === iB || iB.call(qB, new Uint8Array(IB, zB + BB, uB).slice())
-          } else if (fB === QB.U.ConnectionState) {
-            if (uB !== QB.x) return this.crash(AB, `ConnectionState at ${aB} of ${uB} bytes`), TB;
-            this.netOffsets.push(aB), dB.push({
+          } else if (iB === TB.X.Images) {
+            var yB, UB;
+            null === (yB = (UB = this.handlers).onImages) || void 0 === yB || yB.call(UB, new Uint8Array(GB.slice(ZB + BB, ZB + BB + kB)))
+          } else if (iB === TB.X.ModelRequests)
+            for (let ZB = 0; ZB < kB >>> 2; ZB++) {
+              var WB, dB;
+              null === (WB = (dB = this.handlers).onModelRequest) || void 0 === WB || WB.call(dB, pB(ZB))
+            } else if (iB === TB.X.ModelTaken) {
+              var CB, QB;
+              if (kB < 4) return this.crash(XB, `ModelTaken at ${nB} of ${kB} bytes`), LB;
+              const BB = new Uint32Array((kB >>> 2) - 1);
+              for (let IB = 0; IB < BB.length; IB++) BB[IB] = pB(1 + IB);
+              null === (CB = (QB = this.handlers).onModelTaken) || void 0 === CB || CB.call(QB, pB(0), BB)
+            } else if (iB === TB.X.TerrainTexturesWanted) {
+            var sB, wB;
+            if (0 !== kB) return this.crash(XB, `TerrainTexturesWanted at ${nB} of ${kB} bytes`), LB;
+            null === (sB = (wB = this.handlers).onTerrainTexturesWanted) || void 0 === sB || sB.call(wB)
+          } else if (iB === TB.X.KeepAliveDue) {
+            var OB, YB;
+            if (kB > TB.Bb) return this.crash(XB, `KeepAliveDue at ${nB} of ${kB} bytes`), LB;
+            null === (OB = (YB = this.handlers).onKeepAlive) || void 0 === OB || OB.call(YB, new Uint8Array(GB, ZB + BB, kB).slice())
+          } else if (iB === TB.X.ConnectionState) {
+            if (kB !== TB.w) return this.crash(XB, `ConnectionState at ${nB} of ${kB} bytes`), LB;
+            this.netOffsets.push(nB), oB.push({
               type: "connection",
-              conn: oB(0),
-              phase: oB(1),
-              code: 0 | oB(2)
+              conn: pB(0),
+              phase: pB(1),
+              code: 0 | pB(2)
             })
-          } else if (fB === QB.U.EnvLighting || fB === QB.U.SkyImages) {
-            if (uB !== (fB === QB.U.EnvLighting ? QB.O : QB.md)) return this.crash(AB, `event ${fB} at ${aB} of ${uB} bytes`), TB;
+          } else if (iB === TB.X.EnvLighting || iB === TB.X.SkyImages) {
+            if (kB !== (iB === TB.X.EnvLighting ? TB.R : TB.xd)) return this.crash(XB, `event ${iB} at ${nB} of ${kB} bytes`), LB;
             this.envEvents.push({
-              kind: fB,
-              payload: new Uint8Array(IB.slice(zB + BB, zB + BB + uB))
+              kind: iB,
+              payload: new Uint8Array(GB.slice(ZB + BB, ZB + BB + kB))
             })
-          } else if (fB === QB.U.ReconnectGrace) {
-            if (uB !== QB.oc) return this.crash(AB, `ReconnectGrace at ${aB} of ${uB} bytes`), TB;
-            const BB = oB(2);
+          } else if (iB === TB.X.ReconnectGrace) {
+            if (kB !== TB.tc) return this.crash(XB, `ReconnectGrace at ${nB} of ${kB} bytes`), LB;
+            const BB = pB(2);
             this.graceEvents.push({
-              conn: oB(0),
-              graceMs: oB(1),
-              sessionBased: 0 !== (BB & QB.Kc.SessionBased),
-              replayOffer: 0 !== (BB & QB.Kc.ReplayOffer)
+              conn: pB(0),
+              graceMs: pB(1),
+              sessionBased: 0 !== (BB & TB.Uc.SessionBased),
+              replayOffer: 0 !== (BB & TB.Uc.ReplayOffer)
             })
           }
-          aB = BB + (0, QB.ie)(uB)
+          nB = BB + (0, TB.xe)(kB)
         }
-        return dB
+        return oB
       }
       takeSends(BB) {
         this.atSendsStop = !0;
         try {
           BB()
-        } catch (jB) {
-          this.crashOn(oB, jB)
+        } catch (IB) {
+          this.crashOn(pB, IB)
         } finally {
           this.atSendsStop = !1
         }
         return !this.stopped
       }
       forEachNetOut(BB) {
-        this.forEachOut(gB, "net-out", QB.jb.NetOutPtr, QB.jb.NetOutLen, QB.Rb, 0, ((jB, zB, nB, dB) => {
-          const IB = (0, QB.$d)(zB);
-          IB === QB.Tb.Frame ? BB((0, QB._d)(zB), nB) : this.crash(gB, `net-out record at ${dB} is kind ${IB}, not a frame`)
+        this.forEachOut(dB, "net-out", TB.mb.NetOutPtr, TB.mb.NetOutLen, TB.Wb, 0, ((IB, ZB, JB, oB) => {
+          const GB = (0, TB.oe)(ZB);
+          GB === TB.Yb.Frame ? BB((0, TB.le)(ZB), JB) : this.crash(dB, `net-out record at ${oB} is kind ${GB}, not a frame`)
         }))
       }
       forEachWorkerOut(BB) {
-        this.forEachOut(tB, "worker-out", QB.jb.WorkerOutPtr, QB.jb.WorkerOutLen, QB.zd, 4, ((jB, zB, nB, dB) => {
-          const IB = 255 & jB,
-            NB = IB === QB.Jd.Init ? this.initOf(nB, dB) : nB;
-          null !== NB && BB(IB, jB >>> 8 & 16777215, NB)
+        this.forEachOut(CB, "worker-out", TB.mb.WorkerOutPtr, TB.mb.WorkerOutLen, TB.Ld, 4, ((IB, ZB, JB, oB) => {
+          const GB = 255 & IB,
+            vB = GB === TB.Wd.Init ? this.initOf(JB, oB) : JB;
+          null !== vB && BB(GB, IB >>> 8 & 16777215, vB)
         }))
       }
-      initOf(BB, jB) {
-        const zB = this.memory().buffer;
-        if (BB.byteLength !== QB.kb) return this.crash(tB, `worker-out Init record at ${jB} is ${BB.byteLength} bytes, not a view`), null;
-        const nB = new DataView(BB.buffer, BB.byteOffset, QB.kb),
-          dB = nB.getUint32(0, !0),
-          IB = nB.getUint32(4, !0);
-        return dB + IB > zB.byteLength ? (this.crash(tB, `worker-out Init record at ${jB} names ${IB} bytes at ${dB} outside ${zB.byteLength} bytes of memory`), null) : new Uint8Array(zB, dB, IB)
+      initOf(BB, IB) {
+        const ZB = this.memory().buffer;
+        if (BB.byteLength !== TB.qb) return this.crash(CB, `worker-out Init record at ${IB} is ${BB.byteLength} bytes, not a view`), null;
+        const JB = new DataView(BB.buffer, BB.byteOffset, TB.qb),
+          oB = JB.getUint32(0, !0),
+          GB = JB.getUint32(4, !0);
+        return oB + GB > ZB.byteLength ? (this.crash(CB, `worker-out Init record at ${IB} names ${GB} bytes at ${oB} outside ${ZB.byteLength} bytes of memory`), null) : new Uint8Array(ZB, oB, GB)
       }
-      forEachOut(BB, jB, zB, nB, dB, IB, NB) {
+      forEachOut(BB, IB, ZB, JB, oB, GB, vB) {
         if (!this.headerReadable()) return;
-        const uB = this.headerView(),
-          UB = uB[zB],
-          aB = uB[nB];
-        if (0 === aB) return;
-        const pB = this.memory().buffer;
-        if (UB % 4 !== 0 || UB + aB > pB.byteLength) return void this.crash(BB, `${jB} of ${aB} bytes at ${UB} outside ${pB.byteLength} bytes of memory`);
-        const rB = new DataView(pB, UB, aB);
-        let sB = 0;
-        for (; sB < aB;) {
-          const zB = sB + dB,
-            nB = zB <= aB ? rB.getUint32(sB + IB, !0) : -1;
-          if (nB < 0 || nB > aB - zB) return void this.crash(BB, `${jB} record at ${sB} overruns its ${aB} bytes`);
-          if (NB(rB.getUint32(sB, !0), rB.getUint32(sB + 4, !0), new Uint8Array(pB, UB + zB, nB), sB), this.stopped) return;
-          sB = zB + (0, QB.ie)(nB)
+        const kB = this.headerView(),
+          cB = kB[ZB],
+          nB = kB[JB];
+        if (0 === nB) return;
+        const hB = this.memory().buffer;
+        if (cB % 4 !== 0 || cB + nB > hB.byteLength) return void this.crash(BB, `${IB} of ${nB} bytes at ${cB} outside ${hB.byteLength} bytes of memory`);
+        const zB = new DataView(hB, cB, nB);
+        let FB = 0;
+        for (; FB < nB;) {
+          const ZB = FB + oB,
+            JB = ZB <= nB ? zB.getUint32(FB + GB, !0) : -1;
+          if (JB < 0 || JB > nB - ZB) return void this.crash(BB, `${IB} record at ${FB} overruns its ${nB} bytes`);
+          if (vB(zB.getUint32(FB, !0), zB.getUint32(FB + 4, !0), new Uint8Array(hB, cB + ZB, JB), FB), this.stopped) return;
+          FB = ZB + (0, TB.xe)(JB)
         }
       }
       forEachEvent(BB) {
         if (this.stopped || null === this.lastHeader) return;
-        const jB = this.headerView(),
-          zB = jB[QB.jb.EventsPtr],
-          nB = jB[QB.jb.EventsLen];
-        if (0 === nB) return;
-        const dB = this.memory().buffer;
-        if (zB % 4 !== 0 || zB + nB > dB.byteLength) return void this.crash(AB, `events of ${nB} bytes at ${zB} outside ${dB.byteLength} bytes of memory`);
-        const IB = new DataView(dB, zB, nB);
-        let NB = 0;
-        for (; NB < nB;) {
-          const jB = NB + QB.Q,
-            zB = jB <= nB ? IB.getUint32(NB, !0) : -1,
-            dB = zB >>> 16;
-          if (zB < 0 || dB > nB - jB) return void this.crash(AB, `event record at ${NB} overruns its ${nB} bytes`);
-          BB(65535 & zB, IB, jB, dB), NB = jB + (0, QB.ie)(dB)
+        const IB = this.headerView(),
+          ZB = IB[TB.mb.EventsPtr],
+          JB = IB[TB.mb.EventsLen];
+        if (0 === JB) return;
+        const oB = this.memory().buffer;
+        if (ZB % 4 !== 0 || ZB + JB > oB.byteLength) return void this.crash(XB, `events of ${JB} bytes at ${ZB} outside ${oB.byteLength} bytes of memory`);
+        const GB = new DataView(oB, ZB, JB);
+        let vB = 0;
+        for (; vB < JB;) {
+          const IB = vB + TB.U,
+            ZB = IB <= JB ? GB.getUint32(vB, !0) : -1,
+            oB = ZB >>> 16;
+          if (ZB < 0 || oB > JB - IB) return void this.crash(XB, `event record at ${vB} overruns its ${JB} bytes`);
+          BB(65535 & ZB, GB, IB, oB), vB = IB + (0, TB.xe)(oB)
         }
       }
-      crashOn(BB, jB) {
-        jB instanceof nB.c ? this.crash(AB, jB.message) : this.crash(BB, jB)
+      crashOn(BB, IB) {
+        IB instanceof JB.c ? this.crash(XB, IB.message) : this.crash(BB, IB)
       }
-      crash(BB, jB) {
+      crash(BB, IB) {
         this.stopped || (this.stopped = !0, this.handlers.onCrash({
           site: BB,
-          error: jB,
+          error: IB,
           header: this.lastHeader
         }))
       }
@@ -763,185 +763,185 @@ export const modules = {
         return !this.stopped && (null !== this.lastHeader || this.atSendsStop)
       }
       readLoadCounts(BB) {
-        const jB = this.loadCountWords();
-        return null !== jB && (BB.chunksReceived = jB[QB.Db.ChunksReceived], BB.chunksCancelled = this.headerView()[QB.jb.ChunksCancelled], BB.chunksStored = jB[QB.Db.ChunksStored], BB.jobsSent = jB[QB.Db.JobsSent], BB.jobsDone = jB[QB.Db.JobsDone], BB.jobsInFlight = jB[QB.Db.JobsInFlight], BB.workersLive = jB[QB.Db.WorkersLive], BB.workersRetired = jB[QB.Db.WorkersRetired], !0)
+        const IB = this.loadCountWords();
+        return null !== IB && (BB.chunksReceived = IB[TB.Hb.ChunksReceived], BB.chunksCancelled = this.headerView()[TB.mb.ChunksCancelled], BB.chunksStored = IB[TB.Hb.ChunksStored], BB.jobsSent = IB[TB.Hb.JobsSent], BB.jobsDone = IB[TB.Hb.JobsDone], BB.jobsInFlight = IB[TB.Hb.JobsInFlight], BB.workersLive = IB[TB.Hb.WorkersLive], BB.workersRetired = IB[TB.Hb.WorkersRetired], !0)
       }
       readViewQueuedPrograms() {
-        var BB, jB;
-        const zB = null !== (BB = null === (jB = this.loadCountWords()) || void 0 === jB ? void 0 : jB[QB.Db.ViewQueuedPrograms]) && void 0 !== BB ? BB : 0;
-        return 0 === zB ? null : zB - 1
+        var BB, IB;
+        const ZB = null !== (BB = null === (IB = this.loadCountWords()) || void 0 === IB ? void 0 : IB[TB.Hb.ViewQueuedPrograms]) && void 0 !== BB ? BB : 0;
+        return 0 === ZB ? null : ZB - 1
       }
-      readFirstViewWait(BB, jB) {
-        const zB = this.loadCountWords();
-        return null === zB ? null : [zB[QB.Db.FirstViewLinkMs], zB[QB.Db.FirstViewTerrainMs], zB[QB.Db.FirstViewHeldMs], zB[QB.Db.FirstViewOtherMs], zB[QB.Db.FirstViewGaps], zB[QB.Db.FirstViewGapMs], BB, jB]
+      readFirstViewWait(BB, IB) {
+        const ZB = this.loadCountWords();
+        return null === ZB ? null : [ZB[TB.Hb.FirstViewLinkMs], ZB[TB.Hb.FirstViewTerrainMs], ZB[TB.Hb.FirstViewHeldMs], ZB[TB.Hb.FirstViewOtherMs], ZB[TB.Hb.FirstViewGaps], ZB[TB.Hb.FirstViewGapMs], BB, IB]
       }
       loadCountWords() {
         if (this.stopped || null === this.lastHeader) return null;
-        const BB = this.core.Wy();
+        const BB = this.core.Mq();
         if (0 === BB) return null;
-        const jB = this.memory().buffer;
-        return jB !== this.loadCountsBuffer && (this.loadCountsBuffer = jB, this.loadCounts = new Uint32Array(jB, BB, QB.xb)), this.loadCounts
+        const IB = this.memory().buffer;
+        return IB !== this.loadCountsBuffer && (this.loadCountsBuffer = IB, this.loadCounts = new Uint32Array(IB, BB, TB.Db)), this.loadCounts
       }
       headerView() {
         const BB = this.memory().buffer;
-        return BB !== this.headerBuffer && (this.headerBuffer = BB, this.header = new Uint32Array(BB, this.core.Fs(), QB.fb)), this.header
+        return BB !== this.headerBuffer && (this.headerBuffer = BB, this.header = new Uint32Array(BB, this.core.sF(), TB.kb)), this.header
       }
     }
   },
-  40867: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => IB,
-      c: () => dB
+  40816: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => GB,
+      h: () => oB
     });
-    var QB = zB(4782);
-    let nB = null;
+    var TB = ZB(4874);
+    let JB = null;
 
-    function dB(BB) {
-      nB = {
+    function oB(BB) {
+      JB = {
         scanned: !1
       };
       try {
         return BB()
       } finally {
-        nB = null
+        JB = null
       }
     }
 
-    function IB() {
-      const BB = nB;
-      if (null === BB) return (0, QB.e)();
-      const jB = (0, QB.e)(!BB.scanned);
-      return BB.scanned = !0, jB
+    function GB() {
+      const BB = JB;
+      if (null === BB) return (0, TB.h)();
+      const IB = (0, TB.h)(!BB.scanned);
+      return BB.scanned = !0, IB
     }
   },
-  40909: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB
+  40860: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB
     });
-    const QB = {
+    const TB = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  40929: (BB, jB, zB) => {
-    function QB() {
-      return zB(40933)
+  40876: (BB, IB, ZB) => {
+    function TB() {
+      return ZB(40878)
     }
 
-    function nB() {
-      return zB(40939)
+    function JB() {
+      return ZB(40882)
     }
 
-    function dB(BB) {
+    function oB(BB) {
       return ["pl", "ru", "tr", "uk", "vi"].includes(BB)
     }
-    zB.d(jB, {
-      c: () => dB,
-      g: () => QB,
-      k: () => nB
+    ZB.d(IB, {
+      c: () => oB,
+      e: () => TB,
+      h: () => JB
     })
   },
-  36347: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => NB,
-      i: () => UB,
-      l: () => IB,
-      m: () => pB
+  36297: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => vB,
+      g: () => cB,
+      h: () => GB,
+      k: () => hB
     });
-    var QB = zB(36340),
-      nB = zB(12);
-    const dB = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var TB = ZB(36292),
+      JB = ZB(11);
+    const oB = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function IB(BB) {
+    function GB(BB) {
       if (BB instanceof WebAssembly.RuntimeError) return !0;
-      const jB = BB instanceof Error ? BB.stack : void 0;
-      return "string" === typeof jB && dB.test(jB)
+      const IB = BB instanceof Error ? BB.stack : void 0;
+      return "string" === typeof IB && oB.test(IB)
     }
 
-    function NB(BB, jB, zB) {
-      var nB;
-      const IB = BB instanceof Error ? BB.name : "thrown",
-        NB = (BB instanceof Error && null !== (nB = BB.stack) && void 0 !== nB ? nB : "").split("\n").filter((BB => dB.test(BB))).slice(0, 8).map((BB => BB.trim())),
-        uB = null === jB ? "wasm memory unknown" : `wasm memory ${Math.round(jB/2**20)} MB`,
-        UB = null === zB.panic ? "" : `, panic: ${(0,QB.k)(zB.panic)}`,
-        aB = `${IB}: ${BB instanceof Error?BB.message:String(BB)}`;
-      return `${(0,QB.o)(zB.kind,zB.refusedBytes)} ${aB} (${uB})${UB}${NB.length>0?` | ${NB.join(" < ")}`:""}`
+    function vB(BB, IB, ZB) {
+      var JB;
+      const GB = BB instanceof Error ? BB.name : "thrown",
+        vB = (BB instanceof Error && null !== (JB = BB.stack) && void 0 !== JB ? JB : "").split("\n").filter((BB => oB.test(BB))).slice(0, 8).map((BB => BB.trim())),
+        kB = null === IB ? "wasm memory unknown" : `wasm memory ${Math.round(IB/2**20)} MB`,
+        cB = null === ZB.panic ? "" : `, panic: ${(0,TB.j)(ZB.panic)}`,
+        nB = `${GB}: ${BB instanceof Error?BB.message:String(BB)}`;
+      return `${(0,TB.m)(ZB.kind,ZB.refusedBytes)} ${nB} (${kB})${cB}${vB.length>0?` | ${vB.join(" < ")}`:""}`
     }
-    const uB = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+    const kB = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
 
-    function UB(BB) {
-      var jB;
-      let zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(BB instanceof Error) || !uB.test(BB.message)) return {};
-      if (!("detached" in zB)) return {
+    function cB(BB) {
+      var IB;
+      let ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(BB instanceof Error) || !kB.test(BB.message)) return {};
+      if (!("detached" in ZB)) return {
         arrayBufferDetached: "absent"
       };
       return {
-        arrayBufferDetached: (0, nB.eb)(null === (jB = (0, nB.X)(zB, "detached")) || void 0 === jB ? void 0 : jB.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+        arrayBufferDetached: (0, JB.V)(null === (IB = (0, JB.M)(ZB, "detached")) || void 0 === IB ? void 0 : IB.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
       }
     }
-    const aB = 500;
+    const nB = 500;
 
-    function pB(BB) {
-      let jB = "[object Object]";
+    function hB(BB) {
+      let IB = "[object Object]";
       try {
-        jB = String(BB)
+        IB = String(BB)
       } catch {}
-      if ("[object Object]" !== jB) return jB;
+      if ("[object Object]" !== IB) return IB;
       try {
-        var zB, QB;
-        return null !== (zB = null === (QB = JSON.stringify(BB)) || void 0 === QB ? void 0 : QB.slice(0, aB)) && void 0 !== zB ? zB : jB
+        var ZB, TB;
+        return null !== (ZB = null === (TB = JSON.stringify(BB)) || void 0 === TB ? void 0 : TB.slice(0, nB)) && void 0 !== ZB ? ZB : IB
       } catch {
-        return jB
+        return IB
       }
     }
   },
-  40933: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  40878: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  40939: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  40882: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  36340: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => QB,
-      h: () => dB,
-      k: () => uB,
-      m: () => IB,
-      o: () => nB
+  36292: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB,
+      h: () => oB,
+      j: () => kB,
+      l: () => GB,
+      m: () => JB
     });
-    const QB = /^alloc_failed (\d+) bytes$/;
+    const TB = /^alloc_failed (\d+) bytes$/;
 
-    function nB(BB, jB) {
-      return dB(BB, jB) ? `trap=alloc_failed ${jB} bytes` : `trap=${BB}`
+    function JB(BB, IB) {
+      return oB(BB, IB) ? `trap=alloc_failed ${IB} bytes` : `trap=${BB}`
     }
 
-    function dB(BB, jB) {
-      return "unreachable" === BB && jB > 0
+    function oB(BB, IB) {
+      return "unreachable" === BB && IB > 0
     }
 
-    function IB(BB, jB, zB) {
-      const QB = function(BB) {
+    function GB(BB, IB, ZB) {
+      const TB = function(BB) {
         return BB instanceof WebAssembly.RuntimeError ? /unreachable/i.test(BB.message) ? "unreachable" : /out of bounds/i.test(BB.message) ? "out_of_bounds" : "runtime_error" : (BB instanceof RangeError || BB instanceof Error && "InternalError" === BB.name) && /call stack|recursion/i.test(BB.message) ? "stack_overflow" : "js_error"
       }(BB);
-      if ("unreachable" !== QB) return {
-        kind: QB,
+      if ("unreachable" !== TB) return {
+        kind: TB,
         panic: null,
         refusedBytes: 0
       };
-      const nB = jB(),
-        dB = zB();
+      const JB = IB(),
+        oB = ZB();
       return {
-        kind: QB,
-        panic: dB > 0 ? null : nB,
-        refusedBytes: dB
+        kind: TB,
+        panic: oB > 0 ? null : JB,
+        refusedBytes: oB
       }
     }
-    const NB = 300;
+    const vB = 300;
 
-    function uB(BB) {
-      return BB.replace(/\s*\n\s*/g, " / ").slice(0, NB)
+    function kB(BB) {
+      return BB.replace(/\s*\n\s*/g, " / ").slice(0, vB)
     }
   }
 };

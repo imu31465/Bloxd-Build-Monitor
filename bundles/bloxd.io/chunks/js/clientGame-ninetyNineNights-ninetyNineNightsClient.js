@@ -1,19 +1,19 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  39529: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => nB
+  39507: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => JB
     });
-    var QB = zB(31);
-    const nB = function(BB, jB, zB) {
-      let nB;
+    var TB = ZB(24);
+    const JB = function(BB, IB, ZB) {
+      let JB;
       return {
         onCreate: BB => {
-          nB = BB
+          JB = BB
         },
-        onPlayerClick: (BB, jB, zB, dB, IB, NB) => {
-          jB || "Workbench" !== nB.getMetaInfo(NB).rootName || QB.n.Ly("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (BB, IB, ZB, oB, GB, vB) => {
+          IB || "Workbench" !== JB.getMetaInfo(vB).rootName || TB.l.Gq("toggleMenu", "inventory|Workbench")
         }
       }
     }

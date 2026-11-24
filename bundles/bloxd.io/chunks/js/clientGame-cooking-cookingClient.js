@@ -1,22 +1,22 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39497: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => nB
+  39485: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => JB
     });
-    const QB = [
+    const TB = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      nB = function(BB, jB, zB) {
-        let nB;
+      JB = function(BB, IB, ZB) {
+        let JB;
         return {
           onCreate: BB => {
-            nB = BB
+            JB = BB
           },
-          onPlayerAltAction: (BB, jB, zB, dB, IB, NB) => {
-            QB.some((BB => BB[0] === jB && BB[2] === dB)) && nB.openShop(BB, !1)
+          onPlayerAltAction: (BB, IB, ZB, oB, GB, vB) => {
+            TB.some((BB => BB[0] === IB && BB[2] === oB)) && JB.openShop(BB, !1)
           }
         }
       }

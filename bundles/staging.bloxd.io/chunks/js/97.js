@@ -1,459 +1,459 @@
 export const id = 97;
 export const ids = [95, 96, 97];
 export const modules = {
-  36699: (BB, jB, zB) => {
-    function QB(BB, jB, zB, QB) {
-      return !(zB && !BB.aimable) && (!jB || BB.gun && "head" !== QB)
+  36636: (BB, IB, ZB) => {
+    function TB(BB, IB, ZB, TB) {
+      return !(ZB && !BB.aimable) && (!IB || BB.gun && "head" !== TB)
     }
 
-    function nB(BB) {
+    function JB(BB) {
       return Math.max(.1 * BB, 1)
     }
 
-    function dB(BB, jB) {
-      return !BB && jB
+    function oB(BB, IB) {
+      return !BB && IB
     }
-    zB.d(jB, {
-      e: () => dB,
-      h: () => nB,
-      l: () => QB
+    ZB.d(IB, {
+      d: () => oB,
+      f: () => JB,
+      g: () => TB
     })
   },
-  36703: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => NB,
-      e: () => IB
+  36642: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => vB,
+      d: () => GB
     });
-    let QB = null;
-    const nB = {
+    let TB = null;
+    const JB = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      dB = {
+      oB = {
         crosshairAccuracy: BB => {
-          const jB = nB.crosshairAccuracy.at(-1);
-          jB ? jB.hook(BB) : QB = BB
+          const IB = JB.crosshairAccuracy.at(-1);
+          IB ? IB.hook(BB) : TB = BB
         },
         turnDamageIndicators: BB => {
-          var jB;
-          null === (jB = nB.turnDamageIndicators.at(-1)) || void 0 === jB || jB.hook(BB)
+          var IB;
+          null === (IB = JB.turnDamageIndicators.at(-1)) || void 0 === IB || IB.hook(BB)
         }
       };
 
-    function IB(BB, jB) {
-      const zB = {
-          hook: jB
+    function GB(BB, IB) {
+      const ZB = {
+          hook: IB
         },
-        IB = nB[BB];
-      if (IB.push(zB), "crosshairAccuracy" === BB && null !== QB) {
-        const BB = QB;
-        QB = null, dB.crosshairAccuracy(BB)
+        GB = JB[BB];
+      if (GB.push(ZB), "crosshairAccuracy" === BB && null !== TB) {
+        const BB = TB;
+        TB = null, oB.crosshairAccuracy(BB)
       }
       return () => {
-        const BB = IB.indexOf(zB); - 1 !== BB && IB.splice(BB, 1)
+        const BB = GB.indexOf(ZB); - 1 !== BB && GB.splice(BB, 1)
       }
     }
 
-    function NB() {
-      return dB
+    function vB() {
+      return oB
     }
   },
-  36514: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      countDecodesAs: () => pB,
-      decodedAudio: () => rB
+  36464: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      countDecodesAs: () => hB,
+      decodedAudio: () => zB
     });
-    var QB = zB(3362),
-      nB = zB(4950);
-    const dB = nB.Howler,
-      IB = new Map;
-    let NB = 0;
-    const uB = {
+    var TB = ZB(3428),
+      JB = ZB(5028);
+    const oB = JB.Howler,
+      GB = new Map;
+    let vB = 0;
+    const kB = {
         song: 0,
         sheet: 0
       },
-      UB = new WeakMap,
-      aB = new WeakSet;
+      cB = new WeakMap,
+      nB = new WeakSet;
 
-    function pB(BB, jB) {
-      return UB.set(BB, jB), BB
+    function hB(BB, IB) {
+      return cB.set(BB, IB), BB
     }
 
-    function rB() {
+    function zB() {
       return {
-        bytes: NB,
-        songsDecoded: uB.song,
-        sheetsDecoded: uB.sheet
+        bytes: vB,
+        songsDecoded: kB.song,
+        sheetsDecoded: kB.sheet
       }
     }
 
-    function sB(BB) {
-      if (aB.has(BB)) return;
-      aB.add(BB);
-      const jB = 1 === BB.decodeAudioData.length,
-        zB = BB.decodeAudioData.bind(BB);
-      BB.decodeAudioData = (BB, QB, nB) => {
-        const aB = BB => {
-          const jB = dB._howls.filter((BB => "loaded" !== BB._state));
+    function FB(BB) {
+      if (nB.has(BB)) return;
+      nB.add(BB);
+      const IB = 1 === BB.decodeAudioData.length,
+        ZB = BB.decodeAudioData.bind(BB);
+      BB.decodeAudioData = (BB, TB, JB) => {
+        const nB = BB => {
+          const IB = oB._howls.filter((BB => "loaded" !== BB._state));
           try {
-            null === QB || void 0 === QB || QB(BB)
+            null === TB || void 0 === TB || TB(BB)
           } finally {
-            const zB = jB.find((BB => "loaded" === BB._state));
-            void 0 !== zB && "string" === typeof zB._src && function(BB, jB, zB) {
-              var QB;
-              NB += zB - (null !== (QB = IB.get(jB)) && void 0 !== QB ? QB : 0), IB.set(jB, zB);
-              const nB = UB.get(BB);
-              void 0 !== nB && uB[nB]++
-            }(zB, zB._src, BB.length * BB.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const ZB = IB.find((BB => "loaded" === BB._state));
+            void 0 !== ZB && "string" === typeof ZB._src && function(BB, IB, ZB) {
+              var TB;
+              vB += ZB - (null !== (TB = GB.get(IB)) && void 0 !== TB ? TB : 0), GB.set(IB, ZB);
+              const JB = cB.get(BB);
+              void 0 !== JB && kB[JB]++
+            }(ZB, ZB._src, BB.length * BB.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
           return BB
         };
-        if (!jB) return zB(BB, aB, nB);
-        const pB = zB(BB).then(aB);
-        return pB.catch((BB => {
-          null === nB || void 0 === nB || nB(BB)
-        })), pB
+        if (!IB) return ZB(BB, nB, JB);
+        const hB = ZB(BB).then(nB);
+        return hB.catch((BB => {
+          null === JB || void 0 === JB || JB(BB)
+        })), hB
       }
-    }(0, QB.h)(rB);
-    const JB = nB.Howl.prototype,
-      mB = JB.init;
-    JB.init = function(BB) {
-      return nB.Howler.volume(), dB.ctx && sB(dB.ctx), mB.call(this, BB)
+    }(0, TB.e)(zB);
+    const NB = JB.Howl.prototype,
+      gB = NB.init;
+    NB.init = function(BB) {
+      return JB.Howler.volume(), oB.ctx && FB(oB.ctx), gB.call(this, BB)
     };
-    const yB = JB.unload;
-    JB.unload = function() {
+    const qB = NB.unload;
+    NB.unload = function() {
       const BB = this._src,
-        jB = yB.call(this);
-      if ("string" !== typeof BB) return jB;
-      const zB = IB.get(BB);
-      return void 0 !== zB && function(BB) {
-        return !dB._howls.some((jB => jB._src === BB || "string" === typeof jB._src && BB.indexOf(jB._src) >= 0))
-      }(BB) && (IB.delete(BB), NB -= zB), jB
+        IB = qB.call(this);
+      if ("string" !== typeof BB) return IB;
+      const ZB = GB.get(BB);
+      return void 0 !== ZB && function(BB) {
+        return !oB._howls.some((IB => IB._src === BB || "string" === typeof IB._src && BB.indexOf(IB._src) >= 0))
+      }(BB) && (GB.delete(BB), vB -= ZB), IB
     }
   },
-  36864: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => uB
+  36812: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB
     });
-    var QB = zB(28),
-      nB = zB(36830),
-      dB = zB(4443),
-      IB = zB(36871),
-      NB = zB(4950);
-    const uB = function(BB) {
-      const jB = new Set;
-      return zB => {
-        var QB;
-        const dB = null === (QB = [...nB.d].find((BB => {
-          let [, jB] = BB;
-          return jB.includes(zB)
-        }))) || void 0 === QB ? void 0 : QB[0];
-        if (void 0 === dB || jB.has(dB)) return;
-        jB.add(dB);
-        ! function(BB, jB) {
+    var TB = ZB(20),
+      JB = ZB(36783),
+      oB = ZB(4518),
+      GB = ZB(36821),
+      vB = ZB(5028);
+    const kB = function(BB) {
+      const IB = new Set;
+      return ZB => {
+        var TB;
+        const oB = null === (TB = [...JB.c].find((BB => {
+          let [, IB] = BB;
+          return IB.includes(ZB)
+        }))) || void 0 === TB ? void 0 : TB[0];
+        if (void 0 === oB || IB.has(oB)) return;
+        IB.add(oB);
+        ! function(BB, IB) {
           let {
-            afterJoin: zB,
-            joining: QB,
-            idle: nB,
-            fetchFile: dB
-          } = jB;
-          const IB = jB => {
-            jB >= BB.length || zB((() => {
-              nB((() => {
-                QB() ? IB(jB) : dB(BB[jB]).catch((() => {})).finally((() => {
-                  IB(jB + 1)
+            afterJoin: ZB,
+            joining: TB,
+            idle: JB,
+            fetchFile: oB
+          } = IB;
+          const GB = IB => {
+            IB >= BB.length || ZB((() => {
+              JB((() => {
+                TB() ? GB(IB) : oB(BB[IB]).catch((() => {})).finally((() => {
+                  GB(IB + 1)
                 }))
               }))
             }))
           };
-          IB(0)
-        }(nB.d.get(dB).filter((BB => BB !== zB)).flatMap((jB => {
-          const zB = (QB = (0, nB.g)(jB).src, dB = BB.canPlay, QB.find((BB => {
-            var jB;
-            const zB = null === (jB = /\.([^.]+)$/.exec(BB.split("?", 1)[0])) || void 0 === jB ? void 0 : jB[1];
-            return void 0 !== zB && dB(zB.toLowerCase())
+          GB(0)
+        }(JB.c.get(oB).filter((BB => BB !== ZB)).flatMap((IB => {
+          const ZB = (TB = (0, JB.g)(IB).src, oB = BB.canPlay, TB.find((BB => {
+            var IB;
+            const ZB = null === (IB = /\.([^.]+)$/.exec(BB.split("?", 1)[0])) || void 0 === IB ? void 0 : IB[1];
+            return void 0 !== ZB && oB(ZB.toLowerCase())
           })));
-          var QB, dB;
-          return void 0 === zB ? [] : [zB]
+          var TB, oB;
+          return void 0 === ZB ? [] : [ZB]
         })), BB)
       }
     }({
       afterJoin: BB => {
-        (0, dB.e)(QB.c.get("gameState"), BB)
+        (0, oB.e)(TB.d.get("gameState"), BB)
       },
-      joining: () => (0, dB.h)(QB.c.get("gameState")),
-      idle: zB(269).c,
-      fetchFile: IB.e,
-      canPlay: BB => !!NB.Howler.codecs(BB)
+      joining: () => (0, oB.f)(TB.d.get("gameState")),
+      idle: ZB(256).c,
+      fetchFile: GB.e,
+      canPlay: BB => !!vB.Howler.codecs(BB)
     })
   },
-  36871: (BB, jB, zB) => {
-    async function QB(BB) {
-      const jB = await fetch(BB, {
+  36821: (BB, IB, ZB) => {
+    async function TB(BB) {
+      const IB = await fetch(BB, {
         priority: "low"
       });
-      if (!jB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${jB.status}`);
-      const zB = jB.body.getReader();
-      for (; !(await zB.read()).done;);
+      if (!IB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${IB.status}`);
+      const ZB = IB.body.getReader();
+      for (; !(await ZB.read()).done;);
     }
-    zB.d(jB, {
-      e: () => QB
+    ZB.d(IB, {
+      e: () => TB
     })
   },
-  36838: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => nB
+  36789: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => JB
     });
-    const QB = ["end", "stop", "playerror"];
+    const TB = ["end", "stop", "playerror"];
 
-    function nB(BB, jB) {
-      const zB = () => {
+    function JB(BB, IB) {
+      const ZB = () => {
         if (function(BB) {
             return "loaded" === BB.state() && !BB.playing() && !BB._playLock
           }(BB)) {
-          for (const jB of QB) BB.off(jB, zB);
-          BB.unload(), jB()
+          for (const IB of TB) BB.off(IB, ZB);
+          BB.unload(), IB()
         }
       };
-      for (const nB of QB) BB.on(nB, zB);
-      zB()
+      for (const JB of TB) BB.on(JB, ZB);
+      ZB()
     }
   },
-  4950: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      Howl: () => nB.Howl,
-      Howler: () => nB.Howler,
-      musicOutput: () => yB,
-      readyAudioContext: () => kB
+  5028: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      Howl: () => JB.Howl,
+      Howler: () => JB.Howler,
+      musicOutput: () => qB,
+      readyAudioContext: () => yB
     });
-    var QB, nB = zB(4958),
-      dB = zB(3551),
-      IB = zB(4741);
-    const NB = nB.Howler;
+    var TB, JB = ZB(5031),
+      oB = ZB(3625),
+      GB = ZB(4824);
+    const vB = JB.Howler;
 
-    function uB() {
-      var BB, jB;
-      if (NB.ctx || !NB.usingWebAudio || "undefined" === typeof AudioContext || !(0, IB.h)()) return;
-      const zB = navigator.audioSession;
-      let QB;
-      "auto" === (null === zB || void 0 === zB ? void 0 : zB.type) && (zB.type = "ambient");
+    function kB() {
+      var BB, IB;
+      if (vB.ctx || !vB.usingWebAudio || "undefined" === typeof AudioContext || !(0, GB.i)()) return;
+      const ZB = navigator.audioSession;
+      let TB;
+      "auto" === (null === ZB || void 0 === ZB ? void 0 : ZB.type) && (ZB.type = "ambient");
       try {
-        QB = new AudioContext({
+        TB = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const nB = QB.createGain();
-      nB.gain.setValueAtTime(NB._muted ? 0 : null !== (BB = NB._volume) && void 0 !== BB ? BB : 1, QB.currentTime), nB.connect(QB.destination), NB.ctx = QB, NB.masterGain = nB, null === (jB = NB._setup) || void 0 === jB || jB.call(NB)
+      const JB = TB.createGain();
+      JB.gain.setValueAtTime(vB._muted ? 0 : null !== (BB = vB._volume) && void 0 !== BB ? BB : 1, TB.currentTime), JB.connect(TB.destination), vB.ctx = TB, vB.masterGain = JB, null === (IB = vB._setup) || void 0 === IB || IB.call(vB)
     }
-    NB._mobileUnloaded = !0;
-    const UB = NB.volume.bind(nB.Howler);
-    NB.volume = function() {
-      return uB(), UB(...arguments)
+    vB._mobileUnloaded = !0;
+    const cB = vB.volume.bind(JB.Howler);
+    vB.volume = function() {
+      return kB(), cB(...arguments)
     };
-    const aB = NB.mute.bind(nB.Howler);
-    NB.mute = BB => (uB(), aB(BB));
-    const pB = nB.Howl.prototype,
-      rB = pB.init;
+    const nB = vB.mute.bind(JB.Howler);
+    vB.mute = BB => (kB(), nB(BB));
+    const hB = JB.Howl.prototype,
+      zB = hB.init;
 
-    function sB() {
-      for (; NB._html5AudioPool.length < NB.html5PoolSize;) {
+    function FB() {
+      for (; vB._html5AudioPool.length < vB.html5PoolSize;) {
         const BB = new Audio;
-        BB._unlocked = !0, NB._releaseHtml5Audio(BB)
+        BB._unlocked = !0, vB._releaseHtml5Audio(BB)
       }
-      for (const jB of NB._howls)
-        if (!jB._webAudio)
-          for (const zB of jB._getSoundIds()) {
+      for (const IB of vB._howls)
+        if (!IB._webAudio)
+          for (const ZB of IB._getSoundIds()) {
             var BB;
-            const QB = null === (BB = jB._soundById(zB)) || void 0 === BB ? void 0 : BB._node;
-            QB && !QB._unlocked && (QB._unlocked = !0, QB.load())
+            const TB = null === (BB = IB._soundById(ZB)) || void 0 === BB ? void 0 : BB._node;
+            TB && !TB._unlocked && (TB._unlocked = !0, TB.load())
           }
     }
-    pB.init = function(BB) {
-      return uB(), rB.call(this, BB)
-    }, (0, IB.h)() && (NB._unlockAudio = () => {
-      const BB = NB.ctx;
-      if (NB._audioUnlocked || !BB) return;
-      NB.autoUnlock = !1;
-      const jB = BB.createBuffer(1, 1, 22050);
-      NB._scratchBuffer = jB;
-      const zB = new AbortController;
-      let QB = "afterPaint";
-      const nB = () => {
-          var QB;
-          if (NB._audioUnlocked) return;
-          null === (QB = NB._autoResume) || void 0 === QB || QB.call(NB);
-          const nB = BB.createBufferSource();
-          nB.buffer = jB, nB.connect(BB.destination), nB.start(0), BB.resume().catch((() => {})), nB.onended = () => {
-            nB.disconnect(0), NB._audioUnlocked = !0, zB.abort();
-            for (const BB of NB._howls) BB._emit("unlock")
+    hB.init = function(BB) {
+      return kB(), zB.call(this, BB)
+    }, (0, GB.i)() && (vB._unlockAudio = () => {
+      const BB = vB.ctx;
+      if (vB._audioUnlocked || !BB) return;
+      vB.autoUnlock = !1;
+      const IB = BB.createBuffer(1, 1, 22050);
+      vB._scratchBuffer = IB;
+      const ZB = new AbortController;
+      let TB = "afterPaint";
+      const JB = () => {
+          var TB;
+          if (vB._audioUnlocked) return;
+          null === (TB = vB._autoResume) || void 0 === TB || TB.call(vB);
+          const JB = BB.createBufferSource();
+          JB.buffer = IB, JB.connect(BB.destination), JB.start(0), BB.resume().catch((() => {})), JB.onended = () => {
+            JB.disconnect(0), vB._audioUnlocked = !0, ZB.abort();
+            for (const BB of vB._howls) BB._emit("unlock")
           }
         },
-        uB = () => {
-          sB(), nB()
+        kB = () => {
+          FB(), JB()
         },
-        UB = jB => {
-          if (sB(), "inTap" === QB) {
+        cB = IB => {
+          if (FB(), "inTap" === TB) {
             if ("running" === BB.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), nB()
-          } else "afterPaint" === QB && (QB = "queued", (0, dB.b)(jB.timeStamp, (() => {
-            QB = "inTap", nB()
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), JB()
+          } else "afterPaint" === TB && (TB = "queued", (0, oB.d)(IB.timeStamp, (() => {
+            TB = "inTap", JB()
           })))
         };
-      for (const dB of ["touchstart", "touchend"]) document.addEventListener(dB, uB, {
+      for (const oB of ["touchstart", "touchend"]) document.addEventListener(oB, kB, {
         capture: !0,
-        signal: zB.signal
+        signal: ZB.signal
       });
-      for (const dB of IB.d) document.addEventListener(dB, UB, {
+      for (const oB of GB.e) document.addEventListener(oB, cB, {
         capture: !0,
-        signal: zB.signal
+        signal: ZB.signal
       })
     });
-    let JB = 0;
-    const mB = null === (QB = NB._autoSuspend) || void 0 === QB ? void 0 : QB.bind(nB.Howler);
+    let NB = 0;
+    const gB = null === (TB = vB._autoSuspend) || void 0 === TB ? void 0 : TB.bind(JB.Howler);
 
-    function yB() {
-      kB();
+    function qB() {
+      yB();
       const {
         ctx: BB,
-        masterGain: jB
-      } = NB;
-      return BB && jB ? {
+        masterGain: IB
+      } = vB;
+      return BB && IB ? {
         ctx: BB,
-        destination: jB,
+        destination: IB,
         holdAwake: BB => {
-          var jB, zB;
-          (JB += BB ? 1 : -1, BB) ? null === (jB = NB._autoResume) || void 0 === jB || jB.call(NB): null === (zB = NB._autoSuspend) || void 0 === zB || zB.call(NB)
+          var IB, ZB;
+          (NB += BB ? 1 : -1, BB) ? null === (IB = vB._autoResume) || void 0 === IB || IB.call(vB): null === (ZB = vB._autoSuspend) || void 0 === ZB || ZB.call(vB)
         },
         wake: () => {
-          var jB;
-          "running" !== BB.state && (null === (jB = NB._autoResume) || void 0 === jB || jB.call(NB), BB.resume().catch((() => {})))
+          var IB;
+          "running" !== BB.state && (null === (IB = vB._autoResume) || void 0 === IB || IB.call(vB), BB.resume().catch((() => {})))
         }
       } : null
     }
 
-    function kB() {
+    function yB() {
       var BB;
-      (NB.volume(), NB.ctx && NB.autoUnlock) && (null === (BB = NB._unlockAudio) || void 0 === BB || BB.call(NB))
+      (vB.volume(), vB.ctx && vB.autoUnlock) && (null === (BB = vB._unlockAudio) || void 0 === BB || BB.call(vB))
     }
-    mB && (NB._autoSuspend = () => JB > 0 ? nB.Howler : mB())
+    gB && (vB._autoSuspend = () => NB > 0 ? JB.Howler : gB())
   },
-  36856: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => QB
+  36807: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB
     });
-    const QB = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const TB = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  36848: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => IB,
-      f: () => nB,
-      g: () => QB
+  36800: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => GB,
+      f: () => JB,
+      j: () => TB
     });
 
-    function QB(BB) {
+    function TB(BB) {
       return BB.replace(/[_\-\s]*\d+$/, "") || BB
     }
 
-    function nB(BB, jB, zB) {
-      return zB <= 0 ? 0 : BB * zB / Math.max(jB, zB)
+    function JB(BB, IB, ZB) {
+      return ZB <= 0 ? 0 : BB * ZB / Math.max(IB, ZB)
     }
 
-    function dB(BB, jB) {
-      const zB = BB.getDurationMs();
-      return zB > 0 ? BB.loudness * Math.max(0, 1 - (jB - BB.startMs) / zB) : 0
+    function oB(BB, IB) {
+      const ZB = BB.getDurationMs();
+      return ZB > 0 ? BB.loudness * Math.max(0, 1 - (IB - BB.startMs) / ZB) : 0
     }
-    class IB {
+    class GB {
       constructor() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = BB, this.maxPerGroup = jB, this.voices = []
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = BB, this.maxPerGroup = IB, this.voices = []
       }
       admit(BB) {
         if (this.voices = this.voices.filter((BB => BB.isAlive())), null !== BB.group) {
-          const jB = this.voices.filter((jB => jB.group === BB.group));
-          if (jB.length >= this.maxPerGroup && !this.dropLeastWorth(jB, BB)) return !1
+          const IB = this.voices.filter((IB => IB.group === BB.group));
+          if (IB.length >= this.maxPerGroup && !this.dropLeastWorth(IB, BB)) return !1
         }
         return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, BB)) && (this.voices.push(BB), !0)
       }
-      dropLeastWorth(BB, jB) {
-        let zB = null,
-          QB = 1 / 0;
-        for (const nB of BB) {
-          if (!nB.canStop()) continue;
-          const BB = dB(nB, jB.startMs);
-          BB < QB && (zB = nB, QB = BB)
+      dropLeastWorth(BB, IB) {
+        let ZB = null,
+          TB = 1 / 0;
+        for (const JB of BB) {
+          if (!JB.canStop()) continue;
+          const BB = oB(JB, IB.startMs);
+          BB < TB && (ZB = JB, TB = BB)
         }
-        return !(!zB || jB.loudness < QB) && (this.voices.splice(this.voices.indexOf(zB), 1), zB.stop(), !0)
+        return !(!ZB || IB.loudness < TB) && (this.voices.splice(this.voices.indexOf(ZB), 1), ZB.stop(), !0)
       }
     }
   },
-  36668: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => nB,
-      e: () => IB,
-      i: () => NB
+  36609: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => JB,
+      h: () => GB,
+      i: () => vB
     });
-    var QB = zB(31);
-    const nB = "touchSprintChanged";
-    let dB = !0;
+    var TB = ZB(24);
+    const JB = "touchSprintChanged";
+    let oB = !0;
 
-    function IB() {
-      return dB
+    function GB() {
+      return oB
     }
 
-    function NB(BB) {
-      BB !== dB && (dB = BB, QB.n.Ly(nB, BB))
+    function vB(BB) {
+      BB !== oB && (oB = BB, TB.l.Gq(JB, BB))
     }
   },
-  36882: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB,
-      f: () => IB,
-      j: () => QB
+  36829: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      h: () => GB,
+      k: () => TB
     });
-    class QB {
+    class TB {
       constructor(BB) {
         this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = BB
       }
-      setMultiplierType(BB, jB) {
-        var zB;
-        this.multipliers[BB] = jB, null === (zB = this._onUpdate) || void 0 === zB || zB.call(this)
+      setMultiplierType(BB, IB) {
+        var ZB;
+        this.multipliers[BB] = IB, null === (ZB = this._onUpdate) || void 0 === ZB || ZB.call(this)
       }
       removeMultiplier(BB) {
-        var jB;
-        delete this.multipliers[BB], null === (jB = this._onUpdate) || void 0 === jB || jB.call(this)
+        var IB;
+        delete this.multipliers[BB], null === (IB = this._onUpdate) || void 0 === IB || IB.call(this)
       }
       getMultiplierType(BB) {
         return this.multipliers[BB]
       }
       getTotalMultipliedVal() {
         let BB = 1;
-        for (const jB in this.multipliers) BB *= this.multipliers[jB];
+        for (const IB in this.multipliers) BB *= this.multipliers[IB];
         return BB
       }
     }
-    class nB {
+    class JB {
       constructor() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         this.booleans = {}, this._onUpdate = void 0, this._onUpdate = BB
       }
-      setBooleanType(BB, jB) {
-        const zB = this._getTotalBooleanVal();
-        this.booleans[BB] = !!jB;
-        const QB = this.getTotalBooleanVal();
-        var nB;
-        QB !== zB && (null === (nB = this._onUpdate) || void 0 === nB || nB.call(this, QB, this.booleans));
-        return QB
+      setBooleanType(BB, IB) {
+        const ZB = this._getTotalBooleanVal();
+        this.booleans[BB] = !!IB;
+        const TB = this.getTotalBooleanVal();
+        var JB;
+        TB !== ZB && (null === (JB = this._onUpdate) || void 0 === JB || JB.call(this, TB, this.booleans));
+        return TB
       }
       removeBoolean(BB) {
-        const jB = this._getTotalBooleanVal();
+        const IB = this._getTotalBooleanVal();
         delete this.booleans[BB];
-        const zB = this._getTotalBooleanVal();
-        var QB;
-        null !== zB && zB !== jB && (null === (QB = this._onUpdate) || void 0 === QB || QB.call(this, zB, this.booleans));
-        return null !== zB && void 0 !== zB && zB
+        const ZB = this._getTotalBooleanVal();
+        var TB;
+        null !== ZB && ZB !== IB && (null === (TB = this._onUpdate) || void 0 === TB || TB.call(this, ZB, this.booleans));
+        return null !== ZB && void 0 !== ZB && ZB
       }
       getBooleanType(BB) {
         return this.booleans[BB]
@@ -469,7 +469,7 @@ export const modules = {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class dB extends nB {
+    class oB extends JB {
       getTotalBooleanVal() {
         const BB = this._getTotalBooleanVal();
         if (null === BB) throw new Error("Should not be gotten before at least 1 type has been initialised");
@@ -477,12 +477,12 @@ export const modules = {
       }
       _getTotalBooleanVal() {
         let BB = !1,
-          jB = !0;
-        for (const zB in this.booleans) BB = !0, jB &&= this.booleans[zB];
-        return BB ? jB : null
+          IB = !0;
+        for (const ZB in this.booleans) BB = !0, IB &&= this.booleans[ZB];
+        return BB ? IB : null
       }
     }
-    class IB extends nB {
+    class GB extends JB {
       getTotalBooleanVal() {
         const BB = this._getTotalBooleanVal();
         if (null === BB) throw new Error("Should not be gotten before at least 1 type has been initialised");
@@ -490,21 +490,21 @@ export const modules = {
       }
       _getTotalBooleanVal() {
         let BB = !1,
-          jB = !1;
-        for (const zB in this.booleans) BB = !0, jB ||= this.booleans[zB];
-        return BB ? jB : null
+          IB = !1;
+        for (const ZB in this.booleans) BB = !0, IB ||= this.booleans[ZB];
+        return BB ? IB : null
       }
     }
   },
-  36873: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => dB,
-      g: () => QB,
-      k: () => nB
+  36827: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      g: () => TB,
+      h: () => JB
     });
-    const QB = 15,
-      nB = 3,
-      dB = 30
+    const TB = 15,
+      JB = 3,
+      oB = 30
   }
 };
 Object.freeze(modules);

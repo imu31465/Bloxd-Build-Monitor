@@ -1,66 +1,66 @@
 export const id = 356;
 export const ids = [356];
 export const modules = {
-  42687: (BB, jB, zB) => {
-    function QB(BB) {
+  42552: (BB, IB, ZB) => {
+    function TB(BB) {
       return Math.floor(BB / 8)
     }
 
-    function nB(BB) {
+    function JB(BB) {
       return 1 << BB % 8
     }
-    zB.d(jB, {
-      OptimizeIndices: () => IB
+    ZB.d(IB, {
+      OptimizeIndices: () => GB
     });
-    class dB {
+    class oB {
       constructor(BB) {
         this.size = BB, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
       get(BB) {
         if (BB >= this.size) throw new RangeError("Bit index out of range");
-        const jB = QB(BB),
-          zB = nB(BB);
-        return 0 !== (this._byteArray[jB] & zB)
+        const IB = TB(BB),
+          ZB = JB(BB);
+        return 0 !== (this._byteArray[IB] & ZB)
       }
-      set(BB, jB) {
+      set(BB, IB) {
         if (BB >= this.size) throw new RangeError("Bit index out of range");
-        const zB = QB(BB),
-          dB = nB(BB);
-        jB ? this._byteArray[zB] |= dB : this._byteArray[zB] &= ~dB
+        const ZB = TB(BB),
+          oB = JB(BB);
+        IB ? this._byteArray[ZB] |= oB : this._byteArray[ZB] &= ~oB
       }
     }
 
-    function IB(BB) {
-      const jB = [],
-        zB = BB.length / 3;
-      for (let dB = 0; dB < zB; dB++) jB.push([BB[3 * dB], BB[3 * dB + 1], BB[3 * dB + 2]]);
-      const QB = new Map;
-      for (let dB = 0; dB < jB.length; dB++) {
-        const BB = jB[dB];
-        for (const jB of BB) {
-          let BB = QB.get(jB);
-          BB || QB.set(jB, BB = []), BB.push(dB)
+    function GB(BB) {
+      const IB = [],
+        ZB = BB.length / 3;
+      for (let oB = 0; oB < ZB; oB++) IB.push([BB[3 * oB], BB[3 * oB + 1], BB[3 * oB + 2]]);
+      const TB = new Map;
+      for (let oB = 0; oB < IB.length; oB++) {
+        const BB = IB[oB];
+        for (const IB of BB) {
+          let BB = TB.get(IB);
+          BB || TB.set(IB, BB = []), BB.push(oB)
         }
       }
-      const nB = new dB(zB),
-        IB = [],
-        NB = BB => {
-          const zB = [BB];
-          for (; zB.length > 0;) {
-            const BB = zB.pop();
-            if (!nB.get(BB)) {
-              nB.set(BB, !0), IB.push(jB[BB]);
-              for (const dB of jB[BB]) {
-                const BB = QB.get(dB);
+      const JB = new oB(ZB),
+        GB = [],
+        vB = BB => {
+          const ZB = [BB];
+          for (; ZB.length > 0;) {
+            const BB = ZB.pop();
+            if (!JB.get(BB)) {
+              JB.set(BB, !0), GB.push(IB[BB]);
+              for (const oB of IB[BB]) {
+                const BB = TB.get(oB);
                 if (!BB) return;
-                for (const jB of BB) nB.get(jB) || zB.push(jB)
+                for (const IB of BB) JB.get(IB) || ZB.push(IB)
               }
             }
           }
         };
-      for (let dB = 0; dB < zB; dB++) nB.get(dB) || NB(dB);
-      let uB = 0;
-      for (const dB of IB) BB[uB++] = dB[0], BB[uB++] = dB[1], BB[uB++] = dB[2]
+      for (let oB = 0; oB < ZB; oB++) JB.get(oB) || vB(oB);
+      let kB = 0;
+      for (const oB of GB) BB[kB++] = oB[0], BB[kB++] = oB[1], BB[kB++] = oB[2]
     }
   }
 };

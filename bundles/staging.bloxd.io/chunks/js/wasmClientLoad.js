@@ -1,259 +1,259 @@
 export const id = 59;
 export const ids = [59];
 export const modules = {
-  36871: (BB, jB, zB) => {
-    async function QB(BB) {
-      const jB = await fetch(BB, {
+  36821: (BB, IB, ZB) => {
+    async function TB(BB) {
+      const IB = await fetch(BB, {
         priority: "low"
       });
-      if (!jB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${jB.status}`);
-      const zB = jB.body.getReader();
-      for (; !(await zB.read()).done;);
+      if (!IB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${IB.status}`);
+      const ZB = IB.body.getReader();
+      for (; !(await ZB.read()).done;);
     }
-    zB.d(jB, {
-      e: () => QB
+    ZB.d(IB, {
+      e: () => TB
     })
   },
-  39166: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => uB
+  39126: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB
     });
-    var QB = zB(8923),
-      nB = zB(36568),
-      dB = zB(39169);
-    const IB = {
+    var TB = ZB(9011),
+      JB = ZB(36516),
+      oB = ZB(39129);
+    const GB = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      NB = {
+      vB = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function uB(BB, jB) {
-      if (BB instanceof nB.h) return {
-        at: IB[jB],
+    function kB(BB, IB) {
+      if (BB instanceof JB.f) return {
+        at: GB[IB],
         code: 0
       };
-      const zB = (0, QB.g)(BB),
-        uB = "number" === typeof zB ? zB : 0;
-      return null !== (0, dB.m)(uB).name ? {
+      const ZB = (0, TB.h)(BB),
+        kB = "number" === typeof ZB ? ZB : 0;
+      return null !== (0, oB.f)(kB).name ? {
         at: "refused",
-        code: uB
+        code: kB
       } : {
-        at: NB[jB],
-        code: uB
+        at: vB[IB],
+        code: kB
       }
     }
   },
-  8923: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => dB,
-      g: () => IB,
-      h: () => NB,
-      l: () => UB,
-      p: () => uB
+  9011: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      h: () => GB,
+      i: () => vB,
+      k: () => cB,
+      l: () => kB
     });
-    var QB = zB(214),
-      nB = zB(4729);
+    var TB = ZB(201),
+      JB = ZB(4802);
 
-    function dB(BB) {
-      return IB(BB) === QB.c.gameOrPluginOnPlayerAuthRejected.code
+    function oB(BB) {
+      return GB(BB) === TB.c.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function IB(BB) {
+    function GB(BB) {
       return "object" === typeof BB && null !== BB ? BB.code : void 0
     }
 
-    function NB(BB) {
-      var jB;
-      return null !== (jB = Object.keys(nB.b).find((jB => nB.b[jB] === BB))) && void 0 !== jB ? jB : null
+    function vB(BB) {
+      var IB;
+      return null !== (IB = Object.keys(JB.c).find((IB => JB.c[IB] === BB))) && void 0 !== IB ? IB : null
     }
 
-    function uB(BB) {
+    function kB(BB) {
       return "notWhitelisted" === BB ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const UB = {
+    const cB = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  41142: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      prefetchWasmClient: () => SB,
-      startJoinLoad: () => GB,
-      startLoadAheadOfJoin: () => gB
+  41074: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      prefetchWasmClient: () => QB,
+      startJoinLoad: () => UB,
+      startLoadAheadOfJoin: () => dB
     });
-    var QB = zB(2967),
-      nB = zB(36387),
-      dB = zB(40948),
-      IB = zB(1121),
-      NB = zB(40805),
-      uB = (zB(40856), zB(36871)),
-      UB = zB(40796),
-      aB = zB(41054),
-      pB = zB(40929);
-    const rB = "[bloxd-wasm-client]";
-    let sB = null,
-      JB = null,
-      mB = null,
-      yB = null,
-      kB = null;
+    var TB = ZB(3036),
+      JB = ZB(36330),
+      oB = ZB(40884),
+      GB = ZB(1125),
+      vB = ZB(40759),
+      kB = (ZB(40804), ZB(36821)),
+      cB = ZB(40751),
+      nB = ZB(41008),
+      hB = ZB(40876);
+    const zB = "[bloxd-wasm-client]";
+    let FB = null,
+      NB = null,
+      gB = null,
+      qB = null,
+      yB = null;
 
-    function GB() {
-      return yB ??= (async () => {
+    function UB() {
+      return qB ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const BB = await (0, UB.M)();
+        const BB = await (0, cB.T)();
         if (null === BB) return;
-        if ((0, NB.r)(BB)) return (0, UB.N)("none"), void LB("none");
-        (0, UB.N)(BB.backend);
-        const jB = await BB.load();
-        LB(jB.name);
-        const zB = "unloaded" === (0, QB.z)();
-        if (zB && (0, UB.p)(), !await (0, aB.b)(jB)) return void console.warn(`${rB} the join's early wasm load failed: the boot loads the client itself`);
-        if (!zB) return;
-        const dB = (0, nB.g)(jB.name);
-        void 0 !== dB ? (0, IB.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(dB.ms)
+        if ((0, vB.o)(BB)) return (0, cB.X)("none"), void WB("none");
+        (0, cB.X)(BB.backend);
+        const IB = await BB.load();
+        WB(IB.name);
+        const ZB = "unloaded" === (0, TB.u)();
+        if (ZB && (0, cB.m)(), !await (0, nB.b)(IB)) return void console.warn(`${zB} the join's early wasm load failed: the boot loads the client itself`);
+        if (!ZB) return;
+        const oB = (0, JB.e)(IB.name);
+        void 0 !== oB ? (0, GB.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(oB.ms)
         }, {
-          path: dB.path,
-          build: jB.name
-        }) : console.warn(`${rB} the join's wasm load left no record of how it compiled ${jB.name}`)
+          path: oB.path,
+          build: IB.name
+        }) : console.warn(`${zB} the join's wasm load left no record of how it compiled ${IB.name}`)
       })().catch((BB => {
-        console.warn(`${rB} the join's early wasm load did not start: the boot loads the client itself`, BB)
-      })), yB
+        console.warn(`${zB} the join's early wasm load did not start: the boot loads the client itself`, BB)
+      })), qB
     }
 
-    function LB(BB) {
-      null !== kB && (0, IB.logClientMeasurement)("wasm_compile_ahead", {
-        hit: kB === BB ? 1 : 0
+    function WB(BB) {
+      null !== yB && (0, GB.logClientMeasurement)("wasm_compile_ahead", {
+        hit: yB === BB ? 1 : 0
       }, {
-        guessed: kB,
+        guessed: yB,
         loaded: BB
       })
     }
 
-    function gB() {
+    function dB() {
       let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === mB) {
-        var jB;
-        const zB = null !== (jB = BB.joinStarted) && void 0 !== jB ? jB : () => !1;
-        mB = Promise.all([SB(BB), tB(zB)]).then((() => {}))
+      if (null === gB) {
+        var IB;
+        const ZB = null !== (IB = BB.joinStarted) && void 0 !== IB ? IB : () => !1;
+        gB = Promise.all([QB(BB), CB(ZB)]).then((() => {}))
       }
-      return mB
+      return gB
     }
 
-    function tB(BB) {
-      return JB ??= (async () => {
+    function CB(BB) {
+      return NB ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const jB = await (0, UB.k)();
-        null === jB || BB() || "unloaded" !== (0, QB.z)() || (kB = jB.name, await (0, nB.e)([jB, dB.c], "low"))
+        const IB = await (0, cB.g)();
+        null === IB || BB() || "unloaded" !== (0, TB.u)() || (yB = IB.name, await (0, JB.b)([IB, oB.h], "low"))
       })().catch((BB => {
-        console.warn(`${rB} the compile ahead of the join did not start: the join loads the client itself`, BB)
-      })), JB
+        console.warn(`${zB} the compile ahead of the join did not start: the join loads the client itself`, BB)
+      })), NB
     }
 
-    function SB() {
+    function QB() {
       let {
         joinStarted: BB = () => !1,
-        language: jB = ""
+        language: IB = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return sB ??= async function(BB, jB) {
+      return FB ??= async function(BB, IB) {
         if (!await async function(BB) {
             if (BB()) return !1;
-            let jB;
+            let IB;
             try {
-              var QB;
-              const BB = await fetch(`${zB.p}static/js/7zvlu.wasmJoinFiles.json`, {
+              var TB;
+              const BB = await fetch(`${ZB.p}static/js/c6gaap.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
               if (!BB.ok) throw new Error(`HTTP ${BB.status}`);
-              if (/\bno-store\b/.test(null !== (QB = BB.headers.get("Cache-Control")) && void 0 !== QB ? QB : "")) return !1;
-              const nB = await BB.json();
-              if (!Array.isArray(nB)) throw new Error("not a list");
-              jB = nB
-            } catch (dB) {
-              return console.warn(`${rB} the join's chunk list did not load: the join downloads its chunks itself`, dB), !BB()
+              if (/\bno-store\b/.test(null !== (TB = BB.headers.get("Cache-Control")) && void 0 !== TB ? TB : "")) return !1;
+              const JB = await BB.json();
+              if (!Array.isArray(JB)) throw new Error("not a list");
+              IB = JB
+            } catch (oB) {
+              return console.warn(`${zB} the join's chunk list did not load: the join downloads its chunks itself`, oB), !BB()
             }
             if (BB()) return !1;
-            const nB = document.createElement("link").relList.supports("prefetch");
-            for (const IB of jB) {
-              const BB = `${zB.p}${IB}`;
-              nB ? MB(BB) : (0, uB.e)(BB).catch((jB => {
-                console.warn(`${rB} prefetching ${BB} failed`, jB)
+            const JB = document.createElement("link").relList.supports("prefetch");
+            for (const GB of IB) {
+              const BB = `${ZB.p}${GB}`;
+              JB ? sB(BB) : (0, kB.e)(BB).catch((IB => {
+                console.warn(`${zB} prefetching ${BB} failed`, IB)
               }))
             }
             return !0
           }(BB)) return;
-        const QB = [(0, uB.e)((0, pB.g)())];
-        (0, pB.c)(jB) && QB.push((0, uB.e)((0, pB.k)()));
-        await Promise.all(QB)
-      }(BB, jB).catch((BB => {
-        console.warn(`${rB} the prefetch failed: the join downloads the client itself`, BB)
-      })), sB
+        const TB = [(0, kB.e)((0, hB.e)())];
+        (0, hB.c)(IB) && TB.push((0, kB.e)((0, hB.h)()));
+        await Promise.all(TB)
+      }(BB, IB).catch((BB => {
+        console.warn(`${zB} the prefetch failed: the join downloads the client itself`, BB)
+      })), FB
     }
 
-    function MB(BB) {
-      const jB = document.createElement("link");
-      jB.rel = "prefetch", jB.href = BB, BB.endsWith(".js") && (jB.crossOrigin = "anonymous"), document.head.appendChild(jB)
+    function sB(BB) {
+      const IB = document.createElement("link");
+      IB.rel = "prefetch", IB.href = BB, BB.endsWith(".js") && (IB.crossOrigin = "anonymous"), document.head.appendChild(IB)
     }
   },
-  39169: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => nB,
-      h: () => dB,
-      l: () => NB,
-      m: () => aB,
-      p: () => uB,
-      t: () => IB
+  39129: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => JB,
+      c: () => oB,
+      e: () => vB,
+      f: () => nB,
+      j: () => kB,
+      l: () => GB
     });
-    var QB = zB(214);
-    const nB = 3e3,
-      dB = 15e3;
+    var TB = ZB(201);
+    const JB = 3e3,
+      oB = 15e3;
 
-    function IB(BB) {
-      const jB = BB.endsWith(QB.g);
+    function GB(BB) {
+      const IB = BB.endsWith(TB.k);
       return {
-        text: (jB ? BB.slice(0, -QB.g.length) : BB) || null,
-        dropsCache: jB
+        text: (IB ? BB.slice(0, -TB.k.length) : BB) || null,
+        dropsCache: IB
       }
     }
-    const NB = "Either your internet isn't working or this is a bug.";
+    const vB = "Either your internet isn't working or this is a bug.";
 
-    function uB(BB, jB) {
-      const zB = aB(BB);
-      return null !== zB.name && "" === QB.c[zB.name].text && null !== jB ? jB : zB.reason
+    function kB(BB, IB) {
+      const ZB = nB(BB);
+      return null !== ZB.name && "" === TB.c[ZB.name].text && null !== IB ? IB : ZB.reason
     }
-    const UB = "You were removed from the game.";
+    const cB = "You were removed from the game.";
 
-    function aB(BB) {
-      var jB;
-      let zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const nB = null !== (jB = Object.keys(QB.c).find((jB => QB.c[jB].code === BB))) && void 0 !== jB ? jB : null;
-      if (null === nB) return {
+    function nB(BB) {
+      var IB;
+      let ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const JB = null !== (IB = Object.keys(TB.c).find((IB => TB.c[IB].code === BB))) && void 0 !== IB ? IB : null;
+      if (null === JB) return {
         code: BB,
-        name: nB,
-        reason: null !== zB && void 0 !== zB ? zB : `${NB}\nCode: ${BB}`,
+        name: JB,
+        reason: null !== ZB && void 0 !== ZB ? ZB : `${vB}\nCode: ${BB}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: dB,
-        canReconnect: IB = !1
-      } = QB.c[nB], uB = BB === QB.c.outdatedVersion.code || BB === QB.c.loadRecaptchaError.code;
+        text: oB,
+        canReconnect: GB = !1
+      } = TB.c[JB], kB = BB === TB.c.outdatedVersion.code || BB === TB.c.loadRecaptchaError.code;
       return {
         code: BB,
-        name: nB,
-        reason: "" !== dB ? dB : null !== zB && void 0 !== zB ? zB : BB === QB.c.gameOrPluginKick.code ? UB : `Code: ${BB}`,
-        canReconnect: IB,
-        automaticallyReconnect: BB === QB.c.customGameUpdated.code || BB === QB.c.duplicateLobbyNameError.code,
-        requiresRefresh: uB
+        name: JB,
+        reason: "" !== oB ? oB : null !== ZB && void 0 !== ZB ? ZB : BB === TB.c.gameOrPluginKick.code ? cB : `Code: ${BB}`,
+        canReconnect: GB,
+        automaticallyReconnect: BB === TB.c.customGameUpdated.code || BB === TB.c.duplicateLobbyNameError.code,
+        requiresRefresh: kB
       }
     }
   }

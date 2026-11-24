@@ -1,75 +1,75 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  8881: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => NB
+  8979: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => vB
     });
-    var QB = zB(28),
-      nB = zB(1240),
-      dB = zB(5078),
-      IB = zB(1148);
+    var TB = ZB(20),
+      JB = ZB(1248),
+      oB = ZB(5143),
+      GB = ZB(1153);
 
-    function NB(BB) {
+    function vB(BB) {
       let {
-        note: jB
+        note: IB
       } = BB;
       const {
-        t: zB
-      } = (0, nB.D)(), {
-        clientEscMenuOptions: NB
-      } = (0, QB.m)(["clientEscMenuOptions"]);
-      return (0, IB.jsx)(dB.b, {
-        label: zB("touchSettings:actionButtons"),
-        checked: NB.touchActionButtons,
+        t: ZB
+      } = (0, JB.G)(), {
+        clientEscMenuOptions: vB
+      } = (0, TB.o)(["clientEscMenuOptions"]);
+      return (0, GB.jsx)(oB.e, {
+        label: ZB("touchSettings:actionButtons"),
+        checked: vB.touchActionButtons,
         onClick: BB => {
-          QB.c.setClientEscMenuOptions({
+          TB.d.setClientEscMenuOptions({
             touchActionButtons: BB
           })
         },
-        circleInfoText: zB("touchSettings:actionButtonsInfo"),
-        note: jB
+        circleInfoText: ZB("touchSettings:actionButtonsInfo"),
+        note: IB
       })
     }
   },
-  8867: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => wz,
-      d: () => lz
+  8969: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => AZ,
+      h: () => lZ
     });
-    var QB = zB(1240),
-      nB = zB(62),
-      dB = zB(2033),
-      IB = zB(2046),
-      NB = zB(1091),
-      uB = zB.n(NB),
-      UB = zB(1478),
-      aB = zB(28),
-      pB = zB(106),
-      rB = zB(125),
-      sB = zB(5078),
-      JB = zB(2516),
-      mB = zB(297),
-      yB = zB(2053),
-      kB = zB(2059),
-      GB = zB(8875),
-      LB = zB(8881),
-      gB = zB(363),
-      tB = zB(1148);
-    const SB = {
+    var TB = ZB(1248),
+      JB = ZB(63),
+      oB = ZB(2066),
+      GB = ZB(2074),
+      vB = ZB(1091),
+      kB = ZB.n(vB),
+      cB = ZB(1516),
+      nB = ZB(20),
+      hB = ZB(105),
+      zB = ZB(121),
+      FB = ZB(5143),
+      NB = ZB(2526),
+      gB = ZB(282),
+      qB = ZB(2079),
+      yB = ZB(2083),
+      UB = ZB(8976),
+      WB = ZB(8979),
+      dB = ZB(342),
+      CB = ZB(1153);
+    const QB = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var MB = zB(8888);
-    var EB = zB(1514),
-      iB = zB(1381),
-      qB = zB(8897),
-      fB = zB(1442),
-      oB = zB(1108),
-      HB = zB(8901),
-      DB = zB(2559);
-    const FB = {
+    var sB = ZB(8985);
+    var wB = ZB(1542),
+      OB = ZB(1403),
+      YB = ZB(8991),
+      iB = ZB(1469),
+      pB = ZB(1102),
+      aB = ZB(8997),
+      HB = ZB(2555);
+    const MB = {
         sprint: "joystick",
         jump: "cluster",
         crouch: "cluster",
@@ -81,313 +81,313 @@ export const modules = {
         inventory: "hotbar",
         shop: "inventory",
         bag: "inventory",
-        ...Object.fromEntries(DB.F.map((BB => [BB, "menu"])))
+        ...Object.fromEntries(HB.A.map((BB => [BB, "menu"])))
       },
-      YB = BB => DB.A.filter((jB => FB[jB] === BB)),
-      VB = new Set(YB("cluster")),
-      hB = new Set(YB("inventory")),
-      XB = BB => "inventory" === BB || hB.has(BB),
-      ZB = BB => {
-        const jB = FB[BB];
-        return void 0 === jB ? [] : [jB, ...ZB(jB)]
+      jB = BB => HB.t.filter((IB => MB[IB] === BB)),
+      PB = new Set(jB("cluster")),
+      RB = new Set(jB("inventory")),
+      rB = BB => "inventory" === BB || RB.has(BB),
+      mB = BB => {
+        const IB = MB[BB];
+        return void 0 === IB ? [] : [IB, ...mB(IB)]
       },
-      AB = BB => [BB, ...ZB(BB)],
-      TB = (BB, jB, zB) => "shop" === BB && jB ? zB("inventory") ? ["inventory"] : zB("bag") ? [BB, "bag"] : [BB] : [BB],
-      PB = new Map([
-        ["cluster", VB],
-        ["inventory", hB]
+      XB = BB => [BB, ...mB(BB)],
+      LB = (BB, IB, ZB) => "shop" === BB && IB ? ZB("inventory") ? ["inventory"] : ZB("bag") ? [BB, "bag"] : [BB] : [BB],
+      eB = new Map([
+        ["cluster", PB],
+        ["inventory", RB]
       ]),
-      WB = ["cluster"],
-      eB = [...WB, ...DB.A.filter((BB => !WB.includes(BB) && !FB[BB]))],
-      lB = BB => [BB, ...YB(BB).flatMap(lB)],
-      wB = eB.flatMap(lB).map((BB => ({
+      uB = ["cluster"],
+      fB = [...uB, ...HB.t.filter((BB => !uB.includes(BB) && !MB[BB]))],
+      lB = BB => [BB, ...jB(BB).flatMap(lB)],
+      AB = fB.flatMap(lB).map((BB => ({
         id: BB,
         label: `hudLayout:${BB}`,
-        ...DB.w[BB],
-        parent: FB[BB]
+        ...HB.r[BB],
+        parent: MB[BB]
       }))),
-      xB = Object.fromEntries(wB.map((BB => [BB.id, BB]))),
-      KB = "data-hud-el";
+      tB = Object.fromEntries(AB.map((BB => [BB.id, BB]))),
+      bB = "data-hud-el";
 
-    function CB(BB, jB, zB, QB) {
-      const nB = zB(function(BB, jB) {
-          return "attack" !== BB || jB ? xB[BB].label : "hudLayout:attackContext"
-        }(BB, jB)),
-        dB = QB[BB];
-      return dB ? zB("hudLayout:slotWithKey", {
-        slot: nB,
-        key: dB
-      }) : nB
+    function xB(BB, IB, ZB, TB) {
+      const JB = ZB(function(BB, IB) {
+          return "attack" !== BB || IB ? tB[BB].label : "hudLayout:attackContext"
+        }(BB, IB)),
+        oB = TB[BB];
+      return oB ? ZB("hudLayout:slotWithKey", {
+        slot: JB,
+        key: oB
+      }) : JB
     }
 
-    function cB(BB, jB, zB, QB) {
-      return BB.map((BB => CB(BB, jB, zB, QB))).join(", ")
+    function EB(BB, IB, ZB, TB) {
+      return BB.map((BB => xB(BB, IB, ZB, TB))).join(", ")
     }
 
-    function bB(BB) {
+    function DB(BB) {
       let {
-        className: jB,
-        keepPlace: zB
+        className: IB,
+        keepPlace: ZB
       } = BB;
-      return zB ? (0, tB.jsx)("div", {
-        className: uB()(jB, "Placeholder")
+      return ZB ? (0, CB.jsx)("div", {
+        className: kB()(IB, "Placeholder")
       }) : null
     }
 
-    function vB(BB) {
+    function KB(BB) {
       let {
-        id: jB,
-        elements: zB,
-        actionButtons: nB,
-        keyNames: dB,
-        className: IB,
-        keepPlace: NB,
-        onHidden: uB
+        id: IB,
+        elements: ZB,
+        actionButtons: JB,
+        keyNames: oB,
+        className: GB,
+        keepPlace: vB,
+        onHidden: kB
       } = BB;
       const {
-        t: aB
-      } = (0, QB.D)();
-      if (!xB[jB].hide) return (0, tB.jsx)(bB, {
-        className: IB,
-        keepPlace: NB
+        t: nB
+      } = (0, TB.G)();
+      if (!tB[IB].hide) return (0, CB.jsx)(DB, {
+        className: GB,
+        keepPlace: vB
       });
-      const pB = (0, DB.s)(zB, jB);
-      return (0, tB.jsx)(UB.M, {
-        className: IB,
-        ariaLabel: aB(pB ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: CB(jB, nB, aB, dB)
+      const hB = (0, HB.p)(ZB, IB);
+      return (0, CB.jsx)(cB.V, {
+        className: GB,
+        ariaLabel: nB(hB ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: xB(IB, JB, nB, oB)
         }),
-        pressed: !pB,
+        pressed: !hB,
         onClick: () => {
-          uB(jB, !pB)
+          kB(IB, !hB)
         },
-        children: (0, tB.jsx)(oB.c, {
-          name: pB ? "eye-slash" : "eye"
+        children: (0, CB.jsx)(pB.d, {
+          name: hB ? "eye-slash" : "eye"
         })
       })
     }
 
-    function RB(BB) {
+    function VB(BB) {
       let {
-        id: jB,
-        elements: zB,
-        actionButtons: nB,
-        keyNames: dB,
-        className: IB,
-        keepPlace: NB,
-        onlyWhenMoved: uB,
-        locked: aB,
-        onReset: pB
+        id: IB,
+        elements: ZB,
+        actionButtons: JB,
+        keyNames: oB,
+        className: GB,
+        keepPlace: vB,
+        onlyWhenMoved: kB,
+        locked: nB,
+        onReset: hB
       } = BB;
       const {
-        t: rB
-      } = (0, QB.D)(), sB = xB[jB], JB = (0, DB.N)(zB[jB]);
-      return !sB.move && !sB.scale || uB && JB ? (0, tB.jsx)(bB, {
-        className: IB,
-        keepPlace: NB
-      }) : (0, tB.jsx)(UB.M, {
-        className: IB,
-        disabled: JB || aB,
-        ariaLabel: rB("hudLayout:resetElement", {
-          name: CB(jB, nB, rB, dB)
+        t: zB
+      } = (0, TB.G)(), FB = tB[IB], NB = (0, HB.I)(ZB[IB]);
+      return !FB.move && !FB.scale || kB && NB ? (0, CB.jsx)(DB, {
+        className: GB,
+        keepPlace: vB
+      }) : (0, CB.jsx)(cB.V, {
+        className: GB,
+        disabled: NB || nB,
+        ariaLabel: zB("hudLayout:resetElement", {
+          name: xB(IB, JB, zB, oB)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: jB
+          value: IB
         },
         onClick: BB => {
-          uB && zj(BB.currentTarget), pB(jB)
+          kB && ZI(BB.currentTarget), hB(IB)
         },
-        children: (0, tB.jsx)(oB.c, {
+        children: (0, CB.jsx)(pB.d, {
           name: "rotate-left"
         })
       })
     }
 
-    function OB(BB) {
+    function SB(BB) {
       let {
-        id: jB,
-        actionButtons: zB,
-        keyNames: nB,
-        className: dB,
-        keepPlace: IB,
-        locked: NB,
-        lockable: uB,
-        onLocked: aB
+        id: IB,
+        actionButtons: ZB,
+        keyNames: JB,
+        className: oB,
+        keepPlace: GB,
+        locked: vB,
+        lockable: kB,
+        onLocked: nB
       } = BB;
       const {
-        t: pB
-      } = (0, QB.D)();
-      return uB || NB ? (0, tB.jsx)(UB.M, {
-        className: dB,
-        ariaLabel: pB(NB ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: CB(jB, zB, pB, nB)
+        t: hB
+      } = (0, TB.G)();
+      return kB || vB ? (0, CB.jsx)(cB.V, {
+        className: oB,
+        ariaLabel: hB(vB ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: xB(IB, ZB, hB, JB)
         }),
-        pressed: NB,
-        active: NB,
+        pressed: vB,
+        active: vB,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${NB?"unlock":"lock"}:${jB}`
+          value: `${vB?"unlock":"lock"}:${IB}`
         },
         onClick: () => {
-          aB(jB, !NB)
+          nB(IB, !vB)
         },
-        children: (0, tB.jsx)(oB.c, {
-          name: NB ? "lock" : "lock-open"
+        children: (0, CB.jsx)(pB.d, {
+          name: vB ? "lock" : "lock-open"
         })
-      }) : (0, tB.jsx)(bB, {
-        className: dB,
-        keepPlace: IB
+      }) : (0, CB.jsx)(DB, {
+        className: oB,
+        keepPlace: GB
       })
     }
 
-    function Bj(BB) {
+    function BI(BB) {
       let {
-        className: jB,
-        open: zB,
-        name: nB,
-        onToggle: dB
+        className: IB,
+        open: ZB,
+        name: JB,
+        onToggle: oB
       } = BB;
       const {
-        t: IB
-      } = (0, QB.D)();
-      return (0, tB.jsx)(UB.M, {
-        className: jB,
-        ariaLabel: IB(zB ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: nB
+        t: GB
+      } = (0, TB.G)();
+      return (0, CB.jsx)(cB.V, {
+        className: IB,
+        ariaLabel: GB(ZB ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: JB
         }),
-        pressed: zB,
+        pressed: ZB,
         analyticsClick: {
           id: "hud_layout.children",
-          value: zB ? "close" : "open"
+          value: ZB ? "close" : "open"
         },
         onClick: () => {
-          dB(!zB)
+          oB(!ZB)
         },
-        children: (0, tB.jsx)(oB.c, {
-          name: zB ? "angle-up" : "angle-down"
+        children: (0, CB.jsx)(pB.d, {
+          name: ZB ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function jj(BB, jB) {
-      var zB;
-      BB.contains(document.activeElement) && jB.focus({
+    function II(BB, IB) {
+      var ZB;
+      BB.contains(document.activeElement) && IB.focus({
         preventScroll: !0
-      }), null === (zB = (0, fB.d)()) || void 0 === zB || zB.handOverPadFocus(BB, jB)
+      }), null === (ZB = (0, iB.d)()) || void 0 === ZB || ZB.handOverPadFocus(BB, IB)
     }
 
-    function zj(BB) {
-      const jB = BB.closest("[data-hud-row]"),
-        zB = null === jB || void 0 === jB ? void 0 : jB.querySelector(".HudElementRowName");
-      return !(!jB || !zB) && (jj(jB, zB), !0)
+    function ZI(BB) {
+      const IB = BB.closest("[data-hud-row]"),
+        ZB = null === IB || void 0 === IB ? void 0 : IB.querySelector(".HudElementRowName");
+      return !(!IB || !ZB) && (II(IB, ZB), !0)
     }
-    const Qj = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const TI = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function nj(BB, jB) {
-      return "joystick" === BB && !jB
+    function JI(BB, IB) {
+      return "joystick" === BB && !IB
     }
 
-    function dj() {
+    function oI() {
       const {
         t: BB
-      } = (0, QB.D)();
-      return (0, tB.jsx)(UB.M, {
+      } = (0, TB.G)();
+      return (0, CB.jsx)(cB.V, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
         onClick: BB => {
-          const jB = BB.currentTarget;
-          if (!zj(jB)) {
+          const IB = BB.currentTarget;
+          if (!ZI(IB)) {
             const BB = function(BB) {
-              var jB, zB;
-              const QB = [BB.previousElementSibling, BB.nextElementSibling].find((BB => BB instanceof HTMLElement && BB.matches(Qj)));
-              return null !== (jB = null !== QB && void 0 !== QB ? QB : null === (zB = BB.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === zB ? void 0 : zB.querySelector(`:is(${Qj}):not(.HudFixJoystickButton)`)) && void 0 !== jB ? jB : null
-            }(jB);
-            BB && jj(jB, BB)
+              var IB, ZB;
+              const TB = [BB.previousElementSibling, BB.nextElementSibling].find((BB => BB instanceof HTMLElement && BB.matches(TI)));
+              return null !== (IB = null !== TB && void 0 !== TB ? TB : null === (ZB = BB.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === ZB ? void 0 : ZB.querySelector(`:is(${TI}):not(.HudFixJoystickButton)`)) && void 0 !== IB ? IB : null
+            }(IB);
+            BB && II(IB, BB)
           }
-          aB.c.setClientEscMenuOptions({
+          nB.d.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
         children: BB("hudLayout:fixJoystick")
       })
     }
-    var Ij = zB(83),
-      Nj = zB(1306),
-      uj = zB(3219),
-      Uj = zB(2853),
-      aj = zB(2568);
-    const pj = (BB, jB, zB) => {
-      const QB = ZB(jB).includes(BB) ? BB : ZB(BB).includes(jB) ? jB : null;
-      if (null === QB || "joystick" === QB) return !1;
-      const nB = QB === BB ? jB : BB;
-      if ("menu" === QB) return (0, aj.y)(nB, zB.hudElements[nB]);
-      if ("hotbar" !== QB || !XB(nB)) return !0;
-      if ((0, DB.R)(zB.hudElements[nB]) || (0, DB.R)(zB.hudElements.inventory)) return !1;
-      return !(zB.hudLocked.includes(nB) || zB.hudLocked.includes("inventory")) || (0, DB.N)(zB.hudElements.hotbar)
+    var GI = ZB(82),
+      vI = ZB(1343),
+      kI = ZB(3272),
+      cI = ZB(2896),
+      nI = ZB(2562);
+    const hI = (BB, IB, ZB) => {
+      const TB = mB(IB).includes(BB) ? BB : mB(BB).includes(IB) ? IB : null;
+      if (null === TB || "joystick" === TB) return !1;
+      const JB = TB === BB ? IB : BB;
+      if ("menu" === TB) return (0, nI.y)(JB, ZB.hudElements[JB]);
+      if ("hotbar" !== TB || !rB(JB)) return !0;
+      if ((0, HB.M)(ZB.hudElements[JB]) || (0, HB.M)(ZB.hudElements.inventory)) return !1;
+      return !(ZB.hudLocked.includes(JB) || ZB.hudLocked.includes("inventory")) || (0, HB.I)(ZB.hudElements.hotbar)
     };
-    var rj = zB(2585),
-      sj = zB(3270),
-      Jj = zB(8907);
-    const mj = BB => ({
-      [KB]: BB
+    var zI = ZB(2590),
+      FI = ZB(3316),
+      NI = ZB(8999);
+    const gI = BB => ({
+      [bB]: BB
     });
 
-    function yj(BB) {
+    function qI(BB) {
       let {
-        id: jB,
-        slot: zB,
-        icon: QB,
-        label: dB,
-        hidden: IB,
-        className: NB,
-        face: UB
+        id: IB,
+        slot: ZB,
+        icon: TB,
+        label: oB,
+        hidden: GB,
+        className: vB,
+        face: cB
       } = BB;
-      const aB = (0, nB.useRef)(null);
-      return (0, nB.useLayoutEffect)((() => {
-        UB && aB.current && (0, Jj.l)(aB.current, UB)
-      }), [UB]), (0, tB.jsxs)("div", {
-        className: uB()("TouchKeyHit", `TouchSlot${zB}`, NB, {
-          HudPreviewGhost: IB.has(jB)
+      const nB = (0, JB.useRef)(null);
+      return (0, JB.useLayoutEffect)((() => {
+        cB && nB.current && (0, NI.q)(nB.current, cB)
+      }), [cB]), (0, CB.jsxs)("div", {
+        className: kB()("TouchKeyHit", `TouchSlot${ZB}`, vB, {
+          HudPreviewGhost: GB.has(IB)
         }),
-        ...mj(jB),
-        children: [UB && (0, tB.jsx)("div", {
-          ref: aB,
-          className: uB()("TouchKey", {
-            Labelled: UB.classList.contains("Labelled")
+        ...gI(IB),
+        children: [cB && (0, CB.jsx)("div", {
+          ref: nB,
+          className: kB()("TouchKey", {
+            Labelled: cB.classList.contains("Labelled")
           })
-        }), !UB && (0, tB.jsxs)("div", {
-          className: uB()("TouchKey", {
-            Labelled: void 0 !== dB
+        }), !cB && (0, CB.jsxs)("div", {
+          className: kB()("TouchKey", {
+            Labelled: void 0 !== oB
           }),
-          children: [QB && (0, tB.jsx)(oB.c, {
-            name: QB
-          }), void 0 !== dB && (0, tB.jsx)("span", {
+          children: [TB && (0, CB.jsx)(pB.d, {
+            name: TB
+          }), void 0 !== oB && (0, CB.jsx)("span", {
             className: "TouchKeyLabel",
-            children: dB
+            children: oB
           })]
         })]
       })
     }
 
-    function kj(BB) {
+    function yI(BB) {
       let {
-        item: jB,
-        selected: zB
+        item: IB,
+        selected: ZB
       } = BB;
-      const QB = (0, nB.useRef)(null);
-      return (0, nB.useLayoutEffect)((() => {
-        QB.current && (0, Jj.l)(QB.current, jB)
-      }), [jB]), (0, tB.jsx)("div", {
-        ref: QB,
-        className: uB()("InvenItem", {
-          Selected: zB
+      const TB = (0, JB.useRef)(null);
+      return (0, JB.useLayoutEffect)((() => {
+        TB.current && (0, NI.q)(TB.current, IB)
+      }), [IB]), (0, CB.jsx)("div", {
+        ref: TB,
+        className: kB()("InvenItem", {
+          Selected: ZB
         })
       })
     }
-    const Gj = {
+    const UI = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -396,173 +396,173 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      Lj = BB => void 0 === BB ? {} : {
+      WI = BB => void 0 === BB ? {} : {
         style: {
           "--parked": BB
         }
       };
 
-    function gj(BB) {
+    function dI(BB) {
       let {
-        id: jB,
-        hidden: zB,
-        parked: QB,
-        unslotted: nB = !1
+        id: IB,
+        hidden: ZB,
+        parked: TB,
+        unslotted: JB = !1
       } = BB;
-      return (0, tB.jsx)("div", {
-        className: uB()("TopRightIcon", rj.n[jB], {
-          HudPreviewGhost: zB.has(jB),
-          [aj.b]: void 0 !== QB,
-          [aj.d]: nB
+      return (0, CB.jsx)("div", {
+        className: kB()("TopRightIcon", zI.l[IB], {
+          HudPreviewGhost: ZB.has(IB),
+          [nI.c]: void 0 !== TB,
+          [nI.g]: JB
         }),
-        ...Lj(QB),
-        children: (0, tB.jsx)("div", {
+        ...WI(TB),
+        children: (0, CB.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...mj(jB),
-          children: (0, tB.jsx)("div", {
+          ...gI(IB),
+          children: (0, CB.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, tB.jsx)(oB.c, {
-              name: Gj[jB]
+            children: (0, CB.jsx)(pB.d, {
+              name: UI[IB]
             })
           })
         })
       })
     }
 
-    function tj(BB) {
+    function CI(BB) {
       let {
-        portraitPhone: jB,
-        icons: zB,
-        pinnedIcons: QB,
-        hidden: dB,
-        moved: IB,
-        trayState: NB
+        portraitPhone: IB,
+        icons: ZB,
+        pinnedIcons: TB,
+        hidden: oB,
+        moved: GB,
+        trayState: vB
       } = BB;
-      const UB = jB ? (0, aj.I)(zB) : [],
-        aB = zB.filter((BB => "settings" === BB)),
-        pB = zB.filter((BB => "settings" !== BB && !UB.includes(BB))).reverse(),
-        rB = UB.length > 0 && "gone" === NB,
-        sB = [...aB, ...rB ? ["tray"] : [], ...pB].filter((BB => "tray" === BB || dB.has(BB) && !IB.has(BB))),
-        JB = BB => {
-          const jB = sB.indexOf(BB);
-          return jB < 0 ? void 0 : jB
+      const cB = IB ? (0, nI.H)(ZB) : [],
+        nB = ZB.filter((BB => "settings" === BB)),
+        hB = ZB.filter((BB => "settings" !== BB && !cB.includes(BB))).reverse(),
+        zB = cB.length > 0 && "gone" === vB,
+        FB = [...nB, ...zB ? ["tray"] : [], ...hB].filter((BB => "tray" === BB || oB.has(BB) && !GB.has(BB))),
+        NB = BB => {
+          const IB = FB.indexOf(BB);
+          return IB < 0 ? void 0 : IB
         },
-        mB = (BB, jB) => (0, tB.jsx)(gj, {
+        gB = (BB, IB) => (0, CB.jsx)(dI, {
           id: BB,
-          hidden: dB,
-          parked: jB ? JB(BB) : void 0,
-          unslotted: jB && dB.has(BB) && IB.has(BB)
+          hidden: oB,
+          parked: IB ? NB(BB) : void 0,
+          unslotted: IB && oB.has(BB) && GB.has(BB)
         }, BB);
-      return (0, tB.jsxs)("div", {
-        className: uB()("TopRightIcons TouchInGame", {
-          Column: jB
+      return (0, CB.jsxs)("div", {
+        className: kB()("TopRightIcons TouchInGame", {
+          Column: IB
         }),
-        children: [aB.map((BB => mB(BB, !0))), UB.length > 0 && (0, tB.jsxs)("div", {
-          className: uB()("TopRightIcon TopRightTrayToggle Open", {
-            [aj.b]: rB
+        children: [nB.map((BB => gB(BB, !0))), cB.length > 0 && (0, CB.jsxs)("div", {
+          className: kB()("TopRightIcon TopRightTrayToggle Open", {
+            [nI.c]: zB
           }),
-          ...Lj(JB("tray")),
-          children: [(0, tB.jsx)("div", {
-            className: uB()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== NB
+          ...WI(NB("tray")),
+          children: [(0, CB.jsx)("div", {
+            className: kB()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== vB
             }),
-            children: (0, tB.jsx)("div", {
+            children: (0, CB.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, tB.jsx)(oB.c, {
+              children: (0, CB.jsx)(pB.d, {
                 name: "ellipsis"
               })
             })
-          }), (0, tB.jsx)("div", {
+          }), (0, CB.jsx)("div", {
             className: "TopRightTray",
-            children: UB.map((BB => mB(BB, !1)))
+            children: cB.map((BB => gB(BB, !1)))
           })]
-        }), pB.map((BB => (0, tB.jsxs)(nB.Fragment, {
-          children: ["perspective" === BB && null !== QB.rightOfCamera && (0, tB.jsx)(Sj, {
-            icon: QB.rightOfCamera
-          }), mB(BB, !0)]
-        }, BB))), null !== QB.leftEnd && (0, tB.jsx)(Sj, {
-          icon: QB.leftEnd
+        }), hB.map((BB => (0, CB.jsxs)(JB.Fragment, {
+          children: ["perspective" === BB && null !== TB.rightOfCamera && (0, CB.jsx)(QI, {
+            icon: TB.rightOfCamera
+          }), gB(BB, !0)]
+        }, BB))), null !== TB.leftEnd && (0, CB.jsx)(QI, {
+          icon: TB.leftEnd
         })]
       })
     }
 
-    function Sj(BB) {
+    function QI(BB) {
       let {
-        icon: jB
+        icon: IB
       } = BB;
-      return (0, tB.jsx)("div", {
+      return (0, CB.jsx)("div", {
         className: "TopRightIcon",
-        children: (0, tB.jsx)("div", {
+        children: (0, CB.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, tB.jsx)("div", {
+          children: (0, CB.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, tB.jsx)(oB.c, {
-              name: jB
+            children: (0, CB.jsx)(pB.d, {
+              name: IB
             })
           })
         })
       })
     }
 
-    function Mj(BB) {
+    function sI(BB) {
       let {
-        next: jB,
-        hidden: zB
+        next: IB,
+        hidden: ZB
       } = BB;
-      return (0, tB.jsx)("div", {
-        className: uB()("HotBarArrow", jB ? "Next" : "Previous", {
-          HudPreviewGhost: zB
+      return (0, CB.jsx)("div", {
+        className: kB()("HotBarArrow", IB ? "Next" : "Previous", {
+          HudPreviewGhost: ZB
         }),
-        ...mj("arrows"),
-        children: (0, tB.jsx)("div", {
+        ...gI("arrows"),
+        children: (0, CB.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, tB.jsx)("div", {
+          children: (0, CB.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, tB.jsx)(oB.c, {
-              name: jB ? "caret-right" : "caret-left"
+            children: (0, CB.jsx)(pB.d, {
+              name: IB ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function Ej() {
-      return (0, tB.jsx)("div", {
+    function wI() {
+      return (0, CB.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, tB.jsx)("div", {
+        children: (0, CB.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, tB.jsx)("div", {
+          children: (0, CB.jsx)("div", {
             className: "SocialBar",
-            children: (0, tB.jsx)("div", {
+            children: (0, CB.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, tB.jsx)("div", {
+              children: (0, CB.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, tB.jsxs)("div", {
+                children: (0, CB.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, tB.jsxs)("div", {
+                  children: [(0, CB.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, tB.jsx)("div", {
+                    children: [(0, CB.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, tB.jsx)("div", {
+                    }), (0, CB.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, tB.jsx)(oB.c, {
+                      children: (0, CB.jsx)(pB.d, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, tB.jsx)("div", {
+                  }), (0, CB.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, tB.jsx)("div", {
+                    children: (0, CB.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, tB.jsxs)("div", {
+                  }), (0, CB.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, tB.jsx)("div", {
+                    children: [(0, CB.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, tB.jsx)("div", {
+                    }), (0, CB.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, tB.jsx)(oB.c, {
+                      children: (0, CB.jsx)(pB.d, {
                         name: "user"
                       })
                     })]
@@ -574,11 +574,11 @@ export const modules = {
         })
       })
     }
-    const ij = {
+    const OI = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      qj = {
+      YI = {
         P: {
           icon: "crosshairs",
           labelKey: "touchKeys:scope"
@@ -588,8 +588,8 @@ export const modules = {
           labelKey: "touchKeys:fly"
         }
       },
-      fj = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      oj = {
+      iI = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      pI = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -597,320 +597,320 @@ export const modules = {
         5: "cookie"
       };
 
-    function Hj(BB) {
+    function aI(BB) {
       let {
-        presence: jB,
-        portraitPhone: zB,
-        hidden: nB,
-        actionButtons: dB,
-        joystickFixed: IB,
-        keysAbove: NB,
-        auraBar: UB,
-        trayState: aB,
-        moved: rB
+        presence: IB,
+        portraitPhone: ZB,
+        hidden: JB,
+        actionButtons: oB,
+        joystickFixed: GB,
+        keysAbove: vB,
+        auraBar: cB,
+        trayState: nB,
+        moved: zB
       } = BB;
       const {
-        t: sB
-      } = (0, QB.D)(), {
-        faces: JB,
-        items: mB
-      } = jB, yB = BB => ({
-        HudPreviewGhost: AB(BB).some((BB => nB.has(BB)))
+        t: FB
+      } = (0, TB.G)(), {
+        faces: NB,
+        items: gB
+      } = IB, qB = BB => ({
+        HudPreviewGhost: XB(BB).some((BB => JB.has(BB)))
       });
-      return (0, tB.jsxs)("div", {
+      return (0, CB.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, tB.jsx)("div", {
+        children: [(0, CB.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, tB.jsxs)("div", {
+          children: (0, CB.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, tB.jsx)("div", {
+            children: [(0, CB.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, tB.jsx)("div", {
+            }), (0, CB.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, tB.jsx)("div", {
+            }), (0, CB.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: sB("hudLayout:previewGameName")
+              children: FB("hudLayout:previewGameName")
             })]
           })
-        }), (0, tB.jsx)("div", {
+        }), (0, CB.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, tB.jsx)("div", {
+          children: (0, CB.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, tB.jsxs)("div", {
+            children: (0, CB.jsxs)("div", {
               className: "Chat",
-              children: [(0, tB.jsx)("div", {
+              children: [(0, CB.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [sB("hudLayout:previewChatLine"), sB("hudLayout:previewChatJoined", {
+                children: [FB("hudLayout:previewChatLine"), FB("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), sB("hudLayout:previewChatJoined", {
+                }), FB("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((BB => (0, tB.jsx)("div", {
+                })].map((BB => (0, CB.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, tB.jsx)("div", {
+                  children: (0, CB.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, tB.jsx)("div", {
+                    children: (0, CB.jsx)("div", {
                       className: "IndividualText",
                       children: BB
                     })
                   })
                 }, BB)))
-              }), (0, tB.jsx)("button", {
+              }), (0, CB.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: uB()("ChatIconWrapper SmallTextLight", yB("chat")),
-                ...mj("chat"),
-                children: (0, tB.jsx)(oB.c, {
+                className: kB()("ChatIconWrapper SmallTextLight", qB("chat")),
+                ...gI("chat"),
+                children: (0, CB.jsx)(pB.d, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, tB.jsx)("div", {
+        }), (0, CB.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, tB.jsxs)("div", {
+          children: (0, CB.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, tB.jsx)("div", {
+            children: [(0, CB.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, tB.jsx)("div", {
+              children: (0, CB.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...mj("menu"),
-                children: (0, tB.jsx)(tj, {
-                  portraitPhone: zB,
-                  icons: jB.rowIcons,
-                  pinnedIcons: jB.pinnedIcons,
-                  hidden: nB,
-                  trayState: aB,
-                  moved: rB
+                ...gI("menu"),
+                children: (0, CB.jsx)(CI, {
+                  portraitPhone: ZB,
+                  icons: IB.rowIcons,
+                  pinnedIcons: IB.pinnedIcons,
+                  hidden: JB,
+                  trayState: nB,
+                  moved: zB
                 })
               })
-            }), pB.featureFlags.useSocialFeatures && (0, tB.jsx)("div", {
+            }), hB.featureFlags.useSocialFeatures && (0, CB.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, tB.jsx)(Ej, {})
+              children: (0, CB.jsx)(wI, {})
             })]
           })
-        }), (0, tB.jsx)("div", {
+        }), (0, CB.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, tB.jsx)("div", {
+        }), (0, CB.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, tB.jsxs)("div", {
+          children: (0, CB.jsxs)("div", {
             className: "TouchInteractKey",
-            ...mj("interact"),
-            children: [(0, tB.jsx)("div", {
+            ...gI("interact"),
+            children: [(0, CB.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, tB.jsx)(oB.c, {
+              children: (0, CB.jsx)(pB.d, {
                 name: "hand-back-point-up"
               })
-            }), (0, tB.jsx)("div", {
-              children: sB("hudLayout:previewInteract")
+            }), (0, CB.jsx)("div", {
+              children: FB("hudLayout:previewInteract")
             })]
           })
-        }), (0, tB.jsx)("div", {
+        }), (0, CB.jsx)("div", {
           className: "BottomCentre",
-          children: (0, tB.jsxs)("div", {
+          children: (0, CB.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, tB.jsx)("div", {
+            children: [(0, CB.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, tB.jsxs)("div", {
+            }), (0, CB.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, tB.jsx)("div", {
+              children: [(0, CB.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...mj("hotbar"),
-                children: (0, tB.jsx)("div", {
+                ...gI("hotbar"),
+                children: (0, CB.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, tB.jsxs)("div", {
+                  children: (0, CB.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, tB.jsx)("div", {
+                    children: [(0, CB.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, tB.jsxs)("div", {
+                    }), (0, CB.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, tB.jsx)(oB.c, {
+                      children: [(0, CB.jsx)(pB.d, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), UB && (0, tB.jsxs)("div", {
+              }), cB && (0, CB.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, tB.jsxs)("div", {
+                children: [(0, CB.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, tB.jsx)("img", {
+                  children: [(0, CB.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, sj.f)("glint"),
+                    src: (0, FI.f)("glint"),
                     alt: ""
-                  }), (0, tB.jsx)("div", {
+                  }), (0, CB.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, tB.jsx)("div", {
+                }), (0, CB.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, tB.jsx)("div", {
+                  children: (0, CB.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, tB.jsx)("div", {
+              }), (0, CB.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, tB.jsx)("div", {
-                  className: uB()("HotBarContainer Touch", {
-                    KeysAbove: NB
+                children: (0, CB.jsx)("div", {
+                  className: kB()("HotBarContainer Touch", {
+                    KeysAbove: vB
                   }),
-                  children: (0, tB.jsxs)("div", {
+                  children: (0, CB.jsxs)("div", {
                     className: "HotBar",
-                    ...mj("hotbar"),
-                    children: [(0, tB.jsxs)("div", {
-                      className: uB()("TouchInventoryKeys", {
-                        NoAuraBar: !UB
+                    ...gI("hotbar"),
+                    children: [(0, CB.jsxs)("div", {
+                      className: kB()("TouchInventoryKeys", {
+                        NoAuraBar: !cB
                       }),
-                      children: [(0, tB.jsx)("div", {
-                        className: uB()("TouchInventoryKey ShopKey", yB("shop"), {
-                          Hidden: !jB.shop
+                      children: [(0, CB.jsx)("div", {
+                        className: kB()("TouchInventoryKey ShopKey", qB("shop"), {
+                          Hidden: !IB.shop
                         }),
-                        ...mj("shop"),
-                        children: (0, tB.jsx)("div", {
+                        ...gI("shop"),
+                        children: (0, CB.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, tB.jsx)("div", {
+                          children: (0, CB.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, tB.jsx)(oB.c, {
+                            children: (0, CB.jsx)(pB.d, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, tB.jsx)("div", {
-                        className: uB()("TouchInventoryKey BagKey", yB("bag"), {
-                          Hidden: !jB.bag
+                      }), (0, CB.jsx)("div", {
+                        className: kB()("TouchInventoryKey BagKey", qB("bag"), {
+                          Hidden: !IB.bag
                         }),
-                        ...mj("bag"),
-                        children: (0, tB.jsx)("div", {
+                        ...gI("bag"),
+                        children: (0, CB.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, tB.jsx)("div", {
+                          children: (0, CB.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, tB.jsx)(oB.c, {
+                            children: (0, CB.jsx)(pB.d, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, tB.jsx)(Mj, {
+                    }), (0, CB.jsx)(sI, {
                       next: !1,
-                      hidden: nB.has("arrows")
-                    }), (0, tB.jsxs)("div", {
+                      hidden: JB.has("arrows")
+                    }), (0, CB.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== mB && mB.map(((BB, jB) => (0, tB.jsx)(kj, {
+                      children: [null !== gB && gB.map(((BB, IB) => (0, CB.jsx)(yI, {
                         item: BB,
                         selected: BB.classList.contains("Selected")
-                      }, jB))), null === mB && fj.map((BB => {
-                        const jB = oj[BB];
-                        return (0, tB.jsx)("div", {
-                          className: uB()("InvenItem", {
+                      }, IB))), null === gB && iI.map((BB => {
+                        const IB = pI[BB];
+                        return (0, CB.jsx)("div", {
+                          className: kB()("InvenItem", {
                             Selected: 0 === BB
                           }),
-                          children: jB && (0, tB.jsx)("div", {
+                          children: IB && (0, CB.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, tB.jsx)(oB.c, {
-                              name: jB
+                            children: (0, CB.jsx)(pB.d, {
+                              name: IB
                             })
                           })
                         }, BB)
                       }))]
-                    }), (0, tB.jsx)(Mj, {
+                    }), (0, CB.jsx)(sI, {
                       next: !0,
-                      hidden: nB.has("arrows")
+                      hidden: JB.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, tB.jsx)("div", {
+            }), (0, CB.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, tB.jsxs)("div", {
+              children: (0, CB.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== JB && Jj.f.map((BB => {
-                  const jB = JB[BB];
-                  return jB && (0, tB.jsx)(yj, {
-                    id: Jj.e[BB],
+                children: [null !== NB && NI.m.map((BB => {
+                  const IB = NB[BB];
+                  return IB && (0, CB.jsx)(qI, {
+                    id: NI.i[BB],
                     slot: BB,
-                    face: jB,
-                    className: ij[BB],
-                    hidden: nB
+                    face: IB,
+                    className: OI[BB],
+                    hidden: JB
                   }, BB)
-                })), (0, Jj.m)(jB, dB).map((BB => (0, tB.jsx)(yj, {
-                  id: Jj.e[BB],
+                })), (0, NI.u)(IB, oB).map((BB => (0, CB.jsx)(qI, {
+                  id: NI.i[BB],
                   slot: BB,
-                  icon: qj[BB].icon,
-                  label: sB(qj[BB].labelKey),
+                  icon: YI[BB].icon,
+                  label: FB(YI[BB].labelKey),
                   className: "HudPreviewContextSlot",
-                  hidden: nB
-                }, BB))), null === JB && (0, tB.jsxs)(tB.Fragment, {
-                  children: [(0, tB.jsx)(yj, {
+                  hidden: JB
+                }, BB))), null === NB && (0, CB.jsxs)(CB.Fragment, {
+                  children: [(0, CB.jsx)(qI, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: nB
-                  }), (0, tB.jsx)(yj, {
+                    hidden: JB
+                  }), (0, CB.jsx)(qI, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: nB
-                  }), dB && (0, tB.jsxs)(tB.Fragment, {
-                    children: [(0, tB.jsx)(yj, {
+                    hidden: JB
+                  }), oB && (0, CB.jsxs)(CB.Fragment, {
+                    children: [(0, CB.jsx)(qI, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: nB
-                    }), (0, tB.jsx)(yj, {
+                      hidden: JB
+                    }), (0, CB.jsx)(qI, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: nB
+                      hidden: JB
                     })]
-                  }), (0, Jj.j)(dB).map((BB => (0, tB.jsx)(yj, {
-                    id: Jj.e[BB],
+                  }), (0, NI.o)(oB).map((BB => (0, CB.jsx)(qI, {
+                    id: NI.i[BB],
                     slot: BB,
-                    icon: qj[BB].icon,
-                    label: sB(qj[BB].labelKey),
-                    hidden: nB
-                  }, BB))), (0, tB.jsx)(yj, {
+                    icon: YI[BB].icon,
+                    label: FB(YI[BB].labelKey),
+                    hidden: JB
+                  }, BB))), (0, CB.jsx)(qI, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: nB
+                    hidden: JB
                   })]
                 })]
               })
             })]
           })
-        }), (0, tB.jsxs)("div", {
+        }), (0, CB.jsxs)("div", {
           className: "TouchMovementWrapper",
-          children: [(0, tB.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, tB.jsxs)("div", {
-              className: uB()("Joystick Resting HudPreviewJoystick", {
-                Floating: !IB
+            children: (0, CB.jsxs)("div", {
+              className: kB()("Joystick Resting HudPreviewJoystick", {
+                Floating: !GB
               }),
-              ...mj("joystick"),
-              children: [(0, tB.jsx)("div", {
+              ...gI("joystick"),
+              children: [(0, CB.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, tB.jsx)("div", {
+              }), (0, CB.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
-          }), jB.sprint && (0, tB.jsx)("div", {
-            className: uB()("TouchSprintHit", yB("sprint"), {
-              AtHome: !IB
+          }), IB.sprint && (0, CB.jsx)("div", {
+            className: kB()("TouchSprintHit", qB("sprint"), {
+              AtHome: !GB
             }),
-            ...mj("sprint"),
-            children: (0, tB.jsx)("div", {
+            ...gI("sprint"),
+            children: (0, CB.jsx)("div", {
               className: "TouchKey TouchSprintKey Lit",
-              children: (0, tB.jsx)(oB.c, {
+              children: (0, CB.jsx)(pB.d, {
                 name: "person-running"
               })
             })
@@ -919,1096 +919,1096 @@ export const modules = {
       })
     }
 
-    function Dj() {
-      const [BB, jB] = (0, nB.useState)({}), zB = (0, nB.useCallback)((BB => {
-        jB((jB => [...new Set([...Object.keys(jB), ...Object.keys(BB)])].every((zB => jB[zB] === BB[zB])) ? jB : BB))
+    function HI() {
+      const [BB, IB] = (0, JB.useState)({}), ZB = (0, JB.useCallback)((BB => {
+        IB((IB => [...new Set([...Object.keys(IB), ...Object.keys(BB)])].every((ZB => IB[ZB] === BB[ZB])) ? IB : BB))
       }), []);
-      return [BB, zB]
+      return [BB, ZB]
     }
-    const Fj = .05;
+    const MI = .05;
 
-    function Yj(BB) {
-      var jB;
+    function jI(BB) {
+      var IB;
       let {
-        selected: zB,
-        layout: nB,
-        actionButtons: dB,
-        keyNames: IB,
-        overlaps: NB,
-        scaleCaps: aB,
-        joystickFixed: pB,
-        onScale: rB,
-        onHidden: sB,
-        onReset: JB,
-        locked: mB,
-        lockable: yB,
-        onLocked: kB,
-        extra: GB
+        selected: ZB,
+        layout: JB,
+        actionButtons: oB,
+        keyNames: GB,
+        overlaps: vB,
+        scaleCaps: nB,
+        joystickFixed: hB,
+        onScale: zB,
+        onHidden: FB,
+        onReset: NB,
+        locked: gB,
+        lockable: qB,
+        onLocked: yB,
+        extra: UB
       } = BB;
       const {
-        t: LB
-      } = (0, QB.D)(), gB = zB ? xB[zB] : null, SB = null !== zB && mB.has(zB), MB = (zB && nB.hudElements[zB] || DB.m)[2], EB = null !== (jB = zB && aB[zB]) && void 0 !== jB ? jB : DB.h, iB = BB => {
-        zB && rB(zB, Math.min(EB, Math.round(100 * (MB + .1 * BB)) / 100))
+        t: WB
+      } = (0, TB.G)(), dB = ZB ? tB[ZB] : null, QB = null !== ZB && gB.has(ZB), sB = (ZB && JB.hudElements[ZB] || HB.k)[2], wB = null !== (IB = ZB && nB[ZB]) && void 0 !== IB ? IB : HB.g, OB = BB => {
+        ZB && zB(ZB, Math.min(wB, Math.round(100 * (sB + .1 * BB)) / 100))
       };
-      return (0, tB.jsxs)(tB.Fragment, {
-        children: [(0, tB.jsxs)("div", {
-          className: uB()("HudQuickName SmallTextBold", {
-            Overlap: NB.length > 0
+      return (0, CB.jsxs)(CB.Fragment, {
+        children: [(0, CB.jsxs)("div", {
+          className: kB()("HudQuickName SmallTextBold", {
+            Overlap: vB.length > 0
           }),
-          children: [NB.length > 0 && (0, tB.jsx)(oB.c, {
+          children: [vB.length > 0 && (0, CB.jsx)(pB.d, {
             name: "triangle-exclamation"
-          }), gB ? CB(gB.id, dB, LB, IB) : LB("hudLayout:fullScreenHint"), NB.length > 0 && (0, tB.jsx)("span", {
+          }), dB ? xB(dB.id, oB, WB, GB) : WB("hudLayout:fullScreenHint"), vB.length > 0 && (0, CB.jsx)("span", {
             className: "HudQuickOverlap",
-            children: LB("hudLayout:overlapsShort", {
-              names: cB(NB, dB, LB, IB)
+            children: WB("hudLayout:overlapsShort", {
+              names: EB(vB, oB, WB, GB)
             })
           })]
-        }), (null === gB || void 0 === gB ? void 0 : gB.scale) && (0, tB.jsxs)("div", {
+        }), (null === dB || void 0 === dB ? void 0 : dB.scale) && (0, CB.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, tB.jsx)(UB.M, {
-            disabled: SB || MB <= DB.k,
-            ariaLabel: LB("hudLayout:smaller"),
+          children: [(0, CB.jsx)(cB.V, {
+            disabled: QB || sB <= HB.i,
+            ariaLabel: WB("hudLayout:smaller"),
             onClick: () => {
-              iB(-1)
+              OB(-1)
             },
-            children: (0, tB.jsx)(oB.c, {
+            children: (0, CB.jsx)(pB.d, {
               name: "minus"
             })
-          }), (0, tB.jsx)("span", {
+          }), (0, CB.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*MB)}%`
-          }), (0, tB.jsx)(UB.M, {
-            disabled: SB || MB >= EB,
-            ariaLabel: LB("hudLayout:larger"),
+            children: `${Math.round(100*sB)}%`
+          }), (0, CB.jsx)(cB.V, {
+            disabled: QB || sB >= wB,
+            ariaLabel: WB("hudLayout:larger"),
             onClick: () => {
-              iB(1)
+              OB(1)
             },
-            children: (0, tB.jsx)(oB.c, {
+            children: (0, CB.jsx)(pB.d, {
               name: "plus"
             })
           })]
-        }), (gB || GB) && (0, tB.jsxs)("div", {
+        }), (dB || UB) && (0, CB.jsxs)("div", {
           className: "HudQuickActions",
-          children: [gB && (0, tB.jsxs)(tB.Fragment, {
-            children: [(0, tB.jsx)(OB, {
-              id: gB.id,
-              actionButtons: dB,
-              keyNames: IB,
-              locked: SB,
-              lockable: yB(gB.id),
-              onLocked: kB
-            }), (0, tB.jsx)(vB, {
-              id: gB.id,
-              elements: nB.hudElements,
-              actionButtons: dB,
-              keyNames: IB,
-              onHidden: sB
-            }), (0, tB.jsx)(RB, {
-              id: gB.id,
-              elements: nB.hudElements,
-              actionButtons: dB,
-              keyNames: IB,
-              locked: SB,
-              onReset: JB
-            }), nj(gB.id, pB) && (0, tB.jsx)(dj, {})]
-          }), GB]
+          children: [dB && (0, CB.jsxs)(CB.Fragment, {
+            children: [(0, CB.jsx)(SB, {
+              id: dB.id,
+              actionButtons: oB,
+              keyNames: GB,
+              locked: QB,
+              lockable: qB(dB.id),
+              onLocked: yB
+            }), (0, CB.jsx)(KB, {
+              id: dB.id,
+              elements: JB.hudElements,
+              actionButtons: oB,
+              keyNames: GB,
+              onHidden: FB
+            }), (0, CB.jsx)(VB, {
+              id: dB.id,
+              elements: JB.hudElements,
+              actionButtons: oB,
+              keyNames: GB,
+              locked: QB,
+              onReset: NB
+            }), JI(dB.id, hB) && (0, CB.jsx)(oI, {})]
+          }), UB]
         })]
       })
     }
-    var Vj = zB(1162),
-      hj = zB(4536);
-    const Xj = "HudPreviewDoc",
-      Zj = {
+    var PI = ZB(1165),
+      RI = ZB(4602);
+    const rI = "HudPreviewDoc",
+      mI = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      Aj = new Set([Xj, ...Object.values(Zj)]),
-      Tj = new Set(DB.A.map(rj.C)),
-      Pj = new Set(rj.i),
-      Wj = 'style, link[rel="stylesheet"]';
+      XI = new Set([rI, ...Object.values(mI)]),
+      LI = new Set(HB.t.map(zI.B)),
+      eI = new Set(zI.g),
+      uI = 'style, link[rel="stylesheet"]';
 
-    function ej(BB, jB, zB, QB) {
-      const nB = new Map,
-        dB = new Set,
-        IB = new URL(BB.baseURI).origin,
-        NB = jB => {
-          var zB;
-          if ("LINK" !== jB.nodeName) return !0;
-          const QB = null === (zB = jB.getAttribute("href")) || void 0 === zB ? void 0 : zB.trim();
-          if (!QB) return !1;
+    function fI(BB, IB, ZB, TB) {
+      const JB = new Map,
+        oB = new Set,
+        GB = new URL(BB.baseURI).origin,
+        vB = IB => {
+          var ZB;
+          if ("LINK" !== IB.nodeName) return !0;
+          const TB = null === (ZB = IB.getAttribute("href")) || void 0 === ZB ? void 0 : ZB.trim();
+          if (!TB) return !1;
           try {
-            return new URL(QB, BB.baseURI).origin === IB
+            return new URL(TB, BB.baseURI).origin === GB
           } catch {
             return !1
           }
         };
-      let uB = null;
-      const UB = () => {
-          uB !== (0 === dB.size) && (uB = 0 === dB.size, null === QB || void 0 === QB || QB(uB))
+      let kB = null;
+      const cB = () => {
+          kB !== (0 === oB.size) && (kB = 0 === oB.size, null === TB || void 0 === TB || TB(kB))
         },
-        aB = BB => {
-          const jB = BB.cloneNode(!0);
-          if ("LINK" === jB.tagName) {
-            dB.add(jB);
+        nB = BB => {
+          const IB = BB.cloneNode(!0);
+          if ("LINK" === IB.tagName) {
+            oB.add(IB);
             const BB = () => {
-              dB.delete(jB), UB()
+              oB.delete(IB), cB()
             };
-            jB.addEventListener("load", BB), jB.addEventListener("error", BB), zB && jB.addEventListener("load", zB)
+            IB.addEventListener("load", BB), IB.addEventListener("error", BB), ZB && IB.addEventListener("load", ZB)
           }
-          return jB
+          return IB
         },
-        pB = () => {
-          const QB = function(BB) {
-              const jB = [...BB.body.children].filter((BB => BB.matches(Wj)));
-              return [...BB.head.querySelectorAll(Wj), ...jB]
-            }(BB).filter(NB),
-            IB = new Set(QB);
-          for (const [BB, jB] of nB) IB.has(BB) || (jB.remove(), nB.delete(BB), dB.delete(jB));
-          let uB = null;
-          for (let BB = QB.length - 1; BB >= 0; BB--) {
-            const dB = QB[BB];
-            let IB = nB.get(dB);
-            IB ? "STYLE" === dB.tagName && IB.textContent !== dB.textContent && (IB.textContent = dB.textContent, null === zB || void 0 === zB || zB()) : (IB = aB(dB), nB.set(dB, IB), jB.head.insertBefore(IB, uB)), uB = IB
+        hB = () => {
+          const TB = function(BB) {
+              const IB = [...BB.body.children].filter((BB => BB.matches(uI)));
+              return [...BB.head.querySelectorAll(uI), ...IB]
+            }(BB).filter(vB),
+            GB = new Set(TB);
+          for (const [BB, IB] of JB) GB.has(BB) || (IB.remove(), JB.delete(BB), oB.delete(IB));
+          let kB = null;
+          for (let BB = TB.length - 1; BB >= 0; BB--) {
+            const oB = TB[BB];
+            let GB = JB.get(oB);
+            GB ? "STYLE" === oB.tagName && GB.textContent !== oB.textContent && (GB.textContent = oB.textContent, null === ZB || void 0 === ZB || ZB()) : (GB = nB(oB), JB.set(oB, GB), IB.head.insertBefore(GB, kB)), kB = GB
           }
-          UB()
+          cB()
         };
-      pB();
-      const rB = new MutationObserver(pB);
-      return rB.observe(BB.head, {
+      hB();
+      const zB = new MutationObserver(hB);
+      return zB.observe(BB.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), rB.observe(BB.body, {
+      }), zB.observe(BB.body, {
         childList: !0
       }), () => {
-        rB.disconnect()
+        zB.disconnect()
       }
     }
 
-    function lj(BB, jB, zB) {
+    function lI(BB, IB, ZB) {
       let {
-        keysAbove: QB
-      } = zB;
-      const nB = [...BB.documentElement.classList].filter((BB => !Aj.has(BB) && !Pj.has(BB))),
-        dB = [...jB.documentElement.classList].filter((BB => Pj.has(BB))),
-        IB = [Xj, Zj.hotbar, Zj.hasShop, Zj.hasBag];
-      QB && IB.push(Zj.keysAbove), jB.documentElement.className = [...nB, ...IB, ...dB].join(" ")
+        keysAbove: TB
+      } = ZB;
+      const JB = [...BB.documentElement.classList].filter((BB => !XI.has(BB) && !eI.has(BB))),
+        oB = [...IB.documentElement.classList].filter((BB => eI.has(BB))),
+        GB = [rI, mI.hotbar, mI.hasShop, mI.hasBag];
+      TB && GB.push(mI.keysAbove), IB.documentElement.className = [...JB, ...GB, ...oB].join(" ")
     }
-    const wj = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const AI = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function xj(BB, jB, zB, QB, nB) {
-      const dB = (0, DB.E)(zB, QB, "joystick"),
-        IB = (0, rj.G)((0, rj.S)(zB, QB, nB), QB),
-        NB = IB.classes.filter((BB => !Tj.has(BB))),
-        uB = jB.documentElement,
-        UB = zB.hudLayouts[QB].hudSafe,
-        aB = (0, rj.J)(UB, window.innerWidth, window.innerHeight, Kj(), UB ? (0, rj.T)(jB) : 0);
-      (0, rj.V)({
-        ...IB,
-        classes: NB
+    function tI(BB, IB, ZB, TB, JB) {
+      const oB = (0, HB.x)(ZB, TB, "joystick"),
+        GB = (0, zI.C)((0, zI.L)(ZB, TB, JB), TB),
+        vB = GB.classes.filter((BB => !LI.has(BB))),
+        kB = IB.documentElement,
+        cB = ZB.hudLayouts[TB].hudSafe,
+        nB = (0, zI.F)(cB, window.innerWidth, window.innerHeight, bI(), cB ? (0, zI.O)(IB) : 0);
+      (0, zI.R)({
+        ...GB,
+        classes: vB
       }, {
-        vars: uB,
-        safe: uB,
-        classes: uB
-      }), uB.style.setProperty("--preview-joystick-shift-left", `${aB[3]}px`), uB.style.setProperty("--preview-joystick-shift-bottom", `${aB[2]}px`), uB.style.setProperty("--preview-joystick-scale", String(dB[2])), (0, hj.f)(uB, jB, zB, QB);
-      for (const pB of wj) uB.style.setProperty(pB, BB.documentElement.style.getPropertyValue(pB) || "0px")
+        vars: kB,
+        safe: kB,
+        classes: kB
+      }), kB.style.setProperty("--preview-joystick-shift-left", `${nB[3]}px`), kB.style.setProperty("--preview-joystick-shift-bottom", `${nB[2]}px`), kB.style.setProperty("--preview-joystick-scale", String(oB[2])), (0, RI.e)(kB, IB, ZB, TB);
+      for (const hB of AI) kB.style.setProperty(hB, BB.documentElement.style.getPropertyValue(hB) || "0px")
     }
 
-    function Kj() {
-      return (0, rj.Q)(aB.c.get("notchSize"), window.innerWidth, window.innerHeight)
+    function bI() {
+      return (0, zI.J)(nB.d.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function Cj(BB) {
-      return (0, rj.x)(Kj(), (0, rj.T)(BB))
+    function xI(BB) {
+      return (0, zI.v)(bI(), (0, zI.O)(BB))
     }
 
-    function cj(BB, jB, zB) {
-      const QB = BB.documentElement.style,
-        nB = (0, rj.N)(jB),
-        dB = QB.getPropertyValue(nB);
+    function EI(BB, IB, ZB) {
+      const TB = BB.documentElement.style,
+        JB = (0, zI.I)(IB),
+        oB = TB.getPropertyValue(JB);
       try {
-        return zB((BB => {
-          QB.setProperty(nB, String(BB))
+        return ZB((BB => {
+          TB.setProperty(JB, String(BB))
         }))
       } finally {
-        "" === dB ? QB.removeProperty(nB) : QB.setProperty(nB, dB)
+        "" === oB ? TB.removeProperty(JB) : TB.setProperty(JB, oB)
       }
     }
 
-    function bj(BB, jB) {
-      const [zB, QB] = cj(BB, "hotbar", (jB => {
-        const zB = zB => {
-          var QB, nB;
-          return jB(zB), null !== (QB = null === (nB = BB.querySelector(".HotBarGameItemsContainer")) || void 0 === nB ? void 0 : nB.getBoundingClientRect().width) && void 0 !== QB ? QB : 0
+    function DI(BB, IB) {
+      const [ZB, TB] = EI(BB, "hotbar", (IB => {
+        const ZB = ZB => {
+          var TB, JB;
+          return IB(ZB), null !== (TB = null === (JB = BB.querySelector(".HotBarGameItemsContainer")) || void 0 === JB ? void 0 : JB.getBoundingClientRect().width) && void 0 !== TB ? TB : 0
         };
-        return [zB(1), zB(DB.h)]
+        return [ZB(1), ZB(HB.g)]
       }));
-      return zB <= 0 ? DB.h : Math.min(DB.h, Math.max(1, Math.floor(QB / zB / jB + 1e-6) * jB))
+      return ZB <= 0 ? HB.g : Math.min(HB.g, Math.max(1, Math.floor(TB / ZB / IB + 1e-6) * IB))
     }
-    const vj = 3,
-      Rj = .5,
-      Oj = BB => BB.right - BB.left;
-    const Bz = (BB, jB) => Math.abs((0, HB.d)(BB).x - (0, HB.d)(jB).x) + Math.abs((0, HB.d)(BB).y - (0, HB.d)(jB).y) + Math.abs(Oj(BB) - Oj(jB));
+    const KI = 3,
+      VI = .5,
+      SI = BB => BB.right - BB.left;
+    const BZ = (BB, IB) => Math.abs((0, aB.c)(BB).x - (0, aB.c)(IB).x) + Math.abs((0, aB.c)(BB).y - (0, aB.c)(IB).y) + Math.abs(SI(BB) - SI(IB));
 
-    function jz(BB, jB, zB, QB, nB) {
+    function IZ(BB, IB, ZB, TB, JB) {
       let {
-        canKeep: dB = () => !0,
-        passes: IB = vj,
-        before: NB
+        canKeep: oB = () => !0,
+        passes: GB = KI,
+        before: vB
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const uB = jB.hudLayouts[zB].hudLocked.filter(dB);
-      if (0 === uB.length) return jB;
-      const UB = [...VB].filter((QB => !uB.includes(QB) && (0, DB.E)(BB, zB, QB).join() === (0, DB.E)(jB, zB, QB).join())),
-        aB = BB => {
-          const jB = (0, HB.H)(UB.flatMap((jB => BB[jB] ? [BB[jB]] : [])));
+      const kB = IB.hudLayouts[ZB].hudLocked.filter(oB);
+      if (0 === kB.length) return IB;
+      const cB = [...PB].filter((TB => !kB.includes(TB) && (0, HB.x)(BB, ZB, TB).join() === (0, HB.x)(IB, ZB, TB).join())),
+        nB = BB => {
+          const IB = (0, aB.F)(cB.flatMap((IB => BB[IB] ? [BB[IB]] : [])));
           return {
             ...BB,
-            cluster: null !== jB && void 0 !== jB ? jB : void 0
+            cluster: null !== IB && void 0 !== IB ? IB : void 0
           }
         };
-      let pB = null;
-      const rB = BB => {
-          pB = BB;
-          const jB = nB(BB);
-          return jB && {
-            ...jB,
-            boxes: aB(jB.boxes)
+      let hB = null;
+      const zB = BB => {
+          hB = BB;
+          const IB = JB(BB);
+          return IB && {
+            ...IB,
+            boxes: nB(IB.boxes)
           }
         },
-        sB = NB ? {
-          ...NB,
-          boxes: aB(NB.boxes)
-        } : rB(BB),
-        JB = sB && rB(jB);
-      if (!sB || !JB) return jB;
-      const mB = sB.boxes;
-      let yB = JB.boxes;
-      const kB = sB.keysAbove !== JB.keysAbove,
-        GB = kB || Boolean(sB.shopAlone) !== Boolean(JB.shopAlone),
-        LB = new Set(uB.filter((BB => !XB(BB) || !("bag" === BB ? kB : GB))));
-      let gB = jB;
-      for (let MB = 0; MB < IB && LB.size > 0; MB++) {
-        var tB, SB;
+        FB = vB ? {
+          ...vB,
+          boxes: nB(vB.boxes)
+        } : zB(BB),
+        NB = FB && zB(IB);
+      if (!FB || !NB) return IB;
+      const gB = FB.boxes;
+      let qB = NB.boxes;
+      const yB = FB.keysAbove !== NB.keysAbove,
+        UB = yB || Boolean(FB.shopAlone) !== Boolean(NB.shopAlone),
+        WB = new Set(kB.filter((BB => !rB(BB) || !("bag" === BB ? yB : UB))));
+      let dB = IB;
+      for (let sB = 0; sB < GB && WB.size > 0; sB++) {
+        var CB, QB;
         const BB = new Map;
-        for (const jB of LB) {
-          const nB = mB[jB],
-            dB = yB[jB],
-            IB = nB && dB ? zz(jB, (0, DB.E)(gB, zB, jB), nB, dB, QB) : null;
-          IB ? BB.set(jB, IB) : LB.delete(jB)
+        for (const IB of WB) {
+          const JB = gB[IB],
+            oB = qB[IB],
+            GB = JB && oB ? ZZ(IB, (0, HB.x)(dB, ZB, IB), JB, oB, TB) : null;
+          GB ? BB.set(IB, GB) : WB.delete(IB)
         }
         if (0 === BB.size) break;
-        let nB = gB;
-        for (const [jB, QB] of BB) nB = (0, DB.ab)(nB, zB, jB, QB);
-        const dB = null === (tB = rB(nB)) || void 0 === tB ? void 0 : tB.boxes;
-        if (!dB) return jB;
-        let IB = gB;
-        for (const [jB, QB] of BB) {
-          const BB = dB[jB];
-          BB && Bz(mB[jB], BB) < Bz(mB[jB], yB[jB]) - Rj ? IB = (0, DB.ab)(IB, zB, jB, QB) : LB.delete(jB)
+        let JB = dB;
+        for (const [IB, TB] of BB) JB = (0, HB.gb)(JB, ZB, IB, TB);
+        const oB = null === (CB = zB(JB)) || void 0 === CB ? void 0 : CB.boxes;
+        if (!oB) return IB;
+        let GB = dB;
+        for (const [IB, TB] of BB) {
+          const BB = oB[IB];
+          BB && BZ(gB[IB], BB) < BZ(gB[IB], qB[IB]) - VI ? GB = (0, HB.gb)(GB, ZB, IB, TB) : WB.delete(IB)
         }
-        if (IB === gB) break;
-        const NB = [...BB.keys()].every((BB => LB.has(BB)));
-        gB = NB ? nB : IB;
-        const uB = NB ? dB : null === (SB = rB(gB)) || void 0 === SB ? void 0 : SB.boxes;
-        if (!uB) return jB;
-        yB = uB
+        if (GB === dB) break;
+        const vB = [...BB.keys()].every((BB => WB.has(BB)));
+        dB = vB ? JB : GB;
+        const kB = vB ? oB : null === (QB = zB(dB)) || void 0 === QB ? void 0 : QB.boxes;
+        if (!kB) return IB;
+        qB = kB
       }
-      return pB !== gB && nB(gB), gB
+      return hB !== dB && JB(dB), dB
     }
 
-    function zz(BB, jB, zB, QB, nB) {
-      let [dB, IB, NB] = jB;
-      const uB = DB.w[BB],
-        UB = {};
-      uB.scale && Oj(QB) > 0 && Math.abs(Oj(zB) - Oj(QB)) > Rj && (UB.scale = Math.max(DB.k, Math.min(DB.h, NB * Oj(zB) / Oj(QB))));
-      const aB = (0, HB.d)(zB).x - (0, HB.d)(QB).x,
-        pB = (0, HB.d)(zB).y - (0, HB.d)(QB).y;
-      return uB.move && (Math.abs(aB) > Rj || Math.abs(pB) > Rj) && (UB.dx = dB + aB / nB.width, UB.dy = IB + pB / nB.height), void 0 === UB.scale && void 0 === UB.dx ? null : UB
+    function ZZ(BB, IB, ZB, TB, JB) {
+      let [oB, GB, vB] = IB;
+      const kB = HB.r[BB],
+        cB = {};
+      kB.scale && SI(TB) > 0 && Math.abs(SI(ZB) - SI(TB)) > VI && (cB.scale = Math.max(HB.i, Math.min(HB.g, vB * SI(ZB) / SI(TB))));
+      const nB = (0, aB.c)(ZB).x - (0, aB.c)(TB).x,
+        hB = (0, aB.c)(ZB).y - (0, aB.c)(TB).y;
+      return kB.move && (Math.abs(nB) > VI || Math.abs(hB) > VI) && (cB.dx = oB + nB / JB.width, cB.dy = GB + hB / JB.height), void 0 === cB.scale && void 0 === cB.dx ? null : cB
     }
-    let Qz = 0;
+    let TZ = 0;
 
-    function nz() {
-      return Qz > 0
+    function JZ() {
+      return TZ > 0
     }
-    const dz = BB => 0 === BB.dx && 0 === BB.dy,
-      Iz = .001,
-      Nz = BB => Math.abs(BB.dx) >= 5e-4 || Math.abs(BB.dy) >= 5e-4 ? BB : {
+    const oZ = BB => 0 === BB.dx && 0 === BB.dy,
+      GZ = .001,
+      vZ = BB => Math.abs(BB.dx) >= 5e-4 || Math.abs(BB.dy) >= 5e-4 ? BB : {
         dx: BB.dx,
-        dy: BB.dy < 0 ? -.001 : Iz
+        dy: BB.dy < 0 ? -.001 : GZ
       };
 
-    function uz(BB) {
+    function kZ(BB) {
       let {
-        preview: jB,
-        stageRef: zB,
-        ringRef: QB,
-        centreLineRef: dB,
-        snapCentre: IB,
-        ready: NB,
-        measure: uB,
-        k: UB,
-        viewport: aB,
-        boxes: pB,
-        pieces: rB,
-        selected: sB,
-        insets: JB,
-        layout: mB,
-        canMove: yB,
-        onSelect: kB,
-        onMove: GB
+        preview: IB,
+        stageRef: ZB,
+        ringRef: TB,
+        centreLineRef: oB,
+        snapCentre: GB,
+        ready: vB,
+        measure: kB,
+        k: cB,
+        viewport: nB,
+        boxes: hB,
+        pieces: zB,
+        selected: FB,
+        insets: NB,
+        layout: gB,
+        canMove: qB,
+        onSelect: yB,
+        onMove: UB
       } = BB;
-      const LB = (0, nB.useRef)(null),
-        gB = (0, nB.useCallback)((() => null !== LB.current), []),
-        tB = (BB, jB) => {
-          if (!jB) return null;
-          const zB = (0, HB.d)(BB.origin),
-            QB = (0, HB.d)(jB),
-            nB = (BB.to.dx - BB.from.dx) * aB.width,
-            dB = (BB.to.dy - BB.from.dy) * aB.height,
-            IB = jB.right - jB.left,
-            NB = jB.bottom - jB.top;
+      const WB = (0, JB.useRef)(null),
+        dB = (0, JB.useCallback)((() => null !== WB.current), []),
+        CB = (BB, IB) => {
+          if (!IB) return null;
+          const ZB = (0, aB.c)(BB.origin),
+            TB = (0, aB.c)(IB),
+            JB = (BB.to.dx - BB.from.dx) * nB.width,
+            oB = (BB.to.dy - BB.from.dy) * nB.height,
+            GB = IB.right - IB.left,
+            vB = IB.bottom - IB.top;
           return {
             skew: {
-              x: QB.x - zB.x - nB,
-              y: QB.y - zB.y - dB
+              x: TB.x - ZB.x - JB,
+              y: TB.y - ZB.y - oB
             },
             box: {
-              left: zB.x - IB / 2,
-              top: zB.y - NB / 2,
-              right: zB.x + IB / 2,
-              bottom: zB.y + NB / 2
+              left: ZB.x - GB / 2,
+              top: ZB.y - vB / 2,
+              right: ZB.x + GB / 2,
+              bottom: ZB.y + vB / 2
             }
           }
         },
-        SB = (BB, zB) => {
-          var nB;
-          const IB = LB.current;
-          if (!IB || IB.pointerId !== BB.pointerId) return;
-          LB.current = null, null === (nB = dB.current) || void 0 === nB || nB.classList.remove("Shown", "Snapped");
-          const NB = QB.current;
-          if (NB && null !== IB.ringStyle && NB.setAttribute("style", IB.ringStyle), zB && IB.moved) {
-            const BB = dz(IB.to) ? null : uB(IB.id),
-              jB = BB ? (0, HB.G)(BB, (0, HB.C)(aB.width, aB.height, JB)) : {
+        QB = (BB, ZB) => {
+          var JB;
+          const GB = WB.current;
+          if (!GB || GB.pointerId !== BB.pointerId) return;
+          WB.current = null, null === (JB = oB.current) || void 0 === JB || JB.classList.remove("Shown", "Snapped");
+          const vB = TB.current;
+          if (vB && null !== GB.ringStyle && vB.setAttribute("style", GB.ringStyle), ZB && GB.moved) {
+            const BB = oZ(GB.to) ? null : kB(GB.id),
+              IB = BB ? (0, aB.D)(BB, (0, aB.B)(nB.width, nB.height, NB)) : {
                 x: 0,
                 y: 0
               },
-              zB = {
-                dx: IB.to.dx + jB.x / aB.width,
-                dy: IB.to.dy + jB.y / aB.height
+              ZB = {
+                dx: GB.to.dx + IB.x / nB.width,
+                dy: GB.to.dy + IB.y / nB.height
               },
-              QB = dz(IB.to) ? zB : Nz(zB);
-            GB(IB.id, QB.dx, QB.dy)
-          } else jB(IB.id, null), zB && IB.tapPick && kB(IB.tapPick)
+              TB = oZ(GB.to) ? ZB : vZ(ZB);
+            UB(GB.id, TB.dx, TB.dy)
+          } else IB(GB.id, null), ZB && GB.tapPick && yB(GB.tapPick)
         };
       return {
-        busy: gB,
+        busy: dB,
         handlers: {
           onPointerDown: BB => {
-            var jB;
-            if (!NB || LB.current || !BB.target.closest(".HudPreviewHandle")) return;
-            const QB = zB.current.getBoundingClientRect(),
-              nB = {
-                x: (BB.clientX - QB.left) / UB,
-                y: (BB.clientY - QB.top) / UB
+            var IB;
+            if (!vB || WB.current || !BB.target.closest(".HudPreviewHandle")) return;
+            const TB = ZB.current.getBoundingClientRect(),
+              JB = {
+                x: (BB.clientX - TB.left) / cB,
+                y: (BB.clientY - TB.top) / cB
               },
-              dB = (0, HB.y)(nB, rB, 40 / UB),
-              IB = null !== sB ? PB.get(sB) : void 0,
-              uB = void 0 !== IB && null !== (0, HB.y)(nB, rB.filter((BB => {
+              oB = (0, aB.z)(JB, zB, 40 / cB),
+              GB = null !== FB ? eB.get(FB) : void 0,
+              kB = void 0 !== GB && null !== (0, aB.z)(JB, zB.filter((BB => {
                 let {
-                  id: jB
+                  id: IB
                 } = BB;
-                return IB.has(jB)
-              })), 40 / UB),
-              aB = "menu" === sB && void 0 !== pB.menu && (0, HB.e)(pB.menu, nB) && ("menu" === dB || null !== dB && (0, aj.y)(dB, mB.hudElements[dB])),
-              JB = uB ? sB : aB ? "menu" : null,
-              GB = null !== JB,
-              gB = null !== JB && void 0 !== JB ? JB : dB;
-            if (!gB) return;
+                return GB.has(IB)
+              })), 40 / cB),
+              nB = "menu" === FB && void 0 !== hB.menu && (0, aB.d)(hB.menu, JB) && ("menu" === oB || null !== oB && (0, nI.y)(oB, gB.hudElements[oB])),
+              NB = kB ? FB : nB ? "menu" : null,
+              UB = null !== NB,
+              dB = null !== NB && void 0 !== NB ? NB : oB;
+            if (!dB) return;
             if (function(BB) {
-                Qz++;
-                const jB = zB => {
-                  zB.pointerId === BB && (Qz = Math.max(0, Qz - 1), window.removeEventListener("pointerup", jB, !0), window.removeEventListener("pointercancel", jB, !0))
+                TZ++;
+                const IB = ZB => {
+                  ZB.pointerId === BB && (TZ = Math.max(0, TZ - 1), window.removeEventListener("pointerup", IB, !0), window.removeEventListener("pointercancel", IB, !0))
                 };
-                window.addEventListener("pointerup", jB, !0), window.addEventListener("pointercancel", jB, !0)
-              }(BB.pointerId), !yB(gB)) return void kB(GB && dB ? dB : gB);
-            kB(gB);
-            const [tB, SB] = null !== (jB = mB.hudElements[gB]) && void 0 !== jB ? jB : [0, 0], MB = {
-              dx: tB,
-              dy: SB
-            }, EB = {
+                window.addEventListener("pointerup", IB, !0), window.addEventListener("pointercancel", IB, !0)
+              }(BB.pointerId), !qB(dB)) return void yB(UB && oB ? oB : dB);
+            yB(dB);
+            const [CB, QB] = null !== (IB = gB.hudElements[dB]) && void 0 !== IB ? IB : [0, 0], sB = {
+              dx: CB,
+              dy: QB
+            }, wB = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: pB[gB]
+              box: hB[dB]
             };
-            LB.current = {
-              id: gB,
+            WB.current = {
+              id: dB,
               pointerId: BB.pointerId,
               startX: BB.clientX,
               startY: BB.clientY,
-              origin: pB[gB],
-              from: MB,
-              to: MB,
+              origin: hB[dB],
+              from: sB,
+              to: sB,
               moved: !1,
-              home: dz(MB) ? {
-                centre: (0, HB.d)(pB[gB]),
-                anchor: EB
+              home: oZ(sB) ? {
+                centre: (0, aB.c)(hB[dB]),
+                anchor: wB
               } : null,
-              away: dz(MB) ? null : EB,
-              anchor: EB,
+              away: oZ(sB) ? null : wB,
+              anchor: wB,
               ringStyle: null,
-              tapPick: GB ? dB : null
+              tapPick: UB ? oB : null
             }, BB.currentTarget.setPointerCapture(BB.pointerId)
           },
           onPointerMove: BB => {
-            const zB = LB.current;
-            if (!zB || zB.pointerId !== BB.pointerId) return;
-            const nB = BB.clientX - zB.startX,
-              NB = BB.clientY - zB.startY;
-            if (!zB.moved && Math.hypot(nB, NB) < 5) return;
-            const pB = !zB.moved;
-            var rB, sB;
-            (zB.moved = !0, pB) && (zB.ringStyle = null !== (rB = null === (sB = QB.current) || void 0 === sB ? void 0 : sB.getAttribute("style")) && void 0 !== rB ? rB : null);
-            const mB = (0, HB.C)(aB.width, aB.height, JB);
-            if (!zB.home) {
-              var yB;
-              zB.to = {
+            const ZB = WB.current;
+            if (!ZB || ZB.pointerId !== BB.pointerId) return;
+            const JB = BB.clientX - ZB.startX,
+              vB = BB.clientY - ZB.startY;
+            if (!ZB.moved && Math.hypot(JB, vB) < 5) return;
+            const hB = !ZB.moved;
+            var zB, FB;
+            (ZB.moved = !0, hB) && (ZB.ringStyle = null !== (zB = null === (FB = TB.current) || void 0 === FB ? void 0 : FB.getAttribute("style")) && void 0 !== zB ? zB : null);
+            const gB = (0, aB.B)(nB.width, nB.height, NB);
+            if (!ZB.home) {
+              var qB;
+              ZB.to = {
                 dx: 0,
                 dy: 0
-              }, jB(zB.id, zB.to);
-              const BB = uB(zB.id),
-                QB = null !== (yB = tB(zB, BB)) && void 0 !== yB ? yB : {
+              }, IB(ZB.id, ZB.to);
+              const BB = kB(ZB.id),
+                TB = null !== (qB = CB(ZB, BB)) && void 0 !== qB ? qB : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: zB.origin
+                  box: ZB.origin
                 },
-                nB = (0, HB.d)(zB.origin);
-              zB.home = {
-                centre: BB ? (0, HB.d)(BB) : {
-                  x: nB.x - zB.from.dx * aB.width,
-                  y: nB.y - zB.from.dy * aB.height
+                JB = (0, aB.c)(ZB.origin);
+              ZB.home = {
+                centre: BB ? (0, aB.c)(BB) : {
+                  x: JB.x - ZB.from.dx * nB.width,
+                  y: JB.y - ZB.from.dy * nB.height
                 },
-                anchor: QB
+                anchor: TB
               }
             }
-            const kB = zB.home;
-            let GB = !1;
-            const gB = BB => {
-                GB = !1;
-                let QB = (0, HB.p)(BB.box, nB / UB, NB / UB, mB);
-                const dB = aB.width / 2;
-                if (IB && Math.abs((0, HB.d)(zB.origin).x + QB.x - dB) <= 8 / UB) {
-                  const jB = dB - (0, HB.d)(zB.origin).x,
-                    nB = (0, HB.p)(BB.box, jB, QB.y, mB);
-                  GB = Math.abs(nB.x - jB) < .01, GB && (QB = nB)
+            const yB = ZB.home;
+            let UB = !1;
+            const dB = BB => {
+                UB = !1;
+                let TB = (0, aB.n)(BB.box, JB / cB, vB / cB, gB);
+                const oB = nB.width / 2;
+                if (GB && Math.abs((0, aB.c)(ZB.origin).x + TB.x - oB) <= 8 / cB) {
+                  const IB = oB - (0, aB.c)(ZB.origin).x,
+                    JB = (0, aB.n)(BB.box, IB, TB.y, gB);
+                  UB = Math.abs(JB.x - IB) < .01, UB && (TB = JB)
                 }
-                const uB = (0, HB.x)(zB.from, QB.x - BB.skew.x, QB.y - BB.skew.y, aB.width, aB.height);
-                zB.to = Nz(uB), zB.anchor = BB, jB(zB.id, zB.to)
+                const kB = (0, aB.v)(ZB.from, TB.x - BB.skew.x, TB.y - BB.skew.y, nB.width, nB.height);
+                ZB.to = vZ(kB), ZB.anchor = BB, IB(ZB.id, ZB.to)
               },
-              SB = (0, HB.p)(kB.anchor.box, nB / UB, NB / UB, mB),
-              MB = dB.current,
-              EB = (0, HB.d)(zB.origin),
-              iB = ((0, DB.S)(zB.id) ? 20 : 6) / UB;
-            if (Math.abs(EB.x + SB.x - kB.centre.x) <= iB && Math.abs(EB.y + SB.y - kB.centre.y) <= iB) zB.to = {
+              QB = (0, aB.n)(yB.anchor.box, JB / cB, vB / cB, gB),
+              sB = oB.current,
+              wB = (0, aB.c)(ZB.origin),
+              OB = ((0, HB.P)(ZB.id) ? 20 : 6) / cB;
+            if (Math.abs(wB.x + QB.x - yB.centre.x) <= OB && Math.abs(wB.y + QB.y - yB.centre.y) <= OB) ZB.to = {
               dx: 0,
               dy: 0
-            }, zB.anchor = kB.anchor, GB = IB && Math.abs(kB.centre.x - aB.width / 2) < 1, jB(zB.id, zB.to);
-            else if (zB.away) gB(zB.away);
+            }, ZB.anchor = yB.anchor, UB = GB && Math.abs(yB.centre.x - nB.width / 2) < 1, IB(ZB.id, ZB.to);
+            else if (ZB.away) dB(ZB.away);
             else {
-              var qB;
-              gB(kB.anchor), zB.away = null !== (qB = tB(zB, uB(zB.id))) && void 0 !== qB ? qB : kB.anchor, gB(zB.away)
+              var YB;
+              dB(yB.anchor), ZB.away = null !== (YB = CB(ZB, kB(ZB.id))) && void 0 !== YB ? YB : yB.anchor, dB(ZB.away)
             }
-            null === MB || void 0 === MB || MB.classList.add("Shown"), null === MB || void 0 === MB || MB.classList.toggle("Snapped", GB), (BB => {
-              const jB = QB.current;
-              if (jB) {
+            null === sB || void 0 === sB || sB.classList.add("Shown"), null === sB || void 0 === sB || sB.classList.toggle("Snapped", UB), (BB => {
+              const IB = TB.current;
+              if (IB) {
                 const {
-                  skew: zB,
-                  box: QB
+                  skew: ZB,
+                  box: TB
                 } = BB.anchor;
-                jB.style.left = QB.left * UB + "px", jB.style.top = QB.top * UB + "px", jB.style.width = (QB.right - QB.left) * UB + "px", jB.style.height = (QB.bottom - QB.top) * UB + "px", jB.style.translate = `${((BB.to.dx-BB.from.dx)*aB.width+zB.x)*UB}px ${((BB.to.dy-BB.from.dy)*aB.height+zB.y)*UB}px`
+                IB.style.left = TB.left * cB + "px", IB.style.top = TB.top * cB + "px", IB.style.width = (TB.right - TB.left) * cB + "px", IB.style.height = (TB.bottom - TB.top) * cB + "px", IB.style.translate = `${((BB.to.dx-BB.from.dx)*nB.width+ZB.x)*cB}px ${((BB.to.dy-BB.from.dy)*nB.height+ZB.y)*cB}px`
               }
-            })(zB)
+            })(ZB)
           },
           onPointerUp: BB => {
-            SB(BB, !0)
+            QB(BB, !0)
           },
           onPointerCancel: BB => {
-            SB(BB, !1)
+            QB(BB, !1)
           }
         }
       }
     }
-    var Uz = zB(8910);
+    var cZ = ZB(9001);
 
-    function az(BB, jB) {
-      return Object.keys(BB).filter((BB => BB !== jB)).map((jB => BB[jB]))
+    function nZ(BB, IB) {
+      return Object.keys(BB).filter((BB => BB !== IB)).map((IB => BB[IB]))
     }
 
-    function pz(BB) {
+    function hZ(BB) {
       return BB.map((BB => {
         let {
-          id: jB,
-          box: zB
+          id: IB,
+          box: ZB
         } = BB;
-        return `${jB}:${zB.left},${zB.top},${zB.right},${zB.bottom}`
+        return `${IB}:${ZB.left},${ZB.top},${ZB.right},${ZB.bottom}`
       })).join(";")
     }
 
-    function rz(BB) {
-      const jB = [],
-        zB = jB => (0, DB.S)(jB) && !BB.documentElement.classList.contains((0, rj.H)(jB));
-      for (const NB of BB.querySelectorAll(`[${KB}]`)) {
-        const BB = zB(NB.getAttribute(KB)) ? NB.querySelector(".ScaleOnHover") : null,
-          QB = (null !== BB && void 0 !== BB ? BB : NB).getBoundingClientRect();
-        (QB.width > 0 || QB.height > 0) && jB.push({
-          id: NB.getAttribute(KB),
-          box: (0, HB.h)(QB)
+    function zZ(BB) {
+      const IB = [],
+        ZB = IB => (0, HB.P)(IB) && !BB.documentElement.classList.contains((0, zI.D)(IB));
+      for (const vB of BB.querySelectorAll(`[${bB}]`)) {
+        const BB = ZB(vB.getAttribute(bB)) ? vB.querySelector(".ScaleOnHover") : null,
+          TB = (null !== BB && void 0 !== BB ? BB : vB).getBoundingClientRect();
+        (TB.width > 0 || TB.height > 0) && IB.push({
+          id: vB.getAttribute(bB),
+          box: (0, aB.g)(TB)
         })
       }
-      const QB = BB => (0, HB.H)(jB.filter((jB => {
+      const TB = BB => (0, aB.F)(IB.filter((IB => {
           let {
-            id: zB
-          } = jB;
-          return BB(zB)
+            id: ZB
+          } = IB;
+          return BB(ZB)
         })).map((BB => {
           let {
-            box: jB
+            box: IB
           } = BB;
-          return jB
+          return IB
         }))),
-        nB = {};
-      for (const NB of new Set(jB.map((BB => BB.id)))) nB[NB] = QB((BB => BB === NB));
-      for (const [NB, uB] of PB) {
-        const BB = QB((BB => uB.has(BB)));
-        BB && (nB[NB] = BB)
+        JB = {};
+      for (const vB of new Set(IB.map((BB => BB.id)))) JB[vB] = TB((BB => BB === vB));
+      for (const [vB, kB] of eB) {
+        const BB = TB((BB => kB.has(BB)));
+        BB && (JB[vB] = BB)
       }
-      const dB = BB.querySelector(".TouchInventoryKeys"),
-        IB = dB ? (0, HB.h)(dB.getBoundingClientRect()) : null;
+      const oB = BB.querySelector(".TouchInventoryKeys"),
+        GB = oB ? (0, aB.g)(oB.getBoundingClientRect()) : null;
       return {
-        boxes: nB,
-        pieces: jB,
-        pairHome: IB
+        boxes: JB,
+        pieces: IB,
+        pairHome: GB
       }
     }
 
-    function sz(BB, jB, zB) {
-      const QB = jB.right - jB.left,
-        nB = jB.bottom - jB.top;
-      return cj(BB, "cluster", (jB => {
-        const dB = zB => {
-            jB(zB);
-            const QB = [...BB.querySelectorAll(`[${KB}]:not(.HudPreviewGhost)`)].filter((BB => VB.has(BB.getAttribute(KB)))).map((BB => (0, HB.h)(BB.getBoundingClientRect()))),
-              nB = (0, HB.H)(QB);
-            return nB ? {
-              w: nB.right - nB.left,
-              h: nB.bottom - nB.top
+    function FZ(BB, IB, ZB) {
+      const TB = IB.right - IB.left,
+        JB = IB.bottom - IB.top;
+      return EI(BB, "cluster", (IB => {
+        const oB = ZB => {
+            IB(ZB);
+            const TB = [...BB.querySelectorAll(`[${bB}]:not(.HudPreviewGhost)`)].filter((BB => PB.has(BB.getAttribute(bB)))).map((BB => (0, aB.g)(BB.getBoundingClientRect()))),
+              JB = (0, aB.F)(TB);
+            return JB ? {
+              w: JB.right - JB.left,
+              h: JB.bottom - JB.top
             } : null
           },
-          IB = BB => !BB || BB.w <= QB && BB.h <= nB,
-          NB = dB(1),
-          uB = dB(DB.h);
-        if (!NB || IB(uB)) return DB.h;
-        const UB = (BB, jB, zB) => jB > BB ? 1 + (zB - BB) * (DB.h - 1) / (jB - BB) : DB.h;
-        let aB = Math.floor(Math.min(DB.h, UB(NB.w, uB.w, QB), UB(NB.h, uB.h, nB)) / zB + 1e-6) * zB;
-        for (; aB > 1 && !IB(dB(aB));) aB = Math.round(100 * (aB - zB)) / 100;
-        return Math.max(1, aB)
+          GB = BB => !BB || BB.w <= TB && BB.h <= JB,
+          vB = oB(1),
+          kB = oB(HB.g);
+        if (!vB || GB(kB)) return HB.g;
+        const cB = (BB, IB, ZB) => IB > BB ? 1 + (ZB - BB) * (HB.g - 1) / (IB - BB) : HB.g;
+        let nB = Math.floor(Math.min(HB.g, cB(vB.w, kB.w, TB), cB(vB.h, kB.h, JB)) / ZB + 1e-6) * ZB;
+        for (; nB > 1 && !GB(oB(nB));) nB = Math.round(100 * (nB - ZB)) / 100;
+        return Math.max(1, nB)
       }))
     }
 
-    function Jz(BB) {
-      lj(document, BB, {
+    function NZ(BB) {
+      lI(document, BB, {
         keysAbove: !1
       });
-      const jB = parseFloat(getComputedStyle(BB.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        zB = Number.isFinite(jB) && jB < 0;
-      return lj(document, BB, {
-        keysAbove: zB
-      }), (0, Uz.b)(BB), zB
+      const IB = parseFloat(getComputedStyle(BB.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        ZB = Number.isFinite(IB) && IB < 0;
+      return lI(document, BB, {
+        keysAbove: ZB
+      }), (0, cZ.d)(BB), ZB
     }
 
-    function mz(BB) {
-      const jB = BB.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== jB && "1" === getComputedStyle(jB).getPropertyValue("--touch-shop-above").trim()
+    function gZ(BB) {
+      const IB = BB.querySelector(".TouchInventoryKey.ShopKey");
+      return null !== IB && "1" === getComputedStyle(IB).getPropertyValue("--touch-shop-above").trim()
     }
 
-    function yz(BB, jB) {
+    function qZ(BB, IB) {
       let {
-        layout: zB,
-        orientation: QB,
-        viewport: dB,
-        replicaKey: IB,
-        joystickFixed: NB,
-        busy: uB
-      } = jB;
-      const [UB, aB] = (0, nB.useState)(null), [pB, rB] = (0, nB.useState)({
+        layout: ZB,
+        orientation: TB,
+        viewport: oB,
+        replicaKey: GB,
+        joystickFixed: vB,
+        busy: kB
+      } = IB;
+      const [cB, nB] = (0, JB.useState)(null), [hB, zB] = (0, JB.useState)({
         boxes: {},
         pieces: []
-      }), [sB, JB] = (0, nB.useState)({
+      }), [FB, NB] = (0, JB.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [mB, yB] = (0, nB.useState)(!1), [kB, GB] = (0, nB.useState)(!1), [LB, gB] = (0, nB.useState)(!1), tB = (0, nB.useCallback)((BB => {
-        GB(BB), BB && gB(!0)
-      }), []), SB = zB.hudLayouts[QB].hudSafe;
-      (0, nB.useLayoutEffect)((() => {
-        const jB = BB.current.contentDocument;
-        jB.open(), jB.write("<!DOCTYPE html><html><head></head><body></body></html>"), jB.close(), aB(jB)
+      }), [gB, qB] = (0, JB.useState)(!1), [yB, UB] = (0, JB.useState)(!1), [WB, dB] = (0, JB.useState)(!1), CB = (0, JB.useCallback)((BB => {
+        UB(BB), BB && dB(!0)
+      }), []), QB = ZB.hudLayouts[TB].hudSafe;
+      (0, JB.useLayoutEffect)((() => {
+        const IB = BB.current.contentDocument;
+        IB.open(), IB.write("<!DOCTYPE html><html><head></head><body></body></html>"), IB.close(), nB(IB)
       }), [BB]);
-      const MB = (0, nB.useCallback)((() => {
-          UB && ((0, aj.B)(UB), rB(rz(UB)), JB(function(BB, jB) {
-            const zB = Cj(BB),
-              [QB, nB, dB, IB] = jB ? (0, rj.B)(jB, window.innerWidth, window.innerHeight, zB) : zB;
+      const sB = (0, JB.useCallback)((() => {
+          cB && ((0, nI.B)(cB), zB(zZ(cB)), NB(function(BB, IB) {
+            const ZB = xI(BB),
+              [TB, JB, oB, GB] = IB ? (0, zI.x)(IB, window.innerWidth, window.innerHeight, ZB) : ZB;
             return {
-              top: QB,
-              right: nB,
-              bottom: dB,
-              left: IB
+              top: TB,
+              right: JB,
+              bottom: oB,
+              left: GB
             }
-          }(UB, SB)))
-        }), [UB, SB]),
-        EB = (0, nB.useCallback)((() => {
-          UB && yB(Jz(UB))
-        }), [UB]),
-        iB = (0, nB.useRef)((() => {}));
-      return iB.current = () => {
-        EB(), uB() || MB()
-      }, (0, nB.useLayoutEffect)((() => {
-        if (UB) return ej(document, UB, (() => {
-          iB.current()
-        }), tB)
-      }), [UB, tB]), (0, nB.useLayoutEffect)(EB, [EB, dB]), (0, nB.useLayoutEffect)((() => {
-        UB && (lj(document, UB, {
-          keysAbove: mB
-        }), xj(document, UB, zB, QB, NB), EB(), MB())
-      }), [UB, zB, QB, mB, IB, NB, dB, MB, EB]), (0, nB.useEffect)((() => {
+          }(cB, QB)))
+        }), [cB, QB]),
+        wB = (0, JB.useCallback)((() => {
+          cB && qB(NZ(cB))
+        }), [cB]),
+        OB = (0, JB.useRef)((() => {}));
+      return OB.current = () => {
+        wB(), kB() || sB()
+      }, (0, JB.useLayoutEffect)((() => {
+        if (cB) return fI(document, cB, (() => {
+          OB.current()
+        }), CB)
+      }), [cB, CB]), (0, JB.useLayoutEffect)(wB, [wB, oB]), (0, JB.useLayoutEffect)((() => {
+        cB && (lI(document, cB, {
+          keysAbove: gB
+        }), tI(document, cB, ZB, TB, vB), wB(), sB())
+      }), [cB, ZB, TB, gB, GB, vB, oB, sB, wB]), (0, JB.useEffect)((() => {
         var BB;
-        if (!UB) return;
-        const jB = new ResizeObserver((() => {
-          uB() || MB()
+        if (!cB) return;
+        const IB = new ResizeObserver((() => {
+          kB() || sB()
         }));
-        for (const zB of UB.querySelectorAll(`[${KB}]`)) jB.observe(zB);
-        return null === (BB = UB.fonts) || void 0 === BB || BB.ready.then(MB), () => {
-          jB.disconnect()
+        for (const ZB of cB.querySelectorAll(`[${bB}]`)) IB.observe(ZB);
+        return null === (BB = cB.fonts) || void 0 === BB || BB.ready.then(sB), () => {
+          IB.disconnect()
         }
-      }), [UB, MB, uB, IB]), {
-        doc: UB,
-        boxes: pB.boxes,
-        pieces: pB.pieces,
-        insets: sB,
-        keysAbove: mB,
-        ready: kB,
-        settled: LB
+      }), [cB, sB, kB, GB]), {
+        doc: cB,
+        boxes: hB.boxes,
+        pieces: hB.pieces,
+        insets: FB,
+        keysAbove: gB,
+        ready: yB,
+        settled: WB
       }
     }
-    const kz = ["Above", "Below", "Left", "Right"];
+    const yZ = ["Above", "Below", "Left", "Right"];
 
-    function Gz(BB, jB, zB, QB, nB) {
-      const dB = zB[BB],
-        IB = (dB.left + dB.right) / 2,
-        NB = (dB.top + dB.bottom) / 2,
-        uB = (7.5 * jB.length + 14) / QB,
-        UB = 18 / QB,
-        aB = {
+    function UZ(BB, IB, ZB, TB, JB) {
+      const oB = ZB[BB],
+        GB = (oB.left + oB.right) / 2,
+        vB = (oB.top + oB.bottom) / 2,
+        kB = (7.5 * IB.length + 14) / TB,
+        cB = 18 / TB,
+        nB = {
           Above: {
-            left: IB - uB / 2,
-            top: dB.top - UB,
-            right: IB + uB / 2,
-            bottom: dB.top
+            left: GB - kB / 2,
+            top: oB.top - cB,
+            right: GB + kB / 2,
+            bottom: oB.top
           },
           Below: {
-            left: IB - uB / 2,
-            top: dB.bottom,
-            right: IB + uB / 2,
-            bottom: dB.bottom + UB
+            left: GB - kB / 2,
+            top: oB.bottom,
+            right: GB + kB / 2,
+            bottom: oB.bottom + cB
           },
           Left: {
-            left: dB.left - uB,
-            top: NB - UB / 2,
-            right: dB.left,
-            bottom: NB + UB / 2
+            left: oB.left - kB,
+            top: vB - cB / 2,
+            right: oB.left,
+            bottom: vB + cB / 2
           },
           Right: {
-            left: dB.right,
-            top: NB - UB / 2,
-            right: dB.right + uB,
-            bottom: NB + UB / 2
+            left: oB.right,
+            top: vB - cB / 2,
+            right: oB.right + kB,
+            bottom: vB + cB / 2
           }
         },
-        pB = az(zB, BB),
-        rB = {
+        hB = nZ(ZB, BB),
+        zB = {
           left: 0,
           top: 0,
-          right: nB.width,
-          bottom: nB.height
+          right: JB.width,
+          bottom: JB.height
         };
-      return kz[(0, HB.u)(kz.map((BB => aB[BB])), pB, {
-        bounds: rB
+      return yZ[(0, aB.s)(yZ.map((BB => nB[BB])), hB, {
+        bounds: zB
       })]
     }
 
-    function Lz() {
-      const [BB, jB] = (0, uj.d)();
-      return (0, nB.useMemo)((() => ({
+    function WZ() {
+      const [BB, IB] = (0, kI.b)();
+      return (0, JB.useMemo)((() => ({
         width: BB,
-        height: jB
-      })), [BB, jB])
+        height: IB
+      })), [BB, IB])
     }
 
-    function gz(BB) {
-      var jB;
+    function dZ(BB) {
+      var IB;
       const {
-        layout: zB,
-        orientation: dB,
-        selected: IB,
-        onSelect: NB,
-        onMove: UB,
-        canMove: aB,
-        actionButtons: pB,
-        joystickFixed: rB,
-        presence: sB,
-        keyNames: mB,
-        maxHeight: yB,
-        fill: kB = !1,
-        apiRef: GB
+        layout: ZB,
+        orientation: oB,
+        selected: GB,
+        onSelect: vB,
+        onMove: cB,
+        canMove: nB,
+        actionButtons: hB,
+        joystickFixed: zB,
+        presence: FB,
+        keyNames: gB,
+        maxHeight: qB,
+        fill: yB = !1,
+        apiRef: UB
       } = BB, {
-        t: LB
-      } = (0, QB.D)(), gB = Lz(), SB = (null !== (jB = (0, JB.i)("maxAuraLevel")) && void 0 !== jB ? jB : 0) > 0, MB = zB.hudLayouts[dB], EB = (0, nB.useRef)(null), iB = (0, nB.useRef)(null), qB = (0, nB.useRef)(null), fB = (0, nB.useRef)(null), FB = (0, nB.useRef)(null), YB = (0, nB.useRef)(null), VB = (0, Uj.b)(EB).width, XB = kB ? 1 : VB > 0 ? (0, HB.A)(VB, gB.width, gB.height, yB) : 0, ZB = (0, nB.useRef)((() => !1)), WB = (0, nB.useCallback)((() => ZB.current()), []), eB = `${pB}:${rB}:${SB}`, {
+        t: WB
+      } = (0, TB.G)(), dB = WZ(), QB = (null !== (IB = (0, NB.d)("maxAuraLevel")) && void 0 !== IB ? IB : 0) > 0, sB = ZB.hudLayouts[oB], wB = (0, JB.useRef)(null), OB = (0, JB.useRef)(null), YB = (0, JB.useRef)(null), iB = (0, JB.useRef)(null), MB = (0, JB.useRef)(null), jB = (0, JB.useRef)(null), PB = (0, cI.e)(wB).width, rB = yB ? 1 : PB > 0 ? (0, aB.A)(PB, dB.width, dB.height, qB) : 0, mB = (0, JB.useRef)((() => !1)), uB = (0, JB.useCallback)((() => mB.current()), []), fB = `${hB}:${zB}:${QB}`, {
         doc: lB,
-        boxes: wB,
-        pieces: xB,
-        insets: KB,
-        keysAbove: cB,
-        ready: bB,
-        settled: vB
-      } = yz(qB, {
-        layout: zB,
-        orientation: dB,
-        viewport: gB,
-        replicaKey: eB,
-        joystickFixed: rB,
-        busy: WB
-      }), RB = (0, nB.useCallback)((BB => {
-        lB && xj(document, lB, BB, dB, rB)
-      }), [lB, dB, rB]), OB = (0, nB.useCallback)((BB => {
-        if (!lB || !vB) return null;
-        RB(BB);
-        const jB = Jz(lB),
-          zB = function(BB, jB) {
+        boxes: AB,
+        pieces: tB,
+        insets: bB,
+        keysAbove: EB,
+        ready: DB,
+        settled: KB
+      } = qZ(YB, {
+        layout: ZB,
+        orientation: oB,
+        viewport: dB,
+        replicaKey: fB,
+        joystickFixed: zB,
+        busy: uB
+      }), VB = (0, JB.useCallback)((BB => {
+        lB && tI(document, lB, BB, oB, zB)
+      }), [lB, oB, zB]), SB = (0, JB.useCallback)((BB => {
+        if (!lB || !KB) return null;
+        VB(BB);
+        const IB = NZ(lB),
+          ZB = function(BB, IB) {
             let {
-              boxes: zB,
-              pieces: QB,
-              pairHome: nB
+              boxes: ZB,
+              pieces: TB,
+              pairHome: JB
             } = BB;
-            const dB = QB.find((BB => hB.has(BB.id)));
-            if (!dB || !nB) return zB;
-            const IB = (0, HB.d)(nB),
-              NB = jB(dB.id),
-              uB = Oj(dB.box) / NB / 2,
-              UB = (dB.box.bottom - dB.box.top) / NB / 2;
+            const oB = TB.find((BB => RB.has(BB.id)));
+            if (!oB || !JB) return ZB;
+            const GB = (0, aB.c)(JB),
+              vB = IB(oB.id),
+              kB = SI(oB.box) / vB / 2,
+              cB = (oB.box.bottom - oB.box.top) / vB / 2;
             return {
-              ...zB,
+              ...ZB,
               inventory: {
-                left: IB.x - uB,
-                top: IB.y - UB,
-                right: IB.x + uB,
-                bottom: IB.y + UB
+                left: GB.x - kB,
+                top: GB.y - cB,
+                right: GB.x + kB,
+                bottom: GB.y + cB
               }
             }
-          }(rz(lB), (jB => (0, DB.E)(BB, dB, jB)[2]));
+          }(zZ(lB), (IB => (0, HB.x)(BB, oB, IB)[2]));
         return {
-          boxes: zB,
-          keysAbove: jB,
-          shopAlone: mz(lB)
+          boxes: ZB,
+          keysAbove: IB,
+          shopAlone: gZ(lB)
         }
-      }), [lB, vB, RB, dB]), Bj = (0, nB.useRef)(null), jj = (0, nB.useRef)(null), zj = (0, nB.useRef)(zB);
-      zj.current = zB;
-      const Qj = (0, nB.useCallback)((() => {
-        null !== Bj.current && (cancelAnimationFrame(Bj.current), Bj.current = null)
+      }), [lB, KB, VB, oB]), BI = (0, JB.useRef)(null), II = (0, JB.useRef)(null), ZI = (0, JB.useRef)(ZB);
+      ZI.current = ZB;
+      const TI = (0, JB.useCallback)((() => {
+        null !== BI.current && (cancelAnimationFrame(BI.current), BI.current = null)
       }), []);
-      (0, nB.useEffect)((() => Qj), [zB, Qj]);
-      const nj = (0, nB.useRef)(-1 / 0),
+      (0, JB.useEffect)((() => TI), [ZB, TI]);
+      const JI = (0, JB.useRef)(-1 / 0),
         {
-          lockable: dj
+          lockable: oI
         } = BB,
-        Nj = (0, nB.useCallback)((BB => {
-          if (RB(BB), nj.current = performance.now(), !vB || 0 === zB.hudLayouts[dB].hudLocked.length) return;
-          const jB = zB;
-          Qj(), Bj.current = requestAnimationFrame((() => {
-            var zB;
-            if (Bj.current = null, zj.current !== jB) return;
-            const QB = (null === (zB = jj.current) || void 0 === zB ? void 0 : zB.from) === jB ? jj.current.measured : OB(jB);
-            QB && (jj.current = {
-              from: jB,
-              measured: QB
-            }), RB(QB ? jz(jB, BB, dB, gB, OB, {
-              canKeep: dj,
+        vI = (0, JB.useCallback)((BB => {
+          if (VB(BB), JI.current = performance.now(), !KB || 0 === ZB.hudLayouts[oB].hudLocked.length) return;
+          const IB = ZB;
+          TI(), BI.current = requestAnimationFrame((() => {
+            var ZB;
+            if (BI.current = null, ZI.current !== IB) return;
+            const TB = (null === (ZB = II.current) || void 0 === ZB ? void 0 : ZB.from) === IB ? II.current.measured : SB(IB);
+            TB && (II.current = {
+              from: IB,
+              measured: TB
+            }), VB(TB ? IZ(IB, BB, oB, dB, SB, {
+              canKeep: oI,
               passes: 1,
-              before: QB
+              before: TB
             }) : BB)
           }))
-        }), [RB, vB, zB, dB, gB, OB, dj, Qj]),
-        uj = uz({
-          preview: (BB, jB) => {
-            jB ? Nj((0, DB.ab)(zB, dB, BB, jB)) : (Qj(), RB(zB))
+        }), [VB, KB, ZB, oB, dB, SB, oI, TI]),
+        kI = kZ({
+          preview: (BB, IB) => {
+            IB ? vI((0, HB.gb)(ZB, oB, BB, IB)) : (TI(), VB(ZB))
           },
-          stageRef: iB,
-          ringRef: fB,
-          centreLineRef: FB,
-          snapCentre: zB.hudSnapCentre,
-          ready: vB,
+          stageRef: OB,
+          ringRef: iB,
+          centreLineRef: MB,
+          snapCentre: ZB.hudSnapCentre,
+          ready: KB,
           measure: BB => {
-            const jB = lB && bB ? rz(lB).boxes[BB] : void 0;
-            return jB && (0, HB.j)(jB, gB.width, gB.height) ? jB : null
+            const IB = lB && DB ? zZ(lB).boxes[BB] : void 0;
+            return IB && (0, aB.k)(IB, dB.width, dB.height) ? IB : null
           },
-          k: XB,
-          viewport: gB,
-          boxes: wB,
-          pieces: xB,
-          selected: IB,
-          insets: KB,
-          layout: MB,
-          canMove: aB,
-          onSelect: NB,
-          onMove: (BB, jB, zB) => {
-            Qj(), UB(BB, jB, zB)
+          k: rB,
+          viewport: dB,
+          boxes: AB,
+          pieces: tB,
+          selected: GB,
+          insets: bB,
+          layout: sB,
+          canMove: nB,
+          onSelect: vB,
+          onMove: (BB, IB, ZB) => {
+            TI(), cB(BB, IB, ZB)
           }
         });
-      (0, nB.useLayoutEffect)((() => {
-        ZB.current = uj.busy
-      }), [uj.busy]);
-      const sj = (0, nB.useRef)([]),
-        Jj = (0, nB.useRef)(MB.hudElements);
-      (0, nB.useEffect)((() => {
-        for (const nB of Object.keys(MB.hudElements)) {
-          var BB, jB, zB, QB;
-          (null !== (BB = null === (jB = MB.hudElements[nB]) || void 0 === jB ? void 0 : jB[2]) && void 0 !== BB ? BB : 1) > (null !== (zB = null === (QB = Jj.current[nB]) || void 0 === QB ? void 0 : QB[2]) && void 0 !== zB ? zB : 1) && aB(nB) && !(0, aj.y)(nB, MB.hudElements[nB]) && sj.current.push(...TB(nB, cB, aB))
+      (0, JB.useLayoutEffect)((() => {
+        mB.current = kI.busy
+      }), [kI.busy]);
+      const FI = (0, JB.useRef)([]),
+        NI = (0, JB.useRef)(sB.hudElements);
+      (0, JB.useEffect)((() => {
+        for (const JB of Object.keys(sB.hudElements)) {
+          var BB, IB, ZB, TB;
+          (null !== (BB = null === (IB = sB.hudElements[JB]) || void 0 === IB ? void 0 : IB[2]) && void 0 !== BB ? BB : 1) > (null !== (ZB = null === (TB = NI.current[JB]) || void 0 === TB ? void 0 : TB[2]) && void 0 !== ZB ? ZB : 1) && nB(JB) && !(0, nI.y)(JB, sB.hudElements[JB]) && FI.current.push(...LB(JB, EB, nB))
         }
-        Jj.current = MB.hudElements
-      }), [MB.hudElements, aB, cB]), (0, nB.useEffect)((() => {
-        if (!bB) return;
-        const BB = (0, HB.C)(gB.width, gB.height, KB);
-        for (const zB of ((BB, jB, zB, QB) => {
-            const nB = BB => {
-              const nB = jB[BB],
+        NI.current = sB.hudElements
+      }), [sB.hudElements, nB, EB]), (0, JB.useEffect)((() => {
+        if (!DB) return;
+        const BB = (0, aB.B)(dB.width, dB.height, bB);
+        for (const ZB of ((BB, IB, ZB, TB) => {
+            const JB = BB => {
+              const JB = IB[BB],
                 {
-                  x: dB,
-                  y: IB
-                } = nB && QB(BB) ? (0, HB.G)(nB, zB) : {
+                  x: oB,
+                  y: GB
+                } = JB && TB(BB) ? (0, aB.D)(JB, ZB) : {
                   x: 0,
                   y: 0
                 };
-              return nB && {
-                left: nB.left + dB,
-                top: nB.top + IB,
-                right: nB.right + dB,
-                bottom: nB.bottom + IB
+              return JB && {
+                left: JB.left + oB,
+                top: JB.top + GB,
+                right: JB.right + oB,
+                bottom: JB.bottom + GB
               }
             };
             return BB.flatMap((BB => {
-              const dB = jB[BB];
-              if ("inventory" !== BB || !dB || dB.right - dB.left <= zB.right - zB.left && dB.bottom - dB.top <= zB.bottom - zB.top) return [BB];
-              const [IB, NB] = [nB("shop"), nB("bag")];
-              return IB && NB && !(0, HB.l)(IB, NB, 0) ? ["shop", "bag"].filter(QB) : [BB]
+              const oB = IB[BB];
+              if ("inventory" !== BB || !oB || oB.right - oB.left <= ZB.right - ZB.left && oB.bottom - oB.top <= ZB.bottom - ZB.top) return [BB];
+              const [GB, vB] = [JB("shop"), JB("bag")];
+              return GB && vB && !(0, aB.l)(GB, vB, 0) ? ["shop", "bag"].filter(TB) : [BB]
             }))
-          })(sj.current.splice(0), wB, BB, aB)) {
-          const QB = wB[zB];
-          if (!QB || uj.busy() || !(0, HB.j)(QB, gB.width, gB.height)) continue;
-          const nB = (0, HB.G)(QB, BB);
-          if (0 !== nB.x || 0 !== nB.y) {
-            var jB;
-            const [BB, QB] = null !== (jB = MB.hudElements[zB]) && void 0 !== jB ? jB : [0, 0];
-            UB(zB, BB + nB.x / gB.width, QB + nB.y / gB.height)
+          })(FI.current.splice(0), AB, BB, nB)) {
+          const TB = AB[ZB];
+          if (!TB || kI.busy() || !(0, aB.k)(TB, dB.width, dB.height)) continue;
+          const JB = (0, aB.D)(TB, BB);
+          if (0 !== JB.x || 0 !== JB.y) {
+            var IB;
+            const [BB, TB] = null !== (IB = sB.hudElements[ZB]) && void 0 !== IB ? IB : [0, 0];
+            cB(ZB, BB + JB.x / dB.width, TB + JB.y / dB.height)
           }
         }
-      }), [wB, bB]), (0, nB.useImperativeHandle)(GB, (() => ({
-        setScale: (BB, jB) => {
-          Nj((0, DB.ab)(zB, dB, BB, {
-            scale: jB
+      }), [AB, DB]), (0, JB.useImperativeHandle)(UB, (() => ({
+        setScale: (BB, IB) => {
+          vI((0, HB.gb)(ZB, oB, BB, {
+            scale: IB
           }))
         },
         setOpacity: BB => {
-          RB({
-            ...zB,
+          VB({
+            ...ZB,
             hudKeyOpacity: BB
           })
         },
-        keepLocks: (BB, jB) => (Qj(), jz(BB, jB, dB, gB, OB, {
-          canKeep: dj
+        keepLocks: (BB, IB) => (TI(), IZ(BB, IB, oB, dB, SB, {
+          canKeep: oI
         })),
         setSafe: BB => {
-          const jB = (0, rj.B)(BB, gB.width, gB.height, Cj(null !== lB && void 0 !== lB ? lB : document));
-          Nj((0, DB.fb)(zB, dB, BB)), YB.current && (YB.current.style.inset = jB.map((BB => BB * XB + "px")).join(" "))
+          const IB = (0, zI.x)(BB, dB.width, dB.height, xI(null !== lB && void 0 !== lB ? lB : document));
+          vI((0, HB.lb)(ZB, oB, BB)), jB.current && (jB.current.style.inset = IB.map((BB => BB * rB + "px")).join(" "))
         }
-      })), [RB, Nj, OB, Qj, dj, lB, zB, dB, gB, XB]);
-      const mj = new Set(Object.keys(MB.hudElements).filter((BB => (0, DB.s)(MB.hudElements, BB)))),
-        yj = IB ? wB[IB] : void 0,
-        kj = IB ? CB(IB, pB, LB, mB) : "",
-        Gj = (0, Vj.c)(gB.width, gB.height),
-        Lj = IB ? function(BB, jB, zB, QB) {
-          const nB = BB => AB(BB).some((BB => (0, DB.s)(zB.hudElements, BB) || (0, aj.x)(BB, zB, QB)));
-          if (nB(BB)) return [];
-          const dB = BB => {
-              var jB, QB;
-              return "bag" === BB && 1 !== (null !== (jB = null === (QB = zB.hudElements.shop) || void 0 === QB ? void 0 : QB[2]) && void 0 !== jB ? jB : 1) || AB(BB).some((BB => void 0 !== zB.hudElements[BB]))
+      })), [VB, vI, SB, TI, oI, lB, ZB, oB, dB, rB]);
+      const gI = new Set(Object.keys(sB.hudElements).filter((BB => (0, HB.p)(sB.hudElements, BB)))),
+        qI = GB ? AB[GB] : void 0,
+        yI = GB ? xB(GB, hB, WB, gB) : "",
+        UI = (0, PI.f)(dB.width, dB.height),
+        WI = GB ? function(BB, IB, ZB, TB) {
+          const JB = BB => XB(BB).some((BB => (0, HB.p)(ZB.hudElements, BB) || (0, nI.w)(BB, ZB, TB)));
+          if (JB(BB)) return [];
+          const oB = BB => {
+              var IB, TB;
+              return "bag" === BB && 1 !== (null !== (IB = null === (TB = ZB.hudElements.shop) || void 0 === TB ? void 0 : TB[2]) && void 0 !== IB ? IB : 1) || XB(BB).some((BB => void 0 !== ZB.hudElements[BB]))
             },
-            IB = PB.get(BB),
-            NB = jB.filter((jB => {
+            GB = eB.get(BB),
+            vB = IB.filter((IB => {
               let {
-                id: zB
-              } = jB;
-              return IB ? IB.has(zB) && !nB(zB) : zB === BB
+                id: ZB
+              } = IB;
+              return GB ? GB.has(ZB) && !JB(ZB) : ZB === BB
             })),
-            uB = new Set;
-          for (const UB of jB) UB.id === BB || null !== IB && void 0 !== IB && IB.has(UB.id) || uB.has(UB.id) || nB(UB.id) || NB.some((BB => {
+            kB = new Set;
+          for (const cB of IB) cB.id === BB || null !== GB && void 0 !== GB && GB.has(cB.id) || kB.has(cB.id) || JB(cB.id) || vB.some((BB => {
             let {
-              id: jB,
-              box: QB
+              id: IB,
+              box: TB
             } = BB;
-            return !pj(jB, UB.id, zB) && (dB(jB) || dB(UB.id)) && (0, HB.l)(QB, UB.box, 2)
-          })) && uB.add(UB.id);
-          return [...uB]
-        }(IB, xB, MB, Gj) : [],
-        gj = new Set((0, aj.v)(MB.hudElements)),
-        tj = (0, aj.K)(MB, (0, aj.I)(sB.rowIcons)).state,
-        Sj = Lj.join(),
-        Mj = (0, nB.useRef)(BB.onReady);
-      Mj.current = BB.onReady, (0, nB.useEffect)((() => {
+            return !hI(IB, cB.id, ZB) && (oB(IB) || oB(cB.id)) && (0, aB.l)(TB, cB.box, 2)
+          })) && kB.add(cB.id);
+          return [...kB]
+        }(GB, tB, sB, UI) : [],
+        dI = new Set((0, nI.u)(sB.hudElements)),
+        CI = (0, nI.J)(sB, (0, nI.H)(FB.rowIcons)).state,
+        QI = WI.join(),
+        sI = (0, JB.useRef)(BB.onReady);
+      sI.current = BB.onReady, (0, JB.useEffect)((() => {
         var BB;
-        null === (BB = Mj.current) || void 0 === BB || BB.call(Mj, vB)
-      }), [vB]);
-      const Ej = (0, nB.useRef)(BB.onMeasured);
-      (0, nB.useLayoutEffect)((() => {
-        Ej.current = BB.onMeasured
+        null === (BB = sI.current) || void 0 === BB || BB.call(sI, KB)
+      }), [KB]);
+      const wI = (0, JB.useRef)(BB.onMeasured);
+      (0, JB.useLayoutEffect)((() => {
+        wI.current = BB.onMeasured
       }));
-      const ij = (0, nB.useRef)({
+      const OI = (0, JB.useRef)({
           layout: null,
           input: "",
           caps: {}
         }),
-        qj = [pz(xB), gB.width, gB.height, KB.top, KB.right, KB.bottom, KB.left, bB, eB].join("|");
-      (0, nB.useEffect)((() => {
-        const BB = Sj ? Sj.split(",") : [],
-          jB = () => {
-            var jB;
-            null === (jB = Ej.current) || void 0 === jB || jB.call(Ej, wB, BB, ij.current.caps)
+        YI = [hZ(tB), dB.width, dB.height, bB.top, bB.right, bB.bottom, bB.left, DB, fB].join("|");
+      (0, JB.useEffect)((() => {
+        const BB = QI ? QI.split(",") : [],
+          IB = () => {
+            var IB;
+            null === (IB = wI.current) || void 0 === IB || IB.call(wI, AB, BB, OI.current.caps)
           };
-        let zB;
-        const QB = () => {
-          const BB = zj.current;
-          if (!lB || BB === ij.current.layout && qj === ij.current.input) return !1;
-          const nB = nj.current + 250 - performance.now();
-          return BB === ij.current.layout && (nB > 0 || WB()) ? (zB = setTimeout((() => {
-            QB() && jB()
-          }), Math.max(nB, 62.5)), !1) : (ij.current = {
+        let ZB;
+        const TB = () => {
+          const BB = ZI.current;
+          if (!lB || BB === OI.current.layout && YI === OI.current.input) return !1;
+          const JB = JI.current + 250 - performance.now();
+          return BB === OI.current.layout && (JB > 0 || uB()) ? (ZB = setTimeout((() => {
+            TB() && IB()
+          }), Math.max(JB, 62.5)), !1) : (OI.current = {
             layout: BB,
-            input: qj,
+            input: YI,
             caps: {
-              hotbar: bj(lB, Fj),
-              cluster: sz(lB, (0, HB.C)(gB.width, gB.height, KB), Fj)
+              hotbar: DI(lB, MI),
+              cluster: FZ(lB, (0, aB.B)(dB.width, dB.height, bB), MI)
             }
           }, !0)
         };
-        return QB(), jB(), () => {
-          clearTimeout(zB)
+        return TB(), IB(), () => {
+          clearTimeout(ZB)
         }
-      }), [wB, Sj, lB, gB, KB, qj, WB]);
-      const fj = BB => ({
-        left: BB.left * XB,
-        top: BB.top * XB,
-        width: (BB.right - BB.left) * XB,
-        height: (BB.bottom - BB.top) * XB
+      }), [AB, QI, lB, dB, bB, YI, uB]);
+      const iI = BB => ({
+        left: BB.left * rB,
+        top: BB.top * rB,
+        width: (BB.right - BB.left) * rB,
+        height: (BB.bottom - BB.top) * rB
       });
-      return (0, tB.jsx)("div", {
-        ref: EB,
-        className: uB()("HudPreviewBox", {
-          Fill: kB
+      return (0, CB.jsx)("div", {
+        ref: wB,
+        className: kB()("HudPreviewBox", {
+          Fill: yB
         }),
         style: {
-          height: gB.height * XB
+          height: dB.height * rB
         },
-        children: (0, tB.jsxs)("div", {
-          ref: iB,
+        children: (0, CB.jsxs)("div", {
+          ref: OB,
           className: "HudPreviewStage",
           style: {
-            width: gB.width * XB,
-            height: gB.height * XB
+            width: dB.width * rB,
+            height: dB.height * rB
           },
-          children: [(0, tB.jsx)("iframe", {
-            ref: qB,
+          children: [(0, CB.jsx)("iframe", {
+            ref: YB,
             className: "HudPreviewFrame",
-            title: LB("hudLayout:preview"),
+            title: WB("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: gB.width,
-              height: gB.height,
-              transform: `scale(${XB})`
+              width: dB.width,
+              height: dB.height,
+              transform: `scale(${rB})`
             }
-          }), lB && (0, Ij.createPortal)((0, tB.jsx)(Hj, {
-            presence: sB,
-            portraitPhone: Gj,
-            hidden: mj,
-            actionButtons: pB,
-            joystickFixed: rB,
-            keysAbove: cB,
-            auraBar: SB,
-            trayState: tj,
-            moved: gj
-          }), lB.body), (0, tB.jsxs)("div", {
+          }), lB && (0, GI.createPortal)((0, CB.jsx)(aI, {
+            presence: FB,
+            portraitPhone: UI,
+            hidden: gI,
+            actionButtons: hB,
+            joystickFixed: zB,
+            keysAbove: EB,
+            auraBar: QB,
+            trayState: CI,
+            moved: dI
+          }), lB.body), (0, CB.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...uj.handlers,
-            children: [(0, tB.jsx)("div", {
-              ref: YB,
+            ...kI.handlers,
+            children: [(0, CB.jsx)("div", {
+              ref: jB,
               className: "HudPreviewSafeZone",
               style: {
-                top: KB.top * XB,
-                right: KB.right * XB,
-                bottom: KB.bottom * XB,
-                left: KB.left * XB
+                top: bB.top * rB,
+                right: bB.right * rB,
+                bottom: bB.bottom * rB,
+                left: bB.left * rB
               }
-            }), xB.map(((BB, jB) => {
+            }), tB.map(((BB, IB) => {
               let {
-                id: zB,
-                box: QB
+                id: ZB,
+                box: TB
               } = BB;
-              return (0, tB.jsx)("div", {
+              return (0, CB.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: fj((0, HB.t)(QB, 40 / XB))
-              }, `${zB}:${jB}`)
-            })), MB.hudLocked.map((BB => {
-              const jB = wB[BB];
-              return jB && (0, tB.jsx)("span", {
+                style: iI((0, aB.r)(TB, 40 / rB))
+              }, `${ZB}:${IB}`)
+            })), sB.hudLocked.map((BB => {
+              const IB = AB[BB];
+              return IB && (0, CB.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: jB.right * XB,
-                  top: jB.top * XB
+                  left: IB.right * rB,
+                  top: IB.top * rB
                 },
-                children: (0, tB.jsx)(oB.c, {
+                children: (0, CB.jsx)(pB.d, {
                   name: "lock"
                 })
               }, BB)
-            })), (0, tB.jsx)("div", {
-              ref: FB,
+            })), (0, CB.jsx)("div", {
+              ref: MB,
               className: "HudPreviewCentreLine",
               style: {
-                left: gB.width / 2 * XB
+                left: dB.width / 2 * rB
               }
-            }), IB && yj && (0, tB.jsx)("div", {
-              ref: fB,
-              className: uB()("HudPreviewRing", {
-                Fixed: !aB(IB),
-                Overlap: Lj.length > 0
+            }), GB && qI && (0, CB.jsx)("div", {
+              ref: iB,
+              className: kB()("HudPreviewRing", {
+                Fixed: !nB(GB),
+                Overlap: WI.length > 0
               }),
-              style: fj(yj),
-              children: (0, tB.jsx)("span", {
-                className: uB()("HudPreviewRingLabel", Gz(IB, kj, wB, XB, gB)),
-                children: kj
+              style: iI(qI),
+              children: (0, CB.jsx)("span", {
+                className: kB()("HudPreviewRingLabel", UZ(GB, yI, AB, rB, dB)),
+                children: yI
               })
             })]
           })]
@@ -2016,798 +2016,798 @@ export const modules = {
       })
     }
 
-    function tz(BB, jB) {
-      (0, nB.useEffect)((() => {
-        var zB;
-        null === (zB = BB.current) || void 0 === zB || zB.toggleAttribute("inert", jB)
-      }), [BB, jB])
+    function CZ(BB, IB) {
+      (0, JB.useEffect)((() => {
+        var ZB;
+        null === (ZB = BB.current) || void 0 === ZB || ZB.toggleAttribute("inert", IB)
+      }), [BB, IB])
     }
-    const Sz = "hudFullScreen";
+    const QZ = "hudFullScreen";
 
-    function Mz(BB) {
+    function sZ(BB) {
       let {
-        onScale: jB,
-        onHidden: zB,
-        onReset: dB,
-        locked: IB,
-        lockable: NB,
-        onLocked: uB,
-        onClose: aB,
-        ...pB
+        onScale: IB,
+        onHidden: ZB,
+        onReset: oB,
+        locked: GB,
+        lockable: vB,
+        onLocked: kB,
+        onClose: nB,
+        ...hB
       } = BB;
       const {
-        t: rB
-      } = (0, QB.D)(), sB = (0, nB.useRef)(null);
-      (0, Nj.v)("popup", sB, aB),
+        t: zB
+      } = (0, TB.G)(), FB = (0, JB.useRef)(null);
+      (0, vI.t)("popup", FB, nB),
       function(BB) {
-        const jB = (0, nB.useRef)(BB);
-        jB.current = BB, (0, nB.useEffect)((() => {
+        const IB = (0, JB.useRef)(BB);
+        IB.current = BB, (0, JB.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [Sz]: !0
+            [QZ]: !0
           }, "");
           let BB = !1;
-          const zB = () => {
-            BB = !0, jB.current()
+          const ZB = () => {
+            BB = !0, IB.current()
           };
-          return window.addEventListener("popstate", zB), () => {
-            var jB;
-            window.removeEventListener("popstate", zB), !BB && null !== (jB = window.history.state) && void 0 !== jB && jB[Sz] && window.history.back()
+          return window.addEventListener("popstate", ZB), () => {
+            var IB;
+            window.removeEventListener("popstate", ZB), !BB && null !== (IB = window.history.state) && void 0 !== IB && IB[QZ] && window.history.back()
           }
         }), [])
-      }(aB), (0, nB.useEffect)((() => {
+      }(nB), (0, JB.useEffect)((() => {
         function BB(BB) {
-          "Escape" === BB.key && (BB.stopPropagation(), aB())
+          "Escape" === BB.key && (BB.stopPropagation(), nB())
         }
         return window.addEventListener("keydown", BB, !0), () => {
           window.removeEventListener("keydown", BB, !0)
         }
-      }), [aB]);
+      }), [nB]);
       const {
-        selected: JB
-      } = pB, mB = (0, nB.useRef)(null), yB = (0, nB.useRef)(null), [kB, GB] = (0, nB.useState)(!1);
-      tz(yB, !kB);
-      const [LB, gB] = (0, nB.useState)(null), [SB, MB] = (0, nB.useState)([]), [EB, iB] = Dj(), qB = (0, nB.useRef)(pB.selected);
-      qB.current = pB.selected;
-      const fB = (0, nB.useRef)({}),
-        oB = (0, nB.useCallback)((() => {
-          const BB = mB.current;
-          BB && gB(function(BB, jB, zB) {
-            var QB;
+        selected: NB
+      } = hB, gB = (0, JB.useRef)(null), qB = (0, JB.useRef)(null), [yB, UB] = (0, JB.useState)(!1);
+      CZ(qB, !yB);
+      const [WB, dB] = (0, JB.useState)(null), [QB, sB] = (0, JB.useState)([]), [wB, OB] = HI(), YB = (0, JB.useRef)(hB.selected);
+      YB.current = hB.selected;
+      const iB = (0, JB.useRef)({}),
+        pB = (0, JB.useCallback)((() => {
+          const BB = gB.current;
+          BB && dB(function(BB, IB, ZB) {
+            var TB;
             const {
-              innerWidth: nB,
-              innerHeight: dB
-            } = window, IB = BB.offsetWidth, NB = BB.offsetHeight, uB = Math.max(Kj()[0], 6), UB = [];
-            for (const rB of [uB, .2 * dB, .5 * dB - NB / 2, .33 * dB])
-              for (const BB of [.5, .3, .7]) UB.push({
-                left: Math.max(0, Math.min(nB - IB - 6, Math.max(6, nB * BB - IB / 2))),
-                top: rB
+              innerWidth: JB,
+              innerHeight: oB
+            } = window, GB = BB.offsetWidth, vB = BB.offsetHeight, kB = Math.max(bI()[0], 6), cB = [];
+            for (const zB of [kB, .2 * oB, .5 * oB - vB / 2, .33 * oB])
+              for (const BB of [.5, .3, .7]) cB.push({
+                left: Math.max(0, Math.min(JB - GB - 6, Math.max(6, JB * BB - GB / 2))),
+                top: zB
               });
-            const aB = UB.map((BB => ({
+            const nB = cB.map((BB => ({
                 left: BB.left - 6,
                 top: BB.top - 6,
-                right: BB.left + IB + 6,
-                bottom: BB.top + NB + 6
+                right: BB.left + GB + 6,
+                bottom: BB.top + vB + 6
               }))),
-              pB = az(jB, zB);
-            return UB[(0, HB.u)(aB, pB, {
-              avoid: zB && null !== (QB = jB[zB]) && void 0 !== QB ? QB : null
+              hB = nZ(IB, ZB);
+            return cB[(0, aB.s)(nB, hB, {
+              avoid: ZB && null !== (TB = IB[ZB]) && void 0 !== TB ? TB : null
             })]
-          }(BB, fB.current, qB.current))
+          }(BB, iB.current, YB.current))
         }), []),
-        DB = (0, nB.useCallback)(((BB, jB, zB) => {
-          MB(jB), iB(zB), fB.current = BB, oB()
-        }), [oB, iB]);
-      return (0, nB.useLayoutEffect)(oB, [pB.selected, oB]), (0, Ij.createPortal)((0, tB.jsxs)("div", {
-        ref: sB,
+        HB = (0, JB.useCallback)(((BB, IB, ZB) => {
+          sB(IB), OB(ZB), iB.current = BB, pB()
+        }), [pB, OB]);
+      return (0, JB.useLayoutEffect)(pB, [hB.selected, pB]), (0, GI.createPortal)((0, CB.jsxs)("div", {
+        ref: FB,
         className: "HudFullScreenEditor",
-        children: [(0, tB.jsx)(gz, {
-          ...pB,
+        children: [(0, CB.jsx)(dZ, {
+          ...hB,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: DB,
-          onReady: GB,
-          lockable: NB
-        }), (0, tB.jsxs)("div", {
-          ref: mB,
+          onMeasured: HB,
+          onReady: UB,
+          lockable: vB
+        }), (0, CB.jsxs)("div", {
+          ref: gB,
           className: "HudFullScreenToolbar",
-          style: null === LB ? void 0 : {
-            left: LB.left,
-            top: LB.top,
+          style: null === WB ? void 0 : {
+            left: WB.left,
+            top: WB.top,
             transform: "none"
           },
-          children: [(0, tB.jsx)("div", {
-            ref: yB,
+          children: [(0, CB.jsx)("div", {
+            ref: qB,
             className: "HudFullScreenControls",
-            children: (0, tB.jsx)(Yj, {
-              selected: JB,
-              layout: pB.layout.hudLayouts[pB.orientation],
-              actionButtons: pB.actionButtons,
-              keyNames: pB.keyNames,
-              overlaps: SB,
-              scaleCaps: EB,
-              onScale: jB,
-              onHidden: zB,
-              onReset: dB,
-              locked: IB,
-              lockable: NB,
-              onLocked: uB,
-              joystickFixed: pB.joystickFixed
+            children: (0, CB.jsx)(jI, {
+              selected: NB,
+              layout: hB.layout.hudLayouts[hB.orientation],
+              actionButtons: hB.actionButtons,
+              keyNames: hB.keyNames,
+              overlaps: QB,
+              scaleCaps: wB,
+              onScale: IB,
+              onHidden: ZB,
+              onReset: oB,
+              locked: GB,
+              lockable: vB,
+              onLocked: kB,
+              joystickFixed: hB.joystickFixed
             })
-          }), (0, tB.jsx)(UB.f, {
+          }), (0, CB.jsx)(cB.g, {
             className: "HudFullScreenDone",
-            onClick: aB,
+            onClick: nB,
             padDefaultFocus: !0,
-            children: rB("hudLayout:done")
+            children: zB("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const Ez = BB => `${Math.round(100*BB)}%`;
+    const wZ = BB => `${Math.round(100*BB)}%`;
 
-    function iz(BB) {
+    function OZ(BB) {
       let {
-        info: jB,
-        tuple: zB,
-        props: nB
+        info: IB,
+        tuple: ZB,
+        props: JB
       } = BB;
       const {
-        t: dB
-      } = (0, QB.D)();
-      return (0, tB.jsx)(sB.f, {
-        name: dB("hudLayout:size"),
-        min: DB.k,
-        max: DB.h,
-        step: Fj,
-        initValue: zB[2],
-        disabled: nB.locked.has(jB.id),
-        selectableMax: nB.scaleCaps[jB.id],
-        cappedNote: dB("hudLayout:sizeCapped"),
-        format: Ez,
+        t: oB
+      } = (0, TB.G)();
+      return (0, CB.jsx)(FB.j, {
+        name: oB("hudLayout:size"),
+        min: HB.i,
+        max: HB.g,
+        step: MI,
+        initValue: ZB[2],
+        disabled: JB.locked.has(IB.id),
+        selectableMax: JB.scaleCaps[IB.id],
+        cappedNote: oB("hudLayout:sizeCapped"),
+        format: wZ,
         onChange: BB => {
-          nB.onScalePreview(jB.id, BB)
+          JB.onScalePreview(IB.id, BB)
         },
         onChangeComplete: BB => {
-          nB.onScale(jB.id, BB)
+          JB.onScale(IB.id, BB)
         }
       })
     }
 
-    function qz(BB) {
+    function YZ(BB) {
       const {
-        t: jB
-      } = (0, QB.D)(), {
-        present: zB,
-        elements: dB,
-        selected: IB,
-        onSelect: NB,
-        onHidden: UB,
-        onReset: aB,
-        note: pB,
-        actionButtons: rB,
-        keyNames: sB,
-        sizeBesidePreview: JB,
-        locked: mB,
-        lockable: yB,
-        onLocked: kB
+        t: IB
+      } = (0, TB.G)(), {
+        present: ZB,
+        elements: oB,
+        selected: GB,
+        onSelect: vB,
+        onHidden: cB,
+        onReset: nB,
+        note: hB,
+        actionButtons: zB,
+        keyNames: FB,
+        sizeBesidePreview: NB,
+        locked: gB,
+        lockable: qB,
+        onLocked: yB
       } = BB, {
-        rowIconsOpen: GB,
-        onRowIconsOpen: LB
-      } = BB, gB = (0, nB.useRef)(null), SB = null !== IB && (GB || !(0, DB.S)(IB));
-      return (0, nB.useEffect)((() => {
+        rowIconsOpen: UB,
+        onRowIconsOpen: WB
+      } = BB, dB = (0, JB.useRef)(null), QB = null !== GB && (UB || !(0, HB.P)(GB));
+      return (0, JB.useEffect)((() => {
         var BB;
-        const jB = IB ? null === (BB = gB.current) || void 0 === BB ? void 0 : BB.querySelector(`[data-hud-row="${IB}"]`) : null;
-        if (!jB) return;
-        const zB = jB.closest(".SettingsMenuRight"),
-          QB = performance.now();
-        let nB = null;
-        const dB = () => {
-            clearInterval(uB), null === zB || void 0 === zB || zB.removeEventListener("scroll", NB)
+        const IB = GB ? null === (BB = dB.current) || void 0 === BB ? void 0 : BB.querySelector(`[data-hud-row="${GB}"]`) : null;
+        if (!IB) return;
+        const ZB = IB.closest(".SettingsMenuRight"),
+          TB = performance.now();
+        let JB = null;
+        const oB = () => {
+            clearInterval(kB), null === ZB || void 0 === ZB || ZB.removeEventListener("scroll", vB)
           },
-          NB = () => {
-            nz() || dB()
+          vB = () => {
+            JZ() || oB()
           },
-          uB = setInterval((() => {
+          kB = setInterval((() => {
             const BB = performance.now();
-            BB - QB > 1500 ? dB() : nz() ? nB = null : null === nB ? nB = BB : BB - nB >= 150 && (dB(), function(BB) {
-              var jB;
-              const zB = BB.closest(".SettingsMenuRight"),
-                QB = null === (jB = BB.closest(".HudLayoutSettings")) || void 0 === jB ? void 0 : jB.querySelector(".HudLayoutPreviewBox");
-              if (!zB || !QB) return;
-              const nB = QB.getBoundingClientRect().bottom + 8,
-                dB = zB.getBoundingClientRect().bottom - 8,
-                IB = BB.getBoundingClientRect();
-              IB.top < nB ? zB.scrollBy({
-                top: IB.top - nB,
+            BB - TB > 1500 ? oB() : JZ() ? JB = null : null === JB ? JB = BB : BB - JB >= 150 && (oB(), function(BB) {
+              var IB;
+              const ZB = BB.closest(".SettingsMenuRight"),
+                TB = null === (IB = BB.closest(".HudLayoutSettings")) || void 0 === IB ? void 0 : IB.querySelector(".HudLayoutPreviewBox");
+              if (!ZB || !TB) return;
+              const JB = TB.getBoundingClientRect().bottom + 8,
+                oB = ZB.getBoundingClientRect().bottom - 8,
+                GB = BB.getBoundingClientRect();
+              GB.top < JB ? ZB.scrollBy({
+                top: GB.top - JB,
                 behavior: "smooth"
-              }) : IB.bottom > dB && zB.scrollBy({
-                top: Math.min(IB.bottom - dB, IB.top - nB),
+              }) : GB.bottom > oB && ZB.scrollBy({
+                top: Math.min(GB.bottom - oB, GB.top - JB),
                 behavior: "smooth"
               })
-            }(jB))
+            }(IB))
           }), 50);
-        return null === zB || void 0 === zB || zB.addEventListener("scroll", NB, {
+        return null === ZB || void 0 === ZB || ZB.addEventListener("scroll", vB, {
           passive: !0
-        }), dB
-      }), [IB, SB]), (0, tB.jsx)("div", {
-        ref: gB,
+        }), oB
+      }), [GB, QB]), (0, CB.jsx)("div", {
+        ref: dB,
         className: "SettingBoxGroup HudElementList",
-        children: wB.filter((BB => zB.has(BB.id) && (GB || !(0, DB.S)(BB.id)))).map((zB => {
-          const QB = ((BB, jB) => {
-              var zB;
-              return null !== (zB = BB[jB]) && void 0 !== zB ? zB : DB.m
-            })(dB, zB.id),
-            nB = (0, DB.s)(dB, zB.id),
-            gB = zB.id === IB,
-            SB = zB.scale && !JB,
-            MB = pB(zB.id, gB);
-          return (0, tB.jsxs)("div", {
-            "data-hud-row": zB.id,
-            className: uB()("SettingBox HudElementRow", {
-              Open: gB,
-              Hidden: nB,
-              Child: void 0 !== zB.parent,
-              Grandchild: ZB(zB.id).length > 1
+        children: AB.filter((BB => ZB.has(BB.id) && (UB || !(0, HB.P)(BB.id)))).map((ZB => {
+          const TB = ((BB, IB) => {
+              var ZB;
+              return null !== (ZB = BB[IB]) && void 0 !== ZB ? ZB : HB.k
+            })(oB, ZB.id),
+            JB = (0, HB.p)(oB, ZB.id),
+            dB = ZB.id === GB,
+            QB = ZB.scale && !NB,
+            sB = hB(ZB.id, dB);
+          return (0, CB.jsxs)("div", {
+            "data-hud-row": ZB.id,
+            className: kB()("SettingBox HudElementRow", {
+              Open: dB,
+              Hidden: JB,
+              Child: void 0 !== ZB.parent,
+              Grandchild: mB(ZB.id).length > 1
             }),
-            children: [(0, tB.jsxs)("div", {
+            children: [(0, CB.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, tB.jsx)("button", {
+              children: [(0, CB.jsx)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": SB ? gB : void 0,
+                "aria-expanded": QB ? dB : void 0,
                 onClick: () => {
-                  NB(zB.id)
+                  vB(ZB.id)
                 },
-                children: (0, tB.jsxs)("span", {
+                children: (0, CB.jsxs)("span", {
                   className: "HudElementRowLabel",
-                  children: [CB(zB.id, rB, jB, sB), zB.scale && 1 !== QB[2] && !(gB && SB) && (0, tB.jsxs)(tB.Fragment, {
-                    children: [" ", (0, tB.jsx)("span", {
+                  children: [xB(ZB.id, zB, IB, FB), ZB.scale && 1 !== TB[2] && !(dB && QB) && (0, CB.jsxs)(CB.Fragment, {
+                    children: [" ", (0, CB.jsx)("span", {
                       className: "HudElementRowSize",
-                      children: Ez(QB[2])
+                      children: wZ(TB[2])
                     })]
-                  }), SB && (0, tB.jsxs)(tB.Fragment, {
-                    children: [" ", (0, tB.jsx)("span", {
+                  }), QB && (0, CB.jsxs)(CB.Fragment, {
+                    children: [" ", (0, CB.jsx)("span", {
                       className: "HudElementRowChevron",
                       children: "\u25be"
                     })]
                   })]
                 })
-              }), (0, tB.jsx)(OB, {
+              }), (0, CB.jsx)(SB, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: zB.id,
-                actionButtons: rB,
-                keyNames: sB,
-                locked: mB.has(zB.id),
-                lockable: yB(zB.id),
-                onLocked: kB
-              }), "menu" === zB.id && (0, tB.jsx)(Bj, {
+                id: ZB.id,
+                actionButtons: zB,
+                keyNames: FB,
+                locked: gB.has(ZB.id),
+                lockable: qB(ZB.id),
+                onLocked: yB
+              }), "menu" === ZB.id && (0, CB.jsx)(BI, {
                 className: "HudElementRowIcon",
-                open: GB,
-                name: CB(zB.id, rB, jB, sB),
-                onToggle: LB
-              }), "menu" !== zB.id && (0, tB.jsx)(vB, {
+                open: UB,
+                name: xB(ZB.id, zB, IB, FB),
+                onToggle: WB
+              }), "menu" !== ZB.id && (0, CB.jsx)(KB, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: zB.id,
-                elements: dB,
-                actionButtons: rB,
-                keyNames: sB,
-                onHidden: UB
-              }), (0, tB.jsx)(RB, {
+                id: ZB.id,
+                elements: oB,
+                actionButtons: zB,
+                keyNames: FB,
+                onHidden: cB
+              }), (0, CB.jsx)(VB, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: mB.has(zB.id),
-                id: zB.id,
-                elements: dB,
-                actionButtons: rB,
-                keyNames: sB,
-                onReset: aB
+                locked: gB.has(ZB.id),
+                id: ZB.id,
+                elements: oB,
+                actionButtons: zB,
+                keyNames: FB,
+                onReset: nB
               })]
-            }), gB && SB && (0, tB.jsx)(iz, {
-              info: zB,
-              tuple: QB,
+            }), dB && QB && (0, CB.jsx)(OZ, {
+              info: ZB,
+              tuple: TB,
               props: BB
-            }), MB && (0, tB.jsx)("div", {
+            }), sB && (0, CB.jsx)("div", {
               className: "HudElementNote",
-              children: MB
+              children: sB
             })]
-          }, zB.id)
+          }, ZB.id)
         }))
       })
     }
 
-    function fz(BB) {
+    function iZ(BB) {
       let {
-        preview: jB,
-        quick: zB,
-        onFullScreen: dB,
-        resting: IB,
-        onSidePanel: NB
+        preview: IB,
+        quick: ZB,
+        onFullScreen: oB,
+        resting: GB,
+        onSidePanel: vB
       } = BB;
       const {
-        t: uB
-      } = (0, QB.D)(), aB = Lz(), pB = (0, nB.useRef)(null), {
-        width: rB
-      } = (0, Uj.b)(pB), sB = Math.floor(aB.width * Math.min(1, jB.maxHeight / aB.height)), JB = rB - sB - 12, mB = JB >= 130, yB = rB > 0;
-      (0, nB.useEffect)((() => {
-        yB && NB(mB)
-      }), [yB, mB, NB]);
-      const kB = (0, HB.A)(mB ? sB : rB, aB.width, aB.height, jB.maxHeight),
-        GB = IB ? (0, tB.jsx)("div", {
+        t: kB
+      } = (0, TB.G)(), nB = WZ(), hB = (0, JB.useRef)(null), {
+        width: zB
+      } = (0, cI.e)(hB), FB = Math.floor(nB.width * Math.min(1, IB.maxHeight / nB.height)), NB = zB - FB - 12, gB = NB >= 130, qB = zB > 0;
+      (0, JB.useEffect)((() => {
+        qB && vB(gB)
+      }), [qB, gB, vB]);
+      const yB = (0, aB.A)(gB ? FB : zB, nB.width, nB.height, IB.maxHeight),
+        UB = GB ? (0, CB.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: aB.height * kB
+            height: nB.height * yB
           }
-        }) : (0, tB.jsx)(gz, {
-          ...jB
+        }) : (0, CB.jsx)(dZ, {
+          ...IB
         }),
-        LB = BB => (0, tB.jsxs)(UB.M, {
+        WB = BB => (0, CB.jsxs)(cB.V, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: uB("hudLayout:fullScreen"),
+          ariaLabel: kB("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: dB,
-          children: [(0, tB.jsx)(oB.c, {
+          onClick: oB,
+          children: [(0, CB.jsx)(pB.d, {
             name: "expand"
-          }), BB && (0, tB.jsx)("span", {
-            children: uB("hudLayout:fullScreen")
+          }), BB && (0, CB.jsx)("span", {
+            children: kB("hudLayout:fullScreen")
           })]
         });
-      return (0, tB.jsxs)("div", {
-        ref: pB,
+      return (0, CB.jsxs)("div", {
+        ref: hB,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [rB > 0 && mB && (0, tB.jsxs)("div", {
+        children: [zB > 0 && gB && (0, CB.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, tB.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             style: {
-              width: sB
+              width: FB
             },
-            children: GB
-          }), (0, tB.jsx)("div", {
+            children: UB
+          }), (0, CB.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, tB.jsx)(Yj, {
-              selected: jB.selected,
-              ...zB,
-              joystickFixed: jB.joystickFixed,
-              extra: LB(!jB.selected || JB >= 278)
+            children: (0, CB.jsx)(jI, {
+              selected: IB.selected,
+              ...ZB,
+              joystickFixed: IB.joystickFixed,
+              extra: WB(!IB.selected || NB >= 278)
             })
           })]
-        }), rB > 0 && !mB && (0, tB.jsxs)(tB.Fragment, {
-          children: [GB, (0, tB.jsx)("div", {
+        }), zB > 0 && !gB && (0, CB.jsxs)(CB.Fragment, {
+          children: [UB, (0, CB.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: LB(!1)
+            children: WB(!1)
           })]
         })]
       })
     }
-    var oz = zB(2574),
-      Hz = zB(4527),
-      Dz = zB(2550),
-      Fz = zB(2501);
-    const Yz = BB => {
-      const jB = rj.q * ("sides" === BB ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(jB / 2))
+    var pZ = ZB(2576),
+      aZ = ZB(4597),
+      HZ = ZB(2551),
+      MZ = ZB(2504);
+    const jZ = BB => {
+      const IB = zI.p * ("sides" === BB ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(IB / 2))
     };
 
-    function Vz(BB, jB, zB) {
-      const [QB, nB, dB, IB] = BB;
-      return "sides" === jB ? [QB, zB, dB, zB] : [zB, nB, zB, IB]
+    function PZ(BB, IB, ZB) {
+      const [TB, JB, oB, GB] = BB;
+      return "sides" === IB ? [TB, ZB, oB, ZB] : [ZB, JB, ZB, GB]
     }
-    const hz = [null, null, null, null],
-      Xz = BB => `${BB}px`;
+    const RZ = [null, null, null, null],
+      rZ = BB => `${BB}px`;
 
-    function Zz(BB) {
+    function mZ(BB) {
       let {
-        safe: jB,
-        onPreview: zB,
-        onCommit: dB
+        safe: IB,
+        onPreview: ZB,
+        onCommit: oB
       } = BB;
       const {
-        t: IB
-      } = (0, QB.D)(), NB = (0, rj.B)(null !== jB && void 0 !== jB ? jB : hz, window.innerWidth, window.innerHeight, Cj(document).map(Math.round)), uB = (0, nB.useRef)(null !== jB && void 0 !== jB ? jB : hz);
-      uB.current = null !== jB && void 0 !== jB ? jB : hz;
-      const aB = BB => {
-        const jB = Math.min(Yz(BB), "sides" === BB ? Math.max(NB[1], NB[3]) : Math.max(NB[0], NB[2]));
-        return (0, tB.jsx)(sB.f, {
-          name: IB("sides" === BB ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: GB
+      } = (0, TB.G)(), vB = (0, zI.x)(null !== IB && void 0 !== IB ? IB : RZ, window.innerWidth, window.innerHeight, xI(document).map(Math.round)), kB = (0, JB.useRef)(null !== IB && void 0 !== IB ? IB : RZ);
+      kB.current = null !== IB && void 0 !== IB ? IB : RZ;
+      const nB = BB => {
+        const IB = Math.min(jZ(BB), "sides" === BB ? Math.max(vB[1], vB[3]) : Math.max(vB[0], vB[2]));
+        return (0, CB.jsx)(FB.j, {
+          name: GB("sides" === BB ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: Yz(BB),
+          max: jZ(BB),
           step: 2,
-          initValue: jB,
-          format: Xz,
-          onChange: jB => {
-            zB(Vz(uB.current, BB, jB))
+          initValue: IB,
+          format: rZ,
+          onChange: IB => {
+            ZB(PZ(kB.current, BB, IB))
           },
-          onChangeComplete: QB => {
-            if (QB === jB) return void zB(uB.current);
-            const nB = Vz(uB.current, BB, QB);
-            uB.current = nB, dB(nB), (0, EB.reportAnalyticsClick)({
+          onChangeComplete: TB => {
+            if (TB === IB) return void ZB(kB.current);
+            const JB = PZ(kB.current, BB, TB);
+            kB.current = JB, oB(JB), (0, wB.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
               value: BB
             })
           }
         })
       };
-      return (0, tB.jsxs)("div", {
+      return (0, CB.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, tB.jsxs)("div", {
+        children: [(0, CB.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, tB.jsx)("div", {
-            children: IB("hudLayout:safeZone")
-          }), (0, tB.jsx)(UB.M, {
-            active: null === jB,
-            pressed: null === jB,
+          children: [(0, CB.jsx)("div", {
+            children: GB("hudLayout:safeZone")
+          }), (0, CB.jsx)(cB.V, {
+            active: null === IB,
+            pressed: null === IB,
             onClick: () => {
-              dB(null)
+              oB(null)
             },
-            children: IB("hudLayout:safeZoneAuto")
+            children: GB("hudLayout:safeZoneAuto")
           })]
-        }), aB("sides"), aB("ends")]
+        }), nB("sides"), nB("ends")]
       })
     }
 
-    function Az() {
+    function XZ() {
       const {
         t: BB
-      } = (0, QB.D)(), jB = (0, DB.Z)(), {
-        clientEscMenuOptions: zB
-      } = (0, aB.m)(["clientEscMenuOptions"]), dB = (0, oz.f)(), IB = jB.hudLayouts[dB], [NB, uB] = (0, nB.useState)(null), {
-        rowIconsOpen: pB,
-        onRowIconsOpen: rB,
-        select: JB
-      } = function(BB, jB) {
-        const [zB, QB] = (0, nB.useState)((() => DB.F.some((jB => void 0 !== BB.hudElements[jB] || BB.hudLocked.includes(jB))))), dB = (0, nB.useCallback)((BB => {
-          jB(BB), (0, DB.S)(BB) && QB(!0)
-        }), [jB]);
+      } = (0, TB.G)(), IB = (0, HB.db)(), {
+        clientEscMenuOptions: ZB
+      } = (0, nB.o)(["clientEscMenuOptions"]), oB = (0, pZ.h)(), GB = IB.hudLayouts[oB], [vB, kB] = (0, JB.useState)(null), {
+        rowIconsOpen: hB,
+        onRowIconsOpen: zB,
+        select: NB
+      } = function(BB, IB) {
+        const [ZB, TB] = (0, JB.useState)((() => HB.A.some((IB => void 0 !== BB.hudElements[IB] || BB.hudLocked.includes(IB))))), oB = (0, JB.useCallback)((BB => {
+          IB(BB), (0, HB.P)(BB) && TB(!0)
+        }), [IB]);
         return {
-          rowIconsOpen: zB,
-          onRowIconsOpen: QB,
-          select: dB
+          rowIconsOpen: ZB,
+          onRowIconsOpen: TB,
+          select: oB
         }
-      }(IB, uB), [mB, yB] = (0, nB.useState)([]), [kB, GB] = (0, nB.useState)(null), [LB, gB] = Dj(), SB = (0, nB.useCallback)(((BB, jB, zB) => {
-        yB(jB), gB(zB);
-        const QB = Object.keys(BB);
-        GB((BB => (null === BB || void 0 === BB ? void 0 : BB.size) === QB.length && QB.every((jB => BB.has(jB))) ? BB : new Set(QB)))
-      }), [gB]), {
-        gameState: MB
-      } = (0, aB.m)(["gameState"]), qB = (0, Dz.l)(), fB = (0, Fz.p)(), [oB] = (0, nB.useState)((() => {
-        var BB, jB, zB, QB;
-        return "inGame" === MB ? (0, Jj.p)(document, qB, {
-          rightOfCamera: null !== (BB = null === (jB = fB.rightOfCamera) || void 0 === jB ? void 0 : jB.icon) && void 0 !== BB ? BB : null,
-          leftEnd: null !== (zB = null === (QB = fB.leftEnd) || void 0 === QB ? void 0 : QB.icon) && void 0 !== zB ? zB : null
-        }) : Jj.d
-      })), HB = (0, nB.useRef)(null), FB = (0, nB.useRef)(null), YB = function(BB) {
-        const [jB, zB] = (0, nB.useState)((() => .4 * window.innerHeight));
-        return (0, nB.useLayoutEffect)((() => {
-          var jB;
-          const QB = null === (jB = BB.current) || void 0 === jB ? void 0 : jB.closest(".SettingsMenuRight");
-          if (!QB) return;
-          const nB = () => {
-            const BB = QB.clientHeight < Tz ? .4 : .5;
-            zB(Math.max(80, QB.clientHeight * BB - 24))
+      }(GB, kB), [gB, qB] = (0, JB.useState)([]), [yB, UB] = (0, JB.useState)(null), [WB, dB] = HI(), QB = (0, JB.useCallback)(((BB, IB, ZB) => {
+        qB(IB), dB(ZB);
+        const TB = Object.keys(BB);
+        UB((BB => (null === BB || void 0 === BB ? void 0 : BB.size) === TB.length && TB.every((IB => BB.has(IB))) ? BB : new Set(TB)))
+      }), [dB]), {
+        gameState: sB
+      } = (0, nB.o)(["gameState"]), YB = (0, HZ.i)(), iB = (0, MZ.o)(), [pB] = (0, JB.useState)((() => {
+        var BB, IB, ZB, TB;
+        return "inGame" === sB ? (0, NI.A)(document, YB, {
+          rightOfCamera: null !== (BB = null === (IB = iB.rightOfCamera) || void 0 === IB ? void 0 : IB.icon) && void 0 !== BB ? BB : null,
+          leftEnd: null !== (ZB = null === (TB = iB.leftEnd) || void 0 === TB ? void 0 : TB.icon) && void 0 !== ZB ? ZB : null
+        }) : NI.e
+      })), aB = (0, JB.useRef)(null), MB = (0, JB.useRef)(null), jB = function(BB) {
+        const [IB, ZB] = (0, JB.useState)((() => .4 * window.innerHeight));
+        return (0, JB.useLayoutEffect)((() => {
+          var IB;
+          const TB = null === (IB = BB.current) || void 0 === IB ? void 0 : IB.closest(".SettingsMenuRight");
+          if (!TB) return;
+          const JB = () => {
+            const BB = TB.clientHeight < LZ ? .4 : .5;
+            ZB(Math.max(80, TB.clientHeight * BB - 24))
           };
-          nB();
-          const dB = new ResizeObserver(nB);
-          return dB.observe(QB), () => {
-            dB.disconnect()
+          JB();
+          const oB = new ResizeObserver(JB);
+          return oB.observe(TB), () => {
+            oB.disconnect()
           }
-        }), [BB]), jB
-      }(FB), VB = (0, Hz.m)(zB.joystickMode), hB = zB.touchActionButtons, ZB = (0, nB.useMemo)((() => (0, Jj.n)(oB, hB)), [oB, hB]), AB = (0, nB.useMemo)((() => new Set((0, Jj.m)(oB, hB).map((BB => Jj.e[BB])))), [oB, hB]);
-      (0, nB.useEffect)((() => {
-        (0, EB.reportAnalyticsClick)({
+        }), [BB]), IB
+      }(MB), PB = (0, aZ.t)(ZB.joystickMode), RB = ZB.touchActionButtons, mB = (0, JB.useMemo)((() => (0, NI.w)(pB, RB)), [pB, RB]), XB = (0, JB.useMemo)((() => new Set((0, NI.u)(pB, RB).map((BB => NI.i[BB])))), [pB, RB]);
+      (0, JB.useEffect)((() => {
+        (0, wB.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [TB, PB] = (0, nB.useState)(!1), [WB, eB] = (0, nB.useState)(!1), lB = (0, nB.useRef)(null);
-      tz(lB, !WB);
-      const [KB, bB] = (0, nB.useState)(!1), vB = (0, nB.useCallback)((() => {
-        bB(!1)
-      }), []), RB = (0, nB.useMemo)((() => new Set(IB.hudLocked)), [IB.hudLocked]), OB = BB => {
-        var jB, zB;
-        const QB = (0, DB.p)(),
-          nB = BB(QB);
-        (0, DB.X)(null !== (jB = null === (zB = HB.current) || void 0 === zB ? void 0 : zB.keepLocks(QB, nB)) && void 0 !== jB ? jB : nB)
-      }, Bj = (BB, jB) => {
-        OB((zB => (0, DB.ab)(zB, dB, BB, jB)))
-      }, jj = (BB, jB, zB) => {
-        Bj(BB, {
-          dx: jB,
-          dy: zB
-        }), (0, EB.reportAnalyticsClick)({
+      const [LB, eB] = (0, JB.useState)(!1), [uB, fB] = (0, JB.useState)(!1), lB = (0, JB.useRef)(null);
+      CZ(lB, !uB);
+      const [bB, DB] = (0, JB.useState)(!1), KB = (0, JB.useCallback)((() => {
+        DB(!1)
+      }), []), VB = (0, JB.useMemo)((() => new Set(GB.hudLocked)), [GB.hudLocked]), SB = BB => {
+        var IB, ZB;
+        const TB = (0, HB.n)(),
+          JB = BB(TB);
+        (0, HB.ab)(null !== (IB = null === (ZB = aB.current) || void 0 === ZB ? void 0 : ZB.keepLocks(TB, JB)) && void 0 !== IB ? IB : JB)
+      }, BI = (BB, IB) => {
+        SB((ZB => (0, HB.gb)(ZB, oB, BB, IB)))
+      }, II = (BB, IB, ZB) => {
+        BI(BB, {
+          dx: IB,
+          dy: ZB
+        }), (0, wB.reportAnalyticsClick)({
           id: "hud_layout.edit",
           value: `move:${BB}`
         })
-      }, zj = (BB, jB) => {
-        OB((zB => (0, DB.eb)(zB, dB, BB, jB)))
-      }, Qj = BB => {
-        const jB = xB[BB];
-        return (jB.move || jB.scale) && ("joystick" !== BB || VB) && !(0, aj.y)(BB, IB.hudElements[BB])
-      }, Ij = BB => xB[BB].move && ("joystick" !== BB || VB) && !RB.has(BB), Nj = new Set(wB.map((BB => BB.id)).filter((BB => {
-        const jB = (0, DB.S)(BB) && !oB.rowIcons.includes(BB);
-        return null === kB || kB.has(BB) || (0, DB.s)(IB.hudElements, BB) && !jB
-      }))), uj = {
-        present: Nj,
-        actionButtons: hB,
-        keyNames: ZB,
-        scaleCaps: LB,
-        sizeBesidePreview: TB,
-        elements: IB.hudElements,
-        selected: NB,
-        onSelect: JB,
-        rowIconsOpen: pB,
-        onRowIconsOpen: rB,
-        onScalePreview: (BB, jB) => {
-          var zB;
-          null === (zB = HB.current) || void 0 === zB || zB.setScale(BB, jB)
+      }, ZI = (BB, IB) => {
+        SB((ZB => (0, HB.jb)(ZB, oB, BB, IB)))
+      }, TI = BB => {
+        const IB = tB[BB];
+        return (IB.move || IB.scale) && ("joystick" !== BB || PB) && !(0, nI.y)(BB, GB.hudElements[BB])
+      }, GI = BB => tB[BB].move && ("joystick" !== BB || PB) && !VB.has(BB), vI = new Set(AB.map((BB => BB.id)).filter((BB => {
+        const IB = (0, HB.P)(BB) && !pB.rowIcons.includes(BB);
+        return null === yB || yB.has(BB) || (0, HB.p)(GB.hudElements, BB) && !IB
+      }))), kI = {
+        present: vI,
+        actionButtons: RB,
+        keyNames: mB,
+        scaleCaps: WB,
+        sizeBesidePreview: LB,
+        elements: GB.hudElements,
+        selected: vB,
+        onSelect: NB,
+        rowIconsOpen: hB,
+        onRowIconsOpen: zB,
+        onScalePreview: (BB, IB) => {
+          var ZB;
+          null === (ZB = aB.current) || void 0 === ZB || ZB.setScale(BB, IB)
         },
-        onScale: (BB, jB) => {
-          Bj(BB, {
-            scale: jB
-          }), (0, EB.reportAnalyticsClick)({
+        onScale: (BB, IB) => {
+          BI(BB, {
+            scale: IB
+          }), (0, wB.reportAnalyticsClick)({
             id: "hud_layout.edit",
             value: `size:${BB}`
           })
         },
-        onHidden: (BB, jB) => {
-          Bj(BB, {
-            hidden: jB
-          }), (0, EB.reportAnalyticsClick)({
+        onHidden: (BB, IB) => {
+          BI(BB, {
+            hidden: IB
+          }), (0, wB.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${jB?"hide":"show"}:${BB}`
+            value: `${IB?"hide":"show"}:${BB}`
           })
         },
         onReset: BB => {
-          Bj(BB, DB.b)
+          BI(BB, HB.b)
         },
-        locked: RB,
-        lockable: Qj,
-        onLocked: zj,
-        note: (jB, zB) => {
-          const QB = zB && mB.length > 0 ? BB("hudLayout:overlapsNote", {
-            names: cB(mB, hB, BB, ZB)
+        locked: VB,
+        lockable: TI,
+        onLocked: ZI,
+        note: (IB, ZB) => {
+          const TB = ZB && gB.length > 0 ? BB("hudLayout:overlapsNote", {
+            names: EB(gB, RB, BB, mB)
           }) : null;
-          if (zB && nj(jB, VB)) return (0, tB.jsxs)(tB.Fragment, {
-            children: [QB && (0, tB.jsx)("span", {
-              children: QB
-            }), (0, tB.jsx)("span", {
+          if (ZB && JI(IB, PB)) return (0, CB.jsxs)(CB.Fragment, {
+            children: [TB && (0, CB.jsx)("span", {
+              children: TB
+            }), (0, CB.jsx)("span", {
               children: BB("hudLayout:floatingJoystickNote")
-            }), !TB && (0, tB.jsx)(dj, {})]
+            }), !LB && (0, CB.jsx)(oI, {})]
           });
-          if (QB) return QB;
-          const nB = zB && RB.has(jB) ? BB("hudLayout:lockedNote") : null,
-            dB = zB && AB.has(jB) ? BB("hudLayout:contextSlotNote") : null;
-          return nB || dB ? (0, tB.jsxs)(tB.Fragment, {
-            children: [nB && (0, tB.jsx)("span", {
-              children: nB
-            }), dB && (0, tB.jsx)("span", {
-              children: dB
+          if (TB) return TB;
+          const JB = ZB && VB.has(IB) ? BB("hudLayout:lockedNote") : null,
+            oB = ZB && XB.has(IB) ? BB("hudLayout:contextSlotNote") : null;
+          return JB || oB ? (0, CB.jsxs)(CB.Fragment, {
+            children: [JB && (0, CB.jsx)("span", {
+              children: JB
+            }), oB && (0, CB.jsx)("span", {
+              children: oB
             })]
-          }) : zB && "cluster" === jB ? BB("hudLayout:clusterNote") : zB && "inventory" === jB ? BB("hudLayout:inventoryNote") : zB && "menu" === jB ? BB("hudLayout:menuNote") : zB && (0, aj.y)(jB, IB.hudElements[jB]) && Ij(jB) ? BB("hudLayout:rowIconNote") : zB && "arrows" === jB ? BB("hudLayout:arrowsNote") : zB && "sprint" === jB ? BB("hudLayout:sprintNote") : XB(jB) && (0, DB.s)(IB.hudElements, jB) ? BB("hudLayout:inventoryHiddenNote", {
-            name: CB(jB, hB, BB, ZB)
+          }) : ZB && "cluster" === IB ? BB("hudLayout:clusterNote") : ZB && "inventory" === IB ? BB("hudLayout:inventoryNote") : ZB && "menu" === IB ? BB("hudLayout:menuNote") : ZB && (0, nI.y)(IB, GB.hudElements[IB]) && GI(IB) ? BB("hudLayout:rowIconNote") : ZB && "arrows" === IB ? BB("hudLayout:arrowsNote") : ZB && "sprint" === IB ? BB("hudLayout:sprintNote") : rB(IB) && (0, HB.p)(GB.hudElements, IB) ? BB("hudLayout:inventoryHiddenNote", {
+            name: xB(IB, RB, BB, mB)
           }) : null
         }
       };
-      return (0, tB.jsxs)("div", {
-        ref: FB,
+      return (0, CB.jsxs)("div", {
+        ref: MB,
         className: "HudLayoutSettings",
-        children: [(0, tB.jsxs)("div", {
+        children: [(0, CB.jsxs)("div", {
           ref: lB,
           className: "HudLayoutBody",
-          children: [(0, tB.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: BB("landscape" === dB ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, tB.jsx)(fz, {
+            children: BB("landscape" === oB ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, CB.jsx)(iZ, {
             preview: {
-              layout: jB,
-              orientation: dB,
-              selected: NB,
-              onSelect: JB,
-              onMove: jj,
-              canMove: Ij,
-              actionButtons: hB,
-              joystickFixed: VB,
-              presence: oB,
-              keyNames: ZB,
-              maxHeight: YB,
-              apiRef: HB,
-              onMeasured: SB,
-              onReady: eB,
-              lockable: Qj
+              layout: IB,
+              orientation: oB,
+              selected: vB,
+              onSelect: NB,
+              onMove: II,
+              canMove: GI,
+              actionButtons: RB,
+              joystickFixed: PB,
+              presence: pB,
+              keyNames: mB,
+              maxHeight: jB,
+              apiRef: aB,
+              onMeasured: QB,
+              onReady: fB,
+              lockable: TI
             },
             quick: {
-              layout: IB,
-              actionButtons: hB,
-              keyNames: ZB,
-              scaleCaps: LB,
-              overlaps: mB,
-              onScale: uj.onScale,
-              onHidden: uj.onHidden,
-              onReset: uj.onReset,
-              locked: RB,
-              lockable: Qj,
-              onLocked: zj
+              layout: GB,
+              actionButtons: RB,
+              keyNames: mB,
+              scaleCaps: WB,
+              overlaps: gB,
+              onScale: kI.onScale,
+              onHidden: kI.onHidden,
+              onReset: kI.onReset,
+              locked: VB,
+              lockable: TI,
+              onLocked: ZI
             },
             onFullScreen: () => {
-              bB(!0)
+              DB(!0)
             },
-            resting: KB,
-            onSidePanel: PB
-          }), KB && (0, tB.jsx)(Mz, {
-            layout: jB,
-            orientation: dB,
-            selected: NB,
-            onSelect: JB,
-            onMove: jj,
-            canMove: Ij,
-            actionButtons: hB,
-            joystickFixed: VB,
-            presence: oB,
-            keyNames: ZB,
-            onScale: uj.onScale,
-            onHidden: uj.onHidden,
-            onReset: uj.onReset,
-            locked: RB,
-            lockable: Qj,
-            onLocked: zj,
-            apiRef: HB,
-            onClose: vB
-          }), (0, tB.jsx)(Zz, {
-            safe: IB.hudSafe,
+            resting: bB,
+            onSidePanel: eB
+          }), bB && (0, CB.jsx)(sZ, {
+            layout: IB,
+            orientation: oB,
+            selected: vB,
+            onSelect: NB,
+            onMove: II,
+            canMove: GI,
+            actionButtons: RB,
+            joystickFixed: PB,
+            presence: pB,
+            keyNames: mB,
+            onScale: kI.onScale,
+            onHidden: kI.onHidden,
+            onReset: kI.onReset,
+            locked: VB,
+            lockable: TI,
+            onLocked: ZI,
+            apiRef: aB,
+            onClose: KB
+          }), (0, CB.jsx)(mZ, {
+            safe: GB.hudSafe,
             onCommit: BB => {
-              OB((jB => (0, DB.fb)(jB, dB, BB)))
+              SB((IB => (0, HB.lb)(IB, oB, BB)))
             },
             onPreview: BB => {
-              var jB;
-              null === (jB = HB.current) || void 0 === jB || jB.setSafe(BB)
+              var IB;
+              null === (IB = aB.current) || void 0 === IB || IB.setSafe(BB)
             }
-          }), (0, tB.jsx)(sB.b, {
+          }), (0, CB.jsx)(FB.e, {
             label: BB("hudLayout:snapCentre"),
-            checked: jB.hudSnapCentre,
+            checked: IB.hudSnapCentre,
             onClick: BB => {
-              (0, DB.V)(BB)
+              (0, HB.Z)(BB)
             },
             circleInfoText: BB("hudLayout:snapCentreInfo")
-          }), (0, tB.jsx)(qz, {
-            ...uj
-          }), (0, tB.jsx)(sB.c, {
+          }), (0, CB.jsx)(YZ, {
+            ...kI
+          }), (0, CB.jsx)(FB.h, {
             label: BB("hudLayout:shape"),
-            options: DB.J.map((jB => ({
-              value: jB,
-              label: BB(`hudLayout:shape_${jB}`)
+            options: HB.D.map((IB => ({
+              value: IB,
+              label: BB(`hudLayout:shape_${IB}`)
             }))),
-            value: jB.hudShape,
+            value: IB.hudShape,
             onChange: BB => {
-              OB((jB => ({
-                ...jB,
+              SB((IB => ({
+                ...IB,
                 hudShape: BB
-              }))), (0, EB.reportAnalyticsClick)({
+              }))), (0, wB.reportAnalyticsClick)({
                 id: "hud_layout.shape",
                 value: BB
               })
             }
-          }), (0, tB.jsx)(sB.f, {
+          }), (0, CB.jsx)(FB.j, {
             name: BB("hudLayout:opacity"),
-            min: DB.e,
+            min: HB.d,
             max: 1,
             step: .05,
-            initValue: jB.hudKeyOpacity,
+            initValue: IB.hudKeyOpacity,
             format: BB => `${Math.round(100*BB)}%`,
             circleInfoText: BB("hudLayout:opacityInfo"),
             onChange: BB => {
-              var jB;
-              null === (jB = HB.current) || void 0 === jB || jB.setOpacity(BB)
+              var IB;
+              null === (IB = aB.current) || void 0 === IB || IB.setOpacity(BB)
             },
             onChangeComplete: BB => {
-              (0, DB.U)(BB), (0, EB.reportAnalyticsClick)({
+              (0, HB.W)(BB), (0, wB.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, tB.jsx)(UB.G, {
+        }), (0, CB.jsx)(cB.M, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const BB = iB.NotificationProvider.showPromptPopup({
+              const BB = OB.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await BB.getResult() && (0, DB.T)()
+              !0 === await BB.getResult() && (0, HB.S)()
             }()
           },
           children: BB("hudLayout:resetAll")
         })]
       })
     }
-    const Tz = 350;
-    const Pz = [function() {
+    const LZ = 350;
+    const eZ = [function() {
       const {
         t: BB
-      } = (0, QB.D)(), [jB, zB] = (0, nB.useState)(!1), dB = (0, nB.useRef)(null);
-      return (0, nB.useEffect)((() => {
+      } = (0, TB.G)(), [IB, ZB] = (0, JB.useState)(!1), oB = (0, JB.useRef)(null);
+      return (0, JB.useEffect)((() => {
         var BB;
-        jB && (null === (BB = dB.current) || void 0 === BB || BB.scrollIntoView({
+        IB && (null === (BB = oB.current) || void 0 === BB || BB.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [jB]), (0, tB.jsxs)("div", {
+      }), [IB]), (0, CB.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, tB.jsx)(qB.c, {
-          ref: dB,
+        children: [(0, CB.jsx)(YB.e, {
+          ref: oB,
           icon: "arrows-up-down-left-right",
           title: BB("hudLayout:title"),
           sub: BB("hudLayout:entrySub"),
-          expanded: jB,
+          expanded: IB,
           onClick: () => {
-            zB(!jB)
+            ZB(!IB)
           }
-        }), jB && (0, tB.jsx)(Az, {})]
+        }), IB && (0, CB.jsx)(XZ, {})]
       })
     }, function() {
       const {
         t: BB
-      } = (0, QB.D)(), {
-        joystickMode: jB,
-        touchSpeedCurve: zB,
-        autorun: nB,
-        jumpLock: dB,
-        touchEdgeGuard: IB
-      } = (0, aB.m)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, tB.jsxs)(tB.Fragment, {
-        children: [(0, tB.jsx)(sB.c, {
+      } = (0, TB.G)(), {
+        joystickMode: IB,
+        touchSpeedCurve: ZB,
+        autorun: JB,
+        jumpLock: oB,
+        touchEdgeGuard: GB
+      } = (0, nB.o)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, CB.jsxs)(CB.Fragment, {
+        children: [(0, CB.jsx)(FB.h, {
           label: BB("settingsMenu:joystick"),
-          options: gB.ob.map((jB => ({
-            value: jB,
-            label: BB(SB[jB])
+          options: dB.Eb.map((IB => ({
+            value: IB,
+            label: BB(QB[IB])
           }))),
-          value: jB,
+          value: IB,
           onChange: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               joystickMode: BB
             })
           },
           circleInfoText: BB("settingsMenu:joystickInfo")
-        }), (0, tB.jsx)(sB.b, {
+        }), (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:preciseWalking"),
-          checked: zB,
+          checked: ZB,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               touchSpeedCurve: BB
             })
           },
           circleInfoText: BB("settingsMenu:preciseWalkingInfo")
-        }), (0, tB.jsx)(sB.b, {
+        }), (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:autoRun"),
-          checked: nB,
+          checked: JB,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               autorun: BB
             })
           },
           circleInfoText: BB("settingsMenu:autoRunInfo")
-        }), (0, tB.jsx)(sB.b, {
+        }), (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:jumpLock"),
-          checked: dB,
+          checked: oB,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               jumpLock: BB
             })
           },
           circleInfoText: BB("settingsMenu:jumpLockInfo")
-        }), (0, tB.jsx)(sB.b, {
+        }), (0, CB.jsx)(FB.e, {
           label: BB("touchSettings:stopAtEdges"),
-          checked: IB,
+          checked: GB,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               touchEdgeGuard: BB
             })
           },
@@ -2815,18 +2815,18 @@ export const modules = {
         })]
       })
     }, function() {
-      return (0, tB.jsx)(LB.b, {})
+      return (0, CB.jsx)(WB.c, {})
     }, function() {
       const {
         t: BB
-      } = (0, QB.D)(), {
-        clientEscMenuOptions: jB
-      } = (0, aB.m)(["clientEscMenuOptions"]);
-      return (0, MB.e)() ? (0, tB.jsx)(sB.b, {
+      } = (0, TB.G)(), {
+        clientEscMenuOptions: IB
+      } = (0, nB.o)(["clientEscMenuOptions"]);
+      return (0, sB.c)() ? (0, CB.jsx)(FB.e, {
         label: BB("settingsMenu:vibration"),
-        checked: jB.vibration,
+        checked: IB.vibration,
         onClick: BB => {
-          aB.c.setClientEscMenuOptions({
+          nB.d.setClientEscMenuOptions({
             vibration: BB
           })
         },
@@ -2834,119 +2834,119 @@ export const modules = {
       }) : null
     }];
 
-    function Wz() {
-      return (0, tB.jsx)(tB.Fragment, {
-        children: Pz.map(((BB, jB) => (0, tB.jsx)(BB, {}, jB)))
+    function uZ() {
+      return (0, CB.jsx)(CB.Fragment, {
+        children: eZ.map(((BB, IB) => (0, CB.jsx)(BB, {}, IB)))
       })
     }
-    var ez = zB(4485);
+    var fZ = ZB(4553);
 
-    function lz() {
+    function lZ() {
       const {
         t: BB
-      } = (0, QB.D)(), {
-        isTouchScreen: jB,
-        clientEscMenuOptions: zB,
-        gameState: IB
-      } = (0, aB.m)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), NB = (0, JB.i)("ezBridging"), uB = (0, JB.i)("ezTowering"), yB = "inGame" !== IB || !0 === NB, kB = (0, mB.e)(), LB = null !== kB && ("inGame" !== IB || !0 === uB), [, gB] = (0, nB.useReducer)((BB => BB + 1), 0), SB = (0, GB.i)(), [MB, EB] = (0, nB.useState)(ez.g);
-      return (0, tB.jsxs)("div", {
+      } = (0, TB.G)(), {
+        isTouchScreen: IB,
+        clientEscMenuOptions: ZB,
+        gameState: GB
+      } = (0, nB.o)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), vB = (0, NB.d)("ezBridging"), kB = (0, NB.d)("ezTowering"), qB = "inGame" !== GB || !0 === vB, yB = (0, gB.g)(), WB = null !== yB && ("inGame" !== GB || !0 === kB), [, dB] = (0, JB.useReducer)((BB => BB + 1), 0), QB = (0, UB.f)(), [sB, wB] = (0, JB.useState)(fZ.i);
+      return (0, CB.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [SB && (0, tB.jsxs)("div", {
+        children: [QB && (0, CB.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, tB.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             children: BB("controller:settingsControlsNote")
-          }), (0, tB.jsx)(UB.M, {
+          }), (0, CB.jsx)(cB.V, {
             onClick: () => {
-              aB.c.set({
+              nB.d.set({
                 openSettingsCategory: "controller"
               })
             },
             children: BB("controller:settingsOpenController")
           })]
-        }), (0, pB.isTouchscreen)() && !(0, pB.isMobile)() ? (0, tB.jsx)(tB.Fragment, {
-          children: (0, tB.jsx)(sB.b, {
+        }), (0, hB.isTouchscreen)() && !(0, hB.isMobile)() ? (0, CB.jsx)(CB.Fragment, {
+          children: (0, CB.jsx)(FB.e, {
             label: BB("settingsMenu:useTouchControls"),
-            checked: MB,
+            checked: sB,
             onClick: BB => {
-              (0, ez.c)(BB), EB(BB)
+              (0, fZ.e)(BB), wB(BB)
             }
           })
-        }) : null, jB && (0, tB.jsx)(Wz, {}), yB && (0, tB.jsx)(sB.b, {
+        }) : null, IB && (0, CB.jsx)(uZ, {}), qB && (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:ezBridging"),
-          checked: zB.ezBridging,
+          checked: ZB.ezBridging,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               ezBridging: BB
             })
           },
           circleInfoText: BB("settingsMenu:ezBridgingInfo")
-        }), LB && (0, tB.jsx)(sB.b, {
+        }), WB && (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:ezTowering"),
-          checked: zB.ezTowering,
+          checked: ZB.ezTowering,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               ezTowering: BB
             })
           },
-          circleInfoText: BB("jump" === kB ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, tB.jsx)(sB.b, {
+          circleInfoText: BB("jump" === yB ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
+        }), (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:crouchToggle"),
-          checked: zB.crouchIsToggle,
+          checked: ZB.crouchIsToggle,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               crouchIsToggle: BB
             })
           },
           circleInfoText: BB("settingsMenu:crouchToggleInfo")
-        }), (0, tB.jsx)(sB.b, {
+        }), (0, CB.jsx)(FB.e, {
           label: BB("settingsMenu:hideUiToggle"),
-          checked: zB.hideUiIsToggle,
+          checked: ZB.hideUiIsToggle,
           onClick: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               hideUiIsToggle: BB
             })
           },
           circleInfoText: BB("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, rB.c)() && (0, tB.jsx)(sB.f, {
+        }), "mouseOnly" !== (0, zB.e)() && (0, CB.jsx)(FB.j, {
           name: BB("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: zB.touchscreenSensitivity,
+          initValue: ZB.touchscreenSensitivity,
           onChange: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               touchscreenSensitivity: BB
             })
           }
-        }), !(0, pB.isMobile)() && (0, tB.jsx)(sB.f, {
+        }), !(0, hB.isMobile)() && (0, CB.jsx)(FB.j, {
           name: BB("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: zB.mouseSensitivity,
+          initValue: ZB.mouseSensitivity,
           onChange: BB => {
-            aB.c.setClientEscMenuOptions({
+            nB.d.setClientEscMenuOptions({
               mouseSensitivity: BB
             })
           }
-        }), !(0, pB.isMobile)() && (0, tB.jsxs)("div", {
+        }), !(0, hB.isMobile)() && (0, CB.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, tB.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             className: "SliderText",
             children: BB("settingsMenu:keyBindings")
-          }), dB.f.map((jB => (0, tB.jsx)(wz, {
-            title: BB(jB.name.translationKey, jB.name.params),
-            defaultOpen: dB.h.has(jB.id),
-            children: jB.actions.map((BB => (0, tB.jsx)(xz, {
+          }), oB.h.map((IB => (0, CB.jsx)(AZ, {
+            title: BB(IB.name.translationKey, IB.name.params),
+            defaultOpen: oB.l.has(IB.id),
+            children: IB.actions.map((BB => (0, CB.jsx)(tZ, {
               noaAction: BB,
-              forceUpdate: gB,
-              clashesWith: jB.clashesWith,
-              showPadGlyph: SB
+              forceUpdate: dB,
+              clashesWith: IB.clashesWith,
+              showPadGlyph: QB
             }, BB)))
-          }, jB.name.translationKey))), (0, tB.jsx)(UB.G, {
+          }, IB.name.translationKey))), (0, CB.jsx)(cB.M, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, dB.I)(), gB()
+              (0, oB.D)(), dB()
             },
             children: BB("controls:resetBindings")
           })]
@@ -2954,460 +2954,460 @@ export const modules = {
       })
     }
 
-    function wz(BB) {
+    function AZ(BB) {
       let {
-        title: jB,
-        defaultOpen: zB,
-        children: QB
+        title: IB,
+        defaultOpen: ZB,
+        children: TB
       } = BB;
-      const [dB, IB] = (0, nB.useState)(zB);
-      return (0, tB.jsxs)("div", {
-        className: uB()("ControlsSection", {
-          Collapsed: !dB
+      const [oB, GB] = (0, JB.useState)(ZB);
+      return (0, CB.jsxs)("div", {
+        className: kB()("ControlsSection", {
+          Collapsed: !oB
         }),
-        children: [(0, tB.jsxs)("div", {
+        children: [(0, CB.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            IB(!dB)
+            GB(!oB)
           },
-          children: [(0, tB.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: jB
-          }), (0, tB.jsx)("div", {
+            children: IB
+          }), (0, CB.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), dB && (0, tB.jsx)("div", {
+        }), oB && (0, CB.jsx)("div", {
           className: "ControlsSectionRows",
-          children: QB
+          children: TB
         })]
       })
     }
 
-    function xz(BB) {
+    function tZ(BB) {
       let {
-        noaAction: jB,
-        forceUpdate: zB,
-        clashesWith: NB,
-        showPadGlyph: aB
+        noaAction: IB,
+        forceUpdate: ZB,
+        clashesWith: vB,
+        showPadGlyph: nB
       } = BB;
       const {
-        t: pB
-      } = (0, QB.D)(), rB = (0, kB.c)(jB), [sB, JB] = (0, nB.useState)(!1), [mB, GB] = (0, nB.useState)("controls:clickToEnterNewBinding"), [LB, gB] = (0, nB.useState)(null), [SB, MB] = (0, nB.useState)(null), EB = (0, nB.useRef)(null);
-      (0, nB.useEffect)((() => {
-        sB && EB.current && EB.current.focus()
-      }), [sB]);
-      const iB = dB.w[jB].filter((BB => IB.e[BB]));
-      let qB = null;
-      const fB = [],
-        oB = NB.flatMap((BB => {
-          var jB, zB;
-          return null !== (jB = null === (zB = dB.f.find((jB => jB.id === BB))) || void 0 === zB ? void 0 : zB.actions) && void 0 !== jB ? jB : []
+        t: hB
+      } = (0, TB.G)(), zB = (0, yB.e)(IB), [FB, NB] = (0, JB.useState)(!1), [gB, UB] = (0, JB.useState)("controls:clickToEnterNewBinding"), [WB, dB] = (0, JB.useState)(null), [QB, sB] = (0, JB.useState)(null), wB = (0, JB.useRef)(null);
+      (0, JB.useEffect)((() => {
+        FB && wB.current && wB.current.focus()
+      }), [FB]);
+      const OB = oB.u[IB].filter((BB => GB.h[BB]));
+      let YB = null;
+      const iB = [],
+        pB = vB.flatMap((BB => {
+          var IB, ZB;
+          return null !== (IB = null === (ZB = oB.h.find((IB => IB.id === BB))) || void 0 === ZB ? void 0 : ZB.actions) && void 0 !== IB ? IB : []
         }));
-      for (const QB of oB) {
-        if (QB === jB) continue;
-        const BB = dB.w[QB];
-        for (const jB of BB) iB.includes(jB) && fB.push(pB(dB.A[QB].translationKey, dB.A[QB].params))
+      for (const TB of pB) {
+        if (TB === IB) continue;
+        const BB = oB.u[TB];
+        for (const IB of BB) OB.includes(IB) && iB.push(hB(oB.y[TB].translationKey, oB.y[TB].params))
       }
-      fB.length > 0 && (qB = pB("controls:sharedBindingsWarning") + " ", qB += fB.join(", "));
-      const HB = () => {
-          JB(!1), gB(null), GB("controls:clickToEnterNewBinding"), MB(null)
+      iB.length > 0 && (YB = hB("controls:sharedBindingsWarning") + " ", YB += iB.join(", "));
+      const aB = () => {
+          NB(!1), dB(null), UB("controls:clickToEnterNewBinding"), sB(null)
         },
-        DB = () => "BindingInput_" + jB;
-      return (0, tB.jsxs)("div", {
-        className: uB()("ControlRow", {
-          WarningBorder: null !== qB
+        HB = () => "BindingInput_" + IB;
+      return (0, CB.jsxs)("div", {
+        className: kB()("ControlRow", {
+          WarningBorder: null !== YB
         }),
-        children: [(0, tB.jsxs)("div", {
+        children: [(0, CB.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, tB.jsxs)("div", {
+          children: [(0, CB.jsxs)("div", {
             className: "ControlName",
-            children: [pB(dB.A[jB].translationKey, dB.A[jB].params), aB && rB && (0, tB.jsx)(yB.b, {
-              glyph: rB,
+            children: [hB(oB.y[IB].translationKey, oB.y[IB].params), nB && zB && (0, CB.jsx)(qB.b, {
+              glyph: zB,
               className: "ControlPadGlyph"
             })]
-          }), (0, tB.jsxs)("div", {
+          }), (0, CB.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, tB.jsxs)("div", {
+            children: [(0, CB.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [iB.map((BB => (0, tB.jsxs)("div", {
+              children: [OB.map((BB => (0, CB.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, tB.jsx)("div", {
-                  children: (0, dB.m)(BB)
-                }), (0, tB.jsx)("div", {
+                children: [(0, CB.jsx)("div", {
+                  children: (0, oB.n)(BB)
+                }), (0, CB.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const QB = (0, dB.B)(jB, BB);
-                    QB.isError() ? MB(QB.asError().message) : MB(null), zB()
+                    const TB = (0, oB.A)(IB, BB);
+                    TB.isError() ? sB(TB.asError().message) : sB(null), ZB()
                   },
                   children: "\xd7"
                 })]
-              }, BB))), !sB && (0, tB.jsx)("div", {
+              }, BB))), !FB && (0, CB.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  JB(!0), MB(null)
+                  NB(!0), sB(null)
                 },
-                children: (0, tB.jsx)("div", {
+                children: (0, CB.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), sB && (0, tB.jsxs)("div", {
+            }), FB && (0, CB.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, tB.jsxs)("div", {
+              children: [(0, CB.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, tB.jsx)("div", {
+                children: [(0, CB.jsx)("div", {
                   className: "InputOverlay",
-                  children: LB ? (0, dB.m)(LB) : (0, tB.jsx)("div", {
+                  children: WB ? (0, oB.n)(WB) : (0, CB.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: pB(mB)
+                    children: hB(gB)
                   })
-                }), (0, tB.jsx)("input", {
-                  ref: EB,
-                  id: DB(),
+                }), (0, CB.jsx)("input", {
+                  ref: wB,
+                  id: HB(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
                   onKeyDown: BB => {
-                    if ("Escape" === BB.code) return HB(), BB.preventDefault(), void BB.stopPropagation();
-                    const jB = BB.code;
-                    IB.b.includes(jB) ? (MB(null), gB(jB)) : (MB("controls:keyIsReserved"), gB(null)), BB.preventDefault(), BB.stopPropagation()
+                    if ("Escape" === BB.code) return aB(), BB.preventDefault(), void BB.stopPropagation();
+                    const IB = BB.code;
+                    GB.b.includes(IB) ? (sB(null), dB(IB)) : (sB("controls:keyIsReserved"), dB(null)), BB.preventDefault(), BB.stopPropagation()
                   },
                   onMouseDown: BB => {
-                    const jB = "Mouse" + (BB.button + 1);
-                    document.activeElement && document.activeElement.id === DB() ? IB.b.includes(jB) ? (MB(null), gB(jB)) : (MB("controls:keyIsReserved"), gB(null)) : GB("controls:enterNewBinding"), BB.stopPropagation()
+                    const IB = "Mouse" + (BB.button + 1);
+                    document.activeElement && document.activeElement.id === HB() ? GB.b.includes(IB) ? (sB(null), dB(IB)) : (sB("controls:keyIsReserved"), dB(null)) : UB("controls:enterNewBinding"), BB.stopPropagation()
                   },
                   onBlur: () => {
-                    GB("controls:clickToEnterNewBinding")
+                    UB("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, tB.jsx)(UB.f, {
+              }), (0, CB.jsx)(cB.g, {
                 onPointerDown: BB => {
                   BB.preventDefault()
                 },
                 onClick: () => {
-                  (0, dB.c)(jB, LB), zB(), HB()
+                  (0, oB.d)(IB, WB), ZB(), aB()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === LB,
-                children: pB("general:add")
-              }), (0, tB.jsx)("div", {
+                disabled: null === WB,
+                children: hB("general:add")
+              }), (0, CB.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  HB()
+                  aB()
                 },
                 children: "\xd7"
               })]
-            }), SB && (0, tB.jsx)("div", {
+            }), QB && (0, CB.jsx)("div", {
               className: "ControlBindingError",
-              children: pB(SB)
+              children: hB(QB)
             })]
           })]
-        }), qB && (0, tB.jsx)("div", {
+        }), YB && (0, CB.jsx)("div", {
           className: "ControlRowWarning",
-          children: qB
+          children: YB
         })]
       })
     }
   },
-  8897: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => IB
+  8991: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => GB
     });
-    var QB = zB(62),
-      nB = zB(1108),
-      dB = zB(1148);
-    const IB = (0, QB.forwardRef)((function(BB, jB) {
+    var TB = ZB(63),
+      JB = ZB(1102),
+      oB = ZB(1153);
+    const GB = (0, TB.forwardRef)((function(BB, IB) {
       let {
-        icon: zB,
-        title: QB,
-        sub: IB,
-        expanded: NB,
-        onClick: uB
+        icon: ZB,
+        title: TB,
+        sub: GB,
+        expanded: vB,
+        onClick: kB
       } = BB;
-      return (0, dB.jsxs)("button", {
-        ref: jB,
+      return (0, oB.jsxs)("button", {
+        ref: IB,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": NB,
-        onClick: uB,
-        children: [(0, dB.jsx)(nB.c, {
-          name: zB,
+        "aria-expanded": vB,
+        onClick: kB,
+        children: [(0, oB.jsx)(JB.d, {
+          name: ZB,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, dB.jsxs)("span", {
+        }), (0, oB.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, dB.jsx)("span", {
+          children: [(0, oB.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: QB
-          }), (0, dB.jsx)("span", {
+            children: TB
+          }), (0, oB.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: IB
+            children: GB
           })]
-        }), (0, dB.jsx)("span", {
+        }), (0, oB.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  8671: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => kB,
-      e: () => yB,
-      f: () => aB,
-      i: () => GB,
-      l: () => LB,
-      p: () => rB
+  8792: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => yB,
+      f: () => qB,
+      g: () => nB,
+      j: () => UB,
+      m: () => WB,
+      q: () => zB
     });
-    var QB = zB(1694),
-      nB = zB(1786);
-    const dB = BB => BB >= 56320 && BB <= 57343,
-      IB = BB => BB >= 55296 && BB <= 56319,
-      NB = (BB, jB) => jB >= 2 && dB(BB.charCodeAt(jB - 1)) && IB(BB.charCodeAt(jB - 2)) ? jB - 2 : Math.max(0, jB - 1),
-      uB = (BB, jB) => {
-        let zB;
-        var QB, nB;
-        return zB = BB.start !== BB.end ? jB < 0 ? BB.start : BB.end : jB < 0 ? NB(BB.value, BB.start) : (QB = BB.value, (nB = BB.start) + 1 < QB.length && IB(QB.charCodeAt(nB)) && dB(QB.charCodeAt(nB + 1)) ? nB + 2 : Math.min(QB.length, nB + 1)), {
+    var TB = ZB(1738),
+      JB = ZB(1814);
+    const oB = BB => BB >= 56320 && BB <= 57343,
+      GB = BB => BB >= 55296 && BB <= 56319,
+      vB = (BB, IB) => IB >= 2 && oB(BB.charCodeAt(IB - 1)) && GB(BB.charCodeAt(IB - 2)) ? IB - 2 : Math.max(0, IB - 1),
+      kB = (BB, IB) => {
+        let ZB;
+        var TB, JB;
+        return ZB = BB.start !== BB.end ? IB < 0 ? BB.start : BB.end : IB < 0 ? vB(BB.value, BB.start) : (TB = BB.value, (JB = BB.start) + 1 < TB.length && GB(TB.charCodeAt(JB)) && oB(TB.charCodeAt(JB + 1)) ? JB + 2 : Math.min(TB.length, JB + 1)), {
           value: BB.value,
-          start: zB,
-          end: zB
+          start: ZB,
+          end: ZB
         }
       },
-      UB = ["text", "search", "url", "email", "tel", "password", "number"],
-      aB = BB => !(!(0, nB.e)(BB) || BB.isContentEditable || BB.hasAttribute("data-pad-no-osk")) && (BB instanceof HTMLTextAreaElement || BB instanceof HTMLInputElement && UB.includes(BB.type)),
-      pB = BB => null !== BB.selectionStart,
-      rB = BB => {
-        var jB, zB;
+      cB = ["text", "search", "url", "email", "tel", "password", "number"],
+      nB = BB => !(!(0, JB.d)(BB) || BB.isContentEditable || BB.hasAttribute("data-pad-no-osk")) && (BB instanceof HTMLTextAreaElement || BB instanceof HTMLInputElement && cB.includes(BB.type)),
+      hB = BB => null !== BB.selectionStart,
+      zB = BB => {
+        var IB, ZB;
         const {
-          value: QB
+          value: TB
         } = BB;
         return {
-          value: QB,
-          start: null !== (jB = BB.selectionStart) && void 0 !== jB ? jB : QB.length,
-          end: null !== (zB = BB.selectionEnd) && void 0 !== zB ? zB : QB.length
+          value: TB,
+          start: null !== (IB = BB.selectionStart) && void 0 !== IB ? IB : TB.length,
+          end: null !== (ZB = BB.selectionEnd) && void 0 !== ZB ? ZB : TB.length
         }
       },
-      sB = (BB, jB, zB) => {
+      FB = (BB, IB, ZB) => {
         if (BB.readOnly) return;
-        const nB = BB instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(nB, "value").set.call(BB, jB.value), pB(BB) && BB.setSelectionRange(jB.start, jB.end), (0, QB.d)(BB, new InputEvent("input", {
+        const JB = BB instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(JB, "value").set.call(BB, IB.value), hB(BB) && BB.setSelectionRange(IB.start, IB.end), (0, TB.h)(BB, new InputEvent("input", {
           bubbles: !0,
-          inputType: zB
+          inputType: ZB
         }))
       };
-    let JB = !1;
-    const mB = (BB, jB) => !!document.execCommand(BB, !1, jB) || (JB || (JB = !0, console.warn(`execCommand("${BB}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      yB = (BB, jB) => {
-        mB("insertText", jB) || sB(BB, function(BB, jB) {
-          let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const QB = BB.value.slice(0, BB.start),
-            nB = BB.value.slice(BB.end);
-          let dB = zB < 0 ? jB.length : Math.max(0, zB - QB.length - nB.length);
-          dB > 0 && dB < jB.length && IB(jB.charCodeAt(dB - 1)) && dB--;
-          const NB = jB.slice(0, dB),
-            uB = QB.length + NB.length;
+    let NB = !1;
+    const gB = (BB, IB) => !!document.execCommand(BB, !1, IB) || (NB || (NB = !0, console.warn(`execCommand("${BB}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      qB = (BB, IB) => {
+        gB("insertText", IB) || FB(BB, function(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const TB = BB.value.slice(0, BB.start),
+            JB = BB.value.slice(BB.end);
+          let oB = ZB < 0 ? IB.length : Math.max(0, ZB - TB.length - JB.length);
+          oB > 0 && oB < IB.length && GB(IB.charCodeAt(oB - 1)) && oB--;
+          const vB = IB.slice(0, oB),
+            kB = TB.length + vB.length;
           return {
-            value: QB + NB + nB,
-            start: uB,
-            end: uB
+            value: TB + vB + JB,
+            start: kB,
+            end: kB
           }
-        }(rB(BB), jB, BB.maxLength), "insertText")
+        }(zB(BB), IB, BB.maxLength), "insertText")
       },
-      kB = BB => {
-        mB("delete") || sB(BB, (BB => {
-          const jB = BB.start === BB.end ? NB(BB.value, BB.start) : BB.start;
+      yB = BB => {
+        gB("delete") || FB(BB, (BB => {
+          const IB = BB.start === BB.end ? vB(BB.value, BB.start) : BB.start;
           return {
-            value: BB.value.slice(0, jB) + BB.value.slice(BB.end),
-            start: jB,
-            end: jB
+            value: BB.value.slice(0, IB) + BB.value.slice(BB.end),
+            start: IB,
+            end: IB
           }
-        })(rB(BB)), "deleteContentBackward")
+        })(zB(BB)), "deleteContentBackward")
       },
-      GB = (BB, jB) => {
-        if (!pB(BB)) return;
-        const zB = uB(rB(BB), jB);
-        BB.setSelectionRange(zB.start, zB.end)
+      UB = (BB, IB) => {
+        if (!hB(BB)) return;
+        const ZB = kB(zB(BB), IB);
+        BB.setSelectionRange(ZB.start, ZB.end)
       },
-      LB = BB => {
-        pB(BB) && 0 === BB.selectionStart && 0 === BB.selectionEnd && BB.setSelectionRange(BB.value.length, BB.value.length)
+      WB = BB => {
+        hB(BB) && 0 === BB.selectionStart && 0 === BB.selectionEnd && BB.setSelectionRange(BB.value.length, BB.value.length)
       }
   },
-  8839: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => NB
+  8946: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => vB
     });
-    var QB = zB(28),
-      nB = zB(2196),
-      dB = zB(1381),
-      IB = zB(1418);
-    const NB = async () => {
-      if ((0, IB.l)()) {
-        if (!0 !== await dB.NotificationProvider.showPromptPopup({
+    var TB = ZB(20),
+      JB = ZB(2220),
+      oB = ZB(1403),
+      GB = ZB(1454);
+    const vB = async () => {
+      if ((0, GB.j)()) {
+        if (!0 !== await oB.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== QB.c.get("gameState")) return
-      }(0, nB.f)()
+          }).getResult() || "inGame" !== TB.d.get("gameState")) return
+      }(0, JB.g)()
     }
   },
-  8841: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => uB,
-      f: () => dB,
-      j: () => IB,
-      k: () => nB,
-      l: () => NB
+  8951: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => kB,
+      e: () => oB,
+      h: () => GB,
+      k: () => JB,
+      o: () => vB
     });
-    var QB = zB(2015);
-    const nB = "controllerPadShopOpen",
-      dB = BB => QB.j.includes(BB),
-      IB = BB => Object.values(BB).some((BB => !1 !== BB.canBuy && !BB.isRewardedAd)),
-      NB = (BB, jB, zB) => {
-        var QB, nB, IB, NB;
-        const uB = BB.filter((BB => !dB(BB))),
-          UB = null !== jB && BB.includes(jB) ? jB : null;
-        return null !== UB && !dB(UB) && zB(UB) ? UB : null !== (QB = null !== (nB = null !== (IB = null !== (NB = uB.find(zB)) && void 0 !== NB ? NB : uB[0]) && void 0 !== IB ? IB : UB) && void 0 !== nB ? nB : BB[0]) && void 0 !== QB ? QB : null
+    var TB = ZB(2038);
+    const JB = "controllerPadShopOpen",
+      oB = BB => TB.i.includes(BB),
+      GB = BB => Object.values(BB).some((BB => !1 !== BB.canBuy && !BB.isRewardedAd)),
+      vB = (BB, IB, ZB) => {
+        var TB, JB, GB, vB;
+        const kB = BB.filter((BB => !oB(BB))),
+          cB = null !== IB && BB.includes(IB) ? IB : null;
+        return null !== cB && !oB(cB) && ZB(cB) ? cB : null !== (TB = null !== (JB = null !== (GB = null !== (vB = kB.find(ZB)) && void 0 !== vB ? vB : kB[0]) && void 0 !== GB ? GB : cB) && void 0 !== JB ? JB : BB[0]) && void 0 !== TB ? TB : null
       },
-      uB = BB => BB.userInput || BB.isRewardedAd || "boolean" === typeof BB.isSelected ? null : JSON.stringify([BB.image, BB.cost, BB.currency, BB.amount, BB.customTitle, BB.buyButtonText, BB.description, BB.canBuy])
+      kB = BB => BB.userInput || BB.isRewardedAd || "boolean" === typeof BB.isSelected ? null : JSON.stringify([BB.image, BB.cost, BB.currency, BB.amount, BB.customTitle, BB.buyButtonText, BB.description, BB.canBuy])
   },
-  8875: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => UB,
-      i: () => aB
+  8976: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => cB,
+      f: () => nB
     });
-    var QB = zB(62),
-      nB = zB(1471),
-      dB = zB(2065),
-      IB = zB(1442),
-      NB = zB(1453),
-      uB = zB(1148);
-    const UB = () => {
-        const BB = (0, IB.k)();
-        if ((0, QB.useEffect)((() => {
-            (0, IB.g)()
+    var TB = ZB(63),
+      JB = ZB(1507),
+      oB = ZB(2089),
+      GB = ZB(1469),
+      vB = ZB(1492),
+      kB = ZB(1153);
+    const cB = () => {
+        const BB = (0, GB.o)();
+        if ((0, TB.useEffect)((() => {
+            (0, GB.i)()
           }), []), !BB) return null;
         const {
-          ControllerCategory: jB
+          ControllerCategory: IB
         } = BB;
-        return (0, uB.jsx)(NB.d, {
-          children: (0, uB.jsx)(jB, {})
+        return (0, kB.jsx)(vB.e, {
+          children: (0, kB.jsx)(IB, {})
         })
       },
-      aB = () => {
+      nB = () => {
         var BB;
-        const jB = (0, IB.k)(),
-          [, zB] = (0, QB.useReducer)((BB => BB + 1), 0);
-        return (0, nB.f)(dB.d, zB), null !== (BB = null === jB || void 0 === jB ? void 0 : jB.hasActivePad()) && void 0 !== BB && BB
+        const IB = (0, GB.o)(),
+          [, ZB] = (0, TB.useReducer)((BB => BB + 1), 0);
+        return (0, JB.d)(oB.e, ZB), null !== (BB = null === IB || void 0 === IB ? void 0 : IB.hasActivePad()) && void 0 !== BB && BB
       }
   },
-  8680: (BB, jB, zB) => {
-    zB.d(jB, {
-      A: () => rB,
-      e: () => QB,
-      f: () => UB,
-      h: () => mB,
-      l: () => pB,
-      p: () => JB,
-      s: () => dB,
-      v: () => sB,
-      y: () => IB
+  8797: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB,
+      e: () => cB,
+      i: () => gB,
+      m: () => hB,
+      o: () => NB,
+      r: () => oB,
+      u: () => FB,
+      x: () => GB,
+      y: () => zB
     });
-    const QB = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
-      nB = (BB, jB) => {
+    const TB = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
+      JB = (BB, IB) => {
         if ("function" === typeof BB.checkVisibility) return !BB.checkVisibility({
           visibilityProperty: !0,
           checkVisibilityCSS: !0,
-          opacityProperty: jB,
-          checkOpacity: jB
+          opacityProperty: IB,
+          checkOpacity: IB
         });
         const {
-          visibility: zB
+          visibility: ZB
         } = getComputedStyle(BB);
-        if ("hidden" === zB || "collapse" === zB) return !0;
-        if (!jB) return !1;
-        for (let QB = BB; QB; QB = QB.parentElement)
-          if ("0" === getComputedStyle(QB).opacity) return !0;
+        if ("hidden" === ZB || "collapse" === ZB) return !0;
+        if (!IB) return !1;
+        for (let TB = BB; TB; TB = TB.parentElement)
+          if ("0" === getComputedStyle(TB).opacity) return !0;
         return !1
       },
-      dB = BB => {
-        if (!BB.isConnected || nB(BB, !0)) return !1;
-        const jB = BB.getBoundingClientRect();
-        return jB.width > 0 && jB.height > 0
+      oB = BB => {
+        if (!BB.isConnected || JB(BB, !0)) return !1;
+        const IB = BB.getBoundingClientRect();
+        return IB.width > 0 && IB.height > 0
       },
-      IB = BB => !!BB.matches(":disabled, [aria-disabled='true']") || "button" === BB.getAttribute("role") && "-1" === BB.getAttribute("tabindex"),
-      NB = BB => {
-        var jB;
+      GB = BB => !!BB.matches(":disabled, [aria-disabled='true']") || "button" === BB.getAttribute("role") && "-1" === BB.getAttribute("tabindex"),
+      vB = BB => {
+        var IB;
         if (BB.closest("[data-pad-ignore]")) return !0;
-        return !!(null === (jB = BB.parentElement) || void 0 === jB ? void 0 : jB.closest("[data-pad-focusable]"))
+        return !!(null === (IB = BB.parentElement) || void 0 === IB ? void 0 : IB.closest("[data-pad-focusable]"))
       },
-      uB = BB => {
-        const jB = BB.querySelectorAll(QB);
-        return BB.matches(QB) ? [BB, ...jB] : jB
+      kB = BB => {
+        const IB = BB.querySelectorAll(TB);
+        return BB.matches(TB) ? [BB, ...IB] : IB
       },
-      UB = BB => {
-        const jB = [];
-        for (const zB of uB(BB)) !NB(zB) && dB(zB) && jB.push(zB);
-        return jB
+      cB = BB => {
+        const IB = [];
+        for (const ZB of kB(BB)) !vB(ZB) && oB(ZB) && IB.push(ZB);
+        return IB
       },
-      aB = new WeakMap,
-      pB = BB => {
-        const jB = aB.get(BB);
-        if (jB && rB(jB, BB)) return !0;
-        for (const zB of uB(BB))
-          if (!NB(zB) && dB(zB)) return aB.set(BB, zB), !0;
-        return aB.delete(BB), !1
+      nB = new WeakMap,
+      hB = BB => {
+        const IB = nB.get(BB);
+        if (IB && zB(IB, BB)) return !0;
+        for (const ZB of kB(BB))
+          if (!vB(ZB) && oB(ZB)) return nB.set(BB, ZB), !0;
+        return nB.delete(BB), !1
       },
-      rB = (BB, jB) => jB.contains(BB) && BB.matches(QB) && !NB(BB) && dB(BB),
-      sB = (BB, jB) => rB(BB, jB) && !IB(BB),
-      JB = BB => {
-        for (const jB of BB.querySelectorAll("[data-pad-initial-area]"))
-          if (!nB(jB, !1)) return !0;
+      zB = (BB, IB) => IB.contains(BB) && BB.matches(TB) && !vB(BB) && oB(BB),
+      FB = (BB, IB) => zB(BB, IB) && !GB(BB),
+      NB = BB => {
+        for (const IB of BB.querySelectorAll("[data-pad-initial-area]"))
+          if (!JB(IB, !1)) return !0;
         return !1
       },
-      mB = BB => {
-        const jB = jB => {
-          let zB = 0;
-          for (let QB = jB.parentElement; QB && QB !== BB; QB = QB.parentElement) zB++;
-          return zB
+      gB = BB => {
+        const IB = IB => {
+          let ZB = 0;
+          for (let TB = IB.parentElement; TB && TB !== BB; TB = TB.parentElement) ZB++;
+          return ZB
         };
-        return [...BB.querySelectorAll("[data-pad-initial-area]")].filter(dB).sort(((BB, zB) => jB(zB) - jB(BB)))
+        return [...BB.querySelectorAll("[data-pad-initial-area]")].filter(oB).sort(((BB, ZB) => IB(ZB) - IB(BB)))
       }
   },
-  8658: (BB, jB, zB) => {
-    zB.d(jB, {
-      B: () => SB,
-      F: () => MB,
-      H: () => yB,
-      J: () => uB,
-      M: () => aB,
-      b: () => kB,
-      f: () => iB,
-      g: () => tB,
-      k: () => gB,
-      o: () => JB,
-      q: () => mB,
-      s: () => rB,
-      v: () => sB,
-      w: () => EB,
-      x: () => UB,
-      z: () => qB
+  8779: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      B: () => FB,
+      E: () => wB,
+      H: () => cB,
+      K: () => YB,
+      L: () => QB,
+      N: () => sB,
+      R: () => qB,
+      T: () => kB,
+      V: () => nB,
+      e: () => yB,
+      h: () => OB,
+      j: () => CB,
+      n: () => dB,
+      q: () => NB,
+      u: () => gB,
+      x: () => zB
     });
-    var QB = zB(31),
-      nB = zB(1694),
-      dB = zB(8665),
-      IB = zB(8671),
-      NB = zB(8680);
-    const uB = BB => (0, IB.f)(BB),
-      UB = BB => {
-        const jB = BB.getBoundingClientRect();
+    var TB = ZB(24),
+      JB = ZB(1738),
+      oB = ZB(8785),
+      GB = ZB(8792),
+      vB = ZB(8797);
+    const kB = BB => (0, GB.g)(BB),
+      cB = BB => {
+        const IB = BB.getBoundingClientRect();
         return {
-          x: jB.left + jB.width / 2,
-          y: jB.top + jB.height / 2
+          x: IB.left + IB.width / 2,
+          y: IB.top + IB.height / 2
         }
       },
-      aB = (BB, jB, zB) => ({
+      nB = (BB, IB, ZB) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
@@ -3416,107 +3416,107 @@ export const modules = {
         clientY: BB.y,
         screenX: BB.x,
         screenY: BB.y,
-        button: jB,
-        buttons: zB,
+        button: IB,
+        buttons: ZB,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      pB = (BB, jB) => {
-        (0, nB.d)(BB, jB)
+      hB = (BB, IB) => {
+        (0, JB.h)(BB, IB)
       },
-      rB = function(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const QB = 0 === zB ? 1 : 2;
-        pB(BB, new PointerEvent("pointerdown", aB(jB, zB, QB))), pB(BB, new MouseEvent("mousedown", aB(jB, zB, QB)))
+      zB = function(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const TB = 0 === ZB ? 1 : 2;
+        hB(BB, new PointerEvent("pointerdown", nB(IB, ZB, TB))), hB(BB, new MouseEvent("mousedown", nB(IB, ZB, TB)))
       },
-      sB = function(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        pB(BB, new PointerEvent("pointerup", aB(jB, zB, 0))), pB(BB, new MouseEvent("mouseup", aB(jB, zB, 0)))
+      FB = function(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        hB(BB, new PointerEvent("pointerup", nB(IB, ZB, 0))), hB(BB, new MouseEvent("mouseup", nB(IB, ZB, 0)))
       },
-      JB = function(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        rB(BB, jB, zB), sB(BB, jB, zB), pB(BB, 0 === zB ? new MouseEvent("click", aB(jB, 0, 0)) : new MouseEvent("contextmenu", aB(jB, 2, 0)))
+      NB = function(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        zB(BB, IB, ZB), FB(BB, IB, ZB), hB(BB, 0 === ZB ? new MouseEvent("click", nB(IB, 0, 0)) : new MouseEvent("contextmenu", nB(IB, 2, 0)))
       },
-      mB = function(BB, jB, zB) {
+      gB = function(BB, IB, ZB) {
         let {
-          leaveBelow: QB = null,
-          enterBelow: nB = null
+          leaveBelow: TB = null,
+          enterBelow: JB = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (BB !== jB) {
+        if (BB !== IB) {
           if (null !== BB && void 0 !== BB && BB.isConnected) {
-            const nB = {
-              ...aB(zB, 0, 0),
-              relatedTarget: jB
+            const JB = {
+              ...nB(ZB, 0, 0),
+              relatedTarget: IB
             };
-            pB(BB, new PointerEvent("pointerout", nB)), pB(BB, new MouseEvent("mouseout", nB));
-            const dB = BB => !!jB && BB.contains(jB) || !!QB && BB.contains(QB);
-            for (let jB = BB; jB && !dB(jB); jB = jB.parentElement) pB(jB, new PointerEvent("pointerleave", {
-              ...nB,
+            hB(BB, new PointerEvent("pointerout", JB)), hB(BB, new MouseEvent("mouseout", JB));
+            const oB = BB => !!IB && BB.contains(IB) || !!TB && BB.contains(TB);
+            for (let IB = BB; IB && !oB(IB); IB = IB.parentElement) hB(IB, new PointerEvent("pointerleave", {
+              ...JB,
               bubbles: !1
-            })), pB(jB, new MouseEvent("mouseleave", {
-              ...nB,
+            })), hB(IB, new MouseEvent("mouseleave", {
+              ...JB,
               bubbles: !1
             }))
           }
-          if (jB) {
-            const QB = {
-              ...aB(zB, 0, 0),
+          if (IB) {
+            const TB = {
+              ...nB(ZB, 0, 0),
               relatedTarget: BB
             };
-            pB(jB, new PointerEvent("pointerover", QB)), pB(jB, new MouseEvent("mouseover", QB));
-            const dB = [],
-              IB = jB => !(null === BB || void 0 === BB || !BB.isConnected) && jB.contains(BB) || !!nB && jB.contains(nB);
-            for (let BB = jB; BB && !IB(BB); BB = BB.parentElement) dB.push(BB);
-            for (const BB of dB.reverse()) pB(BB, new PointerEvent("pointerenter", {
-              ...QB,
+            hB(IB, new PointerEvent("pointerover", TB)), hB(IB, new MouseEvent("mouseover", TB));
+            const oB = [],
+              GB = IB => !(null === BB || void 0 === BB || !BB.isConnected) && IB.contains(BB) || !!JB && IB.contains(JB);
+            for (let BB = IB; BB && !GB(BB); BB = BB.parentElement) oB.push(BB);
+            for (const BB of oB.reverse()) hB(BB, new PointerEvent("pointerenter", {
+              ...TB,
               bubbles: !1
-            })), pB(BB, new MouseEvent("mouseenter", {
-              ...QB,
+            })), hB(BB, new MouseEvent("mouseenter", {
+              ...TB,
               bubbles: !1
             }));
-            pB(jB, new PointerEvent("pointermove", aB(zB, 0, 0))), pB(jB, new MouseEvent("mousemove", aB(zB, 0, 0)))
+            hB(IB, new PointerEvent("pointermove", nB(ZB, 0, 0))), hB(IB, new MouseEvent("mousemove", nB(ZB, 0, 0)))
           }
-        } else jB && (pB(jB, new PointerEvent("pointermove", aB(zB, 0, 0))), pB(jB, new MouseEvent("mousemove", aB(zB, 0, 0))))
-      },
-      yB = BB => {
-        QB.n.Ly(dB.f, BB)
-      },
-      kB = BB => {
-        if (uB(BB)) return void yB(BB);
-        const jB = BB.hasAttribute("data-pad-focusable") ? BB.querySelector("a[href]") : null,
-          zB = null !== jB && void 0 !== jB ? jB : BB;
-        JB(zB, UB(zB))
-      },
-      GB = ".Dropdown-root.is-open",
-      LB = BB => {
-        const jB = BB.querySelector(".Dropdown-control");
-        return kB(jB), jB
-      },
-      gB = BB => {
-        var jB;
-        const zB = null !== (jB = BB.closest(GB)) && void 0 !== jB ? jB : BB.querySelector(GB);
-        return zB ? LB(zB) : null
-      },
-      tB = BB => {
-        for (const jB of document.querySelectorAll(GB)) jB.contains(BB) || LB(jB)
-      },
-      SB = BB => null !== BB.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      MB = BB => {
-        const jB = BB ? document.elementFromPoint(BB.x, BB.y) : null;
-        return !(null === jB || void 0 === jB || !jB.closest("[data-pad-repeat]"))
-      },
-      EB = BB => {
-        var jB;
-        return null !== (jB = [...BB.querySelectorAll("[data-pad-back]")].find(NB.s)) && void 0 !== jB ? jB : null
-      },
-      iB = BB => {
-        const jB = EB(BB);
-        return !!jB && (kB(jB), !0)
+        } else IB && (hB(IB, new PointerEvent("pointermove", nB(ZB, 0, 0))), hB(IB, new MouseEvent("mousemove", nB(ZB, 0, 0))))
       },
       qB = BB => {
-        var jB, zB, QB, nB;
-        return null !== (jB = null !== (zB = null !== (QB = BB.getAttribute("data-pad-key")) && void 0 !== QB ? QB : BB.getAttribute("href")) && void 0 !== zB ? zB : null === (nB = BB.querySelector("a[href]")) || void 0 === nB ? void 0 : nB.getAttribute("href")) && void 0 !== jB ? jB : null
+        TB.l.Gq(oB.d, BB)
+      },
+      yB = BB => {
+        if (kB(BB)) return void qB(BB);
+        const IB = BB.hasAttribute("data-pad-focusable") ? BB.querySelector("a[href]") : null,
+          ZB = null !== IB && void 0 !== IB ? IB : BB;
+        NB(ZB, cB(ZB))
+      },
+      UB = ".Dropdown-root.is-open",
+      WB = BB => {
+        const IB = BB.querySelector(".Dropdown-control");
+        return yB(IB), IB
+      },
+      dB = BB => {
+        var IB;
+        const ZB = null !== (IB = BB.closest(UB)) && void 0 !== IB ? IB : BB.querySelector(UB);
+        return ZB ? WB(ZB) : null
+      },
+      CB = BB => {
+        for (const IB of document.querySelectorAll(UB)) IB.contains(BB) || WB(IB)
+      },
+      QB = BB => null !== BB.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      sB = BB => {
+        const IB = BB ? document.elementFromPoint(BB.x, BB.y) : null;
+        return !(null === IB || void 0 === IB || !IB.closest("[data-pad-repeat]"))
+      },
+      wB = BB => {
+        var IB;
+        return null !== (IB = [...BB.querySelectorAll("[data-pad-back]")].find(vB.r)) && void 0 !== IB ? IB : null
+      },
+      OB = BB => {
+        const IB = wB(BB);
+        return !!IB && (yB(IB), !0)
+      },
+      YB = BB => {
+        var IB, ZB, TB, JB;
+        return null !== (IB = null !== (ZB = null !== (TB = BB.getAttribute("data-pad-key")) && void 0 !== TB ? TB : BB.getAttribute("href")) && void 0 !== ZB ? ZB : null === (JB = BB.querySelector("a[href]")) || void 0 === JB ? void 0 : JB.getAttribute("href")) && void 0 !== IB ? IB : null
       }
   }
 };

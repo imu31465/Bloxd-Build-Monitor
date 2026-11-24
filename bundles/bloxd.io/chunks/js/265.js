@@ -1,23 +1,23 @@
 export const id = 265;
 export const ids = [265];
 export const modules = {
-  40491: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => nB
+  40443: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => JB
     });
-    var QB = zB(40076);
+    var TB = ZB(40071);
 
-    function nB(BB) {
+    function JB(BB) {
       return class extends BB {
         constructor() {
           super(...arguments);
           const BB = new.target;
           if (!BB[Symbol.metadata]) {
-            const jB = Object.getPrototypeOf(BB)?.[Symbol.metadata];
-            BB[Symbol.metadata] = jB ? Object.create(jB) : {}
+            const IB = Object.getPrototypeOf(BB)?.[Symbol.metadata];
+            BB[Symbol.metadata] = IB ? Object.create(IB) : {}
           }
-          const jB = (0, QB.c)(BB[Symbol.metadata]);
-          jB._imageProcessingConfiguration || (jB._imageProcessingConfiguration = {
+          const IB = (0, TB.c)(BB[Symbol.metadata]);
+          IB._imageProcessingConfiguration || (IB._imageProcessingConfiguration = {
             type: 9,
             sourceName: void 0
           })
@@ -29,7 +29,7 @@ export const modules = {
           this._attachImageProcessingConfiguration(BB), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
         }
         _attachImageProcessingConfiguration(BB) {
-          BB !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !BB && this.aY ? this._imageProcessingConfiguration = this.aY().imageProcessingConfiguration : BB && (this._imageProcessingConfiguration = BB), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
+          BB !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !BB && this.JR ? this._imageProcessingConfiguration = this.JR().imageProcessingConfiguration : BB && (this._imageProcessingConfiguration = BB), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
             this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
           }))))
         }
@@ -78,75 +78,75 @@ export const modules = {
       }
     }
   },
-  40373: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => dB,
-      e: () => nB
+  40333: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB,
+      c: () => JB
     });
-    var QB = zB(40376);
+    var TB = ZB(40335);
 
-    function nB(BB) {
+    function JB(BB) {
       return class extends BB {
         constructor() {
           super(...arguments), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.EXPOSURE = !1
         }
       }
     }
-    class dB extends QB.b {
+    class oB extends TB.e {
       constructor() {
         super(), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.EXPOSURE = !1, this.SKIPFINALCOLORCLAMP = !1, this.rebuild()
       }
     }
   },
-  40451: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => pB
+  40400: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => hB
     });
-    var QB = zB(40066),
-      nB = zB(40380),
-      dB = zB(40068),
-      IB = zB(40435),
-      NB = zB(40376),
-      uB = zB(40457),
-      UB = zB(40428);
-    class aB extends NB.b {
+    var TB = ZB(40061),
+      JB = ZB(40339),
+      oB = ZB(40065),
+      GB = ZB(40383),
+      vB = ZB(40335),
+      kB = ZB(40408),
+      cB = ZB(40371);
+    class nB extends vB.e {
       constructor() {
         super(...arguments), this.DETAIL = !1, this.DETAILDIRECTUV = 0, this.DETAIL_NORMALBLENDMETHOD = 0
       }
     }
-    let pB = (() => {
-      var BB, jB, zB, NB;
-      let pB, rB, sB, JB, mB, yB, kB = uB.c,
-        GB = [],
-        LB = [],
-        gB = [],
-        tB = [],
-        SB = [],
-        MB = [],
-        EB = [],
+    let hB = (() => {
+      var BB, IB, ZB, vB;
+      let hB, zB, FB, NB, gB, qB, yB = kB.e,
+        UB = [],
+        WB = [],
+        dB = [],
+        CB = [],
+        QB = [],
+        sB = [],
+        wB = [],
+        OB = [],
+        YB = [],
         iB = [],
-        qB = [],
-        fB = [],
-        oB = [],
-        HB = [];
-      return BB = class extends kB {
+        pB = [],
+        aB = [];
+      return BB = class extends yB {
         get texture() {
-          return (0, QB.b)(this, jB, "f")
+          return (0, TB.b)(this, IB, "f")
         }
         set texture(BB) {
-          (0, QB.d)(this, jB, BB, "f")
+          (0, TB.f)(this, IB, BB, "f")
         }
         get normalBlendMethod() {
-          return (0, QB.b)(this, zB, "f")
+          return (0, TB.b)(this, ZB, "f")
         }
         set normalBlendMethod(BB) {
-          (0, QB.d)(this, zB, BB, "f")
+          (0, TB.f)(this, ZB, BB, "f")
         }
         get isEnabled() {
-          return (0, QB.b)(this, NB, "f")
+          return (0, TB.b)(this, vB, "f")
         }
         set isEnabled(BB) {
-          (0, QB.d)(this, NB, BB, "f")
+          (0, TB.f)(this, vB, BB, "f")
         }
         _markAllSubMeshesAsTexturesDirty() {
           this._enable(this._isEnabled), this._internalMarkAllSubMeshesAsTexturesDirty()
@@ -155,23 +155,23 @@ export const modules = {
           return !0
         }
         constructor(BB) {
-          let dB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          super(BB, "DetailMap", 140, new aB, dB), this._texture = null, jB.set(this, (0, QB.g)(this, GB, void 0)), this.diffuseBlendLevel = ((0, QB.g)(this, LB), (0, QB.g)(this, gB, 1)), this.roughnessBlendLevel = ((0, QB.g)(this, tB), (0, QB.g)(this, SB, 1)), this.bumpLevel = ((0, QB.g)(this, MB), (0, QB.g)(this, EB, 1)), this._normalBlendMethod = ((0, QB.g)(this, iB), nB.b.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), zB.set(this, (0, QB.g)(this, qB, void 0)), this._isEnabled = ((0, QB.g)(this, fB), !1), NB.set(this, (0, QB.g)(this, oB, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, QB.g)(this, HB), this._internalMarkAllSubMeshesAsTexturesDirty = BB._dirtyCallbacks[1]
+          let oB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          super(BB, "DetailMap", 140, new nB, oB), this._texture = null, IB.set(this, (0, TB.l)(this, UB, void 0)), this.diffuseBlendLevel = ((0, TB.l)(this, WB), (0, TB.l)(this, dB, 1)), this.roughnessBlendLevel = ((0, TB.l)(this, CB), (0, TB.l)(this, QB, 1)), this.bumpLevel = ((0, TB.l)(this, sB), (0, TB.l)(this, wB, 1)), this._normalBlendMethod = ((0, TB.l)(this, OB), JB.e.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), ZB.set(this, (0, TB.l)(this, YB, void 0)), this._isEnabled = ((0, TB.l)(this, iB), !1), vB.set(this, (0, TB.l)(this, pB, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, TB.l)(this, aB), this._internalMarkAllSubMeshesAsTexturesDirty = BB._dirtyCallbacks[1]
         }
-        isReadyForSubMesh(BB, jB, zB) {
-          return !this._isEnabled || !(BB._areTexturesDirty && jB.texturesEnabled && zB.getCaps().standardDerivatives && this._texture && IB.d.DetailTextureEnabled && !this._texture.isReady())
+        isReadyForSubMesh(BB, IB, ZB) {
+          return !this._isEnabled || !(BB._areTexturesDirty && IB.texturesEnabled && ZB.getCaps().standardDerivatives && this._texture && GB.e.DetailTextureEnabled && !this._texture.isReady())
         }
-        prepareDefines(BB, jB) {
+        prepareDefines(BB, IB) {
           if (this._isEnabled) {
             BB.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
-            const zB = jB.wJ();
-            BB._areTexturesDirty && (zB.getCaps().standardDerivatives && this._texture && IB.d.DetailTextureEnabled && this._isEnabled ? ((0, UB.cb)(this._texture, BB, "DETAIL"), BB.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : BB.DETAIL = !1)
+            const ZB = IB.PN();
+            BB._areTexturesDirty && (ZB.getCaps().standardDerivatives && this._texture && GB.e.DetailTextureEnabled && this._isEnabled ? ((0, cB.ab)(this._texture, BB, "DETAIL"), BB.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : BB.DETAIL = !1)
           } else BB.DETAIL = !1
         }
-        bindForSubMesh(BB, jB) {
+        bindForSubMesh(BB, IB) {
           if (!this._isEnabled) return;
-          const zB = this._material.isFrozen;
-          BB.useUbo && zB && BB.isSync || this._texture && IB.d.DetailTextureEnabled && (BB.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, UB.A)(this._texture, BB, "detail")), jB.texturesEnabled && this._texture && IB.d.DetailTextureEnabled && BB.setTexture("detailSampler", this._texture)
+          const ZB = this._material.isFrozen;
+          BB.useUbo && ZB && BB.isSync || this._texture && GB.e.DetailTextureEnabled && (BB.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, cB.y)(this._texture, BB, "detail")), IB.texturesEnabled && this._texture && GB.e.DetailTextureEnabled && BB.setTexture("detailSampler", this._texture)
         }
         hasTexture(BB) {
           return this._texture === BB
@@ -204,9 +204,9 @@ export const modules = {
             }]
           }
         }
-      }, jB = new WeakMap, zB = new WeakMap, NB = new WeakMap, (() => {
-        const jB = "function" === typeof Symbol && Symbol.metadata ? Object.create(kB[Symbol.metadata] ?? null) : void 0;
-        pB = [(0, dB.v)("detailTexture"), (0, dB.e)("_markAllSubMeshesAsTexturesDirty")], rB = [(0, dB.A)()], sB = [(0, dB.A)()], JB = [(0, dB.A)()], mB = [(0, dB.A)(), (0, dB.e)("_markAllSubMeshesAsTexturesDirty")], yB = [(0, dB.A)(), (0, dB.e)("_markAllSubMeshesAsTexturesDirty")], (0, QB.e)(BB, null, pB, {
+      }, IB = new WeakMap, ZB = new WeakMap, vB = new WeakMap, (() => {
+        const IB = "function" === typeof Symbol && Symbol.metadata ? Object.create(yB[Symbol.metadata] ?? null) : void 0;
+        hB = [(0, oB.v)("detailTexture"), (0, oB.e)("_markAllSubMeshesAsTexturesDirty")], zB = [(0, oB.C)()], FB = [(0, oB.C)()], NB = [(0, oB.C)()], gB = [(0, oB.C)(), (0, oB.e)("_markAllSubMeshesAsTexturesDirty")], qB = [(0, oB.C)(), (0, oB.e)("_markAllSubMeshesAsTexturesDirty")], (0, TB.j)(BB, null, hB, {
           kind: "accessor",
           name: "texture",
           static: !1,
@@ -214,12 +214,12 @@ export const modules = {
           access: {
             has: BB => "texture" in BB,
             get: BB => BB.texture,
-            set: (BB, jB) => {
-              BB.texture = jB
+            set: (BB, IB) => {
+              BB.texture = IB
             }
           },
-          metadata: jB
-        }, GB, LB), (0, QB.e)(BB, null, mB, {
+          metadata: IB
+        }, UB, WB), (0, TB.j)(BB, null, gB, {
           kind: "accessor",
           name: "normalBlendMethod",
           static: !1,
@@ -227,12 +227,12 @@ export const modules = {
           access: {
             has: BB => "normalBlendMethod" in BB,
             get: BB => BB.normalBlendMethod,
-            set: (BB, jB) => {
-              BB.normalBlendMethod = jB
+            set: (BB, IB) => {
+              BB.normalBlendMethod = IB
             }
           },
-          metadata: jB
-        }, qB, fB), (0, QB.e)(BB, null, yB, {
+          metadata: IB
+        }, YB, iB), (0, TB.j)(BB, null, qB, {
           kind: "accessor",
           name: "isEnabled",
           static: !1,
@@ -240,12 +240,12 @@ export const modules = {
           access: {
             has: BB => "isEnabled" in BB,
             get: BB => BB.isEnabled,
-            set: (BB, jB) => {
-              BB.isEnabled = jB
+            set: (BB, IB) => {
+              BB.isEnabled = IB
             }
           },
-          metadata: jB
-        }, oB, HB), (0, QB.e)(null, null, rB, {
+          metadata: IB
+        }, pB, aB), (0, TB.j)(null, null, zB, {
           kind: "field",
           name: "diffuseBlendLevel",
           static: !1,
@@ -253,12 +253,12 @@ export const modules = {
           access: {
             has: BB => "diffuseBlendLevel" in BB,
             get: BB => BB.diffuseBlendLevel,
-            set: (BB, jB) => {
-              BB.diffuseBlendLevel = jB
+            set: (BB, IB) => {
+              BB.diffuseBlendLevel = IB
             }
           },
-          metadata: jB
-        }, gB, tB), (0, QB.e)(null, null, sB, {
+          metadata: IB
+        }, dB, CB), (0, TB.j)(null, null, FB, {
           kind: "field",
           name: "roughnessBlendLevel",
           static: !1,
@@ -266,12 +266,12 @@ export const modules = {
           access: {
             has: BB => "roughnessBlendLevel" in BB,
             get: BB => BB.roughnessBlendLevel,
-            set: (BB, jB) => {
-              BB.roughnessBlendLevel = jB
+            set: (BB, IB) => {
+              BB.roughnessBlendLevel = IB
             }
           },
-          metadata: jB
-        }, SB, MB), (0, QB.e)(null, null, JB, {
+          metadata: IB
+        }, QB, sB), (0, TB.j)(null, null, NB, {
           kind: "field",
           name: "bumpLevel",
           static: !1,
@@ -279,28 +279,28 @@ export const modules = {
           access: {
             has: BB => "bumpLevel" in BB,
             get: BB => BB.bumpLevel,
-            set: (BB, jB) => {
-              BB.bumpLevel = jB
+            set: (BB, IB) => {
+              BB.bumpLevel = IB
             }
           },
-          metadata: jB
-        }, EB, iB), jB && Object.defineProperty(BB, Symbol.metadata, {
+          metadata: IB
+        }, wB, OB), IB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: jB
+          value: IB
         })
       })(), BB
     })()
   },
-  40376: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => QB
+  40335: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB
     });
-    class QB {
+    class TB {
       constructor(BB) {
         if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = BB, BB)
-          for (const jB in BB) Object.prototype.hasOwnProperty.call(BB, jB) && this._setDefaultValue(jB)
+          for (const IB in BB) Object.prototype.hasOwnProperty.call(BB, IB) && this._setDefaultValue(IB)
       }
       get isDirty() {
         return this._isDirty
@@ -344,186 +344,186 @@ export const modules = {
       }
       isEqual(BB) {
         if (this._keys.length !== BB._keys.length) return !1;
-        for (let jB = 0; jB < this._keys.length; jB++) {
-          const zB = this._keys[jB];
-          if (this[zB] !== BB[zB]) return !1
+        for (let IB = 0; IB < this._keys.length; IB++) {
+          const ZB = this._keys[IB];
+          if (this[ZB] !== BB[ZB]) return !1
         }
         return !0
       }
       cloneTo(BB) {
         this._keys.length !== BB._keys.length && (BB._keys = this._keys.slice(0));
-        for (let jB = 0; jB < this._keys.length; jB++) {
-          const zB = this._keys[jB];
-          BB[zB] = this[zB]
+        for (let IB = 0; IB < this._keys.length; IB++) {
+          const ZB = this._keys[IB];
+          BB[ZB] = this[ZB]
         }
       }
       reset() {
         for (const BB of this._keys) this._setDefaultValue(BB)
       }
       _setDefaultValue(BB) {
-        const jB = this._externalProperties?.[BB]?.type ?? typeof this[BB],
-          zB = this._externalProperties?.[BB]?.default;
-        switch (jB) {
+        const IB = this._externalProperties?.[BB]?.type ?? typeof this[BB],
+          ZB = this._externalProperties?.[BB]?.default;
+        switch (IB) {
           case "number":
-            this[BB] = zB ?? 0;
+            this[BB] = ZB ?? 0;
             break;
           case "string":
-            this[BB] = zB ?? "";
+            this[BB] = ZB ?? "";
             break;
           default:
-            this[BB] = zB ?? !1
+            this[BB] = ZB ?? !1
         }
       }
       toString() {
         let BB = "";
-        for (let jB = 0; jB < this._keys.length; jB++) {
-          const zB = this._keys[jB],
-            QB = this[zB];
-          switch (typeof QB) {
+        for (let IB = 0; IB < this._keys.length; IB++) {
+          const ZB = this._keys[IB],
+            TB = this[ZB];
+          switch (typeof TB) {
             case "number":
             case "string":
-              BB += "#define " + zB + " " + QB + "\n";
+              BB += "#define " + ZB + " " + TB + "\n";
               break;
             default:
-              QB && (BB += "#define " + zB + "\n")
+              TB && (BB += "#define " + ZB + "\n")
           }
         }
         return BB
       }
     }
   },
-  40475: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => NB,
-      f: () => IB,
-      h: () => dB
+  40431: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => vB,
+      e: () => GB,
+      h: () => oB
     });
-    var QB, nB = zB(37171);
+    var TB, JB = ZB(37120);
 
-    function dB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
-      const QB = jB(BB);
-      if (!Number.isInteger(QB) || QB < 0 || QB > zB) throw new Error(`Invalid geometry object ID ${QB} for mesh "${BB.name}". Object IDs must be integers between 0 and 0x${zB.toString(16).toUpperCase()}.`);
-      return QB
+    function oB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
+      const TB = IB(BB);
+      if (!Number.isInteger(TB) || TB < 0 || TB > ZB) throw new Error(`Invalid geometry object ID ${TB} for mesh "${BB.name}". Object IDs must be integers between 0 and 0x${ZB.toString(16).toUpperCase()}.`);
+      return TB
     }
 
-    function IB(BB, jB) {
-      const zB = jB(BB);
-      if (!Number.isInteger(zB) || zB < 0 || zB > 255 || 0 !== zB && 0 === (63 & zB)) throw new Error(`Invalid geometry mesh-blending tag ${zB} for mesh "${BB.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
-      return zB
+    function GB(BB, IB) {
+      const ZB = IB(BB);
+      if (!Number.isInteger(ZB) || ZB < 0 || ZB > 255 || 0 !== ZB && 0 === (63 & ZB)) throw new Error(`Invalid geometry mesh-blending tag ${ZB} for mesh "${BB.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
+      return ZB
     }! function(BB) {
       BB[BB.Zero = 0] = "Zero", BB[BB.One = 1] = "One", BB[BB.MaxViewZ = 2] = "MaxViewZ", BB[BB.NoClear = 3] = "NoClear"
-    }(QB || (QB = {}));
-    class NB {
+    }(TB || (TB = {}));
+    class vB {
       static CreateConfiguration(BB) {
-        return NB._Configurations[BB] = {
+        return vB._Configurations[BB] = {
           defines: {},
           previousWorldMatrices: {},
-          previousViewProjection: nB.c.Zero(),
-          currentViewProjection: nB.c.Zero(),
+          previousViewProjection: JB.b.Zero(),
+          currentViewProjection: JB.b.Zero(),
           previousBones: {},
           lastUpdateFrameId: -1,
           excludedSkinnedMesh: [],
           reverseCulling: !1,
           objectIdIsRedFormat: !1
-        }, NB._Configurations[BB]
+        }, vB._Configurations[BB]
       }
       static DeleteConfiguration(BB) {
-        delete NB._Configurations[BB]
+        delete vB._Configurations[BB]
       }
       static GetConfiguration(BB) {
-        return NB._Configurations[BB]
+        return vB._Configurations[BB]
       }
-      static _PrepareConfiguration(BB, jB, zB) {
-        const QB = NB._Configurations[BB];
-        QB._attachments = jB, QB._colorAttachments = zB, QB._mrtCount = jB.length;
-        let nB = "#define PREPASS\n";
-        for (const dB of NB.GeometryTextureDescriptions) {
-          const BB = QB.defines[dB.defineIndex];
-          void 0 !== BB && (nB += `#define ${dB.define}\n#define ${dB.defineIndex} ${BB}\n`)
+      static _PrepareConfiguration(BB, IB, ZB) {
+        const TB = vB._Configurations[BB];
+        TB._attachments = IB, TB._colorAttachments = ZB, TB._mrtCount = IB.length;
+        let JB = "#define PREPASS\n";
+        for (const oB of vB.GeometryTextureDescriptions) {
+          const BB = TB.defines[oB.defineIndex];
+          void 0 !== BB && (JB += `#define ${oB.define}\n#define ${oB.defineIndex} ${BB}\n`)
         }
-        QB.objectIdIsRedFormat && (nB += "#define PREPASS_OBJECT_ID_R8\n"), QB._defines = nB + `#define SCENE_MRT_COUNT ${jB.length}\n`
+        TB.objectIdIsRedFormat && (JB += "#define PREPASS_OBJECT_ID_R8\n"), TB._defines = JB + `#define SCENE_MRT_COUNT ${IB.length}\n`
       }
-      static _PrepareStringDefines(BB, jB) {
-        const zB = NB._Configurations[BB];
-        return !!zB?._defines && (jB.push(zB._defines), !0)
+      static _PrepareStringDefines(BB, IB) {
+        const ZB = vB._Configurations[BB];
+        return !!ZB?._defines && (IB.push(ZB._defines), !0)
       }
-      static _BindAttachmentsForEffect(BB, jB) {
-        const zB = NB._Configurations[BB.currentRenderPassId];
-        return !zB?._attachments || (BB.bindAttachments(jB._multiTarget ? zB._attachments : zB._colorAttachments), jB._multiTarget || void 0 !== zB.defines.PREPASS_COLOR_INDEX)
+      static _BindAttachmentsForEffect(BB, IB) {
+        const ZB = vB._Configurations[BB.currentRenderPassId];
+        return !ZB?._attachments || (BB.bindAttachments(IB._multiTarget ? ZB._attachments : ZB._colorAttachments), IB._multiTarget || void 0 !== ZB.defines.PREPASS_COLOR_INDEX)
       }
       static _RestoreAttachments(BB) {
-        const jB = NB._Configurations[BB.currentRenderPassId];
-        jB?._colorAttachments && BB.bindAttachments(jB._colorAttachments)
+        const IB = vB._Configurations[BB.currentRenderPassId];
+        IB?._colorAttachments && BB.bindAttachments(IB._colorAttachments)
       }
       static _BindColorAttachments(BB) {
-        const jB = NB._Configurations[BB.currentRenderPassId];
-        return !jB?._colorAttachments || (BB.bindAttachments(jB._colorAttachments), void 0 !== jB.defines.PREPASS_COLOR_INDEX)
+        const IB = vB._Configurations[BB.currentRenderPassId];
+        return !IB?._colorAttachments || (BB.bindAttachments(IB._colorAttachments), void 0 !== IB.defines.PREPASS_COLOR_INDEX)
       }
       static _IsColorAttachmentEnabled(BB) {
-        const jB = NB._Configurations[BB.currentRenderPassId];
-        return !jB?._colorAttachments || void 0 !== jB.defines.PREPASS_COLOR_INDEX
+        const IB = vB._Configurations[BB.currentRenderPassId];
+        return !IB?._colorAttachments || void 0 !== IB.defines.PREPASS_COLOR_INDEX
       }
-      static _BindZeroAlphaDiscard(BB, jB) {
-        const zB = NB._Configurations[BB.currentRenderPassId];
-        if (!zB) return;
-        const QB = BB.getAlphaMode(),
-          nB = void 0 === zB.defines.PREPASS_COLOR_INDEX || 2 === QB || 1 === QB || 17 === QB;
-        jB.setFloat("geometryZeroAlphaDiscard", nB ? 1 : 0)
+      static _BindZeroAlphaDiscard(BB, IB) {
+        const ZB = vB._Configurations[BB.currentRenderPassId];
+        if (!ZB) return;
+        const TB = BB.getAlphaMode(),
+          JB = void 0 === ZB.defines.PREPASS_COLOR_INDEX || 2 === TB || 1 === TB || 17 === TB;
+        IB.setFloat("geometryZeroAlphaDiscard", JB ? 1 : 0)
       }
-      static AddUniformsAndSamplers(BB, jB) {
+      static AddUniformsAndSamplers(BB, IB) {
         BB.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
       }
-      static MarkAsDirty(BB, jB) {
-        for (const zB of jB)
-          if (zB.cL)
-            for (const jB of zB.cL) jB._removeDrawWrapper(BB)
+      static MarkAsDirty(BB, IB) {
+        for (const ZB of IB)
+          if (ZB.EW)
+            for (const IB of ZB.EW) IB._removeDrawWrapper(BB)
       }
-      static PrepareDefines(BB, jB, zB) {
-        if (!zB._arePrePassDirty) return;
-        const QB = NB._Configurations[BB];
-        if (!QB) return;
-        zB.PREPASS = !0;
-        let nB = 0;
-        for (let dB = 0; dB < NB.GeometryTextureDescriptions.length; dB++) {
-          const BB = NB.GeometryTextureDescriptions[dB],
-            jB = BB.define,
-            IB = BB.defineIndex,
-            uB = QB.defines[IB];
-          void 0 !== uB ? (zB[jB] = !0, zB[IB] = uB, nB++) : (zB[jB] = !1, delete zB[IB])
+      static PrepareDefines(BB, IB, ZB) {
+        if (!ZB._arePrePassDirty) return;
+        const TB = vB._Configurations[BB];
+        if (!TB) return;
+        ZB.PREPASS = !0;
+        let JB = 0;
+        for (let oB = 0; oB < vB.GeometryTextureDescriptions.length; oB++) {
+          const BB = vB.GeometryTextureDescriptions[oB],
+            IB = BB.define,
+            GB = BB.defineIndex,
+            kB = TB.defines[GB];
+          void 0 !== kB ? (ZB[IB] = !0, ZB[GB] = kB, JB++) : (ZB[IB] = !1, delete ZB[GB])
         }
-        zB.PREPASS_OBJECT_ID_R8 = QB.objectIdIsRedFormat, zB.SCENE_MRT_COUNT = QB._mrtCount ?? nB, zB.BONES_VELOCITY_ENABLED = jB.useBones && jB.computeBonesUsingShaders && jB.skeleton && !jB.skeleton.isUsingTextureForMatrices && -1 === QB.excludedSkinnedMesh.indexOf(jB)
+        ZB.PREPASS_OBJECT_ID_R8 = TB.objectIdIsRedFormat, ZB.SCENE_MRT_COUNT = TB._mrtCount ?? JB, ZB.BONES_VELOCITY_ENABLED = IB.useBones && IB.computeBonesUsingShaders && IB.skeleton && !IB.skeleton.isUsingTextureForMatrices && -1 === TB.excludedSkinnedMesh.indexOf(IB)
       }
-      static Bind(BB, jB, zB, QB, nB) {
-        const uB = NB._Configurations[BB];
-        if (!uB) return;
-        const UB = zB.aY(),
-          aB = UB.wJ();
-        if (uB.reverseCulling && aB.setStateCullFaceType(UB._mirroredCameraPosition ? nB.cullBackFaces : !nB.cullBackFaces), void 0 !== uB.defines.PREPASS_OBJECT_ID_INDEX) {
-          const BB = uB.objectIdIsRedFormat ? 255 : 16777215;
-          let QB = zB.uniqueId;
-          if (uB.objectIdProvider) QB = dB(zB, uB.objectIdProvider, BB);
-          else if (QB > BB) throw new Error(`Invalid geometry object ID ${QB} for mesh "${zB.name}". Object IDs must be integers between 0 and 0x${BB.toString(16).toUpperCase()}.`);
-          jB.setFloat("objectId", QB)
+      static Bind(BB, IB, ZB, TB, JB) {
+        const kB = vB._Configurations[BB];
+        if (!kB) return;
+        const cB = ZB.JR(),
+          nB = cB.PN();
+        if (kB.reverseCulling && nB.setStateCullFaceType(cB._mirroredCameraPosition ? JB.cullBackFaces : !JB.cullBackFaces), void 0 !== kB.defines.PREPASS_OBJECT_ID_INDEX) {
+          const BB = kB.objectIdIsRedFormat ? 255 : 16777215;
+          let TB = ZB.uniqueId;
+          if (kB.objectIdProvider) TB = oB(ZB, kB.objectIdProvider, BB);
+          else if (TB > BB) throw new Error(`Invalid geometry object ID ${TB} for mesh "${ZB.name}". Object IDs must be integers between 0 and 0x${BB.toString(16).toUpperCase()}.`);
+          IB.setFloat("objectId", TB)
         }
-        if (void 0 !== uB.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
-          const BB = uB.meshBlendTagProvider ? IB(zB, uB.meshBlendTagProvider) : zB.meshBlendingTag;
-          jB.setInt("meshBlendTag", BB)
+        if (void 0 !== kB.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
+          const BB = kB.meshBlendTagProvider ? GB(ZB, kB.meshBlendTagProvider) : ZB.meshBlendingTag;
+          IB.setInt("meshBlendTag", BB)
         }
-        if (void 0 !== uB.defines.PREPASS_VELOCITY_INDEX || void 0 !== uB.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
-          const BB = uB._currentWorldMatrices ?? (uB._currentWorldMatrices = {}),
-            nB = uB._worldMatrixFrameIds ?? (uB._worldMatrixFrameIds = {});
-          if (BB[zB.uniqueId] || (BB[zB.uniqueId] = QB.clone(), uB.previousWorldMatrices[zB.uniqueId] = QB.clone()), nB[zB.uniqueId] !== aB.frameId && (uB.previousWorldMatrices[zB.uniqueId].jH(BB[zB.uniqueId]), nB[zB.uniqueId] = aB.frameId), BB[zB.uniqueId].jH(QB), -1 === uB.lastUpdateFrameId ? (uB.lastUpdateFrameId = aB.frameId, uB.previousViewProjection.jH(UB.getTransformMatrix()), uB.currentViewProjection.jH(UB.getTransformMatrix())) : uB.currentViewProjection.updateFlag !== UB.getTransformMatrix().updateFlag ? (uB.lastUpdateFrameId = aB.frameId, uB.previousViewProjection.jH(uB.currentViewProjection), uB.currentViewProjection.jH(UB.getTransformMatrix())) : uB.lastUpdateFrameId !== aB.frameId && (uB.lastUpdateFrameId = aB.frameId, uB.previousViewProjection.jH(uB.currentViewProjection)), jB.setMatrix("previousWorld", uB.previousWorldMatrices[zB.uniqueId]), jB.setMatrix("previousViewProjection", uB.previousViewProjection), zB.useBones && zB.computeBonesUsingShaders && zB.skeleton) {
-            const BB = zB.skeleton;
-            if (!BB.isUsingTextureForMatrices || -1 === jB.getUniformIndex("boneTextureInfo")) {
-              const QB = BB.getTransformMatrices(zB);
-              QB && (uB.previousBones[zB.uniqueId] || (uB.previousBones[zB.uniqueId] = QB.slice()), jB.setMatrices("mPreviousBones", uB.previousBones[zB.uniqueId]), uB.previousBones[zB.uniqueId].set(QB))
+        if (void 0 !== kB.defines.PREPASS_VELOCITY_INDEX || void 0 !== kB.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
+          const BB = kB._currentWorldMatrices ?? (kB._currentWorldMatrices = {}),
+            JB = kB._worldMatrixFrameIds ?? (kB._worldMatrixFrameIds = {});
+          if (BB[ZB.uniqueId] || (BB[ZB.uniqueId] = TB.clone(), kB.previousWorldMatrices[ZB.uniqueId] = TB.clone()), JB[ZB.uniqueId] !== nB.frameId && (kB.previousWorldMatrices[ZB.uniqueId].TY(BB[ZB.uniqueId]), JB[ZB.uniqueId] = nB.frameId), BB[ZB.uniqueId].TY(TB), -1 === kB.lastUpdateFrameId ? (kB.lastUpdateFrameId = nB.frameId, kB.previousViewProjection.TY(cB.getTransformMatrix()), kB.currentViewProjection.TY(cB.getTransformMatrix())) : kB.currentViewProjection.updateFlag !== cB.getTransformMatrix().updateFlag ? (kB.lastUpdateFrameId = nB.frameId, kB.previousViewProjection.TY(kB.currentViewProjection), kB.currentViewProjection.TY(cB.getTransformMatrix())) : kB.lastUpdateFrameId !== nB.frameId && (kB.lastUpdateFrameId = nB.frameId, kB.previousViewProjection.TY(kB.currentViewProjection)), IB.setMatrix("previousWorld", kB.previousWorldMatrices[ZB.uniqueId]), IB.setMatrix("previousViewProjection", kB.previousViewProjection), ZB.useBones && ZB.computeBonesUsingShaders && ZB.skeleton) {
+            const BB = ZB.skeleton;
+            if (!BB.isUsingTextureForMatrices || -1 === IB.getUniformIndex("boneTextureInfo")) {
+              const TB = BB.getTransformMatrices(ZB);
+              TB && (kB.previousBones[ZB.uniqueId] || (kB.previousBones[ZB.uniqueId] = TB.slice()), IB.setMatrices("mPreviousBones", kB.previousBones[ZB.uniqueId]), kB.previousBones[ZB.uniqueId].set(TB))
             }
           }
         }
       }
     }
-    NB.GeometryTextureDescriptions = [{
+    vB.GeometryTextureDescriptions = [{
       type: 0,
       name: "IrradianceLegacy",
       clearType: 0,
@@ -625,118 +625,118 @@ export const modules = {
       clearType: 0,
       define: "PREPASS_MESH_BLEND_TAG",
       defineIndex: "PREPASS_MESH_BLEND_TAG_INDEX"
-    }], NB._Configurations = {}
+    }], vB._Configurations = {}
   },
-  40457: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => rB,
-      f: () => JB
+  40408: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => zB,
+      h: () => NB
     });
-    var QB = zB(40066),
-      nB = zB(40068),
-      dB = zB(39974),
-      IB = zB(39932);
-    const NB = new RegExp("^([gimus]+)!");
-    class uB {
+    var TB = ZB(40061),
+      JB = ZB(40065),
+      oB = ZB(39939),
+      GB = ZB(39905);
+    const vB = new RegExp("^([gimus]+)!");
+    class kB {
       constructor(BB) {
-        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = BB, this._scene = BB.aY(), this._engine = this._scene.wJ()
+        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = BB, this._scene = BB.JR(), this._engine = this._scene.PN()
       }
       _addPlugin(BB) {
-        for (let QB = 0; QB < this._plugins.length; ++QB)
-          if (this._plugins[QB].name === BB.name) return !1;
+        for (let TB = 0; TB < this._plugins.length; ++TB)
+          if (this._plugins[TB].name === BB.name) return !1;
         if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !BB.isCompatible(this._material.shaderLanguage)) throw `The plugin "${BB.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
-        const jB = BB.getClassName();
-        uB._MaterialPluginClassToMainDefine[jB] || (uB._MaterialPluginClassToMainDefine[jB] = "MATERIALPLUGIN_" + ++uB._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (BB, jB) => this._handlePluginEvent(BB, jB), this._plugins.push(BB), this._plugins.sort(((BB, jB) => BB.priority - jB.priority)), this._codeInjectionPoints = {};
-        const zB = {};
-        zB[uB._MaterialPluginClassToMainDefine[jB]] = {
+        const IB = BB.getClassName();
+        kB._MaterialPluginClassToMainDefine[IB] || (kB._MaterialPluginClassToMainDefine[IB] = "MATERIALPLUGIN_" + ++kB._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (BB, IB) => this._handlePluginEvent(BB, IB), this._plugins.push(BB), this._plugins.sort(((BB, IB) => BB.priority - IB.priority)), this._codeInjectionPoints = {};
+        const ZB = {};
+        ZB[kB._MaterialPluginClassToMainDefine[IB]] = {
           type: "boolean",
           default: !0
         };
-        for (const QB of this._plugins) QB.collectDefines(zB), this._collectPointNames("vertex", QB.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", QB.getCustomCode("fragment", this._material.shaderLanguage));
-        return this._defineNamesFromPlugins = zB, !0
+        for (const TB of this._plugins) TB.collectDefines(ZB), this._collectPointNames("vertex", TB.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", TB.getCustomCode("fragment", this._material.shaderLanguage));
+        return this._defineNamesFromPlugins = ZB, !0
       }
       _activatePlugin(BB) {
-        -1 === this._activePlugins.indexOf(BB) && (this._activePlugins.push(BB), this._activePlugins.sort(((BB, jB) => BB.priority - jB.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), BB.registerForExtraEvents && (this._activePluginsForExtraEvents.push(BB), this._activePluginsForExtraEvents.sort(((BB, jB) => BB.priority - jB.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
+        -1 === this._activePlugins.indexOf(BB) && (this._activePlugins.push(BB), this._activePlugins.sort(((BB, IB) => BB.priority - IB.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), BB.registerForExtraEvents && (this._activePluginsForExtraEvents.push(BB), this._activePluginsForExtraEvents.sort(((BB, IB) => BB.priority - IB.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
       }
       getPlugin(BB) {
-        for (let jB = 0; jB < this._plugins.length; ++jB)
-          if (this._plugins[jB].name === BB) return this._plugins[jB];
+        for (let IB = 0; IB < this._plugins.length; ++IB)
+          if (this._plugins[IB].name === BB) return this._plugins[IB];
         return null
       }
       _handlePluginEventIsReadyForSubMesh(BB) {
-        let jB = !0;
-        for (const zB of this._activePlugins) jB = jB && zB.isReadyForSubMesh(BB.defines, this._scene, this._engine, BB.subMesh);
-        BB.isReadyForSubMesh = jB
+        let IB = !0;
+        for (const ZB of this._activePlugins) IB = IB && ZB.isReadyForSubMesh(BB.defines, this._scene, this._engine, BB.subMesh);
+        BB.isReadyForSubMesh = IB
       }
       _handlePluginEventPrepareDefinesBeforeAttributes(BB) {
-        for (const jB of this._activePlugins) jB.prepareDefinesBeforeAttributes(BB.defines, this._scene, BB.mesh)
+        for (const IB of this._activePlugins) IB.prepareDefinesBeforeAttributes(BB.defines, this._scene, BB.mesh)
       }
       _handlePluginEventPrepareDefines(BB) {
-        for (const jB of this._activePlugins) jB.prepareDefines(BB.defines, this._scene, BB.mesh)
+        for (const IB of this._activePlugins) IB.prepareDefines(BB.defines, this._scene, BB.mesh)
       }
       _handlePluginEventHardBindForSubMesh(BB) {
-        for (const jB of this._activePluginsForExtraEvents) jB.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, BB.subMesh)
+        for (const IB of this._activePluginsForExtraEvents) IB.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, BB.subMesh)
       }
       _handlePluginEventBindForSubMesh(BB) {
-        for (const jB of this._activePlugins) jB.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, BB.subMesh)
+        for (const IB of this._activePlugins) IB.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, BB.subMesh)
       }
       _handlePluginEventHasRenderTargetTextures(BB) {
-        let jB = !1;
-        for (const zB of this._activePluginsForExtraEvents)
-          if (jB = zB.hasRenderTargetTextures(), jB) break;
-        BB.hasRenderTargetTextures = jB
+        let IB = !1;
+        for (const ZB of this._activePluginsForExtraEvents)
+          if (IB = ZB.hasRenderTargetTextures(), IB) break;
+        BB.hasRenderTargetTextures = IB
       }
       _handlePluginEventFillRenderTargetTextures(BB) {
-        for (const jB of this._activePluginsForExtraEvents) jB.fillRenderTargetTextures(BB.renderTargets)
+        for (const IB of this._activePluginsForExtraEvents) IB.fillRenderTargetTextures(BB.renderTargets)
       }
-      _handlePluginEvent(BB, jB) {
+      _handlePluginEvent(BB, IB) {
         switch (BB) {
           case 512: {
-            const BB = jB;
-            for (const jB of this._activePlugins) jB.getActiveTextures(BB.activeTextures);
+            const BB = IB;
+            for (const IB of this._activePlugins) IB.getActiveTextures(BB.activeTextures);
             break
           }
           case 256: {
-            const BB = jB;
-            for (const jB of this._activePlugins) jB.getAnimatables(BB.animatables);
+            const BB = IB;
+            for (const IB of this._activePlugins) IB.getAnimatables(BB.animatables);
             break
           }
           case 1024: {
-            const BB = jB;
-            let zB = !1;
-            for (const jB of this._activePlugins)
-              if (zB = jB.hasTexture(BB.texture), zB) break;
-            BB.hasTexture = zB;
+            const BB = IB;
+            let ZB = !1;
+            for (const IB of this._activePlugins)
+              if (ZB = IB.hasTexture(BB.texture), ZB) break;
+            BB.hasTexture = ZB;
             break
           }
           case 2: {
-            const BB = jB;
-            for (const jB of this._plugins) jB.dispose(BB.forceDisposeTextures);
+            const BB = IB;
+            for (const IB of this._plugins) IB.dispose(BB.forceDisposeTextures);
             break
           }
           case 4:
-            jB.defineNames = this._defineNamesFromPlugins;
+            IB.defineNames = this._defineNamesFromPlugins;
             break;
           case 128: {
-            const BB = jB;
-            for (const jB of this._activePlugins) BB.fallbackRank = jB.addFallbacks(BB.defines, BB.fallbacks, BB.fallbackRank), jB.getAttributes(BB.attributes, this._scene, BB.mesh);
+            const BB = IB;
+            for (const IB of this._activePlugins) BB.fallbackRank = IB.addFallbacks(BB.defines, BB.fallbacks, BB.fallbackRank), IB.getAttributes(BB.attributes, this._scene, BB.mesh);
             this._uniformList.length > 0 && BB.uniforms.push(...this._uniformList), this._samplerList.length > 0 && BB.samplers.push(...this._samplerList), this._uboList.length > 0 && BB.uniformBuffersNames.push(...this._uboList), BB.customCode = this._injectCustomCode(BB, BB.customCode);
             break
           }
           case 8: {
-            const BB = jB;
+            const BB = IB;
             this._uboDeclaration = "", this._vertexDeclaration = "", this._fragmentDeclaration = "", this._uniformList = [], this._samplerList = [], this._uboList = [];
-            const zB = 1 === this._material.shaderLanguage;
-            for (const jB of this._plugins) {
-              const QB = jB.getUniforms(this._material.shaderLanguage);
-              if (QB) {
-                if (QB.ubo)
-                  for (const jB of QB.ubo) {
-                    if (jB.size && jB.type) {
-                      const QB = jB.arraySize ?? 0;
-                      if (BB.ubo.addUniform(jB.name, jB.size, QB), zB) {
+            const ZB = 1 === this._material.shaderLanguage;
+            for (const IB of this._plugins) {
+              const TB = IB.getUniforms(this._material.shaderLanguage);
+              if (TB) {
+                if (TB.ubo)
+                  for (const IB of TB.ubo) {
+                    if (IB.size && IB.type) {
+                      const TB = IB.arraySize ?? 0;
+                      if (BB.ubo.addUniform(IB.name, IB.size, TB), ZB) {
                         let BB;
-                        switch (jB.type) {
+                        switch (IB.type) {
                           case "mat4":
                             BB = "mat4x4f";
                             break;
@@ -744,100 +744,100 @@ export const modules = {
                             BB = "f32";
                             break;
                           default:
-                            BB = `${jB.type}f`
+                            BB = `${IB.type}f`
                         }
-                        this._uboDeclaration += QB > 0 ? `uniform ${jB.name}: array<${BB}, ${QB}>;\n` : `uniform ${jB.name}: ${BB};\n`
-                      } else this._uboDeclaration += `${jB.type} ${jB.name}${QB>0?`[${QB}]`:""};\n`
+                        this._uboDeclaration += TB > 0 ? `uniform ${IB.name}: array<${BB}, ${TB}>;\n` : `uniform ${IB.name}: ${BB};\n`
+                      } else this._uboDeclaration += `${IB.type} ${IB.name}${TB>0?`[${TB}]`:""};\n`
                     }
-                    this._uniformList.push(jB.name)
+                    this._uniformList.push(IB.name)
                   }
-                QB.vertex && (this._vertexDeclaration += QB.vertex + "\n"), QB.fragment && (this._fragmentDeclaration += QB.fragment + "\n"), QB.externalUniforms && this._uniformList.push(...QB.externalUniforms)
+                TB.vertex && (this._vertexDeclaration += TB.vertex + "\n"), TB.fragment && (this._fragmentDeclaration += TB.fragment + "\n"), TB.externalUniforms && this._uniformList.push(...TB.externalUniforms)
               }
-              jB.getSamplers(this._samplerList), jB.getUniformBuffersNames(this._uboList)
+              IB.getSamplers(this._samplerList), IB.getUniformBuffersNames(this._uboList)
             }
             break
           }
         }
       }
-      _collectPointNames(BB, jB) {
-        if (jB)
-          for (const zB in jB) this._codeInjectionPoints[BB] || (this._codeInjectionPoints[BB] = {}), this._codeInjectionPoints[BB][zB] = !0
+      _collectPointNames(BB, IB) {
+        if (IB)
+          for (const ZB in IB) this._codeInjectionPoints[BB] || (this._codeInjectionPoints[BB] = {}), this._codeInjectionPoints[BB][ZB] = !0
       }
-      _injectCustomCode(BB, jB) {
-        return (zB, QB) => {
-          jB && (QB = jB(zB, QB)), this._uboDeclaration && (QB = QB.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (QB = QB.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (QB = QB.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
-          const nB = this._codeInjectionPoints?.[zB];
-          if (!nB) return QB;
-          let uB = null;
-          for (let jB in nB) {
-            let nB = "";
-            for (const QB of this._activePlugins) {
-              const NB = this._material.shaderLanguage;
-              let UB = QB.getCustomCode(zB, NB)?.[jB];
-              UB && (QB.resolveIncludes && (null === uB && (uB = {
+      _injectCustomCode(BB, IB) {
+        return (ZB, TB) => {
+          IB && (TB = IB(ZB, TB)), this._uboDeclaration && (TB = TB.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (TB = TB.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (TB = TB.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
+          const JB = this._codeInjectionPoints?.[ZB];
+          if (!JB) return TB;
+          let kB = null;
+          for (let IB in JB) {
+            let JB = "";
+            for (const TB of this._activePlugins) {
+              const vB = this._material.shaderLanguage;
+              let cB = TB.getCustomCode(ZB, vB)?.[IB];
+              cB && (TB.resolveIncludes && (null === kB && (kB = {
                 defines: [],
                 indexParameters: BB.indexParameters,
                 isFragment: !1,
                 shouldUseHighPrecisionShader: this._engine._shouldUseHighPrecisionShader,
                 processor: void 0,
                 supportsUniformBuffers: this._engine.supportsUniformBuffers,
-                shadersRepository: IB.e.GetShadersRepository(NB),
-                includesShadersStore: IB.e.GetIncludesShadersStore(NB),
+                shadersRepository: GB.c.GetShadersRepository(vB),
+                includesShadersStore: GB.c.GetIncludesShadersStore(vB),
                 version: void 0,
                 platformName: this._engine.shaderPlatformName,
                 processingContext: void 0,
                 isNDCHalfZRange: this._engine.isNDCHalfZRange,
-                jQB: this._engine.jQB,
+                iTB: this._engine.iTB,
                 processCodeAfterIncludes: void 0
-              }), uB.isFragment = "fragment" === zB, (0, dB.h)(UB, uB, (BB => UB = BB))), nB += UB + "\n")
+              }), kB.isFragment = "fragment" === ZB, (0, oB.j)(cB, kB, (BB => cB = BB))), JB += cB + "\n")
             }
-            if (nB.length > 0)
-              if ("!" === jB.charAt(0)) {
-                jB = jB.substring(1);
+            if (JB.length > 0)
+              if ("!" === IB.charAt(0)) {
+                IB = IB.substring(1);
                 let BB = "g";
-                if ("!" === jB.charAt(0)) BB = "", jB = jB.substring(1);
+                if ("!" === IB.charAt(0)) BB = "", IB = IB.substring(1);
                 else {
-                  const zB = NB.exec(jB);
-                  zB && zB.length >= 2 && (BB = zB[1], jB = jB.substring(BB.length + 1))
+                  const ZB = vB.exec(IB);
+                  ZB && ZB.length >= 2 && (BB = ZB[1], IB = IB.substring(BB.length + 1))
                 }
                 BB.indexOf("g") < 0 && (BB += "g");
-                const zB = new RegExp(jB, BB);
-                let dB = zB.exec(QB);
-                for (; null !== dB;) {
+                const ZB = new RegExp(IB, BB);
+                let oB = ZB.exec(TB);
+                for (; null !== oB;) {
                   const {
                     index: BB
-                  } = dB, jB = UB(nB, dB);
-                  QB = QB.substring(0, BB) + jB + QB.substring(BB + dB[0].length), zB.lastIndex = BB + jB.length, dB = zB.exec(QB)
+                  } = oB, IB = cB(JB, oB);
+                  TB = TB.substring(0, BB) + IB + TB.substring(BB + oB[0].length), ZB.lastIndex = BB + IB.length, oB = ZB.exec(TB)
                 }
               } else {
-                const BB = "#define " + jB;
-                QB = QB.replace(BB, "\n" + nB + "\n" + BB)
+                const BB = "#define " + IB;
+                TB = TB.replace(BB, "\n" + JB + "\n" + BB)
               }
           }
-          return QB
+          return TB
         }
       }
     }
-    uB._MaterialPluginClassToMainDefine = {}, uB._MaterialPluginCounter = 0;
+    kB._MaterialPluginClassToMainDefine = {}, kB._MaterialPluginCounter = 0;
 
-    function UB(BB, jB) {
-      return BB.replace(/\$(\d+)/g, ((BB, zB) => {
-        const QB = Number(zB);
-        return QB < jB.length ? jB[QB] : ""
+    function cB(BB, IB) {
+      return BB.replace(/\$(\d+)/g, ((BB, ZB) => {
+        const TB = Number(ZB);
+        return TB < IB.length ? IB[TB] : ""
       }))
     }
-    var aB = zB(40086),
-      pB = zB(37222);
-    let rB = (() => {
+    var nB = ZB(40085),
+      hB = ZB(37170);
+    let zB = (() => {
         var BB;
-        let jB, zB, dB, IB, NB = [],
-          UB = [],
-          pB = [],
-          rB = [],
-          sB = [],
-          JB = [],
-          mB = [],
-          yB = [];
+        let IB, ZB, oB, GB, vB = [],
+          cB = [],
+          hB = [],
+          zB = [],
+          FB = [],
+          NB = [],
+          gB = [],
+          qB = [];
         return BB = class {
           isCompatible(BB) {
             return 0 === BB
@@ -845,39 +845,39 @@ export const modules = {
           _enable(BB) {
             BB && this._pluginManager._activatePlugin(this)
           }
-          constructor(BB, jB, zB, nB) {
-            let dB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-              IB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-              aB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-            this.name = (0, QB.g)(this, NB, void 0), this.priority = ((0, QB.g)(this, UB), (0, QB.g)(this, pB, 500)), this.resolveIncludes = ((0, QB.g)(this, rB), (0, QB.g)(this, sB, !1)), this.registerForExtraEvents = ((0, QB.g)(this, JB), (0, QB.g)(this, mB, !1)), this.doNotSerialize = ((0, QB.g)(this, yB), !1), this._material = BB, this.name = jB, this.priority = zB, this.resolveIncludes = aB, BB.pluginManager || (BB.pluginManager = new uB(BB), BB.pY.add((() => {
+          constructor(BB, IB, ZB, JB) {
+            let oB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+              GB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+              nB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+            this.name = (0, TB.l)(this, vB, void 0), this.priority = ((0, TB.l)(this, cB), (0, TB.l)(this, hB, 500)), this.resolveIncludes = ((0, TB.l)(this, zB), (0, TB.l)(this, FB, !1)), this.registerForExtraEvents = ((0, TB.l)(this, NB), (0, TB.l)(this, gB, !1)), this.doNotSerialize = ((0, TB.l)(this, qB), !1), this._material = BB, this.name = IB, this.priority = ZB, this.resolveIncludes = nB, BB.pluginManager || (BB.pluginManager = new kB(BB), BB.oR.add((() => {
               BB.pluginManager = void 0
-            }))), this._pluginDefineNames = nB, this._pluginManager = BB.pluginManager, dB && this._pluginManager._addPlugin(this), IB && this._enable(!0), this.markAllDefinesAsDirty = BB._dirtyCallbacks[127]
+            }))), this._pluginDefineNames = JB, this._pluginManager = BB.pluginManager, oB && this._pluginManager._addPlugin(this), GB && this._enable(!0), this.markAllDefinesAsDirty = BB._dirtyCallbacks[127]
           }
           getClassName() {
             return "MaterialPluginBase"
           }
-          isReadyForSubMesh(BB, jB, zB, QB) {
+          isReadyForSubMesh(BB, IB, ZB, TB) {
             return !0
           }
-          hardBindForSubMesh(BB, jB, zB, QB) {}
-          bindForSubMesh(BB, jB, zB, QB) {}
+          hardBindForSubMesh(BB, IB, ZB, TB) {}
+          bindForSubMesh(BB, IB, ZB, TB) {}
           dispose(BB) {}
           getCustomCode(BB) {
             return null
           }
           collectDefines(BB) {
             if (this._pluginDefineNames)
-              for (const jB of Object.keys(this._pluginDefineNames)) {
-                if ("_" === jB[0]) continue;
-                const zB = typeof this._pluginDefineNames[jB];
-                BB[jB] = {
-                  type: "number" === zB ? "number" : "string" === zB ? "string" : "boolean" === zB ? "boolean" : "object",
-                  default: this._pluginDefineNames[jB]
+              for (const IB of Object.keys(this._pluginDefineNames)) {
+                if ("_" === IB[0]) continue;
+                const ZB = typeof this._pluginDefineNames[IB];
+                BB[IB] = {
+                  type: "number" === ZB ? "number" : "string" === ZB ? "string" : "boolean" === ZB ? "boolean" : "object",
+                  default: this._pluginDefineNames[IB]
                 }
               }
           }
-          prepareDefinesBeforeAttributes(BB, jB, zB) {}
-          prepareDefines(BB, jB, zB) {}
+          prepareDefinesBeforeAttributes(BB, IB, ZB) {}
+          prepareDefines(BB, IB, ZB) {}
           hasTexture(BB) {
             return !1
           }
@@ -887,27 +887,27 @@ export const modules = {
           fillRenderTargetTextures(BB) {}
           getActiveTextures(BB) {}
           getAnimatables(BB) {}
-          addFallbacks(BB, jB, zB) {
-            return zB
+          addFallbacks(BB, IB, ZB) {
+            return ZB
           }
           getSamplers(BB) {}
-          getAttributes(BB, jB, zB) {}
+          getAttributes(BB, IB, ZB) {}
           getUniformBuffersNames(BB) {}
           getUniforms() {
             return {}
           }
           copyTo(BB) {
-            aB.b.Clone((() => BB), this)
+            nB.b.Clone((() => BB), this)
           }
           serialize() {
-            return aB.b.Serialize(this)
+            return nB.b.Serialize(this)
           }
-          parse(BB, jB, zB) {
-            aB.b.Parse((() => this), BB, jB, zB)
+          parse(BB, IB, ZB) {
+            nB.b.Parse((() => this), BB, IB, ZB)
           }
         }, (() => {
-          const uB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          jB = [(0, nB.A)()], zB = [(0, nB.A)()], dB = [(0, nB.A)()], IB = [(0, nB.A)()], (0, QB.e)(null, null, jB, {
+          const kB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          IB = [(0, JB.C)()], ZB = [(0, JB.C)()], oB = [(0, JB.C)()], GB = [(0, JB.C)()], (0, TB.j)(null, null, IB, {
             kind: "field",
             name: "name",
             static: !1,
@@ -915,12 +915,12 @@ export const modules = {
             access: {
               has: BB => "name" in BB,
               get: BB => BB.name,
-              set: (BB, jB) => {
-                BB.name = jB
+              set: (BB, IB) => {
+                BB.name = IB
               }
             },
-            metadata: uB
-          }, NB, UB), (0, QB.e)(null, null, zB, {
+            metadata: kB
+          }, vB, cB), (0, TB.j)(null, null, ZB, {
             kind: "field",
             name: "priority",
             static: !1,
@@ -928,12 +928,12 @@ export const modules = {
             access: {
               has: BB => "priority" in BB,
               get: BB => BB.priority,
-              set: (BB, jB) => {
-                BB.priority = jB
+              set: (BB, IB) => {
+                BB.priority = IB
               }
             },
-            metadata: uB
-          }, pB, rB), (0, QB.e)(null, null, dB, {
+            metadata: kB
+          }, hB, zB), (0, TB.j)(null, null, oB, {
             kind: "field",
             name: "resolveIncludes",
             static: !1,
@@ -941,12 +941,12 @@ export const modules = {
             access: {
               has: BB => "resolveIncludes" in BB,
               get: BB => BB.resolveIncludes,
-              set: (BB, jB) => {
-                BB.resolveIncludes = jB
+              set: (BB, IB) => {
+                BB.resolveIncludes = IB
               }
             },
-            metadata: uB
-          }, sB, JB), (0, QB.e)(null, null, IB, {
+            metadata: kB
+          }, FB, NB), (0, TB.j)(null, null, GB, {
             kind: "field",
             name: "registerForExtraEvents",
             static: !1,
@@ -954,30 +954,30 @@ export const modules = {
             access: {
               has: BB => "registerForExtraEvents" in BB,
               get: BB => BB.registerForExtraEvents,
-              set: (BB, jB) => {
-                BB.registerForExtraEvents = jB
+              set: (BB, IB) => {
+                BB.registerForExtraEvents = IB
               }
             },
-            metadata: uB
-          }, mB, yB), uB && Object.defineProperty(BB, Symbol.metadata, {
+            metadata: kB
+          }, gB, qB), kB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: uB
+            value: kB
           })
         })(), BB
       })(),
-      sB = !1;
+      FB = !1;
 
-    function JB() {
-      sB || (sB = !0, (0, pB.d)("BABYLON.MaterialPluginBase", rB))
+    function NB() {
+      FB || (FB = !0, (0, hB.i)("BABYLON.MaterialPluginBase", zB))
     }
   },
-  40364: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => QB
+  40330: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB
     });
-    class QB {
+    class TB {
       constructor() {
         this.previousWorldMatrices = {}, this.previousBones = {}
       }
@@ -985,417 +985,417 @@ export const modules = {
         BB.push("previousWorld", "previousViewProjection", "mPreviousBones")
       }
       static AddSamplers(BB) {}
-      bindForSubMesh(BB, jB, zB, QB, nB) {
-        if (jB.prePassRenderer && jB.prePassRenderer.enabled && jB.prePassRenderer.currentRTisSceneRT && (-1 !== jB.prePassRenderer.getIndex(2) || -1 !== jB.prePassRenderer.getIndex(11))) {
-          this.previousWorldMatrices[zB.uniqueId] || (this.previousWorldMatrices[zB.uniqueId] = QB.clone()), this.previousViewProjection || (this.previousViewProjection = jB.getTransformMatrix().clone(), this.currentViewProjection = jB.getTransformMatrix().clone());
-          const nB = jB.wJ();
-          this.currentViewProjection.updateFlag !== jB.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = nB.frameId, this.previousViewProjection.jH(this.currentViewProjection), this.currentViewProjection.jH(jB.getTransformMatrix())) : this._lastUpdateFrameId !== nB.frameId && (this._lastUpdateFrameId = nB.frameId, this.previousViewProjection.jH(this.currentViewProjection)), BB.setMatrix("previousWorld", this.previousWorldMatrices[zB.uniqueId]), BB.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[zB.uniqueId] = QB.clone()
+      bindForSubMesh(BB, IB, ZB, TB, JB) {
+        if (IB.prePassRenderer && IB.prePassRenderer.enabled && IB.prePassRenderer.currentRTisSceneRT && (-1 !== IB.prePassRenderer.getIndex(2) || -1 !== IB.prePassRenderer.getIndex(11))) {
+          this.previousWorldMatrices[ZB.uniqueId] || (this.previousWorldMatrices[ZB.uniqueId] = TB.clone()), this.previousViewProjection || (this.previousViewProjection = IB.getTransformMatrix().clone(), this.currentViewProjection = IB.getTransformMatrix().clone());
+          const JB = IB.PN();
+          this.currentViewProjection.updateFlag !== IB.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = JB.frameId, this.previousViewProjection.TY(this.currentViewProjection), this.currentViewProjection.TY(IB.getTransformMatrix())) : this._lastUpdateFrameId !== JB.frameId && (this._lastUpdateFrameId = JB.frameId, this.previousViewProjection.TY(this.currentViewProjection)), BB.setMatrix("previousWorld", this.previousWorldMatrices[ZB.uniqueId]), BB.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[ZB.uniqueId] = TB.clone()
         }
       }
     }
   },
-  40482: (BB, jB, zB) => {
-    function QB(BB) {
+  40437: (BB, IB, ZB) => {
+    function TB(BB) {
       return class extends BB {
         constructor() {
           super(...arguments), this.PREPASS = !1, this.PREPASS_COLOR = !1, this.PREPASS_COLOR_INDEX = -1, this.PREPASS_IRRADIANCE_LEGACY = !1, this.PREPASS_IRRADIANCE_LEGACY_INDEX = -1, this.PREPASS_IRRADIANCE = !1, this.PREPASS_IRRADIANCE_INDEX = -1, this.PREPASS_ALBEDO = !1, this.PREPASS_ALBEDO_INDEX = -1, this.PREPASS_ALBEDO_SQRT = !1, this.PREPASS_ALBEDO_SQRT_INDEX = -1, this.PREPASS_DEPTH = !1, this.PREPASS_DEPTH_INDEX = -1, this.PREPASS_SCREENSPACE_DEPTH = !1, this.PREPASS_SCREENSPACE_DEPTH_INDEX = -1, this.PREPASS_NORMALIZED_VIEW_DEPTH = !1, this.PREPASS_NORMALIZED_VIEW_DEPTH_INDEX = -1, this.PREPASS_NORMAL = !1, this.PREPASS_NORMAL_INDEX = -1, this.PREPASS_NORMAL_WORLDSPACE = !1, this.PREPASS_WORLD_NORMAL = !1, this.PREPASS_WORLD_NORMAL_INDEX = -1, this.PREPASS_POSITION = !1, this.PREPASS_POSITION_INDEX = -1, this.PREPASS_LOCAL_POSITION = !1, this.PREPASS_LOCAL_POSITION_INDEX = -1, this.PREPASS_VELOCITY = !1, this.PREPASS_VELOCITY_INDEX = -1, this.PREPASS_VELOCITY_LINEAR = !1, this.PREPASS_VELOCITY_LINEAR_INDEX = -1, this.PREPASS_REFLECTIVITY = !1, this.PREPASS_REFLECTIVITY_INDEX = -1, this.PREPASS_OBJECT_ID = !1, this.PREPASS_OBJECT_ID_INDEX = -1, this.PREPASS_OBJECT_ID_R8 = !1, this.PREPASS_MESH_BLEND_TAG = !1, this.PREPASS_MESH_BLEND_TAG_INDEX = -1, this.SCENE_MRT_COUNT = 0
         }
       }
     }
-    zB.d(jB, {
-      b: () => QB
+    ZB.d(IB, {
+      b: () => TB
     })
   },
-  40350: (BB, jB, zB) => {
-    zB.d(jB, {
-      StandardMaterial: () => QB.e
+  40318: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      StandardMaterial: () => TB.f
     });
-    var QB = zB(40355);
-    (0, QB.c)()
+    var TB = ZB(40322);
+    (0, TB.d)()
   },
-  40355: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => XB,
-      e: () => VB
+  40322: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => rB,
+      f: () => PB
     });
-    var QB = zB(40066),
-      nB = zB(40068),
-      dB = zB(40171),
-      IB = zB(40156),
-      NB = zB(37379),
-      uB = zB(40211),
-      UB = zB(40364),
-      aB = zB(40373),
-      pB = zB(40180),
-      rB = zB(40380),
-      sB = zB(40376),
-      JB = zB(40438),
-      mB = zB(40435),
-      yB = zB(40445),
-      kB = zB(40451),
-      GB = zB(40432),
-      LB = zB(40466),
-      gB = zB(40428),
-      tB = zB(40086),
-      SB = zB(40473),
-      MB = zB(40475),
-      EB = zB(40478),
-      iB = zB(40482),
-      qB = zB(40491),
-      fB = zB(37222),
-      oB = zB(39965);
-    const HB = {
+    var TB = ZB(40061),
+      JB = ZB(40065),
+      oB = ZB(40163),
+      GB = ZB(40148),
+      vB = ZB(37311),
+      kB = ZB(40188),
+      cB = ZB(40330),
+      nB = ZB(40333),
+      hB = ZB(40166),
+      zB = ZB(40339),
+      FB = ZB(40335),
+      NB = ZB(40390),
+      gB = ZB(40383),
+      qB = ZB(40395),
+      yB = ZB(40400),
+      UB = ZB(40380),
+      WB = ZB(40416),
+      dB = ZB(40371),
+      CB = ZB(40085),
+      QB = ZB(40425),
+      sB = ZB(40431),
+      wB = ZB(40433),
+      OB = ZB(40437),
+      YB = ZB(40443),
+      iB = ZB(37170),
+      pB = ZB(39931);
+    const aB = {
       effect: null,
       subMesh: null
     };
-    class DB extends((0, iB.b)((0, EB.d)(sB.b))) {}
-    class FB extends((0, aB.e)(DB)) {
+    class HB extends((0, OB.b)((0, wB.b)(FB.e))) {}
+    class MB extends((0, nB.c)(HB)) {
       constructor(BB) {
         super(BB), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
       }
     }
-    class YB extends((0, qB.d)(JB.e)) {}
-    let VB = (() => {
-        var BB, jB, aB, sB, EB, iB, qB, fB, oB, DB, VB, hB, XB, ZB, AB, TB, PB, WB, eB, lB, wB, xB, KB, CB, cB, bB, vB, RB, OB, Bj, jj, zj, Qj;
-        let nj, dj, Ij, Nj, uj, Uj, aj, pj, rj, sj, Jj, mj, yj, kj, Gj, Lj, gj, tj, Sj, Mj, Ej, ij, qj, fj, oj, Hj, Dj, Fj, Yj, Vj, hj, Xj, Zj, Aj, Tj, Pj, Wj, ej, lj, wj, xj, Kj, Cj, cj, bj, vj, Rj, Oj, Bz, jz, zz, Qz, nz, dz, Iz, Nz, uz, Uz, az, pz, rz, sz, Jz, mz, yz, kz, Gz, Lz, gz, tz, Sz, Mz, Ez, iz = YB,
-          qz = [],
-          fz = [],
-          oz = [],
-          Hz = [],
-          Dz = [],
-          Fz = [],
-          Yz = [],
-          Vz = [],
-          hz = [],
-          Xz = [],
-          Zz = [],
-          Az = [],
-          Tz = [],
-          Pz = [],
-          Wz = [],
-          ez = [],
-          lz = [],
-          wz = [],
-          xz = [],
-          Kz = [],
-          Cz = [],
-          cz = [],
-          bz = [],
-          vz = [],
-          Rz = [],
-          Oz = [],
-          BQ = [],
-          jQ = [],
-          zQ = [],
-          QQ = [],
-          nQ = [],
-          dQ = [],
-          IQ = [],
-          NQ = [],
-          uQ = [],
-          UQ = [],
-          aQ = [],
-          pQ = [],
-          rQ = [],
-          sQ = [],
-          JQ = [],
-          mQ = [],
-          yQ = [],
-          kQ = [],
-          GQ = [],
-          LQ = [],
-          gQ = [],
-          tQ = [],
-          SQ = [],
-          MQ = [],
-          EQ = [],
-          iQ = [],
-          qQ = [],
-          fQ = [],
-          oQ = [],
-          HQ = [],
-          DQ = [],
-          FQ = [],
-          YQ = [],
-          VQ = [],
-          hQ = [],
-          XQ = [],
-          ZQ = [],
-          AQ = [],
-          TQ = [],
-          PQ = [],
-          WQ = [],
-          eQ = [],
-          lQ = [],
-          wQ = [],
-          xQ = [],
-          KQ = [],
-          CQ = [],
-          cQ = [],
-          bQ = [],
-          vQ = [],
-          RQ = [],
-          OQ = [],
-          Bn = [],
-          jn = [],
-          zn = [],
-          Qn = [],
-          nn = [],
-          dn = [],
-          In = [],
-          Nn = [],
-          un = [],
-          Un = [],
-          an = [],
-          pn = [],
-          rn = [],
-          sn = [],
-          Jn = [],
-          mn = [],
-          yn = [],
-          kn = [],
-          Gn = [],
-          Ln = [],
-          gn = [],
-          tn = [],
-          Sn = [],
-          Mn = [],
-          En = [],
-          qn = [],
-          fn = [],
-          Hn = [],
-          Dn = [],
-          Fn = [],
-          Yn = [],
-          Vn = [],
-          hn = [],
-          Xn = [],
-          Zn = [],
-          An = [],
-          Tn = [],
-          Pn = [],
-          Wn = [],
-          en = [],
-          wn = [],
-          xn = [],
-          Kn = [],
-          Cn = [],
-          cn = [],
-          bn = [],
-          vn = [],
-          Rn = [],
-          On = [],
-          Bd = [],
-          jd = [],
-          zd = [],
-          Qd = [],
-          nd = [],
-          dd = [],
-          Id = [],
-          Nd = [],
-          ud = [],
-          Ud = [],
-          pd = [],
-          rd = [],
-          sd = [],
-          Jd = [],
-          md = [],
-          yd = [],
-          kd = [],
-          Gd = [],
-          Ld = [];
-        return BB = class extends iz {
+    class jB extends((0, YB.b)(NB.b)) {}
+    let PB = (() => {
+        var BB, IB, nB, FB, wB, OB, YB, iB, pB, HB, PB, RB, rB, mB, XB, LB, eB, uB, fB, lB, AB, tB, bB, xB, EB, DB, KB, VB, SB, BI, II, ZI, TI;
+        let JI, oI, GI, vI, kI, cI, nI, hI, zI, FI, NI, gI, qI, yI, UI, WI, dI, CI, QI, sI, wI, OI, YI, iI, pI, aI, HI, MI, jI, PI, RI, rI, mI, XI, LI, eI, uI, fI, lI, AI, tI, bI, xI, EI, DI, KI, VI, SI, BZ, IZ, ZZ, TZ, JZ, oZ, GZ, vZ, kZ, cZ, nZ, hZ, zZ, FZ, NZ, gZ, qZ, yZ, UZ, WZ, dZ, CZ, QZ, sZ, wZ, OZ = jB,
+          YZ = [],
+          iZ = [],
+          pZ = [],
+          aZ = [],
+          HZ = [],
+          MZ = [],
+          jZ = [],
+          PZ = [],
+          RZ = [],
+          rZ = [],
+          mZ = [],
+          XZ = [],
+          LZ = [],
+          eZ = [],
+          uZ = [],
+          fZ = [],
+          lZ = [],
+          AZ = [],
+          tZ = [],
+          bZ = [],
+          xZ = [],
+          EZ = [],
+          DZ = [],
+          KZ = [],
+          VZ = [],
+          SZ = [],
+          BT = [],
+          IT = [],
+          ZT = [],
+          TT = [],
+          JT = [],
+          oT = [],
+          GT = [],
+          vT = [],
+          kT = [],
+          cT = [],
+          nT = [],
+          hT = [],
+          zT = [],
+          FT = [],
+          NT = [],
+          gT = [],
+          qT = [],
+          yT = [],
+          UT = [],
+          WT = [],
+          dT = [],
+          CT = [],
+          QT = [],
+          sT = [],
+          wT = [],
+          OT = [],
+          YT = [],
+          iT = [],
+          pT = [],
+          aT = [],
+          HT = [],
+          MT = [],
+          jT = [],
+          PT = [],
+          RT = [],
+          rT = [],
+          mT = [],
+          XT = [],
+          LT = [],
+          eT = [],
+          uT = [],
+          fT = [],
+          lT = [],
+          AT = [],
+          tT = [],
+          bT = [],
+          xT = [],
+          ET = [],
+          DT = [],
+          KT = [],
+          VT = [],
+          ST = [],
+          BJ = [],
+          IJ = [],
+          ZJ = [],
+          TJ = [],
+          JJ = [],
+          oJ = [],
+          GJ = [],
+          vJ = [],
+          kJ = [],
+          cJ = [],
+          nJ = [],
+          hJ = [],
+          zJ = [],
+          FJ = [],
+          NJ = [],
+          gJ = [],
+          qJ = [],
+          yJ = [],
+          UJ = [],
+          WJ = [],
+          dJ = [],
+          CJ = [],
+          QJ = [],
+          sJ = [],
+          wJ = [],
+          OJ = [],
+          YJ = [],
+          iJ = [],
+          pJ = [],
+          aJ = [],
+          HJ = [],
+          MJ = [],
+          jJ = [],
+          PJ = [],
+          RJ = [],
+          rJ = [],
+          mJ = [],
+          XJ = [],
+          LJ = [],
+          eJ = [],
+          uJ = [],
+          fJ = [],
+          lJ = [],
+          AJ = [],
+          tJ = [],
+          bJ = [],
+          xJ = [],
+          EJ = [],
+          DJ = [],
+          KJ = [],
+          VJ = [],
+          SJ = [],
+          Bo = [],
+          Io = [],
+          Zo = [],
+          To = [],
+          Jo = [],
+          oo = [],
+          Go = [],
+          vo = [],
+          ko = [],
+          co = [],
+          no = [],
+          ho = [],
+          zo = [],
+          Fo = [],
+          No = [],
+          go = [];
+        return BB = class extends OZ {
           get diffuseTexture() {
-            return (0, QB.b)(this, jB, "f")
+            return (0, TB.b)(this, IB, "f")
           }
           set diffuseTexture(BB) {
-            (0, QB.d)(this, jB, BB, "f")
+            (0, TB.f)(this, IB, BB, "f")
           }
           get ambientTexture() {
-            return (0, QB.b)(this, aB, "f")
+            return (0, TB.b)(this, nB, "f")
           }
           set ambientTexture(BB) {
-            (0, QB.d)(this, aB, BB, "f")
+            (0, TB.f)(this, nB, BB, "f")
           }
           get opacityTexture() {
-            return (0, QB.b)(this, sB, "f")
+            return (0, TB.b)(this, FB, "f")
           }
           set opacityTexture(BB) {
-            (0, QB.d)(this, sB, BB, "f")
+            (0, TB.f)(this, FB, BB, "f")
           }
           get reflectionTexture() {
-            return (0, QB.b)(this, EB, "f")
+            return (0, TB.b)(this, wB, "f")
           }
           set reflectionTexture(BB) {
-            (0, QB.d)(this, EB, BB, "f")
+            (0, TB.f)(this, wB, BB, "f")
           }
           get emissiveTexture() {
-            return (0, QB.b)(this, iB, "f")
+            return (0, TB.b)(this, OB, "f")
           }
           set emissiveTexture(BB) {
-            (0, QB.d)(this, iB, BB, "f")
+            (0, TB.f)(this, OB, BB, "f")
           }
           get specularTexture() {
-            return (0, QB.b)(this, qB, "f")
+            return (0, TB.b)(this, YB, "f")
           }
           set specularTexture(BB) {
-            (0, QB.d)(this, qB, BB, "f")
+            (0, TB.f)(this, YB, BB, "f")
           }
           get bumpTexture() {
-            return (0, QB.b)(this, fB, "f")
+            return (0, TB.b)(this, iB, "f")
           }
           set bumpTexture(BB) {
-            (0, QB.d)(this, fB, BB, "f")
+            (0, TB.f)(this, iB, BB, "f")
           }
           get lightmapTexture() {
-            return (0, QB.b)(this, oB, "f")
+            return (0, TB.b)(this, pB, "f")
           }
           set lightmapTexture(BB) {
-            (0, QB.d)(this, oB, BB, "f")
+            (0, TB.f)(this, pB, BB, "f")
           }
           get refractionTexture() {
-            return (0, QB.b)(this, DB, "f")
+            return (0, TB.b)(this, HB, "f")
           }
           set refractionTexture(BB) {
-            (0, QB.d)(this, DB, BB, "f")
+            (0, TB.f)(this, HB, BB, "f")
           }
           get useAlphaFromDiffuseTexture() {
-            return (0, QB.b)(this, VB, "f")
+            return (0, TB.b)(this, PB, "f")
           }
           set useAlphaFromDiffuseTexture(BB) {
-            (0, QB.d)(this, VB, BB, "f")
+            (0, TB.f)(this, PB, BB, "f")
           }
           get useEmissiveAsIllumination() {
-            return (0, QB.b)(this, hB, "f")
+            return (0, TB.b)(this, RB, "f")
           }
           set useEmissiveAsIllumination(BB) {
-            (0, QB.d)(this, hB, BB, "f")
+            (0, TB.f)(this, RB, BB, "f")
           }
           get linkEmissiveWithDiffuse() {
-            return (0, QB.b)(this, XB, "f")
+            return (0, TB.b)(this, rB, "f")
           }
           set linkEmissiveWithDiffuse(BB) {
-            (0, QB.d)(this, XB, BB, "f")
+            (0, TB.f)(this, rB, BB, "f")
           }
           get useSpecularOverAlpha() {
-            return (0, QB.b)(this, ZB, "f")
+            return (0, TB.b)(this, mB, "f")
           }
           set useSpecularOverAlpha(BB) {
-            (0, QB.d)(this, ZB, BB, "f")
+            (0, TB.f)(this, mB, BB, "f")
           }
           get useReflectionOverAlpha() {
-            return (0, QB.b)(this, AB, "f")
+            return (0, TB.b)(this, XB, "f")
           }
           set useReflectionOverAlpha(BB) {
-            (0, QB.d)(this, AB, BB, "f")
+            (0, TB.f)(this, XB, BB, "f")
           }
           get disableLighting() {
-            return (0, QB.b)(this, TB, "f")
+            return (0, TB.b)(this, LB, "f")
           }
           set disableLighting(BB) {
-            (0, QB.d)(this, TB, BB, "f")
+            (0, TB.f)(this, LB, BB, "f")
           }
           get useObjectSpaceNormalMap() {
-            return (0, QB.b)(this, PB, "f")
+            return (0, TB.b)(this, eB, "f")
           }
           set useObjectSpaceNormalMap(BB) {
-            (0, QB.d)(this, PB, BB, "f")
+            (0, TB.f)(this, eB, BB, "f")
           }
           get useParallax() {
-            return (0, QB.b)(this, WB, "f")
+            return (0, TB.b)(this, uB, "f")
           }
           set useParallax(BB) {
-            (0, QB.d)(this, WB, BB, "f")
+            (0, TB.f)(this, uB, BB, "f")
           }
           get useParallaxOcclusion() {
-            return (0, QB.b)(this, eB, "f")
+            return (0, TB.b)(this, fB, "f")
           }
           set useParallaxOcclusion(BB) {
-            (0, QB.d)(this, eB, BB, "f")
+            (0, TB.f)(this, fB, BB, "f")
           }
           get roughness() {
-            return (0, QB.b)(this, lB, "f")
+            return (0, TB.b)(this, lB, "f")
           }
           set roughness(BB) {
-            (0, QB.d)(this, lB, BB, "f")
+            (0, TB.f)(this, lB, BB, "f")
           }
           get useLightmapAsShadowmap() {
-            return (0, QB.b)(this, wB, "f")
+            return (0, TB.b)(this, AB, "f")
           }
           set useLightmapAsShadowmap(BB) {
-            (0, QB.d)(this, wB, BB, "f")
+            (0, TB.f)(this, AB, BB, "f")
           }
           get diffuseFresnelParameters() {
-            return (0, QB.b)(this, xB, "f")
+            return (0, TB.b)(this, tB, "f")
           }
           set diffuseFresnelParameters(BB) {
-            (0, QB.d)(this, xB, BB, "f")
+            (0, TB.f)(this, tB, BB, "f")
           }
           get opacityFresnelParameters() {
-            return (0, QB.b)(this, KB, "f")
+            return (0, TB.b)(this, bB, "f")
           }
           set opacityFresnelParameters(BB) {
-            (0, QB.d)(this, KB, BB, "f")
+            (0, TB.f)(this, bB, BB, "f")
           }
           get reflectionFresnelParameters() {
-            return (0, QB.b)(this, CB, "f")
+            return (0, TB.b)(this, xB, "f")
           }
           set reflectionFresnelParameters(BB) {
-            (0, QB.d)(this, CB, BB, "f")
+            (0, TB.f)(this, xB, BB, "f")
           }
           get refractionFresnelParameters() {
-            return (0, QB.b)(this, cB, "f")
+            return (0, TB.b)(this, EB, "f")
           }
           set refractionFresnelParameters(BB) {
-            (0, QB.d)(this, cB, BB, "f")
+            (0, TB.f)(this, EB, BB, "f")
           }
           get emissiveFresnelParameters() {
-            return (0, QB.b)(this, bB, "f")
+            return (0, TB.b)(this, DB, "f")
           }
           set emissiveFresnelParameters(BB) {
-            (0, QB.d)(this, bB, BB, "f")
+            (0, TB.f)(this, DB, BB, "f")
           }
           get useReflectionFresnelFromSpecular() {
-            return (0, QB.b)(this, vB, "f")
+            return (0, TB.b)(this, KB, "f")
           }
           set useReflectionFresnelFromSpecular(BB) {
-            (0, QB.d)(this, vB, BB, "f")
+            (0, TB.f)(this, KB, BB, "f")
           }
           get useGlossinessFromSpecularMapAlpha() {
-            return (0, QB.b)(this, RB, "f")
+            return (0, TB.b)(this, VB, "f")
           }
           set useGlossinessFromSpecularMapAlpha(BB) {
-            (0, QB.d)(this, RB, BB, "f")
+            (0, TB.f)(this, VB, BB, "f")
           }
           get maxSimultaneousLights() {
-            return (0, QB.b)(this, OB, "f")
+            return (0, TB.b)(this, SB, "f")
           }
           set maxSimultaneousLights(BB) {
-            (0, QB.d)(this, OB, BB, "f")
+            (0, TB.f)(this, SB, BB, "f")
           }
           get invertNormalMapX() {
-            return (0, QB.b)(this, Bj, "f")
+            return (0, TB.b)(this, BI, "f")
           }
           set invertNormalMapX(BB) {
-            (0, QB.d)(this, Bj, BB, "f")
+            (0, TB.f)(this, BI, BB, "f")
           }
           get invertNormalMapY() {
-            return (0, QB.b)(this, jj, "f")
+            return (0, TB.b)(this, II, "f")
           }
           set invertNormalMapY(BB) {
-            (0, QB.d)(this, jj, BB, "f")
+            (0, TB.f)(this, II, BB, "f")
           }
           get twoSidedLighting() {
-            return (0, QB.b)(this, zj, "f")
+            return (0, TB.b)(this, ZI, "f")
           }
           set twoSidedLighting(BB) {
-            (0, QB.d)(this, zj, BB, "f")
+            (0, TB.f)(this, ZI, BB, "f")
           }
           get applyDecalMapAfterDetailMap() {
-            return (0, QB.b)(this, Qj, "f")
+            return (0, TB.b)(this, TI, "f")
           }
           set applyDecalMapAfterDetailMap(BB) {
-            (0, QB.d)(this, Qj, BB, "f")
+            (0, TB.f)(this, TI, BB, "f")
           }
           get isPrePassCapable() {
             return !this.disableDepthWrite
@@ -1403,8 +1403,8 @@ export const modules = {
           get canRenderToMRT() {
             return !0
           }
-          constructor(zB, nB) {
-            super(zB, nB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || BB.ForceGLSL), this._diffuseTexture = (0, QB.g)(this, qz, null), jB.set(this, ((0, QB.g)(this, fz), (0, QB.g)(this, oz, void 0))), this._ambientTexture = ((0, QB.g)(this, Hz), (0, QB.g)(this, Dz, null)), aB.set(this, ((0, QB.g)(this, Fz), (0, QB.g)(this, Yz, void 0))), this._opacityTexture = ((0, QB.g)(this, Vz), (0, QB.g)(this, hz, null)), sB.set(this, ((0, QB.g)(this, Xz), (0, QB.g)(this, Zz, void 0))), this._reflectionTexture = ((0, QB.g)(this, Az), (0, QB.g)(this, Tz, null)), EB.set(this, ((0, QB.g)(this, Pz), (0, QB.g)(this, Wz, void 0))), this._emissiveTexture = ((0, QB.g)(this, ez), (0, QB.g)(this, lz, null)), iB.set(this, ((0, QB.g)(this, wz), (0, QB.g)(this, xz, void 0))), this._specularTexture = ((0, QB.g)(this, Kz), (0, QB.g)(this, Cz, null)), qB.set(this, ((0, QB.g)(this, cz), (0, QB.g)(this, bz, void 0))), this._bumpTexture = ((0, QB.g)(this, vz), (0, QB.g)(this, Rz, null)), fB.set(this, ((0, QB.g)(this, Oz), (0, QB.g)(this, BQ, void 0))), this._lightmapTexture = ((0, QB.g)(this, jQ), (0, QB.g)(this, zQ, null)), oB.set(this, ((0, QB.g)(this, QQ), (0, QB.g)(this, nQ, void 0))), this._refractionTexture = ((0, QB.g)(this, dQ), (0, QB.g)(this, IQ, null)), DB.set(this, ((0, QB.g)(this, NQ), (0, QB.g)(this, uQ, void 0))), this.ambientColor = ((0, QB.g)(this, UQ), (0, QB.g)(this, aQ, new NB.d(0, 0, 0))), this.diffuseColor = ((0, QB.g)(this, pQ), (0, QB.g)(this, rQ, new NB.d(1, 1, 1))), this.specularColor = ((0, QB.g)(this, sQ), (0, QB.g)(this, JQ, new NB.d(1, 1, 1))), this.emissiveColor = ((0, QB.g)(this, mQ), (0, QB.g)(this, yQ, new NB.d(0, 0, 0))), this.specularPower = ((0, QB.g)(this, kQ), (0, QB.g)(this, GQ, 64)), this._useAlphaFromDiffuseTexture = ((0, QB.g)(this, LQ), (0, QB.g)(this, gQ, !1)), VB.set(this, ((0, QB.g)(this, tQ), (0, QB.g)(this, SQ, void 0))), this._useEmissiveAsIllumination = ((0, QB.g)(this, MQ), (0, QB.g)(this, EQ, !1)), hB.set(this, ((0, QB.g)(this, iQ), (0, QB.g)(this, qQ, void 0))), this._linkEmissiveWithDiffuse = ((0, QB.g)(this, fQ), (0, QB.g)(this, oQ, !1)), XB.set(this, ((0, QB.g)(this, HQ), (0, QB.g)(this, DQ, void 0))), this._useSpecularOverAlpha = ((0, QB.g)(this, FQ), (0, QB.g)(this, YQ, !1)), ZB.set(this, ((0, QB.g)(this, VQ), (0, QB.g)(this, hQ, void 0))), this._useReflectionOverAlpha = ((0, QB.g)(this, XQ), (0, QB.g)(this, ZQ, !1)), AB.set(this, ((0, QB.g)(this, AQ), (0, QB.g)(this, TQ, void 0))), this._disableLighting = ((0, QB.g)(this, PQ), (0, QB.g)(this, WQ, !1)), TB.set(this, ((0, QB.g)(this, eQ), (0, QB.g)(this, lQ, void 0))), this._useObjectSpaceNormalMap = ((0, QB.g)(this, wQ), (0, QB.g)(this, xQ, !1)), PB.set(this, ((0, QB.g)(this, KQ), (0, QB.g)(this, CQ, void 0))), this._useParallax = ((0, QB.g)(this, cQ), (0, QB.g)(this, bQ, !1)), WB.set(this, ((0, QB.g)(this, vQ), (0, QB.g)(this, RQ, void 0))), this._useParallaxOcclusion = ((0, QB.g)(this, OQ), (0, QB.g)(this, Bn, !1)), eB.set(this, ((0, QB.g)(this, jn), (0, QB.g)(this, zn, void 0))), this.parallaxScaleBias = ((0, QB.g)(this, Qn), (0, QB.g)(this, nn, .05)), this._roughness = ((0, QB.g)(this, dn), (0, QB.g)(this, In, 0)), lB.set(this, ((0, QB.g)(this, Nn), (0, QB.g)(this, un, void 0))), this.indexOfRefraction = ((0, QB.g)(this, Un), (0, QB.g)(this, an, .98)), this.invertRefractionY = ((0, QB.g)(this, pn), (0, QB.g)(this, rn, !0)), this.alphaCutOff = ((0, QB.g)(this, sn), (0, QB.g)(this, Jn, .4)), this._useLightmapAsShadowmap = ((0, QB.g)(this, mn), (0, QB.g)(this, yn, !1)), wB.set(this, ((0, QB.g)(this, kn), (0, QB.g)(this, Gn, void 0))), this._diffuseFresnelParameters = ((0, QB.g)(this, Ln), (0, QB.g)(this, gn, void 0)), xB.set(this, ((0, QB.g)(this, tn), (0, QB.g)(this, Sn, void 0))), this._opacityFresnelParameters = ((0, QB.g)(this, Mn), (0, QB.g)(this, En, void 0)), KB.set(this, ((0, QB.g)(this, qn), (0, QB.g)(this, fn, void 0))), this._reflectionFresnelParameters = ((0, QB.g)(this, Hn), (0, QB.g)(this, Dn, void 0)), CB.set(this, ((0, QB.g)(this, Fn), (0, QB.g)(this, Yn, void 0))), this._refractionFresnelParameters = ((0, QB.g)(this, Vn), (0, QB.g)(this, hn, void 0)), cB.set(this, ((0, QB.g)(this, Xn), (0, QB.g)(this, Zn, void 0))), this._emissiveFresnelParameters = ((0, QB.g)(this, An), (0, QB.g)(this, Tn, void 0)), bB.set(this, ((0, QB.g)(this, Pn), (0, QB.g)(this, Wn, void 0))), this._useReflectionFresnelFromSpecular = ((0, QB.g)(this, en), (0, QB.g)(this, wn, !1)), vB.set(this, ((0, QB.g)(this, xn), (0, QB.g)(this, Kn, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, QB.g)(this, Cn), (0, QB.g)(this, cn, !1)), RB.set(this, ((0, QB.g)(this, bn), (0, QB.g)(this, vn, void 0))), this._maxSimultaneousLights = ((0, QB.g)(this, Rn), (0, QB.g)(this, On, 4)), OB.set(this, ((0, QB.g)(this, Bd), (0, QB.g)(this, jd, void 0))), this._invertNormalMapX = ((0, QB.g)(this, zd), (0, QB.g)(this, Qd, !1)), Bj.set(this, ((0, QB.g)(this, nd), (0, QB.g)(this, dd, void 0))), this._invertNormalMapY = ((0, QB.g)(this, Id), (0, QB.g)(this, Nd, !1)), jj.set(this, ((0, QB.g)(this, ud), (0, QB.g)(this, Ud, void 0))), this._twoSidedLighting = ((0, QB.g)(this, pd), (0, QB.g)(this, rd, !1)), zj.set(this, ((0, QB.g)(this, sd), (0, QB.g)(this, Jd, void 0))), this._applyDecalMapAfterDetailMap = ((0, QB.g)(this, md), (0, QB.g)(this, yd, !1)), Qj.set(this, ((0, QB.g)(this, kd), (0, QB.g)(this, Gd, void 0))), this._vertexPullingMetadata = ((0, QB.g)(this, Ld), null), this._renderTargets = new dB.i(16), this._globalAmbientColor = new NB.d(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new kB.e(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new UB.e, this.getRenderTargetTextures = () => (this._renderTargets.reset(), BB.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), BB.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
+          constructor(ZB, JB) {
+            super(ZB, JB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || BB.ForceGLSL), this._diffuseTexture = (0, TB.l)(this, YZ, null), IB.set(this, ((0, TB.l)(this, iZ), (0, TB.l)(this, pZ, void 0))), this._ambientTexture = ((0, TB.l)(this, aZ), (0, TB.l)(this, HZ, null)), nB.set(this, ((0, TB.l)(this, MZ), (0, TB.l)(this, jZ, void 0))), this._opacityTexture = ((0, TB.l)(this, PZ), (0, TB.l)(this, RZ, null)), FB.set(this, ((0, TB.l)(this, rZ), (0, TB.l)(this, mZ, void 0))), this._reflectionTexture = ((0, TB.l)(this, XZ), (0, TB.l)(this, LZ, null)), wB.set(this, ((0, TB.l)(this, eZ), (0, TB.l)(this, uZ, void 0))), this._emissiveTexture = ((0, TB.l)(this, fZ), (0, TB.l)(this, lZ, null)), OB.set(this, ((0, TB.l)(this, AZ), (0, TB.l)(this, tZ, void 0))), this._specularTexture = ((0, TB.l)(this, bZ), (0, TB.l)(this, xZ, null)), YB.set(this, ((0, TB.l)(this, EZ), (0, TB.l)(this, DZ, void 0))), this._bumpTexture = ((0, TB.l)(this, KZ), (0, TB.l)(this, VZ, null)), iB.set(this, ((0, TB.l)(this, SZ), (0, TB.l)(this, BT, void 0))), this._lightmapTexture = ((0, TB.l)(this, IT), (0, TB.l)(this, ZT, null)), pB.set(this, ((0, TB.l)(this, TT), (0, TB.l)(this, JT, void 0))), this._refractionTexture = ((0, TB.l)(this, oT), (0, TB.l)(this, GT, null)), HB.set(this, ((0, TB.l)(this, vT), (0, TB.l)(this, kT, void 0))), this.ambientColor = ((0, TB.l)(this, cT), (0, TB.l)(this, nT, new vB.c(0, 0, 0))), this.diffuseColor = ((0, TB.l)(this, hT), (0, TB.l)(this, zT, new vB.c(1, 1, 1))), this.specularColor = ((0, TB.l)(this, FT), (0, TB.l)(this, NT, new vB.c(1, 1, 1))), this.emissiveColor = ((0, TB.l)(this, gT), (0, TB.l)(this, qT, new vB.c(0, 0, 0))), this.specularPower = ((0, TB.l)(this, yT), (0, TB.l)(this, UT, 64)), this._useAlphaFromDiffuseTexture = ((0, TB.l)(this, WT), (0, TB.l)(this, dT, !1)), PB.set(this, ((0, TB.l)(this, CT), (0, TB.l)(this, QT, void 0))), this._useEmissiveAsIllumination = ((0, TB.l)(this, sT), (0, TB.l)(this, wT, !1)), RB.set(this, ((0, TB.l)(this, OT), (0, TB.l)(this, YT, void 0))), this._linkEmissiveWithDiffuse = ((0, TB.l)(this, iT), (0, TB.l)(this, pT, !1)), rB.set(this, ((0, TB.l)(this, aT), (0, TB.l)(this, HT, void 0))), this._useSpecularOverAlpha = ((0, TB.l)(this, MT), (0, TB.l)(this, jT, !1)), mB.set(this, ((0, TB.l)(this, PT), (0, TB.l)(this, RT, void 0))), this._useReflectionOverAlpha = ((0, TB.l)(this, rT), (0, TB.l)(this, mT, !1)), XB.set(this, ((0, TB.l)(this, XT), (0, TB.l)(this, LT, void 0))), this._disableLighting = ((0, TB.l)(this, eT), (0, TB.l)(this, uT, !1)), LB.set(this, ((0, TB.l)(this, fT), (0, TB.l)(this, lT, void 0))), this._useObjectSpaceNormalMap = ((0, TB.l)(this, AT), (0, TB.l)(this, tT, !1)), eB.set(this, ((0, TB.l)(this, bT), (0, TB.l)(this, xT, void 0))), this._useParallax = ((0, TB.l)(this, ET), (0, TB.l)(this, DT, !1)), uB.set(this, ((0, TB.l)(this, KT), (0, TB.l)(this, VT, void 0))), this._useParallaxOcclusion = ((0, TB.l)(this, ST), (0, TB.l)(this, BJ, !1)), fB.set(this, ((0, TB.l)(this, IJ), (0, TB.l)(this, ZJ, void 0))), this.parallaxScaleBias = ((0, TB.l)(this, TJ), (0, TB.l)(this, JJ, .05)), this._roughness = ((0, TB.l)(this, oJ), (0, TB.l)(this, GJ, 0)), lB.set(this, ((0, TB.l)(this, vJ), (0, TB.l)(this, kJ, void 0))), this.indexOfRefraction = ((0, TB.l)(this, cJ), (0, TB.l)(this, nJ, .98)), this.invertRefractionY = ((0, TB.l)(this, hJ), (0, TB.l)(this, zJ, !0)), this.alphaCutOff = ((0, TB.l)(this, FJ), (0, TB.l)(this, NJ, .4)), this._useLightmapAsShadowmap = ((0, TB.l)(this, gJ), (0, TB.l)(this, qJ, !1)), AB.set(this, ((0, TB.l)(this, yJ), (0, TB.l)(this, UJ, void 0))), this._diffuseFresnelParameters = ((0, TB.l)(this, WJ), (0, TB.l)(this, dJ, void 0)), tB.set(this, ((0, TB.l)(this, CJ), (0, TB.l)(this, QJ, void 0))), this._opacityFresnelParameters = ((0, TB.l)(this, sJ), (0, TB.l)(this, wJ, void 0)), bB.set(this, ((0, TB.l)(this, OJ), (0, TB.l)(this, YJ, void 0))), this._reflectionFresnelParameters = ((0, TB.l)(this, iJ), (0, TB.l)(this, pJ, void 0)), xB.set(this, ((0, TB.l)(this, aJ), (0, TB.l)(this, HJ, void 0))), this._refractionFresnelParameters = ((0, TB.l)(this, MJ), (0, TB.l)(this, jJ, void 0)), EB.set(this, ((0, TB.l)(this, PJ), (0, TB.l)(this, RJ, void 0))), this._emissiveFresnelParameters = ((0, TB.l)(this, rJ), (0, TB.l)(this, mJ, void 0)), DB.set(this, ((0, TB.l)(this, XJ), (0, TB.l)(this, LJ, void 0))), this._useReflectionFresnelFromSpecular = ((0, TB.l)(this, eJ), (0, TB.l)(this, uJ, !1)), KB.set(this, ((0, TB.l)(this, fJ), (0, TB.l)(this, lJ, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, TB.l)(this, AJ), (0, TB.l)(this, tJ, !1)), VB.set(this, ((0, TB.l)(this, bJ), (0, TB.l)(this, xJ, void 0))), this._maxSimultaneousLights = ((0, TB.l)(this, EJ), (0, TB.l)(this, DJ, 4)), SB.set(this, ((0, TB.l)(this, KJ), (0, TB.l)(this, VJ, void 0))), this._invertNormalMapX = ((0, TB.l)(this, SJ), (0, TB.l)(this, Bo, !1)), BI.set(this, ((0, TB.l)(this, Io), (0, TB.l)(this, Zo, void 0))), this._invertNormalMapY = ((0, TB.l)(this, To), (0, TB.l)(this, Jo, !1)), II.set(this, ((0, TB.l)(this, oo), (0, TB.l)(this, Go, void 0))), this._twoSidedLighting = ((0, TB.l)(this, vo), (0, TB.l)(this, ko, !1)), ZI.set(this, ((0, TB.l)(this, co), (0, TB.l)(this, no, void 0))), this._applyDecalMapAfterDetailMap = ((0, TB.l)(this, ho), (0, TB.l)(this, zo, !1)), TI.set(this, ((0, TB.l)(this, Fo), (0, TB.l)(this, No, void 0))), this._vertexPullingMetadata = ((0, TB.l)(this, go), null), this._renderTargets = new oB.g(16), this._globalAmbientColor = new vB.c(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new yB.e(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new cB.e, this.getRenderTargetTextures = () => (this._renderTargets.reset(), BB.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), BB.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
           }
           get hasRenderTargetTextures() {
             return !!(BB.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(BB.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
@@ -1416,10 +1416,10 @@ export const modules = {
             return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && (this.alpha < 1 || null != this._opacityTexture || this._shouldUseAlphaFromDiffuseTexture() || this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled)
           }
           needAlphaTesting() {
-            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === rB.b.MATERIAL_ALPHATEST)
+            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === zB.e.MATERIAL_ALPHATEST)
           }
           _shouldUseAlphaFromDiffuseTexture() {
-            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== rB.b.MATERIAL_OPAQUE
+            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== zB.e.MATERIAL_OPAQUE
           }
           _hasAlphaChannel() {
             return null != this._diffuseTexture && this._diffuseTexture.hasAlpha || null != this._opacityTexture
@@ -1427,182 +1427,182 @@ export const modules = {
           getAlphaTestTexture() {
             return this._diffuseTexture
           }
-          isReadyForSubMesh(jB, zB) {
-            let QB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          isReadyForSubMesh(IB, ZB) {
+            let TB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             this._uniformBufferLayoutBuilt || this.buildUniformLayout();
-            const nB = zB._drawWrapper;
-            if (nB.effect && this.isFrozen && nB._wasPreviouslyReady && nB._wasPreviouslyUsingInstances === QB) return !0;
-            zB.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), zB.materialDefines = new FB(this._eventInfo.defineNames));
-            const dB = this.aY(),
-              IB = zB.materialDefines;
-            if (this._isReadyForSubMesh(zB)) return !0;
-            const NB = dB.wJ();
-            if (IB._needNormals = (0, gB.ab)(dB, jB, IB, !0, this._maxSimultaneousLights, this._disableLighting), !(0, gB.c)(dB, jB, this._maxSimultaneousLights, this._disableLighting)) return !1;
-            (0, gB.gb)(dB, IB);
-            const aB = this.needAlphaBlendingForMesh(jB) && this.aY().useOrderIndependentTransparency;
-            if ((0, gB.lb)(dB, IB, this.canRenderToMRT && !aB), (0, gB.hb)(dB, IB, aB), MB.c.PrepareDefines(NB.currentRenderPassId, jB, IB), IB._areTexturesDirty) {
-              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, IB._needUVs = !1;
-              for (let BB = 1; BB <= 6; ++BB) IB["MAINUV" + BB] = !1;
-              if (dB.texturesEnabled) {
-                if (IB.DIFFUSEDIRECTUV = 0, IB.BUMPDIRECTUV = 0, IB.AMBIENTDIRECTUV = 0, IB.OPACITYDIRECTUV = 0, IB.EMISSIVEDIRECTUV = 0, IB.SPECULARDIRECTUV = 0, IB.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && BB.DiffuseTextureEnabled) {
+            const JB = ZB._drawWrapper;
+            if (JB.effect && this.isFrozen && JB._wasPreviouslyReady && JB._wasPreviouslyUsingInstances === TB) return !0;
+            ZB.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), ZB.materialDefines = new MB(this._eventInfo.defineNames));
+            const oB = this.JR(),
+              GB = ZB.materialDefines;
+            if (this._isReadyForSubMesh(ZB)) return !0;
+            const vB = oB.PN();
+            if (GB._needNormals = (0, dB.Y)(oB, IB, GB, !0, this._maxSimultaneousLights, this._disableLighting), !(0, dB.c)(oB, IB, this._maxSimultaneousLights, this._disableLighting)) return !1;
+            (0, dB.fb)(oB, GB);
+            const nB = this.needAlphaBlendingForMesh(IB) && this.JR().useOrderIndependentTransparency;
+            if ((0, dB.kb)(oB, GB, this.canRenderToMRT && !nB), (0, dB.gb)(oB, GB, nB), sB.b.PrepareDefines(vB.currentRenderPassId, IB, GB), GB._areTexturesDirty) {
+              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, GB._needUVs = !1;
+              for (let BB = 1; BB <= 6; ++BB) GB["MAINUV" + BB] = !1;
+              if (oB.texturesEnabled) {
+                if (GB.DIFFUSEDIRECTUV = 0, GB.BUMPDIRECTUV = 0, GB.AMBIENTDIRECTUV = 0, GB.OPACITYDIRECTUV = 0, GB.EMISSIVEDIRECTUV = 0, GB.SPECULARDIRECTUV = 0, GB.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && BB.DiffuseTextureEnabled) {
                   if (!this._diffuseTexture.isReadyOrNotBlocking()) return !1;
-                  (0, gB.cb)(this._diffuseTexture, IB, "DIFFUSE")
-                } else IB.DIFFUSE = !1;
+                  (0, dB.ab)(this._diffuseTexture, GB, "DIFFUSE")
+                } else GB.DIFFUSE = !1;
                 if (this._ambientTexture && BB.AmbientTextureEnabled) {
                   if (!this._ambientTexture.isReadyOrNotBlocking()) return !1;
-                  (0, gB.cb)(this._ambientTexture, IB, "AMBIENT")
-                } else IB.AMBIENT = !1;
+                  (0, dB.ab)(this._ambientTexture, GB, "AMBIENT")
+                } else GB.AMBIENT = !1;
                 if (this._opacityTexture && BB.OpacityTextureEnabled) {
                   if (!this._opacityTexture.isReadyOrNotBlocking()) return !1;
-                  (0, gB.cb)(this._opacityTexture, IB, "OPACITY"), IB.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
-                } else IB.OPACITY = !1;
-                if (this._reflectionTexture && BB.ReflectionTextureEnabled ? (IB.ROUGHNESS = this._roughness > 0, IB.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (IB.ROUGHNESS = !1, IB.REFLECTIONOVERALPHA = !1), !(0, gB.Y)(dB, this._reflectionTexture, IB)) return !1;
+                  (0, dB.ab)(this._opacityTexture, GB, "OPACITY"), GB.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
+                } else GB.OPACITY = !1;
+                if (this._reflectionTexture && BB.ReflectionTextureEnabled ? (GB.ROUGHNESS = this._roughness > 0, GB.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (GB.ROUGHNESS = !1, GB.REFLECTIONOVERALPHA = !1), !(0, dB.W)(oB, this._reflectionTexture, GB)) return !1;
                 if (this._emissiveTexture && BB.EmissiveTextureEnabled) {
                   if (!this._emissiveTexture.isReadyOrNotBlocking()) return !1;
-                  (0, gB.cb)(this._emissiveTexture, IB, "EMISSIVE")
-                } else IB.EMISSIVE = !1;
+                  (0, dB.ab)(this._emissiveTexture, GB, "EMISSIVE")
+                } else GB.EMISSIVE = !1;
                 if (this._lightmapTexture && BB.LightmapTextureEnabled) {
                   if (!this._lightmapTexture.isReadyOrNotBlocking()) return !1;
-                  (0, gB.cb)(this._lightmapTexture, IB, "LIGHTMAP"), IB.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, IB.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
-                } else IB.LIGHTMAP = !1;
+                  (0, dB.ab)(this._lightmapTexture, GB, "LIGHTMAP"), GB.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, GB.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
+                } else GB.LIGHTMAP = !1;
                 if (this._specularTexture && BB.SpecularTextureEnabled) {
                   if (!this._specularTexture.isReadyOrNotBlocking()) return !1;
-                  (0, gB.cb)(this._specularTexture, IB, "SPECULAR"), IB.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
-                } else IB.SPECULAR = !1;
-                if (dB.wJ().getCaps().standardDerivatives && this._bumpTexture && BB.BumpTextureEnabled) {
+                  (0, dB.ab)(this._specularTexture, GB, "SPECULAR"), GB.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
+                } else GB.SPECULAR = !1;
+                if (oB.PN().getCaps().standardDerivatives && this._bumpTexture && BB.BumpTextureEnabled) {
                   if (!this._bumpTexture.isReady()) return !1;
-                  (0, gB.cb)(this._bumpTexture, IB, "BUMP"), IB.PARALLAX = this._useParallax, IB.PARALLAX_RHS = dB.useRightHandedSystem, IB.PARALLAXOCCLUSION = this._useParallaxOcclusion, IB.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
-                } else IB.BUMP = !1, IB.PARALLAX = !1, IB.PARALLAX_RHS = !1, IB.PARALLAXOCCLUSION = !1;
+                  (0, dB.ab)(this._bumpTexture, GB, "BUMP"), GB.PARALLAX = this._useParallax, GB.PARALLAX_RHS = oB.useRightHandedSystem, GB.PARALLAXOCCLUSION = this._useParallaxOcclusion, GB.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
+                } else GB.BUMP = !1, GB.PARALLAX = !1, GB.PARALLAX_RHS = !1, GB.PARALLAXOCCLUSION = !1;
                 if (this._refractionTexture && BB.RefractionTextureEnabled) {
                   if (!this._refractionTexture.isReadyOrNotBlocking()) return !1;
-                  IB._needUVs = !0, IB.REFRACTION = !0, IB.REFRACTIONMAP_3D = this._refractionTexture.isCube, IB.RGBDREFRACTION = this._refractionTexture.isRGBD, IB.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
-                } else IB.REFRACTION = !1;
-                IB.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
-              } else IB.DIFFUSE = !1, IB.AMBIENT = !1, IB.OPACITY = !1, IB.REFLECTION = !1, IB.EMISSIVE = !1, IB.LIGHTMAP = !1, IB.BUMP = !1, IB.REFRACTION = !1;
-              IB.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), IB.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, IB.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, IB.SPECULAROVERALPHA = this._useSpecularOverAlpha, IB.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, IB.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, IB.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(jB), IB.TEXTURE_REPETITION_MODE = NB.version > 1 || NB.isWebGPU ? this.textureRepetitionMode : 0
+                  GB._needUVs = !0, GB.REFRACTION = !0, GB.REFRACTIONMAP_3D = this._refractionTexture.isCube, GB.RGBDREFRACTION = this._refractionTexture.isRGBD, GB.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
+                } else GB.REFRACTION = !1;
+                GB.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
+              } else GB.DIFFUSE = !1, GB.AMBIENT = !1, GB.OPACITY = !1, GB.REFLECTION = !1, GB.EMISSIVE = !1, GB.LIGHTMAP = !1, GB.BUMP = !1, GB.REFRACTION = !1;
+              GB.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), GB.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, GB.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, GB.SPECULAROVERALPHA = this._useSpecularOverAlpha, GB.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, GB.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, GB.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(IB), GB.TEXTURE_REPETITION_MODE = vB.version > 1 || vB.isWebGPU ? this.textureRepetitionMode : 0
             }
-            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = IB, this._eventInfo.subMesh = zB, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
-            if (IB._areImageProcessingDirty && this._imageProcessingConfiguration) {
+            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = GB, this._eventInfo.subMesh = ZB, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
+            if (GB._areImageProcessingDirty && this._imageProcessingConfiguration) {
               if (!this._imageProcessingConfiguration.isReady()) return !1;
-              this._imageProcessingConfiguration.prepareDefines(IB), IB.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, IB.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
+              this._imageProcessingConfiguration.prepareDefines(GB), GB.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, GB.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
             }
-            if (IB._areFresnelDirty && (BB.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (IB.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, IB.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, IB.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, IB.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, IB.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, IB.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, IB._needNormals = !0, IB.FRESNEL = !0) : IB.FRESNEL = !1), IB.AREALIGHTUSED || IB.CLUSTLIGHT_BATCH)
-              for (let BB = 0; BB < jB.lightSources.length; BB++)
-                if (!jB.lightSources[BB]._isReady()) return !1;
-            (0, gB.db)(jB, dB, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(jB), IB, this._applyDecalMapAfterDetailMap, this._useVertexPulling, zB.getRenderingMesh(), this._isVertexOutputInvariant), (0, gB.U)(dB, NB, this, IB, QB, null, zB.getRenderingMesh().hasThinInstances), this._eventInfo.defines = IB, this._eventInfo.mesh = jB, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, gB.S)(jB, IB, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
-            let rB = !1;
-            if (IB.isDirty) {
-              const QB = IB._areLightsDisposed;
-              IB.markAsProcessed();
-              const nB = new yB.c;
-              IB.REFLECTION && nB.addFallback(0, "REFLECTION"), IB.SPECULAR && nB.addFallback(0, "SPECULAR"), IB.BUMP && nB.addFallback(0, "BUMP"), IB.PARALLAX && nB.addFallback(1, "PARALLAX"), IB.PARALLAX_RHS && nB.addFallback(1, "PARALLAX_RHS"), IB.PARALLAXOCCLUSION && nB.addFallback(0, "PARALLAXOCCLUSION"), IB.SPECULAROVERALPHA && nB.addFallback(0, "SPECULAROVERALPHA"), IB.FOG && nB.addFallback(1, "FOG"), IB.POINTSIZE && nB.addFallback(0, "POINTSIZE"), IB.LOGARITHMICDEPTH && nB.addFallback(0, "LOGARITHMICDEPTH"), (0, gB.E)(IB, nB, this._maxSimultaneousLights), IB.SPECULARTERM && nB.addFallback(0, "SPECULARTERM"), IB.DIFFUSEFRESNEL && nB.addFallback(1, "DIFFUSEFRESNEL"), IB.OPACITYFRESNEL && nB.addFallback(2, "OPACITYFRESNEL"), IB.REFLECTIONFRESNEL && nB.addFallback(3, "REFLECTIONFRESNEL"), IB.EMISSIVEFRESNEL && nB.addFallback(4, "EMISSIVEFRESNEL"), IB.FRESNEL && nB.addFallback(4, "FRESNEL"), IB.MULTIVIEW && nB.addFallback(0, "MULTIVIEW");
-              const aB = [uB.l.PositionKind];
-              IB.NORMAL && aB.push(uB.l.NormalKind), IB.TANGENT && aB.push(uB.l.TangentKind);
-              for (let BB = 1; BB <= 6; ++BB) IB["UV" + BB] && aB.push(`uv${1===BB?"":BB}`);
-              IB.VERTEXCOLOR && aB.push(uB.l.ColorKind), (0, gB.J)(aB, jB, IB, nB), (0, gB.K)(aB, IB), (0, gB.N)(aB, jB, IB), (0, gB.H)(aB, jB, IB);
-              let sB = "default";
-              const JB = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
-                mB = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
-              (0, gB.rb)(JB, mB, !1);
-              const kB = ["Material", "Scene", "Mesh"],
-                tB = {
+            if (GB._areFresnelDirty && (BB.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (GB.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, GB.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, GB.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, GB.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, GB.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, GB.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, GB._needNormals = !0, GB.FRESNEL = !0) : GB.FRESNEL = !1), GB.AREALIGHTUSED || GB.CLUSTLIGHT_BATCH)
+              for (let BB = 0; BB < IB.lightSources.length; BB++)
+                if (!IB.lightSources[BB]._isReady()) return !1;
+            (0, dB.eb)(IB, oB, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(IB), GB, this._applyDecalMapAfterDetailMap, this._useVertexPulling, ZB.getRenderingMesh(), this._isVertexOutputInvariant), (0, dB.V)(oB, vB, this, GB, TB, null, ZB.getRenderingMesh().hasThinInstances), this._eventInfo.defines = GB, this._eventInfo.mesh = IB, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, dB.R)(IB, GB, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
+            let zB = !1;
+            if (GB.isDirty) {
+              const TB = GB._areLightsDisposed;
+              GB.markAsProcessed();
+              const JB = new qB.e;
+              GB.REFLECTION && JB.addFallback(0, "REFLECTION"), GB.SPECULAR && JB.addFallback(0, "SPECULAR"), GB.BUMP && JB.addFallback(0, "BUMP"), GB.PARALLAX && JB.addFallback(1, "PARALLAX"), GB.PARALLAX_RHS && JB.addFallback(1, "PARALLAX_RHS"), GB.PARALLAXOCCLUSION && JB.addFallback(0, "PARALLAXOCCLUSION"), GB.SPECULAROVERALPHA && JB.addFallback(0, "SPECULAROVERALPHA"), GB.FOG && JB.addFallback(1, "FOG"), GB.POINTSIZE && JB.addFallback(0, "POINTSIZE"), GB.LOGARITHMICDEPTH && JB.addFallback(0, "LOGARITHMICDEPTH"), (0, dB.C)(GB, JB, this._maxSimultaneousLights), GB.SPECULARTERM && JB.addFallback(0, "SPECULARTERM"), GB.DIFFUSEFRESNEL && JB.addFallback(1, "DIFFUSEFRESNEL"), GB.OPACITYFRESNEL && JB.addFallback(2, "OPACITYFRESNEL"), GB.REFLECTIONFRESNEL && JB.addFallback(3, "REFLECTIONFRESNEL"), GB.EMISSIVEFRESNEL && JB.addFallback(4, "EMISSIVEFRESNEL"), GB.FRESNEL && JB.addFallback(4, "FRESNEL"), GB.MULTIVIEW && JB.addFallback(0, "MULTIVIEW");
+              const nB = [kB.i.PositionKind];
+              GB.NORMAL && nB.push(kB.i.NormalKind), GB.TANGENT && nB.push(kB.i.TangentKind);
+              for (let BB = 1; BB <= 6; ++BB) GB["UV" + BB] && nB.push(`uv${1===BB?"":BB}`);
+              GB.VERTEXCOLOR && nB.push(kB.i.ColorKind), (0, dB.I)(nB, IB, GB, JB), (0, dB.L)(nB, GB), (0, dB.M)(nB, IB, GB), (0, dB.F)(nB, IB, GB);
+              let FB = "default";
+              const NB = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
+                gB = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
+              (0, dB.rb)(NB, gB, !1);
+              const yB = ["Material", "Scene", "Mesh"],
+                CB = {
                   maxSimultaneousLights: this._maxSimultaneousLights,
-                  maxSimultaneousMorphTargets: IB.NUM_MORPH_INFLUENCERS
+                  maxSimultaneousMorphTargets: GB.NUM_MORPH_INFLUENCERS
                 };
-              if (this._eventInfo.fallbacks = nB, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = IB, this._eventInfo.uniforms = JB, this._eventInfo.attributes = aB, this._eventInfo.samplers = mB, this._eventInfo.uniformBuffersNames = kB, this._eventInfo.customCode = void 0, this._eventInfo.mesh = jB, this._eventInfo.indexParameters = tB, this._callbackPluginEventGeneric(128, this._eventInfo), MB.c.AddUniformsAndSamplers(JB, mB), UB.e.AddUniforms(JB), UB.e.AddSamplers(mB), pB.c && (pB.c.PrepareUniforms(JB, IB), pB.c.PrepareSamplers(mB, IB)), (0, gB.vb)({
-                  uniformsNames: JB,
-                  uniformBuffersNames: kB,
-                  samplers: mB,
-                  defines: IB,
+              if (this._eventInfo.fallbacks = JB, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = GB, this._eventInfo.uniforms = NB, this._eventInfo.attributes = nB, this._eventInfo.samplers = gB, this._eventInfo.uniformBuffersNames = yB, this._eventInfo.customCode = void 0, this._eventInfo.mesh = IB, this._eventInfo.indexParameters = CB, this._callbackPluginEventGeneric(128, this._eventInfo), sB.b.AddUniformsAndSamplers(NB, gB), cB.e.AddUniforms(NB), cB.e.AddSamplers(gB), hB.b && (hB.b.PrepareUniforms(NB, GB), hB.b.PrepareSamplers(gB, GB)), (0, dB.vb)({
+                  uniformsNames: NB,
+                  uniformBuffersNames: yB,
+                  samplers: gB,
+                  defines: GB,
                   maxSimultaneousLights: this._maxSimultaneousLights,
                   shaderLanguage: this._shaderLanguage
-                }), (0, GB.c)(JB), this._useVertexPulling) {
-                const BB = zB.getRenderingMesh(),
-                  jB = BB?.geometry;
-                jB && (this._vertexPullingMetadata = (0, LB.d)(jB), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((BB, jB) => {
-                  JB.push(`vp_${jB}_info`)
+                }), (0, UB.c)(NB), this._useVertexPulling) {
+                const BB = ZB.getRenderingMesh(),
+                  IB = BB?.geometry;
+                IB && (this._vertexPullingMetadata = (0, WB.d)(IB), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((BB, IB) => {
+                  NB.push(`vp_${IB}_info`)
                 })))
               } else this._vertexPullingMetadata = null;
-              const SB = {};
-              this.customShaderNameResolve && (sB = this.customShaderNameResolve(sB, JB, kB, mB, IB, aB, SB));
-              const EB = IB.toString(),
-                iB = zB.effect,
-                qB = dB.wJ().createEffect(sB, {
-                  attributes: aB,
-                  uniformsNames: JB,
-                  uniformBuffersNames: kB,
-                  samplers: mB,
-                  defines: EB,
-                  fallbacks: nB,
+              const QB = {};
+              this.customShaderNameResolve && (FB = this.customShaderNameResolve(FB, NB, yB, gB, GB, nB, QB));
+              const wB = GB.toString(),
+                OB = ZB.effect,
+                YB = oB.PN().createEffect(FB, {
+                  attributes: nB,
+                  uniformsNames: NB,
+                  uniformBuffersNames: yB,
+                  samplers: gB,
+                  defines: wB,
+                  fallbacks: JB,
                   onCompiled: this.onCompiled,
                   onError: this.onError,
-                  indexParameters: tB,
-                  processFinalCode: SB.processFinalCode,
+                  indexParameters: CB,
+                  processFinalCode: QB.processFinalCode,
                   processCodeAfterIncludes: this._eventInfo.customCode,
-                  multiTarget: IB.PREPASS,
+                  multiTarget: GB.PREPASS,
                   shaderLanguage: this._shaderLanguage,
                   extraInitializationsAsync: BB._ShaderLoader.getLoadCallback(this._shaderLanguage)
-                }, NB);
-              if (this._eventInfo.customCode = void 0, qB)
-                if (this._onEffectCreatedObservable && (HB.effect = qB, HB.subMesh = zB, this._onEffectCreatedObservable.notifyObservers(HB)), this.allowShaderHotSwapping && iB && !qB.isReady()) {
-                  if (IB.markAsUnprocessed(), rB = this.isFrozen, QB) return IB._areLightsDisposed = !0, !1
-                } else dB.resetCachedMaterial(), zB.setEffect(qB, IB, this._materialContext)
+                }, vB);
+              if (this._eventInfo.customCode = void 0, YB)
+                if (this._onEffectCreatedObservable && (aB.effect = YB, aB.subMesh = ZB, this._onEffectCreatedObservable.notifyObservers(aB)), this.allowShaderHotSwapping && OB && !YB.isReady()) {
+                  if (GB.markAsUnprocessed(), zB = this.isFrozen, TB) return GB._areLightsDisposed = !0, !1
+                } else oB.resetCachedMaterial(), ZB.setEffect(YB, GB, this._materialContext)
             }
-            return !(!zB.effect || !zB.effect.isReady()) && (IB._renderId = dB.getRenderId(), nB._wasPreviouslyReady = !rB, nB._wasPreviouslyUsingInstances = QB, this._checkScenePerformancePriority(), !0)
+            return !(!ZB.effect || !ZB.effect.isReady()) && (GB._renderId = oB.getRenderId(), JB._wasPreviouslyReady = !zB, JB._wasPreviouslyUsingInstances = TB, this._checkScenePerformancePriority(), !0)
           }
           buildUniformLayout() {
             const BB = this._uniformBuffer;
-            BB.addUniform("diffuseLeftColor", 4), BB.addUniform("diffuseRightColor", 4), BB.addUniform("opacityParts", 4), BB.addUniform("reflectionLeftColor", 4), BB.addUniform("reflectionRightColor", 4), BB.addUniform("refractionLeftColor", 4), BB.addUniform("refractionRightColor", 4), BB.addUniform("emissiveLeftColor", 4), BB.addUniform("emissiveRightColor", 4), BB.addUniform("vDiffuseInfos", 2), BB.addUniform("vAmbientInfos", 2), BB.addUniform("vOpacityInfos", 2), BB.addUniform("vEmissiveInfos", 2), BB.addUniform("vLightmapInfos", 2), BB.addUniform("vSpecularInfos", 2), BB.addUniform("vBumpInfos", 3), BB.addUniform("diffuseMatrix", 16), BB.addUniform("ambientMatrix", 16), BB.addUniform("opacityMatrix", 16), BB.addUniform("emissiveMatrix", 16), BB.addUniform("lightmapMatrix", 16), BB.addUniform("specularMatrix", 16), BB.addUniform("bumpMatrix", 16), BB.addUniform("vTangentSpaceParams", 2), BB.addUniform("pointSize", 1), BB.addUniform("alphaCutOff", 1), BB.addUniform("refractionMatrix", 16), BB.addUniform("vRefractionInfos", 4), BB.addUniform("vRefractionPosition", 3), BB.addUniform("vRefractionSize", 3), BB.addUniform("vSpecularColor", 4), BB.addUniform("vEmissiveColor", 3), BB.addUniform("vDiffuseColor", 4), BB.addUniform("vAmbientColor", 3), BB.addUniform("cameraInfo", 4), BB.addUniform("vTextureRepetitionHexTilingParams", 4), (0, gB.nb)(BB, !1, !0), super.buildUniformLayout()
+            BB.addUniform("diffuseLeftColor", 4), BB.addUniform("diffuseRightColor", 4), BB.addUniform("opacityParts", 4), BB.addUniform("reflectionLeftColor", 4), BB.addUniform("reflectionRightColor", 4), BB.addUniform("refractionLeftColor", 4), BB.addUniform("refractionRightColor", 4), BB.addUniform("emissiveLeftColor", 4), BB.addUniform("emissiveRightColor", 4), BB.addUniform("vDiffuseInfos", 2), BB.addUniform("vAmbientInfos", 2), BB.addUniform("vOpacityInfos", 2), BB.addUniform("vEmissiveInfos", 2), BB.addUniform("vLightmapInfos", 2), BB.addUniform("vSpecularInfos", 2), BB.addUniform("vBumpInfos", 3), BB.addUniform("diffuseMatrix", 16), BB.addUniform("ambientMatrix", 16), BB.addUniform("opacityMatrix", 16), BB.addUniform("emissiveMatrix", 16), BB.addUniform("lightmapMatrix", 16), BB.addUniform("specularMatrix", 16), BB.addUniform("bumpMatrix", 16), BB.addUniform("vTangentSpaceParams", 2), BB.addUniform("pointSize", 1), BB.addUniform("alphaCutOff", 1), BB.addUniform("refractionMatrix", 16), BB.addUniform("vRefractionInfos", 4), BB.addUniform("vRefractionPosition", 3), BB.addUniform("vRefractionSize", 3), BB.addUniform("vSpecularColor", 4), BB.addUniform("vEmissiveColor", 3), BB.addUniform("vDiffuseColor", 4), BB.addUniform("vAmbientColor", 3), BB.addUniform("cameraInfo", 4), BB.addUniform("vTextureRepetitionHexTilingParams", 4), (0, dB.ob)(BB, !1, !0), super.buildUniformLayout()
           }
-          bindForSubMesh(jB, zB, QB) {
-            const nB = this.aY(),
-              dB = QB.materialDefines;
-            if (!dB) return;
-            const uB = QB.effect;
-            if (!uB) return;
-            this._activeEffect = uB, zB.getMeshUniformBuffer().bindToEffect(uB, "Mesh"), zB.transferToEffect(jB), this._uniformBuffer.bindToEffect(uB, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, nB, zB, jB, this.isFrozen), MB.c.Bind(nB.wJ().currentRenderPassId, this._activeEffect, zB, jB, this);
-            const UB = nB.activeCamera;
-            UB ? this._uniformBuffer.updateFloat4("cameraInfo", UB.minZ, UB.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const aB = this.textureRepetitionHexTilingParams;
-            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", aB[0], aB[1], aB[2], aB[3]), this._eventInfo.subMesh = QB, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), dB.OBJECTSPACE_NORMALMAP && (jB.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
-            const pB = this._mustRebind(nB, uB, QB, zB.visibility),
-              rB = nB.wJ()._features.needToAlwaysBindUniformBuffers;
-            (0, gB.f)(zB, uB), this._vertexPullingMetadata && (0, LB.c)(uB, this._vertexPullingMetadata);
-            const sB = this._uniformBuffer;
-            if (pB) {
-              if (this.bindViewProjection(uB), !sB.useUbo || !this.isFrozen || !sB.isSync || QB._drawWrapper._forceRebindOnNextCall) {
-                if (BB.FresnelEnabled && dB.FRESNEL) {
-                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (sB.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), sB.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
-                    const BB = NB.o.Color3[0];
-                    BB.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), sB.updateColor4("opacityParts", BB, this.opacityFresnelParameters.power)
+          bindForSubMesh(IB, ZB, TB) {
+            const JB = this.JR(),
+              oB = TB.materialDefines;
+            if (!oB) return;
+            const kB = TB.effect;
+            if (!kB) return;
+            this._activeEffect = kB, ZB.getMeshUniformBuffer().bindToEffect(kB, "Mesh"), ZB.transferToEffect(IB), this._uniformBuffer.bindToEffect(kB, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, JB, ZB, IB, this.isFrozen), sB.b.Bind(JB.PN().currentRenderPassId, this._activeEffect, ZB, IB, this);
+            const cB = JB.activeCamera;
+            cB ? this._uniformBuffer.updateFloat4("cameraInfo", cB.minZ, cB.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const nB = this.textureRepetitionHexTilingParams;
+            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", nB[0], nB[1], nB[2], nB[3]), this._eventInfo.subMesh = TB, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), oB.OBJECTSPACE_NORMALMAP && (IB.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
+            const hB = this._mustRebind(JB, kB, TB, ZB.visibility),
+              zB = JB.PN()._features.needToAlwaysBindUniformBuffers;
+            (0, dB.e)(ZB, kB), this._vertexPullingMetadata && (0, WB.c)(kB, this._vertexPullingMetadata);
+            const FB = this._uniformBuffer;
+            if (hB) {
+              if (this.bindViewProjection(kB), !FB.useUbo || !this.isFrozen || !FB.isSync || TB._drawWrapper._forceRebindOnNextCall) {
+                if (BB.FresnelEnabled && oB.FRESNEL) {
+                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (FB.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), FB.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
+                    const BB = vB.k.Color3[0];
+                    BB.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), FB.updateColor4("opacityParts", BB, this.opacityFresnelParameters.power)
                   }
-                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (sB.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), sB.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (sB.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), sB.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (sB.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), sB.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
+                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (FB.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), FB.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (FB.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), FB.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (FB.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), FB.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
                 }
-                if (dB.ALPHATEST && sB.updateFloat("alphaCutOff", this.alphaCutOff), nB.texturesEnabled && (this._diffuseTexture && BB.DiffuseTextureEnabled && (sB.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, gB.A)(this._diffuseTexture, sB, "diffuse")), this._ambientTexture && BB.AmbientTextureEnabled && (sB.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, gB.A)(this._ambientTexture, sB, "ambient")), this._opacityTexture && BB.OpacityTextureEnabled && (sB.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, gB.A)(this._opacityTexture, sB, "opacity")), (0, gB.n)(nB, dB, sB, NB.d.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && BB.ReflectionTextureEnabled || sB.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && BB.EmissiveTextureEnabled && (sB.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, gB.A)(this._emissiveTexture, sB, "emissive")), this._lightmapTexture && BB.LightmapTextureEnabled && (sB.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, gB.A)(this._lightmapTexture, sB, "lightmap")), this._specularTexture && BB.SpecularTextureEnabled && (sB.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, gB.A)(this._specularTexture, sB, "specular")), this._bumpTexture && nB.wJ().getCaps().standardDerivatives && BB.BumpTextureEnabled && (sB.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, gB.A)(this._bumpTexture, sB, "bump"), nB._mirroredCameraPosition ? sB.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : sB.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && BB.RefractionTextureEnabled)) {
+                if (oB.ALPHATEST && FB.updateFloat("alphaCutOff", this.alphaCutOff), JB.texturesEnabled && (this._diffuseTexture && BB.DiffuseTextureEnabled && (FB.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, dB.y)(this._diffuseTexture, FB, "diffuse")), this._ambientTexture && BB.AmbientTextureEnabled && (FB.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, dB.y)(this._ambientTexture, FB, "ambient")), this._opacityTexture && BB.OpacityTextureEnabled && (FB.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, dB.y)(this._opacityTexture, FB, "opacity")), (0, dB.j)(JB, oB, FB, vB.c.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && BB.ReflectionTextureEnabled || FB.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && BB.EmissiveTextureEnabled && (FB.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, dB.y)(this._emissiveTexture, FB, "emissive")), this._lightmapTexture && BB.LightmapTextureEnabled && (FB.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, dB.y)(this._lightmapTexture, FB, "lightmap")), this._specularTexture && BB.SpecularTextureEnabled && (FB.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, dB.y)(this._specularTexture, FB, "specular")), this._bumpTexture && JB.PN().getCaps().standardDerivatives && BB.BumpTextureEnabled && (FB.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, dB.y)(this._bumpTexture, FB, "bump"), JB._mirroredCameraPosition ? FB.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : FB.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && BB.RefractionTextureEnabled)) {
                   let BB = 1;
-                  if (this._refractionTexture.isCube || (sB.l_("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (BB = this._refractionTexture.depth)), sB.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, BB, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
+                  if (this._refractionTexture.isCube || (FB.T6("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (BB = this._refractionTexture.depth)), FB.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, BB, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
                     const BB = this._refractionTexture;
-                    sB.updateVector3("vRefractionPosition", BB.boundingBoxPosition), sB.updateVector3("vRefractionSize", BB.boundingBoxSize)
+                    FB.updateVector3("vRefractionPosition", BB.boundingBoxPosition), FB.updateVector3("vRefractionSize", BB.boundingBoxSize)
                   }
                 }
-                this.pointsCloud && sB.updateFloat("pointSize", this.pointSize), sB.updateColor4("vSpecularColor", this.specularColor, this.specularPower), sB.updateColor3("vEmissiveColor", BB.EmissiveTextureEnabled ? this.emissiveColor : NB.d.BlackReadOnly), sB.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), nB.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), sB.updateColor3("vAmbientColor", this._globalAmbientColor)
+                this.pointsCloud && FB.updateFloat("pointSize", this.pointSize), FB.updateColor4("vSpecularColor", this.specularColor, this.specularPower), FB.updateColor3("vEmissiveColor", BB.EmissiveTextureEnabled ? this.emissiveColor : vB.c.BlackReadOnly), FB.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), JB.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), FB.updateColor3("vAmbientColor", this._globalAmbientColor)
               }
-              nB.texturesEnabled && (this._diffuseTexture && BB.DiffuseTextureEnabled && uB.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && BB.AmbientTextureEnabled && uB.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && BB.OpacityTextureEnabled && uB.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && BB.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? uB.setTexture("reflectionCubeSampler", this._reflectionTexture) : uB.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && BB.EmissiveTextureEnabled && uB.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && BB.LightmapTextureEnabled && uB.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && BB.SpecularTextureEnabled && uB.setTexture("specularSampler", this._specularTexture), this._bumpTexture && nB.wJ().getCaps().standardDerivatives && BB.BumpTextureEnabled && uB.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && BB.RefractionTextureEnabled && (this._refractionTexture.isCube ? uB.setTexture("refractionCubeSampler", this._refractionTexture) : uB.setTexture("refraction2DSampler", this._refractionTexture))), this.aY().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(zB) && this.aY().depthPeelingRenderer.bind(uB), this._eventInfo.subMesh = QB, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, GB.g)(uB, this, nB), this.bindEyePosition(uB)
-            } else rB && (this._needToBindSceneUbo = !0);
-            !pB && this.isFrozen && !rB || !nB.lightsEnabled || this._disableLighting || (0, gB.t)(nB, zB, uB, dB, this._maxSimultaneousLights), !pB && this.isFrozen || ((nB.fogEnabled && zB.applyFog && nB.fogMode !== IB.g.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || zB.receiveShadows || dB.PREPASS || dB.CLUSTLIGHT_BATCH) && this.bindView(uB), (0, gB.j)(nB, zB, uB), dB.NUM_MORPH_INFLUENCERS && (0, gB.y)(zB, uB), dB.BAKED_VERTEX_ANIMATION_TEXTURE && zB.bakedVertexAnimationManager?.bind(uB, dB.INSTANCES), this.useLogarithmicDepth && (0, gB.x)(dB, uB, nB), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(zB, this._activeEffect, QB), sB.update()
+              JB.texturesEnabled && (this._diffuseTexture && BB.DiffuseTextureEnabled && kB.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && BB.AmbientTextureEnabled && kB.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && BB.OpacityTextureEnabled && kB.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && BB.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? kB.setTexture("reflectionCubeSampler", this._reflectionTexture) : kB.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && BB.EmissiveTextureEnabled && kB.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && BB.LightmapTextureEnabled && kB.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && BB.SpecularTextureEnabled && kB.setTexture("specularSampler", this._specularTexture), this._bumpTexture && JB.PN().getCaps().standardDerivatives && BB.BumpTextureEnabled && kB.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && BB.RefractionTextureEnabled && (this._refractionTexture.isCube ? kB.setTexture("refractionCubeSampler", this._refractionTexture) : kB.setTexture("refraction2DSampler", this._refractionTexture))), this.JR().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(ZB) && this.JR().depthPeelingRenderer.bind(kB), this._eventInfo.subMesh = TB, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, UB.d)(kB, this, JB), this.bindEyePosition(kB)
+            } else zB && (this._needToBindSceneUbo = !0);
+            !hB && this.isFrozen && !zB || !JB.lightsEnabled || this._disableLighting || (0, dB.p)(JB, ZB, kB, oB, this._maxSimultaneousLights), !hB && this.isFrozen || ((JB.fogEnabled && ZB.applyFog && JB.fogMode !== GB.e.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || ZB.receiveShadows || oB.PREPASS || oB.CLUSTLIGHT_BATCH) && this.bindView(kB), (0, dB.h)(JB, ZB, kB), oB.NUM_MORPH_INFLUENCERS && (0, dB.t)(ZB, kB), oB.BAKED_VERTEX_ANIMATION_TEXTURE && ZB.bakedVertexAnimationManager?.bind(kB, oB.INSTANCES), this.useLogarithmicDepth && (0, dB.s)(oB, kB, JB), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(ZB, this._activeEffect, TB), FB.update()
           }
-          _canBindRunFollower(jB, zB, QB, nB, dB) {
-            const IB = jB.prePassRenderer;
-            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === BB.prototype.isReadyForSubMesh && this.bindForSubMesh === BB.prototype.bindForSubMesh && this._mustRebind === JB.e.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !zB._features.needToAlwaysBindUniformBuffers && !(IB && IB.enabled && IB.currentRTisSceneRT) && !MB.c._Configurations[zB.currentRenderPassId] && !nB.materialDefines?.OBJECTSPACE_NORMALMAP && !QB.skeleton && !dB._bonesComputationForcedToCPU
+          _canBindRunFollower(IB, ZB, TB, JB, oB) {
+            const GB = IB.prePassRenderer;
+            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === BB.prototype.isReadyForSubMesh && this.bindForSubMesh === BB.prototype.bindForSubMesh && this._mustRebind === NB.b.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !ZB._features.needToAlwaysBindUniformBuffers && !(GB && GB.enabled && GB.currentRTisSceneRT) && !sB.b._Configurations[ZB.currentRenderPassId] && !JB.materialDefines?.OBJECTSPACE_NORMALMAP && !TB.skeleton && !oB._bonesComputationForcedToCPU
           }
-          _bindRunFollower(BB, jB, zB, QB) {
-            this._activeEffect = QB, jB.getMeshUniformBuffer().bindToEffect(QB, "Mesh"), jB.transferToEffect(BB);
-            const nB = this._uniformBuffer;
-            nB.bindToEffect(QB, "Material");
-            const dB = this._scene.activeCamera;
-            dB ? nB.updateFloat4("cameraInfo", dB.minZ, dB.maxZ, 0, 0) : nB.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const IB = this.textureRepetitionHexTilingParams;
-            nB.updateFloat4("vTextureRepetitionHexTilingParams", IB[0], IB[1], IB[2], IB[3]), this._afterBind(jB, QB, zB), nB.update()
+          _bindRunFollower(BB, IB, ZB, TB) {
+            this._activeEffect = TB, IB.getMeshUniformBuffer().bindToEffect(TB, "Mesh"), IB.transferToEffect(BB);
+            const JB = this._uniformBuffer;
+            JB.bindToEffect(TB, "Material");
+            const oB = this._scene.activeCamera;
+            oB ? JB.updateFloat4("cameraInfo", oB.minZ, oB.maxZ, 0, 0) : JB.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const GB = this.textureRepetitionHexTilingParams;
+            JB.updateFloat4("vTextureRepetitionHexTilingParams", GB[0], GB[1], GB[2], GB[3]), this._afterBind(IB, TB, ZB), JB.update()
           }
           getAnimatables() {
             const BB = super.getAnimatables();
@@ -1615,96 +1615,96 @@ export const modules = {
           hasTexture(BB) {
             return !!super.hasTexture(BB) || (this._diffuseTexture === BB || (this._ambientTexture === BB || (this._opacityTexture === BB || (this._reflectionTexture === BB || (this._emissiveTexture === BB || (this._specularTexture === BB || (this._bumpTexture === BB || (this._lightmapTexture === BB || this._refractionTexture === BB))))))))
           }
-          dispose(BB, jB) {
-            jB && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(BB, jB)
+          dispose(BB, IB) {
+            IB && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(BB, IB)
           }
-          clone(jB) {
-            let zB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-              QB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-            const nB = tB.b.Clone((() => new BB(jB, this.aY())), this, {
-              cloneTexturesOnlyOnce: zB
+          clone(IB) {
+            let ZB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+              TB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+            const JB = CB.b.Clone((() => new BB(IB, this.JR())), this, {
+              cloneTexturesOnlyOnce: ZB
             });
-            return nB.name = jB, nB.id = jB, this.stencil.copyTo(nB.stencil), this._clonePlugins(nB, QB), nB
+            return JB.name = IB, JB.id = IB, this.stencil.copyTo(JB.stencil), this._clonePlugins(JB, TB), JB
           }
-          static Parse(jB, zB, QB) {
-            const nB = tB.b.Parse((() => new BB(jB.name, zB)), jB, zB, QB);
-            return jB.stencil && nB.stencil.parse(jB.stencil, zB, QB), rB.b._ParsePlugins(jB, nB, zB, QB), nB
+          static Parse(IB, ZB, TB) {
+            const JB = CB.b.Parse((() => new BB(IB.name, ZB)), IB, ZB, TB);
+            return IB.stencil && JB.stencil.parse(IB.stencil, ZB, TB), zB.e._ParsePlugins(IB, JB, ZB, TB), JB
           }
           static get DiffuseTextureEnabled() {
-            return mB.d.DiffuseTextureEnabled
+            return gB.e.DiffuseTextureEnabled
           }
           static set DiffuseTextureEnabled(BB) {
-            mB.d.DiffuseTextureEnabled = BB
+            gB.e.DiffuseTextureEnabled = BB
           }
           static get DetailTextureEnabled() {
-            return mB.d.DetailTextureEnabled
+            return gB.e.DetailTextureEnabled
           }
           static set DetailTextureEnabled(BB) {
-            mB.d.DetailTextureEnabled = BB
+            gB.e.DetailTextureEnabled = BB
           }
           static get AmbientTextureEnabled() {
-            return mB.d.AmbientTextureEnabled
+            return gB.e.AmbientTextureEnabled
           }
           static set AmbientTextureEnabled(BB) {
-            mB.d.AmbientTextureEnabled = BB
+            gB.e.AmbientTextureEnabled = BB
           }
           static get OpacityTextureEnabled() {
-            return mB.d.OpacityTextureEnabled
+            return gB.e.OpacityTextureEnabled
           }
           static set OpacityTextureEnabled(BB) {
-            mB.d.OpacityTextureEnabled = BB
+            gB.e.OpacityTextureEnabled = BB
           }
           static get ReflectionTextureEnabled() {
-            return mB.d.ReflectionTextureEnabled
+            return gB.e.ReflectionTextureEnabled
           }
           static set ReflectionTextureEnabled(BB) {
-            mB.d.ReflectionTextureEnabled = BB
+            gB.e.ReflectionTextureEnabled = BB
           }
           static get EmissiveTextureEnabled() {
-            return mB.d.EmissiveTextureEnabled
+            return gB.e.EmissiveTextureEnabled
           }
           static set EmissiveTextureEnabled(BB) {
-            mB.d.EmissiveTextureEnabled = BB
+            gB.e.EmissiveTextureEnabled = BB
           }
           static get SpecularTextureEnabled() {
-            return mB.d.SpecularTextureEnabled
+            return gB.e.SpecularTextureEnabled
           }
           static set SpecularTextureEnabled(BB) {
-            mB.d.SpecularTextureEnabled = BB
+            gB.e.SpecularTextureEnabled = BB
           }
           static get BumpTextureEnabled() {
-            return mB.d.BumpTextureEnabled
+            return gB.e.BumpTextureEnabled
           }
           static set BumpTextureEnabled(BB) {
-            mB.d.BumpTextureEnabled = BB
+            gB.e.BumpTextureEnabled = BB
           }
           static get LightmapTextureEnabled() {
-            return mB.d.LightmapTextureEnabled
+            return gB.e.LightmapTextureEnabled
           }
           static set LightmapTextureEnabled(BB) {
-            mB.d.LightmapTextureEnabled = BB
+            gB.e.LightmapTextureEnabled = BB
           }
           static get RefractionTextureEnabled() {
-            return mB.d.RefractionTextureEnabled
+            return gB.e.RefractionTextureEnabled
           }
           static set RefractionTextureEnabled(BB) {
-            mB.d.RefractionTextureEnabled = BB
+            gB.e.RefractionTextureEnabled = BB
           }
           static get ColorGradingTextureEnabled() {
-            return mB.d.ColorGradingTextureEnabled
+            return gB.e.ColorGradingTextureEnabled
           }
           static set ColorGradingTextureEnabled(BB) {
-            mB.d.ColorGradingTextureEnabled = BB
+            gB.e.ColorGradingTextureEnabled = BB
           }
           static get FresnelEnabled() {
-            return mB.d.FresnelEnabled
+            return gB.e.FresnelEnabled
           }
           static set FresnelEnabled(BB) {
-            mB.d.FresnelEnabled = BB
+            gB.e.FresnelEnabled = BB
           }
-        }, jB = new WeakMap, aB = new WeakMap, sB = new WeakMap, EB = new WeakMap, iB = new WeakMap, qB = new WeakMap, fB = new WeakMap, oB = new WeakMap, DB = new WeakMap, VB = new WeakMap, hB = new WeakMap, XB = new WeakMap, ZB = new WeakMap, AB = new WeakMap, TB = new WeakMap, PB = new WeakMap, WB = new WeakMap, eB = new WeakMap, lB = new WeakMap, wB = new WeakMap, xB = new WeakMap, KB = new WeakMap, CB = new WeakMap, cB = new WeakMap, bB = new WeakMap, vB = new WeakMap, RB = new WeakMap, OB = new WeakMap, Bj = new WeakMap, jj = new WeakMap, zj = new WeakMap, Qj = new WeakMap, (() => {
-          const jB = "function" === typeof Symbol && Symbol.metadata ? Object.create(iz[Symbol.metadata] ?? null) : void 0;
-          nj = [(0, nB.v)("diffuseTexture")], dj = [(0, nB.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], Ij = [(0, nB.v)("ambientTexture")], Nj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], uj = [(0, nB.v)("opacityTexture")], Uj = [(0, nB.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], aj = [(0, nB.v)("reflectionTexture")], pj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], rj = [(0, nB.v)("emissiveTexture")], sj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Jj = [(0, nB.v)("specularTexture")], mj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], yj = [(0, nB.v)("bumpTexture")], kj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Gj = [(0, nB.v)("lightmapTexture")], Lj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], gj = [(0, nB.v)("refractionTexture")], tj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Sj = [(0, nB.i)("ambient")], Mj = [(0, nB.i)("diffuse")], Ej = [(0, nB.i)("specular")], ij = [(0, nB.i)("emissive")], qj = [(0, nB.A)()], fj = [(0, nB.A)("useAlphaFromDiffuseTexture")], oj = [() => ({
+        }, IB = new WeakMap, nB = new WeakMap, FB = new WeakMap, wB = new WeakMap, OB = new WeakMap, YB = new WeakMap, iB = new WeakMap, pB = new WeakMap, HB = new WeakMap, PB = new WeakMap, RB = new WeakMap, rB = new WeakMap, mB = new WeakMap, XB = new WeakMap, LB = new WeakMap, eB = new WeakMap, uB = new WeakMap, fB = new WeakMap, lB = new WeakMap, AB = new WeakMap, tB = new WeakMap, bB = new WeakMap, xB = new WeakMap, EB = new WeakMap, DB = new WeakMap, KB = new WeakMap, VB = new WeakMap, SB = new WeakMap, BI = new WeakMap, II = new WeakMap, ZI = new WeakMap, TI = new WeakMap, (() => {
+          const IB = "function" === typeof Symbol && Symbol.metadata ? Object.create(OZ[Symbol.metadata] ?? null) : void 0;
+          JI = [(0, JB.v)("diffuseTexture")], oI = [(0, JB.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], GI = [(0, JB.v)("ambientTexture")], vI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], kI = [(0, JB.v)("opacityTexture")], cI = [(0, JB.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], nI = [(0, JB.v)("reflectionTexture")], hI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], zI = [(0, JB.v)("emissiveTexture")], FI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], NI = [(0, JB.v)("specularTexture")], gI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], qI = [(0, JB.v)("bumpTexture")], yI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], UI = [(0, JB.v)("lightmapTexture")], WI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], dI = [(0, JB.v)("refractionTexture")], CI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], QI = [(0, JB.l)("ambient")], sI = [(0, JB.l)("diffuse")], wI = [(0, JB.l)("specular")], OI = [(0, JB.l)("emissive")], YI = [(0, JB.C)()], iI = [(0, JB.C)("useAlphaFromDiffuseTexture")], pI = [() => ({
             init(BB) {
               return void 0 === BB && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = BB), BB
             },
@@ -1714,7 +1714,7 @@ export const modules = {
             set(BB) {
               this._useAlphaFromDiffuseTexture = BB
             }
-          })], Hj = [(0, nB.A)("useEmissiveAsIllumination")], Dj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Fj = [(0, nB.A)("linkEmissiveWithDiffuse")], Yj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Vj = [(0, nB.A)("useSpecularOverAlpha")], hj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Xj = [(0, nB.A)("useReflectionOverAlpha")], Zj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Aj = [(0, nB.A)("disableLighting")], Tj = [(0, nB.e)("_markAllSubMeshesAsLightsDirty")], Pj = [(0, nB.A)("useObjectSpaceNormalMap")], Wj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], ej = [(0, nB.A)("useParallax")], lj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], wj = [(0, nB.A)("useParallaxOcclusion")], xj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Kj = [(0, nB.A)()], Cj = [(0, nB.A)("roughness")], cj = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], bj = [(0, nB.A)()], vj = [(0, nB.A)()], Rj = [(0, nB.A)()], Oj = [(0, nB.A)("useLightmapAsShadowmap")], Bz = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], jz = [(0, nB.p)("diffuseFresnelParameters")], zz = [(0, nB.e)("_markAllSubMeshesAsFresnelDirty")], Qz = [(0, nB.p)("opacityFresnelParameters")], nz = [(0, nB.e)("_markAllSubMeshesAsFresnelAndMiscDirty")], dz = [(0, nB.p)("reflectionFresnelParameters")], Iz = [(0, nB.e)("_markAllSubMeshesAsFresnelDirty")], Nz = [(0, nB.p)("refractionFresnelParameters")], uz = [(0, nB.e)("_markAllSubMeshesAsFresnelDirty")], Uz = [(0, nB.p)("emissiveFresnelParameters")], az = [(0, nB.e)("_markAllSubMeshesAsFresnelDirty")], pz = [(0, nB.A)("useReflectionFresnelFromSpecular")], rz = [(0, nB.e)("_markAllSubMeshesAsFresnelDirty")], sz = [(0, nB.A)("useGlossinessFromSpecularMapAlpha")], Jz = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], mz = [(0, nB.A)("maxSimultaneousLights")], yz = [(0, nB.e)("_markAllSubMeshesAsLightsDirty")], kz = [(0, nB.A)("invertNormalMapX")], Gz = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Lz = [(0, nB.A)("invertNormalMapY")], gz = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], tz = [(0, nB.A)("twoSidedLighting")], Sz = [(0, nB.e)("_markAllSubMeshesAsTexturesDirty")], Mz = [(0, nB.A)("applyDecalMapAfterDetailMap")], Ez = [(0, nB.e)("_markAllSubMeshesAsMiscDirty")], (0, QB.e)(BB, null, dj, {
+          })], aI = [(0, JB.C)("useEmissiveAsIllumination")], HI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], MI = [(0, JB.C)("linkEmissiveWithDiffuse")], jI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], PI = [(0, JB.C)("useSpecularOverAlpha")], RI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], rI = [(0, JB.C)("useReflectionOverAlpha")], mI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], XI = [(0, JB.C)("disableLighting")], LI = [(0, JB.e)("_markAllSubMeshesAsLightsDirty")], eI = [(0, JB.C)("useObjectSpaceNormalMap")], uI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], fI = [(0, JB.C)("useParallax")], lI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], AI = [(0, JB.C)("useParallaxOcclusion")], tI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], bI = [(0, JB.C)()], xI = [(0, JB.C)("roughness")], EI = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], DI = [(0, JB.C)()], KI = [(0, JB.C)()], VI = [(0, JB.C)()], SI = [(0, JB.C)("useLightmapAsShadowmap")], BZ = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], IZ = [(0, JB.o)("diffuseFresnelParameters")], ZZ = [(0, JB.e)("_markAllSubMeshesAsFresnelDirty")], TZ = [(0, JB.o)("opacityFresnelParameters")], JZ = [(0, JB.e)("_markAllSubMeshesAsFresnelAndMiscDirty")], oZ = [(0, JB.o)("reflectionFresnelParameters")], GZ = [(0, JB.e)("_markAllSubMeshesAsFresnelDirty")], vZ = [(0, JB.o)("refractionFresnelParameters")], kZ = [(0, JB.e)("_markAllSubMeshesAsFresnelDirty")], cZ = [(0, JB.o)("emissiveFresnelParameters")], nZ = [(0, JB.e)("_markAllSubMeshesAsFresnelDirty")], hZ = [(0, JB.C)("useReflectionFresnelFromSpecular")], zZ = [(0, JB.e)("_markAllSubMeshesAsFresnelDirty")], FZ = [(0, JB.C)("useGlossinessFromSpecularMapAlpha")], NZ = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], gZ = [(0, JB.C)("maxSimultaneousLights")], qZ = [(0, JB.e)("_markAllSubMeshesAsLightsDirty")], yZ = [(0, JB.C)("invertNormalMapX")], UZ = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], WZ = [(0, JB.C)("invertNormalMapY")], dZ = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], CZ = [(0, JB.C)("twoSidedLighting")], QZ = [(0, JB.e)("_markAllSubMeshesAsTexturesDirty")], sZ = [(0, JB.C)("applyDecalMapAfterDetailMap")], wZ = [(0, JB.e)("_markAllSubMeshesAsMiscDirty")], (0, TB.j)(BB, null, oI, {
             kind: "accessor",
             name: "diffuseTexture",
             static: !1,
@@ -1722,12 +1722,12 @@ export const modules = {
             access: {
               has: BB => "diffuseTexture" in BB,
               get: BB => BB.diffuseTexture,
-              set: (BB, jB) => {
-                BB.diffuseTexture = jB
+              set: (BB, IB) => {
+                BB.diffuseTexture = IB
               }
             },
-            metadata: jB
-          }, oz, Hz), (0, QB.e)(BB, null, Nj, {
+            metadata: IB
+          }, pZ, aZ), (0, TB.j)(BB, null, vI, {
             kind: "accessor",
             name: "ambientTexture",
             static: !1,
@@ -1735,12 +1735,12 @@ export const modules = {
             access: {
               has: BB => "ambientTexture" in BB,
               get: BB => BB.ambientTexture,
-              set: (BB, jB) => {
-                BB.ambientTexture = jB
+              set: (BB, IB) => {
+                BB.ambientTexture = IB
               }
             },
-            metadata: jB
-          }, Yz, Vz), (0, QB.e)(BB, null, Uj, {
+            metadata: IB
+          }, jZ, PZ), (0, TB.j)(BB, null, cI, {
             kind: "accessor",
             name: "opacityTexture",
             static: !1,
@@ -1748,12 +1748,12 @@ export const modules = {
             access: {
               has: BB => "opacityTexture" in BB,
               get: BB => BB.opacityTexture,
-              set: (BB, jB) => {
-                BB.opacityTexture = jB
+              set: (BB, IB) => {
+                BB.opacityTexture = IB
               }
             },
-            metadata: jB
-          }, Zz, Az), (0, QB.e)(BB, null, pj, {
+            metadata: IB
+          }, mZ, XZ), (0, TB.j)(BB, null, hI, {
             kind: "accessor",
             name: "reflectionTexture",
             static: !1,
@@ -1761,12 +1761,12 @@ export const modules = {
             access: {
               has: BB => "reflectionTexture" in BB,
               get: BB => BB.reflectionTexture,
-              set: (BB, jB) => {
-                BB.reflectionTexture = jB
+              set: (BB, IB) => {
+                BB.reflectionTexture = IB
               }
             },
-            metadata: jB
-          }, Wz, ez), (0, QB.e)(BB, null, sj, {
+            metadata: IB
+          }, uZ, fZ), (0, TB.j)(BB, null, FI, {
             kind: "accessor",
             name: "emissiveTexture",
             static: !1,
@@ -1774,12 +1774,12 @@ export const modules = {
             access: {
               has: BB => "emissiveTexture" in BB,
               get: BB => BB.emissiveTexture,
-              set: (BB, jB) => {
-                BB.emissiveTexture = jB
+              set: (BB, IB) => {
+                BB.emissiveTexture = IB
               }
             },
-            metadata: jB
-          }, xz, Kz), (0, QB.e)(BB, null, mj, {
+            metadata: IB
+          }, tZ, bZ), (0, TB.j)(BB, null, gI, {
             kind: "accessor",
             name: "specularTexture",
             static: !1,
@@ -1787,12 +1787,12 @@ export const modules = {
             access: {
               has: BB => "specularTexture" in BB,
               get: BB => BB.specularTexture,
-              set: (BB, jB) => {
-                BB.specularTexture = jB
+              set: (BB, IB) => {
+                BB.specularTexture = IB
               }
             },
-            metadata: jB
-          }, bz, vz), (0, QB.e)(BB, null, kj, {
+            metadata: IB
+          }, DZ, KZ), (0, TB.j)(BB, null, yI, {
             kind: "accessor",
             name: "bumpTexture",
             static: !1,
@@ -1800,12 +1800,12 @@ export const modules = {
             access: {
               has: BB => "bumpTexture" in BB,
               get: BB => BB.bumpTexture,
-              set: (BB, jB) => {
-                BB.bumpTexture = jB
+              set: (BB, IB) => {
+                BB.bumpTexture = IB
               }
             },
-            metadata: jB
-          }, BQ, jQ), (0, QB.e)(BB, null, Lj, {
+            metadata: IB
+          }, BT, IT), (0, TB.j)(BB, null, WI, {
             kind: "accessor",
             name: "lightmapTexture",
             static: !1,
@@ -1813,12 +1813,12 @@ export const modules = {
             access: {
               has: BB => "lightmapTexture" in BB,
               get: BB => BB.lightmapTexture,
-              set: (BB, jB) => {
-                BB.lightmapTexture = jB
+              set: (BB, IB) => {
+                BB.lightmapTexture = IB
               }
             },
-            metadata: jB
-          }, nQ, dQ), (0, QB.e)(BB, null, tj, {
+            metadata: IB
+          }, JT, oT), (0, TB.j)(BB, null, CI, {
             kind: "accessor",
             name: "refractionTexture",
             static: !1,
@@ -1826,12 +1826,12 @@ export const modules = {
             access: {
               has: BB => "refractionTexture" in BB,
               get: BB => BB.refractionTexture,
-              set: (BB, jB) => {
-                BB.refractionTexture = jB
+              set: (BB, IB) => {
+                BB.refractionTexture = IB
               }
             },
-            metadata: jB
-          }, uQ, UQ), (0, QB.e)(BB, null, oj, {
+            metadata: IB
+          }, kT, cT), (0, TB.j)(BB, null, pI, {
             kind: "accessor",
             name: "useAlphaFromDiffuseTexture",
             static: !1,
@@ -1839,12 +1839,12 @@ export const modules = {
             access: {
               has: BB => "useAlphaFromDiffuseTexture" in BB,
               get: BB => BB.useAlphaFromDiffuseTexture,
-              set: (BB, jB) => {
-                BB.useAlphaFromDiffuseTexture = jB
+              set: (BB, IB) => {
+                BB.useAlphaFromDiffuseTexture = IB
               }
             },
-            metadata: jB
-          }, SQ, MQ), (0, QB.e)(BB, null, Dj, {
+            metadata: IB
+          }, QT, sT), (0, TB.j)(BB, null, HI, {
             kind: "accessor",
             name: "useEmissiveAsIllumination",
             static: !1,
@@ -1852,12 +1852,12 @@ export const modules = {
             access: {
               has: BB => "useEmissiveAsIllumination" in BB,
               get: BB => BB.useEmissiveAsIllumination,
-              set: (BB, jB) => {
-                BB.useEmissiveAsIllumination = jB
+              set: (BB, IB) => {
+                BB.useEmissiveAsIllumination = IB
               }
             },
-            metadata: jB
-          }, qQ, fQ), (0, QB.e)(BB, null, Yj, {
+            metadata: IB
+          }, YT, iT), (0, TB.j)(BB, null, jI, {
             kind: "accessor",
             name: "linkEmissiveWithDiffuse",
             static: !1,
@@ -1865,12 +1865,12 @@ export const modules = {
             access: {
               has: BB => "linkEmissiveWithDiffuse" in BB,
               get: BB => BB.linkEmissiveWithDiffuse,
-              set: (BB, jB) => {
-                BB.linkEmissiveWithDiffuse = jB
+              set: (BB, IB) => {
+                BB.linkEmissiveWithDiffuse = IB
               }
             },
-            metadata: jB
-          }, DQ, FQ), (0, QB.e)(BB, null, hj, {
+            metadata: IB
+          }, HT, MT), (0, TB.j)(BB, null, RI, {
             kind: "accessor",
             name: "useSpecularOverAlpha",
             static: !1,
@@ -1878,12 +1878,12 @@ export const modules = {
             access: {
               has: BB => "useSpecularOverAlpha" in BB,
               get: BB => BB.useSpecularOverAlpha,
-              set: (BB, jB) => {
-                BB.useSpecularOverAlpha = jB
+              set: (BB, IB) => {
+                BB.useSpecularOverAlpha = IB
               }
             },
-            metadata: jB
-          }, hQ, XQ), (0, QB.e)(BB, null, Zj, {
+            metadata: IB
+          }, RT, rT), (0, TB.j)(BB, null, mI, {
             kind: "accessor",
             name: "useReflectionOverAlpha",
             static: !1,
@@ -1891,12 +1891,12 @@ export const modules = {
             access: {
               has: BB => "useReflectionOverAlpha" in BB,
               get: BB => BB.useReflectionOverAlpha,
-              set: (BB, jB) => {
-                BB.useReflectionOverAlpha = jB
+              set: (BB, IB) => {
+                BB.useReflectionOverAlpha = IB
               }
             },
-            metadata: jB
-          }, TQ, PQ), (0, QB.e)(BB, null, Tj, {
+            metadata: IB
+          }, LT, eT), (0, TB.j)(BB, null, LI, {
             kind: "accessor",
             name: "disableLighting",
             static: !1,
@@ -1904,12 +1904,12 @@ export const modules = {
             access: {
               has: BB => "disableLighting" in BB,
               get: BB => BB.disableLighting,
-              set: (BB, jB) => {
-                BB.disableLighting = jB
+              set: (BB, IB) => {
+                BB.disableLighting = IB
               }
             },
-            metadata: jB
-          }, lQ, wQ), (0, QB.e)(BB, null, Wj, {
+            metadata: IB
+          }, lT, AT), (0, TB.j)(BB, null, uI, {
             kind: "accessor",
             name: "useObjectSpaceNormalMap",
             static: !1,
@@ -1917,12 +1917,12 @@ export const modules = {
             access: {
               has: BB => "useObjectSpaceNormalMap" in BB,
               get: BB => BB.useObjectSpaceNormalMap,
-              set: (BB, jB) => {
-                BB.useObjectSpaceNormalMap = jB
+              set: (BB, IB) => {
+                BB.useObjectSpaceNormalMap = IB
               }
             },
-            metadata: jB
-          }, CQ, cQ), (0, QB.e)(BB, null, lj, {
+            metadata: IB
+          }, xT, ET), (0, TB.j)(BB, null, lI, {
             kind: "accessor",
             name: "useParallax",
             static: !1,
@@ -1930,12 +1930,12 @@ export const modules = {
             access: {
               has: BB => "useParallax" in BB,
               get: BB => BB.useParallax,
-              set: (BB, jB) => {
-                BB.useParallax = jB
+              set: (BB, IB) => {
+                BB.useParallax = IB
               }
             },
-            metadata: jB
-          }, RQ, OQ), (0, QB.e)(BB, null, xj, {
+            metadata: IB
+          }, VT, ST), (0, TB.j)(BB, null, tI, {
             kind: "accessor",
             name: "useParallaxOcclusion",
             static: !1,
@@ -1943,12 +1943,12 @@ export const modules = {
             access: {
               has: BB => "useParallaxOcclusion" in BB,
               get: BB => BB.useParallaxOcclusion,
-              set: (BB, jB) => {
-                BB.useParallaxOcclusion = jB
+              set: (BB, IB) => {
+                BB.useParallaxOcclusion = IB
               }
             },
-            metadata: jB
-          }, zn, Qn), (0, QB.e)(BB, null, cj, {
+            metadata: IB
+          }, ZJ, TJ), (0, TB.j)(BB, null, EI, {
             kind: "accessor",
             name: "roughness",
             static: !1,
@@ -1956,12 +1956,12 @@ export const modules = {
             access: {
               has: BB => "roughness" in BB,
               get: BB => BB.roughness,
-              set: (BB, jB) => {
-                BB.roughness = jB
+              set: (BB, IB) => {
+                BB.roughness = IB
               }
             },
-            metadata: jB
-          }, un, Un), (0, QB.e)(BB, null, Bz, {
+            metadata: IB
+          }, kJ, cJ), (0, TB.j)(BB, null, BZ, {
             kind: "accessor",
             name: "useLightmapAsShadowmap",
             static: !1,
@@ -1969,12 +1969,12 @@ export const modules = {
             access: {
               has: BB => "useLightmapAsShadowmap" in BB,
               get: BB => BB.useLightmapAsShadowmap,
-              set: (BB, jB) => {
-                BB.useLightmapAsShadowmap = jB
+              set: (BB, IB) => {
+                BB.useLightmapAsShadowmap = IB
               }
             },
-            metadata: jB
-          }, Gn, Ln), (0, QB.e)(BB, null, zz, {
+            metadata: IB
+          }, UJ, WJ), (0, TB.j)(BB, null, ZZ, {
             kind: "accessor",
             name: "diffuseFresnelParameters",
             static: !1,
@@ -1982,12 +1982,12 @@ export const modules = {
             access: {
               has: BB => "diffuseFresnelParameters" in BB,
               get: BB => BB.diffuseFresnelParameters,
-              set: (BB, jB) => {
-                BB.diffuseFresnelParameters = jB
+              set: (BB, IB) => {
+                BB.diffuseFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, Sn, Mn), (0, QB.e)(BB, null, nz, {
+            metadata: IB
+          }, QJ, sJ), (0, TB.j)(BB, null, JZ, {
             kind: "accessor",
             name: "opacityFresnelParameters",
             static: !1,
@@ -1995,12 +1995,12 @@ export const modules = {
             access: {
               has: BB => "opacityFresnelParameters" in BB,
               get: BB => BB.opacityFresnelParameters,
-              set: (BB, jB) => {
-                BB.opacityFresnelParameters = jB
+              set: (BB, IB) => {
+                BB.opacityFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, fn, Hn), (0, QB.e)(BB, null, Iz, {
+            metadata: IB
+          }, YJ, iJ), (0, TB.j)(BB, null, GZ, {
             kind: "accessor",
             name: "reflectionFresnelParameters",
             static: !1,
@@ -2008,12 +2008,12 @@ export const modules = {
             access: {
               has: BB => "reflectionFresnelParameters" in BB,
               get: BB => BB.reflectionFresnelParameters,
-              set: (BB, jB) => {
-                BB.reflectionFresnelParameters = jB
+              set: (BB, IB) => {
+                BB.reflectionFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, Yn, Vn), (0, QB.e)(BB, null, uz, {
+            metadata: IB
+          }, HJ, MJ), (0, TB.j)(BB, null, kZ, {
             kind: "accessor",
             name: "refractionFresnelParameters",
             static: !1,
@@ -2021,12 +2021,12 @@ export const modules = {
             access: {
               has: BB => "refractionFresnelParameters" in BB,
               get: BB => BB.refractionFresnelParameters,
-              set: (BB, jB) => {
-                BB.refractionFresnelParameters = jB
+              set: (BB, IB) => {
+                BB.refractionFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, Zn, An), (0, QB.e)(BB, null, az, {
+            metadata: IB
+          }, RJ, rJ), (0, TB.j)(BB, null, nZ, {
             kind: "accessor",
             name: "emissiveFresnelParameters",
             static: !1,
@@ -2034,12 +2034,12 @@ export const modules = {
             access: {
               has: BB => "emissiveFresnelParameters" in BB,
               get: BB => BB.emissiveFresnelParameters,
-              set: (BB, jB) => {
-                BB.emissiveFresnelParameters = jB
+              set: (BB, IB) => {
+                BB.emissiveFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, Wn, en), (0, QB.e)(BB, null, rz, {
+            metadata: IB
+          }, LJ, eJ), (0, TB.j)(BB, null, zZ, {
             kind: "accessor",
             name: "useReflectionFresnelFromSpecular",
             static: !1,
@@ -2047,12 +2047,12 @@ export const modules = {
             access: {
               has: BB => "useReflectionFresnelFromSpecular" in BB,
               get: BB => BB.useReflectionFresnelFromSpecular,
-              set: (BB, jB) => {
-                BB.useReflectionFresnelFromSpecular = jB
+              set: (BB, IB) => {
+                BB.useReflectionFresnelFromSpecular = IB
               }
             },
-            metadata: jB
-          }, Kn, Cn), (0, QB.e)(BB, null, Jz, {
+            metadata: IB
+          }, lJ, AJ), (0, TB.j)(BB, null, NZ, {
             kind: "accessor",
             name: "useGlossinessFromSpecularMapAlpha",
             static: !1,
@@ -2060,12 +2060,12 @@ export const modules = {
             access: {
               has: BB => "useGlossinessFromSpecularMapAlpha" in BB,
               get: BB => BB.useGlossinessFromSpecularMapAlpha,
-              set: (BB, jB) => {
-                BB.useGlossinessFromSpecularMapAlpha = jB
+              set: (BB, IB) => {
+                BB.useGlossinessFromSpecularMapAlpha = IB
               }
             },
-            metadata: jB
-          }, vn, Rn), (0, QB.e)(BB, null, yz, {
+            metadata: IB
+          }, xJ, EJ), (0, TB.j)(BB, null, qZ, {
             kind: "accessor",
             name: "maxSimultaneousLights",
             static: !1,
@@ -2073,12 +2073,12 @@ export const modules = {
             access: {
               has: BB => "maxSimultaneousLights" in BB,
               get: BB => BB.maxSimultaneousLights,
-              set: (BB, jB) => {
-                BB.maxSimultaneousLights = jB
+              set: (BB, IB) => {
+                BB.maxSimultaneousLights = IB
               }
             },
-            metadata: jB
-          }, jd, zd), (0, QB.e)(BB, null, Gz, {
+            metadata: IB
+          }, VJ, SJ), (0, TB.j)(BB, null, UZ, {
             kind: "accessor",
             name: "invertNormalMapX",
             static: !1,
@@ -2086,12 +2086,12 @@ export const modules = {
             access: {
               has: BB => "invertNormalMapX" in BB,
               get: BB => BB.invertNormalMapX,
-              set: (BB, jB) => {
-                BB.invertNormalMapX = jB
+              set: (BB, IB) => {
+                BB.invertNormalMapX = IB
               }
             },
-            metadata: jB
-          }, dd, Id), (0, QB.e)(BB, null, gz, {
+            metadata: IB
+          }, Zo, To), (0, TB.j)(BB, null, dZ, {
             kind: "accessor",
             name: "invertNormalMapY",
             static: !1,
@@ -2099,12 +2099,12 @@ export const modules = {
             access: {
               has: BB => "invertNormalMapY" in BB,
               get: BB => BB.invertNormalMapY,
-              set: (BB, jB) => {
-                BB.invertNormalMapY = jB
+              set: (BB, IB) => {
+                BB.invertNormalMapY = IB
               }
             },
-            metadata: jB
-          }, Ud, pd), (0, QB.e)(BB, null, Sz, {
+            metadata: IB
+          }, Go, vo), (0, TB.j)(BB, null, QZ, {
             kind: "accessor",
             name: "twoSidedLighting",
             static: !1,
@@ -2112,12 +2112,12 @@ export const modules = {
             access: {
               has: BB => "twoSidedLighting" in BB,
               get: BB => BB.twoSidedLighting,
-              set: (BB, jB) => {
-                BB.twoSidedLighting = jB
+              set: (BB, IB) => {
+                BB.twoSidedLighting = IB
               }
             },
-            metadata: jB
-          }, Jd, md), (0, QB.e)(BB, null, Ez, {
+            metadata: IB
+          }, no, ho), (0, TB.j)(BB, null, wZ, {
             kind: "accessor",
             name: "applyDecalMapAfterDetailMap",
             static: !1,
@@ -2125,12 +2125,12 @@ export const modules = {
             access: {
               has: BB => "applyDecalMapAfterDetailMap" in BB,
               get: BB => BB.applyDecalMapAfterDetailMap,
-              set: (BB, jB) => {
-                BB.applyDecalMapAfterDetailMap = jB
+              set: (BB, IB) => {
+                BB.applyDecalMapAfterDetailMap = IB
               }
             },
-            metadata: jB
-          }, Gd, Ld), (0, QB.e)(null, null, nj, {
+            metadata: IB
+          }, No, go), (0, TB.j)(null, null, JI, {
             kind: "field",
             name: "_diffuseTexture",
             static: !1,
@@ -2138,12 +2138,12 @@ export const modules = {
             access: {
               has: BB => "_diffuseTexture" in BB,
               get: BB => BB._diffuseTexture,
-              set: (BB, jB) => {
-                BB._diffuseTexture = jB
+              set: (BB, IB) => {
+                BB._diffuseTexture = IB
               }
             },
-            metadata: jB
-          }, qz, fz), (0, QB.e)(null, null, Ij, {
+            metadata: IB
+          }, YZ, iZ), (0, TB.j)(null, null, GI, {
             kind: "field",
             name: "_ambientTexture",
             static: !1,
@@ -2151,12 +2151,12 @@ export const modules = {
             access: {
               has: BB => "_ambientTexture" in BB,
               get: BB => BB._ambientTexture,
-              set: (BB, jB) => {
-                BB._ambientTexture = jB
+              set: (BB, IB) => {
+                BB._ambientTexture = IB
               }
             },
-            metadata: jB
-          }, Dz, Fz), (0, QB.e)(null, null, uj, {
+            metadata: IB
+          }, HZ, MZ), (0, TB.j)(null, null, kI, {
             kind: "field",
             name: "_opacityTexture",
             static: !1,
@@ -2164,12 +2164,12 @@ export const modules = {
             access: {
               has: BB => "_opacityTexture" in BB,
               get: BB => BB._opacityTexture,
-              set: (BB, jB) => {
-                BB._opacityTexture = jB
+              set: (BB, IB) => {
+                BB._opacityTexture = IB
               }
             },
-            metadata: jB
-          }, hz, Xz), (0, QB.e)(null, null, aj, {
+            metadata: IB
+          }, RZ, rZ), (0, TB.j)(null, null, nI, {
             kind: "field",
             name: "_reflectionTexture",
             static: !1,
@@ -2177,12 +2177,12 @@ export const modules = {
             access: {
               has: BB => "_reflectionTexture" in BB,
               get: BB => BB._reflectionTexture,
-              set: (BB, jB) => {
-                BB._reflectionTexture = jB
+              set: (BB, IB) => {
+                BB._reflectionTexture = IB
               }
             },
-            metadata: jB
-          }, Tz, Pz), (0, QB.e)(null, null, rj, {
+            metadata: IB
+          }, LZ, eZ), (0, TB.j)(null, null, zI, {
             kind: "field",
             name: "_emissiveTexture",
             static: !1,
@@ -2190,12 +2190,12 @@ export const modules = {
             access: {
               has: BB => "_emissiveTexture" in BB,
               get: BB => BB._emissiveTexture,
-              set: (BB, jB) => {
-                BB._emissiveTexture = jB
+              set: (BB, IB) => {
+                BB._emissiveTexture = IB
               }
             },
-            metadata: jB
-          }, lz, wz), (0, QB.e)(null, null, Jj, {
+            metadata: IB
+          }, lZ, AZ), (0, TB.j)(null, null, NI, {
             kind: "field",
             name: "_specularTexture",
             static: !1,
@@ -2203,12 +2203,12 @@ export const modules = {
             access: {
               has: BB => "_specularTexture" in BB,
               get: BB => BB._specularTexture,
-              set: (BB, jB) => {
-                BB._specularTexture = jB
+              set: (BB, IB) => {
+                BB._specularTexture = IB
               }
             },
-            metadata: jB
-          }, Cz, cz), (0, QB.e)(null, null, yj, {
+            metadata: IB
+          }, xZ, EZ), (0, TB.j)(null, null, qI, {
             kind: "field",
             name: "_bumpTexture",
             static: !1,
@@ -2216,12 +2216,12 @@ export const modules = {
             access: {
               has: BB => "_bumpTexture" in BB,
               get: BB => BB._bumpTexture,
-              set: (BB, jB) => {
-                BB._bumpTexture = jB
+              set: (BB, IB) => {
+                BB._bumpTexture = IB
               }
             },
-            metadata: jB
-          }, Rz, Oz), (0, QB.e)(null, null, Gj, {
+            metadata: IB
+          }, VZ, SZ), (0, TB.j)(null, null, UI, {
             kind: "field",
             name: "_lightmapTexture",
             static: !1,
@@ -2229,12 +2229,12 @@ export const modules = {
             access: {
               has: BB => "_lightmapTexture" in BB,
               get: BB => BB._lightmapTexture,
-              set: (BB, jB) => {
-                BB._lightmapTexture = jB
+              set: (BB, IB) => {
+                BB._lightmapTexture = IB
               }
             },
-            metadata: jB
-          }, zQ, QQ), (0, QB.e)(null, null, gj, {
+            metadata: IB
+          }, ZT, TT), (0, TB.j)(null, null, dI, {
             kind: "field",
             name: "_refractionTexture",
             static: !1,
@@ -2242,12 +2242,12 @@ export const modules = {
             access: {
               has: BB => "_refractionTexture" in BB,
               get: BB => BB._refractionTexture,
-              set: (BB, jB) => {
-                BB._refractionTexture = jB
+              set: (BB, IB) => {
+                BB._refractionTexture = IB
               }
             },
-            metadata: jB
-          }, IQ, NQ), (0, QB.e)(null, null, Sj, {
+            metadata: IB
+          }, GT, vT), (0, TB.j)(null, null, QI, {
             kind: "field",
             name: "ambientColor",
             static: !1,
@@ -2255,12 +2255,12 @@ export const modules = {
             access: {
               has: BB => "ambientColor" in BB,
               get: BB => BB.ambientColor,
-              set: (BB, jB) => {
-                BB.ambientColor = jB
+              set: (BB, IB) => {
+                BB.ambientColor = IB
               }
             },
-            metadata: jB
-          }, aQ, pQ), (0, QB.e)(null, null, Mj, {
+            metadata: IB
+          }, nT, hT), (0, TB.j)(null, null, sI, {
             kind: "field",
             name: "diffuseColor",
             static: !1,
@@ -2268,12 +2268,12 @@ export const modules = {
             access: {
               has: BB => "diffuseColor" in BB,
               get: BB => BB.diffuseColor,
-              set: (BB, jB) => {
-                BB.diffuseColor = jB
+              set: (BB, IB) => {
+                BB.diffuseColor = IB
               }
             },
-            metadata: jB
-          }, rQ, sQ), (0, QB.e)(null, null, Ej, {
+            metadata: IB
+          }, zT, FT), (0, TB.j)(null, null, wI, {
             kind: "field",
             name: "specularColor",
             static: !1,
@@ -2281,12 +2281,12 @@ export const modules = {
             access: {
               has: BB => "specularColor" in BB,
               get: BB => BB.specularColor,
-              set: (BB, jB) => {
-                BB.specularColor = jB
+              set: (BB, IB) => {
+                BB.specularColor = IB
               }
             },
-            metadata: jB
-          }, JQ, mQ), (0, QB.e)(null, null, ij, {
+            metadata: IB
+          }, NT, gT), (0, TB.j)(null, null, OI, {
             kind: "field",
             name: "emissiveColor",
             static: !1,
@@ -2294,12 +2294,12 @@ export const modules = {
             access: {
               has: BB => "emissiveColor" in BB,
               get: BB => BB.emissiveColor,
-              set: (BB, jB) => {
-                BB.emissiveColor = jB
+              set: (BB, IB) => {
+                BB.emissiveColor = IB
               }
             },
-            metadata: jB
-          }, yQ, kQ), (0, QB.e)(null, null, qj, {
+            metadata: IB
+          }, qT, yT), (0, TB.j)(null, null, YI, {
             kind: "field",
             name: "specularPower",
             static: !1,
@@ -2307,12 +2307,12 @@ export const modules = {
             access: {
               has: BB => "specularPower" in BB,
               get: BB => BB.specularPower,
-              set: (BB, jB) => {
-                BB.specularPower = jB
+              set: (BB, IB) => {
+                BB.specularPower = IB
               }
             },
-            metadata: jB
-          }, GQ, LQ), (0, QB.e)(null, null, fj, {
+            metadata: IB
+          }, UT, WT), (0, TB.j)(null, null, iI, {
             kind: "field",
             name: "_useAlphaFromDiffuseTexture",
             static: !1,
@@ -2320,12 +2320,12 @@ export const modules = {
             access: {
               has: BB => "_useAlphaFromDiffuseTexture" in BB,
               get: BB => BB._useAlphaFromDiffuseTexture,
-              set: (BB, jB) => {
-                BB._useAlphaFromDiffuseTexture = jB
+              set: (BB, IB) => {
+                BB._useAlphaFromDiffuseTexture = IB
               }
             },
-            metadata: jB
-          }, gQ, tQ), (0, QB.e)(null, null, Hj, {
+            metadata: IB
+          }, dT, CT), (0, TB.j)(null, null, aI, {
             kind: "field",
             name: "_useEmissiveAsIllumination",
             static: !1,
@@ -2333,12 +2333,12 @@ export const modules = {
             access: {
               has: BB => "_useEmissiveAsIllumination" in BB,
               get: BB => BB._useEmissiveAsIllumination,
-              set: (BB, jB) => {
-                BB._useEmissiveAsIllumination = jB
+              set: (BB, IB) => {
+                BB._useEmissiveAsIllumination = IB
               }
             },
-            metadata: jB
-          }, EQ, iQ), (0, QB.e)(null, null, Fj, {
+            metadata: IB
+          }, wT, OT), (0, TB.j)(null, null, MI, {
             kind: "field",
             name: "_linkEmissiveWithDiffuse",
             static: !1,
@@ -2346,12 +2346,12 @@ export const modules = {
             access: {
               has: BB => "_linkEmissiveWithDiffuse" in BB,
               get: BB => BB._linkEmissiveWithDiffuse,
-              set: (BB, jB) => {
-                BB._linkEmissiveWithDiffuse = jB
+              set: (BB, IB) => {
+                BB._linkEmissiveWithDiffuse = IB
               }
             },
-            metadata: jB
-          }, oQ, HQ), (0, QB.e)(null, null, Vj, {
+            metadata: IB
+          }, pT, aT), (0, TB.j)(null, null, PI, {
             kind: "field",
             name: "_useSpecularOverAlpha",
             static: !1,
@@ -2359,12 +2359,12 @@ export const modules = {
             access: {
               has: BB => "_useSpecularOverAlpha" in BB,
               get: BB => BB._useSpecularOverAlpha,
-              set: (BB, jB) => {
-                BB._useSpecularOverAlpha = jB
+              set: (BB, IB) => {
+                BB._useSpecularOverAlpha = IB
               }
             },
-            metadata: jB
-          }, YQ, VQ), (0, QB.e)(null, null, Xj, {
+            metadata: IB
+          }, jT, PT), (0, TB.j)(null, null, rI, {
             kind: "field",
             name: "_useReflectionOverAlpha",
             static: !1,
@@ -2372,12 +2372,12 @@ export const modules = {
             access: {
               has: BB => "_useReflectionOverAlpha" in BB,
               get: BB => BB._useReflectionOverAlpha,
-              set: (BB, jB) => {
-                BB._useReflectionOverAlpha = jB
+              set: (BB, IB) => {
+                BB._useReflectionOverAlpha = IB
               }
             },
-            metadata: jB
-          }, ZQ, AQ), (0, QB.e)(null, null, Aj, {
+            metadata: IB
+          }, mT, XT), (0, TB.j)(null, null, XI, {
             kind: "field",
             name: "_disableLighting",
             static: !1,
@@ -2385,12 +2385,12 @@ export const modules = {
             access: {
               has: BB => "_disableLighting" in BB,
               get: BB => BB._disableLighting,
-              set: (BB, jB) => {
-                BB._disableLighting = jB
+              set: (BB, IB) => {
+                BB._disableLighting = IB
               }
             },
-            metadata: jB
-          }, WQ, eQ), (0, QB.e)(null, null, Pj, {
+            metadata: IB
+          }, uT, fT), (0, TB.j)(null, null, eI, {
             kind: "field",
             name: "_useObjectSpaceNormalMap",
             static: !1,
@@ -2398,12 +2398,12 @@ export const modules = {
             access: {
               has: BB => "_useObjectSpaceNormalMap" in BB,
               get: BB => BB._useObjectSpaceNormalMap,
-              set: (BB, jB) => {
-                BB._useObjectSpaceNormalMap = jB
+              set: (BB, IB) => {
+                BB._useObjectSpaceNormalMap = IB
               }
             },
-            metadata: jB
-          }, xQ, KQ), (0, QB.e)(null, null, ej, {
+            metadata: IB
+          }, tT, bT), (0, TB.j)(null, null, fI, {
             kind: "field",
             name: "_useParallax",
             static: !1,
@@ -2411,12 +2411,12 @@ export const modules = {
             access: {
               has: BB => "_useParallax" in BB,
               get: BB => BB._useParallax,
-              set: (BB, jB) => {
-                BB._useParallax = jB
+              set: (BB, IB) => {
+                BB._useParallax = IB
               }
             },
-            metadata: jB
-          }, bQ, vQ), (0, QB.e)(null, null, wj, {
+            metadata: IB
+          }, DT, KT), (0, TB.j)(null, null, AI, {
             kind: "field",
             name: "_useParallaxOcclusion",
             static: !1,
@@ -2424,12 +2424,12 @@ export const modules = {
             access: {
               has: BB => "_useParallaxOcclusion" in BB,
               get: BB => BB._useParallaxOcclusion,
-              set: (BB, jB) => {
-                BB._useParallaxOcclusion = jB
+              set: (BB, IB) => {
+                BB._useParallaxOcclusion = IB
               }
             },
-            metadata: jB
-          }, Bn, jn), (0, QB.e)(null, null, Kj, {
+            metadata: IB
+          }, BJ, IJ), (0, TB.j)(null, null, bI, {
             kind: "field",
             name: "parallaxScaleBias",
             static: !1,
@@ -2437,12 +2437,12 @@ export const modules = {
             access: {
               has: BB => "parallaxScaleBias" in BB,
               get: BB => BB.parallaxScaleBias,
-              set: (BB, jB) => {
-                BB.parallaxScaleBias = jB
+              set: (BB, IB) => {
+                BB.parallaxScaleBias = IB
               }
             },
-            metadata: jB
-          }, nn, dn), (0, QB.e)(null, null, Cj, {
+            metadata: IB
+          }, JJ, oJ), (0, TB.j)(null, null, xI, {
             kind: "field",
             name: "_roughness",
             static: !1,
@@ -2450,12 +2450,12 @@ export const modules = {
             access: {
               has: BB => "_roughness" in BB,
               get: BB => BB._roughness,
-              set: (BB, jB) => {
-                BB._roughness = jB
+              set: (BB, IB) => {
+                BB._roughness = IB
               }
             },
-            metadata: jB
-          }, In, Nn), (0, QB.e)(null, null, bj, {
+            metadata: IB
+          }, GJ, vJ), (0, TB.j)(null, null, DI, {
             kind: "field",
             name: "indexOfRefraction",
             static: !1,
@@ -2463,12 +2463,12 @@ export const modules = {
             access: {
               has: BB => "indexOfRefraction" in BB,
               get: BB => BB.indexOfRefraction,
-              set: (BB, jB) => {
-                BB.indexOfRefraction = jB
+              set: (BB, IB) => {
+                BB.indexOfRefraction = IB
               }
             },
-            metadata: jB
-          }, an, pn), (0, QB.e)(null, null, vj, {
+            metadata: IB
+          }, nJ, hJ), (0, TB.j)(null, null, KI, {
             kind: "field",
             name: "invertRefractionY",
             static: !1,
@@ -2476,12 +2476,12 @@ export const modules = {
             access: {
               has: BB => "invertRefractionY" in BB,
               get: BB => BB.invertRefractionY,
-              set: (BB, jB) => {
-                BB.invertRefractionY = jB
+              set: (BB, IB) => {
+                BB.invertRefractionY = IB
               }
             },
-            metadata: jB
-          }, rn, sn), (0, QB.e)(null, null, Rj, {
+            metadata: IB
+          }, zJ, FJ), (0, TB.j)(null, null, VI, {
             kind: "field",
             name: "alphaCutOff",
             static: !1,
@@ -2489,12 +2489,12 @@ export const modules = {
             access: {
               has: BB => "alphaCutOff" in BB,
               get: BB => BB.alphaCutOff,
-              set: (BB, jB) => {
-                BB.alphaCutOff = jB
+              set: (BB, IB) => {
+                BB.alphaCutOff = IB
               }
             },
-            metadata: jB
-          }, Jn, mn), (0, QB.e)(null, null, Oj, {
+            metadata: IB
+          }, NJ, gJ), (0, TB.j)(null, null, SI, {
             kind: "field",
             name: "_useLightmapAsShadowmap",
             static: !1,
@@ -2502,12 +2502,12 @@ export const modules = {
             access: {
               has: BB => "_useLightmapAsShadowmap" in BB,
               get: BB => BB._useLightmapAsShadowmap,
-              set: (BB, jB) => {
-                BB._useLightmapAsShadowmap = jB
+              set: (BB, IB) => {
+                BB._useLightmapAsShadowmap = IB
               }
             },
-            metadata: jB
-          }, yn, kn), (0, QB.e)(null, null, jz, {
+            metadata: IB
+          }, qJ, yJ), (0, TB.j)(null, null, IZ, {
             kind: "field",
             name: "_diffuseFresnelParameters",
             static: !1,
@@ -2515,12 +2515,12 @@ export const modules = {
             access: {
               has: BB => "_diffuseFresnelParameters" in BB,
               get: BB => BB._diffuseFresnelParameters,
-              set: (BB, jB) => {
-                BB._diffuseFresnelParameters = jB
+              set: (BB, IB) => {
+                BB._diffuseFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, gn, tn), (0, QB.e)(null, null, Qz, {
+            metadata: IB
+          }, dJ, CJ), (0, TB.j)(null, null, TZ, {
             kind: "field",
             name: "_opacityFresnelParameters",
             static: !1,
@@ -2528,12 +2528,12 @@ export const modules = {
             access: {
               has: BB => "_opacityFresnelParameters" in BB,
               get: BB => BB._opacityFresnelParameters,
-              set: (BB, jB) => {
-                BB._opacityFresnelParameters = jB
+              set: (BB, IB) => {
+                BB._opacityFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, En, qn), (0, QB.e)(null, null, dz, {
+            metadata: IB
+          }, wJ, OJ), (0, TB.j)(null, null, oZ, {
             kind: "field",
             name: "_reflectionFresnelParameters",
             static: !1,
@@ -2541,12 +2541,12 @@ export const modules = {
             access: {
               has: BB => "_reflectionFresnelParameters" in BB,
               get: BB => BB._reflectionFresnelParameters,
-              set: (BB, jB) => {
-                BB._reflectionFresnelParameters = jB
+              set: (BB, IB) => {
+                BB._reflectionFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, Dn, Fn), (0, QB.e)(null, null, Nz, {
+            metadata: IB
+          }, pJ, aJ), (0, TB.j)(null, null, vZ, {
             kind: "field",
             name: "_refractionFresnelParameters",
             static: !1,
@@ -2554,12 +2554,12 @@ export const modules = {
             access: {
               has: BB => "_refractionFresnelParameters" in BB,
               get: BB => BB._refractionFresnelParameters,
-              set: (BB, jB) => {
-                BB._refractionFresnelParameters = jB
+              set: (BB, IB) => {
+                BB._refractionFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, hn, Xn), (0, QB.e)(null, null, Uz, {
+            metadata: IB
+          }, jJ, PJ), (0, TB.j)(null, null, cZ, {
             kind: "field",
             name: "_emissiveFresnelParameters",
             static: !1,
@@ -2567,12 +2567,12 @@ export const modules = {
             access: {
               has: BB => "_emissiveFresnelParameters" in BB,
               get: BB => BB._emissiveFresnelParameters,
-              set: (BB, jB) => {
-                BB._emissiveFresnelParameters = jB
+              set: (BB, IB) => {
+                BB._emissiveFresnelParameters = IB
               }
             },
-            metadata: jB
-          }, Tn, Pn), (0, QB.e)(null, null, pz, {
+            metadata: IB
+          }, mJ, XJ), (0, TB.j)(null, null, hZ, {
             kind: "field",
             name: "_useReflectionFresnelFromSpecular",
             static: !1,
@@ -2580,12 +2580,12 @@ export const modules = {
             access: {
               has: BB => "_useReflectionFresnelFromSpecular" in BB,
               get: BB => BB._useReflectionFresnelFromSpecular,
-              set: (BB, jB) => {
-                BB._useReflectionFresnelFromSpecular = jB
+              set: (BB, IB) => {
+                BB._useReflectionFresnelFromSpecular = IB
               }
             },
-            metadata: jB
-          }, wn, xn), (0, QB.e)(null, null, sz, {
+            metadata: IB
+          }, uJ, fJ), (0, TB.j)(null, null, FZ, {
             kind: "field",
             name: "_useGlossinessFromSpecularMapAlpha",
             static: !1,
@@ -2593,12 +2593,12 @@ export const modules = {
             access: {
               has: BB => "_useGlossinessFromSpecularMapAlpha" in BB,
               get: BB => BB._useGlossinessFromSpecularMapAlpha,
-              set: (BB, jB) => {
-                BB._useGlossinessFromSpecularMapAlpha = jB
+              set: (BB, IB) => {
+                BB._useGlossinessFromSpecularMapAlpha = IB
               }
             },
-            metadata: jB
-          }, cn, bn), (0, QB.e)(null, null, mz, {
+            metadata: IB
+          }, tJ, bJ), (0, TB.j)(null, null, gZ, {
             kind: "field",
             name: "_maxSimultaneousLights",
             static: !1,
@@ -2606,12 +2606,12 @@ export const modules = {
             access: {
               has: BB => "_maxSimultaneousLights" in BB,
               get: BB => BB._maxSimultaneousLights,
-              set: (BB, jB) => {
-                BB._maxSimultaneousLights = jB
+              set: (BB, IB) => {
+                BB._maxSimultaneousLights = IB
               }
             },
-            metadata: jB
-          }, On, Bd), (0, QB.e)(null, null, kz, {
+            metadata: IB
+          }, DJ, KJ), (0, TB.j)(null, null, yZ, {
             kind: "field",
             name: "_invertNormalMapX",
             static: !1,
@@ -2619,12 +2619,12 @@ export const modules = {
             access: {
               has: BB => "_invertNormalMapX" in BB,
               get: BB => BB._invertNormalMapX,
-              set: (BB, jB) => {
-                BB._invertNormalMapX = jB
+              set: (BB, IB) => {
+                BB._invertNormalMapX = IB
               }
             },
-            metadata: jB
-          }, Qd, nd), (0, QB.e)(null, null, Lz, {
+            metadata: IB
+          }, Bo, Io), (0, TB.j)(null, null, WZ, {
             kind: "field",
             name: "_invertNormalMapY",
             static: !1,
@@ -2632,12 +2632,12 @@ export const modules = {
             access: {
               has: BB => "_invertNormalMapY" in BB,
               get: BB => BB._invertNormalMapY,
-              set: (BB, jB) => {
-                BB._invertNormalMapY = jB
+              set: (BB, IB) => {
+                BB._invertNormalMapY = IB
               }
             },
-            metadata: jB
-          }, Nd, ud), (0, QB.e)(null, null, tz, {
+            metadata: IB
+          }, Jo, oo), (0, TB.j)(null, null, CZ, {
             kind: "field",
             name: "_twoSidedLighting",
             static: !1,
@@ -2645,12 +2645,12 @@ export const modules = {
             access: {
               has: BB => "_twoSidedLighting" in BB,
               get: BB => BB._twoSidedLighting,
-              set: (BB, jB) => {
-                BB._twoSidedLighting = jB
+              set: (BB, IB) => {
+                BB._twoSidedLighting = IB
               }
             },
-            metadata: jB
-          }, rd, sd), (0, QB.e)(null, null, Mz, {
+            metadata: IB
+          }, ko, co), (0, TB.j)(null, null, sZ, {
             kind: "field",
             name: "_applyDecalMapAfterDetailMap",
             static: !1,
@@ -2658,74 +2658,74 @@ export const modules = {
             access: {
               has: BB => "_applyDecalMapAfterDetailMap" in BB,
               get: BB => BB._applyDecalMapAfterDetailMap,
-              set: (BB, jB) => {
-                BB._applyDecalMapAfterDetailMap = jB
+              set: (BB, IB) => {
+                BB._applyDecalMapAfterDetailMap = IB
               }
             },
-            metadata: jB
-          }, yd, kd), jB && Object.defineProperty(BB, Symbol.metadata, {
+            metadata: IB
+          }, zo, Fo), IB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: jB
+            value: IB
           })
-        })(), BB.ForceGLSL = !1, BB._ShaderLoader = new SB.c((() => [Promise.all([zB.e(322), zB.e(321)]).then((() => zB(41957))), Promise.all([zB.e(327), zB.e(323), zB.e(336), zB.e(326)]).then((() => zB(42159)))]), (() => [Promise.all([zB.e(343), zB.e(338)]).then((() => zB(42319))), Promise.all([zB.e(344), zB.e(354), zB.e(340)]).then((() => zB(42523)))])), BB
+        })(), BB.ForceGLSL = !1, BB._ShaderLoader = new QB.d((() => [Promise.all([ZB.e(322), ZB.e(321)]).then((() => ZB(41895))), Promise.all([ZB.e(327), ZB.e(323), ZB.e(336), ZB.e(326)]).then((() => ZB(42088)))]), (() => [Promise.all([ZB.e(343), ZB.e(338)]).then((() => ZB(42226))), Promise.all([ZB.e(344), ZB.e(354), ZB.e(340)]).then((() => ZB(42413)))])), BB
       })(),
-      hB = !1;
+      RB = !1;
 
-    function XB() {
-      hB || (hB = !0, (0, pB.e)(), (0, fB.d)("BABYLON.StandardMaterial", VB), IB.g.DefaultMaterialFactory = BB => new VB("default material", BB))
+    function rB() {
+      RB || (RB = !0, (0, hB.d)(), (0, iB.i)("BABYLON.StandardMaterial", PB), GB.e.DefaultMaterialFactory = BB => new PB("default material", BB))
     }
-    Object.getOwnPropertyDescriptor(VB.prototype, "decalMap") || Object.defineProperty(VB.prototype, "decalMap", (0, oB.f)("StandardMaterial", "decalMap"))
+    Object.getOwnPropertyDescriptor(PB.prototype, "decalMap") || Object.defineProperty(PB.prototype, "decalMap", (0, pB.g)("StandardMaterial", "decalMap"))
   },
-  40478: (BB, jB, zB) => {
-    function QB(BB) {
+  40433: (BB, IB, ZB) => {
+    function TB(BB) {
       return class extends BB {
         constructor() {
           super(...arguments), this.MAINUV1 = !1, this.MAINUV2 = !1, this.MAINUV3 = !1, this.MAINUV4 = !1, this.MAINUV5 = !1, this.MAINUV6 = !1, this.UV1 = !1, this.UV2 = !1, this.UV3 = !1, this.UV4 = !1, this.UV5 = !1, this.UV6 = !1
         }
       }
     }
-    zB.d(jB, {
-      d: () => QB
+    ZB.d(IB, {
+      b: () => TB
     })
   },
-  40473: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB
+  40425: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => TB
     });
-    class QB {
-      constructor(BB, jB) {
+    class TB {
+      constructor(BB, IB) {
         this._webGL = {
           load: BB,
           loaded: !1,
           loadPromise: null
         }, this._webGPU = {
-          load: jB,
+          load: IB,
           loaded: !1,
           loadPromise: null
         }
       }
       getLoadCallback(BB) {
-        const jB = 1 === BB ? this._webGPU : this._webGL;
-        return jB.loaded ? void 0 : async () => {
-          await this._loadAsync(jB)
+        const IB = 1 === BB ? this._webGPU : this._webGL;
+        return IB.loaded ? void 0 : async () => {
+          await this._loadAsync(IB)
         }
       }
       async _loadAsync(BB) {
         if (BB.loaded) return;
-        let jB = BB.loadPromise;
-        const zB = null === jB;
-        zB && (jB = Promise.all(BB.load()), BB.loadPromise = jB);
-        let QB = !1;
+        let IB = BB.loadPromise;
+        const ZB = null === IB;
+        ZB && (IB = Promise.all(BB.load()), BB.loadPromise = IB);
+        let TB = !1;
         try {
-          await jB, QB = !0
+          await IB, TB = !0
         } finally {
-          zB && this._completeLoad(BB, QB)
+          ZB && this._completeLoad(BB, TB)
         }
       }
-      _completeLoad(BB, jB) {
-        BB.loaded = jB, BB.loadPromise = null
+      _completeLoad(BB, IB) {
+        BB.loaded = IB, BB.loadPromise = null
       }
     }
   }

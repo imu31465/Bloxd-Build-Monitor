@@ -1,128 +1,128 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6639: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      BaseExtension: () => Bz,
-      BaseInstrumentation: () => jz,
-      BaseTransport: () => Bd,
-      CSPInstrumentation: () => En,
-      ConsoleInstrumentation: () => Fz,
-      ConsoleTransport: () => dd,
-      EVENT_CLICK: () => Lj,
-      EVENT_NAVIGATION: () => gj,
-      EVENT_ROUTE_CHANGE: () => qj,
-      EVENT_SESSION_EXTEND: () => Ej,
-      EVENT_SESSION_RESUME: () => Mj,
-      EVENT_SESSION_START: () => Sj,
-      EVENT_VIEW_CHANGED: () => tj,
-      ErrorsInstrumentation: () => Vz,
-      FetchTransport: () => Ed,
-      InternalLoggerLevel: () => wj,
-      LogLevel: () => Lz,
-      MAX_SESSION_PERSISTENCE_TIME: () => uB,
-      NavigationInstrumentation: () => en,
-      Observable: () => Gz,
-      PerformanceInstrumentation: () => KQ,
-      PersistentSessionsManager: () => Zj,
-      SESSION_EXPIRATION_TIME: () => dB,
-      SESSION_INACTIVITY_TIME: () => IB,
-      STORAGE_KEY: () => nB,
-      SessionInstrumentation: () => Qz,
-      TransportItemType: () => jd,
-      UserActionInstrumentation: () => Mn,
-      UserActionState: () => Jn,
-      VERSION: () => zz,
-      ViewInstrumentation: () => Xz,
-      VolatileSessionsManager: () => Aj,
-      WebVitalsInstrumentation: () => YQ,
-      allLogLevels: () => tz,
-      browserMeta: () => bn,
-      buildStackFrame: () => nz,
-      captureMetas: () => Wd,
-      createInternalLogger: () => Dd,
-      createPromiseBuffer: () => yd,
-      createSession: () => Rn,
-      deepEqual: () => Gj,
-      defaultEventDomain: () => QB,
-      defaultExceptionType: () => iz,
-      defaultGlobalObjectKey: () => Fd,
-      defaultInternalLoggerLevel: () => Kj,
-      defaultLogLevel: () => gz,
-      faro: () => mB,
-      genShortID: () => kj,
-      getCurrentTimestamp: () => Jj,
-      getDataFromSafariExtensions: () => rz,
-      getIgnoreUrls: () => CB,
-      getInternalFaroFromGlobalObject: () => rB,
-      getStackFramesFromError: () => Jz,
-      getTransportBody: () => nd,
-      getUrlFromResource: () => bB,
-      getWebInstrumentations: () => wn,
-      globalObject: () => aB,
-      initializeFaro: () => zI,
-      internalGlobalObjectKey: () => pB,
-      isArray: () => HB,
-      isBoolean: () => iB,
-      isDomError: () => TB,
-      isDomException: () => PB,
-      isElement: () => eB,
-      isElementDefined: () => WB,
-      tJ: () => KB,
-      isError: () => ZB,
-      isErrorDefined: () => XB,
-      isErrorEvent: () => AB,
-      isEvent: () => hB,
-      isEventDefined: () => VB,
-      isFunction: () => oB,
-      isInstanceOf: () => LB,
-      isInt: () => EB,
-      isInternalFaroOnGlobalObject: () => JB,
-      isMap: () => wB,
+  6843: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      BaseExtension: () => BZ,
+      BaseInstrumentation: () => IZ,
+      BaseTransport: () => KJ,
+      CSPInstrumentation: () => wJ,
+      ConsoleInstrumentation: () => MZ,
+      ConsoleTransport: () => Zo,
+      EVENT_CLICK: () => WI,
+      EVENT_NAVIGATION: () => dI,
+      EVENT_ROUTE_CHANGE: () => YI,
+      EVENT_SESSION_EXTEND: () => wI,
+      EVENT_SESSION_RESUME: () => sI,
+      EVENT_SESSION_START: () => QI,
+      EVENT_VIEW_CHANGED: () => CI,
+      ErrorsInstrumentation: () => PZ,
+      FetchTransport: () => Co,
+      InternalLoggerLevel: () => AI,
+      LogLevel: () => WZ,
+      MAX_SESSION_PERSISTENCE_TIME: () => kB,
+      NavigationInstrumentation: () => eJ,
+      Observable: () => UZ,
+      PerformanceInstrumentation: () => bT,
+      PersistentSessionsManager: () => mI,
+      SESSION_EXPIRATION_TIME: () => oB,
+      SESSION_INACTIVITY_TIME: () => GB,
+      STORAGE_KEY: () => JB,
+      SessionInstrumentation: () => TZ,
+      TransportItemType: () => VJ,
+      UserActionInstrumentation: () => sJ,
+      UserActionState: () => NJ,
+      VERSION: () => ZZ,
+      ViewInstrumentation: () => rZ,
+      VolatileSessionsManager: () => XI,
+      WebVitalsInstrumentation: () => jT,
+      allLogLevels: () => CZ,
+      browserMeta: () => bJ,
+      buildStackFrame: () => JZ,
+      captureMetas: () => mo,
+      createInternalLogger: () => Yo,
+      createPromiseBuffer: () => zo,
+      createSession: () => EJ,
+      deepEqual: () => UI,
+      defaultEventDomain: () => TB,
+      defaultExceptionType: () => OZ,
+      defaultGlobalObjectKey: () => io,
+      defaultInternalLoggerLevel: () => bI,
+      defaultLogLevel: () => dZ,
+      faro: () => gB,
+      genShortID: () => yI,
+      getCurrentTimestamp: () => NI,
+      getDataFromSafariExtensions: () => zZ,
+      getIgnoreUrls: () => xB,
+      getInternalFaroFromGlobalObject: () => zB,
+      getStackFramesFromError: () => NZ,
+      getTransportBody: () => Io,
+      getUrlFromResource: () => DB,
+      getWebInstrumentations: () => uJ,
+      globalObject: () => nB,
+      initializeFaro: () => So,
+      internalGlobalObjectKey: () => hB,
+      isArray: () => aB,
+      isBoolean: () => OB,
+      isDomError: () => LB,
+      isDomException: () => eB,
+      isElement: () => fB,
+      isElementDefined: () => uB,
+      hN: () => bB,
+      isError: () => mB,
+      isErrorDefined: () => rB,
+      isErrorEvent: () => XB,
+      isEvent: () => RB,
+      isEventDefined: () => PB,
+      isFunction: () => pB,
+      isInstanceOf: () => WB,
+      isInt: () => wB,
+      isInternalFaroOnGlobalObject: () => NB,
+      isMap: () => AB,
       isMapDefined: () => lB,
-      isNull: () => tB,
-      isNumber: () => MB,
-      isObject: () => fB,
-      isPrimitive: () => YB,
-      isRegExp: () => DB,
-      isString: () => SB,
-      isSymbol: () => qB,
-      isSyntheticEvent: () => xB,
-      isThenable: () => FB,
-      isToString: () => GB,
-      isTypeof: () => kB,
-      isUndefined: () => gB,
-      makeCoreConfig: () => hd,
-      noop: () => lj,
-      osMeta: () => vn,
-      parseStacktrace: () => mz,
-      sdkMeta: () => On,
-      setInternalFaroOnGlobalObject: () => sB,
-      transportItemTypeToBodyKey: () => zd,
-      unknownString: () => hz,
-      userActionDataAttribute: () => CQ,
-      userActionTimeoutDataAttribute: () => cQ
+      isNull: () => CB,
+      isNumber: () => sB,
+      isObject: () => iB,
+      isPrimitive: () => jB,
+      isRegExp: () => HB,
+      isString: () => QB,
+      isSymbol: () => YB,
+      isSyntheticEvent: () => tB,
+      isThenable: () => MB,
+      isToString: () => UB,
+      isTypeof: () => yB,
+      isUndefined: () => dB,
+      makeCoreConfig: () => Ho,
+      noop: () => lI,
+      osMeta: () => xJ,
+      parseStacktrace: () => gZ,
+      sdkMeta: () => DJ,
+      setInternalFaroOnGlobalObject: () => FB,
+      transportItemTypeToBodyKey: () => SJ,
+      unknownString: () => RZ,
+      userActionDataAttribute: () => xT,
+      userActionTimeoutDataAttribute: () => ET
     });
-    const QB = "browser",
-      nB = "com.grafana.faro.session",
-      dB = 144e5,
-      IB = 9e5,
-      NB = 1e3,
-      uB = IB,
-      UB = {
+    const TB = "browser",
+      JB = "com.grafana.faro.session",
+      oB = 144e5,
+      GB = 9e5,
+      vB = 1e3,
+      kB = GB,
+      cB = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: uB
+        maxSessionPersistenceTime: kB
       };
-    const aB = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof zB.g ? zB.g : "undefined" !== typeof self ? self : void 0;
-    const pB = "_faroInternal";
+    const nB = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof ZB.g ? ZB.g : "undefined" !== typeof self ? self : void 0;
+    const hB = "_faroInternal";
 
-    function rB() {
-      return aB[pB]
+    function zB() {
+      return nB[hB]
     }
 
-    function sB(BB) {
-      BB.config.isolate ? BB.internalLogger.debug("Skipping registering internal Faro instance on global object") : (BB.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(aB, pB, {
+    function FB(BB) {
+      BB.config.isolate ? BB.internalLogger.debug("Skipping registering internal Faro instance on global object") : (BB.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(nB, hB, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
@@ -130,10 +130,10 @@ export const modules = {
       }))
     }
 
-    function JB() {
-      return pB in aB
+    function NB() {
+      return hB in nB
     }
-    let mB = {
+    let gB = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,445 +160,445 @@ export const modules = {
       }
     };
 
-    function yB(BB, jB, zB, QB, nB, dB, IB) {
-      return jB.debug("Initializing Faro"), mB = {
-          api: dB,
-          config: zB,
-          instrumentations: IB,
-          internalLogger: jB,
-          metas: QB,
-          pause: nB.pause,
-          transports: nB,
+    function qB(BB, IB, ZB, TB, JB, oB, GB) {
+      return IB.debug("Initializing Faro"), gB = {
+          api: oB,
+          config: ZB,
+          instrumentations: GB,
+          internalLogger: IB,
+          metas: TB,
+          pause: JB.pause,
+          transports: JB,
           unpatchedConsole: BB,
-          unpause: nB.unpause
-        }, sB(mB),
+          unpause: JB.unpause
+        }, FB(gB),
         function(BB) {
           if (BB.config.preventGlobalExposure) BB.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (BB.internalLogger.debug(`Registering public faro reference in the global scope using "${BB.config.globalObjectKey}" key`), BB.config.globalObjectKey in aB) return void BB.internalLogger.warn(`Skipping global registration due to key "${BB.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(aB, BB.config.globalObjectKey, {
+            if (BB.internalLogger.debug(`Registering public faro reference in the global scope using "${BB.config.globalObjectKey}" key`), BB.config.globalObjectKey in nB) return void BB.internalLogger.warn(`Skipping global registration due to key "${BB.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(nB, BB.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
               value: BB
             })
           }
-        }(mB), mB
+        }(gB), gB
     }
 
-    function kB(BB, jB) {
-      return typeof BB === jB
+    function yB(BB, IB) {
+      return typeof BB === IB
     }
 
-    function GB(BB, jB) {
-      return Object.prototype.toString.call(BB) === `[object ${jB}]`
+    function UB(BB, IB) {
+      return Object.prototype.toString.call(BB) === `[object ${IB}]`
     }
 
-    function LB(BB, jB) {
+    function WB(BB, IB) {
       try {
-        return BB instanceof jB
-      } catch (zB) {
+        return BB instanceof IB
+      } catch (ZB) {
         return !1
       }
     }
-    const gB = BB => kB(BB, "undefined"),
-      tB = BB => kB(BB, "null"),
-      SB = BB => kB(BB, "string"),
-      MB = BB => kB(BB, "number") && !isNaN(BB) || kB(BB, "bigint"),
-      EB = BB => MB(BB) && Number.isInteger(BB),
-      iB = BB => kB(BB, "boolean"),
-      qB = BB => kB(BB, "symbol"),
-      fB = BB => !tB(BB) && kB(BB, "object"),
-      oB = BB => kB(BB, "function"),
-      HB = BB => GB(BB, "Array"),
-      DB = BB => GB(BB, "RegExp"),
-      FB = BB => oB(null === BB || void 0 === BB ? void 0 : BB.then),
-      YB = BB => !fB(BB) && !oB(BB),
-      VB = "undefined" !== typeof Event,
-      hB = BB => VB && LB(BB, Event),
-      XB = "undefined" !== typeof Error,
-      ZB = BB => XB && LB(BB, Error),
-      AB = BB => GB(BB, "ErrorEvent"),
-      TB = BB => GB(BB, "DOMError"),
-      PB = BB => GB(BB, "DOMException"),
-      WB = "undefined" !== typeof Element,
-      eB = BB => WB && LB(BB, Element),
+    const dB = BB => yB(BB, "undefined"),
+      CB = BB => yB(BB, "null"),
+      QB = BB => yB(BB, "string"),
+      sB = BB => yB(BB, "number") && !isNaN(BB) || yB(BB, "bigint"),
+      wB = BB => sB(BB) && Number.isInteger(BB),
+      OB = BB => yB(BB, "boolean"),
+      YB = BB => yB(BB, "symbol"),
+      iB = BB => !CB(BB) && yB(BB, "object"),
+      pB = BB => yB(BB, "function"),
+      aB = BB => UB(BB, "Array"),
+      HB = BB => UB(BB, "RegExp"),
+      MB = BB => pB(null === BB || void 0 === BB ? void 0 : BB.then),
+      jB = BB => !iB(BB) && !pB(BB),
+      PB = "undefined" !== typeof Event,
+      RB = BB => PB && WB(BB, Event),
+      rB = "undefined" !== typeof Error,
+      mB = BB => rB && WB(BB, Error),
+      XB = BB => UB(BB, "ErrorEvent"),
+      LB = BB => UB(BB, "DOMError"),
+      eB = BB => UB(BB, "DOMException"),
+      uB = "undefined" !== typeof Element,
+      fB = BB => uB && WB(BB, Element),
       lB = "undefined" !== typeof Map,
-      wB = BB => lB && LB(BB, Map),
-      xB = BB => fB(BB) && "nativeEvent" in BB && "preventDefault" in BB && "stopPropagation" in BB;
-
-    function KB(BB) {
-      return null == BB || (HB(BB) || SB(BB) ? 0 === BB.length : !!fB(BB) && 0 === Object.keys(BB).length)
-    }
-
-    function CB() {
-      return mB.transports.transports.flatMap((BB => BB.getIgnoreUrls()))
-    }
-
-    function cB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return CB().some((jB => BB && null != BB.match(jB)))
-    }
+      AB = BB => lB && WB(BB, Map),
+      tB = BB => iB(BB) && "nativeEvent" in BB && "preventDefault" in BB && "stopPropagation" in BB;
 
     function bB(BB) {
-      return SB(BB) ? BB : BB instanceof URL ? BB.href : !KB(BB) && oB(null === BB || void 0 === BB ? void 0 : BB.toString) ? BB.toString() : void 0
+      return null == BB || (aB(BB) || QB(BB) ? 0 === BB.length : !!iB(BB) && 0 === Object.keys(BB).length)
     }
-    const vB = "sessionStorage",
-      RB = "localStorage";
 
-    function OB(BB) {
+    function xB() {
+      return gB.transports.transports.flatMap((BB => BB.getIgnoreUrls()))
+    }
+
+    function EB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return xB().some((IB => BB && null != BB.match(IB)))
+    }
+
+    function DB(BB) {
+      return QB(BB) ? BB : BB instanceof URL ? BB.href : !bB(BB) && pB(null === BB || void 0 === BB ? void 0 : BB.toString) ? BB.toString() : void 0
+    }
+    const KB = "sessionStorage",
+      VB = "localStorage";
+
+    function SB(BB) {
       try {
-        let jB;
-        jB = window[BB];
-        const zB = "__faro_storage_test__";
-        return jB.setItem(zB, zB), jB.removeItem(zB), !0
-      } catch (zB) {
-        var jB;
-        return null === (jB = mB.internalLogger) || void 0 === jB || jB.info(`Web storage of type ${BB} is not available. Reason: ${zB}`), !1
+        let IB;
+        IB = window[BB];
+        const ZB = "__faro_storage_test__";
+        return IB.setItem(ZB, ZB), IB.removeItem(ZB), !0
+      } catch (ZB) {
+        var IB;
+        return null === (IB = gB.internalLogger) || void 0 === IB || IB.info(`Web storage of type ${BB} is not available. Reason: ${ZB}`), !1
       }
     }
 
-    function Bj(BB, jB) {
-      return dj(jB) ? window[jB].getItem(BB) : null
+    function BI(BB, IB) {
+      return oI(IB) ? window[IB].getItem(BB) : null
     }
 
-    function jj(BB, jB, zB) {
-      if (dj(zB)) try {
-        window[zB].setItem(BB, jB)
-      } catch (QB) {}
+    function II(BB, IB, ZB) {
+      if (oI(ZB)) try {
+        window[ZB].setItem(BB, IB)
+      } catch (TB) {}
     }
 
-    function zj(BB, jB) {
-      dj(jB) && window[jB].removeItem(BB)
+    function ZI(BB, IB) {
+      oI(IB) && window[IB].removeItem(BB)
     }
-    const Qj = OB(RB),
-      nj = OB(vB);
+    const TI = SB(VB),
+      JI = SB(KB);
 
-    function dj(BB) {
-      return BB === RB ? Qj : BB === vB && nj
+    function oI(BB) {
+      return BB === VB ? TI : BB === KB && JI
     }
 
-    function Ij(BB) {
-      return Ij = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
+    function GI(BB) {
+      return GI = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
         return typeof BB
       } : function(BB) {
         return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-      }, Ij(BB)
+      }, GI(BB)
     }
 
-    function Nj(BB) {
-      var jB = function(BB, jB) {
-        if ("object" != Ij(BB) || !BB) return BB;
-        var zB = BB[Symbol.toPrimitive];
-        if (void 0 !== zB) {
-          var QB = zB.call(BB, jB || "default");
-          if ("object" != Ij(QB)) return QB;
+    function vI(BB) {
+      var IB = function(BB, IB) {
+        if ("object" != GI(BB) || !BB) return BB;
+        var ZB = BB[Symbol.toPrimitive];
+        if (void 0 !== ZB) {
+          var TB = ZB.call(BB, IB || "default");
+          if ("object" != GI(TB)) return TB;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === jB ? String : Number)(BB)
+        return ("string" === IB ? String : Number)(BB)
       }(BB, "string");
-      return "symbol" == Ij(jB) ? jB : jB + ""
+      return "symbol" == GI(IB) ? IB : IB + ""
     }
 
-    function uj(BB, jB, zB) {
-      return (jB = Nj(jB)) in BB ? Object.defineProperty(BB, jB, {
-        value: zB,
+    function kI(BB, IB, ZB) {
+      return (IB = vI(IB)) in BB ? Object.defineProperty(BB, IB, {
+        value: ZB,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : BB[jB] = zB, BB
+      }) : BB[IB] = ZB, BB
     }
 
-    function Uj(BB, jB) {
-      var zB = Object.keys(BB);
+    function cI(BB, IB) {
+      var ZB = Object.keys(BB);
       if (Object.getOwnPropertySymbols) {
-        var QB = Object.getOwnPropertySymbols(BB);
-        jB && (QB = QB.filter((function(jB) {
-          return Object.getOwnPropertyDescriptor(BB, jB).enumerable
-        }))), zB.push.apply(zB, QB)
+        var TB = Object.getOwnPropertySymbols(BB);
+        IB && (TB = TB.filter((function(IB) {
+          return Object.getOwnPropertyDescriptor(BB, IB).enumerable
+        }))), ZB.push.apply(ZB, TB)
       }
-      return zB
+      return ZB
     }
 
-    function aj(BB) {
-      for (var jB = 1; jB < arguments.length; jB++) {
-        var zB = null != arguments[jB] ? arguments[jB] : {};
-        jB % 2 ? Uj(Object(zB), !0).forEach((function(jB) {
-          uj(BB, jB, zB[jB])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(zB)) : Uj(Object(zB)).forEach((function(jB) {
-          Object.defineProperty(BB, jB, Object.getOwnPropertyDescriptor(zB, jB))
+    function nI(BB) {
+      for (var IB = 1; IB < arguments.length; IB++) {
+        var ZB = null != arguments[IB] ? arguments[IB] : {};
+        IB % 2 ? cI(Object(ZB), !0).forEach((function(IB) {
+          kI(BB, IB, ZB[IB])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(ZB)) : cI(Object(ZB)).forEach((function(IB) {
+          Object.defineProperty(BB, IB, Object.getOwnPropertyDescriptor(ZB, IB))
         }))
       }
       return BB
     }
 
-    function pj() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mB;
-      var jB, zB, QB;
-      const nB = BB.config.sessionTracking,
-        dB = null !== (jB = null !== (zB = null === nB || void 0 === nB || null === (QB = nB.sampler) || void 0 === QB ? void 0 : QB.call(nB, {
+    function hI() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : gB;
+      var IB, ZB, TB;
+      const JB = BB.config.sessionTracking,
+        oB = null !== (IB = null !== (ZB = null === JB || void 0 === JB || null === (TB = JB.sampler) || void 0 === TB ? void 0 : TB.call(JB, {
           metas: BB.metas.value
-        })) && void 0 !== zB ? zB : null === nB || void 0 === nB ? void 0 : nB.samplingRate) && void 0 !== jB ? jB : 1,
-        IB = "number" === typeof dB ? function(BB) {
+        })) && void 0 !== ZB ? ZB : null === JB || void 0 === JB ? void 0 : JB.samplingRate) && void 0 !== IB ? IB : 1,
+        GB = "number" === typeof oB ? function(BB) {
           return Math.min(1, Math.max(0, BB))
-        }(dB) : 0;
-      if (!(IB > 0)) return !1;
-      if (1 === IB) return !0;
+        }(oB) : 0;
+      if (!(GB > 0)) return !1;
+      if (1 === GB) return !0;
       try {
         const BB = "undefined" !== typeof window ? window.crypto : void 0;
         if ("function" === typeof(null === BB || void 0 === BB ? void 0 : BB.getRandomValues)) {
-          const jB = new Uint32Array(1);
-          return BB.getRandomValues(jB), jB[0] / Math.pow(2, 32) < IB
+          const IB = new Uint32Array(1);
+          return BB.getRandomValues(IB), IB[0] / Math.pow(2, 32) < GB
         }
-      } catch (NB) {}
-      return Math.random() < IB
+      } catch (vB) {}
+      return Math.random() < GB
     }
 
-    function rj() {
+    function zI() {
       return Date.now()
     }
 
-    function sj() {
+    function FI() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function Jj() {
+    function NI() {
       return (new Date).toISOString()
     }
 
-    function mj(BB) {
+    function gI(BB) {
       return new Date(BB).toISOString()
     }
-    const yj = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const qI = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function kj() {
+    function yI() {
       let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const jB = new Uint32Array(BB),
-        zB = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === zB || void 0 === zB ? void 0 : zB.getRandomValues) zB.getRandomValues(jB);
+      const IB = new Uint32Array(BB),
+        ZB = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === ZB || void 0 === ZB ? void 0 : ZB.getRandomValues) ZB.getRandomValues(IB);
       else
-        for (let nB = 0; nB < BB; nB++) jB[nB] = Math.floor(4294967296 * Math.random());
-      let QB = "";
-      for (let nB = 0; nB < BB; nB++) QB += yj[jB[nB] % 59];
-      return QB
+        for (let JB = 0; JB < BB; JB++) IB[JB] = Math.floor(4294967296 * Math.random());
+      let TB = "";
+      for (let JB = 0; JB < BB; JB++) TB += qI[IB[JB] % 59];
+      return TB
     }
 
-    function Gj(BB, jB) {
-      if (BB === jB) return !0;
-      if (kB(BB, "number") && isNaN(BB)) return kB(jB, "number") && isNaN(jB);
-      const zB = HB(BB),
-        QB = HB(jB);
-      if (zB !== QB) return !1;
-      if (zB && QB) {
-        const zB = BB.length;
-        if (zB !== jB.length) return !1;
-        for (let QB = zB; 0 !== QB--;)
-          if (!Gj(BB[QB], jB[QB])) return !1;
+    function UI(BB, IB) {
+      if (BB === IB) return !0;
+      if (yB(BB, "number") && isNaN(BB)) return yB(IB, "number") && isNaN(IB);
+      const ZB = aB(BB),
+        TB = aB(IB);
+      if (ZB !== TB) return !1;
+      if (ZB && TB) {
+        const ZB = BB.length;
+        if (ZB !== IB.length) return !1;
+        for (let TB = ZB; 0 !== TB--;)
+          if (!UI(BB[TB], IB[TB])) return !1;
         return !0
       }
-      const nB = fB(BB),
-        dB = fB(jB);
-      if (nB !== dB) return !1;
-      if (BB && jB && nB && dB) {
-        const zB = Object.keys(BB),
-          QB = Object.keys(jB);
-        if (zB.length !== QB.length) return !1;
-        for (let BB of zB)
-          if (!QB.includes(BB)) return !1;
-        for (let nB of zB)
-          if (!Gj(BB[nB], jB[nB])) return !1;
+      const JB = iB(BB),
+        oB = iB(IB);
+      if (JB !== oB) return !1;
+      if (BB && IB && JB && oB) {
+        const ZB = Object.keys(BB),
+          TB = Object.keys(IB);
+        if (ZB.length !== TB.length) return !1;
+        for (let BB of ZB)
+          if (!TB.includes(BB)) return !1;
+        for (let JB of ZB)
+          if (!UI(BB[JB], IB[JB])) return !1;
         return !0
       }
       return !1
     }
-    const Lj = "click",
-      gj = "navigation",
-      tj = "view_changed",
-      Sj = "session_start",
-      Mj = "session_resume",
-      Ej = "session_extend",
-      ij = "service_name_override",
-      qj = "route_change";
+    const WI = "click",
+      dI = "navigation",
+      CI = "view_changed",
+      QI = "session_start",
+      sI = "session_resume",
+      wI = "session_extend",
+      OI = "service_name_override",
+      YI = "route_change";
 
-    function fj() {
+    function iI() {
       let {
         sessionId: BB,
-        started: jB,
-        lastActivity: zB,
-        isSampled: QB = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, nB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mB;
-      var dB;
-      const IB = rj(),
-        NB = null === (dB = nB.config) || void 0 === dB || null === (dB = dB.sessionTracking) || void 0 === dB ? void 0 : dB.generateSessionId;
-      return null == BB && (BB = "function" === typeof NB ? NB() : kj()), {
+        started: IB,
+        lastActivity: ZB,
+        isSampled: TB = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, JB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gB;
+      var oB;
+      const GB = zI(),
+        vB = null === (oB = JB.config) || void 0 === oB || null === (oB = oB.sessionTracking) || void 0 === oB ? void 0 : oB.generateSessionId;
+      return null == BB && (BB = "function" === typeof vB ? vB() : yI()), {
         sessionId: BB,
-        lastActivity: null !== zB && void 0 !== zB ? zB : IB,
-        started: null !== jB && void 0 !== jB ? jB : IB,
-        isSampled: QB
+        lastActivity: null !== ZB && void 0 !== ZB ? ZB : GB,
+        started: null !== IB && void 0 !== IB ? IB : GB,
+        isSampled: TB
       }
     }
 
-    function oj(BB) {
+    function pI(BB) {
       if (null == BB) return !1;
-      const jB = rj();
-      return jB - BB.started < 144e5 && jB - BB.lastActivity < IB
+      const IB = zI();
+      return IB - BB.started < 144e5 && IB - BB.lastActivity < GB
     }
 
-    function Hj(BB) {
+    function aI(BB) {
       let {
-        fetchUserSession: jB,
-        storeUserSession: zB,
-        adoptSession: QB,
-        updateInterval: nB = 0
-      } = BB, NB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mB, uB = 0;
+        fetchUserSession: IB,
+        storeUserSession: ZB,
+        adoptSession: TB,
+        updateInterval: JB = 0
+      } = BB, vB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gB, kB = 0;
       return function() {
         let {
           forceSessionExtend: BB = !1,
-          refreshActivity: UB = !0
+          refreshActivity: cB = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var aB, pB;
-        if (!jB || !zB) return;
-        const rB = rj();
-        if (!BB && rB < uB && uB - rB <= nB) return;
-        const sB = NB.config.sessionTracking,
-          JB = null === sB || void 0 === sB ? void 0 : sB.persistent;
-        if (JB && !Qj || !JB && !nj) return;
-        const mB = jB();
-        if (uB = Math.min(rB + nB, (null !== (aB = null === mB || void 0 === mB ? void 0 : mB.started) && void 0 !== aB ? aB : rB) + dB, (null !== (pB = null === mB || void 0 === mB ? void 0 : mB.lastActivity) && void 0 !== pB ? pB : rB) + IB), !1 === BB && oj(mB)) {
-          var yB;
-          UB && zB(aj(aj({}, mB), {}, {
-            lastActivity: rB
+        var nB, hB;
+        if (!IB || !ZB) return;
+        const zB = zI();
+        if (!BB && zB < kB && kB - zB <= JB) return;
+        const FB = vB.config.sessionTracking,
+          NB = null === FB || void 0 === FB ? void 0 : FB.persistent;
+        if (NB && !TI || !NB && !JI) return;
+        const gB = IB();
+        if (kB = Math.min(zB + JB, (null !== (nB = null === gB || void 0 === gB ? void 0 : gB.started) && void 0 !== nB ? nB : zB) + oB, (null !== (hB = null === gB || void 0 === gB ? void 0 : gB.lastActivity) && void 0 !== hB ? hB : zB) + GB), !1 === BB && pI(gB)) {
+          var qB;
+          cB && ZB(nI(nI({}, gB), {}, {
+            lastActivity: zB
           }));
-          const BB = null === (yB = NB.metas.value.session) || void 0 === yB ? void 0 : yB.id;
-          null != QB && null != mB.sessionMeta && mB.sessionId !== BB && QB(mB.sessionMeta)
+          const BB = null === (qB = vB.metas.value.session) || void 0 === qB ? void 0 : qB.id;
+          null != TB && null != gB.sessionMeta && gB.sessionId !== BB && TB(gB.sessionMeta)
         } else {
-          var kB, GB, LB;
-          let BB = Fj(fj({
-            isSampled: pj(NB)
-          }, NB), mB, NB);
-          uB = rB + nB, zB(BB), null === (kB = NB.api) || void 0 === kB || kB.setSession(BB.sessionMeta), null === sB || void 0 === sB || null === (GB = sB.onSessionChange) || void 0 === GB || GB.call(sB, null !== (LB = null === mB || void 0 === mB ? void 0 : mB.sessionMeta) && void 0 !== LB ? LB : null, BB.sessionMeta)
+          var yB, UB, WB;
+          let BB = MI(iI({
+            isSampled: hI(vB)
+          }, vB), gB, vB);
+          kB = zB + JB, ZB(BB), null === (yB = vB.api) || void 0 === yB || yB.setSession(BB.sessionMeta), null === FB || void 0 === FB || null === (UB = FB.onSessionChange) || void 0 === UB || UB.call(FB, null !== (WB = null === gB || void 0 === gB ? void 0 : gB.sessionMeta) && void 0 !== WB ? WB : null, BB.sessionMeta)
         }
       }
     }
 
-    function Dj(BB) {
-      let jB, {
-          fetchUserSession: zB,
-          storeUserSession: QB,
-          updateInterval: nB = 0
+    function HI(BB) {
+      let IB, {
+          fetchUserSession: ZB,
+          storeUserSession: TB,
+          updateInterval: JB = 0
         } = BB,
-        dB = 0;
+        oB = 0;
       return BB => {
-        const IB = rj();
-        if (BB === jB && IB < dB && dB - IB <= nB) return;
-        jB = BB, dB = IB + nB;
-        const NB = zB();
-        (null === NB || void 0 === NB ? void 0 : NB.sessionId) === BB && oj(NB) && QB(aj(aj({}, NB), {}, {
-          lastActivity: IB
+        const GB = zI();
+        if (BB === IB && GB < oB && oB - GB <= JB) return;
+        IB = BB, oB = GB + JB;
+        const vB = ZB();
+        (null === vB || void 0 === vB ? void 0 : vB.sessionId) === BB && pI(vB) && TB(nI(nI({}, vB), {}, {
+          lastActivity: GB
         }))
       }
     }
 
-    function Fj(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mB;
-      var QB, nB, dB, IB, NB, uB;
-      const UB = aj(aj({}, BB), {}, {
+    function MI(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : gB;
+      var TB, JB, oB, GB, vB, kB;
+      const cB = nI(nI({}, BB), {}, {
           sessionMeta: {
             id: BB.sessionId,
-            attributes: Vj(aj(aj(aj({}, null === (QB = zB.config.sessionTracking) || void 0 === QB || null === (QB = QB.session) || void 0 === QB ? void 0 : QB.attributes), null !== (nB = null === (dB = zB.metas.value.session) || void 0 === dB ? void 0 : dB.attributes) && void 0 !== nB ? nB : {}), {}, {
+            attributes: PI(nI(nI(nI({}, null === (TB = ZB.config.sessionTracking) || void 0 === TB || null === (TB = TB.session) || void 0 === TB ? void 0 : TB.attributes), null !== (JB = null === (oB = ZB.metas.value.session) || void 0 === oB ? void 0 : oB.attributes) && void 0 !== JB ? JB : {}), {}, {
               isSampled: BB.isSampled.toString()
             }))
           }
         }),
-        aB = null !== (IB = null === (NB = zB.metas.value.session) || void 0 === NB ? void 0 : NB.overrides) && void 0 !== IB ? IB : null === jB || void 0 === jB || null === (uB = jB.sessionMeta) || void 0 === uB ? void 0 : uB.overrides;
-      KB(aB) || (UB.sessionMeta.overrides = aB);
-      const pB = null === jB || void 0 === jB ? void 0 : jB.sessionId;
-      return null != pB && (UB.sessionMeta.attributes.previousSession = pB), UB
+        nB = null !== (GB = null === (vB = ZB.metas.value.session) || void 0 === vB ? void 0 : vB.overrides) && void 0 !== GB ? GB : null === IB || void 0 === IB || null === (kB = IB.sessionMeta) || void 0 === kB ? void 0 : kB.overrides;
+      bB(nB) || (cB.sessionMeta.overrides = nB);
+      const hB = null === IB || void 0 === IB ? void 0 : IB.sessionId;
+      return null != hB && (cB.sessionMeta.attributes.previousSession = hB), cB
     }
 
-    function Yj(BB) {
+    function jI(BB) {
       let {
-        fetchUserSession: jB,
-        storeUserSession: zB
-      } = BB, QB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mB, nB = !1;
+        fetchUserSession: IB,
+        storeUserSession: ZB
+      } = BB, TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gB, JB = !1;
       return function(BB) {
-        if (nB) return;
-        const dB = BB.session,
-          IB = jB();
-        let NB = null === dB || void 0 === dB ? void 0 : dB.id;
-        const uB = null === dB || void 0 === dB ? void 0 : dB.attributes,
-          UB = null === dB || void 0 === dB ? void 0 : dB.overrides,
-          aB = null === IB || void 0 === IB ? void 0 : IB.sessionMeta,
-          pB = null === aB || void 0 === aB ? void 0 : aB.overrides,
-          rB = !!UB && !Gj(UB, pB),
-          sB = !!uB && !Gj(uB, null === aB || void 0 === aB ? void 0 : aB.attributes);
-        if (dB && NB !== (null === IB || void 0 === IB ? void 0 : IB.sessionId) || sB || rB) {
-          var JB, mB;
-          const BB = null != IB && NB === IB.sessionId,
-            jB = Fj(BB ? IB : fj({
-              sessionId: NB,
-              isSampled: pj(QB)
-            }, QB), IB, QB),
-            dB = null === IB || void 0 === IB || null === (JB = IB.sessionMeta) || void 0 === JB || null === (JB = JB.attributes) || void 0 === JB ? void 0 : JB.previousSession;
-          BB && null != dB && dB !== jB.sessionId && (jB.sessionMeta.attributes.previousSession = dB), (null === (mB = jB.sessionMeta.attributes) || void 0 === mB ? void 0 : mB.previousSession) === jB.sessionId && delete jB.sessionMeta.attributes.previousSession, zB(jB),
-            function(BB, jB) {
-              let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var nB, dB, IB;
-              if (!jB) return;
-              const NB = zB.serviceName,
-                uB = null !== (nB = null !== (dB = QB.serviceName) && void 0 !== dB ? dB : null === (IB = BB.metas.value.app) || void 0 === IB ? void 0 : IB.name) && void 0 !== nB ? nB : "";
-              NB && NB !== uB && BB.api.pushEvent(ij, {
-                serviceName: NB,
-                previousServiceName: uB
+        if (JB) return;
+        const oB = BB.session,
+          GB = IB();
+        let vB = null === oB || void 0 === oB ? void 0 : oB.id;
+        const kB = null === oB || void 0 === oB ? void 0 : oB.attributes,
+          cB = null === oB || void 0 === oB ? void 0 : oB.overrides,
+          nB = null === GB || void 0 === GB ? void 0 : GB.sessionMeta,
+          hB = null === nB || void 0 === nB ? void 0 : nB.overrides,
+          zB = !!cB && !UI(cB, hB),
+          FB = !!kB && !UI(kB, null === nB || void 0 === nB ? void 0 : nB.attributes);
+        if (oB && vB !== (null === GB || void 0 === GB ? void 0 : GB.sessionId) || FB || zB) {
+          var NB, gB;
+          const BB = null != GB && vB === GB.sessionId,
+            IB = MI(BB ? GB : iI({
+              sessionId: vB,
+              isSampled: hI(TB)
+            }, TB), GB, TB),
+            oB = null === GB || void 0 === GB || null === (NB = GB.sessionMeta) || void 0 === NB || null === (NB = NB.attributes) || void 0 === NB ? void 0 : NB.previousSession;
+          BB && null != oB && oB !== IB.sessionId && (IB.sessionMeta.attributes.previousSession = oB), (null === (gB = IB.sessionMeta.attributes) || void 0 === gB ? void 0 : gB.previousSession) === IB.sessionId && delete IB.sessionMeta.attributes.previousSession, ZB(IB),
+            function(BB, IB) {
+              let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var JB, oB, GB;
+              if (!IB) return;
+              const vB = ZB.serviceName,
+                kB = null !== (JB = null !== (oB = TB.serviceName) && void 0 !== oB ? oB : null === (GB = BB.metas.value.app) || void 0 === GB ? void 0 : GB.name) && void 0 !== JB ? JB : "";
+              vB && vB !== kB && BB.api.pushEvent(OI, {
+                serviceName: vB,
+                previousServiceName: kB
               })
-            }(QB, rB, UB, pB), nB = !0;
+            }(TB, zB, cB, hB), JB = !0;
           try {
-            QB.api.setSession(jB.sessionMeta)
+            TB.api.setSession(IB.sessionMeta)
           } finally {
-            nB = !1
+            JB = !1
           }
         }
       }
     }
 
-    function Vj(BB) {
-      const jB = {};
-      for (const zB of Object.keys(BB)) {
-        const QB = BB[zB];
-        void 0 !== QB && (jB[zB] = QB)
+    function PI(BB) {
+      const IB = {};
+      for (const ZB of Object.keys(BB)) {
+        const TB = BB[ZB];
+        void 0 !== TB && (IB[ZB] = TB)
       }
-      return jB
+      return IB
     }
 
-    function hj() {
+    function RI() {
       let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return JSON.stringify(null !== BB && void 0 !== BB ? BB : {}, function() {
         const BB = new WeakSet;
-        return function(jB, zB) {
-          if (fB(zB) && null !== zB) {
-            if (BB.has(zB)) return null;
-            BB.add(zB)
+        return function(IB, ZB) {
+          if (iB(ZB) && null !== ZB) {
+            if (BB.has(ZB)) return null;
+            BB.add(ZB)
           }
-          return zB
+          return ZB
         }
       }())
     }
 
-    function Xj() {
+    function rI() {
       let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const jB = {};
-      for (const [zB, QB] of Object.entries(BB)) jB[zB] = fB(QB) && null !== QB ? hj(QB) : String(QB);
-      return jB
+      const IB = {};
+      for (const [ZB, TB] of Object.entries(BB)) IB[ZB] = iB(TB) && null !== TB ? RI(TB) : String(TB);
+      return IB
     }
-    var Zj = class BB {
+    var mI = class BB {
       constructor() {
-        var jB = this;
-        let zB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mB;
-        this.context = zB, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = BB => {
+        var IB = this;
+        let ZB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : gB;
+        this.context = ZB, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = BB => {
           this.adopting = !0;
           try {
-            var jB;
-            null === (jB = this.context.api) || void 0 === jB || jB.setSession(BB)
+            var IB;
+            null === (IB = this.context.api) || void 0 === IB || IB.setSession(BB)
           } finally {
             this.adopting = !1
           }
@@ -606,29 +606,29 @@ export const modules = {
           let {
             refreshActivity: BB = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return jB.updateUserSession({
+          return IB.updateUserSession({
             refreshActivity: BB
           })
-        }, this.recordActivity = Dj({
+        }, this.recordActivity = HI({
           fetchUserSession: BB.fetchUserSession,
           storeUserSession: BB.storeUserSession,
-          updateInterval: NB
-        }), this.updateUserSession = Hj({
+          updateInterval: vB
+        }), this.updateUserSession = aI({
           fetchUserSession: BB.fetchUserSession,
           storeUserSession: BB.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: NB
-        }, zB), this.init()
+          updateInterval: vB
+        }, ZB), this.init()
       }
       static removeUserSession() {
-        zj(nB, BB.storageTypeLocal)
+        ZI(JB, BB.storageTypeLocal)
       }
-      static storeUserSession(jB) {
-        jj(nB, hj(jB), BB.storageTypeLocal)
+      static storeUserSession(IB) {
+        II(JB, RI(IB), BB.storageTypeLocal)
       }
       static fetchUserSession() {
-        const jB = Bj(nB, BB.storageTypeLocal);
-        return jB ? JSON.parse(jB) : null
+        const IB = BI(JB, BB.storageTypeLocal);
+        return IB ? JSON.parse(IB) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
@@ -637,46 +637,46 @@ export const modules = {
             this.updateSession({
               refreshActivity: !1
             });
-            const jB = null === (BB = this.context.api) || void 0 === BB || null === (BB = BB.getSession()) || void 0 === BB ? void 0 : BB.id;
-            jB && this.recordActivity(jB)
+            const IB = null === (BB = this.context.api) || void 0 === BB || null === (BB = BB.getSession()) || void 0 === BB ? void 0 : BB.id;
+            IB && this.recordActivity(IB)
           }
-        })), this.context.metas.addListener(Yj({
+        })), this.context.metas.addListener(jI({
           fetchUserSession: BB.fetchUserSession,
           storeUserSession: BB.storeUserSession
         }, this.context))
       }
     };
-    Zj.storageTypeLocal = RB;
-    var Aj = class BB {
+    mI.storageTypeLocal = VB;
+    var XI = class BB {
       constructor() {
-        var jB = this;
-        let zB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mB;
-        this.context = zB, this.isAdopting = () => !1, this.updateSession = function() {
+        var IB = this;
+        let ZB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : gB;
+        this.context = ZB, this.isAdopting = () => !1, this.updateSession = function() {
           let {
             refreshActivity: BB = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return jB.updateUserSession({
+          return IB.updateUserSession({
             refreshActivity: BB
           })
-        }, this.recordActivity = Dj({
+        }, this.recordActivity = HI({
           fetchUserSession: BB.fetchUserSession,
           storeUserSession: BB.storeUserSession,
-          updateInterval: NB
-        }), this.updateUserSession = Hj({
+          updateInterval: vB
+        }), this.updateUserSession = aI({
           fetchUserSession: BB.fetchUserSession,
           storeUserSession: BB.storeUserSession,
-          updateInterval: NB
-        }, zB), this.init()
+          updateInterval: vB
+        }, ZB), this.init()
       }
       static removeUserSession() {
-        zj(nB, BB.storageTypeSession)
+        ZI(JB, BB.storageTypeSession)
       }
-      static storeUserSession(jB) {
-        jj(nB, hj(jB), BB.storageTypeSession)
+      static storeUserSession(IB) {
+        II(JB, RI(IB), BB.storageTypeSession)
       }
       static fetchUserSession() {
-        const jB = Bj(nB, BB.storageTypeSession);
-        return jB ? JSON.parse(jB) : null
+        const IB = BI(JB, BB.storageTypeSession);
+        return IB ? JSON.parse(IB) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
@@ -685,67 +685,67 @@ export const modules = {
             this.updateSession({
               refreshActivity: !1
             });
-            const jB = null === (BB = this.context.api) || void 0 === BB || null === (BB = BB.getSession()) || void 0 === BB ? void 0 : BB.id;
-            jB && this.recordActivity(jB)
+            const IB = null === (BB = this.context.api) || void 0 === BB || null === (BB = BB.getSession()) || void 0 === BB ? void 0 : BB.id;
+            IB && this.recordActivity(IB)
           }
-        })), this.context.metas.addListener(Yj({
+        })), this.context.metas.addListener(jI({
           fetchUserSession: BB.fetchUserSession,
           storeUserSession: BB.storeUserSession
         }, this.context))
       }
     };
-    Aj.storageTypeSession = vB;
-    const Tj = new WeakMap;
+    XI.storageTypeSession = KB;
+    const LI = new WeakMap;
 
-    function Pj(BB) {
-      let jB = Tj.get(BB);
-      if (!jB) {
-        let zB = [],
-          QB = [];
-        jB = {
+    function eI(BB) {
+      let IB = LI.get(BB);
+      if (!IB) {
+        let ZB = [],
+          TB = [];
+        IB = {
           addSessionUpdateListener: BB => {
-            zB.push(BB)
+            ZB.push(BB)
           },
           removeSessionUpdateListener: BB => {
-            zB = zB.filter((jB => jB !== BB))
+            ZB = ZB.filter((IB => IB !== BB))
           },
           notifySessionUpdate: BB => {
-            zB.forEach((jB => jB(BB)))
+            ZB.forEach((IB => IB(BB)))
           },
-          shouldCapture: () => QB.every((BB => BB())),
+          shouldCapture: () => TB.every((BB => BB())),
           addCaptureFilter: BB => {
-            QB.push(BB)
+            TB.push(BB)
           },
           removeCaptureFilter: BB => {
-            QB = QB.filter((jB => jB !== BB))
+            TB = TB.filter((IB => IB !== BB))
           }
-        }, Tj.set(BB, jB)
+        }, LI.set(BB, IB)
       }
-      return jB
+      return IB
     }
-    var Wj = class {
-      constructor(BB, jB, zB) {
-        this.metas = BB, this.transports = jB, this.onActivate = zB, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = BB => {
-          var jB, zB, QB;
-          const nB = this.pending;
-          var dB, IB;
+    var uI = class {
+      constructor(BB, IB, ZB) {
+        this.metas = BB, this.transports = IB, this.onActivate = ZB, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = BB => {
+          var IB, ZB, TB;
+          const JB = this.pending;
+          var oB, GB;
           if ("overrides" === BB.type) return void(this.pending = {
-            reset: null !== (dB = null === nB || void 0 === nB ? void 0 : nB.reset) && void 0 !== dB && dB,
-            inheritOverrides: null === (IB = null === nB || void 0 === nB ? void 0 : nB.inheritOverrides) || void 0 === IB || IB,
-            session: aj(aj({}, null === nB || void 0 === nB ? void 0 : nB.session), {}, {
-              overrides: aj(aj({}, null === nB || void 0 === nB ? void 0 : nB.session.overrides), BB.overrides)
+            reset: null !== (oB = null === JB || void 0 === JB ? void 0 : JB.reset) && void 0 !== oB && oB,
+            inheritOverrides: null === (GB = null === JB || void 0 === JB ? void 0 : JB.inheritOverrides) || void 0 === GB || GB,
+            session: nI(nI({}, null === JB || void 0 === JB ? void 0 : JB.session), {}, {
+              overrides: nI(nI({}, null === JB || void 0 === JB ? void 0 : JB.session.overrides), BB.overrides)
             })
           });
-          const NB = BB.session,
-            uB = KB(NB) || null != NB && "id" in NB && !NB.id,
-            UB = null !== (jB = null === NB || void 0 === NB ? void 0 : NB.overrides) && void 0 !== jB ? jB : null === nB || void 0 === nB ? void 0 : nB.session.overrides;
+          const vB = BB.session,
+            kB = bB(vB) || null != vB && "id" in vB && !vB.id,
+            cB = null !== (IB = null === vB || void 0 === vB ? void 0 : vB.overrides) && void 0 !== IB ? IB : null === JB || void 0 === JB ? void 0 : JB.session.overrides;
           this.pending = {
-            reset: uB || !(null === NB || void 0 === NB ? void 0 : NB.id) && null !== (zB = null === nB || void 0 === nB ? void 0 : nB.reset) && void 0 !== zB && zB,
-            inheritOverrides: !(!BB.overrides && void 0 !== (null === NB || void 0 === NB ? void 0 : NB.overrides)) && (null === (QB = null === nB || void 0 === nB ? void 0 : nB.inheritOverrides) || void 0 === QB || QB),
+            reset: kB || !(null === vB || void 0 === vB ? void 0 : vB.id) && null !== (ZB = null === JB || void 0 === JB ? void 0 : JB.reset) && void 0 !== ZB && ZB,
+            inheritOverrides: !(!BB.overrides && void 0 !== (null === vB || void 0 === vB ? void 0 : vB.overrides)) && (null === (TB = null === JB || void 0 === JB ? void 0 : JB.inheritOverrides) || void 0 === TB || TB),
             session: {
-              id: null === NB || void 0 === NB ? void 0 : NB.id,
-              attributes: (null === NB || void 0 === NB ? void 0 : NB.attributes) && aj({}, NB.attributes),
-              overrides: BB.overrides ? aj(aj({}, null === nB || void 0 === nB ? void 0 : nB.session.overrides), BB.overrides) : UB && aj({}, UB)
+              id: null === vB || void 0 === vB ? void 0 : vB.id,
+              attributes: (null === vB || void 0 === vB ? void 0 : vB.attributes) && nI({}, vB.attributes),
+              overrides: BB.overrides ? nI(nI({}, null === JB || void 0 === JB ? void 0 : JB.session.overrides), BB.overrides) : cB && nI({}, cB)
             }
           }
         }, this.activate = () => {
@@ -753,302 +753,302 @@ export const modules = {
         }
       }
       initialize() {
-        var BB, jB;
-        this.waiting = !0, Pj(this.metas).addSessionUpdateListener(this.recordUpdate), Pj(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (BB = (jB = this.metas).addCaptureListener) || void 0 === BB || BB.call(jB, this.activate), this.activate()
+        var BB, IB;
+        this.waiting = !0, eI(this.metas).addSessionUpdateListener(this.recordUpdate), eI(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (BB = (IB = this.metas).addCaptureListener) || void 0 === BB || BB.call(IB, this.activate), this.activate()
       }
       destroy() {
-        var BB, jB;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), Pj(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (BB = (jB = this.metas).removeCaptureListener) || void 0 === BB || BB.call(jB, this.activate), Pj(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var BB, IB;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), eI(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (BB = (IB = this.metas).removeCaptureListener) || void 0 === BB || BB.call(IB, this.activate), eI(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function ej(BB) {
-      return (null === BB || void 0 === BB ? void 0 : BB.persistent) ? Zj : Aj
+    function fI(BB) {
+      return (null === BB || void 0 === BB ? void 0 : BB.persistent) ? mI : XI
     }
 
-    function lj() {}
-    let wj = function(BB) {
+    function lI() {}
+    let AI = function(BB) {
       return BB[BB.OFF = 0] = "OFF", BB[BB.ERROR = 1] = "ERROR", BB[BB.WARN = 2] = "WARN", BB[BB.INFO = 3] = "INFO", BB[BB.VERBOSE = 4] = "VERBOSE", BB
     }({});
-    const xj = {
-        debug: lj,
-        error: lj,
-        info: lj,
+    const tI = {
+        debug: lI,
+        error: lI,
+        info: lI,
         prefix: "Faro",
-        warn: lj
+        warn: lI
       },
-      Kj = 1;
+      bI = 1;
 
-    function Cj(BB) {
-      return Cj = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
+    function xI(BB) {
+      return xI = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
         return typeof BB
       } : function(BB) {
         return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-      }, Cj(BB)
+      }, xI(BB)
     }
 
-    function cj(BB) {
-      var jB = function(BB, jB) {
-        if ("object" != Cj(BB) || !BB) return BB;
-        var zB = BB[Symbol.toPrimitive];
-        if (void 0 !== zB) {
-          var QB = zB.call(BB, jB || "default");
-          if ("object" != Cj(QB)) return QB;
+    function EI(BB) {
+      var IB = function(BB, IB) {
+        if ("object" != xI(BB) || !BB) return BB;
+        var ZB = BB[Symbol.toPrimitive];
+        if (void 0 !== ZB) {
+          var TB = ZB.call(BB, IB || "default");
+          if ("object" != xI(TB)) return TB;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === jB ? String : Number)(BB)
+        return ("string" === IB ? String : Number)(BB)
       }(BB, "string");
-      return "symbol" == Cj(jB) ? jB : jB + ""
+      return "symbol" == xI(IB) ? IB : IB + ""
     }
 
-    function bj(BB, jB, zB) {
-      return (jB = cj(jB)) in BB ? Object.defineProperty(BB, jB, {
-        value: zB,
+    function DI(BB, IB, ZB) {
+      return (IB = EI(IB)) in BB ? Object.defineProperty(BB, IB, {
+        value: ZB,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : BB[jB] = zB, BB
+      }) : BB[IB] = ZB, BB
     }
 
-    function vj(BB, jB) {
-      var zB = Object.keys(BB);
+    function KI(BB, IB) {
+      var ZB = Object.keys(BB);
       if (Object.getOwnPropertySymbols) {
-        var QB = Object.getOwnPropertySymbols(BB);
-        jB && (QB = QB.filter((function(jB) {
-          return Object.getOwnPropertyDescriptor(BB, jB).enumerable
-        }))), zB.push.apply(zB, QB)
+        var TB = Object.getOwnPropertySymbols(BB);
+        IB && (TB = TB.filter((function(IB) {
+          return Object.getOwnPropertyDescriptor(BB, IB).enumerable
+        }))), ZB.push.apply(ZB, TB)
       }
-      return zB
+      return ZB
     }
 
-    function Rj(BB) {
-      for (var jB = 1; jB < arguments.length; jB++) {
-        var zB = null != arguments[jB] ? arguments[jB] : {};
-        jB % 2 ? vj(Object(zB), !0).forEach((function(jB) {
-          bj(BB, jB, zB[jB])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(zB)) : vj(Object(zB)).forEach((function(jB) {
-          Object.defineProperty(BB, jB, Object.getOwnPropertyDescriptor(zB, jB))
+    function VI(BB) {
+      for (var IB = 1; IB < arguments.length; IB++) {
+        var ZB = null != arguments[IB] ? arguments[IB] : {};
+        IB % 2 ? KI(Object(ZB), !0).forEach((function(IB) {
+          DI(BB, IB, ZB[IB])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(ZB)) : KI(Object(ZB)).forEach((function(IB) {
+          Object.defineProperty(BB, IB, Object.getOwnPropertyDescriptor(ZB, IB))
         }))
       }
       return BB
     }
-    const Oj = Rj({}, console);
-    var Bz = class {
+    const SI = VI({}, console);
+    var BZ = class {
         constructor() {
-          this.unpatchedConsole = Oj, this.internalLogger = xj, this.config = {}, this.metas = {}
+          this.unpatchedConsole = SI, this.internalLogger = tI, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-          this.internalLogger.debug(`${this.name}\n`, ...jB)
+          for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+          this.internalLogger.debug(`${this.name}\n`, ...IB)
         }
         logInfo() {
-          for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-          this.internalLogger.info(`${this.name}\n`, ...jB)
+          for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+          this.internalLogger.info(`${this.name}\n`, ...IB)
         }
         logWarn() {
-          for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-          this.internalLogger.warn(`${this.name}\n`, ...jB)
+          for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+          this.internalLogger.warn(`${this.name}\n`, ...IB)
         }
         logError() {
-          for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-          this.internalLogger.error(`${this.name}\n`, ...jB)
+          for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+          this.internalLogger.error(`${this.name}\n`, ...IB)
         }
       },
-      jz = class extends Bz {
+      IZ = class extends BZ {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const zz = "2.12.1";
-    var Qz = class extends jz {
+    const ZZ = "2.12.1";
+    var TZ = class extends IZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = zz, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ZZ, this.isAdoptingSession = () => !1
       }
       sendSessionStartEvent(BB) {
-        var jB;
-        const zB = BB.session;
-        if (zB && zB.id !== (null === (jB = this.notifiedSession) || void 0 === jB ? void 0 : jB.id)) {
-          var QB;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = zB);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (QB = zB.attributes) || void 0 === QB ? void 0 : QB.previousSession)) return this.api.pushEvent(Ej, {}, void 0, {
+        var IB;
+        const ZB = BB.session;
+        if (ZB && ZB.id !== (null === (IB = this.notifiedSession) || void 0 === IB ? void 0 : IB.id)) {
+          var TB;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = ZB);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (TB = ZB.attributes) || void 0 === TB ? void 0 : TB.previousSession)) return this.api.pushEvent(wI, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = zB);
-          this.notifiedSession = zB, this.api.pushEvent(Sj, {}, void 0, {
+          }), void(this.notifiedSession = ZB);
+          this.notifiedSession = ZB, this.api.pushEvent(QI, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(BB, jB, zB) {
-        const QB = null === zB || void 0 === zB ? void 0 : zB.session;
-        let nB, dB, IB = BB.fetchUserSession();
-        if (jB.persistent && jB.maxSessionPersistenceTime && IB) {
-          const BB = rj();
-          IB.lastActivity < BB - jB.maxSessionPersistenceTime && (Zj.removeUserSession(), IB = null)
+      createInitialSession(BB, IB, ZB) {
+        const TB = null === ZB || void 0 === ZB ? void 0 : ZB.session;
+        let JB, oB, GB = BB.fetchUserSession();
+        if (IB.persistent && IB.maxSessionPersistenceTime && GB) {
+          const BB = zI();
+          GB.lastActivity < BB - IB.maxSessionPersistenceTime && (mI.removeUserSession(), GB = null)
         }
-        const NB = oj(IB);
-        if ((null === zB || void 0 === zB ? void 0 : zB.reset) || !NB || (null === QB || void 0 === QB ? void 0 : QB.id) && QB.id !== (null === IB || void 0 === IB ? void 0 : IB.sessionId)) {
-          var uB, UB, aB, pB, rB, sB;
-          dB = fj({
-            sessionId: (null === zB || void 0 === zB ? void 0 : zB.reset) ? void 0 : null !== (uB = null === QB || void 0 === QB ? void 0 : QB.id) && void 0 !== uB ? uB : null === (UB = jB.session) || void 0 === UB ? void 0 : UB.id,
-            isSampled: pj(this)
+        const vB = pI(GB);
+        if ((null === ZB || void 0 === ZB ? void 0 : ZB.reset) || !vB || (null === TB || void 0 === TB ? void 0 : TB.id) && TB.id !== (null === GB || void 0 === GB ? void 0 : GB.sessionId)) {
+          var kB, cB, nB, hB, zB, FB;
+          oB = iI({
+            sessionId: (null === ZB || void 0 === ZB ? void 0 : ZB.reset) ? void 0 : null !== (kB = null === TB || void 0 === TB ? void 0 : TB.id) && void 0 !== kB ? kB : null === (cB = IB.session) || void 0 === cB ? void 0 : cB.id,
+            isSampled: hI(this)
           }, this);
-          const BB = dB.sessionId,
-            JB = zB && NB ? null === IB || void 0 === IB || null === (aB = IB.sessionMeta) || void 0 === aB ? void 0 : aB.overrides : void 0,
-            mB = JB ? aj(aj({}, null === (pB = jB.session) || void 0 === pB ? void 0 : pB.overrides), JB) : null === (rB = jB.session) || void 0 === rB ? void 0 : rB.overrides;
-          dB.sessionMeta = aj({
+          const BB = oB.sessionId,
+            NB = ZB && vB ? null === GB || void 0 === GB || null === (nB = GB.sessionMeta) || void 0 === nB ? void 0 : nB.overrides : void 0,
+            gB = NB ? nI(nI({}, null === (hB = IB.session) || void 0 === hB ? void 0 : hB.overrides), NB) : null === (zB = IB.session) || void 0 === zB ? void 0 : zB.overrides;
+          oB.sessionMeta = nI({
             id: BB,
-            attributes: aj({
-              isSampled: dB.isSampled.toString()
-            }, null === (sB = jB.session) || void 0 === sB ? void 0 : sB.attributes)
-          }, mB ? {
-            overrides: mB
-          } : {}), nB = Sj
+            attributes: nI({
+              isSampled: oB.isSampled.toString()
+            }, null === (FB = IB.session) || void 0 === FB ? void 0 : FB.attributes)
+          }, gB ? {
+            overrides: gB
+          } : {}), JB = QI
         } else {
-          var JB, mB;
-          const BB = null === IB || void 0 === IB ? void 0 : IB.sessionId;
-          dB = fj({
+          var NB, gB;
+          const BB = null === GB || void 0 === GB ? void 0 : GB.sessionId;
+          oB = iI({
             sessionId: BB,
-            isSampled: IB.isSampled || !1,
-            started: null === IB || void 0 === IB ? void 0 : IB.started
+            isSampled: GB.isSampled || !1,
+            started: null === GB || void 0 === GB ? void 0 : GB.started
           }, this);
-          const zB = null === IB || void 0 === IB ? void 0 : IB.sessionMeta,
-            QB = aj(aj({}, null === (JB = jB.session) || void 0 === JB ? void 0 : JB.overrides), null === zB || void 0 === zB ? void 0 : zB.overrides);
-          dB.sessionMeta = aj(aj({}, jB.session), {}, {
+          const ZB = null === GB || void 0 === GB ? void 0 : GB.sessionMeta,
+            TB = nI(nI({}, null === (NB = IB.session) || void 0 === NB ? void 0 : NB.overrides), null === ZB || void 0 === ZB ? void 0 : ZB.overrides);
+          oB.sessionMeta = nI(nI({}, IB.session), {}, {
             id: BB,
-            attributes: aj(aj(aj({}, null === (mB = jB.session) || void 0 === mB ? void 0 : mB.attributes), null === zB || void 0 === zB ? void 0 : zB.attributes), {}, {
-              isSampled: dB.isSampled.toString()
+            attributes: nI(nI(nI({}, null === (gB = IB.session) || void 0 === gB ? void 0 : gB.attributes), null === ZB || void 0 === ZB ? void 0 : ZB.attributes), {}, {
+              isSampled: oB.isSampled.toString()
             }),
-            overrides: QB
-          }), nB = Mj
+            overrides: TB
+          }), JB = sI
         }
-        var yB;
-        if (QB && (dB.sessionMeta = aj(aj({}, dB.sessionMeta), {}, {
-            attributes: aj(aj(aj({}, null === (yB = dB.sessionMeta) || void 0 === yB ? void 0 : yB.attributes), QB.attributes), {}, {
-              isSampled: dB.isSampled.toString()
+        var qB;
+        if (TB && (oB.sessionMeta = nI(nI({}, oB.sessionMeta), {}, {
+            attributes: nI(nI(nI({}, null === (qB = oB.sessionMeta) || void 0 === qB ? void 0 : qB.attributes), TB.attributes), {}, {
+              isSampled: oB.isSampled.toString()
             })
-          }), QB.overrides)) {
-          const BB = (null === zB || void 0 === zB ? void 0 : zB.inheritOverrides) ? aj(aj({}, dB.sessionMeta.overrides), QB.overrides) : QB.overrides;
-          Object.keys(BB).length > 0 ? dB.sessionMeta.overrides = BB : delete dB.sessionMeta.overrides
+          }), TB.overrides)) {
+          const BB = (null === ZB || void 0 === ZB ? void 0 : ZB.inheritOverrides) ? nI(nI({}, oB.sessionMeta.overrides), TB.overrides) : TB.overrides;
+          Object.keys(BB).length > 0 ? oB.sessionMeta.overrides = BB : delete oB.sessionMeta.overrides
         }
         return {
-          initialSession: dB,
-          lifecycleType: nB
+          initialSession: oB,
+          lifecycleType: JB
         }
       }
       registerBeforeSendHook(BB) {
-        var jB;
-        this.beforeSendHook = jB => {
-          var zB, QB;
-          const nB = null === (zB = jB.meta.session) || void 0 === zB ? void 0 : zB.id;
-          nB && !this.transports.isPaused() && BB(nB);
-          const dB = null === (QB = jB.meta.session) || void 0 === QB ? void 0 : QB.attributes;
-          if (dB && "true" === (null === dB || void 0 === dB ? void 0 : dB.isSampled)) {
-            var IB;
-            let BB = JSON.parse(JSON.stringify(jB));
-            const zB = null === (IB = BB.meta.session) || void 0 === IB ? void 0 : IB.attributes;
-            var NB;
-            if (null === zB || void 0 === zB || delete zB.isSampled, 0 === Object.keys(null !== zB && void 0 !== zB ? zB : {}).length) null === (NB = BB.meta.session) || void 0 === NB || delete NB.attributes;
+        var IB;
+        this.beforeSendHook = IB => {
+          var ZB, TB;
+          const JB = null === (ZB = IB.meta.session) || void 0 === ZB ? void 0 : ZB.id;
+          JB && !this.transports.isPaused() && BB(JB);
+          const oB = null === (TB = IB.meta.session) || void 0 === TB ? void 0 : TB.attributes;
+          if (oB && "true" === (null === oB || void 0 === oB ? void 0 : oB.isSampled)) {
+            var GB;
+            let BB = JSON.parse(JSON.stringify(IB));
+            const ZB = null === (GB = BB.meta.session) || void 0 === GB ? void 0 : GB.attributes;
+            var vB;
+            if (null === ZB || void 0 === ZB || delete ZB.isSampled, 0 === Object.keys(null !== ZB && void 0 !== ZB ? ZB : {}).length) null === (vB = BB.meta.session) || void 0 === vB || delete vB.attributes;
             return BB
           }
           return null
-        }, null === (jB = this.transports) || void 0 === jB || jB.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (IB = this.transports) || void 0 === IB || IB.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
         var BB;
         this.logDebug("init session instrumentation");
-        const jB = document.prerendering;
-        var zB;
-        if ((null === (BB = this.config.sessionTracking) || void 0 === BB ? void 0 : BB.enabled) && (jB || this.prerenderSession)) return null !== (zB = this.prerenderSession) && void 0 !== zB || (this.prerenderSession = new Wj(this.metas, this.transports, (BB => {
+        const IB = document.prerendering;
+        var ZB;
+        if ((null === (BB = this.config.sessionTracking) || void 0 === BB ? void 0 : BB.enabled) && (IB || this.prerenderSession)) return null !== (ZB = this.prerenderSession) && void 0 !== ZB || (this.prerenderSession = new uI(this.metas, this.transports, (BB => {
           this.prerenderSession = void 0, this.initializeSession(BB)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
       initializeSession(BB) {
-        const jB = this.config.sessionTracking;
-        if (null === jB || void 0 === jB ? void 0 : jB.enabled) {
-          var zB, QB;
-          const nB = ej(jB),
-            dB = new nB(this);
-          this.isAdoptingSession = dB.isAdopting, this.registerBeforeSendHook(dB.recordActivity);
+        const IB = this.config.sessionTracking;
+        if (null === IB || void 0 === IB ? void 0 : IB.enabled) {
+          var ZB, TB;
+          const JB = fI(IB),
+            oB = new JB(this);
+          this.isAdoptingSession = oB.isAdopting, this.registerBeforeSendHook(oB.recordActivity);
           const {
-            initialSession: IB,
-            lifecycleType: NB
-          } = this.createInitialSession(nB, jB, BB);
-          nB.storeUserSession(IB);
-          const uB = IB.sessionMeta;
-          this.notifiedSession = uB, this.api.setSession(uB), this.captureListener = () => {
-            this.transports.isPaused() || dB.updateSession({
+            initialSession: GB,
+            lifecycleType: vB
+          } = this.createInitialSession(JB, IB, BB);
+          JB.storeUserSession(GB);
+          const kB = GB.sessionMeta;
+          this.notifiedSession = kB, this.api.setSession(kB), this.captureListener = () => {
+            this.transports.isPaused() || oB.updateSession({
               refreshActivity: !1
             })
-          }, null === (zB = (QB = this.metas).addCaptureListener) || void 0 === zB || zB.call(QB, this.captureListener), NB === Sj && this.api.pushEvent(Sj, {}, void 0, {
+          }, null === (ZB = (TB = this.metas).addCaptureListener) || void 0 === ZB || ZB.call(TB, this.captureListener), vB === QI && this.api.pushEvent(QI, {}, void 0, {
             skipDedupe: !0
-          }), NB === Mj && this.api.pushEvent(Mj, {}, void 0, {
+          }), vB === sI && this.api.pushEvent(sI, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var BB, jB, zB;
-        (null === (BB = this.prerenderSession) || void 0 === BB || BB.destroy(), this.captureListener) && (null === (jB = (zB = this.metas).removeCaptureListener) || void 0 === jB || jB.call(zB, this.captureListener), this.captureListener = void 0);
+        var BB, IB, ZB;
+        (null === (BB = this.prerenderSession) || void 0 === BB || BB.destroy(), this.captureListener) && (null === (IB = (ZB = this.metas).removeCaptureListener) || void 0 === IB || IB.call(ZB, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function nz(BB, jB, zB, QB) {
-      const nB = {
+    function JZ(BB, IB, ZB, TB) {
+      const JB = {
         filename: BB || document.location.href,
-        function: jB || "?"
+        function: IB || "?"
       };
-      return void 0 !== zB && (nB.lineno = zB), void 0 !== QB && (nB.colno = QB), nB
+      return void 0 !== ZB && (JB.lineno = ZB), void 0 !== TB && (JB.colno = TB), JB
     }
-    const dz = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      Iz = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      Nz = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      uz = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      Uz = "safari-extension",
-      az = "safari-web-extension",
-      pz = /Minified React error #\d+;/i;
+    const oZ = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      GZ = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      vZ = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      kZ = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      cZ = "safari-extension",
+      nZ = "safari-web-extension",
+      hZ = /Minified React error #\d+;/i;
 
-    function rz(BB, jB) {
-      const zB = null === BB || void 0 === BB ? void 0 : BB.includes(Uz),
-        QB = !zB && (null === BB || void 0 === BB ? void 0 : BB.includes("safari-web-extension"));
-      return zB || QB ? [(null === BB || void 0 === BB ? void 0 : BB.includes("@")) ? BB.split("@")[0] : BB, zB ? `${Uz}:${jB}` : `${az}:${jB}`] : [BB, jB]
+    function zZ(BB, IB) {
+      const ZB = null === BB || void 0 === BB ? void 0 : BB.includes(cZ),
+        TB = !ZB && (null === BB || void 0 === BB ? void 0 : BB.includes("safari-web-extension"));
+      return ZB || TB ? [(null === BB || void 0 === BB ? void 0 : BB.includes("@")) ? BB.split("@")[0] : BB, ZB ? `${cZ}:${IB}` : `${nZ}:${IB}`] : [BB, IB]
     }
-    const sz = 1024;
+    const FZ = 1024;
 
-    function Jz(BB) {
-      let jB = [];
-      BB.stacktrace ? jB = BB.stacktrace.split("\n").filter(((BB, jB) => jB % 2 === 0)) : BB.stack && (jB = BB.stack.split("\n"));
-      const zB = jB.reduce(((jB, zB, QB) => {
-        if (zB.length > sz) return jB;
-        let nB, dB, IB, NB, uB;
-        if (nB = dz.exec(zB)) {
-          if (dB = nB[1], IB = nB[2], NB = nB[3], uB = nB[4], null === IB || void 0 === IB ? void 0 : IB.startsWith("eval")) {
-            const BB = Iz.exec(IB);
-            BB && (IB = BB[1], NB = BB[2], uB = BB[3])
+    function NZ(BB) {
+      let IB = [];
+      BB.stacktrace ? IB = BB.stacktrace.split("\n").filter(((BB, IB) => IB % 2 === 0)) : BB.stack && (IB = BB.stack.split("\n"));
+      const ZB = IB.reduce(((IB, ZB, TB) => {
+        if (ZB.length > FZ) return IB;
+        let JB, oB, GB, vB, kB;
+        if (JB = oZ.exec(ZB)) {
+          if (oB = JB[1], GB = JB[2], vB = JB[3], kB = JB[4], null === GB || void 0 === GB ? void 0 : GB.startsWith("eval")) {
+            const BB = GZ.exec(GB);
+            BB && (GB = BB[1], vB = BB[2], kB = BB[3])
           }
-          IB = (null === IB || void 0 === IB ? void 0 : IB.startsWith("address at ")) ? IB.substring(11) : IB, [dB, IB] = rz(dB, IB)
-        } else if (nB = Nz.exec(zB)) {
-          if (dB = nB[1], IB = nB[3], NB = nB[4], uB = nB[5], IB && IB.includes(" > eval")) {
-            const BB = uz.exec(IB);
-            BB && (dB = dB || "eval", IB = BB[1], NB = BB[2])
-          } else 0 === QB && !uB && MB(BB.columnNumber) && (uB = String(BB.columnNumber + 1));
-          [dB, IB] = rz(dB, IB)
+          GB = (null === GB || void 0 === GB ? void 0 : GB.startsWith("address at ")) ? GB.substring(11) : GB, [oB, GB] = zZ(oB, GB)
+        } else if (JB = vZ.exec(ZB)) {
+          if (oB = JB[1], GB = JB[3], vB = JB[4], kB = JB[5], GB && GB.includes(" > eval")) {
+            const BB = kZ.exec(GB);
+            BB && (oB = oB || "eval", GB = BB[1], vB = BB[2])
+          } else 0 === TB && !kB && sB(BB.columnNumber) && (kB = String(BB.columnNumber + 1));
+          [oB, GB] = zZ(oB, GB)
         }
-        return (IB || dB) && jB.push(nz(IB, dB, NB ? Number(NB) : void 0, uB ? Number(uB) : void 0)), jB
+        return (GB || oB) && IB.push(JZ(GB, oB, vB ? Number(vB) : void 0, kB ? Number(kB) : void 0)), IB
       }), []);
-      return pz.test(BB.message) ? zB.slice(1) : zB
+      return hZ.test(BB.message) ? ZB.slice(1) : ZB
     }
 
-    function mz(BB) {
+    function gZ(BB) {
       return {
-        frames: Jz(BB)
+        frames: NZ(BB)
       }
     }
-    const yz = "http-request-start",
-      kz = "http-request-end";
-    var Gz = class BB {
+    const qZ = "http-request-start",
+      yZ = "http-request-end";
+    var UZ = class BB {
       constructor() {
         this.subscribers = []
       }
@@ -1058,178 +1058,178 @@ export const modules = {
         }
       }
       unsubscribe(BB) {
-        this.subscribers = this.subscribers.filter((jB => jB !== BB))
+        this.subscribers = this.subscribers.filter((IB => IB !== BB))
       }
       notify(BB) {
-        this.subscribers.forEach((jB => jB(BB)))
+        this.subscribers.forEach((IB => IB(BB)))
       }
       first() {
-        const jB = new BB,
-          zB = BB => {
-            jB.notify(BB), QB.unsubscribe()
+        const IB = new BB,
+          ZB = BB => {
+            IB.notify(BB), TB.unsubscribe()
           },
-          QB = this.subscribe(zB),
-          nB = jB.unsubscribe.bind(jB);
-        return this.withUnsubscribeOverride(jB, nB, zB)
+          TB = this.subscribe(ZB),
+          JB = IB.unsubscribe.bind(IB);
+        return this.withUnsubscribeOverride(IB, JB, ZB)
       }
-      takeWhile(jB) {
-        const zB = new BB,
-          QB = BB => {
-            jB(BB) ? zB.notify(BB) : zB.unsubscribe(QB)
+      takeWhile(IB) {
+        const ZB = new BB,
+          TB = BB => {
+            IB(BB) ? ZB.notify(BB) : ZB.unsubscribe(TB)
           };
-        this.subscribe(QB);
-        const nB = zB.unsubscribe.bind(zB);
-        return this.withUnsubscribeOverride(zB, nB, QB)
+        this.subscribe(TB);
+        const JB = ZB.unsubscribe.bind(ZB);
+        return this.withUnsubscribeOverride(ZB, JB, TB)
       }
-      filter(jB) {
-        const zB = new BB,
-          QB = BB => {
-            jB(BB) && zB.notify(BB)
+      filter(IB) {
+        const ZB = new BB,
+          TB = BB => {
+            IB(BB) && ZB.notify(BB)
           };
-        this.subscribe(QB);
-        const nB = zB.unsubscribe.bind(zB);
-        return this.withUnsubscribeOverride(zB, nB, QB)
+        this.subscribe(TB);
+        const JB = ZB.unsubscribe.bind(ZB);
+        return this.withUnsubscribeOverride(ZB, JB, TB)
       }
       merge() {
-        const jB = new BB,
-          zB = [];
-        for (var QB = arguments.length, nB = new Array(QB), dB = 0; dB < QB; dB++) nB[dB] = arguments[dB];
-        nB.forEach((BB => {
-          const QB = BB.subscribe((BB => {
-            jB.notify(BB)
+        const IB = new BB,
+          ZB = [];
+        for (var TB = arguments.length, JB = new Array(TB), oB = 0; oB < TB; oB++) JB[oB] = arguments[oB];
+        JB.forEach((BB => {
+          const TB = BB.subscribe((BB => {
+            IB.notify(BB)
           }));
-          zB.push(QB)
+          ZB.push(TB)
         }));
-        const IB = jB.unsubscribeAll.bind(jB);
-        return jB.unsubscribe = () => {
-          zB.forEach((BB => BB.unsubscribe())), IB()
-        }, jB
+        const GB = IB.unsubscribeAll.bind(IB);
+        return IB.unsubscribe = () => {
+          ZB.forEach((BB => BB.unsubscribe())), GB()
+        }, IB
       }
-      withUnsubscribeOverride(BB, jB, zB) {
+      withUnsubscribeOverride(BB, IB, ZB) {
         return BB.unsubscribe = BB => {
-          jB(BB), this.unsubscribe(zB)
+          IB(BB), this.unsubscribe(ZB)
         }, BB
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let Lz = function(BB) {
+    let WZ = function(BB) {
       return BB.TRACE = "trace", BB.DEBUG = "debug", BB.INFO = "info", BB.LOG = "log", BB.WARN = "warn", BB.ERROR = "error", BB
     }({});
-    const gz = "log",
-      tz = ["trace", "debug", "info", "log", "warn", "error"];
-    let Sz, Mz = !1;
-    const Ez = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      iz = "Error",
-      qz = BB => BB.map((BB => fB(BB) ? hj(BB) : String(BB))).join(" ");
+    const dZ = "log",
+      CZ = ["trace", "debug", "info", "log", "warn", "error"];
+    let QZ, sZ = !1;
+    const wZ = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      OZ = "Error",
+      YZ = BB => BB.map((BB => iB(BB) ? RI(BB) : String(BB))).join(" ");
 
-    function fz(BB) {
-      let jB, zB, QB, nB, dB = [];
-      if (AB(BB) && BB.error) jB = BB.error.message, zB = BB.error.name, dB = Jz(BB.error);
-      else if ((QB = TB(BB)) || PB(BB)) {
+    function iZ(BB) {
+      let IB, ZB, TB, JB, oB = [];
+      if (XB(BB) && BB.error) IB = BB.error.message, ZB = BB.error.name, oB = NZ(BB.error);
+      else if ((TB = LB(BB)) || eB(BB)) {
         const {
-          name: nB,
-          message: dB
+          name: JB,
+          message: oB
         } = BB;
-        zB = null !== nB && void 0 !== nB ? nB : QB ? "DOMError" : "DOMException", jB = dB ? `${zB}: ${dB}` : zB
-      } else ZB(BB) ? (zB = BB.name, jB = BB.message, dB = Jz(BB)) : (fB(BB) || (nB = hB(BB))) && (zB = nB ? BB.constructor.name : void 0, jB = `Non-Error exception captured with keys: ${Object.keys(BB)}`);
-      return [jB, zB, dB]
+        ZB = null !== JB && void 0 !== JB ? JB : TB ? "DOMError" : "DOMException", IB = oB ? `${ZB}: ${oB}` : ZB
+      } else mB(BB) ? (ZB = BB.name, IB = BB.message, oB = NZ(BB)) : (iB(BB) || (JB = RB(BB))) && (ZB = JB ? BB.constructor.name : void 0, IB = `Non-Error exception captured with keys: ${Object.keys(BB)}`);
+      return [IB, ZB, oB]
     }
 
-    function oz(BB) {
-      const [jB, zB, QB, nB, dB] = BB;
-      let IB, NB, uB = [];
-      const UB = SB(jB),
-        aB = nz(zB, "?", QB, nB);
-      return dB || !UB ? ([IB, NB, uB] = fz(null !== dB && void 0 !== dB ? dB : jB), 0 === uB.length && (uB = [aB])) : UB && ([IB, NB] = function(BB) {
-        var jB, zB;
-        const QB = BB.match(Ez),
-          nB = null !== (jB = null === QB || void 0 === QB ? void 0 : QB[1]) && void 0 !== jB ? jB : iz;
-        return [null !== (zB = null === QB || void 0 === QB ? void 0 : QB[2]) && void 0 !== zB ? zB : BB, nB]
-      }(jB), uB = [aB]), {
-        value: IB,
-        type: NB,
-        stackFrames: uB
+    function pZ(BB) {
+      const [IB, ZB, TB, JB, oB] = BB;
+      let GB, vB, kB = [];
+      const cB = QB(IB),
+        nB = JZ(ZB, "?", TB, JB);
+      return oB || !cB ? ([GB, vB, kB] = iZ(null !== oB && void 0 !== oB ? oB : IB), 0 === kB.length && (kB = [nB])) : cB && ([GB, vB] = function(BB) {
+        var IB, ZB;
+        const TB = BB.match(wZ),
+          JB = null !== (IB = null === TB || void 0 === TB ? void 0 : TB[1]) && void 0 !== IB ? IB : OZ;
+        return [null !== (ZB = null === TB || void 0 === TB ? void 0 : TB[2]) && void 0 !== ZB ? ZB : BB, JB]
+      }(IB), kB = [nB]), {
+        value: GB,
+        type: vB,
+        stackFrames: kB
       }
     }
 
-    function Hz(BB, jB) {
-      return ZB(BB[0]) ? oz(BB) : {
-        value: jB(BB)
+    function aZ(BB, IB) {
+      return mB(BB[0]) ? pZ(BB) : {
+        value: IB(BB)
       }
     }
-    const Dz = BB => BB.map((BB => {
+    const HZ = BB => BB.map((BB => {
       try {
         return String(BB)
-      } catch (jB) {
+      } catch (IB) {
         return ""
       }
     })).join(" ");
-    var Fz = class BB extends jz {
+    var MZ = class BB extends IZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = zz, this.errorSerializer = Dz
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ZZ, this.errorSerializer = HZ
       }
       initialize() {
-        var jB, zB;
-        const QB = this.config.consoleInstrumentation,
-          nB = (null === QB || void 0 === QB ? void 0 : QB.serializeErrors) || !!(null === QB || void 0 === QB ? void 0 : QB.errorSerializer);
-        this.errorSerializer = nB ? null !== (jB = null === QB || void 0 === QB ? void 0 : QB.errorSerializer) && void 0 !== jB ? jB : qz : Dz;
-        const dB = null !== (zB = null === QB || void 0 === QB ? void 0 : QB.disabledLevels) && void 0 !== zB ? zB : BB.defaultDisabledLevels,
-          IB = function(BB) {
-            if (Sz || (Sz = new Gz), !Mz) {
-              const jB = null !== BB && void 0 !== BB ? BB : Oj;
-              tz.forEach((BB => {
+        var IB, ZB;
+        const TB = this.config.consoleInstrumentation,
+          JB = (null === TB || void 0 === TB ? void 0 : TB.serializeErrors) || !!(null === TB || void 0 === TB ? void 0 : TB.errorSerializer);
+        this.errorSerializer = JB ? null !== (IB = null === TB || void 0 === TB ? void 0 : TB.errorSerializer) && void 0 !== IB ? IB : YZ : HZ;
+        const oB = null !== (ZB = null === TB || void 0 === TB ? void 0 : TB.disabledLevels) && void 0 !== ZB ? ZB : BB.defaultDisabledLevels,
+          GB = function(BB) {
+            if (QZ || (QZ = new UZ), !sZ) {
+              const IB = null !== BB && void 0 !== BB ? BB : SI;
+              CZ.forEach((BB => {
                 console[BB] = function() {
-                  for (var zB, QB = arguments.length, nB = new Array(QB), dB = 0; dB < QB; dB++) nB[dB] = arguments[dB];
-                  Sz.notify({
+                  for (var ZB, TB = arguments.length, JB = new Array(TB), oB = 0; oB < TB; oB++) JB[oB] = arguments[oB];
+                  QZ.notify({
                     type: "console",
                     level: BB,
-                    args: nB
-                  }), null === (zB = jB[BB]) || void 0 === zB || zB.apply(console, nB)
+                    args: JB
+                  }), null === (ZB = IB[BB]) || void 0 === ZB || ZB.apply(console, JB)
                 }
-              })), Mz = !0
+              })), sZ = !0
             }
-            return Sz
+            return QZ
           }(this.unpatchedConsole);
-        this.subscription = IB.subscribe((jB => {
+        this.subscription = GB.subscribe((IB => {
           let {
-            level: zB,
-            args: nB
-          } = jB;
-          if (!dB.includes(zB)) try {
-            if (zB !== Lz.ERROR || (null === QB || void 0 === QB ? void 0 : QB.consoleErrorAsLog))
-              if (zB === Lz.ERROR && (null === QB || void 0 === QB ? void 0 : QB.consoleErrorAsLog)) {
+            level: ZB,
+            args: JB
+          } = IB;
+          if (!oB.includes(ZB)) try {
+            if (ZB !== WZ.ERROR || (null === TB || void 0 === TB ? void 0 : TB.consoleErrorAsLog))
+              if (ZB === WZ.ERROR && (null === TB || void 0 === TB ? void 0 : TB.consoleErrorAsLog)) {
                 const {
-                  value: jB,
-                  type: QB,
-                  stackFrames: dB
-                } = Hz(nB, this.errorSerializer);
-                this.api.pushLog(jB ? [BB.consoleErrorPrefix + jB] : nB, {
-                  level: zB,
+                  value: IB,
+                  type: TB,
+                  stackFrames: oB
+                } = aZ(JB, this.errorSerializer);
+                this.api.pushLog(IB ? [BB.consoleErrorPrefix + IB] : JB, {
+                  level: ZB,
                   context: {
-                    value: null !== jB && void 0 !== jB ? jB : "",
-                    type: null !== QB && void 0 !== QB ? QB : "",
-                    stackFrames: (null === dB || void 0 === dB ? void 0 : dB.length) ? qz(dB) : ""
+                    value: null !== IB && void 0 !== IB ? IB : "",
+                    type: null !== TB && void 0 !== TB ? TB : "",
+                    stackFrames: (null === oB || void 0 === oB ? void 0 : oB.length) ? YZ(oB) : ""
                   }
                 })
-              } else this.api.pushLog(nB, {
-                level: zB
+              } else this.api.pushLog(JB, {
+                level: ZB
               });
             else {
               const {
-                value: jB,
-                type: zB,
-                stackFrames: QB
-              } = Hz(nB, this.errorSerializer);
-              if (jB && !zB && !QB) return void this.api.pushError(new Error(BB.consoleErrorPrefix + jB));
-              this.api.pushError(new Error(BB.consoleErrorPrefix + jB), {
-                type: zB,
-                stackFrames: QB
+                value: IB,
+                type: ZB,
+                stackFrames: TB
+              } = aZ(JB, this.errorSerializer);
+              if (IB && !ZB && !TB) return void this.api.pushError(new Error(BB.consoleErrorPrefix + IB));
+              this.api.pushError(new Error(BB.consoleErrorPrefix + IB), {
+                type: ZB,
+                stackFrames: TB
               })
             }
-          } catch (IB) {
-            this.logError(IB)
+          } catch (GB) {
+            this.logError(GB)
           }
         }))
       }
@@ -1238,68 +1238,68 @@ export const modules = {
         null === (BB = this.subscription) || void 0 === BB || BB.unsubscribe(), this.subscription = void 0
       }
     };
-    Fz.defaultDisabledLevels = [Lz.DEBUG, Lz.TRACE, Lz.LOG], Fz.consoleErrorPrefix = "console.error: ";
-    const Yz = [];
-    var Vz = class extends jz {
+    MZ.defaultDisabledLevels = [WZ.DEBUG, WZ.TRACE, WZ.LOG], MZ.consoleErrorPrefix = "console.error: ";
+    const jZ = [];
+    var PZ = class extends IZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = zz
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ZZ
       }
       initialize() {
         this.logDebug("Initializing"),
           function(BB) {
-            const jB = window.onerror;
+            const IB = window.onerror;
             window.onerror = function() {
-              for (var zB = arguments.length, QB = new Array(zB), nB = 0; nB < zB; nB++) QB[nB] = arguments[nB];
+              for (var ZB = arguments.length, TB = new Array(ZB), JB = 0; JB < ZB; JB++) TB[JB] = arguments[JB];
               try {
                 const {
-                  value: jB,
-                  type: zB,
-                  stackFrames: nB
-                } = oz(QB), dB = QB[4];
-                if (jB) {
-                  const QB = {
-                    type: zB,
-                    stackFrames: nB
+                  value: IB,
+                  type: ZB,
+                  stackFrames: JB
+                } = pZ(TB), oB = TB[4];
+                if (IB) {
+                  const TB = {
+                    type: ZB,
+                    stackFrames: JB
                   };
-                  null != dB && (QB.originalError = dB), BB.pushError(new Error(jB), QB)
+                  null != oB && (TB.originalError = oB), BB.pushError(new Error(IB), TB)
                 }
               } finally {
-                null === jB || void 0 === jB || jB.apply(window, QB)
+                null === IB || void 0 === IB || IB.apply(window, TB)
               }
             }
           }(this.api),
           function(BB) {
-            const jB = jB => {
-              var zB;
-              let QB, nB, dB = jB;
-              if (dB.reason) dB = jB.reason;
-              else if (null === (zB = jB.detail) || void 0 === zB ? void 0 : zB.reason) {
-                var IB;
-                dB = null === (IB = jB.detail) || void 0 === IB ? void 0 : IB.reason
+            const IB = IB => {
+              var ZB;
+              let TB, JB, oB = IB;
+              if (oB.reason) oB = IB.reason;
+              else if (null === (ZB = IB.detail) || void 0 === ZB ? void 0 : ZB.reason) {
+                var GB;
+                oB = null === (GB = IB.detail) || void 0 === GB ? void 0 : GB.reason
               }
-              let NB = [];
-              YB(dB) ? (QB = `Non-Error promise rejection captured with value: ${String(dB)}`, nB = "UnhandledRejection") : [QB, nB, NB] = fz(dB), QB && BB.pushError(new Error(QB), {
-                type: nB,
-                stackFrames: NB
+              let vB = [];
+              jB(oB) ? (TB = `Non-Error promise rejection captured with value: ${String(oB)}`, JB = "UnhandledRejection") : [TB, JB, vB] = iZ(oB), TB && BB.pushError(new Error(TB), {
+                type: JB,
+                stackFrames: vB
               })
             };
-            window.addEventListener("unhandledrejection", jB), Yz.push(jB)
+            window.addEventListener("unhandledrejection", IB), jZ.push(IB)
           }(this.api)
       }
     };
-    const hz = "unknown";
-    var Xz = class extends jz {
+    const RZ = "unknown";
+    var rZ = class extends IZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = zz, this.waitingForActivation = !1, this.sendViewChangedEvent = BB => {
-          var jB;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ZZ, this.waitingForActivation = !1, this.sendViewChangedEvent = BB => {
+          var IB;
           if (this.waitingForActivation || document.prerendering) return;
-          const zB = BB.view;
-          if (zB && zB.name !== (null === (jB = this.notifiedView) || void 0 === jB ? void 0 : jB.name)) {
-            var QB, nB, dB;
-            const BB = null !== (QB = null === (nB = this.notifiedView) || void 0 === nB ? void 0 : nB.name) && void 0 !== QB ? QB : hz;
-            this.notifiedView = zB, this.api.pushEvent(tj, {
+          const ZB = BB.view;
+          if (ZB && ZB.name !== (null === (IB = this.notifiedView) || void 0 === IB ? void 0 : IB.name)) {
+            var TB, JB, oB;
+            const BB = null !== (TB = null === (JB = this.notifiedView) || void 0 === JB ? void 0 : JB.name) && void 0 !== TB ? TB : RZ;
+            this.notifiedView = ZB, this.api.pushEvent(CI, {
               fromView: BB,
-              toView: null !== (dB = zB.name) && void 0 !== dB ? dB : hz
+              toView: null !== (oB = ZB.name) && void 0 !== oB ? oB : RZ
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,213 +1319,213 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class Zz {
+    class mZ {
       t;
       o = 0;
       i = [];
       l(BB) {
         if (BB.hadRecentInput) return;
-        const jB = this.i[0],
-          zB = this.i.at(-1);
-        this.o && jB && zB && BB.startTime - zB.startTime < 1e3 && BB.startTime - jB.startTime < 5e3 ? (this.o += BB.value, this.i.push(BB)) : (this.o = BB.value, this.i = [BB]), this.t?.(BB)
+        const IB = this.i[0],
+          ZB = this.i.at(-1);
+        this.o && IB && ZB && BB.startTime - ZB.startTime < 1e3 && BB.startTime - IB.startTime < 5e3 ? (this.o += BB.value, this.i.push(BB)) : (this.o = BB.value, this.i = [BB]), this.t?.(BB)
       }
     }
-    const Az = () => {
+    const XZ = () => {
         const BB = performance.getEntriesByType("navigation")[0];
         if (BB && BB.responseStart > 0 && BB.responseStart < performance.now()) return BB
       },
-      Tz = BB => {
+      LZ = BB => {
         if ("loading" === document.readyState) return "loading";
-        const jB = Az();
-        if (jB) {
-          if (BB < jB.domInteractive) return "loading";
-          if (0 === jB.domContentLoadedEventStart || BB < jB.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === jB.domComplete || BB < jB.domComplete) return "dom-content-loaded"
+        const IB = XZ();
+        if (IB) {
+          if (BB < IB.domInteractive) return "loading";
+          if (0 === IB.domContentLoadedEventStart || BB < IB.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === IB.domComplete || BB < IB.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      Pz = BB => {
-        const jB = BB.nodeName;
-        return 1 === BB.nodeType ? jB.toLowerCase() : jB.toUpperCase().replace(/^#/, "")
+      eZ = BB => {
+        const IB = BB.nodeName;
+        return 1 === BB.nodeType ? IB.toLowerCase() : IB.toUpperCase().replace(/^#/, "")
       },
-      Wz = BB => {
-        let jB = "";
+      uZ = BB => {
+        let IB = "";
         try {
           for (; 9 !== BB?.nodeType;) {
-            const zB = BB,
-              QB = zB.id ? "#" + zB.id : [Pz(zB), ...Array.from(zB.classList ?? []).sort()].join(".");
-            if (jB.length + QB.length > 99) return jB || QB;
-            if (jB = jB ? QB + ">" + jB : QB, zB.id) break;
-            BB = zB.parentNode
+            const ZB = BB,
+              TB = ZB.id ? "#" + ZB.id : [eZ(ZB), ...Array.from(ZB.classList ?? []).sort()].join(".");
+            if (IB.length + TB.length > 99) return IB || TB;
+            if (IB = IB ? TB + ">" + IB : TB, ZB.id) break;
+            BB = ZB.parentNode
           }
         } catch {}
-        return jB
+        return IB
       },
-      ez = new WeakMap;
+      fZ = new WeakMap;
 
-    function lz(BB, jB) {
-      let zB = ez.get(jB);
-      return zB || (zB = new WeakMap, ez.set(jB, zB)), zB.get(BB) || zB.set(BB, new jB), zB.get(BB)
+    function lZ(BB, IB) {
+      let ZB = fZ.get(IB);
+      return ZB || (ZB = new WeakMap, fZ.set(IB, ZB)), ZB.get(BB) || ZB.set(BB, new IB), ZB.get(BB)
     }
-    let wz = -1;
-    const xz = () => wz,
-      Kz = BB => {
-        addEventListener("pageshow", (jB => {
-          jB.persisted && (wz = jB.timeStamp, BB(jB))
+    let AZ = -1;
+    const tZ = () => AZ,
+      bZ = BB => {
+        addEventListener("pageshow", (IB => {
+          IB.persisted && (AZ = IB.timeStamp, BB(IB))
         }), !0)
       },
-      Cz = (BB, jB, zB, QB) => {
-        let nB, dB;
-        return IB => {
-          jB.value >= 0 && (IB || QB) && (dB = jB.value - (nB ?? 0), (dB || void 0 === nB) && (nB = jB.value, jB.delta = dB, jB.rating = ((BB, jB) => BB > jB[1] ? "poor" : BB > jB[0] ? "needs-improvement" : "good")(jB.value, zB), BB(jB)))
+      xZ = (BB, IB, ZB, TB) => {
+        let JB, oB;
+        return GB => {
+          IB.value >= 0 && (GB || TB) && (oB = IB.value - (JB ?? 0), (oB || void 0 === JB) && (JB = IB.value, IB.delta = oB, IB.rating = ((BB, IB) => BB > IB[1] ? "poor" : BB > IB[0] ? "needs-improvement" : "good")(IB.value, ZB), BB(IB)))
         }
       },
-      cz = BB => {
+      EZ = BB => {
         requestAnimationFrame((() => requestAnimationFrame((() => BB()))))
       },
-      bz = () => Az()?.activationStart ?? 0;
-    let vz = -1;
-    const Rz = new Set,
-      Oz = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      BQ = BB => {
+      DZ = () => XZ()?.activationStart ?? 0;
+    let KZ = -1;
+    const VZ = new Set,
+      SZ = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      BT = BB => {
         if ("hidden" === document.visibilityState) {
           if ("visibilitychange" === BB.type)
-            for (const BB of Rz) BB();
-          isFinite(vz) || (vz = "visibilitychange" === BB.type ? BB.timeStamp : 0, removeEventListener("prerenderingchange", BQ, !0))
+            for (const BB of VZ) BB();
+          isFinite(KZ) || (KZ = "visibilitychange" === BB.type ? BB.timeStamp : 0, removeEventListener("prerenderingchange", BT, !0))
         }
       },
-      jQ = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (vz = 1 / 0), vz < 0) {
-          const BB = bz(),
-            jB = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((jB => "hidden" === jB.name && jB.startTime >= BB))?.startTime;
-          vz = jB ?? Oz(), addEventListener("visibilitychange", BQ, !0), addEventListener("prerenderingchange", BQ, !0), Kz((() => {
+      IT = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (KZ = 1 / 0), KZ < 0) {
+          const BB = DZ(),
+            IB = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((IB => "hidden" === IB.name && IB.startTime >= BB))?.startTime;
+          KZ = IB ?? SZ(), addEventListener("visibilitychange", BT, !0), addEventListener("prerenderingchange", BT, !0), bZ((() => {
             setTimeout((() => {
-              vz = Oz()
+              KZ = SZ()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return vz
+            return KZ
           },
           onHidden(BB) {
-            Rz.add(BB)
+            VZ.add(BB)
           }
         }
       },
-      zQ = function(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          zB = arguments.length > 2 ? arguments[2] : void 0,
-          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          nB = arguments.length > 4 ? arguments[4] : void 0,
-          dB = arguments.length > 5 ? arguments[5] : void 0,
-          IB = arguments.length > 6 ? arguments[6] : void 0;
-        const NB = Az(),
-          uB = NB?.navigationId || 0;
-        let UB = "navigate";
-        return zB ? UB = zB : xz() >= 0 ? UB = "back-forward-cache" : NB && (document.prerendering || bz() > 0 ? UB = "prerender" : document.wasDiscarded ? UB = "restore" : NB.type && (UB = NB.type.replace(/_/g, "-"))), {
+      ZT = function(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ZB = arguments.length > 2 ? arguments[2] : void 0,
+          TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          JB = arguments.length > 4 ? arguments[4] : void 0,
+          oB = arguments.length > 5 ? arguments[5] : void 0,
+          GB = arguments.length > 6 ? arguments[6] : void 0;
+        const vB = XZ(),
+          kB = vB?.navigationId || 0;
+        let cB = "navigate";
+        return ZB ? cB = ZB : tZ() >= 0 ? cB = "back-forward-cache" : vB && (document.prerendering || DZ() > 0 ? cB = "prerender" : document.wasDiscarded ? cB = "restore" : vB.type && (cB = vB.type.replace(/_/g, "-"))), {
           name: BB,
-          value: jB,
+          value: IB,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: UB,
-          navigationId: QB || uB,
-          navigationInteractionId: nB,
-          navigationURL: dB || NB?.name,
-          navigationStartTime: IB || 0
+          navigationType: cB,
+          navigationId: TB || kB,
+          navigationInteractionId: JB,
+          navigationURL: oB || vB?.name,
+          navigationStartTime: GB || 0
         }
       },
-      QQ = function(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      TT = function(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const QB = BB.filter((BB => PerformanceObserver.supportedEntryTypes.includes(BB)));
-          if (QB.length > 0) {
+          const TB = BB.filter((BB => PerformanceObserver.supportedEntryTypes.includes(BB)));
+          if (TB.length > 0) {
             const BB = new PerformanceObserver((BB => {
               queueMicrotask((() => {
-                const zB = BB.getEntries();
-                QB.length > 1 && zB.sort(((BB, jB) => BB.startTime + BB.duration - (jB.startTime + jB.duration))), jB(zB)
+                const ZB = BB.getEntries();
+                TB.length > 1 && ZB.sort(((BB, IB) => BB.startTime + BB.duration - (IB.startTime + IB.duration))), IB(ZB)
               }))
             }));
-            for (const jB of QB) BB.observe({
-              type: jB,
+            for (const IB of TB) BB.observe({
+              type: IB,
               buffered: !0,
-              ...zB
+              ...ZB
             });
             return BB
           }
         } catch {}
       },
-      nQ = BB => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && BB && BB.reportSoftNavs,
-      dQ = (BB, jB) => {
-        if (BB.set(jB.navigationId, jB), BB.size > 2) {
-          const jB = BB.keys().next().value;
-          void 0 !== jB && BB.delete(jB)
+      JT = BB => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && BB && BB.reportSoftNavs,
+      oT = (BB, IB) => {
+        if (BB.set(IB.navigationId, IB), BB.size > 2) {
+          const IB = BB.keys().next().value;
+          void 0 !== IB && BB.delete(IB)
         }
       },
-      IQ = BB => {
-        let jB = !1;
+      GT = BB => {
+        let IB = !1;
         return () => {
-          jB || (BB(), jB = !0)
+          IB || (BB(), IB = !0)
         }
       };
-    class NQ {
+    class vT {
       u
     }
-    const uQ = BB => {
+    const kT = BB => {
         document.prerendering ? addEventListener("prerenderingchange", BB, !0) : BB()
       },
-      UQ = [1800, 3e3],
-      aQ = function(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const zB = nQ(jB);
-        uQ((() => {
-          const QB = lz(jB, NQ),
-            nB = jQ();
-          let dB, IB = zQ("FCP");
-          const NB = QQ(["paint"], (BB => {
-            for (const jB of BB) "first-contentful-paint" === jB.name && (NB.disconnect(), jB.startTime < nB.firstHiddenTime && (IB.value = Math.max(jB.startTime - bz(), 0), IB.entries.push(jB), IB.navigationId = jB.navigationId || IB.navigationId, dB(!0)))
+      cT = [1800, 3e3],
+      nT = function(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZB = JT(IB);
+        kT((() => {
+          const TB = lZ(IB, vT),
+            JB = IT();
+          let oB, GB = ZT("FCP");
+          const vB = TT(["paint"], (BB => {
+            for (const IB of BB) "first-contentful-paint" === IB.name && (vB.disconnect(), IB.startTime < JB.firstHiddenTime && (GB.value = Math.max(IB.startTime - DZ(), 0), GB.entries.push(IB), GB.navigationId = IB.navigationId || GB.navigationId, oB(!0)))
           }));
-          NB && (dB = Cz(BB, IB, UQ, jB.reportAllChanges), Kz((zB => {
-            IB = zQ("FCP", -1, "back-forward-cache", IB.navigationId, IB.navigationInteractionId, IB.navigationURL, xz()), dB = Cz(BB, IB, UQ, jB.reportAllChanges), cz((() => {
-              IB.value = performance.now() - zB.timeStamp, dB(!0)
+          vB && (oB = xZ(BB, GB, cT, IB.reportAllChanges), bZ((ZB => {
+            GB = ZT("FCP", -1, "back-forward-cache", GB.navigationId, GB.navigationInteractionId, GB.navigationURL, tZ()), oB = xZ(BB, GB, cT, IB.reportAllChanges), EZ((() => {
+              GB.value = performance.now() - ZB.timeStamp, oB(!0)
             }))
-          }))), zB && QQ(["soft-navigation"], (zB => {
-            zB.forEach((zB => {
-              QB.u && zB.navigationId && dQ(QB.u, zB);
-              const nB = Math.max((zB.presentationTime || zB.paintTime || 0) - zB.startTime, 0);
-              IB = zQ("FCP", nB, "soft-navigation", zB.navigationId, zB.interactionId, zB.name, zB.startTime), dB = Cz(BB, IB, UQ, jB.reportAllChanges), dB(!0)
+          }))), ZB && TT(["soft-navigation"], (ZB => {
+            ZB.forEach((ZB => {
+              TB.u && ZB.navigationId && oT(TB.u, ZB);
+              const JB = Math.max((ZB.presentationTime || ZB.paintTime || 0) - ZB.startTime, 0);
+              GB = ZT("FCP", JB, "soft-navigation", ZB.navigationId, ZB.interactionId, ZB.name, ZB.startTime), oB = xZ(BB, GB, cT, IB.reportAllChanges), oB(!0)
             }))
-          }), jB)
+          }), IB)
         }))
       },
-      pQ = [.1, .25],
-      rQ = BB => BB.find((BB => 1 === BB.node?.nodeType)) || BB[0];
-    let sQ = 0,
-      JQ = 1 / 0,
-      mQ = 0;
-    const yQ = BB => {
-      for (const jB of BB) jB.interactionId && (JQ = Math.min(JQ, jB.interactionId), mQ = Math.max(mQ, jB.interactionId), sQ = mQ ? (mQ - JQ) / 7 + 1 : 0)
+      hT = [.1, .25],
+      zT = BB => BB.find((BB => 1 === BB.node?.nodeType)) || BB[0];
+    let FT = 0,
+      NT = 1 / 0,
+      gT = 0;
+    const qT = BB => {
+      for (const IB of BB) IB.interactionId && (NT = Math.min(NT, IB.interactionId), gT = Math.max(gT, IB.interactionId), FT = gT ? (gT - NT) / 7 + 1 : 0)
     };
-    let kQ;
-    const GQ = () => kQ ? sQ : performance.interactionCount ?? 0;
-    class LQ {
+    let yT;
+    const UT = () => yT ? FT : performance.interactionCount ?? 0;
+    class WT {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return GQ() - this.h
+        return UT() - this.h
       }
       D() {
-        this.h = GQ(), this.v.length = 0, this.p.clear()
+        this.h = UT(), this.v.length = 0, this.p.clear()
       }
       S(BB) {
-        const jB = this.T(),
-          zB = Math.min(this.v.length - 1, Math.floor(jB / 50));
-        return !jB || -1 !== zB || "soft-navigation" !== BB && "back-forward-cache" !== BB ? this.v[zB] : {
+        const IB = this.T(),
+          ZB = Math.min(this.v.length - 1, Math.floor(IB / 50));
+        return !IB || -1 !== ZB || "soft-navigation" !== BB && "back-forward-cache" !== BB ? this.v[ZB] : {
           k: 8,
           id: -1,
           entries: []
@@ -1533,184 +1533,184 @@ export const modules = {
       }
       l(BB) {
         if (this.m?.(BB), !BB.interactionId) return;
-        const jB = this.v.at(-1);
-        let zB = this.p.get(BB.interactionId);
-        if (zB || this.v.length < 10 || BB.duration > jB.k) {
-          if (zB ? BB.duration > zB.k ? (zB.entries = [BB], zB.k = BB.duration) : BB.duration === zB.k && BB.startTime === zB.entries[0].startTime && zB.entries.push(BB) : (zB = {
+        const IB = this.v.at(-1);
+        let ZB = this.p.get(BB.interactionId);
+        if (ZB || this.v.length < 10 || BB.duration > IB.k) {
+          if (ZB ? BB.duration > ZB.k ? (ZB.entries = [BB], ZB.k = BB.duration) : BB.duration === ZB.k && BB.startTime === ZB.entries[0].startTime && ZB.entries.push(BB) : (ZB = {
               id: BB.interactionId,
               entries: [BB],
               k: BB.duration
-            }, this.p.set(zB.id, zB), this.v.push(zB)), this.v.sort(((BB, jB) => jB.k - BB.k)), this.v.length > 10) {
+            }, this.p.set(ZB.id, ZB), this.v.push(ZB)), this.v.sort(((BB, IB) => IB.k - BB.k)), this.v.length > 10) {
             const BB = this.v.splice(10);
-            for (const jB of BB) this.p.delete(jB.id)
+            for (const IB of BB) this.p.delete(IB.id)
           }
-          this.M?.(zB)
+          this.M?.(ZB)
         }
       }
     }
-    const gQ = BB => {
-        const jB = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          zB = globalThis.requestIdleCallback || setTimeout,
-          QB = globalThis.cancelIdleCallback || clearTimeout;
+    const dT = BB => {
+        const IB = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          ZB = globalThis.requestIdleCallback || setTimeout,
+          TB = globalThis.cancelIdleCallback || clearTimeout;
         if ("hidden" === document.visibilityState) BB();
         else {
-          const nB = IQ(BB);
-          let dB = -1;
-          const IB = () => {
-            QB(dB), nB()
+          const JB = GT(BB);
+          let oB = -1;
+          const GB = () => {
+            TB(oB), JB()
           };
-          addEventListener("visibilitychange", IB, {
+          addEventListener("visibilitychange", GB, {
             once: !0,
             capture: !0
-          }), dB = zB((() => {
-            removeEventListener("visibilitychange", IB, {
+          }), oB = ZB((() => {
+            removeEventListener("visibilitychange", GB, {
               capture: !0
-            }), nB()
+            }), JB()
           }), {
-            timeout: jB
+            timeout: IB
           })
         }
       },
-      tQ = [200, 500],
-      SQ = function(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const zB = lz(jB = Object.assign({}, jB), LQ);
-        let QB = [],
-          nB = [],
-          dB = 0;
-        const IB = new WeakMap,
-          NB = new WeakMap;
-        let uB = !1;
-        const UB = () => {
-            uB || (uB = !0, gQ(aB))
+      CT = [200, 500],
+      QT = function(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZB = lZ(IB = Object.assign({}, IB), WT);
+        let TB = [],
+          JB = [],
+          oB = 0;
+        const GB = new WeakMap,
+          vB = new WeakMap;
+        let kB = !1;
+        const cB = () => {
+            kB || (kB = !0, dT(nB))
           },
-          aB = () => {
-            const BB = new Set(zB.v.map((BB => IB.get(BB.entries[0])))),
-              jB = nB.length - 10;
-            nB = nB.filter(((zB, QB) => QB >= jB || BB.has(zB)));
-            const NB = new Set;
-            for (const zB of nB) {
-              const BB = pB(zB.startTime, zB.processingEnd);
-              for (const jB of BB) NB.add(jB)
+          nB = () => {
+            const BB = new Set(ZB.v.map((BB => GB.get(BB.entries[0])))),
+              IB = JB.length - 10;
+            JB = JB.filter(((ZB, TB) => TB >= IB || BB.has(ZB)));
+            const vB = new Set;
+            for (const ZB of JB) {
+              const BB = hB(ZB.startTime, ZB.processingEnd);
+              for (const IB of BB) vB.add(IB)
             }
-            const UB = QB.length - 10;
-            QB = QB.filter(((BB, jB) => NB.has(BB) || jB >= UB && BB.startTime > dB)), uB = !1
+            const cB = TB.length - 10;
+            TB = TB.filter(((BB, IB) => vB.has(BB) || IB >= cB && BB.startTime > oB)), kB = !1
           };
-        zB.m = BB => {
-          const zB = BB.startTime + BB.duration;
-          let QB;
-          dB = Math.max(dB, BB.processingEnd);
-          for (let dB = nB.length - 1; dB >= 0; dB--) {
-            const IB = nB[dB];
-            if (Math.abs(zB - IB.renderTime) <= 8) {
-              QB = IB, QB.startTime = Math.min(BB.startTime, QB.startTime), QB.processingStart = Math.min(BB.processingStart, QB.processingStart), QB.processingEnd = Math.max(BB.processingEnd, QB.processingEnd), jB.includeProcessedEventEntries && QB.entries.push(BB);
+        ZB.m = BB => {
+          const ZB = BB.startTime + BB.duration;
+          let TB;
+          oB = Math.max(oB, BB.processingEnd);
+          for (let oB = JB.length - 1; oB >= 0; oB--) {
+            const GB = JB[oB];
+            if (Math.abs(ZB - GB.renderTime) <= 8) {
+              TB = GB, TB.startTime = Math.min(BB.startTime, TB.startTime), TB.processingStart = Math.min(BB.processingStart, TB.processingStart), TB.processingEnd = Math.max(BB.processingEnd, TB.processingEnd), IB.includeProcessedEventEntries && TB.entries.push(BB);
               break
             }
           }
-          QB || (QB = {
+          TB || (TB = {
             startTime: BB.startTime,
             processingStart: BB.processingStart,
             processingEnd: BB.processingEnd,
-            renderTime: zB,
-            entries: jB.includeProcessedEventEntries ? [BB] : []
-          }, nB.push(QB)), BB.interactionId && IB.set(BB, QB), UB()
-        }, zB.M = BB => {
-          if (!NB.get(BB)) {
-            const zB = BB.entries.find((BB => BB.target))?.target;
-            if (zB) {
-              const QB = jB.generateTarget?.(zB) ?? Wz(zB);
-              NB.set(BB, QB)
+            renderTime: ZB,
+            entries: IB.includeProcessedEventEntries ? [BB] : []
+          }, JB.push(TB)), BB.interactionId && GB.set(BB, TB), cB()
+        }, ZB.M = BB => {
+          if (!vB.get(BB)) {
+            const ZB = BB.entries.find((BB => BB.target))?.target;
+            if (ZB) {
+              const TB = IB.generateTarget?.(ZB) ?? uZ(ZB);
+              vB.set(BB, TB)
             } else {
-              const jB = BB.entries.find((BB => BB.targetSelector))?.targetSelector;
-              jB && NB.set(BB, jB)
+              const IB = BB.entries.find((BB => BB.targetSelector))?.targetSelector;
+              IB && vB.set(BB, IB)
             }
           }
         };
-        const pB = (BB, jB) => {
-          const zB = [];
-          for (const nB of QB)
-            if (!(nB.startTime + nB.duration < BB)) {
-              if (nB.startTime > jB) break;
-              zB.push(nB)
-            } return zB
+        const hB = (BB, IB) => {
+          const ZB = [];
+          for (const JB of TB)
+            if (!(JB.startTime + JB.duration < BB)) {
+              if (JB.startTime > IB) break;
+              ZB.push(JB)
+            } return ZB
         };
-        QQ(["long-animation-frame"], (BB => {
-            QB = QB.concat(BB), UB()
-          }), jB),
+        TT(["long-animation-frame"], (BB => {
+            TB = TB.concat(BB), cB()
+          }), IB),
           function(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const zB = jQ();
-            uQ((() => {
-              "interactionCount" in performance || kQ || (kQ = QQ(["event"], yQ, {
+            const ZB = IT();
+            kT((() => {
+              "interactionCount" in performance || yT || (yT = TT(["event"], qT, {
                 durationThreshold: 0
               }));
-              let QB, nB = zQ("INP");
-              const dB = lz(jB, LQ),
-                IB = (zB, IB, NB, uB, UB) => {
-                  dB.D(), nB = zQ("INP", -1, zB, IB, NB, uB, UB), QB = Cz(BB, nB, tQ, jB.reportAllChanges)
+              let TB, JB = ZT("INP");
+              const oB = lZ(IB, WT),
+                GB = (ZB, GB, vB, kB, cB) => {
+                  oB.D(), JB = ZT("INP", -1, ZB, GB, vB, kB, cB), TB = xZ(BB, JB, CT, IB.reportAllChanges)
                 },
-                NB = () => {
-                  const BB = dB.S(nB.navigationType);
-                  BB && BB.k !== nB.value && (nB.value = BB.k, nB.entries = BB.entries, QB())
+                vB = () => {
+                  const BB = oB.S(JB.navigationType);
+                  BB && BB.k !== JB.value && (JB.value = BB.k, JB.entries = BB.entries, TB())
                 },
-                uB = BB => {
-                  NB(), QB(!0), IB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime)
+                kB = BB => {
+                  vB(), TB(!0), GB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime)
                 },
-                UB = function(BB) {
-                  let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  gQ((() => {
-                    for (const jB of BB) "soft-navigation" !== jB.entryType ? dB.l(jB) : uB(jB);
-                    NB(), jB && QB(!0)
+                cB = function(BB) {
+                  let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  dT((() => {
+                    for (const IB of BB) "soft-navigation" !== IB.entryType ? oB.l(IB) : kB(IB);
+                    vB(), IB && TB(!0)
                   }))
                 },
-                aB = ["event", "first-input"];
-              nQ(jB) && aB.push("soft-navigation");
-              const pB = QQ(aB, UB, {
-                ...jB,
-                durationThreshold: jB.durationThreshold ?? 40
+                nB = ["event", "first-input"];
+              JT(IB) && nB.push("soft-navigation");
+              const hB = TT(nB, cB, {
+                ...IB,
+                durationThreshold: IB.durationThreshold ?? 40
               });
-              QB = Cz(BB, nB, tQ, jB.reportAllChanges), pB && (zB.onHidden((() => {
-                UB(pB.takeRecords(), !0)
-              })), Kz((() => {
-                IB("back-forward-cache", nB.navigationId, nB.navigationInteractionId, nB.navigationURL, xz())
+              TB = xZ(BB, JB, CT, IB.reportAllChanges), hB && (ZB.onHidden((() => {
+                cB(hB.takeRecords(), !0)
+              })), bZ((() => {
+                GB("back-forward-cache", JB.navigationId, JB.navigationInteractionId, JB.navigationURL, tZ())
               })))
             }))
-          }((jB => {
+          }((IB => {
             BB((BB => {
               if (0 === BB.entries.length) {
-                const jB = BB.navigationStartTime || 0,
-                  zB = {
+                const IB = BB.navigationStartTime || 0,
+                  ZB = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
                     presentationDelay: BB.value,
-                    loadState: Tz(jB)
+                    loadState: LZ(IB)
                   };
                 return Object.assign(BB, {
-                  attribution: zB
+                  attribution: ZB
                 })
               }
-              const jB = BB.entries[0],
-                QB = IB.get(jB),
-                nB = Math.max(QB.processingStart, jB.startTime),
-                dB = Math.max(jB.startTime + jB.duration, nB),
-                uB = Math.min(QB.processingEnd, dB),
-                UB = QB.entries.sort(((BB, jB) => BB.processingStart - jB.processingStart)),
-                aB = pB(jB.startTime, uB),
-                rB = zB.p.get(jB.interactionId),
-                sB = {
-                  interactionTarget: NB.get(rB),
-                  interactionType: jB.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: jB.startTime,
-                  nextPaintTime: dB,
-                  processedEventEntries: UB,
-                  longAnimationFrameEntries: aB,
-                  inputDelay: nB - jB.startTime,
-                  processingDuration: uB - nB,
-                  presentationDelay: dB - uB,
-                  loadState: Tz(jB.startTime),
+              const IB = BB.entries[0],
+                TB = GB.get(IB),
+                JB = Math.max(TB.processingStart, IB.startTime),
+                oB = Math.max(IB.startTime + IB.duration, JB),
+                kB = Math.min(TB.processingEnd, oB),
+                cB = TB.entries.sort(((BB, IB) => BB.processingStart - IB.processingStart)),
+                nB = hB(IB.startTime, kB),
+                zB = ZB.p.get(IB.interactionId),
+                FB = {
+                  interactionTarget: vB.get(zB),
+                  interactionType: IB.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: IB.startTime,
+                  nextPaintTime: oB,
+                  processedEventEntries: cB,
+                  longAnimationFrameEntries: nB,
+                  inputDelay: JB - IB.startTime,
+                  processingDuration: kB - JB,
+                  presentationDelay: oB - kB,
+                  loadState: LZ(IB.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
@@ -1718,60 +1718,60 @@ export const modules = {
                   totalUnattributedDuration: void 0
                 };
               return (BB => {
-                const jB = BB.interactionTime,
-                  zB = BB.nextPaintTime;
-                if (!BB.longAnimationFrameEntries?.length || !jB || !zB) return;
-                const QB = BB.inputDelay,
-                  nB = BB.processingDuration;
-                let dB, IB, NB = 0,
-                  uB = 0,
-                  UB = 0,
-                  aB = 0;
-                for (const sB of BB.longAnimationFrameEntries) {
-                  uB = uB + sB.startTime + sB.duration - sB.styleAndLayoutStart;
-                  for (const BB of sB.scripts) {
-                    const zB = BB.startTime + BB.duration;
-                    if (zB < jB) continue;
-                    const UB = zB - Math.max(jB, BB.startTime),
-                      pB = BB.duration ? UB / BB.duration * BB.forcedStyleAndLayoutDuration : 0;
-                    NB += UB - pB, uB += pB, UB > aB && (IB = BB.startTime < jB + QB ? "input-delay" : BB.startTime >= jB + QB + nB ? "presentation-delay" : "processing-duration", dB = BB, aB = UB)
+                const IB = BB.interactionTime,
+                  ZB = BB.nextPaintTime;
+                if (!BB.longAnimationFrameEntries?.length || !IB || !ZB) return;
+                const TB = BB.inputDelay,
+                  JB = BB.processingDuration;
+                let oB, GB, vB = 0,
+                  kB = 0,
+                  cB = 0,
+                  nB = 0;
+                for (const FB of BB.longAnimationFrameEntries) {
+                  kB = kB + FB.startTime + FB.duration - FB.styleAndLayoutStart;
+                  for (const BB of FB.scripts) {
+                    const ZB = BB.startTime + BB.duration;
+                    if (ZB < IB) continue;
+                    const cB = ZB - Math.max(IB, BB.startTime),
+                      hB = BB.duration ? cB / BB.duration * BB.forcedStyleAndLayoutDuration : 0;
+                    vB += cB - hB, kB += hB, cB > nB && (GB = BB.startTime < IB + TB ? "input-delay" : BB.startTime >= IB + TB + JB ? "presentation-delay" : "processing-duration", oB = BB, nB = cB)
                   }
                 }
-                const pB = BB.longAnimationFrameEntries.at(-1),
-                  rB = pB ? pB.startTime + pB.duration : 0;
-                rB >= jB + QB + nB && (UB = zB - rB), dB && IB && (BB.longestScript = {
-                  entry: dB,
-                  subpart: IB,
-                  intersectingDuration: aB
-                }), BB.totalScriptDuration = NB, BB.totalStyleAndLayoutDuration = uB, BB.totalPaintDuration = UB, BB.totalUnattributedDuration = zB - jB - NB - uB - UB
-              })(sB), Object.assign(BB, {
-                attribution: sB
+                const hB = BB.longAnimationFrameEntries.at(-1),
+                  zB = hB ? hB.startTime + hB.duration : 0;
+                zB >= IB + TB + JB && (cB = ZB - zB), oB && GB && (BB.longestScript = {
+                  entry: oB,
+                  subpart: GB,
+                  intersectingDuration: nB
+                }), BB.totalScriptDuration = vB, BB.totalStyleAndLayoutDuration = kB, BB.totalPaintDuration = cB, BB.totalUnattributedDuration = ZB - IB - vB - kB - cB
+              })(FB), Object.assign(BB, {
+                attribution: FB
               })
-            })(jB))
-          }), jB)
+            })(IB))
+          }), IB)
       };
-    class MQ {
+    class sT {
       m;
       u;
       l(BB) {
         this.m?.(BB)
       }
     }
-    const EQ = [2500, 4e3];
-    let iQ = 50;
-    const qQ = [];
-    QQ(["resource"], (BB => {
-      for (const jB of BB) qQ.push(jB), qQ.length > iQ && qQ.shift()
+    const wT = [2500, 4e3];
+    let OT = 50;
+    const YT = [];
+    TT(["resource"], (BB => {
+      for (const IB of BB) YT.push(IB), YT.length > OT && YT.shift()
     }));
-    const fQ = [800, 1800],
-      oQ = BB => {
-        document.prerendering ? uQ((() => oQ(BB))) : "complete" !== document.readyState ? addEventListener("load", (() => oQ(BB)), !0) : setTimeout(BB)
+    const iT = [800, 1800],
+      pT = BB => {
+        document.prerendering ? kT((() => pT(BB))) : "complete" !== document.readyState ? addEventListener("load", (() => pT(BB)), !0) : setTimeout(BB)
       },
-      HQ = "load_state",
-      DQ = "time_to_first_byte";
-    var FQ = class {
-        constructor(BB, jB) {
-          this.corePushMeasurement = BB, this.webVitalConfig = jB
+      aT = "load_state",
+      HT = "time_to_first_byte";
+    var MT = class {
+        constructor(BB, IB) {
+          this.corePushMeasurement = BB, this.webVitalConfig = IB
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
@@ -1779,80 +1779,80 @@ export const modules = {
         measureCLS() {
           var BB;
           ! function(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const zB = lz(jB = Object.assign({}, jB), Zz),
-              QB = new WeakMap;
-            zB.t = BB => {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ZB = lZ(IB = Object.assign({}, IB), mZ),
+              TB = new WeakMap;
+            ZB.t = BB => {
                 if (BB?.sources?.length) {
-                  const zB = rQ(BB.sources),
-                    nB = zB?.node;
-                  if (nB) {
-                    const BB = jB.generateTarget?.(nB) ?? Wz(nB);
-                    QB.set(zB, BB)
+                  const ZB = zT(BB.sources),
+                    JB = ZB?.node;
+                  if (JB) {
+                    const BB = IB.generateTarget?.(JB) ?? uZ(JB);
+                    TB.set(ZB, BB)
                   }
                 }
               },
               function(BB) {
-                let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const zB = jQ();
-                aQ(IQ((() => {
-                  let QB, nB = zQ("CLS", 0);
-                  const dB = lz(jB, Zz),
-                    IB = (zB, IB, NB, uB, UB) => {
-                      nB = zQ("CLS", 0, zB, IB, NB, uB, UB), dB.o = 0, QB = Cz(BB, nB, pQ, jB.reportAllChanges)
+                let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const ZB = IT();
+                nT(GT((() => {
+                  let TB, JB = ZT("CLS", 0);
+                  const oB = lZ(IB, mZ),
+                    GB = (ZB, GB, vB, kB, cB) => {
+                      JB = ZT("CLS", 0, ZB, GB, vB, kB, cB), oB.o = 0, TB = xZ(BB, JB, hT, IB.reportAllChanges)
                     },
-                    NB = function() {
+                    vB = function() {
                       let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      dB.o > nB.value && (nB.value = dB.o, nB.entries = dB.i), QB(BB)
+                      oB.o > JB.value && (JB.value = oB.o, JB.entries = oB.i), TB(BB)
                     },
-                    uB = BB => {
-                      NB(!0), IB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime)
+                    kB = BB => {
+                      vB(!0), GB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime)
                     },
-                    UB = BB => {
-                      for (const jB of BB) "soft-navigation" !== jB.entryType ? dB.l(jB) : uB(jB);
-                      NB()
+                    cB = BB => {
+                      for (const IB of BB) "soft-navigation" !== IB.entryType ? oB.l(IB) : kB(IB);
+                      vB()
                     },
-                    aB = ["layout-shift"];
-                  nQ(jB) && aB.push("soft-navigation");
-                  const pB = QQ(aB, UB);
-                  pB && (QB = Cz(BB, nB, pQ, jB.reportAllChanges), zB.onHidden((() => {
-                    UB(pB.takeRecords()), QB(!0)
-                  })), Kz((() => {
-                    IB("back-forward-cache", nB.navigationId, nB.navigationInteractionId, nB.navigationURL, xz()), cz(QB)
-                  })), setTimeout(QB))
+                    nB = ["layout-shift"];
+                  JT(IB) && nB.push("soft-navigation");
+                  const hB = TT(nB, cB);
+                  hB && (TB = xZ(BB, JB, hT, IB.reportAllChanges), ZB.onHidden((() => {
+                    cB(hB.takeRecords()), TB(!0)
+                  })), bZ((() => {
+                    GB("back-forward-cache", JB.navigationId, JB.navigationInteractionId, JB.navigationURL, tZ()), EZ(TB)
+                  })), setTimeout(TB))
                 })))
-              }((jB => {
+              }((IB => {
                 BB((BB => {
-                  let jB = {};
+                  let IB = {};
                   if (BB.entries.length) {
-                    const zB = BB.entries.reduce(((BB, jB) => BB.value > jB.value ? BB : jB));
-                    if (zB?.sources?.length) {
-                      const BB = rQ(zB.sources);
-                      BB && (jB = {
-                        largestShiftTarget: QB.get(BB),
-                        largestShiftTime: zB.startTime,
-                        largestShiftValue: zB.value,
+                    const ZB = BB.entries.reduce(((BB, IB) => BB.value > IB.value ? BB : IB));
+                    if (ZB?.sources?.length) {
+                      const BB = zT(ZB.sources);
+                      BB && (IB = {
+                        largestShiftTarget: TB.get(BB),
+                        largestShiftTime: ZB.startTime,
+                        largestShiftValue: ZB.value,
                         largestShiftSource: BB,
-                        largestShiftEntry: zB,
-                        loadState: Tz(zB.startTime)
+                        largestShiftEntry: ZB,
+                        loadState: LZ(ZB.startTime)
                       })
                     }
                   }
                   return Object.assign(BB, {
-                    attribution: jB
+                    attribution: IB
                   })
-                })(jB))
-              }), jB)
+                })(IB))
+              }), IB)
           }((BB => {
             const {
-              loadState: jB,
-              largestShiftValue: zB,
-              largestShiftTime: QB,
-              largestShiftTarget: nB
-            } = BB.attribution, dB = this.buildInitialValues(BB);
-            this.addIfPresent(dB, "largest_shift_value", zB), this.addIfPresent(dB, "largest_shift_time", QB);
-            const IB = this.buildInitialContext(BB);
-            this.addIfPresent(IB, HQ, jB), this.addIfPresent(IB, "largest_shift_target", nB), this.pushMeasurement(dB, IB)
+              loadState: IB,
+              largestShiftValue: ZB,
+              largestShiftTime: TB,
+              largestShiftTarget: JB
+            } = BB.attribution, oB = this.buildInitialValues(BB);
+            this.addIfPresent(oB, "largest_shift_value", ZB), this.addIfPresent(oB, "largest_shift_time", TB);
+            const GB = this.buildInitialContext(BB);
+            this.addIfPresent(GB, aT, IB), this.addIfPresent(GB, "largest_shift_target", JB), this.pushMeasurement(oB, GB)
           }), {
             reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
           })
@@ -1860,81 +1860,81 @@ export const modules = {
         measureFCP() {
           var BB;
           ! function(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const zB = lz(jB = Object.assign({}, jB), NQ);
-            nQ(jB) && (zB.u = new Map), aQ((jB => {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ZB = lZ(IB = Object.assign({}, IB), vT);
+            JT(IB) && (ZB.u = new Map), nT((IB => {
               BB((BB => {
-                let jB = {
+                let IB = {
                   timeToFirstByte: 0,
                   firstByteToFCP: BB.value,
-                  loadState: Tz(xz())
+                  loadState: LZ(tZ())
                 };
                 if ("soft-navigation" !== BB.navigationType) {
                   if (BB.entries.length) {
-                    const zB = Az(),
-                      QB = BB.entries.at(-1);
-                    if (zB) {
-                      const nB = zB.responseStart,
-                        dB = zB.activationStart || 0,
-                        IB = Math.max(0, nB - dB);
-                      jB = {
-                        timeToFirstByte: IB,
-                        firstByteToFCP: BB.value - IB,
-                        loadState: Tz(BB.entries[0].startTime),
-                        navigationEntry: zB,
-                        fcpEntry: QB
+                    const ZB = XZ(),
+                      TB = BB.entries.at(-1);
+                    if (ZB) {
+                      const JB = ZB.responseStart,
+                        oB = ZB.activationStart || 0,
+                        GB = Math.max(0, JB - oB);
+                      IB = {
+                        timeToFirstByte: GB,
+                        firstByteToFCP: BB.value - GB,
+                        loadState: LZ(BB.entries[0].startTime),
+                        navigationEntry: ZB,
+                        fcpEntry: TB
                       }
                     }
                   }
                 } else {
-                  const QB = zB.u?.get(BB.navigationId);
-                  QB && (jB = {
+                  const TB = ZB.u?.get(BB.navigationId);
+                  TB && (IB = {
                     timeToFirstByte: 0,
                     firstByteToFCP: BB.value,
                     loadState: "complete",
-                    navigationEntry: QB
+                    navigationEntry: TB
                   })
                 }
                 return Object.assign(BB, {
-                  attribution: jB
+                  attribution: IB
                 })
-              })(jB))
-            }), jB)
+              })(IB))
+            }), IB)
           }((BB => {
             const {
-              firstByteToFCP: jB,
-              timeToFirstByte: zB,
-              loadState: QB
-            } = BB.attribution, nB = this.buildInitialValues(BB);
-            this.addIfPresent(nB, "first_byte_to_fcp", jB), this.addIfPresent(nB, DQ, zB);
-            const dB = this.buildInitialContext(BB);
-            this.addIfPresent(dB, HQ, QB), this.pushMeasurement(nB, dB)
+              firstByteToFCP: IB,
+              timeToFirstByte: ZB,
+              loadState: TB
+            } = BB.attribution, JB = this.buildInitialValues(BB);
+            this.addIfPresent(JB, "first_byte_to_fcp", IB), this.addIfPresent(JB, HT, ZB);
+            const oB = this.buildInitialContext(BB);
+            this.addIfPresent(oB, aT, TB), this.pushMeasurement(JB, oB)
           }), {
             reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
           })
         }
         measureINP() {
           var BB;
-          SQ((BB => {
-            var jB;
+          QT((BB => {
+            var IB;
             const {
-              interactionTime: zB,
-              presentationDelay: QB,
-              inputDelay: nB,
-              processingDuration: dB,
-              nextPaintTime: IB,
-              loadState: NB,
-              interactionTarget: uB,
-              interactionType: UB,
-              totalScriptDuration: aB,
-              totalStyleAndLayoutDuration: pB,
-              totalPaintDuration: rB,
-              totalUnattributedDuration: sB,
-              longestScript: JB
-            } = BB.attribution, mB = this.buildInitialValues(BB);
-            this.addIfPresent(mB, "interaction_time", zB), this.addIfPresent(mB, "presentation_delay", QB), this.addIfPresent(mB, "input_delay", nB), this.addIfPresent(mB, "processing_duration", dB), this.addIfPresent(mB, "next_paint_time", IB), this.addNumberIfDefined(mB, "total_script_duration", aB), this.addNumberIfDefined(mB, "total_style_and_layout_duration", pB), this.addNumberIfDefined(mB, "total_paint_duration", rB), this.addNumberIfDefined(mB, "total_unattributed_duration", sB), this.addNumberIfDefined(mB, "longest_script_intersecting_duration", null === JB || void 0 === JB ? void 0 : JB.intersectingDuration);
-            const yB = this.buildInitialContext(BB);
-            this.addIfPresent(yB, HQ, NB), this.addIfPresent(yB, "interaction_target", uB), this.addIfPresent(yB, "interaction_type", UB), this.addIfPresent(yB, "longest_script_subpart", null === JB || void 0 === JB ? void 0 : JB.subpart), this.addIfPresent(yB, "longest_script_invoker_type", null === JB || void 0 === JB ? void 0 : JB.entry.invokerType), (null === (jB = this.webVitalConfig) || void 0 === jB ? void 0 : jB.trackAttributionSources) && (this.addIfPresent(yB, "longest_script_invoker", null === JB || void 0 === JB ? void 0 : JB.entry.invoker), this.addIfPresent(yB, "longest_script_source_url", null === JB || void 0 === JB ? void 0 : JB.entry.sourceURL), this.addIfPresent(yB, "longest_script_source_function_name", null === JB || void 0 === JB ? void 0 : JB.entry.sourceFunctionName), this.addIfPresent(yB, "longest_script_source_char_position", void 0 !== (null === JB || void 0 === JB ? void 0 : JB.entry.sourceCharPosition) ? String(JB.entry.sourceCharPosition) : void 0)), this.pushMeasurement(mB, yB)
+              interactionTime: ZB,
+              presentationDelay: TB,
+              inputDelay: JB,
+              processingDuration: oB,
+              nextPaintTime: GB,
+              loadState: vB,
+              interactionTarget: kB,
+              interactionType: cB,
+              totalScriptDuration: nB,
+              totalStyleAndLayoutDuration: hB,
+              totalPaintDuration: zB,
+              totalUnattributedDuration: FB,
+              longestScript: NB
+            } = BB.attribution, gB = this.buildInitialValues(BB);
+            this.addIfPresent(gB, "interaction_time", ZB), this.addIfPresent(gB, "presentation_delay", TB), this.addIfPresent(gB, "input_delay", JB), this.addIfPresent(gB, "processing_duration", oB), this.addIfPresent(gB, "next_paint_time", GB), this.addNumberIfDefined(gB, "total_script_duration", nB), this.addNumberIfDefined(gB, "total_style_and_layout_duration", hB), this.addNumberIfDefined(gB, "total_paint_duration", zB), this.addNumberIfDefined(gB, "total_unattributed_duration", FB), this.addNumberIfDefined(gB, "longest_script_intersecting_duration", null === NB || void 0 === NB ? void 0 : NB.intersectingDuration);
+            const qB = this.buildInitialContext(BB);
+            this.addIfPresent(qB, aT, vB), this.addIfPresent(qB, "interaction_target", kB), this.addIfPresent(qB, "interaction_type", cB), this.addIfPresent(qB, "longest_script_subpart", null === NB || void 0 === NB ? void 0 : NB.subpart), this.addIfPresent(qB, "longest_script_invoker_type", null === NB || void 0 === NB ? void 0 : NB.entry.invokerType), (null === (IB = this.webVitalConfig) || void 0 === IB ? void 0 : IB.trackAttributionSources) && (this.addIfPresent(qB, "longest_script_invoker", null === NB || void 0 === NB ? void 0 : NB.entry.invoker), this.addIfPresent(qB, "longest_script_source_url", null === NB || void 0 === NB ? void 0 : NB.entry.sourceURL), this.addIfPresent(qB, "longest_script_source_function_name", null === NB || void 0 === NB ? void 0 : NB.entry.sourceFunctionName), this.addIfPresent(qB, "longest_script_source_char_position", void 0 !== (null === NB || void 0 === NB ? void 0 : NB.entry.sourceCharPosition) ? String(NB.entry.sourceCharPosition) : void 0)), this.pushMeasurement(gB, qB)
           }), {
             reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
           })
@@ -1942,135 +1942,135 @@ export const modules = {
         measureLCP() {
           var BB;
           ! function(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (jB = Object.assign({}, jB)).resourceBufferSize && (iQ = jB.resourceBufferSize);
-            const zB = lz(jB, MQ),
-              QB = new WeakMap;
-            nQ(jB) && (zB.u = new Map), zB.m = BB => {
-                const zB = BB.element;
-                if (zB) {
-                  const nB = jB.generateTarget?.(zB) ?? Wz(zB);
-                  QB.set(BB, nB)
-                } else BB.id && QB.set(BB, `#${BB.id}`)
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (IB = Object.assign({}, IB)).resourceBufferSize && (OT = IB.resourceBufferSize);
+            const ZB = lZ(IB, sT),
+              TB = new WeakMap;
+            JT(IB) && (ZB.u = new Map), ZB.m = BB => {
+                const ZB = BB.element;
+                if (ZB) {
+                  const JB = IB.generateTarget?.(ZB) ?? uZ(ZB);
+                  TB.set(BB, JB)
+                } else BB.id && TB.set(BB, `#${BB.id}`)
               },
               function(BB) {
-                let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  zB = !1;
-                const QB = nQ(jB);
-                uQ((() => {
-                  let nB, dB = jQ(),
-                    IB = zQ("LCP");
-                  const NB = lz(jB, MQ),
-                    uB = (QB, NB, uB, UB, aB) => {
-                      IB = zQ("LCP", -1, QB, NB, uB, UB, aB), nB = Cz(BB, IB, EQ, jB.reportAllChanges), zB = !1, "soft-navigation" === QB && (dB = jQ(!0))
+                let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  ZB = !1;
+                const TB = JT(IB);
+                kT((() => {
+                  let JB, oB = IT(),
+                    GB = ZT("LCP");
+                  const vB = lZ(IB, sT),
+                    kB = (TB, vB, kB, cB, nB) => {
+                      GB = ZT("LCP", -1, TB, vB, kB, cB, nB), JB = xZ(BB, GB, wT, IB.reportAllChanges), ZB = !1, "soft-navigation" === TB && (oB = IT(!0))
                     },
-                    UB = BB => {
-                      NB.u && BB.navigationId && dQ(NB.u, BB), zB || nB(!0), uB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime);
-                      const jB = BB.getLargestInteractionContentfulPaint?.();
-                      jB && aB([jB])
+                    cB = BB => {
+                      vB.u && BB.navigationId && oT(vB.u, BB), ZB || JB(!0), kB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime);
+                      const IB = BB.getLargestInteractionContentfulPaint?.();
+                      IB && nB([IB])
                     },
-                    aB = BB => {
-                      jB.reportAllChanges || QB || (BB = BB.slice(-1));
-                      for (const jB of BB) {
-                        if (!jB) continue;
-                        if ("soft-navigation" === jB.entryType) {
-                          UB(jB);
+                    nB = BB => {
+                      IB.reportAllChanges || TB || (BB = BB.slice(-1));
+                      for (const IB of BB) {
+                        if (!IB) continue;
+                        if ("soft-navigation" === IB.entryType) {
+                          cB(IB);
                           continue
                         }
                         let BB = 0,
-                          zB = [],
-                          QB = jB.startTime;
-                        if ("largest-contentful-paint" === jB.entryType) BB = Math.max(jB.startTime - bz(), 0), NB.l(jB), zB = [jB];
-                        else if ("interaction-contentful-paint" === jB.entryType) {
-                          const nB = jB;
-                          if (!IB.navigationId) continue;
-                          if ("interactionId" in nB && nB.interactionId != IB.navigationInteractionId) continue;
-                          QB = nB.largestContentfulPaint?.renderTime || 0, BB = Math.max(QB - jB.startTime, 0), nB.largestContentfulPaint && (NB.l(nB.largestContentfulPaint), zB = [nB.largestContentfulPaint])
+                          ZB = [],
+                          TB = IB.startTime;
+                        if ("largest-contentful-paint" === IB.entryType) BB = Math.max(IB.startTime - DZ(), 0), vB.l(IB), ZB = [IB];
+                        else if ("interaction-contentful-paint" === IB.entryType) {
+                          const JB = IB;
+                          if (!GB.navigationId) continue;
+                          if ("interactionId" in JB && JB.interactionId != GB.navigationInteractionId) continue;
+                          TB = JB.largestContentfulPaint?.renderTime || 0, BB = Math.max(TB - IB.startTime, 0), JB.largestContentfulPaint && (vB.l(JB.largestContentfulPaint), ZB = [JB.largestContentfulPaint])
                         }
-                        QB < dB.firstHiddenTime && (IB.value = BB, IB.entries = zB, nB())
+                        TB < oB.firstHiddenTime && (GB.value = BB, GB.entries = ZB, JB())
                       }
                     },
-                    pB = ["largest-contentful-paint"];
-                  QB && pB.push("interaction-contentful-paint", "soft-navigation");
-                  const rB = QQ(pB, aB);
-                  if (rB) {
-                    nB = Cz(BB, IB, EQ, jB.reportAllChanges);
-                    const dB = ["keydown", "click", "visibilitychange"],
-                      NB = BB => {
-                        if (BB.isTrusted && !zB) {
-                          const BB = IB.id;
-                          gQ((() => {
-                            if (!zB) {
-                              if (!QB) {
-                                rB.disconnect();
-                                for (const BB of dB) removeEventListener(BB, NB, {
+                    hB = ["largest-contentful-paint"];
+                  TB && hB.push("interaction-contentful-paint", "soft-navigation");
+                  const zB = TT(hB, nB);
+                  if (zB) {
+                    JB = xZ(BB, GB, wT, IB.reportAllChanges);
+                    const oB = ["keydown", "click", "visibilitychange"],
+                      vB = BB => {
+                        if (BB.isTrusted && !ZB) {
+                          const BB = GB.id;
+                          dT((() => {
+                            if (!ZB) {
+                              if (!TB) {
+                                zB.disconnect();
+                                for (const BB of oB) removeEventListener(BB, vB, {
                                   capture: !0
                                 })
                               }
-                              BB === IB.id && (zB = !0, nB(!0))
+                              BB === GB.id && (ZB = !0, JB(!0))
                             }
                           }))
                         }
                       };
-                    for (const BB of dB) addEventListener(BB, NB, {
+                    for (const BB of oB) addEventListener(BB, vB, {
                       capture: !0
                     });
-                    Kz((QB => {
-                      uB("back-forward-cache", IB.navigationId, IB.navigationInteractionId, IB.navigationURL, xz()), nB = Cz(BB, IB, EQ, jB.reportAllChanges), cz((() => {
-                        IB.value = performance.now() - QB.timeStamp, zB = !0, nB(!0)
+                    bZ((TB => {
+                      kB("back-forward-cache", GB.navigationId, GB.navigationInteractionId, GB.navigationURL, tZ()), JB = xZ(BB, GB, wT, IB.reportAllChanges), EZ((() => {
+                        GB.value = performance.now() - TB.timeStamp, ZB = !0, JB(!0)
                       }))
                     }))
                   }
                 }))
-              }((jB => {
+              }((IB => {
                 BB((BB => {
-                  let jB = {
+                  let IB = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
                     elementRenderDelay: BB.value
                   };
                   if (BB.entries.length) {
-                    const nB = BB.entries.at(-1),
-                      dB = BB => BB.name === nB.url && (BB.requestStart || BB.startTime) <= nB.startTime,
-                      IB = nB.url && (qQ.findLast(dB) || performance.getEntriesByType("resource").findLast(dB));
-                    let NB;
-                    jB.target = QB.get(nB), jB.lcpEntry = nB, nB.url && (jB.url = nB.url), IB && (jB.lcpResourceEntry = IB);
-                    let uB = 0,
-                      UB = 0;
-                    if ("soft-navigation" !== BB.navigationType ? (NB = Az(), uB = NB?.activationStart ?? 0, UB = NB?.responseStart ?? 0) : (uB = BB.navigationStartTime || 0, NB = zB.u?.get(BB.navigationId)), NB) {
-                      const zB = Math.max(0, UB - uB),
-                        QB = Math.max(zB, IB ? (IB.requestStart || IB.startTime) - uB : 0),
-                        nB = Math.min(BB.value, Math.max(QB, IB ? IB.responseEnd - uB : 0));
-                      jB = {
-                        ...jB,
-                        timeToFirstByte: zB,
-                        resourceLoadDelay: QB - zB,
-                        resourceLoadDuration: nB - QB,
-                        elementRenderDelay: BB.value - nB,
-                        navigationEntry: NB
+                    const JB = BB.entries.at(-1),
+                      oB = BB => BB.name === JB.url && (BB.requestStart || BB.startTime) <= JB.startTime,
+                      GB = JB.url && (YT.findLast(oB) || performance.getEntriesByType("resource").findLast(oB));
+                    let vB;
+                    IB.target = TB.get(JB), IB.lcpEntry = JB, JB.url && (IB.url = JB.url), GB && (IB.lcpResourceEntry = GB);
+                    let kB = 0,
+                      cB = 0;
+                    if ("soft-navigation" !== BB.navigationType ? (vB = XZ(), kB = vB?.activationStart ?? 0, cB = vB?.responseStart ?? 0) : (kB = BB.navigationStartTime || 0, vB = ZB.u?.get(BB.navigationId)), vB) {
+                      const ZB = Math.max(0, cB - kB),
+                        TB = Math.max(ZB, GB ? (GB.requestStart || GB.startTime) - kB : 0),
+                        JB = Math.min(BB.value, Math.max(TB, GB ? GB.responseEnd - kB : 0));
+                      IB = {
+                        ...IB,
+                        timeToFirstByte: ZB,
+                        resourceLoadDelay: TB - ZB,
+                        resourceLoadDuration: JB - TB,
+                        elementRenderDelay: BB.value - JB,
+                        navigationEntry: vB
                       }
                     }
                   }
                   return Object.assign(BB, {
-                    attribution: jB
+                    attribution: IB
                   })
-                })(jB))
-              }), jB)
+                })(IB))
+              }), IB)
           }((BB => {
-            var jB;
+            var IB;
             const {
-              elementRenderDelay: zB,
-              resourceLoadDelay: QB,
-              resourceLoadDuration: nB,
-              timeToFirstByte: dB,
-              target: IB,
-              url: NB,
-              lcpResourceEntry: uB
-            } = BB.attribution, UB = this.buildInitialValues(BB);
-            this.addIfPresent(UB, "element_render_delay", zB), this.addIfPresent(UB, "resource_load_delay", QB), this.addIfPresent(UB, "resource_load_duration", nB), this.addIfPresent(UB, DQ, dB);
-            const aB = this.buildInitialContext(BB);
-            this.addIfPresent(aB, "element", IB), (null === (jB = this.webVitalConfig) || void 0 === jB ? void 0 : jB.trackAttributionSources) && (this.addIfPresent(aB, "resource_url", NB), this.addIfPresent(aB, "resource_delivery_type", null === uB || void 0 === uB ? void 0 : uB.deliveryType), this.addIfPresent(aB, "resource_initiator_type", null === uB || void 0 === uB ? void 0 : uB.initiatorType)), this.pushMeasurement(UB, aB)
+              elementRenderDelay: ZB,
+              resourceLoadDelay: TB,
+              resourceLoadDuration: JB,
+              timeToFirstByte: oB,
+              target: GB,
+              url: vB,
+              lcpResourceEntry: kB
+            } = BB.attribution, cB = this.buildInitialValues(BB);
+            this.addIfPresent(cB, "element_render_delay", ZB), this.addIfPresent(cB, "resource_load_delay", TB), this.addIfPresent(cB, "resource_load_duration", JB), this.addIfPresent(cB, HT, oB);
+            const nB = this.buildInitialContext(BB);
+            this.addIfPresent(nB, "element", GB), (null === (IB = this.webVitalConfig) || void 0 === IB ? void 0 : IB.trackAttributionSources) && (this.addIfPresent(nB, "resource_url", vB), this.addIfPresent(nB, "resource_delivery_type", null === kB || void 0 === kB ? void 0 : kB.deliveryType), this.addIfPresent(nB, "resource_initiator_type", null === kB || void 0 === kB ? void 0 : kB.initiatorType)), this.pushMeasurement(cB, nB)
           }), {
             reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
           })
@@ -2079,65 +2079,65 @@ export const modules = {
           var BB;
           ! function(BB) {
             ! function(BB) {
-              let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const zB = nQ(jB);
-              let QB = zQ("TTFB"),
-                nB = Cz(BB, QB, fQ, jB.reportAllChanges);
-              oQ((() => {
-                const dB = Az();
-                if (dB) {
-                  const IB = dB.responseStart;
-                  QB.value = Math.max(IB - bz(), 0), QB.entries = [dB], nB(!0), Kz((() => {
-                    QB = zQ("TTFB", 0, "back-forward-cache", QB.navigationId, QB.navigationInteractionId, QB.navigationURL, xz()), nB = Cz(BB, QB, fQ, jB.reportAllChanges), nB(!0)
-                  })), zB && QQ(["soft-navigation"], (zB => {
-                    zB.forEach((zB => {
-                      zB.navigationId && (QB = zQ("TTFB", 0, "soft-navigation", zB.navigationId, zB.interactionId, zB.name, zB.startTime), QB.entries = [zB], nB = Cz(BB, QB, fQ, jB.reportAllChanges), nB(!0))
+              let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const ZB = JT(IB);
+              let TB = ZT("TTFB"),
+                JB = xZ(BB, TB, iT, IB.reportAllChanges);
+              pT((() => {
+                const oB = XZ();
+                if (oB) {
+                  const GB = oB.responseStart;
+                  TB.value = Math.max(GB - DZ(), 0), TB.entries = [oB], JB(!0), bZ((() => {
+                    TB = ZT("TTFB", 0, "back-forward-cache", TB.navigationId, TB.navigationInteractionId, TB.navigationURL, tZ()), JB = xZ(BB, TB, iT, IB.reportAllChanges), JB(!0)
+                  })), ZB && TT(["soft-navigation"], (ZB => {
+                    ZB.forEach((ZB => {
+                      ZB.navigationId && (TB = ZT("TTFB", 0, "soft-navigation", ZB.navigationId, ZB.interactionId, ZB.name, ZB.startTime), TB.entries = [ZB], JB = xZ(BB, TB, iT, IB.reportAllChanges), JB(!0))
                     }))
-                  }), jB)
+                  }), IB)
                 }
               }))
-            }((jB => {
+            }((IB => {
               BB((BB => {
-                const jB = BB.entries[0];
-                let zB = {
+                const IB = BB.entries[0];
+                let ZB = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: jB
+                  navigationEntry: IB
                 };
-                if (BB.entries.length && jB instanceof PerformanceNavigationTiming) {
-                  const QB = jB.activationStart || 0,
-                    nB = Math.max((jB.workerStart || jB.fetchStart || 0) - QB, 0),
-                    dB = Math.max(jB.domainLookupStart - QB, 0),
-                    IB = Math.max(jB.connectStart - QB, 0),
-                    NB = Math.max(jB.connectEnd - QB, 0);
-                  zB = {
-                    waitingDuration: nB,
-                    cacheDuration: dB - nB,
-                    dnsDuration: IB - dB,
-                    connectionDuration: NB - IB,
-                    requestDuration: BB.value - NB,
-                    navigationEntry: jB
+                if (BB.entries.length && IB instanceof PerformanceNavigationTiming) {
+                  const TB = IB.activationStart || 0,
+                    JB = Math.max((IB.workerStart || IB.fetchStart || 0) - TB, 0),
+                    oB = Math.max(IB.domainLookupStart - TB, 0),
+                    GB = Math.max(IB.connectStart - TB, 0),
+                    vB = Math.max(IB.connectEnd - TB, 0);
+                  ZB = {
+                    waitingDuration: JB,
+                    cacheDuration: oB - JB,
+                    dnsDuration: GB - oB,
+                    connectionDuration: vB - GB,
+                    requestDuration: BB.value - vB,
+                    navigationEntry: IB
                   }
                 }
                 return Object.assign(BB, {
-                  attribution: zB
+                  attribution: ZB
                 })
-              })(jB))
+              })(IB))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
           }((BB => {
             const {
-              dnsDuration: jB,
-              connectionDuration: zB,
-              requestDuration: QB,
-              waitingDuration: nB,
-              cacheDuration: dB
-            } = BB.attribution, IB = this.buildInitialValues(BB);
-            this.addIfPresent(IB, "dns_duration", jB), this.addIfPresent(IB, "connection_duration", zB), this.addIfPresent(IB, "request_duration", QB), this.addIfPresent(IB, "waiting_duration", nB), this.addIfPresent(IB, "cache_duration", dB);
-            const NB = this.buildInitialContext(BB);
-            this.pushMeasurement(IB, NB)
+              dnsDuration: IB,
+              connectionDuration: ZB,
+              requestDuration: TB,
+              waitingDuration: JB,
+              cacheDuration: oB
+            } = BB.attribution, GB = this.buildInitialValues(BB);
+            this.addIfPresent(GB, "dns_duration", IB), this.addIfPresent(GB, "connection_duration", ZB), this.addIfPresent(GB, "request_duration", TB), this.addIfPresent(GB, "waiting_duration", JB), this.addIfPresent(GB, "cache_duration", oB);
+            const vB = this.buildInitialContext(BB);
+            this.pushMeasurement(GB, vB)
           }), {
             reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
           })
@@ -2149,462 +2149,462 @@ export const modules = {
           }
         }
         buildInitialContext(BB) {
-          var jB;
-          const zB = null !== (jB = Bj("com.grafana.faro.lastNavigationId", vB)) && void 0 !== jB ? jB : hz;
+          var IB;
+          const ZB = null !== (IB = BI("com.grafana.faro.lastNavigationId", KB)) && void 0 !== IB ? IB : RZ;
           return {
             id: BB.id,
             rating: BB.rating,
             navigation_type: BB.navigationType,
-            navigation_entry_id: zB
+            navigation_entry_id: ZB
           }
         }
-        pushMeasurement(BB, jB) {
+        pushMeasurement(BB, IB) {
           this.corePushMeasurement({
             type: "web-vitals",
             values: BB
           }, {
-            context: jB
+            context: IB
           })
         }
-        addIfPresent(BB, jB, zB) {
-          zB && (BB[jB] = zB)
+        addIfPresent(BB, IB, ZB) {
+          ZB && (BB[IB] = ZB)
         }
-        addNumberIfDefined(BB, jB, zB) {
-          void 0 !== zB && (BB[jB] = zB)
+        addNumberIfDefined(BB, IB, ZB) {
+          void 0 !== ZB && (BB[IB] = ZB)
         }
       },
-      YQ = class extends jz {
+      jT = class extends IZ {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = zz
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ZZ
         }
         initialize() {
-          this.logDebug("Initializing"), new FQ(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new MT(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const VQ = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const PT = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function hQ() {
+    function RT() {
       let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const jB of BB)
-        if ("traceparent" === jB.name) {
-          if (!VQ.test(jB.description)) continue;
-          const [, BB, zB] = jB.description.split("-");
-          if (null != BB && null != zB) return {
+      for (const IB of BB)
+        if ("traceparent" === IB.name) {
+          if (!PT.test(IB.description)) continue;
+          const [, BB, ZB] = IB.description.split("-");
+          if (null != BB && null != ZB) return {
             traceId: BB,
-            spanId: zB
+            spanId: ZB
           };
           break
         }
     }
 
-    function XQ(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function rT(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: zB,
-        monoNow: QB
-      } = jB;
-      return Math.min(zB, zB - (QB - BB))
+        wallNow: ZB,
+        monoNow: TB
+      } = IB;
+      return Math.min(ZB, ZB - (TB - BB))
     }
 
-    function ZQ(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [zB, QB] of Object.entries(jB)) {
-        const jB = BB[zB];
-        return null != jB && (HB(QB) ? QB.includes(jB) : jB === QB)
+    function mT(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [ZB, TB] of Object.entries(IB)) {
+        const IB = BB[ZB];
+        return null != IB && (aB(TB) ? TB.includes(IB) : IB === TB)
       }
       return !0
     }
 
-    function AQ(BB) {
+    function XT(BB) {
       const {
-        connectEnd: jB,
-        connectStart: zB,
-        decodedBodySize: QB,
-        domainLookupEnd: nB,
-        domainLookupStart: dB,
-        duration: IB,
-        encodedBodySize: NB,
-        fetchStart: uB,
-        initiatorType: UB,
-        name: aB,
-        nextHopProtocol: pB,
-        redirectEnd: rB,
-        redirectStart: sB,
-        renderBlockingStatus: JB,
-        requestStart: mB,
-        responseEnd: yB,
-        responseStart: kB,
-        responseStatus: GB,
-        secureConnectionStart: LB,
-        transferSize: gB,
-        workerStart: tB
+        connectEnd: IB,
+        connectStart: ZB,
+        decodedBodySize: TB,
+        domainLookupEnd: JB,
+        domainLookupStart: oB,
+        duration: GB,
+        encodedBodySize: vB,
+        fetchStart: kB,
+        initiatorType: cB,
+        name: nB,
+        nextHopProtocol: hB,
+        redirectEnd: zB,
+        redirectStart: FB,
+        renderBlockingStatus: NB,
+        requestStart: gB,
+        responseEnd: qB,
+        responseStart: yB,
+        responseStatus: UB,
+        secureConnectionStart: WB,
+        transferSize: dB,
+        workerStart: CB
       } = BB;
       return {
-        name: aB,
-        httpHost: PQ(aB),
-        duration: WQ(IB),
-        tcpHandshakeTime: WQ(jB - zB),
-        dnsLookupTime: WQ(nB - dB),
-        tlsNegotiationTime: WQ(jB - LB),
-        responseStatus: WQ(GB),
-        redirectTime: WQ(rB - sB),
-        requestTime: WQ(kB - mB),
-        responseTime: WQ(yB - kB),
-        fetchTime: WQ(yB - uB),
-        serviceWorkerTime: WQ(tB > 0 ? uB - tB : 0),
-        decodedBodySize: WQ(QB),
-        encodedBodySize: WQ(NB),
+        name: nB,
+        httpHost: eT(nB),
+        duration: uT(GB),
+        tcpHandshakeTime: uT(IB - ZB),
+        dnsLookupTime: uT(JB - oB),
+        tlsNegotiationTime: uT(IB - WB),
+        responseStatus: uT(UB),
+        redirectTime: uT(zB - FB),
+        requestTime: uT(yB - gB),
+        responseTime: uT(qB - yB),
+        fetchTime: uT(qB - kB),
+        serviceWorkerTime: uT(CB > 0 ? kB - CB : 0),
+        decodedBodySize: uT(TB),
+        encodedBodySize: uT(vB),
         cacheHitStatus: function() {
           let BB = "fullLoad";
-          0 === gB ? QB > 0 && (BB = "cache") : null != GB ? 304 === GB && (BB = "conditionalFetch") : NB > 0 && gB < NB && (BB = "conditionalFetch");
+          0 === dB ? TB > 0 && (BB = "cache") : null != UB ? 304 === UB && (BB = "conditionalFetch") : vB > 0 && dB < vB && (BB = "conditionalFetch");
           return BB
         }(),
-        renderBlockingStatus: WQ(JB),
-        protocol: pB,
-        initiatorType: UB,
+        renderBlockingStatus: uT(NB),
+        protocol: hB,
+        initiatorType: cB,
         visibilityState: document.visibilityState,
-        ttfb: WQ(kB - mB),
-        transferSize: WQ(gB)
+        ttfb: uT(yB - gB),
+        transferSize: uT(dB)
       }
     }
 
-    function TQ(BB) {
+    function LT(BB) {
       const {
-        activationStart: jB,
-        domComplete: zB,
-        domContentLoadedEventEnd: QB,
-        domContentLoadedEventStart: nB,
-        domInteractive: dB,
-        fetchStart: IB,
-        loadEventEnd: NB,
-        loadEventStart: uB,
-        responseStart: UB,
-        type: aB
-      } = BB, pB = function() {
+        activationStart: IB,
+        domComplete: ZB,
+        domContentLoadedEventEnd: TB,
+        domContentLoadedEventStart: JB,
+        domInteractive: oB,
+        fetchStart: GB,
+        loadEventEnd: vB,
+        loadEventStart: kB,
+        responseStart: cB,
+        type: nB
+      } = BB, hB = function() {
         var BB;
         return null != (null === (BB = performance.timing) || void 0 === BB ? void 0 : BB.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return aj(aj({}, AQ(BB)), {}, {
-        pageLoadTime: WQ(zB - IB),
-        documentParsingTime: WQ(pB ? dB - pB : null),
-        domProcessingTime: WQ(zB - dB),
-        domContentLoadHandlerTime: WQ(QB - nB),
-        onLoadTime: WQ(NB - uB),
-        ttfb: WQ(Math.max(UB - (null !== jB && void 0 !== jB ? jB : 0), 0)),
-        type: aB
+      return nI(nI({}, XT(BB)), {}, {
+        pageLoadTime: uT(ZB - GB),
+        documentParsingTime: uT(hB ? oB - hB : null),
+        domProcessingTime: uT(ZB - oB),
+        domContentLoadHandlerTime: uT(TB - JB),
+        onLoadTime: uT(vB - kB),
+        ttfb: uT(Math.max(cB - (null !== IB && void 0 !== IB ? IB : 0), 0)),
+        type: nB
       })
     }
 
-    function PQ(BB) {
+    function eT(BB) {
       try {
-        return new URL(BB).host || hz
-      } catch (jB) {
-        return hz
+        return new URL(BB).host || RZ
+      } catch (IB) {
+        return RZ
       }
     }
 
-    function WQ(BB) {
-      return null == BB ? hz : "number" === typeof BB ? Math.round(BB > 0 ? BB : 0).toString() : BB.toString()
+    function uT(BB) {
+      return null == BB ? RZ : "number" === typeof BB ? Math.round(BB > 0 ? BB : 0).toString() : BB.toString()
     }
-    const eQ = {
+    const fT = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function lQ(BB, jB, zB, QB, nB, dB, IB) {
+    function lT(BB, IB, ZB, TB, JB, oB, GB) {
       try {
-        var NB = BB[dB](IB),
-          uB = NB.value
+        var vB = BB[oB](GB),
+          kB = vB.value
       } catch (BB) {
-        return void zB(BB)
+        return void ZB(BB)
       }
-      NB.done ? jB(uB) : Promise.resolve(uB).then(QB, nB)
+      vB.done ? IB(kB) : Promise.resolve(kB).then(TB, JB)
     }
 
-    function wQ(BB) {
+    function AT(BB) {
       return function() {
-        var jB = this,
-          zB = arguments;
-        return new Promise((function(QB, nB) {
-          var dB = BB.apply(jB, zB);
+        var IB = this,
+          ZB = arguments;
+        return new Promise((function(TB, JB) {
+          var oB = BB.apply(IB, ZB);
 
-          function IB(BB) {
-            lQ(dB, QB, nB, IB, NB, "next", BB)
+          function GB(BB) {
+            lT(oB, TB, JB, GB, vB, "next", BB)
           }
 
-          function NB(BB) {
-            lQ(dB, QB, nB, IB, NB, "throw", BB)
+          function vB(BB) {
+            lT(oB, TB, JB, GB, vB, "throw", BB)
           }
-          IB(void 0)
+          GB(void 0)
         }))
       }
     }
-    const xQ = new Gz;
-    var KQ = class extends jz {
+    const tT = new UZ;
+    var bT = class extends IZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = zz
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ZZ
       }
       initialize() {
         var BB = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let jB = !1;
-        const zB = () => {
+        let IB = !1;
+        const ZB = () => {
           ! function(BB) {
             if ("complete" === document.readyState) BB();
             else {
-              const jB = () => {
-                "complete" === document.readyState && (BB(), document.removeEventListener("readystatechange", jB))
+              const IB = () => {
+                "complete" === document.readyState && (BB(), document.removeEventListener("readystatechange", IB))
               };
-              document.addEventListener("readystatechange", jB)
+              document.addEventListener("readystatechange", IB)
             }
-          }(wQ((function*() {
-            if (jB) return;
-            const zB = BB.api.pushEvent,
+          }(AT((function*() {
+            if (IB) return;
+            const ZB = BB.api.pushEvent,
               {
-                faroNavigationId: QB
+                faroNavigationId: TB
               } = yield function(BB) {
-                let jB;
-                const zB = new Promise((BB => {
-                  jB = BB
+                let IB;
+                const ZB = new Promise((BB => {
+                  IB = BB
                 }));
-                return new PerformanceObserver((zB => {
-                  var QB;
-                  const [nB] = zB.getEntries();
-                  if (null == nB || cB(nB.name)) return;
-                  const dB = nB.toJSON();
-                  let IB = hQ(null === dB || void 0 === dB ? void 0 : dB.serverTiming);
-                  const NB = null !== (QB = Bj("com.grafana.faro.lastNavigationId", vB)) && void 0 !== QB ? QB : hz,
-                    uB = aj(aj({}, TQ(dB)), {}, {
-                      faroNavigationId: kj(),
-                      faroPreviousNavigationId: NB
+                return new PerformanceObserver((ZB => {
+                  var TB;
+                  const [JB] = ZB.getEntries();
+                  if (null == JB || EB(JB.name)) return;
+                  const oB = JB.toJSON();
+                  let GB = RT(null === oB || void 0 === oB ? void 0 : oB.serverTiming);
+                  const vB = null !== (TB = BI("com.grafana.faro.lastNavigationId", KB)) && void 0 !== TB ? TB : RZ,
+                    kB = nI(nI({}, LT(oB)), {}, {
+                      faroNavigationId: yI(),
+                      faroPreviousNavigationId: vB
                     });
-                  jj("com.grafana.faro.lastNavigationId", uB.faroNavigationId, vB), BB("faro.performance.navigation", uB, void 0, {
-                    spanContext: IB,
-                    timestampOverwriteMs: XQ(dB.startTime)
-                  }), jB(uB)
+                  II("com.grafana.faro.lastNavigationId", kB.faroNavigationId, KB), BB("faro.performance.navigation", kB, void 0, {
+                    spanContext: GB,
+                    timestampOverwriteMs: rT(oB.startTime)
+                  }), IB(kB)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), zB
-              }(zB);
-            jB || null == QB || function(BB, jB, zB, QB) {
-              const nB = QB.trackResources;
-              new PerformanceObserver((QB => {
-                const dB = QB.getEntries(),
-                  IB = {
+                }), ZB
+              }(ZB);
+            IB || null == TB || function(BB, IB, ZB, TB) {
+              const JB = TB.trackResources;
+              new PerformanceObserver((TB => {
+                const oB = TB.getEntries(),
+                  GB = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const NB of dB) {
-                  if (cB(NB.name)) continue;
-                  null === zB || void 0 === zB || zB.notify({
+                for (const vB of oB) {
+                  if (EB(vB.name)) continue;
+                  null === ZB || void 0 === ZB || ZB.notify({
                     type: "resource"
                   });
-                  const QB = NB.toJSON();
-                  let dB = hQ(null === QB || void 0 === QB ? void 0 : QB.serverTiming);
-                  (null == nB && ZQ(QB, eQ) || nB) && jB("faro.performance.resource", aj(aj({}, AQ(QB)), {}, {
+                  const TB = vB.toJSON();
+                  let oB = RT(null === TB || void 0 === TB ? void 0 : TB.serverTiming);
+                  (null == JB && mT(TB, fT) || JB) && IB("faro.performance.resource", nI(nI({}, XT(TB)), {}, {
                     faroNavigationId: BB,
-                    faroResourceId: kj()
+                    faroResourceId: yI()
                   }), void 0, {
-                    spanContext: dB,
-                    timestampOverwriteMs: XQ(QB.startTime, IB)
+                    spanContext: oB,
+                    timestampOverwriteMs: rT(TB.startTime, GB)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(QB, zB, xQ, BB.config)
+            }(TB, ZB, tT, BB.config)
           })))
         };
         this.cancelInitialization = () => {
-          jB = !0, document.removeEventListener("prerenderingchange", zB)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", zB, {
+          IB = !0, document.removeEventListener("prerenderingchange", ZB)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", ZB, {
           once: !0
-        }) : zB()
+        }) : ZB()
       }
       destroy() {
         var BB;
         null === (BB = this.cancelInitialization) || void 0 === BB || BB.call(this), this.cancelInitialization = void 0
       }
     };
-    const CQ = "data-faro-user-action-name",
-      cQ = CQ.replace(/-name$/, "-timeout"),
-      bQ = 1e3;
+    const xT = "data-faro-user-action-name",
+      ET = xT.replace(/-name$/, "-timeout"),
+      DT = 1e3;
 
-    function vQ(BB) {
+    function KT(BB) {
       return `data-${(BB.startsWith("data-")?BB.slice(5):BB).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function RQ(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lj;
-      if (void 0 === BB) return jB;
-      let QB = NaN;
+    function VT(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lI;
+      if (void 0 === BB) return IB;
+      let TB = NaN;
       try {
-        QB = "string" === typeof BB && "" === BB.trim() ? NaN : Number(BB)
-      } catch (nB) {}
-      return !Number.isFinite(QB) || QB <= 0 ? (zB(`initialActivityTimeout must be a finite number greater than zero; using ${jB} ms`), jB) : QB > 1e3 ? (zB(`initialActivityTimeout cannot exceed ${bQ} ms; clamping to the maximum`), bQ) : QB
+        TB = "string" === typeof BB && "" === BB.trim() ? NaN : Number(BB)
+      } catch (JB) {}
+      return !Number.isFinite(TB) || TB <= 0 ? (ZB(`initialActivityTimeout must be a finite number greater than zero; using ${IB} ms`), IB) : TB > 1e3 ? (ZB(`initialActivityTimeout cannot exceed ${DT} ms; clamping to the maximum`), DT) : TB
     }
 
-    function OQ(BB, jB, zB) {
+    function ST(BB, IB, ZB) {
       return void 0 !== BB && window.clearTimeout(BB), window.setTimeout((() => {
-        jB()
-      }), zB)
+        IB()
+      }), ZB)
     }
 
-    function Bn(BB) {
-      return BB.type === kz
+    function BJ(BB) {
+      return BB.type === yZ
     }
-    let jn, zn;
+    let IJ, ZJ;
 
-    function Qn() {
-      return jn || (jn = new Gz), zn || (zn = new MutationObserver(((BB, jB) => {
-        jn.notify({
+    function TJ() {
+      return IJ || (IJ = new UZ), ZJ || (ZJ = new MutationObserver(((BB, IB) => {
+        IJ.notify({
           type: "dom-mutation"
         })
-      })), zn.observe(document, {
+      })), ZJ.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), jn
+      })), IJ
     }
-    const nn = "fetch",
-      dn = "xhr";
-    let In, Nn, un, Un, an = !1;
+    const JJ = "fetch",
+      oJ = "xhr";
+    let GJ, vJ, kJ, cJ, nJ = !1;
 
-    function pn() {
-      if (In) return In;
+    function hJ() {
+      if (GJ) return GJ;
 
       function BB(BB) {
-        In.notify({
-          type: yz,
+        GJ.notify({
+          type: qZ,
           request: BB
         })
       }
 
-      function jB(BB) {
-        In.notify({
-          type: kz,
+      function IB(BB) {
+        GJ.notify({
+          type: yZ,
           request: BB
         })
       }
-      return In = new Gz, an || (! function(BB) {
+      return GJ = new UZ, nJ || (! function(BB) {
         let {
-          onRequestEnd: jB,
-          onRequestStart: zB
+          onRequestEnd: IB,
+          onRequestStart: ZB
         } = BB;
-        un || (un = window.fetch);
+        kJ || (kJ = window.fetch);
         window.fetch = function() {
-          var BB, QB;
-          const nB = null !== (BB = bB(arguments[0])) && void 0 !== BB ? BB : "",
-            dB = cB(nB),
-            IB = (null !== (QB = arguments[1]) && void 0 !== QB ? QB : {}).method,
-            NB = kj();
-          return dB || zB({
-            url: nB,
-            method: IB,
-            requestId: NB,
-            apiType: nn
-          }), un.apply(this, arguments).then((BB => (dB || jB({
-            url: nB,
-            method: IB,
-            requestId: NB,
-            apiType: nn
+          var BB, TB;
+          const JB = null !== (BB = DB(arguments[0])) && void 0 !== BB ? BB : "",
+            oB = EB(JB),
+            GB = (null !== (TB = arguments[1]) && void 0 !== TB ? TB : {}).method,
+            vB = yI();
+          return oB || ZB({
+            url: JB,
+            method: GB,
+            requestId: vB,
+            apiType: JJ
+          }), kJ.apply(this, arguments).then((BB => (oB || IB({
+            url: JB,
+            method: GB,
+            requestId: vB,
+            apiType: JJ
           }), BB))).catch((BB => {
-            throw dB || jB({
-              url: nB,
-              method: IB,
-              requestId: NB,
-              apiType: nn
+            throw oB || IB({
+              url: JB,
+              method: GB,
+              requestId: vB,
+              apiType: JJ
             }), BB
           }))
         }
       }({
         onRequestStart: BB,
-        onRequestEnd: jB
+        onRequestEnd: IB
       }), function(BB) {
         let {
-          onRequestStart: jB,
-          onRequestEnd: zB
+          onRequestStart: IB,
+          onRequestEnd: ZB
         } = BB;
-        Nn || (Nn = XMLHttpRequest.prototype.open);
+        vJ || (vJ = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
           const BB = arguments[1],
-            QB = cB(BB),
-            nB = arguments[0],
-            dB = kj();
+            TB = EB(BB),
+            JB = arguments[0],
+            oB = yI();
           this.addEventListener("loadstart", (function() {
-            QB || jB({
+            TB || IB({
               url: BB,
-              method: nB,
-              requestId: dB,
-              apiType: dn
+              method: JB,
+              requestId: oB,
+              apiType: oJ
             })
           })), this.addEventListener("load", (function() {
-            QB || zB({
+            TB || ZB({
               url: BB,
-              method: nB,
-              requestId: dB,
-              apiType: dn
+              method: JB,
+              requestId: oB,
+              apiType: oJ
             })
           })), this.addEventListener("error", (function() {
-            QB || zB({
+            TB || ZB({
               url: BB,
-              method: nB,
-              requestId: dB,
-              apiType: dn
+              method: JB,
+              requestId: oB,
+              apiType: oJ
             })
           })), this.addEventListener("abort", (function() {
-            QB || zB({
+            TB || ZB({
               url: BB,
-              method: nB,
-              requestId: dB,
-              apiType: dn
+              method: JB,
+              requestId: oB,
+              apiType: oJ
             })
-          })), Nn.apply(this, arguments)
+          })), vJ.apply(this, arguments)
         }
       }({
         onRequestStart: BB,
-        onRequestEnd: jB
-      }), an = !0), In
+        onRequestEnd: IB
+      }), nJ = !0), GJ
     }
-    let rn, sn = !1;
-    let Jn = function(BB) {
+    let zJ, FJ = !1;
+    let NJ = function(BB) {
       return BB[BB.Started = 0] = "Started", BB[BB.Halted = 1] = "Halted", BB[BB.Cancelled = 2] = "Cancelled", BB[BB.Ended = 3] = "Ended", BB
     }({});
-    var mn = class {
-      constructor(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = BB, this.logDebug = jB, this.initialActivityTimeout = zB, this.http = pn(), this.dom = Qn(), this.perf = (Un || (Un = new Gz), sn || (rn = xQ.subscribe((BB => {
-          "resource" === BB.type && Un.notify({
+    var gJ = class {
+      constructor(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = BB, this.logDebug = IB, this.initialActivityTimeout = ZB, this.http = hJ(), this.dom = TJ(), this.perf = (cJ || (cJ = new UZ), FJ || (zJ = tT.subscribe((BB => {
+          "resource" === BB.type && cJ.notify({
             type: "resource-entry"
           })
-        })), sn = !0), Un), this.isValid = !1, this.runningRequests = new Map
+        })), FJ = !0), cJ), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new Gz).merge(this.http, this.dom, this.perf).takeWhile((() => [Jn.Started, Jn.Halted].includes(this.userAction.getState()))).filter((BB => !!(this.userAction.getState() !== Jn.Halted || Bn(BB) && this.runningRequests.has(BB.request.requestId)))).subscribe((BB => {
+        this.allMonitorsSub = (new UZ).merge(this.http, this.dom, this.perf).takeWhile((() => [NJ.Started, NJ.Halted].includes(this.userAction.getState()))).filter((BB => !!(this.userAction.getState() !== NJ.Halted || BJ(BB) && this.runningRequests.has(BB.request.requestId)))).subscribe((BB => {
           (function(BB) {
-            return BB.type === yz
-          })(BB) && this.runningRequests.set(BB.request.requestId, BB.request), Bn(BB) && this.runningRequests.delete(BB.request.requestId), Bn(BB) ? this.userAction.getState() === Jn.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((BB => [Jn.Ended, Jn.Cancelled].includes(BB))).first().subscribe((() => this.cleanup())), this.startupTid = OQ(this.startupTid, (() => {
+            return BB.type === qZ
+          })(BB) && this.runningRequests.set(BB.request.requestId, BB.request), BJ(BB) && this.runningRequests.delete(BB.request.requestId), BJ(BB) ? this.userAction.getState() === NJ.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((BB => [NJ.Ended, NJ.Cancelled].includes(BB))).first().subscribe((() => this.cleanup())), this.startupTid = ST(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === Jn.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === NJ.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === Jn.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === NJ.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = OQ(this.haltTid, (() => {
-          this.userAction.getState() === Jn.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = ST(this.haltTid, (() => {
+          this.userAction.getState() === NJ.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,71 +2614,71 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var BB, jB;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (BB = this.allMonitorsSub) || void 0 === BB || BB.unsubscribe(), null === (jB = this.stateSub) || void 0 === jB || jB.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var BB, IB;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (BB = this.allMonitorsSub) || void 0 === BB || BB.unsubscribe(), null === (IB = this.stateSub) || void 0 === IB || IB.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
       clearTimer(BB) {
         void 0 !== BB && window.clearTimeout(BB)
       }
     };
 
-    function yn(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lj;
-      var zB;
+    function qJ(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lI;
+      var ZB;
       const {
-        api: QB,
-        config: nB,
-        internalLogger: dB
-      } = BB, IB = RQ(null === (zB = nB.userActionsInstrumentation) || void 0 === zB ? void 0 : zB.initialActivityTimeout, 100, jB);
+        api: TB,
+        config: JB,
+        internalLogger: oB
+      } = BB, GB = VT(null === (ZB = JB.userActionsInstrumentation) || void 0 === ZB ? void 0 : ZB.initialActivityTimeout, 100, IB);
       return {
         processUserEvent: function(BB) {
-          var jB, zB;
-          const dB = null !== (jB = null === (zB = nB.userActionsInstrumentation) || void 0 === zB ? void 0 : zB.dataAttributeName) && void 0 !== jB ? jB : CQ,
-            IB = BB.target;
-          if (!(IB instanceof Element)) return;
-          const NB = function(BB, jB) {
-              let zB = BB;
-              for (; zB;) {
-                if (zB.hasAttribute(jB)) return zB;
-                zB = zB.parentElement
+          var IB, ZB;
+          const oB = null !== (IB = null === (ZB = JB.userActionsInstrumentation) || void 0 === ZB ? void 0 : ZB.dataAttributeName) && void 0 !== IB ? IB : xT,
+            GB = BB.target;
+          if (!(GB instanceof Element)) return;
+          const vB = function(BB, IB) {
+              let ZB = BB;
+              for (; ZB;) {
+                if (ZB.hasAttribute(IB)) return ZB;
+                ZB = ZB.parentElement
               }
               return null
-            }(IB, vQ(dB)),
-            uB = function(BB, jB) {
+            }(GB, KT(oB)),
+            kB = function(BB, IB) {
               if (!BB) return;
-              const zB = function(BB) {
-                  return vQ(BB).slice(5).replace(/-(.)/g, ((BB, jB) => jB.toUpperCase()))
-                }(jB),
-                QB = BB.dataset;
-              for (const nB in QB)
-                if (nB === zB) return QB[nB]
-            }(NB, dB);
-          if (!NB || !uB) return;
-          const UB = function(BB, jB) {
-            const zB = BB.getAttribute(function(BB) {
-              const jB = vQ(BB);
-              return jB.endsWith("-name") ? `${jB.slice(0,-5)}-timeout` : `${jB}-timeout`
-            }(jB));
-            return null === zB ? void 0 : Number(zB)
-          }(NB, dB);
-          QB.startUserAction(uB, {}, {
+              const ZB = function(BB) {
+                  return KT(BB).slice(5).replace(/-(.)/g, ((BB, IB) => IB.toUpperCase()))
+                }(IB),
+                TB = BB.dataset;
+              for (const JB in TB)
+                if (JB === ZB) return TB[JB]
+            }(vB, oB);
+          if (!vB || !kB) return;
+          const cB = function(BB, IB) {
+            const ZB = BB.getAttribute(function(BB) {
+              const IB = KT(BB);
+              return IB.endsWith("-name") ? `${IB.slice(0,-5)}-timeout` : `${IB}-timeout`
+            }(IB));
+            return null === ZB ? void 0 : Number(ZB)
+          }(vB, oB);
+          TB.startUserAction(kB, {}, {
             triggerName: BB.type,
-            initialActivityTimeout: UB
+            initialActivityTimeout: cB
           })
         },
-        processUserActionStarted: function(BB, zB) {
-          const QB = BB,
-            nB = RQ(zB, IB, jB);
-          new mn(QB, dB.debug, nB).attach()
+        processUserActionStarted: function(BB, ZB) {
+          const TB = BB,
+            JB = VT(ZB, GB, IB);
+          new gJ(TB, oB.debug, JB).attach()
         }
       }
     }
-    const kn = "user_action_start",
-      Gn = {
+    const yJ = "user_action_start",
+      UJ = {
         Normal: "normal",
         Critical: "critical"
       };
-    var Ln = class {
+    var WJ = class {
         constructor() {
           this.buffer = []
         }
@@ -2686,33 +2686,33 @@ export const modules = {
           this.buffer.push(BB)
         }
         flushBuffer(BB) {
-          if (oB(BB))
-            for (const jB of this.buffer) BB(jB);
+          if (pB(BB))
+            for (const IB of this.buffer) BB(IB);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      gn = class extends Gz {
+      dJ = class extends UZ {
         constructor(BB) {
           let {
-            name: jB,
-            parentId: zB,
-            trigger: QB,
-            transports: nB,
-            attributes: dB,
-            trackUserActionsExcludeItem: IB,
-            importance: NB = Gn.Normal,
-            pushEvent: uB
+            name: IB,
+            parentId: ZB,
+            trigger: TB,
+            transports: JB,
+            attributes: oB,
+            trackUserActionsExcludeItem: GB,
+            importance: vB = UJ.Normal,
+            pushEvent: kB
           } = BB;
-          super(), this.name = jB, this.attributes = dB, this.id = kj(), this.trigger = QB, this.parentId = null !== zB && void 0 !== zB ? zB : this.id, this.trackUserActionsExcludeItem = IB, this.importance = NB, this._pushEvent = uB, this._itemBuffer = new Ln, this._transports = nB, this._state = 0, this._start()
+          super(), this.name = IB, this.attributes = oB, this.id = yI(), this.trigger = TB, this.parentId = null !== ZB && void 0 !== ZB ? ZB : this.id, this.trackUserActionsExcludeItem = GB, this.importance = vB, this._pushEvent = kB, this._itemBuffer = new WJ, this._transports = JB, this._state = 0, this._start()
         }
         addItem(BB) {
           return 0 === this._state && (this._itemBuffer.addItem(BB), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = rj(), this._startTimeMono = sj())
+          this._state = 0, 0 === this._state && (this.startTime = zI(), this._startTimeMono = FI())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
@@ -2724,29 +2724,29 @@ export const modules = {
         }
         end() {
           if (2 === this._state) return;
-          const BB = rj(),
-            jB = sj() - this._startTimeMono;
+          const BB = zI(),
+            IB = FI() - this._startTimeMono;
           this._state = 3, this._itemBuffer.flushBuffer((BB => {
-            if (function(BB, jB) {
-                return (null === jB || void 0 === jB ? void 0 : jB(BB)) || "measurement" === BB.type && "web-vitals" === BB.payload.type
+            if (function(BB, IB) {
+                return (null === IB || void 0 === IB ? void 0 : IB(BB)) || "measurement" === BB.type && "web-vitals" === BB.payload.type
               }(BB, this.trackUserActionsExcludeItem)) return void this._transports.execute(BB);
-            const jB = Rj(Rj({}, BB), {}, {
-              payload: Rj(Rj({}, BB.payload), {}, {
+            const IB = VI(VI({}, BB), {}, {
+              payload: VI(VI({}, BB.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(jB)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Rj({
+            this._transports.execute(IB)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", VI({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
             userActionEndTime: BB.toString(),
-            userActionDuration: jB.toString(),
+            userActionDuration: IB.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, Xj(this.attributes)), void 0, {
+          }, rI(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
             customPayloadTransformer: BB => (BB.action = {
               id: this.id,
@@ -2758,29 +2758,29 @@ export const modules = {
           return this._state
         }
       };
-    const tn = new Gz;
+    const CJ = new UZ;
 
-    function Sn(BB, jB) {
-      return !!BB && (0 === (null === BB || void 0 === BB ? void 0 : BB.getState()) && (BB.addItem(jB), !0))
+    function QJ(BB, IB) {
+      return !!BB && (0 === (null === BB || void 0 === BB ? void 0 : BB.getState()) && (BB.addItem(IB), !0))
     }
-    var Mn = class extends jz {
+    var sJ = class extends IZ {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = zz
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ZZ
         }
         initialize() {
           const {
             processUserEvent: BB,
-            processUserActionStarted: jB
-          } = yn(mB, (BB => this.logWarn(BB)));
-          this._processUserEvent = BB, this._processKeydown = jB => {
-            [" ", "Enter"].includes(jB.key) && BB(jB)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = tn.subscribe((BB => {
+            processUserActionStarted: IB
+          } = qJ(gB, (BB => this.logWarn(BB)));
+          this._processUserEvent = BB, this._processKeydown = IB => {
+            [" ", "Enter"].includes(IB.key) && BB(IB)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = CJ.subscribe((BB => {
             let {
-              type: zB,
-              userAction: QB,
-              initialActivityTimeout: nB
+              type: ZB,
+              userAction: TB,
+              initialActivityTimeout: JB
             } = BB;
-            "user_action_start" === zB && jB(QB, nB)
+            "user_action_start" === ZB && IB(TB, JB)
           }))
         }
         destroy() {
@@ -2788,9 +2788,9 @@ export const modules = {
           this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (BB = this._userActionSub) || void 0 === BB || BB.unsubscribe()
         }
       },
-      En = class extends jz {
+      wJ = class extends IZ {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = zz, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ZZ, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2799,7 +2799,7 @@ export const modules = {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
         securitypolicyviolationHandler(BB) {
-          const jB = {
+          const IB = {
             blockedURI: BB.blockedURI,
             columnNumber: BB.columnNumber,
             disposition: BB.disposition,
@@ -2813,52 +2813,52 @@ export const modules = {
             statusCode: BB.statusCode,
             violatedDirective: BB.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", Xj(jB))
+          this.api.pushEvent("securitypolicyviolation", rI(IB))
         }
       };
-    var qn = class extends Gz {
-      constructor(BB, jB) {
-        var zB, QB, nB, dB;
+    var OJ = class extends UZ {
+      constructor(BB, IB) {
+        var ZB, TB, JB, oB;
         super(), this._tracking = !1, this.eventsObservable = BB, this._options = {
-          inactivityMs: null !== (zB = null === jB || void 0 === jB ? void 0 : jB.inactivityMs) && void 0 !== zB ? zB : 100,
-          drainTimeoutMs: null !== (QB = null === jB || void 0 === jB ? void 0 : jB.drainTimeoutMs) && void 0 !== QB ? QB : 1e4,
-          isOperationStart: null !== (nB = null === jB || void 0 === jB ? void 0 : jB.isOperationStart) && void 0 !== nB ? nB : () => {},
-          isOperationEnd: null !== (dB = null === jB || void 0 === jB ? void 0 : jB.isOperationEnd) && void 0 !== dB ? dB : () => {}
+          inactivityMs: null !== (ZB = null === IB || void 0 === IB ? void 0 : IB.inactivityMs) && void 0 !== ZB ? ZB : 100,
+          drainTimeoutMs: null !== (TB = null === IB || void 0 === IB ? void 0 : IB.drainTimeoutMs) && void 0 !== TB ? TB : 1e4,
+          isOperationStart: null !== (JB = null === IB || void 0 === IB ? void 0 : IB.isOperationStart) && void 0 !== JB ? JB : () => {},
+          isOperationEnd: null !== (oB = null === IB || void 0 === IB ? void 0 : IB.isOperationEnd) && void 0 !== oB ? oB : () => {}
         }, this._initialize()
       }
       _initialize() {
         this.eventsObservable.filter((() => this._tracking)).subscribe((BB => {
-          var jB;
-          this._lastEventTime = sj(), null === (jB = this._currentEvents) || void 0 === jB || jB.push(BB);
-          const zB = this._options.isOperationStart(BB);
-          var QB;
-          zB && (null === (QB = this._activeOperations) || void 0 === QB || QB.set(zB, !0));
-          const nB = this._options.isOperationEnd(BB);
-          var dB;
-          nB && (null === (dB = this._activeOperations) || void 0 === dB || dB.delete(nB));
+          var IB;
+          this._lastEventTime = FI(), null === (IB = this._currentEvents) || void 0 === IB || IB.push(BB);
+          const ZB = this._options.isOperationStart(BB);
+          var TB;
+          ZB && (null === (TB = this._activeOperations) || void 0 === TB || TB.set(ZB, !0));
+          const JB = this._options.isOperationEnd(BB);
+          var oB;
+          JB && (null === (oB = this._activeOperations) || void 0 === oB || oB.delete(JB));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = sj(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = FI(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
         let BB;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), BB = this.hasActiveOperations() ? sj() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), BB = this.hasActiveOperations() ? FI() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
           duration: BB
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = fn(this._inactivityTid, (() => {
+        this._inactivityTid = YJ(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = fn(this._drainTid, (() => {
+        this._drainTid = YJ(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
@@ -2870,167 +2870,167 @@ export const modules = {
       }
     };
 
-    function fn(BB, jB, zB) {
+    function YJ(BB, IB, ZB) {
       return BB && clearTimeout(BB), BB = setTimeout((() => {
-        jB()
-      }), zB)
+        IB()
+      }), ZB)
     }
-    let Hn;
-    const Dn = new Set,
-      Fn = new Map;
-    let Yn, Vn, hn, Xn, Zn, An, Tn, Pn, Wn = !1;
-    var en = class extends jz {
+    let iJ;
+    const pJ = new Set,
+      aJ = new Map;
+    let HJ, MJ, jJ, PJ, RJ, rJ, mJ, XJ, LJ = !1;
+    var eJ = class extends IZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = zz
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ZZ
       }
       initialize() {
-        const BB = pn(),
-          jB = Qn(),
-          zB = function() {
-            function BB(BB, jB) {
-              const zB = null !== jB && void 0 !== jB ? jB : location.href;
-              zB !== Vn && (Yn.notify({
+        const BB = hJ(),
+          IB = TJ(),
+          ZB = function() {
+            function BB(BB, IB) {
+              const ZB = null !== IB && void 0 !== IB ? IB : location.href;
+              ZB !== MJ && (HJ.notify({
                 type: "url-change",
-                from: Vn,
-                to: zB,
+                from: MJ,
+                to: ZB,
                 trigger: BB
-              }), Vn = zB)
+              }), MJ = ZB)
             }
-            if (Yn || (Yn = new Gz, Vn = location.href), !Wn)
+            if (HJ || (HJ = new UZ, MJ = location.href), !LJ)
               if ("navigation" in window && "NavigateEvent" in window) {
-                Tn = jB => {
+                mJ = IB => {
                   try {
-                    const zB = null === jB || void 0 === jB ? void 0 : jB.destination;
-                    (null === zB || void 0 === zB ? void 0 : zB.sameDocument) && "string" === typeof zB.url && BB("navigate", zB.url)
-                  } catch (zB) {}
-                }, window.navigation.addEventListener("navigate", Tn);
-                const jB = window.NavigateEvent;
-                jB && jB.prototype && "function" === typeof jB.prototype.intercept && (Pn || (Pn = jB.prototype.intercept), jB.prototype.intercept = function(jB) {
+                    const ZB = null === IB || void 0 === IB ? void 0 : IB.destination;
+                    (null === ZB || void 0 === ZB ? void 0 : ZB.sameDocument) && "string" === typeof ZB.url && BB("navigate", ZB.url)
+                  } catch (ZB) {}
+                }, window.navigation.addEventListener("navigate", mJ);
+                const IB = window.NavigateEvent;
+                IB && IB.prototype && "function" === typeof IB.prototype.intercept && (XJ || (XJ = IB.prototype.intercept), IB.prototype.intercept = function(IB) {
                   try {
-                    const jB = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      zB = null === this || void 0 === this ? void 0 : this.destination;
-                    jB && zB && !1 === zB.sameDocument && "string" === typeof zB.url && BB("navigate-intercept", zB.url)
-                  } catch (zB) {}
-                  return Pn.call(this, jB)
-                }), Wn = !0
-              } else hn || (hn = window.history.pushState), window.history.pushState = function() {
-                for (var jB = arguments.length, zB = new Array(jB), QB = 0; QB < jB; QB++) zB[QB] = arguments[QB];
-                const nB = hn.apply(window.history, zB);
-                return BB("pushState"), nB
-              }, Xn || (Xn = window.history.replaceState), window.history.replaceState = function() {
-                for (var jB = arguments.length, zB = new Array(jB), QB = 0; QB < jB; QB++) zB[QB] = arguments[QB];
-                const nB = Xn.apply(window.history, zB);
-                return BB("replaceState"), nB
-              }, Zn = () => BB("popstate"), An = () => BB("hashchange"), window.addEventListener("popstate", Zn), window.addEventListener("hashchange", An), Wn = !0;
-            return Yn
+                    const IB = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      ZB = null === this || void 0 === this ? void 0 : this.destination;
+                    IB && ZB && !1 === ZB.sameDocument && "string" === typeof ZB.url && BB("navigate-intercept", ZB.url)
+                  } catch (ZB) {}
+                  return XJ.call(this, IB)
+                }), LJ = !0
+              } else jJ || (jJ = window.history.pushState), window.history.pushState = function() {
+                for (var IB = arguments.length, ZB = new Array(IB), TB = 0; TB < IB; TB++) ZB[TB] = arguments[TB];
+                const JB = jJ.apply(window.history, ZB);
+                return BB("pushState"), JB
+              }, PJ || (PJ = window.history.replaceState), window.history.replaceState = function() {
+                for (var IB = arguments.length, ZB = new Array(IB), TB = 0; TB < IB; TB++) ZB[TB] = arguments[TB];
+                const JB = PJ.apply(window.history, ZB);
+                return BB("replaceState"), JB
+              }, RJ = () => BB("popstate"), rJ = () => BB("hashchange"), window.addEventListener("popstate", RJ), window.addEventListener("hashchange", rJ), LJ = !0;
+            return HJ
           }(),
-          QB = (nB = ["pointerdown", "keydown"], Hn || (Hn = new Gz), nB.forEach((BB => {
-            if (!Dn.has(BB)) {
-              const jB = () => {
-                Hn.notify({
+          TB = (JB = ["pointerdown", "keydown"], iJ || (iJ = new UZ), JB.forEach((BB => {
+            if (!pJ.has(BB)) {
+              const IB = () => {
+                iJ.notify({
                   type: "interaction",
                   name: BB
                 })
               };
-              window.addEventListener(BB, jB), Dn.add(BB), Fn.set(BB, jB)
+              window.addEventListener(BB, IB), pJ.add(BB), aJ.set(BB, IB)
             }
-          })), Hn);
-        var nB;
-        const dB = new qn((new Gz).merge(BB, jB, zB), {
+          })), iJ);
+        var JB;
+        const oB = new OJ((new UZ).merge(BB, IB, ZB), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
           isOperationStart: BB => function(BB) {
-            return BB.type === yz
+            return BB.type === qZ
           }(BB) ? BB.request.requestId : void 0,
           isOperationEnd: BB => function(BB) {
-            return BB.type === kz
+            return BB.type === yZ
           }(BB) ? BB.request.requestId : void 0
         });
-        dB.filter((BB => "tracking-ended" === BB.message)).subscribe((BB => {
-          var jB, zB;
-          if ((null === (jB = BB.events) || void 0 === jB ? void 0 : jB.some((BB => "url-change" === BB.type))) && (null === (zB = BB.events) || void 0 === zB ? void 0 : zB.some((BB => "dom-mutation" === BB.type)))) {
-            var QB;
-            const jB = null === (QB = BB.events) || void 0 === QB ? void 0 : QB.find((BB => "url-change" === BB.type));
-            mB.api.pushEvent("faro.navigation", {
-              fromUrl: null === jB || void 0 === jB ? void 0 : jB.from,
-              toUrl: null === jB || void 0 === jB ? void 0 : jB.to,
+        oB.filter((BB => "tracking-ended" === BB.message)).subscribe((BB => {
+          var IB, ZB;
+          if ((null === (IB = BB.events) || void 0 === IB ? void 0 : IB.some((BB => "url-change" === BB.type))) && (null === (ZB = BB.events) || void 0 === ZB ? void 0 : ZB.some((BB => "dom-mutation" === BB.type)))) {
+            var TB;
+            const IB = null === (TB = BB.events) || void 0 === TB ? void 0 : TB.find((BB => "url-change" === BB.type));
+            gB.api.pushEvent("faro.navigation", {
+              fromUrl: null === IB || void 0 === IB ? void 0 : IB.from,
+              toUrl: null === IB || void 0 === IB ? void 0 : IB.to,
               sameDocument: String(!0),
               duration: BB.duration
             })
           }
-        })), QB.subscribe((() => {
-          dB.startTracking()
+        })), TB.subscribe((() => {
+          oB.startTracking()
         }))
       }
     };
 
-    function wn() {
+    function uJ() {
       let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const jB = [new Mn, new Vz, new YQ, new Qz, new Xz, new en];
-      return !1 !== BB.enablePerformanceInstrumentation && jB.unshift(new KQ), !1 !== BB.enableContentSecurityPolicyInstrumentation && jB.push(new En), !1 !== BB.captureConsole && jB.push(new Fz), jB
+      const IB = [new sJ, new PZ, new jT, new TZ, new rZ, new eJ];
+      return !1 !== BB.enablePerformanceInstrumentation && IB.unshift(new bT), !1 !== BB.enableContentSecurityPolicyInstrumentation && IB.push(new wJ), !1 !== BB.captureConsole && IB.push(new MZ), IB
     }
-    var xn = zB(6641);
-    let Kn, Cn;
+    var fJ = ZB(6850);
+    let lJ, AJ;
 
-    function cn() {
+    function tJ() {
       const BB = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return Kn === BB && Cn || (Cn = new xn.UAParser(BB).getResult(), Kn = BB), Cn
+      return lJ === BB && AJ || (AJ = new fJ.UAParser(BB).getResult(), lJ = BB), AJ
     }
-    const bn = () => {
+    const bJ = () => {
         const {
           browser: BB,
-          os: jB,
-          ua: zB
-        } = cn(), {
-          name: QB,
-          version: nB
+          os: IB,
+          ua: ZB
+        } = tJ(), {
+          name: TB,
+          version: JB
         } = BB, {
-          name: dB,
-          version: IB
-        } = jB, NB = navigator.language, uB = zB.includes("Mobi"), UB = function() {
-          if (!QB || !nB) return;
+          name: oB,
+          version: GB
+        } = IB, vB = navigator.language, kB = ZB.includes("Mobi"), cB = function() {
+          if (!TB || !JB) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== QB && void 0 !== QB ? QB : hz,
-            version: null !== nB && void 0 !== nB ? nB : hz,
-            os: `${null!==dB&&void 0!==dB?dB:hz} ${null!==IB&&void 0!==IB?IB:hz}`,
-            userAgent: null !== zB && void 0 !== zB ? zB : hz,
-            language: null !== NB && void 0 !== NB ? NB : hz,
-            mobile: uB,
-            brands: null !== UB && void 0 !== UB ? UB : hz,
+            name: null !== TB && void 0 !== TB ? TB : RZ,
+            version: null !== JB && void 0 !== JB ? JB : RZ,
+            os: `${null!==oB&&void 0!==oB?oB:RZ} ${null!==GB&&void 0!==GB?GB:RZ}`,
+            userAgent: null !== ZB && void 0 !== ZB ? ZB : RZ,
+            language: null !== vB && void 0 !== vB ? vB : RZ,
+            mobile: kB,
+            brands: null !== cB && void 0 !== cB ? cB : RZ,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      vn = () => {
+      xJ = () => {
         const {
           name: BB,
-          version: jB
-        } = cn().os;
-        if (!BB && !jB) return {};
-        const zB = {};
-        return BB && (zB.name = BB), jB && (zB.version = jB), {
-          os: zB
+          version: IB
+        } = tJ().os;
+        if (!BB && !IB) return {};
+        const ZB = {};
+        return BB && (ZB.name = BB), IB && (ZB.version = IB), {
+          os: ZB
         }
       };
 
-    function Rn(BB) {
-      var jB, zB, QB;
+    function EJ(BB) {
+      var IB, ZB, TB;
       return {
-        id: null !== (jB = null === (zB = mB.config) || void 0 === zB || null === (zB = zB.sessionTracking) || void 0 === zB || null === (QB = zB.generateSessionId) || void 0 === QB ? void 0 : QB.call(zB)) && void 0 !== jB ? jB : kj(),
+        id: null !== (IB = null === (ZB = gB.config) || void 0 === ZB || null === (ZB = ZB.sessionTracking) || void 0 === ZB || null === (TB = ZB.generateSessionId) || void 0 === TB ? void 0 : TB.call(ZB)) && void 0 !== IB ? IB : yI(),
         attributes: BB
       }
     }
-    const On = () => ({
+    const DJ = () => ({
       sdk: {
         name: "faro-web",
-        version: zz
+        version: ZZ
       }
     });
-    var Bd = class extends Bz {
+    var KJ = class extends BZ {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let jd = function(BB) {
+    let VJ = function(BB) {
       return BB.EXCEPTION = "exception", BB.LOG = "log", BB.MEASUREMENT = "measurement", BB.TRACE = "trace", BB.EVENT = "event", BB
     }({});
-    const zd = {
+    const SJ = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,80 +3049,80 @@ export const modules = {
       event: "events"
     };
 
-    function Qd(BB, jB) {
-      var zB, QB;
-      if (void 0 === jB) return BB;
+    function Bo(BB, IB) {
+      var ZB, TB;
+      if (void 0 === IB) return BB;
       if (void 0 === BB) return {
-        resourceSpans: jB
+        resourceSpans: IB
       };
-      const nB = null === (zB = BB.resourceSpans) || void 0 === zB ? void 0 : zB[0];
-      if (void 0 === nB) return BB;
-      const dB = (null === nB || void 0 === nB ? void 0 : nB.scopeSpans) || [],
-        IB = (null === jB || void 0 === jB || null === (QB = jB[0]) || void 0 === QB ? void 0 : QB.scopeSpans) || [];
-      return Rj(Rj({}, BB), {}, {
-        resourceSpans: [Rj(Rj({}, nB), {}, {
-          scopeSpans: [...dB, ...IB]
+      const JB = null === (ZB = BB.resourceSpans) || void 0 === ZB ? void 0 : ZB[0];
+      if (void 0 === JB) return BB;
+      const oB = (null === JB || void 0 === JB ? void 0 : JB.scopeSpans) || [],
+        GB = (null === IB || void 0 === IB || null === (TB = IB[0]) || void 0 === TB ? void 0 : TB.scopeSpans) || [];
+      return VI(VI({}, BB), {}, {
+        resourceSpans: [VI(VI({}, JB), {}, {
+          scopeSpans: [...oB, ...GB]
         })]
       })
     }
 
-    function nd(BB) {
-      let jB = {
+    function Io(BB) {
+      let IB = {
         meta: {}
       };
-      return void 0 !== BB[0] && (jB.meta = BB[0].meta), BB.forEach((BB => {
+      return void 0 !== BB[0] && (IB.meta = BB[0].meta), BB.forEach((BB => {
         switch (BB.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const zB = zd[BB.type],
-              QB = jB[zB];
-            jB = Rj(Rj({}, jB), {}, {
-              [zB]: void 0 === QB ? [BB.payload] : [...QB, BB.payload]
+            const ZB = SJ[BB.type],
+              TB = IB[ZB];
+            IB = VI(VI({}, IB), {}, {
+              [ZB]: void 0 === TB ? [BB.payload] : [...TB, BB.payload]
             });
             break
           }
           case "trace":
-            jB = Rj(Rj({}, jB), {}, {
-              traces: Qd(jB.traces, BB.payload.resourceSpans)
+            IB = VI(VI({}, IB), {}, {
+              traces: Bo(IB.traces, BB.payload.resourceSpans)
             })
         }
-      })), jB
+      })), IB
     }
-    var dd = class extends Bd {
+    var Zo = class extends KJ {
       constructor() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = BB, this.name = "@grafana/faro-web-sdk:transport-console", this.version = zz
+        super(), this.options = BB, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ZZ
       }
       send(BB) {
-        var jB;
-        return this.unpatchedConsole[null !== (jB = this.options.level) && void 0 !== jB ? jB : Lz.DEBUG]("New event", nd([BB]))
+        var IB;
+        return this.unpatchedConsole[null !== (IB = this.options.level) && void 0 !== IB ? IB : WZ.DEBUG]("New event", Io([BB]))
       }
     };
-    const Id = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      Nd = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      ud = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      Ud = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      pd = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      rd = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const To = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      Jo = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      oo = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      Go = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      vo = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      ko = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function sd(BB) {
+    function co(BB) {
       let {
-        weekday: jB,
-        day: zB,
-        month: QB,
-        year: nB,
-        hour: dB,
-        minute: IB,
-        second: NB
+        weekday: IB,
+        day: ZB,
+        month: TB,
+        year: JB,
+        hour: oB,
+        minute: GB,
+        second: vB
       } = BB;
-      if (nB < 1900 || zB < 1 || dB > 23 || IB > 59 || NB > 60) return;
-      const uB = 60 === NB,
-        UB = new Date(0);
-      return UB.setUTCFullYear(nB, QB, zB), UB.setUTCHours(dB, IB, uB ? 59 : NB, 0), UB.getUTCDay() === jB && UB.getUTCDate() === zB && UB.getUTCMonth() === QB && UB.getUTCFullYear() === nB && UB.getUTCHours() === dB && UB.getUTCMinutes() === IB && UB.getUTCSeconds() === (uB ? 59 : NB) ? UB.getTime() + (uB ? 1e3 : 0) : void 0
+      if (JB < 1900 || ZB < 1 || oB > 23 || GB > 59 || vB > 60) return;
+      const kB = 60 === vB,
+        cB = new Date(0);
+      return cB.setUTCFullYear(JB, TB, ZB), cB.setUTCHours(oB, GB, kB ? 59 : vB, 0), cB.getUTCDay() === IB && cB.getUTCDate() === ZB && cB.getUTCMonth() === TB && cB.getUTCFullYear() === JB && cB.getUTCHours() === oB && cB.getUTCMinutes() === GB && cB.getUTCSeconds() === (kB ? 59 : vB) ? cB.getTime() + (kB ? 1e3 : 0) : void 0
     }
-    var Jd = class {
+    var no = class {
       constructor(BB) {
         this.options = BB, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
@@ -3130,61 +3130,61 @@ export const modules = {
         var BB = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const jB = this.sequence++;
-        let zB = !1;
+        const IB = this.sequence++;
+        let ZB = !1;
         return {
           deliver: function() {
-            var zB = wQ((function*(zB) {
-              const QB = BB.options.getNow();
-              let nB, dB = 0;
+            var ZB = AT((function*(ZB) {
+              const TB = BB.options.getNow();
+              let JB, oB = 0;
               for (;;) {
-                var IB, NB, uB;
-                const UB = BB.options.retry.maxAttempts - dB,
-                  aB = yield BB.runAttempt((() => zB(UB, BB.unloading)), dB > 0);
-                if (dB += aB.attemptsMade, "success" === aB.kind) return {
+                var GB, vB, kB;
+                const cB = BB.options.retry.maxAttempts - oB,
+                  nB = yield BB.runAttempt((() => ZB(cB, BB.unloading)), oB > 0);
+                if (oB += nB.attemptsMade, "success" === nB.kind) return {
                   kind: "success",
-                  attempts: dB,
-                  elapsedTimeMs: BB.options.getNow() - QB
+                  attempts: oB,
+                  elapsedTimeMs: BB.options.getNow() - TB
                 };
-                if (nB = aB.failure, "terminal" === aB.kind || BB.unloading) return {
+                if (JB = nB.failure, "terminal" === nB.kind || BB.unloading) return {
                   kind: "terminal",
-                  attempts: dB,
-                  elapsedTimeMs: BB.options.getNow() - QB,
-                  failure: nB
+                  attempts: oB,
+                  elapsedTimeMs: BB.options.getNow() - TB,
+                  failure: JB
                 };
-                if (dB >= BB.options.retry.maxAttempts) return {
+                if (oB >= BB.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: dB,
-                  elapsedTimeMs: BB.options.getNow() - QB,
-                  failure: nB,
+                  attempts: oB,
+                  elapsedTimeMs: BB.options.getNow() - TB,
+                  failure: JB,
                   reason: "retries-exhausted"
                 };
-                if (null != aB.retryAfterMs && aB.retryAfterMs > BB.options.retry.maxBackoffMs) return {
+                if (null != nB.retryAfterMs && nB.retryAfterMs > BB.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: dB,
-                  elapsedTimeMs: BB.options.getNow() - QB,
-                  failure: nB,
+                  attempts: oB,
+                  elapsedTimeMs: BB.options.getNow() - TB,
+                  failure: JB,
                   reason: "retry-after-too-long"
                 };
-                const pB = Math.min(null !== (IB = aB.retryAfterMs) && void 0 !== IB ? IB : BB.options.retry.initialBackoffMs * Math.pow(BB.options.retry.backoffMultiplier, dB - 1), BB.options.retry.maxBackoffMs);
-                if (null === (NB = (uB = BB.options).onRetry) || void 0 === NB || NB.call(uB, pB, dB + 1), yield BB.waitForTurn(jB, pB)) {
-                  const jB = BB.options.retry.maxAttempts - dB,
-                    nB = yield BB.runAttempt((() => zB(jB, !0)));
-                  return dB += nB.attemptsMade, {
-                    kind: "success" === nB.kind ? "success" : "terminal",
-                    attempts: dB,
-                    elapsedTimeMs: BB.options.getNow() - QB,
-                    failure: "success" === nB.kind ? void 0 : nB.failure
+                const hB = Math.min(null !== (GB = nB.retryAfterMs) && void 0 !== GB ? GB : BB.options.retry.initialBackoffMs * Math.pow(BB.options.retry.backoffMultiplier, oB - 1), BB.options.retry.maxBackoffMs);
+                if (null === (vB = (kB = BB.options).onRetry) || void 0 === vB || vB.call(kB, hB, oB + 1), yield BB.waitForTurn(IB, hB)) {
+                  const IB = BB.options.retry.maxAttempts - oB,
+                    JB = yield BB.runAttempt((() => ZB(IB, !0)));
+                  return oB += JB.attemptsMade, {
+                    kind: "success" === JB.kind ? "success" : "terminal",
+                    attempts: oB,
+                    elapsedTimeMs: BB.options.getNow() - TB,
+                    failure: "success" === JB.kind ? void 0 : JB.failure
                   }
                 }
               }
             }));
             return function(BB) {
-              return zB.apply(this, arguments)
+              return ZB.apply(this, arguments)
             }
           }(),
           release: () => {
-            zB || (zB = !0, this.admitted--)
+            ZB || (ZB = !0, this.admitted--)
           }
         }
       }
@@ -3192,213 +3192,213 @@ export const modules = {
         this.unloading = !0, this.nextSendAt = 0;
         const BB = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const jB of BB) jB.resolve(!0);
+        for (const IB of BB) IB.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
       runAttempt(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((zB, QB) => {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((ZB, TB) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const jB = () => {
+              const IB = () => {
                 this.inProgress--, this.runNextAttempt()
               };
               BB().then((BB => {
-                jB(), zB(BB)
+                IB(), ZB(BB)
               }), (BB => {
-                jB(), QB(BB)
+                IB(), TB(BB)
               }))
             },
-            isRedelivery: jB
+            isRedelivery: IB
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
           const BB = this.options.getNow(),
-            jB = this.attemptQueue.findIndex((jB => {
+            IB = this.attemptQueue.findIndex((IB => {
               let {
-                isRedelivery: zB
-              } = jB;
-              return this.unloading || !zB || BB >= this.nextSendAt
+                isRedelivery: ZB
+              } = IB;
+              return this.unloading || !ZB || BB >= this.nextSendAt
             }));
-          if (jB < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (IB < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
           }), Math.max(0, this.nextSendAt - BB)));
-          const [zB] = this.attemptQueue.splice(jB, 1);
-          zB.isRedelivery && !this.unloading && (this.nextSendAt = BB + 1), zB.run()
+          const [ZB] = this.attemptQueue.splice(IB, 1);
+          ZB.isRedelivery && !this.unloading && (this.nextSendAt = BB + 1), ZB.run()
         }
       }
-      waitForTurn(BB, jB) {
-        const zB = Math.min(jB * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((jB => {
+      waitForTurn(BB, IB) {
+        const ZB = Math.min(IB * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((IB => {
           this.waiting.push({
             sequence: BB,
-            readyAt: this.options.getNow() + zB,
-            resolve: jB
-          }), this.waiting.sort(((BB, jB) => BB.readyAt === jB.readyAt ? BB.sequence - jB.sequence : BB.readyAt - jB.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            readyAt: this.options.getNow() + ZB,
+            resolve: IB
+          }), this.waiting.sort(((BB, IB) => BB.readyAt === IB.readyAt ? BB.sequence - IB.sequence : BB.readyAt - IB.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
         const BB = this.waiting[0],
-          jB = BB.readyAt;
+          IB = BB.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const jB = this.waiting.indexOf(BB);
-          jB >= 0 && this.waiting.splice(jB, 1), BB.resolve(!1), this.scheduleNext()
-        }), Math.max(0, jB - this.options.getNow()))
+          const IB = this.waiting.indexOf(BB);
+          IB >= 0 && this.waiting.splice(IB, 1), BB.resolve(!1), this.scheduleNext()
+        }), Math.max(0, IB - this.options.getNow()))
       }
     };
 
-    function md(BB, jB) {
+    function ho(BB, IB) {
       if (null == BB) return {};
-      var zB, QB, nB = function(BB, jB) {
+      var ZB, TB, JB = function(BB, IB) {
         if (null == BB) return {};
-        var zB = {};
-        for (var QB in BB)
-          if ({}.hasOwnProperty.call(BB, QB)) {
-            if (jB.includes(QB)) continue;
-            zB[QB] = BB[QB]
-          } return zB
-      }(BB, jB);
+        var ZB = {};
+        for (var TB in BB)
+          if ({}.hasOwnProperty.call(BB, TB)) {
+            if (IB.includes(TB)) continue;
+            ZB[TB] = BB[TB]
+          } return ZB
+      }(BB, IB);
       if (Object.getOwnPropertySymbols) {
-        var dB = Object.getOwnPropertySymbols(BB);
-        for (QB = 0; QB < dB.length; QB++) zB = dB[QB], jB.includes(zB) || {}.propertyIsEnumerable.call(BB, zB) && (nB[zB] = BB[zB])
+        var oB = Object.getOwnPropertySymbols(BB);
+        for (TB = 0; TB < oB.length; TB++) ZB = oB[TB], IB.includes(ZB) || {}.propertyIsEnumerable.call(BB, ZB) && (JB[ZB] = BB[ZB])
       }
-      return nB
+      return JB
     }
 
-    function yd(BB) {
+    function zo(BB) {
       const {
-        size: jB,
-        concurrency: zB
-      } = BB, QB = [];
-      let nB = 0;
-      const dB = () => {
-        if (nB < zB && QB.length) {
+        size: IB,
+        concurrency: ZB
+      } = BB, TB = [];
+      let JB = 0;
+      const oB = () => {
+        if (JB < ZB && TB.length) {
           const {
             producer: BB,
-            resolve: jB,
-            reject: zB
-          } = QB.shift();
-          nB++, BB().then((BB => {
-            nB--, dB(), jB(BB)
+            resolve: IB,
+            reject: ZB
+          } = TB.shift();
+          JB++, BB().then((BB => {
+            JB--, oB(), IB(BB)
           }), (BB => {
-            nB--, dB(), zB(BB)
+            JB--, oB(), ZB(BB)
           }))
         }
       };
       return {
         add: BB => {
-          if (QB.length + nB >= jB) throw new Error("Task buffer full");
-          return new Promise(((jB, zB) => {
-            QB.push({
+          if (TB.length + JB >= IB) throw new Error("Task buffer full");
+          return new Promise(((IB, ZB) => {
+            TB.push({
               producer: BB,
-              resolve: jB,
-              reject: zB
-            }), dB()
+              resolve: IB,
+              reject: ZB
+            }), oB()
           }))
         }
       }
     }
-    const kd = ["headers"],
-      Gd = ["keepalive", "signal"],
-      Ld = new Set([408, 425, 429, 500, 502, 503, 504]),
-      gd = new Set([429, 503]);
-    let td = 0,
-      Sd = 0;
-    var Md = class extends Error {};
-    var Ed = class extends Bd {
+    const Fo = ["headers"],
+      No = ["keepalive", "signal"],
+      go = new Set([408, 425, 429, 500, 502, 503, 504]),
+      qo = new Set([429, 503]);
+    let yo = 0,
+      Uo = 0;
+    var Wo = class extends Error {};
+    var Co = class extends KJ {
       constructor(BB) {
-        var jB, zB, QB, nB, dB, IB, NB, uB, UB, aB, pB, rB, sB, JB, mB, yB, kB;
-        super(), this.options = BB, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = zz, this.pendingCustomSends = 0, this.getNow = null !== (jB = BB.getNow) && void 0 !== jB ? jB : Date.now, this.requestTimeoutMs = null !== (zB = BB.requestTimeoutMs) && void 0 !== zB ? zB : 1e4, this.compressionEnabled = null !== (QB = BB.requestCompression) && void 0 !== QB && QB && "undefined" !== typeof CompressionStream, BB.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new Jd({
-          bufferSize: null !== (nB = BB.bufferSize) && void 0 !== nB ? nB : 30,
-          concurrency: null !== (dB = BB.concurrency) && void 0 !== dB ? dB : 5,
+        var IB, ZB, TB, JB, oB, GB, vB, kB, cB, nB, hB, zB, FB, NB, gB, qB, yB;
+        super(), this.options = BB, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ZZ, this.pendingCustomSends = 0, this.getNow = null !== (IB = BB.getNow) && void 0 !== IB ? IB : Date.now, this.requestTimeoutMs = null !== (ZB = BB.requestTimeoutMs) && void 0 !== ZB ? ZB : 1e4, this.compressionEnabled = null !== (TB = BB.requestCompression) && void 0 !== TB && TB && "undefined" !== typeof CompressionStream, BB.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new no({
+          bufferSize: null !== (JB = BB.bufferSize) && void 0 !== JB ? JB : 30,
+          concurrency: null !== (oB = BB.concurrency) && void 0 !== oB ? oB : 5,
           retry: {
-            maxAttempts: null !== (IB = null === (NB = BB.retry) || void 0 === NB ? void 0 : NB.maxAttempts) && void 0 !== IB ? IB : 3,
-            initialBackoffMs: null !== (uB = null !== (UB = null === (aB = BB.retry) || void 0 === aB ? void 0 : aB.initialBackoffMs) && void 0 !== UB ? UB : BB.defaultRateLimitBackoffMs) && void 0 !== uB ? uB : 1e3,
-            maxBackoffMs: null !== (pB = null === (rB = BB.retry) || void 0 === rB ? void 0 : rB.maxBackoffMs) && void 0 !== pB ? pB : 3e4,
-            backoffMultiplier: null !== (sB = null === (JB = BB.retry) || void 0 === JB ? void 0 : JB.backoffMultiplier) && void 0 !== sB ? sB : 2
+            maxAttempts: null !== (GB = null === (vB = BB.retry) || void 0 === vB ? void 0 : vB.maxAttempts) && void 0 !== GB ? GB : 3,
+            initialBackoffMs: null !== (kB = null !== (cB = null === (nB = BB.retry) || void 0 === nB ? void 0 : nB.initialBackoffMs) && void 0 !== cB ? cB : BB.defaultRateLimitBackoffMs) && void 0 !== kB ? kB : 1e3,
+            maxBackoffMs: null !== (hB = null === (zB = BB.retry) || void 0 === zB ? void 0 : zB.maxBackoffMs) && void 0 !== hB ? hB : 3e4,
+            backoffMultiplier: null !== (FB = null === (NB = BB.retry) || void 0 === NB ? void 0 : NB.backoffMultiplier) && void 0 !== FB ? FB : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (mB = BB.getRandom) && void 0 !== mB ? mB : Math.random,
-          onRetry: (BB, jB) => {
-            this.logDebug(`Retrying failed request after ${BB}ms. Attempt ${jB}.`)
+          getRandom: null !== (gB = BB.getRandom) && void 0 !== gB ? gB : Math.random,
+          onRetry: (BB, IB) => {
+            this.logDebug(`Retrying failed request after ${BB}ms. Attempt ${IB}.`)
           }
-        }), this.customPromiseBuffer = yd({
-          size: null !== (yB = BB.bufferSize) && void 0 !== yB ? yB : 30,
-          concurrency: null !== (kB = BB.concurrency) && void 0 !== kB ? kB : 5
+        }), this.customPromiseBuffer = zo({
+          size: null !== (qB = BB.bufferSize) && void 0 !== qB ? qB : 30,
+          concurrency: null !== (yB = BB.concurrency) && void 0 !== yB ? yB : 5
         }), this.defaultPromiseBuffer = {
           add: BB => {
             if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(BB);
-            const jB = this.deliveryQueue.reserve();
-            if (!jB) throw new Error("Task buffer full");
-            return this.runBufferedTask(jB, BB)
+            const IB = this.deliveryQueue.reserve();
+            if (!IB) throw new Error("Task buffer full");
+            return this.runBufferedTask(IB, BB)
           }
         }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (BB => {
           BB.persisted && this.deliveryQueue.resume()
         })))
       }
       send(BB) {
-        var jB = this;
-        return wQ((function*() {
-          const zB = jB.promiseBuffer;
-          if (zB !== jB.defaultPromiseBuffer || zB.add !== jB.defaultBufferAdd) {
-            jB.pendingCustomSends++;
+        var IB = this;
+        return AT((function*() {
+          const ZB = IB.promiseBuffer;
+          if (ZB !== IB.defaultPromiseBuffer || ZB.add !== IB.defaultBufferAdd) {
+            IB.pendingCustomSends++;
             try {
-              yield zB.add((() => jB.deliver(BB)))
-            } catch (QB) {
-              jB.logError("Permanent delivery failure", {
-                error: QB,
+              yield ZB.add((() => IB.deliver(BB)))
+            } catch (TB) {
+              IB.logError("Permanent delivery failure", {
+                error: TB,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              jB.pendingCustomSends--
+              IB.pendingCustomSends--
             }
-          } else yield jB.deliver(BB)
+          } else yield IB.deliver(BB)
         }))()
       }
-      runBufferedTask(BB, jB) {
-        return wQ((function*() {
-          let zB;
+      runBufferedTask(BB, IB) {
+        return AT((function*() {
+          let ZB;
           try {
-            return yield BB.deliver(wQ((function*() {
-              return zB = yield jB(), {
+            return yield BB.deliver(AT((function*() {
+              return ZB = yield IB(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), zB
+            }))), ZB
           } finally {
             BB.release()
           }
         }))()
       }
       deliver(BB) {
-        var jB = this;
-        return wQ((function*() {
-          const zB = jB.deliveryQueue.reserve();
-          if (zB) try {
-            const QB = yield jB.prepareRequest(BB), nB = yield zB.deliver(((BB, zB) => jB.performAttempt(QB, BB, zB)));
-            "terminal" === nB.kind && jB.logError("retries-exhausted" === nB.reason ? "Delivery retries exhausted" : "Permanent delivery failure", aj(aj({}, nB.failure), {}, {
-              reason: nB.reason,
-              attempts: nB.attempts,
-              elapsedTimeMs: nB.elapsedTimeMs
+        var IB = this;
+        return AT((function*() {
+          const ZB = IB.deliveryQueue.reserve();
+          if (ZB) try {
+            const TB = yield IB.prepareRequest(BB), JB = yield ZB.deliver(((BB, ZB) => IB.performAttempt(TB, BB, ZB)));
+            "terminal" === JB.kind && IB.logError("retries-exhausted" === JB.reason ? "Delivery retries exhausted" : "Permanent delivery failure", nI(nI({}, JB.failure), {}, {
+              reason: JB.reason,
+              attempts: JB.attempts,
+              elapsedTimeMs: JB.elapsedTimeMs
             }))
-          } catch (QB) {
-            jB.logError("Permanent delivery failure", {
-              error: QB,
+          } catch (TB) {
+            IB.logError("Permanent delivery failure", {
+              error: TB,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            zB.release()
-          } else jB.logError("Permanent delivery failure", {
+            ZB.release()
+          } else IB.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3413,465 +3413,465 @@ export const modules = {
         return !0
       }
       prepareRequest(BB) {
-        var jB = this;
-        return wQ((function*() {
-          var zB, QB;
-          const nB = nd(BB),
-            dB = null === (zB = nB.meta.session) || void 0 === zB ? void 0 : zB.id,
-            IB = JSON.stringify(nB),
-            NB = null !== (QB = jB.options.requestOptions) && void 0 !== QB ? QB : {},
+        var IB = this;
+        return AT((function*() {
+          var ZB, TB;
+          const JB = Io(BB),
+            oB = null === (ZB = JB.meta.session) || void 0 === ZB ? void 0 : ZB.id,
+            GB = JSON.stringify(JB),
+            vB = null !== (TB = IB.options.requestOptions) && void 0 !== TB ? TB : {},
             {
-              headers: uB = {}
-            } = NB,
-            UB = md(NB, kd),
+              headers: kB = {}
+            } = vB,
+            cB = ho(vB, Fo),
             {
-              keepalive: aB,
-              signal: pB
-            } = UB,
-            rB = md(UB, Gd),
-            sB = {};
-          for (const [BB, jB] of Object.entries(uB)) sB[BB] = "function" === typeof jB ? yield jB(): jB;
-          let JB = IB,
-            mB = function(BB) {
+              keepalive: nB,
+              signal: hB
+            } = cB,
+            zB = ho(cB, No),
+            FB = {};
+          for (const [BB, IB] of Object.entries(kB)) FB[BB] = "function" === typeof IB ? yield IB(): IB;
+          let NB = GB,
+            gB = function(BB) {
               return "undefined" === typeof TextEncoder ? BB.length : (new TextEncoder).encode(BB).byteLength
-            }(IB);
-          const yB = {};
-          return jB.compressionEnabled && (JB = yield jB.compress(IB), mB = JB.size, yB["Content-Encoding"] = "gzip"), {
-            bodySize: mB,
-            sessionId: dB,
-            requestInit: aj({
+            }(GB);
+          const qB = {};
+          return IB.compressionEnabled && (NB = yield IB.compress(GB), gB = NB.size, qB["Content-Encoding"] = "gzip"), {
+            bodySize: gB,
+            sessionId: oB,
+            requestInit: nI({
               method: "POST",
-              headers: aj(aj(aj(aj(aj({
+              headers: nI(nI(nI(nI(nI({
                 "Content-Type": "application/json"
-              }, yB), sB), jB.options.apiKey ? {
-                "x-api-key": jB.options.apiKey
-              } : {}), dB ? {
-                "x-faro-session-id": dB
+              }, qB), FB), IB.options.apiKey ? {
+                "x-api-key": IB.options.apiKey
+              } : {}), oB ? {
+                "x-faro-session-id": oB
               } : {}), {}, {
-                "Idempotency-Key": kj(20)
+                "Idempotency-Key": yI(20)
               }),
-              body: JB
-            }, rB)
+              body: NB
+            }, zB)
           }
         }))()
       }
-      performAttempt(BB, jB, zB) {
-        var QB = this;
-        return wQ((function*() {
-          var nB;
-          const dB = null === (nB = QB.options.requestOptions) || void 0 === nB ? void 0 : nB.signal;
-          if (null === dB || void 0 === dB ? void 0 : dB.aborted) return {
+      performAttempt(BB, IB, ZB) {
+        var TB = this;
+        return AT((function*() {
+          var JB;
+          const oB = null === (JB = TB.options.requestOptions) || void 0 === JB ? void 0 : JB.signal;
+          if (null === oB || void 0 === oB ? void 0 : oB.aborted) return {
             kind: "terminal",
             failure: {
-              error: dB.reason
+              error: oB.reason
             },
             attemptsMade: 0
           };
-          let IB = 0;
+          let GB = 0;
           try {
-            var NB;
-            const nB = yield QB.fetchWithKeepaliveFallback(BB.requestInit, BB.bodySize, !!zB || (null === (NB = QB.options.requestOptions) || void 0 === NB ? void 0 : NB.keepalive), jB, (() => IB++));
-            if (QB.handleResponse(nB, BB.sessionId), nB.status >= 200 && nB.status < 300) return {
+            var vB;
+            const JB = yield TB.fetchWithKeepaliveFallback(BB.requestInit, BB.bodySize, !!ZB || (null === (vB = TB.options.requestOptions) || void 0 === vB ? void 0 : vB.keepalive), IB, (() => GB++));
+            if (TB.handleResponse(JB, BB.sessionId), JB.status >= 200 && JB.status < 300) return {
               kind: "success",
-              attemptsMade: IB
+              attemptsMade: GB
             };
-            const dB = {
-              status: nB.status
+            const oB = {
+              status: JB.status
             };
-            return !Ld.has(nB.status) || zB ? {
+            return !go.has(JB.status) || ZB ? {
               kind: "terminal",
-              failure: dB,
-              attemptsMade: IB
+              failure: oB,
+              attemptsMade: GB
             } : {
               kind: "retry",
-              failure: dB,
-              attemptsMade: IB,
-              retryAfterMs: gd.has(nB.status) ? QB.getRetryAfterDelayMs(nB) : void 0
+              failure: oB,
+              attemptsMade: GB,
+              retryAfterMs: qo.has(JB.status) ? TB.getRetryAfterDelayMs(JB) : void 0
             }
-          } catch (uB) {
+          } catch (kB) {
             const BB = {
-              error: uB
+              error: kB
             };
-            return (null === dB || void 0 === dB ? void 0 : dB.aborted) || !QB.isFetchNetworkError(uB) || zB ? {
+            return (null === oB || void 0 === oB ? void 0 : oB.aborted) || !TB.isFetchNetworkError(kB) || ZB ? {
               kind: "terminal",
               failure: BB,
-              attemptsMade: IB
+              attemptsMade: GB
             } : {
               kind: "retry",
               failure: BB,
-              attemptsMade: IB
+              attemptsMade: GB
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(BB, jB, zB, QB, nB) {
-        var dB = this;
-        return wQ((function*() {
-          const IB = dB.getNow(),
-            NB = dB.reserveKeepalive(jB, zB);
+      fetchWithKeepaliveFallback(BB, IB, ZB, TB, JB) {
+        var oB = this;
+        return AT((function*() {
+          const GB = oB.getNow(),
+            vB = oB.reserveKeepalive(IB, ZB);
           try {
-            return yield dB.fetchWithTimeout(aj(aj({}, BB), {}, {
-              keepalive: NB.keepalive
-            }), dB.requestTimeoutMs, nB)
-          } catch (UB) {
-            var uB;
-            if (NB.keepalive && QB > 1 && dB.isFetchNetworkError(UB) && !(UB instanceof Md) && !(null === (uB = dB.options.requestOptions) || void 0 === uB || null === (uB = uB.signal) || void 0 === uB ? void 0 : uB.aborted)) {
-              dB.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const jB = dB.requestTimeoutMs - (dB.getNow() - IB);
-              return dB.fetchWithTimeout(aj(aj({}, BB), {}, {
+            return yield oB.fetchWithTimeout(nI(nI({}, BB), {}, {
+              keepalive: vB.keepalive
+            }), oB.requestTimeoutMs, JB)
+          } catch (cB) {
+            var kB;
+            if (vB.keepalive && TB > 1 && oB.isFetchNetworkError(cB) && !(cB instanceof Wo) && !(null === (kB = oB.options.requestOptions) || void 0 === kB || null === (kB = kB.signal) || void 0 === kB ? void 0 : kB.aborted)) {
+              oB.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const IB = oB.requestTimeoutMs - (oB.getNow() - GB);
+              return oB.fetchWithTimeout(nI(nI({}, BB), {}, {
                 keepalive: !1
-              }), jB, nB)
+              }), IB, JB)
             }
-            throw UB
+            throw cB
           } finally {
-            NB.release()
+            vB.release()
           }
         }))()
       }
-      fetchWithTimeout(BB, jB, zB) {
-        var QB = this;
-        return wQ((function*() {
-          var nB;
-          const dB = null === (nB = QB.options.requestOptions) || void 0 === nB ? void 0 : nB.signal;
-          if (QB.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return zB(), fetch(QB.options.url, aj(aj({}, BB), {}, {
-            signal: dB
+      fetchWithTimeout(BB, IB, ZB) {
+        var TB = this;
+        return AT((function*() {
+          var JB;
+          const oB = null === (JB = TB.options.requestOptions) || void 0 === JB ? void 0 : JB.signal;
+          if (TB.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return ZB(), fetch(TB.options.url, nI(nI({}, BB), {}, {
+            signal: oB
           }));
-          if (jB <= 0) throw new Md("Request timed out");
-          const IB = new AbortController,
-            NB = () => IB.abort(null === dB || void 0 === dB ? void 0 : dB.reason);
-          null === dB || void 0 === dB || dB.addEventListener("abort", NB, {
+          if (IB <= 0) throw new Wo("Request timed out");
+          const GB = new AbortController,
+            vB = () => GB.abort(null === oB || void 0 === oB ? void 0 : oB.reason);
+          null === oB || void 0 === oB || oB.addEventListener("abort", vB, {
             once: !0
           });
-          let uB = !1;
-          const UB = setTimeout((() => {
-            uB = !0, IB.abort()
-          }), jB);
+          let kB = !1;
+          const cB = setTimeout((() => {
+            kB = !0, GB.abort()
+          }), IB);
           try {
-            return zB(), yield fetch(QB.options.url, aj(aj({}, BB), {}, {
-              signal: IB.signal
+            return ZB(), yield fetch(TB.options.url, nI(nI({}, BB), {}, {
+              signal: GB.signal
             }))
-          } catch (aB) {
-            if (uB && !(null === dB || void 0 === dB ? void 0 : dB.aborted)) throw new Md("Request timed out");
-            throw aB
+          } catch (nB) {
+            if (kB && !(null === oB || void 0 === oB ? void 0 : oB.aborted)) throw new Wo("Request timed out");
+            throw nB
           } finally {
-            clearTimeout(UB), null === dB || void 0 === dB || dB.removeEventListener("abort", NB)
+            clearTimeout(cB), null === oB || void 0 === oB || oB.removeEventListener("abort", vB)
           }
         }))()
       }
       getRetryAfterDelayMs(BB) {
-        const jB = BB.headers.get("Retry-After");
-        if (!jB) return;
-        if (/^\d+$/.test(jB)) {
-          const BB = 1e3 * Number(jB);
+        const IB = BB.headers.get("Retry-After");
+        if (!IB) return;
+        if (/^\d+$/.test(IB)) {
+          const BB = 1e3 * Number(IB);
           return Number.isFinite(BB) ? BB : Number.POSITIVE_INFINITY
         }
-        const zB = this.getNow(),
-          QB = function(BB, jB) {
-            const zB = Id.exec(BB);
-            if (zB) {
-              const [, BB, jB, QB, nB, dB, IB, NB] = zB;
-              return sd({
-                weekday: Ud.indexOf(BB),
-                day: Number(jB),
-                month: rd.indexOf(QB),
-                year: Number(nB),
-                hour: Number(dB),
-                minute: Number(IB),
-                second: Number(NB)
+        const ZB = this.getNow(),
+          TB = function(BB, IB) {
+            const ZB = To.exec(BB);
+            if (ZB) {
+              const [, BB, IB, TB, JB, oB, GB, vB] = ZB;
+              return co({
+                weekday: Go.indexOf(BB),
+                day: Number(IB),
+                month: ko.indexOf(TB),
+                year: Number(JB),
+                hour: Number(oB),
+                minute: Number(GB),
+                second: Number(vB)
               })
             }
-            const QB = Nd.exec(BB);
-            if (QB) {
-              const [, BB, zB, IB, NB, uB, UB, aB] = QB, pB = new Date(jB);
-              if (Number.isNaN(pB.getTime())) return;
-              const rB = pB.getUTCFullYear();
-              let sB = 100 * Math.floor(rB / 100) + Number(NB);
-              sB < rB && (sB += 100);
-              const JB = rd.indexOf(IB),
-                mB = {
-                  month: JB,
-                  day: Number(zB),
-                  hour: Number(uB),
-                  minute: Number(UB),
-                  second: Number(aB),
+            const TB = Jo.exec(BB);
+            if (TB) {
+              const [, BB, ZB, GB, vB, kB, cB, nB] = TB, hB = new Date(IB);
+              if (Number.isNaN(hB.getTime())) return;
+              const zB = hB.getUTCFullYear();
+              let FB = 100 * Math.floor(zB / 100) + Number(vB);
+              FB < zB && (FB += 100);
+              const NB = ko.indexOf(GB),
+                gB = {
+                  month: NB,
+                  day: Number(ZB),
+                  hour: Number(kB),
+                  minute: Number(cB),
+                  second: Number(nB),
                   millisecond: 0
                 },
-                yB = {
-                  month: pB.getUTCMonth(),
-                  day: pB.getUTCDate(),
-                  hour: pB.getUTCHours(),
-                  minute: pB.getUTCMinutes(),
-                  second: pB.getUTCSeconds(),
-                  millisecond: pB.getUTCMilliseconds()
+                qB = {
+                  month: hB.getUTCMonth(),
+                  day: hB.getUTCDate(),
+                  hour: hB.getUTCHours(),
+                  minute: hB.getUTCMinutes(),
+                  second: hB.getUTCSeconds(),
+                  millisecond: hB.getUTCMilliseconds()
                 };
-              return (sB > rB + 50 || sB === rB + 50 && (dB = yB, ((nB = mB).month - dB.month || nB.day - dB.day || nB.hour - dB.hour || nB.minute - dB.minute || nB.second - dB.second || nB.millisecond - dB.millisecond) > 0)) && (sB -= 100), sd({
-                weekday: pd.indexOf(BB),
-                day: Number(zB),
-                month: JB,
-                year: sB,
-                hour: Number(uB),
-                minute: Number(UB),
-                second: Number(aB)
+              return (FB > zB + 50 || FB === zB + 50 && (oB = qB, ((JB = gB).month - oB.month || JB.day - oB.day || JB.hour - oB.hour || JB.minute - oB.minute || JB.second - oB.second || JB.millisecond - oB.millisecond) > 0)) && (FB -= 100), co({
+                weekday: vo.indexOf(BB),
+                day: Number(ZB),
+                month: NB,
+                year: FB,
+                hour: Number(kB),
+                minute: Number(cB),
+                second: Number(nB)
               })
             }
-            var nB, dB;
-            const IB = ud.exec(BB);
-            if (!IB) return;
-            const [, NB, uB, UB, aB, pB, rB, sB, JB] = IB;
-            return sd({
-              weekday: Ud.indexOf(NB),
-              day: Number(null !== UB && void 0 !== UB ? UB : aB),
-              month: rd.indexOf(uB),
-              year: Number(JB),
-              hour: Number(pB),
-              minute: Number(rB),
-              second: Number(sB)
+            var JB, oB;
+            const GB = oo.exec(BB);
+            if (!GB) return;
+            const [, vB, kB, cB, nB, hB, zB, FB, NB] = GB;
+            return co({
+              weekday: Go.indexOf(vB),
+              day: Number(null !== cB && void 0 !== cB ? cB : nB),
+              month: ko.indexOf(kB),
+              year: Number(NB),
+              hour: Number(hB),
+              minute: Number(zB),
+              second: Number(FB)
             })
-          }(jB, zB);
-        return null == QB ? void 0 : Math.max(0, QB - zB)
+          }(IB, ZB);
+        return null == TB ? void 0 : Math.max(0, TB - ZB)
       }
-      reserveKeepalive(BB, jB) {
-        if (!1 === jB || BB > 6e4 || td + BB > 6e4 || Sd >= 9) return {
+      reserveKeepalive(BB, IB) {
+        if (!1 === IB || BB > 6e4 || yo + BB > 6e4 || Uo >= 9) return {
           keepalive: !1,
-          release: lj
+          release: lI
         };
-        td += BB, Sd++;
-        let zB = !1;
+        yo += BB, Uo++;
+        let ZB = !1;
         return {
           keepalive: !0,
           release: () => {
-            zB || (zB = !0, td -= BB, Sd--)
+            ZB || (ZB = !0, yo -= BB, Uo--)
           }
         }
       }
-      handleResponse(BB, jB) {
-        202 === BB.status && "invalid" === BB.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), jB), BB.text().catch(lj)
+      handleResponse(BB, IB) {
+        202 === BB.status && "invalid" === BB.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), IB), BB.text().catch(lI)
       }
       isFetchNetworkError(BB) {
-        return BB instanceof TypeError || BB instanceof Md || BB instanceof DOMException && "AbortError" === BB.name
+        return BB instanceof TypeError || BB instanceof Wo || BB instanceof DOMException && "AbortError" === BB.name
       }
       compress(BB) {
-        return wQ((function*() {
-          const jB = [],
-            zB = new ReadableStream({
-              start(jB) {
-                jB.enqueue((new TextEncoder).encode(BB)), jB.close()
+        return AT((function*() {
+          const IB = [],
+            ZB = new ReadableStream({
+              start(IB) {
+                IB.enqueue((new TextEncoder).encode(BB)), IB.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
               done: BB,
-              value: QB
-            } = yield zB.read();
-            if (BB) return new Blob(jB);
-            jB.push(QB)
+              value: TB
+            } = yield ZB.read();
+            if (BB) return new Blob(IB);
+            IB.push(TB)
           }
         }))()
       }
-      extendFaroSession(BB, jB, zB) {
-        var QB, nB;
-        const dB = BB.sessionTracking;
-        if (!(null === dB || void 0 === dB ? void 0 : dB.enabled)) return void jB("Session expired.");
+      extendFaroSession(BB, IB, ZB) {
+        var TB, JB;
+        const oB = BB.sessionTracking;
+        if (!(null === oB || void 0 === oB ? void 0 : oB.enabled)) return void IB("Session expired.");
         const {
-          fetchUserSession: IB,
-          storeUserSession: NB
-        } = ej(dB), uB = null === (QB = this.metas.value.session) || void 0 === QB ? void 0 : QB.id, UB = null === (nB = IB()) || void 0 === nB ? void 0 : nB.sessionId;
-        zB && zB === uB && zB === UB ? (Hj({
-          fetchUserSession: IB,
-          storeUserSession: NB
+          fetchUserSession: GB,
+          storeUserSession: vB
+        } = fI(oB), kB = null === (TB = this.metas.value.session) || void 0 === TB ? void 0 : TB.id, cB = null === (JB = GB()) || void 0 === JB ? void 0 : JB.sessionId;
+        ZB && ZB === kB && ZB === cB ? (aI({
+          fetchUserSession: GB,
+          storeUserSession: vB
         })({
           forceSessionExtend: !0
-        }), jB("Session expired; created new session.")) : jB("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), IB("Session expired; created new session.")) : IB("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const qd = () => {
+    const Qo = () => {
       const BB = window.k6;
       return {
-        k6: aj({
+        k6: nI({
           isK6Browser: !0
         }, (null === BB || void 0 === BB ? void 0 : BB.testRunId) && {
           testRunId: null === BB || void 0 === BB ? void 0 : BB.testRunId
         })
       }
     };
-    let fd, od;
+    let so, wo;
 
-    function Hd() {
+    function Oo() {
       let {
         generatePageId: BB,
-        initialPageMeta: jB
+        initialPageMeta: IB
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const zB = location.href;
-        return oB(BB) && fd !== zB && (fd = zB, od = BB(location)), {
-          page: aj(aj({
-            url: zB
-          }, od ? {
-            id: od
-          } : {}), jB)
+        const ZB = location.href;
+        return pB(BB) && so !== ZB && (so = ZB, wo = BB(location)), {
+          page: nI(nI({
+            url: ZB
+          }, wo ? {
+            id: wo
+          } : {}), IB)
         }
       }
     }
 
-    function Dd() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Oj,
-        jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const zB = xj;
-      return jB > 0 && (zB.error = jB >= 1 ? function() {
-        for (var jB = arguments.length, QB = new Array(jB), nB = 0; nB < jB; nB++) QB[nB] = arguments[nB];
-        BB.error(`${zB.prefix}\n`, ...QB)
-      } : lj, zB.warn = jB >= 2 ? function() {
-        for (var jB = arguments.length, QB = new Array(jB), nB = 0; nB < jB; nB++) QB[nB] = arguments[nB];
-        BB.warn(`${zB.prefix}\n`, ...QB)
-      } : lj, zB.info = jB >= 3 ? function() {
-        for (var jB = arguments.length, QB = new Array(jB), nB = 0; nB < jB; nB++) QB[nB] = arguments[nB];
-        BB.info(`${zB.prefix}\n`, ...QB)
-      } : lj, zB.debug = jB >= 4 ? function() {
-        for (var jB = arguments.length, QB = new Array(jB), nB = 0; nB < jB; nB++) QB[nB] = arguments[nB];
-        BB.debug(`${zB.prefix}\n`, ...QB)
-      } : lj), zB
+    function Yo() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : SI,
+        IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ZB = tI;
+      return IB > 0 && (ZB.error = IB >= 1 ? function() {
+        for (var IB = arguments.length, TB = new Array(IB), JB = 0; JB < IB; JB++) TB[JB] = arguments[JB];
+        BB.error(`${ZB.prefix}\n`, ...TB)
+      } : lI, ZB.warn = IB >= 2 ? function() {
+        for (var IB = arguments.length, TB = new Array(IB), JB = 0; JB < IB; JB++) TB[JB] = arguments[JB];
+        BB.warn(`${ZB.prefix}\n`, ...TB)
+      } : lI, ZB.info = IB >= 3 ? function() {
+        for (var IB = arguments.length, TB = new Array(IB), JB = 0; JB < IB; JB++) TB[JB] = arguments[JB];
+        BB.info(`${ZB.prefix}\n`, ...TB)
+      } : lI, ZB.debug = IB >= 4 ? function() {
+        for (var IB = arguments.length, TB = new Array(IB), JB = 0; JB < IB; JB++) TB[JB] = arguments[JB];
+        BB.debug(`${ZB.prefix}\n`, ...TB)
+      } : lI), ZB
     }
-    const Fd = "faro",
-      Yd = {
+    const io = "faro",
+      po = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      Vd = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      ao = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function hd(BB) {
-      var jB, zB, nB, dB, IB, NB;
-      const uB = [],
-        aB = Dd(BB.unpatchedConsole, BB.internalLoggerLevel);
-      BB.transports ? ((BB.url || BB.apiKey) && aB.error('if "transports" is defined, "url" and "apiKey" should not be defined'), uB.push(...BB.transports)) : BB.url ? uB.push(new Ed({
+    function Ho(BB) {
+      var IB, ZB, JB, oB, GB, vB;
+      const kB = [],
+        nB = Yo(BB.unpatchedConsole, BB.internalLoggerLevel);
+      BB.transports ? ((BB.url || BB.apiKey) && nB.error('if "transports" is defined, "url" and "apiKey" should not be defined'), kB.push(...BB.transports)) : BB.url ? kB.push(new Co({
         url: BB.url,
         apiKey: BB.apiKey,
         requestCompression: BB.requestCompression
-      })) : aB.error('either "url" or "transports" must be defined');
+      })) : nB.error('either "url" or "transports" must be defined');
       const {
-        dedupe: pB = !0,
-        eventDomain: rB = QB,
-        globalObjectKey: sB = Fd,
-        instrumentations: JB = wn(),
-        internalLoggerLevel: mB = Kj,
-        isolate: yB = !1,
-        logArgsSerializer: kB = Dz,
-        metas: GB = Zd(BB),
-        paused: LB = !1,
-        preventGlobalExposure: gB = !1,
-        unpatchedConsole: tB = Oj,
-        url: SB,
-        experimental: MB
-      } = BB, EB = md(BB, Vd), iB = null !== (jB = null === MB || void 0 === MB ? void 0 : MB.trackNavigation) && void 0 !== jB && jB, qB = {
-        dataAttributeName: vQ(null !== (zB = null === (nB = BB.userActionsInstrumentation) || void 0 === nB ? void 0 : nB.dataAttributeName) && void 0 !== zB ? zB : CQ),
-        excludeItem: null === (dB = BB.userActionsInstrumentation) || void 0 === dB ? void 0 : dB.excludeItem,
-        initialActivityTimeout: RQ(null === (IB = BB.userActionsInstrumentation) || void 0 === IB ? void 0 : IB.initialActivityTimeout, 100, (BB => aB.warn(BB)))
+        dedupe: hB = !0,
+        eventDomain: zB = TB,
+        globalObjectKey: FB = io,
+        instrumentations: NB = uJ(),
+        internalLoggerLevel: gB = bI,
+        isolate: qB = !1,
+        logArgsSerializer: yB = HZ,
+        metas: UB = jo(BB),
+        paused: WB = !1,
+        preventGlobalExposure: dB = !1,
+        unpatchedConsole: CB = SI,
+        url: QB,
+        experimental: sB
+      } = BB, wB = ho(BB, ao), OB = null !== (IB = null === sB || void 0 === sB ? void 0 : sB.trackNavigation) && void 0 !== IB && IB, YB = {
+        dataAttributeName: KT(null !== (ZB = null === (JB = BB.userActionsInstrumentation) || void 0 === JB ? void 0 : JB.dataAttributeName) && void 0 !== ZB ? ZB : xT),
+        excludeItem: null === (oB = BB.userActionsInstrumentation) || void 0 === oB ? void 0 : oB.excludeItem,
+        initialActivityTimeout: VT(null === (GB = BB.userActionsInstrumentation) || void 0 === GB ? void 0 : GB.initialActivityTimeout, 100, (BB => nB.warn(BB)))
       };
-      return aj(aj({}, EB), {}, {
-        batching: aj(aj({}, Yd), BB.batching),
-        dedupe: pB,
-        globalObjectKey: sB,
-        instrumentations: Xd(JB, BB),
-        internalLoggerLevel: mB,
-        isolate: yB,
-        logArgsSerializer: kB,
-        metas: GB,
-        parseStacktrace: mz,
-        paused: LB,
-        preventGlobalExposure: gB,
-        transports: uB,
-        unpatchedConsole: tB,
-        eventDomain: rB,
-        ignoreUrls: [...null !== (NB = BB.ignoreUrls) && void 0 !== NB ? NB : [], ...SB ? [SB] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: aj(aj(aj({}, UB), BB.sessionTracking), Ad({
+      return nI(nI({}, wB), {}, {
+        batching: nI(nI({}, po), BB.batching),
+        dedupe: hB,
+        globalObjectKey: FB,
+        instrumentations: Mo(NB, BB),
+        internalLoggerLevel: gB,
+        isolate: qB,
+        logArgsSerializer: yB,
+        metas: UB,
+        parseStacktrace: gZ,
+        paused: WB,
+        preventGlobalExposure: dB,
+        transports: kB,
+        unpatchedConsole: CB,
+        eventDomain: zB,
+        ignoreUrls: [...null !== (vB = BB.ignoreUrls) && void 0 !== vB ? vB : [], ...QB ? [QB] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: nI(nI(nI({}, cB), BB.sessionTracking), Po({
           trackGeolocation: BB.trackGeolocation,
           sessionTracking: BB.sessionTracking
         })),
-        userActionsInstrumentation: qB,
+        userActionsInstrumentation: YB,
         experimental: {
-          trackNavigation: iB
+          trackNavigation: OB
         }
       })
     }
 
-    function Xd(BB, jB) {
+    function Mo(BB, IB) {
       let {
-        experimental: zB
-      } = jB;
-      var QB;
-      const nB = null !== (QB = null === zB || void 0 === zB ? void 0 : zB.trackNavigation) && void 0 !== QB && QB;
-      return BB.filter((BB => !("@grafana/faro-web-sdk:instrumentation-navigation" === BB.name && !nB)))
+        experimental: ZB
+      } = IB;
+      var TB;
+      const JB = null !== (TB = null === ZB || void 0 === ZB ? void 0 : ZB.trackNavigation) && void 0 !== TB && TB;
+      return BB.filter((BB => !("@grafana/faro-web-sdk:instrumentation-navigation" === BB.name && !JB)))
     }
 
-    function Zd(BB) {
-      var jB, zB, QB;
+    function jo(BB) {
+      var IB, ZB, TB;
       const {
-        page: nB,
-        generatePageId: dB
-      } = null !== (jB = null === BB || void 0 === BB ? void 0 : BB.pageTracking) && void 0 !== jB ? jB : {}, IB = [bn, vn, Hd({
-        generatePageId: dB,
-        initialPageMeta: nB
-      }), ...null !== (zB = BB.metas) && void 0 !== zB ? zB : [], On];
-      return fB(null === (QB = window) || void 0 === QB ? void 0 : QB.k6) ? [...IB, qd] : IB
+        page: JB,
+        generatePageId: oB
+      } = null !== (IB = null === BB || void 0 === BB ? void 0 : BB.pageTracking) && void 0 !== IB ? IB : {}, GB = [bJ, xJ, Oo({
+        generatePageId: oB,
+        initialPageMeta: JB
+      }), ...null !== (ZB = BB.metas) && void 0 !== ZB ? ZB : [], DJ];
+      return iB(null === (TB = window) || void 0 === TB ? void 0 : TB.k6) ? [...GB, Qo] : GB
     }
 
-    function Ad(BB) {
+    function Po(BB) {
       let {
-        trackGeolocation: jB,
-        sessionTracking: zB
+        trackGeolocation: IB,
+        sessionTracking: ZB
       } = BB;
-      var QB;
-      const nB = {};
-      return iB(jB) && (nB.geoLocationTrackingEnabled = jB), KB(nB) ? {} : {
-        session: aj(aj({}, null !== (QB = null === zB || void 0 === zB ? void 0 : zB.session) && void 0 !== QB ? QB : {}), {}, {
-          overrides: nB
+      var TB;
+      const JB = {};
+      return OB(IB) && (JB.geoLocationTrackingEnabled = IB), bB(JB) ? {} : {
+        session: nI(nI({}, null !== (TB = null === ZB || void 0 === ZB ? void 0 : ZB.session) && void 0 !== TB ? TB : {}), {}, {
+          overrides: JB
         })
       }
     }
-    const Td = new WeakSet;
+    const Ro = new WeakSet;
 
-    function Pd(BB) {
-      return Td.add(BB), BB
+    function ro(BB) {
+      return Ro.add(BB), BB
     }
 
-    function Wd(BB, jB) {
-      if (BB.capture) return Pd(BB.capture(jB));
-      const zB = Pd(BB.value);
-      return null === jB || void 0 === jB || jB(), zB
+    function mo(BB, IB) {
+      if (BB.capture) return ro(BB.capture(IB));
+      const ZB = ro(BB.value);
+      return null === IB || void 0 === IB || IB(), ZB
     }
 
-    function ed(BB) {
-      const jB = `__faroBundleId_${BB}`,
-        zB = null === aB || void 0 === aB ? void 0 : aB[jB];
-      if ("string" === typeof zB && "" !== zB) return zB;
-      const QB = "undefined" !== typeof window ? window[jB] : void 0;
-      return "string" === typeof QB && "" !== QB ? QB : void 0
+    function Xo(BB) {
+      const IB = `__faroBundleId_${BB}`,
+        ZB = null === nB || void 0 === nB ? void 0 : nB[IB];
+      if ("string" === typeof ZB && "" !== ZB) return ZB;
+      const TB = "undefined" !== typeof window ? window[IB] : void 0;
+      return "string" === typeof TB && "" !== TB ? TB : void 0
     }
 
-    function ld(BB) {
-      var jB, zB;
-      const QB = BB.config.app.name,
-        nB = QB ? function(BB) {
-          return null === aB || void 0 === aB ? void 0 : aB[`__faroGitHash_${BB}`]
-        }(QB) : void 0,
-        dB = {
+    function Lo(BB) {
+      var IB, ZB;
+      const TB = BB.config.app.name,
+        JB = TB ? function(BB) {
+          return null === nB || void 0 === nB ? void 0 : nB[`__faroGitHash_${BB}`]
+        }(TB) : void 0,
+        oB = {
           sdk: {
-            version: zz,
+            version: ZZ,
             name: "faro"
           },
-          app: Rj({
-            bundleId: QB && ed(QB)
-          }, void 0 !== nB ? {
-            gitHash: nB
+          app: VI({
+            bundleId: TB && Xo(TB)
+          }, void 0 !== JB ? {
+            gitHash: JB
           } : {})
         },
-        IB = null === (jB = BB.config.sessionTracking) || void 0 === jB ? void 0 : jB.session;
-      IB && BB.api.setSession(IB), BB.config.app && (dB.app = Rj(Rj({}, BB.config.app), dB.app)), BB.config.user && (dB.user = BB.config.user), BB.config.view && (dB.view = BB.config.view), BB.metas.add(dB, ...null !== (zB = BB.config.metas) && void 0 !== zB ? zB : [])
+        GB = null === (IB = BB.config.sessionTracking) || void 0 === IB ? void 0 : IB.session;
+      GB && BB.api.setSession(GB), BB.config.app && (oB.app = VI(VI({}, BB.config.app), oB.app)), BB.config.user && (oB.user = BB.config.user), BB.config.view && (oB.view = BB.config.view), BB.metas.add(oB, ...null !== (ZB = BB.config.metas) && void 0 !== ZB ? ZB : [])
     }
-    var wd = class {
-      constructor(BB, jB) {
-        var zB, QB;
-        this.signalBuffer = [], this.itemLimit = null !== (zB = null === jB || void 0 === jB ? void 0 : jB.itemLimit) && void 0 !== zB ? zB : 50, this.sendTimeout = null !== (QB = null === jB || void 0 === jB ? void 0 : jB.sendTimeout) && void 0 !== QB ? QB : 250, this.paused = (null === jB || void 0 === jB ? void 0 : jB.paused) || !1, this.sendFn = BB, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var eo = class {
+      constructor(BB, IB) {
+        var ZB, TB;
+        this.signalBuffer = [], this.itemLimit = null !== (ZB = null === IB || void 0 === IB ? void 0 : IB.itemLimit) && void 0 !== ZB ? ZB : 50, this.sendTimeout = null !== (TB = null === IB || void 0 === IB ? void 0 : IB.sendTimeout) && void 0 !== TB ? TB : 250, this.paused = (null === IB || void 0 === IB ? void 0 : IB.paused) || !1, this.sendFn = BB, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
@@ -3885,12 +3885,12 @@ export const modules = {
         this.paused = !0, clearInterval(this.flushInterval)
       }
       groupItems(BB) {
-        const jB = new Map;
+        const IB = new Map;
         return BB.forEach((BB => {
-          const zB = JSON.stringify(BB.meta);
-          let QB = jB.get(zB);
-          QB = void 0 === QB ? [BB] : [...QB, BB], jB.set(zB, QB)
-        })), Array.from(jB.values())
+          const ZB = JSON.stringify(BB.meta);
+          let TB = IB.get(ZB);
+          TB = void 0 === TB ? [BB] : [...TB, BB], IB.set(ZB, TB)
+        })), Array.from(IB.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
@@ -3898,8 +3898,8 @@ export const modules = {
         this.signalBuffer = [];
         try {
           this.groupItems(BB).forEach(this.sendFn)
-        } catch (jB) {
-          throw this.signalBuffer = [...BB, ...this.signalBuffer], this.trimBufferToLimit(), jB
+        } catch (IB) {
+          throw this.signalBuffer = [...BB, ...this.signalBuffer], this.trimBufferToLimit(), IB
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function xd(BB, jB, zB, QB) {
-      var nB;
-      jB.debug("Initializing transports");
-      const dB = [];
-      let IB = [];
-      const NB = BB => {
-        let jB = BB;
-        for (const QB of IB) {
-          const BB = jB.map(QB).filter(Boolean);
+    function uo(BB, IB, ZB, TB) {
+      var JB;
+      IB.debug("Initializing transports");
+      const oB = [];
+      let GB = [];
+      const vB = BB => {
+        let IB = BB;
+        for (const TB of GB) {
+          const BB = IB.map(TB).filter(Boolean);
           if (0 === BB.length) return [];
-          jB = Kd(BB, zB)
+          IB = fo(BB, ZB)
         }
-        return jB
+        return IB
       };
-      let uB;
-      (null === (nB = zB.batching) || void 0 === nB ? void 0 : nB.enabled) && (uB = new wd((BB => {
-        const zB = NB(BB);
-        if (0 !== zB.length)
-          for (const QB of dB) jB.debug(`Transporting item using ${QB.name}\n`, zB), QB.isBatched() && QB.send(zB)
+      let kB;
+      (null === (JB = ZB.batching) || void 0 === JB ? void 0 : JB.enabled) && (kB = new eo((BB => {
+        const ZB = vB(BB);
+        if (0 !== ZB.length)
+          for (const TB of oB) IB.debug(`Transporting item using ${TB.name}\n`, ZB), TB.isBatched() && TB.send(ZB)
       }), {
-        sendTimeout: zB.batching.sendTimeout,
-        itemLimit: zB.batching.itemLimit,
-        paused: zB.paused
+        sendTimeout: ZB.batching.sendTimeout,
+        itemLimit: ZB.batching.itemLimit,
+        paused: ZB.paused
       }));
       return {
         add: function() {
-          jB.debug("Adding transports");
-          for (var nB = arguments.length, IB = new Array(nB), NB = 0; NB < nB; NB++) IB[NB] = arguments[NB];
-          IB.forEach((nB => {
-            jB.debug(`Adding "${nB.name}" transport`), dB.some((BB => BB === nB)) ? jB.warn(`Transport ${nB.name} is already added`) : (nB.unpatchedConsole = BB, nB.internalLogger = jB, nB.config = zB, nB.metas = QB, dB.push(nB))
+          IB.debug("Adding transports");
+          for (var JB = arguments.length, GB = new Array(JB), vB = 0; vB < JB; vB++) GB[vB] = arguments[vB];
+          GB.forEach((JB => {
+            IB.debug(`Adding "${JB.name}" transport`), oB.some((BB => BB === JB)) ? IB.warn(`Transport ${JB.name} is already added`) : (JB.unpatchedConsole = BB, JB.internalLogger = IB, JB.config = ZB, JB.metas = TB, oB.push(JB))
           }))
         },
         addBeforeSendHooks: function() {
-          jB.debug("Adding beforeSendHooks\n", IB);
-          for (var BB = arguments.length, zB = new Array(BB), QB = 0; QB < BB; QB++) zB[QB] = arguments[QB];
-          zB.forEach((BB => {
-            BB && IB.push(BB)
+          IB.debug("Adding beforeSendHooks\n", GB);
+          for (var BB = arguments.length, ZB = new Array(BB), TB = 0; TB < BB; TB++) ZB[TB] = arguments[TB];
+          ZB.forEach((BB => {
+            BB && GB.push(BB)
           }))
         },
-        getBeforeSendHooks: () => [...IB],
+        getBeforeSendHooks: () => [...GB],
         execute: BB => {
-          var nB;
-          if (!zB.paused && Pj(QB).shouldCapture()) {
-            if (pB = BB.meta, !Td.has(pB)) {
-              var IB, UB, aB;
-              const jB = null === (IB = QB.value.session) || void 0 === IB ? void 0 : IB.id,
-                nB = Wd(QB);
-              if (zB.paused) return;
-              const dB = Rj({}, BB.meta);
-              (null === (UB = dB.session) || void 0 === UB ? void 0 : UB.id) === jB && (null === (aB = nB.session) || void 0 === aB ? void 0 : aB.id) !== jB && (void 0 === nB.session ? delete dB.session : dB.session = nB.session), BB = Rj(Rj({}, BB), {}, {
-                meta: Pd(dB)
+          var JB;
+          if (!ZB.paused && eI(TB).shouldCapture()) {
+            if (hB = BB.meta, !Ro.has(hB)) {
+              var GB, cB, nB;
+              const IB = null === (GB = TB.value.session) || void 0 === GB ? void 0 : GB.id,
+                JB = mo(TB);
+              if (ZB.paused) return;
+              const oB = VI({}, BB.meta);
+              (null === (cB = oB.session) || void 0 === cB ? void 0 : cB.id) === IB && (null === (nB = JB.session) || void 0 === nB ? void 0 : nB.id) !== IB && (void 0 === JB.session ? delete oB.session : oB.session = JB.session), BB = VI(VI({}, BB), {}, {
+                meta: ro(oB)
               })
             }
-            var pB;
-            (null === (nB = zB.batching) || void 0 === nB ? void 0 : nB.enabled) && (null === uB || void 0 === uB || uB.addItem(BB)), (BB => {
-              var QB;
-              if ((null === (QB = zB.batching) || void 0 === QB ? void 0 : QB.enabled) && dB.every((BB => BB.isBatched()))) return;
-              const [nB] = NB([BB]);
-              if (void 0 !== nB)
-                for (const NB of dB) {
-                  var IB;
-                  jB.debug(`Transporting item using ${NB.name}\n`, nB), NB.isBatched() ? (null === (IB = zB.batching) || void 0 === IB ? void 0 : IB.enabled) || NB.send([nB]) : NB.send(nB)
+            var hB;
+            (null === (JB = ZB.batching) || void 0 === JB ? void 0 : JB.enabled) && (null === kB || void 0 === kB || kB.addItem(BB)), (BB => {
+              var TB;
+              if ((null === (TB = ZB.batching) || void 0 === TB ? void 0 : TB.enabled) && oB.every((BB => BB.isBatched()))) return;
+              const [JB] = vB([BB]);
+              if (void 0 !== JB)
+                for (const vB of oB) {
+                  var GB;
+                  IB.debug(`Transporting item using ${vB.name}\n`, JB), vB.isBatched() ? (null === (GB = ZB.batching) || void 0 === GB ? void 0 : GB.enabled) || vB.send([JB]) : vB.send(JB)
                 }
             })(BB)
           }
         },
-        isPaused: () => zB.paused,
+        isPaused: () => ZB.paused,
         pause: () => {
-          jB.debug("Pausing transports"), null === uB || void 0 === uB || uB.pause(), zB.paused = !0
+          IB.debug("Pausing transports"), null === kB || void 0 === kB || kB.pause(), ZB.paused = !0
         },
         remove: function() {
-          jB.debug("Removing transports");
-          for (var BB = arguments.length, zB = new Array(BB), QB = 0; QB < BB; QB++) zB[QB] = arguments[QB];
-          zB.forEach((BB => {
-            jB.debug(`Removing "${BB.name}" transport`);
-            const zB = dB.indexOf(BB); - 1 !== zB ? dB.splice(zB, 1) : jB.warn(`Transport "${BB.name}" is not added`)
+          IB.debug("Removing transports");
+          for (var BB = arguments.length, ZB = new Array(BB), TB = 0; TB < BB; TB++) ZB[TB] = arguments[TB];
+          ZB.forEach((BB => {
+            IB.debug(`Removing "${BB.name}" transport`);
+            const ZB = oB.indexOf(BB); - 1 !== ZB ? oB.splice(ZB, 1) : IB.warn(`Transport "${BB.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var BB = arguments.length, zB = new Array(BB), QB = 0; QB < BB; QB++) zB[QB] = arguments[QB];
-          jB.debug("Removing beforeSendHooks"), IB = IB.filter((BB => !zB.includes(BB)))
+          for (var BB = arguments.length, ZB = new Array(BB), TB = 0; TB < BB; TB++) ZB[TB] = arguments[TB];
+          IB.debug("Removing beforeSendHooks"), GB = GB.filter((BB => !ZB.includes(BB)))
         },
         get transports() {
-          return [...dB]
+          return [...oB]
         },
         unpause: () => {
-          jB.debug("Unpausing transports"), null === uB || void 0 === uB || uB.start(), zB.paused = !1
+          IB.debug("Unpausing transports"), null === kB || void 0 === kB || kB.start(), ZB.paused = !1
         }
       }
     }
 
-    function Kd(BB, jB) {
-      if (jB.preserveOriginalError)
-        for (const zB of BB) "exception" === zB.type && delete zB.payload.originalError;
+    function fo(BB, IB) {
+      if (IB.preserveOriginalError)
+        for (const ZB of BB) "exception" === ZB.type && delete ZB.payload.originalError;
       return BB
     }
-    let Cd = Oj;
+    let Ao = SI;
 
-    function cd(BB) {
-      var jB;
-      return Cd = null !== (jB = BB.unpatchedConsole) && void 0 !== jB ? jB : Cd, Cd
+    function to(BB) {
+      var IB;
+      return Ao = null !== (IB = BB.unpatchedConsole) && void 0 !== IB ? IB : Ao, Ao
     }
-    let bd, vd = xj;
+    let bo, xo = tI;
 
-    function Rd(BB, jB) {
-      return vd = Dd(BB, jB.internalLoggerLevel), vd
+    function Eo(BB, IB) {
+      return xo = Yo(BB, IB.internalLoggerLevel), xo
     }
 
-    function Od(BB) {
+    function Do(BB) {
       let {
-        internalLogger: jB,
-        config: zB,
-        metas: QB,
-        transports: nB,
-        tracesApi: dB,
-        userActionsApi: IB
+        internalLogger: IB,
+        config: ZB,
+        metas: TB,
+        transports: JB,
+        tracesApi: oB,
+        userActionsApi: GB
       } = BB;
-      var NB;
-      jB.debug("Initializing exceptions API");
-      let uB = null;
-      bd = null !== (NB = zB.parseStacktrace) && void 0 !== NB ? NB : bd;
-      const UB = BB => {
-          jB.debug("Changing stacktrace parser"), bd = null !== BB && void 0 !== BB ? BB : bd
+      var vB;
+      IB.debug("Initializing exceptions API");
+      let kB = null;
+      bo = null !== (vB = ZB.parseStacktrace) && void 0 !== vB ? vB : bo;
+      const cB = BB => {
+          IB.debug("Changing stacktrace parser"), bo = null !== BB && void 0 !== BB ? BB : bo
         },
         {
-          ignoreErrors: aB = [],
-          preserveOriginalError: pB
-        } = zB;
-      return UB(zB.parseStacktrace), {
-        changeStacktraceParser: UB,
-        getStacktraceParser: () => bd,
+          ignoreErrors: nB = [],
+          preserveOriginalError: hB
+        } = ZB;
+      return cB(ZB.parseStacktrace), {
+        changeStacktraceParser: cB,
+        getStacktraceParser: () => bo,
         pushError: function(BB) {
           let {
-            skipDedupe: NB,
-            stackFrames: UB,
-            type: rB,
-            context: sB,
-            spanContext: JB,
-            timestampOverwriteMs: mB,
-            originalError: yB,
-            fingerprint: kB,
-            fatal: GB
+            skipDedupe: vB,
+            stackFrames: cB,
+            type: zB,
+            context: FB,
+            spanContext: NB,
+            timestampOverwriteMs: gB,
+            originalError: qB,
+            fingerprint: yB,
+            fatal: UB
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(BB, jB) {
+          if (! function(BB, IB) {
               const {
-                message: zB,
-                name: QB,
-                stack: nB
-              } = jB;
-              return dB = BB, IB = zB + " " + QB + " " + nB, dB.some((BB => SB(BB) ? IB.includes(BB) : !!IB.match(BB)));
-              var dB, IB
-            }(aB, null !== yB && void 0 !== yB ? yB : BB)) try {
-            var LB, gB;
-            if (!Pj(QB).shouldCapture()) return;
-            const aB = Xj(Rj(Rj({}, function(BB) {
-                let jB = BB.cause;
-                ZB(jB) ? jB = BB.cause.toString() : null !== jB && (fB(BB.cause) || HB(BB.cause)) ? jB = hj(BB.cause) : null != jB && (jB = BB.cause.toString());
-                return null == jB ? {} : {
-                  cause: jB
+                message: ZB,
+                name: TB,
+                stack: JB
+              } = IB;
+              return oB = BB, GB = ZB + " " + TB + " " + JB, oB.some((BB => QB(BB) ? GB.includes(BB) : !!GB.match(BB)));
+              var oB, GB
+            }(nB, null !== qB && void 0 !== qB ? qB : BB)) try {
+            var WB, dB;
+            if (!eI(TB).shouldCapture()) return;
+            const nB = rI(VI(VI({}, function(BB) {
+                let IB = BB.cause;
+                mB(IB) ? IB = BB.cause.toString() : null !== IB && (iB(BB.cause) || aB(BB.cause)) ? IB = RI(BB.cause) : null != IB && (IB = BB.cause.toString());
+                return null == IB ? {} : {
+                  cause: IB
                 }
-              }(null !== yB && void 0 !== yB ? yB : BB)), null !== sB && void 0 !== sB ? sB : {})),
-              SB = Rj(Rj(Rj(Rj({
-                type: rB || BB.name || "Error",
+              }(null !== qB && void 0 !== qB ? qB : BB)), null !== FB && void 0 !== FB ? FB : {})),
+              QB = VI(VI(VI(VI({
+                type: zB || BB.name || "Error",
                 value: BB.message,
-                timestamp: mB ? mj(mB) : Jj(),
-                trace: JB ? {
-                  trace_id: JB.traceId,
-                  span_id: JB.spanId
-                } : dB.getTraceContext()
-              }, KB(aB) ? {} : {
-                context: aB
-              }), pB ? {
-                originalError: yB
-              } : {}), kB ? {
-                fingerprint: kB
-              } : {}), void 0 !== GB ? {
-                fatal: GB
+                timestamp: gB ? gI(gB) : NI(),
+                trace: NB ? {
+                  trace_id: NB.traceId,
+                  span_id: NB.spanId
+                } : oB.getTraceContext()
+              }, bB(nB) ? {} : {
+                context: nB
+              }), hB ? {
+                originalError: qB
+              } : {}), yB ? {
+                fingerprint: yB
+              } : {}), void 0 !== UB ? {
+                fatal: UB
               } : {});
-            UB = null !== (LB = UB) && void 0 !== LB ? LB : BB.stack ? null === bd || void 0 === bd ? void 0 : bd(BB).frames : void 0, (null === UB || void 0 === UB ? void 0 : UB.length) && (SB.stacktrace = {
-              frames: UB
+            cB = null !== (WB = cB) && void 0 !== WB ? WB : BB.stack ? null === bo || void 0 === bo ? void 0 : bo(BB).frames : void 0, (null === cB || void 0 === cB ? void 0 : cB.length) && (QB.stacktrace = {
+              frames: cB
             });
-            const MB = {
-              type: SB.type,
-              value: SB.value,
-              stacktrace: SB.stacktrace,
-              context: SB.context,
-              fingerprint: SB.fingerprint,
-              fatal: null !== (gB = SB.fatal) && void 0 !== gB && gB
+            const sB = {
+              type: QB.type,
+              value: QB.value,
+              stacktrace: QB.stacktrace,
+              context: QB.context,
+              fingerprint: QB.fingerprint,
+              fatal: null !== (dB = QB.fatal) && void 0 !== dB && dB
             };
-            if (!NB && zB.dedupe && !tB(uB) && Gj(MB, uB)) return void jB.debug("Skipping error push because it is the same as the last one\n", SB);
-            const EB = uB,
-              iB = Wd(QB);
-            if (uB !== EB && !NB && zB.dedupe && Gj(MB, uB)) return;
-            uB = MB;
-            const qB = {
-              meta: iB,
-              payload: SB,
+            if (!vB && ZB.dedupe && !CB(kB) && UI(sB, kB)) return void IB.debug("Skipping error push because it is the same as the last one\n", QB);
+            const wB = kB,
+              OB = mo(TB);
+            if (kB !== wB && !vB && ZB.dedupe && UI(sB, kB)) return;
+            kB = sB;
+            const YB = {
+              meta: OB,
+              payload: QB,
               type: "exception"
             };
-            jB.debug("Pushing exception\n", qB), Sn(IB.getActiveUserAction(), qB) || nB.execute(qB)
-          } catch (MB) {
-            jB.error("Error pushing event", MB)
+            IB.debug("Pushing exception\n", YB), QJ(GB.getActiveUserAction(), YB) || JB.execute(YB)
+          } catch (sB) {
+            IB.error("Error pushing event", sB)
           }
         }
       }
     }
 
-    function BI(BB, jB, zB, QB, nB) {
-      jB.debug("Initializing API");
-      let dB = null;
-      const IB = function(BB) {
+    function Ko(BB, IB, ZB, TB, JB) {
+      IB.debug("Initializing API");
+      let oB = null;
+      const GB = function(BB) {
           let {
-            transports: jB,
-            internalLogger: zB,
-            config: QB,
-            pushEvent: nB
+            transports: IB,
+            internalLogger: ZB,
+            config: TB,
+            pushEvent: JB
           } = BB;
-          var dB;
-          const IB = null === (dB = QB.userActionsInstrumentation) || void 0 === dB ? void 0 : dB.excludeItem;
-          let NB;
-          const uB = () => NB;
+          var oB;
+          const GB = null === (oB = TB.userActionsInstrumentation) || void 0 === oB ? void 0 : oB.excludeItem;
+          let vB;
+          const kB = () => vB;
           return {
-            startUserAction: (BB, QB, dB) => {
-              if (void 0 === uB()) {
-                const zB = new gn({
+            startUserAction: (BB, TB, oB) => {
+              if (void 0 === kB()) {
+                const ZB = new dJ({
                   name: BB,
-                  transports: jB,
-                  attributes: QB,
-                  trigger: (null === dB || void 0 === dB ? void 0 : dB.triggerName) || "faroApiCall",
-                  importance: (null === dB || void 0 === dB ? void 0 : dB.importance) || Gn.Normal,
-                  trackUserActionsExcludeItem: IB,
-                  pushEvent: nB
+                  transports: IB,
+                  attributes: TB,
+                  trigger: (null === oB || void 0 === oB ? void 0 : oB.triggerName) || "faroApiCall",
+                  importance: (null === oB || void 0 === oB ? void 0 : oB.importance) || UJ.Normal,
+                  trackUserActionsExcludeItem: GB,
+                  pushEvent: JB
                 });
-                return zB.filter((BB => [3, 2].includes(BB))).first().subscribe((() => {
-                  NB = void 0
-                })), tn.notify({
-                  type: kn,
-                  userAction: zB,
-                  initialActivityTimeout: null === dB || void 0 === dB ? void 0 : dB.initialActivityTimeout
-                }), NB = zB, NB
+                return ZB.filter((BB => [3, 2].includes(BB))).first().subscribe((() => {
+                  vB = void 0
+                })), CJ.notify({
+                  type: yJ,
+                  userAction: ZB,
+                  initialActivityTimeout: null === oB || void 0 === oB ? void 0 : oB.initialActivityTimeout
+                }), vB = ZB, vB
               }
-              zB.error("Attempted to create a new user action while one is already running. This is not possible.")
+              ZB.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: uB
+            getActiveUserAction: kB
           }
         }({
-          transports: nB,
-          config: zB,
-          internalLogger: jB,
-          pushEvent: (BB, zB, QB, nB) => {
-            dB ? dB(BB, zB, QB, nB) : jB.warn("pushEventImpl is not initialized. Event dropped:", {
+          transports: JB,
+          config: ZB,
+          internalLogger: IB,
+          pushEvent: (BB, ZB, TB, JB) => {
+            oB ? oB(BB, ZB, TB, JB) : IB.warn("pushEventImpl is not initialized. Event dropped:", {
               name: BB,
-              attributes: zB,
-              domain: QB,
-              options: nB
+              attributes: ZB,
+              domain: TB,
+              options: JB
             })
           }
         }),
-        NB = function(BB, jB, zB, QB, nB) {
-          let dB;
-          return jB.debug("Initializing traces API"), {
-            getOTEL: () => dB,
+        vB = function(BB, IB, ZB, TB, JB) {
+          let oB;
+          return IB.debug("Initializing traces API"), {
+            getOTEL: () => oB,
             getTraceContext: () => {
-              const BB = null === dB || void 0 === dB ? void 0 : dB.trace.getSpanContext(dB.context.active());
+              const BB = null === oB || void 0 === oB ? void 0 : oB.trace.getSpanContext(oB.context.active());
               return BB ? {
                 trace_id: BB.traceId,
                 span_id: BB.spanId
               } : void 0
             },
-            initOTEL: (BB, zB) => {
-              jB.debug("Initializing OpenTelemetry"), dB = {
+            initOTEL: (BB, ZB) => {
+              IB.debug("Initializing OpenTelemetry"), oB = {
                 trace: BB,
-                context: zB
+                context: ZB
               }
             },
-            isOTELInitialized: () => !!dB,
+            isOTELInitialized: () => !!oB,
             pushTraces: BB => {
               try {
-                if (!Pj(QB).shouldCapture()) return;
-                const zB = {
+                if (!eI(TB).shouldCapture()) return;
+                const ZB = {
                   type: "trace",
                   payload: BB,
-                  meta: Wd(QB)
+                  meta: mo(TB)
                 };
-                jB.debug("Pushing trace\n", zB), nB.execute(zB)
-              } catch (zB) {
-                jB.error("Error pushing trace\n", zB)
+                IB.debug("Pushing trace\n", ZB), JB.execute(ZB)
+              } catch (ZB) {
+                IB.error("Error pushing trace\n", ZB)
               }
             }
           }
-        }(0, jB, 0, QB, nB),
-        uB = {
+        }(0, IB, 0, TB, JB),
+        kB = {
           unpatchedConsole: BB,
-          internalLogger: jB,
-          userActionsApi: IB,
-          config: zB,
-          metas: QB,
-          transports: nB,
-          tracesApi: NB
+          internalLogger: IB,
+          userActionsApi: GB,
+          config: ZB,
+          metas: TB,
+          transports: JB,
+          tracesApi: vB
         },
-        UB = function(BB) {
+        cB = function(BB) {
           let {
-            internalLogger: jB,
-            config: zB,
-            metas: QB,
-            transports: nB,
-            tracesApi: dB,
-            userActionsApi: IB
-          } = BB, NB = null;
+            internalLogger: IB,
+            config: ZB,
+            metas: TB,
+            transports: JB,
+            tracesApi: oB,
+            userActionsApi: GB
+          } = BB, vB = null;
           return {
-            pushEvent: function(BB, uB, UB) {
+            pushEvent: function(BB, kB, cB) {
               let {
-                skipDedupe: aB,
-                spanContext: pB,
-                timestampOverwriteMs: rB,
-                customPayloadTransformer: sB = BB => BB
+                skipDedupe: nB,
+                spanContext: hB,
+                timestampOverwriteMs: zB,
+                customPayloadTransformer: FB = BB => BB
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!Pj(QB).shouldCapture()) return;
-                const JB = Xj(uB),
-                  mB = sB({
+                if (!eI(TB).shouldCapture()) return;
+                const NB = rI(kB),
+                  gB = FB({
                     name: BB,
-                    domain: null !== UB && void 0 !== UB ? UB : zB.eventDomain,
-                    attributes: KB(JB) ? void 0 : JB,
-                    timestamp: rB ? mj(rB) : Jj(),
-                    trace: pB ? {
-                      trace_id: pB.traceId,
-                      span_id: pB.spanId
-                    } : dB.getTraceContext()
+                    domain: null !== cB && void 0 !== cB ? cB : ZB.eventDomain,
+                    attributes: bB(NB) ? void 0 : NB,
+                    timestamp: zB ? gI(zB) : NI(),
+                    trace: hB ? {
+                      trace_id: hB.traceId,
+                      span_id: hB.spanId
+                    } : oB.getTraceContext()
                   }),
-                  yB = {
-                    name: mB.name,
-                    attributes: mB.attributes,
-                    domain: mB.domain
+                  qB = {
+                    name: gB.name,
+                    attributes: gB.attributes,
+                    domain: gB.domain
                   };
-                if (!aB && zB.dedupe && !tB(NB) && Gj(yB, NB)) return void jB.debug("Skipping event push because it is the same as the last one\n", mB);
-                const kB = NB,
-                  GB = Wd(QB);
-                if (NB !== kB && !aB && zB.dedupe && Gj(yB, NB)) return;
-                NB = yB;
-                const LB = {
-                  meta: GB,
-                  payload: mB,
+                if (!nB && ZB.dedupe && !CB(vB) && UI(qB, vB)) return void IB.debug("Skipping event push because it is the same as the last one\n", gB);
+                const yB = vB,
+                  UB = mo(TB);
+                if (vB !== yB && !nB && ZB.dedupe && UI(qB, vB)) return;
+                vB = qB;
+                const WB = {
+                  meta: UB,
+                  payload: gB,
                   type: "event"
                 };
-                jB.debug("Pushing event\n", LB), Sn(IB.getActiveUserAction(), LB) || nB.execute(LB)
-              } catch (JB) {
-                jB.error("Error pushing event", JB)
+                IB.debug("Pushing event\n", WB), QJ(GB.getActiveUserAction(), WB) || JB.execute(WB)
+              } catch (NB) {
+                IB.error("Error pushing event", NB)
               }
             }
           }
-        }(uB);
-      return dB = UB.pushEvent, Rj(Rj(Rj(Rj(Rj(Rj(Rj({}, NB), Od(uB)), function(BB) {
-        let jB, zB, QB, nB, {
-          internalLogger: dB,
-          metas: IB
+        }(kB);
+      return oB = cB.pushEvent, VI(VI(VI(VI(VI(VI(VI({}, vB), Do(kB)), function(BB) {
+        let IB, ZB, TB, JB, {
+          internalLogger: oB,
+          metas: GB
         } = BB;
-        dB.debug("Initializing meta API");
-        const NB = BB => {
-            zB && IB.remove(zB), zB = {
+        oB.debug("Initializing meta API");
+        const vB = BB => {
+            ZB && GB.remove(ZB), ZB = {
               user: BB
-            }, IB.add(zB)
+            }, GB.add(ZB)
           },
-          uB = (BB, zB) => {
-            var QB;
-            const nB = null === zB || void 0 === zB ? void 0 : zB.overrides,
-              dB = nB ? {
-                overrides: Rj(Rj({}, null === jB || void 0 === jB || null === (QB = jB.session) || void 0 === QB ? void 0 : QB.overrides), nB)
+          kB = (BB, ZB) => {
+            var TB;
+            const JB = null === ZB || void 0 === ZB ? void 0 : ZB.overrides,
+              oB = JB ? {
+                overrides: VI(VI({}, null === IB || void 0 === IB || null === (TB = IB.session) || void 0 === TB ? void 0 : TB.overrides), JB)
               } : {};
-            jB && IB.remove(jB), jB = {
-              session: Rj(Rj({}, KB(BB) ? void 0 : BB), dB)
-            }, IB.add(jB)
+            IB && GB.remove(IB), IB = {
+              session: VI(VI({}, bB(BB) ? void 0 : BB), oB)
+            }, GB.add(IB)
           },
-          UB = (BB, jB) => {
-            Pj(IB).notifySessionUpdate({
+          cB = (BB, IB) => {
+            eI(GB).notifySessionUpdate({
               type: "replace",
               session: BB,
-              overrides: null === jB || void 0 === jB ? void 0 : jB.overrides
-            }), uB(BB, jB)
+              overrides: null === IB || void 0 === IB ? void 0 : IB.overrides
+            }), kB(BB, IB)
           },
-          aB = () => IB.value.session,
-          pB = () => IB.value.page;
+          nB = () => GB.value.session,
+          hB = () => GB.value.page;
         return {
-          setUser: NB,
-          resetUser: NB,
-          setSession: UB,
-          resetSession: UB,
-          getSession: aB,
-          setView: (BB, jB) => {
-            var zB;
-            if ((null === jB || void 0 === jB ? void 0 : jB.overrides) && (Pj(IB).notifySessionUpdate({
+          setUser: vB,
+          resetUser: vB,
+          setSession: cB,
+          resetSession: cB,
+          getSession: nB,
+          setView: (BB, IB) => {
+            var ZB;
+            if ((null === IB || void 0 === IB ? void 0 : IB.overrides) && (eI(GB).notifySessionUpdate({
                 type: "overrides",
-                overrides: jB.overrides
-              }), uB(aB(), {
-                overrides: jB.overrides
-              })), (null === QB || void 0 === QB || null === (zB = QB.view) || void 0 === zB ? void 0 : zB.name) === (null === BB || void 0 === BB ? void 0 : BB.name)) return;
-            const nB = QB;
-            QB = {
+                overrides: IB.overrides
+              }), kB(nB(), {
+                overrides: IB.overrides
+              })), (null === TB || void 0 === TB || null === (ZB = TB.view) || void 0 === ZB ? void 0 : ZB.name) === (null === BB || void 0 === BB ? void 0 : BB.name)) return;
+            const JB = TB;
+            TB = {
               view: BB
-            }, IB.add(QB), nB && IB.remove(nB)
+            }, GB.add(TB), JB && GB.remove(JB)
           },
-          getView: () => IB.value.view,
+          getView: () => GB.value.view,
           setPage: BB => {
-            var jB;
-            const zB = SB(BB) ? Rj(Rj({}, null !== (jB = null === nB || void 0 === nB ? void 0 : nB.page) && void 0 !== jB ? jB : pB()), {}, {
+            var IB;
+            const ZB = QB(BB) ? VI(VI({}, null !== (IB = null === JB || void 0 === JB ? void 0 : JB.page) && void 0 !== IB ? IB : hB()), {}, {
               id: BB
             }) : BB;
-            nB && IB.remove(nB), nB = {
-              page: zB
-            }, IB.add(nB)
+            JB && GB.remove(JB), JB = {
+              page: ZB
+            }, GB.add(JB)
           },
-          getPage: pB
+          getPage: hB
         }
-      }(uB)), function(BB) {
+      }(kB)), function(BB) {
         let {
-          internalLogger: jB,
-          config: zB,
-          metas: QB,
-          transports: nB,
-          tracesApi: dB,
-          userActionsApi: IB
+          internalLogger: IB,
+          config: ZB,
+          metas: TB,
+          transports: JB,
+          tracesApi: oB,
+          userActionsApi: GB
         } = BB;
-        var NB;
-        jB.debug("Initializing logs API");
-        let uB = null;
-        const UB = null !== (NB = zB.logArgsSerializer) && void 0 !== NB ? NB : Dz;
+        var vB;
+        IB.debug("Initializing logs API");
+        let kB = null;
+        const cB = null !== (vB = ZB.logArgsSerializer) && void 0 !== vB ? vB : HZ;
         return {
           pushLog: function(BB) {
             let {
-              context: NB,
-              level: aB,
-              skipDedupe: pB,
-              spanContext: rB,
-              timestampOverwriteMs: sB
+              context: vB,
+              level: nB,
+              skipDedupe: hB,
+              spanContext: zB,
+              timestampOverwriteMs: FB
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!Pj(QB).shouldCapture()) return;
-              const JB = Xj(NB),
-                mB = {
-                  message: UB(BB),
-                  level: null !== aB && void 0 !== aB ? aB : "log",
-                  context: KB(JB) ? void 0 : JB,
-                  timestamp: sB ? mj(sB) : Jj(),
-                  trace: rB ? {
-                    trace_id: rB.traceId,
-                    span_id: rB.spanId
-                  } : dB.getTraceContext()
+              if (!eI(TB).shouldCapture()) return;
+              const NB = rI(vB),
+                gB = {
+                  message: cB(BB),
+                  level: null !== nB && void 0 !== nB ? nB : "log",
+                  context: bB(NB) ? void 0 : NB,
+                  timestamp: FB ? gI(FB) : NI(),
+                  trace: zB ? {
+                    trace_id: zB.traceId,
+                    span_id: zB.spanId
+                  } : oB.getTraceContext()
                 },
-                yB = {
-                  message: mB.message,
-                  level: mB.level,
-                  context: mB.context
+                qB = {
+                  message: gB.message,
+                  level: gB.level,
+                  context: gB.context
                 };
-              if (!pB && zB.dedupe && !tB(uB) && Gj(yB, uB)) return void jB.debug("Skipping log push because it is the same as the last one\n", mB);
-              const kB = uB,
-                GB = Wd(QB);
-              if (uB !== kB && !pB && zB.dedupe && Gj(yB, uB)) return;
-              uB = yB;
-              const LB = {
+              if (!hB && ZB.dedupe && !CB(kB) && UI(qB, kB)) return void IB.debug("Skipping log push because it is the same as the last one\n", gB);
+              const yB = kB,
+                UB = mo(TB);
+              if (kB !== yB && !hB && ZB.dedupe && UI(qB, kB)) return;
+              kB = qB;
+              const WB = {
                 type: "log",
-                payload: mB,
-                meta: GB
+                payload: gB,
+                meta: UB
               };
-              jB.debug("Pushing log\n", LB), Sn(IB.getActiveUserAction(), LB) || nB.execute(LB)
-            } catch (JB) {
-              jB.error("Error pushing log\n", JB)
+              IB.debug("Pushing log\n", WB), QJ(GB.getActiveUserAction(), WB) || JB.execute(WB)
+            } catch (NB) {
+              IB.error("Error pushing log\n", NB)
             }
           }
         }
-      }(uB)), function(BB) {
+      }(kB)), function(BB) {
         let {
-          internalLogger: jB,
-          config: zB,
-          metas: QB,
-          transports: nB,
-          tracesApi: dB,
-          userActionsApi: IB
+          internalLogger: IB,
+          config: ZB,
+          metas: TB,
+          transports: JB,
+          tracesApi: oB,
+          userActionsApi: GB
         } = BB;
-        jB.debug("Initializing measurements API");
-        let NB = null;
+        IB.debug("Initializing measurements API");
+        let vB = null;
         return {
           pushMeasurement: function(BB) {
             let {
-              skipDedupe: uB,
-              context: UB,
-              spanContext: aB,
-              timestampOverwriteMs: pB
+              skipDedupe: kB,
+              context: cB,
+              spanContext: nB,
+              timestampOverwriteMs: hB
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!Pj(QB).shouldCapture()) return;
-              const rB = Xj(UB),
-                sB = Rj(Rj({}, BB), {}, {
-                  trace: aB ? {
-                    trace_id: aB.traceId,
-                    span_id: aB.spanId
-                  } : dB.getTraceContext(),
-                  timestamp: pB ? mj(pB) : Jj(),
-                  context: KB(rB) ? void 0 : rB
+              if (!eI(TB).shouldCapture()) return;
+              const zB = rI(cB),
+                FB = VI(VI({}, BB), {}, {
+                  trace: nB ? {
+                    trace_id: nB.traceId,
+                    span_id: nB.spanId
+                  } : oB.getTraceContext(),
+                  timestamp: hB ? gI(hB) : NI(),
+                  context: bB(zB) ? void 0 : zB
                 }),
-                JB = {
-                  type: sB.type,
-                  values: sB.values,
-                  context: sB.context
+                NB = {
+                  type: FB.type,
+                  values: FB.values,
+                  context: FB.context
                 };
-              if (!uB && zB.dedupe && !tB(NB) && Gj(JB, NB)) return void jB.debug("Skipping measurement push because it is the same as the last one\n", sB);
-              const mB = NB,
-                yB = Wd(QB);
-              if (NB !== mB && !uB && zB.dedupe && Gj(JB, NB)) return;
-              NB = JB;
-              const kB = {
+              if (!kB && ZB.dedupe && !CB(vB) && UI(NB, vB)) return void IB.debug("Skipping measurement push because it is the same as the last one\n", FB);
+              const gB = vB,
+                qB = mo(TB);
+              if (vB !== gB && !kB && ZB.dedupe && UI(NB, vB)) return;
+              vB = NB;
+              const yB = {
                 type: "measurement",
-                payload: sB,
-                meta: yB
+                payload: FB,
+                meta: qB
               };
-              jB.debug("Pushing measurement\n", kB), Sn(IB.getActiveUserAction(), kB) || nB.execute(kB)
-            } catch (rB) {
-              jB.error("Error pushing measurement\n", rB)
+              IB.debug("Pushing measurement\n", yB), QJ(GB.getActiveUserAction(), yB) || JB.execute(yB)
+            } catch (zB) {
+              IB.error("Error pushing measurement\n", zB)
             }
           }
         }
-      }(uB)), UB), IB)
+      }(kB)), cB), GB)
     }
 
-    function jI(BB) {
-      const jB = cd(BB),
-        zB = Rd(jB, BB);
-      if (JB() && !BB.isolate) return void zB.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      zB.debug("Initializing");
-      const QB = function(BB, jB) {
-          let zB, QB = [],
-            nB = [],
-            dB = [],
-            IB = 0,
-            NB = 0;
-          const uB = () => QB.reduce(((BB, jB) => Object.assign(BB, oB(jB) ? jB() : jB)), {}),
-            UB = () => {
-              if (nB.length) {
-                const BB = uB();
-                nB.forEach((jB => jB(BB)))
+    function Vo(BB) {
+      const IB = to(BB),
+        ZB = Eo(IB, BB);
+      if (NB() && !BB.isolate) return void ZB.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      ZB.debug("Initializing");
+      const TB = function(BB, IB) {
+          let ZB, TB = [],
+            JB = [],
+            oB = [],
+            GB = 0,
+            vB = 0;
+          const kB = () => TB.reduce(((BB, IB) => Object.assign(BB, pB(IB) ? IB() : IB)), {}),
+            cB = () => {
+              if (JB.length) {
+                const BB = kB();
+                JB.forEach((IB => IB(BB)))
               }
             };
           return {
             add: function() {
-              for (var BB = arguments.length, zB = new Array(BB), nB = 0; nB < BB; nB++) zB[nB] = arguments[nB];
-              jB.debug("Adding metas\n", zB), QB.push(...zB), UB()
+              for (var BB = arguments.length, ZB = new Array(BB), JB = 0; JB < BB; JB++) ZB[JB] = arguments[JB];
+              IB.debug("Adding metas\n", ZB), TB.push(...ZB), cB()
             },
             remove: function() {
-              for (var BB = arguments.length, zB = new Array(BB), nB = 0; nB < BB; nB++) zB[nB] = arguments[nB];
-              jB.debug("Removing metas\n", zB), QB = QB.filter((BB => !zB.includes(BB))), UB()
+              for (var BB = arguments.length, ZB = new Array(BB), JB = 0; JB < BB; JB++) ZB[JB] = arguments[JB];
+              IB.debug("Removing metas\n", ZB), TB = TB.filter((BB => !ZB.includes(BB))), cB()
             },
             addListener: BB => {
-              jB.debug("Adding metas listener\n", BB), nB.push(BB)
+              IB.debug("Adding metas listener\n", BB), JB.push(BB)
             },
             removeListener: BB => {
-              jB.debug("Removing metas listener\n", BB), nB = nB.filter((jB => jB !== BB))
+              IB.debug("Removing metas listener\n", BB), JB = JB.filter((IB => IB !== BB))
             },
             capture: BB => {
-              var jB;
-              const QB = void 0 !== zB,
-                nB = null !== (jB = zB) && void 0 !== jB ? jB : dB;
-              QB || (zB = nB, IB = 0, NB = nB.length);
+              var IB;
+              const TB = void 0 !== ZB,
+                JB = null !== (IB = ZB) && void 0 !== IB ? IB : oB;
+              TB || (ZB = JB, GB = 0, vB = JB.length);
               try {
-                for (; IB < NB;) {
-                  const BB = nB[IB++];
+                for (; GB < vB;) {
+                  const BB = JB[GB++];
                   null === BB || void 0 === BB || BB()
                 }
-                const jB = Pd(uB());
-                return null === BB || void 0 === BB || BB(), jB
+                const IB = ro(kB());
+                return null === BB || void 0 === BB || BB(), IB
               } finally {
-                QB || (zB = void 0)
+                TB || (ZB = void 0)
               }
             },
             addCaptureListener: BB => {
-              dB.push(BB)
+              oB.push(BB)
             },
             removeCaptureListener: BB => {
-              dB = dB.filter((jB => jB !== BB))
+              oB = oB.filter((IB => IB !== BB))
             },
             get value() {
-              return uB()
+              return kB()
             }
           }
-        }(0, zB),
-        nB = xd(jB, zB, BB, QB),
-        dB = BI(jB, zB, BB, QB, nB),
-        IB = function(BB, jB, zB, QB, nB, dB) {
-          jB.debug("Initializing instrumentations");
-          const IB = [];
+        }(0, ZB),
+        JB = uo(IB, ZB, BB, TB),
+        oB = Ko(IB, ZB, BB, TB, JB),
+        GB = function(BB, IB, ZB, TB, JB, oB) {
+          IB.debug("Initializing instrumentations");
+          const GB = [];
           return {
             add: function() {
-              jB.debug("Adding instrumentations");
-              for (var NB = arguments.length, uB = new Array(NB), UB = 0; UB < NB; UB++) uB[UB] = arguments[UB];
-              uB.forEach((NB => {
-                jB.debug(`Adding "${NB.name}" instrumentation`), IB.some((BB => BB.name === NB.name)) ? jB.warn(`Instrumentation ${NB.name} is already added`) : (NB.unpatchedConsole = BB, NB.internalLogger = jB, NB.config = zB, NB.metas = QB, NB.transports = nB, NB.api = dB, IB.push(NB), NB.initialize())
+              IB.debug("Adding instrumentations");
+              for (var vB = arguments.length, kB = new Array(vB), cB = 0; cB < vB; cB++) kB[cB] = arguments[cB];
+              kB.forEach((vB => {
+                IB.debug(`Adding "${vB.name}" instrumentation`), GB.some((BB => BB.name === vB.name)) ? IB.warn(`Instrumentation ${vB.name} is already added`) : (vB.unpatchedConsole = BB, vB.internalLogger = IB, vB.config = ZB, vB.metas = TB, vB.transports = JB, vB.api = oB, GB.push(vB), vB.initialize())
               }))
             },
             get instrumentations() {
-              return [...IB]
+              return [...GB]
             },
             remove: function() {
-              jB.debug("Removing instrumentations");
-              for (var BB = arguments.length, zB = new Array(BB), QB = 0; QB < BB; QB++) zB[QB] = arguments[QB];
-              zB.forEach((BB => {
-                var zB, QB;
-                jB.debug(`Removing "${BB.name}" instrumentation`);
-                const nB = IB.reduce(((jB, zB, QB) => null === jB && zB.name === BB.name ? QB : null), null);
-                null !== nB ? (null === (zB = (QB = IB[nB]).destroy) || void 0 === zB || zB.call(QB), IB.splice(nB, 1)) : jB.warn(`Instrumentation "${BB.name}" is not added`)
+              IB.debug("Removing instrumentations");
+              for (var BB = arguments.length, ZB = new Array(BB), TB = 0; TB < BB; TB++) ZB[TB] = arguments[TB];
+              ZB.forEach((BB => {
+                var ZB, TB;
+                IB.debug(`Removing "${BB.name}" instrumentation`);
+                const JB = GB.reduce(((IB, ZB, TB) => null === IB && ZB.name === BB.name ? TB : null), null);
+                null !== JB ? (null === (ZB = (TB = GB[JB]).destroy) || void 0 === ZB || ZB.call(TB), GB.splice(JB, 1)) : IB.warn(`Instrumentation "${BB.name}" is not added`)
               }))
             }
           }
-        }(jB, zB, BB, QB, nB, dB),
-        NB = yB(jB, zB, BB, QB, nB, dB, IB);
-      return ld(NB),
+        }(IB, ZB, BB, TB, JB, oB),
+        vB = qB(IB, ZB, BB, TB, JB, oB, GB);
+      return Lo(vB),
         function(BB) {
           BB.transports.add(...BB.config.transports), BB.transports.addBeforeSendHooks(BB.config.beforeSend)
-        }(NB),
+        }(vB),
         function(BB) {
           BB.instrumentations.add(...BB.config.instrumentations)
-        }(NB), NB
+        }(vB), vB
     }
 
-    function zI(BB) {
-      const jB = hd(BB);
-      if (jB) return jI(jB)
+    function So(BB) {
+      const IB = Ho(BB);
+      if (IB) return Vo(IB)
     }
   },
-  6641: function(BB, jB, zB) {
-    var QB;
-    ! function(nB, dB) {
-      var IB = "function",
-        NB = "undefined",
-        uB = "object",
-        UB = "string",
-        aB = "major",
-        pB = "model",
-        rB = "name",
-        sB = "type",
-        JB = "vendor",
-        mB = "version",
-        yB = "architecture",
-        kB = "console",
-        GB = "mobile",
-        LB = "tablet",
-        gB = "smarttv",
-        tB = "wearable",
-        SB = "embedded",
-        MB = "Amazon",
-        EB = "Apple",
-        iB = "ASUS",
-        qB = "BlackBerry",
-        fB = "Browser",
-        oB = "Chrome",
-        HB = "Firefox",
-        DB = "Google",
-        FB = "Honor",
-        YB = "Huawei",
-        VB = "LG",
-        hB = "Microsoft",
-        XB = "Motorola",
-        ZB = "Nvidia",
-        AB = "OnePlus",
-        TB = "Opera",
-        PB = "OPPO",
-        WB = "Samsung",
-        eB = "Sharp",
+  6850: function(BB, IB, ZB) {
+    var TB;
+    ! function(JB, oB) {
+      var GB = "function",
+        vB = "undefined",
+        kB = "object",
+        cB = "string",
+        nB = "major",
+        hB = "model",
+        zB = "name",
+        FB = "type",
+        NB = "vendor",
+        gB = "version",
+        qB = "architecture",
+        yB = "console",
+        UB = "mobile",
+        WB = "tablet",
+        dB = "smarttv",
+        CB = "wearable",
+        QB = "embedded",
+        sB = "Amazon",
+        wB = "Apple",
+        OB = "ASUS",
+        YB = "BlackBerry",
+        iB = "Browser",
+        pB = "Chrome",
+        aB = "Firefox",
+        HB = "Google",
+        MB = "Honor",
+        jB = "Huawei",
+        PB = "LG",
+        RB = "Microsoft",
+        rB = "Motorola",
+        mB = "Nvidia",
+        XB = "OnePlus",
+        LB = "Opera",
+        eB = "OPPO",
+        uB = "Samsung",
+        fB = "Sharp",
         lB = "Sony",
-        wB = "Xiaomi",
-        xB = "Zebra",
-        KB = "Facebook",
-        CB = "Chromium OS",
-        cB = "Mac OS",
-        bB = " Browser",
-        vB = function(BB) {
-          for (var jB = {}, zB = 0; zB < BB.length; zB++) jB[BB[zB].toUpperCase()] = BB[zB];
-          return jB
+        AB = "Xiaomi",
+        tB = "Zebra",
+        bB = "Facebook",
+        xB = "Chromium OS",
+        EB = "Mac OS",
+        DB = " Browser",
+        KB = function(BB) {
+          for (var IB = {}, ZB = 0; ZB < BB.length; ZB++) IB[BB[ZB].toUpperCase()] = BB[ZB];
+          return IB
         },
-        RB = function(BB, jB) {
-          return typeof BB === UB && -1 !== OB(jB).indexOf(OB(BB))
+        VB = function(BB, IB) {
+          return typeof BB === cB && -1 !== SB(IB).indexOf(SB(BB))
         },
-        OB = function(BB) {
+        SB = function(BB) {
           return BB.toLowerCase()
         },
-        Bj = function(BB, jB) {
-          if (typeof BB === UB) return BB = BB.replace(/^\s\s*/, ""), typeof jB === NB ? BB : BB.substring(0, 500)
+        BI = function(BB, IB) {
+          if (typeof BB === cB) return BB = BB.replace(/^\s\s*/, ""), typeof IB === vB ? BB : BB.substring(0, 500)
         },
-        jj = function(BB, jB) {
-          for (var zB, QB, nB, NB, UB, aB, pB = 0; pB < jB.length && !UB;) {
-            var rB = jB[pB],
-              sB = jB[pB + 1];
-            for (zB = QB = 0; zB < rB.length && !UB && rB[zB];)
-              if (UB = rB[zB++].exec(BB))
-                for (nB = 0; nB < sB.length; nB++) aB = UB[++QB], typeof(NB = sB[nB]) === uB && NB.length > 0 ? 2 === NB.length ? typeof NB[1] == IB ? this[NB[0]] = NB[1].call(this, aB) : this[NB[0]] = NB[1] : 3 === NB.length ? typeof NB[1] !== IB || NB[1].exec && NB[1].test ? this[NB[0]] = aB ? aB.replace(NB[1], NB[2]) : dB : this[NB[0]] = aB ? NB[1].call(this, aB, NB[2]) : dB : 4 === NB.length && (this[NB[0]] = aB ? NB[3].call(this, aB.replace(NB[1], NB[2])) : dB) : this[NB] = aB || dB;
-            pB += 2
+        II = function(BB, IB) {
+          for (var ZB, TB, JB, vB, cB, nB, hB = 0; hB < IB.length && !cB;) {
+            var zB = IB[hB],
+              FB = IB[hB + 1];
+            for (ZB = TB = 0; ZB < zB.length && !cB && zB[ZB];)
+              if (cB = zB[ZB++].exec(BB))
+                for (JB = 0; JB < FB.length; JB++) nB = cB[++TB], typeof(vB = FB[JB]) === kB && vB.length > 0 ? 2 === vB.length ? typeof vB[1] == GB ? this[vB[0]] = vB[1].call(this, nB) : this[vB[0]] = vB[1] : 3 === vB.length ? typeof vB[1] !== GB || vB[1].exec && vB[1].test ? this[vB[0]] = nB ? nB.replace(vB[1], vB[2]) : oB : this[vB[0]] = nB ? vB[1].call(this, nB, vB[2]) : oB : 4 === vB.length && (this[vB[0]] = nB ? vB[3].call(this, nB.replace(vB[1], vB[2])) : oB) : this[vB] = nB || oB;
+            hB += 2
           }
         },
-        zj = function(BB, jB) {
-          for (var zB in jB)
-            if (typeof jB[zB] === uB && jB[zB].length > 0) {
-              for (var QB = 0; QB < jB[zB].length; QB++)
-                if (RB(jB[zB][QB], BB)) return "?" === zB ? dB : zB
-            } else if (RB(jB[zB], BB)) return "?" === zB ? dB : zB;
-          return jB.hasOwnProperty("*") ? jB["*"] : BB
+        ZI = function(BB, IB) {
+          for (var ZB in IB)
+            if (typeof IB[ZB] === kB && IB[ZB].length > 0) {
+              for (var TB = 0; TB < IB[ZB].length; TB++)
+                if (VB(IB[ZB][TB], BB)) return "?" === ZB ? oB : ZB
+            } else if (VB(IB[ZB], BB)) return "?" === ZB ? oB : ZB;
+          return IB.hasOwnProperty("*") ? IB["*"] : BB
         },
-        Qj = {
+        TI = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        nj = {
+        JI = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [mB, [rB, "Chrome"]],
+            [gB, [zB, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [mB, [rB, "Edge"]],
+            [gB, [zB, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/opios[\/ ]+([\w\.]+)/i],
-            [mB, [rB, TB + " Mini"]],
+            [gB, [zB, LB + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [mB, [rB, TB + " GX"]],
+            [gB, [zB, LB + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [mB, [rB, TB]],
+            [gB, [zB, LB]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [mB, [rB, "Baidu"]],
+            [gB, [zB, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [mB, [rB, "Maxthon"]],
+            [gB, [zB, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [mB, [rB, "Quark"]],
+            [gB, [zB, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [mB, [rB, "DuckDuckGo"]],
+            [gB, [zB, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [mB, [rB, "UC" + fB]],
+            [gB, [zB, "UC" + iB]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [mB, [rB, "WeChat"]],
+            [gB, [zB, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [mB, [rB, "Konqueror"]],
+            [gB, [zB, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [mB, [rB, "IE"]],
+            [gB, [zB, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [mB, [rB, "Yandex"]],
+            [gB, [zB, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [mB, [rB, "Smart Lenovo " + fB]],
+            [gB, [zB, "Smart Lenovo " + iB]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [rB, /(.+)/, "$1 Secure " + fB], mB
+              [zB, /(.+)/, "$1 Secure " + iB], gB
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [mB, [rB, HB + " Focus"]],
+            [gB, [zB, aB + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [mB, [rB, TB + " Touch"]],
+            [gB, [zB, LB + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [mB, [rB, "Coc Coc"]],
+            [gB, [zB, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [mB, [rB, "Dolphin"]],
+            [gB, [zB, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [mB, [rB, TB + " Coast"]],
+            [gB, [zB, LB + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [mB, [rB, "MIUI" + bB]],
+            [gB, [zB, "MIUI" + DB]],
             [/fxios\/([\w\.-]+)/i],
-            [mB, [rB, HB]],
+            [gB, [zB, aB]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [mB, [rB, "360"]],
+            [gB, [zB, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [rB, /(.+)/, "$1Browser"], mB
+              [zB, /(.+)/, "$1Browser"], gB
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [rB, /(.+)/, "$1" + bB], mB
+              [zB, /(.+)/, "$1" + DB], gB
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [mB, [rB, WB + " Internet"]],
+            [gB, [zB, uB + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [mB, [rB, "Sogou Explorer"]],
+            [gB, [zB, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [rB, "Sogou Mobile"], mB
+              [zB, "Sogou Mobile"], gB
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [rB],
+            [zB],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [mB, rB],
+            [gB, zB],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [rB, KB], mB
+              [zB, bB], gB
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [mB, [rB, "GSA"]],
+            [gB, [zB, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [mB, [rB, "TikTok"]],
+            [gB, [zB, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [mB, [rB, oB + " Headless"]],
+            [gB, [zB, pB + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [rB, oB + " WebView"], mB
+              [zB, pB + " WebView"], gB
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [mB, [rB, "Android " + fB]],
+            [gB, [zB, "Android " + iB]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [mB, [rB, "Mobile Safari"]],
+            [gB, [zB, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [mB, rB],
+            [gB, zB],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [rB, [mB, zj, {
+            [zB, [gB, ZI, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,638 +4737,638 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [rB, "Netscape"], mB
+              [zB, "Netscape"], gB
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [mB, [rB, HB + " Reality"]],
+            [gB, [zB, aB + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [rB, [mB, /_/g, "."]],
+            [zB, [gB, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [rB, [mB, /master.|lts./, ""]]
+            [zB, [gB, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [yB, "amd64"]
+              [qB, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [yB, "ia32"]
+              [qB, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [yB, "arm64"]
+              [qB, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [yB, "armhf"]
+              [qB, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [yB, "arm"]
+              [qB, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [yB, /ower/, "", OB]
+              [qB, /ower/, "", SB]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [yB, "sparc"]
+              [qB, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [yB, OB]
+              [qB, SB]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [pB, [JB, WB],
-              [sB, LB]
+            [hB, [NB, uB],
+              [FB, WB]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [pB, [JB, WB],
-              [sB, GB]
+            [hB, [NB, uB],
+              [FB, UB]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [pB, [JB, EB],
-              [sB, GB]
+            [hB, [NB, wB],
+              [FB, UB]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [pB, [JB, EB],
-              [sB, LB]
+            [hB, [NB, wB],
+              [FB, WB]
             ],
             [/(macintosh);/i],
-            [pB, [JB, EB]],
+            [hB, [NB, wB]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [pB, [JB, eB],
-              [sB, GB]
+            [hB, [NB, fB],
+              [FB, UB]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [pB, [JB, FB],
-              [sB, LB]
+            [hB, [NB, MB],
+              [FB, WB]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [pB, [JB, FB],
-              [sB, GB]
+            [hB, [NB, MB],
+              [FB, UB]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [pB, [JB, YB],
-              [sB, LB]
+            [hB, [NB, jB],
+              [FB, WB]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [pB, [JB, YB],
-              [sB, GB]
+            [hB, [NB, jB],
+              [FB, UB]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [pB, /_/g, " "],
-              [JB, wB],
-              [sB, LB]
+              [hB, /_/g, " "],
+              [NB, AB],
+              [FB, WB]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [pB, /_/g, " "],
-              [JB, wB],
-              [sB, GB]
+              [hB, /_/g, " "],
+              [NB, AB],
+              [FB, UB]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [pB, [JB, PB],
-              [sB, GB]
+            [hB, [NB, eB],
+              [FB, UB]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [pB, [JB, zj, {
+            [hB, [NB, ZI, {
                 OnePlus: ["304", "403", "203"],
-                "*": PB
+                "*": eB
               }],
-              [sB, LB]
+              [FB, WB]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [pB, [JB, "Vivo"],
-              [sB, GB]
+            [hB, [NB, "Vivo"],
+              [FB, UB]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [pB, [JB, "Realme"],
-              [sB, GB]
+            [hB, [NB, "Realme"],
+              [FB, UB]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [pB, [JB, XB],
-              [sB, GB]
+            [hB, [NB, rB],
+              [FB, UB]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [pB, [JB, XB],
-              [sB, LB]
+            [hB, [NB, rB],
+              [FB, WB]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [pB, [JB, VB],
-              [sB, LB]
+            [hB, [NB, PB],
+              [FB, WB]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [pB, [JB, VB],
-              [sB, GB]
+            [hB, [NB, PB],
+              [FB, UB]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [pB, [JB, "Lenovo"],
-              [sB, LB]
+            [hB, [NB, "Lenovo"],
+              [FB, WB]
             ],
             [/(nokia) (t[12][01])/i],
-            [JB, pB, [sB, LB]],
+            [NB, hB, [FB, WB]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [pB, /_/g, " "],
-              [sB, GB],
-              [JB, "Nokia"]
+              [hB, /_/g, " "],
+              [FB, UB],
+              [NB, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [pB, [JB, DB],
-              [sB, LB]
+            [hB, [NB, HB],
+              [FB, WB]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [pB, [JB, DB],
-              [sB, GB]
+            [hB, [NB, HB],
+              [FB, UB]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [pB, [JB, lB],
-              [sB, GB]
+            [hB, [NB, lB],
+              [FB, UB]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [pB, "Xperia Tablet"],
-              [JB, lB],
-              [sB, LB]
+              [hB, "Xperia Tablet"],
+              [NB, lB],
+              [FB, WB]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [pB, [JB, AB],
-              [sB, GB]
+            [hB, [NB, XB],
+              [FB, UB]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [pB, [JB, MB],
-              [sB, LB]
+            [hB, [NB, sB],
+              [FB, WB]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [pB, /(.+)/g, "Fire Phone $1"],
-              [JB, MB],
-              [sB, GB]
+              [hB, /(.+)/g, "Fire Phone $1"],
+              [NB, sB],
+              [FB, UB]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [pB, JB, [sB, LB]],
+            [hB, NB, [FB, WB]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [pB, [JB, qB],
-              [sB, GB]
+            [hB, [NB, YB],
+              [FB, UB]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [pB, [JB, iB],
-              [sB, LB]
+            [hB, [NB, OB],
+              [FB, WB]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [pB, [JB, iB],
-              [sB, GB]
+            [hB, [NB, OB],
+              [FB, UB]
             ],
             [/(nexus 9)/i],
-            [pB, [JB, "HTC"],
-              [sB, LB]
+            [hB, [NB, "HTC"],
+              [FB, WB]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [JB, [pB, /_/g, " "],
-              [sB, GB]
+            [NB, [hB, /_/g, " "],
+              [FB, UB]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [pB, [JB, "TCL"],
-              [sB, LB]
+            [hB, [NB, "TCL"],
+              [FB, WB]
             ],
             [/(itel) ((\w+))/i],
             [
-              [JB, OB], pB, [sB, zj, {
+              [NB, SB], hB, [FB, ZI, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [pB, [JB, "Acer"],
-              [sB, LB]
+            [hB, [NB, "Acer"],
+              [FB, WB]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [pB, [JB, "Meizu"],
-              [sB, GB]
+            [hB, [NB, "Meizu"],
+              [FB, UB]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [pB, [JB, "Ulefone"],
-              [sB, GB]
+            [hB, [NB, "Ulefone"],
+              [FB, UB]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [pB, [JB, "Energizer"],
-              [sB, GB]
+            [hB, [NB, "Energizer"],
+              [FB, UB]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [pB, [JB, "Cat"],
-              [sB, GB]
+            [hB, [NB, "Cat"],
+              [FB, UB]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [pB, [JB, "Smartfren"],
-              [sB, GB]
+            [hB, [NB, "Smartfren"],
+              [FB, UB]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [pB, [JB, "Nothing"],
-              [sB, GB]
+            [hB, [NB, "Nothing"],
+              [FB, UB]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [pB, [JB, "Archos"],
-              [sB, LB]
+            [hB, [NB, "Archos"],
+              [FB, WB]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [pB, [JB, "Archos"],
-              [sB, GB]
+            [hB, [NB, "Archos"],
+              [FB, UB]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [JB, pB, [sB, LB]],
+            [NB, hB, [FB, WB]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [JB, pB, [sB, GB]],
+            [NB, hB, [FB, UB]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [JB, pB, [sB, LB]],
+            [NB, hB, [FB, WB]],
             [/(surface duo)/i],
-            [pB, [JB, hB],
-              [sB, LB]
+            [hB, [NB, RB],
+              [FB, WB]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [pB, [JB, "Fairphone"],
-              [sB, GB]
+            [hB, [NB, "Fairphone"],
+              [FB, UB]
             ],
             [/(u304aa)/i],
-            [pB, [JB, "AT&T"],
-              [sB, GB]
+            [hB, [NB, "AT&T"],
+              [FB, UB]
             ],
             [/\bsie-(\w*)/i],
-            [pB, [JB, "Siemens"],
-              [sB, GB]
+            [hB, [NB, "Siemens"],
+              [FB, UB]
             ],
             [/\b(rct\w+) b/i],
-            [pB, [JB, "RCA"],
-              [sB, LB]
+            [hB, [NB, "RCA"],
+              [FB, WB]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [pB, [JB, "Dell"],
-              [sB, LB]
+            [hB, [NB, "Dell"],
+              [FB, WB]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [pB, [JB, "Verizon"],
-              [sB, LB]
+            [hB, [NB, "Verizon"],
+              [FB, WB]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [pB, [JB, "Barnes & Noble"],
-              [sB, LB]
+            [hB, [NB, "Barnes & Noble"],
+              [FB, WB]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [pB, [JB, "NuVision"],
-              [sB, LB]
+            [hB, [NB, "NuVision"],
+              [FB, WB]
             ],
             [/\b(k88) b/i],
-            [pB, [JB, "ZTE"],
-              [sB, LB]
+            [hB, [NB, "ZTE"],
+              [FB, WB]
             ],
             [/\b(nx\d{3}j) b/i],
-            [pB, [JB, "ZTE"],
-              [sB, GB]
+            [hB, [NB, "ZTE"],
+              [FB, UB]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [pB, [JB, "Swiss"],
-              [sB, GB]
+            [hB, [NB, "Swiss"],
+              [FB, UB]
             ],
             [/\b(zur\d{3}) b/i],
-            [pB, [JB, "Swiss"],
-              [sB, LB]
+            [hB, [NB, "Swiss"],
+              [FB, WB]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [pB, [JB, "Zeki"],
-              [sB, LB]
+            [hB, [NB, "Zeki"],
+              [FB, WB]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [JB, "Dragon Touch"], pB, [sB, LB]
+              [NB, "Dragon Touch"], hB, [FB, WB]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [pB, [JB, "Insignia"],
-              [sB, LB]
+            [hB, [NB, "Insignia"],
+              [FB, WB]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [pB, [JB, "NextBook"],
-              [sB, LB]
+            [hB, [NB, "NextBook"],
+              [FB, WB]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [JB, "Voice"], pB, [sB, GB]
+              [NB, "Voice"], hB, [FB, UB]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [JB, "LvTel"], pB, [sB, GB]
+              [NB, "LvTel"], hB, [FB, UB]
             ],
             [/\b(ph-1) /i],
-            [pB, [JB, "Essential"],
-              [sB, GB]
+            [hB, [NB, "Essential"],
+              [FB, UB]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [pB, [JB, "Envizen"],
-              [sB, LB]
+            [hB, [NB, "Envizen"],
+              [FB, WB]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [pB, [JB, "MachSpeed"],
-              [sB, LB]
+            [hB, [NB, "MachSpeed"],
+              [FB, WB]
             ],
             [/\btu_(1491) b/i],
-            [pB, [JB, "Rotor"],
-              [sB, LB]
+            [hB, [NB, "Rotor"],
+              [FB, WB]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [pB, [JB, ZB],
-              [sB, LB]
+            [hB, [NB, mB],
+              [FB, WB]
             ],
             [/(sprint) (\w+)/i],
-            [JB, pB, [sB, GB]],
+            [NB, hB, [FB, UB]],
             [/(kin\.[onetw]{3})/i],
             [
-              [pB, /\./g, " "],
-              [JB, hB],
-              [sB, GB]
+              [hB, /\./g, " "],
+              [NB, RB],
+              [FB, UB]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [pB, [JB, xB],
-              [sB, LB]
+            [hB, [NB, tB],
+              [FB, WB]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [pB, [JB, xB],
-              [sB, GB]
+            [hB, [NB, tB],
+              [FB, UB]
             ],
             [/smart-tv.+(samsung)/i],
-            [JB, [sB, gB]],
+            [NB, [FB, dB]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [pB, /^/, "SmartTV"],
-              [JB, WB],
-              [sB, gB]
+              [hB, /^/, "SmartTV"],
+              [NB, uB],
+              [FB, dB]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [JB, VB],
-              [sB, gB]
+              [NB, PB],
+              [FB, dB]
             ],
             [/(apple) ?tv/i],
-            [JB, [pB, EB + " TV"],
-              [sB, gB]
+            [NB, [hB, wB + " TV"],
+              [FB, dB]
             ],
             [/crkey/i],
             [
-              [pB, oB + "cast"],
-              [JB, DB],
-              [sB, gB]
+              [hB, pB + "cast"],
+              [NB, HB],
+              [FB, dB]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [pB, [JB, MB],
-              [sB, gB]
+            [hB, [NB, sB],
+              [FB, dB]
             ],
             [/(shield \w+ tv)/i],
-            [pB, [JB, ZB],
-              [sB, gB]
+            [hB, [NB, mB],
+              [FB, dB]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [pB, [JB, eB],
-              [sB, gB]
+            [hB, [NB, fB],
+              [FB, dB]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [pB, [JB, lB],
-              [sB, gB]
+            [hB, [NB, lB],
+              [FB, dB]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [pB, [JB, wB],
-              [sB, gB]
+            [hB, [NB, AB],
+              [FB, dB]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [JB, pB, [sB, gB]],
+            [NB, hB, [FB, dB]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [JB, Bj],
-              [pB, Bj],
-              [sB, gB]
+              [NB, BI],
+              [hB, BI],
+              [FB, dB]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [pB, [sB, gB]],
+            [hB, [FB, dB]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [sB, gB]
+              [FB, dB]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [JB, pB, [sB, kB]],
+            [NB, hB, [FB, yB]],
             [/droid.+; (shield)( bui|\))/i],
-            [pB, [JB, ZB],
-              [sB, kB]
+            [hB, [NB, mB],
+              [FB, yB]
             ],
             [/(playstation \w+)/i],
-            [pB, [JB, lB],
-              [sB, kB]
+            [hB, [NB, lB],
+              [FB, yB]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [pB, [JB, hB],
-              [sB, kB]
+            [hB, [NB, RB],
+              [FB, yB]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [pB, [JB, WB],
-              [sB, tB]
+            [hB, [NB, uB],
+              [FB, CB]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [JB, pB, [sB, tB]],
+            [NB, hB, [FB, CB]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [pB, [JB, PB],
-              [sB, tB]
+            [hB, [NB, eB],
+              [FB, CB]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [pB, [JB, EB],
-              [sB, tB]
+            [hB, [NB, wB],
+              [FB, CB]
             ],
             [/(opwwe\d{3})/i],
-            [pB, [JB, AB],
-              [sB, tB]
+            [hB, [NB, XB],
+              [FB, CB]
             ],
             [/(moto 360)/i],
-            [pB, [JB, XB],
-              [sB, tB]
+            [hB, [NB, rB],
+              [FB, CB]
             ],
             [/(smartwatch 3)/i],
-            [pB, [JB, lB],
-              [sB, tB]
+            [hB, [NB, lB],
+              [FB, CB]
             ],
             [/(g watch r)/i],
-            [pB, [JB, VB],
-              [sB, tB]
+            [hB, [NB, PB],
+              [FB, CB]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [pB, [JB, xB],
-              [sB, tB]
+            [hB, [NB, tB],
+              [FB, CB]
             ],
             [/droid.+; (glass) \d/i],
-            [pB, [JB, DB],
-              [sB, tB]
+            [hB, [NB, HB],
+              [FB, CB]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [JB, pB, [sB, tB]],
+            [NB, hB, [FB, CB]],
             [/; (quest( \d| pro)?)/i],
-            [pB, [JB, KB],
-              [sB, tB]
+            [hB, [NB, bB],
+              [FB, CB]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [JB, [sB, SB]],
+            [NB, [FB, QB]],
             [/(aeobc)\b/i],
-            [pB, [JB, MB],
-              [sB, SB]
+            [hB, [NB, sB],
+              [FB, QB]
             ],
             [/(homepod).+mac os/i],
-            [pB, [JB, EB],
-              [sB, SB]
+            [hB, [NB, wB],
+              [FB, QB]
             ],
             [/windows iot/i],
             [
-              [sB, SB]
+              [FB, QB]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [pB, [sB, GB]],
+            [hB, [FB, UB]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [pB, [sB, LB]],
+            [hB, [FB, WB]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [sB, LB]
+              [FB, WB]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [sB, GB]
+              [FB, UB]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [pB, [JB, "Generic"]]
+            [hB, [NB, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [mB, [rB, "EdgeHTML"]],
+            [gB, [zB, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [rB, mB],
+            [zB, gB],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [mB, [rB, "Blink"]],
+            [gB, [zB, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [rB, mB],
+            [zB, gB],
             [/ladybird\//i],
             [
-              [rB, "LibWeb"]
+              [zB, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [mB, rB]
+            [gB, zB]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [rB, mB],
+            [zB, gB],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [rB, [mB, zj, Qj]],
+            [zB, [gB, ZI, TI]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [mB, zj, Qj],
-              [rB, "Windows"]
+              [gB, ZI, TI],
+              [zB, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [mB, /_/g, "."],
-              [rB, "iOS"]
+              [gB, /_/g, "."],
+              [zB, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [rB, cB],
-              [mB, /_/g, "."]
+              [zB, EB],
+              [gB, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [mB, rB],
+            [gB, zB],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [rB, /(.+)/, "$1 Touch"], mB
+              [zB, /(.+)/, "$1 Touch"], gB
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [rB, mB],
+            [zB, gB],
             [/\(bb(10);/i],
-            [mB, [rB, qB]],
+            [gB, [zB, YB]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [mB, [rB, "Symbian"]],
+            [gB, [zB, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [mB, [rB, HB + " OS"]],
+            [gB, [zB, aB + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [mB, [rB, "webOS"]],
+            [gB, [zB, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [mB, [rB, "watchOS"]],
+            [gB, [zB, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [mB, [rB, oB + "cast"]],
+            [gB, [zB, pB + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [rB, CB], mB
+              [zB, xB], gB
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [rB, mB],
+            [zB, gB],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [rB, "Solaris"], mB
+              [zB, "Solaris"], gB
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [rB, mB]
+            [zB, gB]
           ]
         },
-        dj = function(BB, jB) {
-          if (typeof BB === uB && (jB = BB, BB = dB), !(this instanceof dj)) return new dj(BB, jB).getResult();
-          var zB = typeof nB !== NB && nB.navigator ? nB.navigator : dB,
-            QB = BB || (zB && zB.userAgent ? zB.userAgent : ""),
-            kB = zB && zB.userAgentData ? zB.userAgentData : dB,
-            gB = jB ? function(BB, jB) {
-              var zB = {};
-              for (var QB in BB) jB[QB] && jB[QB].length % 2 === 0 ? zB[QB] = jB[QB].concat(BB[QB]) : zB[QB] = BB[QB];
-              return zB
-            }(nj, jB) : nj,
-            tB = zB && zB.userAgent == QB;
+        oI = function(BB, IB) {
+          if (typeof BB === kB && (IB = BB, BB = oB), !(this instanceof oI)) return new oI(BB, IB).getResult();
+          var ZB = typeof JB !== vB && JB.navigator ? JB.navigator : oB,
+            TB = BB || (ZB && ZB.userAgent ? ZB.userAgent : ""),
+            yB = ZB && ZB.userAgentData ? ZB.userAgentData : oB,
+            dB = IB ? function(BB, IB) {
+              var ZB = {};
+              for (var TB in BB) IB[TB] && IB[TB].length % 2 === 0 ? ZB[TB] = IB[TB].concat(BB[TB]) : ZB[TB] = BB[TB];
+              return ZB
+            }(JI, IB) : JI,
+            CB = ZB && ZB.userAgent == TB;
           return this.getBrowser = function() {
-            var BB, jB = {};
-            return jB[rB] = dB, jB[mB] = dB, jj.call(jB, QB, gB.browser), jB[aB] = typeof(BB = jB[mB]) === UB ? BB.replace(/[^\d\.]/g, "").split(".")[0] : dB, tB && zB && zB.brave && typeof zB.brave.isBrave == IB && (jB[rB] = "Brave"), jB
+            var BB, IB = {};
+            return IB[zB] = oB, IB[gB] = oB, II.call(IB, TB, dB.browser), IB[nB] = typeof(BB = IB[gB]) === cB ? BB.replace(/[^\d\.]/g, "").split(".")[0] : oB, CB && ZB && ZB.brave && typeof ZB.brave.isBrave == GB && (IB[zB] = "Brave"), IB
           }, this.getCPU = function() {
             var BB = {};
-            return BB[yB] = dB, jj.call(BB, QB, gB.cpu), BB
+            return BB[qB] = oB, II.call(BB, TB, dB.cpu), BB
           }, this.getDevice = function() {
             var BB = {};
-            return BB[JB] = dB, BB[pB] = dB, BB[sB] = dB, jj.call(BB, QB, gB.device), tB && !BB[sB] && kB && kB.mobile && (BB[sB] = GB), tB && "Macintosh" == BB[pB] && zB && typeof zB.standalone !== NB && zB.maxTouchPoints && zB.maxTouchPoints > 2 && (BB[pB] = "iPad", BB[sB] = LB), BB
-          }, this.wJ = function() {
+            return BB[NB] = oB, BB[hB] = oB, BB[FB] = oB, II.call(BB, TB, dB.device), CB && !BB[FB] && yB && yB.mobile && (BB[FB] = UB), CB && "Macintosh" == BB[hB] && ZB && typeof ZB.standalone !== vB && ZB.maxTouchPoints && ZB.maxTouchPoints > 2 && (BB[hB] = "iPad", BB[FB] = WB), BB
+          }, this.PN = function() {
             var BB = {};
-            return BB[rB] = dB, BB[mB] = dB, jj.call(BB, QB, gB.engine), BB
+            return BB[zB] = oB, BB[gB] = oB, II.call(BB, TB, dB.engine), BB
           }, this.getOS = function() {
             var BB = {};
-            return BB[rB] = dB, BB[mB] = dB, jj.call(BB, QB, gB.os), tB && !BB[rB] && kB && kB.platform && "Unknown" != kB.platform && (BB[rB] = kB.platform.replace(/chrome os/i, CB).replace(/macos/i, cB)), BB
+            return BB[zB] = oB, BB[gB] = oB, II.call(BB, TB, dB.os), CB && !BB[zB] && yB && yB.platform && "Unknown" != yB.platform && (BB[zB] = yB.platform.replace(/chrome os/i, xB).replace(/macos/i, EB)), BB
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.wJ(),
+              engine: this.PN(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return QB
+            return TB
           }, this.setUA = function(BB) {
-            return QB = typeof BB === UB && BB.length > 500 ? Bj(BB, 500) : BB, this
-          }, this.setUA(QB), this
+            return TB = typeof BB === cB && BB.length > 500 ? BI(BB, 500) : BB, this
+          }, this.setUA(TB), this
         };
-      dj.VERSION = "1.0.41", dj.BROWSER = vB([rB, mB, aB]), dj.CPU = vB([yB]), dj.DEVICE = vB([pB, JB, sB, kB, GB, gB, LB, tB, SB]), dj.ENGINE = dj.OS = vB([rB, mB]), typeof jB !== NB ? (BB.exports && (jB = BB.exports = dj), jB.UAParser = dj) : zB.amdO ? (QB = function() {
-        return dj
-      }.call(jB, zB, jB, BB)) === dB || (BB.exports = QB) : typeof nB !== NB && (nB.UAParser = dj);
-      var Ij = typeof nB !== NB && (nB.jQuery || nB.Zepto);
-      if (Ij && !Ij.ua) {
-        var Nj = new dj;
-        Ij.ua = Nj.getResult(), Ij.ua.get = function() {
-          return Nj.getUA()
-        }, Ij.ua.set = function(BB) {
-          Nj.setUA(BB);
-          var jB = Nj.getResult();
-          for (var zB in jB) Ij.ua[zB] = jB[zB]
+      oI.VERSION = "1.0.41", oI.BROWSER = KB([zB, gB, nB]), oI.CPU = KB([qB]), oI.DEVICE = KB([hB, NB, FB, yB, UB, dB, WB, CB, QB]), oI.ENGINE = oI.OS = KB([zB, gB]), typeof IB !== vB ? (BB.exports && (IB = BB.exports = oI), IB.UAParser = oI) : ZB.amdO ? (TB = function() {
+        return oI
+      }.call(IB, ZB, IB, BB)) === oB || (BB.exports = TB) : typeof JB !== vB && (JB.UAParser = oI);
+      var GI = typeof JB !== vB && (JB.jQuery || JB.Zepto);
+      if (GI && !GI.ua) {
+        var vI = new oI;
+        GI.ua = vI.getResult(), GI.ua.get = function() {
+          return vI.getUA()
+        }, GI.ua.set = function(BB) {
+          vI.setUA(BB);
+          var IB = vI.getResult();
+          for (var ZB in IB) GI.ua[ZB] = IB[ZB]
         }
       }
     }("object" === typeof window ? window : this)

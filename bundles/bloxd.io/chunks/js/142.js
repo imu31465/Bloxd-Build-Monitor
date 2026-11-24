@@ -1,142 +1,142 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  41831: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      compilePagePack: () => UB,
-      prefetchCompiler: () => NB,
-      reconcileHint: () => uB
+  41763: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      compilePagePack: () => cB,
+      prefetchCompiler: () => vB,
+      reconcileHint: () => kB
     });
-    var QB = zB(6574),
-      nB = zB(6601),
-      dB = zB(6585),
-      IB = zB(6598);
+    var TB = ZB(6763),
+      JB = ZB(6800),
+      oB = ZB(6778),
+      GB = ZB(6792);
 
-    function NB() {
-      (0, QB.loadPageShaderPackCompiler)()
+    function vB() {
+      (0, TB.loadPageShaderPackCompiler)()
     }
-    async function uB() {
-      const BB = await (0, QB.loadPageShaderPackCompiler)();
-      await (BB ? (0, nB.reconcileStoredShaderPackHint)(BB) : (0, nB.forgetShaderPackActiveHint)())
+    async function kB() {
+      const BB = await (0, TB.loadPageShaderPackCompiler)();
+      await (BB ? (0, JB.reconcileStoredShaderPackHint)(BB) : (0, JB.forgetShaderPackActiveHint)())
     }
-    async function UB(BB) {
-      const jB = await (0, QB.loadPageShaderPackCompiler)();
-      if (!jB) return {
+    async function cB(BB) {
+      const IB = await (0, TB.loadPageShaderPackCompiler)();
+      if (!IB) return {
         status: "none"
       };
-      const zB = await (0, IB.c)(BB, jB),
-        NB = (0, nB.storedPackOutcome)(zB, jB);
-      if ("none" === NB.kind) return {
+      const ZB = await (0, GB.d)(BB, IB),
+        vB = (0, JB.storedPackOutcome)(ZB, IB);
+      if ("none" === vB.kind) return {
         status: "none"
       };
-      const uB = jB.O4((0, nB.storedShaderPackFiles)(zB), (0, dB.shaderPackTextures)());
-      if ("blocked" === NB.kind) return {
+      const kB = IB.yBB((0, JB.storedShaderPackFiles)(ZB), (0, oB.shaderPackTextures)());
+      if ("blocked" === vB.kind) return {
         status: "blocked",
-        messageKey: NB.messageKey,
-        variants: 0 === uB.errors.length ? uB.variants : null
+        messageKey: vB.messageKey,
+        variants: 0 === kB.errors.length ? kB.variants : null
       };
-      if (uB.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", uB.errors), {
+      if (kB.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", kB.errors), {
         status: "none"
       };
       const {
-        name: UB,
-        keepCircleShadows: aB
-      } = zB.manifest;
+        name: cB,
+        keepCircleShadows: nB
+      } = ZB.manifest;
       return {
         status: "active",
         pack: {
-          name: UB,
-          variants: uB.variants,
-          keepCircleShadows: !0 === aB
+          name: cB,
+          variants: kB.variants,
+          keepCircleShadows: !0 === nB
         }
       }
     }
   },
-  6601: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      forgetShaderPackActiveHint: () => oB,
-      isOtherApiVersion: () => EB,
-      isShaderPackActive: () => gB,
-      isShaderPackChangePending: () => MB,
-      markShaderPackChangePending: () => SB,
-      pageShaderPackValidationVersion: () => iB,
-      reconcileStoredShaderPackHint: () => fB,
-      removeShaderPack: () => LB,
-      replaceShaderPack: () => yB,
-      saveShaderPack: () => mB,
-      shaderPackNeedsCheck: () => qB,
-      storedPackOutcome: () => tB,
-      storedShaderPackFiles: () => rB,
-      toStoredShaderPack: () => pB
+  6800: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      forgetShaderPackActiveHint: () => pB,
+      isOtherApiVersion: () => wB,
+      isShaderPackActive: () => dB,
+      isShaderPackChangePending: () => sB,
+      markShaderPackChangePending: () => QB,
+      pageShaderPackValidationVersion: () => OB,
+      reconcileStoredShaderPackHint: () => iB,
+      removeShaderPack: () => WB,
+      replaceShaderPack: () => qB,
+      saveShaderPack: () => gB,
+      shaderPackNeedsCheck: () => YB,
+      storedPackOutcome: () => CB,
+      storedShaderPackFiles: () => zB,
+      toStoredShaderPack: () => hB
     });
-    var QB = zB(5120),
-      nB = zB(5115),
-      dB = zB(41),
-      IB = zB(3572),
-      NB = zB(6606),
-      uB = zB(6585);
-    const UB = "shaderPackChangePending";
-    let aB = null;
+    var TB = ZB(5210),
+      JB = ZB(5204),
+      oB = ZB(36),
+      GB = ZB(3640),
+      vB = ZB(6808),
+      kB = ZB(6778);
+    const cB = "shaderPackChangePending";
+    let nB = null;
 
-    function pB(BB, jB, zB) {
+    function hB(BB, IB, ZB) {
       return {
         manifest: BB.manifest,
-        files: (0, QB.w)(BB.files),
-        validation: jB,
-        ...zB && {
-          listing: zB
+        files: (0, TB.y)(BB.files),
+        validation: IB,
+        ...ZB && {
+          listing: ZB
         }
       }
     }
 
-    function rB(BB) {
-      return Object.keys(BB.files).map((jB => ({
-        path: jB,
-        source: BB.files[jB]
+    function zB(BB) {
+      return Object.keys(BB.files).map((IB => ({
+        path: IB,
+        source: BB.files[IB]
       })))
     }
-    let sB = Promise.resolve();
+    let FB = Promise.resolve();
 
-    function JB(BB) {
-      const jB = sB.then(BB);
-      return sB = jB.catch((() => {})), jB
-    }
-
-    function mB(BB, jB) {
-      return JB((() => kB(BB, jB)))
+    function NB(BB) {
+      const IB = FB.then(BB);
+      return FB = IB.catch((() => {})), IB
     }
 
-    function yB(BB, jB, zB) {
-      return JB((async () => JSON.stringify(await (0, NB.h)()) === JSON.stringify(BB) && (null === jB ? (await GB(), !0) : kB(jB, zB))))
-    }
-    async function kB(BB, jB) {
-      const zB = await dB.g.setItem(NB.d, BB);
-      return zB && HB(BB, jB), zB
-    }
-    async function GB() {
-      await dB.g.removeItem(NB.d), dB.j.removeItem(IB.e)
+    function gB(BB, IB) {
+      return NB((() => yB(BB, IB)))
     }
 
-    function LB() {
-      return JB(GB)
+    function qB(BB, IB, ZB) {
+      return NB((async () => JSON.stringify(await (0, vB.i)()) === JSON.stringify(BB) && (null === IB ? (await UB(), !0) : yB(IB, ZB))))
+    }
+    async function yB(BB, IB) {
+      const ZB = await oB.i.setItem(vB.e, BB);
+      return ZB && aB(BB, IB), ZB
+    }
+    async function UB() {
+      await oB.i.removeItem(vB.e), oB.m.removeItem(GB.e)
     }
 
-    function gB(BB, jB) {
-      return "active" === tB(BB, jB).kind
+    function WB() {
+      return NB(UB)
     }
 
-    function tB(BB, jB) {
-      var zB;
+    function dB(BB, IB) {
+      return "active" === CB(BB, IB).kind
+    }
+
+    function CB(BB, IB) {
+      var ZB;
       return null === BB ? {
         kind: "none",
         reason: "nothingStored"
-      } : EB(BB) ? {
+      } : wB(BB) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (zB = BB.validation) || void 0 === zB ? void 0 : zB.ok) || BB.validation.fromRecheck ? null === jB ? {
+      } : !1 !== (null === (ZB = BB.validation) || void 0 === ZB ? void 0 : ZB.ok) || BB.validation.fromRecheck ? null === IB ? {
         kind: "none",
         reason: "noCompiler"
-      } : qB(BB, jB) ? {
+      } : YB(BB, IB) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
       } : BB.validation.ok ? {
@@ -150,121 +150,121 @@ export const modules = {
       }
     }
 
-    function SB() {
-      dB.k.setItem(UB, performance.timeOrigin)
+    function QB() {
+      oB.n.setItem(cB, performance.timeOrigin)
     }
 
-    function MB() {
-      return dB.k.getItem(UB) === performance.timeOrigin
+    function sB() {
+      return oB.n.getItem(cB) === performance.timeOrigin
     }
 
-    function EB(BB) {
-      return !(0, nB.k)(BB.manifest.apiVersion)
+    function wB(BB) {
+      return !(0, JB.g)(BB.manifest.apiVersion)
+    }
+
+    function OB(BB) {
+      return nB ??= BB.rM((0, kB.shaderPackTextures)()), nB
+    }
+
+    function YB(BB, IB) {
+      var ZB;
+      return (null === (ZB = BB.validation) || void 0 === ZB ? void 0 : ZB.headerVersion) !== OB(IB)
     }
 
     function iB(BB) {
-      return aB ??= BB.ZF((0, uB.shaderPackTextures)()), aB
-    }
-
-    function qB(BB, jB) {
-      var zB;
-      return (null === (zB = BB.validation) || void 0 === zB ? void 0 : zB.headerVersion) !== iB(jB)
-    }
-
-    function fB(BB) {
-      return JB((async () => {
-        HB(await (0, NB.h)(!0), BB)
+      return NB((async () => {
+        aB(await (0, vB.i)(!0), BB)
       }))
     }
 
-    function oB() {
-      return JB((async () => {
-        dB.j.removeItem(IB.e)
+    function pB() {
+      return NB((async () => {
+        oB.m.removeItem(GB.e)
       }))
     }
 
-    function HB(BB, jB) {
-      gB(BB, jB) ? dB.j.setItem(IB.e, !0) : dB.j.removeItem(IB.e)
+    function aB(BB, IB) {
+      dB(BB, IB) ? oB.m.setItem(GB.e, !0) : oB.m.removeItem(GB.e)
     }
   },
-  6598: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => uB,
-      f: () => NB
+  6792: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => kB,
+      h: () => vB
     });
-    var QB = zB(6601),
-      nB = zB(6585),
-      dB = zB(128);
-    const IB = 100;
-    async function NB(BB, jB) {
-      var zB;
-      let QB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (zB = navigator.gpu) && void 0 !== zB ? zB : null;
-      const IB = BB.O4(jB, (0, nB.shaderPackTextures)());
-      if (IB.errors.length > 0) return UB(BB, IB.errors, IB.offInStrict);
-      const NB = await async function(BB) {
+    var TB = ZB(6800),
+      JB = ZB(6778),
+      oB = ZB(129);
+    const GB = 100;
+    async function vB(BB, IB) {
+      var ZB;
+      let TB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ZB = navigator.gpu) && void 0 !== ZB ? ZB : null;
+      const GB = BB.yBB(IB, (0, JB.shaderPackTextures)());
+      if (GB.errors.length > 0) return cB(BB, GB.errors, GB.offInStrict);
+      const vB = await async function(BB) {
         if (!BB) return null;
         try {
-          const jB = await (0, dB.x)(BB);
-          return jB ? await jB.requestDevice() : null
-        } catch (jB) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", jB), null
+          const IB = await (0, oB.w)(BB);
+          return IB ? await IB.requestDevice() : null
+        } catch (IB) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", IB), null
         }
-      }(QB);
-      if (!NB) return null;
-      let uB = !1;
-      NB.lost.then((() => {
-        uB = !0
+      }(TB);
+      if (!vB) return null;
+      let kB = !1;
+      vB.lost.then((() => {
+        kB = !0
       }));
       try {
-        const jB = await Promise.all(IB.validationModules.map((jB => async function(BB, jB, zB) {
-          jB.pushErrorScope("validation");
-          const QB = jB.createShaderModule({
-              code: zB.code
+        const IB = await Promise.all(GB.validationModules.map((IB => async function(BB, IB, ZB) {
+          IB.pushErrorScope("validation");
+          const TB = IB.createShaderModule({
+              code: ZB.code
             }),
-            nB = jB.popErrorScope(),
+            JB = IB.popErrorScope(),
             {
-              messages: dB
-            } = await QB.getCompilationInfo(),
-            IB = dB.filter((BB => "error" === BB.type)).map((jB => BB.mapValidationMessage(zB, jB))),
-            NB = await nB;
-          NB && 0 === IB.length && IB.push({
+              messages: oB
+            } = await TB.getCompilationInfo(),
+            GB = oB.filter((BB => "error" === BB.type)).map((IB => BB.mapValidationMessage(ZB, IB))),
+            vB = await JB;
+          vB && 0 === GB.length && GB.push({
             file: null,
             line: 0,
-            message: NB.message,
-            variants: [zB.key]
+            message: vB.message,
+            variants: [ZB.key]
           });
-          return IB
-        }(BB, NB, jB))));
-        return uB ? null : UB(BB, BB.lzB(jB.flat()), IB.offInStrict)
-      } catch (aB) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", aB), null
+          return GB
+        }(BB, vB, IB))));
+        return kB ? null : cB(BB, BB.qTB(IB.flat()), GB.offInStrict)
+      } catch (nB) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", nB), null
       } finally {
-        NB.destroy()
+        vB.destroy()
       }
     }
-    async function uB(BB, jB) {
-      var zB;
-      if (!(0, QB.shaderPackNeedsCheck)(BB, jB) || (0, QB.isOtherApiVersion)(BB)) return BB;
-      const nB = await NB(jB, (0, QB.storedShaderPackFiles)(BB));
-      if (!nB) return BB;
-      const dB = !1 === (null === (zB = BB.validation) || void 0 === zB ? void 0 : zB.ok) && !BB.validation.fromRecheck,
-        IB = {
+    async function kB(BB, IB) {
+      var ZB;
+      if (!(0, TB.shaderPackNeedsCheck)(BB, IB) || (0, TB.isOtherApiVersion)(BB)) return BB;
+      const JB = await vB(IB, (0, TB.storedShaderPackFiles)(BB));
+      if (!JB) return BB;
+      const oB = !1 === (null === (ZB = BB.validation) || void 0 === ZB ? void 0 : ZB.ok) && !BB.validation.fromRecheck,
+        GB = {
           ...BB,
-          validation: dB ? nB : {
-            ...nB,
+          validation: oB ? JB : {
+            ...JB,
             fromRecheck: !0
           }
         };
-      return await (0, QB.replaceShaderPack)(BB, IB, jB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), IB
+      return await (0, TB.replaceShaderPack)(BB, GB, IB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), GB
     }
 
-    function UB(BB, jB, zB) {
+    function cB(BB, IB, ZB) {
       return {
-        headerVersion: (0, QB.pageShaderPackValidationVersion)(BB),
-        ok: 0 === jB.length,
-        errors: jB.slice(0, IB),
-        moreErrors: Math.max(0, jB.length - IB),
-        offInStrict: zB
+        headerVersion: (0, TB.pageShaderPackValidationVersion)(BB),
+        ok: 0 === IB.length,
+        errors: IB.slice(0, GB),
+        moreErrors: Math.max(0, IB.length - GB),
+        offInStrict: ZB
       }
     }
   }

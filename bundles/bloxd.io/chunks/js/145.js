@@ -1,14 +1,14 @@
 export const id = 145;
 export const ids = [145];
 export const modules = {
-  8039: (BB, jB, zB) => {
-    zB.d(jB, {
-      encodeBinaryMessageWithMetricsCookies: () => nB
+  8216: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      encodeBinaryMessageWithMetricsCookies: () => JB
     });
-    var QB = zB(3849);
+    var TB = ZB(3911);
 
-    function nB(BB) {
-      return QB.j.toBuffer(BB)
+    function JB(BB) {
+      return TB.m.toBuffer(BB)
     }
   }
 };

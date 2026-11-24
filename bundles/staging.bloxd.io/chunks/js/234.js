@@ -1,39 +1,39 @@
 export const id = 234;
 export const ids = [234, 241, 244];
 export const modules = {
-  40330: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => IB,
-      f: () => NB
+  40291: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => GB,
+      f: () => vB
     });
-    var QB = zB(38783),
-      nB = zB(40086),
-      dB = zB(40301),
-      IB = {};
-    class NB {
+    var TB = ZB(38718),
+      JB = ZB(40085),
+      oB = ZB(40269),
+      GB = {};
+    class vB {
       constructor(BB) {
         this.attachedToElement = !1, this.attached = {}, this.camera = BB, this.checkInputs = () => {}
       }
       add(BB) {
-        const jB = BB.getSimpleName();
-        this.attached[jB] ? QB.c.Warn("camera input of type " + jB + " already exists on camera") : (this.attached[jB] = BB, BB.camera = this.camera, BB.checkInputs && (this.checkInputs = this._addCheckInputs(BB.checkInputs.bind(BB))), this.attachedToElement && BB.attachControl(this.noPreventDefault))
+        const IB = BB.getSimpleName();
+        this.attached[IB] ? TB.d.Warn("camera input of type " + IB + " already exists on camera") : (this.attached[IB] = BB, BB.camera = this.camera, BB.checkInputs && (this.checkInputs = this._addCheckInputs(BB.checkInputs.bind(BB))), this.attachedToElement && BB.attachControl(this.noPreventDefault))
       }
       remove(BB) {
-        for (const jB in this.attached) {
-          const zB = this.attached[jB];
-          if (zB === BB) return zB.detachControl(), zB.camera = null, delete this.attached[jB], void this.rebuildInputCheck()
+        for (const IB in this.attached) {
+          const ZB = this.attached[IB];
+          if (ZB === BB) return ZB.detachControl(), ZB.camera = null, delete this.attached[IB], void this.rebuildInputCheck()
         }
       }
       removeByType(BB) {
-        for (const jB in this.attached) {
-          const zB = this.attached[jB];
-          zB.getClassName() === BB && (zB.detachControl(), zB.camera = null, delete this.attached[jB], this.rebuildInputCheck())
+        for (const IB in this.attached) {
+          const ZB = this.attached[IB];
+          ZB.getClassName() === BB && (ZB.detachControl(), ZB.camera = null, delete this.attached[IB], this.rebuildInputCheck())
         }
       }
       _addCheckInputs(BB) {
-        const jB = this.checkInputs;
+        const IB = this.checkInputs;
         return () => {
-          jB(), BB()
+          IB(), BB()
         }
       }
       attachInput(BB) {
@@ -42,86 +42,86 @@ export const modules = {
       attachElement() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          BB = !dB.b.ForceAttachControlToAlwaysPreventDefault && BB, this.attachedToElement = !0, this.noPreventDefault = BB;
-          for (const jB in this.attached) this.attached[jB].attachControl(BB)
+          BB = !oB.c.ForceAttachControlToAlwaysPreventDefault && BB, this.attachedToElement = !0, this.noPreventDefault = BB;
+          for (const IB in this.attached) this.attached[IB].attachControl(BB)
         }
       }
       detachElement() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const jB in this.attached) this.attached[jB].detachControl(), BB && (this.attached[jB].camera = null);
+        for (const IB in this.attached) this.attached[IB].detachControl(), BB && (this.attached[IB].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
         for (const BB in this.attached) {
-          const jB = this.attached[BB];
-          jB.checkInputs && (this.checkInputs = this._addCheckInputs(jB.checkInputs.bind(jB)))
+          const IB = this.attached[BB];
+          IB.checkInputs && (this.checkInputs = this._addCheckInputs(IB.checkInputs.bind(IB)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
       serialize(BB) {
-        const jB = {};
-        for (const zB in this.attached) {
-          const BB = this.attached[zB],
-            QB = nB.b.Serialize(BB);
-          jB[BB.getClassName()] = QB
+        const IB = {};
+        for (const ZB in this.attached) {
+          const BB = this.attached[ZB],
+            TB = JB.b.Serialize(BB);
+          IB[BB.getClassName()] = TB
         }
-        BB.inputsmgr = jB
+        BB.inputsmgr = IB
       }
       parse(BB) {
-        const jB = BB.inputsmgr;
-        if (jB) {
+        const IB = BB.inputsmgr;
+        if (IB) {
           this.clear();
-          for (const BB in jB) {
-            const zB = IB[BB];
-            if (zB) {
-              const QB = jB[BB],
-                dB = nB.b.Parse((() => new zB), QB, null);
-              this.add(dB)
+          for (const BB in IB) {
+            const ZB = GB[BB];
+            if (ZB) {
+              const TB = IB[BB],
+                oB = JB.b.Parse((() => new ZB), TB, null);
+              this.add(oB)
             }
           }
         } else
-          for (const zB in this.attached) {
-            const jB = IB[this.attached[zB].getClassName()];
-            if (jB) {
-              const QB = nB.b.Parse((() => new jB), BB, null);
-              this.remove(this.attached[zB]), this.add(QB)
+          for (const ZB in this.attached) {
+            const IB = GB[this.attached[ZB].getClassName()];
+            if (IB) {
+              const TB = JB.b.Parse((() => new IB), BB, null);
+              this.remove(this.attached[ZB]), this.add(TB)
             }
           }
       }
     }
   },
-  40335: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => QB.e
+  40297: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => TB.e
     });
-    var QB = zB(40339);
-    (0, QB.f)()
+    var TB = ZB(40305);
+    (0, TB.h)()
   },
-  40339: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => aB,
-      f: () => rB
+  40305: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => nB,
+      h: () => zB
     });
-    var QB = zB(40066),
-      nB = zB(40068),
-      dB = zB(37171),
-      IB = zB(37379),
-      NB = zB(40344),
-      uB = zB(40306),
-      UB = zB(37222);
-    let aB = (() => {
+    var TB = ZB(40061),
+      JB = ZB(40065),
+      oB = ZB(37120),
+      GB = ZB(37311),
+      vB = ZB(40310),
+      kB = ZB(40272),
+      cB = ZB(37170);
+    let nB = (() => {
         var BB;
-        let jB, zB, uB = NB.b,
-          UB = [],
-          aB = [],
-          pB = [],
-          rB = [];
-        return BB = class extends uB {
-          constructor(BB, jB, zB, nB) {
-            super(BB, zB, nB), this.groundColor = (0, QB.g)(this, UB, new IB.d(0, 0, 0)), this.direction = ((0, QB.g)(this, aB), (0, QB.g)(this, pB, void 0)), (0, QB.g)(this, rB), this.direction = jB || dB.m.Up()
+        let IB, ZB, kB = vB.b,
+          cB = [],
+          nB = [],
+          hB = [],
+          zB = [];
+        return BB = class extends kB {
+          constructor(BB, IB, ZB, JB) {
+            super(BB, ZB, JB), this.groundColor = (0, TB.l)(this, cB, new GB.c(0, 0, 0)), this.direction = ((0, TB.l)(this, nB), (0, TB.l)(this, hB, void 0)), (0, TB.l)(this, zB), this.direction = IB || oB.s.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -130,31 +130,31 @@ export const modules = {
             return "HemisphericLight"
           }
           setDirectionToTarget(BB) {
-            return this.direction = dB.m.Normalize(BB.subtract(dB.m.Zero())), this.direction
+            return this.direction = oB.s.Normalize(BB.subtract(oB.s.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(BB, jB) {
-            const zB = dB.m.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", zB.x, zB.y, zB.z, 0, jB), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), jB), this
+          transferToEffect(BB, IB) {
+            const ZB = oB.s.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", ZB.x, ZB.y, ZB.z, 0, IB), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), IB), this
           }
-          transferToNodeMaterialEffect(BB, jB) {
-            const zB = dB.m.Normalize(this.direction);
-            return BB.setFloat3(jB, zB.x, zB.y, zB.z), this
+          transferToNodeMaterialEffect(BB, IB) {
+            const ZB = oB.s.Normalize(this.direction);
+            return BB.setFloat3(IB, ZB.x, ZB.y, ZB.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = dB.c.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = oB.b.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return NB.b.LIGHTTYPEID_HEMISPHERICLIGHT
+            return vB.b.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(BB, jB) {
-            BB["HEMILIGHT" + jB] = !0
+          prepareLightSpecificDefines(BB, IB) {
+            BB["HEMILIGHT" + IB] = !0
           }
         }, (() => {
-          const dB = "function" === typeof Symbol && Symbol.metadata ? Object.create(uB[Symbol.metadata] ?? null) : void 0;
-          jB = [(0, nB.i)()], zB = [(0, nB.x)()], (0, QB.e)(null, null, jB, {
+          const oB = "function" === typeof Symbol && Symbol.metadata ? Object.create(kB[Symbol.metadata] ?? null) : void 0;
+          IB = [(0, JB.l)()], ZB = [(0, JB.A)()], (0, TB.j)(null, null, IB, {
             kind: "field",
             name: "groundColor",
             static: !1,
@@ -162,12 +162,12 @@ export const modules = {
             access: {
               has: BB => "groundColor" in BB,
               get: BB => BB.groundColor,
-              set: (BB, jB) => {
-                BB.groundColor = jB
+              set: (BB, IB) => {
+                BB.groundColor = IB
               }
             },
-            metadata: dB
-          }, UB, aB), (0, QB.e)(null, null, zB, {
+            metadata: oB
+          }, cB, nB), (0, TB.j)(null, null, ZB, {
             kind: "field",
             name: "direction",
             static: !1,
@@ -175,92 +175,92 @@ export const modules = {
             access: {
               has: BB => "direction" in BB,
               get: BB => BB.direction,
-              set: (BB, jB) => {
-                BB.direction = jB
+              set: (BB, IB) => {
+                BB.direction = IB
               }
             },
-            metadata: dB
-          }, pB, rB), dB && Object.defineProperty(BB, Symbol.metadata, {
+            metadata: oB
+          }, hB, zB), oB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: dB
+            value: oB
           })
         })(), BB
       })(),
-      pB = !1;
+      hB = !1;
 
-    function rB() {
-      pB || (pB = !0, uB.c.AddNodeConstructor("Light_Type_3", ((BB, jB) => () => new aB(BB, dB.m.Zero(), jB))), (0, UB.d)("BABYLON.HemisphericLight", aB))
+    function zB() {
+      hB || (hB = !0, kB.e.AddNodeConstructor("Light_Type_3", ((BB, IB) => () => new nB(BB, oB.s.Zero(), IB))), (0, cB.i)("BABYLON.HemisphericLight", nB))
     }
   },
-  37372: (BB, jB, zB) => {
-    zB.d(jB, {
-      Color3: () => QB.d,
-      c: () => QB.g
+  37304: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      Color3: () => TB.c,
+      e: () => TB.g
     });
-    var QB = zB(37379);
-    (0, QB.k)()
+    var TB = ZB(37311);
+    (0, TB.j)()
   },
-  37865: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB
+  37819: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => JB
     });
-    var QB = zB(37869);
-    class nB {
+    var TB = ZB(37824);
+    class JB {
       static GetPlanes(BB) {
-        const jB = [];
-        for (let zB = 0; zB < 6; zB++) jB.push(new QB.c(0, 0, 0, 0));
-        return nB.GetPlanesToRef(BB, jB), jB
+        const IB = [];
+        for (let ZB = 0; ZB < 6; ZB++) IB.push(new TB.c(0, 0, 0, 0));
+        return JB.GetPlanesToRef(BB, IB), IB
       }
-      static GetNearPlaneToRef(BB, jB) {
-        const zB = BB.m;
-        jB.normal.x = zB[3] + zB[2], jB.normal.y = zB[7] + zB[6], jB.normal.z = zB[11] + zB[10], jB.d = zB[15] + zB[14], jB.normalize()
+      static GetNearPlaneToRef(BB, IB) {
+        const ZB = BB.m;
+        IB.normal.x = ZB[3] + ZB[2], IB.normal.y = ZB[7] + ZB[6], IB.normal.z = ZB[11] + ZB[10], IB.d = ZB[15] + ZB[14], IB.normalize()
       }
-      static GetFarPlaneToRef(BB, jB) {
-        const zB = BB.m;
-        jB.normal.x = zB[3] - zB[2], jB.normal.y = zB[7] - zB[6], jB.normal.z = zB[11] - zB[10], jB.d = zB[15] - zB[14], jB.normalize()
+      static GetFarPlaneToRef(BB, IB) {
+        const ZB = BB.m;
+        IB.normal.x = ZB[3] - ZB[2], IB.normal.y = ZB[7] - ZB[6], IB.normal.z = ZB[11] - ZB[10], IB.d = ZB[15] - ZB[14], IB.normalize()
       }
-      static GetLeftPlaneToRef(BB, jB) {
-        const zB = BB.m;
-        jB.normal.x = zB[3] + zB[0], jB.normal.y = zB[7] + zB[4], jB.normal.z = zB[11] + zB[8], jB.d = zB[15] + zB[12], jB.normalize()
+      static GetLeftPlaneToRef(BB, IB) {
+        const ZB = BB.m;
+        IB.normal.x = ZB[3] + ZB[0], IB.normal.y = ZB[7] + ZB[4], IB.normal.z = ZB[11] + ZB[8], IB.d = ZB[15] + ZB[12], IB.normalize()
       }
-      static GetRightPlaneToRef(BB, jB) {
-        const zB = BB.m;
-        jB.normal.x = zB[3] - zB[0], jB.normal.y = zB[7] - zB[4], jB.normal.z = zB[11] - zB[8], jB.d = zB[15] - zB[12], jB.normalize()
+      static GetRightPlaneToRef(BB, IB) {
+        const ZB = BB.m;
+        IB.normal.x = ZB[3] - ZB[0], IB.normal.y = ZB[7] - ZB[4], IB.normal.z = ZB[11] - ZB[8], IB.d = ZB[15] - ZB[12], IB.normalize()
       }
-      static GetTopPlaneToRef(BB, jB) {
-        const zB = BB.m;
-        jB.normal.x = zB[3] - zB[1], jB.normal.y = zB[7] - zB[5], jB.normal.z = zB[11] - zB[9], jB.d = zB[15] - zB[13], jB.normalize()
+      static GetTopPlaneToRef(BB, IB) {
+        const ZB = BB.m;
+        IB.normal.x = ZB[3] - ZB[1], IB.normal.y = ZB[7] - ZB[5], IB.normal.z = ZB[11] - ZB[9], IB.d = ZB[15] - ZB[13], IB.normalize()
       }
-      static GetBottomPlaneToRef(BB, jB) {
-        const zB = BB.m;
-        jB.normal.x = zB[3] + zB[1], jB.normal.y = zB[7] + zB[5], jB.normal.z = zB[11] + zB[9], jB.d = zB[15] + zB[13], jB.normalize()
+      static GetBottomPlaneToRef(BB, IB) {
+        const ZB = BB.m;
+        IB.normal.x = ZB[3] + ZB[1], IB.normal.y = ZB[7] + ZB[5], IB.normal.z = ZB[11] + ZB[9], IB.d = ZB[15] + ZB[13], IB.normalize()
       }
-      static GetPlanesToRef(BB, jB) {
-        nB.GetNearPlaneToRef(BB, jB[0]), nB.GetFarPlaneToRef(BB, jB[1]), nB.GetLeftPlaneToRef(BB, jB[2]), nB.GetRightPlaneToRef(BB, jB[3]), nB.GetTopPlaneToRef(BB, jB[4]), nB.GetBottomPlaneToRef(BB, jB[5])
+      static GetPlanesToRef(BB, IB) {
+        JB.GetNearPlaneToRef(BB, IB[0]), JB.GetFarPlaneToRef(BB, IB[1]), JB.GetLeftPlaneToRef(BB, IB[2]), JB.GetRightPlaneToRef(BB, IB[3]), JB.GetTopPlaneToRef(BB, IB[4]), JB.GetBottomPlaneToRef(BB, IB[5])
       }
-      static IsPointInFrustum(BB, jB) {
-        for (let zB = 0; zB < 6; zB++)
-          if (jB[zB].dotCoordinate(BB) < 0) return !1;
+      static IsPointInFrustum(BB, IB) {
+        for (let ZB = 0; ZB < 6; ZB++)
+          if (IB[ZB].dotCoordinate(BB) < 0) return !1;
         return !0
       }
     }
   },
-  37869: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => nB
+  37824: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB
     });
-    var QB = zB(37171);
-    class nB {
-      constructor(BB, jB, zB, nB) {
-        this.normal = new QB.m(BB, jB, zB), this.d = nB
+    var TB = ZB(37120);
+    class JB {
+      constructor(BB, IB, ZB, JB) {
+        this.normal = new TB.s(BB, IB, ZB), this.d = JB
       }
-      nQB() {
+      HTB() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new nB(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new JB(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
@@ -271,356 +271,356 @@ export const modules = {
       }
       normalize() {
         const BB = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let jB = 0;
-        return 0 !== BB && (jB = 1 / BB), this.normal.x *= jB, this.normal.y *= jB, this.normal.z *= jB, this.d *= jB, this
+        let IB = 0;
+        return 0 !== BB && (IB = 1 / BB), this.normal.x *= IB, this.normal.y *= IB, this.normal.z *= IB, this.d *= IB, this
       }
       transform(BB) {
-        const jB = nB._TmpMatrix;
-        BB.invertToRef(jB);
-        const zB = jB.m,
-          QB = this.normal.x,
-          dB = this.normal.y,
-          IB = this.normal.z,
-          NB = this.d,
-          uB = QB * zB[0] + dB * zB[1] + IB * zB[2] + NB * zB[3],
-          UB = QB * zB[4] + dB * zB[5] + IB * zB[6] + NB * zB[7],
-          aB = QB * zB[8] + dB * zB[9] + IB * zB[10] + NB * zB[11],
-          pB = QB * zB[12] + dB * zB[13] + IB * zB[14] + NB * zB[15];
-        return new nB(uB, UB, aB, pB)
+        const IB = JB._TmpMatrix;
+        BB.invertToRef(IB);
+        const ZB = IB.m,
+          TB = this.normal.x,
+          oB = this.normal.y,
+          GB = this.normal.z,
+          vB = this.d,
+          kB = TB * ZB[0] + oB * ZB[1] + GB * ZB[2] + vB * ZB[3],
+          cB = TB * ZB[4] + oB * ZB[5] + GB * ZB[6] + vB * ZB[7],
+          nB = TB * ZB[8] + oB * ZB[9] + GB * ZB[10] + vB * ZB[11],
+          hB = TB * ZB[12] + oB * ZB[13] + GB * ZB[14] + vB * ZB[15];
+        return new JB(kB, cB, nB, hB)
       }
       dotCoordinate(BB) {
         return this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z + this.d
       }
-      copyFromPoints(BB, jB, zB) {
-        const QB = jB.x - BB.x,
-          nB = jB.y - BB.y,
-          dB = jB.z - BB.z,
-          IB = zB.x - BB.x,
-          NB = zB.y - BB.y,
-          uB = zB.z - BB.z,
-          UB = nB * uB - dB * NB,
-          aB = dB * IB - QB * uB,
-          pB = QB * NB - nB * IB,
-          rB = Math.sqrt(UB * UB + aB * aB + pB * pB);
-        let sB;
-        return sB = 0 !== rB ? 1 / rB : 0, this.normal.x = UB * sB, this.normal.y = aB * sB, this.normal.z = pB * sB, this.d = -(this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z), this
+      copyFromPoints(BB, IB, ZB) {
+        const TB = IB.x - BB.x,
+          JB = IB.y - BB.y,
+          oB = IB.z - BB.z,
+          GB = ZB.x - BB.x,
+          vB = ZB.y - BB.y,
+          kB = ZB.z - BB.z,
+          cB = JB * kB - oB * vB,
+          nB = oB * GB - TB * kB,
+          hB = TB * vB - JB * GB,
+          zB = Math.sqrt(cB * cB + nB * nB + hB * hB);
+        let FB;
+        return FB = 0 !== zB ? 1 / zB : 0, this.normal.x = cB * FB, this.normal.y = nB * FB, this.normal.z = hB * FB, this.d = -(this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z), this
       }
-      isFrontFacingTo(BB, jB) {
-        return QB.m.Dot(this.normal, BB) <= jB
+      isFrontFacingTo(BB, IB) {
+        return TB.s.Dot(this.normal, BB) <= IB
       }
       signedDistanceTo(BB) {
-        return QB.m.Dot(BB, this.normal) + this.d
+        return TB.s.Dot(BB, this.normal) + this.d
       }
       static FromArray(BB) {
-        return new nB(BB[0], BB[1], BB[2], BB[3])
+        return new JB(BB[0], BB[1], BB[2], BB[3])
       }
-      static FromPoints(BB, jB, zB) {
-        const QB = new nB(0, 0, 0, 0);
-        return QB.copyFromPoints(BB, jB, zB), QB
+      static FromPoints(BB, IB, ZB) {
+        const TB = new JB(0, 0, 0, 0);
+        return TB.copyFromPoints(BB, IB, ZB), TB
       }
-      static FromPositionAndNormal(BB, jB) {
-        const zB = new nB(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(BB, jB, zB)
+      static FromPositionAndNormal(BB, IB) {
+        const ZB = new JB(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(BB, IB, ZB)
       }
-      static FromPositionAndNormalToRef(BB, jB, zB) {
-        return zB.normal.jH(jB), zB.normal.normalize(), zB.d = -BB.dot(zB.normal), zB
+      static FromPositionAndNormalToRef(BB, IB, ZB) {
+        return ZB.normal.TY(IB), ZB.normal.normalize(), ZB.d = -BB.dot(ZB.normal), ZB
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(BB, jB, zB) {
-        const nB = -(jB.x * BB.x + jB.y * BB.y + jB.z * BB.z);
-        return QB.m.Dot(zB, jB) + nB
+      static SignedDistanceToPlaneFromPositionAndNormal(BB, IB, ZB) {
+        const JB = -(IB.x * BB.x + IB.y * BB.y + IB.z * BB.z);
+        return TB.s.Dot(ZB, IB) + JB
       }
     }
-    nB._TmpMatrix = QB.c.Identity()
+    JB._TmpMatrix = TB.b.Identity()
   },
-  37166: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      Matrix: () => QB.c,
-      Quaternion: () => QB.d,
-      RegisterMathVector: () => QB.e,
-      TmpVectors: () => QB.h,
-      Vector2: () => QB.i,
-      KJ: () => QB.m,
-      Vector4: () => QB.n
+  37113: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      Matrix: () => TB.b,
+      Quaternion: () => TB.f,
+      RegisterMathVector: () => TB.j,
+      TmpVectors: () => TB.m,
+      Vector2: () => TB.p,
+      rN: () => TB.s,
+      Vector4: () => TB.t
     });
-    var QB = zB(37171);
-    (0, QB.e)()
+    var TB = ZB(37120);
+    (0, TB.j)()
   },
-  38170: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => QB
+  38151: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => TB
     });
-    class QB {
-      constructor(BB, jB, zB, QB) {
-        this.x = BB, this.y = jB, this.width = zB, this.height = QB
+    class TB {
+      constructor(BB, IB, ZB, TB) {
+        this.x = BB, this.y = IB, this.width = ZB, this.height = TB
       }
-      toGlobal(BB, jB) {
-        return new QB(this.x * BB, this.y * jB, this.width * BB, this.height * jB)
+      toGlobal(BB, IB) {
+        return new TB(this.x * BB, this.y * IB, this.width * BB, this.height * IB)
       }
-      toGlobalToRef(BB, jB, zB) {
-        return zB.x = this.x * BB, zB.y = this.y * jB, zB.width = this.width * BB, zB.height = this.height * jB, this
+      toGlobalToRef(BB, IB, ZB) {
+        return ZB.x = this.x * BB, ZB.y = this.y * IB, ZB.width = this.width * BB, ZB.height = this.height * IB, this
       }
       clone() {
-        return new QB(this.x, this.y, this.width, this.height)
+        return new TB(this.x, this.y, this.width, this.height)
       }
     }
   },
-  40496: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => UB
+  40446: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => cB
     });
-    var QB = zB(37171),
-      nB = zB(37379),
-      dB = zB(40504),
-      IB = zB(40519),
-      NB = zB(40535);
+    var TB = ZB(37120),
+      JB = ZB(37311),
+      oB = ZB(40448),
+      GB = ZB(40463),
+      vB = ZB(40480);
 
-    function uB(BB) {
-      let jB = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const zB = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        dB = [],
-        uB = BB.width || BB.size || 1,
-        UB = BB.height || BB.size || 1,
-        aB = BB.depth || BB.size || 1,
-        pB = BB.wrap || !1;
-      let rB = void 0 === BB.topBaseAt ? 1 : BB.topBaseAt,
-        sB = void 0 === BB.bottomBaseAt ? 0 : BB.bottomBaseAt;
-      rB = (rB + 4) % 4, sB = (sB + 4) % 4;
-      let JB = [2, 0, 3, 1][rB],
-        mB = [2, 0, 1, 3][sB],
-        yB = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (pB) {
-        jB = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], yB = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+    function kB(BB) {
+      let IB = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const ZB = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        oB = [],
+        kB = BB.width || BB.size || 1,
+        cB = BB.height || BB.size || 1,
+        nB = BB.depth || BB.size || 1,
+        hB = BB.wrap || !1;
+      let zB = void 0 === BB.topBaseAt ? 1 : BB.topBaseAt,
+        FB = void 0 === BB.bottomBaseAt ? 0 : BB.bottomBaseAt;
+      zB = (zB + 4) % 4, FB = (FB + 4) % 4;
+      let NB = [2, 0, 3, 1][zB],
+        gB = [2, 0, 1, 3][FB],
+        qB = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (hB) {
+        IB = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], qB = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
         let BB = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          zB = [
+          ZB = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const QB = [17, 18, 19, 16],
-          nB = [22, 23, 20, 21];
-        for (; JB > 0;) BB.unshift(BB.pop()), QB.unshift(QB.pop()), JB--;
-        for (; mB > 0;) zB.unshift(zB.pop()), nB.unshift(nB.pop()), mB--;
-        BB = BB.flat(), zB = zB.flat(), yB = yB.concat(BB).concat(zB), jB.push(QB[0], QB[2], QB[3], QB[0], QB[1], QB[2]), jB.push(nB[0], nB[2], nB[3], nB[0], nB[1], nB[2])
+        const TB = [17, 18, 19, 16],
+          JB = [22, 23, 20, 21];
+        for (; NB > 0;) BB.unshift(BB.pop()), TB.unshift(TB.pop()), NB--;
+        for (; gB > 0;) ZB.unshift(ZB.pop()), JB.unshift(JB.pop()), gB--;
+        BB = BB.flat(), ZB = ZB.flat(), qB = qB.concat(BB).concat(ZB), IB.push(TB[0], TB[2], TB[3], TB[0], TB[1], TB[2]), IB.push(JB[0], JB[2], JB[3], JB[0], JB[1], JB[2])
       }
-      const kB = [uB / 2, UB / 2, aB / 2],
-        GB = yB.reduce(((BB, jB, zB) => BB.concat(jB * kB[zB % 3])), []),
-        LB = 0 === BB.sideOrientation ? 0 : BB.sideOrientation || IB.e.DEFAULTSIDE,
-        gB = BB.faceUV || new Array(6),
-        tB = BB.faceColors,
-        SB = [];
-      for (let IB = 0; IB < 6; IB++) void 0 === gB[IB] && (gB[IB] = new QB.n(0, 0, 1, 1)), tB && void 0 === tB[IB] && (tB[IB] = new nB.g(1, 1, 1, 1));
-      for (let QB = 0; QB < 6; QB++)
-        if (dB.push(gB[QB].z, NB.d ? 1 - gB[QB].w : gB[QB].w), dB.push(gB[QB].x, NB.d ? 1 - gB[QB].w : gB[QB].w), dB.push(gB[QB].x, NB.d ? 1 - gB[QB].y : gB[QB].y), dB.push(gB[QB].z, NB.d ? 1 - gB[QB].y : gB[QB].y), tB)
-          for (let BB = 0; BB < 4; BB++) SB.push(tB[QB].r, tB[QB].g, tB[QB].b, tB[QB].a);
-      IB.e._ComputeSides(LB, GB, jB, zB, dB, BB.frontUVs, BB.backUVs);
-      const MB = new IB.e;
-      if (MB.indices = jB, MB.positions = GB, MB.normals = zB, MB.uvs = dB, tB) {
-        const BB = LB === IB.e.DOUBLESIDE ? SB.concat(SB) : SB;
-        MB.colors = BB
+      const yB = [kB / 2, cB / 2, nB / 2],
+        UB = qB.reduce(((BB, IB, ZB) => BB.concat(IB * yB[ZB % 3])), []),
+        WB = 0 === BB.sideOrientation ? 0 : BB.sideOrientation || GB.c.DEFAULTSIDE,
+        dB = BB.faceUV || new Array(6),
+        CB = BB.faceColors,
+        QB = [];
+      for (let GB = 0; GB < 6; GB++) void 0 === dB[GB] && (dB[GB] = new TB.t(0, 0, 1, 1)), CB && void 0 === CB[GB] && (CB[GB] = new JB.g(1, 1, 1, 1));
+      for (let TB = 0; TB < 6; TB++)
+        if (oB.push(dB[TB].z, vB.e ? 1 - dB[TB].w : dB[TB].w), oB.push(dB[TB].x, vB.e ? 1 - dB[TB].w : dB[TB].w), oB.push(dB[TB].x, vB.e ? 1 - dB[TB].y : dB[TB].y), oB.push(dB[TB].z, vB.e ? 1 - dB[TB].y : dB[TB].y), CB)
+          for (let BB = 0; BB < 4; BB++) QB.push(CB[TB].r, CB[TB].g, CB[TB].b, CB[TB].a);
+      GB.c._ComputeSides(WB, UB, IB, ZB, oB, BB.frontUVs, BB.backUVs);
+      const sB = new GB.c;
+      if (sB.indices = IB, sB.positions = UB, sB.normals = ZB, sB.uvs = oB, CB) {
+        const BB = WB === GB.c.DOUBLESIDE ? QB.concat(QB) : QB;
+        sB.colors = BB
       }
-      return MB
+      return sB
     }
 
-    function UB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const QB = new dB.b(BB, zB);
-      jB.sideOrientation = dB.b._GetDefaultSideOrientation(jB.sideOrientation), QB._originalBuilderSideOrientation = jB.sideOrientation;
-      return uB(jB).applyToMesh(QB, jB.updatable), QB
+    function cB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const TB = new oB.c(BB, ZB);
+      IB.sideOrientation = oB.c._GetDefaultSideOrientation(IB.sideOrientation), TB._originalBuilderSideOrientation = IB.sideOrientation;
+      return kB(IB).applyToMesh(TB, IB.updatable), TB
     }
-    let aB = !1;
-    aB || (aB = !0, IB.e.CreateBox = uB, dB.b.CreateBox = function(BB, jB) {
-      return UB(BB, {
-        size: jB,
+    let nB = !1;
+    nB || (nB = !0, GB.c.CreateBox = kB, oB.c.CreateBox = function(BB, IB) {
+      return cB(BB, {
+        size: IB,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  40557: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => pB
+  40501: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => hB
     });
-    var QB = zB(37171),
-      nB = zB(40504),
-      dB = zB(40519),
-      IB = zB(40564),
-      NB = zB(40211),
-      uB = zB(38783);
+    var TB = ZB(37120),
+      JB = ZB(40448),
+      oB = ZB(40463),
+      GB = ZB(40503),
+      vB = ZB(40188),
+      kB = ZB(38718);
 
-    function UB(BB) {
-      const jB = [],
-        zB = [],
-        QB = BB.lines,
-        nB = BB.colors,
-        IB = [];
-      let NB = 0;
-      for (let dB = 0; dB < QB.length; dB++) {
-        const BB = QB[dB];
-        for (let QB = 0; QB < BB.length; QB++) {
+    function cB(BB) {
+      const IB = [],
+        ZB = [],
+        TB = BB.lines,
+        JB = BB.colors,
+        GB = [];
+      let vB = 0;
+      for (let oB = 0; oB < TB.length; oB++) {
+        const BB = TB[oB];
+        for (let TB = 0; TB < BB.length; TB++) {
           const {
-            x: uB,
-            y: UB,
-            z: aB
-          } = BB[QB];
-          if (zB.push(uB, UB, aB), nB) {
-            const BB = nB[dB],
+            x: kB,
+            y: cB,
+            z: nB
+          } = BB[TB];
+          if (ZB.push(kB, cB, nB), JB) {
+            const BB = JB[oB],
               {
-                r: jB,
-                g: zB,
-                b: NB,
-                a: uB
-              } = BB[QB];
-            IB.push(jB, zB, NB, uB)
+                r: IB,
+                g: ZB,
+                b: vB,
+                a: kB
+              } = BB[TB];
+            GB.push(IB, ZB, vB, kB)
           }
-          QB > 0 && (jB.push(NB - 1), jB.push(NB)), NB++
+          TB > 0 && (IB.push(vB - 1), IB.push(vB)), vB++
         }
       }
-      const uB = new dB.e;
-      return uB.indices = jB, uB.positions = zB, nB && (uB.colors = IB), uB
+      const kB = new oB.c;
+      return kB.indices = IB, kB.positions = ZB, JB && (kB.colors = GB), kB
     }
 
-    function aB(BB) {
-      const jB = BB.dashSize || 3,
-        zB = BB.gapSize || 1,
-        nB = BB.dashNb || 200,
-        IB = BB.points,
-        NB = [],
-        uB = [],
-        UB = QB.m.Zero();
-      let aB, pB, rB, sB = 0,
-        JB = 0;
-      for (rB = 0; rB < IB.length - 1; rB++) IB[rB + 1].subtractToRef(IB[rB], UB), sB += UB.length();
-      const mB = sB / nB,
-        yB = jB * mB / (jB + zB);
-      for (rB = 0; rB < IB.length - 1; rB++) {
-        IB[rB + 1].subtractToRef(IB[rB], UB), aB = Math.floor(UB.length() / mB), UB.normalize();
-        for (let BB = 0; BB < aB; BB++) pB = mB * BB, NB.push(IB[rB].x + pB * UB.x, IB[rB].y + pB * UB.y, IB[rB].z + pB * UB.z), NB.push(IB[rB].x + (pB + yB) * UB.x, IB[rB].y + (pB + yB) * UB.y, IB[rB].z + (pB + yB) * UB.z), uB.push(JB, JB + 1), JB += 2
+    function nB(BB) {
+      const IB = BB.dashSize || 3,
+        ZB = BB.gapSize || 1,
+        JB = BB.dashNb || 200,
+        GB = BB.points,
+        vB = [],
+        kB = [],
+        cB = TB.s.Zero();
+      let nB, hB, zB, FB = 0,
+        NB = 0;
+      for (zB = 0; zB < GB.length - 1; zB++) GB[zB + 1].subtractToRef(GB[zB], cB), FB += cB.length();
+      const gB = FB / JB,
+        qB = IB * gB / (IB + ZB);
+      for (zB = 0; zB < GB.length - 1; zB++) {
+        GB[zB + 1].subtractToRef(GB[zB], cB), nB = Math.floor(cB.length() / gB), cB.normalize();
+        for (let BB = 0; BB < nB; BB++) hB = gB * BB, vB.push(GB[zB].x + hB * cB.x, GB[zB].y + hB * cB.y, GB[zB].z + hB * cB.z), vB.push(GB[zB].x + (hB + qB) * cB.x, GB[zB].y + (hB + qB) * cB.y, GB[zB].z + (hB + qB) * cB.z), kB.push(NB, NB + 1), NB += 2
       }
-      const kB = new dB.e;
-      return kB.positions = NB, kB.indices = uB, kB
+      const yB = new oB.c;
+      return yB.positions = vB, yB.indices = kB, yB
     }
 
-    function pB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const QB = jB.instance,
-        nB = jB.lines,
-        dB = jB.colors;
-      if (QB) {
-        const BB = QB.getVerticesData(NB.l.PositionKind);
-        let jB, zB;
-        dB && (jB = QB.getVerticesData(NB.l.ColorKind));
-        let IB = 0,
-          uB = 0;
-        for (let QB = 0; QB < nB.length; QB++) {
-          const NB = nB[QB];
-          for (let nB = 0; nB < NB.length; nB++) BB[IB] = NB[nB].x, BB[IB + 1] = NB[nB].y, BB[IB + 2] = NB[nB].z, dB && jB && (zB = dB[QB], jB[uB] = zB[nB].r, jB[uB + 1] = zB[nB].g, jB[uB + 2] = zB[nB].b, jB[uB + 3] = zB[nB].a, uB += 4), IB += 3
+    function hB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const TB = IB.instance,
+        JB = IB.lines,
+        oB = IB.colors;
+      if (TB) {
+        const BB = TB.getVerticesData(vB.i.PositionKind);
+        let IB, ZB;
+        oB && (IB = TB.getVerticesData(vB.i.ColorKind));
+        let GB = 0,
+          kB = 0;
+        for (let TB = 0; TB < JB.length; TB++) {
+          const vB = JB[TB];
+          for (let JB = 0; JB < vB.length; JB++) BB[GB] = vB[JB].x, BB[GB + 1] = vB[JB].y, BB[GB + 2] = vB[JB].z, oB && IB && (ZB = oB[TB], IB[kB] = ZB[JB].r, IB[kB + 1] = ZB[JB].g, IB[kB + 2] = ZB[JB].b, IB[kB + 3] = ZB[JB].a, kB += 4), GB += 3
         }
-        return QB.updateVerticesData(NB.l.PositionKind, BB, !1, !1), dB && jB && QB.updateVerticesData(NB.l.ColorKind, jB, !1, !1), QB.refreshBoundingInfo(), QB
+        return TB.updateVerticesData(vB.i.PositionKind, BB, !1, !1), oB && IB && TB.updateVerticesData(vB.i.ColorKind, IB, !1, !1), TB.refreshBoundingInfo(), TB
       }
-      const uB = !!dB,
-        aB = new IB.b(BB, zB, null, void 0, void 0, uB, jB.useVertexAlpha, jB.material);
-      return UB(jB).applyToMesh(aB, jB.updatable), aB
+      const kB = !!oB,
+        nB = new GB.e(BB, ZB, null, void 0, void 0, kB, IB.useVertexAlpha, IB.material);
+      return cB(IB).applyToMesh(nB, IB.updatable), nB
     }
 
-    function rB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const QB = jB.colors ? [jB.colors] : null;
-      return pB(BB, {
-        lines: [jB.points],
-        updatable: jB.updatable,
-        instance: jB.instance,
-        colors: QB,
-        useVertexAlpha: jB.useVertexAlpha,
-        material: jB.material
-      }, zB)
+    function zB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const TB = IB.colors ? [IB.colors] : null;
+      return hB(BB, {
+        lines: [IB.points],
+        updatable: IB.updatable,
+        instance: IB.instance,
+        colors: TB,
+        useVertexAlpha: IB.useVertexAlpha,
+        material: IB.material
+      }, ZB)
     }
 
-    function sB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const dB = jB.points,
-        NB = jB.instance,
-        UB = jB.gapSize || 1,
-        pB = jB.dashSize || 3;
-      if (NB) {
+    function FB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const oB = IB.points,
+        vB = IB.instance,
+        cB = IB.gapSize || 1,
+        hB = IB.dashSize || 3;
+      if (vB) {
         const BB = BB => {
-          const jB = QB.m.Zero(),
-            zB = BB.length / 6;
-          let nB, IB, uB, UB, aB = 0,
-            pB = 0;
-          for (uB = 0; uB < dB.length - 1; uB++) dB[uB + 1].subtractToRef(dB[uB], jB), aB += jB.length();
-          const rB = aB / zB,
-            sB = NB._creationDataStorage.dashSize,
-            JB = sB * rB / (sB + NB._creationDataStorage.gapSize);
-          for (uB = 0; uB < dB.length - 1; uB++)
-            for (dB[uB + 1].subtractToRef(dB[uB], jB), nB = Math.floor(jB.length() / rB), jB.normalize(), UB = 0; UB < nB && pB < BB.length;) IB = rB * UB, BB[pB] = dB[uB].x + IB * jB.x, BB[pB + 1] = dB[uB].y + IB * jB.y, BB[pB + 2] = dB[uB].z + IB * jB.z, BB[pB + 3] = dB[uB].x + (IB + JB) * jB.x, BB[pB + 4] = dB[uB].y + (IB + JB) * jB.y, BB[pB + 5] = dB[uB].z + (IB + JB) * jB.z, pB += 6, UB++;
-          for (; pB < BB.length;) BB[pB] = dB[uB].x, BB[pB + 1] = dB[uB].y, BB[pB + 2] = dB[uB].z, pB += 3
+          const IB = TB.s.Zero(),
+            ZB = BB.length / 6;
+          let JB, GB, kB, cB, nB = 0,
+            hB = 0;
+          for (kB = 0; kB < oB.length - 1; kB++) oB[kB + 1].subtractToRef(oB[kB], IB), nB += IB.length();
+          const zB = nB / ZB,
+            FB = vB._creationDataStorage.dashSize,
+            NB = FB * zB / (FB + vB._creationDataStorage.gapSize);
+          for (kB = 0; kB < oB.length - 1; kB++)
+            for (oB[kB + 1].subtractToRef(oB[kB], IB), JB = Math.floor(IB.length() / zB), IB.normalize(), cB = 0; cB < JB && hB < BB.length;) GB = zB * cB, BB[hB] = oB[kB].x + GB * IB.x, BB[hB + 1] = oB[kB].y + GB * IB.y, BB[hB + 2] = oB[kB].z + GB * IB.z, BB[hB + 3] = oB[kB].x + (GB + NB) * IB.x, BB[hB + 4] = oB[kB].y + (GB + NB) * IB.y, BB[hB + 5] = oB[kB].z + (GB + NB) * IB.z, hB += 6, cB++;
+          for (; hB < BB.length;) BB[hB] = oB[kB].x, BB[hB + 1] = oB[kB].y, BB[hB + 2] = oB[kB].z, hB += 3
         };
-        return (jB.dashNb || jB.dashSize || jB.gapSize || jB.useVertexAlpha || jB.material) && uB.c.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), NB.updateMeshPositions(BB, !1), NB
+        return (IB.dashNb || IB.dashSize || IB.gapSize || IB.useVertexAlpha || IB.material) && kB.d.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), vB.updateMeshPositions(BB, !1), vB
       }
-      const rB = new IB.b(BB, zB, null, void 0, void 0, void 0, jB.useVertexAlpha, jB.material);
-      return aB(jB).applyToMesh(rB, jB.updatable), rB._creationDataStorage = new nB.g, rB._creationDataStorage.dashSize = pB, rB._creationDataStorage.gapSize = UB, rB
+      const zB = new GB.e(BB, ZB, null, void 0, void 0, void 0, IB.useVertexAlpha, IB.material);
+      return nB(IB).applyToMesh(zB, IB.updatable), zB._creationDataStorage = new JB.f, zB._creationDataStorage.dashSize = hB, zB._creationDataStorage.gapSize = cB, zB
     }
-    let JB = !1;
-    JB || (JB = !0, dB.e.CreateLineSystem = UB, dB.e.CreateDashedLines = aB, nB.b.CreateLines = function(BB, jB) {
-      return rB(BB, {
-        points: jB,
+    let NB = !1;
+    NB || (NB = !0, oB.c.CreateLineSystem = cB, oB.c.CreateDashedLines = nB, JB.c.CreateLines = function(BB, IB) {
+      return zB(BB, {
+        points: IB,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, nB.b.CreateDashedLines = function(BB, jB, zB, QB, nB) {
-      return sB(BB, {
-        points: jB,
-        dashSize: zB,
-        gapSize: QB,
-        dashNb: nB,
+    }, JB.c.CreateDashedLines = function(BB, IB, ZB, TB, JB) {
+      return FB(BB, {
+        points: IB,
+        dashSize: ZB,
+        gapSize: TB,
+        dashNb: JB,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  40564: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => rB,
-      c: () => mB
+  40503: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => zB,
+      f: () => gB
     });
-    var QB, nB, dB = zB(37379),
-      IB = zB(40211),
-      NB = zB(40504),
-      uB = zB(40570),
-      UB = zB(40380),
-      aB = zB(40576),
-      pB = zB(39965);
-    class rB extends NB.b {
+    var TB, JB, oB = ZB(37311),
+      GB = ZB(40188),
+      vB = ZB(40448),
+      kB = ZB(40510),
+      cB = ZB(40339),
+      nB = ZB(40514),
+      hB = ZB(39931);
+    class zB extends vB.c {
       _isShaderMaterial(BB) {
         return !!BB && "ShaderMaterial" === BB.getClassName()
       }
       constructor(BB) {
-        let jB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          QB = arguments.length > 5 ? arguments[5] : void 0,
-          nB = arguments.length > 6 ? arguments[6] : void 0,
-          NB = arguments.length > 7 ? arguments[7] : void 0;
-        super(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, jB, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = QB, this.useVertexAlpha = nB, this.color = new dB.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, jB && (this.color = jB.color.clone(), this.alpha = jB.alpha, this.useVertexColor = jB.useVertexColor, this.useVertexAlpha = jB.useVertexAlpha), this.intersectionThreshold = .1;
-        const uB = {
-          attributes: [IB.l.PositionKind],
+        let IB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          TB = arguments.length > 5 ? arguments[5] : void 0,
+          JB = arguments.length > 6 ? arguments[6] : void 0,
+          vB = arguments.length > 7 ? arguments[7] : void 0;
+        super(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, IB, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = TB, this.useVertexAlpha = JB, this.color = new oB.c(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, IB && (this.color = IB.color.clone(), this.alpha = IB.alpha, this.useVertexColor = IB.useVertexColor, this.useVertexAlpha = IB.useVertexAlpha), this.intersectionThreshold = .1;
+        const kB = {
+          attributes: [GB.i.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? uB.defines.push("#define VERTEXALPHA") : uB.needAlphaBlending = !1, this.useVertexColor ? (uB.defines.push("#define VERTEXCOLOR"), uB.attributes.push(IB.l.ColorKind)) : (uB.uniforms.push("color"), this._color4 = new dB.g), NB) this.material = NB;
+        if (this.useVertexAlpha ? kB.defines.push("#define VERTEXALPHA") : kB.needAlphaBlending = !1, this.useVertexColor ? (kB.defines.push("#define VERTEXCOLOR"), kB.attributes.push(GB.i.ColorKind)) : (kB.uniforms.push("color"), this._color4 = new oB.g), vB) this.material = vB;
         else {
-          this.aY().wJ().isWebGPU && !rB.ForceGLSL && (this._shaderLanguage = 1), uB.shaderLanguage = this._shaderLanguage, uB.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([zB.e(349).then((() => zB(42691))), zB.e(355).then((() => zB(42700)))]) : await Promise.all([zB.e(331).then((() => zB(42706))), zB.e(337).then((() => zB(42714)))])
+          this.JR().PN().isWebGPU && !zB.ForceGLSL && (this._shaderLanguage = 1), kB.shaderLanguage = this._shaderLanguage, kB.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([ZB.e(349).then((() => ZB(42557))), ZB.e(355).then((() => ZB(42563)))]) : await Promise.all([ZB.e(331).then((() => ZB(42572))), ZB.e(337).then((() => ZB(42575)))])
           };
-          const BB = new aB.l("colorShader", this.aY(), "color", uB, !1);
+          const BB = new nB.n("colorShader", this.JR(), "color", kB, !1);
           BB.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(BB)
         }
       }
@@ -631,192 +631,192 @@ export const modules = {
         return this._internalAbstractMeshDataInfo._material
       }
       set material(BB) {
-        const jB = this.material;
-        if (jB === BB) return;
-        const zB = jB && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(BB), zB && jB?.dispose()
+        const IB = this.material;
+        if (IB === BB) return;
+        const ZB = IB && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(BB), ZB && IB?.dispose()
       }
       _setInternalMaterial(BB) {
-        this._setMaterial(BB), this.material && (this.material.fillMode = UB.b.LineListDrawMode, this.material.disableLighting = !0)
+        this._setMaterial(BB), this.material && (this.material.fillMode = cB.e.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
       set checkCollisions(BB) {}
-      _bind(BB, jB) {
+      _bind(BB, IB) {
         if (!this._geometry) return this;
-        const zB = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(jB, zB) : this._geometry._bind(jB, zB, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const ZB = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(IB, ZB) : this._geometry._bind(IB, ZB, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
             r: BB,
-            g: jB,
-            b: zB
+            g: IB,
+            b: ZB
           } = this.color;
-          this._color4.set(BB, jB, zB, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(BB, IB, ZB, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(BB, jB, zB) {
+      _draw(BB, IB, ZB) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const QB = this.aY().wJ();
-        return this._unIndexed ? QB.drawArraysType(UB.b.LineListDrawMode, BB.verticesStart, BB.verticesCount, zB) : QB.drawElementsType(UB.b.LineListDrawMode, BB.indexStart, BB.indexCount, zB), this
+        const TB = this.JR().PN();
+        return this._unIndexed ? TB.drawArraysType(cB.e.LineListDrawMode, BB.verticesStart, BB.verticesCount, ZB) : TB.drawElementsType(cB.e.LineListDrawMode, BB.indexStart, BB.indexCount, ZB), this
       }
       dispose(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || jB) && this.material?.dispose(!1, !1, !0), super.dispose(BB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || IB) && this.material?.dispose(!1, !1, !0), super.dispose(BB)
       }
       clone(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        if (jB && void 0 === jB._addToSceneRootNodes) {
-          const zB = jB;
-          return zB.source = this, new rB(BB, this.aY(), zB.parent, zB.source, zB.doNotCloneChildren)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        if (IB && void 0 === IB._addToSceneRootNodes) {
+          const ZB = IB;
+          return ZB.source = this, new zB(BB, this.JR(), ZB.parent, ZB.source, ZB.doNotCloneChildren)
         }
-        return new rB(BB, this.aY(), jB, this, zB)
+        return new zB(BB, this.JR(), IB, this, ZB)
       }
       createInstance(BB) {
-        const jB = new sB(BB, this);
-        if (this.vY) {
-          jB.vY = {};
-          for (const BB in this.vY) jB.vY[BB] = this.vY[BB]
+        const IB = new FB(BB, this);
+        if (this.Zm) {
+          IB.Zm = {};
+          for (const BB in this.Zm) IB.Zm[BB] = this.Zm[BB]
         }
-        return jB
+        return IB
       }
       serialize(BB) {
-        super.serialize(BB), BB.color = this.color.nQB(), BB.alpha = this.alpha
+        super.serialize(BB), BB.color = this.color.HTB(), BB.alpha = this.alpha
       }
-      static Parse(BB, jB) {
-        const zB = new rB(BB.name, jB);
-        return zB.color = dB.d.FromArray(BB.color), zB.alpha = BB.alpha, zB
+      static Parse(BB, IB) {
+        const ZB = new zB(BB.name, IB);
+        return ZB.color = oB.c.FromArray(BB.color), ZB.alpha = BB.alpha, ZB
       }
     }
-    rB.ForceGLSL = !1;
-    class sB extends uB.d {
-      constructor(BB, jB) {
-        super(BB, jB), this.intersectionThreshold = jB.intersectionThreshold
+    zB.ForceGLSL = !1;
+    class FB extends kB.b {
+      constructor(BB, IB) {
+        super(BB, IB), this.intersectionThreshold = IB.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let JB = !1;
+    let NB = !1;
 
-    function mB() {
-      JB || (JB = !0, NB.b._LinesMeshParser = (BB, jB) => rB.Parse(BB, jB))
-    }(QB = rB.prototype).enableEdgesRendering ?? (QB.enableEdgesRendering = (0, pB.i)("LinesMesh", "enableEdgesRendering")), (nB = sB.prototype).enableEdgesRendering ?? (nB.enableEdgesRendering = (0, pB.i)("InstancedLinesMesh", "enableEdgesRendering"))
+    function gB() {
+      NB || (NB = !0, vB.c._LinesMeshParser = (BB, IB) => zB.Parse(BB, IB))
+    }(TB = zB.prototype).enableEdgesRendering ?? (TB.enableEdgesRendering = (0, hB.j)("LinesMesh", "enableEdgesRendering")), (JB = FB.prototype).enableEdgesRendering ?? (JB.enableEdgesRendering = (0, hB.j)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38780: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => dB
+  38714: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB
     });
-    var QB = zB(38783);
-    const nB = (BB, jB, zB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : zB && "object" === typeof BB ? {
+    var TB = ZB(38718);
+    const JB = (BB, IB, ZB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : ZB && "object" === typeof BB ? {
       ...BB
-    } : null : BB.clone(jB) : null;
-    class dB {
-      static DeepCopy(BB, jB, zB, dB) {
-        let IB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const NB = function(BB) {
-          const jB = [];
+    } : null : BB.clone(IB) : null;
+    class oB {
+      static DeepCopy(BB, IB, ZB, oB) {
+        let GB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const vB = function(BB) {
+          const IB = [];
           do {
-            const zB = Object.getOwnPropertyNames(BB);
-            for (const BB of zB) - 1 === jB.indexOf(BB) && jB.push(BB)
+            const ZB = Object.getOwnPropertyNames(BB);
+            for (const BB of ZB) - 1 === IB.indexOf(BB) && IB.push(BB)
           } while (BB = Object.getPrototypeOf(BB));
-          return jB
+          return IB
         }(BB);
-        for (const UB of NB) {
-          if ("_" === UB[0] && (!dB || -1 === dB.indexOf(UB))) continue;
-          if (UB.endsWith("Observable")) continue;
-          if (zB && -1 !== zB.indexOf(UB)) continue;
-          const NB = BB[UB],
-            aB = typeof NB;
-          if ("function" !== aB) try {
-            if ("object" === aB)
-              if (NB instanceof Uint8Array) jB[UB] = Uint8Array.from(NB);
-              else if (NB instanceof Array) {
-              if (jB[UB] = [], NB.length > 0)
-                if ("object" == typeof NB[0])
-                  for (let BB = 0; BB < NB.length; BB++) {
-                    const zB = nB(NB[BB], jB, IB); - 1 === jB[UB].indexOf(zB) && jB[UB].push(zB)
-                  } else jB[UB] = NB.slice(0)
-            } else jB[UB] = nB(NB, jB, IB);
-            else jB[UB] = NB
-          } catch (uB) {
-            QB.c.Warn(uB.message)
+        for (const cB of vB) {
+          if ("_" === cB[0] && (!oB || -1 === oB.indexOf(cB))) continue;
+          if (cB.endsWith("Observable")) continue;
+          if (ZB && -1 !== ZB.indexOf(cB)) continue;
+          const vB = BB[cB],
+            nB = typeof vB;
+          if ("function" !== nB) try {
+            if ("object" === nB)
+              if (vB instanceof Uint8Array) IB[cB] = Uint8Array.from(vB);
+              else if (vB instanceof Array) {
+              if (IB[cB] = [], vB.length > 0)
+                if ("object" == typeof vB[0])
+                  for (let BB = 0; BB < vB.length; BB++) {
+                    const ZB = JB(vB[BB], IB, GB); - 1 === IB[cB].indexOf(ZB) && IB[cB].push(ZB)
+                  } else IB[cB] = vB.slice(0)
+            } else IB[cB] = JB(vB, IB, GB);
+            else IB[cB] = vB
+          } catch (kB) {
+            TB.d.Warn(kB.message)
           }
         }
       }
     }
   },
-  37987: (BB, jB, zB) => {
-    function QB() {
+  37964: (BB, IB, ZB) => {
+    function TB() {
       return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (BB => {
-        const jB = 16 * Math.random() | 0;
-        return ("x" === BB ? jB : 3 & jB | 8).toString(16)
+        const IB = 16 * Math.random() | 0;
+        return ("x" === BB ? IB : 3 & IB | 8).toString(16)
       }))
     }
-    zB.d(jB, {
-      d: () => QB
+    ZB.d(IB, {
+      d: () => TB
     })
   },
-  38783: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB
+  38718: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => TB
     });
-    class QB {
-      static _CheckLimit(BB, jB) {
-        let zB = QB._LogLimitOutputs[BB];
-        return zB ? zB.current++ : (zB = {
-          limit: jB,
+    class TB {
+      static _CheckLimit(BB, IB) {
+        let ZB = TB._LogLimitOutputs[BB];
+        return ZB ? ZB.current++ : (ZB = {
+          limit: IB,
           current: 1
-        }, QB._LogLimitOutputs[BB] = zB), zB.current <= zB.limit
+        }, TB._LogLimitOutputs[BB] = ZB), ZB.current <= ZB.limit
       }
       static _GenerateLimitMessage(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const zB = QB._LogLimitOutputs[BB];
-        if (!zB || !QB.MessageLimitReached) return;
-        const nB = this._Levels[jB];
-        zB.current === zB.limit && QB[nB.name](QB.MessageLimitReached.replace(/%LIMIT%/g, "" + zB.limit).replace(/%TYPE%/g, nB.name ?? ""))
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZB = TB._LogLimitOutputs[BB];
+        if (!ZB || !TB.MessageLimitReached) return;
+        const JB = this._Levels[IB];
+        ZB.current === ZB.limit && TB[JB.name](TB.MessageLimitReached.replace(/%LIMIT%/g, "" + ZB.limit).replace(/%TYPE%/g, JB.name ?? ""))
       }
       static _AddLogEntry(BB) {
-        QB._LogCache = BB + QB._LogCache, QB.OnNewCacheEntry && QB.OnNewCacheEntry(BB)
+        TB._LogCache = BB + TB._LogCache, TB.OnNewCacheEntry && TB.OnNewCacheEntry(BB)
       }
       static _FormatMessage(BB) {
-        const jB = BB => BB < 10 ? "0" + BB : "" + BB,
-          zB = new Date;
-        return "[" + jB(zB.getHours()) + ":" + jB(zB.getMinutes()) + ":" + jB(zB.getSeconds()) + "]: " + BB
+        const IB = BB => BB < 10 ? "0" + BB : "" + BB,
+          ZB = new Date;
+        return "[" + IB(ZB.getHours()) + ":" + IB(ZB.getMinutes()) + ":" + IB(ZB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(BB, jB) {}
+      static _LogDisabled(BB, IB) {}
       static _LogEnabled() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          jB = arguments.length > 1 ? arguments[1] : void 0,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        const nB = Array.isArray(jB) ? jB[0] : jB;
-        if (void 0 !== zB && !QB._CheckLimit(nB, zB)) return;
-        const dB = QB._FormatMessage(nB),
-          IB = this._Levels[BB],
-          NB = Array.isArray(jB) ? jB.slice(1) : [];
-        IB.logFunc && IB.logFunc("BJS - " + dB, ...NB);
-        const uB = `<div style='color:${IB.color}'>${dB}</div><br>`;
-        QB._AddLogEntry(uB), QB._GenerateLimitMessage(nB, BB)
+          IB = arguments.length > 1 ? arguments[1] : void 0,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        const JB = Array.isArray(IB) ? IB[0] : IB;
+        if (void 0 !== ZB && !TB._CheckLimit(JB, ZB)) return;
+        const oB = TB._FormatMessage(JB),
+          GB = this._Levels[BB],
+          vB = Array.isArray(IB) ? IB.slice(1) : [];
+        GB.logFunc && GB.logFunc("BJS - " + oB, ...vB);
+        const kB = `<div style='color:${GB.color}'>${oB}</div><br>`;
+        TB._AddLogEntry(kB), TB._GenerateLimitMessage(JB, BB)
       }
       static get LogCache() {
-        return QB._LogCache
+        return TB._LogCache
       }
       static ClearLogCache() {
-        QB._LogCache = "", QB._LogLimitOutputs = {}, QB.errorsCount = 0
+        TB._LogCache = "", TB._LogLimitOutputs = {}, TB.errorsCount = 0
       }
       static set LogLevels(BB) {
-        QB.Log = QB._LogDisabled, QB.Warn = QB._LogDisabled, QB.Error = QB._LogDisabled;
-        const jB = [QB.MessageLogLevel, QB.WarningLogLevel, QB.ErrorLogLevel];
-        for (const zB of jB)
-          if ((BB & zB) === zB) {
-            const BB = this._Levels[zB];
-            QB[BB.name] = QB._LogEnabled.bind(QB, zB)
+        TB.Log = TB._LogDisabled, TB.Warn = TB._LogDisabled, TB.Error = TB._LogDisabled;
+        const IB = [TB.MessageLogLevel, TB.WarningLogLevel, TB.ErrorLogLevel];
+        for (const ZB of IB)
+          if ((BB & ZB) === ZB) {
+            const BB = this._Levels[ZB];
+            TB[BB.name] = TB._LogEnabled.bind(TB, ZB)
           }
       }
     }
-    QB.NoneLogLevel = 0, QB.MessageLogLevel = 1, QB.WarningLogLevel = 2, QB.ErrorLogLevel = 4, QB.AllLogLevel = 7, QB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QB._LogCache = "", QB._LogLimitOutputs = {}, QB._Levels = [{}, {
+    TB.NoneLogLevel = 0, TB.MessageLogLevel = 1, TB.WarningLogLevel = 2, TB.ErrorLogLevel = 4, TB.AllLogLevel = 7, TB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", TB._LogCache = "", TB._LogLimitOutputs = {}, TB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,14 +828,14 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], QB.errorsCount = 0, QB.Log = QB._LogEnabled.bind(QB, QB.MessageLogLevel), QB.Warn = QB._LogEnabled.bind(QB, QB.WarningLogLevel), QB.Error = QB._LogEnabled.bind(QB, QB.ErrorLogLevel)
+    }], TB.errorsCount = 0, TB.Log = TB._LogEnabled.bind(TB, TB.MessageLogLevel), TB.Warn = TB._LogEnabled.bind(TB, TB.WarningLogLevel), TB.Error = TB._LogEnabled.bind(TB, TB.ErrorLogLevel)
   },
-  40154: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => QB.g
+  40143: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB.e
     });
-    var QB = zB(40156);
-    (0, QB.e)()
+    var TB = ZB(40148);
+    (0, TB.b)()
   }
 };
 Object.freeze(modules);

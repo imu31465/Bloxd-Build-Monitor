@@ -1,29 +1,29 @@
 export const id = 138;
 export const ids = [138];
 export const modules = {
-  6585: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      loadShaderPackTextures: () => IB,
-      shaderPackTextures: () => NB
+  6778: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      loadShaderPackTextures: () => GB,
+      shaderPackTextures: () => vB
     });
-    var QB = zB(5120);
-    let nB = null,
-      dB = null;
+    var TB = ZB(5210);
+    let JB = null,
+      oB = null;
 
-    function IB() {
-      return dB ??= Promise.all([zB.e(73), zB.e(190)]).then((() => zB(40588))).then((BB => {
+    function GB() {
+      return oB ??= Promise.all([ZB.e(73), ZB.e(190)]).then((() => ZB(40534))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: jB,
-          textureNameToIndex: zB,
-          textureAnimationData: dB
+          FORMER_BLOCK_IMAGE_NAMES: IB,
+          textureNameToIndex: ZB,
+          textureAnimationData: oB
         } = BB;
-        return nB ??= (0, QB.j)(zB, dB, jB), nB
-      })), dB
+        return JB ??= (0, TB.l)(ZB, oB, IB), JB
+      })), oB
     }
 
-    function NB() {
-      if (null === nB) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return nB
+    function vB() {
+      if (null === JB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return JB
     }
   }
 };

@@ -1,11 +1,11 @@
 export const id = 122;
 export const ids = [122];
 export const modules = {
-  6431: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB
+  6643: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB
     });
-    const QB = {
+    const TB = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -159,7 +159,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: zB(2015).d,
+      _shopVersion: ZB(2038).d,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,

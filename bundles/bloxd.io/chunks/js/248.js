@@ -1,1221 +1,1221 @@
 export const id = 248;
 export const ids = [248];
 export const modules = {
-  39199: (BB, jB, zB) => {
-    function QB(BB) {
+  39175: (BB, IB, ZB) => {
+    function TB(BB) {
       return !(!BB.lobbyLeaderboardInfo && !BB.lobbyManage)
     }
-    zB.d(jB, {
-      c: () => QB
+    ZB.d(IB, {
+      d: () => TB
     })
   },
-  39136: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB
+  39082: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB
     });
-    var QB = zB(31),
-      nB = zB(2006);
+    var TB = ZB(24),
+      JB = ZB(2029);
 
-    function dB(BB) {
+    function oB(BB) {
       let {
-        taskId: jB,
-        progress: zB
+        taskId: IB,
+        progress: ZB
       } = BB;
-      const QB = nB.c.get("_tasks");
-      null !== QB && void 0 !== QB && QB[jB] && nB.c.apply({
+      const TB = JB.c.get("_tasks");
+      null !== TB && void 0 !== TB && TB[IB] && JB.c.apply({
         _tasks: {
-          ...QB,
-          [jB]: {
-            ...QB[jB],
-            progress: zB
+          ...TB,
+          [IB]: {
+            ...TB[IB],
+            progress: ZB
           }
         }
       })
     }
-    QB.n.subscribe("clientTaskProgress", (BB => {
-      dB(BB)
+    TB.l.subscribe("clientTaskProgress", (BB => {
+      oB(BB)
     }))
   },
-  39062: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => Bz,
-      h: () => Rj,
-      j: () => Oj
+  39021: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => BZ,
+      e: () => VI,
+      h: () => SI
     });
-    var QB = zB(3798),
-      nB = zB(174),
-      dB = zB(214),
-      IB = zB(667),
-      NB = zB(41),
-      uB = zB(2863),
-      UB = zB(3849),
-      aB = zB(3836),
-      pB = zB(1263);
-    const rB = new WeakMap;
-    class sB {
-      constructor(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-          yUB: !0
+    var TB = ZB(3854),
+      JB = ZB(168),
+      oB = ZB(201),
+      GB = ZB(671),
+      vB = ZB(36),
+      kB = ZB(2912),
+      cB = ZB(3911),
+      nB = ZB(3896),
+      hB = ZB(1281);
+    const zB = new WeakMap;
+    class FB {
+      constructor(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          AcB: !0
         };
-        this.callbacks = jB, this.options = zB, this.LzB = void 0, this.sessionId = void 0, this.iH = [], this.kUB = !1, this.HJ = !1, this.GUB = void 0, this.gH = 0, this.ynB = 0, this.LUB = (BB, jB) => {
-          if (this.HJ) return;
-          const zB = Number(BB);
-          this.kUB ? this.gUB(zB, jB) : this.iH.push({
-            id: zB,
-            payload: jB
+        this.callbacks = IB, this.options = ZB, this.xZB = void 0, this.sessionId = void 0, this.aY = [], this.tcB = !1, this.WN = !1, this.bcB = void 0, this.pY = 0, this.AJB = 0, this.xcB = (BB, IB) => {
+          if (this.WN) return;
+          const ZB = Number(BB);
+          this.tcB ? this.EcB(ZB, IB) : this.aY.push({
+            id: ZB,
+            payload: IB
           })
         }, this.dispose = () => {
-          this.HJ || (this.HJ = !0, rB.delete(this), this.iH.length = 0, this.GUB())
-        }, this.LzB = BB, this.sessionId = BB.sessionId, rB.set(this, []), this.GUB = this.tUB()
+          this.WN || (this.WN = !0, zB.delete(this), this.aY.length = 0, this.bcB())
+        }, this.xZB = BB, this.sessionId = BB.sessionId, zB.set(this, []), this.bcB = this.DcB()
       }
-      MUB(BB) {
-        this.GUB(), this.LzB = BB, this.sessionId = BB.sessionId, this.gH = 0, this.ynB = 0, this.GUB = this.tUB()
+      KcB(BB) {
+        this.bcB(), this.xZB = BB, this.sessionId = BB.sessionId, this.pY = 0, this.AJB = 0, this.bcB = this.DcB()
       }
-      get sH() {
-        return this.ynB
+      get FY() {
+        return this.AJB
       }
-      tUB() {
-        const BB = this.LzB.hG("*", this.LUB);
-        return this.options.yUB && this.LzB.WG(this.dispose), BB
+      DcB() {
+        const BB = this.xZB.rU("*", this.xcB);
+        return this.options.AcB && this.xZB.KU(this.dispose), BB
       }
-      gUB(BB, jB) {
+      EcB(BB, IB) {
         try {
-          (0, UB.wc)(BB) && (jB = (0, UB.b)(BB, aB.oJ.from(jB)));
-          const zB = rB.get(this)[BB];
-          if ("function" !== typeof zB) {
-            if (this.callbacks.EUB) return void this.callbacks.EUB(BB, jB);
+          (0, cB.sc)(BB) && (IB = (0, cB.c)(BB, nB.UN.from(IB)));
+          const ZB = zB.get(this)[BB];
+          if ("function" !== typeof ZB) {
+            if (this.callbacks.VcB) return void this.callbacks.VcB(BB, IB);
             throw new Error(`No onMessage handler registered for message id ${BB}`)
           }
-          zB(jB)
-        } catch (zB) {
-          this.callbacks.iUB(`Error in onMessage ${BB} with payload ${JSON.stringify(jB)}`, zB)
+          ZB(IB)
+        } catch (ZB) {
+          this.callbacks.ScB(`Error in onMessage ${BB} with payload ${JSON.stringify(IB)}`, ZB)
         } finally {
-          this.gH++
+          this.pY++
         }
       }
-      qUB() {
+      BnB() {
         for (const {
             id: BB,
-            payload: jB
+            payload: IB
           }
-          of this.iH) {
-          if (this.HJ) break;
-          this.gUB(BB, jB)
+          of this.aY) {
+          if (this.WN) break;
+          this.EcB(BB, IB)
         }
-        this.iH.length = 0
+        this.aY.length = 0
       }
-      aE() {
-        return this.HJ
+      mC() {
+        return this.WN
       }
-      fUB() {
-        if (this.kUB || this.HJ) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
+      InB() {
+        if (this.tcB || this.WN) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
         return {
-          hG: (BB, jB) => {
-            if (this.kUB || this.HJ) throw new Error("Trying to call onMessage after registration finished");
-            this.hG(BB, jB)
+          rU: (BB, IB) => {
+            if (this.tcB || this.WN) throw new Error("Trying to call onMessage after registration finished");
+            this.rU(BB, IB)
           },
           finishRegistration: () => {
-            if (this.HJ) throw new Error("Cannot finish message registration after disposal");
-            this.kUB = !0, this.qUB()
+            if (this.WN) throw new Error("Cannot finish message registration after disposal");
+            this.tcB = !0, this.BnB()
           }
         }
       }
-      hG(BB, jB) {
-        var zB, QB;
-        null === (zB = (QB = this.callbacks).oUB) || void 0 === zB || zB.call(QB);
-        const nB = rB.get(this);
-        for (; BB > nB.length;) nB[nB.length] = null;
-        nB[BB] = jB
+      rU(BB, IB) {
+        var ZB, TB;
+        null === (ZB = (TB = this.callbacks).ZnB) || void 0 === ZB || ZB.call(TB);
+        const JB = zB.get(this);
+        for (; BB > JB.length;) JB[JB.length] = null;
+        JB[BB] = IB
       }
-      send(BB, jB) {
-        this.DUB(), (0, pB.A)(jB) ? this.LzB.lH(BB, jB) : this.LzB.send(BB, jB)
+      send(BB, IB) {
+        this.TnB(), (0, hB.z)(IB) ? this.xZB.lY(BB, IB) : this.xZB.send(BB, IB)
       }
-      DUB() {
-        var BB, jB;
-        (this.ynB++, 5 === JB++) && (null === (BB = (jB = this.callbacks).oUB) || void 0 === BB || BB.call(jB), JB = 0)
+      TnB() {
+        var BB, IB;
+        (this.AJB++, 5 === NB++) && (null === (BB = (IB = this.callbacks).ZnB) || void 0 === BB || BB.call(IB), NB = 0)
       }
-      Wk() {
-        this.dispose(), this.LzB.Wk()
+      jy() {
+        this.dispose(), this.xZB.jy()
       }
       leave() {
-        this.dispose(), this.LzB.leave()
+        this.dispose(), this.xZB.leave()
       }
     }
-    let JB = 0;
-    var mB = zB(3806);
-    class yB extends sB {
+    let NB = 0;
+    var gB = ZB(3869);
+    class qB extends FB {
       constructor(BB) {
         super(BB, {
-          oUB: () => {
-            (0, NB.o)(!0) && (0, QB.UH)()
+          ZnB: () => {
+            (0, vB.o)(!0) && (0, TB.hY)()
           },
-          iUB: (BB, jB) => {
-            var zB;
-            null === (zB = (0, uB.g)()) || void 0 === zB || zB.Xm(BB, jB)
+          ScB: (BB, IB) => {
+            var ZB;
+            null === (ZB = (0, kB.h)()) || void 0 === ZB || ZB.wg(BB, IB)
           }
         }, {
-          yUB: !1
-        }), (0, mB.d)(BB)
+          AcB: !1
+        }), (0, gB.e)(BB)
       }
-      DH(BB, jB) {
-        return !!(0, mB.j)((0, mB.b)(), this.LzB, BB, jB) && (this.DUB(), !0)
+      RY(BB, IB) {
+        return !!(0, gB.l)((0, gB.c)(), this.xZB, BB, IB) && (this.TnB(), !0)
       }
-      MUB(BB) {
-        this.FUB(), super.MUB(BB), (0, mB.d)(BB)
+      KcB(BB) {
+        this.JnB(), super.KcB(BB), (0, gB.e)(BB)
       }
-      Wk() {
-        super.Wk(), this.FUB()
+      jy() {
+        super.jy(), this.JnB()
       }
-      FUB() {
-        this.LzB.Rk.GJ.uF = void 0
+      JnB() {
+        this.xZB.Py.kN.mH = void 0
       }
     }
-    var kB = zB(31),
-      GB = zB(2006),
-      LB = zB(1778),
-      gB = zB(36533),
-      tB = zB(39071),
-      SB = zB(38122),
-      MB = zB(37902),
-      EB = zB(658),
-      iB = zB(38505);
+    var yB = ZB(24),
+      UB = ZB(2029),
+      WB = ZB(1805),
+      dB = ZB(36485),
+      CB = ZB(39023),
+      QB = ZB(38099),
+      sB = ZB(37855),
+      wB = ZB(665),
+      OB = ZB(38455);
 
-    function qB(BB, jB, zB) {
-      const QB = function(BB) {
-          const jB = new Int32Array(BB.length * iB.g);
-          return BB.forEach(((BB, zB) => {
-            const QB = zB * iB.g;
+    function YB(BB, IB, ZB) {
+      const TB = function(BB) {
+          const IB = new Int32Array(BB.length * OB.c);
+          return BB.forEach(((BB, ZB) => {
+            const TB = ZB * OB.c;
             if (4 === BB.length) {
-              const [zB, nB, dB, IB] = BB;
-              jB.set([zB, nB, dB, zB, nB, dB, IB], QB)
+              const [ZB, JB, oB, GB] = BB;
+              IB.set([ZB, JB, oB, ZB, JB, oB, GB], TB)
             } else {
-              const [zB, nB, dB, IB, NB, uB, UB] = BB;
-              jB.set([zB, dB, NB, nB, IB, uB, UB], QB)
+              const [ZB, JB, oB, GB, vB, kB, cB] = BB;
+              IB.set([ZB, oB, vB, JB, GB, kB, cB], TB)
             }
-          })), jB
-        }(zB),
-        nB = (jB, zB, QB, nB) => {
-          BB.setBlockNoMulti(jB, zB, QB, nB, !0)
+          })), IB
+        }(ZB),
+        JB = (IB, ZB, TB, JB) => {
+          BB.setBlockNoMulti(IB, ZB, TB, JB, !0)
         };
-      BB.client.gameRecorder.isCapturing() ? (0, iB.lb)(QB, (0, iB.jb)(QB), nB) : BB.ur.zr.TE(QB, {
-        wT: nB,
-        isHookId: jB => BB.blockChangeHasHooks(jB),
-        watched: () => function(BB, jB, zB) {
-          const QB = [],
-            nB = (BB, jB, zB) => {
-              QB.push(BB, jB, zB)
+      BB.client.gameRecorder.isCapturing() ? (0, OB.nb)(TB, (0, OB.jb)(TB), JB) : BB.Nz.vz.EQ(TB, {
+        qE: JB,
+        isHookId: IB => BB.blockChangeHasHooks(IB),
+        watched: () => function(BB, IB, ZB) {
+          const TB = [],
+            JB = (BB, IB, ZB) => {
+              TB.push(BB, IB, ZB)
             },
-            dB = new Set;
-          for (let IB = 0; IB < zB.length; IB += iB.g)
-            for (let jB = (0, EB.P)(zB[IB]); jB <= (0, EB.P)(zB[IB + 3]); jB++)
-              for (let QB = (0, EB.P)(zB[IB + 1]); QB <= (0, EB.P)(zB[IB + 4]); QB++)
-                for (let NB = (0, EB.P)(zB[IB + 2]); NB <= (0, EB.P)(zB[IB + 5]); NB++) {
-                  const zB = `${jB}|${QB}|${NB}`;
-                  dB.has(zB) || (dB.add(zB), BB.blockDataOwner.forEachDataCell(jB, QB, NB, nB))
+            oB = new Set;
+          for (let GB = 0; GB < ZB.length; GB += OB.c)
+            for (let IB = (0, wB.T)(ZB[GB]); IB <= (0, wB.T)(ZB[GB + 3]); IB++)
+              for (let TB = (0, wB.T)(ZB[GB + 1]); TB <= (0, wB.T)(ZB[GB + 4]); TB++)
+                for (let vB = (0, wB.T)(ZB[GB + 2]); vB <= (0, wB.T)(ZB[GB + 5]); vB++) {
+                  const ZB = `${IB}|${TB}|${vB}`;
+                  oB.has(ZB) || (oB.add(ZB), BB.blockDataOwner.forEachDataCell(IB, TB, vB, JB))
                 }
-          return jB.forEachCell(nB), Int32Array.from(QB)
-        }(BB, jB, QB)
-      }), BB.ur.kBB()
+          return IB.forEachCell(JB), Int32Array.from(TB)
+        }(BB, IB, TB)
+      }), BB.Nz.tBB()
     }
 
-    function fB(BB) {
-      BB.NzB = new Set, BB.azB = new Set, BB.uzB = new Set, BB.rzB = new Set, BB.UzB = [], BB.szB = [], BB.hA = new Set, BB.Wn = [], BB.jT = []
+    function iB(BB) {
+      BB.rZB = new Set, BB.LZB = new Set, BB.mZB = new Set, BB.eZB = new Set, BB.XZB = [], BB.uZB = [], BB.Bx = new Set, BB.HJ = [], BB.Ix = []
     }
-    class oB {
+    class pB {
       constructor(BB) {
-        this.ur = BB
+        this.Nz = BB
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
-        BB.hG(UB.S, (BB => {
-          jB.zr.NzB.add(BB), jB.zr.azB.delete(BB)
-        })), BB.hG(UB.ab, (BB => {
-          jB.zr.azB.add(BB), jB.zr.NzB.delete(BB)
-        })), BB.hG(UB.re, (BB => {
-          jB.zr.azB.delete(BB), jB.zr.NzB.delete(BB)
-        })), BB.hG(UB.Z, (BB => {
-          jB.zr.uzB.add(BB), jB.zr.rzB.delete(BB)
-        })), BB.hG(UB.ib, (BB => {
-          jB.zr.rzB.add(BB), jB.zr.uzB.delete(BB)
-        })), BB.hG(UB.xe, (BB => {
-          jB.zr.rzB.delete(BB), jB.zr.uzB.delete(BB)
-        })), BB.hG(UB.V, (BB => {
-          (0, pB.U)(BB, jB.zr.szB), (0, pB.U)(BB, jB.zr.UzB), jB.zr.UzB.push(BB)
-        })), BB.hG(UB.eb, (BB => {
-          (0, pB.U)(BB, jB.zr.UzB), (0, pB.U)(BB, jB.zr.szB), jB.zr.szB.push(BB)
-        })), BB.hG(UB.ve, (BB => {
-          (0, pB.U)(BB, jB.zr.UzB), (0, pB.U)(BB, jB.zr.szB)
-        })), BB.hG(UB.Vf, (BB => {
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
+        BB.rU(cB.ab, (BB => {
+          IB.vz.rZB.add(BB), IB.vz.LZB.delete(BB)
+        })), BB.rU(cB.ib, (BB => {
+          IB.vz.LZB.add(BB), IB.vz.rZB.delete(BB)
+        })), BB.rU(cB.je, (BB => {
+          IB.vz.LZB.delete(BB), IB.vz.rZB.delete(BB)
+        })), BB.rU(cB.hb, (BB => {
+          IB.vz.mZB.add(BB), IB.vz.eZB.delete(BB)
+        })), BB.rU(cB.lb, (BB => {
+          IB.vz.eZB.add(BB), IB.vz.mZB.delete(BB)
+        })), BB.rU(cB.oe, (BB => {
+          IB.vz.eZB.delete(BB), IB.vz.mZB.delete(BB)
+        })), BB.rU(cB.db, (BB => {
+          (0, hB.$)(BB, IB.vz.uZB), (0, hB.$)(BB, IB.vz.XZB), IB.vz.XZB.push(BB)
+        })), BB.rU(cB.kb, (BB => {
+          (0, hB.$)(BB, IB.vz.XZB), (0, hB.$)(BB, IB.vz.uZB), IB.vz.uZB.push(BB)
+        })), BB.rU(cB.ke, (BB => {
+          (0, hB.$)(BB, IB.vz.XZB), (0, hB.$)(BB, IB.vz.uZB)
+        })), BB.rU(cB.Gf, (BB => {
           let {
-            dn: zB,
-            Nn: QB
+            IJ: ZB,
+            ZJ: TB
           } = BB;
-          QB ? jB.zr.hA.delete(zB) : jB.zr.hA.add(zB)
-        })), BB.hG(UB.Uf, (BB => {
+          TB ? IB.vz.Bx.delete(ZB) : IB.vz.Bx.add(ZB)
+        })), BB.rU(cB.Cf, (BB => {
           let {
-            Wn: QB,
-            en: nB
+            HJ: TB,
+            MJ: JB
           } = BB;
-          zB.updateWalkThroughRect(jB.zV, QB, nB)
-        })), (0, QB.onGameResetOnce)((() => {
-          fB(jB.zr)
-        })), BB.hG(UB.rc, (BB => {
-          SB.c.applyServerUpdate(BB)
-        })), BB.hG(UB.lb, (BB => {
-          zB.applyServerBlocks((() => {
-            ! function(BB, jB) {
+          ZB.updateWalkThroughRect(IB.Jm, TB, JB)
+        })), (0, TB.onGameResetOnce)((() => {
+          iB(IB.vz)
+        })), BB.rU(cB.oc, (BB => {
+          QB.c.applyServerUpdate(BB)
+        })), BB.rU(cB.sb, (BB => {
+          ZB.applyServerBlocks((() => {
+            ! function(BB, IB) {
               for (const {
-                  GB: zB,
-                  LB: QB
+                  UB: ZB,
+                  WB: TB
                 }
-                of jB) {
-                const jB = MB.b[QB];
-                if (jB) {
+                of IB) {
+                const IB = sB.d[TB];
+                if (IB) {
                   const {
-                    compX: QB,
-                    compY: nB,
-                    compZ: dB,
-                    mainMultiblock: IB
-                  } = jB;
-                  BB.eD(zB[0] - QB, zB[1] - nB, zB[2] - dB, IB)
+                    compX: TB,
+                    compY: JB,
+                    compZ: oB,
+                    mainMultiblock: GB
+                  } = IB;
+                  BB.UH(ZB[0] - TB, ZB[1] - JB, ZB[2] - oB, GB)
                 }
               }
               for (const {
-                  GB: zB,
-                  LB: QB,
-                  gB: nB
+                  UB: ZB,
+                  WB: TB,
+                  dB: JB
                 }
-                of jB) BB.setBlockNoMulti(zB[0], zB[1], zB[2], QB, !0), BB.blockDataOwner.setBlockData(zB[0], zB[1], zB[2], null === nB ? void 0 : JSON.parse(nB)), BB.blockAdded(zB[0], zB[1], zB[2], QB)
-            }(zB, BB)
-          })), kB.n.Ly("changeBlockFail", BB), zB.client.triggerGameCallback("onChangeBlockFail", BB), kB.n.Ly("EditBoard", {
+                of IB) BB.setBlockNoMulti(ZB[0], ZB[1], ZB[2], TB, !0), BB.blockDataOwner.setBlockData(ZB[0], ZB[1], ZB[2], null === JB ? void 0 : JSON.parse(JB)), BB.blockAdded(ZB[0], ZB[1], ZB[2], TB)
+            }(ZB, BB)
+          })), yB.l.Gq("changeBlockFail", BB), ZB.client.triggerGameCallback("onChangeBlockFail", BB), yB.l.Gq("EditBoard", {
             pos: null
-          }), kB.n.Ly("EditCodeBlock", {
+          }), yB.l.Gq("EditCodeBlock", {
             pos: null,
             canChangePos: null
           })
-        })), BB.hG(UB.Sb, (BB => {
-          zB.applyServerBlocks((() => {
-            qB(zB, SB.c, BB)
+        })), BB.rU(cB.Ob, (BB => {
+          ZB.applyServerBlocks((() => {
+            YB(ZB, QB.c, BB)
           }))
-        })), BB.hG(UB.Lf, (BB => {
+        })), BB.rU(cB.uf, (BB => {
           let {
-            tB: jB,
-            SB: QB
+            CB: IB,
+            QB: TB
           } = BB;
-          if (zB.Bl(jB[0], jB[1], jB[2])) {
-            const BB = (0, uB.c)().JG(jB[0], jB[1], jB[2]);
-            (0, uB.c)().updateMailboxContents(jB[0], jB[1], jB[2], BB, QB)
+          if (ZB.pD(IB[0], IB[1], IB[2])) {
+            const BB = (0, kB.d)().WU(IB[0], IB[1], IB[2]);
+            (0, kB.d)().updateMailboxContents(IB[0], IB[1], IB[2], BB, TB)
           }
-        })), BB.hG(UB.Ve, (BB => {
+        })), BB.rU(cB.He, (BB => {
           let {
-            pos: jB,
-            data: QB
+            pos: IB,
+            data: TB
           } = BB;
-          zB.blockDataOwner.setBlockData(jB[0], jB[1], jB[2], QB), zB.blockAdded(jB[0], jB[1], jB[2], zB.JG(jB[0], jB[1], jB[2]))
+          ZB.blockDataOwner.setBlockData(IB[0], IB[1], IB[2], TB), ZB.blockAdded(IB[0], IB[1], IB[2], ZB.WU(IB[0], IB[1], IB[2]))
         }))
       }
     }
-    var HB = zB(37248),
-      DB = zB(36843),
-      FB = zB(38147),
-      YB = zB(37999),
-      VB = zB(38162);
-    class hB {
-      constructor(BB, jB) {
-        this.ur = BB, this.setUpQueuedEntity = jB
+    var aB = ZB(37192),
+      HB = ZB(36794),
+      MB = ZB(38136),
+      jB = ZB(37975),
+      PB = ZB(38146);
+    class RB {
+      constructor(BB, IB) {
+        this.Nz = BB, this.setUpQueuedEntity = IB
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
-        BB.hG(UB.R, (BB => {
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
+        BB.rU(cB.Z, (BB => {
           let {
-            Sz: jB,
-            Mz: zB
+            CZ: IB,
+            QZ: ZB
           } = BB;
-          this.setUpQueuedEntity(jB), jB = (0, DB.b)(jB), (0, uB.c)().client.gameRecorder.recordBulletShot(jB, zB), kB.n.Ly(`bulletShot|${jB}`, {
-            bulletDirections: zB
+          this.setUpQueuedEntity(IB), IB = (0, HB.e)(IB), (0, kB.d)().client.gameRecorder.recordBulletShot(IB, ZB), yB.l.Gq(`bulletShot|${IB}`, {
+            bulletDirections: ZB
           })
-        })), BB.hG(UB.tc, (BB => {
+        })), BB.rU(cB.rc, (BB => {
           let {
-            Gz: jB,
-            Lz: zB
+            yZ: IB,
+            UZ: ZB
           } = BB;
-          kB.n.Ly("damagedByOtherPlayer", {
-            Gz: jB,
-            direction: zB
+          yB.l.Gq("damagedByOtherPlayer", {
+            yZ: IB,
+            direction: ZB
           }, !0)
-        })), BB.hG(UB.Ld, (BB => {
-          kB.n.Ly("playerKilled", BB, !0), (0, uB.c)().client.gameRecorder.recordPlayerKilled(BB.deadEId, BB.killerEId, BB.withItem, BB.killstreak)
-        })), BB.hG(UB.Zb, (BB => {
-          kB.n.Ly("customKillfeed", BB, !0), (0, uB.c)().client.gameRecorder.recordCustomKillfeed(BB.killer, BB.victim, BB.withItem)
-        })), BB.hG(UB.Xd, (BB => {
+        })), BB.rU(cB.Ed, (BB => {
+          yB.l.Gq("playerKilled", BB, !0), (0, kB.d)().client.gameRecorder.recordPlayerKilled(BB.deadEId, BB.killerEId, BB.withItem, BB.killstreak)
+        })), BB.rU(cB.Wb, (BB => {
+          yB.l.Gq("customKillfeed", BB, !0), (0, kB.d)().client.gameRecorder.recordCustomKillfeed(BB.killer, BB.victim, BB.withItem)
+        })), BB.rU(cB.Sd, (BB => {
           let {
-            lB: zB,
-            wB: QB
+            lB: ZB,
+            AB: TB
           } = BB;
-          this.setUpQueuedEntity(zB);
-          const nB = jB.vG.ZjB(zB);
-          null !== nB && void 0 !== nB && nB.isGun() && nB.reload(Date.now(), QB)
-        })), BB.hG(UB.Pe, (BB => {
+          this.setUpQueuedEntity(ZB);
+          const JB = IB.zW.FZB(ZB);
+          null !== JB && void 0 !== JB && JB.isGun() && JB.reload(Date.now(), TB)
+        })), BB.rU(cB.De, (BB => {
           let {
-            Wj: zB,
-            fB: QB
+            uI: ZB,
+            YB: TB
           } = BB;
-          const nB = QB ? (0, VB.h)(jB, QB) : void 0;
-          kB.n.Ly("sendHitmarker", {
-            Wj: zB,
-            screenPos: nB
+          const JB = TB ? (0, PB.f)(IB, TB) : void 0;
+          yB.l.Gq("sendHitmarker", {
+            uI: ZB,
+            screenPos: JB
           }, !0)
-        })), BB.hG(UB.$c, (BB => {
+        })), BB.rU(cB.Vc, (BB => {
           let {
-            EB: QB,
-            iB: nB,
-            oB: dB,
-            HB: IB,
-            DB: NB,
-            FB: uB,
-            YB: UB
+            sB: TB,
+            wB: JB,
+            iB: oB,
+            pB: GB,
+            aB: vB,
+            HB: kB,
+            jB: cB
           } = BB;
-          this.setUpQueuedEntity(QB), QB = (0, DB.b)(QB);
-          const aB = jB.vG.HjB(QB);
-          if (aB && (aB.lastHurtTime = performance.now()), (0, FB.playRigHurt)(jB, QB, uB), kB.n.Ly("lifeformHurt", {
-              eId: QB,
-              YB: UB
-            }), nB) {
-            const BB = (0, VB.h)(jB, nB.fB);
-            kB.n.Ly("yourAttackHit", {
-              Wj: IB,
+          this.setUpQueuedEntity(TB), TB = (0, HB.e)(TB);
+          const nB = IB.zW.oZB(TB);
+          if (nB && (nB.lastHurtTime = performance.now()), (0, MB.playRigHurt)(IB, TB, kB), yB.l.Gq("lifeformHurt", {
+              eId: TB,
+              jB: cB
+            }), JB) {
+            const BB = (0, PB.f)(IB, JB.YB);
+            yB.l.Gq("yourAttackHit", {
+              uI: GB,
               screenPos: BB,
-              hitSelf: QB === jB.zV
+              hitSelf: TB === IB.Jm
             })
           }
-          QB === jB.zV && (zB.shakePlayerCamera(QB, NB / 40, 200), kB.n.Ly("closeShopOnDamaged", null), kB.n.Ly("damagedByOtherPlayer", {
-            Gz: null,
-            direction: uB,
-            DB: NB
+          TB === IB.Jm && (ZB.shakePlayerCamera(TB, vB / 40, 200), yB.l.Gq("closeShopOnDamaged", null), yB.l.Gq("damagedByOtherPlayer", {
+            yZ: null,
+            direction: kB,
+            aB: vB
           }, !0));
-          const pB = jB.vG.iG(QB);
-          if (pB && (dB || IB)) {
-            const BB = [pB[0], pB[1] + 1, pB[2]];
-            dB && (0, YB.j)(jB, YB.y, BB, 15), IB && (0, YB.j)(jB, YB.p, BB, 10)
+          const hB = IB.zW.aU(TB);
+          if (hB && (oB || GB)) {
+            const BB = [hB[0], hB[1] + 1, hB[2]];
+            oB && (0, jB.j)(IB, jB.A, BB, 15), GB && (0, jB.j)(IB, jB.n, BB, 10)
           }
-        })), BB.hG(UB.Yc, (BB => {
+        })), BB.rU(cB.Rc, (BB => {
           let {
-            ij: zB,
-            qj: QB,
-            fj: nB
+            wI: ZB,
+            OI: TB,
+            YI: JB
           } = BB;
-          (0, HB.b)(jB).setHealthFrac((0, DB.b)(zB), nB), kB.n.Ly("lifeformHealthChanged", {
-            eId: (0, DB.b)(zB),
-            qj: QB,
-            fj: nB
+          (0, aB.c)(IB).setHealthFrac((0, HB.e)(ZB), JB), yB.l.Gq("lifeformHealthChanged", {
+            eId: (0, HB.e)(ZB),
+            OI: TB,
+            YI: JB
           })
-        })), BB.hG(UB.N, (BB => {
+        })), BB.rU(cB.W, (BB => {
           let {
-            Ed: zB,
-            qd: QB
+            ko: ZB,
+            ho: TB
           } = BB;
-          (0, uB.c)().playerAttacked(jB.zV, zB, QB)
-        })), BB.hG(UB.tb, (() => {
-          const BB = jB.vG.ZjB(jB.zV);
+          (0, kB.d)().playerAttacked(IB.Jm, ZB, TB)
+        })), BB.rU(cB.ub, (() => {
+          const BB = IB.zW.FZB(IB.Jm);
           null !== BB && void 0 !== BB && BB.isChargeable() && BB.finishCharging(!1, Date.now())
-        })), BB.hG(UB.cc, (BB => {
+        })), BB.rU(cB.$b, (BB => {
           let {
-            VB: jB,
-            hB: zB,
-            XB: QB,
-            ej: nB,
-            lj: dB,
-            wj: IB
+            PB: IB,
+            RB: ZB,
+            rB: TB,
+            fI: JB,
+            lI: oB,
+            AI: GB
           } = BB;
-          jB = (0, DB.b)(jB), (0, uB.c)().client.updateEffect(jB, zB, {
-            displayName: QB,
-            icon: nB,
-            duration: dB,
-            level: IB
+          IB = (0, HB.e)(IB), (0, kB.d)().client.updateEffect(IB, ZB, {
+            displayName: TB,
+            icon: JB,
+            duration: oB,
+            level: GB
           })
-        })), BB.hG(UB._d, (BB => {
+        })), BB.rU(cB.Td, (BB => {
           let {
-            VB: jB,
-            hB: zB
+            PB: IB,
+            RB: ZB
           } = BB;
-          jB = (0, DB.b)(jB), (0, uB.c)().client.removeEffect(jB, zB)
-        })), BB.hG(UB.Ef, (BB => {
-          kB.n.Ly("ttbEffectMultiplier", BB)
+          IB = (0, HB.e)(IB), (0, kB.d)().client.removeEffect(IB, ZB)
+        })), BB.rU(cB.pf, (BB => {
+          yB.l.Gq("ttbEffectMultiplier", BB)
         }))
       }
     }
-    var XB = zB(39102),
-      ZB = zB(37239),
-      AB = zB(4315),
-      TB = zB(38177),
-      PB = zB(36828),
-      WB = zB(36830),
-      eB = zB(37151),
-      lB = zB(37340),
-      wB = zB(38181),
-      xB = zB(39111);
-    class KB {
-      constructor(BB, jB) {
-        this.ur = BB, this.setUpQueuedEntity = jB
+    var rB = ZB(39043),
+      mB = ZB(37188),
+      XB = ZB(4403),
+      LB = ZB(38159),
+      eB = ZB(36780),
+      uB = ZB(36783),
+      fB = ZB(37101),
+      lB = ZB(37270),
+      AB = ZB(38166),
+      tB = ZB(39052);
+    class bB {
+      constructor(BB, IB) {
+        this.Nz = BB, this.setUpQueuedEntity = IB
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
-        BB.hG(UB.jd, (BB => {
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
+        BB.rU(cB.hd, (BB => {
           let {
-            eId: zB,
-            settings: QB
+            eId: ZB,
+            settings: TB
           } = BB;
-          (0, lB.d)(zB);
-          for (const jB in QB)(0, lB.b)(zB, jB, QB[jB]);
-          if ("canSee" in QB && jB.vG.HBB(zB, "hidingMeshManager")) {
-            const BB = jB.vG.getState(zB, "hidingMeshManager");
-            BB.canSee = (0, wB.d)("canSee", QB.canSee), BB._forceUpdate = !0
+          (0, lB.c)(ZB);
+          for (const IB in TB)(0, lB.b)(ZB, IB, TB[IB]);
+          if ("canSee" in TB && IB.zW.TIB(ZB, "hidingMeshManager")) {
+            const BB = IB.zW.getState(ZB, "hidingMeshManager");
+            BB.canSee = (0, AB.c)("canSee", TB.canSee), BB._forceUpdate = !0
           }
-        })), BB.hG(UB.D, (BB => {
+        })), BB.rU(cB.N, (BB => {
           let {
-            PQ: zB,
-            WQ: QB,
-            animationScript: nB,
-            eQ: dB,
-            lQ: IB,
-            wQ: NB,
-            xQ: UB
+            rT: ZB,
+            mT: TB,
+            animationScript: JB,
+            XT: oB,
+            LT: GB,
+            eT: vB,
+            uT: cB
           } = BB;
-          zB = (0, DB.b)(zB);
-          const aB = null === nB && null !== NB ? (0, XB.e)(NB, UB) : nB;
-          (0, uB.c)().client.gameRecorder.recordAnimateEntity(zB, QB, aB, dB, IB), (0, HB.b)(jB).animations.animateEntity(zB, QB, nB, dB, IB, NB, UB), null !== nB || zB === jB.zV && QB === ZB.f.Emote && (0, uB.c)().client.cameraController.endTemporaryThirdPerson()
-        })), BB.hG(UB.Ne, (BB => {
-          (0, xB.e)(BB)
-        })), BB.hG(UB.Jd, (BB => {
-          for (const jB of BB)(0, TB.E)(jB);
-          kB.n.Ly("playerCosmeticsUpdated", BB, !0)
-        })), BB.hG(UB.K, (BB => {
-          for (const zB of BB)(0, eB.d)(jB, zB)
-        })), BB.hG(UB.ld, (BB => {
-          (0, YB.l)(jB, (0, pB.n)(BB))
-        })), BB.hG(UB.od, (BB => {
-          AB.h[BB.Yd] ? (0, YB.l)(jB, {
-            ...AB.h[BB.Yd],
+          ZB = (0, HB.e)(ZB);
+          const nB = null === JB && null !== vB ? (0, rB.e)(vB, cB) : JB;
+          (0, kB.d)().client.gameRecorder.recordAnimateEntity(ZB, TB, nB, oB, GB), (0, aB.c)(IB).animations.animateEntity(ZB, TB, JB, oB, GB, vB, cB), null !== JB || ZB === IB.Jm && TB === mB.h.Emote && (0, kB.d)().client.cameraController.endTemporaryThirdPerson()
+        })), BB.rU(cB.Be, (BB => {
+          (0, tB.b)(BB)
+        })), BB.rU(cB.Ad, (BB => {
+          for (const IB of BB)(0, LB.v)(IB);
+          yB.l.Gq("playerCosmeticsUpdated", BB, !0)
+        })), BB.rU(cB.U, (BB => {
+          for (const ZB of BB)(0, fB.h)(IB, ZB)
+        })), BB.rU(cB.jd, (BB => {
+          (0, jB.l)(IB, (0, hB.m)(BB))
+        })), BB.rU(cB.md, (BB => {
+          XB.f[BB.Wo] ? (0, jB.l)(IB, {
+            ...XB.f[BB.Wo],
             pos1: BB.pos1,
             pos2: BB.pos2
-          }) : console.error(`Unknown preset id: ${BB.Yd}`)
-        })), BB.hG(UB.Fd, (BB => {
-          var jB, zB;
+          }) : console.error(`Unknown preset id: ${BB.Wo}`)
+        })), BB.rU(cB.yd, (BB => {
+          var IB, ZB;
           let {
-            BB: QB,
-            jB: nB,
-            zB: dB,
-            QB: IB
+            BB: TB,
+            IB: JB,
+            ZB: oB,
+            TB: GB
           } = BB, {
-            dB: NB,
-            IB: UB
-          } = null !== IB && void 0 !== IB ? IB : {};
+            oB: vB,
+            GB: cB
+          } = null !== GB && void 0 !== GB ? GB : {};
           const {
-            nB: aB
-          } = null !== IB && void 0 !== IB ? IB : {};
-          NB = null !== (jB = NB) && void 0 !== jB ? jB : void 0, UB = null !== (zB = UB) && void 0 !== zB ? zB : void 0, "string" === typeof aB && this.setUpQueuedEntity(aB), (0, uB.c)().client.gameRecorder.recordPlaySound(QB, nB, dB, IB), PB.e.play((0, WB.f)(QB), nB, aB, NB, UB).rate(dB)
-        })), BB.hG(UB.Pf, (BB => {
-          for (const jB in BB) {
-            const QB = BB[jB];
-            for (const BB in QB) zB.client.meshCreator.handleParticleSystemUpdate(jB, BB, QB[BB])
+            JB: nB
+          } = null !== GB && void 0 !== GB ? GB : {};
+          vB = null !== (IB = vB) && void 0 !== IB ? IB : void 0, cB = null !== (ZB = cB) && void 0 !== ZB ? ZB : void 0, "string" === typeof nB && this.setUpQueuedEntity(nB), (0, kB.d)().client.gameRecorder.recordPlaySound(TB, JB, oB, GB), eB.d.play((0, uB.f)(TB), JB, nB, vB, cB).rate(oB)
+        })), BB.rU(cB.vf, (BB => {
+          for (const IB in BB) {
+            const TB = BB[IB];
+            for (const BB in TB) ZB.client.meshCreator.handleParticleSystemUpdate(IB, BB, TB[BB])
           }
         }))
       }
     }
-    var CB = zB(37879),
-      cB = zB(37859);
-    class bB {
+    var xB = ZB(37840),
+      EB = ZB(37814);
+    class DB {
       constructor(BB) {
-        this.ur = BB
+        this.Nz = BB
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
 
-        function QB() {
-          return jB.vG.yjB(jB.zV)
+        function TB() {
+          return IB.zW.lIB(IB.Jm)
         }
-        BB.hG(UB.Ic, (BB => {
+        BB.rU(cB.Ec, (BB => {
           let {
-            En: zB,
-            qn: QB,
-            fn: nB,
-            Hn: dB,
-            Dn: IB,
-            Fn: NB,
-            Yn: uB,
-            Vn: UB,
-            hn: aB
+            yJ: ZB,
+            UJ: TB,
+            WJ: JB,
+            dJ: oB,
+            CJ: GB,
+            QJ: vB,
+            sJ: kB,
+            wJ: cB,
+            OJ: nB
           } = BB;
-          if (!jB.vG.HBB(zB, "itemState")) return void(0, CB.j)(jB, zB, [IB, NB, uB], QB, {
-            amount: nB,
-            attributes: JSON.parse(dB),
-            Vn: UB,
-            size: aB
+          if (!IB.zW.TIB(ZB, "itemState")) return void(0, xB.l)(IB, ZB, [GB, vB, kB], TB, {
+            amount: JB,
+            attributes: JSON.parse(oB),
+            wJ: cB,
+            size: nB
           });
-          const pB = jB.vG.getState(zB, "itemState");
-          pB.amount = nB, pB.Vn = UB, pB.creationTime = Date.now(), (0, cB.setServerPosition)(jB.vG.getState(zB, "smoothToServerPos"), IB, NB, uB)
-        })), BB.hG(UB.jb, (BB => {
-          (0, HB.b)(jB).setCantPickUp(BB, !0), jB.vG.HBB(BB, "itemState") && (jB.vG.getState(BB, "itemState").Vn = !0)
-        })), BB.hG(UB.pe, (BB => {
-          (0, HB.b)(jB).setCantPickUp(BB, !1), jB.vG.HBB(BB, "itemState") && (jB.vG.getState(BB, "itemState").Vn = !1)
-        })), BB.hG(UB.Ad, (BB => {
+          const hB = IB.zW.getState(ZB, "itemState");
+          hB.amount = JB, hB.wJ = cB, hB.creationTime = Date.now(), (0, EB.setServerPosition)(IB.zW.getState(ZB, "smoothToServerPos"), GB, vB, kB)
+        })), BB.rU(cB.ob, (BB => {
+          (0, aB.c)(IB).setCantPickUp(BB, !0), IB.zW.TIB(BB, "itemState") && (IB.zW.getState(BB, "itemState").wJ = !0)
+        })), BB.rU(cB.he, (BB => {
+          (0, aB.c)(IB).setCantPickUp(BB, !1), IB.zW.TIB(BB, "itemState") && (IB.zW.getState(BB, "itemState").wJ = !1)
+        })), BB.rU(cB.vd, (BB => {
           let {
-            pickUpItems: jB,
-            pickUpAckSeq: zB
+            pickUpItems: IB,
+            pickUpAckSeq: ZB
           } = BB;
           for (const {
-              name: nB,
-              amount: dB,
-              attributes: IB
+              name: JB,
+              amount: oB,
+              attributes: GB
             }
-            of jB) QB().pickUpItem({
-            name: nB,
-            amount: dB,
-            typeObj: CB.t[nB],
-            attributes: IB
+            of IB) TB().pickUpItem({
+            name: JB,
+            amount: oB,
+            typeObj: xB.A[JB],
+            attributes: GB
           });
-          (0, uB.c)().client.inventoryPrediction.serverChangeApplied(zB)
-        })), BB.hG(UB.ef, (BB => {
+          (0, kB.d)().client.inventoryPrediction.serverChangeApplied(ZB)
+        })), BB.rU(cB.Ve, (BB => {
           let {
-            index: zB,
-            name: QB,
-            amount: nB,
-            attributes: dB,
-            setSlotAckSeq: IB
+            index: ZB,
+            name: TB,
+            amount: JB,
+            attributes: oB,
+            setSlotAckSeq: GB
           } = BB;
-          const NB = jB.vG.kjB(jB.zV);
-          (zB < NB.playerInventory.numSlots || NB.hd || NB.inCreative) && NB.setItemSlot(zB, QB, nB, dB), (0, uB.c)().client.inventoryPrediction.serverChangeApplied(IB)
-        })), BB.hG(UB.Ec, (BB => {
-          (0, uB.c)().client.inventoryPrediction.acknowledge(BB)
-        })), BB.hG(UB.A, (BB => {
+          const vB = IB.zW.tIB(IB.Jm);
+          (ZB < vB.playerInventory.numSlots || vB.Qo || vB.inCreative) && vB.setItemSlot(ZB, TB, JB, oB), (0, kB.d)().client.inventoryPrediction.serverChangeApplied(GB)
+        })), BB.rU(cB.Ac, (BB => {
+          (0, kB.d)().client.inventoryPrediction.acknowledge(BB)
+        })), BB.rU(cB.L, (BB => {
           let {
-            Pz: jB,
-            Wz: zB,
-            ez: QB,
-            lz: nB
+            mZ: IB,
+            XZ: ZB,
+            LZ: TB,
+            eZ: JB
           } = BB;
-          (0, uB.c)().client.itemDropPrediction.onActionItemDrops(jB, zB, QB, nB)
-        })), BB.hG(UB.Kb, (BB => {
-          QB().clearInventory(), (0, uB.c)().client.inventoryPrediction.serverChangeApplied(BB)
-        })), BB.hG(UB.hf, (BB => {
-          kB.n.Ly("setSelectedInventorySlotI", BB, !0)
-        })), BB.hG(UB.Ab, (BB => {
+          (0, kB.d)().client.itemDropPrediction.onActionItemDrops(IB, ZB, TB, JB)
+        })), BB.rU(cB.Ib, (BB => {
+          TB().clearInventory(), (0, kB.d)().client.inventoryPrediction.serverChangeApplied(BB)
+        })), BB.rU(cB.Ye, (BB => {
+          yB.l.Gq("setSelectedInventorySlotI", BB, !0)
+        })), BB.rU(cB.Ab, (BB => {
           let {
-            Cn: zB,
-            cn: QB,
-            bn: nB,
-            vn: dB,
-            Rn: IB,
-            Bd: NB,
-            jd: UB,
-            zd: aB
+            RJ: ZB,
+            rJ: TB,
+            mJ: JB,
+            XJ: oB,
+            LJ: GB,
+            eJ: vB,
+            uJ: cB,
+            fJ: nB
           } = BB;
-          const pB = jB.vG.kjB(jB.zV);
-          if (NB) {
+          const hB = IB.zW.tIB(IB.Jm);
+          if (vB) {
             const {
-              dd: BB,
-              Id: jB
-            } = aB;
-            return (0, uB.c)().client.inventoryPrediction.I3(jB, (() => {
-              pB.chestRefreshed(QB, nB, dB, UB, BB)
-            })) && kB.n.Ly("chestToggleFromServer", !1, !0), void kB.n.Ly("chestRefreshedFromServer")
-          }(zB || pB.hd) && (zB ? (pB.chestOpened(QB, nB, dB, IB, UB), null !== IB && (0, uB.c)().client.ironChestPasskeyCache.onChestOpened(dB, IB)) : pB.chestClosed(), kB.n.Ly("chestToggleFromServer", zB, !0))
-        })), BB.hG(UB.ac, (BB => {
+              AJ: BB,
+              tJ: IB
+            } = nB;
+            return (0, kB.d)().client.inventoryPrediction.kBB(IB, (() => {
+              hB.chestRefreshed(TB, JB, oB, cB, BB)
+            })) && yB.l.Gq("chestToggleFromServer", !1, !0), void yB.l.Gq("chestRefreshedFromServer")
+          }(ZB || hB.Qo) && (ZB ? (hB.chestOpened(TB, JB, oB, GB, cB), null !== GB && (0, kB.d)().client.ironChestPasskeyCache.onChestOpened(oB, GB)) : hB.chestClosed(), yB.l.Gq("chestToggleFromServer", ZB, !0))
+        })), BB.rU(cB.Xb, (BB => {
           let {
-            craftingRecipeItemName: QB,
-            recipesForItem: nB
+            craftingRecipeItemName: TB,
+            recipesForItem: JB
           } = BB;
-          QB ? zB.craftingManager.editRecipesForPlayer(jB.zV, QB, nB) : zB.craftingManager.resetAllPlayerRecipes(jB.zV), kB.n.Ly("craftingRecipesEdited", {
-            itemName: QB,
-            recipesForItem: nB
+          TB ? ZB.craftingManager.editRecipesForPlayer(IB.Jm, TB, JB) : ZB.craftingManager.resetAllPlayerRecipes(IB.Jm), yB.l.Gq("craftingRecipesEdited", {
+            itemName: TB,
+            recipesForItem: JB
           })
-        })), BB.hG(UB.ee, (BB => {
+        })), BB.rU(cB.Wd, (BB => {
           let {
-            Zz: jB,
-            Az: zB,
-            Tz: nB
+            PZ: IB,
+            RZ: ZB,
+            rZ: JB
           } = BB;
-          QB().removeItemName(jB, zB), (0, uB.c)().client.inventoryPrediction.serverChangeApplied(nB)
-        })), BB.hG(UB.ce, (BB => {
+          TB().removeItemName(IB, ZB), (0, kB.d)().client.inventoryPrediction.serverChangeApplied(JB)
+        })), BB.rU(cB.Vd, (BB => {
           let {
-            Xn: QB
+            YJ: TB
           } = BB;
-          zB.craftingManager.removeRecipes(jB.zV, QB), kB.n.Ly("craftingRecipesEdited", {
-            itemName: QB,
+          ZB.craftingManager.removeRecipes(IB.Jm, TB), yB.l.Gq("craftingRecipesEdited", {
+            itemName: TB,
             recipesForItem: []
           })
         }))
       }
     }
-    var vB = zB(6428),
-      RB = zB(37524),
-      OB = zB(386),
-      Bj = zB.n(OB),
-      jj = zB(4644),
-      zj = zB(37784),
-      Qj = zB(38337),
-      nj = zB(37518);
-    class dj {
-      constructor(BB, jB) {
-        this.ur = BB, this.setUpQueuedEntity = jB
+    var KB = ZB(6635),
+      VB = ZB(37454),
+      SB = ZB(364),
+      BI = ZB.n(SB),
+      II = ZB(4704),
+      ZI = ZB(37749),
+      TI = ZB(38318),
+      JI = ZB(37448);
+    class oI {
+      constructor(BB, IB) {
+        this.Nz = BB, this.setUpQueuedEntity = IB
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
-        BB.hG(UB.xf, (BB => {
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
+        BB.rU(cB.nf, (BB => {
           let {
-            oj: zB,
-            Hj: nB,
-            Dj: dB,
-            Fj: IB
+            iI: ZB,
+            pI: JB,
+            aI: oB,
+            HI: GB
           } = BB;
-          const NB = [nB, dB, IB];
-          jB.vG.setPosition(jB.zV, NB), (0, QB.sendColyMessage)(UB.mh, {
-            Iu: zB,
-            Nu: jj.g
-          }), kB.n.Ly("localPlayerTeleported", {
-            pos: NB,
+          const vB = [JB, oB, GB];
+          IB.zW.setPosition(IB.Jm, vB), (0, TB.sendColyMessage)(cB.Sg, {
+            Sv: ZB,
+            Bk: II.f
+          }), yB.l.Gq("localPlayerTeleported", {
+            pos: vB,
             isCorrection: !1
           })
-        })), BB.hG(UB.vd, (BB => {
+        })), BB.rU(cB.qd, (BB => {
           let {
-            Cd: jB,
-            bd: zB,
-            vd: QB,
-            Rd: nB
+            ro: IB,
+            Xo: ZB,
+            Lo: TB,
+            eo: JB
           } = BB;
-          this.setUpQueuedEntity(jB);
-          const dB = [zB, QB, nB];
-          kB.n.Ly(`otherPlayerTeleported|${jB}`, {
-            pos: dB
+          this.setUpQueuedEntity(IB);
+          const oB = [ZB, TB, JB];
+          yB.l.Gq(`otherPlayerTeleported|${IB}`, {
+            pos: oB
           })
-        })), BB.hG(UB.Pd, (BB => {
+        })), BB.rU(cB.Id, (BB => {
           let {
-            Un: zB,
-            pn: nB,
-            rn: dB,
-            sn: IB,
-            Jn: NB,
-            mn: uB,
-            yn: aB,
-            Gn: pB,
-            kn: rB,
-            tn: sB
+            TJ: ZB,
+            JJ: JB,
+            oJ: oB,
+            GJ: GB,
+            vJ: vB,
+            kJ: kB,
+            cJ: nB,
+            hJ: hB,
+            nJ: zB,
+            NJ: FB
           } = BB;
-          const JB = [nB, dB, IB];
-          jB.vG.setPosition(jB.zV, JB);
-          const mB = jB.vG.CBB(jB.zV),
-            yB = jB.vG.pT(jB.zV);
-          Bj().set(yB.eZ, 0, 0, 0), Bj().set(yB.wZ, 0, 0, 0), Bj().set(yB.Hy, NB, uB, aB), yB.xZ(), mB._flying = null !== sB, sB ? (mB.flyAccel.Sn = sB.Sn, mB.flyAccel.Mn = sB.Mn) : mB.flyAccel.reset(), pB && mB.movementType === vB.r.GLIDING && (mB.Ln = pB.Ln, Bj().copy(mB.gn, pB.gn)), (0, QB.sendColyMessage)(UB.mh, {
-            Iu: zB,
-            Nu: jj.g
-          }), kB.n.Ly("localPlayerTeleported", {
-            pos: JB,
+          const NB = [JB, oB, GB];
+          IB.zW.setPosition(IB.Jm, NB);
+          const gB = IB.zW.dIB(IB.Jm),
+            qB = IB.zW.vx(IB.Jm);
+          BI().set(qB.Rl, 0, 0, 0), BI().set(qB.Al, 0, 0, 0), BI().set(qB.zq, vB, kB, nB), qB.Kl(), gB._flying = null !== FB, FB ? (gB.flyAccel.gJ = FB.gJ, gB.flyAccel.qJ = FB.qJ) : gB.flyAccel.reset(), hB && gB.movementType === KB.l.GLIDING && (gB.zJ = hB.zJ, BI().copy(gB.FJ, hB.FJ)), (0, TB.sendColyMessage)(cB.Sg, {
+            Sv: ZB,
+            Bk: II.f
+          }), yB.l.Gq("localPlayerTeleported", {
+            pos: NB,
             isCorrection: !0
           })
-        })), BB.hG(UB.jf, (BB => {
+        })), BB.rU(cB.$e, (BB => {
           let {
-            vehicleEId: jB,
-            overrides: zB
+            vehicleEId: IB,
+            overrides: ZB
           } = BB;
-          (0, uB.c)().applyRiddenVehicleSettingOverrides(jB, zB)
-        })), BB.hG(UB.Qf, (BB => {
+          (0, kB.d)().applyRiddenVehicleSettingOverrides(IB, ZB)
+        })), BB.rU(cB.zf, (BB => {
           let {
-            Dz: zB,
-            Fz: QB,
-            Yz: nB
+            iZ: ZB,
+            pZ: TB,
+            aZ: JB
           } = BB;
-          const dB = jB.vG.CBB(jB.zV).physicsState.type === vB.t.SLEEPING && zB === vB.t.DEFAULT;
-          (0, uB.c)().updatePositionAndPhysics(jB.zV, {
-            type: zB,
-            tier: QB
-          }, !0, nB), dB && (0, uB.c)().updateHeldVehicleStatus()
-        })), BB.hG(UB.pb, (BB => {
+          const oB = IB.zW.dIB(IB.Jm).physicsState.type === KB.o.SLEEPING && ZB === KB.o.DEFAULT;
+          (0, kB.d)().updatePositionAndPhysics(IB.Jm, {
+            type: ZB,
+            tier: TB
+          }, !0, JB), oB && (0, kB.d)().updateHeldVehicleStatus()
+        })), BB.rU(cB.tb, (BB => {
           let {
-            Mj: zB,
-            Ej: QB
+            QI: ZB,
+            sI: TB
           } = BB;
-          jB.vG.JjB(jB.zV).setPose(zB, QB)
-        })), BB.hG(UB.We, (BB => {
+          IB.zW.uIB(IB.Jm).setPose(ZB, TB)
+        })), BB.rU(cB.Le, (BB => {
           const {
-            gp: zB,
-            CjB: QB
-          } = (0, RB.d)([BB[0], BB[1], BB[2]]);
-          nj.b.setLookDirection(jB, zB, QB), (0, zj.A)(zB, QB);
-          const nB = jB.vG.JjB(jB.zV);
-          nB && (nB.heading = zB)
-        })), BB.hG(UB.Xe, (BB => {
-          zB.client.cameraController.setCameraZoom(BB)
-        })), BB.hG(UB.of, (BB => {
+            rc: ZB,
+            sZB: TB
+          } = (0, VB.c)([BB[0], BB[1], BB[2]]);
+          JI.c.setLookDirection(IB, ZB, TB), (0, ZI.w)(ZB, TB);
+          const JB = IB.zW.uIB(IB.Jm);
+          JB && (JB.heading = ZB)
+        })), BB.rU(cB.Pe, (BB => {
+          ZB.client.cameraController.setCameraZoom(BB)
+        })), BB.rU(cB.ef, (BB => {
           let {
-            gz: QB,
-            tz: nB
+            WZ: TB,
+            dZ: JB
           } = BB;
-          zB.shakePlayerCamera(jB.zV, QB, nB)
-        })), BB.hG(UB.Qc, (BB => {
-          jB.vG.JjB(jB.zV).jumpMultiplier.setMultiplierType("jumpEffectAmount", BB)
-        })), (0, QB.onGameResetOnce)((() => {
-          jB.vG.JjB(jB.zV).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
-        })), BB.hG(UB.H, (BB => {
-          jB.vG.pT(jB.zV).applyImpulse(BB)
-        })), BB.hG(UB.mf, (BB => {
-          const zB = jB.vG.pT(jB.zV);
-          Bj().set(zB.eZ, 0, 0, 0), Bj().set(zB.wZ, 0, 0, 0), Bj().copy(zB.Hy, BB), zB.xZ()
-        })), (0, QB.onGameResetOnce)((() => {
-          (0, Qj.setFloatingYValue)(jB.vG.getState(jB.zV, "physics"), jB.vG.Gw(jB.zV), null)
-        })), BB.hG(UB.dc, (BB => {
+          ZB.shakePlayerCamera(IB.Jm, TB, JB)
+        })), BB.rU(cB.Kc, (BB => {
+          IB.zW.uIB(IB.Jm).jumpMultiplier.setMultiplierType("jumpEffectAmount", BB)
+        })), (0, TB.onGameResetOnce)((() => {
+          IB.zW.uIB(IB.Jm).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
+        })), BB.rU(cB.Q, (BB => {
+          IB.zW.vx(IB.Jm).applyImpulse(BB)
+        })), BB.rU(cB.cf, (BB => {
+          const ZB = IB.zW.vx(IB.Jm);
+          BI().set(ZB.Rl, 0, 0, 0), BI().set(ZB.Al, 0, 0, 0), BI().copy(ZB.zq, BB), ZB.Kl()
+        })), (0, TB.onGameResetOnce)((() => {
+          (0, TI.setFloatingYValue)(IB.zW.getState(IB.Jm, "physics"), IB.zW.zK(IB.Jm), null)
+        })), BB.rU(cB.cc, (BB => {
           let {
-            Vz: zB,
-            hz: QB,
-            Xz: nB
+            HZ: ZB,
+            MZ: TB,
+            jZ: JB
           } = BB;
-          const dB = (0, DB.b)(zB);
-          if (dB === jB.zV) {
-            const BB = jB.vG.Gw(jB.zV).position;
-            nB ??= Math.floor(BB[1]) - 1, (0, Qj.setFloatingYValue)(jB.vG.getState(jB.zV, "physics"), jB.vG.Gw(jB.zV), QB ? nB : null)
-          }(0, HB.b)(jB).setFloating(dB, QB, nB);
-          const IB = jB.vG.getState(dB, "floating");
-          IB && (IB.isFloating = QB, IB.Xz = QB ? nB : null)
+          const oB = (0, HB.e)(ZB);
+          if (oB === IB.Jm) {
+            const BB = IB.zW.zK(IB.Jm).position;
+            JB ??= Math.floor(BB[1]) - 1, (0, TI.setFloatingYValue)(IB.zW.getState(IB.Jm, "physics"), IB.zW.zK(IB.Jm), TB ? JB : null)
+          }(0, aB.c)(IB).setFloating(oB, TB, JB);
+          const GB = IB.zW.getState(oB, "floating");
+          GB && (GB.isFloating = TB, GB.jZ = TB ? JB : null)
         }))
       }
     }
 
-    function Ij(BB, jB, zB, QB, nB) {
-      let dB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!BB.vG.mjB(BB.zV)) return console.log("Got resync inven but don't have inven component"), void jB.acknowledge(QB);
-      dB && console.error("Had to sync inven"), jB.I3(QB, nB) && zB.Ly("chestToggleFromServer", !1, !0), zB.Ly("syncedInvenFromServer")
+    function GI(BB, IB, ZB, TB, JB) {
+      let oB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!BB.zW.fIB(BB.Jm)) return console.log("Got resync inven but don't have inven component"), void IB.acknowledge(TB);
+      oB && console.error("Had to sync inven"), IB.kBB(TB, JB) && ZB.Gq("chestToggleFromServer", !1, !0), ZB.Gq("syncedInvenFromServer")
     }
-    var Nj = zB(39121),
-      uj = zB(39126),
-      Uj = zB(2015);
-    var aj = zB(4629);
+    var vI = ZB(39067),
+      kI = ZB(39076),
+      cI = ZB(2038);
+    var nI = ZB(4691);
 
-    function pj(BB) {
-      const jB = BB.zr;
-      let zB = 0,
-        nB = -1,
-        IB = -1 / 0,
-        NB = null,
-        uB = !0;
-      const aB = () => {
-        if (++zB % 10 !== 0) return;
-        const aB = (0, QB.getLastReceivedPacketId)();
-        if (aB <= nB) return;
-        const [pB, rB, sB] = BB.vG.iG(BB.zV), JB = ! function(BB) {
-          var jB;
-          let zB = null === (jB = BB.vG.RjB(BB.zV)) || void 0 === jB ? void 0 : jB.SJ;
-          if (void 0 === zB) return !1;
-          const QB = new Set;
-          for (; void 0 !== zB && !QB.has(zB);) {
-            var nB;
-            QB.add(zB);
-            const jB = BB.vG.getState(zB, "smoothToServerPos"),
-              dB = Array.isArray(jB) ? null : null === jB || void 0 === jB ? void 0 : jB.serverPosition;
-            if (dB) {
-              const jB = BB.vG.iG(zB);
-              if (Math.abs(jB[0] - dB[0]) > 10 || Math.abs(jB[1] - dB[1]) > 10 || Math.abs(jB[2] - dB[2]) > 10) return !0
+    function hI(BB) {
+      const IB = BB.vz;
+      let ZB = 0,
+        JB = -1,
+        GB = -1 / 0,
+        vB = null,
+        kB = !0;
+      const nB = () => {
+        if (++ZB % 10 !== 0) return;
+        const nB = (0, TB.getLastReceivedPacketId)();
+        if (nB <= JB) return;
+        const [hB, zB, FB] = BB.zW.aU(BB.Jm), NB = ! function(BB) {
+          var IB;
+          let ZB = null === (IB = BB.zW.YZB(BB.Jm)) || void 0 === IB ? void 0 : IB.zN;
+          if (void 0 === ZB) return !1;
+          const TB = new Set;
+          for (; void 0 !== ZB && !TB.has(ZB);) {
+            var JB;
+            TB.add(ZB);
+            const IB = BB.zW.getState(ZB, "smoothToServerPos"),
+              oB = Array.isArray(IB) ? null : null === IB || void 0 === IB ? void 0 : IB.serverPosition;
+            if (oB) {
+              const IB = BB.zW.aU(ZB);
+              if (Math.abs(IB[0] - oB[0]) > 10 || Math.abs(IB[1] - oB[1]) > 10 || Math.abs(IB[2] - oB[2]) > 10) return !0
             }
-            zB = null === (nB = BB.vG.RjB(zB)) || void 0 === nB ? void 0 : nB.SJ
+            ZB = null === (JB = BB.zW.YZB(ZB)) || void 0 === JB ? void 0 : JB.zN
           }
           return !1
-        }(BB) && function(BB, jB, zB, QB) {
-          const nB = dB.e.ZJ;
-          for (let dB = 0; dB < BB.length; dB++) {
-            const IB = BB[dB];
-            if (!(0, aj.h)(jB, zB, QB, IB[0] * nB, IB[1] * nB, IB[2] * nB)) return !1
+        }(BB) && function(BB, IB, ZB, TB) {
+          const JB = oB.f.YN;
+          for (let oB = 0; oB < BB.length; oB++) {
+            const GB = BB[oB];
+            if (!(0, nI.g)(IB, ZB, TB, GB[0] * JB, GB[1] * JB, GB[2] * JB)) return !1
           }
           return !0
-        }(jB.Gy.DJ, pB, rB, sB), mB = null === NB || Math.abs(pB - NB[0]) > 8 || Math.abs(rB - NB[1]) > 8 || Math.abs(sB - NB[2]) > 8, yB = !uB || mB || performance.now() - IB >= 1e4;
-        uB = JB, JB && yB && (nB = aB, IB = performance.now(), NB = [pB, rB, sB], (0, QB.sendColyMessage)(UB.Ng, {
-          kN: aB
+        }(IB.Bq.dN, hB, zB, FB), gB = null === vB || Math.abs(hB - vB[0]) > 8 || Math.abs(zB - vB[1]) > 8 || Math.abs(FB - vB[2]) > 8, qB = !kB || gB || performance.now() - GB >= 1e4;
+        kB = NB, NB && qB && (JB = nB, GB = performance.now(), vB = [hB, zB, FB], (0, TB.sendColyMessage)(cB.xg, {
+          cv: nB
         }))
       };
-      return BB.on("vp", aB), () => {
-        BB.off("vp", aB)
+      return BB.on("Iz", nB), () => {
+        BB.off("Iz", nB)
       }
     }
-    var rj = zB(39131),
-      sj = zB(1543),
-      Jj = zB(2859),
-      mj = zB(1859),
-      yj = zB(3015),
-      kj = zB(4866);
-    class Gj {
-      constructor(BB, jB, zB) {
-        this.ur = BB, this.gameNameWithVariation = jB, this.connectionResume = zB, this.stopChunkReports = () => {}, this.replayResume = null
+    var zI = ZB(39078),
+      FI = ZB(1579),
+      NI = ZB(2908),
+      gI = ZB(1868),
+      qI = ZB(3088),
+      yI = ZB(4952);
+    class UI {
+      constructor(BB, IB, ZB) {
+        this.Nz = BB, this.gameNameWithVariation = IB, this.connectionResume = ZB, this.stopChunkReports = () => {}, this.replayResume = null
       }
       clearUiRequestsAndQTEs() {
-        kj.c.reset(), (0, Nj.b)()
+        yI.d.reset(), (0, vI.b)()
       }
       startChunkReports() {
         const BB = function(BB) {
-            let jB = null,
-              zB = -1 / 0,
-              nB = null;
-            const dB = () => {
-                nB = null;
-                const dB = Math.ceil(BB.dD[0]),
-                  IB = Math.ceil(BB.dD[1]);
-                jB && jB[0] === dB && jB[1] === IB || (jB = [dB, IB], zB = performance.now(), (0, QB.sendColyMessage)(UB.Mg, {
-                  OI: dB,
-                  BN: IB
+            let IB = null,
+              ZB = -1 / 0,
+              JB = null;
+            const oB = () => {
+                JB = null;
+                const oB = Math.ceil(BB.Ip[0]),
+                  GB = Math.ceil(BB.Ip[1]);
+                IB && IB[0] === oB && IB[1] === GB || (IB = [oB, GB], ZB = performance.now(), (0, TB.sendColyMessage)(cB.vg, {
+                  AG: oB,
+                  tG: GB
                 }))
               },
-              IB = () => {
-                null === nB && (nB = setTimeout(dB, Math.max(0, zB + 250 - performance.now())))
+              GB = () => {
+                null === JB && (JB = setTimeout(oB, Math.max(0, ZB + 250 - performance.now())))
               };
-            return dB(), BB.on("addRemoveDistanceChanged", IB), () => {
-              BB.off("addRemoveDistanceChanged", IB), null !== nB && (clearTimeout(nB), nB = null)
+            return oB(), BB.on("addRemoveDistanceChanged", GB), () => {
+              BB.off("addRemoveDistanceChanged", GB), null !== JB && (clearTimeout(JB), JB = null)
             }
-          }(this.ur.zr),
-          jB = pj(this.ur);
+          }(this.Nz.vz),
+          IB = hI(this.Nz);
         this.stopChunkReports = () => {
-          BB(), jB()
+          BB(), IB()
         }
       }
       restartChunkStreaming() {
-        (0, zj.q)(this.ur, (0, uB.c)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - rj.d)), this.startChunkReports()
+        (0, ZI.k)(this.Nz, (0, kB.d)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - zI.b)), this.startChunkReports()
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
-        BB.hG(UB.hd, (BB => {
-          GB.c.applyNewClientOptions(BB)
-        })), BB.hG(UB.Ed, (BB => {
-          Jj.d.onReceiveColyseusPing(BB)
-        })), BB.hG(UB._e, (BB => {
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
+        BB.rU(cB.ed, (BB => {
+          UB.c.applyNewClientOptions(BB)
+        })), BB.rU(cB.xd, (BB => {
+          NI.c.onReceiveColyseusPing(BB)
+        })), BB.rU(cB.Se, (BB => {
           let {
-            key: jB,
-            value: zB
+            key: IB,
+            value: ZB
           } = BB;
-          (0, LB.setCookie)(this.gameNameWithVariation, jB, zB)
-        })), BB.hG(UB.df, (BB => {
-          kB.n.Ly("setDiscordReportKey", BB)
-        })), (0, QB.onGameResetOnce)((() => {
+          (0, WB.setCookie)(this.gameNameWithVariation, IB, ZB)
+        })), BB.rU(cB.Ue, (BB => {
+          yB.l.Gq("setDiscordReportKey", BB)
+        })), (0, TB.onGameResetOnce)((() => {
           this.stopChunkReports()
-        })), BB.hG(UB.Ac, (nB => {
+        })), BB.rU(cB.vc, (JB => {
           const {
-            UB: dB,
-            aB: IB
-          } = nB;
-          if ((0, QB.setAdjustment)(IB), this.connectionResume.onInitialInfo(nB.pB, nB.rB), QB.offlineInputReplay.mH(nB.sB), this.connectionResume.isResuming()) {
-            console.log("Resumed the connection as eId", dB);
+            cB: oB,
+            nB: GB
+          } = JB;
+          if ((0, TB.setAdjustment)(GB), this.connectionResume.onInitialInfo(JB.hB, JB.zB), TB.offlineInputReplay.qY(JB.FB), this.connectionResume.isResuming()) {
+            console.log("Resumed the connection as eId", oB);
             try {
-              null === nB.JB && (0, uB.c)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), fB(jB.zr), GB.c.apply({
+              null === JB.NB && (0, kB.d)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), iB(IB.vz), UB.c.apply({
                 shopInfo: null,
-                _shopVersion: Uj.d
+                _shopVersion: cI.d
               });
-              const zB = jB.vG.kjB(jB.zV);
-              zB.hd && (zB.chestClosed(), kB.n.Ly("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), kB.n.Ly("initInfoReceived", BB)
+              const ZB = IB.zW.tIB(IB.Jm);
+              ZB.Qo && (ZB.chestClosed(), yB.l.Gq("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), yB.l.Gq("initInfoReceived", BB)
             } finally {
-              const BB = null === nB.JB ? null : {
+              const BB = null === JB.NB ? null : {
                 sync: null,
                 endSeq: null
               };
-              this.replayResume = BB, this.connectionResume.onResumeInitialInfo(nB.JB, (() => {
-                BB.endSeq = (0, uB.c)().client.inventoryPrediction.lastActionSeq
+              this.replayResume = BB, this.connectionResume.onResumeInitialInfo(JB.NB, (() => {
+                BB.endSeq = (0, kB.d)().client.inventoryPrediction.lastActionSeq
               })), null === BB && this.restartChunkStreaming()
             }
-          } else console.log("Local client is eId", dB), mj.b.markAdmitted(), (0, zj.t)(jB), kB.n.Ly("loadingScreenState", "loadingPage:loadingWorld"), jB.FBB = dB, jB.vG.HBB(jB.zV, jB.vG.names.entityName) && jB.vG.ZY(jB.zV, jB.vG.names.entityName), (0, uB.c)().setEntityName(jB.FBB, (0, uB.c)().getRawEntityName(jB.zV)), jB.RY[jB.FBB] = {}, jB.vG.hY(jB.zV, jB.vG.names.entityName), kB.n.Ly("initInfoReceived", BB), this.startChunkReports(), zB.client.onServerConnectionFinalised()
-        })), BB.hG(UB.Je, (() => {
+          } else console.log("Local client is eId", oB), gI.d.markAdmitted(), (0, ZI.n)(IB), yB.l.Gq("loadingScreenState", "loadingPage:loadingWorld"), IB.oIB = oB, IB.zW.TIB(IB.Jm, IB.zW.names.entityName) && IB.zW.Qr(IB.Jm, IB.zW.names.entityName), (0, kB.d)().setEntityName(IB.oIB, (0, kB.d)().getRawEntityName(IB.Jm)), IB.Tm[IB.oIB] = {}, IB.zW.xR(IB.Jm, IB.zW.names.entityName), yB.l.Gq("initInfoReceived", BB), this.startChunkReports(), ZB.client.onServerConnectionFinalised()
+        })), BB.rU(cB.ye, (() => {
           this.connectionResume.isResuming() ? this.connectionResume.onResumed((() => {
             const BB = this.replayResume;
             if (this.replayResume = null, !BB) return;
             this.restartChunkStreaming();
             const {
-              inventoryPrediction: zB
-            } = (0, uB.c)().client, {
-              sync: nB
-            } = BB, dB = new Set(QB.offlineInputReplay.takeDroppedActions());
-            if (nB) {
-              var IB;
-              const QB = null !== (IB = BB.endSeq) && void 0 !== IB ? IB : zB.lastActionSeq;
-              zB.forget((BB => BB > nB.Id && BB <= QB || dB.has(BB))), Ij(jB, zB, kB.n, nB.Id, nB.load)
-            } else zB.dropPending(), zB.askForSnapshot()
+              inventoryPrediction: ZB
+            } = (0, kB.d)().client, {
+              sync: JB
+            } = BB, oB = new Set(TB.offlineInputReplay.takeDroppedActions());
+            if (JB) {
+              var GB;
+              const TB = null !== (GB = BB.endSeq) && void 0 !== GB ? GB : ZB.lastActionSeq;
+              ZB.forget((BB => BB > JB.tJ && BB <= TB || oB.has(BB))), GI(IB, ZB, yB.l, JB.tJ, JB.load)
+            } else ZB.dropPending(), ZB.askForSnapshot()
           })) : console.warn("ResumeComplete arrived without a resume")
-        })), BB.hG(UB.sf, (BB => {
+        })), BB.rU(cB.if, (BB => {
           let {
-            Vd: zB,
-            Td: QB,
-            Id: nB
+            Co: ZB,
+            po: TB,
+            tJ: JB
           } = BB;
           const {
-            inventoryPrediction: dB
-          } = (0, uB.c)().client, IB = () => {
-            jB.vG.kjB(jB.zV).loadFromString(zB)
+            inventoryPrediction: oB
+          } = (0, kB.d)().client, GB = () => {
+            IB.zW.tIB(IB.Jm).loadFromString(ZB)
           };
           this.replayResume && (this.replayResume.sync = {
-            Id: nB,
-            load: IB
-          }), Ij(jB, dB, kB.n, nB, IB, QB)
-        })), BB.hG(UB.Wd, (BB => {
+            tJ: JB,
+            load: GB
+          }), GI(IB, oB, yB.l, JB, GB, TB)
+        })), BB.rU(cB.Pd, (BB => {
           let {
-            type: jB,
-            location1: zB,
-            location2: QB,
-            location3: nB,
-            score: dB
+            type: IB,
+            location1: ZB,
+            location2: TB,
+            location3: JB,
+            score: oB
           } = BB;
-          (0, yj.logProgressionEvent)({
-            type: jB,
-            location1: zB,
-            location2: QB,
-            location3: nB,
-            score: dB
+          (0, qI.logProgressionEvent)({
+            type: IB,
+            location1: ZB,
+            location2: TB,
+            location3: JB,
+            score: oB
           })
-        })), BB.hG(UB.Ie, (BB => {
+        })), BB.rU(cB.we, (BB => {
           let {
-            type: jB,
-            resourceType: zB,
-            amount: QB,
-            category: nB,
-            itemName: dB
+            type: IB,
+            resourceType: ZB,
+            amount: TB,
+            category: JB,
+            itemName: oB
           } = BB;
-          (0, yj.logResourceEvent)({
-            type: jB,
-            resourceType: zB,
-            amount: QB,
-            category: nB,
-            itemName: dB
+          (0, qI.logResourceEvent)({
+            type: IB,
+            resourceType: ZB,
+            amount: TB,
+            category: JB,
+            itemName: oB
           })
-        })), BB.hG(UB.Wc, (BB => {
+        })), BB.rU(cB.Qc, (BB => {
           let {
-            leaveEventType: jB,
-            category: zB,
-            subCategory: QB,
-            value: nB
+            leaveEventType: IB,
+            category: ZB,
+            subCategory: TB,
+            value: JB
           } = BB;
-          (0, yj.updateLeaveValue)({
-            leaveEventType: jB,
-            category: zB,
-            subCategory: QB,
-            value: nB
+          (0, qI.updateLeaveValue)({
+            leaveEventType: IB,
+            category: ZB,
+            subCategory: TB,
+            value: JB
           })
-        })), BB.hG(UB.Vb, (BB => {
+        })), BB.rU(cB.Sb, (BB => {
           let {
-            cat1: jB,
-            cat2: zB,
-            cat3: QB,
-            value: nB
+            cat1: IB,
+            cat2: ZB,
+            cat3: TB,
+            value: JB
           } = BB;
-          (0, yj.logCustomAnalyticsEvent)({
-            cat1: jB,
-            cat2: zB,
-            cat3: QB,
-            value: nB
+          (0, qI.logCustomAnalyticsEvent)({
+            cat1: IB,
+            cat2: ZB,
+            cat3: TB,
+            value: JB
           })
-        })), BB.hG(UB.Rc, (BB => {
-          (0, uB.c)().client.leaveGameUnwanted({
+        })), BB.rU(cB.Mc, (BB => {
+          (0, kB.d)().client.leaveGameUnwanted({
             reason: BB,
             requiresRefresh: !1,
             canReconnect: !1,
             automaticallyReconnect: !1
-          }), (0, sj.navigatePreserveSearch)("/")
-        })), BB.hG(UB.Se, (BB => {
-          kB.n.Ly("serverUpdating", Date.now() + BB, !0)
-        })), BB.hG(UB.gd, uj.c), BB.hG(UB.bd, (BB => {
+          }), (0, FI.navigatePreserveSearch)("/")
+        })), BB.rU(cB.Ge, (BB => {
+          yB.l.Gq("serverUpdating", Date.now() + BB, !0)
+        })), BB.rU(cB.dd, kI.e), BB.rU(cB.Xc, (BB => {
           console.error(`[logErrorToConsole]: ${BB}`)
         }))
       }
     }
-    var Lj = zB(39136),
-      gj = zB(39146),
-      tj = zB(1067),
-      Sj = zB(39142),
-      Mj = zB(2505),
-      Ej = zB(3762);
-    class ij {
-      constructor(BB, jB) {
-        this.ur = BB, this.clientApi = jB
+    var WI = ZB(39082),
+      dI = ZB(39094),
+      CI = ZB(1058),
+      QI = ZB(39090),
+      sI = ZB(2510),
+      wI = ZB(3820);
+    class OI {
+      constructor(BB, IB) {
+        this.Nz = BB, this.clientApi = IB
       }
       register(BB) {
-        const jB = this.ur,
-          zB = (0, uB.c)();
-        BB.hG(UB.wb, (BB => {
+        const IB = this.Nz,
+          ZB = (0, kB.d)();
+        BB.rU(cB.wb, (BB => {
           let {
-            chatMsgId: jB,
-            content: zB,
-            chatterEId: QB
+            chatMsgId: IB,
+            content: ZB,
+            chatterEId: TB
           } = BB;
-          kB.n.Ly("chat", {
-            serverChatMsgId: jB,
-            content: zB,
-            chatterEId: QB
+          yB.l.Gq("chat", {
+            serverChatMsgId: IB,
+            content: ZB,
+            chatterEId: TB
           }, !0)
-        })), BB.hG(UB.Af, (BB => {
-          kB.n.Ly("TopRightHelper", BB, !0)
-        })), BB.hG(UB.tf, (BB => {
-          (0, Lj.d)(BB)
-        })), BB.hG(UB.Uc, (BB => {
+        })), BB.rU(cB.of, (BB => {
+          yB.l.Gq("TopRightHelper", BB, !0)
+        })), BB.rU(cB.lf, (BB => {
+          (0, WI.d)(BB)
+        })), BB.rU(cB.Oc, (BB => {
           let {
-            category: jB,
-            timeframe: zB,
-            data: QB
+            category: IB,
+            timeframe: ZB,
+            data: TB
           } = BB;
-          kB.n.Ly("leaderboardResponse", {
-            category: jB,
-            timeframe: zB,
-            data: QB
+          yB.l.Gq("leaderboardResponse", {
+            category: IB,
+            timeframe: ZB,
+            data: TB
           })
-        })), BB.hG(UB.rf, (() => {
-          kB.n.Ly("showShopTutorial", null, !0)
-        })), BB.hG(UB.Sd, (BB => {
-          kB.n.Ly("progressBarUpdate", BB, !0)
-        })), BB.hG(UB.Bc, (BB => {
-          kB.n.Ly("middleScreenBarInitiate", {
-            duration: BB.Zn,
-            Tn: BB.Tn,
-            horizBarRemOffset: BB.Pn
+        })), BB.rU(cB.ff, (() => {
+          yB.l.Gq("showShopTutorial", null, !0)
+        })), BB.rU(cB.Ld, (BB => {
+          yB.l.Gq("progressBarUpdate", BB, !0)
+        })), BB.rU(cB.xc, (BB => {
+          yB.l.Gq("middleScreenBarInitiate", {
+            duration: BB.iJ,
+            pJ: BB.pJ,
+            horizBarRemOffset: BB.aJ
           }, !0)
-        })), BB.hG(UB.ge, (() => {
-          kB.n.Ly("middleScreenBarRemove", !0)
-        })), BB.hG(UB.$e, (BB => {
+        })), BB.rU(cB._d, (() => {
+          yB.l.Gq("middleScreenBarRemove", !0)
+        })), BB.rU(cB.Te, (BB => {
           let {
-            id: jB,
-            position: zB,
-            style: QB,
-            Yj: nB,
-            hj: dB
+            id: IB,
+            position: ZB,
+            style: TB,
+            MI: JB,
+            RI: oB
           } = BB;
-          kB.n.Ly("setDirectionArrow", {
-            id: jB,
-            position: zB,
-            style: QB,
-            text: (0, UB.s)(nB),
-            hj: dB
+          yB.l.Gq("setDirectionArrow", {
+            id: IB,
+            position: ZB,
+            style: TB,
+            text: (0, cB.z)(JB),
+            RI: oB
           }, !0)
-        })), BB.hG(UB.Gb, (BB => {
+        })), BB.rU(cB.Gb, (BB => {
           let {
-            id: jB
+            id: IB
           } = BB;
-          kB.n.Ly("clearDirectionArrow", {
-            id: jB
+          yB.l.Gq("clearDirectionArrow", {
+            id: IB
           }, !0)
-        })), BB.hG(UB.Ub, (BB => {
-          (0, Ej.onCosmeticPackGranted)(BB)
-        })), BB.hG(UB.pd, (BB => {
+        })), BB.rU(cB.Pb, (BB => {
+          (0, wI.onCosmeticPackGranted)(BB)
+        })), BB.rU(cB.nd, (BB => {
           let {
-            id: jB,
-            xB: zB
+            id: IB,
+            tB: ZB
           } = BB;
           const {
-            type: nB,
-            params: dB
-          } = (0, gj.c)(zB), IB = {
-            ...dB
+            type: JB,
+            params: oB
+          } = (0, dI.i)(ZB), GB = {
+            ...oB
           };
-          for (const QB of gj.b) QB in IB && IB[QB] && (IB[QB] = (0, UB.s)(IB[QB]));
-          kj.c.queueQTE(jB, nB, IB).getResult().then((BB => {
-            "boolean" === typeof BB && (0, QB.sendColyMessage)(UB.Zi, {
-              qteId: jB,
+          for (const TB of dI.e) TB in GB && GB[TB] && (GB[TB] = (0, cB.z)(GB[TB]));
+          yI.d.queueQTE(IB, JB, GB).getResult().then((BB => {
+            "boolean" === typeof BB && (0, TB.sendColyMessage)(cB.ti, {
+              qteId: IB,
               qteResponse: BB
             })
           }))
-        })), BB.hG(UB.je, (BB => {
-          kj.c.cancelQTE(BB)
-        })), (0, QB.onGameResetOnce)((() => {
-          kj.c.reset()
-        })), BB.hG(UB.rd, (BB => {
+        })), BB.rU(cB.ae, (BB => {
+          yI.d.cancelQTE(BB)
+        })), (0, TB.onGameResetOnce)((() => {
+          yI.d.reset()
+        })), BB.rU(cB.od, (BB => {
           let {
-            id: jB,
-            clientParameters: zB
+            id: IB,
+            clientParameters: ZB
           } = BB;
-          (0, Nj.d)(jB, zB)
-        })), BB.hG(UB.me, (BB => {
-          (0, Nj.f)(BB)
-        })), BB.hG(UB.Hf, (BB => {
+          (0, vI.f)(IB, ZB)
+        })), BB.rU(cB.de, (BB => {
+          (0, vI.j)(BB)
+        })), BB.rU(cB.tf, (BB => {
           let {
-            text: jB,
-            id: zB,
-            destructive: nB
+            text: IB,
+            id: ZB,
+            destructive: JB
           } = BB;
-          (0, Nj.j)(zB, jB, nB, (BB => {
-            (0, QB.sendColyMessage)(UB.gk, {
-              Ju: zB,
-              mu: BB,
-              yu: 5
+          (0, vI.k)(ZB, IB, JB, (BB => {
+            (0, TB.sendColyMessage)(cB.Mj, {
+              vk: ZB,
+              kk: BB,
+              nk: 5
             })
           }))
-        })), BB.hG(UB.wd, (BB => {
+        })), BB.rU(cB.rd, (BB => {
           let {
-            info: jB
+            info: IB
           } = BB;
-          kB.n.Ly("overShopInfo", jB, !0)
-        })), BB.hG(UB.jc, (BB => {
+          yB.l.Gq("overShopInfo", IB, !0)
+        })), BB.rU(cB.kc, (BB => {
           let {
-            NB: zB,
-            uB: QB
+            vB: ZB,
+            kB: TB
           } = BB;
-          this.clientApi.openShop(jB.zV, zB, QB)
-        })), BB.hG(UB.fc, (BB => {
+          this.clientApi.openShop(IB.Jm, ZB, TB)
+        })), BB.rU(cB.gc, (BB => {
           let {
-            wd: jB,
-            xd: zB,
-            Kd: QB
+            jo: IB,
+            Po: ZB,
+            Ro: TB
           } = BB;
-          kB.n.Ly("flyingMiddleMessage", {
-            content: (0, UB.s)(jB),
-            xd: zB,
-            Kd: QB
+          yB.l.Gq("flyingMiddleMessage", {
+            content: (0, cB.z)(IB),
+            Po: ZB,
+            Ro: TB
           }, !0)
-        })), BB.hG(UB.Wf, (BB => {
-          const jB = BB === tj.g ? null : {
+        })), BB.rU(cB.Kf, (BB => {
+          const IB = BB === CI.f ? null : {
             message: `Currently loaded as variation: ${BB}`,
             type: "Warning"
           };
-          kB.n.Ly("showPermanentBottomMessage", jB, !0)
-        })), BB.hG(UB.nc, (BB => {
+          yB.l.Gq("showPermanentBottomMessage", IB, !0)
+        })), BB.rU(cB.lc, (BB => {
           let {
-            messageType: jB,
-            data: QB
+            messageType: IB,
+            data: TB
           } = BB;
-          (0, Sj.f)(jB) ? (0, Sj.e)(jB, QB) : ("freeCamPerms" === jB && zB.client.freeCameraController.setPerms(QB.key, QB.value), zB.client.triggerGameCallback("onReceivedMessageFromServer", jB, QB))
-        })), BB.hG(UB.Ob, Mj.k)
+          (0, QI.f)(IB) ? (0, QI.c)(IB, TB) : ("freeCamPerms" === IB && ZB.client.freeCameraController.setPerms(TB.key, TB.value), ZB.client.triggerGameCallback("onReceivedMessageFromServer", IB, TB))
+        })), BB.rU(cB.Mb, sI.o)
       }
     }
-    class qj {
-      constructor(BB, jB, zB, QB) {
-        this.gameNameWithVariation = BB, this.ur = zB, this.connectionResume = QB, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new tB.b(jB, this.ur)
+    class YI {
+      constructor(BB, IB, ZB, TB) {
+        this.gameNameWithVariation = BB, this.Nz = ZB, this.connectionResume = TB, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new CB.b(IB, this.Nz)
       }
       setupStateReplicationHandlers() {
-        this.stateReplicationHandler.setup(), (0, QB.onGameResetOnce)((() => {
+        this.stateReplicationHandler.setup(), (0, TB.onGameResetOnce)((() => {
           this.stateReplicationHandler.dispose()
         }))
       }
-      MUB(BB) {
-        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new tB.b(BB, this.ur), this.stateReplicationHandler.setup()
+      KcB(BB) {
+        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new CB.b(BB, this.Nz), this.stateReplicationHandler.setup()
       }
-      setupOnMessageListeners(BB, jB) {
-        const zB = this.ur,
-          QB = BB => {
+      setupOnMessageListeners(BB, IB) {
+        const ZB = this.Nz,
+          TB = BB => {
             this.stateReplicationHandler.setUpIfQueued(BB)
           };
-        new Gj(zB, this.gameNameWithVariation, this.connectionResume).register(BB), new oB(zB).register(BB), new bB(zB).register(BB), new hB(zB, QB).register(BB), new KB(zB, QB).register(BB), new ij(zB, jB).register(BB), new dj(zB, QB).register(BB)
+        new UI(ZB, this.gameNameWithVariation, this.connectionResume).register(BB), new pB(ZB).register(BB), new DB(ZB).register(BB), new RB(ZB, TB).register(BB), new bB(ZB, TB).register(BB), new OI(ZB, IB).register(BB), new oI(ZB, TB).register(BB)
       }
     }
     window.addEventListener("beforeunload", (() => {}));
-    var fj = zB(39151),
-      oj = zB(39153),
-      Hj = zB(701),
-      Dj = zB(3036);
-    class Fj {
-      constructor(BB, jB, zB, QB) {
-        this.msgHandler = zB, this.listener = QB, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new fj.b({
+    var iI = ZB(39098),
+      pI = ZB(39104),
+      aI = ZB(696),
+      HI = ZB(3101);
+    class MI {
+      constructor(BB, IB, ZB, TB) {
+        this.msgHandler = ZB, this.listener = TB, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new iI.e({
           reconnect: BB,
-          isLive: () => QB.isLive(),
+          isLive: () => TB.isLive(),
           onReconnected: BB => {
             this.resumeOnRoom(BB)
           },
-          onGaveUp: (BB, jB) => {
-            QB.onGaveUp(BB, jB)
+          onGaveUp: (BB, IB) => {
+            TB.onGaveUp(BB, IB)
           },
-          freeze: jB,
-          releaseSeat: jB => {
-            BB(jB).then((BB => {
+          freeze: IB,
+          releaseSeat: IB => {
+            BB(IB).then((BB => {
               BB.leave(!0)
             }), (BB => {
               console.warn("Couldn't release the held seat of a game left while reconnecting", BB)
@@ -1223,8 +1223,8 @@ export const modules = {
           }
         })
       }
-      onInitialInfo(BB, jB) {
-        this.session.onInitialInfo(BB, jB)
+      onInitialInfo(BB, IB) {
+        this.session.onInitialInfo(BB, IB)
       }
       isResuming() {
         return this.session.isResuming()
@@ -1232,173 +1232,173 @@ export const modules = {
       getDroppedAt() {
         return this.droppedAt
       }
-      onResumeInitialInfo(BB, jB) {
+      onResumeInitialInfo(BB, IB) {
         if (this.session.onResuming(), null === BB) {
           try {
-            (0, uB.c)().client.itemDropPrediction.reset()
-          } catch (zB) {
-            console.error("Error dropping the item drop predictions on resuming", zB)
+            (0, kB.d)().client.itemDropPrediction.reset()
+          } catch (ZB) {
+            console.error("Error dropping the item drop predictions on resuming", ZB)
           }
-          return QB.offlineInputReplay.discard(), void this.setSuspended(!1)
-        }(0, uB.c)().client.itemDropPrediction.onResumeReplayOffered(), QB.offlineInputReplay.replayFrom(BB.yB, jB)
+          return TB.offlineInputReplay.discard(), void this.setSuspended(!1)
+        }(0, kB.d)().client.itemDropPrediction.onResumeReplayOffered(), TB.offlineInputReplay.replayFrom(BB.qB, IB)
       }
       onResumed(BB) {
-        this.setSuspended(!1), (0, QB.resendBeacons)();
+        this.setSuspended(!1), (0, TB.resendBeacons)();
         try {
           BB()
-        } catch (jB) {
-          console.error("Error completing the resume", jB)
+        } catch (IB) {
+          console.error("Error completing the resume", IB)
         } finally {
           this.session.onResumed()
         }
       }
       attachRoom(BB) {
-        const jB = (0, Hj.l)((() => BB.connection.isOpen));
-        BB.WG(jB);
-        const zB = new oj.c((() => {
+        const IB = (0, aI.k)((() => BB.connection.isOpen));
+        BB.KU(IB);
+        const ZB = new pI.e((() => {
           this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(BB, "silent"), BB.leave(!1))
         }));
         BB.onStateChange((() => {
-          zB.heard()
+          ZB.heard()
         }));
-        const QB = jB => {
-          jB.persisted || BB.leave(!0)
+        const TB = IB => {
+          IB.persisted || BB.leave(!0)
         };
-        window.addEventListener("pagehide", QB), BB.WG(((jB, zB) => {
-          if (BB === this.attachedRoom && this.listener.isLive()) return (0, dB.f)(jB) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${jB}, reconnecting`), this.listener.onDropped(jB, zB), void this.onConnectionDropped(BB, String(jB))) : void this.listener.onRoomLeft(jB, zB)
+        window.addEventListener("pagehide", TB), BB.KU(((IB, ZB) => {
+          if (BB === this.attachedRoom && this.listener.isLive()) return (0, oB.g)(IB) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${IB}, reconnecting`), this.listener.onDropped(IB, ZB), void this.onConnectionDropped(BB, String(IB))) : void this.listener.onRoomLeft(IB, ZB)
         })), this.attachedRoom = BB, this.detachRoomListeners = () => {
-          jB(), zB.dispose(), window.removeEventListener("pagehide", QB)
+          IB(), ZB.dispose(), window.removeEventListener("pagehide", TB)
         }
       }
       dispose() {
         this.detachRoom(), this.session.leave(), this.setSuspended(!1)
       }
       setSuspended(BB) {
-        BB !== this.suspended && (this.suspended = BB, (0, QB.setConnectionSuspended)(BB), (0, uB.c)().client.itemDropPrediction.setSuspended(BB))
+        BB !== this.suspended && (this.suspended = BB, (0, TB.setConnectionSuspended)(BB), (0, kB.d)().client.itemDropPrediction.setSuspended(BB))
       }
       detachRoom() {
         var BB;
         null === (BB = this.detachRoomListeners) || void 0 === BB || BB.call(this), this.detachRoomListeners = null, this.attachedRoom = null
       }
-      onConnectionDropped(BB, jB) {
-        (0, Dj.reportClientError)("disconnect", "Left room", jB), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), QB.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(BB.reconnectionToken)
+      onConnectionDropped(BB, IB) {
+        (0, HI.reportClientError)("disconnect", "Left room", IB), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), TB.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(BB.reconnectionToken)
       }
       resumeOnRoom(BB) {
         if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), BB.leave(!0), void this.dispose();
-        console.log("Reconnected to the game server, waiting for the game to resume"), (0, xB.r)(), QB.offlineInputReplay.onConnectionReplaced(), this.msgHandler.MUB(BB), this.listener.onReconnected(BB), this.attachRoom(BB)
+        console.log("Reconnected to the game server, waiting for the game to resume"), (0, tB.r)(), TB.offlineInputReplay.onConnectionReplaced(), this.msgHandler.KcB(BB), this.listener.onReconnected(BB), this.attachRoom(BB)
       }
     }
-    var Yj = zB(3084),
-      Vj = zB(3092),
-      hj = zB(1357),
-      Xj = zB(1325),
-      Zj = zB(4766),
-      Aj = zB(3270),
-      Tj = zB(1121),
-      Pj = zB(37811),
-      Wj = zB(39156),
-      ej = zB(8923),
-      lj = zB(39158),
-      wj = zB(1253),
-      xj = zB(36568),
-      Kj = zB(39166),
-      Cj = zB(1760),
-      cj = zB(2869);
+    var jI = ZB(3141),
+      PI = ZB(3150),
+      RI = ZB(1382),
+      rI = ZB(1362),
+      mI = ZB(4856),
+      XI = ZB(3316),
+      LI = ZB(1125),
+      eI = ZB(37781),
+      uI = ZB(39110),
+      fI = ZB(9011),
+      lI = ZB(39119),
+      AI = ZB(1261),
+      tI = ZB(36516),
+      bI = ZB(39126),
+      xI = ZB(1787),
+      EI = ZB(2921);
 
-    function bj(BB) {
-      var jB, zB;
+    function DI(BB) {
+      var IB, ZB;
       if ("object" !== typeof BB || null === BB) return {
         errType: typeof BB
       };
-      const QB = BB;
+      const TB = BB;
       return {
-        errType: null !== (jB = null === (zB = BB.constructor) || void 0 === zB ? void 0 : zB.name) && void 0 !== jB ? jB : "",
-        errName: "string" === typeof QB.name ? QB.name : "",
-        eventType: "string" === typeof QB.type ? QB.type : "",
-        errStack: "string" === typeof QB.stack ? QB.stack.split("\n").slice(1).join(" | ") : ""
+        errType: null !== (IB = null === (ZB = BB.constructor) || void 0 === ZB ? void 0 : ZB.name) && void 0 !== IB ? IB : "",
+        errName: "string" === typeof TB.name ? TB.name : "",
+        eventType: "string" === typeof TB.type ? TB.type : "",
+        errStack: "string" === typeof TB.stack ? TB.stack.split("\n").slice(1).join(" | ") : ""
       }
     }
 
-    function vj(BB) {
+    function KI(BB) {
       if ("undefined" !== typeof ProgressEvent && BB instanceof ProgressEvent) return !0;
       if (!(BB instanceof Error)) return !1;
-      const jB = BB.code;
-      return "ServerError" === BB.name && void 0 === jB || "AbortError" === BB.name || "seat reservation expired." === BB.message || "early_leave" === BB.message
-    }(0, mB.m)((BB => {
-      (0, Dj.reportClientError)("wasm_net", BB)
+      const IB = BB.code;
+      return "ServerError" === BB.name && void 0 === IB || "AbortError" === BB.name || "seat reservation expired." === BB.message || "early_leave" === BB.message
+    }(0, gB.o)((BB => {
+      (0, HI.reportClientError)("wasm_net", BB)
     }));
-    let Rj = !0;
+    let VI = !0;
 
-    function Oj() {
-      Rj = !1
+    function SI() {
+      VI = !1
     }
-    class Bz {
+    class BZ {
       constructor(BB) {
-        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.ur = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = BB.gameNameWithVariation, this.lobbyName = BB.lobbyName, this.colyClient = BB.colyClient, this.userContext = BB.userContext
+        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.Nz = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = BB.gameNameWithVariation, this.lobbyName = BB.lobbyName, this.colyClient = BB.colyClient, this.userContext = BB.userContext
       }
-      async connectToServer(BB, jB, zB) {
-        GB.c.reset(), BB.RY = {
-          [BB.zV]: {}
-        }, BB.FBB = void 0, (0, xB.r)(), (0, uB.c)().removeAllEntityNames(), (0, uB.c)().setEntityName(BB.zV, this.userContext.getPlayerName()), (0, hj.q)({
+      async connectToServer(BB, IB, ZB) {
+        UB.c.reset(), BB.Tm = {
+          [BB.Jm]: {}
+        }, BB.oIB = void 0, (0, tB.r)(), (0, kB.d)().removeAllEntityNames(), (0, kB.d)().setEntityName(BB.Jm, this.userContext.getPlayerName()), (0, RI.l)({
           lobbyName: this.lobbyName
-        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, Cj.i)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
-        const IB = performance.now();
-        zB.aborted || (0, Xj.r)("wasm_core_ready", IB);
-        const NB = (0, lj.h)(this.userContext, (() => {
+        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, xI.g)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
+        const GB = performance.now();
+        ZB.aborted || (0, rI.n)("wasm_core_ready", GB);
+        const vB = (0, lI.g)(this.userContext, (() => {
           const {
-            roomName: QB,
-            joinOptions: nB
-          } = (0, gB.i)(this.userContext, this.gameNameWithVariation, this.lobbyName, jB, (BB => Aj.e.isUsingCustomGameTexturePack(BB)));
-          return nB.joinAdHold = this.joinAdHold, nB.renderBackend = (0, cj.b)(BB.pm), (0, Wj.f)((() => this.colyClient.joinOrCreateUntil(zB, QB, nB)), zB)
+            roomName: TB,
+            joinOptions: JB
+          } = (0, dB.d)(this.userContext, this.gameNameWithVariation, this.lobbyName, IB, (BB => XI.e.isUsingCustomGameTexturePack(BB)));
+          return JB.joinAdHold = this.joinAdHold, JB.renderBackend = (0, EI.e)(BB.Ig), (0, uI.h)((() => this.colyClient.joinOrCreateUntil(ZB, TB, JB)), ZB)
         }));
-        return kB.n.Ly("loadingScreenState", "loadingPage:joiningLobby"), await NB.then((jB => {
-          if (this.joinedAt = performance.now(), (0, Xj.r)("wasm_joined", this.joinedAt), this.ur = BB, this.joinAdHold) {
-            const BB = (0, Cj.q)((() => {
-              jB.send(nB.f), (0, Xj.m)(), mj.b.markJoinAdEnded()
+        return yB.l.Gq("loadingScreenState", "loadingPage:joiningLobby"), await vB.then((IB => {
+          if (this.joinedAt = performance.now(), (0, rI.n)("wasm_joined", this.joinedAt), this.Nz = BB, this.joinAdHold) {
+            const BB = (0, xI.o)((() => {
+              IB.send(JB.f), (0, rI.i)(), gI.d.markJoinAdEnded()
             }));
-            jB.WG(BB), (0, QB.onGameResetOnce)(BB)
+            IB.KU(BB), (0, TB.onGameResetOnce)(BB)
           }
-          const zB = new yB(jB);
-          this.connectionResume = new Fj((BB => this.colyClient.reconnect(BB)), (jB => {
-            BB.nD(jB)
-          }), zB, {
-            isLive: () => (0, uB.c)().client.getMsgHandler() === zB,
-            onDropped: (BB, jB) => {
-              (0, Vj.d)(BB) || this.logUnrecognisedConnectionLoss(BB, void 0, {
+          const ZB = new qB(IB);
+          this.connectionResume = new MI((BB => this.colyClient.reconnect(BB)), (IB => {
+            BB.VY(IB)
+          }), ZB, {
+            isLive: () => (0, kB.d)().client.getMsgHandler() === ZB,
+            onDropped: (BB, IB) => {
+              (0, PI.i)(BB) || this.logUnrecognisedConnectionLoss(BB, void 0, {
                 site: "drop",
-                closeReason: null !== jB && void 0 !== jB ? jB : "",
+                closeReason: null !== IB && void 0 !== IB ? IB : "",
                 sinceJoined: this.sinceJoined()
               })
             },
-            onRoomLeft: (BB, jB) => {
-              this.onRoomLeft(BB, jB)
+            onRoomLeft: (BB, IB) => {
+              this.onRoomLeft(BB, IB)
             },
             onReconnected: BB => {
-              this.incomingMsgInitialisor.MUB(BB), this.checkSendPath = (0, Pj.d)(zB, BB, mB.n)
+              this.incomingMsgInitialisor.KcB(BB), this.checkSendPath = (0, eI.f)(ZB, BB, gB.s)
             },
-            onGaveUp: (BB, jB) => {
-              this.onResumeGaveUp(BB, jB)
+            onGaveUp: (BB, IB) => {
+              this.onResumeGaveUp(BB, IB)
             }
-          }), this.connectionResume.attachRoom(jB), (0, QB.onGameResetOnce)((() => {
+          }), this.connectionResume.attachRoom(IB), (0, TB.onGameResetOnce)((() => {
             this.connectionResume.dispose()
           }));
-          const dB = zB.send,
-            IB = zB.hG,
-            NB = zB.LzB.send,
-            UB = zB.LzB.hG,
-            aB = zB.gUB;
-          this.checkSendPath = (0, Pj.d)(zB, jB, mB.n);
-          const pB = setInterval((() => {
-            dB === zB.send && IB === zB.hG && NB === zB.LzB.send && UB === zB.LzB.hG && aB === zB.gUB || Oj(), this.checkSendPath()
+          const oB = ZB.send,
+            GB = ZB.rU,
+            vB = ZB.xZB.send,
+            cB = ZB.xZB.rU,
+            nB = ZB.EcB;
+          this.checkSendPath = (0, eI.f)(ZB, IB, gB.s);
+          const hB = setInterval((() => {
+            oB === ZB.send && GB === ZB.rU && vB === ZB.xZB.send && cB === ZB.xZB.rU && nB === ZB.EcB || SI(), this.checkSendPath()
           }), 1e4);
-          return (0, QB.onGameResetOnce)((() => {
-            clearInterval(pB)
+          return (0, TB.onGameResetOnce)((() => {
+            clearInterval(hB)
           })), {
             success: !0,
-            successDetails: zB
+            successDetails: ZB
           }
-        })).catch((jB => {
-          if (zB.aborted && jB === (0, wj.f)(zB)) return {
+        })).catch((IB => {
+          if (ZB.aborted && IB === (0, AI.e)(ZB)) return {
             success: !1,
             failDetails: {
               reason: "Left the game while it loaded",
@@ -1406,22 +1406,22 @@ export const modules = {
               canReconnect: !1
             }
           };
-          if (jB instanceof xj.h) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
+          if (IB instanceof tI.f) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
             success: !1,
             failDetails: {
-              reason: jB.message,
+              reason: IB.message,
               requiresRefresh: !1,
               canReconnect: !1,
               gameServerUnreachable: "timedOut",
-              joinFailure: (0, Kj.b)(jB, jB.leg)
+              joinFailure: (0, bI.b)(IB, IB.leg)
             }
           };
-          BB.Xm(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${jB.code}\n`, jB);
-          const QB = jB.code;
-          return QB === dB.c.serverUpdating.code ? (this.goToUpdateWaiting(), {
+          BB.wg(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${IB.code}\n`, IB);
+          const TB = IB.code;
+          return TB === oB.c.serverUpdating.code ? (this.goToUpdateWaiting(), {
             success: !1,
             failDetails: {
-              reason: dB.c.serverUpdating.text,
+              reason: oB.c.serverUpdating.text,
               requiresRefresh: !1,
               canReconnect: !0,
               goesToUpdateWaiting: !0
@@ -1429,31 +1429,31 @@ export const modules = {
           }) : {
             success: !1,
             failDetails: {
-              ...this.onConnectionToServerLost(QB, jB.message, {
+              ...this.onConnectionToServerLost(TB, IB.message, {
                 site: "join",
-                sinceJoinStart: (0, Vj.b)(performance.now() - IB),
-                ...bj(jB)
-              }, vj(jB)),
-              rematch: (0, Wj.e)(jB),
-              gameRefused: (0, ej.c)(jB),
-              joinFailure: (0, Kj.b)(jB, this.colyClient.legReached())
+                sinceJoinStart: (0, PI.e)(performance.now() - GB),
+                ...DI(IB)
+              }, KI(IB)),
+              rematch: (0, uI.e)(IB),
+              gameRefused: (0, fI.e)(IB),
+              joinFailure: (0, bI.b)(IB, this.colyClient.legReached())
             }
           }
         }))
       }
-      setupServerListeners(BB, jB, zB) {
-        kB.n.Ly("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new qj(this.gameNameWithVariation, jB.LzB, BB, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
-        const nB = jB.fUB();
-        this.incomingMsgInitialisor.setupOnMessageListeners(nB, zB), (0, QB.onConnectionToServerReady)(nB, jB), this.joinAdHold && mj.b.markAdmissionAwaited(), nB.finishRegistration()
+      setupServerListeners(BB, IB, ZB) {
+        yB.l.Gq("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new YI(this.gameNameWithVariation, IB.xZB, BB, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
+        const JB = IB.InB();
+        this.incomingMsgInitialisor.setupOnMessageListeners(JB, ZB), (0, TB.onConnectionToServerReady)(JB, IB), this.joinAdHold && gI.d.markAdmissionAwaited(), JB.finishRegistration()
       }
       dispose() {
         this.connectionResume.dispose()
       }
-      onResumeGaveUp(BB, jB) {
-        (0, Tj.Zm)(new Error("Reconnect failed"), {
-          ...(0, Yj.h)(jB),
+      onResumeGaveUp(BB, IB) {
+        (0, LI.Og)(new Error("Reconnect failed"), {
+          ...(0, jI.j)(IB),
           game: this.gameNameWithVariation
-        }), (0, Dj.reportClientError)("disconnect", "Reconnect failed", jB.reason), (0, uB.c)().client.leaveGameUnwanted({
+        }), (0, HI.reportClientError)("disconnect", "Reconnect failed", IB.reason), (0, kB.d)().client.leaveGameUnwanted({
           reason: {
             translationKey: "general:lostConnection"
           },
@@ -1461,1300 +1461,1300 @@ export const modules = {
           canPlayAgain: BB,
           requiresRefresh: !1,
           automaticallyReconnect: !1
-        }), (0, sj.navigatePreserveSearch)("/")
+        }), (0, FI.navigatePreserveSearch)("/")
       }
       sinceJoined() {
-        return null === this.joinedAt ? "" : (0, Vj.b)(performance.now() - this.joinedAt)
+        return null === this.joinedAt ? "" : (0, PI.e)(performance.now() - this.joinedAt)
       }
-      onRoomLeft(BB, jB) {
-        var zB;
-        if (BB === dB.c.gameOrPluginKick.code) return;
-        if (console.log(`Left room with code ${BB}`), BB === dB.c.serverUpdating.code) return (0, Dj.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, uB.c)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
-        this.ur.Xm(`Kicked from server with code ${BB}`, new Error);
-        const QB = Object.keys(dB.c).find((jB => dB.c[jB].code === BB));
-        (0, Dj.reportClientError)("disconnect", "Left room", null !== QB && void 0 !== QB ? QB : String(BB));
-        const nB = this.onConnectionToServerLost(BB, void 0, {
+      onRoomLeft(BB, IB) {
+        var ZB;
+        if (BB === oB.c.gameOrPluginKick.code) return;
+        if (console.log(`Left room with code ${BB}`), BB === oB.c.serverUpdating.code) return (0, HI.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, kB.d)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
+        this.Nz.wg(`Kicked from server with code ${BB}`, new Error);
+        const TB = Object.keys(oB.c).find((IB => oB.c[IB].code === BB));
+        (0, HI.reportClientError)("disconnect", "Left room", null !== TB && void 0 !== TB ? TB : String(BB));
+        const JB = this.onConnectionToServerLost(BB, void 0, {
           site: "leave",
-          closeReason: null !== jB && void 0 !== jB ? jB : "",
+          closeReason: null !== IB && void 0 !== IB ? IB : "",
           sinceJoined: this.sinceJoined()
         });
-        (0, uB.c)().client.leaveGameUnwanted({
-          reason: `You have disconnected from the server.\n${nB.reason}`,
-          canReconnect: nB.canReconnect,
-          requiresRefresh: nB.requiresRefresh,
-          automaticallyReconnect: null !== (zB = nB.automaticallyReconnect) && void 0 !== zB && zB
-        }), (0, sj.navigatePreserveSearch)("/")
+        (0, kB.d)().client.leaveGameUnwanted({
+          reason: `You have disconnected from the server.\n${JB.reason}`,
+          canReconnect: JB.canReconnect,
+          requiresRefresh: JB.requiresRefresh,
+          automaticallyReconnect: null !== (ZB = JB.automaticallyReconnect) && void 0 !== ZB && ZB
+        }), (0, FI.navigatePreserveSearch)("/")
       }
       getUpdateWaitingUrl() {
-        return (0, Zj.C)(this.gameNameWithVariation, this.lobbyName)
+        return (0, mI.A)(this.gameNameWithVariation, this.lobbyName)
       }
       goToUpdateWaiting() {
-        (0, sj.navigatePreserveSearch)(this.getUpdateWaitingUrl())
+        (0, FI.navigatePreserveSearch)(this.getUpdateWaitingUrl())
       }
-      onConnectionToServerLost(BB, jB, zB) {
-        var QB;
-        let nB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null !== (QB = jB) && void 0 !== QB && QB.endsWith(dB.g) && (this.userContext.invalidateTrafficCode(), jB = jB.replace(dB.g, "")), BB === dB.c.outdatedVersion.code) return console.error("Outdated client with version ", IB.b, ", refreshing page"), (0, LB.reloadBloxd)(), {
+      onConnectionToServerLost(BB, IB, ZB) {
+        var TB;
+        let JB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null !== (TB = IB) && void 0 !== TB && TB.endsWith(oB.k) && (this.userContext.invalidateTrafficCode(), IB = IB.replace(oB.k, "")), BB === oB.c.outdatedVersion.code) return console.error("Outdated client with version ", GB.b, ", refreshing page"), (0, WB.reloadBloxd)(), {
           reason: "Outdated client",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        if (BB === dB.c.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, LB.reloadBloxd)(), {
+        if (BB === oB.c.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, WB.reloadBloxd)(), {
           reason: "Failed to load recaptcha",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        for (const IB in dB.c) {
+        for (const GB in oB.c) {
           const {
-            code: zB,
-            text: QB,
-            canReconnect: nB
-          } = dB.c[IB];
-          if (zB === BB) {
+            code: ZB,
+            text: TB,
+            canReconnect: JB
+          } = oB.c[GB];
+          if (ZB === BB) {
             console.log("matched known error", BB, "leaving game");
             return {
-              reason: "" !== QB ? QB : jB || `Code: ${BB}`,
+              reason: "" !== TB ? TB : IB || `Code: ${BB}`,
               requiresRefresh: !1,
-              canReconnect: nB,
-              automaticallyReconnect: zB === dB.c.customGameUpdated.code || zB === dB.c.duplicateLobbyNameError.code
+              canReconnect: JB,
+              automaticallyReconnect: ZB === oB.c.customGameUpdated.code || ZB === oB.c.duplicateLobbyNameError.code
             }
           }
         }
-        return console.log("Didn't match known error, leaving game"), (0, Vj.c)(BB) || nB ? console.warn("Connection lost", BB, jB) : this.logUnrecognisedConnectionLoss(BB, jB, zB), {
+        return console.log("Didn't match known error, leaving game"), (0, PI.g)(BB) || JB ? console.warn("Connection lost", BB, IB) : this.logUnrecognisedConnectionLoss(BB, IB, ZB), {
           reason: `Either your internet isn't working or this is a bug.\nCode: ${BB}`,
           requiresRefresh: !1,
           canReconnect: !1,
-          gameServerUnreachable: nB ? "failed" : void 0
+          gameServerUnreachable: JB ? "failed" : void 0
         }
       }
-      logUnrecognisedConnectionLoss(BB, jB, zB) {
-        (0, Tj.Zm)(new Error("Unrecognised connection loss"), {
+      logUnrecognisedConnectionLoss(BB, IB, ZB) {
+        (0, LI.Og)(new Error("Unrecognised connection loss"), {
           code: String(BB),
-          cause: null !== jB && void 0 !== jB ? jB : "",
-          ...zB,
+          cause: null !== IB && void 0 !== IB ? IB : "",
+          ...ZB,
           game: this.gameNameWithVariation,
-          ...(0, Vj.e)()
+          ...(0, PI.l)()
         })
       }
     }
   },
-  39071: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => Kz,
-      f: () => Oz
+  39023: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => bZ,
+      f: () => SZ
     });
-    var QB, nB, dB, IB, NB, uB, UB, aB, pB, rB, sB, JB, mB, yB, kB, GB, LB, gB, tB, SB, MB, EB, iB, qB, fB, oB, HB, DB, FB, YB, VB, hB, XB, ZB, AB, TB, PB, WB, eB, lB, wB, xB, KB, CB, cB, bB, vB, RB, OB, Bj, jj, zj, Qj, nj, dj, Ij, Nj, uj, Uj, aj, pj, rj, sj, Jj, mj, yj, kj, Gj, Lj, gj, tj, Sj, Mj, Ej, ij, qj, fj, oj, Hj, Dj, Fj, Yj, Vj, hj, Xj, Zj, Aj, Tj, Pj, Wj, ej, lj, wj, xj, Kj, Cj, cj, bj, vj, Rj = zB(31),
-      Oj = zB(37248),
-      Bz = zB(39087),
-      jz = zB(39093),
-      zz = zB(9159),
-      Qz = zB(652),
-      nz = zB(644),
-      dz = zB(36873);
-    let Iz = (QB = (0, zz.type)("number"), nB = (0, zz.type)("number"), dB = (0, zz.type)("number"), IB = (0, zz.type)("number"), NB = (0, zz.type)("number"), uB = (0, zz.type)("number"), UB = (0, zz.type)("string"), aB = class extends zz.Schema {
+    var TB, JB, oB, GB, vB, kB, cB, nB, hB, zB, FB, NB, gB, qB, yB, UB, WB, dB, CB, QB, sB, wB, OB, YB, iB, pB, aB, HB, MB, jB, PB, RB, rB, mB, XB, LB, eB, uB, fB, lB, AB, tB, bB, xB, EB, DB, KB, VB, SB, BI, II, ZI, TI, JI, oI, GI, vI, kI, cI, nI, hI, zI, FI, NI, gI, qI, yI, UI, WI, dI, CI, QI, sI, wI, OI, YI, iI, pI, aI, HI, MI, jI, PI, RI, rI, mI, XI, LI, eI, uI, fI, lI, AI, tI, bI, xI, EI, DI, KI, VI = ZB(24),
+      SI = ZB(37192),
+      BZ = ZB(39032),
+      IZ = ZB(39039),
+      ZZ = ZB(9201),
+      TZ = ZB(663),
+      JZ = ZB(655),
+      oZ = ZB(36827);
+    let GZ = (TB = (0, ZZ.type)("number"), JB = (0, ZZ.type)("number"), oB = (0, ZZ.type)("number"), GB = (0, ZZ.type)("number"), vB = (0, ZZ.type)("number"), kB = (0, ZZ.type)("number"), cB = (0, ZZ.type)("string"), nB = class extends ZZ.Schema {
         constructor() {
-          super(...arguments), (0, Bz.c)(this, "id", pB, this), (0, Bz.c)(this, "amount", rB, this), (0, Bz.c)(this, "x", sB, this), (0, Bz.c)(this, "y", JB, this), (0, Bz.c)(this, "z", mB, this), (0, Bz.c)(this, "size", yB, this), (0, Bz.c)(this, "attributes", kB, this)
+          super(...arguments), (0, BZ.d)(this, "id", hB, this), (0, BZ.d)(this, "amount", zB, this), (0, BZ.d)(this, "x", FB, this), (0, BZ.d)(this, "y", NB, this), (0, BZ.d)(this, "z", gB, this), (0, BZ.d)(this, "size", qB, this), (0, BZ.d)(this, "attributes", yB, this)
         }
-      }, pB = (0, jz.d)(aB.prototype, "id", [QB], {
+      }, hB = (0, IZ.b)(nB.prototype, "id", [TB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), rB = (0, jz.d)(aB.prototype, "amount", [nB], {
+      }), zB = (0, IZ.b)(nB.prototype, "amount", [JB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), sB = (0, jz.d)(aB.prototype, "x", [dB], {
+      }), FB = (0, IZ.b)(nB.prototype, "x", [oB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), JB = (0, jz.d)(aB.prototype, "y", [IB], {
+      }), NB = (0, IZ.b)(nB.prototype, "y", [GB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), mB = (0, jz.d)(aB.prototype, "z", [NB], {
+      }), gB = (0, IZ.b)(nB.prototype, "z", [vB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), yB = (0, jz.d)(aB.prototype, "size", [uB], {
+      }), qB = (0, IZ.b)(nB.prototype, "size", [kB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), kB = (0, jz.d)(aB.prototype, "attributes", [UB], {
+      }), yB = (0, IZ.b)(nB.prototype, "attributes", [cB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "{}"
         }
-      }), aB),
-      Nz = (GB = (0, zz.type)("string"), LB = (0, zz.type)("string"), gB = class extends zz.Schema {
+      }), nB),
+      vZ = (UB = (0, ZZ.type)("string"), WB = (0, ZZ.type)("string"), dB = class extends ZZ.Schema {
         constructor() {
-          super(...arguments), (0, Bz.c)(this, "itemName", tB, this), (0, Bz.c)(this, "enchantmentTier", SB, this)
+          super(...arguments), (0, BZ.d)(this, "itemName", CB, this), (0, BZ.d)(this, "enchantmentTier", QB, this)
         }
-      }, tB = (0, jz.d)(gB.prototype, "itemName", [GB], {
+      }, CB = (0, IZ.b)(dB.prototype, "itemName", [UB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), SB = (0, jz.d)(gB.prototype, "enchantmentTier", [LB], {
+      }), QB = (0, IZ.b)(dB.prototype, "enchantmentTier", [WB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), gB),
-      uz = (MB = (0, zz.type)("string"), EB = (0, zz.type)("string"), iB = (0, zz.type)("number"), qB = (0, zz.type)("number"), fB = (0, zz.type)("number"), oB = (0, zz.type)("float32"), HB = (0, zz.type)("float32"), DB = (0, zz.type)("float32"), FB = (0, zz.type)("string"), YB = (0, zz.type)(["number"]), VB = (0, zz.type)("boolean"), hB = class extends zz.Schema {
+      }), dB),
+      kZ = (sB = (0, ZZ.type)("string"), wB = (0, ZZ.type)("string"), OB = (0, ZZ.type)("number"), YB = (0, ZZ.type)("number"), iB = (0, ZZ.type)("number"), pB = (0, ZZ.type)("float32"), aB = (0, ZZ.type)("float32"), HB = (0, ZZ.type)("float32"), MB = (0, ZZ.type)("string"), jB = (0, ZZ.type)(["number"]), PB = (0, ZZ.type)("boolean"), RB = class extends ZZ.Schema {
         constructor() {
-          super(...arguments), (0, Bz.c)(this, "type", XB, this), (0, Bz.c)(this, "name", ZB, this), (0, Bz.c)(this, "x", AB, this), (0, Bz.c)(this, "y", TB, this), (0, Bz.c)(this, "z", PB, this), (0, Bz.c)(this, "xRotation", WB, this), (0, Bz.c)(this, "yRotation", eB, this), (0, Bz.c)(this, "zRotation", lB, this), (0, Bz.c)(this, "followingEId", wB, this), (0, Bz.c)(this, "followingOffset", xB, this), (0, Bz.c)(this, "shouldMatchFollowingEntityRotation", KB, this)
+          super(...arguments), (0, BZ.d)(this, "type", rB, this), (0, BZ.d)(this, "name", mB, this), (0, BZ.d)(this, "x", XB, this), (0, BZ.d)(this, "y", LB, this), (0, BZ.d)(this, "z", eB, this), (0, BZ.d)(this, "xRotation", uB, this), (0, BZ.d)(this, "yRotation", fB, this), (0, BZ.d)(this, "zRotation", lB, this), (0, BZ.d)(this, "followingEId", AB, this), (0, BZ.d)(this, "followingOffset", tB, this), (0, BZ.d)(this, "shouldMatchFollowingEntityRotation", bB, this)
         }
-      }, XB = (0, jz.d)(hB.prototype, "type", [MB], {
+      }, rB = (0, IZ.b)(RB.prototype, "type", [sB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), ZB = (0, jz.d)(hB.prototype, "name", [EB], {
+      }), mB = (0, IZ.b)(RB.prototype, "name", [wB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), AB = (0, jz.d)(hB.prototype, "x", [iB], {
+      }), XB = (0, IZ.b)(RB.prototype, "x", [OB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), TB = (0, jz.d)(hB.prototype, "y", [qB], {
+      }), LB = (0, IZ.b)(RB.prototype, "y", [YB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), PB = (0, jz.d)(hB.prototype, "z", [fB], {
+      }), eB = (0, IZ.b)(RB.prototype, "z", [iB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), WB = (0, jz.d)(hB.prototype, "xRotation", [oB], {
+      }), uB = (0, IZ.b)(RB.prototype, "xRotation", [pB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), eB = (0, jz.d)(hB.prototype, "yRotation", [HB], {
+      }), fB = (0, IZ.b)(RB.prototype, "yRotation", [aB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), lB = (0, jz.d)(hB.prototype, "zRotation", [DB], {
+      }), lB = (0, IZ.b)(RB.prototype, "zRotation", [HB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), wB = (0, jz.d)(hB.prototype, "followingEId", [FB], {
+      }), AB = (0, IZ.b)(RB.prototype, "followingEId", [MB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), xB = (0, jz.d)(hB.prototype, "followingOffset", [YB], {
+      }), tB = (0, IZ.b)(RB.prototype, "followingOffset", [jB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new zz.ArraySchema(0, 0, 0)
+          return new ZZ.ArraySchema(0, 0, 0)
         }
-      }), KB = (0, jz.d)(hB.prototype, "shouldMatchFollowingEntityRotation", [VB], {
+      }), bB = (0, IZ.b)(RB.prototype, "shouldMatchFollowingEntityRotation", [PB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !0
         }
-      }), hB),
-      Uz = (CB = (0, zz.type)("float32"), cB = (0, zz.type)("float32"), bB = (0, zz.type)("boolean"), vB = (0, zz.type)("boolean"), RB = (0, zz.type)("float32"), OB = (0, zz.type)("boolean"), Bj = (0, zz.type)("string"), jj = (0, zz.type)("string"), zj = (0, zz.type)("string"), Qj = (0, zz.type)("string"), nj = (0, zz.type)(["number"]), dj = (0, zz.type)("number"), Ij = (0, zz.type)({
-        map: Nz
-      }), Nj = class extends uz {
+      }), RB),
+      cZ = (xB = (0, ZZ.type)("float32"), EB = (0, ZZ.type)("float32"), DB = (0, ZZ.type)("boolean"), KB = (0, ZZ.type)("boolean"), VB = (0, ZZ.type)("float32"), SB = (0, ZZ.type)("boolean"), BI = (0, ZZ.type)("string"), II = (0, ZZ.type)("string"), ZI = (0, ZZ.type)("string"), TI = (0, ZZ.type)("string"), JI = (0, ZZ.type)(["number"]), oI = (0, ZZ.type)("number"), GI = (0, ZZ.type)({
+        map: vZ
+      }), vI = class extends kZ {
         constructor() {
-          super(...arguments), (0, Bz.c)(this, "scale", uj, this), (0, Bz.c)(this, "speed", Uj, this), (0, Bz.c)(this, "jumping", aj, this), (0, Bz.c)(this, "crouching", pj, this), (0, Bz.c)(this, "cameraPitch", rj, this), (0, Bz.c)(this, "armSwinging", sj, this), (0, Bz.c)(this, "heldItemName", Jj, this), (0, Bz.c)(this, "heldItemEnchantmentTier", mj, this), (0, Bz.c)(this, "pose", yj, this), (0, Bz.c)(this, "ridingVehicleEId", kj, this), (0, Bz.c)(this, "meshOffset", Gj, this), (0, Bz.c)(this, "baseRenderHeading", Lj, this), (0, Bz.c)(this, "armour", gj, this)
+          super(...arguments), (0, BZ.d)(this, "scale", kI, this), (0, BZ.d)(this, "speed", cI, this), (0, BZ.d)(this, "jumping", nI, this), (0, BZ.d)(this, "crouching", hI, this), (0, BZ.d)(this, "cameraPitch", zI, this), (0, BZ.d)(this, "armSwinging", FI, this), (0, BZ.d)(this, "heldItemName", NI, this), (0, BZ.d)(this, "heldItemEnchantmentTier", gI, this), (0, BZ.d)(this, "pose", qI, this), (0, BZ.d)(this, "ridingVehicleEId", yI, this), (0, BZ.d)(this, "meshOffset", UI, this), (0, BZ.d)(this, "baseRenderHeading", WI, this), (0, BZ.d)(this, "armour", dI, this)
         }
-      }, uj = (0, jz.d)(Nj.prototype, "scale", [CB], {
+      }, kI = (0, IZ.b)(vI.prototype, "scale", [xB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), Uj = (0, jz.d)(Nj.prototype, "speed", [cB], {
+      }), cI = (0, IZ.b)(vI.prototype, "speed", [EB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), aj = (0, jz.d)(Nj.prototype, "jumping", [bB], {
+      }), nI = (0, IZ.b)(vI.prototype, "jumping", [DB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), pj = (0, jz.d)(Nj.prototype, "crouching", [vB], {
+      }), hI = (0, IZ.b)(vI.prototype, "crouching", [KB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), rj = (0, jz.d)(Nj.prototype, "cameraPitch", [RB], {
+      }), zI = (0, IZ.b)(vI.prototype, "cameraPitch", [VB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), sj = (0, jz.d)(Nj.prototype, "armSwinging", [OB], {
+      }), FI = (0, IZ.b)(vI.prototype, "armSwinging", [SB], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), Jj = (0, jz.d)(Nj.prototype, "heldItemName", [Bj], {
+      }), NI = (0, IZ.b)(vI.prototype, "heldItemName", [BI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), mj = (0, jz.d)(Nj.prototype, "heldItemEnchantmentTier", [jj], {
+      }), gI = (0, IZ.b)(vI.prototype, "heldItemEnchantmentTier", [II], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), yj = (0, jz.d)(Nj.prototype, "pose", [zj], {
+      }), qI = (0, IZ.b)(vI.prototype, "pose", [ZI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "standing"
         }
-      }), kj = (0, jz.d)(Nj.prototype, "ridingVehicleEId", [Qj], {
+      }), yI = (0, IZ.b)(vI.prototype, "ridingVehicleEId", [TI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), Gj = (0, jz.d)(Nj.prototype, "meshOffset", [nj], {
+      }), UI = (0, IZ.b)(vI.prototype, "meshOffset", [JI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new zz.ArraySchema(0, 0, 0)
+          return new ZZ.ArraySchema(0, 0, 0)
         }
-      }), Lj = (0, jz.d)(Nj.prototype, "baseRenderHeading", [dj], {
+      }), WI = (0, IZ.b)(vI.prototype, "baseRenderHeading", [oI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), gj = (0, jz.d)(Nj.prototype, "armour", [Ij], {
+      }), dI = (0, IZ.b)(vI.prototype, "armour", [GI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new zz.MapSchema
+          return new ZZ.MapSchema
         }
-      }), Nj),
-      az = (tj = (0, zz.type)("string"), Sj = (0, zz.type)("string"), Mj = (0, zz.type)("string"), Ej = (0, zz.type)("uint8"), ij = class extends Uz {
+      }), vI),
+      nZ = (CI = (0, ZZ.type)("string"), QI = (0, ZZ.type)("string"), sI = (0, ZZ.type)("string"), wI = (0, ZZ.type)("uint8"), OI = class extends cZ {
         constructor() {
-          super(...arguments), (0, Bz.c)(this, "variation", qj, this), (0, Bz.c)(this, "ownerDbId", fj, this), (0, Bz.c)(this, "metaInfo", oj, this), (0, Bz.c)(this, "aiState", Hj, this)
+          super(...arguments), (0, BZ.d)(this, "variation", YI, this), (0, BZ.d)(this, "ownerDbId", iI, this), (0, BZ.d)(this, "metaInfo", pI, this), (0, BZ.d)(this, "aiState", aI, this)
         }
-      }, qj = (0, jz.d)(ij.prototype, "variation", [tj], {
+      }, YI = (0, IZ.b)(OI.prototype, "variation", [CI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "default"
         }
-      }), fj = (0, jz.d)(ij.prototype, "ownerDbId", [Sj], {
+      }), iI = (0, IZ.b)(OI.prototype, "ownerDbId", [QI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), oj = (0, jz.d)(ij.prototype, "metaInfo", [Mj], {
+      }), pI = (0, IZ.b)(OI.prototype, "metaInfo", [sI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), Hj = (0, jz.d)(ij.prototype, "aiState", [Ej], {
+      }), aI = (0, IZ.b)(OI.prototype, "aiState", [wI], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ij);
-    Dj = (0, zz.type)("string"), Fj = (0, zz.type)("string"), Yj = (0, zz.type)("string"), Vj = (0, zz.type)("string"), hj = class extends uz {
+      }), OI);
+    HI = (0, ZZ.type)("string"), MI = (0, ZZ.type)("string"), jI = (0, ZZ.type)("string"), PI = (0, ZZ.type)("string"), RI = class extends kZ {
       constructor() {
-        super(...arguments), (0, Bz.c)(this, "meshKind", Xj, this), (0, Bz.c)(this, "meshOpts", Zj, this), (0, Bz.c)(this, "pose", Aj, this), (0, Bz.c)(this, "leaderboardTop", Tj, this)
+        super(...arguments), (0, BZ.d)(this, "meshKind", rI, this), (0, BZ.d)(this, "meshOpts", mI, this), (0, BZ.d)(this, "pose", XI, this), (0, BZ.d)(this, "leaderboardTop", LI, this)
       }
-    }, Xj = (0, jz.d)(hj.prototype, "meshKind", [Dj], {
+    }, rI = (0, IZ.b)(RI.prototype, "meshKind", [HI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), Zj = (0, jz.d)(hj.prototype, "meshOpts", [Fj], {
+    }), mI = (0, IZ.b)(RI.prototype, "meshOpts", [MI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), Aj = (0, jz.d)(hj.prototype, "pose", [Yj], {
+    }), XI = (0, IZ.b)(RI.prototype, "pose", [jI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), Tj = (0, jz.d)(hj.prototype, "leaderboardTop", [Vj], {
+    }), LI = (0, IZ.b)(RI.prototype, "leaderboardTop", [PI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
     });
 
-    function pz(BB) {
-      return Object.keys(zz.Metadata.getFields(BB))
+    function hZ(BB) {
+      return Object.keys(ZZ.Metadata.getFields(BB))
     }
-    const rz = pz(az);
-    for (const BQ of Qz.t)
-      if (!rz.includes(BQ)) throw new Error(`Mob Schema is missing a networked property: "${BQ}"`);
-    const sz = pz((Pj = (0, zz.type)("string"), Wj = (0, zz.type)("float32"), ej = (0, zz.type)("float32"), lj = (0, zz.type)("float32"), wj = (0, zz.type)("float32"), xj = class extends uz {
+    const zZ = hZ(nZ);
+    for (const BT of TZ.t)
+      if (!zZ.includes(BT)) throw new Error(`Mob Schema is missing a networked property: "${BT}"`);
+    const FZ = hZ((eI = (0, ZZ.type)("string"), uI = (0, ZZ.type)("float32"), fI = (0, ZZ.type)("float32"), lI = (0, ZZ.type)("float32"), AI = (0, ZZ.type)("float32"), tI = class extends kZ {
       constructor() {
-        super(...arguments), (0, Bz.c)(this, "soundName", Kj, this), (0, Bz.c)(this, "volume", Cj, this), (0, Bz.c)(this, "refDistance", cj, this), (0, Bz.c)(this, "maxHearDist", bj, this), (0, Bz.c)(this, "rate", vj, this)
+        super(...arguments), (0, BZ.d)(this, "soundName", bI, this), (0, BZ.d)(this, "volume", xI, this), (0, BZ.d)(this, "refDistance", EI, this), (0, BZ.d)(this, "maxHearDist", DI, this), (0, BZ.d)(this, "rate", KI, this)
       }
-    }, Kj = (0, jz.d)(xj.prototype, "soundName", [Pj], {
+    }, bI = (0, IZ.b)(tI.prototype, "soundName", [eI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return ""
       }
-    }), Cj = (0, jz.d)(xj.prototype, "volume", [Wj], {
+    }), xI = (0, IZ.b)(tI.prototype, "volume", [uI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), cj = (0, jz.d)(xj.prototype, "refDistance", [ej], {
+    }), EI = (0, IZ.b)(tI.prototype, "refDistance", [fI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return dz.k
+        return oZ.h
       }
-    }), bj = (0, jz.d)(xj.prototype, "maxHearDist", [lj], {
+    }), DI = (0, IZ.b)(tI.prototype, "maxHearDist", [lI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return dz.c
+        return oZ.e
       }
-    }), vj = (0, jz.d)(xj.prototype, "rate", [wj], {
+    }), KI = (0, IZ.b)(tI.prototype, "rate", [AI], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), xj));
-    for (const BQ of nz.g)
-      if (!sz.includes(BQ)) throw new Error(`AudioEntity Schema is missing a replicated property: "${BQ}"`);
-    var Jz = zB(38524),
-      mz = zB(1270),
-      yz = zB(658),
-      kz = zB(38293),
-      Gz = zB(4334),
-      Lz = zB(376),
-      gz = zB(37372),
-      tz = zB(38177),
-      Sz = zB(2302),
-      Mz = zB(37340),
-      Ez = zB(38545),
-      iz = zB(37504),
-      qz = zB(386),
-      fz = zB.n(qz),
-      oz = zB(38028),
-      Hz = zB(37155),
-      Dz = zB(38154),
-      Fz = zB(38189);
-    class Yz {
-      constructor(BB, jB) {
-        this.bloxd = BB, this.eId = jB, this.ur = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.HJ = !1, this.ur = BB.ur
+    }), tI));
+    for (const BT of JZ.h)
+      if (!FZ.includes(BT)) throw new Error(`AudioEntity Schema is missing a replicated property: "${BT}"`);
+    var NZ = ZB(38483),
+      gZ = ZB(1300),
+      qZ = ZB(665),
+      yZ = ZB(38270),
+      UZ = ZB(4416),
+      WZ = ZB(360),
+      dZ = ZB(37304),
+      CZ = ZB(38159),
+      QZ = ZB(2326),
+      sZ = ZB(37270),
+      wZ = ZB(38501),
+      OZ = ZB(37436),
+      YZ = ZB(364),
+      iZ = ZB.n(YZ),
+      pZ = ZB(37998),
+      aZ = ZB(37105),
+      HZ = ZB(38140),
+      MZ = ZB(38181);
+    class jZ {
+      constructor(BB, IB) {
+        this.bloxd = BB, this.eId = IB, this.Nz = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.WN = !1, this.Nz = BB.Nz
       }
       initClient(BB) {
-        var jB, zB, QB;
-        this.colyseusEntity = BB, this.meshKind = BB.meshKind, this.meshOpts = BB.meshOpts, this.leaderboardTop = BB.leaderboardTop, this.ur.vG.add([BB.x, BB.y, BB.z], 1, 1, null, null, !1, !1, this.eId), this.ur.vG.hY(this.eId, "smoothToServerPos");
-        const nB = "Person" === this.meshKind;
-        this.ur.vG.hY(this.eId, "meshRotation", {
+        var IB, ZB, TB;
+        this.colyseusEntity = BB, this.meshKind = BB.meshKind, this.meshOpts = BB.meshOpts, this.leaderboardTop = BB.leaderboardTop, this.Nz.zW.add([BB.x, BB.y, BB.z], 1, 1, null, null, !1, !1, this.eId), this.Nz.zW.xR(this.eId, "smoothToServerPos");
+        const JB = "Person" === this.meshKind;
+        this.Nz.zW.xR(this.eId, "meshRotation", {
           isServerControlled: !0,
-          ...nB ? {
+          ...JB ? {
             defaultRotationsPerSecond: .5
           } : {},
-          childrenNodeParams: nB ? [{
+          childrenNodeParams: JB ? [{
             nodeName: "HeadMesh",
-            softTolerance: Ez.o,
+            softTolerance: wZ.j,
             hardTolerance: null
           }] : []
-        }), this.updateHidingMeshMgr(), this.canSeeSub = Rj.n.subscribe(`otherEntitySettings|${this.eId}|canSee`, (BB => {
+        }), this.updateHidingMeshMgr(), this.canSeeSub = VI.l.subscribe(`otherEntitySettings|${this.eId}|canSee`, (BB => {
           this.updateHidingMeshMgr()
         }));
-        const dB = () => {
-          const BB = this.ur.vG.ujB(this.eId);
+        const oB = () => {
+          const BB = this.Nz.zW.RIB(this.eId);
           if (!BB) return;
-          const jB = (0, iz.h)(this.eId);
-          if ("number" === typeof BB.mY) {
-            var zB, QB, nB, dB;
-            const IB = null === (zB = (0, Sz.j)("head", null === (nB = this.getSpec()) || void 0 === nB || null === (dB = nB.opts.textures) || void 0 === dB ? void 0 : dB.head)) || void 0 === zB || null === (QB = zB.personModel) || void 0 === QB ? void 0 : QB.fullBody;
-            return this.ur.pm.JY.setPickable(BB.mY, jB && !IB), void(0, Hz.updatePersonAttachmentPickability)(this.ur, this.eId, jB)
+          const IB = (0, OZ.f)(this.eId);
+          if ("number" === typeof BB.gR) {
+            var ZB, TB, JB, oB;
+            const GB = null === (ZB = (0, QZ.h)("head", null === (JB = this.getSpec()) || void 0 === JB || null === (oB = JB.opts.textures) || void 0 === oB ? void 0 : oB.head)) || void 0 === ZB || null === (TB = ZB.personModel) || void 0 === TB ? void 0 : TB.fullBody;
+            return this.Nz.Ig.kR.setPickable(BB.gR, IB && !GB), void(0, aZ.updatePersonAttachmentPickability)(this.Nz, this.eId, IB)
           }
-          const IB = BB.mesh;
-          if (IB)
-            for (const NB of [IB, ...IB.getChildMeshes(!1)]) "Ny" in NB && !NB.name.startsWith("Cape|") && (NB.Ny = jB)
+          const GB = BB.mesh;
+          if (GB)
+            for (const vB of [GB, ...GB.getChildMeshes(!1)]) "tg" in vB && !vB.name.startsWith("Cape|") && (vB.tg = IB)
         };
-        this.canAttackSub = Rj.n.subscribe(`otherEntitySettings|${this.eId}|canAttack`, dB), this.interactableSub = Rj.n.subscribe(`otherEntitySettings|${this.eId}|interactable`, dB), this.overlayColourSub = Rj.n.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (BB => {
+        this.canAttackSub = VI.l.subscribe(`otherEntitySettings|${this.eId}|canAttack`, oB), this.interactableSub = VI.l.subscribe(`otherEntitySettings|${this.eId}|interactable`, oB), this.overlayColourSub = VI.l.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (BB => {
           this.updateOverlayColour(BB)
-        })), this.opacitySub = Rj.n.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (BB => {
+        })), this.opacitySub = VI.l.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (BB => {
           this.updateOpacity(BB)
-        })), this.zIndexSub = Rj.n.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (BB => {
+        })), this.zIndexSub = VI.l.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (BB => {
           this.updateZIndex(BB)
         }));
-        const IB = this.ur.RY[this.ur.zV][this.eId];
-        this.updateOverlayColour(null !== (jB = null === IB || void 0 === IB ? void 0 : IB.overlayColour) && void 0 !== jB ? jB : null), this.updateOpacity(null !== (zB = null === IB || void 0 === IB ? void 0 : IB.opacity) && void 0 !== zB ? zB : 1), this.updateZIndex(null !== (QB = null === IB || void 0 === IB ? void 0 : IB.zIndex) && void 0 !== QB ? QB : 0), this.multilineTextBoxSub = (0, Mz.r)(this.ur, this.eId)
+        const GB = this.Nz.Tm[this.Nz.Jm][this.eId];
+        this.updateOverlayColour(null !== (IB = null === GB || void 0 === GB ? void 0 : GB.overlayColour) && void 0 !== IB ? IB : null), this.updateOpacity(null !== (ZB = null === GB || void 0 === GB ? void 0 : GB.opacity) && void 0 !== ZB ? ZB : 1), this.updateZIndex(null !== (TB = null === GB || void 0 === GB ? void 0 : GB.zIndex) && void 0 !== TB ? TB : 0), this.multilineTextBoxSub = (0, sZ.q)(this.Nz, this.eId)
       }
-      onChangeClient(BB, jB) {
-        if ("xRotation" === BB || "yRotation" === BB || "zRotation" === BB)(0, Mz.t)(this.ur, this.eId, BB, jB);
+      onChangeClient(BB, IB) {
+        if ("xRotation" === BB || "yRotation" === BB || "zRotation" === BB)(0, sZ.r)(this.Nz, this.eId, BB, IB);
         else if ("pose" === BB) {
-          const BB = this.ur.vG.JjB(this.eId);
-          BB && (BB.pose = jB || "standing")
-        } else "meshKind" === BB || "meshOpts" === BB ? (this[BB] = jB, this.queueMeshRebuild()) : "name" === BB && "" !== jB ? this.updateHidingMeshMgr() : "leaderboardTop" === BB && (this.leaderboardTop = jB, Rj.n.Ly(`leaderboardTop|${this.eId}`, jB))
+          const BB = this.Nz.zW.uIB(this.eId);
+          BB && (BB.pose = IB || "standing")
+        } else "meshKind" === BB || "meshOpts" === BB ? (this[BB] = IB, this.queueMeshRebuild()) : "name" === BB && "" !== IB ? this.updateHidingMeshMgr() : "leaderboardTop" === BB && (this.leaderboardTop = IB, VI.l.Gq(`leaderboardTop|${this.eId}`, IB))
       }
       disposeClient() {
-        this.HJ = !0, this.ur.vG.deleteEntity(this.eId), Rj.n.unsubscribe(this.canSeeSub), Rj.n.unsubscribe(this.canAttackSub), Rj.n.unsubscribe(this.interactableSub), Rj.n.unsubscribe(this.overlayColourSub), Rj.n.unsubscribe(this.opacitySub), Rj.n.unsubscribe(this.zIndexSub), Rj.n.unsubscribe(this.multilineTextBoxSub)
+        this.WN = !0, this.Nz.zW.deleteEntity(this.eId), VI.l.unsubscribe(this.canSeeSub), VI.l.unsubscribe(this.canAttackSub), VI.l.unsubscribe(this.interactableSub), VI.l.unsubscribe(this.overlayColourSub), VI.l.unsubscribe(this.opacitySub), VI.l.unsubscribe(this.zIndexSub), VI.l.unsubscribe(this.multilineTextBoxSub)
       }
       getCurrentHidingMeshMgrState() {
-        var BB, jB;
+        var BB, IB;
         return {
-          canSee: null !== (BB = null === (jB = this.ur.RY[this.ur.zV][this.eId]) || void 0 === jB ? void 0 : jB.canSee) && void 0 !== BB && BB,
+          canSee: null !== (BB = null === (IB = this.Nz.Tm[this.Nz.Jm][this.eId]) || void 0 === IB ? void 0 : IB.canSee) && void 0 !== BB && BB,
           name: this.colyseusEntity.name,
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         }
       }
       updateHidingMeshMgr() {
-        var BB, jB, zB;
+        var BB, IB, ZB;
         const {
-          ur: QB
+          Nz: TB
         } = this, {
-          vG: nB
-        } = QB, dB = this.getCurrentHidingMeshMgrState();
-        if ((0, Lz.se)(this.previousHidingMeshManagerState, dB)) return;
-        if (this.previousHidingMeshManagerState = dB, nB.ZY(this.eId, "hidingMeshManager"), null === (BB = QB.RY[QB.zV][this.eId]) || void 0 === BB || !BB.canSee) return;
-        const IB = this.getSpec();
-        if (!IB) return;
+          zW: JB
+        } = TB, oB = this.getCurrentHidingMeshMgrState();
+        if ((0, WZ.he)(this.previousHidingMeshManagerState, oB)) return;
+        if (this.previousHidingMeshManagerState = oB, JB.Qr(this.eId, "hidingMeshManager"), null === (BB = TB.Tm[TB.Jm][this.eId]) || void 0 === BB || !BB.canSee) return;
+        const GB = this.getSpec();
+        if (!GB) return;
         const {
-          type: NB,
-          opts: uB
-        } = IB;
-        "Person" === NB && (uB.textures = (0, Sz.p)(uB.textures)), uB.eId = this.eId, nB.hY(this.eId, "hidingMeshManager", {
+          type: vB,
+          opts: kB
+        } = GB;
+        "Person" === vB && (kB.textures = (0, QZ.m)(kB.textures)), kB.eId = this.eId, JB.xR(this.eId, "hidingMeshManager", {
           addMeshComponent: () => {
-            var BB, jB, zB;
-            "Leaderboard" === NB && (uB.leaderboardTop = this.leaderboardTop);
-            const dB = this.bloxd.client.meshCreator.getEntityMesh(NB, uB, (BB => {
-              var jB, zB;
+            var BB, IB, ZB;
+            "Leaderboard" === vB && (kB.leaderboardTop = this.leaderboardTop);
+            const oB = this.bloxd.client.meshCreator.getEntityMesh(vB, kB, (BB => {
+              var IB, ZB;
               if ("number" === typeof BB) {
-                var nB, dB, IB;
-                const jB = QB.pm.JY;
-                jB.setEntityId(BB, this.eId);
-                const zB = "Person" === NB && (null === (nB = (0, Sz.j)("head", null === (IB = uB.textures) || void 0 === IB ? void 0 : IB.head)) || void 0 === nB || null === (dB = nB.personModel) || void 0 === dB ? void 0 : dB.fullBody);
-                return void jB.setPickable(BB, (0, iz.h)(this.eId) && !zB)
+                var JB, oB, GB;
+                const IB = TB.Ig.kR;
+                IB.setEntityId(BB, this.eId);
+                const ZB = "Person" === vB && (null === (JB = (0, QZ.h)("head", null === (GB = kB.textures) || void 0 === GB ? void 0 : GB.head)) || void 0 === JB || null === (oB = JB.personModel) || void 0 === oB ? void 0 : oB.fullBody);
+                return void IB.setPickable(BB, (0, OZ.f)(this.eId) && !ZB)
               }
-              const UB = BB;
-              for (const NB of [UB, ...UB.getChildMeshes(!1)]) void 0 === NB.Ny || NB.name.startsWith("Cape|") || (NB.Ny = (0, iz.h)(this.eId), NB.metadata ??= new QB.pm.Uy, NB.metadata.eId = this.eId);
-              this.updateOpacity(null !== (jB = null === (zB = QB.RY[QB.zV][this.eId]) || void 0 === zB ? void 0 : zB.opacity) && void 0 !== jB ? jB : 1)
+              const cB = BB;
+              for (const vB of [cB, ...cB.getChildMeshes(!1)]) void 0 === vB.tg || vB.name.startsWith("Cape|") || (vB.tg = (0, OZ.f)(this.eId), vB.metadata ??= new TB.Ig.bg, vB.metadata.eId = this.eId);
+              this.updateOpacity(null !== (IB = null === (ZB = TB.Tm[TB.Jm][this.eId]) || void 0 === ZB ? void 0 : ZB.opacity) && void 0 !== IB ? IB : 1)
             }));
-            if (!dB) return;
+            if (!oB) return;
             const {
-              mY: IB,
-              mesh: UB,
-              meshOffset: aB,
-              nameYOffset: pB,
-              modelLoaded: rB
-            } = dB;
-            null === rB || void 0 === rB || rB.then((() => {
+              gR: GB,
+              mesh: cB,
+              meshOffset: nB,
+              nameYOffset: hB,
+              modelLoaded: zB
+            } = oB;
+            null === zB || void 0 === zB || zB.then((() => {
               var BB;
-              (null === (BB = nB.ujB(this.eId)) || void 0 === BB ? void 0 : BB.mesh) === UB && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
+              (null === (BB = JB.RIB(this.eId)) || void 0 === BB ? void 0 : BB.mesh) === cB && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
             }));
-            const sB = null === IB ? null : QB.pm.JY.zQB(IB, 0);
-            if (nB.hY(this.eId, nB.names.mesh, {
-                mY: IB,
-                EzB: sB,
-                mesh: UB,
-                vIB: !1,
-                qzB: "Leaderboard" !== NB,
-                offset: aB.slice(),
-                bIB: "ParticleEmitter" === NB && uB.followTargetMeshOffset ? BB => {
-                  var jB;
-                  fz().copy(BB, aB);
-                  const zB = null === (jB = nB.RjB(this.eId)) || void 0 === jB ? void 0 : jB.SJ,
-                    QB = void 0 === zB ? null : nB.JjB(zB);
-                  if (QB) {
-                    var dB, IB;
-                    const jB = this.bloxd.getEntityHeading(null !== (dB = QB.ridingVehicleEId) && void 0 !== dB ? dB : zB, !0),
-                      nB = Math.sin(jB),
-                      NB = Math.cos(jB);
-                    BB[0] += QB.meshOffset[0] * NB + QB.meshOffset[2] * nB, BB[1] += QB.meshOffset[1], BB[2] += QB.meshOffset[2] * NB - QB.meshOffset[0] * nB;
-                    const uB = null !== (IB = QB.ridingVehicleEId) && void 0 !== IB ? IB : null;
-                    null !== uB && (0, Fz.e)(this.ur, uB, BB)
+            const FB = null === GB ? null : TB.Ig.kR.pTB(GB, 0);
+            if (JB.xR(this.eId, JB.names.mesh, {
+                gR: GB,
+                SZB: FB,
+                mesh: cB,
+                svB: !1,
+                ITB: "Leaderboard" !== vB,
+                offset: nB.slice(),
+                QvB: "ParticleEmitter" === vB && kB.followTargetMeshOffset ? BB => {
+                  var IB;
+                  iZ().copy(BB, nB);
+                  const ZB = null === (IB = JB.YZB(this.eId)) || void 0 === IB ? void 0 : IB.zN,
+                    TB = void 0 === ZB ? null : JB.uIB(ZB);
+                  if (TB) {
+                    var oB, GB;
+                    const IB = this.bloxd.getEntityHeading(null !== (oB = TB.ridingVehicleEId) && void 0 !== oB ? oB : ZB, !0),
+                      JB = Math.sin(IB),
+                      vB = Math.cos(IB);
+                    BB[0] += TB.meshOffset[0] * vB + TB.meshOffset[2] * JB, BB[1] += TB.meshOffset[1], BB[2] += TB.meshOffset[2] * vB - TB.meshOffset[0] * JB;
+                    const kB = null !== (GB = TB.ridingVehicleEId) && void 0 !== GB ? GB : null;
+                    null !== kB && (0, MZ.b)(this.Nz, kB, BB)
                   }
                 } : null
-              }), "Person" === NB) {
-              var JB, mB, yB, kB;
-              nB.hY(this.eId, nB.names.meshAttachments, {
-                personFullBody: null !== (JB = null === (mB = (0, Sz.j)("head", null === (kB = uB.textures) || void 0 === kB ? void 0 : kB.head)) || void 0 === mB || null === (yB = mB.personModel) || void 0 === yB ? void 0 : yB.fullBody) && void 0 !== JB && JB
+              }), "Person" === vB) {
+              var NB, gB, qB, yB;
+              JB.xR(this.eId, JB.names.meshAttachments, {
+                personFullBody: null !== (NB = null === (gB = (0, QZ.h)("head", null === (yB = kB.textures) || void 0 === yB ? void 0 : yB.head)) || void 0 === gB || null === (qB = gB.personModel) || void 0 === qB ? void 0 : qB.fullBody) && void 0 !== NB && NB
               });
-              for (const BB of mz.v) {
-                var GB, LB, gB;
-                const jB = null === (GB = uB.textures) || void 0 === GB ? void 0 : GB[BB];
-                jB && null !== (LB = (0, Sz.j)(BB, jB)) && void 0 !== LB && null !== (gB = LB.attachments) && void 0 !== gB && gB.length && tz.e.Player.meshApi.updatePlayerCosmetic(this.eId, IB, BB, jB)
+              for (const BB of gZ.y) {
+                var UB, WB, dB;
+                const IB = null === (UB = kB.textures) || void 0 === UB ? void 0 : UB[BB];
+                IB && null !== (WB = (0, QZ.h)(BB, IB)) && void 0 !== WB && null !== (dB = WB.attachments) && void 0 !== dB && dB.length && CZ.d.Player.meshApi.updatePlayerCosmetic(this.eId, GB, BB, IB)
               }
-              nB.hY(this.eId, nB.names.moveState), nB.hY(this.eId, "updateWalkingState", {
-                mY: IB,
-                EzB: sB,
-                walkingLegSwingDuration: Ez.w
-              }), nB.hY(this.eId, "humanoidMesh", {
-                mY: IB,
-                EzB: sB,
+              JB.xR(this.eId, JB.names.moveState), JB.xR(this.eId, "updateWalkingState", {
+                gR: GB,
+                SZB: FB,
+                walkingLegSwingDuration: wZ.p
+              }), JB.xR(this.eId, "humanoidMesh", {
+                gR: GB,
+                SZB: FB,
                 heldItemPositionParams: {},
                 maxWalkingAngleOverride: null
-              }), nB.hY(this.eId, "animator", {
-                mY: IB,
-                EzB: sB,
+              }), JB.xR(this.eId, "animator", {
+                gR: GB,
+                SZB: FB,
                 modelLifeformType: "Player"
-              }), Dz.f.hasAnimation("Person") && nB.hY(this.eId, "rigAnimation", {
+              }), HZ.f.hasAnimation("Person") && JB.xR(this.eId, "rigAnimation", {
                 target: "Person",
-                mY: IB
-              }), nB.JjB(this.eId).pose = this.colyseusEntity.pose || "standing"
-            } else if ("BloxdBlock" === NB && null !== IB) {
-              nB.hY(this.eId, "animator", {
-                mY: IB,
-                EzB: sB,
+                gR: GB
+              }), JB.uIB(this.eId).pose = this.colyseusEntity.pose || "standing"
+            } else if ("BloxdBlock" === vB && null !== GB) {
+              JB.xR(this.eId, "animator", {
+                gR: GB,
+                SZB: FB,
                 modelLifeformType: null
               });
-              const BB = (0, kz.q)(uB.blockName);
-              null !== BB && nB.hY(this.eId, "rigAnimation", {
+              const BB = (0, yZ.s)(kB.blockName);
+              null !== BB && JB.xR(this.eId, "rigAnimation", {
                 target: BB,
-                mY: IB
+                gR: GB
               })
             }
-            nB.GNB(this.eId, "entityName", {
+            JB.tvB(this.eId, "entityName", {
               name: this.colyseusEntity.name,
-              nameYOffset: pB
-            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === uB.autoRotate && (nB.ZY(this.eId, "meshRotation"), nB.hY(this.eId, "autoRotate"));
+              nameYOffset: hB
+            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === kB.autoRotate && (JB.Qr(this.eId, "meshRotation"), JB.xR(this.eId, "autoRotate"));
             const {
-              lineToEId: tB
-            } = uB;
-            (0, yz.I)(tB) || nB.hY(this.eId, "lineToEntity", {
-              lineToEId: tB
+              lineToEId: CB
+            } = kB;
+            (0, qZ.L)(CB) || JB.xR(this.eId, "lineToEntity", {
+              lineToEId: CB
             });
-            const SB = QB.RY[QB.zV][this.eId];
-            this.updateOverlayColour(null !== (BB = null === SB || void 0 === SB ? void 0 : SB.overlayColour) && void 0 !== BB ? BB : null), this.updateOpacity(null !== (jB = null === SB || void 0 === SB ? void 0 : SB.opacity) && void 0 !== jB ? jB : 1), this.updateZIndex(null !== (zB = null === SB || void 0 === SB ? void 0 : SB.zIndex) && void 0 !== zB ? zB : 0)
+            const QB = TB.Tm[TB.Jm][this.eId];
+            this.updateOverlayColour(null !== (BB = null === QB || void 0 === QB ? void 0 : QB.overlayColour) && void 0 !== BB ? BB : null), this.updateOpacity(null !== (IB = null === QB || void 0 === QB ? void 0 : QB.opacity) && void 0 !== IB ? IB : 1), this.updateZIndex(null !== (ZB = null === QB || void 0 === QB ? void 0 : QB.zIndex) && void 0 !== ZB ? ZB : 0)
           },
           removeMeshComponent: () => {
-            "Person" !== NB && "BloxdBlock" !== NB || nB.ZY(this.eId, "rigAnimation"), nB.ZY(this.eId, nB.names.mesh), nB.HBB(this.eId, nB.names.meshAttachments) && nB.ZY(this.eId, nB.names.meshAttachments), nB.ZY(this.eId, "entityName"), nB.ZY(this.eId, "autoRotate"), nB.ZY(this.eId, "lineToEntity"), "Person" === NB ? (nB.ZY(this.eId, nB.names.moveState), nB.ZY(this.eId, "updateWalkingState"), nB.ZY(this.eId, "humanoidMesh"), nB.ZY(this.eId, "animator")) : "BloxdBlock" === NB && nB.ZY(this.eId, "animator")
+            "Person" !== vB && "BloxdBlock" !== vB || JB.Qr(this.eId, "rigAnimation"), JB.Qr(this.eId, JB.names.mesh), JB.TIB(this.eId, JB.names.meshAttachments) && JB.Qr(this.eId, JB.names.meshAttachments), JB.Qr(this.eId, "entityName"), JB.Qr(this.eId, "autoRotate"), JB.Qr(this.eId, "lineToEntity"), "Person" === vB ? (JB.Qr(this.eId, JB.names.moveState), JB.Qr(this.eId, "updateWalkingState"), JB.Qr(this.eId, "humanoidMesh"), JB.Qr(this.eId, "animator")) : "BloxdBlock" === vB && JB.Qr(this.eId, "animator")
           },
-          hideDist: null !== (jB = uB.hideDist) && void 0 !== jB ? jB : 80,
-          movingHideDist: null !== (zB = uB.hideDist) && void 0 !== zB ? zB : 120,
-          displayOutsideLoadedChunk: uB.hideDist > 100,
+          hideDist: null !== (IB = kB.hideDist) && void 0 !== IB ? IB : 80,
+          movingHideDist: null !== (ZB = kB.hideDist) && void 0 !== ZB ? ZB : 120,
+          displayOutsideLoadedChunk: kB.hideDist > 100,
           immediatelyUpdate: !0,
-          ju: "BloxdBlock" === NB ? uB.blockName : NB
+          Ev: "BloxdBlock" === vB ? kB.blockName : vB
         })
       }
       queueMeshRebuild() {
         this.meshRebuildQueued || (this.meshRebuildQueued = !0, queueMicrotask((() => {
-          this.meshRebuildQueued = !1, this.HJ || this.updateHidingMeshMgr()
+          this.meshRebuildQueued = !1, this.WN || this.updateHidingMeshMgr()
         })))
       }
       getSpec() {
-        return (0, Gz.g)({
+        return (0, UZ.h)({
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         })
       }
       updateOverlayColour(BB) {
-        var jB, zB;
+        var IB, ZB;
         if ("Person" !== this.meshKind) return;
-        let QB = new gz.c(0, 0, 0, 0);
+        let TB = new dZ.e(0, 0, 0, 0);
         if (null !== BB) {
-          const jB = (0, Lz.W)(BB);
-          QB = new gz.c(jB[0] / 255, jB[1] / 255, jB[2] / 255, .5)
+          const IB = (0, WZ.cb)(BB);
+          TB = new dZ.e(IB[0] / 255, IB[1] / 255, IB[2] / 255, .5)
         }
-        const nB = null !== (jB = null === (zB = this.ur.vG.ujB(this.eId)) || void 0 === zB ? void 0 : zB.mY) && void 0 !== jB ? jB : null;
-        null !== nB && tz.e.Player.meshApi.updateMeshOverlayColour(nB, QB)
+        const JB = null !== (IB = null === (ZB = this.Nz.zW.RIB(this.eId)) || void 0 === ZB ? void 0 : ZB.gR) && void 0 !== IB ? IB : null;
+        null !== JB && CZ.d.Player.meshApi.updateMeshOverlayColour(JB, TB)
       }
       updateZIndex(BB) {
-        var jB;
+        var IB;
         if ("Person" !== this.meshKind) return;
-        const zB = null === (jB = this.ur.vG.ujB(this.eId)) || void 0 === jB ? void 0 : jB.mY;
-        "number" === typeof zB && this.ur.pm.JY.setRenderingGroupId(zB, BB)
+        const ZB = null === (IB = this.Nz.zW.RIB(this.eId)) || void 0 === IB ? void 0 : IB.gR;
+        "number" === typeof ZB && this.Nz.Ig.kR.setRenderingGroupId(ZB, BB)
       }
       updateOpacity(BB) {
-        const jB = this.ur.vG.ujB(this.eId);
-        jB && ("number" !== typeof jB.mY ? jB.mesh && "ParticleEmitter" !== this.meshKind && (0, oz.g)(jB.mesh, BB) : tz.e.Player.meshApi.updateMeshOpacity(jB.mY, BB))
+        const IB = this.Nz.zW.RIB(this.eId);
+        IB && ("number" !== typeof IB.gR ? IB.mesh && "ParticleEmitter" !== this.meshKind && (0, pZ.g)(IB.mesh, BB) : CZ.d.Player.meshApi.updateMeshOpacity(IB.gR, BB))
       }
     }
-    var Vz = zB(39078);
-    class hz {
-      constructor(BB, jB) {
-        this.eId = jB, this.ur = void 0, this.schema = void 0, this.ur = BB.ur
+    var PZ = ZB(39030);
+    class RZ {
+      constructor(BB, IB) {
+        this.eId = IB, this.Nz = void 0, this.schema = void 0, this.Nz = BB.Nz
       }
       initClient(BB) {
-        this.schema = BB, this.ur.vG.add([BB.x, BB.y, BB.z], .1, .1, null, null, !1, !1, this.eId), this.ur.vG.hY(this.eId, "smoothToServerPos"), Vz.c.add(this.eId, this.copyOpts())
+        this.schema = BB, this.Nz.zW.add([BB.x, BB.y, BB.z], .1, .1, null, null, !1, !1, this.eId), this.Nz.zW.xR(this.eId, "smoothToServerPos"), PZ.d.add(this.eId, this.copyOpts())
       }
       onChangeClient(BB) {
-        nz.g.includes(BB) && Vz.c.update(this.eId, this.copyOpts())
+        JZ.h.includes(BB) && PZ.d.update(this.eId, this.copyOpts())
       }
       disposeClient() {
-        Vz.c.remove(this.eId), this.ur.vG.deleteEntity(this.eId)
+        PZ.d.remove(this.eId), this.Nz.zW.deleteEntity(this.eId)
       }
       copyOpts() {
         const {
           soundName: BB,
-          volume: jB,
-          refDistance: zB,
-          maxHearDist: QB,
-          rate: nB
+          volume: IB,
+          refDistance: ZB,
+          maxHearDist: TB,
+          rate: JB
         } = this.schema;
         return {
           soundName: BB,
-          volume: jB,
-          refDistance: zB,
-          maxHearDist: QB,
-          rate: nB
+          volume: IB,
+          refDistance: ZB,
+          maxHearDist: TB,
+          rate: JB
         }
       }
     }
-    var Xz = zB(3798),
-      Zz = zB(36843),
-      Az = zB(6428),
-      Tz = zB(37879),
-      Pz = zB(2863),
-      Wz = zB(38227),
-      ez = zB(9109),
-      lz = zB(38558),
-      wz = zB(37859),
-      xz = zB(3036);
-    class Kz {
-      constructor(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
-        this.LzB = BB, this.ur = jB, this.setupBudgetMs = zB, this.now = QB, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.HJ = !1, this.onFrame = () => {
+    var rZ = ZB(3854),
+      mZ = ZB(36794),
+      XZ = ZB(6635),
+      LZ = ZB(37840),
+      eZ = ZB(2912),
+      uZ = ZB(38220),
+      fZ = ZB(9155),
+      lZ = ZB(38513),
+      AZ = ZB(37814),
+      tZ = ZB(3101);
+    class bZ {
+      constructor(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+          TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
+        this.xZB = BB, this.Nz = IB, this.setupBudgetMs = ZB, this.now = TB, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.WN = !1, this.onFrame = () => {
           this.setUpQueuedEntities(!0)
-        }, this.mG = () => {
+        }, this.dU = () => {
           this.setUpQueuedEntities(this.now() - this.lastRefillMs > 100)
         }, this.setUpPromoted = () => {
           for (const BB of this.promotedSetups) {
             this.promotedSetups.delete(BB);
-            const jB = this.queuedSetups.get(BB);
-            jB && (this.queuedSetups.delete(BB), this.timedSetup(jB, BB))
+            const IB = this.queuedSetups.get(BB);
+            IB && (this.queuedSetups.delete(BB), this.timedSetup(IB, BB))
           }
-        }, this.createStateCallbacks = (0, ez.getStateCallbacks)(BB), this.roomStateCallbacks = this.createStateCallbacks(BB.state), this.roomState = BB.state, this.setupBudgetLeftMs = zB, this.lastRefillMs = QB()
+        }, this.createStateCallbacks = (0, fZ.getStateCallbacks)(BB), this.roomStateCallbacks = this.createStateCallbacks(BB.state), this.roomState = BB.state, this.setupBudgetLeftMs = ZB, this.lastRefillMs = TB()
       }
       setup() {
-        this.setupEntityHandlers(), this.setupItemHandlers(), this.LzB.onStateChange(this.setUpPromoted), this.ur.on("beforeInputs", this.onFrame), this.ur.on("vp", this.mG)
+        this.setupEntityHandlers(), this.setupItemHandlers(), this.xZB.onStateChange(this.setUpPromoted), this.Nz.on("beforeInputs", this.onFrame), this.Nz.on("Iz", this.dU)
       }
       setUpQueuedEntities(BB) {
-        var jB;
-        if ((null === (jB = (0, Pz.c)().client.getMsgHandler()) || void 0 === jB ? void 0 : jB.LzB) !== this.LzB) return this.ur.off("beforeInputs", this.onFrame), this.ur.off("vp", this.mG), this.queuedSetups.clear(), void this.promotedSetups.clear();
+        var IB;
+        if ((null === (IB = (0, eZ.d)().client.getMsgHandler()) || void 0 === IB ? void 0 : IB.xZB) !== this.xZB) return this.Nz.off("beforeInputs", this.onFrame), this.Nz.off("Iz", this.dU), this.queuedSetups.clear(), void this.promotedSetups.clear();
         if (BB && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
-          for (fz().copy(Cz, this.ur.vG.iG(this.ur.zV)); this.setupBudgetLeftMs > 0;) {
-            const BB = this.nearestQueued(Cz);
+          for (iZ().copy(xZ, this.Nz.zW.aU(this.Nz.Jm)); this.setupBudgetLeftMs > 0;) {
+            const BB = this.nearestQueued(xZ);
             if (null === BB) return;
             this.setUpIfQueued(BB), this.setUpPromoted()
           }
       }
       nearestQueued(BB) {
-        let jB = null,
-          zB = 1 / 0;
-        return this.queuedSetups.forEach(((QB, nB) => {
-          const dB = function(BB, jB) {
-            return (jB.x - BB[0]) ** 2 + (jB.y - BB[1]) ** 2 + (jB.z - BB[2]) ** 2
-          }(BB, QB);
-          (null === jB || dB < zB) && (jB = nB, zB = dB)
-        })), jB
+        let IB = null,
+          ZB = 1 / 0;
+        return this.queuedSetups.forEach(((TB, JB) => {
+          const oB = function(BB, IB) {
+            return (IB.x - BB[0]) ** 2 + (IB.y - BB[1]) ** 2 + (IB.z - BB[2]) ** 2
+          }(BB, TB);
+          (null === IB || oB < ZB) && (IB = JB, ZB = oB)
+        })), IB
       }
-      setUpOrQueue(BB, jB) {
-        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(BB, jB) ? this.timedSetup(BB, jB) : this.queuedSetups.set(jB, BB)
+      setUpOrQueue(BB, IB) {
+        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(BB, IB) ? this.timedSetup(BB, IB) : this.queuedSetups.set(IB, BB)
       }
-      mustSetUpNow(BB, jB) {
-        const zB = this.ur.FBB;
-        if (jB === zB) return !0;
-        const QB = this.roomState.entities.get(zB);
-        return !(!QB || QB.ridingVehicleEId !== jB && QB.followingEId !== jB) || (cz(BB.type) === Jz.d || (0, Pz.c)().getFollowingEntities(jB).length > 0)
+      mustSetUpNow(BB, IB) {
+        const ZB = this.Nz.oIB;
+        if (IB === ZB) return !0;
+        const TB = this.roomState.entities.get(ZB);
+        return !(!TB || TB.ridingVehicleEId !== IB && TB.followingEId !== IB) || (EZ(BB.type) === NZ.b || (0, eZ.d)().getFollowingEntities(IB).length > 0)
       }
       setUpIfQueued(BB) {
-        const jB = this.queuedSetups.get(BB);
-        jB && (this.queuedSetups.delete(BB), this.timedSetup(jB, BB))
+        const IB = this.queuedSetups.get(BB);
+        IB && (this.queuedSetups.delete(BB), this.timedSetup(IB, BB))
       }
       promoteIfQueued(BB) {
         null !== BB && this.queuedSetups.has(BB) && this.promotedSetups.add(BB)
       }
-      timedSetup(BB, jB) {
-        const zB = this.now();
-        this.setupEntity(BB, jB), this.setupBudgetLeftMs -= this.now() - zB
+      timedSetup(BB, IB) {
+        const ZB = this.now();
+        this.setupEntity(BB, IB), this.setupBudgetLeftMs -= this.now() - ZB
       }
       setupEntityHandlers() {
-        this.roomStateCallbacks.entities.xG(((BB, jB) => {
-          this.ur.FBB ? this.setUpOrQueue(BB, jB) : this.deferEntitySetupUntilInitInfo(BB, jB)
-        })), this.roomStateCallbacks.entities.ZD(((BB, jB) => {
-          const zB = this.deferredSetups.get(jB);
-          zB && (Rj.n.unsubscribe(zB), this.deferredSetups.delete(jB)), this.queuedSetups.delete(jB), this.detach(jB), (0, Pz.c)().client.disposeEntity(jB)
+        this.roomStateCallbacks.entities.cW(((BB, IB) => {
+          this.Nz.oIB ? this.setUpOrQueue(BB, IB) : this.deferEntitySetupUntilInitInfo(BB, IB)
+        })), this.roomStateCallbacks.entities.nH(((BB, IB) => {
+          const ZB = this.deferredSetups.get(IB);
+          ZB && (VI.l.unsubscribe(ZB), this.deferredSetups.delete(IB)), this.queuedSetups.delete(IB), this.detach(IB), (0, eZ.d)().client.disposeEntity(IB)
         }))
       }
-      deferEntitySetupUntilInitInfo(BB, jB) {
-        const zB = Rj.n.Yk("initInfoReceived", (() => {
-          this.deferredSetups.delete(jB), this.setUpOrQueue(BB, jB)
+      deferEntitySetupUntilInitInfo(BB, IB) {
+        const ZB = VI.l.Uy("initInfoReceived", (() => {
+          this.deferredSetups.delete(IB), this.setUpOrQueue(BB, IB)
         }));
-        this.deferredSetups.set(jB, zB), (0, Xz.onGameResetOnce)((() => {
-          this.deferredSetups.get(jB) === zB && (Rj.n.unsubscribe(zB), this.deferredSetups.delete(jB)), (0, Pz.c)().updatePositionAndPhysics(this.ur.zV, {
-            type: Az.t.DEFAULT,
+        this.deferredSetups.set(IB, ZB), (0, rZ.onGameResetOnce)((() => {
+          this.deferredSetups.get(IB) === ZB && (VI.l.unsubscribe(ZB), this.deferredSetups.delete(IB)), (0, eZ.d)().updatePositionAndPhysics(this.Nz.Jm, {
+            type: XZ.o.DEFAULT,
             tier: null
-          }, !0), (0, Pz.c)().takeHeldPlayerBodySize(this.ur.zV);
-          const BB = this.ur.vG.CBB(this.ur.zV);
-          BB && (BB.movementType = Az.r.NORMAL)
+          }, !0), (0, eZ.d)().takeHeldPlayerBodySize(this.Nz.Jm);
+          const BB = this.Nz.zW.dIB(this.Nz.Jm);
+          BB && (BB.movementType = XZ.l.NORMAL)
         }))
       }
-      setupEntity(BB, jB) {
-        const zB = jB === this.ur.FBB;
-        if (zB)(0, Pz.c)().client.mw(this.ur.zV, null, null);
+      setupEntity(BB, IB) {
+        const ZB = IB === this.Nz.oIB;
+        if (ZB)(0, eZ.d)().client.hK(this.Nz.Jm, null, null);
         else {
           const {
-            type: zB
-          } = BB, QB = cz(zB);
-          if (void 0 === QB) return void
-          function(BB, jB) {
-            const zB = String(BB);
-            if (bz.has(zB)) return;
-            bz.add(zB);
-            const QB = zB.length > 80 ? `${zB.slice(0,80)}...` : zB,
-              nB = `No client handler for entity type ${JSON.stringify(QB)}, so entity ${jB} is not set up`;
-            console.warn(nB), (0, xz.reportClientError)("uncaught", nB, "unknown_entity_type")
-          }(zB, jB);
-          (0, Pz.c)().client.mw(jB, BB, new QB((0, Pz.c)(), jB, zB))
+            type: ZB
+          } = BB, TB = EZ(ZB);
+          if (void 0 === TB) return void
+          function(BB, IB) {
+            const ZB = String(BB);
+            if (DZ.has(ZB)) return;
+            DZ.add(ZB);
+            const TB = ZB.length > 80 ? `${ZB.slice(0,80)}...` : ZB,
+              JB = `No client handler for entity type ${JSON.stringify(TB)}, so entity ${IB} is not set up`;
+            console.warn(JB), (0, tZ.reportClientError)("uncaught", JB, "unknown_entity_type")
+          }(ZB, IB);
+          (0, eZ.d)().client.hK(IB, BB, new TB((0, eZ.d)(), IB, ZB))
         }
-        const QB = this.createStateCallbacks(BB);
-        if (zB) return this.setupMapSchemaCallbacks(jB, BB, QB, "armour"), this.setupScalarField(jB, BB, QB, "scale"), this.setupScalarField(jB, BB, QB, "ridingVehicleEId"), this.setupScalarField(jB, BB, QB, "followingEId"), this.setupScalarField(jB, BB, QB, "followingOffset"), void this.setupScalarField(jB, BB, QB, "shouldMatchFollowingEntityRotation");
-        for (const nB of pz(BB.constructor)) BB[nB] instanceof zz.MapSchema ? this.setupMapSchemaCallbacks(jB, BB, QB, nB) : this.setupScalarField(jB, BB, QB, nB)
+        const TB = this.createStateCallbacks(BB);
+        if (ZB) return this.setupMapSchemaCallbacks(IB, BB, TB, "armour"), this.setupScalarField(IB, BB, TB, "scale"), this.setupScalarField(IB, BB, TB, "ridingVehicleEId"), this.setupScalarField(IB, BB, TB, "followingEId"), this.setupScalarField(IB, BB, TB, "followingOffset"), void this.setupScalarField(IB, BB, TB, "shouldMatchFollowingEntityRotation");
+        for (const JB of hZ(BB.constructor)) BB[JB] instanceof ZZ.MapSchema ? this.setupMapSchemaCallbacks(IB, BB, TB, JB) : this.setupScalarField(IB, BB, TB, JB)
       }
-      setupMapSchemaCallbacks(BB, jB, zB, QB) {
-        const nB = zB[QB],
-          dB = new Map;
-        nB.xG(((zB, nB) => {
-          if (this.onEntityFieldChange(BB, jB, QB, {
-              key: nB,
-              value: zB
-            }), !(zB instanceof zz.Schema)) return;
-          const IB = this.createStateCallbacks(zB),
-            NB = [];
-          for (const dB of pz(zB.constructor)) NB.push(this.listenForFutureChanges(IB, dB, (() => {
-            this.onEntityFieldChange(BB, jB, QB, {
-              key: nB,
-              value: zB
+      setupMapSchemaCallbacks(BB, IB, ZB, TB) {
+        const JB = ZB[TB],
+          oB = new Map;
+        JB.cW(((ZB, JB) => {
+          if (this.onEntityFieldChange(BB, IB, TB, {
+              key: JB,
+              value: ZB
+            }), !(ZB instanceof ZZ.Schema)) return;
+          const GB = this.createStateCallbacks(ZB),
+            vB = [];
+          for (const oB of hZ(ZB.constructor)) vB.push(this.listenForFutureChanges(GB, oB, (() => {
+            this.onEntityFieldChange(BB, IB, TB, {
+              key: JB,
+              value: ZB
             })
           })));
-          dB.set(nB, (() => {
-            for (const BB of NB) BB()
+          oB.set(JB, (() => {
+            for (const BB of vB) BB()
           }))
-        })), nB.ZD(((zB, nB) => {
-          var IB;
-          null === (IB = dB.get(nB)) || void 0 === IB || IB(), dB.delete(nB), this.onEntityFieldChange(BB, jB, QB, {
-            key: nB,
+        })), JB.nH(((ZB, JB) => {
+          var GB;
+          null === (GB = oB.get(JB)) || void 0 === GB || GB(), oB.delete(JB), this.onEntityFieldChange(BB, IB, TB, {
+            key: JB,
             value: null
           })
         })), this.addDetacher(BB, (() => {
-          for (const BB of dB.values()) BB();
-          dB.clear()
+          for (const BB of oB.values()) BB();
+          oB.clear()
         }))
       }
-      setupScalarField(BB, jB, zB, QB) {
-        this.onEntityFieldChange(BB, jB, QB, jB[QB]);
-        const nB = this.listenForFutureChanges(zB, QB, (zB => {
-          this.onEntityFieldChange(BB, jB, QB, zB)
+      setupScalarField(BB, IB, ZB, TB) {
+        this.onEntityFieldChange(BB, IB, TB, IB[TB]);
+        const JB = this.listenForFutureChanges(ZB, TB, (ZB => {
+          this.onEntityFieldChange(BB, IB, TB, ZB)
         }));
-        this.addDetacher(BB, nB)
+        this.addDetacher(BB, JB)
       }
-      addDetacher(BB, jB) {
-        let zB = this.detachers.get(BB);
-        zB || (zB = [], this.detachers.set(BB, zB)), zB.push(jB)
+      addDetacher(BB, IB) {
+        let ZB = this.detachers.get(BB);
+        ZB || (ZB = [], this.detachers.set(BB, ZB)), ZB.push(IB)
       }
       detach(BB) {
-        for (const zB of null !== (jB = this.detachers.get(BB)) && void 0 !== jB ? jB : []) {
-          var jB;
-          zB()
+        for (const ZB of null !== (IB = this.detachers.get(BB)) && void 0 !== IB ? IB : []) {
+          var IB;
+          ZB()
         }
         this.detachers.delete(BB)
       }
-      listenForFutureChanges(BB, jB, zB) {
-        return BB.listen(jB, zB, !1)
+      listenForFutureChanges(BB, IB, ZB) {
+        return BB.listen(IB, ZB, !1)
       }
-      onEntityFieldChange(BB, jB, zB, QB) {
-        switch (zB) {
+      onEntityFieldChange(BB, IB, ZB, TB) {
+        switch (ZB) {
           case "ridingVehicleEId": {
-            this.promoteIfQueued(QB);
-            const jB = this.ur.vG.JjB((0, Zz.b)(BB));
-            jB && (jB.ridingVehicleEId = QB);
+            this.promoteIfQueued(TB);
+            const IB = this.Nz.zW.uIB((0, mZ.e)(BB));
+            IB && (IB.ridingVehicleEId = TB);
             break
           }
           case "armour":
-            this.handleArmourChange(BB, QB);
+            this.handleArmourChange(BB, TB);
             break;
           case "followingEId":
-            this.promoteIfQueued(QB), this.handleFollowingEIdChange(BB, jB, QB);
+            this.promoteIfQueued(TB), this.handleFollowingEIdChange(BB, IB, TB);
             break;
           case "xRotation":
           case "yRotation":
           case "zRotation":
-            this.handleRotationChange(BB, zB, QB);
+            this.handleRotationChange(BB, ZB, TB);
             break;
           case "scale":
-            this.handleScaleChange(BB, QB);
+            this.handleScaleChange(BB, TB);
             break;
           case "baseRenderHeading":
-            this.handleBaseRenderHeadingChange(BB, QB);
+            this.handleBaseRenderHeadingChange(BB, TB);
             break;
           case "followingOffset":
-            this.handleFollowingOffsetChange(BB, QB);
+            this.handleFollowingOffsetChange(BB, TB);
             break;
           case "shouldMatchFollowingEntityRotation":
-            this.handleShouldMatchFollowingEntityRotationChange(BB, QB);
+            this.handleShouldMatchFollowingEntityRotationChange(BB, TB);
             break;
           case "x":
           case "y":
           case "z":
-            return void this.handlePositionChange(BB, zB, QB)
-        }(0, Pz.c)().client.updateEntityField(BB, zB, QB)
+            return void this.handlePositionChange(BB, ZB, TB)
+        }(0, eZ.d)().client.updateEntityField(BB, ZB, TB)
       }
-      handleArmourChange(BB, jB) {
-        var zB, QB;
+      handleArmourChange(BB, IB) {
+        var ZB, TB;
         const {
-          key: nB,
-          value: dB
-        } = jB;
-        (0, tz.B)(BB, nB, null !== (zB = null === dB || void 0 === dB ? void 0 : dB.itemName) && void 0 !== zB ? zB : null, null !== (QB = null === dB || void 0 === dB ? void 0 : dB.enchantmentTier) && void 0 !== QB ? QB : null)
+          key: JB,
+          value: oB
+        } = IB;
+        (0, CZ.t)(BB, JB, null !== (ZB = null === oB || void 0 === oB ? void 0 : oB.itemName) && void 0 !== ZB ? ZB : null, null !== (TB = null === oB || void 0 === oB ? void 0 : oB.enchantmentTier) && void 0 !== TB ? TB : null)
       }
-      handleFollowingEIdChange(BB, jB, zB) {
-        const QB = (0, Zz.b)(BB),
-          nB = QB === this.ur.zV;
-        if (this.ur.vG.ZY(QB, this.ur.vG.names.qS), zB) this.ur.vG.ZY(QB, "smoothToServerPos"), this.ur.vG.hY(QB, this.ur.vG.names.qS, {
-          SJ: (0, Zz.b)(zB),
-          offset: Array.from(jB.followingOffset),
-          OjB: jB.shouldMatchFollowingEntityRotation,
-          nzB: !0,
-          dzB: (BB, QB) => {
-            if (fz().copy(BB, jB.followingOffset), jB.ridingVehicleEId === zB) {
-              const jB = (0, Zz.b)(zB),
-                nB = (0, Pz.c)().getEntityHeading(jB, QB);
-              fz().ta(BB, BB, fz().ZERO, nB)
+      handleFollowingEIdChange(BB, IB, ZB) {
+        const TB = (0, mZ.e)(BB),
+          JB = TB === this.Nz.Jm;
+        if (this.Nz.zW.Qr(TB, this.Nz.zW.names.nC), ZB) this.Nz.zW.Qr(TB, "smoothToServerPos"), this.Nz.zW.xR(TB, this.Nz.zW.names.nC, {
+          zN: (0, mZ.e)(ZB),
+          offset: Array.from(IB.followingOffset),
+          iZB: IB.shouldMatchFollowingEntityRotation,
+          MZB: !0,
+          PZB: (BB, TB) => {
+            if (iZ().copy(BB, IB.followingOffset), IB.ridingVehicleEId === ZB) {
+              const IB = (0, mZ.e)(ZB),
+                JB = (0, eZ.d)().getEntityHeading(IB, TB);
+              iZ().ck(BB, BB, iZ().ZERO, JB)
             }
           }
         });
-        else if (!nB) {
-          this.ur.vG.HBB(QB, "smoothToServerPos") || this.ur.vG.hY(QB, "smoothToServerPos");
-          const BB = this.ur.vG.getState(QB, "smoothToServerPos"),
-            jB = this.ur.vG.Gw(QB).position;
-          (0, wz.setServerPosition)(BB, jB[0], jB[1], jB[2])
+        else if (!JB) {
+          this.Nz.zW.TIB(TB, "smoothToServerPos") || this.Nz.zW.xR(TB, "smoothToServerPos");
+          const BB = this.Nz.zW.getState(TB, "smoothToServerPos"),
+            IB = this.Nz.zW.zK(TB).position;
+          (0, AZ.setServerPosition)(BB, IB[0], IB[1], IB[2])
         }
       }
-      handleRotationChange(BB, jB, zB) {
-        const QB = "xRotation" === jB ? 0 : "yRotation" === jB ? 1 : 2;
-        for (const nB of (0, Pz.c)().getFollowingEntities(BB)) {
-          const BB = this.ur.vG.getState(nB, "meshRotation"),
-            jB = this.ur.vG.RjB(nB);
-          BB && jB.OjB && (BB.serverSetRotation[QB] = zB)
+      handleRotationChange(BB, IB, ZB) {
+        const TB = "xRotation" === IB ? 0 : "yRotation" === IB ? 1 : 2;
+        for (const JB of (0, eZ.d)().getFollowingEntities(BB)) {
+          const BB = this.Nz.zW.getState(JB, "meshRotation"),
+            IB = this.Nz.zW.YZB(JB);
+          BB && IB.iZB && (BB.serverSetRotation[TB] = ZB)
         }
       }
-      handleScaleChange(BB, jB) {
-        const zB = (0, Zz.b)(BB);
-        if (Rj.n.Ly(`entityScale|${zB}`, jB), zB === this.ur.zV) {
-          var QB;
-          (0, Pz.c)().removeFromEyeHeightCache(zB);
-          const BB = this.ur.vG.CBB(this.ur.zV),
-            jB = null !== (QB = null === BB || void 0 === BB ? void 0 : BB.physicsState) && void 0 !== QB ? QB : {
-              type: Az.t.DEFAULT,
+      handleScaleChange(BB, IB) {
+        const ZB = (0, mZ.e)(BB);
+        if (VI.l.Gq(`entityScale|${ZB}`, IB), ZB === this.Nz.Jm) {
+          var TB;
+          (0, eZ.d)().removeFromEyeHeightCache(ZB);
+          const BB = this.Nz.zW.dIB(this.Nz.Jm),
+            IB = null !== (TB = null === BB || void 0 === BB ? void 0 : BB.physicsState) && void 0 !== TB ? TB : {
+              type: XZ.o.DEFAULT,
               tier: null
             };
-          return void(0, Pz.c)().updatePositionAndPhysics(this.ur.zV, jB, !1)
+          return void(0, eZ.d)().updatePositionAndPhysics(this.Nz.Jm, IB, !1)
         }
-        const nB = (0, Pz.c)().getLifeformType(zB);
-        if (null === nB) return;
+        const JB = (0, eZ.d)().getLifeformType(ZB);
+        if (null === JB) return;
         const {
-          physicsBodyWidth: dB,
-          physicsBodyHeight: IB
-        } = (0, lz.d)(jB, nB);
-        this.ur.vG.bjB(zB, dB, IB, dB)
+          physicsBodyWidth: oB,
+          physicsBodyHeight: GB
+        } = (0, lZ.h)(IB, JB);
+        this.Nz.zW.wZB(ZB, oB, GB, oB)
       }
-      handleBaseRenderHeadingChange(BB, jB) {
-        const zB = this.ur.vG.getState(BB, "meshRotation");
-        zB && (zB.baseRenderRotation[1] = jB);
-        for (const QB of (0, Pz.c)().getFollowingEntities(BB)) {
-          const BB = this.ur.vG.getState(QB, "meshRotation"),
-            zB = this.ur.vG.RjB(QB);
-          BB && zB.OjB && (BB.baseRenderRotation[1] = jB)
+      handleBaseRenderHeadingChange(BB, IB) {
+        const ZB = this.Nz.zW.getState(BB, "meshRotation");
+        ZB && (ZB.baseRenderRotation[1] = IB);
+        for (const TB of (0, eZ.d)().getFollowingEntities(BB)) {
+          const BB = this.Nz.zW.getState(TB, "meshRotation"),
+            ZB = this.Nz.zW.YZB(TB);
+          BB && ZB.iZB && (BB.baseRenderRotation[1] = IB)
         }
       }
-      handleFollowingOffsetChange(BB, jB) {
-        const zB = this.ur.vG.RjB((0, Zz.b)(BB));
-        if (zB && zB.offset) {
-          const BB = jB ? Array.from(jB) : fz().ZERO;
-          zB.offset[0] = BB[0], zB.offset[1] = BB[1], zB.offset[2] = BB[2]
+      handleFollowingOffsetChange(BB, IB) {
+        const ZB = this.Nz.zW.YZB((0, mZ.e)(BB));
+        if (ZB && ZB.offset) {
+          const BB = IB ? Array.from(IB) : iZ().ZERO;
+          ZB.offset[0] = BB[0], ZB.offset[1] = BB[1], ZB.offset[2] = BB[2]
         }
       }
-      handleShouldMatchFollowingEntityRotationChange(BB, jB) {
-        const zB = this.ur.vG.RjB((0, Zz.b)(BB));
-        zB && (zB.OjB = null === jB || void 0 === jB || jB)
+      handleShouldMatchFollowingEntityRotationChange(BB, IB) {
+        const ZB = this.Nz.zW.YZB((0, mZ.e)(BB));
+        ZB && (ZB.iZB = null === IB || void 0 === IB || IB)
       }
-      handlePositionChange(BB, jB, zB) {
-        if (this.ur.vG.HBB(BB, "smoothToServerPos")) {
-          const QB = this.ur.vG.getState(BB, "smoothToServerPos");
-          (0, wz.setServerPositionAxis)(QB, vz[jB], zB)
+      handlePositionChange(BB, IB, ZB) {
+        if (this.Nz.zW.TIB(BB, "smoothToServerPos")) {
+          const TB = this.Nz.zW.getState(BB, "smoothToServerPos");
+          (0, AZ.setServerPositionAxis)(TB, KZ[IB], ZB)
         }
       }
       setupItemHandlers() {
-        this.roomStateCallbacks.items.xG(((BB, jB) => {
-          this.allItems[jB] = BB, (0, Tz.j)(this.ur, jB, [BB.x, BB.y, BB.z], BB.id, {
+        this.roomStateCallbacks.items.cW(((BB, IB) => {
+          this.allItems[IB] = BB, (0, LZ.l)(this.Nz, IB, [BB.x, BB.y, BB.z], BB.id, {
             amount: BB.amount,
             attributes: JSON.parse(BB.attributes),
-            Vn: (0, Oj.b)(this.ur).cantPickUpItem(jB),
+            wJ: (0, SI.c)(this.Nz).cantPickUpItem(IB),
             size: BB.size,
-            predictedAt: (0, Pz.c)().client.itemDropPrediction.onServerItemAdded(jB)
+            predictedAt: (0, eZ.d)().client.itemDropPrediction.onServerItemAdded(IB)
           });
-          const zB = this.createStateCallbacks(BB);
-          for (const QB of pz(Iz)) this.onItemFieldChange(jB, QB, BB[QB]), this.addDetacher(jB, this.listenForFutureChanges(zB, QB, (BB => {
-            this.onItemFieldChange(jB, QB, BB)
+          const ZB = this.createStateCallbacks(BB);
+          for (const TB of hZ(GZ)) this.onItemFieldChange(IB, TB, BB[TB]), this.addDetacher(IB, this.listenForFutureChanges(ZB, TB, (BB => {
+            this.onItemFieldChange(IB, TB, BB)
           })))
-        })), this.roomStateCallbacks.items.ZD(((BB, jB) => {
-          delete this.allItems[jB], this.detach(jB), (0, Pz.c)().client.itemDropPrediction.onServerItemRemoved(jB), this.ur.vG.HBB(jB, this.ur.vG.names.itemState) && this.ur.vG.deleteEntity(jB), (0, Oj.b)(this.ur).disposeEntity(jB)
+        })), this.roomStateCallbacks.items.nH(((BB, IB) => {
+          delete this.allItems[IB], this.detach(IB), (0, eZ.d)().client.itemDropPrediction.onServerItemRemoved(IB), this.Nz.zW.TIB(IB, this.Nz.zW.names.itemState) && this.Nz.zW.deleteEntity(IB), (0, SI.c)(this.Nz).disposeEntity(IB)
         }))
       }
-      onItemFieldChange(BB, jB, zB) {
-        if (jB in vz) {
-          if (this.ur.vG.HBB(BB, "itemState")) {
-            const QB = this.ur.vG.getState(BB, "smoothToServerPos");
-            (0, wz.setServerPositionAxis)(QB, vz[jB], zB), (0, Pz.c)().client.itemDropPrediction.onServerItemMoved(BB)
+      onItemFieldChange(BB, IB, ZB) {
+        if (IB in KZ) {
+          if (this.Nz.zW.TIB(BB, "itemState")) {
+            const TB = this.Nz.zW.getState(BB, "smoothToServerPos");
+            (0, AZ.setServerPositionAxis)(TB, KZ[IB], ZB), (0, eZ.d)().client.itemDropPrediction.onServerItemMoved(BB)
           }
           return
         }
-        if (!this.ur.vG.HBB(BB, "itemState")) return;
-        const QB = this.ur.vG.getState(BB, "itemState");
-        "amount" === jB && zB !== QB.amount && (QB.creationTime = Date.now()), QB[jB] = "attributes" === jB ? JSON.parse(zB) : zB
+        if (!this.Nz.zW.TIB(BB, "itemState")) return;
+        const TB = this.Nz.zW.getState(BB, "itemState");
+        "amount" === IB && ZB !== TB.amount && (TB.creationTime = Date.now()), TB[IB] = "attributes" === IB ? JSON.parse(ZB) : ZB
       }
       dispose() {
-        if (!this.HJ) {
-          this.HJ = !0, this.ur.off("beforeInputs", this.onFrame), this.ur.off("vp", this.mG), this.queuedSetups.clear(), this.promotedSetups.clear();
-          for (const BB of this.deferredSetups.values()) Rj.n.unsubscribe(BB);
-          this.deferredSetups.clear(), this.ur.vG.ZY(this.ur.zV, this.ur.vG.names.qS);
-          for (const BB in this.allItems) this.ur.vG.deleteEntity(BB), delete this.allItems[BB];
+        if (!this.WN) {
+          this.WN = !0, this.Nz.off("beforeInputs", this.onFrame), this.Nz.off("Iz", this.dU), this.queuedSetups.clear(), this.promotedSetups.clear();
+          for (const BB of this.deferredSetups.values()) VI.l.unsubscribe(BB);
+          this.deferredSetups.clear(), this.Nz.zW.Qr(this.Nz.Jm, this.Nz.zW.names.nC);
+          for (const BB in this.allItems) this.Nz.zW.deleteEntity(BB), delete this.allItems[BB];
           for (const BB of [...this.detachers.keys()]) this.detach(BB);
-          (0, Oj.b)(this.ur).clear();
-          for (const BB of (0, Pz.c)().client.iterateEntityIds())(0, Pz.c)().client.disposeEntity(BB)
+          (0, SI.c)(this.Nz).clear();
+          for (const BB of (0, eZ.d)().client.iterateEntityIds())(0, eZ.d)().client.disposeEntity(BB)
         }
       }
     }
-    const Cz = [0, 0, 0];
+    const xZ = [0, 0, 0];
 
-    function cz(BB) {
+    function EZ(BB) {
       if ("string" !== typeof BB) return;
-      const jB = BB.indexOf("|"),
-        zB = -1 === jB ? BB : BB.slice(0, jB),
-        QB = Oz();
-      return Object.hasOwn(QB, zB) ? QB[zB] : void 0
+      const IB = BB.indexOf("|"),
+        ZB = -1 === IB ? BB : BB.slice(0, IB),
+        TB = SZ();
+      return Object.hasOwn(TB, ZB) ? TB[ZB] : void 0
     }
-    const bz = new Set;
-    const vz = {
+    const DZ = new Set;
+    const KZ = {
       x: 0,
       y: 1,
       z: 2
     };
-    let Rz = null;
+    let VZ = null;
 
-    function Oz() {
-      return null !== Rz || (Rz = {
-        ...Object.fromEntries(nz.i.map((BB => {
+    function SZ() {
+      return null !== VZ || (VZ = {
+        ...Object.fromEntries(JZ.i.map((BB => {
           const {
-            ju: jB
-          } = (0, Wz.b)(BB);
-          return [BB, jB]
+            Ev: IB
+          } = (0, uZ.b)(BB);
+          return [BB, IB]
         }))),
-        Pebble: Jz.d,
-        Snowball: Jz.d,
-        "Snowball Launcher": Jz.d,
-        "Reinforced Pebble": Jz.d,
-        Bullet: Jz.d,
-        "Reinforced Ball": Jz.d,
-        Ball: Jz.d,
-        Mango: Jz.d,
-        "Moonstone Orb": Jz.d,
-        ...Object.fromEntries(Qz.v.map((BB => [(0, Lz.Yb)(BB), Jz.d]))),
-        Arrow: Jz.d,
-        "Arrow of Speed": Jz.d,
-        "Arrow of Poison": Jz.d,
-        "Arrow of Slowness": Jz.d,
-        "Arrow of Weakness": Jz.d,
-        "Arrow of Knockback": Jz.d,
-        "Arrow of Strength": Jz.d,
-        "Arrow of Invisibility": Jz.d,
-        "Arrow of Jumping": Jz.d,
-        "Arrow of Defense": Jz.d,
-        "Arrow of Instant Healing": Jz.d,
-        "Arrow of Instant Damage": Jz.d,
-        "Arrow of Regeneration": Jz.d,
-        "Arrow of Haste": Jz.d,
-        "Arrow of Shield": Jz.d,
-        "Arrow of Double Jump": Jz.d,
-        "Arrow of Heat Resistance": Jz.d,
-        "Arrow of X-Ray Vision": Jz.d,
-        "Arrow of Mining Yield": Jz.d,
-        "Arrow of Brain Rot": Jz.d,
-        "Arrow of Milk": Jz.d,
-        Fireball: Jz.d,
-        "Bouncy Bomb": Jz.d,
-        RPG: Jz.d,
-        "Obby RPG": Jz.d,
-        "Super RPG": Jz.d,
-        "Grenade Launcher": Jz.d,
-        Iceball: Jz.d,
-        Coconut: Jz.d,
-        "Splash Speed Potion": Jz.d,
-        "Splash Defense Potion": Jz.d,
-        "Splash Strength Potion": Jz.d,
-        "Splash Invisibility Potion": Jz.d,
-        "Splash Jump Potion": Jz.d,
-        "Splash Knockback Potion": Jz.d,
-        "Splash Poison Potion": Jz.d,
-        "Splash Speed Potion II": Jz.d,
-        "Splash Defense Potion II": Jz.d,
-        "Splash Strength Potion II": Jz.d,
-        "Splash Jump Potion II": Jz.d,
-        "Splash Knockback Potion II": Jz.d,
-        "Splash Poison Potion II": Jz.d,
-        "Splash Slowness Potion": Jz.d,
-        "Splash Slowness Potion II": Jz.d,
-        "Splash Weakness Potion": Jz.d,
-        "Splash Weakness Potion II": Jz.d,
-        "Splash Milk Potion": Jz.d,
-        "Splash Instant Damage Potion": Jz.d,
-        "Splash Instant Damage Potion II": Jz.d,
-        "Splash Instant Healing Potion": Jz.d,
-        "Splash Instant Healing Potion II": Jz.d,
-        "Splash Regeneration Potion": Jz.d,
-        "Splash Regeneration Potion II": Jz.d,
-        "Splash Haste Potion": Jz.d,
-        "Splash Haste Potion II": Jz.d,
-        "Splash Shield Potion": Jz.d,
-        "Splash Shield Potion II": Jz.d,
-        "Splash Double Jump Potion": Jz.d,
-        "Splash Heat Resistance Potion": Jz.d,
-        "Splash X-Ray Vision Potion": Jz.d,
-        "Splash Mining Yield Potion": Jz.d,
-        "Splash Mining Yield Potion II": Jz.d,
-        "Splash Brain Rot Potion": Jz.d,
-        "Yellow Paintball Gun": Jz.d,
-        "White Paintball Gun": Jz.d,
-        "Red Paintball Gun": Jz.d,
-        "Purple Paintball Gun": Jz.d,
-        "Pink Paintball Gun": Jz.d,
-        "Orange Paintball Gun": Jz.d,
-        "Magenta Paintball Gun": Jz.d,
-        "Lime Paintball Gun": Jz.d,
-        "Light Gray Paintball Gun": Jz.d,
-        "Light Blue Paintball Gun": Jz.d,
-        "Green Paintball Gun": Jz.d,
-        "Gray Paintball Gun": Jz.d,
-        "Cyan Paintball Gun": Jz.d,
-        "Brown Paintball Gun": Jz.d,
-        "Blue Paintball Gun": Jz.d,
-        "Black Paintball Gun": Jz.d,
-        "Yellow Heavy Paintball Gun": Jz.d,
-        "White Heavy Paintball Gun": Jz.d,
-        "Red Heavy Paintball Gun": Jz.d,
-        "Purple Heavy Paintball Gun": Jz.d,
-        "Pink Heavy Paintball Gun": Jz.d,
-        "Orange Heavy Paintball Gun": Jz.d,
-        "Magenta Heavy Paintball Gun": Jz.d,
-        "Lime Heavy Paintball Gun": Jz.d,
-        "Light Gray Heavy Paintball Gun": Jz.d,
-        "Light Blue Heavy Paintball Gun": Jz.d,
-        "Green Heavy Paintball Gun": Jz.d,
-        "Gray Heavy Paintball Gun": Jz.d,
-        "Cyan Heavy Paintball Gun": Jz.d,
-        "Brown Heavy Paintball Gun": Jz.d,
-        "Blue Heavy Paintball Gun": Jz.d,
-        "Black Heavy Paintball Gun": Jz.d,
-        "Toxin Ball": Jz.d,
-        "Splash Aura XP Potion": Jz.d,
-        "Splash Aura XP Potion II": Jz.d,
-        "Arrow of Aura XP": Jz.d,
-        Firecracker: Jz.d,
-        "Rainbow Firecracker": Jz.d,
-        "White Firecracker": Jz.d,
-        "Orange Firecracker": Jz.d,
-        "Magenta Firecracker": Jz.d,
-        "Light Blue Firecracker": Jz.d,
-        "Yellow Firecracker": Jz.d,
-        "Lime Firecracker": Jz.d,
-        "Pink Firecracker": Jz.d,
-        "Gray Firecracker": Jz.d,
-        "Light Gray Firecracker": Jz.d,
-        "Cyan Firecracker": Jz.d,
-        "Purple Firecracker": Jz.d,
-        "Blue Firecracker": Jz.d,
-        "Brown Firecracker": Jz.d,
-        "Green Firecracker": Jz.d,
-        "Red Firecracker": Jz.d,
-        "Black Firecracker": Jz.d,
-        "Firecracker Pebble": Jz.d,
-        "Rainbow Firecracker Pebble": Jz.d,
-        "White Firecracker Pebble": Jz.d,
-        "Orange Firecracker Pebble": Jz.d,
-        "Magenta Firecracker Pebble": Jz.d,
-        "Light Blue Firecracker Pebble": Jz.d,
-        "Yellow Firecracker Pebble": Jz.d,
-        "Lime Firecracker Pebble": Jz.d,
-        "Pink Firecracker Pebble": Jz.d,
-        "Gray Firecracker Pebble": Jz.d,
-        "Light Gray Firecracker Pebble": Jz.d,
-        "Cyan Firecracker Pebble": Jz.d,
-        "Purple Firecracker Pebble": Jz.d,
-        "Blue Firecracker Pebble": Jz.d,
-        "Brown Firecracker Pebble": Jz.d,
-        "Green Firecracker Pebble": Jz.d,
-        "Red Firecracker Pebble": Jz.d,
-        "Black Firecracker Pebble": Jz.d,
-        "Blinding Pebble": Jz.d,
-        Poop: Jz.d,
-        "Wood Boomerang": Jz.d,
-        "Stone Boomerang": Jz.d,
-        "Iron Boomerang": Jz.d,
-        "Gold Boomerang": Jz.d,
-        "Diamond Boomerang": Jz.d,
-        "Amethite Boomerang": Jz.d,
-        "Magmasteel Boomerang": Jz.d,
-        "Rubellite Boomerang": Jz.d,
-        "Serpentite Boomerang": Jz.d,
-        "Moonstone Boomerang": Jz.d,
-        "67 Base Projectile": Jz.d,
-        "67 Boosted Projectile": Jz.d,
-        "Capitano Grenade": Jz.d,
-        "Scatter Pellet": Jz.d,
-        "Lucky Bomb": Jz.d,
-        "Unlucky Bomb": Jz.d,
-        "Swap Orb": Jz.d,
-        Mesh: Yz,
-        AudioEntity: hz
-      }), Rz
+        Pebble: NZ.b,
+        Snowball: NZ.b,
+        "Snowball Launcher": NZ.b,
+        "Reinforced Pebble": NZ.b,
+        Bullet: NZ.b,
+        "Reinforced Ball": NZ.b,
+        Ball: NZ.b,
+        Mango: NZ.b,
+        "Moonstone Orb": NZ.b,
+        ...Object.fromEntries(TZ.u.map((BB => [(0, WZ.Zb)(BB), NZ.b]))),
+        Arrow: NZ.b,
+        "Arrow of Speed": NZ.b,
+        "Arrow of Poison": NZ.b,
+        "Arrow of Slowness": NZ.b,
+        "Arrow of Weakness": NZ.b,
+        "Arrow of Knockback": NZ.b,
+        "Arrow of Strength": NZ.b,
+        "Arrow of Invisibility": NZ.b,
+        "Arrow of Jumping": NZ.b,
+        "Arrow of Defense": NZ.b,
+        "Arrow of Instant Healing": NZ.b,
+        "Arrow of Instant Damage": NZ.b,
+        "Arrow of Regeneration": NZ.b,
+        "Arrow of Haste": NZ.b,
+        "Arrow of Shield": NZ.b,
+        "Arrow of Double Jump": NZ.b,
+        "Arrow of Heat Resistance": NZ.b,
+        "Arrow of X-Ray Vision": NZ.b,
+        "Arrow of Mining Yield": NZ.b,
+        "Arrow of Brain Rot": NZ.b,
+        "Arrow of Milk": NZ.b,
+        Fireball: NZ.b,
+        "Bouncy Bomb": NZ.b,
+        RPG: NZ.b,
+        "Obby RPG": NZ.b,
+        "Super RPG": NZ.b,
+        "Grenade Launcher": NZ.b,
+        Iceball: NZ.b,
+        Coconut: NZ.b,
+        "Splash Speed Potion": NZ.b,
+        "Splash Defense Potion": NZ.b,
+        "Splash Strength Potion": NZ.b,
+        "Splash Invisibility Potion": NZ.b,
+        "Splash Jump Potion": NZ.b,
+        "Splash Knockback Potion": NZ.b,
+        "Splash Poison Potion": NZ.b,
+        "Splash Speed Potion II": NZ.b,
+        "Splash Defense Potion II": NZ.b,
+        "Splash Strength Potion II": NZ.b,
+        "Splash Jump Potion II": NZ.b,
+        "Splash Knockback Potion II": NZ.b,
+        "Splash Poison Potion II": NZ.b,
+        "Splash Slowness Potion": NZ.b,
+        "Splash Slowness Potion II": NZ.b,
+        "Splash Weakness Potion": NZ.b,
+        "Splash Weakness Potion II": NZ.b,
+        "Splash Milk Potion": NZ.b,
+        "Splash Instant Damage Potion": NZ.b,
+        "Splash Instant Damage Potion II": NZ.b,
+        "Splash Instant Healing Potion": NZ.b,
+        "Splash Instant Healing Potion II": NZ.b,
+        "Splash Regeneration Potion": NZ.b,
+        "Splash Regeneration Potion II": NZ.b,
+        "Splash Haste Potion": NZ.b,
+        "Splash Haste Potion II": NZ.b,
+        "Splash Shield Potion": NZ.b,
+        "Splash Shield Potion II": NZ.b,
+        "Splash Double Jump Potion": NZ.b,
+        "Splash Heat Resistance Potion": NZ.b,
+        "Splash X-Ray Vision Potion": NZ.b,
+        "Splash Mining Yield Potion": NZ.b,
+        "Splash Mining Yield Potion II": NZ.b,
+        "Splash Brain Rot Potion": NZ.b,
+        "Yellow Paintball Gun": NZ.b,
+        "White Paintball Gun": NZ.b,
+        "Red Paintball Gun": NZ.b,
+        "Purple Paintball Gun": NZ.b,
+        "Pink Paintball Gun": NZ.b,
+        "Orange Paintball Gun": NZ.b,
+        "Magenta Paintball Gun": NZ.b,
+        "Lime Paintball Gun": NZ.b,
+        "Light Gray Paintball Gun": NZ.b,
+        "Light Blue Paintball Gun": NZ.b,
+        "Green Paintball Gun": NZ.b,
+        "Gray Paintball Gun": NZ.b,
+        "Cyan Paintball Gun": NZ.b,
+        "Brown Paintball Gun": NZ.b,
+        "Blue Paintball Gun": NZ.b,
+        "Black Paintball Gun": NZ.b,
+        "Yellow Heavy Paintball Gun": NZ.b,
+        "White Heavy Paintball Gun": NZ.b,
+        "Red Heavy Paintball Gun": NZ.b,
+        "Purple Heavy Paintball Gun": NZ.b,
+        "Pink Heavy Paintball Gun": NZ.b,
+        "Orange Heavy Paintball Gun": NZ.b,
+        "Magenta Heavy Paintball Gun": NZ.b,
+        "Lime Heavy Paintball Gun": NZ.b,
+        "Light Gray Heavy Paintball Gun": NZ.b,
+        "Light Blue Heavy Paintball Gun": NZ.b,
+        "Green Heavy Paintball Gun": NZ.b,
+        "Gray Heavy Paintball Gun": NZ.b,
+        "Cyan Heavy Paintball Gun": NZ.b,
+        "Brown Heavy Paintball Gun": NZ.b,
+        "Blue Heavy Paintball Gun": NZ.b,
+        "Black Heavy Paintball Gun": NZ.b,
+        "Toxin Ball": NZ.b,
+        "Splash Aura XP Potion": NZ.b,
+        "Splash Aura XP Potion II": NZ.b,
+        "Arrow of Aura XP": NZ.b,
+        Firecracker: NZ.b,
+        "Rainbow Firecracker": NZ.b,
+        "White Firecracker": NZ.b,
+        "Orange Firecracker": NZ.b,
+        "Magenta Firecracker": NZ.b,
+        "Light Blue Firecracker": NZ.b,
+        "Yellow Firecracker": NZ.b,
+        "Lime Firecracker": NZ.b,
+        "Pink Firecracker": NZ.b,
+        "Gray Firecracker": NZ.b,
+        "Light Gray Firecracker": NZ.b,
+        "Cyan Firecracker": NZ.b,
+        "Purple Firecracker": NZ.b,
+        "Blue Firecracker": NZ.b,
+        "Brown Firecracker": NZ.b,
+        "Green Firecracker": NZ.b,
+        "Red Firecracker": NZ.b,
+        "Black Firecracker": NZ.b,
+        "Firecracker Pebble": NZ.b,
+        "Rainbow Firecracker Pebble": NZ.b,
+        "White Firecracker Pebble": NZ.b,
+        "Orange Firecracker Pebble": NZ.b,
+        "Magenta Firecracker Pebble": NZ.b,
+        "Light Blue Firecracker Pebble": NZ.b,
+        "Yellow Firecracker Pebble": NZ.b,
+        "Lime Firecracker Pebble": NZ.b,
+        "Pink Firecracker Pebble": NZ.b,
+        "Gray Firecracker Pebble": NZ.b,
+        "Light Gray Firecracker Pebble": NZ.b,
+        "Cyan Firecracker Pebble": NZ.b,
+        "Purple Firecracker Pebble": NZ.b,
+        "Blue Firecracker Pebble": NZ.b,
+        "Brown Firecracker Pebble": NZ.b,
+        "Green Firecracker Pebble": NZ.b,
+        "Red Firecracker Pebble": NZ.b,
+        "Black Firecracker Pebble": NZ.b,
+        "Blinding Pebble": NZ.b,
+        Poop: NZ.b,
+        "Wood Boomerang": NZ.b,
+        "Stone Boomerang": NZ.b,
+        "Iron Boomerang": NZ.b,
+        "Gold Boomerang": NZ.b,
+        "Diamond Boomerang": NZ.b,
+        "Amethite Boomerang": NZ.b,
+        "Magmasteel Boomerang": NZ.b,
+        "Rubellite Boomerang": NZ.b,
+        "Serpentite Boomerang": NZ.b,
+        "Moonstone Boomerang": NZ.b,
+        "67 Base Projectile": NZ.b,
+        "67 Boosted Projectile": NZ.b,
+        "Capitano Grenade": NZ.b,
+        "Scatter Pellet": NZ.b,
+        "Lucky Bomb": NZ.b,
+        "Unlucky Bomb": NZ.b,
+        "Swap Orb": NZ.b,
+        Mesh: jZ,
+        AudioEntity: RZ
+      }), VZ
     }
   },
-  39131: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB,
-      f: () => IB
+  39078: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB,
+      c: () => GB
     });
-    var QB = zB(658),
-      nB = zB(37816);
-    const dB = 4e4;
-    class IB {
+    var TB = ZB(665),
+      JB = ZB(37787);
+    const oB = 4e4;
+    class GB {
       constructor() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
         this.now = BB, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
       }
-      noteEdit(BB, jB, zB) {
-        const dB = (0, QB.P)(BB),
-          IB = (0, QB.P)(jB),
-          NB = (0, QB.P)(zB),
-          uB = this.now();
-        if (dB !== this.lastChunkX || IB !== this.lastChunkY || NB !== this.lastChunkZ) {
-          this.lastChunkX = dB, this.lastChunkY = IB, this.lastChunkZ = NB, this.lastChunkId = (0, nB.c)(dB, IB, NB), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, uB);
-          for (const [BB, jB] of this.editedAt) {
-            if (jB >= uB - 3e5) break;
+      noteEdit(BB, IB, ZB) {
+        const oB = (0, TB.T)(BB),
+          GB = (0, TB.T)(IB),
+          vB = (0, TB.T)(ZB),
+          kB = this.now();
+        if (oB !== this.lastChunkX || GB !== this.lastChunkY || vB !== this.lastChunkZ) {
+          this.lastChunkX = oB, this.lastChunkY = GB, this.lastChunkZ = vB, this.lastChunkId = (0, JB.c)(oB, GB, vB), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, kB);
+          for (const [BB, IB] of this.editedAt) {
+            if (IB >= kB - 3e5) break;
             this.editedAt.delete(BB)
           }
-        } else this.editedAt.set(this.lastChunkId, uB)
+        } else this.editedAt.set(this.lastChunkId, kB)
       }
       chunksEditedSince(BB) {
-        const jB = [];
-        for (const [zB, QB] of this.editedAt) QB >= BB && jB.push(zB);
-        return jB
+        const IB = [];
+        for (const [ZB, TB] of this.editedAt) TB >= BB && IB.push(ZB);
+        return IB
       }
     }
   },
-  39173: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => sj,
-      f: () => Pj,
-      g: () => Dj,
-      k: () => Wj
+  39135: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => FI,
+      f: () => fI,
+      i: () => jI,
+      m: () => lI
     });
-    var QB = zB(3798),
-      nB = zB(8769),
-      dB = zB(36751),
-      IB = zB(1456),
-      NB = zB(36828),
-      uB = zB(39078),
-      UB = zB(39062),
-      aB = zB(3849),
-      pB = zB(37957),
-      rB = zB(39177),
-      sB = zB(1270),
-      JB = zB(363),
-      mB = zB(31),
-      yB = zB(2006),
-      kB = zB(106),
-      GB = zB(41),
-      LB = zB(2033),
-      gB = zB(1948),
-      tB = zB(3078);
-    class SB {
+    var TB = ZB(3854),
+      JB = ZB(8885),
+      oB = ZB(36697),
+      GB = ZB(1500),
+      vB = ZB(36780),
+      kB = ZB(39030),
+      cB = ZB(39021),
+      nB = ZB(3911),
+      hB = ZB(37928),
+      zB = ZB(39143),
+      FB = ZB(1300),
+      NB = ZB(342),
+      gB = ZB(24),
+      qB = ZB(2029),
+      yB = ZB(105),
+      UB = ZB(36),
+      WB = ZB(2066),
+      dB = ZB(1956),
+      CB = ZB(3133);
+    class QB {
       constructor(BB) {
-        this.storeForMs = BB, this.clicks = new tB.c
+        this.storeForMs = BB, this.clicks = new CB.e
       }
       click() {
         this.clicks.enqueue(Date.now());
@@ -2762,74 +2762,74 @@ export const modules = {
         for (; this.clicks.size > 0 && this.clicks.peek() < BB;) this.clicks.dequeue()
       }
       getNumClicksInMs(BB) {
-        let jB = 0;
-        return this.clicks.forEach((zB => {
-          zB > Date.now() - BB && jB++
-        })), jB
+        let IB = 0;
+        return this.clicks.forEach((ZB => {
+          ZB > Date.now() - BB && IB++
+        })), IB
       }
       getMaxClickSeparationInMs(BB) {
         if (0 === this.clicks.size) return this.storeForMs;
-        let jB = 0,
-          zB = Date.now() - BB;
-        this.clicks.forEach((QB => {
-          QB < Date.now() - BB || (jB = Math.max(jB, Math.abs(QB - zB)), zB = QB)
+        let IB = 0,
+          ZB = Date.now() - BB;
+        this.clicks.forEach((TB => {
+          TB < Date.now() - BB || (IB = Math.max(IB, Math.abs(TB - ZB)), ZB = TB)
         }));
-        const QB = Math.abs(Date.now() - zB);
-        return Math.max(jB, QB)
+        const TB = Math.abs(Date.now() - ZB);
+        return Math.max(IB, TB)
       }
     }
-    class MB {
+    class sB {
       constructor(BB) {
-        this.storeForMs = BB, this.clickDownDurations = new tB.c
+        this.storeForMs = BB, this.clickDownDurations = new CB.e
       }
       registerClickDownDuration(BB) {
         this.clickDownDurations.enqueue({
           dur: BB,
           atTime: Date.now()
         });
-        const jB = Date.now() - this.storeForMs;
-        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < jB;) this.clickDownDurations.dequeue()
+        const IB = Date.now() - this.storeForMs;
+        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < IB;) this.clickDownDurations.dequeue()
       }
       clickDownDurationsCheck(BB) {
         if (BB > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
-        let jB = 0,
-          zB = 0;
-        return this.clickDownDurations.forEach((QB => {
-          QB.atTime > Date.now() - BB && (jB++, zB = Math.max(zB, QB.dur))
-        })), `${jB}:${zB}`
+        let IB = 0,
+          ZB = 0;
+        return this.clickDownDurations.forEach((TB => {
+          TB.atTime > Date.now() - BB && (IB++, ZB = Math.max(ZB, TB.dur))
+        })), `${IB}:${ZB}`
       }
     }
-    var EB = zB(36574),
-      iB = zB(39179),
-      qB = zB(28),
-      fB = zB(2863),
-      oB = zB(1357),
-      HB = zB(2505),
-      DB = zB(4562),
-      FB = zB(145),
-      YB = zB(38235),
-      VB = zB(38470),
-      hB = zB(658),
-      XB = zB(36570),
-      ZB = zB(12),
-      AB = zB(9266),
-      TB = zB(1263),
-      PB = zB(214),
-      WB = zB(39187),
-      eB = zB(39191),
-      lB = zB(39193),
-      wB = zB(38274),
-      xB = zB(39203),
-      KB = zB(38162),
-      CB = zB(3510),
-      cB = zB(1664),
-      bB = zB(36682),
-      vB = zB(2912),
-      RB = zB(36451),
-      OB = zB(36453),
-      Bj = zB(39199),
-      jj = zB(38032);
-    const zj = {
+    var wB = ZB(36529),
+      OB = ZB(39152),
+      YB = ZB(20),
+      iB = ZB(2912),
+      pB = ZB(1382),
+      aB = ZB(2510),
+      HB = ZB(4624),
+      MB = ZB(140),
+      jB = ZB(38227),
+      PB = ZB(38431),
+      RB = ZB(665),
+      rB = ZB(36524),
+      mB = ZB(11),
+      XB = ZB(9296),
+      LB = ZB(1281),
+      eB = ZB(201),
+      uB = ZB(39155),
+      fB = ZB(39163),
+      lB = ZB(39170),
+      AB = ZB(38258),
+      tB = ZB(39182),
+      bB = ZB(38146),
+      xB = ZB(3586),
+      EB = ZB(1711),
+      DB = ZB(36619),
+      KB = ZB(2973),
+      VB = ZB(36396),
+      SB = ZB(36398),
+      BI = ZB(39175),
+      II = ZB(38004);
+    const ZI = {
       forward: "freeCamForward",
       backward: "freeCamBackward",
       left: "freeCamLeft",
@@ -2838,409 +2838,441 @@ export const modules = {
       crouch: "freeCamDown"
     };
 
-    function Qj() {
-      var BB, jB;
-      return !(null === (BB = (0, fB.c)().client) || void 0 === BB || null === (jB = BB.freeCameraController) || void 0 === jB || !jB.movesFly())
+    function TI() {
+      var BB, IB;
+      return !(null === (BB = (0, iB.d)().client) || void 0 === BB || null === (IB = BB.freeCameraController) || void 0 === IB || !IB.movesFly())
     }
 
-    function nj(BB) {
-      const jB = BB.on.bind(BB);
-      BB.on = (BB, zB) => {
-        LB.E.has(BB) ? jB(BB, zB) : jB(BB, (jB => {
-          var QB;
-          return null !== (QB = (0, fB.c)().client) && void 0 !== QB && QB.isReplayMode() ? function(BB) {
-            return BB in zj
-          }(BB) && Qj() ? zB(jB) : void 0 : zB(jB)
+    function JI(BB) {
+      const IB = BB.on.bind(BB);
+      BB.on = (BB, ZB) => {
+        WB.C.has(BB) ? IB(BB, ZB) : IB(BB, (IB => {
+          var TB;
+          return null !== (TB = (0, iB.d)().client) && void 0 !== TB && TB.isReplayMode() ? function(BB) {
+            return BB in ZI
+          }(BB) && TI() ? ZB(IB) : void 0 : ZB(IB)
         }))
       }
     }
-    const dj = 5e3,
-      Ij = 1;
-    let Nj, uj = Ij,
-      Uj = 0;
-    const aj = !0;
-    let pj = aj;
-    yB.c.subscribe("_ignoreBasicBoards", (BB => {
-      pj = BB
-    })), (0, QB.onGameReset)((() => {
-      pj = aj
+    const oI = 5e3,
+      GI = 1;
+    let vI, kI = GI,
+      cI = 0;
+    const nI = !0;
+    let hI = nI;
+    qB.c.subscribe("_ignoreBasicBoards", (BB => {
+      hI = BB
+    })), (0, TB.onGameReset)((() => {
+      hI = nI
     }));
-    let rj = null;
-    const sj = () => rj;
-    let Jj, mj, yj;
-    var kj, Gj, Lj, gj, tj, Sj, Mj, Ej, ij;
-    const qj = [1, 68, 0, "h", 93, 171, 7, 217, 6, 4, 8, 255, "length", 2, 3, "c", "undefined", "a", void 0, "b", 63, "fromCodePoint", 12, "push", 109, 107, 9, 65, 91, "e", 8191, 88, 13, 14, 159, 224, "g", 35, "f", 59, 30, 5, 74, 1023, 65536, 105, 177, 10, 55296, 56320, 87, 128, 212, 31, 15, 18, 56, 62, 73, "i", 135, 192, 173, 53, "d", 85, 43, 114, 52, 240, 86, 11, 185, !1, 151, 42, 208, 133, 211, 231, 96, null, 25, 152, 176, 120, 80, 79, 126, 60, 112, 71, 28, 121, 89, 32, 138, 170, 100, 16, 158, 234, 56319, 64512, 213, 160, 65535, 57343, 4294967168, 4294965248, 4294901760, 4292870144, 181, 46, 127, 123, 66, 2048, 98, 209, 248, 1114111];
+    let zI = null;
+    const FI = () => zI;
+    let NI, gI, qI;
+    var yI, UI, WI, dI, CI, QI, sI, wI, OI;
+    const YI = [1, 243, 0, 18, 85, 72, 215, 5, 10, 231, 8, 255, "length", "undefined", void 0, 122, 4, "c", 2, 188, 63, 6, "fromCodePoint", 7, 12, "push", 50, 3, 54, 49, "g", 91, "e", 8191, 88, 13, 14, 46, 19, 71, "d", "h", 197, 51, 26, 9, "f", "b", "i", 171, !1, 169, 218, "a", 116, 38, 127, 128, 235, 53, 79, 58, 92, 206, 113, 57, 40, 90, 148, 119, 176, 87, 16, 512, 81, 97, 208, 195, 15, 249, 80, 221, 111, 191, 1023, 31, 32, 24, 64, 65535, null, 174, 77, 178, 35, 204, 95, 240, 61, 60, "/", 184, 236, 232, 82, 62, !0, 256];
 
-    function fj(...BB) {
-      return BB[qj[12]] = qj[0], typeof gj !== qj[16] && gj ? (new gj).decode(new tj(BB[qj[2]])) : typeof Sj !== qj[16] && Sj ? Sj.from(BB[qj[2]]).toString("utf-8") : ij(BB[qj[2]])
+    function iI(...BB) {
+      return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+        for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = '8Lmak/R^t=l1h)SBT#,`{?+C9vGbpsx_J:IO.(g2|%wFQ47V"[NA;DKYHE&zPoUZu*]>}yWX5j6q@$rincMd!<03~fe', BB[YI[1]] = "" + (BB[YI[2]] || ""), BB[-YI[4]] = BB[YI[1]].length, BB[YI[9]] = [], BB[-YI[7]] = YI[2], BB[YI[8]] = YI[2], BB[YI[6]] = -YI[0]), BB[-YI[3]] = YI[2]; BB[-YI[3]] < BB[-YI[4]]; BB[-YI[3]]++)
+          if (BB[-YI[5]] = BB[YI[0]].indexOf(BB[YI[1]][BB[-YI[3]]]), BB[-YI[5]] !== -YI[0])
+            if (BB[YI[6]] < YI[2]) BB[YI[6]] = BB[-YI[5]];
+            else {
+              MI(BB[YI[6]] += BB[-YI[5]] * YI[31], BB[-YI[7]] |= BB[YI[6]] << BB[YI[8]], BB[YI[8]] += (BB[YI[6]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+              do {
+                MI(BB[YI[9]].push(BB[-YI[7]] & YI[11]), BB[-YI[7]] >>= YI[10], BB[YI[8]] -= YI[10])
+              } while (BB[YI[8]] > YI[23]);
+              BB[YI[6]] = -YI[0]
+            } return BB[YI[6]] > -YI[0] && BB[YI[9]].push((BB[-YI[7]] | BB[YI[6]] << BB[YI[8]]) & YI[11]), pI(BB[YI[9]])
+      }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
     }
 
-    function oj() {}
-
-    function Hj() {
-      Hj = function() {}
+    function pI(...BB) {
+      return BB[YI[12]] = YI[0], typeof dI !== YI[13] && dI ? (new dI).decode(new CI(BB[YI[2]])) : typeof QI !== YI[13] && QI ? QI.from(BB[YI[2]]).toString("utf-8") : OI(BB[YI[2]])
     }
 
-    function Dj(BB) {
-      function jB() {
-        return BB.vG.ZjB(BB.zV)
+    function aI(...BB) {
+      if (BB[YI[12]] = YI[27], BB[YI[2]] === function(BB) {
+          return typeof yI[BB] === YI[13] ? yI[BB] = function(...BB) {
+            for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = ':rgYfESFiKImcA9D?;0k!R+@H(4B/s}.OC~ql_M5XoPtU^=VwvW7y]x>3G1Ju)[Zn#8L2|eh6<"{Njpb`TQz$%&*ad,', BB[-YI[28]] = "" + (BB[YI[2]] || ""), BB[YI[17]] = BB[-YI[28]].length, BB[YI[37]] = [], BB[YI[32]] = YI[2], BB[YI[21]] = YI[2], BB[YI[30]] = -YI[0]), BB[YI[10]] = YI[2]; BB[YI[10]] < BB[YI[17]]; BB[YI[10]]++)
+              if (BB[YI[29]] = BB[YI[0]].indexOf(BB[-YI[28]][BB[YI[10]]]), BB[YI[29]] !== -YI[0])
+                if (BB[YI[30]] < YI[2]) BB[YI[30]] = BB[YI[29]];
+                else {
+                  MI(BB[YI[30]] += BB[YI[29]] * YI[31], BB[YI[32]] |= BB[YI[30]] << BB[YI[21]], BB[YI[21]] += (BB[YI[30]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                  do {
+                    MI(BB[YI[37]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[21]] -= YI[10])
+                  } while (BB[YI[21]] > YI[23]);
+                  BB[YI[30]] = -YI[0]
+                } return BB[YI[30]] > -YI[0] && BB[YI[37]].push((BB[YI[32]] | BB[YI[30]] << BB[YI[21]]) & YI[11]), pI(BB[YI[37]])
+          }(UI[BB]) : yI[BB]
+        }(109)) return BB[YI[0]] + BB[YI[18]]
+    }
+
+    function HI() {}
+
+    function MI() {
+      MI = function() {}
+    }
+
+    function jI(BB) {
+      function IB() {
+        return BB.zW.FZB(BB.Jm)
       }
-      nj(BB.inputs.down), nj(BB.inputs.up);
-      for (const QB of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
-        const jB = (jB, zB) => {
-          var nB, dB;
-          if (Qj()) {
-            var IB;
-            const nB = zj[QB];
-            var NB, uB;
-            if (nB) null === (NB = (0, fB.c)().client) || void 0 === NB || null === (uB = NB.freeCameraController) || void 0 === uB || uB.handlefreeCamKeyPress(nB, jB, zB);
-            return void(zB || null !== (IB = (0, fB.c)().client) && void 0 !== IB && IB.isReplayMode() || (BB.vG.ejB()[QB] = !1))
+      JI(BB.inputs.down), JI(BB.inputs.up);
+      for (const TB of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
+        const IB = (IB, ZB) => {
+          var JB, oB;
+          if (TI()) {
+            var GB;
+            const JB = ZI[TB];
+            var vB, kB;
+            if (JB) null === (vB = (0, iB.d)().client) || void 0 === vB || null === (kB = vB.freeCameraController) || void 0 === kB || kB.handlefreeCamKeyPress(JB, IB, ZB);
+            return void(ZB || null !== (GB = (0, iB.d)().client) && void 0 !== GB && GB.isReplayMode() || (BB.zW.UZB()[TB] = !1))
           }
-          if (null !== (nB = (0, fB.c)().client) && void 0 !== nB && null !== (dB = nB.freeCameraController) && void 0 !== dB && dB.isKeyPressOverriden(jB)) return;
-          BB.vG.ejB()[QB] = zB
+          if (null !== (JB = (0, iB.d)().client) && void 0 !== JB && null !== (oB = JB.freeCameraController) && void 0 !== oB && oB.isKeyPressOverriden(IB)) return;
+          BB.zW.UZB()[TB] = ZB
         };
-        BB.inputs.down.on(QB, (BB => jB(BB, !0))), BB.inputs.up.on(QB, (BB => jB(BB, !1)))
+        BB.inputs.down.on(TB, (BB => IB(BB, !0))), BB.inputs.up.on(TB, (BB => IB(BB, !1)))
       }
       BB.inputs.down.on("crouch", (() => {
-        if (Qj()) return;
-        if (!BB.wG.canCrouch) return;
-        const jB = BB.vG.ejB();
-        qB.c.get("clientEscMenuOptions").crouchIsToggle && (jB.crouchToggled = !jB.crouchToggled && !jB.padSneakToggled), jB.padSneakToggled = !1
+        if (TI()) return;
+        if (!BB.vW.canCrouch) return;
+        const IB = BB.zW.UZB();
+        YB.d.get("clientEscMenuOptions").crouchIsToggle && (IB.crouchToggled = !IB.crouchToggled && !IB.padSneakToggled), IB.padSneakToggled = !1
       }));
-      const zB = () => {
-        const BB = jB();
+      const ZB = () => {
+        const BB = IB();
         BB.isGun() && BB.inaccuracyCalculator.jump()
       };
       BB.inputs.down.on("jump", (BB => {
-        Qj() || (zB(), Jj(BB))
+        TI() || (ZB(), NI(BB))
       }));
-      for (const QB of LB.l) BB.inputs.down.on(QB, (BB => {
-        var jB, zB;
-        null !== (jB = (0, fB.c)().client) && void 0 !== jB && null !== (zB = jB.freeCameraController) && void 0 !== zB && zB.handlefreeCamKeyPress(QB, BB, !0) && (BB.preventDefault(), BB.stopPropagation())
-      })), BB.inputs.up.on(QB, (BB => {
-        var jB, zB;
-        null !== (jB = (0, fB.c)().client) && void 0 !== jB && null !== (zB = jB.freeCameraController) && void 0 !== zB && zB.handlefreeCamKeyPress(QB, BB, !1) && (BB.preventDefault(), BB.stopPropagation())
+      for (const TB of WB.m) BB.inputs.down.on(TB, (BB => {
+        var IB, ZB;
+        null !== (IB = (0, iB.d)().client) && void 0 !== IB && null !== (ZB = IB.freeCameraController) && void 0 !== ZB && ZB.handlefreeCamKeyPress(TB, BB, !0) && (BB.preventDefault(), BB.stopPropagation())
+      })), BB.inputs.up.on(TB, (BB => {
+        var IB, ZB;
+        null !== (IB = (0, iB.d)().client) && void 0 !== IB && null !== (ZB = IB.freeCameraController) && void 0 !== ZB && ZB.handlefreeCamKeyPress(TB, BB, !1) && (BB.preventDefault(), BB.stopPropagation())
       }));
       BB.inputs.down.on("recordGame", (() => {
-        var BB, jB;
-        null === (BB = (0, fB.c)().client) || void 0 === BB || null === (jB = BB.gameRecorder) || void 0 === jB || jB.toggleRecording()
+        var BB, IB;
+        null === (BB = (0, iB.d)().client) || void 0 === BB || null === (IB = BB.gameRecorder) || void 0 === IB || IB.toggleRecording()
       })), BB.inputs.down.on("recordClip", (() => {
-        var BB, jB;
-        (0, EB.b)() || null === (BB = (0, fB.c)().client) || void 0 === BB || null === (jB = BB.gameRecorder) || void 0 === jB || jB.saveClip()
+        var BB, IB;
+        (0, wB.d)() || null === (BB = (0, iB.d)().client) || void 0 === BB || null === (IB = BB.gameRecorder) || void 0 === IB || IB.saveClip()
       }));
-      for (const QB of LB.E) BB.inputs.down.on(QB, (() => {
+      for (const TB of WB.C) BB.inputs.down.on(TB, (() => {
         var BB;
-        if ((0, iB.d)()) return;
-        if ("replayViewerOpen" === QB) return void mB.n.Ly("replayViewer|requested", "toggle");
-        const jB = null === (BB = (0, fB.c)().client) || void 0 === BB ? void 0 : BB.gameReplayer;
-        ((0, EB.b)() || null !== jB && void 0 !== jB && jB.isReplayMode()) && (null === jB || void 0 === jB || jB.handleAction(QB))
+        if ((0, OB.d)()) return;
+        if ("replayViewerOpen" === TB) return void gB.l.Gq("replayViewer|requested", "toggle");
+        const IB = null === (BB = (0, iB.d)().client) || void 0 === BB ? void 0 : BB.gameReplayer;
+        ((0, wB.d)() || null !== IB && void 0 !== IB && IB.isReplayMode()) && (null === IB || void 0 === IB || IB.handleAction(TB))
       }));
-      const IB = new SB(3e4),
-        pB = new MB(4e4);
-      let rB = 0;
-      const GB = BB => {
-          let jB = 0,
-            zB = null;
-          const QB = jB => null !== jB && jB === zB && (zB = null, BB(), !0);
+      const GB = new QB(3e4),
+        hB = new sB(4e4);
+      let zB = 0;
+      const UB = BB => {
+          let IB = 0,
+            ZB = null;
+          const TB = IB => null !== IB && IB === ZB && (ZB = null, BB(), !0);
           return {
-            press: () => (jB++, (0, WB.d)() || (QB(zB), zB = jB), jB),
-            owns: BB => BB === zB,
-            release: QB
+            press: () => (IB++, (0, uB.e)() || (TB(ZB), ZB = IB), IB),
+            owns: BB => BB === ZB,
+            release: TB
           }
         },
-        tB = (BB, zB) => {
-          zB && Wj(sB.c.TouchDownFirePrimary), BB ? AB() : ((0, VB.i)(), jB().XzB()), zB || Wj(sB.c.DownFirePrimary), Pj(!0), IB.click();
-          const nB = IB.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
-            dB = IB.getMaxClickSeparationInMs(1e4) < 20,
-            NB = IB.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
-          if (nB || dB || NB) {
+        CB = (BB, ZB) => {
+          ZB && lI(FB.d.TouchDownFirePrimary), BB ? XB() : ((0, PB.g)(), IB().cTB()), ZB || lI(FB.d.DownFirePrimary), fI(!0), GB.click();
+          const JB = GB.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
+            oB = GB.getMaxClickSeparationInMs(1e4) < 20,
+            vB = GB.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
+          if (JB || oB || vB) {
             let BB;
-            if (nB) BB = 30;
-            else if (dB) BB = 50;
+            if (JB) BB = 30;
+            else if (oB) BB = 50;
             else {
-              if (!NB) throw new Error("???");
+              if (!vB) throw new Error("???");
               BB = 70
-            }(0, QB.sendColyMessage)(aB.wk, BB)
+            }(0, TB.sendColyMessage)(nB.ak, BB)
           }
         },
-        DB = new eB.d,
-        FB = GB((() => {
-          eB.d.stopRunning();
-          const BB = Date.now() - rB;
-          pB.registerClickDownDuration(BB), jB().YzB(), Wj(sB.c.UpFirePrimary), Pj(!1);
-          const zB = pB.clickDownDurationsCheck(4e4);
-          (0, QB.sendColyMessage)(aB.Rg, zB)
+        HB = new fB.e,
+        MB = UB((() => {
+          fB.e.stopRunning();
+          const BB = Date.now() - zB;
+          hB.registerClickDownDuration(BB), IB().GTB(), lI(FB.d.UpFirePrimary), fI(!1);
+          const ZB = hB.clickDownDurationsCheck(4e4);
+          (0, TB.sendColyMessage)(nB.zg, ZB)
         }));
-      let YB = 0;
+      let jB = 0;
       BB.inputs.down.on("primary-fire", (function(BB) {
-        YB = FB.press(), FB.owns(YB) && (rB = Date.now(), Math.abs(performance.now() - BB.timeStamp) > 5e3 || (tB(BB.altKey, "changedTouches" in BB), Jj(BB)))
+        jB = MB.press(), MB.owns(jB) && (zB = Date.now(), Math.abs(performance.now() - BB.timeStamp) > 5e3 || (CB(BB.altKey, "changedTouches" in BB), NI(BB)))
       })), BB.inputs.up.on("primary-fire", (function(BB) {
-        FB.release(YB) && Jj(BB, !0)
+        MB.release(jB) && NI(BB, !0)
       }));
-      const hB = () => {
-          jB().rUB(), Wj(sB.c.DownFireSecondary), Pj(!0), BB.mBB && !BB.mBB.position && (0, UB.j)()
+      const RB = () => {
+          IB().ecB(), lI(FB.d.DownFireSecondary), fI(!0), BB.lBB && !BB.lBB.position && (0, cB.h)()
         },
-        XB = GB((() => {
-          jB().DzB(), Wj(sB.c.UpFireSecondary), Pj(!1)
+        rB = UB((() => {
+          IB().oTB(), lI(FB.d.UpFireSecondary), fI(!1)
         }));
-      let ZB = 0;
+      let mB = 0;
       BB.inputs.down.on("alt-fire", (function(BB) {
-        ZB = XB.press(), XB.owns(ZB) && (hB(), Jj(BB))
+        mB = rB.press(), rB.owns(mB) && (RB(), NI(BB))
       })), BB.inputs.up.on("alt-fire", (function(BB) {
-        XB.release(ZB) && Jj(BB, !0)
+        rB.release(mB) && NI(BB, !0)
       }));
-      const AB = () => jB().mUB();
+      const XB = () => IB().lcB();
       BB.inputs.down.on("mid-fire", (() => {
-        (0, WB.d)() || AB()
+        (0, uB.e)() || XB()
       }));
-      const xB = BB => {
-          (0, QB.sendColyMessage)(aB.bi, BB, !0)
+      const tB = BB => {
+          (0, TB.sendColyMessage)(nB.Mh, BB, !0)
         },
-        Nj = BB => {
-          (0, QB.sendColyMessage)(aB.di, {
-            HN: BB,
-            DN: aj()
+        vI = BB => {
+          (0, TB.sendColyMessage)(nB.Nh, {
+            Qv: BB,
+            sv: nI()
           }, !0)
         };
-      for (const QB of ["SpecialAction1", "SpecialAction2"]) BB.inputs.down.on(QB, (() => {
-        xB(QB)
-      })), BB.inputs.up.on(QB, (() => {
-        Nj(QB)
+      for (const TB of ["SpecialAction1", "SpecialAction2"]) BB.inputs.down.on(TB, (() => {
+        tB(TB)
+      })), BB.inputs.up.on(TB, (() => {
+        vI(TB)
       }));
-      const Uj = () => {
-        const BB = jB();
+      const cI = () => {
+        const BB = IB();
         BB.isGun() && BB.reload(Date.now())
       };
-      BB.inputs.down.on("ReloadGun", Uj);
-      const aj = () => {
-        let jB = "a";
-        return BB.physics.testSolid.toString().includes("Dr") || (jB = "b"), jB
+      BB.inputs.down.on("ReloadGun", cI);
+      const nI = () => {
+        let IB = "a";
+        return BB.physics.testSolid.toString().includes("Pz") || (IB = "b"), IB
       };
       BB.inputs.down.on("OpenInventory", (BB => {
-        BB.preventDefault(), (0, cB.u)(BB, "inventory", (0, lB.c)((0, fB.g)()))
+        BB.preventDefault(), (0, EB.A)(BB, "inventory", (0, lB.b)((0, iB.h)()))
       })), BB.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
-      const pj = BB => {
-        mB.n.Ly("DropItemKeyPressed", BB)
+      const hI = BB => {
+        gB.l.Gq("DropItemKeyPressed", BB)
       };
       BB.inputs.down.on("DropItem", (() => {
-        pj(BB.vG.ejB().crouch)
-      })), BB.inputs.down.on("OpenShop", (jB => {
-        (0, EB.b)() || "inGame" === qB.c.get("gameState") && (0, cB.t)(jB, JB.o.SHOP, !(0, nB.b)(BB.wG.shopInfo))
-      })), BB.inputs.down.on("OpenLobbyLeaderboard", (jB => {
-        (0, EB.b)() || "inGame" === qB.c.get("gameState") && (0, cB.t)(jB, JB.o.LOBBY_LEADERBOARD, (0, Bj.c)(BB.wG))
+        hI(BB.zW.UZB().crouch)
+      })), BB.inputs.down.on("OpenShop", (IB => {
+        (0, wB.d)() || "inGame" === YB.d.get("gameState") && (0, EB.x)(IB, NB.q.SHOP, !(0, JB.d)(BB.vW.shopInfo))
+      })), BB.inputs.down.on("OpenLobbyLeaderboard", (IB => {
+        (0, wB.d)() || "inGame" === YB.d.get("gameState") && (0, EB.x)(IB, NB.q.LOBBY_LEADERBOARD, (0, BI.d)(BB.vW))
       })), BB.inputs.down.on("HideUi", (() => {
-        mB.n.Ly("showUi", !1)
+        gB.l.Gq("showUi", !1)
       })), BB.inputs.up.on("HideUi", (() => {
-        mB.n.Ly("showUi", !0)
+        gB.l.Gq("showUi", !0)
       }));
-      const sj = BB => {
-        0 === BB && (BB = 10), mB.n.Ly("setSelectedInventorySlotI", BB - 1), mB.n.Ly("numkeyPressed", BB)
+      const FI = BB => {
+        0 === BB && (BB = 10), gB.l.Gq("setSelectedInventorySlotI", BB - 1), gB.l.Gq("numkeyPressed", BB)
       };
-      for (let QB = 1; QB <= 10; QB++) BB.inputs.down.on("HotBarSlot" + QB.toString(), (() => {
-        sj(QB)
+      for (let TB = 1; TB <= 10; TB++) BB.inputs.down.on("HotBarSlot" + TB.toString(), (() => {
+        FI(TB)
       }));
-      BB.inputs.down.on("OpenTasksAndLeaderboard", (jB => {
-        const zB = (0, bB.j)();
-        zB ? (0, cB.v)(jB, !0, zB) : (0, cB.u)(jB, "retentionFeatures", !(!BB.wG._tasks && !BB.wG._availableLeaderboards))
-      })), BB.inputs.down.on("OpenCodeEditor", (jB => {
-        (0, cB.v)(jB, (0, HB.b)((0, oB.d)()), (() => {
-          (0, HB.g)(BB.vG.iG(BB.zV))
+      BB.inputs.down.on("OpenTasksAndLeaderboard", (IB => {
+        const ZB = (0, DB.m)();
+        ZB ? (0, EB.C)(IB, !0, ZB) : (0, EB.A)(IB, "retentionFeatures", !(!BB.vW._tasks && !BB.vW._availableLeaderboards))
+      })), BB.inputs.down.on("OpenCodeEditor", (IB => {
+        (0, EB.C)(IB, (0, aB.e)((0, pB.c)()), (() => {
+          (0, aB.l)(BB.zW.aU(BB.Jm))
         }))
       })), BB.inputs.bind("ToggleFullCoordinateOverlay", "F3"), BB.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
-        mB.n.Ly("toggleFullCoordinateOverlay")
+        gB.l.Gq("toggleFullCoordinateOverlay")
       }));
-      const yj = () => {
-        (0, fB.c)().client.cameraController.swapCameraZoom()
+      const qI = () => {
+        (0, iB.d)().client.cameraController.swapCameraZoom()
       };
-      BB.inputs.down.on("SwapCameraZoom", yj), BB.inputs.down.on("OpenInviteLink", (BB => {
-        (0, cB.u)(BB, "inviteLink", kB.featureFlags.canUseInviteLinks)
+      BB.inputs.down.on("SwapCameraZoom", qI), BB.inputs.down.on("OpenInviteLink", (BB => {
+        (0, EB.A)(BB, "inviteLink", yB.featureFlags.canUseInviteLinks)
       })), BB.inputs.bind("Y", "KeyY"), BB.inputs.down.on("Y", (BB => {
-        (0, EB.b)() || mB.n.Ly("YKeyPressed")
+        (0, wB.d)() || gB.l.Gq("YKeyPressed")
       })), BB.inputs.bind("X", "KeyX"), BB.inputs.down.on("X", (BB => {
-        (0, EB.b)() || mB.n.Ly("XKeyPressed")
+        (0, wB.d)() || gB.l.Gq("XKeyPressed")
       })), BB.inputs.down.on("OpenEmoteWheel", (() => {
-        mB.n.Ly("requestEmoteWheelHoldOpen")
+        gB.l.Gq("requestEmoteWheelHoldOpen")
       })), BB.inputs.up.on("OpenEmoteWheel", (() => {
-        mB.n.Ly("requestEmoteWheelHoldRelease")
+        gB.l.Gq("requestEmoteWheelHoldRelease")
       })), BB.inputs.down.on("Zoom", (() => {
-        if ("inGame" === qB.c.get("gameState")) {
-          BB.vG.getState(BB.zV, "playerCameraAdjustment").zoomKeyPressed = !0, (0, fB.c)().client.cameraController.handleZoomKeyPressed()
+        if ("inGame" === YB.d.get("gameState")) {
+          BB.zW.getState(BB.Jm, "playerCameraAdjustment").zoomKeyPressed = !0, (0, iB.d)().client.cameraController.handleZoomKeyPressed()
         }
       })), BB.inputs.up.on("Zoom", (() => {
-        BB.vG.getState(BB.zV, "playerCameraAdjustment").zoomKeyPressed = !1
-      })), Fj();
-      const kj = BB => function() {
-        return mj(), BB(...arguments)
+        BB.zW.getState(BB.Jm, "playerCameraAdjustment").zoomKeyPressed = !1
+      })), PI();
+      const yI = BB => function() {
+        return gI(), BB(...arguments)
       };
 
-      function Gj(BB) {
-        "inGame" !== qB.c.get("gameState") || (0, cB.q)() || (mB.n.Ly("ctrlCrouchWithoutFullscreen"), BB.preventDefault())
+      function UI(BB) {
+        "inGame" !== YB.d.get("gameState") || (0, EB.p)() || (gB.l.Gq("ctrlCrouchWithoutFullscreen"), BB.preventDefault())
       }
-      rj = {
-        primaryFireDown: kj((BB => {
-          const jB = FB.press();
-          return FB.owns(jB) && (rB = Date.now(), tB(!1, !1), BB && DB.start()), jB
+      zI = {
+        primaryFireDown: yI((BB => {
+          const IB = MB.press();
+          return MB.owns(IB) && (zB = Date.now(), CB(!1, !1), BB && HB.start()), IB
         })),
-        primaryFireUp: kj((BB => {
-          FB.release(BB)
+        primaryFireUp: yI((BB => {
+          MB.release(BB)
         })),
-        altFireDown: kj((() => {
-          const BB = XB.press();
-          return XB.owns(BB) && hB(), BB
+        altFireDown: yI((() => {
+          const BB = rB.press();
+          return rB.owns(BB) && RB(), BB
         })),
-        altFireUp: kj((BB => {
-          XB.release(BB)
+        altFireUp: yI((BB => {
+          rB.release(BB)
         })),
-        jumpDown: kj(zB),
-        specialActionDown: kj(xB),
-        specialActionUp: kj(Nj),
-        reloadGun: kj(Uj),
-        dropItem: kj(pj),
-        swapCameraZoom: kj(yj),
-        pickBlock: kj(AB)
-      }, BB.inputs.down.on("ctrlCrouch", Gj), BB.inputs.up.on("ctrlCrouch", Gj), BB.inputs.bind("ctrlCrouch", "ControlLeft");
-      const Lj = BB => {
-        "inGame" === qB.c.get("gameState") && BB.ctrlKey && !(0, cB.q)() && BB.preventDefault()
+        jumpDown: yI(ZB),
+        specialActionDown: yI(tB),
+        specialActionUp: yI(vI),
+        reloadGun: yI(cI),
+        dropItem: yI(hI),
+        swapCameraZoom: yI(qI),
+        pickBlock: yI(XB)
+      }, BB.inputs.down.on("ctrlCrouch", UI), BB.inputs.up.on("ctrlCrouch", UI), BB.inputs.bind("ctrlCrouch", "ControlLeft");
+      const WI = BB => {
+        "inGame" === YB.d.get("gameState") && BB.ctrlKey && !(0, EB.p)() && BB.preventDefault()
       };
-      document.addEventListener("keydown", Lj), document.addEventListener("keyup", Lj), document.addEventListener("keypress", Lj), BB.inputs.bind("Alt", "AltLeft", "AltRight"), BB.inputs.down.on("Alt", (BB => {
+      document.addEventListener("keydown", WI), document.addEventListener("keyup", WI), document.addEventListener("keypress", WI), BB.inputs.bind("Alt", "AltLeft", "AltRight"), BB.inputs.down.on("Alt", (BB => {
         BB.preventDefault()
       }));
-      const gj = jB => (0, KB.i)(BB, jB),
-        tj = jB => (0, KB.k)(BB, jB),
-        Sj = [0, 0, 0],
-        Mj = [0, 0, 1];
-      BB.on("afterRender", (jB => {
-        OB.m.frame(jB, BB.camera.heading, BB.camera.pitch, OB.k.drawn), (0, dB.g)(BB.camera.heading), (0, KB.n)(BB, Sj, Mj), (0, fB.c)().client.triggerGameCallback("onAfterRender", jB, {
+      const dI = IB => (0, bB.h)(BB, IB),
+        CI = IB => (0, bB.l)(BB, IB),
+        QI = [0, 0, 0],
+        sI = [0, 0, 1];
+      BB.on("afterRender", (IB => {
+        SB.o.frame(IB, BB.camera.heading, BB.camera.pitch, SB.j.drawn), (0, oB.e)(BB.camera.heading), (0, bB.o)(BB, QI, sI), (0, iB.d)().client.triggerGameCallback("onAfterRender", IB, {
           cameraHeading: BB.camera.heading,
           cameraPitch: BB.camera.pitch,
-          cameraPosition: Sj,
-          cameraDirection: Mj,
-          tanHalfFovX: (0, KB.d)(BB),
-          tanHalfFovY: Math.tan(BB.pm.fC().fov / 2),
+          cameraPosition: QI,
+          cameraDirection: sI,
+          tanHalfFovX: (0, bB.d)(BB),
+          tanHalfFovY: Math.tan(BB.Ig.qS().fov / 2),
           screenBandPct: {
-            x: CB.e,
-            y: (0, CB.k)()
+            x: xB.b,
+            y: (0, xB.g)()
           },
-          projectWorldPosToScreenPos: gj,
-          projectWorldPosToViewport: tj
+          projectWorldPosToScreenPos: dI,
+          projectWorldPosToViewport: CI
         })
-      })), BB.camera.JF = (0, RB.startLookDebug)("js"), BB.inputs.XF = RB.noteLookDroppedCopy, (0, vB.q)("remesh") && (0, jj.j)(BB), BB.on("beforeInputs", (() => {
-        if ((0, iB.d)()) return BB.inputs.FW.dx = 0, void(BB.inputs.FW.dy = 0);
-        if (BB.camera.FW.dx += BB.inputs.FW.dx, BB.camera.FW.dy += BB.inputs.FW.dy, 0 !== BB.inputs.FW.dx || 0 !== BB.inputs.FW.dy) {
-          BB.vG.getState(BB.zV, "playerCameraAdjustment").lastPointerMove = Date.now()
+      })), BB.camera.lH = (0, VB.startLookDebug)("js"), BB.inputs.pM = VB.noteLookDroppedCopy, (0, KB.t)("remesh") && (0, II.j)(BB), BB.on("beforeInputs", (() => {
+        if ((0, OB.d)()) return BB.inputs.zD.dx = 0, void(BB.inputs.zD.dy = 0);
+        if (BB.camera.zD.dx += BB.inputs.zD.dx, BB.camera.zD.dy += BB.inputs.zD.dy, 0 !== BB.inputs.zD.dx || 0 !== BB.inputs.zD.dy) {
+          BB.zW.getState(BB.Jm, "playerCameraAdjustment").lastPointerMove = Date.now()
         }
-        BB.inputs.FW.dx = 0, BB.inputs.FW.dy = 0
+        BB.inputs.zD.dx = 0, BB.inputs.zD.dy = 0
       }));
-      let Ej = 0;
-      const ij = [0, 0, 0],
-        qj = [0, 0, 0],
-        fj = {
-          base: ij,
-          max: qj
+      let wI = 0;
+      const OI = [0, 0, 0],
+        YI = [0, 0, 0],
+        iI = {
+          base: OI,
+          max: YI
         },
-        oj = BB => {
-          const jB = PB.e.droppedBlockSize / 2;
-          return [0, 1, 2].every((zB => BB[zB] >= ij[zB] - jB && BB[zB] <= qj[zB] + jB))
+        pI = BB => {
+          const IB = eB.f.droppedBlockSize / 2;
+          return [0, 1, 2].every((ZB => BB[ZB] >= OI[ZB] - IB && BB[ZB] <= YI[ZB] + IB))
         };
-      BB.on("vp", (function(jB) {
-        mB.n.Ly("noaTick", jB);
-        const zB = (0, fB.c)().client;
-        if (zB.triggerGameCallback("vp", jB), zB.isClientGameSessionActive()) try {
-          uB.c.vp(jB)
-        } catch (IB) {
-          console.error("Error ticking audio entities", IB)
+      BB.on("Iz", (function(IB) {
+        gB.l.Gq("noaTick", IB);
+        const ZB = (0, iB.d)().client;
+        if (ZB.triggerGameCallback("Iz", IB), ZB.isClientGameSessionActive()) try {
+          kB.d.Iz(IB)
+        } catch (GB) {
+          console.error("Error ticking audio entities", GB)
         }
-        if (!BB.vG.hjB(BB.zV).isAlive) return;
-        Date.now() - Ej > 9e3 && (! function() {
-          const BB = (0, fB.g)();
-          "number" === typeof BB.wG.speedMultiplier && "number" === typeof BB.wG.jumpAmount && (0, QB.sendColyMessage)(aB.Ji, {
-            GN: (0, TB.d)(BB.wG.speedMultiplier),
-            LN: (0, TB.b)(BB.wG.jumpAmount),
-            gN: (0, TB.d)(BB.wG.crouchingSpeed),
-            tN: (0, TB.d)(BB.wG.walkingSpeed),
-            SN: (0, TB.d)(BB.wG.runningSpeed),
-            MN: (0, TB.b)(BB.NBB),
-            EN: BB.vG.CBB(BB.zV).jumpForce,
-            iN: BB.vG.Gw(1).width,
-            qN: BB.vG.Gw(1).height,
-            fN: BB.vG.pT(1).fN
+        if (!BB.zW.hZB(BB.Jm).isAlive) return;
+        Date.now() - wI > 9e3 && (! function() {
+          const BB = (0, iB.h)();
+          "number" === typeof BB.vW.speedMultiplier && "number" === typeof BB.vW.jumpAmount && (0, TB.sendColyMessage)(nB.hi, {
+            nv: (0, LB.d)(BB.vW.speedMultiplier),
+            hv: (0, LB.b)(BB.vW.jumpAmount),
+            zv: (0, LB.d)(BB.vW.crouchingSpeed),
+            Fv: (0, LB.d)(BB.vW.walkingSpeed),
+            Nv: (0, LB.d)(BB.vW.runningSpeed),
+            gv: (0, LB.b)(BB.PBB),
+            qv: BB.zW.dIB(BB.Jm).jumpForce,
+            yv: BB.zW.zK(1).width,
+            Uv: BB.zW.zK(1).height,
+            Wv: BB.zW.vx(1).Wv
           }, !0)
-        }(), Ej = Date.now());
-        const nB = BB.vG.ejB();
-        if ((nB.jump || nB.forward || nB.backward || nB.left || nB.right || nB.sprint) && mB.n.Ly("usedKeyboard"), BB.vG.GjB(BB.zV) && !0 === BB.wG.canPickUpItems) {
-          const jB = BB.vG.iG(BB.zV),
-            zB = (0, gB.u)(uj),
-            nB = (0, gB.v)(uj);
-          ij[0] = jB[0] - zB, ij[1] = jB[1] - .6 * nB, ij[2] = jB[2] - zB, qj[0] = jB[0] + zB, qj[1] = jB[1] + PB.e.Bk + .6 * nB, qj[2] = jB[2] + zB;
-          const dB = BB.vG.LNB(fj, BB.vG.names.autoRotate),
+        }(), wI = Date.now());
+        const JB = BB.zW.UZB();
+        if ((JB.jump || JB.forward || JB.backward || JB.left || JB.right || JB.sprint) && gB.l.Gq("usedKeyboard"), BB.zW.bIB(BB.Jm) && !0 === BB.vW.canPickUpItems) {
+          const IB = BB.zW.aU(BB.Jm),
+            ZB = (0, dB.t)(kI),
+            JB = (0, dB.v)(kI);
+          OI[0] = IB[0] - ZB, OI[1] = IB[1] - .6 * JB, OI[2] = IB[2] - ZB, YI[0] = IB[0] + ZB, YI[1] = IB[1] + eB.f.fq + .6 * JB, YI[2] = IB[2] + ZB;
+          const oB = BB.zW.bvB(iI, BB.zW.names.autoRotate),
             {
-              itemDropPrediction: IB
-            } = (0, fB.c)().client,
-            uB = QB.offlineInputReplay.holdsInput();
-          if (dB.length > 0)
-            for (const pB of dB) {
-              const jB = BB.vG.getState(pB, "itemState");
-              if (void 0 === jB || Date.now() - jB.creationTime < 500) continue;
-              let zB = pB,
-                nB = null;
-              if (jB.Vn) {
-                const BB = IB.pickupTarget(pB, oj, uB);
+              itemDropPrediction: GB
+            } = (0, iB.d)().client,
+            kB = TB.offlineInputReplay.holdsInput();
+          if (oB.length > 0)
+            for (const hB of oB) {
+              const IB = BB.zW.getState(hB, "itemState");
+              if (void 0 === IB || Date.now() - IB.creationTime < 500) continue;
+              let ZB = hB,
+                JB = null;
+              if (IB.wJ) {
+                const BB = GB.pickupTarget(hB, pI, kB);
                 if (null === BB) continue;
                 ({
-                  wN: zB,
-                  CN: nB
+                  mv: ZB,
+                  ev: JB
                 } = BB)
               }
-              const dB = BB.vG.getState(zB, "itemState");
-              if (dB.Vn && null === nB) continue;
-              let rB = 0,
-                sB = null,
-                JB = !1;
-              if (0 === dB.amount) JB = !0;
+              const oB = BB.zW.getState(ZB, "itemState");
+              if (oB.wJ && null === JB) continue;
+              let zB = 0,
+                FB = null,
+                NB = !1;
+              if (0 === oB.amount) NB = !0;
               else {
                 const {
-                  amountPickedUp: jB
-                } = BB.vG.yjB(BB.zV).pickUpItem({
-                  name: dB.name,
-                  typeObj: dB.typeObj,
-                  amount: dB.amount,
-                  attributes: dB.attributes
+                  amountPickedUp: IB
+                } = BB.zW.lIB(BB.Jm).pickUpItem({
+                  name: oB.name,
+                  typeObj: oB.typeObj,
+                  amount: oB.amount,
+                  attributes: oB.attributes
                 });
-                if (rB = jB, 0 === rB) continue;
-                sB = wB.b.pickUp(dB, rB), dB.amount -= rB, dB.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === dB.amount ? JB = !0 : dB.creationTime = Date.now() + dj
+                if (zB = IB, 0 === zB) continue;
+                FB = AB.b.pickUp(oB, zB), oB.amount -= zB, oB.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === oB.amount ? NB = !0 : oB.creationTime = Date.now() + oI
               }
-              const mB = (0, fB.c)().client.inventoryPrediction.record(sB);
-              (0, QB.sendColyMessage)(aB.Wh, {
-                wN: null === nB ? zB : "",
-                xN: rB,
-                KN: UB.h,
-                RI: mB,
-                CN: nB
-              }, !0), JB && (uB && IB.onPickedUpOffline(zB, mB, nB), null === nB && BB.vG.deleteEntity(zB));
-              NB.e.play("pickUp", PB.e.pickupSoundVol).rate(1 + Math.random() * PB.e.pickupSoundRateVariation)
+              const gB = (0, iB.d)().client.inventoryPrediction.record(FB);
+              (0, TB.sendColyMessage)(nB.Gh, {
+                mv: null === JB ? ZB : "",
+                Xv: zB,
+                Lv: cB.e,
+                lG: gB,
+                ev: JB
+              }, !0), NB && (kB && GB.onPickedUpOffline(ZB, gB, JB), null === JB && BB.zW.deleteEntity(ZB));
+              vB.d.play("pickUp", eB.f.pickupSoundVol).rate(1 + Math.random() * eB.f.pickupSoundRateVariation)
             }
         }
-        if (!BB.vG.ujB(BB.zV)) return;
-        const dB = BB.inputs.FW.BjB;
-        if (0 !== dB) {
-          const jB = dB > 0 ? 1 : -1;
-          BB.inputs.state["mid-fire"] || BB.inputs.state.Alt || !BB.wG.useInventory ? (BB.inputs.state["mid-fire"] && mB.n.Ly("requestEmoteWheelClose"), (0, fB.c)().client.cameraController.handleScrollZoom(jB)) : mB.n.Ly("ScrollInventorySlot", jB)
+        if (!BB.zW.RIB(BB.Jm)) return;
+        const oB = BB.inputs.zD.OIB;
+        if (0 !== oB) {
+          const IB = oB > 0 ? 1 : -1;
+          BB.inputs.state["mid-fire"] || BB.inputs.state.Alt || !BB.vW.useInventory ? (BB.inputs.state["mid-fire"] && gB.l.Gq("requestEmoteWheelClose"), (0, iB.d)().client.cameraController.handleScrollZoom(IB)) : gB.l.Gq("ScrollInventorySlot", IB)
         }
-      })), yB.c.subscribe("droppedItemScale", (BB => {
-        uj = "number" === typeof BB && isFinite(BB) ? BB : Ij
+      })), qB.c.subscribe("droppedItemScale", (BB => {
+        kI = "number" === typeof BB && isFinite(BB) ? BB : GI
       }))
     }
 
-    function Fj() {
-      const BB = (0, fB.g)();
+    function PI() {
+      const BB = (0, iB.h)();
       if (BB)
-        for (const jB in LB.w) {
-          BB.inputs.unbind(jB);
-          for (const zB of LB.w[jB]) BB.inputs.bind(jB, zB)
+        for (const IB in WB.u) {
+          BB.inputs.unbind(IB);
+          for (const ZB of WB.u[IB]) BB.inputs.bind(IB, ZB)
         }
     }
-    Hj(kj = {}, Gj = ["a>`!a8/7vbeH{1_BC_GbsPY#Z.gSL*>CSA3,@fWFTOADzU", "Y,va7t}aN@{)|DN?5nWz{{Gl85|dljdj)pwP.8dsl@>Pq93E%;6/BP~", ")`h)zf,KHArYb@ru+;[Gh*Ih/", "^M#)/`s5;X`IUp;pq>W,y4B1", "<H>GP|^hu7mIj???Cwyw^<#7}@=", "bQ^a:e~WNH", "8?&b@+W(CQ9?xAACpO{oD8cq", "@`HJNM:H;AL2q", ',(x!Omx72#@O)j{C%./!Sj}l}<((Z"4B?nD,sjnSyDCYBG5K*A$/}x~', '"4xa8taX}Qt+M`P,Yx"wVjag(5(9i/25]Mq', "XOX/Oml{QDHmwL.E2H<rZ%!X(g*t49(5", "Z4+w_=SK9n$0gM0sJM#t|z9WrD3dG`B?A.U", "g`Z_^x~", "w<08K{!X,>AduVL#jk#w&BIH>>>&ygx,7CuGVjS!VHh", 'yLa}QWAgN>9B(Rys+?wGFv[7j5<zn">!p</Jv+dg*n', "%ng,dY+h+C^", "8<e%KG:Iqna7@8e)QxW/$f~", "kH1St^JaZDoS@jfh0~", "tB!+_W)5KCmWx`/#YE~n@8]%>X9hz@7{%<_b", "dEDJJ_218@AG6M%rmyb<%3!!|`hU0jFhA.;,[", '1!va478#k4$QNAop:(JP"f>QdArfu*c{w+1', '#26%_?/:bofrEUQuU@"<`7Sq:55ULja5]O.tGSm#YAUl,pB^"s_mg', "RLCFG4pbv4E%q", "FkI<@J)X~&cf{8D", "!24_,vi!%<1lr)<)u+2/jE)5jglo07Rk7p,%BG1Ix<CVz@Rh|~", "[uUm&B6!{QcoO`jhZU>Gp*vhrc|2bUn", 'p?qSo"V7kOr%"^;5WYSp,PGq', "qGepj6mHdAGC%@C)PxE)~=w#pOx&_V!u~kjaLXbb$g", 'oQ>/O"OQqQxW07e)xxw)77k5YblPf/f,{_Kw/||KgDr_M@},VP_X)', 'yQStX7C!xN<Pg6b#puzt*877{H0PSUe{6O>r1+/b"nyC9LvEPdta', "NUmGMS>u)CMclDgjn+b(]}B:F#lo#?aj8p9nYteQ.NQWrmI)h_w(J3SQ}`Q", "jMB)ZjcaSCagN)d", '~>8_vzfq7OFB|WL5{<koxB(^:N"[=WF^@>6+~3WxHDb6n3o', "<D^!kSM1O`lG3@^h1&ib`2}QTd", "UuwFT<6!Mc57SpB?Ex~(hQ<1zC4", "a!eL}6uakOdU$D6^1!tL4`D^u.u7GM=#SD%!z+xHHDla{W7!(wL%.", "RLxJKl[h2>eQ,p`F0~", 'VPn)0"END#[|Ygqu2OvrPQvhiY#_Zsy,]dbF}v,!kO/xIUa', 'cHQ_t8/FN@d?lDCEwn/o"J6uS4EU|p7^)q', "r+LGojBHV>sOx*{?L~", "9_Z!eL5g`C6AAVs{uQ>P/B5!.N|>TUP5.!,n.j3%/", "uu=r1XHbF&!mxmO^`xl/{G+#!cu|I^m#cLuFK{H%6A})q", "h_$r#z>_@H2h3AQ!ib~(LY6qV5]2dDrF//hv2x++w`:[PmQr;xgo", 'ZA2,~^#hKOLtn`>C)2(,6m!>">VtoDo,9(govQ!a{nV2.U', "uxSpR^;ayO(u/@o=Q~", "`x3,Y=+%ug", "#2N<|LleY4X>bLUCx,c+r{kln7{h%*`FS;,P3*AuGHcgfMn", "^H(z`t!5v#", "1>@<dfH2U", "cn|%r%&I;caFajQu.2ra6mq{zXId>7kjauP(Q=8EUH", 'Ex?z{AT1@H8IjW")v_$<pEgsJ7iNq^6u4(an{vc{;cK', "cEb(5*x(zY$+d1", "yQ4nxY2E!D:8VGp!5wz8Y|UKk.(x`A7Khq", "XQLPW|H1", "2nq_p%FHoA%/Qmd=Mk2%!lV+qQmP*@K5fC*ttQ)!F>,|fGt=4_cr3fKq?<!f~", '"__+|j91', "|BtLnQ8NN#YAtmH", '~2u/iLb7QOcM$p=#=.3p[jSQ8`]Wi"l=d!x83YegR', "p<EPCY!5Gn`", "eWJrUMC{CnPIIm,?pE5wX7w^McLIyVFy6r;+U+*q", '5ph<Klj7WgNa=WH.w(WLOmUs{N]027zjN,$Pu%u"bo"R:f`u(Ge+Q`g5!#', "5>=/gf@q", "0;,<T</bS4$[*W1h3r+b5", "l,9FH*$!I@=zb3)yx(SR", '#<1t[jXlE.4P2?|p:=lz]Aiu%N}UJWwFVUb<5jYIyY9x*Lxj5H;o9"kq', "%HLG$AH1", "YOKm9J975QEU*WT=TY`XFE|arA6t:D,^D`F%X_T2[7P{iM3E;(EP@QZ%R", "1cpmi}~7YdV8~)w#TCnvmz+2v48,HUK#._%,u8lqyCv`o?`^R`t,pjG{0n", "<C)t$Q~", "kQZX7X,5#`,m`h)r0~", "0PeLT?]Bc7&wI*0s4L(J02B^z4Jd1s+phq", "FQ}S2V^1/5", "fMZRvM,{QOz/ihsr8UcoiLz#q&~v,*H5", '/!R8gM^+h7DO?/C.+.2z&BD2nogmpR")RL.a', "e;9Fq^B^y.}BwU1,", "$W*p!{EEP.v`q", "j!q(7`~", "d!y)[%RsiC7PK/^F2,hG>+m#tb=|lUsrzB8wgMoNq>s", '";e,,eH:sC++/=)C|;CF:;rb*Qc.*jPsW(Jn', "O?az$%YFSdt^WsOC5p)tJB2%?gJz0A?supv/", 'B@7_F6PQ{<]5&",y!OSt^eOKVQMdd8[EAUG)|Je|SC"G3U', 'N<b(cfzEg&bSg"wh`r:,+^WhZ.', ">,8mtMnfkA#mV1", "ln38*8Rq", "H!Z3dt8h", "}J)[b^Gh", "Wi3Y!pM", "?Y@C9[Bh", "YcnS*4kh", '1")R/tqh', '1"13Y', "CE*w.z+h>ROIB6{dGEF,63~", '!"y+>G4)9;{P~6p(CN#]M4jIZAK.8mn', "`kvhE4oJg]69TXjuHkQ=XNA", 'CE*w.z+hN8A&vGa?p`_b@+5">ROIB6H', '{K@eG)I*:ngXdU"`Y$v&[I9SDk_mRQ.', "?S/4q)CN;g:M4D{jY&/[48>N)?g", "48D;6hK", "6EF,qmr1", "Mv(_", "ePf&W^fk", "wl0`l@xt", "FfTH)+Xt", ">!.rRpD<", "BZVM:pa", "@Q.rrpb<", "P@6o;{s#", "8aFQ]@uL", "0wW7]I3C", "kqSnqy+F", "u6>Z", "!j(NW|c!", "2h:=qU0F", "kY/lydam", "h:><qe3f", 'svG")HPf', "#x<~:7c", 'z~AB*"(lg', "xh[mFE$EC", "iv9;&|`7g", ".]VYTIJkb>B=DCLel]X6C^M", ",2A{w0LbFS>^Id_tx`.:EL;H!$7ryGM", "Vzfi:IHlG2?/*UKeEBaTvHsLMWD}(Ph", '0NkAflUBJ9rW*7={^?"ZbUOS:5e_xFQ', ".]VYTIJkowi_YExHheVzYsnkI.w", "&$pl=qM", "y,+{0.TX", "Ah}e"]), Hj(Lj = function(...BB) {
-      Hj(BB[qj[12]] = qj[2], BB[qj[15]] = [function() {
+    MI(yI = {}, UI = ["EXh^,UECPUE", '"I3=ngFqc=H1XSjv', "p=!$Jrb`IEHkL", "WR=xOzM7`KrZ}b%g?ZzJE7dsOu)oQbbCeSMAz7GuLBi,oPk,;GX=", "hFPDJ}=%#h0DE93|X8", 'X(C;^Ddi8]0.y"J.mh9x/i%yR', ":aHR,U}x8?", "IK!XedVEs?;H!B](h7L59|BL", 'UUS=uPH0D)+*bNoOS|!/ti/)e1{"`m', "8hRY:|!h0`_i.aL,tOY;10iscZRVha}_FGCkG<cAk`(y2Gi2Xwg^", "5SS;]5fL", '<z=AZ2:%B?^}Bb=,W}u=mcjE"BA', 'YzUpKH%LnZXJ|ba#XKx@.V{.LB_l)5uC>(Trv|t9;uHpkB!b1Zbl/"2O}K<EL', 'DAK^+N8.V?@6!XTIhkdDFAG05&"@Uc*#G}xk', "#ZqG(HR&5{ujt!?O2Uy_CX#s2&m=+c8,u}7_|Zf%R", '7E;_?;1L(&/T:kR9<SLKly;;#PMZI)1gM"^;4M,;z**j2bt', 'BE^K"[:^s?~PhXJ.IBYk', ",hdD$Yk,+u&nmMk_^sG5/IktQ*h)A&]9((D6RizC7]N_oPGpA=gp{|VL", '{=_pVq$LGz"U&o5g,KlbGgjL2uo]bmqg7}NJ3:6,7][yxSBGxL', "_73k6gR9Jhd+}BPCn8", "6U>l4nmwqSIb`mXvA|GJAZ%yVDga9zk,fzbsy.iiF16>XSzpU(Z@2KavV]w", "bGNt.ocs/KdP828CPCI5FM#^J]}j@.*#OAuRK5zsV?Q]!zxw=|IAh", "JA?_Y2sqt{|iia", "xIkl2K$%szZ?ha}v^7a", "IK@$5.2Ev{6sHb3|jzTR", ')Bhs{;&|BPr6aX/`1(Iqs<2OaEFUcn$20wW@T.H;(K(ircV2D"/lK$di#E9RL', '4A/^ZDqE_?[nrWq`ls/6aD,01#n7,cN|_7B;s|,9I`(]<"vs', '|K16}5d)0&"yka<+^Ea/.z|,duaIbmL,gELroi=^)z36tTjGtXm', 'TX+_C@+tQH(@_M"I5K+phU[qRu%y8', ':(lJ+X9mrzB}{".,uIMt&5#`pUt)|b_(({C@9gmWwS', "B=Kk;W{nTP/M<.SGLJWp|H00S,", "$U|x3E&m2uf6fkZ.oCa5AZt;~#JyBa(g", "/KHK=EXEH&h{qGVGw(i@;ANx`=eDOSdp$_1sjEr7+)h{(TR", 'H"7_rc>C41&1vk', 'L6=Rs|7mQ1iLTb~Oc"k^', "}aFJTd?Le*}vg)z#K=$NVZqs;=", "N*Dkx;P0BZ3hxoYI?=Aseg{&IP:5Ya", "sX_jN(M0o1*,w)>xJ|(^2VRu0&j>=c&wrWpsIjM|=Y(", 'wE<pD$t7duZSpb"bqwQ$.OJ;ZP<+XWECkZTRA&[)r,I*_G6`', "F(<GprfOAhSxmv#|eIm", "G6%bt0,mfU>O](}xKA@sF[`seSjj~af+i*.lTgD)h?!6L.q`?Ea", ".}|xWcHxVH=)wo5_DA|A=i$Z&Uj13SG.!_)lb", '|KLJq"enu,)I^M].(AwswO}9k`', "7#]t$4o%y`yOcP*.M(/l9NyLi,]n:k~OU(6ACg8", "UKd/*2uxwUGR_NpC`RnKg}/LJB", "9|Xp<X^L5)@1nXX(OI{s(|<<NPnkL", '5HS:o"8', "U_U;WcEL*,WjU(<|SJqJdrL`RlGbw)3s68", '&Gr_a"$A8,R(,(n|)k|KV(EsC&+)kaqg:}m/Z7[%b{1*KvO,', "yj.$W6;ucZ`As5A%9L", '#Ax@g}50ZZ"9PB0b+sijSYk.VH:yL', 'I(H=m5r0LZ/Cy"kg+h9:gjw|lS&^o9B', "{EGb|MP,a", "%A2@i.J.5)sb=Tqv4RIqNHL):E%jCXJ.G=%Ae<DZ;K8}pT<+s(vABEm9/", 'A|2@(H+.D)1A"By,ft7@ccx9aKR}4)_CB=W@)E`%JEN@ZzHwKG7YG', 'nvk$In.;IKc$"dI.,X)l(q4)R', "b|]J(<_Vy`G#5d7|#BB=hYRxp#nWlSR", '"IeA]".nUH&,!X<OS[X;rcqqRl`i%)&O6(Yjgj8', "y(>DtY~7O=WWoczw!abJq6k0&{RMQVG.", '3"lb]!~;Nh3EJd@Gu#R;{z8xK)dB5zt', "d_4_gK4OZt7@?/{Iy}uATE7|nENzDk5,qI9r}Y,m", "oC#KYi*OPSmI)TP%KSRYFMlxl#7kE5kxash$ly]ht{}?Ioh", "/Zx^dd:s/", "4*G$S@D%RuGy6GGs6AW_$N>E]ER}QTVG_L", "|A=JhyjykuM12G`{BAal%H}6QtR}1zD|JAsl?", "{RADvg@|%#IUx(gvnpgYRUi)kun+_ml", "YCCpk0zCUBjHnz1`_Px[2[S.Yue/#.U9]UJK:;!|?K8bgvIxSL", "4}F6zIwh8BJ{sT#|", ".ETrFZ+&K&rW@9)", 'kEYkfz;|3{]S2M{|540jAH1%[Kjt*"y_(}0=', "WANbtigmq{eu>MO_ew@6}Dkt]ZZ1VmHI~*)69dAL", '=hOJ;qsO,h;n.da(aOTKCd07f{/V="Tb~{>s4qlxxzg', ",Zh_2V2E#PTxAgJxK=9KG|8,%{%", "~4Qlr.()4HQy=/7|HaDl%}8,K&!JOmqG)h7k", "&zI5h6)`[P8(|d+|mP}DbVavY&.5<c)2Uz9[vX!I_h9iAa@ga,HKvgM9qSP,L", 'j*{Y4Ot;Q#r6yy@`?=,5D(Ix`=U7)"8x', "A*AJ#Y!Ix,u^L", "oztx;W$Z*=nD{d%v(X>Df;_O`=rk%TS", "3*Z@^U<C#]dNz&GsLsjKHMB^|&|#go.9AaVk|qltQ1J*o.JC0*%R=P8", "bBgYt@g,xBG*;z!b<{d$3g8", "h[GsT;lW8,8MBgfCWag_d:L)!uJ", "u_.6n;3^kE}]^gZ#3{%RGgmw[]TI2WqgvPZk!X&06SloDT~p)XBx#yKm", ")ZAJ].$AL]VSry|_9AwAK(?O5&|Y}B+bP{~R", ":(vraUdsvUfsdG/`OA7^Y2g;2)Yv;a", '!W[K<@bsBZ"', "[At:jyzsZZApkXJ9p(:xu!.6S]Ti7S^`z#?^ME,m", "]}zD@NACPtdWSG+|X*9:Y!|hH)FUL", "s|+_9|phnh_9kB6gD|/lBEYsqH{@1Mux2*XkL0YVn=i,ykuCHzfJqYy)P1H", "4_Dlk5x.G{#i(v^_~U^x^Ui)J]?iVV#2*a@6T", "L6Wp(jz%<u8Kec&s!I_=xo|xqt#5M[d%4*7j2j,9a", "VA7^AHt&#]@1tB&sCPW@8Yi^cZi>wvgvc(4_HMh;R", "etD^x;r97Bl5L", "F{k$L!.&$zb_pbd|Ha/6[qa)qzT5dmB", 'vBOJ}"D<R', "54*tpz{nk", "}}EKbz)VD)&J%T3ssK*RqyoZF1<.Y&xx", '_PLKN&_ONEII{V"2oaX=J;}xlY7SK[m,TPa', "!2Z@9g&95#$$Gc#bgRg^!X}RzUn>`d5_aBA5LD;nE#o;Ro1G1FJj+@8", "D}!$D$0&7,t)gvR", 'oU:K#@P,mhjp=!avetCkdz,t?uJybVnb?BgpR"_`k', 'zC=RXDq)6#]v1N^,<z!GcEN7"]<WIo*#b}9[T', 'ThJj9;HxD`D9}aHIS7esED}xVPY_8X;|<I<^D2D)mZ3WP9fO|"Ujb', '4_<^p|vVd`Uvt2`b_|n=a"@R]`!P#PnG1[Q$x;dL', "e{H[FOStdh6n0y}9Rsm", "ep9[vd(ENPPn2V<bC}WkT6txu,k5GN](`Aa", "aF;D{gNm", '/=HR/y&,`uk=<"GsKay^8YN,%#VYBg>,JP`JxK1LMEJa8XPw;hdJ,cS9]=QaL', "?XXKlye60&O5@91gzS6tti~78Z(@xm&%:K`$t@G0_BNnQTr`1(yX#", "?GzDz5~;OK~`TaICms)6TgUh:Pp&L", "LxUs}xTr", "g(_@#U%L", "eNIl8z~V", "*LG^E!WkLH8Ib~qq9}+VGGzFWx)@0:.", "t[]Lg|OWW6:", "Et&~@*W9", "#cF7r7Z9", "Et97;C>9", "HN|s:%Vv", "Sd9=JaD8x%sn)6ay", "MxqQ!gl#SjkE0s${", "fc.Ln9M33d:*@?y", '#]RY<m<"EvBXsyBgb)&bB8YaH', 'WicEdeMf6<}*ey;~HA&{_q"il', "M[XILTo!OAjMK6QGWi&{=#ens", 'W_zIFS2sZqwt*ciI,[g{~r:n#?fQN"!p9Nv3[', 'iSba58GJ[xye:eR@H9w.R863v&_X|2hCrLEa"', "[i&{KC:n[}`6D)S_%Xd=JXOMr<WQsy=x!Nv37", "SdHdcBoff,Z1I6{x)j7{JX}fax)QsyIA0N7{[", "uF7{fg_J|d6m}S%#Vc$^:>_1!l]oGyIA:NV", "r;Qb_LbJ", "IDb3;5bU", "TX].VET=", "F9Ds`f,Q", "*j67Z)_Q", 'yDp.:j"Q', "W$6I_SrN", "H[zwSo0N", "[@67!n!i~P<", "h?mo1>[Ah~/", "!]yXq:{mJ8/", "|v>I^;9g=rl", "C{Ky;O[?(x{", ";:=t;}.Ej</", "<?+y=4.9U", "1Mu(RT3NekZyjvm(<?:Ilp#g[|s/Gi2q]GP+&a64s|88jQ", "`?+yL3yg[|~yU3|[{{`o.OsO:!ZyNyrb1//.^;9P<DVPbN", ',{LI]7*Dsqc{vAJlU]eUu*0iJ8M**ARb%v+yQ4yg[|k0"H', 'ssFIO4EgB8j{_A0x.sFIJ3ngtL@{xA=rnG{."jN@WXzccQ', "CB{$rcGm", 'LB"CX$o', "[|bMM$Zg", '3u"EpV!g', "M.D8", ">U{1oeEKIJui5C", "<82NP][.s#A:$C", "FFM1P],jR8rvL1", "4P24+erq_$Vu%C", "%U*vsu[.,8r#0C", "%sm1>3qa8sT", "W4iPS4$A", 'hp"EF%OA', "JlGJ1QUA", "I?T]L", 'w="ig@td', "m_VmzM$J", 'KS"NY', "D}/MK26eKRx", "LDv*}?cb>BY", ")Rozy^zzhP2", "W9NDb&5W2Cp", "7iR,(~AAEKR", "dP6fK66.2pT", "t,A>Hy4o}?w", "1L7.gCGg", "{4s=4*pg", "6Od0", "~lA>n}Z@", ",8*_(7`J", "gB3{6Kqx", ">+<o6^n1", "A^A(Bspn", "^vRi@qYM"]), MI(WI = function() {
+      var BB, IB, ZB, TB = [function() {
         return globalThis
       }, function() {
         return global
@@ -3248,527 +3280,738 @@ export const modules = {
         return window
       }, function() {
         return new Function("return this")()
-      }], BB[qj[0]] = qj[18], BB[qj[13]] = []);
+      }];
+      MI(BB = void 0, IB = []);
       try {
-        Hj(BB[qj[0]] = Object, BB[qj[13]][qj[23]]("".__proto__.constructor.name))
-      } catch (Gj) {}
-      BB: for (BB[qj[14]] = qj[2]; BB[qj[14]] < BB[qj[15]][qj[12]]; BB[qj[14]]++) try {
-        for (BB[qj[0]] = BB[qj[15]][BB[qj[14]]](), BB[qj[9]] = qj[2]; BB[qj[9]] < BB[qj[13]][qj[12]]; BB[qj[9]]++)
-          if (typeof BB[qj[0]][BB[qj[13]][BB[qj[9]]]] === qj[16]) continue BB;
-        return BB[qj[0]]
-      } catch (Gj) {}
-      return BB[qj[0]] || this
-    }() || {}, gj = Lj.TextDecoder, tj = Lj.Uint8Array, Sj = Lj.oJ, Mj = Lj.String || String, Ej = Lj.Array || Array, ij = function(...BB) {
-      return Hj(BB[qj[12]] = qj[2], BB[qj[17]] = new Ej(qj[51]), BB[qj[19]] = Mj[qj[21]] || Mj.fromCharCode, BB[qj[15]] = []),
-        function(...jB) {
-          for (Hj(jB[qj[12]] = qj[0], jB[qj[17]] = qj[18], jB[qj[19]] = qj[18], jB[qj[14]] = jB[qj[2]][qj[12]], BB[qj[15]][qj[12]] = qj[2]), jB[qj[9]] = qj[2]; jB[qj[9]] < jB[qj[14]];) Hj(jB[qj[19]] = jB[qj[2]][jB[qj[9]]++], jB[qj[19]] <= qj[114] ? jB[qj[17]] = jB[qj[19]] : jB[qj[19]] <= 223 ? jB[qj[17]] = (jB[qj[19]] & qj[53]) << qj[8] | jB[qj[2]][jB[qj[9]]++] & qj[20] : jB[qj[19]] <= 239 ? jB[qj[17]] = (jB[qj[19]] & qj[54]) << qj[22] | (jB[qj[2]][jB[qj[9]]++] & qj[20]) << qj[8] | jB[qj[2]][jB[qj[9]]++] & qj[20] : Mj[qj[21]] ? jB[qj[17]] = (jB[qj[19]] & qj[6]) << qj[55] | (jB[qj[2]][jB[qj[9]]++] & qj[20]) << qj[22] | (jB[qj[2]][jB[qj[9]]++] & qj[20]) << qj[8] | jB[qj[2]][jB[qj[9]]++] & qj[20] : (jB[qj[17]] = qj[20], jB[qj[9]] += qj[14]), BB[qj[15]][qj[23]](BB[qj[17]][jB[qj[17]]] || (BB[qj[17]][jB[qj[17]]] = BB[qj[19]](jB[qj[17]]))));
-          return BB[qj[15]].join("")
+        MI(BB = Object, IB[YI[25]]("".__proto__.constructor.name))
+      } catch (CI) {}
+      BB: for (ZB = YI[2]; ZB < TB[YI[12]]; ZB++) try {
+        var JB;
+        for (BB = TB[ZB](), JB = YI[2]; JB < IB[YI[12]]; JB++)
+          if (typeof BB[IB[JB]] === YI[13]) continue BB;
+        return BB
+      } catch (CI) {}
+      return BB || this
+    }() || {}, dI = WI.TextDecoder, CI = WI.Uint8Array, QI = WI.UN, sI = WI.String || String, wI = WI.Array || Array, OI = function(...BB) {
+      return MI(BB[YI[12]] = YI[2], BB[YI[26]] = new wI(YI[57]), BB[YI[0]] = sI[YI[22]] || sI.fromCharCode, BB[-YI[15]] = []),
+        function(...IB) {
+          for (MI(IB[YI[12]] = YI[0], IB[-YI[19]] = YI[14], IB[YI[18]] = YI[14], IB[YI[17]] = IB[YI[2]][YI[12]], BB[-YI[15]][YI[12]] = YI[2]), IB[YI[16]] = YI[2]; IB[YI[16]] < IB[YI[17]];) MI(IB[YI[18]] = IB[YI[2]][IB[YI[16]]++], IB[YI[18]] <= YI[56] ? IB[-YI[19]] = IB[YI[18]] : IB[YI[18]] <= 223 ? IB[-YI[19]] = (IB[YI[18]] & YI[85]) << YI[21] | IB[YI[2]][IB[YI[16]]++] & YI[20] : IB[YI[18]] <= 239 ? IB[-YI[19]] = (IB[YI[18]] & YI[78]) << YI[24] | (IB[YI[2]][IB[YI[16]]++] & YI[20]) << YI[21] | IB[YI[2]][IB[YI[16]]++] & YI[20] : sI[YI[22]] ? IB[-YI[19]] = (IB[YI[18]] & YI[23]) << YI[3] | (IB[YI[2]][IB[YI[16]]++] & YI[20]) << YI[24] | (IB[YI[2]][IB[YI[16]]++] & YI[20]) << YI[21] | IB[YI[2]][IB[YI[16]]++] & YI[20] : (IB[-YI[19]] = YI[20], IB[YI[16]] += YI[27]), BB[-YI[15]][YI[25]](BB[YI[26]][IB[-YI[19]]] || (BB[YI[26]][IB[-YI[19]]] = BB[YI[0]](IB[-YI[19]]))));
+          return BB[-YI[15]].join("")
         }
-    }()), Hj(yj = (...BB) => {
-      BB[qj[12]] = qj[0],
-        function(...BB) {
-          return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = function(...BB) {
-            for (Hj(BB[qj[12]] = qj[0], BB[qj[17]] = '/BkLXiowve7#D@!t3l:0)V%2F;PNHbEM.{y[|$6"f?8z*Za]KxgU1InGm^YpO4,hj`u<~T9sJ&Q(RWdAC>+5=}Sqcr_', BB[qj[13]] = "" + (BB[qj[2]] || ""), BB[-qj[74]] = BB[qj[13]].length, BB[qj[75]] = [], BB[qj[29]] = qj[2], BB[qj[8]] = qj[2], BB[qj[6]] = -qj[0]), BB[qj[10]] = qj[2]; BB[qj[10]] < BB[-qj[74]]; BB[qj[10]]++)
-              if (BB[qj[26]] = BB[qj[17]].indexOf(BB[qj[13]][BB[qj[10]]]), BB[qj[26]] !== -qj[0])
-                if (BB[qj[6]] < qj[2]) BB[qj[6]] = BB[qj[26]];
-                else {
-                  Hj(BB[qj[6]] += BB[qj[26]] * qj[28], BB[qj[29]] |= BB[qj[6]] << BB[qj[8]], BB[qj[8]] += (BB[qj[6]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                  do {
-                    Hj(BB[qj[75]].push(BB[qj[29]] & qj[11]), BB[qj[29]] >>= qj[10], BB[qj[8]] -= qj[10])
-                  } while (BB[qj[8]] > qj[6]);
-                  BB[qj[6]] = -qj[0]
-                } return BB[qj[6]] > -qj[0] && BB[qj[75]].push((BB[qj[29]] | BB[qj[6]] << BB[qj[8]]) & qj[11]), fj(BB[qj[75]])
-          }(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-        }(qj[98]) in oj && function(...BB) {
-          BB[qj[12]] = qj[2]
-        }(), BB[qj[0]] = qj[2];
-      for (const jB in BB[qj[2]]) BB[qj[0]]++;
-      return BB[qj[0]]
-    }, mj = (...BB) => {
-      function jB(...BB) {
-        return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = function(...BB) {
-          for (Hj(BB[qj[12]] = qj[0], BB[qj[77]] = 'ZtM=ve*X$nq<h}A~#zu?3pwT(L",jE^B9%!+aVR;)rycYx{2@>.b4`d[&:m05|oQ]f_C1J768HlFNWPDKSIsGgUkiO/', BB[qj[19]] = "" + (BB[qj[2]] || ""), BB[qj[14]] = BB[qj[19]].length, BB[qj[64]] = [], BB[qj[29]] = qj[2], BB[qj[38]] = qj[2], BB[qj[79]] = -qj[0]), BB[qj[3]] = qj[2]; BB[qj[3]] < BB[qj[14]]; BB[qj[3]]++)
-            if (BB[qj[78]] = BB[qj[77]].indexOf(BB[qj[19]][BB[qj[3]]]), BB[qj[78]] !== -qj[0])
-              if (BB[qj[79]] < qj[2]) BB[qj[79]] = BB[qj[78]];
-              else {
-                Hj(BB[qj[79]] += BB[qj[78]] * qj[28], BB[qj[29]] |= BB[qj[79]] << BB[qj[38]], BB[qj[38]] += (BB[qj[79]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                do {
-                  Hj(BB[qj[64]].push(BB[qj[29]] & qj[11]), BB[qj[29]] >>= qj[10], BB[qj[38]] -= qj[10])
-                } while (BB[qj[38]] > qj[6]);
-                BB[qj[79]] = -qj[0]
-              } return BB[qj[79]] > -qj[0] && BB[qj[64]].push((BB[qj[29]] | BB[qj[79]] << BB[qj[38]]) & qj[11]), fj(BB[qj[64]])
-        }(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-      }
-      if (BB[qj[12]] = qj[2], jB(101) in oj && function(...BB) {
-          function jB() {}
-          BB[qj[12]] = qj[2], Hj(BB[qj[19]] = function(...BB) {
-            for (Hj(BB[qj[12]] = qj[13], BB[qj[13]] = qj[2], BB[qj[19]] = qj[2], BB[qj[9]] = new jB(qj[2]), BB[-qj[62]] = BB[qj[9]], BB[qj[8]] = BB[qj[2]], BB[qj[80]] = BB[qj[0]]); BB[qj[8]] !== qj[81] || BB[qj[80]] !== qj[81];) Hj(BB[qj[19]] = (BB[qj[8]] ? BB[qj[8]].val : qj[2]) + (BB[qj[80]] ? BB[qj[80]].val : qj[2]) + BB[qj[13]], BB[qj[13]] = Math.floor(BB[qj[19]] / qj[47]), BB[-qj[62]].next = new jB(BB[qj[19]] % qj[47]), BB[-qj[62]] = BB[-qj[62]].next, BB[qj[8]] = BB[qj[8]] ? BB[qj[8]].next : qj[81], BB[qj[80]] = BB[qj[80]] ? BB[qj[80]].next : qj[81]);
-            return BB[qj[13]] && (BB[-qj[62]].next = new jB(BB[qj[13]])), BB[qj[9]].next
-          }, console.log(BB[qj[19]]))
-        }(), Uj++ === qj[41]) {
-        if ((0, GB.o)()) {
-          function zB(...BB) {
-            Hj(BB[qj[12]] = qj[2], BB[qj[17]] = function(...BB) {
-              for (Hj(BB[qj[12]] = qj[0], BB[qj[0]] = qj[2], BB[qj[41]] = {}, BB[-qj[83]] = qj[2], BB[qj[84]] = qj[2], BB[qj[29]] = qj[2], BB[-qj[57]] = BB[qj[2]].length), BB[qj[82]] = qj[2]; BB[qj[82]] < BB[-qj[57]]; BB[qj[82]]++) {
-                for (Hj(BB[qj[41]] = {}, BB[-qj[83]] = qj[2], BB[qj[84]] = qj[0]), BB[-qj[8]] = BB[qj[82]] + qj[0]; BB[-qj[8]] < BB[-qj[57]]; BB[-qj[8]]++) BB[qj[2]][BB[qj[82]]].x !== BB[qj[2]][BB[-qj[8]]].x || BB[qj[2]][BB[qj[82]]].y !== BB[qj[2]][BB[-qj[8]]].y ? (BB[qj[2]][BB[qj[82]]].y === BB[qj[2]][BB[-qj[8]]].y ? BB[qj[29]] = Number.MAX_SAFE_INTEGER : BB[qj[29]] = (BB[qj[2]][BB[qj[82]]].x - BB[qj[2]][BB[-qj[8]]].x) / (BB[qj[2]][BB[qj[82]]].y - BB[qj[2]][BB[-qj[8]]].y), BB[qj[41]][BB[qj[29]]] || (BB[qj[41]][BB[qj[29]]] = qj[2]), Hj(BB[qj[41]][BB[qj[29]]]++, BB[-qj[83]] = Math.max(BB[-qj[83]], BB[qj[41]][BB[qj[29]]]))) : BB[qj[84]]++;
-                Hj(BB[-qj[83]] += BB[qj[84]], BB[qj[0]] = Math.max(BB[qj[0]], BB[-qj[83]]))
-              }
-              return BB[qj[0]]
-            }, console.log(BB[qj[17]]))
+    }()), MI(qI = (...BB) => {
+      BB[YI[12]] = YI[0], iI(110) + "D" in HI && function(...BB) {
+        MI(BB[YI[12]] = YI[2], BB[YI[43]] = function(...BB) {
+          for (MI(BB[YI[12]] = YI[0], BB[-YI[29]] = YI[2], BB[YI[38]] = {}, BB[-YI[39]] = YI[2], BB[YI[40]] = YI[2], BB[-YI[42]] = YI[2], BB[YI[21]] = BB[YI[2]].length), BB[YI[23]] = YI[2]; BB[YI[23]] < BB[YI[21]]; BB[YI[23]]++) {
+            for (MI(BB[YI[38]] = {}, BB[-YI[39]] = YI[2], BB[YI[40]] = YI[0]), BB[YI[41]] = BB[YI[23]] + YI[0]; BB[YI[41]] < BB[YI[21]]; BB[YI[41]]++) BB[YI[2]][BB[YI[23]]].x !== BB[YI[2]][BB[YI[41]]].x || BB[YI[2]][BB[YI[23]]].y !== BB[YI[2]][BB[YI[41]]].y ? (BB[YI[2]][BB[YI[23]]].y === BB[YI[2]][BB[YI[41]]].y ? BB[-YI[42]] = Number.MAX_SAFE_INTEGER : BB[-YI[42]] = (BB[YI[2]][BB[YI[23]]].x - BB[YI[2]][BB[YI[41]]].x) / (BB[YI[2]][BB[YI[23]]].y - BB[YI[2]][BB[YI[41]]].y), BB[YI[38]][BB[-YI[42]]] || (BB[YI[38]][BB[-YI[42]]] = YI[2]), MI(BB[YI[38]][BB[-YI[42]]]++, BB[-YI[39]] = Math.max(BB[-YI[39]], BB[YI[38]][BB[-YI[42]]]))) : BB[YI[40]]++;
+            MI(BB[-YI[39]] += BB[YI[40]], BB[-YI[29]] = Math.max(BB[-YI[29]], BB[-YI[39]]))
           }
-          jB(102) + "4" in oj && zB(), (0, pB[qj[19]])("4 ")
-        }
-        Uj = qj[2]
-      }
-    }), Jj = function(BB) {
-      function jB(...BB) {
-        return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = function(...BB) {
-          for (Hj(BB[qj[12]] = qj[0], BB[qj[17]] = 'a6<u_|v$&wx8+y?!9G@7.m*>A;DFb"cT5^JLtsN]hz[#W=4X`qEk}MnSPI(BQlZj2dC%g~e3UO0f/rR):pHYV,oi1K{', BB[qj[19]] = "" + (BB[qj[2]] || ""), BB[qj[14]] = BB[qj[19]].length, BB[qj[54]] = [], BB[qj[41]] = qj[2], BB[qj[8]] = qj[2], BB[qj[36]] = -qj[0]), BB[qj[3]] = qj[2]; BB[qj[3]] < BB[qj[14]]; BB[qj[3]]++)
-            if (BB[qj[26]] = BB[qj[17]].indexOf(BB[qj[19]][BB[qj[3]]]), BB[qj[26]] !== -qj[0])
-              if (BB[qj[36]] < qj[2]) BB[qj[36]] = BB[qj[26]];
+          return BB[-YI[29]]
+        }, console.log(BB[YI[43]]))
+      }(), BB[YI[53]] = YI[2];
+      for (const IB in BB[YI[2]]) {
+        function ZB(...BB) {
+          for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = '2AVMBstK3=C`^5NO@y~6nx*Q>i1$(TIlL8U#+[a;zgS<b.9pqc)%YW/:mw_DvkE&h,R0X?ZF}7d4f!jJ|]GrPe"uoH{', BB[YI[20]] = "" + (BB[YI[2]] || ""), BB[YI[27]] = BB[YI[20]].length, BB[YI[16]] = [], BB[YI[32]] = YI[2], BB[YI[46]] = YI[2], BB[YI[30]] = -YI[0]), BB[-YI[44]] = YI[2]; BB[-YI[44]] < BB[YI[27]]; BB[-YI[44]]++)
+            if (BB[YI[45]] = BB[YI[0]].indexOf(BB[YI[20]][BB[-YI[44]]]), BB[YI[45]] !== -YI[0])
+              if (BB[YI[30]] < YI[2]) BB[YI[30]] = BB[YI[45]];
               else {
-                Hj(BB[qj[36]] += BB[qj[26]] * qj[28], BB[qj[41]] |= BB[qj[36]] << BB[qj[8]], BB[qj[8]] += (BB[qj[36]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
+                MI(BB[YI[30]] += BB[YI[45]] * YI[31], BB[YI[32]] |= BB[YI[30]] << BB[YI[46]], BB[YI[46]] += (BB[YI[30]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
                 do {
-                  Hj(BB[qj[54]].push(BB[qj[41]] & qj[11]), BB[qj[41]] >>= qj[10], BB[qj[8]] -= qj[10])
-                } while (BB[qj[8]] > qj[6]);
-                BB[qj[36]] = -qj[0]
-              } return BB[qj[36]] > -qj[0] && BB[qj[54]].push((BB[qj[41]] | BB[qj[36]] << BB[qj[8]]) & qj[11]), fj(BB[qj[54]])
-        }(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-      }
-      if ((arguments[jB(103)] > qj[0] && arguments[qj[0]] !== qj[18] ? arguments[qj[0]] : qj[73]) && (0, xB[qj[3]])(BB)) return;
-      const zB = window[jB(104)];
-      if (typeof zB !== jB(qj[45]) + "on" || BB instanceof zB || (0, ZB.L)(BB)) {
-        function QB(...BB) {
-          for (Hj(BB[qj[12]] = qj[0], BB[qj[91]] = 'HVFWIi9*ZPv7[5L6b!g":RrXco{&#=JuT|0AtD;S%Os@BpM<+2?1nUqkfhKem`)/Q_d,aCjGlY^>]~.Ezxy}8w34($N', BB[qj[72]] = "" + (BB[qj[2]] || ""), BB[qj[15]] = BB[qj[72]].length, BB[qj[45]] = [], BB[qj[29]] = qj[2], BB[qj[92]] = qj[2], BB[qj[36]] = -qj[0]), BB[qj[10]] = qj[2]; BB[qj[10]] < BB[qj[15]]; BB[qj[10]]++)
-            if (BB[qj[59]] = BB[qj[91]].indexOf(BB[qj[72]][BB[qj[10]]]), BB[qj[59]] !== -qj[0])
-              if (BB[qj[36]] < qj[2]) BB[qj[36]] = BB[qj[59]];
-              else {
-                Hj(BB[qj[36]] += BB[qj[59]] * qj[28], BB[qj[29]] |= BB[qj[36]] << BB[qj[92]], BB[qj[92]] += (BB[qj[36]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                do {
-                  Hj(BB[qj[45]].push(BB[qj[29]] & qj[11]), BB[qj[29]] >>= qj[10], BB[qj[92]] -= qj[10])
-                } while (BB[qj[92]] > qj[6]);
-                BB[qj[36]] = -qj[0]
-              } return BB[qj[36]] > -qj[0] && BB[qj[45]].push((BB[qj[29]] | BB[qj[36]] << BB[qj[92]]) & qj[11]), fj(BB[qj[45]])
+                  MI(BB[YI[16]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[46]] -= YI[10])
+                } while (BB[YI[46]] > YI[23]);
+                BB[YI[30]] = -YI[0]
+              } return BB[YI[30]] > -YI[0] && BB[YI[16]].push((BB[YI[32]] | BB[YI[30]] << BB[YI[46]]) & YI[11]), pI(BB[YI[16]])
         }
 
-        function nB(...BB) {
-          return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = QB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
+        function TB(...BB) {
+          return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = ZB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
         }
-        if (BB[nB(qj[24]) + nB(110)] === qj[73]) {
-          function dB(...BB) {
-            for (Hj(BB[qj[12]] = qj[0], BB[qj[17]] = 'i:!)($S"2.FmZB^R~@YfaJV#`6;I8%cNT,=zyxp}wsg*CK|/<Xq1+?W7Dbu>jPv{4hHnM[A0le9]EG&3Q5t_OorULdk', BB[qj[13]] = "" + (BB[qj[2]] || ""), BB[qj[15]] = BB[qj[13]].length, BB[qj[93]] = [], BB[qj[41]] = qj[2], BB[qj[38]] = qj[2], BB[qj[36]] = -qj[0]), BB[qj[10]] = qj[2]; BB[qj[10]] < BB[qj[15]]; BB[qj[10]]++)
-              if (BB[qj[26]] = BB[qj[17]].indexOf(BB[qj[13]][BB[qj[10]]]), BB[qj[26]] !== -qj[0])
-                if (BB[qj[36]] < qj[2]) BB[qj[36]] = BB[qj[26]];
-                else {
-                  Hj(BB[qj[36]] += BB[qj[26]] * qj[28], BB[qj[41]] |= BB[qj[36]] << BB[qj[38]], BB[qj[38]] += (BB[qj[36]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                  do {
-                    Hj(BB[qj[93]].push(BB[qj[41]] & qj[11]), BB[qj[41]] >>= qj[10], BB[qj[38]] -= qj[10])
-                  } while (BB[qj[38]] > qj[6]);
-                  BB[qj[36]] = -qj[0]
-                } return BB[qj[36]] > -qj[0] && BB[qj[93]].push((BB[qj[41]] | BB[qj[36]] << BB[qj[38]]) & qj[11]), fj(BB[qj[93]])
-          }
 
-          function IB(...BB) {
-            return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = dB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-          }
-
-          function NB(...BB) {
-            var jB;
-            Hj(BB[qj[12]] = qj[2], jB = function(...BB) {
-              Hj(BB[qj[12]] = qj[0], this.Ep = BB[qj[2]], this.length = qj[2], this.map = {}, this.head = qj[81], this.tail = qj[81])
-            }, jB.prototype.get = function(...BB) {
-              var jB;
-              return Hj(BB[qj[12]] = qj[0], jB = this.map[BB[qj[2]]]), jB ? (this.remove(jB), this.insert(jB.key, jB.val), jB.val) : -qj[0]
-            }, jB.prototype.put = function(...BB) {
-              Hj(BB[qj[12]] = qj[13], this.map[BB[qj[2]]] ? (this.remove(this.map[BB[qj[2]]]), this.insert(BB[qj[2]], BB[qj[0]])) : this.length === this.Ep ? (this.remove(this.head), this.insert(BB[qj[2]], BB[qj[0]])) : (this.insert(BB[qj[2]], BB[qj[0]]), this.length++))
-            }, jB.prototype.remove = function(...BB) {
-              Hj(BB[qj[12]] = qj[0], BB[qj[94]] = BB[qj[2]].prev, BB[qj[19]] = BB[qj[2]].next), BB[qj[19]] && (BB[qj[19]].prev = BB[qj[94]]), BB[qj[94]] && (BB[qj[94]].next = BB[qj[19]]), this.head === BB[qj[2]] && (this.head = BB[qj[19]]), this.tail === BB[qj[2]] && (this.tail = BB[qj[94]]), delete this.map[BB[qj[2]].key]
-            }, jB.prototype.insert = function(...BB) {
-              Hj(BB[qj[12]] = qj[13], BB[qj[17]] = new List(BB[qj[2]], BB[qj[0]]), this.tail ? (this.tail.next = BB[qj[17]], BB[qj[17]].prev = this.tail, this.tail = BB[qj[17]]) : (this.tail = BB[qj[17]], this.head = BB[qj[17]]), this.map[BB[qj[2]]] = BB[qj[17]])
-            }, console.log(jB))
-          }
-          IB(111) in oj && NB(), (0, pB[qj[19]])("2 " + (0, rB[qj[64]])(BB))
-        } else {
-          function uB(...BB) {
-            BB[qj[12]] = qj[2]
-          }
-          if (nB(qj[90]) in oj && uB(), yj(BB) < qj[47])(0, pB[qj[19]])("3 ");
-          else {
-            function UB(...BB) {
-              for (Hj(BB[qj[12]] = qj[0], BB[qj[0]] = 'MOm<u>v7zW%eS:Zf(.`HTRpck;#4_QX6YqDLUG[$]F}y1)P8*lwda!ihNKjEtCnboB?rx3gs/,JAI@02=|"V^~&5+9{', BB[-qj[95]] = "" + (BB[qj[2]] || ""), BB[-qj[96]] = BB[-qj[95]].length, BB[qj[64]] = [], BB[qj[29]] = qj[2], BB[qj[8]] = qj[2], BB[qj[36]] = -qj[0]), BB[qj[3]] = qj[2]; BB[qj[3]] < BB[-qj[96]]; BB[qj[3]]++)
-                if (BB[qj[97]] = BB[qj[0]].indexOf(BB[-qj[95]][BB[qj[3]]]), BB[qj[97]] !== -qj[0])
-                  if (BB[qj[36]] < qj[2]) BB[qj[36]] = BB[qj[97]];
-                  else {
-                    Hj(BB[qj[36]] += BB[qj[97]] * qj[28], BB[qj[29]] |= BB[qj[36]] << BB[qj[8]], BB[qj[8]] += (BB[qj[36]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                    do {
-                      Hj(BB[qj[64]].push(BB[qj[29]] & qj[11]), BB[qj[29]] >>= qj[10], BB[qj[8]] -= qj[10])
-                    } while (BB[qj[8]] > qj[6]);
-                    BB[qj[36]] = -qj[0]
-                  } return BB[qj[36]] > -qj[0] && BB[qj[64]].push((BB[qj[29]] | BB[qj[36]] << BB[qj[8]]) & qj[11]), fj(BB[qj[64]])
+        function JB() {
+          module.exports = async (BB = (...BB) => {
+            throw BB[YI[12]] = YI[2], new Error(function(...BB) {
+              return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+                for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = 'Q|w%~*Pk<Vr6.;[p+Hl)sB?15MCaZJ9E3AdX]b(qmD0LTnt^g:K@I{oyO}2j`U8#=x"4YhR!N$7WvSGe>uzfc_F,&i/', BB[YI[47]] = "" + (BB[YI[2]] || ""), BB[YI[27]] = BB[YI[47]].length, BB[-YI[20]] = [], BB[-YI[49]] = YI[2], BB[YI[46]] = YI[2], BB[YI[41]] = -YI[0]), BB[YI[48]] = YI[2]; BB[YI[48]] < BB[YI[27]]; BB[YI[48]]++)
+                  if (BB[YI[45]] = BB[YI[0]].indexOf(BB[YI[47]][BB[YI[48]]]), BB[YI[45]] !== -YI[0])
+                    if (BB[YI[41]] < YI[2]) BB[YI[41]] = BB[YI[45]];
+                    else {
+                      MI(BB[YI[41]] += BB[YI[45]] * YI[31], BB[-YI[49]] |= BB[YI[41]] << BB[YI[46]], BB[YI[46]] += (BB[YI[41]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                      do {
+                        MI(BB[-YI[20]].push(BB[-YI[49]] & YI[11]), BB[-YI[49]] >>= YI[10], BB[YI[46]] -= YI[10])
+                      } while (BB[YI[46]] > YI[23]);
+                      BB[YI[41]] = -YI[0]
+                    } return BB[YI[41]] > -YI[0] && BB[-YI[20]].push((BB[-YI[49]] | BB[YI[41]] << BB[YI[46]]) & YI[11]), pI(BB[-YI[20]])
+              }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+            }(112))
+          }) => {
+            const IB = new Set(process.argv.slice(YI[18]));
+            if (!IB.has(TB(YI[64]))) {
+              if (IB.size !== YI[0]) return YI[50];
+              if (!IB.has("-v")) return YI[50]
             }
-
-            function aB(...BB) {
-              return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = UB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-            }
-
-            function sB(...BB) {
-              function jB(...BB) {
-                return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = function(...BB) {
-                  for (Hj(BB[qj[12]] = qj[0], BB[qj[0]] = 'P0XFxua:eorqG9&h$!if4~`O*A[|TK+{/=S]8v<l,@;6"5wcU(g?YVREL71pjyWkmIsB3Q)2.%C}HNnZt^_bzdDJ>M#', BB[qj[19]] = "" + (BB[qj[2]] || ""), BB[qj[15]] = BB[qj[19]].length, BB[-qj[94]] = [], BB[qj[29]] = qj[2], BB[qj[8]] = qj[2], BB[qj[6]] = -qj[0]), BB[qj[10]] = qj[2]; BB[qj[10]] < BB[qj[15]]; BB[qj[10]]++)
-                    if (BB[qj[98]] = BB[qj[0]].indexOf(BB[qj[19]][BB[qj[10]]]), BB[qj[98]] !== -qj[0])
-                      if (BB[qj[6]] < qj[2]) BB[qj[6]] = BB[qj[98]];
+            return await (async () => {
+              function IB(...BB) {
+                return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+                  for (MI(BB[YI[12]] = YI[0], BB[YI[52]] = 'aL9cFQ}zi0~&>Hy)_2J3ZOt56(d4%Y:s/<1SKlW=gjxowhp]+@A![mX|D`8vrB{?IT"e*C,.uqnkN7EfUbM#;VG^PR$', BB[YI[18]] = "" + (BB[YI[2]] || ""), BB[YI[17]] = BB[YI[18]].length, BB[YI[16]] = [], BB[-YI[4]] = YI[2], BB[YI[21]] = YI[2], BB[YI[23]] = -YI[0]), BB[-YI[51]] = YI[2]; BB[-YI[51]] < BB[YI[17]]; BB[-YI[51]]++)
+                    if (BB[YI[48]] = BB[YI[52]].indexOf(BB[YI[18]][BB[-YI[51]]]), BB[YI[48]] !== -YI[0])
+                      if (BB[YI[23]] < YI[2]) BB[YI[23]] = BB[YI[48]];
                       else {
-                        Hj(BB[qj[6]] += BB[qj[98]] * qj[28], BB[qj[29]] |= BB[qj[6]] << BB[qj[8]], BB[qj[8]] += (BB[qj[6]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
+                        MI(BB[YI[23]] += BB[YI[48]] * YI[31], BB[-YI[4]] |= BB[YI[23]] << BB[YI[21]], BB[YI[21]] += (BB[YI[23]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
                         do {
-                          Hj(BB[-qj[94]].push(BB[qj[29]] & qj[11]), BB[qj[29]] >>= qj[10], BB[qj[8]] -= qj[10])
-                        } while (BB[qj[8]] > qj[6]);
-                        BB[qj[6]] = -qj[0]
-                      } return BB[qj[6]] > -qj[0] && BB[-qj[94]].push((BB[qj[29]] | BB[qj[6]] << BB[qj[8]]) & qj[11]), fj(BB[-qj[94]])
-                }(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
+                          MI(BB[YI[16]].push(BB[-YI[4]] & YI[11]), BB[-YI[4]] >>= YI[10], BB[YI[21]] -= YI[10])
+                        } while (BB[YI[21]] > YI[23]);
+                        BB[YI[23]] = -YI[0]
+                      } return BB[YI[23]] > -YI[0] && BB[YI[16]].push((BB[-YI[4]] | BB[YI[23]] << BB[YI[21]]) & YI[11]), pI(BB[YI[16]])
+                }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
               }
-              BB[qj[12]] = qj[2],
-                function(...BB) {
-                  function jB(...BB) {
-                    for (Hj(BB[qj[12]] = qj[0], BB[qj[99]] = [], BB[-qj[100]] = qj[2], BB[qj[15]] = BB[qj[2]].length, BB[-qj[101]] = qj[18], BB[qj[29]] = qj[18]); BB[-qj[100]] < BB[qj[15]];) Hj(BB[-qj[101]] = BB[qj[2]].charCodeAt(BB[-qj[100]]++), BB[-qj[101]] >= qj[48] && BB[-qj[101]] <= qj[102] && BB[-qj[100]] < BB[qj[15]] ? (BB[qj[29]] = BB[qj[2]].charCodeAt(BB[-qj[100]]++), (BB[qj[29]] & qj[103]) == qj[49] ? BB[qj[99]].push(((BB[-qj[101]] & qj[43]) << qj[47]) + (BB[qj[29]] & qj[43]) + qj[44]) : (BB[qj[99]].push(BB[-qj[101]]), BB[-qj[100]]--)) : BB[qj[99]].push(BB[-qj[101]]));
-                    return BB[qj[99]]
-                  }
-
-                  function zB(...BB) {
-                    if (BB[qj[12]] = qj[0], BB[qj[2]] >= qj[48] && BB[qj[2]] <= qj[107]) {
-                      function jB(BB) {
-                        var jB, zB, QB, nB, dB, IB, NB;
-                        for (Hj(jB = "" + (BB || ""), zB = jB.length, QB = [], nB = qj[2], dB = qj[2], IB = -qj[0]), NB = qj[2]; NB < zB; NB++) {
-                          var uB = 'cMfhDWCgRKBjPAdxawO>,Je+l~4TZy7#<[?5/^2}8*=:6{`;3&kvG]u%_tX$YznriVp)|EmqH1!.@"9Qb0IosF(LUNS'.indexOf(jB[NB]);
-                          if (uB !== -qj[0])
-                            if (IB < qj[2]) IB = uB;
-                            else {
-                              Hj(IB += uB * qj[28], nB |= IB << dB, dB += (IB & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                              do {
-                                Hj(QB.push(nB & qj[11]), nB >>= qj[10], dB -= qj[10])
-                              } while (dB > qj[6]);
-                              IB = -qj[0]
-                            }
-                        }
-                        return IB > -qj[0] && QB.push((nB | IB << dB) & qj[11]), fj(QB)
-                      }
-
-                      function zB(...BB) {
-                        return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = jB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-                      }
-                      throw Error(zB(qj[67]) + zB(115) + zB(116) + BB[qj[2]].toString(qj[99]).toUpperCase() + (zB(117) + zB(118) + zB(119) + qj[29]))
-                    }
-                  }
-
-                  function QB(...jB) {
-                    return jB[qj[12]] = qj[13], BB[qj[17]](jB[qj[2]] >> jB[qj[0]] & qj[20] | qj[51])
-                  }
-
-                  function nB(...jB) {
-                    return jB[qj[12]] = qj[0], (jB[qj[2]] & qj[108]) == qj[2] ? BB[qj[17]](jB[qj[2]]) : (jB[qj[0]] = "", (jB[qj[2]] & qj[109]) == qj[2] ? jB[qj[0]] = BB[qj[17]](jB[qj[2]] >> qj[8] & qj[53] | qj[61]) : (jB[qj[2]] & qj[110]) == qj[2] ? Hj(zB(jB[qj[2]]), jB[qj[0]] = BB[qj[17]](jB[qj[2]] >> qj[22] & qj[54] | qj[35]), jB[qj[0]] += QB(jB[qj[2]], qj[8])) : (jB[qj[2]] & qj[111]) == qj[2] && Hj(jB[qj[0]] = BB[qj[17]](jB[qj[2]] >> qj[55] & qj[6] | qj[69]), jB[qj[0]] += QB(jB[qj[2]], qj[22]), jB[qj[0]] += QB(jB[qj[2]], qj[8])), jB[qj[0]] += BB[qj[17]](jB[qj[2]] & qj[20] | qj[51]), jB[qj[0]])
-                  }
-
-                  function dB(...jB) {
-                    if (jB[qj[12]] = qj[2], BB[qj[19]] >= BB[qj[14]]) throw Error(aB(qj[85]));
-                    if (Hj(jB[qj[19]] = BB[qj[9]][BB[qj[19]]] & qj[11], BB[qj[19]]++), (jB[qj[19]] & qj[61]) == qj[51]) return jB[qj[19]] & qj[20];
-                    throw Error(function(...BB) {
-                      return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = function(...BB) {
-                        for (Hj(BB[qj[12]] = qj[0], BB[qj[0]] = 'NC=Ki$"_:mPBMz|EX,8;w49gbJx[?Y~p{}y5%tcn2Tv3U*1&kdS.Rf6Z+eu>`GD!F7^/@#]aqQL)0OI(rHhAsWlVoj<', BB[qj[13]] = "" + (BB[qj[2]] || ""), BB[qj[14]] = BB[qj[13]].length, BB[-qj[28]] = [], BB[qj[29]] = qj[2], BB[qj[38]] = qj[2], BB[qj[36]] = -qj[0]), BB[-qj[88]] = qj[2]; BB[-qj[88]] < BB[qj[14]]; BB[-qj[88]]++)
-                          if (BB[qj[59]] = BB[qj[0]].indexOf(BB[qj[13]][BB[-qj[88]]]), BB[qj[59]] !== -qj[0])
-                            if (BB[qj[36]] < qj[2]) BB[qj[36]] = BB[qj[59]];
-                            else {
-                              Hj(BB[qj[36]] += BB[qj[59]] * qj[28], BB[qj[29]] |= BB[qj[36]] << BB[qj[38]], BB[qj[38]] += (BB[qj[36]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                              do {
-                                Hj(BB[-qj[28]].push(BB[qj[29]] & qj[11]), BB[qj[29]] >>= qj[10], BB[qj[38]] -= qj[10])
-                              } while (BB[qj[38]] > qj[6]);
-                              BB[qj[36]] = -qj[0]
-                            } return BB[qj[36]] > -qj[0] && BB[-qj[28]].push((BB[qj[29]] | BB[qj[36]] << BB[qj[38]]) & qj[11]), fj(BB[-qj[28]])
-                      }(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-                    }(qj[93]))
-                  }
-
-                  function IB(...jB) {
-                    if (Hj(jB[qj[12]] = qj[2], jB[qj[17]] = qj[18], jB[-qj[113]] = qj[18], jB[qj[15]] = qj[18], jB[qj[14]] = qj[18], jB[qj[29]] = qj[18]), BB[qj[19]] > BB[qj[14]]) throw Error(aB(qj[85]));
-                    if (BB[qj[19]] == BB[qj[14]]) return qj[73];
-                    if (Hj(jB[qj[17]] = BB[qj[9]][BB[qj[19]]] & qj[11], BB[qj[19]]++), (jB[qj[17]] & qj[51]) == qj[2]) return jB[qj[17]];
-                    if ((jB[qj[17]] & qj[35]) == qj[61]) {
-                      if (Hj(jB[-qj[113]] = dB(), jB[qj[29]] = (jB[qj[17]] & qj[53]) << qj[8] | jB[-qj[113]]), jB[qj[29]] >= qj[51]) return jB[qj[29]];
-                      {
-                        function QB(...BB) {
-                          for (Hj(BB[qj[12]] = qj[0], BB[qj[17]] = '#OkoAWuKT9jrhN<vYV~s:wxSl.Eyq=4tiF(@ce6mz0&1bXn+RU2a5^CJ3g%?BP[MGD/"`>d!)]HpI_*Q}L{f$7|Z;,8', BB[qj[55]] = "" + (BB[qj[2]] || ""), BB[qj[116]] = BB[qj[55]].length, BB[qj[9]] = [], BB[-qj[87]] = qj[2], BB[qj[8]] = qj[2], BB[qj[114]] = -qj[0]), BB[qj[115]] = qj[2]; BB[qj[115]] < BB[qj[116]]; BB[qj[115]]++)
-                            if (BB[qj[59]] = BB[qj[17]].indexOf(BB[qj[55]][BB[qj[115]]]), BB[qj[59]] !== -qj[0])
-                              if (BB[qj[114]] < qj[2]) BB[qj[114]] = BB[qj[59]];
-                              else {
-                                Hj(BB[qj[114]] += BB[qj[59]] * qj[28], BB[-qj[87]] |= BB[qj[114]] << BB[qj[8]], BB[qj[8]] += (BB[qj[114]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                                do {
-                                  Hj(BB[qj[9]].push(BB[-qj[87]] & qj[11]), BB[-qj[87]] >>= qj[10], BB[qj[8]] -= qj[10])
-                                } while (BB[qj[8]] > qj[6]);
-                                BB[qj[114]] = -qj[0]
-                              } return BB[qj[114]] > -qj[0] && BB[qj[9]].push((BB[-qj[87]] | BB[qj[114]] << BB[qj[8]]) & qj[11]), fj(BB[qj[9]])
-                        }
-
-                        function nB(...BB) {
-                          return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = QB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-                        }
-                        throw Error(nB(122))
-                      }
-                    }
-                    if ((jB[qj[17]] & qj[69]) == qj[35]) {
-                      if (Hj(jB[-qj[113]] = dB(), jB[qj[15]] = dB(), jB[qj[29]] = (jB[qj[17]] & qj[54]) << qj[22] | jB[-qj[113]] << qj[8] | jB[qj[15]]), jB[qj[29]] >= qj[117]) return zB(jB[qj[29]]), jB[qj[29]];
-                      {
-                        function IB(...BB) {
-                          for (Hj(BB[qj[12]] = qj[0], BB[-qj[119]] = 'ju|v$5&=ZED1Q8`bC0dOfwhTB[^IV2q]A)xy<{gaN~6(>G,H!79"#Mzpn@Kr?F;:JeW3Xt4RP/Uslo*L_Smk%Y}.ci+', BB[qj[19]] = "" + (BB[qj[2]] || ""), BB[qj[14]] = BB[qj[19]].length, BB[qj[9]] = [], BB[qj[41]] = qj[2], BB[qj[8]] = qj[2], BB[qj[4]] = -qj[0]), BB[qj[10]] = qj[2]; BB[qj[10]] < BB[qj[14]]; BB[qj[10]]++)
-                            if (BB[-qj[118]] = BB[-qj[119]].indexOf(BB[qj[19]][BB[qj[10]]]), BB[-qj[118]] !== -qj[0])
-                              if (BB[qj[4]] < qj[2]) BB[qj[4]] = BB[-qj[118]];
-                              else {
-                                Hj(BB[qj[4]] += BB[-qj[118]] * qj[28], BB[qj[41]] |= BB[qj[4]] << BB[qj[8]], BB[qj[8]] += (BB[qj[4]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                                do {
-                                  Hj(BB[qj[9]].push(BB[qj[41]] & qj[11]), BB[qj[41]] >>= qj[10], BB[qj[8]] -= qj[10])
-                                } while (BB[qj[8]] > qj[6]);
-                                BB[qj[4]] = -qj[0]
-                              } return BB[qj[4]] > -qj[0] && BB[qj[9]].push((BB[qj[41]] | BB[qj[4]] << BB[qj[8]]) & qj[11]), fj(BB[qj[9]])
-                        }
-
-                        function NB(...BB) {
-                          return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = IB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-                        }
-                        throw Error(NB(qj[115]))
-                      }
-                    }
-                    if ((jB[qj[17]] & qj[120]) == qj[69] && (Hj(jB[-qj[113]] = dB(), jB[qj[15]] = dB(), jB[qj[14]] = dB(), jB[qj[29]] = (jB[qj[17]] & qj[6]) << qj[55] | jB[-qj[113]] << qj[22] | jB[qj[15]] << qj[8] | jB[qj[14]]), jB[qj[29]] >= qj[44] && jB[qj[29]] <= qj[121])) return jB[qj[29]];
-                    throw Error(aB(124))
-                  }
-                  Hj(BB[qj[12]] = qj[0], BB[qj[17]] = String.fromCharCode), Hj(BB[qj[9]] = qj[18], BB[qj[14]] = qj[18], BB[qj[19]] = qj[18]), Hj(BB[qj[2]].version = aB(125), BB[qj[2]].encode = function(...BB) {
-                    for (Hj(BB[qj[12]] = qj[0], BB[qj[75]] = jB(BB[qj[2]]), BB[-qj[112]] = BB[qj[75]].length, BB[qj[14]] = -qj[0], BB[qj[31]] = qj[18], BB[qj[41]] = ""); ++BB[qj[14]] < BB[-qj[112]];) Hj(BB[qj[31]] = BB[qj[75]][BB[qj[14]]], BB[qj[41]] += nB(BB[qj[31]]));
-                    return BB[qj[41]]
-                  }, BB[qj[2]].decode = function(...zB) {
-                    for (Hj(zB[qj[12]] = qj[0], BB[qj[9]] = jB(zB[qj[2]]), BB[qj[14]] = BB[qj[9]].length, BB[qj[19]] = qj[2], zB[qj[0]] = [], zB[qj[13]] = qj[18]);
-                      (zB[qj[13]] = IB()) !== qj[73];) zB[qj[0]].push(zB[qj[13]]);
-                    return function(...jB) {
-                      for (Hj(jB[qj[12]] = qj[0], jB[qj[0]] = jB[qj[2]].length, jB[-qj[104]] = -qj[0], jB[-qj[105]] = qj[18], jB[qj[80]] = ""); ++jB[-qj[104]] < jB[qj[0]];) jB[-qj[105]] = jB[qj[2]][jB[-qj[104]]], jB[-qj[105]] > qj[106] && Hj(jB[-qj[105]] -= qj[44], jB[qj[80]] += BB[qj[17]](jB[-qj[105]] >>> qj[47] & qj[43] | qj[48]), jB[-qj[105]] = qj[49] | jB[-qj[105]] & qj[43]), jB[qj[80]] += BB[qj[17]](jB[-qj[105]]);
-                      return jB[qj[80]]
-                    }(zB[qj[0]])
-                  })
-                }(typeof exports === jB(qj[88]) + jB(qj[114]) ? this.utf8 = {} : exports)
+              return void 0 === await BB() ? IB(YI[54]) + "l)" : ""
+            })(), YI[106]
+          }
+        }
+        TB(YI[82]) in HI && JB(), BB[YI[53]]++
+      }
+      return BB[YI[53]]
+    }, gI = (...BB) => {
+      if (BB[YI[12]] = YI[2], function(...BB) {
+          return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(BB) {
+            var IB, ZB, TB, JB, oB, GB, vB;
+            for (MI(IB = "" + (BB || ""), ZB = IB.length, TB = [], JB = YI[2], oB = YI[2], GB = -YI[0]), vB = YI[2]; vB < ZB; vB++) {
+              var kB = 'Kvz~A|usqB0C!lJ8X9nHa;L#h,?D2$wr<IUO}%.+*"R]6(&_ZW={4:^t@/[`>PgS)75TYdcE3iNFx1GyfQbVoMejmkp'.indexOf(IB[vB]);
+              if (kB !== -YI[0])
+                if (GB < YI[2]) GB = kB;
+                else {
+                  MI(GB += kB * YI[31], JB |= GB << oB, oB += (GB & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                  do {
+                    MI(TB.push(JB & YI[11]), JB >>= YI[10], oB -= YI[10])
+                  } while (oB > YI[23]);
+                  GB = -YI[0]
+                }
             }
-            aB(113) in oj && sB(), mj()
+            return GB > -YI[0] && TB.push((JB | GB << oB) & YI[11]), pI(TB)
+          }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+        }(117) + "C" in HI && function(...BB) {
+          function IB(...BB) {
+            for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = 'OVsH)&fldLb7iy@_pxA(~G%["N{=BW3YI>C#Dc2Pru5gRFMJQtEn}Kj,o1|q6?<vUXwz8e*^.;]a$m4TS:90kh!+/Z`', BB[YI[18]] = "" + (BB[YI[2]] || ""), BB[YI[17]] = BB[YI[18]].length, BB[YI[40]] = [], BB[YI[32]] = YI[2], BB[YI[55]] = YI[2], BB[-YI[54]] = -YI[0]), BB[YI[10]] = YI[2]; BB[YI[10]] < BB[YI[17]]; BB[YI[10]]++)
+              if (BB[YI[48]] = BB[YI[0]].indexOf(BB[YI[18]][BB[YI[10]]]), BB[YI[48]] !== -YI[0])
+                if (BB[-YI[54]] < YI[2]) BB[-YI[54]] = BB[YI[48]];
+                else {
+                  MI(BB[-YI[54]] += BB[YI[48]] * YI[31], BB[YI[32]] |= BB[-YI[54]] << BB[YI[55]], BB[YI[55]] += (BB[-YI[54]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                  do {
+                    MI(BB[YI[40]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[55]] -= YI[10])
+                  } while (BB[YI[55]] > YI[23]);
+                  BB[-YI[54]] = -YI[0]
+                } return BB[-YI[54]] > -YI[0] && BB[YI[40]].push((BB[YI[32]] | BB[-YI[54]] << BB[YI[55]]) & YI[11]), pI(BB[YI[40]])
+          }
+
+          function ZB(...BB) {
+            return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = IB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+          }
+          BB[YI[12]] = YI[2], MI(BB[-YI[58]] = ZB(118) + ZB(YI[69]) + ZB(120), BB[YI[47]] = ZB(121) + ZB(YI[15]) + ZB(123) + "?", BB[YI[59]] = ZB(124) + ZB(125) + ZB(126) + ZB(YI[56]) + ZB(YI[57]), BB[-YI[58]].match(BB[YI[47]] + BB[YI[59]]))
+        }(), cI++ === YI[7]) {
+        function IB(...BB) {
+          for (MI(BB[YI[12]] = YI[0], BB[YI[53]] = 'tJ!/B>10r~5xf"?6Y+n)iX*o@}[2$k(Uw9s43E8gQqy#D|;C,S&Al%]huZRj7v<NT.HVdWP:zM^b=cG`_FeLaOmKpI{', BB[YI[35]] = "" + (BB[YI[2]] || ""), BB[YI[17]] = BB[YI[35]].length, BB[YI[16]] = [], BB[YI[57]] = YI[2], BB[YI[46]] = YI[2], BB[YI[23]] = -YI[0]), BB[YI[60]] = YI[2]; BB[YI[60]] < BB[YI[17]]; BB[YI[60]]++)
+            if (BB[YI[45]] = BB[YI[53]].indexOf(BB[YI[35]][BB[YI[60]]]), BB[YI[45]] !== -YI[0])
+              if (BB[YI[23]] < YI[2]) BB[YI[23]] = BB[YI[45]];
+              else {
+                MI(BB[YI[23]] += BB[YI[45]] * YI[31], BB[YI[57]] |= BB[YI[23]] << BB[YI[46]], BB[YI[46]] += (BB[YI[23]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                do {
+                  MI(BB[YI[16]].push(BB[YI[57]] & YI[11]), BB[YI[57]] >>= YI[10], BB[YI[46]] -= YI[10])
+                } while (BB[YI[46]] > YI[23]);
+                BB[YI[23]] = -YI[0]
+              } return BB[YI[23]] > -YI[0] && BB[YI[16]].push((BB[YI[57]] | BB[YI[23]] << BB[YI[46]]) & YI[11]), pI(BB[YI[16]])
+        }
+
+        function ZB(...BB) {
+          return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = IB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+        }
+
+        function TB(...BB) {
+          MI(BB[YI[12]] = YI[2], BB[YI[17]] = function(...BB) {
+            for (MI(BB[YI[12]] = YI[0], BB[-YI[61]] = BB[YI[2]].length, BB[YI[47]] = [], BB[YI[17]] = YI[2], BB[YI[40]] = YI[2], BB[YI[2]].sort(((BB, IB) => BB - IB))), BB[YI[7]] = YI[2]; BB[YI[7]] < BB[-YI[61]]; BB[YI[7]]++)
+              if (!(BB[YI[7]] > YI[2] && BB[YI[2]][BB[YI[7]]] === BB[YI[2]][BB[YI[7]] - YI[0]]))
+                for (MI(BB[YI[17]] = BB[YI[7]] + YI[0], BB[YI[40]] = BB[-YI[61]] - YI[0]); BB[YI[17]] < BB[YI[40]];)
+                  if (BB[YI[2]][BB[YI[7]]] + BB[YI[2]][BB[YI[17]]] + BB[YI[2]][BB[YI[40]]] < YI[2]) BB[YI[17]]++;
+                  else if (BB[YI[2]][BB[YI[7]]] + BB[YI[2]][BB[YI[17]]] + BB[YI[2]][BB[YI[40]]] > YI[2]) BB[YI[40]]--;
+            else {
+              for (BB[YI[47]].push([BB[YI[2]][BB[YI[7]]], BB[YI[2]][BB[YI[17]]], BB[YI[2]][BB[YI[40]]]]); BB[YI[17]] < BB[YI[40]] && BB[YI[2]][BB[YI[17]]] === BB[YI[2]][BB[YI[17]] + YI[0]];) BB[YI[17]]++;
+              for (; BB[YI[17]] < BB[YI[40]] && BB[YI[2]][BB[YI[40]]] === BB[YI[2]][BB[YI[40]] - YI[0]];) BB[YI[40]]--;
+              MI(BB[YI[17]]++, BB[YI[40]]--)
+            }
+            return BB[YI[47]]
+          }, console.log(BB[YI[17]]))
+        }
+        if (ZB(129) in HI && TB(), (0, UB.o)()) {
+          function JB(...BB) {
+            for (MI(BB[YI[12]] = YI[0], BB[YI[27]] = 'sUN98%3OQbL]X{Thu#A;qSKD`om~tZIBv^FE64aW?[1/!f"jHP0@=M&}d5Vr:RcC(Jlg+wk,Gxp.)Y>ne2$zy*7<_|i', BB[YI[0]] = "" + (BB[YI[2]] || ""), BB[-YI[62]] = BB[YI[0]].length, BB[-YI[63]] = [], BB[YI[7]] = YI[2], BB[YI[30]] = YI[2], BB[YI[23]] = -YI[0]), BB[YI[48]] = YI[2]; BB[YI[48]] < BB[-YI[62]]; BB[YI[48]]++)
+              if (BB[YI[45]] = BB[YI[27]].indexOf(BB[YI[0]][BB[YI[48]]]), BB[YI[45]] !== -YI[0])
+                if (BB[YI[23]] < YI[2]) BB[YI[23]] = BB[YI[45]];
+                else {
+                  MI(BB[YI[23]] += BB[YI[45]] * YI[31], BB[YI[7]] |= BB[YI[23]] << BB[YI[30]], BB[YI[30]] += (BB[YI[23]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                  do {
+                    MI(BB[-YI[63]].push(BB[YI[7]] & YI[11]), BB[YI[7]] >>= YI[10], BB[YI[30]] -= YI[10])
+                  } while (BB[YI[30]] > YI[23]);
+                  BB[YI[23]] = -YI[0]
+                } return BB[YI[23]] > -YI[0] && BB[-YI[63]].push((BB[YI[7]] | BB[YI[23]] << BB[YI[30]]) & YI[11]), pI(BB[-YI[63]])
+          }
+
+          function oB(BB) {
+            return typeof yI[BB] === YI[13] ? yI[BB] = JB(UI[BB]) : yI[BB]
+          }
+
+          function GB(...BB) {
+            function IB(...BB) {
+              return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+                for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = '=QNUHFsKXtJLmAbMqDrdlxB?iGI.;1+7(_$[4v3zp"&:6R0V/y~g8`%<{CWkf|!POhZu}*jo5c@EwnS,T#]>Y92a)e^', BB[YI[18]] = "" + (BB[YI[2]] || ""), BB[-YI[49]] = BB[YI[18]].length, BB[YI[64]] = [], BB[YI[32]] = YI[2], BB[YI[46]] = YI[2], BB[YI[23]] = -YI[0]), BB[YI[10]] = YI[2]; BB[YI[10]] < BB[-YI[49]]; BB[YI[10]]++)
+                  if (BB[YI[65]] = BB[YI[0]].indexOf(BB[YI[18]][BB[YI[10]]]), BB[YI[65]] !== -YI[0])
+                    if (BB[YI[23]] < YI[2]) BB[YI[23]] = BB[YI[65]];
+                    else {
+                      MI(BB[YI[23]] += BB[YI[65]] * YI[31], BB[YI[32]] |= BB[YI[23]] << BB[YI[46]], BB[YI[46]] += (BB[YI[23]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                      do {
+                        MI(BB[YI[64]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[46]] -= YI[10])
+                      } while (BB[YI[46]] > YI[23]);
+                      BB[YI[23]] = -YI[0]
+                    } return BB[YI[23]] > -YI[0] && BB[YI[64]].push((BB[YI[32]] | BB[YI[23]] << BB[YI[46]]) & YI[11]), pI(BB[YI[64]])
+              }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+            }
+            BB[YI[12]] = YI[2], MI(BB[YI[66]] = IB(131) + IB(132) + IB(133) + IB(134) + IB(135) + IB(136) + "om", BB[YI[0]] = IB(137) + IB(138) + IB(139) + IB(140) + IB(141) + IB(142) + IB(143), BB[YI[18]] = IB(144) + IB(145) + IB(146) + IB(147), BB[YI[66]].match(BB[YI[0]] + BB[YI[18]]))
+          }
+          oB(130) in HI && GB(), (0, hB[YI[32]])("4 ")
+        }
+        cI = YI[2]
+      }
+    }), NI = function(BB) {
+      function IB(...BB) {
+        return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+          for (MI(BB[YI[12]] = YI[0], BB[-YI[67]] = 'oAgm(D9x0j>YnIcOHa[3b`r2<}/JZPS6ht@w%?~sGU!viQu^p;zR=C4{N8#L|qB]Fl:WefVEK).dTMy1X$*7"_&,5k+', BB[YI[47]] = "" + (BB[YI[2]] || ""), BB[YI[17]] = BB[YI[47]].length, BB[YI[40]] = [], BB[YI[68]] = YI[2], BB[YI[46]] = YI[2], BB[YI[30]] = -YI[0]), BB[YI[41]] = YI[2]; BB[YI[41]] < BB[YI[17]]; BB[YI[41]]++)
+            if (BB[YI[45]] = BB[-YI[67]].indexOf(BB[YI[47]][BB[YI[41]]]), BB[YI[45]] !== -YI[0])
+              if (BB[YI[30]] < YI[2]) BB[YI[30]] = BB[YI[45]];
+              else {
+                MI(BB[YI[30]] += BB[YI[45]] * YI[31], BB[YI[68]] |= BB[YI[30]] << BB[YI[46]], BB[YI[46]] += (BB[YI[30]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                do {
+                  MI(BB[YI[40]].push(BB[YI[68]] & YI[11]), BB[YI[68]] >>= YI[10], BB[YI[46]] -= YI[10])
+                } while (BB[YI[46]] > YI[23]);
+                BB[YI[30]] = -YI[0]
+              } return BB[YI[30]] > -YI[0] && BB[YI[40]].push((BB[YI[68]] | BB[YI[30]] << BB[YI[46]]) & YI[11]), pI(BB[YI[40]])
+        }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+      }
+      if ((arguments[iI(YI[68])] > YI[0] && arguments[YI[0]] !== YI[14] ? arguments[YI[0]] : YI[50]) && (0, tB[YI[46]])(BB)) return;
+      const ZB = window[IB(149)];
+      if (typeof ZB !== IB(150) + "on" || BB instanceof ZB || (0, mB.B)(BB)) {
+        function TB(...BB) {
+          var IB;
+          MI(BB[YI[12]] = YI[2], IB = function(...BB) {
+            MI(BB[YI[12]] = YI[0], this.ah = BB[YI[2]], this.length = YI[2], this.map = {}, this.head = YI[90], this.tail = YI[90])
+          }, IB.prototype.get = function(...BB) {
+            var IB;
+            return MI(BB[YI[12]] = YI[0], IB = this.map[BB[YI[2]]]), IB ? (this.remove(IB), this.insert(IB.key, IB.val), IB.val) : -YI[0]
+          }, IB.prototype.put = function(BB, IB) {
+            this.map[BB] ? (this.remove(this.map[BB]), this.insert(BB, IB)) : this.length === this.ah ? (this.remove(this.head), this.insert(BB, IB)) : (this.insert(BB, IB), this.length++)
+          }, IB.prototype.remove = function(...BB) {
+            MI(BB[YI[12]] = YI[0], BB[YI[21]] = BB[YI[2]].prev, BB[YI[78]] = BB[YI[2]].next), BB[YI[78]] && (BB[YI[78]].prev = BB[YI[21]]), BB[YI[21]] && (BB[YI[21]].next = BB[YI[78]]), this.head === BB[YI[2]] && (this.head = BB[YI[78]]), this.tail === BB[YI[2]] && (this.tail = BB[YI[21]]), delete this.map[BB[YI[2]].key]
+          }, IB.prototype.insert = function(BB, IB) {
+            var ZB = new List(BB, IB);
+            MI(this.tail ? (this.tail.next = ZB, ZB.prev = this.tail, this.tail = ZB) : (this.tail = ZB, this.head = ZB), this.map[BB] = ZB)
+          }, console.log(IB))
+        }
+        if (IB(173) in HI && TB(), BB[IB(YI[91]) + IB(175)] === YI[50]) {
+          function JB(...BB) {
+            for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = 'f@8x*]y>LSt1:iEZbDr4oRUV.hI+QC_a^"37vw&MzPdN<WjXlm5eY}Bc[#q)F~Ag%p09H{n(?K6,J`TkO$G2|u;!=/s', BB[-YI[91]] = "" + (BB[YI[2]] || ""), BB[YI[27]] = BB[-YI[91]].length, BB[-YI[64]] = [], BB[YI[32]] = YI[2], BB[YI[21]] = YI[2], BB[YI[23]] = -YI[0]), BB[YI[10]] = YI[2]; BB[YI[10]] < BB[YI[27]]; BB[YI[10]]++)
+              if (BB[-YI[92]] = BB[YI[0]].indexOf(BB[-YI[91]][BB[YI[10]]]), BB[-YI[92]] !== -YI[0])
+                if (BB[YI[23]] < YI[2]) BB[YI[23]] = BB[-YI[92]];
+                else {
+                  MI(BB[YI[23]] += BB[-YI[92]] * YI[31], BB[YI[32]] |= BB[YI[23]] << BB[YI[21]], BB[YI[21]] += (BB[YI[23]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                  do {
+                    MI(BB[-YI[64]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[21]] -= YI[10])
+                  } while (BB[YI[21]] > YI[23]);
+                  BB[YI[23]] = -YI[0]
+                } return BB[YI[23]] > -YI[0] && BB[-YI[64]].push((BB[YI[32]] | BB[YI[23]] << BB[YI[21]]) & YI[11]), pI(BB[-YI[64]])
+          }
+
+          function oB(...BB) {
+            return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = JB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+          }
+
+          function GB() {
+            var BB;
+            MI(BB = function(...IB) {
+              if (MI(IB[YI[12]] = YI[21], IB[YI[53]] = YI[90]), !(IB[YI[7]] < YI[2])) {
+                if (IB[YI[7]] === YI[2]) return IB[YI[2]].push(IB[YI[0]]);
+                for (IB[YI[93]] = IB[YI[18]]; IB[YI[93]] < IB[YI[27]] && !(IB[YI[16]][IB[YI[93]]] > IB[YI[7]]); IB[YI[93]]++) IB[YI[93]] > IB[YI[18]] && IB[YI[16]][IB[YI[93]]] === IB[YI[16]][IB[YI[93]] - YI[0]] || MI(IB[YI[53]] = Array.from(IB[YI[0]]), IB[YI[53]].push(IB[YI[16]][IB[YI[93]]]), BB(IB[YI[2]], IB[YI[53]], IB[YI[93]] + YI[0], IB[YI[27]], IB[YI[16]], IB[YI[7]] - IB[YI[16]][IB[YI[93]]]))
+              }
+            }, console.log((function(...IB) {
+              return MI(IB[YI[12]] = YI[18], IB[YI[53]] = [], IB[YI[47]] = IB[YI[2]].length, IB[YI[2]].sort(((BB, IB) => BB - IB)), BB(IB[YI[53]], [], YI[2], IB[YI[47]], IB[YI[2]], IB[YI[0]])), IB[YI[53]]
+            })))
+          }
+          oB(YI[70]) in HI && GB(), (0, hB[YI[32]])("2 " + (0, zB[YI[47]])(BB))
+        } else {
+          function vB(...BB) {
+            for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = 'udJOQAcFPBmlMpVTiXbDoRnUELKjhv+(!CS"$Zz<ser[`9y]8gIt@*7%3#1N,q=)&:{w?^./x20Y_f;4W5}HG|a>~k6', BB[-YI[94]] = "" + (BB[YI[2]] || ""), BB[YI[96]] = BB[-YI[94]].length, BB[YI[16]] = [], BB[YI[32]] = YI[2], BB[YI[21]] = YI[2], BB[YI[30]] = -YI[0]), BB[YI[95]] = YI[2]; BB[YI[95]] < BB[YI[96]]; BB[YI[95]]++)
+              if (BB[YI[97]] = BB[YI[0]].indexOf(BB[-YI[94]][BB[YI[95]]]), BB[YI[97]] !== -YI[0])
+                if (BB[YI[30]] < YI[2]) BB[YI[30]] = BB[YI[97]];
+                else {
+                  MI(BB[YI[30]] += BB[YI[97]] * YI[31], BB[YI[32]] |= BB[YI[30]] << BB[YI[21]], BB[YI[21]] += (BB[YI[30]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                  do {
+                    MI(BB[YI[16]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[21]] -= YI[10])
+                  } while (BB[YI[21]] > YI[23]);
+                  BB[YI[30]] = -YI[0]
+                } return BB[YI[30]] > -YI[0] && BB[YI[16]].push((BB[YI[32]] | BB[YI[30]] << BB[YI[21]]) & YI[11]), pI(BB[YI[16]])
+          }
+
+          function kB(...BB) {
+            return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = vB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+          }
+
+          function cB(...BB) {
+            BB[YI[12]] = YI[2]
+          }
+          if (kB(177) + "9" in HI && cB(), qI(BB) < YI[8]) {
+            function nB(...BB) {
+              for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = '%ync_>}u85(z#3p/[2]xA$BqeZ;Povab^JwXSlir7WHLT*UG=0sO6.|f~&t":,{hKN<Y)C@?E4j9gQRD!m+d1kMIF`V', BB[YI[47]] = "" + (BB[YI[2]] || ""), BB[YI[17]] = BB[YI[47]].length, BB[YI[16]] = [], BB[YI[32]] = YI[2], BB[YI[46]] = YI[2], BB[YI[30]] = -YI[0]), BB[YI[41]] = YI[2]; BB[YI[41]] < BB[YI[17]]; BB[YI[41]]++)
+                if (BB[-YI[65]] = BB[YI[0]].indexOf(BB[YI[47]][BB[YI[41]]]), BB[-YI[65]] !== -YI[0])
+                  if (BB[YI[30]] < YI[2]) BB[YI[30]] = BB[-YI[65]];
+                  else {
+                    MI(BB[YI[30]] += BB[-YI[65]] * YI[31], BB[YI[32]] |= BB[YI[30]] << BB[YI[46]], BB[YI[46]] += (BB[YI[30]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                    do {
+                      MI(BB[YI[16]].push(BB[YI[32]] & YI[11]), BB[YI[32]] >>= YI[10], BB[YI[46]] -= YI[10])
+                    } while (BB[YI[46]] > YI[23]);
+                    BB[YI[30]] = -YI[0]
+                  } return BB[YI[30]] > -YI[0] && BB[YI[16]].push((BB[YI[32]] | BB[YI[30]] << BB[YI[46]]) & YI[11]), pI(BB[YI[16]])
+            }
+
+            function FB(...BB) {
+              return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = nB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+            }
+
+            function NB(...BB) {
+              MI(BB[YI[12]] = YI[2], BB[YI[101]] = function(...BB) {
+                for (MI(BB[YI[12]] = YI[0], BB[YI[53]] = BB[YI[2]].length, BB[YI[18]] = [], BB[YI[27]] = YI[2]), BB[YI[40]] = YI[2]; BB[YI[40]] < BB[YI[53]]; BB[YI[40]]++) BB[YI[18]].push(BB[YI[40]] !== YI[2] && BB[YI[2]][BB[YI[40]]] > BB[YI[2]][BB[YI[40]] - YI[0]] ? BB[YI[18]][BB[YI[40]] - YI[0]] + YI[0] : YI[0]);
+                for (BB[YI[7]] = BB[YI[53]] - YI[0]; BB[YI[7]] >= YI[2]; BB[YI[7]]--) BB[YI[7]] !== BB[YI[53]] - YI[0] && BB[YI[2]][BB[YI[7]]] > BB[YI[2]][BB[YI[7]] + YI[0]] && (BB[YI[18]][BB[YI[7]]] = Math.max(BB[YI[18]][BB[YI[7]]], BB[YI[18]][BB[YI[7]] + YI[0]] + YI[0])), BB[YI[27]] += BB[YI[18]][BB[YI[7]]];
+                return BB[YI[27]]
+              }, console.log(BB[YI[101]]))
+            }
+            FB(180) + "X" in HI && NB(), (0, hB[YI[32]])("3 ")
+          } else {
+            function gB(...BB) {
+              for (MI(BB[YI[12]] = YI[0], BB[-YI[103]] = '`MAHBrJYihX+,{enZC8s?[P0D~:^cN<(S6#}t./Id>uW92|LVEoRxbf;yUgq"F%)3K!kv7GlOajz&m$]1w5=*p_4@TQ', BB[-YI[65]] = "" + (BB[YI[2]] || ""), BB[-YI[102]] = BB[-YI[65]].length, BB[YI[40]] = [], BB[YI[7]] = YI[2], BB[YI[105]] = YI[2], BB[-YI[0]] = -YI[0]), BB[YI[10]] = YI[2]; BB[YI[10]] < BB[-YI[102]]; BB[YI[10]]++)
+                if (BB[YI[104]] = BB[-YI[103]].indexOf(BB[-YI[65]][BB[YI[10]]]), BB[YI[104]] !== -YI[0])
+                  if (BB[-YI[0]] < YI[2]) BB[-YI[0]] = BB[YI[104]];
+                  else {
+                    MI(BB[-YI[0]] += BB[YI[104]] * YI[31], BB[YI[7]] |= BB[-YI[0]] << BB[YI[105]], BB[YI[105]] += (BB[-YI[0]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                    do {
+                      MI(BB[YI[40]].push(BB[YI[7]] & YI[11]), BB[YI[7]] >>= YI[10], BB[YI[105]] -= YI[10])
+                    } while (BB[YI[105]] > YI[23]);
+                    BB[-YI[0]] = -YI[0]
+                  } return BB[-YI[0]] > -YI[0] && BB[YI[40]].push((BB[YI[7]] | BB[-YI[0]] << BB[YI[105]]) & YI[11]), pI(BB[YI[40]])
+            }
+
+            function qB(...BB) {
+              return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = gB(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+            }
+
+            function yB(...BB) {
+              BB[YI[12]] = YI[2];
+              const IB = require("big-integer");
+              MI(BB[YI[53]] = class {
+                static randomPrime(...BB) {
+                  BB[YI[12]] = YI[0];
+                  const ZB = IB.one.shiftLeft(BB[YI[2]] - YI[0]),
+                    TB = IB.one.shiftLeft(BB[YI[2]]).prev();
+                  for (; YI[106];) {
+                    let BB = IB.randBetween(ZB, TB);
+                    if (BB.isProbablePrime(YI[107])) return BB
+                  }
+                }
+                static generate(...BB) {
+                  BB[YI[12]] = YI[0];
+                  const ZB = IB(65537);
+                  let TB, JB;
+                  BB[YI[0]] = YI[14];
+                  do {
+                    MI(TB = this.randomPrime(BB[YI[2]] / YI[18]), JB = this.randomPrime(BB[YI[2]] / YI[18]), BB[YI[0]] = IB.lcm(TB.prev(), JB.prev()))
+                  } while (IB.gcd(ZB, BB[YI[0]]).notEquals(YI[0]) || TB.minus(JB).abs().shiftRight(BB[YI[2]] / YI[18] - 100).isZero());
+                  return {
+                    e: ZB,
+                    n: TB.multiply(JB),
+                    d: ZB.modInv(BB[YI[0]])
+                  }
+                }
+                static encrypt(...BB) {
+                  return BB[YI[12]] = YI[27], IB(BB[YI[2]]).modPow(BB[YI[18]], BB[YI[0]])
+                }
+                static decrypt(...BB) {
+                  return BB[YI[12]] = YI[27], IB(BB[YI[2]]).modPow(BB[YI[0]], BB[YI[18]])
+                }
+                static encode(...BB) {
+                  BB[YI[12]] = YI[0];
+                  const ZB = BB[YI[2]].split("").map((BB => BB.charCodeAt())).join("");
+                  return IB(ZB)
+                }
+                static decode(...BB) {
+                  BB[YI[12]] = YI[0];
+                  const IB = BB[YI[2]].toString();
+                  BB[YI[0]] = "";
+                  for (let ZB = YI[2]; ZB < IB.length; ZB += YI[18]) {
+                    let TB = Number(IB.substr(ZB, YI[18]));
+                    TB <= 30 ? (BB[YI[0]] += String.fromCharCode(Number(IB.substr(ZB, YI[27]))), ZB++) : BB[YI[0]] += String.fromCharCode(TB)
+                  }
+                  return BB[YI[0]]
+                }
+              }, module.exports = BB[YI[53]])
+            }
+            qB(181) + "q" in HI && yB(), gI()
           }
         }
       } else {
-        function JB(...BB) {
-          for (Hj(BB[qj[12]] = qj[0], BB[-qj[85]] = 'P#B`Afl",x5|4u)~q*17kRUi+p.gQDS6WLw9J$]}E(m8b<FK?2e[{vCt&MXOHy3Y_0@zIc:s=GaNohdnV/>!%;^jrTZ', BB[qj[13]] = "" + (BB[qj[2]] || ""), BB[qj[14]] = BB[qj[13]].length, BB[qj[64]] = [], BB[qj[86]] = qj[2], BB[qj[8]] = qj[2], BB[qj[36]] = -qj[0]), BB[qj[10]] = qj[2]; BB[qj[10]] < BB[qj[14]]; BB[qj[10]]++)
-            if (BB[qj[26]] = BB[-qj[85]].indexOf(BB[qj[13]][BB[qj[10]]]), BB[qj[26]] !== -qj[0])
-              if (BB[qj[36]] < qj[2]) BB[qj[36]] = BB[qj[26]];
-              else {
-                Hj(BB[qj[36]] += BB[qj[26]] * qj[28], BB[qj[86]] |= BB[qj[36]] << BB[qj[8]], BB[qj[8]] += (BB[qj[36]] & qj[30]) > qj[31] ? qj[32] : qj[33]);
-                do {
-                  Hj(BB[qj[64]].push(BB[qj[86]] & qj[11]), BB[qj[86]] >>= qj[10], BB[qj[8]] -= qj[10])
-                } while (BB[qj[8]] > qj[6]);
-                BB[qj[36]] = -qj[0]
-              } return BB[qj[36]] > -qj[0] && BB[qj[64]].push((BB[qj[86]] | BB[qj[36]] << BB[qj[8]]) & qj[11]), fj(BB[qj[64]])
-        }
+        function UB(...BB) {
+          MI(BB[YI[12]] = YI[2], BB[YI[69]] = function(...BB) {
+            function ZB(...BB) {
+              return BB[YI[12]] = YI[18], GB(JB(vB(BB[YI[2]]), vB(BB[YI[0]])))
+            }
 
-        function mB(...BB) {
-          return BB[qj[12]] = qj[0], typeof kj[BB[qj[2]]] === qj[16] ? kj[BB[qj[2]]] = JB(Gj[BB[qj[2]]]) : kj[BB[qj[2]]]
-        }
+            function TB(BB, IB, ZB) {
+              return function(...BB) {
+                var IB, ZB, TB, JB;
+                for (MI(BB[YI[12]] = YI[18], BB[YI[53]] = BB[YI[0]].length, BB[YI[47]] = Array()), BB[YI[16]] = Array(Math.ceil(BB[YI[2]].length / YI[18])), IB = YI[2]; IB < BB[YI[16]].length; IB++) BB[YI[16]][IB] = BB[YI[2]].charCodeAt(IB * YI[18]) << YI[10] | BB[YI[2]].charCodeAt(IB * YI[18] + YI[0]);
+                for (; BB[YI[16]].length > YI[2];) {
+                  for (MI(JB = Array(), TB = YI[2]), IB = YI[2]; IB < BB[YI[16]].length; IB++) MI(TB = (TB << YI[72]) + BB[YI[16]][IB], ZB = Math.floor(TB / BB[YI[53]]), TB -= ZB * BB[YI[53]]), (JB.length > YI[2] || ZB > YI[2]) && (JB[JB.length] = ZB);
+                  MI(BB[YI[47]][BB[YI[47]].length] = TB, BB[YI[16]] = JB)
+                }
+                for (BB[-YI[83]] = "", IB = BB[YI[47]].length - YI[0]; IB >= YI[2]; IB--) BB[-YI[83]] += BB[YI[0]].charAt(BB[YI[47]][IB]);
+                for (BB[YI[21]] = Math.ceil(BB[YI[2]].length * YI[10] / (Math.log(BB[YI[0]].length) / Math.log(YI[18]))), IB = BB[-YI[83]].length; IB < BB[YI[21]]; IB++) BB[-YI[83]] = BB[YI[0]][YI[2]] + BB[-YI[83]];
+                return BB[-YI[83]]
+              }(JB(vB(BB), vB(IB)), ZB)
+            }
 
-        function yB(...BB) {
-          BB[qj[12]] = qj[2]
+            function JB(...BB) {
+              MI(BB[YI[12]] = YI[18], BB[YI[53]] = kB(BB[YI[2]])), BB[YI[53]].length > YI[72] && (BB[YI[53]] = UB(BB[YI[53]], BB[YI[2]].length * YI[10]));
+              var ZB = Array(YI[72]),
+                TB = Array(YI[72]);
+              for (BB[YI[27]] = YI[2]; BB[YI[27]] < YI[72]; BB[YI[27]]++) MI(ZB[BB[YI[27]]] = 909522486 ^ BB[YI[53]][BB[YI[27]]], TB[BB[YI[27]]] = 1549556828 ^ BB[YI[53]][BB[YI[27]]]);
+              return BB[YI[16]] = UB(ZB.concat(kB(BB[YI[0]])), YI[73] + BB[YI[0]].length * YI[10]), cB(UB(TB.concat(BB[YI[16]]), aI(IB(159), YI[73], YI[107])))
+            }
+
+            function oB(...ZB) {
+              function JB(...BB) {
+                return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+                  for (MI(BB[YI[12]] = YI[0], BB[YI[53]] = 'XdJ,3l.v(Tr?SH$t~Lpx#{>`!Y5mj|eKw0z<@cAWVhk2B^C9=Q/]UN[Ob16+yG&}g_D4Maui8R:o*qPZ);f%"sFn7EI', BB[-YI[74]] = "" + (BB[YI[2]] || ""), BB[-YI[4]] = BB[-YI[74]].length, BB[YI[16]] = [], BB[YI[7]] = YI[2], BB[YI[21]] = YI[2], BB[YI[23]] = -YI[0]), BB[-YI[75]] = YI[2]; BB[-YI[75]] < BB[-YI[4]]; BB[-YI[75]]++)
+                    if (BB[YI[76]] = BB[YI[53]].indexOf(BB[-YI[74]][BB[-YI[75]]]), BB[YI[76]] !== -YI[0])
+                      if (BB[YI[23]] < YI[2]) BB[YI[23]] = BB[YI[76]];
+                      else {
+                        MI(BB[YI[23]] += BB[YI[76]] * YI[31], BB[YI[7]] |= BB[YI[23]] << BB[YI[21]], BB[YI[21]] += (BB[YI[23]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                        do {
+                          MI(BB[YI[16]].push(BB[YI[7]] & YI[11]), BB[YI[7]] >>= YI[10], BB[YI[21]] -= YI[10])
+                        } while (BB[YI[21]] > YI[23]);
+                        BB[YI[23]] = -YI[0]
+                      } return BB[YI[23]] > -YI[0] && BB[YI[16]].push((BB[YI[7]] | BB[YI[23]] << BB[YI[21]]) & YI[11]), pI(BB[YI[16]])
+                }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+              }
+              ZB[YI[12]] = YI[0];
+              try {
+                BB[YI[76]]
+              } catch (TB) {
+                BB[YI[76]] = YI[2]
+              }
+              for (MI(ZB[YI[53]] = BB[YI[76]] ? IB(160) + IB(161) + JB(162) : JB(163) + JB(164) + JB(165), ZB[YI[18]] = "", ZB[YI[17]] = YI[14]), ZB[YI[77]] = YI[2]; ZB[YI[77]] < ZB[YI[2]].length; ZB[YI[77]]++) MI(ZB[YI[17]] = ZB[YI[2]].charCodeAt(ZB[YI[77]]), ZB[YI[18]] += ZB[YI[53]].charAt(ZB[YI[17]] >>> YI[16] & YI[78]) + ZB[YI[53]].charAt(ZB[YI[17]] & YI[78]));
+              return ZB[YI[18]]
+            }
+
+            function GB(...IB) {
+              function ZB(...BB) {
+                return BB[YI[12]] = YI[0], typeof yI[BB[YI[2]]] === YI[13] ? yI[BB[YI[2]]] = function(...BB) {
+                  for (MI(BB[YI[12]] = YI[0], BB[YI[53]] = 'tbGulM}IA9_HE%B`)3Cv4wJjT5q>g*NDd(i[x|yZeYU<s1oW2ka{zp,?VR.=P^"nOKrcQL]S&F@8+f~m$h#/67:!0;X', BB[YI[18]] = "" + (BB[YI[2]] || ""), BB[-YI[80]] = BB[YI[18]].length, BB[-YI[81]] = [], BB[YI[7]] = YI[2], BB[YI[46]] = YI[2], BB[YI[30]] = -YI[0]), BB[-YI[79]] = YI[2]; BB[-YI[79]] < BB[-YI[80]]; BB[-YI[79]]++)
+                    if (BB[YI[48]] = BB[YI[53]].indexOf(BB[YI[18]][BB[-YI[79]]]), BB[YI[48]] !== -YI[0])
+                      if (BB[YI[30]] < YI[2]) BB[YI[30]] = BB[YI[48]];
+                      else {
+                        MI(BB[YI[30]] += BB[YI[48]] * YI[31], BB[YI[7]] |= BB[YI[30]] << BB[YI[46]], BB[YI[46]] += (BB[YI[30]] & YI[33]) > YI[34] ? YI[35] : YI[36]);
+                        do {
+                          MI(BB[-YI[81]].push(BB[YI[7]] & YI[11]), BB[YI[7]] >>= YI[10], BB[YI[46]] -= YI[10])
+                        } while (BB[YI[46]] > YI[23]);
+                        BB[YI[30]] = -YI[0]
+                      } return BB[YI[30]] > -YI[0] && BB[-YI[81]].push((BB[YI[7]] | BB[YI[30]] << BB[YI[46]]) & YI[11]), pI(BB[-YI[81]])
+                }(UI[BB[YI[2]]]) : yI[BB[YI[2]]]
+              }
+              IB[YI[12]] = YI[0];
+              try {
+                BB[YI[0]]
+              } catch (TB) {
+                BB[YI[0]] = ""
+              }
+              for (MI(IB[YI[0]] = ZB(166) + ZB(167) + ZB(168) + ZB(YI[51]) + ZB(170) + ZB(YI[49]) + ZB(172) + YI[100], IB[YI[47]] = "", IB[YI[27]] = IB[YI[2]].length), IB[YI[16]] = YI[2]; IB[YI[16]] < IB[YI[27]]; IB[YI[16]] += YI[27])
+                for (IB[-YI[82]] = IB[YI[2]].charCodeAt(IB[YI[16]]) << YI[72] | (IB[YI[16]] + YI[0] < IB[YI[27]] ? IB[YI[2]].charCodeAt(IB[YI[16]] + YI[0]) << YI[10] : YI[2]) | (IB[YI[16]] + YI[18] < IB[YI[27]] ? IB[YI[2]].charCodeAt(IB[YI[16]] + YI[18]) : YI[2]), IB[YI[46]] = YI[2]; IB[YI[46]] < YI[16]; IB[YI[46]]++) IB[YI[16]] * YI[10] + IB[YI[46]] * YI[21] > IB[YI[2]].length * YI[10] ? IB[YI[47]] += BB[YI[0]] : IB[YI[47]] += IB[YI[0]].charAt(IB[-YI[82]] >>> YI[21] * (YI[27] - IB[YI[46]]) & YI[20]);
+              return IB[YI[47]]
+            }
+
+            function vB(...BB) {
+              var IB, ZB;
+              for (MI(BB[YI[12]] = YI[0], BB[YI[67]] = "", BB[YI[47]] = -YI[0]); ++BB[YI[47]] < BB[YI[2]].length;) MI(IB = BB[YI[2]].charCodeAt(BB[YI[47]]), ZB = BB[YI[47]] + YI[0] < BB[YI[2]].length ? BB[YI[2]].charCodeAt(BB[YI[47]] + YI[0]) : YI[2]), 55296 <= IB && IB <= 56319 && 56320 <= ZB && ZB <= 57343 && MI(IB = 65536 + ((IB & YI[84]) << YI[8]) + (ZB & YI[84]), BB[YI[47]]++), IB <= YI[56] ? BB[YI[67]] += String.fromCharCode(IB) : IB <= 2047 ? BB[YI[67]] += String.fromCharCode(192 | IB >>> YI[21] & YI[85], YI[57] | IB & YI[20]) : IB <= YI[89] ? BB[YI[67]] += String.fromCharCode(224 | IB >>> YI[24] & YI[78], YI[57] | IB >>> YI[21] & YI[20], YI[57] | IB & YI[20]) : IB <= 2097151 && (BB[YI[67]] += String.fromCharCode(YI[97] | IB >>> YI[3] & YI[23], YI[57] | IB >>> YI[24] & YI[20], YI[57] | IB >>> YI[21] & YI[20], YI[57] | IB & YI[20]));
+              return BB[YI[67]]
+            }
+
+            function kB(...BB) {
+              for (MI(BB[YI[12]] = YI[0], BB[YI[53]] = Array(BB[YI[2]].length >> YI[18])), BB[YI[47]] = YI[2]; BB[YI[47]] < BB[YI[53]].length; BB[YI[47]]++) BB[YI[53]][BB[YI[47]]] = YI[2];
+              for (BB[YI[47]] = YI[2]; BB[YI[47]] < BB[YI[2]].length * YI[10]; BB[YI[47]] += YI[10]) BB[YI[53]][BB[YI[47]] >> YI[7]] |= (BB[YI[2]].charCodeAt(BB[YI[47]] / YI[10]) & YI[11]) << YI[87] - BB[YI[47]] % YI[86];
+              return BB[YI[53]]
+            }
+
+            function cB(...BB) {
+              for (MI(BB[YI[12]] = YI[0], BB[YI[0]] = ""), BB[YI[18]] = YI[2]; BB[YI[18]] < BB[YI[2]].length * YI[86]; BB[YI[18]] += YI[10]) BB[YI[0]] += String.fromCharCode(BB[YI[2]][BB[YI[18]] >> YI[7]] >>> YI[87] - BB[YI[18]] % YI[86] & YI[11]);
+              return BB[YI[0]]
+            }
+
+            function nB(...BB) {
+              return BB[YI[12]] = YI[18], BB[YI[2]] >>> BB[YI[0]] | BB[YI[2]] << YI[86] - BB[YI[0]]
+            }
+
+            function hB(BB, IB) {
+              return BB >>> IB
+            }
+
+            function zB(...BB) {
+              return BB[YI[12]] = YI[27], BB[YI[2]] & BB[YI[0]] ^ ~BB[YI[2]] & BB[YI[18]]
+            }
+
+            function FB(BB, IB, ZB) {
+              return BB & IB ^ BB & ZB ^ IB & ZB
+            }
+
+            function NB(...BB) {
+              return BB[YI[12]] = YI[0], nB(BB[YI[2]], YI[18]) ^ nB(BB[YI[2]], YI[35]) ^ nB(BB[YI[2]], 22)
+            }
+
+            function gB(...BB) {
+              return BB[YI[12]] = YI[0], nB(BB[YI[2]], YI[21]) ^ nB(BB[YI[2]], 11) ^ nB(BB[YI[2]], 25)
+            }
+
+            function qB(...BB) {
+              return BB[YI[12]] = YI[0], nB(BB[YI[2]], YI[23]) ^ nB(BB[YI[2]], YI[3]) ^ hB(BB[YI[2]], YI[27])
+            }
+
+            function yB(...BB) {
+              return BB[YI[12]] = YI[0], nB(BB[YI[2]], 17) ^ nB(BB[YI[2]], YI[38]) ^ hB(BB[YI[2]], YI[8])
+            }
+
+            function UB(...IB) {
+              var ZB, TB, JB, oB, GB, vB, kB, cB, nB, hB, UB, dB;
+              for (MI(IB[YI[12]] = YI[18], IB[YI[18]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), IB[YI[27]] = new Array(YI[88])), MI(IB[YI[2]][IB[YI[0]] >> YI[7]] |= YI[57] << YI[87] - IB[YI[0]] % YI[86], IB[YI[2]][(IB[YI[0]] + YI[88] >> YI[45] << YI[16]) + YI[78]] = IB[YI[0]]), nB = YI[2]; nB < IB[YI[2]].length; nB += YI[72]) {
+                for (MI(ZB = IB[YI[18]][YI[2]], TB = IB[YI[18]][YI[0]], JB = IB[YI[18]][YI[18]], oB = IB[YI[18]][YI[27]], GB = IB[YI[18]][YI[16]], vB = IB[YI[18]][YI[7]], kB = IB[YI[18]][YI[21]], cB = IB[YI[18]][YI[23]]), hB = YI[2]; hB < YI[88]; hB++) MI(IB[YI[27]][hB] = hB < YI[72] ? IB[YI[2]][hB + nB] : WB(WB(WB(yB(IB[YI[27]][hB - YI[18]]), IB[YI[27]][hB - YI[23]]), qB(IB[YI[27]][hB - YI[78]])), IB[YI[27]][hB - YI[72]]), UB = WB(WB(WB(WB(cB, gB(GB)), zB(GB, vB, kB)), BB[YI[17]][hB]), IB[YI[27]][hB]), dB = WB(NB(ZB), FB(ZB, TB, JB)), cB = kB, kB = vB, vB = GB, GB = WB(oB, UB), oB = JB, JB = TB, TB = ZB, ZB = WB(UB, dB));
+                MI(IB[YI[18]][YI[2]] = WB(ZB, IB[YI[18]][YI[2]]), IB[YI[18]][YI[0]] = WB(TB, IB[YI[18]][YI[0]]), IB[YI[18]][YI[18]] = WB(JB, IB[YI[18]][YI[18]]), IB[YI[18]][YI[27]] = WB(oB, IB[YI[18]][YI[27]]), IB[YI[18]][YI[16]] = WB(GB, IB[YI[18]][YI[16]]), IB[YI[18]][YI[7]] = WB(vB, IB[YI[18]][YI[7]]), IB[YI[18]][YI[21]] = WB(kB, IB[YI[18]][YI[21]]), IB[YI[18]][YI[23]] = WB(cB, IB[YI[18]][YI[23]]))
+              }
+              return IB[YI[18]]
+            }
+
+            function WB(...BB) {
+              return MI(BB[YI[12]] = YI[18], BB[YI[18]] = (BB[YI[2]] & YI[89]) + (BB[YI[0]] & YI[89]), BB[YI[47]] = (BB[YI[2]] >> YI[72]) + (BB[YI[0]] >> YI[72]) + (BB[YI[18]] >> YI[72])), BB[YI[47]] << YI[72] | BB[YI[18]] & YI[89]
+            }
+            return MI(BB[YI[12]] = YI[2], BB[YI[76]] = YI[2], BB[YI[0]] = ""), BB[YI[17]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
+              hex: function(...BB) {
+                return BB[YI[12]] = YI[0], oB(function(...BB) {
+                  return BB[YI[12]] = YI[0], cB(UB(kB(BB[YI[2]]), BB[YI[2]].length * YI[10]))
+                }(vB(BB[YI[2]])))
+              },
+              b64: ZB,
+              any: TB,
+              hex_hmac: function(...BB) {
+                return BB[YI[12]] = YI[18], oB(JB(vB(BB[YI[2]]), vB(BB[YI[0]])))
+              },
+              b64_hmac: ZB,
+              any_hmac: TB
+            }
+          }(), console.log(BB[YI[69]]))
         }
-        mB(106) + "r" in oj && yB(), (0, pB[qj[19]])("5 ")
+        IB(151) + YI[30] in HI && UB(), (0, hB[YI[32]])("5 ")
       }
-    }, mB.n.subscribe("customBindingsChanged", (() => {
-      Fj()
+    }, gB.l.subscribe("customBindingsChanged", (() => {
+      PI()
     }));
-    let Yj = !1,
-      Vj = !1;
-    const hj = () => Yj || Vj && DB.d.isInGame(),
-      Xj = BB => {
-        hj() && BB.preventDefault()
+    let RI = !1,
+      rI = !1;
+    const mI = () => RI || rI && HB.b.isInGame(),
+      XI = BB => {
+        mI() && BB.preventDefault()
       };
-    mB.n.subscribe("displaymodeFullscreenChange", (BB => {
-      Zj()
-    })), mB.n.subscribe("pointerLockUpdate", (BB => {
-      Yj = BB, Zj(), Aj()
-    })), mB.n.subscribe("freeCursorUpdate", (BB => {
-      Vj = BB, Zj(), Aj()
+    gB.l.subscribe("displaymodeFullscreenChange", (BB => {
+      LI()
+    })), gB.l.subscribe("pointerLockUpdate", (BB => {
+      RI = BB, LI(), eI()
+    })), gB.l.subscribe("freeCursorUpdate", (BB => {
+      rI = BB, LI(), eI()
     }));
-    const Zj = () => {
-        window.removeEventListener("wheel", Xj), FB.isIframed && !(0, IB.l)() && (Yj || Vj) && window.addEventListener("wheel", Xj, {
+    const LI = () => {
+        window.removeEventListener("wheel", XI), MB.isIframed && !(0, GB.l)() && (RI || rI) && window.addEventListener("wheel", XI, {
           passive: !1
         })
       },
-      Aj = () => {
-        window.removeEventListener("wheel", Tj), (Yj || Vj) && window.addEventListener("wheel", Tj, {
+      eI = () => {
+        window.removeEventListener("wheel", uI), (RI || rI) && window.addEventListener("wheel", uI, {
           passive: !1
         })
       },
-      Tj = BB => {
-        !0 === BB.ctrlKey && hj() && BB.preventDefault()
+      uI = BB => {
+        !0 === BB.ctrlKey && mI() && BB.preventDefault()
       };
 
-    function Pj(BB) {
-      mB.n.Ly("QTEMouseState", {
+    function fI(BB) {
+      gB.l.Gq("QTEMouseState", {
         isDown: BB
       })
     }
 
-    function Wj(BB) {
-      var jB, zB, nB, dB, IB, NB, uB, UB;
-      const pB = (0, fB.g)();
-      pB.mBB = null !== (jB = function(BB, jB) {
-        var zB, QB;
-        if (!pj) return null;
-        const nB = BB.bloxd;
-        Nj ??= nB.getMetaInfo("Board").rootId;
-        const dB = null !== (zB = null === jB || void 0 === jB ? void 0 : jB.JR) && void 0 !== zB ? zB : null;
-        if (!dB || nB.getMetaInfo(dB).rootId !== Nj) return null;
-        const IB = null !== (QB = null === jB || void 0 === jB ? void 0 : jB.position) && void 0 !== QB ? QB : null;
-        if (nB.playerCanChangePos(BB.zV, IB[0], IB[1], IB[2])) return null;
-        const NB = (BB, jB, zB) => {
-          const QB = nB.blockDataOwner.getBlockData(BB, jB, zB),
-            dB = null === QB || void 0 === QB ? void 0 : QB.persisted.shared.text.split("\n")[0].toLowerCase().trim();
-          return YB.singleLineBoardActions.has(dB)
+    function lI(BB) {
+      var IB, ZB, JB, oB, GB, vB, kB, cB;
+      const hB = (0, iB.h)();
+      hB.lBB = null !== (IB = function(BB, IB) {
+        var ZB, TB;
+        if (!hI) return null;
+        const JB = BB.bloxd;
+        vI ??= JB.getMetaInfo("Board").rootId;
+        const oB = null !== (ZB = null === IB || void 0 === IB ? void 0 : IB.n_) && void 0 !== ZB ? ZB : null;
+        if (!oB || JB.getMetaInfo(oB).rootId !== vI) return null;
+        const GB = null !== (TB = null === IB || void 0 === IB ? void 0 : IB.position) && void 0 !== TB ? TB : null;
+        if (JB.playerCanChangePos(BB.Jm, GB[0], GB[1], GB[2])) return null;
+        const vB = (BB, IB, ZB) => {
+          const TB = JB.blockDataOwner.getBlockData(BB, IB, ZB),
+            oB = null === TB || void 0 === TB ? void 0 : TB.persisted.shared.text.split("\n")[0].toLowerCase().trim();
+          return jB.singleLineBoardActions.has(oB)
         };
-        if (NB(IB[0], IB[1], IB[2])) return null;
-        let uB;
-        BB.YBB && (uB = [...BB.YBB], BB.WK(uB, uB));
-        const UB = (uB ? BB.camera.Xw : 0) + nB.getBlockReach(BB.zV);
-        return BB.pickBlock(uB, BB.VBB, UB, ((jB, zB, QB, dB) => 0 !== jB && ("Board" !== nB.getMetaInfo(jB).rootName || nB.playerCanChangePos(BB.zV, zB, QB, dB) || NB(zB, QB, dB))))
-      }(pB, pB.mBB)) && void 0 !== jB ? jB : pB.mBB;
-      const rB = null !== (zB = null === (nB = pB.mBB) || void 0 === nB ? void 0 : nB.position) && void 0 !== zB ? zB : null,
-        JB = null !== (dB = pB.VBB) && void 0 !== dB ? dB : pB.camera.nC(),
-        yB = fB.i.localPlayerPickActionHelper.getPickEntityResult(JB),
-        kB = null !== (IB = pB.mBB) && void 0 !== IB && IB.JR ? (0, AB.g)(pB.mBB.JR) : "Air",
-        GB = BB === sB.c.UpFirePrimary || BB === sB.c.UpFireSecondary,
-        LB = GB ? "onPlayerClickUp" : "onPlayerClick",
-        gB = GB ? BB === sB.c.UpFireSecondary : BB === sB.c.DownFireSecondary,
-        tB = !GB && (0, QB.getWasDoubleClick)();
-      mB.n.Ly("mouseState", {
-        ea: BB,
-        isDown: !GB
-      }), (0, QB.sendColyMessage)(aB.Qh, {
-        ea: BB,
-        la: tB,
-        rI: rB,
-        sI: yB
-      }, !0), (0, fB.c)().client.triggerGameCallback(LB, pB.zV, gB, null !== (NB = null === rB || void 0 === rB ? void 0 : rB[0]) && void 0 !== NB ? NB : null, null !== (uB = null === rB || void 0 === rB ? void 0 : rB[1]) && void 0 !== uB ? uB : null, null !== (UB = null === rB || void 0 === rB ? void 0 : rB[2]) && void 0 !== UB ? UB : null, kB, yB)
+        if (vB(GB[0], GB[1], GB[2])) return null;
+        let kB;
+        BB.vIB && (kB = [...BB.vIB], BB.HV(kB, kB));
+        const cB = (kB ? BB.camera.NK : 0) + JB.getBlockReach(BB.Jm);
+        return BB.pickBlock(kB, BB.kIB, cB, ((IB, ZB, TB, oB) => 0 !== IB && ("Board" !== JB.getMetaInfo(IB).rootName || JB.playerCanChangePos(BB.Jm, ZB, TB, oB) || vB(ZB, TB, oB))))
+      }(hB, hB.lBB)) && void 0 !== IB ? IB : hB.lBB;
+      const zB = null !== (ZB = null === (JB = hB.lBB) || void 0 === JB ? void 0 : JB.position) && void 0 !== ZB ? ZB : null,
+        NB = null !== (oB = hB.kIB) && void 0 !== oB ? oB : hB.camera.XV(),
+        qB = iB.l.localPlayerPickActionHelper.getPickEntityResult(NB),
+        yB = null !== (GB = hB.lBB) && void 0 !== GB && GB.n_ ? (0, XB.e)(hB.lBB.n_) : "Air",
+        UB = BB === FB.d.UpFirePrimary || BB === FB.d.UpFireSecondary,
+        WB = UB ? "onPlayerClickUp" : "onPlayerClick",
+        dB = UB ? BB === FB.d.UpFireSecondary : BB === FB.d.DownFireSecondary,
+        CB = !UB && (0, TB.getWasDoubleClick)();
+      gB.l.Gq("mouseState", {
+        En: BB,
+        isDown: !UB
+      }), (0, TB.sendColyMessage)(nB.zh, {
+        En: BB,
+        Dn: CB,
+        JG: zB,
+        oG: qB
+      }, !0), (0, iB.d)().client.triggerGameCallback(WB, hB.Jm, dB, null !== (vB = null === zB || void 0 === zB ? void 0 : zB[0]) && void 0 !== vB ? vB : null, null !== (kB = null === zB || void 0 === zB ? void 0 : zB[1]) && void 0 !== kB ? kB : null, null !== (cB = null === zB || void 0 === zB ? void 0 : zB[2]) && void 0 !== cB ? cB : null, yB, qB)
     }
     window.addEventListener("keydown", (BB => {
       ["ArrowUp", "ArrowDown"].includes(BB.key) && BB.preventDefault()
     })), document.addEventListener("keydown", (BB => {
-      (0, XB.b)(BB, (() => {
-        const BB = (0, fB.g)();
-        return (0, hB.I)(BB) || !1 !== BB.wG.canCustomiseChar
+      (0, rB.d)(BB, (() => {
+        const BB = (0, iB.h)();
+        return (0, RB.L)(BB) || !1 !== BB.vW.canCustomiseChar
       }))
     }))
   },
-  39187: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB,
-      g: () => IB
+  39155: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      i: () => GB
     });
-    var QB = zB(38520);
-    let nB = !1;
+    var TB = ZB(38474);
+    let JB = !1;
 
-    function dB() {
-      return nB
+    function oB() {
+      return JB
     }
 
-    function IB(BB) {
-      nB = BB, BB ? QB.f.setMultiplierType("emoteWheel", 0) : QB.f.removeMultiplier("emoteWheel")
+    function GB(BB) {
+      JB = BB, BB ? TB.d.setMultiplierType("emoteWheel", 0) : TB.d.removeMultiplier("emoteWheel")
     }
   },
-  39193: (BB, jB, zB) => {
-    function QB(BB) {
-      return Boolean(BB.wG.useInventory && BB.wG.useFullInventory && BB.vG.GjB(BB.zV))
+  39170: (BB, IB, ZB) => {
+    function TB(BB) {
+      return Boolean(BB.vW.useInventory && BB.vW.useFullInventory && BB.zW.bIB(BB.Jm))
     }
-    zB.d(jB, {
-      c: () => QB
+    ZB.d(IB, {
+      b: () => TB
     })
   },
-  39102: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB,
-      e: () => nB
+  39043: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      e: () => JB
     });
-    var QB = zB(37239);
+    var TB = ZB(37188);
 
-    function nB(BB, jB) {
+    function JB(BB, IB) {
       return {
         replayedClipName: BB,
-        replayedClipAgeSeconds: jB
+        replayedClipAgeSeconds: IB
       }
     }
 
-    function dB(BB, jB, zB, nB, dB) {
-      const IB = function(BB) {
+    function oB(BB, IB, ZB, JB, oB) {
+      const GB = function(BB) {
           if ("object" !== typeof BB || null === BB) return null;
           const {
-            replayedClipName: jB,
-            replayedClipAgeSeconds: zB
+            replayedClipName: IB,
+            replayedClipAgeSeconds: ZB
           } = BB;
-          return "string" === typeof jB && "number" === typeof zB ? {
-            wQ: jB,
-            xQ: zB
+          return "string" === typeof IB && "number" === typeof ZB ? {
+            eT: IB,
+            uT: ZB
           } : null
-        }(zB),
-        NB = null === IB ? zB : null,
+        }(ZB),
+        vB = null === GB ? ZB : null,
         {
-          wQ: uB = null,
-          xQ: UB = 0
-        } = null !== IB && void 0 !== IB ? IB : {};
-      BB.animateEntity(jB, QB.f.Custom, NB, nB, dB, uB, UB)
+          eT: kB = null,
+          uT: cB = 0
+        } = null !== GB && void 0 !== GB ? GB : {};
+      BB.animateEntity(IB, TB.h.Custom, vB, JB, oB, kB, cB)
     }
   },
-  39191: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => aB
+  39163: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => nB
     });
-    var QB = zB(38470),
-      nB = zB(376),
-      dB = zB(2863);
+    var TB = ZB(38431),
+      JB = ZB(360),
+      oB = ZB(2912);
 
-    function IB() {
-      var BB, jB, zB, QB;
-      const IB = (0, dB.g)(),
-        NB = null !== (BB = null === (jB = IB.vG.mjB(IB.zV)) || void 0 === jB ? void 0 : jB.selectedItem) && void 0 !== BB ? BB : null,
-        uB = NB ? (0, dB.c)().getItemStat(IB.zV, NB.name, "attackCooldownMs") : null,
-        UB = (0, nB.jd)(uB, null === NB || void 0 === NB || null === (zB = NB.attributes.customAttributes) || void 0 === zB || null === (QB = zB.enchantments) || void 0 === QB ? void 0 : QB["Attack Speed"]);
-      return Math.max(56, Math.ceil((UB + 30) / 3))
+    function GB() {
+      var BB, IB, ZB, TB;
+      const GB = (0, oB.h)(),
+        vB = null !== (BB = null === (IB = GB.zW.fIB(GB.Jm)) || void 0 === IB ? void 0 : IB.selectedItem) && void 0 !== BB ? BB : null,
+        kB = vB ? (0, oB.d)().getItemStat(GB.Jm, vB.name, "attackCooldownMs") : null,
+        cB = (0, JB.hd)(kB, null === vB || void 0 === vB || null === (ZB = vB.attributes.customAttributes) || void 0 === ZB || null === (TB = ZB.enchantments) || void 0 === TB ? void 0 : TB["Attack Speed"]);
+      return Math.max(56, Math.ceil((cB + 30) / 3))
     }
-    class NB {
-      constructor(BB, jB) {
-        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [BB], this.dueMs = BB, this.intervalMs = jB
+    class vB {
+      constructor(BB, IB) {
+        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [BB], this.dueMs = BB, this.intervalMs = IB
       }
-      spacedBy(BB, jB) {
+      spacedBy(BB, IB) {
         if (BB === this.intervalMs) return this;
-        const zB = this.tries[this.tries.length - 1],
-          QB = new NB(zB, BB);
-        return QB.dueMs = Math.max(zB, jB - BB), QB
+        const ZB = this.tries[this.tries.length - 1],
+          TB = new vB(ZB, BB);
+        return TB.dueMs = Math.max(ZB, IB - BB), TB
       }
       nextDueMs() {
         const BB = this.tries[this.tries.length - 1];
         return Math.max(BB + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
       }
-      noteTry(BB, jB) {
-        this.tries.push(BB), this.tries.length > 3 && this.tries.shift(), this.dueMs = jB
+      noteTry(BB, IB) {
+        this.tries.push(BB), this.tries.length > 3 && this.tries.shift(), this.dueMs = IB
       }
     }
-    var uB = zB(39187),
-      UB = zB(1316);
-    class aB {
+    var kB = ZB(39155),
+      cB = ZB(1353);
+    class nB {
       constructor() {
-        this.timer = null, this.tries = new NB(0, 0), this.check = () => {
+        this.timer = null, this.tries = new vB(0, 0), this.check = () => {
           const BB = Date.now(),
-            jB = this.tries.spacedBy(IB(), BB),
-            zB = jB.nextDueMs();
-          if (BB < zB) this.schedule();
+            IB = this.tries.spacedBy(GB(), BB),
+            ZB = IB.nextDueMs();
+          if (BB < ZB) this.schedule();
           else {
-            if (jB.noteTry(BB, zB), this.tries = jB, (0, UB.y)() && !(0, uB.d)()) {
-              var nB, NB;
-              (0, QB.i)();
-              const BB = (0, dB.g)();
-              null === (nB = BB.vG.XjB(BB.zV)) || void 0 === nB || null === (NB = nB.kS) || void 0 === NB || NB.repeatAttack()
+            if (IB.noteTry(BB, ZB), this.tries = IB, (0, cB.w)() && !(0, kB.e)()) {
+              var JB, vB;
+              (0, TB.g)();
+              const BB = (0, oB.h)();
+              null === (JB = BB.zW.zZB(BB.Jm)) || void 0 === JB || null === (vB = JB.JC) || void 0 === vB || vB.repeatAttack()
             }
             this.schedule()
           }
@@ -3776,394 +4019,394 @@ export const modules = {
       }
       start() {
         var BB;
-        null === (BB = aB.running) || void 0 === BB || BB.stop(), aB.running = this, this.tries = new NB(Date.now(), IB()), this.schedule()
+        null === (BB = nB.running) || void 0 === BB || BB.stop(), nB.running = this, this.tries = new vB(Date.now(), GB()), this.schedule()
       }
       static stopRunning() {
         var BB;
-        null === (BB = aB.running) || void 0 === BB || BB.stop()
+        null === (BB = nB.running) || void 0 === BB || BB.stop()
       }
       stop() {
-        clearTimeout(this.timer), this.timer = null, aB.running === this && (aB.running = null)
+        clearTimeout(this.timer), this.timer = null, nB.running === this && (nB.running = null)
       }
       schedule() {
         const BB = Date.now(),
-          jB = this.tries.spacedBy(IB(), BB).nextDueMs() - BB;
-        this.timer = setTimeout(this.check, Math.min(jB, 100))
+          IB = this.tries.spacedBy(GB(), BB).nextDueMs() - BB;
+        this.timer = setTimeout(this.check, Math.min(IB, 100))
       }
     }
-    aB.running = null
+    nB.running = null
   },
-  39111: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => JB,
-      h: () => aB,
-      k: () => sB,
-      o: () => rB,
-      q: () => mB,
-      r: () => pB
+  39052: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => NB,
+      e: () => nB,
+      i: () => FB,
+      m: () => zB,
+      q: () => gB,
+      r: () => hB
     });
-    var QB = zB(39117),
-      nB = zB(37340),
-      dB = zB(3798),
-      IB = zB(1991),
-      NB = zB(31),
-      uB = zB(2863);
-    const UB = new QB.c;
+    var TB = ZB(39061),
+      JB = ZB(37270),
+      oB = ZB(3854),
+      GB = ZB(2003),
+      vB = ZB(24),
+      kB = ZB(2912);
+    const cB = new TB.c;
 
-    function aB() {
-      return UB
+    function nB() {
+      return cB
     }
 
-    function pB() {
-      UB.clear()
+    function hB() {
+      cB.clear()
     }
 
-    function rB() {
-      for (const BB of UB.ids()) {
-        const jB = UB.getName(BB);
-        void 0 !== jB && IB.b.delete(jB)
+    function zB() {
+      for (const BB of cB.ids()) {
+        const IB = cB.getName(BB);
+        void 0 !== IB && GB.b.delete(IB)
       }
-      pB(), NB.n.Ly("playerRosterChanged", UB.ids())
+      hB(), vB.l.Gq("playerRosterChanged", cB.ids())
     }
 
-    function sB(BB, jB) {
-      var zB, QB;
-      if (UB.has(BB)) return UB.getSetting(BB, jB);
-      const nB = (0, uB.g)();
-      return null === (zB = nB.RY[nB.zV]) || void 0 === zB || null === (QB = zB[BB]) || void 0 === QB ? void 0 : QB[jB]
+    function FB(BB, IB) {
+      var ZB, TB;
+      if (cB.has(BB)) return cB.getSetting(BB, IB);
+      const JB = (0, kB.h)();
+      return null === (ZB = JB.Tm[JB.Jm]) || void 0 === ZB || null === (TB = ZB[BB]) || void 0 === TB ? void 0 : TB[IB]
     }
 
-    function JB(BB) {
+    function NB(BB) {
       const {
-        added: jB,
-        removed: zB,
-        settingChanges: QB
-      } = UB.apply(BB);
+        added: IB,
+        removed: ZB,
+        settingChanges: TB
+      } = cB.apply(BB);
       for (const {
-          playerId: nB,
-          name: dB
+          playerId: JB,
+          name: oB
         }
-        of zB) void 0 === dB || yB(nB) || IB.b.delete(dB);
+        of ZB) void 0 === oB || qB(JB) || GB.b.delete(oB);
       for (const {
-          playerId: dB,
-          settings: IB
+          playerId: oB,
+          settings: GB
         }
-        of QB)
-        if (yB(dB)) mB(dB, IB);
+        of TB)
+        if (qB(oB)) gB(oB, GB);
         else
-          for (const BB in IB)(0, nB.k)(dB, BB, IB[BB]);
-      (jB.length > 0 || zB.length > 0) && NB.n.Ly("playerRosterChanged", UB.ids())
+          for (const BB in GB)(0, JB.g)(oB, BB, GB[BB]);
+      (IB.length > 0 || ZB.length > 0) && vB.l.Gq("playerRosterChanged", cB.ids())
     }
 
-    function mB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UB.getSettings(BB);
-      if (jB) {
-        (0, nB.d)(BB);
-        for (const zB in jB)(0, nB.b)(BB, zB, jB[zB])
-      }
-    }
-
-    function yB(BB) {
-      return BB === (0, uB.g)().FBB || (0, uB.c)().client.hasEntity(BB)
-    }(0, dB.onGameReset)(pB)
-  },
-  38162: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => qB,
-      h: () => SB,
-      i: () => EB,
-      k: () => iB,
-      n: () => fB
-    });
-    var QB = zB(37166),
-      nB = zB(38170),
-      dB = zB(386),
-      IB = zB.n(dB),
-      NB = zB(3510);
-    const uB = new QB.KJ,
-      UB = new QB.KJ,
-      aB = new QB.KJ,
-      pB = new QB.KJ,
-      rB = new QB.KJ,
-      sB = [0, 0, 0],
-      JB = {
-        x: 0,
-        y: 0
-      },
-      mB = new QB.KJ(1, 0, 0),
-      yB = new QB.KJ(0, 1, 0),
-      kB = QB.Matrix.Identity(),
-      GB = new QB.Matrix,
-      LB = new QB.Matrix,
-      gB = new QB.KJ,
-      tB = new nB.e(0, 0, 0, 0);
-
-    function SB(BB, jB) {
-      var zB, nB;
-      const dB = MB(BB, jB);
-      if (dB) {
-        const BB = dB.x,
-          jB = dB.y,
-          zB = BB - 50,
-          QB = jB - 50;
-        return Math.abs(zB) <= NB.e && Math.abs(QB) <= (0, NB.k)() ? {
-          x: BB,
-          y: jB
-        } : HB(zB, QB)
-      }
-      aB.U3(jB[0], jB[1], jB[2]),
-        function(BB) {
-          const jB = BB.pm.ozB(),
-            zB = jB ? QB.Matrix.FromArrayToRef(jB.worldMatrix, 0, LB) : BB.pm.aY().activeCamera.getWorldMatrix();
-          QB.KJ.TransformNormalToRef(mB, zB, pB), pB.normalize(), QB.KJ.TransformNormalToRef(yB, zB, rB), rB.normalize()
-        }(BB);
-      const IB = QB.KJ.Dot(aB, pB);
-      let uB = -QB.KJ.Dot(aB, rB);
-      Math.abs(IB) < .001 && Math.abs(uB) < .001 && (uB = -1);
-      const UB = null !== (zB = null === (nB = BB.pm.ozB()) || void 0 === nB ? void 0 : nB.projectionMatrix) && void 0 !== zB ? zB : BB.pm.aY().activeCamera.getProjectionMatrix().m;
-      return HB(IB * UB[0], uB * UB[5])
-    }
-
-    function MB(BB, jB) {
-      const zB = BB.pm.aY(),
-        nB = zB.wJ(),
-        dB = nB.getRenderWidth(),
-        IB = nB.getRenderHeight();
-      tB.width = dB, tB.height = IB;
-      const NB = BB.pm.ozB(),
-        aB = NB ? gB.U3(NB.eye[0], NB.eye[1], NB.eye[2]) : BB.pm.camera.globalPosition;
-      uB.U3(aB.x + 10 * jB[0], aB.y + 10 * jB[1], aB.z + 10 * jB[2]);
-      const pB = NB ? QB.Matrix.FromArrayToRef(NB.viewProjectionMatrix, 0, GB) : zB.getTransformMatrix();
-      return QB.KJ.ProjectToRef(uB, kB, pB, tB, UB), UB.z < 0 || UB.z > 1 ? null : (JB.x = UB.x / dB * 100, JB.y = UB.y / IB * 100, JB)
-    }
-
-    function EB(BB, jB) {
-      return SB(BB, oB(BB, jB))
-    }
-
-    function iB(BB, jB) {
-      const zB = MB(BB, oB(BB, jB));
-      return zB && {
-        x: zB.x,
-        y: zB.y
+    function gB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cB.getSettings(BB);
+      if (IB) {
+        (0, JB.c)(BB);
+        for (const ZB in IB)(0, JB.b)(BB, ZB, IB[ZB])
       }
     }
 
     function qB(BB) {
-      var jB, zB;
-      return 1 / (null !== (jB = null === (zB = BB.pm.ozB()) || void 0 === zB ? void 0 : zB.projectionMatrix[0]) && void 0 !== jB ? jB : BB.pm.aY().activeCamera.getProjectionMatrix().m[0])
+      return BB === (0, kB.h)().oIB || (0, kB.d)().client.hasEntity(BB)
+    }(0, oB.onGameReset)(hB)
+  },
+  38146: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => YB,
+      f: () => QB,
+      h: () => wB,
+      l: () => OB,
+      o: () => iB
+    });
+    var TB = ZB(37113),
+      JB = ZB(38151),
+      oB = ZB(364),
+      GB = ZB.n(oB),
+      vB = ZB(3586);
+    const kB = new TB.rN,
+      cB = new TB.rN,
+      nB = new TB.rN,
+      hB = new TB.rN,
+      zB = new TB.rN,
+      FB = [0, 0, 0],
+      NB = {
+        x: 0,
+        y: 0
+      },
+      gB = new TB.rN(1, 0, 0),
+      qB = new TB.rN(0, 1, 0),
+      yB = TB.Matrix.Identity(),
+      UB = new TB.Matrix,
+      WB = new TB.Matrix,
+      dB = new TB.rN,
+      CB = new JB.c(0, 0, 0, 0);
+
+    function QB(BB, IB) {
+      var ZB, JB;
+      const oB = sB(BB, IB);
+      if (oB) {
+        const BB = oB.x,
+          IB = oB.y,
+          ZB = BB - 50,
+          TB = IB - 50;
+        return Math.abs(ZB) <= vB.b && Math.abs(TB) <= (0, vB.g)() ? {
+          x: BB,
+          y: IB
+        } : aB(ZB, TB)
+      }
+      nB.cBB(IB[0], IB[1], IB[2]),
+        function(BB) {
+          const IB = BB.Ig.TTB(),
+            ZB = IB ? TB.Matrix.FromArrayToRef(IB.worldMatrix, 0, WB) : BB.Ig.JR().activeCamera.getWorldMatrix();
+          TB.rN.TransformNormalToRef(gB, ZB, hB), hB.normalize(), TB.rN.TransformNormalToRef(qB, ZB, zB), zB.normalize()
+        }(BB);
+      const GB = TB.rN.Dot(nB, hB);
+      let kB = -TB.rN.Dot(nB, zB);
+      Math.abs(GB) < .001 && Math.abs(kB) < .001 && (kB = -1);
+      const cB = null !== (ZB = null === (JB = BB.Ig.TTB()) || void 0 === JB ? void 0 : JB.projectionMatrix) && void 0 !== ZB ? ZB : BB.Ig.JR().activeCamera.getProjectionMatrix().m;
+      return aB(GB * cB[0], kB * cB[5])
     }
 
-    function fB(BB, jB, zB) {
-      const QB = BB.pm.ozB(),
-        nB = QB ? QB.worldMatrix : BB.pm.aY().activeCamera.getWorldMatrix().m,
-        dB = BB.qr;
-      for (let IB = 0; IB < 3; IB++) jB[IB] = nB[12 + IB] + dB[IB], zB[IB] = nB[8 + IB];
-      IB().normalize(zB, zB)
+    function sB(BB, IB) {
+      const ZB = BB.Ig.JR(),
+        JB = ZB.PN(),
+        oB = JB.getRenderWidth(),
+        GB = JB.getRenderHeight();
+      CB.width = oB, CB.height = GB;
+      const vB = BB.Ig.TTB(),
+        nB = vB ? dB.cBB(vB.eye[0], vB.eye[1], vB.eye[2]) : BB.Ig.camera.globalPosition;
+      kB.cBB(nB.x + 10 * IB[0], nB.y + 10 * IB[1], nB.z + 10 * IB[2]);
+      const hB = vB ? TB.Matrix.FromArrayToRef(vB.viewProjectionMatrix, 0, UB) : ZB.getTransformMatrix();
+      return TB.rN.ProjectToRef(kB, yB, hB, CB, cB), cB.z < 0 || cB.z > 1 ? null : (NB.x = cB.x / oB * 100, NB.y = cB.y / GB * 100, NB)
     }
 
-    function oB(BB, jB) {
-      const zB = BB.qr,
-        QB = BB.pm.ozB(),
-        nB = QB ? gB.U3(QB.eye[0], QB.eye[1], QB.eye[2]) : BB.pm.camera.globalPosition;
-      return sB[0] = jB[0] - zB[0] - nB.x, sB[1] = jB[1] - zB[1] - nB.y, sB[2] = jB[2] - zB[2] - nB.z, IB().normalize(sB, sB), sB
+    function wB(BB, IB) {
+      return QB(BB, pB(BB, IB))
     }
 
-    function HB(BB, jB) {
-      return (0, NB.g)(BB, jB, NB.e, (0, NB.k)())
+    function OB(BB, IB) {
+      const ZB = sB(BB, pB(BB, IB));
+      return ZB && {
+        x: ZB.x,
+        y: ZB.y
+      }
+    }
+
+    function YB(BB) {
+      var IB, ZB;
+      return 1 / (null !== (IB = null === (ZB = BB.Ig.TTB()) || void 0 === ZB ? void 0 : ZB.projectionMatrix[0]) && void 0 !== IB ? IB : BB.Ig.JR().activeCamera.getProjectionMatrix().m[0])
+    }
+
+    function iB(BB, IB, ZB) {
+      const TB = BB.Ig.TTB(),
+        JB = TB ? TB.worldMatrix : BB.Ig.JR().activeCamera.getWorldMatrix().m,
+        oB = BB.Mz;
+      for (let GB = 0; GB < 3; GB++) IB[GB] = JB[12 + GB] + oB[GB], ZB[GB] = JB[8 + GB];
+      GB().normalize(ZB, ZB)
+    }
+
+    function pB(BB, IB) {
+      const ZB = BB.Mz,
+        TB = BB.Ig.TTB(),
+        JB = TB ? dB.cBB(TB.eye[0], TB.eye[1], TB.eye[2]) : BB.Ig.camera.globalPosition;
+      return FB[0] = IB[0] - ZB[0] - JB.x, FB[1] = IB[1] - ZB[1] - JB.y, FB[2] = IB[2] - ZB[2] - JB.z, GB().normalize(FB, FB), FB
+    }
+
+    function aB(BB, IB) {
+      return (0, vB.d)(BB, IB, vB.b, (0, vB.g)())
     }
   },
-  39078: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => rB
+  39030: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => zB
     });
-    var QB = zB(214),
-      nB = zB(386),
-      dB = zB.n(nB),
-      IB = zB(36828),
-      NB = zB(36830),
-      uB = zB(2863);
-    const UB = QB.e.Bk * QB.e.playerEyeToHeightRatio,
-      aB = 250,
-      pB = 1.1,
-      rB = new class {
+    var TB = ZB(201),
+      JB = ZB(364),
+      oB = ZB.n(JB),
+      GB = ZB(36780),
+      vB = ZB(36783),
+      kB = ZB(2912);
+    const cB = TB.f.fq * TB.f.playerEyeToHeightRatio,
+      nB = 250,
+      hB = 1.1,
+      zB = new class {
         constructor() {
           this.entities = new Map, this.playing = new Map, this.msSinceLastScan = 0
         }
-        add(BB, jB) {
-          this.entities.set(BB, jB)
+        add(BB, IB) {
+          this.entities.set(BB, IB)
         }
-        update(BB, jB) {
-          const zB = this.entities.get(BB);
-          this.entities.set(BB, jB);
-          const QB = this.playing.get(BB);
-          QB && (zB && zB.soundName === jB.soundName ? (QB.sound.setRelativeVolume(jB.volume), QB.sound.rate(jB.rate), QB.sound.setPannerAttr({
-            refDistance: jB.refDistance
+        update(BB, IB) {
+          const ZB = this.entities.get(BB);
+          this.entities.set(BB, IB);
+          const TB = this.playing.get(BB);
+          TB && (ZB && ZB.soundName === IB.soundName ? (TB.sound.setRelativeVolume(IB.volume), TB.sound.rate(IB.rate), TB.sound.setPannerAttr({
+            refDistance: IB.refDistance
           })) : this.stopEntity(BB))
         }
         remove(BB) {
           this.stopEntity(BB), this.entities.delete(BB)
         }
-        vp(BB) {
-          this.msSinceLastScan += BB, this.msSinceLastScan < aB || (this.msSinceLastScan = 0, this.scan())
+        Iz(BB) {
+          this.msSinceLastScan += BB, this.msSinceLastScan < nB || (this.msSinceLastScan = 0, this.scan())
         }
         stopEntity(BB) {
-          const jB = this.playing.get(BB);
-          jB && (jB.sound.stop(), this.playing.delete(BB))
+          const IB = this.playing.get(BB);
+          IB && (IB.sound.stop(), this.playing.delete(BB))
         }
-        startEntity(BB, jB, zB) {
-          const QB = (0, NB.f)(jB.soundName);
-          if (!QB) return console.error(`AudioEntityManager: no sound found for "${jB.soundName}", dropping audio entity ${BB}`), void this.remove(BB);
-          const nB = IB.e.play(QB, jB.volume, zB, jB.maxHearDist, jB.refDistance, !0);
-          nB.rate(jB.rate), this.playing.set(BB, {
-            sound: nB,
-            lastPos: dB().clone(zB)
+        startEntity(BB, IB, ZB) {
+          const TB = (0, vB.f)(IB.soundName);
+          if (!TB) return console.error(`AudioEntityManager: no sound found for "${IB.soundName}", dropping audio entity ${BB}`), void this.remove(BB);
+          const JB = GB.d.play(TB, IB.volume, ZB, IB.maxHearDist, IB.refDistance, !0);
+          JB.rate(IB.rate), this.playing.set(BB, {
+            sound: JB,
+            lastPos: oB().clone(ZB)
           })
         }
         scan() {
-          const BB = (0, uB.g)();
+          const BB = (0, kB.h)();
           if (!BB) return;
-          const jB = BB.vG.iG(BB.zV);
-          if (jB)
-            for (const [zB, QB] of this.entities) {
-              if (!BB.vG.HBB(zB, "position")) continue;
-              const nB = BB.vG.iG(zB),
-                IB = dB().sqrDist(jB, nB),
-                NB = this.playing.get(zB);
-              if (NB) {
-                const BB = QB.maxHearDist * pB;
-                IB > BB * BB ? this.stopEntity(zB) : dB().equals(nB, NB.lastPos) || (NB.sound.setPosition([nB[0], nB[1] + UB, nB[2]]), dB().copy(NB.lastPos, nB))
-              } else IB <= QB.maxHearDist * QB.maxHearDist && this.startEntity(zB, QB, nB)
+          const IB = BB.zW.aU(BB.Jm);
+          if (IB)
+            for (const [ZB, TB] of this.entities) {
+              if (!BB.zW.TIB(ZB, "position")) continue;
+              const JB = BB.zW.aU(ZB),
+                GB = oB().sqrDist(IB, JB),
+                vB = this.playing.get(ZB);
+              if (vB) {
+                const BB = TB.maxHearDist * hB;
+                GB > BB * BB ? this.stopEntity(ZB) : oB().equals(JB, vB.lastPos) || (vB.sound.setPosition([JB[0], JB[1] + cB, JB[2]]), oB().copy(vB.lastPos, JB))
+              } else GB <= TB.maxHearDist * TB.maxHearDist && this.startEntity(ZB, TB, JB)
             }
         }
       }
   },
-  39142: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => dB,
-      f: () => nB
+  39090: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => oB,
+      f: () => JB
     });
-    var QB = zB(31);
+    var TB = ZB(24);
 
-    function nB(BB) {
+    function JB(BB) {
       return "refetchCode" === BB || "devDownloadJson" === BB || BB.startsWith("Plugin")
     }
 
-    function dB(BB, jB) {
-      "refetchCode" !== BB ? "Plugin|MobAiPlugin|ShowPetUi" !== BB ? Promise.all([zB.e(109), zB.e(110), zB.e(105), zB.e(107), zB.e(218)]).then((() => zB(41825))).then((zB => {
+    function oB(BB, IB) {
+      "refetchCode" !== BB ? "Plugin|MobAiPlugin|ShowPetUi" !== BB ? Promise.all([ZB.e(109), ZB.e(110), ZB.e(105), ZB.e(107), ZB.e(218)]).then((() => ZB(41761))).then((ZB => {
         let {
-          runClientGameMessage: QB
-        } = zB;
-        QB(BB, jB)
-      })).catch((jB => {
-        console.error(`Game message ${BB} failed`, jB)
-      })) : QB.n.Ly("showPetUi", jB) : QB.n.Ly("refetchCode")
+          runClientGameMessage: TB
+        } = ZB;
+        TB(BB, IB)
+      })).catch((IB => {
+        console.error(`Game message ${BB} failed`, IB)
+      })) : TB.l.Gq("showPetUi", IB) : TB.l.Gq("refetchCode")
     }
   },
-  39126: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => aB
+  39076: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => nB
     });
-    var QB = zB(1263),
-      nB = zB(1359),
-      dB = zB(28),
-      IB = zB(1343),
-      NB = zB(1357),
-      uB = zB(1543),
-      UB = zB(36538);
+    var TB = ZB(1281),
+      JB = ZB(1385),
+      oB = ZB(20),
+      GB = ZB(1370),
+      vB = ZB(1382),
+      kB = ZB(1579),
+      cB = ZB(36492);
 
-    function aB(BB) {
+    function nB(BB) {
       let {
-        xn: jB,
-        Kn: zB
+        jJ: IB,
+        PJ: ZB
       } = BB;
-      const aB = null !== jB && void 0 !== jB ? jB : (0, NB.d)().gameNameWithVariation;
-      (0, QB.C)(aB) && ((0, UB.i)(), (0, IB.W)((() => {
-        console.log("Received matchmaking order from game server to game", jB), (0, dB.i)("inGameReplay"), (0, uB.navigatePreserveSearch)((0, nB.e)(aB, null !== zB && void 0 !== zB ? zB : void 0))
+      const nB = null !== IB && void 0 !== IB ? IB : (0, vB.c)().gameNameWithVariation;
+      (0, TB.D)(nB) && ((0, cB.l)(), (0, GB.$)((() => {
+        console.log("Received matchmaking order from game server to game", IB), (0, oB.m)("inGameReplay"), (0, kB.navigatePreserveSearch)((0, JB.b)(nB, null !== ZB && void 0 !== ZB ? ZB : void 0))
       }), "video_start"))
     }
   },
-  39121: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => uB,
-      d: () => IB,
-      f: () => NB,
-      j: () => UB
+  39067: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB,
+      f: () => GB,
+      j: () => vB,
+      k: () => cB
     });
-    var QB = zB(31),
-      nB = zB(1381);
-    const dB = new Map;
+    var TB = ZB(24),
+      JB = ZB(1403);
+    const oB = new Map;
 
-    function IB(BB, jB) {
-      QB.n.Ly("newUiRequest", {
+    function GB(BB, IB) {
+      TB.l.Gq("newUiRequest", {
         id: BB,
-        clientParameters: jB
+        clientParameters: IB
       }, !0)
     }
 
-    function NB(BB) {
-      QB.n.Ly("removeUiRequest", BB, !0);
-      const jB = dB.get(BB);
-      jB && (jB.tearDownNotification(), dB.delete(BB))
+    function vB(BB) {
+      TB.l.Gq("removeUiRequest", BB, !0);
+      const IB = oB.get(BB);
+      IB && (IB.tearDownNotification(), oB.delete(BB))
     }
 
-    function uB() {
-      QB.n.Ly("clearUiRequests");
-      for (const BB of dB.values()) BB.tearDownNotification();
-      dB.clear()
+    function kB() {
+      TB.l.Gq("clearUiRequests");
+      for (const BB of oB.values()) BB.tearDownNotification();
+      oB.clear()
     }
 
-    function UB(BB, jB, zB, QB) {
-      const IB = nB.NotificationProvider.showPromptPopup({
-        title: jB,
+    function cB(BB, IB, ZB, TB) {
+      const GB = JB.NotificationProvider.showPromptPopup({
+        title: IB,
         confirmText: "general:yes",
         cancelText: "general:no",
-        destructive: zB,
+        destructive: ZB,
         unlockPointerKey: "uiRequestPopup"
       });
-      dB.set(BB, IB), IB.getResult().then((jB => {
-        dB.delete(BB), "notificationTornDown" !== jB && QB(jB)
+      oB.set(BB, GB), GB.getResult().then((IB => {
+        oB.delete(BB), "notificationTornDown" !== IB && TB(IB)
       }))
     }
   },
-  39117: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB
+  39061: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => TB
     });
-    class QB {
+    class TB {
       constructor() {
         this.members = new Map
       }
       apply(BB) {
-        const jB = {
+        const IB = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const QB of BB.ZB) {
-          let BB = this.members.get(QB.AB);
+        for (const TB of BB.mB) {
+          let BB = this.members.get(TB.XB);
           if (BB || (BB = {
               name: null,
               settings: {}
-            }, this.members.set(QB.AB, BB), jB.added.push(QB.AB)), null !== QB.TB && (BB.name = QB.TB), null !== QB.PB || QB.WB.length > 0) {
-            const zB = null === QB.PB ? {} : JSON.parse(QB.PB);
-            Object.assign(BB.settings, zB);
-            for (const jB of QB.WB) delete BB.settings[jB], zB[jB] = void 0;
-            jB.settingChanges.push({
-              playerId: QB.AB,
-              settings: zB
+            }, this.members.set(TB.XB, BB), IB.added.push(TB.XB)), null !== TB.LB && (BB.name = TB.LB), null !== TB.eB || TB.uB.length > 0) {
+            const ZB = null === TB.eB ? {} : JSON.parse(TB.eB);
+            Object.assign(BB.settings, ZB);
+            for (const IB of TB.uB) delete BB.settings[IB], ZB[IB] = void 0;
+            IB.settingChanges.push({
+              playerId: TB.XB,
+              settings: ZB
             })
           }
         }
-        for (const QB of BB.eB) {
-          const BB = this.members.get(QB);
-          var zB;
-          if (BB) this.members.delete(QB), jB.removed.push({
-            playerId: QB,
-            name: null !== (zB = BB.name) && void 0 !== zB ? zB : void 0
+        for (const TB of BB.fB) {
+          const BB = this.members.get(TB);
+          var ZB;
+          if (BB) this.members.delete(TB), IB.removed.push({
+            playerId: TB,
+            name: null !== (ZB = BB.name) && void 0 !== ZB ? ZB : void 0
           })
         }
-        return jB
+        return IB
       }
       has(BB) {
         return this.members.has(BB)
@@ -4172,34 +4415,34 @@ export const modules = {
         return [...this.members.keys()]
       }
       getName(BB) {
-        var jB, zB;
-        return null !== (jB = null === (zB = this.members.get(BB)) || void 0 === zB ? void 0 : zB.name) && void 0 !== jB ? jB : void 0
+        var IB, ZB;
+        return null !== (IB = null === (ZB = this.members.get(BB)) || void 0 === ZB ? void 0 : ZB.name) && void 0 !== IB ? IB : void 0
       }
       getSettings(BB) {
-        var jB;
-        return null === (jB = this.members.get(BB)) || void 0 === jB ? void 0 : jB.settings
+        var IB;
+        return null === (IB = this.members.get(BB)) || void 0 === IB ? void 0 : IB.settings
       }
-      getSetting(BB, jB) {
-        var zB;
-        return null === (zB = this.members.get(BB)) || void 0 === zB ? void 0 : zB.settings[jB]
+      getSetting(BB, IB) {
+        var ZB;
+        return null === (ZB = this.members.get(BB)) || void 0 === ZB ? void 0 : ZB.settings[IB]
       }
       clear() {
         this.members.clear()
       }
     }
   },
-  39146: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => QB,
-      c: () => nB
+  39094: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB,
+      i: () => JB
     });
-    const QB = ["description", "label"];
+    const TB = ["description", "label"];
 
-    function nB(BB) {
-      const jB = BB.type;
+    function JB(BB) {
+      const IB = BB.type;
       return {
-        type: jB,
-        params: BB[jB]
+        type: IB,
+        params: BB[IB]
       }
     }
   }

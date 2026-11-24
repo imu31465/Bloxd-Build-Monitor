@@ -1,17 +1,17 @@
 export const id = 276;
 export const ids = [276];
 export const modules = {
-  41150: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      gamePackSource: () => dB
+  41082: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      gamePackSource: () => oB
     });
-    var QB = zB(5066),
-      nB = zB(1532);
+    var TB = ZB(5134),
+      JB = ZB(1561);
 
-    function dB(BB) {
+    function oB(BB) {
       return {
-        packKey: async jB => (await nB.b.getGame(BB, jB, !0)).customTexturePackKey,
-        fetchPack: QB.e
+        packKey: async IB => (await JB.c.getGame(BB, IB, !0)).customTexturePackKey,
+        fetchPack: TB.c
       }
     }
   }

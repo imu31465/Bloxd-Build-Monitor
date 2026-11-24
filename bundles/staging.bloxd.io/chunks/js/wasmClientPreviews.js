@@ -1,38 +1,38 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  38738: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      e: () => dB
+  38677: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => JB,
+      f: () => oB
     });
-    const QB = new WeakMap;
+    const TB = new WeakMap;
 
-    function nB(BB, jB) {
-      return QB.set(BB, jB), BB
+    function JB(BB, IB) {
+      return TB.set(BB, IB), BB
     }
 
-    function dB(BB) {
-      var jB;
-      return null !== (jB = QB.get(BB)) && void 0 !== jB ? jB : null
+    function oB(BB) {
+      var IB;
+      return null !== (IB = TB.get(BB)) && void 0 !== IB ? IB : null
     }
   },
-  38756: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => NB
+  38696: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => vB
     });
-    var QB = zB(1263);
+    var TB = ZB(1281);
 
-    function nB(BB) {
-      const jB = /(\d*\.?\d+)px/.exec(BB);
-      return jB ? Number(jB[1]) : null
+    function JB(BB) {
+      const IB = /(\d*\.?\d+)px/.exec(BB);
+      return IB ? Number(IB[1]) : null
     }
 
-    function dB(BB) {
+    function oB(BB) {
       return BB.split(/[\s,]+/).pop()
     }
-    let IB = !1;
-    const NB = {
+    let GB = !1;
+    const vB = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,371 +43,371 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(BB, jB, QB, NB, uB, UB) {
-        if (uB <= 0 || UB <= 0 || this.fontSize <= 0) return {
+      drawText: function(BB, IB, TB, vB, kB, cB) {
+        if (kB <= 0 || cB <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: aB,
-          fontVariant: pB,
-          fontWeight: rB,
-          fontSize: sB,
-          font: JB
-        } = this, mB = [aB, pB, rB, `${sB}px`, JB].filter(Boolean).join(" "), yB = [
-          [rB, `${sB}px`, dB(JB)].filter(Boolean).join(" "), `${sB}px sans-serif`
-        ], kB = BB.font, GB = function(BB, jB, zB) {
-          for (const QB of jB) {
-            BB.font = QB;
-            const jB = nB(BB.font),
-              IB = dB(QB);
-            if (null !== jB && Math.abs(jB - zB) <= .5 && BB.font.toLowerCase().includes(IB.toLowerCase())) return QB
+          fontStyle: nB,
+          fontVariant: hB,
+          fontWeight: zB,
+          fontSize: FB,
+          font: NB
+        } = this, gB = [nB, hB, zB, `${FB}px`, NB].filter(Boolean).join(" "), qB = [
+          [zB, `${FB}px`, oB(NB)].filter(Boolean).join(" "), `${FB}px sans-serif`
+        ], yB = BB.font, UB = function(BB, IB, ZB) {
+          for (const TB of IB) {
+            BB.font = TB;
+            const IB = JB(BB.font),
+              GB = oB(TB);
+            if (null !== IB && Math.abs(IB - ZB) <= .5 && BB.font.toLowerCase().includes(GB.toLowerCase())) return TB
           }
           return null
-        }(BB, [mB, ...yB], sB);
-        GB !== mB && function(BB, jB, QB) {
-          IB || (IB = !0, Promise.resolve().then((() => zB(1121))).then((zB => {
+        }(BB, [gB, ...qB], FB);
+        UB !== gB && function(BB, IB, TB) {
+          GB || (GB = !0, Promise.resolve().then((() => ZB(1125))).then((ZB => {
             let {
-              Zm: nB
-            } = zB;
-            nB(new Error("A canvas didn't take canvasTxt's font"), {
+              Og: JB
+            } = ZB;
+            JB(new Error("A canvas didn't take canvasTxt's font"), {
               font: BB,
-              Cs: jB,
-              drawnWith: null !== QB && void 0 !== QB ? QB : "the kept font, scaled"
+              XF: IB,
+              drawnWith: null !== TB && void 0 !== TB ? TB : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(mB, kB, GB);
-        const LB = nB(BB.font);
-        if (null === GB && null !== LB && LB > 0) {
-          const zB = sB / LB;
+        }(gB, yB, UB);
+        const WB = JB(BB.font);
+        if (null === UB && null !== WB && WB > 0) {
+          const ZB = FB / WB;
           BB.save();
           try {
-            return BB.scale(zB, zB), {
-              height: this.drawLines(BB, jB, QB / zB, NB / zB, uB / zB, UB / zB, LB).height * zB
+            return BB.scale(ZB, ZB), {
+              height: this.drawLines(BB, IB, TB / ZB, vB / ZB, kB / ZB, cB / ZB, WB).height * ZB
             }
           } finally {
             BB.restore()
           }
         }
-        return this.drawLines(BB, jB, QB, NB, uB, UB, sB)
+        return this.drawLines(BB, IB, TB, vB, kB, cB, FB)
       },
-      drawLines: function(BB, jB, zB, nB, dB, IB, NB) {
-        const uB = zB + dB,
-          UB = nB + IB;
-        let aB, pB = nB + IB / 2 + NB / 2;
-        "right" === this.align ? (aB = uB, BB.textAlign = "right") : "left" === this.align ? (aB = zB, BB.textAlign = "left") : (aB = zB + dB / 2, BB.textAlign = "center");
-        for (const QB of jB) {
-          BB.measureText(QB).width >= dB && (jB = jB.replace(QB, ""))
+      drawLines: function(BB, IB, ZB, JB, oB, GB, vB) {
+        const kB = ZB + oB,
+          cB = JB + GB;
+        let nB, hB = JB + GB / 2 + vB / 2;
+        "right" === this.align ? (nB = kB, BB.textAlign = "right") : "left" === this.align ? (nB = ZB, BB.textAlign = "left") : (nB = ZB + oB / 2, BB.textAlign = "center");
+        for (const TB of IB) {
+          BB.measureText(TB).width >= oB && (IB = IB.replace(TB, ""))
         }
-        jB = (0, QB.K)(jB);
-        const rB = [],
-          sB = jB.split("\n"),
-          JB = this.justify ? BB.measureText("\u200a").width : 0;
-        sB.forEach((jB => {
-          let zB = BB.measureText(jB).width;
-          if (zB <= dB) rB.push(jB);
+        IB = (0, TB.N)(IB);
+        const zB = [],
+          FB = IB.split("\n"),
+          NB = this.justify ? BB.measureText("\u200a").width : 0;
+        FB.forEach((IB => {
+          let ZB = BB.measureText(IB).width;
+          if (ZB <= oB) zB.push(IB);
           else {
-            let QB = jB;
-            const nB = dB;
-            let IB, NB, uB;
-            for (zB = BB.measureText(QB).width; zB > nB;) {
-              for (IB = 0, NB = 0, uB = ""; NB < nB;) IB++, uB = QB.substr(0, IB), NB = BB.measureText(uB).width;
-              IB--, uB = uB.substr(0, IB);
-              const jB = IB;
-              if (" " !== QB.substr(IB, 1)) {
+            let TB = IB;
+            const JB = oB;
+            let GB, vB, kB;
+            for (ZB = BB.measureText(TB).width; ZB > JB;) {
+              for (GB = 0, vB = 0, kB = ""; vB < JB;) GB++, kB = TB.substr(0, GB), vB = BB.measureText(kB).width;
+              GB--, kB = kB.substr(0, GB);
+              const IB = GB;
+              if (" " !== TB.substr(GB, 1)) {
                 for (;
-                  " " !== QB.substr(IB, 1) && 0 !== IB;) IB--;
-                0 === IB && (IB = jB), uB = QB.substr(0, IB)
+                  " " !== TB.substr(GB, 1) && 0 !== GB;) GB--;
+                0 === GB && (GB = IB), kB = TB.substr(0, GB)
               }
-              uB = this.justify ? this.justifyLine(BB, uB, JB, "\u200a", dB) : uB, QB = QB.substr(IB), zB = BB.measureText(QB).width, rB.push(uB)
+              kB = this.justify ? this.justifyLine(BB, kB, NB, "\u200a", oB) : kB, TB = TB.substr(GB), ZB = BB.measureText(TB).width, zB.push(kB)
             }
-            zB > 0 && rB.push(QB)
+            ZB > 0 && zB.push(TB)
           }
         }));
-        const mB = this.lineHeight ? this.lineHeight : this.getTextHeight(BB, jB),
-          yB = mB * (rB.length - 1),
-          kB = yB / 2;
-        let GB = nB;
-        "top" === this.vAlign ? pB = nB + NB : "bottom" === this.vAlign ? (pB = UB - yB, GB = UB) : (GB = nB + IB / 2, pB -= kB), rB.forEach((jB => {
-          jB = jB.trim(), BB.fillText(jB, aB, pB), pB += mB
-        })), this.debug && (BB.lineWidth = 3, BB.strokeStyle = "#00909e", BB.strokeRect(zB, nB, dB, IB), BB.lineWidth = 2, BB.strokeStyle = "#f6d743", BB.beginPath(), BB.moveTo(aB, nB), BB.lineTo(aB, UB), BB.stroke(), BB.strokeStyle = "#ff6363", BB.beginPath(), BB.moveTo(zB, GB), BB.lineTo(uB, GB), BB.stroke());
+        const gB = this.lineHeight ? this.lineHeight : this.getTextHeight(BB, IB),
+          qB = gB * (zB.length - 1),
+          yB = qB / 2;
+        let UB = JB;
+        "top" === this.vAlign ? hB = JB + vB : "bottom" === this.vAlign ? (hB = cB - qB, UB = cB) : (UB = JB + GB / 2, hB -= yB), zB.forEach((IB => {
+          IB = IB.trim(), BB.fillText(IB, nB, hB), hB += gB
+        })), this.debug && (BB.lineWidth = 3, BB.strokeStyle = "#00909e", BB.strokeRect(ZB, JB, oB, GB), BB.lineWidth = 2, BB.strokeStyle = "#f6d743", BB.beginPath(), BB.moveTo(nB, JB), BB.lineTo(nB, cB), BB.stroke(), BB.strokeStyle = "#ff6363", BB.beginPath(), BB.moveTo(ZB, UB), BB.lineTo(kB, UB), BB.stroke());
         return {
-          height: yB + mB
+          height: qB + gB
         }
       },
-      getTextHeight: function(BB, jB) {
-        const zB = BB.textBaseline;
+      getTextHeight: function(BB, IB) {
+        const ZB = BB.textBaseline;
         BB.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: QB
-        } = BB.measureText(jB);
-        return BB.textBaseline = zB, QB
+          actualBoundingBoxAscent: TB
+        } = BB.measureText(IB);
+        return BB.textBaseline = ZB, TB
       },
-      justifyLine: function(BB, jB, zB, QB, nB) {
-        const dB = jB.trim(),
-          IB = BB.measureText(dB).width,
-          NB = dB.split(/\s+/).length - 1,
-          uB = Math.floor((nB - IB) / zB);
-        if (NB <= 0 || uB <= 0) return dB;
-        const UB = Math.floor(uB / NB);
-        let aB = uB - NB * UB,
-          pB = [];
-        for (let rB = 0; rB < UB; rB++) pB.push(QB);
-        pB = pB.join("");
-        return dB.replace(/\s+/g, (BB => {
-          const jB = aB > 0 ? pB + QB : pB;
-          return aB--, BB + jB
+      justifyLine: function(BB, IB, ZB, TB, JB) {
+        const oB = IB.trim(),
+          GB = BB.measureText(oB).width,
+          vB = oB.split(/\s+/).length - 1,
+          kB = Math.floor((JB - GB) / ZB);
+        if (vB <= 0 || kB <= 0) return oB;
+        const cB = Math.floor(kB / vB);
+        let nB = kB - vB * cB,
+          hB = [];
+        for (let zB = 0; zB < cB; zB++) hB.push(TB);
+        hB = hB.join("");
+        return oB.replace(/\s+/g, (BB => {
+          const IB = nB > 0 ? hB + TB : hB;
+          return nB--, BB + IB
         }))
       }
     }
   },
-  38764: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => mB,
-      c: () => JB,
-      f: () => rB,
-      j: () => aB,
-      l: () => pB
+  38703: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => gB,
+      e: () => NB,
+      h: () => zB,
+      l: () => nB,
+      m: () => hB
     });
-    var QB = zB(4334),
-      nB = zB(376);
-    const dB = 1024,
-      IB = 1536,
-      NB = 2 * QB.k + 1,
-      uB = new Intl.NumberFormat("en", {
+    var TB = ZB(4416),
+      JB = ZB(360);
+    const oB = 1024,
+      GB = 1536,
+      vB = 2 * TB.k + 1,
+      kB = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      UB = 1.5;
+      cB = 1.5;
 
-    function aB(BB, jB, zB) {
-      if ("string" !== typeof BB) return jB;
+    function nB(BB, IB, ZB) {
+      if ("string" !== typeof BB) return IB;
       try {
-        const zB = JSON.parse(BB);
-        return zB && "object" === typeof zB ? zB : jB
-      } catch (QB) {
-        return void 0 !== zB && console.error(`Couldn't parse ${zB}`, QB), jB
+        const ZB = JSON.parse(BB);
+        return ZB && "object" === typeof ZB ? ZB : IB
+      } catch (TB) {
+        return void 0 !== ZB && console.error(`Couldn't parse ${ZB}`, TB), IB
       }
     }
 
-    function pB(BB) {
-      return aB(BB, null, "a leaderboard's rows")
+    function hB(BB) {
+      return nB(BB, null, "a leaderboard's rows")
     }
 
-    function rB(BB, jB) {
-      var zB, QB;
-      return null !== jB && void 0 !== jB ? jB : {
-        status: null !== (zB = BB.status) && void 0 !== zB ? zB : "loading",
-        entries: null !== (QB = BB.entries) && void 0 !== QB ? QB : []
+    function zB(BB, IB) {
+      var ZB, TB;
+      return null !== IB && void 0 !== IB ? IB : {
+        status: null !== (ZB = BB.status) && void 0 !== ZB ? ZB : "loading",
+        entries: null !== (TB = BB.entries) && void 0 !== TB ? TB : []
       }
     }
 
-    function sB(BB, jB) {
-      return "number" === typeof BB && Number.isFinite(BB) && BB > 0 ? BB : jB
+    function FB(BB, IB) {
+      return "number" === typeof BB && Number.isFinite(BB) && BB > 0 ? BB : IB
     }
 
-    function JB(BB, jB) {
-      const zB = sB(BB.size, 1);
-      let QB = sB(BB.width, sB(2.5 * zB, 2.5)),
-        nB = sB(BB.height, sB(3.75 * zB, 3.75));
-      Number.isFinite(dB * nB / QB) && Number.isFinite(IB * QB / nB) || (QB = 2.5, nB = 3.75);
-      const NB = nB / QB,
-        uB = Math.max(1, Math.min(dB, jB / NB));
+    function NB(BB, IB) {
+      const ZB = FB(BB.size, 1);
+      let TB = FB(BB.width, FB(2.5 * ZB, 2.5)),
+        JB = FB(BB.height, FB(3.75 * ZB, 3.75));
+      Number.isFinite(oB * JB / TB) && Number.isFinite(GB * TB / JB) || (TB = 2.5, JB = 3.75);
+      const vB = JB / TB,
+        kB = Math.max(1, Math.min(oB, IB / vB));
       return {
-        width: QB,
-        height: nB,
-        layoutWidth: Math.max(dB, IB / NB),
-        layoutHeight: Math.max(IB, dB * NB),
-        pixelWidth: Math.round(uB),
-        pixelHeight: Math.round(Math.max(1, Math.min(jB, uB * NB)))
+        width: TB,
+        height: JB,
+        layoutWidth: Math.max(oB, GB / vB),
+        layoutHeight: Math.max(GB, oB * vB),
+        pixelWidth: Math.round(kB),
+        pixelHeight: Math.round(Math.max(1, Math.min(IB, kB * vB)))
       }
     }
 
-    function mB(BB, jB, zB, IB, aB, pB) {
-      BB.setTransform(1, 0, 0, 1, 0, 0), BB.fillStyle = nB.E.defaultNameTagBackground, BB.fillRect(0, 0, jB, zB), BB.scale(jB / IB.layoutWidth, zB / IB.layoutHeight), BB.translate((IB.layoutWidth - dB) / 2, 0),
-        function(BB, jB, zB, dB) {
-          var IB, aB, pB, rB;
+    function gB(BB, IB, ZB, GB, nB, hB) {
+      BB.setTransform(1, 0, 0, 1, 0, 0), BB.fillStyle = JB.P.defaultNameTagBackground, BB.fillRect(0, 0, IB, ZB), BB.scale(IB / GB.layoutWidth, ZB / GB.layoutHeight), BB.translate((GB.layoutWidth - oB) / 2, 0),
+        function(BB, IB, ZB, oB) {
+          var GB, nB, hB, zB;
           const {
-            top: sB,
-            around: JB,
-            showPlayerText: mB,
-            localPlayerDbId: GB
-          } = zB, {
-            whiteUiText: LB,
-            grayUiText: gB,
-            yellowUiText: tB
-          } = nB.E;
+            top: FB,
+            around: NB,
+            showPlayerText: gB,
+            localPlayerDbId: UB
+          } = ZB, {
+            whiteUiText: WB,
+            grayUiText: dB,
+            yellowUiText: CB
+          } = JB.P;
           BB.textBaseline = "middle";
-          const SB = function(jB, zB, QB, nB, dB, IB) {
-              let NB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              BB.font = `bold ${nB}px 'Jetbrains Mono', monospace`, BB.fillStyle = dB, BB.textAlign = NB;
-              let uB = jB.replace(/[\r\n\t]/g, " ");
-              if (BB.measureText(uB).width > IB) {
-                for (; uB.length > 0 && BB.measureText(`${uB}\u2026`).width > IB;) uB = uB.slice(0, -1);
-                uB += "\u2026"
+          const QB = function(IB, ZB, TB, JB, oB, GB) {
+              let vB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              BB.font = `bold ${JB}px 'Jetbrains Mono', monospace`, BB.fillStyle = oB, BB.textAlign = vB;
+              let kB = IB.replace(/[\r\n\t]/g, " ");
+              if (BB.measureText(kB).width > GB) {
+                for (; kB.length > 0 && BB.measureText(`${kB}\u2026`).width > GB;) kB = kB.slice(0, -1);
+                kB += "\u2026"
               }
-              BB.fillText(uB, zB, QB)
+              BB.fillText(kB, ZB, TB)
             },
-            MB = jB => {
-              BB.fillStyle = LB, BB.globalAlpha = .15, BB.fillRect(24, jB, 976, 2), BB.globalAlpha = 1
+            sB = IB => {
+              BB.fillStyle = WB, BB.globalAlpha = .15, BB.fillRect(24, IB, 976, 2), BB.globalAlpha = 1
             },
-            EB = null === GB ? null : (0, nB.oc)(GB),
-            iB = BB => null !== EB && BB.playerHash === EB,
-            qB = yB(sB.entries, QB.n),
-            fB = "ready" === sB.status && qB.length > 0,
-            oB = null === JB ? [] : yB(JB.entries, NB),
-            HB = qB.some(iB),
-            DB = null === JB ? null : function(BB) {
-              const jB = BB;
-              if (!jB || !Number.isFinite(jB.rank) || !Number.isFinite(jB.tied) || !Number.isFinite(jB.total)) return null;
-              return jB
-            }(JB.standing),
-            FB = oB.find(iB),
-            YB = qB.find(iB),
-            VB = null === DB || void 0 === FB ? null : {
-              value: FB.value,
-              rank: DB.rank
+            wB = null === UB ? null : (0, JB.nc)(UB),
+            OB = BB => null !== wB && BB.playerHash === wB,
+            YB = qB(FB.entries, TB.n),
+            iB = "ready" === FB.status && YB.length > 0,
+            pB = null === NB ? [] : qB(NB.entries, vB),
+            aB = YB.some(OB),
+            HB = null === NB ? null : function(BB) {
+              const IB = BB;
+              if (!IB || !Number.isFinite(IB.rank) || !Number.isFinite(IB.tied) || !Number.isFinite(IB.total)) return null;
+              return IB
+            }(NB.standing),
+            MB = pB.find(OB),
+            jB = YB.find(OB),
+            PB = null === HB || void 0 === MB ? null : {
+              value: MB.value,
+              rank: HB.rank
             },
-            hB = kB(qB, void 0 === YB || YB.value === (null === VB || void 0 === VB ? void 0 : VB.value) ? VB : null),
-            XB = kB(oB, VB),
-            ZB = (BB, jB) => {
-              const zB = BB.findIndex(iB);
-              return zB >= 0 ? jB[zB] : null
+            RB = yB(YB, void 0 === jB || jB.value === (null === PB || void 0 === PB ? void 0 : PB.value) ? PB : null),
+            rB = yB(pB, PB),
+            mB = (BB, IB) => {
+              const ZB = BB.findIndex(OB);
+              return ZB >= 0 ? IB[ZB] : null
             },
-            AB = null !== (IB = null !== (aB = null === DB || void 0 === DB ? void 0 : DB.rank) && void 0 !== aB ? aB : ZB(oB, XB)) && void 0 !== IB ? IB : ZB(qB, hB);
+            XB = null !== (GB = null !== (nB = null === HB || void 0 === HB ? void 0 : HB.rank) && void 0 !== nB ? nB : mB(pB, rB)) && void 0 !== GB ? GB : mB(YB, RB);
           BB.font = "bold 34px 'Jetbrains Mono', monospace";
-          const TB = [...fB ? hB : [], ...HB ? [] : XB],
-            PB = Math.min(280, Math.max(0, ...TB.map((jB => BB.measureText(uB.format(jB)).width)))),
-            WB = PB <= 80,
-            eB = WB ? 80 : 32 + PB,
-            lB = WB ? 148 : eB + 28,
-            wB = 660 - lB;
-          SB(`TOP ${QB.n}  /  ALL TIME`, 24, 52, 28, gB, 976), SB(mB ? String(null !== (pB = jB.title) && void 0 !== pB ? pB : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, LB, 976), SB("RANK", 32, 174, 28, gB, lB - 40), SB("PLAYER", lB, 174, 28, gB, wB), SB(mB ? String(null !== (rB = jB.scoreLabel) && void 0 !== rB ? rB : "Score").slice(0, 24) : "Score", 992, 174, 28, gB, 304, "right"), MB(202);
-          const xB = (dB - 232) / (QB.n + UB + NB),
-            KB = 208 + QB.n * xB,
-            CB = KB + UB * xB,
-            cB = (jB, zB, QB, nB) => {
-              const dB = iB(jB);
-              BB.fillStyle = dB ? tB : LB, BB.globalAlpha = dB ? .15 : nB ? .035 : 0, BB.fillRect(24, QB - xB / 2 + 1, 976, xB - 2), BB.globalAlpha = 1;
-              const IB = dB ? tB : LB;
-              SB(uB.format(zB), eB, QB, 34, IB, WB ? 80 : PB, WB ? "center" : "right"), SB(mB ? String(jB.name).slice(0, 64) : "Player", lB, QB, 34, IB, wB);
-              const NB = uB.format(jB.value);
-              SB(BB.measureText(NB).width > 304 ? jB.value.toExponential(6) : NB, 992, QB, 34, IB, 304, "right")
+          const LB = [...iB ? RB : [], ...aB ? [] : rB],
+            eB = Math.min(280, Math.max(0, ...LB.map((IB => BB.measureText(kB.format(IB)).width)))),
+            uB = eB <= 80,
+            fB = uB ? 80 : 32 + eB,
+            lB = uB ? 148 : fB + 28,
+            AB = 660 - lB;
+          QB(`TOP ${TB.n}  /  ALL TIME`, 24, 52, 28, dB, 976), QB(gB ? String(null !== (hB = IB.title) && void 0 !== hB ? hB : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, WB, 976), QB("RANK", 32, 174, 28, dB, lB - 40), QB("PLAYER", lB, 174, 28, dB, AB), QB(gB ? String(null !== (zB = IB.scoreLabel) && void 0 !== zB ? zB : "Score").slice(0, 24) : "Score", 992, 174, 28, dB, 304, "right"), sB(202);
+          const tB = (oB - 232) / (TB.n + cB + vB),
+            bB = 208 + TB.n * tB,
+            xB = bB + cB * tB,
+            EB = (IB, ZB, TB, JB) => {
+              const oB = OB(IB);
+              BB.fillStyle = oB ? CB : WB, BB.globalAlpha = oB ? .15 : JB ? .035 : 0, BB.fillRect(24, TB - tB / 2 + 1, 976, tB - 2), BB.globalAlpha = 1;
+              const GB = oB ? CB : WB;
+              QB(kB.format(ZB), fB, TB, 34, GB, uB ? 80 : eB, uB ? "center" : "right"), QB(gB ? String(IB.name).slice(0, 64) : "Player", lB, TB, 34, GB, AB);
+              const vB = kB.format(IB.value);
+              QB(BB.measureText(vB).width > 304 ? IB.value.toExponential(6) : vB, 992, TB, 34, GB, 304, "right")
             };
-          if (fB)
-            for (const [QB, nB] of qB.entries()) cB(nB, hB[QB], 208 + (QB + .5) * xB, QB % 2 === 0);
+          if (iB)
+            for (const [TB, JB] of YB.entries()) EB(JB, RB[TB], 208 + (TB + .5) * tB, TB % 2 === 0);
           else {
-            const BB = "error" === sB.status,
-              jB = BB ? "Couldn't load leaderboard" : "ready" === sB.status ? "No scores yet" : "Loading leaderboard\u2026",
-              zB = BB ? "Trying again shortly" : "ready" === sB.status ? "Be the first on the board!" : "Fetching the top players",
-              QB = (208 + KB) / 2;
-            SB(jB, 512, QB - 28, 40, BB ? nB.E.redUiText : LB, 960, "center"), SB(zB, 512, QB + 27, 30, gB, 960, "center")
+            const BB = "error" === FB.status,
+              IB = BB ? "Couldn't load leaderboard" : "ready" === FB.status ? "No scores yet" : "Loading leaderboard\u2026",
+              ZB = BB ? "Trying again shortly" : "ready" === FB.status ? "Be the first on the board!" : "Fetching the top players",
+              TB = (208 + bB) / 2;
+            QB(IB, 512, TB - 28, 40, BB ? JB.P.redUiText : WB, 960, "center"), QB(ZB, 512, TB + 27, 30, dB, 960, "center")
           }
-          const bB = KB + UB * xB / 2;
-          if (null === AB) MB(bB);
+          const DB = bB + cB * tB / 2;
+          if (null === XB) sB(DB);
           else {
-            const jB = null === DB ? 0 : DB.tied - 1,
-              zB = `YOUR RANK #${uB.format(AB)}${null===DB?"":` of ${uB.format(DB.total)}`}`;
+            const IB = null === HB ? 0 : HB.tied - 1,
+              ZB = `YOUR RANK #${kB.format(XB)}${null===HB?"":` of ${kB.format(HB.total)}`}`;
             BB.font = "bold 36px 'Jetbrains Mono', monospace";
-            const QB = Math.max(20, Math.min(36, Math.floor(34560 / BB.measureText(zB).width)));
-            SB(zB, 512, bB - (jB > 0 ? 15 : 0), QB, tB, 960, "center"), jB > 0 && SB(`Tied with ${uB.format(jB)} other${1===jB?"":"s"}`, 512, bB + 24, 24, gB, 960, "center")
+            const TB = Math.max(20, Math.min(36, Math.floor(34560 / BB.measureText(ZB).width)));
+            QB(ZB, 512, DB - (IB > 0 ? 15 : 0), TB, CB, 960, "center"), IB > 0 && QB(`Tied with ${kB.format(IB)} other${1===IB?"":"s"}`, 512, DB + 24, 24, dB, 960, "center")
           }
-          if (null === JB) return;
-          const vB = CB + NB * xB / 2;
-          if (HB) SB(`You're in the top ${QB.n}!`, 512, vB, 40, tB, 960, "center");
-          else if (0 === oB.length) SB("You're not on this board yet", 512, vB, 34, gB, 960, "center");
+          if (null === NB) return;
+          const KB = xB + vB * tB / 2;
+          if (aB) QB(`You're in the top ${TB.n}!`, 512, KB, 40, CB, 960, "center");
+          else if (0 === pB.length) QB("You're not on this board yet", 512, KB, 34, dB, 960, "center");
           else
-            for (const [QB, nB] of oB.entries()) cB(nB, XB[QB], CB + (QB + .5) * xB, QB % 2 === 0)
-        }(BB, aB, pB, IB.layoutHeight)
+            for (const [TB, JB] of pB.entries()) EB(JB, rB[TB], xB + (TB + .5) * tB, TB % 2 === 0)
+        }(BB, nB, hB, GB.layoutHeight)
     }
 
-    function yB(BB, jB) {
-      return Array.isArray(BB) ? BB.slice(0, jB).filter((BB => BB && Number.isFinite(BB.rank) && Number.isFinite(BB.value))) : []
+    function qB(BB, IB) {
+      return Array.isArray(BB) ? BB.slice(0, IB).filter((BB => BB && Number.isFinite(BB.rank) && Number.isFinite(BB.value))) : []
     }
 
-    function kB(BB, jB) {
-      const zB = [];
-      let QB = !1;
-      return BB.forEach(((nB, dB) => {
-        if (null !== jB && nB.value === jB.value) return void zB.push(jB.rank);
-        const IB = dB > 0 && nB.value === BB[dB - 1].value;
-        IB || (QB = 0 === dB && 1 !== nB.rank), zB.push(IB && !QB ? zB[dB - 1] : nB.rank)
-      })), zB
+    function yB(BB, IB) {
+      const ZB = [];
+      let TB = !1;
+      return BB.forEach(((JB, oB) => {
+        if (null !== IB && JB.value === IB.value) return void ZB.push(IB.rank);
+        const GB = oB > 0 && JB.value === BB[oB - 1].value;
+        GB || (TB = 0 === oB && 1 !== JB.rank), ZB.push(GB && !TB ? ZB[oB - 1] : JB.rank)
+      })), ZB
     }
   },
-  38984: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => nB,
-      g: () => dB
+  38926: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      f: () => oB
     });
-    const QB = 32;
+    const TB = 32;
 
-    function nB(BB) {
+    function JB(BB) {
       return Array.from(BB).length
     }
 
-    function dB(BB) {
-      const jB = [""];
-      let zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        nB = "";
-      const dB = () => {
-        jB.push(""), zB = 0, nB = ""
+    function oB(BB) {
+      const IB = [""];
+      let ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        JB = "";
+      const oB = () => {
+        IB.push(""), ZB = 0, JB = ""
       };
-      for (const IB of BB.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(IB)) dB();
-        else if (/^\s+$/.test(IB)) nB += IB;
-      else if (IB.length > 0) {
-        const BB = Array.from(IB);
-        zB > 0 && zB + nB.length + BB.length > QB && dB(), jB[jB.length - 1] += nB, zB += nB.length, nB = "";
-        for (const nB of BB) zB >= QB && dB(), jB[jB.length - 1] += nB, zB++
+      for (const GB of BB.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(GB)) oB();
+        else if (/^\s+$/.test(GB)) JB += GB;
+      else if (GB.length > 0) {
+        const BB = Array.from(GB);
+        ZB > 0 && ZB + JB.length + BB.length > TB && oB(), IB[IB.length - 1] += JB, ZB += JB.length, JB = "";
+        for (const JB of BB) ZB >= TB && oB(), IB[IB.length - 1] += JB, ZB++
       }
-      return jB[jB.length - 1] += nB, jB
+      return IB[IB.length - 1] += JB, IB
     }
   },
-  51135: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      WasmPreviewHost: () => fj,
-      pageBuiltInAnimationPack: () => rB,
-      pagePreviews: () => Ij,
-      previewModule: () => vB
+  51044: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      WasmPreviewHost: () => iI,
+      pageBuiltInAnimationPack: () => zB,
+      pagePreviews: () => GI,
+      previewModule: () => KB
     });
-    var QB = zB(2974),
-      nB = zB(667);
-    const dB = "[bloxd-wasm-client]";
+    var TB = ZB(3043),
+      JB = ZB(671);
+    const oB = "[bloxd-wasm-client]";
 
-    function IB(BB) {
-      const jB = {
+    function GB(BB) {
+      const IB = {
         wasm: "unknown",
-        client: String(nB.b)
+        client: String(JB.b)
       };
       try {
-        var zB;
-        jB.wasm = null !== (zB = null === BB || void 0 === BB ? void 0 : BB.tp()) && void 0 !== zB ? zB : jB.wasm
+        var ZB;
+        IB.wasm = null !== (ZB = null === BB || void 0 === BB ? void 0 : BB.Yh()) && void 0 !== ZB ? ZB : IB.wasm
       } catch {}
-      return jB
+      return IB
     }
-    async function NB(BB) {
+    async function vB(BB) {
       if (BB.length < 2 || 31 !== BB[0] || 139 !== BB[1]) return BB;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: jB
-        } = await Promise.resolve().then((() => zB(2929)));
-        return jB(BB)
+          ungzip: IB
+        } = await Promise.resolve().then((() => ZB(2984)));
+        return IB(BB)
       }
-      const jB = new Blob([BB]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(jB).arrayBuffer())
+      const IB = new Blob([BB]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(IB).arrayBuffer())
     }
 
-    function uB(BB, jB, QB, nB) {
-      Promise.resolve().then((() => zB(40830))).then((zB => {
+    function kB(BB, IB, TB, JB) {
+      Promise.resolve().then((() => ZB(40784))).then((ZB => {
         let {
-          reportDataLoadFailure: dB
-        } = zB;
-        dB(BB, jB, QB, nB)
-      }), (jB => {
-        console.warn(`${dB} ${BB} didn't load, and the report couldn't be sent`, QB.error, jB)
+          reportDataLoadFailure: oB
+        } = ZB;
+        oB(BB, IB, TB, JB)
+      }), (IB => {
+        console.warn(`${oB} ${BB} didn't load, and the report couldn't be sent`, TB.error, IB)
       }))
     }
-    const UB = [3e4, 12e4, 3e5];
-    class aB {
+    const cB = [3e4, 12e4, 3e5];
+    class nB {
       constructor(BB) {
         this.deps = BB, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((BB => {
           this.resolveSet = BB
@@ -420,228 +420,228 @@ export const modules = {
         return this.set
       }
       async load(BB) {
-        const jB = IB(BB),
-          zB = await async function(BB, jB) {
-            let zB;
+        const IB = GB(BB),
+          ZB = await async function(BB, IB) {
+            let ZB;
             try {
-              zB = await BB()
-            } catch (QB) {
+              ZB = await BB()
+            } catch (TB) {
               return {
                 stage: "fetch",
-                error: QB
+                error: TB
               }
             }
             try {
-              return jB(zB) ? null : {
+              return IB(ZB) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (QB) {
+            } catch (TB) {
               return {
                 stage: "decode",
-                error: QB
+                error: TB
               }
             }
-          }((() => this.deps.fetch()), (jB => {
-            const zB = BB.UdB(jB);
-            return zB && this.resolveSet(jB), zB
+          }((() => this.deps.fetch()), (IB => {
+            const ZB = BB.roB(IB);
+            return ZB && this.resolveSet(IB), ZB
           }));
-        if (null !== zB) {
-          if ("fetch" === zB.stage) {
+        if (null !== ZB) {
+          if ("fetch" === ZB.stage) {
             this.loading = null;
-            const jB = UB[this.retries++];
-            void 0 !== jB && this.deps.later((() => {
+            const IB = cB[this.retries++];
+            void 0 !== IB && this.deps.later((() => {
               this.provide(BB)
-            }), jB)
+            }), IB)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(zB, jB))
+          this.reported || (this.reported = !0, this.deps.onFailed(ZB, IB))
         }
       }
     }
-    let pB = null;
+    let hB = null;
 
-    function rB() {
-      return pB ??= new aB({
-        fetch: async () => NB(await (0, QB.L)(sB(), {
+    function zB() {
+      return hB ??= new nB({
+        fetch: async () => vB(await (0, TB.K)(FB(), {
           priority: "low"
         })),
-        onFailed: (BB, jB) => {
-          uB("builtInAnimations", sB(), BB, jB)
+        onFailed: (BB, IB) => {
+          kB("builtInAnimations", FB(), BB, IB)
         },
-        later: (BB, jB) => {
-          setTimeout(BB, jB)
+        later: (BB, IB) => {
+          setTimeout(BB, IB)
         }
-      }), pB
+      }), hB
     }
 
-    function sB() {
-      return zB(51139)
+    function FB() {
+      return ZB(51050)
     }
-    var JB = zB(2967),
-      mB = zB(1244),
-      yB = zB(355),
-      kB = zB(348),
-      GB = zB(690),
-      LB = zB(4887),
-      gB = zB(40805),
-      tB = zB(40824),
-      SB = zB(41019),
-      MB = (zB(40856), zB(40872)),
-      EB = zB(40881),
-      iB = zB(40883),
-      qB = zB(40822),
-      fB = zB(41038),
-      oB = zB(41044),
-      HB = zB(40796),
-      DB = zB(41054),
-      FB = zB(40925),
-      YB = zB(40909),
-      VB = zB(40963),
-      hB = zB(41028),
-      XB = zB(42725),
-      ZB = zB(36347),
-      AB = zB(3814);
-    const TB = "[bloxd-previews]",
-      PB = 4e5,
-      WB = 0,
-      eB = 1,
+    var NB = ZB(3036),
+      gB = ZB(1258),
+      qB = ZB(339),
+      yB = ZB(331),
+      UB = ZB(684),
+      WB = ZB(4969),
+      dB = ZB(40759),
+      CB = ZB(40771),
+      QB = ZB(40965),
+      sB = (ZB(40804), ZB(40821)),
+      wB = ZB(40829),
+      OB = ZB(40834),
+      YB = ZB(40768),
+      iB = ZB(40976),
+      pB = ZB(40983),
+      aB = ZB(40751),
+      HB = ZB(41008),
+      MB = ZB(40870),
+      jB = ZB(40860),
+      PB = ZB(40906),
+      RB = ZB(40971),
+      rB = ZB(42585),
+      mB = ZB(36297),
+      XB = ZB(3875);
+    const LB = "[bloxd-previews]",
+      eB = 4e5,
+      uB = 0,
+      fB = 1,
       lB = 2,
-      wB = 1,
-      xB = 2,
-      KB = 3,
-      CB = 0,
-      cB = 1,
-      bB = 2;
+      AB = 1,
+      tB = 2,
+      bB = 3,
+      xB = 0,
+      EB = 1,
+      DB = 2;
 
-    function vB(BB) {
-      const jB = BB,
-        zB = (0, gB.S)(BB),
-        QB = (0, gB.q)(BB);
-      return null !== zB && null !== QB && "function" === typeof jB.IdB && "function" === typeof jB.NdB && "function" === typeof jB.udB ? jB : null
+    function KB(BB) {
+      const IB = BB,
+        ZB = (0, dB.Q)(BB),
+        TB = (0, dB.l)(BB);
+      return null !== ZB && null !== TB && "function" === typeof IB.joB && "function" === typeof IB.PoB && "function" === typeof IB.RoB ? IB : null
     }
 
-    function RB(BB, jB, zB) {
-      let [QB, nB] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [BB, jB], dB = Math.min(Number.isFinite(zB) && zB > 0 ? zB : 1, 2);
-      const IB = Math.max(0, QB, BB) * Math.max(0, nB, jB) * dB * dB;
-      return IB > PB && (dB *= Math.sqrt(PB / IB)), [Math.max(1, Math.floor(Math.max(0, BB) * dB)), Math.max(1, Math.floor(Math.max(0, jB) * dB))]
+    function VB(BB, IB, ZB) {
+      let [TB, JB] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [BB, IB], oB = Math.min(Number.isFinite(ZB) && ZB > 0 ? ZB : 1, 2);
+      const GB = Math.max(0, TB, BB) * Math.max(0, JB, IB) * oB * oB;
+      return GB > eB && (oB *= Math.sqrt(eB / GB)), [Math.max(1, Math.floor(Math.max(0, BB) * oB)), Math.max(1, Math.floor(Math.max(0, IB) * oB))]
     }
 
-    function OB() {
-      return zB(51143)
+    function SB() {
+      return ZB(51057)
     }
-    async function Bj(BB, jB, QB) {
-      var nB;
-      let dB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === BB && (0, HB.y)();
-      const NB = await (0, HB.M)();
-      if (null === NB || (0, gB.r)(NB) || (0, HB.d)()) return;
-      const uB = "webgpu" === NB.backend;
-      if (!uB && "lost" !== BB) return;
-      const UB = uB && (0, kB.r)(NB.adapter, null !== QB && void 0 !== QB ? QB : null, "lost" === BB, dB),
-        aB = null !== (nB = "lost" === BB ? (0, tB.m)((0, JB.K)() ? (0, gB.S)((0, JB.C)()) : null) : void 0) && void 0 !== nB ? nB : jB,
-        pB = uB ? (0, gB.db)(BB, void 0, (0, tB.d)(aB)) : null;
-      if (null === pB) {
-        uB || (0, GB.r)(), (0, HB.s)();
+    async function BI(BB, IB, TB) {
+      var JB;
+      let oB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === BB && (0, aB.x)();
+      const vB = await (0, aB.T)();
+      if (null === vB || (0, dB.o)(vB) || (0, aB.e)()) return;
+      const kB = "webgpu" === vB.backend;
+      if (!kB && "lost" !== BB) return;
+      const cB = kB && (0, yB.q)(vB.adapter, null !== TB && void 0 !== TB ? TB : null, "lost" === BB, oB),
+        nB = null !== (JB = "lost" === BB ? (0, CB.i)((0, NB.M)() ? (0, dB.Q)((0, NB.x)()) : null) : void 0) && void 0 !== JB ? JB : IB,
+        hB = kB ? (0, dB.$)(BB, void 0, (0, CB.c)(nB)) : null;
+      if (null === hB) {
+        kB || (0, UB.q)(), (0, aB.o)();
         try {
-          await async function(BB, jB, QB, nB, dB) {
+          await async function(BB, IB, TB, JB, oB) {
             let {
-              restoreLost: NB,
-              adapterRemembered: uB
-            } = dB;
-            const UB = (0, JB.K)(),
+              restoreLost: vB,
+              adapterRemembered: kB
+            } = oB;
+            const cB = (0, NB.M)(),
               {
-                flushCrashReports: aB,
-                reportRenderReload: pB
-              } = await Promise.resolve().then((() => zB(40830)));
-            pB(BB.backend, nB, IB(UB ? (0, JB.C)() : null), {
+                flushCrashReports: nB,
+                reportRenderReload: hB
+              } = await Promise.resolve().then((() => ZB(40784)));
+            hB(BB.backend, JB, GB(cB ? (0, NB.x)() : null), {
               from: "home",
-              cause: jB,
-              restoreLost: NB,
-              adapterRemembered: uB,
-              ...jj(BB, jB, QB)
-            }), await aB(FB.d)
-          }(NB, BB, aB, null !== QB && void 0 !== QB ? QB : "start_failed" === BB ? 0 : 1, {
-            restoreLost: dB,
-            adapterRemembered: UB
+              cause: IB,
+              restoreLost: vB,
+              adapterRemembered: kB,
+              ...II(BB, IB, TB)
+            }), await nB(MB.e)
+          }(vB, BB, nB, null !== TB && void 0 !== TB ? TB : "start_failed" === BB ? 0 : 1, {
+            restoreLost: oB,
+            adapterRemembered: cB
           })
-        } catch (sB) {
-          console.warn(`${TB} ${NB.backend} failed at home (${BB}), and its report couldn't be sent`, sB)
-        }(0, FB.k)()
+        } catch (FB) {
+          console.warn(`${LB} ${vB.backend} failed at home (${BB}), and its report couldn't be sent`, FB)
+        }(0, MB.p)()
       } else {
-        var rB;
-        const jB = jj(NB, BB, aB),
-          QB = `WebGPU failed at home (${BB}${void 0===jB.error?"":`: ${jB.error instanceof Error?jB.error.message:(0,ZB.m)(jB.error)}`}) and ${pB}`;
-        console.warn(`${TB} ${QB}: the previews stop`, null !== (rB = jB.error) && void 0 !== rB ? rB : ""), (0, HB.t)(QB);
+        var zB;
+        const IB = II(vB, BB, nB),
+          TB = `WebGPU failed at home (${BB}${void 0===IB.error?"":`: ${IB.error instanceof Error?IB.error.message:(0,mB.k)(IB.error)}`}) and ${hB}`;
+        console.warn(`${LB} ${TB}: the previews stop`, null !== (zB = IB.error) && void 0 !== zB ? zB : ""), (0, aB.s)(TB);
         try {
           const {
-            countRenderLost: QB
-          } = await Promise.resolve().then((() => zB(40830)));
-          QB(BB, jB.error, jB.context)
-        } catch (mB) {
-          console.warn(`${TB} WebGPU failed at home (${BB}), and its count couldn't be sent`, mB)
+            countRenderLost: TB
+          } = await Promise.resolve().then((() => ZB(40784)));
+          TB(BB, IB.error, IB.context)
+        } catch (gB) {
+          console.warn(`${LB} WebGPU failed at home (${BB}), and its count couldn't be sent`, gB)
         }
       }
     }
 
-    function jj(BB, jB, zB) {
+    function II(BB, IB, ZB) {
       let {
-        adapter: QB
+        adapter: TB
       } = BB;
       return {
-        error: zB,
+        error: ZB,
         context: {
-          adapter: QB,
-          boundAtMs: "start_failed" === jB ? null : (0, HB.H)(),
-          indirectHangs: (0, HB.B)(),
-          restoresSkipped: (0, HB.I)()
+          adapter: TB,
+          boundAtMs: "start_failed" === IB ? null : (0, aB.M)(),
+          indirectHangs: (0, aB.B)(),
+          restoresSkipped: (0, aB.P)()
         }
       }
     }
-    async function zj() {
-      if (!(0, JB.K)()) {
-        const BB = await (0, HB.M)();
-        if (null === BB || (0, gB.r)(BB)) return null;
-        if (await (0, DB.b)(await BB.load()), !(0, JB.K)()) return null
+    async function ZI() {
+      if (!(0, NB.M)()) {
+        const BB = await (0, aB.T)();
+        if (null === BB || (0, dB.o)(BB)) return null;
+        if (await (0, HB.b)(await BB.load()), !(0, NB.M)()) return null
       }
-      return vB((0, JB.C)())
+      return KB((0, NB.x)())
     }
-    class Qj {
-      constructor(BB, jB, zB, QB, nB, dB) {
-        this.page = BB, this.host = jB, this.id = zB, this.canvas = QB, this.size = nB, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const IB = {
-            ...dB.images,
+    class TI {
+      constructor(BB, IB, ZB, TB, JB, oB) {
+        this.page = BB, this.host = IB, this.id = ZB, this.canvas = TB, this.size = JB, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const GB = {
+            ...oB.images,
             glbUrl: BB => {
-              var jB;
-              return null !== (jB = this.models.drawnUrl(BB)) && void 0 !== jB ? jB : dB.images.glbUrl(BB)
+              var IB;
+              return null !== (IB = this.models.drawnUrl(BB)) && void 0 !== IB ? IB : oB.images.glbUrl(BB)
             }
           },
-          NB = jB => BB.modelFile(jB);
-        this.images = new SB.d(IB, (BB => {
-          console.warn(`${TB} image ${BB.key.kind}:${BB.key.index}:${BB.key.word} failed`, BB.error)
+          vB = IB => BB.modelFile(IB);
+        this.images = new QB.h(GB, (BB => {
+          console.warn(`${LB} image ${BB.key.kind}:${BB.key.index}:${BB.key.word} failed`, BB.error)
         }), {
-          fetchFile: NB,
-          fetchImage: jB => BB.imageFile(jB)
-        }), BB.startModels(), this.models = new MB.i(dB.files, ((jB, zB) => BB.buildModel(jB, zB)), (BB => {
-          console.warn(`${TB} model file ${BB.file} (${BB.url}) failed`, BB.error)
+          fetchFile: vB,
+          fetchImage: IB => BB.imageFile(IB)
+        }), BB.startModels(), this.models = new sB.f(oB.files, ((IB, ZB) => BB.buildModel(IB, ZB)), (BB => {
+          console.warn(`${LB} model file ${BB.file} (${BB.url}) failed`, BB.error)
         }), {
-          fetchFile: NB,
-          onWritten: (BB, jB) => {
-            this.images.glbWritten(BB, jB)
+          fetchFile: vB,
+          onWritten: (BB, IB) => {
+            this.images.glbWritten(BB, IB)
           },
-          onTaken: (BB, jB) => {
-            this.images.glbTaken(BB, jB)
+          onTaken: (BB, IB) => {
+            this.images.glbTaken(BB, IB)
           }
-        }), this.write = (BB, jB, zB) => {
+        }), this.write = (BB, IB, ZB) => {
           if (this.closed) return !0;
-          if (BB === MB.e) {
-            const BB = new DataView(zB.buffer, zB.byteOffset, iB.c),
-              QB = BB.getUint32(0, !0),
-              nB = BB.getUint32(iB.g, !0),
-              dB = this.page.hostCall(bB, (() => this.host.JIB(this.id, QB, jB, zB.subarray(iB.c))));
-            return this.outcomes.push([nB, dB]), !0
+          if (BB === sB.b) {
+            const BB = new DataView(ZB.buffer, ZB.byteOffset, OB.c),
+              TB = BB.getUint32(0, !0),
+              JB = BB.getUint32(OB.f, !0),
+              oB = this.page.hostCall(DB, (() => this.host.AGB(this.id, TB, IB, ZB.subarray(OB.c))));
+            return this.outcomes.push([JB, oB]), !0
           }
-          return BB === SB.c && (this.page.hostCall(void 0, (() => {
-            this.host.yIB(this.id, zB)
+          return BB === QB.e && (this.page.hostCall(void 0, (() => {
+            this.host.xGB(this.id, ZB)
           })), !0)
         }
       }
@@ -651,24 +651,24 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(BB, jB, zB) {
+      resize(BB, IB, ZB) {
         if (this.closed) return;
-        const [QB, nB] = RB(BB, jB, this.page.dpr(), zB);
-        QB === this.size[0] && nB === this.size[1] || (this.size = [QB, nB], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, QB, nB)
+        const [TB, JB] = VB(BB, IB, this.page.dpr(), ZB);
+        TB === this.size[0] && JB === this.size[1] || (this.size = [TB, JB], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, TB, JB)
         })))
       }
-      setMob(BB, jB, zB, QB) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.SIB(this.id, BB, jB, zB, QB))))
+      setMob(BB, IB, ZB, TB) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.SGB(this.id, BB, IB, ZB, TB))))
       }
-      setPet(BB, jB, zB, QB) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.iIB(this.id, BB, jB, zB, QB))))
+      setPet(BB, IB, ZB, TB) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.IvB(this.id, BB, IB, ZB, TB))))
       }
-      setPlayer(BB, jB, zB) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.LIB(this.id, BB, jB, zB))))
+      setPlayer(BB, IB, ZB) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.DGB(this.id, BB, IB, ZB))))
       }
-      setFigure(BB, jB, zB, QB) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.gIB(this.id, BB, jB, zB, QB))))
+      setFigure(BB, IB, ZB, TB) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.KGB(this.id, BB, IB, ZB, TB))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
@@ -684,12 +684,12 @@ export const modules = {
       }
       setOrbit(BB) {
         let {
-          alpha: jB,
-          beta: zB,
-          radius: QB
+          alpha: IB,
+          beta: ZB,
+          radius: TB
         } = BB;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.EIB(this.id, jB, zB, QB)
+          this.host.BvB(this.id, IB, ZB, TB)
         }))
       }
       untilSettled() {
@@ -698,27 +698,27 @@ export const modules = {
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, fB.i)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, iB.j)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [BB, jB] of this.outcomes) {
-          const zB = jB === CB ? [] : [jB === cB ? BB : (BB | MB.h) >>> 0];
-          this.models.taken(BB, zB)
+        for (const [BB, IB] of this.outcomes) {
+          const ZB = IB === xB ? [] : [IB === EB ? BB : (BB | sB.e) >>> 0];
+          this.models.taken(BB, ZB)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
       collect(BB) {
-        let jB = !1;
+        let IB = !1;
         if (BB) {
-          const BB = this.host.oIB(this.id);
-          for (const jB of BB) this.models.request(jB);
-          const zB = this.host.fIB(this.id);
-          zB.length > 0 && this.images.onEvent(zB), jB = BB.length > 0 || zB.length > 0
+          const BB = this.host.JvB(this.id);
+          for (const IB of BB) this.models.request(IB);
+          const ZB = this.host.TvB(this.id);
+          ZB.length > 0 && this.images.onEvent(ZB), IB = BB.length > 0 || ZB.length > 0
         }
-        const zB = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          QB = jB || zB > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = QB ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const ZB = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          TB = IB || ZB > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = TB ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -728,39 +728,39 @@ export const modules = {
       }
       dispose(BB) {
         this.page.hostCall(void 0, (() => {
-          const jB = this.host.close(this.id);
-          jB.length > 0 && this.images.onEvent(jB), this.page.isTrapped || BB.udB(this.id)
+          const IB = this.host.close(this.id);
+          IB.length > 0 && this.images.onEvent(IB), this.page.isTrapped || BB.RoB(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
         const BB = this.settled;
         this.settled = [];
-        for (const jB of BB) jB()
+        for (const IB of BB) IB()
       }
     }
-    class nj {
+    class JI {
       constructor(BB) {
         this.deps = BB, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
           onUnavailable: BB => {
             this.modelsFailed(BB)
           },
           onDecoderFailed: BB => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${TB} the Draco decoder didn't load: models waiting on it won't draw`, BB))
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${LB} the Draco decoder didn't load: models waiting on it won't draw`, BB))
           },
           onWorkerLost: BB => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${TB} a model worker was lost: ${BB}`))
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${LB} a model worker was lost: ${BB}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.mJ = {
-          setShaderPack: (BB, jB, zB, QB, nB) => (this.shaderPackArgs = [BB, jB, zB, QB, nB], this.handOverShaderPack(), !0)
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.oN = {
+          setShaderPack: (BB, IB, ZB, TB, JB) => (this.shaderPackArgs = [BB, IB, ZB, TB, JB], this.handOverShaderPack(), !0)
         }, this.frame = BB => {
           this.frameId = null;
-          const jB = this.host;
-          if (null !== jB && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(jB, BB)
-          } catch (zB) {
-            if (!this.stopIfTrapped(zB) && (this.stop(), (0, gB.u)(zB))) return void this.deps.onRenderFailed("frames_refused", zB);
-            console.warn(`${TB} the previews stopped: their frame threw`, zB)
+          const IB = this.host;
+          if (null !== IB && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(IB, BB)
+          } catch (ZB) {
+            if (!this.stopIfTrapped(ZB) && (this.stop(), (0, dB.p)(ZB))) return void this.deps.onRenderFailed("frames_refused", ZB);
+            console.warn(`${LB} the previews stopped: their frame threw`, ZB)
           }
         }, BB.pack.onChange((() => {
           this.packChanged()
@@ -776,89 +776,89 @@ export const modules = {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var BB, jB;
-        return null !== (BB = null === (jB = this.host) || void 0 === jB ? void 0 : jB.attached()) && void 0 !== BB && BB
+        var BB, IB;
+        return null !== (BB = null === (IB = this.host) || void 0 === IB ? void 0 : IB.attached()) && void 0 !== BB && BB
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((BB, jB) => BB + jB), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((BB, IB) => BB + IB), 0) / this.costs.length
       }
-      async bindSession(BB, jB, zB) {
-        const QB = this.binding,
-          nB = this.sessionEnds;
+      async bindSession(BB, IB, ZB) {
+        const TB = this.binding,
+          JB = this.sessionEnds;
         try {
-          const dB = this.hostOf(BB);
-          if (!dB.mIB()) {
-            const jB = (0, VB.g)().sampleCount,
-              IB = await zB(jB);
-            if (this.sessionEnds !== nB) return this.keepRendererOfEndedSession(BB, dB, IB, jB, QB), jB;
-            if (!dB.OdB(IB)) throw new Error("the page has a renderer already");
-            (0, HB.x)(performance.now()), this.samples = jB, (0, hB.f)((0, gB.q)(BB))
+          const oB = this.hostOf(BB);
+          if (!oB.tGB()) {
+            const IB = (0, PB.c)().sampleCount,
+              GB = await ZB(IB);
+            if (this.sessionEnds !== JB) return this.keepRendererOfEndedSession(BB, oB, GB, IB, TB), IB;
+            if (!oB.iGB(GB)) throw new Error("the page has a renderer already");
+            (0, aB.w)(performance.now()), this.samples = IB, (0, RB.g)((0, dB.l)(BB))
           }
-          if (!dB.attach(jB)) throw new Error("the page's renderer is lent to another session");
+          if (!oB.attach(IB)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === QB && this.endBinding()
+          this.binding === TB && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(BB, jB, zB, QB, nB) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== nB) try {
-          zB.free()
-        } catch (dB) {
-          console.warn(`${TB} an ended session's renderer didn't free`, dB)
-        } else jB.OdB(zB) && ((0, HB.x)(performance.now()), this.samples = QB, (0, hB.f)(this.registryOf(BB)))
+      keepRendererOfEndedSession(BB, IB, ZB, TB, JB) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== JB) try {
+          ZB.free()
+        } catch (oB) {
+          console.warn(`${LB} an ended session's renderer didn't free`, oB)
+        } else IB.iGB(ZB) && ((0, aB.w)(performance.now()), this.samples = TB, (0, RB.g)(this.registryOf(BB)))
       }
       async beginSession() {
         var BB;
-        let jB = () => {};
-        const zB = new Promise((BB => {
-          jB = BB
+        let IB = () => {};
+        const ZB = new Promise((BB => {
+          IB = BB
         }));
         this.binding = {
-          done: zB,
-          release: jB
+          done: ZB,
+          release: IB
         }, await (null === (BB = this.opening) || void 0 === BB ? void 0 : BB.catch((() => null)));
-        const QB = this.pageCanvas;
-        return this.pageCanvas = null, QB
+        const TB = this.pageCanvas;
+        return this.pageCanvas = null, TB
       }
       endSession(BB) {
-        var jB, zB;
+        var IB, ZB;
         if (this.sessionEnds++, this.lastEndReturned = BB, this.endBinding(), BB) {
           try {
-            var QB;
-            null === (QB = this.host) || void 0 === QB || QB.detach()
-          } catch (nB) {
-            return void console.warn(`${TB} the session's core kept the page's renderer`, nB)
-          }!0 === (null === (jB = this.host) || void 0 === jB ? void 0 : jB.attached()) && console.warn(`${TB} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (zB = this.host) || void 0 === zB ? void 0 : zB.mIB()) && (0, hB.f)(this.registryOf(this.module))
+            var TB;
+            null === (TB = this.host) || void 0 === TB || TB.detach()
+          } catch (JB) {
+            return void console.warn(`${LB} the session's core kept the page's renderer`, JB)
+          }!0 === (null === (IB = this.host) || void 0 === IB ? void 0 : IB.attached()) && console.warn(`${LB} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (ZB = this.host) || void 0 === ZB ? void 0 : ZB.tGB()) && (0, RB.g)(this.registryOf(this.module))
         }
       }
       endBinding() {
         var BB;
         null === (BB = this.binding) || void 0 === BB || BB.release(), this.binding = null
       }
-      async openPreview(BB, jB, zB, QB) {
-        const nB = await this.renderingHost(),
-          dB = this.module;
-        if (null === nB || null === dB) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(nB), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(BB, IB, ZB, TB) {
+        const JB = await this.renderingHost(),
+          oB = this.module;
+        if (null === JB || null === oB) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(JB), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(dB)
+          this.deps.provideBuiltInAnimationPack(oB)
         }));
-        const IB = this.nextId++,
-          NB = this.deps.createCanvas(),
-          [uB, UB] = RB(jB, zB, this.deps.dpr(), QB);
-        NB.width = uB, NB.height = UB;
-        if (!this.guarded((() => (dB.NdB(IB, NB), nB.open(IB, uB, UB, BB))))) throw this.hostCall(void 0, (() => {
-          dB.udB(IB)
+        const GB = this.nextId++,
+          vB = this.deps.createCanvas(),
+          [kB, cB] = VB(IB, ZB, this.deps.dpr(), TB);
+        vB.width = kB, vB.height = cB;
+        if (!this.guarded((() => (oB.PoB(GB, vB), JB.open(GB, kB, cB, BB))))) throw this.hostCall(void 0, (() => {
+          oB.RoB(GB)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const aB = new Qj(this, nB, IB, NB, [uB, UB], this.deps);
-        return this.previews.set(IB, aB), this.startFrames(), aB
+        const nB = new TI(this, JB, GB, vB, [kB, cB], this.deps);
+        return this.previews.set(GB, nB), this.startFrames(), nB
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, HB.d)() || null !== (0, HB.G)()) return;
+        if (this.prefetched || this.isStopped || (0, aB.e)() || null !== (0, aB.L)()) return;
         this.prefetched = !0;
         (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((BB => {
           null === BB || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
@@ -868,24 +868,24 @@ export const modules = {
         return this.prefetchedOr(BB, this.deps.fetchModel)
       }
       imageFile(BB) {
-        return this.prefetchedOr(BB, QB.L)
+        return this.prefetchedOr(BB, TB.K)
       }
-      prefetchedOr(BB, jB) {
-        const zB = this.prefetchedFiles.get(BB);
-        return void 0 === zB ? jB(BB) : zB.catch((() => jB(BB)))
+      prefetchedOr(BB, IB) {
+        const ZB = this.prefetchedFiles.get(BB);
+        return void 0 === ZB ? IB(BB) : ZB.catch((() => IB(BB)))
       }
       async prefetchPlayerFiles() {
         const BB = this.deps.playerFile().then((BB => this.deps.files.url(BB))),
-          jB = await Promise.all([BB, this.deps.images.lifeformAtlasUrl(fB.e)]).catch((() => null));
-        if (null === jB) return;
-        const [zB, QB] = jB, nB = (BB, jB) => {
+          IB = await Promise.all([BB, this.deps.images.lifeformAtlasUrl(iB.e)]).catch((() => null));
+        if (null === IB) return;
+        const [ZB, TB] = IB, JB = (BB, IB) => {
           if (null === BB) return;
-          const zB = jB(BB);
-          this.prefetchedFiles.set(BB, zB), zB.catch((() => {
+          const ZB = IB(BB);
+          this.prefetchedFiles.set(BB, ZB), ZB.catch((() => {
             this.prefetchedFiles.delete(BB)
           }))
         };
-        nB(zB, (BB => this.modelFile(BB))), nB(QB, (BB => this.imageFile(BB)))
+        JB(ZB, (BB => this.modelFile(BB))), JB(TB, (BB => this.imageFile(BB)))
       }
       loadModule() {
         return this.moduleLoad ??= this.deps.loadModule().then((BB => (null === BB && (this.moduleLoad = null), BB)), (BB => {
@@ -903,14 +903,14 @@ export const modules = {
       startModels() {
         this.models ??= this.deps.startModels(this.modelsListener).catch((BB => (this.modelsFailed(BB), () => new Promise((() => {})))))
       }
-      buildModel(BB, jB) {
-        return this.startModels(), this.models.then((zB => zB(BB, jB))).then((BB => this.unavailable ? new Promise((() => {})) : BB))
+      buildModel(BB, IB) {
+        return this.startModels(), this.models.then((ZB => ZB(BB, IB))).then((BB => this.unavailable ? new Promise((() => {})) : BB))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
       modelsFailed(BB) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${TB} the model workers didn't start: models won't draw in the previews`, BB))
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${LB} the model workers didn't start: models won't draw in the previews`, BB))
       }
       called(BB) {
         return 0 !== BB && this.logError(BB, 0), BB
@@ -920,120 +920,120 @@ export const modules = {
       }
       hostOf(BB) {
         if (null !== this.module && this.module !== BB) throw new Error("a second renderer module on one page");
-        return this.module = BB, null === this.host && (this.host = this.guarded((() => new BB.IdB)), this.tellInGame(), this.handOverShaderPack()), this.host
+        return this.module = BB, null === this.host && (this.host = this.guarded((() => new BB.joB)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
           host: BB
         } = this;
         null !== BB && this.outsideCall("the game's start or end", (() => {
-          BB.tIB(this.deps.game.inGame())
+          BB.VGB(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
           host: BB,
-          shaderPackArgs: jB
+          shaderPackArgs: IB
         } = this;
-        null !== BB && null !== jB && this.outsideCall("the shader pack's hand-over", (() => {
-          BB.NQB(...jB) || console.warn(`${TB} the host refused the shader pack: previews draw without it at home`)
+        null !== BB && null !== IB && this.outsideCall("the shader pack's hand-over", (() => {
+          BB.PTB(...IB) || console.warn(`${LB} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(BB, jB) {
+      outsideCall(BB, IB) {
         try {
-          this.hostCall(void 0, jB)
-        } catch (zB) {
-          this.stop(), console.warn(`${TB} the previews stopped: ${BB} threw`, zB)
+          this.hostCall(void 0, IB)
+        } catch (ZB) {
+          this.stop(), console.warn(`${LB} the previews stopped: ${BB} threw`, ZB)
         }
       }
       async loadAnimations(BB) {
-        const jB = IB(null),
-          zB = this.module;
+        const IB = GB(null),
+          ZB = this.module;
         try {
-          jB.wasm = null === zB ? jB.wasm : this.hostCall(jB.wasm, (() => zB.tp()))
+          IB.wasm = null === ZB ? IB.wasm : this.hostCall(IB.wasm, (() => ZB.Yh()))
         } catch {}
-        let QB, nB;
+        let TB, JB;
         try {
-          QB = await this.fetchAnimationTable()
-        } catch (dB) {
+          TB = await this.fetchAnimationTable()
+        } catch (oB) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: dB
-          }, jB)
+            error: oB
+          }, IB)
         }
         if (!this.settleIfTrapped()) {
           try {
-            nB = BB.kIB(QB)
-          } catch (dB) {
-            if (this.stopIfTrapped(dB)) return;
+            JB = BB.EGB(TB)
+          } catch (oB) {
+            if (this.stopIfTrapped(oB)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: dB
-            }, jB)
+              error: oB
+            }, IB)
           }
-          nB || this.deps.onAnimationsFailed({
+          JB || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, jB)
+          }, IB)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
         const BB = this.host;
-        return null !== BB && this.guarded((() => BB.mIB())) ? BB : (this.opening ??= this.openAtHome().finally((() => {
+        return null !== BB && this.guarded((() => BB.tGB())) ? BB : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
         var BB;
-        const jB = null !== (BB = this.module) && void 0 !== BB ? BB : await this.loadModule();
-        if (null === jB) return null;
-        const zB = this.hostOf(jB),
-          QB = () => this.guarded((() => zB.mIB()));
-        if (QB()) return zB;
-        if (null !== (0, HB.G)() || (0, HB.d)()) return null;
-        const nB = this.deps.createCanvas();
-        nB.width = 1, nB.height = 1;
-        const dB = await this.deps.openExtras();
+        const IB = null !== (BB = this.module) && void 0 !== BB ? BB : await this.loadModule();
+        if (null === IB) return null;
+        const ZB = this.hostOf(IB),
+          TB = () => this.guarded((() => ZB.tGB()));
+        if (TB()) return ZB;
+        if (null !== (0, aB.L)() || (0, aB.e)()) return null;
+        const JB = this.deps.createCanvas();
+        JB.width = 1, JB.height = 1;
+        const oB = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const IB = (0, VB.g)().sampleCount;
-        let NB;
+        const GB = (0, PB.c)().sampleCount;
+        let vB;
         try {
-          NB = await (0, gB.A)(jB, "previewRenderer", nB, IB, XB.d, dB)
-        } catch (uB) {
-          throw uB instanceof qB.c ? this.stopForTrap(uB) : (0, gB.y)(uB) && await this.deps.onRenderFailed("start_failed", uB), uB
+          vB = await (0, dB.v)(IB, "previewRenderer", JB, GB, rB.c, oB)
+        } catch (kB) {
+          throw kB instanceof YB.b ? this.stopForTrap(kB) : (0, dB.t)(kB) && await this.deps.onRenderFailed("start_failed", kB), kB
         }
-        return this.guarded((() => zB.OdB(NB))) ? ((0, HB.x)(performance.now()), this.samples = IB, this.pageCanvas = nB, (0, hB.f)(this.registryOf(jB)), zB) : QB() ? zB : null
+        return this.guarded((() => ZB.iGB(vB))) ? ((0, aB.w)(performance.now()), this.samples = GB, this.pageCanvas = JB, (0, RB.g)(this.registryOf(IB)), ZB) : TB() ? ZB : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(BB, jB) {
-        for (const IB of this.previews.values()) IB.feed();
+      drawFrame(BB, IB) {
+        for (const GB of this.previews.values()) GB.feed();
         if (this.stopped) return;
-        const zB = this.deps.now(),
-          QB = BB.frame(jB);
-        this.costs.push(this.deps.now() - zB), this.costs.length > 120 && this.costs.shift();
-        const nB = 0 !== (256 & QB),
-          dB = 255 & QB;
-        for (const IB of this.previews.values()) {
+        const ZB = this.deps.now(),
+          TB = BB.frame(IB);
+        this.costs.push(this.deps.now() - ZB), this.costs.length > 120 && this.costs.shift();
+        const JB = 0 !== (256 & TB),
+          oB = 255 & TB;
+        for (const GB of this.previews.values()) {
           if (this.stopped) return;
-          IB.collect(nB)
+          GB.collect(JB)
         }
         if (!this.stopped) {
-          if (0 !== (512 & QB) && this.deps.onDrew(), nB) {
-            const jB = BB.qIB();
-            for (let BB = 0; BB + 1 < jB.length; BB += 2) jB[BB] === LB.J.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(jB[BB], jB[BB + 1])
+          if (0 !== (512 & TB) && this.deps.onDrew(), JB) {
+            const IB = BB.ZvB();
+            for (let BB = 0; BB + 1 < IB.length; BB += 2) IB[BB] === WB.K.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(IB[BB], IB[BB + 1])
           }
-          if (dB !== wB) {
-            if (dB === xB) return this.stop(), void this.deps.onFatal(BB.pIB(), BB.rIB());
-            if (dB === KB) return this.stop(), void console.warn(`${TB} the previews stopped: the page's renderer went with its session`);
-            (0, yB.e)(jB), this.startFrames()
+          if (oB !== AB) {
+            if (oB === tB) return this.stop(), void this.deps.onFatal(BB.uGB(), BB.fGB());
+            if (oB === bB) return this.stop(), void console.warn(`${LB} the previews stopped: the page's renderer went with its session`);
+            (0, qB.e)(IB), this.startFrames()
           } else {
-            const jB = BB.sIB();
+            const IB = BB.lGB();
             this.stop();
-            const zB = jB[2] === LB.Tc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(zB, void 0, jB[1], jB[2] === LB.Tc.RESTORE_LOST)
+            const ZB = IB[2] === WB.ed.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(ZB, void 0, IB[1], IB[2] === WB.ed.RESTORE_LOST)
           }
         }
       }
@@ -1041,91 +1041,91 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, qB.h)(this.module) || "failed" === (0, JB.z)())
+        return null !== this.module && ((0, YB.f)(this.module) || "failed" === (0, NB.u)())
       }
-      hostCall(BB, jB) {
+      hostCall(BB, IB) {
         if (this.settleIfTrapped()) return BB;
         try {
-          return jB()
-        } catch (zB) {
-          if (this.stopIfTrapped(zB)) return BB;
-          throw zB
+          return IB()
+        } catch (ZB) {
+          if (this.stopIfTrapped(ZB)) return BB;
+          throw ZB
         }
       }
       guarded(BB) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
           return BB()
-        } catch (jB) {
-          throw this.stopIfTrapped(jB), jB
+        } catch (IB) {
+          throw this.stopIfTrapped(IB), IB
         }
       }
       registryOf(BB) {
         return {
-          KzB: (jB, zB) => {
+          WTB: (IB, ZB) => {
             this.hostCall(void 0, (() => {
-              BB.KzB(jB, zB)
+              BB.WTB(IB, ZB)
             }))
           },
-          CzB: jB => {
+          dTB: IB => {
             this.hostCall(void 0, (() => {
-              BB.CzB(jB)
+              BB.dTB(IB)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, hB.f)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, RB.g)(null)), !0)
       }
       stopIfTrapped(BB) {
-        return !(null === this.module || !(0, qB.j)(this.module, BB)) && (this.stopForTrap(BB), !0)
+        return !(null === this.module || !(0, YB.h)(this.module, BB)) && (this.stopForTrap(BB), !0)
       }
       stopForTrap(BB) {
-        this.stop(), (0, hB.f)(null), (0, AB.f)("previews", BB)
+        this.stop(), (0, RB.g)(null), (0, XB.f)("previews", BB)
       }
       stop() {
         this.stopped = !0;
         for (const BB of this.previews.values()) BB.abandon()
       }
-      logError(BB, jB) {
-        const zB = `${BB}:${jB}`;
-        this.loggedErrors.has(zB) || (this.loggedErrors.add(zB), console.warn(`${TB} error ${BB} (detail ${jB})`))
+      logError(BB, IB) {
+        const ZB = `${BB}:${IB}`;
+        this.loggedErrors.has(ZB) || (this.loggedErrors.add(ZB), console.warn(`${LB} error ${BB} (detail ${IB})`))
       }
     }
-    let dj = null;
+    let oI = null;
 
-    function Ij() {
-      return dj ??= new nj(function() {
-        const BB = (0, EB.q)(mB.clientSideServerUrls.staticUrl, {
+    function GI() {
+      return oI ??= new JI(function() {
+        const BB = (0, wB.q)(gB.clientSideServerUrls.staticUrl, {
           packUrl: BB => {
-            var jB, zB;
-            return null !== (jB = null === (zB = fB.h.current) || void 0 === zB ? void 0 : zB.modelUrl(BB)) && void 0 !== jB ? jB : null
+            var IB, ZB;
+            return null !== (IB = null === (ZB = iB.f.current) || void 0 === ZB ? void 0 : ZB.modelUrl(BB)) && void 0 !== IB ? IB : null
           }
         });
         return {
-          loadModule: zj,
+          loadModule: ZI,
           startModels: async BB => {
             const {
-              pageModelPool: jB
-            } = await zB.e(43).then((() => zB(51202))), {
-              pool: QB
-            } = jB(BB);
-            return (BB, jB) => QB.build(BB, jB)
+              pageModelPool: IB
+            } = await ZB.e(43).then((() => ZB(51116))), {
+              pool: TB
+            } = IB(BB);
+            return (BB, IB) => TB.build(BB, IB)
           },
-          fetchAnimations: async () => NB(await (0, QB.L)(OB())),
-          playerFile: async () => (await (0, EB.p)()).PLAYER_FILE,
-          onAnimationsFailed: (BB, jB) => {
-            uB("previewAnimations", OB(), BB, jB)
+          fetchAnimations: async () => vB(await (0, TB.K)(SB())),
+          playerFile: async () => (await (0, wB.m)()).PLAYER_FILE,
+          onAnimationsFailed: (BB, IB) => {
+            kB("previewAnimations", SB(), BB, IB)
           },
           provideBuiltInAnimationPack: BB => {
-            rB().provide(BB)
+            zB().provide(BB)
           },
-          openExtras: HB.C,
+          openExtras: aB.E,
           files: BB,
-          images: (0, fB.m)((0, SB.k)(BB.url), (() => fB.h.current)),
-          pack: fB.h,
-          game: oB.c,
-          fetchModel: BB => (0, EB.j)(BB),
+          images: (0, iB.n)((0, QB.l)(BB.url), (() => iB.f.current)),
+          pack: iB.f,
+          game: pB.b,
+          fetchModel: BB => (0, wB.i)(BB),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
@@ -1133,23 +1133,23 @@ export const modules = {
           cancelFrame: BB => {
             cancelAnimationFrame(BB)
           },
-          onRenderFailed: Bj,
-          onFatal: (BB, jB) => {
-            console.error(`${TB} the previews stopped: renderer error ${BB} (detail ${jB})`)
+          onRenderFailed: BI,
+          onFatal: (BB, IB) => {
+            console.error(`${LB} the previews stopped: renderer error ${BB} (detail ${IB})`)
           },
           onDeviceLost: () => {
-            (0, HB.D)() === YB.c.webgpu && ((0, tB.h)((0, JB.K)() ? (0, gB.S)((0, JB.C)()) : null), kB.G.lost())
+            (0, aB.I)() === jB.b.webgpu && ((0, CB.e)((0, NB.M)() ? (0, dB.Q)((0, NB.x)()) : null), yB.H.lost())
           },
           onDrew: () => {
-            kB.G.drew()
+            yB.H.drew()
           }
         }
-      }()), dj
+      }()), oI
     }
-    var Nj = zB(644),
-      uj = zB(38738),
-      Uj = zB(3402);
-    const aj = {
+    var vI = ZB(655),
+      kI = ZB(38677),
+      cI = ZB(3461);
+    const nI = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1167,116 +1167,116 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const pj = "[bloxd-previews]",
-      rj = new Uint32Array(5);
+    const hI = "[bloxd-previews]",
+      zI = new Uint32Array(5);
 
-    function sj(BB) {
-      return Nj.i.indexOf(BB)
+    function FI(BB) {
+      return vI.i.indexOf(BB)
     }
-    const Jj = new WeakSet;
+    const NI = new WeakSet;
 
-    function mj(BB) {
-      const jB = (0, uj.e)(BB),
-        zB = null === jB ? -1 : yj(jB);
-      return -1 !== zB ? zB : (Jj.has(BB) || (Jj.add(BB), console.warn(`${pj} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function yj(BB) {
-      var jB;
-      return null !== (jB = aj[BB]) && void 0 !== jB ? jB : -1
+    function gI(BB) {
+      const IB = (0, kI.f)(BB),
+        ZB = null === IB ? -1 : qI(IB);
+      return -1 !== ZB ? ZB : (NI.has(BB) || (NI.add(BB), console.warn(`${hI} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function kj(BB, jB) {
+    function qI(BB) {
+      var IB;
+      return null !== (IB = nI[BB]) && void 0 !== IB ? IB : -1
+    }
+
+    function yI(BB, IB) {
       const {
-        canvas: zB
-      } = jB;
-      zB.style.width = "100%", zB.style.height = "100%", zB.style.display = "block", BB.appendChild(zB)
+        canvas: ZB
+      } = IB;
+      ZB.style.width = "100%", ZB.style.height = "100%", ZB.style.display = "block", BB.appendChild(ZB)
     }
 
-    function Gj(BB) {
-      const jB = BB.getBoundingClientRect();
-      return [jB.width, jB.height]
+    function UI(BB) {
+      const IB = BB.getBoundingClientRect();
+      return [IB.width, IB.height]
     }
-    class Lj {
-      constructor(BB, jB) {
-        this.preview = BB, this.showView = jB
+    class WI {
+      constructor(BB, IB) {
+        this.preview = BB, this.showView = IB
       }
       show(BB) {
         this.showView(this.preview, BB)
       }
-      resize(BB, jB) {
-        this.preview.resize(BB, jB)
+      resize(BB, IB) {
+        this.preview.resize(BB, IB)
       }
       close() {
         this.preview.close()
       }
     }
-    class gj {
+    class dI {
       constructor(BB) {
         this.preview = BB, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(BB) {
           const {
-            canvas: jB
+            canvas: IB
           } = BB;
-          let zB = null;
-          const QB = BB => {
-              var QB;
-              zB = {
+          let ZB = null;
+          const TB = BB => {
+              var TB;
+              ZB = {
                 pointer: BB.pointerId,
                 x: BB.clientX,
                 y: BB.clientY
-              }, null === (QB = jB.setPointerCapture) || void 0 === QB || QB.call(jB, BB.pointerId)
+              }, null === (TB = IB.setPointerCapture) || void 0 === TB || TB.call(IB, BB.pointerId)
             },
-            nB = jB => {
-              var QB;
-              const nB = BB.orbit;
-              if ((null === (QB = zB) || void 0 === QB ? void 0 : QB.pointer) !== jB.pointerId || null === nB) return;
-              const dB = jB.clientX - zB.x,
-                IB = jB.clientY - zB.y;
-              zB = {
-                ...zB,
-                x: jB.clientX,
-                y: jB.clientY
+            JB = IB => {
+              var TB;
+              const JB = BB.orbit;
+              if ((null === (TB = ZB) || void 0 === TB ? void 0 : TB.pointer) !== IB.pointerId || null === JB) return;
+              const oB = IB.clientX - ZB.x,
+                GB = IB.clientY - ZB.y;
+              ZB = {
+                ...ZB,
+                x: IB.clientX,
+                y: IB.clientY
               }, BB.setOrbit({
-                alpha: nB.alpha - .01 * dB,
-                beta: Math.min(Math.PI - .01, Math.max(.01, nB.beta - .01 * IB)),
-                radius: nB.radius
+                alpha: JB.alpha - .01 * oB,
+                beta: Math.min(Math.PI - .01, Math.max(.01, JB.beta - .01 * GB)),
+                radius: JB.radius
               })
             },
-            dB = BB => {
-              var jB;
-              (null === (jB = zB) || void 0 === jB ? void 0 : jB.pointer) === BB.pointerId && (zB = null)
+            oB = BB => {
+              var IB;
+              (null === (IB = ZB) || void 0 === IB ? void 0 : IB.pointer) === BB.pointerId && (ZB = null)
             },
-            IB = jB => {
-              const zB = BB.orbit;
-              if (null === zB) return;
-              jB.preventDefault();
-              const QB = jB.deltaY * (jB.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : jB.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                nB = Math.min(100, Math.max(5, zB.radius + .08 * QB));
+            GB = IB => {
+              const ZB = BB.orbit;
+              if (null === ZB) return;
+              IB.preventDefault();
+              const TB = IB.deltaY * (IB.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : IB.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                JB = Math.min(100, Math.max(5, ZB.radius + .08 * TB));
               BB.setOrbit({
-                ...zB,
-                radius: nB
+                ...ZB,
+                radius: JB
               })
             };
-          return jB.style.touchAction = "none", jB.addEventListener("pointerdown", QB), jB.addEventListener("pointermove", nB), jB.addEventListener("pointerup", dB), jB.addEventListener("pointercancel", dB), jB.addEventListener("wheel", IB, {
+          return IB.style.touchAction = "none", IB.addEventListener("pointerdown", TB), IB.addEventListener("pointermove", JB), IB.addEventListener("pointerup", oB), IB.addEventListener("pointercancel", oB), IB.addEventListener("wheel", GB, {
             passive: !1
           }), () => {
-            jB.removeEventListener("pointerdown", QB), jB.removeEventListener("pointermove", nB), jB.removeEventListener("pointerup", dB), jB.removeEventListener("pointercancel", dB), jB.removeEventListener("wheel", IB)
+            IB.removeEventListener("pointerdown", TB), IB.removeEventListener("pointermove", JB), IB.removeEventListener("pointerup", oB), IB.removeEventListener("pointercancel", oB), IB.removeEventListener("wheel", GB)
           }
         }(BB), this.dev = {
           canvas: () => BB.canvas,
           isolateHead: () => {
-            console.warn(`${pj} isolateHead: noa's character preview only`)
+            console.warn(`${hI} isolateHead: noa's character preview only`)
           }
         }, this.apply(), this.ready = BB.untilSettled().then((() => {
-          if (BB.isStopped) throw new Error(`${pj} the previews stopped before the character drew`);
+          if (BB.isStopped) throw new Error(`${hI} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(BB, jB) {
-        this.cosmetics[BB] = jB, this.apply()
+      setCosmetic(BB, IB) {
+        this.cosmetics[BB] = IB, this.apply()
       }
       playEmote(BB) {
         null === BB || BB !== this.emote ? (this.emote = BB, this.apply()) : this.preview.replay()
@@ -1286,69 +1286,69 @@ export const modules = {
       }
       setOrbit(BB) {
         let {
-          yaw: jB,
-          pitch: zB,
-          radius: QB
+          yaw: IB,
+          pitch: ZB,
+          radius: TB
         } = BB;
-        const nB = this.preview.orbit;
-        null !== nB && this.preview.setOrbit({
-          alpha: jB,
-          beta: zB,
-          radius: null !== QB && void 0 !== QB ? QB : nB.radius
+        const JB = this.preview.orbit;
+        null !== JB && this.preview.setOrbit({
+          alpha: IB,
+          beta: ZB,
+          radius: null !== TB && void 0 !== TB ? TB : JB.radius
         })
       }
       resetCamera() {}
-      resize(BB, jB) {
-        this.preview.resize(BB, jB)
+      resize(BB, IB) {
+        this.preview.resize(BB, IB)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
         var BB;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), rj, null === (BB = this.emote) ? -1 : yj(BB))
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), zI, null === (BB = this.emote) ? -1 : qI(BB))
       }
     }
 
-    function tj(BB, jB) {
+    function CI(BB, IB) {
       let {
-        mobType: zB,
-        variation: QB,
-        animation: nB
-      } = jB;
-      BB.setMob(sj(zB), null !== QB && void 0 !== QB ? QB : "", 1, mj(nB))
+        mobType: ZB,
+        variation: TB,
+        animation: JB
+      } = IB;
+      BB.setMob(FI(ZB), null !== TB && void 0 !== TB ? TB : "", 1, gI(JB))
     }
 
-    function Sj(BB, jB) {
+    function QI(BB, IB) {
       let {
-        mobType: zB,
-        variation: QB,
-        metaInfo: nB,
-        tamed: dB
-      } = jB;
-      BB.setPet(sj(zB), QB, nB, dB)
+        mobType: ZB,
+        variation: TB,
+        metaInfo: JB,
+        tamed: oB
+      } = IB;
+      BB.setPet(FI(ZB), TB, JB, oB)
     }
-    const Mj = {
+    const sI = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Ej {
-      constructor(BB, jB, zB, QB) {
+    class wI {
+      constructor(BB, IB, ZB, TB) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, BB(zB.width, QB[1], QB).then((BB => {
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, BB(ZB.width, TB[1], TB).then((BB => {
           if (this.closed) return void BB.close();
           const {
-            style: zB
+            style: ZB
           } = BB.canvas;
-          zB.position = "absolute", zB.top = "0", zB.visibility = "hidden", kj(jB, BB), this.preview = BB, this.apply()
+          ZB.position = "absolute", ZB.top = "0", ZB.visibility = "hidden", yI(IB, BB), this.preview = BB, this.apply()
         })).catch((BB => {
-          console.error(`${pj} couldn't open a lineup figure`, BB)
+          console.error(`${hI} couldn't open a lineup figure`, BB)
         }))
       }
-      update(BB, jB, zB, QB, nB) {
-        this.figure = BB, this.shown = jB, this.order = zB, this.span = QB, this.lineup = nB, this.apply()
+      update(BB, IB, ZB, TB, JB) {
+        this.figure = BB, this.shown = IB, this.order = ZB, this.span = TB, this.lineup = JB, this.apply()
       }
       close() {
         var BB;
@@ -1357,47 +1357,47 @@ export const modules = {
       apply() {
         const {
           preview: BB,
-          figure: jB,
-          lineup: zB
+          figure: IB,
+          lineup: ZB
         } = this;
-        if (null === BB || null === jB) return;
-        if (this.given !== jB) {
-          var QB;
-          this.given = jB, this.loaded = !1;
-          const zB = null === jB.kS ? 0 : null !== (QB = (0, Uj.c)(jB.kS)) && void 0 !== QB ? QB : 0;
+        if (null === BB || null === IB) return;
+        if (this.given !== IB) {
+          var TB;
+          this.given = IB, this.loaded = !1;
+          const ZB = null === IB.JC ? 0 : null !== (TB = (0, cI.c)(IB.JC)) && void 0 !== TB ? TB : 0;
           BB.setFigure(function(BB) {
             return JSON.stringify(Object.fromEntries(BB.cosmetics))
-          }(jB), zB, mj(jB.animation), jB.size), BB.untilSettled().then((() => {
-            this.given === jB && (this.loaded = !0, this.apply())
+          }(IB), ZB, gI(IB.animation), IB.size), BB.untilSettled().then((() => {
+            this.given === IB && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: nB,
-          width: dB
+          left: JB,
+          width: oB
         } = this.span;
-        BB.resize(dB, zB[1], zB);
+        BB.resize(oB, ZB[1], ZB);
         const {
-          style: IB
+          style: GB
         } = BB.canvas;
-        IB.left = `${nB}px`, IB.width = `${dB}px`, IB.zIndex = this.order, IB.visibility = this.shown && this.loaded ? "visible" : "hidden"
+        GB.left = `${JB}px`, GB.width = `${oB}px`, GB.zIndex = this.order, GB.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class ij {
-      constructor(BB, jB) {
-        this.open = jB, this.layer = void 0, this.figures = [], this.view = {
+    class OI {
+      constructor(BB, IB) {
+        this.open = IB, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = Gj(BB), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = UI(BB), this.layer = document.createElement("div");
         const {
-          style: zB
+          style: ZB
         } = this.layer;
-        zB.position = "relative", zB.isolation = "isolate", zB.overflow = "hidden", zB.width = "100%", zB.height = "100%", zB.pointerEvents = "none", BB.appendChild(this.layer)
+        ZB.position = "relative", ZB.isolation = "isolate", ZB.overflow = "hidden", ZB.width = "100%", ZB.height = "100%", ZB.pointerEvents = "none", BB.appendChild(this.layer)
       }
       show(BB) {
         this.view = BB, this.place()
       }
-      resize(BB, jB) {
-        this.size = [BB, jB], this.place()
+      resize(BB, IB) {
+        this.size = [BB, IB], this.place()
       }
       close() {
         for (const BB of this.figures) BB.close();
@@ -1406,81 +1406,81 @@ export const modules = {
       place() {
         const {
           figures: BB,
-          shown: jB
+          shown: IB
         } = this.view;
-        for (const QB of this.figures.splice(BB.length)) QB.close();
+        for (const TB of this.figures.splice(BB.length)) TB.close();
         const {
-          size: zB
+          size: ZB
         } = this;
-        BB.forEach(((QB, nB) => {
-          var dB;
-          const IB = function(BB, jB, zB, QB) {
-            let [nB, dB] = QB;
-            const IB = (BB + .5) * nB / jB,
-              NB = Math.min(Math.max(nB / jB, 2 * zB * dB), 2 * Math.max(IB, nB - IB));
+        BB.forEach(((TB, JB) => {
+          var oB;
+          const GB = function(BB, IB, ZB, TB) {
+            let [JB, oB] = TB;
+            const GB = (BB + .5) * JB / IB,
+              vB = Math.min(Math.max(JB / IB, 2 * ZB * oB), 2 * Math.max(GB, JB - GB));
             return {
-              left: IB - NB / 2,
-              width: NB
+              left: GB - vB / 2,
+              width: vB
             }
-          }(nB, BB.length, function(BB) {
+          }(JB, BB.length, function(BB) {
             let {
-              animation: jB,
-              size: zB
+              animation: IB,
+              size: ZB
             } = BB;
             const {
-              aimed: QB,
-              ready: nB
-            } = Mj;
-            return (mj(jB) === aj.gunAimed ? QB : nB) * zB
-          }(QB), zB);
-          this.figures[nB] ??= new Ej(this.open, this.layer, IB, zB), this.figures[nB].update(QB, null !== (dB = jB[nB]) && void 0 !== dB && dB, function(BB, jB) {
-            return String(Math.round(1e3 * BB) + jB)
-          }(QB.size, nB), IB, zB)
+              aimed: TB,
+              ready: JB
+            } = sI;
+            return (gI(IB) === nI.gunAimed ? TB : JB) * ZB
+          }(TB), ZB);
+          this.figures[JB] ??= new wI(this.open, this.layer, GB, ZB), this.figures[JB].update(TB, null !== (oB = IB[JB]) && void 0 !== oB && oB, function(BB, IB) {
+            return String(Math.round(1e3 * BB) + IB)
+          }(TB.size, JB), GB, ZB)
         }))
       }
     }
-    const qj = {
-      player: eB,
+    const YI = {
+      player: fB,
       store: lB
     };
-    class fj {
+    class iI {
       constructor(BB) {
         this.page = BB
       }
       async openMob(BB) {
-        return new Lj(await this.open(BB, WB), tj)
+        return new WI(await this.open(BB, uB), CI)
       }
       async openPet(BB) {
-        return new Lj(await this.open(BB, WB), Sj)
+        return new WI(await this.open(BB, uB), QI)
       }
       openMobLineup(BB) {
-        return new ij(BB, ((BB, jB, zB) => this.page.openPreview(WB, BB, jB, zB)))
+        return new OI(BB, ((BB, IB, ZB) => this.page.openPreview(uB, BB, IB, ZB)))
       }
-      async openCharacter(BB, jB) {
-        return new gj(await this.open(BB, qj[jB]))
+      async openCharacter(BB, IB) {
+        return new dI(await this.open(BB, YI[IB]))
       }
-      async open(BB, jB) {
-        const [zB, QB] = Gj(BB), nB = await this.page.openPreview(jB, zB, QB);
-        return kj(BB, nB), nB
+      async open(BB, IB) {
+        const [ZB, TB] = UI(BB), JB = await this.page.openPreview(IB, ZB, TB);
+        return yI(BB, JB), JB
       }
     }
   },
-  36823: (BB, jB, zB) => {
-    zB.d(jB, {
-      D: () => mB,
-      F: () => kB,
-      e: () => QB,
-      h: () => nB,
-      i: () => rB,
-      m: () => yB,
-      n: () => aB,
-      r: () => GB,
-      t: () => uB,
-      x: () => UB,
-      y: () => sB,
-      z: () => JB
+  36771: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => FB,
+      B: () => NB,
+      C: () => gB,
+      G: () => yB,
+      d: () => TB,
+      g: () => JB,
+      k: () => zB,
+      l: () => qB,
+      o: () => nB,
+      q: () => UB,
+      u: () => kB,
+      y: () => cB
     });
-    const QB = [{
+    const TB = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1497,64 +1497,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function nB(BB, jB) {
+    function JB(BB, IB) {
       const {
-        numLines: zB,
-        charsPerLine: nB
-      } = QB[jB];
-      return LB(BB, zB, nB, !1)
+        numLines: ZB,
+        charsPerLine: JB
+      } = TB[IB];
+      return WB(BB, ZB, JB, !1)
     }
-    const dB = 7 / 8,
-      IB = .25,
-      NB = 8;
+    const oB = 7 / 8,
+      GB = .25,
+      vB = 8;
 
-    function uB(BB, jB) {
+    function kB(BB, IB) {
       return {
-        width: Math.min(BB, NB) - 2 * IB,
-        height: Math.min(jB, NB) - 2 * IB
+        width: Math.min(BB, vB) - 2 * GB,
+        height: Math.min(IB, vB) - 2 * GB
       }
     }
 
-    function UB(BB, jB, zB) {
-      const nB = uB(BB, jB),
+    function cB(BB, IB, ZB) {
+      const JB = kB(BB, IB),
         {
-          numLines: IB,
-          charsPerLine: NB
-        } = QB[zB];
+          numLines: GB,
+          charsPerLine: vB
+        } = TB[ZB];
       return {
-        numLines: Math.max(1, Math.floor(IB / dB * nB.height)),
-        charsPerLine: Math.max(1, Math.floor(NB * nB.width))
+        numLines: Math.max(1, Math.floor(GB / oB * JB.height)),
+        charsPerLine: Math.max(1, Math.floor(vB * JB.width))
       }
     }
 
-    function aB(BB, jB, zB, QB) {
+    function nB(BB, IB, ZB, TB) {
       const {
-        numLines: nB,
-        charsPerLine: dB
-      } = UB(zB, QB, jB);
-      return LB(BB, nB, dB, !1)
+        numLines: JB,
+        charsPerLine: oB
+      } = cB(ZB, TB, IB);
+      return WB(BB, JB, oB, !1)
     }
-    const pB = 32e3;
+    const hB = 32e3;
 
-    function rB(BB) {
-      return BB.slice(0, pB)
+    function zB(BB) {
+      return BB.slice(0, hB)
     }
-    const sB = 512e3,
-      JB = 64,
-      mB = sB;
+    const FB = 512e3,
+      NB = 64,
+      gB = FB;
 
-    function yB(BB, jB) {
-      const zB = Math.max(0, mB - jB),
-        QB = Math.min(sB, zB);
-      return BB.slice(0, QB)
+    function qB(BB, IB) {
+      const ZB = Math.max(0, gB - IB),
+        TB = Math.min(FB, ZB);
+      return BB.slice(0, TB)
     }
-    const kB = {
+    const yB = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      zN: {
+      xG: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1566,30 +1566,30 @@ export const modules = {
       }
     };
 
-    function GB(BB, jB) {
+    function UB(BB, IB) {
       const {
-        numLines: zB,
-        charsPerLine: QB
-      } = kB[jB];
-      return LB(BB, zB, QB, !1)
+        numLines: ZB,
+        charsPerLine: TB
+      } = yB[IB];
+      return WB(BB, ZB, TB, !1)
     }
 
-    function LB(BB, jB, zB, QB, nB) {
-      (nB || QB) && (BB = BB.slice(0, null !== nB && void 0 !== nB ? nB : jB * zB));
-      const dB = BB.split("\n");
-      if (dB.length > jB && dB.splice(jB, dB.length - jB), !QB)
-        for (let IB = 0; IB < dB.length; IB++) {
-          const BB = dB[IB];
-          BB.length > zB && (dB[IB] = BB.substring(0, zB), dB.length < jB && dB.splice(IB + 1, 0, BB.substring(zB)))
+    function WB(BB, IB, ZB, TB, JB) {
+      (JB || TB) && (BB = BB.slice(0, null !== JB && void 0 !== JB ? JB : IB * ZB));
+      const oB = BB.split("\n");
+      if (oB.length > IB && oB.splice(IB, oB.length - IB), !TB)
+        for (let GB = 0; GB < oB.length; GB++) {
+          const BB = oB[GB];
+          BB.length > ZB && (oB[GB] = BB.substring(0, ZB), oB.length < IB && oB.splice(GB + 1, 0, BB.substring(ZB)))
         }
-      return dB.join("\n")
+      return oB.join("\n")
     }
   },
-  51139: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  51050: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  51143: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  51057: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);

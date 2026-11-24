@@ -1,109 +1,109 @@
 export const id = 99;
 export const ids = [99];
 export const modules = {
-  4971: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
+  5038: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
       default: () => lB
     });
-    var QB = zB(62),
-      nB = zB(1547),
-      dB = zB(376),
-      IB = zB(1268),
-      NB = zB(1637),
-      uB = zB(1297),
-      UB = zB(1570),
-      aB = zB(1532),
-      pB = zB(2790);
-    const rB = {
+    var TB = ZB(63),
+      JB = ZB(1591),
+      oB = ZB(360),
+      GB = ZB(1296),
+      vB = ZB(1687),
+      kB = ZB(1333),
+      cB = ZB(1614),
+      nB = ZB(1561),
+      hB = ZB(2808);
+    const zB = {
       retries: 2,
       minTimeout: 2e3
     };
-    var sB = zB(1162),
-      JB = zB(1630),
-      mB = zB(1169),
-      yB = zB(1952),
-      kB = zB(1240),
-      GB = zB(1263),
-      LB = zB(3587),
-      gB = zB(1369),
-      tB = zB(1478),
-      SB = zB(1543),
-      MB = zB(2729),
-      EB = zB(2737),
-      iB = zB(4974),
-      qB = zB(2224),
-      fB = zB(1091),
-      oB = zB.n(fB),
-      HB = zB(1108),
-      DB = zB(4981),
-      FB = zB(28),
-      YB = zB(1982),
-      VB = zB(3749),
-      hB = zB(2078),
-      XB = zB(3693),
-      ZB = zB(106),
-      AB = zB(4668),
-      TB = zB(1148);
-    const PB = [iB];
+    var FB = ZB(1165),
+      NB = ZB(1679),
+      gB = ZB(1179),
+      qB = ZB(1960),
+      yB = ZB(1248),
+      UB = ZB(1281),
+      WB = ZB(3663),
+      dB = ZB(1397),
+      CB = ZB(1516),
+      QB = ZB(1579),
+      sB = ZB(2754),
+      wB = ZB(2770),
+      OB = ZB(5040),
+      YB = ZB(2259),
+      iB = ZB(1091),
+      pB = ZB.n(iB),
+      aB = ZB(1102),
+      HB = ZB(5045),
+      MB = ZB(20),
+      jB = ZB(1995),
+      PB = ZB(3816),
+      RB = ZB(2102),
+      rB = ZB(3756),
+      mB = ZB(105),
+      XB = ZB(4741),
+      LB = ZB(1153);
+    const eB = [OB];
 
-    function WB(BB) {
+    function uB(BB) {
       let {
-        icon: jB,
-        label: zB,
-        value: QB
+        icon: IB,
+        label: ZB,
+        value: TB
       } = BB;
-      return (0, TB.jsxs)("div", {
+      return (0, LB.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, TB.jsx)(HB.c, {
-          name: jB,
+        children: [(0, LB.jsx)(aB.d, {
+          name: IB,
           className: "PlayerProfileStatIcon"
-        }), (0, TB.jsxs)("div", {
+        }), (0, LB.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, TB.jsx)("div", {
+          children: [(0, LB.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: zB
-          }), (0, TB.jsx)("div", {
+            children: ZB
+          }), (0, LB.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: QB
+            children: TB
           })]
         })]
       })
     }
 
-    function eB(BB) {
+    function fB(BB) {
       let {
-        profile: jB
+        profile: IB
       } = BB;
       const {
-        t: zB,
-        selectedLanguage: QB
-      } = (0, kB.D)();
-      let nB = zB("homePage:profileUnknown");
-      if (jB.lastOnline) {
-        const BB = (0, kB.n)(QB.code, "homePage:profileTimeAgo");
-        nB = zB("homePage:profileTimeAgo", {
-          time: (0, dB.$)(BB, jB.lastOnline, Date.now())
+        t: ZB,
+        selectedLanguage: TB
+      } = (0, yB.G)();
+      let JB = ZB("homePage:profileUnknown");
+      if (IB.lastOnline) {
+        const BB = (0, yB.o)(TB.code, "homePage:profileTimeAgo");
+        JB = ZB("homePage:profileTimeAgo", {
+          time: (0, oB.hb)(BB, IB.lastOnline, Date.now())
         })
       }
-      let IB = zB("homePage:profileUnknown");
-      return jB.accountCreatedAt && (IB = new Date(jB.accountCreatedAt).toLocaleDateString(void 0, {
+      let GB = ZB("homePage:profileUnknown");
+      return IB.accountCreatedAt && (GB = new Date(IB.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, TB.jsxs)("div", {
+      })), (0, LB.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, TB.jsx)(WB, {
+        children: [(0, LB.jsx)(uB, {
           icon: "hourglass",
-          label: zB("homePage:profileTimePlayed"),
-          value: (0, VB.e)(jB.totalPlayMinutes)
-        }), (0, TB.jsx)(WB, {
+          label: ZB("homePage:profileTimePlayed"),
+          value: (0, PB.d)(IB.totalPlayMinutes)
+        }), (0, LB.jsx)(uB, {
           icon: "wifi",
-          label: zB("homePage:profileLastOnline"),
-          value: nB
-        }), (0, TB.jsx)(WB, {
+          label: ZB("homePage:profileLastOnline"),
+          value: JB
+        }), (0, LB.jsx)(uB, {
           icon: "calendar",
-          label: zB("homePage:profileJoined"),
-          value: IB
+          label: ZB("homePage:profileJoined"),
+          value: GB
         })]
       })
     }
@@ -111,16 +111,16 @@ export const modules = {
     function lB() {
       const {
         t: BB
-      } = (0, kB.D)(), jB = (0, SB.useNavigatePreserveSearch)(), zB = (0, sB.d)(), {
-        playerName: iB,
-        playerUrlName: fB
-      } = (0, nB.w)(), VB = (0, nB.n)(), WB = (0, IB.e)(VB.pathname), lB = WB && ("urlId" in WB ? `urlId:${WB.urlId}` : `name:${WB.lowerCaseName}`), wB = (0, QB.useRef)(lB);
-      wB.current = lB;
+      } = (0, yB.G)(), IB = (0, QB.useNavigatePreserveSearch)(), ZB = (0, FB.j)(), {
+        playerName: OB,
+        playerUrlName: iB
+      } = (0, JB.B)(), PB = (0, JB.r)(), uB = (0, GB.f)(PB.pathname), lB = uB && ("urlId" in uB ? `urlId:${uB.urlId}` : `name:${uB.lowerCaseName}`), AB = (0, TB.useRef)(lB);
+      AB.current = lB;
       const {
-        userContext: xB,
-        isUserContextUpdating: KB
-      } = (0, mB.d)(), CB = (0, QB.useRef)(null), cB = (0, QB.useRef)(null), bB = (0, QB.useRef)(null), vB = (0, QB.useRef)(!1), RB = (0, QB.useRef)((0, dB.cc)(PB)), [OB, Bj] = (0, QB.useState)((() => {
-        const BB = WB && EB.b.peek(xB, WB);
+        userContext: tB,
+        isUserContextUpdating: bB
+      } = (0, gB.d)(), xB = (0, TB.useRef)(null), EB = (0, TB.useRef)(null), DB = (0, TB.useRef)(null), KB = (0, TB.useRef)(!1), VB = (0, TB.useRef)((0, oB.bc)(eB)), [SB, BI] = (0, TB.useState)((() => {
+        const BB = uB && wB.c.peek(tB, uB);
         return BB ? {
           status: "loaded",
           profile: BB,
@@ -128,94 +128,94 @@ export const modules = {
         } : {
           status: "loading"
         }
-      })), [jj, zj] = (0, QB.useState)(0);
-      (0, QB.useEffect)(MB.e, []), (0, QB.useEffect)((() => {
-        YB.gameBridge.send("leaveGame", {
+      })), [II, ZI] = (0, TB.useState)(0);
+      (0, TB.useEffect)(sB.c, []), (0, TB.useEffect)((() => {
+        jB.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), FB.c.set({
+        }), MB.d.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [VB.key]);
-      const Qj = () => {
-        const BB = (0, SB.getPreviousLocation)();
-        null === BB || BB.startsWith("/play") ? (0, SB.navigateToHomePage)() : jB(-1)
+      }), [PB.key]);
+      const TI = () => {
+        const BB = (0, QB.getPreviousLocation)();
+        null === BB || BB.startsWith("/play") ? (0, QB.navigateToHomePage)() : IB(-1)
       };
-      (0, AB.b)(Qj), (0, QB.useEffect)((() => {
+      (0, XB.e)(TI), (0, TB.useEffect)((() => {
         var BB;
-        if (KB) return;
-        if (!WB) return void Bj({
+        if (bB) return;
+        if (!uB) return void BI({
           status: "notFound",
           playerKey: lB
         });
-        const jB = "urlId" in WB && (null === (BB = cB.current) || void 0 === BB ? void 0 : BB.urlId) === WB.urlId && bB.current === xB;
-        if (jB && vB.current) return;
-        const zB = jB ? null : EB.b.peek(xB, WB);
-        let QB = !1;
-        const nB = BB => "loaded" === BB.status && (BB.playerKey === lB || "urlId" in WB && BB.profile.urlId === WB.urlId);
-        return zB ? (bB.current = xB, vB.current = !1, Bj({
+        const IB = "urlId" in uB && (null === (BB = EB.current) || void 0 === BB ? void 0 : BB.urlId) === uB.urlId && DB.current === tB;
+        if (IB && KB.current) return;
+        const ZB = IB ? null : wB.c.peek(tB, uB);
+        let TB = !1;
+        const JB = BB => "loaded" === BB.status && (BB.playerKey === lB || "urlId" in uB && BB.profile.urlId === uB.urlId);
+        return ZB ? (DB.current = tB, KB.current = !1, BI({
           status: "loaded",
-          profile: zB,
+          profile: ZB,
           playerKey: lB
-        }), EB.b.invalidate(WB)) : Bj((BB => nB(BB) ? BB : {
+        }), wB.c.invalidate(uB)) : BI((BB => JB(BB) ? BB : {
           status: "loading"
-        })), async function(BB, jB) {
-          if ("lowerCaseName" in jB && jB.lowerCaseName.length > uB.g) return {
+        })), async function(BB, IB) {
+          if ("lowerCaseName" in IB && IB.lowerCaseName.length > kB.j) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await aB.b.getPlayerProfile(BB, jB, rB)
+              profile: await nB.c.getPlayerProfile(BB, IB, zB)
             }
-          } catch (zB) {
-            return (0, pB.d)(zB) ? {
+          } catch (ZB) {
+            return (0, hB.d)(ZB) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", zB), {
+            } : (console.error("Failed to load user profile", ZB), {
               status: "failed"
             })
           }
-        }(xB, WB).then((BB => {
-          QB || ("loaded" === BB.status && (bB.current = xB, vB.current = !0), Bj((jB => "failed" === BB.status && nB(jB) ? jB : {
+        }(tB, uB).then((BB => {
+          TB || ("loaded" === BB.status && (DB.current = tB, KB.current = !0), BI((IB => "failed" === BB.status && JB(IB) ? IB : {
             ...BB,
             playerKey: lB
           })))
         })), () => {
-          QB = !0
+          TB = !0
         }
-      }), [KB, lB, xB, jj]);
-      const nj = "loading" === OB.status || OB.playerKey === lB || "loaded" === OB.status && !!WB && "urlId" in WB && OB.profile.urlId === WB.urlId ? OB : {
+      }), [bB, lB, tB, II]);
+      const JI = "loading" === SB.status || SB.playerKey === lB || "loaded" === SB.status && !!uB && "urlId" in uB && SB.profile.urlId === uB.urlId ? SB : {
           status: "loading"
         },
-        dj = "loaded" === nj.status ? nj.profile : null,
-        Ij = "loading" === nj.status ? null : function(BB) {
+        oI = "loaded" === JI.status ? JI.profile : null,
+        GI = "loading" === JI.status ? null : function(BB) {
           if ("loaded" === BB.status) {
             const {
-              profile: jB
+              profile: IB
             } = BB;
-            return (0, UB.I)({
-              urlId: jB.urlId,
-              name: jB.player.name,
-              ranks: jB.player.ranks,
-              socialLinks: jB.socialLinks
+            return (0, cB.V)({
+              urlId: IB.urlId,
+              name: IB.player.name,
+              ranks: IB.player.ranks,
+              socialLinks: IB.socialLinks
             })
           }
-          return "notFound" === BB.status ? (0, UB.R)() : null
-        }(nj),
-        Nj = null !== dj && void 0 !== dj && dj.urlId ? (0, IB.h)({
-          urlId: dj.urlId,
-          name: dj.player.name
+          return "notFound" === BB.status ? (0, cB.db)() : null
+        }(JI),
+        vI = null !== oI && void 0 !== oI && oI.urlId ? (0, GB.h)({
+          urlId: oI.urlId,
+          name: oI.player.name
         }) : null;
-      (0, JB.d)(Nj);
-      const uj = null !== dj && void 0 !== dj && dj.player.cosmetics.profileEffect ? qB.d[dj.player.cosmetics.profileEffect] : void 0,
-        Uj = null !== dj && !KB && xB.getPlayerName().toLowerCase() === dj.player.name.toLowerCase(),
-        aj = (0, hB.c)(null === dj || void 0 === dj ? void 0 : dj.player.name),
-        pj = Uj && xB.playerHasRank("youtuber");
-      cB.current = dj;
-      const rj = (0, QB.useCallback)((() => {
-          WB && (EB.b.invalidate(WB), EB.b.get(xB, WB).then((BB => {
-            wB.current === lB && (vB.current = !0, Bj({
+      (0, NB.i)(vI);
+      const kI = null !== oI && void 0 !== oI && oI.player.cosmetics.profileEffect ? YB.e[oI.player.cosmetics.profileEffect] : void 0,
+        cI = null !== oI && !bB && tB.getPlayerName().toLowerCase() === oI.player.name.toLowerCase(),
+        nI = (0, RB.d)(null === oI || void 0 === oI ? void 0 : oI.player.name),
+        hI = cI && tB.playerHasRank("youtuber");
+      EB.current = oI;
+      const zI = (0, TB.useCallback)((() => {
+          uB && (wB.c.invalidate(uB), wB.c.get(tB, uB).then((BB => {
+            AB.current === lB && (KB.current = !0, BI({
               status: "loaded",
               profile: BB,
               playerKey: lB
@@ -223,110 +223,110 @@ export const modules = {
           })).catch((BB => {
             console.error("Failed to refresh user profile", BB)
           })))
-        }), [lB, xB]),
-        sj = (0, QB.useCallback)((() => {
+        }), [lB, tB]),
+        FI = (0, TB.useCallback)((() => {
           var BB;
-          const jB = cB.current;
-          return !(!jB || null === (BB = CB.current) || void 0 === BB || !BB.isReady()) && (CB.current.setAllCosmetics(jB.player.cosmetics), !0)
+          const IB = EB.current;
+          return !(!IB || null === (BB = xB.current) || void 0 === BB || !BB.isReady()) && (xB.current.setAllCosmetics(IB.player.cosmetics), !0)
         }), []);
-      return (0, QB.useEffect)((() => {
-        if (!dj) return;
-        let BB, jB = !1;
-        const zB = () => {
-          jB || sj() || (BB = setTimeout(zB, 100))
+      return (0, TB.useEffect)((() => {
+        if (!oI) return;
+        let BB, IB = !1;
+        const ZB = () => {
+          IB || FI() || (BB = setTimeout(ZB, 100))
         };
-        return zB(), () => {
-          jB = !0, clearTimeout(BB)
+        return ZB(), () => {
+          IB = !0, clearTimeout(BB)
         }
-      }), [dj, sj]), (0, TB.jsxs)("div", {
-        className: oB()("PlayerProfile", {
-          PlayerProfilePortrait: zB
+      }), [oI, FI]), (0, LB.jsxs)("div", {
+        className: pB()("PlayerProfile", {
+          PlayerProfilePortrait: ZB
         }),
-        children: [Ij && (0, TB.jsx)(NB.b, {
-          meta: Ij
-        }), (0, TB.jsxs)("div", {
+        children: [GI && (0, LB.jsx)(vB.c, {
+          meta: GI
+        }), (0, LB.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [uj && (0, TB.jsx)(uj, {}), !uj && (0, TB.jsx)("div", {
+          children: [kI && (0, LB.jsx)(kI, {}), !kI && (0, LB.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${RB.current})`
+              backgroundImage: `url(${VB.current})`
             }
           })]
-        }), (0, TB.jsxs)("div", {
+        }), (0, LB.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, TB.jsx)(tB.c, {
-            onClick: Qj,
+          children: [(0, LB.jsx)(CB.c, {
+            onClick: TI,
             children: BB("general:back")
-          }), dj && !KB && !Uj && ZB.featureFlags.useSocialFeatures && (0, TB.jsx)("div", {
+          }), oI && !bB && !cI && mB.featureFlags.useSocialFeatures && (0, LB.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, TB.jsx)(XB.b, {
-              playerName: dj.player.name,
+            children: (0, LB.jsx)(rB.e, {
+              playerName: oI.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === nj.status && (0, TB.jsx)("div", {
+        }), "loading" === JI.status && (0, LB.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, TB.jsx)(gB.e, {})
-        }), ("notFound" === nj.status || "failed" === nj.status) && (0, TB.jsxs)("div", {
+          children: (0, LB.jsx)(dB.d, {})
+        }), ("notFound" === JI.status || "failed" === JI.status) && (0, LB.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, TB.jsx)(HB.c, {
+          children: [(0, LB.jsx)(aB.d, {
             name: "face-dizzy"
-          }), (0, TB.jsx)("div", {
+          }), (0, LB.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === nj.status ? BB("socialBar:playerNotFound", {
-              playerName: null !== fB && void 0 !== fB ? fB : iB
+            children: "notFound" === JI.status ? BB("socialBar:playerNotFound", {
+              playerName: null !== iB && void 0 !== iB ? iB : OB
             }) : BB("playerProfile:loadFailed")
-          }), "failed" === nj.status && (0, TB.jsx)(tB.f, {
+          }), "failed" === JI.status && (0, LB.jsx)(CB.g, {
             onClick: () => {
-              zj((BB => BB + 1))
+              ZI((BB => BB + 1))
             },
             children: BB("general:tryAgain")
           })]
-        }), dj && (0, TB.jsxs)("div", {
+        }), oI && (0, LB.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, TB.jsxs)("div", {
+          children: [(0, LB.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, TB.jsx)("div", {
+            children: [(0, LB.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, TB.jsx)(yB.e, {
-                text: (0, GB.s)(dj.player.ranks, dj.player.name, dj.player.nameColour),
-                friendBadgeFor: aj ? dj.player.name : void 0
+              children: (0, LB.jsx)(qB.e, {
+                text: (0, UB.q)(oI.player.ranks, oI.player.name, oI.player.nameColour),
+                friendBadgeFor: nI ? oI.player.name : void 0
               })
-            }), (0, TB.jsx)("div", {
+            }), (0, LB.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, TB.jsx)(QB.Suspense, {
-                fallback: (0, TB.jsx)("div", {
+              children: (0, LB.jsx)(TB.Suspense, {
+                fallback: (0, LB.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, TB.jsx)(gB.e, {})
+                  children: (0, LB.jsx)(dB.d, {})
                 }),
-                children: (0, TB.jsx)(MB.d, {
-                  ref: CB,
+                children: (0, LB.jsx)(sB.b, {
+                  ref: xB,
                   onReady: () => {
-                    sj()
+                    FI()
                   }
                 })
               })
             })]
-          }), (0, TB.jsxs)("div", {
+          }), (0, LB.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, TB.jsx)(eB, {
-              profile: dj
-            }), (dj.socialLinks.length > 0 || pj) && (0, TB.jsx)(DB.b, {
-              socialLinks: dj.socialLinks,
-              editable: pj,
-              userContext: xB,
-              onLinksUpdated: rj
-            }), (0, TB.jsxs)("div", {
+            children: [(0, LB.jsx)(fB, {
+              profile: oI
+            }), (oI.socialLinks.length > 0 || hI) && (0, LB.jsx)(HB.e, {
+              socialLinks: oI.socialLinks,
+              editable: hI,
+              userContext: tB,
+              onLinksUpdated: zI
+            }), (0, LB.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, TB.jsx)("div", {
+              children: [(0, LB.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
                 children: BB("homePage:profileReleasedGames")
-              }), 0 === dj.releasedGames.length && (0, TB.jsx)("div", {
+              }), 0 === oI.releasedGames.length && (0, LB.jsx)("div", {
                 className: "PlayerProfileNoGames",
                 children: BB("homePage:profileNoReleasedGames")
-              }), dj.releasedGames.length > 0 && (0, TB.jsx)("div", {
+              }), oI.releasedGames.length > 0 && (0, LB.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: dj.releasedGames.map((BB => (0, TB.jsx)(LB.f, {
+                children: oI.releasedGames.map((BB => (0, LB.jsx)(WB.f, {
                   source: {
                     type: "preview",
                     preview: BB
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  4981: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => yB
+  5045: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => qB
     });
-    var QB = zB(1091),
-      nB = zB.n(QB),
-      dB = zB(4733),
-      IB = zB(1240),
-      NB = zB(1108),
-      uB = zB(1478),
-      UB = zB(1532),
-      aB = zB(1381),
-      pB = zB(2611),
-      rB = zB(1148);
-    const sB = {
+    var TB = ZB(1091),
+      JB = ZB.n(TB),
+      oB = ZB(4813),
+      GB = ZB(1248),
+      vB = ZB(1102),
+      kB = ZB(1516),
+      cB = ZB(1561),
+      nB = ZB(1403),
+      hB = ZB(2619),
+      zB = ZB(1153);
+    const FB = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,161 +385,161 @@ export const modules = {
       }
     };
 
-    function JB(BB) {
+    function NB(BB) {
       let {
-        platform: jB
+        platform: IB
       } = BB;
-      const zB = "youtube" === jB;
-      return (0, rB.jsxs)("span", {
-        className: nB()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: zB
+      const ZB = "youtube" === IB;
+      return (0, zB.jsxs)("span", {
+        className: JB()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: ZB
         }),
-        children: [zB && (0, rB.jsx)(pB.d, {
+        children: [ZB && (0, zB.jsx)(hB.c, {
           variant: "white"
-        }), !zB && (0, rB.jsx)(NB.c, {
-          name: sB[jB].icon,
+        }), !ZB && (0, zB.jsx)(vB.d, {
+          name: FB[IB].icon,
           kit: "brands"
         })]
       })
     }
 
-    function mB(BB) {
+    function gB(BB) {
       let {
-        platform: jB,
-        link: zB,
-        editable: QB,
-        userContext: nB,
-        onLinksUpdated: pB
+        platform: IB,
+        link: ZB,
+        editable: TB,
+        userContext: JB,
+        onLinksUpdated: hB
       } = BB;
       const {
-        t: mB
-      } = (0, IB.D)(), yB = sB[jB];
-      if (!zB && !QB) return null;
+        t: gB
+      } = (0, GB.G)(), qB = FB[IB];
+      if (!ZB && !TB) return null;
 
-      function kB() {
+      function yB() {
         var BB;
-        if (!nB || !pB) return;
-        aB.NotificationProvider.showInputPopup({
+        if (!JB || !hB) return;
+        nB.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: yB.name
+              platform: qB.name
             }
           },
-          prefixText: dB.r[jB],
+          prefixText: oB.u[IB],
           placeholderText: "playBloxd",
-          initialValue: null !== (BB = null === zB || void 0 === zB ? void 0 : zB.handle) && void 0 !== BB ? BB : "",
+          initialValue: null !== (BB = null === ZB || void 0 === ZB ? void 0 : ZB.handle) && void 0 !== BB ? BB : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: zB ? "general:remove" : void 0
+          secondaryButtonText: ZB ? "general:remove" : void 0
         }).getResult().then((async BB => {
           if ("notificationTornDown" !== BB && null !== BB) try {
-            "submit" === BB.type ? await UB.b.setSocialLink(nB, jB, BB.value) : await UB.b.clearSocialLink(nB, jB), pB()
-          } catch (zB) {
-            console.error("Failed to update social link", zB), aB.NotificationProvider.showAlertPopup({
-              title: zB.errorMessageForUser,
+            "submit" === BB.type ? await cB.c.setSocialLink(JB, IB, BB.value) : await cB.c.clearSocialLink(JB, IB), hB()
+          } catch (ZB) {
+            console.error("Failed to update social link", ZB), nB.NotificationProvider.showAlertPopup({
+              title: ZB.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (zB) {
-        const BB = `@${zB.handle}`;
-        return (0, rB.jsxs)("a", {
+      if (ZB) {
+        const BB = `@${ZB.handle}`;
+        return (0, zB.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: yB.color
+            background: qB.color
           },
-          href: zB.profileUrl,
+          href: ZB.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, rB.jsxs)("div", {
+          children: [(0, zB.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, rB.jsx)(JB, {
-              platform: jB
-            }), (0, rB.jsx)("span", {
+            children: [(0, zB.jsx)(NB, {
+              platform: IB
+            }), (0, zB.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, rB.jsx)("span", {
+              children: (0, zB.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
                 children: BB
               })
             })]
-          }), QB && (0, rB.jsx)("button", {
+          }), TB && (0, zB.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, uB.S)({
+            ...(0, kB.ab)({
               stopPropagation: !0
             }),
             onClick: BB => {
-              BB.stopPropagation(), BB.preventDefault(), kB()
+              BB.stopPropagation(), BB.preventDefault(), yB()
             },
-            children: (0, rB.jsx)(NB.c, {
+            children: (0, zB.jsx)(vB.d, {
               name: "pen-to-square"
             })
-          }), !QB && (0, rB.jsx)("span", {
+          }), !TB && (0, zB.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, rB.jsx)(NB.c, {
+            children: (0, zB.jsx)(vB.d, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, rB.jsxs)("button", {
+      return (0, zB.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: yB.color
+          background: qB.color
         },
-        ...(0, uB.S)(),
+        ...(0, kB.ab)(),
         onClick: () => {
-          kB()
+          yB()
         },
-        children: [(0, rB.jsx)(JB, {
-          platform: jB
-        }), (0, rB.jsxs)("span", {
+        children: [(0, zB.jsx)(NB, {
+          platform: IB
+        }), (0, zB.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, rB.jsx)("span", {
+          children: [(0, zB.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: yB.name
-          }), (0, rB.jsx)("span", {
+            children: qB.name
+          }), (0, zB.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: mB("homePage:profileSocialLinkAdd")
+            children: gB("homePage:profileSocialLinkAdd")
           })]
-        }), (0, rB.jsx)("span", {
+        }), (0, zB.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, rB.jsx)(NB.c, {
+          children: (0, zB.jsx)(vB.d, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function yB(BB) {
+    function qB(BB) {
       let {
-        socialLinks: jB,
-        editable: zB = !1,
-        userContext: QB,
-        onLinksUpdated: nB
+        socialLinks: IB,
+        editable: ZB = !1,
+        userContext: TB,
+        onLinksUpdated: JB
       } = BB;
-      if (!zB && 0 === jB.length) return null;
-      const IB = new Map(jB.map((BB => [BB.platform, BB]))),
-        NB = zB ? dB.q : jB.map((BB => BB.platform));
-      return (0, rB.jsx)("div", {
+      if (!ZB && 0 === IB.length) return null;
+      const GB = new Map(IB.map((BB => [BB.platform, BB]))),
+        vB = ZB ? oB.t : IB.map((BB => BB.platform));
+      return (0, zB.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, rB.jsx)("div", {
+        children: (0, zB.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: NB.map((BB => (0, rB.jsx)(mB, {
+          children: vB.map((BB => (0, zB.jsx)(gB, {
             platform: BB,
-            link: IB.get(BB),
-            editable: zB,
-            userContext: QB,
-            onLinksUpdated: nB
+            link: GB.get(BB),
+            editable: ZB,
+            userContext: TB,
+            onLinksUpdated: JB
           }, BB)))
         })
       })
     }
   },
-  4974: BB => {
+  5040: BB => {
     BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };

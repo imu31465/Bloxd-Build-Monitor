@@ -1,114 +1,114 @@
-/*! For license information please see 7zvlu.272.8be229ea.chunk.js.LICENSE.txt */
+/*! For license information please see c6gaap.272.71428ee2.chunk.js.LICENSE.txt */
 export const id = 272;
 export const ids = [272];
 export const modules = {
-    40634: (BB, jB, zB) => {
-        zB.r(jB), zB.d(jB, {
-          ActionCodeOperation: () => rB,
-          ActionCodeURL: () => vj,
-          AuthCredential: () => Aj,
-          AuthErrorCodes: () => kB,
-          EmailAuthCredential: () => xj,
-          EmailAuthProvider: () => Oj,
-          FacebookAuthProvider: () => Qz,
-          FactorId: () => uB,
-          GithubAuthProvider: () => dz,
-          GoogleAuthProvider: () => nz,
-          OAuthCredential: () => Cj,
-          OAuthProvider: () => zz,
-          OperationType: () => pB,
-          PhoneAuthCredential: () => bj,
-          PhoneAuthProvider: () => jn,
-          PhoneMultiFactorGenerator: () => Qd,
-          ProviderId: () => UB,
-          RecaptchaVerifier: () => CQ,
-          SAMLAuthProvider: () => Nz,
-          SignInMethod: () => aB,
-          TotpMultiFactorGenerator: () => nd,
-          TotpSecret: () => Id,
-          TwitterAuthProvider: () => uz,
-          applyActionCode: () => Fz,
-          beforeAuthStateChanged: () => nQ,
-          browserLocalPersistence: () => LQ,
-          browserPopupRedirectResolver: () => Bd,
-          browserSessionPersistence: () => tQ,
-          checkActionCode: () => Yz,
-          confirmPasswordReset: () => Dz,
-          connectAuthEmulator: () => hj,
-          createUserWithEmailAndPassword: () => hz,
-          debugErrorMap: () => JB,
-          deleteUser: () => UQ,
-          fetchSignInMethodsForEmail: () => Pz,
-          getAdditionalUserInfo: () => BQ,
-          getAuth: () => md,
-          getIdToken: () => xB,
-          getIdTokenResult: () => KB,
-          getMultiFactorResolver: () => rQ,
-          getRedirectResult: () => Mn,
-          inMemoryPersistence: () => Nj,
-          indexedDBLocalPersistence: () => ZQ,
-          initializeAuth: () => Vj,
-          initializeRecaptchaConfig: () => zQ,
-          isSignInWithEmailLink: () => Az,
-          linkWithCredential: () => Sz,
-          linkWithPhoneNumber: () => vQ,
-          linkWithPopup: () => pn,
-          linkWithRedirect: () => Sn,
-          multiFactor: () => mQ,
-          onAuthStateChanged: () => dQ,
-          onIdTokenChanged: () => QQ,
-          parseActionCodeURL: () => Rj,
-          prodErrorMap: () => mB,
-          reauthenticateWithCredential: () => Mz,
-          reauthenticateWithPhoneNumber: () => RQ,
-          reauthenticateWithPopup: () => an,
-          reauthenticateWithRedirect: () => tn,
-          reload: () => Bj,
-          sendEmailVerification: () => Wz,
-          sendPasswordResetEmail: () => Hz,
-          sendSignInLinkToEmail: () => Zz,
-          setPersistence: () => jQ,
-          signInAnonymously: () => rz,
-          signInWithCredential: () => tz,
-          signInWithCustomToken: () => Ez,
-          signInWithEmailAndPassword: () => Xz,
-          signInWithEmailLink: () => Tz,
-          signInWithPhoneNumber: () => bQ,
-          signInWithPopup: () => Un,
-          signInWithRedirect: () => gn,
-          signOut: () => uQ,
-          unlink: () => yz,
-          updateCurrentUser: () => NQ,
-          updateEmail: () => wz,
-          updatePassword: () => xz,
-          updatePhoneNumber: () => Bn,
-          updateProfile: () => lz,
-          useDeviceLanguage: () => IQ,
-          verifyBeforeUpdateEmail: () => ez,
-          verifyPasswordResetCode: () => Vz
+    40583: (BB, IB, ZB) => {
+        ZB.r(IB), ZB.d(IB, {
+          ActionCodeOperation: () => zB,
+          ActionCodeURL: () => KI,
+          AuthCredential: () => XI,
+          AuthErrorCodes: () => yB,
+          EmailAuthCredential: () => tI,
+          EmailAuthProvider: () => SI,
+          FacebookAuthProvider: () => TZ,
+          FactorId: () => kB,
+          GithubAuthProvider: () => oZ,
+          GoogleAuthProvider: () => JZ,
+          OAuthCredential: () => xI,
+          OAuthProvider: () => ZZ,
+          OperationType: () => hB,
+          PhoneAuthCredential: () => DI,
+          PhoneAuthProvider: () => IJ,
+          PhoneMultiFactorGenerator: () => Bo,
+          ProviderId: () => cB,
+          RecaptchaVerifier: () => xT,
+          SAMLAuthProvider: () => vZ,
+          SignInMethod: () => nB,
+          TotpMultiFactorGenerator: () => Io,
+          TotpSecret: () => To,
+          TwitterAuthProvider: () => kZ,
+          applyActionCode: () => MZ,
+          beforeAuthStateChanged: () => JT,
+          browserLocalPersistence: () => WT,
+          browserPopupRedirectResolver: () => KJ,
+          browserSessionPersistence: () => CT,
+          checkActionCode: () => jZ,
+          confirmPasswordReset: () => HZ,
+          connectAuthEmulator: () => RI,
+          createUserWithEmailAndPassword: () => RZ,
+          debugErrorMap: () => NB,
+          deleteUser: () => cT,
+          fetchSignInMethodsForEmail: () => eZ,
+          getAdditionalUserInfo: () => BT,
+          getAuth: () => ho,
+          getIdToken: () => tB,
+          getIdTokenResult: () => bB,
+          getMultiFactorResolver: () => zT,
+          getRedirectResult: () => sJ,
+          inMemoryPersistence: () => vI,
+          indexedDBLocalPersistence: () => mT,
+          initializeAuth: () => PI,
+          initializeRecaptchaConfig: () => ZT,
+          isSignInWithEmailLink: () => XZ,
+          linkWithCredential: () => QZ,
+          linkWithPhoneNumber: () => KT,
+          linkWithPopup: () => hJ,
+          linkWithRedirect: () => QJ,
+          multiFactor: () => gT,
+          onAuthStateChanged: () => oT,
+          onIdTokenChanged: () => TT,
+          parseActionCodeURL: () => VI,
+          prodErrorMap: () => gB,
+          reauthenticateWithCredential: () => sZ,
+          reauthenticateWithPhoneNumber: () => VT,
+          reauthenticateWithPopup: () => nJ,
+          reauthenticateWithRedirect: () => CJ,
+          reload: () => BI,
+          sendEmailVerification: () => uZ,
+          sendPasswordResetEmail: () => aZ,
+          sendSignInLinkToEmail: () => mZ,
+          setPersistence: () => IT,
+          signInAnonymously: () => zZ,
+          signInWithCredential: () => CZ,
+          signInWithCustomToken: () => wZ,
+          signInWithEmailAndPassword: () => rZ,
+          signInWithEmailLink: () => LZ,
+          signInWithPhoneNumber: () => DT,
+          signInWithPopup: () => cJ,
+          signInWithRedirect: () => dJ,
+          signOut: () => kT,
+          unlink: () => qZ,
+          updateCurrentUser: () => vT,
+          updateEmail: () => AZ,
+          updatePassword: () => tZ,
+          updatePhoneNumber: () => BJ,
+          updateProfile: () => lZ,
+          useDeviceLanguage: () => GT,
+          verifyBeforeUpdateEmail: () => fZ,
+          verifyPasswordResetCode: () => PZ
         });
-        var QB = zB(40611),
-          nB = zB(40601);
+        var TB = ZB(40562),
+          JB = ZB(40551);
 
-        function dB(BB, jB) {
-          var zB = {};
-          for (var QB in BB) Object.prototype.hasOwnProperty.call(BB, QB) && jB.indexOf(QB) < 0 && (zB[QB] = BB[QB]);
+        function oB(BB, IB) {
+          var ZB = {};
+          for (var TB in BB) Object.prototype.hasOwnProperty.call(BB, TB) && IB.indexOf(TB) < 0 && (ZB[TB] = BB[TB]);
           if (null != BB && "function" === typeof Object.getOwnPropertySymbols) {
-            var nB = 0;
-            for (QB = Object.getOwnPropertySymbols(BB); nB < QB.length; nB++) jB.indexOf(QB[nB]) < 0 && Object.prototype.propertyIsEnumerable.call(BB, QB[nB]) && (zB[QB[nB]] = BB[QB[nB]])
+            var JB = 0;
+            for (TB = Object.getOwnPropertySymbols(BB); JB < TB.length; JB++) IB.indexOf(TB[JB]) < 0 && Object.prototype.propertyIsEnumerable.call(BB, TB[JB]) && (ZB[TB[JB]] = BB[TB[JB]])
           }
-          return zB
+          return ZB
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var IB = zB(40616),
-          NB = zB(40603);
-        const uB = {
+        var GB = ZB(40568),
+          vB = ZB(40559);
+        const kB = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          UB = {
+          cB = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          aB = {
+          nB = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          pB = {
+          hB = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          rB = {
+          zB = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function sB() {
+        function FB() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const JB = function() {
+        const NB = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          mB = sB,
-          yB = new QB.d("auth", "Firebase", {
+          gB = FB,
+          qB = new TB.h("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          kB = {
+          yB = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          GB = new IB.c("@firebase/auth");
+          UB = new GB.g("@firebase/auth");
 
-        function LB(BB) {
-          if (GB.logLevel <= IB.b.ERROR) {
-            for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
-            GB.error(`Auth (${nB.e}): ${BB}`, ...zB)
+        function WB(BB) {
+          if (UB.logLevel <= GB.d.ERROR) {
+            for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+            UB.error(`Auth (${JB.f}): ${BB}`, ...ZB)
           }
         }
 
-        function gB(BB) {
-          for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
-          throw EB(BB, ...zB)
+        function dB(BB) {
+          for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+          throw wB(BB, ...ZB)
         }
 
-        function tB(BB) {
-          for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
-          return EB(BB, ...zB)
+        function CB(BB) {
+          for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+          return wB(BB, ...ZB)
         }
 
-        function SB(BB, jB, zB) {
-          const nB = Object.assign(Object.assign({}, mB()), {
-            [jB]: zB
+        function QB(BB, IB, ZB) {
+          const JB = Object.assign(Object.assign({}, gB()), {
+            [IB]: ZB
           });
-          return new QB.d("auth", "Firebase", nB).create(jB, {
+          return new TB.h("auth", "Firebase", JB).create(IB, {
             appName: BB.name
           })
         }
 
-        function MB(BB, jB, zB) {
-          if (!(jB instanceof zB)) throw zB.name !== jB.constructor.name && gB(BB, "argument-error"), SB(BB, "argument-error", `Type of ${jB.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function sB(BB, IB, ZB) {
+          if (!(IB instanceof ZB)) throw ZB.name !== IB.constructor.name && dB(BB, "argument-error"), QB(BB, "argument-error", `Type of ${IB.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function EB(BB) {
-          for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
+        function wB(BB) {
+          for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
           if ("string" !== typeof BB) {
-            const jB = zB[0],
-              QB = [...zB.slice(1)];
-            return QB[0] && (QB[0].appName = BB.name), BB._errorFactory.create(jB, ...QB)
+            const IB = ZB[0],
+              TB = [...ZB.slice(1)];
+            return TB[0] && (TB[0].appName = BB.name), BB._errorFactory.create(IB, ...TB)
           }
-          return yB.create(BB, ...zB)
+          return qB.create(BB, ...ZB)
         }
 
-        function iB(BB, jB) {
+        function OB(BB, IB) {
           if (!BB) {
-            for (var zB = arguments.length, QB = new Array(zB > 2 ? zB - 2 : 0), nB = 2; nB < zB; nB++) QB[nB - 2] = arguments[nB];
-            throw EB(jB, ...QB)
+            for (var ZB = arguments.length, TB = new Array(ZB > 2 ? ZB - 2 : 0), JB = 2; JB < ZB; JB++) TB[JB - 2] = arguments[JB];
+            throw wB(IB, ...TB)
           }
         }
 
-        function qB(BB) {
-          const jB = "INTERNAL ASSERTION FAILED: " + BB;
-          throw LB(jB), new Error(jB)
+        function YB(BB) {
+          const IB = "INTERNAL ASSERTION FAILED: " + BB;
+          throw WB(IB), new Error(IB)
         }
 
-        function fB(BB, jB) {
-          BB || qB(jB)
+        function iB(BB, IB) {
+          BB || YB(IB)
         }
 
-        function oB() {
+        function pB() {
           var BB;
           return "undefined" !== typeof self && (null === (BB = self.location) || void 0 === BB ? void 0 : BB.href) || ""
         }
 
-        function HB() {
-          return "http:" === DB() || "https:" === DB()
+        function aB() {
+          return "http:" === HB() || "https:" === HB()
         }
 
-        function DB() {
+        function HB() {
           var BB;
           return "undefined" !== typeof self && (null === (BB = self.location) || void 0 === BB ? void 0 : BB.protocol) || null
         }
-        class FB {
-          constructor(BB, jB) {
-            this.shortDelay = BB, this.longDelay = jB, fB(jB > BB, "Short delay should be less than long delay!"), this.isMobile = (0, QB.T)() || (0, QB.W)()
+        class MB {
+          constructor(BB, IB) {
+            this.shortDelay = BB, this.longDelay = IB, iB(IB > BB, "Short delay should be less than long delay!"), this.isMobile = (0, TB.Z)() || (0, TB.ab)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (HB() || (0, QB.K)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (aB() || (0, TB.T)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function YB(BB, jB) {
-          fB(BB.emulator, "Emulator should always be set here");
+        function jB(BB, IB) {
+          iB(BB.emulator, "Emulator should always be set here");
           const {
-            url: zB
+            url: ZB
           } = BB.emulator;
-          return jB ? `${zB}${jB.startsWith("/")?jB.slice(1):jB}` : zB
+          return IB ? `${ZB}${IB.startsWith("/")?IB.slice(1):IB}` : ZB
         }
-        class VB {
-          static initialize(BB, jB, zB) {
-            this.fetchImpl = BB, jB && (this.headersImpl = jB), zB && (this.responseImpl = zB)
+        class PB {
+          static initialize(BB, IB, ZB) {
+            this.fetchImpl = BB, IB && (this.headersImpl = IB), ZB && (this.responseImpl = ZB)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void qB("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void YB("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void qB("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void YB("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void qB("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void YB("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const hB = {
+        const RB = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          XB = new FB(3e4, 6e4);
+          rB = new MB(3e4, 6e4);
 
-        function ZB(BB, jB) {
-          return BB.tenantId && !jB.tenantId ? Object.assign(Object.assign({}, jB), {
+        function mB(BB, IB) {
+          return BB.tenantId && !IB.tenantId ? Object.assign(Object.assign({}, IB), {
             tenantId: BB.tenantId
-          }) : jB
+          }) : IB
         }
-        async function AB(BB, jB, zB, nB) {
-          return TB(BB, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let dB = {},
-              IB = {};
-            nB && ("GET" === jB ? IB = nB : dB = {
-              body: JSON.stringify(nB)
+        async function XB(BB, IB, ZB, JB) {
+          return LB(BB, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let oB = {},
+              GB = {};
+            JB && ("GET" === IB ? GB = JB : oB = {
+              body: JSON.stringify(JB)
             });
-            const NB = (0, QB.$)(Object.assign({
+            const vB = (0, TB.db)(Object.assign({
                 key: BB.config.apiKey
-              }, IB)).slice(1),
-              uB = await BB._getAdditionalHeaders();
-            return uB["Content-Type"] = "application/json", BB.languageCode && (uB["X-Firebase-Locale"] = BB.languageCode), VB.fetch()(WB(BB, BB.config.apiHost, zB, NB), Object.assign({
-              method: jB,
-              headers: uB,
+              }, GB)).slice(1),
+              kB = await BB._getAdditionalHeaders();
+            return kB["Content-Type"] = "application/json", BB.languageCode && (kB["X-Firebase-Locale"] = BB.languageCode), PB.fetch()(uB(BB, BB.config.apiHost, ZB, vB), Object.assign({
+              method: IB,
+              headers: kB,
               referrerPolicy: "no-referrer"
-            }, dB))
+            }, oB))
           }))
         }
-        async function TB(BB, jB, zB) {
+        async function LB(BB, IB, ZB) {
           BB._canInitEmulator = !1;
-          const nB = Object.assign(Object.assign({}, hB), jB);
+          const JB = Object.assign(Object.assign({}, RB), IB);
           try {
-            const jB = new eB(BB),
-              QB = await Promise.race([zB(), jB.promise]);
-            jB.clearNetworkTimeout();
-            const dB = await QB.json();
-            if ("needConfirmation" in dB) throw lB(BB, "account-exists-with-different-credential", dB);
-            if (QB.ok && !("errorMessage" in dB)) return dB;
+            const IB = new fB(BB),
+              TB = await Promise.race([ZB(), IB.promise]);
+            IB.clearNetworkTimeout();
+            const oB = await TB.json();
+            if ("needConfirmation" in oB) throw lB(BB, "account-exists-with-different-credential", oB);
+            if (TB.ok && !("errorMessage" in oB)) return oB;
             {
-              const jB = QB.ok ? dB.errorMessage : dB.error.message,
-                [zB, IB] = jB.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === zB) throw lB(BB, "credential-already-in-use", dB);
-              if ("EMAIL_EXISTS" === zB) throw lB(BB, "email-already-in-use", dB);
-              if ("USER_DISABLED" === zB) throw lB(BB, "user-disabled", dB);
-              const NB = nB[zB] || zB.toLowerCase().replace(/[_\s]+/g, "-");
-              if (IB) throw SB(BB, NB, IB);
-              gB(BB, NB)
+              const IB = TB.ok ? oB.errorMessage : oB.error.message,
+                [ZB, GB] = IB.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === ZB) throw lB(BB, "credential-already-in-use", oB);
+              if ("EMAIL_EXISTS" === ZB) throw lB(BB, "email-already-in-use", oB);
+              if ("USER_DISABLED" === ZB) throw lB(BB, "user-disabled", oB);
+              const vB = JB[ZB] || ZB.toLowerCase().replace(/[_\s]+/g, "-");
+              if (GB) throw QB(BB, vB, GB);
+              dB(BB, vB)
             }
-          } catch (dB) {
-            if (dB instanceof QB.g) throw dB;
-            gB(BB, "network-request-failed", {
-              message: String(dB)
+          } catch (oB) {
+            if (oB instanceof TB.j) throw oB;
+            dB(BB, "network-request-failed", {
+              message: String(oB)
             })
           }
         }
-        async function PB(BB, jB, zB, QB) {
-          let nB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const dB = await AB(BB, jB, zB, QB, nB);
-          return "mfaPendingCredential" in dB && gB(BB, "multi-factor-auth-required", {
-            _serverResponse: dB
-          }), dB
+        async function eB(BB, IB, ZB, TB) {
+          let JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const oB = await XB(BB, IB, ZB, TB, JB);
+          return "mfaPendingCredential" in oB && dB(BB, "multi-factor-auth-required", {
+            _serverResponse: oB
+          }), oB
         }
 
-        function WB(BB, jB, zB, QB) {
-          const nB = `${jB}${zB}?${QB}`;
-          return BB.config.emulator ? YB(BB.config, nB) : `${BB.config.apiScheme}://${nB}`
+        function uB(BB, IB, ZB, TB) {
+          const JB = `${IB}${ZB}?${TB}`;
+          return BB.config.emulator ? jB(BB.config, JB) : `${BB.config.apiScheme}://${JB}`
         }
-        class eB {
+        class fB {
           constructor(BB) {
-            this.auth = BB, this.timer = null, this.promise = new Promise(((BB, jB) => {
-              this.timer = setTimeout((() => jB(tB(this.auth, "network-request-failed"))), XB.get())
+            this.auth = BB, this.timer = null, this.promise = new Promise(((BB, IB) => {
+              this.timer = setTimeout((() => IB(CB(this.auth, "network-request-failed"))), rB.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,73 +586,73 @@ export const modules = {
           }
         }
 
-        function lB(BB, jB, zB) {
-          const QB = {
+        function lB(BB, IB, ZB) {
+          const TB = {
             appName: BB.name
           };
-          zB.email && (QB.email = zB.email), zB.phoneNumber && (QB.phoneNumber = zB.phoneNumber);
-          const nB = tB(BB, jB, QB);
-          return nB.customData._tokenResponse = zB, nB
+          ZB.email && (TB.email = ZB.email), ZB.phoneNumber && (TB.phoneNumber = ZB.phoneNumber);
+          const JB = CB(BB, IB, TB);
+          return JB.customData._tokenResponse = ZB, JB
         }
 
-        function wB(BB) {
+        function AB(BB) {
           if (BB) try {
-            const jB = new Date(Number(BB));
-            if (!isNaN(jB.getTime())) return jB.toUTCString()
-          } catch (jB) {}
+            const IB = new Date(Number(BB));
+            if (!isNaN(IB.getTime())) return IB.toUTCString()
+          } catch (IB) {}
+        }
+
+        function tB(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, TB.N)(BB).getIdToken(IB)
+        }
+        async function bB(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const ZB = (0, TB.N)(BB),
+            JB = await ZB.getIdToken(IB),
+            oB = EB(JB);
+          OB(oB && oB.exp && oB.auth_time && oB.iat, ZB.auth, "internal-error");
+          const GB = "object" === typeof oB.firebase ? oB.firebase : void 0,
+            vB = null === GB || void 0 === GB ? void 0 : GB.sign_in_provider;
+          return {
+            claims: oB,
+            token: JB,
+            authTime: AB(xB(oB.auth_time)),
+            issuedAtTime: AB(xB(oB.iat)),
+            expirationTime: AB(xB(oB.exp)),
+            signInProvider: vB || null,
+            signInSecondFactor: (null === GB || void 0 === GB ? void 0 : GB.sign_in_second_factor) || null
+          }
         }
 
         function xB(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, QB.H)(BB).getIdToken(jB)
-        }
-        async function KB(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const zB = (0, QB.H)(BB),
-            nB = await zB.getIdToken(jB),
-            dB = cB(nB);
-          iB(dB && dB.exp && dB.auth_time && dB.iat, zB.auth, "internal-error");
-          const IB = "object" === typeof dB.firebase ? dB.firebase : void 0,
-            NB = null === IB || void 0 === IB ? void 0 : IB.sign_in_provider;
-          return {
-            claims: dB,
-            token: nB,
-            authTime: wB(CB(dB.auth_time)),
-            issuedAtTime: wB(CB(dB.iat)),
-            expirationTime: wB(CB(dB.exp)),
-            signInProvider: NB || null,
-            signInSecondFactor: (null === IB || void 0 === IB ? void 0 : IB.sign_in_second_factor) || null
-          }
-        }
-
-        function CB(BB) {
           return 1e3 * Number(BB)
         }
 
-        function cB(BB) {
-          const [jB, zB, nB] = BB.split(".");
-          if (void 0 === jB || void 0 === zB || void 0 === nB) return LB("JWT malformed, contained fewer than 3 sections"), null;
+        function EB(BB) {
+          const [IB, ZB, JB] = BB.split(".");
+          if (void 0 === IB || void 0 === ZB || void 0 === JB) return WB("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const BB = (0, QB.l)(zB);
-            return BB ? JSON.parse(BB) : (LB("Failed to decode base64 JWT payload"), null)
-          } catch (dB) {
-            return LB("Caught error parsing JWT payload as JSON", null === dB || void 0 === dB ? void 0 : dB.toString()), null
+            const BB = (0, TB.p)(ZB);
+            return BB ? JSON.parse(BB) : (WB("Failed to decode base64 JWT payload"), null)
+          } catch (oB) {
+            return WB("Caught error parsing JWT payload as JSON", null === oB || void 0 === oB ? void 0 : oB.toString()), null
           }
         }
-        async function bB(BB, jB) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return jB;
+        async function DB(BB, IB) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return IB;
           try {
-            return await jB
-          } catch (zB) {
-            throw zB instanceof QB.g && function(BB) {
+            return await IB
+          } catch (ZB) {
+            throw ZB instanceof TB.j && function(BB) {
               let {
-                code: jB
+                code: IB
               } = BB;
-              return "auth/user-disabled" === jB || "auth/user-token-expired" === jB
-            }(zB) && BB.auth.currentUser === BB && await BB.auth.signOut(), zB
+              return "auth/user-disabled" === IB || "auth/user-token-expired" === IB
+            }(ZB) && BB.auth.currentUser === BB && await BB.auth.signOut(), ZB
           }
         }
-        class vB {
+        class KB {
           constructor(BB) {
             this.user = BB, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
@@ -663,23 +663,23 @@ export const modules = {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
           getInterval(BB) {
-            var jB;
+            var IB;
             if (BB) {
               const BB = this.errorBackoff;
               return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), BB
             } {
               this.errorBackoff = 3e4;
-              const BB = (null !== (jB = this.user.stsTokenManager.expirationTime) && void 0 !== jB ? jB : 0) - Date.now() - 3e5;
+              const BB = (null !== (IB = this.user.stsTokenManager.expirationTime) && void 0 !== IB ? IB : 0) - Date.now() - 3e5;
               return Math.max(0, BB)
             }
           }
           schedule() {
             let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const jB = this.getInterval(BB);
+            const IB = this.getInterval(BB);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), jB)
+            }), IB)
           }
           async iteration() {
             try {
@@ -690,12 +690,12 @@ export const modules = {
             this.schedule()
           }
         }
-        class RB {
-          constructor(BB, jB) {
-            this.createdAt = BB, this.lastLoginAt = jB, this._initializeTime()
+        class VB {
+          constructor(BB, IB) {
+            this.createdAt = BB, this.lastLoginAt = IB, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = wB(this.lastLoginAt), this.creationTime = wB(this.createdAt)
+            this.lastSignInTime = AB(this.lastLoginAt), this.creationTime = AB(this.createdAt)
           }
           _copy(BB) {
             this.createdAt = BB.createdAt, this.lastLoginAt = BB.lastLoginAt, this._initializeTime()
@@ -707,55 +707,55 @@ export const modules = {
             }
           }
         }
-        async function OB(BB) {
-          var jB;
-          const zB = BB.auth,
-            QB = await BB.getIdToken(),
-            nB = await bB(BB, async function(BB, jB) {
-              return AB(BB, "POST", "/v1/accounts:lookup", jB)
-            }(zB, {
-              idToken: QB
+        async function SB(BB) {
+          var IB;
+          const ZB = BB.auth,
+            TB = await BB.getIdToken(),
+            JB = await DB(BB, async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:lookup", IB)
+            }(ZB, {
+              idToken: TB
             }));
-          iB(null === nB || void 0 === nB ? void 0 : nB.users.length, zB, "internal-error");
-          const IB = nB.users[0];
-          BB._notifyReloadListener(IB);
-          const NB = (null === (jB = IB.providerUserInfo) || void 0 === jB ? void 0 : jB.length) ? IB.providerUserInfo.map((BB => {
+          OB(null === JB || void 0 === JB ? void 0 : JB.users.length, ZB, "internal-error");
+          const GB = JB.users[0];
+          BB._notifyReloadListener(GB);
+          const vB = (null === (IB = GB.providerUserInfo) || void 0 === IB ? void 0 : IB.length) ? GB.providerUserInfo.map((BB => {
             var {
-              providerId: jB
-            } = BB, zB = dB(BB, ["providerId"]);
+              providerId: IB
+            } = BB, ZB = oB(BB, ["providerId"]);
             return {
-              providerId: jB,
-              uid: zB.rawId || "",
-              displayName: zB.displayName || null,
-              email: zB.email || null,
-              phoneNumber: zB.phoneNumber || null,
-              photoURL: zB.photoUrl || null
+              providerId: IB,
+              uid: ZB.rawId || "",
+              displayName: ZB.displayName || null,
+              email: ZB.email || null,
+              phoneNumber: ZB.phoneNumber || null,
+              photoURL: ZB.photoUrl || null
             }
           })) : [];
-          const uB = (UB = BB.providerData, aB = NB, [...UB.filter((BB => !aB.some((jB => jB.providerId === BB.providerId)))), ...aB]);
-          var UB, aB;
-          const pB = BB.isAnonymous,
-            rB = !(BB.email && IB.passwordHash) && !(null === uB || void 0 === uB ? void 0 : uB.length),
-            sB = !!pB && rB,
-            JB = {
-              uid: IB.localId,
-              displayName: IB.displayName || null,
-              photoURL: IB.photoUrl || null,
-              email: IB.email || null,
-              emailVerified: IB.emailVerified || !1,
-              phoneNumber: IB.phoneNumber || null,
-              tenantId: IB.tenantId || null,
-              providerData: uB,
-              metadata: new RB(IB.createdAt, IB.lastLoginAt),
-              isAnonymous: sB
+          const kB = (cB = BB.providerData, nB = vB, [...cB.filter((BB => !nB.some((IB => IB.providerId === BB.providerId)))), ...nB]);
+          var cB, nB;
+          const hB = BB.isAnonymous,
+            zB = !(BB.email && GB.passwordHash) && !(null === kB || void 0 === kB ? void 0 : kB.length),
+            FB = !!hB && zB,
+            NB = {
+              uid: GB.localId,
+              displayName: GB.displayName || null,
+              photoURL: GB.photoUrl || null,
+              email: GB.email || null,
+              emailVerified: GB.emailVerified || !1,
+              phoneNumber: GB.phoneNumber || null,
+              tenantId: GB.tenantId || null,
+              providerData: kB,
+              metadata: new VB(GB.createdAt, GB.lastLoginAt),
+              isAnonymous: FB
             };
-          Object.assign(BB, JB)
+          Object.assign(BB, NB)
         }
-        async function Bj(BB) {
-          const jB = (0, QB.H)(BB);
-          await OB(jB), await jB.auth._persistUserIfCurrent(jB), jB.auth._notifyListenersIfCurrent(jB)
+        async function BI(BB) {
+          const IB = (0, TB.N)(BB);
+          await SB(IB), await IB.auth._persistUserIfCurrent(IB), IB.auth._notifyListenersIfCurrent(IB)
         }
-        class jj {
+        class II {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
@@ -763,67 +763,67 @@ export const modules = {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
           updateFromServerResponse(BB) {
-            iB(BB.idToken, "internal-error"), iB("undefined" !== typeof BB.idToken, "internal-error"), iB("undefined" !== typeof BB.refreshToken, "internal-error");
-            const jB = "expiresIn" in BB && "undefined" !== typeof BB.expiresIn ? Number(BB.expiresIn) : function(BB) {
-              const jB = cB(BB);
-              return iB(jB, "internal-error"), iB("undefined" !== typeof jB.exp, "internal-error"), iB("undefined" !== typeof jB.iat, "internal-error"), Number(jB.exp) - Number(jB.iat)
+            OB(BB.idToken, "internal-error"), OB("undefined" !== typeof BB.idToken, "internal-error"), OB("undefined" !== typeof BB.refreshToken, "internal-error");
+            const IB = "expiresIn" in BB && "undefined" !== typeof BB.expiresIn ? Number(BB.expiresIn) : function(BB) {
+              const IB = EB(BB);
+              return OB(IB, "internal-error"), OB("undefined" !== typeof IB.exp, "internal-error"), OB("undefined" !== typeof IB.iat, "internal-error"), Number(IB.exp) - Number(IB.iat)
             }(BB.idToken);
-            this.updateTokensAndExpiration(BB.idToken, BB.refreshToken, jB)
+            this.updateTokensAndExpiration(BB.idToken, BB.refreshToken, IB)
           }
           async getToken(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return iB(!this.accessToken || this.refreshToken, BB, "user-token-expired"), jB || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(BB, this.refreshToken), this.accessToken) : null : this.accessToken
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return OB(!this.accessToken || this.refreshToken, BB, "user-token-expired"), IB || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(BB, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(BB, jB) {
+          async refresh(BB, IB) {
             const {
-              accessToken: zB,
-              refreshToken: nB,
-              expiresIn: dB
-            } = await async function(BB, jB) {
-              const zB = await TB(BB, {}, (async () => {
-                const zB = (0, QB.$)({
+              accessToken: ZB,
+              refreshToken: JB,
+              expiresIn: oB
+            } = await async function(BB, IB) {
+              const ZB = await LB(BB, {}, (async () => {
+                const ZB = (0, TB.db)({
                     grant_type: "refresh_token",
-                    refresh_token: jB
+                    refresh_token: IB
                   }).slice(1),
                   {
-                    tokenApiHost: nB,
-                    apiKey: dB
+                    tokenApiHost: JB,
+                    apiKey: oB
                   } = BB.config,
-                  IB = WB(BB, nB, "/v1/token", `key=${dB}`),
-                  NB = await BB._getAdditionalHeaders();
-                return NB["Content-Type"] = "application/x-www-form-urlencoded", VB.fetch()(IB, {
+                  GB = uB(BB, JB, "/v1/token", `key=${oB}`),
+                  vB = await BB._getAdditionalHeaders();
+                return vB["Content-Type"] = "application/x-www-form-urlencoded", PB.fetch()(GB, {
                   method: "POST",
-                  headers: NB,
-                  body: zB
+                  headers: vB,
+                  body: ZB
                 })
               }));
               return {
-                accessToken: zB.access_token,
-                expiresIn: zB.expires_in,
-                refreshToken: zB.refresh_token
+                accessToken: ZB.access_token,
+                expiresIn: ZB.expires_in,
+                refreshToken: ZB.refresh_token
               }
-            }(BB, jB);
-            this.updateTokensAndExpiration(zB, nB, Number(dB))
+            }(BB, IB);
+            this.updateTokensAndExpiration(ZB, JB, Number(oB))
           }
-          updateTokensAndExpiration(BB, jB, zB) {
-            this.refreshToken = jB || null, this.accessToken = BB || null, this.expirationTime = Date.now() + 1e3 * zB
+          updateTokensAndExpiration(BB, IB, ZB) {
+            this.refreshToken = IB || null, this.accessToken = BB || null, this.expirationTime = Date.now() + 1e3 * ZB
           }
-          static fromJSON(BB, jB) {
+          static fromJSON(BB, IB) {
             const {
-              refreshToken: zB,
-              accessToken: QB,
-              expirationTime: nB
-            } = jB, dB = new jj;
-            return zB && (iB("string" === typeof zB, "internal-error", {
+              refreshToken: ZB,
+              accessToken: TB,
+              expirationTime: JB
+            } = IB, oB = new II;
+            return ZB && (OB("string" === typeof ZB, "internal-error", {
               appName: BB
-            }), dB.refreshToken = zB), QB && (iB("string" === typeof QB, "internal-error", {
+            }), oB.refreshToken = ZB), TB && (OB("string" === typeof TB, "internal-error", {
               appName: BB
-            }), dB.accessToken = QB), nB && (iB("number" === typeof nB, "internal-error", {
+            }), oB.accessToken = TB), JB && (OB("number" === typeof JB, "internal-error", {
               appName: BB
-            }), dB.expirationTime = nB), dB
+            }), oB.expirationTime = JB), oB
           }
           toJSON() {
             return {
@@ -836,49 +836,49 @@ export const modules = {
             this.accessToken = BB.accessToken, this.refreshToken = BB.refreshToken, this.expirationTime = BB.expirationTime
           }
           _clone() {
-            return Object.assign(new jj, this.toJSON())
+            return Object.assign(new II, this.toJSON())
           }
           _performRefresh() {
-            return qB("not implemented")
+            return YB("not implemented")
           }
         }
 
-        function zj(BB, jB) {
-          iB("string" === typeof BB || "undefined" === typeof BB, "internal-error", {
-            appName: jB
+        function ZI(BB, IB) {
+          OB("string" === typeof BB || "undefined" === typeof BB, "internal-error", {
+            appName: IB
           })
         }
-        class Qj {
+        class TI {
           constructor(BB) {
             var {
-              uid: jB,
-              auth: zB,
-              stsTokenManager: QB
-            } = BB, nB = dB(BB, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new vB(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = jB, this.auth = zB, this.stsTokenManager = QB, this.accessToken = QB.accessToken, this.displayName = nB.displayName || null, this.email = nB.email || null, this.emailVerified = nB.emailVerified || !1, this.phoneNumber = nB.phoneNumber || null, this.photoURL = nB.photoURL || null, this.isAnonymous = nB.isAnonymous || !1, this.tenantId = nB.tenantId || null, this.providerData = nB.providerData ? [...nB.providerData] : [], this.metadata = new RB(nB.createdAt || void 0, nB.lastLoginAt || void 0)
+              uid: IB,
+              auth: ZB,
+              stsTokenManager: TB
+            } = BB, JB = oB(BB, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new KB(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = IB, this.auth = ZB, this.stsTokenManager = TB, this.accessToken = TB.accessToken, this.displayName = JB.displayName || null, this.email = JB.email || null, this.emailVerified = JB.emailVerified || !1, this.phoneNumber = JB.phoneNumber || null, this.photoURL = JB.photoURL || null, this.isAnonymous = JB.isAnonymous || !1, this.tenantId = JB.tenantId || null, this.providerData = JB.providerData ? [...JB.providerData] : [], this.metadata = new VB(JB.createdAt || void 0, JB.lastLoginAt || void 0)
           }
           async getIdToken(BB) {
-            const jB = await bB(this, this.stsTokenManager.getToken(this.auth, BB));
-            return iB(jB, this.auth, "internal-error"), this.accessToken !== jB && (this.accessToken = jB, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), jB
+            const IB = await DB(this, this.stsTokenManager.getToken(this.auth, BB));
+            return OB(IB, this.auth, "internal-error"), this.accessToken !== IB && (this.accessToken = IB, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), IB
           }
           getIdTokenResult(BB) {
-            return KB(this, BB)
+            return bB(this, BB)
           }
           reload() {
-            return Bj(this)
+            return BI(this)
           }
           _assign(BB) {
-            this !== BB && (iB(this.uid === BB.uid, this.auth, "internal-error"), this.displayName = BB.displayName, this.photoURL = BB.photoURL, this.email = BB.email, this.emailVerified = BB.emailVerified, this.phoneNumber = BB.phoneNumber, this.isAnonymous = BB.isAnonymous, this.tenantId = BB.tenantId, this.providerData = BB.providerData.map((BB => Object.assign({}, BB))), this.metadata._copy(BB.metadata), this.stsTokenManager._assign(BB.stsTokenManager))
+            this !== BB && (OB(this.uid === BB.uid, this.auth, "internal-error"), this.displayName = BB.displayName, this.photoURL = BB.photoURL, this.email = BB.email, this.emailVerified = BB.emailVerified, this.phoneNumber = BB.phoneNumber, this.isAnonymous = BB.isAnonymous, this.tenantId = BB.tenantId, this.providerData = BB.providerData.map((BB => Object.assign({}, BB))), this.metadata._copy(BB.metadata), this.stsTokenManager._assign(BB.stsTokenManager))
           }
           _clone(BB) {
-            const jB = new Qj(Object.assign(Object.assign({}, this), {
+            const IB = new TI(Object.assign(Object.assign({}, this), {
               auth: BB,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return jB.metadata._copy(this.metadata), jB
+            return IB.metadata._copy(this.metadata), IB
           }
           _onReload(BB) {
-            iB(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = BB, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+            OB(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = BB, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
           _notifyReloadListener(BB) {
             this.reloadListener ? this.reloadListener(BB) : this.reloadUserInfo = BB
@@ -890,14 +890,14 @@ export const modules = {
             this.proactiveRefresh._stop()
           }
           async _updateTokensIfNecessary(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              zB = !1;
-            BB.idToken && BB.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(BB), zB = !0), jB && await OB(this), await this.auth._persistUserIfCurrent(this), zB && this.auth._notifyListenersIfCurrent(this)
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              ZB = !1;
+            BB.idToken && BB.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(BB), ZB = !0), IB && await SB(this), await this.auth._persistUserIfCurrent(this), ZB && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
             const BB = await this.getIdToken();
-            return await bB(this, async function(BB, jB) {
-              return AB(BB, "POST", "/v1/accounts:delete", jB)
+            return await DB(this, async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:delete", IB)
             }(this.auth, {
               idToken: BB
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(BB, jB) {
-            var zB, QB, nB, dB, IB, NB, uB, UB;
-            const aB = null !== (zB = jB.displayName) && void 0 !== zB ? zB : void 0,
-              pB = null !== (QB = jB.email) && void 0 !== QB ? QB : void 0,
-              rB = null !== (nB = jB.phoneNumber) && void 0 !== nB ? nB : void 0,
-              sB = null !== (dB = jB.photoURL) && void 0 !== dB ? dB : void 0,
-              JB = null !== (IB = jB.tenantId) && void 0 !== IB ? IB : void 0,
-              mB = null !== (NB = jB._redirectEventId) && void 0 !== NB ? NB : void 0,
-              yB = null !== (uB = jB.createdAt) && void 0 !== uB ? uB : void 0,
-              kB = null !== (UB = jB.lastLoginAt) && void 0 !== UB ? UB : void 0,
+          static _fromJSON(BB, IB) {
+            var ZB, TB, JB, oB, GB, vB, kB, cB;
+            const nB = null !== (ZB = IB.displayName) && void 0 !== ZB ? ZB : void 0,
+              hB = null !== (TB = IB.email) && void 0 !== TB ? TB : void 0,
+              zB = null !== (JB = IB.phoneNumber) && void 0 !== JB ? JB : void 0,
+              FB = null !== (oB = IB.photoURL) && void 0 !== oB ? oB : void 0,
+              NB = null !== (GB = IB.tenantId) && void 0 !== GB ? GB : void 0,
+              gB = null !== (vB = IB._redirectEventId) && void 0 !== vB ? vB : void 0,
+              qB = null !== (kB = IB.createdAt) && void 0 !== kB ? kB : void 0,
+              yB = null !== (cB = IB.lastLoginAt) && void 0 !== cB ? cB : void 0,
               {
-                uid: GB,
-                emailVerified: LB,
-                isAnonymous: gB,
-                providerData: tB,
-                stsTokenManager: SB
-              } = jB;
-            iB(GB && SB, BB, "internal-error");
-            const MB = jj.fromJSON(this.name, SB);
-            iB("string" === typeof GB, BB, "internal-error"), zj(aB, BB.name), zj(pB, BB.name), iB("boolean" === typeof LB, BB, "internal-error"), iB("boolean" === typeof gB, BB, "internal-error"), zj(rB, BB.name), zj(sB, BB.name), zj(JB, BB.name), zj(mB, BB.name), zj(yB, BB.name), zj(kB, BB.name);
-            const EB = new Qj({
-              uid: GB,
+                uid: UB,
+                emailVerified: WB,
+                isAnonymous: dB,
+                providerData: CB,
+                stsTokenManager: QB
+              } = IB;
+            OB(UB && QB, BB, "internal-error");
+            const sB = II.fromJSON(this.name, QB);
+            OB("string" === typeof UB, BB, "internal-error"), ZI(nB, BB.name), ZI(hB, BB.name), OB("boolean" === typeof WB, BB, "internal-error"), OB("boolean" === typeof dB, BB, "internal-error"), ZI(zB, BB.name), ZI(FB, BB.name), ZI(NB, BB.name), ZI(gB, BB.name), ZI(qB, BB.name), ZI(yB, BB.name);
+            const wB = new TI({
+              uid: UB,
               auth: BB,
-              email: pB,
-              emailVerified: LB,
-              displayName: aB,
-              isAnonymous: gB,
-              photoURL: sB,
-              phoneNumber: rB,
-              tenantId: JB,
-              stsTokenManager: MB,
-              createdAt: yB,
-              lastLoginAt: kB
+              email: hB,
+              emailVerified: WB,
+              displayName: nB,
+              isAnonymous: dB,
+              photoURL: FB,
+              phoneNumber: zB,
+              tenantId: NB,
+              stsTokenManager: sB,
+              createdAt: qB,
+              lastLoginAt: yB
             });
-            return tB && Array.isArray(tB) && (EB.providerData = tB.map((BB => Object.assign({}, BB)))), mB && (EB._redirectEventId = mB), EB
+            return CB && Array.isArray(CB) && (wB.providerData = CB.map((BB => Object.assign({}, BB)))), gB && (wB._redirectEventId = gB), wB
           }
-          static async _fromIdTokenResponse(BB, jB) {
-            let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const QB = new jj;
-            QB.updateFromServerResponse(jB);
-            const nB = new Qj({
-              uid: jB.localId,
+          static async _fromIdTokenResponse(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const TB = new II;
+            TB.updateFromServerResponse(IB);
+            const JB = new TI({
+              uid: IB.localId,
               auth: BB,
-              stsTokenManager: QB,
-              isAnonymous: zB
+              stsTokenManager: TB,
+              isAnonymous: ZB
             });
-            return await OB(nB), nB
+            return await SB(JB), JB
           }
         }
-        const nj = new Map;
+        const JI = new Map;
 
-        function dj(BB) {
-          fB(BB instanceof Function, "Expected a class definition");
-          let jB = nj.get(BB);
-          return jB ? (fB(jB instanceof BB, "Instance stored in cache mismatched with class"), jB) : (jB = new BB, nj.set(BB, jB), jB)
+        function oI(BB) {
+          iB(BB instanceof Function, "Expected a class definition");
+          let IB = JI.get(BB);
+          return IB ? (iB(IB instanceof BB, "Instance stored in cache mismatched with class"), IB) : (IB = new BB, JI.set(BB, IB), IB)
         }
-        class Ij {
+        class GI {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(BB, jB) {
-            this.storage[BB] = jB
+          async _set(BB, IB) {
+            this.storage[BB] = IB
           }
           async _get(BB) {
-            const jB = this.storage[BB];
-            return void 0 === jB ? null : jB
+            const IB = this.storage[BB];
+            return void 0 === IB ? null : IB
           }
           async _remove(BB) {
             delete this.storage[BB]
           }
-          _addListener(BB, jB) {}
-          _removeListener(BB, jB) {}
+          _addListener(BB, IB) {}
+          _removeListener(BB, IB) {}
         }
-        Ij.type = "NONE";
-        const Nj = Ij;
+        GI.type = "NONE";
+        const vI = GI;
 
-        function uj(BB, jB, zB) {
-          return `firebase:${BB}:${jB}:${zB}`
+        function kI(BB, IB, ZB) {
+          return `firebase:${BB}:${IB}:${ZB}`
         }
-        class Uj {
-          constructor(BB, jB, zB) {
-            this.persistence = BB, this.auth = jB, this.userKey = zB;
+        class cI {
+          constructor(BB, IB, ZB) {
+            this.persistence = BB, this.auth = IB, this.userKey = ZB;
             const {
-              config: QB,
-              name: nB
+              config: TB,
+              name: JB
             } = this.auth;
-            this.fullUserKey = uj(this.userKey, QB.apiKey, nB), this.fullPersistenceKey = uj("persistence", QB.apiKey, nB), this.boundEventHandler = jB._onStorageEvent.bind(jB), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = kI(this.userKey, TB.apiKey, JB), this.fullPersistenceKey = kI("persistence", TB.apiKey, JB), this.boundEventHandler = IB._onStorageEvent.bind(IB), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
           setCurrentUser(BB) {
             return this.persistence._set(this.fullUserKey, BB.toJSON())
           }
           async getCurrentUser() {
             const BB = await this.persistence._get(this.fullUserKey);
-            return BB ? Qj._fromJSON(this.auth, BB) : null
+            return BB ? TI._fromJSON(this.auth, BB) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1029,278 +1029,278 @@ export const modules = {
           }
           async setPersistence(BB) {
             if (this.persistence === BB) return;
-            const jB = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = BB, jB ? this.setCurrentUser(jB) : void 0
+            const IB = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = BB, IB ? this.setCurrentUser(IB) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(BB, jB) {
-            let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!jB.length) return new Uj(dj(Nj), BB, zB);
-            const QB = (await Promise.all(jB.map((async BB => {
+          static async create(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!IB.length) return new cI(oI(vI), BB, ZB);
+            const TB = (await Promise.all(IB.map((async BB => {
               if (await BB._isAvailable()) return BB
             })))).filter((BB => BB));
-            let nB = QB[0] || dj(Nj);
-            const dB = uj(zB, BB.config.apiKey, BB.name);
-            let IB = null;
-            for (const UB of jB) try {
-              const jB = await UB._get(dB);
-              if (jB) {
-                const zB = Qj._fromJSON(BB, jB);
-                UB !== nB && (IB = zB), nB = UB;
+            let JB = TB[0] || oI(vI);
+            const oB = kI(ZB, BB.config.apiKey, BB.name);
+            let GB = null;
+            for (const cB of IB) try {
+              const IB = await cB._get(oB);
+              if (IB) {
+                const ZB = TI._fromJSON(BB, IB);
+                cB !== JB && (GB = ZB), JB = cB;
                 break
               }
-            } catch (uB) {}
-            const NB = QB.filter((BB => BB._shouldAllowMigration));
-            return nB._shouldAllowMigration && NB.length ? (nB = NB[0], IB && await nB._set(dB, IB.toJSON()), await Promise.all(jB.map((async BB => {
-              if (BB !== nB) try {
-                await BB._remove(dB)
-              } catch (uB) {}
-            }))), new Uj(nB, BB, zB)) : new Uj(nB, BB, zB)
+            } catch (kB) {}
+            const vB = TB.filter((BB => BB._shouldAllowMigration));
+            return JB._shouldAllowMigration && vB.length ? (JB = vB[0], GB && await JB._set(oB, GB.toJSON()), await Promise.all(IB.map((async BB => {
+              if (BB !== JB) try {
+                await BB._remove(oB)
+              } catch (kB) {}
+            }))), new cI(JB, BB, ZB)) : new cI(JB, BB, ZB)
           }
         }
 
-        function aj(BB) {
-          const jB = BB.toLowerCase();
-          if (jB.includes("opera/") || jB.includes("opr/") || jB.includes("opios/")) return "Opera";
-          if (Jj(jB)) return "IEMobile";
-          if (jB.includes("msie") || jB.includes("trident/")) return "IE";
-          if (jB.includes("edge/")) return "Edge";
-          if (pj(jB)) return "Firefox";
-          if (jB.includes("silk/")) return "Silk";
-          if (yj(jB)) return "Blackberry";
-          if (kj(jB)) return "Webos";
-          if (rj(jB)) return "Safari";
-          if ((jB.includes("chrome/") || sj(jB)) && !jB.includes("edge/")) return "Chrome";
-          if (mj(jB)) return "Android";
+        function nI(BB) {
+          const IB = BB.toLowerCase();
+          if (IB.includes("opera/") || IB.includes("opr/") || IB.includes("opios/")) return "Opera";
+          if (NI(IB)) return "IEMobile";
+          if (IB.includes("msie") || IB.includes("trident/")) return "IE";
+          if (IB.includes("edge/")) return "Edge";
+          if (hI(IB)) return "Firefox";
+          if (IB.includes("silk/")) return "Silk";
+          if (qI(IB)) return "Blackberry";
+          if (yI(IB)) return "Webos";
+          if (zI(IB)) return "Safari";
+          if ((IB.includes("chrome/") || FI(IB)) && !IB.includes("edge/")) return "Chrome";
+          if (gI(IB)) return "Android";
           {
-            const jB = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              zB = BB.match(jB);
-            if (2 === (null === zB || void 0 === zB ? void 0 : zB.length)) return zB[1]
+            const IB = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              ZB = BB.match(IB);
+            if (2 === (null === ZB || void 0 === ZB ? void 0 : ZB.length)) return ZB[1]
           }
           return "Other"
         }
 
-        function pj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function hI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /firefox\//i.test(BB)
         }
 
-        function rj() {
-          const BB = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)()).toLowerCase();
+        function zI() {
+          const BB = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)()).toLowerCase();
           return BB.includes("safari/") && !BB.includes("chrome/") && !BB.includes("crios/") && !BB.includes("android")
         }
 
-        function sj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function FI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /crios\//i.test(BB)
         }
 
-        function Jj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function NI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /iemobile/i.test(BB)
         }
 
-        function mj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function gI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /android/i.test(BB)
         }
 
-        function yj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function qI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /blackberry/i.test(BB)
         }
 
-        function kj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function yI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /webos/i.test(BB)
         }
 
-        function Gj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
+        function UI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
           return /iphone|ipad|ipod/i.test(BB) || /macintosh/i.test(BB) && /mobile/i.test(BB)
         }
 
-        function Lj() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)();
-          return Gj(BB) || mj(BB) || kj(BB) || yj(BB) || /windows phone/i.test(BB) || Jj(BB)
+        function WI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return UI(BB) || gI(BB) || yI(BB) || qI(BB) || /windows phone/i.test(BB) || NI(BB)
         }
 
-        function gj(BB) {
-          let jB, zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        function dI(BB) {
+          let IB, ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
           switch (BB) {
             case "Browser":
-              jB = aj((0, QB.J)());
+              IB = nI((0, TB.P)());
               break;
             case "Worker":
-              jB = `${aj((0,QB.J)())}-${BB}`;
+              IB = `${nI((0,TB.P)())}-${BB}`;
               break;
             default:
-              jB = BB
+              IB = BB
           }
-          const dB = zB.length ? zB.join(",") : "FirebaseCore-web";
-          return `${jB}/JsCore/${nB.e}/${dB}`
+          const oB = ZB.length ? ZB.join(",") : "FirebaseCore-web";
+          return `${IB}/JsCore/${JB.f}/${oB}`
         }
-        async function tj(BB, jB) {
-          return AB(BB, "GET", "/v2/recaptchaConfig", ZB(BB, jB))
+        async function CI(BB, IB) {
+          return XB(BB, "GET", "/v2/recaptchaConfig", mB(BB, IB))
         }
 
-        function Sj(BB) {
+        function QI(BB) {
           return void 0 !== BB && void 0 !== BB.getResponse
         }
 
-        function Mj(BB) {
+        function sI(BB) {
           return void 0 !== BB && void 0 !== BB.enterprise
         }
-        class Ej {
+        class wI {
           constructor(BB) {
             if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === BB.recaptchaKey) throw new Error("recaptchaKey undefined");
             this.siteKey = BB.recaptchaKey.split("/")[3], this.emailPasswordEnabled = BB.recaptchaEnforcementState.some((BB => "EMAIL_PASSWORD_PROVIDER" === BB.provider && "OFF" !== BB.enforcementState))
           }
         }
 
-        function ij(BB) {
-          return new Promise(((jB, zB) => {
-            const QB = document.createElement("script");
-            QB.setAttribute("src", BB), QB.onload = jB, QB.onerror = BB => {
-                const jB = tB("internal-error");
-                jB.customData = BB, zB(jB)
-              }, QB.type = "text/javascript", QB.charset = "UTF-8",
+        function OI(BB) {
+          return new Promise(((IB, ZB) => {
+            const TB = document.createElement("script");
+            TB.setAttribute("src", BB), TB.onload = IB, TB.onerror = BB => {
+                const IB = CB("internal-error");
+                IB.customData = BB, ZB(IB)
+              }, TB.type = "text/javascript", TB.charset = "UTF-8",
               function() {
-                var BB, jB;
-                return null !== (jB = null === (BB = document.getElementsByTagName("head")) || void 0 === BB ? void 0 : BB[0]) && void 0 !== jB ? jB : document
-              }().appendChild(QB)
+                var BB, IB;
+                return null !== (IB = null === (BB = document.getElementsByTagName("head")) || void 0 === BB ? void 0 : BB[0]) && void 0 !== IB ? IB : document
+              }().appendChild(TB)
           }))
         }
 
-        function qj(BB) {
+        function YI(BB) {
           return `__${BB}${Math.floor(1e6*Math.random())}`
         }
-        class fj {
+        class iI {
           constructor(BB) {
-            this.type = "recaptcha-enterprise", this.auth = Fj(BB)
+            this.type = "recaptcha-enterprise", this.auth = MI(BB)
           }
           async verify() {
             let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+              IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function zB(jB, zB, QB) {
-              const nB = window.grecaptcha;
-              Mj(nB) ? nB.enterprise.ready((() => {
-                nB.enterprise.execute(jB, {
+            function ZB(IB, ZB, TB) {
+              const JB = window.grecaptcha;
+              sI(JB) ? JB.enterprise.ready((() => {
+                JB.enterprise.execute(IB, {
                   action: BB
                 }).then((BB => {
-                  zB(BB)
+                  ZB(BB)
                 })).catch((() => {
-                  zB("NO_RECAPTCHA")
+                  ZB("NO_RECAPTCHA")
                 }))
-              })) : QB(Error("No reCAPTCHA enterprise script loaded."))
+              })) : TB(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((BB, QB) => {
+            return new Promise(((BB, TB) => {
               (async function(BB) {
-                if (!jB) {
+                if (!IB) {
                   if (null == BB.tenantId && null != BB._agentRecaptchaConfig) return BB._agentRecaptchaConfig.siteKey;
                   if (null != BB.tenantId && void 0 !== BB._tenantRecaptchaConfigs[BB.tenantId]) return BB._tenantRecaptchaConfigs[BB.tenantId].siteKey
                 }
-                return new Promise((async (jB, zB) => {
-                  tj(BB, {
+                return new Promise((async (IB, ZB) => {
+                  CI(BB, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((QB => {
-                    if (void 0 !== QB.recaptchaKey) {
-                      const zB = new Ej(QB);
-                      return null == BB.tenantId ? BB._agentRecaptchaConfig = zB : BB._tenantRecaptchaConfigs[BB.tenantId] = zB, jB(zB.siteKey)
+                  }).then((TB => {
+                    if (void 0 !== TB.recaptchaKey) {
+                      const ZB = new wI(TB);
+                      return null == BB.tenantId ? BB._agentRecaptchaConfig = ZB : BB._tenantRecaptchaConfigs[BB.tenantId] = ZB, IB(ZB.siteKey)
                     }
-                    zB(new Error("recaptcha Enterprise site key undefined"))
+                    ZB(new Error("recaptcha Enterprise site key undefined"))
                   })).catch((BB => {
-                    zB(BB)
+                    ZB(BB)
                   }))
                 }))
-              })(this.auth).then((nB => {
-                if (!jB && Mj(window.grecaptcha)) zB(nB, BB, QB);
+              })(this.auth).then((JB => {
+                if (!IB && sI(window.grecaptcha)) ZB(JB, BB, TB);
                 else {
-                  if ("undefined" === typeof window) return void QB(new Error("RecaptchaVerifier is only supported in browser"));
-                  ij("https://www.google.com/recaptcha/enterprise.js?render=" + nB).then((() => {
-                    zB(nB, BB, QB)
+                  if ("undefined" === typeof window) return void TB(new Error("RecaptchaVerifier is only supported in browser"));
+                  OI("https://www.google.com/recaptcha/enterprise.js?render=" + JB).then((() => {
+                    ZB(JB, BB, TB)
                   })).catch((BB => {
-                    QB(BB)
+                    TB(BB)
                   }))
                 }
               })).catch((BB => {
-                QB(BB)
+                TB(BB)
               }))
             }))
           }
         }
-        async function oj(BB, jB, zB) {
-          let QB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const nB = new fj(BB);
-          let dB;
+        async function pI(BB, IB, ZB) {
+          let TB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const JB = new iI(BB);
+          let oB;
           try {
-            dB = await nB.verify(zB)
-          } catch (NB) {
-            dB = await nB.verify(zB, !0)
+            oB = await JB.verify(ZB)
+          } catch (vB) {
+            oB = await JB.verify(ZB, !0)
           }
-          const IB = Object.assign({}, jB);
-          return QB ? Object.assign(IB, {
-            captchaResp: dB
-          }) : Object.assign(IB, {
-            captchaResponse: dB
-          }), Object.assign(IB, {
+          const GB = Object.assign({}, IB);
+          return TB ? Object.assign(GB, {
+            captchaResp: oB
+          }) : Object.assign(GB, {
+            captchaResponse: oB
+          }), Object.assign(GB, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(IB, {
+          }), Object.assign(GB, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), IB
+          }), GB
         }
-        class Hj {
+        class aI {
           constructor(BB) {
             this.auth = BB, this.queue = []
           }
-          pushCallback(BB, jB) {
-            const zB = jB => new Promise(((zB, QB) => {
+          pushCallback(BB, IB) {
+            const ZB = IB => new Promise(((ZB, TB) => {
               try {
-                zB(BB(jB))
-              } catch (nB) {
-                QB(nB)
+                ZB(BB(IB))
+              } catch (JB) {
+                TB(JB)
               }
             }));
-            zB.onAbort = jB, this.queue.push(zB);
-            const QB = this.queue.length - 1;
+            ZB.onAbort = IB, this.queue.push(ZB);
+            const TB = this.queue.length - 1;
             return () => {
-              this.queue[QB] = () => Promise.resolve()
+              this.queue[TB] = () => Promise.resolve()
             }
           }
           async runMiddleware(BB) {
             if (this.auth.currentUser === BB) return;
-            const jB = [];
+            const IB = [];
             try {
-              for (const zB of this.queue) await zB(BB), zB.onAbort && jB.push(zB.onAbort)
-            } catch (zB) {
-              jB.reverse();
-              for (const BB of jB) try {
+              for (const ZB of this.queue) await ZB(BB), ZB.onAbort && IB.push(ZB.onAbort)
+            } catch (ZB) {
+              IB.reverse();
+              for (const BB of IB) try {
                 BB()
-              } catch (QB) {}
+              } catch (TB) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === zB || void 0 === zB ? void 0 : zB.message
+                originalMessage: null === ZB || void 0 === ZB ? void 0 : ZB.message
               })
             }
           }
         }
-        class Dj {
-          constructor(BB, jB, zB, QB) {
-            this.app = BB, this.heartbeatServiceProvider = jB, this.appCheckServiceProvider = zB, this.config = QB, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new Yj(this), this.idTokenSubscription = new Yj(this), this.beforeStateQueue = new Hj(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = yB, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class HI {
+          constructor(BB, IB, ZB, TB) {
+            this.app = BB, this.heartbeatServiceProvider = IB, this.appCheckServiceProvider = ZB, this.config = TB, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new jI(this), this.idTokenSubscription = new jI(this), this.beforeStateQueue = new aI(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = qB, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = BB.name, this.clientVersion = QB.sdkClientVersion
+            }, this.frameworks = [], this.name = BB.name, this.clientVersion = TB.sdkClientVersion
           }
-          _initializeWithPersistence(BB, jB) {
-            return jB && (this._popupRedirectResolver = dj(jB)), this._initializationPromise = this.queue((async () => {
-              var zB, QB;
-              if (!this._deleted && (this.persistenceManager = await Uj.create(this, BB), !this._deleted)) {
-                if (null === (zB = this._popupRedirectResolver) || void 0 === zB ? void 0 : zB._shouldInitProactively) try {
+          _initializeWithPersistence(BB, IB) {
+            return IB && (this._popupRedirectResolver = oI(IB)), this._initializationPromise = this.queue((async () => {
+              var ZB, TB;
+              if (!this._deleted && (this.persistenceManager = await cI.create(this, BB), !this._deleted)) {
+                if (null === (ZB = this._popupRedirectResolver) || void 0 === ZB ? void 0 : ZB._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (nB) {}
-                await this.initializeCurrentUser(jB), this.lastNotifiedUid = (null === (QB = this.currentUser) || void 0 === QB ? void 0 : QB.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (JB) {}
+                await this.initializeCurrentUser(IB), this.lastNotifiedUid = (null === (TB = this.currentUser) || void 0 === TB ? void 0 : TB.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
@@ -1310,42 +1310,42 @@ export const modules = {
             return this.currentUser || BB ? this.currentUser && BB && this.currentUser.uid === BB.uid ? (this._currentUser._assign(BB), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(BB, !0) : void 0
           }
           async initializeCurrentUser(BB) {
-            var jB;
-            const zB = await this.assertedPersistence.getCurrentUser();
-            let QB = zB,
-              nB = !1;
+            var IB;
+            const ZB = await this.assertedPersistence.getCurrentUser();
+            let TB = ZB,
+              JB = !1;
             if (BB && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const zB = null === (jB = this.redirectUser) || void 0 === jB ? void 0 : jB._redirectEventId,
-                dB = null === QB || void 0 === QB ? void 0 : QB._redirectEventId,
-                IB = await this.tryRedirectSignIn(BB);
-              zB && zB !== dB || !(null === IB || void 0 === IB ? void 0 : IB.user) || (QB = IB.user, nB = !0)
+              const ZB = null === (IB = this.redirectUser) || void 0 === IB ? void 0 : IB._redirectEventId,
+                oB = null === TB || void 0 === TB ? void 0 : TB._redirectEventId,
+                GB = await this.tryRedirectSignIn(BB);
+              ZB && ZB !== oB || !(null === GB || void 0 === GB ? void 0 : GB.user) || (TB = GB.user, JB = !0)
             }
-            if (!QB) return this.directlySetCurrentUser(null);
-            if (!QB._redirectEventId) {
-              if (nB) try {
-                await this.beforeStateQueue.runMiddleware(QB)
-              } catch (dB) {
-                QB = zB, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(dB)))
+            if (!TB) return this.directlySetCurrentUser(null);
+            if (!TB._redirectEventId) {
+              if (JB) try {
+                await this.beforeStateQueue.runMiddleware(TB)
+              } catch (oB) {
+                TB = ZB, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(oB)))
               }
-              return QB ? this.reloadAndSetCurrentUserOrClear(QB) : this.directlySetCurrentUser(null)
+              return TB ? this.reloadAndSetCurrentUserOrClear(TB) : this.directlySetCurrentUser(null)
             }
-            return iB(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === QB._redirectEventId ? this.directlySetCurrentUser(QB) : this.reloadAndSetCurrentUserOrClear(QB)
+            return OB(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === TB._redirectEventId ? this.directlySetCurrentUser(TB) : this.reloadAndSetCurrentUserOrClear(TB)
           }
           async tryRedirectSignIn(BB) {
-            let jB = null;
+            let IB = null;
             try {
-              jB = await this._popupRedirectResolver._completeRedirectFn(this, BB, !0)
-            } catch (zB) {
+              IB = await this._popupRedirectResolver._completeRedirectFn(this, BB, !0)
+            } catch (ZB) {
               await this._setRedirectUser(null)
             }
-            return jB
+            return IB
           }
           async reloadAndSetCurrentUserOrClear(BB) {
             try {
-              await OB(BB)
-            } catch (jB) {
-              if ("auth/network-request-failed" !== (null === jB || void 0 === jB ? void 0 : jB.code)) return this.directlySetCurrentUser(null)
+              await SB(BB)
+            } catch (IB) {
+              if ("auth/network-request-failed" !== (null === IB || void 0 === IB ? void 0 : IB.code)) return this.directlySetCurrentUser(null)
             }
             return this.directlySetCurrentUser(BB)
           }
@@ -1360,12 +1360,12 @@ export const modules = {
             this._deleted = !0
           }
           async updateCurrentUser(BB) {
-            const jB = BB ? (0, QB.H)(BB) : null;
-            return jB && iB(jB.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(jB && jB._clone(this))
+            const IB = BB ? (0, TB.N)(BB) : null;
+            return IB && OB(IB.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(IB && IB._clone(this))
           }
           async _updateCurrentUser(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return BB && iB(this.tenantId === BB.tenantId, this, "tenant-id-mismatch"), jB || await this.beforeStateQueue.runMiddleware(BB), this.queue((async () => {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return BB && OB(this.tenantId === BB.tenantId, this, "tenant-id-mismatch"), IB || await this.beforeStateQueue.runMiddleware(BB), this.queue((async () => {
               await this.directlySetCurrentUser(BB), this.notifyAuthListeners()
             }))
           }
@@ -1374,17 +1374,17 @@ export const modules = {
           }
           setPersistence(BB) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(dj(BB))
+              await this.assertedPersistence.setPersistence(oI(BB))
             }))
           }
           async initializeRecaptchaConfig() {
-            const BB = await tj(this, {
+            const BB = await CI(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              jB = new Ej(BB);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = jB : this._tenantRecaptchaConfigs[this.tenantId] = jB, jB.emailPasswordEnabled) {
-              new fj(this).verify()
+              IB = new wI(BB);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = IB : this._tenantRecaptchaConfigs[this.tenantId] = IB, IB.emailPasswordEnabled) {
+              new iI(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1394,16 +1394,16 @@ export const modules = {
             return this.assertedPersistence.persistence.type
           }
           _updateErrorMap(BB) {
-            this._errorFactory = new QB.d("auth", "Firebase", BB())
+            this._errorFactory = new TB.h("auth", "Firebase", BB())
           }
-          onAuthStateChanged(BB, jB, zB) {
-            return this.registerStateListener(this.authStateSubscription, BB, jB, zB)
+          onAuthStateChanged(BB, IB, ZB) {
+            return this.registerStateListener(this.authStateSubscription, BB, IB, ZB)
           }
-          beforeAuthStateChanged(BB, jB) {
-            return this.beforeStateQueue.pushCallback(BB, jB)
+          beforeAuthStateChanged(BB, IB) {
+            return this.beforeStateQueue.pushCallback(BB, IB)
           }
-          onIdTokenChanged(BB, jB, zB) {
-            return this.registerStateListener(this.idTokenSubscription, BB, jB, zB)
+          onIdTokenChanged(BB, IB, ZB) {
+            return this.registerStateListener(this.idTokenSubscription, BB, IB, ZB)
           }
           toJSON() {
             var BB;
@@ -1414,20 +1414,20 @@ export const modules = {
               currentUser: null === (BB = this._currentUser) || void 0 === BB ? void 0 : BB.toJSON()
             }
           }
-          async _setRedirectUser(BB, jB) {
-            const zB = await this.getOrInitRedirectPersistenceManager(jB);
-            return null === BB ? zB.removeCurrentUser() : zB.setCurrentUser(BB)
+          async _setRedirectUser(BB, IB) {
+            const ZB = await this.getOrInitRedirectPersistenceManager(IB);
+            return null === BB ? ZB.removeCurrentUser() : ZB.setCurrentUser(BB)
           }
           async getOrInitRedirectPersistenceManager(BB) {
             if (!this.redirectPersistenceManager) {
-              const jB = BB && dj(BB) || this._popupRedirectResolver;
-              iB(jB, this, "argument-error"), this.redirectPersistenceManager = await Uj.create(this, [dj(jB._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const IB = BB && oI(BB) || this._popupRedirectResolver;
+              OB(IB, this, "argument-error"), this.redirectPersistenceManager = await cI.create(this, [oI(IB._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
           async _redirectUserForId(BB) {
-            var jB, zB;
-            return this._isInitialized && await this.queue((async () => {})), (null === (jB = this._currentUser) || void 0 === jB ? void 0 : jB._redirectEventId) === BB ? this._currentUser : (null === (zB = this.redirectUser) || void 0 === zB ? void 0 : zB._redirectEventId) === BB ? this.redirectUser : null
+            var IB, ZB;
+            return this._isInitialized && await this.queue((async () => {})), (null === (IB = this._currentUser) || void 0 === IB ? void 0 : IB._redirectEventId) === BB ? this._currentUser : (null === (ZB = this.redirectUser) || void 0 === ZB ? void 0 : ZB._redirectEventId) === BB ? this.redirectUser : null
           }
           async _persistUserIfCurrent(BB) {
             if (BB === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(BB)))
@@ -1448,17 +1448,17 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var BB, jB;
+            var BB, IB;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const zB = null !== (jB = null === (BB = this.currentUser) || void 0 === BB ? void 0 : BB.uid) && void 0 !== jB ? jB : null;
-            this.lastNotifiedUid !== zB && (this.lastNotifiedUid = zB, this.authStateSubscription.next(this.currentUser))
+            const ZB = null !== (IB = null === (BB = this.currentUser) || void 0 === BB ? void 0 : BB.uid) && void 0 !== IB ? IB : null;
+            this.lastNotifiedUid !== ZB && (this.lastNotifiedUid = ZB, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(BB, jB, zB, QB) {
+          registerStateListener(BB, IB, ZB, TB) {
             if (this._deleted) return () => {};
-            const nB = "function" === typeof jB ? jB : jB.next.bind(jB),
-              dB = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return iB(dB, this, "internal-error"), dB.then((() => nB(this.currentUser))), "function" === typeof jB ? BB.addObserver(jB, zB, QB) : BB.addObserver(jB)
+            const JB = "function" === typeof IB ? IB : IB.next.bind(IB),
+              oB = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return OB(oB, this, "internal-error"), oB.then((() => JB(this.currentUser))), "function" === typeof IB ? BB.addObserver(IB, ZB, TB) : BB.addObserver(IB)
           }
           async directlySetCurrentUser(BB) {
             this.currentUser && this.currentUser !== BB && this._currentUser._stopProactiveRefresh(), BB && this.isProactiveRefreshEnabled && BB._startProactiveRefresh(), this.currentUser = BB, BB ? await this.assertedPersistence.setCurrentUser(BB) : await this.assertedPersistence.removeCurrentUser()
@@ -1467,173 +1467,173 @@ export const modules = {
             return this.operations = this.operations.then(BB, BB), this.operations
           }
           get assertedPersistence() {
-            return iB(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return OB(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
           _logFramework(BB) {
-            BB && !this.frameworks.includes(BB) && (this.frameworks.push(BB), this.frameworks.sort(), this.clientVersion = gj(this.config.clientPlatform, this._getFrameworks()))
+            BB && !this.frameworks.includes(BB) && (this.frameworks.push(BB), this.frameworks.sort(), this.clientVersion = dI(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
             var BB;
-            const jB = {
+            const IB = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (jB["X-Firebase-gmpid"] = this.app.options.appId);
-            const zB = await (null === (BB = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (IB["X-Firebase-gmpid"] = this.app.options.appId);
+            const ZB = await (null === (BB = this.heartbeatServiceProvider.getImmediate({
               optional: !0
             })) || void 0 === BB ? void 0 : BB.getHeartbeatsHeader());
-            zB && (jB["X-Firebase-Client"] = zB);
-            const QB = await this._getAppCheckToken();
-            return QB && (jB["X-Firebase-AppCheck"] = QB), jB
+            ZB && (IB["X-Firebase-Client"] = ZB);
+            const TB = await this._getAppCheckToken();
+            return TB && (IB["X-Firebase-AppCheck"] = TB), IB
           }
           async _getAppCheckToken() {
             var BB;
-            const jB = await (null === (BB = this.appCheckServiceProvider.getImmediate({
+            const IB = await (null === (BB = this.appCheckServiceProvider.getImmediate({
               optional: !0
             })) || void 0 === BB ? void 0 : BB.getToken());
-            return (null === jB || void 0 === jB ? void 0 : jB.error) && function(BB) {
-              if (GB.logLevel <= IB.b.WARN) {
-                for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
-                GB.warn(`Auth (${nB.e}): ${BB}`, ...zB)
+            return (null === IB || void 0 === IB ? void 0 : IB.error) && function(BB) {
+              if (UB.logLevel <= GB.d.WARN) {
+                for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+                UB.warn(`Auth (${JB.f}): ${BB}`, ...ZB)
               }
-            }(`Error while retrieving App Check token: ${jB.error}`), null === jB || void 0 === jB ? void 0 : jB.token
+            }(`Error while retrieving App Check token: ${IB.error}`), null === IB || void 0 === IB ? void 0 : IB.token
           }
         }
 
-        function Fj(BB) {
-          return (0, QB.H)(BB)
+        function MI(BB) {
+          return (0, TB.N)(BB)
         }
-        class Yj {
+        class jI {
           constructor(BB) {
-            this.auth = BB, this.observer = null, this.addObserver = (0, QB.u)((BB => this.observer = BB))
+            this.auth = BB, this.observer = null, this.addObserver = (0, TB.x)((BB => this.observer = BB))
           }
           get next() {
-            return iB(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return OB(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function Vj(BB, jB) {
-          const zB = (0, nB.z)(BB, "auth");
-          if (zB.isInitialized()) {
-            const BB = zB.getImmediate(),
-              nB = zB.getOptions();
-            if ((0, QB.x)(nB, null !== jB && void 0 !== jB ? jB : {})) return BB;
-            gB(BB, "already-initialized")
+        function PI(BB, IB) {
+          const ZB = (0, JB.w)(BB, "auth");
+          if (ZB.isInitialized()) {
+            const BB = ZB.getImmediate(),
+              JB = ZB.getOptions();
+            if ((0, TB.B)(JB, null !== IB && void 0 !== IB ? IB : {})) return BB;
+            dB(BB, "already-initialized")
           }
-          return zB.initialize({
-            options: jB
+          return ZB.initialize({
+            options: IB
           })
         }
 
-        function hj(BB, jB, zB) {
-          const QB = Fj(BB);
-          iB(QB._canInitEmulator, QB, "emulator-config-failed"), iB(/^https?:\/\//.test(jB), QB, "invalid-emulator-scheme");
-          const nB = !!(null === zB || void 0 === zB ? void 0 : zB.disableWarnings),
-            dB = Xj(jB),
+        function RI(BB, IB, ZB) {
+          const TB = MI(BB);
+          OB(TB._canInitEmulator, TB, "emulator-config-failed"), OB(/^https?:\/\//.test(IB), TB, "invalid-emulator-scheme");
+          const JB = !!(null === ZB || void 0 === ZB ? void 0 : ZB.disableWarnings),
+            oB = rI(IB),
             {
-              host: IB,
-              port: NB
+              host: GB,
+              port: vB
             } = function(BB) {
-              const jB = Xj(BB),
-                zB = /(\/\/)?([^?#/]+)/.exec(BB.substr(jB.length));
-              if (!zB) return {
+              const IB = rI(BB),
+                ZB = /(\/\/)?([^?#/]+)/.exec(BB.substr(IB.length));
+              if (!ZB) return {
                 host: "",
                 port: null
               };
-              const QB = zB[2].split("@").pop() || "",
-                nB = /^(\[[^\]]+\])(:|$)/.exec(QB);
-              if (nB) {
-                const BB = nB[1];
+              const TB = ZB[2].split("@").pop() || "",
+                JB = /^(\[[^\]]+\])(:|$)/.exec(TB);
+              if (JB) {
+                const BB = JB[1];
                 return {
                   host: BB,
-                  port: Zj(QB.substr(BB.length + 1))
+                  port: mI(TB.substr(BB.length + 1))
                 }
               } {
-                const [BB, jB] = QB.split(":");
+                const [BB, IB] = TB.split(":");
                 return {
                   host: BB,
-                  port: Zj(jB)
+                  port: mI(IB)
                 }
               }
-            }(jB),
-            uB = null === NB ? "" : `:${NB}`;
-          QB.config.emulator = {
-            url: `${dB}//${IB}${uB}/`
-          }, QB.settings.appVerificationDisabledForTesting = !0, QB.emulatorConfig = Object.freeze({
-            host: IB,
-            port: NB,
-            protocol: dB.replace(":", ""),
+            }(IB),
+            kB = null === vB ? "" : `:${vB}`;
+          TB.config.emulator = {
+            url: `${oB}//${GB}${kB}/`
+          }, TB.settings.appVerificationDisabledForTesting = !0, TB.emulatorConfig = Object.freeze({
+            host: GB,
+            port: vB,
+            protocol: oB.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: nB
+              disableWarnings: JB
             })
-          }), nB || function() {
+          }), JB || function() {
             function BB() {
               const BB = document.createElement("p"),
-                jB = BB.style;
-              BB.innerText = "Running in emulator mode. Do not use with production credentials.", jB.position = "fixed", jB.width = "100%", jB.backgroundColor = "#ffffff", jB.border = ".1em solid #000000", jB.color = "#b50000", jB.bottom = "0px", jB.left = "0px", jB.margin = "0px", jB.zIndex = "10000", jB.textAlign = "center", BB.classList.add("firebase-emulator-warning"), document.body.appendChild(BB)
+                IB = BB.style;
+              BB.innerText = "Running in emulator mode. Do not use with production credentials.", IB.position = "fixed", IB.width = "100%", IB.backgroundColor = "#ffffff", IB.border = ".1em solid #000000", IB.color = "#b50000", IB.bottom = "0px", IB.left = "0px", IB.margin = "0px", IB.zIndex = "10000", IB.textAlign = "center", BB.classList.add("firebase-emulator-warning"), document.body.appendChild(BB)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
             "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", BB) : BB())
           }()
         }
 
-        function Xj(BB) {
-          const jB = BB.indexOf(":");
-          return jB < 0 ? "" : BB.substr(0, jB + 1)
+        function rI(BB) {
+          const IB = BB.indexOf(":");
+          return IB < 0 ? "" : BB.substr(0, IB + 1)
         }
 
-        function Zj(BB) {
+        function mI(BB) {
           if (!BB) return null;
-          const jB = Number(BB);
-          return isNaN(jB) ? null : jB
+          const IB = Number(BB);
+          return isNaN(IB) ? null : IB
         }
-        class Aj {
-          constructor(BB, jB) {
-            this.providerId = BB, this.signInMethod = jB
+        class XI {
+          constructor(BB, IB) {
+            this.providerId = BB, this.signInMethod = IB
           }
           toJSON() {
-            return qB("not implemented")
+            return YB("not implemented")
           }
           _getIdTokenResponse(BB) {
-            return qB("not implemented")
+            return YB("not implemented")
           }
-          _linkToIdToken(BB, jB) {
-            return qB("not implemented")
+          _linkToIdToken(BB, IB) {
+            return YB("not implemented")
           }
           _getReauthenticationResolver(BB) {
-            return qB("not implemented")
+            return YB("not implemented")
           }
         }
-        async function Tj(BB, jB) {
-          return AB(BB, "POST", "/v1/accounts:resetPassword", ZB(BB, jB))
+        async function LI(BB, IB) {
+          return XB(BB, "POST", "/v1/accounts:resetPassword", mB(BB, IB))
         }
-        async function Pj(BB, jB) {
-          return AB(BB, "POST", "/v1/accounts:update", jB)
+        async function eI(BB, IB) {
+          return XB(BB, "POST", "/v1/accounts:update", IB)
         }
-        async function Wj(BB, jB) {
-          return PB(BB, "POST", "/v1/accounts:signInWithPassword", ZB(BB, jB))
+        async function uI(BB, IB) {
+          return eB(BB, "POST", "/v1/accounts:signInWithPassword", mB(BB, IB))
         }
-        async function ej(BB, jB) {
-          return AB(BB, "POST", "/v1/accounts:sendOobCode", ZB(BB, jB))
+        async function fI(BB, IB) {
+          return XB(BB, "POST", "/v1/accounts:sendOobCode", mB(BB, IB))
         }
-        async function lj(BB, jB) {
-          return ej(BB, jB)
+        async function lI(BB, IB) {
+          return fI(BB, IB)
         }
-        async function wj(BB, jB) {
-          return ej(BB, jB)
+        async function AI(BB, IB) {
+          return fI(BB, IB)
         }
-        class xj extends Aj {
-          constructor(BB, jB, zB) {
-            let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", zB), this._email = BB, this._password = jB, this._tenantId = QB
+        class tI extends XI {
+          constructor(BB, IB, ZB) {
+            let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", ZB), this._email = BB, this._password = IB, this._tenantId = TB
           }
-          static _fromEmailAndPassword(BB, jB) {
-            return new xj(BB, jB, "password")
+          static _fromEmailAndPassword(BB, IB) {
+            return new tI(BB, IB, "password")
           }
-          static _fromEmailAndCode(BB, jB) {
-            return new xj(BB, jB, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(BB, IB) {
+            return new tI(BB, IB, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1644,81 +1644,81 @@ export const modules = {
             }
           }
           static fromJSON(BB) {
-            const jB = "string" === typeof BB ? JSON.parse(BB) : BB;
-            if ((null === jB || void 0 === jB ? void 0 : jB.email) && (null === jB || void 0 === jB ? void 0 : jB.password)) {
-              if ("password" === jB.signInMethod) return this._fromEmailAndPassword(jB.email, jB.password);
-              if ("emailLink" === jB.signInMethod) return this._fromEmailAndCode(jB.email, jB.password, jB.tenantId)
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB;
+            if ((null === IB || void 0 === IB ? void 0 : IB.email) && (null === IB || void 0 === IB ? void 0 : IB.password)) {
+              if ("password" === IB.signInMethod) return this._fromEmailAndPassword(IB.email, IB.password);
+              if ("emailLink" === IB.signInMethod) return this._fromEmailAndCode(IB.email, IB.password, IB.tenantId)
             }
             return null
           }
           async _getIdTokenResponse(BB) {
-            var jB;
+            var IB;
             switch (this.signInMethod) {
               case "password":
-                const zB = {
+                const ZB = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (jB = BB._getRecaptchaConfig()) || void 0 === jB ? void 0 : jB.emailPasswordEnabled) {
-                  const jB = await oj(BB, zB, "signInWithPassword");
-                  return Wj(BB, jB)
+                if (null === (IB = BB._getRecaptchaConfig()) || void 0 === IB ? void 0 : IB.emailPasswordEnabled) {
+                  const IB = await pI(BB, ZB, "signInWithPassword");
+                  return uI(BB, IB)
                 }
-                return Wj(BB, zB).catch((async jB => {
-                  if ("auth/missing-recaptcha-token" === jB.code) {
+                return uI(BB, ZB).catch((async IB => {
+                  if ("auth/missing-recaptcha-token" === IB.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const jB = await oj(BB, zB, "signInWithPassword");
-                    return Wj(BB, jB)
+                    const IB = await pI(BB, ZB, "signInWithPassword");
+                    return uI(BB, IB)
                   }
-                  return Promise.reject(jB)
+                  return Promise.reject(IB)
                 }));
               case "emailLink":
-                return async function(BB, jB) {
-                  return PB(BB, "POST", "/v1/accounts:signInWithEmailLink", ZB(BB, jB))
+                return async function(BB, IB) {
+                  return eB(BB, "POST", "/v1/accounts:signInWithEmailLink", mB(BB, IB))
                 }(BB, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                gB(BB, "internal-error")
+                dB(BB, "internal-error")
             }
           }
-          async _linkToIdToken(BB, jB) {
+          async _linkToIdToken(BB, IB) {
             switch (this.signInMethod) {
               case "password":
-                return Pj(BB, {
-                  idToken: jB,
+                return eI(BB, {
+                  idToken: IB,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(BB, jB) {
-                  return PB(BB, "POST", "/v1/accounts:signInWithEmailLink", ZB(BB, jB))
+                return async function(BB, IB) {
+                  return eB(BB, "POST", "/v1/accounts:signInWithEmailLink", mB(BB, IB))
                 }(BB, {
-                  idToken: jB,
+                  idToken: IB,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                gB(BB, "internal-error")
+                dB(BB, "internal-error")
             }
           }
           _getReauthenticationResolver(BB) {
             return this._getIdTokenResponse(BB)
           }
         }
-        async function Kj(BB, jB) {
-          return PB(BB, "POST", "/v1/accounts:signInWithIdp", ZB(BB, jB))
+        async function bI(BB, IB) {
+          return eB(BB, "POST", "/v1/accounts:signInWithIdp", mB(BB, IB))
         }
-        class Cj extends Aj {
+        class xI extends XI {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
           static _fromParams(BB) {
-            const jB = new Cj(BB.providerId, BB.signInMethod);
-            return BB.idToken || BB.accessToken ? (BB.idToken && (jB.idToken = BB.idToken), BB.accessToken && (jB.accessToken = BB.accessToken), BB.nonce && !BB.pendingToken && (jB.nonce = BB.nonce), BB.pendingToken && (jB.pendingToken = BB.pendingToken)) : BB.oauthToken && BB.oauthTokenSecret ? (jB.accessToken = BB.oauthToken, jB.secret = BB.oauthTokenSecret) : gB("argument-error"), jB
+            const IB = new xI(BB.providerId, BB.signInMethod);
+            return BB.idToken || BB.accessToken ? (BB.idToken && (IB.idToken = BB.idToken), BB.accessToken && (IB.accessToken = BB.accessToken), BB.nonce && !BB.pendingToken && (IB.nonce = BB.nonce), BB.pendingToken && (IB.pendingToken = BB.pendingToken)) : BB.oauthToken && BB.oauthTokenSecret ? (IB.accessToken = BB.oauthToken, IB.secret = BB.oauthTokenSecret) : dB("argument-error"), IB
           }
           toJSON() {
             return {
@@ -1732,26 +1732,26 @@ export const modules = {
             }
           }
           static fromJSON(BB) {
-            const jB = "string" === typeof BB ? JSON.parse(BB) : BB,
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB,
               {
-                providerId: zB,
-                signInMethod: QB
-              } = jB,
-              nB = dB(jB, ["providerId", "signInMethod"]);
-            if (!zB || !QB) return null;
-            const IB = new Cj(zB, QB);
-            return IB.idToken = nB.idToken || void 0, IB.accessToken = nB.accessToken || void 0, IB.secret = nB.secret, IB.nonce = nB.nonce, IB.pendingToken = nB.pendingToken || null, IB
+                providerId: ZB,
+                signInMethod: TB
+              } = IB,
+              JB = oB(IB, ["providerId", "signInMethod"]);
+            if (!ZB || !TB) return null;
+            const GB = new xI(ZB, TB);
+            return GB.idToken = JB.idToken || void 0, GB.accessToken = JB.accessToken || void 0, GB.secret = JB.secret, GB.nonce = JB.nonce, GB.pendingToken = JB.pendingToken || null, GB
           }
           _getIdTokenResponse(BB) {
-            return Kj(BB, this.buildRequest())
+            return bI(BB, this.buildRequest())
           }
-          _linkToIdToken(BB, jB) {
-            const zB = this.buildRequest();
-            return zB.idToken = jB, Kj(BB, zB)
+          _linkToIdToken(BB, IB) {
+            const ZB = this.buildRequest();
+            return ZB.idToken = IB, bI(BB, ZB)
           }
           _getReauthenticationResolver(BB) {
-            const jB = this.buildRequest();
-            return jB.autoCreate = !1, Kj(BB, jB)
+            const IB = this.buildRequest();
+            return IB.autoCreate = !1, bI(BB, IB)
           }
           buildRequest() {
             const BB = {
@@ -1760,65 +1760,65 @@ export const modules = {
             };
             if (this.pendingToken) BB.pendingToken = this.pendingToken;
             else {
-              const jB = {};
-              this.idToken && (jB.id_token = this.idToken), this.accessToken && (jB.access_token = this.accessToken), this.secret && (jB.oauth_token_secret = this.secret), jB.providerId = this.providerId, this.nonce && !this.pendingToken && (jB.nonce = this.nonce), BB.postBody = (0, QB.$)(jB)
+              const IB = {};
+              this.idToken && (IB.id_token = this.idToken), this.accessToken && (IB.access_token = this.accessToken), this.secret && (IB.oauth_token_secret = this.secret), IB.providerId = this.providerId, this.nonce && !this.pendingToken && (IB.nonce = this.nonce), BB.postBody = (0, TB.db)(IB)
             }
             return BB
           }
         }
-        const cj = {
+        const EI = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class bj extends Aj {
+        class DI extends XI {
           constructor(BB) {
             super("phone", "phone"), this.params = BB
           }
-          static _fromVerification(BB, jB) {
-            return new bj({
+          static _fromVerification(BB, IB) {
+            return new DI({
               verificationId: BB,
-              verificationCode: jB
+              verificationCode: IB
             })
           }
-          static _fromTokenResponse(BB, jB) {
-            return new bj({
+          static _fromTokenResponse(BB, IB) {
+            return new DI({
               phoneNumber: BB,
-              temporaryProof: jB
+              temporaryProof: IB
             })
           }
           _getIdTokenResponse(BB) {
-            return async function(BB, jB) {
-              return PB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", ZB(BB, jB))
+            return async function(BB, IB) {
+              return eB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", mB(BB, IB))
             }(BB, this._makeVerificationRequest())
           }
-          _linkToIdToken(BB, jB) {
-            return async function(BB, jB) {
-              const zB = await PB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", ZB(BB, jB));
-              if (zB.temporaryProof) throw lB(BB, "account-exists-with-different-credential", zB);
-              return zB
+          _linkToIdToken(BB, IB) {
+            return async function(BB, IB) {
+              const ZB = await eB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", mB(BB, IB));
+              if (ZB.temporaryProof) throw lB(BB, "account-exists-with-different-credential", ZB);
+              return ZB
             }(BB, Object.assign({
-              idToken: jB
+              idToken: IB
             }, this._makeVerificationRequest()))
           }
           _getReauthenticationResolver(BB) {
-            return async function(BB, jB) {
-              return PB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", ZB(BB, Object.assign(Object.assign({}, jB), {
+            return async function(BB, IB) {
+              return eB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", mB(BB, Object.assign(Object.assign({}, IB), {
                 operation: "REAUTH"
-              })), cj)
+              })), EI)
             }(BB, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
               temporaryProof: BB,
-              phoneNumber: jB,
-              verificationId: zB,
-              verificationCode: QB
+              phoneNumber: IB,
+              verificationId: ZB,
+              verificationCode: TB
             } = this.params;
-            return BB && jB ? {
+            return BB && IB ? {
               temporaryProof: BB,
-              phoneNumber: jB
+              phoneNumber: IB
             } : {
-              sessionInfo: zB,
-              code: QB
+              sessionInfo: ZB,
+              code: TB
             }
           }
           toJSON() {
@@ -1830,26 +1830,26 @@ export const modules = {
           static fromJSON(BB) {
             "string" === typeof BB && (BB = JSON.parse(BB));
             const {
-              verificationId: jB,
-              verificationCode: zB,
-              phoneNumber: QB,
-              temporaryProof: nB
+              verificationId: IB,
+              verificationCode: ZB,
+              phoneNumber: TB,
+              temporaryProof: JB
             } = BB;
-            return zB || jB || QB || nB ? new bj({
-              verificationId: jB,
-              verificationCode: zB,
-              phoneNumber: QB,
-              temporaryProof: nB
+            return ZB || IB || TB || JB ? new DI({
+              verificationId: IB,
+              verificationCode: ZB,
+              phoneNumber: TB,
+              temporaryProof: JB
             }) : null
           }
         }
-        class vj {
+        class KI {
           constructor(BB) {
-            var jB, zB, nB, dB, IB, NB;
-            const uB = (0, QB._)((0, QB.y)(BB)),
-              UB = null !== (jB = uB.apiKey) && void 0 !== jB ? jB : null,
-              aB = null !== (zB = uB.oobCode) && void 0 !== zB ? zB : null,
-              pB = function(BB) {
+            var IB, ZB, JB, oB, GB, vB;
+            const kB = (0, TB.cb)((0, TB.F)(BB)),
+              cB = null !== (IB = kB.apiKey) && void 0 !== IB ? IB : null,
+              nB = null !== (ZB = kB.oobCode) && void 0 !== ZB ? ZB : null,
+              hB = function(BB) {
                 switch (BB) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
@@ -1866,41 +1866,41 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (nB = uB.mode) && void 0 !== nB ? nB : null);
-            iB(UB && aB && pB, "argument-error"), this.apiKey = UB, this.operation = pB, this.code = aB, this.continueUrl = null !== (dB = uB.continueUrl) && void 0 !== dB ? dB : null, this.languageCode = null !== (IB = uB.languageCode) && void 0 !== IB ? IB : null, this.tenantId = null !== (NB = uB.tenantId) && void 0 !== NB ? NB : null
+              }(null !== (JB = kB.mode) && void 0 !== JB ? JB : null);
+            OB(cB && nB && hB, "argument-error"), this.apiKey = cB, this.operation = hB, this.code = nB, this.continueUrl = null !== (oB = kB.continueUrl) && void 0 !== oB ? oB : null, this.languageCode = null !== (GB = kB.languageCode) && void 0 !== GB ? GB : null, this.tenantId = null !== (vB = kB.tenantId) && void 0 !== vB ? vB : null
           }
           static parseLink(BB) {
-            const jB = function(BB) {
-              const jB = (0, QB._)((0, QB.y)(BB)).link,
-                zB = jB ? (0, QB._)((0, QB.y)(jB)).deep_link_id : null,
-                nB = (0, QB._)((0, QB.y)(BB)).deep_link_id;
-              return (nB ? (0, QB._)((0, QB.y)(nB)).link : null) || nB || zB || jB || BB
+            const IB = function(BB) {
+              const IB = (0, TB.cb)((0, TB.F)(BB)).link,
+                ZB = IB ? (0, TB.cb)((0, TB.F)(IB)).deep_link_id : null,
+                JB = (0, TB.cb)((0, TB.F)(BB)).deep_link_id;
+              return (JB ? (0, TB.cb)((0, TB.F)(JB)).link : null) || JB || ZB || IB || BB
             }(BB);
             try {
-              return new vj(jB)
-            } catch (zB) {
+              return new KI(IB)
+            } catch (ZB) {
               return null
             }
           }
         }
 
-        function Rj(BB) {
-          return vj.parseLink(BB)
+        function VI(BB) {
+          return KI.parseLink(BB)
         }
-        class Oj {
+        class SI {
           constructor() {
-            this.providerId = Oj.PROVIDER_ID
+            this.providerId = SI.PROVIDER_ID
           }
-          static credential(BB, jB) {
-            return xj._fromEmailAndPassword(BB, jB)
+          static credential(BB, IB) {
+            return tI._fromEmailAndPassword(BB, IB)
           }
-          static credentialWithLink(BB, jB) {
-            const zB = vj.parseLink(jB);
-            return iB(zB, "argument-error"), xj._fromEmailAndCode(BB, zB.code, zB.tenantId)
+          static credentialWithLink(BB, IB) {
+            const ZB = KI.parseLink(IB);
+            return OB(ZB, "argument-error"), tI._fromEmailAndCode(BB, ZB.code, ZB.tenantId)
           }
         }
-        Oj.PROVIDER_ID = "password", Oj.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", Oj.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class Bz {
+        SI.PROVIDER_ID = "password", SI.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", SI.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class BZ {
           constructor(BB) {
             this.providerId = BB, this.defaultLanguageCode = null, this.customParameters = {}
           }
@@ -1914,7 +1914,7 @@ export const modules = {
             return this.customParameters
           }
         }
-        class jz extends Bz {
+        class IZ extends BZ {
           constructor() {
             super(...arguments), this.scopes = []
           }
@@ -1925,10 +1925,10 @@ export const modules = {
             return [...this.scopes]
           }
         }
-        class zz extends jz {
+        class ZZ extends IZ {
           static credentialFromJSON(BB) {
-            const jB = "string" === typeof BB ? JSON.parse(BB) : BB;
-            return iB("providerId" in jB && "signInMethod" in jB, "argument-error"), Cj._fromParams(jB)
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB;
+            return OB("providerId" in IB && "signInMethod" in IB, "argument-error"), xI._fromParams(IB)
           }
           credential(BB) {
             return this._credential(Object.assign(Object.assign({}, BB), {
@@ -1936,156 +1936,156 @@ export const modules = {
             }))
           }
           _credential(BB) {
-            return iB(BB.idToken || BB.accessToken, "argument-error"), Cj._fromParams(Object.assign(Object.assign({}, BB), {
+            return OB(BB.idToken || BB.accessToken, "argument-error"), xI._fromParams(Object.assign(Object.assign({}, BB), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
           static credentialFromResult(BB) {
-            return zz.oauthCredentialFromTaggedObject(BB)
+            return ZZ.oauthCredentialFromTaggedObject(BB)
           }
           static credentialFromError(BB) {
-            return zz.oauthCredentialFromTaggedObject(BB.customData || {})
+            return ZZ.oauthCredentialFromTaggedObject(BB.customData || {})
           }
           static oauthCredentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB) return null;
+            if (!IB) return null;
             const {
-              oauthIdToken: zB,
-              oauthAccessToken: QB,
-              oauthTokenSecret: nB,
-              pendingToken: dB,
-              nonce: IB,
-              providerId: NB
-            } = jB;
-            if (!QB && !nB && !zB && !dB) return null;
-            if (!NB) return null;
+              oauthIdToken: ZB,
+              oauthAccessToken: TB,
+              oauthTokenSecret: JB,
+              pendingToken: oB,
+              nonce: GB,
+              providerId: vB
+            } = IB;
+            if (!TB && !JB && !ZB && !oB) return null;
+            if (!vB) return null;
             try {
-              return new zz(NB)._credential({
-                idToken: zB,
-                accessToken: QB,
-                nonce: IB,
-                pendingToken: dB
+              return new ZZ(vB)._credential({
+                idToken: ZB,
+                accessToken: TB,
+                nonce: GB,
+                pendingToken: oB
               })
-            } catch (uB) {
+            } catch (kB) {
               return null
             }
           }
         }
-        class Qz extends jz {
+        class TZ extends IZ {
           constructor() {
             super("facebook.com")
           }
           static credential(BB) {
-            return Cj._fromParams({
-              providerId: Qz.PROVIDER_ID,
-              signInMethod: Qz.FACEBOOK_SIGN_IN_METHOD,
+            return xI._fromParams({
+              providerId: TZ.PROVIDER_ID,
+              signInMethod: TZ.FACEBOOK_SIGN_IN_METHOD,
               accessToken: BB
             })
           }
           static credentialFromResult(BB) {
-            return Qz.credentialFromTaggedObject(BB)
+            return TZ.credentialFromTaggedObject(BB)
           }
           static credentialFromError(BB) {
-            return Qz.credentialFromTaggedObject(BB.customData || {})
+            return TZ.credentialFromTaggedObject(BB.customData || {})
           }
           static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB || !("oauthAccessToken" in jB)) return null;
-            if (!jB.oauthAccessToken) return null;
+            if (!IB || !("oauthAccessToken" in IB)) return null;
+            if (!IB.oauthAccessToken) return null;
             try {
-              return Qz.credential(jB.oauthAccessToken)
-            } catch (zB) {
+              return TZ.credential(IB.oauthAccessToken)
+            } catch (ZB) {
               return null
             }
           }
         }
-        Qz.FACEBOOK_SIGN_IN_METHOD = "facebook.com", Qz.PROVIDER_ID = "facebook.com";
-        class nz extends jz {
+        TZ.FACEBOOK_SIGN_IN_METHOD = "facebook.com", TZ.PROVIDER_ID = "facebook.com";
+        class JZ extends IZ {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(BB, jB) {
-            return Cj._fromParams({
-              providerId: nz.PROVIDER_ID,
-              signInMethod: nz.GOOGLE_SIGN_IN_METHOD,
+          static credential(BB, IB) {
+            return xI._fromParams({
+              providerId: JZ.PROVIDER_ID,
+              signInMethod: JZ.GOOGLE_SIGN_IN_METHOD,
               idToken: BB,
-              accessToken: jB
+              accessToken: IB
             })
           }
           static credentialFromResult(BB) {
-            return nz.credentialFromTaggedObject(BB)
+            return JZ.credentialFromTaggedObject(BB)
           }
           static credentialFromError(BB) {
-            return nz.credentialFromTaggedObject(BB.customData || {})
+            return JZ.credentialFromTaggedObject(BB.customData || {})
           }
           static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB) return null;
+            if (!IB) return null;
             const {
-              oauthIdToken: zB,
-              oauthAccessToken: QB
-            } = jB;
-            if (!zB && !QB) return null;
+              oauthIdToken: ZB,
+              oauthAccessToken: TB
+            } = IB;
+            if (!ZB && !TB) return null;
             try {
-              return nz.credential(zB, QB)
-            } catch (nB) {
+              return JZ.credential(ZB, TB)
+            } catch (JB) {
               return null
             }
           }
         }
-        nz.GOOGLE_SIGN_IN_METHOD = "google.com", nz.PROVIDER_ID = "google.com";
-        class dz extends jz {
+        JZ.GOOGLE_SIGN_IN_METHOD = "google.com", JZ.PROVIDER_ID = "google.com";
+        class oZ extends IZ {
           constructor() {
             super("github.com")
           }
           static credential(BB) {
-            return Cj._fromParams({
-              providerId: dz.PROVIDER_ID,
-              signInMethod: dz.GITHUB_SIGN_IN_METHOD,
+            return xI._fromParams({
+              providerId: oZ.PROVIDER_ID,
+              signInMethod: oZ.GITHUB_SIGN_IN_METHOD,
               accessToken: BB
             })
           }
           static credentialFromResult(BB) {
-            return dz.credentialFromTaggedObject(BB)
+            return oZ.credentialFromTaggedObject(BB)
           }
           static credentialFromError(BB) {
-            return dz.credentialFromTaggedObject(BB.customData || {})
+            return oZ.credentialFromTaggedObject(BB.customData || {})
           }
           static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB || !("oauthAccessToken" in jB)) return null;
-            if (!jB.oauthAccessToken) return null;
+            if (!IB || !("oauthAccessToken" in IB)) return null;
+            if (!IB.oauthAccessToken) return null;
             try {
-              return dz.credential(jB.oauthAccessToken)
-            } catch (zB) {
+              return oZ.credential(IB.oauthAccessToken)
+            } catch (ZB) {
               return null
             }
           }
         }
-        dz.GITHUB_SIGN_IN_METHOD = "github.com", dz.PROVIDER_ID = "github.com";
-        class Iz extends Aj {
-          constructor(BB, jB) {
-            super(BB, BB), this.pendingToken = jB
+        oZ.GITHUB_SIGN_IN_METHOD = "github.com", oZ.PROVIDER_ID = "github.com";
+        class GZ extends XI {
+          constructor(BB, IB) {
+            super(BB, BB), this.pendingToken = IB
           }
           _getIdTokenResponse(BB) {
-            return Kj(BB, this.buildRequest())
+            return bI(BB, this.buildRequest())
           }
-          _linkToIdToken(BB, jB) {
-            const zB = this.buildRequest();
-            return zB.idToken = jB, Kj(BB, zB)
+          _linkToIdToken(BB, IB) {
+            const ZB = this.buildRequest();
+            return ZB.idToken = IB, bI(BB, ZB)
           }
           _getReauthenticationResolver(BB) {
-            const jB = this.buildRequest();
-            return jB.autoCreate = !1, Kj(BB, jB)
+            const IB = this.buildRequest();
+            return IB.autoCreate = !1, bI(BB, IB)
           }
           toJSON() {
             return {
@@ -2095,16 +2095,16 @@ export const modules = {
             }
           }
           static fromJSON(BB) {
-            const jB = "string" === typeof BB ? JSON.parse(BB) : BB,
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB,
               {
-                providerId: zB,
-                signInMethod: QB,
-                pendingToken: nB
-              } = jB;
-            return zB && QB && nB && zB === QB ? new Iz(zB, nB) : null
+                providerId: ZB,
+                signInMethod: TB,
+                pendingToken: JB
+              } = IB;
+            return ZB && TB && JB && ZB === TB ? new GZ(ZB, JB) : null
           }
-          static _create(BB, jB) {
-            return new Iz(BB, jB)
+          static _create(BB, IB) {
+            return new GZ(BB, IB)
           }
           buildRequest() {
             return {
@@ -2114,574 +2114,574 @@ export const modules = {
             }
           }
         }
-        class Nz extends Bz {
+        class vZ extends BZ {
           constructor(BB) {
-            iB(BB.startsWith("saml."), "argument-error"), super(BB)
+            OB(BB.startsWith("saml."), "argument-error"), super(BB)
           }
           static credentialFromResult(BB) {
-            return Nz.samlCredentialFromTaggedObject(BB)
+            return vZ.samlCredentialFromTaggedObject(BB)
           }
           static credentialFromError(BB) {
-            return Nz.samlCredentialFromTaggedObject(BB.customData || {})
+            return vZ.samlCredentialFromTaggedObject(BB.customData || {})
           }
           static credentialFromJSON(BB) {
-            const jB = Iz.fromJSON(BB);
-            return iB(jB, "argument-error"), jB
+            const IB = GZ.fromJSON(BB);
+            return OB(IB, "argument-error"), IB
           }
           static samlCredentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB) return null;
+            if (!IB) return null;
             const {
-              pendingToken: zB,
-              providerId: QB
-            } = jB;
-            if (!zB || !QB) return null;
+              pendingToken: ZB,
+              providerId: TB
+            } = IB;
+            if (!ZB || !TB) return null;
             try {
-              return Iz._create(QB, zB)
-            } catch (nB) {
+              return GZ._create(TB, ZB)
+            } catch (JB) {
               return null
             }
           }
         }
-        class uz extends jz {
+        class kZ extends IZ {
           constructor() {
             super("twitter.com")
           }
-          static credential(BB, jB) {
-            return Cj._fromParams({
-              providerId: uz.PROVIDER_ID,
-              signInMethod: uz.TWITTER_SIGN_IN_METHOD,
+          static credential(BB, IB) {
+            return xI._fromParams({
+              providerId: kZ.PROVIDER_ID,
+              signInMethod: kZ.TWITTER_SIGN_IN_METHOD,
               oauthToken: BB,
-              oauthTokenSecret: jB
+              oauthTokenSecret: IB
             })
           }
           static credentialFromResult(BB) {
-            return uz.credentialFromTaggedObject(BB)
+            return kZ.credentialFromTaggedObject(BB)
           }
           static credentialFromError(BB) {
-            return uz.credentialFromTaggedObject(BB.customData || {})
+            return kZ.credentialFromTaggedObject(BB.customData || {})
           }
           static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB) return null;
+            if (!IB) return null;
             const {
-              oauthAccessToken: zB,
-              oauthTokenSecret: QB
-            } = jB;
-            if (!zB || !QB) return null;
+              oauthAccessToken: ZB,
+              oauthTokenSecret: TB
+            } = IB;
+            if (!ZB || !TB) return null;
             try {
-              return uz.credential(zB, QB)
-            } catch (nB) {
+              return kZ.credential(ZB, TB)
+            } catch (JB) {
               return null
             }
           }
         }
-        async function Uz(BB, jB) {
-          return PB(BB, "POST", "/v1/accounts:signUp", ZB(BB, jB))
+        async function cZ(BB, IB) {
+          return eB(BB, "POST", "/v1/accounts:signUp", mB(BB, IB))
         }
-        uz.TWITTER_SIGN_IN_METHOD = "twitter.com", uz.PROVIDER_ID = "twitter.com";
-        class az {
+        kZ.TWITTER_SIGN_IN_METHOD = "twitter.com", kZ.PROVIDER_ID = "twitter.com";
+        class nZ {
           constructor(BB) {
             this.user = BB.user, this.providerId = BB.providerId, this._tokenResponse = BB._tokenResponse, this.operationType = BB.operationType
           }
-          static async _fromIdTokenResponse(BB, jB, zB) {
-            let QB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const nB = await Qj._fromIdTokenResponse(BB, zB, QB),
-              dB = pz(zB);
-            return new az({
-              user: nB,
-              providerId: dB,
-              _tokenResponse: zB,
-              operationType: jB
+          static async _fromIdTokenResponse(BB, IB, ZB) {
+            let TB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const JB = await TI._fromIdTokenResponse(BB, ZB, TB),
+              oB = hZ(ZB);
+            return new nZ({
+              user: JB,
+              providerId: oB,
+              _tokenResponse: ZB,
+              operationType: IB
             })
           }
-          static async _forOperation(BB, jB, zB) {
-            await BB._updateTokensIfNecessary(zB, !0);
-            const QB = pz(zB);
-            return new az({
+          static async _forOperation(BB, IB, ZB) {
+            await BB._updateTokensIfNecessary(ZB, !0);
+            const TB = hZ(ZB);
+            return new nZ({
               user: BB,
-              providerId: QB,
-              _tokenResponse: zB,
-              operationType: jB
+              providerId: TB,
+              _tokenResponse: ZB,
+              operationType: IB
             })
           }
         }
 
-        function pz(BB) {
+        function hZ(BB) {
           return BB.providerId ? BB.providerId : "phoneNumber" in BB ? "phone" : null
         }
-        async function rz(BB) {
-          var jB;
-          const zB = Fj(BB);
-          if (await zB._initializationPromise, null === (jB = zB.currentUser) || void 0 === jB ? void 0 : jB.isAnonymous) return new az({
-            user: zB.currentUser,
+        async function zZ(BB) {
+          var IB;
+          const ZB = MI(BB);
+          if (await ZB._initializationPromise, null === (IB = ZB.currentUser) || void 0 === IB ? void 0 : IB.isAnonymous) return new nZ({
+            user: ZB.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const QB = await Uz(zB, {
+          const TB = await cZ(ZB, {
               returnSecureToken: !0
             }),
-            nB = await az._fromIdTokenResponse(zB, "signIn", QB, !0);
-          return await zB._updateCurrentUser(nB.user), nB
+            JB = await nZ._fromIdTokenResponse(ZB, "signIn", TB, !0);
+          return await ZB._updateCurrentUser(JB.user), JB
         }
-        class sz extends QB.g {
-          constructor(BB, jB, zB, QB) {
-            var nB;
-            super(jB.code, jB.message), this.operationType = zB, this.user = QB, Object.setPrototypeOf(this, sz.prototype), this.customData = {
+        class FZ extends TB.j {
+          constructor(BB, IB, ZB, TB) {
+            var JB;
+            super(IB.code, IB.message), this.operationType = ZB, this.user = TB, Object.setPrototypeOf(this, FZ.prototype), this.customData = {
               appName: BB.name,
-              tenantId: null !== (nB = BB.tenantId) && void 0 !== nB ? nB : void 0,
-              _serverResponse: jB.customData._serverResponse,
-              operationType: zB
+              tenantId: null !== (JB = BB.tenantId) && void 0 !== JB ? JB : void 0,
+              _serverResponse: IB.customData._serverResponse,
+              operationType: ZB
             }
           }
-          static _fromErrorAndOperation(BB, jB, zB, QB) {
-            return new sz(BB, jB, zB, QB)
+          static _fromErrorAndOperation(BB, IB, ZB, TB) {
+            return new FZ(BB, IB, ZB, TB)
           }
         }
 
-        function Jz(BB, jB, zB, QB) {
-          return ("reauthenticate" === jB ? zB._getReauthenticationResolver(BB) : zB._getIdTokenResponse(BB)).catch((zB => {
-            if ("auth/multi-factor-auth-required" === zB.code) throw sz._fromErrorAndOperation(BB, zB, jB, QB);
-            throw zB
+        function NZ(BB, IB, ZB, TB) {
+          return ("reauthenticate" === IB ? ZB._getReauthenticationResolver(BB) : ZB._getIdTokenResponse(BB)).catch((ZB => {
+            if ("auth/multi-factor-auth-required" === ZB.code) throw FZ._fromErrorAndOperation(BB, ZB, IB, TB);
+            throw ZB
           }))
         }
 
-        function mz(BB) {
+        function gZ(BB) {
           return new Set(BB.map((BB => {
             let {
-              providerId: jB
+              providerId: IB
             } = BB;
-            return jB
+            return IB
           })).filter((BB => !!BB)))
         }
-        async function yz(BB, jB) {
-          const zB = (0, QB.H)(BB);
-          await Gz(!0, zB, jB);
+        async function qZ(BB, IB) {
+          const ZB = (0, TB.N)(BB);
+          await UZ(!0, ZB, IB);
           const {
-            providerUserInfo: nB
-          } = await async function(BB, jB) {
-            return AB(BB, "POST", "/v1/accounts:update", jB)
-          }(zB.auth, {
-            idToken: await zB.getIdToken(),
-            deleteProvider: [jB]
-          }), dB = mz(nB || []);
-          return zB.providerData = zB.providerData.filter((BB => dB.has(BB.providerId))), dB.has("phone") || (zB.phoneNumber = null), await zB.auth._persistUserIfCurrent(zB), zB
+            providerUserInfo: JB
+          } = await async function(BB, IB) {
+            return XB(BB, "POST", "/v1/accounts:update", IB)
+          }(ZB.auth, {
+            idToken: await ZB.getIdToken(),
+            deleteProvider: [IB]
+          }), oB = gZ(JB || []);
+          return ZB.providerData = ZB.providerData.filter((BB => oB.has(BB.providerId))), oB.has("phone") || (ZB.phoneNumber = null), await ZB.auth._persistUserIfCurrent(ZB), ZB
         }
-        async function kz(BB, jB) {
-          let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const QB = await bB(BB, jB._linkToIdToken(BB.auth, await BB.getIdToken()), zB);
-          return az._forOperation(BB, "link", QB)
+        async function yZ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const TB = await DB(BB, IB._linkToIdToken(BB.auth, await BB.getIdToken()), ZB);
+          return nZ._forOperation(BB, "link", TB)
         }
-        async function Gz(BB, jB, zB) {
-          await OB(jB);
-          const QB = !1 === BB ? "provider-already-linked" : "no-such-provider";
-          iB(mz(jB.providerData).has(zB) === BB, jB.auth, QB)
+        async function UZ(BB, IB, ZB) {
+          await SB(IB);
+          const TB = !1 === BB ? "provider-already-linked" : "no-such-provider";
+          OB(gZ(IB.providerData).has(ZB) === BB, IB.auth, TB)
         }
-        async function Lz(BB, jB) {
-          let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function WZ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: QB
-          } = BB, nB = "reauthenticate";
+            auth: TB
+          } = BB, JB = "reauthenticate";
           try {
-            const dB = await bB(BB, Jz(QB, nB, jB, BB), zB);
-            iB(dB.idToken, QB, "internal-error");
-            const IB = cB(dB.idToken);
-            iB(IB, QB, "internal-error");
+            const oB = await DB(BB, NZ(TB, JB, IB, BB), ZB);
+            OB(oB.idToken, TB, "internal-error");
+            const GB = EB(oB.idToken);
+            OB(GB, TB, "internal-error");
             const {
-              sub: NB
-            } = IB;
-            return iB(BB.uid === NB, QB, "user-mismatch"), az._forOperation(BB, nB, dB)
-          } catch (dB) {
-            throw "auth/user-not-found" === (null === dB || void 0 === dB ? void 0 : dB.code) && gB(QB, "user-mismatch"), dB
+              sub: vB
+            } = GB;
+            return OB(BB.uid === vB, TB, "user-mismatch"), nZ._forOperation(BB, JB, oB)
+          } catch (oB) {
+            throw "auth/user-not-found" === (null === oB || void 0 === oB ? void 0 : oB.code) && dB(TB, "user-mismatch"), oB
           }
         }
-        async function gz(BB, jB) {
-          let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const QB = "signIn",
-            nB = await Jz(BB, QB, jB),
-            dB = await az._fromIdTokenResponse(BB, QB, nB);
-          return zB || await BB._updateCurrentUser(dB.user), dB
+        async function dZ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const TB = "signIn",
+            JB = await NZ(BB, TB, IB),
+            oB = await nZ._fromIdTokenResponse(BB, TB, JB);
+          return ZB || await BB._updateCurrentUser(oB.user), oB
         }
-        async function tz(BB, jB) {
-          return gz(Fj(BB), jB)
+        async function CZ(BB, IB) {
+          return dZ(MI(BB), IB)
         }
-        async function Sz(BB, jB) {
-          const zB = (0, QB.H)(BB);
-          return await Gz(!1, zB, jB.providerId), kz(zB, jB)
+        async function QZ(BB, IB) {
+          const ZB = (0, TB.N)(BB);
+          return await UZ(!1, ZB, IB.providerId), yZ(ZB, IB)
         }
-        async function Mz(BB, jB) {
-          return Lz((0, QB.H)(BB), jB)
+        async function sZ(BB, IB) {
+          return WZ((0, TB.N)(BB), IB)
         }
-        async function Ez(BB, jB) {
-          const zB = Fj(BB),
-            QB = await async function(BB, jB) {
-              return PB(BB, "POST", "/v1/accounts:signInWithCustomToken", ZB(BB, jB))
-            }(zB, {
-              token: jB,
+        async function wZ(BB, IB) {
+          const ZB = MI(BB),
+            TB = await async function(BB, IB) {
+              return eB(BB, "POST", "/v1/accounts:signInWithCustomToken", mB(BB, IB))
+            }(ZB, {
+              token: IB,
               returnSecureToken: !0
-            }), nB = await az._fromIdTokenResponse(zB, "signIn", QB);
-          return await zB._updateCurrentUser(nB.user), nB
+            }), JB = await nZ._fromIdTokenResponse(ZB, "signIn", TB);
+          return await ZB._updateCurrentUser(JB.user), JB
         }
-        class iz {
-          constructor(BB, jB) {
-            this.factorId = BB, this.uid = jB.mfaEnrollmentId, this.enrollmentTime = new Date(jB.enrolledAt).toUTCString(), this.displayName = jB.displayName
+        class OZ {
+          constructor(BB, IB) {
+            this.factorId = BB, this.uid = IB.mfaEnrollmentId, this.enrollmentTime = new Date(IB.enrolledAt).toUTCString(), this.displayName = IB.displayName
           }
-          static _fromServerResponse(BB, jB) {
-            return "phoneInfo" in jB ? qz._fromServerResponse(BB, jB) : "totpInfo" in jB ? fz._fromServerResponse(BB, jB) : gB(BB, "internal-error")
+          static _fromServerResponse(BB, IB) {
+            return "phoneInfo" in IB ? YZ._fromServerResponse(BB, IB) : "totpInfo" in IB ? iZ._fromServerResponse(BB, IB) : dB(BB, "internal-error")
           }
         }
-        class qz extends iz {
+        class YZ extends OZ {
           constructor(BB) {
             super("phone", BB), this.phoneNumber = BB.phoneInfo
           }
-          static _fromServerResponse(BB, jB) {
-            return new qz(jB)
+          static _fromServerResponse(BB, IB) {
+            return new YZ(IB)
           }
         }
-        class fz extends iz {
+        class iZ extends OZ {
           constructor(BB) {
             super("totp", BB)
           }
-          static _fromServerResponse(BB, jB) {
-            return new fz(jB)
+          static _fromServerResponse(BB, IB) {
+            return new iZ(IB)
           }
         }
 
-        function oz(BB, jB, zB) {
-          var QB;
-          iB((null === (QB = zB.url) || void 0 === QB ? void 0 : QB.length) > 0, BB, "invalid-continue-uri"), iB("undefined" === typeof zB.dynamicLinkDomain || zB.dynamicLinkDomain.length > 0, BB, "invalid-dynamic-link-domain"), jB.continueUrl = zB.url, jB.dynamicLinkDomain = zB.dynamicLinkDomain, jB.canHandleCodeInApp = zB.handleCodeInApp, zB.iOS && (iB(zB.iOS.bundleId.length > 0, BB, "missing-ios-bundle-id"), jB.iOSBundleId = zB.iOS.bundleId), zB.android && (iB(zB.android.packageName.length > 0, BB, "missing-android-pkg-name"), jB.androidInstallApp = zB.android.installApp, jB.androidMinimumVersionCode = zB.android.minimumVersion, jB.androidPackageName = zB.android.packageName)
+        function pZ(BB, IB, ZB) {
+          var TB;
+          OB((null === (TB = ZB.url) || void 0 === TB ? void 0 : TB.length) > 0, BB, "invalid-continue-uri"), OB("undefined" === typeof ZB.dynamicLinkDomain || ZB.dynamicLinkDomain.length > 0, BB, "invalid-dynamic-link-domain"), IB.continueUrl = ZB.url, IB.dynamicLinkDomain = ZB.dynamicLinkDomain, IB.canHandleCodeInApp = ZB.handleCodeInApp, ZB.iOS && (OB(ZB.iOS.bundleId.length > 0, BB, "missing-ios-bundle-id"), IB.iOSBundleId = ZB.iOS.bundleId), ZB.android && (OB(ZB.android.packageName.length > 0, BB, "missing-android-pkg-name"), IB.androidInstallApp = ZB.android.installApp, IB.androidMinimumVersionCode = ZB.android.minimumVersion, IB.androidPackageName = ZB.android.packageName)
         }
-        async function Hz(BB, jB, zB) {
-          var QB;
-          const nB = Fj(BB),
-            dB = {
+        async function aZ(BB, IB, ZB) {
+          var TB;
+          const JB = MI(BB),
+            oB = {
               requestType: "PASSWORD_RESET",
-              email: jB,
+              email: IB,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (QB = nB._getRecaptchaConfig()) || void 0 === QB ? void 0 : QB.emailPasswordEnabled) {
-            const BB = await oj(nB, dB, "getOobCode", !0);
-            zB && oz(nB, BB, zB), await lj(nB, BB)
-          } else zB && oz(nB, dB, zB), await lj(nB, dB).catch((async BB => {
+          if (null === (TB = JB._getRecaptchaConfig()) || void 0 === TB ? void 0 : TB.emailPasswordEnabled) {
+            const BB = await pI(JB, oB, "getOobCode", !0);
+            ZB && pZ(JB, BB, ZB), await lI(JB, BB)
+          } else ZB && pZ(JB, oB, ZB), await lI(JB, oB).catch((async BB => {
             if ("auth/missing-recaptcha-token" !== BB.code) return Promise.reject(BB);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const BB = await oj(nB, dB, "getOobCode", !0);
-              zB && oz(nB, BB, zB), await lj(nB, BB)
+              const BB = await pI(JB, oB, "getOobCode", !0);
+              ZB && pZ(JB, BB, ZB), await lI(JB, BB)
             }
           }))
         }
-        async function Dz(BB, jB, zB) {
-          await Tj((0, QB.H)(BB), {
-            oobCode: jB,
-            newPassword: zB
+        async function HZ(BB, IB, ZB) {
+          await LI((0, TB.N)(BB), {
+            oobCode: IB,
+            newPassword: ZB
           })
         }
-        async function Fz(BB, jB) {
-          await async function(BB, jB) {
-            return AB(BB, "POST", "/v1/accounts:update", ZB(BB, jB))
-          }((0, QB.H)(BB), {
-            oobCode: jB
+        async function MZ(BB, IB) {
+          await async function(BB, IB) {
+            return XB(BB, "POST", "/v1/accounts:update", mB(BB, IB))
+          }((0, TB.N)(BB), {
+            oobCode: IB
           })
         }
-        async function Yz(BB, jB) {
-          const zB = (0, QB.H)(BB),
-            nB = await Tj(zB, {
-              oobCode: jB
+        async function jZ(BB, IB) {
+          const ZB = (0, TB.N)(BB),
+            JB = await LI(ZB, {
+              oobCode: IB
             }),
-            dB = nB.requestType;
-          switch (iB(dB, zB, "internal-error"), dB) {
+            oB = JB.requestType;
+          switch (OB(oB, ZB, "internal-error"), oB) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              iB(nB.newEmail, zB, "internal-error");
+              OB(JB.newEmail, ZB, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              iB(nB.mfaInfo, zB, "internal-error");
+              OB(JB.mfaInfo, ZB, "internal-error");
             default:
-              iB(nB.email, zB, "internal-error")
+              OB(JB.email, ZB, "internal-error")
           }
-          let IB = null;
-          return nB.mfaInfo && (IB = iz._fromServerResponse(Fj(zB), nB.mfaInfo)), {
+          let GB = null;
+          return JB.mfaInfo && (GB = OZ._fromServerResponse(MI(ZB), JB.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === nB.requestType ? nB.newEmail : nB.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === nB.requestType ? nB.email : nB.newEmail) || null,
-              multiFactorInfo: IB
+              email: ("VERIFY_AND_CHANGE_EMAIL" === JB.requestType ? JB.newEmail : JB.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === JB.requestType ? JB.email : JB.newEmail) || null,
+              multiFactorInfo: GB
             },
-            operation: dB
+            operation: oB
           }
         }
-        async function Vz(BB, jB) {
+        async function PZ(BB, IB) {
           const {
-            data: zB
-          } = await Yz((0, QB.H)(BB), jB);
-          return zB.email
+            data: ZB
+          } = await jZ((0, TB.N)(BB), IB);
+          return ZB.email
         }
-        async function hz(BB, jB, zB) {
-          var QB;
-          const nB = Fj(BB),
-            dB = {
+        async function RZ(BB, IB, ZB) {
+          var TB;
+          const JB = MI(BB),
+            oB = {
               returnSecureToken: !0,
-              email: jB,
-              password: zB,
+              email: IB,
+              password: ZB,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let IB;
-          if (null === (QB = nB._getRecaptchaConfig()) || void 0 === QB ? void 0 : QB.emailPasswordEnabled) {
-            const BB = await oj(nB, dB, "signUpPassword");
-            IB = Uz(nB, BB)
-          } else IB = Uz(nB, dB).catch((async BB => {
+          let GB;
+          if (null === (TB = JB._getRecaptchaConfig()) || void 0 === TB ? void 0 : TB.emailPasswordEnabled) {
+            const BB = await pI(JB, oB, "signUpPassword");
+            GB = cZ(JB, BB)
+          } else GB = cZ(JB, oB).catch((async BB => {
             if ("auth/missing-recaptcha-token" === BB.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const BB = await oj(nB, dB, "signUpPassword");
-              return Uz(nB, BB)
+              const BB = await pI(JB, oB, "signUpPassword");
+              return cZ(JB, BB)
             }
             return Promise.reject(BB)
           }));
-          const NB = await IB.catch((BB => Promise.reject(BB))),
-            uB = await az._fromIdTokenResponse(nB, "signIn", NB);
-          return await nB._updateCurrentUser(uB.user), uB
+          const vB = await GB.catch((BB => Promise.reject(BB))),
+            kB = await nZ._fromIdTokenResponse(JB, "signIn", vB);
+          return await JB._updateCurrentUser(kB.user), kB
         }
 
-        function Xz(BB, jB, zB) {
-          return tz((0, QB.H)(BB), Oj.credential(jB, zB))
+        function rZ(BB, IB, ZB) {
+          return CZ((0, TB.N)(BB), SI.credential(IB, ZB))
         }
-        async function Zz(BB, jB, zB) {
-          var QB;
-          const nB = Fj(BB),
-            dB = {
+        async function mZ(BB, IB, ZB) {
+          var TB;
+          const JB = MI(BB),
+            oB = {
               requestType: "EMAIL_SIGNIN",
-              email: jB,
+              email: IB,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function IB(BB, jB) {
-            iB(jB.handleCodeInApp, nB, "argument-error"), jB && oz(nB, BB, jB)
+          function GB(BB, IB) {
+            OB(IB.handleCodeInApp, JB, "argument-error"), IB && pZ(JB, BB, IB)
           }
-          if (null === (QB = nB._getRecaptchaConfig()) || void 0 === QB ? void 0 : QB.emailPasswordEnabled) {
-            const BB = await oj(nB, dB, "getOobCode", !0);
-            IB(BB, zB), await wj(nB, BB)
-          } else IB(dB, zB), await wj(nB, dB).catch((async BB => {
+          if (null === (TB = JB._getRecaptchaConfig()) || void 0 === TB ? void 0 : TB.emailPasswordEnabled) {
+            const BB = await pI(JB, oB, "getOobCode", !0);
+            GB(BB, ZB), await AI(JB, BB)
+          } else GB(oB, ZB), await AI(JB, oB).catch((async BB => {
             if ("auth/missing-recaptcha-token" !== BB.code) return Promise.reject(BB);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const BB = await oj(nB, dB, "getOobCode", !0);
-              IB(BB, zB), await wj(nB, BB)
+              const BB = await pI(JB, oB, "getOobCode", !0);
+              GB(BB, ZB), await AI(JB, BB)
             }
           }))
         }
 
-        function Az(BB, jB) {
-          const zB = vj.parseLink(jB);
-          return "EMAIL_SIGNIN" === (null === zB || void 0 === zB ? void 0 : zB.operation)
+        function XZ(BB, IB) {
+          const ZB = KI.parseLink(IB);
+          return "EMAIL_SIGNIN" === (null === ZB || void 0 === ZB ? void 0 : ZB.operation)
         }
-        async function Tz(BB, jB, zB) {
-          const nB = (0, QB.H)(BB),
-            dB = Oj.credentialWithLink(jB, zB || oB());
-          return iB(dB._tenantId === (nB.tenantId || null), nB, "tenant-id-mismatch"), tz(nB, dB)
+        async function LZ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB),
+            oB = SI.credentialWithLink(IB, ZB || pB());
+          return OB(oB._tenantId === (JB.tenantId || null), JB, "tenant-id-mismatch"), CZ(JB, oB)
         }
-        async function Pz(BB, jB) {
-          const zB = {
-              identifier: jB,
-              continueUri: HB() ? oB() : "http://localhost"
+        async function eZ(BB, IB) {
+          const ZB = {
+              identifier: IB,
+              continueUri: aB() ? pB() : "http://localhost"
             },
             {
-              signinMethods: nB
-            } = await async function(BB, jB) {
-              return AB(BB, "POST", "/v1/accounts:createAuthUri", ZB(BB, jB))
-            }((0, QB.H)(BB), zB);
-          return nB || []
+              signinMethods: JB
+            } = await async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:createAuthUri", mB(BB, IB))
+            }((0, TB.N)(BB), ZB);
+          return JB || []
         }
-        async function Wz(BB, jB) {
-          const zB = (0, QB.H)(BB),
-            nB = {
+        async function uZ(BB, IB) {
+          const ZB = (0, TB.N)(BB),
+            JB = {
               requestType: "VERIFY_EMAIL",
               idToken: await BB.getIdToken()
             };
-          jB && oz(zB.auth, nB, jB);
+          IB && pZ(ZB.auth, JB, IB);
           const {
-            email: dB
-          } = await async function(BB, jB) {
-            return ej(BB, jB)
-          }(zB.auth, nB);
-          dB !== BB.email && await BB.reload()
+            email: oB
+          } = await async function(BB, IB) {
+            return fI(BB, IB)
+          }(ZB.auth, JB);
+          oB !== BB.email && await BB.reload()
         }
-        async function ez(BB, jB, zB) {
-          const nB = (0, QB.H)(BB),
-            dB = {
+        async function fZ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB),
+            oB = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
               idToken: await BB.getIdToken(),
-              newEmail: jB
+              newEmail: IB
             };
-          zB && oz(nB.auth, dB, zB);
+          ZB && pZ(JB.auth, oB, ZB);
           const {
-            email: IB
-          } = await async function(BB, jB) {
-            return ej(BB, jB)
-          }(nB.auth, dB);
-          IB !== BB.email && await BB.reload()
+            email: GB
+          } = await async function(BB, IB) {
+            return fI(BB, IB)
+          }(JB.auth, oB);
+          GB !== BB.email && await BB.reload()
         }
-        async function lz(BB, jB) {
+        async function lZ(BB, IB) {
           let {
-            displayName: zB,
-            photoURL: nB
-          } = jB;
-          if (void 0 === zB && void 0 === nB) return;
-          const dB = (0, QB.H)(BB),
-            IB = {
-              idToken: await dB.getIdToken(),
-              displayName: zB,
-              photoUrl: nB,
+            displayName: ZB,
+            photoURL: JB
+          } = IB;
+          if (void 0 === ZB && void 0 === JB) return;
+          const oB = (0, TB.N)(BB),
+            GB = {
+              idToken: await oB.getIdToken(),
+              displayName: ZB,
+              photoUrl: JB,
               returnSecureToken: !0
             },
-            NB = await bB(dB, async function(BB, jB) {
-              return AB(BB, "POST", "/v1/accounts:update", jB)
-            }(dB.auth, IB));
-          dB.displayName = NB.displayName || null, dB.photoURL = NB.photoUrl || null;
-          const uB = dB.providerData.find((BB => {
+            vB = await DB(oB, async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:update", IB)
+            }(oB.auth, GB));
+          oB.displayName = vB.displayName || null, oB.photoURL = vB.photoUrl || null;
+          const kB = oB.providerData.find((BB => {
             let {
-              providerId: jB
+              providerId: IB
             } = BB;
-            return "password" === jB
+            return "password" === IB
           }));
-          uB && (uB.displayName = dB.displayName, uB.photoURL = dB.photoURL), await dB._updateTokensIfNecessary(NB)
+          kB && (kB.displayName = oB.displayName, kB.photoURL = oB.photoURL), await oB._updateTokensIfNecessary(vB)
         }
 
-        function wz(BB, jB) {
-          return Kz((0, QB.H)(BB), jB, null)
+        function AZ(BB, IB) {
+          return bZ((0, TB.N)(BB), IB, null)
         }
 
-        function xz(BB, jB) {
-          return Kz((0, QB.H)(BB), null, jB)
+        function tZ(BB, IB) {
+          return bZ((0, TB.N)(BB), null, IB)
         }
-        async function Kz(BB, jB, zB) {
+        async function bZ(BB, IB, ZB) {
           const {
-            auth: QB
-          } = BB, nB = {
+            auth: TB
+          } = BB, JB = {
             idToken: await BB.getIdToken(),
             returnSecureToken: !0
           };
-          jB && (nB.email = jB), zB && (nB.password = zB);
-          const dB = await bB(BB, Pj(QB, nB));
-          await BB._updateTokensIfNecessary(dB, !0)
+          IB && (JB.email = IB), ZB && (JB.password = ZB);
+          const oB = await DB(BB, eI(TB, JB));
+          await BB._updateTokensIfNecessary(oB, !0)
         }
-        class Cz {
-          constructor(BB, jB) {
-            let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = BB, this.providerId = jB, this.profile = zB
+        class xZ {
+          constructor(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = BB, this.providerId = IB, this.profile = ZB
           }
         }
-        class cz extends Cz {
-          constructor(BB, jB, zB, QB) {
-            super(BB, jB, zB), this.username = QB
+        class EZ extends xZ {
+          constructor(BB, IB, ZB, TB) {
+            super(BB, IB, ZB), this.username = TB
           }
         }
-        class bz extends Cz {
-          constructor(BB, jB) {
-            super(BB, "facebook.com", jB)
+        class DZ extends xZ {
+          constructor(BB, IB) {
+            super(BB, "facebook.com", IB)
           }
         }
-        class vz extends cz {
-          constructor(BB, jB) {
-            super(BB, "github.com", jB, "string" === typeof(null === jB || void 0 === jB ? void 0 : jB.login) ? null === jB || void 0 === jB ? void 0 : jB.login : null)
+        class KZ extends EZ {
+          constructor(BB, IB) {
+            super(BB, "github.com", IB, "string" === typeof(null === IB || void 0 === IB ? void 0 : IB.login) ? null === IB || void 0 === IB ? void 0 : IB.login : null)
           }
         }
-        class Rz extends Cz {
-          constructor(BB, jB) {
-            super(BB, "google.com", jB)
+        class VZ extends xZ {
+          constructor(BB, IB) {
+            super(BB, "google.com", IB)
           }
         }
-        class Oz extends cz {
-          constructor(BB, jB, zB) {
-            super(BB, "twitter.com", jB, zB)
+        class SZ extends EZ {
+          constructor(BB, IB, ZB) {
+            super(BB, "twitter.com", IB, ZB)
           }
         }
 
-        function BQ(BB) {
+        function BT(BB) {
           const {
-            user: jB,
-            _tokenResponse: zB
+            user: IB,
+            _tokenResponse: ZB
           } = BB;
-          return jB.isAnonymous && !zB ? {
+          return IB.isAnonymous && !ZB ? {
             providerId: null,
             isNewUser: !1,
             profile: null
           } : function(BB) {
-            var jB, zB;
+            var IB, ZB;
             if (!BB) return null;
             const {
-              providerId: QB
-            } = BB, nB = BB.rawUserInfo ? JSON.parse(BB.rawUserInfo) : {}, dB = BB.isNewUser || "identitytoolkit#SignupNewUserResponse" === BB.kind;
-            if (!QB && (null === BB || void 0 === BB ? void 0 : BB.idToken)) {
-              const QB = null === (zB = null === (jB = cB(BB.idToken)) || void 0 === jB ? void 0 : jB.firebase) || void 0 === zB ? void 0 : zB.sign_in_provider;
-              if (QB) return new Cz(dB, "anonymous" !== QB && "custom" !== QB ? QB : null)
+              providerId: TB
+            } = BB, JB = BB.rawUserInfo ? JSON.parse(BB.rawUserInfo) : {}, oB = BB.isNewUser || "identitytoolkit#SignupNewUserResponse" === BB.kind;
+            if (!TB && (null === BB || void 0 === BB ? void 0 : BB.idToken)) {
+              const TB = null === (ZB = null === (IB = EB(BB.idToken)) || void 0 === IB ? void 0 : IB.firebase) || void 0 === ZB ? void 0 : ZB.sign_in_provider;
+              if (TB) return new xZ(oB, "anonymous" !== TB && "custom" !== TB ? TB : null)
             }
-            if (!QB) return null;
-            switch (QB) {
+            if (!TB) return null;
+            switch (TB) {
               case "facebook.com":
-                return new bz(dB, nB);
+                return new DZ(oB, JB);
               case "github.com":
-                return new vz(dB, nB);
+                return new KZ(oB, JB);
               case "google.com":
-                return new Rz(dB, nB);
+                return new VZ(oB, JB);
               case "twitter.com":
-                return new Oz(dB, nB, BB.screenName || null);
+                return new SZ(oB, JB, BB.screenName || null);
               case "custom":
               case "anonymous":
-                return new Cz(dB, null);
+                return new xZ(oB, null);
               default:
-                return new Cz(dB, QB, nB)
+                return new xZ(oB, TB, JB)
             }
-          }(zB)
+          }(ZB)
         }
 
-        function jQ(BB, jB) {
-          return (0, QB.H)(BB).setPersistence(jB)
+        function IT(BB, IB) {
+          return (0, TB.N)(BB).setPersistence(IB)
         }
 
-        function zQ(BB) {
-          return Fj(BB).initializeRecaptchaConfig()
+        function ZT(BB) {
+          return MI(BB).initializeRecaptchaConfig()
         }
 
-        function QQ(BB, jB, zB, nB) {
-          return (0, QB.H)(BB).onIdTokenChanged(jB, zB, nB)
+        function TT(BB, IB, ZB, JB) {
+          return (0, TB.N)(BB).onIdTokenChanged(IB, ZB, JB)
         }
 
-        function nQ(BB, jB, zB) {
-          return (0, QB.H)(BB).beforeAuthStateChanged(jB, zB)
+        function JT(BB, IB, ZB) {
+          return (0, TB.N)(BB).beforeAuthStateChanged(IB, ZB)
         }
 
-        function dQ(BB, jB, zB, nB) {
-          return (0, QB.H)(BB).onAuthStateChanged(jB, zB, nB)
+        function oT(BB, IB, ZB, JB) {
+          return (0, TB.N)(BB).onAuthStateChanged(IB, ZB, JB)
         }
 
-        function IQ(BB) {
-          (0, QB.H)(BB).useDeviceLanguage()
+        function GT(BB) {
+          (0, TB.N)(BB).useDeviceLanguage()
         }
 
-        function NQ(BB, jB) {
-          return (0, QB.H)(BB).updateCurrentUser(jB)
+        function vT(BB, IB) {
+          return (0, TB.N)(BB).updateCurrentUser(IB)
         }
 
-        function uQ(BB) {
-          return (0, QB.H)(BB).signOut()
+        function kT(BB) {
+          return (0, TB.N)(BB).signOut()
         }
-        async function UQ(BB) {
-          return (0, QB.H)(BB).delete()
+        async function cT(BB) {
+          return (0, TB.N)(BB).delete()
         }
-        class aQ {
-          constructor(BB, jB, zB) {
-            this.type = BB, this.credential = jB, this.auth = zB
+        class nT {
+          constructor(BB, IB, ZB) {
+            this.type = BB, this.credential = IB, this.auth = ZB
           }
-          static _fromIdtoken(BB, jB) {
-            return new aQ("enroll", BB, jB)
+          static _fromIdtoken(BB, IB) {
+            return new nT("enroll", BB, IB)
           }
           static _fromMfaPendingCredential(BB) {
-            return new aQ("signin", BB)
+            return new nT("signin", BB)
           }
           toJSON() {
             const BB = "enroll" === this.type ? "idToken" : "pendingCredential";
@@ -2692,116 +2692,116 @@ export const modules = {
             }
           }
           static fromJSON(BB) {
-            var jB, zB;
+            var IB, ZB;
             if (null === BB || void 0 === BB ? void 0 : BB.multiFactorSession) {
-              if (null === (jB = BB.multiFactorSession) || void 0 === jB ? void 0 : jB.pendingCredential) return aQ._fromMfaPendingCredential(BB.multiFactorSession.pendingCredential);
-              if (null === (zB = BB.multiFactorSession) || void 0 === zB ? void 0 : zB.idToken) return aQ._fromIdtoken(BB.multiFactorSession.idToken)
+              if (null === (IB = BB.multiFactorSession) || void 0 === IB ? void 0 : IB.pendingCredential) return nT._fromMfaPendingCredential(BB.multiFactorSession.pendingCredential);
+              if (null === (ZB = BB.multiFactorSession) || void 0 === ZB ? void 0 : ZB.idToken) return nT._fromIdtoken(BB.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class pQ {
-          constructor(BB, jB, zB) {
-            this.session = BB, this.hints = jB, this.signInResolver = zB
+        class hT {
+          constructor(BB, IB, ZB) {
+            this.session = BB, this.hints = IB, this.signInResolver = ZB
           }
-          static _fromError(BB, jB) {
-            const zB = Fj(BB),
-              QB = jB.customData._serverResponse,
-              nB = (QB.mfaInfo || []).map((BB => iz._fromServerResponse(zB, BB)));
-            iB(QB.mfaPendingCredential, zB, "internal-error");
-            const dB = aQ._fromMfaPendingCredential(QB.mfaPendingCredential);
-            return new pQ(dB, nB, (async BB => {
-              const nB = await BB._process(zB, dB);
-              delete QB.mfaInfo, delete QB.mfaPendingCredential;
-              const IB = Object.assign(Object.assign({}, QB), {
-                idToken: nB.idToken,
-                refreshToken: nB.refreshToken
+          static _fromError(BB, IB) {
+            const ZB = MI(BB),
+              TB = IB.customData._serverResponse,
+              JB = (TB.mfaInfo || []).map((BB => OZ._fromServerResponse(ZB, BB)));
+            OB(TB.mfaPendingCredential, ZB, "internal-error");
+            const oB = nT._fromMfaPendingCredential(TB.mfaPendingCredential);
+            return new hT(oB, JB, (async BB => {
+              const JB = await BB._process(ZB, oB);
+              delete TB.mfaInfo, delete TB.mfaPendingCredential;
+              const GB = Object.assign(Object.assign({}, TB), {
+                idToken: JB.idToken,
+                refreshToken: JB.refreshToken
               });
-              switch (jB.operationType) {
+              switch (IB.operationType) {
                 case "signIn":
-                  const BB = await az._fromIdTokenResponse(zB, jB.operationType, IB);
-                  return await zB._updateCurrentUser(BB.user), BB;
+                  const BB = await nZ._fromIdTokenResponse(ZB, IB.operationType, GB);
+                  return await ZB._updateCurrentUser(BB.user), BB;
                 case "reauthenticate":
-                  return iB(jB.user, zB, "internal-error"), az._forOperation(jB.user, jB.operationType, IB);
+                  return OB(IB.user, ZB, "internal-error"), nZ._forOperation(IB.user, IB.operationType, GB);
                 default:
-                  gB(zB, "internal-error")
+                  dB(ZB, "internal-error")
               }
             }))
           }
           async resolveSignIn(BB) {
-            const jB = BB;
-            return this.signInResolver(jB)
+            const IB = BB;
+            return this.signInResolver(IB)
           }
         }
 
-        function rQ(BB, jB) {
-          var zB;
-          const nB = (0, QB.H)(BB),
-            dB = jB;
-          return iB(jB.customData.operationType, nB, "argument-error"), iB(null === (zB = dB.customData._serverResponse) || void 0 === zB ? void 0 : zB.mfaPendingCredential, nB, "argument-error"), pQ._fromError(nB, dB)
+        function zT(BB, IB) {
+          var ZB;
+          const JB = (0, TB.N)(BB),
+            oB = IB;
+          return OB(IB.customData.operationType, JB, "argument-error"), OB(null === (ZB = oB.customData._serverResponse) || void 0 === ZB ? void 0 : ZB.mfaPendingCredential, JB, "argument-error"), hT._fromError(JB, oB)
         }
-        class sQ {
+        class FT {
           constructor(BB) {
-            this.user = BB, this.enrolledFactors = [], BB._onReload((jB => {
-              jB.mfaInfo && (this.enrolledFactors = jB.mfaInfo.map((jB => iz._fromServerResponse(BB.auth, jB))))
+            this.user = BB, this.enrolledFactors = [], BB._onReload((IB => {
+              IB.mfaInfo && (this.enrolledFactors = IB.mfaInfo.map((IB => OZ._fromServerResponse(BB.auth, IB))))
             }))
           }
           static _fromUser(BB) {
-            return new sQ(BB)
+            return new FT(BB)
           }
           async getSession() {
-            return aQ._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return nT._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(BB, jB) {
-            const zB = BB,
-              QB = await this.getSession(),
-              nB = await bB(this.user, zB._process(this.user.auth, QB, jB));
-            return await this.user._updateTokensIfNecessary(nB), this.user.reload()
+          async enroll(BB, IB) {
+            const ZB = BB,
+              TB = await this.getSession(),
+              JB = await DB(this.user, ZB._process(this.user.auth, TB, IB));
+            return await this.user._updateTokensIfNecessary(JB), this.user.reload()
           }
           async unenroll(BB) {
-            const jB = "string" === typeof BB ? BB : BB.uid,
-              zB = await this.user.getIdToken();
+            const IB = "string" === typeof BB ? BB : BB.uid,
+              ZB = await this.user.getIdToken();
             try {
-              const BB = await bB(this.user, (QB = this.user.auth, nB = {
-                idToken: zB,
-                mfaEnrollmentId: jB
-              }, AB(QB, "POST", "/v2/accounts/mfaEnrollment:withdraw", ZB(QB, nB))));
+              const BB = await DB(this.user, (TB = this.user.auth, JB = {
+                idToken: ZB,
+                mfaEnrollmentId: IB
+              }, XB(TB, "POST", "/v2/accounts/mfaEnrollment:withdraw", mB(TB, JB))));
               this.enrolledFactors = this.enrolledFactors.filter((BB => {
                 let {
-                  uid: zB
+                  uid: ZB
                 } = BB;
-                return zB !== jB
+                return ZB !== IB
               })), await this.user._updateTokensIfNecessary(BB), await this.user.reload()
-            } catch (dB) {
-              throw dB
+            } catch (oB) {
+              throw oB
             }
-            var QB, nB
+            var TB, JB
           }
         }
-        const JQ = new WeakMap;
+        const NT = new WeakMap;
 
-        function mQ(BB) {
-          const jB = (0, QB.H)(BB);
-          return JQ.has(jB) || JQ.set(jB, sQ._fromUser(jB)), JQ.get(jB)
+        function gT(BB) {
+          const IB = (0, TB.N)(BB);
+          return NT.has(IB) || NT.set(IB, FT._fromUser(IB)), NT.get(IB)
         }
-        const yQ = "__sak";
-        class kQ {
-          constructor(BB, jB) {
-            this.storageRetriever = BB, this.type = jB
+        const qT = "__sak";
+        class yT {
+          constructor(BB, IB) {
+            this.storageRetriever = BB, this.type = IB
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(yQ, "1"), this.storage.removeItem(yQ), Promise.resolve(!0)) : Promise.resolve(!1)
+              return this.storage ? (this.storage.setItem(qT, "1"), this.storage.removeItem(qT), Promise.resolve(!0)) : Promise.resolve(!1)
             } catch (BB) {
               return Promise.resolve(!1)
             }
           }
-          _set(BB, jB) {
-            return this.storage.setItem(BB, JSON.stringify(jB)), Promise.resolve()
+          _set(BB, IB) {
+            return this.storage.setItem(BB, JSON.stringify(IB)), Promise.resolve()
           }
           _get(BB) {
-            const jB = this.storage.getItem(BB);
-            return Promise.resolve(jB ? JSON.parse(jB) : null)
+            const IB = this.storage.getItem(BB);
+            return Promise.resolve(IB ? JSON.parse(IB) : null)
           }
           _remove(BB) {
             return this.storage.removeItem(BB), Promise.resolve()
@@ -2810,57 +2810,57 @@ export const modules = {
             return this.storageRetriever()
           }
         }
-        class GQ extends kQ {
+        class UT extends yT {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (BB, jB) => this.onStorageEvent(BB, jB), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const BB = (0, QB.J)();
-              return rj(BB) || Gj(BB)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (BB, IB) => this.onStorageEvent(BB, IB), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const BB = (0, TB.P)();
+              return zI(BB) || UI(BB)
             }() && function() {
               try {
                 return !(!window || window === window.top)
               } catch (BB) {
                 return !1
               }
-            }(), this.fallbackToPolling = Lj(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = WI(), this._shouldAllowMigration = !0
           }
           forAllChangedKeys(BB) {
-            for (const jB of Object.keys(this.listeners)) {
-              const zB = this.storage.getItem(jB),
-                QB = this.localCache[jB];
-              zB !== QB && BB(jB, QB, zB)
+            for (const IB of Object.keys(this.listeners)) {
+              const ZB = this.storage.getItem(IB),
+                TB = this.localCache[IB];
+              ZB !== TB && BB(IB, TB, ZB)
             }
           }
           onStorageEvent(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!BB.key) return void this.forAllChangedKeys(((BB, jB, zB) => {
-              this.notifyListeners(BB, zB)
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!BB.key) return void this.forAllChangedKeys(((BB, IB, ZB) => {
+              this.notifyListeners(BB, ZB)
             }));
-            const zB = BB.key;
-            if (jB ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const QB = this.storage.getItem(zB);
-              if (BB.newValue !== QB) null !== BB.newValue ? this.storage.setItem(zB, BB.newValue) : this.storage.removeItem(zB);
-              else if (this.localCache[zB] === BB.newValue && !jB) return
+            const ZB = BB.key;
+            if (IB ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const TB = this.storage.getItem(ZB);
+              if (BB.newValue !== TB) null !== BB.newValue ? this.storage.setItem(ZB, BB.newValue) : this.storage.removeItem(ZB);
+              else if (this.localCache[ZB] === BB.newValue && !IB) return
             }
-            const nB = () => {
-                const BB = this.storage.getItem(zB);
-                (jB || this.localCache[zB] !== BB) && this.notifyListeners(zB, BB)
+            const JB = () => {
+                const BB = this.storage.getItem(ZB);
+                (IB || this.localCache[ZB] !== BB) && this.notifyListeners(ZB, BB)
               },
-              dB = this.storage.getItem(zB);
-            (0, QB.O)() && 10 === document.documentMode && dB !== BB.newValue && BB.newValue !== BB.oldValue ? setTimeout(nB, 10) : nB()
+              oB = this.storage.getItem(ZB);
+            (0, TB.W)() && 10 === document.documentMode && oB !== BB.newValue && BB.newValue !== BB.oldValue ? setTimeout(JB, 10) : JB()
           }
-          notifyListeners(BB, jB) {
-            this.localCache[BB] = jB;
-            const zB = this.listeners[BB];
-            if (zB)
-              for (const QB of Array.from(zB)) QB(jB ? JSON.parse(jB) : jB)
+          notifyListeners(BB, IB) {
+            this.localCache[BB] = IB;
+            const ZB = this.listeners[BB];
+            if (ZB)
+              for (const TB of Array.from(ZB)) TB(IB ? JSON.parse(IB) : IB)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((BB, jB, zB) => {
+              this.forAllChangedKeys(((BB, IB, ZB) => {
                 this.onStorageEvent(new StorageEvent("storage", {
                   key: BB,
-                  oldValue: jB,
-                  newValue: zB
+                  oldValue: IB,
+                  newValue: ZB
                 }), !0)
               }))
             }), 1e3)
@@ -2874,63 +2874,63 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(BB, jB) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[BB] || (this.listeners[BB] = new Set, this.localCache[BB] = this.storage.getItem(BB)), this.listeners[BB].add(jB)
+          _addListener(BB, IB) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[BB] || (this.listeners[BB] = new Set, this.localCache[BB] = this.storage.getItem(BB)), this.listeners[BB].add(IB)
           }
-          _removeListener(BB, jB) {
-            this.listeners[BB] && (this.listeners[BB].delete(jB), 0 === this.listeners[BB].size && delete this.listeners[BB]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(BB, IB) {
+            this.listeners[BB] && (this.listeners[BB].delete(IB), 0 === this.listeners[BB].size && delete this.listeners[BB]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(BB, jB) {
-            await super._set(BB, jB), this.localCache[BB] = JSON.stringify(jB)
+          async _set(BB, IB) {
+            await super._set(BB, IB), this.localCache[BB] = JSON.stringify(IB)
           }
           async _get(BB) {
-            const jB = await super._get(BB);
-            return this.localCache[BB] = JSON.stringify(jB), jB
+            const IB = await super._get(BB);
+            return this.localCache[BB] = JSON.stringify(IB), IB
           }
           async _remove(BB) {
             await super._remove(BB), delete this.localCache[BB]
           }
         }
-        GQ.type = "LOCAL";
-        const LQ = GQ;
-        class gQ extends kQ {
+        UT.type = "LOCAL";
+        const WT = UT;
+        class dT extends yT {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(BB, jB) {}
-          _removeListener(BB, jB) {}
+          _addListener(BB, IB) {}
+          _removeListener(BB, IB) {}
         }
-        gQ.type = "SESSION";
-        const tQ = gQ;
-        class SQ {
+        dT.type = "SESSION";
+        const CT = dT;
+        class QT {
           constructor(BB) {
             this.eventTarget = BB, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
           static _getInstance(BB) {
-            const jB = this.receivers.find((jB => jB.isListeningto(BB)));
-            if (jB) return jB;
-            const zB = new SQ(BB);
-            return this.receivers.push(zB), zB
+            const IB = this.receivers.find((IB => IB.isListeningto(BB)));
+            if (IB) return IB;
+            const ZB = new QT(BB);
+            return this.receivers.push(ZB), ZB
           }
           isListeningto(BB) {
             return this.eventTarget === BB
           }
           async handleEvent(BB) {
-            const jB = BB,
+            const IB = BB,
               {
-                eventId: zB,
-                eventType: QB,
-                data: nB
-              } = jB.data,
-              dB = this.handlersMap[QB];
-            if (!(null === dB || void 0 === dB ? void 0 : dB.size)) return;
-            jB.ports[0].postMessage({
+                eventId: ZB,
+                eventType: TB,
+                data: JB
+              } = IB.data,
+              oB = this.handlersMap[TB];
+            if (!(null === oB || void 0 === oB ? void 0 : oB.size)) return;
+            IB.ports[0].postMessage({
               status: "ack",
-              eventId: zB,
-              eventType: QB
+              eventId: ZB,
+              eventType: TB
             });
-            const IB = Array.from(dB).map((async BB => BB(jB.origin, nB))),
-              NB = await
+            const GB = Array.from(oB).map((async BB => BB(IB.origin, JB))),
+              vB = await
             function(BB) {
               return Promise.all(BB.map((async BB => {
                 try {
@@ -2938,175 +2938,175 @@ export const modules = {
                     fulfilled: !0,
                     value: await BB
                   }
-                } catch (jB) {
+                } catch (IB) {
                   return {
                     fulfilled: !1,
-                    reason: jB
+                    reason: IB
                   }
                 }
               })))
-            }(IB);
-            jB.ports[0].postMessage({
+            }(GB);
+            IB.ports[0].postMessage({
               status: "done",
-              eventId: zB,
-              eventType: QB,
-              response: NB
+              eventId: ZB,
+              eventType: TB,
+              response: vB
             })
           }
-          _subscribe(BB, jB) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[BB] || (this.handlersMap[BB] = new Set), this.handlersMap[BB].add(jB)
+          _subscribe(BB, IB) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[BB] || (this.handlersMap[BB] = new Set), this.handlersMap[BB].add(IB)
           }
-          _unsubscribe(BB, jB) {
-            this.handlersMap[BB] && jB && this.handlersMap[BB].delete(jB), jB && 0 !== this.handlersMap[BB].size || delete this.handlersMap[BB], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(BB, IB) {
+            this.handlersMap[BB] && IB && this.handlersMap[BB].delete(IB), IB && 0 !== this.handlersMap[BB].size || delete this.handlersMap[BB], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function MQ() {
+        function sT() {
           let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            zB = "";
-          for (let QB = 0; QB < jB; QB++) zB += Math.floor(10 * Math.random());
-          return BB + zB
+            IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            ZB = "";
+          for (let TB = 0; TB < IB; TB++) ZB += Math.floor(10 * Math.random());
+          return BB + ZB
         }
-        SQ.receivers = [];
-        class EQ {
+        QT.receivers = [];
+        class wT {
           constructor(BB) {
             this.target = BB, this.handlers = new Set
           }
           removeMessageHandler(BB) {
-            BB.messageChannel && (BB.messageChannel.port1.removeEventListener("message", BB.hG), BB.messageChannel.port1.close()), this.handlers.delete(BB)
+            BB.messageChannel && (BB.messageChannel.port1.removeEventListener("message", BB.rU), BB.messageChannel.port1.close()), this.handlers.delete(BB)
           }
-          async _send(BB, jB) {
-            let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const QB = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!QB) throw new Error("connection_unavailable");
-            let nB, dB;
-            return new Promise(((IB, NB) => {
-              const uB = MQ("", 20);
-              QB.port1.start();
-              const UB = setTimeout((() => {
-                NB(new Error("unsupported_event"))
-              }), zB);
-              dB = {
-                messageChannel: QB,
-                hG(BB) {
-                  const jB = BB;
-                  if (jB.data.eventId === uB) switch (jB.data.status) {
+          async _send(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const TB = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!TB) throw new Error("connection_unavailable");
+            let JB, oB;
+            return new Promise(((GB, vB) => {
+              const kB = sT("", 20);
+              TB.port1.start();
+              const cB = setTimeout((() => {
+                vB(new Error("unsupported_event"))
+              }), ZB);
+              oB = {
+                messageChannel: TB,
+                rU(BB) {
+                  const IB = BB;
+                  if (IB.data.eventId === kB) switch (IB.data.status) {
                     case "ack":
-                      clearTimeout(UB), nB = setTimeout((() => {
-                        NB(new Error("timeout"))
+                      clearTimeout(cB), JB = setTimeout((() => {
+                        vB(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(nB), IB(jB.data.response);
+                      clearTimeout(JB), GB(IB.data.response);
                       break;
                     default:
-                      clearTimeout(UB), clearTimeout(nB), NB(new Error("invalid_response"))
+                      clearTimeout(cB), clearTimeout(JB), vB(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(dB), QB.port1.addEventListener("message", dB.hG), this.target.postMessage({
+              }, this.handlers.add(oB), TB.port1.addEventListener("message", oB.rU), this.target.postMessage({
                 eventType: BB,
-                eventId: uB,
-                data: jB
-              }, [QB.port2])
+                eventId: kB,
+                data: IB
+              }, [TB.port2])
             })).finally((() => {
-              dB && this.removeMessageHandler(dB)
+              oB && this.removeMessageHandler(oB)
             }))
           }
         }
 
-        function iQ() {
+        function OT() {
           return window
         }
 
-        function qQ() {
-          return "undefined" !== typeof iQ().WorkerGlobalScope && "function" === typeof iQ().importScripts
+        function YT() {
+          return "undefined" !== typeof OT().WorkerGlobalScope && "function" === typeof OT().importScripts
         }
-        const fQ = "firebaseLocalStorageDb",
-          oQ = "firebaseLocalStorage",
-          HQ = "fbase_key";
-        class DQ {
+        const iT = "firebaseLocalStorageDb",
+          pT = "firebaseLocalStorage",
+          aT = "fbase_key";
+        class HT {
           constructor(BB) {
             this.request = BB
           }
           toPromise() {
-            return new Promise(((BB, jB) => {
+            return new Promise(((BB, IB) => {
               this.request.addEventListener("success", (() => {
                 BB(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                jB(this.request.error)
+                IB(this.request.error)
               }))
             }))
           }
         }
 
-        function FQ(BB, jB) {
-          return BB.transaction([oQ], jB ? "readwrite" : "readonly").objectStore(oQ)
+        function MT(BB, IB) {
+          return BB.transaction([pT], IB ? "readwrite" : "readonly").objectStore(pT)
         }
 
-        function YQ() {
-          const BB = indexedDB.open(fQ, 1);
-          return new Promise(((jB, zB) => {
+        function jT() {
+          const BB = indexedDB.open(iT, 1);
+          return new Promise(((IB, ZB) => {
             BB.addEventListener("error", (() => {
-              zB(BB.error)
+              ZB(BB.error)
             })), BB.addEventListener("upgradeneeded", (() => {
-              const jB = BB.result;
+              const IB = BB.result;
               try {
-                jB.createObjectStore(oQ, {
-                  keyPath: HQ
+                IB.createObjectStore(pT, {
+                  keyPath: aT
                 })
-              } catch (QB) {
-                zB(QB)
+              } catch (TB) {
+                ZB(TB)
               }
             })), BB.addEventListener("success", (async () => {
-              const zB = BB.result;
-              zB.objectStoreNames.contains(oQ) ? jB(zB) : (zB.close(), await
+              const ZB = BB.result;
+              ZB.objectStoreNames.contains(pT) ? IB(ZB) : (ZB.close(), await
                 function() {
-                  const BB = indexedDB.deleteDatabase(fQ);
-                  return new DQ(BB).toPromise()
-                }(), jB(await YQ()))
+                  const BB = indexedDB.deleteDatabase(iT);
+                  return new HT(BB).toPromise()
+                }(), IB(await jT()))
             }))
           }))
         }
-        async function VQ(BB, jB, zB) {
-          const QB = FQ(BB, !0).put({
-            [HQ]: jB,
-            value: zB
+        async function PT(BB, IB, ZB) {
+          const TB = MT(BB, !0).put({
+            [aT]: IB,
+            value: ZB
           });
-          return new DQ(QB).toPromise()
+          return new HT(TB).toPromise()
         }
 
-        function hQ(BB, jB) {
-          const zB = FQ(BB, !0).delete(jB);
-          return new DQ(zB).toPromise()
+        function RT(BB, IB) {
+          const ZB = MT(BB, !0).delete(IB);
+          return new HT(ZB).toPromise()
         }
-        class XQ {
+        class rT {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await YQ()), this.db
+            return this.db || (this.db = await jT()), this.db
           }
           async _withRetries(BB) {
-            let jB = 0;
+            let IB = 0;
             for (;;) try {
-              const jB = await this._openDb();
-              return await BB(jB)
-            } catch (zB) {
-              if (jB++ > 3) throw zB;
+              const IB = await this._openDb();
+              return await BB(IB)
+            } catch (ZB) {
+              if (IB++ > 3) throw ZB;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return qQ() ? this.initializeReceiver() : this.initializeSender()
+            return YT() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = SQ._getInstance(qQ() ? self : null), this.receiver._subscribe("keyChanged", (async (BB, jB) => ({
-              keyProcessed: (await this._poll()).includes(jB.key)
-            }))), this.receiver._subscribe("ping", (async (BB, jB) => ["keyChanged"]))
+            this.receiver = QT._getInstance(YT() ? self : null), this.receiver._subscribe("keyChanged", (async (BB, IB) => ({
+              keyProcessed: (await this._poll()).includes(IB.key)
+            }))), this.receiver._subscribe("ping", (async (BB, IB) => ["keyChanged"]))
           }
           async initializeSender() {
-            var BB, jB;
+            var BB, IB;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
@@ -3115,9 +3115,9 @@ export const modules = {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new EQ(this.activeServiceWorker);
-            const zB = await this.sender._send("ping", {}, 800);
-            zB && (null === (BB = zB[0]) || void 0 === BB ? void 0 : BB.fulfilled) && (null === (jB = zB[0]) || void 0 === jB ? void 0 : jB.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new wT(this.activeServiceWorker);
+            const ZB = await this.sender._send("ping", {}, 800);
+            ZB && (null === (BB = ZB[0]) || void 0 === BB ? void 0 : BB.fulfilled) && (null === (IB = ZB[0]) || void 0 === IB ? void 0 : IB.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
           async notifyServiceWorker(BB) {
             if (this.sender && this.activeServiceWorker && function() {
@@ -3127,13 +3127,13 @@ export const modules = {
               await this.sender._send("keyChanged", {
                 key: BB
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (jB) {}
+            } catch (IB) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const BB = await YQ();
-              return await VQ(BB, yQ, "1"), await hQ(BB, yQ), !0
+              const BB = await jT();
+              return await PT(BB, qT, "1"), await RT(BB, qT), !0
             } catch (BB) {}
             return !1
           }
@@ -3145,42 +3145,42 @@ export const modules = {
               this.pendingWrites--
             }
           }
-          async _set(BB, jB) {
-            return this._withPendingWrite((async () => (await this._withRetries((zB => VQ(zB, BB, jB))), this.localCache[BB] = jB, this.notifyServiceWorker(BB))))
+          async _set(BB, IB) {
+            return this._withPendingWrite((async () => (await this._withRetries((ZB => PT(ZB, BB, IB))), this.localCache[BB] = IB, this.notifyServiceWorker(BB))))
           }
           async _get(BB) {
-            const jB = await this._withRetries((jB => async function(BB, jB) {
-              const zB = FQ(BB, !1).get(jB),
-                QB = await new DQ(zB).toPromise();
-              return void 0 === QB ? null : QB.value
-            }(jB, BB)));
-            return this.localCache[BB] = jB, jB
+            const IB = await this._withRetries((IB => async function(BB, IB) {
+              const ZB = MT(BB, !1).get(IB),
+                TB = await new HT(ZB).toPromise();
+              return void 0 === TB ? null : TB.value
+            }(IB, BB)));
+            return this.localCache[BB] = IB, IB
           }
           async _remove(BB) {
-            return this._withPendingWrite((async () => (await this._withRetries((jB => hQ(jB, BB))), delete this.localCache[BB], this.notifyServiceWorker(BB))))
+            return this._withPendingWrite((async () => (await this._withRetries((IB => RT(IB, BB))), delete this.localCache[BB], this.notifyServiceWorker(BB))))
           }
           async _poll() {
             const BB = await this._withRetries((BB => {
-              const jB = FQ(BB, !1).getAll();
-              return new DQ(jB).toPromise()
+              const IB = MT(BB, !1).getAll();
+              return new HT(IB).toPromise()
             }));
             if (!BB) return [];
             if (0 !== this.pendingWrites) return [];
-            const jB = [],
-              zB = new Set;
+            const IB = [],
+              ZB = new Set;
             for (const {
-                fbase_key: QB,
-                value: nB
+                fbase_key: TB,
+                value: JB
               }
-              of BB) zB.add(QB), JSON.stringify(this.localCache[QB]) !== JSON.stringify(nB) && (this.notifyListeners(QB, nB), jB.push(QB));
-            for (const QB of Object.keys(this.localCache)) this.localCache[QB] && !zB.has(QB) && (this.notifyListeners(QB, null), jB.push(QB));
-            return jB
+              of BB) ZB.add(TB), JSON.stringify(this.localCache[TB]) !== JSON.stringify(JB) && (this.notifyListeners(TB, JB), IB.push(TB));
+            for (const TB of Object.keys(this.localCache)) this.localCache[TB] && !ZB.has(TB) && (this.notifyListeners(TB, null), IB.push(TB));
+            return IB
           }
-          notifyListeners(BB, jB) {
-            this.localCache[BB] = jB;
-            const zB = this.listeners[BB];
-            if (zB)
-              for (const QB of Array.from(zB)) QB(jB)
+          notifyListeners(BB, IB) {
+            this.localCache[BB] = IB;
+            const ZB = this.listeners[BB];
+            if (ZB)
+              for (const TB of Array.from(ZB)) TB(IB)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(BB, jB) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[BB] || (this.listeners[BB] = new Set, this._get(BB)), this.listeners[BB].add(jB)
+          _addListener(BB, IB) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[BB] || (this.listeners[BB] = new Set, this._get(BB)), this.listeners[BB].add(IB)
           }
-          _removeListener(BB, jB) {
-            this.listeners[BB] && (this.listeners[BB].delete(jB), 0 === this.listeners[BB].size && delete this.listeners[BB]), 0 === Object.keys(this.listeners).length && this.stopPolling()
+          _removeListener(BB, IB) {
+            this.listeners[BB] && (this.listeners[BB].delete(IB), 0 === this.listeners[BB].size && delete this.listeners[BB]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        XQ.type = "LOCAL";
-        const ZQ = XQ;
-        const AQ = 1e12;
-        class TQ {
+        rT.type = "LOCAL";
+        const mT = rT;
+        const XT = 1e12;
+        class LT {
           constructor(BB) {
-            this.auth = BB, this.counter = AQ, this._widgets = new Map
+            this.auth = BB, this.counter = XT, this._widgets = new Map
           }
-          render(BB, jB) {
-            const zB = this.counter;
-            return this._widgets.set(zB, new PQ(BB, this.auth.name, jB || {})), this.counter++, zB
+          render(BB, IB) {
+            const ZB = this.counter;
+            return this._widgets.set(ZB, new eT(BB, this.auth.name, IB || {})), this.counter++, ZB
           }
           reset(BB) {
-            var jB;
-            const zB = BB || AQ;
-            null === (jB = this._widgets.get(zB)) || void 0 === jB || jB.delete(), this._widgets.delete(zB)
+            var IB;
+            const ZB = BB || XT;
+            null === (IB = this._widgets.get(ZB)) || void 0 === IB || IB.delete(), this._widgets.delete(ZB)
           }
           getResponse(BB) {
-            var jB;
-            const zB = BB || AQ;
-            return (null === (jB = this._widgets.get(zB)) || void 0 === jB ? void 0 : jB.getResponse()) || ""
+            var IB;
+            const ZB = BB || XT;
+            return (null === (IB = this._widgets.get(ZB)) || void 0 === IB ? void 0 : IB.getResponse()) || ""
           }
           async execute(BB) {
-            var jB;
-            const zB = BB || AQ;
-            return null === (jB = this._widgets.get(zB)) || void 0 === jB || jB.execute(), ""
+            var IB;
+            const ZB = BB || XT;
+            return null === (IB = this._widgets.get(ZB)) || void 0 === IB || IB.execute(), ""
           }
         }
-        class PQ {
-          constructor(BB, jB, zB) {
-            this.params = zB, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        class eT {
+          constructor(BB, IB, ZB) {
+            this.params = ZB, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const QB = "string" === typeof BB ? document.getElementById(BB) : BB;
-            iB(QB, "argument-error", {
-              appName: jB
-            }), this.container = QB, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const TB = "string" === typeof BB ? document.getElementById(BB) : BB;
+            OB(TB, "argument-error", {
+              appName: IB
+            }), this.container = TB, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3241,22 +3241,22 @@ export const modules = {
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
               this.responseToken = function(BB) {
-                const jB = [],
-                  zB = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let QB = 0; QB < BB; QB++) jB.push(zB.charAt(Math.floor(Math.random() * zB.length)));
-                return jB.join("")
+                const IB = [],
+                  ZB = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let TB = 0; TB < BB; TB++) IB.push(ZB.charAt(Math.floor(Math.random() * ZB.length)));
+                return IB.join("")
               }(50);
               const {
                 callback: BB,
-                "expired-callback": jB
+                "expired-callback": IB
               } = this.params;
               if (BB) try {
                 BB(this.responseToken)
-              } catch (zB) {}
+              } catch (ZB) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, jB) try {
-                  jB()
-                } catch (zB) {}
+                if (this.timerId = null, this.responseToken = null, IB) try {
+                  IB()
+                } catch (ZB) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,33 +3265,33 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const WQ = qj("rcb"),
-          eQ = new FB(3e4, 6e4);
-        class lQ {
+        const uT = YI("rcb"),
+          fT = new MB(3e4, 6e4);
+        class lT {
           constructor() {
             var BB;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (BB = iQ().grecaptcha) || void 0 === BB ? void 0 : BB.render)
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (BB = OT().grecaptcha) || void 0 === BB ? void 0 : BB.render)
           }
           load(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return iB(function(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return OB(function(BB) {
               return BB.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(BB)
-            }(jB), BB, "argument-error"), this.shouldResolveImmediately(jB) && Sj(iQ().grecaptcha) ? Promise.resolve(iQ().grecaptcha) : new Promise(((zB, nB) => {
-              const dB = iQ().setTimeout((() => {
-                nB(tB(BB, "network-request-failed"))
-              }), eQ.get());
-              iQ()[WQ] = () => {
-                iQ().clearTimeout(dB), delete iQ()[WQ];
-                const QB = iQ().grecaptcha;
-                if (!QB || !Sj(QB)) return void nB(tB(BB, "internal-error"));
-                const IB = QB.render;
-                QB.render = (BB, jB) => {
-                  const zB = IB(BB, jB);
-                  return this.counter++, zB
-                }, this.hostLanguage = jB, zB(QB)
+            }(IB), BB, "argument-error"), this.shouldResolveImmediately(IB) && QI(OT().grecaptcha) ? Promise.resolve(OT().grecaptcha) : new Promise(((ZB, JB) => {
+              const oB = OT().setTimeout((() => {
+                JB(CB(BB, "network-request-failed"))
+              }), fT.get());
+              OT()[uT] = () => {
+                OT().clearTimeout(oB), delete OT()[uT];
+                const TB = OT().grecaptcha;
+                if (!TB || !QI(TB)) return void JB(CB(BB, "internal-error"));
+                const GB = TB.render;
+                TB.render = (BB, IB) => {
+                  const ZB = GB(BB, IB);
+                  return this.counter++, ZB
+                }, this.hostLanguage = IB, ZB(TB)
               };
-              ij(`https://www.google.com/recaptcha/api.js??${(0,QB.$)({onload:WQ,render:"explicit",hl:jB})}`).catch((() => {
-                clearTimeout(dB), nB(tB(BB, "internal-error"))
+              OI(`https://www.google.com/recaptcha/api.js??${(0,TB.db)({onload:uT,render:"explicit",hl:IB})}`).catch((() => {
+                clearTimeout(oB), JB(CB(BB, "internal-error"))
               }))
             }))
           }
@@ -3299,39 +3299,39 @@ export const modules = {
             this.counter--
           }
           shouldResolveImmediately(BB) {
-            var jB;
-            return !!(null === (jB = iQ().grecaptcha) || void 0 === jB ? void 0 : jB.render) && (BB === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+            var IB;
+            return !!(null === (IB = OT().grecaptcha) || void 0 === IB ? void 0 : IB.render) && (BB === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class wQ {
+        class AT {
           async load(BB) {
-            return new TQ(BB)
+            return new LT(BB)
           }
           clearedOneInstance() {}
         }
-        const xQ = "recaptcha",
-          KQ = {
+        const tT = "recaptcha",
+          bT = {
             theme: "light",
             type: "image"
           };
-        class CQ {
+        class xT {
           constructor(BB) {
-            let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, KQ),
-              zB = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = jB, this.type = xQ, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = Fj(zB), this.isInvisible = "invisible" === this.parameters.size, iB("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const QB = "string" === typeof BB ? document.getElementById(BB) : BB;
-            iB(QB, this.auth, "argument-error"), this.container = QB, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new wQ : new lQ, this.validateStartingState()
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, bT),
+              ZB = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = IB, this.type = tT, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = MI(ZB), this.isInvisible = "invisible" === this.parameters.size, OB("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const TB = "string" === typeof BB ? document.getElementById(BB) : BB;
+            OB(TB, this.auth, "argument-error"), this.container = TB, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new AT : new lT, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
             const BB = await this.render(),
-              jB = this.getAssertedRecaptcha(),
-              zB = jB.getResponse(BB);
-            return zB || new Promise((zB => {
-              const QB = BB => {
-                BB && (this.tokenChangeListeners.delete(QB), zB(BB))
+              IB = this.getAssertedRecaptcha(),
+              ZB = IB.getResponse(BB);
+            return ZB || new Promise((ZB => {
+              const TB = BB => {
+                BB && (this.tokenChangeListeners.delete(TB), ZB(BB))
               };
-              this.tokenChangeListeners.add(QB), this.isInvisible && jB.execute(BB)
+              this.tokenChangeListeners.add(TB), this.isInvisible && IB.execute(BB)
             }))
           }
           render() {
@@ -3353,180 +3353,180 @@ export const modules = {
             }))
           }
           validateStartingState() {
-            iB(!this.parameters.sitekey, this.auth, "argument-error"), iB(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), iB("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            OB(!this.parameters.sitekey, this.auth, "argument-error"), OB(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), OB("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
           makeTokenCallback(BB) {
-            return jB => {
-              if (this.tokenChangeListeners.forEach((BB => BB(jB))), "function" === typeof BB) BB(jB);
+            return IB => {
+              if (this.tokenChangeListeners.forEach((BB => BB(IB))), "function" === typeof BB) BB(IB);
               else if ("string" === typeof BB) {
-                const zB = iQ()[BB];
-                "function" === typeof zB && zB(jB)
+                const ZB = OT()[BB];
+                "function" === typeof ZB && ZB(IB)
               }
             }
           }
           assertNotDestroyed() {
-            iB(!this.destroyed, this.auth, "internal-error")
+            OB(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
               let BB = this.container;
               if (!this.isInvisible) {
-                const jB = document.createElement("div");
-                BB.appendChild(jB), BB = jB
+                const IB = document.createElement("div");
+                BB.appendChild(IB), BB = IB
               }
               this.widgetId = this.getAssertedRecaptcha().render(BB, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            iB(HB() && !qQ(), this.auth, "internal-error"), await
+            OB(aB() && !YT(), this.auth, "internal-error"), await
             function() {
               let BB = null;
-              return new Promise((jB => {
-                "complete" !== document.readyState ? (BB = () => jB(), window.addEventListener("load", BB)) : jB()
-              })).catch((jB => {
-                throw BB && window.removeEventListener("load", BB), jB
+              return new Promise((IB => {
+                "complete" !== document.readyState ? (BB = () => IB(), window.addEventListener("load", BB)) : IB()
+              })).catch((IB => {
+                throw BB && window.removeEventListener("load", BB), IB
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
             const BB = await async function(BB) {
-              return (await AB(BB, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+              return (await XB(BB, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            iB(BB, this.auth, "internal-error"), this.parameters.sitekey = BB
+            OB(BB, this.auth, "internal-error"), this.parameters.sitekey = BB
           }
           getAssertedRecaptcha() {
-            return iB(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return OB(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class cQ {
-          constructor(BB, jB) {
-            this.verificationId = BB, this.onConfirmation = jB
+        class ET {
+          constructor(BB, IB) {
+            this.verificationId = BB, this.onConfirmation = IB
           }
           confirm(BB) {
-            const jB = bj._fromVerification(this.verificationId, BB);
-            return this.onConfirmation(jB)
+            const IB = DI._fromVerification(this.verificationId, BB);
+            return this.onConfirmation(IB)
           }
         }
-        async function bQ(BB, jB, zB) {
-          const nB = Fj(BB),
-            dB = await OQ(nB, jB, (0, QB.H)(zB));
-          return new cQ(dB, (BB => tz(nB, BB)))
+        async function DT(BB, IB, ZB) {
+          const JB = MI(BB),
+            oB = await ST(JB, IB, (0, TB.N)(ZB));
+          return new ET(oB, (BB => CZ(JB, BB)))
         }
-        async function vQ(BB, jB, zB) {
-          const nB = (0, QB.H)(BB);
-          await Gz(!1, nB, "phone");
-          const dB = await OQ(nB.auth, jB, (0, QB.H)(zB));
-          return new cQ(dB, (BB => Sz(nB, BB)))
+        async function KT(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB);
+          await UZ(!1, JB, "phone");
+          const oB = await ST(JB.auth, IB, (0, TB.N)(ZB));
+          return new ET(oB, (BB => QZ(JB, BB)))
         }
-        async function RQ(BB, jB, zB) {
-          const nB = (0, QB.H)(BB),
-            dB = await OQ(nB.auth, jB, (0, QB.H)(zB));
-          return new cQ(dB, (BB => Mz(nB, BB)))
+        async function VT(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB),
+            oB = await ST(JB.auth, IB, (0, TB.N)(ZB));
+          return new ET(oB, (BB => sZ(JB, BB)))
         }
-        async function OQ(BB, jB, zB) {
-          var QB;
-          const nB = await zB.verify();
+        async function ST(BB, IB, ZB) {
+          var TB;
+          const JB = await ZB.verify();
           try {
-            let dB;
-            if (iB("string" === typeof nB, BB, "argument-error"), iB(zB.type === xQ, BB, "argument-error"), dB = "string" === typeof jB ? {
-                phoneNumber: jB
-              } : jB, "session" in dB) {
-              const jB = dB.session;
-              if ("phoneNumber" in dB) {
-                iB("enroll" === jB.type, BB, "internal-error");
-                const zB = await
-                function(BB, jB) {
-                  return AB(BB, "POST", "/v2/accounts/mfaEnrollment:start", ZB(BB, jB))
+            let oB;
+            if (OB("string" === typeof JB, BB, "argument-error"), OB(ZB.type === tT, BB, "argument-error"), oB = "string" === typeof IB ? {
+                phoneNumber: IB
+              } : IB, "session" in oB) {
+              const IB = oB.session;
+              if ("phoneNumber" in oB) {
+                OB("enroll" === IB.type, BB, "internal-error");
+                const ZB = await
+                function(BB, IB) {
+                  return XB(BB, "POST", "/v2/accounts/mfaEnrollment:start", mB(BB, IB))
                 }(BB, {
-                  idToken: jB.credential,
+                  idToken: IB.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: dB.phoneNumber,
-                    recaptchaToken: nB
+                    phoneNumber: oB.phoneNumber,
+                    recaptchaToken: JB
                   }
                 });
-                return zB.phoneSessionInfo.sessionInfo
+                return ZB.phoneSessionInfo.sessionInfo
               } {
-                iB("signin" === jB.type, BB, "internal-error");
-                const zB = (null === (QB = dB.multiFactorHint) || void 0 === QB ? void 0 : QB.uid) || dB.multiFactorUid;
-                iB(zB, BB, "missing-multi-factor-info");
-                const IB = await
-                function(BB, jB) {
-                  return AB(BB, "POST", "/v2/accounts/mfaSignIn:start", ZB(BB, jB))
+                OB("signin" === IB.type, BB, "internal-error");
+                const ZB = (null === (TB = oB.multiFactorHint) || void 0 === TB ? void 0 : TB.uid) || oB.multiFactorUid;
+                OB(ZB, BB, "missing-multi-factor-info");
+                const GB = await
+                function(BB, IB) {
+                  return XB(BB, "POST", "/v2/accounts/mfaSignIn:start", mB(BB, IB))
                 }(BB, {
-                  mfaPendingCredential: jB.credential,
-                  mfaEnrollmentId: zB,
+                  mfaPendingCredential: IB.credential,
+                  mfaEnrollmentId: ZB,
                   phoneSignInInfo: {
-                    recaptchaToken: nB
+                    recaptchaToken: JB
                   }
                 });
-                return IB.phoneResponseInfo.sessionInfo
+                return GB.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: jB
-              } = await async function(BB, jB) {
-                return AB(BB, "POST", "/v1/accounts:sendVerificationCode", ZB(BB, jB))
+                sessionInfo: IB
+              } = await async function(BB, IB) {
+                return XB(BB, "POST", "/v1/accounts:sendVerificationCode", mB(BB, IB))
               }(BB, {
-                phoneNumber: dB.phoneNumber,
-                recaptchaToken: nB
+                phoneNumber: oB.phoneNumber,
+                recaptchaToken: JB
               });
-              return jB
+              return IB
             }
           } finally {
-            zB._reset()
+            ZB._reset()
           }
         }
-        async function Bn(BB, jB) {
-          await kz((0, QB.H)(BB), jB)
+        async function BJ(BB, IB) {
+          await yZ((0, TB.N)(BB), IB)
         }
-        class jn {
+        class IJ {
           constructor(BB) {
-            this.providerId = jn.PROVIDER_ID, this.auth = Fj(BB)
+            this.providerId = IJ.PROVIDER_ID, this.auth = MI(BB)
           }
-          verifyPhoneNumber(BB, jB) {
-            return OQ(this.auth, BB, (0, QB.H)(jB))
+          verifyPhoneNumber(BB, IB) {
+            return ST(this.auth, BB, (0, TB.N)(IB))
           }
-          static credential(BB, jB) {
-            return bj._fromVerification(BB, jB)
+          static credential(BB, IB) {
+            return DI._fromVerification(BB, IB)
           }
           static credentialFromResult(BB) {
-            const jB = BB;
-            return jn.credentialFromTaggedObject(jB)
+            const IB = BB;
+            return IJ.credentialFromTaggedObject(IB)
           }
           static credentialFromError(BB) {
-            return jn.credentialFromTaggedObject(BB.customData || {})
+            return IJ.credentialFromTaggedObject(BB.customData || {})
           }
           static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: jB
+              _tokenResponse: IB
             } = BB;
-            if (!jB) return null;
+            if (!IB) return null;
             const {
-              phoneNumber: zB,
-              temporaryProof: QB
-            } = jB;
-            return zB && QB ? bj._fromTokenResponse(zB, QB) : null
+              phoneNumber: ZB,
+              temporaryProof: TB
+            } = IB;
+            return ZB && TB ? DI._fromTokenResponse(ZB, TB) : null
           }
         }
 
-        function zn(BB, jB) {
-          return jB ? dj(jB) : (iB(BB._popupRedirectResolver, BB, "argument-error"), BB._popupRedirectResolver)
+        function ZJ(BB, IB) {
+          return IB ? oI(IB) : (OB(BB._popupRedirectResolver, BB, "argument-error"), BB._popupRedirectResolver)
         }
-        jn.PROVIDER_ID = "phone", jn.PHONE_SIGN_IN_METHOD = "phone";
-        class Qn extends Aj {
+        IJ.PROVIDER_ID = "phone", IJ.PHONE_SIGN_IN_METHOD = "phone";
+        class TJ extends XI {
           constructor(BB) {
             super("custom", "custom"), this.params = BB
           }
           _getIdTokenResponse(BB) {
-            return Kj(BB, this._buildIdpRequest())
+            return bI(BB, this._buildIdpRequest())
           }
-          _linkToIdToken(BB, jB) {
-            return Kj(BB, this._buildIdpRequest(jB))
+          _linkToIdToken(BB, IB) {
+            return bI(BB, this._buildIdpRequest(IB))
           }
           _getReauthenticationResolver(BB) {
-            return Kj(BB, this._buildIdpRequest())
+            return bI(BB, this._buildIdpRequest())
           }
           _buildIdpRequest(BB) {
-            const jB = {
+            const IB = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,69 +3535,69 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return BB && (jB.idToken = BB), jB
+            return BB && (IB.idToken = BB), IB
           }
         }
 
-        function nn(BB) {
-          return gz(BB.auth, new Qn(BB), BB.bypassAuthState)
+        function JJ(BB) {
+          return dZ(BB.auth, new TJ(BB), BB.bypassAuthState)
         }
 
-        function dn(BB) {
+        function oJ(BB) {
           const {
-            auth: jB,
-            user: zB
+            auth: IB,
+            user: ZB
           } = BB;
-          return iB(zB, jB, "internal-error"), Lz(zB, new Qn(BB), BB.bypassAuthState)
+          return OB(ZB, IB, "internal-error"), WZ(ZB, new TJ(BB), BB.bypassAuthState)
         }
-        async function In(BB) {
+        async function GJ(BB) {
           const {
-            auth: jB,
-            user: zB
+            auth: IB,
+            user: ZB
           } = BB;
-          return iB(zB, jB, "internal-error"), kz(zB, new Qn(BB), BB.bypassAuthState)
+          return OB(ZB, IB, "internal-error"), yZ(ZB, new TJ(BB), BB.bypassAuthState)
         }
-        class Nn {
-          constructor(BB, jB, zB, QB) {
-            let nB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = BB, this.resolver = zB, this.user = QB, this.bypassAuthState = nB, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(jB) ? jB : [jB]
+        class vJ {
+          constructor(BB, IB, ZB, TB) {
+            let JB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = BB, this.resolver = ZB, this.user = TB, this.bypassAuthState = JB, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(IB) ? IB : [IB]
           }
           execute() {
-            return new Promise((async (BB, jB) => {
+            return new Promise((async (BB, IB) => {
               this.pendingPromise = {
                 resolve: BB,
-                reject: jB
+                reject: IB
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (zB) {
-                this.reject(zB)
+              } catch (ZB) {
+                this.reject(ZB)
               }
             }))
           }
           async onAuthEvent(BB) {
             const {
-              urlResponse: jB,
-              sessionId: zB,
-              postBody: QB,
-              tenantId: nB,
-              error: dB,
-              type: IB
+              urlResponse: IB,
+              sessionId: ZB,
+              postBody: TB,
+              tenantId: JB,
+              error: oB,
+              type: GB
             } = BB;
-            if (dB) return void this.reject(dB);
-            const NB = {
+            if (oB) return void this.reject(oB);
+            const vB = {
               auth: this.auth,
-              requestUri: jB,
-              sessionId: zB,
-              tenantId: nB || void 0,
-              postBody: QB || void 0,
+              requestUri: IB,
+              sessionId: ZB,
+              tenantId: JB || void 0,
+              postBody: TB || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(IB)(NB))
-            } catch (uB) {
-              this.reject(uB)
+              this.resolve(await this.getIdpTask(GB)(vB))
+            } catch (kB) {
+              this.reject(kB)
             }
           }
           onError(BB) {
@@ -3607,61 +3607,61 @@ export const modules = {
             switch (BB) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return nn;
+                return JJ;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return In;
+                return GJ;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return dn;
+                return oJ;
               default:
-                gB(this.auth, "internal-error")
+                dB(this.auth, "internal-error")
             }
           }
           resolve(BB) {
-            fB(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(BB), this.unregisterAndCleanUp()
+            iB(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(BB), this.unregisterAndCleanUp()
           }
           reject(BB) {
-            fB(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(BB), this.unregisterAndCleanUp()
+            iB(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(BB), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const un = new FB(2e3, 1e4);
-        async function Un(BB, jB, zB) {
-          const QB = Fj(BB);
-          MB(BB, jB, Bz);
-          const nB = zn(QB, zB);
-          return new rn(QB, "signInViaPopup", jB, nB).executeNotNull()
+        const kJ = new MB(2e3, 1e4);
+        async function cJ(BB, IB, ZB) {
+          const TB = MI(BB);
+          sB(BB, IB, BZ);
+          const JB = ZJ(TB, ZB);
+          return new zJ(TB, "signInViaPopup", IB, JB).executeNotNull()
         }
-        async function an(BB, jB, zB) {
-          const nB = (0, QB.H)(BB);
-          MB(nB.auth, jB, Bz);
-          const dB = zn(nB.auth, zB);
-          return new rn(nB.auth, "reauthViaPopup", jB, dB, nB).executeNotNull()
+        async function nJ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB);
+          sB(JB.auth, IB, BZ);
+          const oB = ZJ(JB.auth, ZB);
+          return new zJ(JB.auth, "reauthViaPopup", IB, oB, JB).executeNotNull()
         }
-        async function pn(BB, jB, zB) {
-          const nB = (0, QB.H)(BB);
-          MB(nB.auth, jB, Bz);
-          const dB = zn(nB.auth, zB);
-          return new rn(nB.auth, "linkViaPopup", jB, dB, nB).executeNotNull()
+        async function hJ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB);
+          sB(JB.auth, IB, BZ);
+          const oB = ZJ(JB.auth, ZB);
+          return new zJ(JB.auth, "linkViaPopup", IB, oB, JB).executeNotNull()
         }
-        class rn extends Nn {
-          constructor(BB, jB, zB, QB, nB) {
-            super(BB, jB, QB, nB), this.provider = zB, this.authWindow = null, this.pollId = null, rn.currentPopupAction && rn.currentPopupAction.cancel(), rn.currentPopupAction = this
+        class zJ extends vJ {
+          constructor(BB, IB, ZB, TB, JB) {
+            super(BB, IB, TB, JB), this.provider = ZB, this.authWindow = null, this.pollId = null, zJ.currentPopupAction && zJ.currentPopupAction.cancel(), zJ.currentPopupAction = this
           }
           async executeNotNull() {
             const BB = await this.execute();
-            return iB(BB, this.auth, "internal-error"), BB
+            return OB(BB, this.auth, "internal-error"), BB
           }
           async onExecution() {
-            fB(1 === this.filter.length, "Popup operations only handle one event");
-            const BB = MQ();
+            iB(1 === this.filter.length, "Popup operations only handle one event");
+            const BB = sT();
             this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], BB), this.authWindow.associatedEvent = BB, this.resolver._originValidation(this.auth).catch((BB => {
               this.reject(BB)
             })), this.resolver._isIframeWebStorageSupported(this.auth, (BB => {
-              BB || this.reject(tB(this.auth, "web-storage-unsupported"))
+              BB || this.reject(CB(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
@@ -3669,53 +3669,53 @@ export const modules = {
             return (null === (BB = this.authWindow) || void 0 === BB ? void 0 : BB.associatedEvent) || null
           }
           cancel() {
-            this.reject(tB(this.auth, "cancelled-popup-request"))
+            this.reject(CB(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, rn.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, zJ.currentPopupAction = null
           }
           pollUserCancellation() {
             const BB = () => {
-              var jB, zB;
-              (null === (zB = null === (jB = this.authWindow) || void 0 === jB ? void 0 : jB.window) || void 0 === zB ? void 0 : zB.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(tB(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(BB, un.get())
+              var IB, ZB;
+              (null === (ZB = null === (IB = this.authWindow) || void 0 === IB ? void 0 : IB.window) || void 0 === ZB ? void 0 : ZB.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(CB(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(BB, kJ.get())
             };
             BB()
           }
         }
-        rn.currentPopupAction = null;
-        const sn = "pendingRedirect",
-          Jn = new Map;
-        class mn extends Nn {
-          constructor(BB, jB) {
-            super(BB, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], jB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        zJ.currentPopupAction = null;
+        const FJ = "pendingRedirect",
+          NJ = new Map;
+        class gJ extends vJ {
+          constructor(BB, IB) {
+            super(BB, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], IB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let BB = Jn.get(this.auth._key());
+            let BB = NJ.get(this.auth._key());
             if (!BB) {
               try {
-                const jB = await async function(BB, jB) {
-                  const zB = Ln(jB),
-                    QB = Gn(BB);
-                  if (!await QB._isAvailable()) return !1;
-                  const nB = "true" === await QB._get(zB);
-                  return await QB._remove(zB), nB
+                const IB = await async function(BB, IB) {
+                  const ZB = WJ(IB),
+                    TB = UJ(BB);
+                  if (!await TB._isAvailable()) return !1;
+                  const JB = "true" === await TB._get(ZB);
+                  return await TB._remove(ZB), JB
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                BB = () => Promise.resolve(jB)
-              } catch (jB) {
-                BB = () => Promise.reject(jB)
+                BB = () => Promise.resolve(IB)
+              } catch (IB) {
+                BB = () => Promise.reject(IB)
               }
-              Jn.set(this.auth._key(), BB)
+              NJ.set(this.auth._key(), BB)
             }
-            return this.bypassAuthState || Jn.set(this.auth._key(), (() => Promise.resolve(null))), BB()
+            return this.bypassAuthState || NJ.set(this.auth._key(), (() => Promise.resolve(null))), BB()
           }
           async onAuthEvent(BB) {
             if ("signInViaRedirect" === BB.type) return super.onAuthEvent(BB);
             if ("unknown" !== BB.type) {
               if (BB.eventId) {
-                const jB = await this.auth._redirectUserForId(BB.eventId);
-                if (jB) return this.user = jB, super.onAuthEvent(BB);
+                const IB = await this.auth._redirectUserForId(BB.eventId);
+                if (IB) return this.user = IB, super.onAuthEvent(BB);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,68 +3723,68 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function yn(BB, jB) {
-          return Gn(BB)._set(Ln(jB), "true")
+        async function qJ(BB, IB) {
+          return UJ(BB)._set(WJ(IB), "true")
         }
 
-        function kn(BB, jB) {
-          Jn.set(BB._key(), jB)
+        function yJ(BB, IB) {
+          NJ.set(BB._key(), IB)
         }
 
-        function Gn(BB) {
-          return dj(BB._redirectPersistence)
+        function UJ(BB) {
+          return oI(BB._redirectPersistence)
         }
 
-        function Ln(BB) {
-          return uj(sn, BB.config.apiKey, BB.name)
+        function WJ(BB) {
+          return kI(FJ, BB.config.apiKey, BB.name)
         }
 
-        function gn(BB, jB, zB) {
-          return async function(BB, jB, zB) {
-            const QB = Fj(BB);
-            MB(BB, jB, Bz), await QB._initializationPromise;
-            const nB = zn(QB, zB);
-            return await yn(nB, QB), nB._openRedirect(QB, jB, "signInViaRedirect")
-          }(BB, jB, zB)
+        function dJ(BB, IB, ZB) {
+          return async function(BB, IB, ZB) {
+            const TB = MI(BB);
+            sB(BB, IB, BZ), await TB._initializationPromise;
+            const JB = ZJ(TB, ZB);
+            return await qJ(JB, TB), JB._openRedirect(TB, IB, "signInViaRedirect")
+          }(BB, IB, ZB)
         }
 
-        function tn(BB, jB, zB) {
-          return async function(BB, jB, zB) {
-            const nB = (0, QB.H)(BB);
-            MB(nB.auth, jB, Bz), await nB.auth._initializationPromise;
-            const dB = zn(nB.auth, zB);
-            await yn(dB, nB.auth);
-            const IB = await qn(nB);
-            return dB._openRedirect(nB.auth, jB, "reauthViaRedirect", IB)
-          }(BB, jB, zB)
+        function CJ(BB, IB, ZB) {
+          return async function(BB, IB, ZB) {
+            const JB = (0, TB.N)(BB);
+            sB(JB.auth, IB, BZ), await JB.auth._initializationPromise;
+            const oB = ZJ(JB.auth, ZB);
+            await qJ(oB, JB.auth);
+            const GB = await OJ(JB);
+            return oB._openRedirect(JB.auth, IB, "reauthViaRedirect", GB)
+          }(BB, IB, ZB)
         }
 
-        function Sn(BB, jB, zB) {
-          return async function(BB, jB, zB) {
-            const nB = (0, QB.H)(BB);
-            MB(nB.auth, jB, Bz), await nB.auth._initializationPromise;
-            const dB = zn(nB.auth, zB);
-            await Gz(!1, nB, jB.providerId), await yn(dB, nB.auth);
-            const IB = await qn(nB);
-            return dB._openRedirect(nB.auth, jB, "linkViaRedirect", IB)
-          }(BB, jB, zB)
+        function QJ(BB, IB, ZB) {
+          return async function(BB, IB, ZB) {
+            const JB = (0, TB.N)(BB);
+            sB(JB.auth, IB, BZ), await JB.auth._initializationPromise;
+            const oB = ZJ(JB.auth, ZB);
+            await UZ(!1, JB, IB.providerId), await qJ(oB, JB.auth);
+            const GB = await OJ(JB);
+            return oB._openRedirect(JB.auth, IB, "linkViaRedirect", GB)
+          }(BB, IB, ZB)
         }
-        async function Mn(BB, jB) {
-          return await Fj(BB)._initializationPromise, En(BB, jB, !1)
+        async function sJ(BB, IB) {
+          return await MI(BB)._initializationPromise, wJ(BB, IB, !1)
         }
-        async function En(BB, jB) {
-          let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const QB = Fj(BB),
-            nB = zn(QB, jB),
-            dB = new mn(QB, nB, zB),
-            IB = await dB.execute();
-          return IB && !zB && (delete IB.user._redirectEventId, await QB._persistUserIfCurrent(IB.user), await QB._setRedirectUser(null, jB)), IB
+        async function wJ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const TB = MI(BB),
+            JB = ZJ(TB, IB),
+            oB = new gJ(TB, JB, ZB),
+            GB = await oB.execute();
+          return GB && !ZB && (delete GB.user._redirectEventId, await TB._persistUserIfCurrent(GB.user), await TB._setRedirectUser(null, IB)), GB
         }
-        async function qn(BB) {
-          const jB = MQ(`${BB.uid}:::`);
-          return BB._redirectEventId = jB, await BB.auth._setRedirectUser(BB), await BB.auth._persistUserIfCurrent(BB), jB
+        async function OJ(BB) {
+          const IB = sT(`${BB.uid}:::`);
+          return BB._redirectEventId = IB, await BB.auth._setRedirectUser(BB), await BB.auth._persistUserIfCurrent(BB), IB
         }
-        class fn {
+        class YJ {
           constructor(BB) {
             this.auth = BB, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
@@ -3796,9 +3796,9 @@ export const modules = {
           }
           onEvent(BB) {
             if (this.hasEventBeenHandled(BB)) return !1;
-            let jB = !1;
-            return this.consumers.forEach((zB => {
-              this.isEventForConsumer(BB, zB) && (jB = !0, this.sendToConsumer(BB, zB), this.saveEventToCache(BB))
+            let IB = !1;
+            return this.consumers.forEach((ZB => {
+              this.isEventForConsumer(BB, ZB) && (IB = !0, this.sendToConsumer(BB, ZB), this.saveEventToCache(BB))
             })), this.hasHandledPotentialRedirect || ! function(BB) {
               switch (BB.type) {
                 case "signInViaRedirect":
@@ -3806,116 +3806,116 @@ export const modules = {
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return Dn(BB);
+                  return pJ(BB);
                 default:
                   return !1
               }
-            }(BB) || (this.hasHandledPotentialRedirect = !0, jB || (this.queuedRedirectEvent = BB, jB = !0)), jB
+            }(BB) || (this.hasHandledPotentialRedirect = !0, IB || (this.queuedRedirectEvent = BB, IB = !0)), IB
           }
-          sendToConsumer(BB, jB) {
-            var zB;
-            if (BB.error && !Dn(BB)) {
-              const QB = (null === (zB = BB.error.code) || void 0 === zB ? void 0 : zB.split("auth/")[1]) || "internal-error";
-              jB.onError(tB(this.auth, QB))
-            } else jB.onAuthEvent(BB)
+          sendToConsumer(BB, IB) {
+            var ZB;
+            if (BB.error && !pJ(BB)) {
+              const TB = (null === (ZB = BB.error.code) || void 0 === ZB ? void 0 : ZB.split("auth/")[1]) || "internal-error";
+              IB.onError(CB(this.auth, TB))
+            } else IB.onAuthEvent(BB)
           }
-          isEventForConsumer(BB, jB) {
-            const zB = null === jB.eventId || !!BB.eventId && BB.eventId === jB.eventId;
-            return jB.filter.includes(BB.type) && zB
+          isEventForConsumer(BB, IB) {
+            const ZB = null === IB.eventId || !!BB.eventId && BB.eventId === IB.eventId;
+            return IB.filter.includes(BB.type) && ZB
           }
           hasEventBeenHandled(BB) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(Hn(BB))
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(iJ(BB))
           }
           saveEventToCache(BB) {
-            this.cachedEventUids.add(Hn(BB)), this.lastProcessedEventTime = Date.now()
+            this.cachedEventUids.add(iJ(BB)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function Hn(BB) {
+        function iJ(BB) {
           return [BB.type, BB.eventId, BB.sessionId, BB.tenantId].filter((BB => BB)).join("-")
         }
 
-        function Dn(BB) {
+        function pJ(BB) {
           let {
-            type: jB,
-            error: zB
+            type: IB,
+            error: ZB
           } = BB;
-          return "unknown" === jB && "auth/no-auth-event" === (null === zB || void 0 === zB ? void 0 : zB.code)
+          return "unknown" === IB && "auth/no-auth-event" === (null === ZB || void 0 === ZB ? void 0 : ZB.code)
         }
-        const Fn = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          Yn = /^https?/;
-        async function Vn(BB) {
+        const aJ = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          HJ = /^https?/;
+        async function MJ(BB) {
           if (BB.config.emulator) return;
           const {
-            authorizedDomains: jB
+            authorizedDomains: IB
           } = await async function(BB) {
-            return AB(BB, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+            return XB(BB, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
           }(BB);
-          for (const QB of jB) try {
-            if (hn(QB)) return
-          } catch (zB) {}
-          gB(BB, "unauthorized-domain")
+          for (const TB of IB) try {
+            if (jJ(TB)) return
+          } catch (ZB) {}
+          dB(BB, "unauthorized-domain")
         }
 
-        function hn(BB) {
-          const jB = oB(),
+        function jJ(BB) {
+          const IB = pB(),
             {
-              protocol: zB,
-              hostname: QB
-            } = new URL(jB);
+              protocol: ZB,
+              hostname: TB
+            } = new URL(IB);
           if (BB.startsWith("chrome-extension://")) {
-            const nB = new URL(BB);
-            return "" === nB.hostname && "" === QB ? "chrome-extension:" === zB && BB.replace("chrome-extension://", "") === jB.replace("chrome-extension://", "") : "chrome-extension:" === zB && nB.hostname === QB
+            const JB = new URL(BB);
+            return "" === JB.hostname && "" === TB ? "chrome-extension:" === ZB && BB.replace("chrome-extension://", "") === IB.replace("chrome-extension://", "") : "chrome-extension:" === ZB && JB.hostname === TB
           }
-          if (!Yn.test(zB)) return !1;
-          if (Fn.test(BB)) return QB === BB;
-          const nB = BB.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + nB + "|" + nB + ")$", "i").test(QB)
+          if (!HJ.test(ZB)) return !1;
+          if (aJ.test(BB)) return TB === BB;
+          const JB = BB.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + JB + "|" + JB + ")$", "i").test(TB)
         }
-        const Xn = new FB(3e4, 6e4);
+        const PJ = new MB(3e4, 6e4);
 
-        function Zn() {
-          const BB = iQ().___jsl;
+        function RJ() {
+          const BB = OT().___jsl;
           if (null === BB || void 0 === BB ? void 0 : BB.H)
-            for (const jB of Object.keys(BB.H))
-              if (BB.H[jB].r = BB.H[jB].r || [], BB.H[jB].L = BB.H[jB].L || [], BB.H[jB].r = [...BB.H[jB].L], BB.CP)
-                for (let zB = 0; zB < BB.CP.length; zB++) BB.CP[zB] = null
+            for (const IB of Object.keys(BB.H))
+              if (BB.H[IB].r = BB.H[IB].r || [], BB.H[IB].L = BB.H[IB].L || [], BB.H[IB].r = [...BB.H[IB].L], BB.CP)
+                for (let ZB = 0; ZB < BB.CP.length; ZB++) BB.CP[ZB] = null
         }
-        let An = null;
+        let rJ = null;
 
-        function Tn(BB) {
-          return An = An || function(BB) {
-            return new Promise(((jB, zB) => {
-              var QB, nB, dB;
+        function mJ(BB) {
+          return rJ = rJ || function(BB) {
+            return new Promise(((IB, ZB) => {
+              var TB, JB, oB;
 
-              function IB() {
-                Zn(), gapi.load("gapi.iframes", {
+              function GB() {
+                RJ(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    jB(gapi.iframes.getContext())
+                    IB(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    Zn(), zB(tB(BB, "network-request-failed"))
+                    RJ(), ZB(CB(BB, "network-request-failed"))
                   },
-                  timeout: Xn.get()
+                  timeout: PJ.get()
                 })
               }
-              if (null === (nB = null === (QB = iQ().gapi) || void 0 === QB ? void 0 : QB.iframes) || void 0 === nB ? void 0 : nB.Iframe) jB(gapi.iframes.getContext());
+              if (null === (JB = null === (TB = OT().gapi) || void 0 === TB ? void 0 : TB.iframes) || void 0 === JB ? void 0 : JB.Iframe) IB(gapi.iframes.getContext());
               else {
-                if (!(null === (dB = iQ().gapi) || void 0 === dB ? void 0 : dB.load)) {
-                  const jB = qj("iframefcb");
-                  return iQ()[jB] = () => {
-                    gapi.load ? IB() : zB(tB(BB, "network-request-failed"))
-                  }, ij(`https://apis.google.com/js/api.js?onload=${jB}`).catch((BB => zB(BB)))
+                if (!(null === (oB = OT().gapi) || void 0 === oB ? void 0 : oB.load)) {
+                  const IB = YI("iframefcb");
+                  return OT()[IB] = () => {
+                    gapi.load ? GB() : ZB(CB(BB, "network-request-failed"))
+                  }, OI(`https://apis.google.com/js/api.js?onload=${IB}`).catch((BB => ZB(BB)))
                 }
-                IB()
+                GB()
               }
             })).catch((BB => {
-              throw An = null, BB
+              throw rJ = null, BB
             }))
-          }(BB), An
+          }(BB), rJ
         }
-        const Pn = new FB(5e3, 15e3),
-          Wn = {
+        const XJ = new MB(5e3, 15e3),
+          LJ = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,33 +3925,33 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          en = new Map([
+          eJ = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function wn(BB) {
-          const jB = BB.config;
-          iB(jB.authDomain, BB, "auth-domain-config-required");
-          const zB = jB.emulator ? YB(jB, "emulator/auth/iframe") : `https://${BB.config.authDomain}/__/auth/iframe`,
-            dB = {
-              apiKey: jB.apiKey,
+        function uJ(BB) {
+          const IB = BB.config;
+          OB(IB.authDomain, BB, "auth-domain-config-required");
+          const ZB = IB.emulator ? jB(IB, "emulator/auth/iframe") : `https://${BB.config.authDomain}/__/auth/iframe`,
+            oB = {
+              apiKey: IB.apiKey,
               appName: BB.name,
-              v: nB.e
+              v: JB.f
             },
-            IB = en.get(BB.config.apiHost);
-          IB && (dB.eid = IB);
-          const NB = BB._getFrameworks();
-          return NB.length && (dB.fw = NB.join(",")), `${zB}?${(0,QB.$)(dB).slice(1)}`
+            GB = eJ.get(BB.config.apiHost);
+          GB && (oB.eid = GB);
+          const vB = BB._getFrameworks();
+          return vB.length && (oB.fw = vB.join(",")), `${ZB}?${(0,TB.db)(oB).slice(1)}`
         }
-        const xn = {
+        const fJ = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class Kn {
+        class lJ {
           constructor(BB) {
             this.window = BB, this.associatedEvent = null
           }
@@ -3962,65 +3962,65 @@ export const modules = {
           }
         }
 
-        function Cn(BB, jB, zB) {
-          let nB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            dB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const IB = Math.max((window.screen.availHeight - dB) / 2, 0).toString(),
-            NB = Math.max((window.screen.availWidth - nB) / 2, 0).toString();
-          let uB = "";
-          const UB = Object.assign(Object.assign({}, xn), {
-              width: nB.toString(),
-              height: dB.toString(),
-              top: IB,
-              left: NB
+        function AJ(BB, IB, ZB) {
+          let JB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const GB = Math.max((window.screen.availHeight - oB) / 2, 0).toString(),
+            vB = Math.max((window.screen.availWidth - JB) / 2, 0).toString();
+          let kB = "";
+          const cB = Object.assign(Object.assign({}, fJ), {
+              width: JB.toString(),
+              height: oB.toString(),
+              top: GB,
+              left: vB
             }),
-            aB = (0, QB.J)().toLowerCase();
-          zB && (uB = sj(aB) ? "_blank" : zB), pj(aB) && (jB = jB || "http://localhost", UB.scrollbars = "yes");
-          const pB = Object.entries(UB).reduce(((BB, jB) => {
-            let [zB, QB] = jB;
-            return `${BB}${zB}=${QB},`
+            nB = (0, TB.P)().toLowerCase();
+          ZB && (kB = FI(nB) ? "_blank" : ZB), hI(nB) && (IB = IB || "http://localhost", cB.scrollbars = "yes");
+          const hB = Object.entries(cB).reduce(((BB, IB) => {
+            let [ZB, TB] = IB;
+            return `${BB}${ZB}=${TB},`
           }), "");
           if (function() {
               var BB;
-              return Gj(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, QB.J)()) && !!(null === (BB = window.navigator) || void 0 === BB ? void 0 : BB.standalone)
-            }(aB) && "_self" !== uB) return function(BB, jB) {
-            const zB = document.createElement("a");
-            zB.href = BB, zB.target = jB;
-            const QB = document.createEvent("MouseEvent");
-            QB.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), zB.dispatchEvent(QB)
-          }(jB || "", uB), new Kn(null);
-          const rB = window.open(jB || "", uB, pB);
-          iB(rB, BB, "popup-blocked");
+              return UI(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)()) && !!(null === (BB = window.navigator) || void 0 === BB ? void 0 : BB.standalone)
+            }(nB) && "_self" !== kB) return function(BB, IB) {
+            const ZB = document.createElement("a");
+            ZB.href = BB, ZB.target = IB;
+            const TB = document.createEvent("MouseEvent");
+            TB.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), ZB.dispatchEvent(TB)
+          }(IB || "", kB), new lJ(null);
+          const zB = window.open(IB || "", kB, hB);
+          OB(zB, BB, "popup-blocked");
           try {
-            rB.focus()
-          } catch (sB) {}
-          return new Kn(rB)
+            zB.focus()
+          } catch (FB) {}
+          return new lJ(zB)
         }
-        const cn = "__/auth/handler",
-          bn = "emulator/auth/handler",
-          vn = encodeURIComponent("fac");
-        async function Rn(BB, jB, zB, dB, IB, NB) {
-            iB(BB.config.authDomain, BB, "auth-domain-config-required"), iB(BB.config.apiKey, BB, "invalid-api-key");
-            const uB = {
+        const tJ = "__/auth/handler",
+          bJ = "emulator/auth/handler",
+          xJ = encodeURIComponent("fac");
+        async function EJ(BB, IB, ZB, oB, GB, vB) {
+            OB(BB.config.authDomain, BB, "auth-domain-config-required"), OB(BB.config.apiKey, BB, "invalid-api-key");
+            const kB = {
               apiKey: BB.config.apiKey,
               appName: BB.name,
-              authType: zB,
-              redirectUrl: dB,
-              v: nB.e,
-              eventId: IB
+              authType: ZB,
+              redirectUrl: oB,
+              v: JB.f,
+              eventId: GB
             };
-            if (jB instanceof Bz) {
-              jB.setDefaultLanguage(BB.languageCode), uB.providerId = jB.providerId || "", (0, QB.N)(jB.getCustomParameters()) || (uB.customParameters = JSON.stringify(jB.getCustomParameters()));
-              for (const [BB, jB] of Object.entries(NB || {})) uB[BB] = jB
+            if (IB instanceof BZ) {
+              IB.setDefaultLanguage(BB.languageCode), kB.providerId = IB.providerId || "", (0, TB.V)(IB.getCustomParameters()) || (kB.customParameters = JSON.stringify(IB.getCustomParameters()));
+              for (const [BB, IB] of Object.entries(vB || {})) kB[BB] = IB
             }
-            if (jB instanceof jz) {
-              const BB = jB.getScopes().filter((BB => "" !== BB));
-              BB.length > 0 && (uB.scopes = BB.join(","))
+            if (IB instanceof IZ) {
+              const BB = IB.getScopes().filter((BB => "" !== BB));
+              BB.length > 0 && (kB.scopes = BB.join(","))
             }
-            BB.tenantId && (uB.tid = BB.tenantId);
-            const UB = uB;
-            for (const QB of Object.keys(UB)) void 0 === UB[QB] && delete UB[QB];
-            const aB = await BB._getAppCheckToken(),
-              pB = aB ? `#${vn}=${encodeURIComponent(aB)}` : "";
-            return `${function(BB){let{config:jB}=BB;if(!jB.emulator)return`
-            https: //${jB.authDomain}/${cn}`;return YB(jB,bn)}(BB)}?${(0,QB.$)(UB).slice(1)}${pB}`}const On="webStorageSupport";const Bd=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=tQ,this._completeRedirectFn=En,this._overrideRedirectResult=kn}async _openPopup(BB,jB,zB,QB){var nB;fB(null===(nB=this.eventManagers[BB._key()])||void 0===nB?void 0:nB.manager,"_initialize() not called before _openPopup()");return Cn(BB,await Rn(BB,jB,zB,oB(),QB),MQ())}async _openRedirect(BB,jB,zB,QB){await this._originValidation(BB);return function(BB){iQ().location.href=BB}(await Rn(BB,jB,zB,oB(),QB)),new Promise((()=>{}))}_initialize(BB){const jB=BB._key();if(this.eventManagers[jB]){const{manager:BB,promise:zB}=this.eventManagers[jB];return BB?Promise.resolve(BB):(fB(zB,"If manager is not set, promise should be"),zB)}const zB=this.initAndGetManager(BB);return this.eventManagers[jB]={promise:zB},zB.catch((()=>{delete this.eventManagers[jB]})),zB}async initAndGetManager(BB){const jB=await async function(BB){const jB=await Tn(BB),zB=iQ().gapi;return iB(zB,BB,"internal-error"),jB.open({where:document.body,url:wn(BB),messageHandlersFilter:zB.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:Wn,dontclear:!0},(jB=>new Promise((async(zB,QB)=>{await jB.restyle({setHideOnLeave:!1});const nB=tB(BB,"network-request-failed"),dB=iQ().setTimeout((()=>{QB(nB)}),Pn.get());function IB(){iQ().clearTimeout(dB),zB(jB)}jB.ping(IB).then(IB,(()=>{QB(nB)}))}))))}(BB),zB=new fn(BB);return jB.register("authEvent",(jB=>{iB(null===jB||void 0===jB?void 0:jB.authEvent,BB,"invalid-auth-event");return{status:zB.onEvent(jB.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[BB._key()]={manager:zB},this.iframes[BB._key()]=jB,zB}_isIframeWebStorageSupported(BB,jB){this.iframes[BB._key()].send(On,{type:On},(zB=>{var QB;const nB=null===(QB=null===zB||void 0===zB?void 0:zB[0])||void 0===QB?void 0:QB[On];void 0!==nB&&jB(!!nB),gB(BB,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(BB){const jB=BB._key();return this.originValidationPromises[jB]||(this.originValidationPromises[jB]=Vn(BB)),this.originValidationPromises[jB]}get _shouldInitProactively(){return Lj()||rj()||Gj()}};class jd{constructor(BB){this.factorId=BB}_process(BB,jB,zB){switch(jB.type){case"enroll":return this._finalizeEnroll(BB,jB.credential,zB);case"signin":return this._finalizeSignIn(BB,jB.credential);default:return qB("unexpected MultiFactorSessionType")}}}class zd extends jd{constructor(BB){super("phone"),this.credential=BB}static _fromCredential(BB){return new zd(BB)}_finalizeEnroll(BB,jB,zB){return function(BB,jB){return AB(BB,"POST","/v2/accounts/mfaEnrollment:finalize",ZB(BB,jB))}(BB,{idToken:jB,displayName:zB,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(BB,jB){return function(BB,jB){return AB(BB,"POST","/v2/accounts/mfaSignIn:finalize",ZB(BB,jB))}(BB,{mfaPendingCredential:jB,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class Qd{constructor(){}static assertion(BB){return zd._fromCredential(BB)}}Qd.FACTOR_ID="phone";class nd{static assertionForEnrollment(BB,jB){return dd._fromSecret(BB,jB)}static assertionForSignIn(BB,jB){return dd._fromEnrollmentId(BB,jB)}static async generateSecret(BB){const jB=BB;iB("undefined"!==typeof jB.auth,"internal-error");const zB=await(QB=jB.auth,nB={idToken:jB.credential,totpEnrollmentInfo:{}},AB(QB,"POST","/v2/accounts/mfaEnrollment:start",ZB(QB,nB)));var QB,nB;return Id._fromStartTotpMfaEnrollmentResponse(zB,jB.auth)}}nd.FACTOR_ID="totp";class dd extends jd{constructor(BB,jB,zB){super("totp"),this.otp=BB,this.enrollmentId=jB,this.secret=zB}static _fromSecret(BB,jB){return new dd(jB,void 0,BB)}static _fromEnrollmentId(BB,jB){return new dd(jB,BB)}async _finalizeEnroll(BB,jB,zB){return iB("undefined"!==typeof this.secret,BB,"argument-error"),function(BB,jB){return AB(BB,"POST","/v2/accounts/mfaEnrollment:finalize",ZB(BB,jB))}(BB,{idToken:jB,displayName:zB,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(BB,jB){iB(void 0!==this.enrollmentId&&void 0!==this.otp,BB,"argument-error");const zB={verificationCode:this.otp};return function(BB,jB){return AB(BB,"POST","/v2/accounts/mfaSignIn:finalize",ZB(BB,jB))}(BB,{mfaPendingCredential:jB,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:zB})}}class Id{constructor(BB,jB,zB,QB,nB,dB,IB){this.sessionInfo=dB,this.auth=IB,this.secretKey=BB,this.hashingAlgorithm=jB,this.codeLength=zB,this.codeIntervalSeconds=QB,this.enrollmentCompletionDeadline=nB}static _fromStartTotpMfaEnrollmentResponse(BB,jB){return new Id(BB.totpSessionInfo.sharedSecretKey,BB.totpSessionInfo.hashingAlgorithm,BB.totpSessionInfo.verificationCodeLength,BB.totpSessionInfo.periodSec,new Date(BB.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),BB.totpSessionInfo.sessionInfo,jB)}_makeTotpVerificationInfo(BB){return{sessionInfo:this.sessionInfo,verificationCode:BB}}generateQrCodeUrl(BB,jB){var zB;let QB=!1;return(Nd(BB)||Nd(jB))&&(QB=!0),QB&&(Nd(BB)&&(BB=(null===(zB=this.auth.currentUser)||void 0===zB?void 0:zB.email)||"unknownuser"),Nd(jB)&&(jB=this.auth.name)),`otpauth://totp/${jB}:${BB}?secret=${this.secretKey}&issuer=${jB}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function Nd(BB){return"undefined"===typeof BB||0===(null===BB||void 0===BB?void 0:BB.length)}var ud="@firebase/auth",Ud="0.23.2";class pd{constructor(BB){this.auth=BB,this.internalListeners=new Map}getUid(){var BB;return this.assertAuthConfigured(),(null===(BB=this.auth.currentUser)||void 0===BB?void 0:BB.uid)||null}async getToken(BB){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(BB)}}addAuthTokenListener(BB){if(this.assertAuthConfigured(),this.internalListeners.has(BB))return;const jB=this.auth.onIdTokenChanged((jB=>{BB((null===jB||void 0===jB?void 0:jB.stsTokenManager.accessToken)||null)}));this.internalListeners.set(BB,jB),this.updateProactiveRefresh()}removeAuthTokenListener(BB){this.assertAuthConfigured();const jB=this.internalListeners.get(BB);jB&&(this.internalListeners.delete(BB),jB(),this.updateProactiveRefresh())}assertAuthConfigured(){iB(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const rd=(0,QB.G)("authIdTokenMaxAge")||300;let sd=null;const Jd=BB=>async jB=>{const zB=jB&&await jB.getIdTokenResult(),QB=zB&&((new Date).getTime()-Date.parse(zB.issuedAtTime))/1e3;if(QB&&QB>rd)return;const nB=null===zB||void 0===zB?void 0:zB.token;sd!==nB&&(sd=nB,await fetch(BB,{method:nB?"POST":"DELETE",headers:nB?{Authorization:`Bearer ${nB}`}:{}}))};function md(){let BB=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,nB.N)();const jB=(0,nB.z)(BB,"auth");if(jB.isInitialized())return jB.getImmediate();const zB=Vj(BB,{popupRedirectResolver:Bd,persistence:[ZQ,LQ,tQ]}),dB=(0,QB.G)("authTokenSyncURL");if(dB){const BB=Jd(dB);nQ(zB,BB,(()=>BB(zB.currentUser))),QQ(zB,(jB=>BB(jB)))}const IB=(0,QB.D)("auth");return IB&&hj(zB,`http://${IB}`),zB}var yd;yd="Browser",(0,nB.D)(new NB.d("auth",((BB,jB)=>{let{options:zB}=jB;const QB=BB.getProvider("app").getImmediate(),nB=BB.getProvider("heartbeat"),dB=BB.getProvider("app-check-internal"),{apiKey:IB,authDomain:NB}=QB.options;iB(IB&&!IB.includes(":"),"invalid-api-key",{appName:QB.name});const uB={apiKey:IB,authDomain:NB,clientPlatform:yd,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:gj(yd)},UB=new Dj(QB,nB,dB,uB);return function(BB,jB){const zB=(null===jB||void 0===jB?void 0:jB.persistence)||[],QB=(Array.isArray(zB)?zB:[zB]).map(dj);(null===jB||void 0===jB?void 0:jB.errorMap)&&BB._updateErrorMap(jB.errorMap),BB._initializeWithPersistence(QB,null===jB||void 0===jB?void 0:jB.popupRedirectResolver)}(UB,zB),UB}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((BB,jB,zB)=>{BB.getProvider("auth-internal").initialize()}))),(0,nB.D)(new NB.d("auth-internal",(BB=>(BB=>new pd(BB))(Fj(BB.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,nB.X)(ud,Ud,function(BB){switch(BB){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(yd)),(0,nB.X)(ud,Ud,"esm2017")}};Object.freeze(modules);for(const BB in modules)Object.freeze(modules[BB]);
+            BB.tenantId && (kB.tid = BB.tenantId);
+            const cB = kB;
+            for (const TB of Object.keys(cB)) void 0 === cB[TB] && delete cB[TB];
+            const nB = await BB._getAppCheckToken(),
+              hB = nB ? `#${xJ}=${encodeURIComponent(nB)}` : "";
+            return `${function(BB){let{config:IB}=BB;if(!IB.emulator)return`
+            https: //${IB.authDomain}/${tJ}`;return jB(IB,bJ)}(BB)}?${(0,TB.db)(cB).slice(1)}${hB}`}const DJ="webStorageSupport";const KJ=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=CT,this._completeRedirectFn=wJ,this._overrideRedirectResult=yJ}async _openPopup(BB,IB,ZB,TB){var JB;iB(null===(JB=this.eventManagers[BB._key()])||void 0===JB?void 0:JB.manager,"_initialize() not called before _openPopup()");return AJ(BB,await EJ(BB,IB,ZB,pB(),TB),sT())}async _openRedirect(BB,IB,ZB,TB){await this._originValidation(BB);return function(BB){OT().location.href=BB}(await EJ(BB,IB,ZB,pB(),TB)),new Promise((()=>{}))}_initialize(BB){const IB=BB._key();if(this.eventManagers[IB]){const{manager:BB,promise:ZB}=this.eventManagers[IB];return BB?Promise.resolve(BB):(iB(ZB,"If manager is not set, promise should be"),ZB)}const ZB=this.initAndGetManager(BB);return this.eventManagers[IB]={promise:ZB},ZB.catch((()=>{delete this.eventManagers[IB]})),ZB}async initAndGetManager(BB){const IB=await async function(BB){const IB=await mJ(BB),ZB=OT().gapi;return OB(ZB,BB,"internal-error"),IB.open({where:document.body,url:uJ(BB),messageHandlersFilter:ZB.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:LJ,dontclear:!0},(IB=>new Promise((async(ZB,TB)=>{await IB.restyle({setHideOnLeave:!1});const JB=CB(BB,"network-request-failed"),oB=OT().setTimeout((()=>{TB(JB)}),XJ.get());function GB(){OT().clearTimeout(oB),ZB(IB)}IB.ping(GB).then(GB,(()=>{TB(JB)}))}))))}(BB),ZB=new YJ(BB);return IB.register("authEvent",(IB=>{OB(null===IB||void 0===IB?void 0:IB.authEvent,BB,"invalid-auth-event");return{status:ZB.onEvent(IB.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[BB._key()]={manager:ZB},this.iframes[BB._key()]=IB,ZB}_isIframeWebStorageSupported(BB,IB){this.iframes[BB._key()].send(DJ,{type:DJ},(ZB=>{var TB;const JB=null===(TB=null===ZB||void 0===ZB?void 0:ZB[0])||void 0===TB?void 0:TB[DJ];void 0!==JB&&IB(!!JB),dB(BB,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(BB){const IB=BB._key();return this.originValidationPromises[IB]||(this.originValidationPromises[IB]=MJ(BB)),this.originValidationPromises[IB]}get _shouldInitProactively(){return WI()||zI()||UI()}};class VJ{constructor(BB){this.factorId=BB}_process(BB,IB,ZB){switch(IB.type){case"enroll":return this._finalizeEnroll(BB,IB.credential,ZB);case"signin":return this._finalizeSignIn(BB,IB.credential);default:return YB("unexpected MultiFactorSessionType")}}}class SJ extends VJ{constructor(BB){super("phone"),this.credential=BB}static _fromCredential(BB){return new SJ(BB)}_finalizeEnroll(BB,IB,ZB){return function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaEnrollment:finalize",mB(BB,IB))}(BB,{idToken:IB,displayName:ZB,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(BB,IB){return function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaSignIn:finalize",mB(BB,IB))}(BB,{mfaPendingCredential:IB,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class Bo{constructor(){}static assertion(BB){return SJ._fromCredential(BB)}}Bo.FACTOR_ID="phone";class Io{static assertionForEnrollment(BB,IB){return Zo._fromSecret(BB,IB)}static assertionForSignIn(BB,IB){return Zo._fromEnrollmentId(BB,IB)}static async generateSecret(BB){const IB=BB;OB("undefined"!==typeof IB.auth,"internal-error");const ZB=await(TB=IB.auth,JB={idToken:IB.credential,totpEnrollmentInfo:{}},XB(TB,"POST","/v2/accounts/mfaEnrollment:start",mB(TB,JB)));var TB,JB;return To._fromStartTotpMfaEnrollmentResponse(ZB,IB.auth)}}Io.FACTOR_ID="totp";class Zo extends VJ{constructor(BB,IB,ZB){super("totp"),this.otp=BB,this.enrollmentId=IB,this.secret=ZB}static _fromSecret(BB,IB){return new Zo(IB,void 0,BB)}static _fromEnrollmentId(BB,IB){return new Zo(IB,BB)}async _finalizeEnroll(BB,IB,ZB){return OB("undefined"!==typeof this.secret,BB,"argument-error"),function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaEnrollment:finalize",mB(BB,IB))}(BB,{idToken:IB,displayName:ZB,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(BB,IB){OB(void 0!==this.enrollmentId&&void 0!==this.otp,BB,"argument-error");const ZB={verificationCode:this.otp};return function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaSignIn:finalize",mB(BB,IB))}(BB,{mfaPendingCredential:IB,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:ZB})}}class To{constructor(BB,IB,ZB,TB,JB,oB,GB){this.sessionInfo=oB,this.auth=GB,this.secretKey=BB,this.hashingAlgorithm=IB,this.codeLength=ZB,this.codeIntervalSeconds=TB,this.enrollmentCompletionDeadline=JB}static _fromStartTotpMfaEnrollmentResponse(BB,IB){return new To(BB.totpSessionInfo.sharedSecretKey,BB.totpSessionInfo.hashingAlgorithm,BB.totpSessionInfo.verificationCodeLength,BB.totpSessionInfo.periodSec,new Date(BB.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),BB.totpSessionInfo.sessionInfo,IB)}_makeTotpVerificationInfo(BB){return{sessionInfo:this.sessionInfo,verificationCode:BB}}generateQrCodeUrl(BB,IB){var ZB;let TB=!1;return(Jo(BB)||Jo(IB))&&(TB=!0),TB&&(Jo(BB)&&(BB=(null===(ZB=this.auth.currentUser)||void 0===ZB?void 0:ZB.email)||"unknownuser"),Jo(IB)&&(IB=this.auth.name)),`otpauth://totp/${IB}:${BB}?secret=${this.secretKey}&issuer=${IB}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function Jo(BB){return"undefined"===typeof BB||0===(null===BB||void 0===BB?void 0:BB.length)}var oo="@firebase/auth",Go="0.23.2";class vo{constructor(BB){this.auth=BB,this.internalListeners=new Map}getUid(){var BB;return this.assertAuthConfigured(),(null===(BB=this.auth.currentUser)||void 0===BB?void 0:BB.uid)||null}async getToken(BB){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(BB)}}addAuthTokenListener(BB){if(this.assertAuthConfigured(),this.internalListeners.has(BB))return;const IB=this.auth.onIdTokenChanged((IB=>{BB((null===IB||void 0===IB?void 0:IB.stsTokenManager.accessToken)||null)}));this.internalListeners.set(BB,IB),this.updateProactiveRefresh()}removeAuthTokenListener(BB){this.assertAuthConfigured();const IB=this.internalListeners.get(BB);IB&&(this.internalListeners.delete(BB),IB(),this.updateProactiveRefresh())}assertAuthConfigured(){OB(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const ko=(0,TB.K)("authIdTokenMaxAge")||300;let co=null;const no=BB=>async IB=>{const ZB=IB&&await IB.getIdTokenResult(),TB=ZB&&((new Date).getTime()-Date.parse(ZB.issuedAtTime))/1e3;if(TB&&TB>ko)return;const JB=null===ZB||void 0===ZB?void 0:ZB.token;co!==JB&&(co=JB,await fetch(BB,{method:JB?"POST":"DELETE",headers:JB?{Authorization:`Bearer ${JB}`}:{}}))};function ho(){let BB=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,JB.I)();const IB=(0,JB.w)(BB,"auth");if(IB.isInitialized())return IB.getImmediate();const ZB=PI(BB,{popupRedirectResolver:KJ,persistence:[mT,WT,CT]}),oB=(0,TB.K)("authTokenSyncURL");if(oB){const BB=no(oB);JT(ZB,BB,(()=>BB(ZB.currentUser))),TT(ZB,(IB=>BB(IB)))}const GB=(0,TB.I)("auth");return GB&&RI(ZB,`http://${GB}`),ZB}var zo;zo="Browser",(0,JB.y)(new vB.e("auth",((BB,IB)=>{let{options:ZB}=IB;const TB=BB.getProvider("app").getImmediate(),JB=BB.getProvider("heartbeat"),oB=BB.getProvider("app-check-internal"),{apiKey:GB,authDomain:vB}=TB.options;OB(GB&&!GB.includes(":"),"invalid-api-key",{appName:TB.name});const kB={apiKey:GB,authDomain:vB,clientPlatform:zo,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:dI(zo)},cB=new HI(TB,JB,oB,kB);return function(BB,IB){const ZB=(null===IB||void 0===IB?void 0:IB.persistence)||[],TB=(Array.isArray(ZB)?ZB:[ZB]).map(oI);(null===IB||void 0===IB?void 0:IB.errorMap)&&BB._updateErrorMap(IB.errorMap),BB._initializeWithPersistence(TB,null===IB||void 0===IB?void 0:IB.popupRedirectResolver)}(cB,ZB),cB}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((BB,IB,ZB)=>{BB.getProvider("auth-internal").initialize()}))),(0,JB.y)(new vB.e("auth-internal",(BB=>(BB=>new vo(BB))(MI(BB.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,JB.R)(oo,Go,function(BB){switch(BB){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(zo)),(0,JB.R)(oo,Go,"esm2017")}};Object.freeze(modules);for(const BB in modules)Object.freeze(modules[BB]);

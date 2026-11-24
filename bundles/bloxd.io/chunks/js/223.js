@@ -1,80 +1,80 @@
 export const id = 223;
 export const ids = [223];
 export const modules = {
-  41170: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      LobbyManageView: () => Sj
+  41101: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      LobbyManageView: () => QI
     });
-    var QB = zB(62),
-      nB = zB(1514),
-      dB = zB(37091),
-      IB = zB(2540),
-      NB = zB(2543),
-      uB = zB(2516),
-      UB = zB(36637);
+    var TB = ZB(63),
+      JB = ZB(1542),
+      oB = ZB(37033),
+      GB = ZB(2540),
+      vB = ZB(2549),
+      kB = ZB(2526),
+      cB = ZB(36587);
 
-    function aB() {
-      const [BB, jB] = (0, QB.useState)(new Map);
+    function nB() {
+      const [BB, IB] = (0, TB.useState)(new Map);
       return {
-        get: jB => BB.get(jB),
-        hold: (0, QB.useCallback)(((BB, zB, QB) => {
-          jB((jB => new Map(jB).set(BB, zB))), QB.then((() => {
-            jB((jB => {
-              const zB = new Map(jB);
-              return zB.delete(BB), zB
+        get: IB => BB.get(IB),
+        hold: (0, TB.useCallback)(((BB, ZB, TB) => {
+          IB((IB => new Map(IB).set(BB, ZB))), TB.then((() => {
+            IB((IB => {
+              const ZB = new Map(IB);
+              return ZB.delete(BB), ZB
             }))
           }))
         }), [])
       }
     }
-    var pB = zB(1091),
-      rB = zB.n(pB),
-      sB = zB(1240),
-      JB = zB(1108),
-      mB = zB(1369),
-      yB = zB(2772),
-      kB = zB(5097),
-      GB = zB(3551);
-    var LB = zB(2025),
-      gB = zB(1478);
+    var hB = ZB(1091),
+      zB = ZB.n(hB),
+      FB = ZB(1248),
+      NB = ZB(1102),
+      gB = ZB(1397),
+      qB = ZB(2797),
+      yB = ZB(5177),
+      UB = ZB(3625);
+    var WB = ZB(2054),
+      dB = ZB(1516);
 
-    function tB(BB, jB, zB) {
-      const QB = BB.filter((BB => BB.name !== jB)),
-        nB = QB.filter((BB => "none" === BB.role)).sort(((BB, jB) => jB.at - BB.at)),
-        dB = QB.filter((BB => "none" !== BB.role)).sort(((BB, jB) => zB.indexOf(BB.role) - zB.indexOf(jB.role) || jB.at - BB.at));
-      return [...BB.some((BB => BB.name === jB)) && null !== jB ? [jB] : [], ...[...nB, ...dB].map((BB => BB.name))]
+    function CB(BB, IB, ZB) {
+      const TB = BB.filter((BB => BB.name !== IB)),
+        JB = TB.filter((BB => "none" === BB.role)).sort(((BB, IB) => IB.at - BB.at)),
+        oB = TB.filter((BB => "none" !== BB.role)).sort(((BB, IB) => ZB.indexOf(BB.role) - ZB.indexOf(IB.role) || IB.at - BB.at));
+      return [...BB.some((BB => BB.name === IB)) && null !== IB ? [IB] : [], ...[...JB, ...oB].map((BB => BB.name))]
     }
 
-    function SB(BB, jB) {
-      const zB = BB.banned.map((BB => BB.name)),
-        QB = new Set(zB);
+    function QB(BB, IB) {
+      const ZB = BB.banned.map((BB => BB.name)),
+        TB = new Set(ZB);
       return {
-        here: tB(BB.here, jB, BB.roles.map((BB => BB.role))),
-        away: BB.away.filter((BB => !QB.has(BB.name))).map((BB => BB.name)),
-        banned: zB
+        here: CB(BB.here, IB, BB.roles.map((BB => BB.role))),
+        away: BB.away.filter((BB => !TB.has(BB.name))).map((BB => BB.name)),
+        banned: ZB
       }
     }
 
-    function MB(BB, jB) {
-      const zB = BB.here.find((BB => BB.name === jB));
-      if (zB) return {
+    function sB(BB, IB) {
+      const ZB = BB.here.find((BB => BB.name === IB));
+      if (ZB) return {
         section: "here",
-        player: zB
+        player: ZB
       };
-      const QB = BB.banned.find((BB => BB.name === jB));
-      if (QB) return {
+      const TB = BB.banned.find((BB => BB.name === IB));
+      if (TB) return {
         section: "banned",
-        bannedAt: QB.at
+        bannedAt: TB.at
       };
-      const nB = BB.away.find((BB => BB.name === jB));
-      return nB ? {
+      const JB = BB.away.find((BB => BB.name === IB));
+      return JB ? {
         section: "away",
-        player: nB
+        player: JB
       } : {
         section: "gone"
       }
     }
-    const EB = {
+    const wB = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -82,357 +82,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var iB = zB(2766),
-      qB = zB(36633),
-      fB = zB(36800),
-      oB = zB(3252),
-      HB = zB(376);
+    var OB = ZB(2792),
+      YB = ZB(36580),
+      iB = ZB(36747),
+      pB = ZB(3294),
+      aB = ZB(360);
 
-    function DB(BB, jB, zB) {
-      return jB.map((jB => {
-        if ("string" === typeof jB) return jB;
-        const QB = "str" in jB ? jB.str : jB;
-        return "string" === typeof QB ? QB : "entityName" in QB ? QB.entityName : "translationKey" in QB ? BB(QB.translationKey, (0, sB.p)(QB.params, zB)) : ""
+    function HB(BB, IB, ZB) {
+      return IB.map((IB => {
+        if ("string" === typeof IB) return IB;
+        const TB = "str" in IB ? IB.str : IB;
+        return "string" === typeof TB ? TB : "entityName" in TB ? TB.entityName : "translationKey" in TB ? BB(TB.translationKey, (0, FB.s)(TB.params, ZB)) : ""
       })).join("")
     }
 
-    function FB(BB, jB, zB, QB, nB) {
-      return nB - QB < 6e4 ? BB(`${zB}JustNow`) : BB(zB, {
-        time: (0, HB.$)((0, sB.n)(jB, zB), QB, nB)
+    function MB(BB, IB, ZB, TB, JB) {
+      return JB - TB < 6e4 ? BB(`${ZB}JustNow`) : BB(ZB, {
+        time: (0, aB.hb)((0, FB.o)(IB, ZB), TB, JB)
       })
     }
-    var YB = zB(1952),
-      VB = zB(1710),
-      hB = zB(1148);
+    var jB = ZB(1960),
+      PB = ZB(1746),
+      RB = ZB(1153);
 
-    function XB(BB) {
+    function rB(BB) {
       let {
-        status: jB
+        status: IB
       } = BB;
-      return (0, hB.jsx)("span", {
-        className: rB()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !jB.ok
+      return (0, RB.jsx)("span", {
+        className: zB()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !IB.ok
         }),
-        children: (0, hB.jsx)(YB.e, {
-          text: jB.text
+        children: (0, RB.jsx)(jB.e, {
+          text: IB.text
         })
       })
     }
 
-    function ZB(BB) {
+    function mB(BB) {
       let {
-        names: jB,
-        cap: zB,
-        filterFrom: nB,
-        moreLabel: dB,
-        reveal: IB = null,
-        renderRow: NB
+        names: IB,
+        cap: ZB,
+        filterFrom: JB,
+        moreLabel: oB,
+        reveal: GB = null,
+        renderRow: vB
       } = BB;
       const {
-        t: uB
-      } = (0, sB.D)(), [UB, aB] = (0, QB.useState)(!1), [pB, rB] = (0, QB.useState)(""), mB = UB || null !== IB && jB.indexOf(IB) >= zB, kB = (mB || jB.length <= zB) && null !== nB && jB.length > nB, GB = pB.trim().toLowerCase();
-      let LB = mB ? jB : jB.slice(0, zB);
-      return kB && "" !== GB && (LB = LB.filter((BB => BB.toLowerCase().includes(GB)))), (0, hB.jsxs)(hB.Fragment, {
-        children: [kB && (0, hB.jsx)(VB.d, {
+        t: kB
+      } = (0, FB.G)(), [cB, nB] = (0, TB.useState)(!1), [hB, zB] = (0, TB.useState)(""), gB = cB || null !== GB && IB.indexOf(GB) >= ZB, yB = (gB || IB.length <= ZB) && null !== JB && IB.length > JB, UB = hB.trim().toLowerCase();
+      let WB = gB ? IB : IB.slice(0, ZB);
+      return yB && "" !== UB && (WB = WB.filter((BB => BB.toLowerCase().includes(UB)))), (0, RB.jsxs)(RB.Fragment, {
+        children: [yB && (0, RB.jsx)(PB.c, {
           className: "LobbyManageFilter",
-          placeholderText: uB("lobbyManage:findName"),
-          ariaLabel: uB("lobbyManage:findName"),
+          placeholderText: kB("lobbyManage:findName"),
+          ariaLabel: kB("lobbyManage:findName"),
           onValueChange: BB => {
-            rB(BB)
+            zB(BB)
           }
-        }), LB.length > 0 && (0, hB.jsx)("div", {
+        }), WB.length > 0 && (0, RB.jsx)("div", {
           className: "PlayerRows",
-          children: LB.map(((BB, jB) => NB(BB, LB.length - jB)))
-        }), !mB && jB.length > zB && (0, hB.jsx)("div", {
+          children: WB.map(((BB, IB) => vB(BB, WB.length - IB)))
+        }), !gB && IB.length > ZB && (0, RB.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, hB.jsx)(yB.d, {
-            label: (0, hB.jsxs)(hB.Fragment, {
-              children: [dB, " ", (0, hB.jsx)(JB.c, {
+          children: (0, RB.jsx)(qB.d, {
+            label: (0, RB.jsxs)(RB.Fragment, {
+              children: [oB, " ", (0, RB.jsx)(NB.d, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              aB(!0)
+              nB(!0)
             }
           })
         })]
       })
     }
 
-    function AB(BB) {
+    function XB(BB) {
       let {
-        value: jB,
-        placeholder: zB,
-        ariaLabel: nB,
-        maxLength: dB,
-        wide: IB = !1,
-        onSave: NB
+        value: IB,
+        placeholder: ZB,
+        ariaLabel: JB,
+        maxLength: oB,
+        wide: GB = !1,
+        onSave: vB
       } = BB;
-      const uB = (0, QB.useRef)(null),
-        [UB, aB] = (0, QB.useState)(0),
-        pB = (0, QB.useRef)(!0),
-        sB = (0, QB.useRef)(null),
-        JB = (0, QB.useRef)({
-          value: jB,
-          onSave: NB
+      const kB = (0, TB.useRef)(null),
+        [cB, nB] = (0, TB.useState)(0),
+        hB = (0, TB.useRef)(!0),
+        FB = (0, TB.useRef)(null),
+        NB = (0, TB.useRef)({
+          value: IB,
+          onSave: vB
         });
-      JB.current = {
-        value: jB,
-        onSave: NB
+      NB.current = {
+        value: IB,
+        onSave: vB
       };
-      const mB = () => {
-        const BB = sB.current;
-        sB.current = null, null !== BB && BB !== JB.current.value && JB.current.onSave(BB).then((() => {
-          pB.current && aB((BB => BB + 1))
+      const gB = () => {
+        const BB = FB.current;
+        FB.current = null, null !== BB && BB !== NB.current.value && NB.current.onSave(BB).then((() => {
+          hB.current && nB((BB => BB + 1))
         }))
       };
-      return (0, QB.useEffect)((() => {
-        null === sB.current && uB.current && (uB.current.value = jB)
-      }), [jB, UB]), (0, QB.useEffect)((() => () => {
-        pB.current = !1, mB()
-      }), []), (0, hB.jsx)("div", {
-        className: rB()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: IB
+      return (0, TB.useEffect)((() => {
+        null === FB.current && kB.current && (kB.current.value = IB)
+      }), [IB, cB]), (0, TB.useEffect)((() => () => {
+        hB.current = !1, gB()
+      }), []), (0, RB.jsx)("div", {
+        className: zB()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: GB
         }),
-        onBlur: mB,
-        children: (0, hB.jsx)(VB.d, {
-          domRef: uB,
-          defaultValue: jB,
-          placeholderText: zB,
-          ariaLabel: nB,
-          maxLength: dB,
+        onBlur: gB,
+        children: (0, RB.jsx)(PB.c, {
+          domRef: kB,
+          defaultValue: IB,
+          placeholderText: ZB,
+          ariaLabel: JB,
+          maxLength: oB,
           onValueChange: BB => {
-            sB.current = BB
+            FB.current = BB
           },
-          onEnter: mB
+          onEnter: gB
         })
       })
     }
-    const TB = ["mod", "coOwner"],
-      PB = {
+    const LB = ["mod", "coOwner"],
+      eB = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function WB(BB) {
-      var jB, zB, dB;
+    function uB(BB) {
+      var IB, ZB, oB;
       let {
-        name: IB,
-        place: NB,
-        openedIn: uB,
-        isYou: UB,
-        manage: pB,
-        hiddenNames: rB,
-        zIndex: mB
+        name: GB,
+        place: vB,
+        openedIn: kB,
+        isYou: cB,
+        manage: hB,
+        hiddenNames: zB,
+        zIndex: gB
       } = BB;
       const {
-        t: yB,
-        selectedLanguage: kB
-      } = (0, sB.D)(), [GB, LB] = (0, QB.useState)(null), {
-        state: tB
-      } = pB, SB = `player:${IB}`, MB = function(BB, jB) {
+        t: qB,
+        selectedLanguage: yB
+      } = (0, FB.G)(), [UB, WB] = (0, TB.useState)(null), {
+        state: CB
+      } = hB, QB = `player:${GB}`, sB = function(BB, IB) {
         if ("banned" === BB.section) return {
-          ...EB,
+          ...wB,
           unban: !0
         };
-        if ("gone" === BB.section) return EB;
+        if ("gone" === BB.section) return wB;
         const {
-          player: zB
-        } = BB, QB = "here" === BB.section, nB = QB || "none" !== zB.role ? zB.can.roles : [];
+          player: ZB
+        } = BB, TB = "here" === BB.section, JB = TB || "none" !== ZB.role ? ZB.can.roles : [];
         return {
-          gamemode: QB && jB && null !== zB.gamemode && zB.can.gamemode,
-          roles: nB,
-          fixedRole: 0 === nB.length && "none" !== zB.role ? zB.role : null,
-          kick: QB && zB.can.kick,
-          ban: zB.can.ban,
+          gamemode: TB && IB && null !== ZB.gamemode && ZB.can.gamemode,
+          roles: JB,
+          fixedRole: 0 === JB.length && "none" !== ZB.role ? ZB.role : null,
+          kick: TB && ZB.can.kick,
+          ban: ZB.can.ban,
           unban: !1
         }
-      }(NB, null !== tB.gamemodes), HB = pB.statusOf(SB), YB = pB.isPending(SB), VB = aB(), ZB = Date.now(), AB = BB => {
-        var jB, zB;
-        return null !== (jB = null === (zB = (BB => tB.roles.find((jB => jB.role === BB)))(BB)) || void 0 === zB ? void 0 : zB.label) && void 0 !== jB ? jB : BB
-      }, WB = BB => {
-        const jB = PB[BB];
-        return void 0 === jB ? void 0 : yB(jB)
-      }, eB = "here" === NB.section || "away" === NB.section ? NB.player : null, lB = "here" === NB.section ? NB.player.id : null, {
-        playerSocialPreview: wB,
-        isFriend: xB
+      }(vB, null !== CB.gamemodes), aB = hB.statusOf(QB), jB = hB.isPending(QB), PB = nB(), mB = Date.now(), XB = BB => {
+        var IB, ZB;
+        return null !== (IB = null === (ZB = (BB => CB.roles.find((IB => IB.role === BB)))(BB)) || void 0 === ZB ? void 0 : ZB.label) && void 0 !== IB ? IB : BB
+      }, uB = BB => {
+        const IB = eB[BB];
+        return void 0 === IB ? void 0 : qB(IB)
+      }, fB = "here" === vB.section || "away" === vB.section ? vB.player : null, lB = "here" === vB.section ? vB.player.id : null, {
+        playerSocialPreview: AB,
+        isFriend: tB
       } = null === lB ? {
-        playerSocialPreview: (0, fB.e)(IB, null),
+        playerSocialPreview: (0, iB.j)(GB, null),
         isFriend: !1
-      } : (0, qB.d)(lB, IB), KB = function() {
-        pB.send(...arguments)
-      }, CB = (BB, jB) => {
-        VB.hold("role", BB, pB.send({
+      } : (0, YB.c)(lB, GB), bB = function() {
+        hB.send(...arguments)
+      }, xB = (BB, IB) => {
+        PB.hold("role", BB, hB.send({
           type: "setRole",
-          name: IB,
+          name: GB,
           role: BB
-        }, SB, jB))
+        }, QB, IB))
       };
-      let cB = null;
-      if ("ban" === (null === GB || void 0 === GB ? void 0 : GB.kind)) cB = yB("lobbyManageEntry:banConfirm", {
-        playerName: IB
+      let EB = null;
+      if ("ban" === (null === UB || void 0 === UB ? void 0 : UB.kind)) EB = qB("lobbyManageEntry:banConfirm", {
+        playerName: GB
       });
-      else if ("role" === (null === GB || void 0 === GB ? void 0 : GB.kind)) {
-        var bB;
-        cB = `${yB("lobbyManage:roleConfirm",{playerName:IB,role:AB(GB.role)})} ${null!==(bB=WB(GB.role))&&void 0!==bB?bB:""}`
-      } else if (HB) cB = (0, hB.jsx)(XB, {
-        status: HB
+      else if ("role" === (null === UB || void 0 === UB ? void 0 : UB.kind)) {
+        var DB;
+        EB = `${qB("lobbyManage:roleConfirm",{playerName:GB,role:XB(UB.role)})} ${null!==(DB=uB(UB.role))&&void 0!==DB?DB:""}`
+      } else if (aB) EB = (0, RB.jsx)(rB, {
+        status: aB
       });
-      else if (UB) cB = yB("lobbyManage:you");
-      else if ("here" === NB.section) "none" === NB.player.role && ZB - NB.player.at < 6e5 && (cB = FB(yB, kB.code, "lobbyManage:joinedAgo", NB.player.at, ZB));
-      else if ("away" === NB.section) {
-        if (NB.player.at > 0) {
-          const BB = "kicked" === NB.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          cB = FB(yB, kB.code, BB, NB.player.at, ZB)
+      else if (cB) EB = qB("lobbyManage:you");
+      else if ("here" === vB.section) "none" === vB.player.role && mB - vB.player.at < 6e5 && (EB = MB(qB, yB.code, "lobbyManage:joinedAgo", vB.player.at, mB));
+      else if ("away" === vB.section) {
+        if (vB.player.at > 0) {
+          const BB = "kicked" === vB.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          EB = MB(qB, yB.code, BB, vB.player.at, mB)
         }
-      } else "banned" === NB.section ? null !== NB.bannedAt && (cB = FB(yB, kB.code, "lobbyManage:bannedAgo", NB.bannedAt, ZB)) : "banned" === uB && (cB = yB("lobbyManageEntry:unbanned"));
-      return (0, hB.jsx)("div", {
+      } else "banned" === vB.section ? null !== vB.bannedAt && (EB = MB(qB, yB.code, "lobbyManage:bannedAgo", vB.bannedAt, mB)) : "banned" === kB && (EB = qB("lobbyManageEntry:unbanned"));
+      return (0, RB.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": IB,
-        children: (0, hB.jsxs)(iB.f, {
-          playerSocialPreview: wB,
-          isFriend: xB,
-          status: cB,
-          opensProfileCard: !UB && (0, qB.f)(!0, IB, rB),
-          zIndex: mB,
-          children: [null !== GB && (0, hB.jsxs)("div", {
+        "data-lobby-manage-row": GB,
+        children: (0, RB.jsxs)(OB.e, {
+          playerSocialPreview: AB,
+          isFriend: tB,
+          status: EB,
+          opensProfileCard: !cB && (0, YB.d)(!0, GB, zB),
+          zIndex: gB,
+          children: [null !== UB && (0, RB.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === GB.kind && (0, hB.jsxs)(gB.G, {
+            children: ["ban" === UB.kind && (0, RB.jsxs)(dB.M, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                LB(null), KB({
+                WB(null), bB({
                   type: "ban",
-                  name: IB
-                }, SB)
+                  name: GB
+                }, QB)
               },
-              children: [(0, hB.jsx)(JB.c, {
+              children: [(0, RB.jsx)(NB.d, {
                 name: "gavel"
-              }), (0, hB.jsx)("span", {
+              }), (0, RB.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: yB("lobbyManageEntry:ban")
+                children: qB("lobbyManageEntry:ban")
               })]
-            }), "role" === GB.kind && (0, hB.jsx)(gB.f, {
+            }), "role" === UB.kind && (0, RB.jsx)(dB.g, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: GB.role
+                value: UB.role
               },
               onClick: () => {
-                LB(null), CB(GB.role)
+                WB(null), xB(UB.role)
               },
-              children: yB("lobbyManage:makeRole", {
-                role: AB(GB.role)
+              children: qB("lobbyManage:makeRole", {
+                role: XB(UB.role)
               })
-            }), (0, hB.jsx)(gB.h, {
+            }), (0, RB.jsx)(dB.k, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                LB(null)
+                WB(null)
               },
-              children: yB("general:cancel")
+              children: qB("general:cancel")
             })]
-          }), null === GB && (0, hB.jsxs)(hB.Fragment, {
-            children: [(0, hB.jsxs)("div", {
+          }), null === UB && (0, RB.jsxs)(RB.Fragment, {
+            children: [(0, RB.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [MB.gamemode && null !== eB && (0, hB.jsx)(oB.e, {
-                options: (null !== (jB = tB.gamemodes) && void 0 !== jB ? jB : []).map((BB => ({
+              children: [sB.gamemode && null !== fB && (0, RB.jsx)(pB.c, {
+                options: (null !== (IB = CB.gamemodes) && void 0 !== IB ? IB : []).map((BB => ({
                   value: BB.value,
-                  label: DB(yB, BB.label, rB)
+                  label: HB(qB, BB.label, zB)
                 }))),
-                value: null !== (zB = VB.get("gamemode")) && void 0 !== zB ? zB : eB.gamemode,
-                disabled: YB,
+                value: null !== (ZB = PB.get("gamemode")) && void 0 !== ZB ? ZB : fB.gamemode,
+                disabled: jB,
                 onChange: BB => {
-                  (0, nB.reportAnalyticsClick)({
+                  (0, JB.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
                     value: BB.value
-                  }), VB.hold("gamemode", BB.value, pB.send({
+                  }), PB.hold("gamemode", BB.value, hB.send({
                     type: "setGamemode",
-                    name: IB,
+                    name: GB,
                     gamemode: BB.value
-                  }, SB))
+                  }, QB))
                 }
-              }), MB.roles.length > 0 && null !== eB && (0, hB.jsx)(oB.e, {
-                options: [...tB.roles].reverse().filter((BB => MB.roles.includes(BB.role))).map((BB => ({
+              }), sB.roles.length > 0 && null !== fB && (0, RB.jsx)(pB.c, {
+                options: [...CB.roles].reverse().filter((BB => sB.roles.includes(BB.role))).map((BB => ({
                   value: BB.role,
                   label: BB.label
                 }))),
-                value: null !== (dB = VB.get("role")) && void 0 !== dB ? dB : eB.role,
-                disabled: YB,
+                value: null !== (oB = PB.get("role")) && void 0 !== oB ? oB : fB.role,
+                disabled: jB,
                 onChange: BB => {
-                  var jB;
-                  (jB = BB.value) !== (null === eB || void 0 === eB ? void 0 : eB.role) && (TB.includes(jB) ? LB({
+                  var IB;
+                  (IB = BB.value) !== (null === fB || void 0 === fB ? void 0 : fB.role) && (LB.includes(IB) ? WB({
                     kind: "role",
-                    role: jB
-                  }) : ((0, nB.reportAnalyticsClick)({
+                    role: IB
+                  }) : ((0, JB.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: jB
-                  }), CB(jB, WB(jB))))
+                    value: IB
+                  }), xB(IB, uB(IB))))
                 }
-              }), null !== MB.fixedRole && (0, hB.jsx)("div", {
+              }), null !== sB.fixedRole && (0, RB.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: AB(MB.fixedRole)
+                children: XB(sB.fixedRole)
               })]
-            }), (0, hB.jsxs)("div", {
+            }), (0, RB.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [MB.kick && (0, hB.jsxs)(gB.h, {
+              children: [sB.kick && (0, RB.jsxs)(dB.k, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${yB("lobbyManageEntry:kick")} ${IB}`,
-                disabled: YB,
+                ariaLabel: `${qB("lobbyManageEntry:kick")} ${GB}`,
+                disabled: jB,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  KB({
+                  bB({
                     type: "kick",
-                    name: IB
-                  }, SB)
+                    name: GB
+                  }, QB)
                 },
-                children: [(0, hB.jsx)(JB.c, {
+                children: [(0, RB.jsx)(NB.d, {
                   name: "person-falling-burst"
-                }), (0, hB.jsx)("span", {
+                }), (0, RB.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: yB("lobbyManageEntry:kick")
+                  children: qB("lobbyManageEntry:kick")
                 })]
-              }), MB.ban && (0, hB.jsxs)(gB.J, {
+              }), sB.ban && (0, RB.jsxs)(dB.N, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${yB("lobbyManageEntry:ban")} ${IB}`,
-                disabled: YB,
+                ariaLabel: `${qB("lobbyManageEntry:ban")} ${GB}`,
+                disabled: jB,
                 padDestructive: !0,
                 onClick: () => {
-                  LB({
+                  WB({
                     kind: "ban"
                   })
                 },
-                children: [(0, hB.jsx)(JB.c, {
+                children: [(0, RB.jsx)(NB.d, {
                   name: "gavel"
-                }), (0, hB.jsx)("span", {
+                }), (0, RB.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: yB("lobbyManageEntry:ban")
+                  children: qB("lobbyManageEntry:ban")
                 })]
-              }), MB.unban && (0, hB.jsxs)(gB.h, {
+              }), sB.unban && (0, RB.jsxs)(dB.k, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${yB("lobbyManageEntry:unban")} ${IB}`,
-                disabled: YB,
+                ariaLabel: `${qB("lobbyManageEntry:unban")} ${GB}`,
+                disabled: jB,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  KB({
+                  bB({
                     type: "unban",
-                    name: IB
-                  }, SB)
+                    name: GB
+                  }, QB)
                 },
-                children: [(0, hB.jsx)(JB.c, {
+                children: [(0, RB.jsx)(NB.d, {
                   name: "user-unlock"
-                }), (0, hB.jsx)("span", {
+                }), (0, RB.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: yB("lobbyManageEntry:unban")
+                  children: qB("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -441,783 +441,783 @@ export const modules = {
       })
     }
 
-    function eB(BB) {
-      var jB, zB, nB, dB;
+    function fB(BB) {
+      var IB, ZB, JB, oB;
       let {
-        manage: IB,
-        focusRequest: NB,
-        onFocused: uB
+        manage: GB,
+        focusRequest: vB,
+        onFocused: kB
       } = BB;
       const {
-        t: UB
-      } = (0, sB.D)(), aB = (0, LB.k)("players"), pB = (0, LB.k)("hiddenPlayerNames"), rB = (0, QB.useRef)(null), {
-        state: mB
-      } = IB, kB = null === aB.localId ? null : null !== (jB = null === (zB = aB.byId[aB.localId]) || void 0 === zB ? void 0 : zB.name) && void 0 !== jB ? jB : null, [GB] = (0, QB.useState)((() => SB(mB, kB))), tB = function(BB, jB, zB) {
-        const QB = new Set([...BB.here, ...BB.away, ...BB.banned]),
-          nB = SB(jB, zB),
-          dB = jB => {
-            const zB = nB[jB].filter((BB => !QB.has(BB)));
-            for (const BB of zB) QB.add(BB);
-            return [...BB[jB], ...zB]
+        t: cB
+      } = (0, FB.G)(), nB = (0, WB.j)("players"), hB = (0, WB.j)("hiddenPlayerNames"), zB = (0, TB.useRef)(null), {
+        state: gB
+      } = GB, yB = null === nB.localId ? null : null !== (IB = null === (ZB = nB.byId[nB.localId]) || void 0 === ZB ? void 0 : ZB.name) && void 0 !== IB ? IB : null, [UB] = (0, TB.useState)((() => QB(gB, yB))), CB = function(BB, IB, ZB) {
+        const TB = new Set([...BB.here, ...BB.away, ...BB.banned]),
+          JB = QB(IB, ZB),
+          oB = IB => {
+            const ZB = JB[IB].filter((BB => !TB.has(BB)));
+            for (const BB of ZB) TB.add(BB);
+            return [...BB[IB], ...ZB]
           };
         return {
-          here: dB("here"),
-          away: dB("away"),
-          banned: dB("banned")
+          here: oB("here"),
+          away: oB("away"),
+          banned: oB("banned")
         }
-      }(GB, mB, kB), [EB, iB] = (0, QB.useState)(!1), qB = function(BB, jB) {
-        return BB.here.filter((BB => BB.name !== jB && "none" === BB.role && BB.can.kick)).length
-      }(mB, kB), fB = IB.statusOf("kickAll");
-      (0, QB.useEffect)((() => {
-        var BB, jB;
-        if (null === NB) return;
-        const zB = null === (BB = rB.current) || void 0 === BB ? void 0 : BB.querySelector(`[data-lobby-manage-row="${CSS.escape(NB.name)}"]`);
-        null === zB || void 0 === zB || zB.scrollIntoView({
+      }(UB, gB, yB), [wB, OB] = (0, TB.useState)(!1), YB = function(BB, IB) {
+        return BB.here.filter((BB => BB.name !== IB && "none" === BB.role && BB.can.kick)).length
+      }(gB, yB), iB = GB.statusOf("kickAll");
+      (0, TB.useEffect)((() => {
+        var BB, IB;
+        if (null === vB) return;
+        const ZB = null === (BB = zB.current) || void 0 === BB ? void 0 : BB.querySelector(`[data-lobby-manage-row="${CSS.escape(vB.name)}"]`);
+        null === ZB || void 0 === ZB || ZB.scrollIntoView({
           block: "center"
-        }), null === zB || void 0 === zB || null === (jB = zB.querySelector(".ProfilePreview")) || void 0 === jB || jB.focus({
+        }), null === ZB || void 0 === ZB || null === (IB = ZB.querySelector(".ProfilePreview")) || void 0 === IB || IB.focus({
           preventScroll: !0
-        }), uB(NB.seq)
-      }), [null === NB || void 0 === NB ? void 0 : NB.seq]);
-      const oB = BB => (jB, zB) => (0, hB.jsx)(WB, {
-        name: jB,
-        place: MB(mB, jB),
+        }), kB(vB.seq)
+      }), [null === vB || void 0 === vB ? void 0 : vB.seq]);
+      const pB = BB => (IB, ZB) => (0, RB.jsx)(uB, {
+        name: IB,
+        place: sB(gB, IB),
         openedIn: BB,
-        isYou: jB === kB,
-        manage: IB,
-        hiddenNames: pB,
-        zIndex: zB
-      }, jB);
-      return (0, hB.jsxs)("div", {
-        ref: rB,
+        isYou: IB === yB,
+        manage: GB,
+        hiddenNames: hB,
+        zIndex: ZB
+      }, IB);
+      return (0, RB.jsxs)("div", {
+        ref: zB,
         className: "LobbyManagePage",
-        children: [tB.here.length > 0 && (0, hB.jsxs)("div", {
+        children: [CB.here.length > 0 && (0, RB.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, hB.jsxs)("div", {
+          children: [(0, RB.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, hB.jsx)(yB.d, {
-              label: UB("lobbyManage:here"),
-              meta: mB.here.length
-            }), qB >= 2 && !EB && (0, hB.jsxs)(gB.J, {
+            children: [(0, RB.jsx)(qB.d, {
+              label: cB("lobbyManage:here"),
+              meta: gB.here.length
+            }), YB >= 2 && !wB && (0, RB.jsxs)(dB.N, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: IB.isPending("kickAll"),
+              disabled: GB.isPending("kickAll"),
               onClick: () => {
-                iB(!0)
+                OB(!0)
               },
-              children: [(0, hB.jsx)(JB.c, {
+              children: [(0, RB.jsx)(NB.d, {
                 name: "person-falling-burst"
-              }), " ", UB("lobbyManage:kickAll")]
+              }), " ", cB("lobbyManage:kickAll")]
             })]
-          }), EB && qB >= 2 && (0, hB.jsxs)("div", {
+          }), wB && YB >= 2 && (0, RB.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, hB.jsx)("span", {
+            children: [(0, RB.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: UB("lobbyManage:kickAllConfirm", {
-                count: qB
+              children: cB("lobbyManage:kickAllConfirm", {
+                count: YB
               })
-            }), (0, hB.jsxs)("div", {
+            }), (0, RB.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, hB.jsx)(gB.G, {
+              children: [(0, RB.jsx)(dB.M, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  iB(!1), IB.send({
+                  OB(!1), GB.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: UB("lobbyManage:kickAll")
-              }), (0, hB.jsx)(gB.h, {
+                children: cB("lobbyManage:kickAll")
+              }), (0, RB.jsx)(dB.k, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  iB(!1)
+                  OB(!1)
                 },
-                children: UB("general:cancel")
+                children: cB("general:cancel")
               })]
             })]
-          }), fB && (0, hB.jsx)("div", {
+          }), iB && (0, RB.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, hB.jsx)(XB, {
-              status: fB
+            children: (0, RB.jsx)(rB, {
+              status: iB
             })
-          }), (0, hB.jsx)(ZB, {
-            names: tB.here,
-            cap: tB.here.length,
+          }), (0, RB.jsx)(mB, {
+            names: CB.here,
+            cap: CB.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: oB("here")
+            renderRow: pB("here")
           })]
-        }), tB.away.length > 0 && (0, hB.jsxs)("div", {
+        }), CB.away.length > 0 && (0, RB.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, hB.jsx)(yB.d, {
-            label: UB("lobbyManage:notHere"),
-            meta: tB.away.length
-          }), (0, hB.jsx)(ZB, {
-            names: tB.away,
+          children: [(0, RB.jsx)(qB.d, {
+            label: cB("lobbyManage:notHere"),
+            meta: CB.away.length
+          }), (0, RB.jsx)(mB, {
+            names: CB.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: UB("lobbyManage:allCount", {
-              count: tB.away.length
+            moreLabel: cB("lobbyManage:allCount", {
+              count: CB.away.length
             }),
-            reveal: null !== (nB = null === NB || void 0 === NB ? void 0 : NB.name) && void 0 !== nB ? nB : null,
-            renderRow: oB("away")
+            reveal: null !== (JB = null === vB || void 0 === vB ? void 0 : vB.name) && void 0 !== JB ? JB : null,
+            renderRow: pB("away")
           })]
-        }), tB.banned.length > 0 && (0, hB.jsxs)("div", {
+        }), CB.banned.length > 0 && (0, RB.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, hB.jsx)(yB.d, {
-            label: UB("lobbyManage:banned"),
-            meta: tB.banned.length
-          }), (0, hB.jsx)(ZB, {
-            names: tB.banned,
+          children: [(0, RB.jsx)(qB.d, {
+            label: cB("lobbyManage:banned"),
+            meta: CB.banned.length
+          }), (0, RB.jsx)(mB, {
+            names: CB.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: UB("lobbyManage:allCount", {
-              count: tB.banned.length
+            moreLabel: cB("lobbyManage:allCount", {
+              count: CB.banned.length
             }),
-            reveal: null !== (dB = null === NB || void 0 === NB ? void 0 : NB.name) && void 0 !== dB ? dB : null,
-            renderRow: oB("banned")
+            reveal: null !== (oB = null === vB || void 0 === vB ? void 0 : vB.name) && void 0 !== oB ? oB : null,
+            renderRow: pB("banned")
           })]
         })]
       })
     }
-    var lB = zB(4729),
-      wB = zB(1668),
-      xB = zB(36783),
-      KB = zB(36795),
-      CB = zB(36793),
-      cB = zB(36790),
-      bB = zB(36820),
-      vB = zB(36805),
-      RB = zB(36812);
+    var lB = ZB(4802),
+      AB = ZB(1717),
+      tB = ZB(36726),
+      bB = ZB(36745),
+      xB = ZB(36737),
+      EB = ZB(36735),
+      DB = ZB(36768),
+      KB = ZB(36754),
+      VB = ZB(36763);
 
-    function OB(BB) {
-      const jB = new Set;
-      for (const zB of BB) jB.add(zB.toLowerCase());
-      return jB
+    function SB(BB) {
+      const IB = new Set;
+      for (const ZB of BB) IB.add(ZB.toLowerCase());
+      return IB
     }
 
-    function Bj(BB) {
-      var jB, zB;
+    function BI(BB) {
+      var IB, ZB;
       let {
-        state: nB,
-        lobbyName: dB,
-        listed: IB,
-        isListed: NB,
-        mG: uB,
-        xG: UB,
-        statusOf: aB
+        state: JB,
+        lobbyName: oB,
+        listed: GB,
+        isListed: vB,
+        dU: kB,
+        cW: cB,
+        statusOf: nB
       } = BB;
       const {
-        t: pB,
-        selectedLanguage: rB
-      } = (0, sB.D)(), JB = (0, wB.j)(), mB = (0, LB.k)("players"), kB = null === mB.localId ? null : null !== (jB = null === (zB = mB.byId[mB.localId]) || void 0 === zB ? void 0 : zB.name) && void 0 !== jB ? jB : null, GB = (0, QB.useMemo)((() => (0, cB.k)(JB.friends, dB, nB.here.map((BB => BB.name)))), [JB.friends, dB, nB.here]), gB = new Map(GB.map((BB => [BB.friend.name.toLowerCase(), BB]))), tB = function(BB) {
+        t: hB,
+        selectedLanguage: zB
+      } = (0, FB.G)(), NB = (0, AB.j)(), gB = (0, WB.j)("players"), yB = null === gB.localId ? null : null !== (IB = null === (ZB = gB.byId[gB.localId]) || void 0 === ZB ? void 0 : ZB.name) && void 0 !== IB ? IB : null, UB = (0, TB.useMemo)((() => (0, EB.i)(NB.friends, oB, JB.here.map((BB => BB.name)))), [NB.friends, oB, JB.here]), dB = new Map(UB.map((BB => [BB.friend.name.toLowerCase(), BB]))), CB = function(BB) {
         let {
-          refused: jB,
-          listed: zB,
-          here: QB,
-          friends: nB,
-          excluded: dB
+          refused: IB,
+          listed: ZB,
+          here: TB,
+          friends: JB,
+          excluded: oB
         } = BB;
-        const IB = OB(dB),
-          NB = BB => BB.filter((BB => {
-            const jB = BB.toLowerCase();
-            return !IB.has(jB) && (IB.add(jB), !0)
+        const GB = SB(oB),
+          vB = BB => BB.filter((BB => {
+            const IB = BB.toLowerCase();
+            return !GB.has(IB) && (GB.add(IB), !0)
           }));
         return {
           added: [],
-          refused: NB(jB),
-          listed: NB(zB),
-          suggested: NB([...QB, ...nB])
+          refused: vB(IB),
+          listed: vB(ZB),
+          suggested: vB([...TB, ...JB])
         }
       }({
-        refused: nB.refused.map((BB => BB.name)),
-        listed: IB,
-        here: nB.here.map((BB => BB.name)),
-        friends: GB.flatMap((BB => "here" === BB.place ? [] : [BB.friend.name])),
-        excluded: [...null === kB ? [] : [kB], ...[...nB.here, ...nB.away].flatMap((BB => "none" === BB.role || (0, cB.l)(IB, BB.name) ? [] : [BB.name]))]
-      }), [SB] = (0, QB.useState)(tB), [MB, EB] = (0, QB.useState)([]), iB = function(BB, jB, zB) {
-        const QB = OB(zB),
-          nB = OB([...zB, ...BB.refused, ...BB.listed, ...BB.suggested]),
-          dB = zB => [...BB[zB].filter((BB => !QB.has(BB.toLowerCase()))), ...jB[zB].filter((BB => {
-            const jB = BB.toLowerCase();
-            return !nB.has(jB) && (nB.add(jB), !0)
+        refused: JB.refused.map((BB => BB.name)),
+        listed: GB,
+        here: JB.here.map((BB => BB.name)),
+        friends: UB.flatMap((BB => "here" === BB.place ? [] : [BB.friend.name])),
+        excluded: [...null === yB ? [] : [yB], ...[...JB.here, ...JB.away].flatMap((BB => "none" === BB.role || (0, EB.m)(GB, BB.name) ? [] : [BB.name]))]
+      }), [QB] = (0, TB.useState)(CB), [sB, wB] = (0, TB.useState)([]), OB = function(BB, IB, ZB) {
+        const TB = SB(ZB),
+          JB = SB([...ZB, ...BB.refused, ...BB.listed, ...BB.suggested]),
+          oB = ZB => [...BB[ZB].filter((BB => !TB.has(BB.toLowerCase()))), ...IB[ZB].filter((BB => {
+            const IB = BB.toLowerCase();
+            return !JB.has(IB) && (JB.add(IB), !0)
           }))];
         return {
-          added: [...zB],
-          refused: dB("refused"),
-          listed: dB("listed"),
-          suggested: dB("suggested")
+          added: [...ZB],
+          refused: oB("refused"),
+          listed: oB("listed"),
+          suggested: oB("suggested")
         }
-      }(SB, tB, MB), oB = (BB, jB) => {
-        var zB, QB;
-        const dB = BB.toLowerCase(),
-          IB = gB.get(dB),
-          UB = nB.here.find((BB => BB.name.toLowerCase() === dB)),
-          sB = nB.refused.find((BB => BB.name.toLowerCase() === dB)),
-          JB = null !== (zB = null === aB || void 0 === aB ? void 0 : aB(BB)) && void 0 !== zB ? zB : null;
-        let mB = null;
-        JB ? mB = (0, hB.jsx)(XB, {
-          status: JB
-        }) : sB ? mB = FB(pB, rB.code, "lobbyManage:triedToJoinAgo", sB.at, Date.now()) : IB && UB ? mB = pB("lobbyManage:friendHere") : IB ? mB = "online" === IB.place ? pB("lobbyManage:friendOnline") : pB("lobbyManage:friend") : UB && (mB = pB("lobbyManage:hereStatus"));
-        let yB = null !== (QB = null === IB || void 0 === IB ? void 0 : IB.friend) && void 0 !== QB ? QB : (0, fB.e)(BB, null);
-        return !IB && null !== UB && void 0 !== UB && UB.id && (yB = (0, qB.d)(UB.id, UB.name).playerSocialPreview), (0, hB.jsx)(vB.d, {
-          playerSocialPreview: yB,
-          isFriend: void 0 !== IB,
+      }(QB, CB, sB), pB = (BB, IB) => {
+        var ZB, TB;
+        const oB = BB.toLowerCase(),
+          GB = dB.get(oB),
+          cB = JB.here.find((BB => BB.name.toLowerCase() === oB)),
+          FB = JB.refused.find((BB => BB.name.toLowerCase() === oB)),
+          NB = null !== (ZB = null === nB || void 0 === nB ? void 0 : nB(BB)) && void 0 !== ZB ? ZB : null;
+        let gB = null;
+        NB ? gB = (0, RB.jsx)(rB, {
+          status: NB
+        }) : FB ? gB = MB(hB, zB.code, "lobbyManage:triedToJoinAgo", FB.at, Date.now()) : GB && cB ? gB = hB("lobbyManage:friendHere") : GB ? gB = "online" === GB.place ? hB("lobbyManage:friendOnline") : hB("lobbyManage:friend") : cB && (gB = hB("lobbyManage:hereStatus"));
+        let qB = null !== (TB = null === GB || void 0 === GB ? void 0 : GB.friend) && void 0 !== TB ? TB : (0, iB.j)(BB, null);
+        return !GB && null !== cB && void 0 !== cB && cB.id && (qB = (0, YB.c)(cB.id, cB.name).playerSocialPreview), (0, RB.jsx)(KB.c, {
+          playerSocialPreview: qB,
+          isFriend: void 0 !== GB,
           hideFriendBadge: !0,
-          status: mB,
-          zIndex: jB,
-          vp: {
-            on: NB(BB),
-            onChange: jB => {
-              uB(BB, jB)
+          status: gB,
+          zIndex: IB,
+          Iz: {
+            on: vB(BB),
+            onChange: IB => {
+              kB(BB, IB)
             }
           }
-        }, dB)
-      }, HB = [...iB.added, ...iB.refused];
-      return (0, hB.jsxs)("div", {
+        }, oB)
+      }, aB = [...OB.added, ...OB.refused];
+      return (0, RB.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, hB.jsx)(yB.d, {
-          label: pB("worldSocial:whitelist"),
-          meta: IB.length
-        }), (0, hB.jsx)(RB.d, {
-          label: pB("lobbyManage:add"),
+        children: [(0, RB.jsx)(qB.d, {
+          label: hB("worldSocial:whitelist"),
+          meta: GB.length
+        }), (0, RB.jsx)(VB.c, {
+          label: hB("lobbyManage:add"),
           icon: "user-check",
-          placeholder: pB("socialBar:enterPlayerName"),
+          placeholder: hB("socialBar:enterPlayerName"),
           onSubmit: async BB => {
-            const jB = await UB(BB);
-            return jB.ok && EB((jB => [BB, ...jB])), jB
+            const IB = await cB(BB);
+            return IB.ok && wB((IB => [BB, ...IB])), IB
           }
-        }), HB.length > 0 && (0, hB.jsx)("div", {
+        }), aB.length > 0 && (0, RB.jsx)("div", {
           className: "PlayerRows",
-          children: HB.map(((BB, jB) => oB(BB, HB.length - jB)))
-        }), (0, hB.jsx)(ZB, {
-          names: iB.listed,
+          children: aB.map(((BB, IB) => pB(BB, aB.length - IB)))
+        }), (0, RB.jsx)(mB, {
+          names: OB.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: pB("lobbyManage:allOnWhitelist", {
-            count: iB.listed.length
+          moreLabel: hB("lobbyManage:allOnWhitelist", {
+            count: OB.listed.length
           }),
-          renderRow: oB
-        }), (0, hB.jsx)(ZB, {
-          names: iB.suggested,
+          renderRow: pB
+        }), (0, RB.jsx)(mB, {
+          names: OB.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: pB("lobbyManage:allCount", {
-            count: iB.suggested.length
+          moreLabel: hB("lobbyManage:allCount", {
+            count: OB.suggested.length
           }),
-          renderRow: oB
+          renderRow: pB
         })]
       })
     }
 
-    function jj(BB) {
+    function II(BB) {
       let {
-        manage: jB,
-        listing: zB
+        manage: IB,
+        listing: ZB
       } = BB;
       const {
-        t: QB
-      } = (0, sB.D)(), dB = (BB, zB) => ((0, nB.reportAnalyticsClick)({
+        t: TB
+      } = (0, FB.G)(), oB = (BB, ZB) => ((0, JB.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
         value: BB
-      }), jB.send({
+      }), IB.send({
         type: "setListing",
         field: BB,
-        value: zB
-      }, `listing:${BB}`)), IB = BB => {
-        const zB = jB.statusOf(`listing:${BB}`);
-        return zB && !zB.ok && (0, hB.jsx)("div", {
+        value: ZB
+      }, `listing:${BB}`)), GB = BB => {
+        const ZB = IB.statusOf(`listing:${BB}`);
+        return ZB && !ZB.ok && (0, RB.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, hB.jsx)(XB, {
-            status: zB
+          children: (0, RB.jsx)(rB, {
+            status: ZB
           })
         })
       };
-      return (0, hB.jsxs)("div", {
+      return (0, RB.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, hB.jsx)(yB.d, {
-          label: QB("lobbyManage:inWorldsList")
-        }), (0, hB.jsxs)("div", {
+        children: [(0, RB.jsx)(qB.d, {
+          label: TB("lobbyManage:inWorldsList")
+        }), (0, RB.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, hB.jsx)("div", {
+          children: [(0, RB.jsx)("div", {
             className: "SliderText",
-            children: QB("lobbyManage:description")
-          }), (0, hB.jsx)(AB, {
-            value: zB.description,
-            ariaLabel: QB("lobbyManage:description"),
+            children: TB("lobbyManage:description")
+          }), (0, RB.jsx)(XB, {
+            value: ZB.description,
+            ariaLabel: TB("lobbyManage:description"),
             wide: !0,
-            onSave: BB => dB("description", BB)
+            onSave: BB => oB("description", BB)
           })]
-        }), IB("description"), (0, hB.jsxs)("div", {
+        }), GB("description"), (0, RB.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, hB.jsx)("div", {
+          children: [(0, RB.jsx)("div", {
             className: "SliderText",
-            children: QB("lobbyManage:emojis")
-          }), (0, hB.jsx)(AB, {
-            value: zB.emojis,
-            ariaLabel: QB("lobbyManage:emojis"),
-            onSave: BB => dB("emojis", BB)
+            children: TB("lobbyManage:emojis")
+          }), (0, RB.jsx)(XB, {
+            value: ZB.emojis,
+            ariaLabel: TB("lobbyManage:emojis"),
+            onSave: BB => oB("emojis", BB)
           })]
-        }), IB("emojis"), (0, hB.jsxs)("div", {
+        }), GB("emojis"), (0, RB.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, hB.jsx)("div", {
+          children: [(0, RB.jsx)("div", {
             className: "SliderText",
-            children: QB("lobbyManage:colour")
-          }), (0, hB.jsx)(zj, {
-            value: zB.colour,
-            ariaLabel: QB("lobbyManage:colour"),
+            children: TB("lobbyManage:colour")
+          }), (0, RB.jsx)(ZI, {
+            value: ZB.colour,
+            ariaLabel: TB("lobbyManage:colour"),
             onSave: BB => {
-              dB("colour", BB)
+              oB("colour", BB)
             }
           })]
-        }), IB("colour")]
+        }), GB("colour")]
       })
     }
 
-    function zj(BB) {
+    function ZI(BB) {
       let {
-        value: jB,
-        ariaLabel: zB,
-        onSave: nB
+        value: IB,
+        ariaLabel: ZB,
+        onSave: JB
       } = BB;
-      const dB = (0, QB.useRef)(null),
-        IB = (0, QB.useRef)({
-          value: jB,
-          onSave: nB
+      const oB = (0, TB.useRef)(null),
+        GB = (0, TB.useRef)({
+          value: IB,
+          onSave: JB
         });
-      IB.current = {
-        value: jB,
-        onSave: nB
+      GB.current = {
+        value: IB,
+        onSave: JB
       };
-      const NB = (0, QB.useRef)(null),
-        uB = (0, QB.useRef)(!1),
-        UB = BB => {
-          uB.current && BB.value !== IB.current.value && BB.value !== NB.current && (NB.current = BB.value, IB.current.onSave(BB.value))
+      const vB = (0, TB.useRef)(null),
+        kB = (0, TB.useRef)(!1),
+        cB = BB => {
+          kB.current && BB.value !== GB.current.value && BB.value !== vB.current && (vB.current = BB.value, GB.current.onSave(BB.value))
         };
-      return (0, QB.useEffect)((() => {
-        dB.current && document.activeElement !== dB.current && (dB.current.value = jB)
-      }), [jB]), (0, QB.useEffect)((() => {
-        const BB = dB.current,
-          jB = () => {
-            UB(BB)
+      return (0, TB.useEffect)((() => {
+        oB.current && document.activeElement !== oB.current && (oB.current.value = IB)
+      }), [IB]), (0, TB.useEffect)((() => {
+        const BB = oB.current,
+          IB = () => {
+            cB(BB)
           };
-        return BB.addEventListener("change", jB), () => {
-          BB.removeEventListener("change", jB), UB(BB)
+        return BB.addEventListener("change", IB), () => {
+          BB.removeEventListener("change", IB), cB(BB)
         }
-      }), []), (0, hB.jsx)("input", {
-        ref: dB,
+      }), []), (0, RB.jsx)("input", {
+        ref: oB,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: jB,
-        "aria-label": zB,
+        defaultValue: IB,
+        "aria-label": ZB,
         onInput: () => {
-          uB.current = !0
+          kB.current = !0
         },
         onBlur: BB => {
-          UB(BB.currentTarget)
+          cB(BB.currentTarget)
         }
       })
     }
 
-    function Qj(BB) {
+    function TI(BB) {
       let {
-        manage: jB
+        manage: IB
       } = BB;
       const {
-        lobbyName: zB,
-        shownLobbyName: QB
-      } = (0, LB.k)("connectedGame");
-      return jB.state.you.canSetVisibility && null !== zB ? (0, hB.jsx)(dj, {
-        manage: jB,
-        lobbyName: zB,
-        worldCode: null !== QB && void 0 !== QB ? QB : zB
-      }, zB) : (0, hB.jsx)(Ij, {
-        manage: jB,
-        lobbyName: null !== zB && void 0 !== zB ? zB : ""
+        lobbyName: ZB,
+        shownLobbyName: TB
+      } = (0, WB.j)("connectedGame");
+      return IB.state.you.canSetVisibility && null !== ZB ? (0, RB.jsx)(oI, {
+        manage: IB,
+        lobbyName: ZB,
+        worldCode: null !== TB && void 0 !== TB ? TB : ZB
+      }, ZB) : (0, RB.jsx)(GI, {
+        manage: IB,
+        lobbyName: null !== ZB && void 0 !== ZB ? ZB : ""
       })
     }
 
-    function nj(BB) {
+    function JI(BB) {
       return BB.map((BB => BB.toLowerCase())).sort().join(",")
     }
 
-    function dj(BB) {
-      var jB;
+    function oI(BB) {
+      var IB;
       let {
-        manage: zB,
-        lobbyName: dB,
-        worldCode: IB
+        manage: ZB,
+        lobbyName: oB,
+        worldCode: GB
       } = BB;
       const {
-        t: NB
-      } = (0, sB.D)(), {
-        settings: uB,
-        loading: UB,
-        change: aB,
-        retry: pB,
-        refresh: rB
-      } = (0, xB.g)(dB), JB = (0, wB.j)(), {
-        state: kB
-      } = zB, GB = (0, QB.useRef)(uB);
-      GB.current = uB;
-      const LB = nj(null !== (jB = kB.whitelist) && void 0 !== jB ? jB : []),
-        tB = null !== kB.whitelist;
-      (0, QB.useEffect)((() => {
-        const BB = GB.current;
-        null !== BB && (BB.visibility !== kB.visibility || tB && nj(BB.whitelist) !== LB) && rB()
-      }), [kB.visibility, LB, tB, rB]);
-      const SB = async (BB, jB) => {
-        let zB = null;
-        return await aB(BB, jB, {
+        t: vB
+      } = (0, FB.G)(), {
+        settings: kB,
+        loading: cB,
+        change: nB,
+        retry: hB,
+        refresh: zB
+      } = (0, tB.g)(oB), NB = (0, AB.j)(), {
+        state: yB
+      } = ZB, UB = (0, TB.useRef)(kB);
+      UB.current = kB;
+      const WB = JI(null !== (IB = yB.whitelist) && void 0 !== IB ? IB : []),
+        CB = null !== yB.whitelist;
+      (0, TB.useEffect)((() => {
+        const BB = UB.current;
+        null !== BB && (BB.visibility !== yB.visibility || CB && JI(BB.whitelist) !== WB) && zB()
+      }), [yB.visibility, WB, CB, zB]);
+      const QB = async (BB, IB) => {
+        let ZB = null;
+        return await nB(BB, IB, {
           quiet: !0,
           onAnswer: BB => {
-            zB = BB
+            ZB = BB
           }
-        }), zB
-      }, MB = (BB, jB) => {
-        null !== jB && "error" in jB && zB.showStatus(BB, {
+        }), ZB
+      }, sB = (BB, IB) => {
+        null !== IB && "error" in IB && ZB.showStatus(BB, {
           ok: !1,
-          text: [NB(jB.error)]
+          text: [vB(IB.error)]
         })
-      }, EB = async BB => {
-        if (null === uB || BB === uB.visibility) return;
-        (0, nB.reportAnalyticsClick)({
+      }, wB = async BB => {
+        if (null === kB || BB === kB.visibility) return;
+        (0, JB.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
           value: BB
         });
-        const jB = "whitelist" === BB ? (0, cB.g)((0, cB.k)(JB.friends, dB, kB.here.map((BB => BB.name))), (0, bB.d)(dB), uB.whitelist) : [],
-          zB = await SB({
+        const IB = "whitelist" === BB ? (0, EB.f)((0, EB.i)(NB.friends, oB, yB.here.map((BB => BB.name))), (0, DB.e)(oB), kB.whitelist) : [],
+          ZB = await QB({
             setVisibility: BB
-          }, (jB => ({
-            ...jB,
+          }, (IB => ({
+            ...IB,
             visibility: BB
           })));
-        MB("mode", zB), null === zB || "error" in zB || await (async BB => {
-          for (const jB of (0, cB.n)(BB, lB.x))
-            if (!await aB({
-                whitelistAdd: jB
-              }, (BB => (0, cB.r)(BB, jB, !0)))) return !1;
+        sB("mode", ZB), null === ZB || "error" in ZB || await (async BB => {
+          for (const IB of (0, EB.n)(BB, lB.A))
+            if (!await nB({
+                whitelistAdd: IB
+              }, (BB => (0, EB.s)(BB, IB, !0)))) return !1;
           return !0
-        })(jB)
-      }, iB = (0, QB.useMemo)((() => {
+        })(IB)
+      }, OB = (0, TB.useMemo)((() => {
         var BB;
-        if (null === uB) return [];
-        const jB = null !== (BB = kB.whitelist) && void 0 !== BB ? BB : [];
-        return [...jB.filter((BB => (0, cB.l)(uB.whitelist, BB))), ...uB.whitelist.filter((BB => !(0, cB.l)(jB, BB)))]
-      }), [uB, kB.whitelist]), qB = zB.statusOf("mode");
-      return (0, hB.jsxs)("div", {
+        if (null === kB) return [];
+        const IB = null !== (BB = yB.whitelist) && void 0 !== BB ? BB : [];
+        return [...IB.filter((BB => (0, EB.m)(kB.whitelist, BB))), ...kB.whitelist.filter((BB => !(0, EB.m)(IB, BB)))]
+      }), [kB, yB.whitelist]), YB = ZB.statusOf("mode");
+      return (0, RB.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, hB.jsxs)("div", {
+        children: [(0, RB.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, hB.jsx)(yB.d, {
-            label: NB("worldSocial:whoCanJoin")
-          }), null === uB && UB && (0, hB.jsx)("div", {
+          children: [(0, RB.jsx)(qB.d, {
+            label: vB("worldSocial:whoCanJoin")
+          }), null === kB && cB && (0, RB.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, hB.jsx)(mB.e, {})
-          }), null === uB && !UB && (0, hB.jsx)(gB.h, {
+            children: (0, RB.jsx)(gB.d, {})
+          }), null === kB && !cB && (0, RB.jsx)(dB.k, {
             className: "SmallTextLight",
-            onClick: pB,
-            children: NB("worldSocial:loadFailed")
-          }), null !== uB && (0, hB.jsx)(KB.b, {
-            visibility: uB.visibility,
+            onClick: hB,
+            children: vB("worldSocial:loadFailed")
+          }), null !== kB && (0, RB.jsx)(bB.b, {
+            visibility: kB.visibility,
             onPick: BB => {
-              EB(BB)
+              wB(BB)
             }
-          }), qB && (0, hB.jsx)("div", {
+          }), YB && (0, RB.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, hB.jsx)(XB, {
-              status: qB
+            children: (0, RB.jsx)(rB, {
+              status: YB
             })
-          }), null !== uB && "private" !== uB.visibility && (0, hB.jsx)(CB.b, {
-            worldCode: IB,
+          }), null !== kB && "private" !== kB.visibility && (0, RB.jsx)(xB.c, {
+            worldCode: GB,
             message: null
           })]
-        }), "whitelist" === (null === uB || void 0 === uB ? void 0 : uB.visibility) && (0, hB.jsx)(Bj, {
-          state: kB,
-          lobbyName: dB,
-          listed: iB,
-          isListed: BB => (0, cB.l)(uB.whitelist, BB),
-          mG: (BB, jB) => {
-            (0, nB.reportAnalyticsClick)(jB ? {
+        }), "whitelist" === (null === kB || void 0 === kB ? void 0 : kB.visibility) && (0, RB.jsx)(BI, {
+          state: yB,
+          lobbyName: oB,
+          listed: OB,
+          isListed: BB => (0, EB.m)(kB.whitelist, BB),
+          dU: (BB, IB) => {
+            (0, JB.reportAnalyticsClick)(IB ? {
               id: "lobby_manage.whitelist_add",
-              value: "vp"
+              value: "Iz"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), SB(jB ? {
+            }), QB(IB ? {
               whitelistAdd: [BB]
             } : {
               whitelistRemove: BB
-            }, (zB => (0, cB.r)(zB, [BB], jB))).then((jB => {
-              MB(`whitelist:${BB.toLowerCase()}`, jB)
+            }, (ZB => (0, EB.s)(ZB, [BB], IB))).then((IB => {
+              sB(`whitelist:${BB.toLowerCase()}`, IB)
             }))
           },
-          xG: async BB => {
-            (0, nB.reportAnalyticsClick)({
+          cW: async BB => {
+            (0, JB.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const jB = await SB({
+            const IB = await QB({
               whitelistAdd: [BB]
-            }, (jB => (0, cB.r)(jB, [BB], !0)));
-            return null === jB ? {
+            }, (IB => (0, EB.s)(IB, [BB], !0)));
+            return null === IB ? {
               ok: !1,
-              error: NB("worldSocial:changeFailed")
-            } : "error" in jB ? {
+              error: vB("worldSocial:changeFailed")
+            } : "error" in IB ? {
               ok: !1,
-              error: NB(jB.error)
-            } : (0, cB.l)(jB.notFound, BB) ? {
+              error: vB(IB.error)
+            } : (0, EB.m)(IB.notFound, BB) ? {
               ok: !1,
-              error: NB("lobbyManage:noPlayerCalled", {
+              error: vB("lobbyManage:noPlayerCalled", {
                 playerName: BB
               })
             } : {
               ok: !0
             }
           },
-          statusOf: BB => zB.statusOf(`whitelist:${BB.toLowerCase()}`)
-        }), "public" === (null === uB || void 0 === uB ? void 0 : uB.visibility) && null !== kB.listing && (0, hB.jsx)(jj, {
-          manage: zB,
-          listing: kB.listing
+          statusOf: BB => ZB.statusOf(`whitelist:${BB.toLowerCase()}`)
+        }), "public" === (null === kB || void 0 === kB ? void 0 : kB.visibility) && null !== yB.listing && (0, RB.jsx)(II, {
+          manage: ZB,
+          listing: yB.listing
         })]
       })
     }
 
-    function Ij(BB) {
-      var jB;
+    function GI(BB) {
+      var IB;
       let {
-        manage: zB,
-        lobbyName: QB
+        manage: ZB,
+        lobbyName: TB
       } = BB;
       const {
-        t: dB
-      } = (0, sB.D)(), {
-        state: IB
-      } = zB, NB = aB(), uB = null !== (jB = IB.whitelist) && void 0 !== jB ? jB : [];
-      return (0, hB.jsxs)("div", {
+        t: oB
+      } = (0, FB.G)(), {
+        state: GB
+      } = ZB, vB = nB(), kB = null !== (IB = GB.whitelist) && void 0 !== IB ? IB : [];
+      return (0, RB.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, hB.jsxs)("div", {
+        children: [(0, RB.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, hB.jsx)(yB.d, {
-            label: dB("worldSocial:whoCanJoin")
-          }), (0, hB.jsx)("div", {
+          children: [(0, RB.jsx)(qB.d, {
+            label: oB("worldSocial:whoCanJoin")
+          }), (0, RB.jsx)("div", {
             className: "LobbyManageModeText",
-            children: dB(`worldSocial:${IB.visibility}`)
+            children: oB(`worldSocial:${GB.visibility}`)
           })]
-        }), "whitelist" === IB.visibility && IB.you.canEditWhitelist && (0, hB.jsx)(Bj, {
-          state: IB,
-          lobbyName: QB,
-          listed: uB,
+        }), "whitelist" === GB.visibility && GB.you.canEditWhitelist && (0, RB.jsx)(BI, {
+          state: GB,
+          lobbyName: TB,
+          listed: kB,
           isListed: BB => {
-            var jB;
-            return null !== (jB = NB.get(BB.toLowerCase())) && void 0 !== jB ? jB : (0, cB.l)(uB, BB)
+            var IB;
+            return null !== (IB = vB.get(BB.toLowerCase())) && void 0 !== IB ? IB : (0, EB.m)(kB, BB)
           },
-          mG: (BB, jB) => {
-            (0, nB.reportAnalyticsClick)(jB ? {
+          dU: (BB, IB) => {
+            (0, JB.reportAnalyticsClick)(IB ? {
               id: "lobby_manage.whitelist_add",
-              value: "vp"
+              value: "Iz"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const QB = BB.toLowerCase();
-            NB.hold(QB, jB, zB.send(jB ? {
+            const TB = BB.toLowerCase();
+            vB.hold(TB, IB, ZB.send(IB ? {
               type: "whitelistAdd",
               names: [BB]
             } : {
               type: "whitelistRemove",
               name: BB
-            }, `whitelist:${QB}`))
+            }, `whitelist:${TB}`))
           },
-          xG: async BB => {
-            (0, nB.reportAnalyticsClick)({
+          cW: async BB => {
+            (0, JB.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const jB = await zB.send({
+            const IB = await ZB.send({
               type: "whitelistAdd",
               names: [BB]
             }, "whitelist-field");
-            return jB.ok ? {
+            return IB.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, hB.jsx)(YB.e, {
-                text: jB.message
+              error: (0, RB.jsx)(jB.e, {
+                text: IB.message
               })
             }
           },
-          statusOf: BB => zB.statusOf(`whitelist:${BB.toLowerCase()}`)
-        }), "public" === IB.visibility && null !== IB.listing && (0, hB.jsx)(jj, {
-          manage: zB,
-          listing: IB.listing
+          statusOf: BB => ZB.statusOf(`whitelist:${BB.toLowerCase()}`)
+        }), "public" === GB.visibility && null !== GB.listing && (0, RB.jsx)(II, {
+          manage: ZB,
+          listing: GB.listing
         })]
       })
     }
-    var Nj = zB(5078),
-      uj = zB(1388);
-    const Uj = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const aj = (0, QB.memo)((function(BB) {
-      var jB;
+    var vI = ZB(5143),
+      kI = ZB(1421);
+    const cI = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const nI = (0, TB.memo)((function(BB) {
+      var IB;
       let {
-        rule: zB,
-        value: QB,
-        status: nB,
-        pending: dB,
-        hiddenNames: IB,
-        zq: NB,
-        onAction: uB
+        rule: ZB,
+        value: TB,
+        status: JB,
+        pending: oB,
+        hiddenNames: GB,
+        Qs: vB,
+        onAction: kB
       } = BB;
       const {
-        t: UB
-      } = (0, sB.D)(), aB = BB => NB(zB, BB), pB = (BB, jB) => {
-        uB(zB, BB, jB)
-      }, rB = DB(UB, zB.label, IB), JB = zB.info ? DB(UB, zB.info, IB) : void 0, mB = zB.placeholder ? DB(UB, zB.placeholder, IB) : void 0, yB = (null !== (jB = zB.options) && void 0 !== jB ? jB : []).map((BB => ({
+        t: cB
+      } = (0, FB.G)(), nB = BB => vB(ZB, BB), hB = (BB, IB) => {
+        kB(ZB, BB, IB)
+      }, zB = HB(cB, ZB.label, GB), NB = ZB.info ? HB(cB, ZB.info, GB) : void 0, gB = ZB.placeholder ? HB(cB, ZB.placeholder, GB) : void 0, qB = (null !== (IB = ZB.options) && void 0 !== IB ? IB : []).map((BB => ({
         value: BB.value,
-        label: DB(UB, BB.label, IB)
-      }))), kB = Math.max(0, ...yB.map((BB => function(BB) {
-        let jB = 0;
-        for (const zB of BB) jB += Uj.test(zB) ? 2 : 1;
-        return jB
-      }(BB.label)))), GB = nB && (0, hB.jsx)("div", {
+        label: HB(cB, BB.label, GB)
+      }))), yB = Math.max(0, ...qB.map((BB => function(BB) {
+        let IB = 0;
+        for (const ZB of BB) IB += cI.test(ZB) ? 2 : 1;
+        return IB
+      }(BB.label)))), UB = JB && (0, RB.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, hB.jsx)(XB, {
-          status: nB
+        children: (0, RB.jsx)(rB, {
+          status: JB
         })
-      }), LB = (0, hB.jsxs)("div", {
+      }), WB = (0, RB.jsxs)("div", {
         className: "SliderText",
-        children: [rB, void 0 !== JB && (0, hB.jsx)(uj.e, {
+        children: [zB, void 0 !== NB && (0, RB.jsx)(kI.d, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: JB
+          hoverInfo: NB
         })]
       });
-      return "toggle" === zB.kind ? (0, hB.jsxs)(hB.Fragment, {
-        children: [(0, hB.jsx)(Nj.b, {
-          label: rB,
-          checked: !0 === QB,
-          circleInfoText: JB,
-          disabled: dB,
-          onClick: aB
-        }), GB]
-      }) : "choice" === zB.kind && yB.length <= 3 ? (0, hB.jsxs)(hB.Fragment, {
-        children: [(0, hB.jsx)(Nj.c, {
-          label: rB,
-          options: yB,
-          value: String(QB),
-          circleInfoText: JB,
-          onChange: aB
-        }), GB]
-      }) : (0, hB.jsxs)("div", {
+      return "toggle" === ZB.kind ? (0, RB.jsxs)(RB.Fragment, {
+        children: [(0, RB.jsx)(vI.e, {
+          label: zB,
+          checked: !0 === TB,
+          circleInfoText: NB,
+          disabled: oB,
+          onClick: nB
+        }), UB]
+      }) : "choice" === ZB.kind && qB.length <= 3 ? (0, RB.jsxs)(RB.Fragment, {
+        children: [(0, RB.jsx)(vI.h, {
+          label: zB,
+          options: qB,
+          value: String(TB),
+          circleInfoText: NB,
+          onChange: nB
+        }), UB]
+      }) : (0, RB.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [LB, "choice" === zB.kind && (0, hB.jsx)("span", {
+        children: [WB, "choice" === ZB.kind && (0, RB.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": kB
+            "--lobby-choice-chars": yB
           },
-          children: (0, hB.jsx)(oB.e, {
-            options: yB,
-            value: String(QB),
-            disabled: dB,
+          children: (0, RB.jsx)(pB.c, {
+            options: qB,
+            value: String(TB),
+            disabled: oB,
             onChange: BB => {
-              aB(BB.value)
+              nB(BB.value)
             }
           })
-        }), ("number" === zB.kind || "text" === zB.kind) && (0, hB.jsx)(AB, {
-          value: null === QB ? "" : String(QB),
-          placeholder: mB,
-          ariaLabel: rB,
+        }), ("number" === ZB.kind || "text" === ZB.kind) && (0, RB.jsx)(XB, {
+          value: null === TB ? "" : String(TB),
+          placeholder: gB,
+          ariaLabel: zB,
           onSave: BB => {
-            const jB = BB.trim(),
-              QB = Number(jB);
-            return aB("number" === zB.kind && "" !== jB && Number.isFinite(QB) ? QB : jB)
+            const IB = BB.trim(),
+              TB = Number(IB);
+            return nB("number" === ZB.kind && "" !== IB && Number.isFinite(TB) ? TB : IB)
           }
-        }), "action" === zB.kind && (0, hB.jsxs)("div", {
+        }), "action" === ZB.kind && (0, RB.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [yB.length > 3 && (0, hB.jsx)(oB.e, {
-            options: yB,
+          children: [qB.length > 3 && (0, RB.jsx)(pB.c, {
+            options: qB,
             value: {
               value: "",
-              label: null !== mB && void 0 !== mB ? mB : rB
+              label: null !== gB && void 0 !== gB ? gB : zB
             },
-            disabled: dB,
+            disabled: oB,
             onChange: BB => {
-              pB(BB.value)
+              hB(BB.value)
             }
-          }), yB.length > 0 && yB.length <= 3 && yB.map((BB => (0, hB.jsx)(gB.h, {
+          }), qB.length > 0 && qB.length <= 3 && qB.map((BB => (0, RB.jsx)(dB.k, {
             className: "SmallTextLight",
-            disabled: dB,
+            disabled: oB,
             onClick: () => {
-              pB(BB.value)
+              hB(BB.value)
             },
             children: BB.label
-          }, BB.value))), 0 === yB.length && (0, hB.jsx)(gB.h, {
+          }, BB.value))), 0 === qB.length && (0, RB.jsx)(dB.k, {
             className: "SmallTextLight",
-            disabled: dB,
+            disabled: oB,
             onClick: () => {
-              pB()
+              hB()
             },
-            children: null !== mB && void 0 !== mB ? mB : rB
+            children: null !== gB && void 0 !== gB ? gB : zB
           })]
-        }), "names" === zB.kind && (0, hB.jsx)(pj, {
-          names: Array.isArray(QB) ? QB : [],
-          pending: dB,
-          onAction: pB
-        }), GB]
+        }), "names" === ZB.kind && (0, RB.jsx)(hI, {
+          names: Array.isArray(TB) ? TB : [],
+          pending: oB,
+          onAction: hB
+        }), UB]
       })
     }));
 
-    function pj(BB) {
+    function hI(BB) {
       let {
-        names: jB,
-        pending: zB,
-        onAction: nB
+        names: IB,
+        pending: ZB,
+        onAction: JB
       } = BB;
       const {
-        t: dB
-      } = (0, sB.D)(), IB = (0, QB.useRef)(null), [NB, uB] = (0, QB.useState)(""), UB = () => {
-        const BB = NB.trim();
-        "" !== BB && (nB(BB, "add"), IB.current && (IB.current.value = ""), uB(""))
+        t: oB
+      } = (0, FB.G)(), GB = (0, TB.useRef)(null), [vB, kB] = (0, TB.useState)(""), cB = () => {
+        const BB = vB.trim();
+        "" !== BB && (JB(BB, "add"), GB.current && (GB.current.value = ""), kB(""))
       };
-      return (0, hB.jsxs)("div", {
+      return (0, RB.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [jB.map((BB => (0, hB.jsxs)("div", {
+        children: [IB.map((BB => (0, RB.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, hB.jsx)("span", {
+          children: [(0, RB.jsx)("span", {
             className: "LobbyManageNameText",
             children: BB
-          }), (0, hB.jsx)(gB.h, {
+          }), (0, RB.jsx)(dB.k, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: dB("lobbyManage:removeName", {
+            ariaLabel: oB("lobbyManage:removeName", {
               name: BB
             }),
-            disabled: zB,
+            disabled: ZB,
             onClick: () => {
-              nB(BB, "remove")
+              JB(BB, "remove")
             },
-            children: (0, hB.jsx)(JB.c, {
+            children: (0, RB.jsx)(NB.d, {
               name: "xmark"
             })
           })]
-        }, BB))), (0, hB.jsxs)("div", {
+        }, BB))), (0, RB.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, hB.jsx)(VB.d, {
-            domRef: IB,
-            placeholderText: dB("lobbyManage:namePlaceholder"),
-            ariaLabel: dB("lobbyManage:namePlaceholder"),
+          children: [(0, RB.jsx)(PB.c, {
+            domRef: GB,
+            placeholderText: oB("lobbyManage:namePlaceholder"),
+            ariaLabel: oB("lobbyManage:namePlaceholder"),
             maxLength: 32,
             onValueChange: BB => {
-              uB(BB)
+              kB(BB)
             },
-            onEnter: UB
-          }), (0, hB.jsx)(gB.h, {
+            onEnter: cB
+          }), (0, RB.jsx)(dB.k, {
             className: "SmallTextLight",
-            disabled: zB || "" === NB.trim(),
-            onClick: UB,
-            children: dB("lobbyManage:addHere")
+            disabled: ZB || "" === vB.trim(),
+            onClick: cB,
+            children: oB("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const rj = [{
+    const zI = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1225,125 +1225,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function sj(BB, jB) {
-      return rj.map((zB => {
+    function FI(BB, IB) {
+      return zI.map((ZB => {
         let {
-          group: QB,
-          title: nB
-        } = zB;
-        const dB = BB.filter((BB => BB.group === QB && void 0 === BB.parent)).map((zB => {
-          const QB = !0 === jB(zB) ? BB.filter((BB => BB.parent === zB.key)) : [];
+          group: TB,
+          title: JB
+        } = ZB;
+        const oB = BB.filter((BB => BB.group === TB && void 0 === BB.parent)).map((ZB => {
+          const TB = !0 === IB(ZB) ? BB.filter((BB => BB.parent === ZB.key)) : [];
           return {
-            rule: zB,
-            children: QB
+            rule: ZB,
+            children: TB
           }
         }));
         return {
-          group: QB,
-          title: nB,
-          items: dB
+          group: TB,
+          title: JB,
+          items: oB
         }
       }))
     }
 
-    function Jj(BB) {
+    function NI(BB) {
       return BB.flatMap((BB => {
         let {
-          items: jB
+          items: IB
         } = BB;
-        return jB.flatMap((BB => {
+        return IB.flatMap((BB => {
           let {
-            rule: jB,
-            children: zB
+            rule: IB,
+            children: ZB
           } = BB;
-          return [jB, ...zB]
+          return [IB, ...ZB]
         }))
       }))
     }
 
-    function mj(BB) {
+    function gI(BB) {
       let {
-        manage: jB,
-        rowsShown: zB
+        manage: IB,
+        rowsShown: ZB
       } = BB;
       const {
-        t: dB
-      } = (0, sB.D)(), IB = (0, LB.k)("hiddenPlayerNames"), {
-        rules: NB
-      } = jB.state, uB = aB(), UB = BB => {
-        const jB = uB.get(BB.key);
-        return void 0 === jB ? BB.value : jB
-      }, pB = sj(NB, UB), [rB] = (0, QB.useState)((() => Jj(pB).map((BB => BB.key)))), JB = zB === 1 / 0 ? null : new Set(rB.slice(0, zB)), mB = BB => null === JB || JB.has(BB.key), {
-        hold: kB
-      } = uB, GB = (0, QB.useCallback)(((BB, zB) => {
-        (0, nB.reportAnalyticsClick)({
+        t: oB
+      } = (0, FB.G)(), GB = (0, WB.j)("hiddenPlayerNames"), {
+        rules: vB
+      } = IB.state, kB = nB(), cB = BB => {
+        const IB = kB.get(BB.key);
+        return void 0 === IB ? BB.value : IB
+      }, hB = FI(vB, cB), [zB] = (0, TB.useState)((() => NI(hB).map((BB => BB.key)))), NB = ZB === 1 / 0 ? null : new Set(zB.slice(0, ZB)), gB = BB => null === NB || NB.has(BB.key), {
+        hold: yB
+      } = kB, UB = (0, TB.useCallback)(((BB, ZB) => {
+        (0, JB.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
           value: BB.key
         });
-        const QB = jB.send({
+        const TB = IB.send({
           type: "setRule",
           key: BB.key,
-          value: zB
+          value: ZB
         }, `rule:${BB.key}`);
-        return kB(BB.key, zB, QB), QB
-      }), [jB, kB]), gB = (0, QB.useCallback)(((BB, zB, QB) => {
-        (0, nB.reportAnalyticsClick)({
+        return yB(BB.key, ZB, TB), TB
+      }), [IB, yB]), dB = (0, TB.useCallback)(((BB, ZB, TB) => {
+        (0, JB.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
           value: BB.key
-        }), jB.send({
+        }), IB.send({
           type: "ruleAction",
           key: BB.key,
-          ...void 0 === zB ? {} : {
-            arg: zB
+          ...void 0 === ZB ? {} : {
+            arg: ZB
           },
-          ...void 0 === QB ? {} : {
-            op: QB
+          ...void 0 === TB ? {} : {
+            op: TB
           }
-        }, `rule:${BB.key}`, void 0 === QB ? dB("lobbyManage:setJustNow") : void 0)
-      }), [jB, dB]), tB = BB => {
-        const zB = `rule:${BB.key}`;
-        return (0, hB.jsx)(aj, {
+        }, `rule:${BB.key}`, void 0 === TB ? oB("lobbyManage:setJustNow") : void 0)
+      }), [IB, oB]), CB = BB => {
+        const ZB = `rule:${BB.key}`;
+        return (0, RB.jsx)(nI, {
           rule: BB,
-          value: UB(BB),
-          status: jB.statusOf(zB),
-          pending: jB.isPending(zB),
-          hiddenNames: IB,
-          zq: GB,
-          onAction: gB
+          value: cB(BB),
+          status: IB.statusOf(ZB),
+          pending: IB.isPending(ZB),
+          hiddenNames: GB,
+          Qs: UB,
+          onAction: dB
         }, BB.key)
       };
-      return (0, hB.jsx)("div", {
+      return (0, RB.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: pB.map((BB => {
+        children: hB.map((BB => {
           let {
-            group: jB,
-            title: zB,
-            items: nB
+            group: IB,
+            title: ZB,
+            items: JB
           } = BB;
-          const IB = nB.filter((BB => {
+          const GB = JB.filter((BB => {
             let {
-              rule: jB
+              rule: IB
             } = BB;
-            return mB(jB)
+            return gB(IB)
           }));
-          return 0 === IB.length ? null : (0, hB.jsxs)(QB.Fragment, {
-            children: [(0, hB.jsx)(yB.d, {
-              label: dB(zB)
-            }), IB.map((BB => {
+          return 0 === GB.length ? null : (0, RB.jsxs)(TB.Fragment, {
+            children: [(0, RB.jsx)(qB.d, {
+              label: oB(ZB)
+            }), GB.map((BB => {
               let {
-                rule: jB,
-                children: zB
+                rule: IB,
+                children: ZB
               } = BB;
-              return 0 === zB.length ? tB(jB) : (0, hB.jsxs)("div", {
+              return 0 === ZB.length ? CB(IB) : (0, RB.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [tB(jB), zB.filter(mB).map(tB)]
-              }, jB.key)
+                children: [CB(IB), ZB.filter(gB).map(CB)]
+              }, IB.key)
             }))]
-          }, jB)
+          }, IB)
         }))
       })
     }
-    const yj = {
+    const qI = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1361,356 +1361,356 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      kj = 5,
-      Gj = (0, QB.memo)((function(BB) {
+      yI = 5,
+      UI = (0, TB.memo)((function(BB) {
         let {
-          page: jB,
-          manage: zB,
-          leaderboard: nB,
-          focusRequest: dB,
-          onFocused: IB,
-          ruleRowsShown: NB
+          page: IB,
+          manage: ZB,
+          leaderboard: JB,
+          focusRequest: oB,
+          onFocused: GB,
+          ruleRowsShown: vB
         } = BB;
-        return "leaderboard" === jB ? (0, hB.jsx)(QB.Suspense, {
-          fallback: (0, hB.jsx)("div", {
+        return "leaderboard" === IB ? (0, RB.jsx)(TB.Suspense, {
+          fallback: (0, RB.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, hB.jsx)(mB.e, {})
+            children: (0, RB.jsx)(gB.d, {})
           }),
-          children: nB
-        }) : "joining" === jB ? (0, hB.jsx)(Qj, {
-          manage: zB
-        }) : "rules" === jB ? (0, hB.jsx)(mj, {
-          manage: zB,
-          rowsShown: NB
-        }) : (0, hB.jsx)(eB, {
-          manage: zB,
-          focusRequest: dB,
-          onFocused: IB
+          children: JB
+        }) : "joining" === IB ? (0, RB.jsx)(TI, {
+          manage: ZB
+        }) : "rules" === IB ? (0, RB.jsx)(gI, {
+          manage: ZB,
+          rowsShown: vB
+        }) : (0, RB.jsx)(fB, {
+          manage: ZB,
+          focusRequest: oB,
+          onFocused: GB
         })
       }));
 
-    function Lj(BB) {
+    function WI(BB) {
       let {
-        page: jB
+        page: IB
       } = BB;
       const {
-        t: zB
-      } = (0, sB.D)(), QB = yj[jB];
-      return (0, hB.jsxs)(hB.Fragment, {
-        children: [(0, hB.jsx)(JB.c, {
-          name: QB.icon
-        }), " ", (0, hB.jsx)("span", {
+        t: ZB
+      } = (0, FB.G)(), TB = qI[IB];
+      return (0, RB.jsxs)(RB.Fragment, {
+        children: [(0, RB.jsx)(NB.d, {
+          name: TB.icon
+        }), " ", (0, RB.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: zB(QB.title)
+          children: ZB(TB.title)
         })]
       })
     }
 
-    function gj(BB) {
-      var jB;
+    function dI(BB) {
+      var IB;
       const {
-        t: zB
-      } = (0, sB.D)(), {
-        pages: dB,
-        landing: IB
-      } = BB, uB = (0, QB.useRef)(null), UB = (0, QB.useRef)(null), aB = (0, QB.useRef)(null), pB = (0, QB.useRef)(new Map), [JB, mB] = (0, QB.useState)(null), LB = (0, QB.useRef)(JB), gB = (0, QB.useRef)(0), [tB, SB] = (0, QB.useState)(dB[0]), MB = null !== JB && void 0 !== JB ? JB : dB.includes(tB) ? tB : dB[0], [EB] = (0, QB.useState)(null !== (jB = null === IB || void 0 === IB ? void 0 : IB.page) && void 0 !== jB ? jB : null), iB = null !== EB && dB.includes(EB) ? [EB, ...dB.filter((BB => BB !== EB))] : dB, [qB] = (0, QB.useState)((() => {
-        const jB = Jj(sj(BB.manage.state.rules, (BB => BB.value)));
-        return Math.max(1, Math.ceil(jB.length / kj))
-      })), fB = iB.flatMap((BB => "rules" === BB ? Array(qB).fill(BB) : [BB])), oB = function(BB, jB) {
-        const [zB, nB] = (0, QB.useState)(BB), dB = zB >= jB;
-        return dB && zB !== 1 / 0 && nB(1 / 0), (0, QB.useLayoutEffect)((() => {
-          if (dB) return;
+        t: ZB
+      } = (0, FB.G)(), {
+        pages: oB,
+        landing: GB
+      } = BB, kB = (0, TB.useRef)(null), cB = (0, TB.useRef)(null), nB = (0, TB.useRef)(null), hB = (0, TB.useRef)(new Map), [NB, gB] = (0, TB.useState)(null), WB = (0, TB.useRef)(NB), dB = (0, TB.useRef)(0), [CB, QB] = (0, TB.useState)(oB[0]), sB = null !== NB && void 0 !== NB ? NB : oB.includes(CB) ? CB : oB[0], [wB] = (0, TB.useState)(null !== (IB = null === GB || void 0 === GB ? void 0 : GB.page) && void 0 !== IB ? IB : null), OB = null !== wB && oB.includes(wB) ? [wB, ...oB.filter((BB => BB !== wB))] : oB, [YB] = (0, TB.useState)((() => {
+        const IB = NI(FI(BB.manage.state.rules, (BB => BB.value)));
+        return Math.max(1, Math.ceil(IB.length / yI))
+      })), iB = OB.flatMap((BB => "rules" === BB ? Array(YB).fill(BB) : [BB])), pB = function(BB, IB) {
+        const [ZB, JB] = (0, TB.useState)(BB), oB = ZB >= IB;
+        return oB && ZB !== 1 / 0 && JB(1 / 0), (0, TB.useLayoutEffect)((() => {
+          if (oB) return;
           let BB = !0;
-          return (0, GB.e)().then((() => {
-            BB && nB((BB => BB + 1))
+          return (0, UB.h)().then((() => {
+            BB && JB((BB => BB + 1))
           })), () => {
             BB = !1
           }
-        }), [zB, dB]), dB ? 1 / 0 : zB
-      }(1, fB.length), HB = fB.slice(0, oB), DB = new Set(HB), FB = oB < fB.length, YB = FB ? HB.filter((BB => "rules" === BB)).length * kj : 1 / 0, VB = (0, QB.useRef)(BB.focusRequest);
-      VB.current = BB.focusRequest;
-      const XB = BB => {
-          LB.current = BB, mB(BB)
+        }), [ZB, oB]), oB ? 1 / 0 : ZB
+      }(1, iB.length), aB = iB.slice(0, pB), HB = new Set(aB), MB = pB < iB.length, jB = MB ? aB.filter((BB => "rules" === BB)).length * yI : 1 / 0, PB = (0, TB.useRef)(BB.focusRequest);
+      PB.current = BB.focusRequest;
+      const rB = BB => {
+          WB.current = BB, gB(BB)
         },
-        ZB = () => {
-          var BB, jB;
-          uB.current.style.scrollPaddingTop = `${null!==(BB=null===(jB=aB.current)||void 0===jB?void 0:jB.offsetHeight)&&void 0!==BB?BB:0}px`
+        mB = () => {
+          var BB, IB;
+          kB.current.style.scrollPaddingTop = `${null!==(BB=null===(IB=nB.current)||void 0===IB?void 0:IB.offsetHeight)&&void 0!==BB?BB:0}px`
         },
-        AB = BB => {
-          const jB = uB.current,
-            zB = pB.current.get(BB);
-          if (void 0 === zB) return;
-          const QB = document.activeElement,
-            nB = VB.current,
-            dB = null === nB ? null : zB.querySelector(`[data-lobby-manage-row="${CSS.escape(nB.name)}"]`);
-          ZB(), QB instanceof HTMLElement && null !== dB && void 0 !== dB && dB.contains(QB) ? QB.scrollIntoView({
+        XB = BB => {
+          const IB = kB.current,
+            ZB = hB.current.get(BB);
+          if (void 0 === ZB) return;
+          const TB = document.activeElement,
+            JB = PB.current,
+            oB = null === JB ? null : ZB.querySelector(`[data-lobby-manage-row="${CSS.escape(JB.name)}"]`);
+          mB(), TB instanceof HTMLElement && null !== oB && void 0 !== oB && oB.contains(TB) ? TB.scrollIntoView({
             block: "center"
-          }) : null === zB.previousElementSibling ? jB.scrollTop = 0 : zB.scrollIntoView({
+          }) : null === ZB.previousElementSibling ? IB.scrollTop = 0 : ZB.scrollIntoView({
             block: "start"
-          }), gB.current = jB.scrollTop
+          }), dB.current = IB.scrollTop
         },
-        TB = BB => {
-          (0, nB.reportAnalyticsClick)({
+        LB = BB => {
+          (0, JB.reportAnalyticsClick)({
             id: "lobby_manage.page",
             value: BB
-          }), XB(BB), AB(BB)
+          }), rB(BB), XB(BB)
         },
-        PB = () => {
-          var BB, jB;
-          const zB = uB.current,
-            QB = zB.getBoundingClientRect().top + (null !== (BB = null === (jB = aB.current) || void 0 === jB ? void 0 : jB.offsetHeight) && void 0 !== BB ? BB : 0),
-            nB = dB.map((BB => {
-              var jB, zB;
-              return (null !== (jB = null === (zB = pB.current.get(BB)) || void 0 === zB ? void 0 : zB.getBoundingClientRect().top) && void 0 !== jB ? jB : 1 / 0) - QB
+        eB = () => {
+          var BB, IB;
+          const ZB = kB.current,
+            TB = ZB.getBoundingClientRect().top + (null !== (BB = null === (IB = nB.current) || void 0 === IB ? void 0 : IB.offsetHeight) && void 0 !== BB ? BB : 0),
+            JB = oB.map((BB => {
+              var IB, ZB;
+              return (null !== (IB = null === (ZB = hB.current.get(BB)) || void 0 === ZB ? void 0 : ZB.getBoundingClientRect().top) && void 0 !== IB ? IB : 1 / 0) - TB
             })),
-            IB = !FB && zB.scrollTop + zB.clientHeight >= zB.scrollHeight - 1;
-          SB(dB[(0, NB.i)(nB, IB)])
+            GB = !MB && ZB.scrollTop + ZB.clientHeight >= ZB.scrollHeight - 1;
+          QB(oB[(0, vB.i)(JB, GB)])
         },
-        WB = () => {
-          null !== LB.current && (XB(null), PB())
+        uB = () => {
+          null !== WB.current && (rB(null), eB())
         };
-      (0, QB.useLayoutEffect)((() => {
-        null !== IB && dB.includes(IB.page) && TB(IB.page)
-      }), [null === IB || void 0 === IB ? void 0 : IB.seq]), (0, QB.useLayoutEffect)((() => {
-        null === LB.current || dB.includes(LB.current) || WB()
+      (0, TB.useLayoutEffect)((() => {
+        null !== GB && oB.includes(GB.page) && LB(GB.page)
+      }), [null === GB || void 0 === GB ? void 0 : GB.seq]), (0, TB.useLayoutEffect)((() => {
+        null === WB.current || oB.includes(WB.current) || uB()
       }));
       const {
-        onFocused: eB
-      } = BB, lB = (0, QB.useCallback)((BB => {
-        null !== LB.current && AB(LB.current), eB(BB)
-      }), [eB]);
-      (0, QB.useLayoutEffect)((() => {
-        const BB = LB.current;
-        null !== BB && (!FB || dB.indexOf(fB[oB - 1]) < dB.indexOf(BB)) && AB(BB)
-      }), [oB]), (0, QB.useEffect)((() => {
+        onFocused: fB
+      } = BB, lB = (0, TB.useCallback)((BB => {
+        null !== WB.current && XB(WB.current), fB(BB)
+      }), [fB]);
+      (0, TB.useLayoutEffect)((() => {
+        const BB = WB.current;
+        null !== BB && (!MB || oB.indexOf(iB[pB - 1]) < oB.indexOf(BB)) && XB(BB)
+      }), [pB]), (0, TB.useEffect)((() => {
         const BB = new ResizeObserver((() => {
-          null !== LB.current ? AB(LB.current) : ZB()
+          null !== WB.current ? XB(WB.current) : mB()
         }));
-        return BB.observe(uB.current), BB.observe(UB.current), () => {
+        return BB.observe(kB.current), BB.observe(cB.current), () => {
           BB.disconnect()
         }
-      }), []), (0, QB.useLayoutEffect)((() => {
-        const BB = aB.current,
-          jB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".SegmentedToggleOptionSelected");
-        jB && (BB.scrollLeft = Math.min(jB.offsetLeft, Math.max(BB.scrollLeft, jB.offsetLeft + jB.offsetWidth - BB.clientWidth)))
-      }), [MB]);
-      return (0, hB.jsxs)("div", {
-        ref: uB,
+      }), []), (0, TB.useLayoutEffect)((() => {
+        const BB = nB.current,
+          IB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".SegmentedToggleOptionSelected");
+        IB && (BB.scrollLeft = Math.min(IB.offsetLeft, Math.max(BB.scrollLeft, IB.offsetLeft + IB.offsetWidth - BB.clientWidth)))
+      }), [sB]);
+      return (0, RB.jsxs)("div", {
+        ref: kB,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === LB.current ? PB() : Math.abs(uB.current.scrollTop - gB.current) > 1 && WB()
+          null === WB.current ? eB() : Math.abs(kB.current.scrollTop - dB.current) > 1 && uB()
         },
         onClick: BB => {
-          var jB;
-          null !== (jB = aB.current) && void 0 !== jB && jB.contains(BB.target) || WB()
+          var IB;
+          null !== (IB = nB.current) && void 0 !== IB && IB.contains(BB.target) || uB()
         },
         onFocus: BB => {
-          var jB;
-          const zB = null === LB.current ? null : pB.current.get(LB.current);
-          !zB || zB.contains(BB.target) || null !== (jB = aB.current) && void 0 !== jB && jB.contains(BB.target) || WB()
+          var IB;
+          const ZB = null === WB.current ? null : hB.current.get(WB.current);
+          !ZB || ZB.contains(BB.target) || null !== (IB = nB.current) && void 0 !== IB && IB.contains(BB.target) || uB()
         },
-        children: [dB.length > 1 && (0, hB.jsx)("div", {
-          ref: aB,
+        children: [oB.length > 1 && (0, RB.jsx)("div", {
+          ref: nB,
           className: "LobbyManageChips",
-          children: (0, hB.jsx)(kB.e, {
-            options: dB.map((BB => ({
+          children: (0, RB.jsx)(yB.d, {
+            options: oB.map((BB => ({
               value: BB,
-              label: (0, hB.jsx)(Lj, {
+              label: (0, RB.jsx)(WI, {
                 page: BB
               }),
-              ariaLabel: zB(yj[BB].title)
+              ariaLabel: ZB(qI[BB].title)
             }))),
-            value: MB,
+            value: sB,
             padTabs: "2",
-            ariaLabel: zB("lobbyManageEntry:manageLobby"),
+            ariaLabel: ZB("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: TB
+            onChange: LB
           })
-        }), (0, hB.jsx)("div", {
-          ref: UB,
-          className: rB()("LobbyManageInner", {
-            Staging: FB
+        }), (0, RB.jsx)("div", {
+          ref: cB,
+          className: zB()("LobbyManageInner", {
+            Staging: MB
           }),
-          children: dB.filter((BB => DB.has(BB))).map((jB => {
-            const zB = jB === JB;
-            return (0, hB.jsxs)("section", {
+          children: oB.filter((BB => HB.has(BB))).map((IB => {
+            const ZB = IB === NB;
+            return (0, RB.jsxs)("section", {
               ref: BB => {
-                BB ? pB.current.set(jB, BB) : pB.current.delete(jB)
+                BB ? hB.current.set(IB, BB) : hB.current.delete(IB)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": zB || void 0,
-              children: [dB.length > 1 && (0, hB.jsx)("div", {
+              "data-pad-initial-area": ZB || void 0,
+              children: [oB.length > 1 && (0, RB.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": zB || void 0,
-                "data-pad-unavailable": zB || void 0,
-                children: (0, hB.jsx)(yB.d, {
-                  label: (0, hB.jsx)(Lj, {
-                    page: jB
+                "data-pad-focusable": ZB || void 0,
+                "data-pad-unavailable": ZB || void 0,
+                children: (0, RB.jsx)(qB.d, {
+                  label: (0, RB.jsx)(WI, {
+                    page: IB
                   })
                 })
-              }), (0, hB.jsx)(Gj, {
-                page: jB,
+              }), (0, RB.jsx)(UI, {
+                page: IB,
                 manage: BB.manage,
                 leaderboard: BB.leaderboard,
                 focusRequest: BB.focusRequest,
                 onFocused: lB,
-                ruleRowsShown: "rules" === jB ? YB : 1 / 0
+                ruleRowsShown: "rules" === IB ? jB : 1 / 0
               })]
-            }, jB)
+            }, IB)
           }))
         })]
       })
     }
 
-    function tj(BB) {
+    function CI(BB) {
       return void 0 === (null === BB || void 0 === BB ? void 0 : BB.page) ? null : {
         page: BB.page,
         seq: BB.seq
       }
     }
 
-    function Sj(BB) {
+    function QI(BB) {
       let {
-        leaderboard: jB
+        leaderboard: IB
       } = BB;
-      const zB = function() {
-          const BB = (0, uB.i)("lobbyManage"),
-            [jB, zB] = (0, QB.useReducer)((BB => BB + 1), 0),
-            [nB] = (0, QB.useState)((() => new UB.b(zB)));
-          return (0, QB.useEffect)((() => {
-            const BB = nB.nextDeadline();
+      const ZB = function() {
+          const BB = (0, kB.d)("lobbyManage"),
+            [IB, ZB] = (0, TB.useReducer)((BB => BB + 1), 0),
+            [JB] = (0, TB.useState)((() => new cB.c(ZB)));
+          return (0, TB.useEffect)((() => {
+            const BB = JB.nextDeadline();
             if (null === BB) return;
-            const jB = setTimeout((() => {
-              nB.expire(Date.now()), zB()
+            const IB = setTimeout((() => {
+              JB.expire(Date.now()), ZB()
             }), Math.max(0, BB - Date.now()));
             return () => {
-              clearTimeout(jB)
+              clearTimeout(IB)
             }
-          })), (0, QB.useMemo)((() => null === BB ? null : {
+          })), (0, TB.useMemo)((() => null === BB ? null : {
             state: BB,
-            send: (BB, jB, QB) => {
-              const dB = nB.send(BB, jB, null !== QB && void 0 !== QB ? QB : null);
-              return zB(), dB
+            send: (BB, IB, TB) => {
+              const oB = JB.send(BB, IB, null !== TB && void 0 !== TB ? TB : null);
+              return ZB(), oB
             },
-            statusOf: BB => nB.statusOf(BB, Date.now()),
-            showStatus: (BB, jB) => {
-              nB.show(BB, jB)
+            statusOf: BB => JB.statusOf(BB, Date.now()),
+            showStatus: (BB, IB) => {
+              JB.show(BB, IB)
             },
-            isPending: BB => nB.isPending(BB)
-          }), [BB, jB, nB])
+            isPending: BB => JB.isPending(BB)
+          }), [BB, IB, JB])
         }(),
-        aB = (0, NB.k)((0, dB.e)()),
-        pB = (0, IB.p)(),
-        [rB, sB] = (0, QB.useState)((() => tj(pB))),
-        [JB, mB] = (0, QB.useState)(null);
-      return (0, QB.useEffect)((() => {
-        null === pB && (0, nB.reportAnalyticsClick)({
+        nB = (0, vB.j)((0, oB.c)()),
+        hB = (0, GB.l)(),
+        [zB, FB] = (0, TB.useState)((() => CI(hB))),
+        [NB, gB] = (0, TB.useState)(null);
+      return (0, TB.useEffect)((() => {
+        null === hB && (0, JB.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, QB.useEffect)((() => {
-        null !== pB && (sB((BB => (null === BB || void 0 === BB ? void 0 : BB.seq) === pB.seq ? BB : tj(pB))), void 0 !== pB.focusName && "players" === pB.page ? mB({
-          name: pB.focusName,
-          seq: pB.seq
-        }) : (0, IB.l)(pB.seq))
-      }), [null === pB || void 0 === pB ? void 0 : pB.seq]), null === zB ? null : (0, hB.jsx)("div", {
+      }), []), (0, TB.useEffect)((() => {
+        null !== hB && (FB((BB => (null === BB || void 0 === BB ? void 0 : BB.seq) === hB.seq ? BB : CI(hB))), void 0 !== hB.focusName && "players" === hB.page ? gB({
+          name: hB.focusName,
+          seq: hB.seq
+        }) : (0, GB.h)(hB.seq))
+      }), [null === hB || void 0 === hB ? void 0 : hB.seq]), null === ZB ? null : (0, RB.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, hB.jsx)(gj, {
-          pages: (0, NB.e)(zB.state, aB),
-          manage: zB,
-          leaderboard: jB,
-          focusRequest: JB,
-          onFocused: IB.l,
-          landing: rB
+        children: (0, RB.jsx)(dI, {
+          pages: (0, vB.f)(ZB.state, nB),
+          manage: ZB,
+          leaderboard: IB,
+          focusRequest: NB,
+          onFocused: GB.h,
+          landing: zB
         })
       })
     }
   },
-  36637: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => aB,
-      c: () => uB
+  36587: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => nB,
+      f: () => kB
     });
-    var QB = zB(1514),
-      nB = zB(2006),
-      dB = zB(1982);
-    const IB = 1e4;
-    let NB = 0;
+    var TB = ZB(1542),
+      JB = ZB(2029),
+      oB = ZB(1995);
+    const GB = 1e4;
+    let vB = 0;
 
-    function uB(BB) {
-      const jB = ++NB;
-      return new Promise((zB => {
-        const NB = jB => {
-            uB(), clearTimeout(UB), !1 === (null === jB || void 0 === jB ? void 0 : jB.ok) && (0, QB.reportAnalyticsClick)({
+    function kB(BB) {
+      const IB = ++vB;
+      return new Promise((ZB => {
+        const vB = IB => {
+            kB(), clearTimeout(cB), !1 === (null === IB || void 0 === IB ? void 0 : IB.ok) && (0, TB.reportAnalyticsClick)({
               id: "lobby_manage.refused",
               value: BB.type
-            }), zB(jB)
+            }), ZB(IB)
           },
-          uB = nB.c.subscribe("lobbyManage", (BB => {
-            const zB = function(BB, jB) {
-              var zB;
-              return null !== (zB = null === BB || void 0 === BB ? void 0 : BB.results.find((BB => BB.requestId === jB))) && void 0 !== zB ? zB : null
-            }(BB, jB);
-            null !== zB && NB(zB)
+          kB = JB.c.subscribe("lobbyManage", (BB => {
+            const ZB = function(BB, IB) {
+              var ZB;
+              return null !== (ZB = null === BB || void 0 === BB ? void 0 : BB.results.find((BB => BB.requestId === IB))) && void 0 !== ZB ? ZB : null
+            }(BB, IB);
+            null !== ZB && vB(ZB)
           })),
-          UB = setTimeout((() => {
-            NB(null)
-          }), IB);
-        dB.gameBridge.send("lobbyManage", {
+          cB = setTimeout((() => {
+            vB(null)
+          }), GB);
+        oB.gameBridge.send("lobbyManage", {
           ...BB,
-          requestId: jB
+          requestId: IB
         })
       }))
     }
-    const UB = [{
+    const cB = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class aB {
+    class nB {
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uB;
-        this.onChange = BB, this.sendAction = jB, this.pending = new Map, this.statuses = new Map
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kB;
+        this.onChange = BB, this.sendAction = IB, this.pending = new Map, this.statuses = new Map
       }
-      send(BB, jB, zB) {
-        var QB;
-        return this.statuses.delete(jB), this.pending.set(jB, (null !== (QB = this.pending.get(jB)) && void 0 !== QB ? QB : 0) + 1), this.sendAction(BB).then((BB => {
-          var QB;
-          const nB = null !== BB && void 0 !== BB ? BB : {
+      send(BB, IB, ZB) {
+        var TB;
+        return this.statuses.delete(IB), this.pending.set(IB, (null !== (TB = this.pending.get(IB)) && void 0 !== TB ? TB : 0) + 1), this.sendAction(BB).then((BB => {
+          var TB;
+          const JB = null !== BB && void 0 !== BB ? BB : {
               requestId: -1,
               ok: !1,
-              message: UB
+              message: cB
             },
-            dB = (null !== (QB = this.pending.get(jB)) && void 0 !== QB ? QB : 1) - 1;
-          dB > 0 ? this.pending.set(jB, dB) : this.pending.delete(jB);
-          const IB = !nB.ok || nB.message.length > 0 ? nB.message : null === zB ? null : [zB];
-          return null !== IB && this.statuses.set(jB, {
-            ok: nB.ok,
-            text: IB,
+            oB = (null !== (TB = this.pending.get(IB)) && void 0 !== TB ? TB : 1) - 1;
+          oB > 0 ? this.pending.set(IB, oB) : this.pending.delete(IB);
+          const GB = !JB.ok || JB.message.length > 0 ? JB.message : null === ZB ? null : [ZB];
+          return null !== GB && this.statuses.set(IB, {
+            ok: JB.ok,
+            text: GB,
             until: Date.now() + 4e3
-          }), this.onChange(), nB
+          }), this.onChange(), JB
         }))
       }
-      show(BB, jB) {
+      show(BB, IB) {
         this.statuses.set(BB, {
-          ...jB,
+          ...IB,
           until: Date.now() + 4e3
         }), this.onChange()
       }
       expire(BB) {
-        for (const [jB, zB] of this.statuses) zB.until <= BB && this.statuses.delete(jB)
+        for (const [IB, ZB] of this.statuses) ZB.until <= BB && this.statuses.delete(IB)
       }
       nextDeadline() {
         let BB = null;
-        for (const zB of this.statuses.values()) {
-          var jB;
-          BB = Math.min(null !== (jB = BB) && void 0 !== jB ? jB : 1 / 0, zB.until)
+        for (const ZB of this.statuses.values()) {
+          var IB;
+          BB = Math.min(null !== (IB = BB) && void 0 !== IB ? IB : 1 / 0, ZB.until)
         }
         return BB
       }
-      statusOf(BB, jB) {
-        const zB = this.statuses.get(BB);
-        return !zB || zB.until <= jB ? null : {
-          ok: zB.ok,
-          text: zB.text
+      statusOf(BB, IB) {
+        const ZB = this.statuses.get(BB);
+        return !ZB || ZB.until <= IB ? null : {
+          ok: ZB.ok,
+          text: ZB.text
         }
       }
       isPending(BB) {
@@ -1718,185 +1718,185 @@ export const modules = {
       }
     }
   },
-  36633: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => UB,
-      f: () => uB
+  36580: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => cB,
+      d: () => kB
     });
-    var QB = zB(635),
-      nB = zB(1982),
-      dB = zB(1668),
-      IB = zB(106),
-      NB = zB(1292);
+    var TB = ZB(650),
+      JB = ZB(1995),
+      oB = ZB(1717),
+      GB = ZB(105),
+      vB = ZB(1325);
 
-    function uB(BB, jB, zB) {
-      return IB.featureFlags.useSocialFeatures && BB && null === (0, NB.e)(jB, zB)
+    function kB(BB, IB, ZB) {
+      return GB.featureFlags.useSocialFeatures && BB && null === (0, vB.b)(IB, ZB)
     }
 
-    function UB(BB, jB) {
-      var zB, IB;
-      const NB = dB.d.getSocialState().friends.find((BB => BB.name.toLowerCase() === jB.toLowerCase())),
-        uB = nB.gameBridge.latest("players").byId[BB],
-        UB = void 0 !== uB && uB.name === jB,
-        aB = UB && null !== (zB = uB.cosmetics) && void 0 !== zB ? zB : void 0,
-        pB = NB && aB ? {
-          ...NB,
-          cosmetics: aB
-        } : NB;
+    function cB(BB, IB) {
+      var ZB, GB;
+      const vB = oB.c.getSocialState().friends.find((BB => BB.name.toLowerCase() === IB.toLowerCase())),
+        kB = JB.gameBridge.latest("players").byId[BB],
+        cB = void 0 !== kB && kB.name === IB,
+        nB = cB && null !== (ZB = kB.cosmetics) && void 0 !== ZB ? ZB : void 0,
+        hB = vB && nB ? {
+          ...vB,
+          cosmetics: nB
+        } : vB;
       return {
-        playerSocialPreview: null !== pB && void 0 !== pB ? pB : {
+        playerSocialPreview: null !== hB && void 0 !== hB ? hB : {
           isError: !1,
-          name: jB,
-          ranks: UB ? [...uB.ranks] : [],
-          cosmetics: null !== aB && void 0 !== aB ? aB : {},
-          nameColour: null !== (IB = null === aB || void 0 === aB ? void 0 : aB.nameColour) && void 0 !== IB ? IB : QB.b,
+          name: IB,
+          ranks: cB ? [...kB.ranks] : [],
+          cosmetics: null !== nB && void 0 !== nB ? nB : {},
+          nameColour: null !== (GB = null === nB || void 0 === nB ? void 0 : nB.nameColour) && void 0 !== GB ? GB : TB.e,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== NB
+        isFriend: void 0 !== vB
       }
     }
   },
-  36812: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => pB
+  36763: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => hB
     });
-    var QB = zB(62),
-      nB = zB(1091),
-      dB = zB.n(nB),
-      IB = zB(1710),
-      NB = zB(1478),
-      uB = zB(1369),
-      UB = zB(1108),
-      aB = zB(1148);
+    var TB = ZB(63),
+      JB = ZB(1091),
+      oB = ZB.n(JB),
+      GB = ZB(1746),
+      vB = ZB(1516),
+      kB = ZB(1397),
+      cB = ZB(1102),
+      nB = ZB(1153);
 
-    function pB(BB) {
+    function hB(BB) {
       let {
-        label: jB,
-        icon: zB,
-        placeholder: nB,
-        onSubmit: pB
+        label: IB,
+        icon: ZB,
+        placeholder: JB,
+        onSubmit: hB
       } = BB;
-      const rB = (0, QB.useRef)(null),
-        [sB, JB] = (0, QB.useState)(""),
-        [mB, yB] = (0, QB.useState)("Enter"),
-        [kB, GB] = (0, QB.useState)(null);
-      (0, QB.useEffect)((() => {
-        if ("Success" !== mB && "Error" !== mB) return;
+      const zB = (0, TB.useRef)(null),
+        [FB, NB] = (0, TB.useState)(""),
+        [gB, qB] = (0, TB.useState)("Enter"),
+        [yB, UB] = (0, TB.useState)(null);
+      (0, TB.useEffect)((() => {
+        if ("Success" !== gB && "Error" !== gB) return;
         const BB = setTimeout((() => {
-          "Success" === mB && rB.current && (rB.current.value = "", JB("")), yB("Enter")
-        }), "Success" === mB ? 1e3 : 4e3);
+          "Success" === gB && zB.current && (zB.current.value = "", NB("")), qB("Enter")
+        }), "Success" === gB ? 1e3 : 4e3);
         return () => {
           clearTimeout(BB)
         }
-      }), [mB]);
-      const LB = () => {
-        const BB = sB.trim();
-        "" !== BB && "Enter" === mB && (yB("Loading"), pB(BB).then((BB => {
-          rB.current && ("error" in BB ? null === BB.error ? yB("Enter") : (GB(BB.error), yB("Error")) : yB("Success"))
+      }), [gB]);
+      const WB = () => {
+        const BB = FB.trim();
+        "" !== BB && "Enter" === gB && (qB("Loading"), hB(BB).then((BB => {
+          zB.current && ("error" in BB ? null === BB.error ? qB("Enter") : (UB(BB.error), qB("Error")) : qB("Success"))
         })))
       };
-      return (0, aB.jsxs)("div", {
+      return (0, nB.jsxs)("div", {
         className: "PlayerNameField",
         onKeyDown: BB => {
-          BB.target === rB.current && "Escape" !== BB.key && BB.stopPropagation()
+          BB.target === zB.current && "Escape" !== BB.key && BB.stopPropagation()
         },
-        children: [(0, aB.jsxs)("div", {
-          className: dB()("AddFriendBodyOverlay", `AddFriendBodyOverlay${mB}`),
-          children: ["Loading" === mB && (0, aB.jsx)(uB.e, {}), "Success" === mB && (0, aB.jsx)(UB.c, {
+        children: [(0, nB.jsxs)("div", {
+          className: oB()("AddFriendBodyOverlay", `AddFriendBodyOverlay${gB}`),
+          children: ["Loading" === gB && (0, nB.jsx)(kB.d, {}), "Success" === gB && (0, nB.jsx)(cB.d, {
             name: "check"
-          }), "Error" === mB && kB]
-        }), (0, aB.jsxs)("div", {
+          }), "Error" === gB && yB]
+        }), (0, nB.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, aB.jsx)(IB.d, {
+          children: [(0, nB.jsx)(GB.c, {
             className: "PlayerSearchInput",
-            domRef: rB,
+            domRef: zB,
             maxLength: 32,
-            placeholderText: nB,
-            ariaLabel: nB,
+            placeholderText: JB,
+            ariaLabel: JB,
             stopPropagation: !1,
             onValueChange: BB => {
-              JB(BB)
+              NB(BB)
             },
-            onEnter: LB
-          }), (0, aB.jsxs)(NB.f, {
+            onEnter: WB
+          }), (0, nB.jsxs)(vB.g, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== mB || "" === sB.trim(),
-            onClick: LB,
-            children: [(0, aB.jsx)(UB.c, {
-              name: zB
-            }), " ", jB]
+            disabled: "Enter" !== gB || "" === FB.trim(),
+            onClick: WB,
+            children: [(0, nB.jsx)(cB.d, {
+              name: ZB
+            }), " ", IB]
           })]
         })]
       })
     }
   },
-  36795: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => pB
+  36745: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => hB
     });
-    var QB = zB(62),
-      nB = zB(1091),
-      dB = zB.n(nB),
-      IB = zB(1240),
-      NB = zB(1108),
-      uB = zB(1148);
-    const UB = {
+    var TB = ZB(63),
+      JB = ZB(1091),
+      oB = ZB.n(JB),
+      GB = ZB(1248),
+      vB = ZB(1102),
+      kB = ZB(1153);
+    const cB = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      aB = ["unlisted", "public", "whitelist", "private"];
+      nB = ["unlisted", "public", "whitelist", "private"];
 
-    function pB(BB) {
+    function hB(BB) {
       let {
-        visibility: jB,
-        onPick: zB
+        visibility: IB,
+        onPick: ZB
       } = BB;
       const {
-        t: nB
-      } = (0, IB.D)(), pB = (0, QB.useRef)([]);
-      return (0, uB.jsx)("div", {
+        t: JB
+      } = (0, GB.G)(), hB = (0, TB.useRef)([]);
+      return (0, kB.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": nB("worldSocial:whoCanJoin"),
-        children: aB.map(((BB, QB) => {
-          const IB = BB === jB;
-          return (0, uB.jsxs)("button", {
+        "aria-label": JB("worldSocial:whoCanJoin"),
+        children: nB.map(((BB, TB) => {
+          const GB = BB === IB;
+          return (0, kB.jsxs)("button", {
             ref: BB => {
-              pB.current[QB] = BB
+              hB.current[TB] = BB
             },
             type: "button",
-            className: dB()("WorldSocialTile", {
-              WorldSocialTileSelected: IB
+            className: oB()("WorldSocialTile", {
+              WorldSocialTileSelected: GB
             }),
-            "aria-pressed": IB,
-            tabIndex: IB ? 0 : -1,
+            "aria-pressed": GB,
+            tabIndex: GB ? 0 : -1,
             onKeyDown: BB => {
-              ((BB, jB) => {
-                const zB = "ArrowRight" === BB.key || "ArrowDown" === BB.key ? 1 : "ArrowLeft" === BB.key || "ArrowUp" === BB.key ? -1 : 0;
-                var QB;
-                0 !== zB && (BB.preventDefault(), null === (QB = pB.current[(jB + zB + aB.length) % aB.length]) || void 0 === QB || QB.focus())
-              })(BB, QB)
+              ((BB, IB) => {
+                const ZB = "ArrowRight" === BB.key || "ArrowDown" === BB.key ? 1 : "ArrowLeft" === BB.key || "ArrowUp" === BB.key ? -1 : 0;
+                var TB;
+                0 !== ZB && (BB.preventDefault(), null === (TB = hB.current[(IB + ZB + nB.length) % nB.length]) || void 0 === TB || TB.focus())
+              })(BB, TB)
             },
             onClick: () => {
-              zB(BB)
+              ZB(BB)
             },
-            children: [(0, uB.jsx)("span", {
+            children: [(0, kB.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, uB.jsx)(NB.c, {
-                name: UB[BB]
+              children: (0, kB.jsx)(vB.d, {
+                name: cB[BB]
               })
-            }), (0, uB.jsxs)("span", {
+            }), (0, kB.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, uB.jsx)("span", {
+              children: [(0, kB.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: nB(`worldSocial:${BB}`)
-              }), (0, uB.jsx)("span", {
+                children: JB(`worldSocial:${BB}`)
+              }), (0, kB.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: nB(`worldSocial:${BB}Description`)
+                children: JB(`worldSocial:${BB}Description`)
               })]
             })]
           }, BB)
@@ -1904,47 +1904,47 @@ export const modules = {
       })
     }
   },
-  36805: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => NB
+  36754: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => vB
     });
-    var QB = zB(1240),
-      nB = zB(2766),
-      dB = zB(4478),
-      IB = zB(1148);
+    var TB = ZB(1248),
+      JB = ZB(2792),
+      oB = ZB(4545),
+      GB = ZB(1153);
 
-    function NB(BB) {
+    function vB(BB) {
       let {
-        vp: jB,
-        children: zB,
-        ...NB
+        Iz: IB,
+        children: ZB,
+        ...vB
       } = BB;
       const {
-        t: uB
-      } = (0, QB.D)();
-      return (0, IB.jsx)("div", {
+        t: kB
+      } = (0, TB.G)();
+      return (0, GB.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          jB.onChange(!jB.on)
+          IB.onChange(!IB.on)
         },
-        children: (0, IB.jsx)(nB.f, {
-          ...NB,
+        children: (0, GB.jsx)(JB.e, {
+          ...vB,
           opensProfileCard: !1,
-          children: (0, IB.jsxs)("div", {
+          children: (0, GB.jsxs)("div", {
             className: "WhitelistTickRowActions",
             onClick: BB => {
               BB.stopPropagation()
             },
-            children: [zB, (0, IB.jsx)("label", {
+            children: [ZB, (0, GB.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, IB.jsx)(dB.e, {
-                checked: jB.on,
+              children: (0, GB.jsx)(oB.d, {
+                checked: IB.on,
                 disabled: !1,
-                ariaLabel: uB("worldSocial:letJoin", {
-                  playerName: NB.playerSocialPreview.name
+                ariaLabel: kB("worldSocial:letJoin", {
+                  playerName: vB.playerSocialPreview.name
                 }),
                 onChange: BB => {
-                  jB.onChange(BB.target.checked)
+                  IB.onChange(BB.target.checked)
                 }
               })
             })]
@@ -1953,392 +1953,392 @@ export const modules = {
       })
     }
   },
-  36793: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => JB
+  36737: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => NB
     });
-    var QB = zB(62),
-      nB = zB(1240),
-      dB = zB(1901),
-      IB = zB(106),
-      NB = zB(28),
-      uB = zB(1514),
-      UB = zB(2792),
-      aB = zB(34141),
-      pB = zB(1478),
-      rB = zB(1108),
-      sB = zB(1148);
+    var TB = ZB(63),
+      JB = ZB(1248),
+      oB = ZB(1919),
+      GB = ZB(105),
+      vB = ZB(20),
+      kB = ZB(1542),
+      cB = ZB(2816),
+      nB = ZB(34073),
+      hB = ZB(1516),
+      zB = ZB(1102),
+      FB = ZB(1153);
 
-    function JB(BB) {
+    function NB(BB) {
       let {
-        worldCode: jB,
-        message: zB
+        worldCode: IB,
+        message: ZB
       } = BB;
       const {
-        t: JB
-      } = (0, nB.D)(), {
-        isTouchScreen: mB
-      } = (0, NB.m)(["isTouchScreen"]), yB = IB.featureFlags.canUseInviteLinks, kB = (0, aB.j)(yB && null === zB), [GB, LB] = (0, UB.j)(), gB = (0, QB.useRef)(null);
-      if (null !== zB) return (0, sB.jsxs)("div", {
+        t: NB
+      } = (0, JB.G)(), {
+        isTouchScreen: gB
+      } = (0, vB.o)(["isTouchScreen"]), qB = GB.featureFlags.canUseInviteLinks, yB = (0, nB.h)(qB && null === ZB), [UB, WB] = (0, cB.i)(), dB = (0, TB.useRef)(null);
+      if (null !== ZB) return (0, FB.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, sB.jsx)(rB.c, {
+        children: [(0, FB.jsx)(zB.d, {
           name: "lock"
-        }), (0, sB.jsx)("span", {
-          children: zB
+        }), (0, FB.jsx)("span", {
+          children: ZB
         })]
       });
-      const tB = yB ? kB : jB,
-        SB = mB && yB && (0, UB.e)();
-      return (0, sB.jsxs)("div", {
+      const CB = qB ? yB : IB,
+        QB = gB && qB && (0, cB.b)();
+      return (0, FB.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!yB && (0, sB.jsx)("span", {
+        children: [!qB && (0, FB.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: JB("worldSocial:worldCode")
-        }), (0, sB.jsx)("input", {
-          ref: gB,
+          children: NB("worldSocial:worldCode")
+        }), (0, FB.jsx)("input", {
+          ref: dB,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== tB && void 0 !== tB ? tB : "",
-          "aria-label": JB(yB ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          value: null !== CB && void 0 !== CB ? CB : "",
+          "aria-label": NB(qB ? "worldSocial:worldLink" : "worldSocial:worldCode"),
           onFocus: BB => {
             BB.currentTarget.select()
           }
-        }), (0, sB.jsxs)(pB.f, {
+        }), (0, FB.jsxs)(hB.g, {
           className: "WorldSocialCopy",
-          disabled: null === tB,
+          disabled: null === CB,
           onClick: () => {
-            null !== tB && (0, UB.f)(tB, {
-              useShareSheet: SB,
+            null !== CB && (0, cB.e)(CB, {
+              useShareSheet: QB,
               onOutcome: BB => {
-                if ((0, uB.reportAnalyticsClick)({
+                if ((0, kB.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== BB || yB ? BB : "code"
-                  }), "copied" === BB) LB();
+                    value: "copied" !== BB || qB ? BB : "code"
+                  }), "copied" === BB) WB();
                 else if ("failed" === BB) {
-                  var jB;
-                  null === (jB = gB.current) || void 0 === jB || jB.focus(), dB.f.showMessage({
+                  var IB;
+                  null === (IB = dB.current) || void 0 === IB || IB.focus(), oB.f.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, sB.jsx)(rB.c, {
-            name: GB ? "check" : SB ? "up-from-bracket" : "copy"
-          }), " ", JB(GB ? "general:copied" : SB ? "worldSocial:share" : "general:copy")]
+          children: [(0, FB.jsx)(zB.d, {
+            name: UB ? "check" : QB ? "up-from-bracket" : "copy"
+          }), " ", NB(UB ? "general:copied" : QB ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  36800: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => sB,
-      d: () => rB,
-      e: () => pB
+  36747: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => FB,
+      f: () => zB,
+      j: () => hB
     });
-    var QB = zB(635),
-      nB = zB(1240),
-      dB = zB(1668),
-      IB = zB(2766),
-      NB = zB(2711),
-      uB = zB(1478),
-      UB = zB(36805),
-      aB = zB(1148);
+    var TB = ZB(650),
+      JB = ZB(1248),
+      oB = ZB(1717),
+      GB = ZB(2792),
+      vB = ZB(2739),
+      kB = ZB(1516),
+      cB = ZB(36754),
+      nB = ZB(1153);
 
-    function pB(BB, jB) {
-      var zB;
+    function hB(BB, IB) {
+      var ZB;
       return {
         isError: !1,
         name: BB,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== jB && void 0 !== jB ? jB : {},
-        nameColour: null !== (zB = null === jB || void 0 === jB ? void 0 : jB.nameColour) && void 0 !== zB ? zB : QB.b,
+        cosmetics: null !== IB && void 0 !== IB ? IB : {},
+        nameColour: null !== (ZB = null === IB || void 0 === IB ? void 0 : IB.nameColour) && void 0 !== ZB ? ZB : TB.e,
         location: {
           status: "offline"
         }
       }
     }
 
-    function rB(BB) {
+    function zB(BB) {
       let {
-        player: jB,
-        isFriend: zB = !1,
-        status: QB,
-        showLocation: uB = void 0 === QB,
-        vp: pB,
-        onSendFriendRequest: rB,
-        actions: sB,
-        zIndex: JB
-      } = BB;
-      const {
-        t: mB
-      } = (0, nB.D)();
-      let yB = QB;
-      null !== pB && void 0 !== pB && pB.on && (yB = (0, aB.jsxs)(aB.Fragment, {
-        children: [null !== QB && void 0 !== QB ? QB : (0, aB.jsx)(NB.c, {
-          socialPreview: jB
-        }), (0, aB.jsxs)("span", {
-          className: "WorldSocialCanJoin",
-          children: [" \xb7 ", mB("worldSocial:canJoin")]
-        })]
-      }));
-      const kB = {
-        playerSocialPreview: jB,
-        isFriend: zB,
-        hideFriendBadge: !0,
-        onFriendRemoved: zB ? BB => {
-          dB.d.removeFriendFromState(BB)
-        } : void 0,
-        status: yB,
-        showLocation: uB,
-        onSendFriendRequest: rB,
-        zIndex: JB
-      };
-      return pB ? (0, aB.jsx)(UB.d, {
-        ...kB,
-        vp: pB,
-        children: sB
-      }) : (0, aB.jsx)(IB.f, {
-        ...kB,
-        opensProfileCard: !1,
-        children: sB || void 0
-      })
-    }
-
-    function sB(BB) {
-      let {
-        row: jB,
-        vp: zB,
-        canInvite: QB,
-        invited: dB,
-        onInvite: IB,
+        player: IB,
+        isFriend: ZB = !1,
+        status: TB,
+        showLocation: kB = void 0 === TB,
+        Iz: hB,
+        onSendFriendRequest: zB,
+        actions: FB,
         zIndex: NB
       } = BB;
       const {
-        t: UB
-      } = (0, nB.D)(), pB = "online" === jB.place ? uB.f : uB.h;
-      return (0, aB.jsx)(rB, {
-        player: jB.friend,
+        t: gB
+      } = (0, JB.G)();
+      let qB = TB;
+      null !== hB && void 0 !== hB && hB.on && (qB = (0, nB.jsxs)(nB.Fragment, {
+        children: [null !== TB && void 0 !== TB ? TB : (0, nB.jsx)(vB.c, {
+          socialPreview: IB
+        }), (0, nB.jsxs)("span", {
+          className: "WorldSocialCanJoin",
+          children: [" \xb7 ", gB("worldSocial:canJoin")]
+        })]
+      }));
+      const yB = {
+        playerSocialPreview: IB,
+        isFriend: ZB,
+        hideFriendBadge: !0,
+        onFriendRemoved: ZB ? BB => {
+          oB.c.removeFriendFromState(BB)
+        } : void 0,
+        status: qB,
+        showLocation: kB,
+        onSendFriendRequest: zB,
+        zIndex: NB
+      };
+      return hB ? (0, nB.jsx)(cB.c, {
+        ...yB,
+        Iz: hB,
+        children: FB
+      }) : (0, nB.jsx)(GB.e, {
+        ...yB,
+        opensProfileCard: !1,
+        children: FB || void 0
+      })
+    }
+
+    function FB(BB) {
+      let {
+        row: IB,
+        Iz: ZB,
+        canInvite: TB,
+        invited: oB,
+        onInvite: GB,
+        zIndex: vB
+      } = BB;
+      const {
+        t: cB
+      } = (0, JB.G)(), hB = "online" === IB.place ? kB.g : kB.k;
+      return (0, nB.jsx)(zB, {
+        player: IB.friend,
         isFriend: !0,
-        status: "here" === jB.place ? UB("worldSocial:inThisWorld") : void 0,
+        status: "here" === IB.place ? cB("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        vp: zB,
-        zIndex: NB,
-        actions: QB && (0, aB.jsx)(pB, {
+        Iz: ZB,
+        zIndex: vB,
+        actions: TB && (0, nB.jsx)(hB, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: dB,
-          onClick: IB,
-          ariaLabel: `${UB("worldSocial:invite")} ${jB.friend.name}`,
-          children: UB(dB ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: oB,
+          onClick: GB,
+          ariaLabel: `${cB("worldSocial:invite")} ${IB.friend.name}`,
+          children: cB(oB ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  36783: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => uB,
-      c: () => IB,
-      g: () => UB
+  36726: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB,
+      e: () => GB,
+      g: () => cB
     });
-    var QB = zB(62),
-      nB = zB(4696),
-      dB = zB(1901);
+    var TB = ZB(63),
+      JB = ZB(4768),
+      oB = ZB(1919);
 
-    function IB(BB) {
-      const jB = {
+    function GB(BB) {
+      const IB = {
         lobbyName: BB,
         answer: null,
-        response: nB.b.getSocialSettings(BB)
+        response: JB.d.getSocialSettings(BB)
       };
-      return jB.response.then((BB => {
-        jB.answer = BB
-      })), jB
+      return IB.response.then((BB => {
+        IB.answer = BB
+      })), IB
     }
-    const NB = new Map;
+    const vB = new Map;
 
-    function uB(BB) {
-      NB.set(BB.lobbyName, BB)
+    function kB(BB) {
+      vB.set(BB.lobbyName, BB)
     }
 
-    function UB(BB) {
-      const [jB] = (0, QB.useState)((() => function(BB) {
-        var jB;
-        const zB = null !== (jB = NB.get(BB)) && void 0 !== jB ? jB : null;
-        return null !== zB && void 0 !== zB && zB.answer && "error" in zB.answer ? null : zB
-      }(BB))), [zB, IB] = (0, QB.useState)((() => null !== jB && void 0 !== jB && jB.answer && "settings" in jB.answer ? jB.answer.settings : null)), [uB, UB] = (0, QB.useState)(!0), [aB, pB] = (0, QB.useState)(null !== zB), rB = (0, QB.useRef)(zB);
-      rB.current = zB;
-      const sB = (0, QB.useRef)(0),
-        JB = (0, QB.useRef)(0),
-        mB = (0, QB.useRef)(!1),
-        yB = (0, QB.useRef)(!0),
-        kB = (0, QB.useCallback)((async jB => {
-          const zB = ++sB.current,
-            QB = await (null !== jB && void 0 !== jB ? jB : nB.b.getSocialSettings(BB));
-          yB.current && zB === sB.current && (pB(!0), UB(!1), "error" in QB || IB(QB.settings))
+    function cB(BB) {
+      const [IB] = (0, TB.useState)((() => function(BB) {
+        var IB;
+        const ZB = null !== (IB = vB.get(BB)) && void 0 !== IB ? IB : null;
+        return null !== ZB && void 0 !== ZB && ZB.answer && "error" in ZB.answer ? null : ZB
+      }(BB))), [ZB, GB] = (0, TB.useState)((() => null !== IB && void 0 !== IB && IB.answer && "settings" in IB.answer ? IB.answer.settings : null)), [kB, cB] = (0, TB.useState)(!0), [nB, hB] = (0, TB.useState)(null !== ZB), zB = (0, TB.useRef)(ZB);
+      zB.current = ZB;
+      const FB = (0, TB.useRef)(0),
+        NB = (0, TB.useRef)(0),
+        gB = (0, TB.useRef)(!1),
+        qB = (0, TB.useRef)(!0),
+        yB = (0, TB.useCallback)((async IB => {
+          const ZB = ++FB.current,
+            TB = await (null !== IB && void 0 !== IB ? IB : JB.d.getSocialSettings(BB));
+          qB.current && ZB === FB.current && (hB(!0), cB(!1), "error" in TB || GB(TB.settings))
         }), [BB]),
-        GB = (0, QB.useCallback)((() => {
-          UB(!0), kB()
-        }), [kB]),
-        LB = (0, QB.useCallback)((() => {
-          JB.current > 0 ? mB.current = !0 : kB()
-        }), [kB]);
-      (0, QB.useEffect)((() => (yB.current = !0, NB.delete(BB), UB(!0), kB(null === jB || void 0 === jB ? void 0 : jB.response), () => {
-        yB.current = !1
-      })), [kB, BB, jB]);
-      const gB = BB => {
-        sB.current++, UB(!1), rB.current = BB, IB(BB)
+        UB = (0, TB.useCallback)((() => {
+          cB(!0), yB()
+        }), [yB]),
+        WB = (0, TB.useCallback)((() => {
+          NB.current > 0 ? gB.current = !0 : yB()
+        }), [yB]);
+      (0, TB.useEffect)((() => (qB.current = !0, vB.delete(BB), cB(!0), yB(null === IB || void 0 === IB ? void 0 : IB.response), () => {
+        qB.current = !1
+      })), [yB, BB, IB]);
+      const dB = BB => {
+        FB.current++, cB(!1), zB.current = BB, GB(BB)
       };
       return {
-        settings: zB,
-        loading: uB,
-        answered: aB,
-        retry: GB,
-        refresh: LB,
-        change: async function(jB, zB) {
+        settings: ZB,
+        loading: kB,
+        answered: nB,
+        retry: UB,
+        refresh: WB,
+        change: async function(IB, ZB) {
           let {
-            quiet: QB = !1,
-            onAnswer: IB
+            quiet: TB = !1,
+            onAnswer: GB
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const NB = rB.current;
-          if (null === NB) return !1;
-          gB(zB(NB)), JB.current > 0 && (mB.current = !0), JB.current++;
-          const uB = await nB.b.setSocialSettings(BB, jB);
-          JB.current--;
-          const UB = !("error" in uB);
-          if (!yB.current) return UB;
-          if (null === IB || void 0 === IB || IB(uB), QB);
-          else if ("error" in uB) dB.f.showMessage({
-            translationKey: uB.error
+          const vB = zB.current;
+          if (null === vB) return !1;
+          dB(ZB(vB)), NB.current > 0 && (gB.current = !0), NB.current++;
+          const kB = await JB.d.setSocialSettings(BB, IB);
+          NB.current--;
+          const cB = !("error" in kB);
+          if (!qB.current) return cB;
+          if (null === GB || void 0 === GB || GB(kB), TB);
+          else if ("error" in kB) oB.f.showMessage({
+            translationKey: kB.error
           });
           else
-            for (const BB of uB.notFound) dB.f.showMessage({
+            for (const BB of kB.notFound) oB.f.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
                 playerName: BB
               }
             });
-          if (JB.current > 0) return UB;
-          const aB = mB.current;
-          return mB.current = !1, !aB && "settings" in uB ? gB(uB.settings) : (aB || gB(NB), kB()), UB
+          if (NB.current > 0) return cB;
+          const nB = gB.current;
+          return gB.current = !1, !nB && "settings" in kB ? dB(kB.settings) : (nB || dB(vB), yB()), cB
         }
       }
     }
   },
-  36820: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => IB,
-      f: () => dB
+  36768: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => GB,
+      f: () => oB
     });
-    var QB = zB(174);
-    const nB = new Map;
+    var TB = ZB(168);
+    const JB = new Map;
 
-    function dB(BB, jB) {
-      var zB;
-      const QB = null !== (zB = nB.get(BB)) && void 0 !== zB ? zB : new Map;
-      QB.set(jB, Date.now()), nB.set(BB, QB)
+    function oB(BB, IB) {
+      var ZB;
+      const TB = null !== (ZB = JB.get(BB)) && void 0 !== ZB ? ZB : new Map;
+      TB.set(IB, Date.now()), JB.set(BB, TB)
     }
 
-    function IB(BB) {
-      const jB = nB.get(BB);
-      if (!jB) return [];
-      const zB = Date.now();
-      for (const [nB, dB] of jB) zB - dB >= QB.n && jB.delete(nB);
-      return [...jB.keys()]
+    function GB(BB) {
+      const IB = JB.get(BB);
+      if (!IB) return [];
+      const ZB = Date.now();
+      for (const [JB, oB] of IB) ZB - oB >= TB.m && IB.delete(JB);
+      return [...IB.keys()]
     }
   },
-  36790: (BB, jB, zB) => {
-    function QB(BB, jB) {
-      const zB = jB.toLowerCase();
-      for (const QB of BB)
-        if (QB.toLowerCase() === zB) return !0;
+  36735: (BB, IB, ZB) => {
+    function TB(BB, IB) {
+      const ZB = IB.toLowerCase();
+      for (const TB of BB)
+        if (TB.toLowerCase() === ZB) return !0;
       return !1
     }
 
-    function nB(BB, jB, zB) {
-      const nB = [],
-        dB = [],
-        IB = [];
-      for (const NB of BB) !NB.isError && NB.name && ("inGame" === NB.location.status && NB.location.inLobbyName === jB || QB(zB, NB.name) ? dB.push({
-        friend: NB,
+    function JB(BB, IB, ZB) {
+      const JB = [],
+        oB = [],
+        GB = [];
+      for (const vB of BB) !vB.isError && vB.name && ("inGame" === vB.location.status && vB.location.inLobbyName === IB || TB(ZB, vB.name) ? oB.push({
+        friend: vB,
         place: "here"
-      }) : "offline" === NB.location.status ? IB.push({
-        friend: NB,
+      }) : "offline" === vB.location.status ? GB.push({
+        friend: vB,
         place: "offline"
-      }) : nB.push({
-        friend: NB,
+      }) : JB.push({
+        friend: vB,
         place: "online"
       }));
-      return [...nB, ...dB, ...IB]
+      return [...JB, ...oB, ...GB]
     }
 
-    function dB(BB, jB, zB) {
-      const nB = [],
-        dB = BB.flatMap((BB => "here" === BB.place ? [BB.friend.name] : []));
-      for (const IB of [...dB, ...jB]) QB(nB, IB) || QB(zB, IB) || nB.push(IB);
-      return nB
+    function oB(BB, IB, ZB) {
+      const JB = [],
+        oB = BB.flatMap((BB => "here" === BB.place ? [BB.friend.name] : []));
+      for (const GB of [...oB, ...IB]) TB(JB, GB) || TB(ZB, GB) || JB.push(GB);
+      return JB
     }
 
-    function IB(BB, jB) {
-      return null === BB || void 0 === BB || !BB.canManage || QB(BB.whitelist, jB) ? "none" : "whitelist" === BB.visibility ? "required" : "quiet"
+    function GB(BB, IB) {
+      return null === BB || void 0 === BB || !BB.canManage || TB(BB.whitelist, IB) ? "none" : "whitelist" === BB.visibility ? "required" : "quiet"
     }
 
-    function NB(BB) {
+    function vB(BB) {
       if (null === BB) return !0;
       const {
-        visibility: jB
+        visibility: IB
       } = BB;
-      return "public" === jB || "unlisted" === jB || "whitelist" === jB && BB.canManage
+      return "public" === IB || "unlisted" === IB || "whitelist" === IB && BB.canManage
     }
 
-    function uB(BB, jB, zB) {
-      if (zB) {
-        const zB = jB.filter((jB => !QB(BB.whitelist, jB)));
+    function kB(BB, IB, ZB) {
+      if (ZB) {
+        const ZB = IB.filter((IB => !TB(BB.whitelist, IB)));
         return {
           ...BB,
-          whitelist: [...BB.whitelist, ...zB]
+          whitelist: [...BB.whitelist, ...ZB]
         }
       }
       return {
         ...BB,
-        whitelist: BB.whitelist.filter((BB => !QB(jB, BB)))
+        whitelist: BB.whitelist.filter((BB => !TB(IB, BB)))
       }
     }
 
-    function UB(BB, jB) {
-      const zB = [];
-      for (let QB = 0; QB < BB.length; QB += jB) zB.push(BB.slice(QB, QB + jB));
-      return zB
+    function cB(BB, IB) {
+      const ZB = [];
+      for (let TB = 0; TB < BB.length; TB += IB) ZB.push(BB.slice(TB, TB + IB));
+      return ZB
     }
-    zB.d(jB, {
-      c: () => NB,
-      g: () => dB,
-      k: () => nB,
-      l: () => QB,
-      n: () => UB,
-      p: () => IB,
-      r: () => uB
+    ZB.d(IB, {
+      b: () => vB,
+      f: () => oB,
+      i: () => JB,
+      m: () => TB,
+      n: () => cB,
+      p: () => GB,
+      s: () => kB
     })
   },
-  37091: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => dB
+  37033: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => oB
     });
-    var QB = zB(62),
-      nB = zB(2516);
+    var TB = ZB(63),
+      JB = ZB(2526);
 
-    function dB() {
-      const BB = (0, nB.i)("lobbyLeaderboardInfo");
-      return (0, QB.useMemo)((() => function(BB) {
+    function oB() {
+      const BB = (0, JB.d)("lobbyLeaderboardInfo");
+      return (0, TB.useMemo)((() => function(BB) {
         if (null === BB) return null;
-        const jB = Object.entries(BB),
-          zB = jB.filter((BB => {
-            let [, jB] = BB;
-            return void 0 !== jB
+        const IB = Object.entries(BB),
+          ZB = IB.filter((BB => {
+            let [, IB] = BB;
+            return void 0 !== IB
           }));
-        if (zB.length === jB.length) return BB;
-        const QB = Object.fromEntries(zB),
-          nB = Object.keys(BB).filter((BB => !Object.hasOwn(QB, BB)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${nB.join(", ")}`), QB
+        if (ZB.length === IB.length) return BB;
+        const TB = Object.fromEntries(ZB),
+          JB = Object.keys(BB).filter((BB => !Object.hasOwn(TB, BB)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${JB.join(", ")}`), TB
       }(BB)), [BB])
     }
   }

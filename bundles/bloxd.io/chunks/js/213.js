@@ -1,31 +1,31 @@
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  36337: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      CAPPED_COUNTS_VISIT_CAP: () => dB,
-      reportCappedWasmFailure: () => uB,
-      reportUncappedWasmFailure: () => NB,
-      reportWasmCrash: () => nB,
-      reportWasmFailure: () => IB
+  36283: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      CAPPED_COUNTS_VISIT_CAP: () => oB,
+      reportCappedWasmFailure: () => kB,
+      reportUncappedWasmFailure: () => vB,
+      reportWasmCrash: () => JB,
+      reportWasmFailure: () => GB
     });
-    var QB = zB(3036);
+    var TB = ZB(3101);
 
-    function nB(BB) {
-      (0, QB.reportClientError)("wasm_load", BB.message, BB.code)
+    function JB(BB) {
+      (0, TB.reportClientError)("wasm_load", BB.message, BB.code)
     }
-    const dB = QB.c - 4;
+    const oB = TB.MAX_ERRORS_PER_VISIT - 4;
 
-    function IB(BB, jB, zB) {
-      (0, QB.reportClientError)(BB, jB, zB, !1)
-    }
-
-    function NB(BB, jB, zB) {
-      (0, QB.reportClientError)(BB, jB, zB, !1, 1 / 0)
+    function GB(BB, IB, ZB) {
+      (0, TB.reportClientError)(BB, IB, ZB, !1)
     }
 
-    function uB(BB, jB, zB) {
-      (0, QB.reportClientError)(BB, jB, zB, !1, dB)
+    function vB(BB, IB, ZB) {
+      (0, TB.reportClientError)(BB, IB, ZB, !1, 1 / 0)
+    }
+
+    function kB(BB, IB, ZB) {
+      (0, TB.reportClientError)(BB, IB, ZB, !1, oB)
     }
   }
 };

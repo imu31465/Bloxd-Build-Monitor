@@ -1,46 +1,46 @@
 export const id = 196;
 export const ids = [196];
 export const modules = {
-  34126: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      ALL_DEV_TOOLS: () => IB,
-      coreDevTools: () => UB,
-      devTools: () => uB
+  34060: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      ALL_DEV_TOOLS: () => GB,
+      coreDevTools: () => cB,
+      devTools: () => kB
     });
-    var QB = zB(690),
-      nB = zB(1325),
-      dB = zB(34132);
-    const IB = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function NB() {
+    var TB = ZB(684),
+      JB = ZB(1362),
+      oB = ZB(34066);
+    const GB = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function vB() {
       const {
         noaDevTools: BB
-      } = await zB.e(242).then((() => zB(41159)));
+      } = await ZB.e(242).then((() => ZB(41093)));
       return BB
     }
-    const uB = new class {
+    const kB = new class {
         constructor() {
-          this.loadHost = NB, this.tools = IB
+          this.loadHost = vB, this.tools = GB
         }
         setHost(BB) {
-          this.tools = null === BB ? IB : BB.tools, this.loadHost = null === BB ? NB : async () => BB
+          this.tools = null === BB ? GB : BB.tools, this.loadHost = null === BB ? vB : async () => BB
         }
         supports(BB) {
           return this.tools.has(BB)
         }
-        async downloadScene(BB, jB) {
-          const zB = await this.loadHost();
-          await zB.downloadScene(BB, jB)
+        async downloadScene(BB, IB) {
+          const ZB = await this.loadHost();
+          await ZB.downloadScene(BB, IB)
         }
         async setAmbientLightIntensity(BB) {
-          const jB = await this.loadHost();
-          await jB.setAmbientLightIntensity(BB)
+          const IB = await this.loadHost();
+          await IB.setAmbientLightIntensity(BB)
         }
-        async capturePhoto(BB, jB, zB) {
-          return (await this.loadHost()).capturePhoto(BB, jB, zB)
+        async capturePhoto(BB, IB, ZB) {
+          return (await this.loadHost()).capturePhoto(BB, IB, ZB)
         }
       },
-      UB = {
-        tools: dB.d,
+      cB = {
+        tools: oB.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -51,8 +51,8 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    QB.E && uB.setHost(UB), (0, nB.A)((() => {
-      uB.setHost(UB)
+    TB.B && kB.setHost(cB), (0, JB.w)((() => {
+      kB.setHost(cB)
     }))
   }
 };

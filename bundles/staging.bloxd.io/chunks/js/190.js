@@ -1,34 +1,34 @@
 export const id = 190;
 export const ids = [190];
 export const modules = {
-  40588: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      FORMER_BLOCK_IMAGE_NAMES: () => QB.d,
-      textureAnimationData: () => nB.q,
-      textureNameToIndex: () => nB.s
+  40534: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      FORMER_BLOCK_IMAGE_NAMES: () => TB.b,
+      textureAnimationData: () => JB.n,
+      textureNameToIndex: () => JB.r
     });
-    var QB = zB(38831),
-      nB = zB(9266)
+    var TB = ZB(38766),
+      JB = ZB(9296)
   },
-  9366: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      e: () => dB
+  9388: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      d: () => oB
     });
-    var QB = zB(9311);
-    const nB = "Air",
-      dB = Object.freeze(new QB.h(nB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var TB = ZB(9340);
+    const JB = "Air",
+      oB = Object.freeze(new TB.i(JB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38831: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => QB,
-      g: () => nB
+  38766: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB,
+      f: () => JB
     });
-    const QB = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((BB => [BB, `${BB}_block`])));
+    const TB = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((BB => [BB, `${BB}_block`])));
 
-    function nB(BB) {
-      var jB;
-      return null !== (jB = QB.get(BB)) && void 0 !== jB ? jB : BB
+    function JB(BB) {
+      var IB;
+      return null !== (IB = TB.get(BB)) && void 0 !== IB ? IB : BB
     }
   }
 };

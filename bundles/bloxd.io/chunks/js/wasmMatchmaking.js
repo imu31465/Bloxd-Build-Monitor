@@ -1,30 +1,30 @@
-/*! For license information please see 7zvlu.wasmMatchmaking.c725b42b.chunk.js.LICENSE.txt */
+/*! For license information please see c6gaap.wasmMatchmaking.52e2e759.chunk.js.LICENSE.txt */
 export const id = 63;
 export const ids = [63];
 export const modules = {
-  36619: (BB, jB) => {
-    function zB(BB) {
+  36565: (BB, IB) => {
+    function ZB(BB) {
       if (BB && "object" === typeof BB) {
-        var jB = BB.which || BB.keyCode || BB.charCode;
-        jB && (BB = jB)
+        var IB = BB.which || BB.keyCode || BB.charCode;
+        IB && (BB = IB)
       }
-      if ("number" === typeof BB) return IB[BB];
-      var zB, dB = String(BB);
-      return (zB = QB[dB.toLowerCase()]) ? zB : (zB = nB[dB.toLowerCase()]) || (1 === dB.length ? dB.charCodeAt(0) : void 0)
+      if ("number" === typeof BB) return GB[BB];
+      var ZB, oB = String(BB);
+      return (ZB = TB[oB.toLowerCase()]) ? ZB : (ZB = JB[oB.toLowerCase()]) || (1 === oB.length ? oB.charCodeAt(0) : void 0)
     }
-    zB.isEventKey = function(BB, jB) {
+    ZB.isEventKey = function(BB, IB) {
       if (BB && "object" === typeof BB) {
-        var zB = BB.which || BB.keyCode || BB.charCode;
-        if (null === zB || void 0 === zB) return !1;
-        if ("string" === typeof jB) {
-          var dB;
-          if (dB = QB[jB.toLowerCase()]) return dB === zB;
-          if (dB = nB[jB.toLowerCase()]) return dB === zB
-        } else if ("number" === typeof jB) return jB === zB;
+        var ZB = BB.which || BB.keyCode || BB.charCode;
+        if (null === ZB || void 0 === ZB) return !1;
+        if ("string" === typeof IB) {
+          var oB;
+          if (oB = TB[IB.toLowerCase()]) return oB === ZB;
+          if (oB = JB[IB.toLowerCase()]) return oB === ZB
+        } else if ("number" === typeof IB) return IB === ZB;
         return !1
       }
     };
-    var QB = (jB = BB.exports = zB).code = jB.codes = {
+    var TB = (IB = BB.exports = ZB).code = IB.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      nB = jB.aliases = {
+      JB = IB.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,32 +91,32 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (dB = 97; dB < 123; dB++) QB[String.fromCharCode(dB)] = dB - 32;
-    for (var dB = 48; dB < 58; dB++) QB[dB - 48] = dB;
-    for (dB = 1; dB < 13; dB++) QB["f" + dB] = dB + 111;
-    for (dB = 0; dB < 10; dB++) QB["numpad " + dB] = dB + 96;
-    var IB = jB.names = jB.title = {};
-    for (dB in QB) IB[QB[dB]] = dB;
-    for (var NB in nB) QB[NB] = nB[NB]
+    for (oB = 97; oB < 123; oB++) TB[String.fromCharCode(oB)] = oB - 32;
+    for (var oB = 48; oB < 58; oB++) TB[oB - 48] = oB;
+    for (oB = 1; oB < 13; oB++) TB["f" + oB] = oB + 111;
+    for (oB = 0; oB < 10; oB++) TB["numpad " + oB] = oB + 96;
+    var GB = IB.names = IB.title = {};
+    for (oB in TB) GB[TB[oB]] = oB;
+    for (var vB in JB) TB[vB] = JB[vB]
   },
-  36775: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => IB
+  36717: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => GB
     });
-    var QB = zB(62);
-    const nB = QB.useLayoutEffect;
-    const dB = function(BB) {
-      var jB = (0, QB.useRef)(BB);
-      return nB((function() {
-        jB.current = BB
-      })), jB
+    var TB = ZB(63);
+    const JB = TB.useLayoutEffect;
+    const oB = function(BB) {
+      var IB = (0, TB.useRef)(BB);
+      return JB((function() {
+        IB.current = BB
+      })), IB
     };
-    var IB = function(BB) {
-      var jB = dB(BB);
-      (0, QB.useEffect)((function() {
+    var GB = function(BB) {
+      var IB = oB(BB);
+      (0, TB.useEffect)((function() {
         var BB = function(BB) {
-          var zB;
-          if (null != jB.current && (zB = jB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof zB) return BB.returnValue = zB, zB
+          var ZB;
+          if (null != IB.current && (ZB = IB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof ZB) return BB.returnValue = ZB, ZB
         };
         return window.addEventListener("beforeunload", BB),
           function() {
@@ -125,13 +125,13 @@ export const modules = {
       }), [])
     }
   },
-  36662: BB => {
-    var jB, zB = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      QB = /OS X/.test(zB),
-      nB = /Opera/.test(zB),
-      dB = !/like Gecko/.test(zB) && !nB,
-      IB = BB.exports = {
-        0: QB ? "<menu>" : "<UNK>",
+  36600: BB => {
+    var IB, ZB = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      TB = /OS X/.test(ZB),
+      JB = /Opera/.test(ZB),
+      oB = !/like Gecko/.test(ZB) && !JB,
+      GB = BB.exports = {
+        0: TB ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: QB ? "<meta>" : "<menu>",
+        93: TB ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: QB && dB ? "-" : "<volume-mute>",
+        173: TB && oB ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: nB ? "`" : "<unicode>",
+        231: JB ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,321 +234,321 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (jB = 58; jB < 65; ++jB) IB[jB] = String.fromCharCode(jB);
-    for (jB = 48; jB < 58; ++jB) IB[jB] = jB - 48 + "";
-    for (jB = 65; jB < 91; ++jB) IB[jB] = String.fromCharCode(jB);
-    for (jB = 96; jB < 106; ++jB) IB[jB] = "<num-" + (jB - 96) + ">";
-    for (jB = 112; jB < 136; ++jB) IB[jB] = "F" + (jB - 111)
+    for (IB = 58; IB < 65; ++IB) GB[IB] = String.fromCharCode(IB);
+    for (IB = 48; IB < 58; ++IB) GB[IB] = IB - 48 + "";
+    for (IB = 65; IB < 91; ++IB) GB[IB] = String.fromCharCode(IB);
+    for (IB = 96; IB < 106; ++IB) GB[IB] = "<num-" + (IB - 96) + ">";
+    for (IB = 112; IB < 136; ++IB) GB[IB] = "F" + (IB - 111)
   },
-  8937: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB,
-      f: () => nB
+  9019: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      g: () => JB
     });
-    let QB = !1;
+    let TB = !1;
+
+    function JB() {
+      TB = !0
+    }
+
+    function oB() {
+      return TB
+    }
+  },
+  36472: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      InGameUi: () => CB.d,
+      LobbyLeaderboard: () => QB.c,
+      loadCharacterCustomisationUI: () => sB,
+      loadCharacterPreview: () => wB,
+      matchmakeAndPlay: () => pB,
+      matchmakeForAhead: () => vB.e,
+      setUpGame: () => OB
+    });
+    var TB = ZB(1305),
+      JB = ZB(168),
+      oB = ZB(20),
+      GB = ZB(36478),
+      vB = ZB(36483),
+      kB = ZB(2029),
+      cB = ZB(36524);
 
     function nB() {
-      QB = !0
+      return !1 !== kB.c.get("canCustomiseChar")
     }
+    let hB = !1;
+    var zB = ZB(1382),
+      FB = ZB(1310),
+      NB = ZB(256),
+      gB = ZB(3733),
+      qB = ZB(9019),
+      yB = ZB(9016);
 
-    function dB() {
-      return QB
-    }
-  },
-  36519: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      InGameUi: () => tB.b,
-      LobbyLeaderboard: () => SB.c,
-      loadCharacterCustomisationUI: () => MB,
-      loadCharacterPreview: () => EB,
-      matchmakeAndPlay: () => oB,
-      matchmakeForAhead: () => NB.g,
-      setUpGame: () => iB
-    });
-    var QB = zB(1277),
-      nB = zB(174),
-      dB = zB(28),
-      IB = zB(36522),
-      NB = zB(36530),
-      uB = zB(2006),
-      UB = zB(36570);
-
-    function aB() {
-      return !1 !== uB.c.get("canCustomiseChar")
-    }
-    let pB = !1;
-    var rB = zB(1357),
-      sB = zB(1284),
-      JB = zB(269),
-      mB = zB(3673),
-      yB = zB(8937),
-      kB = zB(8930);
-
-    function GB() {
-      (0, yB.d)() || (0, kB.d)().catch((BB => {
+    function UB() {
+      (0, qB.d)() || (0, yB.c)().catch((BB => {
         console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", BB)
       }))
     }
-    var LB = zB(3551),
-      gB = zB(1799);
-    var tB = zB(36577),
-      SB = zB(37089);
+    var WB = ZB(3625),
+      dB = ZB(1824);
+    var CB = ZB(36535),
+      QB = ZB(37031);
 
-    function MB() {
-      return zB.e(220).then((() => zB(41373)))
+    function sB() {
+      return ZB.e(220).then((() => ZB(41316)))
     }
 
-    function EB() {
-      return zB.e(296).then((() => zB(41379)))
+    function wB() {
+      return ZB.e(296).then((() => ZB(41319)))
     }
 
-    function iB() {
-      return (0, kB.i)()
+    function OB() {
+      return (0, yB.e)()
     }
-    pB || (pB = !0, document.addEventListener("keydown", (BB => {
-        (0, UB.b)(BB, aB)
+    hB || (hB = !0, document.addEventListener("keydown", (BB => {
+        (0, cB.d)(BB, nB)
       }))),
       function(BB) {
-        var jB;
-        return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (jB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== jB ? jB : "")
-      }(navigator.connection) && (0, mB.c)((() => {
-        (0, yB.d)() || Promise.all([zB.e(78), zB.e(90), zB.e(215), zB.e(214), zB.e(137), zB.e(140), zB.e(59)]).then((() => zB(41142))).then((async BB => {
-          (0, yB.d)() || (await BB.startLoadAheadOfJoin({
-            joinStarted: yB.d,
-            language: sB.c.get().getCurrentLanguageCode()
-          }), (0, JB.c)(GB))
+        var IB;
+        return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (IB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== IB ? IB : "")
+      }(navigator.connection) && (0, gB.c)((() => {
+        (0, qB.d)() || Promise.all([ZB.e(78), ZB.e(90), ZB.e(215), ZB.e(214), ZB.e(137), ZB.e(140), ZB.e(59)]).then((() => ZB(41074))).then((async BB => {
+          (0, qB.d)() || (await BB.startLoadAheadOfJoin({
+            joinStarted: qB.d,
+            language: FB.h.get().getCurrentLanguageCode()
+          }), (0, NB.c)(UB))
         }), (BB => {
           console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", BB)
         }))
       }));
-    const qB = dB.c.get("router");
-    null === qB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(jB) {
-      if ((0, gB.c)(jB.state.location.pathname)) return void(0, kB.e)().catch((() => {}));
-      const zB = jB.subscribe((QB => {
-        (0, gB.c)(QB.location.pathname) && (zB(), (0, LB.e)().then((() => {
-          BB(jB)
+    const YB = oB.d.get("router");
+    null === YB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(IB) {
+      if ((0, dB.e)(IB.state.location.pathname)) return void(0, yB.d)().catch((() => {}));
+      const ZB = IB.subscribe((TB => {
+        (0, dB.e)(TB.location.pathname) && (ZB(), (0, WB.h)().then((() => {
+          BB(IB)
         })))
       }))
-    }(qB), (0, IB.e)();
-    const fB = (0, NB.c)((async function(BB, jB) {
+    }(YB), (0, GB.d)();
+    const iB = (0, vB.c)((async function(BB, IB) {
       let {
-        place: zB,
-        userContext: dB,
-        direct: IB,
-        matchedAt: NB,
-        rematch: uB
+        place: ZB,
+        userContext: oB,
+        direct: GB,
+        matchedAt: vB,
+        rematch: kB
       } = BB;
-      const UB = IB ? 1 / 0 : NB;
-      let aB;
+      const cB = GB ? 1 / 0 : vB;
+      let nB;
       try {
-        aB = await (0, kB.e)()
-      } catch (pB) {
-        return console.error("The wasm client did not load:", pB), (0, rB.q)({
+        nB = await (0, yB.d)()
+      } catch (hB) {
+        return console.error("The wasm client did not load:", hB), (0, zB.l)({
           websocketUrl: null
-        }), QB.d.errorWithCode(String(pB), nB.j.CONNECT_TO_GAME_SERVER, {
-          error: pB,
-          severity: jB.aborted ? "low" : "medium",
-          xz: jB.aborted
+        }), TB.b.errorWithCode(String(hB), JB.l.CONNECT_TO_GAME_SERVER, {
+          error: hB,
+          severity: IB.aborted ? "low" : "medium",
+          fZ: IB.aborted
         })
       }
-      return aB.playWasmGame({
-        userContext: dB,
-        place: zB,
-        matchedAt: UB,
-        rematch: uB
-      }, jB)
+      return nB.playWasmGame({
+        userContext: oB,
+        place: ZB,
+        matchedAt: cB,
+        rematch: kB
+      }, IB)
     }));
 
-    function oB() {
-      return (0, kB.e)().catch((() => {})), fB(...arguments)
+    function pB() {
+      return (0, yB.d)().catch((() => {})), iB(...arguments)
     }
   },
-  8930: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => sB,
-      e: () => rB,
-      i: () => JB
+  9016: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => FB,
+      d: () => zB,
+      e: () => NB
     });
-    var QB = zB(3270),
-      nB = zB(2354),
-      dB = zB(2201),
-      IB = zB(4736),
-      NB = zB(3606),
-      uB = zB(8937);
-    let UB = null;
+    var TB = ZB(3316),
+      JB = ZB(2392),
+      oB = ZB(2224),
+      GB = ZB(4821),
+      vB = ZB(3676),
+      kB = ZB(9019);
+    let cB = null;
 
-    function aB() {
-      return Promise.all([zB.e(75), zB.e(78), zB.e(90), zB.e(215), zB.e(214), zB.e(160), zB.e(137), zB.e(198), zB.e(140), zB.e(88), zB.e(275), zB.e(64)]).then((() => zB(40763)))
+    function nB() {
+      return Promise.all([ZB.e(75), ZB.e(78), ZB.e(90), ZB.e(215), ZB.e(214), ZB.e(160), ZB.e(137), ZB.e(198), ZB.e(140), ZB.e(88), ZB.e(275), ZB.e(64)]).then((() => ZB(40726)))
     }
 
-    function pB() {
-      Promise.all([zB.e(73), zB.e(76), zB.e(75), zB.e(74), zB.e(90), zB.e(87), zB.e(273), zB.e(191), zB.e(228), zB.e(252), zB.e(275), zB.e(47)]).then((() => zB(41085))).catch((() => {}))
+    function hB() {
+      Promise.all([ZB.e(73), ZB.e(76), ZB.e(75), ZB.e(74), ZB.e(90), ZB.e(87), ZB.e(273), ZB.e(191), ZB.e(228), ZB.e(252), ZB.e(275), ZB.e(47)]).then((() => ZB(41032))).catch((() => {}))
     }
 
-    function rB() {
-      return IB.b.cancelDownloadForJoin(), (0, NB.e)(), (0, nB.e)(), (0, uB.f)(), (0, dB.g)(), pB(), Promise.all([zB.e(78), zB.e(90), zB.e(215), zB.e(214), zB.e(137), zB.e(140), zB.e(59)]).then((() => zB(41142))).then((BB => {
+    function zB() {
+      return GB.c.cancelDownloadForJoin(), (0, vB.b)(), (0, JB.g)(), (0, kB.g)(), (0, oB.k)(), hB(), Promise.all([ZB.e(78), ZB.e(90), ZB.e(215), ZB.e(214), ZB.e(137), ZB.e(140), ZB.e(59)]).then((() => ZB(41074))).then((BB => {
         let {
-          startJoinLoad: jB
+          startJoinLoad: IB
         } = BB;
-        jB()
-      }), (() => {})), UB ??= aB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        QB.e.showGamePack(BB)
+        IB()
+      }), (() => {})), cB ??= nB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
+        TB.e.showGamePack(BB)
       })), BB)), (BB => {
-        throw UB = null, BB
-      })), UB
+        throw cB = null, BB
+      })), cB
     }
 
-    function sB() {
-      return pB(), zB.e(276).then((() => zB(41150))).catch((() => {})), aB().then((() => {}))
+    function FB() {
+      return hB(), ZB.e(276).then((() => ZB(41082))).catch((() => {})), nB().then((() => {}))
     }
 
-    function JB() {
-      return aB().then((BB => {
+    function NB() {
+      return nB().then((BB => {
         BB.startWasmPreviews(), BB.prefetchWasmPreviews()
       }))
     }
   },
-  36538: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => rB,
-      f: () => aB,
-      h: () => sB,
-      i: () => pB
+  36492: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => zB,
+      f: () => nB,
+      h: () => FB,
+      l: () => hB
     });
-    var QB = zB(376),
-      nB = zB(698),
-      dB = zB(710),
-      IB = zB(41);
-    const NB = {
+    var TB = ZB(360),
+      JB = ZB(694),
+      oB = ZB(700),
+      GB = ZB(36);
+    const vB = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      uB = "playSessionGameNameWithVariation",
-      UB = "wasMatchmakePlayer";
+      kB = "playSessionGameNameWithVariation",
+      cB = "wasMatchmakePlayer";
 
-    function aB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : IB.k;
-      (0, dB.h)(BB, NB)
+    function nB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n;
+      (0, oB.i)(BB, vB)
     }
 
-    function pB() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : IB.k).setItem(UB, !0)
+    function hB() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n).setItem(cB, !0)
     }
 
-    function rB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : IB.k;
-      return (0, dB.d)(BB, NB)
+    function zB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n;
+      return (0, oB.c)(BB, vB)
     }
 
-    function sB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : IB.k;
-      const zB = (0, dB.d)(jB, NB),
-        aB = function(BB) {
-          const jB = BB.getItem(uB);
-          return "string" !== typeof jB ? null : jB
-        }(jB),
-        pB = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : IB.k).getItem(UB)
-        }(jB);
-      let rB;
-      return rB = null !== zB && null !== aB && (0, dB.f)(jB, NB) && function(BB, jB, zB) {
-          const nB = (0, QB.Sb)(BB),
-            dB = (0, QB.Sb)(jB),
-            IB = (0, QB.Mb)(BB),
-            NB = (0, QB.Mb)(jB);
-          return !(nB !== dB || !zB) || nB === dB && IB === NB
-        }(aB, BB, pB) ? zB : (0, nB.b)(), (0, dB.l)(jB, NB, rB), jB.setItem(uB, BB),
+    function FB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GB.n;
+      const ZB = (0, oB.c)(IB, vB),
+        nB = function(BB) {
+          const IB = BB.getItem(kB);
+          return "string" !== typeof IB ? null : IB
+        }(IB),
+        hB = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n).getItem(cB)
+        }(IB);
+      let zB;
+      return zB = null !== ZB && null !== nB && (0, oB.e)(IB, vB) && function(BB, IB, ZB) {
+          const JB = (0, TB.Vb)(BB),
+            oB = (0, TB.Vb)(IB),
+            GB = (0, TB.Pb)(BB),
+            vB = (0, TB.Pb)(IB);
+          return !(JB !== oB || !ZB) || JB === oB && GB === vB
+        }(nB, BB, hB) ? ZB : (0, JB.d)(), (0, oB.l)(IB, vB, zB), IB.setItem(kB, BB),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : IB.k).removeItem(UB)
-        }(jB), rB
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n).removeItem(cB)
+        }(IB), zB
     }
   },
-  36533: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => tB,
-      i: () => SB
+  36485: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => CB,
+      d: () => QB
     });
-    var QB = zB(1067),
-      nB = zB(225),
-      dB = zB(373),
-      IB = zB(667),
-      NB = zB(376),
-      uB = zB(1069),
-      UB = zB(690),
-      aB = zB(722),
-      pB = zB(4644),
-      rB = zB(106),
-      sB = zB(145),
-      JB = zB(1778),
-      mB = zB(125),
-      yB = zB(36538),
-      kB = zB(41),
-      GB = zB(701),
-      LB = zB(676),
-      gB = zB(36547);
+    var TB = ZB(1058),
+      JB = ZB(212),
+      oB = ZB(357),
+      GB = ZB(671),
+      vB = ZB(360),
+      kB = ZB(1060),
+      cB = ZB(684),
+      nB = ZB(714),
+      hB = ZB(4704),
+      zB = ZB(105),
+      FB = ZB(140),
+      NB = ZB(1805),
+      gB = ZB(121),
+      qB = ZB(36492),
+      yB = ZB(36),
+      UB = ZB(696),
+      WB = ZB(676),
+      dB = ZB(36501);
 
-    function tB() {
-      var BB, jB;
-      return [...null !== (BB = navigator.languages) && void 0 !== BB ? BB : [null !== (jB = navigator.language) && void 0 !== jB ? jB : "none"], "en-Gb"]
+    function CB() {
+      var BB, IB;
+      return [...null !== (BB = navigator.languages) && void 0 !== BB ? BB : [null !== (IB = navigator.language) && void 0 !== IB ? IB : "none"], "en-Gb"]
     }
 
-    function SB(BB, jB, zB, SB, MB) {
-      const EB = (0, QB.n)(jB) ? (0, QB.q)(jB) : null,
-        iB = BB.isLoggedIn() && void 0 !== (0, nB.b)(dB.k, sB.siteUsed) ? (0, LB.f)() : null,
-        qB = {
-          cookies: (0, JB.getAllCookiesForGameNameWithVariation)(jB),
-          isMobile: (0, rB.isMobile)(),
-          isUsingCustomGameTexturePack: null !== EB && MB(EB),
+    function QB(BB, IB, ZB, QB, sB) {
+      const wB = (0, TB.i)(IB) ? (0, TB.l)(IB) : null,
+        OB = BB.isLoggedIn() && void 0 !== (0, JB.e)(oB.r, FB.siteUsed) ? (0, WB.f)() : null,
+        YB = {
+          cookies: (0, NB.getAllCookiesForGameNameWithVariation)(IB),
+          isMobile: (0, zB.isMobile)(),
+          isUsingCustomGameTexturePack: null !== wB && sB(wB),
           generalCookies: {
-            joinDiscord: !!kB.j.getItem("DiscordPressed"),
-            newGo: pB.c,
+            joinDiscord: !!yB.m.getItem("DiscordPressed"),
+            newGo: hB.b,
             ...BB.getMetricsCookies(),
-            trafficCode: SB,
-            compliance: rB.compliance
+            trafficCode: QB,
+            compliance: zB.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, rB.getBrowserName)(),
-            version: (0, rB.getBrowserVersion)(),
+            name: (0, zB.getBrowserName)(),
+            version: (0, zB.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, rB.getPlatformType)(),
-            deviceType: (0, mB.c)()
+            platformType: (0, zB.getPlatformType)(),
+            deviceType: (0, gB.e)()
           },
           isLoggedIn: BB.isLoggedIn(),
-          lobbyName: zB,
-          languages: tB(),
-          version: IB.b,
-          siteUsed: sB.siteUsed,
-          subsiteUsed: sB.subsiteUsed,
-          playSessionId: (0, yB.h)(jB),
-          visitSessionId: (0, GB.h)(),
-          clientReason: UB.p.reason,
-          budgetBasis: (0, gB.i)(),
-          ...null !== aB.l && {
-            diagClaim: aB.l.claimId
+          lobbyName: ZB,
+          languages: CB(),
+          version: GB.b,
+          siteUsed: FB.siteUsed,
+          subsiteUsed: FB.subsiteUsed,
+          playSessionId: (0, qB.h)(IB),
+          visitSessionId: (0, UB.i)(),
+          clientReason: cB.p.reason,
+          budgetBasis: (0, dB.h)(),
+          ...null !== nB.t && {
+            diagClaim: nB.t.claimId
           },
-          ...null !== iB && {
-            webGpuLoss: iB
+          ...null !== OB && {
+            webGpuLoss: OB
           }
         };
-      return null !== EB && (0, NB.Hc)(EB) ? (qB.lobbyName = (0, QB.j)(EB, (0, QB.p)(jB), zB), {
-        roomName: `classic_${uB.g}`,
-        joinOptions: qB
+      return null !== wB && (0, vB.Gc)(wB) ? (YB.lobbyName = (0, TB.h)(wB, (0, TB.k)(IB), ZB), {
+        roomName: `classic_${kB.h}`,
+        joinOptions: YB
       }) : {
-        roomName: jB,
-        joinOptions: qB
+        roomName: IB,
+        joinOptions: YB
       }
     }
   },
-  9366: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      e: () => dB
+  9388: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      d: () => oB
     });
-    var QB = zB(9311);
-    const nB = "Air",
-      dB = Object.freeze(new QB.h(nB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var TB = ZB(9340);
+    const JB = "Air",
+      oB = Object.freeze(new TB.i(JB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);

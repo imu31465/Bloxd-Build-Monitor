@@ -1,177 +1,177 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36469: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      drawBlockIcon: () => kB,
-      drawBlockIconUrl: () => GB,
-      getDrawnBlockIcon: () => yB
+  36408: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      drawBlockIcon: () => yB,
+      drawBlockIconUrl: () => UB,
+      getDrawnBlockIcon: () => qB
     });
-    var QB = zB(36473);
-    const nB = {
+    var TB = ZB(36416);
+    const JB = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      dB = {
+      oB = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      IB = {
+      GB = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const NB = 1e-6;
+    const vB = 1e-6;
 
-    function uB(BB, jB, zB, QB) {
+    function kB(BB, IB, ZB, TB) {
       let {
-        origin: nB,
-        across: dB,
-        down: IB,
-        texture: uB,
-        rect: [UB, aB, pB, rB],
-        shade: sB
-      } = QB;
-      const JB = dB.x * IB.y - dB.y * IB.x;
-      if (Math.abs(JB) < 1e-9) return;
-      const mB = [nB.x, nB.x + dB.x, nB.x + IB.x, nB.x + dB.x + IB.x],
-        yB = [nB.y, nB.y + dB.y, nB.y + IB.y, nB.y + dB.y + IB.y],
-        kB = Math.max(0, Math.floor(Math.min(...mB))),
-        GB = Math.min(zB - 1, Math.ceil(Math.max(...mB))),
-        LB = Math.max(0, Math.floor(Math.min(...yB))),
-        gB = Math.min(zB - 1, Math.ceil(Math.max(...yB)));
-      for (let tB = LB; tB <= gB; tB++)
-        for (let QB = kB; QB <= GB; QB++) {
-          const mB = QB + .5 - nB.x,
-            yB = tB + .5 - nB.y,
-            kB = (mB * IB.y - yB * IB.x) / JB,
-            GB = (dB.x * yB - dB.y * mB) / JB;
-          if (kB < -NB || kB > 1 + NB || GB < -NB || GB > 1 + NB) continue;
-          const LB = tB * zB + QB;
-          jB[LB] = 1;
-          const gB = UB + Math.min(Math.max(kB, 0), 1) * (pB - UB),
-            SB = aB + Math.min(Math.max(GB, 0), 1) * (rB - aB),
-            MB = Math.min(uB.width - 1, Math.floor(gB * uB.width)),
-            EB = 4 * (Math.min(uB.height - 1, Math.floor(SB * uB.height)) * uB.width + MB),
-            iB = uB.pixels[EB + 3] / 255;
-          if (0 === iB) continue;
-          const qB = 4 * LB,
-            fB = BB[qB + 3] / 255 * (1 - iB),
-            oB = iB + fB;
-          for (let jB = 0; jB < 3; jB++) BB[qB + jB] = (uB.pixels[EB + jB] * sB * iB + BB[qB + jB] * fB) / oB;
-          BB[qB + 3] = 255 * oB
+        origin: JB,
+        across: oB,
+        down: GB,
+        texture: kB,
+        rect: [cB, nB, hB, zB],
+        shade: FB
+      } = TB;
+      const NB = oB.x * GB.y - oB.y * GB.x;
+      if (Math.abs(NB) < 1e-9) return;
+      const gB = [JB.x, JB.x + oB.x, JB.x + GB.x, JB.x + oB.x + GB.x],
+        qB = [JB.y, JB.y + oB.y, JB.y + GB.y, JB.y + oB.y + GB.y],
+        yB = Math.max(0, Math.floor(Math.min(...gB))),
+        UB = Math.min(ZB - 1, Math.ceil(Math.max(...gB))),
+        WB = Math.max(0, Math.floor(Math.min(...qB))),
+        dB = Math.min(ZB - 1, Math.ceil(Math.max(...qB)));
+      for (let CB = WB; CB <= dB; CB++)
+        for (let TB = yB; TB <= UB; TB++) {
+          const gB = TB + .5 - JB.x,
+            qB = CB + .5 - JB.y,
+            yB = (gB * GB.y - qB * GB.x) / NB,
+            UB = (oB.x * qB - oB.y * gB) / NB;
+          if (yB < -vB || yB > 1 + vB || UB < -vB || UB > 1 + vB) continue;
+          const WB = CB * ZB + TB;
+          IB[WB] = 1;
+          const dB = cB + Math.min(Math.max(yB, 0), 1) * (hB - cB),
+            QB = nB + Math.min(Math.max(UB, 0), 1) * (zB - nB),
+            sB = Math.min(kB.width - 1, Math.floor(dB * kB.width)),
+            wB = 4 * (Math.min(kB.height - 1, Math.floor(QB * kB.height)) * kB.width + sB),
+            OB = kB.pixels[wB + 3] / 255;
+          if (0 === OB) continue;
+          const YB = 4 * WB,
+            iB = BB[YB + 3] / 255 * (1 - OB),
+            pB = OB + iB;
+          for (let IB = 0; IB < 3; IB++) BB[YB + IB] = (kB.pixels[wB + IB] * FB * OB + BB[YB + IB] * iB) / pB;
+          BB[YB + 3] = 255 * pB
         }
     }
-    var UB = zB(36475);
-    const aB = new Map,
-      pB = new Map,
-      rB = new Map,
-      sB = new Map;
+    var cB = ZB(36422);
+    const nB = new Map,
+      hB = new Map,
+      zB = new Map,
+      FB = new Map;
 
-    function JB(BB, jB, zB) {
-      return `${jB}|${zB}|${BB}`
+    function NB(BB, IB, ZB) {
+      return `${IB}|${ZB}|${BB}`
     }
 
-    function mB(BB, jB, zB) {
-      let QB = BB.get(jB);
-      return void 0 === QB && (QB = zB().catch((zB => {
-        throw BB.delete(jB), zB
-      })), BB.set(jB, QB)), QB
+    function gB(BB, IB, ZB) {
+      let TB = BB.get(IB);
+      return void 0 === TB && (TB = ZB().catch((ZB => {
+        throw BB.delete(IB), ZB
+      })), BB.set(IB, TB)), TB
     }
 
-    function yB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return pB.get(JB(BB, jB, zB))
+    function qB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return hB.get(NB(BB, IB, ZB))
     }
 
-    function kB(BB, jB, zB, QB) {
-      const nB = JB(BB, jB, zB);
-      return mB(aB, nB, (async () => {
-        const dB = await LB(QB(BB), jB, zB);
-        return pB.set(nB, dB), dB
+    function yB(BB, IB, ZB, TB) {
+      const JB = NB(BB, IB, ZB);
+      return gB(nB, JB, (async () => {
+        const oB = await WB(TB(BB), IB, ZB);
+        return hB.set(JB, oB), oB
       }))
     }
 
-    function GB(BB, jB, zB, QB) {
-      return mB(rB, JB(BB, jB, zB), (async () => {
-        var nB;
-        const dB = QB(BB);
-        return null !== (nB = await (0, UB.c)(dB, jB, zB)) && void 0 !== nB ? nB : (await LB(dB, jB, zB)).toDataURL()
+    function UB(BB, IB, ZB, TB) {
+      return gB(zB, NB(BB, IB, ZB), (async () => {
+        var JB;
+        const oB = TB(BB);
+        return null !== (JB = await (0, cB.e)(oB, IB, ZB)) && void 0 !== JB ? JB : (await WB(oB, IB, ZB)).toDataURL()
       }))
     }
-    async function LB(BB, jB, zB) {
+    async function WB(BB, IB, ZB) {
       let {
-        top: NB,
-        left: UB,
-        right: aB,
-        itemType: pB
+        top: vB,
+        left: cB,
+        right: nB,
+        itemType: hB
       } = BB;
-      const [rB, sB, JB] = await Promise.all([gB(NB), gB(UB), gB(aB)]), mB = function(BB, jB, zB, nB) {
-        const dB = (0, QB.g)(zB, nB),
-          IB = dB * QB.c.across,
-          NB = dB * QB.c.down,
-          UB = dB * QB.c.up,
-          aB = Math.max(...jB.boxes.map((BB => BB[4]))),
-          pB = zB / 2,
-          rB = NB + (zB - NB - NB - aB * UB) / 2,
-          sB = (BB, jB, zB) => ({
-            x: pB + (BB - zB) * IB,
-            y: rB - NB + (BB + zB) * NB + (aB - jB) * UB
+      const [zB, FB, NB] = await Promise.all([dB(vB), dB(cB), dB(nB)]), gB = function(BB, IB, ZB, JB) {
+        const oB = (0, TB.j)(ZB, JB),
+          GB = oB * TB.d.across,
+          vB = oB * TB.d.down,
+          cB = oB * TB.d.up,
+          nB = Math.max(...IB.boxes.map((BB => BB[4]))),
+          hB = ZB / 2,
+          zB = vB + (ZB - vB - vB - nB * cB) / 2,
+          FB = (BB, IB, ZB) => ({
+            x: hB + (BB - ZB) * GB,
+            y: zB - vB + (BB + ZB) * vB + (nB - IB) * cB
           }),
-          JB = (BB, zB, QB, nB, dB, IB) => ({
+          NB = (BB, ZB, TB, JB, oB, GB) => ({
             origin: BB,
             across: {
-              x: zB.x - BB.x,
-              y: zB.y - BB.y
+              x: ZB.x - BB.x,
+              y: ZB.y - BB.y
             },
             down: {
-              x: QB.x - BB.x,
-              y: QB.y - BB.y
+              x: TB.x - BB.x,
+              y: TB.y - BB.y
             },
-            texture: nB,
-            rect: jB.cropFaces ? dB : [0, 0, 1, 1],
-            shade: IB
+            texture: JB,
+            rect: IB.cropFaces ? oB : [0, 0, 1, 1],
+            shade: GB
           }),
-          mB = new Uint8ClampedArray(zB * zB * 4),
-          yB = new Uint8Array(zB * zB),
-          kB = QB.f;
-        for (const [QB, GB, LB, gB, tB, SB] of jB.boxes) {
-          const jB = JB(sB(gB, tB, SB), sB(gB, tB, LB), sB(gB, GB, SB), BB.right, [1 - SB, 1 - tB, 1 - LB, 1 - GB], kB.right),
-            nB = JB(sB(QB, tB, SB), sB(gB, tB, SB), sB(QB, GB, SB), BB.left, [QB, 1 - tB, gB, 1 - GB], kB.left),
-            dB = JB(sB(QB, tB, LB), sB(gB, tB, LB), sB(QB, tB, SB), BB.top, [QB, LB, gB, SB], kB.top);
-          for (const BB of [jB, nB, dB]) uB(mB, yB, zB, BB)
+          gB = new Uint8ClampedArray(ZB * ZB * 4),
+          qB = new Uint8Array(ZB * ZB),
+          yB = TB.h;
+        for (const [TB, UB, WB, dB, CB, QB] of IB.boxes) {
+          const IB = NB(FB(dB, CB, QB), FB(dB, CB, WB), FB(dB, UB, QB), BB.right, [1 - QB, 1 - CB, 1 - WB, 1 - UB], yB.right),
+            JB = NB(FB(TB, CB, QB), FB(dB, CB, QB), FB(TB, UB, QB), BB.left, [TB, 1 - CB, dB, 1 - UB], yB.left),
+            oB = NB(FB(TB, CB, WB), FB(dB, CB, WB), FB(TB, CB, QB), BB.top, [TB, WB, dB, QB], yB.top);
+          for (const BB of [IB, JB, oB]) kB(gB, qB, ZB, BB)
         }
-        return (0, QB.j)(mB, zB, nB, (BB => 1 === yB[BB])), mB
+        return (0, TB.n)(gB, ZB, JB, (BB => 1 === qB[BB])), gB
       }({
-        top: rB,
-        left: sB,
-        right: JB
+        top: zB,
+        left: FB,
+        right: NB
       }, function(BB) {
-        return "SlabBlock" === BB ? dB : "StairsBlock" === BB ? IB : nB
-      }(pB), jB, zB), yB = document.createElement("canvas");
-      yB.width = jB, yB.height = jB;
-      const kB = yB.getContext("2d");
-      if (!kB) throw new Error("Failed to get 2D context");
-      return kB.putImageData(new ImageData(mB, jB, jB), 0, 0), yB
+        return "SlabBlock" === BB ? oB : "StairsBlock" === BB ? GB : JB
+      }(hB), IB, ZB), qB = document.createElement("canvas");
+      qB.width = IB, qB.height = IB;
+      const yB = qB.getContext("2d");
+      if (!yB) throw new Error("Failed to get 2D context");
+      return yB.putImageData(new ImageData(gB, IB, IB), 0, 0), qB
     }
 
-    function gB(BB) {
-      return mB(sB, BB, (async () => {
-        const jB = await (0, UB.g)(BB),
-          zB = document.createElement("canvas");
-        zB.width = jB.width, zB.height = jB.height;
-        const QB = zB.getContext("2d");
-        if (!QB) throw new Error("Failed to get 2D context");
-        return QB.drawImage(jB, 0, 0), {
-          width: jB.width,
-          height: jB.height,
-          pixels: QB.getImageData(0, 0, jB.width, jB.height).data
+    function dB(BB) {
+      return gB(FB, BB, (async () => {
+        const IB = await (0, cB.h)(BB),
+          ZB = document.createElement("canvas");
+        ZB.width = IB.width, ZB.height = IB.height;
+        const TB = ZB.getContext("2d");
+        if (!TB) throw new Error("Failed to get 2D context");
+        return TB.drawImage(IB, 0, 0), {
+          width: IB.width,
+          height: IB.height,
+          pixels: TB.getImageData(0, 0, IB.width, IB.height).data
         }
       }))
     }

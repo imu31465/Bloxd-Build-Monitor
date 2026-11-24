@@ -1,40 +1,40 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41164: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      ShaderPackCategory: () => FB
+  41099: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      ShaderPackCategory: () => MB
     });
-    var QB = zB(62),
-      nB = zB(1547),
-      dB = zB(1478),
-      IB = zB(1543),
-      NB = zB(1240),
-      uB = zB(106),
-      UB = zB(28),
-      aB = zB(1664),
-      pB = zB(6574),
-      rB = zB(348),
-      sB = zB(6601),
-      JB = zB(6598),
-      mB = zB(6606),
-      yB = zB(6515),
-      kB = zB(5078),
-      GB = zB(5110),
-      LB = zB(6572),
-      gB = zB(3577);
+    var TB = ZB(63),
+      JB = ZB(1591),
+      oB = ZB(1516),
+      GB = ZB(1579),
+      vB = ZB(1248),
+      kB = ZB(105),
+      cB = ZB(20),
+      nB = ZB(1711),
+      hB = ZB(6763),
+      zB = ZB(331),
+      FB = ZB(6800),
+      NB = ZB(6792),
+      gB = ZB(6808),
+      qB = ZB(6726),
+      yB = ZB(5143),
+      UB = ZB(5198),
+      WB = ZB(6760),
+      dB = ZB(3649);
 
-    function tB(BB, jB) {
-      const zB = (0, sB.storedPackOutcome)(BB, jB);
-      return "none" !== zB.kind || "noCompiler" === zB.reason
+    function CB(BB, IB) {
+      const ZB = (0, FB.storedPackOutcome)(BB, IB);
+      return "none" !== ZB.kind || "noCompiler" === ZB.reason
     }
-    var SB = zB(1091),
-      MB = zB.n(SB),
-      EB = zB(5115),
-      iB = zB(1108),
-      qB = zB(6567),
-      fB = zB(1148);
-    const oB = {
+    var QB = ZB(1091),
+      sB = ZB.n(QB),
+      wB = ZB(5204),
+      OB = ZB(1102),
+      YB = ZB(6758),
+      iB = ZB(1153);
+    const pB = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function HB(BB, jB) {
-      return "failedRecheck" === BB && jB.listing ? "shaderPack:statusFailedRecheckListed" : oB[BB]
+    function aB(BB, IB) {
+      return "failedRecheck" === BB && IB.listing ? "shaderPack:statusFailedRecheckListed" : pB[BB]
     }
 
-    function DB(BB) {
+    function HB(BB) {
       let {
-        stored: jB,
-        checking: zB,
-        webGpuUsable: QB,
-        changePending: nB,
-        compiler: dB,
-        t: IB
+        stored: IB,
+        checking: ZB,
+        webGpuUsable: TB,
+        changePending: JB,
+        compiler: oB,
+        t: GB
       } = BB;
-      const NB = function(BB, jB, zB, QB, nB) {
-          const dB = (0, sB.storedPackOutcome)(BB, nB);
-          return "none" === dB.kind ? "noCompiler" === dB.reason ? jB ? "checking" : "noCompiler" : "otherApiVersion" === dB.reason ? "wrongApiVersion" : "failed" : (0, gB.e)() ? "harnessBuild" : "blocked" === dB.kind ? (0, sB.shaderPackNeedsCheck)(BB, nB) ? jB ? "checking" : !1 === zB ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === zB ? "offNoWebGpu" : QB ? "readyAfterReload" : "ready"
-        }(jB, zB, QB, nB, dB),
-        uB = "failed" === NB || "failedRecheck" === NB,
-        UB = uB || "wrongApiVersion" === NB || "noCompiler" === NB,
-        aB = "ready" === NB || "readyAfterReload" === NB ? jB.validation.offInStrict : [];
-      return (0, fB.jsxs)(fB.Fragment, {
-        children: [(0, fB.jsxs)("div", {
-          className: MB()("ShaderPackStatus", {
-            Ready: "ready" === NB,
-            Failed: UB
+      const vB = function(BB, IB, ZB, TB, JB) {
+          const oB = (0, FB.storedPackOutcome)(BB, JB);
+          return "none" === oB.kind ? "noCompiler" === oB.reason ? IB ? "checking" : "noCompiler" : "otherApiVersion" === oB.reason ? "wrongApiVersion" : "failed" : (0, dB.e)() ? "harnessBuild" : "blocked" === oB.kind ? (0, FB.shaderPackNeedsCheck)(BB, JB) ? IB ? "checking" : !1 === ZB ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === ZB ? "offNoWebGpu" : TB ? "readyAfterReload" : "ready"
+        }(IB, ZB, TB, JB, oB),
+        kB = "failed" === vB || "failedRecheck" === vB,
+        cB = kB || "wrongApiVersion" === vB || "noCompiler" === vB,
+        nB = "ready" === vB || "readyAfterReload" === vB ? IB.validation.offInStrict : [];
+      return (0, iB.jsxs)(iB.Fragment, {
+        children: [(0, iB.jsxs)("div", {
+          className: sB()("ShaderPackStatus", {
+            Ready: "ready" === vB,
+            Failed: cB
           }),
-          children: ["ready" === NB && (0, fB.jsx)(iB.c, {
+          children: ["ready" === vB && (0, iB.jsx)(OB.d, {
             name: "circle-check"
-          }), UB && (0, fB.jsx)(iB.c, {
+          }), cB && (0, iB.jsx)(OB.d, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === NB ? (0, gB.d)() : IB(HB(NB, jB), {
-            packVersion: String(jB.manifest.apiVersion),
-            version: String(EB.d)
+          }), "harnessBuild" === vB ? (0, dB.d)() : GB(aB(vB, IB), {
+            packVersion: String(IB.manifest.apiVersion),
+            version: String(wB.b)
           })]
-        }), uB && (0, fB.jsx)(qB.e, {
-          diagnostics: jB.validation.errors,
-          more: jB.validation.moreErrors,
-          t: IB
-        }), aB.length > 0 && (0, fB.jsxs)(fB.Fragment, {
-          children: [(0, fB.jsxs)("div", {
+        }), kB && (0, iB.jsx)(YB.c, {
+          diagnostics: IB.validation.errors,
+          more: IB.validation.moreErrors,
+          t: GB
+        }), nB.length > 0 && (0, iB.jsxs)(iB.Fragment, {
+          children: [(0, iB.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, fB.jsx)(iB.c, {
+            children: [(0, iB.jsx)(OB.d, {
               name: "triangle-exclamation"
-            }), IB("shaderPack:offInStrict")]
-          }), (0, fB.jsx)(qB.e, {
-            diagnostics: aB,
-            t: IB
+            }), GB("shaderPack:offInStrict")]
+          }), (0, iB.jsx)(YB.c, {
+            diagnostics: nB,
+            t: GB
           })]
         })]
       })
     }
 
-    function FB(BB) {
+    function MB(BB) {
       let {
-        setApplySettingsCallback: jB
+        setApplySettingsCallback: IB
       } = BB;
       const {
-        t: zB
-      } = (0, NB.D)(), [nB, IB] = (0, QB.useState)(null), [UB, aB] = (0, QB.useState)(null), [gB, SB] = (0, QB.useState)(null), [MB] = (0, QB.useState)(rB.l), [EB, iB] = (0, QB.useState)(!0), [qB, oB] = (0, QB.useState)(!1), {
-        loading: HB,
-        error: FB,
-        setError: VB,
-        onFiles: hB
-      } = (0, LB.e)((async BB => {
-        const jB = await (0, pB.loadPageShaderPackCompiler)();
-        if (!jB) return void VB(zB("shaderPack:compilerUnavailable"));
-        aB(jB);
-        const QB = (0, sB.toStoredShaderPack)(BB, await (0, JB.f)(jB, BB.files));
-        await (0, sB.saveShaderPack)(QB, jB) ? (IB(QB), XB(nB, QB, jB)) : VB(zB("shaderPack:saveFailed"))
+        t: ZB
+      } = (0, vB.G)(), [JB, GB] = (0, TB.useState)(null), [cB, nB] = (0, TB.useState)(null), [dB, QB] = (0, TB.useState)(null), [sB] = (0, TB.useState)(zB.l), [wB, OB] = (0, TB.useState)(!0), [YB, pB] = (0, TB.useState)(!1), {
+        loading: aB,
+        error: MB,
+        setError: PB,
+        onFiles: RB
+      } = (0, WB.e)((async BB => {
+        const IB = await (0, hB.loadPageShaderPackCompiler)();
+        if (!IB) return void PB(ZB("shaderPack:compilerUnavailable"));
+        nB(IB);
+        const TB = (0, FB.toStoredShaderPack)(BB, await (0, NB.h)(IB, BB.files));
+        await (0, FB.saveShaderPack)(TB, IB) ? (GB(TB), rB(JB, TB, IB)) : PB(ZB("shaderPack:saveFailed"))
       }));
 
-      function XB(BB, zB, QB) {
-        (function(BB, jB, zB, QB) {
-          return zB || tB(BB, QB) || tB(jB, QB)
-        })(BB, zB, (0, sB.isShaderPackChangePending)(), QB) && ((0, sB.markShaderPackChangePending)(), jB((() => kB.i)))
+      function rB(BB, ZB, TB) {
+        (function(BB, IB, ZB, TB) {
+          return ZB || CB(BB, TB) || CB(IB, TB)
+        })(BB, ZB, (0, FB.isShaderPackChangePending)(), TB) && ((0, FB.markShaderPackChangePending)(), IB((() => yB.m)))
       }
-      return (0, QB.useEffect)((() => {
+      return (0, TB.useEffect)((() => {
         let BB = !1;
         return async function() {
-          const jB = (0, uB.hasUsableWebGpuAdapter)(),
-            zB = await (0, mB.h)();
+          const IB = (0, kB.hasUsableWebGpuAdapter)(),
+            ZB = await (0, gB.i)();
           if (BB) return;
-          IB(zB), oB(!0), iB(!1);
-          const QB = null !== zB ? (0, pB.loadPageShaderPackCompiler)() : null,
-            nB = await jB;
+          GB(ZB), pB(!0), OB(!1);
+          const TB = null !== ZB ? (0, hB.loadPageShaderPackCompiler)() : null,
+            JB = await IB;
           if (BB) return;
-          SB(nB);
-          const dB = await QB;
-          if (!BB && (aB(dB), null !== zB && nB && null !== dB && (0, sB.shaderPackNeedsCheck)(zB, dB))) {
-            const jB = await (0, JB.c)(zB, dB);
-            BB || IB((BB => BB === zB ? jB : BB))
+          QB(JB);
+          const oB = await TB;
+          if (!BB && (nB(oB), null !== ZB && JB && null !== oB && (0, FB.shaderPackNeedsCheck)(ZB, oB))) {
+            const IB = await (0, NB.d)(ZB, oB);
+            BB || GB((BB => BB === ZB ? IB : BB))
           }
-        }().catch((jB => {
-          console.error("Failed to load the stored shader pack", jB), BB || VB(zB("shaderPack:unexpectedError"))
+        }().catch((IB => {
+          console.error("Failed to load the stored shader pack", IB), BB || PB(ZB("shaderPack:unexpectedError"))
         })).finally((() => {
-          BB || (iB(!1), oB(!1))
+          BB || (OB(!1), pB(!1))
         })), () => {
           BB = !0
         }
-      }), []), (0, fB.jsxs)("div", {
+      }), []), (0, iB.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, fB.jsx)("div", {
+        children: [(0, iB.jsx)("div", {
           className: "ShaderPackIntro",
-          children: zB("shaderPack:intro")
-        }), (0, fB.jsx)(YB, {
-          to: yB.R,
+          children: ZB("shaderPack:intro")
+        }), (0, iB.jsx)(jB, {
+          to: qB.S,
           className: "ShaderPackBrowseLink",
-          children: (0, fB.jsx)(dB.m, {
+          children: (0, iB.jsx)(oB.p, {
             className: "ShaderPackBrowseButton",
-            children: zB("shaderPackListing:browse")
+            children: ZB("shaderPackListing:browse")
           })
-        }), !1 === gB && (0, fB.jsx)("div", {
+        }), !1 === dB && (0, iB.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: zB(MB ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== FB && (0, fB.jsxs)("div", {
+          children: ZB(sB ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== MB && (0, iB.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [zB("general:error"), ": ", FB]
-        }), nB && (0, fB.jsxs)("div", {
+          children: [ZB("general:error"), ": ", MB]
+        }), JB && (0, iB.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, fB.jsxs)("div", {
+          children: [(0, iB.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, fB.jsxs)("div", {
-              children: [(0, fB.jsx)("div", {
+            children: [(0, iB.jsxs)("div", {
+              children: [(0, iB.jsx)("div", {
                 className: "ShaderPackName",
-                children: nB.manifest.name
-              }), nB.manifest.author && (0, fB.jsx)("div", {
+                children: JB.manifest.name
+              }), JB.manifest.author && (0, iB.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, GB.h)(zB, "shaderPack:byAuthor", {
-                  author: nB.manifest.author
+                children: (0, UB.h)(ZB, "shaderPack:byAuthor", {
+                  author: JB.manifest.author
                 })
-              }), nB.manifest.description && (0, fB.jsx)("div", {
+              }), JB.manifest.description && (0, iB.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: nB.manifest.description
-              }), nB.listing && (0, fB.jsx)("div", {
+                children: JB.manifest.description
+              }), JB.listing && (0, iB.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, fB.jsx)(YB, {
-                  to: (0, yB.W)(nB.listing.packId),
+                children: (0, iB.jsx)(jB, {
+                  to: (0, qB.X)(JB.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: zB("shaderPackListing:openPackPage")
+                  children: ZB("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, fB.jsx)(dB.J, {
-              disabled: EB || HB,
+            }), (0, iB.jsx)(oB.N, {
+              disabled: wB || aB,
               onClick: async function() {
-                iB(!0), VB(null), await (0, sB.removeShaderPack)(), IB(null), iB(!1), XB(nB, null, UB)
+                OB(!0), PB(null), await (0, FB.removeShaderPack)(), GB(null), OB(!1), rB(JB, null, cB)
               },
-              children: zB("shaderPack:removePack")
+              children: ZB("shaderPack:removePack")
             })]
-          }), (0, fB.jsx)(DB, {
-            stored: nB,
-            checking: qB,
-            webGpuUsable: gB,
-            changePending: (0, sB.isShaderPackChangePending)(),
-            compiler: UB,
-            t: zB
+          }), (0, iB.jsx)(HB, {
+            stored: JB,
+            checking: YB,
+            webGpuUsable: dB,
+            changePending: (0, FB.isShaderPackChangePending)(),
+            compiler: cB,
+            t: ZB
           })]
-        }), (0, fB.jsx)(LB.d, {
-          busy: EB || HB || qB,
-          disabled: EB || HB || qB || !0 !== gB,
-          onFiles: hB
+        }), (0, iB.jsx)(WB.b, {
+          busy: wB || aB || YB,
+          disabled: wB || aB || YB || !0 !== dB,
+          onFiles: RB
         })]
       })
     }
 
-    function YB(BB) {
+    function jB(BB) {
       let {
-        to: jB,
-        className: zB,
-        children: QB
+        to: IB,
+        className: ZB,
+        children: TB
       } = BB;
       const {
-        gameState: dB
-      } = (0, UB.m)(["gameState"]), {
-        pathname: NB,
-        search: uB
-      } = (0, nB.n)(), pB = "landingPage" !== dB && "studio" !== dB;
-      return (0, fB.jsx)(IB.LinkPreserveSearch, {
-        to: jB,
-        className: zB,
-        target: pB ? "_blank" : void 0,
+        gameState: oB
+      } = (0, cB.o)(["gameState"]), {
+        pathname: vB,
+        search: kB
+      } = (0, JB.r)(), hB = "landingPage" !== oB && "studio" !== oB;
+      return (0, iB.jsx)(GB.LinkPreserveSearch, {
+        to: IB,
+        className: ZB,
+        target: hB ? "_blank" : void 0,
         onClick: () => {
-          pB || ((0, yB.H)(`${NB}${uB}`), (0, aB.c)())
+          hB || ((0, qB.I)(`${vB}${kB}`), (0, nB.d)())
         },
-        children: QB
+        children: TB
       })
     }
   },
-  6515: (BB, jB, zB) => {
-    zB.d(jB, {
-      A: () => JB,
-      B: () => kB,
-      D: () => fB,
-      H: () => aB,
-      J: () => HB,
-      L: () => mB,
-      N: () => AB,
-      Q: () => XB,
-      R: () => IB,
-      S: () => ZB,
-      W: () => uB,
-      X: () => NB,
-      Z: () => VB,
-      ab: () => hB,
-      e: () => GB,
-      eb: () => LB,
-      gb: () => oB,
-      i: () => iB,
-      j: () => yB,
-      m: () => rB,
-      p: () => pB,
-      s: () => DB,
-      u: () => sB,
-      v: () => FB,
-      z: () => TB
+  6726: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      B: () => yB,
+      F: () => iB,
+      I: () => nB,
+      J: () => aB,
+      K: () => gB,
+      O: () => XB,
+      R: () => rB,
+      S: () => GB,
+      T: () => mB,
+      X: () => kB,
+      Y: () => vB,
+      ab: () => PB,
+      e: () => UB,
+      eb: () => RB,
+      hb: () => WB,
+      i: () => OB,
+      kb: () => pB,
+      l: () => qB,
+      m: () => zB,
+      p: () => hB,
+      q: () => HB,
+      r: () => FB,
+      u: () => MB,
+      x: () => LB,
+      y: () => NB
     });
-    var QB = zB(6523),
-      nB = zB(174),
-      dB = zB(4673);
-    const IB = "/shader-packs",
-      NB = `${IB}/publish`;
+    var TB = ZB(6731),
+      JB = ZB(168),
+      oB = ZB(4750);
+    const GB = "/shader-packs",
+      vB = `${GB}/publish`;
 
-    function uB(BB) {
-      return `${IB}/${encodeURIComponent(BB)}`
+    function kB(BB) {
+      return `${GB}/${encodeURIComponent(BB)}`
     }
-    let UB = null;
+    let cB = null;
 
-    function aB(BB) {
-      UB = BB
-    }
-
-    function pB() {
-      return UB
+    function nB(BB) {
+      cB = BB
     }
 
-    function rB() {
-      UB = null
+    function hB() {
+      return cB
     }
 
-    function sB(BB) {
+    function zB() {
+      cB = null
+    }
+
+    function FB(BB) {
       return BB.playerHasRank("developer") || BB.playerHasRank("admin")
     }
-    const JB = ["terrain", "water", "models", "sunShadows", "strict"],
-      mB = {
+    const NB = ["terrain", "water", "models", "sunShadows", "strict"],
+      gB = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function yB(BB, jB) {
-      return BB.withFeatures.includes(jB) ? "with" : BB.withoutFeatures.includes(jB) ? "without" : null
+    function qB(BB, IB) {
+      return BB.withFeatures.includes(IB) ? "with" : BB.withoutFeatures.includes(IB) ? "without" : null
     }
 
-    function kB(BB) {
+    function yB(BB) {
       return null === BB ? "with" : "with" === BB ? "without" : null
     }
 
-    function GB(BB) {
+    function UB(BB) {
       return "with" === BB ? "only" : null === BB ? "include" : void 0
     }
 
-    function LB(BB, jB) {
-      const zB = yB(BB, jB),
-        QB = BB => BB.filter((BB => BB !== jB));
+    function WB(BB, IB) {
+      const ZB = qB(BB, IB),
+        TB = BB => BB.filter((BB => BB !== IB));
       return {
-        withFeatures: null === zB ? [...BB.withFeatures, jB] : QB(BB.withFeatures),
-        withoutFeatures: "with" === zB ? [...BB.withoutFeatures, jB] : QB(BB.withoutFeatures)
+        withFeatures: null === ZB ? [...BB.withFeatures, IB] : TB(BB.withFeatures),
+        withoutFeatures: "with" === ZB ? [...BB.withoutFeatures, IB] : TB(BB.withoutFeatures)
       }
     }
-    const gB = "section",
-      tB = "sort",
-      SB = "filters",
-      MB = "q",
-      EB = "banned",
-      iB = "popular",
-      qB = "strict";
+    const dB = "section",
+      CB = "sort",
+      QB = "filters",
+      sB = "q",
+      wB = "banned",
+      OB = "popular",
+      YB = "strict";
 
-    function fB(BB) {
-      var jB, zB, nB;
-      const IB = BB.get(gB),
-        NB = (null !== (jB = BB.get(SB)) && void 0 !== jB ? jB : qB).split(","),
-        uB = BB.get(EB);
+    function iB(BB) {
+      var IB, ZB, JB;
+      const GB = BB.get(dB),
+        vB = (null !== (IB = BB.get(QB)) && void 0 !== IB ? IB : YB).split(","),
+        kB = BB.get(wB);
       return {
-        section: "favourites" === IB || "mine" === IB ? IB : "explore",
-        sort: null !== (zB = QB.y.find((jB => jB === BB.get(tB)))) && void 0 !== zB ? zB : iB,
-        withFeatures: JB.filter((BB => NB.includes(BB) && !NB.includes(`-${BB}`))),
-        withoutFeatures: JB.filter((BB => NB.includes(`-${BB}`))),
-        searchQuery: (null === (nB = BB.get(MB)) || void 0 === nB ? void 0 : nB.slice(0, QB.O)) || null,
-        pageNumber: (0, dB.d)(BB.get(dB.c)),
-        banned: "only" === uB ? "with" : "include" === uB ? null : "without"
+        section: "favourites" === GB || "mine" === GB ? GB : "explore",
+        sort: null !== (ZB = TB.y.find((IB => IB === BB.get(CB)))) && void 0 !== ZB ? ZB : OB,
+        withFeatures: NB.filter((BB => vB.includes(BB) && !vB.includes(`-${BB}`))),
+        withoutFeatures: NB.filter((BB => vB.includes(`-${BB}`))),
+        searchQuery: (null === (JB = BB.get(sB)) || void 0 === JB ? void 0 : JB.slice(0, TB.K)) || null,
+        pageNumber: (0, oB.e)(BB.get(oB.b)),
+        banned: "only" === kB ? "with" : "include" === kB ? null : "without"
       }
     }
 
-    function oB(BB, jB) {
-      var zB;
-      const QB = YB(jB);
-      (0, dB.f)(BB, gB, "explore" === jB.section ? null : jB.section), (0, dB.f)(BB, tB, jB.sort === iB ? null : jB.sort), (0, dB.f)(BB, SB, QB === qB ? null : QB), (0, dB.f)(BB, MB, jB.searchQuery), (0, dB.f)(BB, EB, null !== (zB = GB(jB.banned)) && void 0 !== zB ? zB : null), (0, dB.i)(BB, jB.pageNumber)
+    function pB(BB, IB) {
+      var ZB;
+      const TB = jB(IB);
+      (0, oB.i)(BB, dB, "explore" === IB.section ? null : IB.section), (0, oB.i)(BB, CB, IB.sort === OB ? null : IB.sort), (0, oB.i)(BB, QB, TB === YB ? null : TB), (0, oB.i)(BB, sB, IB.searchQuery), (0, oB.i)(BB, wB, null !== (ZB = UB(IB.banned)) && void 0 !== ZB ? ZB : null), (0, oB.m)(BB, IB.pageNumber)
     }
 
-    function HB(BB) {
-      const jB = new URLSearchParams;
-      return oB(jB, {
+    function aB(BB) {
+      const IB = new URLSearchParams;
+      return pB(IB, {
         section: "explore",
-        sort: iB,
+        sort: OB,
         withFeatures: "strict" === BB ? [BB] : [BB, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${IB}?${jB.toString()}`
+      }), `${GB}?${IB.toString()}`
     }
 
-    function DB(BB) {
-      return YB(BB) === qB
+    function HB(BB) {
+      return jB(BB) === YB
     }
 
-    function FB(BB) {
-      return null !== BB.searchQuery || "with" === BB.banned || YB(BB) !== qB
+    function MB(BB) {
+      return null !== BB.searchQuery || "with" === BB.banned || jB(BB) !== YB
     }
 
-    function YB(BB) {
-      return JB.flatMap((jB => {
-        const zB = yB(BB, jB);
-        return "with" === zB ? [jB] : "without" === zB ? [`-${jB}`] : []
+    function jB(BB) {
+      return NB.flatMap((IB => {
+        const ZB = qB(BB, IB);
+        return "with" === ZB ? [IB] : "without" === ZB ? [`-${IB}`] : []
       })).join(",")
     }
-    const VB = {
+    const PB = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      hB = {
+      RB = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,79 +387,79 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function XB(BB) {
+    function rB(BB) {
       return Math.round(100 * Math.max(0, 1 - 1 / BB))
     }
 
-    function ZB(BB, jB, zB, nB) {
-      const dB = [];
-      BB.isBanned && dB.push({
+    function mB(BB, IB, ZB, JB) {
+      const oB = [];
+      BB.isBanned && oB.push({
         tone: "warning",
-        text: nB("shaderPackListing:ownerBanned"),
+        text: JB("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: IB
+        pending: GB
       } = BB;
-      if (null === BB.brokenError || IB && !IB.error || dB.push({
+      if (null === BB.brokenError || GB && !GB.error || oB.push({
           tone: "warning",
-          text: nB("shaderPackListing:ownerBroken"),
+          text: JB("shaderPackListing:ownerBroken"),
           detail: BB.brokenError
-        }), null !== IB && void 0 !== IB && IB.error) dB.push({
+        }), null !== GB && void 0 !== GB && GB.error) oB.push({
         tone: "warning",
-        text: nB(jB ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, QB.m)(IB.error) ? null : IB.error
+        text: JB(IB ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, TB.j)(GB.error) ? null : GB.error
       });
-      else if (IB) {
-        const BB = null === IB.renderNotBefore ? 0 : IB.renderNotBefore - zB,
-          QB = String(Math.ceil(BB / 6e4)),
-          NB = nB(jB ? BB > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : BB > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: QB
+      else if (GB) {
+        const BB = null === GB.renderNotBefore ? 0 : GB.renderNotBefore - ZB,
+          TB = String(Math.ceil(BB / 6e4)),
+          vB = JB(IB ? BB > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : BB > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: TB
           });
-        dB.push({
+        oB.push({
           tone: "info",
-          text: NB,
+          text: vB,
           detail: null
         })
       }
-      return BB.listed || dB.push({
+      return BB.listed || oB.push({
         tone: "info",
-        text: nB("shaderPackListing:ownerUnlisted"),
+        text: JB("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), dB
+      }), oB
     }
 
-    function AB(BB) {
+    function XB(BB) {
       return Math.max(1, Math.round(BB / 1024))
     }
 
-    function TB(BB, jB, zB) {
-      return BB instanceof nB.c && BB.errorMessageForUser ? BB.errorMessageForUser : jB(zB)
+    function LB(BB, IB, ZB) {
+      return BB instanceof JB.d && BB.errorMessageForUser ? BB.errorMessageForUser : IB(ZB)
     }
   },
-  6523: (BB, jB, zB) => {
-    zB.d(jB, {
-      B: () => NB,
-      D: () => IB,
-      H: () => QB,
-      L: () => rB,
-      O: () => aB,
-      P: () => gB,
-      T: () => pB,
-      U: () => UB,
-      d: () => JB,
-      f: () => yB,
-      h: () => mB,
-      l: () => sB,
-      m: () => LB,
-      n: () => SB,
-      o: () => uB,
-      s: () => nB,
-      u: () => tB,
-      y: () => dB
+  6731: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => vB,
+      B: () => GB,
+      F: () => TB,
+      G: () => zB,
+      K: () => nB,
+      O: () => dB,
+      P: () => hB,
+      R: () => cB,
+      d: () => NB,
+      f: () => qB,
+      h: () => gB,
+      i: () => FB,
+      j: () => WB,
+      n: () => QB,
+      o: () => kB,
+      r: () => JB,
+      u: () => CB,
+      y: () => oB
     });
-    const QB = ["forest", "desert", "water", "night", "cave"];
-    const nB = {
+    const TB = ["forest", "desert", "water", "night", "cave"];
+    const JB = {
         full: {
           width: 3840,
           height: 2160
@@ -473,47 +473,47 @@ export const modules = {
           height: 360
         }
       },
-      dB = ["popular", "updated", "newest"],
-      IB = 3,
-      NB = 32,
-      uB = 300;
+      oB = ["popular", "updated", "newest"],
+      GB = 3,
+      vB = 32,
+      kB = 300;
 
-    function UB(BB, jB) {
-      return BB.slice(0, jB).replace(/[\uD800-\uDBFF]$/, "")
+    function cB(BB, IB) {
+      return BB.slice(0, IB).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const aB = 64,
-      pB = 512,
-      rB = 18e5;
+    const nB = 64,
+      hB = 512,
+      zB = 18e5;
 
-    function sB(BB) {
-      const jB = BB,
-        zB = null === jB || void 0 === jB ? void 0 : jB.files;
-      return "number" === typeof(null === jB || void 0 === jB ? void 0 : jB.apiVersion) && "string" === typeof jB.name && (null === jB.author || "string" === typeof jB.author) && (void 0 === jB.keepCircleShadows || "boolean" === typeof jB.keepCircleShadows) && "object" === typeof zB && null !== zB && Object.values(zB).every((BB => "string" === typeof BB))
+    function FB(BB) {
+      const IB = BB,
+        ZB = null === IB || void 0 === IB ? void 0 : IB.files;
+      return "number" === typeof(null === IB || void 0 === IB ? void 0 : IB.apiVersion) && "string" === typeof IB.name && (null === IB.author || "string" === typeof IB.author) && (void 0 === IB.keepCircleShadows || "boolean" === typeof IB.keepCircleShadows) && "object" === typeof ZB && null !== ZB && Object.values(ZB).every((BB => "string" === typeof BB))
     }
-    const JB = "Bloxdhub",
-      mB = "https://bloxdhub.com/shaders";
+    const NB = "Bloxdhub",
+      gB = "https://bloxdhub.com/shaders";
 
-    function yB(BB) {
+    function qB(BB) {
       return `https://bloxdhub.com/workshop/${encodeURIComponent(BB)}`
     }
-    const kB = "Screenshot generation failed.",
-      GB = "Its screenshots couldn't be generated:";
+    const yB = "Screenshot generation failed.",
+      UB = "Its screenshots couldn't be generated:";
 
-    function LB(BB) {
-      var jB;
-      return BB === kB || null !== (jB = null === BB || void 0 === BB ? void 0 : BB.startsWith(GB)) && void 0 !== jB && jB
+    function WB(BB) {
+      var IB;
+      return BB === yB || null !== (IB = null === BB || void 0 === BB ? void 0 : BB.startsWith(UB)) && void 0 !== IB && IB
     }
 
-    function gB(BB, jB) {
-      return `shaderPacks/${BB}/${jB}.json`
+    function dB(BB, IB) {
+      return `shaderPacks/${BB}/${IB}.json`
     }
 
-    function tB(BB, jB, zB, QB) {
-      return null === jB.renderId ? SB(BB, jB.baselineVersion, zB, QB) : `${BB}/${function(BB,jB,zB,QB){return`shaderPacks/${BB}/${jB}/${zB}-${QB}.webp`}(jB.packId,jB.renderId,zB,QB)}`
+    function CB(BB, IB, ZB, TB) {
+      return null === IB.renderId ? QB(BB, IB.baselineVersion, ZB, TB) : `${BB}/${function(BB,IB,ZB,TB){return`shaderPacks/${BB}/${IB}/${ZB}-${TB}.webp`}(IB.packId,IB.renderId,ZB,TB)}`
     }
 
-    function SB(BB, jB, zB, QB) {
-      return `${BB}/${function(BB,jB,zB){return`shaderPacks/baseline/${BB}/${jB}-${zB}.webp`}(jB,zB,QB)}`
+    function QB(BB, IB, ZB, TB) {
+      return `${BB}/${function(BB,IB,ZB){return`shaderPacks/baseline/${BB}/${IB}-${ZB}.webp`}(IB,ZB,TB)}`
     }
   }
 };

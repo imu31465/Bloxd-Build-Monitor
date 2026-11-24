@@ -1,14 +1,14 @@
 export const id = 357;
 export const ids = [357];
 export const modules = {
-  61427: (BB, jB, zB) => {
-    var QB;
-    zB.r(jB), zB.d(jB, {
-        ShaderLanguage: () => QB
+  61309: (BB, IB, ZB) => {
+    var TB;
+    ZB.r(IB), ZB.d(IB, {
+        ShaderLanguage: () => TB
       }),
       function(BB) {
         BB[BB.GLSL = 0] = "GLSL", BB[BB.WGSL = 1] = "WGSL"
-      }(QB || (QB = {}))
+      }(TB || (TB = {}))
   }
 };
 Object.freeze(modules);

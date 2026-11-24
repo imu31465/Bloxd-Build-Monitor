@@ -1,17 +1,17 @@
 export const id = 376;
 export const ids = [376];
 export const modules = {
-  61603: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      passPixelShader: () => IB
+  61482: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      passPixelShader: () => GB
     });
-    var QB = zB(39932);
-    const nB = "passPixelShader",
-      dB = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
-    QB.e.ShadersStore[nB] || (QB.e.ShadersStore[nB] = dB);
-    const IB = {
-      name: nB,
-      shader: dB
+    var TB = ZB(39905);
+    const JB = "passPixelShader",
+      oB = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
+    TB.c.ShadersStore[JB] || (TB.c.ShadersStore[JB] = oB);
+    const GB = {
+      name: JB,
+      shader: oB
     }
   }
 };

@@ -1,11 +1,11 @@
 export const id = 21;
 export const ids = [21];
 export const modules = {
-  39537: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => dB
+  39515: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => oB
     });
-    const QB = {
+    const TB = {
       Maverick: "Portal Config",
       "Bling Bling": "Bank",
       Fred: "Farmer",
@@ -14,41 +14,41 @@ export const modules = {
       Gill: "Farmer's Guild",
       Wren: "Travelling Trader"
     };
-    const nB = 6400;
-    const dB = function(BB, jB, zB, dB) {
-      let IB, {
-          localPlayerId: NB
-        } = dB,
-        uB = [];
+    const JB = 6400;
+    const oB = function(BB, IB, ZB, oB) {
+      let GB, {
+          localPlayerId: vB
+        } = oB,
+        kB = [];
       return {
         onCreate: BB => {
-          IB = BB
+          GB = BB
         },
-        onReceivedMessageFromServer: (BB, jB) => {
-          "oneBlockNextBlocks" === BB && (uB = jB.blocks.map((BB => IB.blockNameToBlockId(BB))))
+        onReceivedMessageFromServer: (BB, IB) => {
+          "oneBlockNextBlocks" === BB && (kB = IB.blocks.map((BB => GB.blockNameToBlockId(BB))))
         },
-        vp: () => {
-          if (0 === uB.length) return;
-          const BB = IB.getPositionView(NB),
-            jB = function(BB, jB) {
-              const zB = Math.ceil((BB - 3200) / nB);
-              if (zB !== Math.ceil((jB - 3200) / nB) || zB <= 0) return null;
-              const QB = zB * nB + 6;
-              return [QB, 10, QB]
+        Iz: () => {
+          if (0 === kB.length) return;
+          const BB = GB.getPositionView(vB),
+            IB = function(BB, IB) {
+              const ZB = Math.ceil((BB - 3200) / JB);
+              if (ZB !== Math.ceil((IB - 3200) / JB) || ZB <= 0) return null;
+              const TB = ZB * JB + 6;
+              return [TB, 10, TB]
             }(BB[0], BB[2]);
-          if (!jB) return;
-          const [zB, QB, dB] = jB;
-          if (IB.isBlockInLoadedChunk(zB, QB, dB) && 0 === IB.getBlockId(zB, QB, dB)) {
-            const BB = uB.shift();
-            IB.setBlockId(zB, QB, dB, BB)
+          if (!IB) return;
+          const [ZB, TB, oB] = IB;
+          if (GB.isBlockInLoadedChunk(ZB, TB, oB) && 0 === GB.getBlockId(ZB, TB, oB)) {
+            const BB = kB.shift();
+            GB.setBlockId(ZB, TB, oB, BB)
           }
         },
-        onPlayerAltAction: (BB, jB, zB, nB, dB, NB) => {
-          ! function(BB, jB, zB, nB) {
-            if (!zB || "Mesh" !== BB.getEntityType(zB)) return !1;
-            const dB = QB[BB.getEntityName(zB)];
-            !!dB && BB.openShop(jB, nB, dB)
-          }(IB, BB, NB, !1)
+        onPlayerAltAction: (BB, IB, ZB, JB, oB, vB) => {
+          ! function(BB, IB, ZB, JB) {
+            if (!ZB || "Mesh" !== BB.getEntityType(ZB)) return !1;
+            const oB = TB[BB.getEntityName(ZB)];
+            !!oB && BB.openShop(IB, JB, oB)
+          }(GB, BB, vB, !1)
         }
       }
     }

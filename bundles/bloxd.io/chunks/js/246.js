@@ -1,15 +1,15 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  37902: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => pB,
-      d: () => IB
+  37855: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => hB,
+      h: () => GB
     });
-    var QB = zB(9283),
-      nB = zB(9266),
-      dB = zB(376);
-    const IB = {
+    var TB = ZB(9316),
+      JB = ZB(9296),
+      oB = ZB(360);
+    const GB = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...NB("White"),
-      ...NB("Orange"),
-      ...NB("Magenta"),
-      ...NB("Light Blue"),
-      ...NB("Yellow"),
-      ...NB("Lime"),
-      ...NB("Pink"),
-      ...NB("Gray"),
-      ...NB("Light Gray"),
-      ...NB("Cyan"),
-      ...NB("Purple"),
-      ...NB("Blue"),
-      ...NB("Brown"),
-      ...NB("Green"),
-      ...NB("Red"),
-      ...NB("Black"),
-      ...NB("Draugr"),
-      ...NB("Skull"),
-      ...NB("Rainbow"),
-      ...uB("Sheep"),
-      ...uB("Cow"),
-      ...uB("Pig"),
-      ...uB("Horse"),
-      ...uB("Camel"),
-      ...uB("Wolf"),
-      ...uB("Deer"),
-      ...uB("Wildcat"),
-      ...UB("Radar"),
-      ...UB("Inactive Radar"),
-      ...UB("Active Radar"),
-      ...aB("Magenta"),
-      ...aB("Light Gray"),
-      ...aB("Red"),
-      ...aB("White"),
-      ...aB("Orange"),
-      ...aB("Light Blue"),
-      ...aB("Yellow"),
-      ...aB("Lime"),
-      ...aB("Pink"),
-      ...aB("Gray"),
-      ...aB("Cyan"),
-      ...aB("Purple"),
-      ...aB("Blue"),
-      ...aB("Brown"),
-      ...aB("Green"),
-      ...aB("Black"),
+      ...vB("White"),
+      ...vB("Orange"),
+      ...vB("Magenta"),
+      ...vB("Light Blue"),
+      ...vB("Yellow"),
+      ...vB("Lime"),
+      ...vB("Pink"),
+      ...vB("Gray"),
+      ...vB("Light Gray"),
+      ...vB("Cyan"),
+      ...vB("Purple"),
+      ...vB("Blue"),
+      ...vB("Brown"),
+      ...vB("Green"),
+      ...vB("Red"),
+      ...vB("Black"),
+      ...vB("Draugr"),
+      ...vB("Skull"),
+      ...vB("Rainbow"),
+      ...kB("Sheep"),
+      ...kB("Cow"),
+      ...kB("Pig"),
+      ...kB("Horse"),
+      ...kB("Camel"),
+      ...kB("Wolf"),
+      ...kB("Deer"),
+      ...kB("Wildcat"),
+      ...cB("Radar"),
+      ...cB("Inactive Radar"),
+      ...cB("Active Radar"),
+      ...nB("Magenta"),
+      ...nB("Light Gray"),
+      ...nB("Red"),
+      ...nB("White"),
+      ...nB("Orange"),
+      ...nB("Light Blue"),
+      ...nB("Yellow"),
+      ...nB("Lime"),
+      ...nB("Pink"),
+      ...nB("Gray"),
+      ...nB("Cyan"),
+      ...nB("Purple"),
+      ...nB("Blue"),
+      ...nB("Brown"),
+      ...nB("Green"),
+      ...nB("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3242,53 +3242,53 @@ export const modules = {
               z: 0
             })
           },
-          jB = {};
-        for (let zB = 1; zB <= 4; zB++) {
-          const nB = 1 === zB ? "" : `|meta|rot${zB}`;
-          jB[`${QB.b[0].block}${nB}`] = {
-            positions: QB.b.map((jB => {
+          IB = {};
+        for (let ZB = 1; ZB <= 4; ZB++) {
+          const JB = 1 === ZB ? "" : `|meta|rot${ZB}`;
+          IB[`${TB.e[0].block}${JB}`] = {
+            positions: TB.e.map((IB => {
               let {
-                block: QB,
-                y: dB,
-                z: IB
-              } = jB;
+                block: TB,
+                y: oB,
+                z: GB
+              } = IB;
               return {
-                block: `${QB}${nB}`,
-                y: dB,
-                ...BB[zB](IB)
+                block: `${TB}${JB}`,
+                y: oB,
+                ...BB[ZB](GB)
               }
             }))
           }
         }
-        return jB
+        return IB
       }(),
       ... function() {
         const BB = {};
-        for (let jB = 1; jB <= QB.m; jB++) {
-          const zB = (0, QB.nc)(jB),
-            nB = QB.q[jB - 1],
-            dB = [{
-              block: zB,
+        for (let IB = 1; IB <= TB.o; IB++) {
+          const ZB = (0, TB.cc)(IB),
+            JB = TB.p[IB - 1],
+            oB = [{
+              block: ZB,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const BB of QB.i)
-            for (let jB = 1; jB <= nB; jB++) {
-              if ("southwest" === BB && 1 === jB) continue;
+          for (const BB of TB.i)
+            for (let IB = 1; IB <= JB; IB++) {
+              if ("southwest" === BB && 1 === IB) continue;
               const {
-                x: zB,
-                z: nB
-              } = QB.j[BB];
-              dB.push({
-                block: (0, QB.kc)(BB, jB),
-                x: zB,
-                y: jB - 1,
-                z: nB
+                x: ZB,
+                z: JB
+              } = TB.k[BB];
+              oB.push({
+                block: (0, TB._b)(BB, IB),
+                x: ZB,
+                y: IB - 1,
+                z: JB
               })
             }
-          BB[zB] = {
-            positions: dB
+          BB[ZB] = {
+            positions: oB
           }
         }
         return BB
@@ -3405,7 +3405,7 @@ export const modules = {
       }
     };
 
-    function NB(BB) {
+    function vB(BB) {
       return {
         [`${BB} Banner`]: {
           positions: [{
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function uB(BB) {
-      const jB = (0, dB.Wb)(BB);
+    function kB(BB) {
+      const IB = (0, oB.Wb)(BB);
       return {
-        [jB]: {
+        [IB]: {
           positions: [{
-            block: jB,
+            block: IB,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${jB} Top Left`,
+            block: `_${IB} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${jB} Top Right`,
+            block: `_${IB} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${jB} Bottom Right`,
+            block: `_${IB} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${jB}|meta|rot2`]: {
+        [`${IB}|meta|rot2`]: {
           positions: [{
-            block: `${jB}|meta|rot2`,
+            block: `${IB}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${jB} Top Left|meta|rot2`,
+            block: `_${IB} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${jB} Top Right|meta|rot2`,
+            block: `_${IB} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${jB} Bottom Right|meta|rot2`,
+            block: `_${IB} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${jB}|meta|rot3`]: {
+        [`${IB}|meta|rot3`]: {
           positions: [{
-            block: `${jB}|meta|rot3`,
+            block: `${IB}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${jB} Top Left|meta|rot3`,
+            block: `_${IB} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${jB} Top Right|meta|rot3`,
+            block: `_${IB} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${jB} Bottom Right|meta|rot3`,
+            block: `_${IB} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${jB}|meta|rot4`]: {
+        [`${IB}|meta|rot4`]: {
           positions: [{
-            block: `${jB}|meta|rot4`,
+            block: `${IB}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${jB} Top Left|meta|rot4`,
+            block: `_${IB} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${jB} Top Right|meta|rot4`,
+            block: `_${IB} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${jB} Bottom Right|meta|rot4`,
+            block: `_${IB} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,9 +3664,9 @@ export const modules = {
       }
     }
 
-    function UB(BB) {
-      const jB = `_${BB} Back`,
-        zB = `_${BB} Dish`;
+    function cB(BB) {
+      const IB = `_${BB} Back`,
+        ZB = `_${BB} Dish`;
       return {
         [BB]: {
           positions: [{
@@ -3675,12 +3675,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: jB,
+            block: IB,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: zB,
+            block: ZB,
             x: 0,
             y: 1,
             z: -1
@@ -3693,12 +3693,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: `${jB}|meta|rot2`,
+            block: `${IB}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${zB}|meta|rot2`,
+            block: `${ZB}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
@@ -3711,12 +3711,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: `${jB}|meta|rot3`,
+            block: `${IB}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${zB}|meta|rot3`,
+            block: `${ZB}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
@@ -3729,12 +3729,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: `${jB}|meta|rot4`,
+            block: `${IB}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${zB}|meta|rot4`,
+            block: `${ZB}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,12 +3743,12 @@ export const modules = {
       }
     }
 
-    function aB(BB) {
-      const jB = `Small ${BB} Pod`;
+    function nB(BB) {
+      const IB = `Small ${BB} Pod`;
       return {
-        [jB]: {
+        [IB]: {
           positions: [{
-            block: jB,
+            block: IB,
             x: 0,
             y: 0,
             z: 0
@@ -3766,279 +3766,279 @@ export const modules = {
         }
       }
     }
-    for (const rB in IB) {
-      for (const BB of IB[rB].positions)
-        if (BB.id = nB.i[BB.block].id, rB === BB.block && (0 !== BB.x || 0 !== BB.y || 0 !== BB.z)) throw new Error(`Multiblock "${rB}" has main block "${BB.block}" at non-origin position (${BB.x}, ${BB.y}, ${BB.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      IB[nB.i[rB].id] = IB[rB]
+    for (const zB in GB) {
+      for (const BB of GB[zB].positions)
+        if (BB.id = JB.f[BB.block].id, zB === BB.block && (0 !== BB.x || 0 !== BB.y || 0 !== BB.z)) throw new Error(`Multiblock "${zB}" has main block "${BB.block}" at non-origin position (${BB.x}, ${BB.y}, ${BB.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      GB[JB.f[zB].id] = GB[zB]
     }
-    const pB = {};
-    for (const rB in IB)
+    const hB = {};
+    for (const zB in GB)
       for (const {
           block: BB,
-          x: jB,
-          y: zB,
-          z: QB
+          x: IB,
+          y: ZB,
+          z: TB
         }
-        of IB[rB].positions) {
-        const dB = {
-          mainMultiblock: rB,
-          compX: jB,
-          compY: zB,
-          compZ: QB
+        of GB[zB].positions) {
+        const oB = {
+          mainMultiblock: zB,
+          compX: IB,
+          compY: ZB,
+          compZ: TB
         };
-        pB[BB] = dB, pB[nB.i[BB].id] = dB
+        hB[BB] = oB, hB[JB.f[BB].id] = oB
       }
   },
-  38300: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => uB,
-      e: () => NB
+  38284: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => kB,
+      e: () => vB
     });
-    var QB = zB(9266),
-      nB = zB(9319),
-      dB = zB(9323);
-    const IB = nB.t.map((BB => {
+    var TB = ZB(9296),
+      JB = ZB(9347),
+      oB = ZB(9355);
+    const GB = JB.v.map((BB => {
       let {
-        dx: jB,
-        dz: zB
+        dx: IB,
+        dz: ZB
       } = BB;
-      return [jB, 0, zB]
+      return [IB, 0, ZB]
     }));
 
-    function NB(BB) {
-      const jB = QB.i[BB];
-      return !!jB && BB !== QB.e && !jB.model && !jB.Ss && !1 !== jB.solid && !jB.Sy
+    function vB(BB) {
+      const IB = TB.f[BB];
+      return !!IB && BB !== TB.b && !IB.model && !IB.gF && !1 !== IB.solid && !IB.cq
     }
-    class uB {
+    class kB {
       constructor(BB) {
-        this.model = BB, this.reshapeOffsets = [...IB, [0, -1, 0]]
+        this.model = BB, this.reshapeOffsets = [...GB, [0, -1, 0]]
       }
       handles(BB) {
-        const jB = QB.i[BB];
-        return (null === jB || void 0 === jB ? void 0 : jB.model) === this.model && void 0 !== jB.attachedTop
+        const IB = TB.f[BB];
+        return (null === IB || void 0 === IB ? void 0 : IB.model) === this.model && void 0 !== IB.attachedTop
       }
       affects(BB) {
-        return this.handles(BB) || NB(BB) || (0, dB.u)(QB.i[BB])
+        return this.handles(BB) || vB(BB) || (0, oB.t)(TB.f[BB])
       }
-      shape(BB, jB, zB, IB, uB) {
-        let UB = this.handles(BB(jB, zB + 1, IB)) ? nB.l : 0;
-        return nB.t.forEach(((uB, aB) => {
+      shape(BB, IB, ZB, GB, kB) {
+        let cB = this.handles(BB(IB, ZB + 1, GB)) ? JB.h : 0;
+        return JB.v.forEach(((kB, nB) => {
           let {
-            dx: pB,
-            dz: rB
-          } = uB;
-          const sB = BB(jB + pB, zB, IB + rB);
-          (this.handles(sB) || NB(sB) || function(BB, jB) {
-            const zB = QB.i[BB];
-            return (0, dB.u)(zB) && (0, dB.p)(zB.meta.rot) === (0 !== nB.t[jB].dx)
-          }(sB, aB)) && (UB |= 1 << aB)
-        })), (0, QB.k)((0, nB.m)(QB.i[uB].meta.rootName, UB))
+            dx: hB,
+            dz: zB
+          } = kB;
+          const FB = BB(IB + hB, ZB, GB + zB);
+          (this.handles(FB) || vB(FB) || function(BB, IB) {
+            const ZB = TB.f[BB];
+            return (0, oB.t)(ZB) && (0, oB.p)(ZB.meta.rot) === (0 !== JB.v[IB].dx)
+          }(FB, nB)) && (cB |= 1 << nB)
+        })), (0, TB.g)((0, JB.l)(TB.f[kB].meta.rootName, cB))
       }
     }
   },
-  38087: (BB, jB, zB) => {
-    function QB(BB, jB) {
-      var zB;
-      jB || (jB = {});
-      const QB = null !== (zB = jB.customAttributes) && void 0 !== zB ? zB : {};
-      var nB, dB, IB;
-      "Gun" === (null === BB || void 0 === BB ? void 0 : BB.type) && (QB.shotsLeft = null !== (nB = null !== (dB = QB.shotsLeft) && void 0 !== dB ? dB : null === (IB = QB.gunStats) || void 0 === IB ? void 0 : IB.clipSize) && void 0 !== nB ? nB : BB.clipSize);
-      if (QB.enchantmentTier && (QB.enchantmentTier = QB.enchantmentTier.toString()), QB.enchantments)
-        for (const pB in QB.enchantments) {
-          const BB = QB.enchantments[pB];
+  38063: (BB, IB, ZB) => {
+    function TB(BB, IB) {
+      var ZB;
+      IB || (IB = {});
+      const TB = null !== (ZB = IB.customAttributes) && void 0 !== ZB ? ZB : {};
+      var JB, oB, GB;
+      "Gun" === (null === BB || void 0 === BB ? void 0 : BB.type) && (TB.shotsLeft = null !== (JB = null !== (oB = TB.shotsLeft) && void 0 !== oB ? oB : null === (GB = TB.gunStats) || void 0 === GB ? void 0 : GB.clipSize) && void 0 !== JB ? JB : BB.clipSize);
+      if (TB.enchantmentTier && (TB.enchantmentTier = TB.enchantmentTier.toString()), TB.enchantments)
+        for (const hB in TB.enchantments) {
+          const BB = TB.enchantments[hB];
           if ("number" !== typeof BB) {
-            const jB = parseInt(BB);
-            isNaN(jB) || jB < 0 ? QB.enchantments[pB] = void 0 : QB.enchantments[pB] = jB > 1e9 ? 1e9 : jB
+            const IB = parseInt(BB);
+            isNaN(IB) || IB < 0 ? TB.enchantments[hB] = void 0 : TB.enchantments[hB] = IB > 1e9 ? 1e9 : IB
           }
         }
-      if (QB.enchantmentData)
-        for (const pB in QB.enchantmentData) {
-          const BB = QB.enchantmentData[pB];
+      if (TB.enchantmentData)
+        for (const hB in TB.enchantmentData) {
+          const BB = TB.enchantmentData[hB];
           if (!BB) continue;
           if ("object" !== typeof BB) {
-            QB.enchantmentData[pB] = void 0;
+            TB.enchantmentData[hB] = void 0;
             continue
           }
-          const jB = BB.icon,
-            zB = BB.description;
-          var NB, uB, UB, aB;
-          if ("string" !== typeof jB) QB.enchantmentData[pB].icon = null !== (NB = null === jB || void 0 === jB || null === (uB = jB.toString) || void 0 === uB ? void 0 : uB.call(jB)) && void 0 !== NB ? NB : void 0;
-          if ("string" !== typeof zB) QB.enchantmentData[pB].description = null !== (UB = null === zB || void 0 === zB || null === (aB = zB.toString) || void 0 === aB ? void 0 : aB.call(zB)) && void 0 !== UB ? UB : void 0
+          const IB = BB.icon,
+            ZB = BB.description;
+          var vB, kB, cB, nB;
+          if ("string" !== typeof IB) TB.enchantmentData[hB].icon = null !== (vB = null === IB || void 0 === IB || null === (kB = IB.toString) || void 0 === kB ? void 0 : kB.call(IB)) && void 0 !== vB ? vB : void 0;
+          if ("string" !== typeof ZB) TB.enchantmentData[hB].description = null !== (cB = null === ZB || void 0 === ZB || null === (nB = ZB.toString) || void 0 === nB ? void 0 : nB.call(ZB)) && void 0 !== cB ? cB : void 0
         }
-      return jB.customAttributes = QB, jB
+      return IB.customAttributes = TB, IB
     }
-    zB.d(jB, {
-      b: () => QB
+    ZB.d(IB, {
+      b: () => TB
     })
   },
-  38298: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => MB,
-      g: () => kB,
-      h: () => uB,
-      i: () => pB,
-      k: () => EB
+  38277: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => sB,
+      d: () => yB,
+      h: () => kB,
+      l: () => hB,
+      p: () => wB
     });
-    var QB = zB(9266),
-      nB = zB(9297),
-      dB = zB(38300);
-    const IB = (0, QB.k)("Noticeboard"),
-      NB = (0, QB.k)("Standing Noticeboard|meta|rot4|lrud");
-
-    function uB(BB) {
-      return IB <= BB && BB <= NB
-    }
-    const UB = new Uint8Array(NB - IB + 1);
-    for (let iB = IB; iB <= NB; iB++) UB[iB - IB] = (0, nB.r)(QB.i[iB].meta.metaStr);
-    const aB = 64,
-      pB = aB * aB,
-      [rB, sB, JB, mB] = [0, 1, 2, 3];
-
-    function yB(BB) {
-      var jB, zB;
-      return "string" === typeof(null === BB || void 0 === BB || null === (jB = BB.persisted) || void 0 === jB || null === (zB = jB.shared) || void 0 === zB ? void 0 : zB.text)
-    }
+    var TB = ZB(9296),
+      JB = ZB(9328),
+      oB = ZB(38284);
+    const GB = (0, TB.g)("Noticeboard"),
+      vB = (0, TB.g)("Standing Noticeboard|meta|rot4|lrud");
 
     function kB(BB) {
-      return yB(BB) && "" !== BB.persisted.shared.text.trim()
+      return GB <= BB && BB <= vB
+    }
+    const cB = new Uint8Array(vB - GB + 1);
+    for (let OB = GB; OB <= vB; OB++) cB[OB - GB] = (0, JB.p)(TB.f[OB].meta.metaStr);
+    const nB = 64,
+      hB = nB * nB,
+      [zB, FB, NB, gB] = [0, 1, 2, 3];
+
+    function qB(BB) {
+      var IB, ZB;
+      return "string" === typeof(null === BB || void 0 === BB || null === (IB = BB.persisted) || void 0 === IB || null === (ZB = IB.shared) || void 0 === ZB ? void 0 : ZB.text)
     }
 
-    function GB(BB, jB) {
-      let [zB, , QB] = jB;
-      const [dB, , IB] = nB.y[BB][sB];
-      return zB * dB + QB * IB
+    function yB(BB) {
+      return qB(BB) && "" !== BB.persisted.shared.text.trim()
     }
 
-    function LB(BB, jB, zB) {
-      return zB[1] - jB[1] || GB(BB, jB) - GB(BB, zB)
+    function UB(BB, IB) {
+      let [ZB, , TB] = IB;
+      const [oB, , GB] = JB.r[BB][FB];
+      return ZB * oB + TB * GB
     }
 
-    function gB(BB, jB, zB, dB, NB) {
-      var uB;
-      let aB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : BB(jB[0], jB[1], jB[2]);
-      if (!(UB[aB - IB] & 1 << zB)) return null;
-      const [pB, rB, sB] = nB.y[NB][zB], JB = [jB[0] + pB, jB[1] + rB, jB[2] + sB], mB = BB(JB[0], JB[1], JB[2]), yB = null === (uB = QB.i[mB]) || void 0 === uB ? void 0 : uB.meta;
-      return (null === yB || void 0 === yB ? void 0 : yB.rootId) === dB && yB.rot === NB && UB[mB - IB] & 1 << (1 ^ zB) ? JB : null
+    function WB(BB, IB, ZB) {
+      return ZB[1] - IB[1] || UB(BB, IB) - UB(BB, ZB)
     }
 
-    function tB(BB, jB, zB, dB) {
-      const IB = BB(jB, zB, dB);
-      if (!uB(IB)) return null;
+    function dB(BB, IB, ZB, oB, vB) {
+      var kB;
+      let nB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : BB(IB[0], IB[1], IB[2]);
+      if (!(cB[nB - GB] & 1 << ZB)) return null;
+      const [hB, zB, FB] = JB.r[vB][ZB], NB = [IB[0] + hB, IB[1] + zB, IB[2] + FB], gB = BB(NB[0], NB[1], NB[2]), qB = null === (kB = TB.f[gB]) || void 0 === kB ? void 0 : kB.meta;
+      return (null === qB || void 0 === qB ? void 0 : qB.rootId) === oB && qB.rot === vB && cB[gB - GB] & 1 << (1 ^ ZB) ? NB : null
+    }
+
+    function CB(BB, IB, ZB, oB) {
+      const GB = BB(IB, ZB, oB);
+      if (!kB(GB)) return null;
       const {
-        rootId: NB,
-        rot: UB
-      } = QB.i[IB].meta, pB = (jB, zB) => {
-        let QB = jB,
-          nB = 1;
-        for (let dB = gB(BB, QB, zB, NB, UB); dB && nB < aB; dB = gB(BB, QB, zB, NB, UB)) QB = dB, nB++;
+        rootId: vB,
+        rot: cB
+      } = TB.f[GB].meta, hB = (IB, ZB) => {
+        let TB = IB,
+          JB = 1;
+        for (let oB = dB(BB, TB, ZB, vB, cB); oB && JB < nB; oB = dB(BB, TB, ZB, vB, cB)) TB = oB, JB++;
         return {
-          end: QB,
-          cells: nB
+          end: TB,
+          cells: JB
         }
-      }, yB = pB(pB([jB, zB, dB], rB).end, JB).end, kB = pB(yB, sB).cells, [GB, , LB] = nB.y[UB][sB];
-      let tB = 1;
-      BB: for (; tB < aB; tB++)
-        for (let jB = 0; jB < kB; jB++)
-          if (!gB(BB, [yB[0] + GB * jB, yB[1] - tB + 1, yB[2] + LB * jB], mB, NB, UB)) break BB;
+      }, qB = hB(hB([IB, ZB, oB], zB).end, NB).end, yB = hB(qB, FB).cells, [UB, , WB] = JB.r[cB][FB];
+      let CB = 1;
+      BB: for (; CB < nB; CB++)
+        for (let IB = 0; IB < yB; IB++)
+          if (!dB(BB, [qB[0] + UB * IB, qB[1] - CB + 1, qB[2] + WB * IB], gB, vB, cB)) break BB;
       return {
-        anchor: yB,
-        rootId: NB,
-        rot: UB,
-        width: kB,
-        height: tB
+        anchor: qB,
+        rootId: vB,
+        rot: cB,
+        width: yB,
+        height: CB
       }
     }
 
-    function SB(BB, jB) {
-      for (const zB of function(BB) {
+    function QB(BB, IB) {
+      for (const ZB of function(BB) {
           let {
-            anchor: jB,
-            rot: zB,
-            width: QB,
-            height: dB
+            anchor: IB,
+            rot: ZB,
+            width: TB,
+            height: oB
           } = BB;
-          const [IB, , NB] = nB.y[zB][sB], uB = [];
-          for (let nB = 0; nB < dB; nB++)
-            for (let BB = 0; BB < QB; BB++) uB.push([jB[0] + IB * BB, jB[1] - nB, jB[2] + NB * BB]);
-          return uB
+          const [GB, , vB] = JB.r[ZB][FB], kB = [];
+          for (let JB = 0; JB < oB; JB++)
+            for (let BB = 0; BB < TB; BB++) kB.push([IB[0] + GB * BB, IB[1] - JB, IB[2] + vB * BB]);
+          return kB
         }(BB))
-        if (yB(jB(zB[0], zB[1], zB[2]))) return zB;
+        if (qB(IB(ZB[0], ZB[1], ZB[2]))) return ZB;
       return null
     }
 
-    function MB(BB, jB, zB, nB, dB) {
-      const IB = BB(zB, nB, dB);
-      if (!uB(IB)) return null;
+    function sB(BB, IB, ZB, JB, oB) {
+      const GB = BB(ZB, JB, oB);
+      if (!kB(GB)) return null;
       const {
-        rootId: NB,
-        rot: UB
-      } = QB.i[IB].meta, aB = [
-        [zB, nB, dB]
-      ], rB = new Set([aB[0].join()]);
-      let sB = aB[0],
-        JB = null;
-      for (let QB = 0; QB < aB.length; QB++) {
-        const zB = aB[QB];
-        if (LB(UB, zB, sB) < 0 && (sB = zB), yB(jB(zB[0], zB[1], zB[2]))) {
-          const jB = tB(BB, zB[0], zB[1], zB[2]);
-          (!JB || LB(UB, jB.anchor, JB.anchor) < 0) && (JB = jB)
+        rootId: vB,
+        rot: cB
+      } = TB.f[GB].meta, nB = [
+        [ZB, JB, oB]
+      ], zB = new Set([nB[0].join()]);
+      let FB = nB[0],
+        NB = null;
+      for (let TB = 0; TB < nB.length; TB++) {
+        const ZB = nB[TB];
+        if (WB(cB, ZB, FB) < 0 && (FB = ZB), qB(IB(ZB[0], ZB[1], ZB[2]))) {
+          const IB = CB(BB, ZB[0], ZB[1], ZB[2]);
+          (!NB || WB(cB, IB.anchor, NB.anchor) < 0) && (NB = IB)
         }
-        for (let jB = 0; jB < 4 && aB.length < pB; jB++) {
-          const QB = gB(BB, zB, jB, NB, UB);
-          QB && !rB.has(QB.join()) && (rB.add(QB.join()), aB.push(QB))
+        for (let IB = 0; IB < 4 && nB.length < hB; IB++) {
+          const TB = dB(BB, ZB, IB, vB, cB);
+          TB && !zB.has(TB.join()) && (zB.add(TB.join()), nB.push(TB))
         }
       }
-      return JB ??= tB(BB, sB[0], sB[1], sB[2]), {
-        cells: aB,
-        topLeft: sB,
-        rect: JB,
-        textCell: SB(JB, jB)
+      return NB ??= CB(BB, FB[0], FB[1], FB[2]), {
+        cells: nB,
+        topLeft: FB,
+        rect: NB,
+        textCell: QB(NB, IB)
       }
     }
 
-    function EB(BB, jB, zB, IB, NB) {
-      if (null !== zB && uB(zB)) {
+    function wB(BB, IB, ZB, GB, vB) {
+      if (null !== ZB && kB(ZB)) {
         const {
           rootName: BB,
-          rot: jB
-        } = QB.i[zB].meta;
-        if (nB.y[jB].some((BB => {
-            let [jB, zB, QB] = BB;
-            return jB === IB[0] && zB === IB[1] && QB === IB[2]
+          rot: IB
+        } = TB.f[ZB].meta;
+        if (JB.r[IB].some((BB => {
+            let [IB, ZB, TB] = BB;
+            return IB === GB[0] && ZB === GB[1] && TB === GB[2]
           }))) return {
           root: BB,
-          rot: jB
+          rot: IB
         }
       }
-      const [UB, aB] = nB.k[NB], pB = BB(jB[0] - UB, jB[1], jB[2] - aB);
+      const [cB, nB] = JB.m[vB], hB = BB(IB[0] - cB, IB[1], IB[2] - nB);
       return {
-        root: (0, dB.e)(pB) ? nB.F : nB.B,
-        rot: NB
+        root: (0, oB.e)(hB) ? JB.z : JB.v,
+        rot: vB
       }
     }
   },
-  38307: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => dB,
-      f: () => IB,
-      g: () => nB,
-      j: () => NB
+  38287: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB,
+      e: () => GB,
+      g: () => JB,
+      k: () => vB
     });
-    var QB = zB(382);
-    const nB = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...zB(652).v.map((BB => `${BB} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...QB.j, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      dB = ["Obby RPG"];
+    var TB = ZB(362);
+    const JB = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...ZB(663).u.map((BB => `${BB} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...TB.h, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      oB = ["Obby RPG"];
 
-    function IB(BB) {
-      const jB = BB.indexOf("|");
-      return -1 === jB ? {
+    function GB(BB) {
+      const IB = BB.indexOf("|");
+      return -1 === IB ? {
         item: BB,
         clientPredictedThrower: null
       } : {
-        item: BB.slice(0, jB),
-        clientPredictedThrower: BB.slice(jB + 1)
+        item: BB.slice(0, IB),
+        clientPredictedThrower: BB.slice(IB + 1)
       }
     }
-    const NB = [...nB, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const vB = [...JB, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);

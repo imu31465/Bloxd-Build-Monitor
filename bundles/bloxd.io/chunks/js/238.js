@@ -1,12 +1,12 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  37197: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => nB
+  37147: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => JB
     });
-    var QB = zB(37202);
-    class nB {
+    var TB = ZB(37153);
+    class JB {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,120 +14,120 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    nB.Instances = [], nB.OnEnginesDisposedObservable = new QB.c, nB._LastCreatedScene = null, nB.UseFallbackTexture = !0, nB.FallbackTexture = ""
+    JB.Instances = [], JB.OnEnginesDisposedObservable = new TB.b, JB._LastCreatedScene = null, JB.UseFallbackTexture = !0, JB.FallbackTexture = ""
   },
-  38780: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => dB
+  38714: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB
     });
-    var QB = zB(38783);
-    const nB = (BB, jB, zB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : zB && "object" === typeof BB ? {
+    var TB = ZB(38718);
+    const JB = (BB, IB, ZB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : ZB && "object" === typeof BB ? {
       ...BB
-    } : null : BB.clone(jB) : null;
-    class dB {
-      static DeepCopy(BB, jB, zB, dB) {
-        let IB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const NB = function(BB) {
-          const jB = [];
+    } : null : BB.clone(IB) : null;
+    class oB {
+      static DeepCopy(BB, IB, ZB, oB) {
+        let GB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const vB = function(BB) {
+          const IB = [];
           do {
-            const zB = Object.getOwnPropertyNames(BB);
-            for (const BB of zB) - 1 === jB.indexOf(BB) && jB.push(BB)
+            const ZB = Object.getOwnPropertyNames(BB);
+            for (const BB of ZB) - 1 === IB.indexOf(BB) && IB.push(BB)
           } while (BB = Object.getPrototypeOf(BB));
-          return jB
+          return IB
         }(BB);
-        for (const UB of NB) {
-          if ("_" === UB[0] && (!dB || -1 === dB.indexOf(UB))) continue;
-          if (UB.endsWith("Observable")) continue;
-          if (zB && -1 !== zB.indexOf(UB)) continue;
-          const NB = BB[UB],
-            aB = typeof NB;
-          if ("function" !== aB) try {
-            if ("object" === aB)
-              if (NB instanceof Uint8Array) jB[UB] = Uint8Array.from(NB);
-              else if (NB instanceof Array) {
-              if (jB[UB] = [], NB.length > 0)
-                if ("object" == typeof NB[0])
-                  for (let BB = 0; BB < NB.length; BB++) {
-                    const zB = nB(NB[BB], jB, IB); - 1 === jB[UB].indexOf(zB) && jB[UB].push(zB)
-                  } else jB[UB] = NB.slice(0)
-            } else jB[UB] = nB(NB, jB, IB);
-            else jB[UB] = NB
-          } catch (uB) {
-            QB.c.Warn(uB.message)
+        for (const cB of vB) {
+          if ("_" === cB[0] && (!oB || -1 === oB.indexOf(cB))) continue;
+          if (cB.endsWith("Observable")) continue;
+          if (ZB && -1 !== ZB.indexOf(cB)) continue;
+          const vB = BB[cB],
+            nB = typeof vB;
+          if ("function" !== nB) try {
+            if ("object" === nB)
+              if (vB instanceof Uint8Array) IB[cB] = Uint8Array.from(vB);
+              else if (vB instanceof Array) {
+              if (IB[cB] = [], vB.length > 0)
+                if ("object" == typeof vB[0])
+                  for (let BB = 0; BB < vB.length; BB++) {
+                    const ZB = JB(vB[BB], IB, GB); - 1 === IB[cB].indexOf(ZB) && IB[cB].push(ZB)
+                  } else IB[cB] = vB.slice(0)
+            } else IB[cB] = JB(vB, IB, GB);
+            else IB[cB] = vB
+          } catch (kB) {
+            TB.d.Warn(kB.message)
           }
         }
       }
     }
   },
-  37987: (BB, jB, zB) => {
-    function QB() {
+  37964: (BB, IB, ZB) => {
+    function TB() {
       return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (BB => {
-        const jB = 16 * Math.random() | 0;
-        return ("x" === BB ? jB : 3 & jB | 8).toString(16)
+        const IB = 16 * Math.random() | 0;
+        return ("x" === BB ? IB : 3 & IB | 8).toString(16)
       }))
     }
-    zB.d(jB, {
-      d: () => QB
+    ZB.d(IB, {
+      d: () => TB
     })
   },
-  38783: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => QB
+  38718: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => TB
     });
-    class QB {
-      static _CheckLimit(BB, jB) {
-        let zB = QB._LogLimitOutputs[BB];
-        return zB ? zB.current++ : (zB = {
-          limit: jB,
+    class TB {
+      static _CheckLimit(BB, IB) {
+        let ZB = TB._LogLimitOutputs[BB];
+        return ZB ? ZB.current++ : (ZB = {
+          limit: IB,
           current: 1
-        }, QB._LogLimitOutputs[BB] = zB), zB.current <= zB.limit
+        }, TB._LogLimitOutputs[BB] = ZB), ZB.current <= ZB.limit
       }
       static _GenerateLimitMessage(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const zB = QB._LogLimitOutputs[BB];
-        if (!zB || !QB.MessageLimitReached) return;
-        const nB = this._Levels[jB];
-        zB.current === zB.limit && QB[nB.name](QB.MessageLimitReached.replace(/%LIMIT%/g, "" + zB.limit).replace(/%TYPE%/g, nB.name ?? ""))
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZB = TB._LogLimitOutputs[BB];
+        if (!ZB || !TB.MessageLimitReached) return;
+        const JB = this._Levels[IB];
+        ZB.current === ZB.limit && TB[JB.name](TB.MessageLimitReached.replace(/%LIMIT%/g, "" + ZB.limit).replace(/%TYPE%/g, JB.name ?? ""))
       }
       static _AddLogEntry(BB) {
-        QB._LogCache = BB + QB._LogCache, QB.OnNewCacheEntry && QB.OnNewCacheEntry(BB)
+        TB._LogCache = BB + TB._LogCache, TB.OnNewCacheEntry && TB.OnNewCacheEntry(BB)
       }
       static _FormatMessage(BB) {
-        const jB = BB => BB < 10 ? "0" + BB : "" + BB,
-          zB = new Date;
-        return "[" + jB(zB.getHours()) + ":" + jB(zB.getMinutes()) + ":" + jB(zB.getSeconds()) + "]: " + BB
+        const IB = BB => BB < 10 ? "0" + BB : "" + BB,
+          ZB = new Date;
+        return "[" + IB(ZB.getHours()) + ":" + IB(ZB.getMinutes()) + ":" + IB(ZB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(BB, jB) {}
+      static _LogDisabled(BB, IB) {}
       static _LogEnabled() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          jB = arguments.length > 1 ? arguments[1] : void 0,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        const nB = Array.isArray(jB) ? jB[0] : jB;
-        if (void 0 !== zB && !QB._CheckLimit(nB, zB)) return;
-        const dB = QB._FormatMessage(nB),
-          IB = this._Levels[BB],
-          NB = Array.isArray(jB) ? jB.slice(1) : [];
-        IB.logFunc && IB.logFunc("BJS - " + dB, ...NB);
-        const uB = `<div style='color:${IB.color}'>${dB}</div><br>`;
-        QB._AddLogEntry(uB), QB._GenerateLimitMessage(nB, BB)
+          IB = arguments.length > 1 ? arguments[1] : void 0,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        const JB = Array.isArray(IB) ? IB[0] : IB;
+        if (void 0 !== ZB && !TB._CheckLimit(JB, ZB)) return;
+        const oB = TB._FormatMessage(JB),
+          GB = this._Levels[BB],
+          vB = Array.isArray(IB) ? IB.slice(1) : [];
+        GB.logFunc && GB.logFunc("BJS - " + oB, ...vB);
+        const kB = `<div style='color:${GB.color}'>${oB}</div><br>`;
+        TB._AddLogEntry(kB), TB._GenerateLimitMessage(JB, BB)
       }
       static get LogCache() {
-        return QB._LogCache
+        return TB._LogCache
       }
       static ClearLogCache() {
-        QB._LogCache = "", QB._LogLimitOutputs = {}, QB.errorsCount = 0
+        TB._LogCache = "", TB._LogLimitOutputs = {}, TB.errorsCount = 0
       }
       static set LogLevels(BB) {
-        QB.Log = QB._LogDisabled, QB.Warn = QB._LogDisabled, QB.Error = QB._LogDisabled;
-        const jB = [QB.MessageLogLevel, QB.WarningLogLevel, QB.ErrorLogLevel];
-        for (const zB of jB)
-          if ((BB & zB) === zB) {
-            const BB = this._Levels[zB];
-            QB[BB.name] = QB._LogEnabled.bind(QB, zB)
+        TB.Log = TB._LogDisabled, TB.Warn = TB._LogDisabled, TB.Error = TB._LogDisabled;
+        const IB = [TB.MessageLogLevel, TB.WarningLogLevel, TB.ErrorLogLevel];
+        for (const ZB of IB)
+          if ((BB & ZB) === ZB) {
+            const BB = this._Levels[ZB];
+            TB[BB.name] = TB._LogEnabled.bind(TB, ZB)
           }
       }
     }
-    QB.NoneLogLevel = 0, QB.MessageLogLevel = 1, QB.WarningLogLevel = 2, QB.ErrorLogLevel = 4, QB.AllLogLevel = 7, QB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QB._LogCache = "", QB._LogLimitOutputs = {}, QB._Levels = [{}, {
+    TB.NoneLogLevel = 0, TB.MessageLogLevel = 1, TB.WarningLogLevel = 2, TB.ErrorLogLevel = 4, TB.AllLogLevel = 7, TB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", TB._LogCache = "", TB._LogLimitOutputs = {}, TB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -139,68 +139,68 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], QB.errorsCount = 0, QB.Log = QB._LogEnabled.bind(QB, QB.MessageLogLevel), QB.Warn = QB._LogEnabled.bind(QB, QB.WarningLogLevel), QB.Error = QB._LogEnabled.bind(QB, QB.ErrorLogLevel)
+    }], TB.errorsCount = 0, TB.Log = TB._LogEnabled.bind(TB, TB.MessageLogLevel), TB.Warn = TB._LogEnabled.bind(TB, TB.WarningLogLevel), TB.Error = TB._LogEnabled.bind(TB, TB.ErrorLogLevel)
   },
-  37202: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => IB
+  37153: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => GB
     });
-    const QB = "undefined" !== typeof WeakRef;
-    class nB {
+    const TB = "undefined" !== typeof WeakRef;
+    class JB {
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          zB = arguments.length > 2 ? arguments[2] : void 0,
-          QB = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(BB, jB, zB, QB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZB = arguments.length > 2 ? arguments[2] : void 0,
+          TB = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(BB, IB, ZB, TB)
       }
       initialize(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          zB = arguments.length > 2 ? arguments[2] : void 0,
-          QB = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = BB, this.skipNextObservers = jB, this.target = zB, this.currentTarget = QB, this
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZB = arguments.length > 2 ? arguments[2] : void 0,
+          TB = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = BB, this.skipNextObservers = IB, this.target = ZB, this.currentTarget = TB, this
       }
     }
-    class dB {
-      constructor(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = BB, this.mask = jB, this.scope = zB, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class oB {
+      constructor(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = BB, this.mask = IB, this.scope = ZB, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         this._remove && this._remove(BB)
       }
     }
-    class IB {
-      static FromPromise(BB, jB) {
-        const zB = new IB;
+    class GB {
+      static FromPromise(BB, IB) {
+        const ZB = new GB;
         return BB.then((BB => {
-          zB.notifyObservers(BB)
+          ZB.notifyObservers(BB)
         })).catch((BB => {
-          if (!jB) throw BB;
-          jB.notifyObservers(BB)
-        })), zB
+          if (!IB) throw BB;
+          IB.notifyObservers(BB)
+        })), ZB
       }
       get observers() {
         return this._observers
       }
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = jB, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new nB(0), BB && (this._onObserverAdded = BB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = IB, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new JB(0), BB && (this._onObserverAdded = BB)
       }
       add(BB) {
-        let jB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          zB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        let IB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          ZB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if (!BB) return null;
-        const nB = new dB(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        nB.unregisterOnNextCall = zB, jB ? this._observers.unshift(nB) : this._observers.push(nB), this._onObserverAdded && this._onObserverAdded(nB), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(nB, this._lastNotifiedValue);
-        const IB = QB ? new WeakRef(this) : {
+        const JB = new oB(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        JB.unregisterOnNextCall = ZB, IB ? this._observers.unshift(JB) : this._observers.push(JB), this._onObserverAdded && this._onObserverAdded(JB), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(JB, this._lastNotifiedValue);
+        const GB = TB ? new WeakRef(this) : {
           deref: () => this
         };
-        return nB._remove = function() {
+        return JB._remove = function() {
           let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const jB = IB.deref();
-          jB && (BB ? jB.remove(nB) : jB._remove(nB))
-        }, nB
+          const IB = GB.deref();
+          IB && (BB ? IB.remove(JB) : IB._remove(JB))
+        }, JB
       }
       addOnce(BB) {
         return this.add(BB, void 0, void 0, void 0, !0)
@@ -210,10 +210,10 @@ export const modules = {
         BB._remove = null;
         return -1 !== this._observers.indexOf(BB) && (this._deferUnregister(BB), !0)
       }
-      removeCallback(BB, jB) {
-        for (let zB = 0; zB < this._observers.length; zB++) {
-          const QB = this._observers[zB];
-          if (!QB._willBeUnregistered && (QB.callback === BB && (!jB || jB === QB.scope))) return this._deferUnregister(QB), !0
+      removeCallback(BB, IB) {
+        for (let ZB = 0; ZB < this._observers.length; ZB++) {
+          const TB = this._observers[ZB];
+          if (!TB._willBeUnregistered && (TB.callback === BB && (!IB || IB === TB.scope))) return this._deferUnregister(TB), !0
         }
         return !1
       }
@@ -223,10 +223,10 @@ export const modules = {
         }), 0))
       }
       _remove(BB) {
-        let jB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        let IB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
         if (!BB) return !1;
-        const zB = this._observers.indexOf(BB);
-        return -1 !== zB && (jB && this._numObserversMarkedAsDeleted--, this._observers.splice(zB, 1), !0)
+        const ZB = this._observers.indexOf(BB);
+        return -1 !== ZB && (IB && this._numObserversMarkedAsDeleted--, this._observers.splice(ZB, 1), !0)
       }
       makeObserverTopPriority(BB) {
         this._remove(BB, !1), this._observers.unshift(BB)
@@ -235,22 +235,22 @@ export const modules = {
         this._remove(BB, !1), this._observers.push(BB)
       }
       notifyObservers(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          zB = arguments.length > 2 ? arguments[2] : void 0,
-          QB = arguments.length > 3 ? arguments[3] : void 0,
-          nB = arguments.length > 4 ? arguments[4] : void 0;
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ZB = arguments.length > 2 ? arguments[2] : void 0,
+          TB = arguments.length > 3 ? arguments[3] : void 0,
+          JB = arguments.length > 4 ? arguments[4] : void 0;
         if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = BB), !this._observers.length) return !0;
-        const dB = this._eventState;
-        dB.mask = jB, dB.target = zB, dB.currentTarget = QB, dB.skipNextObservers = !1, dB.lastReturnValue = BB, dB.userInfo = nB;
-        for (const IB of this._observers)
-          if (!IB._willBeUnregistered && (IB.mask & jB && (IB.unregisterOnNextCall && this._deferUnregister(IB), IB.scope ? dB.lastReturnValue = IB.callback.apply(IB.scope, [BB, dB]) : dB.lastReturnValue = IB.callback(BB, dB)), dB.skipNextObservers)) return !1;
+        const oB = this._eventState;
+        oB.mask = IB, oB.target = ZB, oB.currentTarget = TB, oB.skipNextObservers = !1, oB.lastReturnValue = BB, oB.userInfo = JB;
+        for (const GB of this._observers)
+          if (!GB._willBeUnregistered && (GB.mask & IB && (GB.unregisterOnNextCall && this._deferUnregister(GB), GB.scope ? oB.lastReturnValue = GB.callback.apply(GB.scope, [BB, oB]) : oB.lastReturnValue = GB.callback(BB, oB)), oB.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = jB), BB._willBeUnregistered) return;
-        const QB = this._eventState;
-        QB.mask = zB, QB.skipNextObservers = !1, BB.unregisterOnNextCall && this._deferUnregister(BB), BB.callback(jB, QB)
+      notifyObserver(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = IB), BB._willBeUnregistered) return;
+        const TB = this._eventState;
+        TB.mask = ZB, TB.skipNextObservers = !1, BB.unregisterOnNextCall && this._deferUnregister(BB), BB.callback(IB, TB)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
@@ -266,40 +266,40 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const BB = new IB;
+        const BB = new GB;
         return BB._observers = this._observers.slice(0), BB
       }
       hasSpecificMask() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const jB of this._observers)
-          if (jB.mask & BB || jB.mask === BB) return !0;
+        for (const IB of this._observers)
+          if (IB.mask & BB || IB.mask === BB) return !0;
         return !1
       }
     }
   },
-  61413: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      AsyncLoop: () => QB.e,
-      RegisterTools: () => QB.h,
-      Tools: () => QB.i,
-      className: () => QB.l
+  61291: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      AsyncLoop: () => TB.d,
+      RegisterTools: () => TB.f,
+      Tools: () => TB.j,
+      className: () => TB.k
     });
-    var QB = zB(40164);
-    (0, QB.h)()
+    var TB = ZB(40152);
+    (0, TB.f)()
   },
-  37222: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => dB,
-      d: () => nB
+  37170: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      i: () => JB
     });
-    const QB = {};
+    const TB = {};
 
-    function nB(BB, jB) {
-      QB[BB] = jB
+    function JB(BB, IB) {
+      TB[BB] = IB
     }
 
-    function dB(BB) {
-      return QB[BB]
+    function oB(BB) {
+      return TB[BB]
     }
   }
 };

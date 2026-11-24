@@ -1,192 +1,192 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  41362: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      DOCS_AGENT_PART_CHARS: () => Xj.d,
-      DOCS_LLMS_FULL_TXT_PATH: () => Xj.f,
-      DOCS_LLMS_TXT_PATH: () => Xj.g,
-      DOCS_LLMS_TXT_URL: () => Xj.h,
-      ROOT_LLMS_TXT_PATH: () => Xj.i,
-      allGamemodeSettings: () => QB.c,
-      arcadeModeStaticConfig: () => mB.c,
-      arenaStaticConfig: () => nj,
-      backroomsStaticConfig: () => Qj.d,
-      battleBoxStaticConfig: () => uj,
-      bedwarsStaticConfig: () => HB.d,
-      bloxdAggregatorConfig: () => NB.b,
-      bloxdPreprodAggregatorConfig: () => uB.b,
-      bloxdStagingAggregatorConfig: () => UB.c,
-      bridgeBattleStaticConfig: () => PB.e,
-      captureTheFlagStaticConfig: () => sj,
-      classicStaticConfig: () => YB.e,
-      clutchStaticConfig: () => CB.b,
-      conquerorStaticConfig: () => rj,
-      containmentBreachStaticConfig: () => Bj.c,
+  41304: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      DOCS_AGENT_PART_CHARS: () => rI.b,
+      DOCS_LLMS_FULL_TXT_PATH: () => rI.e,
+      DOCS_LLMS_TXT_PATH: () => rI.h,
+      DOCS_LLMS_TXT_URL: () => rI.i,
+      ROOT_LLMS_TXT_PATH: () => rI.k,
+      allGamemodeSettings: () => TB.c,
+      arcadeModeStaticConfig: () => gB.d,
+      arenaStaticConfig: () => JI,
+      backroomsStaticConfig: () => TI.e,
+      battleBoxStaticConfig: () => kI,
+      bedwarsStaticConfig: () => aB.e,
+      bloxdAggregatorConfig: () => vB.e,
+      bloxdPreprodAggregatorConfig: () => kB.d,
+      bloxdStagingAggregatorConfig: () => cB.b,
+      bridgeBattleStaticConfig: () => eB.e,
+      captureTheFlagStaticConfig: () => FI,
+      classicStaticConfig: () => jB.b,
+      clutchStaticConfig: () => xB.d,
+      conquerorStaticConfig: () => zI,
+      containmentBreachStaticConfig: () => BI.c,
       cookingStaticConfig: () => lB.d,
-      coolMathGamesAggregatorConfig: () => aB.e,
-      coreDefendersStaticConfig: () => OB.b,
-      crazyGamesNinetyNineNightsBundle: () => pB.d,
-      ctfStaticConfig: () => pj,
-      customGameSettings: () => QB.d,
-      customGamesListingHeading: () => Vj.e,
-      customGamesListingPath: () => Vj.i,
-      defusalStaticConfig: () => aj,
-      docsPageHtmlPath: () => Xj.j,
-      docsPageMarkdownPath: () => Xj.m,
-      docsPagePartPath: () => Xj.n,
-      docsPageTitles: () => ij.b,
-      docsSitePageMarkdownPath: () => Xj.o,
-      dodgeBowStaticConfig: () => Nj,
-      doodleStaticConfig: () => fB.e,
-      dressUpStaticConfig: () => cB.c,
-      eatToGrowStaticConfig: () => zj.c,
-      escapeHtml: () => ij.c,
-      eviltowerStaticConfig: () => GB.c,
-      exampleStaticConfig: () => yB.e,
-      extractionStaticConfig: () => wB.e,
-      firstPartyStudioGames: () => dB.c,
-      fishingStaticConfig: () => JB.c,
-      gameImageVariantHeights: () => Mj.c,
-      gameImageVariantsEncoding: () => Sj.e,
-      getAllAggregatorGameNames: () => IB.d,
-      getConfiguredGameImagePaths: () => Ej.e,
-      getCustomGameFromPath: () => ij.f,
-      getCustomGameListingPage: () => Vj.j,
-      getCustomGamePagePath: () => ij.g,
-      getCustomGamePageRedirectPath: () => ij.j,
-      getCustomGameSchematicIdFromPath: () => ij.k,
-      getCustomGameThumbnailCandidates: () => Lj.b,
-      getCustomGameThumbnailUrls: () => Lj.d,
-      getCustomGameUrlIdFromPath: () => ij.n,
-      getFirstPartyStudioGameName: () => dB.f,
-      getGameCanonicalUrl: () => ij.o,
-      getGameImageBlurhash: () => gj.d,
-      getGameImagePath: () => Ej.h,
-      getGameImageVariantPath: () => Mj.j,
-      getGameImageVariantSource: () => tj.c,
-      getGameImageVariants: () => tj.d,
-      getGamePage: () => ij.u,
-      getGamePageContentHeadings: () => qj.h,
-      getGamePagePath: () => ij.p,
-      getGamePageRedirectPath: () => ij.r,
-      getGameSeoMetadata: () => ij.y,
-      getGameTileImagePaths: () => tj.e,
-      getIndexedCustomGameListingPaths: () => Vj.l,
-      getIndexedGamePages: () => ij.B,
-      getJsonLdScriptText: () => ij.F,
-      getPathGamePageContentGame: () => ij.G,
-      getPathSeoMetadata: () => ij.H,
-      getPlayableGame: () => nB,
-      getPlayerSeoMetadata: () => ij.I,
-      getSeoMetaTagAttributes: () => ij.L,
-      getShaderPackPolicy: () => QB.e,
-      getShaderPackSeoMetadata: () => ij.N,
-      getStaticGameConfig: () => QB.g,
-      getStaticPageSeoMetadata: () => ij.O,
-      getUndescribedPageSeoMetadata: () => ij.R,
-      goalRushStaticConfig: () => vB.e,
-      goldrushStaticConfig: () => dj,
-      greenvilleStaticConfig: () => oB.d,
-      heroesvbrainrotsStaticConfig: () => RB.b,
-      hideseekStaticConfig: () => FB.c,
-      infectionStaticConfig: () => VB.e,
-      isGameIndexed: () => ij.T,
-      knockoutStaticConfig: () => KB.e,
-      lastStandStaticConfig: () => AB.e,
-      loadGamePageContent: () => qj.j,
-      luckyBattlegroundsStaticConfig: () => qB.b,
-      luckyTowersStaticConfig: () => iB.c,
-      murderMysteryStaticConfig: () => DB.b,
-      naturalDisasterStaticConfig: () => XB.c,
-      ninetyNineNightsStaticConfig: () => ZB.c,
-      normaliseFirstPartyGameNames: () => dB.g,
-      oneBlockStaticConfig: () => LB.c,
-      paintballStaticConfig: () => hB.b,
-      parkourStaticConfig: () => rB.d,
-      petSimulatorStaticConfig: () => Uj,
-      piratesStaticConfig: () => MB.b,
-      plotsStaticConfig: () => SB.e,
-      prisonStaticConfig: () => Gj,
-      pvpCivStaticConfig: () => jj.c,
-      racingStaticConfig: () => kj,
-      rankedStaticConfig: () => WB.d,
-      readDocsPageMarkdownPath: () => Xj.r,
-      renderGamePageContentHtml: () => Yj,
-      renderSeoMetaTags: () => ij.U,
-      rocketParkourStaticConfig: () => TB.e,
-      rocketSpleefStaticConfig: () => EB.e,
-      seoSiteOrigin: () => hj.e,
-      shootingStaticConfig: () => sB.c,
-      simonSaysStaticConfig: () => xB.c,
-      skyIslandsStaticConfig: () => bB.d,
-      skyblockStaticConfig: () => gB.c,
-      skywarsStaticConfig: () => tB.c,
-      survivalRoyaleStaticConfig: () => Jj,
-      testGymStaticConfig: () => kB.c,
-      thePitStaticConfig: () => yj,
-      tsunamiStaticConfig: () => eB.c,
-      uchStaticConfig: () => mj,
-      wallsStaticConfig: () => Ij
+      coolMathGamesAggregatorConfig: () => nB.b,
+      coreDefendersStaticConfig: () => SB.b,
+      crazyGamesNinetyNineNightsBundle: () => hB.d,
+      ctfStaticConfig: () => hI,
+      customGameSettings: () => TB.f,
+      customGamesListingHeading: () => PI.e,
+      customGamesListingPath: () => PI.g,
+      defusalStaticConfig: () => nI,
+      docsPageHtmlPath: () => rI.l,
+      docsPageMarkdownPath: () => rI.m,
+      docsPagePartPath: () => rI.q,
+      docsPageTitles: () => OI.e,
+      docsSitePageMarkdownPath: () => rI.u,
+      dodgeBowStaticConfig: () => vI,
+      doodleStaticConfig: () => iB.b,
+      dressUpStaticConfig: () => EB.c,
+      eatToGrowStaticConfig: () => ZI.d,
+      escapeHtml: () => OI.g,
+      eviltowerStaticConfig: () => UB.d,
+      exampleStaticConfig: () => qB.b,
+      extractionStaticConfig: () => AB.e,
+      firstPartyStudioGames: () => oB.c,
+      fishingStaticConfig: () => NB.d,
+      gameImageVariantHeights: () => sI.b,
+      gameImageVariantsEncoding: () => QI.e,
+      getAllAggregatorGameNames: () => GB.d,
+      getConfiguredGameImagePaths: () => wI.b,
+      getCustomGameFromPath: () => OI.k,
+      getCustomGameListingPage: () => PI.h,
+      getCustomGamePagePath: () => OI.l,
+      getCustomGamePageRedirectPath: () => OI.m,
+      getCustomGameSchematicIdFromPath: () => OI.q,
+      getCustomGameThumbnailCandidates: () => WI.c,
+      getCustomGameThumbnailUrls: () => WI.f,
+      getCustomGameUrlIdFromPath: () => OI.u,
+      getFirstPartyStudioGameName: () => oB.g,
+      getGameCanonicalUrl: () => OI.w,
+      getGameImageBlurhash: () => dI.b,
+      getGameImagePath: () => wI.f,
+      getGameImageVariantPath: () => sI.j,
+      getGameImageVariantSource: () => CI.d,
+      getGameImageVariants: () => CI.e,
+      getGamePage: () => OI.G,
+      getGamePageContentHeadings: () => YI.f,
+      getGamePagePath: () => OI.A,
+      getGamePageRedirectPath: () => OI.D,
+      getGameSeoMetadata: () => OI.I,
+      getGameTileImagePaths: () => CI.i,
+      getIndexedCustomGameListingPaths: () => PI.i,
+      getIndexedGamePages: () => OI.K,
+      getJsonLdScriptText: () => OI.N,
+      getPathGamePageContentGame: () => OI.R,
+      getPathSeoMetadata: () => OI.S,
+      getPlayableGame: () => JB,
+      getPlayerSeoMetadata: () => OI.V,
+      getSeoMetaTagAttributes: () => OI.Y,
+      getShaderPackPolicy: () => TB.j,
+      getShaderPackSeoMetadata: () => OI.ab,
+      getStaticGameConfig: () => TB.m,
+      getStaticPageSeoMetadata: () => OI.bb,
+      getUndescribedPageSeoMetadata: () => OI.db,
+      goalRushStaticConfig: () => KB.e,
+      goldrushStaticConfig: () => oI,
+      greenvilleStaticConfig: () => pB.e,
+      heroesvbrainrotsStaticConfig: () => VB.e,
+      hideseekStaticConfig: () => MB.e,
+      infectionStaticConfig: () => PB.d,
+      isGameIndexed: () => OI.eb,
+      knockoutStaticConfig: () => bB.d,
+      lastStandStaticConfig: () => XB.e,
+      loadGamePageContent: () => YI.j,
+      luckyBattlegroundsStaticConfig: () => YB.b,
+      luckyTowersStaticConfig: () => OB.c,
+      murderMysteryStaticConfig: () => HB.b,
+      naturalDisasterStaticConfig: () => rB.c,
+      ninetyNineNightsStaticConfig: () => mB.b,
+      normaliseFirstPartyGameNames: () => oB.i,
+      oneBlockStaticConfig: () => WB.e,
+      paintballStaticConfig: () => RB.e,
+      parkourStaticConfig: () => zB.d,
+      petSimulatorStaticConfig: () => cI,
+      piratesStaticConfig: () => sB.e,
+      plotsStaticConfig: () => QB.b,
+      prisonStaticConfig: () => UI,
+      pvpCivStaticConfig: () => II.c,
+      racingStaticConfig: () => yI,
+      rankedStaticConfig: () => uB.e,
+      readDocsPageMarkdownPath: () => rI.v,
+      renderGamePageContentHtml: () => jI,
+      renderSeoMetaTags: () => OI.ib,
+      rocketParkourStaticConfig: () => LB.d,
+      rocketSpleefStaticConfig: () => wB.c,
+      seoSiteOrigin: () => RI.b,
+      shootingStaticConfig: () => FB.b,
+      simonSaysStaticConfig: () => tB.b,
+      skyIslandsStaticConfig: () => DB.d,
+      skyblockStaticConfig: () => dB.b,
+      skywarsStaticConfig: () => CB.c,
+      survivalRoyaleStaticConfig: () => NI,
+      testGymStaticConfig: () => yB.c,
+      thePitStaticConfig: () => qI,
+      tsunamiStaticConfig: () => fB.b,
+      uchStaticConfig: () => gI,
+      wallsStaticConfig: () => GI
     });
-    var QB = zB(814);
+    var TB = ZB(810);
 
-    function nB(BB) {
-      var jB, zB;
-      return null !== (jB = null === (zB = (0, QB.g)(BB)) || void 0 === zB ? void 0 : zB.defaultListedVariation) && void 0 !== jB ? jB : BB
+    function JB(BB) {
+      var IB, ZB;
+      return null !== (IB = null === (ZB = (0, TB.m)(BB)) || void 0 === ZB ? void 0 : ZB.defaultListedVariation) && void 0 !== IB ? IB : BB
     }
-    var dB = zB(1060),
-      IB = zB(1082),
-      NB = zB(810),
-      uB = zB(798),
-      UB = zB(805),
-      aB = zB(791),
-      pB = zB(789),
-      rB = zB(820),
-      sB = zB(847),
-      JB = zB(826),
-      mB = zB(834),
-      yB = zB(841),
-      kB = zB(845),
-      GB = zB(850),
-      LB = zB(859),
-      gB = zB(868),
-      tB = zB(876),
-      SB = zB(879),
-      MB = zB(888),
-      EB = zB(891),
-      iB = zB(899),
-      qB = zB(901),
-      fB = zB(903),
-      oB = zB(907),
-      HB = zB(914),
-      DB = zB(919),
-      FB = zB(926),
-      YB = zB(928),
-      VB = zB(937),
-      hB = zB(941),
-      XB = zB(947),
-      ZB = zB(950),
-      AB = zB(956),
-      TB = zB(963),
-      PB = zB(972),
-      WB = zB(977),
-      eB = zB(983),
-      lB = zB(989),
-      wB = zB(996),
-      xB = zB(1001),
-      KB = zB(1003),
-      CB = zB(1012),
-      cB = zB(1020),
-      bB = zB(1022),
-      vB = zB(1027),
-      RB = zB(1029),
-      OB = zB(1032),
-      Bj = zB(1041),
-      jj = zB(1047),
-      zj = zB(1053),
-      Qj = zB(1057);
-    const nj = {
+    var oB = ZB(1051),
+      GB = ZB(1075),
+      vB = ZB(803),
+      kB = ZB(788),
+      cB = ZB(796),
+      nB = ZB(779),
+      hB = ZB(770),
+      zB = ZB(817),
+      FB = ZB(840),
+      NB = ZB(820),
+      gB = ZB(826),
+      qB = ZB(828),
+      yB = ZB(832),
+      UB = ZB(844),
+      WB = ZB(847),
+      dB = ZB(851),
+      CB = ZB(857),
+      QB = ZB(860),
+      sB = ZB(862),
+      wB = ZB(864),
+      OB = ZB(873),
+      YB = ZB(878),
+      iB = ZB(885),
+      pB = ZB(893),
+      aB = ZB(901),
+      HB = ZB(908),
+      MB = ZB(914),
+      jB = ZB(919),
+      PB = ZB(923),
+      RB = ZB(927),
+      rB = ZB(936),
+      mB = ZB(938),
+      XB = ZB(941),
+      LB = ZB(944),
+      eB = ZB(948),
+      uB = ZB(953),
+      fB = ZB(962),
+      lB = ZB(967),
+      AB = ZB(976),
+      tB = ZB(984),
+      bB = ZB(993),
+      xB = ZB(996),
+      EB = ZB(1004),
+      DB = ZB(1007),
+      KB = ZB(1011),
+      VB = ZB(1013),
+      SB = ZB(1017),
+      BI = ZB(1025),
+      II = ZB(1032),
+      ZI = ZB(1039),
+      TI = ZB(1046);
+    const JI = {
         type: "Arena",
         title: "Battle Arena",
         description: "Fight for glory in a 2v2v2v2v2v2v2v2 arena!",
@@ -199,7 +199,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      dj = {
+      oI = {
         type: "Arena",
         title: "Goldrush",
         description: "Who is the best miner?\nMine gold and deposit it at your spawn, but beware of others killing you",
@@ -213,7 +213,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      Ij = {
+      GI = {
         type: "Arena",
         title: "Walls",
         description: "Prepare with your team before the walls comes down and you need to fight to the death!",
@@ -224,7 +224,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      Nj = {
+      vI = {
         type: "Arena",
         title: "Dodge Bow",
         description: "Runners use speed and cover to survive until the timer ends. Hunters use bows, trying to eliminate all runners before time runs out.",
@@ -243,7 +243,7 @@ export const modules = {
         },
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      uj = {
+      kI = {
         type: "Arena",
         title: "BattleBox",
         description: "Battle other teams in rounds!",
@@ -263,7 +263,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: ""
       },
-      Uj = {
+      cI = {
         type: "Simulator",
         title: "game:petSim",
         description: "game:petSimDescription",
@@ -277,7 +277,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      aj = {
+      nI = {
         type: "Shooting",
         title: "Defusal",
         description: "Defuse or detonate the spike!",
@@ -288,7 +288,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      pj = {
+      hI = {
         type: "Arena",
         title: "Capture the Flag",
         description: "Classic 'Capture the Flag' with kits.",
@@ -298,7 +298,7 @@ export const modules = {
         useRejoinLastLobbyButton: !1,
         additionalMetaTags: []
       },
-      rj = {
+      zI = {
         type: "Arena",
         title: "Conqueror",
         description: "Make tactical choices to conquer your enemies!",
@@ -317,7 +317,7 @@ export const modules = {
         },
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      sj = {
+      FI = {
         type: "Arena",
         title: "Capture the Flag",
         description: "Capture the flag to win! It's that simple!",
@@ -330,7 +330,7 @@ export const modules = {
         useRejoinLastLobbyButton: !1,
         additionalMetaTags: []
       },
-      Jj = {
+      NI = {
         type: "Survival",
         title: "Survival Royale",
         description: "Fortnite but way better ofc ;)",
@@ -341,7 +341,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      mj = {
+      gI = {
         type: "Parkour",
         title: "Parkour Builder",
         description: "Race through a parkour map with a twist - each round, you get to add a new block to the course!",
@@ -358,7 +358,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      yj = {
+      qI = {
         type: "Arena",
         title: "The Pit",
         description: "Jump in the pit, beat everyone else!",
@@ -369,7 +369,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      kj = {
+      yI = {
         type: "Racing",
         title: "Rush Racing",
         description: "Compete against other players in a fast-paced racing game!",
@@ -382,7 +382,7 @@ export const modules = {
         additionalMetaTags: [],
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       },
-      Gj = {
+      UI = {
         title: "Prison",
         type: "Roleplay",
         description: "Survive in maximum security prison!",
@@ -401,107 +401,107 @@ export const modules = {
         },
         gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       };
-    var Lj = zB(1594),
-      gj = zB(1609),
-      tj = zB(3617),
-      Sj = zB(3629),
-      Mj = zB(1603),
-      Ej = zB(3625),
-      ij = zB(1570),
-      qj = zB(1621);
+    var WI = ZB(1632),
+      dI = ZB(1642),
+      CI = ZB(3685),
+      QI = ZB(3696),
+      sI = ZB(1638),
+      wI = ZB(3688),
+      OI = ZB(1614),
+      YI = ZB(1663);
 
-    function fj(BB, jB, zB) {
-      return `<${BB}><h2>${(0,ij.c)(jB)}</h2>${zB}</${BB}>`
+    function iI(BB, IB, ZB) {
+      return `<${BB}><h2>${(0,OI.g)(IB)}</h2>${ZB}</${BB}>`
     }
 
-    function oj(BB) {
-      return BB.map((BB => `<p>${(0,ij.c)(BB)}</p>`)).join("")
+    function pI(BB) {
+      return BB.map((BB => `<p>${(0,OI.g)(BB)}</p>`)).join("")
     }
 
-    function Hj(BB) {
+    function aI(BB) {
       return `<ul>${BB.map((BB=>`<li>${BB}</li>`)).join("")}</ul>`
     }
 
-    function Dj(BB) {
-      return Hj(BB.map(ij.c))
+    function HI(BB) {
+      return aI(BB.map(OI.g))
     }
 
-    function Fj(BB, jB) {
-      return Hj(BB.similarGames.map((BB => {
-        var zB, nB;
-        const dB = null !== (zB = null === (nB = qj.d[BB]) || void 0 === nB ? void 0 : nB.name) && void 0 !== zB ? zB : jB(QB.c[BB].title);
-        return `<a href="${(0,ij.c)((0,ij.p)(BB))}">${(0,ij.c)(dB)}</a>`
+    function MI(BB, IB) {
+      return aI(BB.similarGames.map((BB => {
+        var ZB, JB;
+        const oB = null !== (ZB = null === (JB = YI.b[BB]) || void 0 === JB ? void 0 : JB.name) && void 0 !== ZB ? ZB : IB(TB.c[BB].title);
+        return `<a href="${(0,OI.g)((0,OI.A)(BB))}">${(0,OI.g)(oB)}</a>`
       })))
     }
-    async function Yj(BB, jB) {
-      const zB = (0, ij.u)(BB);
-      if (!zB) return null;
-      const QB = await (0, qj.j)(zB),
-        nB = (0, qj.h)(QB),
-        dB = QB.faq.map((BB => {
+    async function jI(BB, IB) {
+      const ZB = (0, OI.G)(BB);
+      if (!ZB) return null;
+      const TB = await (0, YI.j)(ZB),
+        JB = (0, YI.f)(TB),
+        oB = TB.faq.map((BB => {
           let {
-            question: jB,
-            answer: zB
+            question: IB,
+            answer: ZB
           } = BB;
-          return `<h3>${(0,ij.c)(jB)}</h3><p>${(0,ij.c)(zB)}</p>`
+          return `<h3>${(0,OI.g)(IB)}</h3><p>${(0,OI.g)(ZB)}</p>`
         })).join("");
-      return `<main style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><article>${[`<header><h1>${(0,ij.c)(QB.name)}</h1><p>${(0,ij.c)(QB.description)}</p></header>`,fj("section",nB.whatIs,oj(QB.whatIs)),fj("section",nB.howToPlay,oj(QB.howToPlay)),fj("section",nB.features,Dj(QB.features)),fj("aside",nB.tips,Dj(QB.tips)),fj("section",nB.faq,dB),fj("nav",nB.similarGames,Fj(QB,jB))].join("")}</article></main>`
+      return `<main style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><article>${[`<header><h1>${(0,OI.g)(TB.name)}</h1><p>${(0,OI.g)(TB.description)}</p></header>`,iI("section",JB.whatIs,pI(TB.whatIs)),iI("section",JB.howToPlay,pI(TB.howToPlay)),iI("section",JB.features,HI(TB.features)),iI("aside",JB.tips,HI(TB.tips)),iI("section",JB.faq,oB),iI("nav",JB.similarGames,MI(TB,IB))].join("")}</article></main>`
     }
-    var Vj = zB(1619),
-      hj = zB(1615),
-      Xj = zB(4918)
+    var PI = ZB(1657),
+      RI = ZB(1651),
+      rI = ZB(4995)
   },
-  4918: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => nB,
-      f: () => uB,
-      g: () => dB,
-      h: () => IB,
-      i: () => NB,
-      j: () => yB,
-      m: () => aB,
-      n: () => pB,
-      o: () => mB,
-      r: () => sB
+  4995: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => JB,
+      e: () => kB,
+      h: () => oB,
+      i: () => GB,
+      k: () => vB,
+      l: () => qB,
+      m: () => nB,
+      q: () => hB,
+      u: () => gB,
+      v: () => FB
     });
-    var QB = zB(1615);
-    const nB = 24e3,
-      dB = "/docs/llms.txt",
-      IB = `${QB.e}${dB}`,
-      NB = "/llms.txt",
-      uB = "/docs/llms-full.txt";
+    var TB = ZB(1651);
+    const JB = 24e3,
+      oB = "/docs/llms.txt",
+      GB = `${TB.b}${oB}`,
+      vB = "/llms.txt",
+      kB = "/docs/llms-full.txt";
 
-    function UB(BB) {
+    function cB(BB) {
       return BB || "index"
     }
 
-    function aB(BB) {
-      return `/docs/${UB(BB)}.md`
+    function nB(BB) {
+      return `/docs/${cB(BB)}.md`
     }
 
-    function pB(BB, jB) {
-      return `/docs/${UB(BB)}/${jB+1}.md`
+    function hB(BB, IB) {
+      return `/docs/${cB(BB)}/${IB+1}.md`
     }
-    const rB = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+    const zB = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-    function sB(BB) {
-      const jB = rB.exec(BB);
-      return null === jB ? null : {
-        name: jB[1],
-        part: void 0 === jB[2] ? null : Number(jB[2])
+    function FB(BB) {
+      const IB = zB.exec(BB);
+      return null === IB ? null : {
+        name: IB[1],
+        part: void 0 === IB[2] ? null : Number(IB[2])
       }
     }
-    const JB = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+    const NB = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-    function mB(BB) {
-      const jB = JB.exec(BB);
-      if (null === jB) return null;
-      const [, zB = "", QB] = jB;
-      return void 0 === QB ? aB(zB) : pB(zB, Number(QB) - 1)
+    function gB(BB) {
+      const IB = NB.exec(BB);
+      if (null === IB) return null;
+      const [, ZB = "", TB] = IB;
+      return void 0 === TB ? nB(ZB) : hB(ZB, Number(TB) - 1)
     }
 
-    function yB(BB) {
-      return `/docsHtml/${UB(BB)}.html`
+    function qB(BB) {
+      return `/docsHtml/${cB(BB)}.html`
     }
   }
 };

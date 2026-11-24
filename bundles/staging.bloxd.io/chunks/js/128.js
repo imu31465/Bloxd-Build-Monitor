@@ -1,40 +1,40 @@
 export const id = 128;
 export const ids = [128];
 export const modules = {
-  6501: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => rB
+  6715: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => zB
     });
-    var QB = zB(1369),
-      nB = zB(62),
-      dB = zB(121),
-      IB = zB(1547),
-      NB = zB(1265),
-      uB = zB(363),
-      UB = zB(690);
-    const aB = new URL(NB.n[uB.e.PRODUCTION]).origin;
-    var pB = zB(1148);
+    var TB = ZB(1397),
+      JB = ZB(63),
+      oB = ZB(118),
+      GB = ZB(1591),
+      vB = ZB(1290),
+      kB = ZB(342),
+      cB = ZB(684);
+    const nB = new URL(vB.l[kB.e.PRODUCTION]).origin;
+    var hB = ZB(1153);
 
-    function rB() {
-      const BB = (0, IB.w)();
-      return (0, nB.useEffect)((() => {
-        const jB = dB.currentUrl.getSearchParam("code");
-        dB.currentUrl.removeSearchParam("code"), null === jB && (console.error("No authorization code found in the URL"), window.close());
-        const zB = {
+    function zB() {
+      const BB = (0, GB.B)();
+      return (0, JB.useEffect)((() => {
+        const IB = oB.currentUrl.getSearchParam("code");
+        oB.currentUrl.removeSearchParam("code"), null === IB && (console.error("No authorization code found in the URL"), window.close());
+        const ZB = {
           type: `oauth_authentication_${BB.providerName}`,
-          code: jB
+          code: IB
         };
-        for (const BB of (nB = window.location.origin) === aB ? [nB, `https://${UB.b}`] : [nB]) {
-          var QB;
-          null === (QB = window.opener) || void 0 === QB || QB.postMessage(zB, BB)
+        for (const BB of (JB = window.location.origin) === nB ? [JB, `https://${cB.c}`] : [JB]) {
+          var TB;
+          null === (TB = window.opener) || void 0 === TB || TB.postMessage(ZB, BB)
         }
-        var nB;
+        var JB;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, pB.jsx)("div", {
+      })), (0, hB.jsx)("div", {
         className: "AuthCallback",
-        children: (0, pB.jsx)(QB.e, {
+        children: (0, hB.jsx)(TB.d, {
           showFace: !0,
           loading: !0
         })

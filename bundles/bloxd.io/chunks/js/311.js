@@ -1,432 +1,432 @@
 export const id = 311;
 export const ids = [311];
 export const modules = {
-  41862: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => UB
+  41794: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => cB
     });
-    var QB = zB(37171),
-      nB = zB(37208),
-      dB = zB(40056),
-      IB = zB(37178),
-      NB = zB(37379);
-    class uB {
-      constructor(BB, jB, zB, QB) {
-        this.name = BB, this.worldAxisForNormal = jB, this.worldAxisForFileX = zB, this.worldAxisForFileY = QB
+    var TB = ZB(37120),
+      JB = ZB(37158),
+      oB = ZB(40044),
+      GB = ZB(37129),
+      vB = ZB(37311);
+    class kB {
+      constructor(BB, IB, ZB, TB) {
+        this.name = BB, this.worldAxisForNormal = IB, this.worldAxisForFileX = ZB, this.worldAxisForFileY = TB
       }
     }
-    class UB {
+    class cB {
       static _NearestPow2Floor(BB) {
         return BB <= 1 ? 1 : 1 << Math.floor(Math.log2(BB))
       }
       static ConvertCubeMapTextureToSphericalPolynomial(BB) {
         if (!BB.isCube) return null;
-        BB.aY()?.wJ().flushFramebuffer();
-        const jB = BB.getSize().width,
-          zB = BB._sphericalPolynomialTargetSize,
-          QB = zB > 0 ? this._NearestPow2Floor(zB) : 0,
-          nB = !BB.noMipmap && !0 === BB._texture?.generateMipMaps,
-          dB = QB > 0 && QB < jB && nB,
-          IB = dB ? Math.max(0, Math.round(Math.log2(jB / QB))) : 0,
-          NB = dB ? Math.max(1, Math.floor(jB / Math.pow(2, IB))) : jB,
-          uB = BB.readPixels(0, IB, void 0, !1),
-          UB = BB.readPixels(1, IB, void 0, !1);
-        let aB, pB;
-        BB.isRenderTarget ? (aB = BB.readPixels(3, IB, void 0, !1), pB = BB.readPixels(2, IB, void 0, !1)) : (aB = BB.readPixels(2, IB, void 0, !1), pB = BB.readPixels(3, IB, void 0, !1));
-        const rB = BB.readPixels(4, IB, void 0, !1),
-          sB = BB.readPixels(5, IB, void 0, !1),
-          JB = BB.gammaSpace,
-          mB = QB > 0 && QB < jB && !dB;
+        BB.JR()?.PN().flushFramebuffer();
+        const IB = BB.getSize().width,
+          ZB = BB._sphericalPolynomialTargetSize,
+          TB = ZB > 0 ? this._NearestPow2Floor(ZB) : 0,
+          JB = !BB.noMipmap && !0 === BB._texture?.generateMipMaps,
+          oB = TB > 0 && TB < IB && JB,
+          GB = oB ? Math.max(0, Math.round(Math.log2(IB / TB))) : 0,
+          vB = oB ? Math.max(1, Math.floor(IB / Math.pow(2, GB))) : IB,
+          kB = BB.readPixels(0, GB, void 0, !1),
+          cB = BB.readPixels(1, GB, void 0, !1);
+        let nB, hB;
+        BB.isRenderTarget ? (nB = BB.readPixels(3, GB, void 0, !1), hB = BB.readPixels(2, GB, void 0, !1)) : (nB = BB.readPixels(2, GB, void 0, !1), hB = BB.readPixels(3, GB, void 0, !1));
+        const zB = BB.readPixels(4, GB, void 0, !1),
+          FB = BB.readPixels(5, GB, void 0, !1),
+          NB = BB.gammaSpace,
+          gB = TB > 0 && TB < IB && !oB;
         return new Promise((BB => {
-          Promise.all([UB, uB, aB, pB, rB, sB]).then((zB => {
-            let [nB, dB, IB, uB, UB, aB] = zB, pB = NB;
-            if (mB) {
+          Promise.all([cB, kB, nB, hB, zB, FB]).then((ZB => {
+            let [JB, oB, GB, kB, cB, nB] = ZB, hB = vB;
+            if (gB) {
               const BB = 4;
-              nB = this._DownsampleFace(nB, jB, QB, BB), dB = this._DownsampleFace(dB, jB, QB, BB), IB = this._DownsampleFace(IB, jB, QB, BB), uB = this._DownsampleFace(uB, jB, QB, BB), UB = this._DownsampleFace(UB, jB, QB, BB), aB = this._DownsampleFace(aB, jB, QB, BB), pB = QB
+              JB = this._DownsampleFace(JB, IB, TB, BB), oB = this._DownsampleFace(oB, IB, TB, BB), GB = this._DownsampleFace(GB, IB, TB, BB), kB = this._DownsampleFace(kB, IB, TB, BB), cB = this._DownsampleFace(cB, IB, TB, BB), nB = this._DownsampleFace(nB, IB, TB, BB), hB = TB
             }
-            const rB = {
-              size: pB,
-              right: dB,
-              left: nB,
-              up: IB,
-              down: uB,
-              front: UB,
-              back: aB,
+            const zB = {
+              size: hB,
+              right: oB,
+              left: JB,
+              up: GB,
+              down: kB,
+              front: cB,
+              back: nB,
               format: 5,
-              type: nB instanceof Float32Array ? 1 : 0,
-              gammaSpace: JB
+              type: JB instanceof Float32Array ? 1 : 0,
+              gammaSpace: NB
             };
-            BB(this.ConvertCubeMapToSphericalPolynomial(rB))
+            BB(this.ConvertCubeMapToSphericalPolynomial(zB))
           }))
         }))
       }
-      static _AreaElement(BB, jB) {
-        return Math.atan2(BB * jB, Math.sqrt(BB * BB + jB * jB + 1))
+      static _AreaElement(BB, IB) {
+        return Math.atan2(BB * IB, Math.sqrt(BB * BB + IB * IB + 1))
       }
-      static _DownsampleFace(BB, jB, zB, QB) {
-        const nB = BB instanceof Float32Array ? BB : Float32Array.from(BB),
-          dB = zB * zB * QB,
-          IB = new Float32Array(dB),
-          NB = jB / zB,
-          uB = 1 / (NB * NB);
-        for (let aB = 0; aB < zB; aB++) {
-          const BB = Math.floor(aB * NB),
-            dB = Math.floor((aB + 1) * NB);
-          for (let UB = 0; UB < zB; UB++) {
-            const pB = Math.floor(UB * NB),
-              rB = Math.floor((UB + 1) * NB),
-              sB = (aB * zB + UB) * QB;
-            for (let zB = 0; zB < QB; zB++) {
-              let NB = 0;
-              for (let IB = BB; IB < dB; IB++)
-                for (let BB = pB; BB < rB; BB++) NB += nB[(IB * jB + BB) * QB + zB];
-              IB[sB + zB] = NB * uB
+      static _DownsampleFace(BB, IB, ZB, TB) {
+        const JB = BB instanceof Float32Array ? BB : Float32Array.from(BB),
+          oB = ZB * ZB * TB,
+          GB = new Float32Array(oB),
+          vB = IB / ZB,
+          kB = 1 / (vB * vB);
+        for (let nB = 0; nB < ZB; nB++) {
+          const BB = Math.floor(nB * vB),
+            oB = Math.floor((nB + 1) * vB);
+          for (let cB = 0; cB < ZB; cB++) {
+            const hB = Math.floor(cB * vB),
+              zB = Math.floor((cB + 1) * vB),
+              FB = (nB * ZB + cB) * TB;
+            for (let ZB = 0; ZB < TB; ZB++) {
+              let vB = 0;
+              for (let GB = BB; GB < oB; GB++)
+                for (let BB = hB; BB < zB; BB++) vB += JB[(GB * IB + BB) * TB + ZB];
+              GB[FB + ZB] = vB * kB
             }
           }
         }
-        if (BB instanceof Float32Array) return IB;
-        const UB = new(0, BB.constructor)(dB);
-        for (let aB = 0; aB < dB; aB++) UB[aB] = IB[aB] + .5 | 0;
-        return UB
+        if (BB instanceof Float32Array) return GB;
+        const cB = new(0, BB.constructor)(oB);
+        for (let nB = 0; nB < oB; nB++) cB[nB] = GB[nB] + .5 | 0;
+        return cB
       }
       static ConvertCubeMapToSphericalPolynomial(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const zB = jB > 0 ? this._NearestPow2Floor(jB) : 0;
-        if (zB > 0 && BB.size > zB) {
-          const jB = 5 === BB.format ? 4 : 3,
-            QB = ["right", "left", "up", "down", "front", "back"],
-            nB = {};
-          for (const dB of QB) nB[dB] = this._DownsampleFace(BB[dB], BB.size, zB, jB);
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ZB = IB > 0 ? this._NearestPow2Floor(IB) : 0;
+        if (ZB > 0 && BB.size > ZB) {
+          const IB = 5 === BB.format ? 4 : 3,
+            TB = ["right", "left", "up", "down", "front", "back"],
+            JB = {};
+          for (const oB of TB) JB[oB] = this._DownsampleFace(BB[oB], BB.size, ZB, IB);
           BB = {
             ...BB,
-            ...nB,
-            size: zB
+            ...JB,
+            size: ZB
           }
         }
-        const QB = new dB.d;
-        let uB = 0;
-        const UB = 2 / BB.size,
-          aB = UB,
-          pB = .5 * UB,
-          rB = pB - 1;
-        for (let dB = 0; dB < 6; dB++) {
-          const jB = this._FileFaces[dB],
-            zB = BB[jB.name];
-          let sB = rB;
-          const JB = 5 === BB.format ? 4 : 3;
-          for (let dB = 0; dB < BB.size; dB++) {
-            let mB = rB;
-            for (let aB = 0; aB < BB.size; aB++) {
-              const rB = jB.worldAxisForFileX.scale(mB).add(jB.worldAxisForFileY.scale(sB)).add(jB.worldAxisForNormal);
-              rB.normalize();
-              const yB = this._AreaElement(mB - pB, sB - pB) - this._AreaElement(mB - pB, sB + pB) - this._AreaElement(mB + pB, sB - pB) + this._AreaElement(mB + pB, sB + pB);
-              let kB = zB[dB * BB.size * JB + aB * JB + 0],
-                GB = zB[dB * BB.size * JB + aB * JB + 1],
-                LB = zB[dB * BB.size * JB + aB * JB + 2];
-              isNaN(kB) && (kB = 0), isNaN(GB) && (GB = 0), isNaN(LB) && (LB = 0), 0 === BB.type && (kB /= 255, GB /= 255, LB /= 255), BB.gammaSpace && (kB = Math.pow((0, nB.Clamp)(kB), IB.h), GB = Math.pow((0, nB.Clamp)(GB), IB.h), LB = Math.pow((0, nB.Clamp)(LB), IB.h));
-              const gB = this.MAX_HDRI_VALUE;
+        const TB = new oB.c;
+        let kB = 0;
+        const cB = 2 / BB.size,
+          nB = cB,
+          hB = .5 * cB,
+          zB = hB - 1;
+        for (let oB = 0; oB < 6; oB++) {
+          const IB = this._FileFaces[oB],
+            ZB = BB[IB.name];
+          let FB = zB;
+          const NB = 5 === BB.format ? 4 : 3;
+          for (let oB = 0; oB < BB.size; oB++) {
+            let gB = zB;
+            for (let nB = 0; nB < BB.size; nB++) {
+              const zB = IB.worldAxisForFileX.scale(gB).add(IB.worldAxisForFileY.scale(FB)).add(IB.worldAxisForNormal);
+              zB.normalize();
+              const qB = this._AreaElement(gB - hB, FB - hB) - this._AreaElement(gB - hB, FB + hB) - this._AreaElement(gB + hB, FB - hB) + this._AreaElement(gB + hB, FB + hB);
+              let yB = ZB[oB * BB.size * NB + nB * NB + 0],
+                UB = ZB[oB * BB.size * NB + nB * NB + 1],
+                WB = ZB[oB * BB.size * NB + nB * NB + 2];
+              isNaN(yB) && (yB = 0), isNaN(UB) && (UB = 0), isNaN(WB) && (WB = 0), 0 === BB.type && (yB /= 255, UB /= 255, WB /= 255), BB.gammaSpace && (yB = Math.pow((0, JB.Clamp)(yB), GB.g), UB = Math.pow((0, JB.Clamp)(UB), GB.g), WB = Math.pow((0, JB.Clamp)(WB), GB.g));
+              const dB = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const BB = Math.max(kB, GB, LB);
-                if (BB > gB) {
-                  const jB = gB / BB;
-                  kB *= jB, GB *= jB, LB *= jB
+                const BB = Math.max(yB, UB, WB);
+                if (BB > dB) {
+                  const IB = dB / BB;
+                  yB *= IB, UB *= IB, WB *= IB
                 }
-              } else kB = (0, nB.Clamp)(kB, 0, gB), GB = (0, nB.Clamp)(GB, 0, gB), LB = (0, nB.Clamp)(LB, 0, gB);
-              const tB = new NB.d(kB, GB, LB);
-              QB.addLight(rB, tB, yB), uB += yB, mB += UB
+              } else yB = (0, JB.Clamp)(yB, 0, dB), UB = (0, JB.Clamp)(UB, 0, dB), WB = (0, JB.Clamp)(WB, 0, dB);
+              const CB = new vB.c(yB, UB, WB);
+              TB.addLight(zB, CB, qB), kB += qB, gB += cB
             }
-            sB += aB
+            FB += nB
           }
         }
-        const sB = 6 * (4 * Math.PI) / 6 / uB;
-        return QB.scaleInPlace(sB), QB.convertIncidentRadianceToIrradiance(), QB.convertIrradianceToLambertianRadiance(), dB.h.FromHarmonics(QB)
+        const FB = 6 * (4 * Math.PI) / 6 / kB;
+        return TB.scaleInPlace(FB), TB.convertIncidentRadianceToIrradiance(), TB.convertIrradianceToLambertianRadiance(), oB.f.FromHarmonics(TB)
       }
     }
-    UB._FileFaces = [new uB("right", new QB.m(1, 0, 0), new QB.m(0, 0, -1), new QB.m(0, -1, 0)), new uB("left", new QB.m(-1, 0, 0), new QB.m(0, 0, 1), new QB.m(0, -1, 0)), new uB("up", new QB.m(0, 1, 0), new QB.m(1, 0, 0), new QB.m(0, 0, 1)), new uB("down", new QB.m(0, -1, 0), new QB.m(1, 0, 0), new QB.m(0, 0, -1)), new uB("front", new QB.m(0, 0, 1), new QB.m(1, 0, 0), new QB.m(0, -1, 0)), new uB("back", new QB.m(0, 0, -1), new QB.m(-1, 0, 0), new QB.m(0, -1, 0))], UB.MAX_HDRI_VALUE = 4096, UB.PRESERVE_CLAMPED_COLORS = !1
+    cB._FileFaces = [new kB("right", new TB.s(1, 0, 0), new TB.s(0, 0, -1), new TB.s(0, -1, 0)), new kB("left", new TB.s(-1, 0, 0), new TB.s(0, 0, 1), new TB.s(0, -1, 0)), new kB("up", new TB.s(0, 1, 0), new TB.s(1, 0, 0), new TB.s(0, 0, 1)), new kB("down", new TB.s(0, -1, 0), new TB.s(1, 0, 0), new TB.s(0, 0, -1)), new kB("front", new TB.s(0, 0, 1), new TB.s(1, 0, 0), new TB.s(0, -1, 0)), new kB("back", new TB.s(0, 0, -1), new TB.s(-1, 0, 0), new TB.s(0, -1, 0))], cB.MAX_HDRI_VALUE = 4096, cB.PRESERVE_CLAMPED_COLORS = !1
   },
-  41853: (BB, jB, zB) => {
-    zB.d(jB, {
-      DDSTools: () => JB
+  41790: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      DDSTools: () => NB
     });
-    var QB = zB(37208),
-      nB = zB(38783),
-      dB = zB(41862),
-      IB = zB(40130);
-    const NB = 131072,
-      uB = 131072;
+    var TB = ZB(37158),
+      JB = ZB(38718),
+      oB = ZB(41794),
+      GB = ZB(40134);
+    const vB = 131072,
+      kB = 131072;
 
-    function UB(BB) {
+    function cB(BB) {
       return BB.charCodeAt(0) + (BB.charCodeAt(1) << 8) + (BB.charCodeAt(2) << 16) + (BB.charCodeAt(3) << 24)
     }
-    const aB = UB("DXT1"),
-      pB = UB("DXT3"),
-      rB = UB("DXT5"),
-      sB = UB("DX10");
-    class JB {
+    const nB = cB("DXT1"),
+      hB = cB("DXT3"),
+      zB = cB("DXT5"),
+      FB = cB("DX10");
+    class NB {
       static GetDDSInfo(BB) {
-        const jB = new Int32Array(BB.buffer, BB.byteOffset, 31),
-          zB = new Int32Array(BB.buffer, BB.byteOffset, 35);
-        let QB = 1;
-        jB[2] & NB && (QB = Math.max(1, jB[7]));
-        const nB = jB[21],
-          dB = nB === sB ? zB[32] : 0;
-        let IB = 0;
-        switch (nB) {
+        const IB = new Int32Array(BB.buffer, BB.byteOffset, 31),
+          ZB = new Int32Array(BB.buffer, BB.byteOffset, 35);
+        let TB = 1;
+        IB[2] & vB && (TB = Math.max(1, IB[7]));
+        const JB = IB[21],
+          oB = JB === FB ? ZB[32] : 0;
+        let GB = 0;
+        switch (JB) {
           case 113:
-            IB = 2;
+            GB = 2;
             break;
           case 116:
-            IB = 1;
+            GB = 1;
             break;
-          case sB:
-            if (10 === dB) {
-              IB = 2;
+          case FB:
+            if (10 === oB) {
+              GB = 2;
               break
             }
-            if (2 === dB) {
-              IB = 1;
+            if (2 === oB) {
+              GB = 1;
               break
             }
         }
         return {
-          width: jB[4],
-          height: jB[3],
-          mipmapCount: QB,
-          isFourCC: 4 === (4 & jB[20]),
-          isRGB: 64 === (64 & jB[20]),
-          isLuminance: (jB[20] & uB) === uB,
-          isCube: 512 === (512 & jB[28]),
-          isCompressed: nB === aB || nB === pB || nB === rB,
-          dxgiFormat: dB,
-          textureType: IB
+          width: IB[4],
+          height: IB[3],
+          mipmapCount: TB,
+          isFourCC: 4 === (4 & IB[20]),
+          isRGB: 64 === (64 & IB[20]),
+          isLuminance: (IB[20] & kB) === kB,
+          isCube: 512 === (512 & IB[28]),
+          isCompressed: JB === nB || JB === hB || JB === zB,
+          dxgiFormat: oB,
+          textureType: GB
         }
       }
-      static _GetHalfFloatAsFloatRGBAArrayBuffer(BB, jB, zB, QB, nB, dB) {
-        const NB = new Float32Array(QB),
-          uB = new Uint16Array(nB, zB);
-        let UB = 0;
-        for (let aB = 0; aB < jB; aB++)
-          for (let jB = 0; jB < BB; jB++) {
-            const zB = 4 * (jB + aB * BB);
-            NB[UB] = (0, IB.c)(uB[zB]), NB[UB + 1] = (0, IB.c)(uB[zB + 1]), NB[UB + 2] = (0, IB.c)(uB[zB + 2]), JB.StoreLODInAlphaChannel ? NB[UB + 3] = dB : NB[UB + 3] = (0, IB.c)(uB[zB + 3]), UB += 4
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(BB, IB, ZB, TB, JB, oB) {
+        const vB = new Float32Array(TB),
+          kB = new Uint16Array(JB, ZB);
+        let cB = 0;
+        for (let nB = 0; nB < IB; nB++)
+          for (let IB = 0; IB < BB; IB++) {
+            const ZB = 4 * (IB + nB * BB);
+            vB[cB] = (0, GB.c)(kB[ZB]), vB[cB + 1] = (0, GB.c)(kB[ZB + 1]), vB[cB + 2] = (0, GB.c)(kB[ZB + 2]), NB.StoreLODInAlphaChannel ? vB[cB + 3] = oB : vB[cB + 3] = (0, GB.c)(kB[ZB + 3]), cB += 4
           }
-        return NB
+        return vB
       }
-      static _GetHalfFloatRGBAArrayBuffer(BB, jB, zB, QB, nB, dB) {
-        if (JB.StoreLODInAlphaChannel) {
-          const NB = new Uint16Array(QB),
-            uB = new Uint16Array(nB, zB);
-          let UB = 0;
-          for (let zB = 0; zB < jB; zB++)
-            for (let jB = 0; jB < BB; jB++) {
-              const QB = 4 * (jB + zB * BB);
-              NB[UB] = uB[QB], NB[UB + 1] = uB[QB + 1], NB[UB + 2] = uB[QB + 2], NB[UB + 3] = (0, IB.f)(dB), UB += 4
+      static _GetHalfFloatRGBAArrayBuffer(BB, IB, ZB, TB, JB, oB) {
+        if (NB.StoreLODInAlphaChannel) {
+          const vB = new Uint16Array(TB),
+            kB = new Uint16Array(JB, ZB);
+          let cB = 0;
+          for (let ZB = 0; ZB < IB; ZB++)
+            for (let IB = 0; IB < BB; IB++) {
+              const TB = 4 * (IB + ZB * BB);
+              vB[cB] = kB[TB], vB[cB + 1] = kB[TB + 1], vB[cB + 2] = kB[TB + 2], vB[cB + 3] = (0, GB.h)(oB), cB += 4
             }
-          return NB
+          return vB
         }
-        return new Uint16Array(nB, zB, QB)
+        return new Uint16Array(JB, ZB, TB)
       }
-      static _GetFloatRGBAArrayBuffer(BB, jB, zB, QB, nB, dB) {
-        if (JB.StoreLODInAlphaChannel) {
-          const IB = new Float32Array(QB),
-            NB = new Float32Array(nB, zB);
-          let uB = 0;
-          for (let zB = 0; zB < jB; zB++)
-            for (let jB = 0; jB < BB; jB++) {
-              const QB = 4 * (jB + zB * BB);
-              IB[uB] = NB[QB], IB[uB + 1] = NB[QB + 1], IB[uB + 2] = NB[QB + 2], IB[uB + 3] = dB, uB += 4
+      static _GetFloatRGBAArrayBuffer(BB, IB, ZB, TB, JB, oB) {
+        if (NB.StoreLODInAlphaChannel) {
+          const GB = new Float32Array(TB),
+            vB = new Float32Array(JB, ZB);
+          let kB = 0;
+          for (let ZB = 0; ZB < IB; ZB++)
+            for (let IB = 0; IB < BB; IB++) {
+              const TB = 4 * (IB + ZB * BB);
+              GB[kB] = vB[TB], GB[kB + 1] = vB[TB + 1], GB[kB + 2] = vB[TB + 2], GB[kB + 3] = oB, kB += 4
             }
-          return IB
+          return GB
         }
-        return new Float32Array(nB, zB, QB)
+        return new Float32Array(JB, ZB, TB)
       }
-      static _GetFloatAsHalfFloatRGBAArrayBuffer(BB, jB, zB, QB, nB, dB) {
-        const NB = new Uint16Array(QB),
-          uB = new Float32Array(nB, zB);
-        let UB = 0;
-        for (let aB = 0; aB < jB; aB++)
-          for (let jB = 0; jB < BB; jB++) NB[UB] = (0, IB.f)(uB[UB]), NB[UB + 1] = (0, IB.f)(uB[UB + 1]), NB[UB + 2] = (0, IB.f)(uB[UB + 2]), JB.StoreLODInAlphaChannel ? NB[UB + 3] = (0, IB.f)(dB) : NB[UB + 3] = (0, IB.f)(uB[UB + 3]), UB += 4;
-        return NB
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(BB, IB, ZB, TB, JB, oB) {
+        const vB = new Uint16Array(TB),
+          kB = new Float32Array(JB, ZB);
+        let cB = 0;
+        for (let nB = 0; nB < IB; nB++)
+          for (let IB = 0; IB < BB; IB++) vB[cB] = (0, GB.h)(kB[cB]), vB[cB + 1] = (0, GB.h)(kB[cB + 1]), vB[cB + 2] = (0, GB.h)(kB[cB + 2]), NB.StoreLODInAlphaChannel ? vB[cB + 3] = (0, GB.h)(oB) : vB[cB + 3] = (0, GB.h)(kB[cB + 3]), cB += 4;
+        return vB
       }
-      static _GetFloatAsUIntRGBAArrayBuffer(BB, jB, zB, nB, dB, IB) {
-        const NB = new Uint8Array(nB),
-          uB = new Float32Array(dB, zB);
-        let UB = 0;
-        for (let aB = 0; aB < jB; aB++)
-          for (let jB = 0; jB < BB; jB++) {
-            const zB = 4 * (jB + aB * BB);
-            NB[UB] = 255 * (0, QB.Clamp)(uB[zB]), NB[UB + 1] = 255 * (0, QB.Clamp)(uB[zB + 1]), NB[UB + 2] = 255 * (0, QB.Clamp)(uB[zB + 2]), JB.StoreLODInAlphaChannel ? NB[UB + 3] = IB : NB[UB + 3] = 255 * (0, QB.Clamp)(uB[zB + 3]), UB += 4
+      static _GetFloatAsUIntRGBAArrayBuffer(BB, IB, ZB, JB, oB, GB) {
+        const vB = new Uint8Array(JB),
+          kB = new Float32Array(oB, ZB);
+        let cB = 0;
+        for (let nB = 0; nB < IB; nB++)
+          for (let IB = 0; IB < BB; IB++) {
+            const ZB = 4 * (IB + nB * BB);
+            vB[cB] = 255 * (0, TB.Clamp)(kB[ZB]), vB[cB + 1] = 255 * (0, TB.Clamp)(kB[ZB + 1]), vB[cB + 2] = 255 * (0, TB.Clamp)(kB[ZB + 2]), NB.StoreLODInAlphaChannel ? vB[cB + 3] = GB : vB[cB + 3] = 255 * (0, TB.Clamp)(kB[ZB + 3]), cB += 4
           }
-        return NB
+        return vB
       }
-      static _GetHalfFloatAsUIntRGBAArrayBuffer(BB, jB, zB, nB, dB, NB) {
-        const uB = new Uint8Array(nB),
-          UB = new Uint16Array(dB, zB);
-        let aB = 0;
-        for (let pB = 0; pB < jB; pB++)
-          for (let jB = 0; jB < BB; jB++) {
-            const zB = 4 * (jB + pB * BB);
-            uB[aB] = 255 * (0, QB.Clamp)((0, IB.c)(UB[zB])), uB[aB + 1] = 255 * (0, QB.Clamp)((0, IB.c)(UB[zB + 1])), uB[aB + 2] = 255 * (0, QB.Clamp)((0, IB.c)(UB[zB + 2])), JB.StoreLODInAlphaChannel ? uB[aB + 3] = NB : uB[aB + 3] = 255 * (0, QB.Clamp)((0, IB.c)(UB[zB + 3])), aB += 4
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(BB, IB, ZB, JB, oB, vB) {
+        const kB = new Uint8Array(JB),
+          cB = new Uint16Array(oB, ZB);
+        let nB = 0;
+        for (let hB = 0; hB < IB; hB++)
+          for (let IB = 0; IB < BB; IB++) {
+            const ZB = 4 * (IB + hB * BB);
+            kB[nB] = 255 * (0, TB.Clamp)((0, GB.c)(cB[ZB])), kB[nB + 1] = 255 * (0, TB.Clamp)((0, GB.c)(cB[ZB + 1])), kB[nB + 2] = 255 * (0, TB.Clamp)((0, GB.c)(cB[ZB + 2])), NB.StoreLODInAlphaChannel ? kB[nB + 3] = vB : kB[nB + 3] = 255 * (0, TB.Clamp)((0, GB.c)(cB[ZB + 3])), nB += 4
           }
-        return uB
+        return kB
       }
-      static _GetRGBAArrayBuffer(BB, jB, zB, QB, nB, dB, IB, NB, uB) {
-        const UB = new Uint8Array(QB),
-          aB = new Uint8Array(nB, zB);
-        let pB = 0;
-        for (let rB = 0; rB < jB; rB++)
-          for (let jB = 0; jB < BB; jB++) {
-            const zB = 4 * (jB + rB * BB);
-            UB[pB] = aB[zB + dB], UB[pB + 1] = aB[zB + IB], UB[pB + 2] = aB[zB + NB], UB[pB + 3] = aB[zB + uB], pB += 4
+      static _GetRGBAArrayBuffer(BB, IB, ZB, TB, JB, oB, GB, vB, kB) {
+        const cB = new Uint8Array(TB),
+          nB = new Uint8Array(JB, ZB);
+        let hB = 0;
+        for (let zB = 0; zB < IB; zB++)
+          for (let IB = 0; IB < BB; IB++) {
+            const ZB = 4 * (IB + zB * BB);
+            cB[hB] = nB[ZB + oB], cB[hB + 1] = nB[ZB + GB], cB[hB + 2] = nB[ZB + vB], cB[hB + 3] = nB[ZB + kB], hB += 4
           }
-        return UB
+        return cB
       }
       static _ExtractLongWordOrder(BB) {
-        return 0 === BB || 255 === BB || -16777216 === BB ? 0 : 1 + JB._ExtractLongWordOrder(BB >> 8)
+        return 0 === BB || 255 === BB || -16777216 === BB ? 0 : 1 + NB._ExtractLongWordOrder(BB >> 8)
       }
-      static _GetRGBArrayBuffer(BB, jB, zB, QB, nB, dB, IB, NB) {
-        const uB = new Uint8Array(QB),
-          UB = new Uint8Array(nB, zB);
-        let aB = 0;
-        for (let pB = 0; pB < jB; pB++)
-          for (let jB = 0; jB < BB; jB++) {
-            const zB = 3 * (jB + pB * BB);
-            uB[aB] = UB[zB + dB], uB[aB + 1] = UB[zB + IB], uB[aB + 2] = UB[zB + NB], aB += 3
+      static _GetRGBArrayBuffer(BB, IB, ZB, TB, JB, oB, GB, vB) {
+        const kB = new Uint8Array(TB),
+          cB = new Uint8Array(JB, ZB);
+        let nB = 0;
+        for (let hB = 0; hB < IB; hB++)
+          for (let IB = 0; IB < BB; IB++) {
+            const ZB = 3 * (IB + hB * BB);
+            kB[nB] = cB[ZB + oB], kB[nB + 1] = cB[ZB + GB], kB[nB + 2] = cB[ZB + vB], nB += 3
           }
-        return uB
+        return kB
       }
-      static _GetLuminanceArrayBuffer(BB, jB, zB, QB, nB) {
-        const dB = new Uint8Array(QB),
-          IB = new Uint8Array(nB, zB);
-        let NB = 0;
-        for (let uB = 0; uB < jB; uB++)
-          for (let jB = 0; jB < BB; jB++) {
-            const zB = jB + uB * BB;
-            dB[NB] = IB[zB], NB++
+      static _GetLuminanceArrayBuffer(BB, IB, ZB, TB, JB) {
+        const oB = new Uint8Array(TB),
+          GB = new Uint8Array(JB, ZB);
+        let vB = 0;
+        for (let kB = 0; kB < IB; kB++)
+          for (let IB = 0; IB < BB; IB++) {
+            const ZB = IB + kB * BB;
+            oB[vB] = GB[ZB], vB++
           }
-        return dB
+        return oB
       }
-      static UploadDDSLevels(BB, jB, zB, QB, IB, uB) {
-        let UB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
-          mB = arguments.length > 7 ? arguments[7] : void 0,
-          yB = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          kB = null;
-        QB.sphericalPolynomial && (kB = []);
-        const GB = !!BB.getCaps().s3tc;
-        jB.generateMipMaps = IB;
-        const LB = new Int32Array(zB.buffer, zB.byteOffset, 31);
-        let gB, tB, SB, MB, EB, iB, qB, fB = 0,
-          oB = 0,
-          HB = 1;
-        if (542327876 !== LB[0]) return void nB.c.Error("Invalid magic number in DDS header");
-        if (!QB.isFourCC && !QB.isRGB && !QB.isLuminance) return void nB.c.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
-        if (QB.isCompressed && !GB) return void nB.c.Error("Compressed textures are not supported on this platform.");
-        let DB = LB[22];
-        MB = LB[1] + 4;
-        let FB = !1;
-        if (QB.isFourCC) switch (gB = LB[21], gB) {
-          case aB:
-            HB = 8, oB = 33777;
+      static UploadDDSLevels(BB, IB, ZB, TB, GB, kB) {
+        let cB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          gB = arguments.length > 7 ? arguments[7] : void 0,
+          qB = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          yB = null;
+        TB.sphericalPolynomial && (yB = []);
+        const UB = !!BB.getCaps().s3tc;
+        IB.generateMipMaps = GB;
+        const WB = new Int32Array(ZB.buffer, ZB.byteOffset, 31);
+        let dB, CB, QB, sB, wB, OB, YB, iB = 0,
+          pB = 0,
+          aB = 1;
+        if (542327876 !== WB[0]) return void JB.d.Error("Invalid magic number in DDS header");
+        if (!TB.isFourCC && !TB.isRGB && !TB.isLuminance) return void JB.d.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (TB.isCompressed && !UB) return void JB.d.Error("Compressed textures are not supported on this platform.");
+        let HB = WB[22];
+        sB = WB[1] + 4;
+        let MB = !1;
+        if (TB.isFourCC) switch (dB = WB[21], dB) {
+          case nB:
+            aB = 8, pB = 33777;
             break;
-          case pB:
-            HB = 16, oB = 33778;
+          case hB:
+            aB = 16, pB = 33778;
             break;
-          case rB:
-            HB = 16, oB = 33779;
+          case zB:
+            aB = 16, pB = 33779;
             break;
           case 113:
-            FB = !0, DB = 64;
+            MB = !0, HB = 64;
             break;
           case 116:
-            FB = !0, DB = 128;
+            MB = !0, HB = 128;
             break;
-          case sB: {
-            MB += 20;
+          case FB: {
+            sB += 20;
             let BB = !1;
-            switch (QB.dxgiFormat) {
+            switch (TB.dxgiFormat) {
               case 10:
-                FB = !0, DB = 64, BB = !0;
+                MB = !0, HB = 64, BB = !0;
                 break;
               case 2:
-                FB = !0, DB = 128, BB = !0;
+                MB = !0, HB = 128, BB = !0;
                 break;
               case 88:
-                QB.isRGB = !0, QB.isFourCC = !1, DB = 32, BB = !0
+                TB.isRGB = !0, TB.isFourCC = !1, HB = 32, BB = !0
             }
             if (BB) break
           }
           default:
-            return void nB.c.Error(["Unsupported FourCC code:", (YB = gB, String.fromCharCode(255 & YB, YB >> 8 & 255, YB >> 16 & 255, YB >> 24 & 255))])
+            return void JB.d.Error(["Unsupported FourCC code:", (jB = dB, String.fromCharCode(255 & jB, jB >> 8 & 255, jB >> 16 & 255, jB >> 24 & 255))])
         }
-        var YB;
-        const VB = JB._ExtractLongWordOrder(LB[23]),
-          hB = JB._ExtractLongWordOrder(LB[24]),
-          XB = JB._ExtractLongWordOrder(LB[25]),
-          ZB = JB._ExtractLongWordOrder(LB[26]);
-        FB && (oB = BB._getRGBABufferInternalSizedFormat(QB.textureType)), iB = 1, LB[2] & NB && !1 !== IB && (iB = Math.max(1, LB[7]));
-        const AB = mB || 0,
-          TB = BB.getCaps();
-        for (let nB = AB; nB < uB; nB++) {
-          for (tB = LB[4], SB = LB[3], qB = 0; qB < iB; ++qB) {
-            if (-1 === UB || UB === qB) {
-              const dB = -1 === UB ? qB : 0;
-              if (!QB.isCompressed && QB.isFourCC) {
-                jB.format = 5, fB = tB * SB * 4;
-                let QB = null;
-                if (BB._badOS || BB._badDesktopOS || !TB.textureHalfFloat && !TB.textureFloat) 128 === DB ? (QB = JB._GetFloatAsUIntRGBAArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer, dB), kB && 0 == dB && kB.push(JB._GetFloatRGBAArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer, dB))) : 64 === DB && (QB = JB._GetHalfFloatAsUIntRGBAArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer, dB), kB && 0 == dB && kB.push(JB._GetHalfFloatAsFloatRGBAArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer, dB))), jB.type = 0;
+        var jB;
+        const PB = NB._ExtractLongWordOrder(WB[23]),
+          RB = NB._ExtractLongWordOrder(WB[24]),
+          rB = NB._ExtractLongWordOrder(WB[25]),
+          mB = NB._ExtractLongWordOrder(WB[26]);
+        MB && (pB = BB._getRGBABufferInternalSizedFormat(TB.textureType)), OB = 1, WB[2] & vB && !1 !== GB && (OB = Math.max(1, WB[7]));
+        const XB = gB || 0,
+          LB = BB.getCaps();
+        for (let JB = XB; JB < kB; JB++) {
+          for (CB = WB[4], QB = WB[3], YB = 0; YB < OB; ++YB) {
+            if (-1 === cB || cB === YB) {
+              const oB = -1 === cB ? YB : 0;
+              if (!TB.isCompressed && TB.isFourCC) {
+                IB.format = 5, iB = CB * QB * 4;
+                let TB = null;
+                if (BB._badOS || BB._badDesktopOS || !LB.textureHalfFloat && !LB.textureFloat) 128 === HB ? (TB = NB._GetFloatAsUIntRGBAArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, oB), yB && 0 == oB && yB.push(NB._GetFloatRGBAArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, oB))) : 64 === HB && (TB = NB._GetHalfFloatAsUIntRGBAArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, oB), yB && 0 == oB && yB.push(NB._GetHalfFloatAsFloatRGBAArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, oB))), IB.type = 0;
                 else {
-                  const BB = TB.textureFloat && (yB && TB.textureFloatLinearFiltering || !yB),
-                    nB = TB.textureHalfFloat && (yB && TB.textureHalfFloatLinearFiltering || !yB),
-                    IB = (128 === DB || 64 === DB && !nB) && BB ? 1 : (64 === DB || 128 === DB && !BB) && nB ? 2 : 0;
-                  let NB, uB = null;
-                  if (128 === DB) switch (IB) {
+                  const BB = LB.textureFloat && (qB && LB.textureFloatLinearFiltering || !qB),
+                    JB = LB.textureHalfFloat && (qB && LB.textureHalfFloatLinearFiltering || !qB),
+                    GB = (128 === HB || 64 === HB && !JB) && BB ? 1 : (64 === HB || 128 === HB && !BB) && JB ? 2 : 0;
+                  let vB, kB = null;
+                  if (128 === HB) switch (GB) {
                     case 1:
-                      NB = JB._GetFloatRGBAArrayBuffer, uB = null;
+                      vB = NB._GetFloatRGBAArrayBuffer, kB = null;
                       break;
                     case 2:
-                      NB = JB._GetFloatAsHalfFloatRGBAArrayBuffer, uB = JB._GetFloatRGBAArrayBuffer;
+                      vB = NB._GetFloatAsHalfFloatRGBAArrayBuffer, kB = NB._GetFloatRGBAArrayBuffer;
                       break;
                     case 0:
-                      NB = JB._GetFloatAsUIntRGBAArrayBuffer, uB = JB._GetFloatRGBAArrayBuffer
-                  } else switch (IB) {
+                      vB = NB._GetFloatAsUIntRGBAArrayBuffer, kB = NB._GetFloatRGBAArrayBuffer
+                  } else switch (GB) {
                     case 1:
-                      NB = JB._GetHalfFloatAsFloatRGBAArrayBuffer, uB = null;
+                      vB = NB._GetHalfFloatAsFloatRGBAArrayBuffer, kB = null;
                       break;
                     case 2:
-                      NB = JB._GetHalfFloatRGBAArrayBuffer, uB = JB._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      vB = NB._GetHalfFloatRGBAArrayBuffer, kB = NB._GetHalfFloatAsFloatRGBAArrayBuffer;
                       break;
                     case 0:
-                      NB = JB._GetHalfFloatAsUIntRGBAArrayBuffer, uB = JB._GetHalfFloatAsFloatRGBAArrayBuffer
+                      vB = NB._GetHalfFloatAsUIntRGBAArrayBuffer, kB = NB._GetHalfFloatAsFloatRGBAArrayBuffer
                   }
-                  jB.type = IB, QB = NB(tB, SB, zB.byteOffset + MB, fB, zB.buffer, dB), kB && 0 == dB && kB.push(uB ? uB(tB, SB, zB.byteOffset + MB, fB, zB.buffer, dB) : QB)
+                  IB.type = GB, TB = vB(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, oB), yB && 0 == oB && yB.push(kB ? kB(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, oB) : TB)
                 }
-                QB && BB._uploadDataToTextureDirectly(jB, QB, nB, dB)
-              } else if (QB.isRGB) jB.type = 0, 24 === DB ? (jB.format = 4, fB = tB * SB * 3, EB = JB._GetRGBArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer, VB, hB, XB), BB._uploadDataToTextureDirectly(jB, EB, nB, dB)) : (jB.format = 5, fB = tB * SB * 4, EB = JB._GetRGBAArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer, VB, hB, XB, ZB), BB._uploadDataToTextureDirectly(jB, EB, nB, dB));
-              else if (QB.isLuminance) {
-                const QB = BB._getUnpackAlignement(),
-                  IB = tB;
-                fB = Math.floor((tB + QB - 1) / QB) * QB * (SB - 1) + IB, EB = JB._GetLuminanceArrayBuffer(tB, SB, zB.byteOffset + MB, fB, zB.buffer), jB.format = 1, jB.type = 0, BB._uploadDataToTextureDirectly(jB, EB, nB, dB)
-              } else fB = Math.max(4, tB) / 4 * Math.max(4, SB) / 4 * HB, EB = new Uint8Array(zB.buffer, zB.byteOffset + MB, fB), jB.type = 0, BB._uploadCompressedDataToTextureDirectly(jB, oB, tB, SB, EB, nB, dB)
+                TB && BB._uploadDataToTextureDirectly(IB, TB, JB, oB)
+              } else if (TB.isRGB) IB.type = 0, 24 === HB ? (IB.format = 4, iB = CB * QB * 3, wB = NB._GetRGBArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, PB, RB, rB), BB._uploadDataToTextureDirectly(IB, wB, JB, oB)) : (IB.format = 5, iB = CB * QB * 4, wB = NB._GetRGBAArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer, PB, RB, rB, mB), BB._uploadDataToTextureDirectly(IB, wB, JB, oB));
+              else if (TB.isLuminance) {
+                const TB = BB._getUnpackAlignement(),
+                  GB = CB;
+                iB = Math.floor((CB + TB - 1) / TB) * TB * (QB - 1) + GB, wB = NB._GetLuminanceArrayBuffer(CB, QB, ZB.byteOffset + sB, iB, ZB.buffer), IB.format = 1, IB.type = 0, BB._uploadDataToTextureDirectly(IB, wB, JB, oB)
+              } else iB = Math.max(4, CB) / 4 * Math.max(4, QB) / 4 * aB, wB = new Uint8Array(ZB.buffer, ZB.byteOffset + sB, iB), IB.type = 0, BB._uploadCompressedDataToTextureDirectly(IB, pB, CB, QB, wB, JB, oB)
             }
-            MB += DB ? tB * SB * (DB / 8) : fB, tB *= .5, SB *= .5, tB = Math.max(1, tB), SB = Math.max(1, SB)
+            sB += HB ? CB * QB * (HB / 8) : iB, CB *= .5, QB *= .5, CB = Math.max(1, CB), QB = Math.max(1, QB)
           }
-          if (void 0 !== mB) break
+          if (void 0 !== gB) break
         }
-        kB && kB.length > 0 ? QB.sphericalPolynomial = dB.b.ConvertCubeMapToSphericalPolynomial({
-          size: LB[4],
-          right: kB[0],
-          left: kB[1],
-          up: kB[2],
-          down: kB[3],
-          front: kB[4],
-          back: kB[5],
+        yB && yB.length > 0 ? TB.sphericalPolynomial = oB.d.ConvertCubeMapToSphericalPolynomial({
+          size: WB[4],
+          right: yB[0],
+          left: yB[1],
+          up: yB[2],
+          down: yB[3],
+          front: yB[4],
+          back: yB[5],
           format: 5,
           type: 1,
           gammaSpace: !1
-        }) : QB.sphericalPolynomial = void 0
+        }) : TB.sphericalPolynomial = void 0
       }
     }
-    JB.StoreLODInAlphaChannel = !1
+    NB.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);

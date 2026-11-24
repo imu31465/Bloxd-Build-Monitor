@@ -1,94 +1,94 @@
 export const id = 277;
 export const ids = [276, 277];
 export const modules = {
-  41150: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      gamePackSource: () => dB
+  41082: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      gamePackSource: () => oB
     });
-    var QB = zB(5066),
-      nB = zB(1532);
+    var TB = ZB(5134),
+      JB = ZB(1561);
 
-    function dB(BB) {
+    function oB(BB) {
       return {
-        packKey: async jB => (await nB.b.getGame(BB, jB, !0)).customTexturePackKey,
-        fetchPack: QB.e
+        packKey: async IB => (await JB.c.getGame(BB, IB, !0)).customTexturePackKey,
+        fetchPack: TB.c
       }
     }
   },
-  51154: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      fetchGuestContext: () => rB,
-      guestJoinTarget: () => LB,
-      guestJoinWithPack: () => JB,
-      guestPackForGame: () => sB,
-      invalidateGuestTrafficCode: () => GB
+  51065: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      fetchGuestContext: () => zB,
+      guestJoinTarget: () => WB,
+      guestJoinWithPack: () => NB,
+      guestPackForGame: () => FB,
+      invalidateGuestTrafficCode: () => UB
     });
-    var QB = zB(1244),
-      nB = zB(1532),
-      dB = zB(106),
-      IB = zB(36533),
-      NB = zB(1173),
-      uB = zB(40830),
-      UB = zB(41150),
-      aB = zB(40791);
+    var TB = ZB(1258),
+      JB = ZB(1561),
+      oB = ZB(105),
+      GB = ZB(36485),
+      vB = ZB(1186),
+      kB = ZB(40784),
+      cB = ZB(41082),
+      nB = ZB(40746);
 
-    function pB() {
-      if (dB.featureFlags.useTurnstile) throw new uB.TurnstilePageError
+    function hB() {
+      if (oB.featureFlags.useTurnstile) throw new kB.TurnstilePageError
     }
 
-    function rB() {
-      return (0, NB.fetchAnonymousUserContext)().catch((BB => (console.warn("the guest context didn't load", BB), null)))
+    function zB() {
+      return (0, vB.fetchAnonymousUserContext)().catch((BB => (console.warn("the guest context didn't load", BB), null)))
     }
-    async function sB(BB, jB, zB, QB) {
+    async function FB(BB, IB, ZB, TB) {
       try {
-        const nB = await zB;
-        if (null === nB) return void console.warn(`the texture pack step for ${BB} has no guest context: the pack in play stays`);
-        await jB.packForGame(BB, (0, UB.gamePackSource)(nB), QB)
-      } catch (nB) {
-        console.warn(`the texture pack step for ${BB} failed: the pack in play stays`, nB)
+        const JB = await ZB;
+        if (null === JB) return void console.warn(`the texture pack step for ${BB} has no guest context: the pack in play stays`);
+        await IB.packForGame(BB, (0, cB.gamePackSource)(JB), TB)
+      } catch (JB) {
+        console.warn(`the texture pack step for ${BB} failed: the pack in play stays`, JB)
       }
     }
-    async function JB(BB, jB, zB, QB) {
-      pB();
-      const nB = rB();
-      return await zB(((jB, zB) => sB(BB, jB, nB, zB))), LB(BB, jB, QB(), await nB)
+    async function NB(BB, IB, ZB, TB) {
+      hB();
+      const JB = zB();
+      return await ZB(((IB, ZB) => FB(BB, IB, JB, ZB))), WB(BB, IB, TB(), await JB)
     }
-    let mB = null,
-      yB = null;
-    async function kB() {
-      if ((null === mB || mB.hasExpired()) && (yB ??= (0, NB.fetchAnonymousUserContext)().then((BB => {
-          mB = BB
+    let gB = null,
+      qB = null;
+    async function yB() {
+      if ((null === gB || gB.hasExpired()) && (qB ??= (0, vB.fetchAnonymousUserContext)().then((BB => {
+          gB = BB
         })).finally((() => {
-          yB = null
-        })), await yB), null === mB) throw new Error("no guest context to post as");
-      return mB.getMetricsCookies()
+          qB = null
+        })), await qB), null === gB) throw new Error("no guest context to post as");
+      return gB.getMetricsCookies()
     }
-    async function GB() {
+    async function UB() {
       var BB;
-      await (null === (BB = mB) || void 0 === BB ? void 0 : BB.invalidateTrafficCode())
+      await (null === (BB = gB) || void 0 === BB ? void 0 : BB.invalidateTrafficCode())
     }
-    async function LB(BB, jB, zB) {
-      let dB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      pB();
-      const uB = null !== dB && void 0 !== dB ? dB : await (0, NB.fetchAnonymousUserContext)();
-      if (mB = uB, uB.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const UB = await nB.b.matchmakePlayer(uB, jB, BB, (0, IB.e)()),
-        rB = performance.now();
-      if (!("gameServerHost" in UB)) throw new Error(`matchmaking refused: ${UB.failReason}`);
-      const sB = QB.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(UB.gameServerHost);
-      if (sB.isError()) throw new Error(`no socket URL for ${UB.gameServerHost}: ${sB.asError().message}`);
-      const JB = {
-        endpoint: sB.getValue(),
-        gameNameWithVariation: UB.gameNameWithVariation,
-        lobbyName: UB.lobbyName
+    async function WB(BB, IB, ZB) {
+      let oB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      hB();
+      const kB = null !== oB && void 0 !== oB ? oB : await (0, vB.fetchAnonymousUserContext)();
+      if (gB = kB, kB.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const cB = await JB.c.matchmakePlayer(kB, IB, BB, (0, GB.b)()),
+        zB = performance.now();
+      if (!("gameServerHost" in cB)) throw new Error(`matchmaking refused: ${cB.failReason}`);
+      const FB = TB.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(cB.gameServerHost);
+      if (FB.isError()) throw new Error(`no socket URL for ${cB.gameServerHost}: ${FB.asError().message}`);
+      const NB = {
+        endpoint: FB.getValue(),
+        gameNameWithVariation: cB.gameNameWithVariation,
+        lobbyName: cB.lobbyName
       };
       return {
         target: {
-          ...await (0, aB.c)(uB, JB, zB, !1),
-          postCookies: kB
+          ...await (0, nB.e)(kB, NB, ZB, !1),
+          postCookies: yB
         },
-        matchedAt: rB,
-        freshMs: aB.b
+        matchedAt: zB,
+        freshMs: nB.c
       }
     }
   }

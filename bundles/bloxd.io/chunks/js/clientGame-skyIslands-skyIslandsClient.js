@@ -1,20 +1,20 @@
 export const id = 24;
 export const ids = [24];
 export const modules = {
-  39622: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => QB
+  39610: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => TB
     });
-    const QB = function() {
+    const TB = function() {
       let BB;
       return {
-        onCreate: jB => {
-          BB = jB
+        onCreate: IB => {
+          BB = IB
         },
-        onPlayerAltAction: (jB, zB, QB, nB, dB, IB) => {
-          if (!IB || "Mesh" !== BB.getEntityType(IB)) return;
-          const NB = BB.getEntityName(IB);
-          "Perks" === NB ? BB.openShop(jB, !1, "Perks") : "Returning Bonus" === NB && BB.openShop(jB, !1, "Returning Player Bonus")
+        onPlayerAltAction: (IB, ZB, TB, JB, oB, GB) => {
+          if (!GB || "Mesh" !== BB.getEntityType(GB)) return;
+          const vB = BB.getEntityName(GB);
+          "Perks" === vB ? BB.openShop(IB, !1, "Perks") : "Returning Bonus" === vB && BB.openShop(IB, !1, "Returning Player Bonus")
         }
       }
     }

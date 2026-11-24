@@ -1,131 +1,131 @@
 export const id = 11;
 export const ids = [11];
 export const modules = {
-  36677: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => sB,
-      e: () => JB,
-      g: () => rB,
-      h: () => pB
+  36613: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => FB,
+      h: () => NB,
+      l: () => zB,
+      n: () => hB
     });
-    var QB = zB(34242),
-      nB = zB(36682),
-      dB = zB(36687),
-      IB = zB(8722),
-      NB = zB(1471),
-      uB = zB(62),
-      UB = zB(83),
-      aB = zB(1148);
+    var TB = ZB(34184),
+      JB = ZB(36619),
+      oB = ZB(36625),
+      GB = ZB(8840),
+      vB = ZB(1507),
+      kB = ZB(63),
+      cB = ZB(82),
+      nB = ZB(1153);
 
-    function pB() {
+    function hB() {
       var BB;
-      return (0, NB.h)(nB.c, (0, nB.n)()), (0, aB.jsx)(aB.Fragment, {
-        children: null === (BB = (0, nB.n)()) || void 0 === BB ? void 0 : BB.content
+      return (0, vB.h)(JB.d, (0, JB.q)()), (0, nB.jsx)(nB.Fragment, {
+        children: null === (BB = (0, JB.q)()) || void 0 === BB ? void 0 : BB.content
       })
     }
 
-    function rB(BB) {
-      var jB;
+    function zB(BB) {
+      var IB;
       let {
-        show: zB
+        show: ZB
       } = BB;
-      (0, NB.h)(nB.c, (0, nB.n)());
-      const UB = null === (jB = (0, nB.n)()) || void 0 === jB ? void 0 : jB.menu;
-      return (0, uB.useEffect)((() => {
+      (0, vB.h)(JB.d, (0, JB.q)());
+      const cB = null === (IB = (0, JB.q)()) || void 0 === IB ? void 0 : IB.menu;
+      return (0, kB.useEffect)((() => {
         var BB;
-        zB || (null === UB || void 0 === UB || null === (BB = UB.onClose) || void 0 === BB || BB.call(UB), (0, dB.n)())
-      }), [zB, UB]), (0, uB.useEffect)((() => zB ? (0, IB.f)(dB.w, dB.f) : void 0), [zB]), (0, aB.jsx)(QB.b, {
-        showing: zB,
+        ZB || (null === cB || void 0 === cB || null === (BB = cB.onClose) || void 0 === BB || BB.call(cB), (0, oB.p)())
+      }), [ZB, cB]), (0, kB.useEffect)((() => ZB ? (0, GB.g)(oB.t, oB.c) : void 0), [ZB]), (0, nB.jsx)(TB.e, {
+        showing: ZB,
         globallyUniqueKey: "clientGameMenu",
-        children: null === UB || void 0 === UB ? void 0 : UB.content
+        children: null === cB || void 0 === cB ? void 0 : cB.content
       })
     }
 
-    function sB(BB) {
+    function FB(BB) {
       let {
-        placement: jB = "bottom"
+        placement: IB = "bottom"
       } = BB;
-      return (0, aB.jsx)("div", {
-        id: `clientGameHud-${jB}`,
+      return (0, nB.jsx)("div", {
+        id: `clientGameHud-${IB}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function JB(BB) {
+    function NB(BB) {
       let {
-        children: jB,
-        placement: zB = "bottom"
+        children: IB,
+        placement: ZB = "bottom"
       } = BB;
-      const [QB, nB] = (0, uB.useState)(null);
-      return (0, uB.useEffect)((() => {
-        nB(document.getElementById(`clientGameHud-${zB}`))
-      }), [zB]), QB ? (0, UB.createPortal)(jB, QB) : null
+      const [TB, JB] = (0, kB.useState)(null);
+      return (0, kB.useEffect)((() => {
+        JB(document.getElementById(`clientGameHud-${ZB}`))
+      }), [ZB]), TB ? (0, cB.createPortal)(IB, TB) : null
     }
   },
-  34242: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => dB
+  34184: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB
     });
-    var QB = zB(4657),
-      nB = zB(4664);
+    var TB = ZB(4721),
+      JB = ZB(4728);
 
-    function dB(BB) {
+    function oB(BB) {
       let {
-        children: jB,
-        showing: zB,
-        globallyUniqueKey: dB,
-        alwaysMountChildren: IB = !1,
-        doGameplayStartStopOnShow: NB = !0,
-        keepsMovement: uB = !1
+        children: IB,
+        showing: ZB,
+        globallyUniqueKey: oB,
+        alwaysMountChildren: GB = !1,
+        doGameplayStartStopOnShow: vB = !0,
+        keepsMovement: kB = !1
       } = BB;
-      return (0, nB.c)(!0, zB, dB, uB), (0, QB.d)(NB, zB), zB || IB ? jB : null
+      return (0, JB.e)(!0, ZB, oB, kB), (0, TB.e)(vB, ZB), ZB || GB ? IB : null
     }
   },
-  5097: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => IB
+  5177: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => GB
     });
-    var QB = zB(1091),
-      nB = zB.n(QB),
-      dB = zB(1148);
+    var TB = ZB(1091),
+      JB = ZB.n(TB),
+      oB = ZB(1153);
 
-    function IB(BB) {
+    function GB(BB) {
       let {
-        options: jB,
-        value: zB,
-        onChange: QB,
-        ariaLabel: IB,
-        className: NB,
-        reselectable: uB = !1,
-        keepsFocus: UB = !1,
-        padTabs: aB
+        options: IB,
+        value: ZB,
+        onChange: TB,
+        ariaLabel: GB,
+        className: vB,
+        reselectable: kB = !1,
+        keepsFocus: cB = !1,
+        padTabs: nB
       } = BB;
-      const pB = void 0 !== aB;
-      return (0, dB.jsx)("div", {
-        className: nB()("SegmentedToggle", NB),
+      const hB = void 0 !== nB;
+      return (0, oB.jsx)("div", {
+        className: JB()("SegmentedToggle", vB),
         role: "group",
-        "aria-label": IB,
-        "data-pad-tabs": aB,
-        children: jB.map((BB => {
-          const jB = BB.value === zB;
-          return (0, dB.jsx)("button", {
+        "aria-label": GB,
+        "data-pad-tabs": nB,
+        children: IB.map((BB => {
+          const IB = BB.value === ZB;
+          return (0, oB.jsx)("button", {
             type: "button",
-            "aria-pressed": jB,
-            "data-pad-tab": pB || void 0,
-            "data-pad-selected": pB && jB ? "true" : void 0,
-            "data-pad-default-focus": pB && jB || void 0,
+            "aria-pressed": IB,
+            "data-pad-tab": hB || void 0,
+            "data-pad-selected": hB && IB ? "true" : void 0,
+            "data-pad-default-focus": hB && IB || void 0,
             "aria-label": BB.ariaLabel,
             title: BB.ariaLabel,
-            className: nB()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: jB
+            className: JB()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: IB
             }),
-            onMouseDown: UB ? BB => {
+            onMouseDown: cB ? BB => {
               BB.preventDefault()
             } : void 0,
             onClick: () => {
-              jB && !uB || QB(BB.value)
+              IB && !kB || TB(BB.value)
             },
             children: BB.label
           }, BB.value)
@@ -133,82 +133,82 @@ export const modules = {
       })
     }
   },
-  8722: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => dB,
-      f: () => nB
+  8840: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      g: () => JB
     });
-    let QB = null;
-    const nB = function(BB) {
-        const jB = {
+    let TB = null;
+    const JB = function(BB) {
+        const IB = {
           cycle: BB,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return QB = jB, () => {
-          QB === jB && (QB = null)
+        return TB = IB, () => {
+          TB === IB && (TB = null)
         }
       },
-      dB = () => {
+      oB = () => {
         var BB;
-        return null !== (BB = QB) && void 0 !== BB && BB.canCycle() ? QB.cycle : null
+        return null !== (BB = TB) && void 0 !== BB && BB.canCycle() ? TB.cycle : null
       }
   },
-  36907: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      d: () => dB
+  36856: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      f: () => oB
     });
-    const QB = new Map;
+    const TB = new Map;
 
-    function nB(BB) {
-      var jB;
-      return null === BB ? null : null !== (jB = QB.get(BB)) && void 0 !== jB ? jB : null
+    function JB(BB) {
+      var IB;
+      return null === BB ? null : null !== (IB = TB.get(BB)) && void 0 !== IB ? IB : null
     }
 
-    function dB(BB, jB) {
-      return QB.set(BB, jB), () => {
-        QB.get(BB) === jB && QB.delete(BB)
+    function oB(BB, IB) {
+      return TB.set(BB, IB), () => {
+        TB.get(BB) === IB && TB.delete(BB)
       }
     }
   },
-  38517: (BB, jB, zB) => {
-    zB.d(jB, {
-      A: () => SB,
-      C: () => EB,
-      E: () => tB,
-      I: () => gB,
-      M: () => rB,
-      Q: () => mB,
-      T: () => kB,
-      V: () => nB,
-      b: () => aB,
-      f: () => uB,
-      j: () => LB,
-      k: () => UB,
-      o: () => NB,
-      s: () => IB,
-      u: () => dB,
-      v: () => MB,
+  38468: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      B: () => FB,
+      E: () => QB,
+      H: () => wB,
+      I: () => CB,
+      K: () => dB,
+      N: () => zB,
+      R: () => gB,
+      U: () => yB,
+      W: () => JB,
+      e: () => nB,
+      f: () => kB,
+      h: () => WB,
+      j: () => cB,
+      n: () => vB,
+      q: () => GB,
+      t: () => oB,
       x: () => sB
     });
-    var QB = zB(9354);
+    var TB = ZB(9380);
 
-    function nB(BB) {
+    function JB(BB) {
       return Math.floor(BB).toLocaleString("en-US")
     }
-    const dB = 2e3,
-      IB = .005,
-      NB = .001,
-      uB = 2,
-      UB = "Fluid Tank",
-      aB = "Coolant Mixer",
-      pB = 144;
+    const oB = 2e3,
+      GB = .005,
+      vB = .001,
+      kB = 2,
+      cB = "Fluid Tank",
+      nB = "Coolant Mixer",
+      hB = 144;
 
-    function rB(BB) {
-      const jB = BB.split("|")[0];
-      return (0, QB.j)(jB) ? jB === QB.d ? "cryo" : "water" : null
+    function zB(BB) {
+      const IB = BB.split("|")[0];
+      return (0, TB.j)(IB) ? IB === TB.d ? "cryo" : "water" : null
     }
-    const sB = [
+    const FB = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -216,43 +216,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      JB = 63;
+      NB = 63;
 
-    function mB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const zB = jB ? function(BB, jB, zB) {
-        const QB = sB.findIndex((QB => {
-          let [nB, dB, IB] = QB;
-          return nB === BB && dB === jB && IB === zB
+    function gB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const ZB = IB ? function(BB, IB, ZB) {
+        const TB = FB.findIndex((TB => {
+          let [JB, oB, GB] = TB;
+          return JB === BB && oB === IB && GB === ZB
         }));
-        return QB < 0 ? 0 : 1 << QB
-      }(jB[0], jB[1], jB[2]) : 0;
+        return TB < 0 ? 0 : 1 << TB
+      }(IB[0], IB[1], IB[2]) : 0;
       return "maker" === BB ? {
         kind: BB,
-        faces: zB
+        faces: ZB
       } : "user" === BB ? {
         kind: BB,
-        faces: JB & ~zB
+        faces: NB & ~ZB
       } : {
         kind: BB,
-        faces: JB
+        faces: NB
       }
     }
 
-    function yB(BB) {
+    function qB(BB) {
       return "pipe" === BB || "tank" === BB || "maker" === BB
     }
 
-    function kB(BB, jB, zB) {
-      return 0 !== (BB.faces & 1 << zB) && 0 !== (jB.faces & 1 << (1 ^ zB)) && (yB(BB.kind) || yB(jB.kind))
+    function yB(BB, IB, ZB) {
+      return 0 !== (BB.faces & 1 << ZB) && 0 !== (IB.faces & 1 << (1 ^ ZB)) && (qB(BB.kind) || qB(IB.kind))
     }
-    const GB = (BB, jB, zB, QB) => ({
+    const UB = (BB, IB, ZB, TB) => ({
         input: BB,
-        inputAmount: QB,
-        output: jB,
-        outputAmount: zB
+        inputAmount: TB,
+        output: IB,
+        outputAmount: ZB
       }),
-      LB = {
+      WB = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -271,7 +271,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [GB("Uranium Grit", "Uranium Pellet", 1, 12), GB("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [UB("Uranium Grit", "Uranium Pellet", 1, 12), UB("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -292,57 +292,57 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [GB("Biomass", "", 0, 1)],
+          recipes: [UB("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: pB,
+          cryoMade: hB,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function gB(BB, jB) {
-      return 1e3 * (null !== jB && void 0 !== jB ? jB : 0) / BB.opMs
+    function dB(BB, IB) {
+      return 1e3 * (null !== IB && void 0 !== IB ? IB : 0) / BB.opMs
     }
 
-    function tB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const zB = gB(LB["Coolant Mixer"], pB) * jB;
-      return BB <= 0 ? 0 : Math.ceil(BB / zB - 1e-9)
+    function CB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ZB = dB(WB["Coolant Mixer"], hB) * IB;
+      return BB <= 0 ? 0 : Math.ceil(BB / ZB - 1e-9)
     }
-    const SB = "baf2Water",
-      MB = "baf2waterclose",
-      EB = "baf2wateropen"
+    const QB = "baf2Water",
+      sB = "baf2waterclose",
+      wB = "baf2wateropen"
   },
-  38513: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => iB,
-      g: () => gB,
-      j: () => LB
+  38466: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => OB,
+      e: () => dB,
+      f: () => WB
     });
-    var QB = zB(9266),
-      nB = zB(9283),
-      dB = zB(9354),
-      IB = zB(38517),
-      NB = zB(9345);
-    const uB = (0, IB.Q)("pipe"),
-      UB = (0, IB.Q)("tank"),
-      aB = (0, IB.Q)("port"),
-      pB = "Reactor Port";
+    var TB = ZB(9296),
+      JB = ZB(9316),
+      oB = ZB(9380),
+      GB = ZB(38468),
+      vB = ZB(9375);
+    const kB = (0, GB.R)("pipe"),
+      cB = (0, GB.R)("tank"),
+      nB = (0, GB.R)("port"),
+      hB = "Reactor Port";
 
-    function rB(BB, jB, zB) {
-      const QB = new Set([dB.f, dB.d, pB, ...jB, ...zB, ...BB ? [IB.k] : []]);
+    function zB(BB, IB, ZB) {
+      const TB = new Set([oB.f, oB.d, hB, ...IB, ...ZB, ...BB ? [GB.j] : []]);
       return {
-        makers: new Set(jB),
-        roots: QB
+        makers: new Set(IB),
+        roots: TB
       }
     }
-    const sB = {
-        water: rB(!0, ["Condenser"], ["Centrifuge", "Synthesizer", IB.b]),
-        cryo: rB(!1, [IB.b], [])
+    const FB = {
+        water: zB(!0, ["Condenser"], ["Centrifuge", "Synthesizer", GB.e]),
+        cryo: zB(!1, [GB.e], [])
       },
-      JB = new Set([...sB.water.roots, ...sB.cryo.roots]),
-      mB = {
+      NB = new Set([...FB.water.roots, ...FB.cryo.roots]),
+      gB = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -350,117 +350,117 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      yB = nB.e.map((BB => mB[BB])),
-      kB = yB.map((BB => {
-        let [jB, zB, QB] = BB;
-        return IB.x.findIndex((BB => {
-          let [nB, dB, IB] = BB;
-          return nB === jB && dB === zB && IB === QB
+      qB = JB.f.map((BB => gB[BB])),
+      yB = qB.map((BB => {
+        let [IB, ZB, TB] = BB;
+        return GB.B.findIndex((BB => {
+          let [JB, oB, GB] = BB;
+          return JB === IB && oB === ZB && GB === TB
         }))
       }));
 
-    function GB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const zB = QB.i[BB],
-        nB = null === zB || void 0 === zB ? void 0 : zB.meta.rootName,
-        rB = sB[jB];
-      if (!nB || !rB.roots.has(nB)) return null;
-      if ((0, dB.j)(nB)) return (0, IB.M)(zB.name) === jB ? uB : null;
-      if (nB === IB.k) return UB;
-      if (nB === pB) return zB.name.endsWith("|Water") ? aB : null;
-      const [JB, mB] = NB.d[(zB.meta.rot || 1) - 1];
-      return (0, IB.Q)(rB.makers.has(nB) ? "maker" : "user", [-JB, 0, -mB])
+    function UB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const ZB = TB.f[BB],
+        JB = null === ZB || void 0 === ZB ? void 0 : ZB.meta.rootName,
+        zB = FB[IB];
+      if (!JB || !zB.roots.has(JB)) return null;
+      if ((0, oB.j)(JB)) return (0, GB.N)(ZB.name) === IB ? kB : null;
+      if (JB === GB.j) return cB;
+      if (JB === hB) return ZB.name.endsWith("|Water") ? nB : null;
+      const [NB, gB] = vB.f[(ZB.meta.rot || 1) - 1];
+      return (0, GB.R)(zB.makers.has(JB) ? "maker" : "user", [-NB, 0, -gB])
     }
 
-    function LB(BB, jB, zB, nB) {
-      let dB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function WB(BB, IB, ZB, JB) {
+      let oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: NB
-      } = sB[dB];
-      return yB.some(((UB, aB) => {
-        var pB, rB;
-        let [sB, JB, mB] = UB;
-        const yB = BB(jB + sB, zB + JB, nB + mB),
-          LB = GB(yB, dB);
-        return null !== LB && NB.has(null !== (pB = null === (rB = QB.i[yB]) || void 0 === rB ? void 0 : rB.meta.rootName) && void 0 !== pB ? pB : "") && !(0, IB.T)(uB, LB, kB[aB])
+        makers: vB
+      } = FB[oB];
+      return qB.some(((cB, nB) => {
+        var hB, zB;
+        let [FB, NB, gB] = cB;
+        const qB = BB(IB + FB, ZB + NB, JB + gB),
+          WB = UB(qB, oB);
+        return null !== WB && vB.has(null !== (hB = null === (zB = TB.f[qB]) || void 0 === zB ? void 0 : zB.meta.rootName) && void 0 !== hB ? hB : "") && !(0, GB.U)(kB, WB, yB[nB])
       }))
     }
 
-    function gB(BB) {
-      const jB = QB.i[BB];
-      return jB ? (0, IB.M)(jB.name) : null
+    function dB(BB) {
+      const IB = TB.f[BB];
+      return IB ? (0, GB.N)(IB.name) : null
     }
-    let tB = null;
+    let CB = null;
 
-    function SB(BB) {
-      if (!tB) {
-        tB = new Map;
+    function QB(BB) {
+      if (!CB) {
+        CB = new Map;
         for (const BB of ["water", "cryo"])
-          for (let jB = 0; jB < 64; jB++)
-            for (const zB of [!1, !0]) tB.set((0, dB.m)(BB, jB, zB), {
-              Ss: BB,
-              mask: jB,
-              full: zB
+          for (let IB = 0; IB < 64; IB++)
+            for (const ZB of [!1, !0]) CB.set((0, oB.n)(BB, IB, ZB), {
+              gF: BB,
+              mask: IB,
+              full: ZB
             })
       }
-      return tB.get(BB)
+      return CB.get(BB)
     }
-    const MB = new Map(Array.from({
-      length: dB.g + 1
-    }, ((BB, jB) => [(0, dB.p)(jB), jB])));
+    const sB = new Map(Array.from({
+      length: oB.i + 1
+    }, ((BB, IB) => [(0, oB.o)(IB), IB])));
 
-    function EB(BB, jB, zB, nB, dB, IB) {
-      return yB.some(((NB, uB) => {
-        var UB, aB, pB;
-        let [rB, sB, JB] = NB;
-        if (0 === (IB >> uB & 1)) return !1;
-        const mB = null !== (UB = null === (aB = QB.i[BB(jB + rB, zB + sB, nB + JB)]) || void 0 === aB ? void 0 : aB.name) && void 0 !== UB ? UB : "",
-          yB = SB(mB);
-        return yB ? yB.Ss === dB && yB.full : (null !== (pB = function(BB) {
-          var jB;
-          return null !== (jB = MB.get(BB)) && void 0 !== jB ? jB : null
-        }(mB)) && void 0 !== pB ? pB : 0) > 0
+    function wB(BB, IB, ZB, JB, oB, GB) {
+      return qB.some(((vB, kB) => {
+        var cB, nB, hB;
+        let [zB, FB, NB] = vB;
+        if (0 === (GB >> kB & 1)) return !1;
+        const gB = null !== (cB = null === (nB = TB.f[BB(IB + zB, ZB + FB, JB + NB)]) || void 0 === nB ? void 0 : nB.name) && void 0 !== cB ? cB : "",
+          qB = QB(gB);
+        return qB ? qB.gF === oB && qB.full : (null !== (hB = function(BB) {
+          var IB;
+          return null !== (IB = sB.get(BB)) && void 0 !== IB ? IB : null
+        }(gB)) && void 0 !== hB ? hB : 0) > 0
       }))
     }
-    class iB {
+    class OB {
       constructor() {
-        this.reshapeOffsets = yB
+        this.reshapeOffsets = qB
       }
       handles(BB) {
-        return null !== gB(BB)
+        return null !== dB(BB)
       }
       affects(BB) {
-        var jB, zB;
-        return JB.has(null !== (jB = null === (zB = QB.i[BB]) || void 0 === zB ? void 0 : zB.meta.rootName) && void 0 !== jB ? jB : "")
+        var IB, ZB;
+        return NB.has(null !== (IB = null === (ZB = TB.f[BB]) || void 0 === ZB ? void 0 : ZB.meta.rootName) && void 0 !== IB ? IB : "")
       }
       placedBy(BB) {
-        var jB;
-        return (null === (jB = QB.i[BB]) || void 0 === jB ? void 0 : jB.meta.rootName) === dB.d ? dB.f : null
+        var IB;
+        return (null === (IB = TB.f[BB]) || void 0 === IB ? void 0 : IB.meta.rootName) === oB.d ? oB.f : null
       }
-      shape(BB, jB, zB, nB, NB, UB) {
-        var aB, pB, rB;
-        const sB = null !== (aB = null === (pB = QB.i[NB]) || void 0 === pB ? void 0 : pB.name) && void 0 !== aB ? aB : "",
-          JB = UB || sB !== dB.f ? null !== (rB = (0, IB.M)(sB)) && void 0 !== rB ? rB : "water" : function(BB, jB, zB, QB) {
-            return yB.some(((nB, dB) => {
-              let [NB, UB, aB] = nB;
-              const pB = GB(BB(jB + NB, zB + UB, QB + aB), "cryo");
-              return null !== pB && "port" !== pB.kind && (0, IB.T)(uB, pB, kB[dB])
+      shape(BB, IB, ZB, JB, vB, cB) {
+        var nB, hB, zB;
+        const FB = null !== (nB = null === (hB = TB.f[vB]) || void 0 === hB ? void 0 : hB.name) && void 0 !== nB ? nB : "",
+          NB = cB || FB !== oB.f ? null !== (zB = (0, GB.N)(FB)) && void 0 !== zB ? zB : "water" : function(BB, IB, ZB, TB) {
+            return qB.some(((JB, oB) => {
+              let [vB, cB, nB] = JB;
+              const hB = UB(BB(IB + vB, ZB + cB, TB + nB), "cryo");
+              return null !== hB && "port" !== hB.kind && (0, GB.U)(kB, hB, yB[oB])
             })) ? "cryo" : "water"
-          }(BB, jB, zB, nB),
-          mB = function(BB, jB, zB, QB) {
-            let nB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              dB = 0;
-            return yB.forEach(((NB, UB) => {
-              let [aB, pB, rB] = NB;
-              const sB = GB(BB(jB + aB, zB + pB, QB + rB), nB);
-              sB && (0, IB.T)(uB, sB, kB[UB]) && (dB |= 1 << UB)
-            })), dB
-          }(BB, jB, zB, nB, JB),
-          LB = UB ? function(BB) {
-            var jB;
-            return !0 === (null === (jB = SB(BB)) || void 0 === jB ? void 0 : jB.full)
-          }(sB) : EB(BB, jB, zB, nB, JB, mB);
-        return (0, QB.k)((0, dB.m)(JB, mB, LB))
+          }(BB, IB, ZB, JB),
+          gB = function(BB, IB, ZB, TB) {
+            let JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              oB = 0;
+            return qB.forEach(((vB, cB) => {
+              let [nB, hB, zB] = vB;
+              const FB = UB(BB(IB + nB, ZB + hB, TB + zB), JB);
+              FB && (0, GB.U)(kB, FB, yB[cB]) && (oB |= 1 << cB)
+            })), oB
+          }(BB, IB, ZB, JB, NB),
+          WB = cB ? function(BB) {
+            var IB;
+            return !0 === (null === (IB = QB(BB)) || void 0 === IB ? void 0 : IB.full)
+          }(FB) : wB(BB, IB, ZB, JB, NB, gB);
+        return (0, TB.g)((0, oB.n)(NB, gB, WB))
       }
     }
   }

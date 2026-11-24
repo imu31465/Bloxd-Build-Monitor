@@ -1,130 +1,130 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  5087: (BB, jB, zB) => {
-    function QB(BB) {
-      return QB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
+  5158: (BB, IB, ZB) => {
+    function TB(BB) {
+      return TB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
         return typeof BB
       } : function(BB) {
         return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-      }, QB(BB)
+      }, TB(BB)
     }
-    Object.defineProperty(jB, "__esModule", {
+    Object.defineProperty(IB, "__esModule", {
       value: !0
-    }), jB.default = void 0;
-    var nB = pB(zB(1091)),
-      dB = function(BB, jB) {
-        if (!jB && BB && BB.__esModule) return BB;
-        if (null === BB || "object" !== QB(BB) && "function" !== typeof BB) return {
+    }), IB.default = void 0;
+    var JB = hB(ZB(1091)),
+      oB = function(BB, IB) {
+        if (!IB && BB && BB.__esModule) return BB;
+        if (null === BB || "object" !== TB(BB) && "function" !== typeof BB) return {
           default: BB
         };
-        var zB = aB(jB);
-        if (zB && zB.has(BB)) return zB.get(BB);
-        var nB = {},
-          dB = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var IB in BB)
-          if ("default" !== IB && Object.prototype.hasOwnProperty.call(BB, IB)) {
-            var NB = dB ? Object.getOwnPropertyDescriptor(BB, IB) : null;
-            NB && (NB.get || NB.set) ? Object.defineProperty(nB, IB, NB) : nB[IB] = BB[IB]
-          } nB.default = BB, zB && zB.set(BB, nB);
-        return nB
-      }(zB(62)),
-      IB = pB(zB(5045)),
-      NB = pB(zB(5091)),
-      uB = zB(5094),
-      UB = zB(1148);
+        var ZB = nB(IB);
+        if (ZB && ZB.has(BB)) return ZB.get(BB);
+        var JB = {},
+          oB = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var GB in BB)
+          if ("default" !== GB && Object.prototype.hasOwnProperty.call(BB, GB)) {
+            var vB = oB ? Object.getOwnPropertyDescriptor(BB, GB) : null;
+            vB && (vB.get || vB.set) ? Object.defineProperty(JB, GB, vB) : JB[GB] = BB[GB]
+          } JB.default = BB, ZB && ZB.set(BB, JB);
+        return JB
+      }(ZB(63)),
+      GB = hB(ZB(5115)),
+      vB = hB(ZB(5166)),
+      kB = ZB(5169),
+      cB = ZB(1153);
 
-    function aB(BB) {
+    function nB(BB) {
       if ("function" !== typeof WeakMap) return null;
-      var jB = new WeakMap,
-        zB = new WeakMap;
-      return (aB = function(BB) {
-        return BB ? zB : jB
+      var IB = new WeakMap,
+        ZB = new WeakMap;
+      return (nB = function(BB) {
+        return BB ? ZB : IB
       })(BB)
     }
 
-    function pB(BB) {
+    function hB(BB) {
       return BB && BB.__esModule ? BB : {
         default: BB
       }
     }
 
-    function rB(BB, jB) {
-      var zB = "undefined" !== typeof Symbol && BB[Symbol.iterator] || BB["@@iterator"];
-      if (!zB) {
-        if (Array.isArray(BB) || (zB = function(BB, jB) {
+    function zB(BB, IB) {
+      var ZB = "undefined" !== typeof Symbol && BB[Symbol.iterator] || BB["@@iterator"];
+      if (!ZB) {
+        if (Array.isArray(BB) || (ZB = function(BB, IB) {
             if (!BB) return;
-            if ("string" === typeof BB) return sB(BB, jB);
-            var zB = Object.prototype.toString.call(BB).slice(8, -1);
-            "Object" === zB && BB.constructor && (zB = BB.constructor.name);
-            if ("Map" === zB || "Set" === zB) return Array.from(BB);
-            if ("Arguments" === zB || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(zB)) return sB(BB, jB)
-          }(BB)) || jB && BB && "number" === typeof BB.length) {
-          zB && (BB = zB);
-          var QB = 0,
-            nB = function() {};
+            if ("string" === typeof BB) return FB(BB, IB);
+            var ZB = Object.prototype.toString.call(BB).slice(8, -1);
+            "Object" === ZB && BB.constructor && (ZB = BB.constructor.name);
+            if ("Map" === ZB || "Set" === ZB) return Array.from(BB);
+            if ("Arguments" === ZB || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(ZB)) return FB(BB, IB)
+          }(BB)) || IB && BB && "number" === typeof BB.length) {
+          ZB && (BB = ZB);
+          var TB = 0,
+            JB = function() {};
           return {
-            s: nB,
+            s: JB,
             n: function() {
-              return QB >= BB.length ? {
+              return TB >= BB.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: BB[QB++]
+                value: BB[TB++]
               }
             },
             e: function(BB) {
               throw BB
             },
-            f: nB
+            f: JB
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var dB, IB = !0,
-        NB = !1;
+      var oB, GB = !0,
+        vB = !1;
       return {
         s: function() {
-          zB = zB.call(BB)
+          ZB = ZB.call(BB)
         },
         n: function() {
-          var BB = zB.next();
-          return IB = BB.done, BB
+          var BB = ZB.next();
+          return GB = BB.done, BB
         },
         e: function(BB) {
-          NB = !0, dB = BB
+          vB = !0, oB = BB
         },
         f: function() {
           try {
-            IB || null == zB.return || zB.return()
+            GB || null == ZB.return || ZB.return()
           } finally {
-            if (NB) throw dB
+            if (vB) throw oB
           }
         }
       }
     }
 
-    function sB(BB, jB) {
-      (null == jB || jB > BB.length) && (jB = BB.length);
-      for (var zB = 0, QB = new Array(jB); zB < jB; zB++) QB[zB] = BB[zB];
-      return QB
+    function FB(BB, IB) {
+      (null == IB || IB > BB.length) && (IB = BB.length);
+      for (var ZB = 0, TB = new Array(IB); ZB < IB; ZB++) TB[ZB] = BB[ZB];
+      return TB
     }
 
-    function JB(BB, jB) {
-      for (var zB = 0; zB < jB.length; zB++) {
-        var QB = jB[zB];
-        QB.enumerable = QB.enumerable || !1, QB.configurable = !0, "value" in QB && (QB.writable = !0), Object.defineProperty(BB, QB.key, QB)
+    function NB(BB, IB) {
+      for (var ZB = 0; ZB < IB.length; ZB++) {
+        var TB = IB[ZB];
+        TB.enumerable = TB.enumerable || !1, TB.configurable = !0, "value" in TB && (TB.writable = !0), Object.defineProperty(BB, TB.key, TB)
       }
     }
 
-    function mB(BB, jB) {
-      return mB = Object.setPrototypeOf || function(BB, jB) {
-        return BB.__proto__ = jB, BB
-      }, mB(BB, jB)
+    function gB(BB, IB) {
+      return gB = Object.setPrototypeOf || function(BB, IB) {
+        return BB.__proto__ = IB, BB
+      }, gB(BB, IB)
     }
 
-    function yB(BB) {
-      var jB = function() {
+    function qB(BB) {
+      var IB = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
@@ -135,39 +135,39 @@ export const modules = {
         }
       }();
       return function() {
-        var zB, nB = GB(BB);
-        if (jB) {
-          var dB = GB(this).constructor;
-          zB = Reflect.construct(nB, arguments, dB)
-        } else zB = nB.apply(this, arguments);
-        return function(BB, jB) {
-          if (jB && ("object" === QB(jB) || "function" === typeof jB)) return jB;
-          if (void 0 !== jB) throw new TypeError("Derived constructors may only return object or undefined");
-          return kB(BB)
-        }(this, zB)
+        var ZB, JB = UB(BB);
+        if (IB) {
+          var oB = UB(this).constructor;
+          ZB = Reflect.construct(JB, arguments, oB)
+        } else ZB = JB.apply(this, arguments);
+        return function(BB, IB) {
+          if (IB && ("object" === TB(IB) || "function" === typeof IB)) return IB;
+          if (void 0 !== IB) throw new TypeError("Derived constructors may only return object or undefined");
+          return yB(BB)
+        }(this, ZB)
       }
     }
 
-    function kB(BB) {
+    function yB(BB) {
       if (void 0 === BB) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
       return BB
     }
 
-    function GB(BB) {
-      return GB = Object.setPrototypeOf ? Object.getPrototypeOf : function(BB) {
+    function UB(BB) {
+      return UB = Object.setPrototypeOf ? Object.getPrototypeOf : function(BB) {
         return BB.__proto__ || Object.getPrototypeOf(BB)
-      }, GB(BB)
+      }, UB(BB)
     }
 
-    function LB(BB, jB, zB) {
-      return jB in BB ? Object.defineProperty(BB, jB, {
-        value: zB,
+    function WB(BB, IB, ZB) {
+      return IB in BB ? Object.defineProperty(BB, IB, {
+        value: ZB,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : BB[jB] = zB, BB
+      }) : BB[IB] = ZB, BB
     }
-    var gB = {
+    var dB = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,11 +183,11 @@ export const modules = {
           }
         }
       },
-      tB = function(BB) {
-        ! function(BB, jB) {
-          if ("function" !== typeof jB && null !== jB) throw new TypeError("Super expression must either be null or a function");
+      CB = function(BB) {
+        ! function(BB, IB) {
+          if ("function" !== typeof IB && null !== IB) throw new TypeError("Super expression must either be null or a function");
           Object.defineProperty(BB, "prototype", {
-            value: Object.create(jB && jB.prototype, {
+            value: Object.create(IB && IB.prototype, {
               constructor: {
                 value: BB,
                 writable: !0,
@@ -195,246 +195,246 @@ export const modules = {
               }
             }),
             writable: !1
-          }), jB && mB(BB, jB)
-        }(IB, BB);
-        var jB, zB, QB, dB = yB(IB);
+          }), IB && gB(BB, IB)
+        }(GB, BB);
+        var IB, ZB, TB, oB = qB(GB);
 
-        function IB(BB, jB) {
-          var zB;
-          return function(BB, jB) {
-            if (!(BB instanceof jB)) throw new TypeError("Cannot call a class as a function")
-          }(this, IB), LB(kB(zB = dB.call(this, BB, jB)), "handleFormat", (function(BB) {
-            var jB = zB.props.format;
-            return jB ? jB(BB) : BB
-          })), LB(kB(zB), "handleUpdate", (function() {
-            if (zB.slider) {
-              var BB = zB.props.orientation,
-                jB = (0, uB.capitalize)(gB.orientation[BB].dimension),
-                QB = zB.slider["offset".concat(jB)],
-                nB = zB.handle["offset".concat(jB)];
-              zB.setState({
-                limit: QB - nB,
-                grab: nB / 2
+        function GB(BB, IB) {
+          var ZB;
+          return function(BB, IB) {
+            if (!(BB instanceof IB)) throw new TypeError("Cannot call a class as a function")
+          }(this, GB), WB(yB(ZB = oB.call(this, BB, IB)), "handleFormat", (function(BB) {
+            var IB = ZB.props.format;
+            return IB ? IB(BB) : BB
+          })), WB(yB(ZB), "handleUpdate", (function() {
+            if (ZB.slider) {
+              var BB = ZB.props.orientation,
+                IB = (0, kB.capitalize)(dB.orientation[BB].dimension),
+                TB = ZB.slider["offset".concat(IB)],
+                JB = ZB.handle["offset".concat(IB)];
+              ZB.setState({
+                limit: TB - JB,
+                grab: JB / 2
               })
             }
-          })), LB(kB(zB), "handleStart", (function(BB) {
-            var jB = zB.props.onChangeStart;
-            document.addEventListener("mousemove", zB.handleDrag), document.addEventListener("mouseup", zB.handleEnd), zB.setState({
+          })), WB(yB(ZB), "handleStart", (function(BB) {
+            var IB = ZB.props.onChangeStart;
+            document.addEventListener("mousemove", ZB.handleDrag), document.addEventListener("mouseup", ZB.handleEnd), ZB.setState({
               active: !0
             }, (function() {
-              jB && jB(BB)
+              IB && IB(BB)
             }))
-          })), LB(kB(zB), "handleDrag", (function(BB) {
+          })), WB(yB(ZB), "handleDrag", (function(BB) {
             BB.stopPropagation();
-            var jB = zB.props.onChange,
-              QB = BB.target,
-              nB = QB.className,
-              dB = QB.classList,
-              IB = QB.dataset;
-            if (jB && "rangeslider__labels" !== nB) {
-              var NB = zB.position(BB);
-              dB && dB.contains("rangeslider__label-item") && IB.value && (NB = parseFloat(IB.value)), jB && jB(NB, BB)
+            var IB = ZB.props.onChange,
+              TB = BB.target,
+              JB = TB.className,
+              oB = TB.classList,
+              GB = TB.dataset;
+            if (IB && "rangeslider__labels" !== JB) {
+              var vB = ZB.position(BB);
+              oB && oB.contains("rangeslider__label-item") && GB.value && (vB = parseFloat(GB.value)), IB && IB(vB, BB)
             }
-          })), LB(kB(zB), "handleEnd", (function(BB) {
-            var jB = zB.props.onChangeComplete;
-            zB.setState({
+          })), WB(yB(ZB), "handleEnd", (function(BB) {
+            var IB = ZB.props.onChangeComplete;
+            ZB.setState({
               active: !1
             }, (function() {
-              jB && jB(BB)
-            })), document.removeEventListener("mousemove", zB.handleDrag), document.removeEventListener("mouseup", zB.handleEnd)
-          })), LB(kB(zB), "handleKeyDown", (function(BB) {
+              IB && IB(BB)
+            })), document.removeEventListener("mousemove", ZB.handleDrag), document.removeEventListener("mouseup", ZB.handleEnd)
+          })), WB(yB(ZB), "handleKeyDown", (function(BB) {
             BB.preventDefault();
-            var jB, QB = BB.keyCode,
-              nB = zB.props,
-              dB = nB.value,
-              IB = nB.min,
-              NB = nB.max,
-              uB = nB.step,
-              UB = nB.onChange;
-            switch (QB) {
+            var IB, TB = BB.keyCode,
+              JB = ZB.props,
+              oB = JB.value,
+              GB = JB.min,
+              vB = JB.max,
+              kB = JB.step,
+              cB = JB.onChange;
+            switch (TB) {
               case 38:
               case 39:
-                jB = dB + uB > NB ? NB : dB + uB, UB && UB(jB, BB);
+                IB = oB + kB > vB ? vB : oB + kB, cB && cB(IB, BB);
                 break;
               case 37:
               case 40:
-                jB = dB - uB < IB ? IB : dB - uB, UB && UB(jB, BB)
+                IB = oB - kB < GB ? GB : oB - kB, cB && cB(IB, BB)
             }
-          })), LB(kB(zB), "getPositionFromValue", (function(BB) {
-            var jB = zB.state.limit,
-              QB = zB.props,
-              nB = QB.min,
-              dB = (BB - nB) / (QB.max - nB);
-            return Math.round(dB * jB)
-          })), LB(kB(zB), "getValueFromPosition", (function(BB) {
-            var jB = zB.state.limit,
-              QB = zB.props,
-              nB = QB.orientation,
-              dB = QB.min,
-              IB = QB.max,
-              NB = QB.step,
-              UB = (0, uB.clamp)(BB, 0, jB) / (jB || 1),
-              aB = NB * Math.round(UB * (IB - dB) / NB),
-              pB = "horizontal" === nB ? aB + dB : IB - aB;
-            return (0, uB.clamp)(pB, dB, IB)
-          })), LB(kB(zB), "position", (function(BB) {
-            var jB = zB.state.grab,
-              QB = zB.props,
-              nB = QB.orientation,
-              dB = QB.reverse,
-              IB = zB.slider,
-              NB = gB.orientation[nB].coordinate,
-              UB = dB ? gB.orientation[nB].reverseDirection : gB.orientation[nB].direction,
-              aB = "client".concat((0, uB.capitalize)(NB)),
-              pB = BB.touches ? BB.touches[0][aB] : BB[aB],
-              rB = IB.getBoundingClientRect()[UB],
-              sB = dB ? rB - pB - jB : pB - rB - jB;
-            return zB.getValueFromPosition(sB)
-          })), LB(kB(zB), "coordinates", (function(BB) {
-            var jB = zB.state,
-              QB = jB.limit,
-              nB = jB.grab,
-              dB = zB.props.orientation,
-              IB = zB.getValueFromPosition(BB),
-              NB = zB.getPositionFromValue(IB),
-              uB = "horizontal" === dB ? NB + nB : NB;
+          })), WB(yB(ZB), "getPositionFromValue", (function(BB) {
+            var IB = ZB.state.limit,
+              TB = ZB.props,
+              JB = TB.min,
+              oB = (BB - JB) / (TB.max - JB);
+            return Math.round(oB * IB)
+          })), WB(yB(ZB), "getValueFromPosition", (function(BB) {
+            var IB = ZB.state.limit,
+              TB = ZB.props,
+              JB = TB.orientation,
+              oB = TB.min,
+              GB = TB.max,
+              vB = TB.step,
+              cB = (0, kB.clamp)(BB, 0, IB) / (IB || 1),
+              nB = vB * Math.round(cB * (GB - oB) / vB),
+              hB = "horizontal" === JB ? nB + oB : GB - nB;
+            return (0, kB.clamp)(hB, oB, GB)
+          })), WB(yB(ZB), "position", (function(BB) {
+            var IB = ZB.state.grab,
+              TB = ZB.props,
+              JB = TB.orientation,
+              oB = TB.reverse,
+              GB = ZB.slider,
+              vB = dB.orientation[JB].coordinate,
+              cB = oB ? dB.orientation[JB].reverseDirection : dB.orientation[JB].direction,
+              nB = "client".concat((0, kB.capitalize)(vB)),
+              hB = BB.touches ? BB.touches[0][nB] : BB[nB],
+              zB = GB.getBoundingClientRect()[cB],
+              FB = oB ? zB - hB - IB : hB - zB - IB;
+            return ZB.getValueFromPosition(FB)
+          })), WB(yB(ZB), "coordinates", (function(BB) {
+            var IB = ZB.state,
+              TB = IB.limit,
+              JB = IB.grab,
+              oB = ZB.props.orientation,
+              GB = ZB.getValueFromPosition(BB),
+              vB = ZB.getPositionFromValue(GB),
+              kB = "horizontal" === oB ? vB + JB : vB;
             return {
-              fill: "horizontal" === dB ? uB : QB - uB,
-              handle: uB,
-              label: uB
+              fill: "horizontal" === oB ? kB : TB - kB,
+              handle: kB,
+              label: kB
             }
-          })), LB(kB(zB), "renderLabels", (function(BB) {
-            return (0, UB.jsx)("ul", {
+          })), WB(yB(ZB), "renderLabels", (function(BB) {
+            return (0, cB.jsx)("ul", {
               ref: function(BB) {
-                zB.labels = BB
+                ZB.labels = BB
               },
-              className: (0, nB.default)("rangeslider__labels"),
+              className: (0, JB.default)("rangeslider__labels"),
               children: BB
             })
-          })), zB.state = {
+          })), ZB.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, zB
+          }, ZB
         }
-        return jB = IB, (zB = [{
+        return IB = GB, (ZB = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new NB.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new vB.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
             var BB = this,
-              jB = this.props,
-              zB = jB.value,
-              QB = jB.orientation,
-              dB = jB.className,
-              IB = jB.tooltip,
-              NB = jB.reverse,
-              uB = jB.labels,
-              aB = jB.min,
-              pB = jB.max,
-              sB = jB.handleLabel,
-              JB = this.state.active,
-              mB = gB.orientation[QB].dimension,
-              yB = NB ? gB.orientation[QB].reverseDirection : gB.orientation[QB].direction,
-              kB = this.getPositionFromValue(zB),
-              GB = this.coordinates(kB),
-              tB = LB({}, mB, "".concat(GB.fill, "px")),
-              SB = LB({}, yB, "".concat(GB.handle, "px")),
-              MB = IB && JB,
-              EB = [],
-              iB = Object.keys(uB);
-            if (iB.length > 0) {
-              var qB, fB = rB(iB = iB.sort((function(BB, jB) {
-                return NB ? BB - jB : jB - BB
+              IB = this.props,
+              ZB = IB.value,
+              TB = IB.orientation,
+              oB = IB.className,
+              GB = IB.tooltip,
+              vB = IB.reverse,
+              kB = IB.labels,
+              nB = IB.min,
+              hB = IB.max,
+              FB = IB.handleLabel,
+              NB = this.state.active,
+              gB = dB.orientation[TB].dimension,
+              qB = vB ? dB.orientation[TB].reverseDirection : dB.orientation[TB].direction,
+              yB = this.getPositionFromValue(ZB),
+              UB = this.coordinates(yB),
+              CB = WB({}, gB, "".concat(UB.fill, "px")),
+              QB = WB({}, qB, "".concat(UB.handle, "px")),
+              sB = GB && NB,
+              wB = [],
+              OB = Object.keys(kB);
+            if (OB.length > 0) {
+              var YB, iB = zB(OB = OB.sort((function(BB, IB) {
+                return vB ? BB - IB : IB - BB
               })));
               try {
-                for (fB.s(); !(qB = fB.n()).done;) {
-                  var oB = qB.value,
-                    HB = this.getPositionFromValue(oB),
-                    DB = this.coordinates(HB),
-                    FB = LB({}, yB, "".concat(DB.label, "px"));
-                  EB.push((0, UB.jsx)("li", {
-                    className: (0, nB.default)("rangeslider__label-item"),
-                    "data-value": oB,
+                for (iB.s(); !(YB = iB.n()).done;) {
+                  var pB = YB.value,
+                    aB = this.getPositionFromValue(pB),
+                    HB = this.coordinates(aB),
+                    MB = WB({}, qB, "".concat(HB.label, "px"));
+                  wB.push((0, cB.jsx)("li", {
+                    className: (0, JB.default)("rangeslider__label-item"),
+                    "data-value": pB,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: FB,
-                    children: this.props.labels[oB]
-                  }, oB))
+                    style: MB,
+                    children: this.props.labels[pB]
+                  }, pB))
                 }
-              } catch (YB) {
-                fB.e(YB)
+              } catch (jB) {
+                iB.e(jB)
               } finally {
-                fB.f()
+                iB.f()
               }
             }
-            return (0, UB.jsxs)("div", {
-              ref: function(jB) {
-                BB.slider = jB
+            return (0, cB.jsxs)("div", {
+              ref: function(IB) {
+                BB.slider = IB
               },
-              className: (0, nB.default)("rangeslider", "rangeslider-".concat(QB), {
-                "rangeslider-reverse": NB
-              }, dB),
+              className: (0, JB.default)("rangeslider", "rangeslider-".concat(TB), {
+                "rangeslider-reverse": vB
+              }, oB),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": aB,
-              "aria-valuemax": pB,
-              "aria-valuenow": zB,
-              "aria-orientation": QB,
-              children: [(0, UB.jsx)("div", {
+              "aria-valuemin": nB,
+              "aria-valuemax": hB,
+              "aria-valuenow": ZB,
+              "aria-orientation": TB,
+              children: [(0, cB.jsx)("div", {
                 className: "rangeslider__fill",
-                style: tB
-              }), (0, UB.jsxs)("div", {
-                ref: function(jB) {
-                  BB.handle = jB
+                style: CB
+              }), (0, cB.jsxs)("div", {
+                ref: function(IB) {
+                  BB.handle = IB
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: SB,
+                style: QB,
                 tabIndex: 0,
-                children: [MB && (0, UB.jsx)("div", {
-                  ref: function(jB) {
-                    BB.tooltip = jB
+                children: [sB && (0, cB.jsx)("div", {
+                  ref: function(IB) {
+                    BB.tooltip = IB
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, UB.jsx)("span", {
-                    children: this.handleFormat(zB)
+                  children: (0, cB.jsx)("span", {
+                    children: this.handleFormat(ZB)
                   })
-                }), (0, UB.jsx)("div", {
+                }), (0, cB.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: sB
+                  children: FB
                 })]
-              }), uB && this.renderLabels(EB)]
+              }), kB && this.renderLabels(wB)]
             })
           }
-        }]) && JB(jB.prototype, zB), QB && JB(jB, QB), Object.defineProperty(jB, "prototype", {
+        }]) && NB(IB.prototype, ZB), TB && NB(IB, TB), Object.defineProperty(IB, "prototype", {
           writable: !1
-        }), IB
-      }(dB.Component);
-    LB(tB, "propTypes", {
-      min: IB.default.number,
-      max: IB.default.number,
-      step: IB.default.number,
-      value: IB.default.number,
-      orientation: IB.default.string,
-      tooltip: IB.default.bool,
-      reverse: IB.default.bool,
-      labels: IB.default.object,
-      handleLabel: IB.default.string,
-      format: IB.default.func,
-      onChangeStart: IB.default.func,
-      onChange: IB.default.func,
-      onChangeComplete: IB.default.func
-    }), LB(tB, "defaultProps", {
+        }), GB
+      }(oB.Component);
+    WB(CB, "propTypes", {
+      min: GB.default.number,
+      max: GB.default.number,
+      step: GB.default.number,
+      value: GB.default.number,
+      orientation: GB.default.string,
+      tooltip: GB.default.bool,
+      reverse: GB.default.bool,
+      labels: GB.default.object,
+      handleLabel: GB.default.string,
+      format: GB.default.func,
+      onChangeStart: GB.default.func,
+      onChange: GB.default.func,
+      onChangeComplete: GB.default.func
+    }), WB(CB, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,45 +445,45 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var SB = tB;
-    jB.default = SB
+    var QB = CB;
+    IB.default = QB
   },
-  5081: (BB, jB, zB) => {
-    var QB;
-    jB.c = void 0;
-    var nB = ((QB = zB(5087)) && QB.__esModule ? QB : {
-      default: QB
+  5150: (BB, IB, ZB) => {
+    var TB;
+    IB.d = void 0;
+    var JB = ((TB = ZB(5158)) && TB.__esModule ? TB : {
+      default: TB
     }).default;
-    jB.c = nB
+    IB.d = JB
   },
-  5094: (BB, jB) => {
-    Object.defineProperty(jB, "__esModule", {
+  5169: (BB, IB) => {
+    Object.defineProperty(IB, "__esModule", {
       value: !0
-    }), jB.capitalize = function(BB) {
+    }), IB.capitalize = function(BB) {
       return BB.charAt(0).toUpperCase() + BB.substr(1)
-    }, jB.clamp = function(BB, jB, zB) {
-      return Math.min(Math.max(BB, jB), zB)
+    }, IB.clamp = function(BB, IB, ZB) {
+      return Math.min(Math.max(BB, IB), ZB)
     }
   },
-  5053: (BB, jB, zB) => {
-    var QB = zB(5058);
+  5117: (BB, IB, ZB) => {
+    var TB = ZB(5124);
 
-    function nB() {}
+    function JB() {}
 
-    function dB() {}
-    dB.resetWarningCache = nB, BB.exports = function() {
-      function BB(BB, jB, zB, nB, dB, IB) {
-        if (IB !== QB) {
-          var NB = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw NB.name = "Invariant Violation", NB
+    function oB() {}
+    oB.resetWarningCache = JB, BB.exports = function() {
+      function BB(BB, IB, ZB, JB, oB, GB) {
+        if (GB !== TB) {
+          var vB = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw vB.name = "Invariant Violation", vB
         }
       }
 
-      function jB() {
+      function IB() {
         return BB
       }
       BB.isRequired = BB;
-      var zB = {
+      var ZB = {
         array: BB,
         bigint: BB,
         bool: BB,
@@ -493,116 +493,116 @@ export const modules = {
         string: BB,
         symbol: BB,
         any: BB,
-        arrayOf: jB,
+        arrayOf: IB,
         element: BB,
         elementType: BB,
-        instanceOf: jB,
+        instanceOf: IB,
         node: BB,
-        objectOf: jB,
-        oneOf: jB,
-        oneOfType: jB,
-        shape: jB,
-        exact: jB,
-        checkPropTypes: dB,
-        resetWarningCache: nB
+        objectOf: IB,
+        oneOf: IB,
+        oneOfType: IB,
+        shape: IB,
+        exact: IB,
+        checkPropTypes: oB,
+        resetWarningCache: JB
       };
-      return zB.PropTypes = zB, zB
+      return ZB.PropTypes = ZB, ZB
     }
   },
-  5045: (BB, jB, zB) => {
-    BB.exports = zB(5053)()
+  5115: (BB, IB, ZB) => {
+    BB.exports = ZB(5117)()
   },
-  5058: BB => {
+  5124: BB => {
     BB.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5091: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => EB
+  5166: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => wB
     });
-    var QB = function() {
+    var TB = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function BB(BB, jB) {
-          var zB = -1;
-          return BB.some((function(BB, QB) {
-            return BB[0] === jB && (zB = QB, !0)
-          })), zB
+        function BB(BB, IB) {
+          var ZB = -1;
+          return BB.some((function(BB, TB) {
+            return BB[0] === IB && (ZB = TB, !0)
+          })), ZB
         }
         return function() {
-          function jB() {
+          function IB() {
             this.__entries__ = []
           }
-          return Object.defineProperty(jB.prototype, "size", {
+          return Object.defineProperty(IB.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), jB.prototype.get = function(jB) {
-            var zB = BB(this.__entries__, jB),
-              QB = this.__entries__[zB];
-            return QB && QB[1]
-          }, jB.prototype.set = function(jB, zB) {
-            var QB = BB(this.__entries__, jB);
-            ~QB ? this.__entries__[QB][1] = zB : this.__entries__.push([jB, zB])
-          }, jB.prototype.delete = function(jB) {
-            var zB = this.__entries__,
-              QB = BB(zB, jB);
-            ~QB && zB.splice(QB, 1)
-          }, jB.prototype.has = function(jB) {
-            return !!~BB(this.__entries__, jB)
-          }, jB.prototype.clear = function() {
+          }), IB.prototype.get = function(IB) {
+            var ZB = BB(this.__entries__, IB),
+              TB = this.__entries__[ZB];
+            return TB && TB[1]
+          }, IB.prototype.set = function(IB, ZB) {
+            var TB = BB(this.__entries__, IB);
+            ~TB ? this.__entries__[TB][1] = ZB : this.__entries__.push([IB, ZB])
+          }, IB.prototype.delete = function(IB) {
+            var ZB = this.__entries__,
+              TB = BB(ZB, IB);
+            ~TB && ZB.splice(TB, 1)
+          }, IB.prototype.has = function(IB) {
+            return !!~BB(this.__entries__, IB)
+          }, IB.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, jB.prototype.forEach = function(BB, jB) {
-            void 0 === jB && (jB = null);
-            for (var zB = 0, QB = this.__entries__; zB < QB.length; zB++) {
-              var nB = QB[zB];
-              BB.call(jB, nB[1], nB[0])
+          }, IB.prototype.forEach = function(BB, IB) {
+            void 0 === IB && (IB = null);
+            for (var ZB = 0, TB = this.__entries__; ZB < TB.length; ZB++) {
+              var JB = TB[ZB];
+              BB.call(IB, JB[1], JB[0])
             }
-          }, jB
+          }, IB
         }()
       }(),
-      nB = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      dB = "undefined" !== typeof zB.g && zB.g.Math === Math ? zB.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      IB = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(dB) : function(BB) {
+      JB = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      oB = "undefined" !== typeof ZB.g && ZB.g.Math === Math ? ZB.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      GB = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(oB) : function(BB) {
         return setTimeout((function() {
           return BB(Date.now())
         }), 1e3 / 60)
       };
-    var NB = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      uB = "undefined" !== typeof MutationObserver,
-      UB = function() {
+    var vB = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      kB = "undefined" !== typeof MutationObserver,
+      cB = function() {
         function BB() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(BB, jB) {
-            var zB = !1,
-              QB = !1,
-              nB = 0;
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(BB, IB) {
+            var ZB = !1,
+              TB = !1,
+              JB = 0;
 
-            function dB() {
-              zB && (zB = !1, BB()), QB && uB()
+            function oB() {
+              ZB && (ZB = !1, BB()), TB && kB()
             }
 
-            function NB() {
-              IB(dB)
+            function vB() {
+              GB(oB)
             }
 
-            function uB() {
+            function kB() {
               var BB = Date.now();
-              if (zB) {
-                if (BB - nB < 2) return;
-                QB = !0
-              } else zB = !0, QB = !1, setTimeout(NB, jB);
-              nB = BB
+              if (ZB) {
+                if (BB - JB < 2) return;
+                TB = !0
+              } else ZB = !0, TB = !1, setTimeout(vB, IB);
+              JB = BB
             }
-            return uB
+            return kB
           }(this.refresh.bind(this), 20)
         }
         return BB.prototype.addObserver = function(BB) {
           ~this.observers_.indexOf(BB) || this.observers_.push(BB), this.connected_ || this.connect_()
         }, BB.prototype.removeObserver = function(BB) {
-          var jB = this.observers_,
-            zB = jB.indexOf(BB);
-          ~zB && jB.splice(zB, 1), !jB.length && this.connected_ && this.disconnect_()
+          var IB = this.observers_,
+            ZB = IB.indexOf(BB);
+          ~ZB && IB.splice(ZB, 1), !IB.length && this.connected_ && this.disconnect_()
         }, BB.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
         }, BB.prototype.updateObservers_ = function() {
@@ -613,29 +613,29 @@ export const modules = {
             return BB.broadcastActive()
           })), BB.length > 0
         }, BB.prototype.connect_ = function() {
-          nB && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), uB ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          JB && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), kB ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
         }, BB.prototype.disconnect_ = function() {
-          nB && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+          JB && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
         }, BB.prototype.onTransitionEnd_ = function(BB) {
-          var jB = BB.propertyName,
-            zB = void 0 === jB ? "" : jB;
-          NB.some((function(BB) {
-            return !!~zB.indexOf(BB)
+          var IB = BB.propertyName,
+            ZB = void 0 === IB ? "" : IB;
+          vB.some((function(BB) {
+            return !!~ZB.indexOf(BB)
           })) && this.refresh()
         }, BB.getInstance = function() {
           return this.instance_ || (this.instance_ = new BB), this.instance_
         }, BB.instance_ = null, BB
       }(),
-      aB = function(BB, jB) {
-        for (var zB = 0, QB = Object.keys(jB); zB < QB.length; zB++) {
-          var nB = QB[zB];
-          Object.defineProperty(BB, nB, {
-            value: jB[nB],
+      nB = function(BB, IB) {
+        for (var ZB = 0, TB = Object.keys(IB); ZB < TB.length; ZB++) {
+          var JB = TB[ZB];
+          Object.defineProperty(BB, JB, {
+            value: IB[JB],
             enumerable: !1,
             writable: !1,
             configurable: !0
@@ -643,138 +643,138 @@ export const modules = {
         }
         return BB
       },
-      pB = function(BB) {
-        return BB && BB.ownerDocument && BB.ownerDocument.defaultView || dB
+      hB = function(BB) {
+        return BB && BB.ownerDocument && BB.ownerDocument.defaultView || oB
       },
-      rB = GB(0, 0, 0, 0);
+      zB = UB(0, 0, 0, 0);
 
-    function sB(BB) {
+    function FB(BB) {
       return parseFloat(BB) || 0
     }
 
-    function JB(BB) {
-      for (var jB = [], zB = 1; zB < arguments.length; zB++) jB[zB - 1] = arguments[zB];
-      return jB.reduce((function(jB, zB) {
-        return jB + sB(BB["border-" + zB + "-width"])
+    function NB(BB) {
+      for (var IB = [], ZB = 1; ZB < arguments.length; ZB++) IB[ZB - 1] = arguments[ZB];
+      return IB.reduce((function(IB, ZB) {
+        return IB + FB(BB["border-" + ZB + "-width"])
       }), 0)
     }
 
-    function mB(BB) {
-      var jB = BB.clientWidth,
-        zB = BB.clientHeight;
-      if (!jB && !zB) return rB;
-      var QB = pB(BB).getComputedStyle(BB),
-        nB = function(BB) {
-          for (var jB = {}, zB = 0, QB = ["top", "right", "bottom", "left"]; zB < QB.length; zB++) {
-            var nB = QB[zB],
-              dB = BB["padding-" + nB];
-            jB[nB] = sB(dB)
+    function gB(BB) {
+      var IB = BB.clientWidth,
+        ZB = BB.clientHeight;
+      if (!IB && !ZB) return zB;
+      var TB = hB(BB).getComputedStyle(BB),
+        JB = function(BB) {
+          for (var IB = {}, ZB = 0, TB = ["top", "right", "bottom", "left"]; ZB < TB.length; ZB++) {
+            var JB = TB[ZB],
+              oB = BB["padding-" + JB];
+            IB[JB] = FB(oB)
           }
-          return jB
-        }(QB),
-        dB = nB.left + nB.right,
-        IB = nB.top + nB.bottom,
-        NB = sB(QB.width),
-        uB = sB(QB.height);
-      if ("border-box" === QB.boxSizing && (Math.round(NB + dB) !== jB && (NB -= JB(QB, "left", "right") + dB), Math.round(uB + IB) !== zB && (uB -= JB(QB, "top", "bottom") + IB)), ! function(BB) {
-          return BB === pB(BB).document.documentElement
+          return IB
+        }(TB),
+        oB = JB.left + JB.right,
+        GB = JB.top + JB.bottom,
+        vB = FB(TB.width),
+        kB = FB(TB.height);
+      if ("border-box" === TB.boxSizing && (Math.round(vB + oB) !== IB && (vB -= NB(TB, "left", "right") + oB), Math.round(kB + GB) !== ZB && (kB -= NB(TB, "top", "bottom") + GB)), ! function(BB) {
+          return BB === hB(BB).document.documentElement
         }(BB)) {
-        var UB = Math.round(NB + dB) - jB,
-          aB = Math.round(uB + IB) - zB;
-        1 !== Math.abs(UB) && (NB -= UB), 1 !== Math.abs(aB) && (uB -= aB)
+        var cB = Math.round(vB + oB) - IB,
+          nB = Math.round(kB + GB) - ZB;
+        1 !== Math.abs(cB) && (vB -= cB), 1 !== Math.abs(nB) && (kB -= nB)
       }
-      return GB(nB.left, nB.top, NB, uB)
+      return UB(JB.left, JB.top, vB, kB)
     }
-    var yB = "undefined" !== typeof SVGGraphicsElement ? function(BB) {
-      return BB instanceof pB(BB).SVGGraphicsElement
+    var qB = "undefined" !== typeof SVGGraphicsElement ? function(BB) {
+      return BB instanceof hB(BB).SVGGraphicsElement
     } : function(BB) {
-      return BB instanceof pB(BB).SVGElement && "function" === typeof BB.getBBox
+      return BB instanceof hB(BB).SVGElement && "function" === typeof BB.getBBox
     };
 
-    function kB(BB) {
-      return nB ? yB(BB) ? function(BB) {
-        var jB = BB.getBBox();
-        return GB(0, 0, jB.width, jB.height)
-      }(BB) : mB(BB) : rB
+    function yB(BB) {
+      return JB ? qB(BB) ? function(BB) {
+        var IB = BB.getBBox();
+        return UB(0, 0, IB.width, IB.height)
+      }(BB) : gB(BB) : zB
     }
 
-    function GB(BB, jB, zB, QB) {
+    function UB(BB, IB, ZB, TB) {
       return {
         x: BB,
-        y: jB,
-        width: zB,
-        height: QB
+        y: IB,
+        width: ZB,
+        height: TB
       }
     }
-    var LB = function() {
+    var WB = function() {
         function BB(BB) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = GB(0, 0, 0, 0), this.target = BB
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = UB(0, 0, 0, 0), this.target = BB
         }
         return BB.prototype.isActive = function() {
-          var BB = kB(this.target);
+          var BB = yB(this.target);
           return this.contentRect_ = BB, BB.width !== this.broadcastWidth || BB.height !== this.broadcastHeight
         }, BB.prototype.broadcastRect = function() {
           var BB = this.contentRect_;
           return this.broadcastWidth = BB.width, this.broadcastHeight = BB.height, BB
         }, BB
       }(),
-      gB = function(BB, jB) {
-        var zB = function(BB) {
-          var jB = BB.x,
-            zB = BB.y,
-            QB = BB.width,
-            nB = BB.height,
-            dB = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            IB = Object.create(dB.prototype);
-          return aB(IB, {
-            x: jB,
-            y: zB,
-            width: QB,
-            height: nB,
-            top: zB,
-            right: jB + QB,
-            bottom: nB + zB,
-            left: jB
-          }), IB
-        }(jB);
-        aB(this, {
+      dB = function(BB, IB) {
+        var ZB = function(BB) {
+          var IB = BB.x,
+            ZB = BB.y,
+            TB = BB.width,
+            JB = BB.height,
+            oB = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            GB = Object.create(oB.prototype);
+          return nB(GB, {
+            x: IB,
+            y: ZB,
+            width: TB,
+            height: JB,
+            top: ZB,
+            right: IB + TB,
+            bottom: JB + ZB,
+            left: IB
+          }), GB
+        }(IB);
+        nB(this, {
           target: BB,
-          contentRect: zB
+          contentRect: ZB
         })
       },
-      tB = function() {
-        function BB(BB, jB, zB) {
-          if (this.activeObservations_ = [], this.observations_ = new QB, "function" !== typeof BB) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = BB, this.controller_ = jB, this.callbackCtx_ = zB
+      CB = function() {
+        function BB(BB, IB, ZB) {
+          if (this.activeObservations_ = [], this.observations_ = new TB, "function" !== typeof BB) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = BB, this.controller_ = IB, this.callbackCtx_ = ZB
         }
         return BB.prototype.observe = function(BB) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(BB instanceof pB(BB).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var jB = this.observations_;
-            jB.has(BB) || (jB.set(BB, new LB(BB)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(BB instanceof hB(BB).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var IB = this.observations_;
+            IB.has(BB) || (IB.set(BB, new WB(BB)), this.controller_.addObserver(this), this.controller_.refresh())
           }
         }, BB.prototype.unobserve = function(BB) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(BB instanceof pB(BB).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var jB = this.observations_;
-            jB.has(BB) && (jB.delete(BB), jB.size || this.controller_.removeObserver(this))
+            if (!(BB instanceof hB(BB).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var IB = this.observations_;
+            IB.has(BB) && (IB.delete(BB), IB.size || this.controller_.removeObserver(this))
           }
         }, BB.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
         }, BB.prototype.gatherActive = function() {
           var BB = this;
-          this.clearActive(), this.observations_.forEach((function(jB) {
-            jB.isActive() && BB.activeObservations_.push(jB)
+          this.clearActive(), this.observations_.forEach((function(IB) {
+            IB.isActive() && BB.activeObservations_.push(IB)
           }))
         }, BB.prototype.broadcastActive = function() {
           if (this.hasActive()) {
             var BB = this.callbackCtx_,
-              jB = this.activeObservations_.map((function(BB) {
-                return new gB(BB.target, BB.broadcastRect())
+              IB = this.activeObservations_.map((function(BB) {
+                return new dB(BB.target, BB.broadcastRect())
               }));
-            this.callback_.call(BB, jB, BB), this.clearActive()
+            this.callback_.call(BB, IB, BB), this.clearActive()
           }
         }, BB.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
@@ -782,21 +782,21 @@ export const modules = {
           return this.activeObservations_.length > 0
         }, BB
       }(),
-      SB = "undefined" !== typeof WeakMap ? new WeakMap : new QB,
-      MB = function BB(jB) {
+      QB = "undefined" !== typeof WeakMap ? new WeakMap : new TB,
+      sB = function BB(IB) {
         if (!(this instanceof BB)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var zB = UB.getInstance(),
-          QB = new tB(jB, zB, this);
-        SB.set(this, QB)
+        var ZB = cB.getInstance(),
+          TB = new CB(IB, ZB, this);
+        QB.set(this, TB)
       };
     ["observe", "unobserve", "disconnect"].forEach((function(BB) {
-      MB.prototype[BB] = function() {
-        var jB;
-        return (jB = SB.get(this))[BB].apply(jB, arguments)
+      sB.prototype[BB] = function() {
+        var IB;
+        return (IB = QB.get(this))[BB].apply(IB, arguments)
       }
     }));
-    const EB = "undefined" !== typeof dB.ResizeObserver ? dB.ResizeObserver : MB
+    const wB = "undefined" !== typeof oB.ResizeObserver ? oB.ResizeObserver : sB
   }
 };
 Object.freeze(modules);

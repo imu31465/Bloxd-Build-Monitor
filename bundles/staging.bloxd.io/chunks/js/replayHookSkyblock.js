@@ -1,45 +1,45 @@
 export const id = 52;
 export const ids = [52];
 export const modules = {
-  38742: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      SkyblockEntityFacing: () => NB,
-      needsSkyblockEntityFacing: () => IB
+  38681: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      SkyblockEntityFacing: () => vB,
+      needsSkyblockEntityFacing: () => GB
     });
-    var QB = zB(652),
-      nB = zB(4334),
-      dB = zB(38748);
+    var TB = ZB(663),
+      JB = ZB(4416),
+      oB = ZB(38685);
 
-    function IB(BB, jB) {
-      if (BB.metaInfo === QB.c || "Iron Guardian" === BB.type || "Gold Guardian" === BB.type) return !0;
+    function GB(BB, IB) {
+      if (BB.metaInfo === TB.d || "Iron Guardian" === BB.type || "Gold Guardian" === BB.type) return !0;
       if ("Pig" === BB.type) return "sitting" === BB.pose;
       if ("Person" !== BB.meshKind || void 0 === BB.meshOpts) return !1;
-      let zB = null === jB || void 0 === jB ? void 0 : jB.get(BB.meshOpts);
-      if (void 0 === zB) {
-        var dB, IB;
-        const QB = (0, nB.g)(BB);
-        zB = !1, "pig_napoleon" === (null === QB || void 0 === QB || null === (dB = QB.opts.textures) || void 0 === dB ? void 0 : dB.head) ? zB = !0 : "npc_pig_head" === (null === QB || void 0 === QB || null === (IB = QB.opts.textures) || void 0 === IB ? void 0 : IB.head) && (zB = "sitting" === QB.opts.pose || "sitting"), jB && (jB.size >= 256 && jB.clear(), jB.set(BB.meshOpts, zB))
+      let ZB = null === IB || void 0 === IB ? void 0 : IB.get(BB.meshOpts);
+      if (void 0 === ZB) {
+        var oB, GB;
+        const TB = (0, JB.h)(BB);
+        ZB = !1, "pig_napoleon" === (null === TB || void 0 === TB || null === (oB = TB.opts.textures) || void 0 === oB ? void 0 : oB.head) ? ZB = !0 : "npc_pig_head" === (null === TB || void 0 === TB || null === (GB = TB.opts.textures) || void 0 === GB ? void 0 : GB.head) && (ZB = "sitting" === TB.opts.pose || "sitting"), IB && (IB.size >= 256 && IB.clear(), IB.set(BB.meshOpts, ZB))
       }
-      return "sitting" === zB ? "sitting" === BB.pose : zB
-    }(0, dB.h)("skyblock", ((BB, jB) => {
-      jB.setFacingTolerance(IB(BB) ? 0 : null)
+      return "sitting" === ZB ? "sitting" === BB.pose : ZB
+    }(0, oB.g)("skyblock", ((BB, IB) => {
+      IB.setFacingTolerance(GB(BB) ? 0 : null)
     }));
-    class NB {
+    class vB {
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = BB, this.alsoVisit = jB, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = BB => {
-          var jB;
-          const zB = this.api.getEntityInfo(BB);
-          zB && (IB(zB, this.meshFacingCache) && (this.api.setFacingTolerance(BB, 0), this.nextFacing.add(BB)), null === (jB = this.alsoVisit) || void 0 === jB || jB.call(this, BB, zB))
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = BB, this.alsoVisit = IB, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = BB => {
+          var IB;
+          const ZB = this.api.getEntityInfo(BB);
+          ZB && (GB(ZB, this.meshFacingCache) && (this.api.setFacingTolerance(BB, 0), this.nextFacing.add(BB)), null === (IB = this.alsoVisit) || void 0 === IB || IB.call(this, BB, ZB))
         }
       }
-      vp() {
+      Iz() {
         const {
           api: BB
-        } = this, jB = this.nextFacing;
+        } = this, IB = this.nextFacing;
         BB.forEachEntity(this.visit);
-        for (const zB of this.facing) jB.has(zB) || BB.setFacingTolerance(zB, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = jB
+        for (const ZB of this.facing) IB.has(ZB) || BB.setFacingTolerance(ZB, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = IB
       }
       dispose() {
         for (const BB of this.facing) this.api.setFacingTolerance(BB, null);

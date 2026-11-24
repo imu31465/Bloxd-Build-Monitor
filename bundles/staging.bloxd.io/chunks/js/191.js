@@ -1,145 +1,145 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  40713: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => uB,
-      d: () => NB,
-      e: () => IB
+  40675: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => kB,
+      e: () => vB,
+      f: () => GB
     });
-    var QB = zB(40718),
-      nB = zB(4887),
-      dB = zB(40721);
+    var TB = ZB(40682),
+      JB = ZB(4969),
+      oB = ZB(40684);
 
-    function IB(BB) {
-      return BB.payloadKind === nB.fc.Msgpack ? (0, QB.c)(BB.payload) : void 0
+    function GB(BB) {
+      return BB.payloadKind === JB.nc.Msgpack ? (0, TB.e)(BB.payload) : void 0
     }
 
-    function NB(BB, jB) {
-      if (jB.payloadKind === nB.fc.Bytes || jB.payloadKind === nB.fc.MsgpackBin) return (0, dB.e)(BB, jB.payload)
+    function vB(BB, IB) {
+      if (IB.payloadKind === JB.nc.Bytes || IB.payloadKind === JB.nc.MsgpackBin) return (0, oB.e)(BB, IB.payload)
     }
 
-    function uB(BB) {
+    function kB(BB) {
       return null !== BB && "object" === typeof BB
     }
   },
-  40725: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => pB,
-      e: () => rB,
-      h: () => sB,
-      l: () => aB,
-      m: () => yB
+  40692: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => hB,
+      g: () => zB,
+      j: () => FB,
+      l: () => nB,
+      p: () => qB
     });
-    var QB = zB(4887),
-      nB = zB(40730);
-    const dB = new Map,
-      IB = new Set,
-      NB = new Set;
-    let uB = 0,
-      UB = 0;
+    var TB = ZB(4969),
+      JB = ZB(40701);
+    const oB = new Map,
+      GB = new Set,
+      vB = new Set;
+    let kB = 0,
+      cB = 0;
 
-    function aB(BB, jB) {
-      let zB = dB.get(BB);
-      return zB || (zB = new Set, dB.set(BB, zB)), zB.add(jB), () => {
-        zB.delete(jB)
+    function nB(BB, IB) {
+      let ZB = oB.get(BB);
+      return ZB || (ZB = new Set, oB.set(BB, ZB)), ZB.add(IB), () => {
+        ZB.delete(IB)
       }
     }
 
-    function pB() {
-      return 0 !== uB
+    function hB() {
+      return 0 !== kB
     }
 
-    function rB(BB) {
-      return IB.add(BB), () => {
-        IB.delete(BB)
+    function zB(BB) {
+      return GB.add(BB), () => {
+        GB.delete(BB)
       }
     }
 
-    function sB(BB) {
-      return NB.add(BB), () => {
-        NB.delete(BB)
+    function FB(BB) {
+      return vB.add(BB), () => {
+        vB.delete(BB)
       }
     }
-    const JB = "A raw message listener threw";
+    const NB = "A raw message listener threw";
 
-    function mB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : IB;
-      for (const QB of jB) try {
-        QB()
-      } catch (zB) {
-        BB ? (0, nB.p)(zB, JB) : console.error(JB, zB)
+    function gB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GB;
+      for (const TB of IB) try {
+        TB()
+      } catch (ZB) {
+        BB ? (0, JB.r)(ZB, NB) : console.error(NB, ZB)
       }
     }
-    const yB = {
+    const qB = {
       fire: function(BB) {
         if ("connection" === BB.type) {
-          const jB = BB.phase === QB.E.Activated && BB.conn !== uB && BB.conn > UB,
-            zB = (BB.phase === QB.E.Left || BB.phase === QB.E.Closed) && BB.conn === uB;
-          return void(jB || zB ? (uB = jB ? BB.conn : 0, mB(!0)) : BB.phase === QB.E.Resumed && 0 !== uB && BB.conn > UB && (uB = BB.conn, mB(!0, NB)))
+          const IB = BB.phase === TB.G.Activated && BB.conn !== kB && BB.conn > cB,
+            ZB = (BB.phase === TB.G.Left || BB.phase === TB.G.Closed) && BB.conn === kB;
+          return void(IB || ZB ? (kB = IB ? BB.conn : 0, gB(!0)) : BB.phase === TB.G.Resumed && 0 !== kB && BB.conn > cB && (kB = BB.conn, gB(!0, vB)))
         }
-        const jB = dB.get(BB.ha);
-        if (jB && BB.conn === uB && 0 !== uB)
-          for (const QB of jB) try {
-            QB(BB)
-          } catch (zB) {
-            (0, nB.p)(zB, JB)
+        const IB = oB.get(BB.Xn);
+        if (IB && BB.conn === kB && 0 !== kB)
+          for (const TB of IB) try {
+            TB(BB)
+          } catch (ZB) {
+            (0, JB.r)(ZB, NB)
           }
       },
       close: function(BB) {
-        UB = Math.max(UB, BB, uB), 0 !== uB && (uB = 0, mB(!1))
+        cB = Math.max(cB, BB, kB), 0 !== kB && (kB = 0, gB(!1))
       }
     }
   },
-  40705: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => UB,
-      f: () => uB,
-      g: () => NB
+  40664: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => cB,
+      h: () => kB,
+      k: () => vB
     });
-    var QB = zB(1297),
-      nB = zB(40682);
-    const dB = new TextDecoder,
-      IB = new TextEncoder;
+    var TB = ZB(1333),
+      JB = ZB(40633);
+    const oB = new TextDecoder,
+      GB = new TextEncoder;
 
-    function NB(BB, jB) {
-      const zB = BB.queries.entityName(jB);
-      if (zB === nB.Yc) return;
-      const IB = BB.memoryData(BB.scratch(), 4 + zB, 4, "entity_name's answer");
-      if (!IB) return;
-      const NB = IB.getUint32(0, !0),
-        uB = dB.decode(new Uint8Array(IB.buffer, IB.byteOffset + 4, zB));
-      return (0, QB.d)(uB, !1, NB === nB.fe ? null : NB)
+    function vB(BB, IB) {
+      const ZB = BB.queries.entityName(IB);
+      if (ZB === JB.Bc) return;
+      const GB = BB.memoryData(BB.scratch(), 4 + ZB, 4, "entity_name's answer");
+      if (!GB) return;
+      const vB = GB.getUint32(0, !0),
+        kB = oB.decode(new Uint8Array(GB.buffer, GB.byteOffset + 4, ZB));
+      return (0, TB.c)(kB, !1, vB === JB.Qd ? null : vB)
     }
 
-    function uB(BB, jB, zB) {
-      const QB = IB.encode(zB);
-      if (QB.length > nB.Nb) return !1;
-      const dB = BB.memoryView(Uint8Array, BB.scratch(), QB.length, "has_effect's name");
-      return !!dB && (dB.set(QB), 1 === BB.queries.hasEffect(jB, QB.length))
+    function kB(BB, IB, ZB) {
+      const TB = GB.encode(ZB);
+      if (TB.length > JB.sb) return !1;
+      const oB = BB.memoryView(Uint8Array, BB.scratch(), TB.length, "has_effect's name");
+      return !!oB && (oB.set(TB), 1 === BB.queries.hasEffect(IB, TB.length))
     }
 
-    function UB(BB, jB, zB, QB) {
-      const IB = BB.queries.blockData(jB, zB, QB);
-      if (IB === nB.Yc) return;
-      const NB = BB.memoryView(Uint8Array, BB.scratch(), IB, "block_data's answer");
-      return NB ? JSON.parse(dB.decode(NB)) : void 0
+    function cB(BB, IB, ZB, TB) {
+      const GB = BB.queries.blockData(IB, ZB, TB);
+      if (GB === JB.Bc) return;
+      const vB = BB.memoryView(Uint8Array, BB.scratch(), GB, "block_data's answer");
+      return vB ? JSON.parse(oB.decode(vB)) : void 0
     }
   },
-  40718: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => nB,
-      d: () => aB
+  40682: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => JB,
+      i: () => nB
     });
-    const QB = new TextDecoder;
+    const TB = new TextDecoder;
 
-    function nB(BB) {
-      const jB = new dB(BB),
-        zB = jB.value();
-      if (jB.at !== BB.length) throw new Error(`msgpack: ${BB.length-jB.at} bytes after the value`);
-      return zB
+    function JB(BB) {
+      const IB = new oB(BB),
+        ZB = IB.value();
+      if (IB.at !== BB.length) throw new Error(`msgpack: ${BB.length-IB.at} bytes after the value`);
+      return ZB
     }
-    class dB {
+    class oB {
       constructor(BB) {
         this.bytes = BB, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(BB.buffer, BB.byteOffset, BB.byteLength)
       }
@@ -218,9 +218,9 @@ export const modules = {
         }
       }
       take(BB) {
-        const jB = this.at;
-        if (jB + BB > this.bytes.length) throw new Error(`msgpack: ${BB} bytes past the end at ${jB}`);
-        return this.at = jB + BB, jB
+        const IB = this.at;
+        if (IB + BB > this.bytes.length) throw new Error(`msgpack: ${BB} bytes past the end at ${IB}`);
+        return this.at = IB + BB, IB
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -232,87 +232,87 @@ export const modules = {
         return this.view.getUint32(this.take(4), !1)
       }
       int64(BB) {
-        const jB = this.take(8);
-        return BB ? this.view.getBigInt64(jB, !1) : this.view.getBigUint64(jB, !1)
+        const IB = this.take(8);
+        return BB ? this.view.getBigInt64(IB, !1) : this.view.getBigUint64(IB, !1)
       }
       str(BB) {
-        const jB = this.take(BB),
-          zB = this.bytes;
+        const IB = this.take(BB),
+          ZB = this.bytes;
         if (BB < 16) {
-          let nB = "";
-          for (let dB = jB; dB < jB + BB; dB++) {
-            const IB = zB[dB];
-            if (IB >= 128) return QB.decode(zB.subarray(jB, jB + BB));
-            nB += String.fromCharCode(IB)
+          let JB = "";
+          for (let oB = IB; oB < IB + BB; oB++) {
+            const GB = ZB[oB];
+            if (GB >= 128) return TB.decode(ZB.subarray(IB, IB + BB));
+            JB += String.fromCharCode(GB)
           }
-          return nB
+          return JB
         }
-        return QB.decode(zB.subarray(jB, jB + BB))
+        return TB.decode(ZB.subarray(IB, IB + BB))
       }
       bin(BB) {
-        const jB = this.take(BB);
-        return this.bytes.subarray(jB, jB + BB)
+        const IB = this.take(BB);
+        return this.bytes.subarray(IB, IB + BB)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
       array(BB) {
         this.enter();
-        const jB = [];
-        for (let zB = 0; zB < BB; zB++) jB.push(this.value());
-        return this.depth--, jB
+        const IB = [];
+        for (let ZB = 0; ZB < BB; ZB++) IB.push(this.value());
+        return this.depth--, IB
       }
       map(BB) {
         this.enter();
-        const jB = {};
-        for (let zB = 0; zB < BB; zB++) {
+        const IB = {};
+        for (let ZB = 0; ZB < BB; ZB++) {
           const BB = this.value(),
-            zB = this.value();
-          jB["__proto__" === BB ? "__proto_" : String(BB)] = zB
+            ZB = this.value();
+          IB["__proto__" === BB ? "__proto_" : String(BB)] = ZB
         }
-        return this.depth--, jB
+        return this.depth--, IB
       }
       ext(BB) {
-        const jB = this.view.getInt8(this.take(1)),
-          zB = this.take(BB);
-        if (0 !== jB) {
-          if (-1 === jB) {
+        const IB = this.view.getInt8(this.take(1)),
+          ZB = this.take(BB);
+        if (0 !== IB) {
+          if (-1 === IB) {
             if (1 === BB) return new Date(NaN);
-            if (4 === BB) return new Date(1e3 * this.view.getUint32(zB, !1));
+            if (4 === BB) return new Date(1e3 * this.view.getUint32(ZB, !1));
             if (8 === BB) {
-              const BB = this.view.getUint32(zB, !1),
-                jB = BB >>> 2,
-                QB = 4294967296 * (3 & BB) + this.view.getUint32(zB + 4, !1);
-              return new Date(1e3 * QB + jB / 1e6)
+              const BB = this.view.getUint32(ZB, !1),
+                IB = BB >>> 2,
+                TB = 4294967296 * (3 & BB) + this.view.getUint32(ZB + 4, !1);
+              return new Date(1e3 * TB + IB / 1e6)
             }
             if (12 === BB) {
-              const BB = this.view.getUint32(zB, !1),
-                jB = 4294967296 * this.view.getInt32(zB + 4, !1) + this.view.getUint32(zB + 8, !1);
-              return new Date(1e3 * jB + BB / 1e6)
+              const BB = this.view.getUint32(ZB, !1),
+                IB = 4294967296 * this.view.getInt32(ZB + 4, !1) + this.view.getUint32(ZB + 8, !1);
+              return new Date(1e3 * IB + BB / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${jB} of ${BB} bytes`)
+          throw new Error(`msgpack: ext type ${IB} of ${BB} bytes`)
         }
       }
     }
-    const IB = new TextEncoder,
-      NB = -(2n ** 63n),
-      uB = 2n ** 63n - 1n,
-      UB = 2n ** 64n - 1n;
+    const GB = new TextEncoder,
+      vB = -(2n ** 63n),
+      kB = 2n ** 63n - 1n,
+      cB = 2n ** 64n - 1n;
 
-    function aB(BB) {
-      const jB = new pB;
-      return jB.value(BB, 0), jB.bytes()
+    function nB(BB) {
+      const IB = new hB;
+      return IB.value(BB, 0), IB.bytes()
     }
-    class pB {
+    class hB {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(BB, jB) {
-        if (jB > 512) throw new Error("msgpack: nested too deep");
+      value(BB, IB) {
+        if (IB > 512) throw new Error("msgpack: nested too deep");
         switch (typeof BB) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
@@ -329,14 +329,14 @@ export const modules = {
             else if (BB instanceof Uint8Array) this.head(BB.length, 196, -1, 197, 198), this.room(BB.length), this.buf.set(BB, this.at), this.at += BB.length;
             else if (Array.isArray(BB)) {
               this.head(BB.length, 220, 144, 220, 221);
-              for (const zB of BB) this.value(zB, jB + 1)
+              for (const ZB of BB) this.value(ZB, IB + 1)
             } else {
-              var zB, QB;
-              if (Object.getPrototypeOf(BB) !== Object.prototype && null !== Object.getPrototypeOf(BB)) throw new Error(`msgpack: can't encode a ${null!==(zB=null===(QB=BB.constructor)||void 0===QB?void 0:QB.name)&&void 0!==zB?zB:"object"}`);
+              var ZB, TB;
+              if (Object.getPrototypeOf(BB) !== Object.prototype && null !== Object.getPrototypeOf(BB)) throw new Error(`msgpack: can't encode a ${null!==(ZB=null===(TB=BB.constructor)||void 0===TB?void 0:TB.name)&&void 0!==ZB?ZB:"object"}`);
               {
-                const zB = Object.keys(BB);
-                this.head(zB.length, 222, 128, 222, 223);
-                for (const QB of zB) this.string(QB), this.value(BB[QB], jB + 1)
+                const ZB = Object.keys(BB);
+                this.head(ZB.length, 222, 128, 222, 223);
+                for (const TB of ZB) this.string(TB), this.value(BB[TB], IB + 1)
               }
             }
             return;
@@ -348,23 +348,23 @@ export const modules = {
         Number.isInteger(BB) && BB >= -2147483648 && BB <= 4294967295 ? BB >= 0 ? BB < 128 ? this.u8(BB) : BB < 256 ? (this.u8(204), this.u8(BB)) : BB < 65536 ? (this.u8(205), this.u16(BB)) : (this.u8(206), this.u32(BB)) : BB >= -32 ? this.u8(BB + 256) : BB >= -128 ? (this.u8(208), this.u8(BB + 256)) : BB >= -32768 ? (this.u8(209), this.u16(BB + 65536)) : (this.u8(210), this.u32(BB >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, BB, !1), this.at += 8)
       }
       bigint(BB) {
-        const jB = BB >= NB && BB <= uB;
-        if (!jB && (BB < 0n || BB > UB)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(jB ? 211 : 207), this.room(8), jB ? this.view.setBigInt64(this.at, BB, !1) : this.view.setBigUint64(this.at, BB, !1), this.at += 8
+        const IB = BB >= vB && BB <= kB;
+        if (!IB && (BB < 0n || BB > cB)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(IB ? 211 : 207), this.room(8), IB ? this.view.setBigInt64(this.at, BB, !1) : this.view.setBigUint64(this.at, BB, !1), this.at += 8
       }
       string(BB) {
-        const jB = IB.encode(BB);
-        this.head(jB.length, 217, 160, 218, 219), this.room(jB.length), this.buf.set(jB, this.at), this.at += jB.length
+        const IB = GB.encode(BB);
+        this.head(IB.length, 217, 160, 218, 219), this.room(IB.length), this.buf.set(IB, this.at), this.at += IB.length
       }
-      head(BB, jB, zB, QB, nB) {
-        zB >= 0 && BB < (160 === zB ? 32 : 16) ? this.u8(zB | BB) : jB !== QB && BB < 256 ? (this.u8(jB), this.u8(BB)) : BB < 65536 ? (this.u8(QB), this.u16(BB)) : (this.u8(nB), this.u32(BB))
+      head(BB, IB, ZB, TB, JB) {
+        ZB >= 0 && BB < (160 === ZB ? 32 : 16) ? this.u8(ZB | BB) : IB !== TB && BB < 256 ? (this.u8(IB), this.u8(BB)) : BB < 65536 ? (this.u8(TB), this.u16(BB)) : (this.u8(JB), this.u32(BB))
       }
       room(BB) {
         if (this.at + BB <= this.buf.length) return;
-        let jB = 2 * this.buf.length;
-        for (; jB < this.at + BB;) jB *= 2;
-        const zB = new Uint8Array(jB);
-        zB.set(this.buf.subarray(0, this.at)), this.buf = zB, this.view = new DataView(zB.buffer)
+        let IB = 2 * this.buf.length;
+        for (; IB < this.at + BB;) IB *= 2;
+        const ZB = new Uint8Array(IB);
+        ZB.set(this.buf.subarray(0, this.at)), this.buf = ZB, this.view = new DataView(ZB.buffer)
       }
       u8(BB) {
         this.room(1), this.buf[this.at++] = BB
@@ -377,15 +377,15 @@ export const modules = {
       }
     }
   },
-  40721: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => IB
+  40684: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => GB
     });
-    var QB = zB(40709);
-    const nB = new TextDecoder("utf-8", {
+    var TB = ZB(40666);
+    const JB = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class dB {
+    class oB {
       constructor(BB) {
         this.buf = BB, this.at = 0, this.view = null
       }
@@ -394,13 +394,13 @@ export const modules = {
       }
       long() {
         let BB = this.u8(),
-          jB = 127 & BB,
-          zB = 128;
+          IB = 127 & BB,
+          ZB = 128;
         for (; 128 & BB;) {
-          if (zB > 2 ** 63) throw new RangeError("avro: varint too long");
-          BB = this.u8(), jB += (127 & BB) * zB, zB *= 128
+          if (ZB > 2 ** 63) throw new RangeError("avro: varint too long");
+          BB = this.u8(), IB += (127 & BB) * ZB, ZB *= 128
         }
-        return jB % 2 === 1 ? -(jB + 1) / 2 : jB / 2
+        return IB % 2 === 1 ? -(IB + 1) / 2 : IB / 2
       }
       float() {
         const BB = this.take(4);
@@ -412,56 +412,56 @@ export const modules = {
       }
       str() {
         const BB = this.size(),
-          jB = this.take(BB),
-          zB = jB + BB;
+          IB = this.take(BB),
+          ZB = IB + BB;
         if (BB <= 32) {
           let BB = "";
-          for (let QB = jB; QB < zB; QB++) {
-            const dB = this.buf[QB];
-            if (dB >= 128) return nB.decode(this.buf.subarray(jB, zB));
-            BB += String.fromCharCode(dB)
+          for (let TB = IB; TB < ZB; TB++) {
+            const oB = this.buf[TB];
+            if (oB >= 128) return JB.decode(this.buf.subarray(IB, ZB));
+            BB += String.fromCharCode(oB)
           }
           return BB
         }
-        return nB.decode(this.buf.subarray(jB, zB))
+        return JB.decode(this.buf.subarray(IB, ZB))
       }
       bytes() {
         return this.fixed(this.size())
       }
       fixed(BB) {
-        const jB = this.take(BB);
-        return this.buf.slice(jB, jB + BB)
+        const IB = this.take(BB);
+        return this.buf.slice(IB, IB + BB)
       }
       index(BB) {
-        const jB = this.long();
-        if (!(jB >= 0 && jB < BB)) throw new RangeError(`avro: index ${jB} of ${BB}`);
-        return jB
+        const IB = this.long();
+        if (!(IB >= 0 && IB < BB)) throw new RangeError(`avro: index ${IB} of ${BB}`);
+        return IB
       }
-      DJ(BB) {
-        const jB = [];
-        for (let zB = this.long(); 0 !== zB; zB = this.long()) {
-          zB = this.block(zB);
-          for (let QB = 0; QB < zB; QB++) jB.push(BB(this))
+      dN(BB) {
+        const IB = [];
+        for (let ZB = this.long(); 0 !== ZB; ZB = this.long()) {
+          ZB = this.block(ZB);
+          for (let TB = 0; TB < ZB; TB++) IB.push(BB(this))
         }
-        return jB
+        return IB
       }
       map(BB) {
-        const jB = {};
-        for (let zB = this.long(); 0 !== zB; zB = this.long()) {
-          zB = this.block(zB);
-          for (let QB = 0; QB < zB; QB++) {
-            jB[this.str()] = BB(this)
+        const IB = {};
+        for (let ZB = this.long(); 0 !== ZB; ZB = this.long()) {
+          ZB = this.block(ZB);
+          for (let TB = 0; TB < ZB; TB++) {
+            IB[this.str()] = BB(this)
           }
         }
-        return jB
+        return IB
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
       block(BB) {
-        let jB = BB;
-        if (jB < 0 && (jB = -jB, this.long()), jB > this.buf.length - this.at) throw new RangeError(`avro: block of ${jB} items in ${this.buf.length-this.at} bytes`);
-        return jB
+        let IB = BB;
+        if (IB < 0 && (IB = -IB, this.long()), IB > this.buf.length - this.at) throw new RangeError(`avro: block of ${IB} items in ${this.buf.length-this.at} bytes`);
+        return IB
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
@@ -477,712 +477,712 @@ export const modules = {
         return this.at++, BB
       }
       take(BB) {
-        const jB = this.at;
-        if (BB > this.buf.length - jB) throw new RangeError("avro: truncated");
-        return this.at = jB + BB, jB
+        const IB = this.at;
+        if (BB > this.buf.length - IB) throw new RangeError("avro: truncated");
+        return this.at = IB + BB, IB
       }
     }
 
-    function IB(BB, jB) {
-      const zB = new dB(jB),
-        nB = (0, QB.gb)(BB, zB);
-      return zB.end(), nB
+    function GB(BB, IB) {
+      const ZB = new oB(IB),
+        JB = (0, TB.ab)(BB, ZB);
+      return ZB.end(), JB
     }
   },
-  40709: (BB, jB, zB) => {
-    zB.d(jB, {
-      $: () => JB,
-      C: () => nB,
-      F: () => NB,
-      G: () => sB,
-      I: () => iB,
-      M: () => EB,
-      Q: () => SB,
-      T: () => aB,
-      W: () => pB,
-      X: () => qB,
-      ab: () => LB,
-      bb: () => mB,
-      c: () => tB,
-      db: () => uB,
-      f: () => yB,
-      g: () => kB,
-      gb: () => oB,
-      h: () => GB,
-      j: () => MB,
-      m: () => QB,
-      o: () => dB,
-      p: () => gB,
-      q: () => rB,
-      s: () => UB,
-      w: () => IB,
-      y: () => fB
+  40666: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => JB,
+      C: () => vB,
+      E: () => FB,
+      F: () => OB,
+      H: () => wB,
+      I: () => QB,
+      J: () => nB,
+      L: () => hB,
+      O: () => YB,
+      R: () => NB,
+      U: () => WB,
+      W: () => gB,
+      Z: () => kB,
+      ab: () => pB,
+      c: () => CB,
+      f: () => qB,
+      h: () => yB,
+      k: () => UB,
+      n: () => sB,
+      o: () => TB,
+      p: () => oB,
+      q: () => dB,
+      t: () => zB,
+      u: () => cB,
+      v: () => GB,
+      y: () => iB
     });
-    const QB = 2,
-      nB = 12,
-      dB = 27,
-      IB = 40,
-      NB = 52,
-      uB = 59,
-      UB = 63,
-      aB = 83,
-      pB = 84,
-      rB = 89,
-      sB = 91,
-      JB = 93,
-      mB = 94,
-      yB = 95,
-      kB = 97,
-      GB = 101,
-      LB = 102,
-      gB = 73,
-      tB = 16,
-      SB = 86,
-      MB = 60,
-      EB = 17,
-      iB = 56,
-      qB = 100,
-      fB = 81;
+    const TB = 2,
+      JB = 12,
+      oB = 27,
+      GB = 40,
+      vB = 52,
+      kB = 59,
+      cB = 63,
+      nB = 83,
+      hB = 84,
+      zB = 89,
+      FB = 91,
+      NB = 93,
+      gB = 94,
+      qB = 95,
+      yB = 97,
+      UB = 101,
+      WB = 102,
+      dB = 73,
+      CB = 16,
+      QB = 86,
+      sB = 60,
+      wB = 17,
+      OB = 56,
+      YB = 100,
+      iB = 81;
 
-    function oB(BB, jB) {
+    function pB(BB, IB) {
       switch (BB) {
-        case QB:
+        case TB:
           return function(BB) {
             return {
-              wd: cB(BB),
-              xd: BB.float(),
-              Kd: BB.long()
+              jo: EB(BB),
+              Po: BB.float(),
+              Ro: BB.long()
             }
-          }(jB);
-        case nB:
-          return function(BB) {
-            return {
-              xn: VB(BB),
-              Kn: VB(BB)
-            }
-          }(jB);
-        case dB:
-          return function(BB) {
-            return {
-              NB: BB.bool(),
-              uB: VB(BB)
-            }
-          }(jB);
-        case IB:
-          return jB.str();
-        case NB:
-          return function(BB) {
-            return {
-              id: BB.long(),
-              xB: Ij(BB)
-            }
-          }(jB);
-        case uB:
-          return function(BB) {
-            return {
-              UI: VB(BB),
-              aI: uj(BB)
-            }
-          }(jB);
-        case UB:
-          return jB.str();
-        case aB:
-        case pB:
-          return jB.long();
-        case rB:
-          return function(BB) {
-            return {
-              Zn: BB.long(),
-              Tn: BB.bool(),
-              Pn: BB.float()
-            }
-          }(jB);
-        case sB:
-          return jB.long();
+          }(IB);
         case JB:
           return function(BB) {
             return {
-              Wj: BB.bool(),
-              fB: pj(BB)
+              jJ: PB(BB),
+              PJ: PB(BB)
             }
-          }(jB);
-        case mB:
+          }(IB);
+        case oB:
           return function(BB) {
             return {
-              id: BB.str(),
-              position: aj(BB),
-              Yj: rj(BB),
-              style: PB(BB),
-              hj: BB.bool()
+              vB: BB.bool(),
+              kB: PB(BB)
             }
-          }(jB);
-        case yB:
+          }(IB);
+        case GB:
+          return IB.str();
+        case vB:
           return function(BB) {
             return {
-              id: VB(BB)
+              id: BB.long(),
+              tB: GI(BB)
             }
-          }(jB);
+          }(IB);
         case kB:
           return function(BB) {
             return {
-              Nd: BB.long(),
-              ud: BB.str(),
-              Ud: nj(BB),
-              pd: nj(BB),
-              rd: VB(BB),
-              sd: VB(BB),
-              Jd: VB(BB),
-              yd: VB(BB),
-              kd: VB(BB),
-              Gd: nj(BB),
-              Ld: nj(BB),
-              td: VB(BB),
-              Sd: VB(BB),
-              Md: VB(BB)
+              IG: PB(BB),
+              ZG: kI(BB)
             }
-          }(jB);
-        case GB:
-          return jB.str();
-        case LB:
-          return jB.long();
+          }(IB);
+        case cB:
+          return IB.str();
+        case nB:
+        case hB:
+          return IB.long();
+        case zB:
+          return function(BB) {
+            return {
+              iJ: BB.long(),
+              pJ: BB.bool(),
+              aJ: BB.float()
+            }
+          }(IB);
+        case FB:
+          return IB.long();
+        case NB:
+          return function(BB) {
+            return {
+              uI: BB.bool(),
+              YB: hI(BB)
+            }
+          }(IB);
         case gB:
           return function(BB) {
             return {
-              kz: BB.long(),
-              Gz: BB.str(),
-              Lz: BB.float()
+              id: BB.str(),
+              position: nI(BB),
+              MI: zI(BB),
+              style: eB(BB),
+              RI: BB.bool()
             }
-          }(jB);
-        case tB:
-          return function(BB) {
-            return {
-              Cn: BB.bool(),
-              cn: VB(BB),
-              bn: BB.str(),
-              vn: Jj(BB),
-              Rn: Jj(BB),
-              Bd: BB.bool(),
-              jd: BB.long(),
-              zd: mj(BB)
-            }
-          }(jB);
-        case SB:
-          return function(BB) {
-            return {
-              Xn: VB(BB)
-            }
-          }(jB);
-        case MB:
-          return function(BB) {
-            return {
-              VB: BB.str(),
-              hB: BB.str(),
-              XB: yj(BB),
-              ej: BB.str(),
-              lj: RB(BB),
-              wj: BB.float()
-            }
-          }(jB);
-        case EB:
-          return function(BB) {
-            return {
-              VB: BB.str(),
-              hB: BB.str(),
-              XB: yj(BB)
-            }
-          }(jB);
-        case iB:
-          return function(BB) {
-            return BB.DJ(kj)
-          }(jB);
+          }(IB);
         case qB:
           return function(BB) {
             return {
-              ZB: Lj(BB),
-              eB: lB(BB)
+              id: PB(BB)
             }
-          }(jB);
-        case fB:
+          }(IB);
+        case yB:
           return function(BB) {
             return {
-              vz: BB.bool(),
-              Rz: VB(BB),
-              Oz: tj(BB),
-              jQ: Zj(BB)
+              bJ: BB.long(),
+              xJ: BB.str(),
+              EJ: JI(BB),
+              DJ: JI(BB),
+              KJ: PB(BB),
+              VJ: PB(BB),
+              SJ: PB(BB),
+              Bo: PB(BB),
+              Io: PB(BB),
+              Zo: JI(BB),
+              Jo: JI(BB),
+              oo: PB(BB),
+              Go: PB(BB),
+              vo: PB(BB)
             }
-          }(jB);
+          }(IB);
+        case UB:
+          return IB.str();
+        case WB:
+          return IB.long();
+        case dB:
+          return function(BB) {
+            return {
+              qZ: BB.long(),
+              yZ: BB.str(),
+              UZ: BB.float()
+            }
+          }(IB);
+        case CB:
+          return function(BB) {
+            return {
+              RJ: BB.bool(),
+              rJ: PB(BB),
+              mJ: BB.str(),
+              XJ: NI(BB),
+              LJ: NI(BB),
+              eJ: BB.bool(),
+              uJ: BB.long(),
+              fJ: gI(BB)
+            }
+          }(IB);
+        case QB:
+          return function(BB) {
+            return {
+              YJ: PB(BB)
+            }
+          }(IB);
+        case sB:
+          return function(BB) {
+            return {
+              PB: BB.str(),
+              RB: BB.str(),
+              rB: qI(BB),
+              fI: BB.str(),
+              lI: VB(BB),
+              AI: BB.float()
+            }
+          }(IB);
+        case wB:
+          return function(BB) {
+            return {
+              PB: BB.str(),
+              RB: BB.str(),
+              rB: qI(BB)
+            }
+          }(IB);
+        case OB:
+          return function(BB) {
+            return BB.dN(yI)
+          }(IB);
+        case YB:
+          return function(BB) {
+            return {
+              mB: WI(BB),
+              fB: lB(BB)
+            }
+          }(IB);
+        case iB:
+          return function(BB) {
+            return {
+              bZ: BB.bool(),
+              xZ: PB(BB),
+              EZ: CI(BB),
+              KZ: mI(BB)
+            }
+          }(IB);
         default:
           throw new Error(`no reader for to-client message ${BB}`)
       }
     }
 
-    function HB(BB) {
+    function aB(BB) {
       return {
         entityName: BB.str()
       }
     }
 
-    function DB(BB) {
-      const jB = BB.index(4);
-      return 0 === jB ? BB.str() : 1 === jB ? BB.long() : 2 === jB ? BB.bool() : HB(BB)
+    function HB(BB) {
+      const IB = BB.index(4);
+      return 0 === IB ? BB.str() : 1 === IB ? BB.long() : 2 === IB ? BB.bool() : aB(BB)
     }
 
-    function FB(BB) {
+    function MB(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
-        return BB.map(DB)
+        return BB.map(HB)
       }(BB)
     }
 
-    function YB(BB) {
+    function jB(BB) {
       return {
         translationKey: BB.str(),
-        params: FB(BB)
+        params: MB(BB)
       }
-    }
-
-    function VB(BB) {
-      return 0 === BB.index(2) ? null : BB.str()
-    }
-
-    function hB(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
-        return {
-          color: VB(BB),
-          colour: VB(BB),
-          fontSize: VB(BB)
-        }
-      }(BB)
-    }
-
-    function XB(BB) {
-      return {
-        icon: BB.str(),
-        style: hB(BB)
-      }
-    }
-
-    function ZB(BB) {
-      const jB = BB.index(3);
-      return 0 === jB ? {
-        string: BB.str()
-      } : 1 === jB ? {
-        styledEntityName: HB(BB)
-      } : {
-        styledTranslatedText: YB(BB)
-      }
-    }
-
-    function AB(BB) {
-      const jB = BB.index(3);
-      return 0 === jB ? null : 1 === jB ? BB.str() : BB.long()
-    }
-
-    function TB(BB) {
-      return 0 === BB.index(2) ? null : BB.float()
     }
 
     function PB(BB) {
+      return 0 === BB.index(2) ? null : BB.str()
+    }
+
+    function RB(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          color: VB(BB),
-          colour: VB(BB),
-          fontWeight: AB(BB),
-          fontStyle: VB(BB),
-          fontSize: VB(BB),
-          opacity: TB(BB)
+          color: PB(BB),
+          colour: PB(BB),
+          fontSize: PB(BB)
         }
       }(BB)
     }
 
-    function WB(BB) {
+    function rB(BB) {
       return {
-        str: ZB(BB),
-        style: PB(BB),
-        clickableUrl: VB(BB)
+        icon: BB.str(),
+        style: RB(BB)
       }
     }
 
+    function mB(BB) {
+      const IB = BB.index(3);
+      return 0 === IB ? {
+        string: BB.str()
+      } : 1 === IB ? {
+        styledEntityName: aB(BB)
+      } : {
+        styledTranslatedText: jB(BB)
+      }
+    }
+
+    function XB(BB) {
+      const IB = BB.index(3);
+      return 0 === IB ? null : 1 === IB ? BB.str() : BB.long()
+    }
+
+    function LB(BB) {
+      return 0 === BB.index(2) ? null : BB.float()
+    }
+
     function eB(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
+        return {
+          color: PB(BB),
+          colour: PB(BB),
+          fontWeight: XB(BB),
+          fontStyle: PB(BB),
+          fontSize: PB(BB),
+          opacity: LB(BB)
+        }
+      }(BB)
+    }
+
+    function uB(BB) {
+      return {
+        str: mB(BB),
+        style: eB(BB),
+        clickableUrl: PB(BB)
+      }
+    }
+
+    function fB(BB) {
       return BB.str()
     }
 
     function lB(BB) {
-      return BB.DJ(eB)
+      return BB.dN(fB)
     }
 
-    function wB(BB) {
+    function AB(BB) {
       return 0 === BB.index(2) ? null : lB(BB)
     }
 
-    function xB(BB) {
+    function tB(BB) {
       return {
         type: BB.str(),
         progress: BB.float(),
-        width: VB(BB),
-        height: VB(BB),
-        colours: wB(BB),
-        backgroundColour: VB(BB)
+        width: PB(BB),
+        height: PB(BB),
+        colours: AB(BB),
+        backgroundColour: PB(BB)
       }
     }
 
-    function KB(BB) {
+    function bB(BB) {
       return {
         type: BB.str(),
         action: BB.str(),
-        style: PB(BB)
+        style: eB(BB)
       }
     }
 
-    function CB(BB) {
-      const jB = BB.index(7);
-      return 0 === jB ? {
+    function xB(BB) {
+      const IB = BB.index(7);
+      return 0 === IB ? {
         string: BB.str()
-      } : 1 === jB ? {
-        entityName: HB(BB)
-      } : 2 === jB ? {
-        translatedText: YB(BB)
-      } : 3 === jB ? {
-        styledIcon: XB(BB)
-      } : 4 === jB ? {
-        jj: WB(BB)
-      } : 5 === jB ? {
-        styledProgressBar: xB(BB)
+      } : 1 === IB ? {
+        entityName: aB(BB)
+      } : 2 === IB ? {
+        translatedText: jB(BB)
+      } : 3 === IB ? {
+        styledIcon: rB(BB)
+      } : 4 === IB ? {
+        II: uB(BB)
+      } : 5 === IB ? {
+        styledProgressBar: tB(BB)
       } : {
-        styledKeyBinding: KB(BB)
+        styledKeyBinding: bB(BB)
       }
     }
 
-    function cB(BB) {
-      return BB.DJ(CB)
+    function EB(BB) {
+      return BB.dN(xB)
     }
-    const bB = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const DB = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function vB(BB) {
-      return bB[BB.index(5)]
+    function KB(BB) {
+      return DB[BB.index(5)]
     }
 
-    function RB(BB) {
+    function VB(BB) {
       return 0 === BB.index(2) ? null : BB.double()
     }
 
-    function OB(BB) {
+    function SB(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          vB: RB(BB),
-          RB: BB.double(),
-          OB: BB.double(),
-          Bj: BB.bool(),
-          description: cB(BB),
-          Qj: BB.str(),
-          scale: RB(BB),
-          rotation: RB(BB)
+          DB: VB(BB),
+          VB: BB.double(),
+          SB: BB.double(),
+          BI: BB.bool(),
+          description: EB(BB),
+          TI: BB.str(),
+          scale: VB(BB),
+          rotation: VB(BB)
         }
       }(BB)
     }
 
-    function Bj(BB) {
+    function BI(BB) {
       return 0 === BB.index(2) ? null : BB.bool()
     }
 
-    function jj(BB) {
+    function II(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          Ij: BB.double(),
+          oI: BB.double(),
           icon: BB.str(),
-          label: cB(BB),
-          Nj: BB.bool(),
-          scale: RB(BB),
-          rotation: RB(BB),
-          uj: Bj(BB)
+          label: EB(BB),
+          GI: BB.bool(),
+          scale: VB(BB),
+          rotation: VB(BB),
+          vI: BI(BB)
         }
       }(BB)
     }
 
-    function zj(BB) {
+    function ZI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          vB: RB(BB),
-          aj: BB.double(),
-          pj: BB.double(),
-          rj: BB.double(),
+          DB: VB(BB),
+          cI: BB.double(),
+          nI: BB.double(),
+          hI: BB.double(),
           gravity: BB.double(),
-          sj: BB.double(),
-          Jj: BB.double(),
-          mj: BB.double(),
-          Bj: BB.bool(),
-          description: cB(BB),
-          icon: VB(BB)
+          zI: BB.double(),
+          FI: BB.double(),
+          NI: BB.double(),
+          BI: BB.bool(),
+          description: EB(BB),
+          icon: PB(BB)
         }
       }(BB)
     }
 
-    function Qj(BB) {
+    function TI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
           speed: BB.double(),
-          kj: BB.double(),
-          label: cB(BB),
-          icon: VB(BB),
-          scale: RB(BB),
-          rotation: RB(BB)
+          qI: BB.double(),
+          label: EB(BB),
+          icon: PB(BB),
+          scale: VB(BB),
+          rotation: VB(BB)
         }
       }(BB)
     }
 
-    function nj(BB) {
+    function JI(BB) {
       return 0 === BB.index(2) ? null : BB.long()
     }
 
-    function dj(BB) {
+    function oI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          Lj: BB.long(),
-          gj: BB.double(),
-          tj: BB.double(),
-          Sj: nj(BB),
-          label: cB(BB),
-          icon: VB(BB)
+          UI: BB.long(),
+          WI: BB.double(),
+          dI: BB.double(),
+          CI: JI(BB),
+          label: EB(BB),
+          icon: PB(BB)
         }
       }(BB)
     }
 
-    function Ij(BB) {
+    function GI(BB) {
       return {
-        type: vB(BB),
-        progressBar: OB(BB),
-        timedClick: jj(BB),
-        gravityBar: zj(BB),
-        precisionBar: Qj(BB),
-        rhythmClick: dj(BB)
+        type: KB(BB),
+        progressBar: SB(BB),
+        timedClick: II(BB),
+        gravityBar: ZI(BB),
+        precisionBar: TI(BB),
+        rhythmClick: oI(BB)
       }
     }
-    const Nj = ["playerGone", "rateLimited"];
+    const vI = ["playerGone", "rateLimited"];
 
-    function uj(BB) {
+    function kI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
-        return Nj[BB.index(2)]
+        return vI[BB.index(2)]
       }(BB)
     }
 
-    function Uj(BB) {
+    function cI(BB) {
       return BB.float()
     }
 
-    function aj(BB) {
-      return BB.DJ(Uj)
+    function nI(BB) {
+      return BB.dN(cI)
     }
 
-    function pj(BB) {
-      return 0 === BB.index(2) ? null : aj(BB)
+    function hI(BB) {
+      return 0 === BB.index(2) ? null : nI(BB)
     }
 
-    function rj(BB) {
-      return 0 === BB.index(2) ? null : cB(BB)
+    function zI(BB) {
+      return 0 === BB.index(2) ? null : EB(BB)
     }
 
-    function sj(BB) {
+    function FI(BB) {
       return BB.long()
     }
 
-    function Jj(BB) {
+    function NI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
-        return BB.DJ(sj)
+        return BB.dN(FI)
       }(BB)
     }
 
-    function mj(BB) {
+    function gI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          dd: BB.str(),
-          Id: BB.long()
+          AJ: BB.str(),
+          tJ: BB.long()
         }
       }(BB)
     }
 
-    function yj(BB) {
-      const jB = BB.index(3);
-      return 0 === jB ? null : 1 === jB ? BB.str() : YB(BB)
+    function qI(BB) {
+      const IB = BB.index(3);
+      return 0 === IB ? null : 1 === IB ? BB.str() : jB(BB)
     }
 
-    function kj(BB) {
+    function yI(BB) {
       return {
-        Pd: BB.str(),
-        Wd: BB.str(),
-        ld: BB.str()
+        ao: BB.str(),
+        Ho: BB.str(),
+        Mo: BB.str()
       }
     }
 
-    function Gj(BB) {
+    function UI(BB) {
       return {
-        AB: BB.str(),
-        TB: VB(BB),
-        PB: VB(BB),
-        WB: lB(BB)
+        XB: BB.str(),
+        LB: PB(BB),
+        eB: PB(BB),
+        uB: lB(BB)
       }
     }
 
-    function Lj(BB) {
-      return BB.DJ(Gj)
+    function WI(BB) {
+      return BB.dN(UI)
     }
 
-    function gj(BB) {
+    function dI(BB) {
       return {
-        BQ: BB.str(),
+        DZ: BB.str(),
         x: BB.long(),
         y: BB.long(),
         z: BB.long()
       }
     }
 
-    function tj(BB) {
-      return BB.DJ(gj)
+    function CI(BB) {
+      return BB.dN(dI)
     }
 
-    function Sj(BB) {
+    function QI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          tQ: BB.float(),
-          SQ: BB.long(),
-          MQ: BB.long()
+          yT: BB.float(),
+          UT: BB.long(),
+          WT: BB.long()
         }
       }(BB)
     }
 
-    function Mj(BB) {
+    function sI(BB) {
       return {
         blockName: BB.str(),
-        sQ: BB.bool(),
-        JQ: BB.bool(),
-        mQ: BB.bool(),
-        yQ: BB.float(),
-        kQ: BB.float(),
-        GQ: BB.long(),
-        LQ: Sj(BB)
+        cT: BB.bool(),
+        nT: BB.bool(),
+        hT: BB.bool(),
+        zT: BB.float(),
+        FT: BB.float(),
+        NT: BB.long(),
+        gT: QI(BB)
       }
     }
 
-    function Ej(BB) {
+    function wI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
-        return BB.DJ(Mj)
+        return BB.dN(sI)
       }(BB)
     }
 
-    function ij(BB) {
+    function OI(BB) {
       return {
-        aQ: BB.str(),
-        pQ: Ej(BB)
+        GT: BB.str(),
+        vT: wI(BB)
       }
     }
 
-    function qj(BB) {
+    function YI(BB) {
       return {
         blockName: BB.str(),
         frequency: BB.float()
       }
     }
 
-    function fj(BB) {
-      return BB.DJ(qj)
+    function iI(BB) {
+      return BB.dN(YI)
     }
 
-    function oj(BB) {
+    function pI(BB) {
       return {
-        qQ: BB.str(),
-        fQ: BB.str(),
+        QT: BB.str(),
+        sT: BB.str(),
         frequency: BB.float(),
-        oQ: fj(BB)
+        wT: iI(BB)
       }
     }
 
-    function Hj(BB) {
-      return BB.DJ(oj)
+    function aI(BB) {
+      return BB.dN(pI)
     }
 
-    function Dj(BB) {
+    function HI(BB) {
       return {
         blockName: BB.str(),
         radius: BB.long(),
-        YQ: BB.long(),
-        nQ: BB.long(),
-        dQ: BB.long(),
-        VQ: BB.float()
+        pT: BB.long(),
+        BT: BB.long(),
+        IT: BB.long(),
+        aT: BB.float()
       }
     }
 
-    function Fj(BB) {
-      return BB.DJ(Dj)
+    function MI(BB) {
+      return BB.dN(HI)
     }
 
-    function Yj(BB) {
+    function jI(BB) {
       return {
-        nQ: BB.long(),
-        dQ: BB.long(),
-        IQ: BB.long(),
-        NQ: BB.bool(),
-        uQ: ij(BB),
-        EQ: Hj(BB),
-        DQ: Fj(BB)
+        BT: BB.long(),
+        IT: BB.long(),
+        ZT: BB.long(),
+        TT: BB.bool(),
+        JT: OI(BB),
+        dT: aI(BB),
+        YT: MI(BB)
       }
     }
 
-    function Vj(BB) {
-      return BB.DJ(Yj)
+    function PI(BB) {
+      return BB.dN(jI)
     }
 
-    function hj(BB) {
+    function RI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
           name: BB.str(),
-          AQ: VB(BB)
+          PT: PB(BB)
         }
       }(BB)
     }
 
-    function Xj(BB) {
+    function rI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          terrain: hj(BB),
-          TQ: Fj(BB)
+          terrain: RI(BB),
+          RT: MI(BB)
         }
       }(BB)
     }
 
-    function Zj(BB) {
+    function mI(BB) {
       return 0 === BB.index(2) ? null : function(BB) {
         return {
-          layers: Vj(BB),
-          hQ: Xj(BB)
+          layers: PI(BB),
+          HT: rI(BB)
         }
       }(BB)
     }
   },
-  40697: (BB, jB, zB) => {
-    zB.d(jB, {
-      B: () => HB,
-      C: () => gB,
-      E: () => tB,
-      G: () => yB,
-      J: () => qB,
-      M: () => FB,
-      Q: () => JB,
-      S: () => VB,
-      T: () => GB,
-      X: () => kB,
-      Z: () => LB,
-      _: () => SB,
-      e: () => nB,
-      f: () => YB,
-      j: () => DB,
-      l: () => sB,
-      n: () => mB,
-      p: () => oB,
-      q: () => EB,
-      s: () => fB,
-      w: () => iB,
-      y: () => MB
+  40649: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => dB,
+      B: () => CB,
+      D: () => qB,
+      G: () => YB,
+      H: () => MB,
+      K: () => NB,
+      L: () => PB,
+      M: () => UB,
+      N: () => yB,
+      R: () => WB,
+      T: () => QB,
+      e: () => JB,
+      i: () => jB,
+      k: () => HB,
+      l: () => FB,
+      m: () => gB,
+      o: () => pB,
+      q: () => wB,
+      s: () => iB,
+      t: () => OB,
+      v: () => sB,
+      y: () => aB
     });
-    var QB = zB(3099);
-    const nB = {
+    var TB = ZB(3159);
+    const JB = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,158 +1211,158 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function dB(BB, jB) {
-      return !ArrayBuffer.isView(BB) || BB instanceof DataView ? Array.isArray(BB) ? BB.map((BB => jB(BB))) : BB : Array.from(BB, (BB => jB(BB)))
-    }
-
-    function IB(BB) {
-      if ("string" !== typeof BB) return BB;
-      for (let jB = 0; jB < BB.length; jB++) {
-        const zB = BB.charCodeAt(jB);
-        if (zB >= 55296 && zB <= 57343) return uB.decode(NB.encode(BB))
-      }
-      return BB
-    }
-    const NB = new TextEncoder,
-      uB = new TextDecoder;
-
-    function UB(BB) {
-      return BB
-    }
-    let aB;
-
-    function pB(BB) {
-      return null === BB || "object" !== typeof BB ? BB : [IB(BB.sN), IB(BB.JN)]
-    }
-
-    function rB(BB) {
-      return null === BB || "object" !== typeof BB ? BB : [dB(BB.vn, UB), dB(BB.oN, UB)]
-    }
-
-    function sB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.ha), IB(jB.Xa)];
-      var jB
-    }
-
-    function JB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [jB.id, jB.Sa];
-      var jB
-    }
-
-    function mB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [jB.Nd, IB(jB.ud), jB.Ud, IB(jB.sd), jB.Gd, jB.Ld, jB.Fa, IB(jB.Ya), IB(jB.Va)];
-      var jB
-    }
-
-    function yB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [dB(jB.nN, UB), jB.dN];
-      var jB
-    }
-
-    function kB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [dB(jB.jN, (BB => IB(BB))), IB(jB.zN), jB.QN];
-      var jB
+    function oB(BB, IB) {
+      return !ArrayBuffer.isView(BB) || BB instanceof DataView ? Array.isArray(BB) ? BB.map((BB => IB(BB))) : BB : Array.from(BB, (BB => IB(BB)))
     }
 
     function GB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [dB(jB.iu, UB), IB(jB.qu), jB.fu];
-      var jB
-    }
-
-    function LB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.Wd), IB(jB.ld)];
-      var jB
-    }
-
-    function gB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.TN)];
-      var jB
-    }
-
-    function tB(BB) {
-      return IB(BB)
-    }
-
-    function SB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.Ga), IB(jB.La), IB(jB.sN), IB(jB.JN)];
-      var jB
-    }
-
-    function MB(BB) {
-      return pB(BB)
-    }
-
-    function EB(BB) {
-      return pB(BB)
-    }
-
-    function iB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.ku)];
-      var jB
-    }
-
-    function qB(BB) {
+      if ("string" !== typeof BB) return BB;
+      for (let IB = 0; IB < BB.length; IB++) {
+        const ZB = BB.charCodeAt(IB);
+        if (ZB >= 55296 && ZB <= 57343) return kB.decode(vB.encode(BB))
+      }
       return BB
     }
+    const vB = new TextEncoder,
+      kB = new TextDecoder;
 
-    function fB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.pN), IB(jB.rN)];
-      var jB
+    function cB(BB) {
+      return BB
+    }
+    let nB;
+
+    function hB(BB) {
+      return null === BB || "object" !== typeof BB ? BB : [GB(BB.ov), GB(BB.Gv)]
     }
 
-    function oB(BB) {
-      return IB(BB)
-    }
-
-    function HB(BB) {
-      return rB(BB)
-    }
-
-    function DB(BB) {
-      return rB(BB)
+    function zB(BB) {
+      return null === BB || "object" !== typeof BB ? BB : [oB(BB.XJ, cB), oB(BB.Cv, cB)]
     }
 
     function FB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.ou)];
-      var jB
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Xn), GB(IB.Ln)];
+      var IB
+    }
+
+    function NB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [IB.id, IB.Cn];
+      var IB
+    }
+
+    function gB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [IB.bJ, GB(IB.xJ), IB.EJ, GB(IB.VJ), IB.Zo, IB.Jo, IB.Rn, GB(IB.rn), GB(IB.mn)];
+      var IB
+    }
+
+    function qB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [oB(IB.DG, cB), IB.KG];
+      var IB
+    }
+
+    function yB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [oB(IB.bG, (BB => GB(BB))), GB(IB.xG), IB.EG];
+      var IB
+    }
+
+    function UB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [oB(IB.Wk, cB), GB(IB.Ck), IB.Qk];
+      var IB
+    }
+
+    function WB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Ho), GB(IB.Mo)];
+      var IB
+    }
+
+    function dB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Mv)];
+      var IB
+    }
+
+    function CB(BB) {
+      return GB(BB)
+    }
+
+    function QB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Un), GB(IB.Wn), GB(IB.ov), GB(IB.Gv)];
+      var IB
+    }
+
+    function sB(BB) {
+      return hB(BB)
+    }
+
+    function wB(BB) {
+      return hB(BB)
+    }
+
+    function OB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.hk)];
+      var IB
     }
 
     function YB(BB) {
-      return (aB ??= (0, QB.f)().map((BB => BB.name)), aB).map((jB => {
-        return "string" === typeof(zB = BB[jB]) ? IB(zB) : dB(zB, UB);
-        var zB
+      return BB
+    }
+
+    function iB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Tv), GB(IB.Jv)];
+      var IB
+    }
+
+    function pB(BB) {
+      return GB(BB)
+    }
+
+    function aB(BB) {
+      return zB(BB)
+    }
+
+    function HB(BB) {
+      return zB(BB)
+    }
+
+    function MB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.sk)];
+      var IB
+    }
+
+    function jB(BB) {
+      return (nB ??= (0, TB.d)().map((BB => BB.name)), nB).map((IB => {
+        return "string" === typeof(ZB = BB[IB]) ? GB(ZB) : oB(ZB, cB);
+        var ZB
       }))
     }
 
-    function VB(BB) {
-      return null === (jB = BB) || "object" !== typeof jB ? jB : [jB.Ju, jB.mu, jB.yu];
-      var jB
+    function PB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [IB.vk, IB.kk, IB.nk];
+      var IB
     }
   },
-  9366: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      e: () => dB
+  9388: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      d: () => oB
     });
-    var QB = zB(9311);
-    const nB = "Air",
-      dB = Object.freeze(new QB.h(nB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var TB = ZB(9340);
+    const JB = "Air",
+      oB = Object.freeze(new TB.i(JB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39330: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => dB,
-      g: () => NB
+  39308: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      g: () => vB
     });
-    var QB = zB(376),
-      nB = zB(4577);
-    const dB = new Set(nB.l),
-      IB = new Map;
+    var TB = ZB(360),
+      JB = ZB(4643);
+    const oB = new Set(JB.m),
+      GB = new Map;
 
-    function NB(BB, jB) {
-      let zB = IB.get(jB);
-      void 0 === zB && (zB = new Map, IB.set(jB, zB));
-      let nB = zB.get(BB);
-      return void 0 === nB && (nB = `${BB}${(0,QB.t)(jB)}`, zB.set(BB, nB)), nB
+    function vB(BB, IB) {
+      let ZB = GB.get(IB);
+      void 0 === ZB && (ZB = new Map, GB.set(IB, ZB));
+      let JB = ZB.get(BB);
+      return void 0 === JB && (JB = `${BB}${(0,TB.F)(IB)}`, ZB.set(BB, JB)), JB
     }
   }
 };

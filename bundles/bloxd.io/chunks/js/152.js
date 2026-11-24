@@ -1,13 +1,13 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  8085: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      CoolMathGamesSdkAdaptor: () => dB
+  8240: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      CoolMathGamesSdkAdaptor: () => oB
     });
-    var QB = zB(1351),
-      nB = zB(1230);
-    class dB extends QB.c {
+    var TB = ZB(1379),
+      JB = ZB(1241);
+    class oB extends TB.d {
       constructor() {
         super(), this.name = "coolmathgames", this.adBreakStartCallback = () => {
           console.error("adBreakStartCallback not set")
@@ -18,15 +18,15 @@ export const modules = {
       doAdBreakStart() {
         this.adBreakStartCallback();
         const BB = document.getElementsByClassName("ads-popup");
-        for (const jB of BB) jB instanceof HTMLElement && (jB.style.position = "fixed")
+        for (const IB of BB) IB instanceof HTMLElement && (IB.style.position = "fixed")
       }
       doAdBreakComplete() {
         this.adBreakCompleteCallback()
       }
       static async setup() {
-        return await (0, nB.c)("https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"), await (0, nB.c)("https://www.coolmathgames.com/sites/default/files/cmg-ads.js"), new dB
+        return await (0, JB.c)("https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"), await (0, JB.c)("https://www.coolmathgames.com/sites/default/files/cmg-ads.js"), new oB
       }
-      playVideoAd(BB, jB) {
+      playVideoAd(BB, IB) {
         this.adBreakStartCallback = () => {
           console.log("CoolMathGames adBreak Started"), window.adStartSoPause(null, {
             preventMovement: !0

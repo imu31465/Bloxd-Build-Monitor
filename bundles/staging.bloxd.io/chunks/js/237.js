@@ -1,39 +1,39 @@
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  37379: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => pB,
-      g: () => rB,
-      k: () => mB,
-      o: () => sB
+  37311: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => hB,
+      g: () => zB,
+      j: () => gB,
+      k: () => FB
     });
-    var QB = zB(37186),
-      nB = zB(37178),
-      dB = zB(37208),
-      IB = zB(37222);
+    var TB = ZB(37131),
+      JB = ZB(37129),
+      oB = ZB(37158),
+      GB = ZB(37170);
 
-    function NB(BB) {
-      return Math.pow(BB, nB.h)
+    function vB(BB) {
+      return Math.pow(BB, JB.g)
     }
 
-    function uB(BB) {
+    function kB(BB) {
       return BB <= .04045 ? .0773993808 * BB : Math.pow(.947867299 * (BB + .055), 2.4)
     }
 
-    function UB(BB) {
-      return Math.pow(BB, nB.g)
+    function cB(BB) {
+      return Math.pow(BB, JB.e)
     }
 
-    function aB(BB) {
+    function nB(BB) {
       return BB <= .0031308 ? 12.92 * BB : 1.055 * Math.pow(BB, .41666) - .055
     }
-    class pB {
+    class hB {
       constructor() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = BB, this.g = jB, this.b = zB
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = BB, this.g = IB, this.b = ZB
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -46,39 +46,39 @@ export const modules = {
         return BB = 397 * BB ^ 255 * this.g, BB = 397 * BB ^ 255 * this.b, BB
       }
       toArray(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return BB[jB] = this.r, BB[jB + 1] = this.g, BB[jB + 2] = this.b, this
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return BB[IB] = this.r, BB[IB + 1] = this.g, BB[IB + 2] = this.b, this
       }
-      ljB(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return pB.FromArrayToRef(BB, jB, this), this
+      WZB(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return hB.FromArrayToRef(BB, IB, this), this
       }
       toColor4() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new rB(this.r, this.g, this.b, BB)
+        return new zB(this.r, this.g, this.b, BB)
       }
-      nQB() {
+      HTB() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
       multiply(BB) {
-        return new pB(this.r * BB.r, this.g * BB.g, this.b * BB.b)
+        return new hB(this.r * BB.r, this.g * BB.g, this.b * BB.b)
       }
-      multiplyToRef(BB, jB) {
-        return jB.r = this.r * BB.r, jB.g = this.g * BB.g, jB.b = this.b * BB.b, jB
+      multiplyToRef(BB, IB) {
+        return IB.r = this.r * BB.r, IB.g = this.g * BB.g, IB.b = this.b * BB.b, IB
       }
       multiplyInPlace(BB) {
         return this.r *= BB.r, this.g *= BB.g, this.b *= BB.b, this
       }
-      multiplyByFloats(BB, jB, zB) {
-        return new pB(this.r * BB, this.g * jB, this.b * zB)
+      multiplyByFloats(BB, IB, ZB) {
+        return new hB(this.r * BB, this.g * IB, this.b * ZB)
       }
       divide(BB) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(BB, jB) {
+      divideToRef(BB, IB) {
         throw new ReferenceError("Can not divide a color")
       }
       divideInPlace(BB) {
@@ -90,11 +90,11 @@ export const modules = {
       maximizeInPlace(BB) {
         return this.maximizeInPlaceFromFloats(BB.r, BB.g, BB.b)
       }
-      minimizeInPlaceFromFloats(BB, jB, zB) {
-        return this.r = Math.min(BB, this.r), this.g = Math.min(jB, this.g), this.b = Math.min(zB, this.b), this
+      minimizeInPlaceFromFloats(BB, IB, ZB) {
+        return this.r = Math.min(BB, this.r), this.g = Math.min(IB, this.g), this.b = Math.min(ZB, this.b), this
       }
-      maximizeInPlaceFromFloats(BB, jB, zB) {
-        return this.r = Math.max(BB, this.r), this.g = Math.max(jB, this.g), this.b = Math.max(zB, this.b), this
+      maximizeInPlaceFromFloats(BB, IB, ZB) {
+        return this.r = Math.max(BB, this.r), this.g = Math.max(IB, this.g), this.b = Math.max(ZB, this.b), this
       }
       floorToRef(BB) {
         throw new ReferenceError("Can not floor a color")
@@ -111,17 +111,17 @@ export const modules = {
       equals(BB) {
         return BB && this.r === BB.r && this.g === BB.g && this.b === BB.b
       }
-      equalsFloats(BB, jB, zB) {
-        return this.YIB(BB, jB, zB)
+      equalsFloats(BB, IB, ZB) {
+        return this.kvB(BB, IB, ZB)
       }
-      YIB(BB, jB, zB) {
-        return this.r === BB && this.g === jB && this.b === zB
+      kvB(BB, IB, ZB) {
+        return this.r === BB && this.g === IB && this.b === ZB
       }
       equalsWithEpsilon(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.c;
-        return (0, dB.WithinEpsilon)(this.r, BB.r, jB) && (0, dB.WithinEpsilon)(this.g, BB.g, jB) && (0, dB.WithinEpsilon)(this.b, BB.b, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JB.d;
+        return (0, oB.WithinEpsilon)(this.r, BB.r, IB) && (0, oB.WithinEpsilon)(this.g, BB.g, IB) && (0, oB.WithinEpsilon)(this.b, BB.b, IB)
       }
-      bu() {
+      dv() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
@@ -131,283 +131,283 @@ export const modules = {
         throw new ReferenceError("Can not negate a color")
       }
       scale(BB) {
-        return new pB(this.r * BB, this.g * BB, this.b * BB)
+        return new hB(this.r * BB, this.g * BB, this.b * BB)
       }
       scaleInPlace(BB) {
         return this.r *= BB, this.g *= BB, this.b *= BB, this
       }
-      scaleToRef(BB, jB) {
-        return jB.r = this.r * BB, jB.g = this.g * BB, jB.b = this.b * BB, jB
+      scaleToRef(BB, IB) {
+        return IB.r = this.r * BB, IB.g = this.g * BB, IB.b = this.b * BB, IB
       }
-      scaleAndAddToRef(BB, jB) {
-        return jB.r += this.r * BB, jB.g += this.g * BB, jB.b += this.b * BB, jB
+      scaleAndAddToRef(BB, IB) {
+        return IB.r += this.r * BB, IB.g += this.g * BB, IB.b += this.b * BB, IB
       }
       clampToRef() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        return zB.r = (0, dB.Clamp)(this.r, BB, jB), zB.g = (0, dB.Clamp)(this.g, BB, jB), zB.b = (0, dB.Clamp)(this.b, BB, jB), zB
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        return ZB.r = (0, oB.Clamp)(this.r, BB, IB), ZB.g = (0, oB.Clamp)(this.g, BB, IB), ZB.b = (0, oB.Clamp)(this.b, BB, IB), ZB
       }
       add(BB) {
-        return new pB(this.r + BB.r, this.g + BB.g, this.b + BB.b)
+        return new hB(this.r + BB.r, this.g + BB.g, this.b + BB.b)
       }
       addInPlace(BB) {
         return this.r += BB.r, this.g += BB.g, this.b += BB.b, this
       }
-      addInPlaceFromFloats(BB, jB, zB) {
-        return this.r += BB, this.g += jB, this.b += zB, this
+      addInPlaceFromFloats(BB, IB, ZB) {
+        return this.r += BB, this.g += IB, this.b += ZB, this
       }
-      addToRef(BB, jB) {
-        return jB.r = this.r + BB.r, jB.g = this.g + BB.g, jB.b = this.b + BB.b, jB
+      addToRef(BB, IB) {
+        return IB.r = this.r + BB.r, IB.g = this.g + BB.g, IB.b = this.b + BB.b, IB
       }
       subtract(BB) {
-        return new pB(this.r - BB.r, this.g - BB.g, this.b - BB.b)
+        return new hB(this.r - BB.r, this.g - BB.g, this.b - BB.b)
       }
-      subtractToRef(BB, jB) {
-        return jB.r = this.r - BB.r, jB.g = this.g - BB.g, jB.b = this.b - BB.b, jB
+      subtractToRef(BB, IB) {
+        return IB.r = this.r - BB.r, IB.g = this.g - BB.g, IB.b = this.b - BB.b, IB
       }
-      MQB(BB) {
+      VTB(BB) {
         return this.r -= BB.r, this.g -= BB.g, this.b -= BB.b, this
       }
-      subtractFromFloats(BB, jB, zB) {
-        return new pB(this.r - BB, this.g - jB, this.b - zB)
+      subtractFromFloats(BB, IB, ZB) {
+        return new hB(this.r - BB, this.g - IB, this.b - ZB)
       }
-      subtractFromFloatsToRef(BB, jB, zB, QB) {
-        return QB.r = this.r - BB, QB.g = this.g - jB, QB.b = this.b - zB, QB
+      subtractFromFloatsToRef(BB, IB, ZB, TB) {
+        return TB.r = this.r - BB, TB.g = this.g - IB, TB.b = this.b - ZB, TB
       }
       clone() {
-        return new pB(this.r, this.g, this.b)
+        return new hB(this.r, this.g, this.b)
       }
-      jH(BB) {
+      TY(BB) {
         return this.r = BB.r, this.g = BB.g, this.b = BB.b, this
       }
-      U3(BB, jB, zB) {
-        return this.r = BB, this.g = jB, this.b = zB, this
+      cBB(BB, IB, ZB) {
+        return this.r = BB, this.g = IB, this.b = ZB, this
       }
-      set(BB, jB, zB) {
-        return this.U3(BB, jB, zB)
+      set(BB, IB, ZB) {
+        return this.cBB(BB, IB, ZB)
       }
-      S_(BB) {
+      K9(BB) {
         return this.r = this.g = this.b = BB, this
       }
       toHexString() {
         const BB = Math.round(255 * this.r),
-          jB = Math.round(255 * this.g),
-          zB = Math.round(255 * this.b);
-        return "#" + (0, dB.ToHex)(BB) + (0, dB.ToHex)(jB) + (0, dB.ToHex)(zB)
+          IB = Math.round(255 * this.g),
+          ZB = Math.round(255 * this.b);
+        return "#" + (0, oB.ToHex)(BB) + (0, oB.ToHex)(IB) + (0, oB.ToHex)(ZB)
       }
       fromHexString(BB) {
         return "#" !== BB.substring(0, 1) || 7 !== BB.length || (this.r = parseInt(BB.substring(1, 3), 16) / 255, this.g = parseInt(BB.substring(3, 5), 16) / 255, this.b = parseInt(BB.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new pB)
+        return this.toHSVToRef(new hB)
       }
       toHSVToRef(BB) {
-        const jB = this.r,
-          zB = this.g,
-          QB = this.b,
-          nB = Math.max(jB, zB, QB),
-          dB = Math.min(jB, zB, QB);
-        let IB = 0,
-          NB = 0;
-        const uB = nB,
-          UB = nB - dB;
-        return 0 !== nB && (NB = UB / nB), nB != dB && (nB == jB ? (IB = (zB - QB) / UB, zB < QB && (IB += 6)) : nB == zB ? IB = (QB - jB) / UB + 2 : nB == QB && (IB = (jB - zB) / UB + 4), IB *= 60), BB.r = IB, BB.g = NB, BB.b = uB, BB
+        const IB = this.r,
+          ZB = this.g,
+          TB = this.b,
+          JB = Math.max(IB, ZB, TB),
+          oB = Math.min(IB, ZB, TB);
+        let GB = 0,
+          vB = 0;
+        const kB = JB,
+          cB = JB - oB;
+        return 0 !== JB && (vB = cB / JB), JB != oB && (JB == IB ? (GB = (ZB - TB) / cB, ZB < TB && (GB += 6)) : JB == ZB ? GB = (TB - IB) / cB + 2 : JB == TB && (GB = (IB - ZB) / cB + 4), GB *= 60), BB.r = GB, BB.g = vB, BB.b = kB, BB
       }
       toLinearSpace() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const jB = new pB;
-        return this.toLinearSpaceToRef(jB, BB), jB
+        const IB = new hB;
+        return this.toLinearSpaceToRef(IB, BB), IB
       }
       toLinearSpaceToRef(BB) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = uB(this.r), BB.g = uB(this.g), BB.b = uB(this.b)) : (BB.r = NB(this.r), BB.g = NB(this.g), BB.b = NB(this.b)), this
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = kB(this.r), BB.g = kB(this.g), BB.b = kB(this.b)) : (BB.r = vB(this.r), BB.g = vB(this.g), BB.b = vB(this.b)), this
       }
       toGammaSpace() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const jB = new pB;
-        return this.toGammaSpaceToRef(jB, BB), jB
+        const IB = new hB;
+        return this.toGammaSpaceToRef(IB, BB), IB
       }
       toGammaSpaceToRef(BB) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = aB(this.r), BB.g = aB(this.g), BB.b = aB(this.b)) : (BB.r = UB(this.r), BB.g = UB(this.g), BB.b = UB(this.b)), this
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = nB(this.r), BB.g = nB(this.g), BB.b = nB(this.b)) : (BB.r = cB(this.r), BB.g = cB(this.g), BB.b = cB(this.b)), this
       }
-      static HSVtoRGBToRef(BB, jB, zB, QB) {
-        const nB = zB * jB,
-          dB = BB / 60,
-          IB = nB * (1 - Math.abs(dB % 2 - 1));
-        let NB = 0,
-          uB = 0,
-          UB = 0;
-        dB >= 0 && dB <= 1 ? (NB = nB, uB = IB) : dB >= 1 && dB <= 2 ? (NB = IB, uB = nB) : dB >= 2 && dB <= 3 ? (uB = nB, UB = IB) : dB >= 3 && dB <= 4 ? (uB = IB, UB = nB) : dB >= 4 && dB <= 5 ? (NB = IB, UB = nB) : dB >= 5 && dB <= 6 && (NB = nB, UB = IB);
-        const aB = zB - nB;
-        return QB.r = NB + aB, QB.g = uB + aB, QB.b = UB + aB, QB
+      static HSVtoRGBToRef(BB, IB, ZB, TB) {
+        const JB = ZB * IB,
+          oB = BB / 60,
+          GB = JB * (1 - Math.abs(oB % 2 - 1));
+        let vB = 0,
+          kB = 0,
+          cB = 0;
+        oB >= 0 && oB <= 1 ? (vB = JB, kB = GB) : oB >= 1 && oB <= 2 ? (vB = GB, kB = JB) : oB >= 2 && oB <= 3 ? (kB = JB, cB = GB) : oB >= 3 && oB <= 4 ? (kB = GB, cB = JB) : oB >= 4 && oB <= 5 ? (vB = GB, cB = JB) : oB >= 5 && oB <= 6 && (vB = JB, cB = GB);
+        const nB = ZB - JB;
+        return TB.r = vB + nB, TB.g = kB + nB, TB.b = cB + nB, TB
       }
-      static FromHSV(BB, jB, zB) {
-        const QB = new pB(0, 0, 0);
-        return pB.HSVtoRGBToRef(BB, jB, zB, QB), QB
+      static FromHSV(BB, IB, ZB) {
+        const TB = new hB(0, 0, 0);
+        return hB.HSVtoRGBToRef(BB, IB, ZB, TB), TB
       }
       static FromHexString(BB) {
-        return new pB(0, 0, 0).fromHexString(BB)
+        return new hB(0, 0, 0).fromHexString(BB)
       }
       static FromArray(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new pB(BB[jB], BB[jB + 1], BB[jB + 2])
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new hB(BB[IB], BB[IB + 1], BB[IB + 2])
       }
       static FromArrayToRef(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        zB.r = BB[jB], zB.g = BB[jB + 1], zB.b = BB[jB + 2]
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        ZB.r = BB[IB], ZB.g = BB[IB + 1], ZB.b = BB[IB + 2]
       }
-      static FromInts(BB, jB, zB) {
-        return new pB(BB / 255, jB / 255, zB / 255)
+      static FromInts(BB, IB, ZB) {
+        return new hB(BB / 255, IB / 255, ZB / 255)
       }
-      static Lerp(BB, jB, zB) {
-        const QB = new pB(0, 0, 0);
-        return pB.LerpToRef(BB, jB, zB, QB), QB
+      static Lerp(BB, IB, ZB) {
+        const TB = new hB(0, 0, 0);
+        return hB.LerpToRef(BB, IB, ZB, TB), TB
       }
-      static LerpToRef(BB, jB, zB, QB) {
-        QB.r = BB.r + (jB.r - BB.r) * zB, QB.g = BB.g + (jB.g - BB.g) * zB, QB.b = BB.b + (jB.b - BB.b) * zB
+      static LerpToRef(BB, IB, ZB, TB) {
+        TB.r = BB.r + (IB.r - BB.r) * ZB, TB.g = BB.g + (IB.g - BB.g) * ZB, TB.b = BB.b + (IB.b - BB.b) * ZB
       }
-      static Hermite(BB, jB, zB, QB, nB) {
-        const dB = nB * nB,
-          IB = nB * dB,
-          NB = 2 * IB - 3 * dB + 1,
-          uB = -2 * IB + 3 * dB,
-          UB = IB - 2 * dB + nB,
-          aB = IB - dB,
-          rB = BB.r * NB + zB.r * uB + jB.r * UB + QB.r * aB,
-          sB = BB.g * NB + zB.g * uB + jB.g * UB + QB.g * aB,
-          JB = BB.b * NB + zB.b * uB + jB.b * UB + QB.b * aB;
-        return new pB(rB, sB, JB)
+      static Hermite(BB, IB, ZB, TB, JB) {
+        const oB = JB * JB,
+          GB = JB * oB,
+          vB = 2 * GB - 3 * oB + 1,
+          kB = -2 * GB + 3 * oB,
+          cB = GB - 2 * oB + JB,
+          nB = GB - oB,
+          zB = BB.r * vB + ZB.r * kB + IB.r * cB + TB.r * nB,
+          FB = BB.g * vB + ZB.g * kB + IB.g * cB + TB.g * nB,
+          NB = BB.b * vB + ZB.b * kB + IB.b * cB + TB.b * nB;
+        return new hB(zB, FB, NB)
       }
-      static Hermite1stDerivative(BB, jB, zB, QB, nB) {
-        const dB = pB.Black();
-        return this.Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB), dB
+      static Hermite1stDerivative(BB, IB, ZB, TB, JB) {
+        const oB = hB.Black();
+        return this.Hermite1stDerivativeToRef(BB, IB, ZB, TB, JB, oB), oB
       }
-      static Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB) {
-        const IB = nB * nB;
-        dB.r = 6 * (IB - nB) * BB.r + (3 * IB - 4 * nB + 1) * jB.r + 6 * (-IB + nB) * zB.r + (3 * IB - 2 * nB) * QB.r, dB.g = 6 * (IB - nB) * BB.g + (3 * IB - 4 * nB + 1) * jB.g + 6 * (-IB + nB) * zB.g + (3 * IB - 2 * nB) * QB.g, dB.b = 6 * (IB - nB) * BB.b + (3 * IB - 4 * nB + 1) * jB.b + 6 * (-IB + nB) * zB.b + (3 * IB - 2 * nB) * QB.b
+      static Hermite1stDerivativeToRef(BB, IB, ZB, TB, JB, oB) {
+        const GB = JB * JB;
+        oB.r = 6 * (GB - JB) * BB.r + (3 * GB - 4 * JB + 1) * IB.r + 6 * (-GB + JB) * ZB.r + (3 * GB - 2 * JB) * TB.r, oB.g = 6 * (GB - JB) * BB.g + (3 * GB - 4 * JB + 1) * IB.g + 6 * (-GB + JB) * ZB.g + (3 * GB - 2 * JB) * TB.g, oB.b = 6 * (GB - JB) * BB.b + (3 * GB - 4 * JB + 1) * IB.b + 6 * (-GB + JB) * ZB.b + (3 * GB - 2 * JB) * TB.b
       }
       static Red() {
-        return new pB(1, 0, 0)
+        return new hB(1, 0, 0)
       }
       static Green() {
-        return new pB(0, 1, 0)
+        return new hB(0, 1, 0)
       }
       static Blue() {
-        return new pB(0, 0, 1)
+        return new hB(0, 0, 1)
       }
       static Black() {
-        return new pB(0, 0, 0)
+        return new hB(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return pB._BlackReadOnly
+        return hB._BlackReadOnly
       }
       static White() {
-        return new pB(1, 1, 1)
+        return new hB(1, 1, 1)
       }
       static Purple() {
-        return new pB(.5, 0, .5)
+        return new hB(.5, 0, .5)
       }
       static Magenta() {
-        return new pB(1, 0, 1)
+        return new hB(1, 0, 1)
       }
       static Yellow() {
-        return new pB(1, 1, 0)
+        return new hB(1, 1, 0)
       }
       static Gray() {
-        return new pB(.5, .5, .5)
+        return new hB(.5, .5, .5)
       }
       static Teal() {
-        return new pB(0, 1, 1)
+        return new hB(0, 1, 1)
       }
       static Random() {
-        return new pB(Math.random(), Math.random(), Math.random())
+        return new hB(Math.random(), Math.random(), Math.random())
       }
     }
-    pB._V8PerformanceHack = new pB(.5, .5, .5), pB._BlackReadOnly = pB.Black();
-    class rB {
+    hB._V8PerformanceHack = new hB(.5, .5, .5), hB._BlackReadOnly = hB.Black();
+    class zB {
       constructor() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = BB, this.g = jB, this.b = zB, this.a = QB
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = BB, this.g = IB, this.b = ZB, this.a = TB
       }
-      nQB() {
+      HTB() {
         return [this.r, this.g, this.b, this.a]
       }
       toArray(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return BB[jB] = this.r, BB[jB + 1] = this.g, BB[jB + 2] = this.b, BB[jB + 3] = this.a, this
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return BB[IB] = this.r, BB[IB + 1] = this.g, BB[IB + 2] = this.b, BB[IB + 3] = this.a, this
       }
-      ljB(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = BB[jB], this.g = BB[jB + 1], this.b = BB[jB + 2], this.a = BB[jB + 3], this
+      WZB(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = BB[IB], this.g = BB[IB + 1], this.b = BB[IB + 2], this.a = BB[IB + 3], this
       }
       equals(BB) {
         return BB && this.r === BB.r && this.g === BB.g && this.b === BB.b && this.a === BB.a
       }
       add(BB) {
-        return new rB(this.r + BB.r, this.g + BB.g, this.b + BB.b, this.a + BB.a)
+        return new zB(this.r + BB.r, this.g + BB.g, this.b + BB.b, this.a + BB.a)
       }
-      addToRef(BB, jB) {
-        return jB.r = this.r + BB.r, jB.g = this.g + BB.g, jB.b = this.b + BB.b, jB.a = this.a + BB.a, jB
+      addToRef(BB, IB) {
+        return IB.r = this.r + BB.r, IB.g = this.g + BB.g, IB.b = this.b + BB.b, IB.a = this.a + BB.a, IB
       }
       addInPlace(BB) {
         return this.r += BB.r, this.g += BB.g, this.b += BB.b, this.a += BB.a, this
       }
-      addInPlaceFromFloats(BB, jB, zB, QB) {
-        return this.r += BB, this.g += jB, this.b += zB, this.a += QB, this
+      addInPlaceFromFloats(BB, IB, ZB, TB) {
+        return this.r += BB, this.g += IB, this.b += ZB, this.a += TB, this
       }
       subtract(BB) {
-        return new rB(this.r - BB.r, this.g - BB.g, this.b - BB.b, this.a - BB.a)
+        return new zB(this.r - BB.r, this.g - BB.g, this.b - BB.b, this.a - BB.a)
       }
-      subtractToRef(BB, jB) {
-        return jB.r = this.r - BB.r, jB.g = this.g - BB.g, jB.b = this.b - BB.b, jB.a = this.a - BB.a, jB
+      subtractToRef(BB, IB) {
+        return IB.r = this.r - BB.r, IB.g = this.g - BB.g, IB.b = this.b - BB.b, IB.a = this.a - BB.a, IB
       }
-      MQB(BB) {
+      VTB(BB) {
         return this.r -= BB.r, this.g -= BB.g, this.b -= BB.b, this.a -= BB.a, this
       }
-      subtractFromFloats(BB, jB, zB, QB) {
-        return new rB(this.r - BB, this.g - jB, this.b - zB, this.a - QB)
+      subtractFromFloats(BB, IB, ZB, TB) {
+        return new zB(this.r - BB, this.g - IB, this.b - ZB, this.a - TB)
       }
-      subtractFromFloatsToRef(BB, jB, zB, QB, nB) {
-        return nB.r = this.r - BB, nB.g = this.g - jB, nB.b = this.b - zB, nB.a = this.a - QB, nB
+      subtractFromFloatsToRef(BB, IB, ZB, TB, JB) {
+        return JB.r = this.r - BB, JB.g = this.g - IB, JB.b = this.b - ZB, JB.a = this.a - TB, JB
       }
       scale(BB) {
-        return new rB(this.r * BB, this.g * BB, this.b * BB, this.a * BB)
+        return new zB(this.r * BB, this.g * BB, this.b * BB, this.a * BB)
       }
       scaleInPlace(BB) {
         return this.r *= BB, this.g *= BB, this.b *= BB, this.a *= BB, this
       }
-      scaleToRef(BB, jB) {
-        return jB.r = this.r * BB, jB.g = this.g * BB, jB.b = this.b * BB, jB.a = this.a * BB, jB
+      scaleToRef(BB, IB) {
+        return IB.r = this.r * BB, IB.g = this.g * BB, IB.b = this.b * BB, IB.a = this.a * BB, IB
       }
-      scaleAndAddToRef(BB, jB) {
-        return jB.r += this.r * BB, jB.g += this.g * BB, jB.b += this.b * BB, jB.a += this.a * BB, jB
+      scaleAndAddToRef(BB, IB) {
+        return IB.r += this.r * BB, IB.g += this.g * BB, IB.b += this.b * BB, IB.a += this.a * BB, IB
       }
       clampToRef() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        return zB.r = (0, dB.Clamp)(this.r, BB, jB), zB.g = (0, dB.Clamp)(this.g, BB, jB), zB.b = (0, dB.Clamp)(this.b, BB, jB), zB.a = (0, dB.Clamp)(this.a, BB, jB), zB
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        return ZB.r = (0, oB.Clamp)(this.r, BB, IB), ZB.g = (0, oB.Clamp)(this.g, BB, IB), ZB.b = (0, oB.Clamp)(this.b, BB, IB), ZB.a = (0, oB.Clamp)(this.a, BB, IB), ZB
       }
       multiply(BB) {
-        return new rB(this.r * BB.r, this.g * BB.g, this.b * BB.b, this.a * BB.a)
+        return new zB(this.r * BB.r, this.g * BB.g, this.b * BB.b, this.a * BB.a)
       }
-      multiplyToRef(BB, jB) {
-        return jB.r = this.r * BB.r, jB.g = this.g * BB.g, jB.b = this.b * BB.b, jB.a = this.a * BB.a, jB
+      multiplyToRef(BB, IB) {
+        return IB.r = this.r * BB.r, IB.g = this.g * BB.g, IB.b = this.b * BB.b, IB.a = this.a * BB.a, IB
       }
       multiplyInPlace(BB) {
         return this.r *= BB.r, this.g *= BB.g, this.b *= BB.b, this.a *= BB.a, this
       }
-      multiplyByFloats(BB, jB, zB, QB) {
-        return new rB(this.r * BB, this.g * jB, this.b * zB, this.a * QB)
+      multiplyByFloats(BB, IB, ZB, TB) {
+        return new zB(this.r * BB, this.g * IB, this.b * ZB, this.a * TB)
       }
       divide(BB) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(BB, jB) {
+      divideToRef(BB, IB) {
         throw new ReferenceError("Can not divide a color")
       }
       divideInPlace(BB) {
@@ -419,11 +419,11 @@ export const modules = {
       maximizeInPlace(BB) {
         return this.r = Math.max(this.r, BB.r), this.g = Math.max(this.g, BB.g), this.b = Math.max(this.b, BB.b), this.a = Math.max(this.a, BB.a), this
       }
-      minimizeInPlaceFromFloats(BB, jB, zB, QB) {
-        return this.r = Math.min(BB, this.r), this.g = Math.min(jB, this.g), this.b = Math.min(zB, this.b), this.a = Math.min(QB, this.a), this
+      minimizeInPlaceFromFloats(BB, IB, ZB, TB) {
+        return this.r = Math.min(BB, this.r), this.g = Math.min(IB, this.g), this.b = Math.min(ZB, this.b), this.a = Math.min(TB, this.a), this
       }
-      maximizeInPlaceFromFloats(BB, jB, zB, QB) {
-        return this.r = Math.max(BB, this.r), this.g = Math.max(jB, this.g), this.b = Math.max(zB, this.b), this.a = Math.max(QB, this.a), this
+      maximizeInPlaceFromFloats(BB, IB, ZB, TB) {
+        return this.r = Math.max(BB, this.r), this.g = Math.max(IB, this.g), this.b = Math.max(ZB, this.b), this.a = Math.max(TB, this.a), this
       }
       floorToRef(BB) {
         throw new ReferenceError("Can not floor a color")
@@ -437,7 +437,7 @@ export const modules = {
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      bu() {
+      dv() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
@@ -447,11 +447,11 @@ export const modules = {
         throw new ReferenceError("Can not negate a color")
       }
       equalsWithEpsilon(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.c;
-        return (0, dB.WithinEpsilon)(this.r, BB.r, jB) && (0, dB.WithinEpsilon)(this.g, BB.g, jB) && (0, dB.WithinEpsilon)(this.b, BB.b, jB) && (0, dB.WithinEpsilon)(this.a, BB.a, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JB.d;
+        return (0, oB.WithinEpsilon)(this.r, BB.r, IB) && (0, oB.WithinEpsilon)(this.g, BB.g, IB) && (0, oB.WithinEpsilon)(this.b, BB.b, IB) && (0, oB.WithinEpsilon)(this.a, BB.a, IB)
       }
-      YIB(BB, jB, zB, QB) {
-        return this.r === BB && this.g === jB && this.b === zB && this.a === QB
+      kvB(BB, IB, ZB, TB) {
+        return this.r === BB && this.g === IB && this.b === ZB && this.a === TB
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -464,340 +464,340 @@ export const modules = {
         return BB = 397 * BB ^ 255 * this.g, BB = 397 * BB ^ 255 * this.b, BB = 397 * BB ^ 255 * this.a, BB
       }
       clone() {
-        return (new rB).jH(this)
+        return (new zB).TY(this)
       }
-      jH(BB) {
+      TY(BB) {
         return this.r = BB.r, this.g = BB.g, this.b = BB.b, this.a = BB.a, this
       }
-      U3(BB, jB, zB, QB) {
-        return this.r = BB, this.g = jB, this.b = zB, this.a = QB, this
+      cBB(BB, IB, ZB, TB) {
+        return this.r = BB, this.g = IB, this.b = ZB, this.a = TB, this
       }
-      set(BB, jB, zB, QB) {
-        return this.U3(BB, jB, zB, QB)
+      set(BB, IB, ZB, TB) {
+        return this.cBB(BB, IB, ZB, TB)
       }
-      S_(BB) {
+      K9(BB) {
         return this.r = this.g = this.b = this.a = BB, this
       }
       toHexString() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const jB = Math.round(255 * this.r),
-          zB = Math.round(255 * this.g),
-          QB = Math.round(255 * this.b);
-        if (BB) return "#" + (0, dB.ToHex)(jB) + (0, dB.ToHex)(zB) + (0, dB.ToHex)(QB);
-        const nB = Math.round(255 * this.a);
-        return "#" + (0, dB.ToHex)(jB) + (0, dB.ToHex)(zB) + (0, dB.ToHex)(QB) + (0, dB.ToHex)(nB)
+        const IB = Math.round(255 * this.r),
+          ZB = Math.round(255 * this.g),
+          TB = Math.round(255 * this.b);
+        if (BB) return "#" + (0, oB.ToHex)(IB) + (0, oB.ToHex)(ZB) + (0, oB.ToHex)(TB);
+        const JB = Math.round(255 * this.a);
+        return "#" + (0, oB.ToHex)(IB) + (0, oB.ToHex)(ZB) + (0, oB.ToHex)(TB) + (0, oB.ToHex)(JB)
       }
       fromHexString(BB) {
         return "#" !== BB.substring(0, 1) || 9 !== BB.length && 7 !== BB.length || (this.r = parseInt(BB.substring(1, 3), 16) / 255, this.g = parseInt(BB.substring(3, 5), 16) / 255, this.b = parseInt(BB.substring(5, 7), 16) / 255, 9 === BB.length && (this.a = parseInt(BB.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const jB = new rB;
-        return this.toLinearSpaceToRef(jB, BB), jB
+        const IB = new zB;
+        return this.toLinearSpaceToRef(IB, BB), IB
       }
       toLinearSpaceToRef(BB) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = uB(this.r), BB.g = uB(this.g), BB.b = uB(this.b)) : (BB.r = NB(this.r), BB.g = NB(this.g), BB.b = NB(this.b)), BB.a = this.a, this
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = kB(this.r), BB.g = kB(this.g), BB.b = kB(this.b)) : (BB.r = vB(this.r), BB.g = vB(this.g), BB.b = vB(this.b)), BB.a = this.a, this
       }
       toGammaSpace() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const jB = new rB;
-        return this.toGammaSpaceToRef(jB, BB), jB
+        const IB = new zB;
+        return this.toGammaSpaceToRef(IB, BB), IB
       }
       toGammaSpaceToRef(BB) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = aB(this.r), BB.g = aB(this.g), BB.b = aB(this.b)) : (BB.r = UB(this.r), BB.g = UB(this.g), BB.b = UB(this.b)), BB.a = this.a, this
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = nB(this.r), BB.g = nB(this.g), BB.b = nB(this.b)) : (BB.r = cB(this.r), BB.g = cB(this.g), BB.b = cB(this.b)), BB.a = this.a, this
       }
       static FromHexString(BB) {
-        return "#" !== BB.substring(0, 1) || 9 !== BB.length && 7 !== BB.length ? new rB(0, 0, 0, 0) : new rB(0, 0, 0, 1).fromHexString(BB)
+        return "#" !== BB.substring(0, 1) || 9 !== BB.length && 7 !== BB.length ? new zB(0, 0, 0, 0) : new zB(0, 0, 0, 1).fromHexString(BB)
       }
-      static Lerp(BB, jB, zB) {
-        return rB.LerpToRef(BB, jB, zB, new rB)
+      static Lerp(BB, IB, ZB) {
+        return zB.LerpToRef(BB, IB, ZB, new zB)
       }
-      static LerpToRef(BB, jB, zB, QB) {
-        return QB.r = BB.r + (jB.r - BB.r) * zB, QB.g = BB.g + (jB.g - BB.g) * zB, QB.b = BB.b + (jB.b - BB.b) * zB, QB.a = BB.a + (jB.a - BB.a) * zB, QB
+      static LerpToRef(BB, IB, ZB, TB) {
+        return TB.r = BB.r + (IB.r - BB.r) * ZB, TB.g = BB.g + (IB.g - BB.g) * ZB, TB.b = BB.b + (IB.b - BB.b) * ZB, TB.a = BB.a + (IB.a - BB.a) * ZB, TB
       }
-      static Hermite(BB, jB, zB, QB, nB) {
-        const dB = nB * nB,
-          IB = nB * dB,
-          NB = 2 * IB - 3 * dB + 1,
-          uB = -2 * IB + 3 * dB,
-          UB = IB - 2 * dB + nB,
-          aB = IB - dB,
-          pB = BB.r * NB + zB.r * uB + jB.r * UB + QB.r * aB,
-          sB = BB.g * NB + zB.g * uB + jB.g * UB + QB.g * aB,
-          JB = BB.b * NB + zB.b * uB + jB.b * UB + QB.b * aB,
-          mB = BB.a * NB + zB.a * uB + jB.a * UB + QB.a * aB;
-        return new rB(pB, sB, JB, mB)
+      static Hermite(BB, IB, ZB, TB, JB) {
+        const oB = JB * JB,
+          GB = JB * oB,
+          vB = 2 * GB - 3 * oB + 1,
+          kB = -2 * GB + 3 * oB,
+          cB = GB - 2 * oB + JB,
+          nB = GB - oB,
+          hB = BB.r * vB + ZB.r * kB + IB.r * cB + TB.r * nB,
+          FB = BB.g * vB + ZB.g * kB + IB.g * cB + TB.g * nB,
+          NB = BB.b * vB + ZB.b * kB + IB.b * cB + TB.b * nB,
+          gB = BB.a * vB + ZB.a * kB + IB.a * cB + TB.a * nB;
+        return new zB(hB, FB, NB, gB)
       }
-      static Hermite1stDerivative(BB, jB, zB, QB, nB) {
-        const dB = new rB;
-        return this.Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB), dB
+      static Hermite1stDerivative(BB, IB, ZB, TB, JB) {
+        const oB = new zB;
+        return this.Hermite1stDerivativeToRef(BB, IB, ZB, TB, JB, oB), oB
       }
-      static Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB) {
-        const IB = nB * nB;
-        dB.r = 6 * (IB - nB) * BB.r + (3 * IB - 4 * nB + 1) * jB.r + 6 * (-IB + nB) * zB.r + (3 * IB - 2 * nB) * QB.r, dB.g = 6 * (IB - nB) * BB.g + (3 * IB - 4 * nB + 1) * jB.g + 6 * (-IB + nB) * zB.g + (3 * IB - 2 * nB) * QB.g, dB.b = 6 * (IB - nB) * BB.b + (3 * IB - 4 * nB + 1) * jB.b + 6 * (-IB + nB) * zB.b + (3 * IB - 2 * nB) * QB.b, dB.a = 6 * (IB - nB) * BB.a + (3 * IB - 4 * nB + 1) * jB.a + 6 * (-IB + nB) * zB.a + (3 * IB - 2 * nB) * QB.a
+      static Hermite1stDerivativeToRef(BB, IB, ZB, TB, JB, oB) {
+        const GB = JB * JB;
+        oB.r = 6 * (GB - JB) * BB.r + (3 * GB - 4 * JB + 1) * IB.r + 6 * (-GB + JB) * ZB.r + (3 * GB - 2 * JB) * TB.r, oB.g = 6 * (GB - JB) * BB.g + (3 * GB - 4 * JB + 1) * IB.g + 6 * (-GB + JB) * ZB.g + (3 * GB - 2 * JB) * TB.g, oB.b = 6 * (GB - JB) * BB.b + (3 * GB - 4 * JB + 1) * IB.b + 6 * (-GB + JB) * ZB.b + (3 * GB - 2 * JB) * TB.b, oB.a = 6 * (GB - JB) * BB.a + (3 * GB - 4 * JB + 1) * IB.a + 6 * (-GB + JB) * ZB.a + (3 * GB - 2 * JB) * TB.a
       }
       static FromColor3(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new rB(BB.r, BB.g, BB.b, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new zB(BB.r, BB.g, BB.b, IB)
       }
       static FromArray(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new rB(BB[jB], BB[jB + 1], BB[jB + 2], BB[jB + 3])
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new zB(BB[IB], BB[IB + 1], BB[IB + 2], BB[IB + 3])
       }
       static FromArrayToRef(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          zB = arguments.length > 2 ? arguments[2] : void 0;
-        zB.r = BB[jB], zB.g = BB[jB + 1], zB.b = BB[jB + 2], zB.a = BB[jB + 3]
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZB = arguments.length > 2 ? arguments[2] : void 0;
+        ZB.r = BB[IB], ZB.g = BB[IB + 1], ZB.b = BB[IB + 2], ZB.a = BB[IB + 3]
       }
-      static FromInts(BB, jB, zB, QB) {
-        return new rB(BB / 255, jB / 255, zB / 255, QB / 255)
+      static FromInts(BB, IB, ZB, TB) {
+        return new zB(BB / 255, IB / 255, ZB / 255, TB / 255)
       }
-      static CheckColors4(BB, jB) {
-        if (BB.length === 3 * jB) {
-          const jB = [];
-          for (let zB = 0; zB < BB.length; zB += 3) {
-            const QB = zB / 3 * 4;
-            jB[QB] = BB[zB], jB[QB + 1] = BB[zB + 1], jB[QB + 2] = BB[zB + 2], jB[QB + 3] = 1
+      static CheckColors4(BB, IB) {
+        if (BB.length === 3 * IB) {
+          const IB = [];
+          for (let ZB = 0; ZB < BB.length; ZB += 3) {
+            const TB = ZB / 3 * 4;
+            IB[TB] = BB[ZB], IB[TB + 1] = BB[ZB + 1], IB[TB + 2] = BB[ZB + 2], IB[TB + 3] = 1
           }
-          return jB
+          return IB
         }
         return BB
       }
     }
-    rB._V8PerformanceHack = new rB(.5, .5, .5, .5);
-    class sB {}
-    sB.Color3 = (0, QB.c)(3, pB.Black), sB.Color4 = (0, QB.c)(3, (() => new rB(0, 0, 0, 0)));
-    let JB = !1;
+    zB._V8PerformanceHack = new zB(.5, .5, .5, .5);
+    class FB {}
+    FB.Color3 = (0, TB.b)(3, hB.Black), FB.Color4 = (0, TB.b)(3, (() => new zB(0, 0, 0, 0)));
+    let NB = !1;
 
-    function mB() {
-      JB || (JB = !0, Object.defineProperties(pB.prototype, {
+    function gB() {
+      NB || (NB = !0, Object.defineProperties(hB.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(rB.prototype, {
+      }), Object.defineProperties(zB.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, IB.d)("BABYLON.Color3", pB), (0, IB.d)("BABYLON.Color4", rB))
+      }), (0, GB.i)("BABYLON.Color3", hB), (0, GB.i)("BABYLON.Color4", zB))
     }
   },
-  37178: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => dB,
-      g: () => QB,
-      h: () => nB
+  37129: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      e: () => TB,
+      g: () => JB
     });
-    const QB = 1 / 2.2,
-      nB = 2.2;
+    const TB = 1 / 2.2,
+      JB = 2.2;
     Math.sqrt(5);
-    let dB = .001
+    let oB = .001
   },
-  37208: (BB, jB, zB) => {
-    function QB(BB) {
+  37158: (BB, IB, ZB) => {
+    function TB(BB) {
       return parseInt(BB.toString().replace(/\W/g, ""))
     }
 
-    function nB(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(BB - jB) <= zB
+    function JB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(BB - IB) <= ZB
     }
 
-    function dB(BB, jB, zB) {
-      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return BB < jB - QB || BB > zB + QB
+    function oB(BB, IB, ZB) {
+      let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return BB < IB - TB || BB > ZB + TB
     }
 
-    function IB(BB, jB) {
-      return BB === jB ? BB : Math.random() * (jB - BB) + BB
+    function GB(BB, IB) {
+      return BB === IB ? BB : Math.random() * (IB - BB) + BB
     }
 
-    function NB(BB, jB, zB) {
-      return BB + (jB - BB) * zB
+    function vB(BB, IB, ZB) {
+      return BB + (IB - BB) * ZB
     }
 
-    function uB(BB, jB, zB) {
-      let QB = yB(jB - BB, 360);
-      return QB > 180 && (QB -= 360), BB + QB * rB(zB)
+    function kB(BB, IB, ZB) {
+      let TB = qB(IB - BB, 360);
+      return TB > 180 && (TB -= 360), BB + TB * zB(ZB)
     }
 
-    function UB(BB, jB, zB) {
-      let QB;
-      return QB = BB != jB ? rB((zB - BB) / (jB - BB)) : 0, QB
+    function cB(BB, IB, ZB) {
+      let TB;
+      return TB = BB != IB ? zB((ZB - BB) / (IB - BB)) : 0, TB
     }
 
-    function aB(BB, jB, zB, QB, nB) {
-      const dB = nB * nB,
-        IB = nB * dB;
-      return BB * (2 * IB - 3 * dB + 1) + zB * (-2 * IB + 3 * dB) + jB * (IB - 2 * dB + nB) + QB * (IB - dB)
+    function nB(BB, IB, ZB, TB, JB) {
+      const oB = JB * JB,
+        GB = JB * oB;
+      return BB * (2 * GB - 3 * oB + 1) + ZB * (-2 * GB + 3 * oB) + IB * (GB - 2 * oB + JB) + TB * (GB - oB)
     }
 
-    function pB(BB, jB, zB, QB, nB) {
-      const dB = nB * nB;
-      return 6 * (dB - nB) * BB + (3 * dB - 4 * nB + 1) * jB + 6 * (-dB + nB) * zB + (3 * dB - 2 * nB) * QB
+    function hB(BB, IB, ZB, TB, JB) {
+      const oB = JB * JB;
+      return 6 * (oB - JB) * BB + (3 * oB - 4 * JB + 1) * IB + 6 * (-oB + JB) * ZB + (3 * oB - 2 * JB) * TB
     }
 
-    function rB(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(zB, Math.max(jB, BB))
+    function zB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(ZB, Math.max(IB, BB))
     }
 
-    function sB(BB) {
+    function FB(BB) {
       return BB -= 2 * Math.PI * Math.floor((BB + Math.PI) / (2 * Math.PI))
     }
 
-    function JB(BB) {
-      const jB = BB.toString(16);
-      return BB <= 15 ? ("0" + jB).toUpperCase() : jB.toUpperCase()
+    function NB(BB) {
+      const IB = BB.toString(16);
+      return BB <= 15 ? ("0" + IB).toUpperCase() : IB.toUpperCase()
     }
 
-    function mB(BB) {
+    function gB(BB) {
       if (Math.log2) return Math.floor(Math.log2(BB));
       if (BB < 0) return NaN;
       if (0 === BB) return -1 / 0;
-      let jB = 0;
+      let IB = 0;
       if (BB < 1) {
-        for (; BB < 1;) jB++, BB *= 2;
-        jB = -jB
+        for (; BB < 1;) IB++, BB *= 2;
+        IB = -IB
       } else if (BB > 1)
-        for (; BB > 1;) jB++, BB = Math.floor(BB / 2);
-      return jB
+        for (; BB > 1;) IB++, BB = Math.floor(BB / 2);
+      return IB
     }
 
-    function yB(BB, jB) {
-      return BB - Math.floor(BB / jB) * jB
+    function qB(BB, IB) {
+      return BB - Math.floor(BB / IB) * IB
     }
 
-    function kB(BB, jB, zB) {
-      return (BB - jB) / (zB - jB)
+    function yB(BB, IB, ZB) {
+      return (BB - IB) / (ZB - IB)
     }
 
-    function GB(BB, jB, zB) {
-      return BB * (zB - jB) + jB
+    function UB(BB, IB, ZB) {
+      return BB * (ZB - IB) + IB
     }
 
-    function LB(BB, jB) {
-      let zB = yB(jB - BB, 360);
-      return zB > 180 && (zB -= 360), zB
+    function WB(BB, IB) {
+      let ZB = qB(IB - BB, 360);
+      return ZB > 180 && (ZB -= 360), ZB
     }
 
-    function gB(BB, jB) {
-      const zB = yB(BB, 2 * jB);
-      return jB - Math.abs(zB - jB)
+    function dB(BB, IB) {
+      const ZB = qB(BB, 2 * IB);
+      return IB - Math.abs(ZB - IB)
     }
 
-    function tB(BB, jB, zB) {
-      let QB = rB(zB);
-      return QB = -2 * QB * QB * QB + 3 * QB * QB, jB * QB + BB * (1 - QB)
+    function CB(BB, IB, ZB) {
+      let TB = zB(ZB);
+      return TB = -2 * TB * TB * TB + 3 * TB * TB, IB * TB + BB * (1 - TB)
     }
 
-    function SB(BB, jB, zB) {
-      let QB;
-      return QB = Math.abs(jB - BB) <= zB ? jB : BB + Math.sign(jB - BB) * zB, QB
+    function QB(BB, IB, ZB) {
+      let TB;
+      return TB = Math.abs(IB - BB) <= ZB ? IB : BB + Math.sign(IB - BB) * ZB, TB
     }
 
-    function MB(BB, jB, zB) {
-      const QB = LB(BB, jB);
-      let nB;
-      return nB = -zB < QB && QB < zB ? jB : SB(BB, jB = BB + QB, zB), nB
+    function sB(BB, IB, ZB) {
+      const TB = WB(BB, IB);
+      let JB;
+      return JB = -ZB < TB && TB < ZB ? IB : QB(BB, IB = BB + TB, ZB), JB
     }
 
-    function EB(BB, jB, zB) {
-      return (BB - jB) / (zB - jB)
+    function wB(BB, IB, ZB) {
+      return (BB - IB) / (ZB - IB)
     }
 
-    function iB(BB, jB, zB) {
-      return (zB - jB) * BB + jB
+    function OB(BB, IB, ZB) {
+      return (ZB - IB) * BB + IB
     }
 
-    function qB(BB, jB) {
-      const zB = BB % jB;
-      return 0 === zB ? jB : qB(jB, zB)
+    function YB(BB, IB) {
+      const ZB = BB % IB;
+      return 0 === ZB ? IB : YB(IB, ZB)
     }
-    zB.r(jB), zB.d(jB, {
-      Clamp: () => rB,
-      DeltaAngle: () => LB,
-      Denormalize: () => GB,
-      ExtractAsInt: () => QB,
-      Hermite: () => aB,
-      Hermite1stDerivative: () => pB,
-      HighestCommonFactor: () => qB,
-      ILog2: () => mB,
-      InverseLerp: () => UB,
-      Lerp: () => NB,
-      LerpAngle: () => uB,
-      MoveTowards: () => SB,
-      MoveTowardsAngle: () => MB,
-      Normalize: () => kB,
-      NormalizeRadians: () => sB,
-      OutsideRange: () => dB,
-      PercentToRange: () => iB,
-      PingPong: () => gB,
-      RandomRange: () => IB,
-      RangeToPercent: () => EB,
-      Repeat: () => yB,
-      SmoothStep: () => tB,
-      ToHex: () => JB,
-      WithinEpsilon: () => nB
+    ZB.r(IB), ZB.d(IB, {
+      Clamp: () => zB,
+      DeltaAngle: () => WB,
+      Denormalize: () => UB,
+      ExtractAsInt: () => TB,
+      Hermite: () => nB,
+      Hermite1stDerivative: () => hB,
+      HighestCommonFactor: () => YB,
+      ILog2: () => gB,
+      InverseLerp: () => cB,
+      Lerp: () => vB,
+      LerpAngle: () => kB,
+      MoveTowards: () => QB,
+      MoveTowardsAngle: () => sB,
+      Normalize: () => yB,
+      NormalizeRadians: () => FB,
+      OutsideRange: () => oB,
+      PercentToRange: () => OB,
+      PingPong: () => dB,
+      RandomRange: () => GB,
+      RangeToPercent: () => wB,
+      Repeat: () => qB,
+      SmoothStep: () => CB,
+      ToHex: () => NB,
+      WithinEpsilon: () => JB
     })
   },
-  37186: (BB, jB, zB) => {
-    function QB(BB, jB) {
-      const zB = [];
-      for (let QB = 0; QB < BB; ++QB) zB.push(jB());
-      return zB
+  37131: (BB, IB, ZB) => {
+    function TB(BB, IB) {
+      const ZB = [];
+      for (let TB = 0; TB < BB; ++TB) ZB.push(IB());
+      return ZB
     }
 
-    function nB(BB, jB) {
-      return QB(BB, jB)
+    function JB(BB, IB) {
+      return TB(BB, IB)
     }
-    zB.d(jB, {
-      c: () => QB,
-      g: () => nB,
-      k: () => IB
+    ZB.d(IB, {
+      b: () => TB,
+      f: () => JB,
+      g: () => GB
     });
-    const dB = ["push", "splice", "pop", "shift", "unshift"];
+    const oB = ["push", "splice", "pop", "shift", "unshift"];
 
-    function IB(BB, jB) {
-      const zB = dB.map((zB => function(BB, jB, zB) {
-        const QB = BB[jB];
-        if ("function" !== typeof QB) return null;
-        const nB = function() {
-          const QB = BB.length,
-            dB = nB.previous.apply(BB, arguments);
-          return zB(jB, QB), dB
+    function GB(BB, IB) {
+      const ZB = oB.map((ZB => function(BB, IB, ZB) {
+        const TB = BB[IB];
+        if ("function" !== typeof TB) return null;
+        const JB = function() {
+          const TB = BB.length,
+            oB = JB.previous.apply(BB, arguments);
+          return ZB(IB, TB), oB
         };
-        return QB.next = nB, nB.previous = QB, BB[jB] = nB, () => {
-          const zB = nB.previous;
-          if (!zB) return;
-          const QB = nB.next;
-          QB ? (zB.next = QB, QB.previous = zB) : (zB.next = void 0, BB[jB] = zB), nB.next = void 0, nB.previous = void 0
+        return TB.next = JB, JB.previous = TB, BB[IB] = JB, () => {
+          const ZB = JB.previous;
+          if (!ZB) return;
+          const TB = JB.next;
+          TB ? (ZB.next = TB, TB.previous = ZB) : (ZB.next = void 0, BB[IB] = ZB), JB.next = void 0, JB.previous = void 0
         }
-      }(BB, zB, jB)));
+      }(BB, ZB, IB)));
       return () => {
-        for (const BB of zB) BB?.()
+        for (const BB of ZB) BB?.()
       }
     }
   },
-  37222: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => dB,
-      d: () => nB
+  37170: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      i: () => JB
     });
-    const QB = {};
+    const TB = {};
 
-    function nB(BB, jB) {
-      QB[BB] = jB
+    function JB(BB, IB) {
+      TB[BB] = IB
     }
 
-    function dB(BB) {
-      return QB[BB]
+    function oB(BB) {
+      return TB[BB]
     }
   }
 };

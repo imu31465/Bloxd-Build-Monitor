@@ -1,234 +1,234 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  61626: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/bloxd_wasm_recorder_bg.63be3fb8006314cf30ad.wasm"
+  61498: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/bloxd_wasm_recorder_bg.9be0e4f456ba305493ee.wasm"
   },
-  61617: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      BloxdRecorderWasmError: () => VB,
-      RECORDER_MODULE_ID: () => YB,
-      loadRecorderModule: () => ZB,
-      markRecorderTrapped: () => TB,
-      prefetchRecorderModule: () => AB,
-      recorderMemoryBytes: () => WB,
-      unloadRecorderModule: () => PB
+  61495: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      BloxdRecorderWasmError: () => PB,
+      RECORDER_MODULE_ID: () => jB,
+      loadRecorderModule: () => mB,
+      markRecorderTrapped: () => LB,
+      prefetchRecorderModule: () => XB,
+      recorderMemoryBytes: () => uB,
+      unloadRecorderModule: () => eB
     });
-    var QB = {};
-    zB.r(QB), zB.d(QB, {
-      WnB: () => nB,
-      VIB: () => HB,
-      np: () => dB,
-      default: () => oB,
-      initSync: () => fB,
-      dp: () => IB,
-      TnB: () => NB,
-      FnB: () => uB
+    var TB = {};
+    ZB.r(TB), ZB.d(TB, {
+      NoB: () => JB,
+      cvB: () => aB,
+      hh: () => oB,
+      default: () => pB,
+      initSync: () => iB,
+      zh: () => GB,
+      zoB: () => vB,
+      ooB: () => kB
     });
-    class nB {
+    class JB {
       __destroy_into_raw() {
         const BB = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, aB.unregister(this), BB
+        return this.__wbg_ptr = 0, nB.unregister(this), BB
       }
       free() {
         const BB = this.__destroy_into_raw();
-        EB.zjzI(BB, 0)
+        wB.L5HD(BB, 0)
       }
       busy() {
-        return 0 !== EB.VdRG(this.__wbg_ptr)
+        return 0 !== wB.M782(this.__wbg_ptr)
       }
-      command(BB, jB) {
-        return 0 !== EB.qE4x(this.__wbg_ptr, BB, jB)
+      command(BB, IB) {
+        return 0 !== wB.PsDP(this.__wbg_ptr, BB, IB)
       }
-      YnB(BB) {
-        return EB.fUV3(this.__wbg_ptr, BB) >>> 0
+      GoB(BB) {
+        return wB.gCef(this.__wbg_ptr, BB) >>> 0
       }
-      DnB() {
-        EB.YYot(this.__wbg_ptr)
+      JoB() {
+        wB.Hybw(this.__wbg_ptr)
       }
-      HnB() {
-        return EB.cRgN(this.__wbg_ptr) >>> 0
+      ToB() {
+        return wB.bitP(this.__wbg_ptr) >>> 0
       }
-      onB() {
-        return EB.iqRb(this.__wbg_ptr)
+      ZoB() {
+        return wB.B5Pg(this.__wbg_ptr)
       }
-      XnB() {
-        return EB.uL42(this.__wbg_ptr) >>> 0
+      coB() {
+        return wB.jmDR(this.__wbg_ptr) >>> 0
       }
-      ZnB() {
-        return EB.DO8Q(this.__wbg_ptr) >>> 0
+      noB() {
+        return wB.nz84(this.__wbg_ptr) >>> 0
       }
       feed(BB) {
-        return EB.KUbz(this.__wbg_ptr, BB) >>> 0
+        return wB.vRCe(this.__wbg_ptr, BB) >>> 0
       }
       constructor() {
-        const BB = EB.ehVN();
-        return this.__wbg_ptr = BB, aB.register(this, this.__wbg_ptr, this), this
+        const BB = wB.xFoM();
+        return this.__wbg_ptr = BB, nB.register(this, this.__wbg_ptr, this), this
       }
-      hnB() {
-        return EB.HR6m(this.__wbg_ptr) >>> 0
+      koB() {
+        return wB.qz7w(this.__wbg_ptr) >>> 0
       }
-      hIB() {
-        return EB.DaV6(this.__wbg_ptr) >>> 0
+      nvB() {
+        return wB.Wqkc(this.__wbg_ptr) >>> 0
       }
-      fnB(BB, jB, zB) {
-        return 0 !== EB.IfkL(this.__wbg_ptr, BB, jB, zB)
+      IoB(BB, IB, ZB) {
+        return 0 !== wB.jRm4(this.__wbg_ptr, BB, IB, ZB)
       }
       stage(BB) {
-        return EB.x54l(this.__wbg_ptr, BB) >>> 0
+        return wB.h0FS(this.__wbg_ptr, BB) >>> 0
       }
       step() {
-        return EB.J8B5(this.__wbg_ptr) >>> 0
+        return wB.IBzI(this.__wbg_ptr) >>> 0
       }
     }
 
-    function dB(BB, jB) {
-      const zB = function(BB, jB, zB) {
-          if (void 0 === zB) {
-            const zB = tB.encode(BB),
-              QB = jB(zB.length, 1) >>> 0;
-            return JB().subarray(QB, QB + zB.length).set(zB), iB = zB.length, QB
+    function oB(BB, IB) {
+      const ZB = function(BB, IB, ZB) {
+          if (void 0 === ZB) {
+            const ZB = CB.encode(BB),
+              TB = IB(ZB.length, 1) >>> 0;
+            return NB().subarray(TB, TB + ZB.length).set(ZB), OB = ZB.length, TB
           }
-          let QB = BB.length,
-            nB = jB(QB, 1) >>> 0;
-          const dB = JB();
-          let IB = 0;
-          for (; IB < QB; IB++) {
-            const jB = BB.charCodeAt(IB);
-            if (jB > 127) break;
-            dB[nB + IB] = jB
+          let TB = BB.length,
+            JB = IB(TB, 1) >>> 0;
+          const oB = NB();
+          let GB = 0;
+          for (; GB < TB; GB++) {
+            const IB = BB.charCodeAt(GB);
+            if (IB > 127) break;
+            oB[JB + GB] = IB
           }
-          if (IB !== QB) {
-            0 !== IB && (BB = BB.slice(IB)), nB = zB(nB, QB, QB = IB + 3 * BB.length, 1) >>> 0;
-            const jB = JB().subarray(nB + IB, nB + QB);
-            IB += tB.encodeInto(BB, jB).written, nB = zB(nB, QB, IB, 1) >>> 0
+          if (GB !== TB) {
+            0 !== GB && (BB = BB.slice(GB)), JB = ZB(JB, TB, TB = GB + 3 * BB.length, 1) >>> 0;
+            const IB = NB().subarray(JB + GB, JB + TB);
+            GB += CB.encodeInto(BB, IB).written, JB = ZB(JB, TB, GB, 1) >>> 0
           }
-          return iB = IB, nB
-        }(BB, EB.bOGr, EB.eM62),
-        QB = iB,
-        nB = EB.LSzG(zB, QB, jB);
-      if (nB[1]) throw kB(nB[0])
+          return OB = GB, JB
+        }(BB, wB.Qjz5, wB.yRIe),
+        TB = OB,
+        JB = wB.Wt6O(ZB, TB, IB);
+      if (JB[1]) throw yB(JB[0])
     }
 
-    function IB() {
-      EB.ylz0()
+    function GB() {
+      wB.KG0D()
     }
 
-    function NB() {
-      return EB.jVHG() >>> 0
+    function vB() {
+      return wB.H2WP() >>> 0
     }
 
-    function uB() {
-      return kB(EB.VTvV())
+    function kB() {
+      return yB(wB.ZRW4())
     }
 
-    function UB() {
+    function cB() {
       return {
         __proto__: null,
-        uCaT: {
+        lyRJ: {
           __proto__: null,
-          aA6t: function(BB, jB) {
-            return pB(Error(rB(BB, jB)))
+          Igfm: function(BB, IB) {
+            return hB(Error(zB(BB, IB)))
           },
-          TjUh: function() {
-            return pB(EB.memory)
+          S3BY: function() {
+            return hB(wB.memory)
           },
-          upjs: function(BB, jB) {
-            throw new Error(rB(BB, jB))
+          InhZ: function(BB, IB) {
+            throw new Error(zB(BB, IB))
           },
-          aVjV: function(BB, jB) {
-            console.error(rB(BB, jB))
+          sxMY: function(BB, IB) {
+            console.error(zB(BB, IB))
           },
-          pnkC: function() {
+          DkYT: function() {
             return performance.now()
           }
         }
       }
     }
-    Symbol.dispose && (nB.prototype[Symbol.dispose] = nB.prototype.free);
-    const aB = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (JB.prototype[Symbol.dispose] = JB.prototype.free);
+    const nB = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((BB => EB?.__wbg_recordermodule_free(BB, 1)));
+    } : new FinalizationRegistry((BB => wB?.__wbg_recordermodule_free(BB, 1)));
 
-    function pB(BB) {
-      yB === mB.length && mB.push(mB.length + 1);
-      const jB = yB;
-      return yB = mB[jB], mB[jB] = BB, jB
+    function hB(BB) {
+      qB === gB.length && gB.push(gB.length + 1);
+      const IB = qB;
+      return qB = gB[IB], gB[IB] = BB, IB
     }
 
-    function rB(BB, jB) {
-      return function(BB, jB) {
-        gB += jB, gB >= LB && (GB = new TextDecoder("utf-8", {
+    function zB(BB, IB) {
+      return function(BB, IB) {
+        dB += IB, dB >= WB && (UB = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), GB.decode(), gB = jB);
-        return GB.decode(JB().subarray(BB, BB + jB))
-      }(BB >>> 0, jB)
+        }), UB.decode(), dB = IB);
+        return UB.decode(NB().subarray(BB, BB + IB))
+      }(BB >>> 0, IB)
     }
-    let sB = null;
+    let FB = null;
 
-    function JB() {
-      return null !== sB && 0 !== sB.byteLength || (sB = new Uint8Array(EB.memory.buffer)), sB
+    function NB() {
+      return null !== FB && 0 !== FB.byteLength || (FB = new Uint8Array(wB.memory.buffer)), FB
     }
-    let mB = new Array(1024).fill(void 0);
-    mB.push(void 0, null, !0, !1);
-    let yB = mB.length;
+    let gB = new Array(1024).fill(void 0);
+    gB.push(void 0, null, !0, !1);
+    let qB = gB.length;
 
-    function kB(BB) {
-      const jB = function(BB) {
-        return mB[BB]
+    function yB(BB) {
+      const IB = function(BB) {
+        return gB[BB]
       }(BB);
       return function(BB) {
-        BB < 1028 || (mB[BB] = yB, yB = BB)
-      }(BB), jB
+        BB < 1028 || (gB[BB] = qB, qB = BB)
+      }(BB), IB
     }
-    let GB = new TextDecoder("utf-8", {
+    let UB = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    GB.decode();
-    const LB = 2146435072;
-    let gB = 0;
-    const tB = new TextEncoder;
-    "encodeInto" in tB || (tB.encodeInto = function(BB, jB) {
-      const zB = tB.encode(BB);
-      return jB.set(zB), {
+    UB.decode();
+    const WB = 2146435072;
+    let dB = 0;
+    const CB = new TextEncoder;
+    "encodeInto" in CB || (CB.encodeInto = function(BB, IB) {
+      const ZB = CB.encode(BB);
+      return IB.set(ZB), {
         read: BB.length,
-        written: zB.length
+        written: ZB.length
       }
     });
-    let SB, MB, EB, iB = 0;
+    let QB, sB, wB, OB = 0;
 
-    function qB(BB, jB) {
-      return MB = BB, EB = BB.exports, SB = jB, sB = null, EB.RmoZ(), EB
+    function YB(BB, IB) {
+      return sB = BB, wB = BB.exports, QB = IB, FB = null, wB.XesA(), wB
     }
 
-    function fB(BB) {
-      if (void 0 !== EB) return EB;
+    function iB(BB) {
+      if (void 0 !== wB) return wB;
       void 0 !== BB && (Object.getPrototypeOf(BB) === Object.prototype ? ({
         module: BB
       } = BB) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const jB = UB();
+      const IB = cB();
       BB instanceof WebAssembly.Module || (BB = new WebAssembly.Module(BB));
-      return qB(new WebAssembly.Instance(BB, jB), BB)
+      return YB(new WebAssembly.Instance(BB, IB), BB)
     }
-    async function oB(BB) {
-      if (void 0 !== EB) return EB;
+    async function pB(BB) {
+      if (void 0 !== wB) return wB;
       void 0 !== BB && (Object.getPrototypeOf(BB) === Object.prototype ? ({
         module_or_path: BB
       } = BB) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const jB = UB();
+      const IB = cB();
       ("string" === typeof BB || "function" === typeof Request && BB instanceof Request || "function" === typeof URL && BB instanceof URL) && (BB = fetch(BB));
       const {
-        instance: zB,
-        module: QB
-      } = await async function(BB, jB) {
+        instance: ZB,
+        module: TB
+      } = await async function(BB, IB) {
         if ("function" === typeof Response && BB instanceof Response) {
           if (!BB.ok) throw new Error(`failed to fetch Wasm: ${BB.status} ${BB.statusText} fetching '${BB.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(BB, jB)
-          } catch (zB) {
+            return await WebAssembly.instantiateStreaming(BB, IB)
+          } catch (ZB) {
             if (! function(BB) {
                 switch (BB) {
                   case "basic":
@@ -237,142 +237,142 @@ export const modules = {
                     return !0
                 }
                 return !1
-              }(BB.type) || "application/wasm" === BB.headers.get("Content-Type")) throw zB;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", zB)
+              }(BB.type) || "application/wasm" === BB.headers.get("Content-Type")) throw ZB;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", ZB)
           }
-          const QB = await BB.arrayBuffer();
-          return await WebAssembly.instantiate(QB, jB)
+          const TB = await BB.arrayBuffer();
+          return await WebAssembly.instantiate(TB, IB)
         } {
-          const zB = await WebAssembly.instantiate(BB, jB);
-          return zB instanceof WebAssembly.Instance ? {
-            instance: zB,
+          const ZB = await WebAssembly.instantiate(BB, IB);
+          return ZB instanceof WebAssembly.Instance ? {
+            instance: ZB,
             module: BB
-          } : zB
+          } : ZB
         }
-      }(await BB, jB);
-      return qB(zB, QB)
+      }(await BB, IB);
+      return YB(ZB, TB)
     }
 
-    function HB() {
-      EB = void 0, MB = void 0, sB = null, mB = new Array(1024).fill(void 0), mB.push(void 0, null, !0, !1), yB = mB.length
+    function aB() {
+      wB = void 0, sB = void 0, FB = null, gB = new Array(1024).fill(void 0), gB.push(void 0, null, !0, !1), qB = gB.length
     }
-    var DB = zB(2974),
-      FB = zB(6578);
-    const YB = 2;
-    class VB extends Error {
+    var HB = ZB(3043),
+      MB = ZB(6771);
+    const jB = 2;
+    class PB extends Error {
       stage;
-      constructor(BB, jB) {
-        super((0, DB.F)(BB, jB), {
-          cause: jB
+      constructor(BB, IB) {
+        super((0, HB.G)(BB, IB), {
+          cause: IB
         }), this.name = "BloxdRecorderWasmError", this.stage = BB
       }
     }
-    let hB = null;
-    const XB = function(BB) {
-      let jB = null,
-        zB = null,
-        QB = null,
-        nB = null;
-      const dB = async () => {
-        let zB = null;
+    let RB = null;
+    const rB = function(BB) {
+      let IB = null,
+        ZB = null,
+        TB = null,
+        JB = null;
+      const oB = async () => {
+        let ZB = null;
         try {
-          return zB = jB ??= (0, DB.I)(BB.url(), (0, FB.b)(BB.name)), await zB
-        } catch (QB) {
-          throw jB === zB && (jB = null), BB.error((0, DB.M)(QB), QB)
+          return ZB = IB ??= (0, HB.J)(BB.url(), (0, MB.e)(BB.name)), await ZB
+        } catch (TB) {
+          throw IB === ZB && (IB = null), BB.error((0, HB.N)(TB), TB)
         }
       };
       return {
         load: () => {
-          if (nB) return Promise.reject(nB);
-          if (zB) return zB;
-          const jB = (async () => {
-            const jB = await dB();
+          if (JB) return Promise.reject(JB);
+          if (ZB) return ZB;
+          const IB = (async () => {
+            const IB = await oB();
             try {
-              await BB.init(jB)
-            } catch (zB) {
-              throw BB.error("instantiate", zB)
+              await BB.init(IB)
+            } catch (ZB) {
+              throw BB.error("instantiate", ZB)
             }
             return BB.bindings
           })();
-          zB = jB, QB = jB;
-          const IB = () => {
-            QB === jB && (QB = null)
+          ZB = IB, TB = IB;
+          const GB = () => {
+            TB === IB && (TB = null)
           };
-          return jB.then(IB, (() => {
-            IB(), zB === jB && (zB = null)
-          })), jB
+          return IB.then(GB, (() => {
+            GB(), ZB === IB && (ZB = null)
+          })), IB
         },
         prefetch: async () => {
-          nB || zB || await dB()
+          JB || ZB || await oB()
         },
-        markTrapped: jB => (nB ??= BB.error("call", jB), nB),
+        markTrapped: IB => (JB ??= BB.error("call", IB), JB),
         unload: () => {
-          nB || !BB.reset || QB || (BB.reset(), zB = null)
+          JB || !BB.reset || TB || (BB.reset(), ZB = null)
         }
       }
     }({
       name: "bloxd_wasm_recorder",
-      url: () => new zB.U(zB(61626)),
+      url: () => new ZB.U(ZB(61498)),
       init: async BB => {
-        await oB({
+        await pB({
           module_or_path: BB
-        }), hB = uB()
+        }), RB = kB()
       },
-      bindings: QB,
-      error: (BB, jB) => new VB(BB, jB),
+      bindings: TB,
+      error: (BB, IB) => new PB(BB, IB),
       reset: () => {
-        HB(), hB = null
+        aB(), RB = null
       }
     });
 
-    function ZB() {
-      return XB.load()
+    function mB() {
+      return rB.load()
     }
 
-    function AB() {
-      return XB.prefetch()
+    function XB() {
+      return rB.prefetch()
     }
 
-    function TB(BB) {
-      return XB.markTrapped(BB)
+    function LB(BB) {
+      return rB.markTrapped(BB)
     }
 
-    function PB() {
-      XB.unload()
+    function eB() {
+      rB.unload()
     }
 
-    function WB() {
-      return hB?.buffer.byteLength ?? 0
+    function uB() {
+      return RB?.buffer.byteLength ?? 0
     }
   },
-  6578: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => IB
+  6771: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => GB
     });
-    var QB = zB(2974);
-    const nB = {
-      bloxd_wasm: () => "7b09e9f186f5fba9951cb6b712084b2a283fca06a42be21f6449860d6e7dc573",
-      bloxd_wasm_client: () => "c15f866f14080480fea14857b9de7e539e335dce452b3ac1f19f0e3e937c9012",
-      bloxd_wasm_workers: () => "00de63c66aff71381fa14ebd2820bcc01d1f74d973a6e00204eb827cb328e85b",
-      bloxd_wasm_models: () => "32d703ec0b794e85682ae80d087c7f2eff99230a39b9a0cb5be5c019534d7923",
-      bloxd_wasm_webgpu: () => "1d41e428ff1a8bf8ab5a5da0e8d9f622575ba5f347bc8d40eb30b5fceef8b724",
-      bloxd_wasm_webgl: () => "312dff8c1bb47e85d35f931d8977e1ee5f52f92a42fa20f9d0123d9376d1a917",
-      bloxd_wasm_webgl1: () => "4855e300e3e615d0266ab5ac62961960b1300dfb8770375a7b598d1264a1830f",
-      bloxd_wasm_replay: () => "5423fc1dc63ea74c6d9a1fac1b68ef8b53800a6e323e74b70ac272cca42c91f0",
-      bloxd_wasm_recorder: () => "70b2547fb7560662bf26d9ee964aae4306b95745e4a8f6ad1533e65a931bfcbd",
-      bloxd_wasm_anim: () => "a442a15413a6d8e2fce5f258c2ba4985529d8bf26cece64b09dc4584f043ade6",
-      bloxd_wasm_textures: () => "e405dd767a5408e017f07c07979684ef0a0b2226e22378a714bcaf40408edfe9",
-      bloxd_wasm_shader_pack: () => "98655291aac1601e5d21cb4017dab03da1e258471aa722674ba91fc68305d170"
+    var TB = ZB(3043);
+    const JB = {
+      bloxd_wasm: () => "3929318ab85efbe7fbf015b7202f97f9213e396225d80b3db1d6eea98607e192",
+      bloxd_wasm_client: () => "de8797e7a2073a4b84142d0cdd231107132c281529510d44e15de2b324a3a30f",
+      bloxd_wasm_workers: () => "e392be22de1540260052c3350081c85739d1c5bc24a5222edf6de5771f9d53cc",
+      bloxd_wasm_models: () => "18f455c31b6430161028848ff988084c6b16d32d8fa12d4af984837abfc3144f",
+      bloxd_wasm_webgpu: () => "5526ae404536156accd26af71c2bbbeb37703fbb83da322278378d23a1e1d759",
+      bloxd_wasm_webgl: () => "cbc2e38eabd8d787bc137c7584b67ac7d90d219065d8b2cfc013c2b7b96e44bf",
+      bloxd_wasm_webgl1: () => "729c4755d993e2a2b24848672562e1cfcebc5f2cf7acaf33d9fc9440993d6ec7",
+      bloxd_wasm_replay: () => "42d3e76b4bdf858378fb0fb477290e11c66f2e51aa3947bbbd34ee4a53e1e6c0",
+      bloxd_wasm_recorder: () => "d9158108e4a445accd8d7aa1bf531832e077768eae0055f5cadb78f130f5884f",
+      bloxd_wasm_anim: () => "1aac61a86d6f89bb60de30b43c299b746d630e8811ba65a52be7c2f8e04ccd3d",
+      bloxd_wasm_textures: () => "24c39accf0c81e5ab4e85e999b876eef419c50c2e0b92783b293de227d550aeb",
+      bloxd_wasm_shader_pack: () => "6ef135dd10de9c09f7158eff62c3ec8671e1706d2e1ff29eeda717db01789bd3"
     };
-    var dB = zB(4782);
+    var oB = ZB(4874);
 
-    function IB(BB) {
-      const jB = Object.prototype.hasOwnProperty.call(nB, BB) ? nB[BB]() : void 0;
-      if (void 0 !== jB) return {
-        sha256: jB,
-        onMismatch: dB.t
+    function GB(BB) {
+      const IB = Object.prototype.hasOwnProperty.call(JB, BB) ? JB[BB]() : void 0;
+      if (void 0 !== IB) return {
+        sha256: IB,
+        onMismatch: oB.D
       };
-      throw new QB.h(`${BB} has no release digest, so this build refuses it`)
+      throw new TB.g(`${BB} has no release digest, so this build refuses it`)
     }
   }
 };

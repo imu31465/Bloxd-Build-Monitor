@@ -1,132 +1,132 @@
 export const id = 141;
 export const ids = [141];
 export const modules = {
-  6587: (BB, jB, zB) => {
-    zB.d(jB, {
-      d: () => gB,
-      g: () => tB,
-      i: () => GB,
-      j: () => kB
+  6780: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => dB,
+      e: () => CB,
+      h: () => UB,
+      i: () => yB
     });
-    var QB = zB(6592);
-    const nB = 6,
-      dB = 3,
-      IB = 1,
-      NB = 2,
-      uB = 4,
-      UB = 8,
-      aB = 16,
-      pB = 32,
-      rB = 64,
-      sB = 128,
-      JB = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var TB = ZB(6784);
+    const JB = 6,
+      oB = 3,
+      GB = 1,
+      vB = 2,
+      kB = 4,
+      cB = 8,
+      nB = 16,
+      hB = 32,
+      zB = 64,
+      FB = 128,
+      NB = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function mB(BB) {
+    function gB(BB) {
       if (!BB) return 0;
-      const jB = JB.indexOf(BB);
-      if (jB <= 0) throw new Error(`"${BB}" is not a shader pack hook function`);
-      return jB
+      const IB = NB.indexOf(BB);
+      if (IB <= 0) throw new Error(`"${BB}" is not a shader pack hook function`);
+      return IB
+    }
+
+    function qB(BB) {
+      if (0 === BB) return null;
+      const IB = NB[BB];
+      if (void 0 === IB) throw new Error(`${BB} is not a shader pack hook function id`);
+      return IB
     }
 
     function yB(BB) {
-      if (0 === BB) return null;
-      const jB = JB[BB];
-      if (void 0 === jB) throw new Error(`${BB} is not a shader pack hook function id`);
-      return jB
-    }
-
-    function kB(BB) {
-      const jB = QB.e.length;
+      const IB = TB.e.length;
       return {
-        strict: BB >= jB,
-        program: QB.e[BB % jB]
+        strict: BB >= IB,
+        program: TB.e[BB % IB]
       }
     }
 
-    function GB(BB) {
-      return Number(BB.strict) * QB.e.length + QB.e.indexOf(BB.program)
+    function UB(BB) {
+      return Number(BB.strict) * TB.e.length + TB.e.indexOf(BB.program)
     }
 
-    function LB(BB) {
+    function WB(BB) {
       return "" === BB ? [] : BB.split(" ")
     }
 
-    function gB(BB) {
-      const jB = {
-        variantFlags: new Uint8Array(nB),
-        hooks: new Uint8Array(nB * dB),
-        moduleCodes: Array(nB).fill(""),
-        reads: Array(2 * nB).fill("")
+    function dB(BB) {
+      const IB = {
+        variantFlags: new Uint8Array(JB),
+        hooks: new Uint8Array(JB * oB),
+        moduleCodes: Array(JB).fill(""),
+        reads: Array(2 * JB).fill("")
       };
-      for (const zB of BB) {
-        const BB = GB(zB.key),
-          QB = (BB, jB) => null === zB.hooks.surface || zB.reads.fragment.includes(BB) ? 0 : jB;
-        jB.variantFlags[BB] = (zB.sceneDepth ? IB : 0) | (zB.movesVertices ? NB : 0) | (zB.sunShadow ? uB : 0) | (zB.airShadow ? UB : 0) | (zB.discards ? aB : 0) | QB("localPosition", pB) | QB("enchantSpeed", rB) | QB("enchantTier", sB), jB.hooks[BB * dB] = mB(zB.hooks.vertex), jB.hooks[BB * dB + 1] = mB(zB.hooks.surface), jB.hooks[BB * dB + 2] = mB(zB.hooks.light), jB.moduleCodes[BB] = zB.moduleCode, jB.reads[2 * BB] = zB.reads.vertex.join(" "), jB.reads[2 * BB + 1] = zB.reads.fragment.join(" ")
+      for (const ZB of BB) {
+        const BB = UB(ZB.key),
+          TB = (BB, IB) => null === ZB.hooks.surface || ZB.reads.fragment.includes(BB) ? 0 : IB;
+        IB.variantFlags[BB] = (ZB.sceneDepth ? GB : 0) | (ZB.movesVertices ? vB : 0) | (ZB.sunShadow ? kB : 0) | (ZB.airShadow ? cB : 0) | (ZB.discards ? nB : 0) | TB("localPosition", hB) | TB("enchantSpeed", zB) | TB("enchantTier", FB), IB.hooks[BB * oB] = gB(ZB.hooks.vertex), IB.hooks[BB * oB + 1] = gB(ZB.hooks.surface), IB.hooks[BB * oB + 2] = gB(ZB.hooks.light), IB.moduleCodes[BB] = ZB.moduleCode, IB.reads[2 * BB] = ZB.reads.vertex.join(" "), IB.reads[2 * BB + 1] = ZB.reads.fragment.join(" ")
       }
-      return jB
+      return IB
     }
 
-    function tB(BB) {
+    function CB(BB) {
       const {
-        hooks: jB,
-        moduleCodes: zB,
-        reads: QB
+        hooks: IB,
+        moduleCodes: ZB,
+        reads: TB
       } = BB;
-      return Array.from(BB.variantFlags, ((BB, nB) => {
-        const pB = nB * dB;
+      return Array.from(BB.variantFlags, ((BB, JB) => {
+        const hB = JB * oB;
         return {
-          key: kB(nB),
+          key: yB(JB),
           hooks: {
-            vertex: yB(jB[pB]),
-            surface: yB(jB[pB + 1]),
-            light: yB(jB[pB + 2])
+            vertex: qB(IB[hB]),
+            surface: qB(IB[hB + 1]),
+            light: qB(IB[hB + 2])
           },
-          moduleCode: zB[nB],
-          sceneDepth: 0 !== (BB & IB),
-          sunShadow: 0 !== (BB & uB),
-          airShadow: 0 !== (BB & UB),
-          movesVertices: 0 !== (BB & NB),
-          discards: 0 !== (BB & aB),
+          moduleCode: ZB[JB],
+          sceneDepth: 0 !== (BB & GB),
+          sunShadow: 0 !== (BB & kB),
+          airShadow: 0 !== (BB & cB),
+          movesVertices: 0 !== (BB & vB),
+          discards: 0 !== (BB & nB),
           reads: {
-            vertex: LB(QB[2 * nB]),
-            fragment: LB(QB[2 * nB + 1])
+            vertex: WB(TB[2 * JB]),
+            fragment: WB(TB[2 * JB + 1])
           }
         }
       }))
     }
   },
-  40789: (BB, jB, zB) => {
-    zB.d(jB, {
-      C: () => IB,
-      E: () => mB,
-      I: () => sB,
-      J: () => JB,
-      d: () => nB,
-      h: () => QB,
-      k: () => rB,
-      o: () => aB,
-      r: () => yB,
-      u: () => dB,
-      v: () => NB,
-      y: () => uB
+  40741: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => gB,
+      B: () => FB,
+      D: () => NB,
+      e: () => JB,
+      f: () => TB,
+      i: () => zB,
+      m: () => nB,
+      p: () => qB,
+      q: () => oB,
+      s: () => vB,
+      u: () => kB,
+      w: () => GB
     });
-    const QB = 3,
-      nB = 0,
-      dB = 1,
-      IB = 2,
-      NB = {
+    const TB = 3,
+      JB = 0,
+      oB = 1,
+      GB = 2,
+      vB = {
         uniform: 3,
-        Vr: 4,
+        mz: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      uB = 10,
-      UB = "BloxdPackInputs",
-      aB = "bloxdPackInputs",
-      pB = [{
+      kB = 10,
+      cB = "BloxdPackInputs",
+      nB = "bloxdPackInputs",
+      hB = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,98 +151,98 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      rB = 80;
+      zB = 80;
 
-    function sB() {
-      const BB = pB.map((BB => {
+    function FB() {
+      const BB = hB.map((BB => {
         let {
-          name: jB,
-          type: zB
+          name: IB,
+          type: ZB
         } = BB;
-        return `    ${jB}: ${zB},\n`
+        return `    ${IB}: ${ZB},\n`
       })).join("");
-      return `struct ${UB} {\n${BB}}\n@group(${QB}) @binding(${nB}) var<uniform> ${aB}: ${UB};\n`
+      return `struct ${cB} {\n${BB}}\n@group(${TB}) @binding(${JB}) var<uniform> ${nB}: ${cB};\n`
     }
 
-    function JB(BB, jB) {
-      const zB = new DataView(BB, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, rB),
-        [QB, nB, dB, IB, NB, uB] = pB;
-      zB.setFloat32(QB.offset, jB.seconds, !0), zB.setUint32(nB.offset, jB.lit ? 1 : 0, !0);
-      for (let UB = 0; UB < 3; UB++) zB.setInt32(dB.offset + 4 * UB, jB.renderOffset[UB], !0), zB.setFloat32(IB.offset + 4 * UB, jB.J7[UB], !0), zB.setFloat32(NB.offset + 4 * UB, jB.eyePosition[UB], !0), zB.setFloat32(uB.offset + 4 * UB, jB.shadowDirection[UB], !0)
+    function NB(BB, IB) {
+      const ZB = new DataView(BB, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, zB),
+        [TB, JB, oB, GB, vB, kB] = hB;
+      ZB.setFloat32(TB.offset, IB.seconds, !0), ZB.setUint32(JB.offset, IB.lit ? 1 : 0, !0);
+      for (let cB = 0; cB < 3; cB++) ZB.setInt32(oB.offset + 4 * cB, IB.renderOffset[cB], !0), ZB.setFloat32(GB.offset + 4 * cB, IB.WBB[cB], !0), ZB.setFloat32(vB.offset + 4 * cB, IB.eyePosition[cB], !0), ZB.setFloat32(kB.offset + 4 * cB, IB.shadowDirection[cB], !0)
     }
 
-    function mB(BB) {
-      const jB = new Uint32Array(Math.max(1, BB.length));
-      return BB.forEach(((BB, zB) => {
+    function gB(BB) {
+      const IB = new Uint32Array(Math.max(1, BB.length));
+      return BB.forEach(((BB, ZB) => {
         let {
-          id: QB,
-          rotation: nB
+          id: TB,
+          rotation: JB
         } = BB;
-        jB[zB] = 65535 & QB | (3 & nB) << 16
-      })), jB
+        IB[ZB] = 65535 & TB | (3 & JB) << 16
+      })), IB
     }
-    const yB = {
+    const qB = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6592: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => QB,
-      i: () => IB,
-      m: () => NB,
-      q: () => nB,
-      s: () => dB
+  6784: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB,
+      i: () => GB,
+      l: () => vB,
+      o: () => JB,
+      s: () => oB
     });
-    const QB = ["terrain", "liquid", "model"];
+    const TB = ["terrain", "liquid", "model"];
 
-    function nB() {
+    function JB() {
       const BB = [];
-      for (const jB of [!1, !0])
-        for (const zB of QB) BB.push({
-          strict: jB,
-          program: zB
+      for (const IB of [!1, !0])
+        for (const ZB of TB) BB.push({
+          strict: IB,
+          program: ZB
         });
       return BB
     }
 
-    function dB(BB) {
+    function oB(BB) {
       return `${BB.strict?"strict":"allow"}.${BB.program}`
     }
 
-    function IB(BB) {
+    function GB(BB) {
       return !BB.hooks.vertex && !BB.hooks.surface && !BB.hooks.light
     }
 
-    function NB(BB, jB) {
-      return "off" !== jB && (null === BB || BB.some((BB => BB.key.strict === ("strict" === jB) && !IB(BB))))
+    function vB(BB, IB) {
+      return "off" !== IB && (null === BB || BB.some((BB => BB.key.strict === ("strict" === IB) && !GB(BB))))
     }
   },
-  41369: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      SHADER_PACK_INPUTS_BINDING: () => dB.d,
-      SHADER_PACK_INPUTS_GROUP: () => dB.h,
-      SHADER_PACK_INPUTS_SIZE: () => dB.k,
-      SHADER_PACK_INPUTS_VAR: () => dB.o,
-      SHADER_PACK_MODES: () => dB.r,
-      SHADER_PACK_PROGRAMS: () => QB.e,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => dB.u,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => dB.v,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => dB.y,
-      SHADER_PACK_TEXTURES_BINDING: () => dB.C,
-      encodeTextureLayers: () => dB.E,
-      flattenVariants: () => nB.d,
-      isVariantOff: () => QB.i,
-      packRunsIn: () => QB.m,
-      shaderPackInputsWgsl: () => dB.I,
-      shaderPackVariantKeys: () => QB.q,
-      variantKeyId: () => QB.s,
-      writeShaderPackInputs: () => dB.J
+  41308: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      SHADER_PACK_INPUTS_BINDING: () => oB.e,
+      SHADER_PACK_INPUTS_GROUP: () => oB.f,
+      SHADER_PACK_INPUTS_SIZE: () => oB.i,
+      SHADER_PACK_INPUTS_VAR: () => oB.m,
+      SHADER_PACK_MODES: () => oB.p,
+      SHADER_PACK_PROGRAMS: () => TB.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => oB.q,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => oB.s,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => oB.u,
+      SHADER_PACK_TEXTURES_BINDING: () => oB.w,
+      encodeTextureLayers: () => oB.A,
+      flattenVariants: () => JB.c,
+      isVariantOff: () => TB.i,
+      packRunsIn: () => TB.l,
+      shaderPackInputsWgsl: () => oB.B,
+      shaderPackVariantKeys: () => TB.o,
+      variantKeyId: () => TB.s,
+      writeShaderPackInputs: () => oB.D
     });
-    var QB = zB(6592),
-      nB = zB(6587),
-      dB = zB(40789)
+    var TB = ZB(6784),
+      JB = ZB(6780),
+      oB = ZB(40741)
   }
 };
 Object.freeze(modules);

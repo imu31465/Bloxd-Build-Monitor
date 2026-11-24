@@ -1,11 +1,11 @@
 export const id = 85;
 export const ids = [85];
 export const modules = {
-  4853: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => QB
+  4937: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => TB
     });
-    const QB = String.raw`export interface GameApi {
+    const TB = String.raw`export interface GameApi {
 		/** The ID of the player running the code.
 		 *
 		 * Lobby code usually has nobody running it, so this is null.

@@ -1,25 +1,25 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  9248: (BB, jB) => {
-    jB.discordURLBuilder = function(BB) {
-      var jB;
-      const zB = (null === (jB = null === window || void 0 === window ? void 0 : window.location) || void 0 === jB ? void 0 : jB.hostname) || "localhost",
-        QB = BB.hostname.split("."),
-        nB = !BB.hostname.includes("trycloudflare.com") && !BB.hostname.includes("discordsays.com") && QB.length > 2 ? `/${QB[0]}` : "";
-      return BB.pathname.startsWith("/.proxy") ? `${BB.protocol}//${zB}${nB}${BB.pathname}${BB.search}` : `${BB.protocol}//${zB}/.proxy/colyseus${nB}${BB.pathname}${BB.search}`
+  9275: (BB, IB) => {
+    IB.discordURLBuilder = function(BB) {
+      var IB;
+      const ZB = (null === (IB = null === window || void 0 === window ? void 0 : window.location) || void 0 === IB ? void 0 : IB.hostname) || "localhost",
+        TB = BB.hostname.split("."),
+        JB = !BB.hostname.includes("trycloudflare.com") && !BB.hostname.includes("discordsays.com") && TB.length > 2 ? `/${TB[0]}` : "";
+      return BB.pathname.startsWith("/.proxy") ? `${BB.protocol}//${ZB}${JB}${BB.pathname}${BB.search}` : `${BB.protocol}//${ZB}/.proxy/colyseus${JB}${BB.pathname}${BB.search}`
     }
   },
-  9233: (BB, jB, zB) => {
-    var QB, nB, dB, IB, NB = zB(9129),
-      uB = zB(9240),
-      UB = zB(9194);
-    QB = new WeakMap, nB = new WeakMap, dB = new WeakMap, IB = new WeakMap, jB.Auth = class {
+  9259: (BB, IB, ZB) => {
+    var TB, JB, oB, GB, vB = ZB(9167),
+      kB = ZB(9266),
+      cB = ZB(9225);
+    TB = new WeakMap, JB = new WeakMap, oB = new WeakMap, GB = new WeakMap, IB.Auth = class {
       constructor(BB) {
         this.http = BB, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, QB.set(this, !1), nB.set(this, void 0), dB.set(this, void 0), IB.set(this, UB.createNanoEvents()), uB.getItem(this.settings.key, (BB => this.token = BB))
+        }, TB.set(this, !1), JB.set(this, void 0), oB.set(this, void 0), GB.set(this, cB.createNanoEvents()), kB.getItem(this.settings.key, (BB => this.token = BB))
       }
       set token(BB) {
         this.http.authToken = BB
@@ -28,8 +28,8 @@ export const modules = {
         return this.http.authToken
       }
       onChange(BB) {
-        const jB = NB.__classPrivateFieldGet(this, IB, "f").on("change", BB);
-        return NB.__classPrivateFieldGet(this, QB, "f") || NB.__classPrivateFieldSet(this, nB, new Promise(((BB, jB) => {
+        const IB = vB.__classPrivateFieldGet(this, GB, "f").on("change", BB);
+        return vB.__classPrivateFieldGet(this, TB, "f") || vB.__classPrivateFieldSet(this, JB, new Promise(((BB, IB) => {
           this.getUserData().then((BB => {
             this.emitChange(Object.assign(Object.assign({}, BB), {
               token: this.token
@@ -42,49 +42,49 @@ export const modules = {
           })).finally((() => {
             BB()
           }))
-        })), "f"), NB.__classPrivateFieldSet(this, QB, !0, "f"), jB
+        })), "f"), vB.__classPrivateFieldSet(this, TB, !0, "f"), IB
       }
       getUserData() {
-        return NB.__awaiter(this, void 0, void 0, (function*() {
+        return vB.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(BB, jB, zB) {
-        return NB.__awaiter(this, void 0, void 0, (function*() {
-          const QB = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(BB, IB, ZB) {
+        return vB.__awaiter(this, void 0, void 0, (function*() {
+          const TB = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
               email: BB,
-              password: jB,
-              options: zB
+              password: IB,
+              options: ZB
             }
           })).data;
-          return this.emitChange(QB), QB
+          return this.emitChange(TB), TB
         }))
       }
-      signInWithEmailAndPassword(BB, jB) {
-        return NB.__awaiter(this, void 0, void 0, (function*() {
-          const zB = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(BB, IB) {
+        return vB.__awaiter(this, void 0, void 0, (function*() {
+          const ZB = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
               email: BB,
-              password: jB
+              password: IB
             }
           })).data;
-          return this.emitChange(zB), zB
+          return this.emitChange(ZB), ZB
         }))
       }
       signInAnonymously(BB) {
-        return NB.__awaiter(this, void 0, void 0, (function*() {
-          const jB = (yield this.http.post(`${this.settings.path}/anonymous`, {
+        return vB.__awaiter(this, void 0, void 0, (function*() {
+          const IB = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
               options: BB
             }
           })).data;
-          return this.emitChange(jB), jB
+          return this.emitChange(IB), IB
         }))
       }
       sendPasswordResetEmail(BB) {
-        return NB.__awaiter(this, void 0, void 0, (function*() {
+        return vB.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
               email: BB
@@ -93,29 +93,29 @@ export const modules = {
         }))
       }
       signInWithProvider(BB) {
-        return NB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((zB, QB) => {
-            const nB = jB.width || 480,
-              IB = jB.height || 768,
-              uB = this.token ? `?token=${this.token}` : "",
-              UB = `Login with ${BB[0].toUpperCase()+BB.substring(1)}`,
-              aB = this.http.client.getHttpEndpoint(`${jB.prefix||`${this.settings.path}/provider`}/${BB}${uB}`),
-              pB = screen.width / 2 - nB / 2,
-              rB = screen.height / 2 - IB / 2;
-            NB.__classPrivateFieldSet(this, dB, window.open(aB, UB, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + nB + ", height=" + IB + ", top=" + rB + ", left=" + pB), "f");
-            const sB = BB => {
-                void 0 === BB.data.user && void 0 === BB.data.token || (clearInterval(JB), NB.__classPrivateFieldGet(this, dB, "f").close(), NB.__classPrivateFieldSet(this, dB, void 0, "f"), window.removeEventListener("message", sB), void 0 !== BB.data.error ? QB(BB.data.error) : (zB(BB.data), this.emitChange(BB.data)))
+        return vB.__awaiter(this, arguments, void 0, (function*(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((ZB, TB) => {
+            const JB = IB.width || 480,
+              GB = IB.height || 768,
+              kB = this.token ? `?token=${this.token}` : "",
+              cB = `Login with ${BB[0].toUpperCase()+BB.substring(1)}`,
+              nB = this.http.client.getHttpEndpoint(`${IB.prefix||`${this.settings.path}/provider`}/${BB}${kB}`),
+              hB = screen.width / 2 - JB / 2,
+              zB = screen.height / 2 - GB / 2;
+            vB.__classPrivateFieldSet(this, oB, window.open(nB, cB, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + JB + ", height=" + GB + ", top=" + zB + ", left=" + hB), "f");
+            const FB = BB => {
+                void 0 === BB.data.user && void 0 === BB.data.token || (clearInterval(NB), vB.__classPrivateFieldGet(this, oB, "f").close(), vB.__classPrivateFieldSet(this, oB, void 0, "f"), window.removeEventListener("message", FB), void 0 !== BB.data.error ? TB(BB.data.error) : (ZB(BB.data), this.emitChange(BB.data)))
               },
-              JB = setInterval((() => {
-                NB.__classPrivateFieldGet(this, dB, "f") && !NB.__classPrivateFieldGet(this, dB, "f").closed || (NB.__classPrivateFieldSet(this, dB, void 0, "f"), QB("xz"), window.removeEventListener("message", sB))
+              NB = setInterval((() => {
+                vB.__classPrivateFieldGet(this, oB, "f") && !vB.__classPrivateFieldGet(this, oB, "f").closed || (vB.__classPrivateFieldSet(this, oB, void 0, "f"), TB("fZ"), window.removeEventListener("message", FB))
               }), 200);
-            window.addEventListener("message", sB)
+            window.addEventListener("message", FB)
           }))
         }))
       }
       signOut() {
-        return NB.__awaiter(this, void 0, void 0, (function*() {
+        return vB.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
@@ -123,168 +123,168 @@ export const modules = {
         }))
       }
       emitChange(BB) {
-        void 0 !== BB.token && (this.token = BB.token, null === BB.token ? uB.removeItem(this.settings.key) : uB.setItem(this.settings.key, BB.token)), NB.__classPrivateFieldGet(this, IB, "f").emit("change", BB)
+        void 0 !== BB.token && (this.token = BB.token, null === BB.token ? kB.removeItem(this.settings.key) : kB.setItem(this.settings.key, BB.token)), vB.__classPrivateFieldGet(this, GB, "f").emit("change", BB)
       }
     }
   },
-  9126: (BB, jB, zB) => {
-    var QB, nB = zB(9129),
-      dB = zB(9132),
-      IB = zB(9138),
-      NB = zB(9219),
-      uB = zB(9233),
-      UB = zB(9248);
-    class aB extends Error {
-      constructor(BB, jB) {
-        super(BB), this.code = jB, this.name = "MatchMakeError", Object.setPrototypeOf(this, aB.prototype)
+  9165: (BB, IB, ZB) => {
+    var TB, JB = ZB(9167),
+      oB = ZB(9171),
+      GB = ZB(9180),
+      vB = ZB(9248),
+      kB = ZB(9259),
+      cB = ZB(9275);
+    class nB extends Error {
+      constructor(BB, IB) {
+        super(BB), this.code = IB, this.name = "MatchMakeError", Object.setPrototypeOf(this, nB.prototype)
       }
     }
-    const pB = "undefined" !== typeof window && "undefined" !== typeof(null === (QB = null === window || void 0 === window ? void 0 : window.location) || void 0 === QB ? void 0 : QB.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class rB {
+    const hB = "undefined" !== typeof window && "undefined" !== typeof(null === (TB = null === window || void 0 === window ? void 0 : window.location) || void 0 === TB ? void 0 : TB.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class zB {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pB,
-          jB = arguments.length > 1 ? arguments[1] : void 0;
-        var zB, QB;
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hB,
+          IB = arguments.length > 1 ? arguments[1] : void 0;
+        var ZB, TB;
         if ("string" === typeof BB) {
-          const jB = BB.startsWith("/") ? new URL(BB, pB) : new URL(BB),
-            zB = "https:" === jB.protocol || "wss:" === jB.protocol,
-            QB = Number(jB.port || (zB ? 443 : 80));
+          const IB = BB.startsWith("/") ? new URL(BB, hB) : new URL(BB),
+            ZB = "https:" === IB.protocol || "wss:" === IB.protocol,
+            TB = Number(IB.port || (ZB ? 443 : 80));
           this.settings = {
-            hostname: jB.hostname,
-            pathname: jB.pathname,
-            port: QB,
-            secure: zB,
-            searchParams: jB.searchParams.toString() || void 0
+            hostname: IB.hostname,
+            pathname: IB.pathname,
+            port: TB,
+            secure: ZB,
+            searchParams: IB.searchParams.toString() || void 0
           }
         } else void 0 === BB.port && (BB.port = BB.secure ? 443 : 80), void 0 === BB.pathname && (BB.pathname = ""), this.settings = BB;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new NB.HTTP(this, (null === jB || void 0 === jB ? void 0 : jB.headers) || {}), this.auth = new uB.Auth(this.http), this.urlBuilder = null === jB || void 0 === jB ? void 0 : jB.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (QB = null === (zB = null === window || void 0 === window ? void 0 : window.location) || void 0 === zB ? void 0 : zB.hostname) || void 0 === QB ? void 0 : QB.includes("discordsays.com")) && (this.urlBuilder = UB.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new vB.HTTP(this, (null === IB || void 0 === IB ? void 0 : IB.headers) || {}), this.auth = new kB.Auth(this.http), this.urlBuilder = null === IB || void 0 === IB ? void 0 : IB.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (TB = null === (ZB = null === window || void 0 === window ? void 0 : window.location) || void 0 === ZB ? void 0 : ZB.hostname) || void 0 === TB ? void 0 : TB.includes("discordsays.com")) && (this.urlBuilder = cB.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
       joinOrCreate(BB) {
-        return nB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            zB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", BB, jB, zB)
+        return JB.__awaiter(this, arguments, void 0, (function*(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZB = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", BB, IB, ZB)
         }))
       }
       create(BB) {
-        return nB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            zB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", BB, jB, zB)
+        return JB.__awaiter(this, arguments, void 0, (function*(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZB = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", BB, IB, ZB)
         }))
       }
       join(BB) {
-        return nB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            zB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", BB, jB, zB)
+        return JB.__awaiter(this, arguments, void 0, (function*(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZB = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", BB, IB, ZB)
         }))
       }
       joinById(BB) {
-        return nB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            zB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", BB, jB, zB)
+        return JB.__awaiter(this, arguments, void 0, (function*(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZB = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", BB, IB, ZB)
         }))
       }
-      reconnect(BB, jB) {
-        return nB.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof BB && "string" === typeof jB) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [zB, QB] = BB.split(":");
-          if (!zB || !QB) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", zB, {
-            reconnectionToken: QB
-          }, jB)
+      reconnect(BB, IB) {
+        return JB.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof BB && "string" === typeof IB) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [ZB, TB] = BB.split(":");
+          if (!ZB || !TB) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", ZB, {
+            reconnectionToken: TB
+          }, IB)
         }))
       }
-      consumeSeatReservation(BB, jB, zB) {
-        return nB.__awaiter(this, void 0, void 0, (function*() {
-          const QB = this.createRoom(BB.room.name, jB);
-          QB.roomId = BB.room.roomId, QB.sessionId = BB.sessionId;
-          const IB = {
-            sessionId: QB.sessionId
+      consumeSeatReservation(BB, IB, ZB) {
+        return JB.__awaiter(this, void 0, void 0, (function*() {
+          const TB = this.createRoom(BB.room.name, IB);
+          TB.roomId = BB.room.roomId, TB.sessionId = BB.sessionId;
+          const GB = {
+            sessionId: TB.sessionId
           };
-          BB.reconnectionToken && (IB.reconnectionToken = BB.reconnectionToken);
-          const NB = zB || QB;
-          return QB.connect(this.buildEndpoint(BB.room, IB, BB.protocol), BB.devMode && (() => nB.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${QB.roomId}'...`);
-            let zB = 0;
-            const dB = () => nB.__awaiter(this, void 0, void 0, (function*() {
-              zB++;
+          BB.reconnectionToken && (GB.reconnectionToken = BB.reconnectionToken);
+          const vB = ZB || TB;
+          return TB.connect(this.buildEndpoint(BB.room, GB, BB.protocol), BB.devMode && (() => JB.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${TB.roomId}'...`);
+            let ZB = 0;
+            const oB = () => JB.__awaiter(this, void 0, void 0, (function*() {
+              ZB++;
               try {
-                yield this.consumeSeatReservation(BB, jB, NB), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${QB.roomId}'`)
-              } catch (nB) {
-                zB < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${zB} out of 8)`), setTimeout(dB, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(BB, IB, vB), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${TB.roomId}'`)
+              } catch (JB) {
+                ZB < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${ZB} out of 8)`), setTimeout(oB, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(dB, 2e3)
-          }))), NB, BB, this.http.headers), new Promise(((BB, jB) => {
-            const zB = (BB, zB) => jB(new dB.ServerError(BB, zB));
-            NB.onError.once(zB), NB.onJoin.once((() => {
-              NB.onError.remove(zB), setTimeout((() => {
+            setTimeout(oB, 2e3)
+          }))), vB, BB, this.http.headers), new Promise(((BB, IB) => {
+            const ZB = (BB, ZB) => IB(new oB.ServerError(BB, ZB));
+            vB.onError.once(ZB), vB.onJoin.once((() => {
+              vB.onError.remove(ZB), setTimeout((() => {
                 try {
                   const BB = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
-                  BB && NB.lH(128, new Uint8Array(BB))
+                  BB && vB.lY(128, new Uint8Array(BB))
                 } catch {}
-              }), 3e3), BB(NB)
+              }), 3e3), BB(vB)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(BB, jB) {
-        return nB.__awaiter(this, arguments, void 0, (function*(BB, jB) {
-          let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            QB = arguments.length > 3 ? arguments[3] : void 0,
-            nB = arguments.length > 4 ? arguments[4] : void 0;
-          const dB = (yield this.http.post(`matchmake/${BB}/${jB}`, {
+      createMatchMakeRequest(BB, IB) {
+        return JB.__awaiter(this, arguments, void 0, (function*(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            TB = arguments.length > 3 ? arguments[3] : void 0,
+            JB = arguments.length > 4 ? arguments[4] : void 0;
+          const oB = (yield this.http.post(`matchmake/${BB}/${IB}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(zB)
+            body: JSON.stringify(ZB)
           })).data;
-          if (dB.error) throw new aB(dB.error, dB.code);
-          return "reconnect" === BB && (dB.reconnectionToken = zB.reconnectionToken), yield this.consumeSeatReservation(dB, QB, nB)
+          if (oB.error) throw new nB(oB.error, oB.code);
+          return "reconnect" === BB && (oB.reconnectionToken = ZB.reconnectionToken), yield this.consumeSeatReservation(oB, TB, JB)
         }))
       }
-      createRoom(BB, jB) {
-        return new IB.xp(BB, jB)
+      createRoom(BB, IB) {
+        return new GB.Dh(BB, IB)
       }
       buildEndpoint(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          QB = this.settings.searchParams || "";
-        this.http.authToken && (jB._authToken = this.http.authToken);
-        for (const IB in jB) jB.hasOwnProperty(IB) && (QB += (QB ? "&" : "") + `${IB}=${jB[IB]}`);
-        "h3" === zB && (zB = "http");
-        let nB = this.settings.secure ? `${zB}s://` : `${zB}://`;
-        BB.publicAddress ? nB += `${BB.publicAddress}` : nB += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const dB = `${nB}/${BB.processId}/${BB.roomId}?${QB}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(dB)) : dB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          TB = this.settings.searchParams || "";
+        this.http.authToken && (IB._authToken = this.http.authToken);
+        for (const GB in IB) IB.hasOwnProperty(GB) && (TB += (TB ? "&" : "") + `${GB}=${IB[GB]}`);
+        "h3" === ZB && (ZB = "http");
+        let JB = this.settings.secure ? `${ZB}s://` : `${ZB}://`;
+        BB.publicAddress ? JB += `${BB.publicAddress}` : JB += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const oB = `${JB}/${BB.processId}/${BB.roomId}?${TB}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(oB)) : oB
       }
       getHttpEndpoint() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const jB = BB.startsWith("/") ? BB : `/${BB}`;
-        let zB = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${jB}`;
-        return this.settings.searchParams && (zB += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(zB)) : zB
+        const IB = BB.startsWith("/") ? BB : `/${BB}`;
+        let ZB = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${IB}`;
+        return this.settings.searchParams && (ZB += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(ZB)) : ZB
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    rB.VERSION = "0.16.22", jB.Client = rB, jB.MatchMakeError = aB
+    zB.VERSION = "0.16.22", IB.Client = zB, IB.MatchMakeError = nB
   },
-  9145: (BB, jB, zB) => {
-    var QB = zB(9151),
-      nB = zB(9166);
-    jB.Connection = class {
+  9189: (BB, IB, ZB) => {
+    var TB = ZB(9194),
+      JB = ZB(9208);
+    IB.Connection = class {
       constructor(BB) {
-        if (this.events = {}, "h3" === BB) this.transport = new QB.H3TransportTransport(this.events);
-        else this.transport = new nB.WebSocketTransport(this.events)
+        if (this.events = {}, "h3" === BB) this.transport = new TB.H3TransportTransport(this.events);
+        else this.transport = new JB.WebSocketTransport(this.events)
       }
-      connect(BB, jB) {
-        this.transport.connect.call(this.transport, BB, jB)
+      connect(BB, IB) {
+        this.transport.connect.call(this.transport, BB, IB)
       }
       send(BB) {
         this.transport.send(BB)
@@ -292,62 +292,62 @@ export const modules = {
       sendUnreliable(BB) {
         this.transport.sendUnreliable(BB)
       }
-      close(BB, jB) {
-        this.transport.close(BB, jB)
+      close(BB, IB) {
+        this.transport.close(BB, IB)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9219: (BB, jB, zB) => {
-    var QB = zB(9132);
+  9248: (BB, IB, ZB) => {
+    var TB = ZB(9171);
 
-    function nB(BB) {
-      var jB = Object.create(null);
-      return BB && Object.keys(BB).forEach((function(zB) {
-        if ("default" !== zB) {
-          var QB = Object.getOwnPropertyDescriptor(BB, zB);
-          Object.defineProperty(jB, zB, QB.get ? QB : {
+    function JB(BB) {
+      var IB = Object.create(null);
+      return BB && Object.keys(BB).forEach((function(ZB) {
+        if ("default" !== ZB) {
+          var TB = Object.getOwnPropertyDescriptor(BB, ZB);
+          Object.defineProperty(IB, ZB, TB.get ? TB : {
             enumerable: !0,
             get: function() {
-              return BB[zB]
+              return BB[ZB]
             }
           })
         }
-      })), jB.default = BB, Object.freeze(jB)
+      })), IB.default = BB, Object.freeze(IB)
     }
-    var dB = nB(zB(9228));
-    jB.HTTP = class {
+    var oB = JB(ZB(9256));
+    IB.HTTP = class {
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = BB, this.headers = jB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = BB, this.headers = IB
       }
       get(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", BB, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", BB, IB)
       }
       post(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", BB, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", BB, IB)
       }
       del(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", BB, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", BB, IB)
       }
       put(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", BB, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", BB, IB)
       }
-      request(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return dB[BB](this.client.getHttpEndpoint(jB), this.getOptions(zB)).catch((BB => {
-          var jB;
-          if (BB.aborted) throw new QB.AbortError("Request aborted");
-          const zB = BB.statusCode,
-            nB = (null === (jB = BB.data) || void 0 === jB ? void 0 : jB.error) || BB.statusMessage || BB.message;
-          if (!zB && !nB) throw BB;
-          throw new QB.ServerError(zB, nB)
+      request(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return oB[BB](this.client.getHttpEndpoint(IB), this.getOptions(ZB)).catch((BB => {
+          var IB;
+          if (BB.aborted) throw new TB.AbortError("Request aborted");
+          const ZB = BB.statusCode,
+            JB = (null === (IB = BB.data) || void 0 === IB ? void 0 : IB.error) || BB.statusMessage || BB.message;
+          if (!ZB && !JB) throw BB;
+          throw new TB.ServerError(ZB, JB)
         }))
       }
       getOptions(BB) {
@@ -355,123 +355,123 @@ export const modules = {
       }
     }
   },
-  9177: (BB, jB) => {
-    var zB, QB;
-    jB.Protocol = void 0, (zB = jB.Protocol || (jB.Protocol = {}))[zB.HANDSHAKE = 9] = "HANDSHAKE", zB[zB.JOIN_ROOM = 10] = "JOIN_ROOM", zB[zB.ERROR = 11] = "ERROR", zB[zB.LEAVE_ROOM = 12] = "LEAVE_ROOM", zB[zB.ROOM_DATA = 13] = "ROOM_DATA", zB[zB.ROOM_STATE = 14] = "ROOM_STATE", zB[zB.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", zB[zB.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", zB[zB.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", jB.ErrorCode = void 0, (QB = jB.ErrorCode || (jB.ErrorCode = {}))[QB.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", QB[QB.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", QB[QB.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", QB[QB.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", QB[QB.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", QB[QB.AUTH_FAILED = 4215] = "AUTH_FAILED", QB[QB.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9215: (BB, IB) => {
+    var ZB, TB;
+    IB.Protocol = void 0, (ZB = IB.Protocol || (IB.Protocol = {}))[ZB.HANDSHAKE = 9] = "HANDSHAKE", ZB[ZB.JOIN_ROOM = 10] = "JOIN_ROOM", ZB[ZB.ERROR = 11] = "ERROR", ZB[ZB.LEAVE_ROOM = 12] = "LEAVE_ROOM", ZB[ZB.ROOM_DATA = 13] = "ROOM_DATA", ZB[ZB.ROOM_STATE = 14] = "ROOM_STATE", ZB[ZB.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", ZB[ZB.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", ZB[ZB.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", IB.ErrorCode = void 0, (TB = IB.ErrorCode || (IB.ErrorCode = {}))[TB.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", TB[TB.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", TB[TB.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", TB[TB.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", TB[TB.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", TB[TB.AUTH_FAILED = 4215] = "AUTH_FAILED", TB[TB.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9138: (BB, jB, zB) => {
-    var QB = zB(9145),
-      nB = zB(9177),
-      dB = zB(9186),
-      IB = zB(9194),
-      NB = zB(9203),
-      uB = zB(9159),
-      UB = zB(9210),
-      aB = zB(9132),
-      pB = zB(9213);
-    class rB {
-      constructor(BB, jB) {
-        this.onStateChange = NB.createSignal(), this.onError = NB.createSignal(), this.WG = NB.createSignal(), this.onJoin = NB.createSignal(), this.hasJoined = !1, this.onMessageHandlers = IB.createNanoEvents(), this.roomId = null, this.name = BB, this.packr = new pB.Packr, this.packr.encode(void 0), jB && (this.Rk = new(dB.getSerializer("schema")), this.rootSchema = jB, this.Rk.state = new jB), this.onError(((BB, jB) => {
-          var zB;
-          return null === (zB = console.warn) || void 0 === zB ? void 0 : zB.call(console, `colyseus.js - onError => (${BB}) ${jB}`)
-        })), this.WG((() => this.Wk()))
+  9180: (BB, IB, ZB) => {
+    var TB = ZB(9189),
+      JB = ZB(9215),
+      oB = ZB(9223),
+      GB = ZB(9225),
+      vB = ZB(9234),
+      kB = ZB(9201),
+      cB = ZB(9238),
+      nB = ZB(9171),
+      hB = ZB(9245);
+    class zB {
+      constructor(BB, IB) {
+        this.onStateChange = vB.createSignal(), this.onError = vB.createSignal(), this.KU = vB.createSignal(), this.onJoin = vB.createSignal(), this.hasJoined = !1, this.onMessageHandlers = GB.createNanoEvents(), this.roomId = null, this.name = BB, this.packr = new hB.Packr, this.packr.encode(void 0), IB && (this.Py = new(oB.getSerializer("schema")), this.rootSchema = IB, this.Py.state = new IB), this.onError(((BB, IB) => {
+          var ZB;
+          return null === (ZB = console.warn) || void 0 === ZB ? void 0 : ZB.call(console, `colyseus.js - onError => (${BB}) ${IB}`)
+        })), this.KU((() => this.jy()))
       }
-      connect(BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          nB = arguments.length > 3 ? arguments[3] : void 0,
-          dB = arguments.length > 4 ? arguments[4] : void 0;
-        const IB = new QB.Connection(nB.protocol);
-        if (zB.connection = IB, IB.events.onmessage = rB.prototype.onMessageCallback.bind(zB), IB.events.onclose = function(BB) {
-            var QB;
-            if (!zB.hasJoined) return null === (QB = console.warn) || void 0 === QB || QB.call(console, `Room connection was closed unexpectedly (${BB.code}): ${BB.reason}`), void zB.onError.invoke(BB.code, BB.reason);
-            BB.code === aB.CloseCode.DEVMODE_RESTART && jB ? jB() : (zB.WG.invoke(BB.code, BB.reason), zB.destroy())
-          }, IB.events.onerror = function(BB) {
-            var jB;
-            null === (jB = console.warn) || void 0 === jB || jB.call(console, `Room, onError (${BB.code}): ${BB.reason}`), zB.onError.invoke(BB.code, BB.reason)
-          }, "h3" === nB.protocol) {
-          const jB = new URL(BB);
-          IB.connect(jB.origin, nB)
-        } else IB.connect(BB, dB)
+      connect(BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          JB = arguments.length > 3 ? arguments[3] : void 0,
+          oB = arguments.length > 4 ? arguments[4] : void 0;
+        const GB = new TB.Connection(JB.protocol);
+        if (ZB.connection = GB, GB.events.onmessage = zB.prototype.onMessageCallback.bind(ZB), GB.events.onclose = function(BB) {
+            var TB;
+            if (!ZB.hasJoined) return null === (TB = console.warn) || void 0 === TB || TB.call(console, `Room connection was closed unexpectedly (${BB.code}): ${BB.reason}`), void ZB.onError.invoke(BB.code, BB.reason);
+            BB.code === nB.CloseCode.DEVMODE_RESTART && IB ? IB() : (ZB.KU.invoke(BB.code, BB.reason), ZB.destroy())
+          }, GB.events.onerror = function(BB) {
+            var IB;
+            null === (IB = console.warn) || void 0 === IB || IB.call(console, `Room, onError (${BB.code}): ${BB.reason}`), ZB.onError.invoke(BB.code, BB.reason)
+          }, "h3" === JB.protocol) {
+          const IB = new URL(BB);
+          GB.connect(IB.origin, JB)
+        } else GB.connect(BB, oB)
       }
       leave() {
         let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((jB => {
-          this.WG((BB => jB(BB))), this.connection ? BB ? (this.packr.buffer[0] = nB.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.WG.invoke(aB.CloseCode.CONSENTED)
+        return new Promise((IB => {
+          this.KU((BB => IB(BB))), this.connection ? BB ? (this.packr.buffer[0] = JB.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.KU.invoke(nB.CloseCode.CONSENTED)
         }))
       }
-      hG(BB, jB) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(BB), jB)
+      rU(BB, IB) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(BB), IB)
       }
-      send(BB, jB) {
-        const zB = {
+      send(BB, IB) {
+        const ZB = {
           offset: 1
         };
-        this.packr.buffer[0] = nB.Protocol.ROOM_DATA, "string" === typeof BB ? uB.encode.string(this.packr.buffer, BB, zB) : uB.encode.number(this.packr.buffer, BB, zB), this.packr.position = 0;
-        const QB = void 0 !== jB ? this.packr.pack(jB, 2048 + zB.offset) : this.packr.buffer.subarray(0, zB.offset);
-        this.connection.send(QB)
+        this.packr.buffer[0] = JB.Protocol.ROOM_DATA, "string" === typeof BB ? kB.encode.string(this.packr.buffer, BB, ZB) : kB.encode.number(this.packr.buffer, BB, ZB), this.packr.position = 0;
+        const TB = void 0 !== IB ? this.packr.pack(IB, 2048 + ZB.offset) : this.packr.buffer.subarray(0, ZB.offset);
+        this.connection.send(TB)
       }
-      sendUnreliable(BB, jB) {
-        const zB = {
+      sendUnreliable(BB, IB) {
+        const ZB = {
           offset: 1
         };
-        this.packr.buffer[0] = nB.Protocol.ROOM_DATA, "string" === typeof BB ? uB.encode.string(this.packr.buffer, BB, zB) : uB.encode.number(this.packr.buffer, BB, zB), this.packr.position = 0;
-        const QB = void 0 !== jB ? this.packr.pack(jB, 2048 + zB.offset) : this.packr.buffer.subarray(0, zB.offset);
-        this.connection.sendUnreliable(QB)
+        this.packr.buffer[0] = JB.Protocol.ROOM_DATA, "string" === typeof BB ? kB.encode.string(this.packr.buffer, BB, ZB) : kB.encode.number(this.packr.buffer, BB, ZB), this.packr.position = 0;
+        const TB = void 0 !== IB ? this.packr.pack(IB, 2048 + ZB.offset) : this.packr.buffer.subarray(0, ZB.offset);
+        this.connection.sendUnreliable(TB)
       }
-      lH(BB, jB) {
-        const zB = {
+      lY(BB, IB) {
+        const ZB = {
           offset: 1
         };
-        if (this.packr.buffer[0] = nB.Protocol.ROOM_DATA_BYTES, "string" === typeof BB ? uB.encode.string(this.packr.buffer, BB, zB) : uB.encode.number(this.packr.buffer, BB, zB), jB.byteLength + zB.offset > this.packr.buffer.byteLength) {
-          const BB = new Uint8Array(zB.offset + jB.byteLength);
+        if (this.packr.buffer[0] = JB.Protocol.ROOM_DATA_BYTES, "string" === typeof BB ? kB.encode.string(this.packr.buffer, BB, ZB) : kB.encode.number(this.packr.buffer, BB, ZB), IB.byteLength + ZB.offset > this.packr.buffer.byteLength) {
+          const BB = new Uint8Array(ZB.offset + IB.byteLength);
           BB.set(this.packr.buffer), this.packr.useBuffer(BB)
         }
-        this.packr.buffer.set(jB, zB.offset), this.connection.send(this.packr.buffer.subarray(0, zB.offset + jB.byteLength))
+        this.packr.buffer.set(IB, ZB.offset), this.connection.send(this.packr.buffer.subarray(0, ZB.offset + IB.byteLength))
       }
       get state() {
-        return this.Rk.getState()
+        return this.Py.getState()
       }
-      Wk() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.WG.clear(), this.onMessageHandlers.events = {}, this.Rk instanceof UB.jF && (this.Rk.GJ.root.callbacks = {})
+      jy() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.KU.clear(), this.onMessageHandlers.events = {}, this.Py instanceof cB.jH && (this.Py.kN.root.callbacks = {})
       }
       onMessageCallback(BB) {
-        const jB = new Uint8Array(BB.data),
-          zB = {
+        const IB = new Uint8Array(BB.data),
+          ZB = {
             offset: 1
           },
-          QB = jB[0];
-        if (QB === nB.Protocol.JOIN_ROOM) {
-          const BB = uB.decode.utf8Read(jB, zB, jB[zB.offset++]);
-          if (this.serializerId = uB.decode.utf8Read(jB, zB, jB[zB.offset++]), !this.Rk) {
-            const BB = dB.getSerializer(this.serializerId);
-            this.Rk = new BB
+          TB = IB[0];
+        if (TB === JB.Protocol.JOIN_ROOM) {
+          const BB = kB.decode.utf8Read(IB, ZB, IB[ZB.offset++]);
+          if (this.serializerId = kB.decode.utf8Read(IB, ZB, IB[ZB.offset++]), !this.Py) {
+            const BB = oB.getSerializer(this.serializerId);
+            this.Py = new BB
           }
-          jB.byteLength > zB.offset && this.Rk.handshake && this.Rk.handshake(jB, zB), this.reconnectionToken = `${this.roomId}:${BB}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = nB.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (QB === nB.Protocol.ERROR) {
-          const BB = uB.decode.number(jB, zB),
-            QB = uB.decode.string(jB, zB);
-          this.onError.invoke(BB, QB)
-        } else if (QB === nB.Protocol.LEAVE_ROOM) this.leave();
-        else if (QB === nB.Protocol.ROOM_STATE) this.Rk.setState(jB, zB), this.onStateChange.invoke(this.Rk.getState());
-        else if (QB === nB.Protocol.ROOM_STATE_PATCH) this.Rk.patch(jB, zB), this.onStateChange.invoke(this.Rk.getState());
-        else if (QB === nB.Protocol.ROOM_DATA) {
-          const BB = uB.decode.stringCheck(jB, zB) ? uB.decode.string(jB, zB) : uB.decode.number(jB, zB),
-            QB = jB.byteLength > zB.offset ? pB.unpack(jB, {
-              start: zB.offset
+          IB.byteLength > ZB.offset && this.Py.handshake && this.Py.handshake(IB, ZB), this.reconnectionToken = `${this.roomId}:${BB}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = JB.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (TB === JB.Protocol.ERROR) {
+          const BB = kB.decode.number(IB, ZB),
+            TB = kB.decode.string(IB, ZB);
+          this.onError.invoke(BB, TB)
+        } else if (TB === JB.Protocol.LEAVE_ROOM) this.leave();
+        else if (TB === JB.Protocol.ROOM_STATE) this.Py.setState(IB, ZB), this.onStateChange.invoke(this.Py.getState());
+        else if (TB === JB.Protocol.ROOM_STATE_PATCH) this.Py.patch(IB, ZB), this.onStateChange.invoke(this.Py.getState());
+        else if (TB === JB.Protocol.ROOM_DATA) {
+          const BB = kB.decode.stringCheck(IB, ZB) ? kB.decode.string(IB, ZB) : kB.decode.number(IB, ZB),
+            TB = IB.byteLength > ZB.offset ? hB.unpack(IB, {
+              start: ZB.offset
             }) : void 0;
-          this.dispatchMessage(BB, QB)
-        } else if (QB === nB.Protocol.ROOM_DATA_BYTES) {
-          const BB = uB.decode.stringCheck(jB, zB) ? uB.decode.string(jB, zB) : uB.decode.number(jB, zB);
-          this.dispatchMessage(BB, jB.subarray(zB.offset))
+          this.dispatchMessage(BB, TB)
+        } else if (TB === JB.Protocol.ROOM_DATA_BYTES) {
+          const BB = kB.decode.stringCheck(IB, ZB) ? kB.decode.string(IB, ZB) : kB.decode.number(IB, ZB);
+          this.dispatchMessage(BB, IB.subarray(ZB.offset))
         }
       }
-      dispatchMessage(BB, jB) {
-        var zB;
-        const QB = this.getMessageHandlerKey(BB);
-        this.onMessageHandlers.events[QB] ? this.onMessageHandlers.emit(QB, jB) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", BB, jB) : null === (zB = console.warn) || void 0 === zB || zB.call(console, `colyseus.js: onMessage() not registered for type '${BB}'.`)
+      dispatchMessage(BB, IB) {
+        var ZB;
+        const TB = this.getMessageHandlerKey(BB);
+        this.onMessageHandlers.events[TB] ? this.onMessageHandlers.emit(TB, IB) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", BB, IB) : null === (ZB = console.warn) || void 0 === ZB || ZB.call(console, `colyseus.js: onMessage() not registered for type '${BB}'.`)
       }
       destroy() {
-        this.Rk && this.Rk.teardown()
+        this.Py && this.Py.teardown()
       }
       getMessageHandlerKey(BB) {
         switch (typeof BB) {
@@ -484,20 +484,20 @@ export const modules = {
         }
       }
     }
-    jB.xp = rB
+    IB.Dh = zB
   },
-  9240: (BB, jB, zB) => {
-    var QB = zB(9129);
-    let nB;
+  9266: (BB, IB, ZB) => {
+    var TB = ZB(9167);
+    let JB;
 
-    function dB() {
-      if (!nB) try {
-        nB = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+    function oB() {
+      if (!JB) try {
+        JB = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
       } catch (BB) {}
-      return nB || "undefined" === typeof globalThis.indexedDB || (nB = new IB), nB || (nB = {
+      return JB || "undefined" === typeof globalThis.indexedDB || (JB = new GB), JB || (JB = {
         cache: {},
-        setItem: function(BB, jB) {
-          this.cache[BB] = jB
+        setItem: function(BB, IB) {
+          this.cache[BB] = IB
         },
         getItem: function(BB) {
           this.cache[BB]
@@ -505,64 +505,64 @@ export const modules = {
         removeItem: function(BB) {
           delete this.cache[BB]
         }
-      }), nB
+      }), JB
     }
-    class IB {
+    class GB {
       constructor() {
         this.dbPromise = new Promise((BB => {
-          const jB = indexedDB.open("_colyseus_storage", 1);
-          jB.onupgradeneeded = () => jB.result.createObjectStore("store"), jB.onsuccess = () => BB(jB.result)
+          const IB = indexedDB.open("_colyseus_storage", 1);
+          IB.onupgradeneeded = () => IB.result.createObjectStore("store"), IB.onsuccess = () => BB(IB.result)
         }))
       }
-      tx(BB, jB) {
-        return QB.__awaiter(this, void 0, void 0, (function*() {
-          const zB = (yield this.dbPromise).transaction("store", BB).objectStore("store");
-          return jB(zB)
+      tx(BB, IB) {
+        return TB.__awaiter(this, void 0, void 0, (function*() {
+          const ZB = (yield this.dbPromise).transaction("store", BB).objectStore("store");
+          return IB(ZB)
         }))
       }
-      setItem(BB, jB) {
-        return this.tx("readwrite", (zB => zB.put(jB, BB))).then()
+      setItem(BB, IB) {
+        return this.tx("readwrite", (ZB => ZB.put(IB, BB))).then()
       }
       getItem(BB) {
-        return QB.__awaiter(this, void 0, void 0, (function*() {
-          const jB = yield this.tx("readonly", (jB => jB.get(BB)));
+        return TB.__awaiter(this, void 0, void 0, (function*() {
+          const IB = yield this.tx("readonly", (IB => IB.get(BB)));
           return new Promise((BB => {
-            jB.onsuccess = () => BB(jB.result)
+            IB.onsuccess = () => BB(IB.result)
           }))
         }))
       }
       removeItem(BB) {
-        return this.tx("readwrite", (jB => jB.delete(BB))).then()
+        return this.tx("readwrite", (IB => IB.delete(BB))).then()
       }
     }
-    jB.getItem = function(BB, jB) {
-      const zB = dB().getItem(BB);
-      "undefined" !== typeof Promise && zB instanceof Promise ? zB.then((BB => jB(BB))) : jB(zB)
-    }, jB.removeItem = function(BB) {
-      dB().removeItem(BB)
-    }, jB.setItem = function(BB, jB) {
-      dB().setItem(BB, jB)
+    IB.getItem = function(BB, IB) {
+      const ZB = oB().getItem(BB);
+      "undefined" !== typeof Promise && ZB instanceof Promise ? ZB.then((BB => IB(BB))) : IB(ZB)
+    }, IB.removeItem = function(BB) {
+      oB().removeItem(BB)
+    }, IB.setItem = function(BB, IB) {
+      oB().setItem(BB, IB)
     }
   },
-  9194: (BB, jB) => {
-    jB.createNanoEvents = () => ({
+  9225: (BB, IB) => {
+    IB.createNanoEvents = () => ({
       emit(BB) {
-        let jB = this.events[BB] || [];
-        for (var zB = arguments.length, QB = new Array(zB > 1 ? zB - 1 : 0), nB = 1; nB < zB; nB++) QB[nB - 1] = arguments[nB];
-        for (let dB = 0, IB = jB.length; dB < IB; dB++) jB[dB](...QB)
+        let IB = this.events[BB] || [];
+        for (var ZB = arguments.length, TB = new Array(ZB > 1 ? ZB - 1 : 0), JB = 1; JB < ZB; JB++) TB[JB - 1] = arguments[JB];
+        for (let oB = 0, GB = IB.length; oB < GB; oB++) IB[oB](...TB)
       },
       events: {},
-      on(BB, jB) {
-        var zB;
-        return (null === (zB = this.events[BB]) || void 0 === zB ? void 0 : zB.push(jB)) || (this.events[BB] = [jB]), () => {
-          var zB;
-          this.events[BB] = null === (zB = this.events[BB]) || void 0 === zB ? void 0 : zB.filter((BB => jB !== BB))
+      on(BB, IB) {
+        var ZB;
+        return (null === (ZB = this.events[BB]) || void 0 === ZB ? void 0 : ZB.push(IB)) || (this.events[BB] = [IB]), () => {
+          var ZB;
+          this.events[BB] = null === (ZB = this.events[BB]) || void 0 === ZB ? void 0 : ZB.filter((BB => IB !== BB))
         }
       }
     })
   },
-  9203: (BB, jB) => {
-    class zB {
+  9234: (BB, IB) => {
+    class ZB {
       constructor() {
         this.handlers = []
       }
@@ -570,82 +570,82 @@ export const modules = {
         return this.handlers.push(BB), this
       }
       invoke() {
-        for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-        this.handlers.forEach((BB => BB.apply(this, jB)))
+        for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+        this.handlers.forEach((BB => BB.apply(this, IB)))
       }
       invokeAsync() {
-        for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-        return Promise.all(this.handlers.map((BB => BB.apply(this, jB))))
+        for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+        return Promise.all(this.handlers.map((BB => BB.apply(this, IB))))
       }
       remove(BB) {
-        const jB = this.handlers.indexOf(BB);
-        this.handlers[jB] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+        const IB = this.handlers.indexOf(BB);
+        this.handlers[IB] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    jB.EventEmitter = zB, jB.createSignal = function() {
-      const BB = new zB;
+    IB.EventEmitter = ZB, IB.createSignal = function() {
+      const BB = new ZB;
 
-      function jB(jB) {
-        return BB.register(jB, null === this)
+      function IB(IB) {
+        return BB.register(IB, null === this)
       }
-      return jB.once = jB => {
-        const zB = function() {
-          for (var QB = arguments.length, nB = new Array(QB), dB = 0; dB < QB; dB++) nB[dB] = arguments[dB];
-          jB.apply(this, nB), BB.remove(zB)
+      return IB.once = IB => {
+        const ZB = function() {
+          for (var TB = arguments.length, JB = new Array(TB), oB = 0; oB < TB; oB++) JB[oB] = arguments[oB];
+          IB.apply(this, JB), BB.remove(ZB)
         };
-        BB.register(zB)
-      }, jB.remove = jB => BB.remove(jB), jB.invoke = function() {
+        BB.register(ZB)
+      }, IB.remove = IB => BB.remove(IB), IB.invoke = function() {
         return BB.invoke(...arguments)
-      }, jB.invokeAsync = function() {
+      }, IB.invokeAsync = function() {
         return BB.invokeAsync(...arguments)
-      }, jB.clear = () => BB.clear(), jB
+      }, IB.clear = () => BB.clear(), IB
     }
   },
-  9132: (BB, jB) => {
-    var zB;
-    jB.CloseCode = void 0, (zB = jB.CloseCode || (jB.CloseCode = {}))[zB.CONSENTED = 4e3] = "CONSENTED", zB[zB.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class QB extends Error {
-      constructor(BB, jB) {
-        super(jB), this.name = "ServerError", this.code = BB
+  9171: (BB, IB) => {
+    var ZB;
+    IB.CloseCode = void 0, (ZB = IB.CloseCode || (IB.CloseCode = {}))[ZB.CONSENTED = 4e3] = "CONSENTED", ZB[ZB.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class TB extends Error {
+      constructor(BB, IB) {
+        super(IB), this.name = "ServerError", this.code = BB
       }
     }
-    class nB extends Error {
+    class JB extends Error {
       constructor(BB) {
         super(BB), this.name = "AbortError"
       }
     }
-    jB.AbortError = nB, jB.ServerError = QB
+    IB.AbortError = JB, IB.ServerError = TB
   },
-  9109: (BB, jB, zB) => {
-    zB(9117);
-    var QB = zB(9126),
-      nB = zB(9177),
-      dB = zB(9138),
-      IB = zB(9233),
-      NB = zB(9132),
-      uB = zB(9210),
-      UB = zB(9250),
-      aB = zB(9186);
-    aB.registerSerializer("schema", uB.jF), aB.registerSerializer("none", UB.NoneSerializer), jB.Client = QB.Client, jB.MatchMakeError = QB.MatchMakeError, Object.defineProperty(jB, "ErrorCode", {
+  9155: (BB, IB, ZB) => {
+    ZB(9159);
+    var TB = ZB(9165),
+      JB = ZB(9215),
+      oB = ZB(9180),
+      GB = ZB(9259),
+      vB = ZB(9171),
+      kB = ZB(9238),
+      cB = ZB(9284),
+      nB = ZB(9223);
+    nB.registerSerializer("schema", kB.jH), nB.registerSerializer("none", cB.NoneSerializer), IB.Client = TB.Client, IB.MatchMakeError = TB.MatchMakeError, Object.defineProperty(IB, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return nB.ErrorCode
+        return JB.ErrorCode
       }
-    }), Object.defineProperty(jB, "Protocol", {
+    }), Object.defineProperty(IB, "Protocol", {
       enumerable: !0,
       get: function() {
-        return nB.Protocol
+        return JB.Protocol
       }
-    }), jB.xp = dB.xp, jB.Auth = IB.Auth, jB.ServerError = NB.ServerError, jB.jF = uB.jF, jB.getStateCallbacks = uB.getStateCallbacks, jB.registerSerializer = aB.registerSerializer
+    }), IB.Dh = oB.Dh, IB.Auth = GB.Auth, IB.ServerError = vB.ServerError, IB.jH = kB.jH, IB.getStateCallbacks = kB.getStateCallbacks, IB.registerSerializer = nB.registerSerializer
   },
-  9117: () => {
+  9159: () => {
     ArrayBuffer.isView || (ArrayBuffer.isView = BB => null !== BB && "object" === typeof BB && BB.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9250: (BB, jB) => {
-    jB.NoneSerializer = class {
+  9284: (BB, IB) => {
+    IB.NoneSerializer = class {
       setState(BB) {}
       getState() {
         return null
@@ -655,61 +655,61 @@ export const modules = {
       handshake(BB) {}
     }
   },
-  9210: (BB, jB, zB) => {
-    var QB = zB(9159);
-    jB.jF = class {
-      setState(BB, jB) {
-        this.GJ.decode(BB, jB)
+  9238: (BB, IB, ZB) => {
+    var TB = ZB(9201);
+    IB.jH = class {
+      setState(BB, IB) {
+        this.kN.decode(BB, IB)
       }
       getState() {
         return this.state
       }
-      patch(BB, jB) {
-        return this.GJ.decode(BB, jB)
+      patch(BB, IB) {
+        return this.kN.decode(BB, IB)
       }
       teardown() {
-        this.GJ.root.clearRefs()
+        this.kN.root.clearRefs()
       }
-      handshake(BB, jB) {
-        this.state ? (QB.Reflection.decode(BB, jB), this.GJ = new QB.Decoder(this.state)) : (this.GJ = QB.Reflection.decode(BB, jB), this.state = this.GJ.state)
+      handshake(BB, IB) {
+        this.state ? (TB.Reflection.decode(BB, IB), this.kN = new TB.Decoder(this.state)) : (this.kN = TB.Reflection.decode(BB, IB), this.state = this.kN.state)
       }
-    }, jB.getStateCallbacks = function(BB) {
+    }, IB.getStateCallbacks = function(BB) {
       try {
-        return QB.getDecoderStateCallbacks(BB.Rk.GJ)
-      } catch (jB) {
+        return TB.getDecoderStateCallbacks(BB.Py.kN)
+      } catch (IB) {
         return
       }
     }
   },
-  9186: (BB, jB) => {
-    const zB = {};
-    jB.getSerializer = function(BB) {
-      const jB = zB[BB];
-      if (!jB) throw new Error("missing serializer: " + BB);
-      return jB
-    }, jB.registerSerializer = function(BB, jB) {
-      zB[BB] = jB
+  9223: (BB, IB) => {
+    const ZB = {};
+    IB.getSerializer = function(BB) {
+      const IB = ZB[BB];
+      if (!IB) throw new Error("missing serializer: " + BB);
+      return IB
+    }, IB.registerSerializer = function(BB, IB) {
+      ZB[BB] = IB
     }
   },
-  9151: (BB, jB, zB) => {
-    var QB = zB(9129),
-      nB = zB(9159);
-    jB.H3TransportTransport = class {
+  9194: (BB, IB, ZB) => {
+    var TB = ZB(9167),
+      JB = ZB(9201);
+    IB.H3TransportTransport = class {
       constructor(BB) {
         this.events = BB, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
       connect(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const zB = jB.fingerprint && {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZB = IB.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(jB.fingerprint).buffer
+            value: new Uint8Array(IB.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(BB, zB), this.wt.ready.then((BB => {
+        this.wt = new WebTransport(BB, ZB), this.wt.ready.then((BB => {
           console.log("WebTransport ready!", BB), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
           this.wt.incomingBidirectionalStreams.getReader().read().then((BB => {
-            this.reader = BB.value.readable.getReader(), this.writer = BB.value.writable.getWriter(), this.sendSeatReservation(jB.room.roomId, jB.sessionId, jB.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+            this.reader = BB.value.readable.getReader(), this.writer = BB.value.writable.getWriter(), this.sendSeatReservation(IB.room.roomId, IB.sessionId, IB.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
           })).catch((BB => {
             console.error("failed to read incoming stream", BB), console.error("TODO: close the connection")
           }))
@@ -730,47 +730,47 @@ export const modules = {
         }))
       }
       send(BB) {
-        const jB = nB.encode.number(this.lengthPrefixBuffer, BB.length, {
+        const IB = JB.encode.number(this.lengthPrefixBuffer, BB.length, {
             offset: 0
           }),
-          zB = new Uint8Array(jB + BB.length);
-        zB.set(this.lengthPrefixBuffer.subarray(0, jB), 0), zB.set(BB, jB), this.writer.write(zB)
+          ZB = new Uint8Array(IB + BB.length);
+        ZB.set(this.lengthPrefixBuffer.subarray(0, IB), 0), ZB.set(BB, IB), this.writer.write(ZB)
       }
       sendUnreliable(BB) {
-        const jB = nB.encode.number(this.lengthPrefixBuffer, BB.length, {
+        const IB = JB.encode.number(this.lengthPrefixBuffer, BB.length, {
             offset: 0
           }),
-          zB = new Uint8Array(jB + BB.length);
-        zB.set(this.lengthPrefixBuffer.subarray(0, jB), 0), zB.set(BB, jB), this.unreliableWriter.write(zB)
+          ZB = new Uint8Array(IB + BB.length);
+        ZB.set(this.lengthPrefixBuffer.subarray(0, IB), 0), ZB.set(BB, IB), this.unreliableWriter.write(ZB)
       }
-      close(BB, jB) {
+      close(BB, IB) {
         try {
           this.wt.close({
             closeCode: BB,
-            reason: jB
+            reason: IB
           })
-        } catch (zB) {
-          console.error(zB)
+        } catch (ZB) {
+          console.error(ZB)
         }
       }
       readIncomingData() {
-        return QB.__awaiter(this, void 0, void 0, (function*() {
+        return TB.__awaiter(this, void 0, void 0, (function*() {
           let BB;
           for (; this.isOpen;) {
             try {
               BB = yield this.reader.read();
-              const jB = BB.value,
-                zB = {
+              const IB = BB.value,
+                ZB = {
                   offset: 0
                 };
               do {
-                const BB = nB.decode.number(jB, zB);
+                const BB = JB.decode.number(IB, ZB);
                 this.events.onmessage({
-                  data: jB.subarray(zB.offset, zB.offset + BB)
-                }), zB.offset += BB
-              } while (zB.offset < jB.length)
-            } catch (jB) {
-              -1 === jB.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", jB);
+                  data: IB.subarray(ZB.offset, ZB.offset + BB)
+                }), ZB.offset += BB
+              } while (ZB.offset < IB.length)
+            } catch (IB) {
+              -1 === IB.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", IB);
               break
             }
             if (BB.done) break
@@ -778,45 +778,45 @@ export const modules = {
         }))
       }
       readIncomingUnreliableData() {
-        return QB.__awaiter(this, void 0, void 0, (function*() {
+        return TB.__awaiter(this, void 0, void 0, (function*() {
           let BB;
           for (; this.isOpen;) {
             try {
               BB = yield this.unreliableReader.read();
-              const jB = BB.value,
-                zB = {
+              const IB = BB.value,
+                ZB = {
                   offset: 0
                 };
               do {
-                const BB = nB.decode.number(jB, zB);
+                const BB = JB.decode.number(IB, ZB);
                 this.events.onmessage({
-                  data: jB.subarray(zB.offset, zB.offset + BB)
-                }), zB.offset += BB
-              } while (zB.offset < jB.length)
-            } catch (jB) {
-              -1 === jB.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", jB);
+                  data: IB.subarray(ZB.offset, ZB.offset + BB)
+                }), ZB.offset += BB
+              } while (ZB.offset < IB.length)
+            } catch (IB) {
+              -1 === IB.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", IB);
               break
             }
             if (BB.done) break
           }
         }))
       }
-      sendSeatReservation(BB, jB, zB) {
-        const QB = {
+      sendSeatReservation(BB, IB, ZB) {
+        const TB = {
             offset: 0
           },
-          dB = [];
-        nB.encode.string(dB, BB, QB), nB.encode.string(dB, jB, QB), zB && nB.encode.string(dB, zB, QB), this.writer.write(new Uint8Array(dB).buffer)
+          oB = [];
+        JB.encode.string(oB, BB, TB), JB.encode.string(oB, IB, TB), ZB && JB.encode.string(oB, ZB, TB), this.writer.write(new Uint8Array(oB).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9166: (BB, jB, zB) => {
-    var QB = zB(9172);
-    const nB = globalThis.WebSocket || QB;
-    jB.WebSocketTransport = class {
+  9208: (BB, IB, ZB) => {
+    var TB = ZB(9210);
+    const JB = globalThis.WebSocket || TB;
+    IB.WebSocketTransport = class {
       constructor(BB) {
         this.events = BB
       }
@@ -826,330 +826,330 @@ export const modules = {
       sendUnreliable(BB) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(BB, jB) {
+      connect(BB, IB) {
         try {
-          this.ws = new nB(BB, {
-            headers: jB,
+          this.ws = new JB(BB, {
+            headers: IB,
             protocols: this.protocols
           })
-        } catch (zB) {
-          this.ws = new nB(BB, this.protocols)
+        } catch (ZB) {
+          this.ws = new JB(BB, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(BB, jB) {
-        this.ws.close(BB, jB)
+      close(BB, IB) {
+        this.ws.close(BB, IB)
       }
       get isOpen() {
-        return this.ws.readyState === nB.OPEN
+        return this.ws.readyState === JB.OPEN
       }
     }
   },
-  9172: BB => {
+  9210: BB => {
     BB.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9228: (BB, jB, zB) => {
-    function QB(BB, jB) {
-      jB.headers = BB.headers || {}, jB.statusMessage = BB.statusText, jB.statusCode = BB.status, jB.data = BB.response
+  9256: (BB, IB, ZB) => {
+    function TB(BB, IB) {
+      IB.headers = BB.headers || {}, IB.statusMessage = BB.statusText, IB.statusCode = BB.status, IB.data = BB.response
     }
 
-    function nB(BB, jB, zB) {
-      return new Promise((function(nB, dB) {
-        zB = zB || {};
-        var IB, NB, uB, UB = new XMLHttpRequest,
-          aB = zB.body,
-          pB = zB.headers || {};
-        for (IB in zB.timeout && (UB.timeout = zB.timeout), UB.ontimeout = UB.onerror = function(BB) {
-            BB.timeout = "timeout" == BB.type, dB(BB)
-          }, UB.onabort = function(BB) {
-            BB.aborted = !0, dB(BB)
-          }, UB.open(BB, jB.href || jB), UB.onload = function() {
-            for (uB = UB.getAllResponseHeaders().trim().split(/[\r\n]+/), QB(UB, UB); NB = uB.shift();) NB = NB.split(": "), UB.headers[NB.shift().toLowerCase()] = NB.join(": ");
-            if ((NB = UB.headers["content-type"]) && ~NB.indexOf("application/json")) try {
-              UB.data = JSON.parse(UB.data, zB.reviver)
+    function JB(BB, IB, ZB) {
+      return new Promise((function(JB, oB) {
+        ZB = ZB || {};
+        var GB, vB, kB, cB = new XMLHttpRequest,
+          nB = ZB.body,
+          hB = ZB.headers || {};
+        for (GB in ZB.timeout && (cB.timeout = ZB.timeout), cB.ontimeout = cB.onerror = function(BB) {
+            BB.timeout = "timeout" == BB.type, oB(BB)
+          }, cB.onabort = function(BB) {
+            BB.aborted = !0, oB(BB)
+          }, cB.open(BB, IB.href || IB), cB.onload = function() {
+            for (kB = cB.getAllResponseHeaders().trim().split(/[\r\n]+/), TB(cB, cB); vB = kB.shift();) vB = vB.split(": "), cB.headers[vB.shift().toLowerCase()] = vB.join(": ");
+            if ((vB = cB.headers["content-type"]) && ~vB.indexOf("application/json")) try {
+              cB.data = JSON.parse(cB.data, ZB.reviver)
             } catch (BB) {
-              return QB(UB, BB), dB(BB)
-            }(UB.status >= 400 ? dB : nB)(UB)
-          }, typeof FormData < "u" && aB instanceof FormData || aB && "object" == typeof aB && (pB["content-type"] = "application/json", aB = JSON.stringify(aB)), UB.withCredentials = !!zB.withCredentials, pB) UB.setRequestHeader(IB, pB[IB]);
-        UB.send(aB), zB.signal && zB.signal.addEventListener("abort", (function() {
-          UB.abort()
+              return TB(cB, BB), oB(BB)
+            }(cB.status >= 400 ? oB : JB)(cB)
+          }, typeof FormData < "u" && nB instanceof FormData || nB && "object" == typeof nB && (hB["content-type"] = "application/json", nB = JSON.stringify(nB)), cB.withCredentials = !!ZB.withCredentials, hB) cB.setRequestHeader(GB, hB[GB]);
+        cB.send(nB), ZB.signal && ZB.signal.addEventListener("abort", (function() {
+          cB.abort()
         }))
       }))
     }
-    zB.r(jB), zB.d(jB, {
-      del: () => uB,
-      get: () => dB,
-      patch: () => NB,
-      post: () => IB,
-      put: () => UB,
-      send: () => nB
+    ZB.r(IB), ZB.d(IB, {
+      del: () => kB,
+      get: () => oB,
+      patch: () => vB,
+      post: () => GB,
+      put: () => cB,
+      send: () => JB
     });
-    var dB = nB.bind(nB, "GET"),
-      IB = nB.bind(nB, "POST"),
-      NB = nB.bind(nB, "PATCH"),
-      uB = nB.bind(nB, "DELETE"),
-      UB = nB.bind(nB, "PUT")
+    var oB = JB.bind(JB, "GET"),
+      GB = JB.bind(JB, "POST"),
+      vB = JB.bind(JB, "PATCH"),
+      kB = JB.bind(JB, "DELETE"),
+      cB = JB.bind(JB, "PUT")
   },
-  9213: (BB, jB, zB) => {
-    var QB, nB, dB;
-    zB.r(jB), zB.d(jB, {
-      ALWAYS: () => Kj,
-      C1: () => tB,
-      DECIMAL_FIT: () => cj,
-      DECIMAL_ROUND: () => Cj,
-      Decoder: () => uj,
-      Encoder: () => wj,
-      FLOAT32_OPTIONS: () => sj,
-      NEVER: () => xj,
-      Packr: () => Vj,
-      RESERVE_START_SPACE: () => Rj,
-      RESET_BUFFER_MODE: () => vj,
-      REUSE_BUFFER_MODE: () => bj,
-      Unpackr: () => fB,
-      addExtension: () => Tj,
-      clearSource: () => Ij,
-      decode: () => rj,
-      decodeIter: () => Oj,
-      encode: () => lj,
-      encodeIter: () => Bz,
-      isNativeAccelerationEnabled: () => PB,
-      mapsAsObjects: () => zz,
-      pack: () => ej,
-      roundFloat32: () => Lj,
-      unpack: () => aj,
-      unpackMultiple: () => pj,
-      useRecords: () => jz
+  9245: (BB, IB, ZB) => {
+    var TB, JB, oB;
+    ZB.r(IB), ZB.d(IB, {
+      ALWAYS: () => bI,
+      C1: () => CB,
+      DECIMAL_FIT: () => EI,
+      DECIMAL_ROUND: () => xI,
+      Decoder: () => kI,
+      Encoder: () => AI,
+      FLOAT32_OPTIONS: () => FI,
+      NEVER: () => tI,
+      Packr: () => PI,
+      RESERVE_START_SPACE: () => VI,
+      RESET_BUFFER_MODE: () => KI,
+      REUSE_BUFFER_MODE: () => DI,
+      Unpackr: () => iB,
+      addExtension: () => LI,
+      clearSource: () => GI,
+      decode: () => zI,
+      decodeIter: () => SI,
+      encode: () => lI,
+      encodeIter: () => BZ,
+      isNativeAccelerationEnabled: () => eB,
+      mapsAsObjects: () => ZZ,
+      pack: () => fI,
+      roundFloat32: () => WI,
+      unpack: () => nI,
+      unpackMultiple: () => hI,
+      useRecords: () => IZ
     });
     try {
-      QB = new TextDecoder
-    } catch (Qz) {}
-    var IB = 0;
-    const NB = [];
-    var uB, UB, aB, pB, rB, sB = NB,
-      JB = 0,
-      mB = {},
+      TB = new TextDecoder
+    } catch (TZ) {}
+    var GB = 0;
+    const vB = [];
+    var kB, cB, nB, hB, zB, FB = vB,
+      NB = 0,
+      gB = {},
+      qB = 0,
       yB = 0,
-      kB = 0,
-      GB = [],
-      LB = {
+      UB = [],
+      WB = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class gB {}
-    const tB = new gB;
-    tB.name = "MessagePack 0xC1";
-    var SB, MB, EB, iB = !1,
-      qB = 2;
+    class dB {}
+    const CB = new dB;
+    CB.name = "MessagePack 0xC1";
+    var QB, sB, wB, OB = !1,
+      YB = 2;
     try {
       new Function("")
-    } catch (Qz) {
-      qB = 1 / 0
+    } catch (TZ) {
+      YB = 1 / 0
     }
-    class fB {
+    class iB {
       constructor(BB) {
         BB && (!1 === BB.useRecords && void 0 === BB.mapsAsObjects && (BB.mapsAsObjects = !0), BB.sequential && !1 !== BB.trusted && (BB.trusted = !0, BB.structures || 0 == BB.useRecords || (BB.structures = [], BB.maxSharedStructures || (BB.maxSharedStructures = 0))), BB.structures ? BB.structures.sharedLength = BB.structures.length : BB.getStructures && ((BB.structures = []).uninitialized = !0, BB.structures.sharedLength = 0), BB.int64AsNumber && (BB.int64AsType = "number")), Object.assign(this, BB)
       }
-      unpack(BB, jB) {
-        if (nB) return dj((() => (Ij(), this ? this.unpack(BB, jB) : fB.prototype.unpack.call(LB, BB, jB))));
-        BB.buffer || BB.constructor !== ArrayBuffer || (BB = "undefined" !== typeof Buffer ? Buffer.from(BB) : new Uint8Array(BB)), "object" === typeof jB ? (dB = jB.end || BB.length, IB = jB.start || 0) : (IB = 0, dB = jB > -1 ? jB : BB.length), JB = 0, kB = 0, UB = null, sB = NB, aB = null, nB = BB;
+      unpack(BB, IB) {
+        if (JB) return oI((() => (GI(), this ? this.unpack(BB, IB) : iB.prototype.unpack.call(WB, BB, IB))));
+        BB.buffer || BB.constructor !== ArrayBuffer || (BB = "undefined" !== typeof Buffer ? Buffer.from(BB) : new Uint8Array(BB)), "object" === typeof IB ? (oB = IB.end || BB.length, GB = IB.start || 0) : (GB = 0, oB = IB > -1 ? IB : BB.length), NB = 0, yB = 0, cB = null, FB = vB, nB = null, JB = BB;
         try {
-          rB = BB.dataView || (BB.dataView = new DataView(BB.buffer, BB.byteOffset, BB.byteLength))
-        } catch (Qz) {
-          if (nB = null, BB instanceof Uint8Array) throw Qz;
+          zB = BB.dataView || (BB.dataView = new DataView(BB.buffer, BB.byteOffset, BB.byteLength))
+        } catch (TZ) {
+          if (JB = null, BB instanceof Uint8Array) throw TZ;
           throw new Error("Source must be a Uint8Array or Buffer but was a " + (BB && "object" == typeof BB ? BB.constructor.name : typeof BB))
         }
-        if (this instanceof fB) {
-          if (mB = this, this.structures) return uB = this.structures, oB(jB);
-          (!uB || uB.length > 0) && (uB = [])
-        } else mB = LB, (!uB || uB.length > 0) && (uB = []);
-        return oB(jB)
+        if (this instanceof iB) {
+          if (gB = this, this.structures) return kB = this.structures, pB(IB);
+          (!kB || kB.length > 0) && (kB = [])
+        } else gB = WB, (!kB || kB.length > 0) && (kB = []);
+        return pB(IB)
       }
-      unpackMultiple(BB, jB) {
-        let zB, QB = 0;
+      unpackMultiple(BB, IB) {
+        let ZB, TB = 0;
         try {
-          iB = !0;
-          let nB = BB.length,
-            dB = this ? this.unpack(BB, nB) : Uj.unpack(BB, nB);
-          if (!jB) {
-            for (zB = [dB]; IB < nB;) QB = IB, zB.push(oB());
-            return zB
+          OB = !0;
+          let JB = BB.length,
+            oB = this ? this.unpack(BB, JB) : cI.unpack(BB, JB);
+          if (!IB) {
+            for (ZB = [oB]; GB < JB;) TB = GB, ZB.push(pB());
+            return ZB
           }
-          if (!1 === jB(dB, QB, IB)) return;
-          for (; IB < nB;)
-            if (QB = IB, !1 === jB(oB(), QB, IB)) return
-        } catch (Qz) {
-          throw Qz.lastPosition = QB, Qz.values = zB, Qz
+          if (!1 === IB(oB, TB, GB)) return;
+          for (; GB < JB;)
+            if (TB = GB, !1 === IB(pB(), TB, GB)) return
+        } catch (TZ) {
+          throw TZ.lastPosition = TB, TZ.values = ZB, TZ
         } finally {
-          iB = !1, Ij()
+          OB = !1, GI()
         }
       }
-      _mergeStructures(BB, jB) {
-        MB && (BB = MB.call(this, BB)), BB = BB || [], Object.isFrozen(BB) && (BB = BB.map((BB => BB.slice(0))));
-        for (let zB = 0, QB = BB.length; zB < QB; zB++) {
-          let jB = BB[zB];
-          jB && (jB.isShared = !0, zB >= 32 && (jB.highByte = zB - 32 >> 5))
+      _mergeStructures(BB, IB) {
+        sB && (BB = sB.call(this, BB)), BB = BB || [], Object.isFrozen(BB) && (BB = BB.map((BB => BB.slice(0))));
+        for (let ZB = 0, TB = BB.length; ZB < TB; ZB++) {
+          let IB = BB[ZB];
+          IB && (IB.isShared = !0, ZB >= 32 && (IB.highByte = ZB - 32 >> 5))
         }
         BB.sharedLength = BB.length;
-        for (let zB in jB || [])
-          if (zB >= 0) {
-            let QB = BB[zB],
-              nB = jB[zB];
-            nB && (QB && ((BB.restoreStructures || (BB.restoreStructures = []))[zB] = QB), BB[zB] = nB)
+        for (let ZB in IB || [])
+          if (ZB >= 0) {
+            let TB = BB[ZB],
+              JB = IB[ZB];
+            JB && (TB && ((BB.restoreStructures || (BB.restoreStructures = []))[ZB] = TB), BB[ZB] = JB)
           } return this.structures = BB
       }
-      decode(BB, jB) {
-        return this.unpack(BB, jB)
+      decode(BB, IB) {
+        return this.unpack(BB, IB)
       }
     }
 
-    function oB(BB) {
+    function pB(BB) {
       try {
-        if (!mB.trusted && !iB) {
-          let BB = uB.sharedLength || 0;
-          BB < uB.length && (uB.length = BB)
+        if (!gB.trusted && !OB) {
+          let BB = kB.sharedLength || 0;
+          BB < kB.length && (kB.length = BB)
         }
-        let jB;
-        if (mB.randomAccessStructure && nB[IB] < 64 && nB[IB] >= 32 && SB ? (jB = SB(nB, IB, dB, mB), nB = null, BB && BB.lazy || !jB || (jB = jB.toJSON()), IB = dB) : jB = DB(), aB && (IB = aB.postBundlePosition, aB = null), iB && (uB.restoreStructures = null), IB == dB) uB && uB.restoreStructures && HB(), uB = null, nB = null, pB && (pB = null);
+        let IB;
+        if (gB.randomAccessStructure && JB[GB] < 64 && JB[GB] >= 32 && QB ? (IB = QB(JB, GB, oB, gB), JB = null, BB && BB.lazy || !IB || (IB = IB.toJSON()), GB = oB) : IB = HB(), nB && (GB = nB.postBundlePosition, nB = null), OB && (kB.restoreStructures = null), GB == oB) kB && kB.restoreStructures && aB(), kB = null, JB = null, hB && (hB = null);
         else {
-          if (IB > dB) throw new Error("Unexpected end of MessagePack data");
-          if (!iB) {
+          if (GB > oB) throw new Error("Unexpected end of MessagePack data");
+          if (!OB) {
             let BB;
             try {
-              BB = JSON.stringify(jB, ((BB, jB) => "bigint" === typeof jB ? `${jB}n` : jB)).slice(0, 100)
-            } catch (Qz) {
-              BB = "(JSON view not available " + Qz + ")"
+              BB = JSON.stringify(IB, ((BB, IB) => "bigint" === typeof IB ? `${IB}n` : IB)).slice(0, 100)
+            } catch (TZ) {
+              BB = "(JSON view not available " + TZ + ")"
             }
             throw new Error("Data read, but end of buffer not reached " + BB)
           }
         }
-        return jB
-      } catch (Qz) {
-        throw uB && uB.restoreStructures && HB(), Ij(), (Qz instanceof RangeError || Qz.message.startsWith("Unexpected end of buffer") || IB > dB) && (Qz.incomplete = !0), Qz
+        return IB
+      } catch (TZ) {
+        throw kB && kB.restoreStructures && aB(), GI(), (TZ instanceof RangeError || TZ.message.startsWith("Unexpected end of buffer") || GB > oB) && (TZ.incomplete = !0), TZ
       }
     }
 
-    function HB() {
-      for (let BB in uB.restoreStructures) uB[BB] = uB.restoreStructures[BB];
-      uB.restoreStructures = null
+    function aB() {
+      for (let BB in kB.restoreStructures) kB[BB] = kB.restoreStructures[BB];
+      kB.restoreStructures = null
     }
 
-    function DB() {
-      let BB = nB[IB++];
+    function HB() {
+      let BB = JB[GB++];
       if (BB < 160) {
         if (BB < 128) {
           if (BB < 64) return BB;
           {
-            let jB = uB[63 & BB] || mB.getStructures && hB()[63 & BB];
-            return jB ? (jB.read || (jB.read = YB(jB, 63 & BB)), jB.read()) : BB
+            let IB = kB[63 & BB] || gB.getStructures && RB()[63 & BB];
+            return IB ? (IB.read || (IB.read = jB(IB, 63 & BB)), IB.read()) : BB
           }
         }
         if (BB < 144) {
-          if (BB -= 128, mB.mapsAsObjects) {
-            let jB = {};
-            for (let zB = 0; zB < BB; zB++) {
-              let BB = RB();
-              "__proto__" === BB && (BB = "__proto_"), jB[BB] = DB()
+          if (BB -= 128, gB.mapsAsObjects) {
+            let IB = {};
+            for (let ZB = 0; ZB < BB; ZB++) {
+              let BB = VB();
+              "__proto__" === BB && (BB = "__proto_"), IB[BB] = HB()
             }
-            return jB
+            return IB
           } {
-            let jB = new Map;
-            for (let zB = 0; zB < BB; zB++) jB.set(DB(), DB());
-            return jB
+            let IB = new Map;
+            for (let ZB = 0; ZB < BB; ZB++) IB.set(HB(), HB());
+            return IB
           }
         } {
           BB -= 144;
-          let jB = new Array(BB);
-          for (let zB = 0; zB < BB; zB++) jB[zB] = DB();
-          return mB.freezeData ? Object.freeze(jB) : jB
+          let IB = new Array(BB);
+          for (let ZB = 0; ZB < BB; ZB++) IB[ZB] = HB();
+          return gB.freezeData ? Object.freeze(IB) : IB
         }
       }
       if (BB < 192) {
-        let jB = BB - 160;
-        if (kB >= IB) return UB.slice(IB - yB, (IB += jB) - yB);
-        if (0 == kB && dB < 140) {
-          let BB = jB < 16 ? KB(jB) : xB(jB);
+        let IB = BB - 160;
+        if (yB >= GB) return cB.slice(GB - qB, (GB += IB) - qB);
+        if (0 == yB && oB < 140) {
+          let BB = IB < 16 ? bB(IB) : tB(IB);
           if (null != BB) return BB
         }
-        return XB(jB)
+        return rB(IB)
       } {
-        let jB;
+        let IB;
         switch (BB) {
           case 192:
             return null;
           case 193:
-            return aB ? (jB = DB(), jB > 0 ? aB[1].slice(aB.position1, aB.position1 += jB) : aB[0].slice(aB.position0, aB.position0 -= jB)) : tB;
+            return nB ? (IB = HB(), IB > 0 ? nB[1].slice(nB.position1, nB.position1 += IB) : nB[0].slice(nB.position0, nB.position0 -= IB)) : CB;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (jB = nB[IB++], void 0 === jB) throw new Error("Unexpected end of buffer");
-            return cB(jB);
+            if (IB = JB[GB++], void 0 === IB) throw new Error("Unexpected end of buffer");
+            return EB(IB);
           case 197:
-            return jB = rB.getUint16(IB), IB += 2, cB(jB);
+            return IB = zB.getUint16(GB), GB += 2, EB(IB);
           case 198:
-            return jB = rB.getUint32(IB), IB += 4, cB(jB);
+            return IB = zB.getUint32(GB), GB += 4, EB(IB);
           case 199:
-            return bB(nB[IB++]);
+            return DB(JB[GB++]);
           case 200:
-            return jB = rB.getUint16(IB), IB += 2, bB(jB);
+            return IB = zB.getUint16(GB), GB += 2, DB(IB);
           case 201:
-            return jB = rB.getUint32(IB), IB += 4, bB(jB);
+            return IB = zB.getUint32(GB), GB += 4, DB(IB);
           case 202:
-            if (jB = rB.getFloat32(IB), mB.useFloat32 > 2) {
-              let BB = Nj[(127 & nB[IB]) << 1 | nB[IB + 1] >> 7];
-              return IB += 4, (BB * jB + (jB > 0 ? .5 : -.5) | 0) / BB
+            if (IB = zB.getFloat32(GB), gB.useFloat32 > 2) {
+              let BB = vI[(127 & JB[GB]) << 1 | JB[GB + 1] >> 7];
+              return GB += 4, (BB * IB + (IB > 0 ? .5 : -.5) | 0) / BB
             }
-            return IB += 4, jB;
+            return GB += 4, IB;
           case 203:
-            return jB = rB.getFloat64(IB), IB += 8, jB;
+            return IB = zB.getFloat64(GB), GB += 8, IB;
           case 204:
-            return nB[IB++];
+            return JB[GB++];
           case 205:
-            return jB = rB.getUint16(IB), IB += 2, jB;
+            return IB = zB.getUint16(GB), GB += 2, IB;
           case 206:
-            return jB = rB.getUint32(IB), IB += 4, jB;
+            return IB = zB.getUint32(GB), GB += 4, IB;
           case 207:
-            return "number" === mB.int64AsType ? (jB = 4294967296 * rB.getUint32(IB), jB += rB.getUint32(IB + 4)) : "string" === mB.int64AsType ? jB = rB.getBigUint64(IB).toString() : "auto" === mB.int64AsType ? (jB = rB.getBigUint64(IB), jB <= BigInt(2) << BigInt(52) && (jB = Number(jB))) : jB = rB.getBigUint64(IB), IB += 8, jB;
+            return "number" === gB.int64AsType ? (IB = 4294967296 * zB.getUint32(GB), IB += zB.getUint32(GB + 4)) : "string" === gB.int64AsType ? IB = zB.getBigUint64(GB).toString() : "auto" === gB.int64AsType ? (IB = zB.getBigUint64(GB), IB <= BigInt(2) << BigInt(52) && (IB = Number(IB))) : IB = zB.getBigUint64(GB), GB += 8, IB;
           case 208:
-            return rB.getInt8(IB++);
+            return zB.getInt8(GB++);
           case 209:
-            return jB = rB.getInt16(IB), IB += 2, jB;
+            return IB = zB.getInt16(GB), GB += 2, IB;
           case 210:
-            return jB = rB.getInt32(IB), IB += 4, jB;
+            return IB = zB.getInt32(GB), GB += 4, IB;
           case 211:
-            return "number" === mB.int64AsType ? (jB = 4294967296 * rB.getInt32(IB), jB += rB.getUint32(IB + 4)) : "string" === mB.int64AsType ? jB = rB.getBigInt64(IB).toString() : "auto" === mB.int64AsType ? (jB = rB.getBigInt64(IB), jB >= BigInt(-2) << BigInt(52) && jB <= BigInt(2) << BigInt(52) && (jB = Number(jB))) : jB = rB.getBigInt64(IB), IB += 8, jB;
+            return "number" === gB.int64AsType ? (IB = 4294967296 * zB.getInt32(GB), IB += zB.getUint32(GB + 4)) : "string" === gB.int64AsType ? IB = zB.getBigInt64(GB).toString() : "auto" === gB.int64AsType ? (IB = zB.getBigInt64(GB), IB >= BigInt(-2) << BigInt(52) && IB <= BigInt(2) << BigInt(52) && (IB = Number(IB))) : IB = zB.getBigInt64(GB), GB += 8, IB;
           case 212:
-            if (jB = nB[IB++], 114 == jB) return Bj(63 & nB[IB++]);
+            if (IB = JB[GB++], 114 == IB) return BI(63 & JB[GB++]);
             {
-              let BB = GB[jB];
-              if (BB) return BB.read ? (IB++, BB.read(DB())) : BB.noBuffer ? (IB++, BB()) : BB(nB.subarray(IB, ++IB));
-              throw new Error("Unknown extension " + jB)
+              let BB = UB[IB];
+              if (BB) return BB.read ? (GB++, BB.read(HB())) : BB.noBuffer ? (GB++, BB()) : BB(JB.subarray(GB, ++GB));
+              throw new Error("Unknown extension " + IB)
             }
           case 213:
-            return jB = nB[IB], 114 == jB ? (IB++, Bj(63 & nB[IB++], nB[IB++])) : bB(2);
+            return IB = JB[GB], 114 == IB ? (GB++, BI(63 & JB[GB++], JB[GB++])) : DB(2);
           case 214:
-            return bB(4);
+            return DB(4);
           case 215:
-            return bB(8);
+            return DB(8);
           case 216:
-            return bB(16);
+            return DB(16);
           case 217:
-            return jB = nB[IB++], kB >= IB ? UB.slice(IB - yB, (IB += jB) - yB) : ZB(jB);
+            return IB = JB[GB++], yB >= GB ? cB.slice(GB - qB, (GB += IB) - qB) : mB(IB);
           case 218:
-            return jB = rB.getUint16(IB), kB >= (IB += 2) ? UB.slice(IB - yB, (IB += jB) - yB) : AB(jB);
+            return IB = zB.getUint16(GB), yB >= (GB += 2) ? cB.slice(GB - qB, (GB += IB) - qB) : XB(IB);
           case 219:
-            return jB = rB.getUint32(IB), kB >= (IB += 4) ? UB.slice(IB - yB, (IB += jB) - yB) : TB(jB);
+            return IB = zB.getUint32(GB), yB >= (GB += 4) ? cB.slice(GB - qB, (GB += IB) - qB) : LB(IB);
           case 220:
-            return jB = rB.getUint16(IB), IB += 2, eB(jB);
+            return IB = zB.getUint16(GB), GB += 2, fB(IB);
           case 221:
-            return jB = rB.getUint32(IB), IB += 4, eB(jB);
+            return IB = zB.getUint32(GB), GB += 4, fB(IB);
           case 222:
-            return jB = rB.getUint16(IB), IB += 2, lB(jB);
+            return IB = zB.getUint16(GB), GB += 2, lB(IB);
           case 223:
-            return jB = rB.getUint32(IB), IB += 4, lB(jB);
+            return IB = zB.getUint32(GB), GB += 4, lB(IB);
           default:
             if (BB >= 224) return BB - 256;
             if (void 0 === BB) {
@@ -1160,1022 +1160,1022 @@ export const modules = {
         }
       }
     }
-    const FB = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const MB = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function YB(BB, jB) {
-      function zB() {
-        if (zB.count++ > qB) {
-          let zB = BB.read = new Function("r", "return function(){return " + (mB.freezeData ? "Object.freeze" : "") + "({" + BB.map((BB => "__proto__" === BB ? "__proto_:r()" : FB.test(BB) ? BB + ":r()" : "[" + JSON.stringify(BB) + "]:r()")).join(",") + "})}")(DB);
-          return 0 === BB.highByte && (BB.read = VB(jB, BB.read)), zB()
+    function jB(BB, IB) {
+      function ZB() {
+        if (ZB.count++ > YB) {
+          let ZB = BB.read = new Function("r", "return function(){return " + (gB.freezeData ? "Object.freeze" : "") + "({" + BB.map((BB => "__proto__" === BB ? "__proto_:r()" : MB.test(BB) ? BB + ":r()" : "[" + JSON.stringify(BB) + "]:r()")).join(",") + "})}")(HB);
+          return 0 === BB.highByte && (BB.read = PB(IB, BB.read)), ZB()
         }
-        let QB = {};
-        for (let jB = 0, zB = BB.length; jB < zB; jB++) {
-          let zB = BB[jB];
-          "__proto__" === zB && (zB = "__proto_"), QB[zB] = DB()
+        let TB = {};
+        for (let IB = 0, ZB = BB.length; IB < ZB; IB++) {
+          let ZB = BB[IB];
+          "__proto__" === ZB && (ZB = "__proto_"), TB[ZB] = HB()
         }
-        return mB.freezeData ? Object.freeze(QB) : QB
+        return gB.freezeData ? Object.freeze(TB) : TB
       }
-      return zB.count = 0, 0 === BB.highByte ? VB(jB, zB) : zB
+      return ZB.count = 0, 0 === BB.highByte ? PB(IB, ZB) : ZB
     }
-    const VB = (BB, jB) => function() {
-      let zB = nB[IB++];
-      if (0 === zB) return jB();
-      let QB = BB < 32 ? -(BB + (zB << 5)) : BB + (zB << 5),
-        dB = uB[QB] || hB()[QB];
-      if (!dB) throw new Error("Record id is not defined for " + QB);
-      return dB.read || (dB.read = YB(dB, BB)), dB.read()
+    const PB = (BB, IB) => function() {
+      let ZB = JB[GB++];
+      if (0 === ZB) return IB();
+      let TB = BB < 32 ? -(BB + (ZB << 5)) : BB + (ZB << 5),
+        oB = kB[TB] || RB()[TB];
+      if (!oB) throw new Error("Record id is not defined for " + TB);
+      return oB.read || (oB.read = jB(oB, BB)), oB.read()
     };
 
-    function hB() {
-      let BB = dj((() => (nB = null, mB.getStructures())));
-      return uB = mB._mergeStructures(BB, uB)
+    function RB() {
+      let BB = oI((() => (JB = null, gB.getStructures())));
+      return kB = gB._mergeStructures(BB, kB)
     }
-    var XB = WB,
-      ZB = WB,
-      AB = WB,
-      TB = WB;
-    let PB = !1;
+    var rB = uB,
+      mB = uB,
+      XB = uB,
+      LB = uB;
+    let eB = !1;
 
-    function WB(BB) {
-      let jB;
-      if (BB < 16 && (jB = KB(BB))) return jB;
-      if (BB > 64 && QB) return QB.decode(nB.subarray(IB, IB += BB));
-      const zB = IB + BB,
-        dB = [];
-      for (jB = ""; IB < zB;) {
-        const BB = nB[IB++];
-        if (0 === (128 & BB)) dB.push(BB);
+    function uB(BB) {
+      let IB;
+      if (BB < 16 && (IB = bB(BB))) return IB;
+      if (BB > 64 && TB) return TB.decode(JB.subarray(GB, GB += BB));
+      const ZB = GB + BB,
+        oB = [];
+      for (IB = ""; GB < ZB;) {
+        const BB = JB[GB++];
+        if (0 === (128 & BB)) oB.push(BB);
         else if (192 === (224 & BB)) {
-          const jB = 63 & nB[IB++];
-          dB.push((31 & BB) << 6 | jB)
+          const IB = 63 & JB[GB++];
+          oB.push((31 & BB) << 6 | IB)
         } else if (224 === (240 & BB)) {
-          const jB = 63 & nB[IB++],
-            zB = 63 & nB[IB++];
-          dB.push((31 & BB) << 12 | jB << 6 | zB)
+          const IB = 63 & JB[GB++],
+            ZB = 63 & JB[GB++];
+          oB.push((31 & BB) << 12 | IB << 6 | ZB)
         } else if (240 === (248 & BB)) {
-          let jB = (7 & BB) << 18 | (63 & nB[IB++]) << 12 | (63 & nB[IB++]) << 6 | 63 & nB[IB++];
-          jB > 65535 && (jB -= 65536, dB.push(jB >>> 10 & 1023 | 55296), jB = 56320 | 1023 & jB), dB.push(jB)
-        } else dB.push(BB);
-        dB.length >= 4096 && (jB += wB.apply(String, dB), dB.length = 0)
+          let IB = (7 & BB) << 18 | (63 & JB[GB++]) << 12 | (63 & JB[GB++]) << 6 | 63 & JB[GB++];
+          IB > 65535 && (IB -= 65536, oB.push(IB >>> 10 & 1023 | 55296), IB = 56320 | 1023 & IB), oB.push(IB)
+        } else oB.push(BB);
+        oB.length >= 4096 && (IB += AB.apply(String, oB), oB.length = 0)
       }
-      return dB.length > 0 && (jB += wB.apply(String, dB)), jB
+      return oB.length > 0 && (IB += AB.apply(String, oB)), IB
     }
 
-    function eB(BB) {
-      let jB = new Array(BB);
-      for (let zB = 0; zB < BB; zB++) jB[zB] = DB();
-      return mB.freezeData ? Object.freeze(jB) : jB
+    function fB(BB) {
+      let IB = new Array(BB);
+      for (let ZB = 0; ZB < BB; ZB++) IB[ZB] = HB();
+      return gB.freezeData ? Object.freeze(IB) : IB
     }
 
     function lB(BB) {
-      if (mB.mapsAsObjects) {
-        let jB = {};
-        for (let zB = 0; zB < BB; zB++) {
-          let BB = RB();
-          "__proto__" === BB && (BB = "__proto_"), jB[BB] = DB()
+      if (gB.mapsAsObjects) {
+        let IB = {};
+        for (let ZB = 0; ZB < BB; ZB++) {
+          let BB = VB();
+          "__proto__" === BB && (BB = "__proto_"), IB[BB] = HB()
         }
-        return jB
+        return IB
       } {
-        let jB = new Map;
-        for (let zB = 0; zB < BB; zB++) jB.set(DB(), DB());
-        return jB
+        let IB = new Map;
+        for (let ZB = 0; ZB < BB; ZB++) IB.set(HB(), HB());
+        return IB
       }
     }
-    var wB = String.fromCharCode;
+    var AB = String.fromCharCode;
 
-    function xB(BB) {
-      let jB = IB,
-        zB = new Array(BB);
-      for (let QB = 0; QB < BB; QB++) {
-        const BB = nB[IB++];
-        if ((128 & BB) > 0) return void(IB = jB);
-        zB[QB] = BB
+    function tB(BB) {
+      let IB = GB,
+        ZB = new Array(BB);
+      for (let TB = 0; TB < BB; TB++) {
+        const BB = JB[GB++];
+        if ((128 & BB) > 0) return void(GB = IB);
+        ZB[TB] = BB
       }
-      return wB.apply(String, zB)
+      return AB.apply(String, ZB)
     }
 
-    function KB(BB) {
+    function bB(BB) {
       if (BB < 4) {
         if (BB < 2) {
           if (0 === BB) return "";
           {
-            let BB = nB[IB++];
-            return (128 & BB) > 1 ? void(IB -= 1) : wB(BB)
+            let BB = JB[GB++];
+            return (128 & BB) > 1 ? void(GB -= 1) : AB(BB)
           }
         } {
-          let jB = nB[IB++],
-            zB = nB[IB++];
-          if ((128 & jB) > 0 || (128 & zB) > 0) return void(IB -= 2);
-          if (BB < 3) return wB(jB, zB);
-          let QB = nB[IB++];
-          return (128 & QB) > 0 ? void(IB -= 3) : wB(jB, zB, QB)
+          let IB = JB[GB++],
+            ZB = JB[GB++];
+          if ((128 & IB) > 0 || (128 & ZB) > 0) return void(GB -= 2);
+          if (BB < 3) return AB(IB, ZB);
+          let TB = JB[GB++];
+          return (128 & TB) > 0 ? void(GB -= 3) : AB(IB, ZB, TB)
         }
       } {
-        let jB = nB[IB++],
-          zB = nB[IB++],
-          QB = nB[IB++],
-          dB = nB[IB++];
-        if ((128 & jB) > 0 || (128 & zB) > 0 || (128 & QB) > 0 || (128 & dB) > 0) return void(IB -= 4);
+        let IB = JB[GB++],
+          ZB = JB[GB++],
+          TB = JB[GB++],
+          oB = JB[GB++];
+        if ((128 & IB) > 0 || (128 & ZB) > 0 || (128 & TB) > 0 || (128 & oB) > 0) return void(GB -= 4);
         if (BB < 6) {
-          if (4 === BB) return wB(jB, zB, QB, dB);
+          if (4 === BB) return AB(IB, ZB, TB, oB);
           {
-            let BB = nB[IB++];
-            return (128 & BB) > 0 ? void(IB -= 5) : wB(jB, zB, QB, dB, BB)
+            let BB = JB[GB++];
+            return (128 & BB) > 0 ? void(GB -= 5) : AB(IB, ZB, TB, oB, BB)
           }
         }
         if (BB < 8) {
-          let NB = nB[IB++],
-            uB = nB[IB++];
-          if ((128 & NB) > 0 || (128 & uB) > 0) return void(IB -= 6);
-          if (BB < 7) return wB(jB, zB, QB, dB, NB, uB);
-          let UB = nB[IB++];
-          return (128 & UB) > 0 ? void(IB -= 7) : wB(jB, zB, QB, dB, NB, uB, UB)
+          let vB = JB[GB++],
+            kB = JB[GB++];
+          if ((128 & vB) > 0 || (128 & kB) > 0) return void(GB -= 6);
+          if (BB < 7) return AB(IB, ZB, TB, oB, vB, kB);
+          let cB = JB[GB++];
+          return (128 & cB) > 0 ? void(GB -= 7) : AB(IB, ZB, TB, oB, vB, kB, cB)
         } {
-          let NB = nB[IB++],
-            uB = nB[IB++],
-            UB = nB[IB++],
-            aB = nB[IB++];
-          if ((128 & NB) > 0 || (128 & uB) > 0 || (128 & UB) > 0 || (128 & aB) > 0) return void(IB -= 8);
+          let vB = JB[GB++],
+            kB = JB[GB++],
+            cB = JB[GB++],
+            nB = JB[GB++];
+          if ((128 & vB) > 0 || (128 & kB) > 0 || (128 & cB) > 0 || (128 & nB) > 0) return void(GB -= 8);
           if (BB < 10) {
-            if (8 === BB) return wB(jB, zB, QB, dB, NB, uB, UB, aB);
+            if (8 === BB) return AB(IB, ZB, TB, oB, vB, kB, cB, nB);
             {
-              let BB = nB[IB++];
-              return (128 & BB) > 0 ? void(IB -= 9) : wB(jB, zB, QB, dB, NB, uB, UB, aB, BB)
+              let BB = JB[GB++];
+              return (128 & BB) > 0 ? void(GB -= 9) : AB(IB, ZB, TB, oB, vB, kB, cB, nB, BB)
             }
           }
           if (BB < 12) {
-            let pB = nB[IB++],
-              rB = nB[IB++];
-            if ((128 & pB) > 0 || (128 & rB) > 0) return void(IB -= 10);
-            if (BB < 11) return wB(jB, zB, QB, dB, NB, uB, UB, aB, pB, rB);
-            let sB = nB[IB++];
-            return (128 & sB) > 0 ? void(IB -= 11) : wB(jB, zB, QB, dB, NB, uB, UB, aB, pB, rB, sB)
+            let hB = JB[GB++],
+              zB = JB[GB++];
+            if ((128 & hB) > 0 || (128 & zB) > 0) return void(GB -= 10);
+            if (BB < 11) return AB(IB, ZB, TB, oB, vB, kB, cB, nB, hB, zB);
+            let FB = JB[GB++];
+            return (128 & FB) > 0 ? void(GB -= 11) : AB(IB, ZB, TB, oB, vB, kB, cB, nB, hB, zB, FB)
           } {
-            let pB = nB[IB++],
-              rB = nB[IB++],
-              sB = nB[IB++],
-              JB = nB[IB++];
-            if ((128 & pB) > 0 || (128 & rB) > 0 || (128 & sB) > 0 || (128 & JB) > 0) return void(IB -= 12);
+            let hB = JB[GB++],
+              zB = JB[GB++],
+              FB = JB[GB++],
+              NB = JB[GB++];
+            if ((128 & hB) > 0 || (128 & zB) > 0 || (128 & FB) > 0 || (128 & NB) > 0) return void(GB -= 12);
             if (BB < 14) {
-              if (12 === BB) return wB(jB, zB, QB, dB, NB, uB, UB, aB, pB, rB, sB, JB);
+              if (12 === BB) return AB(IB, ZB, TB, oB, vB, kB, cB, nB, hB, zB, FB, NB);
               {
-                let BB = nB[IB++];
-                return (128 & BB) > 0 ? void(IB -= 13) : wB(jB, zB, QB, dB, NB, uB, UB, aB, pB, rB, sB, JB, BB)
+                let BB = JB[GB++];
+                return (128 & BB) > 0 ? void(GB -= 13) : AB(IB, ZB, TB, oB, vB, kB, cB, nB, hB, zB, FB, NB, BB)
               }
             } {
-              let mB = nB[IB++],
-                yB = nB[IB++];
-              if ((128 & mB) > 0 || (128 & yB) > 0) return void(IB -= 14);
-              if (BB < 15) return wB(jB, zB, QB, dB, NB, uB, UB, aB, pB, rB, sB, JB, mB, yB);
-              let kB = nB[IB++];
-              return (128 & kB) > 0 ? void(IB -= 15) : wB(jB, zB, QB, dB, NB, uB, UB, aB, pB, rB, sB, JB, mB, yB, kB)
+              let gB = JB[GB++],
+                qB = JB[GB++];
+              if ((128 & gB) > 0 || (128 & qB) > 0) return void(GB -= 14);
+              if (BB < 15) return AB(IB, ZB, TB, oB, vB, kB, cB, nB, hB, zB, FB, NB, gB, qB);
+              let yB = JB[GB++];
+              return (128 & yB) > 0 ? void(GB -= 15) : AB(IB, ZB, TB, oB, vB, kB, cB, nB, hB, zB, FB, NB, gB, qB, yB)
             }
           }
         }
       }
     }
 
-    function CB() {
-      let BB, jB = nB[IB++];
-      if (jB < 192) BB = jB - 160;
-      else switch (jB) {
+    function xB() {
+      let BB, IB = JB[GB++];
+      if (IB < 192) BB = IB - 160;
+      else switch (IB) {
         case 217:
-          BB = nB[IB++];
+          BB = JB[GB++];
           break;
         case 218:
-          BB = rB.getUint16(IB), IB += 2;
+          BB = zB.getUint16(GB), GB += 2;
           break;
         case 219:
-          BB = rB.getUint32(IB), IB += 4;
+          BB = zB.getUint32(GB), GB += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return WB(BB)
+      return uB(BB)
     }
 
-    function cB(BB) {
-      return mB.copyBuffers ? Uint8Array.prototype.slice.call(nB, IB, IB += BB) : nB.subarray(IB, IB += BB)
+    function EB(BB) {
+      return gB.copyBuffers ? Uint8Array.prototype.slice.call(JB, GB, GB += BB) : JB.subarray(GB, GB += BB)
     }
 
-    function bB(BB) {
-      let jB = nB[IB++];
-      if (GB[jB]) {
-        let zB;
-        return GB[jB](nB.subarray(IB, zB = IB += BB), (BB => {
-          IB = BB;
+    function DB(BB) {
+      let IB = JB[GB++];
+      if (UB[IB]) {
+        let ZB;
+        return UB[IB](JB.subarray(GB, ZB = GB += BB), (BB => {
+          GB = BB;
           try {
-            return DB()
+            return HB()
           } finally {
-            IB = zB
+            GB = ZB
           }
         }))
       }
-      throw new Error("Unknown extension type " + jB)
+      throw new Error("Unknown extension type " + IB)
     }
-    var vB = new Array(4096);
+    var KB = new Array(4096);
 
-    function RB() {
-      let BB = nB[IB++];
-      if (!(BB >= 160 && BB < 192)) return IB--, OB(DB());
-      if (BB -= 160, kB >= IB) return UB.slice(IB - yB, (IB += BB) - yB);
-      if (!(0 == kB && dB < 180)) return XB(BB);
-      let jB, zB = 4095 & (BB << 5 ^ (BB > 1 ? rB.getUint16(IB) : BB > 0 ? nB[IB] : 0)),
-        QB = vB[zB],
-        NB = IB,
-        uB = IB + BB - 3,
-        aB = 0;
-      if (QB && QB.bytes == BB) {
-        for (; NB < uB;) {
-          if (jB = rB.getUint32(NB), jB != QB[aB++]) {
-            NB = 1879048192;
+    function VB() {
+      let BB = JB[GB++];
+      if (!(BB >= 160 && BB < 192)) return GB--, SB(HB());
+      if (BB -= 160, yB >= GB) return cB.slice(GB - qB, (GB += BB) - qB);
+      if (!(0 == yB && oB < 180)) return rB(BB);
+      let IB, ZB = 4095 & (BB << 5 ^ (BB > 1 ? zB.getUint16(GB) : BB > 0 ? JB[GB] : 0)),
+        TB = KB[ZB],
+        vB = GB,
+        kB = GB + BB - 3,
+        nB = 0;
+      if (TB && TB.bytes == BB) {
+        for (; vB < kB;) {
+          if (IB = zB.getUint32(vB), IB != TB[nB++]) {
+            vB = 1879048192;
             break
           }
-          NB += 4
+          vB += 4
         }
-        for (uB += 3; NB < uB;)
-          if (jB = nB[NB++], jB != QB[aB++]) {
-            NB = 1879048192;
+        for (kB += 3; vB < kB;)
+          if (IB = JB[vB++], IB != TB[nB++]) {
+            vB = 1879048192;
             break
-          } if (NB === uB) return IB = NB, QB.string;
-        uB -= 3, NB = IB
+          } if (vB === kB) return GB = vB, TB.string;
+        kB -= 3, vB = GB
       }
-      for (QB = [], vB[zB] = QB, QB.bytes = BB; NB < uB;) jB = rB.getUint32(NB), QB.push(jB), NB += 4;
-      for (uB += 3; NB < uB;) jB = nB[NB++], QB.push(jB);
-      let pB = BB < 16 ? KB(BB) : xB(BB);
-      return QB.string = null != pB ? pB : XB(BB)
+      for (TB = [], KB[ZB] = TB, TB.bytes = BB; vB < kB;) IB = zB.getUint32(vB), TB.push(IB), vB += 4;
+      for (kB += 3; vB < kB;) IB = JB[vB++], TB.push(IB);
+      let hB = BB < 16 ? bB(BB) : tB(BB);
+      return TB.string = null != hB ? hB : rB(BB)
     }
 
-    function OB(BB) {
+    function SB(BB) {
       if ("string" === typeof BB) return BB;
       if ("number" === typeof BB || "boolean" === typeof BB || "bigint" === typeof BB) return BB.toString();
       if (null == BB) return BB + "";
-      if (mB.allowArraysInMapKeys && Array.isArray(BB) && BB.flat().every((BB => ["string", "number", "boolean", "bigint"].includes(typeof BB)))) return BB.flat().toString();
+      if (gB.allowArraysInMapKeys && Array.isArray(BB) && BB.flat().every((BB => ["string", "number", "boolean", "bigint"].includes(typeof BB)))) return BB.flat().toString();
       throw new Error("Invalid property type for record: " + typeof BB)
     }
-    const Bj = (BB, jB) => {
-      let zB = DB().map(OB),
-        QB = BB;
-      void 0 !== jB && (BB = BB < 32 ? -((jB << 5) + BB) : (jB << 5) + BB, zB.highByte = jB);
-      let nB = uB[BB];
-      return nB && (nB.isShared || iB) && ((uB.restoreStructures || (uB.restoreStructures = []))[BB] = nB), uB[BB] = zB, zB.read = YB(zB, QB), zB.read()
+    const BI = (BB, IB) => {
+      let ZB = HB().map(SB),
+        TB = BB;
+      void 0 !== IB && (BB = BB < 32 ? -((IB << 5) + BB) : (IB << 5) + BB, ZB.highByte = IB);
+      let JB = kB[BB];
+      return JB && (JB.isShared || OB) && ((kB.restoreStructures || (kB.restoreStructures = []))[BB] = JB), kB[BB] = ZB, ZB.read = jB(ZB, TB), ZB.read()
     };
-    GB[0] = () => {}, GB[0].noBuffer = !0, GB[66] = BB => {
-      let jB = BB.length,
-        zB = BigInt(128 & BB[0] ? BB[0] - 256 : BB[0]);
-      for (let QB = 1; QB < jB; QB++) zB <<= BigInt(8), zB += BigInt(BB[QB]);
-      return zB
+    UB[0] = () => {}, UB[0].noBuffer = !0, UB[66] = BB => {
+      let IB = BB.length,
+        ZB = BigInt(128 & BB[0] ? BB[0] - 256 : BB[0]);
+      for (let TB = 1; TB < IB; TB++) ZB <<= BigInt(8), ZB += BigInt(BB[TB]);
+      return ZB
     };
-    let jj = {
+    let II = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    GB[101] = () => {
-      let BB = DB();
-      return (jj[BB[0]] || Error)(BB[1], {
+    UB[101] = () => {
+      let BB = HB();
+      return (II[BB[0]] || Error)(BB[1], {
         cause: BB[2]
       })
-    }, GB[105] = BB => {
-      if (!1 === mB.structuredClone) throw new Error("Structured clone extension is disabled");
-      let jB = rB.getUint32(IB - 4);
-      pB || (pB = new Map);
-      let zB, QB = nB[IB];
-      zB = QB >= 144 && QB < 160 || 220 == QB || 221 == QB ? [] : {};
-      let dB = {
-        target: zB
+    }, UB[105] = BB => {
+      if (!1 === gB.structuredClone) throw new Error("Structured clone extension is disabled");
+      let IB = zB.getUint32(GB - 4);
+      hB || (hB = new Map);
+      let ZB, TB = JB[GB];
+      ZB = TB >= 144 && TB < 160 || 220 == TB || 221 == TB ? [] : {};
+      let oB = {
+        target: ZB
       };
-      pB.set(jB, dB);
-      let NB = DB();
-      return dB.used ? Object.assign(zB, NB) : (dB.target = NB, NB)
-    }, GB[112] = BB => {
-      if (!1 === mB.structuredClone) throw new Error("Structured clone extension is disabled");
-      let jB = rB.getUint32(IB - 4),
-        zB = pB.get(jB);
-      return zB.used = !0, zB.target
-    }, GB[115] = () => new Set(DB());
-    const zj = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((BB => BB + "Array"));
-    let Qj = "object" === typeof globalThis ? globalThis : window;
-    GB[116] = BB => {
-      let jB = BB[0],
-        zB = zj[jB];
-      if (!zB) {
-        if (16 === jB) {
-          let jB = new ArrayBuffer(BB.length - 1);
-          return new Uint8Array(jB).set(BB.subarray(1)), jB
+      hB.set(IB, oB);
+      let vB = HB();
+      return oB.used ? Object.assign(ZB, vB) : (oB.target = vB, vB)
+    }, UB[112] = BB => {
+      if (!1 === gB.structuredClone) throw new Error("Structured clone extension is disabled");
+      let IB = zB.getUint32(GB - 4),
+        ZB = hB.get(IB);
+      return ZB.used = !0, ZB.target
+    }, UB[115] = () => new Set(HB());
+    const ZI = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((BB => BB + "Array"));
+    let TI = "object" === typeof globalThis ? globalThis : window;
+    UB[116] = BB => {
+      let IB = BB[0],
+        ZB = ZI[IB];
+      if (!ZB) {
+        if (16 === IB) {
+          let IB = new ArrayBuffer(BB.length - 1);
+          return new Uint8Array(IB).set(BB.subarray(1)), IB
         }
-        throw new Error("Could not find typed array for code " + jB)
+        throw new Error("Could not find typed array for code " + IB)
       }
-      return new Qj[zB](Uint8Array.prototype.slice.call(BB, 1).buffer)
-    }, GB[120] = () => {
-      let BB = DB();
+      return new TI[ZB](Uint8Array.prototype.slice.call(BB, 1).buffer)
+    }, UB[120] = () => {
+      let BB = HB();
       return new RegExp(BB[0], BB[1])
     };
-    const nj = [];
+    const JI = [];
 
-    function dj(BB) {
-      EB && EB();
-      let jB = dB,
-        zB = IB,
-        QB = JB,
-        NB = yB,
-        GB = kB,
-        LB = UB,
-        gB = sB,
-        tB = pB,
-        SB = aB,
-        MB = new Uint8Array(nB.slice(0, dB)),
-        qB = uB,
-        fB = uB.slice(0, uB.length),
-        oB = mB,
-        HB = iB,
-        DB = BB();
-      return dB = jB, IB = zB, JB = QB, yB = NB, kB = GB, UB = LB, sB = gB, pB = tB, aB = SB, nB = MB, iB = HB, (uB = qB).splice(0, uB.length, ...fB), mB = oB, rB = new DataView(nB.buffer, nB.byteOffset, nB.byteLength), DB
+    function oI(BB) {
+      wB && wB();
+      let IB = oB,
+        ZB = GB,
+        TB = NB,
+        vB = qB,
+        UB = yB,
+        WB = cB,
+        dB = FB,
+        CB = hB,
+        QB = nB,
+        sB = new Uint8Array(JB.slice(0, oB)),
+        YB = kB,
+        iB = kB.slice(0, kB.length),
+        pB = gB,
+        aB = OB,
+        HB = BB();
+      return oB = IB, GB = ZB, NB = TB, qB = vB, yB = UB, cB = WB, FB = dB, hB = CB, nB = QB, JB = sB, OB = aB, (kB = YB).splice(0, kB.length, ...iB), gB = pB, zB = new DataView(JB.buffer, JB.byteOffset, JB.byteLength), HB
     }
 
-    function Ij() {
-      nB = null, pB = null, uB = null
+    function GI() {
+      JB = null, hB = null, kB = null
     }
-    GB[98] = BB => {
-      let jB = (BB[0] << 24) + (BB[1] << 16) + (BB[2] << 8) + BB[3],
-        zB = IB;
-      return IB += jB - BB.length, aB = nj, (aB = [CB(), CB()]).position0 = 0, aB.position1 = 0, aB.postBundlePosition = IB, IB = zB, DB()
-    }, GB[255] = BB => 4 == BB.length ? new Date(1e3 * (16777216 * BB[0] + (BB[1] << 16) + (BB[2] << 8) + BB[3])) : 8 == BB.length ? new Date(((BB[0] << 22) + (BB[1] << 14) + (BB[2] << 6) + (BB[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & BB[3]) + 16777216 * BB[4] + (BB[5] << 16) + (BB[6] << 8) + BB[7])) : 12 == BB.length ? new Date(((BB[0] << 24) + (BB[1] << 16) + (BB[2] << 8) + BB[3]) / 1e6 + 1e3 * ((128 & BB[4] ? -281474976710656 : 0) + 1099511627776 * BB[6] + 4294967296 * BB[7] + 16777216 * BB[8] + (BB[9] << 16) + (BB[10] << 8) + BB[11])) : new Date("invalid");
-    const Nj = new Array(147);
-    for (let nz = 0; nz < 256; nz++) Nj[nz] = +("1e" + Math.floor(45.15 - .30103 * nz));
-    const uj = fB;
-    var Uj = new fB({
+    UB[98] = BB => {
+      let IB = (BB[0] << 24) + (BB[1] << 16) + (BB[2] << 8) + BB[3],
+        ZB = GB;
+      return GB += IB - BB.length, nB = JI, (nB = [xB(), xB()]).position0 = 0, nB.position1 = 0, nB.postBundlePosition = GB, GB = ZB, HB()
+    }, UB[255] = BB => 4 == BB.length ? new Date(1e3 * (16777216 * BB[0] + (BB[1] << 16) + (BB[2] << 8) + BB[3])) : 8 == BB.length ? new Date(((BB[0] << 22) + (BB[1] << 14) + (BB[2] << 6) + (BB[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & BB[3]) + 16777216 * BB[4] + (BB[5] << 16) + (BB[6] << 8) + BB[7])) : 12 == BB.length ? new Date(((BB[0] << 24) + (BB[1] << 16) + (BB[2] << 8) + BB[3]) / 1e6 + 1e3 * ((128 & BB[4] ? -281474976710656 : 0) + 1099511627776 * BB[6] + 4294967296 * BB[7] + 16777216 * BB[8] + (BB[9] << 16) + (BB[10] << 8) + BB[11])) : new Date("invalid");
+    const vI = new Array(147);
+    for (let JZ = 0; JZ < 256; JZ++) vI[JZ] = +("1e" + Math.floor(45.15 - .30103 * JZ));
+    const kI = iB;
+    var cI = new iB({
       useRecords: !1
     });
-    const aj = Uj.unpack,
-      pj = Uj.unpackMultiple,
-      rj = Uj.unpack,
-      sj = {
+    const nI = cI.unpack,
+      hI = cI.unpackMultiple,
+      zI = cI.unpack,
+      FI = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let Jj, mj, yj, kj = new Float32Array(1),
-      Gj = new Uint8Array(kj.buffer, 0, 4);
+    let NI, gI, qI, yI = new Float32Array(1),
+      UI = new Uint8Array(yI.buffer, 0, 4);
 
-    function Lj(BB) {
-      kj[0] = BB;
-      let jB = Nj[(127 & Gj[3]) << 1 | Gj[2] >> 7];
-      return (jB * BB + (BB > 0 ? .5 : -.5) | 0) / jB
+    function WI(BB) {
+      yI[0] = BB;
+      let IB = vI[(127 & UI[3]) << 1 | UI[2] >> 7];
+      return (IB * BB + (BB > 0 ? .5 : -.5) | 0) / IB
     }
     try {
-      Jj = new TextEncoder
-    } catch (Qz) {}
-    const gj = "undefined" !== typeof Buffer,
-      tj = gj ? function(BB) {
+      NI = new TextEncoder
+    } catch (TZ) {}
+    const dI = "undefined" !== typeof Buffer,
+      CI = dI ? function(BB) {
         return Buffer.allocUnsafeSlow(BB)
       } : Uint8Array,
-      Sj = gj ? Buffer : Uint8Array,
-      Mj = gj ? 4294967296 : 2144337920;
-    let Ej, ij, qj, fj, oj, Hj = 0,
-      Dj = null;
-    const Fj = /[\u0080-\uFFFF]/,
-      Yj = Symbol("record-id");
-    class Vj extends fB {
+      QI = dI ? Buffer : Uint8Array,
+      sI = dI ? 4294967296 : 2144337920;
+    let wI, OI, YI, iI, pI, aI = 0,
+      HI = null;
+    const MI = /[\u0080-\uFFFF]/,
+      jI = Symbol("record-id");
+    class PI extends iB {
       constructor(BB) {
-        let jB, zB, QB, nB;
+        let IB, ZB, TB, JB;
         super(BB), this.offset = 0;
-        let dB = Sj.prototype.utf8Write ? function(BB, jB) {
-            return Ej.utf8Write(BB, jB, Ej.byteLength - jB)
-          } : !(!Jj || !Jj.encodeInto) && function(BB, jB) {
-            return Jj.encodeInto(BB, Ej.subarray(jB)).written
+        let oB = QI.prototype.utf8Write ? function(BB, IB) {
+            return wI.utf8Write(BB, IB, wI.byteLength - IB)
+          } : !(!NI || !NI.encodeInto) && function(BB, IB) {
+            return NI.encodeInto(BB, wI.subarray(IB)).written
           },
-          IB = this;
+          GB = this;
         BB || (BB = {});
-        let NB = BB && BB.sequential,
-          uB = BB.structures || BB.saveStructures,
-          UB = BB.maxSharedStructures;
-        if (null == UB && (UB = uB ? 32 : 0), UB > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        let vB = BB && BB.sequential,
+          kB = BB.structures || BB.saveStructures,
+          cB = BB.maxSharedStructures;
+        if (null == cB && (cB = kB ? 32 : 0), cB > 8160) throw new Error("Maximum maxSharedStructure is 8160");
         BB.structuredClone && void 0 == BB.moreTypes && (this.moreTypes = !0);
-        let aB = BB.maxOwnStructures;
-        null == aB && (aB = uB ? 32 : 64), this.structures || 0 == BB.useRecords || (this.structures = []);
-        let pB = UB > 32 || aB + UB > 64,
-          rB = UB + 64,
-          sB = UB + aB + 64;
-        if (sB > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let JB = [],
-          mB = 0,
-          yB = 0;
-        this.pack = this.encode = function(BB, dB) {
-          if (Ej || (Ej = new tj(8192), qj = Ej.dataView || (Ej.dataView = new DataView(Ej.buffer, 0, 8192)), Hj = 0), fj = Ej.length - 10, fj - Hj < 2048 ? (Ej = new tj(Ej.length), qj = Ej.dataView || (Ej.dataView = new DataView(Ej.buffer, 0, Ej.length)), fj = Ej.length - 10, Hj = 0) : Hj = Hj + 7 & 2147483640, jB = Hj, dB & Rj && (Hj += 255 & dB), nB = IB.structuredClone ? new Map : null, IB.bundleStrings && "string" !== typeof BB ? (Dj = [], Dj.size = 1 / 0) : Dj = null, QB = IB.structures, QB) {
-            QB.uninitialized && (QB = IB._mergeStructures(IB.getStructures()));
-            let BB = QB.sharedLength || 0;
-            if (BB > UB) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + QB.sharedLength);
-            if (!QB.transitions) {
-              QB.transitions = Object.create(null);
-              for (let jB = 0; jB < BB; jB++) {
-                let BB = QB[jB];
+        let nB = BB.maxOwnStructures;
+        null == nB && (nB = kB ? 32 : 64), this.structures || 0 == BB.useRecords || (this.structures = []);
+        let hB = cB > 32 || nB + cB > 64,
+          zB = cB + 64,
+          FB = cB + nB + 64;
+        if (FB > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let NB = [],
+          gB = 0,
+          qB = 0;
+        this.pack = this.encode = function(BB, oB) {
+          if (wI || (wI = new CI(8192), YI = wI.dataView || (wI.dataView = new DataView(wI.buffer, 0, 8192)), aI = 0), iI = wI.length - 10, iI - aI < 2048 ? (wI = new CI(wI.length), YI = wI.dataView || (wI.dataView = new DataView(wI.buffer, 0, wI.length)), iI = wI.length - 10, aI = 0) : aI = aI + 7 & 2147483640, IB = aI, oB & VI && (aI += 255 & oB), JB = GB.structuredClone ? new Map : null, GB.bundleStrings && "string" !== typeof BB ? (HI = [], HI.size = 1 / 0) : HI = null, TB = GB.structures, TB) {
+            TB.uninitialized && (TB = GB._mergeStructures(GB.getStructures()));
+            let BB = TB.sharedLength || 0;
+            if (BB > cB) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + TB.sharedLength);
+            if (!TB.transitions) {
+              TB.transitions = Object.create(null);
+              for (let IB = 0; IB < BB; IB++) {
+                let BB = TB[IB];
                 if (!BB) continue;
-                let zB, nB = QB.transitions;
-                for (let jB = 0, QB = BB.length; jB < QB; jB++) {
-                  let QB = BB[jB];
-                  zB = nB[QB], zB || (zB = nB[QB] = Object.create(null)), nB = zB
+                let ZB, JB = TB.transitions;
+                for (let IB = 0, TB = BB.length; IB < TB; IB++) {
+                  let TB = BB[IB];
+                  ZB = JB[TB], ZB || (ZB = JB[TB] = Object.create(null)), JB = ZB
                 }
-                nB[Yj] = jB + 64
+                JB[jI] = IB + 64
               }
               this.lastNamedStructuresLength = BB
             }
-            NB || (QB.nextId = BB + 64)
+            vB || (TB.nextId = BB + 64)
           }
-          let uB;
-          zB && (zB = !1);
+          let kB;
+          ZB && (ZB = !1);
           try {
-            IB.randomAccessStructure && BB && BB.constructor && BB.constructor === Object ? fB(BB) : LB(BB);
-            let zB = Dj;
-            if (Dj && Aj(jB, LB, 0), nB && nB.idsToInsert) {
-              let BB = nB.idsToInsert.sort(((BB, jB) => BB.offset > jB.offset ? 1 : -1)),
-                QB = BB.length,
-                dB = -1;
-              for (; zB && QB > 0;) {
-                let nB = BB[--QB].offset + jB;
-                nB < zB.stringsPosition + jB && -1 === dB && (dB = 0), nB > zB.position + jB ? dB >= 0 && (dB += 6) : (dB >= 0 && (qj.setUint32(zB.position + jB, qj.getUint32(zB.position + jB) + dB), dB = -1), zB = zB.previous, QB++)
+            GB.randomAccessStructure && BB && BB.constructor && BB.constructor === Object ? iB(BB) : WB(BB);
+            let ZB = HI;
+            if (HI && XI(IB, WB, 0), JB && JB.idsToInsert) {
+              let BB = JB.idsToInsert.sort(((BB, IB) => BB.offset > IB.offset ? 1 : -1)),
+                TB = BB.length,
+                oB = -1;
+              for (; ZB && TB > 0;) {
+                let JB = BB[--TB].offset + IB;
+                JB < ZB.stringsPosition + IB && -1 === oB && (oB = 0), JB > ZB.position + IB ? oB >= 0 && (oB += 6) : (oB >= 0 && (YI.setUint32(ZB.position + IB, YI.getUint32(ZB.position + IB) + oB), oB = -1), ZB = ZB.previous, TB++)
               }
-              dB >= 0 && zB && qj.setUint32(zB.position + jB, qj.getUint32(zB.position + jB) + dB), Hj += 6 * BB.length, Hj > fj && EB(Hj), IB.offset = Hj;
-              let NB = function(BB, jB) {
-                let zB, QB = 6 * jB.length,
-                  nB = BB.length - QB;
-                for (; zB = jB.pop();) {
-                  let jB = zB.offset,
-                    dB = zB.id;
-                  BB.copyWithin(jB + QB, jB, nB), QB -= 6;
-                  let IB = jB + QB;
-                  BB[IB++] = 214, BB[IB++] = 105, BB[IB++] = dB >> 24, BB[IB++] = dB >> 16 & 255, BB[IB++] = dB >> 8 & 255, BB[IB++] = 255 & dB, nB = jB
+              oB >= 0 && ZB && YI.setUint32(ZB.position + IB, YI.getUint32(ZB.position + IB) + oB), aI += 6 * BB.length, aI > iI && wB(aI), GB.offset = aI;
+              let vB = function(BB, IB) {
+                let ZB, TB = 6 * IB.length,
+                  JB = BB.length - TB;
+                for (; ZB = IB.pop();) {
+                  let IB = ZB.offset,
+                    oB = ZB.id;
+                  BB.copyWithin(IB + TB, IB, JB), TB -= 6;
+                  let GB = IB + TB;
+                  BB[GB++] = 214, BB[GB++] = 105, BB[GB++] = oB >> 24, BB[GB++] = oB >> 16 & 255, BB[GB++] = oB >> 8 & 255, BB[GB++] = 255 & oB, JB = IB
                 }
                 return BB
-              }(Ej.subarray(jB, Hj), BB);
-              return nB = null, NB
+              }(wI.subarray(IB, aI), BB);
+              return JB = null, vB
             }
-            return IB.offset = Hj, dB & bj ? (Ej.start = jB, Ej.end = Hj, Ej) : Ej.subarray(jB, Hj)
-          } catch (Qz) {
-            throw uB = Qz, Qz
+            return GB.offset = aI, oB & DI ? (wI.start = IB, wI.end = aI, wI) : wI.subarray(IB, aI)
+          } catch (TZ) {
+            throw kB = TZ, TZ
           } finally {
-            if (QB && (kB(), zB && IB.saveStructures)) {
-              let zB = QB.sharedLength || 0,
-                nB = Ej.subarray(jB, Hj),
-                NB = Pj(QB, IB);
-              if (!uB) return !1 === IB.saveStructures(NB, NB.isCompatible) ? IB.pack(BB, dB) : (IB.lastNamedStructuresLength = zB, Ej.length > 1073741824 && (Ej = null), nB)
+            if (TB && (yB(), ZB && GB.saveStructures)) {
+              let ZB = TB.sharedLength || 0,
+                JB = wI.subarray(IB, aI),
+                vB = eI(TB, GB);
+              if (!kB) return !1 === GB.saveStructures(vB, vB.isCompatible) ? GB.pack(BB, oB) : (GB.lastNamedStructuresLength = ZB, wI.length > 1073741824 && (wI = null), JB)
             }
-            Ej.length > 1073741824 && (Ej = null), dB & vj && (Hj = jB)
+            wI.length > 1073741824 && (wI = null), oB & KI && (aI = IB)
           }
         };
-        const kB = () => {
-            yB < 10 && yB++;
-            let BB = QB.sharedLength || 0;
-            if (QB.length > BB && !NB && (QB.length = BB), mB > 1e4) QB.transitions = null, yB = 0, mB = 0, JB.length > 0 && (JB = []);
-            else if (JB.length > 0 && !NB) {
-              for (let BB = 0, jB = JB.length; BB < jB; BB++) JB[BB][Yj] = 0;
-              JB = []
+        const yB = () => {
+            qB < 10 && qB++;
+            let BB = TB.sharedLength || 0;
+            if (TB.length > BB && !vB && (TB.length = BB), gB > 1e4) TB.transitions = null, qB = 0, gB = 0, NB.length > 0 && (NB = []);
+            else if (NB.length > 0 && !vB) {
+              for (let BB = 0, IB = NB.length; BB < IB; BB++) NB[BB][jI] = 0;
+              NB = []
             }
           },
-          GB = BB => {
-            var jB = BB.length;
-            jB < 16 ? Ej[Hj++] = 144 | jB : jB < 65536 ? (Ej[Hj++] = 220, Ej[Hj++] = jB >> 8, Ej[Hj++] = 255 & jB) : (Ej[Hj++] = 221, qj.setUint32(Hj, jB), Hj += 4);
-            for (let zB = 0; zB < jB; zB++) LB(BB[zB])
+          UB = BB => {
+            var IB = BB.length;
+            IB < 16 ? wI[aI++] = 144 | IB : IB < 65536 ? (wI[aI++] = 220, wI[aI++] = IB >> 8, wI[aI++] = 255 & IB) : (wI[aI++] = 221, YI.setUint32(aI, IB), aI += 4);
+            for (let ZB = 0; ZB < IB; ZB++) WB(BB[ZB])
           },
-          LB = BB => {
-            Hj > fj && (Ej = EB(Hj));
-            var zB, QB = typeof BB;
-            if ("string" === QB) {
-              let QB, nB = BB.length;
-              if (Dj && nB >= 4 && nB < 4096) {
-                if ((Dj.size += nB) > 21760) {
-                  let BB, zB, QB = (Dj[0] ? 3 * Dj[0].length + Dj[1].length : 0) + 10;
-                  Hj + QB > fj && (Ej = EB(Hj + QB)), Dj.position ? (zB = Dj, Ej[Hj] = 200, Hj += 3, Ej[Hj++] = 98, BB = Hj - jB, Hj += 4, Aj(jB, LB, 0), qj.setUint16(BB + jB - 3, Hj - jB - BB)) : (Ej[Hj++] = 214, Ej[Hj++] = 98, BB = Hj - jB, Hj += 4), Dj = ["", ""], Dj.previous = zB, Dj.size = 0, Dj.position = BB
+          WB = BB => {
+            aI > iI && (wI = wB(aI));
+            var ZB, TB = typeof BB;
+            if ("string" === TB) {
+              let TB, JB = BB.length;
+              if (HI && JB >= 4 && JB < 4096) {
+                if ((HI.size += JB) > 21760) {
+                  let BB, ZB, TB = (HI[0] ? 3 * HI[0].length + HI[1].length : 0) + 10;
+                  aI + TB > iI && (wI = wB(aI + TB)), HI.position ? (ZB = HI, wI[aI] = 200, aI += 3, wI[aI++] = 98, BB = aI - IB, aI += 4, XI(IB, WB, 0), YI.setUint16(BB + IB - 3, aI - IB - BB)) : (wI[aI++] = 214, wI[aI++] = 98, BB = aI - IB, aI += 4), HI = ["", ""], HI.previous = ZB, HI.size = 0, HI.position = BB
                 }
-                let zB = Fj.test(BB);
-                return Dj[zB ? 0 : 1] += BB, Ej[Hj++] = 193, void LB(zB ? -nB : nB)
+                let ZB = MI.test(BB);
+                return HI[ZB ? 0 : 1] += BB, wI[aI++] = 193, void WB(ZB ? -JB : JB)
               }
-              QB = nB < 32 ? 1 : nB < 256 ? 2 : nB < 65536 ? 3 : 5;
-              let IB = 3 * nB;
-              if (Hj + IB > fj && (Ej = EB(Hj + IB)), nB < 64 || !dB) {
-                let jB, dB, IB, NB = Hj + QB;
-                for (jB = 0; jB < nB; jB++) dB = BB.charCodeAt(jB), dB < 128 ? Ej[NB++] = dB : dB < 2048 ? (Ej[NB++] = dB >> 6 | 192, Ej[NB++] = 63 & dB | 128) : 55296 === (64512 & dB) && 56320 === (64512 & (IB = BB.charCodeAt(jB + 1))) ? (dB = 65536 + ((1023 & dB) << 10) + (1023 & IB), jB++, Ej[NB++] = dB >> 18 | 240, Ej[NB++] = dB >> 12 & 63 | 128, Ej[NB++] = dB >> 6 & 63 | 128, Ej[NB++] = 63 & dB | 128) : (Ej[NB++] = dB >> 12 | 224, Ej[NB++] = dB >> 6 & 63 | 128, Ej[NB++] = 63 & dB | 128);
-                zB = NB - Hj - QB
-              } else zB = dB(BB, Hj + QB);
-              zB < 32 ? Ej[Hj++] = 160 | zB : zB < 256 ? (QB < 2 && Ej.copyWithin(Hj + 2, Hj + 1, Hj + 1 + zB), Ej[Hj++] = 217, Ej[Hj++] = zB) : zB < 65536 ? (QB < 3 && Ej.copyWithin(Hj + 3, Hj + 2, Hj + 2 + zB), Ej[Hj++] = 218, Ej[Hj++] = zB >> 8, Ej[Hj++] = 255 & zB) : (QB < 5 && Ej.copyWithin(Hj + 5, Hj + 3, Hj + 3 + zB), Ej[Hj++] = 219, qj.setUint32(Hj, zB), Hj += 4), Hj += zB
-            } else if ("number" === QB)
-              if (BB >>> 0 === BB) BB < 32 || BB < 128 && !1 === this.useRecords || BB < 64 && !this.randomAccessStructure ? Ej[Hj++] = BB : BB < 256 ? (Ej[Hj++] = 204, Ej[Hj++] = BB) : BB < 65536 ? (Ej[Hj++] = 205, Ej[Hj++] = BB >> 8, Ej[Hj++] = 255 & BB) : (Ej[Hj++] = 206, qj.setUint32(Hj, BB), Hj += 4);
-              else if ((BB | 0) === BB) BB >= -32 ? Ej[Hj++] = 256 + BB : BB >= -128 ? (Ej[Hj++] = 208, Ej[Hj++] = BB + 256) : BB >= -32768 ? (Ej[Hj++] = 209, qj.setInt16(Hj, BB), Hj += 2) : (Ej[Hj++] = 210, qj.setInt32(Hj, BB), Hj += 4);
+              TB = JB < 32 ? 1 : JB < 256 ? 2 : JB < 65536 ? 3 : 5;
+              let GB = 3 * JB;
+              if (aI + GB > iI && (wI = wB(aI + GB)), JB < 64 || !oB) {
+                let IB, oB, GB, vB = aI + TB;
+                for (IB = 0; IB < JB; IB++) oB = BB.charCodeAt(IB), oB < 128 ? wI[vB++] = oB : oB < 2048 ? (wI[vB++] = oB >> 6 | 192, wI[vB++] = 63 & oB | 128) : 55296 === (64512 & oB) && 56320 === (64512 & (GB = BB.charCodeAt(IB + 1))) ? (oB = 65536 + ((1023 & oB) << 10) + (1023 & GB), IB++, wI[vB++] = oB >> 18 | 240, wI[vB++] = oB >> 12 & 63 | 128, wI[vB++] = oB >> 6 & 63 | 128, wI[vB++] = 63 & oB | 128) : (wI[vB++] = oB >> 12 | 224, wI[vB++] = oB >> 6 & 63 | 128, wI[vB++] = 63 & oB | 128);
+                ZB = vB - aI - TB
+              } else ZB = oB(BB, aI + TB);
+              ZB < 32 ? wI[aI++] = 160 | ZB : ZB < 256 ? (TB < 2 && wI.copyWithin(aI + 2, aI + 1, aI + 1 + ZB), wI[aI++] = 217, wI[aI++] = ZB) : ZB < 65536 ? (TB < 3 && wI.copyWithin(aI + 3, aI + 2, aI + 2 + ZB), wI[aI++] = 218, wI[aI++] = ZB >> 8, wI[aI++] = 255 & ZB) : (TB < 5 && wI.copyWithin(aI + 5, aI + 3, aI + 3 + ZB), wI[aI++] = 219, YI.setUint32(aI, ZB), aI += 4), aI += ZB
+            } else if ("number" === TB)
+              if (BB >>> 0 === BB) BB < 32 || BB < 128 && !1 === this.useRecords || BB < 64 && !this.randomAccessStructure ? wI[aI++] = BB : BB < 256 ? (wI[aI++] = 204, wI[aI++] = BB) : BB < 65536 ? (wI[aI++] = 205, wI[aI++] = BB >> 8, wI[aI++] = 255 & BB) : (wI[aI++] = 206, YI.setUint32(aI, BB), aI += 4);
+              else if ((BB | 0) === BB) BB >= -32 ? wI[aI++] = 256 + BB : BB >= -128 ? (wI[aI++] = 208, wI[aI++] = BB + 256) : BB >= -32768 ? (wI[aI++] = 209, YI.setInt16(aI, BB), aI += 2) : (wI[aI++] = 210, YI.setInt32(aI, BB), aI += 4);
             else {
-              let jB;
-              if ((jB = this.useFloat32) > 0 && BB < 4294967296 && BB >= -2147483648) {
-                let zB;
-                if (Ej[Hj++] = 202, qj.setFloat32(Hj, BB), jB < 4 || ((zB = BB * Nj[(127 & Ej[Hj]) << 1 | Ej[Hj + 1] >> 7]) | 0) === zB) return void(Hj += 4);
-                Hj--
+              let IB;
+              if ((IB = this.useFloat32) > 0 && BB < 4294967296 && BB >= -2147483648) {
+                let ZB;
+                if (wI[aI++] = 202, YI.setFloat32(aI, BB), IB < 4 || ((ZB = BB * vI[(127 & wI[aI]) << 1 | wI[aI + 1] >> 7]) | 0) === ZB) return void(aI += 4);
+                aI--
               }
-              Ej[Hj++] = 203, qj.setFloat64(Hj, BB), Hj += 8
-            } else if ("object" === QB || "function" === QB)
+              wI[aI++] = 203, YI.setFloat64(aI, BB), aI += 8
+            } else if ("object" === TB || "function" === TB)
               if (BB) {
-                if (nB) {
-                  let zB = nB.get(BB);
-                  if (zB) {
-                    if (!zB.id) {
-                      let BB = nB.idsToInsert || (nB.idsToInsert = []);
-                      zB.id = BB.push(zB)
+                if (JB) {
+                  let ZB = JB.get(BB);
+                  if (ZB) {
+                    if (!ZB.id) {
+                      let BB = JB.idsToInsert || (JB.idsToInsert = []);
+                      ZB.id = BB.push(ZB)
                     }
-                    return Ej[Hj++] = 214, Ej[Hj++] = 112, qj.setUint32(Hj, zB.id), void(Hj += 4)
+                    return wI[aI++] = 214, wI[aI++] = 112, YI.setUint32(aI, ZB.id), void(aI += 4)
                   }
-                  nB.set(BB, {
-                    offset: Hj - jB
+                  JB.set(BB, {
+                    offset: aI - IB
                   })
                 }
-                let dB = BB.constructor;
-                if (dB === Object) MB(BB);
-                else if (dB === Array) GB(BB);
-                else if (dB === Map)
-                  if (this.mapAsEmptyObject) Ej[Hj++] = 128;
+                let oB = BB.constructor;
+                if (oB === Object) sB(BB);
+                else if (oB === Array) UB(BB);
+                else if (oB === Map)
+                  if (this.mapAsEmptyObject) wI[aI++] = 128;
                   else {
-                    (zB = BB.size) < 16 ? Ej[Hj++] = 128 | zB : zB < 65536 ? (Ej[Hj++] = 222, Ej[Hj++] = zB >> 8, Ej[Hj++] = 255 & zB) : (Ej[Hj++] = 223, qj.setUint32(Hj, zB), Hj += 4);
-                    for (let [jB, zB] of BB) LB(jB), LB(zB)
+                    (ZB = BB.size) < 16 ? wI[aI++] = 128 | ZB : ZB < 65536 ? (wI[aI++] = 222, wI[aI++] = ZB >> 8, wI[aI++] = 255 & ZB) : (wI[aI++] = 223, YI.setUint32(aI, ZB), aI += 4);
+                    for (let [IB, ZB] of BB) WB(IB), WB(ZB)
                   }
                 else {
-                  for (let jB = 0, zB = mj.length; jB < zB; jB++) {
-                    if (BB instanceof yj[jB]) {
-                      let zB = mj[jB];
-                      if (zB.write) {
-                        zB.type && (Ej[Hj++] = 212, Ej[Hj++] = zB.type, Ej[Hj++] = 0);
-                        let jB = zB.write.call(this, BB);
-                        return void(jB === BB ? Array.isArray(BB) ? GB(BB) : MB(BB) : LB(jB))
+                  for (let IB = 0, ZB = gI.length; IB < ZB; IB++) {
+                    if (BB instanceof qI[IB]) {
+                      let ZB = gI[IB];
+                      if (ZB.write) {
+                        ZB.type && (wI[aI++] = 212, wI[aI++] = ZB.type, wI[aI++] = 0);
+                        let IB = ZB.write.call(this, BB);
+                        return void(IB === BB ? Array.isArray(BB) ? UB(BB) : sB(BB) : WB(IB))
                       }
-                      let QB, nB = Ej,
-                        dB = qj,
-                        IB = Hj;
-                      Ej = null;
+                      let TB, JB = wI,
+                        oB = YI,
+                        GB = aI;
+                      wI = null;
                       try {
-                        QB = zB.pack.call(this, BB, (BB => (Ej = nB, nB = null, Hj += BB, Hj > fj && EB(Hj), {
-                          target: Ej,
-                          targetView: qj,
-                          position: Hj - BB
-                        })), LB)
+                        TB = ZB.pack.call(this, BB, (BB => (wI = JB, JB = null, aI += BB, aI > iI && wB(aI), {
+                          target: wI,
+                          targetView: YI,
+                          position: aI - BB
+                        })), WB)
                       } finally {
-                        nB && (Ej = nB, qj = dB, Hj = IB, fj = Ej.length - 10)
+                        JB && (wI = JB, YI = oB, aI = GB, iI = wI.length - 10)
                       }
-                      return void(QB && (QB.length + Hj > fj && EB(QB.length + Hj), Hj = Zj(QB, Ej, Hj, zB.type)))
+                      return void(TB && (TB.length + aI > iI && wB(TB.length + aI), aI = mI(TB, wI, aI, ZB.type)))
                     }
                   }
-                  if (Array.isArray(BB)) GB(BB);
+                  if (Array.isArray(BB)) UB(BB);
                   else {
                     if (BB.toJSON) {
-                      const jB = BB.toJSON();
-                      if (jB !== BB) return LB(jB)
+                      const IB = BB.toJSON();
+                      if (IB !== BB) return WB(IB)
                     }
-                    if ("function" === QB) return LB(this.writeFunction && this.writeFunction(BB));
-                    MB(BB)
+                    if ("function" === TB) return WB(this.writeFunction && this.writeFunction(BB));
+                    sB(BB)
                   }
                 }
-              } else Ej[Hj++] = 192;
-            else if ("boolean" === QB) Ej[Hj++] = BB ? 195 : 194;
-            else if ("bigint" === QB) {
-              if (BB < BigInt(1) << BigInt(63) && BB >= -(BigInt(1) << BigInt(63))) Ej[Hj++] = 211, qj.setBigInt64(Hj, BB);
-              else if (BB < BigInt(1) << BigInt(64) && BB > 0) Ej[Hj++] = 207, qj.setBigUint64(Hj, BB);
+              } else wI[aI++] = 192;
+            else if ("boolean" === TB) wI[aI++] = BB ? 195 : 194;
+            else if ("bigint" === TB) {
+              if (BB < BigInt(1) << BigInt(63) && BB >= -(BigInt(1) << BigInt(63))) wI[aI++] = 211, YI.setBigInt64(aI, BB);
+              else if (BB < BigInt(1) << BigInt(64) && BB > 0) wI[aI++] = 207, YI.setBigUint64(aI, BB);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return LB(BB.toString());
+                  if (this.largeBigIntToString) return WB(BB.toString());
                   if (this.useBigIntExtension && BB < BigInt(2) ** BigInt(1023) && BB > -(BigInt(2) ** BigInt(1023))) {
-                    Ej[Hj++] = 199, Hj++, Ej[Hj++] = 66;
-                    let jB, zB = [];
+                    wI[aI++] = 199, aI++, wI[aI++] = 66;
+                    let IB, ZB = [];
                     do {
-                      let QB = BB & BigInt(255);
-                      jB = (QB & BigInt(128)) === (BB < BigInt(0) ? BigInt(128) : BigInt(0)), zB.push(QB), BB >>= BigInt(8)
-                    } while (BB !== BigInt(0) && BB !== BigInt(-1) || !jB);
-                    Ej[Hj - 2] = zB.length;
-                    for (let BB = zB.length; BB > 0;) Ej[Hj++] = Number(zB[--BB]);
+                      let TB = BB & BigInt(255);
+                      IB = (TB & BigInt(128)) === (BB < BigInt(0) ? BigInt(128) : BigInt(0)), ZB.push(TB), BB >>= BigInt(8)
+                    } while (BB !== BigInt(0) && BB !== BigInt(-1) || !IB);
+                    wI[aI - 2] = ZB.length;
+                    for (let BB = ZB.length; BB > 0;) wI[aI++] = Number(ZB[--BB]);
                     return
                   }
                   throw new RangeError(BB + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                Ej[Hj++] = 203, qj.setFloat64(Hj, Number(BB))
+                wI[aI++] = 203, YI.setFloat64(aI, Number(BB))
               }
-              Hj += 8
+              aI += 8
             } else {
-              if ("undefined" !== QB) throw new Error("Unknown type: " + QB);
-              this.encodeUndefinedAsNil ? Ej[Hj++] = 192 : (Ej[Hj++] = 212, Ej[Hj++] = 0, Ej[Hj++] = 0)
+              if ("undefined" !== TB) throw new Error("Unknown type: " + TB);
+              this.encodeUndefinedAsNil ? wI[aI++] = 192 : (wI[aI++] = 212, wI[aI++] = 0, wI[aI++] = 0)
             }
           },
-          gB = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? BB => {
-            let jB;
+          dB = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? BB => {
+            let IB;
             if (this.skipValues) {
-              jB = [];
-              for (let zB in BB) "function" === typeof BB.hasOwnProperty && !BB.hasOwnProperty(zB) || this.skipValues.includes(BB[zB]) || jB.push(zB)
-            } else jB = Object.keys(BB);
-            let zB, QB = jB.length;
-            if (QB < 16 ? Ej[Hj++] = 128 | QB : QB < 65536 ? (Ej[Hj++] = 222, Ej[Hj++] = QB >> 8, Ej[Hj++] = 255 & QB) : (Ej[Hj++] = 223, qj.setUint32(Hj, QB), Hj += 4), this.coercibleKeyAsNumber)
-              for (let nB = 0; nB < QB; nB++) {
-                zB = jB[nB];
-                let QB = Number(zB);
-                LB(isNaN(QB) ? zB : QB), LB(BB[zB])
+              IB = [];
+              for (let ZB in BB) "function" === typeof BB.hasOwnProperty && !BB.hasOwnProperty(ZB) || this.skipValues.includes(BB[ZB]) || IB.push(ZB)
+            } else IB = Object.keys(BB);
+            let ZB, TB = IB.length;
+            if (TB < 16 ? wI[aI++] = 128 | TB : TB < 65536 ? (wI[aI++] = 222, wI[aI++] = TB >> 8, wI[aI++] = 255 & TB) : (wI[aI++] = 223, YI.setUint32(aI, TB), aI += 4), this.coercibleKeyAsNumber)
+              for (let JB = 0; JB < TB; JB++) {
+                ZB = IB[JB];
+                let TB = Number(ZB);
+                WB(isNaN(TB) ? ZB : TB), WB(BB[ZB])
               } else
-                for (let nB = 0; nB < QB; nB++) LB(zB = jB[nB]), LB(BB[zB])
+                for (let JB = 0; JB < TB; JB++) WB(ZB = IB[JB]), WB(BB[ZB])
           } : BB => {
-            Ej[Hj++] = 222;
-            let zB = Hj - jB;
-            Hj += 2;
-            let QB = 0;
-            for (let jB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(jB)) && (LB(jB), LB(BB[jB]), QB++);
-            if (QB > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            Ej[zB++ + jB] = QB >> 8, Ej[zB + jB] = 255 & QB
+            wI[aI++] = 222;
+            let ZB = aI - IB;
+            aI += 2;
+            let TB = 0;
+            for (let IB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(IB)) && (WB(IB), WB(BB[IB]), TB++);
+            if (TB > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            wI[ZB++ + IB] = TB >> 8, wI[ZB + IB] = 255 & TB
           },
-          tB = !1 === this.useRecords ? gB : BB.progressiveRecords && !pB ? BB => {
-            let zB, nB, dB = QB.transitions || (QB.transitions = Object.create(null)),
-              IB = Hj++ - jB;
-            for (let NB in BB)
-              if ("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(NB)) {
-                if (zB = dB[NB], zB) dB = zB;
+          CB = !1 === this.useRecords ? dB : BB.progressiveRecords && !hB ? BB => {
+            let ZB, JB, oB = TB.transitions || (TB.transitions = Object.create(null)),
+              GB = aI++ - IB;
+            for (let vB in BB)
+              if ("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(vB)) {
+                if (ZB = oB[vB], ZB) oB = ZB;
                 else {
-                  let uB = Object.keys(BB),
-                    UB = dB;
-                  dB = QB.transitions;
-                  let aB = 0;
-                  for (let BB = 0, jB = uB.length; BB < jB; BB++) {
-                    let jB = uB[BB];
-                    zB = dB[jB], zB || (zB = dB[jB] = Object.create(null), aB++), dB = zB
+                  let kB = Object.keys(BB),
+                    cB = oB;
+                  oB = TB.transitions;
+                  let nB = 0;
+                  for (let BB = 0, IB = kB.length; BB < IB; BB++) {
+                    let IB = kB[BB];
+                    ZB = oB[IB], ZB || (ZB = oB[IB] = Object.create(null), nB++), oB = ZB
                   }
-                  IB + jB + 1 == Hj ? (Hj--, iB(dB, uB, aB)) : qB(dB, uB, IB, aB), nB = !0, dB = UB[NB]
+                  GB + IB + 1 == aI ? (aI--, OB(oB, kB, nB)) : YB(oB, kB, GB, nB), JB = !0, oB = cB[vB]
                 }
-                LB(BB[NB])
-              } if (!nB) {
-              let zB = dB[Yj];
-              zB ? Ej[IB + jB] = zB : qB(dB, Object.keys(BB), IB, 0)
+                WB(BB[vB])
+              } if (!JB) {
+              let ZB = oB[jI];
+              ZB ? wI[GB + IB] = ZB : YB(oB, Object.keys(BB), GB, 0)
             }
           } : BB => {
-            let jB, zB = QB.transitions || (QB.transitions = Object.create(null)),
-              nB = 0;
-            for (let QB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(QB)) && (jB = zB[QB], jB || (jB = zB[QB] = Object.create(null), nB++), zB = jB);
-            let dB = zB[Yj];
-            dB ? dB >= 96 && pB ? (Ej[Hj++] = 96 + (31 & (dB -= 96)), Ej[Hj++] = dB >> 5) : Ej[Hj++] = dB : iB(zB, zB.__keys__ || Object.keys(BB), nB);
-            for (let QB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(QB)) && LB(BB[QB])
+            let IB, ZB = TB.transitions || (TB.transitions = Object.create(null)),
+              JB = 0;
+            for (let TB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(TB)) && (IB = ZB[TB], IB || (IB = ZB[TB] = Object.create(null), JB++), ZB = IB);
+            let oB = ZB[jI];
+            oB ? oB >= 96 && hB ? (wI[aI++] = 96 + (31 & (oB -= 96)), wI[aI++] = oB >> 5) : wI[aI++] = oB : OB(ZB, ZB.__keys__ || Object.keys(BB), JB);
+            for (let TB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(TB)) && WB(BB[TB])
           },
-          SB = "function" == typeof this.useRecords && this.useRecords,
-          MB = SB ? BB => {
-            SB(BB) ? tB(BB) : gB(BB)
-          } : tB,
-          EB = BB => {
-            let zB;
+          QB = "function" == typeof this.useRecords && this.useRecords,
+          sB = QB ? BB => {
+            QB(BB) ? CB(BB) : dB(BB)
+          } : CB,
+          wB = BB => {
+            let ZB;
             if (BB > 16777216) {
-              if (BB - jB > Mj) throw new Error("Packed buffer would be larger than maximum buffer size");
-              zB = Math.min(Mj, 4096 * Math.round(Math.max((BB - jB) * (BB > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else zB = 1 + (Math.max(BB - jB << 2, Ej.length - 1) >> 12) << 12;
-            let QB = new tj(zB);
-            return qj = QB.dataView || (QB.dataView = new DataView(QB.buffer, 0, zB)), BB = Math.min(BB, Ej.length), Ej.copy ? Ej.copy(QB, 0, jB, BB) : QB.set(Ej.slice(jB, BB)), Hj -= jB, jB = 0, fj = QB.length - 10, Ej = QB
+              if (BB - IB > sI) throw new Error("Packed buffer would be larger than maximum buffer size");
+              ZB = Math.min(sI, 4096 * Math.round(Math.max((BB - IB) * (BB > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else ZB = 1 + (Math.max(BB - IB << 2, wI.length - 1) >> 12) << 12;
+            let TB = new CI(ZB);
+            return YI = TB.dataView || (TB.dataView = new DataView(TB.buffer, 0, ZB)), BB = Math.min(BB, wI.length), wI.copy ? wI.copy(TB, 0, IB, BB) : TB.set(wI.slice(IB, BB)), aI -= IB, IB = 0, iI = TB.length - 10, wI = TB
           },
-          iB = (BB, jB, nB) => {
-            let dB = QB.nextId;
-            dB || (dB = 64), dB < rB && this.shouldShareStructure && !this.shouldShareStructure(jB) ? (dB = QB.nextOwnId, dB < sB || (dB = rB), QB.nextOwnId = dB + 1) : (dB >= sB && (dB = rB), QB.nextId = dB + 1);
-            let IB = jB.highByte = dB >= 96 && pB ? dB - 96 >> 5 : -1;
-            BB[Yj] = dB, BB.__keys__ = jB, QB[dB - 64] = jB, dB < rB ? (jB.isShared = !0, QB.sharedLength = dB - 63, zB = !0, IB >= 0 ? (Ej[Hj++] = 96 + (31 & dB), Ej[Hj++] = IB) : Ej[Hj++] = dB) : (IB >= 0 ? (Ej[Hj++] = 213, Ej[Hj++] = 114, Ej[Hj++] = 96 + (31 & dB), Ej[Hj++] = IB) : (Ej[Hj++] = 212, Ej[Hj++] = 114, Ej[Hj++] = dB), nB && (mB += yB * nB), JB.length >= aB && (JB.shift()[Yj] = 0), JB.push(BB), LB(jB))
+          OB = (BB, IB, JB) => {
+            let oB = TB.nextId;
+            oB || (oB = 64), oB < zB && this.shouldShareStructure && !this.shouldShareStructure(IB) ? (oB = TB.nextOwnId, oB < FB || (oB = zB), TB.nextOwnId = oB + 1) : (oB >= FB && (oB = zB), TB.nextId = oB + 1);
+            let GB = IB.highByte = oB >= 96 && hB ? oB - 96 >> 5 : -1;
+            BB[jI] = oB, BB.__keys__ = IB, TB[oB - 64] = IB, oB < zB ? (IB.isShared = !0, TB.sharedLength = oB - 63, ZB = !0, GB >= 0 ? (wI[aI++] = 96 + (31 & oB), wI[aI++] = GB) : wI[aI++] = oB) : (GB >= 0 ? (wI[aI++] = 213, wI[aI++] = 114, wI[aI++] = 96 + (31 & oB), wI[aI++] = GB) : (wI[aI++] = 212, wI[aI++] = 114, wI[aI++] = oB), JB && (gB += qB * JB), NB.length >= nB && (NB.shift()[jI] = 0), NB.push(BB), WB(IB))
           },
-          qB = (BB, zB, QB, nB) => {
-            let dB = Ej,
-              IB = Hj,
-              NB = fj,
-              uB = jB;
-            Ej = ij, Hj = 0, jB = 0, Ej || (ij = Ej = new tj(8192)), fj = Ej.length - 10, iB(BB, zB, nB), ij = Ej;
-            let UB = Hj;
-            if (Ej = dB, Hj = IB, fj = NB, jB = uB, UB > 1) {
-              let BB = Hj + UB - 1;
-              BB > fj && EB(BB);
-              let zB = QB + jB;
-              Ej.copyWithin(zB + UB, zB + 1, Hj), Ej.set(ij.slice(0, UB), zB), Hj = BB
-            } else Ej[QB + jB] = ij[0]
+          YB = (BB, ZB, TB, JB) => {
+            let oB = wI,
+              GB = aI,
+              vB = iI,
+              kB = IB;
+            wI = OI, aI = 0, IB = 0, wI || (OI = wI = new CI(8192)), iI = wI.length - 10, OB(BB, ZB, JB), OI = wI;
+            let cB = aI;
+            if (wI = oB, aI = GB, iI = vB, IB = kB, cB > 1) {
+              let BB = aI + cB - 1;
+              BB > iI && wB(BB);
+              let ZB = TB + IB;
+              wI.copyWithin(ZB + cB, ZB + 1, aI), wI.set(OI.slice(0, cB), ZB), aI = BB
+            } else wI[TB + IB] = OI[0]
           },
-          fB = BB => {
-            let nB = oj(BB, Ej, jB, Hj, QB, EB, ((BB, jB, QB) => {
-              if (QB) return zB = !0;
-              Hj = jB;
-              let nB = Ej;
-              return LB(BB), kB(), nB !== Ej ? {
-                position: Hj,
-                targetView: qj,
-                target: Ej
-              } : Hj
+          iB = BB => {
+            let JB = pI(BB, wI, IB, aI, TB, wB, ((BB, IB, TB) => {
+              if (TB) return ZB = !0;
+              aI = IB;
+              let JB = wI;
+              return WB(BB), yB(), JB !== wI ? {
+                position: aI,
+                targetView: YI,
+                target: wI
+              } : aI
             }), this);
-            if (0 === nB) return MB(BB);
-            Hj = nB
+            if (0 === JB) return sB(BB);
+            aI = JB
           }
       }
       useBuffer(BB) {
-        Ej = BB, qj = Ej.dataView || (Ej.dataView = new DataView(Ej.buffer, Ej.byteOffset, Ej.byteLength)), Hj = 0
+        wI = BB, YI = wI.dataView || (wI.dataView = new DataView(wI.buffer, wI.byteOffset, wI.byteLength)), aI = 0
       }
       set position(BB) {
-        Hj = BB
+        aI = BB
       }
       get position() {
-        return Hj
+        return aI
       }
       set buffer(BB) {
-        Ej = BB
+        wI = BB
       }
       get buffer() {
-        return Ej
+        return wI
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function hj(BB, jB, zB, QB) {
-      let nB = BB.byteLength;
-      if (nB + 1 < 256) {
+    function RI(BB, IB, ZB, TB) {
+      let JB = BB.byteLength;
+      if (JB + 1 < 256) {
         var {
-          target: dB,
-          position: IB
-        } = zB(4 + nB);
-        dB[IB++] = 199, dB[IB++] = nB + 1
-      } else if (nB + 1 < 65536) {
+          target: oB,
+          position: GB
+        } = ZB(4 + JB);
+        oB[GB++] = 199, oB[GB++] = JB + 1
+      } else if (JB + 1 < 65536) {
         var {
-          target: dB,
-          position: IB
-        } = zB(5 + nB);
-        dB[IB++] = 200, dB[IB++] = nB + 1 >> 8, dB[IB++] = nB + 1 & 255
+          target: oB,
+          position: GB
+        } = ZB(5 + JB);
+        oB[GB++] = 200, oB[GB++] = JB + 1 >> 8, oB[GB++] = JB + 1 & 255
       } else {
         var {
-          target: dB,
-          position: IB,
-          targetView: NB
-        } = zB(7 + nB);
-        dB[IB++] = 201, NB.setUint32(IB, nB + 1), IB += 4
+          target: oB,
+          position: GB,
+          targetView: vB
+        } = ZB(7 + JB);
+        oB[GB++] = 201, vB.setUint32(GB, JB + 1), GB += 4
       }
-      dB[IB++] = 116, dB[IB++] = jB, BB.buffer || (BB = new Uint8Array(BB)), dB.set(new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength), IB)
+      oB[GB++] = 116, oB[GB++] = IB, BB.buffer || (BB = new Uint8Array(BB)), oB.set(new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength), GB)
     }
 
-    function Xj(BB, jB) {
-      let zB = BB.byteLength;
-      var QB, nB;
-      if (zB < 256) {
+    function rI(BB, IB) {
+      let ZB = BB.byteLength;
+      var TB, JB;
+      if (ZB < 256) {
         var {
-          target: QB,
-          position: nB
-        } = jB(zB + 2);
-        QB[nB++] = 196, QB[nB++] = zB
-      } else if (zB < 65536) {
+          target: TB,
+          position: JB
+        } = IB(ZB + 2);
+        TB[JB++] = 196, TB[JB++] = ZB
+      } else if (ZB < 65536) {
         var {
-          target: QB,
-          position: nB
-        } = jB(zB + 3);
-        QB[nB++] = 197, QB[nB++] = zB >> 8, QB[nB++] = 255 & zB
+          target: TB,
+          position: JB
+        } = IB(ZB + 3);
+        TB[JB++] = 197, TB[JB++] = ZB >> 8, TB[JB++] = 255 & ZB
       } else {
         var {
-          target: QB,
-          position: nB,
-          targetView: dB
-        } = jB(zB + 5);
-        QB[nB++] = 198, dB.setUint32(nB, zB), nB += 4
+          target: TB,
+          position: JB,
+          targetView: oB
+        } = IB(ZB + 5);
+        TB[JB++] = 198, oB.setUint32(JB, ZB), JB += 4
       }
-      QB.set(BB, nB)
+      TB.set(BB, JB)
     }
 
-    function Zj(BB, jB, zB, QB) {
-      let nB = BB.length;
-      switch (nB) {
+    function mI(BB, IB, ZB, TB) {
+      let JB = BB.length;
+      switch (JB) {
         case 1:
-          jB[zB++] = 212;
+          IB[ZB++] = 212;
           break;
         case 2:
-          jB[zB++] = 213;
+          IB[ZB++] = 213;
           break;
         case 4:
-          jB[zB++] = 214;
+          IB[ZB++] = 214;
           break;
         case 8:
-          jB[zB++] = 215;
+          IB[ZB++] = 215;
           break;
         case 16:
-          jB[zB++] = 216;
+          IB[ZB++] = 216;
           break;
         default:
-          nB < 256 ? (jB[zB++] = 199, jB[zB++] = nB) : nB < 65536 ? (jB[zB++] = 200, jB[zB++] = nB >> 8, jB[zB++] = 255 & nB) : (jB[zB++] = 201, jB[zB++] = nB >> 24, jB[zB++] = nB >> 16 & 255, jB[zB++] = nB >> 8 & 255, jB[zB++] = 255 & nB)
+          JB < 256 ? (IB[ZB++] = 199, IB[ZB++] = JB) : JB < 65536 ? (IB[ZB++] = 200, IB[ZB++] = JB >> 8, IB[ZB++] = 255 & JB) : (IB[ZB++] = 201, IB[ZB++] = JB >> 24, IB[ZB++] = JB >> 16 & 255, IB[ZB++] = JB >> 8 & 255, IB[ZB++] = 255 & JB)
       }
-      return jB[zB++] = QB, jB.set(BB, zB), zB += nB
+      return IB[ZB++] = TB, IB.set(BB, ZB), ZB += JB
     }
 
-    function Aj(BB, jB, zB) {
-      if (Dj.length > 0) {
-        qj.setUint32(Dj.position + BB, Hj + zB - Dj.position - BB), Dj.stringsPosition = Hj - BB;
-        let QB = Dj;
-        Dj = null, jB(QB[0]), jB(QB[1])
+    function XI(BB, IB, ZB) {
+      if (HI.length > 0) {
+        YI.setUint32(HI.position + BB, aI + ZB - HI.position - BB), HI.stringsPosition = aI - BB;
+        let TB = HI;
+        HI = null, IB(TB[0]), IB(TB[1])
       }
     }
 
-    function Tj(BB) {
+    function LI(BB) {
       if (BB.Class) {
         if (!BB.pack && !BB.write) throw new Error("Extension has no pack or write function");
         if (BB.pack && !BB.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        yj.unshift(BB.Class), mj.unshift(BB)
+        qI.unshift(BB.Class), gI.unshift(BB)
       }! function(BB) {
-        BB.unpack ? GB[BB.type] = BB.unpack : GB[BB.type] = BB
+        BB.unpack ? UB[BB.type] = BB.unpack : UB[BB.type] = BB
       }(BB)
     }
 
-    function Pj(BB, jB) {
+    function eI(BB, IB) {
       return BB.isCompatible = BB => {
-        let zB = !BB || (jB.lastNamedStructuresLength || 0) === BB.length;
-        return zB || jB._mergeStructures(BB), zB
+        let ZB = !BB || (IB.lastNamedStructuresLength || 0) === BB.length;
+        return ZB || IB._mergeStructures(BB), ZB
       }, BB
     }
-    yj = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, gB], mj = [{
-      pack(BB, jB, zB) {
-        let QB = BB.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === BB.getMilliseconds()) && QB >= 0 && QB < 4294967296) {
+    qI = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, dB], gI = [{
+      pack(BB, IB, ZB) {
+        let TB = BB.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === BB.getMilliseconds()) && TB >= 0 && TB < 4294967296) {
           let {
             target: BB,
-            targetView: zB,
-            position: nB
-          } = jB(6);
-          BB[nB++] = 214, BB[nB++] = 255, zB.setUint32(nB, QB)
-        } else if (QB > 0 && QB < 4294967296) {
+            targetView: ZB,
+            position: JB
+          } = IB(6);
+          BB[JB++] = 214, BB[JB++] = 255, ZB.setUint32(JB, TB)
+        } else if (TB > 0 && TB < 4294967296) {
           let {
-            target: zB,
-            targetView: nB,
-            position: dB
-          } = jB(10);
-          zB[dB++] = 215, zB[dB++] = 255, nB.setUint32(dB, 4e6 * BB.getMilliseconds() + (QB / 1e3 / 4294967296 | 0)), nB.setUint32(dB + 4, QB)
-        } else if (isNaN(QB)) {
-          if (this.onInvalidDate) return jB(0), zB(this.onInvalidDate());
+            target: ZB,
+            targetView: JB,
+            position: oB
+          } = IB(10);
+          ZB[oB++] = 215, ZB[oB++] = 255, JB.setUint32(oB, 4e6 * BB.getMilliseconds() + (TB / 1e3 / 4294967296 | 0)), JB.setUint32(oB + 4, TB)
+        } else if (isNaN(TB)) {
+          if (this.onInvalidDate) return IB(0), ZB(this.onInvalidDate());
           let {
             target: BB,
-            targetView: QB,
-            position: nB
-          } = jB(3);
-          BB[nB++] = 212, BB[nB++] = 255, BB[nB++] = 255
+            targetView: TB,
+            position: JB
+          } = IB(3);
+          BB[JB++] = 212, BB[JB++] = 255, BB[JB++] = 255
         } else {
           let {
-            target: zB,
-            targetView: nB,
-            position: dB
-          } = jB(15);
-          zB[dB++] = 199, zB[dB++] = 12, zB[dB++] = 255, nB.setUint32(dB, 1e6 * BB.getMilliseconds()), nB.setBigInt64(dB + 4, BigInt(Math.floor(QB)))
+            target: ZB,
+            targetView: JB,
+            position: oB
+          } = IB(15);
+          ZB[oB++] = 199, ZB[oB++] = 12, ZB[oB++] = 255, JB.setUint32(oB, 1e6 * BB.getMilliseconds()), JB.setBigInt64(oB + 4, BigInt(Math.floor(TB)))
         }
       }
     }, {
-      pack(BB, jB, zB) {
-        if (this.setAsEmptyObject) return jB(0), zB({});
-        let QB = Array.from(BB),
+      pack(BB, IB, ZB) {
+        if (this.setAsEmptyObject) return IB(0), ZB({});
+        let TB = Array.from(BB),
           {
-            target: nB,
-            position: dB
-          } = jB(this.moreTypes ? 3 : 0);
-        this.moreTypes && (nB[dB++] = 212, nB[dB++] = 115, nB[dB++] = 0), zB(QB)
+            target: JB,
+            position: oB
+          } = IB(this.moreTypes ? 3 : 0);
+        this.moreTypes && (JB[oB++] = 212, JB[oB++] = 115, JB[oB++] = 0), ZB(TB)
       }
     }, {
-      pack(BB, jB, zB) {
+      pack(BB, IB, ZB) {
         let {
-          target: QB,
-          position: nB
-        } = jB(this.moreTypes ? 3 : 0);
-        this.moreTypes && (QB[nB++] = 212, QB[nB++] = 101, QB[nB++] = 0), zB([BB.name, BB.message, BB.cause])
+          target: TB,
+          position: JB
+        } = IB(this.moreTypes ? 3 : 0);
+        this.moreTypes && (TB[JB++] = 212, TB[JB++] = 101, TB[JB++] = 0), ZB([BB.name, BB.message, BB.cause])
       }
     }, {
-      pack(BB, jB, zB) {
+      pack(BB, IB, ZB) {
         let {
-          target: QB,
-          position: nB
-        } = jB(this.moreTypes ? 3 : 0);
-        this.moreTypes && (QB[nB++] = 212, QB[nB++] = 120, QB[nB++] = 0), zB([BB.source, BB.flags])
+          target: TB,
+          position: JB
+        } = IB(this.moreTypes ? 3 : 0);
+        this.moreTypes && (TB[JB++] = 212, TB[JB++] = 120, TB[JB++] = 0), ZB([BB.source, BB.flags])
       }
     }, {
-      pack(BB, jB) {
-        this.moreTypes ? hj(BB, 16, jB) : Xj(gj ? Buffer.from(BB) : new Uint8Array(BB), jB)
+      pack(BB, IB) {
+        this.moreTypes ? RI(BB, 16, IB) : rI(dI ? Buffer.from(BB) : new Uint8Array(BB), IB)
       }
     }, {
-      pack(BB, jB) {
-        let zB = BB.constructor;
-        zB !== Sj && this.moreTypes ? hj(BB, zj.indexOf(zB.name), jB) : Xj(BB, jB)
+      pack(BB, IB) {
+        let ZB = BB.constructor;
+        ZB !== QI && this.moreTypes ? RI(BB, ZI.indexOf(ZB.name), IB) : rI(BB, IB)
       }
     }, {
-      pack(BB, jB) {
+      pack(BB, IB) {
         let {
-          target: zB,
-          position: QB
-        } = jB(1);
-        zB[QB] = 193
+          target: ZB,
+          position: TB
+        } = IB(1);
+        ZB[TB] = 193
       }
     }];
-    let Wj = new Vj({
+    let uI = new PI({
       useRecords: !1
     });
-    const ej = Wj.pack,
-      lj = Wj.pack,
-      wj = Vj,
+    const fI = uI.pack,
+      lI = uI.pack,
+      AI = PI,
       {
-        NEVER: xj,
-        ALWAYS: Kj,
-        DECIMAL_ROUND: Cj,
-        DECIMAL_FIT: cj
-      } = sj,
-      bj = 512,
-      vj = 1024,
-      Rj = 2048;
-    const Oj = function(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        NEVER: tI,
+        ALWAYS: bI,
+        DECIMAL_ROUND: xI,
+        DECIMAL_FIT: EI
+      } = FI,
+      DI = 512,
+      KI = 1024,
+      VI = 2048;
+    const SI = function(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (!BB || "object" !== typeof BB) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const zB = new fB(jB);
-        let QB;
-        const nB = BB => {
-          let jB;
-          QB && (BB = Buffer.concat([QB, BB]), QB = void 0);
+        const ZB = new iB(IB);
+        let TB;
+        const JB = BB => {
+          let IB;
+          TB && (BB = Buffer.concat([TB, BB]), TB = void 0);
           try {
-            jB = zB.unpackMultiple(BB)
-          } catch (nB) {
-            if (!nB.incomplete) throw nB;
-            QB = BB.slice(nB.lastPosition), jB = nB.values
+            IB = ZB.unpackMultiple(BB)
+          } catch (JB) {
+            if (!JB.incomplete) throw JB;
+            TB = BB.slice(JB.lastPosition), IB = JB.values
           }
-          return jB
+          return IB
         };
         return "function" === typeof BB[Symbol.iterator] ? function*() {
-          for (const jB of BB) yield* nB(jB)
+          for (const IB of BB) yield* JB(IB)
         }() : "function" === typeof BB[Symbol.asyncIterator] ? async function*() {
-          for await (const jB of BB) yield* nB(jB)
+          for await (const IB of BB) yield* JB(IB)
         }(): void 0
       },
-      Bz = function(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      BZ = function(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (BB && "object" === typeof BB) {
-          if ("function" === typeof BB[Symbol.iterator]) return function*(BB, jB) {
-            const zB = new Vj(jB);
-            for (const QB of BB) yield zB.pack(QB)
-          }(BB, jB);
-          if ("function" === typeof BB.then || "function" === typeof BB[Symbol.asyncIterator]) return async function*(BB, jB) {
-            const zB = new Vj(jB);
-            for await (const QB of BB) yield zB.pack(QB)
-          }(BB, jB);
+          if ("function" === typeof BB[Symbol.iterator]) return function*(BB, IB) {
+            const ZB = new PI(IB);
+            for (const TB of BB) yield ZB.pack(TB)
+          }(BB, IB);
+          if ("function" === typeof BB.then || "function" === typeof BB[Symbol.asyncIterator]) return async function*(BB, IB) {
+            const ZB = new PI(IB);
+            for await (const TB of BB) yield ZB.pack(TB)
+          }(BB, IB);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      jz = !1,
-      zz = !0
+      IZ = !1,
+      ZZ = !0
   },
-  9159: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      $changes: () => mB,
-      $childType: () => yB,
-      $decoder: () => aB,
-      $deleteByIndex: () => sB,
-      $encoder: () => UB,
-      $filter: () => pB,
-      $getByIndex: () => rB,
-      $numFields: () => qB,
-      $refId: () => NB,
-      $track: () => uB,
-      $values: () => tB,
-      ArraySchema: () => zQ,
-      Callbacks: () => zn,
-      ChangeTree: () => Hz,
-      CollectionSchema: () => dQ,
-      Decoder: () => CQ,
-      Encoder: () => lQ,
-      FieldBuilder: () => uQ,
-      MapSchema: () => nQ,
-      Metadata: () => Cj,
-      OPERATION: () => nB,
-      Reflection: () => RQ,
-      ReflectionField: () => bQ,
-      ReflectionType: () => vQ,
-      Root: () => DQ,
-      Schema: () => oQ,
-      SetSchema: () => IQ,
-      StateCallbackStrategy: () => jn,
-      StateView: () => XQ,
-      StreamSchema: () => NQ,
-      TypeContext: () => Pj,
-      createPool: () => nn,
-      decode: () => Lj,
-      decodeKeyValueOperation: () => bz,
-      decodeSchemaOperation: () => cz,
-      defineCustomTypes: () => Mj,
-      defineTypes: () => iQ,
-      deprecated: () => MQ,
-      dumpChanges: () => fQ,
-      encode: () => jj,
-      encodeArray: () => Az,
-      encodeIndexedEntry: () => Xz,
-      encodeKeyValueOperation: () => Zz,
-      encodeMapEntry: () => hz,
-      encodeSchemaOperation: () => Vz,
-      SJ: () => mQ,
-      fullStateOnly: () => LQ,
-      getDecoderStateCallbacks: () => OQ,
-      getEncodeDescriptor: () => Bz,
-      getRawChangesCallback: () => Bn,
-      isBuilder: () => UQ,
-      patchOnly: () => GQ,
-      registerType: () => Sj,
-      schema: () => qQ,
-      t: () => sQ,
-      type: () => gQ,
-      unreliable: () => kQ,
-      view: () => yQ
+  9201: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      $changes: () => gB,
+      $childType: () => qB,
+      $decoder: () => nB,
+      $deleteByIndex: () => FB,
+      $encoder: () => cB,
+      $filter: () => hB,
+      $getByIndex: () => zB,
+      $numFields: () => YB,
+      $refId: () => vB,
+      $track: () => kB,
+      $values: () => CB,
+      ArraySchema: () => ZT,
+      Callbacks: () => ZJ,
+      ChangeTree: () => aZ,
+      CollectionSchema: () => oT,
+      Decoder: () => xT,
+      Encoder: () => lT,
+      FieldBuilder: () => kT,
+      MapSchema: () => JT,
+      Metadata: () => xI,
+      OPERATION: () => JB,
+      Reflection: () => VT,
+      ReflectionField: () => DT,
+      ReflectionType: () => KT,
+      Root: () => HT,
+      Schema: () => pT,
+      SetSchema: () => GT,
+      StateCallbackStrategy: () => IJ,
+      StateView: () => rT,
+      StreamSchema: () => vT,
+      TypeContext: () => eI,
+      createPool: () => JJ,
+      decode: () => WI,
+      decodeKeyValueOperation: () => DZ,
+      decodeSchemaOperation: () => EZ,
+      defineCustomTypes: () => sI,
+      defineTypes: () => OT,
+      deprecated: () => sT,
+      dumpChanges: () => iT,
+      encode: () => II,
+      encodeArray: () => XZ,
+      encodeIndexedEntry: () => rZ,
+      encodeKeyValueOperation: () => mZ,
+      encodeMapEntry: () => RZ,
+      encodeSchemaOperation: () => PZ,
+      zN: () => gT,
+      fullStateOnly: () => WT,
+      getDecoderStateCallbacks: () => ST,
+      getEncodeDescriptor: () => BZ,
+      getRawChangesCallback: () => BJ,
+      isBuilder: () => cT,
+      patchOnly: () => UT,
+      registerType: () => QI,
+      schema: () => YT,
+      t: () => FT,
+      type: () => dT,
+      unreliable: () => yT,
+      view: () => qT
     });
-    const QB = 255;
-    var nB;
+    const TB = 255;
+    var JB;
 
-    function dB(BB) {
+    function oB(BB) {
       Object.defineProperty(BB, Symbol.metadata, {
         value: void 0,
         writable: !0,
@@ -2184,262 +2184,262 @@ export const modules = {
       })
     }! function(BB) {
       BB[BB.ADD = 128] = "ADD", BB[BB.REPLACE = 0] = "REPLACE", BB[BB.DELETE = 64] = "DELETE", BB[BB.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", BB[BB.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", BB[BB.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", BB[BB.CLEAR = 10] = "CLEAR", BB[BB.REVERSE = 15] = "REVERSE", BB[BB.MOVE = 32] = "MOVE", BB[BB.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", BB[BB.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(nB || (nB = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const IB = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }(JB || (JB = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const GB = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
       const BB = "colyseus.symbolRegistry",
-        jB = IB[BB] || (IB[BB] = Object.create(null));
+        IB = GB[BB] || (GB[BB] = Object.create(null));
       Symbol.for = function(BB) {
-        return jB[BB] || (jB[BB] = Symbol(BB))
+        return IB[BB] || (IB[BB] = Symbol(BB))
       }, Symbol.keyFor = function(BB) {
-        for (const zB in jB)
-          if (jB[zB] === BB) return zB
+        for (const ZB in IB)
+          if (IB[ZB] === BB) return ZB
       }
     }
-    const NB = Symbol.for("$refId"),
-      uB = "~track",
-      UB = "~encoder",
-      aB = "~decoder",
-      pB = "~filter",
-      rB = "~getByIndex",
-      sB = "~deleteByIndex",
-      JB = "~resyncPrune",
-      mB = Symbol.for("$changes"),
-      yB = Symbol.for("$childType"),
-      kB = Symbol.for("$proxyTarget"),
-      GB = "~onEncodeEnd",
-      LB = "~reset",
-      gB = "~onDecodeEnd",
-      tB = Symbol.for("$values"),
-      SB = "~builder",
-      MB = "~descriptors",
-      EB = "~__encodeDescriptor",
-      iB = "~encoders",
-      qB = "~__numFields",
-      fB = "~__refTypeFieldIndexes",
-      oB = "~__viewFieldIndexes",
-      HB = "$__fieldIndexesByViewTag",
-      DB = "~__unreliableFieldIndexes",
-      FB = "~__patchOnlyFieldIndexes",
-      YB = "~__fullSyncSkipIndexes",
-      VB = "~__fullStateOnlyFieldIndexes",
-      hB = "~__streamFieldIndexes",
-      XB = "~__streamPriorities";
-    let ZB;
+    const vB = Symbol.for("$refId"),
+      kB = "~track",
+      cB = "~encoder",
+      nB = "~decoder",
+      hB = "~filter",
+      zB = "~getByIndex",
+      FB = "~deleteByIndex",
+      NB = "~resyncPrune",
+      gB = Symbol.for("$changes"),
+      qB = Symbol.for("$childType"),
+      yB = Symbol.for("$proxyTarget"),
+      UB = "~onEncodeEnd",
+      WB = "~reset",
+      dB = "~onDecodeEnd",
+      CB = Symbol.for("$values"),
+      QB = "~builder",
+      sB = "~descriptors",
+      wB = "~__encodeDescriptor",
+      OB = "~encoders",
+      YB = "~__numFields",
+      iB = "~__refTypeFieldIndexes",
+      pB = "~__viewFieldIndexes",
+      aB = "$__fieldIndexesByViewTag",
+      HB = "~__unreliableFieldIndexes",
+      MB = "~__patchOnlyFieldIndexes",
+      jB = "~__fullSyncSkipIndexes",
+      PB = "~__fullStateOnlyFieldIndexes",
+      RB = "~__streamFieldIndexes",
+      rB = "~__streamPriorities";
+    let mB;
     try {
-      ZB = new TextEncoder
-    } catch (dn) {}
-    const AB = new ArrayBuffer(8),
-      TB = new Int32Array(AB),
-      PB = new Float32Array(AB),
-      WB = new Float64Array(AB),
-      eB = new BigInt64Array(AB),
-      lB = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(BB, jB) {
-        for (var zB = 0, QB = 0, nB = 0, dB = BB.length; nB < dB; nB++)(zB = BB.charCodeAt(nB)) < 128 ? QB += 1 : zB < 2048 ? QB += 2 : zB < 55296 || zB >= 57344 ? QB += 3 : (nB++, QB += 4);
-        return QB
+      mB = new TextEncoder
+    } catch (oJ) {}
+    const XB = new ArrayBuffer(8),
+      LB = new Int32Array(XB),
+      eB = new Float32Array(XB),
+      uB = new Float64Array(XB),
+      fB = new BigInt64Array(XB),
+      lB = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(BB, IB) {
+        for (var ZB = 0, TB = 0, JB = 0, oB = BB.length; JB < oB; JB++)(ZB = BB.charCodeAt(JB)) < 128 ? TB += 1 : ZB < 2048 ? TB += 2 : ZB < 55296 || ZB >= 57344 ? TB += 3 : (JB++, TB += 4);
+        return TB
       };
 
-    function wB(BB, jB, zB) {
-      for (var QB = 0, nB = 0, dB = jB.length; nB < dB; nB++)(QB = jB.charCodeAt(nB)) < 128 ? BB[zB.offset++] = QB : QB < 2048 ? (BB[zB.offset] = 192 | QB >> 6, BB[zB.offset + 1] = 128 | 63 & QB, zB.offset += 2) : QB < 55296 || QB >= 57344 ? (BB[zB.offset] = 224 | QB >> 12, BB[zB.offset + 1] = 128 | QB >> 6 & 63, BB[zB.offset + 2] = 128 | 63 & QB, zB.offset += 3) : (nB++, QB = 65536 + ((1023 & QB) << 10 | 1023 & jB.charCodeAt(nB)), BB[zB.offset] = 240 | QB >> 18, BB[zB.offset + 1] = 128 | QB >> 12 & 63, BB[zB.offset + 2] = 128 | QB >> 6 & 63, BB[zB.offset + 3] = 128 | 63 & QB, zB.offset += 4)
+    function AB(BB, IB, ZB) {
+      for (var TB = 0, JB = 0, oB = IB.length; JB < oB; JB++)(TB = IB.charCodeAt(JB)) < 128 ? BB[ZB.offset++] = TB : TB < 2048 ? (BB[ZB.offset] = 192 | TB >> 6, BB[ZB.offset + 1] = 128 | 63 & TB, ZB.offset += 2) : TB < 55296 || TB >= 57344 ? (BB[ZB.offset] = 224 | TB >> 12, BB[ZB.offset + 1] = 128 | TB >> 6 & 63, BB[ZB.offset + 2] = 128 | 63 & TB, ZB.offset += 3) : (JB++, TB = 65536 + ((1023 & TB) << 10 | 1023 & IB.charCodeAt(JB)), BB[ZB.offset] = 240 | TB >> 18, BB[ZB.offset + 1] = 128 | TB >> 12 & 63, BB[ZB.offset + 2] = 128 | TB >> 6 & 63, BB[ZB.offset + 3] = 128 | 63 & TB, ZB.offset += 4)
     }
 
-    function xB(BB, jB, zB) {
-      BB[zB.offset++] = 255 & jB
+    function tB(BB, IB, ZB) {
+      BB[ZB.offset++] = 255 & IB
     }
 
-    function KB(BB, jB, zB) {
-      BB[zB.offset++] = 255 & jB, BB[zB.offset++] = jB >> 8 & 255
+    function bB(BB, IB, ZB) {
+      BB[ZB.offset++] = 255 & IB, BB[ZB.offset++] = IB >> 8 & 255
     }
 
-    function CB(BB, jB, zB) {
-      BB[zB.offset++] = 255 & jB, BB[zB.offset++] = jB >> 8 & 255
+    function xB(BB, IB, ZB) {
+      BB[ZB.offset++] = 255 & IB, BB[ZB.offset++] = IB >> 8 & 255
     }
 
-    function cB(BB, jB, zB) {
-      BB[zB.offset++] = 255 & jB, BB[zB.offset++] = jB >> 8 & 255, BB[zB.offset++] = jB >> 16 & 255, BB[zB.offset++] = jB >> 24 & 255
+    function EB(BB, IB, ZB) {
+      BB[ZB.offset++] = 255 & IB, BB[ZB.offset++] = IB >> 8 & 255, BB[ZB.offset++] = IB >> 16 & 255, BB[ZB.offset++] = IB >> 24 & 255
     }
 
-    function bB(BB, jB, zB) {
-      const QB = jB >> 24,
-        nB = jB >> 16,
-        dB = jB >> 8,
-        IB = jB;
-      BB[zB.offset++] = 255 & IB, BB[zB.offset++] = 255 & dB, BB[zB.offset++] = 255 & nB, BB[zB.offset++] = 255 & QB
+    function DB(BB, IB, ZB) {
+      const TB = IB >> 24,
+        JB = IB >> 16,
+        oB = IB >> 8,
+        GB = IB;
+      BB[ZB.offset++] = 255 & GB, BB[ZB.offset++] = 255 & oB, BB[ZB.offset++] = 255 & JB, BB[ZB.offset++] = 255 & TB
     }
 
-    function vB(BB, jB, zB) {
-      const QB = Math.floor(jB / Math.pow(2, 32));
-      bB(BB, jB >>> 0, zB), bB(BB, QB, zB)
+    function KB(BB, IB, ZB) {
+      const TB = Math.floor(IB / Math.pow(2, 32));
+      DB(BB, IB >>> 0, ZB), DB(BB, TB, ZB)
     }
 
-    function RB(BB, jB, zB) {
-      const QB = jB / Math.pow(2, 32) | 0;
-      bB(BB, jB >>> 0, zB), bB(BB, QB, zB)
+    function VB(BB, IB, ZB) {
+      const TB = IB / Math.pow(2, 32) | 0;
+      DB(BB, IB >>> 0, ZB), DB(BB, TB, ZB)
     }
 
-    function OB(BB, jB, zB) {
-      PB[0] = jB, cB(BB, TB[0], zB)
+    function SB(BB, IB, ZB) {
+      eB[0] = IB, EB(BB, LB[0], ZB)
     }
 
-    function Bj(BB, jB, zB) {
-      WB[0] = jB, cB(BB, TB[0], zB), cB(BB, TB[1], zB)
+    function BI(BB, IB, ZB) {
+      uB[0] = IB, EB(BB, LB[0], ZB), EB(BB, LB[1], ZB)
     }
-    const jj = {
-        int8: xB,
-        uint8: function(BB, jB, zB) {
-          BB[zB.offset++] = 255 & jB
+    const II = {
+        int8: tB,
+        uint8: function(BB, IB, ZB) {
+          BB[ZB.offset++] = 255 & IB
         },
-        int16: KB,
-        uint16: CB,
-        int32: cB,
-        uint32: bB,
-        int64: vB,
-        uint64: RB,
-        bigint64: function(BB, jB, zB) {
-          eB[0] = BigInt.asIntN(64, jB), cB(BB, TB[0], zB), cB(BB, TB[1], zB)
+        int16: bB,
+        uint16: xB,
+        int32: EB,
+        uint32: DB,
+        int64: KB,
+        uint64: VB,
+        bigint64: function(BB, IB, ZB) {
+          fB[0] = BigInt.asIntN(64, IB), EB(BB, LB[0], ZB), EB(BB, LB[1], ZB)
         },
-        biguint64: function(BB, jB, zB) {
-          eB[0] = BigInt.asIntN(64, jB), cB(BB, TB[0], zB), cB(BB, TB[1], zB)
+        biguint64: function(BB, IB, ZB) {
+          fB[0] = BigInt.asIntN(64, IB), EB(BB, LB[0], ZB), EB(BB, LB[1], ZB)
         },
-        float32: OB,
-        float64: Bj,
-        boolean: function(BB, jB, zB) {
-          BB[zB.offset++] = jB ? 1 : 0
+        float32: SB,
+        float64: BI,
+        boolean: function(BB, IB, ZB) {
+          BB[ZB.offset++] = IB ? 1 : 0
         },
-        string: function(BB, jB, zB) {
-          jB || (jB = "");
-          let QB = lB(jB, "utf8"),
-            nB = 0;
-          if (QB < 32) BB[zB.offset++] = 160 | QB, nB = 1;
-          else if (QB < 256) BB[zB.offset++] = 217, BB[zB.offset++] = QB, nB = 2;
-          else if (QB < 65536) BB[zB.offset++] = 218, CB(BB, QB, zB), nB = 3;
+        string: function(BB, IB, ZB) {
+          IB || (IB = "");
+          let TB = lB(IB, "utf8"),
+            JB = 0;
+          if (TB < 32) BB[ZB.offset++] = 160 | TB, JB = 1;
+          else if (TB < 256) BB[ZB.offset++] = 217, BB[ZB.offset++] = TB, JB = 2;
+          else if (TB < 65536) BB[ZB.offset++] = 218, xB(BB, TB, ZB), JB = 3;
           else {
-            if (!(QB < 4294967296)) throw new Error("String too long");
-            BB[zB.offset++] = 219, bB(BB, QB, zB), nB = 5
+            if (!(TB < 4294967296)) throw new Error("String too long");
+            BB[ZB.offset++] = 219, DB(BB, TB, ZB), JB = 5
           }
-          return wB(BB, jB, zB), nB + QB
+          return AB(BB, IB, ZB), JB + TB
         },
-        number: function BB(jB, zB, QB) {
-          return isNaN(zB) ? BB(jB, 0, QB) : isFinite(zB) ? zB !== (0 | zB) ? Math.abs(zB) <= 34028235e31 && (PB[0] = zB, Math.abs(Math.abs(PB[0]) - Math.abs(zB)) < 1e-4) ? (jB[QB.offset++] = 202, OB(jB, zB, QB), 5) : (jB[QB.offset++] = 203, Bj(jB, zB, QB), 9) : zB >= 0 ? zB < 128 ? (jB[QB.offset++] = 255 & zB, 1) : zB < 256 ? (jB[QB.offset++] = 204, jB[QB.offset++] = 255 & zB, 2) : zB < 65536 ? (jB[QB.offset++] = 205, CB(jB, zB, QB), 3) : zB < 4294967296 ? (jB[QB.offset++] = 206, bB(jB, zB, QB), 5) : (jB[QB.offset++] = 207, RB(jB, zB, QB), 9) : zB >= -32 ? (jB[QB.offset++] = 224 | zB + 32, 1) : zB >= -128 ? (jB[QB.offset++] = 208, xB(jB, zB, QB), 2) : zB >= -32768 ? (jB[QB.offset++] = 209, KB(jB, zB, QB), 3) : zB >= -2147483648 ? (jB[QB.offset++] = 210, cB(jB, zB, QB), 5) : (jB[QB.offset++] = 211, vB(jB, zB, QB), 9) : BB(jB, zB > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, QB)
+        number: function BB(IB, ZB, TB) {
+          return isNaN(ZB) ? BB(IB, 0, TB) : isFinite(ZB) ? ZB !== (0 | ZB) ? Math.abs(ZB) <= 34028235e31 && (eB[0] = ZB, Math.abs(Math.abs(eB[0]) - Math.abs(ZB)) < 1e-4) ? (IB[TB.offset++] = 202, SB(IB, ZB, TB), 5) : (IB[TB.offset++] = 203, BI(IB, ZB, TB), 9) : ZB >= 0 ? ZB < 128 ? (IB[TB.offset++] = 255 & ZB, 1) : ZB < 256 ? (IB[TB.offset++] = 204, IB[TB.offset++] = 255 & ZB, 2) : ZB < 65536 ? (IB[TB.offset++] = 205, xB(IB, ZB, TB), 3) : ZB < 4294967296 ? (IB[TB.offset++] = 206, DB(IB, ZB, TB), 5) : (IB[TB.offset++] = 207, VB(IB, ZB, TB), 9) : ZB >= -32 ? (IB[TB.offset++] = 224 | ZB + 32, 1) : ZB >= -128 ? (IB[TB.offset++] = 208, tB(IB, ZB, TB), 2) : ZB >= -32768 ? (IB[TB.offset++] = 209, bB(IB, ZB, TB), 3) : ZB >= -2147483648 ? (IB[TB.offset++] = 210, EB(IB, ZB, TB), 5) : (IB[TB.offset++] = 211, KB(IB, ZB, TB), 9) : BB(IB, ZB > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, TB)
         },
-        utf8Write: wB,
+        utf8Write: AB,
         utf8Length: lB
       },
-      zj = new ArrayBuffer(8),
-      Qj = new Int32Array(zj),
-      nj = new Float32Array(zj),
-      dj = new Float64Array(zj),
-      Ij = new BigUint64Array(zj),
-      Nj = new BigInt64Array(zj);
+      ZI = new ArrayBuffer(8),
+      TI = new Int32Array(ZI),
+      JI = new Float32Array(ZI),
+      oI = new Float64Array(ZI),
+      GI = new BigUint64Array(ZI),
+      vI = new BigInt64Array(ZI);
 
-    function uj(BB, jB, zB) {
-      zB > BB.length - jB.offset && (zB = BB.length - jB.offset);
-      for (var QB = "", nB = 0, dB = jB.offset, IB = jB.offset + zB; dB < IB; dB++) {
-        var NB = BB[dB];
-        if (0 !== (128 & NB))
-          if (192 !== (224 & NB))
-            if (224 !== (240 & NB)) {
-              if (240 !== (248 & NB)) {
-                console.error("decode.utf8Read(): Invalid byte " + NB + " at offset " + dB + ". Skip to end of string: " + (jB.offset + zB));
+    function kI(BB, IB, ZB) {
+      ZB > BB.length - IB.offset && (ZB = BB.length - IB.offset);
+      for (var TB = "", JB = 0, oB = IB.offset, GB = IB.offset + ZB; oB < GB; oB++) {
+        var vB = BB[oB];
+        if (0 !== (128 & vB))
+          if (192 !== (224 & vB))
+            if (224 !== (240 & vB)) {
+              if (240 !== (248 & vB)) {
+                console.error("decode.utf8Read(): Invalid byte " + vB + " at offset " + oB + ". Skip to end of string: " + (IB.offset + ZB));
                 break
-              }(nB = (7 & NB) << 18 | (63 & BB[++dB]) << 12 | (63 & BB[++dB]) << 6 | 63 & BB[++dB]) >= 65536 ? (nB -= 65536, QB += String.fromCharCode(55296 + (nB >>> 10), 56320 + (1023 & nB))) : QB += String.fromCharCode(nB)
-            } else QB += String.fromCharCode((15 & NB) << 12 | (63 & BB[++dB]) << 6 | 63 & BB[++dB]);
-        else QB += String.fromCharCode((31 & NB) << 6 | 63 & BB[++dB]);
-        else QB += String.fromCharCode(NB)
+              }(JB = (7 & vB) << 18 | (63 & BB[++oB]) << 12 | (63 & BB[++oB]) << 6 | 63 & BB[++oB]) >= 65536 ? (JB -= 65536, TB += String.fromCharCode(55296 + (JB >>> 10), 56320 + (1023 & JB))) : TB += String.fromCharCode(JB)
+            } else TB += String.fromCharCode((15 & vB) << 12 | (63 & BB[++oB]) << 6 | 63 & BB[++oB]);
+        else TB += String.fromCharCode((31 & vB) << 6 | 63 & BB[++oB]);
+        else TB += String.fromCharCode(vB)
       }
-      return jB.offset += zB, QB
+      return IB.offset += ZB, TB
     }
 
-    function Uj(BB, jB) {
-      return aj(BB, jB) << 24 >> 24
+    function cI(BB, IB) {
+      return nI(BB, IB) << 24 >> 24
     }
 
-    function aj(BB, jB) {
-      return BB[jB.offset++]
+    function nI(BB, IB) {
+      return BB[IB.offset++]
     }
 
-    function pj(BB, jB) {
-      return rj(BB, jB) << 16 >> 16
+    function hI(BB, IB) {
+      return zI(BB, IB) << 16 >> 16
     }
 
-    function rj(BB, jB) {
-      return BB[jB.offset++] | BB[jB.offset++] << 8
+    function zI(BB, IB) {
+      return BB[IB.offset++] | BB[IB.offset++] << 8
     }
 
-    function sj(BB, jB) {
-      return BB[jB.offset++] | BB[jB.offset++] << 8 | BB[jB.offset++] << 16 | BB[jB.offset++] << 24
+    function FI(BB, IB) {
+      return BB[IB.offset++] | BB[IB.offset++] << 8 | BB[IB.offset++] << 16 | BB[IB.offset++] << 24
     }
 
-    function Jj(BB, jB) {
-      return sj(BB, jB) >>> 0
+    function NI(BB, IB) {
+      return FI(BB, IB) >>> 0
     }
 
-    function mj(BB, jB) {
-      return Qj[0] = sj(BB, jB), nj[0]
+    function gI(BB, IB) {
+      return TI[0] = FI(BB, IB), JI[0]
     }
 
-    function yj(BB, jB) {
-      return Qj[0] = sj(BB, jB), Qj[1] = sj(BB, jB), dj[0]
+    function qI(BB, IB) {
+      return TI[0] = FI(BB, IB), TI[1] = FI(BB, IB), oI[0]
     }
 
-    function kj(BB, jB) {
-      const zB = Jj(BB, jB);
-      return sj(BB, jB) * Math.pow(2, 32) + zB
+    function yI(BB, IB) {
+      const ZB = NI(BB, IB);
+      return FI(BB, IB) * Math.pow(2, 32) + ZB
     }
 
-    function Gj(BB, jB) {
-      const zB = Jj(BB, jB);
-      return Jj(BB, jB) * Math.pow(2, 32) + zB
+    function UI(BB, IB) {
+      const ZB = NI(BB, IB);
+      return NI(BB, IB) * Math.pow(2, 32) + ZB
     }
-    const Lj = {
-        utf8Read: uj,
-        int8: Uj,
-        uint8: aj,
-        int16: pj,
-        uint16: rj,
-        int32: sj,
-        uint32: Jj,
-        float32: mj,
-        float64: yj,
-        int64: kj,
-        uint64: Gj,
-        bigint64: function(BB, jB) {
-          return Qj[0] = sj(BB, jB), Qj[1] = sj(BB, jB), Nj[0]
+    const WI = {
+        utf8Read: kI,
+        int8: cI,
+        uint8: nI,
+        int16: hI,
+        uint16: zI,
+        int32: FI,
+        uint32: NI,
+        float32: gI,
+        float64: qI,
+        int64: yI,
+        uint64: UI,
+        bigint64: function(BB, IB) {
+          return TI[0] = FI(BB, IB), TI[1] = FI(BB, IB), vI[0]
         },
-        biguint64: function(BB, jB) {
-          return Qj[0] = sj(BB, jB), Qj[1] = sj(BB, jB), Ij[0]
+        biguint64: function(BB, IB) {
+          return TI[0] = FI(BB, IB), TI[1] = FI(BB, IB), GI[0]
         },
-        boolean: function(BB, jB) {
-          return aj(BB, jB) > 0
+        boolean: function(BB, IB) {
+          return nI(BB, IB) > 0
         },
-        string: function(BB, jB) {
-          const zB = BB[jB.offset++];
-          let QB;
-          return zB < 192 ? QB = 31 & zB : 217 === zB ? QB = aj(BB, jB) : 218 === zB ? QB = rj(BB, jB) : 219 === zB && (QB = Jj(BB, jB)), uj(BB, jB, QB)
+        string: function(BB, IB) {
+          const ZB = BB[IB.offset++];
+          let TB;
+          return ZB < 192 ? TB = 31 & ZB : 217 === ZB ? TB = nI(BB, IB) : 218 === ZB ? TB = zI(BB, IB) : 219 === ZB && (TB = NI(BB, IB)), kI(BB, IB, TB)
         },
-        number: function(BB, jB) {
-          const zB = BB[jB.offset++];
-          return zB < 128 ? zB : 202 === zB ? mj(BB, jB) : 203 === zB ? yj(BB, jB) : 204 === zB ? aj(BB, jB) : 205 === zB ? rj(BB, jB) : 206 === zB ? Jj(BB, jB) : 207 === zB ? Gj(BB, jB) : 208 === zB ? Uj(BB, jB) : 209 === zB ? pj(BB, jB) : 210 === zB ? sj(BB, jB) : 211 === zB ? kj(BB, jB) : zB > 223 ? -1 * (255 - zB + 1) : void 0
+        number: function(BB, IB) {
+          const ZB = BB[IB.offset++];
+          return ZB < 128 ? ZB : 202 === ZB ? gI(BB, IB) : 203 === ZB ? qI(BB, IB) : 204 === ZB ? nI(BB, IB) : 205 === ZB ? zI(BB, IB) : 206 === ZB ? NI(BB, IB) : 207 === ZB ? UI(BB, IB) : 208 === ZB ? cI(BB, IB) : 209 === ZB ? hI(BB, IB) : 210 === ZB ? FI(BB, IB) : 211 === ZB ? yI(BB, IB) : ZB > 223 ? -1 * (255 - ZB + 1) : void 0
         },
-        stringCheck: function(BB, jB) {
-          const zB = BB[jB.offset];
-          return zB < 192 && zB > 160 || 217 === zB || 218 === zB || 219 === zB
+        stringCheck: function(BB, IB) {
+          const ZB = BB[IB.offset];
+          return ZB < 192 && ZB > 160 || 217 === ZB || 218 === ZB || 219 === ZB
         }
       },
-      gj = {},
-      tj = new Map;
+      dI = {},
+      CI = new Map;
 
-    function Sj(BB, jB) {
-      jB.constructor && (Object.prototype.hasOwnProperty.call(jB, "constructor") && null == jB.constructor[Symbol.metadata] && dB(jB.constructor), tj.set(jB.constructor, BB), gj[BB] = jB), jB.encode && (jj[BB] = jB.encode), jB.decode && (Lj[BB] = jB.decode)
+    function QI(BB, IB) {
+      IB.constructor && (Object.prototype.hasOwnProperty.call(IB, "constructor") && null == IB.constructor[Symbol.metadata] && oB(IB.constructor), CI.set(IB.constructor, BB), dI[BB] = IB), IB.encode && (II[BB] = IB.encode), IB.decode && (WI[BB] = IB.decode)
     }
 
-    function Mj(BB) {
-      for (const jB in BB) Sj(jB, BB[jB]);
-      return BB => gQ(BB)
+    function sI(BB) {
+      for (const IB in BB) QI(IB, BB[IB]);
+      return BB => dT(BB)
     }
-    const Ej = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const wI = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function ij() {
+    function OI() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,125 +2450,125 @@ export const modules = {
       }
     }
 
-    function qj(BB) {
-      return BB._stream ??= ij()
+    function YI(BB) {
+      return BB._stream ??= OI()
     }
 
-    function fj(BB, jB, zB) {
-      0 === jB.activeViews.size && qj(BB).broadcastPending.add(zB)
+    function iI(BB, IB, ZB) {
+      0 === IB.activeViews.size && YI(BB).broadcastPending.add(ZB)
     }
 
-    function oj(BB, jB, zB, QB) {
-      const dB = BB._stream;
-      if (void 0 === dB) return !0;
-      let IB = !1;
-      return dB.broadcastPending.delete(QB) ? IB = !0 : dB.sentBroadcast.delete(QB) && dB.broadcastDeletes.add(QB), jB.forEachActiveView((BB => {
-        const jB = dB.pendingByView.get(BB.id);
-        if (jB?.has(QB)) return jB.delete(QB), void(IB = !0);
-        const NB = dB.sentByView.get(BB.id);
-        if (NB?.has(QB)) {
-          NB.delete(QB);
-          let jB = BB.changes.get(zB);
-          void 0 === jB && (jB = new Map, BB.changes.set(zB, jB)), jB.set(QB, nB.DELETE)
+    function pI(BB, IB, ZB, TB) {
+      const oB = BB._stream;
+      if (void 0 === oB) return !0;
+      let GB = !1;
+      return oB.broadcastPending.delete(TB) ? GB = !0 : oB.sentBroadcast.delete(TB) && oB.broadcastDeletes.add(TB), IB.forEachActiveView((BB => {
+        const IB = oB.pendingByView.get(BB.id);
+        if (IB?.has(TB)) return IB.delete(TB), void(GB = !0);
+        const vB = oB.sentByView.get(BB.id);
+        if (vB?.has(TB)) {
+          vB.delete(TB);
+          let IB = BB.changes.get(ZB);
+          void 0 === IB && (IB = new Map, BB.changes.set(ZB, IB)), IB.set(TB, JB.DELETE)
         }
-      })), IB
+      })), GB
     }
 
-    function Hj(BB, jB) {
-      const zB = BB._stream?.pendingByView;
-      if (void 0 === zB) return !1;
-      for (const [QB, nB] of zB)
-        if (nB.size > 0 && void 0 !== jB.activeViews.get(QB)?.deref()) return !0;
+    function aI(BB, IB) {
+      const ZB = BB._stream?.pendingByView;
+      if (void 0 === ZB) return !1;
+      for (const [TB, JB] of ZB)
+        if (JB.size > 0 && void 0 !== IB.activeViews.get(TB)?.deref()) return !0;
       return !1
     }
 
-    function Dj(BB) {
-      const jB = BB._stream;
-      return void 0 !== jB && (jB.broadcastPending.size > 0 || jB.broadcastDeletes.size > 0)
+    function HI(BB) {
+      const IB = BB._stream;
+      return void 0 !== IB && (IB.broadcastPending.size > 0 || IB.broadcastDeletes.size > 0)
     }
 
-    function Fj(BB, jB, zB) {
-      const QB = qj(BB);
-      let nB = QB.pendingByView.get(jB);
-      void 0 === nB && (nB = new Set, QB.pendingByView.set(jB, nB)), nB.add(zB)
+    function MI(BB, IB, ZB) {
+      const TB = YI(BB);
+      let JB = TB.pendingByView.get(IB);
+      void 0 === JB && (JB = new Set, TB.pendingByView.set(IB, JB)), JB.add(ZB)
     }
 
-    function Yj(BB, jB) {
-      const zB = BB._stream;
-      void 0 !== zB && (zB.pendingByView.delete(jB), zB.sentByView.delete(jB), zB.priorityByView?.delete(jB))
+    function jI(BB, IB) {
+      const ZB = BB._stream;
+      void 0 !== ZB && (ZB.pendingByView.delete(IB), ZB.sentByView.delete(IB), ZB.priorityByView?.delete(IB))
     }
-    const Vj = {
+    const PI = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function hj(BB) {
+    function RI(BB) {
       if (null == BB || "object" !== typeof BB) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: jB,
-        max: zB
+        min: IB,
+        max: ZB
       } = BB;
-      if ("number" !== typeof jB || "number" !== typeof zB || !(zB > jB) || !Number.isFinite(jB) || !Number.isFinite(zB)) throw new Error(`t.quantized(): require finite min < max (got min=${jB}, max=${zB}).`);
-      const QB = BB.bits ?? 16;
-      if (8 !== QB && 16 !== QB && 32 !== QB) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${QB}).`);
-      const nB = BB.mode ?? "clamp";
-      if ("clamp" !== nB && "wrap" !== nB) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(nB)}).`);
-      const dB = "wrap" === nB,
-        IB = Math.pow(2, QB);
+      if ("number" !== typeof IB || "number" !== typeof ZB || !(ZB > IB) || !Number.isFinite(IB) || !Number.isFinite(ZB)) throw new Error(`t.quantized(): require finite min < max (got min=${IB}, max=${ZB}).`);
+      const TB = BB.bits ?? 16;
+      if (8 !== TB && 16 !== TB && 32 !== TB) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${TB}).`);
+      const JB = BB.mode ?? "clamp";
+      if ("clamp" !== JB && "wrap" !== JB) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(JB)}).`);
+      const oB = "wrap" === JB,
+        GB = Math.pow(2, TB);
       return {
-        min: jB,
-        max: zB,
-        bits: QB,
-        wrap: dB,
-        wire: Vj[QB],
-        range: zB - jB,
-        span: dB ? IB : jB === -zB ? IB - 2 : IB - 1
+        min: IB,
+        max: ZB,
+        bits: TB,
+        wrap: oB,
+        wire: PI[TB],
+        range: ZB - IB,
+        span: oB ? GB : IB === -ZB ? GB - 2 : GB - 1
       }
     }
 
-    function Xj(BB) {
+    function rI(BB) {
       return null !== BB && "object" === typeof BB && void 0 !== BB.quantized
     }
 
-    function Zj(BB, jB) {
+    function mI(BB, IB) {
       if (BB.wrap) {
-        if (!Number.isFinite(jB)) return 0;
-        const zB = BB.range;
-        let QB = (jB - BB.min) % zB;
-        QB < 0 && (QB += zB);
-        const nB = BB.span;
-        return Math.floor(QB / zB * nB + .5) % nB
+        if (!Number.isFinite(IB)) return 0;
+        const ZB = BB.range;
+        let TB = (IB - BB.min) % ZB;
+        TB < 0 && (TB += ZB);
+        const JB = BB.span;
+        return Math.floor(TB / ZB * JB + .5) % JB
       }
-      if (jB !== jB) return 0;
-      const zB = jB < BB.min ? BB.min : jB > BB.max ? BB.max : jB;
-      return Math.floor((zB - BB.min) / BB.range * BB.span + .5)
+      if (IB !== IB) return 0;
+      const ZB = IB < BB.min ? BB.min : IB > BB.max ? BB.max : IB;
+      return Math.floor((ZB - BB.min) / BB.range * BB.span + .5)
     }
 
-    function Aj(BB, jB) {
-      return BB.min + jB / BB.span * BB.range
+    function XI(BB, IB) {
+      return BB.min + IB / BB.span * BB.range
     }
 
-    function Tj(BB) {
-      const jB = jj[BB.wire];
-      return (zB, QB, nB) => jB(zB, Zj(BB, QB), nB)
+    function LI(BB) {
+      const IB = II[BB.wire];
+      return (ZB, TB, JB) => IB(ZB, mI(BB, TB), JB)
     }
-    class Pj {
+    class eI {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
       static register(BB) {
-        const jB = Object.getPrototypeOf(BB);
-        if (jB !== oQ) {
-          let zB = Pj.inheritedTypes.get(jB);
-          zB || (zB = new Set, Pj.inheritedTypes.set(jB, zB)), zB.add(BB)
+        const IB = Object.getPrototypeOf(BB);
+        if (IB !== pT) {
+          let ZB = eI.inheritedTypes.get(IB);
+          ZB || (ZB = new Set, eI.inheritedTypes.set(IB, ZB)), ZB.add(BB)
         }
       }
       static cache(BB) {
-        let jB = Pj.cachedContexts.get(BB);
-        return jB || (jB = new Pj(BB), Pj.cachedContexts.set(BB, jB)), jB
+        let IB = eI.cachedContexts.get(BB);
+        return IB || (IB = new eI(BB), eI.cachedContexts.set(BB, IB)), IB
       }
       constructor(BB) {
         BB && this.discoverTypes(BB)
@@ -2580,30 +2580,30 @@ export const modules = {
         return this.types[BB]
       }
       add(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(BB) && (this.types[jB] = BB, null == BB[Symbol.metadata] && Cj.initialize(BB), this.schemas.set(BB, jB), !0)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(BB) && (this.types[IB] = BB, null == BB[Symbol.metadata] && xI.initialize(BB), this.schemas.set(BB, IB), !0)
       }
       getTypeId(BB) {
         return this.schemas.get(BB)
       }
       discoverTypes(BB) {
         if (!this.add(BB)) return;
-        Pj.inheritedTypes.get(BB)?.forEach((BB => {
+        eI.inheritedTypes.get(BB)?.forEach((BB => {
           this.discoverTypes(BB)
         }));
-        let jB = BB;
+        let IB = BB;
         for (;
-          (jB = Object.getPrototypeOf(jB)) && jB !== oQ && jB !== Function.prototype;) this.discoverTypes(jB);
-        const zB = BB[Symbol.metadata];
-        (zB[oB] || zB[hB]) && (this.hasFilters = !0);
-        for (const QB in zB) {
-          const BB = zB[QB].type;
-          if ("string" !== typeof BB && !Xj(BB))
+          (IB = Object.getPrototypeOf(IB)) && IB !== pT && IB !== Function.prototype;) this.discoverTypes(IB);
+        const ZB = BB[Symbol.metadata];
+        (ZB[pB] || ZB[RB]) && (this.hasFilters = !0);
+        for (const TB in ZB) {
+          const BB = ZB[TB].type;
+          if ("string" !== typeof BB && !rI(BB))
             if ("function" === typeof BB) this.discoverTypes(BB);
             else {
-              const jB = Object.values(BB)[0];
-              if ("string" === typeof jB) continue;
-              this.discoverTypes(jB)
+              const IB = Object.values(BB)[0];
+              if ("string" === typeof IB) continue;
+              this.discoverTypes(IB)
             }
         }
       }
@@ -2612,233 +2612,233 @@ export const modules = {
       }
     }
 
-    function Wj(BB) {
-      const jB = lj(BB);
-      return jB ? {
-        complexTypeKlass: gj[jB],
-        childType: BB[jB]
+    function uI(BB) {
+      const IB = lI(BB);
+      return IB ? {
+        complexTypeKlass: dI[IB],
+        childType: BB[IB]
       } : {
         complexTypeKlass: !1,
         childType: BB
       }
     }
 
-    function ej(BB, jB) {
-      const zB = wj(BB),
-        QB = lj(zB),
-        nB = QB && lj(zB[QB]);
-      if (nB) throw new Error(`${jB?`${jB}: `:""}@colyseus/schema: nested collections are not supported ("${QB}" of "${nB}"). Collections can only hold primitive types or Schema classes, wrap the inner ${nB} in a Schema class.`);
-      return zB
+    function fI(BB, IB) {
+      const ZB = AI(BB),
+        TB = lI(ZB),
+        JB = TB && lI(ZB[TB]);
+      if (JB) throw new Error(`${IB?`${IB}: `:""}@colyseus/schema: nested collections are not supported ("${TB}" of "${JB}"). Collections can only hold primitive types or Schema classes, wrap the inner ${JB} in a Schema class.`);
+      return ZB
     }
 
-    function lj(BB) {
-      return "object" === typeof BB && null !== BB ? Object.keys(BB).find((BB => void 0 !== gj[BB])) : void 0
+    function lI(BB) {
+      return "object" === typeof BB && null !== BB ? Object.keys(BB).find((BB => void 0 !== dI[BB])) : void 0
     }
 
-    function wj(BB) {
+    function AI(BB) {
       if ("object" !== typeof BB || null === BB) return BB;
       if (Array.isArray(BB)) return {
-        array: wj(BB[0])
+        array: AI(BB[0])
       };
-      const jB = function(BB) {
-        const jB = Object.keys(BB),
-          zB = jB.filter((BB => /\d+/.test(BB)));
-        if (zB.length > 0 && zB.length === jB.length / 2 && BB[BB[zB[0]]] == zB[0]) return "number";
-        if (jB.length > 0 && jB.every((jB => BB[jB] === jB))) return "string"
+      const IB = function(BB) {
+        const IB = Object.keys(BB),
+          ZB = IB.filter((BB => /\d+/.test(BB)));
+        if (ZB.length > 0 && ZB.length === IB.length / 2 && BB[BB[ZB[0]]] == ZB[0]) return "number";
+        if (IB.length > 0 && IB.every((IB => BB[IB] === IB))) return "string"
       }(BB);
-      if (jB) return jB;
-      if (Xj(BB)) return "string" === typeof BB.quantized.wire ? BB : {
-        quantized: hj(BB.quantized)
+      if (IB) return IB;
+      if (rI(BB)) return "string" === typeof BB.quantized.wire ? BB : {
+        quantized: RI(BB.quantized)
       };
-      if (void 0 !== BB.type) return wj(BB.type);
-      const zB = lj(BB);
-      return zB && (BB[zB] = wj(BB[zB])), BB
+      if (void 0 !== BB.type) return AI(BB.type);
+      const ZB = lI(BB);
+      return ZB && (BB[ZB] = AI(BB[ZB])), BB
     }
-    const xj = [fB, DB, FB, YB, VB, hB, iB];
+    const tI = [iB, HB, MB, jB, PB, RB, OB];
 
-    function Kj(BB, jB, zB) {
-      BB[jB] || Object.defineProperty(BB, jB, {
+    function bI(BB, IB, ZB) {
+      BB[IB] || Object.defineProperty(BB, IB, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), BB[jB].push(zB)
+      }), BB[IB].push(ZB)
     }
-    const Cj = {
-        addField(BB, jB, zB, QB, nB) {
-          if (jB >= 63) throw new Error(`Can't define field '${zB}'.\nSchema instances may only have up to 63 fields.`);
-          BB[jB] = Object.assign(BB[jB] || {}, {
-            type: QB,
-            index: jB,
-            name: zB
-          }), Object.defineProperty(BB, MB, {
-            value: BB[MB] || {},
+    const xI = {
+        addField(BB, IB, ZB, TB, JB) {
+          if (IB >= 63) throw new Error(`Can't define field '${ZB}'.\nSchema instances may only have up to 63 fields.`);
+          BB[IB] = Object.assign(BB[IB] || {}, {
+            type: TB,
+            index: IB,
+            name: ZB
+          }), Object.defineProperty(BB, sB, {
+            value: BB[sB] || {},
             enumerable: !1,
             configurable: !0
-          }), BB[MB][zB] = nB || {
+          }), BB[sB][ZB] = JB || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(BB, qB, {
-            value: jB,
+          }, Object.defineProperty(BB, YB, {
+            value: IB,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(BB, zB, {
-            value: jB,
+          }), Object.defineProperty(BB, ZB, {
+            value: IB,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof BB[jB].type || Xj(BB[jB].type) || (void 0 === BB[fB] && Object.defineProperty(BB, fB, {
+          }), "string" === typeof BB[IB].type || rI(BB[IB].type) || (void 0 === BB[iB] && Object.defineProperty(BB, iB, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), BB[fB].push(jB));
-          const dB = BB[jB].type;
-          if (dB && "object" === typeof dB && void 0 !== dB.stream) {
-            if (void 0 !== dB.array) throw new Error(Ej);
-            BB[jB].stream = !0, BB[hB] || Object.defineProperty(BB, hB, {
+          }), BB[iB].push(IB));
+          const oB = BB[IB].type;
+          if (oB && "object" === typeof oB && void 0 !== oB.stream) {
+            if (void 0 !== oB.array) throw new Error(wI);
+            BB[IB].stream = !0, BB[RB] || Object.defineProperty(BB, RB, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), BB[hB].includes(jB) || BB[hB].push(jB);
-            const nB = QB?.priority;
-            "function" === typeof nB && Cj.setStreamPriority(BB, zB, nB)
+            }), BB[RB].includes(IB) || BB[RB].push(IB);
+            const JB = TB?.priority;
+            "function" === typeof JB && xI.setStreamPriority(BB, ZB, JB)
           }
         },
-        setTag(BB, jB, zB) {
-          const QB = BB[jB];
-          if (BB[QB].tag = zB, BB[oB] || (Object.defineProperty(BB, oB, {
+        setTag(BB, IB, ZB) {
+          const TB = BB[IB];
+          if (BB[TB].tag = ZB, BB[pB] || (Object.defineProperty(BB, pB, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(BB, HB, {
+            }), Object.defineProperty(BB, aB, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), BB[oB].push(QB), zB < 0) BB[HB][zB] || (BB[HB][zB] = []), BB[HB][zB].push(QB);
+            })), BB[pB].push(TB), ZB < 0) BB[aB][ZB] || (BB[aB][ZB] = []), BB[aB][ZB].push(TB);
           else
-            for (let nB = zB; nB > 0; nB &= nB - 1) {
-              const jB = nB & -nB;
-              BB[HB][jB] || (BB[HB][jB] = []), BB[HB][jB].push(QB)
+            for (let JB = ZB; JB > 0; JB &= JB - 1) {
+              const IB = JB & -JB;
+              BB[aB][IB] || (BB[aB][IB] = []), BB[aB][IB].push(TB)
             }
         },
-        setUnreliable(BB, jB) {
-          const zB = BB[jB];
-          if ("string" !== typeof BB[zB].type) throw new Error(`@unreliable cannot be applied to ref-type field "${jB}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          BB[zB].unreliable = !0, BB[DB] || Object.defineProperty(BB, DB, {
+        setUnreliable(BB, IB) {
+          const ZB = BB[IB];
+          if ("string" !== typeof BB[ZB].type) throw new Error(`@unreliable cannot be applied to ref-type field "${IB}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          BB[ZB].unreliable = !0, BB[HB] || Object.defineProperty(BB, HB, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), BB[DB].push(zB)
+          }), BB[HB].push(ZB)
         },
-        setPatchOnly(BB, jB) {
-          const zB = BB[jB];
-          if (BB[zB].fullStateOnly) throw new Error(`field "${jB}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          BB[zB].patchOnly = !0, Kj(BB, FB, zB), Kj(BB, YB, zB)
+        setPatchOnly(BB, IB) {
+          const ZB = BB[IB];
+          if (BB[ZB].fullStateOnly) throw new Error(`field "${IB}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          BB[ZB].patchOnly = !0, bI(BB, MB, ZB), bI(BB, jB, ZB)
         },
-        setDeprecated(BB, jB) {
-          const zB = BB[jB];
-          BB[zB].deprecated = !0, Kj(BB, YB, zB), Object.defineProperty(BB, zB, {
-            value: BB[zB],
+        setDeprecated(BB, IB) {
+          const ZB = BB[IB];
+          BB[ZB].deprecated = !0, bI(BB, jB, ZB), Object.defineProperty(BB, ZB, {
+            value: BB[ZB],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(BB, jB) {
-          const zB = BB[jB];
-          if (BB[zB].patchOnly) throw new Error(`field "${jB}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          BB[zB].fullStateOnly = !0, Kj(BB, VB, zB)
+        setFullStateOnly(BB, IB) {
+          const ZB = BB[IB];
+          if (BB[ZB].patchOnly) throw new Error(`field "${IB}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          BB[ZB].fullStateOnly = !0, bI(BB, PB, ZB)
         },
-        setStream(BB, jB) {
-          const zB = BB[jB];
-          BB[zB].stream = !0, BB[hB] || Object.defineProperty(BB, hB, {
+        setStream(BB, IB) {
+          const ZB = BB[IB];
+          BB[ZB].stream = !0, BB[RB] || Object.defineProperty(BB, RB, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), BB[hB].push(zB)
+          }), BB[RB].push(ZB)
         },
-        setStreamPriority(BB, jB, zB) {
-          const QB = BB[jB];
-          BB[XB] || Object.defineProperty(BB, XB, {
+        setStreamPriority(BB, IB, ZB) {
+          const TB = BB[IB];
+          BB[rB] || Object.defineProperty(BB, rB, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), BB[XB][QB] = zB
+          }), BB[rB][TB] = ZB
         },
-        getStreamPriority: (BB, jB) => BB?.[XB]?.[jB],
-        defineField(BB, jB, zB, QB, nB) {
-          const dB = ej(nB, `${BB.name}.${QB}`),
+        getStreamPriority: (BB, IB) => BB?.[rB]?.[IB],
+        defineField(BB, IB, ZB, TB, JB) {
+          const oB = fI(JB, `${BB.name}.${TB}`),
             {
-              complexTypeKlass: IB,
-              childType: NB
-            } = Wj(dB);
-          Cj.addField(jB, zB, QB, dB, SQ(QB, zB, NB, IB)), jB[MB][QB] && Object.defineProperty(BB.prototype, QB, jB[MB][QB]), ("string" === typeof dB || Xj(dB)) && (jB[iB] || Object.defineProperty(jB, iB, {
+              complexTypeKlass: GB,
+              childType: vB
+            } = uI(oB);
+          xI.addField(IB, ZB, TB, oB, QT(TB, ZB, vB, GB)), IB[sB][TB] && Object.defineProperty(BB.prototype, TB, IB[sB][TB]), ("string" === typeof oB || rI(oB)) && (IB[OB] || Object.defineProperty(IB, OB, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), jB[iB][zB] = "string" === typeof dB ? jj[dB] : Tj(dB.quantized))
+          }), IB[OB][ZB] = "string" === typeof oB ? II[oB] : LI(oB.quantized))
         },
-        setFields(BB, jB) {
-          const zB = BB.prototype.constructor;
-          Pj.register(zB);
-          const QB = Object.getPrototypeOf(zB),
-            nB = QB && QB[Symbol.metadata],
-            dB = Cj.initialize(zB);
-          zB[uB] || (zB[uB] = oQ[uB]), zB[UB] || (zB[UB] = oQ[UB]), zB[aB] || (zB[aB] = oQ[aB]), zB.prototype.toJSON || (zB.prototype.toJSON = oQ.prototype.toJSON);
-          let IB = dB[qB] ?? (nB && nB[qB]) ?? -1;
-          IB++, dB[iB] || Object.defineProperty(dB, iB, {
-            value: nB?.[iB] ? [...nB[iB]] : [],
+        setFields(BB, IB) {
+          const ZB = BB.prototype.constructor;
+          eI.register(ZB);
+          const TB = Object.getPrototypeOf(ZB),
+            JB = TB && TB[Symbol.metadata],
+            oB = xI.initialize(ZB);
+          ZB[kB] || (ZB[kB] = pT[kB]), ZB[cB] || (ZB[cB] = pT[cB]), ZB[nB] || (ZB[nB] = pT[nB]), ZB.prototype.toJSON || (ZB.prototype.toJSON = pT.prototype.toJSON);
+          let GB = oB[YB] ?? (JB && JB[YB]) ?? -1;
+          GB++, oB[OB] || Object.defineProperty(oB, OB, {
+            value: JB?.[OB] ? [...JB[OB]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const NB in jB) {
-            if (void 0 !== dB[NB]) throw new Error(`@colyseus/schema: Duplicate '${NB}' definition on '${zB.name||"(anonymous)"}'.`);
-            Cj.defineField(zB, dB, IB, NB, jB[NB]), IB++
+          for (const vB in IB) {
+            if (void 0 !== oB[vB]) throw new Error(`@colyseus/schema: Duplicate '${vB}' definition on '${ZB.name||"(anonymous)"}'.`);
+            xI.defineField(ZB, oB, GB, vB, IB[vB]), GB++
           }
           return BB
         },
-        isDeprecated: (BB, jB) => !0 === BB[jB].deprecated,
+        isDeprecated: (BB, IB) => !0 === BB[IB].deprecated,
         initialize(BB) {
-          const jB = Object.getPrototypeOf(BB),
-            zB = jB[Symbol.metadata];
-          let QB = BB[Symbol.metadata] ?? Object.create(null);
-          if (jB !== oQ && QB === zB && (QB = Object.create(null), zB)) {
-            Object.setPrototypeOf(QB, zB), Object.defineProperty(QB, qB, {
-              value: zB[qB],
+          const IB = Object.getPrototypeOf(BB),
+            ZB = IB[Symbol.metadata];
+          let TB = BB[Symbol.metadata] ?? Object.create(null);
+          if (IB !== pT && TB === ZB && (TB = Object.create(null), ZB)) {
+            Object.setPrototypeOf(TB, ZB), Object.defineProperty(TB, YB, {
+              value: ZB[YB],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== zB[oB] && (Object.defineProperty(QB, oB, {
-              value: [...zB[oB]],
+            }), void 0 !== ZB[pB] && (Object.defineProperty(TB, pB, {
+              value: [...ZB[pB]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(QB, HB, {
+            }), Object.defineProperty(TB, aB, {
               value: {
-                ...zB[HB]
+                ...ZB[aB]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const BB of xj) {
-              const jB = zB[BB];
-              void 0 !== jB && Object.defineProperty(QB, BB, {
-                value: [...jB],
+            for (const BB of tI) {
+              const IB = ZB[BB];
+              void 0 !== IB && Object.defineProperty(TB, BB, {
+                value: [...IB],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(QB, MB, {
+            Object.defineProperty(TB, sB, {
               value: {
-                ...zB[MB]
+                ...ZB[sB]
               },
               enumerable: !1,
               configurable: !0,
@@ -2846,69 +2846,69 @@ export const modules = {
             })
           }
           return Object.defineProperty(BB, Symbol.metadata, {
-            value: QB,
+            value: TB,
             writable: !1,
             configurable: !0
-          }), QB
+          }), TB
         },
-        isValidInstance: BB => BB.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(BB.constructor[Symbol.metadata], qB),
+        isValidInstance: BB => BB.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(BB.constructor[Symbol.metadata], YB),
         getFields(BB) {
-          const jB = BB[Symbol.metadata],
-            zB = {};
-          for (let QB = 0; QB <= jB[qB]; QB++) zB[jB[QB].name] = jB[QB].type;
-          return zB
+          const IB = BB[Symbol.metadata],
+            ZB = {};
+          for (let TB = 0; TB <= IB[YB]; TB++) ZB[IB[TB].name] = IB[TB].type;
+          return ZB
         },
-        hasViewTagAtIndex: (BB, jB) => BB?.[oB]?.includes(jB),
-        hasUnreliableAtIndex: (BB, jB) => BB?.[DB]?.includes(jB),
-        hasPatchOnlyAtIndex: (BB, jB) => BB?.[FB]?.includes(jB),
-        hasFullStateOnlyAtIndex: (BB, jB) => BB?.[VB]?.includes(jB),
-        hasStreamAtIndex: (BB, jB) => BB?.[hB]?.includes(jB)
+        hasViewTagAtIndex: (BB, IB) => BB?.[pB]?.includes(IB),
+        hasUnreliableAtIndex: (BB, IB) => BB?.[HB]?.includes(IB),
+        hasPatchOnlyAtIndex: (BB, IB) => BB?.[MB]?.includes(IB),
+        hasFullStateOnlyAtIndex: (BB, IB) => BB?.[PB]?.includes(IB),
+        hasStreamAtIndex: (BB, IB) => BB?.[RB]?.includes(IB)
       },
-      cj = (BB, jB, zB) => BB(jB, zB);
-    class bj {
+      EI = (BB, IB, ZB) => BB(IB, ZB);
+    class DI {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
       constructor(BB) {
         this.ops = new Uint8Array(Math.max(BB + 1, 1))
       }
-      record(BB, jB) {
-        const zB = this.ops[BB];
-        0 === zB ? this.ops[BB] = jB : (zB === nB.DELETE || zB === nB.ADD && jB === nB.DELETE_AND_ADD) && (this.ops[BB] = nB.DELETE_AND_ADD), BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
+      record(BB, IB) {
+        const ZB = this.ops[BB];
+        0 === ZB ? this.ops[BB] = IB : (ZB === JB.DELETE || ZB === JB.ADD && IB === JB.DELETE_AND_ADD) && (this.ops[BB] = JB.DELETE_AND_ADD), BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
       }
-      recordDelete(BB, jB) {
-        this.ops[BB] = jB, BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
+      recordDelete(BB, IB) {
+        this.ops[BB] = IB, BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
       }
-      recordRaw(BB, jB) {
-        this.record(BB, jB)
+      recordRaw(BB, IB) {
+        this.record(BB, IB)
       }
       operationAt(BB) {
-        const jB = this.ops[BB];
-        return 0 === jB ? void 0 : jB
+        const IB = this.ops[BB];
+        return 0 === IB ? void 0 : IB
       }
-      setOperationAt(BB, jB) {
-        this.ops[BB] = jB
+      setOperationAt(BB, IB) {
+        this.ops[BB] = IB
       }
       forEach(BB) {
-        this.forEachWithCtx(BB, cj)
+        this.forEachWithCtx(BB, EI)
       }
-      forEachWithCtx(BB, jB) {
-        let zB = this.dirtyLow,
-          QB = this.dirtyHigh;
-        const nB = this.ops;
-        for (; 0 !== zB;) {
-          const QB = zB & -zB,
-            dB = 31 - Math.clz32(QB);
-          zB ^= QB, jB(BB, dB, nB[dB])
+      forEachWithCtx(BB, IB) {
+        let ZB = this.dirtyLow,
+          TB = this.dirtyHigh;
+        const JB = this.ops;
+        for (; 0 !== ZB;) {
+          const TB = ZB & -ZB,
+            oB = 31 - Math.clz32(TB);
+          ZB ^= TB, IB(BB, oB, JB[oB])
         }
-        for (; 0 !== QB;) {
-          const zB = QB & -QB,
-            dB = 31 - Math.clz32(zB) + 32;
-          QB ^= zB, jB(BB, dB, nB[dB])
+        for (; 0 !== TB;) {
+          const ZB = TB & -TB,
+            oB = 31 - Math.clz32(ZB) + 32;
+          TB ^= ZB, IB(BB, oB, JB[oB])
         }
       }
       size() {
-        return Rj(this.dirtyLow) + Rj(this.dirtyHigh)
+        return VI(this.dirtyLow) + VI(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class vj {
-      RJ = new Map;
+    class KI {
+      uN = new Map;
       pureOps = [];
-      record(BB, jB) {
-        const zB = this.RJ.get(BB);
-        void 0 === zB ? this.RJ.set(BB, jB) : (zB === nB.DELETE || zB === nB.ADD && jB === nB.DELETE_AND_ADD) && this.RJ.set(BB, nB.DELETE_AND_ADD)
+      record(BB, IB) {
+        const ZB = this.uN.get(BB);
+        void 0 === ZB ? this.uN.set(BB, IB) : (ZB === JB.DELETE || ZB === JB.ADD && IB === JB.DELETE_AND_ADD) && this.uN.set(BB, JB.DELETE_AND_ADD)
       }
-      recordDelete(BB, jB) {
-        this.RJ.set(BB, jB)
+      recordDelete(BB, IB) {
+        this.uN.set(BB, IB)
       }
-      recordRaw(BB, jB) {
-        this.RJ.set(BB, jB)
+      recordRaw(BB, IB) {
+        this.uN.set(BB, IB)
       }
       recordPure(BB) {
-        this.pureOps.push([this.RJ.size, BB])
+        this.pureOps.push([this.uN.size, BB])
       }
       operationAt(BB) {
-        return this.RJ.get(BB)
+        return this.uN.get(BB)
       }
-      setOperationAt(BB, jB) {
-        this.RJ.has(BB) && this.RJ.set(BB, jB)
+      setOperationAt(BB, IB) {
+        this.uN.has(BB) && this.uN.set(BB, IB)
       }
       forEach(BB) {
-        this.forEachWithCtx(BB, cj)
+        this.forEachWithCtx(BB, EI)
       }
-      forEachWithCtx(BB, jB) {
-        const zB = this.pureOps;
-        if (zB.length > 0) {
-          let QB = 0,
-            nB = 0;
-          for (const [dB, IB] of this.RJ) {
-            for (; QB < zB.length && zB[QB][0] <= nB;) {
-              const nB = zB[QB++][1];
-              jB(BB, -nB, nB)
+      forEachWithCtx(BB, IB) {
+        const ZB = this.pureOps;
+        if (ZB.length > 0) {
+          let TB = 0,
+            JB = 0;
+          for (const [oB, GB] of this.uN) {
+            for (; TB < ZB.length && ZB[TB][0] <= JB;) {
+              const JB = ZB[TB++][1];
+              IB(BB, -JB, JB)
             }
-            jB(BB, dB, IB), nB++
+            IB(BB, oB, GB), JB++
           }
-          for (; QB < zB.length;) {
-            const nB = zB[QB++][1];
-            jB(BB, -nB, nB)
+          for (; TB < ZB.length;) {
+            const JB = ZB[TB++][1];
+            IB(BB, -JB, JB)
           }
         } else
-          for (const [QB, nB] of this.RJ) jB(BB, QB, nB)
+          for (const [TB, JB] of this.uN) IB(BB, TB, JB)
       }
       size() {
-        return this.RJ.size + this.pureOps.length
+        return this.uN.size + this.pureOps.length
       }
       has() {
-        return this.RJ.size > 0 || this.pureOps.length > 0
+        return this.uN.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.RJ.clear(), this.pureOps.length = 0
+        this.uN.clear(), this.pureOps.length = 0
       }
       shift(BB) {
-        const jB = new Map;
-        for (const [zB, QB] of this.RJ) jB.set(zB + BB, QB);
-        this.RJ = jB
+        const IB = new Map;
+        for (const [ZB, TB] of this.uN) IB.set(ZB + BB, TB);
+        this.uN = IB
       }
     }
 
-    function Rj(BB) {
+    function VI(BB) {
       return 16843009 * ((BB = (858993459 & (BB -= BB >>> 1 & 1431655765)) + (BB >>> 2 & 858993459)) + (BB >>> 4) & 252645135) >>> 24
     }
 
-    function Oj(BB) {
+    function SI(BB) {
       if (void 0 === BB) return 0;
-      let jB = 0;
-      for (let zB = 0, QB = BB.length; zB < QB; zB++) {
-        const QB = BB[zB];
-        QB < 32 && (jB |= 1 << QB)
+      let IB = 0;
+      for (let ZB = 0, TB = BB.length; ZB < TB; ZB++) {
+        const TB = BB[ZB];
+        TB < 32 && (IB |= 1 << TB)
       }
-      return jB
+      return IB
     }
 
-    function Bz(BB) {
-      const jB = BB.constructor;
-      if (Object.prototype.hasOwnProperty.call(jB, EB)) return jB[EB];
-      const zB = jB[Symbol.metadata],
-        QB = Cj.isValidInstance(BB),
-        nB = (zB?.[oB]?.length ?? 0) > 0,
-        dB = function(BB) {
-          const jB = [],
-            zB = [],
-            QB = [],
-            nB = [],
-            dB = BB?.[qB];
-          if (void 0 === dB) return {
-            names: jB,
-            types: zB,
-            tags: QB,
-            encoders: nB
+    function BZ(BB) {
+      const IB = BB.constructor;
+      if (Object.prototype.hasOwnProperty.call(IB, wB)) return IB[wB];
+      const ZB = IB[Symbol.metadata],
+        TB = xI.isValidInstance(BB),
+        JB = (ZB?.[pB]?.length ?? 0) > 0,
+        oB = function(BB) {
+          const IB = [],
+            ZB = [],
+            TB = [],
+            JB = [],
+            oB = BB?.[YB];
+          if (void 0 === oB) return {
+            names: IB,
+            types: ZB,
+            tags: TB,
+            encoders: JB
           };
-          const IB = BB[iB];
-          for (let NB = 0; NB <= dB; NB++) {
-            const dB = BB[NB];
-            void 0 !== dB ? (jB[NB] = dB.name, zB[NB] = dB.type, QB[NB] = dB.tag, nB[NB] = IB?.[NB]) : (jB[NB] = void 0, zB[NB] = void 0, QB[NB] = void 0, nB[NB] = void 0)
+          const GB = BB[OB];
+          for (let vB = 0; vB <= oB; vB++) {
+            const oB = BB[vB];
+            void 0 !== oB ? (IB[vB] = oB.name, ZB[vB] = oB.type, TB[vB] = oB.tag, JB[vB] = GB?.[vB]) : (IB[vB] = void 0, ZB[vB] = void 0, TB[vB] = void 0, JB[vB] = void 0)
           }
           return {
-            names: jB,
-            types: zB,
-            tags: QB,
-            encoders: nB
+            names: IB,
+            types: ZB,
+            tags: TB,
+            encoders: JB
           }
-        }(zB),
-        IB = QB && !nB ? void 0 : jB[pB],
-        NB = {
-          encoder: jB[UB],
-          filter: IB,
-          metadata: zB,
-          isSchema: QB,
-          filterBitmask: QB ? Oj(zB?.[oB]) : 0,
-          hasAnyFullStateOnly: (zB?.[VB]?.length ?? 0) > 0,
-          hasAnyUnreliable: (zB?.[DB]?.length ?? 0) > 0,
-          hasAnyStream: (zB?.[hB]?.length ?? 0) > 0,
-          hasAnyView: nB,
-          fullStateOnlyBitmask: Oj(zB?.[VB]),
-          unreliableBitmask: Oj(zB?.[DB]),
-          streamBitmask: Oj(zB?.[hB]),
-          names: dB.names,
-          types: dB.types,
-          tags: dB.tags,
-          encoders: dB.encoders
+        }(ZB),
+        GB = TB && !JB ? void 0 : IB[hB],
+        vB = {
+          encoder: IB[cB],
+          filter: GB,
+          metadata: ZB,
+          isSchema: TB,
+          filterBitmask: TB ? SI(ZB?.[pB]) : 0,
+          hasAnyFullStateOnly: (ZB?.[PB]?.length ?? 0) > 0,
+          hasAnyUnreliable: (ZB?.[HB]?.length ?? 0) > 0,
+          hasAnyStream: (ZB?.[RB]?.length ?? 0) > 0,
+          hasAnyView: JB,
+          fullStateOnlyBitmask: SI(ZB?.[PB]),
+          unreliableBitmask: SI(ZB?.[HB]),
+          streamBitmask: SI(ZB?.[RB]),
+          names: oB.names,
+          types: oB.types,
+          tags: oB.tags,
+          encoders: oB.encoders
         };
-      return Object.defineProperty(jB, EB, {
-        value: NB,
+      return Object.defineProperty(IB, wB, {
+        value: vB,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), NB
+      }), vB
     }
 
-    function jz(BB, jB) {
-      if (void 0 !== BB.parentRef && jB(BB.parentRef, BB._parentIndex)) return !0;
-      for (let zB = BB.extraParents; void 0 !== zB; zB = zB.next)
-        if (jB(zB.ref, zB.index)) return !0;
+    function IZ(BB, IB) {
+      if (void 0 !== BB.parentRef && IB(BB.parentRef, BB._parentIndex)) return !0;
+      for (let ZB = BB.extraParents; void 0 !== ZB; ZB = ZB.next)
+        if (IB(ZB.ref, ZB.index)) return !0;
       return !1
     }
-    const zz = (BB, jB) => {
-        BB.isFieldUnreliable(jB) ? BB.ensureUnreliableRecorder().record(jB, nB.ADD) : BB.record(jB, nB.ADD)
+    const ZZ = (BB, IB) => {
+        BB.isFieldUnreliable(IB) ? BB.ensureUnreliableRecorder().record(IB, JB.ADD) : BB.record(IB, JB.ADD)
       },
-      Qz = (BB, jB) => BB(jB);
+      TZ = (BB, IB) => BB(IB);
 
-    function nz(BB, jB, zB) {
-      const QB = BB.refTarget;
-      if (void 0 !== QB[yB]) {
+    function JZ(BB, IB, ZB) {
+      const TB = BB.refTarget;
+      if (void 0 !== TB[qB]) {
         if (BB.isPatchOnly) return;
-        if (Array.isArray(QB.items)) {
-          const BB = QB.items;
-          for (let QB = 0, nB = BB.length; QB < nB; QB++) void 0 !== BB[QB] && zB(jB, QB)
-        } else if (void 0 !== QB.journal)
-          for (const [BB, nB] of QB.journal.keyByIndex) QB.$items.has(nB) && zB(jB, BB);
-        else if (void 0 !== QB.$items)
-          for (const BB of QB.$items.keys()) zB(jB, BB)
+        if (Array.isArray(TB.items)) {
+          const BB = TB.items;
+          for (let TB = 0, JB = BB.length; TB < JB; TB++) void 0 !== BB[TB] && ZB(IB, TB)
+        } else if (void 0 !== TB.journal)
+          for (const [BB, JB] of TB.journal.keyByIndex) TB.$items.has(JB) && ZB(IB, BB);
+        else if (void 0 !== TB.$items)
+          for (const BB of TB.$items.keys()) ZB(IB, BB)
       } else {
-        const nB = BB.metadata;
-        if (!nB) return;
-        const dB = nB[qB] ?? -1,
-          IB = nB[YB],
-          NB = BB.encDescriptor.names;
-        for (let BB = 0; BB <= dB; BB++) {
-          const nB = NB[BB];
-          if (void 0 === nB) continue;
-          if (IB && IB.includes(BB)) continue;
-          const dB = QB[nB];
-          void 0 !== dB && null !== dB && zB(jB, BB)
+        const JB = BB.metadata;
+        if (!JB) return;
+        const oB = JB[YB] ?? -1,
+          GB = JB[jB],
+          vB = BB.encDescriptor.names;
+        for (let BB = 0; BB <= oB; BB++) {
+          const JB = vB[BB];
+          if (void 0 === JB) continue;
+          if (GB && GB.includes(BB)) continue;
+          const oB = TB[JB];
+          void 0 !== oB && null !== oB && ZB(IB, BB)
         }
       }
     }
 
-    function dz(BB, jB, zB, QB) {
-      ! function(BB, jB, zB) {
-        if (!jB) return;
-        const QB = jB[mB],
-          nB = !QB._isSchema;
-        let dB;
-        nB ? (jB = QB.parent, zB = QB.parentIndex, dB = jB?.[mB].metadata) : dB = QB.metadata;
-        const IB = (dB?.[FB]?.includes(zB) ? Ez : 0) | (dB?.[VB]?.includes(zB) ? iz : 0),
-          NB = QB.flags & oz | IB,
-          uB = BB.flags;
-        BB.flags = uB | NB;
-        NB & ~uB & iz && (BB.reset(), BB.unreliableRecorder?.reset());
-        const UB = BB.root?.types;
-        if (!UB?.hasFilters) return;
-        const aB = dB?.[oB]?.includes(zB) ?? !1,
-          pB = dB?.[hB]?.includes(zB) ?? !1,
-          rB = QB.isFiltered || aB || pB;
-        if (BB.isFiltered = rB, pB && !nB) {
+    function oZ(BB, IB, ZB, TB) {
+      ! function(BB, IB, ZB) {
+        if (!IB) return;
+        const TB = IB[gB],
+          JB = !TB._isSchema;
+        let oB;
+        JB ? (IB = TB.parent, ZB = TB.parentIndex, oB = IB?.[gB].metadata) : oB = TB.metadata;
+        const GB = (oB?.[MB]?.includes(ZB) ? wZ : 0) | (oB?.[PB]?.includes(ZB) ? OZ : 0),
+          vB = TB.flags & pZ | GB,
+          kB = BB.flags;
+        BB.flags = kB | vB;
+        vB & ~kB & OZ && (BB.reset(), BB.unreliableRecorder?.reset());
+        const cB = BB.root?.types;
+        if (!cB?.hasFilters) return;
+        const nB = oB?.[pB]?.includes(ZB) ?? !1,
+          hB = oB?.[RB]?.includes(ZB) ?? !1,
+          zB = TB.isFiltered || nB || hB;
+        if (BB.isFiltered = zB, hB && !JB) {
           BB.isStreamCollection = !0;
-          const jB = qj(BB.ref);
-          if (void 0 === jB.priority) {
-            const BB = Cj.getStreamPriority(dB, zB);
-            void 0 !== BB && (jB.priority = BB)
+          const IB = YI(BB.ref);
+          if (void 0 === IB.priority) {
+            const BB = xI.getStreamPriority(oB, ZB);
+            void 0 !== BB && (IB.priority = BB)
           }
           BB.root?.registerStream(BB.ref)
         }
-        if (rB) {
-          const jB = Nz(BB);
-          BB.isVisibilitySharedWithParent = QB.isFiltered && jB && !pB && (!aB || nB && dB[zB].tag !== JQ)
+        if (zB) {
+          const IB = vZ(BB);
+          BB.isVisibilitySharedWithParent = TB.isFiltered && IB && !hB && (!nB || JB && oB[ZB].tag !== NT)
         }
-      }(BB, jB, zB), BB.isFullStateOnly || (BB.has() && BB.root?.enqueueChangeTree(BB), BB.unreliableRecorder?.has() && BB.root?.enqueueUnreliable(BB), BB.has() || BB.unreliableRecorder?.has() || BB.root?.enqueueChangeTree(BB))
+      }(BB, IB, ZB), BB.isFullStateOnly || (BB.has() && BB.root?.enqueueChangeTree(BB), BB.unreliableRecorder?.has() && BB.root?.enqueueUnreliable(BB), BB.has() || BB.unreliableRecorder?.has() || BB.root?.enqueueChangeTree(BB))
     }
 
-    function Iz(BB) {
-      const jB = BB.pendingFilterRefresh;
-      for (let zB = 0; zB < jB.length; zB++) {
-        const BB = jB[zB];
-        0 !== (BB.flags & fz) && uz(BB)
+    function GZ(BB) {
+      const IB = BB.pendingFilterRefresh;
+      for (let ZB = 0; ZB < IB.length; ZB++) {
+        const BB = IB[ZB];
+        0 !== (BB.flags & iZ) && kZ(BB)
       }
-      jB.length = 0
+      IB.length = 0
     }
 
-    function Nz(BB) {
-      return BB._isSchema || "string" !== typeof BB.refTarget[yB]
+    function vZ(BB) {
+      return BB._isSchema || "string" !== typeof BB.refTarget[qB]
     }
 
-    function uz(BB) {
-      BB.flags &= ~fz;
-      const jB = BB.root;
-      if (void 0 === jB || void 0 === BB.parentRef) return;
-      const zB = Nz(BB);
-      let QB = sz(BB, BB.parentRef, BB._parentIndex, zB);
-      for (let dB = BB.extraParents; void 0 !== dB && QB !== rz; dB = dB.next) QB |= sz(BB, dB.ref, dB.index, zB);
-      if (0 === QB) return;
-      BB.isVisibilitySharedWithParent = 0 !== (QB & pz);
-      const nB = 0 === (QB & az);
-      nB !== BB.isFiltered && (BB.isFiltered = nB, nB || BB.isFullStateOnly || (BB.forEachLiveWithCtx(BB, zz), BB.has() && jB.enqueueChangeTree(BB), BB.unreliableRecorder?.has() && jB.enqueueUnreliable(BB)), BB.forEachChildWithCtx(BB, Jz))
+    function kZ(BB) {
+      BB.flags &= ~iZ;
+      const IB = BB.root;
+      if (void 0 === IB || void 0 === BB.parentRef) return;
+      const ZB = vZ(BB);
+      let TB = FZ(BB, BB.parentRef, BB._parentIndex, ZB);
+      for (let oB = BB.extraParents; void 0 !== oB && TB !== zZ; oB = oB.next) TB |= FZ(BB, oB.ref, oB.index, ZB);
+      if (0 === TB) return;
+      BB.isVisibilitySharedWithParent = 0 !== (TB & hZ);
+      const JB = 0 === (TB & nZ);
+      JB !== BB.isFiltered && (BB.isFiltered = JB, JB || BB.isFullStateOnly || (BB.forEachLiveWithCtx(BB, ZZ), BB.has() && IB.enqueueChangeTree(BB), BB.unreliableRecorder?.has() && IB.enqueueUnreliable(BB)), BB.forEachChildWithCtx(BB, NZ))
     }
-    const Uz = 1,
-      az = 2,
-      pz = 4,
-      rz = Uz | az | pz;
+    const cZ = 1,
+      nZ = 2,
+      hZ = 4,
+      zZ = cZ | nZ | hZ;
 
-    function sz(BB, jB, zB, QB) {
-      const nB = jB[mB];
-      if (nB.root !== BB.root || ! function(BB, jB, zB) {
-          const QB = jB.refTarget;
-          if (jB.isArray) {
-            const jB = QB.items,
-              nB = jB[zB];
-            if (void 0 !== nB && nB[mB] === BB) return !0;
-            for (let zB = 0, QB = jB.length; zB < QB; zB++) {
-              const QB = jB[zB];
-              if (void 0 !== QB && QB[mB] === BB) return !0
+    function FZ(BB, IB, ZB, TB) {
+      const JB = IB[gB];
+      if (JB.root !== BB.root || ! function(BB, IB, ZB) {
+          const TB = IB.refTarget;
+          if (IB.isArray) {
+            const IB = TB.items,
+              JB = IB[ZB];
+            if (void 0 !== JB && JB[gB] === BB) return !0;
+            for (let ZB = 0, TB = IB.length; ZB < TB; ZB++) {
+              const TB = IB[ZB];
+              if (void 0 !== TB && TB[gB] === BB) return !0
             }
             return !1
           }
-          const nB = jB.getValue(zB);
-          return void 0 !== nB && nB[mB] === BB
-        }(BB, nB, zB)) return 0;
-      nB.flags & fz && uz(nB);
-      let dB = Uz;
-      if (nB._isSchema) {
-        void 0 !== nB.encDescriptor.tags[zB] || nB.isFieldStream(zB) || (nB.isFiltered ? QB && (dB |= pz) : dB |= az)
-      } else if (nB.isFiltered) {
-        if (QB && !nB.isStreamCollection) {
-          const BB = nB.parent?.[mB];
-          (BB?._isSchema ? BB.encDescriptor.tags[nB.parentIndex] : void 0) !== JQ && (dB |= pz)
+          const JB = IB.getValue(ZB);
+          return void 0 !== JB && JB[gB] === BB
+        }(BB, JB, ZB)) return 0;
+      JB.flags & iZ && kZ(JB);
+      let oB = cZ;
+      if (JB._isSchema) {
+        void 0 !== JB.encDescriptor.tags[ZB] || JB.isFieldStream(ZB) || (JB.isFiltered ? TB && (oB |= hZ) : oB |= nZ)
+      } else if (JB.isFiltered) {
+        if (TB && !JB.isStreamCollection) {
+          const BB = JB.parent?.[gB];
+          (BB?._isSchema ? BB.encDescriptor.tags[JB.parentIndex] : void 0) !== NT && (oB |= hZ)
         }
-      } else dB |= az;
-      return dB
+      } else oB |= nZ;
+      return oB
     }
-    const Jz = (BB, jB, zB) => {
-      uz(jB)
+    const NZ = (BB, IB, ZB) => {
+      kZ(IB)
     };
 
-    function mz(BB, jB, zB, QB) {
-      if (BB.addParent(jB, QB), !zB) return;
-      const nB = zB.add(BB);
-      zB !== BB.root && (BB.root = zB, dz(BB, jB, QB));
-      const dB = jB?.[mB];
-      if (void 0 !== dB && void 0 !== dB.subscribedViews && void 0 !== jB[yB] && function(BB, jB, zB, QB) {
-          const nB = BB.subscribedViews;
-          if (void 0 === nB) return;
-          const dB = BB.isStreamCollection,
-            IB = dB ? BB.ref : void 0,
-            NB = dB ? void 0 : zB[mB];
-          for (let uB = 0, UB = nB.length; uB < UB; uB++) {
-            let BB = nB[uB];
+    function gZ(BB, IB, ZB, TB) {
+      if (BB.addParent(IB, TB), !ZB) return;
+      const JB = ZB.add(BB);
+      ZB !== BB.root && (BB.root = ZB, oZ(BB, IB, TB));
+      const oB = IB?.[gB];
+      if (void 0 !== oB && void 0 !== oB.subscribedViews && void 0 !== IB[qB] && function(BB, IB, ZB, TB) {
+          const JB = BB.subscribedViews;
+          if (void 0 === JB) return;
+          const oB = BB.isStreamCollection,
+            GB = oB ? BB.ref : void 0,
+            vB = oB ? void 0 : ZB[gB];
+          for (let kB = 0, cB = JB.length; kB < cB; kB++) {
+            let BB = JB[kB];
             for (; 0 !== BB;) {
-              const zB = BB & -BB;
-              BB ^= zB;
-              const UB = 32 * uB + (31 - Math.clz32(zB)),
-                aB = QB.activeViews.get(UB),
-                pB = aB?.deref();
-              void 0 !== pB ? dB ? Fj(IB, UB, jB) : void 0 !== NB && pB.markVisible(NB) : nB[uB] &= ~zB
+              const ZB = BB & -BB;
+              BB ^= ZB;
+              const cB = 32 * kB + (31 - Math.clz32(ZB)),
+                nB = TB.activeViews.get(cB),
+                hB = nB?.deref();
+              void 0 !== hB ? oB ? MI(GB, cB, IB) : void 0 !== vB && hB.markVisible(vB) : JB[kB] &= ~ZB
             }
           }
-        }(dB, QB, BB.ref, zB), nB) {
-        let jB = Lz[gz];
-        void 0 === jB && (jB = {
+        }(oB, TB, BB.ref, ZB), JB) {
+        let IB = WZ[dZ];
+        void 0 === IB && (IB = {
           parentRef: void 0,
           root: void 0
-        }, Lz[gz] = jB), jB.parentRef = BB.ref, jB.root = zB, gz++, kz(BB, jB, tz), gz--
+        }, WZ[dZ] = IB), IB.parentRef = BB.ref, IB.root = ZB, dZ++, yZ(BB, IB, CZ), dZ--
       }
     }
 
-    function yz(BB, jB, zB) {
-      BB(jB, zB)
+    function qZ(BB, IB, ZB) {
+      BB(IB, ZB)
     }
 
-    function kz(BB, jB, zB) {
-      const QB = BB.refTarget;
-      if (QB[yB]) {
-        if ("string" !== typeof QB[yB]) {
-          const BB = QB.items;
+    function yZ(BB, IB, ZB) {
+      const TB = BB.refTarget;
+      if (TB[qB]) {
+        if ("string" !== typeof TB[qB]) {
+          const BB = TB.items;
           if (void 0 !== BB)
-            for (let QB = 0, nB = BB.length; QB < nB; QB++) {
-              const nB = BB[QB];
-              nB && zB(jB, nB[mB], QB)
+            for (let TB = 0, JB = BB.length; TB < JB; TB++) {
+              const JB = BB[TB];
+              JB && ZB(IB, JB[gB], TB)
             } else {
-              const BB = QB.$items,
-                nB = QB._collectionIndexes;
-              for (const QB of BB.keys()) {
-                const dB = BB.get(QB);
-                dB && zB(jB, dB[mB], nB?.[QB] ?? QB)
+              const BB = TB.$items,
+                JB = TB._collectionIndexes;
+              for (const TB of BB.keys()) {
+                const oB = BB.get(TB);
+                oB && ZB(IB, oB[gB], JB?.[TB] ?? TB)
               }
             }
         }
       } else {
-        const nB = BB.metadata,
-          dB = nB?.[fB];
-        if (!dB) return;
-        const IB = BB.encDescriptor.names;
-        for (let BB = 0, NB = dB.length; BB < NB; BB++) {
-          const nB = dB[BB],
-            NB = QB[IB[nB]];
-          NB && zB(jB, NB[mB], nB)
+        const JB = BB.metadata,
+          oB = JB?.[iB];
+        if (!oB) return;
+        const GB = BB.encDescriptor.names;
+        for (let BB = 0, vB = oB.length; BB < vB; BB++) {
+          const JB = oB[BB],
+            vB = TB[GB[JB]];
+          vB && ZB(IB, vB[gB], JB)
         }
       }
     }
 
-    function Gz(BB, jB, zB) {
-      jB.root !== BB ? jB.setRoot(BB) : BB.add(jB)
+    function UZ(BB, IB, ZB) {
+      IB.root !== BB ? IB.setRoot(BB) : BB.add(IB)
     }
-    const Lz = [];
-    let gz = 0;
+    const WZ = [];
+    let dZ = 0;
 
-    function tz(BB, jB, zB) {
-      if (jB.root === BB.root) return BB.root.add(jB), void BB.root.moveNextToParent(jB);
-      jB.setParent(BB.parentRef, BB.root, zB)
+    function CZ(BB, IB, ZB) {
+      if (IB.root === BB.root) return BB.root.add(IB), void BB.root.moveNextToParent(IB);
+      IB.setParent(BB.parentRef, BB.root, ZB)
     }
 
-    function Sz(BB, jB, zB) {
-      const QB = (3 & zB) << 3;
-      return zB < 4 ? BB >>> QB & 255 : jB >>> QB & 255
+    function QZ(BB, IB, ZB) {
+      const TB = (3 & ZB) << 3;
+      return ZB < 4 ? BB >>> TB & 255 : IB >>> TB & 255
     }
-    const Mz = (BB, jB, zB) => BB(jB, zB);
-    const Ez = 16,
-      iz = 32,
-      qz = 128,
-      fz = 256,
-      oz = Ez | iz;
-    class Hz {
+    const sZ = (BB, IB, ZB) => BB(IB, ZB);
+    const wZ = 16,
+      OZ = 32,
+      YZ = 128,
+      iZ = 256,
+      pZ = wZ | OZ;
+    class aZ {
       ref;
       refTarget;
       get isArray() {
@@ -3324,16 +3324,16 @@ export const modules = {
         this.flags = BB ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & Ez)
+        return 0 !== (this.flags & wZ)
       }
       set isPatchOnly(BB) {
-        this.flags = BB ? this.flags | Ez : this.flags & ~Ez
+        this.flags = BB ? this.flags | wZ : this.flags & ~wZ
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & iz)
+        return 0 !== (this.flags & OZ)
       }
       set isFullStateOnly(BB) {
-        this.flags = BB ? this.flags | iz : this.flags & ~iz
+        this.flags = BB ? this.flags | OZ : this.flags & ~OZ
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
@@ -3342,73 +3342,73 @@ export const modules = {
         this.flags = BB ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & qz)
+        return 0 !== (this.flags & YZ)
       }
       set needsRestage(BB) {
-        this.flags = BB ? this.flags | qz : -129 & this.flags
+        this.flags = BB ? this.flags | YZ : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new bj(this.metadata?.[qB] ?? 0) : new vj), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new DI(this.metadata?.[YB] ?? 0) : new KI), this.unreliableRecorder
       }
       isFieldUnreliable(BB) {
-        const jB = this.encDescriptor;
-        return !!jB.hasAnyUnreliable && (BB < 32 ? 0 !== (jB.unreliableBitmask & 1 << BB) : Cj.hasUnreliableAtIndex(this.metadata, BB))
+        const IB = this.encDescriptor;
+        return !!IB.hasAnyUnreliable && (BB < 32 ? 0 !== (IB.unreliableBitmask & 1 << BB) : xI.hasUnreliableAtIndex(this.metadata, BB))
       }
       isFieldFullStateOnly(BB) {
         if (this.isFullStateOnly) return !0;
-        const jB = this.encDescriptor;
-        return !!jB.hasAnyFullStateOnly && (BB < 32 ? 0 !== (jB.fullStateOnlyBitmask & 1 << BB) : Cj.hasFullStateOnlyAtIndex(this.metadata, BB))
+        const IB = this.encDescriptor;
+        return !!IB.hasAnyFullStateOnly && (BB < 32 ? 0 !== (IB.fullStateOnlyBitmask & 1 << BB) : xI.hasFullStateOnlyAtIndex(this.metadata, BB))
       }
       isFieldStream(BB) {
-        const jB = this.encDescriptor;
-        return !!jB.hasAnyStream && (BB < 32 ? 0 !== (jB.streamBitmask & 1 << BB) : Cj.hasStreamAtIndex(this.metadata, BB))
+        const IB = this.encDescriptor;
+        return !!IB.hasAnyStream && (BB < 32 ? 0 !== (IB.streamBitmask & 1 << BB) : xI.hasStreamAtIndex(this.metadata, BB))
       }
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
-        this.ref = BB, this.refTarget = jB;
-        const zB = Bz(BB);
-        this.encDescriptor = zB, this.metadata = zB.metadata;
-        const QB = zB.isSchema;
-        if (this._isSchema = QB, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, QB) {
-          const BB = this.metadata?.[qB] ?? 0;
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
+        this.ref = BB, this.refTarget = IB;
+        const ZB = BZ(BB);
+        this.encDescriptor = ZB, this.metadata = ZB.metadata;
+        const TB = ZB.isSchema;
+        if (this._isSchema = TB, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, TB) {
+          const BB = this.metadata?.[YB] ?? 0;
           BB > 7 && (this.ops = new Uint8Array(BB + 1))
         } else this.collDirty = new Map
       }
       _opAt(BB) {
-        const jB = this.ops;
-        if (void 0 !== jB) return jB[BB];
-        const zB = (3 & BB) << 3;
-        return BB < 4 ? this.opsLow >>> zB & 255 : this.opsHigh >>> zB & 255
+        const IB = this.ops;
+        if (void 0 !== IB) return IB[BB];
+        const ZB = (3 & BB) << 3;
+        return BB < 4 ? this.opsLow >>> ZB & 255 : this.opsHigh >>> ZB & 255
       }
-      _opPut(BB, jB) {
-        const zB = this.ops;
-        if (void 0 !== zB) return void(zB[BB] = jB);
-        const QB = (3 & BB) << 3,
-          nB = ~(255 << QB);
-        BB < 4 ? this.opsLow = this.opsLow & nB | jB << QB : this.opsHigh = this.opsHigh & nB | jB << QB
+      _opPut(BB, IB) {
+        const ZB = this.ops;
+        if (void 0 !== ZB) return void(ZB[BB] = IB);
+        const TB = (3 & BB) << 3,
+          JB = ~(255 << TB);
+        BB < 4 ? this.opsLow = this.opsLow & JB | IB << TB : this.opsHigh = this.opsHigh & JB | IB << TB
       }
       _markDirty(BB) {
         BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
       }
-      record(BB, jB) {
+      record(BB, IB) {
         if (this._isSchema) {
-          const zB = this._opAt(BB);
-          0 === zB ? this._opPut(BB, jB) : (zB === nB.DELETE || zB === nB.ADD && jB === nB.DELETE_AND_ADD) && this._opPut(BB, nB.DELETE_AND_ADD), this._markDirty(BB)
+          const ZB = this._opAt(BB);
+          0 === ZB ? this._opPut(BB, IB) : (ZB === JB.DELETE || ZB === JB.ADD && IB === JB.DELETE_AND_ADD) && this._opPut(BB, JB.DELETE_AND_ADD), this._markDirty(BB)
         } else {
-          const zB = this.collDirty,
-            QB = zB.get(BB);
-          let dB;
-          dB = void 0 === QB ? jB : QB === nB.DELETE || QB === nB.ADD && jB === nB.DELETE_AND_ADD ? nB.DELETE_AND_ADD : QB, zB.set(BB, dB)
+          const ZB = this.collDirty,
+            TB = ZB.get(BB);
+          let oB;
+          oB = void 0 === TB ? IB : TB === JB.DELETE || TB === JB.ADD && IB === JB.DELETE_AND_ADD ? JB.DELETE_AND_ADD : TB, ZB.set(BB, oB)
         }
       }
-      recordDelete(BB, jB) {
-        this._isSchema ? (this._opPut(BB, jB), this._markDirty(BB)) : this.collDirty.set(BB, jB)
+      recordDelete(BB, IB) {
+        this._isSchema ? (this._opPut(BB, IB), this._markDirty(BB)) : this.collDirty.set(BB, IB)
       }
-      recordRaw(BB, jB) {
-        this._isSchema ? (this._opPut(BB, jB), this._markDirty(BB)) : this.collDirty.set(BB, jB)
+      recordRaw(BB, IB) {
+        this._isSchema ? (this._opPut(BB, IB), this._markDirty(BB)) : this.collDirty.set(BB, IB)
       }
       recordPure(BB) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
@@ -3416,69 +3416,69 @@ export const modules = {
       }
       operationAt(BB) {
         if (this._isSchema) {
-          const jB = this._opAt(BB);
-          return 0 === jB ? void 0 : jB
+          const IB = this._opAt(BB);
+          return 0 === IB ? void 0 : IB
         }
         return this.collDirty.get(BB)
       }
-      setOperationAt(BB, jB) {
-        if (this._isSchema) this._opPut(BB, jB);
+      setOperationAt(BB, IB) {
+        if (this._isSchema) this._opPut(BB, IB);
         else {
-          const zB = this.collDirty;
-          zB.has(BB) && zB.set(BB, jB)
+          const ZB = this.collDirty;
+          ZB.has(BB) && ZB.set(BB, IB)
         }
       }
       forEach(BB) {
-        this.forEachWithCtx(BB, Mz)
+        this.forEachWithCtx(BB, sZ)
       }
-      forEachWithCtx(BB, jB) {
+      forEachWithCtx(BB, IB) {
         if (this._isSchema) {
-          let zB = this.dirtyLow,
-            QB = this.dirtyHigh;
-          const nB = this.ops;
-          if (void 0 !== nB) {
-            for (; 0 !== zB;) {
-              const QB = zB & -zB,
-                dB = 31 - Math.clz32(QB);
-              zB ^= QB, jB(BB, dB, nB[dB])
+          let ZB = this.dirtyLow,
+            TB = this.dirtyHigh;
+          const JB = this.ops;
+          if (void 0 !== JB) {
+            for (; 0 !== ZB;) {
+              const TB = ZB & -ZB,
+                oB = 31 - Math.clz32(TB);
+              ZB ^= TB, IB(BB, oB, JB[oB])
             }
-            for (; 0 !== QB;) {
-              const zB = QB & -QB,
-                dB = 31 - Math.clz32(zB) + 32;
-              QB ^= zB, jB(BB, dB, nB[dB])
+            for (; 0 !== TB;) {
+              const ZB = TB & -TB,
+                oB = 31 - Math.clz32(ZB) + 32;
+              TB ^= ZB, IB(BB, oB, JB[oB])
             }
           } else {
-            const QB = this.opsLow,
-              nB = this.opsHigh;
-            for (; 0 !== zB;) {
-              const dB = zB & -zB,
-                IB = 31 - Math.clz32(dB);
-              zB ^= dB, jB(BB, IB, Sz(QB, nB, IB))
+            const TB = this.opsLow,
+              JB = this.opsHigh;
+            for (; 0 !== ZB;) {
+              const oB = ZB & -ZB,
+                GB = 31 - Math.clz32(oB);
+              ZB ^= oB, IB(BB, GB, QZ(TB, JB, GB))
             }
           }
           return
         }
-        const zB = this.collDirty,
-          QB = this.collPureOps;
-        if (void 0 !== QB && QB.length > 0) {
-          let nB = 0,
-            dB = 0;
-          for (const [IB, NB] of zB) {
-            for (; nB < QB.length && QB[nB][0] <= dB;) {
-              const zB = QB[nB++][1];
-              jB(BB, -zB, zB)
+        const ZB = this.collDirty,
+          TB = this.collPureOps;
+        if (void 0 !== TB && TB.length > 0) {
+          let JB = 0,
+            oB = 0;
+          for (const [GB, vB] of ZB) {
+            for (; JB < TB.length && TB[JB][0] <= oB;) {
+              const ZB = TB[JB++][1];
+              IB(BB, -ZB, ZB)
             }
-            jB(BB, IB, NB), dB++
+            IB(BB, GB, vB), oB++
           }
-          for (; nB < QB.length;) {
-            const zB = QB[nB++][1];
-            jB(BB, -zB, zB)
+          for (; JB < TB.length;) {
+            const ZB = TB[JB++][1];
+            IB(BB, -ZB, ZB)
           }
         } else
-          for (const [nB, dB] of zB) jB(BB, nB, dB)
+          for (const [JB, oB] of ZB) IB(BB, JB, oB)
       }
       size() {
-        return this._isSchema ? Rj(this.dirtyLow) + Rj(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? VI(this.dirtyLow) + VI(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,78 +3491,78 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(BB, jB) {
+      insertAt(BB, IB) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const zB = this.collDirty,
-          QB = new Map,
-          dB = !this.paused && !this.isFullStateOnly;
+        const ZB = this.collDirty,
+          TB = new Map,
+          oB = !this.paused && !this.isFullStateOnly;
         if (BB > 0)
-          for (const [nB, IB] of zB) nB < BB && QB.set(nB, IB);
-        if (dB)
-          for (let IB = 0; IB < jB; IB++) QB.set(BB + IB, nB.ADD);
-        for (const [nB, IB] of zB) nB >= BB && QB.set(nB + jB, IB);
-        this.collDirty = QB, dB && this.root?.enqueueChangeTree(this)
+          for (const [JB, GB] of ZB) JB < BB && TB.set(JB, GB);
+        if (oB)
+          for (let GB = 0; GB < IB; GB++) TB.set(BB + GB, JB.ADD);
+        for (const [JB, GB] of ZB) JB >= BB && TB.set(JB + IB, GB);
+        this.collDirty = TB, oB && this.root?.enqueueChangeTree(this)
       }
-      removeAt(BB, jB) {
+      removeAt(BB, IB) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const zB = this.collDirty,
-          QB = BB + jB;
-        let nB = !1;
-        for (const IB of zB.keys())
-          if (IB >= QB) {
-            nB = !0;
+        const ZB = this.collDirty,
+          TB = BB + IB;
+        let JB = !1;
+        for (const GB of ZB.keys())
+          if (GB >= TB) {
+            JB = !0;
             break
-          } if (!nB) {
-          for (let jB = BB; jB < QB; jB++) zB.delete(jB);
+          } if (!JB) {
+          for (let IB = BB; IB < TB; IB++) ZB.delete(IB);
           return
         }
-        const dB = new Map;
-        for (const [IB, NB] of zB) IB < BB ? dB.set(IB, NB) : IB >= QB && dB.set(IB - jB, NB);
-        this.collDirty = dB
+        const oB = new Map;
+        for (const [GB, vB] of ZB) GB < BB ? oB.set(GB, vB) : GB >= TB && oB.set(GB - IB, vB);
+        this.collDirty = oB
       }
       unshift(BB) {
         this.insertAt(0, BB)
       }
       setRoot(BB) {
-        ! function(BB, jB) {
-          BB.root = jB;
-          const zB = jB.add(BB);
-          dz(BB, BB.parent, BB.parentIndex), zB && kz(BB, jB, Gz)
+        ! function(BB, IB) {
+          BB.root = IB;
+          const ZB = IB.add(BB);
+          oZ(BB, BB.parent, BB.parentIndex), ZB && yZ(BB, IB, UZ)
         }(this, BB)
       }
-      setParent(BB, jB, zB) {
-        mz(this, BB, jB, zB)
+      setParent(BB, IB, ZB) {
+        gZ(this, BB, IB, ZB)
       }
       forEachChild(BB) {
-        kz(this, BB, yz)
+        yZ(this, BB, qZ)
       }
-      forEachChildWithCtx(BB, jB) {
-        kz(this, BB, jB)
+      forEachChildWithCtx(BB, IB) {
+        yZ(this, BB, IB)
       }
       forEachLive(BB) {
-        nz(this, BB, Qz)
+        JZ(this, BB, TZ)
       }
-      forEachLiveWithCtx(BB, jB) {
-        nz(this, BB, jB)
+      forEachLiveWithCtx(BB, IB) {
+        JZ(this, BB, IB)
       }
       operation(BB) {
         this.paused || this.isFullStateOnly || (this.recordPure(BB), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(BB, jB, zB) {
+      _routeAndRecord(BB, IB, ZB) {
         if (!this.paused && !this.isFieldFullStateOnly(BB)) {
           if (this.isFieldUnreliable(BB) && !this.isNew) {
-            const QB = this.ensureUnreliableRecorder();
-            return zB ? QB.recordRaw(BB, jB) : QB.record(BB, jB), void this.root?.enqueueUnreliable(this)
+            const TB = this.ensureUnreliableRecorder();
+            return ZB ? TB.recordRaw(BB, IB) : TB.record(BB, IB), void this.root?.enqueueUnreliable(this)
           }
-          zB ? this.recordRaw(BB, jB) : this.record(BB, jB), this.root?.enqueueChangeTree(this)
+          ZB ? this.recordRaw(BB, IB) : this.record(BB, IB), this.root?.enqueueChangeTree(this)
         }
       }
       change(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.ADD;
-        this._routeAndRecord(BB, jB, !1)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JB.ADD;
+        this._routeAndRecord(BB, IB, !1)
       }
-      indexedOperation(BB, jB) {
-        this._routeAndRecord(BB, jB, !0)
+      indexedOperation(BB, IB) {
+        this._routeAndRecord(BB, IB, !0)
       }
       getChange(BB) {
         return this.operationAt(BB)
@@ -3574,57 +3574,57 @@ export const modules = {
         this.paused = !1
       }
       untracked(BB) {
-        const jB = this.paused;
+        const IB = this.paused;
         this.paused = !0;
         try {
           return BB()
         } finally {
-          this.paused = jB
+          this.paused = IB
         }
       }
       markDirty(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.ADD;
-        const zB = this.paused;
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JB.ADD;
+        const ZB = this.paused;
         this.paused = !1;
         try {
-          this.change(BB, jB)
+          this.change(BB, IB)
         } finally {
-          this.paused = zB
+          this.paused = ZB
         }
       }
       getValue(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[rB](BB, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[zB](BB, IB)
       }
-      delete(BB, jB) {
+      delete(BB, IB) {
         if (void 0 === BB) {
           try {
             throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${BB}'`)
-          } catch (dn) {
-            console.warn(dn)
+          } catch (oJ) {
+            console.warn(oJ)
           }
           return
         }
         if (this.paused || this.isFieldFullStateOnly(BB)) return this.getValue(BB);
-        const zB = this.isFieldUnreliable(BB) && !this.isNew;
-        zB ? this.ensureUnreliableRecorder().recordDelete(BB, jB ?? nB.DELETE) : this.recordDelete(BB, jB ?? nB.DELETE);
-        const QB = this.getValue(BB);
-        return QB && QB[mB] && this.root?.remove(QB[mB]), zB ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), QB
+        const ZB = this.isFieldUnreliable(BB) && !this.isNew;
+        ZB ? this.ensureUnreliableRecorder().recordDelete(BB, IB ?? JB.DELETE) : this.recordDelete(BB, IB ?? JB.DELETE);
+        const TB = this.getValue(BB);
+        return TB && TB[gB] && this.root?.remove(TB[gB]), ZB ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), TB
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[GB]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[UB]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[GB]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[UB]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[GB]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[UB]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
         const BB = BB => {
           if (BB < 0) return;
-          const jB = this.getValue(BB);
-          jB && jB[mB] && jB[mB].discardAll()
+          const IB = this.getValue(BB);
+          IB && IB[gB] && IB[gB].discardAll()
         };
         this.forEach(BB), this.unreliableRecorder?.forEach(BB), this.discard()
       }
@@ -3637,81 +3637,81 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(BB, jB) {
-        ! function(BB, jB, zB) {
+      addParent(BB, IB) {
+        ! function(BB, IB, ZB) {
           if (BB.parentRef) {
-            if (BB.parentRef[mB] === jB[mB]) return void(BB._parentIndex = zB);
-            if (jz(BB, ((BB, zB) => BB[mB] === jB[mB]))) return void(BB._parentIndex = zB)
+            if (BB.parentRef[gB] === IB[gB]) return void(BB._parentIndex = ZB);
+            if (IZ(BB, ((BB, ZB) => BB[gB] === IB[gB]))) return void(BB._parentIndex = ZB)
           }
-          void 0 === BB.parentRef ? (BB.parentRef = jB, BB._parentIndex = zB) : (BB.extraParents = {
+          void 0 === BB.parentRef ? (BB.parentRef = IB, BB._parentIndex = ZB) : (BB.extraParents = {
             ref: BB.parentRef,
             index: BB._parentIndex,
             next: BB.extraParents
-          }, BB.parentRef = jB, BB._parentIndex = zB)
-        }(this, BB, jB)
+          }, BB.parentRef = IB, BB._parentIndex = ZB)
+        }(this, BB, IB)
       }
-      setParentIndex(BB, jB) {
-        ! function(BB, jB, zB) {
+      setParentIndex(BB, IB) {
+        ! function(BB, IB, ZB) {
           if (void 0 !== BB.extraParents)
-            if (BB.parentRef[mB] !== jB[mB]) {
-              for (let QB = BB.extraParents; void 0 !== QB; QB = QB.next)
-                if (QB.ref[mB] === jB[mB]) return void(QB.index = zB)
-            } else BB._parentIndex = zB;
-          else BB._parentIndex = zB
-        }(this, BB, jB)
+            if (BB.parentRef[gB] !== IB[gB]) {
+              for (let TB = BB.extraParents; void 0 !== TB; TB = TB.next)
+                if (TB.ref[gB] === IB[gB]) return void(TB.index = ZB)
+            } else BB._parentIndex = ZB;
+          else BB._parentIndex = ZB
+        }(this, BB, IB)
       }
       removeParent() {
-        return function(BB, jB) {
-          if (BB.parentRef && BB.parentRef[mB] === jB[mB]) return BB.extraParents ? (BB.parentRef = BB.extraParents.ref, BB._parentIndex = BB.extraParents.index, BB.extraParents = BB.extraParents.next) : (BB.parentRef = void 0, BB._parentIndex = void 0), !0;
-          let zB = BB.extraParents,
-            QB = null;
-          for (; zB;) {
-            if (zB.ref[mB] === jB[mB]) return QB ? QB.next = zB.next : BB.extraParents = zB.next, !0;
-            QB = zB, zB = zB.next
+        return function(BB, IB) {
+          if (BB.parentRef && BB.parentRef[gB] === IB[gB]) return BB.extraParents ? (BB.parentRef = BB.extraParents.ref, BB._parentIndex = BB.extraParents.index, BB.extraParents = BB.extraParents.next) : (BB.parentRef = void 0, BB._parentIndex = void 0), !0;
+          let ZB = BB.extraParents,
+            TB = null;
+          for (; ZB;) {
+            if (ZB.ref[gB] === IB[gB]) return TB ? TB.next = ZB.next : BB.extraParents = ZB.next, !0;
+            TB = ZB, ZB = ZB.next
           }
           return void 0 === BB.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
       findParent(BB) {
-        return function(BB, jB) {
-          if (void 0 !== BB.parentRef && jB(BB.parentRef, BB._parentIndex)) return {
+        return function(BB, IB) {
+          if (void 0 !== BB.parentRef && IB(BB.parentRef, BB._parentIndex)) return {
             ref: BB.parentRef,
             index: BB._parentIndex
           };
-          for (let zB = BB.extraParents; void 0 !== zB; zB = zB.next)
-            if (jB(zB.ref, zB.index)) return {
-              ref: zB.ref,
-              index: zB.index
+          for (let ZB = BB.extraParents; void 0 !== ZB; ZB = ZB.next)
+            if (IB(ZB.ref, ZB.index)) return {
+              ref: ZB.ref,
+              index: ZB.index
             }
         }(this, BB)
       }
       hasParent(BB) {
-        return jz(this, BB)
+        return IZ(this, BB)
       }
       indexInParent(BB) {
-        return function(BB, jB) {
-          if (BB.parentRef && BB.parentRef[mB] === jB[mB]) return BB._parentIndex;
-          for (let zB = BB.extraParents; void 0 !== zB; zB = zB.next)
-            if (zB.ref[mB] === jB[mB]) return zB.index
+        return function(BB, IB) {
+          if (BB.parentRef && BB.parentRef[gB] === IB[gB]) return BB._parentIndex;
+          for (let ZB = BB.extraParents; void 0 !== ZB; ZB = ZB.next)
+            if (ZB.ref[gB] === IB[gB]) return ZB.index
         }(this, BB)
       }
       getAllParents() {
         return function(BB) {
-          const jB = [];
-          BB.parentRef && jB.push({
+          const IB = [];
+          BB.parentRef && IB.push({
             ref: BB.parentRef,
             index: BB._parentIndex
           });
-          let zB = BB.extraParents;
-          for (; zB;) jB.push({
-            ref: zB.ref,
-            index: zB.index
-          }), zB = zB.next;
-          return jB
+          let ZB = BB.extraParents;
+          for (; ZB;) IB.push({
+            ref: ZB.ref,
+            index: ZB.index
+          }), ZB = ZB.next;
+          return IB
         }(this)
       }
     }
-    class Dz {
+    class HZ {
       ref;
       root = void 0;
       parentRef = void 0;
@@ -3743,365 +3743,365 @@ export const modules = {
       }
       markDirty() {}
       forEachChild(BB) {
-        const jB = this.ref;
-        if (jB[yB]) {
-          if ("string" !== typeof jB[yB])
-            for (const [zB, QB] of jB.entries()) QB && BB(QB[mB], jB._collectionIndexes?.[zB] ?? zB);
+        const IB = this.ref;
+        if (IB[qB]) {
+          if ("string" !== typeof IB[qB])
+            for (const [ZB, TB] of IB.entries()) TB && BB(TB[gB], IB._collectionIndexes?.[ZB] ?? ZB);
           return
         }
-        const zB = jB.constructor,
-          QB = zB?.[Symbol.metadata];
-        if (!QB) return;
-        const nB = QB[fB] ?? [];
-        for (let dB = 0; dB < nB.length; dB++) {
-          const zB = nB[dB],
-            IB = jB[QB[zB].name];
-          IB && BB(IB[mB], zB)
+        const ZB = IB.constructor,
+          TB = ZB?.[Symbol.metadata];
+        if (!TB) return;
+        const JB = TB[iB] ?? [];
+        for (let oB = 0; oB < JB.length; oB++) {
+          const ZB = JB[oB],
+            GB = IB[TB[ZB].name];
+          GB && BB(GB[gB], ZB)
         }
       }
-      forEachChildWithCtx(BB, jB) {
-        this.forEachChild(((zB, QB) => jB(BB, zB, QB)))
+      forEachChildWithCtx(BB, IB) {
+        this.forEachChild(((ZB, TB) => IB(BB, ZB, TB)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Fz(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
-      var zB;
-      Object.defineProperty(BB, mB, {
-        value: (zB = jB, new Dz(zB)),
+    function MZ(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
+      var ZB;
+      Object.defineProperty(BB, gB, {
+        value: (ZB = IB, new HZ(ZB)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function Yz(BB, jB, zB, QB, dB, IB, uB) {
-      void 0 !== uB ? uB(jB, QB, IB) : "string" === typeof zB ? jj[zB]?.(jB, QB, IB) : null != zB[Symbol.metadata] ? (jj.number(jB, QB[NB], IB), (dB & nB.ADD) === nB.ADD && BB.tryEncodeTypeId(jB, zB, QB.constructor, IB)) : jj.number(jB, QB[NB], IB)
+    function jZ(BB, IB, ZB, TB, oB, GB, kB) {
+      void 0 !== kB ? kB(IB, TB, GB) : "string" === typeof ZB ? II[ZB]?.(IB, TB, GB) : null != ZB[Symbol.metadata] ? (II.number(IB, TB[vB], GB), (oB & JB.ADD) === JB.ADD && BB.tryEncodeTypeId(IB, ZB, TB.constructor, GB)) : II.number(IB, TB[vB], GB)
     }
-    const Vz = function(BB, jB, zB, QB, dB, IB, NB, uB) {
-        if (jB[IB.offset++] = 255 & (QB | dB), dB === nB.DELETE) return;
-        const UB = zB.encDescriptor,
-          aB = zB.ref,
-          pB = aB[tB][QB] ?? aB[UB.names[QB]];
-        Yz(BB, jB, UB.types[QB], pB, dB, IB, UB.encoders[QB])
+    const PZ = function(BB, IB, ZB, TB, oB, GB, vB, kB) {
+        if (IB[GB.offset++] = 255 & (TB | oB), oB === JB.DELETE) return;
+        const cB = ZB.encDescriptor,
+          nB = ZB.ref,
+          hB = nB[CB][TB] ?? nB[cB.names[TB]];
+        jZ(BB, IB, cB.types[TB], hB, oB, GB, cB.encoders[TB])
       },
-      hz = function(BB, jB, zB, QB, dB, IB) {
-        if (jB[IB.offset++] = 255 & dB, jj.number(jB, QB, IB), dB === nB.DELETE) return;
-        const NB = zB.ref;
-        if ((dB & nB.ADD) === nB.ADD) {
-          const BB = NB.$indexes.get(QB);
-          jj.string(jB, BB, IB)
+      RZ = function(BB, IB, ZB, TB, oB, GB) {
+        if (IB[GB.offset++] = 255 & oB, II.number(IB, TB, GB), oB === JB.DELETE) return;
+        const vB = ZB.ref;
+        if ((oB & JB.ADD) === JB.ADD) {
+          const BB = vB.$indexes.get(TB);
+          II.string(IB, BB, GB)
         }
-        Yz(BB, jB, NB[yB], NB[rB](QB), dB, IB)
+        jZ(BB, IB, vB[qB], vB[zB](TB), oB, GB)
       },
-      Xz = function(BB, jB, zB, QB, dB, IB) {
-        if (jB[IB.offset++] = 255 & dB, jj.number(jB, QB, IB), dB === nB.DELETE) return;
-        const NB = zB.ref;
-        Yz(BB, jB, NB[yB], NB[rB](QB), dB, IB)
+      rZ = function(BB, IB, ZB, TB, oB, GB) {
+        if (IB[GB.offset++] = 255 & oB, II.number(IB, TB, GB), oB === JB.DELETE) return;
+        const vB = ZB.ref;
+        jZ(BB, IB, vB[qB], vB[zB](TB), oB, GB)
       },
-      Zz = function(BB, jB, zB, QB, dB, IB) {
-        const NB = zB.ref;
-        (dB & nB.ADD) === nB.ADD && "function" === typeof NB.set ? hz(BB, jB, zB, QB, dB, IB) : Xz(BB, jB, zB, QB, dB, IB)
+      mZ = function(BB, IB, ZB, TB, oB, GB) {
+        const vB = ZB.ref;
+        (oB & JB.ADD) === JB.ADD && "function" === typeof vB.set ? RZ(BB, IB, ZB, TB, oB, GB) : rZ(BB, IB, ZB, TB, oB, GB)
       },
-      Az = function(BB, jB, zB, QB, dB, IB, uB, UB) {
-        const aB = zB.refTarget,
-          pB = aB[yB],
-          sB = "string" !== typeof pB;
-        let JB;
-        if (UB && zB.isFiltered && sB) {
-          const BB = aB.tmpItems[QB];
+      XZ = function(BB, IB, ZB, TB, oB, GB, kB, cB) {
+        const nB = ZB.refTarget,
+          hB = nB[qB],
+          FB = "string" !== typeof hB;
+        let NB;
+        if (cB && ZB.isFiltered && FB) {
+          const BB = nB.tmpItems[TB];
           if (!BB) return;
-          if (JB = BB[NB], dB === nB.DELETE) dB = nB.DELETE_BY_REFID;
-          else if ((dB & nB.ADD) === nB.ADD) dB = nB.ADD_BY_REFID;
-          else if ((dB & nB.MOVE) === nB.MOVE) return
-        } else if (dB === nB.DELETE && sB) {
-          const BB = aB.tmpItems[QB];
+          if (NB = BB[vB], oB === JB.DELETE) oB = JB.DELETE_BY_REFID;
+          else if ((oB & JB.ADD) === JB.ADD) oB = JB.ADD_BY_REFID;
+          else if ((oB & JB.MOVE) === JB.MOVE) return
+        } else if (oB === JB.DELETE && FB) {
+          const BB = nB.tmpItems[TB];
           if (!BB) return;
-          JB = BB[NB], dB = nB.DELETE_BY_REFID
-        } else JB = QB;
-        if (jB[IB.offset++] = 255 & dB, jj.number(jB, JB, IB), dB === nB.DELETE || dB === nB.DELETE_BY_REFID) return;
-        Yz(BB, jB, pB, aB[rB](QB, uB), dB, IB)
+          NB = BB[vB], oB = JB.DELETE_BY_REFID
+        } else NB = TB;
+        if (IB[GB.offset++] = 255 & oB, II.number(IB, NB, GB), oB === JB.DELETE || oB === JB.DELETE_BY_REFID) return;
+        jZ(BB, IB, hB, nB[zB](TB, kB), oB, GB)
       };
 
-    function Tz(BB, jB, zB, QB, dB, IB, uB) {
-      const UB = BB.resyncVisited;
-      let aB = UB.get(BB.currentRefId);
-      if (void 0 === aB && UB.set(BB.currentRefId, aB = new Set), aB.add(QB), void 0 !== dB && zB === nB.ADD && dB !== IB) {
-        const zB = dB[NB];
-        void 0 !== zB && (BB.root.removeRef(zB), uB?.push({
-          ref: jB,
+    function LZ(BB, IB, ZB, TB, oB, GB, kB) {
+      const cB = BB.resyncVisited;
+      let nB = cB.get(BB.currentRefId);
+      if (void 0 === nB && cB.set(BB.currentRefId, nB = new Set), nB.add(TB), void 0 !== oB && ZB === JB.ADD && oB !== GB) {
+        const ZB = oB[vB];
+        void 0 !== ZB && (BB.root.removeRef(ZB), kB?.push({
+          ref: IB,
           refId: BB.currentRefId,
-          op: nB.DELETE,
-          dynamicIndex: QB,
+          op: JB.DELETE,
+          dynamicIndex: TB,
           value: void 0,
-          previousValue: dB
+          previousValue: oB
         }))
       }
     }
 
-    function Pz(BB, jB, zB, QB) {
-      const nB = jB[NB];
-      if (void 0 === nB || zB.has(nB)) return;
-      zB.add(nB);
-      const dB = jB.constructor[Symbol.metadata],
-        IB = dB?.[fB];
-      if (void 0 === IB) return;
-      const uB = dB[FB];
-      for (let NB = 0; NB < IB.length; NB++) {
-        const nB = IB[NB];
-        if (void 0 !== uB && uB.includes(nB)) continue;
-        const UB = dB[nB],
-          aB = jB[UB.name];
-        aB && (oQ.is(UB.type) ? Pz(BB, aB, zB, QB) : Wz(BB, aB, zB, QB))
+    function eZ(BB, IB, ZB, TB) {
+      const JB = IB[vB];
+      if (void 0 === JB || ZB.has(JB)) return;
+      ZB.add(JB);
+      const oB = IB.constructor[Symbol.metadata],
+        GB = oB?.[iB];
+      if (void 0 === GB) return;
+      const kB = oB[MB];
+      for (let vB = 0; vB < GB.length; vB++) {
+        const JB = GB[vB];
+        if (void 0 !== kB && kB.includes(JB)) continue;
+        const cB = oB[JB],
+          nB = IB[cB.name];
+        nB && (pT.is(cB.type) ? eZ(BB, nB, ZB, TB) : uZ(BB, nB, ZB, TB))
       }
     }
 
-    function Wz(BB, jB, zB, QB) {
-      const dB = jB[kB] ?? jB,
-        IB = dB[NB];
-      if (void 0 === IB || zB.has(IB)) return;
-      zB.add(IB);
-      const uB = BB.resyncVisited.get(IB);
-      if (void 0 === uB) return;
-      const UB = BB.root;
-      dB[JB](uB, ((BB, zB) => {
-        QB?.push({
-          ref: jB,
-          refId: IB,
-          op: nB.DELETE,
-          dynamicIndex: zB,
+    function uZ(BB, IB, ZB, TB) {
+      const oB = IB[yB] ?? IB,
+        GB = oB[vB];
+      if (void 0 === GB || ZB.has(GB)) return;
+      ZB.add(GB);
+      const kB = BB.resyncVisited.get(GB);
+      if (void 0 === kB) return;
+      const cB = BB.root;
+      oB[NB](kB, ((BB, ZB) => {
+        TB?.push({
+          ref: IB,
+          refId: GB,
+          op: JB.DELETE,
+          dynamicIndex: ZB,
           value: void 0,
           previousValue: BB
         });
-        const dB = BB?.[NB];
-        void 0 !== dB && UB.removeRef(dB)
-      }), (jB => {
-        oQ.isSchema(jB) && Pz(BB, jB, zB, QB)
+        const oB = BB?.[vB];
+        void 0 !== oB && cB.removeRef(oB)
+      }), (IB => {
+        pT.isSchema(IB) && eZ(BB, IB, ZB, TB)
       }))
     }
-    const ez = 1,
-      lz = 2,
-      wz = 3,
-      xz = 4,
-      Kz = 5;
+    const fZ = 1,
+      lZ = 2,
+      AZ = 3,
+      tZ = 4,
+      bZ = 5;
 
-    function Cz(BB, jB, zB, QB, dB, IB, uB, UB, aB) {
-      const pB = BB.root;
-      let rB;
-      if ((jB & nB.DELETE) === nB.DELETE) {
-        const BB = dB?.[NB];
-        void 0 !== BB && pB.removeRef(BB), jB !== nB.DELETE_AND_ADD && zB[sB](QB), rB = void 0
+    function xZ(BB, IB, ZB, TB, oB, GB, kB, cB, nB) {
+      const hB = BB.root;
+      let zB;
+      if ((IB & JB.DELETE) === JB.DELETE) {
+        const BB = oB?.[vB];
+        void 0 !== BB && hB.removeRef(BB), IB !== JB.DELETE_AND_ADD && ZB[FB](TB), zB = void 0
       }
-      if (jB === nB.DELETE);
-      else if ("string" === typeof IB) rB = Lj[IB](uB, UB);
-      else if (Xj(IB)) rB = function(BB, jB, zB) {
-        return Aj(BB, (0, Lj[BB.wire])(jB, zB))
-      }(IB.quantized, uB, UB);
-      else if (oQ.is(IB)) {
-        const zB = Lj.number(uB, UB);
-        if (rB = pB.refs.get(zB), (jB & nB.ADD) === nB.ADD) {
-          const QB = BB.getInstanceType(uB, UB, IB);
-          rB || (rB = BB.createInstanceOfType(QB)), pB.addRef(zB, rB, rB !== dB || jB === nB.DELETE_AND_ADD && rB === dB)
+      if (IB === JB.DELETE);
+      else if ("string" === typeof GB) zB = WI[GB](kB, cB);
+      else if (rI(GB)) zB = function(BB, IB, ZB) {
+        return XI(BB, (0, WI[BB.wire])(IB, ZB))
+      }(GB.quantized, kB, cB);
+      else if (pT.is(GB)) {
+        const ZB = WI.number(kB, cB);
+        if (zB = hB.refs.get(ZB), (IB & JB.ADD) === JB.ADD) {
+          const TB = BB.getInstanceType(kB, cB, GB);
+          zB || (zB = BB.createInstanceOfType(TB)), hB.addRef(ZB, zB, zB !== oB || IB === JB.DELETE_AND_ADD && zB === oB)
         }
       } else {
-        const zB = (JB = Object.keys(IB)[0], gj[JB]),
-          QB = Lj.number(uB, UB);
-        null !== BB.resyncVisited && function(BB, jB) {
-          const zB = BB.resyncVisited;
-          zB.has(jB) || zB.set(jB, new Set)
-        }(BB, QB);
-        const sB = pB.refs.has(QB) ? dB || pB.refs.get(QB) : zB.constructor.initializeForDecoder();
-        if (rB = sB.clone(!0), rB[yB] = Object.values(IB)[0], dB) {
-          let BB = dB[NB];
-          if (void 0 !== BB && QB !== BB) {
-            (jB & nB.DELETE) !== nB.DELETE && pB.removeRef(BB);
-            const zB = dB.entries();
-            let QB;
+        const ZB = (NB = Object.keys(GB)[0], dI[NB]),
+          TB = WI.number(kB, cB);
+        null !== BB.resyncVisited && function(BB, IB) {
+          const ZB = BB.resyncVisited;
+          ZB.has(IB) || ZB.set(IB, new Set)
+        }(BB, TB);
+        const FB = hB.refs.has(TB) ? oB || hB.refs.get(TB) : ZB.constructor.initializeForDecoder();
+        if (zB = FB.clone(!0), zB[qB] = Object.values(GB)[0], oB) {
+          let BB = oB[vB];
+          if (void 0 !== BB && TB !== BB) {
+            (IB & JB.DELETE) !== JB.DELETE && hB.removeRef(BB);
+            const ZB = oB.entries();
+            let TB;
             for (;
-              (QB = zB.next()) && !QB.done;) {
-              const [jB, zB] = QB.value;
-              "object" === typeof zB && (BB = zB[NB]), aB?.push({
-                ref: dB,
+              (TB = ZB.next()) && !TB.done;) {
+              const [IB, ZB] = TB.value;
+              "object" === typeof ZB && (BB = ZB[vB]), nB?.push({
+                ref: oB,
                 refId: BB,
-                op: nB.DELETE,
-                field: jB,
+                op: JB.DELETE,
+                field: IB,
                 value: void 0,
-                previousValue: zB
+                previousValue: ZB
               })
             }
           }
         }
-        pB.addRef(QB, rB, sB !== dB || jB === nB.DELETE_AND_ADD && sB === dB)
+        hB.addRef(TB, zB, FB !== oB || IB === JB.DELETE_AND_ADD && FB === oB)
       }
-      var JB;
-      return rB
+      var NB;
+      return zB
     }
-    const cz = function(BB, jB, zB, QB, nB) {
-        const dB = jB[zB.offset++],
-          IB = QB.constructor[Symbol.metadata],
-          NB = dB >> 6 << 6,
-          uB = dB % (NB || 255),
-          UB = IB[uB];
-        if (void 0 === UB) return console.warn("@colyseus/schema: field not defined at", {
-          index: uB,
-          ref: QB.constructor.name,
-          metadata: IB
+    const EZ = function(BB, IB, ZB, TB, JB) {
+        const oB = IB[ZB.offset++],
+          GB = TB.constructor[Symbol.metadata],
+          vB = oB >> 6 << 6,
+          kB = oB % (vB || 255),
+          cB = GB[kB];
+        if (void 0 === cB) return console.warn("@colyseus/schema: field not defined at", {
+          index: kB,
+          ref: TB.constructor.name,
+          metadata: GB
         }), -1;
-        const aB = !0 === UB.deprecated,
-          pB = aB ? void 0 : QB[rB](uB),
-          sB = Cz(BB, NB, QB, uB, pB, UB.type, jB, zB, nB);
-        aB || (null !== sB && void 0 !== sB && (QB[UB.name] = sB), pB !== sB && nB?.push({
-          ref: QB,
+        const nB = !0 === cB.deprecated,
+          hB = nB ? void 0 : TB[zB](kB),
+          FB = xZ(BB, vB, TB, kB, hB, cB.type, IB, ZB, JB);
+        nB || (null !== FB && void 0 !== FB && (TB[cB.name] = FB), hB !== FB && JB?.push({
+          ref: TB,
           refId: BB.currentRefId,
-          op: NB,
-          field: UB.name,
-          value: sB,
-          previousValue: pB
+          op: vB,
+          field: cB.name,
+          value: FB,
+          previousValue: hB
         }))
       },
-      bz = function(BB, jB, zB, QB, dB) {
-        const IB = QB[kB] ?? QB,
-          NB = jB[zB.offset++];
-        if (NB === nB.CLEAR) return BB.removeChildRefs(IB, dB), void IB.clear();
-        const uB = Lj.number(jB, zB),
-          UB = IB[yB],
-          aB = IB.constructor.COLLECTION_KIND;
-        let pB;
-        (NB & nB.ADD) === nB.ADD ? aB === ez ? (pB = Lj.string(jB, zB), IB.setIndex(uB, pB)) : pB = uB : pB = IB.getIndex(uB);
-        const sB = IB[rB](uB),
-          JB = Cz(BB, NB, QB, uB, sB, UB, jB, zB, dB);
-        if (null !== BB.resyncVisited && Tz(BB, QB, NB, pB, sB, JB, dB), null !== JB && void 0 !== JB) switch (aB) {
-          case ez:
-            IB.$items.set(pB, JB);
+      DZ = function(BB, IB, ZB, TB, oB) {
+        const GB = TB[yB] ?? TB,
+          vB = IB[ZB.offset++];
+        if (vB === JB.CLEAR) return BB.removeChildRefs(GB, oB), void GB.clear();
+        const kB = WI.number(IB, ZB),
+          cB = GB[qB],
+          nB = GB.constructor.COLLECTION_KIND;
+        let hB;
+        (vB & JB.ADD) === JB.ADD ? nB === fZ ? (hB = WI.string(IB, ZB), GB.setIndex(kB, hB)) : hB = kB : hB = GB.getIndex(kB);
+        const FB = GB[zB](kB),
+          NB = xZ(BB, vB, TB, kB, FB, cB, IB, ZB, oB);
+        if (null !== BB.resyncVisited && LZ(BB, TB, vB, hB, FB, NB, oB), null !== NB && void 0 !== NB) switch (nB) {
+          case fZ:
+            GB.$items.set(hB, NB);
             break;
-          case lz:
-            IB.$setAt(uB, JB, null !== BB.resyncVisited && NB === nB.ADD ? nB.REPLACE : NB);
+          case lZ:
+            GB.$setAt(kB, NB, null !== BB.resyncVisited && vB === JB.ADD ? JB.REPLACE : vB);
             break;
-          case wz:
-          case xz:
-          case Kz:
-            IB.$items.has(uB) || (IB.$items.set(uB, JB), "number" === typeof IB.$refId && uB >= IB.$refId && (IB.$refId = uB + 1));
+          case AZ:
+          case tZ:
+          case bZ:
+            GB.$items.has(kB) || (GB.$items.set(kB, NB), "number" === typeof GB.$refId && kB >= GB.$refId && (GB.$refId = kB + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${IB.constructor?.name} \u2014 item at index ${uB} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${GB.constructor?.name} \u2014 item at index ${kB} was not stored.`)
         }
-        sB !== JB && dB?.push({
-          ref: QB,
+        FB !== NB && oB?.push({
+          ref: TB,
           refId: BB.currentRefId,
-          op: NB,
-          dynamicIndex: pB,
-          value: JB,
-          previousValue: sB
+          op: vB,
+          dynamicIndex: hB,
+          value: NB,
+          previousValue: FB
         })
       },
-      vz = function(BB, jB, zB, QB, dB) {
-        const IB = QB[kB] ?? QB;
-        let NB, uB = jB[zB.offset++];
-        if (uB === nB.CLEAR) return BB.removeChildRefs(IB, dB), void IB.clear();
-        if (uB === nB.REVERSE) return void IB.items.reverse();
-        if (uB === nB.DELETE_BY_REFID) {
-          const uB = Lj.number(jB, zB),
-            UB = BB.root.refs.get(uB);
-          if (void 0 === UB) return;
-          if (BB.root.removeRef(uB), NB = IB.findIndex((BB => BB === UB)), -1 === NB) return;
-          return IB[sB](NB), void dB?.push({
-            ref: QB,
+      KZ = function(BB, IB, ZB, TB, oB) {
+        const GB = TB[yB] ?? TB;
+        let vB, kB = IB[ZB.offset++];
+        if (kB === JB.CLEAR) return BB.removeChildRefs(GB, oB), void GB.clear();
+        if (kB === JB.REVERSE) return void GB.items.reverse();
+        if (kB === JB.DELETE_BY_REFID) {
+          const kB = WI.number(IB, ZB),
+            cB = BB.root.refs.get(kB);
+          if (void 0 === cB) return;
+          if (BB.root.removeRef(kB), vB = GB.findIndex((BB => BB === cB)), -1 === vB) return;
+          return GB[FB](vB), void oB?.push({
+            ref: TB,
             refId: BB.currentRefId,
-            op: nB.DELETE,
-            dynamicIndex: NB,
+            op: JB.DELETE,
+            dynamicIndex: vB,
             value: void 0,
-            previousValue: UB
+            previousValue: cB
           })
         }
-        if (uB === nB.ADD_BY_REFID) {
-          const QB = Lj.number(jB, zB),
-            nB = BB.root.refs.get(QB);
-          nB && (NB = IB.findIndex((BB => BB === nB))), -1 !== NB && void 0 !== NB || (NB = IB.length)
-        } else NB = Lj.number(jB, zB);
-        const UB = IB[yB];
-        let aB = NB;
-        const pB = IB.items[NB],
-          rB = Cz(BB, uB, QB, NB, pB, UB, jB, zB, dB);
-        null !== BB.resyncVisited && Tz(BB, QB, uB, NB, pB, rB, dB), null !== rB && void 0 !== rB && rB !== pB && IB.$setAt(NB, rB, null !== BB.resyncVisited && uB === nB.ADD ? nB.REPLACE : uB), pB !== rB && dB?.push({
-          ref: QB,
+        if (kB === JB.ADD_BY_REFID) {
+          const TB = WI.number(IB, ZB),
+            JB = BB.root.refs.get(TB);
+          JB && (vB = GB.findIndex((BB => BB === JB))), -1 !== vB && void 0 !== vB || (vB = GB.length)
+        } else vB = WI.number(IB, ZB);
+        const cB = GB[qB];
+        let nB = vB;
+        const hB = GB.items[vB],
+          zB = xZ(BB, kB, TB, vB, hB, cB, IB, ZB, oB);
+        null !== BB.resyncVisited && LZ(BB, TB, kB, vB, hB, zB, oB), null !== zB && void 0 !== zB && zB !== hB && GB.$setAt(vB, zB, null !== BB.resyncVisited && kB === JB.ADD ? JB.REPLACE : kB), hB !== zB && oB?.push({
+          ref: TB,
           refId: BB.currentRefId,
-          op: uB,
-          dynamicIndex: aB,
-          value: rB,
-          previousValue: pB
+          op: kB,
+          dynamicIndex: nB,
+          value: zB,
+          previousValue: hB
         })
       };
-    class Rz extends Error {}
+    class VZ extends Error {}
 
-    function Oz(BB, jB, zB, QB) {
-      if (!(BB instanceof jB)) throw new Rz(`a '${jB.name}' was expected, but '${BB&&BB.constructor.name}' was provided in ${zB.constructor.name}#${QB}`)
+    function SZ(BB, IB, ZB, TB) {
+      if (!(BB instanceof IB)) throw new VZ(`a '${IB.name}' was expected, but '${BB&&BB.constructor.name}' was provided in ${ZB.constructor.name}#${TB}`)
     }
-    const BQ = (BB, jB) => {
-        const zB = BB.toString(),
-          QB = jB.toString();
-        return zB < QB ? -1 : zB > QB ? 1 : 0
+    const BT = (BB, IB) => {
+        const ZB = BB.toString(),
+          TB = IB.toString();
+        return ZB < TB ? -1 : ZB > TB ? 1 : 0
       },
-      jQ = {
-        get: (BB, jB) => "symbol" === typeof jB || isNaN(jB) ? Reflect.get(BB, jB) : BB.items[jB],
-        set: (BB, jB, zB) => {
-          if ("symbol" !== typeof jB && !isNaN(jB)) {
-            if (void 0 === zB || null === zB) BB.$deleteAt(jB);
+      IT = {
+        get: (BB, IB) => "symbol" === typeof IB || isNaN(IB) ? Reflect.get(BB, IB) : BB.items[IB],
+        set: (BB, IB, ZB) => {
+          if ("symbol" !== typeof IB && !isNaN(IB)) {
+            if (void 0 === ZB || null === ZB) BB.$deleteAt(IB);
             else {
-              let QB;
-              if (zB[mB]) {
-                Oz(zB, BB[yB], BB, jB);
-                const dB = BB.items[jB];
-                BB.isMovingItems ? (QB = BB.$wireIndex(Number(jB)), void 0 !== dB ? zB[mB].isNew ? BB[mB].indexedOperation(QB, nB.MOVE_AND_ADD) : (BB[mB].getChange(QB) & nB.DELETE) === nB.DELETE ? BB[mB].indexedOperation(QB, nB.DELETE_AND_MOVE) : BB[mB].indexedOperation(QB, nB.MOVE) : zB[mB].isNew && BB[mB].indexedOperation(QB, nB.ADD), zB[mB].setParent(BB, BB[mB].root, QB)) : QB = BB.$changeAt(Number(jB), zB), void 0 !== dB && dB[mB].root?.remove(dB[mB])
-              } else QB = BB.$changeAt(Number(jB), zB);
-              BB.items[jB] = zB, void 0 !== QB && (BB.tmpItems[QB] = zB)
+              let TB;
+              if (ZB[gB]) {
+                SZ(ZB, BB[qB], BB, IB);
+                const oB = BB.items[IB];
+                BB.isMovingItems ? (TB = BB.$wireIndex(Number(IB)), void 0 !== oB ? ZB[gB].isNew ? BB[gB].indexedOperation(TB, JB.MOVE_AND_ADD) : (BB[gB].getChange(TB) & JB.DELETE) === JB.DELETE ? BB[gB].indexedOperation(TB, JB.DELETE_AND_MOVE) : BB[gB].indexedOperation(TB, JB.MOVE) : ZB[gB].isNew && BB[gB].indexedOperation(TB, JB.ADD), ZB[gB].setParent(BB, BB[gB].root, TB)) : TB = BB.$changeAt(Number(IB), ZB), void 0 !== oB && oB[gB].root?.remove(oB[gB])
+              } else TB = BB.$changeAt(Number(IB), ZB);
+              BB.items[IB] = ZB, void 0 !== TB && (BB.tmpItems[TB] = ZB)
             }
             return !0
           }
-          return Reflect.set(BB, jB, zB)
+          return Reflect.set(BB, IB, ZB)
         },
-        deleteProperty: (BB, jB) => ("number" === typeof jB ? BB.$deleteAt(jB) : delete BB[jB], !0),
-        has: (BB, jB) => "symbol" === typeof jB || isNaN(Number(jB)) ? Reflect.has(BB, jB) : Reflect.has(BB.items, jB)
+        deleteProperty: (BB, IB) => ("number" === typeof IB ? BB.$deleteAt(IB) : delete BB[IB], !0),
+        has: (BB, IB) => "symbol" === typeof IB || isNaN(Number(IB)) ? Reflect.has(BB, IB) : Reflect.has(BB.items, IB)
       };
-    class zQ {
-      [mB];
-      [NB];
-      [kB];
+    class ZT {
+      [gB];
+      [vB];
       [yB];
+      [qB];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[UB] = Az;
-      static[aB] = vz;
-      static COLLECTION_KIND = lz;
-      static[pB](BB, jB, zB) {
-        if (!zB) return !0;
-        const QB = BB[kB] ?? BB;
-        return "string" === typeof QB[yB] || zB.isChangeTreeVisible(QB.tmpItems[jB]?.[mB])
+      static[cB] = XZ;
+      static[nB] = KZ;
+      static COLLECTION_KIND = lZ;
+      static[hB](BB, IB, ZB) {
+        if (!ZB) return !0;
+        const TB = BB[yB] ?? BB;
+        return "string" === typeof TB[qB] || ZB.isChangeTreeVisible(TB.tmpItems[IB]?.[gB])
       }
       static is(BB) {
         return Array.isArray(BB) || void 0 !== BB.array
       }
       static from(BB) {
-        return new zQ(...Array.from(BB))
+        return new ZT(...Array.from(BB))
       }
       constructor() {
-        this[yB] = void 0, this[kB] = this;
-        const BB = new Proxy(this, jQ);
-        return Object.defineProperty(this, mB, {
-          value: new Hz(BB, this),
+        this[qB] = void 0, this[yB] = this;
+        const BB = new Proxy(this, IT);
+        return Object.defineProperty(this, gB, {
+          value: new aZ(BB, this),
           enumerable: !1,
           writable: !0
         }), arguments.length > 0 && this.push(...arguments), BB
       }
       static initializeForDecoder() {
-        const BB = Object.create(zQ.prototype);
-        BB.items = [], BB.isMovingItems = !1, BB._needsCompaction = !1, BB[yB] = void 0, BB[kB] = BB;
-        const jB = new Proxy(BB, jQ);
-        return Fz(BB, jB), jB
+        const BB = Object.create(ZT.prototype);
+        BB.items = [], BB.isMovingItems = !1, BB._needsCompaction = !1, BB[qB] = void 0, BB[yB] = BB;
+        const IB = new Proxy(BB, IT);
+        return MZ(BB, IB), IB
       }
       set length(BB) {
         0 === BB ? this.clear() : BB < this.items.length ? this.splice(BB, this.length - BB) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
@@ -4110,234 +4110,234 @@ export const modules = {
         return this.items.length
       }
       pauseTracking() {
-        this[mB].pause()
+        this[gB].pause()
       }
       resumeTracking() {
-        this[mB].resume()
+        this[gB].resume()
       }
       untracked(BB) {
-        return this[mB].untracked(BB)
+        return this[gB].untracked(BB)
       }
       get isTrackingPaused() {
-        return this[mB].paused
+        return this[gB].paused
       }
       push() {
-        const BB = this[kB],
-          jB = BB.items,
-          zB = BB.tmpItems,
-          QB = BB[mB],
-          dB = BB[yB];
-        let IB = zB.length;
-        for (let NB = 0, uB = arguments.length; NB < uB; NB++, IB++) {
-          const uB = NB < 0 || arguments.length <= NB ? void 0 : arguments[NB];
-          if (void 0 === uB || null === uB) return;
-          "object" === typeof uB && dB && Oz(uB, dB, BB, NB), QB.indexedOperation(IB, nB.ADD), jB.push(uB), zB.push(uB), uB[mB]?.setParent(this, QB.root, IB)
+        const BB = this[yB],
+          IB = BB.items,
+          ZB = BB.tmpItems,
+          TB = BB[gB],
+          oB = BB[qB];
+        let GB = ZB.length;
+        for (let vB = 0, kB = arguments.length; vB < kB; vB++, GB++) {
+          const kB = vB < 0 || arguments.length <= vB ? void 0 : arguments[vB];
+          if (void 0 === kB || null === kB) return;
+          "object" === typeof kB && oB && SZ(kB, oB, BB, vB), TB.indexedOperation(GB, JB.ADD), IB.push(kB), ZB.push(kB), kB[gB]?.setParent(this, TB.root, GB)
         }
-        return IB
+        return GB
       }
       pop() {
-        const BB = this[kB],
-          jB = BB.tmpItems,
-          zB = BB.deletedIndexes;
-        let QB = -1;
-        for (let dB = jB.length - 1; dB >= 0; dB--)
-          if (!0 !== zB[dB]) {
-            QB = dB;
+        const BB = this[yB],
+          IB = BB.tmpItems,
+          ZB = BB.deletedIndexes;
+        let TB = -1;
+        for (let oB = IB.length - 1; oB >= 0; oB--)
+          if (!0 !== ZB[oB]) {
+            TB = oB;
             break
-          } if (QB < 0) return;
-        const nB = BB.$isUnsentAdd(QB);
-        return BB[mB].delete(QB), nB ? BB.$cancelAdd(QB) : zB[QB] = !0, BB.items.pop()
+          } if (TB < 0) return;
+        const JB = BB.$isUnsentAdd(TB);
+        return BB[gB].delete(TB), JB ? BB.$cancelAdd(TB) : ZB[TB] = !0, BB.items.pop()
       }
       at(BB) {
         return BB < 0 && (BB += this.length), this.items[BB]
       }
       $wireIndex(BB) {
-        const jB = this.deletedIndexes;
-        if (0 === jB.length) return BB;
-        const zB = this.tmpItems;
-        let QB = 0;
-        for (let nB = 0; nB < zB.length; nB++)
-          if (!0 !== jB[nB]) {
-            if (QB === BB) return nB;
-            QB++
-          } return zB.length + (BB - QB)
+        const IB = this.deletedIndexes;
+        if (0 === IB.length) return BB;
+        const ZB = this.tmpItems;
+        let TB = 0;
+        for (let JB = 0; JB < ZB.length; JB++)
+          if (!0 !== IB[JB]) {
+            if (TB === BB) return JB;
+            TB++
+          } return ZB.length + (BB - TB)
       }
       $isUnsentAdd(BB) {
-        const jB = this[mB];
-        return 0 === (576 & jB.flags) && !jB.paused && "string" !== typeof this[yB] && jB.operationAt(BB) === nB.ADD
+        const IB = this[gB];
+        return 0 === (576 & IB.flags) && !IB.paused && "string" !== typeof this[qB] && IB.operationAt(BB) === JB.ADD
       }
       $cancelAdd(BB) {
-        let jB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const zB = this[mB],
-          QB = this.tmpItems[BB];
-        this.tmpItems.splice(BB, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(BB, 1), zB.removeAt(BB, 1);
-        const nB = QB?.[mB];
-        void 0 !== nB && void 0 === nB.root && nB.removeParent(this), jB && this.$reindexChildren(BB)
+        let IB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const ZB = this[gB],
+          TB = this.tmpItems[BB];
+        this.tmpItems.splice(BB, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(BB, 1), ZB.removeAt(BB, 1);
+        const JB = TB?.[gB];
+        void 0 !== JB && void 0 === JB.root && JB.removeParent(this), IB && this.$reindexChildren(BB)
       }
-      $reindexChildren(BB, jB) {
-        if (!this[mB].hasFilteredFields) return;
-        if ("string" === typeof this[yB]) return;
-        const zB = this.tmpItems,
-          QB = zB.length;
-        if (void 0 !== jB)
-          for (; BB < QB && zB[BB] === jB[BB];) BB++;
-        for (let nB = BB; nB < QB; nB++) zB[nB]?.[mB]?.setParentIndex(this, nB)
+      $reindexChildren(BB, IB) {
+        if (!this[gB].hasFilteredFields) return;
+        if ("string" === typeof this[qB]) return;
+        const ZB = this.tmpItems,
+          TB = ZB.length;
+        if (void 0 !== IB)
+          for (; BB < TB && ZB[BB] === IB[BB];) BB++;
+        for (let JB = BB; JB < TB; JB++) ZB[JB]?.[gB]?.setParentIndex(this, JB)
       }
-      $changeAt(BB, jB) {
-        if (void 0 === jB || null === jB) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[BB] === jB) return;
-        const zB = void 0 !== this.items[BB] ? "object" === typeof jB ? nB.DELETE_AND_ADD : nB.REPLACE : nB.ADD,
-          QB = this.$wireIndex(BB),
-          dB = this[mB];
-        return dB.change(QB, zB), jB[mB]?.setParent(this, dB.root, QB), QB
+      $changeAt(BB, IB) {
+        if (void 0 === IB || null === IB) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[BB] === IB) return;
+        const ZB = void 0 !== this.items[BB] ? "object" === typeof IB ? JB.DELETE_AND_ADD : JB.REPLACE : JB.ADD,
+          TB = this.$wireIndex(BB),
+          oB = this[gB];
+        return oB.change(TB, ZB), IB[gB]?.setParent(this, oB.root, TB), TB
       }
-      $deleteAt(BB, jB) {
-        this[mB].delete(this.$wireIndex(BB), jB)
+      $deleteAt(BB, IB) {
+        this[gB].delete(this.$wireIndex(BB), IB)
       }
-      $setAt(BB, jB, zB) {
-        zB === nB.ADD && void 0 !== this.items[BB] ? this.items.splice(BB, 0, jB) : zB === nB.DELETE_AND_MOVE ? (this.items.splice(BB, 1), this.items[BB] = jB) : (BB > this.items.length && (this._needsCompaction = !0), this.items[BB] = jB)
+      $setAt(BB, IB, ZB) {
+        ZB === JB.ADD && void 0 !== this.items[BB] ? this.items.splice(BB, 0, IB) : ZB === JB.DELETE_AND_MOVE ? (this.items.splice(BB, 1), this.items[BB] = IB) : (BB > this.items.length && (this._needsCompaction = !0), this.items[BB] = IB)
       }
       clear() {
-        const BB = this[kB];
+        const BB = this[yB];
         if (0 === BB.items.length) return;
-        const jB = BB[mB];
-        jB.forEachChild(((BB, zB) => {
-          jB.root?.remove(BB)
-        })), jB.discard(), jB.operation(nB.CLEAR), BB.items.length = 0, BB.tmpItems.length = 0
-      } [LB]() {
-        const BB = this[kB] ?? this,
-          jB = BB[mB];
-        if (jB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const zB = BB.items;
-        for (let QB = 0; QB < zB.length; QB++) zB[QB]?.[LB]?.();
-        BB.items.length = 0, BB.tmpItems.length = 0, BB.deletedIndexes.length = 0, jB.recycle(), BB[NB] = void 0
+        const IB = BB[gB];
+        IB.forEachChild(((BB, ZB) => {
+          IB.root?.remove(BB)
+        })), IB.discard(), IB.operation(JB.CLEAR), BB.items.length = 0, BB.tmpItems.length = 0
+      } [WB]() {
+        const BB = this[yB] ?? this,
+          IB = BB[gB];
+        if (IB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const ZB = BB.items;
+        for (let TB = 0; TB < ZB.length; TB++) ZB[TB]?.[WB]?.();
+        BB.items.length = 0, BB.tmpItems.length = 0, BB.deletedIndexes.length = 0, IB.recycle(), BB[vB] = void 0
       }
       concat() {
-        return new zQ(...this.items.concat(...arguments))
+        return new ZT(...this.items.concat(...arguments))
       }
       join(BB) {
         return this.items.join(BB)
       }
       reverse() {
-        const BB = this[kB],
-          jB = BB[mB];
-        if (jB.has() || BB.deletedIndexes.length > 0) {
-          const jB = BB.items.slice().reverse();
-          return this.clear(), this.push(...jB), this
+        const BB = this[yB],
+          IB = BB[gB];
+        if (IB.has() || BB.deletedIndexes.length > 0) {
+          const IB = BB.items.slice().reverse();
+          return this.clear(), this.push(...IB), this
         }
-        return jB.operation(nB.REVERSE), BB.items.reverse(), BB.tmpItems.reverse(), BB.$reindexChildren(0), this
+        return IB.operation(JB.REVERSE), BB.items.reverse(), BB.tmpItems.reverse(), BB.$reindexChildren(0), this
       }
       shift() {
-        const BB = this[kB],
-          jB = BB.items;
-        if (0 === jB.length) return;
-        const zB = BB[mB],
-          QB = BB.deletedIndexes;
-        let dB = 0;
-        for (; !0 === QB[dB];) dB++;
-        const IB = BB.$isUnsentAdd(dB);
-        return zB.delete(dB, nB.DELETE), IB ? BB.$cancelAdd(dB) : QB[dB] = !0, jB.shift()
+        const BB = this[yB],
+          IB = BB.items;
+        if (0 === IB.length) return;
+        const ZB = BB[gB],
+          TB = BB.deletedIndexes;
+        let oB = 0;
+        for (; !0 === TB[oB];) oB++;
+        const GB = BB.$isUnsentAdd(oB);
+        return ZB.delete(oB, JB.DELETE), GB ? BB.$cancelAdd(oB) : TB[oB] = !0, IB.shift()
       }
-      slice(BB, jB) {
-        const zB = new zQ;
-        return zB.push(...this.items.slice(BB, jB)), zB
+      slice(BB, IB) {
+        const ZB = new ZT;
+        return ZB.push(...this.items.slice(BB, IB)), ZB
       }
       sort() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BQ;
-        const jB = this[kB];
-        jB.isMovingItems = !0;
-        const zB = jB[mB];
-        return jB.items.sort(BB).forEach(((BB, jB) => zB.change(jB, nB.REPLACE))), jB.tmpItems.sort(BB), jB.$reindexChildren(0), jB.isMovingItems = !1, this
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BT;
+        const IB = this[yB];
+        IB.isMovingItems = !0;
+        const ZB = IB[gB];
+        return IB.items.sort(BB).forEach(((BB, IB) => ZB.change(IB, JB.REPLACE))), IB.tmpItems.sort(BB), IB.$reindexChildren(0), IB.isMovingItems = !1, this
       }
-      splice(BB, jB) {
-        const zB = this[kB],
-          QB = zB[mB],
-          dB = zB.items,
-          IB = zB.tmpItems,
-          NB = zB.deletedIndexes,
-          uB = dB.length,
-          UB = IB.length;
-        for (var aB = arguments.length, pB = new Array(aB > 2 ? aB - 2 : 0), rB = 2; rB < aB; rB++) pB[rB - 2] = arguments[rB];
-        const sB = pB.length,
-          JB = [];
-        for (let nB = 0; nB < UB; nB++) !0 !== NB[nB] && JB.push(nB);
-        let yB;
-        if (uB > BB) {
-          void 0 === jB && (jB = uB - BB);
-          for (let dB = BB; dB < BB + jB; dB++) {
-            const BB = JB[dB],
-              jB = zB.$isUnsentAdd(BB);
-            QB.delete(BB, nB.DELETE), jB ? (yB ??= []).push(BB) : NB[BB] = !0
+      splice(BB, IB) {
+        const ZB = this[yB],
+          TB = ZB[gB],
+          oB = ZB.items,
+          GB = ZB.tmpItems,
+          vB = ZB.deletedIndexes,
+          kB = oB.length,
+          cB = GB.length;
+        for (var nB = arguments.length, hB = new Array(nB > 2 ? nB - 2 : 0), zB = 2; zB < nB; zB++) hB[zB - 2] = arguments[zB];
+        const FB = hB.length,
+          NB = [];
+        for (let JB = 0; JB < cB; JB++) !0 !== vB[JB] && NB.push(JB);
+        let qB;
+        if (kB > BB) {
+          void 0 === IB && (IB = kB - BB);
+          for (let oB = BB; oB < BB + IB; oB++) {
+            const BB = NB[oB],
+              IB = ZB.$isUnsentAdd(BB);
+            TB.delete(BB, JB.DELETE), IB ? (qB ??= []).push(BB) : vB[BB] = !0
           }
-        } else jB = 0;
-        if (sB > 0) {
-          const dB = JB[BB] ?? uB,
-            UB = Math.min(sB, jB);
-          for (let BB = 0; BB < UB; BB++) {
-            const jB = dB + BB;
-            let zB;
-            const uB = void 0 !== yB ? yB.indexOf(jB) : -1; - 1 !== uB ? (yB.splice(uB, 1), zB = nB.ADD) : zB = NB[jB] ? nB.DELETE_AND_ADD : nB.ADD, QB.indexedOperation(jB, zB), IB[jB] = pB[BB], NB[jB] = !1, pB[BB][mB]?.setParent(this, QB.root, jB)
+        } else IB = 0;
+        if (FB > 0) {
+          const oB = NB[BB] ?? kB,
+            cB = Math.min(FB, IB);
+          for (let BB = 0; BB < cB; BB++) {
+            const IB = oB + BB;
+            let ZB;
+            const kB = void 0 !== qB ? qB.indexOf(IB) : -1; - 1 !== kB ? (qB.splice(kB, 1), ZB = JB.ADD) : ZB = vB[IB] ? JB.DELETE_AND_ADD : JB.ADD, TB.indexedOperation(IB, ZB), GB[IB] = hB[BB], vB[IB] = !1, hB[BB][gB]?.setParent(this, TB.root, IB)
           }
-          const aB = sB - UB;
-          if (aB > 0) {
-            const BB = dB + UB;
-            QB.insertAt(BB, aB);
-            for (let jB = 0; jB < aB; jB++) pB[UB + jB][mB]?.setParent(this, QB.root, BB + jB);
-            NB.length > 0 && NB.splice(BB, 0, ...new Array(aB).fill(!1)), IB.splice(BB, 0, ...pB.slice(UB)), zB.$reindexChildren(BB + aB)
+          const nB = FB - cB;
+          if (nB > 0) {
+            const BB = oB + cB;
+            TB.insertAt(BB, nB);
+            for (let IB = 0; IB < nB; IB++) hB[cB + IB][gB]?.setParent(this, TB.root, BB + IB);
+            vB.length > 0 && vB.splice(BB, 0, ...new Array(nB).fill(!1)), GB.splice(BB, 0, ...hB.slice(cB)), ZB.$reindexChildren(BB + nB)
           }
         }
-        if (void 0 !== yB && yB.length > 0) {
-          for (let BB = yB.length - 1; BB >= 0; BB--) zB.$cancelAdd(yB[BB], !1);
-          zB.$reindexChildren(yB[0])
+        if (void 0 !== qB && qB.length > 0) {
+          for (let BB = qB.length - 1; BB >= 0; BB--) ZB.$cancelAdd(qB[BB], !1);
+          ZB.$reindexChildren(qB[0])
         }
-        return QB.root?.enqueueChangeTree(QB), dB.splice(BB, jB, ...pB)
+        return TB.root?.enqueueChangeTree(TB), oB.splice(BB, IB, ...hB)
       }
       unshift() {
-        const BB = this[kB],
-          jB = BB[mB];
-        jB.unshift(arguments.length);
-        for (let QB = 0; QB < arguments.length; QB++)(QB < 0 || arguments.length <= QB ? void 0 : arguments[QB])?.[mB]?.setParent(this, jB.root, QB);
-        const zB = BB.deletedIndexes;
-        return zB.length > 0 && zB.unshift(...new Array(arguments.length).fill(!1)), BB.tmpItems.unshift(...arguments), BB.$reindexChildren(arguments.length), BB.items.unshift(...arguments)
+        const BB = this[yB],
+          IB = BB[gB];
+        IB.unshift(arguments.length);
+        for (let TB = 0; TB < arguments.length; TB++)(TB < 0 || arguments.length <= TB ? void 0 : arguments[TB])?.[gB]?.setParent(this, IB.root, TB);
+        const ZB = BB.deletedIndexes;
+        return ZB.length > 0 && ZB.unshift(...new Array(arguments.length).fill(!1)), BB.tmpItems.unshift(...arguments), BB.$reindexChildren(arguments.length), BB.items.unshift(...arguments)
       }
-      indexOf(BB, jB) {
-        return this.items.indexOf(BB, jB)
+      indexOf(BB, IB) {
+        return this.items.indexOf(BB, IB)
       }
       lastIndexOf(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(BB, jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(BB, IB)
       }
-      every(BB, jB) {
-        return this.items.every(BB, jB)
+      every(BB, IB) {
+        return this.items.every(BB, IB)
       }
-      some(BB, jB) {
-        return this.items.some(BB, jB)
+      some(BB, IB) {
+        return this.items.some(BB, IB)
       }
-      forEach(BB, jB) {
-        return this.items.forEach(BB, jB)
+      forEach(BB, IB) {
+        return this.items.forEach(BB, IB)
       }
-      map(BB, jB) {
-        return this.items.map(BB, jB)
+      map(BB, IB) {
+        return this.items.map(BB, IB)
       }
-      filter(BB, jB) {
-        return this.items.filter(BB, jB)
+      filter(BB, IB) {
+        return this.items.filter(BB, IB)
       }
-      reduce(BB, jB) {
+      reduce(BB, IB) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(BB, jB) {
+      reduceRight(BB, IB) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(BB, jB) {
-        return this.items.find(BB, jB)
+      find(BB, IB) {
+        return this.items.find(BB, IB)
       }
-      findIndex(BB, jB) {
-        return this.items.findIndex(BB, jB)
+      findIndex(BB, IB) {
+        return this.items.findIndex(BB, IB)
       }
-      fill(BB, jB, zB) {
+      fill(BB, IB, ZB) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(BB, jB, zB) {
+      copyWithin(BB, IB, ZB) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return zQ
+        return ZT
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,10 +4360,10 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(BB, jB) {
-        return this.items.includes(BB, jB)
+      includes(BB, IB) {
+        return this.items.includes(BB, IB)
       }
-      flatMap(BB, jB) {
+      flatMap(BB, IB) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
       flat(BB) {
@@ -4373,12 +4373,12 @@ export const modules = {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
+        for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(BB, jB) {
-        const zB = this.items.slice();
-        return BB < 0 && (BB += this.length), zB[BB] = jB, new zQ(...zB)
+      with(BB, IB) {
+        const ZB = this.items.slice();
+        return BB < 0 && (BB += this.length), ZB[BB] = IB, new ZT(...ZB)
       }
       toReversed() {
         return this.items.slice().reverse()
@@ -4386,44 +4386,44 @@ export const modules = {
       toSorted(BB) {
         return this.items.slice().sort(BB)
       }
-      toSpliced(BB, jB) {
-        for (var zB = arguments.length, QB = new Array(zB > 2 ? zB - 2 : 0), nB = 2; nB < zB; nB++) QB[nB - 2] = arguments[nB];
-        const dB = this.items.slice();
-        return dB.splice.apply(dB, arguments), dB
+      toSpliced(BB, IB) {
+        for (var ZB = arguments.length, TB = new Array(ZB > 2 ? ZB - 2 : 0), JB = 2; JB < ZB; JB++) TB[JB - 2] = arguments[JB];
+        const oB = this.items.slice();
+        return oB.splice.apply(oB, arguments), oB
       }
       shuffle() {
         return this.move((BB => {
-          let jB = this.items.length;
-          for (; 0 != jB;) {
-            let BB = Math.floor(Math.random() * jB);
-            jB--, [this[jB], this[BB]] = [this[BB], this[jB]]
+          let IB = this.items.length;
+          for (; 0 != IB;) {
+            let BB = Math.floor(Math.random() * IB);
+            IB--, [this[IB], this[BB]] = [this[BB], this[IB]]
           }
         }))
       }
       move(BB) {
         return this.isMovingItems = !0, BB(this), this.isMovingItems = !1, this
-      } [rB](BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const zB = this[kB] ?? this;
-        return jB || zB.deletedIndexes[BB] ? zB.items[BB] : zB.tmpItems[BB] || zB.items[BB]
-      } [sB](BB) {
-        const jB = this[kB] ?? this;
-        jB.items[BB] = void 0, jB._needsCompaction = !0
-      } [GB]() {
+      } [zB](BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ZB = this[yB] ?? this;
+        return IB || ZB.deletedIndexes[BB] ? ZB.items[BB] : ZB.tmpItems[BB] || ZB.items[BB]
+      } [FB](BB) {
+        const IB = this[yB] ?? this;
+        IB.items[BB] = void 0, IB._needsCompaction = !0
+      } [UB]() {
         const BB = this.tmpItems;
         this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, BB), this.deletedIndexes.length = 0)
-      } [gB]() {
-        const BB = this[kB] ?? this;
+      } [dB]() {
+        const BB = this[yB] ?? this;
         BB._needsCompaction && (BB._needsCompaction = !1, BB.items = BB.items.filter((BB => void 0 !== BB)))
-      } [JB](BB, jB, zB) {
-        const QB = this[kB] ?? this,
-          nB = QB.items;
-        let dB = !1;
-        for (let IB = 0; IB < nB.length; IB++) {
-          const NB = nB[IB];
-          BB.has(IB) ? zB(NB) : (dB = !0, jB(NB, IB), QB[sB](IB))
+      } [NB](BB, IB, ZB) {
+        const TB = this[yB] ?? this,
+          JB = TB.items;
+        let oB = !1;
+        for (let GB = 0; GB < JB.length; GB++) {
+          const vB = JB[GB];
+          BB.has(GB) ? ZB(vB) : (oB = !0, IB(vB, GB), TB[FB](GB))
         }
-        dB && QB[gB]()
+        oB && TB[dB]()
       }
       toArray() {
         return this.items.slice(0)
@@ -4432,28 +4432,28 @@ export const modules = {
         return this.toArray().map((BB => "function" === typeof BB.toJSON ? BB.toJSON() : BB))
       }
       clone(BB) {
-        let jB;
-        return BB ? (jB = new zQ, jB.push(...this.items)) : jB = new zQ(...this.map((BB => BB[mB] ? BB.clone() : BB))), jB
+        let IB;
+        return BB ? (IB = new ZT, IB.push(...this.items)) : IB = new ZT(...this.map((BB => BB[gB] ? BB.clone() : BB))), IB
       }
     }
-    Sj("array", {
-      constructor: zQ
+    QI("array", {
+      constructor: ZT
     });
-    class QQ {
+    class TT {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
       indexOf(BB) {
-        const jB = this.indexByKey[BB];
-        return void 0 === jB ? void 0 : jB
+        const IB = this.indexByKey[BB];
+        return void 0 === IB ? void 0 : IB
       }
       assign(BB) {
-        const jB = this.nextIndex++;
-        return this.indexByKey[BB] = jB, this.keyByIndex.set(jB, BB), jB
+        const IB = this.nextIndex++;
+        return this.indexByKey[BB] = IB, this.keyByIndex.set(IB, BB), IB
       }
-      snapshot(BB, jB) {
-        (this.snapshots ??= new Map).set(BB, jB)
+      snapshot(BB, IB) {
+        (this.snapshots ??= new Map).set(BB, IB)
       }
       forgetSnapshot(BB) {
         this.snapshots?.delete(BB)
@@ -4461,8 +4461,8 @@ export const modules = {
       snapshotAt(BB) {
         return this.snapshots?.get(BB)
       }
-      setIndex(BB, jB) {
-        this.keyByIndex.set(BB, jB), this.indexByKey[jB] = BB
+      setIndex(BB, IB) {
+        this.keyByIndex.set(BB, IB), this.indexByKey[IB] = BB
       }
       keyOf(BB) {
         return this.keyByIndex.get(BB)
@@ -4470,8 +4470,8 @@ export const modules = {
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
           for (const [BB] of this.snapshots) {
-            const jB = this.keyByIndex.get(BB);
-            void 0 !== jB && (delete this.indexByKey[jB], this.keyByIndex.delete(BB))
+            const IB = this.keyByIndex.get(BB);
+            void 0 !== IB && (delete this.indexByKey[IB], this.keyByIndex.delete(BB))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class nQ {
-      [mB];
-      [NB];
+    class JT {
+      [gB];
+      [vB];
       childType;
-      [yB];
+      [qB];
       $items = new Map;
-      journal = new QQ;
+      journal = new TT;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(BB) {
-        (this._stream ??= ij()).maxPerTick = BB
+        (this._stream ??= OI()).maxPerTick = BB
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(BB) {
-        (this._stream ??= ij()).priority = BB
+        (this._stream ??= OI()).priority = BB
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[UB] = hz;
-      static[aB] = bz;
-      static COLLECTION_KIND = ez;
-      static[pB](BB, jB, zB) {
-        if (!zB || "string" === typeof BB[yB]) return !0;
-        const QB = BB[rB](jB) ?? BB.journal.snapshotAt(jB);
-        return zB.isChangeTreeVisible(QB[mB])
+      static[cB] = RZ;
+      static[nB] = DZ;
+      static COLLECTION_KIND = fZ;
+      static[hB](BB, IB, ZB) {
+        if (!ZB || "string" === typeof BB[qB]) return !0;
+        const TB = BB[zB](IB) ?? BB.journal.snapshotAt(IB);
+        return ZB.isChangeTreeVisible(TB[gB])
       }
       static is(BB) {
         return void 0 !== BB.map
       }
       constructor(BB) {
-        if (Object.defineProperty(this, mB, {
-            value: new Hz(this),
+        if (Object.defineProperty(this, gB, {
+            value: new aZ(this),
             enumerable: !1,
             writable: !0
-          }), this[yB] = void 0, BB)
-          if (BB instanceof Map || BB instanceof nQ) BB.forEach(((BB, jB) => this.set(jB, BB)));
+          }), this[qB] = void 0, BB)
+          if (BB instanceof Map || BB instanceof JT) BB.forEach(((BB, IB) => this.set(IB, BB)));
           else
-            for (const jB in BB) this.set(jB, BB[jB])
+            for (const IB in BB) this.set(IB, BB[IB])
       }
       static initializeForDecoder() {
-        const BB = Object.create(nQ.prototype);
-        return BB.$items = new Map, BB.journal = new QQ, BB[yB] = void 0, Fz(BB), BB
+        const BB = Object.create(JT.prototype);
+        return BB.$items = new Map, BB.journal = new TT, BB[qB] = void 0, MZ(BB), BB
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,55 +4537,55 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return nQ
+        return JT
       }
-      set(BB, jB) {
-        if (void 0 === jB || null === jB) throw new Error(`MapSchema#set('${BB}', ${jB}): trying to set ${jB} value on '${BB}'.`);
-        "object" === typeof jB && this[yB] && Oz(jB, this[yB], this, BB), BB = BB.toString();
-        const zB = this[mB],
-          QB = void 0 !== jB[mB],
-          dB = this.journal;
-        let IB, NB = dB.indexOf(BB);
-        if (void 0 !== NB) {
-          IB = nB.REPLACE;
-          const zB = this.$items.get(BB);
-          if (zB === jB) return;
-          QB && (IB = nB.DELETE_AND_ADD, void 0 !== zB && zB[mB].root?.remove(zB[mB])), void 0 !== dB.snapshotAt(NB) && dB.forgetSnapshot(NB)
-        } else NB = dB.assign(BB), IB = nB.ADD;
-        return this.$items.set(BB, jB), IB === nB.ADD && zB.isStreamCollection ? void 0 !== zB.root && fj(this, zB.root, NB) : zB.change(NB, IB), QB && jB[mB].setParent(this, zB.root, NB), this
+      set(BB, IB) {
+        if (void 0 === IB || null === IB) throw new Error(`MapSchema#set('${BB}', ${IB}): trying to set ${IB} value on '${BB}'.`);
+        "object" === typeof IB && this[qB] && SZ(IB, this[qB], this, BB), BB = BB.toString();
+        const ZB = this[gB],
+          TB = void 0 !== IB[gB],
+          oB = this.journal;
+        let GB, vB = oB.indexOf(BB);
+        if (void 0 !== vB) {
+          GB = JB.REPLACE;
+          const ZB = this.$items.get(BB);
+          if (ZB === IB) return;
+          TB && (GB = JB.DELETE_AND_ADD, void 0 !== ZB && ZB[gB].root?.remove(ZB[gB])), void 0 !== oB.snapshotAt(vB) && oB.forgetSnapshot(vB)
+        } else vB = oB.assign(BB), GB = JB.ADD;
+        return this.$items.set(BB, IB), GB === JB.ADD && ZB.isStreamCollection ? void 0 !== ZB.root && iI(this, ZB.root, vB) : ZB.change(vB, GB), TB && IB[gB].setParent(this, ZB.root, vB), this
       }
       get(BB) {
         return this.$items.get(BB)
       }
-      getOrInsert(BB, jB) {
-        return this.$items.has(BB) ? this.$items.get(BB) : (this.set(BB, jB), jB)
+      getOrInsert(BB, IB) {
+        return this.$items.has(BB) ? this.$items.get(BB) : (this.set(BB, IB), IB)
       }
-      getOrInsertComputed(BB, jB) {
+      getOrInsertComputed(BB, IB) {
         if (this.$items.has(BB)) return this.$items.get(BB);
-        const zB = jB(BB);
-        return this.set(BB, zB), zB
+        const ZB = IB(BB);
+        return this.set(BB, ZB), ZB
       }
       delete(BB) {
         if (!this.$items.has(BB)) return !1;
-        const jB = this.journal.indexOf(BB),
-          zB = this.$items.get(BB),
-          QB = this[mB];
-        if (QB.isStreamCollection) {
-          const nB = QB.root;
-          let dB = !1;
-          return void 0 !== nB && (dB = oj(this, nB, this[NB], jB)), void 0 !== zB?.[mB] && nB?.remove(zB[mB]), this.$items.delete(BB), dB || this.journal.snapshot(jB, zB), !0
+        const IB = this.journal.indexOf(BB),
+          ZB = this.$items.get(BB),
+          TB = this[gB];
+        if (TB.isStreamCollection) {
+          const JB = TB.root;
+          let oB = !1;
+          return void 0 !== JB && (oB = pI(this, JB, this[vB], IB)), void 0 !== ZB?.[gB] && JB?.remove(ZB[gB]), this.$items.delete(BB), oB || this.journal.snapshot(IB, ZB), !0
         }
-        return this.journal.snapshot(jB, zB), QB.delete(jB), this.$items.delete(BB)
+        return this.journal.snapshot(IB, ZB), TB.delete(IB), this.$items.delete(BB)
       }
       clear() {
-        const BB = this[mB];
-        BB.discard(), BB.forEachChild(((jB, zB) => {
-          BB.root?.remove(jB)
-        })), this.journal.reset(), this.$items.clear(), BB.operation(nB.CLEAR)
-      } [LB]() {
-        const BB = this[mB];
+        const BB = this[gB];
+        BB.discard(), BB.forEachChild(((IB, ZB) => {
+          BB.root?.remove(IB)
+        })), this.journal.reset(), this.$items.clear(), BB.operation(JB.CLEAR)
+      } [WB]() {
+        const BB = this[gB];
         if (BB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((BB => BB?.[LB]?.())), this.$items.clear(), this.journal.reset(), BB.recycle(), this[NB] = void 0
+        this.$items.forEach((BB => BB?.[WB]?.())), this.$items.clear(), this.journal.reset(), BB.recycle(), this[vB] = void 0
       }
       has(BB) {
         return this.$items.has(BB)
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[mB].pause()
+        this[gB].pause()
       }
       resumeTracking() {
-        this[mB].resume()
+        this[gB].resume()
       }
       untracked(BB) {
-        return this[mB].untracked(BB)
+        return this[gB].untracked(BB)
       }
       get isTrackingPaused() {
-        return this[mB].paused
+        return this[gB].paused
       }
-      setIndex(BB, jB) {
-        this.journal.setIndex(BB, jB)
+      setIndex(BB, IB) {
+        this.journal.setIndex(BB, IB)
       }
       getIndex(BB) {
         return this.journal.keyOf(BB)
-      } [rB](BB) {
-        const jB = this.journal.keyOf(BB);
-        return void 0 !== jB ? this.$items.get(jB) : void 0
-      } [sB](BB) {
-        const jB = this.journal.keyOf(BB);
-        void 0 !== jB && (this.$items.delete(jB), this.journal.keyByIndex.delete(BB))
-      } [JB](BB, jB, zB) {
-        let QB = null;
-        if (this.$items.forEach(((nB, dB) => {
-            BB.has(dB) ? zB(nB) : ((QB ??= new Set).add(dB), jB(nB, dB))
-          })), null !== QB) {
-          QB.forEach((BB => {
+      } [zB](BB) {
+        const IB = this.journal.keyOf(BB);
+        return void 0 !== IB ? this.$items.get(IB) : void 0
+      } [FB](BB) {
+        const IB = this.journal.keyOf(BB);
+        void 0 !== IB && (this.$items.delete(IB), this.journal.keyByIndex.delete(BB))
+      } [NB](BB, IB, ZB) {
+        let TB = null;
+        if (this.$items.forEach(((JB, oB) => {
+            BB.has(oB) ? ZB(JB) : ((TB ??= new Set).add(oB), IB(JB, oB))
+          })), null !== TB) {
+          TB.forEach((BB => {
             this.$items.delete(BB), delete this.journal.indexByKey[BB]
           }));
           const BB = [];
-          this.journal.keyByIndex.forEach(((jB, zB) => {
-            QB.has(jB) && BB.push(zB)
+          this.journal.keyByIndex.forEach(((IB, ZB) => {
+            TB.has(IB) && BB.push(ZB)
           }));
-          for (let jB = 0; jB < BB.length; jB++) this.journal.keyByIndex.delete(BB[jB])
+          for (let IB = 0; IB < BB.length; IB++) this.journal.keyByIndex.delete(BB[IB])
         }
-      } [GB]() {
+      } [UB]() {
         this.journal.cleanupAfterEncode()
       }
       _dropView(BB) {
-        Yj(this, BB)
+        jI(this, BB)
       }
       _unregister() {}
       toJSON() {
         return Object.fromEntries(Array.from(this, (BB => {
-          let [jB, zB] = BB;
-          return [jB, "function" === typeof zB.toJSON ? zB.toJSON() : zB]
+          let [IB, ZB] = BB;
+          return [IB, "function" === typeof ZB.toJSON ? ZB.toJSON() : ZB]
         })))
       }
       clone(BB) {
-        let jB;
-        return BB ? jB = Object.assign(new nQ, this) : (jB = new nQ, this.forEach(((BB, zB) => {
-          BB[mB] ? jB.set(zB, BB.clone()) : jB.set(zB, BB)
-        }))), jB
+        let IB;
+        return BB ? IB = Object.assign(new JT, this) : (IB = new JT, this.forEach(((BB, ZB) => {
+          BB[gB] ? IB.set(ZB, BB.clone()) : IB.set(ZB, BB)
+        }))), IB
       }
     }
-    Sj("map", {
-      constructor: nQ
+    QI("map", {
+      constructor: JT
     });
-    class dQ {
-      [mB];
-      [NB];
-      [yB];
+    class oT {
+      [gB];
+      [vB];
+      [qB];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4677,78 +4677,78 @@ export const modules = {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(BB) {
-        (this._stream ??= ij()).maxPerTick = BB
+        (this._stream ??= OI()).maxPerTick = BB
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(BB) {
-        (this._stream ??= ij()).priority = BB
+        (this._stream ??= OI()).priority = BB
       }
-      static[UB] = Xz;
-      static[aB] = bz;
-      static COLLECTION_KIND = xz;
-      static[pB](BB, jB, zB) {
-        return !zB || "string" === typeof BB[yB] || zB.isChangeTreeVisible((BB[rB](jB) ?? BB.deletedItems[jB])[mB])
+      static[cB] = rZ;
+      static[nB] = DZ;
+      static COLLECTION_KIND = tZ;
+      static[hB](BB, IB, ZB) {
+        return !ZB || "string" === typeof BB[qB] || ZB.isChangeTreeVisible((BB[zB](IB) ?? BB.deletedItems[IB])[gB])
       }
       static is(BB) {
         return void 0 !== BB.collection
       }
       constructor(BB) {
-        Object.defineProperty(this, mB, {
-          value: new Hz(this),
+        Object.defineProperty(this, gB, {
+          value: new aZ(this),
           enumerable: !1,
           writable: !0
-        }), this[yB] = void 0, BB && BB.forEach((BB => this.add(BB)))
+        }), this[qB] = void 0, BB && BB.forEach((BB => this.add(BB)))
       }
       static initializeForDecoder() {
-        const BB = Object.create(dQ.prototype);
-        return BB.$items = new Map, BB.deletedItems = {}, BB.$refId = 0, BB[yB] = void 0, Fz(BB), BB
+        const BB = Object.create(oT.prototype);
+        return BB.$items = new Map, BB.deletedItems = {}, BB.$refId = 0, BB[qB] = void 0, MZ(BB), BB
       }
       add(BB) {
-        const jB = this.$refId++,
-          zB = this[mB];
-        return this.$items.set(jB, BB), zB.isStreamCollection ? void 0 !== zB.root && fj(this, zB.root, jB) : zB.change(jB), void 0 !== BB[mB] && BB[mB].setParent(this, zB.root, jB), jB
+        const IB = this.$refId++,
+          ZB = this[gB];
+        return this.$items.set(IB, BB), ZB.isStreamCollection ? void 0 !== ZB.root && iI(this, ZB.root, IB) : ZB.change(IB), void 0 !== BB[gB] && BB[gB].setParent(this, ZB.root, IB), IB
       }
       at(BB) {
-        const jB = Array.from(this.$items.keys())[BB];
-        return this.$items.get(jB)
+        const IB = Array.from(this.$items.keys())[BB];
+        return this.$items.get(IB)
       }
       entries() {
         return this.$items.entries()
       }
       delete(BB) {
-        const jB = this.$items.entries();
-        let zB, QB;
+        const IB = this.$items.entries();
+        let ZB, TB;
         for (;
-          (QB = jB.next()) && !QB.done;)
-          if (BB === QB.value[1]) {
-            zB = QB.value[0];
+          (TB = IB.next()) && !TB.done;)
+          if (BB === TB.value[1]) {
+            ZB = TB.value[0];
             break
-          } if (void 0 === zB) return !1;
-        const nB = this[mB];
-        if (nB.isStreamCollection) {
-          const BB = nB.root,
-            jB = this.$items.get(zB);
-          return void 0 !== BB && oj(this, BB, this[NB], zB), void 0 !== jB?.[mB] && BB?.remove(jB[mB]), this.deletedItems[zB] = jB, this.$items.delete(zB)
+          } if (void 0 === ZB) return !1;
+        const JB = this[gB];
+        if (JB.isStreamCollection) {
+          const BB = JB.root,
+            IB = this.$items.get(ZB);
+          return void 0 !== BB && pI(this, BB, this[vB], ZB), void 0 !== IB?.[gB] && BB?.remove(IB[gB]), this.deletedItems[ZB] = IB, this.$items.delete(ZB)
         }
-        return this.deletedItems[zB] = nB.delete(zB), this.$items.delete(zB)
+        return this.deletedItems[ZB] = JB.delete(ZB), this.$items.delete(ZB)
       }
       clear() {
-        const BB = this[mB];
-        BB.discard(), BB.forEachChild(((jB, zB) => {
-          BB.root?.remove(jB)
-        })), this.$items.clear(), BB.operation(nB.CLEAR)
-      } [LB]() {
-        const BB = this[mB];
+        const BB = this[gB];
+        BB.discard(), BB.forEachChild(((IB, ZB) => {
+          BB.root?.remove(IB)
+        })), this.$items.clear(), BB.operation(JB.CLEAR)
+      } [WB]() {
+        const BB = this[gB];
         if (BB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((BB => BB?.[LB]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, BB.recycle(), this[NB] = void 0
+        this.$items.forEach((BB => BB?.[WB]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, BB.recycle(), this[vB] = void 0
       }
       has(BB) {
-        return Array.from(this.$items.values()).some((jB => jB === BB))
+        return Array.from(this.$items.values()).some((IB => IB === BB))
       }
       forEach(BB) {
-        this.$items.forEach(((jB, zB, QB) => BB(jB, zB, this)))
+        this.$items.forEach(((IB, ZB, TB) => BB(IB, ZB, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,37 +4757,37 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[mB].pause()
+        this[gB].pause()
       }
       resumeTracking() {
-        this[mB].resume()
+        this[gB].resume()
       }
       untracked(BB) {
-        return this[mB].untracked(BB)
+        return this[gB].untracked(BB)
       }
       get isTrackingPaused() {
-        return this[mB].paused
+        return this[gB].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(BB, jB) {}
+      setIndex(BB, IB) {}
       getIndex(BB) {
         return BB
-      } [rB](BB) {
+      } [zB](BB) {
         return this.$items.get(BB)
-      } [sB](BB) {
+      } [FB](BB) {
         this.$items.delete(BB)
-      } [JB](BB, jB, zB) {
-        let QB = null;
-        if (this.$items.forEach(((nB, dB) => {
-            BB.has(dB) ? zB(nB) : ((QB ??= []).push(dB), jB(nB, dB))
-          })), null !== QB)
-          for (let nB = 0; nB < QB.length; nB++) this[sB](QB[nB])
-      } [GB]() {
+      } [NB](BB, IB, ZB) {
+        let TB = null;
+        if (this.$items.forEach(((JB, oB) => {
+            BB.has(oB) ? ZB(JB) : ((TB ??= []).push(oB), IB(JB, oB))
+          })), null !== TB)
+          for (let JB = 0; JB < TB.length; JB++) this[FB](TB[JB])
+      } [UB]() {
         for (const BB in this.deletedItems) delete this.deletedItems[BB]
       }
       _dropView(BB) {
-        Yj(this, BB)
+        jI(this, BB)
       }
       _unregister() {}
       toArray() {
@@ -4795,24 +4795,24 @@ export const modules = {
       }
       toJSON() {
         const BB = [];
-        return this.forEach(((jB, zB) => {
-          BB.push("function" === typeof jB.toJSON ? jB.toJSON() : jB)
+        return this.forEach(((IB, ZB) => {
+          BB.push("function" === typeof IB.toJSON ? IB.toJSON() : IB)
         })), BB
       }
       clone(BB) {
-        let jB;
-        return BB ? jB = Object.assign(new dQ, this) : (jB = new dQ, this.forEach((BB => {
-          BB[mB] ? jB.add(BB.clone()) : jB.add(BB)
-        }))), jB
+        let IB;
+        return BB ? IB = Object.assign(new oT, this) : (IB = new oT, this.forEach((BB => {
+          BB[gB] ? IB.add(BB.clone()) : IB.add(BB)
+        }))), IB
       }
     }
-    Sj("collection", {
-      constructor: dQ
+    QI("collection", {
+      constructor: oT
     });
-    class IQ {
-      [mB];
-      [NB];
-      [yB];
+    class GT {
+      [gB];
+      [vB];
+      [qB];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4821,80 +4821,80 @@ export const modules = {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(BB) {
-        (this._stream ??= ij()).maxPerTick = BB
+        (this._stream ??= OI()).maxPerTick = BB
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(BB) {
-        (this._stream ??= ij()).priority = BB
+        (this._stream ??= OI()).priority = BB
       }
-      static[UB] = Xz;
-      static[aB] = bz;
-      static COLLECTION_KIND = wz;
-      static[pB](BB, jB, zB) {
-        return !zB || "string" === typeof BB[yB] || zB.isVisible((BB[rB](jB) ?? BB.deletedItems[jB])[mB])
+      static[cB] = rZ;
+      static[nB] = DZ;
+      static COLLECTION_KIND = AZ;
+      static[hB](BB, IB, ZB) {
+        return !ZB || "string" === typeof BB[qB] || ZB.isVisible((BB[zB](IB) ?? BB.deletedItems[IB])[gB])
       }
       static is(BB) {
         return void 0 !== BB.set
       }
       constructor(BB) {
-        Object.defineProperty(this, mB, {
-          value: new Hz(this),
+        Object.defineProperty(this, gB, {
+          value: new aZ(this),
           enumerable: !1,
           writable: !0
-        }), this[yB] = void 0, BB && BB.forEach((BB => this.add(BB)))
+        }), this[qB] = void 0, BB && BB.forEach((BB => this.add(BB)))
       }
       static initializeForDecoder() {
-        const BB = Object.create(IQ.prototype);
-        return BB.$items = new Map, BB.deletedItems = {}, BB.$refId = 0, BB[yB] = void 0, Fz(BB), BB
+        const BB = Object.create(GT.prototype);
+        return BB.$items = new Map, BB.deletedItems = {}, BB.$refId = 0, BB[qB] = void 0, MZ(BB), BB
       }
       add(BB) {
         if (this.has(BB)) return !1;
-        const jB = this.$refId++,
-          zB = this[mB];
-        return this.$items.set(jB, BB), zB.isStreamCollection ? void 0 !== zB.root && fj(this, zB.root, jB) : zB.change(jB, nB.ADD), void 0 !== BB[mB] && BB[mB].setParent(this, zB.root, jB), jB
+        const IB = this.$refId++,
+          ZB = this[gB];
+        return this.$items.set(IB, BB), ZB.isStreamCollection ? void 0 !== ZB.root && iI(this, ZB.root, IB) : ZB.change(IB, JB.ADD), void 0 !== BB[gB] && BB[gB].setParent(this, ZB.root, IB), IB
       }
       entries() {
         return this.$items.entries()
       }
       delete(BB) {
-        const jB = this.$items.entries();
-        let zB, QB;
+        const IB = this.$items.entries();
+        let ZB, TB;
         for (;
-          (QB = jB.next()) && !QB.done;)
-          if (BB === QB.value[1]) {
-            zB = QB.value[0];
+          (TB = IB.next()) && !TB.done;)
+          if (BB === TB.value[1]) {
+            ZB = TB.value[0];
             break
-          } if (void 0 === zB) return !1;
-        const nB = this[mB];
-        if (nB.isStreamCollection) {
-          const BB = nB.root,
-            jB = this.$items.get(zB);
-          return void 0 !== BB && oj(this, BB, this[NB], zB), void 0 !== jB?.[mB] && BB?.remove(jB[mB]), this.deletedItems[zB] = jB, this.$items.delete(zB)
+          } if (void 0 === ZB) return !1;
+        const JB = this[gB];
+        if (JB.isStreamCollection) {
+          const BB = JB.root,
+            IB = this.$items.get(ZB);
+          return void 0 !== BB && pI(this, BB, this[vB], ZB), void 0 !== IB?.[gB] && BB?.remove(IB[gB]), this.deletedItems[ZB] = IB, this.$items.delete(ZB)
         }
-        return this.deletedItems[zB] = nB.delete(zB), this.$items.delete(zB)
+        return this.deletedItems[ZB] = JB.delete(ZB), this.$items.delete(ZB)
       }
       clear() {
-        const BB = this[mB];
-        BB.discard(), this.$items.clear(), BB.operation(nB.CLEAR)
-      } [LB]() {
-        const BB = this[mB];
+        const BB = this[gB];
+        BB.discard(), this.$items.clear(), BB.operation(JB.CLEAR)
+      } [WB]() {
+        const BB = this[gB];
         if (BB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((BB => BB?.[LB]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, BB.recycle(), this[NB] = void 0
+        this.$items.forEach((BB => BB?.[WB]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, BB.recycle(), this[vB] = void 0
       }
       has(BB) {
-        const jB = this.$items.values();
-        let zB, QB = !1;
+        const IB = this.$items.values();
+        let ZB, TB = !1;
         for (;
-          (zB = jB.next()) && !zB.done;)
-          if (BB === zB.value) {
-            QB = !0;
+          (ZB = IB.next()) && !ZB.done;)
+          if (BB === ZB.value) {
+            TB = !0;
             break
-          } return QB
+          } return TB
       }
       forEach(BB) {
-        this.$items.forEach(((jB, zB, QB) => BB(jB, zB, this)))
+        this.$items.forEach(((IB, ZB, TB) => BB(IB, ZB, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,37 +4903,37 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[mB].pause()
+        this[gB].pause()
       }
       resumeTracking() {
-        this[mB].resume()
+        this[gB].resume()
       }
       untracked(BB) {
-        return this[mB].untracked(BB)
+        return this[gB].untracked(BB)
       }
       get isTrackingPaused() {
-        return this[mB].paused
+        return this[gB].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(BB, jB) {}
+      setIndex(BB, IB) {}
       getIndex(BB) {
         return BB
-      } [rB](BB) {
+      } [zB](BB) {
         return this.$items.get(BB)
-      } [sB](BB) {
+      } [FB](BB) {
         this.$items.delete(BB)
-      } [JB](BB, jB, zB) {
-        let QB = null;
-        if (this.$items.forEach(((nB, dB) => {
-            BB.has(dB) ? zB(nB) : ((QB ??= []).push(dB), jB(nB, dB))
-          })), null !== QB)
-          for (let nB = 0; nB < QB.length; nB++) this[sB](QB[nB])
-      } [GB]() {
+      } [NB](BB, IB, ZB) {
+        let TB = null;
+        if (this.$items.forEach(((JB, oB) => {
+            BB.has(oB) ? ZB(JB) : ((TB ??= []).push(oB), IB(JB, oB))
+          })), null !== TB)
+          for (let JB = 0; JB < TB.length; JB++) this[FB](TB[JB])
+      } [UB]() {
         for (const BB in this.deletedItems) delete this.deletedItems[BB]
       }
       _dropView(BB) {
-        Yj(this, BB)
+        jI(this, BB)
       }
       _unregister() {}
       toArray() {
@@ -4941,24 +4941,24 @@ export const modules = {
       }
       toJSON() {
         const BB = [];
-        return this.forEach(((jB, zB) => {
-          BB.push("function" === typeof jB.toJSON ? jB.toJSON() : jB)
+        return this.forEach(((IB, ZB) => {
+          BB.push("function" === typeof IB.toJSON ? IB.toJSON() : IB)
         })), BB
       }
       clone(BB) {
-        let jB;
-        return BB ? jB = Object.assign(new IQ, this) : (jB = new IQ, this.forEach((BB => {
-          BB[mB] ? jB.add(BB.clone()) : jB.add(BB)
-        }))), jB
+        let IB;
+        return BB ? IB = Object.assign(new GT, this) : (IB = new GT, this.forEach((BB => {
+          BB[gB] ? IB.add(BB.clone()) : IB.add(BB)
+        }))), IB
       }
     }
-    Sj("set", {
-      constructor: IQ
+    QI("set", {
+      constructor: GT
     });
-    class NQ {
-      [mB];
-      [NB];
-      [yB];
+    class vT {
+      [gB];
+      [vB];
+      [qB];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4967,80 +4967,80 @@ export const modules = {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(BB) {
-        (this._stream ??= ij()).maxPerTick = BB
+        (this._stream ??= OI()).maxPerTick = BB
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(BB) {
-        (this._stream ??= ij()).priority = BB
+        (this._stream ??= OI()).priority = BB
       }
       static $isStream = !0;
-      static[UB] = Xz;
-      static[aB] = bz;
-      static COLLECTION_KIND = Kz;
-      static[pB](BB, jB, zB) {
-        if (!zB) return !0;
-        const QB = BB[rB](jB);
-        return void 0 !== QB && zB.isVisible(QB[mB])
+      static[cB] = rZ;
+      static[nB] = DZ;
+      static COLLECTION_KIND = bZ;
+      static[hB](BB, IB, ZB) {
+        if (!ZB) return !0;
+        const TB = BB[zB](IB);
+        return void 0 !== TB && ZB.isVisible(TB[gB])
       }
       static is(BB) {
         return BB && void 0 !== BB.stream
       }
       constructor() {
-        Object.defineProperty(this, mB, {
-          value: new Hz(this),
+        Object.defineProperty(this, gB, {
+          value: new aZ(this),
           enumerable: !1,
           writable: !0
-        }), this[yB] = void 0
+        }), this[qB] = void 0
       }
       static initializeForDecoder() {
-        const BB = Object.create(NQ.prototype);
-        return BB.$items = new Map, BB.$nextPosition = 0, BB._itemIndex = new Map, BB[yB] = void 0, Fz(BB), BB
+        const BB = Object.create(vT.prototype);
+        return BB.$items = new Map, BB.$nextPosition = 0, BB._itemIndex = new Map, BB[qB] = void 0, MZ(BB), BB
       }
       add(BB) {
         if (this._itemIndex.has(BB)) return -1;
-        const jB = this.$nextPosition++;
-        this.$items.set(jB, BB), this._itemIndex.set(BB, jB);
-        const zB = this[mB].root;
-        return void 0 !== BB[mB] && BB[mB].setParent(this, zB, jB), void 0 !== zB && fj(this, zB, jB), jB
+        const IB = this.$nextPosition++;
+        this.$items.set(IB, BB), this._itemIndex.set(BB, IB);
+        const ZB = this[gB].root;
+        return void 0 !== BB[gB] && BB[gB].setParent(this, ZB, IB), void 0 !== ZB && iI(this, ZB, IB), IB
       }
       remove(BB) {
-        const jB = this._itemIndex.get(BB);
-        if (void 0 === jB) return !1;
-        this._itemIndex.delete(BB), this.$items.delete(jB);
-        const zB = this[mB].root;
-        return void 0 !== zB && (oj(this, zB, this[NB], jB), void 0 !== BB[mB] && zB.remove(BB[mB])), !0
+        const IB = this._itemIndex.get(BB);
+        if (void 0 === IB) return !1;
+        this._itemIndex.delete(BB), this.$items.delete(IB);
+        const ZB = this[gB].root;
+        return void 0 !== ZB && (pI(this, ZB, this[vB], IB), void 0 !== BB[gB] && ZB.remove(BB[gB])), !0
       }
       has(BB) {
         return this._itemIndex.has(BB)
       }
       clear() {
-        const BB = this[mB].root;
+        const BB = this[gB].root;
         if (void 0 !== BB) {
-          ! function(BB, jB, zB) {
-            const QB = BB._stream;
-            if (void 0 !== QB) {
-              QB.broadcastPending.clear();
-              for (const BB of QB.sentBroadcast) QB.broadcastDeletes.add(BB);
-              QB.sentBroadcast.clear(), jB.forEachActiveView((BB => {
-                QB.pendingByView.get(BB.id)?.clear();
-                const jB = QB.sentByView.get(BB.id);
-                if (void 0 !== jB && jB.size > 0) {
-                  let QB = BB.changes.get(zB);
-                  void 0 === QB && (QB = new Map, BB.changes.set(zB, QB));
-                  for (const BB of jB) QB.set(BB, nB.DELETE);
-                  jB.clear()
+          ! function(BB, IB, ZB) {
+            const TB = BB._stream;
+            if (void 0 !== TB) {
+              TB.broadcastPending.clear();
+              for (const BB of TB.sentBroadcast) TB.broadcastDeletes.add(BB);
+              TB.sentBroadcast.clear(), IB.forEachActiveView((BB => {
+                TB.pendingByView.get(BB.id)?.clear();
+                const IB = TB.sentByView.get(BB.id);
+                if (void 0 !== IB && IB.size > 0) {
+                  let TB = BB.changes.get(ZB);
+                  void 0 === TB && (TB = new Map, BB.changes.set(ZB, TB));
+                  for (const BB of IB) TB.set(BB, JB.DELETE);
+                  IB.clear()
                 }
               }))
             }
-          }(this, BB, this[NB]);
-          for (const jB of this.$items.values()) void 0 !== jB[mB] && BB.remove(jB[mB])
+          }(this, BB, this[vB]);
+          for (const IB of this.$items.values()) void 0 !== IB[gB] && BB.remove(IB[gB])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
       forEach(BB) {
-        for (const [jB, zB] of this.$items) BB(zB, jB, this)
+        for (const [IB, ZB] of this.$items) BB(ZB, IB, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(BB, jB) {}
+      setIndex(BB, IB) {}
       getIndex(BB) {
         return BB
-      } [rB](BB) {
+      } [zB](BB) {
         return this.$items.get(BB)
-      } [sB](BB) {
-        const jB = this.$items.get(BB);
-        void 0 !== jB && (this._itemIndex.delete(jB), this.$items.delete(BB))
-      } [JB]() {} [GB]() {}
+      } [FB](BB) {
+        const IB = this.$items.get(BB);
+        void 0 !== IB && (this._itemIndex.delete(IB), this.$items.delete(BB))
+      } [NB]() {} [UB]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
         const BB = [];
-        return this.forEach((jB => {
-          BB.push("function" === typeof jB?.toJSON ? jB.toJSON() : jB)
+        return this.forEach((IB => {
+          BB.push("function" === typeof IB?.toJSON ? IB.toJSON() : IB)
         })), BB
       }
       clone(BB) {
         if (BB) {
-          return Object.assign(new NQ, this)
+          return Object.assign(new vT, this)
         }
-        const jB = new NQ;
-        return jB.maxPerTick = this.maxPerTick, this.forEach((BB => {
-          jB.add("function" === typeof BB?.clone ? BB.clone() : BB)
-        })), jB
+        const IB = new vT;
+        return IB.maxPerTick = this.maxPerTick, this.forEach((BB => {
+          IB.add("function" === typeof BB?.clone ? BB.clone() : BB)
+        })), IB
       }
       _dropView(BB) {
-        Yj(this, BB)
+        jI(this, BB)
       }
       _unregister() {}
     }
-    Sj("stream", {
-      constructor: NQ
+    QI("stream", {
+      constructor: vT
     });
-    class uQ {
-      [SB] = !0;
+    class kT {
+      [QB] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5129,7 +5129,7 @@ export const modules = {
       }
       stream() {
         const BB = this._type;
-        if (BB && "object" === typeof BB && void 0 !== BB.array) throw new Error(Ej);
+        if (BB && "object" === typeof BB && void 0 !== BB.array) throw new Error(wI);
         return this._stream = !0, this
       }
       priority(BB) {
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function UQ(BB) {
-      return null != BB && !0 === BB[SB]
+    function cT(BB) {
+      return null != BB && !0 === BB[QB]
     }
 
-    function aQ(BB) {
-      return () => new uQ(BB)
+    function nT(BB) {
+      return () => new kT(BB)
     }
 
-    function pQ(BB) {
-      if (UQ(BB)) {
-        const jB = BB._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof jB?`use the type name instead: t.array("${jB}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function hT(BB) {
+      if (cT(BB)) {
+        const IB = BB._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof IB?`use the type name instead: t.array("${IB}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
       return BB
     }
 
-    function rQ(BB) {
-      return new uQ({
-        quantized: hj(BB)
+    function zT(BB) {
+      return new kT({
+        quantized: RI(BB)
       })
     }
-    const sQ = Object.freeze({
-        string: aQ("string"),
-        number: aQ("number"),
-        boolean: aQ("boolean"),
-        int8: aQ("int8"),
-        uint8: aQ("uint8"),
-        int16: aQ("int16"),
-        uint16: aQ("uint16"),
-        int32: aQ("int32"),
-        uint32: aQ("uint32"),
-        int64: aQ("int64"),
-        uint64: aQ("uint64"),
-        float32: aQ("float32"),
-        float64: aQ("float64"),
-        bigint64: aQ("bigint64"),
-        biguint64: aQ("biguint64"),
-        ref: BB => new uQ(BB),
-        array: BB => new uQ({
-          array: pQ(BB)
+    const FT = Object.freeze({
+        string: nT("string"),
+        number: nT("number"),
+        boolean: nT("boolean"),
+        int8: nT("int8"),
+        uint8: nT("uint8"),
+        int16: nT("int16"),
+        uint16: nT("uint16"),
+        int32: nT("int32"),
+        uint32: nT("uint32"),
+        int64: nT("int64"),
+        uint64: nT("uint64"),
+        float32: nT("float32"),
+        float64: nT("float64"),
+        bigint64: nT("bigint64"),
+        biguint64: nT("biguint64"),
+        ref: BB => new kT(BB),
+        array: BB => new kT({
+          array: hT(BB)
         }),
-        map: BB => new uQ({
-          map: pQ(BB)
+        map: BB => new kT({
+          map: hT(BB)
         }),
-        set: BB => new uQ({
-          set: pQ(BB)
+        set: BB => new kT({
+          set: hT(BB)
         }),
-        collection: BB => new uQ({
-          collection: pQ(BB)
+        collection: BB => new kT({
+          collection: hT(BB)
         }),
         stream: BB => {
-          const jB = new uQ({
-            stream: pQ(BB)
+          const IB = new kT({
+            stream: hT(BB)
           });
-          return jB._stream = !0, jB
+          return IB._stream = !0, IB
         },
-        quantized: rQ,
-        angle: BB => rQ({
+        quantized: zT,
+        angle: BB => zT({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
           bits: BB?.bits ?? 16
         })
       }),
-      JQ = -1;
+      NT = -1;
 
-    function mQ(BB) {
-      return Pj.register(BB), BB
+    function gT(BB) {
+      return eI.register(BB), BB
     }
 
-    function yQ() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JQ;
-      return function(jB, zB) {
-        const QB = Cj.initialize(jB.constructor);
-        Cj.setTag(QB, zB, BB)
+    function qT() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : NT;
+      return function(IB, ZB) {
+        const TB = xI.initialize(IB.constructor);
+        xI.setTag(TB, ZB, BB)
       }
     }
 
-    function kQ(BB, jB) {
-      const zB = Cj.initialize(BB.constructor);
-      Cj.setUnreliable(zB, jB)
+    function yT(BB, IB) {
+      const ZB = xI.initialize(BB.constructor);
+      xI.setUnreliable(ZB, IB)
     }
 
-    function GQ(BB, jB) {
-      const zB = Cj.initialize(BB.constructor);
-      Cj.setPatchOnly(zB, jB)
+    function UT(BB, IB) {
+      const ZB = xI.initialize(BB.constructor);
+      xI.setPatchOnly(ZB, IB)
     }
 
-    function LQ(BB, jB) {
-      const zB = Cj.initialize(BB.constructor);
-      Cj.setFullStateOnly(zB, jB)
+    function WT(BB, IB) {
+      const ZB = xI.initialize(BB.constructor);
+      xI.setFullStateOnly(ZB, IB)
     }
 
-    function gQ(BB, jB) {
-      return function(zB, QB) {
-        const nB = zB.constructor;
-        if (!BB) throw new Error(`${nB.name}: @type() reference provided for "${QB}" is undefined. Make sure you don't have any circular dependencies.`);
-        BB = ej(BB, `${nB.name}.${QB}`), Pj.register(nB);
-        const dB = Object.getPrototypeOf(nB)[Symbol.metadata],
-          IB = Cj.initialize(nB);
-        let NB = IB[QB];
-        if (void 0 !== IB[NB]) {
-          if (IB[NB].deprecated) return;
-          if (void 0 !== IB[NB].type) {
-            const BB = new Error(`@colyseus/schema: Duplicate '${QB}' definition on '${nB.name}'.\nCheck @type() annotation`);
+    function dT(BB, IB) {
+      return function(ZB, TB) {
+        const JB = ZB.constructor;
+        if (!BB) throw new Error(`${JB.name}: @type() reference provided for "${TB}" is undefined. Make sure you don't have any circular dependencies.`);
+        BB = fI(BB, `${JB.name}.${TB}`), eI.register(JB);
+        const oB = Object.getPrototypeOf(JB)[Symbol.metadata],
+          GB = xI.initialize(JB);
+        let vB = GB[TB];
+        if (void 0 !== GB[vB]) {
+          if (GB[vB].deprecated) return;
+          if (void 0 !== GB[vB].type) {
+            const BB = new Error(`@colyseus/schema: Duplicate '${TB}' definition on '${JB.name}'.\nCheck @type() annotation`);
             throw new Error(`${BB.message} ${BB.stack.split("\n")[4].trim()}`)
           }
-        } else NB = IB[qB] ?? (dB && dB[qB]) ?? -1, NB++;
-        if (jB && jB.manual) Cj.addField(IB, NB, QB, BB, {
+        } else vB = GB[YB] ?? (oB && oB[YB]) ?? -1, vB++;
+        if (IB && IB.manual) xI.addField(GB, vB, TB, BB, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: jB,
-            childType: zB
-          } = Wj(BB);
-          Cj.addField(IB, NB, QB, BB, SQ(QB, NB, zB, jB))
+            complexTypeKlass: IB,
+            childType: ZB
+          } = uI(BB);
+          xI.addField(GB, vB, TB, BB, QT(TB, vB, ZB, IB))
         }
-        IB[MB][QB] && Object.defineProperty(zB, QB, IB[MB][QB]), ("string" === typeof BB || Xj(BB)) && (IB[iB] || Object.defineProperty(IB, iB, {
+        GB[sB][TB] && Object.defineProperty(ZB, TB, GB[sB][TB]), ("string" === typeof BB || rI(BB)) && (GB[OB] || Object.defineProperty(GB, OB, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), IB[iB][NB] = "string" === typeof BB ? jj[BB] : Tj(BB.quantized))
+        }), GB[OB][vB] = "string" === typeof BB ? II[BB] : LI(BB.quantized))
       }
     }
-    const tQ = {
+    const CT = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,431 +5307,431 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function SQ(BB, jB, zB, QB) {
-      let dB;
-      return dB = QB ? function(BB, jB, zB, QB) {
-        const dB = QB.constructor === zQ,
-          IB = QB.constructor === nQ;
+    function QT(BB, IB, ZB, TB) {
+      let oB;
+      return oB = TB ? function(BB, IB, ZB, TB) {
+        const oB = TB.constructor === ZT,
+          GB = TB.constructor === JT;
         return function(BB) {
-          const QB = this[tB],
-            NB = QB[jB];
-          if (BB !== NB) {
+          const TB = this[CB],
+            vB = TB[IB];
+          if (BB !== vB) {
             if (void 0 !== BB && null !== BB) {
-              if (!dB || BB instanceof zQ)
-                if (!IB || BB instanceof nQ) BB[yB] = zB;
+              if (!oB || BB instanceof ZT)
+                if (!GB || BB instanceof JT) BB[qB] = ZB;
                 else {
-                  const jB = new nQ;
-                  if (jB[yB] = zB, BB instanceof Map) BB.forEach(((BB, zB) => jB.set(zB, BB)));
+                  const IB = new JT;
+                  if (IB[qB] = ZB, BB instanceof Map) BB.forEach(((BB, ZB) => IB.set(ZB, BB)));
                   else
-                    for (const zB in BB) jB.set(zB, BB[zB]);
-                  BB = jB
+                    for (const ZB in BB) IB.set(ZB, BB[ZB]);
+                  BB = IB
                 }
               else {
-                const jB = new zQ;
-                jB[yB] = zB, jB.push(...BB), BB = jB
+                const IB = new ZT;
+                IB[qB] = ZB, IB.push(...BB), BB = IB
               }
-              const QB = this[mB],
-                UB = this.constructor;
-              void 0 !== NB && null !== NB && NB[mB] ? (QB.root?.remove(NB[mB]), UB[uB](QB, jB, nB.DELETE_AND_ADD)) : UB[uB](QB, jB, nB.ADD), BB[mB]?.setParent(this, QB.root, jB)
-            } else void 0 !== NB && null !== NB && this[mB].delete(jB);
-            QB[jB] = BB
+              const TB = this[gB],
+                cB = this.constructor;
+              void 0 !== vB && null !== vB && vB[gB] ? (TB.root?.remove(vB[gB]), cB[kB](TB, IB, JB.DELETE_AND_ADD)) : cB[kB](TB, IB, JB.ADD), BB[gB]?.setParent(this, TB.root, IB)
+            } else void 0 !== vB && null !== vB && this[gB].delete(IB);
+            TB[IB] = BB
           }
         }
-      }(0, jB, zB, QB) : "string" === typeof zB ? function(BB, jB, zB) {
-        const QB = tQ[zB],
-          dB = "string" === zB,
-          IB = "boolean" === zB;
-        return function(zB) {
-          const NB = this[tB],
-            UB = NB[jB];
-          if (zB !== UB) {
-            if (void 0 !== zB && null !== zB) {
-              if (!IB && void 0 !== QB && typeof zB !== QB && (!dB || null !== zB)) {
-                const jB = zB && zB.constructor ? ` (${zB.constructor.name})` : "";
-                throw new Rz(`a '${QB}' was expected, but '${JSON.stringify(zB)}'${jB} was provided in ${this.constructor.name}#${BB}`)
+      }(0, IB, ZB, TB) : "string" === typeof ZB ? function(BB, IB, ZB) {
+        const TB = CT[ZB],
+          oB = "string" === ZB,
+          GB = "boolean" === ZB;
+        return function(ZB) {
+          const vB = this[CB],
+            cB = vB[IB];
+          if (ZB !== cB) {
+            if (void 0 !== ZB && null !== ZB) {
+              if (!GB && void 0 !== TB && typeof ZB !== TB && (!oB || null !== ZB)) {
+                const IB = ZB && ZB.constructor ? ` (${ZB.constructor.name})` : "";
+                throw new VZ(`a '${TB}' was expected, but '${JSON.stringify(ZB)}'${IB} was provided in ${this.constructor.name}#${BB}`)
               }
-              this.constructor[uB](this[mB], jB, nB.ADD)
-            } else void 0 !== UB && null !== UB && this[mB].delete(jB);
-            NB[jB] = zB
+              this.constructor[kB](this[gB], IB, JB.ADD)
+            } else void 0 !== cB && null !== cB && this[gB].delete(IB);
+            vB[IB] = ZB
           }
         }
-      }(BB, jB, zB) : Xj(zB) ? function(BB, jB, zB) {
-        return function(QB) {
-          const dB = this[tB],
-            IB = dB[jB];
-          if (void 0 !== QB && null !== QB) {
-            if ("number" !== typeof QB) throw new Rz(`a 'number' was expected, but '${JSON.stringify(QB)}' was provided in ${this.constructor.name}#${BB}`);
-            if ((QB = Aj(zB, Zj(zB, QB))) === IB) return;
-            this.constructor[uB](this[mB], jB, nB.ADD)
+      }(BB, IB, ZB) : rI(ZB) ? function(BB, IB, ZB) {
+        return function(TB) {
+          const oB = this[CB],
+            GB = oB[IB];
+          if (void 0 !== TB && null !== TB) {
+            if ("number" !== typeof TB) throw new VZ(`a 'number' was expected, but '${JSON.stringify(TB)}' was provided in ${this.constructor.name}#${BB}`);
+            if ((TB = XI(ZB, mI(ZB, TB))) === GB) return;
+            this.constructor[kB](this[gB], IB, JB.ADD)
           } else {
-            if (QB === IB) return;
-            void 0 !== IB && null !== IB && this[mB].delete(jB)
+            if (TB === GB) return;
+            void 0 !== GB && null !== GB && this[gB].delete(IB)
           }
-          dB[jB] = QB
+          oB[IB] = TB
         }
-      }(BB, jB, zB.quantized) : function(BB, jB, zB) {
-        return function(QB) {
-          const dB = this[tB],
-            IB = dB[jB];
-          if (QB !== IB) {
-            if (void 0 !== QB && null !== QB) {
-              Oz(QB, zB, this, BB);
-              const dB = this[mB],
-                NB = this.constructor;
-              void 0 !== IB && null !== IB && IB[mB] ? (dB.root?.remove(IB[mB]), NB[uB](dB, jB, nB.DELETE_AND_ADD)) : NB[uB](dB, jB, nB.ADD), QB[mB]?.setParent(this, dB.root, jB)
-            } else void 0 !== IB && null !== IB && this[mB].delete(jB);
-            dB[jB] = QB
+      }(BB, IB, ZB.quantized) : function(BB, IB, ZB) {
+        return function(TB) {
+          const oB = this[CB],
+            GB = oB[IB];
+          if (TB !== GB) {
+            if (void 0 !== TB && null !== TB) {
+              SZ(TB, ZB, this, BB);
+              const oB = this[gB],
+                vB = this.constructor;
+              void 0 !== GB && null !== GB && GB[gB] ? (oB.root?.remove(GB[gB]), vB[kB](oB, IB, JB.DELETE_AND_ADD)) : vB[kB](oB, IB, JB.ADD), TB[gB]?.setParent(this, oB.root, IB)
+            } else void 0 !== GB && null !== GB && this[gB].delete(IB);
+            oB[IB] = TB
           }
         }
-      }(BB, jB, zB), {
+      }(BB, IB, ZB), {
         get: function() {
-          return this[tB][jB]
+          return this[CB][IB]
         },
-        set: dB,
+        set: oB,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function MQ() {
+    function sT() {
       let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(jB, zB) {
-        const QB = Cj.initialize(jB.constructor);
-        Cj.setDeprecated(QB, zB), BB && (QB[MB] ??= {}, QB[MB][zB] = {
+      return function(IB, ZB) {
+        const TB = xI.initialize(IB.constructor);
+        xI.setDeprecated(TB, ZB), BB && (TB[sB] ??= {}, TB[sB][ZB] = {
           get: function() {
-            throw new Error(`${zB} is deprecated.`)
+            throw new Error(`${ZB} is deprecated.`)
           },
           set: function(BB) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(jB, zB, QB[MB][zB]))
+        }, Object.defineProperty(IB, ZB, TB[sB][ZB]))
       }
     }
-    let EQ = !1;
+    let wT = !1;
 
-    function iQ(BB, jB, zB) {
-      EQ || (EQ = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let QB in jB) gQ(jB[QB], zB)(BB.prototype, QB);
+    function OT(BB, IB, ZB) {
+      wT || (wT = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let TB in IB) dT(IB[TB], ZB)(BB.prototype, TB);
       return BB
     }
 
-    function qQ(BB, jB) {
-      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : oQ;
+    function YT(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pT;
       if (null == BB || "object" !== typeof BB) throw new Error(`schema(): first argument must be a fields object (got ${typeof BB}).`);
-      const QB = {},
-        nB = {},
-        dB = {},
-        IB = {},
-        NB = (BB, jB) => {
-          if (jB.hasDefault)((BB, jB) => {
-            "function" === typeof jB ? IB[BB] = jB : jB && "function" === typeof jB.clone ? IB[BB] = () => jB.clone() : dB[BB] = jB
-          })(BB, jB.default);
-          else if (!jB.optional) {
-            const zB = function(BB) {
+      const TB = {},
+        JB = {},
+        oB = {},
+        GB = {},
+        vB = (BB, IB) => {
+          if (IB.hasDefault)((BB, IB) => {
+            "function" === typeof IB ? GB[BB] = IB : IB && "function" === typeof IB.clone ? GB[BB] = () => IB.clone() : oB[BB] = IB
+          })(BB, IB.default);
+          else if (!IB.optional) {
+            const ZB = function(BB) {
               if (BB && "object" === typeof BB) {
-                if (void 0 !== BB.array) return () => new zQ;
-                if (void 0 !== BB.map) return () => new nQ;
-                if (void 0 !== BB.set) return () => new IQ;
-                if (void 0 !== BB.collection) return () => new dQ;
-                if (void 0 !== BB.stream) return () => new NQ
-              } else if ("function" === typeof BB && oQ.is(BB) && (!BB.prototype.initialize || 0 === BB.prototype.initialize.length)) return () => new BB
-            }(jB.type);
-            zB && (IB[BB] = zB)
+                if (void 0 !== BB.array) return () => new ZT;
+                if (void 0 !== BB.map) return () => new JT;
+                if (void 0 !== BB.set) return () => new GT;
+                if (void 0 !== BB.collection) return () => new oT;
+                if (void 0 !== BB.stream) return () => new vT
+              } else if ("function" === typeof BB && pT.is(BB) && (!BB.prototype.initialize || 0 === BB.prototype.initialize.length)) return () => new BB
+            }(IB.type);
+            ZB && (GB[BB] = ZB)
           }
         },
-        uB = {},
-        UB = [],
-        aB = [],
-        pB = {},
-        rB = [],
-        sB = [],
-        JB = {},
-        mB = [];
-      for (const tB in BB) {
-        const zB = BB[tB],
-          dB = `schema(${jB?`'${jB}'`:""}): field '${tB}'`;
-        if (UQ(zB)) {
-          const BB = zB.toDefinition();
+        kB = {},
+        cB = [],
+        nB = [],
+        hB = {},
+        zB = [],
+        FB = [],
+        NB = {},
+        gB = [];
+      for (const CB in BB) {
+        const ZB = BB[CB],
+          oB = `schema(${IB?`'${IB}'`:""}): field '${CB}'`;
+        if (cT(ZB)) {
+          const BB = ZB.toDefinition();
           if (BB.noSync) {
-            if (void 0 !== BB.view || BB.unreliable || BB.patchOnly || BB.fullStateOnly || BB.stream) throw new Error(`${dB} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            NB(tB, BB);
+            if (void 0 !== BB.view || BB.unreliable || BB.patchOnly || BB.fullStateOnly || BB.stream) throw new Error(`${oB} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            vB(CB, BB);
             continue
           }
-          if (BB.patchOnly && BB.fullStateOnly) throw new Error(`${dB} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const jB = ej(BB.type, dB);
-          if ("function" === typeof jB && !oQ.is(jB)) throw new Error(`${dB} is a synced ref to non-Schema class '${jB.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          QB[tB] = jB, void 0 !== BB.view && (uB[tB] = BB.view), BB.unreliable && UB.push(tB), BB.patchOnly && aB.push(tB), BB.deprecated && (pB[tB] = BB.deprecatedThrows), BB.fullStateOnly && rB.push(tB), BB.stream && sB.push(tB), void 0 !== BB.streamPriority && (JB[tB] = BB.streamPriority), BB.optional && mB.push(tB), NB(tB, BB)
+          if (BB.patchOnly && BB.fullStateOnly) throw new Error(`${oB} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const IB = fI(BB.type, oB);
+          if ("function" === typeof IB && !pT.is(IB)) throw new Error(`${oB} is a synced ref to non-Schema class '${IB.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          TB[CB] = IB, void 0 !== BB.view && (kB[CB] = BB.view), BB.unreliable && cB.push(CB), BB.patchOnly && nB.push(CB), BB.deprecated && (hB[CB] = BB.deprecatedThrows), BB.fullStateOnly && zB.push(CB), BB.stream && FB.push(CB), void 0 !== BB.streamPriority && (NB[CB] = BB.streamPriority), BB.optional && gB.push(CB), vB(CB, BB)
         } else {
-          if ("function" !== typeof zB) throw new Error(`${dB} must be a t.* builder, Schema subclass, or method (got ${typeof zB}).`);
-          oQ.is(zB) ? (QB[tB] = zB, zB.prototype.initialize && 0 !== zB.prototype.initialize.length || (IB[tB] = () => new zB)) : nB[tB] = zB
+          if ("function" !== typeof ZB) throw new Error(`${oB} must be a t.* builder, Schema subclass, or method (got ${typeof ZB}).`);
+          pT.is(ZB) ? (TB[CB] = ZB, ZB.prototype.initialize && 0 !== ZB.prototype.initialize.length || (GB[CB] = () => new ZB)) : JB[CB] = ZB
         }
       }
-      const yB = BB => {
-          for (const jB in dB) BB[jB] = dB[jB];
-          for (const jB in IB) BB[jB] = IB[jB]()
+      const qB = BB => {
+          for (const IB in oB) BB[IB] = oB[IB];
+          for (const IB in GB) BB[IB] = GB[IB]()
         },
-        kB = () => {
+        yB = () => {
           const BB = {};
-          return yB(BB), BB
+          return qB(BB), BB
         },
-        GB = "function" === typeof nB.initialize,
-        LB = nB.initialize ?? zB._initialize,
-        gB = class extends zB {
+        UB = "function" === typeof JB.initialize,
+        WB = JB.initialize ?? ZB._initialize,
+        dB = class extends ZB {
           constructor() {
-            for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
-            const nB = jB[0];
-            void 0 === nB ? (super(), yB(this)) : super(Object.assign(kB(), GB ? (BB => {
-              const jB = Object.keys(QB),
-                zB = {};
-              for (const QB in BB) jB.includes(QB) || (zB[QB] = BB[QB]);
-              return zB
-            })(nB) : nB)), LB && new.target === gB && LB.apply(this, jB)
+            for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+            const JB = IB[0];
+            void 0 === JB ? (super(), qB(this)) : super(Object.assign(yB(), UB ? (BB => {
+              const IB = Object.keys(TB),
+                ZB = {};
+              for (const TB in BB) IB.includes(TB) || (ZB[TB] = BB[TB]);
+              return ZB
+            })(JB) : JB)), WB && new.target === dB && WB.apply(this, IB)
           }
         };
-      jB && Object.defineProperty(gB, "name", {
-        value: jB
-      }), Cj.setFields(gB, QB), gB._getDefaultValues = kB, gB._initialize = LB, Object.assign(gB.prototype, nB);
-      for (const tB in uB) yQ(uB[tB])(gB.prototype, tB);
-      for (const tB of UB) kQ(gB.prototype, tB);
-      for (const tB of aB) GQ(gB.prototype, tB);
-      for (const tB in pB) MQ(pB[tB])(gB.prototype, tB);
-      if (rB.length > 0 || sB.length > 0) {
-        const BB = gB[Symbol.metadata];
-        for (const jB of rB) Cj.setFullStateOnly(BB, jB);
-        for (const jB of sB) Cj.setStream(BB, jB);
-        for (const jB in JB) Cj.setStreamPriority(BB, jB, JB[jB])
+      IB && Object.defineProperty(dB, "name", {
+        value: IB
+      }), xI.setFields(dB, TB), dB._getDefaultValues = yB, dB._initialize = WB, Object.assign(dB.prototype, JB);
+      for (const CB in kB) qT(kB[CB])(dB.prototype, CB);
+      for (const CB of cB) yT(dB.prototype, CB);
+      for (const CB of nB) UT(dB.prototype, CB);
+      for (const CB in hB) sT(hB[CB])(dB.prototype, CB);
+      if (zB.length > 0 || FB.length > 0) {
+        const BB = dB[Symbol.metadata];
+        for (const IB of zB) xI.setFullStateOnly(BB, IB);
+        for (const IB of FB) xI.setStream(BB, IB);
+        for (const IB in NB) xI.setStreamPriority(BB, IB, NB[IB])
       }
-      if (mB.length > 0) {
-        const BB = gB[Symbol.metadata];
-        for (const jB of mB) BB[BB[jB]].optional = !0
+      if (gB.length > 0) {
+        const BB = dB[Symbol.metadata];
+        for (const IB of gB) BB[BB[IB]].optional = !0
       }
-      return gB.extend = (BB, jB) => qQ(BB, jB, gB), gB
+      return dB.extend = (BB, IB) => YT(BB, IB, dB), dB
     }
 
-    function fQ(BB) {
-      const jB = BB[mB].root,
-        zB = {
+    function iT(BB) {
+      const IB = BB[gB].root,
+        ZB = {
           ops: {},
           refs: []
         };
-      let QB = jB.changes.next;
-      for (; QB;) {
-        const BB = QB.changeTree;
-        void 0 !== BB ? (zB.refs.push(`refId#${BB.ref[NB]}`), BB.forEach(((BB, jB) => {
-          if (BB < 0 || !jB) return;
-          const QB = nB[jB];
-          zB.ops[QB] || (zB.ops[QB] = 0), zB.ops[QB]++
-        })), QB = QB.next) : QB = QB.next
+      let TB = IB.changes.next;
+      for (; TB;) {
+        const BB = TB.changeTree;
+        void 0 !== BB ? (ZB.refs.push(`refId#${BB.ref[vB]}`), BB.forEach(((BB, IB) => {
+          if (BB < 0 || !IB) return;
+          const TB = JB[IB];
+          ZB.ops[TB] || (ZB.ops[TB] = 0), ZB.ops[TB]++
+        })), TB = TB.next) : TB = TB.next
       }
-      return zB
+      return ZB
     }
-    class oQ {
-      static[UB] = Vz;
-      static[aB] = cz;
-      [NB];
-      [tB];
+    class pT {
+      static[cB] = PZ;
+      static[nB] = EZ;
+      [vB];
+      [CB];
       static initialize(BB) {
-        Object.defineProperty(BB, mB, {
-          value: new Hz(BB),
+        Object.defineProperty(BB, gB, {
+          value: new aZ(BB),
           enumerable: !1,
           writable: !0
-        }), BB[tB] = []
+        }), BB[CB] = []
       }
       static initializeForDecoder() {
         const BB = Object.create(this.prototype);
-        return Fz(BB), BB[tB] = [], BB
+        return MZ(BB), BB[CB] = [], BB
       }
       static reset(BB) {
-        const jB = BB?.[mB];
-        if (void 0 === jB || "function" !== typeof jB.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== jB.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${BB.constructor.name}) with multiple parents.`);
-        BB[LB]()
-      } [LB]() {
+        const IB = BB?.[gB];
+        if (void 0 === IB || "function" !== typeof IB.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== IB.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${BB.constructor.name}) with multiple parents.`);
+        BB[WB]()
+      } [WB]() {
         const BB = this.constructor[Symbol.metadata],
-          jB = BB?.[fB] ?? [],
-          zB = this[tB];
-        for (let QB = 0; QB < jB.length; QB++) {
-          const BB = zB[jB[QB]];
-          BB?.[LB]?.()
+          IB = BB?.[iB] ?? [],
+          ZB = this[CB];
+        for (let TB = 0; TB < IB.length; TB++) {
+          const BB = ZB[IB[TB]];
+          BB?.[WB]?.()
         }
-        this[mB].recycle(), this[NB] = void 0
+        this[gB].recycle(), this[vB] = void 0
       }
       static is(BB) {
-        const jB = BB[Symbol.metadata];
-        return "object" === typeof jB && null !== jB
+        const IB = BB[Symbol.metadata];
+        return "object" === typeof IB && null !== IB
       }
       static isSchema(BB) {
         return "function" === typeof BB?.assign
       }
-      static[uB](BB, jB) {
-        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : nB.ADD;
-        BB.change(jB, zB)
+      static[kB](BB, IB) {
+        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : JB.ADD;
+        BB.change(IB, ZB)
       }
-      static[pB](BB, jB, zB) {
-        const QB = BB.constructor[Symbol.metadata],
-          nB = QB[jB]?.tag;
-        return void 0 === zB ? void 0 === nB : void 0 === nB || (nB === JQ ? zB.isChangeTreeVisible(BB[mB]) : zB.hasTagOnTree(BB[mB], nB))
+      static[hB](BB, IB, ZB) {
+        const TB = BB.constructor[Symbol.metadata],
+          JB = TB[IB]?.tag;
+        return void 0 === ZB ? void 0 === JB : void 0 === JB || (JB === NT ? ZB.isChangeTreeVisible(BB[gB]) : ZB.hasTagOnTree(BB[gB], JB))
       }
       constructor(BB) {
-        oQ.initialize(this), BB && oQ.assignProps(this, BB)
+        pT.initialize(this), BB && pT.assignProps(this, BB)
       }
       assign(BB) {
-        return oQ.assignProps(this, BB), this
+        return pT.assignProps(this, BB), this
       }
-      static assignProps(BB, jB) {
-        const zB = BB.constructor[Symbol.metadata];
-        if (zB && void 0 !== zB[qB])
-          for (let nB = 0; nB <= zB[qB]; nB++) {
-            const QB = zB[nB];
-            if (!QB) continue;
-            const dB = jB[QB.name];
-            void 0 !== dB && (BB[QB.name] = dB)
+      static assignProps(BB, IB) {
+        const ZB = BB.constructor[Symbol.metadata];
+        if (ZB && void 0 !== ZB[YB])
+          for (let JB = 0; JB <= ZB[YB]; JB++) {
+            const TB = ZB[JB];
+            if (!TB) continue;
+            const oB = IB[TB.name];
+            void 0 !== oB && (BB[TB.name] = oB)
           }
-        const QB = Object.keys(jB);
-        for (let nB = 0; nB < QB.length; nB++) {
-          const dB = QB[nB];
-          zB && void 0 !== zB[dB] || (BB[dB] = jB[dB])
+        const TB = Object.keys(IB);
+        for (let JB = 0; JB < TB.length; JB++) {
+          const oB = TB[JB];
+          ZB && void 0 !== ZB[oB] || (BB[oB] = IB[oB])
         }
       }
       restore(BB) {
-        const jB = this.constructor[Symbol.metadata];
-        for (const zB in jB) {
-          const QB = jB[zB],
-            nB = QB.name,
-            dB = QB.type,
-            IB = BB[nB];
-          if (void 0 !== IB && null !== IB)
-            if ("string" === typeof dB) this[nB] = IB;
-            else if (oQ.is(dB)) {
-            const BB = new dB;
-            BB.restore(IB), this[nB] = BB
-          } else if ("object" === typeof dB) {
-            const BB = Object.keys(dB)[0],
-              jB = dB[BB];
+        const IB = this.constructor[Symbol.metadata];
+        for (const ZB in IB) {
+          const TB = IB[ZB],
+            JB = TB.name,
+            oB = TB.type,
+            GB = BB[JB];
+          if (void 0 !== GB && null !== GB)
+            if ("string" === typeof oB) this[JB] = GB;
+            else if (pT.is(oB)) {
+            const BB = new oB;
+            BB.restore(GB), this[JB] = BB
+          } else if ("object" === typeof oB) {
+            const BB = Object.keys(oB)[0],
+              IB = oB[BB];
             if ("map" === BB) {
-              const BB = this[nB];
-              for (const zB in IB)
-                if (oQ.is(jB)) {
-                  const QB = new jB;
-                  QB.restore(IB[zB]), BB.set(zB, QB)
-                } else BB.set(zB, IB[zB])
+              const BB = this[JB];
+              for (const ZB in GB)
+                if (pT.is(IB)) {
+                  const TB = new IB;
+                  TB.restore(GB[ZB]), BB.set(ZB, TB)
+                } else BB.set(ZB, GB[ZB])
             } else if ("array" === BB) {
-              const BB = this[nB];
-              for (let zB = 0; zB < IB.length; zB++)
-                if (oQ.is(jB)) {
-                  const QB = new jB;
-                  QB.restore(IB[zB]), BB.push(QB)
-                } else BB.push(IB[zB])
+              const BB = this[JB];
+              for (let ZB = 0; ZB < GB.length; ZB++)
+                if (pT.is(IB)) {
+                  const TB = new IB;
+                  TB.restore(GB[ZB]), BB.push(TB)
+                } else BB.push(GB[ZB])
             }
           }
         }
         return this
       }
-      setDirty(BB, jB) {
-        const zB = this.constructor[Symbol.metadata];
-        this[mB].change(zB[zB[BB]].index, jB)
+      setDirty(BB, IB) {
+        const ZB = this.constructor[Symbol.metadata];
+        this[gB].change(ZB[ZB[BB]].index, IB)
       }
       pauseTracking() {
-        this[mB].pause()
+        this[gB].pause()
       }
       resumeTracking() {
-        this[mB].resume()
+        this[gB].resume()
       }
       untracked(BB) {
-        return this[mB].untracked(BB)
+        return this[gB].untracked(BB)
       }
       get isTrackingPaused() {
-        return this[mB].paused
+        return this[gB].paused
       }
       clone() {
         const BB = Object.create(this.constructor.prototype);
-        oQ.initialize(BB);
-        const jB = this.constructor[Symbol.metadata];
-        for (const zB in jB) {
-          const QB = jB[zB].name;
-          "object" === typeof this[QB] && "function" === typeof this[QB]?.clone ? BB[QB] = this[QB].clone() : BB[QB] = this[QB]
+        pT.initialize(BB);
+        const IB = this.constructor[Symbol.metadata];
+        for (const ZB in IB) {
+          const TB = IB[ZB].name;
+          "object" === typeof this[TB] && "function" === typeof this[TB]?.clone ? BB[TB] = this[TB].clone() : BB[TB] = this[TB]
         }
         return BB
       }
       toJSON() {
         const BB = {},
-          jB = this.constructor[Symbol.metadata];
-        for (const zB in jB) {
-          const QB = jB[zB],
-            nB = QB.name;
-          QB.deprecated || null === this[nB] || "undefined" === typeof this[nB] || (BB[nB] = "function" === typeof this[nB].toJSON ? this[nB].toJSON() : this[nB])
+          IB = this.constructor[Symbol.metadata];
+        for (const ZB in IB) {
+          const TB = IB[ZB],
+            JB = TB.name;
+          TB.deprecated || null === this[JB] || "undefined" === typeof this[JB] || (BB[JB] = "function" === typeof this[JB].toJSON ? this[JB].toJSON() : this[JB])
         }
         return BB
       }
       discardAllChanges() {
-        this[mB].discardAll()
-      } [rB](BB) {
+        this[gB].discardAll()
+      } [zB](BB) {
         return this[this.constructor[Symbol.metadata][BB].name]
-      } [sB](BB) {
+      } [FB](BB) {
         this[this.constructor[Symbol.metadata][BB].name] = void 0
       }
       static debugRefIds(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          QB = arguments.length > 3 ? arguments[3] : void 0,
-          nB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const dB = jB ? ` - ${JSON.stringify(BB.toJSON())}` : "",
-          IB = BB[mB],
-          uB = BB[NB],
-          UB = QB ? QB.root.refCount[uB] : IB.refCount,
-          aB = UB > 1 ? ` [\xd7${UB}]` : "";
-        let pB = `${function(BB){return new Array(BB).fill(0).map(((jB,zB)=>zB===BB-1?"\u2514\u2500 ":"   ")).join("")}(zB)}${nB}${BB.constructor.name} (refId: ${uB})${aB}${dB}\n`;
-        return IB.forEachChild(((nB, dB) => {
-          let IB = dB;
-          "number" === typeof dB && BB.$indexes && (IB = BB.$indexes.get(dB) ?? dB);
-          const NB = void 0 !== BB.forEach && void 0 !== IB ? `["${IB}"]: ` : "";
-          pB += this.debugRefIds(nB.ref, jB, zB + 1, QB, NB)
-        })), pB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          TB = arguments.length > 3 ? arguments[3] : void 0,
+          JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const oB = IB ? ` - ${JSON.stringify(BB.toJSON())}` : "",
+          GB = BB[gB],
+          kB = BB[vB],
+          cB = TB ? TB.root.refCount[kB] : GB.refCount,
+          nB = cB > 1 ? ` [\xd7${cB}]` : "";
+        let hB = `${function(BB){return new Array(BB).fill(0).map(((IB,ZB)=>ZB===BB-1?"\u2514\u2500 ":"   ")).join("")}(ZB)}${JB}${BB.constructor.name} (refId: ${kB})${nB}${oB}\n`;
+        return GB.forEachChild(((JB, oB) => {
+          let GB = oB;
+          "number" === typeof oB && BB.$indexes && (GB = BB.$indexes.get(oB) ?? oB);
+          const vB = void 0 !== BB.forEach && void 0 !== GB ? `["${GB}"]: ` : "";
+          hB += this.debugRefIds(JB.ref, IB, ZB + 1, TB, vB)
+        })), hB
       }
       static debugRefIdEncodingOrder(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const zB = [],
-          QB = BB[mB];
-        if ("changes" === jB) {
-          let BB = QB.root.changes?.next;
-          for (; BB;) BB.changeTree && zB.push(BB.changeTree.ref[NB]), BB = BB.next;
-          return zB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const ZB = [],
+          TB = BB[gB];
+        if ("changes" === IB) {
+          let BB = TB.root.changes?.next;
+          for (; BB;) BB.changeTree && ZB.push(BB.changeTree.ref[vB]), BB = BB.next;
+          return ZB
         }
-        const nB = "allFilteredChanges" === jB,
-          dB = new Set,
-          IB = BB => {
-            dB.has(BB) || (dB.add(BB), BB.isFiltered === nB && zB.push(BB.ref[NB]), BB.forEachChild(((BB, jB) => IB(BB))))
+        const JB = "allFilteredChanges" === IB,
+          oB = new Set,
+          GB = BB => {
+            oB.has(BB) || (oB.add(BB), BB.isFiltered === JB && ZB.push(BB.ref[vB]), BB.forEachChild(((BB, IB) => GB(BB))))
           };
-        return IB(QB), zB
+        return GB(TB), ZB
       }
       static debugRefIdsFromDecoder(BB) {
         return this.debugRefIds(BB.state, !1, 0, BB)
       }
       static debugChanges(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const zB = BB[mB],
-          QB = jB ? "allChanges" : "changes";
-        let dB = `${BB.constructor.name} (${BB[NB]}) -> .${QB}:\n`;
-        return jB ? zB.forEachLive((BB => {
-          dB += `- [${BB}]: ADD (${JSON.stringify(zB.getValue(Number(BB),!0))})\n`
-        })) : zB.forEach(((BB, jB) => {
-          BB < 0 || !jB || (dB += `- [${BB}]: ${nB[jB]} (${JSON.stringify(zB.getValue(Number(BB),!1))})\n`)
-        })), dB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ZB = BB[gB],
+          TB = IB ? "allChanges" : "changes";
+        let oB = `${BB.constructor.name} (${BB[vB]}) -> .${TB}:\n`;
+        return IB ? ZB.forEachLive((BB => {
+          oB += `- [${BB}]: ADD (${JSON.stringify(ZB.getValue(Number(BB),!0))})\n`
+        })) : ZB.forEach(((BB, IB) => {
+          BB < 0 || !IB || (oB += `- [${BB}]: ${JB[IB]} (${JSON.stringify(ZB.getValue(Number(BB),!1))})\n`)
+        })), oB
       }
     }
-    dB(oQ);
-    const HQ = {
+    oB(pT);
+    const aT = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class DQ {
+    class HT {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
         const BB = {};
-        for (const jB in this.changeTrees) BB[jB] = this.changeTrees[jB].refCount;
+        for (const IB in this.changeTrees) BB[IB] = this.changeTrees[IB].refCount;
         return BB
       }
       changes = {
@@ -5746,7 +5746,7 @@ export const modules = {
       };
       pendingFilterRefresh = [];
       enqueueFilterRefresh(BB) {
-        this.types.hasFilters && (BB.flags & fz || (BB.flags |= fz, this.pendingFilterRefresh.push(BB)))
+        this.types.hasFilters && (BB.flags & iZ || (BB.flags |= iZ, this.pendingFilterRefresh.push(BB)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5764,16 +5764,16 @@ export const modules = {
       }
       unregisterView(BB) {
         this.activeViews.delete(BB.id);
-        const jB = BB.id;
-        for (const zB of this.streamTrees) zB._dropView(jB)
+        const IB = BB.id;
+        for (const ZB of this.streamTrees) ZB._dropView(IB)
       }
       forEachActiveView(BB) {
-        for (const [jB, zB] of this.activeViews) {
-          const QB = zB.deref();
-          if (void 0 !== QB) BB(QB);
+        for (const [IB, ZB] of this.activeViews) {
+          const TB = ZB.deref();
+          if (void 0 !== TB) BB(TB);
           else {
-            this.activeViews.delete(jB);
-            for (const BB of this.streamTrees) BB._dropView(jB)
+            this.activeViews.delete(IB);
+            for (const BB of this.streamTrees) BB._dropView(IB)
           }
         }
       }
@@ -5784,42 +5784,42 @@ export const modules = {
         this.streamTrees.delete(BB)
       }
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = BB, this.nextUniqueId = jB
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = BB, this.nextUniqueId = IB
       }
       add(BB) {
-        const jB = BB.ref;
-        void 0 === jB[NB] && (HQ.value = this.nextUniqueId++, Object.defineProperty(jB, NB, HQ));
-        const zB = jB[NB],
-          QB = void 0 === this.changeTrees[zB];
-        QB && (this.changeTrees[zB] = BB), BB.needsRestage && (BB.needsRestage = !1, BB.forEachLiveWithCtx(BB, zz));
-        const nB = QB ? 0 : BB.refCount;
-        return BB.refCount = nB + 1, nB > 0 && this.enqueueFilterRefresh(BB), QB
+        const IB = BB.ref;
+        void 0 === IB[vB] && (aT.value = this.nextUniqueId++, Object.defineProperty(IB, vB, aT));
+        const ZB = IB[vB],
+          TB = void 0 === this.changeTrees[ZB];
+        TB && (this.changeTrees[ZB] = BB), BB.needsRestage && (BB.needsRestage = !1, BB.forEachLiveWithCtx(BB, ZZ));
+        const JB = TB ? 0 : BB.refCount;
+        return BB.refCount = JB + 1, JB > 0 && this.enqueueFilterRefresh(BB), TB
       }
       remove(BB) {
-        const jB = BB.refCount - 1;
-        if (jB <= 0) {
-          if (BB.root = void 0, delete this.changeTrees[BB.ref[NB]], BB.isStreamCollection) {
-            const jB = BB.ref;
-            jB._unregister?.(), this.unregisterStream(jB)
+        const IB = BB.refCount - 1;
+        if (IB <= 0) {
+          if (BB.root = void 0, delete this.changeTrees[BB.ref[vB]], BB.isStreamCollection) {
+            const IB = BB.ref;
+            IB._unregister?.(), this.unregisterStream(IB)
           }
-          this.removeFromQueue(BB), this.removeFromUnreliableQueue(BB), BB.refCount = 0, BB.needsRestage = !0, BB.forEachChild(((jB, zB) => {
-            jB.removeParent(BB.ref) && (void 0 === jB.parentRef || jB.refCount > 0 ? this.remove(jB) : this.moveNextToParent(jB))
+          this.removeFromQueue(BB), this.removeFromUnreliableQueue(BB), BB.refCount = 0, BB.needsRestage = !0, BB.forEachChild(((IB, ZB) => {
+            IB.removeParent(BB.ref) && (void 0 === IB.parentRef || IB.refCount > 0 ? this.remove(IB) : this.moveNextToParent(IB))
           }))
-        } else BB.refCount = jB, this.enqueueFilterRefresh(BB), this.recursivelyMoveNextToParent(BB);
-        return jB
+        } else BB.refCount = IB, this.enqueueFilterRefresh(BB), this.recursivelyMoveNextToParent(BB);
+        return IB
       }
       recursivelyMoveNextToParent(BB) {
-        this.moveNextToParent(BB), BB.forEachChild(((BB, jB) => this.recursivelyMoveNextToParent(BB)))
+        this.moveNextToParent(BB), BB.forEachChild(((BB, IB) => this.recursivelyMoveNextToParent(BB)))
       }
       moveNextToParent(BB) {
         BB.changesNode && this._moveNextToParentInList(this.changes, BB, BB.changesNode, "changesNode"), BB.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, BB, BB.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(BB, jB, zB, QB) {
-        const nB = jB.parent;
-        if (!nB || !nB[mB]) return;
-        const dB = nB[mB][QB];
-        dB && dB !== zB && (zB.position > dB.position || (zB.prev ? zB.prev.next = zB.next : BB.next = zB.next, zB.next ? zB.next.prev = zB.prev : BB.tail = zB.prev, zB.prev = BB.tail, zB.next = void 0, BB.tail.next = zB, BB.tail = zB, zB.position = BB.nextPosition++))
+      _moveNextToParentInList(BB, IB, ZB, TB) {
+        const JB = IB.parent;
+        if (!JB || !JB[gB]) return;
+        const oB = JB[gB][TB];
+        oB && oB !== ZB && (ZB.position > oB.position || (ZB.prev ? ZB.prev.next = ZB.next : BB.next = ZB.next, ZB.next ? ZB.next.prev = ZB.prev : BB.tail = ZB.prev, ZB.prev = BB.tail, ZB.next = void 0, BB.tail.next = ZB, BB.tail = ZB, ZB.position = BB.nextPosition++))
       }
       enqueueChangeTree(BB) {
         (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB.changesNode) || (BB.changesNode = this._appendToList(this.changes, BB))
@@ -5827,15 +5827,15 @@ export const modules = {
       enqueueUnreliable(BB) {
         (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB.unreliableChangesNode) || (BB.unreliableChangesNode = this._appendToList(this.unreliableChanges, BB))
       }
-      _appendToList(BB, jB) {
-        const zB = this._nodePool;
-        let QB;
-        return zB.length > 0 ? (QB = zB.pop(), QB.changeTree = jB, QB.next = void 0, QB.prev = void 0) : QB = {
-          changeTree: jB,
+      _appendToList(BB, IB) {
+        const ZB = this._nodePool;
+        let TB;
+        return ZB.length > 0 ? (TB = ZB.pop(), TB.changeTree = IB, TB.next = void 0, TB.prev = void 0) : TB = {
+          changeTree: IB,
           next: void 0,
           prev: void 0,
           position: 0
-        }, BB.next ? (QB.prev = BB.tail, BB.tail.next = QB, BB.tail = QB) : (BB.nextPosition = 0, BB.next = QB, BB.tail = QB), QB.position = BB.nextPosition++, QB
+        }, BB.next ? (TB.prev = BB.tail, BB.tail.next = TB, BB.tail = TB) : (BB.nextPosition = 0, BB.next = TB, BB.tail = TB), TB.position = BB.nextPosition++, TB
       }
       releaseNode(BB) {
         BB.changeTree = void 0, BB.prev = void 0, BB.next = void 0, this._nodePool.push(BB)
@@ -5846,52 +5846,52 @@ export const modules = {
       removeFromUnreliableQueue(BB) {
         return this._removeNode(this.unreliableChanges, BB, BB.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(BB, jB, zB, QB) {
-        return !(!zB || zB.changeTree !== jB) && (zB.prev ? zB.prev.next = zB.next : BB.next = zB.next, zB.next ? zB.next.prev = zB.prev : BB.tail = zB.prev, jB[QB] = void 0, this.releaseNode(zB), !0)
+      _removeNode(BB, IB, ZB, TB) {
+        return !(!ZB || ZB.changeTree !== IB) && (ZB.prev ? ZB.prev.next = ZB.next : BB.next = ZB.next, ZB.next ? ZB.next.prev = ZB.prev : BB.tail = ZB.prev, IB[TB] = void 0, this.releaseNode(ZB), !0)
       }
     }
 
-    function FQ(BB, jB) {
-      if (-1 === jB || jB >= BB.length) return !1;
-      const zB = BB.length - 1;
-      for (let QB = jB; QB < zB; QB++) BB[QB] = BB[QB + 1];
-      return BB.length = zB, !0
+    function MT(BB, IB) {
+      if (-1 === IB || IB >= BB.length) return !1;
+      const ZB = BB.length - 1;
+      for (let TB = IB; TB < ZB; TB++) BB[TB] = BB[TB + 1];
+      return BB.length = ZB, !0
     }
 
-    function YQ(BB, jB, zB) {
-      const QB = ~zB,
-        nB = BB.changeTrees;
-      for (const dB in nB) {
-        const BB = nB[dB],
-          zB = BB.visibleViews;
-        void 0 !== zB && jB < zB.length && (zB[jB] &= QB);
-        const IB = BB.subscribedViews;
-        void 0 !== IB && jB < IB.length && (IB[jB] &= QB);
-        const NB = BB.tagViews;
-        void 0 !== NB && NB.forEach((BB => {
-          jB < BB.length && (BB[jB] &= QB)
+    function jT(BB, IB, ZB) {
+      const TB = ~ZB,
+        JB = BB.changeTrees;
+      for (const oB in JB) {
+        const BB = JB[oB],
+          ZB = BB.visibleViews;
+        void 0 !== ZB && IB < ZB.length && (ZB[IB] &= TB);
+        const GB = BB.subscribedViews;
+        void 0 !== GB && IB < GB.length && (GB[IB] &= TB);
+        const vB = BB.tagViews;
+        void 0 !== vB && vB.forEach((BB => {
+          IB < BB.length && (BB[IB] &= TB)
         }))
       }
     }
-    const VQ = new FinalizationRegistry((BB => {
+    const PT = new FinalizationRegistry((BB => {
       let {
-        root: jB,
-        id: zB,
-        slot: QB,
-        bit: nB
+        root: IB,
+        id: ZB,
+        slot: TB,
+        bit: JB
       } = BB;
-      YQ(jB, QB, nB), jB.activeViews.delete(zB);
-      for (const dB of jB.streamTrees) dB._dropView(zB);
-      jB.releaseViewId(zB)
+      jT(IB, TB, JB), IB.activeViews.delete(ZB);
+      for (const oB of IB.streamTrees) oB._dropView(ZB);
+      IB.releaseViewId(ZB)
     }));
 
-    function hQ(BB) {
+    function RT(BB) {
       if (void 0 === BB) return "undefined";
       if (null === BB) return "null";
-      const jB = typeof BB;
-      return "string" === jB ? JSON.stringify(BB.length > 30 ? `${BB.slice(0,30)}\u2026` : BB) : "object" !== jB && "function" !== jB ? `${jB} ${String(BB)}` : Array.isArray(BB) ? `Array(${BB.length})` : BB.constructor?.name ?? "Object"
+      const IB = typeof BB;
+      return "string" === IB ? JSON.stringify(BB.length > 30 ? `${BB.slice(0,30)}\u2026` : BB) : "object" !== IB && "function" !== IB ? `${IB} ${String(BB)}` : Array.isArray(BB) ? `Array(${BB.length})` : BB.constructor?.name ?? "Object"
     }
-    class XQ {
+    class rT {
       iterable;
       items;
       id = -1;
@@ -5904,7 +5904,7 @@ export const modules = {
         this.iterable = BB, BB && (this.items = [])
       }
       _bindRoot(BB) {
-        void 0 === this._root && (this._root = BB, this.id = BB.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), BB.registerView(this), VQ.register(this, {
+        void 0 === this._root && (this._root = BB, this.id = BB.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), BB.registerView(this), PT.register(this, {
           root: BB,
           id: this.id,
           slot: this._slot,
@@ -5912,308 +5912,308 @@ export const modules = {
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), YQ(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), VQ.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), jT(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), PT.unregister(this), this._root = void 0, this.id = -1)
       }
       isVisible(BB) {
-        const jB = BB.visibleViews,
-          zB = this._slot;
-        return void 0 !== jB && zB < jB.length && 0 !== (jB[zB] & this._bit)
+        const IB = BB.visibleViews,
+          ZB = this._slot;
+        return void 0 !== IB && ZB < IB.length && 0 !== (IB[ZB] & this._bit)
       }
       markVisible(BB) {
-        const jB = this._slot;
-        let zB = BB.visibleViews;
-        for (void 0 === zB && (zB = BB.visibleViews = []); zB.length <= jB;) zB.push(0);
-        zB[jB] |= this._bit
+        const IB = this._slot;
+        let ZB = BB.visibleViews;
+        for (void 0 === ZB && (ZB = BB.visibleViews = []); ZB.length <= IB;) ZB.push(0);
+        ZB[IB] |= this._bit
       }
       unmarkVisible(BB) {
-        const jB = BB.visibleViews;
-        if (void 0 === jB) return;
-        const zB = this._slot;
-        zB < jB.length && (jB[zB] &= ~this._bit)
+        const IB = BB.visibleViews;
+        if (void 0 === IB) return;
+        const ZB = this._slot;
+        ZB < IB.length && (IB[ZB] &= ~this._bit)
       }
       isSubscribed(BB) {
-        const jB = BB.subscribedViews,
-          zB = this._slot;
-        return void 0 !== jB && zB < jB.length && 0 !== (jB[zB] & this._bit)
+        const IB = BB.subscribedViews,
+          ZB = this._slot;
+        return void 0 !== IB && ZB < IB.length && 0 !== (IB[ZB] & this._bit)
       }
       _setSubscribed(BB) {
-        const jB = this._slot;
-        let zB = BB.subscribedViews;
-        for (void 0 === zB && (zB = BB.subscribedViews = []); zB.length <= jB;) zB.push(0);
-        zB[jB] |= this._bit
+        const IB = this._slot;
+        let ZB = BB.subscribedViews;
+        for (void 0 === ZB && (ZB = BB.subscribedViews = []); ZB.length <= IB;) ZB.push(0);
+        ZB[IB] |= this._bit
       }
       _clearSubscribed(BB) {
-        const jB = BB.subscribedViews;
-        if (void 0 === jB) return;
-        const zB = this._slot;
-        zB < jB.length && (jB[zB] &= ~this._bit)
+        const IB = BB.subscribedViews;
+        if (void 0 === IB) return;
+        const ZB = this._slot;
+        ZB < IB.length && (IB[ZB] &= ~this._bit)
       }
-      hasTagOnTree(BB, jB) {
-        const zB = BB.tagViews;
-        if (void 0 === zB) return !1;
-        const QB = this._slot,
-          nB = this._bit;
-        for (let dB = jB; 0 !== dB; dB &= dB - 1) {
-          const BB = zB.get(dB & -dB);
-          if (void 0 !== BB && QB < BB.length && 0 !== (BB[QB] & nB)) return !0
+      hasTagOnTree(BB, IB) {
+        const ZB = BB.tagViews;
+        if (void 0 === ZB) return !1;
+        const TB = this._slot,
+          JB = this._bit;
+        for (let oB = IB; 0 !== oB; oB &= oB - 1) {
+          const BB = ZB.get(oB & -oB);
+          if (void 0 !== BB && TB < BB.length && 0 !== (BB[TB] & JB)) return !0
         }
         return !1
       }
-      addTag(BB, jB) {
-        if (jB === JQ) return;
-        let zB = BB.tagViews;
-        void 0 === zB && (zB = BB.tagViews = new Map);
-        const QB = this._slot,
-          nB = this._bit;
-        for (let dB = jB; dB > 0; dB &= dB - 1) {
-          const BB = dB & -dB;
-          let jB = zB.get(BB);
-          for (void 0 === jB && (jB = [], zB.set(BB, jB)); jB.length <= QB;) jB.push(0);
-          jB[QB] |= nB
+      addTag(BB, IB) {
+        if (IB === NT) return;
+        let ZB = BB.tagViews;
+        void 0 === ZB && (ZB = BB.tagViews = new Map);
+        const TB = this._slot,
+          JB = this._bit;
+        for (let oB = IB; oB > 0; oB &= oB - 1) {
+          const BB = oB & -oB;
+          let IB = ZB.get(BB);
+          for (void 0 === IB && (IB = [], ZB.set(BB, IB)); IB.length <= TB;) IB.push(0);
+          IB[TB] |= JB
         }
       }
-      removeTag(BB, jB) {
-        if (jB === JQ) return;
-        const zB = BB.tagViews;
-        if (void 0 === zB) return;
-        const QB = this._slot,
-          nB = ~this._bit;
-        for (let dB = jB; dB > 0; dB &= dB - 1) {
-          const BB = zB.get(dB & -dB);
-          void 0 !== BB && QB < BB.length && (BB[QB] &= nB)
+      removeTag(BB, IB) {
+        if (IB === NT) return;
+        const ZB = BB.tagViews;
+        if (void 0 === ZB) return;
+        const TB = this._slot,
+          JB = ~this._bit;
+        for (let oB = IB; oB > 0; oB &= oB - 1) {
+          const BB = ZB.get(oB & -oB);
+          void 0 !== BB && TB < BB.length && (BB[TB] &= JB)
         }
       }
       removeAllTagsOnTree(BB) {
-        const jB = BB.tagViews;
-        if (void 0 === jB) return;
-        const zB = this._slot,
-          QB = ~this._bit;
-        jB.forEach((BB => {
-          zB < BB.length && (BB[zB] &= QB)
+        const IB = BB.tagViews;
+        if (void 0 === IB) return;
+        const ZB = this._slot,
+          TB = ~this._bit;
+        IB.forEach((BB => {
+          ZB < BB.length && (BB[ZB] &= TB)
         }))
       }
       add(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JQ,
-          zB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(BB, jB, zB, !1)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NT,
+          ZB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(BB, IB, ZB, !1)
       }
       _addImmediate(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JQ;
-        this._add(BB, jB, !0, !0)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NT;
+        this._add(BB, IB, !0, !0)
       }
-      _add(BB, jB, zB, QB) {
-        const dB = BB?.[mB];
-        if (!dB) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${hQ(BB)}`), !1;
-        const IB = dB.parent;
-        if (!IB && 0 !== BB[NB]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${dB.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== dB.root && this._bindRoot(dB.root);
-        const uB = IB?.[mB];
-        if (!QB && uB?.isStreamCollection) return Fj(IB, this.id, dB.parentIndex), !0;
-        const UB = BB.constructor[Symbol.metadata],
-          aB = this.isVisible(dB);
-        if (!this.iterable || !zB || aB && -1 !== this.items.indexOf(BB) || this.items.push(BB), this.markVisible(dB), zB && IB && this.addParentOf(dB, jB), !QB && dB.isStreamCollection) return !0;
-        if (jB === JQ && dB.isNew) return this._markSubtreeVisible(dB, jB), !1;
-        let pB = this.changes.get(BB[NB]);
-        void 0 === pB && (pB = new Map, this.changes.set(BB[NB], pB));
-        let rB = !1;
-        const sB = dB.encDescriptor.tags;
-        if (dB.forEachChild(((BB, zB) => {
-            const QB = sB[zB];
-            if (void 0 !== QB) {
-              if (!(QB === JQ || jB !== JQ && 0 !== (QB & jB))) return
+      _add(BB, IB, ZB, TB) {
+        const oB = BB?.[gB];
+        if (!oB) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${RT(BB)}`), !1;
+        const GB = oB.parent;
+        if (!GB && 0 !== BB[vB]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${oB.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== oB.root && this._bindRoot(oB.root);
+        const kB = GB?.[gB];
+        if (!TB && kB?.isStreamCollection) return MI(GB, this.id, oB.parentIndex), !0;
+        const cB = BB.constructor[Symbol.metadata],
+          nB = this.isVisible(oB);
+        if (!this.iterable || !ZB || nB && -1 !== this.items.indexOf(BB) || this.items.push(BB), this.markVisible(oB), ZB && GB && this.addParentOf(oB, IB), !TB && oB.isStreamCollection) return !0;
+        if (IB === NT && oB.isNew) return this._markSubtreeVisible(oB, IB), !1;
+        let hB = this.changes.get(BB[vB]);
+        void 0 === hB && (hB = new Map, this.changes.set(BB[vB], hB));
+        let zB = !1;
+        const FB = oB.encDescriptor.tags;
+        if (oB.forEachChild(((BB, ZB) => {
+            const TB = FB[ZB];
+            if (void 0 !== TB) {
+              if (!(TB === NT || IB !== NT && 0 !== (TB & IB))) return
             }
-            this.add(BB.ref, jB, !1) && (rB = !0)
-          })), jB !== JQ) {
-          this.addTag(dB, jB);
-          const BB = UB?.[HB];
+            this.add(BB.ref, IB, !1) && (zB = !0)
+          })), IB !== NT) {
+          this.addTag(oB, IB);
+          const BB = cB?.[aB];
           if (void 0 !== BB)
-            for (let zB = jB; zB > 0; zB &= zB - 1) BB[zB & -zB]?.forEach((BB => {
-              dB.getChange(BB) !== nB.DELETE && pB.set(BB, nB.ADD)
+            for (let ZB = IB; ZB > 0; ZB &= ZB - 1) BB[ZB & -ZB]?.forEach((BB => {
+              oB.getChange(BB) !== JB.DELETE && hB.set(BB, JB.ADD)
             }))
         }
-        if ((jB === JQ || !aB) && (!dB.isNew || rB))
-          if (dB.isArray && "string" !== typeof dB.refTarget[yB]) dB.refTarget.items.length > 0 && (pB.set(-1, nB.ADD), rB = !0);
+        if ((IB === NT || !nB) && (!oB.isNew || zB))
+          if (oB.isArray && "string" !== typeof oB.refTarget[qB]) oB.refTarget.items.length > 0 && (hB.set(-1, JB.ADD), zB = !0);
           else {
-            const BB = dB.encDescriptor.tags;
-            dB.forEachLive((zB => {
-              const QB = BB[zB];
-              (void 0 === QB || QB === JQ || jB !== JQ && 0 !== (QB & jB)) && (pB.set(zB, nB.ADD), rB = !0)
+            const BB = oB.encDescriptor.tags;
+            oB.forEachLive((ZB => {
+              const TB = BB[ZB];
+              (void 0 === TB || TB === NT || IB !== NT && 0 !== (TB & IB)) && (hB.set(ZB, JB.ADD), zB = !0)
             }))
-          } return rB
+          } return zB
       }
-      _markSubtreeVisible(BB, jB) {
-        const zB = BB.encDescriptor.tags;
-        BB.forEachChild(((BB, QB) => {
-          const nB = zB[QB];
-          if (void 0 !== nB) {
-            if (!(nB === JQ || jB !== JQ && 0 !== (nB & jB))) return
+      _markSubtreeVisible(BB, IB) {
+        const ZB = BB.encDescriptor.tags;
+        BB.forEachChild(((BB, TB) => {
+          const JB = ZB[TB];
+          if (void 0 !== JB) {
+            if (!(JB === NT || IB !== NT && 0 !== (JB & IB))) return
           }
-          BB.isNew ? (this.markVisible(BB), this._markSubtreeVisible(BB, jB)) : this._add(BB.ref, jB, !1, !1)
+          BB.isNew ? (this.markVisible(BB), this._markSubtreeVisible(BB, IB)) : this._add(BB.ref, IB, !1, !1)
         }))
       }
-      addParentOf(BB, jB) {
-        const zB = BB.parent[mB],
-          QB = BB.parentIndex;
-        this.isVisible(zB) || this.markVisible(zB);
-        const dB = zB.parent?.[mB];
-        if (dB && this.addParentOf(zB, jB), zB.hasFilteredFields && zB.getChange(QB) !== nB.DELETE) {
-          let dB = this.changes.get(zB.ref[NB]);
-          void 0 === dB && (dB = new Map, this.changes.set(zB.ref[NB], dB));
-          const IB = zB.encDescriptor.tags[QB];
-          void 0 !== IB && IB !== JQ && 0 !== (IB & jB) && this.addTag(zB, jB), dB.set(zB.isArray ? BB : QB, nB.ADD)
+      addParentOf(BB, IB) {
+        const ZB = BB.parent[gB],
+          TB = BB.parentIndex;
+        this.isVisible(ZB) || this.markVisible(ZB);
+        const oB = ZB.parent?.[gB];
+        if (oB && this.addParentOf(ZB, IB), ZB.hasFilteredFields && ZB.getChange(TB) !== JB.DELETE) {
+          let oB = this.changes.get(ZB.ref[vB]);
+          void 0 === oB && (oB = new Map, this.changes.set(ZB.ref[vB], oB));
+          const GB = ZB.encDescriptor.tags[TB];
+          void 0 !== GB && GB !== NT && 0 !== (GB & IB) && this.addTag(ZB, IB), oB.set(ZB.isArray ? BB : TB, JB.ADD)
         }
       }
       _touchAncestorsOf(BB) {
-        let jB = BB.parent?.[mB];
-        if (void 0 === jB) return;
-        const zB = [];
-        for (; void 0 !== jB;) {
-          if (jB.hasFilteredFields) {
-            const BB = jB.ref[NB];
+        let IB = BB.parent?.[gB];
+        if (void 0 === IB) return;
+        const ZB = [];
+        for (; void 0 !== IB;) {
+          if (IB.hasFilteredFields) {
+            const BB = IB.ref[vB];
             if (this.changes.has(BB)) break;
-            zB.push(jB)
+            ZB.push(IB)
           }
-          jB = jB.parent?.[mB]
+          IB = IB.parent?.[gB]
         }
-        for (let QB = zB.length - 1; QB >= 0; QB--) this.changes.set(zB[QB].ref[NB], new Map)
+        for (let TB = ZB.length - 1; TB >= 0; TB--) this.changes.set(ZB[TB].ref[vB], new Map)
       }
       remove(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JQ,
-          zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const QB = BB?.[mB];
-        if (!QB) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${hQ(BB)}`), this;
-        const dB = QB.parent?.[mB];
-        if (dB?.isStreamCollection) return this.unmarkVisible(QB), this.iterable && !zB && FQ(this.items, this.items.indexOf(BB)),
-          function(BB, jB, zB, QB, dB) {
-            const IB = BB._stream;
-            if (void 0 === IB) return !1;
-            const NB = IB.pendingByView.get(jB);
-            if (NB?.has(QB)) return NB.delete(QB), !1;
-            const uB = IB.sentByView.get(jB);
-            if (uB?.has(QB)) {
-              uB.delete(QB);
-              let BB = dB.get(zB);
-              return void 0 === BB && (BB = new Map, dB.set(zB, BB)), BB.set(QB, nB.DELETE), !0
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NT,
+          ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const TB = BB?.[gB];
+        if (!TB) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${RT(BB)}`), this;
+        const oB = TB.parent?.[gB];
+        if (oB?.isStreamCollection) return this.unmarkVisible(TB), this.iterable && !ZB && MT(this.items, this.items.indexOf(BB)),
+          function(BB, IB, ZB, TB, oB) {
+            const GB = BB._stream;
+            if (void 0 === GB) return !1;
+            const vB = GB.pendingByView.get(IB);
+            if (vB?.has(TB)) return vB.delete(TB), !1;
+            const kB = GB.sentByView.get(IB);
+            if (kB?.has(TB)) {
+              kB.delete(TB);
+              let BB = oB.get(ZB);
+              return void 0 === BB && (BB = new Map, oB.set(ZB, BB)), BB.set(TB, JB.DELETE), !0
             }
-          }(QB.parent, this.id, QB.parent[NB], QB.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(QB), this;
-        if (QB.isStreamCollection) {
-          this.unmarkVisible(QB), this.iterable && !zB && FQ(this.items, this.items.indexOf(BB));
-          const jB = QB.ref,
-            dB = jB._stream;
-          if (void 0 !== dB) {
-            dB.pendingByView.get(this.id)?.clear();
-            const BB = dB.sentByView.get(this.id);
+          }(TB.parent, this.id, TB.parent[vB], TB.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(TB), this;
+        if (TB.isStreamCollection) {
+          this.unmarkVisible(TB), this.iterable && !ZB && MT(this.items, this.items.indexOf(BB));
+          const IB = TB.ref,
+            oB = IB._stream;
+          if (void 0 !== oB) {
+            oB.pendingByView.get(this.id)?.clear();
+            const BB = oB.sentByView.get(this.id);
             if (void 0 !== BB && BB.size > 0) {
-              const zB = jB[NB];
-              let QB = this.changes.get(zB);
-              void 0 === QB && (QB = new Map, this.changes.set(zB, QB));
-              for (const jB of BB) QB.set(jB, nB.DELETE);
+              const ZB = IB[vB];
+              let TB = this.changes.get(ZB);
+              void 0 === TB && (TB = new Map, this.changes.set(ZB, TB));
+              for (const IB of BB) TB.set(IB, JB.DELETE);
               BB.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(QB), this.iterable && !zB && FQ(this.items, this.items.indexOf(BB));
-        const IB = QB.ref,
-          uB = IB.constructor[Symbol.metadata],
-          UB = IB[NB];
-        this._touchAncestorsOf(QB);
-        let aB = this.changes.get(UB);
-        if (void 0 === aB && (aB = new Map, this.changes.set(UB, aB)), jB === JQ) {
-          const BB = QB.parent;
-          if (BB && !Cj.isValidInstance(BB) && QB.isFiltered) {
-            const jB = dB.isArray ? QB : QB.parentIndex,
-              zB = BB[NB];
-            let IB = this.changes.get(zB);
-            void 0 === IB ? (IB = new Map, this.changes.set(zB, IB)) : IB.get(jB) === nB.ADD && this._dropPendingEntries(QB), IB.set(jB, nB.DELETE), this._recursiveDeleteVisibleChangeTree(QB)
-          } else uB?.[oB]?.forEach((BB => this._removeViewField(QB, aB, BB)))
+        this.unmarkVisible(TB), this.iterable && !ZB && MT(this.items, this.items.indexOf(BB));
+        const GB = TB.ref,
+          kB = GB.constructor[Symbol.metadata],
+          cB = GB[vB];
+        this._touchAncestorsOf(TB);
+        let nB = this.changes.get(cB);
+        if (void 0 === nB && (nB = new Map, this.changes.set(cB, nB)), IB === NT) {
+          const BB = TB.parent;
+          if (BB && !xI.isValidInstance(BB) && TB.isFiltered) {
+            const IB = oB.isArray ? TB : TB.parentIndex,
+              ZB = BB[vB];
+            let GB = this.changes.get(ZB);
+            void 0 === GB ? (GB = new Map, this.changes.set(ZB, GB)) : GB.get(IB) === JB.ADD && this._dropPendingEntries(TB), GB.set(IB, JB.DELETE), this._recursiveDeleteVisibleChangeTree(TB)
+          } else kB?.[pB]?.forEach((BB => this._removeViewField(TB, nB, BB)))
         } else {
-          const BB = uB?.[HB];
+          const BB = kB?.[aB];
           if (void 0 !== BB)
-            for (let zB = jB; zB > 0; zB &= zB - 1) BB[zB & -zB]?.forEach((BB => this._removeViewField(QB, aB, BB)))
+            for (let ZB = IB; ZB > 0; ZB &= ZB - 1) BB[ZB & -ZB]?.forEach((BB => this._removeViewField(TB, nB, BB)))
         }
-        return void 0 === jB ? this.removeAllTagsOnTree(QB) : this.removeTag(QB, jB), this
+        return void 0 === IB ? this.removeAllTagsOnTree(TB) : this.removeTag(TB, IB), this
       }
       has(BB) {
-        return this.isVisible(BB[mB])
+        return this.isVisible(BB[gB])
       }
       hasTag(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JQ;
-        return this.hasTagOnTree(BB[mB], jB)
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NT;
+        return this.hasTagOnTree(BB[gB], IB)
       }
-      subscribe(BB, jB) {
-        const zB = BB?.[mB];
-        if (!zB) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${hQ(BB)}`), this;
-        if (void 0 === this._root && void 0 !== zB.root && this._bindRoot(zB.root), void 0 !== jB)
-          if (zB.isStreamCollection) {
-            const zB = qj(BB);
-            null === jB ? zB.priorityByView?.delete(this.id) : (zB.priorityByView ??= new Map).set(this.id, jB)
+      subscribe(BB, IB) {
+        const ZB = BB?.[gB];
+        if (!ZB) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${RT(BB)}`), this;
+        if (void 0 === this._root && void 0 !== ZB.root && this._bindRoot(ZB.root), void 0 !== IB)
+          if (ZB.isStreamCollection) {
+            const ZB = YI(BB);
+            null === IB ? ZB.priorityByView?.delete(this.id) : (ZB.priorityByView ??= new Map).set(this.id, IB)
           } else {
-            const jB = BB?.constructor?.name ?? "collection",
-              QB = zB.parent;
-            if (void 0 === QB) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${jB} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const IB = BB?.constructor?.name ?? "collection",
+              TB = ZB.parent;
+            if (void 0 === TB) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${IB} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const BB = QB?.constructor?.[Symbol.metadata]?.[zB.parentIndex]?.name,
-                nB = BB ? `${QB.constructor.name}#${BB}` : jB;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${nB} is a ${jB}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const BB = TB?.constructor?.[Symbol.metadata]?.[ZB.parentIndex]?.name,
+                JB = BB ? `${TB.constructor.name}#${BB}` : IB;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${JB} is a ${IB}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(zB)) return this;
-        const QB = void 0 !== zB.parent && !this.isVisible(zB);
-        if (QB ? (this.addParentOf(zB, JQ), this._add(BB, JQ, !1, !1)) : this.markVisible(zB), this._setSubscribed(zB), zB.isStreamCollection) {
-          const jB = BB;
-          zB.forEachChild(((BB, zB) => {
-            Fj(jB, this.id, zB)
+          } if (this.isSubscribed(ZB)) return this;
+        const TB = void 0 !== ZB.parent && !this.isVisible(ZB);
+        if (TB ? (this.addParentOf(ZB, NT), this._add(BB, NT, !1, !1)) : this.markVisible(ZB), this._setSubscribed(ZB), ZB.isStreamCollection) {
+          const IB = BB;
+          ZB.forEachChild(((BB, ZB) => {
+            MI(IB, this.id, ZB)
           }))
-        } else QB || zB.forEachChild((BB => {
+        } else TB || ZB.forEachChild((BB => {
           this.markVisible(BB)
         }));
         return this
       }
       unsubscribe(BB) {
-        const jB = BB?.[mB];
-        if (!jB) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${hQ(BB)}`), this;
-        if (!this.isSubscribed(jB)) return this;
-        this._clearSubscribed(jB);
-        const zB = jB.ref[NB];
-        if (jB.isStreamCollection) {
-          const jB = BB._stream;
-          if (void 0 !== jB) {
-            jB.pendingByView.get(this.id)?.clear();
-            const BB = jB.sentByView.get(this.id);
+        const IB = BB?.[gB];
+        if (!IB) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${RT(BB)}`), this;
+        if (!this.isSubscribed(IB)) return this;
+        this._clearSubscribed(IB);
+        const ZB = IB.ref[vB];
+        if (IB.isStreamCollection) {
+          const IB = BB._stream;
+          if (void 0 !== IB) {
+            IB.pendingByView.get(this.id)?.clear();
+            const BB = IB.sentByView.get(this.id);
             if (void 0 !== BB && BB.size > 0) {
-              let jB = this.changes.get(zB);
-              void 0 === jB && (jB = new Map, this.changes.set(zB, jB));
-              for (const zB of BB) jB.set(zB, nB.DELETE);
+              let IB = this.changes.get(ZB);
+              void 0 === IB && (IB = new Map, this.changes.set(ZB, IB));
+              for (const ZB of BB) IB.set(ZB, JB.DELETE);
               BB.clear()
             }
           }
         } else {
-          const BB = jB.isArray;
-          let QB = this.changes.get(zB);
-          jB.forEachChild(((jB, dB) => {
-            void 0 === QB && (QB = new Map, this.changes.set(zB, QB)), QB.set(BB ? jB : dB, nB.DELETE), this.unmarkVisible(jB)
+          const BB = IB.isArray;
+          let TB = this.changes.get(ZB);
+          IB.forEachChild(((IB, oB) => {
+            void 0 === TB && (TB = new Map, this.changes.set(ZB, TB)), TB.set(BB ? IB : oB, JB.DELETE), this.unmarkVisible(IB)
           }))
         }
-        return this.unmarkVisible(jB), this
+        return this.unmarkVisible(IB), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let BB = 0, jB = this.items.length; BB < jB; BB++) this.remove(this.items[BB], JQ, !0);
+        for (let BB = 0, IB = this.items.length; BB < IB; BB++) this.remove(this.items[BB], NT, !0);
         this.items.length = 0
       }
       isChangeTreeVisible(BB) {
-        let jB = this.isVisible(BB);
-        if (!jB && BB.isVisibilitySharedWithParent)
-          if (this.isVisible(BB.parent[mB])) this.markVisible(BB), jB = !0;
+        let IB = this.isVisible(BB);
+        if (!IB && BB.isVisibilitySharedWithParent)
+          if (this.isVisible(BB.parent[gB])) this.markVisible(BB), IB = !0;
           else
-            for (let zB = BB.extraParents; void 0 !== zB; zB = zB.next) {
-              const QB = zB.ref[mB];
-              if (QB.isFiltered && this.isVisible(QB)) {
-                this.markVisible(BB), jB = !0;
+            for (let ZB = BB.extraParents; void 0 !== ZB; ZB = ZB.next) {
+              const TB = ZB.ref[gB];
+              if (TB.isFiltered && this.isVisible(TB)) {
+                this.markVisible(BB), IB = !0;
                 break
               }
             }
-        return jB
+        return IB
       }
       _recursiveDeleteVisibleChangeTree(BB) {
         BB.forEachChild((BB => {
@@ -6221,64 +6221,64 @@ export const modules = {
         }))
       }
       _dropPendingEntries(BB) {
-        this.changes.delete(BB.ref[NB]), BB.forEachChild((BB => this._dropPendingEntries(BB)))
+        this.changes.delete(BB.ref[vB]), BB.forEachChild((BB => this._dropPendingEntries(BB)))
       }
-      _removeViewField(BB, jB, zB) {
-        const QB = jB.get(zB) === nB.ADD;
-        jB.set(zB, nB.DELETE);
-        const dB = BB.ref[BB.encDescriptor.names[zB]],
-          IB = dB?.[mB];
-        IB && (this.unmarkVisible(IB), this._recursiveDeleteVisibleChangeTree(IB), QB && this._dropPendingEntries(IB))
+      _removeViewField(BB, IB, ZB) {
+        const TB = IB.get(ZB) === JB.ADD;
+        IB.set(ZB, JB.DELETE);
+        const oB = BB.ref[BB.encDescriptor.names[ZB]],
+          GB = oB?.[gB];
+        GB && (this.unmarkVisible(GB), this._recursiveDeleteVisibleChangeTree(GB), TB && this._dropPendingEntries(GB))
       }
     }
 
-    function ZQ(BB) {
-      BB.structSwitchEmitted || (BB.shouldEmitSwitch && (BB.buffer[BB.it.offset++] = 255, jj.number(BB.buffer, BB.ref[NB], BB.it)), BB.structSwitchEmitted = !0)
+    function mT(BB) {
+      BB.structSwitchEmitted || (BB.shouldEmitSwitch && (BB.buffer[BB.it.offset++] = 255, II.number(BB.buffer, BB.ref[vB], BB.it)), BB.structSwitchEmitted = !0)
     }
 
-    function AQ(BB, jB) {
-      WQ(BB, jB, nB.ADD)
+    function XT(BB, IB) {
+      uT(BB, IB, JB.ADD)
     }
 
-    function TQ(BB, jB) {
-      if (jB._fullSyncGen === BB.gen) return;
-      jB._fullSyncGen = BB.gen;
-      if (!BB.hasView || BB.view.isChangeTreeVisible(jB)) {
-        const zB = jB.encDescriptor;
-        BB.changeTree = jB, BB.ref = jB.ref, BB.encoder = zB.encoder, BB.filter = zB.filter, BB.metadata = zB.metadata, BB.treeIsFiltered = jB.isFiltered, BB.isSchema = zB.isSchema, BB.filterBitmask = zB.filterBitmask, BB.tags = zB.tags, BB.structSwitchEmitted = !1, BB.shouldEmitSwitch = BB.hasView || BB.it.offset > BB.initialOffset || jB !== BB.rootChangeTree, jB.isArray && jB.collDirty.size > 0 && (jB.flags |= 512), nz(jB, BB, AQ)
+    function LT(BB, IB) {
+      if (IB._fullSyncGen === BB.gen) return;
+      IB._fullSyncGen = BB.gen;
+      if (!BB.hasView || BB.view.isChangeTreeVisible(IB)) {
+        const ZB = IB.encDescriptor;
+        BB.changeTree = IB, BB.ref = IB.ref, BB.encoder = ZB.encoder, BB.filter = ZB.filter, BB.metadata = ZB.metadata, BB.treeIsFiltered = IB.isFiltered, BB.isSchema = ZB.isSchema, BB.filterBitmask = ZB.filterBitmask, BB.tags = ZB.tags, BB.structSwitchEmitted = !1, BB.shouldEmitSwitch = BB.hasView || BB.it.offset > BB.initialOffset || IB !== BB.rootChangeTree, IB.isArray && IB.collDirty.size > 0 && (IB.flags |= 512), JZ(IB, BB, XT)
       }
-      kz(jB, BB, PQ)
+      yZ(IB, BB, eT)
     }
 
-    function PQ(BB, jB, zB) {
-      TQ(BB, jB)
+    function eT(BB, IB, ZB) {
+      LT(BB, IB)
     }
 
-    function WQ(BB, jB, zB) {
-      if (jB < 0) {
+    function uT(BB, IB, ZB) {
+      if (IB < 0) {
         if (BB.treeIsFiltered !== BB.emitFiltered) return;
-        return ZQ(BB), void(BB.buffer[BB.it.offset++] = 255 & Math.abs(jB))
+        return mT(BB), void(BB.buffer[BB.it.offset++] = 255 & Math.abs(IB))
       }
-      if ((BB.isSchema ? BB.treeIsFiltered || (jB < 32 ? 0 !== (BB.filterBitmask & 1 << jB) : void 0 !== BB.tags[jB]) : BB.treeIsFiltered) !== BB.emitFiltered) return;
-      const QB = BB.isEncodeAll ? nB.ADD : zB;
-      void 0 !== QB && (void 0 === BB.filter || BB.filter(BB.ref, jB, BB.view)) && (ZQ(BB), BB.encoder(BB.self, BB.buffer, BB.changeTree, jB, QB, BB.it, BB.isEncodeAll, BB.hasView, BB.metadata))
+      if ((BB.isSchema ? BB.treeIsFiltered || (IB < 32 ? 0 !== (BB.filterBitmask & 1 << IB) : void 0 !== BB.tags[IB]) : BB.treeIsFiltered) !== BB.emitFiltered) return;
+      const TB = BB.isEncodeAll ? JB.ADD : ZB;
+      void 0 !== TB && (void 0 === BB.filter || BB.filter(BB.ref, IB, BB.view)) && (mT(BB), BB.encoder(BB.self, BB.buffer, BB.changeTree, IB, TB, BB.it, BB.isEncodeAll, BB.hasView, BB.metadata))
     }
 
-    function eQ(BB, jB) {
-      const zB = new Uint8Array(BB.length + jB.length);
-      return zB.set(BB, 0), zB.set(jB, BB.length), zB
+    function fT(BB, IB) {
+      const ZB = new Uint8Array(BB.length + IB.length);
+      return ZB.set(BB, 0), ZB.set(IB, BB.length), ZB
     }
-    class lQ {
+    class lT {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(lQ.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(lT.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(BB, jB) {
-        this.context = Pj.cache(BB.constructor), this.root = jB ?? new DQ(this.context), this.setState(BB)
+      constructor(BB, IB) {
+        this.context = eI.cache(BB.constructor), this.root = IB ?? new HT(this.context), this.setState(BB)
       }
       setState(BB) {
-        this.state = BB, this.state[mB].setRoot(this.root)
+        this.state = BB, this.state[gB].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6309,268 +6309,268 @@ export const modules = {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          jB = arguments.length > 1 ? arguments[1] : void 0,
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB.offset;
-        return this._encodeChannel(BB, jB, zB, QB, !1)
+          IB = arguments.length > 1 ? arguments[1] : void 0,
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB.offset;
+        return this._encodeChannel(BB, IB, ZB, TB, !1)
       }
       encodeUnreliable() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          jB = arguments.length > 1 ? arguments[1] : void 0,
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB.offset;
-        return this._encodeChannel(BB, jB, zB, QB, !0)
+          IB = arguments.length > 1 ? arguments[1] : void 0,
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB.offset;
+        return this._encodeChannel(BB, IB, ZB, TB, !0)
       }
-      _encodeChannel(BB, jB, zB, QB, nB) {
-        this.root.pendingFilterRefresh.length > 0 && Iz(this.root);
-        const dB = void 0 !== jB,
-          IB = this.state[mB],
-          NB = this._encodeCtx;
-        NB.self = this, NB.buffer = zB, NB.it = BB, NB.view = jB, NB.isEncodeAll = !1, NB.hasView = dB, NB.emitFiltered = dB;
-        let uB = nB ? this.root.unreliableChanges : this.root.changes;
-        for (; uB = uB.next;) {
-          const zB = uB.changeTree;
-          if (dB && !jB.isChangeTreeVisible(zB)) continue;
-          const UB = nB ? zB.unreliableRecorder : zB;
-          if (!UB || !UB.has()) continue;
-          const aB = zB.encDescriptor;
-          NB.changeTree = zB, NB.ref = zB.ref, NB.encoder = aB.encoder, NB.filter = aB.filter, NB.metadata = aB.metadata, NB.treeIsFiltered = zB.isFiltered, NB.isSchema = aB.isSchema, NB.filterBitmask = aB.filterBitmask, NB.tags = aB.tags, NB.structSwitchEmitted = !1, NB.isRootTree = zB === IB, NB.shouldEmitSwitch = dB || BB.offset > QB || !NB.isRootTree, UB.forEachWithCtx(NB, WQ)
+      _encodeChannel(BB, IB, ZB, TB, JB) {
+        this.root.pendingFilterRefresh.length > 0 && GZ(this.root);
+        const oB = void 0 !== IB,
+          GB = this.state[gB],
+          vB = this._encodeCtx;
+        vB.self = this, vB.buffer = ZB, vB.it = BB, vB.view = IB, vB.isEncodeAll = !1, vB.hasView = oB, vB.emitFiltered = oB;
+        let kB = JB ? this.root.unreliableChanges : this.root.changes;
+        for (; kB = kB.next;) {
+          const ZB = kB.changeTree;
+          if (oB && !IB.isChangeTreeVisible(ZB)) continue;
+          const cB = JB ? ZB.unreliableRecorder : ZB;
+          if (!cB || !cB.has()) continue;
+          const nB = ZB.encDescriptor;
+          vB.changeTree = ZB, vB.ref = ZB.ref, vB.encoder = nB.encoder, vB.filter = nB.filter, vB.metadata = nB.metadata, vB.treeIsFiltered = ZB.isFiltered, vB.isSchema = nB.isSchema, vB.filterBitmask = nB.filterBitmask, vB.tags = nB.tags, vB.structSwitchEmitted = !1, vB.isRootTree = ZB === GB, vB.shouldEmitSwitch = oB || BB.offset > TB || !vB.isRootTree, cB.forEachWithCtx(vB, uT)
         }
-        return nB || dB || !this._isStreamBroadcastMode || this._emitStreamBroadcast(zB, BB), BB.offset > zB.byteLength ? (zB = this._resizeBuffer(zB, BB.offset), BB.offset = QB, this._encodeChannel(BB, jB, zB, QB, nB)) : zB.subarray(0, BB.offset)
+        return JB || oB || !this._isStreamBroadcastMode || this._emitStreamBroadcast(ZB, BB), BB.offset > ZB.byteLength ? (ZB = this._resizeBuffer(ZB, BB.offset), BB.offset = TB, this._encodeChannel(BB, IB, ZB, TB, JB)) : ZB.subarray(0, BB.offset)
       }
-      encodeFullSync(BB, jB, zB, QB) {
-        let nB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : BB.offset;
-        this.root.pendingFilterRefresh.length > 0 && Iz(this.root);
-        const dB = void 0 !== QB,
-          IB = this.state[mB],
-          NB = this._encodeCtx;
-        return NB.self = this, NB.buffer = jB, NB.it = BB, NB.view = QB, NB.isEncodeAll = !0, NB.hasView = dB, NB.emitFiltered = zB, NB.gen = ++this._fullSyncGen, NB.initialOffset = nB, NB.rootChangeTree = IB, TQ(NB, IB), BB.offset > jB.byteLength ? (jB = this._resizeBuffer(jB, BB.offset), BB.offset = nB, this.encodeFullSync(BB, jB, zB, QB, nB)) : jB.subarray(0, BB.offset)
+      encodeFullSync(BB, IB, ZB, TB) {
+        let JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : BB.offset;
+        this.root.pendingFilterRefresh.length > 0 && GZ(this.root);
+        const oB = void 0 !== TB,
+          GB = this.state[gB],
+          vB = this._encodeCtx;
+        return vB.self = this, vB.buffer = IB, vB.it = BB, vB.view = TB, vB.isEncodeAll = !0, vB.hasView = oB, vB.emitFiltered = ZB, vB.gen = ++this._fullSyncGen, vB.initialOffset = JB, vB.rootChangeTree = GB, LT(vB, GB), BB.offset > IB.byteLength ? (IB = this._resizeBuffer(IB, BB.offset), BB.offset = JB, this.encodeFullSync(BB, IB, ZB, TB, JB)) : IB.subarray(0, BB.offset)
       }
-      _resizeBuffer(BB, jB) {
-        const zB = Math.ceil(jB / lQ.BUFFER_SIZE) * lQ.BUFFER_SIZE,
-          QB = new Uint8Array(zB);
-        return QB.set(BB), BB === this.sharedBuffer && (this.sharedBuffer = QB), QB
+      _resizeBuffer(BB, IB) {
+        const ZB = Math.ceil(IB / lT.BUFFER_SIZE) * lT.BUFFER_SIZE,
+          TB = new Uint8Array(ZB);
+        return TB.set(BB), BB === this.sharedBuffer && (this.sharedBuffer = TB), TB
       }
       encodeAll() {
         let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(BB, jB, !1)
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(BB, IB, !1)
       }
-      encodeAllView(BB, jB, zB) {
-        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const nB = zB.offset;
-        return QB = this.encodeFullSync(zB, QB, !0, BB, nB), eQ(QB.subarray(0, jB), QB.subarray(nB, zB.offset))
+      encodeAllView(BB, IB, ZB) {
+        let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const JB = ZB.offset;
+        return TB = this.encodeFullSync(ZB, TB, !0, BB, JB), fT(TB.subarray(0, IB), TB.subarray(JB, ZB.offset))
       }
-      ensureCapacity(BB, jB) {
-        if (jB + lQ.BUFFER_SIZE <= BB.byteLength) return BB;
-        const zB = Math.ceil((jB + lQ.BUFFER_SIZE) / lQ.BUFFER_SIZE) * lQ.BUFFER_SIZE,
-          QB = new Uint8Array(zB);
-        return QB.set(BB.subarray(0, jB)), BB === this.sharedBuffer && (this.sharedBuffer = QB), QB
+      ensureCapacity(BB, IB) {
+        if (IB + lT.BUFFER_SIZE <= BB.byteLength) return BB;
+        const ZB = Math.ceil((IB + lT.BUFFER_SIZE) / lT.BUFFER_SIZE) * lT.BUFFER_SIZE,
+          TB = new Uint8Array(ZB);
+        return TB.set(BB.subarray(0, IB)), BB === this.sharedBuffer && (this.sharedBuffer = TB), TB
       }
-      encodeView(BB, jB, zB) {
-        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          dB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const IB = zB.offset;
+      encodeView(BB, IB, ZB) {
+        let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          oB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const GB = ZB.offset;
         this._emitStreamPriority(BB);
-        for (const uB of BB.changes.keys()) {
-          const jB = BB.changes.get(uB),
-            dB = this.root.changeTrees[uB];
-          if (void 0 === dB) {
-            BB.changes.delete(uB);
+        for (const kB of BB.changes.keys()) {
+          const IB = BB.changes.get(kB),
+            oB = this.root.changeTrees[kB];
+          if (void 0 === oB) {
+            BB.changes.delete(kB);
             continue
           }
-          if (0 === jB.size) continue;
-          const IB = dB.encDescriptor,
-            UB = IB.encoder,
-            aB = IB.metadata,
-            pB = dB.ref,
-            sB = dB.refTarget;
-          QB = this.ensureCapacity(QB, zB.offset), QB[zB.offset++] = 255, jj.number(QB, pB[NB], zB);
-          for (const [uB, JB] of jB) {
-            let jB;
-            if (-1 === uB) {
-              const BB = sB.tmpItems,
-                jB = sB.deletedIndexes;
-              for (let IB = 0; IB < BB.length; IB++) void 0 !== BB[IB] && !0 !== jB[IB] && UB(this, QB, dB, IB, nB.ADD, zB, !1, !0, aB);
+          if (0 === IB.size) continue;
+          const GB = oB.encDescriptor,
+            cB = GB.encoder,
+            nB = GB.metadata,
+            hB = oB.ref,
+            FB = oB.refTarget;
+          TB = this.ensureCapacity(TB, ZB.offset), TB[ZB.offset++] = 255, II.number(TB, hB[vB], ZB);
+          for (const [kB, NB] of IB) {
+            let IB;
+            if (-1 === kB) {
+              const BB = FB.tmpItems,
+                IB = FB.deletedIndexes;
+              for (let GB = 0; GB < BB.length; GB++) void 0 !== BB[GB] && !0 !== IB[GB] && cB(this, TB, oB, GB, JB.ADD, ZB, !1, !0, nB);
               continue
             }
-            if ("number" === typeof uB) jB = uB;
+            if ("number" === typeof kB) IB = kB;
             else {
-              const zB = uB.indexInParent(pB);
-              if (void 0 === zB) continue;
-              if (jB = zB, JB === nB.ADD && dB.getChange(jB) === nB.DELETE) {
-                BB.changes.delete(uB.ref[NB]);
+              const ZB = kB.indexInParent(hB);
+              if (void 0 === ZB) continue;
+              if (IB = ZB, NB === JB.ADD && oB.getChange(IB) === JB.DELETE) {
+                BB.changes.delete(kB.ref[vB]);
                 continue
               }
             }
-            UB(this, QB, dB, jB, void 0 !== sB[rB](jB) && JB || nB.DELETE, zB, !1, !0, aB)
+            cB(this, TB, oB, IB, void 0 !== FB[zB](IB) && NB || JB.DELETE, ZB, !1, !0, nB)
           }
         }
-        return BB.changes.clear(), QB = this.encode(zB, BB, QB), dB ? eQ(QB.subarray(0, jB), QB.subarray(IB, zB.offset)) : QB.subarray(IB, zB.offset)
+        return BB.changes.clear(), TB = this.encode(ZB, BB, TB), oB ? fT(TB.subarray(0, IB), TB.subarray(GB, ZB.offset)) : TB.subarray(GB, ZB.offset)
       }
-      encodeUnreliableView(BB, jB, zB) {
-        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const nB = zB.offset;
-        return QB = this.encodeUnreliable(zB, BB, QB, nB), eQ(QB.subarray(0, jB), QB.subarray(nB, zB.offset))
+      encodeUnreliableView(BB, IB, ZB) {
+        let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const JB = ZB.offset;
+        return TB = this.encodeUnreliable(ZB, BB, TB, JB), fT(TB.subarray(0, IB), TB.subarray(JB, ZB.offset))
       }
-      _emitStreamBroadcast(BB, jB) {
-        const zB = this.root.streamTrees;
-        for (const QB of zB) {
-          const zB = QB,
-            dB = zB[mB],
-            IB = zB[NB];
-          if (void 0 === IB) continue;
-          const uB = zB._stream,
-            UB = uB.broadcastDeletes,
-            aB = uB.broadcastPending,
-            pB = uB.sentBroadcast,
-            sB = UB.size > 0,
-            JB = aB.size > 0,
-            yB = dB.encDescriptor,
-            kB = yB.encoder,
-            GB = yB.metadata;
-          if (sB || JB) {
-            if (BB[jB.offset++] = 255, jj.number(BB, IB, jB), sB) {
-              for (const zB of UB) kB(this, BB, dB, zB, nB.DELETE, jB, !1, !1, GB);
-              UB.clear()
+      _emitStreamBroadcast(BB, IB) {
+        const ZB = this.root.streamTrees;
+        for (const TB of ZB) {
+          const ZB = TB,
+            oB = ZB[gB],
+            GB = ZB[vB];
+          if (void 0 === GB) continue;
+          const kB = ZB._stream,
+            cB = kB.broadcastDeletes,
+            nB = kB.broadcastPending,
+            hB = kB.sentBroadcast,
+            FB = cB.size > 0,
+            NB = nB.size > 0,
+            qB = oB.encDescriptor,
+            yB = qB.encoder,
+            UB = qB.metadata;
+          if (FB || NB) {
+            if (BB[IB.offset++] = 255, II.number(BB, GB, IB), FB) {
+              for (const ZB of cB) yB(this, BB, oB, ZB, JB.DELETE, IB, !1, !1, UB);
+              cB.clear()
             }
-            const QB = uB.maxPerTick,
-              JB = [];
-            let yB = 0;
-            const LB = [];
-            for (const IB of aB) {
-              if (yB >= QB) break;
-              const NB = zB[rB](IB);
-              void 0 !== NB ? (kB(this, BB, dB, IB, nB.ADD, jB, !1, !1, GB), pB.add(IB), JB.push(NB), LB.push(IB), yB++) : LB.push(IB)
+            const TB = kB.maxPerTick,
+              NB = [];
+            let qB = 0;
+            const WB = [];
+            for (const GB of nB) {
+              if (qB >= TB) break;
+              const vB = ZB[zB](GB);
+              void 0 !== vB ? (yB(this, BB, oB, GB, JB.ADD, IB, !1, !1, UB), hB.add(GB), NB.push(vB), WB.push(GB), qB++) : WB.push(GB)
             }
-            for (const BB of LB) aB.delete(BB);
-            for (const zB of JB) {
-              const QB = zB[mB];
-              if (void 0 === QB) continue;
-              const dB = zB[NB];
-              if (void 0 === dB) continue;
-              BB[jB.offset++] = 255, jj.number(BB, dB, jB);
-              const IB = QB.encDescriptor,
-                uB = IB.encoder,
-                UB = IB.metadata;
-              QB.forEachLive((zB => {
-                Cj.hasUnreliableAtIndex(UB, zB) || uB(this, BB, QB, zB, nB.ADD, jB, !1, !1, UB)
+            for (const BB of WB) nB.delete(BB);
+            for (const ZB of NB) {
+              const TB = ZB[gB];
+              if (void 0 === TB) continue;
+              const oB = ZB[vB];
+              if (void 0 === oB) continue;
+              BB[IB.offset++] = 255, II.number(BB, oB, IB);
+              const GB = TB.encDescriptor,
+                kB = GB.encoder,
+                cB = GB.metadata;
+              TB.forEachLive((ZB => {
+                xI.hasUnreliableAtIndex(cB, ZB) || kB(this, BB, TB, ZB, JB.ADD, IB, !1, !1, cB)
               }))
             }
           }
-          for (const QB of pB) {
-            const nB = zB[rB](QB);
-            if (void 0 === nB) continue;
-            const dB = nB[mB];
-            if (void 0 === dB || !dB.has()) continue;
-            const IB = nB[NB];
-            if (void 0 === IB) continue;
-            BB[jB.offset++] = 255, jj.number(BB, IB, jB);
-            const uB = dB.encDescriptor,
-              UB = uB.encoder,
-              aB = uB.metadata;
-            dB.forEach(((zB, QB) => {
-              zB < 0 || Cj.hasUnreliableAtIndex(aB, zB) || UB(this, BB, dB, zB, QB, jB, !1, !1, aB)
+          for (const TB of hB) {
+            const JB = ZB[zB](TB);
+            if (void 0 === JB) continue;
+            const oB = JB[gB];
+            if (void 0 === oB || !oB.has()) continue;
+            const GB = JB[vB];
+            if (void 0 === GB) continue;
+            BB[IB.offset++] = 255, II.number(BB, GB, IB);
+            const kB = oB.encDescriptor,
+              cB = kB.encoder,
+              nB = kB.metadata;
+            oB.forEach(((ZB, TB) => {
+              ZB < 0 || xI.hasUnreliableAtIndex(nB, ZB) || cB(this, BB, oB, ZB, TB, IB, !1, !1, nB)
             }))
           }
         }
       }
       _emitStreamPriority(BB) {
-        const jB = this.root.streamTrees;
-        if (0 === jB.size) return;
-        const zB = BB.id;
-        for (const QB of jB) {
-          const jB = QB,
-            dB = jB._stream,
-            IB = dB.pendingByView.get(zB);
-          if (void 0 === IB || 0 === IB.size) continue;
-          const uB = dB.priorityByView?.get(zB),
-            UB = void 0 !== uB,
-            aB = dB.priority,
-            pB = dB.maxPerTick,
-            sB = [],
-            JB = [];
-          if (UB || void 0 !== aB) {
-            const zB = [],
-              QB = [];
-            let nB = 0;
-            for (const dB of IB) {
-              const IB = jB[rB](dB);
-              if (void 0 === IB) {
-                JB.push(dB);
+        const IB = this.root.streamTrees;
+        if (0 === IB.size) return;
+        const ZB = BB.id;
+        for (const TB of IB) {
+          const IB = TB,
+            oB = IB._stream,
+            GB = oB.pendingByView.get(ZB);
+          if (void 0 === GB || 0 === GB.size) continue;
+          const kB = oB.priorityByView?.get(ZB),
+            cB = void 0 !== kB,
+            nB = oB.priority,
+            hB = oB.maxPerTick,
+            FB = [],
+            NB = [];
+          if (cB || void 0 !== nB) {
+            const ZB = [],
+              TB = [];
+            let JB = 0;
+            for (const oB of GB) {
+              const GB = IB[zB](oB);
+              if (void 0 === GB) {
+                NB.push(oB);
                 continue
               }
-              const NB = UB ? uB(IB) : aB(BB, IB);
-              if (nB < pB) {
-                let BB = nB++;
-                for (; BB > 0 && QB[BB - 1] < NB;) QB[BB] = QB[BB - 1], zB[BB] = zB[BB - 1], BB--;
-                QB[BB] = NB, zB[BB] = dB
-              } else if (NB > QB[pB - 1]) {
-                let BB = pB - 1;
-                for (; BB > 0 && QB[BB - 1] < NB;) QB[BB] = QB[BB - 1], zB[BB] = zB[BB - 1], BB--;
-                QB[BB] = NB, zB[BB] = dB
+              const vB = cB ? kB(GB) : nB(BB, GB);
+              if (JB < hB) {
+                let BB = JB++;
+                for (; BB > 0 && TB[BB - 1] < vB;) TB[BB] = TB[BB - 1], ZB[BB] = ZB[BB - 1], BB--;
+                TB[BB] = vB, ZB[BB] = oB
+              } else if (vB > TB[hB - 1]) {
+                let BB = hB - 1;
+                for (; BB > 0 && TB[BB - 1] < vB;) TB[BB] = TB[BB - 1], ZB[BB] = ZB[BB - 1], BB--;
+                TB[BB] = vB, ZB[BB] = oB
               }
             }
-            for (let BB = 0; BB < nB; BB++) sB.push(zB[BB])
+            for (let BB = 0; BB < JB; BB++) FB.push(ZB[BB])
           } else
-            for (const BB of IB) {
-              if (sB.length >= pB) break;
-              sB.push(BB)
+            for (const BB of GB) {
+              if (FB.length >= hB) break;
+              FB.push(BB)
             }
-          for (const BB of JB) IB.delete(BB);
-          const yB = sB.length;
-          let kB = dB.sentByView.get(zB);
-          void 0 === kB && (kB = new Set, dB.sentByView.set(zB, kB));
-          for (let zB = 0; zB < yB; zB++) {
-            const QB = sB[zB],
-              dB = jB[rB](QB);
-            if (void 0 === dB) {
-              IB.delete(QB);
+          for (const BB of NB) GB.delete(BB);
+          const qB = FB.length;
+          let yB = oB.sentByView.get(ZB);
+          void 0 === yB && (yB = new Set, oB.sentByView.set(ZB, yB));
+          for (let ZB = 0; ZB < qB; ZB++) {
+            const TB = FB[ZB],
+              oB = IB[zB](TB);
+            if (void 0 === oB) {
+              GB.delete(TB);
               continue
             }
-            BB._addImmediate(dB);
-            const uB = dB[mB];
-            if (void 0 !== uB) {
-              const jB = dB[NB];
-              let zB = BB.changes.get(jB);
-              void 0 === zB && (zB = new Map, BB.changes.set(jB, zB));
-              const QB = uB.metadata;
-              uB.forEachLive((BB => {
-                Cj.hasUnreliableAtIndex(QB, BB) || zB.set(BB, nB.ADD)
+            BB._addImmediate(oB);
+            const kB = oB[gB];
+            if (void 0 !== kB) {
+              const IB = oB[vB];
+              let ZB = BB.changes.get(IB);
+              void 0 === ZB && (ZB = new Map, BB.changes.set(IB, ZB));
+              const TB = kB.metadata;
+              kB.forEachLive((BB => {
+                xI.hasUnreliableAtIndex(TB, BB) || ZB.set(BB, JB.ADD)
               }))
             }
-            IB.delete(QB), kB.add(QB)
+            GB.delete(TB), yB.add(TB)
           }
         }
       }
       discardChanges() {
         const BB = this.root.changes;
-        let jB = BB.next;
-        const zB = this.root;
-        for (; jB;) {
-          const BB = jB.next;
-          jB.changeTree.endEncode(), zB.releaseNode(jB), jB = BB
+        let IB = BB.next;
+        const ZB = this.root;
+        for (; IB;) {
+          const BB = IB.next;
+          IB.changeTree.endEncode(), ZB.releaseNode(IB), IB = BB
         }
         BB.next = void 0, BB.tail = void 0
       }
       discardUnreliableChanges() {
         const BB = this.root.unreliableChanges;
-        let jB = BB.next;
-        const zB = this.root;
-        for (; jB;) {
-          const BB = jB.next;
-          jB.changeTree.endEncodeUnreliable(), zB.releaseNode(jB), jB = BB
+        let IB = BB.next;
+        const ZB = this.root;
+        for (; IB;) {
+          const BB = IB.next;
+          IB.changeTree.endEncodeUnreliable(), ZB.releaseNode(IB), IB = BB
         }
         BB.next = void 0, BB.tail = void 0
       }
-      tryEncodeTypeId(BB, jB, zB, QB) {
-        const nB = this.context.getTypeId(jB),
-          dB = this.context.getTypeId(zB);
-        void 0 !== dB ? nB !== dB && (BB[QB.offset++] = 213, jj.number(BB, dB, QB)) : console.warn(`@colyseus/schema WARNING: Class "${zB.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(BB, IB, ZB, TB) {
+        const JB = this.context.getTypeId(IB),
+          oB = this.context.getTypeId(ZB);
+        void 0 !== oB ? JB !== oB && (BB[TB.offset++] = 213, II.number(BB, oB, TB)) : console.warn(`@colyseus/schema WARNING: Class "${ZB.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6581,26 +6581,26 @@ export const modules = {
       _hasStreamBacklog() {
         const BB = this.root;
         if (0 === BB.streamTrees.size) return !1;
-        const jB = 0 === BB.activeViews.size;
-        for (const zB of BB.streamTrees)
-          if (jB ? Dj(zB) : Hj(zB, BB)) return !0;
+        const IB = 0 === BB.activeViews.size;
+        for (const ZB of BB.streamTrees)
+          if (IB ? HI(ZB) : aI(ZB, BB)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class wQ extends Error {
+    class AT extends Error {
       constructor(BB) {
         super(BB), this.name = "DecodingWarning"
       }
     }
-    const xQ = {
+    const tT = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class KQ {
+    class bT {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,23 +6609,23 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(BB, jB) {
-        let zB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(BB, jB), void 0 === jB[NB] ? (xQ.value = BB, Object.defineProperty(jB, NB, xQ)) : jB[NB] !== BB && (jB[NB] = BB), zB && (this.refCount[BB] = (this.refCount[BB] || 0) + 1), this.deletedRefs.has(BB) && this.deletedRefs.delete(BB)
+      addRef(BB, IB) {
+        let ZB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(BB, IB), void 0 === IB[vB] ? (tT.value = BB, Object.defineProperty(IB, vB, tT)) : IB[vB] !== BB && (IB[vB] = BB), ZB && (this.refCount[BB] = (this.refCount[BB] || 0) + 1), this.deletedRefs.has(BB) && this.deletedRefs.delete(BB)
       }
       removeRef(BB) {
-        const jB = this.refCount[BB];
-        if (void 0 !== jB)
-          if (0 !== jB)(this.refCount[BB] = jB - 1) <= 0 && this.deletedRefs.add(BB);
+        const IB = this.refCount[BB];
+        if (void 0 !== IB)
+          if (0 !== IB)(this.refCount[BB] = IB - 1) <= 0 && this.deletedRefs.add(BB);
           else try {
-            const jB = this.refs.get(BB);
-            throw new wQ(`trying to remove refId '${BB}' with 0 refCount (${jB.constructor.name}: ${JSON.stringify(jB)})`)
-          } catch (dn) {
-            console.warn(dn)
+            const IB = this.refs.get(BB);
+            throw new AT(`trying to remove refId '${BB}' with 0 refCount (${IB.constructor.name}: ${JSON.stringify(IB)})`)
+          } catch (oJ) {
+            console.warn(oJ)
           } else try {
-            throw new wQ("trying to remove refId that doesn't exist: " + BB)
-          } catch (dn) {
-            console.warn(dn)
+            throw new AT("trying to remove refId that doesn't exist: " + BB)
+          } catch (oJ) {
+            console.warn(oJ)
           }
       }
       clearRefs() {
@@ -6634,1154 +6634,1154 @@ export const modules = {
       garbageCollectDeletedRefs() {
         this.deletedRefs.forEach((BB => {
           if (this.refCount[BB] > 0) return;
-          const jB = this.refs.get(BB),
-            zB = jB.constructor[Symbol.metadata];
-          if (null != zB)
-            for (const QB in zB) {
-              const BB = jB[zB[QB].name];
+          const IB = this.refs.get(BB),
+            ZB = IB.constructor[Symbol.metadata];
+          if (null != ZB)
+            for (const TB in ZB) {
+              const BB = IB[ZB[TB].name];
               if ("object" === typeof BB && BB) {
-                const jB = BB[NB];
-                void 0 === jB || this.deletedRefs.has(jB) || this.removeRef(jB)
+                const IB = BB[vB];
+                void 0 === IB || this.deletedRefs.has(IB) || this.removeRef(IB)
               }
-            } else "function" === typeof jB[yB] && Array.from(jB.values()).forEach((BB => {
-              const jB = BB[NB];
-              void 0 === jB || this.deletedRefs.has(jB) || this.removeRef(jB)
+            } else "function" === typeof IB[qB] && Array.from(IB.values()).forEach((BB => {
+              const IB = BB[vB];
+              void 0 === IB || this.deletedRefs.has(IB) || this.removeRef(IB)
             }));
           this.refs.delete(BB), delete this.refCount[BB], delete this.callbacks[BB]
         })), this.deletedRefs.clear()
       }
-      addCallback(BB, jB, zB) {
+      addCallback(BB, IB, ZB) {
         if (void 0 === BB) {
-          const BB = "number" === typeof jB ? nB[jB] : jB;
+          const BB = "number" === typeof IB ? JB[IB] : IB;
           throw new Error(`Can't addCallback on '${BB}' (refId is undefined)`)
         }
-        return this.callbacks[BB] || (this.callbacks[BB] = {}), this.callbacks[BB][jB] || (this.callbacks[BB][jB] = []), this.callbacks[BB][jB].push(zB), () => this.removeCallback(BB, jB, zB)
+        return this.callbacks[BB] || (this.callbacks[BB] = {}), this.callbacks[BB][IB] || (this.callbacks[BB][IB] = []), this.callbacks[BB][IB].push(ZB), () => this.removeCallback(BB, IB, ZB)
       }
-      removeCallback(BB, jB, zB) {
-        const QB = this.callbacks?.[BB]?.[jB]?.indexOf(zB);
-        void 0 !== QB && -1 !== QB && FQ(this.callbacks[BB][jB], QB)
+      removeCallback(BB, IB, ZB) {
+        const TB = this.callbacks?.[BB]?.[IB]?.indexOf(ZB);
+        void 0 !== TB && -1 !== TB && MT(this.callbacks[BB][IB], TB)
       }
     }
-    class CQ {
+    class xT {
       context;
       state;
       root;
       currentRefId = 0;
-      uF;
+      mH;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(BB, jB) {
-        this.setState(BB), this.context = jB || new Pj(BB.constructor)
+      constructor(BB, IB) {
+        this.setState(BB), this.context = IB || new eI(BB.constructor)
       }
       setState(BB) {
-        this.state = BB, this.root = new KQ, this.root.addRef(0, BB)
+        this.state = BB, this.root = new bT, this.root.addRef(0, BB)
       }
       decode(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const nB = void 0 !== this.uF ? [] : null,
-          dB = this.root,
-          IB = BB.byteLength;
-        let NB = zB.constructor[aB];
-        for (this.currentRefId = 0; jB.offset < IB;) {
-          if (BB[jB.offset] == QB) {
-            jB.offset++, zB[gB]?.();
-            const QB = Lj.number(BB, jB),
-              nB = dB.refs.get(QB);
-            nB ? (zB = nB, NB = zB.constructor[aB], this.currentRefId = QB) : (console.error(`"refId" not found: ${QB}`, {
-              previousRef: zB,
+          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const JB = void 0 !== this.mH ? [] : null,
+          oB = this.root,
+          GB = BB.byteLength;
+        let vB = ZB.constructor[nB];
+        for (this.currentRefId = 0; IB.offset < GB;) {
+          if (BB[IB.offset] == TB) {
+            IB.offset++, ZB[dB]?.();
+            const TB = WI.number(BB, IB),
+              JB = oB.refs.get(TB);
+            JB ? (ZB = JB, vB = ZB.constructor[nB], this.currentRefId = TB) : (console.error(`"refId" not found: ${TB}`, {
+              previousRef: ZB,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(BB, jB, IB));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(BB, IB, GB));
             continue
-          } - 1 !== NB(this, BB, jB, zB, nB) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(BB, jB, IB))
+          } - 1 !== vB(this, BB, IB, ZB, JB) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(BB, IB, GB))
         }
-        return zB[gB]?.(), null !== this.resyncVisited && function(BB, jB) {
-          BB.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Pz(BB, BB.state, new Set, jB)
-        }(this, nB), null !== nB && this.uF?.(nB), dB.garbageCollectDeletedRefs(), nB
+        return ZB[dB]?.(), null !== this.resyncVisited && function(BB, IB) {
+          BB.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : eZ(BB, BB.state, new Set, IB)
+        }(this, JB), null !== JB && this.mH?.(JB), oB.garbageCollectDeletedRefs(), JB
       }
       decodeResync(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(BB, jB)
+          return this.decode(BB, IB)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(BB, jB, zB) {
+      skipCurrentStructure(BB, IB, ZB) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const nB = {
-          offset: jB.offset
+        const JB = {
+          offset: IB.offset
         };
-        for (; jB.offset < zB && (BB[jB.offset] !== QB || (nB.offset = jB.offset + 1, !this.root.refs.has(Lj.number(BB, nB))));) jB.offset++
+        for (; IB.offset < ZB && (BB[IB.offset] !== TB || (JB.offset = IB.offset + 1, !this.root.refs.has(WI.number(BB, JB))));) IB.offset++
       }
-      getInstanceType(BB, jB, zB) {
-        let QB;
-        if (213 === BB[jB.offset]) {
-          jB.offset++;
-          const zB = Lj.number(BB, jB);
-          QB = this.context.get(zB)
+      getInstanceType(BB, IB, ZB) {
+        let TB;
+        if (213 === BB[IB.offset]) {
+          IB.offset++;
+          const ZB = WI.number(BB, IB);
+          TB = this.context.get(ZB)
         }
-        return QB || zB
+        return TB || ZB
       }
       createInstanceOfType(BB) {
         return BB.initializeForDecoder()
       }
-      removeChildRefs(BB, jB) {
-        const zB = "string" !== typeof BB[yB],
-          QB = BB[NB];
-        BB.forEach(((dB, IB) => {
-          jB?.push({
+      removeChildRefs(BB, IB) {
+        const ZB = "string" !== typeof BB[qB],
+          TB = BB[vB];
+        BB.forEach(((oB, GB) => {
+          IB?.push({
             ref: BB,
-            refId: QB,
-            op: nB.DELETE,
-            field: IB,
+            refId: TB,
+            op: JB.DELETE,
+            field: GB,
             value: void 0,
-            previousValue: dB
-          }), zB && this.root.removeRef(dB[NB])
+            previousValue: oB
+          }), ZB && this.root.removeRef(oB[vB])
         }))
       }
     }
-    const cQ = qQ({
-        min: sQ.float64(),
-        max: sQ.float64(),
-        bits: sQ.uint8(),
-        mode: sQ.uint8()
+    const ET = YT({
+        min: FT.float64(),
+        max: FT.float64(),
+        bits: FT.uint8(),
+        mode: FT.uint8()
       }, "QuantizedDescriptor"),
-      bQ = qQ({
-        name: sQ.string(),
-        type: sQ.string(),
-        referencedType: sQ.number(),
-        childPrimitive: sQ.string(),
-        quantized: sQ.ref(cQ).optional()
+      DT = YT({
+        name: FT.string(),
+        type: FT.string(),
+        referencedType: FT.number(),
+        childPrimitive: FT.string(),
+        quantized: FT.ref(ET).optional()
       }, "ReflectionField"),
-      vQ = qQ({
-        id: sQ.number(),
-        extendsId: sQ.number(),
-        fields: sQ.array(bQ)
+      KT = YT({
+        id: FT.number(),
+        extendsId: FT.number(),
+        fields: FT.array(DT)
       }, "ReflectionType"),
-      RQ = qQ({
-        types: sQ.array(vQ),
-        rootType: sQ.number()
+      VT = YT({
+        types: FT.array(KT),
+        rootType: FT.number()
       }, "Reflection");
 
-    function OQ(BB) {
-      const jB = BB.root,
-        zB = jB.callbacks,
-        QB = new WeakMap;
-      let dB;
+    function ST(BB) {
+      const IB = BB.root,
+        ZB = IB.callbacks,
+        TB = new WeakMap;
+      let oB;
 
-      function IB(BB, zB) {
-        let UB = zB.instance?.constructor[Symbol.metadata] || BB,
-          aB = zB.instance && "function" === typeof zB.instance.forEach || BB && !oQ.is(BB);
-        if (UB && !aB) {
-          const BB = function(BB, nB, IB, uB) {
-            return uB && void 0 !== zB.instance[nB] && !QB.has(dB) && IB(zB.instance[nB], void 0), jB.addCallback(BB[NB], nB, IB)
+      function GB(BB, ZB) {
+        let cB = ZB.instance?.constructor[Symbol.metadata] || BB,
+          nB = ZB.instance && "function" === typeof ZB.instance.forEach || BB && !pT.is(BB);
+        if (cB && !nB) {
+          const BB = function(BB, JB, GB, kB) {
+            return kB && void 0 !== ZB.instance[JB] && !TB.has(oB) && GB(ZB.instance[JB], void 0), IB.addCallback(BB[vB], JB, GB)
           };
           return new Proxy({
-            listen: function(jB, nB) {
-              let IB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (zB.instance) return BB(zB.instance, jB, nB, IB);
+            listen: function(IB, JB) {
+              let GB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (ZB.instance) return BB(ZB.instance, IB, JB, GB);
               {
-                let NB = () => {};
-                return zB.onInstanceAvailable(((zB, uB) => {
-                  NB = BB(zB, jB, nB, IB && uB && !QB.has(dB))
-                })), () => NB()
+                let vB = () => {};
+                return ZB.onInstanceAvailable(((ZB, kB) => {
+                  vB = BB(ZB, IB, JB, GB && kB && !TB.has(oB))
+                })), () => vB()
               }
             },
             onChange: function(BB) {
-              return jB.addCallback(zB.instance[NB], nB.REPLACE, BB)
+              return IB.addCallback(ZB.instance[vB], JB.REPLACE, BB)
             },
-            bindTo: function(BB, QB) {
-              return QB || (QB = Object.keys(UB).map((BB => UB[BB].name))), jB.addCallback(zB.instance[NB], nB.REPLACE, (() => {
-                QB.forEach((jB => BB[jB] = zB.instance[jB]))
+            bindTo: function(BB, TB) {
+              return TB || (TB = Object.keys(cB).map((BB => cB[BB].name))), IB.addCallback(ZB.instance[vB], JB.REPLACE, (() => {
+                TB.forEach((IB => BB[IB] = ZB.instance[IB]))
               }))
             }
           }, {
-            get(BB, jB) {
-              const QB = UB[UB[jB]];
-              if (QB) {
-                const BB = zB.instance?.[jB],
-                  nB = QB => {
-                    const nB = uB(zB.instance).listen(jB, ((BB, jB) => {
-                      QB(BB, !1), nB?.()
+            get(BB, IB) {
+              const TB = cB[cB[IB]];
+              if (TB) {
+                const BB = ZB.instance?.[IB],
+                  JB = TB => {
+                    const JB = kB(ZB.instance).listen(IB, ((BB, IB) => {
+                      TB(BB, !1), JB?.()
                     }), !1);
-                    void 0 !== BB?.[NB] && QB(BB, !0)
+                    void 0 !== BB?.[vB] && TB(BB, !0)
                   };
-                return IB(QB.type, {
-                  instance: void 0 !== BB?.[NB] && BB,
-                  parentInstance: zB.instance,
-                  onInstanceAvailable: nB
+                return GB(TB.type, {
+                  instance: void 0 !== BB?.[vB] && BB,
+                  parentInstance: ZB.instance,
+                  onInstanceAvailable: JB
                 })
               }
-              return BB[jB]
+              return BB[IB]
             },
-            has: (BB, jB) => void 0 !== UB[jB],
-            set(BB, jB, zB) {
+            has: (BB, IB) => void 0 !== cB[IB],
+            set(BB, IB, ZB) {
               throw new Error("not allowed")
             },
-            deleteProperty(BB, jB) {
+            deleteProperty(BB, IB) {
               throw new Error("not allowed")
             }
           })
         } {
-          const BB = function(BB, zB, IB) {
-              return IB && BB.forEach(((BB, jB) => zB(BB, jB))), jB.addCallback(BB[NB], nB.ADD, ((BB, jB) => {
-                QB.set(zB, !0), dB = zB, zB(BB, jB), QB.delete(zB), dB = void 0
+          const BB = function(BB, ZB, GB) {
+              return GB && BB.forEach(((BB, IB) => ZB(BB, IB))), IB.addCallback(BB[vB], JB.ADD, ((BB, IB) => {
+                TB.set(ZB, !0), oB = ZB, ZB(BB, IB), TB.delete(ZB), oB = void 0
               }))
             },
-            IB = function(BB, zB) {
-              return jB.addCallback(BB[NB], nB.DELETE, zB)
+            GB = function(BB, ZB) {
+              return IB.addCallback(BB[vB], JB.DELETE, ZB)
             },
-            uB = function(BB, zB) {
-              return jB.addCallback(BB[NB], nB.REPLACE, zB)
+            kB = function(BB, ZB) {
+              return IB.addCallback(BB[vB], JB.REPLACE, ZB)
             };
           return new Proxy({
-            xG: function(jB) {
-              let nB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (zB.instance) return BB(zB.instance, jB, nB && !QB.has(dB));
-              if (zB.onInstanceAvailable) {
+            cW: function(IB) {
+              let JB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (ZB.instance) return BB(ZB.instance, IB, JB && !TB.has(oB));
+              if (ZB.onInstanceAvailable) {
+                let GB = () => {};
+                return ZB.onInstanceAvailable(((ZB, vB) => {
+                  GB = BB(ZB, IB, JB && vB && !TB.has(oB))
+                })), () => GB()
+              }
+            },
+            nH: function(BB) {
+              if (ZB.instance) return GB(ZB.instance, BB);
+              if (ZB.onInstanceAvailable) {
                 let IB = () => {};
-                return zB.onInstanceAvailable(((zB, NB) => {
-                  IB = BB(zB, jB, nB && NB && !QB.has(dB))
+                return ZB.onInstanceAvailable((ZB => {
+                  IB = GB(ZB, BB)
                 })), () => IB()
               }
             },
-            ZD: function(BB) {
-              if (zB.instance) return IB(zB.instance, BB);
-              if (zB.onInstanceAvailable) {
-                let jB = () => {};
-                return zB.onInstanceAvailable((zB => {
-                  jB = IB(zB, BB)
-                })), () => jB()
-              }
-            },
             onChange: function(BB) {
-              if (zB.instance) return uB(zB.instance, BB);
-              if (zB.onInstanceAvailable) {
-                let jB = () => {};
-                return zB.onInstanceAvailable((zB => {
-                  jB = uB(zB, BB)
-                })), () => jB()
+              if (ZB.instance) return kB(ZB.instance, BB);
+              if (ZB.onInstanceAvailable) {
+                let IB = () => {};
+                return ZB.onInstanceAvailable((ZB => {
+                  IB = kB(ZB, BB)
+                })), () => IB()
               }
             }
           }, {
-            get(BB, jB) {
-              if (!BB[jB]) throw new Error(`Can't access '${jB}' through callback proxy. access the instance directly.`);
-              return BB[jB]
+            get(BB, IB) {
+              if (!BB[IB]) throw new Error(`Can't access '${IB}' through callback proxy. access the instance directly.`);
+              return BB[IB]
             },
-            has: (BB, jB) => void 0 !== BB[jB],
-            set(BB, jB, zB) {
+            has: (BB, IB) => void 0 !== BB[IB],
+            set(BB, IB, ZB) {
               throw new Error("not allowed")
             },
-            deleteProperty(BB, jB) {
+            deleteProperty(BB, IB) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function uB(BB) {
-        return IB(void 0, {
+      function kB(BB) {
+        return GB(void 0, {
           instance: BB
         })
       }
-      return BB.uF = function(BB) {
-        const jB = new Set;
-        for (let QB = 0, dB = BB.length; QB < dB; QB++) {
-          const dB = BB[QB],
-            IB = dB.refId,
-            uB = dB.ref,
-            UB = zB[IB];
-          if (UB) {
-            if ((dB.op & nB.DELETE) === nB.DELETE && oQ.isSchema(dB.previousValue)) {
-              const BB = zB[dB.previousValue[NB]]?.[nB.DELETE];
-              for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB]()
+      return BB.mH = function(BB) {
+        const IB = new Set;
+        for (let TB = 0, oB = BB.length; TB < oB; TB++) {
+          const oB = BB[TB],
+            GB = oB.refId,
+            kB = oB.ref,
+            cB = ZB[GB];
+          if (cB) {
+            if ((oB.op & JB.DELETE) === JB.DELETE && pT.isSchema(oB.previousValue)) {
+              const BB = ZB[oB.previousValue[vB]]?.[JB.DELETE];
+              for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB]()
             }
-            if (oQ.isSchema(uB)) {
-              if (!jB.has(IB)) {
-                const BB = UB?.[nB.REPLACE];
-                for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB]()
+            if (pT.isSchema(kB)) {
+              if (!IB.has(GB)) {
+                const BB = cB?.[JB.REPLACE];
+                for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB]()
               }
-              if (UB.hasOwnProperty(dB.field)) {
-                const BB = UB[dB.field];
-                for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB](dB.value, dB.previousValue)
+              if (cB.hasOwnProperty(oB.field)) {
+                const BB = cB[oB.field];
+                for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB](oB.value, oB.previousValue)
               }
             } else {
-              if ((dB.op & nB.DELETE) === nB.DELETE) {
-                if (void 0 !== dB.previousValue) {
-                  const BB = UB[nB.DELETE];
-                  for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB](dB.previousValue, dB.dynamicIndex ?? dB.field)
+              if ((oB.op & JB.DELETE) === JB.DELETE) {
+                if (void 0 !== oB.previousValue) {
+                  const BB = cB[JB.DELETE];
+                  for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB](oB.previousValue, oB.dynamicIndex ?? oB.field)
                 }
-                if ((dB.op & nB.ADD) === nB.ADD) {
-                  const BB = UB[nB.ADD];
-                  for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB](dB.value, dB.dynamicIndex ?? dB.field)
+                if ((oB.op & JB.ADD) === JB.ADD) {
+                  const BB = cB[JB.ADD];
+                  for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB](oB.value, oB.dynamicIndex ?? oB.field)
                 }
-              } else if ((dB.op & nB.ADD) === nB.ADD && dB.previousValue !== dB.value) {
-                const BB = UB[nB.ADD];
-                for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB](dB.value, dB.dynamicIndex ?? dB.field)
+              } else if ((oB.op & JB.ADD) === JB.ADD && oB.previousValue !== oB.value) {
+                const BB = cB[JB.ADD];
+                for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB](oB.value, oB.dynamicIndex ?? oB.field)
               }
-              if (dB.value !== dB.previousValue && (void 0 !== dB.value || void 0 !== dB.previousValue)) {
-                const BB = UB[nB.REPLACE];
-                for (let jB = BB?.length - 1; jB >= 0; jB--) BB[jB](dB.value, dB.dynamicIndex ?? dB.field)
+              if (oB.value !== oB.previousValue && (void 0 !== oB.value || void 0 !== oB.previousValue)) {
+                const BB = cB[JB.REPLACE];
+                for (let IB = BB?.length - 1; IB >= 0; IB--) BB[IB](oB.value, oB.dynamicIndex ?? oB.field)
               }
             }
-            jB.add(IB)
+            IB.add(GB)
           }
         }
-      }, uB
+      }, kB
     }
 
-    function Bn(BB, jB) {
-      BB.uF = jB
+    function BJ(BB, IB) {
+      BB.mH = IB
     }
-    RQ.encode = function(BB) {
-      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    VT.encode = function(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const zB = BB.context,
-        QB = new RQ,
-        nB = new lQ(QB),
-        dB = zB.schemas.get(BB.state.constructor);
-      dB > 0 && (QB.rootType = dB);
-      const IB = new Set,
-        NB = {},
-        uB = BB => {
-          if (void 0 === BB.extendsId || IB.has(BB.extendsId)) {
-            IB.add(BB.id), QB.types.push(BB);
-            const jB = NB[BB.id];
-            void 0 !== jB && (delete NB[BB.id], jB.forEach((BB => uB(BB))))
-          } else void 0 === NB[BB.extendsId] && (NB[BB.extendsId] = []), NB[BB.extendsId].push(BB)
+      const ZB = BB.context,
+        TB = new VT,
+        JB = new lT(TB),
+        oB = ZB.schemas.get(BB.state.constructor);
+      oB > 0 && (TB.rootType = oB);
+      const GB = new Set,
+        vB = {},
+        kB = BB => {
+          if (void 0 === BB.extendsId || GB.has(BB.extendsId)) {
+            GB.add(BB.id), TB.types.push(BB);
+            const IB = vB[BB.id];
+            void 0 !== IB && (delete vB[BB.id], IB.forEach((BB => kB(BB))))
+          } else void 0 === vB[BB.extendsId] && (vB[BB.extendsId] = []), vB[BB.extendsId].push(BB)
         };
-      zB.schemas.forEach(((BB, jB) => {
-        const QB = new vQ;
-        QB.id = Number(BB);
-        const nB = Object.getPrototypeOf(jB);
-        nB !== oQ && (QB.extendsId = zB.schemas.get(nB));
-        const dB = jB[Symbol.metadata];
-        if (dB !== nB[Symbol.metadata]) {
-          const BB = dB[qB] ?? -1;
-          for (let jB = 0; jB <= BB; jB++) {
-            const BB = dB[jB];
+      ZB.schemas.forEach(((BB, IB) => {
+        const TB = new KT;
+        TB.id = Number(BB);
+        const JB = Object.getPrototypeOf(IB);
+        JB !== pT && (TB.extendsId = ZB.schemas.get(JB));
+        const oB = IB[Symbol.metadata];
+        if (oB !== JB[Symbol.metadata]) {
+          const BB = oB[YB] ?? -1;
+          for (let IB = 0; IB <= BB; IB++) {
+            const BB = oB[IB];
             if (void 0 === BB) continue;
-            const nB = BB.name;
-            if (!Object.prototype.hasOwnProperty.call(dB, nB)) continue;
-            const IB = new bQ;
-            let NB;
-            if (IB.name = nB, "string" === typeof BB.type) NB = BB.type;
-            else if (Xj(BB.type)) {
-              const jB = BB.type.quantized;
-              NB = "quantized";
-              const zB = new cQ;
-              zB.min = jB.min, zB.max = jB.max, zB.bits = jB.bits, zB.mode = jB.wrap ? 1 : 0, IB.quantized = zB
+            const JB = BB.name;
+            if (!Object.prototype.hasOwnProperty.call(oB, JB)) continue;
+            const GB = new DT;
+            let vB;
+            if (GB.name = JB, "string" === typeof BB.type) vB = BB.type;
+            else if (rI(BB.type)) {
+              const IB = BB.type.quantized;
+              vB = "quantized";
+              const ZB = new ET;
+              ZB.min = IB.min, ZB.max = IB.max, ZB.bits = IB.bits, ZB.mode = IB.wrap ? 1 : 0, GB.quantized = ZB
             } else {
-              let jB;
-              oQ.is(BB.type) ? (NB = "ref", jB = BB.type) : (NB = Object.keys(BB.type)[0], "string" === typeof BB.type[NB] ? IB.childPrimitive = BB.type[NB] : jB = BB.type[NB]), IB.referencedType = jB ? zB.getTypeId(jB) : -1
+              let IB;
+              pT.is(BB.type) ? (vB = "ref", IB = BB.type) : (vB = Object.keys(BB.type)[0], "string" === typeof BB.type[vB] ? GB.childPrimitive = BB.type[vB] : IB = BB.type[vB]), GB.referencedType = IB ? ZB.getTypeId(IB) : -1
             }
-            IB.type = NB, QB.fields.push(IB)
+            GB.type = vB, TB.fields.push(GB)
           }
         }
-        uB(QB)
+        kB(TB)
       }));
-      for (const UB in NB) NB[UB].forEach((BB => QB.types.push(BB)));
-      return nB.encodeAll(jB).slice(0, jB.offset)
-    }, RQ.decode = function(BB, jB) {
-      const zB = new RQ;
-      new CQ(zB).decode(BB, jB);
-      const QB = new Pj;
-      zB.types.forEach((BB => {
-        const jB = QB.get(BB.extendsId) ?? oQ,
-          zB = class extends jB {};
-        Pj.register(zB), QB.add(zB, BB.id)
+      for (const cB in vB) vB[cB].forEach((BB => TB.types.push(BB)));
+      return JB.encodeAll(IB).slice(0, IB.offset)
+    }, VT.decode = function(BB, IB) {
+      const ZB = new VT;
+      new xT(ZB).decode(BB, IB);
+      const TB = new eI;
+      ZB.types.forEach((BB => {
+        const IB = TB.get(BB.extendsId) ?? pT,
+          ZB = class extends IB {};
+        eI.register(ZB), TB.add(ZB, BB.id)
       }), {});
-      zB.types.forEach((BB => {
-        const jB = QB.get(BB.id),
-          nB = Cj.initialize(jB),
-          dB = [];
-        let IB = BB;
+      ZB.types.forEach((BB => {
+        const IB = TB.get(BB.id),
+          JB = xI.initialize(IB),
+          oB = [];
+        let GB = BB;
         do {
-          dB.push(IB), IB = zB.types.find((BB => BB.id === IB.extendsId))
-        } while (IB);
-        let NB = 0;
-        dB.reverse().forEach((BB => {
-          ((BB, jB, zB) => {
-            jB.fields.forEach(((jB, nB) => {
-              const dB = zB + nB;
-              if (void 0 !== jB.quantized) {
-                const zB = jB.quantized;
-                Cj.addField(BB, dB, jB.name, {
-                  quantized: hj({
-                    min: zB.min,
-                    max: zB.max,
-                    bits: zB.bits,
-                    mode: 1 === zB.mode ? "wrap" : "clamp"
+          oB.push(GB), GB = ZB.types.find((BB => BB.id === GB.extendsId))
+        } while (GB);
+        let vB = 0;
+        oB.reverse().forEach((BB => {
+          ((BB, IB, ZB) => {
+            IB.fields.forEach(((IB, JB) => {
+              const oB = ZB + JB;
+              if (void 0 !== IB.quantized) {
+                const ZB = IB.quantized;
+                xI.addField(BB, oB, IB.name, {
+                  quantized: RI({
+                    min: ZB.min,
+                    max: ZB.max,
+                    bits: ZB.bits,
+                    mode: 1 === ZB.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== jB.referencedType) {
-                const zB = jB.type,
-                  nB = QB.get(jB.referencedType) ?? jB.childPrimitive;
-                "ref" === zB ? Cj.addField(BB, dB, jB.name, nB) : Cj.addField(BB, dB, jB.name, {
-                  [zB]: nB
+              } else if (void 0 !== IB.referencedType) {
+                const ZB = IB.type,
+                  JB = TB.get(IB.referencedType) ?? IB.childPrimitive;
+                "ref" === ZB ? xI.addField(BB, oB, IB.name, JB) : xI.addField(BB, oB, IB.name, {
+                  [ZB]: JB
                 })
-              } else Cj.addField(BB, dB, jB.name, jB.type)
+              } else xI.addField(BB, oB, IB.name, IB.type)
             }))
-          })(nB, BB, NB), NB += BB.fields.length
+          })(JB, BB, vB), vB += BB.fields.length
         }))
       }));
-      const nB = new(QB.get(zB.rootType || 0));
-      return new CQ(nB, QB)
-    }, RQ.makeEncodable = function(BB) {
-      const jB = BB[Symbol.metadata];
-      if (!jB) return BB;
-      const zB = jB[qB];
-      if (void 0 === zB) return BB;
-      for (let QB = 0; QB <= zB; QB++) {
-        const zB = jB[QB];
-        zB && Cj.defineField(BB, jB, QB, zB.name, zB.type)
+      const JB = new(TB.get(ZB.rootType || 0));
+      return new xT(JB, TB)
+    }, VT.makeEncodable = function(BB) {
+      const IB = BB[Symbol.metadata];
+      if (!IB) return BB;
+      const ZB = IB[YB];
+      if (void 0 === ZB) return BB;
+      for (let TB = 0; TB <= ZB; TB++) {
+        const ZB = IB[TB];
+        ZB && xI.defineField(BB, IB, TB, ZB.name, ZB.type)
       }
-      return Object.prototype.hasOwnProperty.call(BB, EB) && delete BB[EB], BB
+      return Object.prototype.hasOwnProperty.call(BB, wB) && delete BB[wB], BB
     };
-    class jn {
-      GJ;
+    class IJ {
+      kN;
       uniqueRefIds = new Set;
       isTriggering = !1;
       constructor(BB) {
-        this.GJ = BB, this.GJ.uF = this.uF.bind(this)
+        this.kN = BB, this.kN.mH = this.mH.bind(this)
       }
       get callbacks() {
-        return this.GJ.root.callbacks
+        return this.kN.root.callbacks
       }
       get state() {
-        return this.GJ.state
+        return this.kN.state
       }
-      addCallback(BB, jB, zB) {
-        return this.GJ.root.addCallback(BB, jB, zB)
+      addCallback(BB, IB, ZB) {
+        return this.kN.root.addCallback(BB, IB, ZB)
       }
-      addCallbackOrWaitCollectionAvailable(BB, jB, zB, QB) {
-        let dB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          IB = () => {};
-        const uB = () => IB(),
-          UB = BB[jB];
-        if (UB && void 0 !== UB[NB]) return dB = dB && !1 === this.isTriggering, zB === nB.ADD && dB && UB.forEach(((BB, jB) => {
-          QB(BB, jB)
-        })), this.addCallback(UB[NB], zB, QB);
+      addCallbackOrWaitCollectionAvailable(BB, IB, ZB, TB) {
+        let oB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          GB = () => {};
+        const kB = () => GB(),
+          cB = BB[IB];
+        if (cB && void 0 !== cB[vB]) return oB = oB && !1 === this.isTriggering, ZB === JB.ADD && oB && cB.forEach(((BB, IB) => {
+          TB(BB, IB)
+        })), this.addCallback(cB[vB], ZB, TB);
         {
-          let nB;
-          return nB = this.addCallback(BB[NB], jB, ((BB, jB) => {
-            null !== BB && void 0 !== BB && (nB(), IB = this.addCallback(BB[NB], zB, QB))
-          })), IB = nB, uB
+          let JB;
+          return JB = this.addCallback(BB[vB], IB, ((BB, IB) => {
+            null !== BB && void 0 !== BB && (JB(), GB = this.addCallback(BB[vB], ZB, TB))
+          })), GB = JB, kB
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(BB, jB, zB) {
-        let QB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        QB = QB && !1 === this.isTriggering;
-        const nB = BB[jB];
-        return QB && null !== nB && void 0 !== nB && zB(nB, void 0), this.addCallback(BB[NB], jB, zB)
+      listenInstance(BB, IB, ZB) {
+        let TB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        TB = TB && !1 === this.isTriggering;
+        const JB = BB[IB];
+        return TB && null !== JB && void 0 !== JB && ZB(JB, void 0), this.addCallback(BB[vB], IB, ZB)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
           const BB = arguments.length <= 0 ? void 0 : arguments[0],
-            jB = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(BB[NB], nB.REPLACE, jB)
+            IB = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(BB[vB], JB.REPLACE, IB)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], nB.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], nB.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], JB.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], JB.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      xG() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], nB.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], nB.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      cW() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], JB.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], JB.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      ZD() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], nB.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], nB.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      nH() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], JB.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], JB.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(BB, jB, zB) {
-        let QB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const dB = BB.constructor[Symbol.metadata];
-        zB || (zB = Object.keys(dB).filter((BB => !isNaN(Number(BB)))).map((BB => dB[BB].name)));
-        const IB = () => {
-          for (const QB of zB) {
-            const zB = BB[QB];
-            void 0 !== zB && (jB[QB] = zB)
+      bindTo(BB, IB, ZB) {
+        let TB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const oB = BB.constructor[Symbol.metadata];
+        ZB || (ZB = Object.keys(oB).filter((BB => !isNaN(Number(BB)))).map((BB => oB[BB].name)));
+        const GB = () => {
+          for (const TB of ZB) {
+            const ZB = BB[TB];
+            void 0 !== ZB && (IB[TB] = ZB)
           }
         };
-        return QB && IB(), this.addCallback(BB[NB], nB.REPLACE, IB)
+        return TB && GB(), this.addCallback(BB[vB], JB.REPLACE, GB)
       }
-      uF(BB) {
+      mH(BB) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let jB = 0, zB = BB.length; jB < zB; jB++) {
-          const zB = BB[jB],
-            QB = zB.refId,
-            dB = zB.ref,
-            IB = this.callbacks[QB];
-          if (IB) {
-            if ((zB.op & nB.DELETE) === nB.DELETE && oQ.isSchema(zB.previousValue)) {
-              const BB = zB.previousValue[NB],
-                jB = this.callbacks[BB]?.[nB.DELETE];
-              if (jB)
-                for (let zB = jB.length - 1; zB >= 0; zB--) try {
-                  jB[zB]()
-                } catch (dn) {
-                  console.error(dn)
+        for (let IB = 0, ZB = BB.length; IB < ZB; IB++) {
+          const ZB = BB[IB],
+            TB = ZB.refId,
+            oB = ZB.ref,
+            GB = this.callbacks[TB];
+          if (GB) {
+            if ((ZB.op & JB.DELETE) === JB.DELETE && pT.isSchema(ZB.previousValue)) {
+              const BB = ZB.previousValue[vB],
+                IB = this.callbacks[BB]?.[JB.DELETE];
+              if (IB)
+                for (let ZB = IB.length - 1; ZB >= 0; ZB--) try {
+                  IB[ZB]()
+                } catch (oJ) {
+                  console.error(oJ)
                 }
             }
-            if (oQ.isSchema(dB)) {
-              if (!this.uniqueRefIds.has(QB)) {
-                const BB = IB[nB.REPLACE];
+            if (pT.isSchema(oB)) {
+              if (!this.uniqueRefIds.has(TB)) {
+                const BB = GB[JB.REPLACE];
                 if (BB)
-                  for (let jB = BB.length - 1; jB >= 0; jB--) try {
-                    BB[jB]()
-                  } catch (dn) {
-                    console.error(dn)
+                  for (let IB = BB.length - 1; IB >= 0; IB--) try {
+                    BB[IB]()
+                  } catch (oJ) {
+                    console.error(oJ)
                   }
               }
-              const BB = IB[zB.field];
+              const BB = GB[ZB.field];
               if (BB)
-                for (let jB = BB.length - 1; jB >= 0; jB--) try {
-                  BB[jB](zB.value, zB.previousValue)
-                } catch (dn) {
-                  console.error(dn)
+                for (let IB = BB.length - 1; IB >= 0; IB--) try {
+                  BB[IB](ZB.value, ZB.previousValue)
+                } catch (oJ) {
+                  console.error(oJ)
                 }
             } else {
-              const BB = zB.dynamicIndex ?? zB.field;
-              if ((zB.op & nB.DELETE) === nB.DELETE) {
-                if (void 0 !== zB.previousValue) {
-                  const jB = IB[nB.DELETE];
-                  if (jB)
-                    for (let QB = jB.length - 1; QB >= 0; QB--) try {
-                      jB[QB](zB.previousValue, BB)
-                    } catch (dn) {
-                      console.error(dn)
+              const BB = ZB.dynamicIndex ?? ZB.field;
+              if ((ZB.op & JB.DELETE) === JB.DELETE) {
+                if (void 0 !== ZB.previousValue) {
+                  const IB = GB[JB.DELETE];
+                  if (IB)
+                    for (let TB = IB.length - 1; TB >= 0; TB--) try {
+                      IB[TB](ZB.previousValue, BB)
+                    } catch (oJ) {
+                      console.error(oJ)
                     }
                 }
-                if ((zB.op & nB.ADD) === nB.ADD) {
-                  const jB = IB[nB.ADD];
-                  if (jB)
-                    for (let QB = jB.length - 1; QB >= 0; QB--) try {
-                      jB[QB](zB.value, BB)
-                    } catch (dn) {
-                      console.error(dn)
+                if ((ZB.op & JB.ADD) === JB.ADD) {
+                  const IB = GB[JB.ADD];
+                  if (IB)
+                    for (let TB = IB.length - 1; TB >= 0; TB--) try {
+                      IB[TB](ZB.value, BB)
+                    } catch (oJ) {
+                      console.error(oJ)
                     }
                 }
-              } else if ((zB.op & nB.ADD) === nB.ADD && zB.previousValue !== zB.value) {
-                const jB = IB[nB.ADD];
-                if (jB)
-                  for (let QB = jB.length - 1; QB >= 0; QB--) try {
-                    jB[QB](zB.value, BB)
-                  } catch (dn) {
-                    console.error(dn)
+              } else if ((ZB.op & JB.ADD) === JB.ADD && ZB.previousValue !== ZB.value) {
+                const IB = GB[JB.ADD];
+                if (IB)
+                  for (let TB = IB.length - 1; TB >= 0; TB--) try {
+                    IB[TB](ZB.value, BB)
+                  } catch (oJ) {
+                    console.error(oJ)
                   }
               }
-              if (zB.value !== zB.previousValue) {
-                const jB = IB[nB.REPLACE];
-                if (jB)
-                  for (let QB = jB.length - 1; QB >= 0; QB--) try {
-                    jB[QB](BB, zB.value)
-                  } catch (dn) {
-                    console.error(dn)
+              if (ZB.value !== ZB.previousValue) {
+                const IB = GB[JB.REPLACE];
+                if (IB)
+                  for (let TB = IB.length - 1; TB >= 0; TB--) try {
+                    IB[TB](BB, ZB.value)
+                  } catch (oJ) {
+                    console.error(oJ)
                   }
               }
             }
-            this.uniqueRefIds.add(QB)
+            this.uniqueRefIds.add(TB)
           }
         }
         this.isTriggering = !1
       }
     }
-    const zn = {
+    const ZJ = {
       get(BB) {
-        if (BB instanceof CQ) return new jn(BB);
-        if ("GJ" in BB.Rk) return new jn(BB.Rk.GJ);
+        if (BB instanceof xT) return new IJ(BB);
+        if ("kN" in BB.Py) return new IJ(BB.Py.kN);
         throw new Error("Invalid room or decoder")
       },
       getLegacy(BB) {
-        if (BB instanceof CQ) return OQ(BB);
-        if ("GJ" in BB.Rk) return OQ(BB.Rk.GJ);
+        if (BB instanceof xT) return ST(BB);
+        if ("kN" in BB.Py) return ST(BB.Py.kN);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (BB, jB) => Bn(BB, jB)
+      getRawChanges: (BB, IB) => BJ(BB, IB)
     };
-    class Qn {
+    class TJ {
       _free = [];
       _factory;
       _maxSize;
       constructor(BB) {
-        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = BB, this._maxSize = jB.maxSize ?? 1 / 0;
-        const zB = jB.preallocate ?? 0;
-        for (let QB = 0; QB < zB; QB++) this._free.push(BB())
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = BB, this._maxSize = IB.maxSize ?? 1 / 0;
+        const ZB = IB.preallocate ?? 0;
+        for (let TB = 0; TB < ZB; TB++) this._free.push(BB())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
       release(BB) {
-        oQ.reset(BB), this._free.length < this._maxSize && this._free.push(BB)
+        pT.reset(BB), this._free.length < this._maxSize && this._free.push(BB)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function nn(BB) {
-      return new Qn((() => new BB), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function JJ(BB) {
+      return new TJ((() => new BB), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    Sj("map", {
-      constructor: nQ
-    }), Sj("array", {
-      constructor: zQ
-    }), Sj("set", {
-      constructor: IQ
-    }), Sj("collection", {
-      constructor: dQ
+    QI("map", {
+      constructor: JT
+    }), QI("array", {
+      constructor: ZT
+    }), QI("set", {
+      constructor: GT
+    }), QI("collection", {
+      constructor: oT
     })
   },
-  9129: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      __addDisposableResource: () => XB,
-      __assign: () => dB,
-      __asyncDelegator: () => iB,
-      __asyncGenerator: () => EB,
-      __asyncValues: () => qB,
-      __await: () => MB,
-      __awaiter: () => JB,
-      __classPrivateFieldGet: () => YB,
-      __classPrivateFieldIn: () => hB,
-      __classPrivateFieldSet: () => VB,
-      __createBinding: () => yB,
-      __decorate: () => NB,
-      __disposeResources: () => AB,
-      __esDecorate: () => UB,
-      __exportStar: () => kB,
-      __extends: () => nB,
-      __generator: () => mB,
-      __importDefault: () => FB,
-      __importStar: () => DB,
-      __makeTemplateObject: () => fB,
-      __metadata: () => sB,
-      __param: () => uB,
-      __propKey: () => pB,
-      __read: () => LB,
-      __rest: () => IB,
-      __rewriteRelativeImportExtension: () => TB,
-      __runInitializers: () => aB,
-      __setFunctionName: () => rB,
-      __spread: () => gB,
-      __spreadArray: () => SB,
-      __spreadArrays: () => tB,
-      __values: () => GB,
-      default: () => PB
+  9167: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      __addDisposableResource: () => rB,
+      __assign: () => oB,
+      __asyncDelegator: () => OB,
+      __asyncGenerator: () => wB,
+      __asyncValues: () => YB,
+      __await: () => sB,
+      __awaiter: () => NB,
+      __classPrivateFieldGet: () => jB,
+      __classPrivateFieldIn: () => RB,
+      __classPrivateFieldSet: () => PB,
+      __createBinding: () => qB,
+      __decorate: () => vB,
+      __disposeResources: () => XB,
+      __esDecorate: () => cB,
+      __exportStar: () => yB,
+      __extends: () => JB,
+      __generator: () => gB,
+      __importDefault: () => MB,
+      __importStar: () => HB,
+      __makeTemplateObject: () => iB,
+      __metadata: () => FB,
+      __param: () => kB,
+      __propKey: () => hB,
+      __read: () => WB,
+      __rest: () => GB,
+      __rewriteRelativeImportExtension: () => LB,
+      __runInitializers: () => nB,
+      __setFunctionName: () => zB,
+      __spread: () => dB,
+      __spreadArray: () => QB,
+      __spreadArrays: () => CB,
+      __values: () => UB,
+      default: () => eB
     });
-    var QB = function(BB, jB) {
-      return QB = Object.setPrototypeOf || {
+    var TB = function(BB, IB) {
+      return TB = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(BB, jB) {
-        BB.__proto__ = jB
-      } || function(BB, jB) {
-        for (var zB in jB) Object.prototype.hasOwnProperty.call(jB, zB) && (BB[zB] = jB[zB])
-      }, QB(BB, jB)
+      instanceof Array && function(BB, IB) {
+        BB.__proto__ = IB
+      } || function(BB, IB) {
+        for (var ZB in IB) Object.prototype.hasOwnProperty.call(IB, ZB) && (BB[ZB] = IB[ZB])
+      }, TB(BB, IB)
     };
 
-    function nB(BB, jB) {
-      if ("function" !== typeof jB && null !== jB) throw new TypeError("Class extends value " + String(jB) + " is not a constructor or null");
+    function JB(BB, IB) {
+      if ("function" !== typeof IB && null !== IB) throw new TypeError("Class extends value " + String(IB) + " is not a constructor or null");
 
-      function zB() {
+      function ZB() {
         this.constructor = BB
       }
-      QB(BB, jB), BB.prototype = null === jB ? Object.create(jB) : (zB.prototype = jB.prototype, new zB)
+      TB(BB, IB), BB.prototype = null === IB ? Object.create(IB) : (ZB.prototype = IB.prototype, new ZB)
     }
-    var dB = function() {
-      return dB = Object.assign || function(BB) {
-        for (var jB, zB = 1, QB = arguments.length; zB < QB; zB++)
-          for (var nB in jB = arguments[zB]) Object.prototype.hasOwnProperty.call(jB, nB) && (BB[nB] = jB[nB]);
+    var oB = function() {
+      return oB = Object.assign || function(BB) {
+        for (var IB, ZB = 1, TB = arguments.length; ZB < TB; ZB++)
+          for (var JB in IB = arguments[ZB]) Object.prototype.hasOwnProperty.call(IB, JB) && (BB[JB] = IB[JB]);
         return BB
-      }, dB.apply(this, arguments)
+      }, oB.apply(this, arguments)
     };
 
-    function IB(BB, jB) {
-      var zB = {};
-      for (var QB in BB) Object.prototype.hasOwnProperty.call(BB, QB) && jB.indexOf(QB) < 0 && (zB[QB] = BB[QB]);
+    function GB(BB, IB) {
+      var ZB = {};
+      for (var TB in BB) Object.prototype.hasOwnProperty.call(BB, TB) && IB.indexOf(TB) < 0 && (ZB[TB] = BB[TB]);
       if (null != BB && "function" === typeof Object.getOwnPropertySymbols) {
-        var nB = 0;
-        for (QB = Object.getOwnPropertySymbols(BB); nB < QB.length; nB++) jB.indexOf(QB[nB]) < 0 && Object.prototype.propertyIsEnumerable.call(BB, QB[nB]) && (zB[QB[nB]] = BB[QB[nB]])
+        var JB = 0;
+        for (TB = Object.getOwnPropertySymbols(BB); JB < TB.length; JB++) IB.indexOf(TB[JB]) < 0 && Object.prototype.propertyIsEnumerable.call(BB, TB[JB]) && (ZB[TB[JB]] = BB[TB[JB]])
       }
-      return zB
+      return ZB
     }
 
-    function NB(BB, jB, zB, QB) {
-      var nB, dB = arguments.length,
-        IB = dB < 3 ? jB : null === QB ? QB = Object.getOwnPropertyDescriptor(jB, zB) : QB;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) IB = Reflect.decorate(BB, jB, zB, QB);
+    function vB(BB, IB, ZB, TB) {
+      var JB, oB = arguments.length,
+        GB = oB < 3 ? IB : null === TB ? TB = Object.getOwnPropertyDescriptor(IB, ZB) : TB;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) GB = Reflect.decorate(BB, IB, ZB, TB);
       else
-        for (var NB = BB.length - 1; NB >= 0; NB--)(nB = BB[NB]) && (IB = (dB < 3 ? nB(IB) : dB > 3 ? nB(jB, zB, IB) : nB(jB, zB)) || IB);
-      return dB > 3 && IB && Object.defineProperty(jB, zB, IB), IB
+        for (var vB = BB.length - 1; vB >= 0; vB--)(JB = BB[vB]) && (GB = (oB < 3 ? JB(GB) : oB > 3 ? JB(IB, ZB, GB) : JB(IB, ZB)) || GB);
+      return oB > 3 && GB && Object.defineProperty(IB, ZB, GB), GB
     }
 
-    function uB(BB, jB) {
-      return function(zB, QB) {
-        jB(zB, QB, BB)
+    function kB(BB, IB) {
+      return function(ZB, TB) {
+        IB(ZB, TB, BB)
       }
     }
 
-    function UB(BB, jB, zB, QB, nB, dB) {
-      function IB(BB) {
+    function cB(BB, IB, ZB, TB, JB, oB) {
+      function GB(BB) {
         if (void 0 !== BB && "function" !== typeof BB) throw new TypeError("Function expected");
         return BB
       }
-      for (var NB, uB = QB.kind, UB = "getter" === uB ? "get" : "setter" === uB ? "set" : "value", aB = !jB && BB ? QB.static ? BB : BB.prototype : null, pB = jB || (aB ? Object.getOwnPropertyDescriptor(aB, QB.name) : {}), rB = !1, sB = zB.length - 1; sB >= 0; sB--) {
-        var JB = {};
-        for (var mB in QB) JB[mB] = "access" === mB ? {} : QB[mB];
-        for (var mB in QB.access) JB.access[mB] = QB.access[mB];
-        JB.addInitializer = function(BB) {
-          if (rB) throw new TypeError("Cannot add initializers after decoration has completed");
-          dB.push(IB(BB || null))
+      for (var vB, kB = TB.kind, cB = "getter" === kB ? "get" : "setter" === kB ? "set" : "value", nB = !IB && BB ? TB.static ? BB : BB.prototype : null, hB = IB || (nB ? Object.getOwnPropertyDescriptor(nB, TB.name) : {}), zB = !1, FB = ZB.length - 1; FB >= 0; FB--) {
+        var NB = {};
+        for (var gB in TB) NB[gB] = "access" === gB ? {} : TB[gB];
+        for (var gB in TB.access) NB.access[gB] = TB.access[gB];
+        NB.addInitializer = function(BB) {
+          if (zB) throw new TypeError("Cannot add initializers after decoration has completed");
+          oB.push(GB(BB || null))
         };
-        var yB = (0, zB[sB])("accessor" === uB ? {
-          get: pB.get,
-          set: pB.set
-        } : pB[UB], JB);
-        if ("accessor" === uB) {
-          if (void 0 === yB) continue;
-          if (null === yB || "object" !== typeof yB) throw new TypeError("Object expected");
-          (NB = IB(yB.get)) && (pB.get = NB), (NB = IB(yB.set)) && (pB.set = NB), (NB = IB(yB.init)) && nB.unshift(NB)
-        } else(NB = IB(yB)) && ("field" === uB ? nB.unshift(NB) : pB[UB] = NB)
+        var qB = (0, ZB[FB])("accessor" === kB ? {
+          get: hB.get,
+          set: hB.set
+        } : hB[cB], NB);
+        if ("accessor" === kB) {
+          if (void 0 === qB) continue;
+          if (null === qB || "object" !== typeof qB) throw new TypeError("Object expected");
+          (vB = GB(qB.get)) && (hB.get = vB), (vB = GB(qB.set)) && (hB.set = vB), (vB = GB(qB.init)) && JB.unshift(vB)
+        } else(vB = GB(qB)) && ("field" === kB ? JB.unshift(vB) : hB[cB] = vB)
       }
-      aB && Object.defineProperty(aB, QB.name, pB), rB = !0
+      nB && Object.defineProperty(nB, TB.name, hB), zB = !0
     }
 
-    function aB(BB, jB, zB) {
-      for (var QB = arguments.length > 2, nB = 0; nB < jB.length; nB++) zB = QB ? jB[nB].call(BB, zB) : jB[nB].call(BB);
-      return QB ? zB : void 0
+    function nB(BB, IB, ZB) {
+      for (var TB = arguments.length > 2, JB = 0; JB < IB.length; JB++) ZB = TB ? IB[JB].call(BB, ZB) : IB[JB].call(BB);
+      return TB ? ZB : void 0
     }
 
-    function pB(BB) {
+    function hB(BB) {
       return "symbol" === typeof BB ? BB : "".concat(BB)
     }
 
-    function rB(BB, jB, zB) {
-      return "symbol" === typeof jB && (jB = jB.description ? "[".concat(jB.description, "]") : ""), Object.defineProperty(BB, "name", {
+    function zB(BB, IB, ZB) {
+      return "symbol" === typeof IB && (IB = IB.description ? "[".concat(IB.description, "]") : ""), Object.defineProperty(BB, "name", {
         configurable: !0,
-        value: zB ? "".concat(zB, " ", jB) : jB
+        value: ZB ? "".concat(ZB, " ", IB) : IB
       })
     }
 
-    function sB(BB, jB) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(BB, jB)
+    function FB(BB, IB) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(BB, IB)
     }
 
-    function JB(BB, jB, zB, QB) {
-      return new(zB || (zB = Promise))((function(nB, dB) {
-        function IB(BB) {
+    function NB(BB, IB, ZB, TB) {
+      return new(ZB || (ZB = Promise))((function(JB, oB) {
+        function GB(BB) {
           try {
-            uB(QB.next(BB))
-          } catch (jB) {
-            dB(jB)
+            kB(TB.next(BB))
+          } catch (IB) {
+            oB(IB)
           }
         }
 
-        function NB(BB) {
+        function vB(BB) {
           try {
-            uB(QB.throw(BB))
-          } catch (jB) {
-            dB(jB)
+            kB(TB.throw(BB))
+          } catch (IB) {
+            oB(IB)
           }
         }
 
-        function uB(BB) {
-          var jB;
-          BB.done ? nB(BB.value) : (jB = BB.value, jB instanceof zB ? jB : new zB((function(BB) {
-            BB(jB)
-          }))).then(IB, NB)
+        function kB(BB) {
+          var IB;
+          BB.done ? JB(BB.value) : (IB = BB.value, IB instanceof ZB ? IB : new ZB((function(BB) {
+            BB(IB)
+          }))).then(GB, vB)
         }
-        uB((QB = QB.apply(BB, jB || [])).next())
+        kB((TB = TB.apply(BB, IB || [])).next())
       }))
     }
 
-    function mB(BB, jB) {
-      var zB, QB, nB, dB = {
+    function gB(BB, IB) {
+      var ZB, TB, JB, oB = {
           label: 0,
           sent: function() {
-            if (1 & nB[0]) throw nB[1];
-            return nB[1]
+            if (1 & JB[0]) throw JB[1];
+            return JB[1]
           },
           trys: [],
           ops: []
         },
-        IB = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return IB.next = NB(0), IB.throw = NB(1), IB.return = NB(2), "function" === typeof Symbol && (IB[Symbol.iterator] = function() {
+        GB = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return GB.next = vB(0), GB.throw = vB(1), GB.return = vB(2), "function" === typeof Symbol && (GB[Symbol.iterator] = function() {
         return this
-      }), IB;
+      }), GB;
 
-      function NB(NB) {
-        return function(uB) {
-          return function(NB) {
-            if (zB) throw new TypeError("Generator is already executing.");
-            for (; IB && (IB = 0, NB[0] && (dB = 0)), dB;) try {
-              if (zB = 1, QB && (nB = 2 & NB[0] ? QB.return : NB[0] ? QB.throw || ((nB = QB.return) && nB.call(QB), 0) : QB.next) && !(nB = nB.call(QB, NB[1])).done) return nB;
-              switch (QB = 0, nB && (NB = [2 & NB[0], nB.value]), NB[0]) {
+      function vB(vB) {
+        return function(kB) {
+          return function(vB) {
+            if (ZB) throw new TypeError("Generator is already executing.");
+            for (; GB && (GB = 0, vB[0] && (oB = 0)), oB;) try {
+              if (ZB = 1, TB && (JB = 2 & vB[0] ? TB.return : vB[0] ? TB.throw || ((JB = TB.return) && JB.call(TB), 0) : TB.next) && !(JB = JB.call(TB, vB[1])).done) return JB;
+              switch (TB = 0, JB && (vB = [2 & vB[0], JB.value]), vB[0]) {
                 case 0:
                 case 1:
-                  nB = NB;
+                  JB = vB;
                   break;
                 case 4:
-                  return dB.label++, {
-                    value: NB[1],
+                  return oB.label++, {
+                    value: vB[1],
                     done: !1
                   };
                 case 5:
-                  dB.label++, QB = NB[1], NB = [0];
+                  oB.label++, TB = vB[1], vB = [0];
                   continue;
                 case 7:
-                  NB = dB.ops.pop(), dB.trys.pop();
+                  vB = oB.ops.pop(), oB.trys.pop();
                   continue;
                 default:
-                  if (!(nB = (nB = dB.trys).length > 0 && nB[nB.length - 1]) && (6 === NB[0] || 2 === NB[0])) {
-                    dB = 0;
+                  if (!(JB = (JB = oB.trys).length > 0 && JB[JB.length - 1]) && (6 === vB[0] || 2 === vB[0])) {
+                    oB = 0;
                     continue
                   }
-                  if (3 === NB[0] && (!nB || NB[1] > nB[0] && NB[1] < nB[3])) {
-                    dB.label = NB[1];
+                  if (3 === vB[0] && (!JB || vB[1] > JB[0] && vB[1] < JB[3])) {
+                    oB.label = vB[1];
                     break
                   }
-                  if (6 === NB[0] && dB.label < nB[1]) {
-                    dB.label = nB[1], nB = NB;
+                  if (6 === vB[0] && oB.label < JB[1]) {
+                    oB.label = JB[1], JB = vB;
                     break
                   }
-                  if (nB && dB.label < nB[2]) {
-                    dB.label = nB[2], dB.ops.push(NB);
+                  if (JB && oB.label < JB[2]) {
+                    oB.label = JB[2], oB.ops.push(vB);
                     break
                   }
-                  nB[2] && dB.ops.pop(), dB.trys.pop();
+                  JB[2] && oB.ops.pop(), oB.trys.pop();
                   continue
               }
-              NB = jB.call(BB, dB)
-            } catch (uB) {
-              NB = [6, uB], QB = 0
+              vB = IB.call(BB, oB)
+            } catch (kB) {
+              vB = [6, kB], TB = 0
             } finally {
-              zB = nB = 0
+              ZB = JB = 0
             }
-            if (5 & NB[0]) throw NB[1];
+            if (5 & vB[0]) throw vB[1];
             return {
-              value: NB[0] ? NB[1] : void 0,
+              value: vB[0] ? vB[1] : void 0,
               done: !0
             }
-          }([NB, uB])
+          }([vB, kB])
         }
       }
     }
-    var yB = Object.create ? function(BB, jB, zB, QB) {
-      void 0 === QB && (QB = zB);
-      var nB = Object.getOwnPropertyDescriptor(jB, zB);
-      nB && !("get" in nB ? !jB.__esModule : nB.writable || nB.configurable) || (nB = {
+    var qB = Object.create ? function(BB, IB, ZB, TB) {
+      void 0 === TB && (TB = ZB);
+      var JB = Object.getOwnPropertyDescriptor(IB, ZB);
+      JB && !("get" in JB ? !IB.__esModule : JB.writable || JB.configurable) || (JB = {
         enumerable: !0,
         get: function() {
-          return jB[zB]
+          return IB[ZB]
         }
-      }), Object.defineProperty(BB, QB, nB)
-    } : function(BB, jB, zB, QB) {
-      void 0 === QB && (QB = zB), BB[QB] = jB[zB]
+      }), Object.defineProperty(BB, TB, JB)
+    } : function(BB, IB, ZB, TB) {
+      void 0 === TB && (TB = ZB), BB[TB] = IB[ZB]
     };
 
-    function kB(BB, jB) {
-      for (var zB in BB) "default" === zB || Object.prototype.hasOwnProperty.call(jB, zB) || yB(jB, BB, zB)
+    function yB(BB, IB) {
+      for (var ZB in BB) "default" === ZB || Object.prototype.hasOwnProperty.call(IB, ZB) || qB(IB, BB, ZB)
     }
 
-    function GB(BB) {
-      var jB = "function" === typeof Symbol && Symbol.iterator,
-        zB = jB && BB[jB],
-        QB = 0;
-      if (zB) return zB.call(BB);
+    function UB(BB) {
+      var IB = "function" === typeof Symbol && Symbol.iterator,
+        ZB = IB && BB[IB],
+        TB = 0;
+      if (ZB) return ZB.call(BB);
       if (BB && "number" === typeof BB.length) return {
         next: function() {
-          return BB && QB >= BB.length && (BB = void 0), {
-            value: BB && BB[QB++],
+          return BB && TB >= BB.length && (BB = void 0), {
+            value: BB && BB[TB++],
             done: !BB
           }
         }
       };
-      throw new TypeError(jB ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(IB ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function LB(BB, jB) {
-      var zB = "function" === typeof Symbol && BB[Symbol.iterator];
-      if (!zB) return BB;
-      var QB, nB, dB = zB.call(BB),
-        IB = [];
+    function WB(BB, IB) {
+      var ZB = "function" === typeof Symbol && BB[Symbol.iterator];
+      if (!ZB) return BB;
+      var TB, JB, oB = ZB.call(BB),
+        GB = [];
       try {
         for (;
-          (void 0 === jB || jB-- > 0) && !(QB = dB.next()).done;) IB.push(QB.value)
-      } catch (NB) {
-        nB = {
-          error: NB
+          (void 0 === IB || IB-- > 0) && !(TB = oB.next()).done;) GB.push(TB.value)
+      } catch (vB) {
+        JB = {
+          error: vB
         }
       } finally {
         try {
-          QB && !QB.done && (zB = dB.return) && zB.call(dB)
+          TB && !TB.done && (ZB = oB.return) && ZB.call(oB)
         } finally {
-          if (nB) throw nB.error
+          if (JB) throw JB.error
         }
       }
-      return IB
+      return GB
     }
 
-    function gB() {
-      for (var BB = [], jB = 0; jB < arguments.length; jB++) BB = BB.concat(LB(arguments[jB]));
+    function dB() {
+      for (var BB = [], IB = 0; IB < arguments.length; IB++) BB = BB.concat(WB(arguments[IB]));
       return BB
     }
 
-    function tB() {
-      for (var BB = 0, jB = 0, zB = arguments.length; jB < zB; jB++) BB += arguments[jB].length;
-      var QB = Array(BB),
-        nB = 0;
-      for (jB = 0; jB < zB; jB++)
-        for (var dB = arguments[jB], IB = 0, NB = dB.length; IB < NB; IB++, nB++) QB[nB] = dB[IB];
-      return QB
+    function CB() {
+      for (var BB = 0, IB = 0, ZB = arguments.length; IB < ZB; IB++) BB += arguments[IB].length;
+      var TB = Array(BB),
+        JB = 0;
+      for (IB = 0; IB < ZB; IB++)
+        for (var oB = arguments[IB], GB = 0, vB = oB.length; GB < vB; GB++, JB++) TB[JB] = oB[GB];
+      return TB
     }
 
-    function SB(BB, jB, zB) {
-      if (zB || 2 === arguments.length)
-        for (var QB, nB = 0, dB = jB.length; nB < dB; nB++) !QB && nB in jB || (QB || (QB = Array.prototype.slice.call(jB, 0, nB)), QB[nB] = jB[nB]);
-      return BB.concat(QB || Array.prototype.slice.call(jB))
+    function QB(BB, IB, ZB) {
+      if (ZB || 2 === arguments.length)
+        for (var TB, JB = 0, oB = IB.length; JB < oB; JB++) !TB && JB in IB || (TB || (TB = Array.prototype.slice.call(IB, 0, JB)), TB[JB] = IB[JB]);
+      return BB.concat(TB || Array.prototype.slice.call(IB))
+    }
+
+    function sB(BB) {
+      return this instanceof sB ? (this.v = BB, this) : new sB(BB)
+    }
+
+    function wB(BB, IB, ZB) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var TB, JB = ZB.apply(BB, IB || []),
+        oB = [];
+      return TB = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), GB("next"), GB("throw"), GB("return", (function(BB) {
+        return function(IB) {
+          return Promise.resolve(IB).then(BB, cB)
+        }
+      })), TB[Symbol.asyncIterator] = function() {
+        return this
+      }, TB;
+
+      function GB(BB, IB) {
+        JB[BB] && (TB[BB] = function(IB) {
+          return new Promise((function(ZB, TB) {
+            oB.push([BB, IB, ZB, TB]) > 1 || vB(BB, IB)
+          }))
+        }, IB && (TB[BB] = IB(TB[BB])))
+      }
+
+      function vB(BB, IB) {
+        try {
+          (ZB = JB[BB](IB)).value instanceof sB ? Promise.resolve(ZB.value.v).then(kB, cB) : nB(oB[0][2], ZB)
+        } catch (TB) {
+          nB(oB[0][3], TB)
+        }
+        var ZB
+      }
+
+      function kB(BB) {
+        vB("next", BB)
+      }
+
+      function cB(BB) {
+        vB("throw", BB)
+      }
+
+      function nB(BB, IB) {
+        BB(IB), oB.shift(), oB.length && vB(oB[0][0], oB[0][1])
+      }
+    }
+
+    function OB(BB) {
+      var IB, ZB;
+      return IB = {}, TB("next"), TB("throw", (function(BB) {
+        throw BB
+      })), TB("return"), IB[Symbol.iterator] = function() {
+        return this
+      }, IB;
+
+      function TB(TB, JB) {
+        IB[TB] = BB[TB] ? function(IB) {
+          return (ZB = !ZB) ? {
+            value: sB(BB[TB](IB)),
+            done: !1
+          } : JB ? JB(IB) : IB
+        } : JB
+      }
+    }
+
+    function YB(BB) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var IB, ZB = BB[Symbol.asyncIterator];
+      return ZB ? ZB.call(BB) : (BB = UB(BB), IB = {}, TB("next"), TB("throw"), TB("return"), IB[Symbol.asyncIterator] = function() {
+        return this
+      }, IB);
+
+      function TB(ZB) {
+        IB[ZB] = BB[ZB] && function(IB) {
+          return new Promise((function(TB, JB) {
+            (function(BB, IB, ZB, TB) {
+              Promise.resolve(TB).then((function(IB) {
+                BB({
+                  value: IB,
+                  done: ZB
+                })
+              }), IB)
+            })(TB, JB, (IB = BB[ZB](IB)).done, IB.value)
+          }))
+        }
+      }
+    }
+
+    function iB(BB, IB) {
+      return Object.defineProperty ? Object.defineProperty(BB, "raw", {
+        value: IB
+      }) : BB.raw = IB, BB
+    }
+    var pB = Object.create ? function(BB, IB) {
+        Object.defineProperty(BB, "default", {
+          enumerable: !0,
+          value: IB
+        })
+      } : function(BB, IB) {
+        BB.default = IB
+      },
+      aB = function(BB) {
+        return aB = Object.getOwnPropertyNames || function(BB) {
+          var IB = [];
+          for (var ZB in BB) Object.prototype.hasOwnProperty.call(BB, ZB) && (IB[IB.length] = ZB);
+          return IB
+        }, aB(BB)
+      };
+
+    function HB(BB) {
+      if (BB && BB.__esModule) return BB;
+      var IB = {};
+      if (null != BB)
+        for (var ZB = aB(BB), TB = 0; TB < ZB.length; TB++) "default" !== ZB[TB] && qB(IB, BB, ZB[TB]);
+      return pB(IB, BB), IB
     }
 
     function MB(BB) {
-      return this instanceof MB ? (this.v = BB, this) : new MB(BB)
-    }
-
-    function EB(BB, jB, zB) {
-      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var QB, nB = zB.apply(BB, jB || []),
-        dB = [];
-      return QB = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), IB("next"), IB("throw"), IB("return", (function(BB) {
-        return function(jB) {
-          return Promise.resolve(jB).then(BB, UB)
-        }
-      })), QB[Symbol.asyncIterator] = function() {
-        return this
-      }, QB;
-
-      function IB(BB, jB) {
-        nB[BB] && (QB[BB] = function(jB) {
-          return new Promise((function(zB, QB) {
-            dB.push([BB, jB, zB, QB]) > 1 || NB(BB, jB)
-          }))
-        }, jB && (QB[BB] = jB(QB[BB])))
-      }
-
-      function NB(BB, jB) {
-        try {
-          (zB = nB[BB](jB)).value instanceof MB ? Promise.resolve(zB.value.v).then(uB, UB) : aB(dB[0][2], zB)
-        } catch (QB) {
-          aB(dB[0][3], QB)
-        }
-        var zB
-      }
-
-      function uB(BB) {
-        NB("next", BB)
-      }
-
-      function UB(BB) {
-        NB("throw", BB)
-      }
-
-      function aB(BB, jB) {
-        BB(jB), dB.shift(), dB.length && NB(dB[0][0], dB[0][1])
-      }
-    }
-
-    function iB(BB) {
-      var jB, zB;
-      return jB = {}, QB("next"), QB("throw", (function(BB) {
-        throw BB
-      })), QB("return"), jB[Symbol.iterator] = function() {
-        return this
-      }, jB;
-
-      function QB(QB, nB) {
-        jB[QB] = BB[QB] ? function(jB) {
-          return (zB = !zB) ? {
-            value: MB(BB[QB](jB)),
-            done: !1
-          } : nB ? nB(jB) : jB
-        } : nB
-      }
-    }
-
-    function qB(BB) {
-      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var jB, zB = BB[Symbol.asyncIterator];
-      return zB ? zB.call(BB) : (BB = GB(BB), jB = {}, QB("next"), QB("throw"), QB("return"), jB[Symbol.asyncIterator] = function() {
-        return this
-      }, jB);
-
-      function QB(zB) {
-        jB[zB] = BB[zB] && function(jB) {
-          return new Promise((function(QB, nB) {
-            (function(BB, jB, zB, QB) {
-              Promise.resolve(QB).then((function(jB) {
-                BB({
-                  value: jB,
-                  done: zB
-                })
-              }), jB)
-            })(QB, nB, (jB = BB[zB](jB)).done, jB.value)
-          }))
-        }
-      }
-    }
-
-    function fB(BB, jB) {
-      return Object.defineProperty ? Object.defineProperty(BB, "raw", {
-        value: jB
-      }) : BB.raw = jB, BB
-    }
-    var oB = Object.create ? function(BB, jB) {
-        Object.defineProperty(BB, "default", {
-          enumerable: !0,
-          value: jB
-        })
-      } : function(BB, jB) {
-        BB.default = jB
-      },
-      HB = function(BB) {
-        return HB = Object.getOwnPropertyNames || function(BB) {
-          var jB = [];
-          for (var zB in BB) Object.prototype.hasOwnProperty.call(BB, zB) && (jB[jB.length] = zB);
-          return jB
-        }, HB(BB)
-      };
-
-    function DB(BB) {
-      if (BB && BB.__esModule) return BB;
-      var jB = {};
-      if (null != BB)
-        for (var zB = HB(BB), QB = 0; QB < zB.length; QB++) "default" !== zB[QB] && yB(jB, BB, zB[QB]);
-      return oB(jB, BB), jB
-    }
-
-    function FB(BB) {
       return BB && BB.__esModule ? BB : {
         default: BB
       }
     }
 
-    function YB(BB, jB, zB, QB) {
-      if ("a" === zB && !QB) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof jB ? BB !== jB || !QB : !jB.has(BB)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === zB ? QB : "a" === zB ? QB.call(BB) : QB ? QB.value : jB.get(BB)
+    function jB(BB, IB, ZB, TB) {
+      if ("a" === ZB && !TB) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof IB ? BB !== IB || !TB : !IB.has(BB)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === ZB ? TB : "a" === ZB ? TB.call(BB) : TB ? TB.value : IB.get(BB)
     }
 
-    function VB(BB, jB, zB, QB, nB) {
-      if ("m" === QB) throw new TypeError("Private method is not writable");
-      if ("a" === QB && !nB) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof jB ? BB !== jB || !nB : !jB.has(BB)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === QB ? nB.call(BB, zB) : nB ? nB.value = zB : jB.set(BB, zB), zB
+    function PB(BB, IB, ZB, TB, JB) {
+      if ("m" === TB) throw new TypeError("Private method is not writable");
+      if ("a" === TB && !JB) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof IB ? BB !== IB || !JB : !IB.has(BB)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === TB ? JB.call(BB, ZB) : JB ? JB.value = ZB : IB.set(BB, ZB), ZB
     }
 
-    function hB(BB, jB) {
-      if (null === jB || "object" !== typeof jB && "function" !== typeof jB) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof BB ? jB === BB : BB.has(jB)
+    function RB(BB, IB) {
+      if (null === IB || "object" !== typeof IB && "function" !== typeof IB) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof BB ? IB === BB : BB.has(IB)
     }
 
-    function XB(BB, jB, zB) {
-      if (null !== jB && void 0 !== jB) {
-        if ("object" !== typeof jB && "function" !== typeof jB) throw new TypeError("Object expected.");
-        var QB, nB;
-        if (zB) {
+    function rB(BB, IB, ZB) {
+      if (null !== IB && void 0 !== IB) {
+        if ("object" !== typeof IB && "function" !== typeof IB) throw new TypeError("Object expected.");
+        var TB, JB;
+        if (ZB) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          QB = jB[Symbol.asyncDispose]
+          TB = IB[Symbol.asyncDispose]
         }
-        if (void 0 === QB) {
+        if (void 0 === TB) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          QB = jB[Symbol.dispose], zB && (nB = QB)
+          TB = IB[Symbol.dispose], ZB && (JB = TB)
         }
-        if ("function" !== typeof QB) throw new TypeError("Object not disposable.");
-        nB && (QB = function() {
+        if ("function" !== typeof TB) throw new TypeError("Object not disposable.");
+        JB && (TB = function() {
           try {
-            nB.call(this)
+            JB.call(this)
           } catch (BB) {
             return Promise.reject(BB)
           }
         }), BB.stack.push({
-          value: jB,
-          dispose: QB,
-          async: zB
+          value: IB,
+          dispose: TB,
+          async: ZB
         })
-      } else zB && BB.stack.push({
+      } else ZB && BB.stack.push({
         async: !0
       });
-      return jB
+      return IB
     }
-    var ZB = "function" === typeof SuppressedError ? SuppressedError : function(BB, jB, zB) {
-      var QB = new Error(zB);
-      return QB.name = "SuppressedError", QB.error = BB, QB.suppressed = jB, QB
+    var mB = "function" === typeof SuppressedError ? SuppressedError : function(BB, IB, ZB) {
+      var TB = new Error(ZB);
+      return TB.name = "SuppressedError", TB.error = BB, TB.suppressed = IB, TB
     };
 
-    function AB(BB) {
-      function jB(jB) {
-        BB.error = BB.hasError ? new ZB(jB, BB.error, "An error was suppressed during disposal.") : jB, BB.hasError = !0
+    function XB(BB) {
+      function IB(IB) {
+        BB.error = BB.hasError ? new mB(IB, BB.error, "An error was suppressed during disposal.") : IB, BB.hasError = !0
       }
-      var zB, QB = 0;
-      return function nB() {
-        for (; zB = BB.stack.pop();) try {
-          if (!zB.async && 1 === QB) return QB = 0, BB.stack.push(zB), Promise.resolve().then(nB);
-          if (zB.dispose) {
-            var dB = zB.dispose.call(zB.value);
-            if (zB.async) return QB |= 2, Promise.resolve(dB).then(nB, (function(BB) {
-              return jB(BB), nB()
+      var ZB, TB = 0;
+      return function JB() {
+        for (; ZB = BB.stack.pop();) try {
+          if (!ZB.async && 1 === TB) return TB = 0, BB.stack.push(ZB), Promise.resolve().then(JB);
+          if (ZB.dispose) {
+            var oB = ZB.dispose.call(ZB.value);
+            if (ZB.async) return TB |= 2, Promise.resolve(oB).then(JB, (function(BB) {
+              return IB(BB), JB()
             }))
-          } else QB |= 1
-        } catch (IB) {
-          jB(IB)
+          } else TB |= 1
+        } catch (GB) {
+          IB(GB)
         }
-        if (1 === QB) return BB.hasError ? Promise.reject(BB.error) : Promise.resolve();
+        if (1 === TB) return BB.hasError ? Promise.reject(BB.error) : Promise.resolve();
         if (BB.hasError) throw BB.error
       }()
     }
 
-    function TB(BB, jB) {
-      return "string" === typeof BB && /^\.\.?\//.test(BB) ? BB.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(BB, zB, QB, nB, dB) {
-        return zB ? jB ? ".jsx" : ".js" : !QB || nB && dB ? QB + nB + "." + dB.toLowerCase() + "js" : BB
+    function LB(BB, IB) {
+      return "string" === typeof BB && /^\.\.?\//.test(BB) ? BB.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(BB, ZB, TB, JB, oB) {
+        return ZB ? IB ? ".jsx" : ".js" : !TB || JB && oB ? TB + JB + "." + oB.toLowerCase() + "js" : BB
       })) : BB
     }
-    const PB = {
-      __extends: nB,
-      __assign: dB,
-      __rest: IB,
-      __decorate: NB,
-      __param: uB,
-      __esDecorate: UB,
-      __runInitializers: aB,
-      __propKey: pB,
-      __setFunctionName: rB,
-      __metadata: sB,
-      __awaiter: JB,
-      __generator: mB,
-      __createBinding: yB,
-      __exportStar: kB,
-      __values: GB,
-      __read: LB,
-      __spread: gB,
-      __spreadArrays: tB,
-      __spreadArray: SB,
-      __await: MB,
-      __asyncGenerator: EB,
-      __asyncDelegator: iB,
-      __asyncValues: qB,
-      __makeTemplateObject: fB,
-      __importStar: DB,
-      __importDefault: FB,
-      __classPrivateFieldGet: YB,
-      __classPrivateFieldSet: VB,
-      __classPrivateFieldIn: hB,
-      __addDisposableResource: XB,
-      __disposeResources: AB,
-      __rewriteRelativeImportExtension: TB
+    const eB = {
+      __extends: JB,
+      __assign: oB,
+      __rest: GB,
+      __decorate: vB,
+      __param: kB,
+      __esDecorate: cB,
+      __runInitializers: nB,
+      __propKey: hB,
+      __setFunctionName: zB,
+      __metadata: FB,
+      __awaiter: NB,
+      __generator: gB,
+      __createBinding: qB,
+      __exportStar: yB,
+      __values: UB,
+      __read: WB,
+      __spread: dB,
+      __spreadArrays: CB,
+      __spreadArray: QB,
+      __await: sB,
+      __asyncGenerator: wB,
+      __asyncDelegator: OB,
+      __asyncValues: YB,
+      __makeTemplateObject: iB,
+      __importStar: HB,
+      __importDefault: MB,
+      __classPrivateFieldGet: jB,
+      __classPrivateFieldSet: PB,
+      __classPrivateFieldIn: RB,
+      __addDisposableResource: rB,
+      __disposeResources: XB,
+      __rewriteRelativeImportExtension: LB
     }
   }
 };

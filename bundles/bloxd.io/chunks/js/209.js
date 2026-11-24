@@ -1,144 +1,144 @@
 export const id = 209;
 export const ids = [209];
 export const modules = {
-  41591: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      loadGlbAsset: () => Lj,
-      loadGlbTree: () => Gj
+  41522: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      loadGlbAsset: () => WI,
+      loadGlbTree: () => UI
     });
-    var QB = zB(37987),
-      nB = zB(41598),
-      dB = zB(36327),
-      IB = zB.n(dB);
+    var TB = ZB(37964),
+      JB = ZB(41530),
+      oB = ZB(36267),
+      GB = ZB.n(oB);
 
-    function NB() {
-      return IB()('(()=>{class BB extends Error{}function jB(jB,zB){const QB=jB._malloc(zB);if(0===QB)throw new BB(`Draco: the decoder\'s heap refused ${zB} bytes`);return QB}function zB(BB){return{[BB.DT_FLOAT32]:[Float32Array,5126],[BB.DT_INT8]:[Int8Array,5120],[BB.DT_INT16]:[Int16Array,5122],[BB.DT_INT32]:[Int32Array,5124],[BB.DT_UINT8]:[Uint8Array,5121],[BB.DT_UINT16]:[Uint16Array,5123],[BB.DT_UINT32]:[Uint32Array,5125]}}function QB(jB,QB,nB,dB,IB){let NB=null,uB=null,UB=null;try{NB=new jB.Decoder,uB=new jB.DecoderBuffer,uB.Init(QB,QB.byteLength);let aB=0;const pB=NB.GetEncodedGeometryType(uB);if(pB===jB.TRIANGULAR_MESH){const zB=new jB.Mesh;UB=zB;const QB=NB.DecodeBufferToMesh(uB,zB);if(!QB.ok()||0===zB.ptr)throw new BB(QB.error_msg());aB=3*zB.num_faces()}else{if(pB!==jB.POINT_CLOUD)throw new BB(`Draco: Cannot decode invalid geometry type ${pB}`);{const zB=new jB.PointCloud;UB=zB;const QB=NB.DecodeBufferToPointCloud(uB,zB);if(!QB.ok()||!zB.ptr)throw new BB(QB.error_msg())}}const rB=UB.num_points();if(rB!==dB.vertices||aB!==dB.indices)throw new BB(`Draco: decoded ${rB} vertices and ${aB} indices, the accessors declare ${dB.vertices} and ${dB.indices}`);const sB=zB(jB),JB=[];for(const{kind:jB,id:zB,components:QB}of nB){const nB=NB.GetAttributeByUniqueId(UB,zB);if(!nB||0===nB.ptr)throw new BB(`Draco: no attribute with id ${zB} (${jB})`);const dB=nB.data_type();if(!sB[dB])throw new BB(`Draco: Cannot decode invalid data type ${dB}`);if(nB.num_components()!==QB)throw new BB(`Draco: ${jB} decodes to ${nB.num_components()} components, its accessor declares ${QB}`);JB.push([jB,nB,dB])}return IB({dracoDecoder:NB,geometry:UB,triangles:pB===jB.TRIANGULAR_MESH,numPoints:rB,numIndices:aB,attributes:JB})}finally{UB&&jB.destroy(UB),uB&&jB.destroy(uB),NB&&jB.destroy(NB)}}const nB=self;let dB=null;self.onmessage=BB=>{let{data:IB}=BB;if("init"===IB.id){try{importScripts(IB.url),dB=DracoDecoderModule({wasmBinary:IB.wasmBinary}),nB.postMessage({id:"initDone"})}catch(pB){nB.postMessage({id:"initError",message:pB instanceof Error?pB.message:String(pB)})}return}const{seq:NB,data:uB,attributeIds:UB,expected:aB}=IB;dB?dB.then((BB=>{try{const dB=function(BB,nB,dB,IB){const NB=Object.keys(dB).map((BB=>({kind:BB,id:dB[BB],components:IB.components[BB]})));return QB(BB,nB,NB,IB,(QB=>{let{dracoDecoder:nB,geometry:dB,triangles:IB,numPoints:NB,numIndices:uB,attributes:UB}=QB;const aB=zB(BB);let pB=null;if(IB){const zB=4*uB,QB=jB(BB,zB);try{nB.GetTrianglesUInt32Array(dB,zB,QB),pB=new Uint32Array(uB),pB.set(new Uint32Array(BB.HEAPF32.buffer,QB,uB))}finally{BB._free(QB)}}const rB=[];for(const[zB,sB,JB]of UB){const[QB]=aB[JB],IB=sB.num_components(),uB=NB*IB,UB=uB*QB.BYTES_PER_ELEMENT,pB=jB(BB,UB);try{nB.GetAttributeDataArrayForAllPoints(dB,sB,JB,UB,pB),rB.push({kind:zB,data:new QB(BB.HEAPF32.buffer,pB,uB).slice(),size:IB,byteOffset:sB.byte_offset(),byteStride:sB.byte_stride(),normalized:sB.normalized()})}finally{BB._free(pB)}}return{indices:pB,attributes:rB,totalVertices:NB}}))}(BB,uB,UB,aB),IB=dB.attributes.map((BB=>BB.data.buffer));dB.indices&&IB.push(dB.indices.buffer),nB.postMessage({id:"decoded",seq:NB,...dB},IB)}catch(pB){nB.postMessage({id:"decodeError",seq:NB,message:pB instanceof Error?pB.message:String(pB)})}}),(BB=>{nB.postMessage({id:"decodeError",seq:NB,message:BB instanceof Error?BB.message:String(BB)})})):nB.postMessage({id:"decodeError",seq:NB,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, zB.p + "dracoDecode.worker.8c9b0d48.worker.js")
+    function vB() {
+      return GB()('(()=>{class BB extends Error{}function IB(IB,ZB){const TB=IB._malloc(ZB);if(0===TB)throw new BB(`Draco: the decoder\'s heap refused ${ZB} bytes`);return TB}function ZB(BB){return{[BB.DT_FLOAT32]:[Float32Array,5126],[BB.DT_INT8]:[Int8Array,5120],[BB.DT_INT16]:[Int16Array,5122],[BB.DT_INT32]:[Int32Array,5124],[BB.DT_UINT8]:[Uint8Array,5121],[BB.DT_UINT16]:[Uint16Array,5123],[BB.DT_UINT32]:[Uint32Array,5125]}}function TB(IB,TB,JB,oB,GB){let vB=null,kB=null,cB=null;try{vB=new IB.Decoder,kB=new IB.DecoderBuffer,kB.Init(TB,TB.byteLength);let nB=0;const hB=vB.GetEncodedGeometryType(kB);if(hB===IB.TRIANGULAR_MESH){const ZB=new IB.Mesh;cB=ZB;const TB=vB.DecodeBufferToMesh(kB,ZB);if(!TB.ok()||0===ZB.ptr)throw new BB(TB.error_msg());nB=3*ZB.num_faces()}else{if(hB!==IB.POINT_CLOUD)throw new BB(`Draco: Cannot decode invalid geometry type ${hB}`);{const ZB=new IB.PointCloud;cB=ZB;const TB=vB.DecodeBufferToPointCloud(kB,ZB);if(!TB.ok()||!ZB.ptr)throw new BB(TB.error_msg())}}const zB=cB.num_points();if(zB!==oB.vertices||nB!==oB.indices)throw new BB(`Draco: decoded ${zB} vertices and ${nB} indices, the accessors declare ${oB.vertices} and ${oB.indices}`);const FB=ZB(IB),NB=[];for(const{kind:IB,id:ZB,components:TB}of JB){const JB=vB.GetAttributeByUniqueId(cB,ZB);if(!JB||0===JB.ptr)throw new BB(`Draco: no attribute with id ${ZB} (${IB})`);const oB=JB.data_type();if(!FB[oB])throw new BB(`Draco: Cannot decode invalid data type ${oB}`);if(JB.num_components()!==TB)throw new BB(`Draco: ${IB} decodes to ${JB.num_components()} components, its accessor declares ${TB}`);NB.push([IB,JB,oB])}return GB({dracoDecoder:vB,geometry:cB,triangles:hB===IB.TRIANGULAR_MESH,numPoints:zB,numIndices:nB,attributes:NB})}finally{cB&&IB.destroy(cB),kB&&IB.destroy(kB),vB&&IB.destroy(vB)}}const JB=self;let oB=null;self.onmessage=BB=>{let{data:GB}=BB;if("init"===GB.id){try{importScripts(GB.url),oB=DracoDecoderModule({wasmBinary:GB.wasmBinary}),JB.postMessage({id:"initDone"})}catch(hB){JB.postMessage({id:"initError",message:hB instanceof Error?hB.message:String(hB)})}return}const{seq:vB,data:kB,attributeIds:cB,expected:nB}=GB;oB?oB.then((BB=>{try{const oB=function(BB,JB,oB,GB){const vB=Object.keys(oB).map((BB=>({kind:BB,id:oB[BB],components:GB.components[BB]})));return TB(BB,JB,vB,GB,(TB=>{let{dracoDecoder:JB,geometry:oB,triangles:GB,numPoints:vB,numIndices:kB,attributes:cB}=TB;const nB=ZB(BB);let hB=null;if(GB){const ZB=4*kB,TB=IB(BB,ZB);try{JB.GetTrianglesUInt32Array(oB,ZB,TB),hB=new Uint32Array(kB),hB.set(new Uint32Array(BB.HEAPF32.buffer,TB,kB))}finally{BB._free(TB)}}const zB=[];for(const[ZB,FB,NB]of cB){const[TB]=nB[NB],GB=FB.num_components(),kB=vB*GB,cB=kB*TB.BYTES_PER_ELEMENT,hB=IB(BB,cB);try{JB.GetAttributeDataArrayForAllPoints(oB,FB,NB,cB,hB),zB.push({kind:ZB,data:new TB(BB.HEAPF32.buffer,hB,kB).slice(),size:GB,byteOffset:FB.byte_offset(),byteStride:FB.byte_stride(),normalized:FB.normalized()})}finally{BB._free(hB)}}return{indices:hB,attributes:zB,totalVertices:vB}}))}(BB,kB,cB,nB),GB=oB.attributes.map((BB=>BB.data.buffer));oB.indices&&GB.push(oB.indices.buffer),JB.postMessage({id:"decoded",seq:vB,...oB},GB)}catch(hB){JB.postMessage({id:"decodeError",seq:vB,message:hB instanceof Error?hB.message:String(hB)})}}),(BB=>{JB.postMessage({id:"decodeError",seq:vB,message:BB instanceof Error?BB.message:String(BB)})})):JB.postMessage({id:"decodeError",seq:vB,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ZB.p + "dracoDecode.worker.c157e042.worker.js")
     }
-    var uB = zB(106);
-    const UB = 1e3;
-    let aB = null,
-      pB = null;
-    const rB = [],
-      sB = [];
-    let JB = 0;
-    const mB = {
+    var kB = ZB(105);
+    const cB = 1e3;
+    let nB = null,
+      hB = null;
+    const zB = [],
+      FB = [];
+    let NB = 0;
+    const gB = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      yB = function(BB, jB) {
-        const zB = BB ? Math.max(1, Math.min(Math.floor(.5 * BB), 4)) : 1;
-        return jB ? Math.min(zB, 2) : zB
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, uB.isMobile)());
+      qB = function(BB, IB) {
+        const ZB = BB ? Math.max(1, Math.min(Math.floor(.5 * BB), 4)) : 1;
+        return IB ? Math.min(ZB, 2) : ZB
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, kB.isMobile)());
 
-    function kB() {
-      if (!aB) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function yB() {
+      if (!nB) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
         scriptUrl: BB,
-        wasmBinaryUrl: jB
-      } = aB;
-      return pB ??= fetch(jB).then((BB => {
-        if (!BB.ok) throw new Error(`Draco: fetching ${jB} failed: ${BB.status}`);
+        wasmBinaryUrl: IB
+      } = nB;
+      return hB ??= fetch(IB).then((BB => {
+        if (!BB.ok) throw new Error(`Draco: fetching ${IB} failed: ${BB.status}`);
         return BB.arrayBuffer()
-      })), pB.catch((() => {
-        pB = null
-      })), mB.workersStarted++, pB.then((jB => new Promise(((zB, QB) => {
-        const nB = new NB;
-        nB.onerror = BB => {
-          nB.onmessage = null, nB.onerror = null, nB.terminate(), QB(new Error("Draco: the decode worker failed to start" + (BB.message ? `: ${BB.message}` : " (its script did not load)")))
-        }, nB.onmessage = BB => {
+      })), hB.catch((() => {
+        hB = null
+      })), gB.workersStarted++, hB.then((IB => new Promise(((ZB, TB) => {
+        const JB = new vB;
+        JB.onerror = BB => {
+          JB.onmessage = null, JB.onerror = null, JB.terminate(), TB(new Error("Draco: the decode worker failed to start" + (BB.message ? `: ${BB.message}` : " (its script did not load)")))
+        }, JB.onmessage = BB => {
           let {
-            data: jB
+            data: IB
           } = BB;
-          nB.onmessage = null, nB.onerror = null, "initDone" === jB.id ? zB(nB) : (nB.terminate(), QB(new Error(`Draco: ${"initError"===jB.id?jB.message:"the worker did not start"}`)))
+          JB.onmessage = null, JB.onerror = null, "initDone" === IB.id ? ZB(JB) : (JB.terminate(), TB(new Error(`Draco: ${"initError"===IB.id?IB.message:"the worker did not start"}`)))
         };
-        const dB = jB.slice(0),
-          IB = {
+        const oB = IB.slice(0),
+          GB = {
             id: "init",
             url: BB,
-            wasmBinary: dB
+            wasmBinary: oB
           };
-        nB.postMessage(IB, [dB])
+        JB.postMessage(GB, [oB])
       }))))
     }
 
-    function GB(BB) {
-      const jB = rB.indexOf(BB); - 1 !== jB && rB.splice(jB, 1);
-      const zB = sB.shift();
-      zB && gB(zB)
+    function UB(BB) {
+      const IB = zB.indexOf(BB); - 1 !== IB && zB.splice(IB, 1);
+      const ZB = FB.shift();
+      ZB && dB(ZB)
     }
 
-    function LB(BB, jB) {
+    function WB(BB, IB) {
       BB.busy = !0, BB.releaseTimer && (clearTimeout(BB.releaseTimer), BB.releaseTimer = null);
-      BB.worker.then((zB => {
-        const QB = JB++;
-        zB.onmessage = nB => {
+      BB.worker.then((ZB => {
+        const TB = NB++;
+        ZB.onmessage = JB => {
           let {
-            data: dB
-          } = nB;
-          if (("decoded" === dB.id || "decodeError" === dB.id) && dB.seq === QB) {
-            if (zB.onmessage = null, zB.onerror = null, "decoded" === dB.id) return mB.decodes++, jB.resolve({
-              indices: dB.indices,
-              attributes: dB.attributes,
-              totalVertices: dB.totalVertices
+            data: oB
+          } = JB;
+          if (("decoded" === oB.id || "decodeError" === oB.id) && oB.seq === TB) {
+            if (ZB.onmessage = null, ZB.onerror = null, "decoded" === oB.id) return gB.decodes++, IB.resolve({
+              indices: oB.indices,
+              attributes: oB.attributes,
+              totalVertices: oB.totalVertices
             }), void(() => {
-              const jB = sB.shift();
-              jB ? LB(BB, jB) : (BB.busy = !1, BB.releaseTimer = setTimeout((() => {
-                const jB = rB.indexOf(BB); - 1 !== jB && rB.splice(jB, 1), BB.worker.then((BB => {
+              const IB = FB.shift();
+              IB ? WB(BB, IB) : (BB.busy = !1, BB.releaseTimer = setTimeout((() => {
+                const IB = zB.indexOf(BB); - 1 !== IB && zB.splice(IB, 1), BB.worker.then((BB => {
                   BB.terminate()
                 }))
-              }), UB))
+              }), cB))
             })();
-            zB.terminate(), jB.reject(new Error(dB.message)), GB(BB)
+            ZB.terminate(), IB.reject(new Error(oB.message)), UB(BB)
           }
-        }, zB.onerror = QB => {
-          zB.onmessage = null, zB.onerror = null, zB.terminate(), jB.reject(new Error(`Draco: the decode worker failed: ${QB.message}`)), GB(BB)
+        }, ZB.onerror = TB => {
+          ZB.onmessage = null, ZB.onerror = null, ZB.terminate(), IB.reject(new Error(`Draco: the decode worker failed: ${TB.message}`)), UB(BB)
         };
-        const nB = {
+        const JB = {
           id: "decode",
-          seq: QB,
-          data: jB.data,
-          attributeIds: jB.attributeIds,
-          expected: jB.expected
+          seq: TB,
+          data: IB.data,
+          attributeIds: IB.attributeIds,
+          expected: IB.expected
         };
-        zB.postMessage(nB, [jB.data.buffer])
-      }), (zB => {
-        jB.reject(zB instanceof Error ? zB : new Error(String(zB))), GB(BB)
+        ZB.postMessage(JB, [IB.data.buffer])
+      }), (ZB => {
+        IB.reject(ZB instanceof Error ? ZB : new Error(String(ZB))), UB(BB)
       }))
     }
 
-    function gB(BB) {
-      const jB = rB.find((BB => !BB.busy));
-      if (jB) LB(jB, BB);
+    function dB(BB) {
+      const IB = zB.find((BB => !BB.busy));
+      if (IB) WB(IB, BB);
       else {
-        if (rB.length < yB) {
-          const jB = {
-            worker: kB(),
+        if (zB.length < qB) {
+          const IB = {
+            worker: yB(),
             busy: !0,
             releaseTimer: null
           };
-          return rB.push(jB), mB.mostWorkers = Math.max(mB.mostWorkers, rB.length), void LB(jB, BB)
+          return zB.push(IB), gB.mostWorkers = Math.max(gB.mostWorkers, zB.length), void WB(IB, BB)
         }
-        sB.push(BB)
+        FB.push(BB)
       }
     }
 
-    function tB(BB, jB, zB) {
-      return new Promise(((QB, nB) => {
-        gB({
+    function CB(BB, IB, ZB) {
+      return new Promise(((TB, JB) => {
+        dB({
           data: new Int8Array(BB.buffer, BB.byteOffset, BB.byteLength).slice(),
-          attributeIds: jB,
-          expected: zB,
-          resolve: QB,
-          reject: nB
+          attributeIds: IB,
+          expected: ZB,
+          resolve: TB,
+          reject: JB
         })
       }))
     }
-    var SB = zB(37568),
-      MB = zB(37578),
-      EB = zB(34325),
-      iB = zB(34319);
-    const qB = {
+    var QB = ZB(37516),
+      sB = ZB(37525),
+      wB = ZB(34269),
+      OB = ZB(34261);
+    const YB = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,113 +146,113 @@ export const modules = {
       wrapT: void 0
     };
 
-    function fB(BB) {
-      const jB = (0, iB.j)(BB.byteLength);
-      if (jB) throw new EB.n(jB);
+    function iB(BB) {
+      const IB = (0, OB.f)(BB.byteLength);
+      if (IB) throw new wB.p(IB);
       const {
-        json: zB,
-        bin: QB
-      } = (0, EB.z)(BB), nB = (0, iB.f)(zB, QB);
-      if (nB) throw new EB.n(nB);
+        json: ZB,
+        bin: TB
+      } = (0, wB.C)(BB), JB = (0, OB.d)(ZB, TB);
+      if (JB) throw new wB.p(JB);
       try {
-        return function(BB, jB) {
-          var zB, QB, nB, dB, IB, NB, uB, UB, aB, pB, rB, sB, JB, mB, yB;
-          const kB = new Map,
-            GB = zB => {
-              let QB = kB.get(zB);
-              if (!QB) {
-                var nB;
-                const dB = BB.bufferViews[zB],
-                  IB = null !== (nB = dB.byteOffset) && void 0 !== nB ? nB : 0;
-                QB = {
-                  index: zB,
-                  bytes: jB.subarray(IB, IB + dB.byteLength),
-                  byteStride: dB.byteStride
-                }, kB.set(zB, QB)
+        return function(BB, IB) {
+          var ZB, TB, JB, oB, GB, vB, kB, cB, nB, hB, zB, FB, NB, gB, qB;
+          const yB = new Map,
+            UB = ZB => {
+              let TB = yB.get(ZB);
+              if (!TB) {
+                var JB;
+                const oB = BB.bufferViews[ZB],
+                  GB = null !== (JB = oB.byteOffset) && void 0 !== JB ? JB : 0;
+                TB = {
+                  index: ZB,
+                  bytes: IB.subarray(GB, GB + oB.byteLength),
+                  byteStride: oB.byteStride
+                }, yB.set(ZB, TB)
               }
-              return QB
+              return TB
             },
-            LB = new Map,
-            gB = jB => {
-              let zB = LB.get(jB);
-              if (!zB) {
-                var QB;
-                const nB = BB.accessors[jB];
-                zB = {
-                  index: jB,
-                  count: nB.count,
-                  type: nB.type,
-                  numComponents: EB.p[nB.type],
-                  componentType: nB.componentType,
-                  normalized: null !== (QB = nB.normalized) && void 0 !== QB && QB,
-                  byteOffset: nB.byteOffset,
-                  bufferView: void 0 === nB.bufferView ? null : GB(nB.bufferView),
-                  min: nB.min,
-                  max: nB.max
-                }, LB.set(jB, zB)
+            WB = new Map,
+            dB = IB => {
+              let ZB = WB.get(IB);
+              if (!ZB) {
+                var TB;
+                const JB = BB.accessors[IB];
+                ZB = {
+                  index: IB,
+                  count: JB.count,
+                  type: JB.type,
+                  numComponents: wB.t[JB.type],
+                  componentType: JB.componentType,
+                  normalized: null !== (TB = JB.normalized) && void 0 !== TB && TB,
+                  byteOffset: JB.byteOffset,
+                  bufferView: void 0 === JB.bufferView ? null : UB(JB.bufferView),
+                  min: JB.min,
+                  max: JB.max
+                }, WB.set(IB, ZB)
               }
-              return zB
+              return ZB
             },
-            tB = null !== (zB = null === (QB = BB.extensionsUsed) || void 0 === QB ? void 0 : QB.includes("KHR_draco_mesh_compression")) && void 0 !== zB && zB,
-            SB = (null !== (nB = BB.meshes) && void 0 !== nB ? nB : []).map(((jB, zB) => {
-              const QB = jB.primitives.map(((jB, zB) => {
-                var QB, nB, dB;
-                const IB = tB ? null === (QB = jB.extensions) || void 0 === QB ? void 0 : QB.KHR_draco_mesh_compression : void 0;
-                let NB = null;
-                const uB = [];
-                if (IB) {
-                  const zB = {
-                    vertices: BB.accessors[jB.attributes.POSITION].count,
-                    indices: void 0 === jB.indices ? 0 : BB.accessors[jB.indices].count,
+            CB = null !== (ZB = null === (TB = BB.extensionsUsed) || void 0 === TB ? void 0 : TB.includes("KHR_draco_mesh_compression")) && void 0 !== ZB && ZB,
+            QB = (null !== (JB = BB.meshes) && void 0 !== JB ? JB : []).map(((IB, ZB) => {
+              const TB = IB.primitives.map(((IB, ZB) => {
+                var TB, JB, oB;
+                const GB = CB ? null === (TB = IB.extensions) || void 0 === TB ? void 0 : TB.KHR_draco_mesh_compression : void 0;
+                let vB = null;
+                const kB = [];
+                if (GB) {
+                  const ZB = {
+                    vertices: BB.accessors[IB.attributes.POSITION].count,
+                    indices: void 0 === IB.indices ? 0 : BB.accessors[IB.indices].count,
                     components: {}
                   };
-                  NB = {
-                    bufferView: GB(IB.bufferView),
+                  vB = {
+                    bufferView: UB(GB.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: zB
+                    expected: ZB
                   };
-                  for (const [QB, nB] of EB.j) {
-                    const dB = IB.attributes[QB];
-                    if (void 0 === dB) continue;
-                    NB.attributeIds[nB] = dB;
-                    const uB = jB.attributes[QB];
-                    var UB;
-                    if (void 0 !== uB) NB.normalized[nB] = null !== (UB = BB.accessors[uB].normalized) && void 0 !== UB && UB, zB.components[nB] = EB.p[BB.accessors[uB].type]
+                  for (const [TB, JB] of wB.k) {
+                    const oB = GB.attributes[TB];
+                    if (void 0 === oB) continue;
+                    vB.attributeIds[JB] = oB;
+                    const kB = IB.attributes[TB];
+                    var cB;
+                    if (void 0 !== kB) vB.normalized[JB] = null !== (cB = BB.accessors[kB].normalized) && void 0 !== cB && cB, ZB.components[JB] = wB.t[BB.accessors[kB].type]
                   }
                 } else
-                  for (const [BB, aB] of EB.j) {
-                    const zB = jB.attributes[BB];
-                    void 0 !== zB && uB.push({
+                  for (const [BB, nB] of wB.k) {
+                    const ZB = IB.attributes[BB];
+                    void 0 !== ZB && kB.push({
                       semantic: BB,
-                      kind: aB,
-                      accessor: gB(zB)
+                      kind: nB,
+                      accessor: dB(ZB)
                     })
                   }
                 return {
-                  index: zB,
-                  mode: null !== (nB = jB.mode) && void 0 !== nB ? nB : 4,
-                  attributes: uB,
-                  indices: IB || void 0 === jB.indices ? null : gB(jB.indices),
-                  position: void 0 === jB.attributes.POSITION ? null : gB(jB.attributes.POSITION),
-                  material: null !== (dB = jB.material) && void 0 !== dB ? dB : null,
-                  draco: NB
+                  index: ZB,
+                  mode: null !== (JB = IB.mode) && void 0 !== JB ? JB : 4,
+                  attributes: kB,
+                  indices: GB || void 0 === IB.indices ? null : dB(IB.indices),
+                  position: void 0 === IB.attributes.POSITION ? null : dB(IB.attributes.POSITION),
+                  material: null !== (oB = IB.material) && void 0 !== oB ? oB : null,
+                  draco: vB
                 }
               }));
               return {
-                index: zB,
-                name: jB.name,
-                primitives: QB,
-                extras: jB.extras
+                index: ZB,
+                name: IB.name,
+                primitives: TB,
+                extras: IB.extras
               }
             })),
-            MB = (null !== (dB = BB.nodes) && void 0 !== dB ? dB : []).map(((BB, jB) => {
-              var zB, QB;
+            sB = (null !== (oB = BB.nodes) && void 0 !== oB ? oB : []).map(((BB, IB) => {
+              var ZB, TB;
               return {
-                index: jB,
+                index: IB,
                 name: BB.name,
-                children: null !== (zB = BB.children) && void 0 !== zB ? zB : [],
-                mesh: null !== (QB = BB.mesh) && void 0 !== QB ? QB : null,
+                children: null !== (ZB = BB.children) && void 0 !== ZB ? ZB : [],
+                mesh: null !== (TB = BB.mesh) && void 0 !== TB ? TB : null,
                 translation: BB.translation,
                 rotation: BB.rotation,
                 scale: BB.scale,
@@ -260,209 +260,209 @@ export const modules = {
                 extras: BB.extras
               }
             })),
-            iB = null !== (IB = null === (NB = BB.extensionsUsed) || void 0 === NB ? void 0 : NB.includes("KHR_materials_unlit")) && void 0 !== IB && IB,
-            fB = null !== (uB = null === (UB = BB.extensionsUsed) || void 0 === UB ? void 0 : UB.includes("KHR_texture_transform")) && void 0 !== uB && uB,
-            oB = (null !== (aB = BB.materials) && void 0 !== aB ? aB : []).map(((BB, jB) => {
-              var zB, QB, nB, dB;
-              const IB = BB.pbrMetallicRoughness,
-                NB = null === IB || void 0 === IB ? void 0 : IB.baseColorTexture;
+            OB = null !== (GB = null === (vB = BB.extensionsUsed) || void 0 === vB ? void 0 : vB.includes("KHR_materials_unlit")) && void 0 !== GB && GB,
+            iB = null !== (kB = null === (cB = BB.extensionsUsed) || void 0 === cB ? void 0 : cB.includes("KHR_texture_transform")) && void 0 !== kB && kB,
+            pB = (null !== (nB = BB.materials) && void 0 !== nB ? nB : []).map(((BB, IB) => {
+              var ZB, TB, JB, oB;
+              const GB = BB.pbrMetallicRoughness,
+                vB = null === GB || void 0 === GB ? void 0 : GB.baseColorTexture;
               return {
-                index: jB,
+                index: IB,
                 name: BB.name,
                 extras: BB.extras,
-                unlit: iB && void 0 !== (null === (zB = BB.extensions) || void 0 === zB ? void 0 : zB.KHR_materials_unlit),
-                pbr: IB ? {
-                  baseColorFactor: IB.baseColorFactor,
-                  metallicFactor: IB.metallicFactor,
-                  roughnessFactor: IB.roughnessFactor
+                unlit: OB && void 0 !== (null === (ZB = BB.extensions) || void 0 === ZB ? void 0 : ZB.KHR_materials_unlit),
+                pbr: GB ? {
+                  baseColorFactor: GB.baseColorFactor,
+                  metallicFactor: GB.metallicFactor,
+                  roughnessFactor: GB.roughnessFactor
                 } : null,
-                baseColorTexture: NB ? {
-                  texture: NB.index,
-                  transform: fB && (null === (QB = NB.extensions) || void 0 === QB ? void 0 : QB.KHR_texture_transform) || null
+                baseColorTexture: vB ? {
+                  texture: vB.index,
+                  transform: iB && (null === (TB = vB.extensions) || void 0 === TB ? void 0 : TB.KHR_texture_transform) || null
                 } : null,
                 emissiveFactor: BB.emissiveFactor,
-                alphaMode: null !== (nB = BB.alphaMode) && void 0 !== nB ? nB : "OPAQUE",
+                alphaMode: null !== (JB = BB.alphaMode) && void 0 !== JB ? JB : "OPAQUE",
                 alphaCutoff: BB.alphaCutoff,
-                doubleSided: null !== (dB = BB.doubleSided) && void 0 !== dB && dB
+                doubleSided: null !== (oB = BB.doubleSided) && void 0 !== oB && oB
               }
             })),
-            HB = (null !== (pB = BB.textures) && void 0 !== pB ? pB : []).map(((jB, zB) => {
-              var QB, nB;
-              const dB = void 0 === jB.sampler ? qB : {
-                index: jB.sampler,
-                ...null === (QB = BB.samplers) || void 0 === QB ? void 0 : QB[jB.sampler]
+            aB = (null !== (hB = BB.textures) && void 0 !== hB ? hB : []).map(((IB, ZB) => {
+              var TB, JB;
+              const oB = void 0 === IB.sampler ? YB : {
+                index: IB.sampler,
+                ...null === (TB = BB.samplers) || void 0 === TB ? void 0 : TB[IB.sampler]
               };
               return {
-                index: zB,
+                index: ZB,
                 sampler: {
-                  index: dB.index,
-                  magFilter: dB.magFilter,
-                  minFilter: dB.minFilter,
-                  wrapS: dB.wrapS,
-                  wrapT: dB.wrapT
+                  index: oB.index,
+                  magFilter: oB.magFilter,
+                  minFilter: oB.minFilter,
+                  wrapS: oB.wrapS,
+                  wrapT: oB.wrapT
                 },
-                image: null !== (nB = jB.source) && void 0 !== nB ? nB : -1
+                image: null !== (JB = IB.source) && void 0 !== JB ? JB : -1
               }
             })),
-            DB = (null !== (rB = BB.images) && void 0 !== rB ? rB : []).map(((BB, jB) => ({
-              index: jB,
+            HB = (null !== (zB = BB.images) && void 0 !== zB ? zB : []).map(((BB, IB) => ({
+              index: IB,
               name: BB.name,
               mimeType: BB.mimeType,
-              bufferView: GB(BB.bufferView)
+              bufferView: UB(BB.bufferView)
             }))),
-            FB = null !== (sB = (0, EB.y)(BB)) && void 0 !== sB ? sB : 0;
+            MB = null !== (FB = (0, wB.A)(BB)) && void 0 !== FB ? FB : 0;
           return {
             json: BB,
-            rootNodes: null !== (JB = null === (mB = BB.scenes) || void 0 === mB || null === (yB = mB[FB]) || void 0 === yB ? void 0 : yB.nodes) && void 0 !== JB ? JB : [],
-            nodes: MB,
-            meshes: SB,
-            materials: oB,
-            textures: HB,
-            images: DB
+            rootNodes: null !== (NB = null === (gB = BB.scenes) || void 0 === gB || null === (qB = gB[MB]) || void 0 === qB ? void 0 : qB.nodes) && void 0 !== NB ? NB : [],
+            nodes: sB,
+            meshes: QB,
+            materials: pB,
+            textures: aB,
+            images: HB
           }
-        }(zB, QB)
-      } catch (dB) {
-        throw dB instanceof EB.l ? dB : new EB.l(`reading the GLB failed: ${dB instanceof Error?dB.message:String(dB)}`)
+        }(ZB, TB)
+      } catch (oB) {
+        throw oB instanceof wB.m ? oB : new wB.m(`reading the GLB failed: ${oB instanceof Error?oB.message:String(oB)}`)
       }
     }
-    async function oB(BB, jB) {
-      var zB, QB;
-      const nB = BB.draco;
-      if (!nB) throw new EB.l("not a Draco primitive");
-      let dB;
+    async function pB(BB, IB) {
+      var ZB, TB;
+      const JB = BB.draco;
+      if (!JB) throw new wB.m("not a Draco primitive");
+      let oB;
       try {
-        dB = await jB(nB.bufferView.bytes, nB.attributeIds, nB.expected)
-      } catch (UB) {
-        throw new EB.l(`Draco decoding failed: ${UB instanceof Error?UB.message:String(UB)}`)
+        oB = await IB(JB.bufferView.bytes, JB.attributeIds, JB.expected)
+      } catch (cB) {
+        throw new wB.m(`Draco decoding failed: ${cB instanceof Error?cB.message:String(cB)}`)
       }
       const {
-        vertices: IB,
-        indices: NB,
-        components: uB
-      } = nB.expected;
-      if (dB.totalVertices !== IB || (null !== (zB = null === (QB = dB.indices) || void 0 === QB ? void 0 : QB.length) && void 0 !== zB ? zB : 0) !== NB || dB.attributes.some((BB => BB.size !== uB[BB.kind] || BB.data.length !== IB * BB.size))) throw new EB.l("Draco decoding gave other counts than the accessors declare");
-      for (const aB of dB.attributes) {
-        const BB = nB.normalized[aB.kind];
-        void 0 !== BB && (aB.normalized = BB)
+        vertices: GB,
+        indices: vB,
+        components: kB
+      } = JB.expected;
+      if (oB.totalVertices !== GB || (null !== (ZB = null === (TB = oB.indices) || void 0 === TB ? void 0 : TB.length) && void 0 !== ZB ? ZB : 0) !== vB || oB.attributes.some((BB => BB.size !== kB[BB.kind] || BB.data.length !== GB * BB.size))) throw new wB.m("Draco decoding gave other counts than the accessors declare");
+      for (const nB of oB.attributes) {
+        const BB = JB.normalized[nB.kind];
+        void 0 !== BB && (nB.normalized = BB)
       }
-      return dB
+      return oB
     }
-    const HB = new WeakMap;
+    const aB = new WeakMap;
 
-    function DB(BB, jB) {
-      var zB;
-      const QB = null !== (zB = HB.get(BB)) && void 0 !== zB ? zB : jB(BB);
-      return HB.set(BB, QB), QB
-    }
-
-    function FB(BB) {
-      const jB = BB.bufferView,
-        zB = 5125 === BB.componentType ? Uint32Array : Uint16Array,
-        QB = jB.bytes.buffer,
-        nB = jB.bytes.byteOffset + (BB.byteOffset || 0);
-      return nB % zB.BYTES_PER_ELEMENT !== 0 ? new zB(QB.slice(nB, nB + BB.count * zB.BYTES_PER_ELEMENT), 0) : new zB(QB, nB, BB.count)
+    function HB(BB, IB) {
+      var ZB;
+      const TB = null !== (ZB = aB.get(BB)) && void 0 !== ZB ? ZB : IB(BB);
+      return aB.set(BB, TB), TB
     }
 
-    function YB(BB, jB) {
+    function MB(BB) {
+      const IB = BB.bufferView,
+        ZB = 5125 === BB.componentType ? Uint32Array : Uint16Array,
+        TB = IB.bytes.buffer,
+        JB = IB.bytes.byteOffset + (BB.byteOffset || 0);
+      return JB % ZB.BYTES_PER_ELEMENT !== 0 ? new ZB(TB.slice(JB, JB + BB.count * ZB.BYTES_PER_ELEMENT), 0) : new ZB(TB, JB, BB.count)
+    }
+
+    function jB(BB, IB) {
       if (BB.min && BB.max) return [new Float64Array(BB.min), new Float64Array(BB.max)];
-      const zB = jB.find((BB => {
+      const ZB = IB.find((BB => {
           let {
-            kind: jB
+            kind: IB
           } = BB;
-          return "position" === jB
+          return "position" === IB
         })),
-        QB = zB ? (0, MB.k)(zB, BB.count) : new Float32Array(0);
-      return (0, MB.v)(QB.length / 3, ((BB, jB) => QB[3 * BB + jB]))
+        TB = ZB ? (0, sB.f)(ZB, BB.count) : new Float32Array(0);
+      return (0, sB.n)(TB.length / 3, ((BB, IB) => TB[3 * BB + IB]))
     }
 
-    function VB(BB) {
-      const jB = BB.attributes.map((BB => {
-          var jB, zB;
+    function PB(BB) {
+      const IB = BB.attributes.map((BB => {
+          var IB, ZB;
           let {
-            kind: QB,
-            accessor: nB
+            kind: TB,
+            accessor: JB
           } = BB;
           const {
-            bufferView: dB,
-            numComponents: IB
-          } = nB;
-          if (!dB) {
+            bufferView: oB,
+            numComponents: GB
+          } = JB;
+          if (!oB) {
             return {
-              kind: QB,
-              data: DB(nB, (() => new Float32Array(IB * nB.count))),
+              kind: TB,
+              data: HB(JB, (() => new Float32Array(GB * JB.count))),
               offset: 0,
-              stride: 4 * IB,
-              components: IB,
+              stride: 4 * GB,
+              components: GB,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const NB = null !== (jB = dB.byteStride) && void 0 !== jB ? jB : IB * EB.e[nB.componentType];
+          const vB = null !== (IB = oB.byteStride) && void 0 !== IB ? IB : GB * wB.c[JB.componentType];
           return {
-            kind: QB,
-            data: dB.bytes,
-            offset: null !== (zB = nB.byteOffset) && void 0 !== zB ? zB : 0,
-            stride: NB,
-            components: IB,
-            glType: nB.componentType,
-            isNormalized: nB.normalized
+            kind: TB,
+            data: oB.bytes,
+            offset: null !== (ZB = JB.byteOffset) && void 0 !== ZB ? ZB : 0,
+            stride: vB,
+            components: GB,
+            glType: JB.componentType,
+            isNormalized: JB.normalized
           }
         })),
-        zB = BB.indices,
-        QB = zB && DB(zB, FB),
-        nB = BB.position;
-      return new MB.h(jB, QB, nB.count, ...YB(nB, jB))
+        ZB = BB.indices,
+        TB = ZB && HB(ZB, MB),
+        JB = BB.position;
+      return new sB.e(IB, TB, JB.count, ...jB(JB, IB))
     }
-    const hB = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const RB = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function XB(BB, jB) {
-      const zB = jB.attributes.map((BB => {
+    function rB(BB, IB) {
+      const ZB = IB.attributes.map((BB => {
         let {
-          kind: jB,
-          data: zB,
-          size: QB,
-          byteOffset: nB,
-          byteStride: dB,
-          normalized: IB
+          kind: IB,
+          data: ZB,
+          size: TB,
+          byteOffset: JB,
+          byteStride: oB,
+          normalized: GB
         } = BB;
         return {
-          kind: jB,
-          data: zB,
-          offset: nB,
-          stride: dB,
-          components: QB,
-          glType: 5120 + hB.indexOf(zB.constructor),
-          isNormalized: IB
+          kind: IB,
+          data: ZB,
+          offset: JB,
+          stride: oB,
+          components: TB,
+          glType: 5120 + RB.indexOf(ZB.constructor),
+          isNormalized: GB
         }
       }));
-      return new MB.h(zB, jB.indices, jB.totalVertices, ...YB(BB.position, zB))
+      return new sB.e(ZB, IB.indices, IB.totalVertices, ...jB(BB.position, ZB))
     }
 
-    function ZB(BB) {
-      const jB = BB.lastIndexOf("/");
-      return jB < 0 ? BB : BB.substring(jB + 1)
+    function mB(BB) {
+      const IB = BB.lastIndexOf("/");
+      return IB < 0 ? BB : BB.substring(IB + 1)
     }
 
-    function AB(BB) {
-      const jB = BB.lastIndexOf("/");
-      return jB < 0 ? "" : BB.substring(0, jB + 1)
+    function XB(BB) {
+      const IB = BB.lastIndexOf("/");
+      return IB < 0 ? "" : BB.substring(0, IB + 1)
     }
 
-    function TB(BB) {
+    function LB(BB) {
       return BB.name || `node${BB.index}`
     }
-    const PB = {
+    const eB = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      WB = {
+      uB = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      eB = {
+      fB = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -472,352 +472,352 @@ export const modules = {
       };
 
     function lB(BB) {
-      var jB, zB, QB, nB;
-      const dB = null !== (jB = BB.minFilter) && void 0 !== jB ? jB : 9987;
-      return 9729 === (null !== (zB = BB.magFilter) && void 0 !== zB ? zB : 9729) ? null !== (QB = WB[dB]) && void 0 !== QB ? QB : 3 : null !== (nB = eB[dB]) && void 0 !== nB ? nB : 4
+      var IB, ZB, TB, JB;
+      const oB = null !== (IB = BB.minFilter) && void 0 !== IB ? IB : 9987;
+      return 9729 === (null !== (ZB = BB.magFilter) && void 0 !== ZB ? ZB : 9729) ? null !== (TB = uB[oB]) && void 0 !== TB ? TB : 3 : null !== (JB = fB[oB]) && void 0 !== JB ? JB : 4
     }
-    const wB = {
+    const AB = {
       33071: 0,
       33648: 2
     };
 
-    function xB(BB) {
-      var jB;
-      return null !== (jB = wB[null !== BB && void 0 !== BB ? BB : 10497]) && void 0 !== jB ? jB : 1
+    function tB(BB) {
+      var IB;
+      return null !== (IB = AB[null !== BB && void 0 !== BB ? BB : 10497]) && void 0 !== IB ? IB : 1
     }
 
-    function KB(BB) {
+    function bB(BB) {
       return 9728 === BB.minFilter || 9729 === BB.minFilter
     }
 
-    function CB(BB) {
-      var jB, zB, QB;
-      const nB = Float64Array.from(null !== (jB = BB.scale) && void 0 !== jB ? jB : [1, 1, 1]);
-      return BB.hasCamera && (nB[0] = -1), {
-        translation: Float64Array.from(null !== (zB = BB.translation) && void 0 !== zB ? zB : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (QB = BB.rotation) && void 0 !== QB ? QB : [0, 0, 0, 1]),
-        scale: nB
+    function xB(BB) {
+      var IB, ZB, TB;
+      const JB = Float64Array.from(null !== (IB = BB.scale) && void 0 !== IB ? IB : [1, 1, 1]);
+      return BB.hasCamera && (JB[0] = -1), {
+        translation: Float64Array.from(null !== (ZB = BB.translation) && void 0 !== ZB ? ZB : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (TB = BB.rotation) && void 0 !== TB ? TB : [0, 0, 0, 1]),
+        scale: JB
       }
     }
 
-    function cB(BB, jB) {
+    function EB(BB, IB) {
       let {
-        translation: zB,
-        rotation: QB,
-        scale: nB
+        translation: ZB,
+        rotation: TB,
+        scale: JB
       } = BB;
-      const dB = new Float32Array(16);
-      return (0, SB.e)(nB, 0, QB, 0, zB, 0, dB), jB && (0, SB.q)(dB, jB, 0, dB), dB
+      const oB = new Float32Array(16);
+      return (0, QB.b)(JB, 0, TB, 0, ZB, 0, oB), IB && (0, QB.j)(oB, IB, 0, oB), oB
     }
-    class bB {
-      constructor(BB, jB, zB, QB) {
-        this.model = BB, this.decode = jB, this.fileInfo = zB, this.uniqueRootUrl = QB, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const nB = new Set,
-          dB = (jB, zB) => {
-            const QB = BB.nodes[jB];
-            if (this.parents.has(QB)) throw new EB.l(`/nodes/${jB}: Invalid recursive node hierarchy`);
-            this.parents.set(QB, zB);
-            const IB = null === QB.mesh ? [] : BB.meshes[QB.mesh].primitives,
-              NB = IB.map((BB => {
-                const jB = IB.length > 1;
+    class DB {
+      constructor(BB, IB, ZB, TB) {
+        this.model = BB, this.decode = IB, this.fileInfo = ZB, this.uniqueRootUrl = TB, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const JB = new Set,
+          oB = (IB, ZB) => {
+            const TB = BB.nodes[IB];
+            if (this.parents.has(TB)) throw new wB.m(`/nodes/${IB}: Invalid recursive node hierarchy`);
+            this.parents.set(TB, ZB);
+            const GB = null === TB.mesh ? [] : BB.meshes[TB.mesh].primitives,
+              vB = GB.map((BB => {
+                const IB = GB.length > 1;
                 return {
-                  name: jB ? `${TB(QB)}_primitive${BB.index}` : TB(QB),
-                  node: QB,
+                  name: IB ? `${LB(TB)}_primitive${BB.index}` : LB(TB),
+                  node: TB,
                   primitive: BB,
-                  part: jB,
+                  part: IB,
                   geometry: null
                 }
               }));
-            this.uses.set(QB, NB);
-            const uB = null !== QB.mesh && nB.has(QB.mesh);
-            nB.add(QB.mesh), this.own.set(QB, uB ? [] : NB);
-            for (const BB of QB.children) dB(BB, QB)
+            this.uses.set(TB, vB);
+            const kB = null !== TB.mesh && JB.has(TB.mesh);
+            JB.add(TB.mesh), this.own.set(TB, kB ? [] : vB);
+            for (const BB of TB.children) oB(BB, TB)
           };
-        for (const IB of BB.rootNodes) dB(IB, null);
+        for (const GB of BB.rootNodes) oB(GB, null);
         this.primitives = BB.nodes.flatMap((BB => {
-          var jB;
-          return null !== (jB = this.own.get(BB)) && void 0 !== jB ? jB : []
+          var IB;
+          return null !== (IB = this.own.get(BB)) && void 0 !== IB ? IB : []
         }))
       }
       decodeGeometries() {
         const BB = new Map;
-        return Promise.all(this.primitives.map((async jB => {
+        return Promise.all(this.primitives.map((async IB => {
           const {
-            primitive: zB
-          } = jB, QB = zB.draco;
-          let nB = QB ? BB.get(QB.bufferView.index) : Promise.resolve(VB(zB));
-          nB || (nB = oB(zB, this.decode).then((BB => XB(zB, BB))), BB.set(QB.bufferView.index, nB)), jB.geometry = await nB
+            primitive: ZB
+          } = IB, TB = ZB.draco;
+          let JB = TB ? BB.get(TB.bufferView.index) : Promise.resolve(PB(ZB));
+          JB || (JB = pB(ZB, this.decode).then((BB => rB(ZB, BB))), BB.set(TB.bufferView.index, JB)), IB.geometry = await JB
         })))
       }
       parentOf(BB) {
-        var jB;
-        return null !== (jB = this.parents.get(BB)) && void 0 !== jB ? jB : null
+        var IB;
+        return null !== (IB = this.parents.get(BB)) && void 0 !== IB ? IB : null
       }
       meshesUnder(BB) {
-        const jB = this.model.nodes.filter((BB => this.uses.has(BB)));
-        for (const QB of jB) {
-          const jB = this.uses.get(QB),
-            zB = jB.find((jB => jB.name === BB));
-          if (zB) return 1 === jB.length ? this.subtree(QB) : this.own.get(QB).includes(zB) ? [zB] : []
+        const IB = this.model.nodes.filter((BB => this.uses.has(BB)));
+        for (const TB of IB) {
+          const IB = this.uses.get(TB),
+            ZB = IB.find((IB => IB.name === BB));
+          if (ZB) return 1 === IB.length ? this.subtree(TB) : this.own.get(TB).includes(ZB) ? [ZB] : []
         }
-        const zB = jB.find((jB => 1 !== this.uses.get(jB).length && TB(jB) === BB));
-        return zB ? this.subtree(zB) : null
+        const ZB = IB.find((IB => 1 !== this.uses.get(IB).length && LB(IB) === BB));
+        return ZB ? this.subtree(ZB) : null
       }
       subtree(BB) {
         return [...this.own.get(BB), ...BB.children.flatMap((BB => this.subtree(this.model.nodes[BB])))]
       }
-      worldMatrix(BB, jB, zB) {
-        let QB = cB(CB(jB ? PB : {}), null);
-        const nB = [];
-        for (let IB = BB.part ? BB.node : this.parentOf(BB.node); IB; IB = this.parentOf(IB)) nB.unshift(IB);
-        for (const IB of nB) QB = cB(CB(IB), QB);
-        const dB = CB(BB.part ? {} : BB.node);
-        return void 0 !== zB && dB.scale.fill(zB), cB(dB, QB)
+      worldMatrix(BB, IB, ZB) {
+        let TB = EB(xB(IB ? eB : {}), null);
+        const JB = [];
+        for (let GB = BB.part ? BB.node : this.parentOf(BB.node); GB; GB = this.parentOf(GB)) JB.unshift(GB);
+        for (const GB of JB) TB = EB(xB(GB), TB);
+        const oB = xB(BB.part ? {} : BB.node);
+        return void 0 !== ZB && oB.scale.fill(ZB), EB(oB, TB)
       }
       floats(BB) {
         const {
-          vertexAttributes: jB,
-          vertexCount: zB
+          vertexAttributes: IB,
+          vertexCount: ZB
         } = BB.geometry;
-        return new Map(jB.map((BB => [BB.kind, (0, MB.k)(BB, zB)])))
+        return new Map(IB.map((BB => [BB.kind, (0, sB.f)(BB, ZB)])))
       }
       imageUrl(BB) {
-        return function(BB, jB, zB) {
+        return function(BB, IB, ZB) {
           let {
-            name: QB
-          } = jB;
-          return `data:${BB}${QB}#image${zB}`
+            name: TB
+          } = IB;
+          return `data:${BB}${TB}#image${ZB}`
         }(this.uniqueRootUrl, this.fileInfo, BB)
       }
-      textureDesc(BB, jB) {
-        var zB;
+      textureDesc(BB, IB) {
+        var ZB;
         let {
-          texture: QB,
-          transform: nB
+          texture: TB,
+          transform: JB
         } = BB;
         const {
-          sampler: dB,
-          image: IB
-        } = this.model.textures[QB], {
-          bufferView: NB,
-          mimeType: uB,
-          name: UB
-        } = this.model.images[IB], aB = nB && {
-          ...nB.offset ? {
-            uOffset: nB.offset[0],
-            vOffset: nB.offset[1]
+          sampler: oB,
+          image: GB
+        } = this.model.textures[TB], {
+          bufferView: vB,
+          mimeType: kB,
+          name: cB
+        } = this.model.images[GB], nB = JB && {
+          ...JB.offset ? {
+            uOffset: JB.offset[0],
+            vOffset: JB.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...nB.rotation ? {
-            wAng: -nB.rotation
+          ...JB.rotation ? {
+            wAng: -JB.rotation
           } : {},
-          ...nB.scale ? {
-            uScale: nB.scale[0],
-            vScale: nB.scale[1]
+          ...JB.scale ? {
+            uScale: JB.scale[0],
+            vScale: JB.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(IB),
-          noMipmap: KB(dB),
+          url: this.imageUrl(GB),
+          noMipmap: bB(oB),
           invertY: !1,
-          samplingMode: lB(dB),
+          samplingMode: lB(oB),
           data: {
-            bytes: NB.bytes,
-            mimeType: uB,
-            label: UB,
-            context: `/textures/${QB}`
+            bytes: vB.bytes,
+            mimeType: kB,
+            label: cB,
+            context: `/textures/${TB}`
           },
           sets: {
-            wrapU: xB(dB.wrapS),
-            wrapV: xB(dB.wrapT),
-            ...aB,
-            coordinatesIndex: null !== (zB = null === nB || void 0 === nB ? void 0 : nB.texCoord) && void 0 !== zB ? zB : 0,
-            hasAlpha: jB
+            wrapU: tB(oB.wrapS),
+            wrapV: tB(oB.wrapT),
+            ...nB,
+            coordinatesIndex: null !== (ZB = null === JB || void 0 === JB ? void 0 : JB.texCoord) && void 0 !== ZB ? ZB : 0,
+            hasAlpha: IB
           }
         }
       }
     }
-    async function vB(BB, jB, zB, QB, nB, dB) {
-      let IB = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const NB = function(BB, jB, zB) {
-          return "string" !== typeof jB ? {
+    async function KB(BB, IB, ZB, TB, JB, oB) {
+      let GB = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const vB = function(BB, IB, ZB) {
+          return "string" !== typeof IB ? {
             url: "",
             rootUrl: BB,
-            name: zB()
-          } : jB ? jB.startsWith("data:") ? {
-            url: jB,
+            name: ZB()
+          } : IB ? IB.startsWith("data:") ? {
+            url: IB,
             rootUrl: BB,
             name: ""
           } : BB ? {
-            url: BB + jB,
+            url: BB + IB,
             rootUrl: BB,
-            name: jB
+            name: IB
           } : {
-            url: jB,
-            rootUrl: AB(jB),
-            name: ZB(jB)
+            url: IB,
+            rootUrl: XB(IB),
+            name: mB(IB)
           } : {
             url: BB,
-            rootUrl: AB(BB),
-            name: ZB(BB)
+            rootUrl: XB(BB),
+            name: mB(BB)
           }
-        }(zB, BB, nB),
-        uB = {};
-      jB.addPendingData(uB);
+        }(ZB, BB, JB),
+        kB = {};
+      IB.addPendingData(kB);
       try {
-        const zB = fB(await async function(BB, jB) {
-            return "string" !== typeof jB ? jB : BB.url.startsWith("data:") ? (0, EB.t)(BB.url) : await (0, EB.v)(BB.url)
-          }(NB, BB)),
-          uB = new bB(zB, QB, NB, function(BB, jB) {
+        const ZB = iB(await async function(BB, IB) {
+            return "string" !== typeof IB ? IB : BB.url.startsWith("data:") ? (0, wB.u)(BB.url) : await (0, wB.w)(BB.url)
+          }(vB, BB)),
+          kB = new DB(ZB, TB, vB, function(BB, IB) {
             let {
-              rootUrl: zB,
-              name: QB
+              rootUrl: ZB,
+              name: TB
             } = BB;
-            return !zB.startsWith("file:") && QB ? zB : `${zB}${jB()}/`
-          }(NB, nB));
-        return await dB(uB), jB.importedMeshesFiles && (jB.loadingPluginName = "sF", IB && jB.importedMeshesFiles.push(NB.url)), uB
+            return !ZB.startsWith("file:") && TB ? ZB : `${ZB}${IB()}/`
+          }(vB, JB));
+        return await oB(kB), IB.importedMeshesFiles && (IB.loadingPluginName = "uH", GB && IB.importedMeshesFiles.push(vB.url)), kB
       } finally {
-        jB.removePendingData(uB)
+        IB.removePendingData(kB)
       }
     }
-    var RB = zB(37687),
-      OB = zB(37551),
-      Bj = zB(37971);
+    var VB = ZB(37650),
+      SB = ZB(37495),
+      BI = ZB(37947);
 
-    function jj(BB) {
+    function II(BB) {
       if (null === BB || void 0 === BB || !BB.min || !BB.max) return null;
-      const [jB, zB, QB] = BB.min, [nB, dB, IB] = BB.max, {
-        BoundingInfo: NB,
-        KJ: uB
-      } = (0, RB.e)();
-      return new NB(new uB(jB, zB, QB), new uB(nB, dB, IB))
+      const [IB, ZB, TB] = BB.min, [JB, oB, GB] = BB.max, {
+        BoundingInfo: vB,
+        rN: kB
+      } = (0, VB.e)();
+      return new vB(new kB(IB, ZB, TB), new kB(JB, oB, GB))
     }
 
-    function zj(BB) {
-      (0, OB.e)(BB) || (BB.geometry && BB.geometry.useBoundingInfoFromGeometry ? BB._updateBoundingInfo() : BB.refreshBoundingInfo(!0, !0))
+    function ZI(BB) {
+      (0, SB.d)(BB) || (BB.geometry && BB.geometry.useBoundingInfoFromGeometry ? BB._updateBoundingInfo() : BB.refreshBoundingInfo(!0, !0))
     }
-    class Qj {
-      constructor(BB, jB) {
-        this.ny = BB, this.decode = jB, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class TI {
+      constructor(BB, IB) {
+        this.lg = BB, this.decode = IB, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
       viewBytes(BB) {
-        let jB = this.viewData.get(BB.index);
-        return jB || (jB = this.bufferData.then((() => BB.bytes)), this.viewData.set(BB.index, jB)), jB
+        let IB = this.viewData.get(BB.index);
+        return IB || (IB = this.bufferData.then((() => BB.bytes)), this.viewData.set(BB.index, IB)), IB
       }
       viewBuffer(BB) {
-        let jB = this.viewBuffers.get(BB.index);
-        return jB || (jB = this.viewBytes(BB).then((BB => new((0, RB.e)().oJ)(this.ny.wJ(), BB, !1))), this.viewBuffers.set(BB.index, jB)), jB
+        let IB = this.viewBuffers.get(BB.index);
+        return IB || (IB = this.viewBytes(BB).then((BB => new((0, VB.e)().UN)(this.lg.PN(), BB, !1))), this.viewBuffers.set(BB.index, IB)), IB
       }
-      vertexBuffer(BB, jB) {
+      vertexBuffer(BB, IB) {
         const {
-          kind: zB,
-          data: QB
-        } = jB, nB = `${BB.index}:${zB}`;
-        let dB = this.vertexBuffers.get(nB);
-        if (!dB) {
-          const IB = BB.bufferView;
-          dB = IB ? this.viewBuffer(IB).then((BB => this.layoutVertexBuffer(BB, jB))) : Promise.resolve(QB).then((BB => new((0, RB.e)().VertexBuffer)(this.ny.wJ(), BB, zB, !1))), this.vertexBuffers.set(nB, dB)
+          kind: ZB,
+          data: TB
+        } = IB, JB = `${BB.index}:${ZB}`;
+        let oB = this.vertexBuffers.get(JB);
+        if (!oB) {
+          const GB = BB.bufferView;
+          oB = GB ? this.viewBuffer(GB).then((BB => this.layoutVertexBuffer(BB, IB))) : Promise.resolve(TB).then((BB => new((0, VB.e)().VertexBuffer)(this.lg.PN(), BB, ZB, !1))), this.vertexBuffers.set(JB, oB)
         }
-        return dB
+        return oB
       }
-      layoutVertexBuffer(BB, jB) {
+      layoutVertexBuffer(BB, IB) {
         let {
-          kind: zB,
-          offset: QB,
-          stride: nB,
-          components: dB,
-          glType: IB,
-          isNormalized: NB
-        } = jB;
-        const uB = this.ny.wJ();
-        return new((0, RB.e)().VertexBuffer)(uB, BB, zB, !1, void 0, nB, void 0, QB, dB, IB, NB, !0, void 0, !0)
+          kind: ZB,
+          offset: TB,
+          stride: JB,
+          components: oB,
+          glType: GB,
+          isNormalized: vB
+        } = IB;
+        const kB = this.lg.PN();
+        return new((0, VB.e)().VertexBuffer)(kB, BB, ZB, !1, void 0, JB, void 0, TB, oB, GB, vB, !0, void 0, !0)
       }
-      load(BB, jB, zB) {
-        const QB = (0, OB.e)(zB),
-          nB = BB => {
-            QB || (zB._delayInfo = zB._delayInfo || [], -1 === zB._delayInfo.indexOf(BB) && zB._delayInfo.push(BB))
+      load(BB, IB, ZB) {
+        const TB = (0, SB.d)(ZB),
+          JB = BB => {
+            TB || (ZB._delayInfo = ZB._delayInfo || [], -1 === ZB._delayInfo.indexOf(BB) && ZB._delayInfo.push(BB))
           },
-          dB = jB.draco;
-        if (dB) {
-          for (const BB in dB.attributeIds) nB(BB);
-          let IB = this.dracoGeometry.get(dB.bufferView.index);
-          return IB || (IB = this.viewBytes(dB.bufferView).then((async () => {
-            let nB;
+          oB = IB.draco;
+        if (oB) {
+          for (const BB in oB.attributeIds) JB(BB);
+          let GB = this.dracoGeometry.get(oB.bufferView.index);
+          return GB || (GB = this.viewBytes(oB.bufferView).then((async () => {
+            let JB;
             try {
-              nB = await oB(jB, this.decode)
-            } catch (uB) {
-              throw new EB.l(`${BB}: ${uB instanceof Error?uB.message:String(uB)}`)
+              JB = await pB(IB, this.decode)
+            } catch (kB) {
+              throw new wB.m(`${BB}: ${kB instanceof Error?kB.message:String(kB)}`)
             }
-            const dB = XB(jB, nB);
-            if (QB) return dB;
-            const IB = jj(jB.position),
-              NB = new((0, RB.e)().MirroredGeometry)(zB.name, this.ny);
-            IB && (NB._boundingInfo = IB, NB.useBoundingInfoFromGeometry = !0), dB.indexData && NB.setIndices(dB.indexData);
-            for (const BB of dB.vertexAttributes) NB.setVerticesBuffer(this.layoutVertexBuffer(BB.data, BB), dB.vertexCount);
-            return NB.link(dB), NB
-          })), this.dracoGeometry.set(dB.bufferView.index, IB)), IB
+            const oB = rB(IB, JB);
+            if (TB) return oB;
+            const GB = II(IB.position),
+              vB = new((0, VB.e)().MirroredGeometry)(ZB.name, this.lg);
+            GB && (vB._boundingInfo = GB, vB.useBoundingInfoFromGeometry = !0), oB.indexData && vB.setIndices(oB.indexData);
+            for (const BB of oB.vertexAttributes) vB.setVerticesBuffer(this.layoutVertexBuffer(BB.data, BB), oB.vertexCount);
+            return vB.link(oB), vB
+          })), this.dracoGeometry.set(oB.bufferView.index, GB)), GB
         }
-        const IB = [],
-          NB = VB(jB);
-        if (QB) return zB.isUnIndexed = !NB.indexData, zB.hasVertexAlpha = (0, Bj.c)(jB), Promise.resolve(NB);
-        const uB = new((0, RB.e)().MirroredGeometry)(zB.name, this.ny),
+        const GB = [],
+          vB = PB(IB);
+        if (TB) return ZB.isUnIndexed = !vB.indexData, ZB.hasVertexAlpha = (0, BI.c)(IB), Promise.resolve(vB);
+        const kB = new((0, VB.e)().MirroredGeometry)(ZB.name, this.lg),
           {
-            indexData: UB
-          } = NB;
-        UB ? IB.push(this.viewBytes(jB.indices.bufferView).then((() => {
-          uB.setIndices(UB)
-        }))) : zB.isUnIndexed = !0;
-        for (const [aB, {
-            kind: pB,
-            accessor: rB
-          }] of jB.attributes.entries()) nB(pB), IB.push(this.vertexBuffer(rB, NB.vertexAttributes[aB]).then((BB => {
+            indexData: cB
+          } = vB;
+        cB ? GB.push(this.viewBytes(IB.indices.bufferView).then((() => {
+          kB.setIndices(cB)
+        }))) : ZB.isUnIndexed = !0;
+        for (const [nB, {
+            kind: hB,
+            accessor: zB
+          }] of IB.attributes.entries()) JB(hB), GB.push(this.vertexBuffer(zB, vB.vertexAttributes[nB]).then((BB => {
           if ("position" === BB.getKind()) {
-            const BB = jj(rB);
-            BB && (uB._boundingInfo = BB, uB.useBoundingInfoFromGeometry = !0)
+            const BB = II(zB);
+            BB && (kB._boundingInfo = BB, kB.useBoundingInfoFromGeometry = !0)
           }
-          uB.setVerticesBuffer(BB, NB.vertexCount)
+          kB.setVerticesBuffer(BB, vB.vertexCount)
         })));
-        return (0, Bj.c)(jB) && (zB.hasVertexAlpha = !0), Promise.all(IB).then((() => (uB.link(NB), uB)))
+        return (0, BI.c)(IB) && (ZB.hasVertexAlpha = !0), Promise.all(GB).then((() => (kB.link(vB), kB)))
       }
     }
-    var nj, dj = zB(37430),
-      Ij = zB(37166),
-      Nj = zB(37983),
-      uj = zB(37365),
-      Uj = zB(37408),
-      aj = zB(2863),
-      pj = zB(37394);
+    var JI, oI = ZB(37359),
+      GI = ZB(37113),
+      vI = ZB(37956),
+      kI = ZB(37296),
+      cI = ZB(37336),
+      nI = ZB(2912),
+      hI = ZB(37328);
 
-    function rj(BB, jB) {
+    function zI(BB, IB) {
       BB.metadata = BB.metadata || {};
-      const zB = BB._internalMetadata = BB._internalMetadata || {},
-        QB = zB.sF = zB.sF || {};
-      (QB.pointers = QB.pointers || []).push(jB)
+      const ZB = BB._internalMetadata = BB._internalMetadata || {},
+        TB = ZB.uH = ZB.uH || {};
+      (TB.pointers = TB.pointers || []).push(IB)
     }
 
-    function sj(BB, jB) {
-      if (jB && Object.keys(jB).length > 0) {
-        const zB = BB.metadata = BB.metadata || {};
-        (zB.sF = zB.sF || {}).extras = jB
+    function FI(BB, IB) {
+      if (IB && Object.keys(IB).length > 0) {
+        const ZB = BB.metadata = BB.metadata || {};
+        (ZB.uH = ZB.uH || {}).extras = IB
       }
     }
 
-    function Jj(BB, jB) {
-      jB.position = BB.translation ? Ij.KJ.FromArray(BB.translation) : Ij.KJ.Zero(), jB.rotationQuaternion = BB.rotation ? Ij.Quaternion.FromArray(BB.rotation) : Ij.Quaternion.Identity(), jB.pp = BB.scale ? Ij.KJ.FromArray(BB.scale) : Ij.KJ.One()
+    function NI(BB, IB) {
+      IB.position = BB.translation ? GI.rN.FromArray(BB.translation) : GI.rN.Zero(), IB.rotationQuaternion = BB.rotation ? GI.Quaternion.FromArray(BB.rotation) : GI.Quaternion.Identity(), IB.ek = BB.scale ? GI.rN.FromArray(BB.scale) : GI.rN.One()
     }
-    class mj {
-      constructor(BB, jB) {
-        if (this.ny = BB, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, jB) {
-          const jB = BB.wJ(),
-            zB = BB.pY.add((() => {
+    class gI {
+      constructor(BB, IB) {
+        if (this.lg = BB, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, IB) {
+          const IB = BB.PN(),
+            ZB = BB.oR.add((() => {
               this.dispose()
             })),
-            QB = jB.lJ.add((() => {
+            TB = IB.jN.add((() => {
               for (const BB of [...this.geometries, ...this.meshes, ...this.textures]) BB._rebuild()
             }));
           this.release = () => {
-            BB.pY.remove(zB), jB.lJ.remove(QB)
+            BB.oR.remove(ZB), IB.jN.remove(TB)
           }
         }
       }
@@ -827,266 +827,266 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const BB of this.meshes) this.ny.IQB(BB);
-          for (const BB of this.materials) this.ny.addMaterial(BB);
-          for (const BB of this.geometries) this.ny.addGeometry(BB);
-          for (const BB of this.transformNodes) this.ny.addTransformNode(BB);
-          for (const BB of this.textures) this.ny.addTexture(BB)
+          for (const BB of this.meshes) this.lg.jTB(BB);
+          for (const BB of this.materials) this.lg.addMaterial(BB);
+          for (const BB of this.geometries) this.lg.addGeometry(BB);
+          for (const BB of this.transformNodes) this.lg.addTransformNode(BB);
+          for (const BB of this.textures) this.lg.addTexture(BB)
         }
       }
       dispose() {
         var BB;
-        for (const jB of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const BB of jB.slice()) BB.dispose();
-          jB.length = 0
+        for (const IB of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const BB of IB.slice()) BB.dispose();
+          IB.length = 0
         }
         null === (BB = this.release) || void 0 === BB || BB.call(this), this.release = null
       }
     }
-    class yj {
-      constructor(BB, jB, zB, QB, nB, dB, IB) {
-        this.asset = BB, this.ny = jB, this.tree = zB, this.geometryData = nB, this.materials = dB, this.lite = IB, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = QB ? zB : null
+    class qI {
+      constructor(BB, IB, ZB, TB, JB, oB, GB) {
+        this.asset = BB, this.lg = IB, this.tree = ZB, this.geometryData = JB, this.materials = oB, this.lite = GB, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = TB ? ZB : null
       }
       create(BB) {
         if (this.lite) return BB();
-        const jB = this.ny;
-        jB._blockEntityCollection = !!this.container;
+        const IB = this.lg;
+        IB._blockEntityCollection = !!this.container;
         try {
-          const jB = BB();
-          return this.container && (jB._parentContainer = this.container), jB
+          const IB = BB();
+          return this.container && (IB._parentContainer = this.container), IB
         } finally {
-          jB._blockEntityCollection = !1
+          IB._blockEntityCollection = !1
         }
       }
-      node(BB, jB) {
-        return this.create((() => this.lite ? jB ? (0, Nj.f)(this.lite, BB) : (0, Nj.p)(this.lite, BB) : jB ? new((0, RB.e)().Mesh)(BB, this.ny) : new((0, RB.e)().TransformNode)(BB, this.ny)))
+      node(BB, IB) {
+        return this.create((() => this.lite ? IB ? (0, vI.e)(this.lite, BB) : (0, vI.p)(this.lite, BB) : IB ? new((0, VB.e)().Mesh)(BB, this.lg) : new((0, VB.e)().TransformNode)(BB, this.lg)))
       }
       async load() {
         var BB;
         this.asset.model.json.nodes && this.createRoot();
-        const jB = this.lite ? null : this.ny,
-          zB = null !== (BB = null === jB || void 0 === jB ? void 0 : jB.blockMaterialDirtyMechanism) && void 0 !== BB && BB;
-        let QB;
-        jB && (jB.blockMaterialDirtyMechanism = !0);
+        const IB = this.lite ? null : this.lg,
+          ZB = null !== (BB = null === IB || void 0 === IB ? void 0 : IB.blockMaterialDirtyMechanism) && void 0 !== BB && BB;
+        let TB;
+        IB && (IB.blockMaterialDirtyMechanism = !0);
         try {
-          QB = this.loadScene()
+          TB = this.loadScene()
         } finally {
-          null === jB || void 0 === jB || jB._forceBlockMaterialDirtyMechanism(zB)
+          null === IB || void 0 === IB || IB._forceBlockMaterialDirtyMechanism(ZB)
         }
-        await QB;
+        await TB;
         const {
-          root: nB,
-          tree: dB
+          root: JB,
+          tree: oB
         } = this;
-        nB && (nB.mH(!0), dB.meshes.push(nB), dB.rootNodes.push(nB));
-        for (const NB of this.asset.model.nodes) {
-          const BB = this.nodeObjects.get(NB.index);
-          BB && ["TransformNode", "LiteNode"].includes(BB.getClassName()) && dB.transformNodes.push(BB);
-          for (const jB of null !== (IB = this.nodePrimitives.get(NB.index)) && void 0 !== IB ? IB : []) {
-            var IB;
-            dB.meshes.push(jB);
-            const BB = jB.geometry;
-            BB && !dB.geometries.includes(BB) && dB.geometries.push(BB)
+        JB && (JB.qY(!0), oB.meshes.push(JB), oB.rootNodes.push(JB));
+        for (const vB of this.asset.model.nodes) {
+          const BB = this.nodeObjects.get(vB.index);
+          BB && ["TransformNode", "LiteNode"].includes(BB.getClassName()) && oB.transformNodes.push(BB);
+          for (const IB of null !== (GB = this.nodePrimitives.get(vB.index)) && void 0 !== GB ? GB : []) {
+            var GB;
+            oB.meshes.push(IB);
+            const BB = IB.geometry;
+            BB && !oB.geometries.includes(BB) && oB.geometries.push(BB)
           }
         }
       }
       createRoot() {
         const BB = this.node("__root__", !0);
-        this.root = BB, BB.mH(!1), this.ny.useRightHandedSystem || Jj(PB, BB)
+        this.root = BB, BB.qY(!1), this.lg.useRightHandedSystem || NI(eB, BB)
       }
       loadScene() {
         const BB = [];
-        for (const jB of this.asset.model.rootNodes) BB.push(this.loadNode(this.asset.model.nodes[jB], (BB => {
+        for (const IB of this.asset.model.rootNodes) BB.push(this.loadNode(this.asset.model.nodes[IB], (BB => {
           BB.parent = this.root
         })));
         return BB.push(Promise.resolve()), Promise.all(BB).then((() => {}))
       }
-      loadNode(BB, jB) {
-        const zB = `/nodes/${BB.index}`,
-          QB = [],
-          nB = nB => {
-            if (rj(nB, zB), Jj(BB, nB), BB.hasCamera && !this.ny.useRightHandedSystem) {
+      loadNode(BB, IB) {
+        const ZB = `/nodes/${BB.index}`,
+          TB = [],
+          JB = JB => {
+            if (zI(JB, ZB), NI(BB, JB), BB.hasCamera && !this.lg.useRightHandedSystem) {
               const {
-                pp: BB
-              } = nB;
+                ek: BB
+              } = JB;
               BB.set(-1, BB.y, BB.z)
             }
-            for (const jB of BB.children) QB.push(this.loadNode(this.asset.model.nodes[jB], (BB => {
-              BB.parent = nB
+            for (const IB of BB.children) TB.push(this.loadNode(this.asset.model.nodes[IB], (BB => {
+              BB.parent = JB
             })));
-            (zB => {
-              sj(zB, BB.extras), jB(zB)
-            })(nB)
+            (ZB => {
+              FI(ZB, BB.extras), IB(ZB)
+            })(JB)
           };
         if (null === BB.mesh) {
-          const jB = this.node(TB(BB), !1);
-          this.nodeObjects.set(BB.index, jB), nB(jB)
+          const IB = this.node(LB(BB), !1);
+          this.nodeObjects.set(BB.index, IB), JB(IB)
         } else {
-          const jB = this.asset.model.meshes[BB.mesh];
-          QB.push(this.loadMesh(`/meshes/${jB.index}`, BB, jB, nB))
+          const IB = this.asset.model.meshes[BB.mesh];
+          TB.push(this.loadMesh(`/meshes/${IB.index}`, BB, IB, JB))
         }
-        return Promise.all(QB).then((() => {
-          for (const zB of null !== (jB = this.nodePrimitives.get(BB.index)) && void 0 !== jB ? jB : []) {
-            var jB;
-            zj(zB)
+        return Promise.all(TB).then((() => {
+          for (const ZB of null !== (IB = this.nodePrimitives.get(BB.index)) && void 0 !== IB ? IB : []) {
+            var IB;
+            ZI(ZB)
           }
           return this.nodeObjects.get(BB.index)
         }))
       }
-      loadMesh(BB, jB, zB, QB) {
-        const nB = [],
-          dB = TB(jB);
-        if (1 === zB.primitives.length) {
-          const QB = zB.primitives[0];
-          nB.push(this.loadPrimitive(`${BB}/primitives/${QB.index}`, dB, QB, (BB => {
-            this.nodeObjects.set(jB.index, BB), this.nodePrimitives.set(jB.index, [BB])
+      loadMesh(BB, IB, ZB, TB) {
+        const JB = [],
+          oB = LB(IB);
+        if (1 === ZB.primitives.length) {
+          const TB = ZB.primitives[0];
+          JB.push(this.loadPrimitive(`${BB}/primitives/${TB.index}`, oB, TB, (BB => {
+            this.nodeObjects.set(IB.index, BB), this.nodePrimitives.set(IB.index, [BB])
           })))
         } else {
-          const QB = this.node(dB, !1);
-          this.nodeObjects.set(jB.index, QB);
-          const IB = [];
-          this.nodePrimitives.set(jB.index, IB);
-          for (const jB of zB.primitives) nB.push(this.loadPrimitive(`${BB}/primitives/${jB.index}`, `${dB}_primitive${jB.index}`, jB, (BB => {
-            BB.parent = QB, IB.push(BB)
+          const TB = this.node(oB, !1);
+          this.nodeObjects.set(IB.index, TB);
+          const GB = [];
+          this.nodePrimitives.set(IB.index, GB);
+          for (const IB of ZB.primitives) JB.push(this.loadPrimitive(`${BB}/primitives/${IB.index}`, `${oB}_primitive${IB.index}`, IB, (BB => {
+            BB.parent = TB, GB.push(BB)
           })))
         }
-        const IB = this.nodeObjects.get(jB.index);
-        return QB(IB), Promise.all(nB).then((() => IB))
+        const GB = this.nodeObjects.get(IB.index);
+        return TB(GB), Promise.all(JB).then((() => GB))
       }
-      loadPrimitive(BB, jB, zB, QB) {
-        const nB = [],
-          dB = this.node(jB, !0);
-        if (dB.sideOrientation = this.ny.useRightHandedSystem ? uj.e.CounterClockWiseSideOrientation : uj.e.ClockWiseSideOrientation, nB.push(this.geometryData.load(BB, zB, dB).then((BB => {
-            if ((0, OB.e)(dB)) {
-              var jB, zB;
-              const QB = BB;
-              dB.replaceModel(QB, Int32Array.of(0, null !== (jB = null === (zB = QB.indexData) || void 0 === zB ? void 0 : zB.length) && void 0 !== jB ? jB : QB.vertexCount, 0, QB.vertexCount))
-            } else this.create((() => (BB.applyToMesh(dB), BB)))
+      loadPrimitive(BB, IB, ZB, TB) {
+        const JB = [],
+          oB = this.node(IB, !0);
+        if (oB.sideOrientation = this.lg.useRightHandedSystem ? kI.d.CounterClockWiseSideOrientation : kI.d.ClockWiseSideOrientation, JB.push(this.geometryData.load(BB, ZB, oB).then((BB => {
+            if ((0, SB.d)(oB)) {
+              var IB, ZB;
+              const TB = BB;
+              oB.replaceModel(TB, Int32Array.of(0, null !== (IB = null === (ZB = TB.indexData) || void 0 === ZB ? void 0 : ZB.length) && void 0 !== IB ? IB : TB.vertexCount, 0, TB.vertexCount))
+            } else this.create((() => (BB.applyToMesh(oB), BB)))
           }))), this.materials) {
-          const BB = 0 === zB.mode ? uj.e.PointListDrawMode : uj.e.TriangleFillMode,
-            jB = null === zB.material ? null : this.asset.model.materials[zB.material];
-          nB.push(this.loadMaterial(jB, BB, (BB => {
-            dB.material = BB
+          const BB = 0 === ZB.mode ? kI.d.PointListDrawMode : kI.d.TriangleFillMode,
+            IB = null === ZB.material ? null : this.asset.model.materials[ZB.material];
+          JB.push(this.loadMaterial(IB, BB, (BB => {
+            oB.material = BB
           })))
         }
-        return rj(dB, BB), QB(dB), Promise.all(nB).then((() => dB))
+        return zI(oB, BB), TB(oB), Promise.all(JB).then((() => oB))
       }
-      loadMaterial(BB, jB, zB) {
-        var QB;
-        const nB = `${null!==(QB=null===BB||void 0===BB?void 0:BB.index)&&void 0!==QB?QB:"default"}:${jB}`;
-        let dB = this.materialData.get(nB);
-        return dB || (dB = this.createMaterial(BB, jB), this.materialData.set(nB, dB)), zB(dB.material), dB.promise
+      loadMaterial(BB, IB, ZB) {
+        var TB;
+        const JB = `${null!==(TB=null===BB||void 0===BB?void 0:BB.index)&&void 0!==TB?TB:"default"}:${IB}`;
+        let oB = this.materialData.get(JB);
+        return oB || (oB = this.createMaterial(BB, IB), this.materialData.set(JB, oB)), ZB(oB.material), oB.promise
       }
-      createMaterial(BB, jB) {
-        const zB = BB ? BB.name || `material${BB.index}` : "__GLTFLoader._default",
+      createMaterial(BB, IB) {
+        const ZB = BB ? BB.name || `material${BB.index}` : "__GLTFLoader._default",
           {
-            style: QB,
-            unlit: nB
+            style: TB,
+            unlit: JB
           } = this.materials;
-        let dB;
-        const IB = this.create((() => {
-          const IB = (0, pj.d)({
-            name: zB,
-            ny: this.ny,
+        let oB;
+        const GB = this.create((() => {
+          const GB = (0, hI.d)({
+            name: ZB,
+            lg: this.lg,
             sets: {
-              ...(0, Bj.b)(this.asset, BB, QB, nB),
-              fillMode: jB
+              ...(0, BI.b)(this.asset, BB, TB, JB),
+              fillMode: IB
             },
             unrendered: !0
           });
-          return dB = IB.model, IB.mirror
+          return oB = GB.model, GB.mirror
         }));
-        let NB = Promise.resolve();
+        let vB = Promise.resolve();
         if (BB) {
-          const jB = `/materials/${BB.index}`,
-            QB = dB.diffuseTexture;
-          if (QB && !QB.mirror) NB = new Promise((BB => setTimeout(BB)));
-          else if (QB) {
-            const nB = QB.mirror;
-            nB._parentContainer = this.container, nB.name = `${zB} (Base Color)`, rj(nB, `${jB}${BB.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(nB), NB = (0, Uj.p)(QB)
+          const IB = `/materials/${BB.index}`,
+            TB = oB.diffuseTexture;
+          if (TB && !TB.mirror) vB = new Promise((BB => setTimeout(BB)));
+          else if (TB) {
+            const JB = TB.mirror;
+            JB._parentContainer = this.container, JB.name = `${ZB} (Base Color)`, zI(JB, `${IB}${BB.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(JB), vB = (0, cI.v)(TB)
           }
-          sj(IB, BB.extras), rj(IB, jB)
+          FI(GB, BB.extras), zI(GB, IB)
         }
-        return this.tree.materials.push(IB), {
-          material: IB,
-          promise: NB
+        return this.tree.materials.push(GB), {
+          material: GB,
+          promise: vB
         }
       }
     }
 
-    function kj() {
-      dj.c.dracoDecodes = mB.decodes, dj.c.dracoWorkersStarted = mB.workersStarted, dj.c.dracoMostWorkers = mB.mostWorkers
+    function yI() {
+      oI.e.dracoDecodes = gB.decodes, oI.e.dracoWorkersStarted = gB.workersStarted, oI.e.dracoMostWorkers = gB.mostWorkers
     }
-    async function Gj(BB, jB, zB, nB, dB) {
+    async function UI(BB, IB, ZB, JB, oB) {
       try {
-        return await async function(BB, jB, zB, nB, dB, IB) {
-          var NB;
-          let uB;
-          const UB = null === (NB = (0, aj.g)()) || void 0 === NB ? void 0 : NB.pm,
-            aB = null !== UB && void 0 !== UB && UB.rm && jB === UB.aY() ? UB : null,
-            pB = dB && !aB;
-          return await vB(BB, jB, zB, nB, QB.d, (BB => (uB = new mj(jB, pB), new yj(BB, jB, uB, pB, new Qj(jB, nB), IB, aB).load())), !dB), uB
-        }(BB, jB, zB, tB, nB, dB)
+        return await async function(BB, IB, ZB, JB, oB, GB) {
+          var vB;
+          let kB;
+          const cB = null === (vB = (0, nI.h)()) || void 0 === vB ? void 0 : vB.Ig,
+            nB = null !== cB && void 0 !== cB && cB.Zg && IB === cB.JR() ? cB : null,
+            hB = oB && !nB;
+          return await KB(BB, IB, ZB, JB, TB.d, (BB => (kB = new gI(IB, hB), new qI(BB, IB, kB, hB, new TI(IB, JB), GB, nB).load())), !oB), kB
+        }(BB, IB, ZB, CB, JB, oB)
       } finally {
-        kj()
+        yI()
       }
     }
-    async function Lj(BB, jB, zB, nB) {
+    async function WI(BB, IB, ZB, JB) {
       try {
-        return await vB(BB, jB, zB, tB, QB.d, (BB => nB(BB, new Qj(jB, tB))))
+        return await KB(BB, IB, ZB, CB, TB.d, (BB => JB(BB, new TI(IB, CB))))
       } finally {
-        kj()
+        yI()
       }
     }
-    nj = nB.e, aB || (aB = {
-      scriptUrl: new URL(nj.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(nj.wasmBinaryUrl, location.href).href
+    JI = JB.c, nB || (nB = {
+      scriptUrl: new URL(JI.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(JI.wasmBinaryUrl, location.href).href
     })
   },
-  41598: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => IB
+  41530: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => GB
     });
-    var QB = zB(145),
-      nB = zB(1126);
+    var TB = ZB(140),
+      JB = ZB(1131);
 
-    function dB(BB) {
-      return (0, QB.isDiscordClient)() ? `https://${nB.e.discordDomain}/${BB.href}` : BB.href
+    function oB(BB) {
+      return (0, TB.isDiscordClient)() ? `https://${JB.e.discordDomain}/${BB.href}` : BB.href
     }
-    const IB = {
-      scriptUrl: dB(new zB.U(zB(41604))),
-      wasmBinaryUrl: dB(new zB.U(zB(41608)))
+    const GB = {
+      scriptUrl: oB(new ZB.U(ZB(41539))),
+      wasmBinaryUrl: oB(new ZB.U(ZB(41544)))
     }
   },
-  36327: BB => {
-    BB.exports = function(BB, jB, zB, QB) {
-      var nB = self || window;
+  36267: BB => {
+    BB.exports = function(BB, IB, ZB, TB) {
+      var JB = self || window;
       try {
         try {
-          var dB;
+          var oB;
           try {
-            dB = new nB.Blob([BB])
-          } catch (UB) {
-            (dB = new(nB.BlobBuilder || nB.WebKitBlobBuilder || nB.MozBlobBuilder || nB.MSBlobBuilder)).append(BB), dB = dB.getBlob()
+            oB = new JB.Blob([BB])
+          } catch (cB) {
+            (oB = new(JB.BlobBuilder || JB.WebKitBlobBuilder || JB.MozBlobBuilder || JB.MSBlobBuilder)).append(BB), oB = oB.getBlob()
           }
-          var IB = nB.URL || nB.webkitURL,
-            NB = IB.createObjectURL(dB),
-            uB = new nB[jB](NB, zB);
-          return IB.revokeObjectURL(NB), uB
-        } catch (UB) {
-          return new nB[jB]("data:application/javascript,".concat(encodeURIComponent(BB)), zB)
+          var GB = JB.URL || JB.webkitURL,
+            vB = GB.createObjectURL(oB),
+            kB = new JB[IB](vB, ZB);
+          return GB.revokeObjectURL(vB), kB
+        } catch (cB) {
+          return new JB[IB]("data:application/javascript,".concat(encodeURIComponent(BB)), ZB)
         }
-      } catch (UB) {
-        if (!QB) throw Error("Inline worker is not supported");
-        return new nB[jB](QB, zB)
+      } catch (cB) {
+        if (!TB) throw Error("Inline worker is not supported");
+        return new JB[IB](TB, ZB)
       }
     }
   },
-  41608: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  41539: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41604: (BB, jB, zB) => {
-    BB.exports = zB.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  41544: (BB, IB, ZB) => {
+    BB.exports = ZB.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);

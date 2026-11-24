@@ -1,27 +1,27 @@
 export const id = 365;
 export const ids = [365];
 export const modules = {
-  61520: (BB, jB, zB) => {
-    function QB(BB, jB) {
-      for (const zB of BB._frameGraph._tasks)
-        if (zB?._config && zB._colorAttachment && (zB._config.rt === jB.scRT || zB._config.rst === jB.scRT)) return zB
+  61408: (BB, IB, ZB) => {
+    function TB(BB, IB) {
+      for (const ZB of BB._frameGraph._tasks)
+        if (ZB?._config && ZB._colorAttachment && (ZB._config.rt === IB.scRT || ZB._config.rst === IB.scRT)) return ZB
     }
 
-    function nB(BB, jB) {
-      const zB = BB._renderingContexts[BB._renderingContexts.length - 1];
-      if (!zB?._frameGraph) return;
-      const nB = QB(jB, BB);
-      if (!nB) return;
-      if (1 === BB.msaaSamples) return void(nB._config.clr = !1);
-      const dB = nB.enabled;
-      nB._config.clr = !0, nB.enabled = !1, jB._beforeRender.unshift((() => {
-        const jB = QB(zB, BB),
-          IB = jB?._config.rst === BB.scRT && jB._config.rt._colorView;
-        nB.enabled = !!IB && dB, nB._config.clr = !IB, IB && (nB._colorAttachment.view = IB)
+    function JB(BB, IB) {
+      const ZB = BB._renderingContexts[BB._renderingContexts.length - 1];
+      if (!ZB?._frameGraph) return;
+      const JB = TB(IB, BB);
+      if (!JB) return;
+      if (1 === BB.msaaSamples) return void(JB._config.clr = !1);
+      const oB = JB.enabled;
+      JB._config.clr = !0, JB.enabled = !1, IB._beforeRender.unshift((() => {
+        const IB = TB(ZB, BB),
+          GB = IB?._config.rst === BB.scRT && IB._config.rt._colorView;
+        JB.enabled = !!GB && oB, JB._config.clr = !GB, GB && (JB._colorAttachment.view = GB)
       }))
     }
-    zB.r(jB), zB.d(jB, {
-      configureSwapchainOverlayScene: () => nB
+    ZB.r(IB), ZB.d(IB, {
+      configureSwapchainOverlayScene: () => JB
     })
   }
 };

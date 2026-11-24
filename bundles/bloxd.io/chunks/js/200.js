@@ -1,170 +1,170 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  39203: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => NB,
-      h: () => dB
+  39182: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => vB,
+      f: () => oB
     });
-    var QB = zB(4169);
-    let nB = null;
+    var TB = ZB(4267);
+    let JB = null;
 
-    function dB(BB) {
-      return null !== nB && BB === nB
+    function oB(BB) {
+      return null !== JB && BB === JB
     }
 
-    function IB() {
-      this.oW = !1, this.stopPropagation = !1, this.DW = !1, this.disabled = !1
+    function GB() {
+      this.ZD = !1, this.stopPropagation = !1, this.nD = !1, this.disabled = !1
     }
-    class NB {
-      constructor(BB, jB) {
+    class vB {
+      constructor(BB, IB) {
         this.version = "0.7.0";
-        var zB = Object.assign({}, new IB, jB || {});
-        this.element = BB || document, this.oW = !!zB.oW, this.stopPropagation = !!zB.stopPropagation, this.DW = !!zB.DW, this.disabled = !!zB.disabled, this.filterEvents = (BB, jB) => !0, this.ignoreEvent = BB => !1, this.down = new QB.EventEmitter, this.up = new QB.EventEmitter, this.state = {}, this.FW = {
+        var ZB = Object.assign({}, new GB, IB || {});
+        this.element = BB || document, this.ZD = !!ZB.ZD, this.stopPropagation = !!ZB.stopPropagation, this.nD = !!ZB.nD, this.disabled = !!ZB.disabled, this.filterEvents = (BB, IB) => !0, this.ignoreEvent = BB => !1, this.down = new TB.EventEmitter, this.up = new TB.EventEmitter, this.state = {}, this.zD = {
           dx: 0,
           dy: 0,
-          RBB: 0,
-          BjB: 0,
-          jjB: 0
+          wIB: 0,
+          OIB: 0,
+          YIB: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? UB(this) : document.addEventListener("DOMContentLoaded", (BB => {
-          UB(this)
+        }, "loading" !== document.readyState ? cB(this) : document.addEventListener("DOMContentLoaded", (BB => {
+          cB(this)
         }), {
           once: !0
         })
       }
       bind(BB) {
-        for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
-        zB.forEach((jB => {
-          var zB = this._keyBindmap[jB] || [];
-          zB.includes(BB) || (zB.push(BB), this._keyBindmap[jB] = zB)
+        for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+        ZB.forEach((IB => {
+          var ZB = this._keyBindmap[IB] || [];
+          ZB.includes(BB) || (ZB.push(BB), this._keyBindmap[IB] = ZB)
         })), this.state[BB] = !!this.state[BB], this.pressCount[BB] = this.pressCount[BB] || 0, this.releaseCount[BB] = this.releaseCount[BB] || 0
       }
       unbind(BB) {
-        for (var jB in this._keyBindmap) {
-          var zB = this._keyBindmap[jB],
-            QB = zB.indexOf(BB);
-          QB > -1 && zB.splice(QB, 1)
+        for (var IB in this._keyBindmap) {
+          var ZB = this._keyBindmap[IB],
+            TB = ZB.indexOf(BB);
+          TB > -1 && ZB.splice(TB, 1)
         }
       }
       getBindings() {
         var BB = {};
-        for (var jB in this._keyBindmap) {
-          this._keyBindmap[jB].forEach((zB => {
-            BB[zB] = BB[zB] || [], BB[zB].push(jB)
+        for (var IB in this._keyBindmap) {
+          this._keyBindmap[IB].forEach((ZB => {
+            BB[ZB] = BB[ZB] || [], BB[ZB].push(IB)
           }))
         }
         return BB
       }
-      vp() {
-        uB(this.FW), uB(this.pressCount), uB(this.releaseCount)
+      Iz() {
+        kB(this.zD), kB(this.pressCount), kB(this.releaseCount)
       }
     }
 
-    function uB(BB) {
-      for (var jB in BB) BB[jB] = 0
+    function kB(BB) {
+      for (var IB in BB) BB[IB] = 0
     }
 
-    function UB(BB) {
-      window.addEventListener("keydown", yB.bind(null, BB, !0), !1), window.addEventListener("keyup", yB.bind(null, BB, !1), !1);
-      var jB = {
+    function cB(BB) {
+      window.addEventListener("keydown", qB.bind(null, BB, !0), !1), window.addEventListener("keyup", qB.bind(null, BB, !1), !1);
+      var IB = {
         passive: !0
       };
-      BB.element.addEventListener("touchstart", sB.bind(void 0, BB), {
+      BB.element.addEventListener("touchstart", FB.bind(void 0, BB), {
         passive: !1
-      }), BB.element.addEventListener("touchend", mB.bind(void 0, BB), jB), BB.element.addEventListener("mousedown", kB.bind(null, BB, !0), jB), window.document.addEventListener("mouseup", kB.bind(null, BB, !1), jB), BB.element.addEventListener("touchmove", GB.bind(null, BB), jB), BB.element.addEventListener("mousemove", GB.bind(null, BB), jB), window.PointerEvent, BB.element.addEventListener("wheel", LB.bind(null, BB), jB), BB.element.addEventListener("contextmenu", gB.bind(null, BB), !1), window.addEventListener("blur", MB.bind(null, BB), !1)
+      }), BB.element.addEventListener("touchend", gB.bind(void 0, BB), IB), BB.element.addEventListener("mousedown", yB.bind(null, BB, !0), IB), window.document.addEventListener("mouseup", yB.bind(null, BB, !1), IB), BB.element.addEventListener("touchmove", UB.bind(null, BB), IB), BB.element.addEventListener("mousemove", UB.bind(null, BB), IB), window.PointerEvent, BB.element.addEventListener("wheel", WB.bind(null, BB), IB), BB.element.addEventListener("contextmenu", dB.bind(null, BB), !1), window.addEventListener("blur", sB.bind(null, BB), !1)
     }
-    var aB = 0,
-      pB = 0,
-      rB = null;
+    var nB = 0,
+      hB = 0,
+      zB = null;
 
-    function sB(BB, jB) {
-      jB.preventDefault(), JB(jB)
+    function FB(BB, IB) {
+      IB.preventDefault(), NB(IB)
     }
 
-    function JB(BB) {
-      let jB = !1;
-      for (let zB = 0; zB < BB.touches.length; ++zB)
-        if (BB.touches[zB].identifier === rB) {
-          jB = !0;
+    function NB(BB) {
+      let IB = !1;
+      for (let ZB = 0; ZB < BB.touches.length; ++ZB)
+        if (BB.touches[ZB].identifier === zB) {
+          IB = !0;
           break
-        } if (!jB) {
-        const jB = BB.changedTouches[0];
-        aB = jB.clientX, pB = jB.clientY, rB = jB.identifier
+        } if (!IB) {
+        const IB = BB.changedTouches[0];
+        nB = IB.clientX, hB = IB.clientY, zB = IB.identifier
       }
     }
 
-    function mB(BB, jB) {
-      for (var zB = jB.changedTouches, QB = 0; QB < zB.length; ++QB) zB[QB].identifier === rB && (rB = null)
+    function gB(BB, IB) {
+      for (var ZB = IB.changedTouches, TB = 0; TB < ZB.length; ++TB) ZB[TB].identifier === zB && (zB = null)
     }
 
-    function yB(BB, jB, zB) {
-      if (!BB.ignoreEvent(zB)) try {
-        EB(BB, zB), jB && zB.isTrusted && !zB.repeat && BB._keyStates[zB.code] && iB(BB, zB.code)
+    function qB(BB, IB, ZB) {
+      if (!BB.ignoreEvent(ZB)) try {
+        wB(BB, ZB), IB && ZB.isTrusted && !ZB.repeat && BB._keyStates[ZB.code] && OB(BB, ZB.code)
       } finally {
-        qB(zB.code, jB, BB, zB)
+        YB(ZB.code, IB, BB, ZB)
       }
     }
 
-    function kB(BB, jB, zB) {
-      if (!BB.ignoreEvent(zB)) try {
-        EB(BB, zB)
+    function yB(BB, IB, ZB) {
+      if (!BB.ignoreEvent(ZB)) try {
+        wB(BB, ZB)
       } finally {
-        ! function(BB, jB, zB) {
-          if ("pointerId" in zB)
-            if (jB) {
+        ! function(BB, IB, ZB) {
+          if ("pointerId" in ZB)
+            if (IB) {
               if (null !== BB._touches.currID) return;
-              BB._touches.currID = zB.pointerId
+              BB._touches.currID = ZB.pointerId
             } else {
-              if (BB._touches.currID !== zB.pointerId) return;
+              if (BB._touches.currID !== ZB.pointerId) return;
               BB._touches.currID = null
-            } var QB = "button" in zB ? zB.button + 1 : 1;
-          qB("Mouse" + QB, jB, BB, zB)
-        }(BB, jB, zB)
+            } var TB = "button" in ZB ? ZB.button + 1 : 1;
+          YB("Mouse" + TB, IB, BB, ZB)
+        }(BB, IB, ZB)
       }
     }
 
-    function GB(BB, jB) {
-      var zB = jB.movementX || jB.mozMovementX || 0,
-        QB = jB.movementY || jB.mozMovementY || 0;
-      if (jB.touches && 0 === (zB | QB)) {
-        var nB = function(BB) {
-          JB(BB);
-          for (let jB = 0; jB < BB.changedTouches.length; ++jB)
-            if (BB.changedTouches[jB].identifier == rB) {
-              const zB = BB.changedTouches[jB],
-                QB = [zB.clientX - aB, zB.clientY - pB];
-              return aB = zB.clientX, pB = zB.clientY, QB
-            } return console.error(`Did not find touch id ${rB}`), [0, 0]
-        }(jB);
-        zB = nB[0], QB = nB[1]
+    function UB(BB, IB) {
+      var ZB = IB.movementX || IB.mozMovementX || 0,
+        TB = IB.movementY || IB.mozMovementY || 0;
+      if (IB.touches && 0 === (ZB | TB)) {
+        var JB = function(BB) {
+          NB(BB);
+          for (let IB = 0; IB < BB.changedTouches.length; ++IB)
+            if (BB.changedTouches[IB].identifier == zB) {
+              const ZB = BB.changedTouches[IB],
+                TB = [ZB.clientX - nB, ZB.clientY - hB];
+              return nB = ZB.clientX, hB = ZB.clientY, TB
+            } return console.error(`Did not find touch id ${zB}`), [0, 0]
+        }(IB);
+        ZB = JB[0], TB = JB[1]
       }
-      BB.FW.dx += zB, BB.FW.dy += QB
+      BB.zD.dx += ZB, BB.zD.dy += TB
     }
 
-    function LB(BB, jB) {
-      EB(BB, jB);
-      var zB = 1;
-      switch (jB.deltaMode) {
+    function WB(BB, IB) {
+      wB(BB, IB);
+      var ZB = 1;
+      switch (IB.deltaMode) {
         case 0:
-          zB = 1;
+          ZB = 1;
           break;
         case 1:
-          zB = 12;
+          ZB = 12;
           break;
         case 2:
-          zB = BB.element.clientHeight || window.innerHeight
+          ZB = BB.element.clientHeight || window.innerHeight
       }
-      BB.FW.RBB += (jB.deltaX || 0) * zB, BB.FW.BjB += (jB.deltaY || 0) * zB, BB.FW.jjB += (jB.deltaZ || 0) * zB
+      BB.zD.wIB += (IB.deltaX || 0) * ZB, BB.zD.OIB += (IB.deltaY || 0) * ZB, BB.zD.YIB += (IB.deltaZ || 0) * ZB
     }
 
-    function gB(BB, jB) {
-      if (!BB.DW) return jB.preventDefault(), !1
+    function dB(BB, IB) {
+      if (!BB.nD) return IB.preventDefault(), !1
     }
-    var tB = {
+    var CB = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -175,13 +175,13 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function SB(BB, jB) {
-      return !!BB[tB[jB]] || ("AltRight" === jB || "ControlLeft" === jB) && "function" === typeof BB.getModifierState && !0 === BB.getModifierState("AltGraph")
+    function QB(BB, IB) {
+      return !!BB[CB[IB]] || ("AltRight" === IB || "ControlLeft" === IB) && "function" === typeof BB.getModifierState && !0 === BB.getModifierState("AltGraph")
     }
 
-    function MB(BB, jB) {
-      for (var zB in BB._modifiersHeldThroughBlur = {}, tB) BB._keyStates[zB] && (BB._modifiersHeldThroughBlur[zB] = !0);
-      jB && jB.isTrusted && function() {
+    function sB(BB, IB) {
+      for (var ZB in BB._modifiersHeldThroughBlur = {}, CB) BB._keyStates[ZB] && (BB._modifiersHeldThroughBlur[ZB] = !0);
+      IB && IB.isTrusted && function() {
         try {
           return window.self !== window.top
         } catch (BB) {
@@ -189,245 +189,245 @@ export const modules = {
         }
       }() && (clearTimeout(BB._blurRelease), BB._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var jB in BB._modifiersHeldThroughBlur = {}, BB._keyStates) BB._keyStates[jB] && !/^Mouse\d/.test(jB) && iB(BB, jB)
+          for (var IB in BB._modifiersHeldThroughBlur = {}, BB._keyStates) BB._keyStates[IB] && !/^Mouse\d/.test(IB) && OB(BB, IB)
       }), 0))
     }
 
-    function EB(BB, jB) {
-      var zB = BB._modifiersHeldThroughBlur;
-      if (zB && jB.isTrusted && document.hasFocus())
-        for (var QB in zB) delete zB[QB], BB._keyStates[QB] && QB !== jB.code && (SB(jB, QB) || iB(BB, QB))
+    function wB(BB, IB) {
+      var ZB = BB._modifiersHeldThroughBlur;
+      if (ZB && IB.isTrusted && document.hasFocus())
+        for (var TB in ZB) delete ZB[TB], BB._keyStates[TB] && TB !== IB.code && (QB(IB, TB) || OB(BB, TB))
     }
 
-    function iB(BB, jB) {
-      const zB = {
-          code: jB,
+    function OB(BB, IB) {
+      const ZB = {
+          code: IB,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        QB = nB;
-      nB = zB;
+        TB = JB;
+      JB = ZB;
       try {
-        qB(jB, !1, BB, zB)
+        YB(IB, !1, BB, ZB)
       } finally {
-        nB = QB
+        JB = TB
       }
     }
 
-    function qB(BB, jB, zB, QB) {
-      var nB = zB._keyBindmap[BB];
-      nB && (fB(zB._keyStates[BB], jB) && (zB._keyStates[BB] = jB, nB.forEach((BB => {
-        (!zB.filterEvents || zB.filterEvents(QB, BB)) && function(BB, jB, zB, QB) {
-          var nB = jB ? zB.pressCount : zB.releaseCount;
-          nB[BB] = (nB[BB] || 0) + 1;
-          var dB = zB._bindPressCount[BB] || 0;
-          (dB += jB ? 1 : -1) < 0 && (dB = 0);
-          zB._bindPressCount[BB] = dB;
-          var IB = zB.state[BB];
-          if (fB(IB, dB)) {
-            zB.state[BB] = dB > 0;
-            var NB = jB ? zB.down : zB.up;
-            zB.disabled || NB.emit(BB, QB)
+    function YB(BB, IB, ZB, TB) {
+      var JB = ZB._keyBindmap[BB];
+      JB && (iB(ZB._keyStates[BB], IB) && (ZB._keyStates[BB] = IB, JB.forEach((BB => {
+        (!ZB.filterEvents || ZB.filterEvents(TB, BB)) && function(BB, IB, ZB, TB) {
+          var JB = IB ? ZB.pressCount : ZB.releaseCount;
+          JB[BB] = (JB[BB] || 0) + 1;
+          var oB = ZB._bindPressCount[BB] || 0;
+          (oB += IB ? 1 : -1) < 0 && (oB = 0);
+          ZB._bindPressCount[BB] = oB;
+          var GB = ZB.state[BB];
+          if (iB(GB, oB)) {
+            ZB.state[BB] = oB > 0;
+            var vB = IB ? ZB.down : ZB.up;
+            ZB.disabled || vB.emit(BB, TB)
           }
-        }(BB, jB, zB, QB)
-      }))), "button" in QB || (zB.oW && !QB.defaultPrevented && QB.preventDefault(), zB.stopPropagation && QB.stopPropagation()))
+        }(BB, IB, ZB, TB)
+      }))), "button" in TB || (ZB.ZD && !TB.defaultPrevented && TB.preventDefault(), ZB.stopPropagation && TB.stopPropagation()))
     }
 
-    function fB(BB, jB) {
-      return BB ? !jB : jB
+    function iB(BB, IB) {
+      return BB ? !IB : IB
     }
   },
-  36751: (BB, jB, zB) => {
-    zB.d(jB, {
-      e: () => mB,
-      g: () => yB
+  36697: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => gB,
+      e: () => qB
     });
-    var QB = zB(62),
-      nB = zB(1471),
-      dB = zB(2025),
-      IB = zB(36703),
-      NB = zB(658),
-      uB = zB(1091),
-      UB = zB.n(uB),
-      aB = zB(1148);
-    const pB = [rB()];
+    var TB = ZB(63),
+      JB = ZB(1507),
+      oB = ZB(2054),
+      GB = ZB(36642),
+      vB = ZB(665),
+      kB = ZB(1091),
+      cB = ZB.n(kB),
+      nB = ZB(1153);
+    const hB = [zB()];
 
-    function rB() {
+    function zB() {
       return {
         source: null,
         direction: null,
-        RV: null,
+        tL: null,
         timeout: void 0,
         writtenAngle: null
       }
     }
 
-    function sB(BB) {
-      return pB.find((jB => null !== jB.source && jB.source === BB))
+    function FB(BB) {
+      return hB.find((IB => null !== IB.source && IB.source === BB))
     }
 
-    function JB(BB) {
-      clearTimeout(BB.timeout), BB.source = null, BB.direction = null, BB.writtenAngle = null, BB.RV && (BB.RV.style.rotate = "")
+    function NB(BB) {
+      clearTimeout(BB.timeout), BB.source = null, BB.direction = null, BB.writtenAngle = null, BB.tL && (BB.tL.style.rotate = "")
     }
-    const mB = (0, QB.memo)((function() {
-      const [, BB] = (0, QB.useReducer)((BB => BB + 1), 0);
-      return (0, nB.f)("damagedByOtherPlayer", (jB => {
+    const gB = (0, TB.memo)((function() {
+      const [, BB] = (0, TB.useReducer)((BB => BB + 1), 0);
+      return (0, JB.d)("damagedByOtherPlayer", (IB => {
         let {
-          Gz: zB,
-          direction: QB
-        } = jB;
-        const nB = zB || "nonDirectional",
-          dB = function(BB) {
-            var jB;
-            const zB = null !== (jB = sB(BB)) && void 0 !== jB ? jB : pB.find((BB => null === BB.source));
-            if (zB) return zB;
-            const QB = {
+          yZ: ZB,
+          direction: TB
+        } = IB;
+        const JB = ZB || "nonDirectional",
+          oB = function(BB) {
+            var IB;
+            const ZB = null !== (IB = FB(BB)) && void 0 !== IB ? IB : hB.find((BB => null === BB.source));
+            if (ZB) return ZB;
+            const TB = {
               source: null,
               direction: null,
-              RV: null,
+              tL: null,
               timeout: void 0,
               writtenAngle: null
             };
-            return pB.push(QB), QB
-          }(nB);
-        clearTimeout(dB.timeout), dB.source = nB, dB.direction = QB, dB.timeout = setTimeout((() => {
-          JB(dB), BB()
+            return hB.push(TB), TB
+          }(JB);
+        clearTimeout(oB.timeout), oB.source = JB, oB.direction = TB, oB.timeout = setTimeout((() => {
+          NB(oB), BB()
         }), 800), BB()
-      })), (0, dB.d)("kill", (jB => {
+      })), (0, oB.c)("kill", (IB => {
         let {
-          killer: zB,
-          victim: QB
-        } = jB;
-        const nB = zB.local && sB(QB.id);
-        nB && (JB(nB), BB())
-      })), (0, QB.useEffect)((() => {
-        const BB = (0, IB.e)("turnDamageIndicators", yB);
+          killer: ZB,
+          victim: TB
+        } = IB;
+        const JB = ZB.local && FB(TB.id);
+        JB && (NB(JB), BB())
+      })), (0, TB.useEffect)((() => {
+        const BB = (0, GB.d)("turnDamageIndicators", qB);
         return () => {
-          BB(), pB.forEach(JB)
+          BB(), hB.forEach(NB)
         }
-      }), []), (0, aB.jsx)("div", {
+      }), []), (0, nB.jsx)("div", {
         className: "DirectionalDamage",
-        children: pB.map(((BB, jB) => (0, aB.jsx)("div", {
-          ref: jB => {
-            BB.RV = jB
+        children: hB.map(((BB, IB) => (0, nB.jsx)("div", {
+          ref: IB => {
+            BB.tL = IB
           },
-          className: UB()("DamageIndicator", {
-            DamageIndicatorFullCircle: (0, NB.I)(BB.direction),
+          className: cB()("DamageIndicator", {
+            DamageIndicatorFullCircle: (0, vB.L)(BB.direction),
             DamageIndicatorIdle: null === BB.source
           })
-        }, jB)))
+        }, IB)))
       })
     }));
 
-    function yB(BB) {
-      for (const jB of pB) {
-        if (null === jB.source || (0, NB.I)(jB.direction)) continue;
-        const zB = jB.direction - BB;
-        zB !== jB.writtenAngle && (jB.writtenAngle = zB, jB.RV.style.rotate = `${zB}rad`)
+    function qB(BB) {
+      for (const IB of hB) {
+        if (null === IB.source || (0, vB.L)(IB.direction)) continue;
+        const ZB = IB.direction - BB;
+        ZB !== IB.writtenAngle && (IB.writtenAngle = ZB, IB.tL.style.rotate = `${ZB}rad`)
       }
     }
   },
-  36574: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => nB,
-      c: () => dB
+  36529: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => JB,
+      h: () => oB
     });
-    let QB = !1;
+    let TB = !1;
 
-    function nB() {
-      return QB
+    function JB() {
+      return TB
     }
 
-    function dB(BB) {
-      return QB !== BB && (QB = BB, !0)
+    function oB(BB) {
+      return TB !== BB && (TB = BB, !0)
     }
   },
-  34202: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => dB,
-      d: () => nB
+  34143: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => oB,
+      d: () => JB
     });
-    var QB = zB(28);
+    var TB = ZB(20);
 
-    function nB(BB, jB) {
-      return BB && !jB
+    function JB(BB, IB) {
+      return BB && !IB
     }
 
-    function dB() {
-      return nB(QB.c.get("isTouchScreen"), QB.c.get("clientEscMenuOptions").touchActionButtons)
+    function oB() {
+      return JB(TB.d.get("isTouchScreen"), TB.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  40756: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      startPadGameplay: () => tB
+  40723: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      startPadGameplay: () => CB
     });
-    zB(40640);
-    var QB = zB(40647),
-      nB = zB(3849),
-      dB = zB(28),
-      IB = zB(39173),
-      NB = zB(3798),
-      uB = zB(39193),
-      UB = zB(31),
-      aB = zB(2863),
-      pB = zB(38520),
-      rB = zB(8850),
-      sB = zB(40650);
-    const JB = {
+    ZB(40595);
+    var TB = ZB(40599),
+      JB = ZB(3911),
+      oB = ZB(20),
+      GB = ZB(39135),
+      vB = ZB(3854),
+      kB = ZB(39170),
+      cB = ZB(24),
+      nB = ZB(2912),
+      hB = ZB(38474),
+      zB = ZB(8956),
+      FB = ZB(40606);
+    const NB = {
       yawRadPerSec: 0,
       pitchRadPerSec: 0
     };
-    var mB = zB(40675),
-      yB = zB(8821),
-      kB = zB(39199);
-    const GB = BB => BB.padSneakToggled || !!dB.c.get("clientEscMenuOptions").crouchIsToggle && BB.crouchToggled,
-      LB = () => {
+    var gB = ZB(40627),
+      qB = ZB(8937),
+      yB = ZB(39175);
+    const UB = BB => BB.padSneakToggled || !!oB.d.get("clientEscMenuOptions").crouchIsToggle && BB.crouchToggled,
+      WB = () => {
         const BB = (() => {
-          const BB = (0, rB.b)();
-          let jB = JB;
-          const zB = new sB.b;
-          let QB = !1,
-            nB = 0;
-          const dB = () => {
-            const zB = performance.now(),
-              dB = 0 === nB ? 0 : zB - nB;
-            if (nB = zB, !QB) return BB.discardPending(), null;
-            const IB = (0, sB.q)(jB, dB),
-              NB = BB.drainLookDelta(),
-              uB = (0, pB.h)();
+          const BB = (0, zB.d)();
+          let IB = NB;
+          const ZB = new FB.c;
+          let TB = !1,
+            JB = 0;
+          const oB = () => {
+            const ZB = performance.now(),
+              oB = 0 === JB ? 0 : ZB - JB;
+            if (JB = ZB, !TB) return BB.discardPending(), null;
+            const GB = (0, FB.i)(IB, oB),
+              vB = BB.drainLookDelta(),
+              kB = (0, hB.e)();
             return {
-              bD: (IB.bD + NB.bD) * uB,
-              RD: (IB.RD + NB.RD) * uB
+              YH: (GB.YH + vB.YH) * kB,
+              iH: (GB.iH + vB.iH) * kB
             }
           };
           return {
-            update: (BB, nB, IB, NB) => {
-              BB.camera.IK !== dB && (BB.camera.IK = dB), QB = !0, jB = (0, sB.r)(zB, nB, IB, NB, performance.now())
+            update: (BB, JB, GB, vB) => {
+              BB.camera.hV !== oB && (BB.camera.hV = oB), TB = !0, IB = (0, FB.l)(ZB, JB, GB, vB, performance.now())
             },
             release: () => {
-              QB = !1, jB = JB, zB.reset()
+              TB = !1, IB = NB, ZB.reset()
             },
             uninstall: BB => {
-              BB.camera.IK === dB && (BB.camera.IK = null)
+              BB.camera.hV === oB && (BB.camera.hV = null)
             }
           }
         })();
         return {
-          update: (jB, zB, QB) => {
-            BB.update((0, aB.g)(), jB, zB, QB)
+          update: (IB, ZB, TB) => {
+            BB.update((0, nB.h)(), IB, ZB, TB)
           },
           release: BB.release,
           uninstall: () => {
-            const jB = (0, aB.g)();
-            jB && BB.uninstall(jB)
+            const IB = (0, nB.h)();
+            IB && BB.uninstall(IB)
           }
         }
       };
-    var gB = zB(40667);
-    zB(37784), zB(8730);
-    zB(8747).e;
-    const tB = () => {
-      const BB = (0, gB.c)((() => {
+    var dB = ZB(40619);
+    ZB(37749), ZB(8857);
+    ZB(8871).e;
+    const CB = () => {
+      const BB = (0, dB.b)((() => {
           const BB = {
             x: 0,
             y: 0,
@@ -440,24 +440,24 @@ export const modules = {
             sprintHeld: !1
           };
           return {
-            bodies: () => (0, IB.c)(),
-            look: LB(),
-            move: (jB, zB) => {
-              const QB = (0, aB.g)(),
-                nB = QB.vG.ejB();
-              if (BB.x = jB.x, BB.y = jB.y, BB.magnitude = jB.magnitude, BB.headingOffset = jB.headingOffset, BB.jumpHeld = jB.jumpHeld, jB.jumpPressed && (BB.jumpPressedSinceTick = !0), BB.running = jB.running, BB.sprintHeld = jB.sprintHeld, zB) {
-                const jB = (0, mB.g)({
-                  ...zB,
-                  descending: QB.vG.CBB(QB.zV).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!QB.wG.canCrouch,
-                  toggled: GB(nB)
+            bodies: () => (0, GB.e)(),
+            look: WB(),
+            move: (IB, ZB) => {
+              const TB = (0, nB.h)(),
+                JB = TB.zW.UZB();
+              if (BB.x = IB.x, BB.y = IB.y, BB.magnitude = IB.magnitude, BB.headingOffset = IB.headingOffset, BB.jumpHeld = IB.jumpHeld, IB.jumpPressed && (BB.jumpPressedSinceTick = !0), BB.running = IB.running, BB.sprintHeld = IB.sprintHeld, ZB) {
+                const IB = (0, gB.g)({
+                  ...ZB,
+                  descending: TB.zW.dIB(TB.Jm).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!TB.vW.canCrouch,
+                  toggled: UB(JB)
                 });
-                BB.crouchHeld = jB.crouchHeld, nB.padSneakToggled = jB.toggled, nB.crouchToggled = !1, (0, yB.f)(jB.toggled)
+                BB.crouchHeld = IB.crouchHeld, JB.padSneakToggled = IB.toggled, JB.crouchToggled = !1, (0, qB.f)(IB.toggled)
               }
-              nB.gamepad = BB
+              JB.gamepad = BB
             },
             stopMoving: () => {
-              var jB;
+              var IB;
               Object.assign(BB, {
                 x: 0,
                 y: 0,
@@ -469,256 +469,256 @@ export const modules = {
                 running: !1,
                 sprintHeld: !1
               });
-              const zB = null === (jB = (0, aB.g)()) || void 0 === jB ? void 0 : jB.vG.ejB();
-              (null === zB || void 0 === zB ? void 0 : zB.gamepad) === BB && (zB.gamepad = null)
+              const ZB = null === (IB = (0, nB.h)()) || void 0 === IB ? void 0 : IB.zW.UZB();
+              (null === ZB || void 0 === ZB ? void 0 : ZB.gamepad) === BB && (ZB.gamepad = null)
             },
             uninstall: () => {},
             deviceChanged: BB => {
-              const jB = (0, aB.g)(),
-                zB = null === jB || void 0 === jB ? void 0 : jB.vG.ejB();
-              "touch" === BB ? ((0, yB.f)(!1), null !== zB && void 0 !== zB && zB.padSneakToggled && (zB.padSneakToggled = !1, zB.isTouchscreen && !zB.gamepad && jB.vG.JjB(jB.zV).setCrouching(!!jB.wG.canCrouch && zB.touchCrouch))) : "gamepad" === BB && zB && (0, yB.f)(GB(zB))
+              const IB = (0, nB.h)(),
+                ZB = null === IB || void 0 === IB ? void 0 : IB.zW.UZB();
+              "touch" === BB ? ((0, qB.f)(!1), null !== ZB && void 0 !== ZB && ZB.padSneakToggled && (ZB.padSneakToggled = !1, ZB.isTouchscreen && !ZB.gamepad && IB.zW.uIB(IB.Jm).setCrouching(!!IB.vW.canCrouch && ZB.touchCrouch))) : "gamepad" === BB && ZB && (0, qB.f)(UB(ZB))
             },
             hasPlayer: () => {
               var BB;
-              return !(null === (BB = (0, aB.g)()) || void 0 === BB || !BB.zV)
+              return !(null === (BB = (0, nB.h)()) || void 0 === BB || !BB.Jm)
             },
             isPlayerDead: () => {
               var BB;
-              const jB = (0, aB.g)();
-              return !1 === (null === (BB = jB.vG.hjB(jB.zV)) || void 0 === BB ? void 0 : BB.isAlive)
+              const IB = (0, nB.h)();
+              return !1 === (null === (BB = IB.zW.hZB(IB.Jm)) || void 0 === BB ? void 0 : BB.isAlive)
             },
             isReplayMode: () => {
-              var BB, jB;
-              return !(null === (BB = (0, aB.c)()) || void 0 === BB || null === (jB = BB.client) || void 0 === jB || !jB.isReplayMode())
+              var BB, IB;
+              return !(null === (BB = (0, nB.d)()) || void 0 === BB || null === (IB = BB.client) || void 0 === IB || !IB.isReplayMode())
             },
             isFreeCameraOn: () => {
-              var BB, jB, zB;
-              return !(null === (BB = (0, aB.c)()) || void 0 === BB || null === (jB = BB.client) || void 0 === jB || null === (zB = jB.freeCameraController) || void 0 === zB || !zB.isEnabled())
+              var BB, IB, ZB;
+              return !(null === (BB = (0, nB.d)()) || void 0 === BB || null === (IB = BB.client) || void 0 === IB || null === (ZB = IB.freeCameraController) || void 0 === ZB || !ZB.isEnabled())
             },
-            targetsBlock: () => !!(0, aB.g)().mBB,
+            targetsBlock: () => !!(0, nB.h)().lBB,
             selectedSlotEmpty: () => {
               var BB;
-              const jB = (0, aB.g)();
-              return !(null !== (BB = jB.vG.yjB(jB.zV)) && void 0 !== BB && BB.getItemAtSelectedSlot())
+              const IB = (0, nB.h)();
+              return !(null !== (BB = IB.zW.lIB(IB.Jm)) && void 0 !== BB && BB.getItemAtSelectedSlot())
             },
             pickBlockAllowed: () => {
-              const BB = (0, aB.g)().wG;
+              const BB = (0, nB.h)().vW;
               return !!BB.creative && !!BB.canPickBlocks
             },
             scrollHotbar: BB => {
-              UB.n.Ly("ScrollInventorySlot", BB)
+              cB.l.Gq("ScrollInventorySlot", BB)
             },
-            hasFullInventory: () => (0, uB.c)((0, aB.g)()),
-            hasLobbyTab: () => (0, kB.c)((0, aB.g)().wG),
+            hasFullInventory: () => (0, kB.b)((0, nB.h)()),
+            hasLobbyTab: () => (0, yB.d)((0, nB.h)().vW),
             contextActionInputs: () => {
-              var BB, jB, zB, QB;
-              const nB = (0, aB.g)();
+              var BB, IB, ZB, TB;
+              const JB = (0, nB.h)();
               return {
-                holdingGun: !(null === (BB = nB.vG.XjB(nB.zV)) || void 0 === BB || null === (jB = BB.kS) || void 0 === jB || !jB.isGun()),
-                customButtons: null !== (zB = nB.wG.customButtons) && void 0 !== zB ? zB : null,
-                touchscreenActionButton: null !== (QB = nB.wG.touchscreenActionButton) && void 0 !== QB ? QB : null
+                holdingGun: !(null === (BB = JB.zW.zZB(JB.Jm)) || void 0 === BB || null === (IB = BB.JC) || void 0 === IB || !IB.isGun()),
+                customButtons: null !== (ZB = JB.vW.customButtons) && void 0 !== ZB ? ZB : null,
+                touchscreenActionButton: null !== (TB = JB.vW.touchscreenActionButton) && void 0 !== TB ? TB : null
               }
             },
             pressTouchButton: BB => {
-              (0, NB.sendColyMessage)(nB.bk, BB)
+              (0, vB.sendColyMessage)(JB.Hj, BB)
             }
           }
         })()),
-        jB = (0, QB.b)(),
-        zB = null,
-        dB = null;
+        IB = (0, TB.e)(),
+        ZB = null,
+        oB = null;
       return () => {
-        BB(), jB(), null === zB || void 0 === zB || zB(), null === dB || void 0 === dB || dB()
+        BB(), IB(), null === ZB || void 0 === ZB || ZB(), null === oB || void 0 === oB || oB()
       }
     }
   },
-  36687: (BB, jB, zB) => {
-    zB.d(jB, {
-      A: () => GB,
-      e: () => dB,
-      f: () => mB,
-      i: () => yB,
-      l: () => NB,
-      m: () => rB,
-      n: () => kB,
-      r: () => pB,
-      t: () => LB,
-      w: () => JB
+  36625: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB,
+      c: () => gB,
+      g: () => qB,
+      h: () => vB,
+      l: () => zB,
+      p: () => yB,
+      q: () => hB,
+      s: () => WB,
+      t: () => NB,
+      w: () => UB
     });
-    var QB = zB(28),
-      nB = zB(31);
-    const dB = "clientGameInventoryButtonsChanged",
-      IB = new Map;
+    var TB = ZB(20),
+      JB = ZB(24);
+    const oB = "clientGameInventoryButtonsChanged",
+      GB = new Map;
 
-    function NB() {
-      return [...IB.values()].sort(((BB, jB) => {
-        var zB, QB;
-        return (null !== (zB = BB.order) && void 0 !== zB ? zB : 0) - (null !== (QB = jB.order) && void 0 !== QB ? QB : 0)
+    function vB() {
+      return [...GB.values()].sort(((BB, IB) => {
+        var ZB, TB;
+        return (null !== (ZB = BB.order) && void 0 !== ZB ? ZB : 0) - (null !== (TB = IB.order) && void 0 !== TB ? TB : 0)
       }))
     }
-    let uB = null;
+    let kB = null;
 
-    function UB(BB) {
-      uB = BB
+    function cB(BB) {
+      kB = BB
     }
-    let aB = !1;
+    let nB = !1;
 
-    function pB(BB) {
-      aB = !0;
+    function hB(BB) {
+      nB = !0;
       try {
         BB.onClick()
       } finally {
-        aB = !1
+        nB = !1
       }
-      BB.panel && "clientGame" === QB.c.get("openInGameMenuName") && UB(BB.id)
+      BB.panel && "clientGame" === TB.d.get("openInGameMenuName") && cB(BB.id)
     }
 
-    function rB() {
-      return aB
+    function zB() {
+      return nB
     }
 
-    function sB() {
-      return NB().filter((BB => BB.panel && !BB.disabled))
+    function FB() {
+      return vB().filter((BB => BB.panel && !BB.disabled))
     }
 
-    function JB(BB) {
-      const jB = sB(),
-        zB = jB.findIndex((BB => BB.id === uB));
-      return !(zB < 0 || jB.length < 2) && (pB(jB[(zB + BB + jB.length) % jB.length]), !0)
+    function NB(BB) {
+      const IB = FB(),
+        ZB = IB.findIndex((BB => BB.id === kB));
+      return !(ZB < 0 || IB.length < 2) && (hB(IB[(ZB + BB + IB.length) % IB.length]), !0)
     }
 
-    function mB() {
-      return null !== uB && sB().length > 1
+    function gB() {
+      return null !== kB && FB().length > 1
+    }
+
+    function qB() {
+      cB(null)
     }
 
     function yB() {
-      UB(null)
+      "inventory" !== TB.d.get("openInGameMenuName") && cB(null)
     }
 
-    function kB() {
-      "inventory" !== QB.c.get("openInGameMenuName") && UB(null)
+    function UB() {
+      const BB = kB;
+      return cB(null), BB
     }
 
-    function GB() {
-      const BB = uB;
-      return UB(null), BB
-    }
-
-    function LB(BB) {
-      return IB.set(BB.id, BB), nB.n.Ly(dB, NB(), !0), () => {
-        IB.get(BB.id) === BB && (IB.delete(BB.id), nB.n.Ly(dB, NB()))
+    function WB(BB) {
+      return GB.set(BB.id, BB), JB.l.Gq(oB, vB(), !0), () => {
+        GB.get(BB.id) === BB && (GB.delete(BB.id), JB.l.Gq(oB, vB()))
       }
     }
   },
-  36682: (BB, jB, zB) => {
-    zB.d(jB, {
-      c: () => NB,
-      d: () => yB,
-      f: () => kB,
-      j: () => rB,
-      n: () => UB,
-      o: () => mB,
-      r: () => sB,
-      t: () => aB
+  36619: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => vB,
+      f: () => qB,
+      i: () => yB,
+      m: () => zB,
+      q: () => cB,
+      t: () => gB,
+      v: () => FB,
+      x: () => nB
     });
-    var QB = zB(28),
-      nB = zB(31),
-      dB = zB(1316),
-      IB = zB(36687);
-    const NB = "clientGameUiChanged";
-    let uB = null;
+    var TB = ZB(20),
+      JB = ZB(24),
+      oB = ZB(1353),
+      GB = ZB(36625);
+    const vB = "clientGameUiChanged";
+    let kB = null;
 
-    function UB() {
-      return uB
+    function cB() {
+      return kB
     }
 
-    function aB(BB, jB) {
-      const zB = {
+    function nB(BB, IB) {
+      const ZB = {
         content: BB,
-        menu: jB
+        menu: IB
       };
-      return uB = zB, nB.n.Ly(NB, uB, !0), () => {
-        uB === zB && (uB = null, JB = !1, yB(), nB.n.Ly(NB, null))
+      return kB = ZB, JB.l.Gq(vB, kB, !0), () => {
+        kB === ZB && (kB = null, NB = !1, qB(), JB.l.Gq(vB, null))
       }
     }
-    let pB = null;
+    let hB = null;
 
-    function rB() {
-      return pB
+    function zB() {
+      return hB
     }
 
-    function sB(BB) {
-      return pB = BB, () => {
-        pB === BB && (pB = null)
+    function FB(BB) {
+      return hB = BB, () => {
+        hB === BB && (hB = null)
       }
     }
-    let JB = !1;
+    let NB = !1;
 
-    function mB() {
-      const BB = QB.c.get("openInGameMenuName");
-      "clientGame" !== BB && (JB = "inventory" === BB), (0, IB.m)() || (0, IB.i)(), (0, dB.u)(dB.e), QB.c.set({
+    function gB() {
+      const BB = TB.d.get("openInGameMenuName");
+      "clientGame" !== BB && (NB = "inventory" === BB), (0, GB.l)() || (0, GB.g)(), (0, oB.t)(oB.e), TB.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
+    function qB() {
+      UB(!1)
+    }
+
     function yB() {
-      GB(!1)
+      UB(NB)
     }
 
-    function kB() {
-      GB(JB)
-    }
-
-    function GB(BB) {
-      "clientGame" === QB.c.get("openInGameMenuName") && QB.c.set({
+    function UB(BB) {
+      "clientGame" === TB.d.get("openInGameMenuName") && TB.d.set({
         openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, IB.i)(), JB = !1
+      }), BB || (0, GB.g)(), NB = !1
     }
   },
-  36570: (BB, jB, zB) => {
-    zB.d(jB, {
-      b: () => uB
+  36524: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => kB
     });
-    var QB = zB(363),
-      nB = zB(28),
-      dB = zB(36574),
-      IB = zB(1664),
-      NB = zB(2033);
+    var TB = ZB(342),
+      JB = ZB(20),
+      oB = ZB(36529),
+      GB = ZB(1711),
+      vB = ZB(2066);
 
-    function uB(BB, jB) {
-      var zB, uB, UB;
-      if (!nB.c.get("isKeydownEnabled") || BB.repeat) return;
-      const aB = BB.code;
-      "Escape" === BB.key ? (0, IB.e)(BB) : null !== (zB = NB.w.OpenSettings) && void 0 !== zB && zB.includes(aB) ? (0, IB.t)(BB, QB.o.SETTINGS) : null !== (uB = NB.w.OpenCharacterCustomization) && void 0 !== uB && uB.includes(aB) ? (0, dB.b)() || (0, IB.t)(BB, QB.o.CUSTOMISATION, jB()) : null !== (UB = NB.w.ShowDebugOverlay) && void 0 !== UB && UB.includes(aB) && nB.c.set({
-        showDebugOverlay: !nB.c.get("showDebugOverlay")
+    function kB(BB, IB) {
+      var ZB, kB, cB;
+      if (!JB.d.get("isKeydownEnabled") || BB.repeat) return;
+      const nB = BB.code;
+      "Escape" === BB.key ? (0, GB.f)(BB) : null !== (ZB = vB.u.OpenSettings) && void 0 !== ZB && ZB.includes(nB) ? (0, GB.x)(BB, TB.q.SETTINGS) : null !== (kB = vB.u.OpenCharacterCustomization) && void 0 !== kB && kB.includes(nB) ? (0, oB.d)() || (0, GB.x)(BB, TB.q.CUSTOMISATION, IB()) : null !== (cB = vB.u.ShowDebugOverlay) && void 0 !== cB && cB.includes(nB) && JB.d.set({
+        showDebugOverlay: !JB.d.get("showDebugOverlay")
       })
     }
   },
-  39093: (BB, jB, zB) => {
-    function QB(BB, jB, zB, QB, nB) {
-      var dB = {};
-      return Object.keys(QB).forEach((function(BB) {
-        dB[BB] = QB[BB]
-      })), dB.enumerable = !!dB.enumerable, dB.configurable = !!dB.configurable, ("value" in dB || dB.initializer) && (dB.writable = !0), dB = zB.slice().reverse().reduce((function(zB, QB) {
-        return QB(BB, jB, zB) || zB
-      }), dB), nB && void 0 !== dB.initializer && (dB.value = dB.initializer ? dB.initializer.call(nB) : void 0, dB.initializer = void 0), void 0 === dB.initializer && (Object.defineProperty(BB, jB, dB), dB = null), dB
+  39039: (BB, IB, ZB) => {
+    function TB(BB, IB, ZB, TB, JB) {
+      var oB = {};
+      return Object.keys(TB).forEach((function(BB) {
+        oB[BB] = TB[BB]
+      })), oB.enumerable = !!oB.enumerable, oB.configurable = !!oB.configurable, ("value" in oB || oB.initializer) && (oB.writable = !0), oB = ZB.slice().reverse().reduce((function(ZB, TB) {
+        return TB(BB, IB, ZB) || ZB
+      }), oB), JB && void 0 !== oB.initializer && (oB.value = oB.initializer ? oB.initializer.call(JB) : void 0, oB.initializer = void 0), void 0 === oB.initializer && (Object.defineProperty(BB, IB, oB), oB = null), oB
     }
-    zB.d(jB, {
-      d: () => QB
+    ZB.d(IB, {
+      b: () => TB
     })
   },
-  39087: (BB, jB, zB) => {
-    function QB(BB, jB, zB, QB) {
-      zB && Object.defineProperty(BB, jB, {
-        enumerable: zB.enumerable,
-        configurable: zB.configurable,
-        writable: zB.writable,
-        value: zB.initializer ? zB.initializer.call(QB) : void 0
+  39032: (BB, IB, ZB) => {
+    function TB(BB, IB, ZB, TB) {
+      ZB && Object.defineProperty(BB, IB, {
+        enumerable: ZB.enumerable,
+        configurable: ZB.configurable,
+        writable: ZB.writable,
+        value: ZB.initializer ? ZB.initializer.call(TB) : void 0
       })
     }
-    zB.d(jB, {
-      c: () => QB
+    ZB.d(IB, {
+      d: () => TB
     })
   }
 };

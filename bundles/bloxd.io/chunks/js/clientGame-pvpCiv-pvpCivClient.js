@@ -1,18 +1,18 @@
 export const id = 23;
 export const ids = [23];
 export const modules = {
-  39620: (BB, jB, zB) => {
-    zB.r(jB), zB.d(jB, {
-      default: () => QB
+  39601: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => TB
     });
-    const QB = function(BB, jB, zB) {
-      let QB;
+    const TB = function(BB, IB, ZB) {
+      let TB;
       return {
         onCreate: BB => {
-          QB = BB
+          TB = BB
         },
-        onPlayerAltAction: (BB, jB, zB, nB, dB, IB) => {
-          null !== IB && "Mesh" === QB.getEntityType(IB) && "Weaponmaster" === QB.getEntityName(IB) && QB.openShop(BB, !1, "PvpCivWeapon")
+        onPlayerAltAction: (BB, IB, ZB, JB, oB, GB) => {
+          null !== GB && "Mesh" === TB.getEntityType(GB) && "Weaponmaster" === TB.getEntityName(GB) && TB.openShop(BB, !1, "PvpCivWeapon")
         }
       }
     }
